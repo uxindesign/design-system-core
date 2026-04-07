@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" data-mode="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Badge — Design System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/design-system.css">
+  <style>
+    body { display: flex; min-height: 100vh; }
+    .sidebar { width: 240px; padding: 16px; border-right: 1px solid var(--ds-border-subtle); background: var(--ds-background-subtle); position: fixed; height: 100vh; overflow-y: auto; }
+    .sidebar a { display: block; padding: 6px 8px; color: var(--ds-text-secondary); text-decoration: none; font-size: 12px; border-radius: 4px; }
+    .sidebar a:hover { background: var(--ds-state-hover); color: var(--ds-text-default); }
+    .sidebar a.active { background: var(--ds-color-primary-muted); color: var(--ds-color-primary); font-weight: 500; }
+    .sidebar h3 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ds-text-tertiary); margin: 16px 0 8px; }
+    .main { flex: 1; padding: 48px; margin-left: 240px; max-width: 960px; }
+    .main h1 { margin-bottom: 16px; }
+    .main h2 { margin: 48px 0 16px; }
+    .main p { color: var(--ds-text-secondary); margin-bottom: 16px; }
+    .example { padding: 24px; border: 1px solid var(--ds-border-subtle); border-radius: 8px; margin: 12px 0 24px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+    .example--col { flex-direction: column; align-items: flex-start; }
+    .theme-toggle { position: fixed; top: 16px; right: 16px; z-index: 100; }
+  </style>
+</head>
+<body>
+  <nav class="sidebar">
+    <h2 style="margin-bottom:16px;font-size:16px;">Design System</h2>
+    <h3>Overview</h3>
+    <a href="index.html">Home</a>
+    <a href="tokens.html">Tokens</a>
+    <h3>Components</h3>
+    <a href="button.html">Button</a>
+    <a href="input.html">Input</a>
+    <a href="textarea.html">Textarea</a>
+    <a href="select.html">Select</a>
+    <a href="checkbox.html">Checkbox</a>
+    <a href="radio.html">Radio</a>
+    <a href="toggle.html">Toggle</a>
+    <a href="badge.html" class="active">Badge</a>
+    <a href="alert.html">Alert</a>
+    <a href="card.html">Card</a>
+    <a href="modal.html">Modal</a>
+    <a href="tooltip.html">Tooltip</a>
+    <a href="tabs.html">Tabs</a>
+    <a href="breadcrumb.html">Breadcrumb</a>
+    <a href="avatar.html">Avatar</a>
+    <a href="divider.html">Divider</a>
+    <a href="spinner.html">Spinner</a>
+    <a href="skeleton.html">Skeleton</a>
+    <a href="form-field.html">Form Field</a>
+  </nav>
+  <main class="main">
+    <h1>Badge</h1>
+    <p>Badges display short status labels or counts. Available in 7 color variants, each with a default and subtle style.</p>
+
+    <h2>Default</h2>
+    <div class="example">
+      <span class="ds-badge ds-badge--primary">Primary</span>
+      <span class="ds-badge ds-badge--secondary">Secondary</span>
+      <span class="ds-badge ds-badge--success">Success</span>
+      <span class="ds-badge ds-badge--warning">Warning</span>
+      <span class="ds-badge ds-badge--error">Error</span>
+      <span class="ds-badge ds-badge--info">Info</span>
+      <span class="ds-badge ds-badge--neutral">Neutral</span>
+    </div>
+
+    <h2>Subtle</h2>
+    <div class="example">
+      <span class="ds-badge ds-badge--primary ds-badge--subtle">Primary</span>
+      <span class="ds-badge ds-badge--secondary ds-badge--subtle">Secondary</span>
+      <span class="ds-badge ds-badge--success ds-badge--subtle">Success</span>
+      <span class="ds-badge ds-badge--warning ds-badge--subtle">Warning</span>
+      <span class="ds-badge ds-badge--error ds-badge--subtle">Error</span>
+      <span class="ds-badge ds-badge--info ds-badge--subtle">Info</span>
+      <span class="ds-badge ds-badge--neutral ds-badge--subtle">Neutral</span>
+    </div>
+
+    <h2>Usage Examples</h2>
+    <div class="example">
+      <span class="ds-badge ds-badge--success">Active</span>
+      <span class="ds-badge ds-badge--error">Offline</span>
+      <span class="ds-badge ds-badge--warning ds-badge--subtle">Pending</span>
+      <span class="ds-badge ds-badge--info ds-badge--subtle">Beta</span>
+      <span class="ds-badge ds-badge--neutral ds-badge--subtle">Draft</span>
+      <span class="ds-badge ds-badge--primary">New</span>
+      <span class="ds-badge ds-badge--secondary ds-badge--subtle">v2.0</span>
+    </div>
+  </main>
+  <button class="ds-btn ds-btn--outline ds-btn--sm theme-toggle" onclick="document.documentElement.dataset.mode = document.documentElement.dataset.mode === 'dark' ? 'light' : 'dark'">Toggle Dark Mode</button>
+</body>
+</html>

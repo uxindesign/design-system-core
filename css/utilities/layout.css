@@ -1,0 +1,116 @@
+/* ==========================================================================
+   Layout Utilities
+   Flex/grid helpers using design tokens for spacing.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Flex
+   -------------------------------------------------------------------------- */
+
+.ds-flex {
+  display: flex;
+}
+
+.ds-flex-col {
+  flex-direction: column;
+}
+
+.ds-flex-row {
+  flex-direction: row;
+}
+
+.ds-flex-wrap {
+  flex-wrap: wrap;
+}
+
+/* --------------------------------------------------------------------------
+   Align Items
+   -------------------------------------------------------------------------- */
+
+.ds-items-center {
+  align-items: center;
+}
+
+.ds-items-start {
+  align-items: flex-start;
+}
+
+.ds-items-end {
+  align-items: flex-end;
+}
+
+/* --------------------------------------------------------------------------
+   Justify Content
+   -------------------------------------------------------------------------- */
+
+.ds-justify-center {
+  justify-content: center;
+}
+
+.ds-justify-between {
+  justify-content: space-between;
+}
+
+.ds-justify-start {
+  justify-content: flex-start;
+}
+
+.ds-justify-end {
+  justify-content: flex-end;
+}
+
+/* --------------------------------------------------------------------------
+   Gap
+   -------------------------------------------------------------------------- */
+
+.ds-gap-xs {
+  gap: var(--ds-space-gap-xs);
+}
+
+.ds-gap-sm {
+  gap: var(--ds-space-gap-sm);
+}
+
+.ds-gap-md {
+  gap: var(--ds-space-gap-md);
+}
+
+.ds-gap-lg {
+  gap: var(--ds-space-gap-lg);
+}
+
+.ds-gap-xl {
+  gap: var(--ds-space-gap-xl);
+}
+
+/* --------------------------------------------------------------------------
+   Grid
+   -------------------------------------------------------------------------- */
+
+.ds-grid {
+  display: grid;
+}
+
+.ds-grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.ds-grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.ds-grid-cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* --------------------------------------------------------------------------
+   Sizing
+   -------------------------------------------------------------------------- */
+
+.ds-w-full {
+  width: 100%;
+}
+
+.ds-h-full {
+  height: 100%;
+}

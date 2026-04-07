@@ -1,0 +1,42 @@
+/* ==========================================================================
+   Form Field
+   ========================================================================== */
+
+.ds-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-space-gap-xs);
+}
+
+/* Elements
+   ========================================================================== */
+
+.ds-field__label {
+  font-size: var(--ds-font-size-sm);
+  font-weight: var(--ds-font-weight-medium);
+  color: var(--ds-text-default);
+}
+
+.ds-field__helper {
+  font-size: var(--ds-font-size-xs);
+  color: var(--ds-text-tertiary);
+}
+
+.ds-field__error {
+  font-size: var(--ds-font-size-xs);
+  color: var(--ds-feedback-error);
+}
+
+/* Error state
+   ========================================================================== */
+
+.ds-field--error .ds-field__label {
+  color: var(--ds-feedback-error);
+}
+
+/* Disabled state
+   ========================================================================== */
+
+.ds-field--disabled .ds-field__label {
+  color: var(--ds-text-disabled);
+}

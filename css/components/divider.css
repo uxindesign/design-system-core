@@ -1,0 +1,17 @@
+/* ==========================================================================
+   Divider Component
+   Horizontal and vertical dividers using design tokens.
+   ========================================================================== */
+
+.ds-divider {
+  border: none;
+  border-top: var(--ds-border-width-subtle) solid var(--ds-border-subtle);
+  margin: var(--ds-space-gap-md) 0;
+}
+
+.ds-divider--vertical {
+  border-top: none;
+  border-left: var(--ds-border-width-subtle) solid var(--ds-border-subtle);
+  margin: 0 var(--ds-space-gap-md);
+  align-self: stretch;
+}

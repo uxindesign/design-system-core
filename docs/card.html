@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" data-mode="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card — Design System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/design-system.css">
+  <style>
+    body { display: flex; min-height: 100vh; }
+    .sidebar { width: 240px; padding: 16px; border-right: 1px solid var(--ds-border-subtle); background: var(--ds-background-subtle); position: fixed; height: 100vh; overflow-y: auto; }
+    .sidebar a { display: block; padding: 6px 8px; color: var(--ds-text-secondary); text-decoration: none; font-size: 12px; border-radius: 4px; }
+    .sidebar a:hover { background: var(--ds-state-hover); color: var(--ds-text-default); }
+    .sidebar a.active { background: var(--ds-color-primary-muted); color: var(--ds-color-primary); font-weight: 500; }
+    .sidebar h3 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ds-text-tertiary); margin: 16px 0 8px; }
+    .main { flex: 1; padding: 48px; margin-left: 240px; max-width: 960px; }
+    .main h1 { margin-bottom: 16px; }
+    .main h2 { margin: 48px 0 16px; }
+    .main p { color: var(--ds-text-secondary); margin-bottom: 16px; }
+    .example { padding: 24px; border: 1px solid var(--ds-border-subtle); border-radius: 8px; margin: 12px 0 24px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+    .example--col { flex-direction: column; align-items: flex-start; }
+    .theme-toggle { position: fixed; top: 16px; right: 16px; z-index: 100; }
+  </style>
+</head>
+<body>
+  <nav class="sidebar">
+    <h2 style="margin-bottom:16px;font-size:16px;">Design System</h2>
+    <h3>Overview</h3>
+    <a href="index.html">Home</a>
+    <a href="tokens.html">Tokens</a>
+    <h3>Components</h3>
+    <a href="button.html">Button</a>
+    <a href="input.html">Input</a>
+    <a href="textarea.html">Textarea</a>
+    <a href="select.html">Select</a>
+    <a href="checkbox.html">Checkbox</a>
+    <a href="radio.html">Radio</a>
+    <a href="toggle.html">Toggle</a>
+    <a href="badge.html">Badge</a>
+    <a href="alert.html">Alert</a>
+    <a href="card.html" class="active">Card</a>
+    <a href="modal.html">Modal</a>
+    <a href="tooltip.html">Tooltip</a>
+    <a href="tabs.html">Tabs</a>
+    <a href="breadcrumb.html">Breadcrumb</a>
+    <a href="avatar.html">Avatar</a>
+    <a href="divider.html">Divider</a>
+    <a href="spinner.html">Spinner</a>
+    <a href="skeleton.html">Skeleton</a>
+    <a href="form-field.html">Form Field</a>
+  </nav>
+  <main class="main">
+    <h1>Card</h1>
+    <p>Cards group related content and actions. Available in 3 variants: default, outlined, and elevated.</p>
+
+    <h2>Default</h2>
+    <div class="example example--col" style="width:100%;">
+      <div class="ds-card" style="width:100%;max-width:400px;">
+        <div class="ds-card__header">
+          <h3 style="margin:0;">Default Card</h3>
+        </div>
+        <div class="ds-card__body">
+          <p style="margin:0;color:var(--ds-text-secondary);">This is the default card style with a subtle border. Use it for general content grouping throughout the interface.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>Outlined</h2>
+    <div class="example example--col" style="width:100%;">
+      <div class="ds-card ds-card--outlined" style="width:100%;max-width:400px;">
+        <div class="ds-card__header">
+          <h3 style="margin:0;">Outlined Card</h3>
+        </div>
+        <div class="ds-card__body">
+          <p style="margin:0;color:var(--ds-text-secondary);">The outlined variant uses a visible border for clear separation. Ideal for forms, settings panels, or content that needs defined boundaries.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>Elevated</h2>
+    <div class="example example--col" style="width:100%;">
+      <div class="ds-card ds-card--elevated" style="width:100%;max-width:400px;">
+        <div class="ds-card__header">
+          <h3 style="margin:0;">Elevated Card</h3>
+        </div>
+        <div class="ds-card__body">
+          <p style="margin:0;color:var(--ds-text-secondary);">The elevated variant uses a box shadow instead of a border. Use it for content that should appear lifted above the surface, such as modals or popovers.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>Side by Side</h2>
+    <div class="example" style="width:100%;">
+      <div class="ds-card" style="flex:1;min-width:200px;">
+        <div class="ds-card__header">
+          <h3 style="margin:0;">Default</h3>
+        </div>
+        <div class="ds-card__body">
+          <p style="margin:0;color:var(--ds-text-secondary);">Subtle border, no shadow.</p>
+        </div>
+      </div>
+      <div class="ds-card ds-card--outlined" style="flex:1;min-width:200px;">
+        <div class="ds-card__header">
+          <h3 style="margin:0;">Outlined</h3>
+        </div>
+        <div class="ds-card__body">
+          <p style="margin:0;color:var(--ds-text-secondary);">Visible border emphasis.</p>
+        </div>
+      </div>
+      <div class="ds-card ds-card--elevated" style="flex:1;min-width:200px;">
+        <div class="ds-card__header">
+          <h3 style="margin:0;">Elevated</h3>
+        </div>
+        <div class="ds-card__body">
+          <p style="margin:0;color:var(--ds-text-secondary);">Shadow, no border.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <button class="ds-btn ds-btn--outline ds-btn--sm theme-toggle" onclick="document.documentElement.dataset.mode = document.documentElement.dataset.mode === 'dark' ? 'light' : 'dark'">Toggle Dark Mode</button>
+</body>
+</html>

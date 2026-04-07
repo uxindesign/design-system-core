@@ -1,0 +1,164 @@
+/* ==========================================================================
+   Checkbox – .ds-checkbox
+   ========================================================================== */
+
+/* Base
+   ========================================================================== */
+
+.ds-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--ds-space-gap-sm);
+  cursor: pointer;
+}
+
+/* Control (the box)
+   ========================================================================== */
+
+.ds-checkbox__control {
+  position: relative;
+  flex-shrink: 0;
+  border: 2px solid var(--ds-border-default);
+  border-radius: var(--ds-radius-sm);
+  transition: all 150ms ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Focus */
+.ds-checkbox__control:focus-visible,
+.ds-checkbox:has(input:focus-visible) .ds-checkbox__control {
+  outline: 2px solid var(--ds-border-focus);
+  outline-offset: 2px;
+}
+
+/* Checkmark icon */
+.ds-checkbox__control::after {
+  content: "";
+  display: block;
+  opacity: 0;
+  transition: opacity 150ms ease;
+}
+
+/* Sizes
+   ========================================================================== */
+
+/* Default / md */
+.ds-checkbox__control,
+.ds-checkbox--md .ds-checkbox__control {
+  width: 20px;
+  height: 20px;
+}
+
+.ds-checkbox--md .ds-checkbox__control::after,
+.ds-checkbox__control::after {
+  width: 10px;
+  height: 6px;
+  border-left: 2px solid var(--ds-color-primary-fg, #fff);
+  border-bottom: 2px solid var(--ds-color-primary-fg, #fff);
+  transform: rotate(-45deg) translateY(-1px);
+}
+
+.ds-checkbox__label,
+.ds-checkbox--md .ds-checkbox__label {
+  font-size: var(--ds-font-size-base);
+}
+
+/* sm */
+.ds-checkbox--sm .ds-checkbox__control {
+  width: 16px;
+  height: 16px;
+}
+
+.ds-checkbox--sm .ds-checkbox__control::after {
+  width: 8px;
+  height: 5px;
+  border-left: 2px solid var(--ds-color-primary-fg, #fff);
+  border-bottom: 2px solid var(--ds-color-primary-fg, #fff);
+  transform: rotate(-45deg) translateY(-1px);
+}
+
+.ds-checkbox--sm .ds-checkbox__label {
+  font-size: var(--ds-font-size-sm);
+}
+
+/* lg */
+.ds-checkbox--lg .ds-checkbox__control {
+  width: 24px;
+  height: 24px;
+}
+
+.ds-checkbox--lg .ds-checkbox__control::after {
+  width: 12px;
+  height: 7px;
+  border-left: 2.5px solid var(--ds-color-primary-fg, #fff);
+  border-bottom: 2.5px solid var(--ds-color-primary-fg, #fff);
+  transform: rotate(-45deg) translateY(-1px);
+}
+
+.ds-checkbox--lg .ds-checkbox__label {
+  font-size: var(--ds-font-size-md);
+}
+
+/* States
+   ========================================================================== */
+
+/* Checked */
+.ds-checkbox--checked .ds-checkbox__control,
+.ds-checkbox:has(input:checked) .ds-checkbox__control {
+  background-color: var(--ds-color-primary);
+  border-color: var(--ds-color-primary);
+}
+
+.ds-checkbox--checked .ds-checkbox__control::after,
+.ds-checkbox:has(input:checked) .ds-checkbox__control::after {
+  opacity: 1;
+}
+
+/* Indeterminate */
+.ds-checkbox--indeterminate .ds-checkbox__control,
+.ds-checkbox:has(input:indeterminate) .ds-checkbox__control {
+  background-color: var(--ds-color-primary);
+  border-color: var(--ds-color-primary);
+}
+
+.ds-checkbox--indeterminate .ds-checkbox__control::after,
+.ds-checkbox:has(input:indeterminate) .ds-checkbox__control::after {
+  opacity: 1;
+  width: 10px;
+  height: 0;
+  border-left: none;
+  border-bottom: 2px solid var(--ds-color-primary-fg, #fff);
+  transform: none;
+}
+
+/* Disabled */
+.ds-checkbox--disabled,
+.ds-checkbox:has(input:disabled) {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Label
+   ========================================================================== */
+
+.ds-checkbox__label {
+  user-select: none;
+  color: var(--ds-text-default);
+}
+
+/* Hidden native input
+   ========================================================================== */
+
+.ds-checkbox__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

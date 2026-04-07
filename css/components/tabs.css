@@ -1,0 +1,48 @@
+/* ==========================================================================
+   Tabs
+   ========================================================================== */
+
+.ds-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--ds-border-subtle);
+  gap: 0;
+}
+
+/* Tab item
+   ========================================================================== */
+
+.ds-tab {
+  padding: var(--ds-space-inset-sm) var(--ds-space-inset-md);
+  border: none;
+  background: transparent;
+  color: var(--ds-text-secondary);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  font-size: var(--ds-font-size-base);
+  font-weight: var(--ds-font-weight-medium);
+  transition: all 150ms;
+}
+
+/* Active
+   ========================================================================== */
+
+.ds-tab--active {
+  color: var(--ds-text-default);
+  border-bottom-color: var(--ds-color-primary);
+}
+
+/* Disabled
+   ========================================================================== */
+
+.ds-tab--disabled {
+  color: var(--ds-text-disabled);
+  pointer-events: none;
+}
+
+/* Hover (not active, not disabled)
+   ========================================================================== */
+
+.ds-tab:not(.ds-tab--active):not(.ds-tab--disabled):hover {
+  color: var(--ds-text-default);
+  background: var(--ds-state-hover);
+}

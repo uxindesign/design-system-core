@@ -1,0 +1,71 @@
+/* ==========================================================================
+   Modal
+   ========================================================================== */
+
+.ds-modal {
+  /* Modal root */
+}
+
+/* Overlay
+   ========================================================================== */
+
+.ds-modal__overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--ds-background-overlay);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+/* Dialog
+   ========================================================================== */
+
+.ds-modal__dialog {
+  background: var(--ds-surface-overlay);
+  border-radius: var(--ds-radius-lg);
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1),
+    0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: var(--ds-space-inset-xl);
+}
+
+/* Sizes
+   ========================================================================== */
+
+.ds-modal--sm .ds-modal__dialog {
+  max-width: 400px;
+}
+
+.ds-modal--md .ds-modal__dialog {
+  max-width: 560px;
+}
+
+.ds-modal--lg .ds-modal__dialog {
+  max-width: 720px;
+}
+
+/* Elements
+   ========================================================================== */
+
+.ds-modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--ds-space-gap-lg);
+}
+
+.ds-modal__body {
+  /* Content container */
+}
+
+.ds-modal__footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--ds-space-gap-sm);
+  margin-top: var(--ds-space-gap-lg);
+}

@@ -1,0 +1,154 @@
+/* ==========================================================================
+   Toggle – .ds-toggle
+   ========================================================================== */
+
+/* Base
+   ========================================================================== */
+
+.ds-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--ds-space-gap-sm);
+  cursor: pointer;
+}
+
+/* Track
+   ========================================================================== */
+
+.ds-toggle__track {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  background-color: var(--ds-background-muted);
+  transition: background-color 200ms ease;
+  flex-shrink: 0;
+}
+
+/* Focus */
+.ds-toggle__track:focus-visible,
+.ds-toggle:has(input:focus-visible) .ds-toggle__track {
+  outline: 2px solid var(--ds-border-focus);
+  outline-offset: 2px;
+}
+
+/* Thumb (pseudo-element)
+   ========================================================================== */
+
+.ds-toggle__track::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: transform 200ms ease;
+  left: 2px;
+}
+
+/* Sizes
+   ========================================================================== */
+
+/* Default / md */
+.ds-toggle__track,
+.ds-toggle--md .ds-toggle__track {
+  width: 40px;
+  height: 22px;
+}
+
+.ds-toggle__track::after,
+.ds-toggle--md .ds-toggle__track::after {
+  width: 18px;
+  height: 18px;
+  transform: translateX(0);
+}
+
+.ds-toggle__label,
+.ds-toggle--md .ds-toggle__label {
+  font-size: var(--ds-font-size-base);
+}
+
+/* sm */
+.ds-toggle--sm .ds-toggle__track {
+  width: 32px;
+  height: 18px;
+}
+
+.ds-toggle--sm .ds-toggle__track::after {
+  width: 14px;
+  height: 14px;
+  transform: translateX(0);
+}
+
+.ds-toggle--sm .ds-toggle__label {
+  font-size: var(--ds-font-size-sm);
+}
+
+/* lg */
+.ds-toggle--lg .ds-toggle__track {
+  width: 48px;
+  height: 26px;
+}
+
+.ds-toggle--lg .ds-toggle__track::after {
+  width: 22px;
+  height: 22px;
+  transform: translateX(0);
+}
+
+.ds-toggle--lg .ds-toggle__label {
+  font-size: var(--ds-font-size-md);
+}
+
+/* States
+   ========================================================================== */
+
+/* On */
+.ds-toggle--on .ds-toggle__track,
+.ds-toggle:has(input:checked) .ds-toggle__track {
+  background-color: var(--ds-color-primary);
+}
+
+/* Thumb slides right when on */
+.ds-toggle--on .ds-toggle__track::after,
+.ds-toggle:has(input:checked) .ds-toggle__track::after {
+  transform: translateX(18px);
+}
+
+.ds-toggle--on.ds-toggle--sm .ds-toggle__track::after,
+.ds-toggle--sm:has(input:checked) .ds-toggle__track::after {
+  transform: translateX(14px);
+}
+
+.ds-toggle--on.ds-toggle--lg .ds-toggle__track::after,
+.ds-toggle--lg:has(input:checked) .ds-toggle__track::after {
+  transform: translateX(22px);
+}
+
+/* Disabled */
+.ds-toggle--disabled,
+.ds-toggle:has(input:disabled) {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Label
+   ========================================================================== */
+
+.ds-toggle__label {
+  user-select: none;
+  color: var(--ds-text-default);
+}
+
+/* Hidden native input
+   ========================================================================== */
+
+.ds-toggle__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

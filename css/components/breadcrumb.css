@@ -1,0 +1,38 @@
+/* ==========================================================================
+   Breadcrumb
+   ========================================================================== */
+
+.ds-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-gap-xs);
+  font-size: var(--ds-font-size-sm);
+}
+
+/* Item
+   ========================================================================== */
+
+.ds-breadcrumb__item {
+  color: var(--ds-text-link);
+  text-decoration: none;
+}
+
+.ds-breadcrumb__item:hover {
+  text-decoration: underline;
+}
+
+/* Current (last item)
+   ========================================================================== */
+
+.ds-breadcrumb__item--current {
+  color: var(--ds-text-default);
+  font-weight: var(--ds-font-weight-medium);
+  pointer-events: none;
+}
+
+/* Separator
+   ========================================================================== */
+
+.ds-breadcrumb__separator {
+  color: var(--ds-text-tertiary);
+}

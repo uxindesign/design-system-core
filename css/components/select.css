@@ -1,0 +1,124 @@
+/* ==========================================================================
+   Select – .ds-select
+   ========================================================================== */
+
+/* Wrapper
+   ========================================================================== */
+
+.ds-select {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: var(--ds-border-width-default) solid var(--ds-border-default);
+  border-radius: var(--ds-radius-component);
+  background: var(--ds-surface-default);
+  transition: border-color 150ms ease;
+}
+
+/* Focus */
+.ds-select:focus-within,
+.ds-select--focused {
+  border-color: var(--ds-border-focus);
+  box-shadow: 0 0 0 2px var(--ds-color-primary-muted);
+}
+
+/* Field (native select)
+   ========================================================================== */
+
+.ds-select__field {
+  flex: 1;
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  background: transparent;
+  outline: none;
+  color: var(--ds-text-default);
+  font-size: inherit;
+  font-family: inherit;
+  cursor: pointer;
+  min-width: 0;
+  padding-right: 32px;
+}
+
+.ds-select__field:invalid,
+.ds-select__field option[value=""] {
+  color: var(--ds-text-tertiary);
+}
+
+/* Arrow indicator
+   ========================================================================== */
+
+.ds-select__arrow {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  width: 16px;
+  height: 16px;
+  color: var(--ds-text-tertiary);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* Icon
+   ========================================================================== */
+
+.ds-select__icon {
+  flex-shrink: 0;
+  color: var(--ds-text-tertiary);
+}
+
+/* Sizes
+   ========================================================================== */
+
+.ds-select,
+.ds-select--md {
+  height: 40px;
+  padding-inline: 12px;
+  font-size: var(--ds-font-size-base);
+}
+
+.ds-select--sm {
+  height: 32px;
+  padding-inline: 8px;
+  font-size: var(--ds-font-size-sm);
+}
+
+.ds-select--lg {
+  height: 48px;
+  padding-inline: 16px;
+  font-size: var(--ds-font-size-md);
+}
+
+/* States
+   ========================================================================== */
+
+/* Error */
+.ds-select--error {
+  border-color: var(--ds-feedback-error);
+}
+
+.ds-select--error:focus-within {
+  box-shadow: 0 0 0 2px var(--ds-feedback-error-muted, rgba(239, 68, 68, 0.2));
+}
+
+/* Disabled */
+.ds-select--disabled,
+.ds-select:has(.ds-select__field:disabled) {
+  background: var(--ds-state-disabled-background);
+  color: var(--ds-state-disabled-fg);
+  pointer-events: none;
+}
+
+.ds-select--disabled .ds-select__field,
+.ds-select__field:disabled {
+  color: var(--ds-state-disabled-fg);
+}
+
+/* Readonly */
+.ds-select--readonly {
+  background: var(--ds-background-subtle);
+}

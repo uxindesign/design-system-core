@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" data-mode="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Field — Design System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/design-system.css">
+  <style>
+    body { display: flex; min-height: 100vh; }
+    .sidebar { width: 240px; padding: 16px; border-right: 1px solid var(--ds-border-subtle); background: var(--ds-background-subtle); position: fixed; height: 100vh; overflow-y: auto; }
+    .sidebar a { display: block; padding: 6px 8px; color: var(--ds-text-secondary); text-decoration: none; font-size: 12px; border-radius: 4px; }
+    .sidebar a:hover { background: var(--ds-state-hover); color: var(--ds-text-default); }
+    .sidebar a.active { background: var(--ds-color-primary-muted); color: var(--ds-color-primary); font-weight: 500; }
+    .sidebar h3 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ds-text-tertiary); margin: 16px 0 8px; }
+    .main { flex: 1; padding: 48px; margin-left: 240px; max-width: 960px; }
+    .main h1 { margin-bottom: 16px; }
+    .main h2 { margin: 48px 0 16px; }
+    .main p { color: var(--ds-text-secondary); margin-bottom: 16px; }
+    .example { padding: 24px; border: 1px solid var(--ds-border-subtle); border-radius: 8px; margin: 12px 0 24px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+    .example--col { flex-direction: column; align-items: flex-start; }
+    .theme-toggle { position: fixed; top: 16px; right: 16px; z-index: 100; }
+  </style>
+</head>
+<body>
+  <nav class="sidebar">
+    <h2 style="margin-bottom:16px;font-size:16px;">Design System</h2>
+    <h3>Overview</h3>
+    <a href="index.html">Home</a>
+    <a href="tokens.html">Tokens</a>
+    <h3>Components</h3>
+    <a href="button.html">Button</a>
+    <a href="input.html">Input</a>
+    <a href="textarea.html">Textarea</a>
+    <a href="select.html">Select</a>
+    <a href="checkbox.html">Checkbox</a>
+    <a href="radio.html">Radio</a>
+    <a href="toggle.html">Toggle</a>
+    <a href="badge.html">Badge</a>
+    <a href="alert.html">Alert</a>
+    <a href="card.html">Card</a>
+    <a href="modal.html">Modal</a>
+    <a href="tooltip.html">Tooltip</a>
+    <a href="tabs.html">Tabs</a>
+    <a href="breadcrumb.html">Breadcrumb</a>
+    <a href="avatar.html">Avatar</a>
+    <a href="divider.html">Divider</a>
+    <a href="spinner.html">Spinner</a>
+    <a href="skeleton.html">Skeleton</a>
+    <a href="form-field.html" class="active">Form Field</a>
+  </nav>
+  <main class="main">
+    <h1>Form Field</h1>
+    <p>Combines a label, input, and helper or error text into a single vertical group. Works with any input size.</p>
+
+    <h2>Sizes</h2>
+    <p>Small, medium, and large form fields with helper text.</p>
+    <div class="example example--col" style="width:100%;gap:24px;">
+      <!-- Small -->
+      <div class="ds-field" style="width:100%;">
+        <label class="ds-field__label">Username (sm)</label>
+        <div class="ds-input ds-input--sm" style="width:100%;">
+          <input class="ds-input__field" type="text" placeholder="Enter username">
+        </div>
+        <span class="ds-field__helper">Choose a unique username.</span>
+      </div>
+      <!-- Medium -->
+      <div class="ds-field" style="width:100%;">
+        <label class="ds-field__label">Email (md)</label>
+        <div class="ds-input ds-input--md" style="width:100%;">
+          <input class="ds-input__field" type="email" placeholder="you@example.com">
+        </div>
+        <span class="ds-field__helper">We will never share your email.</span>
+      </div>
+      <!-- Large -->
+      <div class="ds-field" style="width:100%;">
+        <label class="ds-field__label">Company (lg)</label>
+        <div class="ds-input ds-input--lg" style="width:100%;">
+          <input class="ds-input__field" type="text" placeholder="Company name">
+        </div>
+        <span class="ds-field__helper">Your organization or business name.</span>
+      </div>
+    </div>
+
+    <h2>Error state</h2>
+    <p>Apply <code>.ds-field--error</code> to the field wrapper and <code>.ds-input--error</code> to the input. Replace the helper text with an error message using <code>.ds-field__error</code>.</p>
+    <div class="example example--col" style="width:100%;">
+      <div class="ds-field ds-field--error" style="width:100%;">
+        <label class="ds-field__label">Password</label>
+        <div class="ds-input ds-input--error" style="width:100%;">
+          <input class="ds-input__field" type="password" placeholder="Enter password" value="abc">
+        </div>
+        <span class="ds-field__error">Password must be at least 8 characters.</span>
+      </div>
+    </div>
+
+    <h2>Disabled state</h2>
+    <p>Apply <code>.ds-field--disabled</code> to the wrapper and the <code>disabled</code> attribute to the input.</p>
+    <div class="example example--col" style="width:100%;">
+      <div class="ds-field ds-field--disabled" style="width:100%;">
+        <label class="ds-field__label">API Key</label>
+        <div class="ds-input ds-input--disabled" style="width:100%;">
+          <input class="ds-input__field" type="text" value="sk-xxxx-xxxx-xxxx" disabled>
+        </div>
+        <span class="ds-field__helper">Contact support to change your API key.</span>
+      </div>
+    </div>
+
+    <h2>Complete form example</h2>
+    <p>Multiple fields composed together into a realistic form layout.</p>
+    <div class="example example--col" style="width:100%;max-width:480px;">
+      <form style="display:flex;flex-direction:column;gap:20px;width:100%;" onsubmit="return false;">
+        <div class="ds-field" style="width:100%;">
+          <label class="ds-field__label">Full name</label>
+          <div class="ds-input" style="width:100%;">
+            <input class="ds-input__field" type="text" placeholder="Jane Doe">
+          </div>
+        </div>
+
+        <div class="ds-field" style="width:100%;">
+          <label class="ds-field__label">Email address</label>
+          <div class="ds-input" style="width:100%;">
+            <input class="ds-input__field" type="email" placeholder="jane@example.com">
+          </div>
+          <span class="ds-field__helper">We will send a confirmation to this address.</span>
+        </div>
+
+        <div class="ds-field ds-field--error" style="width:100%;">
+          <label class="ds-field__label">Password</label>
+          <div class="ds-input ds-input--error" style="width:100%;">
+            <input class="ds-input__field" type="password" placeholder="Create a password" value="short">
+          </div>
+          <span class="ds-field__error">Must be at least 8 characters long.</span>
+        </div>
+
+        <div class="ds-field" style="width:100%;">
+          <label class="ds-field__label">Role</label>
+          <div class="ds-select" style="width:100%;">
+            <select class="ds-select__field">
+              <option value="">Select a role</option>
+              <option>Designer</option>
+              <option>Developer</option>
+              <option>Manager</option>
+            </select>
+            <span class="ds-select__arrow"></span>
+          </div>
+        </div>
+
+        <div class="ds-field" style="width:100%;">
+          <label class="ds-field__label">Bio</label>
+          <div class="ds-textarea" style="width:100%;">
+            <textarea class="ds-textarea__field" placeholder="Tell us about yourself..."></textarea>
+          </div>
+          <span class="ds-field__helper">Max 200 characters.</span>
+        </div>
+
+        <div style="display:flex;gap:8px;justify-content:flex-end;">
+          <button type="button" class="ds-btn ds-btn--outline">Cancel</button>
+          <button type="submit" class="ds-btn ds-btn--primary">Create account</button>
+        </div>
+      </form>
+    </div>
+  </main>
+  <button class="ds-btn ds-btn--outline ds-btn--sm theme-toggle" onclick="document.documentElement.dataset.mode = document.documentElement.dataset.mode === 'dark' ? 'light' : 'dark'">Toggle Dark Mode</button>
+</body>
+</html>

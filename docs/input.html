@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" data-mode="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input — Design System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/design-system.css">
+  <style>
+    body { display: flex; min-height: 100vh; }
+    .sidebar { width: 240px; padding: 16px; border-right: 1px solid var(--ds-border-subtle); background: var(--ds-background-subtle); position: fixed; height: 100vh; overflow-y: auto; }
+    .sidebar a { display: block; padding: 6px 8px; color: var(--ds-text-secondary); text-decoration: none; font-size: 12px; border-radius: 4px; }
+    .sidebar a:hover { background: var(--ds-state-hover); color: var(--ds-text-default); }
+    .sidebar a.active { background: var(--ds-color-primary-muted); color: var(--ds-color-primary); font-weight: 500; }
+    .sidebar h3 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ds-text-tertiary); margin: 16px 0 8px; }
+    .main { flex: 1; padding: 48px; margin-left: 240px; max-width: 960px; }
+    .main h1 { margin-bottom: 16px; }
+    .main h2 { margin: 48px 0 16px; }
+    .main p { color: var(--ds-text-secondary); margin-bottom: 16px; }
+    .example { padding: 24px; border: 1px solid var(--ds-border-subtle); border-radius: 8px; margin: 12px 0 24px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+    .example--col { flex-direction: column; align-items: flex-start; }
+    .theme-toggle { position: fixed; top: 16px; right: 16px; z-index: 100; }
+  </style>
+</head>
+<body>
+  <nav class="sidebar">
+    <h2 style="margin-bottom:16px;font-size:16px;">Design System</h2>
+    <h3>Overview</h3>
+    <a href="index.html">Home</a>
+    <a href="tokens.html">Tokens</a>
+    <h3>Components</h3>
+    <a href="button.html">Button</a>
+    <a href="input.html" class="active">Input</a>
+    <a href="textarea.html">Textarea</a>
+    <a href="select.html">Select</a>
+    <a href="checkbox.html">Checkbox</a>
+    <a href="radio.html">Radio</a>
+    <a href="toggle.html">Toggle</a>
+    <a href="badge.html">Badge</a>
+    <a href="alert.html">Alert</a>
+    <a href="card.html">Card</a>
+    <a href="modal.html">Modal</a>
+    <a href="tooltip.html">Tooltip</a>
+    <a href="tabs.html">Tabs</a>
+    <a href="breadcrumb.html">Breadcrumb</a>
+    <a href="avatar.html">Avatar</a>
+    <a href="divider.html">Divider</a>
+    <a href="spinner.html">Spinner</a>
+    <a href="skeleton.html">Skeleton</a>
+    <a href="form-field.html">Form Field</a>
+  </nav>
+  <main class="main">
+    <h1>Input</h1>
+    <p>Text inputs allow users to enter and edit text. Available in 3 sizes with support for icons, error, disabled, and readonly states.</p>
+
+    <h2>Sizes</h2>
+    <div class="example example--col">
+      <div class="ds-input ds-input--sm" style="width:320px;">
+        <input class="ds-input__field" type="text" placeholder="Small input">
+      </div>
+      <div class="ds-input ds-input--md" style="width:320px;">
+        <input class="ds-input__field" type="text" placeholder="Medium input (default)">
+      </div>
+      <div class="ds-input ds-input--lg" style="width:320px;">
+        <input class="ds-input__field" type="text" placeholder="Large input">
+      </div>
+    </div>
+
+    <h2>Default</h2>
+    <div class="example example--col">
+      <div class="ds-input" style="width:320px;">
+        <input class="ds-input__field" type="text" placeholder="Enter your name">
+      </div>
+    </div>
+
+    <h2>Focused</h2>
+    <div class="example example--col">
+      <div class="ds-input ds-input--focused" style="width:320px;">
+        <input class="ds-input__field" type="text" value="Focused input">
+      </div>
+    </div>
+
+    <h2>Error</h2>
+    <div class="example example--col">
+      <div class="ds-input ds-input--error" style="width:320px;">
+        <input class="ds-input__field" type="text" value="Invalid value">
+      </div>
+    </div>
+
+    <h2>Disabled</h2>
+    <div class="example example--col">
+      <div class="ds-input ds-input--disabled" style="width:320px;">
+        <input class="ds-input__field" type="text" value="Disabled input" disabled>
+      </div>
+    </div>
+
+    <h2>Readonly</h2>
+    <div class="example example--col">
+      <div class="ds-input ds-input--readonly" style="width:320px;">
+        <input class="ds-input__field" type="text" value="Readonly value" readonly>
+      </div>
+    </div>
+
+    <h2>With Icons</h2>
+    <div class="example example--col">
+      <div class="ds-input" style="width:320px;">
+        <svg class="ds-input__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input class="ds-input__field" type="text" placeholder="Search...">
+      </div>
+      <div class="ds-input" style="width:320px;">
+        <svg class="ds-input__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <input class="ds-input__field" type="email" placeholder="Email address">
+      </div>
+      <div class="ds-input ds-input--error" style="width:320px;">
+        <svg class="ds-input__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <input class="ds-input__field" type="text" value="Error with icon">
+      </div>
+    </div>
+  </main>
+  <button class="ds-btn ds-btn--outline ds-btn--sm theme-toggle" onclick="document.documentElement.dataset.mode = document.documentElement.dataset.mode === 'dark' ? 'light' : 'dark'">Toggle Dark Mode</button>
+</body>
+</html>

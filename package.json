@@ -1,0 +1,23 @@
+{
+  "name": "@uxin/design-system-core",
+  "version": "1.0.0",
+  "description": "White-label CSS design system with semantic tokens, 19 components, and light/dark mode support",
+  "main": "css/design-system.css",
+  "style": "css/design-system.css",
+  "files": [
+    "css/"
+  ],
+  "keywords": [
+    "design-system",
+    "css",
+    "tokens",
+    "white-label",
+    "dark-mode"
+  ],
+  "author": "UXIN",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uxindesignco/design-system-core.git"
+  }
+}

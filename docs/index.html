@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" data-mode="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home — Design System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/design-system.css">
+  <style>
+    body { display: flex; min-height: 100vh; }
+    .sidebar { width: 240px; padding: var(--ds-space-inset-lg); border-right: 1px solid var(--ds-border-subtle); background: var(--ds-background-subtle); position: fixed; height: 100vh; overflow-y: auto; }
+    .sidebar a { display: block; padding: 6px 8px; color: var(--ds-text-secondary); text-decoration: none; font-size: var(--ds-font-size-sm); border-radius: var(--ds-radius-sm); }
+    .sidebar a:hover { background: var(--ds-state-hover); color: var(--ds-text-default); }
+    .sidebar a.active { background: var(--ds-color-primary-muted); color: var(--ds-color-primary); font-weight: 500; }
+    .sidebar h3 { font-size: var(--ds-font-size-xs); text-transform: uppercase; letter-spacing: 0.1em; color: var(--ds-text-tertiary); margin: 16px 0 8px; }
+    .main { flex: 1; padding: var(--ds-space-section-sm); margin-left: 240px; }
+    .main h1 { margin-bottom: var(--ds-space-gap-lg); }
+    .main h2 { margin: var(--ds-space-section-sm) 0 var(--ds-space-gap-md); }
+    .swatch-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 12px; }
+    .swatch { border-radius: var(--ds-radius-md); overflow: hidden; border: 1px solid var(--ds-border-subtle); }
+    .swatch-color { height: 64px; }
+    .swatch-info { padding: 8px; font-size: 11px; }
+    .swatch-info code { font-family: var(--ds-font-family-mono); }
+    .example-box { padding: var(--ds-space-inset-lg); border: 1px solid var(--ds-border-subtle); border-radius: var(--ds-radius-md); margin: 12px 0; }
+    .theme-toggle { position: fixed; top: 16px; right: 16px; z-index: 100; }
+    .spacing-sample { display: inline-block; background: var(--ds-color-primary-muted); height: 24px; border-radius: 2px; }
+    .radius-sample { width: 64px; height: 64px; background: var(--ds-color-primary-muted); border: 2px solid var(--ds-color-primary); }
+    .type-sample { margin: 4px 0; }
+
+    .component-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 16px; }
+    .component-card { display: flex; align-items: center; justify-content: center; padding: 24px 16px; border: 1px solid var(--ds-border-subtle); border-radius: var(--ds-radius-md); text-decoration: none; color: var(--ds-text-default); font-weight: 500; font-size: var(--ds-font-size-base); transition: border-color 0.15s, box-shadow 0.15s; }
+    .component-card:hover { border-color: var(--ds-color-primary); box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+    .quickstart { background: var(--ds-background-subtle); padding: 16px 20px; border-radius: var(--ds-radius-md); font-family: var(--ds-font-family-mono); font-size: var(--ds-font-size-sm); overflow-x: auto; margin: 8px 0 16px; }
+    .intro { max-width: 640px; color: var(--ds-text-secondary); line-height: 1.6; margin-bottom: 24px; }
+  </style>
+</head>
+<body>
+  <nav class="sidebar">
+    <h2 style="margin-bottom:16px;font-size:16px;">Design System</h2>
+    <h3>Overview</h3>
+    <a href="index.html" class="active">Home</a>
+    <a href="tokens.html">Tokens</a>
+    <h3>Components</h3>
+    <a href="button.html">Button</a>
+    <a href="input.html">Input</a>
+    <a href="textarea.html">Textarea</a>
+    <a href="select.html">Select</a>
+    <a href="checkbox.html">Checkbox</a>
+    <a href="radio.html">Radio</a>
+    <a href="toggle.html">Toggle</a>
+    <a href="badge.html">Badge</a>
+    <a href="alert.html">Alert</a>
+    <a href="card.html">Card</a>
+    <a href="modal.html">Modal</a>
+    <a href="tooltip.html">Tooltip</a>
+    <a href="tabs.html">Tabs</a>
+    <a href="breadcrumb.html">Breadcrumb</a>
+    <a href="avatar.html">Avatar</a>
+    <a href="divider.html">Divider</a>
+    <a href="spinner.html">Spinner</a>
+    <a href="skeleton.html">Skeleton</a>
+    <a href="form-field.html">Form Field</a>
+  </nav>
+  <main class="main">
+    <h1>Design System Core</h1>
+    <p class="intro">
+      A white-label CSS design system built with 271 design tokens and 21 components.
+      Ships with full light and dark mode support, semantic color aliases, and a complete
+      set of typography, spacing, and radius scales. Drop it into any project with a single stylesheet.
+    </p>
+
+    <h2>Quick Start</h2>
+    <p style="color:var(--ds-text-secondary);margin-bottom:8px;">Include the stylesheet in your HTML:</p>
+    <div class="quickstart">&lt;link rel="stylesheet" href="css/design-system.css"&gt;</div>
+
+    <h2>Dark Mode</h2>
+    <p style="color:var(--ds-text-secondary);margin-bottom:8px;">Enable dark mode by setting the <code style="font-family:var(--ds-font-family-mono);background:var(--ds-background-subtle);padding:2px 6px;border-radius:4px;">data-mode</code> attribute on the root element:</p>
+    <div class="quickstart">&lt;html data-mode="dark"&gt;</div>
+    <p style="color:var(--ds-text-tertiary);font-size:var(--ds-font-size-sm);margin-top:4px;">
+      Light mode is the default. Toggle between modes by switching the attribute value between <code style="font-family:var(--ds-font-family-mono);">"light"</code> and <code style="font-family:var(--ds-font-family-mono);">"dark"</code>.
+    </p>
+
+    <h2>Components</h2>
+    <div class="component-grid">
+      <a class="component-card" href="button.html">Button</a>
+      <a class="component-card" href="input.html">Input</a>
+      <a class="component-card" href="textarea.html">Textarea</a>
+      <a class="component-card" href="select.html">Select</a>
+      <a class="component-card" href="checkbox.html">Checkbox</a>
+      <a class="component-card" href="radio.html">Radio</a>
+      <a class="component-card" href="toggle.html">Toggle</a>
+      <a class="component-card" href="badge.html">Badge</a>
+      <a class="component-card" href="alert.html">Alert</a>
+      <a class="component-card" href="card.html">Card</a>
+      <a class="component-card" href="modal.html">Modal</a>
+      <a class="component-card" href="tooltip.html">Tooltip</a>
+      <a class="component-card" href="tabs.html">Tabs</a>
+      <a class="component-card" href="breadcrumb.html">Breadcrumb</a>
+      <a class="component-card" href="avatar.html">Avatar</a>
+      <a class="component-card" href="divider.html">Divider</a>
+      <a class="component-card" href="spinner.html">Spinner</a>
+      <a class="component-card" href="skeleton.html">Skeleton</a>
+      <a class="component-card" href="form-field.html">Form Field</a>
+    </div>
+  </main>
+  <button class="ds-btn ds-btn--outline ds-btn--sm theme-toggle" onclick="document.documentElement.dataset.mode = document.documentElement.dataset.mode === 'dark' ? 'light' : 'dark'">Toggle Dark Mode</button>
+</body>
+</html>

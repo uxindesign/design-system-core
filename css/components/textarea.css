@@ -1,0 +1,91 @@
+/* ==========================================================================
+   Textarea – .ds-textarea
+   ========================================================================== */
+
+/* Wrapper
+   ========================================================================== */
+
+.ds-textarea {
+  display: flex;
+  border: var(--ds-border-width-default) solid var(--ds-border-default);
+  border-radius: var(--ds-radius-component);
+  background: var(--ds-surface-default);
+  transition: border-color 150ms ease;
+}
+
+/* Focus */
+.ds-textarea:focus-within,
+.ds-textarea--focused {
+  border-color: var(--ds-border-focus);
+  box-shadow: 0 0 0 2px var(--ds-color-primary-muted);
+}
+
+/* Field
+   ========================================================================== */
+
+.ds-textarea__field {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  color: var(--ds-text-default);
+  font-size: inherit;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 80px;
+  min-width: 0;
+}
+
+.ds-textarea__field::placeholder {
+  color: var(--ds-text-tertiary);
+}
+
+/* Sizes
+   ========================================================================== */
+
+.ds-textarea,
+.ds-textarea--md {
+  padding: 12px;
+  font-size: var(--ds-font-size-base);
+}
+
+.ds-textarea--sm {
+  padding: 8px;
+  font-size: var(--ds-font-size-sm);
+}
+
+.ds-textarea--lg {
+  padding: 16px;
+  font-size: var(--ds-font-size-md);
+}
+
+/* States
+   ========================================================================== */
+
+/* Error */
+.ds-textarea--error {
+  border-color: var(--ds-feedback-error);
+}
+
+.ds-textarea--error:focus-within {
+  box-shadow: 0 0 0 2px var(--ds-feedback-error-muted, rgba(239, 68, 68, 0.2));
+}
+
+/* Disabled */
+.ds-textarea--disabled,
+.ds-textarea:has(.ds-textarea__field:disabled) {
+  background: var(--ds-state-disabled-background);
+  color: var(--ds-state-disabled-fg);
+  pointer-events: none;
+}
+
+.ds-textarea--disabled .ds-textarea__field,
+.ds-textarea__field:disabled {
+  color: var(--ds-state-disabled-fg);
+}
+
+/* Readonly */
+.ds-textarea--readonly,
+.ds-textarea:has(.ds-textarea__field:read-only) {
+  background: var(--ds-background-subtle);
+}

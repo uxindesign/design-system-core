@@ -1,0 +1,261 @@
+/* ==========================================================================
+   Foundation Design Tokens
+   Source: Figma Design System extraction
+   Total: 177 tokens
+   ========================================================================== */
+
+:root {
+
+  /* ========================================================================
+     Neutral Colors (13)
+     ======================================================================== */
+  --ds-neutral-0: #ffffff;
+  --ds-neutral-50: #f8fafc;
+  --ds-neutral-100: #f1f5f9;
+  --ds-neutral-200: #e2e8f0;
+  --ds-neutral-300: #cbd5e1;
+  --ds-neutral-400: #94a3b8;
+  --ds-neutral-500: #64748b;
+  --ds-neutral-600: #475569;
+  --ds-neutral-700: #334155;
+  --ds-neutral-800: #1e293b;
+  --ds-neutral-900: #0f172a;
+  --ds-neutral-950: #050c1a;
+  --ds-neutral-1000: #020617;
+
+  /* ========================================================================
+     Brand Primary (10)
+     ======================================================================== */
+  --ds-brand-primary-50: #eff6ff;
+  --ds-brand-primary-100: #dbeafe;
+  --ds-brand-primary-200: #bfdbfe;
+  --ds-brand-primary-300: #93c5fd;
+  --ds-brand-primary-400: #60a5fa;
+  --ds-brand-primary-500: #3b82f6;
+  --ds-brand-primary-600: #2563eb;
+  --ds-brand-primary-700: #1d4ed8;
+  --ds-brand-primary-800: #1e40af;
+  --ds-brand-primary-900: #1e3a8a;
+
+  /* ========================================================================
+     Brand Secondary (10)
+     ======================================================================== */
+  --ds-brand-secondary-50: #f5f3ff;
+  --ds-brand-secondary-100: #ede9fe;
+  --ds-brand-secondary-200: #ddd6fe;
+  --ds-brand-secondary-300: #c4b5fd;
+  --ds-brand-secondary-400: #a78bfa;
+  --ds-brand-secondary-500: #8b5cf6;
+  --ds-brand-secondary-600: #7c3aed;
+  --ds-brand-secondary-700: #6d28d9;
+  --ds-brand-secondary-800: #5b21b6;
+  --ds-brand-secondary-900: #4c1d95;
+
+  /* ========================================================================
+     Blue (11)
+     ======================================================================== */
+  --ds-blue-50: #eff6ff;
+  --ds-blue-100: #dbeafe;
+  --ds-blue-200: #bfdbfe;
+  --ds-blue-300: #93c5fd;
+  --ds-blue-400: #60a5fa;
+  --ds-blue-500: #3b82f6;
+  --ds-blue-600: #2563eb;
+  --ds-blue-700: #1d4ed8;
+  --ds-blue-800: #1e40af;
+  --ds-blue-900: #1e3a8a;
+  --ds-blue-950: #172554;
+
+  /* ========================================================================
+     Purple (11)
+     ======================================================================== */
+  --ds-purple-50: #faf5ff;
+  --ds-purple-100: #f3e8ff;
+  --ds-purple-200: #e9d5ff;
+  --ds-purple-300: #d8b4fe;
+  --ds-purple-400: #c084fc;
+  --ds-purple-500: #a855f7;
+  --ds-purple-600: #9333ea;
+  --ds-purple-700: #7e22ce;
+  --ds-purple-800: #6b21a8;
+  --ds-purple-900: #581c87;
+  --ds-purple-950: #3b0764;
+
+  /* ========================================================================
+     Red (11)
+     ======================================================================== */
+  --ds-red-50: #fef2f2;
+  --ds-red-100: #fee2e2;
+  --ds-red-200: #fecaca;
+  --ds-red-300: #fca5a5;
+  --ds-red-400: #f87171;
+  --ds-red-500: #ef4444;
+  --ds-red-600: #dc2626;
+  --ds-red-700: #b91c1c;
+  --ds-red-800: #991b1b;
+  --ds-red-900: #7f1d1d;
+  --ds-red-950: #450a0a;
+
+  /* ========================================================================
+     Amber (11)
+     ======================================================================== */
+  --ds-amber-50: #fffbeb;
+  --ds-amber-100: #fef3c7;
+  --ds-amber-200: #fde68a;
+  --ds-amber-300: #fcd34d;
+  --ds-amber-400: #fbbf24;
+  --ds-amber-500: #f59e0b;
+  --ds-amber-600: #d97706;
+  --ds-amber-700: #b45309;
+  --ds-amber-800: #92400e;
+  --ds-amber-900: #78350f;
+  --ds-amber-950: #451a03;
+
+  /* ========================================================================
+     Green (11)
+     ======================================================================== */
+  --ds-green-50: #f0fdf4;
+  --ds-green-100: #dcfce7;
+  --ds-green-200: #bbf7d0;
+  --ds-green-300: #86efac;
+  --ds-green-400: #4ade80;
+  --ds-green-500: #22c55e;
+  --ds-green-600: #16a34a;
+  --ds-green-700: #15803d;
+  --ds-green-800: #166534;
+  --ds-green-900: #14532d;
+  --ds-green-950: #052e16;
+
+  /* ========================================================================
+     Sky (11)
+     ======================================================================== */
+  --ds-sky-50: #f0f9ff;
+  --ds-sky-100: #e0f2fe;
+  --ds-sky-200: #bae6fd;
+  --ds-sky-300: #7dd3fc;
+  --ds-sky-400: #38bdf8;
+  --ds-sky-500: #0ea5e9;
+  --ds-sky-600: #0284c7;
+  --ds-sky-700: #0369a1;
+  --ds-sky-800: #075985;
+  --ds-sky-900: #0c4a6e;
+  --ds-sky-950: #082f49;
+
+  /* ========================================================================
+     Overlays (9)
+     ======================================================================== */
+  --ds-overlay-black-5: rgba(0, 0, 0, 0.05);
+  --ds-overlay-black-10: rgba(0, 0, 0, 0.1);
+  --ds-overlay-black-20: rgba(0, 0, 0, 0.2);
+  --ds-overlay-black-40: rgba(0, 0, 0, 0.4);
+  --ds-overlay-black-60: rgba(0, 0, 0, 0.6);
+  --ds-overlay-white-5: rgba(255, 255, 255, 0.05);
+  --ds-overlay-white-10: rgba(255, 255, 255, 0.1);
+  --ds-overlay-white-20: rgba(255, 255, 255, 0.2);
+  --ds-overlay-white-40: rgba(255, 255, 255, 0.4);
+
+  /* ========================================================================
+     Font Family (3)
+     ======================================================================== */
+  --ds-font-family-sans: 'Inter', system-ui, sans-serif;
+  --ds-font-family-mono: 'DM Mono', monospace;
+  --ds-font-family-display: 'Inter', system-ui, sans-serif;
+
+  /* ========================================================================
+     Font Weight (4)
+     ======================================================================== */
+  --ds-font-weight-regular: 400;
+  --ds-font-weight-medium: 500;
+  --ds-font-weight-semibold: 600;
+  --ds-font-weight-bold: 700;
+
+  /* ========================================================================
+     Font Size (14)
+     ======================================================================== */
+  --ds-font-size-xs: 0.6875rem;
+  --ds-font-size-sm: 0.75rem;
+  --ds-font-size-base: 0.875rem;
+  --ds-font-size-md: 1rem;
+  --ds-font-size-lg: 1.125rem;
+  --ds-font-size-xl: 1.25rem;
+  --ds-font-size-2xl: 1.5rem;
+  --ds-font-size-3xl: 1.75rem;
+  --ds-font-size-4xl: 2rem;
+  --ds-font-size-5xl: 2.5rem;
+  --ds-font-size-6xl: 3rem;
+  --ds-font-size-7xl: 3.5rem;
+  --ds-font-size-8xl: 4rem;
+  --ds-font-size-9xl: 4.5rem;
+
+  /* ========================================================================
+     Line Height (4)
+     ======================================================================== */
+  --ds-font-line-height-tight: 1.2;
+  --ds-font-line-height-snug: 1.35;
+  --ds-font-line-height-normal: 1.5;
+  --ds-font-line-height-relaxed: 1.6;
+
+  /* ========================================================================
+     Letter Spacing (4)
+     ======================================================================== */
+  --ds-font-letter-spacing-tight: -0.025em;
+  --ds-font-letter-spacing-normal: 0em;
+  --ds-font-letter-spacing-wide: 0.025em;
+  --ds-font-letter-spacing-wider: 0.1em;
+
+  /* ========================================================================
+     Spacing (20)
+     ======================================================================== */
+  --ds-spacing-0: 0;
+  --ds-spacing-2: 0.125rem;
+  --ds-spacing-4: 0.25rem;
+  --ds-spacing-6: 0.375rem;
+  --ds-spacing-8: 0.5rem;
+  --ds-spacing-10: 0.625rem;
+  --ds-spacing-12: 0.75rem;
+  --ds-spacing-14: 0.875rem;
+  --ds-spacing-16: 1rem;
+  --ds-spacing-20: 1.25rem;
+  --ds-spacing-24: 1.5rem;
+  --ds-spacing-28: 1.75rem;
+  --ds-spacing-32: 2rem;
+  --ds-spacing-40: 2.5rem;
+  --ds-spacing-48: 3rem;
+  --ds-spacing-56: 3.5rem;
+  --ds-spacing-64: 4rem;
+  --ds-spacing-80: 5rem;
+  --ds-spacing-96: 6rem;
+  --ds-spacing-128: 8rem;
+
+  /* ========================================================================
+     Radius (9)
+     ======================================================================== */
+  --ds-radius-0: 0;
+  --ds-radius-2: 0.125rem;
+  --ds-radius-4: 0.25rem;
+  --ds-radius-6: 0.375rem;
+  --ds-radius-8: 0.5rem;
+  --ds-radius-12: 0.75rem;
+  --ds-radius-16: 1rem;
+  --ds-radius-24: 1.5rem;
+  --ds-radius-full: 9999px;
+
+  /* ========================================================================
+     Stroke (4)
+     ======================================================================== */
+  --ds-stroke-0: 0;
+  --ds-stroke-1: 1px;
+  --ds-stroke-2: 2px;
+  --ds-stroke-4: 4px;
+
+  /* ========================================================================
+     Opacity (7)
+     ======================================================================== */
+  --ds-opacity-0: 0;
+  --ds-opacity-5: 0.05;
+  --ds-opacity-10: 0.1;
+  --ds-opacity-25: 0.25;
+  --ds-opacity-50: 0.5;
+  --ds-opacity-75: 0.75;
+  --ds-opacity-100: 1;
+}

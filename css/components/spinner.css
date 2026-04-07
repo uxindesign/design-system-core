@@ -1,0 +1,37 @@
+/* ==========================================================================
+   Spinner Component
+   Animated loading spinner with size variants.
+   ========================================================================== */
+
+@keyframes ds-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.ds-spinner {
+  display: inline-block;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: currentColor;
+  animation: ds-spin 0.6s linear infinite;
+}
+
+/* --------------------------------------------------------------------------
+   Size Variants
+   -------------------------------------------------------------------------- */
+
+.ds-spinner--sm {
+  width: 16px;
+  height: 16px;
+}
+
+.ds-spinner--md {
+  width: 24px;
+  height: 24px;
+}
+
+.ds-spinner--lg {
+  width: 32px;
+  height: 32px;
+}

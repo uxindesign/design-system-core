@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" data-mode="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alert — Design System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/design-system.css">
+  <style>
+    body { display: flex; min-height: 100vh; }
+    .sidebar { width: 240px; padding: 16px; border-right: 1px solid var(--ds-border-subtle); background: var(--ds-background-subtle); position: fixed; height: 100vh; overflow-y: auto; }
+    .sidebar a { display: block; padding: 6px 8px; color: var(--ds-text-secondary); text-decoration: none; font-size: 12px; border-radius: 4px; }
+    .sidebar a:hover { background: var(--ds-state-hover); color: var(--ds-text-default); }
+    .sidebar a.active { background: var(--ds-color-primary-muted); color: var(--ds-color-primary); font-weight: 500; }
+    .sidebar h3 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ds-text-tertiary); margin: 16px 0 8px; }
+    .main { flex: 1; padding: 48px; margin-left: 240px; max-width: 960px; }
+    .main h1 { margin-bottom: 16px; }
+    .main h2 { margin: 48px 0 16px; }
+    .main p { color: var(--ds-text-secondary); margin-bottom: 16px; }
+    .example { padding: 24px; border: 1px solid var(--ds-border-subtle); border-radius: 8px; margin: 12px 0 24px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+    .example--col { flex-direction: column; align-items: flex-start; }
+    .theme-toggle { position: fixed; top: 16px; right: 16px; z-index: 100; }
+  </style>
+</head>
+<body>
+  <nav class="sidebar">
+    <h2 style="margin-bottom:16px;font-size:16px;">Design System</h2>
+    <h3>Overview</h3>
+    <a href="index.html">Home</a>
+    <a href="tokens.html">Tokens</a>
+    <h3>Components</h3>
+    <a href="button.html">Button</a>
+    <a href="input.html">Input</a>
+    <a href="textarea.html">Textarea</a>
+    <a href="select.html">Select</a>
+    <a href="checkbox.html">Checkbox</a>
+    <a href="radio.html">Radio</a>
+    <a href="toggle.html">Toggle</a>
+    <a href="badge.html">Badge</a>
+    <a href="alert.html" class="active">Alert</a>
+    <a href="card.html">Card</a>
+    <a href="modal.html">Modal</a>
+    <a href="tooltip.html">Tooltip</a>
+    <a href="tabs.html">Tabs</a>
+    <a href="breadcrumb.html">Breadcrumb</a>
+    <a href="avatar.html">Avatar</a>
+    <a href="divider.html">Divider</a>
+    <a href="spinner.html">Spinner</a>
+    <a href="skeleton.html">Skeleton</a>
+    <a href="form-field.html">Form Field</a>
+  </nav>
+  <main class="main">
+    <h1>Alert</h1>
+    <p>Alerts communicate important messages to users. Available in 4 types (success, warning, error, info) with default and subtle backgrounds.</p>
+
+    <h2>Default</h2>
+    <div class="example example--col" style="width:100%;">
+      <div class="ds-alert ds-alert--success" style="width:100%;">
+        <svg class="ds-alert__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <div>
+          <div class="ds-alert__title">Success</div>
+          <div class="ds-alert__description">Your changes have been saved successfully.</div>
+        </div>
+      </div>
+      <div class="ds-alert ds-alert--warning" style="width:100%;">
+        <svg class="ds-alert__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <div>
+          <div class="ds-alert__title">Warning</div>
+          <div class="ds-alert__description">Your session will expire in 5 minutes. Please save your work.</div>
+        </div>
+      </div>
+      <div class="ds-alert ds-alert--error" style="width:100%;">
+        <svg class="ds-alert__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+        <div>
+          <div class="ds-alert__title">Error</div>
+          <div class="ds-alert__description">Failed to process your request. Please try again later.</div>
+        </div>
+      </div>
+      <div class="ds-alert ds-alert--info" style="width:100%;">
+        <svg class="ds-alert__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        <div>
+          <div class="ds-alert__title">Info</div>
+          <div class="ds-alert__description">A new version of the application is available.</div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Subtle</h2>
+    <div class="example example--col" style="width:100%;">
+      <div class="ds-alert ds-alert--success ds-alert--subtle" style="width:100%;">
+        <svg class="ds-alert__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <div>
+          <div class="ds-alert__title">Success (subtle)</div>
+          <div class="ds-alert__description">Your profile has been updated.</div>
+        </div>
+      </div>
+      <div class="ds-alert ds-alert--warning ds-alert--subtle" style="width:100%;">
+        <svg class="ds-alert__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <div>
+          <div class="ds-alert__title">Warning (subtle)</div>
+          <div class="ds-alert__description">Storage is almost full. Consider upgrading your plan.</div>
+        </div>
+      </div>
+      <div class="ds-alert ds-alert--error ds-alert--subtle" style="width:100%;">
+        <svg class="ds-alert__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+        <div>
+          <div class="ds-alert__title">Error (subtle)</div>
+          <div class="ds-alert__description">Unable to connect to the server.</div>
+        </div>
+      </div>
+      <div class="ds-alert ds-alert--info ds-alert--subtle" style="width:100%;">
+        <svg class="ds-alert__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        <div>
+          <div class="ds-alert__title">Info (subtle)</div>
+          <div class="ds-alert__description">Maintenance is scheduled for this weekend.</div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <button class="ds-btn ds-btn--outline ds-btn--sm theme-toggle" onclick="document.documentElement.dataset.mode = document.documentElement.dataset.mode === 'dark' ? 'light' : 'dark'">Toggle Dark Mode</button>
+</body>
+</html>

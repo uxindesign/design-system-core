@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" data-mode="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radio — Design System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/design-system.css">
+  <style>
+    body { display: flex; min-height: 100vh; }
+    .sidebar { width: 240px; padding: 16px; border-right: 1px solid var(--ds-border-subtle); background: var(--ds-background-subtle); position: fixed; height: 100vh; overflow-y: auto; }
+    .sidebar a { display: block; padding: 6px 8px; color: var(--ds-text-secondary); text-decoration: none; font-size: 12px; border-radius: 4px; }
+    .sidebar a:hover { background: var(--ds-state-hover); color: var(--ds-text-default); }
+    .sidebar a.active { background: var(--ds-color-primary-muted); color: var(--ds-color-primary); font-weight: 500; }
+    .sidebar h3 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ds-text-tertiary); margin: 16px 0 8px; }
+    .main { flex: 1; padding: 48px; margin-left: 240px; max-width: 960px; }
+    .main h1 { margin-bottom: 16px; }
+    .main h2 { margin: 48px 0 16px; }
+    .main p { color: var(--ds-text-secondary); margin-bottom: 16px; }
+    .example { padding: 24px; border: 1px solid var(--ds-border-subtle); border-radius: 8px; margin: 12px 0 24px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+    .example--col { flex-direction: column; align-items: flex-start; }
+    .theme-toggle { position: fixed; top: 16px; right: 16px; z-index: 100; }
+  </style>
+</head>
+<body>
+  <nav class="sidebar">
+    <h2 style="margin-bottom:16px;font-size:16px;">Design System</h2>
+    <h3>Overview</h3>
+    <a href="index.html">Home</a>
+    <a href="tokens.html">Tokens</a>
+    <h3>Components</h3>
+    <a href="button.html">Button</a>
+    <a href="input.html">Input</a>
+    <a href="textarea.html">Textarea</a>
+    <a href="select.html">Select</a>
+    <a href="checkbox.html">Checkbox</a>
+    <a href="radio.html" class="active">Radio</a>
+    <a href="toggle.html">Toggle</a>
+    <a href="badge.html">Badge</a>
+    <a href="alert.html">Alert</a>
+    <a href="card.html">Card</a>
+    <a href="modal.html">Modal</a>
+    <a href="tooltip.html">Tooltip</a>
+    <a href="tabs.html">Tabs</a>
+    <a href="breadcrumb.html">Breadcrumb</a>
+    <a href="avatar.html">Avatar</a>
+    <a href="divider.html">Divider</a>
+    <a href="spinner.html">Spinner</a>
+    <a href="skeleton.html">Skeleton</a>
+    <a href="form-field.html">Form Field</a>
+  </nav>
+  <main class="main">
+    <h1>Radio</h1>
+    <p>Radio buttons let users select a single option from a group. Available in 3 sizes with selected and disabled states.</p>
+
+    <h2>Sizes</h2>
+    <div class="example">
+      <label class="ds-radio ds-radio--sm">
+        <input class="ds-radio__input" type="radio" name="size-demo" value="sm">
+        <span class="ds-radio__control"></span>
+        <span class="ds-radio__label">Small</span>
+      </label>
+      <label class="ds-radio ds-radio--md">
+        <input class="ds-radio__input" type="radio" name="size-demo" value="md">
+        <span class="ds-radio__control"></span>
+        <span class="ds-radio__label">Medium</span>
+      </label>
+      <label class="ds-radio ds-radio--lg">
+        <input class="ds-radio__input" type="radio" name="size-demo" value="lg">
+        <span class="ds-radio__control"></span>
+        <span class="ds-radio__label">Large</span>
+      </label>
+    </div>
+
+    <h2>Default (Unselected)</h2>
+    <div class="example example--col">
+      <label class="ds-radio">
+        <input class="ds-radio__input" type="radio" name="default-demo" value="a">
+        <span class="ds-radio__control"></span>
+        <span class="ds-radio__label">Option A</span>
+      </label>
+      <label class="ds-radio">
+        <input class="ds-radio__input" type="radio" name="default-demo" value="b">
+        <span class="ds-radio__control"></span>
+        <span class="ds-radio__label">Option B</span>
+      </label>
+      <label class="ds-radio">
+        <input class="ds-radio__input" type="radio" name="default-demo" value="c">
+        <span class="ds-radio__control"></span>
+        <span class="ds-radio__label">Option C</span>
+      </label>
+    </div>
+
+    <h2>Selected</h2>
+    <div class="example">
+      <label class="ds-radio ds-radio--sm ds-radio--selected">
+        <input class="ds-radio__input" type="radio" name="selected-sm" checked>
+        <span class="ds-radio__control"></span>
+        <span class="ds-radio__label">Small selected</span>
+      </label>
+      <label class="ds-radio ds-radio--md ds-radio--selected">
+        <input class="ds-radio__input" type="radio" name="selected-md" checked>
+        <span class="ds-radio__control"></span>
+        <span class="ds-radio__label">Medium selected</span>
+      </label>
+      <label class="ds-radio ds-radio--lg ds-radio--selected">
+        <input class="ds-radio__input" type="radio" name="selected-lg" checked>
+        <span class="ds-radio__control"></span>
+        <span class="ds-radio__label">Large selected</span>
+      </label>
+    </div>
+
+    <h2>Disabled</h2>
+    <div class="example">
+      <label class="ds-radio ds-radio--disabled">
+        <input class="ds-radio__input" type="radio" name="disabled-demo" disabled>
+        <span class="ds-radio__control"></span>
+        <span class="ds-radio__label">Disabled unselected</span>
+      </label>
+      <label class="ds-radio ds-radio--selected ds-radio--disabled">
+        <input class="ds-radio__input" type="radio" name="disabled-selected" checked disabled>
+        <span class="ds-radio__control"></span>
+        <span class="ds-radio__label">Disabled selected</span>
+      </label>
+    </div>
+  </main>
+  <button class="ds-btn ds-btn--outline ds-btn--sm theme-toggle" onclick="document.documentElement.dataset.mode = document.documentElement.dataset.mode === 'dark' ? 'light' : 'dark'">Toggle Dark Mode</button>
+</body>
+</html>

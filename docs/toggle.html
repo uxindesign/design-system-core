@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" data-mode="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toggle — Design System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/design-system.css">
+  <style>
+    body { display: flex; min-height: 100vh; }
+    .sidebar { width: 240px; padding: 16px; border-right: 1px solid var(--ds-border-subtle); background: var(--ds-background-subtle); position: fixed; height: 100vh; overflow-y: auto; }
+    .sidebar a { display: block; padding: 6px 8px; color: var(--ds-text-secondary); text-decoration: none; font-size: 12px; border-radius: 4px; }
+    .sidebar a:hover { background: var(--ds-state-hover); color: var(--ds-text-default); }
+    .sidebar a.active { background: var(--ds-color-primary-muted); color: var(--ds-color-primary); font-weight: 500; }
+    .sidebar h3 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ds-text-tertiary); margin: 16px 0 8px; }
+    .main { flex: 1; padding: 48px; margin-left: 240px; max-width: 960px; }
+    .main h1 { margin-bottom: 16px; }
+    .main h2 { margin: 48px 0 16px; }
+    .main p { color: var(--ds-text-secondary); margin-bottom: 16px; }
+    .example { padding: 24px; border: 1px solid var(--ds-border-subtle); border-radius: 8px; margin: 12px 0 24px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+    .example--col { flex-direction: column; align-items: flex-start; }
+    .theme-toggle { position: fixed; top: 16px; right: 16px; z-index: 100; }
+  </style>
+</head>
+<body>
+  <nav class="sidebar">
+    <h2 style="margin-bottom:16px;font-size:16px;">Design System</h2>
+    <h3>Overview</h3>
+    <a href="index.html">Home</a>
+    <a href="tokens.html">Tokens</a>
+    <h3>Components</h3>
+    <a href="button.html">Button</a>
+    <a href="input.html">Input</a>
+    <a href="textarea.html">Textarea</a>
+    <a href="select.html">Select</a>
+    <a href="checkbox.html">Checkbox</a>
+    <a href="radio.html">Radio</a>
+    <a href="toggle.html" class="active">Toggle</a>
+    <a href="badge.html">Badge</a>
+    <a href="alert.html">Alert</a>
+    <a href="card.html">Card</a>
+    <a href="modal.html">Modal</a>
+    <a href="tooltip.html">Tooltip</a>
+    <a href="tabs.html">Tabs</a>
+    <a href="breadcrumb.html">Breadcrumb</a>
+    <a href="avatar.html">Avatar</a>
+    <a href="divider.html">Divider</a>
+    <a href="spinner.html">Spinner</a>
+    <a href="skeleton.html">Skeleton</a>
+    <a href="form-field.html">Form Field</a>
+  </nav>
+  <main class="main">
+    <h1>Toggle</h1>
+    <p>Toggles switch between two states (on/off). Available in 3 sizes with on and disabled states.</p>
+
+    <h2>Sizes</h2>
+    <div class="example">
+      <label class="ds-toggle ds-toggle--sm">
+        <input class="ds-toggle__input" type="checkbox">
+        <span class="ds-toggle__track"></span>
+        <span class="ds-toggle__label">Small</span>
+      </label>
+      <label class="ds-toggle ds-toggle--md">
+        <input class="ds-toggle__input" type="checkbox">
+        <span class="ds-toggle__track"></span>
+        <span class="ds-toggle__label">Medium</span>
+      </label>
+      <label class="ds-toggle ds-toggle--lg">
+        <input class="ds-toggle__input" type="checkbox">
+        <span class="ds-toggle__track"></span>
+        <span class="ds-toggle__label">Large</span>
+      </label>
+    </div>
+
+    <h2>Default (Off)</h2>
+    <div class="example">
+      <label class="ds-toggle">
+        <input class="ds-toggle__input" type="checkbox">
+        <span class="ds-toggle__track"></span>
+        <span class="ds-toggle__label">Notifications</span>
+      </label>
+    </div>
+
+    <h2>On</h2>
+    <div class="example">
+      <label class="ds-toggle ds-toggle--sm ds-toggle--on">
+        <input class="ds-toggle__input" type="checkbox" checked>
+        <span class="ds-toggle__track"></span>
+        <span class="ds-toggle__label">Small on</span>
+      </label>
+      <label class="ds-toggle ds-toggle--md ds-toggle--on">
+        <input class="ds-toggle__input" type="checkbox" checked>
+        <span class="ds-toggle__track"></span>
+        <span class="ds-toggle__label">Medium on</span>
+      </label>
+      <label class="ds-toggle ds-toggle--lg ds-toggle--on">
+        <input class="ds-toggle__input" type="checkbox" checked>
+        <span class="ds-toggle__track"></span>
+        <span class="ds-toggle__label">Large on</span>
+      </label>
+    </div>
+
+    <h2>Disabled</h2>
+    <div class="example">
+      <label class="ds-toggle ds-toggle--disabled">
+        <input class="ds-toggle__input" type="checkbox" disabled>
+        <span class="ds-toggle__track"></span>
+        <span class="ds-toggle__label">Disabled off</span>
+      </label>
+      <label class="ds-toggle ds-toggle--on ds-toggle--disabled">
+        <input class="ds-toggle__input" type="checkbox" checked disabled>
+        <span class="ds-toggle__track"></span>
+        <span class="ds-toggle__label">Disabled on</span>
+      </label>
+    </div>
+  </main>
+  <button class="ds-btn ds-btn--outline ds-btn--sm theme-toggle" onclick="document.documentElement.dataset.mode = document.documentElement.dataset.mode === 'dark' ? 'light' : 'dark'">Toggle Dark Mode</button>
+</body>
+</html>

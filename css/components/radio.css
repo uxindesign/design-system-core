@@ -1,0 +1,140 @@
+/* ==========================================================================
+   Radio – .ds-radio
+   ========================================================================== */
+
+/* Base
+   ========================================================================== */
+
+.ds-radio {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--ds-space-gap-sm);
+  cursor: pointer;
+}
+
+/* Control (the circle)
+   ========================================================================== */
+
+.ds-radio__control {
+  position: relative;
+  flex-shrink: 0;
+  border: 2px solid var(--ds-border-default);
+  border-radius: 50%;
+  transition: all 150ms ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Focus */
+.ds-radio__control:focus-visible,
+.ds-radio:has(input:focus-visible) .ds-radio__control {
+  outline: 2px solid var(--ds-border-focus);
+  outline-offset: 2px;
+}
+
+/* Inner circle */
+.ds-radio__control::after {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  background-color: var(--ds-color-primary-fg, #fff);
+  opacity: 0;
+  transition: opacity 150ms ease;
+}
+
+/* Sizes
+   ========================================================================== */
+
+/* Default / md */
+.ds-radio__control,
+.ds-radio--md .ds-radio__control {
+  width: 20px;
+  height: 20px;
+}
+
+.ds-radio__control::after,
+.ds-radio--md .ds-radio__control::after {
+  width: 8px;
+  height: 8px;
+}
+
+.ds-radio__label,
+.ds-radio--md .ds-radio__label {
+  font-size: var(--ds-font-size-base);
+}
+
+/* sm */
+.ds-radio--sm .ds-radio__control {
+  width: 16px;
+  height: 16px;
+}
+
+.ds-radio--sm .ds-radio__control::after {
+  width: 6px;
+  height: 6px;
+}
+
+.ds-radio--sm .ds-radio__label {
+  font-size: var(--ds-font-size-sm);
+}
+
+/* lg */
+.ds-radio--lg .ds-radio__control {
+  width: 24px;
+  height: 24px;
+}
+
+.ds-radio--lg .ds-radio__control::after {
+  width: 10px;
+  height: 10px;
+}
+
+.ds-radio--lg .ds-radio__label {
+  font-size: var(--ds-font-size-md);
+}
+
+/* States
+   ========================================================================== */
+
+/* Selected */
+.ds-radio--selected .ds-radio__control,
+.ds-radio:has(input:checked) .ds-radio__control {
+  border-color: var(--ds-color-primary);
+  background-color: var(--ds-color-primary);
+}
+
+.ds-radio--selected .ds-radio__control::after,
+.ds-radio:has(input:checked) .ds-radio__control::after {
+  opacity: 1;
+}
+
+/* Disabled */
+.ds-radio--disabled,
+.ds-radio:has(input:disabled) {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Label
+   ========================================================================== */
+
+.ds-radio__label {
+  user-select: none;
+  color: var(--ds-text-default);
+}
+
+/* Hidden native input
+   ========================================================================== */
+
+.ds-radio__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

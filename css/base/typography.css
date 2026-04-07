@@ -1,0 +1,211 @@
+/* ==========================================================================
+   Typography — 24 text styles from the Figma design system
+   Naming: .ds-text-{category}-{size}
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Display — font-family: display, weight: bold, line-height: tight,
+             letter-spacing: tight
+   -------------------------------------------------------------------------- */
+
+.ds-text-display-2xl {
+  font-family: var(--ds-font-family-display);
+  font-weight: var(--ds-font-weight-bold);
+  font-size: var(--ds-font-size-9xl);
+  line-height: var(--ds-font-line-height-tight);
+  letter-spacing: var(--ds-font-letter-spacing-tight);
+}
+
+.ds-text-display-xl {
+  font-family: var(--ds-font-family-display);
+  font-weight: var(--ds-font-weight-bold);
+  font-size: var(--ds-font-size-8xl);
+  line-height: var(--ds-font-line-height-tight);
+  letter-spacing: var(--ds-font-letter-spacing-tight);
+}
+
+.ds-text-display-lg {
+  font-family: var(--ds-font-family-display);
+  font-weight: var(--ds-font-weight-bold);
+  font-size: var(--ds-font-size-7xl);
+  line-height: var(--ds-font-line-height-tight);
+  letter-spacing: var(--ds-font-letter-spacing-tight);
+}
+
+.ds-text-display-md {
+  font-family: var(--ds-font-family-display);
+  font-weight: var(--ds-font-weight-bold);
+  font-size: var(--ds-font-size-6xl);
+  line-height: var(--ds-font-line-height-tight);
+  letter-spacing: var(--ds-font-letter-spacing-tight);
+}
+
+.ds-text-display-sm {
+  font-family: var(--ds-font-family-display);
+  font-weight: var(--ds-font-weight-bold);
+  font-size: var(--ds-font-size-5xl);
+  line-height: var(--ds-font-line-height-tight);
+  letter-spacing: var(--ds-font-letter-spacing-tight);
+}
+
+/* --------------------------------------------------------------------------
+   Heading — font-family: sans, weight: semibold, line-height: tight/snug
+   -------------------------------------------------------------------------- */
+
+.ds-text-heading-xl {
+  font-family: var(--ds-font-family-sans);
+  font-weight: var(--ds-font-weight-semibold);
+  font-size: var(--ds-font-size-2xl);
+  line-height: var(--ds-font-line-height-tight);
+}
+
+.ds-text-heading-lg {
+  font-family: var(--ds-font-family-sans);
+  font-weight: var(--ds-font-weight-semibold);
+  font-size: var(--ds-font-size-xl);
+  line-height: var(--ds-font-line-height-tight);
+}
+
+.ds-text-heading-md {
+  font-family: var(--ds-font-family-sans);
+  font-weight: var(--ds-font-weight-semibold);
+  font-size: var(--ds-font-size-lg);
+  line-height: var(--ds-font-line-height-snug);
+}
+
+.ds-text-heading-sm {
+  font-family: var(--ds-font-family-sans);
+  font-weight: var(--ds-font-weight-semibold);
+  font-size: var(--ds-font-size-md);
+  line-height: var(--ds-font-line-height-snug);
+}
+
+.ds-text-heading-xs {
+  font-family: var(--ds-font-family-sans);
+  font-weight: var(--ds-font-weight-semibold);
+  font-size: var(--ds-font-size-base);
+  line-height: var(--ds-font-line-height-snug);
+}
+
+/* --------------------------------------------------------------------------
+   Body — font-family: sans, weight: regular, line-height: normal/relaxed
+   -------------------------------------------------------------------------- */
+
+.ds-text-body-lg {
+  font-family: var(--ds-font-family-sans);
+  font-weight: var(--ds-font-weight-regular);
+  font-size: var(--ds-font-size-md);
+  line-height: var(--ds-font-line-height-relaxed);
+}
+
+.ds-text-body-md {
+  font-family: var(--ds-font-family-sans);
+  font-weight: var(--ds-font-weight-regular);
+  font-size: var(--ds-font-size-base);
+  line-height: var(--ds-font-line-height-normal);
+}
+
+.ds-text-body-sm {
+  font-family: var(--ds-font-family-sans);
+  font-weight: var(--ds-font-weight-regular);
+  font-size: var(--ds-font-size-sm);
+  line-height: var(--ds-font-line-height-normal);
+}
+
+.ds-text-body-xs {
+  font-family: var(--ds-font-family-sans);
+  font-weight: var(--ds-font-weight-regular);
+  font-size: var(--ds-font-size-xs);
+  line-height: var(--ds-font-line-height-normal);
+}
+
+/* --------------------------------------------------------------------------
+   Label — font-family: sans, weight: medium, line-height: normal
+   -------------------------------------------------------------------------- */
+
+.ds-text-label-lg {
+  font-family: var(--ds-font-family-sans);
+  font-weight: var(--ds-font-weight-medium);
+  font-size: var(--ds-font-size-md);
+  line-height: var(--ds-font-line-height-normal);
+}
+
+.ds-text-label-md {
+  font-family: var(--ds-font-family-sans);
+  font-weight: var(--ds-font-weight-medium);
+  font-size: var(--ds-font-size-base);
+  line-height: var(--ds-font-line-height-normal);
+}
+
+.ds-text-label-sm {
+  font-family: var(--ds-font-family-sans);
+  font-weight: var(--ds-font-weight-medium);
+  font-size: var(--ds-font-size-sm);
+  line-height: var(--ds-font-line-height-normal);
+}
+
+.ds-text-label-xs {
+  font-family: var(--ds-font-family-sans);
+  font-weight: var(--ds-font-weight-medium);
+  font-size: var(--ds-font-size-xs);
+  line-height: var(--ds-font-line-height-normal);
+}
+
+/* --------------------------------------------------------------------------
+   Caption — font-family: sans, weight: regular, line-height: normal
+   -------------------------------------------------------------------------- */
+
+.ds-text-caption-md {
+  font-family: var(--ds-font-family-sans);
+  font-weight: var(--ds-font-weight-regular);
+  font-size: var(--ds-font-size-sm);
+  line-height: var(--ds-font-line-height-normal);
+}
+
+.ds-text-caption-sm {
+  font-family: var(--ds-font-family-sans);
+  font-weight: var(--ds-font-weight-regular);
+  font-size: var(--ds-font-size-xs);
+  line-height: var(--ds-font-line-height-normal);
+}
+
+/* --------------------------------------------------------------------------
+   Overline — font-family: sans, weight: semibold, line-height: normal,
+              letter-spacing: wider, text-transform: uppercase
+   -------------------------------------------------------------------------- */
+
+.ds-text-overline-md {
+  font-family: var(--ds-font-family-sans);
+  font-weight: var(--ds-font-weight-semibold);
+  font-size: var(--ds-font-size-xs);
+  line-height: var(--ds-font-line-height-normal);
+  letter-spacing: var(--ds-font-letter-spacing-wider);
+  text-transform: uppercase;
+}
+
+.ds-text-overline-sm {
+  font-family: var(--ds-font-family-sans);
+  font-weight: var(--ds-font-weight-semibold);
+  font-size: var(--ds-font-size-xs);
+  line-height: var(--ds-font-line-height-normal);
+  letter-spacing: var(--ds-font-letter-spacing-wider);
+  text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------
+   Code — font-family: mono, weight: regular, line-height: normal
+   -------------------------------------------------------------------------- */
+
+.ds-text-code-md {
+  font-family: var(--ds-font-family-mono);
+  font-weight: var(--ds-font-weight-regular);
+  font-size: var(--ds-font-size-base);
+  line-height: var(--ds-font-line-height-normal);
+}
+
+.ds-text-code-sm {
+  font-family: var(--ds-font-family-mono);
+  font-weight: var(--ds-font-weight-regular);
+  font-size: var(--ds-font-size-sm);
+  line-height: var(--ds-font-line-height-normal);
+}

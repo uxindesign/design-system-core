@@ -1,0 +1,91 @@
+/* ==========================================================================
+   Alert
+   ========================================================================== */
+
+.ds-alert {
+  display: flex;
+  gap: var(--ds-space-gap-sm);
+  padding: var(--ds-space-inset-md);
+  border-radius: var(--ds-radius-md);
+  border-left: 4px solid;
+}
+
+/* Types
+   ========================================================================== */
+
+.ds-alert--success {
+  border-left-color: var(--ds-feedback-success);
+  background: var(--ds-feedback-success-background);
+}
+
+.ds-alert--success .ds-alert__icon {
+  color: var(--ds-feedback-success);
+}
+
+.ds-alert--warning {
+  border-left-color: var(--ds-feedback-warning);
+  background: var(--ds-feedback-warning-background);
+}
+
+.ds-alert--warning .ds-alert__icon {
+  color: var(--ds-feedback-warning);
+}
+
+.ds-alert--error {
+  border-left-color: var(--ds-feedback-error);
+  background: var(--ds-feedback-error-background);
+}
+
+.ds-alert--error .ds-alert__icon {
+  color: var(--ds-feedback-error);
+}
+
+.ds-alert--info {
+  border-left-color: var(--ds-feedback-info);
+  background: var(--ds-feedback-info-background);
+}
+
+.ds-alert--info .ds-alert__icon {
+  color: var(--ds-feedback-info);
+}
+
+/* Subtle variant
+   ========================================================================== */
+
+.ds-alert--subtle.ds-alert--success {
+  background: var(--ds-feedback-success-background-subtle);
+}
+
+.ds-alert--subtle.ds-alert--warning {
+  background: var(--ds-feedback-warning-background-subtle);
+}
+
+.ds-alert--subtle.ds-alert--error {
+  background: var(--ds-feedback-error-background-subtle);
+}
+
+.ds-alert--subtle.ds-alert--info {
+  background: var(--ds-feedback-info-background-subtle);
+}
+
+/* Elements
+   ========================================================================== */
+
+.ds-alert__icon {
+  flex-shrink: 0;
+}
+
+.ds-alert__title {
+  font-weight: var(--ds-font-weight-semibold);
+}
+
+.ds-alert__description {
+  color: var(--ds-text-secondary);
+}
+
+.ds-alert__close {
+  margin-left: auto;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}

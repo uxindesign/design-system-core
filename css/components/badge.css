@@ -1,0 +1,93 @@
+/* ==========================================================================
+   Badge Component
+   Inline badge with color variants and subtle style modifier.
+   ========================================================================== */
+
+.ds-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--ds-space-1) var(--ds-space-2);
+  border-radius: var(--ds-radius-full);
+  font-size: var(--ds-font-size-xs);
+  font-weight: var(--ds-font-weight-medium);
+  line-height: var(--ds-line-height-normal);
+  white-space: nowrap;
+}
+
+/* --------------------------------------------------------------------------
+   Color Variants — Default
+   -------------------------------------------------------------------------- */
+
+.ds-badge--primary {
+  background: var(--ds-color-primary);
+  color: var(--ds-color-primary-fg);
+}
+
+.ds-badge--secondary {
+  background: var(--ds-color-secondary);
+  color: var(--ds-color-secondary-fg);
+}
+
+.ds-badge--success {
+  background: var(--ds-feedback-success);
+  color: var(--ds-feedback-success-fg);
+}
+
+.ds-badge--warning {
+  background: var(--ds-feedback-warning);
+  color: var(--ds-feedback-warning-fg);
+}
+
+.ds-badge--error {
+  background: var(--ds-feedback-error);
+  color: var(--ds-feedback-error-fg);
+}
+
+.ds-badge--info {
+  background: var(--ds-feedback-info);
+  color: var(--ds-feedback-info-fg);
+}
+
+.ds-badge--neutral {
+  background: var(--ds-background-muted);
+  color: var(--ds-text-default);
+}
+
+/* --------------------------------------------------------------------------
+   Color Variants — Subtle
+   -------------------------------------------------------------------------- */
+
+.ds-badge--primary.ds-badge--subtle {
+  background: var(--ds-color-primary-subtle);
+  color: var(--ds-color-primary);
+}
+
+.ds-badge--secondary.ds-badge--subtle {
+  background: var(--ds-color-secondary-subtle);
+  color: var(--ds-color-secondary);
+}
+
+.ds-badge--success.ds-badge--subtle {
+  background: var(--ds-feedback-success-subtle);
+  color: var(--ds-feedback-success);
+}
+
+.ds-badge--warning.ds-badge--subtle {
+  background: var(--ds-feedback-warning-subtle);
+  color: var(--ds-feedback-warning);
+}
+
+.ds-badge--error.ds-badge--subtle {
+  background: var(--ds-feedback-error-subtle);
+  color: var(--ds-feedback-error);
+}
+
+.ds-badge--info.ds-badge--subtle {
+  background: var(--ds-feedback-info-subtle);
+  color: var(--ds-feedback-info);
+}
+
+.ds-badge--neutral.ds-badge--subtle {
+  background: var(--ds-background-subtle);
+  color: var(--ds-text-default);
+}
