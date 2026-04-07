@@ -8,7 +8,7 @@
 .ds-toggle {
   display: inline-flex;
   align-items: center;
-  gap: var(--ds-space-gap-sm);
+  gap: 8px;
   cursor: pointer;
 }
 
@@ -20,9 +20,11 @@
   display: inline-flex;
   align-items: center;
   border-radius: 9999px;
-  background-color: var(--ds-background-muted);
-  transition: background-color 200ms ease;
+  background-color: var(--ds-surface-default);
+  border: 1px solid var(--ds-border-default);
+  transition: all 200ms ease;
   flex-shrink: 0;
+  box-sizing: border-box;
 }
 
 /* Focus */
@@ -47,6 +49,22 @@
 /* Sizes
    ========================================================================== */
 
+/* sm */
+.ds-toggle--sm .ds-toggle__track {
+  width: 32px;
+  height: 18px;
+}
+
+.ds-toggle--sm .ds-toggle__track::after {
+  width: 14px;
+  height: 14px;
+  transform: translateX(0);
+}
+
+.ds-toggle--sm .ds-toggle__label {
+  font-size: 12px;
+}
+
 /* Default / md */
 .ds-toggle__track,
 .ds-toggle--md .ds-toggle__track {
@@ -63,23 +81,7 @@
 
 .ds-toggle__label,
 .ds-toggle--md .ds-toggle__label {
-  font-size: var(--ds-font-size-base);
-}
-
-/* sm */
-.ds-toggle--sm .ds-toggle__track {
-  width: 32px;
-  height: 18px;
-}
-
-.ds-toggle--sm .ds-toggle__track::after {
-  width: 14px;
-  height: 14px;
-  transform: translateX(0);
-}
-
-.ds-toggle--sm .ds-toggle__label {
-  font-size: var(--ds-font-size-sm);
+  font-size: 14px;
 }
 
 /* lg */
@@ -95,7 +97,7 @@
 }
 
 .ds-toggle--lg .ds-toggle__label {
-  font-size: var(--ds-font-size-md);
+  font-size: 16px;
 }
 
 /* States
@@ -105,6 +107,7 @@
 .ds-toggle--on .ds-toggle__track,
 .ds-toggle:has(input:checked) .ds-toggle__track {
   background-color: var(--ds-color-primary);
+  border-color: transparent;
 }
 
 /* Thumb slides right when on */
@@ -136,6 +139,8 @@
 .ds-toggle__label {
   user-select: none;
   color: var(--ds-text-default);
+  font-weight: var(--ds-font-weight-medium, 500);
+  line-height: 1.35;
 }
 
 /* Hidden native input

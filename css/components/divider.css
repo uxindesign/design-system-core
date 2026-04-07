@@ -4,14 +4,16 @@
    ========================================================================== */
 
 .ds-divider {
+  background-color: var(--ds-border-subtle);
   border: none;
-  border-top: var(--ds-border-width-subtle) solid var(--ds-border-subtle);
+  height: 1px;
+  width: 100%;
   margin: var(--ds-space-gap-md) 0;
 }
 
 .ds-divider--vertical {
-  border-top: none;
-  border-left: var(--ds-border-width-subtle) solid var(--ds-border-subtle);
-  margin: 0 var(--ds-space-gap-md);
+  height: auto;
+  width: 1px;
   align-self: stretch;
+  margin: 0 var(--ds-space-gap-md);
 }

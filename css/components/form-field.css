@@ -12,19 +12,57 @@
    ========================================================================== */
 
 .ds-field__label {
-  font-size: var(--ds-font-size-sm);
   font-weight: var(--ds-font-weight-medium);
-  color: var(--ds-text-default);
+  line-height: 1.35;
+  color: var(--ds-text-secondary);
 }
 
 .ds-field__helper {
-  font-size: var(--ds-font-size-xs);
-  color: var(--ds-text-tertiary);
+  font-weight: var(--ds-font-weight-medium);
+  line-height: 1.35;
+  color: var(--ds-text-secondary);
 }
 
 .ds-field__error {
-  font-size: var(--ds-font-size-xs);
+  font-weight: var(--ds-font-weight-medium);
+  line-height: 1.35;
   color: var(--ds-feedback-error);
+}
+
+/* Size — Small
+   ========================================================================== */
+
+.ds-field--sm .ds-field__label {
+  font-size: var(--ds-font-size-xs);
+}
+
+.ds-field--sm .ds-field__helper,
+.ds-field--sm .ds-field__error {
+  font-size: var(--ds-font-size-xs);
+}
+
+/* Size — Medium (default)
+   ========================================================================== */
+
+.ds-field--md .ds-field__label {
+  font-size: var(--ds-font-size-sm);
+}
+
+.ds-field--md .ds-field__helper,
+.ds-field--md .ds-field__error {
+  font-size: var(--ds-font-size-xs);
+}
+
+/* Size — Large
+   ========================================================================== */
+
+.ds-field--lg .ds-field__label {
+  font-size: var(--ds-font-size-base);
+}
+
+.ds-field--lg .ds-field__helper,
+.ds-field--lg .ds-field__error {
+  font-size: var(--ds-font-size-sm);
 }
 
 /* Error state
@@ -34,9 +72,24 @@
   color: var(--ds-feedback-error);
 }
 
+.ds-field--error .ds-field__error {
+  color: var(--ds-feedback-error);
+}
+
+/* Focused state
+   ========================================================================== */
+
+.ds-field--focused .ds-field__label {
+  color: var(--ds-color-primary);
+}
+
 /* Disabled state
    ========================================================================== */
 
 .ds-field--disabled .ds-field__label {
+  color: var(--ds-text-disabled);
+}
+
+.ds-field--disabled .ds-field__helper {
   color: var(--ds-text-disabled);
 }

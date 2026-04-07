@@ -7,11 +7,11 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: var(--ds-radius-full);
+  border-radius: 9999px;
   overflow: hidden;
-  background: var(--ds-background-muted);
-  color: var(--ds-text-secondary);
-  font-weight: var(--ds-font-weight-medium);
+  background: var(--ds-color-primary);
+  color: var(--ds-color-primary-fg);
+  font-weight: var(--ds-font-weight-semibold);
 }
 
 /* --------------------------------------------------------------------------
@@ -21,19 +21,19 @@
 .ds-avatar--sm {
   width: 32px;
   height: 32px;
-  font-size: var(--ds-font-size-xs);
+  font-size: 12px;
 }
 
 .ds-avatar--md {
   width: 40px;
   height: 40px;
-  font-size: var(--ds-font-size-sm);
+  font-size: 14px;
 }
 
 .ds-avatar--lg {
-  width: 48px;
-  height: 48px;
-  font-size: var(--ds-font-size-base);
+  width: 56px;
+  height: 56px;
+  font-size: 20px;
 }
 
 /* --------------------------------------------------------------------------

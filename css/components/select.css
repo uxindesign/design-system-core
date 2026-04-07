@@ -9,17 +9,33 @@
   position: relative;
   display: flex;
   align-items: center;
-  border: var(--ds-border-width-default) solid var(--ds-border-default);
+  gap: var(--ds-space-gap-xs);
+  border: 1px solid var(--ds-border-default);
   border-radius: var(--ds-radius-component);
   background: var(--ds-surface-default);
   transition: border-color 150ms ease;
 }
 
-/* Focus */
-.ds-select:focus-within,
-.ds-select--focused {
-  border-color: var(--ds-border-focus);
-  box-shadow: 0 0 0 2px var(--ds-color-primary-muted);
+/* Sizes
+   ========================================================================== */
+
+.ds-select,
+.ds-select--md {
+  height: 45px;
+  padding: 0 12px;
+  font-size: var(--ds-font-size-base);
+}
+
+.ds-select--sm {
+  height: 34px;
+  padding: 0 8px;
+  font-size: var(--ds-font-size-sm);
+}
+
+.ds-select--lg {
+  height: 56px;
+  padding: 0 16px;
+  font-size: var(--ds-font-size-md);
 }
 
 /* Field (native select)
@@ -63,6 +79,14 @@
   background-size: contain;
 }
 
+.ds-select--sm .ds-select__arrow {
+  right: 8px;
+}
+
+.ds-select--lg .ds-select__arrow {
+  right: 16px;
+}
+
 /* Icon
    ========================================================================== */
 
@@ -71,30 +95,15 @@
   color: var(--ds-text-tertiary);
 }
 
-/* Sizes
-   ========================================================================== */
-
-.ds-select,
-.ds-select--md {
-  height: 40px;
-  padding-inline: 12px;
-  font-size: var(--ds-font-size-base);
-}
-
-.ds-select--sm {
-  height: 32px;
-  padding-inline: 8px;
-  font-size: var(--ds-font-size-sm);
-}
-
-.ds-select--lg {
-  height: 48px;
-  padding-inline: 16px;
-  font-size: var(--ds-font-size-md);
-}
-
 /* States
    ========================================================================== */
+
+/* Focused */
+.ds-select:focus-within,
+.ds-select--focused {
+  border-color: var(--ds-color-primary);
+  box-shadow: 0 0 0 2px var(--ds-color-primary-muted);
+}
 
 /* Error */
 .ds-select--error {
@@ -102,6 +111,7 @@
 }
 
 .ds-select--error:focus-within {
+  border-color: var(--ds-feedback-error);
   box-shadow: 0 0 0 2px var(--ds-feedback-error-muted, rgba(239, 68, 68, 0.2));
 }
 
@@ -109,6 +119,7 @@
 .ds-select--disabled,
 .ds-select:has(.ds-select__field:disabled) {
   background: var(--ds-state-disabled-background);
+  border-color: var(--ds-border-subtle);
   color: var(--ds-state-disabled-fg);
   pointer-events: none;
 }

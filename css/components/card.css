@@ -3,34 +3,33 @@
    ========================================================================== */
 
 .ds-card {
-  background: var(--ds-surface-default);
   border-radius: var(--ds-radius-lg);
-  padding: var(--ds-space-inset-lg);
   overflow: hidden;
+  background: var(--ds-surface-default);
   border: 1px solid var(--ds-border-subtle);
 }
 
-/* Modifiers
+/* Variants
    ========================================================================== */
 
 .ds-card--outlined {
-  border: 1px solid var(--ds-border-subtle);
+  border: 1px solid var(--ds-border-default);
 }
 
 .ds-card--elevated {
+  background: var(--ds-surface-raised);
   border: none;
-  box-shadow:
-    0 1px 3px rgba(0, 0, 0, 0.1),
-    0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--ds-elevation-2);
 }
 
 /* Elements
    ========================================================================== */
 
 .ds-card__header {
-  margin-bottom: var(--ds-space-gap-md);
+  padding: var(--ds-space-inset-lg);
+  border-bottom: 1px solid var(--ds-border-subtle);
 }
 
 .ds-card__body {
-  /* Content container */
+  padding: var(--ds-space-inset-lg);
 }

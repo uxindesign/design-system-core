@@ -7,15 +7,15 @@
   gap: var(--ds-space-gap-sm);
   padding: var(--ds-space-inset-md);
   border-radius: var(--ds-radius-md);
-  border-left: 4px solid;
+  border: 1px solid;
 }
 
-/* Types
+/* Types — Default
    ========================================================================== */
 
 .ds-alert--success {
-  border-left-color: var(--ds-feedback-success);
   background: var(--ds-feedback-success-background);
+  border-color: var(--ds-feedback-success-border);
 }
 
 .ds-alert--success .ds-alert__icon {
@@ -23,8 +23,8 @@
 }
 
 .ds-alert--warning {
-  border-left-color: var(--ds-feedback-warning);
   background: var(--ds-feedback-warning-background);
+  border-color: var(--ds-feedback-warning-border);
 }
 
 .ds-alert--warning .ds-alert__icon {
@@ -32,8 +32,8 @@
 }
 
 .ds-alert--error {
-  border-left-color: var(--ds-feedback-error);
   background: var(--ds-feedback-error-background);
+  border-color: var(--ds-feedback-error-border);
 }
 
 .ds-alert--error .ds-alert__icon {
@@ -41,31 +41,35 @@
 }
 
 .ds-alert--info {
-  border-left-color: var(--ds-feedback-info);
   background: var(--ds-feedback-info-background);
+  border-color: var(--ds-feedback-info-border);
 }
 
 .ds-alert--info .ds-alert__icon {
   color: var(--ds-feedback-info);
 }
 
-/* Subtle variant
+/* Types — Subtle
    ========================================================================== */
 
 .ds-alert--subtle.ds-alert--success {
-  background: var(--ds-feedback-success-background-subtle);
+  background: var(--ds-feedback-success-subtle);
+  border-color: var(--ds-feedback-success-border);
 }
 
 .ds-alert--subtle.ds-alert--warning {
-  background: var(--ds-feedback-warning-background-subtle);
+  background: var(--ds-feedback-warning-subtle);
+  border-color: var(--ds-feedback-warning-border);
 }
 
 .ds-alert--subtle.ds-alert--error {
-  background: var(--ds-feedback-error-background-subtle);
+  background: var(--ds-feedback-error-subtle);
+  border-color: var(--ds-feedback-error-border);
 }
 
 .ds-alert--subtle.ds-alert--info {
-  background: var(--ds-feedback-info-background-subtle);
+  background: var(--ds-feedback-info-subtle);
+  border-color: var(--ds-feedback-info-border);
 }
 
 /* Elements
@@ -77,6 +81,7 @@
 
 .ds-alert__title {
   font-weight: var(--ds-font-weight-semibold);
+  color: var(--ds-text-default);
 }
 
 .ds-alert__description {
@@ -88,4 +93,5 @@
   cursor: pointer;
   background: transparent;
   border: none;
+  color: var(--ds-text-tertiary);
 }

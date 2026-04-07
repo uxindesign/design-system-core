@@ -16,7 +16,8 @@
   color: var(--ds-text-inverse);
   padding: 4px 8px;
   border-radius: var(--ds-radius-sm);
-  font-size: var(--ds-font-size-xs);
+  font-size: var(--ds-font-size-sm);
+  font-weight: 400;
   white-space: nowrap;
   pointer-events: none;
   z-index: 10;

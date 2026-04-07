@@ -8,7 +8,6 @@
 .ds-checkbox {
   display: inline-flex;
   align-items: center;
-  gap: var(--ds-space-gap-sm);
   cursor: pointer;
 }
 
@@ -18,8 +17,8 @@
 .ds-checkbox__control {
   position: relative;
   flex-shrink: 0;
-  border: 2px solid var(--ds-border-default);
-  border-radius: var(--ds-radius-sm);
+  border: 1.5px solid var(--ds-border-default);
+  background-color: var(--ds-surface-default);
   transition: all 150ms ease;
   display: flex;
   align-items: center;
@@ -44,31 +43,15 @@
 /* Sizes
    ========================================================================== */
 
-/* Default / md */
-.ds-checkbox__control,
-.ds-checkbox--md .ds-checkbox__control {
-  width: 20px;
-  height: 20px;
-}
-
-.ds-checkbox--md .ds-checkbox__control::after,
-.ds-checkbox__control::after {
-  width: 10px;
-  height: 6px;
-  border-left: 2px solid var(--ds-color-primary-fg, #fff);
-  border-bottom: 2px solid var(--ds-color-primary-fg, #fff);
-  transform: rotate(-45deg) translateY(-1px);
-}
-
-.ds-checkbox__label,
-.ds-checkbox--md .ds-checkbox__label {
-  font-size: var(--ds-font-size-base);
-}
-
 /* sm */
 .ds-checkbox--sm .ds-checkbox__control {
   width: 16px;
   height: 16px;
+  border-radius: 4px;
+}
+
+.ds-checkbox--sm {
+  gap: 8px;
 }
 
 .ds-checkbox--sm .ds-checkbox__control::after {
@@ -80,13 +63,45 @@
 }
 
 .ds-checkbox--sm .ds-checkbox__label {
-  font-size: var(--ds-font-size-sm);
+  font-size: 12px;
+}
+
+/* Default / md */
+.ds-checkbox__control,
+.ds-checkbox--md .ds-checkbox__control {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+}
+
+.ds-checkbox,
+.ds-checkbox--md {
+  gap: 8px;
+}
+
+.ds-checkbox__control::after,
+.ds-checkbox--md .ds-checkbox__control::after {
+  width: 10px;
+  height: 6px;
+  border-left: 2px solid var(--ds-color-primary-fg, #fff);
+  border-bottom: 2px solid var(--ds-color-primary-fg, #fff);
+  transform: rotate(-45deg) translateY(-1px);
+}
+
+.ds-checkbox__label,
+.ds-checkbox--md .ds-checkbox__label {
+  font-size: 14px;
 }
 
 /* lg */
 .ds-checkbox--lg .ds-checkbox__control {
   width: 24px;
   height: 24px;
+  border-radius: 6px;
+}
+
+.ds-checkbox--lg {
+  gap: 10px;
 }
 
 .ds-checkbox--lg .ds-checkbox__control::after {
@@ -98,7 +113,7 @@
 }
 
 .ds-checkbox--lg .ds-checkbox__label {
-  font-size: var(--ds-font-size-md);
+  font-size: 16px;
 }
 
 /* States
@@ -146,6 +161,8 @@
 .ds-checkbox__label {
   user-select: none;
   color: var(--ds-text-default);
+  font-weight: var(--ds-font-weight-medium, 500);
+  line-height: 1.35;
 }
 
 /* Hidden native input
