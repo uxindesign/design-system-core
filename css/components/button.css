@@ -118,6 +118,10 @@
   background-color: var(--ds-feedback-error-hover);
 }
 
+.ds-btn--danger:active {
+  background-color: var(--ds-feedback-error-active);
+}
+
 /* Disabled
    ========================================================================== */
 
