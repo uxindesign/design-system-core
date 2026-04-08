@@ -180,6 +180,21 @@
 
 .ds-btn__icon {
   flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+}
+
+.ds-btn--sm .ds-btn__icon {
+  width: 16px;
+  height: 16px;
+  font-size: 16px;
+}
+
+.ds-btn--lg .ds-btn__icon {
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
 }
 
 .ds-btn__label {

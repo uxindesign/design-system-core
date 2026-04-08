@@ -61,6 +61,21 @@
 .ds-input__icon {
   flex-shrink: 0;
   color: var(--ds-text-tertiary);
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+}
+
+.ds-input--sm .ds-input__icon {
+  width: 16px;
+  height: 16px;
+  font-size: 16px;
+}
+
+.ds-input--lg .ds-input__icon {
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
 }
 
 /* States
