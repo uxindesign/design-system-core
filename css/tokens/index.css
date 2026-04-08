@@ -1,3 +1,5 @@
 @import 'foundation.css';
 @import 'theme-light.css';
 @import 'theme-dark.css';
+@import 'themes/theme-ocean.css';
+@import 'themes/theme-forest.css';

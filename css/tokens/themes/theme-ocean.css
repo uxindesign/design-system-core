@@ -1,0 +1,55 @@
+/* ============================================================
+   THEME: Ocean
+   ============================================================
+   Primary:   Cyan (#0891B2)
+   Secondary: Indigo (#4F46E5)
+   ============================================================ */
+
+[data-theme="ocean"] {
+  /* Brand — Primary */
+  --ds-color-primary:        var(--ds-color-cyan-600);
+  --ds-color-primary-hover:  var(--ds-color-cyan-700);
+  --ds-color-primary-active: var(--ds-color-cyan-800);
+  --ds-color-primary-subtle: var(--ds-color-cyan-100);
+  --ds-color-primary-muted:  var(--ds-color-cyan-50);
+  --ds-color-primary-text:   var(--ds-color-cyan-700);
+
+  /* Brand — Secondary */
+  --ds-color-secondary:        var(--ds-color-indigo-600);
+  --ds-color-secondary-hover:  var(--ds-color-indigo-700);
+  --ds-color-secondary-active: var(--ds-color-indigo-800);
+  --ds-color-secondary-subtle: var(--ds-color-indigo-100);
+  --ds-color-secondary-muted:  var(--ds-color-indigo-50);
+  --ds-color-secondary-text:   var(--ds-color-indigo-700);
+
+  /* Text link */
+  --ds-text-link:       var(--ds-color-cyan-600);
+  --ds-text-link-hover: var(--ds-color-cyan-700);
+
+  /* Border / Focus updated to match primary */
+  --ds-border-focus: var(--ds-color-primary);
+  --ds-border-brand: var(--ds-color-primary);
+  --ds-focus-ring: 0 0 0 2px var(--ds-surface-default), 0 0 0 4px var(--ds-color-cyan-600);
+}
+
+/* Ocean + Dark */
+[data-theme="ocean"][data-mode="dark"] {
+  --ds-color-primary:        var(--ds-color-cyan-400);
+  --ds-color-primary-hover:  var(--ds-color-cyan-300);
+  --ds-color-primary-active: var(--ds-color-cyan-200);
+  --ds-color-primary-subtle: var(--ds-color-cyan-900);
+  --ds-color-primary-muted:  var(--ds-color-cyan-900);
+  --ds-color-primary-text:   var(--ds-color-cyan-400);
+
+  --ds-color-secondary:        var(--ds-color-indigo-400);
+  --ds-color-secondary-hover:  var(--ds-color-indigo-300);
+  --ds-color-secondary-active: var(--ds-color-indigo-200);
+  --ds-color-secondary-subtle: var(--ds-color-indigo-800);
+  --ds-color-secondary-muted:  var(--ds-color-indigo-900);
+  --ds-color-secondary-text:   var(--ds-color-indigo-400);
+
+  --ds-text-link:       var(--ds-color-cyan-400);
+  --ds-text-link-hover: var(--ds-color-cyan-300);
+
+  --ds-focus-ring: 0 0 0 2px var(--ds-surface-default), 0 0 0 4px var(--ds-color-cyan-400);
+}

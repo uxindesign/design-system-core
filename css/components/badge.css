@@ -1,94 +1,90 @@
-/* ==========================================================================
-   Badge Component
-   Inline badge with color variants and subtle style modifier.
-   ========================================================================== */
+/* ============================================================
+   COMPONENT: Badge
+   ============================================================ */
 
 .ds-badge {
   display: inline-flex;
   align-items: center;
-  padding: 4px;
-  gap: 4px;
-  border-radius: var(--ds-radius-full);
+  padding: var(--ds-spacing-0-5) var(--ds-spacing-2);
   font-size: var(--ds-font-size-xs);
   font-weight: var(--ds-font-weight-medium);
-  line-height: 1.35;
+  line-height: var(--ds-line-height-normal);
+  border-radius: var(--ds-radius-full);
   white-space: nowrap;
 }
 
-/* --------------------------------------------------------------------------
-   Color Variants — Default
-   -------------------------------------------------------------------------- */
-
-.ds-badge--primary {
-  background: var(--ds-color-primary);
+/* ---------------------------------------------------------
+   Solid style (filled background)
+   --------------------------------------------------------- */
+.ds-badge--primary.ds-badge--solid {
+  background-color: var(--ds-color-primary);
   color: var(--ds-color-primary-fg);
 }
 
-.ds-badge--secondary {
-  background: var(--ds-color-secondary);
+.ds-badge--secondary.ds-badge--solid {
+  background-color: var(--ds-color-secondary);
   color: var(--ds-color-secondary-fg);
 }
 
-.ds-badge--success {
-  background: var(--ds-feedback-success);
+.ds-badge--success.ds-badge--solid {
+  background-color: var(--ds-feedback-success);
   color: var(--ds-feedback-success-fg);
 }
 
-.ds-badge--warning {
-  background: var(--ds-feedback-warning);
+.ds-badge--warning.ds-badge--solid {
+  background-color: var(--ds-feedback-warning);
   color: var(--ds-feedback-warning-fg);
 }
 
-.ds-badge--error {
-  background: var(--ds-feedback-error);
+.ds-badge--error.ds-badge--solid {
+  background-color: var(--ds-feedback-error);
   color: var(--ds-feedback-error-fg);
 }
 
-.ds-badge--info {
-  background: var(--ds-feedback-info);
+.ds-badge--info.ds-badge--solid {
+  background-color: var(--ds-feedback-info);
   color: var(--ds-feedback-info-fg);
 }
 
-.ds-badge--neutral {
-  background: var(--ds-background-muted);
-  color: var(--ds-text-default);
+.ds-badge--neutral.ds-badge--solid {
+  background-color: var(--ds-color-neutral-600);
+  color: var(--ds-color-white);
 }
 
-/* --------------------------------------------------------------------------
-   Color Variants — Subtle
-   -------------------------------------------------------------------------- */
-
+/* ---------------------------------------------------------
+   Subtle style (light background)
+   --------------------------------------------------------- */
 .ds-badge--primary.ds-badge--subtle {
-  background: var(--ds-color-primary-subtle);
-  color: var(--ds-color-primary);
+  background-color: var(--ds-color-primary-subtle);
+  color: var(--ds-color-primary-text);
 }
 
 .ds-badge--secondary.ds-badge--subtle {
-  background: var(--ds-color-secondary-subtle);
-  color: var(--ds-color-secondary);
+  background-color: var(--ds-color-secondary-subtle);
+  color: var(--ds-color-secondary-text);
 }
 
 .ds-badge--success.ds-badge--subtle {
-  background: var(--ds-feedback-success-subtle);
-  color: var(--ds-feedback-success);
+  background-color: var(--ds-feedback-success-subtle);
+  color: var(--ds-feedback-success-text);
 }
 
 .ds-badge--warning.ds-badge--subtle {
-  background: var(--ds-feedback-warning-subtle);
-  color: var(--ds-feedback-warning);
+  background-color: var(--ds-feedback-warning-subtle);
+  color: var(--ds-feedback-warning-text);
 }
 
 .ds-badge--error.ds-badge--subtle {
-  background: var(--ds-feedback-error-subtle);
-  color: var(--ds-feedback-error);
+  background-color: var(--ds-feedback-error-subtle);
+  color: var(--ds-feedback-error-text);
 }
 
 .ds-badge--info.ds-badge--subtle {
-  background: var(--ds-feedback-info-subtle);
-  color: var(--ds-feedback-info);
+  background-color: var(--ds-feedback-info-subtle);
+  color: var(--ds-feedback-info-text);
 }
 
 .ds-badge--neutral.ds-badge--subtle {
-  background: var(--ds-background-subtle);
-  color: var(--ds-text-default);
+  background-color: var(--ds-background-muted);
+  color: var(--ds-text-secondary);
 }

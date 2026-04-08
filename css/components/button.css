@@ -1,162 +1,215 @@
-/* ==========================================================================
-   Button – .ds-btn
-   ========================================================================== */
-
-/* Base
-   ========================================================================== */
+/* ============================================================
+   COMPONENT: Button
+   ============================================================ */
 
 .ds-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--ds-space-gap-sm);
-  border: none;
-  border-radius: var(--ds-radius-component);
+  gap: var(--ds-spacing-2);
+  font-family: var(--ds-font-family-sans);
   font-weight: var(--ds-font-weight-medium);
-  line-height: 1.35;
-  letter-spacing: 0.5px;
-  cursor: pointer;
-  transition: all 150ms ease;
+  line-height: var(--ds-line-height-none);
   text-decoration: none;
-}
+  border: var(--ds-border-width-1) solid transparent;
+  border-radius: var(--ds-radius-md);
+  cursor: pointer;
+  transition: background-color var(--ds-duration-fast) var(--ds-ease-default),
+              border-color var(--ds-duration-fast) var(--ds-ease-default),
+              color var(--ds-duration-fast) var(--ds-ease-default),
+              box-shadow var(--ds-duration-fast) var(--ds-ease-default);
+  white-space: nowrap;
+  user-select: none;
 
-/* Focus
-   ========================================================================== */
+  /* Default size: md */
+  height: 40px;
+  padding: 0 var(--ds-spacing-4);
+  font-size: var(--ds-font-size-sm);
+  min-width: 44px;
+}
 
 .ds-btn:focus-visible {
-  outline: 2px solid var(--ds-border-focus);
-  outline-offset: 2px;
+  outline: 2px solid transparent;
+  box-shadow: var(--ds-focus-ring);
 }
 
-/* Sizes
-   ========================================================================== */
-
-.ds-btn,
-.ds-btn--md {
-  padding: 12px;
-  font-size: var(--ds-font-size-base);
+.ds-btn[disabled],
+.ds-btn--disabled {
+  opacity: var(--ds-opacity-50);
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
+/* Icon inside button — default 20px (md) */
+.ds-btn__icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  fill: currentColor;
+}
+
+/* ---------------------------------------------------------
+   Sizes
+   --------------------------------------------------------- */
 .ds-btn--sm {
-  padding: 8px;
-  font-size: var(--ds-font-size-sm);
+  height: 32px;
+  padding: 0 var(--ds-spacing-3);
+  font-size: var(--ds-font-size-xs);
+  border-radius: var(--ds-radius-sm);
+}
+
+.ds-btn--sm .ds-btn__icon {
+  width: 16px;
+  height: 16px;
 }
 
 .ds-btn--lg {
-  padding: 16px;
-  font-size: var(--ds-font-size-md);
+  height: 48px;
+  padding: 0 var(--ds-spacing-6);
+  font-size: var(--ds-font-size-base);
+  border-radius: var(--ds-radius-md);
 }
 
-/* Styles
-   ========================================================================== */
+.ds-btn--lg .ds-btn__icon {
+  width: 24px;
+  height: 24px;
+}
 
-/* Primary (default) */
+/* ---------------------------------------------------------
+   Variant: Primary (default filled)
+   --------------------------------------------------------- */
 .ds-btn--primary {
   background-color: var(--ds-color-primary);
-  color: var(--ds-color-primary-fg);
+  color: var(--ds-text-on-brand);
+  border-color: var(--ds-color-primary);
 }
 
 .ds-btn--primary:hover {
   background-color: var(--ds-color-primary-hover);
+  border-color: var(--ds-color-primary-hover);
 }
 
 .ds-btn--primary:active {
   background-color: var(--ds-color-primary-active);
+  border-color: var(--ds-color-primary-active);
 }
 
-/* Secondary */
+/* ---------------------------------------------------------
+   Variant: Secondary
+   --------------------------------------------------------- */
 .ds-btn--secondary {
-  background-color: var(--ds-surface-raised);
-  border: 1px solid var(--ds-border-default);
-  color: var(--ds-text-default);
+  background-color: var(--ds-color-secondary);
+  color: var(--ds-text-on-brand);
+  border-color: var(--ds-color-secondary);
 }
 
 .ds-btn--secondary:hover {
-  background-color: var(--ds-state-hover);
+  background-color: var(--ds-color-secondary-hover);
+  border-color: var(--ds-color-secondary-hover);
 }
 
 .ds-btn--secondary:active {
-  background-color: var(--ds-state-pressed);
+  background-color: var(--ds-color-secondary-active);
+  border-color: var(--ds-color-secondary-active);
 }
 
-/* Outline */
+/* ---------------------------------------------------------
+   Variant: Outline
+   --------------------------------------------------------- */
 .ds-btn--outline {
   background-color: transparent;
-  border: 1px solid var(--ds-color-primary);
   color: var(--ds-color-primary);
+  border-color: var(--ds-color-primary);
 }
 
 .ds-btn--outline:hover {
-  background-color: var(--ds-state-hover);
+  background-color: var(--ds-color-primary-subtle);
 }
 
 .ds-btn--outline:active {
-  background-color: var(--ds-state-pressed);
+  background-color: var(--ds-color-primary);
+  color: var(--ds-text-on-brand);
 }
 
-/* Ghost */
+/* ---------------------------------------------------------
+   Variant: Ghost
+   --------------------------------------------------------- */
 .ds-btn--ghost {
   background-color: transparent;
-  color: var(--ds-text-default);
+  color: var(--ds-color-primary);
+  border-color: transparent;
 }
 
 .ds-btn--ghost:hover {
-  background-color: var(--ds-state-hover);
+  background-color: var(--ds-color-primary-subtle);
 }
 
 .ds-btn--ghost:active {
-  background-color: var(--ds-state-pressed);
+  background-color: var(--ds-background-muted);
 }
 
-/* Danger */
-.ds-btn--danger {
+/* ---------------------------------------------------------
+   Variant: Destructive
+   --------------------------------------------------------- */
+.ds-btn--destructive {
   background-color: var(--ds-feedback-error);
-  color: var(--ds-feedback-error-fg);
+  color: var(--ds-text-on-brand);
+  border-color: var(--ds-feedback-error);
 }
 
-.ds-btn--danger:hover {
+.ds-btn--destructive:hover {
   background-color: var(--ds-feedback-error-hover);
+  border-color: var(--ds-feedback-error-hover);
 }
 
-.ds-btn--danger:active {
+.ds-btn--destructive:active {
   background-color: var(--ds-feedback-error-active);
+  border-color: var(--ds-feedback-error-active);
 }
 
-/* Disabled
-   ========================================================================== */
-
-.ds-btn--disabled,
-.ds-btn:disabled {
-  background-color: var(--ds-state-disabled-background);
-  color: var(--ds-state-disabled-fg);
-  border: none;
-  pointer-events: none;
-  cursor: default;
-}
-
-/* Icon-only
-   ========================================================================== */
-
+/* ---------------------------------------------------------
+   Icon Only
+   --------------------------------------------------------- */
 .ds-btn--icon-only {
-  gap: 0;
+  padding: 0;
+  aspect-ratio: 1;
 }
 
 .ds-btn--icon-only.ds-btn--sm {
-  padding: 8px;
+  width: 32px;
 }
 
-.ds-btn--icon-only,
-.ds-btn--icon-only.ds-btn--md {
-  padding: 12px;
+.ds-btn--icon-only:not(.ds-btn--sm):not(.ds-btn--lg) {
+  width: 40px;
 }
 
 .ds-btn--icon-only.ds-btn--lg {
-  padding: 16px;
+  width: 48px;
 }
 
-/* Loading
-   ========================================================================== */
+/* Material Symbols inside button */
+.ds-btn .material-symbols-outlined {
+  font-size: 20px;
+}
 
+.ds-btn--sm .material-symbols-outlined {
+  font-size: 16px;
+}
+
+.ds-btn--lg .material-symbols-outlined {
+  font-size: 24px;
+}
+
+/* ---------------------------------------------------------
+   Full Width
+   --------------------------------------------------------- */
+.ds-btn--full {
+  width: 100%;
+}
+
+/* ---------------------------------------------------------
+   Loading
+   --------------------------------------------------------- */
 .ds-btn--loading {
   position: relative;
   pointer-events: none;
@@ -173,30 +226,4 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-/* Elements
-   ========================================================================== */
-
-.ds-btn__icon {
-  flex-shrink: 0;
-  width: 20px;
-  height: 20px;
-  font-size: 20px;
-}
-
-.ds-btn--sm .ds-btn__icon {
-  width: 16px;
-  height: 16px;
-  font-size: 16px;
-}
-
-.ds-btn--lg .ds-btn__icon {
-  width: 24px;
-  height: 24px;
-  font-size: 24px;
-}
-
-.ds-btn__label {
-  white-space: nowrap;
 }

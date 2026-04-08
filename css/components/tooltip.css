@@ -20,7 +20,8 @@
   font-weight: 400;
   white-space: nowrap;
   pointer-events: none;
-  z-index: 10;
+  z-index: var(--ds-z-50);
+  transition: opacity var(--ds-duration-fast) var(--ds-ease-default);
 }
 
 /* Arrow

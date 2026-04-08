@@ -1,47 +1,55 @@
-/* ==========================================================================
-   Tabs
-   ========================================================================== */
+/* ============================================================
+   COMPONENT: Tabs
+   ============================================================ */
 
 .ds-tabs {
   display: flex;
-  border-bottom: 1px solid var(--ds-border-subtle);
+  border-bottom: var(--ds-border-width-1) solid var(--ds-border-default);
+  gap: 0;
 }
-
-/* Tab item
-   ========================================================================== */
 
 .ds-tab {
-  height: 40px;
-  padding: 12px 16px 0 16px;
-  border: none;
-  background: transparent;
-  color: var(--ds-text-secondary);
-  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--ds-spacing-2) var(--ds-spacing-4);
   font-size: var(--ds-font-size-sm);
   font-weight: var(--ds-font-weight-medium);
+  color: var(--ds-text-secondary);
+  background: none;
+  border: none;
   border-bottom: 2px solid transparent;
-  transition: all 150ms;
+  cursor: pointer;
+  transition: color var(--ds-duration-fast) var(--ds-ease-default),
+              border-color var(--ds-duration-fast) var(--ds-ease-default);
+  margin-bottom: -1px;
 }
 
-/* Hover (not active, not disabled)
-   ========================================================================== */
-
-.ds-tab:not(.ds-tab--active):not(.ds-tab--disabled):hover {
+.ds-tab:hover:not(:disabled):not(.ds-tab--active) {
   color: var(--ds-text-default);
 }
-
-/* Active
-   ========================================================================== */
 
 .ds-tab--active {
   color: var(--ds-color-primary);
   border-bottom-color: var(--ds-color-primary);
 }
 
-/* Disabled
-   ========================================================================== */
+.ds-tab:focus-visible {
+  outline: none;
+  box-shadow: var(--ds-focus-ring);
+  border-radius: var(--ds-radius-sm) var(--ds-radius-sm) 0 0;
+}
 
-.ds-tab--disabled {
+.ds-tab:disabled {
   color: var(--ds-text-disabled);
-  pointer-events: none;
+  cursor: not-allowed;
+}
+
+/* Tab panel */
+.ds-tab-panel {
+  padding: var(--ds-spacing-4) 0;
+}
+
+.ds-tab-panel[hidden] {
+  display: none;
 }

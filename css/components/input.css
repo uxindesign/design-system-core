@@ -8,11 +8,12 @@
 .ds-input {
   display: flex;
   align-items: center;
-  gap: var(--ds-space-gap-xs);
-  border: 1px solid var(--ds-border-default);
+  gap: var(--ds-spacing-1);
+  border: var(--ds-border-width-1) solid var(--ds-border-default);
   border-radius: var(--ds-radius-component);
   background: var(--ds-surface-default);
-  transition: border-color 150ms ease;
+  transition: border-color var(--ds-duration-fast) var(--ds-ease-default),
+              box-shadow var(--ds-duration-fast) var(--ds-ease-default);
 }
 
 /* Sizes
@@ -20,21 +21,21 @@
 
 .ds-input,
 .ds-input--md {
-  height: 45px;
-  padding: 0 12px;
+  height: 47px;
+  padding: 0 var(--ds-spacing-3);
   font-size: var(--ds-font-size-base);
 }
 
 .ds-input--sm {
   height: 34px;
-  padding: 0 8px;
+  padding: 0 var(--ds-spacing-2);
   font-size: var(--ds-font-size-sm);
 }
 
 .ds-input--lg {
-  height: 56px;
-  padding: 0 16px;
-  font-size: var(--ds-font-size-md);
+  height: 58px;
+  padding: 0 var(--ds-spacing-4);
+  font-size: var(--ds-font-size-lg);
 }
 
 /* Field
@@ -81,21 +82,28 @@
 /* States
    ========================================================================== */
 
+/* Hover */
+.ds-input:hover:not(.ds-input--disabled):not(:focus-within) {
+  border-color: var(--ds-border-strong);
+}
+
 /* Focused */
-.ds-input:focus-within,
-.ds-input--focused {
+.ds-input:focus-within {
+  outline: 2px solid transparent;
   border-color: var(--ds-color-primary);
-  box-shadow: 0 0 0 2px var(--ds-color-primary-muted);
+  box-shadow: var(--ds-focus-ring);
 }
 
 /* Error */
-.ds-input--error {
+.ds-input--error,
+.ds-field--error .ds-input {
   border-color: var(--ds-feedback-error);
 }
 
-.ds-input--error:focus-within {
+.ds-input--error:focus-within,
+.ds-field--error .ds-input:focus-within {
   border-color: var(--ds-feedback-error);
-  box-shadow: 0 0 0 2px var(--ds-feedback-error-muted, rgba(239, 68, 68, 0.2));
+  box-shadow: 0 0 0 2px var(--ds-surface-default), 0 0 0 4px var(--ds-feedback-error);
 }
 
 /* Disabled */

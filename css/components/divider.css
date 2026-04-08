@@ -1,19 +1,19 @@
-/* ==========================================================================
-   Divider Component
-   Horizontal and vertical dividers using design tokens.
-   ========================================================================== */
+/* ============================================================
+   COMPONENT: Divider
+   ============================================================ */
 
+/* Horizontal divider (default) */
 .ds-divider {
-  background-color: var(--ds-border-subtle);
   border: none;
   height: 1px;
   width: 100%;
-  margin: var(--ds-space-gap-md) 0;
+  background-color: var(--ds-border-default);
+  margin: var(--ds-spacing-4) 0;
 }
 
+/* Vertical divider */
 .ds-divider--vertical {
-  height: auto;
   width: 1px;
-  align-self: stretch;
-  margin: 0 var(--ds-space-gap-md);
+  height: 100%;
+  margin: 0 var(--ds-spacing-4);
 }

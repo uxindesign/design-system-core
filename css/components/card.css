@@ -1,35 +1,54 @@
-/* ==========================================================================
-   Card
-   ========================================================================== */
+/* ============================================================
+   COMPONENT: Card
+   ============================================================ */
 
 .ds-card {
+  background-color: var(--ds-surface-default);
   border-radius: var(--ds-radius-lg);
   overflow: hidden;
-  background: var(--ds-surface-default);
-  border: 1px solid var(--ds-border-subtle);
 }
-
-/* Variants
-   ========================================================================== */
-
-.ds-card--outlined {
-  border: 1px solid var(--ds-border-default);
-}
-
-.ds-card--elevated {
-  background: var(--ds-surface-raised);
-  border: none;
-  box-shadow: var(--ds-elevation-2);
-}
-
-/* Elements
-   ========================================================================== */
 
 .ds-card__header {
-  padding: var(--ds-space-inset-lg);
-  border-bottom: 1px solid var(--ds-border-subtle);
+  padding: var(--ds-spacing-4) var(--ds-spacing-4) var(--ds-spacing-2);
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-spacing-2);
+}
+
+.ds-card__title {
+  font-size: var(--ds-font-size-lg);
+  font-weight: var(--ds-font-weight-semibold);
+  color: var(--ds-text-default);
+  line-height: var(--ds-line-height-tight);
+}
+
+.ds-card__subtitle {
+  font-size: var(--ds-font-size-sm);
+  color: var(--ds-text-secondary);
 }
 
 .ds-card__body {
-  padding: var(--ds-space-inset-lg);
+  padding: 0 var(--ds-spacing-4) var(--ds-spacing-4);
+  font-size: var(--ds-font-size-sm);
+  color: var(--ds-text-secondary);
+  line-height: var(--ds-line-height-relaxed);
+}
+
+/* ---------------------------------------------------------
+   Variants
+   --------------------------------------------------------- */
+
+/* Default — subtle border */
+.ds-card--default {
+  border: var(--ds-border-width-1) solid var(--ds-border-subtle);
+}
+
+/* Outlined — stronger border */
+.ds-card--outlined {
+  border: var(--ds-border-width-1) solid var(--ds-border-default);
+}
+
+/* Elevated — shadow, no border */
+.ds-card--elevated {
+  box-shadow: var(--ds-shadow-md);
 }

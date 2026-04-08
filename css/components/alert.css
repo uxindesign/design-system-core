@@ -1,97 +1,110 @@
-/* ==========================================================================
-   Alert
-   ========================================================================== */
+/* ============================================================
+   COMPONENT: Alert
+   ============================================================ */
 
 .ds-alert {
   display: flex;
-  gap: var(--ds-space-gap-sm);
-  padding: var(--ds-space-inset-md);
-  border-radius: var(--ds-radius-md);
-  border: 1px solid;
+  align-items: flex-start;
+  gap: var(--ds-spacing-3);
+  padding: var(--ds-spacing-3) var(--ds-spacing-4);
+  border-radius: var(--ds-radius-component);
+  font-size: var(--ds-font-size-sm);
+  line-height: var(--ds-line-height-normal);
 }
-
-/* Types — Default
-   ========================================================================== */
-
-.ds-alert--success {
-  background: var(--ds-feedback-success-background);
-  border-color: var(--ds-feedback-success-border);
-}
-
-.ds-alert--success .ds-alert__icon {
-  color: var(--ds-feedback-success);
-}
-
-.ds-alert--warning {
-  background: var(--ds-feedback-warning-background);
-  border-color: var(--ds-feedback-warning-border);
-}
-
-.ds-alert--warning .ds-alert__icon {
-  color: var(--ds-feedback-warning);
-}
-
-.ds-alert--error {
-  background: var(--ds-feedback-error-background);
-  border-color: var(--ds-feedback-error-border);
-}
-
-.ds-alert--error .ds-alert__icon {
-  color: var(--ds-feedback-error);
-}
-
-.ds-alert--info {
-  background: var(--ds-feedback-info-background);
-  border-color: var(--ds-feedback-info-border);
-}
-
-.ds-alert--info .ds-alert__icon {
-  color: var(--ds-feedback-info);
-}
-
-/* Types — Subtle
-   ========================================================================== */
-
-.ds-alert--subtle.ds-alert--success {
-  background: var(--ds-feedback-success-subtle);
-  border-color: var(--ds-feedback-success-border);
-}
-
-.ds-alert--subtle.ds-alert--warning {
-  background: var(--ds-feedback-warning-subtle);
-  border-color: var(--ds-feedback-warning-border);
-}
-
-.ds-alert--subtle.ds-alert--error {
-  background: var(--ds-feedback-error-subtle);
-  border-color: var(--ds-feedback-error-border);
-}
-
-.ds-alert--subtle.ds-alert--info {
-  background: var(--ds-feedback-info-subtle);
-  border-color: var(--ds-feedback-info-border);
-}
-
-/* Elements
-   ========================================================================== */
 
 .ds-alert__icon {
   flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.ds-alert__icon .material-symbols-outlined {
+  font-size: 20px;
+}
+
+.ds-alert__content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-spacing-1);
 }
 
 .ds-alert__title {
   font-weight: var(--ds-font-weight-semibold);
-  color: var(--ds-text-default);
 }
 
 .ds-alert__description {
-  color: var(--ds-text-secondary);
+  opacity: 0.9;
 }
 
 .ds-alert__close {
-  margin-left: auto;
-  cursor: pointer;
-  background: transparent;
+  flex-shrink: 0;
+  background: none;
   border: none;
-  color: var(--ds-text-tertiary);
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+  opacity: 0.7;
+  transition: opacity var(--ds-duration-fast) var(--ds-ease-default);
+}
+
+.ds-alert__close:hover {
+  opacity: 1;
+}
+
+.ds-alert__close:focus-visible {
+  outline: none;
+  box-shadow: var(--ds-focus-ring);
+  border-radius: var(--ds-radius-sm);
+}
+
+/* ---------------------------------------------------------
+   Filled style
+   --------------------------------------------------------- */
+.ds-alert--success.ds-alert--filled {
+  background-color: var(--ds-feedback-success);
+  color: var(--ds-feedback-success-fg);
+}
+
+.ds-alert--warning.ds-alert--filled {
+  background-color: var(--ds-feedback-warning);
+  color: var(--ds-feedback-warning-fg);
+}
+
+.ds-alert--error.ds-alert--filled {
+  background-color: var(--ds-feedback-error);
+  color: var(--ds-feedback-error-fg);
+}
+
+.ds-alert--info.ds-alert--filled {
+  background-color: var(--ds-feedback-info);
+  color: var(--ds-feedback-info-fg);
+}
+
+/* ---------------------------------------------------------
+   Subtle style
+   --------------------------------------------------------- */
+.ds-alert--success.ds-alert--subtle {
+  background-color: var(--ds-feedback-success-background);
+  color: var(--ds-feedback-success-text);
+  border-left: var(--ds-border-width-4) solid var(--ds-feedback-success);
+}
+
+.ds-alert--warning.ds-alert--subtle {
+  background-color: var(--ds-feedback-warning-background);
+  color: var(--ds-feedback-warning-text);
+  border-left: var(--ds-border-width-4) solid var(--ds-feedback-warning);
+}
+
+.ds-alert--error.ds-alert--subtle {
+  background-color: var(--ds-feedback-error-background);
+  color: var(--ds-feedback-error-text);
+  border-left: var(--ds-border-width-4) solid var(--ds-feedback-error);
+}
+
+.ds-alert--info.ds-alert--subtle {
+  background-color: var(--ds-feedback-info-background);
+  color: var(--ds-feedback-info-text);
+  border-left: var(--ds-border-width-4) solid var(--ds-feedback-info);
 }

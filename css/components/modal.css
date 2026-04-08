@@ -1,81 +1,88 @@
-/* ==========================================================================
-   Modal
-   ========================================================================== */
+/* ============================================================
+   COMPONENT: Modal / Dialog
+   ============================================================ */
 
-/* Overlay
-   ========================================================================== */
-
-.ds-modal__overlay {
+/* Overlay */
+.ds-modal-overlay {
   position: fixed;
   inset: 0;
-  background: var(--ds-background-overlay);
+  background-color: var(--ds-background-overlay);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 50;
+  z-index: var(--ds-z-50);
+  padding: var(--ds-spacing-4);
 }
 
-/* Dialog
-   ========================================================================== */
-
+/* Dialog */
 .ds-modal {
-  background: var(--ds-surface-default);
-  border-radius: var(--ds-radius-lg);
-  box-shadow:
-    0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -2px rgba(0, 0, 0, 0.1);
-  max-height: 90vh;
-  overflow-y: auto;
+  background-color: var(--ds-surface-default);
+  border-radius: var(--ds-radius-xl);
+  box-shadow: var(--ds-shadow-xl);
+  width: 100%;
+  max-height: calc(100vh - var(--ds-spacing-8));
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
-/* Sizes
-   ========================================================================== */
+/* Sizes */
+.ds-modal--sm { max-width: 400px; }
+.ds-modal--md { max-width: 520px; }
+.ds-modal--lg { max-width: 640px; }
 
-.ds-modal--sm {
-  max-width: 400px;
-}
-
-.ds-modal--md {
-  max-width: 520px;
-}
-
-.ds-modal--lg {
-  max-width: 640px;
-}
-
-/* Elements
-   ========================================================================== */
-
+/* Header */
 .ds-modal__header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 8px;
-  padding: 20px 20px 12px 20px;
+  justify-content: space-between;
+  padding: var(--ds-spacing-4) var(--ds-spacing-4) var(--ds-spacing-2);
+  gap: var(--ds-spacing-2);
 }
 
+.ds-modal__title {
+  font-size: var(--ds-font-size-lg);
+  font-weight: var(--ds-font-weight-semibold);
+  color: var(--ds-text-default);
+  line-height: var(--ds-line-height-tight);
+}
+
+.ds-modal__close {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  padding: var(--ds-spacing-1);
+  cursor: pointer;
+  color: var(--ds-text-secondary);
+  border-radius: var(--ds-radius-sm);
+  transition: color var(--ds-duration-fast) var(--ds-ease-default),
+              background-color var(--ds-duration-fast) var(--ds-ease-default);
+}
+
+.ds-modal__close:hover {
+  color: var(--ds-text-default);
+  background-color: var(--ds-background-muted);
+}
+
+.ds-modal__close:focus-visible {
+  outline: none;
+  box-shadow: var(--ds-focus-ring);
+}
+
+/* Body */
 .ds-modal__body {
-  padding: 0 20px 20px 20px;
+  padding: 0 var(--ds-spacing-4) var(--ds-spacing-4);
+  overflow-y: auto;
+  font-size: var(--ds-font-size-sm);
+  color: var(--ds-text-secondary);
+  line-height: var(--ds-line-height-relaxed);
 }
 
+/* Footer */
 .ds-modal__footer {
   display: flex;
   justify-content: flex-end;
-  gap: 8px;
-  padding: 12px 20px 20px 20px;
-}
-
-/* Size overrides — sm
-   ========================================================================== */
-
-.ds-modal--sm .ds-modal__header {
-  padding: 16px 16px 8px 16px;
-}
-
-.ds-modal--sm .ds-modal__body {
-  padding: 0 16px 16px 16px;
-}
-
-.ds-modal--sm .ds-modal__footer {
-  padding: 8px 16px 16px 16px;
+  gap: var(--ds-spacing-2);
+  padding: var(--ds-spacing-2) var(--ds-spacing-4) var(--ds-spacing-4);
+  border-top: var(--ds-border-width-1) solid var(--ds-border-default);
 }

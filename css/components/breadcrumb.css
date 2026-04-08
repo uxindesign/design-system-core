@@ -21,6 +21,12 @@
   text-decoration: underline;
 }
 
+.ds-breadcrumb__item:focus-visible {
+  outline: 2px solid transparent;
+  box-shadow: var(--ds-focus-ring);
+  border-radius: var(--ds-radius-sm);
+}
+
 /* Current (last item)
    ========================================================================== */
 

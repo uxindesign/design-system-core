@@ -1,0 +1,64 @@
+/* ============================================================
+   COMPONENT: Form Field
+   Standalone field wrapper with sizes — extracted from input.css
+   ============================================================ */
+
+/* ---------------------------------------------------------
+   Field Wrapper
+   --------------------------------------------------------- */
+.ds-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-spacing-1-5);
+  margin-bottom: var(--ds-spacing-4);
+}
+
+.ds-field__label {
+  font-size: var(--ds-font-size-sm);
+  font-weight: var(--ds-font-weight-medium);
+  color: var(--ds-text-default);
+  line-height: var(--ds-line-height-normal);
+}
+
+.ds-field__required {
+  color: var(--ds-feedback-error);
+  margin-left: var(--ds-spacing-0-5);
+}
+
+.ds-field__helper {
+  font-size: var(--ds-font-size-xs);
+  color: var(--ds-text-secondary);
+  line-height: var(--ds-line-height-normal);
+}
+
+.ds-field__error {
+  font-size: var(--ds-font-size-xs);
+  color: var(--ds-feedback-error-text);
+  line-height: var(--ds-line-height-normal);
+  display: none;
+}
+
+/* Show error message when field has error */
+.ds-field--error .ds-field__error {
+  display: block;
+}
+
+.ds-field--error .ds-field__helper {
+  display: none;
+}
+
+/* Error state label */
+.ds-field--error .ds-field__label {
+  color: var(--ds-feedback-error-text);
+}
+
+/* ---------------------------------------------------------
+   Field Sizes
+   --------------------------------------------------------- */
+.ds-field--sm .ds-field__label {
+  font-size: var(--ds-font-size-xs);
+}
+
+.ds-field--lg .ds-field__label {
+  font-size: var(--ds-font-size-base);
+}

@@ -1,7 +1,27 @@
+/* Material Symbols */
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap');
+
 *, *::before, *::after { box-sizing: border-box; }
-* { margin: 0; }
-html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-body { font-family: var(--ds-font-family-sans); font-size: var(--ds-font-size-base); line-height: var(--ds-font-line-height-normal); color: var(--ds-text-default); background-color: var(--ds-background-default); }
+* { margin: 0; padding: 0; }
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--ds-font-family-sans);
+  font-size: var(--ds-font-size-base);
+  line-height: var(--ds-line-height-normal);
+  color: var(--ds-text-default);
+  background-color: var(--ds-background-default);
+}
 img, picture, video, canvas, svg { display: block; max-width: 100%; }
 input, button, textarea, select { font: inherit; }
 p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

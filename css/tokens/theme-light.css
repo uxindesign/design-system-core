@@ -1,153 +1,169 @@
-/* ==========================================================================
-   Theme Light — Semantic alias tokens (Light mode)
-   Selector: :root, [data-mode="light"]
-   ========================================================================== */
+/* ============================================================
+   SEMANTIC TOKENS — Light Mode
+   ============================================================
+   Source of truth: Figma Theme collection (Light mode)
+   Naming: Figma variable name → --ds-{group}-{name}
+   ============================================================ */
 
 :root,
 [data-mode="light"] {
 
-  /* Background
-     ======================================================================== */
-  --ds-background-default: var(--ds-neutral-0);
-  --ds-background-subtle: var(--ds-neutral-50);
-  --ds-background-muted: var(--ds-neutral-100);
-  --ds-background-inverse: var(--ds-neutral-900);
-  --ds-background-overlay: var(--ds-overlay-black-40);
+  /* ---------------------------------------------------------
+     BACKGROUND
+     --------------------------------------------------------- */
+  --ds-background-default:    var(--ds-color-white);
+  --ds-background-subtle:     var(--ds-color-neutral-50);
+  --ds-background-muted:      var(--ds-color-neutral-100);
+  --ds-background-inverse:    var(--ds-color-neutral-900);
+  --ds-background-overlay:    rgba(0, 0, 0, 0.4);
 
-  /* Surface
-     ======================================================================== */
-  --ds-surface-default: var(--ds-neutral-0);
-  --ds-surface-raised: var(--ds-neutral-0);
-  --ds-surface-overlay: var(--ds-neutral-0);
+  /* ---------------------------------------------------------
+     SURFACE
+     --------------------------------------------------------- */
+  --ds-surface-default:       var(--ds-color-white);
+  --ds-surface-raised:        var(--ds-color-white);
+  --ds-surface-overlay:       var(--ds-color-white);
 
-  /* Brand Primary
-     ======================================================================== */
-  --ds-color-primary: var(--ds-brand-primary-600);
-  --ds-color-primary-hover: var(--ds-brand-primary-700);
-  --ds-color-primary-active: var(--ds-brand-primary-800);
-  --ds-color-primary-subtle: var(--ds-brand-primary-100);
-  --ds-color-primary-muted: var(--ds-brand-primary-50);
-  --ds-color-primary-fg: var(--ds-neutral-0);
+  /* ---------------------------------------------------------
+     TEXT / FOREGROUND
+     --------------------------------------------------------- */
+  --ds-text-default:          var(--ds-color-neutral-900);
+  --ds-text-secondary:        var(--ds-color-neutral-600);
+  --ds-text-tertiary:         var(--ds-color-neutral-500);
+  --ds-text-disabled:         var(--ds-color-neutral-400);
+  --ds-text-inverse:          var(--ds-color-white);
+  --ds-text-on-brand:         var(--ds-color-white);
+  --ds-text-link:             var(--ds-color-blue-600);
+  --ds-text-link-hover:       var(--ds-color-blue-700);
 
-  /* Brand Secondary
-     ======================================================================== */
-  --ds-color-secondary: var(--ds-brand-secondary-600);
-  --ds-color-secondary-hover: var(--ds-brand-secondary-700);
-  --ds-color-secondary-active: var(--ds-brand-secondary-800);
-  --ds-color-secondary-subtle: var(--ds-brand-secondary-100);
-  --ds-color-secondary-muted: var(--ds-brand-secondary-50);
-  --ds-color-secondary-fg: var(--ds-neutral-0);
+  /* ---------------------------------------------------------
+     BRAND — Primary
+     --------------------------------------------------------- */
+  --ds-color-primary:         var(--ds-color-blue-600);
+  --ds-color-primary-hover:   var(--ds-color-blue-700);
+  --ds-color-primary-active:  var(--ds-color-blue-800);
+  --ds-color-primary-subtle:  var(--ds-color-blue-100);
+  --ds-color-primary-muted:   var(--ds-color-blue-50);
+  --ds-color-primary-fg:      var(--ds-color-white);
+  --ds-color-primary-text:    var(--ds-color-blue-700);
 
-  /* Text
-     ======================================================================== */
-  --ds-text-default: var(--ds-neutral-900);
-  --ds-text-secondary: var(--ds-neutral-600);
-  --ds-text-tertiary: var(--ds-neutral-500);
-  --ds-text-disabled: var(--ds-neutral-400);
-  --ds-text-inverse: var(--ds-neutral-0);
-  --ds-text-on-brand: var(--ds-neutral-0);
-  --ds-text-link: var(--ds-brand-primary-600);
-  --ds-text-link-hover: var(--ds-brand-primary-700);
+  /* ---------------------------------------------------------
+     BRAND — Secondary
+     --------------------------------------------------------- */
+  --ds-color-secondary:         var(--ds-color-purple-600);
+  --ds-color-secondary-hover:   var(--ds-color-purple-700);
+  --ds-color-secondary-active:  var(--ds-color-purple-800);
+  --ds-color-secondary-subtle:  var(--ds-color-purple-100);
+  --ds-color-secondary-muted:   var(--ds-color-purple-50);
+  --ds-color-secondary-fg:      var(--ds-color-white);
+  --ds-color-secondary-text:    var(--ds-color-purple-700);
 
-  /* Border
-     ======================================================================== */
-  --ds-border-default: var(--ds-neutral-500);
-  --ds-border-strong: var(--ds-neutral-400);
-  --ds-border-subtle: var(--ds-neutral-100);
-  --ds-border-focus: var(--ds-brand-primary-500);
-  --ds-border-brand: var(--ds-brand-primary-600);
+  /* ---------------------------------------------------------
+     FEEDBACK — Success
+     --------------------------------------------------------- */
+  --ds-feedback-success:            var(--ds-color-green-600);
+  --ds-feedback-success-hover:      var(--ds-color-green-700);
+  --ds-feedback-success-subtle:     var(--ds-color-green-100);
+  --ds-feedback-success-background: var(--ds-color-green-50);
+  --ds-feedback-success-fg:         var(--ds-color-white);
+  --ds-feedback-success-border:     var(--ds-color-green-600);
+  --ds-feedback-success-text:       var(--ds-color-green-700);
 
-  /* Border Width
-     ======================================================================== */
-  --ds-border-width-subtle: var(--ds-stroke-1);
-  --ds-border-width-default: var(--ds-stroke-1);
-  --ds-border-width-strong: var(--ds-stroke-2);
-  --ds-border-width-focus: var(--ds-stroke-2);
+  /* ---------------------------------------------------------
+     FEEDBACK — Warning
+     --------------------------------------------------------- */
+  --ds-feedback-warning:            var(--ds-color-amber-500);
+  --ds-feedback-warning-hover:      var(--ds-color-amber-600);
+  --ds-feedback-warning-subtle:     var(--ds-color-amber-100);
+  --ds-feedback-warning-background: var(--ds-color-amber-50);
+  --ds-feedback-warning-fg:         var(--ds-color-neutral-900);
+  --ds-feedback-warning-border:     var(--ds-color-amber-500);
+  --ds-feedback-warning-text:       var(--ds-color-amber-700);
 
-  /* Feedback — Success
-     ======================================================================== */
-  --ds-feedback-success-background: var(--ds-green-50);
-  --ds-feedback-success-subtle: var(--ds-green-100);
-  --ds-feedback-success: var(--ds-green-600);
-  --ds-feedback-success-hover: var(--ds-green-600);
-  --ds-feedback-success-fg: var(--ds-neutral-900);
-  --ds-feedback-success-border: var(--ds-green-500);
+  /* ---------------------------------------------------------
+     FEEDBACK — Error
+     --------------------------------------------------------- */
+  --ds-feedback-error:              var(--ds-color-red-600);
+  --ds-feedback-error-hover:        var(--ds-color-red-700);
+  --ds-feedback-error-active:       var(--ds-color-red-800);
+  --ds-feedback-error-subtle:       var(--ds-color-red-100);
+  --ds-feedback-error-background:   var(--ds-color-red-50);
+  --ds-feedback-error-fg:           var(--ds-color-white);
+  --ds-feedback-error-border:       var(--ds-color-red-600);
+  --ds-feedback-error-text:         var(--ds-color-red-700);
 
-  /* Feedback — Warning
-     ======================================================================== */
-  --ds-feedback-warning-background: var(--ds-amber-50);
-  --ds-feedback-warning-subtle: var(--ds-amber-100);
-  --ds-feedback-warning: var(--ds-amber-500);
-  --ds-feedback-warning-hover: var(--ds-amber-600);
-  --ds-feedback-warning-fg: var(--ds-neutral-900);
-  --ds-feedback-warning-border: var(--ds-amber-500);
+  /* ---------------------------------------------------------
+     FEEDBACK — Info
+     --------------------------------------------------------- */
+  --ds-feedback-info:               var(--ds-color-sky-600);
+  --ds-feedback-info-hover:         var(--ds-color-sky-700);
+  --ds-feedback-info-subtle:        var(--ds-color-sky-100);
+  --ds-feedback-info-background:    var(--ds-color-sky-50);
+  --ds-feedback-info-fg:            var(--ds-color-white);
+  --ds-feedback-info-border:        var(--ds-color-sky-600);
+  --ds-feedback-info-text:          var(--ds-color-sky-700);
 
-  /* Feedback — Error
-     ======================================================================== */
-  --ds-feedback-error-background: var(--ds-red-50);
-  --ds-feedback-error-subtle: var(--ds-red-100);
-  --ds-feedback-error: var(--ds-red-600);
-  --ds-feedback-error-hover: var(--ds-red-600);
-  --ds-feedback-error-fg: var(--ds-neutral-0);
-  --ds-feedback-error-border: var(--ds-red-500);
+  /* ---------------------------------------------------------
+     BORDER
+     --------------------------------------------------------- */
+  --ds-border-default:        var(--ds-color-neutral-200);
+  --ds-border-strong:         var(--ds-color-neutral-400);
+  --ds-border-subtle:         var(--ds-color-neutral-100);
+  --ds-border-focus:          var(--ds-color-primary);
+  --ds-border-brand:          var(--ds-color-primary);
+  --ds-border-error:          var(--ds-feedback-error);
 
-  /* Feedback — Info
-     ======================================================================== */
-  --ds-feedback-info-background: var(--ds-sky-50);
-  --ds-feedback-info-subtle: var(--ds-sky-100);
-  --ds-feedback-info: var(--ds-sky-500);
-  --ds-feedback-info-hover: var(--ds-sky-600);
-  --ds-feedback-info-fg: var(--ds-neutral-0);
-  --ds-feedback-info-border: var(--ds-sky-500);
+  /* ---------------------------------------------------------
+     BORDER WIDTH — Semantic aliases
+     --------------------------------------------------------- */
+  --ds-border-width-subtle:   var(--ds-border-width-1);
+  --ds-border-width-default:  var(--ds-border-width-1);
+  --ds-border-width-strong:   var(--ds-border-width-2);
+  --ds-border-width-focus:    var(--ds-border-width-2);
 
-  /* State
-     ======================================================================== */
-  --ds-state-hover: var(--ds-overlay-black-5);
-  --ds-state-pressed: var(--ds-overlay-black-10);
-  --ds-state-focus: var(--ds-brand-primary-500);
-  --ds-state-disabled-background: var(--ds-neutral-100);
-  --ds-state-disabled-fg: var(--ds-neutral-400);
+  /* ---------------------------------------------------------
+     FOCUS RING — Double ring for WCAG 2.2 compliance
+     --------------------------------------------------------- */
+  --ds-focus-ring: 0 0 0 2px var(--ds-surface-default), 0 0 0 4px var(--ds-color-primary);
 
-  /* Space — Inset
-     ======================================================================== */
-  --ds-space-inset-xs: var(--ds-spacing-4);
-  --ds-space-inset-sm: var(--ds-spacing-8);
-  --ds-space-inset-md: var(--ds-spacing-12);
-  --ds-space-inset-lg: var(--ds-spacing-16);
-  --ds-space-inset-xl: var(--ds-spacing-24);
+  /* ---------------------------------------------------------
+     STATE
+     --------------------------------------------------------- */
+  --ds-state-hover:               rgba(0, 0, 0, 0.05);
+  --ds-state-pressed:             rgba(0, 0, 0, 0.1);
+  --ds-state-focus:               var(--ds-color-primary);
+  --ds-state-disabled-background: var(--ds-color-neutral-100);
+  --ds-state-disabled-fg:         var(--ds-color-neutral-400);
 
-  /* Space — Gap
-     ======================================================================== */
-  --ds-space-gap-xs: var(--ds-spacing-4);
-  --ds-space-gap-sm: var(--ds-spacing-8);
-  --ds-space-gap-md: var(--ds-spacing-12);
-  --ds-space-gap-lg: var(--ds-spacing-16);
-  --ds-space-gap-xl: var(--ds-spacing-24);
+  /* ---------------------------------------------------------
+     SPACE — Semantic layout tokens
+     --------------------------------------------------------- */
+  --ds-space-inset-xs:        var(--ds-spacing-1);    /* 4px */
+  --ds-space-inset-sm:        var(--ds-spacing-2);    /* 8px */
+  --ds-space-inset-md:        var(--ds-spacing-3);    /* 12px */
+  --ds-space-inset-lg:        var(--ds-spacing-4);    /* 16px */
+  --ds-space-inset-xl:        var(--ds-spacing-6);    /* 24px */
 
-  /* Space — Component
-     ======================================================================== */
-  --ds-space-component-xs: var(--ds-spacing-4);
-  --ds-space-component-sm: var(--ds-spacing-8);
-  --ds-space-component-md: var(--ds-spacing-12);
-  --ds-space-component-lg: var(--ds-spacing-16);
-  --ds-space-component-xl: var(--ds-spacing-20);
-  --ds-space-component-2xl: var(--ds-spacing-24);
+  --ds-space-gap-xs:          var(--ds-spacing-1);    /* 4px */
+  --ds-space-gap-sm:          var(--ds-spacing-2);    /* 8px */
+  --ds-space-gap-md:          var(--ds-spacing-3);    /* 12px */
+  --ds-space-gap-lg:          var(--ds-spacing-4);    /* 16px */
+  --ds-space-gap-xl:          var(--ds-spacing-6);    /* 24px */
 
-  /* Space — Section
-     ======================================================================== */
-  --ds-space-section-sm: var(--ds-spacing-32);
-  --ds-space-section-md: var(--ds-spacing-48);
-  --ds-space-section-lg: var(--ds-spacing-64);
-  --ds-space-section-xl: var(--ds-spacing-80);
+  --ds-space-component-xs:    var(--ds-spacing-1);    /* 4px */
+  --ds-space-component-sm:    var(--ds-spacing-2);    /* 8px */
+  --ds-space-component-md:    var(--ds-spacing-3);    /* 12px */
+  --ds-space-component-lg:    var(--ds-spacing-4);    /* 16px */
+  --ds-space-component-xl:    var(--ds-spacing-5);    /* 20px */
+  --ds-space-component-2xl:   var(--ds-spacing-6);    /* 24px */
 
-  /* Radius
-     ======================================================================== */
-  --ds-radius-none: var(--ds-radius-0);
-  --ds-radius-sm: var(--ds-radius-4);
-  --ds-radius-md: var(--ds-radius-8);
-  --ds-radius-lg: var(--ds-radius-12);
-  --ds-radius-xl: var(--ds-radius-16);
-  --ds-radius-2xl: var(--ds-radius-24);
-  --ds-radius-full: var(--ds-radius-full);
-  --ds-radius-component: var(--ds-radius-8);
+  --ds-space-section-sm:      var(--ds-spacing-8);    /* 32px */
+  --ds-space-section-md:      var(--ds-spacing-12);   /* 48px */
+  --ds-space-section-lg:      var(--ds-spacing-16);   /* 64px */
+  --ds-space-section-xl:      var(--ds-spacing-20);   /* 80px */
+
+  /* ---------------------------------------------------------
+     RADIUS — Semantic alias
+     --------------------------------------------------------- */
+  --ds-radius-component:      var(--ds-radius-md);
 }
