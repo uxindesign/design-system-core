@@ -111,13 +111,13 @@
 .ds-input:has(.ds-input__field:disabled) {
   background: var(--ds-state-disabled-background);
   border-color: var(--ds-border-subtle);
-  color: var(--ds-state-disabled-fg);
+  color: var(--ds-state-disabled-foreground);
   pointer-events: none;
 }
 
 .ds-input--disabled .ds-input__field,
 .ds-input__field:disabled {
-  color: var(--ds-state-disabled-fg);
+  color: var(--ds-state-disabled-foreground);
 }
 
 /* Readonly */

@@ -9,7 +9,7 @@
   justify-content: center;
   border-radius: var(--ds-radius-full);
   background-color: var(--ds-color-primary);
-  color: var(--ds-color-primary-fg);
+  color: var(--ds-color-primary-foreground);
   font-family: var(--ds-font-family-sans);
   font-weight: var(--ds-font-weight-semibold);
   flex-shrink: 0;

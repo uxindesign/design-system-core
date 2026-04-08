@@ -18,32 +18,32 @@
    --------------------------------------------------------- */
 .ds-badge--primary.ds-badge--solid {
   background-color: var(--ds-color-primary);
-  color: var(--ds-color-primary-fg);
+  color: var(--ds-color-primary-foreground);
 }
 
 .ds-badge--secondary.ds-badge--solid {
   background-color: var(--ds-color-secondary);
-  color: var(--ds-color-secondary-fg);
+  color: var(--ds-color-secondary-foreground);
 }
 
 .ds-badge--success.ds-badge--solid {
   background-color: var(--ds-feedback-success);
-  color: var(--ds-feedback-success-fg);
+  color: var(--ds-feedback-success-foreground);
 }
 
 .ds-badge--warning.ds-badge--solid {
   background-color: var(--ds-feedback-warning);
-  color: var(--ds-feedback-warning-fg);
+  color: var(--ds-feedback-warning-foreground);
 }
 
 .ds-badge--error.ds-badge--solid {
   background-color: var(--ds-feedback-error);
-  color: var(--ds-feedback-error-fg);
+  color: var(--ds-feedback-error-foreground);
 }
 
 .ds-badge--info.ds-badge--solid {
   background-color: var(--ds-feedback-info);
-  color: var(--ds-feedback-info-fg);
+  color: var(--ds-feedback-info-foreground);
 }
 
 .ds-badge--neutral.ds-badge--solid {

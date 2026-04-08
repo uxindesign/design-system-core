@@ -44,7 +44,7 @@
   --ds-color-primary-active:  var(--ds-color-blue-800);
   --ds-color-primary-subtle:  var(--ds-color-blue-100);
   --ds-color-primary-muted:   var(--ds-color-blue-50);
-  --ds-color-primary-fg:      var(--ds-color-white);
+  --ds-color-primary-foreground:      var(--ds-color-white);
   --ds-color-primary-text:    var(--ds-color-blue-700);
 
   /* ---------------------------------------------------------
@@ -55,7 +55,7 @@
   --ds-color-secondary-active:  var(--ds-color-purple-800);
   --ds-color-secondary-subtle:  var(--ds-color-purple-100);
   --ds-color-secondary-muted:   var(--ds-color-purple-50);
-  --ds-color-secondary-fg:      var(--ds-color-white);
+  --ds-color-secondary-foreground:      var(--ds-color-white);
   --ds-color-secondary-text:    var(--ds-color-purple-700);
 
   /* ---------------------------------------------------------
@@ -65,7 +65,7 @@
   --ds-feedback-success-hover:      var(--ds-color-green-700);
   --ds-feedback-success-subtle:     var(--ds-color-green-100);
   --ds-feedback-success-background: var(--ds-color-green-50);
-  --ds-feedback-success-fg:         var(--ds-color-white);
+  --ds-feedback-success-foreground:         var(--ds-color-white);
   --ds-feedback-success-border:     var(--ds-color-green-600);
   --ds-feedback-success-text:       var(--ds-color-green-700);
 
@@ -76,7 +76,7 @@
   --ds-feedback-warning-hover:      var(--ds-color-amber-600);
   --ds-feedback-warning-subtle:     var(--ds-color-amber-100);
   --ds-feedback-warning-background: var(--ds-color-amber-50);
-  --ds-feedback-warning-fg:         var(--ds-color-neutral-900);
+  --ds-feedback-warning-foreground:         var(--ds-color-neutral-900);
   --ds-feedback-warning-border:     var(--ds-color-amber-500);
   --ds-feedback-warning-text:       var(--ds-color-amber-700);
 
@@ -88,7 +88,7 @@
   --ds-feedback-error-active:       var(--ds-color-red-800);
   --ds-feedback-error-subtle:       var(--ds-color-red-100);
   --ds-feedback-error-background:   var(--ds-color-red-50);
-  --ds-feedback-error-fg:           var(--ds-color-white);
+  --ds-feedback-error-foreground:           var(--ds-color-white);
   --ds-feedback-error-border:       var(--ds-color-red-600);
   --ds-feedback-error-text:         var(--ds-color-red-700);
 
@@ -99,7 +99,7 @@
   --ds-feedback-info-hover:         var(--ds-color-sky-700);
   --ds-feedback-info-subtle:        var(--ds-color-sky-100);
   --ds-feedback-info-background:    var(--ds-color-sky-50);
-  --ds-feedback-info-fg:            var(--ds-color-white);
+  --ds-feedback-info-foreground:            var(--ds-color-white);
   --ds-feedback-info-border:        var(--ds-color-sky-600);
   --ds-feedback-info-text:          var(--ds-color-sky-700);
 
@@ -133,7 +133,7 @@
   --ds-state-pressed:             rgba(0, 0, 0, 0.1);
   --ds-state-focus:               var(--ds-color-primary);
   --ds-state-disabled-background: var(--ds-color-neutral-100);
-  --ds-state-disabled-fg:         var(--ds-color-neutral-400);
+  --ds-state-disabled-foreground:         var(--ds-color-neutral-400);
 
   /* ---------------------------------------------------------
      SPACE — Semantic layout tokens

@@ -67,5 +67,5 @@
   --ds-state-hover:               rgba(255, 255, 255, 0.05);
   --ds-state-pressed:             rgba(255, 255, 255, 0.1);
   --ds-state-disabled-background: var(--ds-color-neutral-800);
-  --ds-state-disabled-fg:         var(--ds-color-neutral-600);
+  --ds-state-disabled-foreground:         var(--ds-color-neutral-600);
 }

@@ -97,13 +97,13 @@
 .ds-textarea:has(.ds-textarea__field:disabled) {
   background: var(--ds-state-disabled-background);
   border-color: var(--ds-border-subtle);
-  color: var(--ds-state-disabled-fg);
+  color: var(--ds-state-disabled-foreground);
   pointer-events: none;
 }
 
 .ds-textarea--disabled .ds-textarea__field,
 .ds-textarea__field:disabled {
-  color: var(--ds-state-disabled-fg);
+  color: var(--ds-state-disabled-foreground);
   resize: none;
 }
 

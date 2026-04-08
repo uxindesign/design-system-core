@@ -128,13 +128,13 @@
 .ds-select:has(.ds-select__field:disabled) {
   background: var(--ds-state-disabled-background);
   border-color: var(--ds-border-subtle);
-  color: var(--ds-state-disabled-fg);
+  color: var(--ds-state-disabled-foreground);
   pointer-events: none;
 }
 
 .ds-select--disabled .ds-select__field,
 .ds-select__field:disabled {
-  color: var(--ds-state-disabled-fg);
+  color: var(--ds-state-disabled-foreground);
 }
 
 /* Readonly */

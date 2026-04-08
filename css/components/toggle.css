@@ -62,7 +62,7 @@
 }
 
 .ds-toggle:checked::after {
-  background-color: var(--ds-color-primary-fg);
+  background-color: var(--ds-color-primary-foreground);
   transform: translateX(16px);
 }
 
@@ -80,7 +80,7 @@
 }
 
 .ds-toggle:disabled::after {
-  background-color: var(--ds-state-disabled-fg);
+  background-color: var(--ds-state-disabled-foreground);
 }
 
 .ds-toggle-label:has(.ds-toggle:disabled) {

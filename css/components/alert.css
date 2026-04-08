@@ -64,22 +64,22 @@
    --------------------------------------------------------- */
 .ds-alert--success.ds-alert--filled {
   background-color: var(--ds-feedback-success);
-  color: var(--ds-feedback-success-fg);
+  color: var(--ds-feedback-success-foreground);
 }
 
 .ds-alert--warning.ds-alert--filled {
   background-color: var(--ds-feedback-warning);
-  color: var(--ds-feedback-warning-fg);
+  color: var(--ds-feedback-warning-foreground);
 }
 
 .ds-alert--error.ds-alert--filled {
   background-color: var(--ds-feedback-error);
-  color: var(--ds-feedback-error-fg);
+  color: var(--ds-feedback-error-foreground);
 }
 
 .ds-alert--info.ds-alert--filled {
   background-color: var(--ds-feedback-info);
-  color: var(--ds-feedback-info-fg);
+  color: var(--ds-feedback-info-foreground);
 }
 
 /* ---------------------------------------------------------
