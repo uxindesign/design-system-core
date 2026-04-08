@@ -1,120 +1,241 @@
 <!DOCTYPE html>
-<html lang="en" data-mode="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Toggle — Design System</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+  <title>Toggle — UXIN Design System</title>
   <link rel="stylesheet" href="../css/design-system.css">
-  <style>
-    body { display: flex; min-height: 100vh; }
-    .sidebar { width: 240px; padding: 16px; border-right: 1px solid var(--ds-border-subtle); background: var(--ds-background-subtle); position: fixed; height: 100vh; overflow-y: auto; }
-    .sidebar a { display: block; padding: 6px 8px; color: var(--ds-text-secondary); text-decoration: none; font-size: 12px; border-radius: 4px; }
-    .sidebar a:hover { background: var(--ds-state-hover); color: var(--ds-text-default); }
-    .sidebar a.active { background: var(--ds-color-primary-muted); color: var(--ds-color-primary); font-weight: 500; }
-    .sidebar h3 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ds-text-tertiary); margin: 16px 0 8px; }
-    .main { flex: 1; padding: 48px; margin-left: 240px; max-width: 960px; }
-    .main h1 { margin-bottom: 16px; }
-    .main h2 { margin: 48px 0 16px; }
-    .main p { color: var(--ds-text-secondary); margin-bottom: 16px; }
-    .example { padding: 24px; border: 1px solid var(--ds-border-subtle); border-radius: 8px; margin: 12px 0 24px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
-    .example--col { flex-direction: column; align-items: flex-start; }
-    .theme-toggle { position: fixed; top: 16px; right: 16px; z-index: 100; }
-  </style>
+  <link rel="stylesheet" href="layout.css">
 </head>
 <body>
-  <nav class="sidebar">
-    <h2 style="margin-bottom:16px;font-size:16px;">Design System</h2>
-    <h3>Overview</h3>
-    <a href="index.html">Home</a>
-    <a href="tokens.html">Tokens</a>
-    <h3>Components</h3>
-    <a href="button.html">Button</a>
-    <a href="input.html">Input</a>
-    <a href="textarea.html">Textarea</a>
-    <a href="select.html">Select</a>
-    <a href="checkbox.html">Checkbox</a>
-    <a href="radio.html">Radio</a>
-    <a href="toggle.html" class="active">Toggle</a>
-    <a href="badge.html">Badge</a>
-    <a href="alert.html">Alert</a>
-    <a href="card.html">Card</a>
-    <a href="modal.html">Modal</a>
-    <a href="tooltip.html">Tooltip</a>
-    <a href="tabs.html">Tabs</a>
-    <a href="breadcrumb.html">Breadcrumb</a>
-    <a href="avatar.html">Avatar</a>
-    <a href="divider.html">Divider</a>
-    <a href="spinner.html">Spinner</a>
-    <a href="skeleton.html">Skeleton</a>
-    <a href="form-field.html">Form Field</a>
-  </nav>
-  <main class="main">
-    <h1>Toggle</h1>
-    <p>Toggles switch between two states (on/off). Available in 3 sizes with on and disabled states.</p>
 
-    <h2>Sizes</h2>
-    <div class="example">
-      <label class="ds-toggle ds-toggle--sm">
-        <input class="ds-toggle__input" type="checkbox">
-        <span class="ds-toggle__track"></span>
-        <span class="ds-toggle__label">Small</span>
-      </label>
-      <label class="ds-toggle ds-toggle--md">
-        <input class="ds-toggle__input" type="checkbox">
-        <span class="ds-toggle__track"></span>
-        <span class="ds-toggle__label">Medium</span>
-      </label>
-      <label class="ds-toggle ds-toggle--lg">
-        <input class="ds-toggle__input" type="checkbox">
-        <span class="ds-toggle__track"></span>
-        <span class="ds-toggle__label">Large</span>
-      </label>
+<header class="ds-site-header">
+  <div style="display:flex;align-items:center;gap:var(--ds-spacing-4)">
+    <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <a href="index.html" class="ds-site-header__brand">
+      <div class="ds-site-header__logo">DS</div>
+      <span class="ds-site-header__title">UXIN Design System</span>
+    </a>
+  </div>
+  <div class="ds-site-header__actions">
+    <div class="ds-theme-switcher">
+      <label class="ds-theme-switcher__label" for="theme-switcher">Theme</label>
+      <select class="ds-theme-switcher__select" id="theme-switcher">
+        <option value="default">Default (Blue)</option>
+        <option value="ocean">Ocean (Cyan)</option>
+        <option value="forest">Forest (Emerald)</option>
+      </select>
     </div>
+    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode">Dark</button>
+  </div>
+</header>
+<div class="ds-sidebar-overlay" id="sidebar-overlay"></div>
 
-    <h2>Default (Off)</h2>
-    <div class="example">
-      <label class="ds-toggle">
-        <input class="ds-toggle__input" type="checkbox">
-        <span class="ds-toggle__track"></span>
-        <span class="ds-toggle__label">Notifications</span>
-      </label>
-    </div>
+<nav class="ds-sidebar" id="sidebar" aria-label="Main navigation">
+  <div class="ds-sidebar__section"><h2 class="ds-sidebar__heading">Overview</h2><ul class="ds-sidebar__nav"><li><a href="index.html" class="ds-sidebar__link">Getting Started</a></li></ul></div>
+  <div class="ds-sidebar__section"><h2 class="ds-sidebar__heading">Foundations</h2><ul class="ds-sidebar__nav"><li><a href="foundations.html" class="ds-sidebar__link">Design Tokens</a></li></ul></div>
+  <div class="ds-sidebar__section"><h2 class="ds-sidebar__heading">Components</h2><ul class="ds-sidebar__nav">
+    <li><a href="button.html" class="ds-sidebar__link">Button</a></li>
+    <li><a href="input.html" class="ds-sidebar__link">Input</a></li>
+    <li><a href="textarea.html" class="ds-sidebar__link">Textarea</a></li>
+    <li><a href="select.html" class="ds-sidebar__link">Select</a></li>
+    <li><a href="checkbox.html" class="ds-sidebar__link">Checkbox</a></li>
+    <li><a href="radio.html" class="ds-sidebar__link">Radio</a></li>
+    <li><a href="toggle.html" class="ds-sidebar__link ds-sidebar__link--active">Toggle</a></li>
+    <li><a href="badge.html" class="ds-sidebar__link">Badge</a></li>
+    <li><a href="alert.html" class="ds-sidebar__link">Alert</a></li>
+    <li><a href="card.html" class="ds-sidebar__link">Card</a></li>
+    <li><a href="modal.html" class="ds-sidebar__link">Modal</a></li>
+    <li><a href="tooltip.html" class="ds-sidebar__link">Tooltip</a></li>
+    <li><a href="tabs.html" class="ds-sidebar__link">Tabs</a></li>
+    <li><a href="breadcrumb.html" class="ds-sidebar__link">Breadcrumb</a></li>
+    <li><a href="avatar.html" class="ds-sidebar__link">Avatar</a></li>
+    <li><a href="divider.html" class="ds-sidebar__link">Divider</a></li>
+    <li><a href="spinner.html" class="ds-sidebar__link">Spinner</a></li>
+    <li><a href="skeleton.html" class="ds-sidebar__link">Skeleton</a></li>
+    <li><a href="form-field.html" class="ds-sidebar__link">Form Field</a></li>
+  </ul></div>
+  <div class="ds-sidebar__section"><h2 class="ds-sidebar__heading">Guidelines</h2><ul class="ds-sidebar__nav">
+    <li><a href="theming.html" class="ds-sidebar__link">Theming</a></li>
+    <li><a href="accessibility.html" class="ds-sidebar__link">Accessibility</a></li>
+  </ul></div>
+</nav>
 
-    <h2>On</h2>
-    <div class="example">
-      <label class="ds-toggle ds-toggle--sm ds-toggle--on">
-        <input class="ds-toggle__input" type="checkbox" checked>
-        <span class="ds-toggle__track"></span>
-        <span class="ds-toggle__label">Small on</span>
-      </label>
-      <label class="ds-toggle ds-toggle--md ds-toggle--on">
-        <input class="ds-toggle__input" type="checkbox" checked>
-        <span class="ds-toggle__track"></span>
-        <span class="ds-toggle__label">Medium on</span>
-      </label>
-      <label class="ds-toggle ds-toggle--lg ds-toggle--on">
-        <input class="ds-toggle__input" type="checkbox" checked>
-        <span class="ds-toggle__track"></span>
-        <span class="ds-toggle__label">Large on</span>
-      </label>
-    </div>
+<main class="ds-main">
+  <div class="ds-section">
+    <h1 class="ds-section__title">Toggle</h1>
+    <p class="ds-section__subtitle">Toggles (switches) let users turn a setting on or off instantly. Built with a styled native checkbox.</p>
+  </div>
 
-    <h2>Disabled</h2>
-    <div class="example">
-      <label class="ds-toggle ds-toggle--disabled">
-        <input class="ds-toggle__input" type="checkbox" disabled>
-        <span class="ds-toggle__track"></span>
-        <span class="ds-toggle__label">Disabled off</span>
-      </label>
-      <label class="ds-toggle ds-toggle--on ds-toggle--disabled">
-        <input class="ds-toggle__input" type="checkbox" checked disabled>
-        <span class="ds-toggle__track"></span>
-        <span class="ds-toggle__label">Disabled on</span>
-      </label>
+  <!-- Default -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Default</h2>
+    <div class="ds-preview">
+      <div class="ds-preview__tabs" role="tablist">
+        <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
+        <button class="ds-preview__tab" role="tab" aria-selected="false" data-tab="code">Code</button>
+      </div>
+      <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
+        <div class="ds-preview__canvas ds-preview__canvas--column">
+          <label class="ds-toggle-label">
+            <input type="checkbox" class="ds-toggle" role="switch">
+            Notifications
+          </label>
+        </div>
+      </div>
+      <div class="ds-preview__panel" data-panel="code">
+        <div class="ds-preview__code">
+          <button class="ds-preview__copy" aria-label="Copy code">Copy</button>
+          <pre><code>&lt;label class="ds-toggle-label"&gt;
+  &lt;input type="checkbox" class="ds-toggle" role="switch"&gt;
+  Notifications
+&lt;/label&gt;</code></pre>
+        </div>
+      </div>
     </div>
-  </main>
-  <button class="ds-btn ds-btn--outline ds-btn--sm theme-toggle" onclick="document.documentElement.dataset.mode = document.documentElement.dataset.mode === 'dark' ? 'light' : 'dark'">Toggle Dark Mode</button>
+  </div>
+
+  <!-- Checked -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Checked</h2>
+    <div class="ds-preview">
+      <div class="ds-preview__tabs" role="tablist">
+        <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
+        <button class="ds-preview__tab" role="tab" aria-selected="false" data-tab="code">Code</button>
+      </div>
+      <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
+        <div class="ds-preview__canvas ds-preview__canvas--column">
+          <label class="ds-toggle-label">
+            <input type="checkbox" class="ds-toggle" role="switch" checked>
+            Dark mode enabled
+          </label>
+        </div>
+      </div>
+      <div class="ds-preview__panel" data-panel="code">
+        <div class="ds-preview__code">
+          <button class="ds-preview__copy" aria-label="Copy code">Copy</button>
+          <pre><code>&lt;label class="ds-toggle-label"&gt;
+  &lt;input type="checkbox" class="ds-toggle" role="switch" checked&gt;
+  Dark mode enabled
+&lt;/label&gt;</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sizes -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Sizes</h2>
+    <div class="ds-preview">
+      <div class="ds-preview__tabs" role="tablist">
+        <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
+        <button class="ds-preview__tab" role="tab" aria-selected="false" data-tab="code">Code</button>
+      </div>
+      <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
+        <div class="ds-preview__canvas ds-preview__canvas--column">
+          <label class="ds-toggle-label">
+            <input type="checkbox" class="ds-toggle ds-toggle--sm" role="switch" checked>
+            Small
+          </label>
+          <label class="ds-toggle-label">
+            <input type="checkbox" class="ds-toggle" role="switch" checked>
+            Medium (default)
+          </label>
+          <label class="ds-toggle-label">
+            <input type="checkbox" class="ds-toggle ds-toggle--lg" role="switch" checked>
+            Large
+          </label>
+        </div>
+      </div>
+      <div class="ds-preview__panel" data-panel="code">
+        <div class="ds-preview__code">
+          <button class="ds-preview__copy" aria-label="Copy code">Copy</button>
+          <pre><code>&lt;label class="ds-toggle-label"&gt;
+  &lt;input type="checkbox" class="ds-toggle ds-toggle--sm" role="switch"&gt;
+  Small
+&lt;/label&gt;
+
+&lt;label class="ds-toggle-label"&gt;
+  &lt;input type="checkbox" class="ds-toggle" role="switch"&gt;
+  Medium (default)
+&lt;/label&gt;
+
+&lt;label class="ds-toggle-label"&gt;
+  &lt;input type="checkbox" class="ds-toggle ds-toggle--lg" role="switch"&gt;
+  Large
+&lt;/label&gt;</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Disabled -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Disabled</h2>
+    <div class="ds-preview">
+      <div class="ds-preview__tabs" role="tablist">
+        <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
+        <button class="ds-preview__tab" role="tab" aria-selected="false" data-tab="code">Code</button>
+      </div>
+      <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
+        <div class="ds-preview__canvas ds-preview__canvas--column">
+          <label class="ds-toggle-label">
+            <input type="checkbox" class="ds-toggle" role="switch" disabled>
+            Disabled off
+          </label>
+          <label class="ds-toggle-label">
+            <input type="checkbox" class="ds-toggle" role="switch" checked disabled>
+            Disabled on
+          </label>
+        </div>
+      </div>
+      <div class="ds-preview__panel" data-panel="code">
+        <div class="ds-preview__code">
+          <button class="ds-preview__copy" aria-label="Copy code">Copy</button>
+          <pre><code>&lt;label class="ds-toggle-label"&gt;
+  &lt;input type="checkbox" class="ds-toggle" role="switch" disabled&gt;
+  Disabled off
+&lt;/label&gt;
+
+&lt;label class="ds-toggle-label"&gt;
+  &lt;input type="checkbox" class="ds-toggle" role="switch" checked disabled&gt;
+  Disabled on
+&lt;/label&gt;</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CSS Classes -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">CSS Classes</h2>
+    <table class="ds-table ds-props-table">
+      <thead>
+        <tr><th>Class</th><th>Description</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>ds-toggle</code></td><td>Custom styled switch (native checkbox)</td></tr>
+        <tr><td><code>ds-toggle-label</code></td><td>Label wrapper (wraps toggle + text)</td></tr>
+        <tr><td><code>ds-toggle--sm</code></td><td>Small size (28x16px)</td></tr>
+        <tr><td><code>ds-toggle--lg</code></td><td>Large size (44x24px)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Accessibility -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Accessibility</h2>
+    <div class="ds-a11y-note">
+      <p class="ds-a11y-note__title">Accessibility Guidelines</p>
+      <p class="ds-a11y-note__text">
+        Add <code>role="switch"</code> to the checkbox element so screen readers announce it as a switch rather than a checkbox. The native checkbox provides keyboard support (Space to toggle). A visible label should always describe what the toggle controls. Focus ring is visible on keyboard focus via <code>:focus-visible</code>.
+      </p>
+    </div>
+  </div>
+</main>
+
+<script src="../js/main.js"></script>
 </body>
 </html>

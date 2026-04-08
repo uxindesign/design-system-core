@@ -1,123 +1,342 @@
 <!DOCTYPE html>
-<html lang="en" data-mode="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Input — Design System</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+  <title>Input — UXIN Design System</title>
   <link rel="stylesheet" href="../css/design-system.css">
-  <style>
-    body { display: flex; min-height: 100vh; }
-    .sidebar { width: 240px; padding: 16px; border-right: 1px solid var(--ds-border-subtle); background: var(--ds-background-subtle); position: fixed; height: 100vh; overflow-y: auto; }
-    .sidebar a { display: block; padding: 6px 8px; color: var(--ds-text-secondary); text-decoration: none; font-size: 12px; border-radius: 4px; }
-    .sidebar a:hover { background: var(--ds-state-hover); color: var(--ds-text-default); }
-    .sidebar a.active { background: var(--ds-color-primary-muted); color: var(--ds-color-primary); font-weight: 500; }
-    .sidebar h3 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ds-text-tertiary); margin: 16px 0 8px; }
-    .main { flex: 1; padding: 48px; margin-left: 240px; max-width: 960px; }
-    .main h1 { margin-bottom: 16px; }
-    .main h2 { margin: 48px 0 16px; }
-    .main p { color: var(--ds-text-secondary); margin-bottom: 16px; }
-    .example { padding: 24px; border: 1px solid var(--ds-border-subtle); border-radius: 8px; margin: 12px 0 24px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
-    .example--col { flex-direction: column; align-items: flex-start; }
-    .theme-toggle { position: fixed; top: 16px; right: 16px; z-index: 100; }
-  </style>
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
-  <nav class="sidebar">
-    <h2 style="margin-bottom:16px;font-size:16px;">Design System</h2>
-    <h3>Overview</h3>
-    <a href="index.html">Home</a>
-    <a href="tokens.html">Tokens</a>
-    <h3>Components</h3>
-    <a href="button.html">Button</a>
-    <a href="input.html" class="active">Input</a>
-    <a href="textarea.html">Textarea</a>
-    <a href="select.html">Select</a>
-    <a href="checkbox.html">Checkbox</a>
-    <a href="radio.html">Radio</a>
-    <a href="toggle.html">Toggle</a>
-    <a href="badge.html">Badge</a>
-    <a href="alert.html">Alert</a>
-    <a href="card.html">Card</a>
-    <a href="modal.html">Modal</a>
-    <a href="tooltip.html">Tooltip</a>
-    <a href="tabs.html">Tabs</a>
-    <a href="breadcrumb.html">Breadcrumb</a>
-    <a href="avatar.html">Avatar</a>
-    <a href="divider.html">Divider</a>
-    <a href="spinner.html">Spinner</a>
-    <a href="skeleton.html">Skeleton</a>
-    <a href="form-field.html">Form Field</a>
-  </nav>
-  <main class="main">
-    <h1>Input</h1>
-    <p>Text inputs allow users to enter and edit text. Available in 3 sizes with support for icons, error, disabled, and readonly states.</p>
 
-    <h2>Sizes</h2>
-    <div class="example example--col">
-      <div class="ds-input ds-input--sm" style="width:320px;">
-        <input class="ds-input__field" type="text" placeholder="Small input">
+<header class="ds-site-header">
+  <div style="display:flex;align-items:center;gap:var(--ds-spacing-4)">
+    <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <a href="index.html" class="ds-site-header__brand">
+      <div class="ds-site-header__logo">DS</div>
+      <span class="ds-site-header__title">UXIN Design System</span>
+    </a>
+  </div>
+  <div class="ds-site-header__actions">
+    <div class="ds-theme-switcher">
+      <label class="ds-theme-switcher__label" for="theme-switcher">Theme</label>
+      <select class="ds-theme-switcher__select" id="theme-switcher">
+        <option value="default">Default (Blue)</option>
+        <option value="ocean">Ocean (Cyan)</option>
+        <option value="forest">Forest (Emerald)</option>
+      </select>
+    </div>
+    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode">Dark</button>
+  </div>
+</header>
+<div class="ds-sidebar-overlay" id="sidebar-overlay"></div>
+
+<nav class="ds-sidebar" id="sidebar" aria-label="Main navigation">
+  <div class="ds-sidebar__section"><h2 class="ds-sidebar__heading">Overview</h2><ul class="ds-sidebar__nav"><li><a href="index.html" class="ds-sidebar__link">Getting Started</a></li></ul></div>
+  <div class="ds-sidebar__section"><h2 class="ds-sidebar__heading">Foundations</h2><ul class="ds-sidebar__nav"><li><a href="foundations.html" class="ds-sidebar__link">Design Tokens</a></li></ul></div>
+  <div class="ds-sidebar__section"><h2 class="ds-sidebar__heading">Components</h2><ul class="ds-sidebar__nav">
+    <li><a href="button.html" class="ds-sidebar__link">Button</a></li>
+    <li><a href="input.html" class="ds-sidebar__link ds-sidebar__link--active">Input</a></li>
+    <li><a href="textarea.html" class="ds-sidebar__link">Textarea</a></li>
+    <li><a href="select.html" class="ds-sidebar__link">Select</a></li>
+    <li><a href="checkbox.html" class="ds-sidebar__link">Checkbox</a></li>
+    <li><a href="radio.html" class="ds-sidebar__link">Radio</a></li>
+    <li><a href="toggle.html" class="ds-sidebar__link">Toggle</a></li>
+    <li><a href="badge.html" class="ds-sidebar__link">Badge</a></li>
+    <li><a href="alert.html" class="ds-sidebar__link">Alert</a></li>
+    <li><a href="card.html" class="ds-sidebar__link">Card</a></li>
+    <li><a href="modal.html" class="ds-sidebar__link">Modal</a></li>
+    <li><a href="tooltip.html" class="ds-sidebar__link">Tooltip</a></li>
+    <li><a href="tabs.html" class="ds-sidebar__link">Tabs</a></li>
+    <li><a href="breadcrumb.html" class="ds-sidebar__link">Breadcrumb</a></li>
+    <li><a href="avatar.html" class="ds-sidebar__link">Avatar</a></li>
+    <li><a href="divider.html" class="ds-sidebar__link">Divider</a></li>
+    <li><a href="spinner.html" class="ds-sidebar__link">Spinner</a></li>
+    <li><a href="skeleton.html" class="ds-sidebar__link">Skeleton</a></li>
+    <li><a href="form-field.html" class="ds-sidebar__link">Form Field</a></li>
+  </ul></div>
+  <div class="ds-sidebar__section"><h2 class="ds-sidebar__heading">Guidelines</h2><ul class="ds-sidebar__nav">
+    <li><a href="theming.html" class="ds-sidebar__link">Theming</a></li>
+    <li><a href="accessibility.html" class="ds-sidebar__link">Accessibility</a></li>
+  </ul></div>
+</nav>
+
+<main class="ds-main">
+  <div class="ds-section">
+    <h1 class="ds-section__title">Input</h1>
+    <p class="ds-section__subtitle">Text inputs allow users to enter and edit text. Uses a wrapper pattern with an inner field element for consistent styling.</p>
+  </div>
+
+  <!-- Default -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Default</h2>
+    <div class="ds-preview">
+      <div class="ds-preview__tabs" role="tablist">
+        <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
+        <button class="ds-preview__tab" role="tab" aria-selected="false" data-tab="code">Code</button>
       </div>
-      <div class="ds-input ds-input--md" style="width:320px;">
-        <input class="ds-input__field" type="text" placeholder="Medium input (default)">
+      <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
+        <div class="ds-preview__canvas ds-preview__canvas--column" style="max-width:400px">
+          <div class="ds-input">
+            <input type="text" class="ds-input__field" placeholder="Enter text...">
+          </div>
+        </div>
       </div>
-      <div class="ds-input ds-input--lg" style="width:320px;">
-        <input class="ds-input__field" type="text" placeholder="Large input">
+      <div class="ds-preview__panel" data-panel="code">
+        <div class="ds-preview__code">
+          <button class="ds-preview__copy" aria-label="Copy code">Copy</button>
+          <pre><code>&lt;div class="ds-input"&gt;
+  &lt;input type="text" class="ds-input__field" placeholder="Enter text..."&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sizes -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Sizes</h2>
+    <div class="ds-preview">
+      <div class="ds-preview__tabs" role="tablist">
+        <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
+        <button class="ds-preview__tab" role="tab" aria-selected="false" data-tab="code">Code</button>
+      </div>
+      <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
+        <div class="ds-preview__canvas ds-preview__canvas--column" style="max-width:400px">
+          <div class="ds-input ds-input--sm">
+            <input type="text" class="ds-input__field" placeholder="Small (34px)">
+          </div>
+          <div class="ds-input ds-input--md">
+            <input type="text" class="ds-input__field" placeholder="Medium (47px)">
+          </div>
+          <div class="ds-input ds-input--lg">
+            <input type="text" class="ds-input__field" placeholder="Large (58px)">
+          </div>
+        </div>
+      </div>
+      <div class="ds-preview__panel" data-panel="code">
+        <div class="ds-preview__code">
+          <button class="ds-preview__copy" aria-label="Copy code">Copy</button>
+          <pre><code>&lt;div class="ds-input ds-input--sm"&gt;
+  &lt;input type="text" class="ds-input__field" placeholder="Small (34px)"&gt;
+&lt;/div&gt;
+
+&lt;div class="ds-input ds-input--md"&gt;
+  &lt;input type="text" class="ds-input__field" placeholder="Medium (47px)"&gt;
+&lt;/div&gt;
+
+&lt;div class="ds-input ds-input--lg"&gt;
+  &lt;input type="text" class="ds-input__field" placeholder="Large (58px)"&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- With Icon -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">With Icon</h2>
+    <div class="ds-preview">
+      <div class="ds-preview__tabs" role="tablist">
+        <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
+        <button class="ds-preview__tab" role="tab" aria-selected="false" data-tab="code">Code</button>
+      </div>
+      <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
+        <div class="ds-preview__canvas ds-preview__canvas--column" style="max-width:400px">
+          <div class="ds-input">
+            <span class="ds-input__icon material-symbols-outlined">search</span>
+            <input type="text" class="ds-input__field" placeholder="Search...">
+          </div>
+          <div class="ds-input">
+            <span class="ds-input__icon material-symbols-outlined">mail</span>
+            <input type="email" class="ds-input__field" placeholder="Email address">
+          </div>
+        </div>
+      </div>
+      <div class="ds-preview__panel" data-panel="code">
+        <div class="ds-preview__code">
+          <button class="ds-preview__copy" aria-label="Copy code">Copy</button>
+          <pre><code>&lt;div class="ds-input"&gt;
+  &lt;span class="ds-input__icon material-symbols-outlined"&gt;search&lt;/span&gt;
+  &lt;input type="text" class="ds-input__field" placeholder="Search..."&gt;
+&lt;/div&gt;
+
+&lt;div class="ds-input"&gt;
+  &lt;span class="ds-input__icon material-symbols-outlined"&gt;mail&lt;/span&gt;
+  &lt;input type="email" class="ds-input__field" placeholder="Email address"&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- States -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">States</h2>
+
+    <h3>Error</h3>
+    <div class="ds-preview">
+      <div class="ds-preview__tabs" role="tablist">
+        <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
+        <button class="ds-preview__tab" role="tab" aria-selected="false" data-tab="code">Code</button>
+      </div>
+      <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
+        <div class="ds-preview__canvas ds-preview__canvas--column" style="max-width:400px">
+          <div class="ds-input ds-input--error">
+            <input type="text" class="ds-input__field" value="Invalid value" aria-invalid="true">
+          </div>
+        </div>
+      </div>
+      <div class="ds-preview__panel" data-panel="code">
+        <div class="ds-preview__code">
+          <button class="ds-preview__copy" aria-label="Copy code">Copy</button>
+          <pre><code>&lt;div class="ds-input ds-input--error"&gt;
+  &lt;input type="text" class="ds-input__field" value="Invalid value" aria-invalid="true"&gt;
+&lt;/div&gt;</code></pre>
+        </div>
       </div>
     </div>
 
-    <h2>Default</h2>
-    <div class="example example--col">
-      <div class="ds-input" style="width:320px;">
-        <input class="ds-input__field" type="text" placeholder="Enter your name">
+    <h3>Disabled</h3>
+    <div class="ds-preview">
+      <div class="ds-preview__tabs" role="tablist">
+        <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
+        <button class="ds-preview__tab" role="tab" aria-selected="false" data-tab="code">Code</button>
+      </div>
+      <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
+        <div class="ds-preview__canvas ds-preview__canvas--column" style="max-width:400px">
+          <div class="ds-input">
+            <input type="text" class="ds-input__field" value="Disabled input" disabled>
+          </div>
+        </div>
+      </div>
+      <div class="ds-preview__panel" data-panel="code">
+        <div class="ds-preview__code">
+          <button class="ds-preview__copy" aria-label="Copy code">Copy</button>
+          <pre><code>&lt;div class="ds-input"&gt;
+  &lt;input type="text" class="ds-input__field" value="Disabled input" disabled&gt;
+&lt;/div&gt;</code></pre>
+        </div>
       </div>
     </div>
 
-    <h2>Focused</h2>
-    <div class="example example--col">
-      <div class="ds-input ds-input--focused" style="width:320px;">
-        <input class="ds-input__field" type="text" value="Focused input">
+    <h3>Readonly</h3>
+    <div class="ds-preview">
+      <div class="ds-preview__tabs" role="tablist">
+        <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
+        <button class="ds-preview__tab" role="tab" aria-selected="false" data-tab="code">Code</button>
+      </div>
+      <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
+        <div class="ds-preview__canvas ds-preview__canvas--column" style="max-width:400px">
+          <div class="ds-input">
+            <input type="text" class="ds-input__field" value="Read-only value" readonly>
+          </div>
+        </div>
+      </div>
+      <div class="ds-preview__panel" data-panel="code">
+        <div class="ds-preview__code">
+          <button class="ds-preview__copy" aria-label="Copy code">Copy</button>
+          <pre><code>&lt;div class="ds-input"&gt;
+  &lt;input type="text" class="ds-input__field" value="Read-only value" readonly&gt;
+&lt;/div&gt;</code></pre>
+        </div>
       </div>
     </div>
+  </div>
 
-    <h2>Error</h2>
-    <div class="example example--col">
-      <div class="ds-input ds-input--error" style="width:320px;">
-        <input class="ds-input__field" type="text" value="Invalid value">
+  <!-- With Form Field -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">With Form Field</h2>
+    <div class="ds-preview">
+      <div class="ds-preview__tabs" role="tablist">
+        <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
+        <button class="ds-preview__tab" role="tab" aria-selected="false" data-tab="code">Code</button>
       </div>
-    </div>
+      <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
+        <div class="ds-preview__canvas ds-preview__canvas--column" style="max-width:400px">
+          <div class="ds-field">
+            <label class="ds-field__label" for="demo-name">Full name</label>
+            <div class="ds-input">
+              <input type="text" class="ds-input__field" id="demo-name" placeholder="John Doe">
+            </div>
+            <span class="ds-field__helper">Enter your first and last name.</span>
+          </div>
 
-    <h2>Disabled</h2>
-    <div class="example example--col">
-      <div class="ds-input ds-input--disabled" style="width:320px;">
-        <input class="ds-input__field" type="text" value="Disabled input" disabled>
+          <div class="ds-field ds-field--error">
+            <label class="ds-field__label" for="demo-email">Email<span class="ds-field__required">*</span></label>
+            <div class="ds-input">
+              <input type="email" class="ds-input__field" id="demo-email" value="invalid" aria-invalid="true" aria-describedby="email-error">
+            </div>
+            <span class="ds-field__error" id="email-error">Please enter a valid email address.</span>
+            <span class="ds-field__helper">We'll never share your email.</span>
+          </div>
+        </div>
       </div>
-    </div>
+      <div class="ds-preview__panel" data-panel="code">
+        <div class="ds-preview__code">
+          <button class="ds-preview__copy" aria-label="Copy code">Copy</button>
+          <pre><code>&lt;div class="ds-field"&gt;
+  &lt;label class="ds-field__label" for="name"&gt;Full name&lt;/label&gt;
+  &lt;div class="ds-input"&gt;
+    &lt;input type="text" class="ds-input__field" id="name" placeholder="John Doe"&gt;
+  &lt;/div&gt;
+  &lt;span class="ds-field__helper"&gt;Enter your first and last name.&lt;/span&gt;
+&lt;/div&gt;
 
-    <h2>Readonly</h2>
-    <div class="example example--col">
-      <div class="ds-input ds-input--readonly" style="width:320px;">
-        <input class="ds-input__field" type="text" value="Readonly value" readonly>
+&lt;div class="ds-field ds-field--error"&gt;
+  &lt;label class="ds-field__label" for="email"&gt;Email&lt;span class="ds-field__required"&gt;*&lt;/span&gt;&lt;/label&gt;
+  &lt;div class="ds-input"&gt;
+    &lt;input type="email" class="ds-input__field" id="email" aria-invalid="true" aria-describedby="email-error"&gt;
+  &lt;/div&gt;
+  &lt;span class="ds-field__error" id="email-error"&gt;Please enter a valid email address.&lt;/span&gt;
+  &lt;span class="ds-field__helper"&gt;We'll never share your email.&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+        </div>
       </div>
     </div>
+  </div>
 
-    <h2>With Icons</h2>
-    <div class="example example--col">
-      <div class="ds-input" style="width:320px;">
-        <svg class="ds-input__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        <input class="ds-input__field" type="text" placeholder="Search...">
-      </div>
-      <div class="ds-input" style="width:320px;">
-        <svg class="ds-input__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        <input class="ds-input__field" type="email" placeholder="Email address">
-      </div>
-      <div class="ds-input ds-input--error" style="width:320px;">
-        <svg class="ds-input__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-        <input class="ds-input__field" type="text" value="Error with icon">
-      </div>
+  <!-- CSS Classes -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">CSS Classes</h2>
+    <table class="ds-table ds-props-table">
+      <thead>
+        <tr><th>Class</th><th>Description</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>ds-input</code></td><td>Wrapper element for the input</td></tr>
+        <tr><td><code>ds-input__field</code></td><td>The native <code>&lt;input&gt;</code> element</td></tr>
+        <tr><td><code>ds-input__icon</code></td><td>Leading icon inside the wrapper</td></tr>
+        <tr><td><code>ds-input--sm</code></td><td>Small size (34px height)</td></tr>
+        <tr><td><code>ds-input--md</code></td><td>Medium size (47px height, default)</td></tr>
+        <tr><td><code>ds-input--lg</code></td><td>Large size (58px height)</td></tr>
+        <tr><td><code>ds-input--error</code></td><td>Error state with red border</td></tr>
+        <tr><td><code>ds-input--disabled</code></td><td>Disabled state (or use native <code>disabled</code>)</td></tr>
+        <tr><td><code>ds-input--readonly</code></td><td>Readonly state (or use native <code>readonly</code>)</td></tr>
+        <tr><td><code>ds-field</code></td><td>Form field wrapper with label, helper, and error</td></tr>
+        <tr><td><code>ds-field__label</code></td><td>Field label</td></tr>
+        <tr><td><code>ds-field__helper</code></td><td>Helper text below the input</td></tr>
+        <tr><td><code>ds-field__error</code></td><td>Error message (shown when <code>ds-field--error</code> is set)</td></tr>
+        <tr><td><code>ds-field--error</code></td><td>Error state on the field wrapper</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Accessibility -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Accessibility</h2>
+    <div class="ds-a11y-note">
+      <p class="ds-a11y-note__title">Accessibility Guidelines</p>
+      <p class="ds-a11y-note__text">
+        Always associate a <code>&lt;label&gt;</code> with each input using matching <code>for</code> and <code>id</code> attributes. When in an error state, add <code>aria-invalid="true"</code> to the input and use <code>aria-describedby</code> to link to the error message element so screen readers announce the error. The focus ring is visible on keyboard navigation.
+      </p>
     </div>
-  </main>
-  <button class="ds-btn ds-btn--outline ds-btn--sm theme-toggle" onclick="document.documentElement.dataset.mode = document.documentElement.dataset.mode === 'dark' ? 'light' : 'dark'">Toggle Dark Mode</button>
+  </div>
+</main>
+
+<script src="../js/main.js"></script>
 </body>
 </html>

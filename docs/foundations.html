@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design Tokens — UXIN Design System</title>
+  <link rel="stylesheet" href="../css/design-system.css">
+  <link rel="stylesheet" href="layout.css">
+</head>
+<body>
+
+<header class="ds-site-header">
+  <div style="display:flex;align-items:center;gap:var(--ds-spacing-4)">
+    <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <a href="index.html" class="ds-site-header__brand">
+      <div class="ds-site-header__logo">DS</div>
+      <span class="ds-site-header__title">UXIN Design System</span>
+    </a>
+  </div>
+  <div class="ds-site-header__actions">
+    <div class="ds-theme-switcher">
+      <label class="ds-theme-switcher__label" for="theme-switcher">Theme</label>
+      <select class="ds-theme-switcher__select" id="theme-switcher">
+        <option value="default">Default (Blue)</option>
+        <option value="ocean">Ocean (Cyan)</option>
+        <option value="forest">Forest (Emerald)</option>
+      </select>
+    </div>
+    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode">Dark</button>
+  </div>
+</header>
+<div class="ds-sidebar-overlay" id="sidebar-overlay"></div>
+
+<nav class="ds-sidebar" id="sidebar" aria-label="Main navigation">
+  <div class="ds-sidebar__section">
+    <h2 class="ds-sidebar__heading">Overview</h2>
+    <ul class="ds-sidebar__nav">
+      <li><a href="index.html" class="ds-sidebar__link">Getting Started</a></li>
+    </ul>
+  </div>
+  <div class="ds-sidebar__section">
+    <h2 class="ds-sidebar__heading">Foundations</h2>
+    <ul class="ds-sidebar__nav">
+      <li><a href="foundations.html" class="ds-sidebar__link ds-sidebar__link--active">Design Tokens</a></li>
+    </ul>
+  </div>
+  <div class="ds-sidebar__section">
+    <h2 class="ds-sidebar__heading">Components</h2>
+    <ul class="ds-sidebar__nav">
+      <li><a href="button.html" class="ds-sidebar__link">Button</a></li>
+      <li><a href="input.html" class="ds-sidebar__link">Input</a></li>
+      <li><a href="textarea.html" class="ds-sidebar__link">Textarea</a></li>
+      <li><a href="select.html" class="ds-sidebar__link">Select</a></li>
+      <li><a href="checkbox.html" class="ds-sidebar__link">Checkbox</a></li>
+      <li><a href="radio.html" class="ds-sidebar__link">Radio</a></li>
+      <li><a href="toggle.html" class="ds-sidebar__link">Toggle</a></li>
+      <li><a href="badge.html" class="ds-sidebar__link">Badge</a></li>
+      <li><a href="alert.html" class="ds-sidebar__link">Alert</a></li>
+      <li><a href="card.html" class="ds-sidebar__link">Card</a></li>
+      <li><a href="modal.html" class="ds-sidebar__link">Modal</a></li>
+      <li><a href="tooltip.html" class="ds-sidebar__link">Tooltip</a></li>
+      <li><a href="tabs.html" class="ds-sidebar__link">Tabs</a></li>
+      <li><a href="breadcrumb.html" class="ds-sidebar__link">Breadcrumb</a></li>
+      <li><a href="avatar.html" class="ds-sidebar__link">Avatar</a></li>
+      <li><a href="divider.html" class="ds-sidebar__link">Divider</a></li>
+      <li><a href="spinner.html" class="ds-sidebar__link">Spinner</a></li>
+      <li><a href="skeleton.html" class="ds-sidebar__link">Skeleton</a></li>
+      <li><a href="form-field.html" class="ds-sidebar__link">Form Field</a></li>
+    </ul>
+  </div>
+  <div class="ds-sidebar__section">
+    <h2 class="ds-sidebar__heading">Guidelines</h2>
+    <ul class="ds-sidebar__nav">
+      <li><a href="theming.html" class="ds-sidebar__link">Theming</a></li>
+      <li><a href="accessibility.html" class="ds-sidebar__link">Accessibility</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="ds-main">
+
+  <div class="ds-section">
+    <h1 class="ds-section__title">Design Tokens</h1>
+    <p class="ds-section__subtitle">Foundation primitives and semantic aliases that power the design system.</p>
+  </div>
+
+  <!-- ============================================================
+       COLORS — Neutral
+       ============================================================ -->
+  <div class="ds-section">
+    <div class="ds-subsection">
+      <h2 class="ds-subsection__title">Neutral</h2>
+      <div class="ds-swatch-grid">
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-neutral-50)"></div><div class="ds-swatch__name">50</div><div class="ds-swatch__value">#F8FAFC</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-neutral-100)"></div><div class="ds-swatch__name">100</div><div class="ds-swatch__value">#F1F5F9</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-neutral-200)"></div><div class="ds-swatch__name">200</div><div class="ds-swatch__value">#E2E8F0</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-neutral-300)"></div><div class="ds-swatch__name">300</div><div class="ds-swatch__value">#CBD5E1</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-neutral-400)"></div><div class="ds-swatch__name">400</div><div class="ds-swatch__value">#94A3B8</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-neutral-500)"></div><div class="ds-swatch__name">500</div><div class="ds-swatch__value">#64748B</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-neutral-600)"></div><div class="ds-swatch__name">600</div><div class="ds-swatch__value">#475569</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-neutral-700)"></div><div class="ds-swatch__name">700</div><div class="ds-swatch__value">#334155</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-neutral-800)"></div><div class="ds-swatch__name">800</div><div class="ds-swatch__value">#1E293B</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-neutral-900)"></div><div class="ds-swatch__name">900</div><div class="ds-swatch__value">#0F172A</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-neutral-950)"></div><div class="ds-swatch__name">950</div><div class="ds-swatch__value">#020617</div></div>
+      </div>
+    </div>
+
+    <!-- Blue -->
+    <div class="ds-subsection">
+      <h2 class="ds-subsection__title">Blue</h2>
+      <div class="ds-swatch-grid">
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-blue-50)"></div><div class="ds-swatch__name">50</div><div class="ds-swatch__value">#EFF6FF</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-blue-100)"></div><div class="ds-swatch__name">100</div><div class="ds-swatch__value">#DBEAFE</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-blue-200)"></div><div class="ds-swatch__name">200</div><div class="ds-swatch__value">#BFDBFE</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-blue-300)"></div><div class="ds-swatch__name">300</div><div class="ds-swatch__value">#93C5FD</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-blue-400)"></div><div class="ds-swatch__name">400</div><div class="ds-swatch__value">#60A5FA</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-blue-500)"></div><div class="ds-swatch__name">500</div><div class="ds-swatch__value">#3B82F6</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-blue-600)"></div><div class="ds-swatch__name">600</div><div class="ds-swatch__value">#2563EB</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-blue-700)"></div><div class="ds-swatch__name">700</div><div class="ds-swatch__value">#1D4ED8</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-blue-800)"></div><div class="ds-swatch__name">800</div><div class="ds-swatch__value">#1E40AF</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-blue-900)"></div><div class="ds-swatch__name">900</div><div class="ds-swatch__value">#1E3A8A</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-blue-950)"></div><div class="ds-swatch__name">950</div><div class="ds-swatch__value">#172554</div></div>
+      </div>
+    </div>
+
+    <!-- Purple -->
+    <div class="ds-subsection">
+      <h2 class="ds-subsection__title">Purple</h2>
+      <div class="ds-swatch-grid">
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-purple-50)"></div><div class="ds-swatch__name">50</div><div class="ds-swatch__value">#FAF5FF</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-purple-100)"></div><div class="ds-swatch__name">100</div><div class="ds-swatch__value">#F3E8FF</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-purple-200)"></div><div class="ds-swatch__name">200</div><div class="ds-swatch__value">#E9D5FF</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-purple-300)"></div><div class="ds-swatch__name">300</div><div class="ds-swatch__value">#D8B4FE</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-purple-400)"></div><div class="ds-swatch__name">400</div><div class="ds-swatch__value">#C084FC</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-purple-500)"></div><div class="ds-swatch__name">500</div><div class="ds-swatch__value">#A855F7</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-purple-600)"></div><div class="ds-swatch__name">600</div><div class="ds-swatch__value">#9333EA</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-purple-700)"></div><div class="ds-swatch__name">700</div><div class="ds-swatch__value">#7E22CE</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-purple-800)"></div><div class="ds-swatch__name">800</div><div class="ds-swatch__value">#6B21A8</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-purple-900)"></div><div class="ds-swatch__name">900</div><div class="ds-swatch__value">#581C87</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-purple-950)"></div><div class="ds-swatch__name">950</div><div class="ds-swatch__value">#3B0764</div></div>
+      </div>
+    </div>
+
+    <!-- Red -->
+    <div class="ds-subsection">
+      <h2 class="ds-subsection__title">Red</h2>
+      <div class="ds-swatch-grid">
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-red-50)"></div><div class="ds-swatch__name">50</div><div class="ds-swatch__value">#FEF2F2</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-red-100)"></div><div class="ds-swatch__name">100</div><div class="ds-swatch__value">#FEE2E2</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-red-200)"></div><div class="ds-swatch__name">200</div><div class="ds-swatch__value">#FECACA</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-red-300)"></div><div class="ds-swatch__name">300</div><div class="ds-swatch__value">#FCA5A5</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-red-400)"></div><div class="ds-swatch__name">400</div><div class="ds-swatch__value">#F87171</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-red-500)"></div><div class="ds-swatch__name">500</div><div class="ds-swatch__value">#EF4444</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-red-600)"></div><div class="ds-swatch__name">600</div><div class="ds-swatch__value">#DC2626</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-red-700)"></div><div class="ds-swatch__name">700</div><div class="ds-swatch__value">#B91C1C</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-red-800)"></div><div class="ds-swatch__name">800</div><div class="ds-swatch__value">#991B1B</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-red-900)"></div><div class="ds-swatch__name">900</div><div class="ds-swatch__value">#7F1D1D</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-red-950)"></div><div class="ds-swatch__name">950</div><div class="ds-swatch__value">#450A0A</div></div>
+      </div>
+    </div>
+
+    <!-- Amber -->
+    <div class="ds-subsection">
+      <h2 class="ds-subsection__title">Amber</h2>
+      <div class="ds-swatch-grid">
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-amber-50)"></div><div class="ds-swatch__name">50</div><div class="ds-swatch__value">#FFFBEB</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-amber-100)"></div><div class="ds-swatch__name">100</div><div class="ds-swatch__value">#FEF3C7</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-amber-200)"></div><div class="ds-swatch__name">200</div><div class="ds-swatch__value">#FDE68A</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-amber-300)"></div><div class="ds-swatch__name">300</div><div class="ds-swatch__value">#FCD34D</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-amber-400)"></div><div class="ds-swatch__name">400</div><div class="ds-swatch__value">#FBBF24</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-amber-500)"></div><div class="ds-swatch__name">500</div><div class="ds-swatch__value">#F59E0B</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-amber-600)"></div><div class="ds-swatch__name">600</div><div class="ds-swatch__value">#D97706</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-amber-700)"></div><div class="ds-swatch__name">700</div><div class="ds-swatch__value">#B45309</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-amber-800)"></div><div class="ds-swatch__name">800</div><div class="ds-swatch__value">#92400E</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-amber-900)"></div><div class="ds-swatch__name">900</div><div class="ds-swatch__value">#78350F</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-amber-950)"></div><div class="ds-swatch__name">950</div><div class="ds-swatch__value">#451A03</div></div>
+      </div>
+    </div>
+
+    <!-- Green -->
+    <div class="ds-subsection">
+      <h2 class="ds-subsection__title">Green</h2>
+      <div class="ds-swatch-grid">
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-green-50)"></div><div class="ds-swatch__name">50</div><div class="ds-swatch__value">#F0FDF4</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-green-100)"></div><div class="ds-swatch__name">100</div><div class="ds-swatch__value">#DCFCE7</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-green-200)"></div><div class="ds-swatch__name">200</div><div class="ds-swatch__value">#BBF7D0</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-green-300)"></div><div class="ds-swatch__name">300</div><div class="ds-swatch__value">#86EFAC</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-green-400)"></div><div class="ds-swatch__name">400</div><div class="ds-swatch__value">#4ADE80</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-green-500)"></div><div class="ds-swatch__name">500</div><div class="ds-swatch__value">#22C55E</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-green-600)"></div><div class="ds-swatch__name">600</div><div class="ds-swatch__value">#16A34A</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-green-700)"></div><div class="ds-swatch__name">700</div><div class="ds-swatch__value">#15803D</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-green-800)"></div><div class="ds-swatch__name">800</div><div class="ds-swatch__value">#166534</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-green-900)"></div><div class="ds-swatch__name">900</div><div class="ds-swatch__value">#14532D</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-green-950)"></div><div class="ds-swatch__name">950</div><div class="ds-swatch__value">#052E16</div></div>
+      </div>
+    </div>
+
+    <!-- Sky -->
+    <div class="ds-subsection">
+      <h2 class="ds-subsection__title">Sky</h2>
+      <div class="ds-swatch-grid">
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-sky-50)"></div><div class="ds-swatch__name">50</div><div class="ds-swatch__value">#F0F9FF</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-sky-100)"></div><div class="ds-swatch__name">100</div><div class="ds-swatch__value">#E0F2FE</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-sky-200)"></div><div class="ds-swatch__name">200</div><div class="ds-swatch__value">#BAE6FD</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-sky-300)"></div><div class="ds-swatch__name">300</div><div class="ds-swatch__value">#7DD3FC</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-sky-400)"></div><div class="ds-swatch__name">400</div><div class="ds-swatch__value">#38BDF8</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-sky-500)"></div><div class="ds-swatch__name">500</div><div class="ds-swatch__value">#0EA5E9</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-sky-600)"></div><div class="ds-swatch__name">600</div><div class="ds-swatch__value">#0284C7</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-sky-700)"></div><div class="ds-swatch__name">700</div><div class="ds-swatch__value">#0369A1</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-sky-800)"></div><div class="ds-swatch__name">800</div><div class="ds-swatch__value">#075985</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-sky-900)"></div><div class="ds-swatch__name">900</div><div class="ds-swatch__value">#0C4A6E</div></div>
+        <div class="ds-swatch"><div class="ds-swatch__color" style="background-color: var(--ds-color-sky-950)"></div><div class="ds-swatch__name">950</div><div class="ds-swatch__value">#082F49</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       TYPOGRAPHY
+       ============================================================ -->
+  <div class="ds-section">
+    <div class="ds-subsection">
+      <h2 class="ds-subsection__title">Typography</h2>
+      <table class="ds-props-table" style="width:100%;border-collapse:collapse;">
+        <thead>
+          <tr>
+            <th style="text-align:left;padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-2) solid var(--ds-border-default);">Token</th>
+            <th style="text-align:left;padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-2) solid var(--ds-border-default);">Size (rem)</th>
+            <th style="text-align:left;padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-2) solid var(--ds-border-default);">Size (px)</th>
+            <th style="text-align:left;padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-2) solid var(--ds-border-default);">Sample</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><code>--ds-font-size-xs</code></td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">0.75rem</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">12px</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);font-size:var(--ds-font-size-xs);">The quick brown fox</td>
+          </tr>
+          <tr>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><code>--ds-font-size-sm</code></td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">0.875rem</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">14px</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);font-size:var(--ds-font-size-sm);">The quick brown fox</td>
+          </tr>
+          <tr>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><code>--ds-font-size-base</code></td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">1rem</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">16px</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);font-size:var(--ds-font-size-base);">The quick brown fox</td>
+          </tr>
+          <tr>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><code>--ds-font-size-lg</code></td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">1.125rem</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">18px</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);font-size:var(--ds-font-size-lg);">The quick brown fox</td>
+          </tr>
+          <tr>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><code>--ds-font-size-xl</code></td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">1.25rem</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">20px</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);font-size:var(--ds-font-size-xl);">The quick brown fox</td>
+          </tr>
+          <tr>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><code>--ds-font-size-2xl</code></td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">1.5rem</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">24px</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);font-size:var(--ds-font-size-2xl);">The quick brown fox</td>
+          </tr>
+          <tr>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><code>--ds-font-size-3xl</code></td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">1.875rem</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">30px</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);font-size:var(--ds-font-size-3xl);">The quick brown fox</td>
+          </tr>
+          <tr>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><code>--ds-font-size-4xl</code></td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">2.25rem</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">36px</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);font-size:var(--ds-font-size-4xl);">The quick brown fox</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       SPACING
+       ============================================================ -->
+  <div class="ds-section">
+    <div class="ds-subsection">
+      <h2 class="ds-subsection__title">Spacing</h2>
+      <table class="ds-props-table" style="width:100%;border-collapse:collapse;">
+        <thead>
+          <tr>
+            <th style="text-align:left;padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-2) solid var(--ds-border-default);">Token</th>
+            <th style="text-align:left;padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-2) solid var(--ds-border-default);">Value</th>
+            <th style="text-align:left;padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-2) solid var(--ds-border-default);">px</th>
+            <th style="text-align:left;padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-2) solid var(--ds-border-default);">Visual</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><code>--ds-spacing-0</code></td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">0</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">0px</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><span style="display:inline-block;height:12px;width:0;background:var(--ds-color-primary);border-radius:2px;"></span></td>
+          </tr>
+          <tr>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><code>--ds-spacing-0-5</code></td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">0.125rem</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">2px</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><span style="display:inline-block;height:12px;width:2px;background:var(--ds-color-primary);border-radius:2px;"></span></td>
+          </tr>
+          <tr>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><code>--ds-spacing-1</code></td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">0.25rem</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">4px</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><span style="display:inline-block;height:12px;width:4px;background:var(--ds-color-primary);border-radius:2px;"></span></td>
+          </tr>
+          <tr>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><code>--ds-spacing-2</code></td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">0.5rem</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">8px</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><span style="display:inline-block;height:12px;width:8px;background:var(--ds-color-primary);border-radius:2px;"></span></td>
+          </tr>
+          <tr>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><code>--ds-spacing-3</code></td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">0.75rem</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">12px</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><span style="display:inline-block;height:12px;width:12px;background:var(--ds-color-primary);border-radius:2px;"></span></td>
+          </tr>
+          <tr>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><code>--ds-spacing-4</code></td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">1rem</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">16px</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><span style="display:inline-block;height:12px;width:16px;background:var(--ds-color-primary);border-radius:2px;"></span></td>
+          </tr>
+          <tr>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><code>--ds-spacing-5</code></td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">1.25rem</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">20px</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><span style="display:inline-block;height:12px;width:20px;background:var(--ds-color-primary);border-radius:2px;"></span></td>
+          </tr>
+          <tr>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><code>--ds-spacing-6</code></td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">1.5rem</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">24px</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><span style="display:inline-block;height:12px;width:24px;background:var(--ds-color-primary);border-radius:2px;"></span></td>
+          </tr>
+          <tr>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><code>--ds-spacing-8</code></td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">2rem</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">32px</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><span style="display:inline-block;height:12px;width:32px;background:var(--ds-color-primary);border-radius:2px;"></span></td>
+          </tr>
+          <tr>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><code>--ds-spacing-10</code></td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">2.5rem</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">40px</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><span style="display:inline-block;height:12px;width:40px;background:var(--ds-color-primary);border-radius:2px;"></span></td>
+          </tr>
+          <tr>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><code>--ds-spacing-12</code></td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">3rem</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">48px</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><span style="display:inline-block;height:12px;width:48px;background:var(--ds-color-primary);border-radius:2px;"></span></td>
+          </tr>
+          <tr>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><code>--ds-spacing-16</code></td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">4rem</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">64px</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><span style="display:inline-block;height:12px;width:64px;background:var(--ds-color-primary);border-radius:2px;"></span></td>
+          </tr>
+          <tr>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><code>--ds-spacing-20</code></td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">5rem</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">80px</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><span style="display:inline-block;height:12px;width:80px;background:var(--ds-color-primary);border-radius:2px;"></span></td>
+          </tr>
+          <tr>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><code>--ds-spacing-24</code></td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">6rem</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">96px</td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><span style="display:inline-block;height:12px;width:96px;background:var(--ds-color-primary);border-radius:2px;"></span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       BORDER RADIUS
+       ============================================================ -->
+  <div class="ds-section">
+    <div class="ds-subsection">
+      <h2 class="ds-subsection__title">Border Radius</h2>
+      <div style="display:flex;flex-wrap:wrap;gap:var(--ds-spacing-6);align-items:flex-end;">
+        <div style="text-align:center;">
+          <div style="width:64px;height:64px;background:var(--ds-color-primary-subtle);border:var(--ds-border-width-2) solid var(--ds-color-primary);border-radius:var(--ds-radius-none);"></div>
+          <div style="margin-top:var(--ds-spacing-2);font-size:var(--ds-font-size-xs);font-weight:var(--ds-font-weight-semibold);">none</div>
+          <div style="font-size:var(--ds-font-size-xs);color:var(--ds-text-secondary);font-family:var(--ds-font-family-mono);">0</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="width:64px;height:64px;background:var(--ds-color-primary-subtle);border:var(--ds-border-width-2) solid var(--ds-color-primary);border-radius:var(--ds-radius-xs);"></div>
+          <div style="margin-top:var(--ds-spacing-2);font-size:var(--ds-font-size-xs);font-weight:var(--ds-font-weight-semibold);">xs</div>
+          <div style="font-size:var(--ds-font-size-xs);color:var(--ds-text-secondary);font-family:var(--ds-font-family-mono);">2px</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="width:64px;height:64px;background:var(--ds-color-primary-subtle);border:var(--ds-border-width-2) solid var(--ds-color-primary);border-radius:var(--ds-radius-sm);"></div>
+          <div style="margin-top:var(--ds-spacing-2);font-size:var(--ds-font-size-xs);font-weight:var(--ds-font-weight-semibold);">sm</div>
+          <div style="font-size:var(--ds-font-size-xs);color:var(--ds-text-secondary);font-family:var(--ds-font-family-mono);">4px</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="width:64px;height:64px;background:var(--ds-color-primary-subtle);border:var(--ds-border-width-2) solid var(--ds-color-primary);border-radius:var(--ds-radius-md);"></div>
+          <div style="margin-top:var(--ds-spacing-2);font-size:var(--ds-font-size-xs);font-weight:var(--ds-font-weight-semibold);">md</div>
+          <div style="font-size:var(--ds-font-size-xs);color:var(--ds-text-secondary);font-family:var(--ds-font-family-mono);">8px</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="width:64px;height:64px;background:var(--ds-color-primary-subtle);border:var(--ds-border-width-2) solid var(--ds-color-primary);border-radius:var(--ds-radius-lg);"></div>
+          <div style="margin-top:var(--ds-spacing-2);font-size:var(--ds-font-size-xs);font-weight:var(--ds-font-weight-semibold);">lg</div>
+          <div style="font-size:var(--ds-font-size-xs);color:var(--ds-text-secondary);font-family:var(--ds-font-family-mono);">12px</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="width:64px;height:64px;background:var(--ds-color-primary-subtle);border:var(--ds-border-width-2) solid var(--ds-color-primary);border-radius:var(--ds-radius-xl);"></div>
+          <div style="margin-top:var(--ds-spacing-2);font-size:var(--ds-font-size-xs);font-weight:var(--ds-font-weight-semibold);">xl</div>
+          <div style="font-size:var(--ds-font-size-xs);color:var(--ds-text-secondary);font-family:var(--ds-font-family-mono);">16px</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="width:64px;height:64px;background:var(--ds-color-primary-subtle);border:var(--ds-border-width-2) solid var(--ds-color-primary);border-radius:var(--ds-radius-2xl);"></div>
+          <div style="margin-top:var(--ds-spacing-2);font-size:var(--ds-font-size-xs);font-weight:var(--ds-font-weight-semibold);">2xl</div>
+          <div style="font-size:var(--ds-font-size-xs);color:var(--ds-text-secondary);font-family:var(--ds-font-family-mono);">24px</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="width:64px;height:64px;background:var(--ds-color-primary-subtle);border:var(--ds-border-width-2) solid var(--ds-color-primary);border-radius:var(--ds-radius-full);"></div>
+          <div style="margin-top:var(--ds-spacing-2);font-size:var(--ds-font-size-xs);font-weight:var(--ds-font-weight-semibold);">full</div>
+          <div style="font-size:var(--ds-font-size-xs);color:var(--ds-text-secondary);font-family:var(--ds-font-family-mono);">9999px</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       SHADOWS
+       ============================================================ -->
+  <div class="ds-section">
+    <div class="ds-subsection">
+      <h2 class="ds-subsection__title">Shadows</h2>
+      <div style="display:flex;flex-wrap:wrap;gap:var(--ds-spacing-8);align-items:flex-end;">
+        <div style="text-align:center;">
+          <div style="width:96px;height:96px;background:var(--ds-surface-raised);border-radius:var(--ds-radius-lg);box-shadow:var(--ds-shadow-xs);"></div>
+          <div style="margin-top:var(--ds-spacing-3);font-size:var(--ds-font-size-xs);font-weight:var(--ds-font-weight-semibold);">xs</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="width:96px;height:96px;background:var(--ds-surface-raised);border-radius:var(--ds-radius-lg);box-shadow:var(--ds-shadow-sm);"></div>
+          <div style="margin-top:var(--ds-spacing-3);font-size:var(--ds-font-size-xs);font-weight:var(--ds-font-weight-semibold);">sm</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="width:96px;height:96px;background:var(--ds-surface-raised);border-radius:var(--ds-radius-lg);box-shadow:var(--ds-shadow-md);"></div>
+          <div style="margin-top:var(--ds-spacing-3);font-size:var(--ds-font-size-xs);font-weight:var(--ds-font-weight-semibold);">md</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="width:96px;height:96px;background:var(--ds-surface-raised);border-radius:var(--ds-radius-lg);box-shadow:var(--ds-shadow-lg);"></div>
+          <div style="margin-top:var(--ds-spacing-3);font-size:var(--ds-font-size-xs);font-weight:var(--ds-font-weight-semibold);">lg</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="width:96px;height:96px;background:var(--ds-surface-raised);border-radius:var(--ds-radius-lg);box-shadow:var(--ds-shadow-xl);"></div>
+          <div style="margin-top:var(--ds-spacing-3);font-size:var(--ds-font-size-xs);font-weight:var(--ds-font-weight-semibold);">xl</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

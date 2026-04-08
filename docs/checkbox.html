@@ -1,140 +1,306 @@
 <!DOCTYPE html>
-<html lang="en" data-mode="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Checkbox — Design System</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+  <title>Checkbox — UXIN Design System</title>
   <link rel="stylesheet" href="../css/design-system.css">
-  <style>
-    body { display: flex; min-height: 100vh; }
-    .sidebar { width: 240px; padding: 16px; border-right: 1px solid var(--ds-border-subtle); background: var(--ds-background-subtle); position: fixed; height: 100vh; overflow-y: auto; }
-    .sidebar a { display: block; padding: 6px 8px; color: var(--ds-text-secondary); text-decoration: none; font-size: 12px; border-radius: 4px; }
-    .sidebar a:hover { background: var(--ds-state-hover); color: var(--ds-text-default); }
-    .sidebar a.active { background: var(--ds-color-primary-muted); color: var(--ds-color-primary); font-weight: 500; }
-    .sidebar h3 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ds-text-tertiary); margin: 16px 0 8px; }
-    .main { flex: 1; padding: 48px; margin-left: 240px; max-width: 960px; }
-    .main h1 { margin-bottom: 16px; }
-    .main h2 { margin: 48px 0 16px; }
-    .main p { color: var(--ds-text-secondary); margin-bottom: 16px; }
-    .example { padding: 24px; border: 1px solid var(--ds-border-subtle); border-radius: 8px; margin: 12px 0 24px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
-    .example--col { flex-direction: column; align-items: flex-start; }
-    .theme-toggle { position: fixed; top: 16px; right: 16px; z-index: 100; }
-  </style>
+  <link rel="stylesheet" href="layout.css">
 </head>
 <body>
-  <nav class="sidebar">
-    <h2 style="margin-bottom:16px;font-size:16px;">Design System</h2>
-    <h3>Overview</h3>
-    <a href="index.html">Home</a>
-    <a href="tokens.html">Tokens</a>
-    <h3>Components</h3>
-    <a href="button.html">Button</a>
-    <a href="input.html">Input</a>
-    <a href="textarea.html">Textarea</a>
-    <a href="select.html">Select</a>
-    <a href="checkbox.html" class="active">Checkbox</a>
-    <a href="radio.html">Radio</a>
-    <a href="toggle.html">Toggle</a>
-    <a href="badge.html">Badge</a>
-    <a href="alert.html">Alert</a>
-    <a href="card.html">Card</a>
-    <a href="modal.html">Modal</a>
-    <a href="tooltip.html">Tooltip</a>
-    <a href="tabs.html">Tabs</a>
-    <a href="breadcrumb.html">Breadcrumb</a>
-    <a href="avatar.html">Avatar</a>
-    <a href="divider.html">Divider</a>
-    <a href="spinner.html">Spinner</a>
-    <a href="skeleton.html">Skeleton</a>
-    <a href="form-field.html">Form Field</a>
-  </nav>
-  <main class="main">
-    <h1>Checkbox</h1>
-    <p>Checkboxes allow users to select one or more options. Available in 3 sizes with checked, indeterminate, and disabled states.</p>
 
-    <h2>Sizes</h2>
-    <div class="example">
-      <label class="ds-checkbox ds-checkbox--sm">
-        <input class="ds-checkbox__input" type="checkbox">
-        <span class="ds-checkbox__control"></span>
-        <span class="ds-checkbox__label">Small</span>
-      </label>
-      <label class="ds-checkbox ds-checkbox--md">
-        <input class="ds-checkbox__input" type="checkbox">
-        <span class="ds-checkbox__control"></span>
-        <span class="ds-checkbox__label">Medium</span>
-      </label>
-      <label class="ds-checkbox ds-checkbox--lg">
-        <input class="ds-checkbox__input" type="checkbox">
-        <span class="ds-checkbox__control"></span>
-        <span class="ds-checkbox__label">Large</span>
-      </label>
+<header class="ds-site-header">
+  <div style="display:flex;align-items:center;gap:var(--ds-spacing-4)">
+    <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <a href="index.html" class="ds-site-header__brand">
+      <div class="ds-site-header__logo">DS</div>
+      <span class="ds-site-header__title">UXIN Design System</span>
+    </a>
+  </div>
+  <div class="ds-site-header__actions">
+    <div class="ds-theme-switcher">
+      <label class="ds-theme-switcher__label" for="theme-switcher">Theme</label>
+      <select class="ds-theme-switcher__select" id="theme-switcher">
+        <option value="default">Default (Blue)</option>
+        <option value="ocean">Ocean (Cyan)</option>
+        <option value="forest">Forest (Emerald)</option>
+      </select>
     </div>
+    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode">Dark</button>
+  </div>
+</header>
+<div class="ds-sidebar-overlay" id="sidebar-overlay"></div>
 
-    <h2>Default (Unchecked)</h2>
-    <div class="example">
-      <label class="ds-checkbox">
-        <input class="ds-checkbox__input" type="checkbox">
-        <span class="ds-checkbox__control"></span>
-        <span class="ds-checkbox__label">Accept terms and conditions</span>
-      </label>
-    </div>
+<nav class="ds-sidebar" id="sidebar" aria-label="Main navigation">
+  <div class="ds-sidebar__section"><h2 class="ds-sidebar__heading">Overview</h2><ul class="ds-sidebar__nav"><li><a href="index.html" class="ds-sidebar__link">Getting Started</a></li></ul></div>
+  <div class="ds-sidebar__section"><h2 class="ds-sidebar__heading">Foundations</h2><ul class="ds-sidebar__nav"><li><a href="foundations.html" class="ds-sidebar__link">Design Tokens</a></li></ul></div>
+  <div class="ds-sidebar__section"><h2 class="ds-sidebar__heading">Components</h2><ul class="ds-sidebar__nav">
+    <li><a href="button.html" class="ds-sidebar__link">Button</a></li>
+    <li><a href="input.html" class="ds-sidebar__link">Input</a></li>
+    <li><a href="textarea.html" class="ds-sidebar__link">Textarea</a></li>
+    <li><a href="select.html" class="ds-sidebar__link">Select</a></li>
+    <li><a href="checkbox.html" class="ds-sidebar__link ds-sidebar__link--active">Checkbox</a></li>
+    <li><a href="radio.html" class="ds-sidebar__link">Radio</a></li>
+    <li><a href="toggle.html" class="ds-sidebar__link">Toggle</a></li>
+    <li><a href="badge.html" class="ds-sidebar__link">Badge</a></li>
+    <li><a href="alert.html" class="ds-sidebar__link">Alert</a></li>
+    <li><a href="card.html" class="ds-sidebar__link">Card</a></li>
+    <li><a href="modal.html" class="ds-sidebar__link">Modal</a></li>
+    <li><a href="tooltip.html" class="ds-sidebar__link">Tooltip</a></li>
+    <li><a href="tabs.html" class="ds-sidebar__link">Tabs</a></li>
+    <li><a href="breadcrumb.html" class="ds-sidebar__link">Breadcrumb</a></li>
+    <li><a href="avatar.html" class="ds-sidebar__link">Avatar</a></li>
+    <li><a href="divider.html" class="ds-sidebar__link">Divider</a></li>
+    <li><a href="spinner.html" class="ds-sidebar__link">Spinner</a></li>
+    <li><a href="skeleton.html" class="ds-sidebar__link">Skeleton</a></li>
+    <li><a href="form-field.html" class="ds-sidebar__link">Form Field</a></li>
+  </ul></div>
+  <div class="ds-sidebar__section"><h2 class="ds-sidebar__heading">Guidelines</h2><ul class="ds-sidebar__nav">
+    <li><a href="theming.html" class="ds-sidebar__link">Theming</a></li>
+    <li><a href="accessibility.html" class="ds-sidebar__link">Accessibility</a></li>
+  </ul></div>
+</nav>
 
-    <h2>Checked</h2>
-    <div class="example">
-      <label class="ds-checkbox ds-checkbox--sm ds-checkbox--checked">
-        <input class="ds-checkbox__input" type="checkbox" checked>
-        <span class="ds-checkbox__control"></span>
-        <span class="ds-checkbox__label">Small checked</span>
-      </label>
-      <label class="ds-checkbox ds-checkbox--md ds-checkbox--checked">
-        <input class="ds-checkbox__input" type="checkbox" checked>
-        <span class="ds-checkbox__control"></span>
-        <span class="ds-checkbox__label">Medium checked</span>
-      </label>
-      <label class="ds-checkbox ds-checkbox--lg ds-checkbox--checked">
-        <input class="ds-checkbox__input" type="checkbox" checked>
-        <span class="ds-checkbox__control"></span>
-        <span class="ds-checkbox__label">Large checked</span>
-      </label>
-    </div>
+<main class="ds-main">
+  <div class="ds-section">
+    <h1 class="ds-section__title">Checkbox</h1>
+    <p class="ds-section__subtitle">Checkboxes allow users to select one or more options from a set. Built with native <code>&lt;input type="checkbox"&gt;</code> for full accessibility.</p>
+  </div>
 
-    <h2>Indeterminate</h2>
-    <p>The indeterminate state is set via JavaScript or the CSS class <code>ds-checkbox--indeterminate</code>.</p>
-    <div class="example">
-      <label class="ds-checkbox ds-checkbox--sm ds-checkbox--indeterminate">
-        <input class="ds-checkbox__input" type="checkbox">
-        <span class="ds-checkbox__control"></span>
-        <span class="ds-checkbox__label">Small indeterminate</span>
-      </label>
-      <label class="ds-checkbox ds-checkbox--md ds-checkbox--indeterminate">
-        <input class="ds-checkbox__input" type="checkbox">
-        <span class="ds-checkbox__control"></span>
-        <span class="ds-checkbox__label">Medium indeterminate</span>
-      </label>
-      <label class="ds-checkbox ds-checkbox--lg ds-checkbox--indeterminate">
-        <input class="ds-checkbox__input" type="checkbox">
-        <span class="ds-checkbox__control"></span>
-        <span class="ds-checkbox__label">Large indeterminate</span>
-      </label>
-    </div>
+  <!-- Default -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Default</h2>
+    <div class="ds-preview">
+      <div class="ds-preview__tabs" role="tablist">
+        <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
+        <button class="ds-preview__tab" role="tab" aria-selected="false" data-tab="code">Code</button>
+      </div>
+      <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
+        <div class="ds-preview__canvas ds-preview__canvas--column">
+          <label class="ds-checkbox-label">
+            <input type="checkbox" class="ds-checkbox">
+            Unchecked
+          </label>
+          <label class="ds-checkbox-label">
+            <input type="checkbox" class="ds-checkbox" checked>
+            Checked
+          </label>
+        </div>
+      </div>
+      <div class="ds-preview__panel" data-panel="code">
+        <div class="ds-preview__code">
+          <button class="ds-preview__copy" aria-label="Copy code">Copy</button>
+          <pre><code>&lt;label class="ds-checkbox-label"&gt;
+  &lt;input type="checkbox" class="ds-checkbox"&gt;
+  Unchecked
+&lt;/label&gt;
 
-    <h2>Disabled</h2>
-    <div class="example">
-      <label class="ds-checkbox ds-checkbox--disabled">
-        <input class="ds-checkbox__input" type="checkbox" disabled>
-        <span class="ds-checkbox__control"></span>
-        <span class="ds-checkbox__label">Disabled unchecked</span>
-      </label>
-      <label class="ds-checkbox ds-checkbox--checked ds-checkbox--disabled">
-        <input class="ds-checkbox__input" type="checkbox" checked disabled>
-        <span class="ds-checkbox__control"></span>
-        <span class="ds-checkbox__label">Disabled checked</span>
-      </label>
+&lt;label class="ds-checkbox-label"&gt;
+  &lt;input type="checkbox" class="ds-checkbox" checked&gt;
+  Checked
+&lt;/label&gt;</code></pre>
+        </div>
+      </div>
     </div>
-  </main>
-  <button class="ds-btn ds-btn--outline ds-btn--sm theme-toggle" onclick="document.documentElement.dataset.mode = document.documentElement.dataset.mode === 'dark' ? 'light' : 'dark'">Toggle Dark Mode</button>
+  </div>
+
+  <!-- Indeterminate -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Indeterminate</h2>
+    <div class="ds-preview">
+      <div class="ds-preview__tabs" role="tablist">
+        <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
+        <button class="ds-preview__tab" role="tab" aria-selected="false" data-tab="code">Code</button>
+      </div>
+      <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
+        <div class="ds-preview__canvas ds-preview__canvas--column">
+          <label class="ds-checkbox-label">
+            <input type="checkbox" class="ds-checkbox" id="demo-indeterminate">
+            Select all
+          </label>
+        </div>
+      </div>
+      <div class="ds-preview__panel" data-panel="code">
+        <div class="ds-preview__code">
+          <button class="ds-preview__copy" aria-label="Copy code">Copy</button>
+          <pre><code>&lt;label class="ds-checkbox-label"&gt;
+  &lt;input type="checkbox" class="ds-checkbox" id="select-all"&gt;
+  Select all
+&lt;/label&gt;
+
+&lt;script&gt;
+  // Indeterminate must be set via JavaScript
+  document.getElementById('select-all').indeterminate = true;
+&lt;/script&gt;</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sizes -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Sizes</h2>
+    <div class="ds-preview">
+      <div class="ds-preview__tabs" role="tablist">
+        <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
+        <button class="ds-preview__tab" role="tab" aria-selected="false" data-tab="code">Code</button>
+      </div>
+      <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
+        <div class="ds-preview__canvas ds-preview__canvas--column">
+          <label class="ds-checkbox-label">
+            <input type="checkbox" class="ds-checkbox ds-checkbox--sm" checked>
+            Small (16px)
+          </label>
+          <label class="ds-checkbox-label">
+            <input type="checkbox" class="ds-checkbox" checked>
+            Medium (20px, default)
+          </label>
+          <label class="ds-checkbox-label">
+            <input type="checkbox" class="ds-checkbox ds-checkbox--lg" checked>
+            Large (24px)
+          </label>
+        </div>
+      </div>
+      <div class="ds-preview__panel" data-panel="code">
+        <div class="ds-preview__code">
+          <button class="ds-preview__copy" aria-label="Copy code">Copy</button>
+          <pre><code>&lt;label class="ds-checkbox-label"&gt;
+  &lt;input type="checkbox" class="ds-checkbox ds-checkbox--sm"&gt;
+  Small (16px)
+&lt;/label&gt;
+
+&lt;label class="ds-checkbox-label"&gt;
+  &lt;input type="checkbox" class="ds-checkbox"&gt;
+  Medium (20px, default)
+&lt;/label&gt;
+
+&lt;label class="ds-checkbox-label"&gt;
+  &lt;input type="checkbox" class="ds-checkbox ds-checkbox--lg"&gt;
+  Large (24px)
+&lt;/label&gt;</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Error Group -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Error Group</h2>
+    <div class="ds-preview">
+      <div class="ds-preview__tabs" role="tablist">
+        <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
+        <button class="ds-preview__tab" role="tab" aria-selected="false" data-tab="code">Code</button>
+      </div>
+      <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
+        <div class="ds-preview__canvas ds-preview__canvas--column">
+          <fieldset class="ds-checkbox-group--error" style="border:none;padding:0;margin:0">
+            <legend style="font-size:var(--ds-font-size-sm);font-weight:var(--ds-font-weight-medium);margin-bottom:var(--ds-spacing-2);color:var(--ds-feedback-error-text)">Select at least one option</legend>
+            <label class="ds-checkbox-label">
+              <input type="checkbox" class="ds-checkbox">
+              Option A
+            </label>
+            <label class="ds-checkbox-label">
+              <input type="checkbox" class="ds-checkbox">
+              Option B
+            </label>
+            <span class="ds-checkbox-group__error">Please select at least one option.</span>
+          </fieldset>
+        </div>
+      </div>
+      <div class="ds-preview__panel" data-panel="code">
+        <div class="ds-preview__code">
+          <button class="ds-preview__copy" aria-label="Copy code">Copy</button>
+          <pre><code>&lt;fieldset class="ds-checkbox-group--error"&gt;
+  &lt;legend&gt;Select at least one option&lt;/legend&gt;
+  &lt;label class="ds-checkbox-label"&gt;
+    &lt;input type="checkbox" class="ds-checkbox"&gt;
+    Option A
+  &lt;/label&gt;
+  &lt;label class="ds-checkbox-label"&gt;
+    &lt;input type="checkbox" class="ds-checkbox"&gt;
+    Option B
+  &lt;/label&gt;
+  &lt;span class="ds-checkbox-group__error"&gt;Please select at least one option.&lt;/span&gt;
+&lt;/fieldset&gt;</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Disabled -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Disabled</h2>
+    <div class="ds-preview">
+      <div class="ds-preview__tabs" role="tablist">
+        <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
+        <button class="ds-preview__tab" role="tab" aria-selected="false" data-tab="code">Code</button>
+      </div>
+      <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
+        <div class="ds-preview__canvas ds-preview__canvas--column">
+          <label class="ds-checkbox-label">
+            <input type="checkbox" class="ds-checkbox" disabled>
+            Disabled unchecked
+          </label>
+          <label class="ds-checkbox-label">
+            <input type="checkbox" class="ds-checkbox" checked disabled>
+            Disabled checked
+          </label>
+        </div>
+      </div>
+      <div class="ds-preview__panel" data-panel="code">
+        <div class="ds-preview__code">
+          <button class="ds-preview__copy" aria-label="Copy code">Copy</button>
+          <pre><code>&lt;label class="ds-checkbox-label"&gt;
+  &lt;input type="checkbox" class="ds-checkbox" disabled&gt;
+  Disabled unchecked
+&lt;/label&gt;
+
+&lt;label class="ds-checkbox-label"&gt;
+  &lt;input type="checkbox" class="ds-checkbox" checked disabled&gt;
+  Disabled checked
+&lt;/label&gt;</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CSS Classes -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">CSS Classes</h2>
+    <table class="ds-table ds-props-table">
+      <thead>
+        <tr><th>Class</th><th>Description</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>ds-checkbox</code></td><td>Custom styled native checkbox</td></tr>
+        <tr><td><code>ds-checkbox-label</code></td><td>Label wrapper (wraps checkbox + text)</td></tr>
+        <tr><td><code>ds-checkbox--sm</code></td><td>Small size (16px)</td></tr>
+        <tr><td><code>ds-checkbox--lg</code></td><td>Large size (24px)</td></tr>
+        <tr><td><code>ds-checkbox-group--error</code></td><td>Error state for a group of checkboxes</td></tr>
+        <tr><td><code>ds-checkbox-group__error</code></td><td>Error message text for the group</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Accessibility -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Accessibility</h2>
+    <div class="ds-a11y-note">
+      <p class="ds-a11y-note__title">Accessibility Guidelines</p>
+      <p class="ds-a11y-note__text">
+        Uses native <code>&lt;input type="checkbox"&gt;</code> for built-in keyboard and screen reader support. Wrap related checkboxes in a <code>&lt;fieldset&gt;</code> with a <code>&lt;legend&gt;</code> to provide group context to assistive technology. The indeterminate state must be set via JavaScript. Focus ring is visible on keyboard navigation via <code>:focus-visible</code>.
+      </p>
+    </div>
+  </div>
+</main>
+
+<script>
+  // Set indeterminate state for demo
+  var el = document.getElementById('demo-indeterminate');
+  if (el) el.indeterminate = true;
+</script>
+<script src="../js/main.js"></script>
 </body>
 </html>

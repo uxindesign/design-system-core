@@ -1,80 +1,160 @@
 <!DOCTYPE html>
-<html lang="en" data-mode="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tabs — Design System</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+  <title>Tabs — UXIN Design System</title>
   <link rel="stylesheet" href="../css/design-system.css">
-  <style>
-    body { display: flex; min-height: 100vh; }
-    .sidebar { width: 240px; padding: 16px; border-right: 1px solid var(--ds-border-subtle); background: var(--ds-background-subtle); position: fixed; height: 100vh; overflow-y: auto; }
-    .sidebar a { display: block; padding: 6px 8px; color: var(--ds-text-secondary); text-decoration: none; font-size: 12px; border-radius: 4px; }
-    .sidebar a:hover { background: var(--ds-state-hover); color: var(--ds-text-default); }
-    .sidebar a.active { background: var(--ds-color-primary-muted); color: var(--ds-color-primary); font-weight: 500; }
-    .sidebar h3 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ds-text-tertiary); margin: 16px 0 8px; }
-    .main { flex: 1; padding: 48px; margin-left: 240px; max-width: 960px; }
-    .main h1 { margin-bottom: 16px; }
-    .main h2 { margin: 48px 0 16px; }
-    .main p { color: var(--ds-text-secondary); margin-bottom: 16px; }
-    .example { padding: 24px; border: 1px solid var(--ds-border-subtle); border-radius: 8px; margin: 12px 0 24px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
-    .example--col { flex-direction: column; align-items: flex-start; }
-    .theme-toggle { position: fixed; top: 16px; right: 16px; z-index: 100; }
-  </style>
+  <link rel="stylesheet" href="layout.css">
 </head>
 <body>
-  <nav class="sidebar">
-    <h2 style="margin-bottom:16px;font-size:16px;">Design System</h2>
-    <h3>Overview</h3>
-    <a href="index.html">Home</a>
-    <a href="tokens.html">Tokens</a>
-    <h3>Components</h3>
-    <a href="button.html">Button</a>
-    <a href="input.html">Input</a>
-    <a href="textarea.html">Textarea</a>
-    <a href="select.html">Select</a>
-    <a href="checkbox.html">Checkbox</a>
-    <a href="radio.html">Radio</a>
-    <a href="toggle.html">Toggle</a>
-    <a href="badge.html">Badge</a>
-    <a href="alert.html">Alert</a>
-    <a href="card.html">Card</a>
-    <a href="modal.html">Modal</a>
-    <a href="tooltip.html">Tooltip</a>
-    <a href="tabs.html" class="active">Tabs</a>
-    <a href="breadcrumb.html">Breadcrumb</a>
-    <a href="avatar.html">Avatar</a>
-    <a href="divider.html">Divider</a>
-    <a href="spinner.html">Spinner</a>
-    <a href="skeleton.html">Skeleton</a>
-    <a href="form-field.html">Form Field</a>
-  </nav>
-  <main class="main">
-    <h1>Tabs</h1>
-    <p>Horizontal navigation tabs for switching between content sections.</p>
 
-    <h2>Default tabs</h2>
-    <p>One tab is active, the others are in their default state.</p>
-    <div class="example example--col">
-      <div class="ds-tabs" style="width:100%;">
-        <button class="ds-tab ds-tab--active">Overview</button>
-        <button class="ds-tab">Settings</button>
-        <button class="ds-tab">Activity</button>
+<header class="ds-site-header">
+  <div style="display:flex;align-items:center;gap:var(--ds-spacing-4)">
+    <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <a href="index.html" class="ds-site-header__brand">
+      <div class="ds-site-header__logo">DS</div>
+      <span class="ds-site-header__title">UXIN Design System</span>
+    </a>
+  </div>
+  <div class="ds-site-header__actions">
+    <div class="ds-theme-switcher">
+      <label class="ds-theme-switcher__label" for="theme-switcher">Theme</label>
+      <select class="ds-theme-switcher__select" id="theme-switcher">
+        <option value="default">Default (Blue)</option>
+        <option value="ocean">Ocean (Cyan)</option>
+        <option value="forest">Forest (Emerald)</option>
+      </select>
+    </div>
+    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode">Dark</button>
+  </div>
+</header>
+<div class="ds-sidebar-overlay" id="sidebar-overlay"></div>
+
+<nav class="ds-sidebar" id="sidebar" aria-label="Main navigation">
+  <div class="ds-sidebar__section"><h2 class="ds-sidebar__heading">Overview</h2><ul class="ds-sidebar__nav"><li><a href="index.html" class="ds-sidebar__link">Getting Started</a></li></ul></div>
+  <div class="ds-sidebar__section"><h2 class="ds-sidebar__heading">Foundations</h2><ul class="ds-sidebar__nav"><li><a href="foundations.html" class="ds-sidebar__link">Design Tokens</a></li></ul></div>
+  <div class="ds-sidebar__section"><h2 class="ds-sidebar__heading">Components</h2><ul class="ds-sidebar__nav">
+    <li><a href="button.html" class="ds-sidebar__link">Button</a></li>
+    <li><a href="input.html" class="ds-sidebar__link">Input</a></li>
+    <li><a href="textarea.html" class="ds-sidebar__link">Textarea</a></li>
+    <li><a href="select.html" class="ds-sidebar__link">Select</a></li>
+    <li><a href="checkbox.html" class="ds-sidebar__link">Checkbox</a></li>
+    <li><a href="radio.html" class="ds-sidebar__link">Radio</a></li>
+    <li><a href="toggle.html" class="ds-sidebar__link">Toggle</a></li>
+    <li><a href="badge.html" class="ds-sidebar__link">Badge</a></li>
+    <li><a href="alert.html" class="ds-sidebar__link">Alert</a></li>
+    <li><a href="card.html" class="ds-sidebar__link">Card</a></li>
+    <li><a href="modal.html" class="ds-sidebar__link">Modal</a></li>
+    <li><a href="tooltip.html" class="ds-sidebar__link">Tooltip</a></li>
+    <li><a href="tabs.html" class="ds-sidebar__link ds-sidebar__link--active">Tabs</a></li>
+    <li><a href="breadcrumb.html" class="ds-sidebar__link">Breadcrumb</a></li>
+    <li><a href="avatar.html" class="ds-sidebar__link">Avatar</a></li>
+    <li><a href="divider.html" class="ds-sidebar__link">Divider</a></li>
+    <li><a href="spinner.html" class="ds-sidebar__link">Spinner</a></li>
+    <li><a href="skeleton.html" class="ds-sidebar__link">Skeleton</a></li>
+    <li><a href="form-field.html" class="ds-sidebar__link">Form Field</a></li>
+  </ul></div>
+  <div class="ds-sidebar__section"><h2 class="ds-sidebar__heading">Guidelines</h2><ul class="ds-sidebar__nav">
+    <li><a href="theming.html" class="ds-sidebar__link">Theming</a></li>
+    <li><a href="accessibility.html" class="ds-sidebar__link">Accessibility</a></li>
+  </ul></div>
+</nav>
+
+<main class="ds-main">
+  <section class="ds-section">
+    <h1 class="ds-section__title">Tabs</h1>
+    <p class="ds-section__subtitle">Horizontal navigation tabs for switching between content sections. Only one panel is visible at a time.</p>
+
+    <!-- Accessibility note -->
+    <div class="ds-a11y-note">
+      <p class="ds-a11y-note__title">Accessibility</p>
+      <p class="ds-a11y-note__text">Use <code>role="tablist"</code> on the tab container, <code>role="tab"</code> on each tab button, and <code>role="tabpanel"</code> on each panel. Set <code>aria-selected="true"</code> on the active tab. Support arrow key navigation between tabs.</p>
+    </div>
+
+    <!-- Default tabs -->
+    <div class="ds-subsection">
+      <h2 class="ds-subsection__title">Default tabs</h2>
+      <p>One tab is active, the others are in their default state. Each tab controls a corresponding panel.</p>
+      <div class="ds-preview">
+        <div class="ds-preview__canvas ds-preview__canvas--column">
+          <div class="ds-tabs" role="tablist" aria-label="Account settings" style="width:100%;">
+            <button class="ds-tab ds-tab--active" role="tab" aria-selected="true" aria-controls="panel-overview" id="tab-overview">Overview</button>
+            <button class="ds-tab" role="tab" aria-selected="false" aria-controls="panel-settings" id="tab-settings" tabindex="-1">Settings</button>
+            <button class="ds-tab" role="tab" aria-selected="false" aria-controls="panel-activity" id="tab-activity" tabindex="-1">Activity</button>
+          </div>
+          <div class="ds-tab-panel" role="tabpanel" id="panel-overview" aria-labelledby="tab-overview" style="padding:var(--ds-spacing-4) 0;">
+            <p style="margin:0;color:var(--ds-text-secondary);">This is the Overview panel content. It provides a summary of your account status and recent activity.</p>
+          </div>
+        </div>
       </div>
     </div>
 
-    <h2>With disabled tab</h2>
-    <p>A disabled tab cannot be interacted with.</p>
-    <div class="example example--col">
-      <div class="ds-tabs" style="width:100%;">
-        <button class="ds-tab ds-tab--active">General</button>
-        <button class="ds-tab">Notifications</button>
-        <button class="ds-tab ds-tab--disabled">Billing</button>
-        <button class="ds-tab">Security</button>
+    <!-- Tabs with disabled -->
+    <div class="ds-subsection">
+      <h2 class="ds-subsection__title">With disabled tab</h2>
+      <p>A disabled tab cannot be interacted with and is skipped during keyboard navigation.</p>
+      <div class="ds-preview">
+        <div class="ds-preview__canvas ds-preview__canvas--column">
+          <div class="ds-tabs" role="tablist" aria-label="Settings tabs" style="width:100%;">
+            <button class="ds-tab ds-tab--active" role="tab" aria-selected="true" id="tab-general">General</button>
+            <button class="ds-tab" role="tab" aria-selected="false" id="tab-notifications" tabindex="-1">Notifications</button>
+            <button class="ds-tab ds-tab--disabled" role="tab" aria-selected="false" aria-disabled="true" tabindex="-1" disabled>Billing</button>
+            <button class="ds-tab" role="tab" aria-selected="false" id="tab-security" tabindex="-1">Security</button>
+          </div>
+          <div class="ds-tab-panel" role="tabpanel" aria-labelledby="tab-general" style="padding:var(--ds-spacing-4) 0;">
+            <p style="margin:0;color:var(--ds-text-secondary);">General settings for your account: display name, language, and timezone preferences.</p>
+          </div>
+        </div>
       </div>
     </div>
-  </main>
-  <button class="ds-btn ds-btn--outline ds-btn--sm theme-toggle" onclick="document.documentElement.dataset.mode = document.documentElement.dataset.mode === 'dark' ? 'light' : 'dark'">Toggle Dark Mode</button>
+
+    <!-- Many tabs -->
+    <div class="ds-subsection">
+      <h2 class="ds-subsection__title">Multiple tabs</h2>
+      <p>Tabs scroll horizontally when they overflow the container.</p>
+      <div class="ds-preview">
+        <div class="ds-preview__canvas ds-preview__canvas--column">
+          <div class="ds-tabs" role="tablist" aria-label="Project tabs" style="width:100%;">
+            <button class="ds-tab ds-tab--active" role="tab" aria-selected="true">Dashboard</button>
+            <button class="ds-tab" role="tab" aria-selected="false" tabindex="-1">Issues</button>
+            <button class="ds-tab" role="tab" aria-selected="false" tabindex="-1">Pull Requests</button>
+            <button class="ds-tab" role="tab" aria-selected="false" tabindex="-1">Actions</button>
+            <button class="ds-tab" role="tab" aria-selected="false" tabindex="-1">Projects</button>
+            <button class="ds-tab" role="tab" aria-selected="false" tabindex="-1">Wiki</button>
+          </div>
+          <div class="ds-tab-panel" role="tabpanel" style="padding:var(--ds-spacing-4) 0;">
+            <p style="margin:0;color:var(--ds-text-secondary);">Dashboard panel showing project metrics, recent commits, and team activity overview.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CSS Classes -->
+    <div class="ds-subsection">
+      <h2 class="ds-subsection__title">CSS Classes</h2>
+      <table class="ds-props-table" style="width:100%;border-collapse:collapse;">
+        <thead>
+          <tr style="border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">
+            <th style="text-align:left;padding:var(--ds-spacing-2) var(--ds-spacing-3);">Class</th>
+            <th style="text-align:left;padding:var(--ds-spacing-2) var(--ds-spacing-3);">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);"><code>ds-tabs</code></td><td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);">Tab list container</td></tr>
+          <tr style="border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);"><code>ds-tab</code></td><td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);">Individual tab button</td></tr>
+          <tr style="border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);"><code>ds-tab--active</code></td><td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);">Active / selected tab</td></tr>
+          <tr style="border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);"><code>ds-tab--disabled</code></td><td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);">Disabled tab (non-interactive)</td></tr>
+          <tr><td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);"><code>ds-tab-panel</code></td><td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);">Tab panel content area</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </section>
+</main>
+
+<script src="../js/main.js"></script>
 </body>
 </html>

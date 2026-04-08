@@ -1,159 +1,344 @@
 <!DOCTYPE html>
-<html lang="en" data-mode="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Select — Design System</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+  <title>Select — UXIN Design System</title>
   <link rel="stylesheet" href="../css/design-system.css">
-  <style>
-    body { display: flex; min-height: 100vh; }
-    .sidebar { width: 240px; padding: 16px; border-right: 1px solid var(--ds-border-subtle); background: var(--ds-background-subtle); position: fixed; height: 100vh; overflow-y: auto; }
-    .sidebar a { display: block; padding: 6px 8px; color: var(--ds-text-secondary); text-decoration: none; font-size: 12px; border-radius: 4px; }
-    .sidebar a:hover { background: var(--ds-state-hover); color: var(--ds-text-default); }
-    .sidebar a.active { background: var(--ds-color-primary-muted); color: var(--ds-color-primary); font-weight: 500; }
-    .sidebar h3 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ds-text-tertiary); margin: 16px 0 8px; }
-    .main { flex: 1; padding: 48px; margin-left: 240px; max-width: 960px; }
-    .main h1 { margin-bottom: 16px; }
-    .main h2 { margin: 48px 0 16px; }
-    .main p { color: var(--ds-text-secondary); margin-bottom: 16px; }
-    .example { padding: 24px; border: 1px solid var(--ds-border-subtle); border-radius: 8px; margin: 12px 0 24px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
-    .example--col { flex-direction: column; align-items: flex-start; }
-    .theme-toggle { position: fixed; top: 16px; right: 16px; z-index: 100; }
-  </style>
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
-  <nav class="sidebar">
-    <h2 style="margin-bottom:16px;font-size:16px;">Design System</h2>
-    <h3>Overview</h3>
-    <a href="index.html">Home</a>
-    <a href="tokens.html">Tokens</a>
-    <h3>Components</h3>
-    <a href="button.html">Button</a>
-    <a href="input.html">Input</a>
-    <a href="textarea.html">Textarea</a>
-    <a href="select.html" class="active">Select</a>
-    <a href="checkbox.html">Checkbox</a>
-    <a href="radio.html">Radio</a>
-    <a href="toggle.html">Toggle</a>
-    <a href="badge.html">Badge</a>
-    <a href="alert.html">Alert</a>
-    <a href="card.html">Card</a>
-    <a href="modal.html">Modal</a>
-    <a href="tooltip.html">Tooltip</a>
-    <a href="tabs.html">Tabs</a>
-    <a href="breadcrumb.html">Breadcrumb</a>
-    <a href="avatar.html">Avatar</a>
-    <a href="divider.html">Divider</a>
-    <a href="spinner.html">Spinner</a>
-    <a href="skeleton.html">Skeleton</a>
-    <a href="form-field.html">Form Field</a>
-  </nav>
-  <main class="main">
-    <h1>Select</h1>
-    <p>Select menus let users choose a single option from a dropdown. Available in 3 sizes with error and disabled states.</p>
 
-    <h2>Sizes</h2>
-    <div class="example example--col">
-      <div class="ds-select ds-select--sm" style="width:320px;">
-        <select class="ds-select__field">
-          <option value="">Small select</option>
-          <option>Option A</option>
-          <option>Option B</option>
-        </select>
-        <span class="ds-select__arrow"></span>
+<header class="ds-site-header">
+  <div style="display:flex;align-items:center;gap:var(--ds-spacing-4)">
+    <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <a href="index.html" class="ds-site-header__brand">
+      <div class="ds-site-header__logo">DS</div>
+      <span class="ds-site-header__title">UXIN Design System</span>
+    </a>
+  </div>
+  <div class="ds-site-header__actions">
+    <div class="ds-theme-switcher">
+      <label class="ds-theme-switcher__label" for="theme-switcher">Theme</label>
+      <select class="ds-theme-switcher__select" id="theme-switcher">
+        <option value="default">Default (Blue)</option>
+        <option value="ocean">Ocean (Cyan)</option>
+        <option value="forest">Forest (Emerald)</option>
+      </select>
+    </div>
+    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode">Dark</button>
+  </div>
+</header>
+<div class="ds-sidebar-overlay" id="sidebar-overlay"></div>
+
+<nav class="ds-sidebar" id="sidebar" aria-label="Main navigation">
+  <div class="ds-sidebar__section"><h2 class="ds-sidebar__heading">Overview</h2><ul class="ds-sidebar__nav"><li><a href="index.html" class="ds-sidebar__link">Getting Started</a></li></ul></div>
+  <div class="ds-sidebar__section"><h2 class="ds-sidebar__heading">Foundations</h2><ul class="ds-sidebar__nav"><li><a href="foundations.html" class="ds-sidebar__link">Design Tokens</a></li></ul></div>
+  <div class="ds-sidebar__section"><h2 class="ds-sidebar__heading">Components</h2><ul class="ds-sidebar__nav">
+    <li><a href="button.html" class="ds-sidebar__link">Button</a></li>
+    <li><a href="input.html" class="ds-sidebar__link">Input</a></li>
+    <li><a href="textarea.html" class="ds-sidebar__link">Textarea</a></li>
+    <li><a href="select.html" class="ds-sidebar__link ds-sidebar__link--active">Select</a></li>
+    <li><a href="checkbox.html" class="ds-sidebar__link">Checkbox</a></li>
+    <li><a href="radio.html" class="ds-sidebar__link">Radio</a></li>
+    <li><a href="toggle.html" class="ds-sidebar__link">Toggle</a></li>
+    <li><a href="badge.html" class="ds-sidebar__link">Badge</a></li>
+    <li><a href="alert.html" class="ds-sidebar__link">Alert</a></li>
+    <li><a href="card.html" class="ds-sidebar__link">Card</a></li>
+    <li><a href="modal.html" class="ds-sidebar__link">Modal</a></li>
+    <li><a href="tooltip.html" class="ds-sidebar__link">Tooltip</a></li>
+    <li><a href="tabs.html" class="ds-sidebar__link">Tabs</a></li>
+    <li><a href="breadcrumb.html" class="ds-sidebar__link">Breadcrumb</a></li>
+    <li><a href="avatar.html" class="ds-sidebar__link">Avatar</a></li>
+    <li><a href="divider.html" class="ds-sidebar__link">Divider</a></li>
+    <li><a href="spinner.html" class="ds-sidebar__link">Spinner</a></li>
+    <li><a href="skeleton.html" class="ds-sidebar__link">Skeleton</a></li>
+    <li><a href="form-field.html" class="ds-sidebar__link">Form Field</a></li>
+  </ul></div>
+  <div class="ds-sidebar__section"><h2 class="ds-sidebar__heading">Guidelines</h2><ul class="ds-sidebar__nav">
+    <li><a href="theming.html" class="ds-sidebar__link">Theming</a></li>
+    <li><a href="accessibility.html" class="ds-sidebar__link">Accessibility</a></li>
+  </ul></div>
+</nav>
+
+<main class="ds-main">
+  <div class="ds-section">
+    <h1 class="ds-section__title">Select</h1>
+    <p class="ds-section__subtitle">Select menus allow users to choose one option from a dropdown list. Uses a wrapper pattern with native <code>&lt;select&gt;</code> and a custom arrow indicator.</p>
+  </div>
+
+  <!-- Default -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Default</h2>
+    <div class="ds-preview">
+      <div class="ds-preview__tabs" role="tablist">
+        <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
+        <button class="ds-preview__tab" role="tab" aria-selected="false" data-tab="code">Code</button>
       </div>
-      <div class="ds-select ds-select--md" style="width:320px;">
-        <select class="ds-select__field">
-          <option value="">Medium select (default)</option>
-          <option>Option A</option>
-          <option>Option B</option>
-        </select>
-        <span class="ds-select__arrow"></span>
+      <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
+        <div class="ds-preview__canvas ds-preview__canvas--column" style="max-width:400px">
+          <div class="ds-select">
+            <select class="ds-select__field">
+              <option value="" disabled selected>Choose an option</option>
+              <option value="1">Option One</option>
+              <option value="2">Option Two</option>
+              <option value="3">Option Three</option>
+            </select>
+            <span class="ds-select__arrow"></span>
+          </div>
+        </div>
       </div>
-      <div class="ds-select ds-select--lg" style="width:320px;">
-        <select class="ds-select__field">
-          <option value="">Large select</option>
-          <option>Option A</option>
-          <option>Option B</option>
-        </select>
-        <span class="ds-select__arrow"></span>
+      <div class="ds-preview__panel" data-panel="code">
+        <div class="ds-preview__code">
+          <button class="ds-preview__copy" aria-label="Copy code">Copy</button>
+          <pre><code>&lt;div class="ds-select"&gt;
+  &lt;select class="ds-select__field"&gt;
+    &lt;option value="" disabled selected&gt;Choose an option&lt;/option&gt;
+    &lt;option value="1"&gt;Option One&lt;/option&gt;
+    &lt;option value="2"&gt;Option Two&lt;/option&gt;
+    &lt;option value="3"&gt;Option Three&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;span class="ds-select__arrow"&gt;&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sizes -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Sizes</h2>
+    <div class="ds-preview">
+      <div class="ds-preview__tabs" role="tablist">
+        <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
+        <button class="ds-preview__tab" role="tab" aria-selected="false" data-tab="code">Code</button>
+      </div>
+      <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
+        <div class="ds-preview__canvas ds-preview__canvas--column" style="max-width:400px">
+          <div class="ds-select ds-select--sm">
+            <select class="ds-select__field">
+              <option>Small (34px)</option>
+              <option>Option A</option>
+            </select>
+            <span class="ds-select__arrow"></span>
+          </div>
+          <div class="ds-select ds-select--md">
+            <select class="ds-select__field">
+              <option>Medium (47px)</option>
+              <option>Option A</option>
+            </select>
+            <span class="ds-select__arrow"></span>
+          </div>
+          <div class="ds-select ds-select--lg">
+            <select class="ds-select__field">
+              <option>Large (58px)</option>
+              <option>Option A</option>
+            </select>
+            <span class="ds-select__arrow"></span>
+          </div>
+        </div>
+      </div>
+      <div class="ds-preview__panel" data-panel="code">
+        <div class="ds-preview__code">
+          <button class="ds-preview__copy" aria-label="Copy code">Copy</button>
+          <pre><code>&lt;div class="ds-select ds-select--sm"&gt;
+  &lt;select class="ds-select__field"&gt;...&lt;/select&gt;
+  &lt;span class="ds-select__arrow"&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="ds-select ds-select--md"&gt;
+  &lt;select class="ds-select__field"&gt;...&lt;/select&gt;
+  &lt;span class="ds-select__arrow"&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="ds-select ds-select--lg"&gt;
+  &lt;select class="ds-select__field"&gt;...&lt;/select&gt;
+  &lt;span class="ds-select__arrow"&gt;&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- With Icon -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">With Icon</h2>
+    <div class="ds-preview">
+      <div class="ds-preview__tabs" role="tablist">
+        <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
+        <button class="ds-preview__tab" role="tab" aria-selected="false" data-tab="code">Code</button>
+      </div>
+      <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
+        <div class="ds-preview__canvas ds-preview__canvas--column" style="max-width:400px">
+          <div class="ds-select">
+            <span class="ds-select__icon material-symbols-outlined">language</span>
+            <select class="ds-select__field">
+              <option>English</option>
+              <option>Portuguese</option>
+              <option>Spanish</option>
+            </select>
+            <span class="ds-select__arrow"></span>
+          </div>
+        </div>
+      </div>
+      <div class="ds-preview__panel" data-panel="code">
+        <div class="ds-preview__code">
+          <button class="ds-preview__copy" aria-label="Copy code">Copy</button>
+          <pre><code>&lt;div class="ds-select"&gt;
+  &lt;span class="ds-select__icon material-symbols-outlined"&gt;language&lt;/span&gt;
+  &lt;select class="ds-select__field"&gt;
+    &lt;option&gt;English&lt;/option&gt;
+    &lt;option&gt;Portuguese&lt;/option&gt;
+    &lt;option&gt;Spanish&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;span class="ds-select__arrow"&gt;&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- States -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">States</h2>
+
+    <h3>Error</h3>
+    <div class="ds-preview">
+      <div class="ds-preview__tabs" role="tablist">
+        <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
+        <button class="ds-preview__tab" role="tab" aria-selected="false" data-tab="code">Code</button>
+      </div>
+      <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
+        <div class="ds-preview__canvas ds-preview__canvas--column" style="max-width:400px">
+          <div class="ds-field ds-field--error">
+            <label class="ds-field__label" for="demo-country">Country<span class="ds-field__required">*</span></label>
+            <div class="ds-select ds-select--error">
+              <select class="ds-select__field" id="demo-country" aria-invalid="true" aria-describedby="country-error">
+                <option value="" disabled selected>Select a country</option>
+                <option>Brazil</option>
+                <option>United States</option>
+              </select>
+              <span class="ds-select__arrow"></span>
+            </div>
+            <span class="ds-field__error" id="country-error">Please select a country.</span>
+          </div>
+        </div>
+      </div>
+      <div class="ds-preview__panel" data-panel="code">
+        <div class="ds-preview__code">
+          <button class="ds-preview__copy" aria-label="Copy code">Copy</button>
+          <pre><code>&lt;div class="ds-field ds-field--error"&gt;
+  &lt;label class="ds-field__label" for="country"&gt;Country&lt;span class="ds-field__required"&gt;*&lt;/span&gt;&lt;/label&gt;
+  &lt;div class="ds-select ds-select--error"&gt;
+    &lt;select class="ds-select__field" id="country" aria-invalid="true" aria-describedby="country-error"&gt;
+      &lt;option value="" disabled selected&gt;Select a country&lt;/option&gt;
+      &lt;option&gt;Brazil&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;span class="ds-select__arrow"&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;span class="ds-field__error" id="country-error"&gt;Please select a country.&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+        </div>
       </div>
     </div>
 
-    <h2>Default</h2>
-    <div class="example example--col">
-      <div class="ds-select" style="width:320px;">
-        <select class="ds-select__field">
-          <option value="">Choose a country</option>
-          <option>Brazil</option>
-          <option>United States</option>
-          <option>Germany</option>
-          <option>Japan</option>
-        </select>
-        <span class="ds-select__arrow"></span>
+    <h3>Disabled</h3>
+    <div class="ds-preview">
+      <div class="ds-preview__tabs" role="tablist">
+        <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
+        <button class="ds-preview__tab" role="tab" aria-selected="false" data-tab="code">Code</button>
+      </div>
+      <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
+        <div class="ds-preview__canvas ds-preview__canvas--column" style="max-width:400px">
+          <div class="ds-select">
+            <select class="ds-select__field" disabled>
+              <option>Disabled option</option>
+            </select>
+            <span class="ds-select__arrow"></span>
+          </div>
+        </div>
+      </div>
+      <div class="ds-preview__panel" data-panel="code">
+        <div class="ds-preview__code">
+          <button class="ds-preview__copy" aria-label="Copy code">Copy</button>
+          <pre><code>&lt;div class="ds-select"&gt;
+  &lt;select class="ds-select__field" disabled&gt;
+    &lt;option&gt;Disabled option&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;span class="ds-select__arrow"&gt;&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+        </div>
       </div>
     </div>
 
-    <h2>Error</h2>
-    <div class="example example--col">
-      <div class="ds-select ds-select--error" style="width:320px;">
-        <select class="ds-select__field">
-          <option value="">Please select an option</option>
-          <option>Option A</option>
-          <option>Option B</option>
-        </select>
-        <span class="ds-select__arrow"></span>
+    <h3>Readonly</h3>
+    <div class="ds-preview">
+      <div class="ds-preview__tabs" role="tablist">
+        <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
+        <button class="ds-preview__tab" role="tab" aria-selected="false" data-tab="code">Code</button>
+      </div>
+      <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
+        <div class="ds-preview__canvas ds-preview__canvas--column" style="max-width:400px">
+          <div class="ds-select ds-select--readonly">
+            <select class="ds-select__field" disabled>
+              <option>Read-only value</option>
+            </select>
+            <span class="ds-select__arrow"></span>
+          </div>
+        </div>
+      </div>
+      <div class="ds-preview__panel" data-panel="code">
+        <div class="ds-preview__code">
+          <button class="ds-preview__copy" aria-label="Copy code">Copy</button>
+          <pre><code>&lt;!-- Native select has no readonly; use disabled + ds-select--readonly for styling --&gt;
+&lt;div class="ds-select ds-select--readonly"&gt;
+  &lt;select class="ds-select__field" disabled&gt;
+    &lt;option&gt;Read-only value&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;span class="ds-select__arrow"&gt;&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+        </div>
       </div>
     </div>
+  </div>
 
-    <h2>Focused</h2>
-    <div class="example example--col">
-      <div class="ds-select ds-select--focused" style="width:320px;">
-        <select class="ds-select__field">
-          <option value="">Focused select</option>
-          <option>Option A</option>
-          <option>Option B</option>
-        </select>
-        <span class="ds-select__arrow"></span>
-      </div>
-    </div>
+  <!-- CSS Classes -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">CSS Classes</h2>
+    <table class="ds-table ds-props-table">
+      <thead>
+        <tr><th>Class</th><th>Description</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>ds-select</code></td><td>Wrapper element for the select</td></tr>
+        <tr><td><code>ds-select__field</code></td><td>The native <code>&lt;select&gt;</code> element</td></tr>
+        <tr><td><code>ds-select__arrow</code></td><td>Custom dropdown arrow indicator</td></tr>
+        <tr><td><code>ds-select__icon</code></td><td>Leading icon inside the wrapper</td></tr>
+        <tr><td><code>ds-select--sm</code></td><td>Small size (34px height)</td></tr>
+        <tr><td><code>ds-select--md</code></td><td>Medium size (47px height, default)</td></tr>
+        <tr><td><code>ds-select--lg</code></td><td>Large size (58px height)</td></tr>
+        <tr><td><code>ds-select--error</code></td><td>Error state with red border</td></tr>
+        <tr><td><code>ds-select--disabled</code></td><td>Disabled state (or use native <code>disabled</code>)</td></tr>
+        <tr><td><code>ds-select--readonly</code></td><td>Readonly visual state</td></tr>
+      </tbody>
+    </table>
+  </div>
 
-    <h2>Disabled</h2>
-    <div class="example example--col">
-      <div class="ds-select ds-select--disabled" style="width:320px;">
-        <select class="ds-select__field" disabled>
-          <option>Disabled option</option>
-        </select>
-        <span class="ds-select__arrow"></span>
-      </div>
+  <!-- Accessibility -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Accessibility</h2>
+    <div class="ds-a11y-note">
+      <p class="ds-a11y-note__title">Accessibility Guidelines</p>
+      <p class="ds-a11y-note__text">
+        The native <code>&lt;select&gt;</code> element provides full keyboard support and screen reader compatibility. Always associate a <code>&lt;label&gt;</code> using <code>for</code> and <code>id</code>. Use <code>aria-invalid="true"</code> and <code>aria-describedby</code> for error states. The custom arrow is decorative and uses <code>pointer-events: none</code> so it does not interfere with interaction.
+      </p>
     </div>
+  </div>
+</main>
 
-    <h2>Readonly</h2>
-    <div class="example example--col">
-      <div class="ds-select ds-select--readonly" style="width:320px;">
-        <select class="ds-select__field">
-          <option>Readonly value</option>
-        </select>
-        <span class="ds-select__arrow"></span>
-      </div>
-    </div>
-
-    <h2>With Icon</h2>
-    <div class="example example--col">
-      <div class="ds-select" style="width:320px;">
-        <svg class="ds-select__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        <select class="ds-select__field">
-          <option value="">Select country</option>
-          <option>Brazil</option>
-          <option>United States</option>
-          <option>Germany</option>
-        </select>
-        <span class="ds-select__arrow"></span>
-      </div>
-    </div>
-  </main>
-  <button class="ds-btn ds-btn--outline ds-btn--sm theme-toggle" onclick="document.documentElement.dataset.mode = document.documentElement.dataset.mode === 'dark' ? 'light' : 'dark'">Toggle Dark Mode</button>
+<script src="../js/main.js"></script>
 </body>
 </html>
