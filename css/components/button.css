@@ -1,5 +1,6 @@
 /* ============================================================
-   COMPONENT: Button
+   COMPONENT: Button — aligned with Figma specs
+   Sizes: sm=32px, md=40px, lg=48px
    ============================================================ */
 
 .ds-btn {
@@ -21,7 +22,7 @@
   white-space: nowrap;
   user-select: none;
 
-  /* Default size: md */
+  /* Default size: md (40px) */
   height: 40px;
   padding: 0 var(--ds-spacing-4);
   font-size: var(--ds-font-size-sm);
@@ -55,7 +56,7 @@
   height: 32px;
   padding: 0 var(--ds-spacing-3);
   font-size: var(--ds-font-size-xs);
-  border-radius: var(--ds-radius-sm);
+  border-radius: var(--ds-radius-md);
 }
 
 .ds-btn--sm .ds-btn__icon {
@@ -65,7 +66,7 @@
 
 .ds-btn--lg {
   height: 48px;
-  padding: 0 var(--ds-spacing-6);
+  padding: 0 var(--ds-spacing-5);
   font-size: var(--ds-font-size-base);
   border-radius: var(--ds-radius-md);
 }
@@ -80,7 +81,7 @@
    --------------------------------------------------------- */
 .ds-btn--primary {
   background-color: var(--ds-color-primary);
-  color: var(--ds-text-on-brand);
+  color: var(--ds-color-primary-foreground);
   border-color: var(--ds-color-primary);
 }
 
@@ -95,22 +96,21 @@
 }
 
 /* ---------------------------------------------------------
-   Variant: Secondary
+   Variant: Secondary (outlined style per Figma)
    --------------------------------------------------------- */
 .ds-btn--secondary {
-  background-color: var(--ds-color-secondary);
-  color: var(--ds-text-on-brand);
-  border-color: var(--ds-color-secondary);
+  background-color: var(--ds-surface-raised);
+  color: var(--ds-text-default);
+  border-color: var(--ds-border-default);
 }
 
 .ds-btn--secondary:hover {
-  background-color: var(--ds-color-secondary-hover);
-  border-color: var(--ds-color-secondary-hover);
+  background-color: var(--ds-background-muted);
+  border-color: var(--ds-border-strong);
 }
 
 .ds-btn--secondary:active {
-  background-color: var(--ds-color-secondary-active);
-  border-color: var(--ds-color-secondary-active);
+  background-color: var(--ds-background-subtle);
 }
 
 /* ---------------------------------------------------------
@@ -128,7 +128,7 @@
 
 .ds-btn--outline:active {
   background-color: var(--ds-color-primary);
-  color: var(--ds-text-on-brand);
+  color: var(--ds-color-primary-foreground);
 }
 
 /* ---------------------------------------------------------
@@ -149,19 +149,22 @@
 }
 
 /* ---------------------------------------------------------
-   Variant: Destructive
+   Variant: Danger (destructive)
    --------------------------------------------------------- */
+.ds-btn--danger,
 .ds-btn--destructive {
   background-color: var(--ds-feedback-error);
-  color: var(--ds-text-on-brand);
+  color: var(--ds-feedback-error-foreground);
   border-color: var(--ds-feedback-error);
 }
 
+.ds-btn--danger:hover,
 .ds-btn--destructive:hover {
   background-color: var(--ds-feedback-error-hover);
   border-color: var(--ds-feedback-error-hover);
 }
 
+.ds-btn--danger:active,
 .ds-btn--destructive:active {
   background-color: var(--ds-feedback-error-active);
   border-color: var(--ds-feedback-error-active);
