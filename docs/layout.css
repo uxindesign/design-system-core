@@ -356,6 +356,26 @@
   font-family: var(--ds-font-family-mono);
 }
 
+.ds-swatch__contrast {
+  display: flex;
+  gap: var(--ds-spacing-1);
+  margin-top: var(--ds-spacing-1);
+}
+
+.ds-swatch__badge {
+  font-size: 9px;
+  font-weight: var(--ds-font-weight-semibold);
+  padding: 1px 4px;
+  border-radius: var(--ds-radius-xs);
+  color: var(--ds-color-white);
+  line-height: 1.4;
+}
+
+.ds-swatch__badge--aaa { background-color: var(--ds-color-green-600); }
+.ds-swatch__badge--aa { background-color: var(--ds-color-green-600); }
+.ds-swatch__badge--aa-large { background-color: var(--ds-color-amber-600); }
+.ds-swatch__badge--fail { background-color: var(--ds-color-red-500); }
+
 /* ---------------------------------------------------------
    Props / API Table
    --------------------------------------------------------- */
