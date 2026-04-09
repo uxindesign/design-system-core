@@ -8,17 +8,17 @@
 }
 
 .ds-elevation-1 {
-  box-shadow: var(--ds-shadow-xs);
-}
-
-.ds-elevation-2 {
   box-shadow: var(--ds-shadow-sm);
 }
 
-.ds-elevation-3 {
+.ds-elevation-2 {
   box-shadow: var(--ds-shadow-md);
 }
 
-.ds-elevation-4 {
+.ds-elevation-3 {
   box-shadow: var(--ds-shadow-lg);
+}
+
+.ds-elevation-4 {
+  box-shadow: var(--ds-shadow-xl);
 }

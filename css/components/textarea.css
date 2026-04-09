@@ -19,18 +19,18 @@
 
 .ds-textarea,
 .ds-textarea--md {
-  padding: 0 var(--ds-spacing-3);
-  font-size: var(--ds-font-size-base);
+  padding: 0 var(--ds-spacing-4);
+  font-size: var(--ds-font-size-sm);
 }
 
 .ds-textarea--sm {
-  padding: 0 var(--ds-spacing-2);
+  padding: 0 var(--ds-spacing-3);
   font-size: var(--ds-font-size-sm);
 }
 
 .ds-textarea--lg {
-  padding: 0 var(--ds-spacing-4);
-  font-size: var(--ds-font-size-lg);
+  padding: 0 var(--ds-spacing-5);
+  font-size: var(--ds-font-size-base);
 }
 
 /* Field
@@ -81,13 +81,11 @@
 }
 
 /* Error */
-.ds-textarea--error,
-.ds-field--error .ds-textarea {
+.ds-textarea--error {
   border-color: var(--ds-feedback-error);
 }
 
-.ds-textarea--error:focus-within,
-.ds-field--error .ds-textarea:focus-within {
+.ds-textarea--error:focus-within {
   border-color: var(--ds-feedback-error);
   box-shadow: 0 0 0 2px var(--ds-surface-default), 0 0 0 4px var(--ds-feedback-error);
 }

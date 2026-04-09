@@ -22,21 +22,21 @@
 
 .ds-select,
 .ds-select--md {
-  height: 47px;
-  padding: 0 var(--ds-spacing-3);
-  font-size: var(--ds-font-size-base);
+  height: 40px;
+  padding: 0 var(--ds-spacing-4);
+  font-size: var(--ds-font-size-sm);
 }
 
 .ds-select--sm {
-  height: 34px;
-  padding: 0 var(--ds-spacing-2);
+  height: 32px;
+  padding: 0 var(--ds-spacing-3);
   font-size: var(--ds-font-size-sm);
 }
 
 .ds-select--lg {
-  height: 58px;
-  padding: 0 var(--ds-spacing-4);
-  font-size: var(--ds-font-size-lg);
+  height: 48px;
+  padding: 0 var(--ds-spacing-5);
+  font-size: var(--ds-font-size-base);
 }
 
 /* Field (native select)
@@ -112,13 +112,11 @@
 }
 
 /* Error */
-.ds-select--error,
-.ds-field--error .ds-select {
+.ds-select--error {
   border-color: var(--ds-feedback-error);
 }
 
-.ds-select--error:focus-within,
-.ds-field--error .ds-select:focus-within {
+.ds-select--error:focus-within {
   border-color: var(--ds-feedback-error);
   box-shadow: 0 0 0 2px var(--ds-surface-default), 0 0 0 4px var(--ds-feedback-error);
 }

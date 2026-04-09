@@ -1,5 +1,6 @@
 /* ==========================================================================
-   Input – .ds-input
+   Input – .ds-input — aligned with Figma specs
+   Sizes: sm=32px, md=40px, lg=48px
    ========================================================================== */
 
 /* Wrapper
@@ -8,9 +9,9 @@
 .ds-input {
   display: flex;
   align-items: center;
-  gap: var(--ds-spacing-1);
+  gap: var(--ds-spacing-2);
   border: var(--ds-border-width-1) solid var(--ds-border-default);
-  border-radius: var(--ds-radius-component);
+  border-radius: var(--ds-radius-md);
   background: var(--ds-surface-default);
   transition: border-color var(--ds-duration-fast) var(--ds-ease-default),
               box-shadow var(--ds-duration-fast) var(--ds-ease-default);
@@ -21,21 +22,21 @@
 
 .ds-input,
 .ds-input--md {
-  height: 47px;
-  padding: 0 var(--ds-spacing-3);
-  font-size: var(--ds-font-size-base);
+  height: 40px;
+  padding: 0 var(--ds-spacing-4);
+  font-size: var(--ds-font-size-sm);
 }
 
 .ds-input--sm {
-  height: 34px;
-  padding: 0 var(--ds-spacing-2);
+  height: 32px;
+  padding: 0 var(--ds-spacing-3);
   font-size: var(--ds-font-size-sm);
 }
 
 .ds-input--lg {
-  height: 58px;
-  padding: 0 var(--ds-spacing-4);
-  font-size: var(--ds-font-size-lg);
+  height: 48px;
+  padding: 0 var(--ds-spacing-5);
+  font-size: var(--ds-font-size-base);
 }
 
 /* Field
@@ -95,13 +96,11 @@
 }
 
 /* Error */
-.ds-input--error,
-.ds-field--error .ds-input {
+.ds-input--error {
   border-color: var(--ds-feedback-error);
 }
 
-.ds-input--error:focus-within,
-.ds-field--error .ds-input:focus-within {
+.ds-input--error:focus-within {
   border-color: var(--ds-feedback-error);
   box-shadow: 0 0 0 2px var(--ds-surface-default), 0 0 0 4px var(--ds-feedback-error);
 }
