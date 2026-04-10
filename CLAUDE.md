@@ -110,13 +110,57 @@ Ao criar novas variáveis:
 - **Foundation tipografia** → escopos específicos (`FONT_SIZE`, `FONT_FAMILY`, etc.)
 - NUNCA usar `ALL_SCOPES` — polui todos os pickers
 
-### 4. Componentes Figma
+### 4. Textos de Documentação no Figma — NUNCA hardcodar
+
+Ao criar textos em páginas de documentação do Figma, **sempre** replicar o padrão das páginas existentes:
+
+1. **Aplicar text style** — títulos usam `heading/sm`, corpo e bullets usam `body/md`
+2. **Vincular fill a variável** — títulos: `text/default`, corpo/bullets: `text/secondary`
+3. **Vincular propriedades tipográficas** — fontSize, fontFamily, fontWeight, letterSpacing devem vir do text style (que já referencia variáveis Foundation)
+4. **Fills de shapes/dividers** — vincular a variáveis Theme (ex: `background/muted` para dividers)
+
+**NUNCA** definir cores com valores RGB literais (ex: `{r: 0.06, g: 0.09, b: 0.16}`) — use `setBoundVariableForPaint()` para vincular à variável correta. Sem isso, a troca de tema/modo não funciona.
+
+**Como fazer no código:**
+```js
+// Text style
+const style = textStyles.find(s => s.name === 'body/md');
+textNode.textStyleId = style.id;
+
+// Fill com variável
+const textVar = colorVars.find(v => v.name === 'text/secondary');
+const paint = figma.variables.setBoundVariableForPaint(
+  { type: 'SOLID', color: { r: 0, g: 0, b: 0 } }, 'color', textVar
+);
+textNode.fills = [paint];
+```
+
+### 5. Componentes Figma
 
 - `clipsContent = false` em component sets — permitir visualização de focus rings
 - Resize para abraçar todo o conteúdo incluindo overflow
 - Textos default dos componentes em PT-BR (Rótulo, Texto auxiliar, Texto placeholder)
 
-### 5. Git / Deploy
+### 6. Documentação no Site (HTML) — usar tokens CSS
+
+No site GitHub Pages, todo conteúdo deve usar custom properties do design system:
+- Cores de texto: `var(--ds-text-default)`, `var(--ds-text-secondary)`
+- Backgrounds: `var(--ds-surface-default)`, `var(--ds-background-subtle)`
+- Bordas: `var(--ds-border-default)`
+- Espaçamentos: `var(--ds-spacing-*)`
+- Tipografia: `var(--ds-font-size-*)`, `var(--ds-font-weight-*)`
+- Sombras: `var(--ds-shadow-*)`
+- Radius: `var(--ds-radius-*)`
+- **NUNCA** usar hex/rgb literais em inline styles — sempre custom properties
+
+Seguir os padrões visuais existentes:
+- Cards de navegação: `border: 1px solid var(--ds-border-default)`, `border-radius: var(--ds-radius-lg)`, hover com `var(--ds-shadow-md)`
+- Blocos de código: `<pre><code>` (estilizado via reset.css — fundo `neutral-900`, texto `neutral-100`)
+- Tabelas de classes: `<table class="ds-props-table">` com `<code>` inline para nomes de classes
+- Previews de componentes: `<div class="ds-preview">` com tabs Preview/Code
+- Notas de acessibilidade: `<div class="ds-a11y-note">`
+
+### 7. Git / Deploy
 
 - Repo: `uxindesign/design-system-core` (NÃO confundir com `design-system` que é o repo antigo)
 - Branch: `main`
