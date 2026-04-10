@@ -19,7 +19,8 @@
   /* Surface — progressively lighter = higher elevation */
   --ds-surface-default:       var(--ds-color-neutral-900);  /* flat: cards, panels */
   --ds-surface-raised:        var(--ds-color-neutral-800);  /* raised: cards elevated, sticky headers */
-  --ds-surface-overlay:       var(--ds-color-neutral-700);  /* overlay: modals, dropdowns, FABs */
+  --ds-surface-overlay:       var(--ds-color-neutral-700);  /* overlay: dropdowns, FABs */
+  --ds-surface-elevated:      var(--ds-color-neutral-600);  /* elevated: modals, dialogs */
 
   /* Text */
   --ds-text-default:          var(--ds-color-neutral-50);

@@ -16,7 +16,7 @@
 
 /* Dialog */
 .ds-modal {
-  background-color: var(--ds-surface-default);
+  background-color: var(--ds-surface-elevated);
   border-radius: var(--ds-radius-xl);
   box-shadow: var(--ds-shadow-xl);
   width: 100%;

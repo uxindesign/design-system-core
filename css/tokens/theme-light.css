@@ -26,6 +26,7 @@
   --ds-surface-default:       var(--ds-color-white);
   --ds-surface-raised:        var(--ds-color-white);
   --ds-surface-overlay:       var(--ds-color-white);
+  --ds-surface-elevated:      var(--ds-color-white);
 
   /* ---------------------------------------------------------
      TEXT / FOREGROUND
