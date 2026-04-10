@@ -155,7 +155,7 @@
 .ds-text-label-xs {
   font-family: var(--ds-font-family-sans);
   font-weight: var(--ds-font-weight-medium);
-  font-size: var(--ds-font-size-xs);        /* 12px (Figma 11→12) */
+  font-size: var(--ds-font-size-2xs);       /* 11px */
   line-height: var(--ds-line-height-snug);
   letter-spacing: 0.5px;
 }
@@ -174,7 +174,7 @@
 .ds-text-caption-sm {
   font-family: var(--ds-font-family-sans);
   font-weight: var(--ds-font-weight-regular);
-  font-size: var(--ds-font-size-xs);        /* 12px (Figma 11→12) */
+  font-size: var(--ds-font-size-2xs);       /* 11px */
   line-height: var(--ds-line-height-normal);
 }
 
@@ -195,7 +195,7 @@
 .ds-text-overline-sm {
   font-family: var(--ds-font-family-sans);
   font-weight: var(--ds-font-weight-semibold);
-  font-size: var(--ds-font-size-xs);        /* 12px (Figma 11→12) */
+  font-size: var(--ds-font-size-2xs);       /* 11px */
   line-height: var(--ds-line-height-snug);
   letter-spacing: 1.5px;
   text-transform: uppercase;
