@@ -99,55 +99,67 @@
 <main class="ds-main">
   <div class="ds-section">
     <h1 class="ds-section__title">Elevation</h1>
-    <p class="ds-section__subtitle">Shadow tokens create visual hierarchy by simulating depth. Higher elevations cast larger, more diffused shadows. These are aligned with the Figma elevation styles.</p>
+    <p class="ds-section__subtitle">3 níveis de elevação. Em light mode, sombras criam profundidade. Em dark mode, superfícies progressivamente mais claras indicam elevação — sombras são secundárias.</p>
   </div>
 
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Shadow Levels</h2>
-    <div class="ds-elevation-grid">
-      <div class="ds-elevation-card" style="box-shadow:none">
-        <div class="ds-elevation-card__name">none</div>
-        <div class="ds-elevation-card__value">none</div>
-      </div>
-      <div class="ds-elevation-card" style="box-shadow:0 1px 2px 0 rgba(0,0,0,0.05)">
-        <div class="ds-elevation-card__name">xs</div>
-        <div class="ds-elevation-card__value">0 1px 2px 0 rgba(0,0,0,0.05)</div>
-      </div>
-      <div class="ds-elevation-card" style="box-shadow:0 1px 3px 0 rgba(0,0,0,0.06), 0 1px 2px 0 rgba(0,0,0,0.05)">
-        <div class="ds-elevation-card__name">sm</div>
-        <div class="ds-elevation-card__value">0 1px 3px 0 rgba(0,0,0,0.06), 0 1px 2px 0 rgba(0,0,0,0.05)</div>
-      </div>
-      <div class="ds-elevation-card" style="box-shadow:0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px 0 rgba(0,0,0,0.06)">
-        <div class="ds-elevation-card__name">md</div>
-        <div class="ds-elevation-card__value">0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px 0 rgba(0,0,0,0.06)</div>
-      </div>
-      <div class="ds-elevation-card" style="box-shadow:0 10px 15px -3px rgba(0,0,0,0.12), 0 4px 6px -2px rgba(0,0,0,0.08)">
-        <div class="ds-elevation-card__name">lg</div>
-        <div class="ds-elevation-card__value">0 10px 15px -3px rgba(0,0,0,0.12), 0 4px 6px -2px rgba(0,0,0,0.08)</div>
-      </div>
-      <div class="ds-elevation-card" style="box-shadow:0 20px 25px -5px rgba(0,0,0,0.15), 0 8px 10px -2px rgba(0,0,0,0.1)">
-        <div class="ds-elevation-card__name">xl</div>
-        <div class="ds-elevation-card__value">0 20px 25px -5px rgba(0,0,0,0.15), 0 8px 10px -2px rgba(0,0,0,0.1)</div>
-      </div>
-      <div class="ds-elevation-card" style="box-shadow:0 25px 50px -12px rgba(0,0,0,0.25)">
-        <div class="ds-elevation-card__name">2xl</div>
-        <div class="ds-elevation-card__value">0 25px 50px -12px rgba(0,0,0,0.25)</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Token Reference</h2>
-    <table class="ds-token-table">
-      <thead><tr><th>Token</th><th>CSS Value</th><th>Usage</th></tr></thead>
+    <h2 class="ds-subsection__title">Elevation Levels</h2>
+    <p style="color:var(--ds-text-secondary);margin-bottom:var(--ds-spacing-6);font-size:var(--ds-font-size-sm);line-height:var(--ds-line-height-relaxed)">Each level combines a shadow token (visible in light mode) with a surface token (visible in dark mode). In dark mode, higher elevation = lighter surface color.</p>
+    <table class="ds-props-table">
+      <thead>
+        <tr><th>Level</th><th>Shadow</th><th>Surface</th><th>Dark Surface</th><th>Components</th></tr>
+      </thead>
       <tbody>
-        <tr><td><code>--ds-shadow-none</code></td><td><code>none</code></td><td>No shadow</td></tr>
-        <tr><td><code>--ds-shadow-xs</code></td><td><code>0 1px 2px 0 rgba(0,0,0,0.05)</code></td><td>Subtle depth for inline elements</td></tr>
-        <tr><td><code>--ds-shadow-sm</code></td><td><code>0 1px 3px 0 rgba(0,0,0,0.06), 0 1px 2px 0 rgba(0,0,0,0.05)</code></td><td>Cards, buttons on hover</td></tr>
-        <tr><td><code>--ds-shadow-md</code></td><td><code>0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px 0 rgba(0,0,0,0.06)</code></td><td>Dropdowns, popovers</td></tr>
-        <tr><td><code>--ds-shadow-lg</code></td><td><code>0 10px 15px -3px rgba(0,0,0,0.12), 0 4px 6px -2px rgba(0,0,0,0.08)</code></td><td>Modals, floating panels</td></tr>
-        <tr><td><code>--ds-shadow-xl</code></td><td><code>0 20px 25px -5px rgba(0,0,0,0.15), 0 8px 10px -2px rgba(0,0,0,0.1)</code></td><td>Notifications, toasts</td></tr>
-        <tr><td><code>--ds-shadow-2xl</code></td><td><code>0 25px 50px -12px rgba(0,0,0,0.25)</code></td><td>Top-level overlays</td></tr>
+        <tr>
+          <td><strong>1 — Sutil</strong></td>
+          <td><code>--ds-shadow-sm</code></td>
+          <td><code>--ds-surface-raised</code></td>
+          <td>neutral-800</td>
+          <td>Cards, painéis, sticky headers</td>
+        </tr>
+        <tr>
+          <td><strong>2 — Elevado</strong></td>
+          <td><code>--ds-shadow-md</code></td>
+          <td><code>--ds-surface-overlay</code></td>
+          <td>neutral-700</td>
+          <td>Dropdowns, popovers, FABs</td>
+        </tr>
+        <tr>
+          <td><strong>3 — Flutuante</strong></td>
+          <td><code>--ds-shadow-lg</code></td>
+          <td><code>--ds-surface-overlay</code></td>
+          <td>neutral-700</td>
+          <td>Modais, dialogs, sidesheets</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Dark Mode Surface Hierarchy</h2>
+    <p style="color:var(--ds-text-secondary);margin-bottom:var(--ds-spacing-6);font-size:var(--ds-font-size-sm);line-height:var(--ds-line-height-relaxed)">In dark mode, shadows are barely visible on dark backgrounds. Elevation is conveyed primarily through surface color. The neutral scale provides natural depth progression:</p>
+    <table class="ds-props-table">
+      <thead>
+        <tr><th>Token</th><th>Light</th><th>Dark</th><th>Role</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>--ds-background-default</code></td><td>white</td><td>neutral-950</td><td>Page canvas (deepest)</td></tr>
+        <tr><td><code>--ds-surface-default</code></td><td>white</td><td>neutral-900</td><td>Content surface, flat elements</td></tr>
+        <tr><td><code>--ds-surface-raised</code></td><td>white</td><td>neutral-800</td><td>Cards, panels, sticky headers</td></tr>
+        <tr><td><code>--ds-surface-overlay</code></td><td>white</td><td>neutral-700</td><td>Modals, dropdowns, FABs</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Shadow Tokens</h2>
+    <table class="ds-props-table">
+      <thead><tr><th>Token</th><th>CSS Value</th></tr></thead>
+      <tbody>
+        <tr><td><code>--ds-shadow-sm</code></td><td><code>0 1px 3px 0 rgba(0,0,0,0.06), 0 1px 2px 0 rgba(0,0,0,0.05)</code></td></tr>
+        <tr><td><code>--ds-shadow-md</code></td><td><code>0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px 0 rgba(0,0,0,0.06)</code></td></tr>
+        <tr><td><code>--ds-shadow-lg</code></td><td><code>0 10px 15px -3px rgba(0,0,0,0.12), 0 4px 6px -2px rgba(0,0,0,0.08)</code></td></tr>
+        <tr><td><code>--ds-shadow-xl</code></td><td><code>0 20px 25px -5px rgba(0,0,0,0.15), 0 8px 10px -2px rgba(0,0,0,0.1)</code></td></tr>
       </tbody>
     </table>
   </div>
