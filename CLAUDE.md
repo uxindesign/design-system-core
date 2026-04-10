@@ -149,13 +149,15 @@ textNode.fills = [paint];
 textNode.textAutoResize = 'HEIGHT';
 textNode.layoutSizingHorizontal = 'FILL';
 
-// Spacing em frames
+// Spacing em frames (só vincular valores > 0)
 const spacing12 = spacingVars.find(v => v.name === 'spacing/12');
 frame.setBoundVariable('itemSpacing', spacing12);
-frame.setBoundVariable('paddingTop', spacing0);
+// NÃO vincular padding 0 a spacing/0 — deixar o valor padrão
 frame.layoutSizingHorizontal = 'FILL';
 frame.layoutSizingVertical = 'HUG';
 ```
+
+**Tokens de valor zero NÃO devem ser vinculados:** `spacing/0`, `radius/0`, `stroke/0` e `shadow-none` existem na Foundation como referência, mas nunca devem ser aplicados via `setBoundVariable()`. Zero é zero — não precisa de token. O mesmo vale para `--ds-spacing-0` e `--ds-shadow-none` no CSS.
 
 ### 5. Componentes Figma
 
