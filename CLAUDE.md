@@ -298,9 +298,11 @@ Classes CSS: `.ds-text-display-2xl`, `.ds-text-heading-lg`, `.ds-text-body-md`, 
 
 Antes de considerar uma tarefa concluída:
 
-- [ ] CSS e Figma estão sincronizados?
+- [ ] CSS e Figma estão sincronizados? (valores resolvidos devem ser idênticos)
 - [ ] Escopos das novas variáveis estão corretos?
 - [ ] Textos do Figma estão em PT-BR?
+- [ ] Página Theme Colors atualizada? (hex texts e swatches devem refletir os valores reais dos tokens)
+- [ ] Contraste WCAG 2.2 AA verificado para novos pares foreground/background?
 - [ ] Changelog atualizado (Figma)?
 - [ ] Versão bumpada (Figma Cover + package.json)?
 - [ ] Commit + push feitos?

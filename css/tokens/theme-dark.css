@@ -24,7 +24,7 @@
   /* Text */
   --ds-text-default:          var(--ds-color-neutral-50);
   --ds-text-secondary:        var(--ds-color-neutral-400);
-  --ds-text-tertiary:         var(--ds-color-neutral-500);
+  --ds-text-tertiary:         var(--ds-color-neutral-400);
   --ds-text-disabled:         var(--ds-color-neutral-600);
   --ds-text-inverse:          var(--ds-color-neutral-900);
   --ds-text-on-brand:         var(--ds-color-neutral-900);
