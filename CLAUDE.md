@@ -134,18 +134,27 @@ Ao criar textos em páginas de documentação do Figma, **sempre** replicar o pa
 
 **NUNCA** definir cores com valores RGB literais (ex: `{r: 0.06, g: 0.09, b: 0.16}`) — use `setBoundVariableForPaint()` para vincular à variável correta. Sem isso, a troca de tema/modo não funciona.
 
+5. **Vincular espaçamentos a variáveis** — todo padding, gap e itemSpacing de frames de documentação DEVE usar `setBoundVariable()` com tokens de spacing Foundation (`spacing/0`, `spacing/4`, `spacing/8`, `spacing/12`, etc.)
+6. **Layout sizing** — textos em parents com auto-layout VERTICAL devem usar `layoutSizingHorizontal = 'FILL'` (nunca FIXED). Frames filhos devem usar `layoutSizingHorizontal = 'FILL'` e `layoutSizingVertical = 'HUG'`.
+
 **Como fazer no código:**
 ```js
-// Text style
+// Text style + fill
 const style = textStyles.find(s => s.name === 'body/md');
 textNode.textStyleId = style.id;
-
-// Fill com variável
-const textVar = colorVars.find(v => v.name === 'text/secondary');
 const paint = figma.variables.setBoundVariableForPaint(
-  { type: 'SOLID', color: { r: 0, g: 0, b: 0 } }, 'color', textVar
+  { type: 'SOLID', color: { r: 0, g: 0, b: 0 } }, 'color', textSecondary
 );
 textNode.fills = [paint];
+textNode.textAutoResize = 'HEIGHT';
+textNode.layoutSizingHorizontal = 'FILL';
+
+// Spacing em frames
+const spacing12 = spacingVars.find(v => v.name === 'spacing/12');
+frame.setBoundVariable('itemSpacing', spacing12);
+frame.setBoundVariable('paddingTop', spacing0);
+frame.layoutSizingHorizontal = 'FILL';
+frame.layoutSizingVertical = 'HUG';
 ```
 
 ### 5. Componentes Figma
