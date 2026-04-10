@@ -132,6 +132,14 @@
   --ds-focus-ring: 0 0 0 2px var(--ds-surface-default), 0 0 0 4px var(--ds-color-primary);
 
   /* ---------------------------------------------------------
+     OVERLAY — Semantic (swap black↔white between modes)
+     --------------------------------------------------------- */
+  --ds-overlay-subtle:  var(--ds-overlay-black-5);
+  --ds-overlay-default: var(--ds-overlay-black-10);
+  --ds-overlay-medium:  var(--ds-overlay-black-20);
+  --ds-overlay-strong:  var(--ds-overlay-black-40);
+
+  /* ---------------------------------------------------------
      STATE
      --------------------------------------------------------- */
   --ds-state-hover:               rgba(0, 0, 0, 0.05);

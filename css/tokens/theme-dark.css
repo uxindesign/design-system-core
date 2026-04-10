@@ -91,6 +91,12 @@
   --ds-border-strong:         var(--ds-color-neutral-500);
   --ds-border-subtle:         var(--ds-color-neutral-800);
 
+  /* Overlay — swap to white for dark mode */
+  --ds-overlay-subtle:  var(--ds-overlay-white-5);
+  --ds-overlay-default: var(--ds-overlay-white-10);
+  --ds-overlay-medium:  var(--ds-overlay-white-20);
+  --ds-overlay-strong:  var(--ds-overlay-white-40);
+
   /* Focus ring */
   --ds-focus-ring: 0 0 0 2px var(--ds-surface-default), 0 0 0 4px var(--ds-color-primary);
 
