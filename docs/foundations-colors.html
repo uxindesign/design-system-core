@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colors — UXIN Design System</title>
+  <link rel="stylesheet" href="../css/design-system.css">
+  <link rel="stylesheet" href="layout.css">
+</head>
+<body>
+
+<header class="ds-site-header">
+  <div style="display:flex;align-items:center;gap:var(--ds-spacing-4)">
+    <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <a href="index.html" class="ds-site-header__brand">
+      <div class="ds-site-header__logo">DS</div>
+      <span class="ds-site-header__title">UXIN Design System</span>
+    </a>
+  </div>
+  <div class="ds-site-header__actions">
+    <div class="ds-theme-switcher">
+      <label class="ds-theme-switcher__label" for="theme-switcher">Theme</label>
+      <select class="ds-theme-switcher__select" id="theme-switcher">
+        <option value="default">Default (Blue)</option>
+        <option value="ocean">Ocean (Cyan)</option>
+        <option value="forest">Forest (Emerald)</option>
+      </select>
+    </div>
+    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode">Dark</button>
+  </div>
+</header>
+<div class="ds-sidebar-overlay" id="sidebar-overlay"></div>
+
+<nav class="ds-sidebar" id="sidebar" aria-label="Main navigation">
+  <div class="ds-sidebar__section">
+    <h2 class="ds-sidebar__heading">Overview</h2>
+    <ul class="ds-sidebar__nav">
+      <li><a href="index.html" class="ds-sidebar__link">Getting Started</a></li>
+    </ul>
+  </div>
+  <div class="ds-sidebar__section">
+    <h2 class="ds-sidebar__heading">Foundations</h2>
+    <ul class="ds-sidebar__nav">
+      <li><a href="foundations.html" class="ds-sidebar__link">Overview</a></li>
+      <li><a href="foundations-colors.html" class="ds-sidebar__link ds-sidebar__link--active">Colors</a></li>
+      <li><a href="foundations-theme-colors.html" class="ds-sidebar__link">Theme Colors</a></li>
+      <li><a href="foundations-typography.html" class="ds-sidebar__link">Typography</a></li>
+      <li><a href="foundations-spacing.html" class="ds-sidebar__link">Spacing</a></li>
+      <li><a href="foundations-radius.html" class="ds-sidebar__link">Radius</a></li>
+      <li><a href="foundations-elevation.html" class="ds-sidebar__link">Elevation</a></li>
+      <li><a href="foundations-borders.html" class="ds-sidebar__link">Borders</a></li>
+    </ul>
+  </div>
+  <div class="ds-sidebar__section">
+    <h2 class="ds-sidebar__heading">Components</h2>
+    <ul class="ds-sidebar__nav">
+      <li><a href="button.html" class="ds-sidebar__link">Button</a></li>
+      <li><a href="input.html" class="ds-sidebar__link">Input</a></li>
+      <li><a href="textarea.html" class="ds-sidebar__link">Textarea</a></li>
+      <li><a href="select.html" class="ds-sidebar__link">Select</a></li>
+      <li><a href="checkbox.html" class="ds-sidebar__link">Checkbox</a></li>
+      <li><a href="radio.html" class="ds-sidebar__link">Radio</a></li>
+      <li><a href="toggle.html" class="ds-sidebar__link">Toggle</a></li>
+      <li><a href="badge.html" class="ds-sidebar__link">Badge</a></li>
+      <li><a href="alert.html" class="ds-sidebar__link">Alert</a></li>
+      <li><a href="card.html" class="ds-sidebar__link">Card</a></li>
+      <li><a href="modal.html" class="ds-sidebar__link">Modal</a></li>
+      <li><a href="tooltip.html" class="ds-sidebar__link">Tooltip</a></li>
+      <li><a href="tabs.html" class="ds-sidebar__link">Tabs</a></li>
+      <li><a href="breadcrumb.html" class="ds-sidebar__link">Breadcrumb</a></li>
+      <li><a href="avatar.html" class="ds-sidebar__link">Avatar</a></li>
+      <li><a href="divider.html" class="ds-sidebar__link">Divider</a></li>
+      <li><a href="spinner.html" class="ds-sidebar__link">Spinner</a></li>
+      <li><a href="skeleton.html" class="ds-sidebar__link">Skeleton</a></li>
+      <li><a href="form-field.html" class="ds-sidebar__link">Form Field</a></li>
+    </ul>
+  </div>
+  <div class="ds-sidebar__section">
+    <h2 class="ds-sidebar__heading">Guidelines</h2>
+    <ul class="ds-sidebar__nav">
+      <li><a href="theming.html" class="ds-sidebar__link">Theming</a></li>
+      <li><a href="accessibility.html" class="ds-sidebar__link">Accessibility</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="ds-main">
+  <div class="ds-section">
+    <h1 class="ds-section__title">Foundation Colors</h1>
+    <p class="ds-section__subtitle">The primitive color palette provides raw color values with no semantic meaning. These serve as the base palette referenced by semantic/theme tokens.</p>
+  </div>
+
+  <!-- Neutral -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Neutral (Slate scale)</h2>
+    <div class="ds-swatch-grid">
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#F8FAFC"></div><div class="ds-swatch__name">50</div><div class="ds-swatch__value">#F8FAFC</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#F1F5F9"></div><div class="ds-swatch__name">100</div><div class="ds-swatch__value">#F1F5F9</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#E2E8F0"></div><div class="ds-swatch__name">200</div><div class="ds-swatch__value">#E2E8F0</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#CBD5E1"></div><div class="ds-swatch__name">300</div><div class="ds-swatch__value">#CBD5E1</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#94A3B8"></div><div class="ds-swatch__name">400</div><div class="ds-swatch__value">#94A3B8</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#64748B"></div><div class="ds-swatch__name">500</div><div class="ds-swatch__value">#64748B</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#475569"></div><div class="ds-swatch__name">600</div><div class="ds-swatch__value">#475569</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#334155"></div><div class="ds-swatch__name">700</div><div class="ds-swatch__value">#334155</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#1E293B"></div><div class="ds-swatch__name">800</div><div class="ds-swatch__value">#1E293B</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#0F172A"></div><div class="ds-swatch__name">900</div><div class="ds-swatch__value">#0F172A</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#020617"></div><div class="ds-swatch__name">950</div><div class="ds-swatch__value">#020617</div></div>
+    </div>
+  </div>
+
+  <!-- Blue -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Blue (Primary palette)</h2>
+    <div class="ds-swatch-grid">
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#EFF6FF"></div><div class="ds-swatch__name">50</div><div class="ds-swatch__value">#EFF6FF</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#DBEAFE"></div><div class="ds-swatch__name">100</div><div class="ds-swatch__value">#DBEAFE</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#BFDBFE"></div><div class="ds-swatch__name">200</div><div class="ds-swatch__value">#BFDBFE</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#93C5FD"></div><div class="ds-swatch__name">300</div><div class="ds-swatch__value">#93C5FD</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#60A5FA"></div><div class="ds-swatch__name">400</div><div class="ds-swatch__value">#60A5FA</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#3B82F6"></div><div class="ds-swatch__name">500</div><div class="ds-swatch__value">#3B82F6</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#2563EB"></div><div class="ds-swatch__name">600</div><div class="ds-swatch__value">#2563EB</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#1D4ED8"></div><div class="ds-swatch__name">700</div><div class="ds-swatch__value">#1D4ED8</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#1E40AF"></div><div class="ds-swatch__name">800</div><div class="ds-swatch__value">#1E40AF</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#1E3A8A"></div><div class="ds-swatch__name">900</div><div class="ds-swatch__value">#1E3A8A</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#172554"></div><div class="ds-swatch__name">950</div><div class="ds-swatch__value">#172554</div></div>
+    </div>
+  </div>
+
+  <!-- Purple -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Purple (Secondary palette)</h2>
+    <div class="ds-swatch-grid">
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#FAF5FF"></div><div class="ds-swatch__name">50</div><div class="ds-swatch__value">#FAF5FF</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#F3E8FF"></div><div class="ds-swatch__name">100</div><div class="ds-swatch__value">#F3E8FF</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#E9D5FF"></div><div class="ds-swatch__name">200</div><div class="ds-swatch__value">#E9D5FF</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#D8B4FE"></div><div class="ds-swatch__name">300</div><div class="ds-swatch__value">#D8B4FE</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#C084FC"></div><div class="ds-swatch__name">400</div><div class="ds-swatch__value">#C084FC</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#A855F7"></div><div class="ds-swatch__name">500</div><div class="ds-swatch__value">#A855F7</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#9333EA"></div><div class="ds-swatch__name">600</div><div class="ds-swatch__value">#9333EA</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#7E22CE"></div><div class="ds-swatch__name">700</div><div class="ds-swatch__value">#7E22CE</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#6B21A8"></div><div class="ds-swatch__name">800</div><div class="ds-swatch__value">#6B21A8</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#581C87"></div><div class="ds-swatch__name">900</div><div class="ds-swatch__value">#581C87</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#3B0764"></div><div class="ds-swatch__name">950</div><div class="ds-swatch__value">#3B0764</div></div>
+    </div>
+  </div>
+
+  <!-- Red -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Red (Error / Destructive)</h2>
+    <div class="ds-swatch-grid">
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#FEF2F2"></div><div class="ds-swatch__name">50</div><div class="ds-swatch__value">#FEF2F2</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#FEE2E2"></div><div class="ds-swatch__name">100</div><div class="ds-swatch__value">#FEE2E2</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#FECACA"></div><div class="ds-swatch__name">200</div><div class="ds-swatch__value">#FECACA</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#FCA5A5"></div><div class="ds-swatch__name">300</div><div class="ds-swatch__value">#FCA5A5</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#F87171"></div><div class="ds-swatch__name">400</div><div class="ds-swatch__value">#F87171</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#EF4444"></div><div class="ds-swatch__name">500</div><div class="ds-swatch__value">#EF4444</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#DC2626"></div><div class="ds-swatch__name">600</div><div class="ds-swatch__value">#DC2626</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#B91C1C"></div><div class="ds-swatch__name">700</div><div class="ds-swatch__value">#B91C1C</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#991B1B"></div><div class="ds-swatch__name">800</div><div class="ds-swatch__value">#991B1B</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#7F1D1D"></div><div class="ds-swatch__name">900</div><div class="ds-swatch__value">#7F1D1D</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#450A0A"></div><div class="ds-swatch__name">950</div><div class="ds-swatch__value">#450A0A</div></div>
+    </div>
+  </div>
+
+  <!-- Amber -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Amber (Warning)</h2>
+    <div class="ds-swatch-grid">
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#FFFBEB"></div><div class="ds-swatch__name">50</div><div class="ds-swatch__value">#FFFBEB</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#FEF3C7"></div><div class="ds-swatch__name">100</div><div class="ds-swatch__value">#FEF3C7</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#FDE68A"></div><div class="ds-swatch__name">200</div><div class="ds-swatch__value">#FDE68A</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#FCD34D"></div><div class="ds-swatch__name">300</div><div class="ds-swatch__value">#FCD34D</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#FBBF24"></div><div class="ds-swatch__name">400</div><div class="ds-swatch__value">#FBBF24</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#F59E0B"></div><div class="ds-swatch__name">500</div><div class="ds-swatch__value">#F59E0B</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#D97706"></div><div class="ds-swatch__name">600</div><div class="ds-swatch__value">#D97706</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#B45309"></div><div class="ds-swatch__name">700</div><div class="ds-swatch__value">#B45309</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#92400E"></div><div class="ds-swatch__name">800</div><div class="ds-swatch__value">#92400E</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#78350F"></div><div class="ds-swatch__name">900</div><div class="ds-swatch__value">#78350F</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#451A03"></div><div class="ds-swatch__name">950</div><div class="ds-swatch__value">#451A03</div></div>
+    </div>
+  </div>
+
+  <!-- Green -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Green (Success)</h2>
+    <div class="ds-swatch-grid">
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#F0FDF4"></div><div class="ds-swatch__name">50</div><div class="ds-swatch__value">#F0FDF4</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#DCFCE7"></div><div class="ds-swatch__name">100</div><div class="ds-swatch__value">#DCFCE7</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#BBF7D0"></div><div class="ds-swatch__name">200</div><div class="ds-swatch__value">#BBF7D0</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#86EFAC"></div><div class="ds-swatch__name">300</div><div class="ds-swatch__value">#86EFAC</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#4ADE80"></div><div class="ds-swatch__name">400</div><div class="ds-swatch__value">#4ADE80</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#22C55E"></div><div class="ds-swatch__name">500</div><div class="ds-swatch__value">#22C55E</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#16A34A"></div><div class="ds-swatch__name">600</div><div class="ds-swatch__value">#16A34A</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#15803D"></div><div class="ds-swatch__name">700</div><div class="ds-swatch__value">#15803D</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#166534"></div><div class="ds-swatch__name">800</div><div class="ds-swatch__value">#166534</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#14532D"></div><div class="ds-swatch__name">900</div><div class="ds-swatch__value">#14532D</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#052E16"></div><div class="ds-swatch__name">950</div><div class="ds-swatch__value">#052E16</div></div>
+    </div>
+  </div>
+
+  <!-- Sky -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Sky (Info)</h2>
+    <div class="ds-swatch-grid">
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#F0F9FF"></div><div class="ds-swatch__name">50</div><div class="ds-swatch__value">#F0F9FF</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#E0F2FE"></div><div class="ds-swatch__name">100</div><div class="ds-swatch__value">#E0F2FE</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#BAE6FD"></div><div class="ds-swatch__name">200</div><div class="ds-swatch__value">#BAE6FD</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#7DD3FC"></div><div class="ds-swatch__name">300</div><div class="ds-swatch__value">#7DD3FC</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#38BDF8"></div><div class="ds-swatch__name">400</div><div class="ds-swatch__value">#38BDF8</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#0EA5E9"></div><div class="ds-swatch__name">500</div><div class="ds-swatch__value">#0EA5E9</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#0284C7"></div><div class="ds-swatch__name">600</div><div class="ds-swatch__value">#0284C7</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#0369A1"></div><div class="ds-swatch__name">700</div><div class="ds-swatch__value">#0369A1</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#075985"></div><div class="ds-swatch__name">800</div><div class="ds-swatch__value">#075985</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#0C4A6E"></div><div class="ds-swatch__name">900</div><div class="ds-swatch__value">#0C4A6E</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#082F49"></div><div class="ds-swatch__name">950</div><div class="ds-swatch__value">#082F49</div></div>
+    </div>
+  </div>
+
+  <!-- Cyan -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Cyan (Ocean theme)</h2>
+    <div class="ds-swatch-grid">
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#ECFEFF"></div><div class="ds-swatch__name">50</div><div class="ds-swatch__value">#ECFEFF</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#CFFAFE"></div><div class="ds-swatch__name">100</div><div class="ds-swatch__value">#CFFAFE</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#A5F3FC"></div><div class="ds-swatch__name">200</div><div class="ds-swatch__value">#A5F3FC</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#67E8F9"></div><div class="ds-swatch__name">300</div><div class="ds-swatch__value">#67E8F9</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#22D3EE"></div><div class="ds-swatch__name">400</div><div class="ds-swatch__value">#22D3EE</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#06B6D4"></div><div class="ds-swatch__name">500</div><div class="ds-swatch__value">#06B6D4</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#0891B2"></div><div class="ds-swatch__name">600</div><div class="ds-swatch__value">#0891B2</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#0E7490"></div><div class="ds-swatch__name">700</div><div class="ds-swatch__value">#0E7490</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#155E75"></div><div class="ds-swatch__name">800</div><div class="ds-swatch__value">#155E75</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#164E63"></div><div class="ds-swatch__name">900</div><div class="ds-swatch__value">#164E63</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#083344"></div><div class="ds-swatch__name">950</div><div class="ds-swatch__value">#083344</div></div>
+    </div>
+  </div>
+
+  <!-- Emerald -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Emerald (Forest theme)</h2>
+    <div class="ds-swatch-grid">
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#ECFDF5"></div><div class="ds-swatch__name">50</div><div class="ds-swatch__value">#ECFDF5</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#D1FAE5"></div><div class="ds-swatch__name">100</div><div class="ds-swatch__value">#D1FAE5</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#A7F3D0"></div><div class="ds-swatch__name">200</div><div class="ds-swatch__value">#A7F3D0</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#6EE7B7"></div><div class="ds-swatch__name">300</div><div class="ds-swatch__value">#6EE7B7</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#34D399"></div><div class="ds-swatch__name">400</div><div class="ds-swatch__value">#34D399</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#10B981"></div><div class="ds-swatch__name">500</div><div class="ds-swatch__value">#10B981</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#059669"></div><div class="ds-swatch__name">600</div><div class="ds-swatch__value">#059669</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#047857"></div><div class="ds-swatch__name">700</div><div class="ds-swatch__value">#047857</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#065F46"></div><div class="ds-swatch__name">800</div><div class="ds-swatch__value">#065F46</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#064E3B"></div><div class="ds-swatch__name">900</div><div class="ds-swatch__value">#064E3B</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#022C22"></div><div class="ds-swatch__name">950</div><div class="ds-swatch__value">#022C22</div></div>
+    </div>
+  </div>
+
+  <!-- Indigo -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Indigo (Ocean theme secondary)</h2>
+    <div class="ds-swatch-grid">
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#EEF2FF"></div><div class="ds-swatch__name">50</div><div class="ds-swatch__value">#EEF2FF</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#E0E7FF"></div><div class="ds-swatch__name">100</div><div class="ds-swatch__value">#E0E7FF</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#C7D2FE"></div><div class="ds-swatch__name">200</div><div class="ds-swatch__value">#C7D2FE</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#A5B4FC"></div><div class="ds-swatch__name">300</div><div class="ds-swatch__value">#A5B4FC</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#818CF8"></div><div class="ds-swatch__name">400</div><div class="ds-swatch__value">#818CF8</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#6366F1"></div><div class="ds-swatch__name">500</div><div class="ds-swatch__value">#6366F1</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#4F46E5"></div><div class="ds-swatch__name">600</div><div class="ds-swatch__value">#4F46E5</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#4338CA"></div><div class="ds-swatch__name">700</div><div class="ds-swatch__value">#4338CA</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#3730A3"></div><div class="ds-swatch__name">800</div><div class="ds-swatch__value">#3730A3</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#312E81"></div><div class="ds-swatch__name">900</div><div class="ds-swatch__value">#312E81</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#1E1B4B"></div><div class="ds-swatch__name">950</div><div class="ds-swatch__value">#1E1B4B</div></div>
+    </div>
+  </div>
+
+  <!-- Absolute & Overlays -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Absolute & Overlays</h2>
+    <div class="ds-swatch-grid">
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#FFFFFF"></div><div class="ds-swatch__name">White</div><div class="ds-swatch__value">#FFFFFF</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#000000"></div><div class="ds-swatch__name">Black</div><div class="ds-swatch__value">#000000</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:rgba(0,0,0,0.05)"></div><div class="ds-swatch__name">Black 5%</div><div class="ds-swatch__value">rgba(0,0,0,0.05)</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:rgba(0,0,0,0.1)"></div><div class="ds-swatch__name">Black 10%</div><div class="ds-swatch__value">rgba(0,0,0,0.1)</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:rgba(0,0,0,0.2)"></div><div class="ds-swatch__name">Black 20%</div><div class="ds-swatch__value">rgba(0,0,0,0.2)</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:rgba(0,0,0,0.4)"></div><div class="ds-swatch__name">Black 40%</div><div class="ds-swatch__value">rgba(0,0,0,0.4)</div></div>
+      <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:rgba(0,0,0,0.6)"></div><div class="ds-swatch__name">Black 60%</div><div class="ds-swatch__value">rgba(0,0,0,0.6)</div></div>
+    </div>
+  </div>
+</main>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

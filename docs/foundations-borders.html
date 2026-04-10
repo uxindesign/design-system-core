@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Borders — UXIN Design System</title>
+  <link rel="stylesheet" href="../css/design-system.css">
+  <link rel="stylesheet" href="layout.css">
+  <style>
+    .ds-border-row { display: flex; align-items: center; gap: var(--ds-spacing-4); padding: var(--ds-spacing-3) 0; border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); }
+    .ds-border-row__preview { width: 200px; flex-shrink: 0; }
+    .ds-border-row__line { width: 100%; border-top-style: solid; border-top-color: var(--ds-text-default); }
+    .ds-border-row__token { font-size: var(--ds-font-size-xs); font-family: var(--ds-font-family-mono); color: var(--ds-text-default); width: 200px; flex-shrink: 0; }
+    .ds-border-row__value { font-size: var(--ds-font-size-xs); color: var(--ds-text-secondary); }
+    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-sm); margin-bottom: var(--ds-spacing-8); }
+    .ds-token-table th { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-text-secondary); }
+    .ds-token-table td { padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
+    .ds-token-table code { font-size: var(--ds-font-size-xs); font-family: var(--ds-font-family-mono); }
+    .ds-token-swatch { width: 32px; height: 32px; border-radius: var(--ds-radius-md); border: var(--ds-border-width-1) solid var(--ds-border-default); display: inline-block; vertical-align: middle; }
+  </style>
+</head>
+<body>
+
+<header class="ds-site-header">
+  <div style="display:flex;align-items:center;gap:var(--ds-spacing-4)">
+    <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <a href="index.html" class="ds-site-header__brand">
+      <div class="ds-site-header__logo">DS</div>
+      <span class="ds-site-header__title">UXIN Design System</span>
+    </a>
+  </div>
+  <div class="ds-site-header__actions">
+    <div class="ds-theme-switcher">
+      <label class="ds-theme-switcher__label" for="theme-switcher">Theme</label>
+      <select class="ds-theme-switcher__select" id="theme-switcher">
+        <option value="default">Default (Blue)</option>
+        <option value="ocean">Ocean (Cyan)</option>
+        <option value="forest">Forest (Emerald)</option>
+      </select>
+    </div>
+    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode">Dark</button>
+  </div>
+</header>
+<div class="ds-sidebar-overlay" id="sidebar-overlay"></div>
+
+<nav class="ds-sidebar" id="sidebar" aria-label="Main navigation">
+  <div class="ds-sidebar__section">
+    <h2 class="ds-sidebar__heading">Overview</h2>
+    <ul class="ds-sidebar__nav">
+      <li><a href="index.html" class="ds-sidebar__link">Getting Started</a></li>
+    </ul>
+  </div>
+  <div class="ds-sidebar__section">
+    <h2 class="ds-sidebar__heading">Foundations</h2>
+    <ul class="ds-sidebar__nav">
+      <li><a href="foundations.html" class="ds-sidebar__link">Overview</a></li>
+      <li><a href="foundations-colors.html" class="ds-sidebar__link">Colors</a></li>
+      <li><a href="foundations-theme-colors.html" class="ds-sidebar__link">Theme Colors</a></li>
+      <li><a href="foundations-typography.html" class="ds-sidebar__link">Typography</a></li>
+      <li><a href="foundations-spacing.html" class="ds-sidebar__link">Spacing</a></li>
+      <li><a href="foundations-radius.html" class="ds-sidebar__link">Radius</a></li>
+      <li><a href="foundations-elevation.html" class="ds-sidebar__link">Elevation</a></li>
+      <li><a href="foundations-borders.html" class="ds-sidebar__link ds-sidebar__link--active">Borders</a></li>
+    </ul>
+  </div>
+  <div class="ds-sidebar__section">
+    <h2 class="ds-sidebar__heading">Components</h2>
+    <ul class="ds-sidebar__nav">
+      <li><a href="button.html" class="ds-sidebar__link">Button</a></li>
+      <li><a href="input.html" class="ds-sidebar__link">Input</a></li>
+      <li><a href="textarea.html" class="ds-sidebar__link">Textarea</a></li>
+      <li><a href="select.html" class="ds-sidebar__link">Select</a></li>
+      <li><a href="checkbox.html" class="ds-sidebar__link">Checkbox</a></li>
+      <li><a href="radio.html" class="ds-sidebar__link">Radio</a></li>
+      <li><a href="toggle.html" class="ds-sidebar__link">Toggle</a></li>
+      <li><a href="badge.html" class="ds-sidebar__link">Badge</a></li>
+      <li><a href="alert.html" class="ds-sidebar__link">Alert</a></li>
+      <li><a href="card.html" class="ds-sidebar__link">Card</a></li>
+      <li><a href="modal.html" class="ds-sidebar__link">Modal</a></li>
+      <li><a href="tooltip.html" class="ds-sidebar__link">Tooltip</a></li>
+      <li><a href="tabs.html" class="ds-sidebar__link">Tabs</a></li>
+      <li><a href="breadcrumb.html" class="ds-sidebar__link">Breadcrumb</a></li>
+      <li><a href="avatar.html" class="ds-sidebar__link">Avatar</a></li>
+      <li><a href="divider.html" class="ds-sidebar__link">Divider</a></li>
+      <li><a href="spinner.html" class="ds-sidebar__link">Spinner</a></li>
+      <li><a href="skeleton.html" class="ds-sidebar__link">Skeleton</a></li>
+      <li><a href="form-field.html" class="ds-sidebar__link">Form Field</a></li>
+    </ul>
+  </div>
+  <div class="ds-sidebar__section">
+    <h2 class="ds-sidebar__heading">Guidelines</h2>
+    <ul class="ds-sidebar__nav">
+      <li><a href="theming.html" class="ds-sidebar__link">Theming</a></li>
+      <li><a href="accessibility.html" class="ds-sidebar__link">Accessibility</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="ds-main">
+  <div class="ds-section">
+    <h1 class="ds-section__title">Borders</h1>
+    <p class="ds-section__subtitle">Border width tokens and semantic border color tokens used across components for consistent visual boundaries.</p>
+  </div>
+
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Border Widths</h2>
+    <div style="margin-bottom:var(--ds-spacing-8)">
+      <div class="ds-border-row">
+        <div class="ds-border-row__token">--ds-border-width-0</div>
+        <div class="ds-border-row__value">0</div>
+        <div class="ds-border-row__preview"><div class="ds-border-row__line" style="border-top-width:0"></div></div>
+      </div>
+      <div class="ds-border-row">
+        <div class="ds-border-row__token">--ds-border-width-1</div>
+        <div class="ds-border-row__value">1px</div>
+        <div class="ds-border-row__preview"><div class="ds-border-row__line" style="border-top-width:1px"></div></div>
+      </div>
+      <div class="ds-border-row">
+        <div class="ds-border-row__token">--ds-border-width-2</div>
+        <div class="ds-border-row__value">2px</div>
+        <div class="ds-border-row__preview"><div class="ds-border-row__line" style="border-top-width:2px"></div></div>
+      </div>
+      <div class="ds-border-row">
+        <div class="ds-border-row__token">--ds-border-width-4</div>
+        <div class="ds-border-row__value">4px</div>
+        <div class="ds-border-row__preview"><div class="ds-border-row__line" style="border-top-width:4px"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Semantic Border Widths</h2>
+    <table class="ds-token-table">
+      <thead><tr><th>Token</th><th>Reference</th><th>Value</th><th>Usage</th></tr></thead>
+      <tbody>
+        <tr><td><code>--ds-border-width-subtle</code></td><td><code>border-width-1</code></td><td>1px</td><td>Subtle separators</td></tr>
+        <tr><td><code>--ds-border-width-default</code></td><td><code>border-width-1</code></td><td>1px</td><td>Default component borders</td></tr>
+        <tr><td><code>--ds-border-width-strong</code></td><td><code>border-width-2</code></td><td>2px</td><td>Emphasized borders</td></tr>
+        <tr><td><code>--ds-border-width-focus</code></td><td><code>border-width-2</code></td><td>2px</td><td>Focus indicators</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Border Colors</h2>
+    <table class="ds-token-table">
+      <thead><tr><th>Swatch</th><th>Token</th><th>Light</th><th>Dark</th></tr></thead>
+      <tbody>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-border-default)"></span></td><td><code>--ds-border-default</code></td><td><code>neutral-200</code></td><td><code>neutral-700</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-border-strong)"></span></td><td><code>--ds-border-strong</code></td><td><code>neutral-400</code></td><td><code>neutral-500</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-border-subtle)"></span></td><td><code>--ds-border-subtle</code></td><td><code>neutral-100</code></td><td><code>neutral-800</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-border-focus)"></span></td><td><code>--ds-border-focus</code></td><td><code>primary</code></td><td><code>primary</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-border-brand)"></span></td><td><code>--ds-border-brand</code></td><td><code>primary</code></td><td><code>primary</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-border-error)"></span></td><td><code>--ds-border-error</code></td><td><code>red-600</code></td><td><code>red-500</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Feedback Border Colors</h2>
+    <table class="ds-token-table">
+      <thead><tr><th>Swatch</th><th>Token</th><th>Light</th><th>Dark</th></tr></thead>
+      <tbody>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-success-border)"></span></td><td><code>--ds-feedback-success-border</code></td><td><code>green-600</code></td><td><code>green-500</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-warning-border)"></span></td><td><code>--ds-feedback-warning-border</code></td><td><code>amber-500</code></td><td><code>amber-400</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-error-border)"></span></td><td><code>--ds-feedback-error-border</code></td><td><code>red-600</code></td><td><code>red-500</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-info-border)"></span></td><td><code>--ds-feedback-info-border</code></td><td><code>sky-600</code></td><td><code>sky-400</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+</main>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
