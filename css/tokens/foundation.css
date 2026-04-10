@@ -172,10 +172,13 @@
   --ds-overlay-black-20: rgba(0, 0, 0, 0.2);
   --ds-overlay-black-40: rgba(0, 0, 0, 0.4);
   --ds-overlay-black-60: rgba(0, 0, 0, 0.6);
+  --ds-overlay-black-80: rgba(0, 0, 0, 0.8);
   --ds-overlay-white-5:  rgba(255, 255, 255, 0.05);
   --ds-overlay-white-10: rgba(255, 255, 255, 0.1);
   --ds-overlay-white-20: rgba(255, 255, 255, 0.2);
   --ds-overlay-white-40: rgba(255, 255, 255, 0.4);
+  --ds-overlay-white-60: rgba(255, 255, 255, 0.6);
+  --ds-overlay-white-80: rgba(255, 255, 255, 0.8);
 
   /* ---------------------------------------------------------
      TYPOGRAPHY — Font Families
