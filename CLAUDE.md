@@ -95,7 +95,20 @@ A cada alteração significativa (tokens, componentes, documentação):
 - **Site GitHub Pages** (docs/) — bilíngue **PT-BR + EN** com seletor de idioma
 - Termos técnicos universais (label, placeholder, padding, icon, focus ring) podem ficar em inglês no PT-BR
 
-### 3. Escopos de Variáveis Figma
+### 3. Contraste WCAG 2.2 AA — Obrigatório
+
+Toda combinação foreground/background deve atingir **4.5:1** (texto normal) ou **3:1** (texto grande ≥24px / ≥18.66px bold):
+
+- **`text/on-brand`** — deve ser branco em Light (fundo escuro) e **neutral-900 em Dark** (fundo claro 400-level)
+- **`brand/*/foreground`** — mesma lógica: contrastar com o `default` do respectivo modo
+- **`feedback/*/foreground`** — dark text (#0F172A) quando o feedback color é claro (400-level)
+- **`feedback/info/foreground`** — usa neutral-900 em **ambos** os modos (sky-500 e sky-400 são claros demais para branco)
+
+**Regra geral:** quando uma cor de fundo usa shade 400 ou mais claro, o foreground deve ser neutral-900. Quando usa shade 600 ou mais escuro, o foreground pode ser branco.
+
+**Ao criar novos tokens de cor**, sempre calcular o contraste antes de commitar. Cores que funcionam em Light podem falhar em Dark (e vice-versa).
+
+### 4. Escopos de Variáveis Figma
 
 Ao criar novas variáveis:
 - **Foundation colors/spacing/radius/stroke** → `[]` (ocultas)

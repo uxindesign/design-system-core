@@ -104,7 +104,7 @@
   --ds-feedback-info-hover:          var(--ds-color-sky-700);
   --ds-feedback-info-subtle:         var(--ds-color-sky-100);
   --ds-feedback-info-background:     var(--ds-color-sky-50);
-  --ds-feedback-info-foreground:     var(--ds-color-white);
+  --ds-feedback-info-foreground:     var(--ds-color-neutral-900);
   --ds-feedback-info-border:         var(--ds-color-sky-600);
   --ds-feedback-info-text:           var(--ds-color-sky-700);
 

@@ -141,6 +141,8 @@
       <h2 class="ds-subsection__title">Color Contrast</h2>
       <p style="color:var(--ds-text-secondary);margin-bottom:var(--ds-spacing-4);line-height:var(--ds-line-height-relaxed);">
         All color pairings in the design system meet or exceed WCAG 2.2 AA contrast requirements in both light and dark modes.
+        In dark mode, brand and feedback colors use lighter shades (400-level), so foreground tokens automatically switch to dark text (<code>neutral-900</code>) to maintain contrast.
+        The <code>text/on-brand</code> token handles this: white in light mode, <code>neutral-900</code> in dark mode.
       </p>
       <table class="ds-props-table" style="width:100%;border-collapse:collapse;">
         <thead>
