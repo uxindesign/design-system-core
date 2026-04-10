@@ -19,6 +19,59 @@ img, picture, video, canvas, svg { display: block; max-width: 100%; }
 input, button, textarea, select { font: inherit; }
 p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
 
+/* ---------------------------------------------------------
+   Code / Pre
+   --------------------------------------------------------- */
+code, pre {
+  font-family: var(--ds-font-family-mono);
+  font-size: var(--ds-font-size-sm);
+}
+
+code {
+  background-color: var(--ds-background-muted);
+  padding: var(--ds-spacing-0-5) var(--ds-spacing-1);
+  border-radius: var(--ds-radius-sm);
+  color: var(--ds-text-link);
+}
+
+pre {
+  background-color: var(--ds-color-neutral-900);
+  color: var(--ds-color-neutral-100);
+  padding: var(--ds-spacing-4);
+  border-radius: var(--ds-radius-lg);
+  overflow-x: auto;
+  margin-bottom: var(--ds-spacing-4);
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
+  font-size: var(--ds-font-size-sm);
+}
+
+/* ---------------------------------------------------------
+   Tables
+   --------------------------------------------------------- */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: var(--ds-spacing-3) var(--ds-spacing-4);
+  text-align: left;
+  border-bottom: var(--ds-border-width-1) solid var(--ds-border-default);
+}
+
+th {
+  font-weight: var(--ds-font-weight-semibold);
+  font-size: var(--ds-font-size-sm);
+  color: var(--ds-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: var(--ds-letter-spacing-wide);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
