@@ -149,6 +149,25 @@
 }
 
 /* ---------------------------------------------------------
+   Variant: Success (confirmative)
+   --------------------------------------------------------- */
+.ds-btn--success {
+  background-color: var(--ds-feedback-success);
+  color: var(--ds-feedback-success-foreground);
+  border-color: var(--ds-feedback-success);
+}
+
+.ds-btn--success:hover {
+  background-color: var(--ds-feedback-success-hover);
+  border-color: var(--ds-feedback-success-hover);
+}
+
+.ds-btn--success:active {
+  background-color: var(--ds-feedback-success-active);
+  border-color: var(--ds-feedback-success-active);
+}
+
+/* ---------------------------------------------------------
    Variant: Danger (destructive)
    --------------------------------------------------------- */
 .ds-btn--danger,

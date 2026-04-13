@@ -69,6 +69,7 @@
      --------------------------------------------------------- */
   --ds-feedback-success:             var(--ds-color-green-600);
   --ds-feedback-success-hover:       var(--ds-color-green-700);
+  --ds-feedback-success-active:      var(--ds-color-green-800);
   --ds-feedback-success-subtle:      var(--ds-color-green-100);
   --ds-feedback-success-background:  var(--ds-color-green-50);
   --ds-feedback-success-foreground:  var(--ds-color-white);

@@ -90,7 +90,7 @@
 <main class="ds-main">
   <div class="ds-section">
     <h1 class="ds-section__title">Button</h1>
-    <p class="ds-section__subtitle">Buttons trigger actions. Available in 5 variants and 3 sizes, with support for icons, loading, and disabled states.</p>
+    <p class="ds-section__subtitle">Buttons trigger actions. Available in 6 variants and 3 sizes, with support for icons, loading, and disabled states.</p>
   </div>
 
   <!-- Variants -->
@@ -176,6 +176,27 @@
           <button class="ds-preview__copy" aria-label="Copy code">Copy</button>
           <pre><code>&lt;button class="ds-btn ds-btn--ghost"&gt;
   &lt;span class="ds-btn__label"&gt;Ghost&lt;/span&gt;
+&lt;/button&gt;</code></pre>
+        </div>
+      </div>
+    </div>
+
+    <h3>Success</h3>
+    <div class="ds-preview">
+      <div class="ds-preview__tabs" role="tablist">
+        <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
+        <button class="ds-preview__tab" role="tab" aria-selected="false" data-tab="code">Code</button>
+      </div>
+      <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
+        <div class="ds-preview__canvas">
+          <button class="ds-btn ds-btn--success"><span class="ds-btn__label">Success</span></button>
+        </div>
+      </div>
+      <div class="ds-preview__panel" data-panel="code">
+        <div class="ds-preview__code">
+          <button class="ds-preview__copy" aria-label="Copy code">Copy</button>
+          <pre><code>&lt;button class="ds-btn ds-btn--success"&gt;
+  &lt;span class="ds-btn__label"&gt;Success&lt;/span&gt;
 &lt;/button&gt;</code></pre>
         </div>
       </div>
@@ -417,6 +438,7 @@
           <button class="ds-btn ds-btn--secondary" disabled><span class="ds-btn__label">Secondary</span></button>
           <button class="ds-btn ds-btn--outline" disabled><span class="ds-btn__label">Outline</span></button>
           <button class="ds-btn ds-btn--ghost" disabled><span class="ds-btn__label">Ghost</span></button>
+          <button class="ds-btn ds-btn--success" disabled><span class="ds-btn__label">Success</span></button>
           <button class="ds-btn ds-btn--destructive" disabled><span class="ds-btn__label">Destructive</span></button>
         </div>
       </div>
@@ -448,6 +470,7 @@
         <tr><td><code>ds-btn--secondary</code></td><td>Secondary filled variant</td></tr>
         <tr><td><code>ds-btn--outline</code></td><td>Outline variant with border</td></tr>
         <tr><td><code>ds-btn--ghost</code></td><td>Ghost variant, no border or background</td></tr>
+        <tr><td><code>ds-btn--success</code></td><td>Success/confirmative variant</td></tr>
         <tr><td><code>ds-btn--destructive</code></td><td>Destructive/danger variant</td></tr>
         <tr><td><code>ds-btn--sm</code></td><td>Small size (32px height)</td></tr>
         <tr><td><code>ds-btn--md</code></td><td>Medium size (40px height, default)</td></tr>

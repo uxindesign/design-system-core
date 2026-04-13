@@ -53,6 +53,7 @@
   /* Feedback — Success */
   --ds-feedback-success:             var(--ds-color-green-500);
   --ds-feedback-success-hover:       var(--ds-color-green-400);
+  --ds-feedback-success-active:      var(--ds-color-green-300);
   --ds-feedback-success-subtle:      var(--ds-color-green-900);
   --ds-feedback-success-background:  var(--ds-color-green-950);
   --ds-feedback-success-foreground:  var(--ds-color-neutral-900);
