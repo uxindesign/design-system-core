@@ -168,22 +168,19 @@
 }
 
 /* ---------------------------------------------------------
-   Variant: Danger (destructive)
+   Variant: Destructive
    --------------------------------------------------------- */
-.ds-btn--danger,
 .ds-btn--destructive {
   background-color: var(--ds-feedback-error);
   color: var(--ds-feedback-error-foreground);
   border-color: var(--ds-feedback-error);
 }
 
-.ds-btn--danger:hover,
 .ds-btn--destructive:hover {
   background-color: var(--ds-feedback-error-hover);
   border-color: var(--ds-feedback-error-hover);
 }
 
-.ds-btn--danger:active,
 .ds-btn--destructive:active {
   background-color: var(--ds-feedback-error-active);
   border-color: var(--ds-feedback-error-active);
