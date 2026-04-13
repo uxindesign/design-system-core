@@ -113,24 +113,25 @@
 }
 
 /* ---------------------------------------------------------
-   Variant: Outline
+   Variant: Outline (neutral, no brand color)
    --------------------------------------------------------- */
 .ds-btn--outline {
   background-color: transparent;
-  color: var(--ds-color-primary);
-  border-color: var(--ds-color-primary);
+  color: var(--ds-text-default);
+  border-color: var(--ds-border-default);
 }
 
 .ds-btn--outline:hover {
-  background-color: color-mix(in srgb, var(--ds-color-primary) 8%, transparent);
+  background-color: var(--ds-background-muted);
+  border-color: var(--ds-border-strong);
 }
 
 .ds-btn--outline:active {
-  background-color: color-mix(in srgb, var(--ds-color-primary) 16%, transparent);
+  background-color: var(--ds-background-subtle);
 }
 
 /* ---------------------------------------------------------
-   Variant: Ghost
+   Variant: Ghost (brand color, no background)
    --------------------------------------------------------- */
 .ds-btn--ghost {
   background-color: transparent;
