@@ -77,40 +77,39 @@
 }
 
 /* ---------------------------------------------------------
-   Variant: Primary (default filled)
+   Variant: Brand (filled with brand color)
    --------------------------------------------------------- */
-.ds-btn--primary {
+.ds-btn--brand {
   background-color: var(--ds-color-primary);
   color: var(--ds-color-primary-foreground);
   border-color: var(--ds-color-primary);
 }
 
-.ds-btn--primary:hover {
+.ds-btn--brand:hover {
   background-color: var(--ds-color-primary-hover);
   border-color: var(--ds-color-primary-hover);
 }
 
-.ds-btn--primary:active {
+.ds-btn--brand:active {
   background-color: var(--ds-color-primary-active);
   border-color: var(--ds-color-primary-active);
 }
 
 /* ---------------------------------------------------------
-   Variant: Secondary (outlined style per Figma)
+   Variant: Toned (alpha-tinted brand color)
    --------------------------------------------------------- */
-.ds-btn--secondary {
-  background-color: var(--ds-surface-raised);
-  color: var(--ds-text-default);
-  border-color: var(--ds-border-default);
+.ds-btn--toned {
+  background-color: color-mix(in srgb, var(--ds-color-primary) 12%, transparent);
+  color: var(--ds-color-primary);
+  border-color: transparent;
 }
 
-.ds-btn--secondary:hover {
-  background-color: var(--ds-background-muted);
-  border-color: var(--ds-border-strong);
+.ds-btn--toned:hover {
+  background-color: color-mix(in srgb, var(--ds-color-primary) 20%, transparent);
 }
 
-.ds-btn--secondary:active {
-  background-color: var(--ds-background-subtle);
+.ds-btn--toned:active {
+  background-color: color-mix(in srgb, var(--ds-color-primary) 28%, transparent);
 }
 
 /* ---------------------------------------------------------
@@ -123,12 +122,11 @@
 }
 
 .ds-btn--outline:hover {
-  background-color: var(--ds-color-primary-subtle);
+  background-color: color-mix(in srgb, var(--ds-color-primary) 8%, transparent);
 }
 
 .ds-btn--outline:active {
-  background-color: var(--ds-color-primary);
-  color: var(--ds-color-primary-foreground);
+  background-color: color-mix(in srgb, var(--ds-color-primary) 16%, transparent);
 }
 
 /* ---------------------------------------------------------
@@ -141,15 +139,15 @@
 }
 
 .ds-btn--ghost:hover {
-  background-color: var(--ds-color-primary-subtle);
+  background-color: color-mix(in srgb, var(--ds-color-primary) 8%, transparent);
 }
 
 .ds-btn--ghost:active {
-  background-color: var(--ds-background-muted);
+  background-color: color-mix(in srgb, var(--ds-color-primary) 16%, transparent);
 }
 
 /* ---------------------------------------------------------
-   Variant: Success (confirmative)
+   Variant: Success
    --------------------------------------------------------- */
 .ds-btn--success {
   background-color: var(--ds-feedback-success);
