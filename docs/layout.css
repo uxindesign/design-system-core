@@ -459,6 +459,22 @@
    Responsive — Mobile
    --------------------------------------------------------- */
 @media (max-width: 768px) {
+  .ds-site-header {
+    padding: 0 var(--ds-spacing-3);
+  }
+
+  .ds-site-header__title {
+    display: none;
+  }
+
+  .ds-theme-switcher__label {
+    display: none;
+  }
+
+  .ds-theme-switcher__select {
+    max-width: 120px;
+  }
+
   .ds-menu-toggle {
     display: flex;
     align-items: center;
