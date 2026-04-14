@@ -306,3 +306,170 @@ Antes de considerar uma tarefa concluída:
 - [ ] Changelog atualizado (Figma)?
 - [ ] Versão bumpada (Figma Cover + package.json)?
 - [ ] Commit + push feitos?
+
+---
+
+## Princípios de Design
+
+Os seguintes princípios orientam todas as decisões — de tokens a componentes a patterns.
+Cada decisão que contradiga um princípio precisa de ADR justificando.
+
+1. **Agnóstico de stack** — O DS é CSS puro + vanilla JS. Tokens em JSON (DTCG) transformados via Style Dictionary. Nenhuma decisão deve acoplar o DS a um framework específico.
+2. **Consistência acima de velocidade** — Um componente mal especificado gera retrabalho no Figma e no código. Definir API antes de implementar.
+3. **Acessibilidade desde o início** — WCAG 2.2 AA é piso, não teto. Não é "fase 2".
+4. **Tokens como contrato** — Tokens são a cola entre Figma e código. Toda propriedade visual deve ser resolvida via token, nunca hardcoded.
+5. **Decisão sem registro não existe** — Se não virou ADR em `docs/decisions/`, não foi decidida formalmente.
+
+---
+
+## Migração de Tokens: Foundation→Brand→Theme → Foundation→Semantic→Component
+
+### Contexto
+
+A arquitetura atual (Foundation→Brand→Theme) usa Brand como ponte entre 3 temas de cor (Default, Ocean, Forest). Na evolução para um DS de marca única, a camada Brand perde propósito como seletor multi-marca e passa a ser a camada semântica.
+
+### Arquitetura alvo
+
+```
+Foundation (primitivos — valores brutos)
+    ↓ referência
+Semantic (intenção — surface, text, border, feedback, state)
+    ↓ referência
+Component (tokens específicos por componente — button.bg.default)
+```
+
+A camada Semantic herda a estrutura da atual Theme (94 vars) e absorve o que era Brand (13 vars). A camada Component é nova — não existia antes.
+
+### Formato canônico: JSON (DTCG)
+
+Tokens são definidos em JSON seguindo o formato Design Token Community Group (DTCG):
+- `$value` para valores
+- `$type` para tipo
+- `$description` para documentação
+- Referências com `{foundation.color.blue.500}`
+
+Esses JSONs são transformados pelo Style Dictionary em:
+- CSS custom properties (`--ds-*`) para o código web
+- Figma Variables (via sync script ou `use_figma`)
+- Futuramente: Swift, Kotlin, SCSS, ou o que a stack exigir
+
+### Mapeamento de nomenclatura
+
+| Contexto | Formato | Exemplo |
+|----------|---------|---------|
+| JSON (canônico) | `{nível}.{categoria}.{tipo}.{variante}` | `foundation.color.blue.500` |
+| CSS (gerado) | `--ds-{categoria}-{tipo}-{variante}` | `--ds-color-blue-500` |
+| Figma Variables | `{categoria}/{tipo}/{variante}` | `color/blue/500` |
+
+Os 3 formatos representam o mesmo token — a transformação é automática via Style Dictionary.
+
+### Referência: ADR-001
+
+Ver `docs/decisions/ADR-001-migracao-tokens.md` para contexto completo da decisão.
+
+---
+
+## Style Dictionary
+
+### Instalação
+
+```bash
+npm install style-dictionary @tokens-studio/sd-transforms
+```
+
+### Localização dos tokens
+
+```
+tokens/
+├── foundation/
+│   ├── colors.json
+│   ├── typography.json
+│   ├── spacing.json
+│   ├── radius.json
+│   ├── shadows.json
+│   └── opacity.json
+├── semantic/
+│   ├── light.json
+│   └── dark.json
+└── component/
+    ├── button.json
+    ├── input.json
+    └── [componente].json
+```
+
+### Build
+
+```bash
+npx style-dictionary build
+```
+
+Output vai para `css/tokens/` (substituindo os CSS atuais escritos à mão).
+
+---
+
+## ADRs (Architecture Decision Records)
+
+Toda decisão de arquitetura é registrada em `docs/decisions/ADR-NNN-titulo.md`.
+
+Formato:
+```markdown
+# ADR-NNN: [Título]
+**Data:** YYYY-MM-DD
+**Status:** Proposta | Aceita | Substituída por ADR-NNN
+
+## Contexto
+## Decisão
+## Consequências
+## Alternativas consideradas
+```
+
+Ao trabalhar no Claude Code, ao final de cada decisão relevante, gerar o ADR e fazer commit.
+
+---
+
+## Brand Guidelines
+
+Documento de marca em `brand/principles.md`. Contém:
+- Missão
+- Princípios de design (com exemplos e anti-padrões)
+- Tom de voz
+- Identidade visual (cores da marca, tipografia, logo)
+
+Este documento alimenta tanto o Claude Project (Knowledge Base) quanto o doc site.
+
+---
+
+## Storybook
+
+O DS usa Storybook com `@storybook/html` para playground interativo de componentes.
+
+Cada componente tem um arquivo `.stories.js` co-locado:
+```
+components/
+├── button/
+│   ├── button.css          (pode ser symlink ou import do css/components/)
+│   └── button.stories.js
+```
+
+Stories retornam HTML strings e usam argTypes para controls interativos.
+
+---
+
+## Referências de Design Systems
+
+DSs consultados durante a construção deste sistema:
+
+| DS | Organização | Referência principal |
+|----|-------------|---------------------|
+| Material Design 3 | Google | Arquitetura de tokens (ref→sys→comp) |
+| Polaris | Shopify | Documentação de padrões, guidelines de conteúdo |
+| Carbon | IBM | Tematização, spacing em mini-unit |
+| Primer | GitHub | Color modes, naming funcional |
+| Atlassian DS | Atlassian | Estados interativos, elevation |
+| Lightning | Salesforce | Padrões de componentes enterprise |
+| Spectrum | Adobe | Acessibilidade, tokens multi-plataforma |
+| Fluent 2 | Microsoft | Cross-platform, design tokens |
+| Base Web | Uber | Overrides system, composabilidade |
+| Chakra UI | Community | API de props, variants system |
+
+Notas detalhadas em `docs/references/ds-references.md`.
