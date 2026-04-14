@@ -101,6 +101,9 @@
 
   /* Focus ring */
   --ds-focus-ring: 0 0 0 2px var(--ds-surface-default), 0 0 0 4px var(--ds-color-primary-default);
+  --ds-focus-ring-width: 2px;
+  --ds-focus-ring-offset: 2px;
+  --ds-focus-ring-color: var(--ds-color-primary-default);
 
   /* State */
   --ds-state-hover:               rgba(255, 255, 255, 0.05);

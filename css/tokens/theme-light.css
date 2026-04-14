@@ -132,6 +132,9 @@
      FOCUS RING — Double ring for WCAG 2.2 compliance
      --------------------------------------------------------- */
   --ds-focus-ring: 0 0 0 2px var(--ds-surface-default), 0 0 0 4px var(--ds-color-primary-default);
+  --ds-focus-ring-width: 2px;
+  --ds-focus-ring-offset: 2px;
+  --ds-focus-ring-color: var(--ds-color-primary-default);
 
   /* ---------------------------------------------------------
      OVERLAY — Semantic (swap black↔white between modes)
