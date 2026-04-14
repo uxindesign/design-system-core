@@ -13,7 +13,8 @@
           },
           "display": {
             "$type": "fontFamily",
-            "$value": "'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+            "$value": "'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+            "$description": "Same as sans. Separated for future flexibility if display font diverges."
           }
         },
         "size": {
@@ -28,10 +29,6 @@
           "sm": {
             "$type": "dimension",
             "$value": "0.875rem"
-          },
-          "base": {
-            "$type": "dimension",
-            "$value": "1rem"
           },
           "md": {
             "$type": "dimension",

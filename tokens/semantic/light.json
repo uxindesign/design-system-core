@@ -3,11 +3,13 @@
     "background": {
       "default": {
         "$type": "color",
-        "$value": "{foundation.color.white}"
+        "$value": "{foundation.color.white}",
+        "$description": "Page background"
       },
       "subtle": {
         "$type": "color",
-        "$value": "{foundation.color.neutral.50}"
+        "$value": "{foundation.color.neutral.50}",
+        "$description": "Subtle alternate background"
       },
       "muted": {
         "$type": "color",
@@ -19,17 +21,20 @@
       },
       "overlay": {
         "$type": "color",
-        "$value": "{foundation.color.overlay.black.40}"
+        "$value": "{foundation.color.overlay.black.40}",
+        "$description": "Modal/dialog overlay backdrop"
       }
     },
     "surface": {
       "default": {
         "$type": "color",
-        "$value": "{foundation.color.white}"
+        "$value": "{foundation.color.white}",
+        "$description": "Card and panel surfaces"
       },
       "raised": {
         "$type": "color",
-        "$value": "{foundation.color.white}"
+        "$value": "{foundation.color.white}",
+        "$description": "Elevated surface (sticky headers, raised cards)"
       },
       "overlay": {
         "$type": "color",
@@ -43,11 +48,13 @@
     "text": {
       "default": {
         "$type": "color",
-        "$value": "{foundation.color.neutral.900}"
+        "$value": "{foundation.color.neutral.900}",
+        "$description": "Primary body text"
       },
       "secondary": {
         "$type": "color",
-        "$value": "{foundation.color.neutral.600}"
+        "$value": "{foundation.color.neutral.600}",
+        "$description": "Secondary/supporting text"
       },
       "tertiary": {
         "$type": "color",
@@ -64,16 +71,19 @@
       "link": {
         "default": {
           "$type": "color",
-          "$value": "{semantic.color.primary.default}"
+          "$value": "{semantic.color.primary.default}",
+          "$description": "Default link text color"
         },
         "hover": {
           "$type": "color",
-          "$value": "{semantic.color.primary.hover}"
+          "$value": "{semantic.color.primary.hover}",
+          "$description": "Link text on hover"
         }
       },
       "on-brand": {
         "$type": "color",
-        "$value": "{foundation.color.white}"
+        "$value": "{foundation.color.white}",
+        "$description": "Text on brand-colored backgrounds"
       }
     },
     "color": {
@@ -103,7 +113,7 @@
           "$value": "{foundation.color.blue.700}"
         },
         "default": {
-          "$value": "{foundation.color.blue.600}",
+          "$value": "{foundation.brand.primary}",
           "$type": "color"
         }
       },
@@ -133,7 +143,7 @@
           "$value": "{foundation.color.purple.700}"
         },
         "default": {
-          "$value": "{foundation.color.purple.600}",
+          "$value": "{foundation.brand.secondary}",
           "$type": "color"
         }
       }
@@ -316,15 +326,18 @@
       "ring": {
         "width": {
           "$type": "dimension",
-          "$value": "{foundation.stroke.border.width.2}"
+          "$value": "{foundation.stroke.border.width.2}",
+          "$description": "Focus ring stroke width (2px)"
         },
         "offset": {
           "$type": "dimension",
-          "$value": "{foundation.stroke.border.width.2}"
+          "$value": "{foundation.stroke.border.width.2}",
+          "$description": "Gap between element and focus ring (2px)"
         },
         "color": {
           "$type": "color",
-          "$value": "{semantic.border.focus}"
+          "$value": "{semantic.border.focus}",
+          "$description": "Focus ring color, maps to outline-color"
         }
       }
     },

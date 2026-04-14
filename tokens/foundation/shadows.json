@@ -28,7 +28,8 @@
       "none": {
         "$type": "shadow",
         "$value": "none"
-      }
+      },
+      "$description": "Values as CSS shorthand strings. TODO: convert to DTCG shadow objects ({offsetX, offsetY, blur, spread, color}) when multi-platform pipeline is configured."
     }
   }
 }
