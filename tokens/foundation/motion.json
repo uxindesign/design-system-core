@@ -1,0 +1,15 @@
+{
+  "duration": {
+    "$description": "Animation/transition durations",
+    "fast": { "$value": "150ms", "$type": "duration" },
+    "normal": { "$value": "200ms", "$type": "duration" },
+    "slow": { "$value": "300ms", "$type": "duration" }
+  },
+  "ease": {
+    "$description": "Easing curves for transitions and animations",
+    "default": { "$value": [0.4, 0, 0.2, 1], "$type": "cubicBezier" },
+    "in": { "$value": [0.4, 0, 1, 1], "$type": "cubicBezier" },
+    "out": { "$value": [0, 0, 0.2, 1], "$type": "cubicBezier" },
+    "in-out": { "$value": [0.4, 0, 0.2, 1], "$type": "cubicBezier" }
+  }
+}
