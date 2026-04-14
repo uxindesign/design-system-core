@@ -24,12 +24,12 @@
 .ds-radio-label {
   display: inline-flex;
   align-items: center;
-  gap: var(--ds-spacing-2);
+  gap: var(--ds-radio-gap);
   cursor: pointer;
   padding: var(--ds-spacing-1-5) var(--ds-spacing-1);
   border-radius: var(--ds-radius-sm);
-  min-height: 44px;
-  font-size: var(--ds-font-size-sm);
+  min-height: var(--ds-radio-min-target-size);
+  font-size: var(--ds-radio-font-size);
   color: var(--ds-text-default);
   transition: background-color var(--ds-duration-fast) var(--ds-ease-default);
 }
@@ -42,9 +42,9 @@
 .ds-radio {
   appearance: none;
   -webkit-appearance: none;
-  width: 20px;
-  height: 20px;
-  border: var(--ds-border-width-2) solid var(--ds-border-strong);
+  width: var(--ds-radio-control-size-md);
+  height: var(--ds-radio-control-size-md);
+  border: var(--ds-radio-border-width) solid var(--ds-border-strong);
   border-radius: var(--ds-radius-full);
   background-color: var(--ds-color-white);
   cursor: pointer;
@@ -59,8 +59,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 8px;
-  height: 8px;
+  width: var(--ds-radio-dot-size-md);
+  height: var(--ds-radio-dot-size-md);
   border-radius: var(--ds-radius-full);
   background-color: var(--ds-color-white);
   transform: translate(-50%, -50%) scale(0);
@@ -84,8 +84,8 @@
 
 /* Focus */
 .ds-radio:focus-visible {
-  outline: none;
-  box-shadow: var(--ds-focus-ring);
+  outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color);
+  outline-offset: var(--ds-focus-ring-offset);
 }
 
 /* Disabled */
@@ -138,24 +138,24 @@
    Sizes
    --------------------------------------------------------- */
 
-/* Small (16px) */
+/* Small */
 .ds-radio--sm {
-  width: 16px;
-  height: 16px;
+  width: var(--ds-radio-control-size-sm);
+  height: var(--ds-radio-control-size-sm);
 }
 
 .ds-radio--sm::after {
-  width: 6px;
-  height: 6px;
+  width: var(--ds-radio-dot-size-sm);
+  height: var(--ds-radio-dot-size-sm);
 }
 
-/* Large (24px) */
+/* Large */
 .ds-radio--lg {
-  width: 24px;
-  height: 24px;
+  width: var(--ds-radio-control-size-lg);
+  height: var(--ds-radio-control-size-lg);
 }
 
 .ds-radio--lg::after {
-  width: 10px;
-  height: 10px;
+  width: var(--ds-radio-dot-size-lg);
+  height: var(--ds-radio-dot-size-lg);
 }

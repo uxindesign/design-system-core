@@ -10,7 +10,7 @@
 .ds-spinner {
   display: inline-block;
   border-radius: var(--ds-radius-full);
-  border: 2px solid var(--ds-border-default);
+  border: var(--ds-spinner-stroke-width-md) solid var(--ds-border-default);
   border-top-color: var(--ds-color-primary-default);
   animation: ds-spin 0.6s linear infinite;
   flex-shrink: 0;
@@ -18,23 +18,23 @@
 
 /* Default size: md */
 .ds-spinner {
-  width: 24px;
-  height: 24px;
+  width: var(--ds-spinner-size-md);
+  height: var(--ds-spinner-size-md);
 }
 
 /* ---------------------------------------------------------
    Sizes
    --------------------------------------------------------- */
 .ds-spinner--sm {
-  width: 16px;
-  height: 16px;
-  border-width: 1.5px;
+  width: var(--ds-spinner-size-sm);
+  height: var(--ds-spinner-size-sm);
+  border-width: var(--ds-spinner-stroke-width-sm);
 }
 
 .ds-spinner--lg {
-  width: 32px;
-  height: 32px;
-  border-width: 3px;
+  width: var(--ds-spinner-size-lg);
+  height: var(--ds-spinner-size-lg);
+  border-width: var(--ds-spinner-stroke-width-lg);
 }
 
 /* ---------------------------------------------------------

@@ -9,9 +9,9 @@
   position: relative;
   display: flex;
   align-items: center;
-  gap: var(--ds-spacing-1);
-  border: var(--ds-border-width-1) solid var(--ds-border-default);
-  border-radius: var(--ds-radius-component);
+  gap: var(--ds-select-gap);
+  border: var(--ds-select-border-width) solid var(--ds-border-default);
+  border-radius: var(--ds-select-border-radius);
   background: var(--ds-surface-default);
   transition: border-color var(--ds-duration-fast) var(--ds-ease-default),
               box-shadow var(--ds-duration-fast) var(--ds-ease-default);
@@ -22,21 +22,21 @@
 
 .ds-select,
 .ds-select--md {
-  height: 40px;
-  padding: 0 var(--ds-spacing-4);
-  font-size: var(--ds-font-size-sm);
+  height: var(--ds-select-height-md);
+  padding: 0 var(--ds-select-padding-md);
+  font-size: var(--ds-select-font-size-md);
 }
 
 .ds-select--sm {
-  height: 32px;
-  padding: 0 var(--ds-spacing-3);
-  font-size: var(--ds-font-size-sm);
+  height: var(--ds-select-height-sm);
+  padding: 0 var(--ds-select-padding-sm);
+  font-size: var(--ds-select-font-size-sm);
 }
 
 .ds-select--lg {
-  height: 48px;
-  padding: 0 var(--ds-spacing-5);
-  font-size: var(--ds-font-size-md);
+  height: var(--ds-select-height-lg);
+  padding: 0 var(--ds-select-padding-lg);
+  font-size: var(--ds-select-font-size-lg);
 }
 
 /* Field (native select)
@@ -54,7 +54,7 @@
   font-family: inherit;
   cursor: pointer;
   min-width: 0;
-  padding-right: 32px;
+  padding-right: calc(var(--ds-select-arrow-size) + var(--ds-select-arrow-offset-md) + var(--ds-select-padding-md));
 }
 
 .ds-select__field:invalid,
@@ -67,12 +67,12 @@
 
 .ds-select__arrow {
   position: absolute;
-  right: 12px;
+  right: var(--ds-select-arrow-offset-md);
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
-  width: 16px;
-  height: 16px;
+  width: var(--ds-select-arrow-size);
+  height: var(--ds-select-arrow-size);
   color: var(--ds-text-tertiary);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
@@ -81,11 +81,11 @@
 }
 
 .ds-select--sm .ds-select__arrow {
-  right: 8px;
+  right: var(--ds-select-arrow-offset-sm);
 }
 
 .ds-select--lg .ds-select__arrow {
-  right: 16px;
+  right: var(--ds-select-arrow-offset-lg);
 }
 
 /* Icon
@@ -106,9 +106,9 @@
 
 /* Focused */
 .ds-select:focus-within {
-  outline: 2px solid transparent;
   border-color: var(--ds-color-primary-default);
-  box-shadow: var(--ds-focus-ring);
+  outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color);
+  outline-offset: var(--ds-focus-ring-offset);
 }
 
 /* Error */
@@ -118,7 +118,8 @@
 
 .ds-select--error:focus-within {
   border-color: var(--ds-feedback-error-default);
-  box-shadow: 0 0 0 2px var(--ds-surface-default), 0 0 0 4px var(--ds-feedback-error-default);
+  outline: var(--ds-focus-ring-width) solid var(--ds-feedback-error-default);
+  outline-offset: var(--ds-focus-ring-offset);
 }
 
 /* Disabled */

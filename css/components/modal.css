@@ -17,7 +17,7 @@
 /* Dialog */
 .ds-modal {
   background-color: var(--ds-surface-elevated);
-  border-radius: var(--ds-radius-xl);
+  border-radius: var(--ds-modal-border-radius);
   box-shadow: var(--ds-shadow-xl);
   width: 100%;
   max-height: calc(100vh - var(--ds-spacing-8));
@@ -27,9 +27,9 @@
 }
 
 /* Sizes */
-.ds-modal--sm { max-width: 400px; }
-.ds-modal--md { max-width: 520px; }
-.ds-modal--lg { max-width: 640px; }
+.ds-modal--sm { max-width: var(--ds-modal-max-width-sm); }
+.ds-modal--md { max-width: var(--ds-modal-max-width-md); }
+.ds-modal--lg { max-width: var(--ds-modal-max-width-lg); }
 
 /* Header */
 .ds-modal__header {
@@ -37,7 +37,7 @@
   align-items: center;
   justify-content: space-between;
   padding: var(--ds-spacing-4) var(--ds-spacing-4) var(--ds-spacing-2);
-  gap: var(--ds-spacing-2);
+  gap: var(--ds-modal-header-gap);
 }
 
 .ds-modal__title {
@@ -65,8 +65,8 @@
 }
 
 .ds-modal__close:focus-visible {
-  outline: none;
-  box-shadow: var(--ds-focus-ring);
+  outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color);
+  outline-offset: var(--ds-focus-ring-offset);
 }
 
 /* Body */

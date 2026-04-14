@@ -6,12 +6,12 @@
 .ds-toggle-label {
   display: inline-flex;
   align-items: center;
-  gap: var(--ds-spacing-2);
+  gap: var(--ds-toggle-gap);
   cursor: pointer;
   padding: var(--ds-spacing-1-5) var(--ds-spacing-1);
   border-radius: var(--ds-radius-sm);
-  min-height: 44px;
-  font-size: var(--ds-font-size-sm);
+  min-height: var(--ds-toggle-min-target-size);
+  font-size: var(--ds-toggle-font-size);
   color: var(--ds-text-default);
   transition: background-color var(--ds-duration-fast) var(--ds-ease-default);
 }
@@ -25,8 +25,8 @@
   appearance: none;
   -webkit-appearance: none;
   position: relative;
-  width: 36px;
-  height: 20px;
+  width: var(--ds-toggle-track-width-md);
+  height: var(--ds-toggle-track-height-md);
   background-color: var(--ds-surface-default);
   border: var(--ds-border-width-1) solid var(--ds-border-strong);
   border-radius: var(--ds-radius-full);
@@ -42,8 +42,8 @@
   position: absolute;
   top: 2px;
   left: 2px;
-  width: 14px;
-  height: 14px;
+  width: var(--ds-toggle-thumb-size-md);
+  height: var(--ds-toggle-thumb-size-md);
   border-radius: var(--ds-radius-full);
   background-color: var(--ds-text-secondary);
   transition: transform var(--ds-duration-fast) var(--ds-ease-default),
@@ -68,8 +68,8 @@
 
 /* Focus */
 .ds-toggle:focus-visible {
-  outline: none;
-  box-shadow: var(--ds-focus-ring);
+  outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color);
+  outline-offset: var(--ds-focus-ring-offset);
 }
 
 /* Disabled */
@@ -96,30 +96,30 @@
    Sizes
    --------------------------------------------------------- */
 
-/* Small (28×16px, thumb 10px) */
+/* Small */
 .ds-toggle--sm {
-  width: 28px;
-  height: 16px;
+  width: var(--ds-toggle-track-width-sm);
+  height: var(--ds-toggle-track-height-sm);
 }
 
 .ds-toggle--sm::after {
-  width: 10px;
-  height: 10px;
+  width: var(--ds-toggle-thumb-size-sm);
+  height: var(--ds-toggle-thumb-size-sm);
 }
 
 .ds-toggle--sm:checked::after {
   transform: translateX(12px);
 }
 
-/* Large (44×24px, thumb 18px) */
+/* Large */
 .ds-toggle--lg {
-  width: 44px;
-  height: 24px;
+  width: var(--ds-toggle-track-width-lg);
+  height: var(--ds-toggle-track-height-lg);
 }
 
 .ds-toggle--lg::after {
-  width: 18px;
-  height: 18px;
+  width: var(--ds-toggle-thumb-size-lg);
+  height: var(--ds-toggle-thumb-size-lg);
 }
 
 .ds-toggle--lg:checked::after {

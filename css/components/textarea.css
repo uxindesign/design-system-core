@@ -7,8 +7,8 @@
 
 .ds-textarea {
   display: flex;
-  border: var(--ds-border-width-1) solid var(--ds-border-default);
-  border-radius: var(--ds-radius-component);
+  border: var(--ds-textarea-border-width) solid var(--ds-border-default);
+  border-radius: var(--ds-textarea-border-radius);
   background: var(--ds-surface-default);
   transition: border-color var(--ds-duration-fast) var(--ds-ease-default),
               box-shadow var(--ds-duration-fast) var(--ds-ease-default);
@@ -19,18 +19,18 @@
 
 .ds-textarea,
 .ds-textarea--md {
-  padding: 0 var(--ds-spacing-4);
-  font-size: var(--ds-font-size-sm);
+  padding: 0 var(--ds-textarea-padding-md);
+  font-size: var(--ds-textarea-font-size-md);
 }
 
 .ds-textarea--sm {
-  padding: 0 var(--ds-spacing-3);
-  font-size: var(--ds-font-size-sm);
+  padding: 0 var(--ds-textarea-padding-sm);
+  font-size: var(--ds-textarea-font-size-sm);
 }
 
 .ds-textarea--lg {
-  padding: 0 var(--ds-spacing-5);
-  font-size: var(--ds-font-size-md);
+  padding: 0 var(--ds-textarea-padding-lg);
+  font-size: var(--ds-textarea-font-size-lg);
 }
 
 /* Field
@@ -45,19 +45,19 @@
   font-size: inherit;
   font-family: inherit;
   resize: vertical;
-  min-height: 80px;
+  min-height: var(--ds-textarea-min-height-md);
   min-width: 0;
   padding: var(--ds-spacing-3) 0;
   line-height: var(--ds-line-height-normal);
 }
 
 .ds-textarea--sm .ds-textarea__field {
-  min-height: 68px;
+  min-height: var(--ds-textarea-min-height-sm);
   padding: var(--ds-spacing-2) 0;
 }
 
 .ds-textarea--lg .ds-textarea__field {
-  min-height: 112px;
+  min-height: var(--ds-textarea-min-height-lg);
   padding: var(--ds-spacing-4) 0;
 }
 
@@ -75,9 +75,9 @@
 
 /* Focused */
 .ds-textarea:focus-within {
-  outline: 2px solid transparent;
   border-color: var(--ds-color-primary-default);
-  box-shadow: var(--ds-focus-ring);
+  outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color);
+  outline-offset: var(--ds-focus-ring-offset);
 }
 
 /* Error */
@@ -87,7 +87,8 @@
 
 .ds-textarea--error:focus-within {
   border-color: var(--ds-feedback-error-default);
-  box-shadow: 0 0 0 2px var(--ds-surface-default), 0 0 0 4px var(--ds-feedback-error-default);
+  outline: var(--ds-focus-ring-width) solid var(--ds-feedback-error-default);
+  outline-offset: var(--ds-focus-ring-offset);
 }
 
 /* Disabled */
