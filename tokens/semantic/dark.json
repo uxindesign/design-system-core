@@ -19,7 +19,7 @@
       },
       "overlay": {
         "$type": "color",
-        "$value": "rgba(0, 0, 0, 0.6)"
+        "$value": "{foundation.color.overlay.black.60}"
       }
     },
     "surface": {
@@ -61,19 +61,19 @@
         "$type": "color",
         "$value": "{foundation.color.neutral.900}"
       },
-      "on": {
-        "brand": {
-          "$type": "color",
-          "$value": "{foundation.color.neutral.900}"
-        }
-      },
       "link": {
-        "$type": "color",
-        "$value": "{semantic.color.primary.default}",
+        "default": {
+          "$type": "color",
+          "$value": "{semantic.color.primary.default}"
+        },
         "hover": {
           "$type": "color",
           "$value": "{semantic.color.primary.hover}"
         }
+      },
+      "on-brand": {
+        "$type": "color",
+        "$value": "{foundation.color.neutral.900}"
       }
     },
     "color": {
@@ -280,6 +280,36 @@
       "subtle": {
         "$type": "color",
         "$value": "{foundation.color.neutral.800}"
+      },
+      "width": {
+        "subtle": {
+          "$type": "dimension",
+          "$value": "{foundation.stroke.border.width.1}"
+        },
+        "default": {
+          "$type": "dimension",
+          "$value": "{foundation.stroke.border.width.1}"
+        },
+        "strong": {
+          "$type": "dimension",
+          "$value": "{foundation.stroke.border.width.2}"
+        },
+        "focus": {
+          "$type": "dimension",
+          "$value": "{foundation.stroke.border.width.2}"
+        }
+      },
+      "focus": {
+        "$type": "color",
+        "$value": "{semantic.color.primary.default}"
+      },
+      "brand": {
+        "$type": "color",
+        "$value": "{semantic.color.primary.default}"
+      },
+      "error": {
+        "$type": "color",
+        "$value": "{semantic.feedback.error.default}"
       }
     },
     "overlay": {
@@ -302,18 +332,28 @@
     },
     "focus": {
       "ring": {
-        "$type": "number",
-        "$value": "0 0 0 2px var(--ds-surface-default), 0 0 0 4px var(--ds-color-primary)"
+        "width": {
+          "$type": "dimension",
+          "$value": "{foundation.stroke.border.width.2}"
+        },
+        "offset": {
+          "$type": "dimension",
+          "$value": "{foundation.stroke.border.width.2}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{semantic.border.focus}"
+        }
       }
     },
     "state": {
       "hover": {
         "$type": "color",
-        "$value": "rgba(255, 255, 255, 0.05)"
+        "$value": "{foundation.color.overlay.white.5}"
       },
       "pressed": {
         "$type": "color",
-        "$value": "rgba(255, 255, 255, 0.1)"
+        "$value": "{foundation.color.overlay.white.10}"
       },
       "disabled": {
         "background": {
@@ -324,6 +364,106 @@
           "$type": "color",
           "$value": "{foundation.color.neutral.600}"
         }
+      },
+      "focus": {
+        "$type": "color",
+        "$value": "{semantic.color.primary.default}"
+      }
+    },
+    "space": {
+      "inset": {
+        "xs": {
+          "$type": "dimension",
+          "$value": "{foundation.spacing.1}"
+        },
+        "sm": {
+          "$type": "dimension",
+          "$value": "{foundation.spacing.2}"
+        },
+        "md": {
+          "$type": "dimension",
+          "$value": "{foundation.spacing.3}"
+        },
+        "lg": {
+          "$type": "dimension",
+          "$value": "{foundation.spacing.4}"
+        },
+        "xl": {
+          "$type": "dimension",
+          "$value": "{foundation.spacing.6}"
+        }
+      },
+      "gap": {
+        "xs": {
+          "$type": "dimension",
+          "$value": "{foundation.spacing.1}"
+        },
+        "sm": {
+          "$type": "dimension",
+          "$value": "{foundation.spacing.2}"
+        },
+        "md": {
+          "$type": "dimension",
+          "$value": "{foundation.spacing.3}"
+        },
+        "lg": {
+          "$type": "dimension",
+          "$value": "{foundation.spacing.4}"
+        },
+        "xl": {
+          "$type": "dimension",
+          "$value": "{foundation.spacing.6}"
+        }
+      },
+      "component": {
+        "xs": {
+          "$type": "dimension",
+          "$value": "{foundation.spacing.1}"
+        },
+        "sm": {
+          "$type": "dimension",
+          "$value": "{foundation.spacing.2}"
+        },
+        "md": {
+          "$type": "dimension",
+          "$value": "{foundation.spacing.3}"
+        },
+        "lg": {
+          "$type": "dimension",
+          "$value": "{foundation.spacing.4}"
+        },
+        "xl": {
+          "$type": "dimension",
+          "$value": "{foundation.spacing.5}"
+        },
+        "2xl": {
+          "$type": "dimension",
+          "$value": "{foundation.spacing.6}"
+        }
+      },
+      "section": {
+        "sm": {
+          "$type": "dimension",
+          "$value": "{foundation.spacing.8}"
+        },
+        "md": {
+          "$type": "dimension",
+          "$value": "{foundation.spacing.12}"
+        },
+        "lg": {
+          "$type": "dimension",
+          "$value": "{foundation.spacing.16}"
+        },
+        "xl": {
+          "$type": "dimension",
+          "$value": "{foundation.spacing.20}"
+        }
+      }
+    },
+    "radius": {
+      "component": {
+        "$type": "dimension",
+        "$value": "{foundation.radius.md}"
       }
     }
   }

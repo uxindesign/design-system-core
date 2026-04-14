@@ -19,7 +19,7 @@
       },
       "overlay": {
         "$type": "color",
-        "$value": "rgba(0, 0, 0, 0.4)"
+        "$value": "{foundation.color.overlay.black.40}"
       }
     },
     "surface": {
@@ -61,19 +61,19 @@
         "$type": "color",
         "$value": "{foundation.color.white}"
       },
-      "on": {
-        "brand": {
-          "$type": "color",
-          "$value": "{foundation.color.white}"
-        }
-      },
       "link": {
-        "$type": "color",
-        "$value": "{semantic.color.primary.default}",
+        "default": {
+          "$type": "color",
+          "$value": "{semantic.color.primary.default}"
+        },
         "hover": {
           "$type": "color",
           "$value": "{semantic.color.primary.hover}"
         }
+      },
+      "on-brand": {
+        "$type": "color",
+        "$value": "{foundation.color.white}"
       }
     },
     "color": {
@@ -295,27 +295,37 @@
       },
       "width": {
         "subtle": {
-          "$type": "color",
+          "$type": "dimension",
           "$value": "{foundation.border.width.1}"
         },
         "default": {
-          "$type": "color",
+          "$type": "dimension",
           "$value": "{foundation.border.width.1}"
         },
         "strong": {
-          "$type": "color",
+          "$type": "dimension",
           "$value": "{foundation.border.width.2}"
         },
         "focus": {
-          "$type": "color",
+          "$type": "dimension",
           "$value": "{foundation.border.width.2}"
         }
       }
     },
     "focus": {
       "ring": {
-        "$type": "number",
-        "$value": "0 0 0 2px var(--ds-surface-default), 0 0 0 4px var(--ds-color-primary)"
+        "width": {
+          "$type": "dimension",
+          "$value": "{foundation.stroke.border.width.2}"
+        },
+        "offset": {
+          "$type": "dimension",
+          "$value": "{foundation.stroke.border.width.2}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{semantic.border.focus}"
+        }
       }
     },
     "overlay": {
@@ -339,11 +349,11 @@
     "state": {
       "hover": {
         "$type": "color",
-        "$value": "rgba(0, 0, 0, 0.05)"
+        "$value": "{foundation.color.overlay.black.5}"
       },
       "pressed": {
         "$type": "color",
-        "$value": "rgba(0, 0, 0, 0.1)"
+        "$value": "{foundation.color.overlay.black.10}"
       },
       "focus": {
         "$type": "color",
@@ -363,96 +373,96 @@
     "space": {
       "inset": {
         "xs": {
-          "$type": "color",
+          "$type": "dimension",
           "$value": "{foundation.spacing.1}"
         },
         "sm": {
-          "$type": "color",
+          "$type": "dimension",
           "$value": "{foundation.spacing.2}"
         },
         "md": {
-          "$type": "color",
+          "$type": "dimension",
           "$value": "{foundation.spacing.3}"
         },
         "lg": {
-          "$type": "color",
+          "$type": "dimension",
           "$value": "{foundation.spacing.4}"
         },
         "xl": {
-          "$type": "color",
+          "$type": "dimension",
           "$value": "{foundation.spacing.6}"
         }
       },
       "gap": {
         "xs": {
-          "$type": "color",
+          "$type": "dimension",
           "$value": "{foundation.spacing.1}"
         },
         "sm": {
-          "$type": "color",
+          "$type": "dimension",
           "$value": "{foundation.spacing.2}"
         },
         "md": {
-          "$type": "color",
+          "$type": "dimension",
           "$value": "{foundation.spacing.3}"
         },
         "lg": {
-          "$type": "color",
+          "$type": "dimension",
           "$value": "{foundation.spacing.4}"
         },
         "xl": {
-          "$type": "color",
+          "$type": "dimension",
           "$value": "{foundation.spacing.6}"
         }
       },
       "component": {
         "xs": {
-          "$type": "color",
+          "$type": "dimension",
           "$value": "{foundation.spacing.1}"
         },
         "sm": {
-          "$type": "color",
+          "$type": "dimension",
           "$value": "{foundation.spacing.2}"
         },
         "md": {
-          "$type": "color",
+          "$type": "dimension",
           "$value": "{foundation.spacing.3}"
         },
         "lg": {
-          "$type": "color",
+          "$type": "dimension",
           "$value": "{foundation.spacing.4}"
         },
         "xl": {
-          "$type": "color",
+          "$type": "dimension",
           "$value": "{foundation.spacing.5}"
         },
         "2xl": {
-          "$type": "color",
+          "$type": "dimension",
           "$value": "{foundation.spacing.6}"
         }
       },
       "section": {
         "sm": {
-          "$type": "color",
+          "$type": "dimension",
           "$value": "{foundation.spacing.8}"
         },
         "md": {
-          "$type": "color",
+          "$type": "dimension",
           "$value": "{foundation.spacing.12}"
         },
         "lg": {
-          "$type": "color",
+          "$type": "dimension",
           "$value": "{foundation.spacing.16}"
         },
         "xl": {
-          "$type": "color",
+          "$type": "dimension",
           "$value": "{foundation.spacing.20}"
         }
       }
     },
     "radius": {
       "component": {
-        "$type": "color",
+        "$type": "dimension",
         "$value": "{foundation.radius.md}"
       }
     }
