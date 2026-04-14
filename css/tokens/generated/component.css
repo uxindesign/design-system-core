@@ -3,6 +3,15 @@
  */
 
 :root {
+  --ds-avatar-size-sm: 2rem; /** 32px */
+  --ds-avatar-size-md: 2.5rem; /** 40px */
+  --ds-avatar-size-lg: 3.5rem; /** 56px */
+  --ds-avatar-font-size-sm: 0.75rem; /** 12px initials */
+  --ds-avatar-font-size-md: 0.875rem; /** 14px initials */
+  --ds-avatar-font-size-lg: 1.125rem; /** 18px initials */
+  --ds-avatar-icon-size-sm: 1rem; /** 16px */
+  --ds-avatar-icon-size-md: 1.25rem; /** 20px */
+  --ds-avatar-icon-size-lg: 1.75rem; /** 28px */
   --ds-button-height-sm: 2rem; /** 32px — meets WCAG 2.5.8 minimum 24px */
   --ds-button-height-md: 2.5rem; /** 40px */
   --ds-button-height-lg: 3rem; /** 48px — meets WCAG 2.5.5 enhanced 44px touch target */
@@ -13,10 +22,103 @@
   --ds-button-icon-size-md: 1.25rem; /** 20px */
   --ds-button-icon-size-lg: 1.5rem; /** 24px */
   --ds-button-min-target-size: 2.75rem; /** 44px — WCAG 2.5.5 enhanced touch target */
+  --ds-checkbox-control-size-sm: 1rem; /** 16px */
+  --ds-checkbox-control-size-md: 1.25rem; /** 20px */
+  --ds-checkbox-control-size-lg: 1.5rem; /** 24px */
+  --ds-checkbox-check-width-sm: 4px;
+  --ds-checkbox-check-width-md: 5px;
+  --ds-checkbox-check-width-lg: 6px;
+  --ds-checkbox-check-height-sm: 8px;
+  --ds-checkbox-check-height-md: 10px;
+  --ds-checkbox-check-height-lg: 12px;
+  --ds-checkbox-border-radius: 0.25rem; /** 4px — smaller radius for compact control */
+  --ds-checkbox-min-target-size: 2.75rem; /** 44px — WCAG 2.5.5 */
+  --ds-checkbox-font-size: 0.875rem; /** 14px label */
+  --ds-input-height-sm: 2rem; /** 32px */
+  --ds-input-height-md: 2.5rem; /** 40px */
+  --ds-input-height-lg: 3rem; /** 48px */
+  --ds-input-font-size-sm: 0.875rem; /** 14px */
+  --ds-input-font-size-md: 0.875rem; /** 14px */
+  --ds-input-font-size-lg: 1rem; /** 16px */
+  --ds-input-icon-size-sm: 1rem; /** 16px */
+  --ds-input-icon-size-md: 1.25rem; /** 20px */
+  --ds-input-icon-size-lg: 1.5rem; /** 24px */
+  --ds-modal-max-width-sm: 25rem; /** 400px */
+  --ds-modal-max-width-md: 32.5rem; /** 520px */
+  --ds-modal-max-width-lg: 40rem; /** 640px */
+  --ds-modal-border-radius: 1rem; /** 16px — xl radius for modal overlay */
+  --ds-radio-control-size-sm: 1rem; /** 16px */
+  --ds-radio-control-size-md: 1.25rem; /** 20px */
+  --ds-radio-control-size-lg: 1.5rem; /** 24px */
+  --ds-radio-dot-size-sm: 6px;
+  --ds-radio-dot-size-md: 8px;
+  --ds-radio-dot-size-lg: 10px;
+  --ds-radio-min-target-size: 2.75rem; /** 44px — WCAG 2.5.5 */
+  --ds-radio-font-size: 0.875rem; /** 14px label */
+  --ds-select-height-sm: 2rem; /** 32px */
+  --ds-select-height-md: 2.5rem; /** 40px */
+  --ds-select-height-lg: 3rem; /** 48px */
+  --ds-select-font-size-sm: 0.875rem; /** 14px */
+  --ds-select-font-size-md: 0.875rem; /** 14px */
+  --ds-select-font-size-lg: 1rem; /** 16px */
+  --ds-select-arrow-size: 1rem; /** 16px */
+  --ds-select-arrow-offset-sm: 0.5rem; /** 8px from right edge */
+  --ds-select-arrow-offset-md: 0.75rem; /** 12px */
+  --ds-select-arrow-offset-lg: 1rem; /** 16px */
+  --ds-skeleton-text-height: 1rem; /** 16px line placeholder */
+  --ds-skeleton-circle-size: 2.5rem; /** 40px avatar placeholder */
+  --ds-skeleton-rect-height: 7.5rem; /** 120px image/card placeholder */
+  --ds-spinner-size-sm: 1rem; /** 16px */
+  --ds-spinner-size-md: 1.5rem; /** 24px */
+  --ds-spinner-size-lg: 2rem; /** 32px */
+  --ds-spinner-stroke-width-sm: 1.5px;
+  --ds-spinner-stroke-width-md: 2px;
+  --ds-spinner-stroke-width-lg: 3px;
+  --ds-textarea-min-height-sm: 4.25rem; /** 68px */
+  --ds-textarea-min-height-md: 5rem; /** 80px */
+  --ds-textarea-min-height-lg: 7rem; /** 112px */
+  --ds-textarea-font-size-sm: 0.875rem; /** 14px */
+  --ds-textarea-font-size-md: 0.875rem; /** 14px */
+  --ds-textarea-font-size-lg: 1rem; /** 16px */
+  --ds-toggle-track-width-sm: 1.75rem; /** 28px */
+  --ds-toggle-track-width-md: 2.25rem; /** 36px */
+  --ds-toggle-track-width-lg: 2.75rem; /** 44px */
+  --ds-toggle-track-height-sm: 1rem; /** 16px */
+  --ds-toggle-track-height-md: 1.25rem; /** 20px */
+  --ds-toggle-track-height-lg: 1.5rem; /** 24px */
+  --ds-toggle-thumb-size-sm: 0.625rem; /** 10px */
+  --ds-toggle-thumb-size-md: 0.875rem; /** 14px */
+  --ds-toggle-thumb-size-lg: 1.125rem; /** 18px */
+  --ds-toggle-min-target-size: 2.75rem; /** 44px — WCAG 2.5.5 */
+  --ds-toggle-font-size: 0.875rem; /** 14px label */
   --ds-button-padding-sm: var(--ds-space-inset-md); /** 12px horizontal padding */
   --ds-button-padding-md: var(--ds-space-inset-lg); /** 16px horizontal padding */
   --ds-button-padding-lg: var(--ds-space-component-xl); /** 20px horizontal padding */
   --ds-button-gap: var(--ds-space-gap-sm); /** 8px gap between icon and label */
   --ds-button-border-radius: var(--ds-radius-component);
   --ds-button-border-width: var(--ds-border-width-default);
+  --ds-checkbox-border-width: var(--ds-border-width-default);
+  --ds-checkbox-gap: var(--ds-space-gap-sm); /** 8px between control and label */
+  --ds-input-padding-sm: var(--ds-space-inset-md); /** 12px */
+  --ds-input-padding-md: var(--ds-space-inset-lg); /** 16px */
+  --ds-input-padding-lg: var(--ds-space-component-xl); /** 20px */
+  --ds-input-gap: var(--ds-space-gap-sm); /** 8px gap between icon and field */
+  --ds-input-border-radius: var(--ds-radius-component);
+  --ds-input-border-width: var(--ds-border-width-default);
+  --ds-modal-padding: var(--ds-space-inset-lg); /** 16px */
+  --ds-modal-header-gap: var(--ds-space-gap-sm); /** 8px between title and close */
+  --ds-radio-border-width: var(--ds-border-width-default);
+  --ds-radio-gap: var(--ds-space-gap-sm); /** 8px between control and label */
+  --ds-select-padding-sm: var(--ds-space-inset-md); /** 12px */
+  --ds-select-padding-md: var(--ds-space-inset-lg); /** 16px */
+  --ds-select-padding-lg: var(--ds-space-component-xl); /** 20px */
+  --ds-select-gap: var(--ds-space-gap-xs); /** 4px */
+  --ds-select-border-radius: var(--ds-radius-component);
+  --ds-select-border-width: var(--ds-border-width-default);
+  --ds-textarea-padding-sm: var(--ds-space-inset-md); /** 12px */
+  --ds-textarea-padding-md: var(--ds-space-inset-lg); /** 16px */
+  --ds-textarea-padding-lg: var(--ds-space-component-xl); /** 20px */
+  --ds-textarea-border-radius: var(--ds-radius-component);
+  --ds-textarea-border-width: var(--ds-border-width-default);
+  --ds-toggle-gap: var(--ds-space-gap-sm); /** 8px between toggle and label */
 }
