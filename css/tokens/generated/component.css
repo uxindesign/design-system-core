@@ -1,0 +1,22 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --ds-button-height-sm: 2rem; /** 32px — meets WCAG 2.5.8 minimum 24px */
+  --ds-button-height-md: 2.5rem; /** 40px */
+  --ds-button-height-lg: 3rem; /** 48px — meets WCAG 2.5.5 enhanced 44px touch target */
+  --ds-button-font-size-sm: 0.75rem; /** 12px */
+  --ds-button-font-size-md: 0.875rem; /** 14px */
+  --ds-button-font-size-lg: 1rem; /** 16px */
+  --ds-button-icon-size-sm: 1rem; /** 16px */
+  --ds-button-icon-size-md: 1.25rem; /** 20px */
+  --ds-button-icon-size-lg: 1.5rem; /** 24px */
+  --ds-button-min-target-size: 2.75rem; /** 44px — WCAG 2.5.5 enhanced touch target */
+  --ds-button-padding-sm: var(--ds-space-inset-md); /** 12px horizontal padding */
+  --ds-button-padding-md: var(--ds-space-inset-lg); /** 16px horizontal padding */
+  --ds-button-padding-lg: var(--ds-space-component-xl); /** 20px horizontal padding */
+  --ds-button-gap: var(--ds-space-gap-sm); /** 8px gap between icon and label */
+  --ds-button-border-radius: var(--ds-radius-component);
+  --ds-button-border-width: var(--ds-border-width-default);
+}

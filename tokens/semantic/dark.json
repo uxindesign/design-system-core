@@ -294,19 +294,19 @@
       "width": {
         "subtle": {
           "$type": "dimension",
-          "$value": "{foundation.stroke.border.width.1}"
+          "$value": "{foundation.border.width.1}"
         },
         "default": {
           "$type": "dimension",
-          "$value": "{foundation.stroke.border.width.1}"
+          "$value": "{foundation.border.width.1}"
         },
         "strong": {
           "$type": "dimension",
-          "$value": "{foundation.stroke.border.width.2}"
+          "$value": "{foundation.border.width.2}"
         },
         "focus": {
           "$type": "dimension",
-          "$value": "{foundation.stroke.border.width.2}"
+          "$value": "{foundation.border.width.2}"
         }
       },
       "focus": {
@@ -344,12 +344,12 @@
       "ring": {
         "width": {
           "$type": "dimension",
-          "$value": "{foundation.stroke.border.width.2}",
+          "$value": "{foundation.border.width.2}",
           "$description": "Focus ring stroke width (2px)"
         },
         "offset": {
           "$type": "dimension",
-          "$value": "{foundation.stroke.border.width.2}",
+          "$value": "{foundation.border.width.2}",
           "$description": "Gap between element and focus ring (2px)"
         },
         "color": {
