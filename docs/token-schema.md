@@ -348,7 +348,7 @@ Tokens específicos por componente. Referenciam semantic, nunca foundation (exce
 
 ## Regras invioláveis
 
-1. **Component tokens referenciam Semantic, nunca Foundation** (exceção: estados hover/active que precisam de step específico da paleta)
+1. **Component tokens referenciam Semantic para cores e spacing** — valores dimensionais específicos do componente (heights, icon sizes, font sizes) são absolutos na camada component, respeitando a grade de 4px por convenção
 2. **Semantic tokens referenciam Foundation, nunca hardcoded** — nenhum rgba() ou hex direto na camada semantic
 3. **Foundation tokens são os únicos com valores absolutos**
 4. **Brand é foundation** — 2 tokens (primary, secondary), sem estados, ponto de troca por tema
