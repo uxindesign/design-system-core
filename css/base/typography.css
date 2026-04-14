@@ -105,7 +105,7 @@
 .ds-text-body-md {
   font-family: var(--ds-font-family-sans);
   font-weight: var(--ds-font-weight-regular);
-  font-size: var(--ds-font-size-base);      /* 16px */
+  font-size: var(--ds-font-size-md);      /* 16px */
   line-height: var(--ds-line-height-normal);
 }
 
@@ -131,7 +131,7 @@
 .ds-text-label-lg {
   font-family: var(--ds-font-family-sans);
   font-weight: var(--ds-font-weight-medium);
-  font-size: var(--ds-font-size-base);      /* 16px */
+  font-size: var(--ds-font-size-md);      /* 16px */
   line-height: var(--ds-line-height-snug);
   letter-spacing: 0.5px;
 }

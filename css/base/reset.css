@@ -10,7 +10,7 @@ html {
 }
 body {
   font-family: var(--ds-font-family-sans);
-  font-size: var(--ds-font-size-base);
+  font-size: var(--ds-font-size-md);
   line-height: var(--ds-line-height-normal);
   color: var(--ds-text-default);
   background-color: var(--ds-background-default);
@@ -31,7 +31,7 @@ code {
   background-color: var(--ds-background-muted);
   padding: var(--ds-spacing-0-5) var(--ds-spacing-1);
   border-radius: var(--ds-radius-sm);
-  color: var(--ds-text-link);
+  color: var(--ds-text-link-default);
 }
 
 pre {

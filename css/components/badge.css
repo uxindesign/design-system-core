@@ -17,32 +17,32 @@
    Solid style (filled background)
    --------------------------------------------------------- */
 .ds-badge--primary.ds-badge--solid {
-  background-color: var(--ds-color-primary);
+  background-color: var(--ds-color-primary-default);
   color: var(--ds-color-primary-foreground);
 }
 
 .ds-badge--secondary.ds-badge--solid {
-  background-color: var(--ds-color-secondary);
+  background-color: var(--ds-color-secondary-default);
   color: var(--ds-color-secondary-foreground);
 }
 
 .ds-badge--success.ds-badge--solid {
-  background-color: var(--ds-feedback-success);
+  background-color: var(--ds-feedback-success-default);
   color: var(--ds-feedback-success-foreground);
 }
 
 .ds-badge--warning.ds-badge--solid {
-  background-color: var(--ds-feedback-warning);
+  background-color: var(--ds-feedback-warning-default);
   color: var(--ds-feedback-warning-foreground);
 }
 
 .ds-badge--error.ds-badge--solid {
-  background-color: var(--ds-feedback-error);
+  background-color: var(--ds-feedback-error-default);
   color: var(--ds-feedback-error-foreground);
 }
 
 .ds-badge--info.ds-badge--solid {
-  background-color: var(--ds-feedback-info);
+  background-color: var(--ds-feedback-info-default);
   color: var(--ds-feedback-info-foreground);
 }
 

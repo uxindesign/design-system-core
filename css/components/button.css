@@ -67,7 +67,7 @@
 .ds-btn--lg {
   height: 48px;
   padding: 0 var(--ds-spacing-5);
-  font-size: var(--ds-font-size-base);
+  font-size: var(--ds-font-size-md);
   border-radius: var(--ds-radius-md);
 }
 
@@ -80,9 +80,9 @@
    Variant: Brand (filled with brand color)
    --------------------------------------------------------- */
 .ds-btn--brand {
-  background-color: var(--ds-color-primary);
+  background-color: var(--ds-color-primary-default);
   color: var(--ds-color-primary-foreground);
-  border-color: var(--ds-color-primary);
+  border-color: var(--ds-color-primary-default);
 }
 
 .ds-btn--brand:hover {
@@ -99,17 +99,17 @@
    Variant: Toned (alpha-tinted brand color)
    --------------------------------------------------------- */
 .ds-btn--toned {
-  background-color: color-mix(in srgb, var(--ds-color-primary) 12%, transparent);
-  color: var(--ds-color-primary);
+  background-color: color-mix(in srgb, var(--ds-color-primary-default) 12%, transparent);
+  color: var(--ds-color-primary-default);
   border-color: transparent;
 }
 
 .ds-btn--toned:hover {
-  background-color: color-mix(in srgb, var(--ds-color-primary) 20%, transparent);
+  background-color: color-mix(in srgb, var(--ds-color-primary-default) 20%, transparent);
 }
 
 .ds-btn--toned:active {
-  background-color: color-mix(in srgb, var(--ds-color-primary) 28%, transparent);
+  background-color: color-mix(in srgb, var(--ds-color-primary-default) 28%, transparent);
 }
 
 /* ---------------------------------------------------------
@@ -135,25 +135,25 @@
    --------------------------------------------------------- */
 .ds-btn--ghost {
   background-color: transparent;
-  color: var(--ds-color-primary);
+  color: var(--ds-color-primary-default);
   border-color: transparent;
 }
 
 .ds-btn--ghost:hover {
-  background-color: color-mix(in srgb, var(--ds-color-primary) 8%, transparent);
+  background-color: color-mix(in srgb, var(--ds-color-primary-default) 8%, transparent);
 }
 
 .ds-btn--ghost:active {
-  background-color: color-mix(in srgb, var(--ds-color-primary) 16%, transparent);
+  background-color: color-mix(in srgb, var(--ds-color-primary-default) 16%, transparent);
 }
 
 /* ---------------------------------------------------------
    Variant: Success
    --------------------------------------------------------- */
 .ds-btn--success {
-  background-color: var(--ds-feedback-success);
+  background-color: var(--ds-feedback-success-default);
   color: var(--ds-feedback-success-foreground);
-  border-color: var(--ds-feedback-success);
+  border-color: var(--ds-feedback-success-default);
 }
 
 .ds-btn--success:hover {
@@ -170,9 +170,9 @@
    Variant: Danger
    --------------------------------------------------------- */
 .ds-btn--danger {
-  background-color: var(--ds-feedback-error);
+  background-color: var(--ds-feedback-error-default);
   color: var(--ds-feedback-error-foreground);
-  border-color: var(--ds-feedback-error);
+  border-color: var(--ds-feedback-error-default);
 }
 
 .ds-btn--danger:hover {

@@ -9,7 +9,7 @@
 [data-theme="ocean"],
 [data-theme="ocean"][data-mode="light"] {
   /* Brand — Primary */
-  --ds-color-primary:              var(--ds-color-cyan-600);
+  --ds-color-primary-default:              var(--ds-color-cyan-600);
   --ds-color-primary-hover:        var(--ds-color-cyan-700);
   --ds-color-primary-active:       var(--ds-color-cyan-800);
   --ds-color-primary-subtle:       var(--ds-color-cyan-100);
@@ -18,7 +18,7 @@
   --ds-color-primary-text:         var(--ds-color-cyan-700);
 
   /* Brand — Secondary */
-  --ds-color-secondary:            var(--ds-color-indigo-600);
+  --ds-color-secondary-default:            var(--ds-color-indigo-600);
   --ds-color-secondary-hover:      var(--ds-color-indigo-700);
   --ds-color-secondary-active:     var(--ds-color-indigo-800);
   --ds-color-secondary-subtle:     var(--ds-color-indigo-100);
@@ -27,7 +27,7 @@
   --ds-color-secondary-text:       var(--ds-color-indigo-700);
 
   /* Derived — link and focus use primary */
-  --ds-text-link:       var(--ds-color-cyan-600);
+  --ds-text-link-default:       var(--ds-color-cyan-600);
   --ds-text-link-hover: var(--ds-color-cyan-700);
   --ds-focus-ring: 0 0 0 2px var(--ds-surface-default), 0 0 0 4px var(--ds-color-cyan-600);
 }
@@ -35,7 +35,7 @@
 /* --- Dark mode --- */
 [data-theme="ocean"][data-mode="dark"] {
   /* Brand — Primary */
-  --ds-color-primary:              var(--ds-color-cyan-400);
+  --ds-color-primary-default:              var(--ds-color-cyan-400);
   --ds-color-primary-hover:        var(--ds-color-cyan-300);
   --ds-color-primary-active:       var(--ds-color-cyan-200);
   --ds-color-primary-subtle:       var(--ds-color-cyan-900);
@@ -44,7 +44,7 @@
   --ds-color-primary-text:         var(--ds-color-cyan-400);
 
   /* Brand — Secondary */
-  --ds-color-secondary:            var(--ds-color-indigo-400);
+  --ds-color-secondary-default:            var(--ds-color-indigo-400);
   --ds-color-secondary-hover:      var(--ds-color-indigo-300);
   --ds-color-secondary-active:     var(--ds-color-indigo-200);
   --ds-color-secondary-subtle:     var(--ds-color-indigo-800);
@@ -53,7 +53,7 @@
   --ds-color-secondary-text:       var(--ds-color-indigo-400);
 
   /* Derived */
-  --ds-text-link:       var(--ds-color-cyan-400);
+  --ds-text-link-default:       var(--ds-color-cyan-400);
   --ds-text-link-hover: var(--ds-color-cyan-300);
   --ds-focus-ring: 0 0 0 2px var(--ds-surface-default), 0 0 0 4px var(--ds-color-cyan-400);
 }

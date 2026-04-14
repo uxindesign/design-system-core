@@ -193,8 +193,7 @@
   --ds-font-size-2xs:  0.6875rem; /* 11px */
   --ds-font-size-xs:   0.75rem;   /* 12px */
   --ds-font-size-sm:   0.875rem;  /* 14px */
-  --ds-font-size-base: 1rem;      /* 16px */
-  --ds-font-size-md:   1rem;      /* 16px — alias for base */
+  --ds-font-size-md:   1rem;      /* 16px */
   --ds-font-size-lg:   1.125rem;  /* 18px */
   --ds-font-size-xl:   1.25rem;   /* 20px */
   --ds-font-size-2xl:  1.5rem;    /* 24px */

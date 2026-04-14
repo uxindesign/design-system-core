@@ -30,7 +30,7 @@
 
 .ds-textarea--lg {
   padding: 0 var(--ds-spacing-5);
-  font-size: var(--ds-font-size-base);
+  font-size: var(--ds-font-size-md);
 }
 
 /* Field
@@ -76,18 +76,18 @@
 /* Focused */
 .ds-textarea:focus-within {
   outline: 2px solid transparent;
-  border-color: var(--ds-color-primary);
+  border-color: var(--ds-color-primary-default);
   box-shadow: var(--ds-focus-ring);
 }
 
 /* Error */
 .ds-textarea--error {
-  border-color: var(--ds-feedback-error);
+  border-color: var(--ds-feedback-error-default);
 }
 
 .ds-textarea--error:focus-within {
-  border-color: var(--ds-feedback-error);
-  box-shadow: 0 0 0 2px var(--ds-surface-default), 0 0 0 4px var(--ds-feedback-error);
+  border-color: var(--ds-feedback-error-default);
+  box-shadow: 0 0 0 2px var(--ds-surface-default), 0 0 0 4px var(--ds-feedback-error-default);
 }
 
 /* Disabled */

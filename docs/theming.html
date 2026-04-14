@@ -114,7 +114,7 @@
       <h2 class="ds-subsection__title">Available Themes</h2>
 
       <!-- Default (Blue) -->
-      <h3 style="font-size:var(--ds-font-size-base);font-weight:var(--ds-font-weight-semibold);margin-bottom:var(--ds-spacing-3);margin-top:var(--ds-spacing-6);">Default (Blue)</h3>
+      <h3 style="font-size:var(--ds-font-size-md);font-weight:var(--ds-font-weight-semibold);margin-bottom:var(--ds-spacing-3);margin-top:var(--ds-spacing-6);">Default (Blue)</h3>
       <p style="color:var(--ds-text-secondary);margin-bottom:var(--ds-spacing-3);font-size:var(--ds-font-size-sm);">No <code style="font-family:var(--ds-font-family-mono);">data-theme</code> attribute needed. Primary: Blue 600, Secondary: Purple 600.</p>
       <div class="ds-preview">
         <div class="ds-preview__tabs" role="tablist">
@@ -140,7 +140,7 @@
       </div>
 
       <!-- Ocean (Cyan) -->
-      <h3 style="font-size:var(--ds-font-size-base);font-weight:var(--ds-font-weight-semibold);margin-bottom:var(--ds-spacing-3);margin-top:var(--ds-spacing-6);">Ocean (Cyan)</h3>
+      <h3 style="font-size:var(--ds-font-size-md);font-weight:var(--ds-font-weight-semibold);margin-bottom:var(--ds-spacing-3);margin-top:var(--ds-spacing-6);">Ocean (Cyan)</h3>
       <p style="color:var(--ds-text-secondary);margin-bottom:var(--ds-spacing-3);font-size:var(--ds-font-size-sm);">Primary: Cyan 600, Secondary: Indigo 600.</p>
       <div class="ds-preview">
         <div class="ds-preview__tabs" role="tablist">
@@ -164,7 +164,7 @@
       </div>
 
       <!-- Forest (Emerald) -->
-      <h3 style="font-size:var(--ds-font-size-base);font-weight:var(--ds-font-weight-semibold);margin-bottom:var(--ds-spacing-3);margin-top:var(--ds-spacing-6);">Forest (Emerald)</h3>
+      <h3 style="font-size:var(--ds-font-size-md);font-weight:var(--ds-font-weight-semibold);margin-bottom:var(--ds-spacing-3);margin-top:var(--ds-spacing-6);">Forest (Emerald)</h3>
       <p style="color:var(--ds-text-secondary);margin-bottom:var(--ds-spacing-3);font-size:var(--ds-font-size-sm);">Primary: Emerald 600, Secondary: Amber 600.</p>
       <div class="ds-preview">
         <div class="ds-preview__tabs" role="tablist">
@@ -296,21 +296,21 @@
             <button class="ds-preview__copy" aria-label="Copy code">Copy</button>
             <pre><code>/* Custom "Sunset" theme */
 [data-theme="sunset"] {
-  --ds-color-primary:        #EA580C; /* Orange 600 */
+  --ds-color-primary-default:        #EA580C; /* Orange 600 */
   --ds-color-primary-hover:  #C2410C; /* Orange 700 */
   --ds-color-primary-active: #9A3412; /* Orange 800 */
   --ds-color-primary-subtle: #FED7AA; /* Orange 200 */
   --ds-color-primary-muted:  #FFF7ED; /* Orange 50  */
   --ds-color-primary-text:   #C2410C; /* Orange 700 */
 
-  --ds-color-secondary:        #DB2777; /* Pink 600 */
+  --ds-color-secondary-default:        #DB2777; /* Pink 600 */
   --ds-color-secondary-hover:  #BE185D; /* Pink 700 */
   --ds-color-secondary-active: #9D174D; /* Pink 800 */
   --ds-color-secondary-subtle: #FBCFE8; /* Pink 200 */
   --ds-color-secondary-muted:  #FDF2F8; /* Pink 50  */
   --ds-color-secondary-text:   #BE185D; /* Pink 700 */
 
-  --ds-text-link:       #EA580C;
+  --ds-text-link-default:       #EA580C;
   --ds-text-link-hover: #C2410C;
   --ds-focus-ring: 0 0 0 2px var(--ds-surface-default),
                    0 0 0 4px #EA580C;
@@ -318,14 +318,14 @@
 
 /* Optional: dark-mode adjustments for your theme */
 [data-theme="sunset"][data-mode="dark"] {
-  --ds-color-primary:        #FB923C; /* Orange 400 */
+  --ds-color-primary-default:        #FB923C; /* Orange 400 */
   --ds-color-primary-hover:  #FDBA74; /* Orange 300 */
   --ds-color-primary-active: #FED7AA; /* Orange 200 */
   --ds-color-primary-subtle: #7C2D12; /* Orange 900 */
   --ds-color-primary-muted:  #7C2D12;
   --ds-color-primary-text:   #FB923C;
 
-  --ds-text-link:       #FB923C;
+  --ds-text-link-default:       #FB923C;
   --ds-text-link-hover: #FDBA74;
   --ds-focus-ring: 0 0 0 2px var(--ds-surface-default),
                    0 0 0 4px #FB923C;
@@ -334,7 +334,7 @@
         </div>
       </div>
       <p style="color:var(--ds-text-secondary);margin-top:var(--ds-spacing-4);font-size:var(--ds-font-size-sm);line-height:var(--ds-line-height-relaxed);">
-        Then apply it with <code style="font-family:var(--ds-font-family-mono);">&lt;html data-theme="sunset"&gt;</code>. Every component that uses <code style="font-family:var(--ds-font-family-mono);">--ds-color-primary</code> will pick up your new palette automatically.
+        Then apply it with <code style="font-family:var(--ds-font-family-mono);">&lt;html data-theme="sunset"&gt;</code>. Every component that uses <code style="font-family:var(--ds-font-family-mono);">--ds-color-primary-default</code> will pick up your new palette automatically.
       </p>
     </div>
   </div>

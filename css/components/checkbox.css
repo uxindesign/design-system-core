@@ -52,13 +52,13 @@
 
 /* Hover */
 .ds-checkbox:hover:not(:disabled) {
-  border-color: var(--ds-color-primary);
+  border-color: var(--ds-color-primary-default);
 }
 
 /* Checked */
 .ds-checkbox:checked {
-  background-color: var(--ds-color-primary);
-  border-color: var(--ds-color-primary);
+  background-color: var(--ds-color-primary-default);
+  border-color: var(--ds-color-primary-default);
 }
 
 .ds-checkbox:checked::after {
@@ -67,8 +67,8 @@
 
 /* Indeterminate */
 .ds-checkbox:indeterminate {
-  background-color: var(--ds-color-primary);
-  border-color: var(--ds-color-primary);
+  background-color: var(--ds-color-primary-default);
+  border-color: var(--ds-color-primary-default);
 }
 
 .ds-checkbox:indeterminate::after {
@@ -106,12 +106,12 @@
 
 /* Error state */
 .ds-checkbox-group--error .ds-checkbox {
-  border-color: var(--ds-feedback-error);
+  border-color: var(--ds-feedback-error-default);
 }
 
 .ds-checkbox-group--error .ds-checkbox:checked {
-  background-color: var(--ds-feedback-error);
-  border-color: var(--ds-feedback-error);
+  background-color: var(--ds-feedback-error-default);
+  border-color: var(--ds-feedback-error-default);
 }
 
 .ds-checkbox-group__error {

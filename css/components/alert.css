@@ -63,22 +63,22 @@
    Filled style
    --------------------------------------------------------- */
 .ds-alert--success.ds-alert--filled {
-  background-color: var(--ds-feedback-success);
+  background-color: var(--ds-feedback-success-default);
   color: var(--ds-feedback-success-foreground);
 }
 
 .ds-alert--warning.ds-alert--filled {
-  background-color: var(--ds-feedback-warning);
+  background-color: var(--ds-feedback-warning-default);
   color: var(--ds-feedback-warning-foreground);
 }
 
 .ds-alert--error.ds-alert--filled {
-  background-color: var(--ds-feedback-error);
+  background-color: var(--ds-feedback-error-default);
   color: var(--ds-feedback-error-foreground);
 }
 
 .ds-alert--info.ds-alert--filled {
-  background-color: var(--ds-feedback-info);
+  background-color: var(--ds-feedback-info-default);
   color: var(--ds-feedback-info-foreground);
 }
 
@@ -88,23 +88,23 @@
 .ds-alert--success.ds-alert--subtle {
   background-color: var(--ds-feedback-success-background);
   color: var(--ds-feedback-success-text);
-  border-left: var(--ds-border-width-4) solid var(--ds-feedback-success);
+  border-left: var(--ds-border-width-4) solid var(--ds-feedback-success-default);
 }
 
 .ds-alert--warning.ds-alert--subtle {
   background-color: var(--ds-feedback-warning-background);
   color: var(--ds-feedback-warning-text);
-  border-left: var(--ds-border-width-4) solid var(--ds-feedback-warning);
+  border-left: var(--ds-border-width-4) solid var(--ds-feedback-warning-default);
 }
 
 .ds-alert--error.ds-alert--subtle {
   background-color: var(--ds-feedback-error-background);
   color: var(--ds-feedback-error-text);
-  border-left: var(--ds-border-width-4) solid var(--ds-feedback-error);
+  border-left: var(--ds-border-width-4) solid var(--ds-feedback-error-default);
 }
 
 .ds-alert--info.ds-alert--subtle {
   background-color: var(--ds-feedback-info-background);
   color: var(--ds-feedback-info-text);
-  border-left: var(--ds-border-width-4) solid var(--ds-feedback-info);
+  border-left: var(--ds-border-width-4) solid var(--ds-feedback-info-default);
 }

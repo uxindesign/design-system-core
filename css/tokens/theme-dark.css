@@ -29,11 +29,11 @@
   --ds-text-disabled:         var(--ds-color-neutral-600);
   --ds-text-inverse:          var(--ds-color-neutral-900);
   --ds-text-on-brand:         var(--ds-color-neutral-900);
-  --ds-text-link:             var(--ds-color-primary);
+  --ds-text-link-default:             var(--ds-color-primary-default);
   --ds-text-link-hover:       var(--ds-color-primary-hover);
 
   /* Brand — Primary (default: Blue dark variants) */
-  --ds-color-primary:                var(--ds-color-blue-400);
+  --ds-color-primary-default:                var(--ds-color-blue-400);
   --ds-color-primary-hover:          var(--ds-color-blue-300);
   --ds-color-primary-active:         var(--ds-color-blue-200);
   --ds-color-primary-subtle:         var(--ds-color-blue-900);
@@ -42,7 +42,7 @@
   --ds-color-primary-text:           var(--ds-color-blue-400);
 
   /* Brand — Secondary (default: Purple dark variants) */
-  --ds-color-secondary:              var(--ds-color-purple-400);
+  --ds-color-secondary-default:              var(--ds-color-purple-400);
   --ds-color-secondary-hover:        var(--ds-color-purple-300);
   --ds-color-secondary-active:       var(--ds-color-purple-200);
   --ds-color-secondary-subtle:       var(--ds-color-purple-800);
@@ -51,7 +51,7 @@
   --ds-color-secondary-text:         var(--ds-color-purple-400);
 
   /* Feedback — Success */
-  --ds-feedback-success:             var(--ds-color-green-500);
+  --ds-feedback-success-default:             var(--ds-color-green-500);
   --ds-feedback-success-hover:       var(--ds-color-green-400);
   --ds-feedback-success-active:      var(--ds-color-green-300);
   --ds-feedback-success-subtle:      var(--ds-color-green-900);
@@ -61,7 +61,7 @@
   --ds-feedback-success-text:        var(--ds-color-green-400);
 
   /* Feedback — Warning */
-  --ds-feedback-warning:             var(--ds-color-amber-400);
+  --ds-feedback-warning-default:             var(--ds-color-amber-400);
   --ds-feedback-warning-hover:       var(--ds-color-amber-300);
   --ds-feedback-warning-subtle:      var(--ds-color-amber-900);
   --ds-feedback-warning-background:  var(--ds-color-amber-950);
@@ -70,7 +70,7 @@
   --ds-feedback-warning-text:        var(--ds-color-amber-400);
 
   /* Feedback — Error */
-  --ds-feedback-error:               var(--ds-color-red-500);
+  --ds-feedback-error-default:               var(--ds-color-red-500);
   --ds-feedback-error-hover:         var(--ds-color-red-400);
   --ds-feedback-error-active:        var(--ds-color-red-300);
   --ds-feedback-error-subtle:        var(--ds-color-red-900);
@@ -80,7 +80,7 @@
   --ds-feedback-error-text:          var(--ds-color-red-400);
 
   /* Feedback — Info */
-  --ds-feedback-info:                var(--ds-color-sky-400);
+  --ds-feedback-info-default:                var(--ds-color-sky-400);
   --ds-feedback-info-hover:          var(--ds-color-sky-300);
   --ds-feedback-info-subtle:         var(--ds-color-sky-900);
   --ds-feedback-info-background:     var(--ds-color-sky-950);
@@ -100,7 +100,7 @@
   --ds-overlay-strong:  var(--ds-overlay-white-40);
 
   /* Focus ring */
-  --ds-focus-ring: 0 0 0 2px var(--ds-surface-default), 0 0 0 4px var(--ds-color-primary);
+  --ds-focus-ring: 0 0 0 2px var(--ds-surface-default), 0 0 0 4px var(--ds-color-primary-default);
 
   /* State */
   --ds-state-hover:               rgba(255, 255, 255, 0.05);
