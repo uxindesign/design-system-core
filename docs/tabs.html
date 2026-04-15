@@ -6,6 +6,38 @@
   <title>Tabs — Design System</title>
   <link rel="stylesheet" href="../css/design-system.css">
   <link rel="stylesheet" href="layout.css">
+  <style>
+    /* Tables */
+    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-sm); margin-bottom: var(--ds-spacing-8); }
+    .ds-token-table th { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-text-secondary); }
+    .ds-token-table td { padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
+    .ds-token-table code { font-size: var(--ds-font-size-xs); font-family: var(--ds-font-family-mono); }
+    /* Callouts */
+    .ds-callout { padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-6); font-size: var(--ds-font-size-sm); line-height: var(--ds-line-height-relaxed); color: var(--ds-text-default); }
+    .ds-callout--info { background-color: var(--ds-feedback-info-background); border: var(--ds-border-width-1) solid var(--ds-feedback-info-border); }
+    .ds-callout--success { background-color: var(--ds-feedback-success-background); border: var(--ds-border-width-1) solid var(--ds-feedback-success-border); }
+    .ds-callout--warning { background-color: var(--ds-feedback-warning-background); border: var(--ds-border-width-1) solid var(--ds-feedback-warning-border); }
+    .ds-callout__title { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-1); }
+    /* Do/Don't */
+    .ds-dodont { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ds-spacing-4); margin-bottom: var(--ds-spacing-8); }
+    .ds-dodont__item { border-radius: var(--ds-radius-lg); overflow: hidden; }
+    .ds-dodont__preview { padding: var(--ds-spacing-6); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg) var(--ds-radius-lg) 0 0; display: flex; flex-wrap: wrap; gap: var(--ds-spacing-3); align-items: center; justify-content: center; }
+    .ds-dodont__label { padding: var(--ds-spacing-2) var(--ds-spacing-4); font-size: var(--ds-font-size-sm); font-weight: var(--ds-font-weight-semibold); }
+    .ds-dodont__label--do { background-color: var(--ds-feedback-success-background); color: var(--ds-feedback-success-text); border-top: 3px solid var(--ds-feedback-success-default); }
+    .ds-dodont__label--dont { background-color: var(--ds-feedback-error-background); color: var(--ds-feedback-error-text); border-top: 3px solid var(--ds-feedback-error-default); }
+    .ds-dodont__desc { padding: 0 var(--ds-spacing-4) var(--ds-spacing-3); font-size: var(--ds-font-size-sm); color: var(--ds-text-secondary); background-color: var(--ds-background-subtle); }
+    /* Anatomy */
+    .ds-anatomy { padding: var(--ds-spacing-8); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-4); display: flex; align-items: center; justify-content: center; position: relative; }
+    .ds-anatomy__marker { position: absolute; width: 20px; height: 20px; border-radius: 50%; background-color: var(--ds-color-primary-default); color: var(--ds-text-on-brand); font-size: 11px; font-weight: var(--ds-font-weight-bold); display: flex; align-items: center; justify-content: center; }
+    .ds-anatomy-legend { font-size: var(--ds-font-size-sm); color: var(--ds-text-secondary); margin-bottom: var(--ds-spacing-8); line-height: var(--ds-line-height-relaxed); }
+    .ds-anatomy-legend strong { color: var(--ds-text-default); }
+    /* Related */
+    .ds-related { display: flex; gap: var(--ds-spacing-3); flex-wrap: wrap; margin-bottom: var(--ds-spacing-8); }
+    .ds-related__link { padding: var(--ds-spacing-2) var(--ds-spacing-4); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-md); font-size: var(--ds-font-size-sm); color: var(--ds-text-link-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
+    .ds-related__link:hover { border-color: var(--ds-color-primary-default); background-color: var(--ds-color-primary-muted); }
+    /* Responsive do/dont */
+    @media (max-width: 768px) { .ds-dodont { grid-template-columns: 1fr; } }
+  </style>
 </head>
 <body>
 
@@ -91,95 +123,310 @@
 </nav>
 
 <main class="ds-main">
-  <section class="ds-section">
+
+  <!-- ============================================================
+       1. HEADER
+       ============================================================ -->
+  <div class="ds-section">
     <h1 class="ds-section__title">Tabs</h1>
     <p class="ds-section__subtitle">Horizontal navigation tabs for switching between content sections. Only one panel is visible at a time.</p>
+  </div>
 
-    <!-- Accessibility note -->
-    <div class="ds-a11y-note">
-      <p class="ds-a11y-note__title">Accessibility</p>
-      <p class="ds-a11y-note__text">Use <code>role="tablist"</code> on the tab container, <code>role="tab"</code> on each tab button, and <code>role="tabpanel"</code> on each panel. Set <code>aria-selected="true"</code> on the active tab. Support arrow key navigation between tabs.</p>
+  <!-- ============================================================
+       2. WHEN TO USE / WHEN NOT TO USE
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">When to use</h2>
+    <div class="ds-callout ds-callout--success">
+      <div class="ds-callout__title">Use tabs when</div>
+      Content is organized into parallel categories and the user needs to switch between them without page navigation. Each tab represents a mutually exclusive view of related content.
     </div>
+    <div class="ds-callout ds-callout--warning">
+      <div class="ds-callout__title">Don't use tabs when</div>
+      Content follows sequential steps (use a stepper instead), the action is navigating to different pages (use nav links), or there are more than 6-7 categories (consider a different pattern).
+    </div>
+  </div>
 
-    <!-- Default tabs -->
-    <div class="ds-subsection">
-      <h2 class="ds-subsection__title">Default tabs</h2>
-      <p>One tab is active, the others are in their default state. Each tab controls a corresponding panel.</p>
-      <div class="ds-preview">
-        <div class="ds-preview__canvas ds-preview__canvas--column">
-          <div class="ds-tabs" role="tablist" aria-label="Account settings" style="width:100%;">
-            <button class="ds-tab ds-tab--active" role="tab" aria-selected="true" aria-controls="panel-overview" id="tab-overview">Overview</button>
-            <button class="ds-tab" role="tab" aria-selected="false" aria-controls="panel-settings" id="tab-settings" tabindex="-1">Settings</button>
-            <button class="ds-tab" role="tab" aria-selected="false" aria-controls="panel-activity" id="tab-activity" tabindex="-1">Activity</button>
+  <!-- ============================================================
+       3. ANATOMY
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Anatomy</h2>
+
+    <div class="ds-anatomy">
+      <div style="position:relative;display:flex;flex-direction:column;width:280px;">
+        <!-- Tab list -->
+        <div style="display:flex;gap:0;border-bottom:var(--ds-border-width-2) solid var(--ds-border-default);position:relative;">
+          <div style="padding:var(--ds-spacing-3) var(--ds-spacing-4);color:var(--ds-color-primary-default);font-weight:var(--ds-font-weight-semibold);font-size:var(--ds-font-size-sm);border-bottom:2px solid var(--ds-color-primary-default);margin-bottom:-2px;position:relative;">
+            Overview
+            <span class="ds-anatomy__marker" style="top:-22px;left:50%;transform:translateX(-50%);">2</span>
+            <span class="ds-anatomy__marker" style="bottom:-22px;left:50%;transform:translateX(-50%);">3</span>
           </div>
-          <div class="ds-tab-panel" role="tabpanel" id="panel-overview" aria-labelledby="tab-overview" style="padding:var(--ds-spacing-4) 0;">
-            <p style="margin:0;color:var(--ds-text-secondary);">This is the Overview panel content. It provides a summary of your account status and recent activity.</p>
-          </div>
+          <div style="padding:var(--ds-spacing-3) var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">Settings</div>
+          <div style="padding:var(--ds-spacing-3) var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">Activity</div>
+          <span class="ds-anatomy__marker" style="top:-22px;left:-28px;">1</span>
+        </div>
+        <!-- Panel -->
+        <div style="padding:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);position:relative;">
+          Panel content goes here.
+          <span class="ds-anatomy__marker" style="top:50%;right:-28px;transform:translateY(-50%);">4</span>
         </div>
       </div>
     </div>
 
-    <!-- Tabs with disabled -->
-    <div class="ds-subsection">
-      <h2 class="ds-subsection__title">With disabled tab</h2>
-      <p>A disabled tab cannot be interacted with and is skipped during keyboard navigation.</p>
-      <div class="ds-preview">
-        <div class="ds-preview__canvas ds-preview__canvas--column">
-          <div class="ds-tabs" role="tablist" aria-label="Settings tabs" style="width:100%;">
-            <button class="ds-tab ds-tab--active" role="tab" aria-selected="true" id="tab-general">General</button>
-            <button class="ds-tab" role="tab" aria-selected="false" id="tab-notifications" tabindex="-1">Notifications</button>
-            <button class="ds-tab ds-tab--disabled" role="tab" aria-selected="false" aria-disabled="true" tabindex="-1" disabled>Billing</button>
-            <button class="ds-tab" role="tab" aria-selected="false" id="tab-security" tabindex="-1">Security</button>
-          </div>
-          <div class="ds-tab-panel" role="tabpanel" aria-labelledby="tab-general" style="padding:var(--ds-spacing-4) 0;">
-            <p style="margin:0;color:var(--ds-text-secondary);">General settings for your account: display name, language, and timezone preferences.</p>
-          </div>
+    <div class="ds-anatomy-legend">
+      <strong>1</strong> Tab list (<code>.ds-tabs</code>) — container with <code>role="tablist"</code>.<br>
+      <strong>2</strong> Tab (<code>.ds-tab</code>) — individual tab button with <code>role="tab"</code>.<br>
+      <strong>3</strong> Active indicator — bottom border on the active tab.<br>
+      <strong>4</strong> Tab panel — content area with <code>role="tabpanel"</code>.
+    </div>
+  </div>
+
+  <!-- ============================================================
+       4. VARIANTS (live previews)
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Default tabs</h2>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">One tab is active, the others are in their default state. Each tab controls a corresponding panel.</p>
+    <div class="ds-preview">
+      <div class="ds-preview__tabs">
+        <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
+        <button class="ds-preview__tab" data-tab="code">Code</button>
+      </div>
+      <div class="ds-preview__canvas ds-preview__canvas--column">
+        <div class="ds-tabs" role="tablist" aria-label="Account settings" style="width:100%;">
+          <button class="ds-tab ds-tab--active" role="tab" aria-selected="true" aria-controls="panel-overview" id="tab-overview">Overview</button>
+          <button class="ds-tab" role="tab" aria-selected="false" aria-controls="panel-settings" id="tab-settings" tabindex="-1">Settings</button>
+          <button class="ds-tab" role="tab" aria-selected="false" aria-controls="panel-activity" id="tab-activity" tabindex="-1">Activity</button>
+        </div>
+        <div class="ds-tab-panel" role="tabpanel" id="panel-overview" aria-labelledby="tab-overview" style="padding:var(--ds-spacing-4) 0;">
+          <p style="margin:0;color:var(--ds-text-secondary);">This is the Overview panel content. It provides a summary of your account status and recent activity.</p>
         </div>
       </div>
-    </div>
+      <div class="ds-preview__code" style="display:none">
+        <button class="ds-preview__copy">Copy</button>
+        <pre><code>&lt;div class="ds-tabs" role="tablist" aria-label="Account settings"&gt;
+  &lt;button class="ds-tab ds-tab--active" role="tab"
+          aria-selected="true" aria-controls="panel-overview"
+          id="tab-overview"&gt;Overview&lt;/button&gt;
+  &lt;button class="ds-tab" role="tab"
+          aria-selected="false" aria-controls="panel-settings"
+          id="tab-settings" tabindex="-1"&gt;Settings&lt;/button&gt;
+  &lt;button class="ds-tab" role="tab"
+          aria-selected="false" aria-controls="panel-activity"
+          id="tab-activity" tabindex="-1"&gt;Activity&lt;/button&gt;
+&lt;/div&gt;
 
-    <!-- Many tabs -->
-    <div class="ds-subsection">
-      <h2 class="ds-subsection__title">Multiple tabs</h2>
-      <p>Tabs scroll horizontally when they overflow the container.</p>
-      <div class="ds-preview">
-        <div class="ds-preview__canvas ds-preview__canvas--column">
-          <div class="ds-tabs" role="tablist" aria-label="Project tabs" style="width:100%;">
-            <button class="ds-tab ds-tab--active" role="tab" aria-selected="true">Dashboard</button>
-            <button class="ds-tab" role="tab" aria-selected="false" tabindex="-1">Issues</button>
-            <button class="ds-tab" role="tab" aria-selected="false" tabindex="-1">Pull Requests</button>
-            <button class="ds-tab" role="tab" aria-selected="false" tabindex="-1">Actions</button>
-            <button class="ds-tab" role="tab" aria-selected="false" tabindex="-1">Projects</button>
-            <button class="ds-tab" role="tab" aria-selected="false" tabindex="-1">Wiki</button>
-          </div>
-          <div class="ds-tab-panel" role="tabpanel" style="padding:var(--ds-spacing-4) 0;">
-            <p style="margin:0;color:var(--ds-text-secondary);">Dashboard panel showing project metrics, recent commits, and team activity overview.</p>
-          </div>
-        </div>
+&lt;div class="ds-tab-panel" role="tabpanel"
+     id="panel-overview" aria-labelledby="tab-overview"&gt;
+  &lt;p&gt;Panel content here.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
       </div>
     </div>
+  </div>
 
-    <!-- CSS Classes -->
-    <div class="ds-subsection">
-      <h2 class="ds-subsection__title">CSS Classes</h2>
-      <table class="ds-props-table" style="width:100%;border-collapse:collapse;">
-        <thead>
-          <tr style="border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">
-            <th style="text-align:left;padding:var(--ds-spacing-2) var(--ds-spacing-3);">Class</th>
-            <th style="text-align:left;padding:var(--ds-spacing-2) var(--ds-spacing-3);">Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr style="border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);"><code>ds-tabs</code></td><td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);">Tab list container</td></tr>
-          <tr style="border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);"><code>ds-tab</code></td><td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);">Individual tab button</td></tr>
-          <tr style="border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);"><code>ds-tab--active</code></td><td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);">Active / selected tab</td></tr>
-          <tr style="border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);"><code>ds-tab--disabled</code></td><td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);">Disabled tab (non-interactive)</td></tr>
-          <tr><td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);"><code>ds-tab-panel</code></td><td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);">Tab panel content area</td></tr>
-        </tbody>
-      </table>
+  <!-- With disabled tab -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">With disabled tab</h2>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">A disabled tab cannot be interacted with and is skipped during keyboard navigation.</p>
+    <div class="ds-preview">
+      <div class="ds-preview__tabs">
+        <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
+        <button class="ds-preview__tab" data-tab="code">Code</button>
+      </div>
+      <div class="ds-preview__canvas ds-preview__canvas--column">
+        <div class="ds-tabs" role="tablist" aria-label="Settings tabs" style="width:100%;">
+          <button class="ds-tab ds-tab--active" role="tab" aria-selected="true" id="tab-general">General</button>
+          <button class="ds-tab" role="tab" aria-selected="false" id="tab-notifications" tabindex="-1">Notifications</button>
+          <button class="ds-tab ds-tab--disabled" role="tab" aria-selected="false" aria-disabled="true" tabindex="-1" disabled>Billing</button>
+          <button class="ds-tab" role="tab" aria-selected="false" id="tab-security" tabindex="-1">Security</button>
+        </div>
+        <div class="ds-tab-panel" role="tabpanel" aria-labelledby="tab-general" style="padding:var(--ds-spacing-4) 0;">
+          <p style="margin:0;color:var(--ds-text-secondary);">General settings for your account: display name, language, and timezone preferences.</p>
+        </div>
+      </div>
+      <div class="ds-preview__code" style="display:none">
+        <button class="ds-preview__copy">Copy</button>
+        <pre><code>&lt;button class="ds-tab ds-tab--disabled" role="tab"
+        aria-selected="false" aria-disabled="true"
+        tabindex="-1" disabled&gt;Billing&lt;/button&gt;</code></pre>
+      </div>
     </div>
+  </div>
 
-  </section>
+  <!-- Multiple tabs -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Multiple tabs</h2>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">Tabs scroll horizontally when they overflow the container.</p>
+    <div class="ds-preview">
+      <div class="ds-preview__tabs">
+        <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
+        <button class="ds-preview__tab" data-tab="code">Code</button>
+      </div>
+      <div class="ds-preview__canvas ds-preview__canvas--column">
+        <div class="ds-tabs" role="tablist" aria-label="Project tabs" style="width:100%;">
+          <button class="ds-tab ds-tab--active" role="tab" aria-selected="true">Dashboard</button>
+          <button class="ds-tab" role="tab" aria-selected="false" tabindex="-1">Issues</button>
+          <button class="ds-tab" role="tab" aria-selected="false" tabindex="-1">Pull Requests</button>
+          <button class="ds-tab" role="tab" aria-selected="false" tabindex="-1">Actions</button>
+          <button class="ds-tab" role="tab" aria-selected="false" tabindex="-1">Projects</button>
+          <button class="ds-tab" role="tab" aria-selected="false" tabindex="-1">Wiki</button>
+        </div>
+        <div class="ds-tab-panel" role="tabpanel" style="padding:var(--ds-spacing-4) 0;">
+          <p style="margin:0;color:var(--ds-text-secondary);">Dashboard panel showing project metrics, recent commits, and team activity overview.</p>
+        </div>
+      </div>
+      <div class="ds-preview__code" style="display:none">
+        <button class="ds-preview__copy">Copy</button>
+        <pre><code>&lt;div class="ds-tabs" role="tablist" aria-label="Project tabs"&gt;
+  &lt;button class="ds-tab ds-tab--active" role="tab" aria-selected="true"&gt;Dashboard&lt;/button&gt;
+  &lt;button class="ds-tab" role="tab" aria-selected="false" tabindex="-1"&gt;Issues&lt;/button&gt;
+  &lt;button class="ds-tab" role="tab" aria-selected="false" tabindex="-1"&gt;Pull Requests&lt;/button&gt;
+  &lt;button class="ds-tab" role="tab" aria-selected="false" tabindex="-1"&gt;Actions&lt;/button&gt;
+  &lt;button class="ds-tab" role="tab" aria-selected="false" tabindex="-1"&gt;Projects&lt;/button&gt;
+  &lt;button class="ds-tab" role="tab" aria-selected="false" tabindex="-1"&gt;Wiki&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       5. BEST PRACTICES (Do / Don't)
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Best practices</h2>
+
+    <div class="ds-dodont">
+      <div class="ds-dodont__item">
+        <div class="ds-dodont__preview">
+          <div class="ds-tabs" role="tablist" style="width:100%;">
+            <button class="ds-tab ds-tab--active" role="tab" aria-selected="true">Overview</button>
+            <button class="ds-tab" role="tab" aria-selected="false" tabindex="-1">Settings</button>
+          </div>
+        </div>
+        <div class="ds-dodont__label ds-dodont__label--do">Do</div>
+        <div class="ds-dodont__desc">Use 1-2 word labels. Keep the first tab active by default.</div>
+      </div>
+      <div class="ds-dodont__item">
+        <div class="ds-dodont__preview">
+          <div class="ds-tabs" role="tablist" style="width:100%;">
+            <button class="ds-tab" role="tab" aria-selected="false" tabindex="-1">View your account overview</button>
+            <button class="ds-tab" role="tab" aria-selected="false" tabindex="-1">Change your settings</button>
+          </div>
+        </div>
+        <div class="ds-dodont__label ds-dodont__label--dont">Don't</div>
+        <div class="ds-dodont__desc">Full sentence labels. Starting with no tab selected.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       6. CONTENT GUIDELINES
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Content guidelines</h2>
+    <table class="ds-token-table">
+      <thead><tr><th>Rule</th><th>Example</th></tr></thead>
+      <tbody>
+        <tr><td>Use nouns as labels</td><td>"Overview", "Settings", "Activity" — not "View overview" or "Go to settings"</td></tr>
+        <tr><td>Same hierarchy level</td><td>All tabs should represent parallel categories of the same content</td></tr>
+        <tr><td>No icons without text</td><td>Always include a text label — icons alone are ambiguous in tab context</td></tr>
+        <tr><td>Keep labels short (1-2 words)</td><td>"Pull Requests" — not "View all pull requests in this project"</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============================================================
+       7. TOKEN MAPPING
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Token mapping</h2>
+    <table class="ds-token-table">
+      <thead><tr><th>Property</th><th>Token (semantic)</th><th>CSS variable</th></tr></thead>
+      <tbody>
+        <tr><td>text (inactive)</td><td><code>semantic.text.secondary</code></td><td><code>--ds-text-secondary</code></td></tr>
+        <tr><td>text (active)</td><td><code>semantic.color.primary.default</code></td><td><code>--ds-color-primary-default</code></td></tr>
+        <tr><td>active indicator</td><td><code>semantic.color.primary.default</code></td><td><code>--ds-color-primary-default</code></td></tr>
+        <tr><td>background (hover)</td><td><code>semantic.state.hover</code></td><td><code>--ds-state-hover</code></td></tr>
+        <tr><td>focus ring</td><td><code>semantic.focus.ring.*</code></td><td><code>--ds-focus-ring-width</code>, <code>--ds-focus-ring-offset</code>, <code>--ds-focus-ring-color</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============================================================
+       8. CSS CLASSES
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">CSS classes</h2>
+    <table class="ds-token-table">
+      <thead><tr><th>Class</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td><code>ds-tabs</code></td><td>Tab list container</td></tr>
+        <tr><td><code>ds-tab</code></td><td>Individual tab button</td></tr>
+        <tr><td><code>ds-tab--active</code></td><td>Active / selected tab</td></tr>
+        <tr><td><code>ds-tab--disabled</code></td><td>Disabled tab (non-interactive)</td></tr>
+        <tr><td><code>ds-tab-panel</code></td><td>Tab panel content area</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============================================================
+       9. KEYBOARD INTERACTION
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Keyboard interaction</h2>
+    <table class="ds-token-table">
+      <thead><tr><th>Key</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td><code>Tab</code></td><td>Moves focus into the tab list, landing on the active tab</td></tr>
+        <tr><td><code>Arrow Left</code> / <code>Arrow Right</code></td><td>Moves to previous / next tab (auto-activates)</td></tr>
+        <tr><td><code>Home</code></td><td>Moves to the first tab</td></tr>
+        <tr><td><code>End</code></td><td>Moves to the last tab</td></tr>
+        <tr><td><code>Tab</code> (from list)</td><td>Moves focus into the active panel content</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:var(--ds-spacing-2);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
+      Disabled tabs are skipped during arrow key navigation. Only the active tab is in the <code>Tab</code> sequence (<code>tabindex="0"</code>); all others have <code>tabindex="-1"</code>.
+    </p>
+  </div>
+
+  <!-- ============================================================
+       10. ACCESSIBILITY
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Accessibility</h2>
+    <table class="ds-token-table">
+      <thead><tr><th>WCAG criterion</th><th>Requirement</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>4.1.2 Name, Role, Value (A)</td><td><code>role="tablist"</code>, <code>role="tab"</code>, <code>role="tabpanel"</code>. <code>aria-selected</code> on tabs. <code>aria-controls</code> / <code>aria-labelledby</code> linking tabs to panels.</td><td>&#10003;</td></tr>
+        <tr><td>2.1.1 Keyboard (A)</td><td>Arrow keys navigate between tabs. <code>Tab</code> enters and exits the tab list.</td><td>&#10003;</td></tr>
+        <tr><td>2.4.11 Focus Appearance (AA)</td><td>Focus ring visible on the active tab when focused.</td><td>&#10003;</td></tr>
+      </tbody>
+    </table>
+
+    <div class="ds-callout ds-callout--info" style="margin-top:var(--ds-spacing-4)">
+      <div class="ds-callout__title">ARIA attributes summary</div>
+      <code>role="tablist"</code> — on the tab list container.<br>
+      <code>role="tab"</code> — on each tab button.<br>
+      <code>role="tabpanel"</code> — on each content panel.<br>
+      <code>aria-selected="true|false"</code> — indicates the active tab.<br>
+      <code>aria-controls</code> — on each tab, pointing to the corresponding panel ID.<br>
+      <code>aria-labelledby</code> — on each panel, pointing to the corresponding tab ID.<br>
+      <code>aria-disabled="true"</code> — on disabled tabs.
+    </div>
+  </div>
+
+  <!-- ============================================================
+       11. RELATED COMPONENTS
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Related</h2>
+    <div class="ds-related">
+      <a href="breadcrumb.html" class="ds-related__link">Breadcrumb</a>
+      <a href="card.html" class="ds-related__link">Card</a>
+    </div>
+  </div>
+
 </main>
 
 <script src="../js/main.js"></script>

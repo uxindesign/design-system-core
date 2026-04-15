@@ -7,6 +7,40 @@
   <link rel="stylesheet" href="../css/design-system.css">
   <link rel="stylesheet" href="layout.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <style>
+    /* Tables */
+    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-sm); margin-bottom: var(--ds-spacing-8); }
+    .ds-token-table th { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-text-secondary); }
+    .ds-token-table td { padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
+    .ds-token-table code { font-size: var(--ds-font-size-xs); font-family: var(--ds-font-family-mono); }
+    /* Callouts */
+    .ds-callout { padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-6); font-size: var(--ds-font-size-sm); line-height: var(--ds-line-height-relaxed); color: var(--ds-text-default); }
+    .ds-callout--info { background-color: var(--ds-feedback-info-background); border: var(--ds-border-width-1) solid var(--ds-feedback-info-border); }
+    .ds-callout--success { background-color: var(--ds-feedback-success-background); border: var(--ds-border-width-1) solid var(--ds-feedback-success-border); }
+    .ds-callout--warning { background-color: var(--ds-feedback-warning-background); border: var(--ds-border-width-1) solid var(--ds-feedback-warning-border); }
+    .ds-callout__title { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-1); }
+    /* Do/Don't */
+    .ds-dodont { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ds-spacing-4); margin-bottom: var(--ds-spacing-8); }
+    .ds-dodont__item { border-radius: var(--ds-radius-lg); overflow: hidden; }
+    .ds-dodont__preview { padding: var(--ds-spacing-6); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg) var(--ds-radius-lg) 0 0; display: flex; flex-wrap: wrap; gap: var(--ds-spacing-3); align-items: center; justify-content: center; }
+    .ds-dodont__label { padding: var(--ds-spacing-2) var(--ds-spacing-4); font-size: var(--ds-font-size-sm); font-weight: var(--ds-font-weight-semibold); }
+    .ds-dodont__label--do { background-color: var(--ds-feedback-success-background); color: var(--ds-feedback-success-text); border-top: 3px solid var(--ds-feedback-success-default); }
+    .ds-dodont__label--dont { background-color: var(--ds-feedback-error-background); color: var(--ds-feedback-error-text); border-top: 3px solid var(--ds-feedback-error-default); }
+    .ds-dodont__desc { padding: 0 var(--ds-spacing-4) var(--ds-spacing-3); font-size: var(--ds-font-size-sm); color: var(--ds-text-secondary); background-color: var(--ds-background-subtle); }
+    /* Anatomy */
+    .ds-anatomy { padding: var(--ds-spacing-8); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-4); display: flex; align-items: center; justify-content: center; position: relative; }
+    .ds-anatomy__marker { position: absolute; width: 20px; height: 20px; border-radius: 50%; background-color: var(--ds-color-primary-default); color: var(--ds-text-on-brand); font-size: 11px; font-weight: var(--ds-font-weight-bold); display: flex; align-items: center; justify-content: center; }
+    .ds-anatomy-legend { font-size: var(--ds-font-size-sm); color: var(--ds-text-secondary); margin-bottom: var(--ds-spacing-8); line-height: var(--ds-line-height-relaxed); }
+    .ds-anatomy-legend strong { color: var(--ds-text-default); }
+    /* Code block */
+    .ds-code-block { background-color: var(--ds-color-neutral-900); color: var(--ds-color-neutral-200); padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); font-family: var(--ds-font-family-mono); font-size: var(--ds-font-size-xs); line-height: var(--ds-line-height-relaxed); overflow-x: auto; margin-bottom: var(--ds-spacing-6); white-space: pre; }
+    /* Related */
+    .ds-related { display: flex; gap: var(--ds-spacing-3); flex-wrap: wrap; margin-bottom: var(--ds-spacing-8); }
+    .ds-related__link { padding: var(--ds-spacing-2) var(--ds-spacing-4); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-md); font-size: var(--ds-font-size-sm); color: var(--ds-text-link-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
+    .ds-related__link:hover { border-color: var(--ds-color-primary-default); background-color: var(--ds-color-primary-muted); }
+    /* Responsive do/dont */
+    @media (max-width: 768px) { .ds-dodont { grid-template-columns: 1fr; } }
+  </style>
 </head>
 <body>
 
@@ -92,12 +126,73 @@
 </nav>
 
 <main class="ds-main">
+
+  <!-- ============================================================
+       1. HEADER
+       ============================================================ -->
   <div class="ds-section">
     <h1 class="ds-section__title">Input</h1>
     <p class="ds-section__subtitle">Text inputs allow users to enter and edit text. Uses a wrapper pattern with an inner field element for consistent styling.</p>
   </div>
 
-  <!-- Default -->
+  <!-- ============================================================
+       2. WHEN TO USE / WHEN NOT TO USE
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">When to use</h2>
+    <div class="ds-callout ds-callout--success">
+      <div class="ds-callout__title">Use when</div>
+      The user needs to enter a short, single-line text value: name, email, phone, URL, search query, password.
+    </div>
+    <div class="ds-callout ds-callout--warning">
+      <div class="ds-callout__title">Don't use when</div>
+      The expected input is multi-line (use Textarea), the user must pick from a fixed set of options (use Select, Checkbox, or Radio), or the value is binary on/off (use Toggle).
+    </div>
+
+    <table class="ds-token-table">
+      <thead><tr><th>Situation</th><th>Use instead</th></tr></thead>
+      <tbody>
+        <tr><td>Multi-line text</td><td>Textarea</td></tr>
+        <tr><td>Choosing from a list</td><td>Select</td></tr>
+        <tr><td>Yes/no or on/off</td><td>Toggle or Checkbox</td></tr>
+        <tr><td>Searching with autocomplete</td><td>Custom search component (future)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============================================================
+       3. ANATOMY
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Anatomy</h2>
+
+    <div class="ds-anatomy">
+      <div style="position:relative;display:inline-flex;align-items:center;">
+        <!-- Visual input -->
+        <div style="display:inline-flex;align-items:center;gap:8px;padding:10px 12px;background-color:var(--ds-surface-default);border:1px solid var(--ds-border-default);border-radius:var(--ds-radius-component);font-size:var(--ds-font-size-sm);color:var(--ds-text-default);min-width:220px;position:relative;">
+          <span class="material-symbols-outlined" style="font-size:16px;color:var(--ds-text-secondary);">search</span>
+          <span style="color:var(--ds-text-tertiary);">Search...</span>
+        </div>
+        <!-- Markers -->
+        <span class="ds-anatomy__marker" style="top:-24px;left:50%;transform:translateX(-50%);">1</span>
+        <span class="ds-anatomy__marker" style="top:50%;left:-28px;transform:translateY(-50%);">2</span>
+        <span class="ds-anatomy__marker" style="top:50%;right:-28px;transform:translateY(-50%);">3</span>
+      </div>
+    </div>
+
+    <div class="ds-anatomy-legend">
+      <strong>1</strong> Wrapper (<code>.ds-input</code>) — container with border, radius, background.<br>
+      <strong>2</strong> Icon (optional, <code>.ds-input__icon</code>) — leading icon, 16px, decorative.<br>
+      <strong>3</strong> Field (<code>.ds-input__field</code>) — the native <code>&lt;input&gt;</code> element.<br>
+      <strong>4</strong> Label — external, via Form Field wrapper (<code>.ds-field__label</code>).<br>
+      <strong>5</strong> Helper text — external, via Form Field (<code>.ds-field__helper</code>).<br>
+      <strong>6</strong> Error message — external, via Form Field (<code>.ds-field__error</code>).
+    </div>
+  </div>
+
+  <!-- ============================================================
+       4. DEFAULT (live preview)
+       ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title">Default</h2>
     <div class="ds-preview">
@@ -123,7 +218,9 @@
     </div>
   </div>
 
-  <!-- Sizes -->
+  <!-- ============================================================
+       5. SIZES
+       ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title">Sizes</h2>
     <div class="ds-preview">
@@ -163,7 +260,9 @@
     </div>
   </div>
 
-  <!-- With Icon -->
+  <!-- ============================================================
+       6. WITH ICON
+       ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title">With Icon</h2>
     <div class="ds-preview">
@@ -200,7 +299,9 @@
     </div>
   </div>
 
-  <!-- States -->
+  <!-- ============================================================
+       7. STATES
+       ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title">States</h2>
 
@@ -274,7 +375,9 @@
     </div>
   </div>
 
-  <!-- With Form Field -->
+  <!-- ============================================================
+       8. WITH FORM FIELD
+       ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title">With Form Field</h2>
     <div class="ds-preview">
@@ -326,10 +429,154 @@
     </div>
   </div>
 
-  <!-- CSS Classes -->
+  <!-- ============================================================
+       9. BEST PRACTICES (Do / Don't)
+       ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">CSS Classes</h2>
-    <table class="ds-table ds-props-table">
+    <h2 class="ds-subsection__title">Best practices</h2>
+
+    <div class="ds-dodont">
+      <div class="ds-dodont__item">
+        <div class="ds-dodont__preview" style="flex-direction:column;align-items:stretch;">
+          <div class="ds-field">
+            <label class="ds-field__label" for="dodont-name-do">Full name</label>
+            <div class="ds-input">
+              <input type="text" class="ds-input__field" id="dodont-name-do" placeholder="John Doe">
+            </div>
+          </div>
+        </div>
+        <div class="ds-dodont__label ds-dodont__label--do">Do</div>
+        <div class="ds-dodont__desc">Always use inside a Form Field wrapper with a visible label.</div>
+      </div>
+      <div class="ds-dodont__item">
+        <div class="ds-dodont__preview" style="flex-direction:column;align-items:stretch;">
+          <div class="ds-input">
+            <input type="text" class="ds-input__field" placeholder="Enter your full name">
+          </div>
+        </div>
+        <div class="ds-dodont__label ds-dodont__label--dont">Don't</div>
+        <div class="ds-dodont__desc">Use a placeholder as the only label — it disappears when the user starts typing.</div>
+      </div>
+    </div>
+
+    <div class="ds-dodont">
+      <div class="ds-dodont__item">
+        <div class="ds-dodont__preview" style="flex-direction:column;align-items:stretch;gap:var(--ds-spacing-4);">
+          <div class="ds-field">
+            <label class="ds-field__label" for="dodont-email-do">Email address</label>
+            <div class="ds-input" style="width:100%;">
+              <input type="email" class="ds-input__field" id="dodont-email-do" placeholder="john@example.com">
+            </div>
+          </div>
+          <div class="ds-field">
+            <label class="ds-field__label" for="dodont-zip-do">Zip code</label>
+            <div class="ds-input" style="max-width:120px;">
+              <input type="text" class="ds-input__field" id="dodont-zip-do" placeholder="12345">
+            </div>
+          </div>
+        </div>
+        <div class="ds-dodont__label ds-dodont__label--do">Do</div>
+        <div class="ds-dodont__desc">Match the input size to the expected content length. Use full-width for emails, shorter widths for zip codes.</div>
+      </div>
+      <div class="ds-dodont__item">
+        <div class="ds-dodont__preview" style="flex-direction:column;align-items:stretch;gap:var(--ds-spacing-4);">
+          <div class="ds-field">
+            <label class="ds-field__label" for="dodont-email-dont">Email address</label>
+            <div class="ds-input">
+              <input type="email" class="ds-input__field" id="dodont-email-dont" placeholder="john@example.com">
+            </div>
+          </div>
+          <div class="ds-field">
+            <label class="ds-field__label" for="dodont-zip-dont">Zip code</label>
+            <div class="ds-input">
+              <input type="text" class="ds-input__field" id="dodont-zip-dont" placeholder="12345">
+            </div>
+          </div>
+        </div>
+        <div class="ds-dodont__label ds-dodont__label--dont">Don't</div>
+        <div class="ds-dodont__desc">Make all inputs the same width regardless of content.</div>
+      </div>
+    </div>
+
+    <div class="ds-dodont">
+      <div class="ds-dodont__item">
+        <div class="ds-dodont__preview" style="flex-direction:column;align-items:stretch;">
+          <div class="ds-field ds-field--error">
+            <label class="ds-field__label" for="dodont-err-do">Email<span class="ds-field__required">*</span></label>
+            <div class="ds-input ds-input--error">
+              <input type="email" class="ds-input__field" id="dodont-err-do" value="" aria-invalid="true" aria-describedby="dodont-err-do-msg">
+            </div>
+            <span class="ds-field__error" id="dodont-err-do-msg">Email is required. Enter a valid email address.</span>
+          </div>
+        </div>
+        <div class="ds-dodont__label ds-dodont__label--do">Do</div>
+        <div class="ds-dodont__desc">Show error state with <code>ds-input--error</code> AND <code>ds-field--error</code>, with <code>aria-invalid="true"</code> and a clear error message.</div>
+      </div>
+      <div class="ds-dodont__item">
+        <div class="ds-dodont__preview" style="flex-direction:column;align-items:stretch;">
+          <div class="ds-field">
+            <label class="ds-field__label" for="dodont-err-dont">Email<span class="ds-field__required">*</span></label>
+            <div class="ds-input ds-input--error">
+              <input type="email" class="ds-input__field" id="dodont-err-dont" value="">
+            </div>
+          </div>
+        </div>
+        <div class="ds-dodont__label ds-dodont__label--dont">Don't</div>
+        <div class="ds-dodont__desc">Show error styling without an error message — the user needs to know what went wrong.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       10. CONTENT GUIDELINES
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Content guidelines</h2>
+    <table class="ds-token-table">
+      <thead><tr><th>Rule</th><th>Example</th></tr></thead>
+      <tbody>
+        <tr><td>Placeholder text should be an example value, not an instruction</td><td>"john@example.com" — not "Enter your email"</td></tr>
+        <tr><td>Labels should be 1-3 words, noun or noun phrase</td><td>"Email address", "Phone number"</td></tr>
+        <tr><td>Helper text is optional, use for format hints</td><td>"Must be at least 8 characters"</td></tr>
+        <tr><td>Error messages should say what went wrong AND how to fix it</td><td>"Email is required. Enter a valid email address."</td></tr>
+        <tr><td>Required fields: add required indicator to the label</td><td><code>&lt;span class="ds-field__required"&gt;*&lt;/span&gt;</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============================================================
+       11. TOKEN MAPPING
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Token mapping</h2>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
+      Tokens consumed by the Input component across its states.
+    </p>
+    <table class="ds-token-table">
+      <thead><tr><th>Property</th><th>Token (semantic)</th><th>CSS variable</th></tr></thead>
+      <tbody>
+        <tr><td>background</td><td><code>semantic.surface.default</code></td><td><code>--ds-surface-default</code></td></tr>
+        <tr><td>border-color (default)</td><td><code>semantic.border.default</code></td><td><code>--ds-border-default</code></td></tr>
+        <tr><td>border-color (focus)</td><td><code>semantic.border.focus</code></td><td><code>--ds-border-focus</code></td></tr>
+        <tr><td>border-color (error)</td><td><code>semantic.feedback.error.border</code></td><td><code>--ds-feedback-error-border</code></td></tr>
+        <tr><td>text color</td><td><code>semantic.text.default</code></td><td><code>--ds-text-default</code></td></tr>
+        <tr><td>placeholder color</td><td><code>semantic.text.tertiary</code></td><td><code>--ds-text-tertiary</code></td></tr>
+        <tr><td>icon color</td><td><code>semantic.text.secondary</code></td><td><code>--ds-text-secondary</code></td></tr>
+        <tr><td>border-radius</td><td><code>semantic.radius.component</code></td><td><code>--ds-radius-component</code></td></tr>
+        <tr><td>focus ring</td><td><code>semantic.focus.ring.*</code></td><td><code>--ds-focus-ring-width</code>, <code>--ds-focus-ring-offset</code>, <code>--ds-focus-ring-color</code></td></tr>
+        <tr><td>padding (sm)</td><td><code>semantic.space.inset.sm</code></td><td><code>--ds-space-inset-sm</code></td></tr>
+        <tr><td>padding (md)</td><td><code>semantic.space.inset.md</code></td><td><code>--ds-space-inset-md</code></td></tr>
+        <tr><td>padding (lg)</td><td><code>semantic.space.inset.lg</code></td><td><code>--ds-space-inset-lg</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============================================================
+       12. CSS CLASSES
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">CSS classes</h2>
+    <table class="ds-token-table">
       <thead>
         <tr><th>Class</th><th>Description</th></tr>
       </thead>
@@ -352,16 +599,59 @@
     </table>
   </div>
 
-  <!-- Accessibility -->
+  <!-- ============================================================
+       13. KEYBOARD INTERACTION
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Keyboard interaction</h2>
+    <table class="ds-token-table">
+      <thead><tr><th>Key</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td><code>Tab</code></td><td>Moves focus into / out of the input</td></tr>
+        <tr><td>Any character</td><td>Types into the field</td></tr>
+        <tr><td><code>Escape</code></td><td>Clears focus (browser default)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============================================================
+       14. ACCESSIBILITY
+       ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title">Accessibility</h2>
-    <div class="ds-a11y-note">
-      <p class="ds-a11y-note__title">Accessibility Guidelines</p>
-      <p class="ds-a11y-note__text">
-        Always associate a <code>&lt;label&gt;</code> with each input using matching <code>for</code> and <code>id</code> attributes. When in an error state, add <code>aria-invalid="true"</code> to the input and use <code>aria-describedby</code> to link to the error message element so screen readers announce the error. The focus ring is visible on keyboard navigation.
-      </p>
+    <table class="ds-token-table">
+      <thead><tr><th>WCAG criterion</th><th>Requirement</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>1.3.1 Info and Relationships (A)</td><td>Label associated via <code>for</code>/<code>id</code></td><td>&#10003;</td></tr>
+        <tr><td>1.3.5 Identify Input Purpose (AA)</td><td>Use <code>autocomplete</code> attribute for personal data fields</td><td>&#10003; (when implemented)</td></tr>
+        <tr><td>2.4.11 Focus Appearance (AA)</td><td>Focus ring 2px + 2px offset</td><td>&#10003;</td></tr>
+        <tr><td>3.3.1 Error Identification (A)</td><td>Error state + message via <code>aria-invalid</code> + <code>aria-describedby</code></td><td>&#10003;</td></tr>
+        <tr><td>3.3.2 Labels or Instructions (A)</td><td>Visible label always present</td><td>&#10003;</td></tr>
+        <tr><td>4.1.2 Name, Role, Value (A)</td><td>Native <code>&lt;input&gt;</code> provides role</td><td>&#10003;</td></tr>
+      </tbody>
+    </table>
+
+    <div class="ds-callout ds-callout--info" style="margin-top:var(--ds-spacing-4)">
+      <div class="ds-callout__title">ARIA attributes summary</div>
+      <code>for</code> / <code>id</code> — always pair <code>&lt;label&gt;</code> with <code>&lt;input&gt;</code> using matching attributes.<br>
+      <code>aria-invalid="true"</code> — set on the native input when in error state.<br>
+      <code>aria-describedby</code> — link the input to the error message element ID so screen readers announce the error.<br>
+      <code>autocomplete</code> — use appropriate values (<code>name</code>, <code>email</code>, <code>tel</code>, etc.) for personal data fields.
     </div>
   </div>
+
+  <!-- ============================================================
+       15. RELATED COMPONENTS
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Related</h2>
+    <div class="ds-related">
+      <a href="textarea.html" class="ds-related__link">Textarea</a>
+      <a href="select.html" class="ds-related__link">Select</a>
+      <a href="form-field.html" class="ds-related__link">Form Field</a>
+    </div>
+  </div>
+
 </main>
 
 <script src="../js/main.js"></script>

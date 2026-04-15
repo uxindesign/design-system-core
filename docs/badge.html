@@ -6,6 +6,38 @@
   <title>Badge — Design System</title>
   <link rel="stylesheet" href="../css/design-system.css">
   <link rel="stylesheet" href="layout.css">
+  <style>
+    /* Tables */
+    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-sm); margin-bottom: var(--ds-spacing-8); }
+    .ds-token-table th { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-text-secondary); }
+    .ds-token-table td { padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
+    .ds-token-table code { font-size: var(--ds-font-size-xs); font-family: var(--ds-font-family-mono); }
+    /* Callouts */
+    .ds-callout { padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-6); font-size: var(--ds-font-size-sm); line-height: var(--ds-line-height-relaxed); color: var(--ds-text-default); }
+    .ds-callout--info { background-color: var(--ds-feedback-info-background); border: var(--ds-border-width-1) solid var(--ds-feedback-info-border); }
+    .ds-callout--success { background-color: var(--ds-feedback-success-background); border: var(--ds-border-width-1) solid var(--ds-feedback-success-border); }
+    .ds-callout--warning { background-color: var(--ds-feedback-warning-background); border: var(--ds-border-width-1) solid var(--ds-feedback-warning-border); }
+    .ds-callout__title { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-1); }
+    /* Do/Don't */
+    .ds-dodont { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ds-spacing-4); margin-bottom: var(--ds-spacing-8); }
+    .ds-dodont__item { border-radius: var(--ds-radius-lg); overflow: hidden; }
+    .ds-dodont__preview { padding: var(--ds-spacing-6); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg) var(--ds-radius-lg) 0 0; display: flex; flex-wrap: wrap; gap: var(--ds-spacing-3); align-items: center; justify-content: center; }
+    .ds-dodont__label { padding: var(--ds-spacing-2) var(--ds-spacing-4); font-size: var(--ds-font-size-sm); font-weight: var(--ds-font-weight-semibold); }
+    .ds-dodont__label--do { background-color: var(--ds-feedback-success-background); color: var(--ds-feedback-success-text); border-top: 3px solid var(--ds-feedback-success-default); }
+    .ds-dodont__label--dont { background-color: var(--ds-feedback-error-background); color: var(--ds-feedback-error-text); border-top: 3px solid var(--ds-feedback-error-default); }
+    .ds-dodont__desc { padding: 0 var(--ds-spacing-4) var(--ds-spacing-3); font-size: var(--ds-font-size-sm); color: var(--ds-text-secondary); background-color: var(--ds-background-subtle); }
+    /* Anatomy */
+    .ds-anatomy { padding: var(--ds-spacing-8); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-4); display: flex; align-items: center; justify-content: center; position: relative; }
+    .ds-anatomy__marker { position: absolute; width: 20px; height: 20px; border-radius: 50%; background-color: var(--ds-color-primary-default); color: var(--ds-text-on-brand); font-size: 11px; font-weight: var(--ds-font-weight-bold); display: flex; align-items: center; justify-content: center; }
+    .ds-anatomy-legend { font-size: var(--ds-font-size-sm); color: var(--ds-text-secondary); margin-bottom: var(--ds-spacing-8); line-height: var(--ds-line-height-relaxed); }
+    .ds-anatomy-legend strong { color: var(--ds-text-default); }
+    /* Related */
+    .ds-related { display: flex; gap: var(--ds-spacing-3); flex-wrap: wrap; margin-bottom: var(--ds-spacing-8); }
+    .ds-related__link { padding: var(--ds-spacing-2) var(--ds-spacing-4); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-md); font-size: var(--ds-font-size-sm); color: var(--ds-text-link-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
+    .ds-related__link:hover { border-color: var(--ds-color-primary-default); background-color: var(--ds-color-primary-muted); }
+    /* Responsive do/dont */
+    @media (max-width: 768px) { .ds-dodont { grid-template-columns: 1fr; } }
+  </style>
 </head>
 <body>
 
@@ -91,10 +123,54 @@
 </nav>
 
 <main class="ds-main">
+
+  <!-- ============================================================
+       1. HEADER
+       ============================================================ -->
   <div class="ds-section">
     <h1 class="ds-section__title">Badge</h1>
     <p class="ds-section__subtitle">Badges are small status indicators used to label, categorize, or highlight information. Available in solid and subtle styles across 7 color variants.</p>
   </div>
+
+  <!-- ============================================================
+       2. WHEN TO USE / WHEN NOT TO USE
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">When to use</h2>
+    <div class="ds-callout ds-callout--success">
+      <div class="ds-callout__title">Use badges when</div>
+      Labeling, categorizing, or showing status: counts, tags, active/inactive states, severity levels.
+    </div>
+    <div class="ds-callout ds-callout--warning">
+      <div class="ds-callout__title">Don't use badges when</div>
+      The content needs a description or action (use Alert), the element should be large and interactive (use Button), or you need a floating count indicator (notification dot — future).
+    </div>
+  </div>
+
+  <!-- ============================================================
+       3. ANATOMY
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Anatomy</h2>
+
+    <div class="ds-anatomy">
+      <div style="position:relative;display:inline-flex;align-items:center;">
+        <span class="ds-badge ds-badge--primary ds-badge--solid" style="font-size:var(--ds-font-size-sm);">Active</span>
+        <!-- Markers -->
+        <span class="ds-anatomy__marker" style="top:-24px;left:50%;transform:translateX(-50%);">1</span>
+        <span class="ds-anatomy__marker" style="bottom:-24px;left:50%;transform:translateX(-50%);">2</span>
+      </div>
+    </div>
+
+    <div class="ds-anatomy-legend">
+      <strong>1</strong> Container (<code>.ds-badge</code>) — pill-shaped span with background color and border-radius.<br>
+      <strong>2</strong> Text — label content, 1-2 words.
+    </div>
+  </div>
+
+  <!-- ============================================================
+       4. VARIANTS (live previews)
+       ============================================================ -->
 
   <!-- Solid Variants -->
   <div class="ds-subsection">
@@ -164,13 +240,92 @@
     </div>
   </div>
 
-  <!-- CSS Classes -->
+  <!-- ============================================================
+       5. BEST PRACTICES (Do / Don't)
+       ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">CSS Classes</h2>
-    <table class="ds-table ds-props-table">
-      <thead>
-        <tr><th>Class</th><th>Description</th></tr>
-      </thead>
+    <h2 class="ds-subsection__title">Best practices</h2>
+
+    <div class="ds-dodont">
+      <div class="ds-dodont__item">
+        <div class="ds-dodont__preview">
+          <span class="ds-badge ds-badge--success ds-badge--solid">Active</span>
+          <span class="ds-badge ds-badge--info ds-badge--subtle">Beta</span>
+        </div>
+        <div class="ds-dodont__label ds-dodont__label--do">Do</div>
+        <div class="ds-dodont__desc">Keep labels to 1-2 words. "New", "Beta", "Active".</div>
+      </div>
+      <div class="ds-dodont__item">
+        <div class="ds-dodont__preview">
+          <span class="ds-badge ds-badge--primary ds-badge--solid">This feature is currently in beta testing</span>
+        </div>
+        <div class="ds-dodont__label ds-dodont__label--dont">Don't</div>
+        <div class="ds-dodont__desc">Use sentences in badges. They should be short labels, not descriptions.</div>
+      </div>
+    </div>
+
+    <div class="ds-dodont">
+      <div class="ds-dodont__item">
+        <div class="ds-dodont__preview">
+          <span class="ds-badge ds-badge--success ds-badge--solid">Approved</span>
+          <span class="ds-badge ds-badge--error ds-badge--solid">Rejected</span>
+        </div>
+        <div class="ds-dodont__label ds-dodont__label--do">Do</div>
+        <div class="ds-dodont__desc">Use semantic color matching meaning: success for positive, error for negative.</div>
+      </div>
+      <div class="ds-dodont__item">
+        <div class="ds-dodont__preview">
+          <span class="ds-badge ds-badge--error ds-badge--solid">Approved</span>
+          <span class="ds-badge ds-badge--success ds-badge--solid">Rejected</span>
+        </div>
+        <div class="ds-dodont__label ds-dodont__label--dont">Don't</div>
+        <div class="ds-dodont__desc">Use color decoratively or in contradiction with the label meaning.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       6. CONTENT GUIDELINES
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Content guidelines</h2>
+    <table class="ds-token-table">
+      <thead><tr><th>Rule</th><th>Example</th></tr></thead>
+      <tbody>
+        <tr><td>1-2 words, sentence case</td><td>"New", "Beta", "Active"</td></tr>
+        <tr><td>Status: consistent vocabulary</td><td>"Active" / "Inactive" — not "On" / "Off"</td></tr>
+        <tr><td>Counts: use numbers, not words</td><td>"3" — not "Three"</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============================================================
+       7. TOKEN MAPPING
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Token mapping</h2>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
+      Tokens shown for the primary variant. Other color variants follow the same pattern with their respective color groups.
+    </p>
+    <table class="ds-token-table">
+      <thead><tr><th>Property</th><th>Token (semantic)</th><th>CSS variable</th></tr></thead>
+      <tbody>
+        <tr><td>bg (primary solid)</td><td><code>semantic.color.primary.default</code></td><td><code>--ds-color-primary-default</code></td></tr>
+        <tr><td>text (primary solid)</td><td><code>semantic.color.primary.foreground</code></td><td><code>--ds-color-primary-foreground</code></td></tr>
+        <tr><td>bg (primary subtle)</td><td><code>semantic.color.primary.subtle</code></td><td><code>--ds-color-primary-subtle</code></td></tr>
+        <tr><td>text (primary subtle)</td><td><code>semantic.color.primary.text</code></td><td><code>--ds-color-primary-text</code></td></tr>
+        <tr><td>border-radius</td><td><code>foundation.radius.full</code></td><td><code>--ds-radius-full</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============================================================
+       8. CSS CLASSES
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">CSS classes</h2>
+    <table class="ds-token-table">
+      <thead><tr><th>Class</th><th>Description</th></tr></thead>
       <tbody>
         <tr><td><code>ds-badge</code></td><td>Base badge class</td></tr>
         <tr><td><code>ds-badge--solid</code></td><td>Solid filled style</td></tr>
@@ -186,16 +341,47 @@
     </table>
   </div>
 
-  <!-- Accessibility -->
+  <!-- ============================================================
+       9. KEYBOARD INTERACTION
+       ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Accessibility</h2>
-    <div class="ds-a11y-note">
-      <p class="ds-a11y-note__title">Accessibility Guidelines</p>
-      <p class="ds-a11y-note__text">
-        Badges are primarily visual indicators. Do not rely on color alone to convey meaning -- always include descriptive text inside the badge. If a badge conveys status that is important for the user, ensure it is part of the accessible text content (not just an icon). All color combinations meet WCAG contrast requirements.
-      </p>
+    <h2 class="ds-subsection__title">Keyboard interaction</h2>
+    <div class="ds-callout ds-callout--info">
+      <div class="ds-callout__title">Not interactive</div>
+      Badges are static display elements and do not receive keyboard focus or interaction.
     </div>
   </div>
+
+  <!-- ============================================================
+       10. ACCESSIBILITY
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Accessibility</h2>
+    <table class="ds-token-table">
+      <thead><tr><th>WCAG criterion</th><th>Requirement</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>1.4.1 Use of Color (A)</td><td>Text conveys meaning, not color alone</td><td>&#10003;</td></tr>
+        <tr><td>1.4.3 Contrast (AA)</td><td>All color combinations meet 4.5:1 contrast ratio</td><td>&#10003;</td></tr>
+      </tbody>
+    </table>
+
+    <div class="ds-callout ds-callout--info" style="margin-top:var(--ds-spacing-4)">
+      <div class="ds-callout__title">Accessibility note</div>
+      Badges are visual indicators. Always ensure the badge text itself conveys the meaning — do not rely on color alone. If a badge communicates important status, make sure it is part of the accessible text content, not just an icon or color indicator.
+    </div>
+  </div>
+
+  <!-- ============================================================
+       11. RELATED COMPONENTS
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Related</h2>
+    <div class="ds-related">
+      <a href="alert.html" class="ds-related__link">Alert</a>
+      <a href="button.html" class="ds-related__link">Button</a>
+    </div>
+  </div>
+
 </main>
 
 <script src="../js/main.js"></script>

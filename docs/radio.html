@@ -6,6 +6,38 @@
   <title>Radio — Design System</title>
   <link rel="stylesheet" href="../css/design-system.css">
   <link rel="stylesheet" href="layout.css">
+  <style>
+    /* Tables */
+    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-sm); margin-bottom: var(--ds-spacing-8); }
+    .ds-token-table th { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-text-secondary); }
+    .ds-token-table td { padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
+    .ds-token-table code { font-size: var(--ds-font-size-xs); font-family: var(--ds-font-family-mono); }
+    /* Callouts */
+    .ds-callout { padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-6); font-size: var(--ds-font-size-sm); line-height: var(--ds-line-height-relaxed); color: var(--ds-text-default); }
+    .ds-callout--info { background-color: var(--ds-feedback-info-background); border: var(--ds-border-width-1) solid var(--ds-feedback-info-border); }
+    .ds-callout--success { background-color: var(--ds-feedback-success-background); border: var(--ds-border-width-1) solid var(--ds-feedback-success-border); }
+    .ds-callout--warning { background-color: var(--ds-feedback-warning-background); border: var(--ds-border-width-1) solid var(--ds-feedback-warning-border); }
+    .ds-callout__title { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-1); }
+    /* Do/Don't */
+    .ds-dodont { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ds-spacing-4); margin-bottom: var(--ds-spacing-8); }
+    .ds-dodont__item { border-radius: var(--ds-radius-lg); overflow: hidden; }
+    .ds-dodont__preview { padding: var(--ds-spacing-6); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg) var(--ds-radius-lg) 0 0; display: flex; flex-wrap: wrap; gap: var(--ds-spacing-3); align-items: center; justify-content: center; }
+    .ds-dodont__label { padding: var(--ds-spacing-2) var(--ds-spacing-4); font-size: var(--ds-font-size-sm); font-weight: var(--ds-font-weight-semibold); }
+    .ds-dodont__label--do { background-color: var(--ds-feedback-success-background); color: var(--ds-feedback-success-text); border-top: 3px solid var(--ds-feedback-success-default); }
+    .ds-dodont__label--dont { background-color: var(--ds-feedback-error-background); color: var(--ds-feedback-error-text); border-top: 3px solid var(--ds-feedback-error-default); }
+    .ds-dodont__desc { padding: 0 var(--ds-spacing-4) var(--ds-spacing-3); font-size: var(--ds-font-size-sm); color: var(--ds-text-secondary); background-color: var(--ds-background-subtle); }
+    /* Anatomy */
+    .ds-anatomy { padding: var(--ds-spacing-8); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-4); display: flex; align-items: center; justify-content: center; position: relative; }
+    .ds-anatomy__marker { position: absolute; width: 20px; height: 20px; border-radius: 50%; background-color: var(--ds-color-primary-default); color: var(--ds-text-on-brand); font-size: 11px; font-weight: var(--ds-font-weight-bold); display: flex; align-items: center; justify-content: center; }
+    .ds-anatomy-legend { font-size: var(--ds-font-size-sm); color: var(--ds-text-secondary); margin-bottom: var(--ds-spacing-8); line-height: var(--ds-line-height-relaxed); }
+    .ds-anatomy-legend strong { color: var(--ds-text-default); }
+    /* Related */
+    .ds-related { display: flex; gap: var(--ds-spacing-3); flex-wrap: wrap; margin-bottom: var(--ds-spacing-8); }
+    .ds-related__link { padding: var(--ds-spacing-2) var(--ds-spacing-4); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-md); font-size: var(--ds-font-size-sm); color: var(--ds-text-link-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
+    .ds-related__link:hover { border-color: var(--ds-color-primary-default); background-color: var(--ds-color-primary-muted); }
+    /* Responsive do/dont */
+    @media (max-width: 768px) { .ds-dodont { grid-template-columns: 1fr; } }
+  </style>
 </head>
 <body>
 
@@ -91,12 +123,70 @@
 </nav>
 
 <main class="ds-main">
+
+  <!-- ============================================================
+       1. HEADER
+       ============================================================ -->
   <div class="ds-section">
     <h1 class="ds-section__title">Radio</h1>
     <p class="ds-section__subtitle">Radio buttons let users select exactly one option from a group. Built with native <code>&lt;input type="radio"&gt;</code> inside a <code>&lt;fieldset&gt;</code>.</p>
   </div>
 
-  <!-- Default Radio Group -->
+  <!-- ============================================================
+       2. WHEN TO USE / WHEN NOT TO USE
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">When to use</h2>
+    <div class="ds-callout ds-callout--success">
+      <div class="ds-callout__title">Use radio buttons when</div>
+      Exactly one option must be selected from 2-7 visible options. Radio buttons make all options visible at once, helping users compare choices.
+    </div>
+    <div class="ds-callout ds-callout--warning">
+      <div class="ds-callout__title">Don't use radio buttons when</div>
+      Multiple selections are needed (use <a href="checkbox.html" style="color:inherit;text-decoration:underline">Checkbox</a>), there are more than 7 options (use <a href="select.html" style="color:inherit;text-decoration:underline">Select</a>), or for a binary on/off with immediate effect (use <a href="toggle.html" style="color:inherit;text-decoration:underline">Toggle</a>).
+    </div>
+  </div>
+
+  <!-- ============================================================
+       3. ANATOMY
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Anatomy</h2>
+
+    <div class="ds-anatomy">
+      <div style="position:relative;display:flex;flex-direction:column;gap:var(--ds-spacing-3);">
+        <!-- Visual legend -->
+        <span style="font-size:var(--ds-font-size-sm);font-weight:var(--ds-font-weight-medium);color:var(--ds-text-default);position:relative;">
+          Select a plan
+          <span class="ds-anatomy__marker" style="top:50%;right:-28px;transform:translateY(-50%);">5</span>
+        </span>
+        <!-- Visual radio row -->
+        <div style="display:flex;align-items:center;gap:var(--ds-spacing-3);position:relative;">
+          <div style="width:20px;height:20px;border-radius:50%;border:2px solid var(--ds-color-primary-default);display:flex;align-items:center;justify-content:center;position:relative;">
+            <div style="width:10px;height:10px;border-radius:50%;background-color:var(--ds-color-primary-default);"></div>
+          </div>
+          <span style="font-size:var(--ds-font-size-sm);color:var(--ds-text-default);">Free plan</span>
+          <!-- Markers -->
+          <span class="ds-anatomy__marker" style="top:-24px;left:10px;transform:translateX(-50%);">1</span>
+          <span class="ds-anatomy__marker" style="top:50%;left:-28px;transform:translateY(-50%);">2</span>
+          <span class="ds-anatomy__marker" style="top:50%;right:-28px;transform:translateY(-50%);">3</span>
+          <span class="ds-anatomy__marker" style="bottom:-24px;left:10px;transform:translateX(-50%);">4</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ds-anatomy-legend">
+      <strong>1</strong> Label (<code>.ds-radio-label</code>) — wraps radio + text, extends click target.<br>
+      <strong>2</strong> Input (<code>.ds-radio</code>) — styled native <code>&lt;input type="radio"&gt;</code>.<br>
+      <strong>3</strong> Dot — CSS pseudo-element, visible when selected.<br>
+      <strong>4</strong> Group (<code>.ds-radio-group</code>) — <code>&lt;fieldset&gt;</code> wrapping related radios.<br>
+      <strong>5</strong> Legend (<code>.ds-radio-group__legend</code>) — group heading, provides context to screen readers.
+    </div>
+  </div>
+
+  <!-- ============================================================
+       4. RADIO GROUP (live preview)
+       ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title">Radio Group</h2>
     <div class="ds-preview">
@@ -146,7 +236,9 @@
     </div>
   </div>
 
-  <!-- Sizes -->
+  <!-- ============================================================
+       5. SIZES
+       ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title">Sizes</h2>
     <div class="ds-preview">
@@ -192,7 +284,9 @@
     </div>
   </div>
 
-  <!-- Error Group -->
+  <!-- ============================================================
+       6. ERROR GROUP
+       ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title">Error Group</h2>
     <div class="ds-preview">
@@ -236,7 +330,9 @@
     </div>
   </div>
 
-  <!-- Disabled -->
+  <!-- ============================================================
+       7. DISABLED
+       ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title">Disabled</h2>
     <div class="ds-preview">
@@ -273,13 +369,106 @@
     </div>
   </div>
 
-  <!-- CSS Classes -->
+  <!-- ============================================================
+       8. BEST PRACTICES (Do / Don't)
+       ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">CSS Classes</h2>
-    <table class="ds-table ds-props-table">
-      <thead>
-        <tr><th>Class</th><th>Description</th></tr>
-      </thead>
+    <h2 class="ds-subsection__title">Best practices</h2>
+
+    <div class="ds-dodont">
+      <div class="ds-dodont__item">
+        <div class="ds-dodont__preview" style="flex-direction:column;align-items:flex-start;">
+          <fieldset class="ds-radio-group" style="border:none;padding:0;margin:0;">
+            <legend class="ds-radio-group__legend">Select a plan</legend>
+            <label class="ds-radio-label"><input type="radio" class="ds-radio" name="dodont-plan1" value="free" checked> Free plan</label>
+            <label class="ds-radio-label"><input type="radio" class="ds-radio" name="dodont-plan1" value="pro"> Pro plan</label>
+            <label class="ds-radio-label"><input type="radio" class="ds-radio" name="dodont-plan1" value="enterprise"> Enterprise plan</label>
+          </fieldset>
+        </div>
+        <div class="ds-dodont__label ds-dodont__label--do">Do</div>
+        <div class="ds-dodont__desc">Always wrap in <code>&lt;fieldset&gt;</code> with <code>&lt;legend&gt;</code>. Use 2-7 visible options.</div>
+      </div>
+      <div class="ds-dodont__item">
+        <div class="ds-dodont__preview" style="flex-direction:column;align-items:flex-start;">
+          <label class="ds-radio-label"><input type="radio" class="ds-radio" name="dodont-single" checked> Accept terms</label>
+        </div>
+        <div class="ds-dodont__label ds-dodont__label--dont">Don't</div>
+        <div class="ds-dodont__desc">Use a single radio button alone. For a single binary choice, use a Checkbox instead.</div>
+      </div>
+    </div>
+
+    <div class="ds-dodont">
+      <div class="ds-dodont__item">
+        <div class="ds-dodont__preview" style="flex-direction:column;align-items:flex-start;">
+          <fieldset class="ds-radio-group" style="border:none;padding:0;margin:0;">
+            <legend class="ds-radio-group__legend">Frequency</legend>
+            <label class="ds-radio-label"><input type="radio" class="ds-radio" name="dodont-freq1" value="daily"> Daily</label>
+            <label class="ds-radio-label"><input type="radio" class="ds-radio" name="dodont-freq1" value="weekly"> Weekly</label>
+            <label class="ds-radio-label"><input type="radio" class="ds-radio" name="dodont-freq1" value="monthly"> Monthly</label>
+          </fieldset>
+        </div>
+        <div class="ds-dodont__label ds-dodont__label--do">Do</div>
+        <div class="ds-dodont__desc">No option pre-selected unless a genuinely sensible default exists.</div>
+      </div>
+      <div class="ds-dodont__item">
+        <div class="ds-dodont__preview" style="flex-direction:column;align-items:flex-start;">
+          <fieldset class="ds-radio-group" style="border:none;padding:0;margin:0;">
+            <legend class="ds-radio-group__legend">Frequency</legend>
+            <label class="ds-radio-label"><input type="radio" class="ds-radio" name="dodont-freq2" value="daily" checked> Daily</label>
+            <label class="ds-radio-label"><input type="radio" class="ds-radio" name="dodont-freq2" value="weekly"> Weekly</label>
+            <label class="ds-radio-label"><input type="radio" class="ds-radio" name="dodont-freq2" value="monthly"> Monthly</label>
+          </fieldset>
+        </div>
+        <div class="ds-dodont__label ds-dodont__label--dont">Don't</div>
+        <div class="ds-dodont__desc">Pre-select an option unless it is genuinely the most common or sensible default.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       9. CONTENT GUIDELINES
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Content guidelines</h2>
+    <table class="ds-token-table">
+      <thead><tr><th>Rule</th><th>Example</th></tr></thead>
+      <tbody>
+        <tr><td>Use parallel labels</td><td>"Free plan", "Pro plan", "Enterprise plan" — not "Free", "The pro one", "Enterprise tier"</td></tr>
+        <tr><td>Legend should be a clear question</td><td>"Select a plan" — not "Plans"</td></tr>
+        <tr><td>Keep options short (1-4 words)</td><td>"Monthly" — not "Bill me on a monthly basis"</td></tr>
+        <tr><td>Use sentence case</td><td>"Push notification" — not "Push Notification"</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============================================================
+       10. TOKEN MAPPING
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Token mapping</h2>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
+      Same tokens as Checkbox except <code>border-radius: 50%</code> (circle) instead of <code>semantic.radius.sm</code>.
+    </p>
+    <table class="ds-token-table">
+      <thead><tr><th>Property</th><th>Token (semantic)</th><th>CSS variable</th></tr></thead>
+      <tbody>
+        <tr><td>border (unselected)</td><td><code>semantic.border.default</code></td><td><code>--ds-border-default</code></td></tr>
+        <tr><td>background (selected)</td><td><code>semantic.color.primary.default</code></td><td><code>--ds-color-primary-default</code></td></tr>
+        <tr><td>dot color</td><td><code>semantic.color.primary.foreground</code></td><td><code>--ds-color-primary-foreground</code></td></tr>
+        <tr><td>border (error)</td><td><code>semantic.feedback.error.border</code></td><td><code>--ds-feedback-error-border</code></td></tr>
+        <tr><td>focus ring</td><td><code>semantic.focus.ring.*</code></td><td><code>--ds-focus-ring-width</code>, <code>--ds-focus-ring-offset</code>, <code>--ds-focus-ring-color</code></td></tr>
+        <tr><td>border-radius</td><td>50% (circle)</td><td><code>border-radius: 50%</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============================================================
+       11. CSS CLASSES
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">CSS classes</h2>
+    <table class="ds-token-table">
+      <thead><tr><th>Class</th><th>Description</th></tr></thead>
       <tbody>
         <tr><td><code>ds-radio</code></td><td>Custom styled native radio button</td></tr>
         <tr><td><code>ds-radio-label</code></td><td>Label wrapper (wraps radio + text)</td></tr>
@@ -293,16 +482,59 @@
     </table>
   </div>
 
-  <!-- Accessibility -->
+  <!-- ============================================================
+       12. KEYBOARD INTERACTION
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Keyboard interaction</h2>
+    <table class="ds-token-table">
+      <thead><tr><th>Key</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td><code>Tab</code></td><td>Moves focus into the radio group (single tab stop) or out of it</td></tr>
+        <tr><td><code>Arrow Up</code> / <code>Arrow Left</code></td><td>Selects the previous option in the group</td></tr>
+        <tr><td><code>Arrow Down</code> / <code>Arrow Right</code></td><td>Selects the next option in the group</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:var(--ds-spacing-2);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
+      A radio group behaves as a single tab stop. Arrow keys navigate between options within the group, and selection moves with focus.
+    </p>
+  </div>
+
+  <!-- ============================================================
+       13. ACCESSIBILITY
+       ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title">Accessibility</h2>
-    <div class="ds-a11y-note">
-      <p class="ds-a11y-note__title">Accessibility Guidelines</p>
-      <p class="ds-a11y-note__text">
-        Always wrap radio groups in a <code>&lt;fieldset&gt;</code> with a <code>&lt;legend&gt;</code> to provide group context to screen readers. Uses native <code>&lt;input type="radio"&gt;</code> for built-in keyboard navigation (arrow keys move between options within a group). The focus ring is visible on keyboard focus via <code>:focus-visible</code>.
-      </p>
+    <table class="ds-token-table">
+      <thead><tr><th>WCAG criterion</th><th>Requirement</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>1.3.1 Info and Relationships (A)</td><td>Group in <code>&lt;fieldset&gt;</code> + <code>&lt;legend&gt;</code></td><td>&#10003;</td></tr>
+        <tr><td>2.4.11 Focus Appearance (AA)</td><td>Focus ring visible via <code>:focus-visible</code></td><td>&#10003;</td></tr>
+        <tr><td>2.5.8 Target Size min (AA)</td><td>Label extends click target beyond the radio itself</td><td>&#10003;</td></tr>
+        <tr><td>4.1.2 Name, Role, Value (A)</td><td>Native <code>&lt;input type="radio"&gt;</code> provides role + state automatically</td><td>&#10003;</td></tr>
+        <tr><td>3.3.1 Error Identification (A)</td><td>Group error communicated via <code>ds-radio-group--error</code></td><td>&#10003;</td></tr>
+      </tbody>
+    </table>
+
+    <div class="ds-callout ds-callout--info" style="margin-top:var(--ds-spacing-4)">
+      <div class="ds-callout__title">Implementation notes</div>
+      Always wrap radio groups in a <code>&lt;fieldset&gt;</code> with a <code>&lt;legend&gt;</code> to provide group context to screen readers. Uses native <code>&lt;input type="radio"&gt;</code> for built-in keyboard navigation -- arrow keys move between options within a group, Tab enters and exits the group. Focus ring is visible on keyboard focus via <code>:focus-visible</code>.
     </div>
   </div>
+
+  <!-- ============================================================
+       14. RELATED COMPONENTS
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Related</h2>
+    <div class="ds-related">
+      <a href="checkbox.html" class="ds-related__link">Checkbox</a>
+      <a href="toggle.html" class="ds-related__link">Toggle</a>
+      <a href="select.html" class="ds-related__link">Select</a>
+      <a href="form-field.html" class="ds-related__link">Form Field</a>
+    </div>
+  </div>
+
 </main>
 
 <script src="../js/main.js"></script>

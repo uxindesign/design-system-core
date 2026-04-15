@@ -6,6 +6,33 @@
   <title>Spinner — Design System</title>
   <link rel="stylesheet" href="../css/design-system.css">
   <link rel="stylesheet" href="layout.css">
+  <style>
+    /* Tables */
+    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-sm); margin-bottom: var(--ds-spacing-8); }
+    .ds-token-table th { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-text-secondary); }
+    .ds-token-table td { padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
+    .ds-token-table code { font-size: var(--ds-font-size-xs); font-family: var(--ds-font-family-mono); }
+    /* Callouts */
+    .ds-callout { padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-6); font-size: var(--ds-font-size-sm); line-height: var(--ds-line-height-relaxed); color: var(--ds-text-default); }
+    .ds-callout--info { background-color: var(--ds-feedback-info-background); border: var(--ds-border-width-1) solid var(--ds-feedback-info-border); }
+    .ds-callout--success { background-color: var(--ds-feedback-success-background); border: var(--ds-border-width-1) solid var(--ds-feedback-success-border); }
+    .ds-callout--warning { background-color: var(--ds-feedback-warning-background); border: var(--ds-border-width-1) solid var(--ds-feedback-warning-border); }
+    .ds-callout__title { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-1); }
+    /* Do/Don't */
+    .ds-dodont { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ds-spacing-4); margin-bottom: var(--ds-spacing-8); }
+    .ds-dodont__item { border-radius: var(--ds-radius-lg); overflow: hidden; }
+    .ds-dodont__preview { padding: var(--ds-spacing-6); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg) var(--ds-radius-lg) 0 0; display: flex; flex-wrap: wrap; gap: var(--ds-spacing-3); align-items: center; justify-content: center; }
+    .ds-dodont__label { padding: var(--ds-spacing-2) var(--ds-spacing-4); font-size: var(--ds-font-size-sm); font-weight: var(--ds-font-weight-semibold); }
+    .ds-dodont__label--do { background-color: var(--ds-feedback-success-background); color: var(--ds-feedback-success-text); border-top: 3px solid var(--ds-feedback-success-default); }
+    .ds-dodont__label--dont { background-color: var(--ds-feedback-error-background); color: var(--ds-feedback-error-text); border-top: 3px solid var(--ds-feedback-error-default); }
+    .ds-dodont__desc { padding: 0 var(--ds-spacing-4) var(--ds-spacing-3); font-size: var(--ds-font-size-sm); color: var(--ds-text-secondary); background-color: var(--ds-background-subtle); }
+    /* Related */
+    .ds-related { display: flex; gap: var(--ds-spacing-3); flex-wrap: wrap; margin-bottom: var(--ds-spacing-8); }
+    .ds-related__link { padding: var(--ds-spacing-2) var(--ds-spacing-4); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-md); font-size: var(--ds-font-size-sm); color: var(--ds-text-link-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
+    .ds-related__link:hover { border-color: var(--ds-color-primary-default); background-color: var(--ds-color-primary-muted); }
+    /* Responsive do/dont */
+    @media (max-width: 768px) { .ds-dodont { grid-template-columns: 1fr; } }
+  </style>
 </head>
 <body>
 
@@ -91,114 +118,248 @@
 </nav>
 
 <main class="ds-main">
-  <section class="ds-section">
+
+  <!-- ============================================================
+       1. HEADER
+       ============================================================ -->
+  <div class="ds-section">
     <h1 class="ds-section__title">Spinner</h1>
     <p class="ds-section__subtitle">Animated loading indicators available in three sizes. The spinner inherits its color from <code>currentColor</code>, so you can tint it by setting <code>color</code> on the element or a parent.</p>
+  </div>
 
-    <!-- Accessibility note -->
-    <div class="ds-a11y-note">
-      <p class="ds-a11y-note__title">Accessibility</p>
-      <p class="ds-a11y-note__text">Add <code>role="status"</code> and <code>aria-label="Loading"</code> to every spinner so screen readers announce the loading state. When the spinner replaces content, set <code>aria-busy="true"</code> on the container.</p>
+  <!-- ============================================================
+       2. WHEN TO USE / WHEN NOT TO USE
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">When to use</h2>
+    <div class="ds-callout ds-callout--success">
+      <div class="ds-callout__title">Use spinners when</div>
+      Indicating indeterminate loading: inside buttons during async actions, inline in content areas, or centered for full-page loading states.
     </div>
+    <div class="ds-callout ds-callout--warning">
+      <div class="ds-callout__title">Don't use spinners when</div>
+      The content structure is known ahead of time (use <a href="skeleton.html" style="color:var(--ds-text-link-default)">Skeleton</a> instead) or the wait is very short (&lt;300ms) -- showing a spinner for brief operations feels jarring.
+    </div>
+  </div>
 
-    <!-- Sizes -->
-    <div class="ds-subsection">
-      <h2 class="ds-subsection__title">Sizes</h2>
-      <p>Three sizes to suit different contexts: sm (16px), md (24px), lg (32px).</p>
-      <div class="ds-preview">
-        <div class="ds-preview__canvas ds-preview__canvas--centered">
-          <div style="display:flex;align-items:center;gap:var(--ds-spacing-8);">
-            <div style="text-align:center;">
-              <span class="ds-spinner ds-spinner--sm" role="status" aria-label="Loading"></span>
-              <p style="margin:var(--ds-spacing-2) 0 0;font-size:var(--ds-font-size-xs);color:var(--ds-text-secondary);">sm (16px)</p>
-            </div>
-            <div style="text-align:center;">
-              <span class="ds-spinner ds-spinner--md" role="status" aria-label="Loading"></span>
-              <p style="margin:var(--ds-spacing-2) 0 0;font-size:var(--ds-font-size-xs);color:var(--ds-text-secondary);">md (24px)</p>
-            </div>
-            <div style="text-align:center;">
-              <span class="ds-spinner ds-spinner--lg" role="status" aria-label="Loading"></span>
-              <p style="margin:var(--ds-spacing-2) 0 0;font-size:var(--ds-font-size-xs);color:var(--ds-text-secondary);">lg (32px)</p>
-            </div>
-          </div>
-        </div>
+  <!-- ============================================================
+       3. VARIANTS (live previews)
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Sizes</h2>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">Three sizes to suit different contexts: sm (16px), md (24px), lg (32px).</p>
+    <div class="ds-preview">
+      <div class="ds-preview__tabs">
+        <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
+        <button class="ds-preview__tab" data-tab="code">Code</button>
       </div>
-    </div>
-
-    <!-- Colored variants -->
-    <div class="ds-subsection">
-      <h2 class="ds-subsection__title">Colored variants</h2>
-      <p>Set <code>color</code> on the spinner to change its appearance.</p>
-      <div class="ds-preview">
-        <div class="ds-preview__canvas ds-preview__canvas--centered">
-          <span class="ds-spinner ds-spinner--md" style="color:var(--ds-color-primary-default);" role="status" aria-label="Loading"></span>
-          <span class="ds-spinner ds-spinner--md" style="color:var(--ds-feedback-error-default);" role="status" aria-label="Loading"></span>
-          <span class="ds-spinner ds-spinner--md" style="color:var(--ds-feedback-success-default, green);" role="status" aria-label="Loading"></span>
-          <span class="ds-spinner ds-spinner--md" style="color:var(--ds-text-tertiary);" role="status" aria-label="Loading"></span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Button loading state -->
-    <div class="ds-subsection">
-      <h2 class="ds-subsection__title">Button loading state</h2>
-      <p>Spinners inside buttons indicate that an action is in progress. The button is non-interactive while loading.</p>
-      <div class="ds-preview">
-        <div class="ds-preview__canvas ds-preview__canvas--centered">
-          <button class="ds-btn ds-btn--brand ds-btn--loading ds-btn--sm">
-            <span class="ds-btn__label">Saving</span>
-            <span class="ds-btn__spinner"><span class="ds-spinner ds-spinner--sm" role="status" aria-label="Loading"></span></span>
-          </button>
-          <button class="ds-btn ds-btn--brand ds-btn--loading ds-btn--md">
-            <span class="ds-btn__label">Saving</span>
-            <span class="ds-btn__spinner"><span class="ds-spinner ds-spinner--sm" role="status" aria-label="Loading"></span></span>
-          </button>
-          <button class="ds-btn ds-btn--toned ds-btn--loading ds-btn--md">
-            <span class="ds-btn__label">Loading</span>
-            <span class="ds-btn__spinner"><span class="ds-spinner ds-spinner--sm" role="status" aria-label="Loading"></span></span>
-          </button>
-          <button class="ds-btn ds-btn--outline ds-btn--loading ds-btn--md">
-            <span class="ds-btn__label">Loading</span>
-            <span class="ds-btn__spinner"><span class="ds-spinner ds-spinner--sm" role="status" aria-label="Loading"></span></span>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Full page loading -->
-    <div class="ds-subsection">
-      <h2 class="ds-subsection__title">Centered loading</h2>
-      <p>Use a large spinner centered in a container for full-area loading states.</p>
-      <div class="ds-preview">
-        <div class="ds-preview__canvas ds-preview__canvas--centered" style="min-height:160px;" aria-busy="true">
+      <div class="ds-preview__canvas ds-preview__canvas--centered">
+        <div style="display:flex;align-items:center;gap:var(--ds-spacing-8);">
           <div style="text-align:center;">
-            <span class="ds-spinner ds-spinner--lg" role="status" aria-label="Loading content"></span>
-            <p style="margin:var(--ds-spacing-3) 0 0;font-size:var(--ds-font-size-sm);color:var(--ds-text-secondary);">Loading content...</p>
+            <span class="ds-spinner ds-spinner--sm" role="status" aria-label="Loading"></span>
+            <p style="margin:var(--ds-spacing-2) 0 0;font-size:var(--ds-font-size-xs);color:var(--ds-text-secondary);">sm (16px)</p>
+          </div>
+          <div style="text-align:center;">
+            <span class="ds-spinner ds-spinner--md" role="status" aria-label="Loading"></span>
+            <p style="margin:var(--ds-spacing-2) 0 0;font-size:var(--ds-font-size-xs);color:var(--ds-text-secondary);">md (24px)</p>
+          </div>
+          <div style="text-align:center;">
+            <span class="ds-spinner ds-spinner--lg" role="status" aria-label="Loading"></span>
+            <p style="margin:var(--ds-spacing-2) 0 0;font-size:var(--ds-font-size-xs);color:var(--ds-text-secondary);">lg (32px)</p>
           </div>
         </div>
       </div>
+      <div class="ds-preview__code" style="display:none">
+        <button class="ds-preview__copy">Copy</button>
+        <pre><code>&lt;span class="ds-spinner ds-spinner--sm" role="status" aria-label="Loading"&gt;&lt;/span&gt;
+&lt;span class="ds-spinner ds-spinner--md" role="status" aria-label="Loading"&gt;&lt;/span&gt;
+&lt;span class="ds-spinner ds-spinner--lg" role="status" aria-label="Loading"&gt;&lt;/span&gt;</code></pre>
+      </div>
     </div>
+  </div>
 
-    <!-- CSS Classes -->
-    <div class="ds-subsection">
-      <h2 class="ds-subsection__title">CSS Classes</h2>
-      <table class="ds-props-table" style="width:100%;border-collapse:collapse;">
-        <thead>
-          <tr style="border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">
-            <th style="text-align:left;padding:var(--ds-spacing-2) var(--ds-spacing-3);">Class</th>
-            <th style="text-align:left;padding:var(--ds-spacing-2) var(--ds-spacing-3);">Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr style="border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);"><code>ds-spinner</code></td><td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);">Base spinner class</td></tr>
-          <tr style="border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);"><code>ds-spinner--sm</code></td><td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);">Small size (16px)</td></tr>
-          <tr style="border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);"><code>ds-spinner--md</code></td><td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);">Medium size (24px)</td></tr>
-          <tr><td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);"><code>ds-spinner--lg</code></td><td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);">Large size (32px)</td></tr>
-        </tbody>
-      </table>
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Colored variants</h2>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">Set <code>color</code> on the spinner to change its appearance.</p>
+    <div class="ds-preview">
+      <div class="ds-preview__tabs">
+        <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
+        <button class="ds-preview__tab" data-tab="code">Code</button>
+      </div>
+      <div class="ds-preview__canvas ds-preview__canvas--centered">
+        <span class="ds-spinner ds-spinner--md" style="color:var(--ds-color-primary-default);" role="status" aria-label="Loading"></span>
+        <span class="ds-spinner ds-spinner--md" style="color:var(--ds-feedback-error-default);" role="status" aria-label="Loading"></span>
+        <span class="ds-spinner ds-spinner--md" style="color:var(--ds-feedback-success-default, green);" role="status" aria-label="Loading"></span>
+        <span class="ds-spinner ds-spinner--md" style="color:var(--ds-text-tertiary);" role="status" aria-label="Loading"></span>
+      </div>
+      <div class="ds-preview__code" style="display:none">
+        <button class="ds-preview__copy">Copy</button>
+        <pre><code>&lt;span class="ds-spinner ds-spinner--md"
+      style="color:var(--ds-color-primary-default);"
+      role="status" aria-label="Loading"&gt;&lt;/span&gt;
+
+&lt;span class="ds-spinner ds-spinner--md"
+      style="color:var(--ds-feedback-error-default);"
+      role="status" aria-label="Loading"&gt;&lt;/span&gt;</code></pre>
+      </div>
     </div>
+  </div>
 
-  </section>
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Button loading state</h2>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">Spinners inside buttons indicate that an action is in progress. The button is non-interactive while loading.</p>
+    <div class="ds-preview">
+      <div class="ds-preview__tabs">
+        <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
+        <button class="ds-preview__tab" data-tab="code">Code</button>
+      </div>
+      <div class="ds-preview__canvas ds-preview__canvas--centered">
+        <button class="ds-btn ds-btn--brand ds-btn--loading ds-btn--sm">
+          <span class="ds-btn__label">Saving</span>
+          <span class="ds-btn__spinner"><span class="ds-spinner ds-spinner--sm" role="status" aria-label="Loading"></span></span>
+        </button>
+        <button class="ds-btn ds-btn--brand ds-btn--loading ds-btn--md">
+          <span class="ds-btn__label">Saving</span>
+          <span class="ds-btn__spinner"><span class="ds-spinner ds-spinner--sm" role="status" aria-label="Loading"></span></span>
+        </button>
+        <button class="ds-btn ds-btn--toned ds-btn--loading ds-btn--md">
+          <span class="ds-btn__label">Loading</span>
+          <span class="ds-btn__spinner"><span class="ds-spinner ds-spinner--sm" role="status" aria-label="Loading"></span></span>
+        </button>
+        <button class="ds-btn ds-btn--outline ds-btn--loading ds-btn--md">
+          <span class="ds-btn__label">Loading</span>
+          <span class="ds-btn__spinner"><span class="ds-spinner ds-spinner--sm" role="status" aria-label="Loading"></span></span>
+        </button>
+      </div>
+      <div class="ds-preview__code" style="display:none">
+        <button class="ds-preview__copy">Copy</button>
+        <pre><code>&lt;button class="ds-btn ds-btn--brand ds-btn--loading"
+        aria-disabled="true" aria-busy="true"&gt;
+  &lt;span class="ds-btn__label"&gt;Saving&lt;/span&gt;
+  &lt;span class="ds-btn__spinner"&gt;
+    &lt;span class="ds-spinner ds-spinner--sm"
+          role="status" aria-label="Loading"&gt;&lt;/span&gt;
+  &lt;/span&gt;
+&lt;/button&gt;</code></pre>
+      </div>
+    </div>
+  </div>
+
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Centered loading</h2>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">Use a large spinner centered in a container for full-area loading states.</p>
+    <div class="ds-preview">
+      <div class="ds-preview__tabs">
+        <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
+        <button class="ds-preview__tab" data-tab="code">Code</button>
+      </div>
+      <div class="ds-preview__canvas ds-preview__canvas--centered" style="min-height:160px;" aria-busy="true">
+        <div style="text-align:center;">
+          <span class="ds-spinner ds-spinner--lg" role="status" aria-label="Loading content"></span>
+          <p style="margin:var(--ds-spacing-3) 0 0;font-size:var(--ds-font-size-sm);color:var(--ds-text-secondary);">Loading content...</p>
+        </div>
+      </div>
+      <div class="ds-preview__code" style="display:none">
+        <button class="ds-preview__copy">Copy</button>
+        <pre><code>&lt;div aria-busy="true" style="display:flex;align-items:center;justify-content:center;min-height:160px;"&gt;
+  &lt;div style="text-align:center;"&gt;
+    &lt;span class="ds-spinner ds-spinner--lg"
+          role="status" aria-label="Loading content"&gt;&lt;/span&gt;
+    &lt;p&gt;Loading content...&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       4. BEST PRACTICES (Do / Don't)
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Best practices</h2>
+
+    <div class="ds-dodont">
+      <div class="ds-dodont__item">
+        <div class="ds-dodont__preview" style="flex-direction:column;">
+          <span class="ds-spinner ds-spinner--md" role="status" aria-label="Loading" style="color:var(--ds-color-primary-default);"></span>
+          <span style="font-size:var(--ds-font-size-xs);color:var(--ds-text-secondary);margin-top:var(--ds-spacing-2);">Show after 300ms delay</span>
+        </div>
+        <div class="ds-dodont__label ds-dodont__label--do">Do</div>
+        <div class="ds-dodont__desc">Show the spinner after a 300ms delay to avoid a flash for fast operations.</div>
+      </div>
+      <div class="ds-dodont__item">
+        <div class="ds-dodont__preview" style="min-height:80px;">
+          <span class="ds-spinner ds-spinner--lg" role="status" aria-label="Loading" style="color:var(--ds-text-tertiary);"></span>
+        </div>
+        <div class="ds-dodont__label ds-dodont__label--dont">Don't</div>
+        <div class="ds-dodont__desc">Don't replace an entire page with just a spinner -- use Skeleton placeholders to preview the layout structure.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       5. TOKEN MAPPING
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Token mapping</h2>
+    <table class="ds-token-table">
+      <thead><tr><th>Property</th><th>Token (semantic)</th><th>CSS variable</th></tr></thead>
+      <tbody>
+        <tr><td>color</td><td><code>semantic.color.primary.default</code></td><td><code>--ds-color-primary-default</code></td></tr>
+        <tr><td>animation duration</td><td><code>foundation.motion.duration.slow</code></td><td><code>--ds-duration-slow</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============================================================
+       6. CSS CLASSES
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">CSS classes</h2>
+    <table class="ds-token-table">
+      <thead><tr><th>Class</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td><code>ds-spinner</code></td><td>Base spinner class</td></tr>
+        <tr><td><code>ds-spinner--sm</code></td><td>Small size (16px)</td></tr>
+        <tr><td><code>ds-spinner--md</code></td><td>Medium size (24px)</td></tr>
+        <tr><td><code>ds-spinner--lg</code></td><td>Large size (32px)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============================================================
+       7. ACCESSIBILITY
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Accessibility</h2>
+    <table class="ds-token-table">
+      <thead><tr><th>WCAG criterion</th><th>Requirement</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>4.1.2 Name, Role, Value (A)</td><td><code>role="status"</code> + <code>aria-label="Loading"</code> on every spinner</td><td>&#10003;</td></tr>
+        <tr><td>2.3.1 Three Flashes (A)</td><td>Animation is a continuous rotation, not flashing</td><td>&#10003;</td></tr>
+        <tr><td>2.3.3 Animation from Interactions (AAA)</td><td>Respects <code>prefers-reduced-motion</code> -- animation paused or slowed</td><td>&#10003;</td></tr>
+      </tbody>
+    </table>
+
+    <div class="ds-callout ds-callout--info" style="margin-top:var(--ds-spacing-4)">
+      <div class="ds-callout__title">ARIA attributes summary</div>
+      <code>role="status"</code> + <code>aria-label="Loading"</code> — required on every spinner so screen readers announce the loading state.<br>
+      <code>aria-busy="true"</code> — set on the container when the spinner replaces content.<br>
+      <code>prefers-reduced-motion</code> — the spinner CSS respects this media query by pausing or reducing animation.
+    </div>
+  </div>
+
+  <!-- ============================================================
+       8. RELATED COMPONENTS
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Related</h2>
+    <div class="ds-related">
+      <a href="skeleton.html" class="ds-related__link">Skeleton</a>
+      <a href="button.html" class="ds-related__link">Button (loading state)</a>
+    </div>
+  </div>
+
 </main>
 
 <script src="../js/main.js"></script>

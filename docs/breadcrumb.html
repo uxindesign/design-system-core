@@ -6,6 +6,38 @@
   <title>Breadcrumb — Design System</title>
   <link rel="stylesheet" href="../css/design-system.css">
   <link rel="stylesheet" href="layout.css">
+  <style>
+    /* Tables */
+    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-sm); margin-bottom: var(--ds-spacing-8); }
+    .ds-token-table th { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-text-secondary); }
+    .ds-token-table td { padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
+    .ds-token-table code { font-size: var(--ds-font-size-xs); font-family: var(--ds-font-family-mono); }
+    /* Callouts */
+    .ds-callout { padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-6); font-size: var(--ds-font-size-sm); line-height: var(--ds-line-height-relaxed); color: var(--ds-text-default); }
+    .ds-callout--info { background-color: var(--ds-feedback-info-background); border: var(--ds-border-width-1) solid var(--ds-feedback-info-border); }
+    .ds-callout--success { background-color: var(--ds-feedback-success-background); border: var(--ds-border-width-1) solid var(--ds-feedback-success-border); }
+    .ds-callout--warning { background-color: var(--ds-feedback-warning-background); border: var(--ds-border-width-1) solid var(--ds-feedback-warning-border); }
+    .ds-callout__title { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-1); }
+    /* Do/Don't */
+    .ds-dodont { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ds-spacing-4); margin-bottom: var(--ds-spacing-8); }
+    .ds-dodont__item { border-radius: var(--ds-radius-lg); overflow: hidden; }
+    .ds-dodont__preview { padding: var(--ds-spacing-6); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg) var(--ds-radius-lg) 0 0; display: flex; flex-wrap: wrap; gap: var(--ds-spacing-3); align-items: center; justify-content: center; }
+    .ds-dodont__label { padding: var(--ds-spacing-2) var(--ds-spacing-4); font-size: var(--ds-font-size-sm); font-weight: var(--ds-font-weight-semibold); }
+    .ds-dodont__label--do { background-color: var(--ds-feedback-success-background); color: var(--ds-feedback-success-text); border-top: 3px solid var(--ds-feedback-success-default); }
+    .ds-dodont__label--dont { background-color: var(--ds-feedback-error-background); color: var(--ds-feedback-error-text); border-top: 3px solid var(--ds-feedback-error-default); }
+    .ds-dodont__desc { padding: 0 var(--ds-spacing-4) var(--ds-spacing-3); font-size: var(--ds-font-size-sm); color: var(--ds-text-secondary); background-color: var(--ds-background-subtle); }
+    /* Anatomy */
+    .ds-anatomy { padding: var(--ds-spacing-8); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-4); display: flex; align-items: center; justify-content: center; position: relative; }
+    .ds-anatomy__marker { position: absolute; width: 20px; height: 20px; border-radius: 50%; background-color: var(--ds-color-primary-default); color: var(--ds-text-on-brand); font-size: 11px; font-weight: var(--ds-font-weight-bold); display: flex; align-items: center; justify-content: center; }
+    .ds-anatomy-legend { font-size: var(--ds-font-size-sm); color: var(--ds-text-secondary); margin-bottom: var(--ds-spacing-8); line-height: var(--ds-line-height-relaxed); }
+    .ds-anatomy-legend strong { color: var(--ds-text-default); }
+    /* Related */
+    .ds-related { display: flex; gap: var(--ds-spacing-3); flex-wrap: wrap; margin-bottom: var(--ds-spacing-8); }
+    .ds-related__link { padding: var(--ds-spacing-2) var(--ds-spacing-4); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-md); font-size: var(--ds-font-size-sm); color: var(--ds-text-link-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
+    .ds-related__link:hover { border-color: var(--ds-color-primary-default); background-color: var(--ds-color-primary-muted); }
+    /* Responsive do/dont */
+    @media (max-width: 768px) { .ds-dodont { grid-template-columns: 1fr; } }
+  </style>
 </head>
 <body>
 
@@ -91,22 +123,187 @@
 </nav>
 
 <main class="ds-main">
-  <section class="ds-section">
+
+  <!-- ============================================================
+       1. HEADER
+       ============================================================ -->
+  <div class="ds-section">
     <h1 class="ds-section__title">Breadcrumb</h1>
     <p class="ds-section__subtitle">Navigation aid showing the user's current location within a page hierarchy. Breadcrumbs help users understand where they are and navigate back to parent pages.</p>
+  </div>
 
-    <!-- Accessibility note -->
-    <div class="ds-a11y-note">
-      <p class="ds-a11y-note__title">Accessibility</p>
-      <p class="ds-a11y-note__text">Wrap the breadcrumb in a <code>&lt;nav&gt;</code> element with <code>aria-label="Breadcrumb"</code>. Mark the current page with <code>aria-current="page"</code> on the last item. Separators are decorative and should be hidden from screen readers or included as non-linked text.</p>
+  <!-- ============================================================
+       2. WHEN TO USE / WHEN NOT TO USE
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">When to use</h2>
+    <div class="ds-callout ds-callout--success">
+      <div class="ds-callout__title">Use breadcrumbs when</div>
+      The site has hierarchical navigation and the user needs to see their current location and navigate back to parent pages. Ideal for content-heavy sites with 3+ levels of depth.
+    </div>
+    <div class="ds-callout ds-callout--warning">
+      <div class="ds-callout__title">Don't use breadcrumbs when</div>
+      The site is flat (1-2 levels only), the flow is linear (use a back button instead), or there is only a single level above the current page.
+    </div>
+  </div>
+
+  <!-- ============================================================
+       3. ANATOMY
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Anatomy</h2>
+
+    <div class="ds-anatomy">
+      <div style="position:relative;display:inline-flex;align-items:center;gap:var(--ds-spacing-2);font-size:var(--ds-font-size-sm);">
+        <!-- Nav wrapper marker -->
+        <span class="ds-anatomy__marker" style="top:-28px;left:50%;transform:translateX(-50%);">1</span>
+        <!-- Link -->
+        <a href="#" style="color:var(--ds-text-link-default);text-decoration:none;position:relative;">
+          Home
+          <span class="ds-anatomy__marker" style="bottom:-24px;left:50%;transform:translateX(-50%);">4</span>
+        </a>
+        <!-- Separator -->
+        <span style="color:var(--ds-text-tertiary);position:relative;">
+          /
+          <span class="ds-anatomy__marker" style="top:-28px;left:50%;transform:translateX(-50%);">6</span>
+        </span>
+        <!-- Link -->
+        <a href="#" style="color:var(--ds-text-link-default);text-decoration:none;">Products</a>
+        <!-- Separator -->
+        <span style="color:var(--ds-text-tertiary);">/</span>
+        <!-- Current -->
+        <span style="color:var(--ds-text-secondary);position:relative;">
+          Sneakers
+          <span class="ds-anatomy__marker" style="bottom:-24px;left:50%;transform:translateX(-50%);">5</span>
+        </span>
+        <!-- List marker -->
+        <span class="ds-anatomy__marker" style="top:50%;right:-32px;transform:translateY(-50%);">2</span>
+        <!-- Item marker -->
+        <span class="ds-anatomy__marker" style="top:50%;left:-32px;transform:translateY(-50%);">3</span>
+      </div>
     </div>
 
-    <!-- Basic breadcrumb -->
-    <div class="ds-subsection">
-      <h2 class="ds-subsection__title">Basic breadcrumb</h2>
-      <p>A simple 3-level hierarchy. The last item is the current page and is not a link.</p>
-      <div class="ds-preview">
-        <div class="ds-preview__canvas">
+    <div class="ds-anatomy-legend">
+      <strong>1</strong> Nav — <code>&lt;nav&gt;</code> element with <code>aria-label="Breadcrumb"</code>.<br>
+      <strong>2</strong> List (<code>.ds-breadcrumb</code>) — <code>&lt;ol&gt;</code> containing breadcrumb items.<br>
+      <strong>3</strong> Item (<code>.ds-breadcrumb__item</code>) — individual breadcrumb entry.<br>
+      <strong>4</strong> Link — navigable parent pages.<br>
+      <strong>5</strong> Current (<code>.ds-breadcrumb__current</code>) — text (not a link), with <code>aria-current="page"</code>.<br>
+      <strong>6</strong> Separator — CSS-generated or decorative text between items.
+    </div>
+  </div>
+
+  <!-- ============================================================
+       4. VARIANTS (live previews)
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Basic breadcrumb</h2>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">A simple 3-level hierarchy. The last item is the current page and is not a link.</p>
+    <div class="ds-preview">
+      <div class="ds-preview__tabs">
+        <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
+        <button class="ds-preview__tab" data-tab="code">Code</button>
+      </div>
+      <div class="ds-preview__canvas">
+        <nav class="ds-breadcrumb" aria-label="Breadcrumb">
+          <a href="#" class="ds-breadcrumb__item">Home</a>
+          <span class="ds-breadcrumb__separator">/</span>
+          <a href="#" class="ds-breadcrumb__item">Products</a>
+          <span class="ds-breadcrumb__separator">/</span>
+          <span class="ds-breadcrumb__item ds-breadcrumb__item--current" aria-current="page">Sneakers</span>
+        </nav>
+      </div>
+      <div class="ds-preview__code" style="display:none">
+        <button class="ds-preview__copy">Copy</button>
+        <pre><code>&lt;nav class="ds-breadcrumb" aria-label="Breadcrumb"&gt;
+  &lt;a href="/home" class="ds-breadcrumb__item"&gt;Home&lt;/a&gt;
+  &lt;span class="ds-breadcrumb__separator"&gt;/&lt;/span&gt;
+  &lt;a href="/products" class="ds-breadcrumb__item"&gt;Products&lt;/a&gt;
+  &lt;span class="ds-breadcrumb__separator"&gt;/&lt;/span&gt;
+  &lt;span class="ds-breadcrumb__item ds-breadcrumb__item--current"
+        aria-current="page"&gt;Sneakers&lt;/span&gt;
+&lt;/nav&gt;</code></pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- Deep hierarchy -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Deep hierarchy</h2>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">A 5-level breadcrumb trail for deeply nested pages.</p>
+    <div class="ds-preview">
+      <div class="ds-preview__tabs">
+        <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
+        <button class="ds-preview__tab" data-tab="code">Code</button>
+      </div>
+      <div class="ds-preview__canvas">
+        <nav class="ds-breadcrumb" aria-label="Breadcrumb">
+          <a href="#" class="ds-breadcrumb__item">Home</a>
+          <span class="ds-breadcrumb__separator">/</span>
+          <a href="#" class="ds-breadcrumb__item">Dashboard</a>
+          <span class="ds-breadcrumb__separator">/</span>
+          <a href="#" class="ds-breadcrumb__item">Settings</a>
+          <span class="ds-breadcrumb__separator">/</span>
+          <a href="#" class="ds-breadcrumb__item">Account</a>
+          <span class="ds-breadcrumb__separator">/</span>
+          <span class="ds-breadcrumb__item ds-breadcrumb__item--current" aria-current="page">Security</span>
+        </nav>
+      </div>
+      <div class="ds-preview__code" style="display:none">
+        <button class="ds-preview__copy">Copy</button>
+        <pre><code>&lt;nav class="ds-breadcrumb" aria-label="Breadcrumb"&gt;
+  &lt;a href="#" class="ds-breadcrumb__item"&gt;Home&lt;/a&gt;
+  &lt;span class="ds-breadcrumb__separator"&gt;/&lt;/span&gt;
+  &lt;a href="#" class="ds-breadcrumb__item"&gt;Dashboard&lt;/a&gt;
+  &lt;span class="ds-breadcrumb__separator"&gt;/&lt;/span&gt;
+  &lt;a href="#" class="ds-breadcrumb__item"&gt;Settings&lt;/a&gt;
+  &lt;span class="ds-breadcrumb__separator"&gt;/&lt;/span&gt;
+  &lt;a href="#" class="ds-breadcrumb__item"&gt;Account&lt;/a&gt;
+  &lt;span class="ds-breadcrumb__separator"&gt;/&lt;/span&gt;
+  &lt;span class="ds-breadcrumb__item ds-breadcrumb__item--current"
+        aria-current="page"&gt;Security&lt;/span&gt;
+&lt;/nav&gt;</code></pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- Two levels -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Two levels</h2>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">The minimum useful breadcrumb with just a parent and the current page.</p>
+    <div class="ds-preview">
+      <div class="ds-preview__tabs">
+        <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
+        <button class="ds-preview__tab" data-tab="code">Code</button>
+      </div>
+      <div class="ds-preview__canvas">
+        <nav class="ds-breadcrumb" aria-label="Breadcrumb">
+          <a href="#" class="ds-breadcrumb__item">Blog</a>
+          <span class="ds-breadcrumb__separator">/</span>
+          <span class="ds-breadcrumb__item ds-breadcrumb__item--current" aria-current="page">How to get started</span>
+        </nav>
+      </div>
+      <div class="ds-preview__code" style="display:none">
+        <button class="ds-preview__copy">Copy</button>
+        <pre><code>&lt;nav class="ds-breadcrumb" aria-label="Breadcrumb"&gt;
+  &lt;a href="/blog" class="ds-breadcrumb__item"&gt;Blog&lt;/a&gt;
+  &lt;span class="ds-breadcrumb__separator"&gt;/&lt;/span&gt;
+  &lt;span class="ds-breadcrumb__item ds-breadcrumb__item--current"
+        aria-current="page"&gt;How to get started&lt;/span&gt;
+&lt;/nav&gt;</code></pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       5. BEST PRACTICES (Do / Don't)
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Best practices</h2>
+
+    <div class="ds-dodont">
+      <div class="ds-dodont__item">
+        <div class="ds-dodont__preview">
           <nav class="ds-breadcrumb" aria-label="Breadcrumb">
             <a href="#" class="ds-breadcrumb__item">Home</a>
             <span class="ds-breadcrumb__separator">/</span>
@@ -115,65 +312,121 @@
             <span class="ds-breadcrumb__item ds-breadcrumb__item--current" aria-current="page">Sneakers</span>
           </nav>
         </div>
+        <div class="ds-dodont__label ds-dodont__label--do">Do</div>
+        <div class="ds-dodont__desc">Show the full hierarchy path from root. Current page as text (not a link).</div>
       </div>
-    </div>
-
-    <!-- Deep hierarchy -->
-    <div class="ds-subsection">
-      <h2 class="ds-subsection__title">Deep hierarchy</h2>
-      <p>A 5-level breadcrumb trail for deeply nested pages.</p>
-      <div class="ds-preview">
-        <div class="ds-preview__canvas">
+      <div class="ds-dodont__item">
+        <div class="ds-dodont__preview">
           <nav class="ds-breadcrumb" aria-label="Breadcrumb">
             <a href="#" class="ds-breadcrumb__item">Home</a>
             <span class="ds-breadcrumb__separator">/</span>
-            <a href="#" class="ds-breadcrumb__item">Dashboard</a>
+            <span style="color:var(--ds-text-tertiary);">...</span>
             <span class="ds-breadcrumb__separator">/</span>
-            <a href="#" class="ds-breadcrumb__item">Settings</a>
-            <span class="ds-breadcrumb__separator">/</span>
-            <a href="#" class="ds-breadcrumb__item">Account</a>
-            <span class="ds-breadcrumb__separator">/</span>
-            <span class="ds-breadcrumb__item ds-breadcrumb__item--current" aria-current="page">Security</span>
+            <a href="#" class="ds-breadcrumb__item ds-breadcrumb__item--current">Sneakers</a>
           </nav>
         </div>
+        <div class="ds-dodont__label ds-dodont__label--dont">Don't</div>
+        <div class="ds-dodont__desc">Truncate intermediate levels. Don't make the current page clickable.</div>
       </div>
     </div>
+  </div>
 
-    <!-- Single parent -->
-    <div class="ds-subsection">
-      <h2 class="ds-subsection__title">Two levels</h2>
-      <p>The minimum useful breadcrumb with just a parent and the current page.</p>
-      <div class="ds-preview">
-        <div class="ds-preview__canvas">
-          <nav class="ds-breadcrumb" aria-label="Breadcrumb">
-            <a href="#" class="ds-breadcrumb__item">Blog</a>
-            <span class="ds-breadcrumb__separator">/</span>
-            <span class="ds-breadcrumb__item ds-breadcrumb__item--current" aria-current="page">How to get started</span>
-          </nav>
-        </div>
-      </div>
+  <!-- ============================================================
+       6. CONTENT GUIDELINES
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Content guidelines</h2>
+    <table class="ds-token-table">
+      <thead><tr><th>Rule</th><th>Example</th></tr></thead>
+      <tbody>
+        <tr><td>Labels match page titles exactly</td><td>"Products" in breadcrumb matches the "Products" page title</td></tr>
+        <tr><td>Use sentence case</td><td>"Getting started" — not "Getting Started" or "GETTING STARTED"</td></tr>
+        <tr><td>Keep hierarchy to 3-5 levels</td><td>Home / Dashboard / Settings / Security — not 8+ levels deep</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============================================================
+       7. TOKEN MAPPING
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Token mapping</h2>
+    <table class="ds-token-table">
+      <thead><tr><th>Property</th><th>Token (semantic)</th><th>CSS variable</th></tr></thead>
+      <tbody>
+        <tr><td>link color</td><td><code>semantic.text.link.default</code></td><td><code>--ds-text-link-default</code></td></tr>
+        <tr><td>link hover</td><td><code>semantic.text.link.hover</code></td><td><code>--ds-text-link-hover</code></td></tr>
+        <tr><td>current text</td><td><code>semantic.text.secondary</code></td><td><code>--ds-text-secondary</code></td></tr>
+        <tr><td>separator</td><td><code>semantic.text.tertiary</code></td><td><code>--ds-text-tertiary</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============================================================
+       8. CSS CLASSES
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">CSS classes</h2>
+    <table class="ds-token-table">
+      <thead><tr><th>Class</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td><code>ds-breadcrumb</code></td><td>Breadcrumb container (use on <code>&lt;nav&gt;</code>)</td></tr>
+        <tr><td><code>ds-breadcrumb__item</code></td><td>Individual breadcrumb link or text</td></tr>
+        <tr><td><code>ds-breadcrumb__item--current</code></td><td>Current page item (non-clickable)</td></tr>
+        <tr><td><code>ds-breadcrumb__separator</code></td><td>Visual separator between items (e.g. "/")</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============================================================
+       9. KEYBOARD INTERACTION
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Keyboard interaction</h2>
+    <table class="ds-token-table">
+      <thead><tr><th>Key</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td><code>Tab</code></td><td>Moves focus between breadcrumb links (current page is not focusable)</td></tr>
+        <tr><td><code>Enter</code></td><td>Navigates to the focused link</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:var(--ds-spacing-2);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
+      The current page item is a <code>&lt;span&gt;</code>, not a link, so it is naturally excluded from the tab order. Separators are decorative and not focusable.
+    </p>
+  </div>
+
+  <!-- ============================================================
+       10. ACCESSIBILITY
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Accessibility</h2>
+    <table class="ds-token-table">
+      <thead><tr><th>WCAG criterion</th><th>Requirement</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>1.3.1 Info and Relationships (A)</td><td><code>&lt;nav&gt;</code> landmark with <code>aria-label="Breadcrumb"</code>. Uses <code>&lt;ol&gt;</code> for semantic list structure.</td><td>&#10003;</td></tr>
+        <tr><td>2.4.8 Location (AAA)</td><td>Communicates user's current location within the site hierarchy.</td><td>&#10003;</td></tr>
+        <tr><td>4.1.2 Name, Role, Value (A)</td><td><code>aria-current="page"</code> on the current page item.</td><td>&#10003;</td></tr>
+      </tbody>
+    </table>
+
+    <div class="ds-callout ds-callout--info" style="margin-top:var(--ds-spacing-4)">
+      <div class="ds-callout__title">ARIA attributes summary</div>
+      <code>aria-label="Breadcrumb"</code> — on the <code>&lt;nav&gt;</code> element to identify the landmark.<br>
+      <code>aria-current="page"</code> — on the current page item to communicate location to screen readers.<br>
+      Separators should be purely decorative (CSS-generated or <code>aria-hidden="true"</code>).
     </div>
+  </div>
 
-    <!-- CSS Classes -->
-    <div class="ds-subsection">
-      <h2 class="ds-subsection__title">CSS Classes</h2>
-      <table class="ds-props-table" style="width:100%;border-collapse:collapse;">
-        <thead>
-          <tr style="border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">
-            <th style="text-align:left;padding:var(--ds-spacing-2) var(--ds-spacing-3);">Class</th>
-            <th style="text-align:left;padding:var(--ds-spacing-2) var(--ds-spacing-3);">Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr style="border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);"><code>ds-breadcrumb</code></td><td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);">Breadcrumb container (use on <code>&lt;nav&gt;</code>)</td></tr>
-          <tr style="border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);"><code>ds-breadcrumb__item</code></td><td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);">Individual breadcrumb link or text</td></tr>
-          <tr style="border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);"><code>ds-breadcrumb__item--current</code></td><td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);">Current page item (non-clickable)</td></tr>
-          <tr><td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);"><code>ds-breadcrumb__separator</code></td><td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);">Visual separator between items (e.g. "/")</td></tr>
-        </tbody>
-      </table>
+  <!-- ============================================================
+       11. RELATED COMPONENTS
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Related</h2>
+    <div class="ds-related">
+      <a href="tabs.html" class="ds-related__link">Tabs</a>
     </div>
+  </div>
 
-  </section>
 </main>
 
 <script src="../js/main.js"></script>

@@ -6,6 +6,38 @@
   <title>Card — Design System</title>
   <link rel="stylesheet" href="../css/design-system.css">
   <link rel="stylesheet" href="layout.css">
+  <style>
+    /* Tables */
+    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-sm); margin-bottom: var(--ds-spacing-8); }
+    .ds-token-table th { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-text-secondary); }
+    .ds-token-table td { padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
+    .ds-token-table code { font-size: var(--ds-font-size-xs); font-family: var(--ds-font-family-mono); }
+    /* Callouts */
+    .ds-callout { padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-6); font-size: var(--ds-font-size-sm); line-height: var(--ds-line-height-relaxed); color: var(--ds-text-default); }
+    .ds-callout--info { background-color: var(--ds-feedback-info-background); border: var(--ds-border-width-1) solid var(--ds-feedback-info-border); }
+    .ds-callout--success { background-color: var(--ds-feedback-success-background); border: var(--ds-border-width-1) solid var(--ds-feedback-success-border); }
+    .ds-callout--warning { background-color: var(--ds-feedback-warning-background); border: var(--ds-border-width-1) solid var(--ds-feedback-warning-border); }
+    .ds-callout__title { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-1); }
+    /* Do/Don't */
+    .ds-dodont { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ds-spacing-4); margin-bottom: var(--ds-spacing-8); }
+    .ds-dodont__item { border-radius: var(--ds-radius-lg); overflow: hidden; }
+    .ds-dodont__preview { padding: var(--ds-spacing-6); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg) var(--ds-radius-lg) 0 0; display: flex; flex-wrap: wrap; gap: var(--ds-spacing-3); align-items: center; justify-content: center; }
+    .ds-dodont__label { padding: var(--ds-spacing-2) var(--ds-spacing-4); font-size: var(--ds-font-size-sm); font-weight: var(--ds-font-weight-semibold); }
+    .ds-dodont__label--do { background-color: var(--ds-feedback-success-background); color: var(--ds-feedback-success-text); border-top: 3px solid var(--ds-feedback-success-default); }
+    .ds-dodont__label--dont { background-color: var(--ds-feedback-error-background); color: var(--ds-feedback-error-text); border-top: 3px solid var(--ds-feedback-error-default); }
+    .ds-dodont__desc { padding: 0 var(--ds-spacing-4) var(--ds-spacing-3); font-size: var(--ds-font-size-sm); color: var(--ds-text-secondary); background-color: var(--ds-background-subtle); }
+    /* Anatomy */
+    .ds-anatomy { padding: var(--ds-spacing-8); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-4); display: flex; align-items: center; justify-content: center; position: relative; }
+    .ds-anatomy__marker { position: absolute; width: 20px; height: 20px; border-radius: 50%; background-color: var(--ds-color-primary-default); color: var(--ds-text-on-brand); font-size: 11px; font-weight: var(--ds-font-weight-bold); display: flex; align-items: center; justify-content: center; }
+    .ds-anatomy-legend { font-size: var(--ds-font-size-sm); color: var(--ds-text-secondary); margin-bottom: var(--ds-spacing-8); line-height: var(--ds-line-height-relaxed); }
+    .ds-anatomy-legend strong { color: var(--ds-text-default); }
+    /* Related */
+    .ds-related { display: flex; gap: var(--ds-spacing-3); flex-wrap: wrap; margin-bottom: var(--ds-spacing-8); }
+    .ds-related__link { padding: var(--ds-spacing-2) var(--ds-spacing-4); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-md); font-size: var(--ds-font-size-sm); color: var(--ds-text-link-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
+    .ds-related__link:hover { border-color: var(--ds-color-primary-default); background-color: var(--ds-color-primary-muted); }
+    /* Responsive do/dont */
+    @media (max-width: 768px) { .ds-dodont { grid-template-columns: 1fr; } }
+  </style>
 </head>
 <body>
 
@@ -91,12 +123,62 @@
 </nav>
 
 <main class="ds-main">
+
+  <!-- ============================================================
+       1. HEADER
+       ============================================================ -->
   <div class="ds-section">
     <h1 class="ds-section__title">Card</h1>
     <p class="ds-section__subtitle">Cards group related content and actions. Available in default, outlined, and elevated variants.</p>
   </div>
 
-  <!-- Default -->
+  <!-- ============================================================
+       2. WHEN TO USE / WHEN NOT TO USE
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">When to use</h2>
+    <div class="ds-callout ds-callout--success">
+      <div class="ds-callout__title">Use cards when</div>
+      Grouping related information: product listings, content previews, dashboard widgets. Cards create visual boundaries that help users scan and compare discrete pieces of content.
+    </div>
+    <div class="ds-callout ds-callout--warning">
+      <div class="ds-callout__title">Don't use cards when</div>
+      Displaying a single action result (use Alert), building full-page sections (use layout primitives), or presenting dense tabular data (use a table row instead).
+    </div>
+  </div>
+
+  <!-- ============================================================
+       3. ANATOMY
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Anatomy</h2>
+
+    <div class="ds-anatomy">
+      <div style="position:relative;width:100%;max-width:320px;">
+        <div class="ds-card ds-card--outlined" style="position:relative;">
+          <div class="ds-card__header">
+            <h3 class="ds-card__title">Card Title</h3>
+            <p class="ds-card__subtitle">Subtitle text</p>
+          </div>
+          <div class="ds-card__body">
+            <p>Body content goes here. This is a flexible slot for any content.</p>
+          </div>
+        </div>
+        <!-- Markers -->
+        <span class="ds-anatomy__marker" style="top:-10px;left:-10px;">1</span>
+        <span class="ds-anatomy__marker" style="top:50%;right:-10px;transform:translateY(-50%);">2</span>
+      </div>
+    </div>
+
+    <div class="ds-anatomy-legend">
+      <strong>1</strong> Container (<code>.ds-card</code>) — surface with border-radius, optional border or shadow depending on variant.<br>
+      <strong>2</strong> Content — flexible slot. Can contain header, body, footer, images, or any combination.
+    </div>
+  </div>
+
+  <!-- ============================================================
+       4. VARIANTS (live previews)
+       ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title">Default</h2>
     <div class="ds-preview">
@@ -134,7 +216,6 @@
     </div>
   </div>
 
-  <!-- Outlined -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title">Outlined</h2>
     <div class="ds-preview">
@@ -172,7 +253,6 @@
     </div>
   </div>
 
-  <!-- Elevated -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title">Elevated</h2>
     <div class="ds-preview">
@@ -210,7 +290,6 @@
     </div>
   </div>
 
-  <!-- All Variants Side by Side -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title">Comparison</h2>
     <div class="ds-preview">
@@ -257,13 +336,88 @@
     </div>
   </div>
 
-  <!-- CSS Classes -->
+  <!-- ============================================================
+       5. BEST PRACTICES (Do / Don't)
+       ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">CSS Classes</h2>
-    <table class="ds-table ds-props-table">
-      <thead>
-        <tr><th>Class</th><th>Description</th></tr>
-      </thead>
+    <h2 class="ds-subsection__title">Best practices</h2>
+
+    <div class="ds-dodont">
+      <div class="ds-dodont__item">
+        <div class="ds-dodont__preview" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--ds-spacing-3);">
+          <div class="ds-card ds-card--outlined" style="padding:var(--ds-spacing-3);font-size:var(--ds-font-size-xs);">Item A</div>
+          <div class="ds-card ds-card--outlined" style="padding:var(--ds-spacing-3);font-size:var(--ds-font-size-xs);">Item B</div>
+        </div>
+        <div class="ds-dodont__label ds-dodont__label--do">Do</div>
+        <div class="ds-dodont__desc">Use consistent variants in the same context. All cards in a grid should share the same style.</div>
+      </div>
+      <div class="ds-dodont__item">
+        <div class="ds-dodont__preview" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--ds-spacing-3);">
+          <div class="ds-card ds-card--default" style="padding:var(--ds-spacing-3);font-size:var(--ds-font-size-xs);">Item A</div>
+          <div class="ds-card ds-card--elevated" style="padding:var(--ds-spacing-3);font-size:var(--ds-font-size-xs);">Item B</div>
+        </div>
+        <div class="ds-dodont__label ds-dodont__label--dont">Don't</div>
+        <div class="ds-dodont__desc">Mix default, outlined, and elevated variants in the same grid. It creates inconsistent visual hierarchy.</div>
+      </div>
+    </div>
+
+    <div class="ds-dodont">
+      <div class="ds-dodont__item">
+        <div class="ds-dodont__preview" style="flex-direction:column;">
+          <span style="font-size:var(--ds-font-size-sm);color:var(--ds-text-secondary);">Outlined cards in a dense list</span>
+        </div>
+        <div class="ds-dodont__label ds-dodont__label--do">Do</div>
+        <div class="ds-dodont__desc">Use outlined for dense layouts where clear boundaries are needed. Use elevated for prominent, standalone content.</div>
+      </div>
+      <div class="ds-dodont__item">
+        <div class="ds-dodont__preview" style="flex-direction:column;">
+          <span style="font-size:var(--ds-font-size-sm);color:var(--ds-text-secondary);">Elevated card inside elevated panel</span>
+        </div>
+        <div class="ds-dodont__label ds-dodont__label--dont">Don't</div>
+        <div class="ds-dodont__desc">Place elevated cards inside an already elevated container. Stacking shadows creates visual noise and breaks hierarchy.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       6. CONTENT GUIDELINES
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Content guidelines</h2>
+    <table class="ds-token-table">
+      <thead><tr><th>Rule</th><th>Example</th></tr></thead>
+      <tbody>
+        <tr><td>Cards are containers — content guidelines apply to what's inside</td><td>Use semantic headings, body text, and action buttons as needed</td></tr>
+        <tr><td>Clickable cards: entire surface should be click target</td><td>Wrap content in <code>&lt;a&gt;</code> or use a single link with <code>::after</code> pseudo-element</td></tr>
+        <tr><td>Keep content scannable</td><td>Title + 1-2 lines of body text. Avoid long paragraphs inside cards.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============================================================
+       7. TOKEN MAPPING
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Token mapping</h2>
+    <table class="ds-token-table">
+      <thead><tr><th>Property</th><th>Token (semantic)</th><th>CSS variable</th></tr></thead>
+      <tbody>
+        <tr><td>background</td><td><code>semantic.surface.default</code></td><td><code>--ds-surface-default</code></td></tr>
+        <tr><td>border (outlined)</td><td><code>semantic.border.default</code></td><td><code>--ds-border-default</code></td></tr>
+        <tr><td>shadow (elevated)</td><td><code>foundation.shadow.sm</code></td><td><code>--ds-shadow-sm</code></td></tr>
+        <tr><td>border-radius</td><td><code>semantic.radius.lg</code></td><td><code>--ds-radius-lg</code></td></tr>
+        <tr><td>padding</td><td><code>semantic.space.inset.lg</code></td><td><code>--ds-space-inset-lg</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============================================================
+       8. CSS CLASSES
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">CSS classes</h2>
+    <table class="ds-token-table">
+      <thead><tr><th>Class</th><th>Description</th></tr></thead>
       <tbody>
         <tr><td><code>ds-card</code></td><td>Base card container</td></tr>
         <tr><td><code>ds-card--default</code></td><td>Default variant with subtle border</td></tr>
@@ -277,16 +431,46 @@
     </table>
   </div>
 
-  <!-- Accessibility -->
+  <!-- ============================================================
+       9. KEYBOARD INTERACTION
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Keyboard interaction</h2>
+    <p style="color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);margin-bottom:var(--ds-spacing-4);">
+      Cards have no keyboard interaction by default. If the card is interactive (clickable), wrap content in an <code>&lt;a&gt;</code> element or add <code>role="link"</code> with <code>tabindex="0"</code> to make it focusable and operable via <code>Enter</code>.
+    </p>
+  </div>
+
+  <!-- ============================================================
+       10. ACCESSIBILITY
+       ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title">Accessibility</h2>
-    <div class="ds-a11y-note">
-      <p class="ds-a11y-note__title">Accessibility Guidelines</p>
-      <p class="ds-a11y-note__text">
-        Cards are generic containers and do not require specific ARIA roles by default. Use semantic heading tags (<code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>) for card titles to maintain proper document outline. If the entire card is clickable, wrap it in an <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code> element, or use a single link inside the card with a clear accessible name.
-      </p>
+    <table class="ds-token-table">
+      <thead><tr><th>WCAG criterion</th><th>Requirement</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>1.4.11 Non-text Contrast (AA)</td><td>Border or shadow must have at least 3:1 contrast against the page background</td><td>&#10003;</td></tr>
+        <tr><td>2.5.8 Target Size min (AA)</td><td>If the card is clickable, the entire surface must be the click target</td><td>&#10003;</td></tr>
+      </tbody>
+    </table>
+
+    <div class="ds-callout ds-callout--info" style="margin-top:var(--ds-spacing-4)">
+      <div class="ds-callout__title">Semantic markup</div>
+      Cards are generic containers and do not require specific ARIA roles by default. Use semantic heading tags (<code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>) for card titles to maintain proper document outline. If the entire card is clickable, wrap it in an <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code> element, or use a single link inside the card with a clear accessible name.
     </div>
   </div>
+
+  <!-- ============================================================
+       11. RELATED COMPONENTS
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Related</h2>
+    <div class="ds-related">
+      <a href="alert.html" class="ds-related__link">Alert</a>
+      <a href="modal.html" class="ds-related__link">Modal</a>
+    </div>
+  </div>
+
 </main>
 
 <script src="../js/main.js"></script>

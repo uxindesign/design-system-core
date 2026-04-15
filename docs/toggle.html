@@ -6,6 +6,38 @@
   <title>Toggle — Design System</title>
   <link rel="stylesheet" href="../css/design-system.css">
   <link rel="stylesheet" href="layout.css">
+  <style>
+    /* Tables */
+    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-sm); margin-bottom: var(--ds-spacing-8); }
+    .ds-token-table th { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-text-secondary); }
+    .ds-token-table td { padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
+    .ds-token-table code { font-size: var(--ds-font-size-xs); font-family: var(--ds-font-family-mono); }
+    /* Callouts */
+    .ds-callout { padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-6); font-size: var(--ds-font-size-sm); line-height: var(--ds-line-height-relaxed); color: var(--ds-text-default); }
+    .ds-callout--info { background-color: var(--ds-feedback-info-background); border: var(--ds-border-width-1) solid var(--ds-feedback-info-border); }
+    .ds-callout--success { background-color: var(--ds-feedback-success-background); border: var(--ds-border-width-1) solid var(--ds-feedback-success-border); }
+    .ds-callout--warning { background-color: var(--ds-feedback-warning-background); border: var(--ds-border-width-1) solid var(--ds-feedback-warning-border); }
+    .ds-callout__title { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-1); }
+    /* Do/Don't */
+    .ds-dodont { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ds-spacing-4); margin-bottom: var(--ds-spacing-8); }
+    .ds-dodont__item { border-radius: var(--ds-radius-lg); overflow: hidden; }
+    .ds-dodont__preview { padding: var(--ds-spacing-6); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg) var(--ds-radius-lg) 0 0; display: flex; flex-wrap: wrap; gap: var(--ds-spacing-3); align-items: center; justify-content: center; }
+    .ds-dodont__label { padding: var(--ds-spacing-2) var(--ds-spacing-4); font-size: var(--ds-font-size-sm); font-weight: var(--ds-font-weight-semibold); }
+    .ds-dodont__label--do { background-color: var(--ds-feedback-success-background); color: var(--ds-feedback-success-text); border-top: 3px solid var(--ds-feedback-success-default); }
+    .ds-dodont__label--dont { background-color: var(--ds-feedback-error-background); color: var(--ds-feedback-error-text); border-top: 3px solid var(--ds-feedback-error-default); }
+    .ds-dodont__desc { padding: 0 var(--ds-spacing-4) var(--ds-spacing-3); font-size: var(--ds-font-size-sm); color: var(--ds-text-secondary); background-color: var(--ds-background-subtle); }
+    /* Anatomy */
+    .ds-anatomy { padding: var(--ds-spacing-8); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-4); display: flex; align-items: center; justify-content: center; position: relative; }
+    .ds-anatomy__marker { position: absolute; width: 20px; height: 20px; border-radius: 50%; background-color: var(--ds-color-primary-default); color: var(--ds-text-on-brand); font-size: 11px; font-weight: var(--ds-font-weight-bold); display: flex; align-items: center; justify-content: center; }
+    .ds-anatomy-legend { font-size: var(--ds-font-size-sm); color: var(--ds-text-secondary); margin-bottom: var(--ds-spacing-8); line-height: var(--ds-line-height-relaxed); }
+    .ds-anatomy-legend strong { color: var(--ds-text-default); }
+    /* Related */
+    .ds-related { display: flex; gap: var(--ds-spacing-3); flex-wrap: wrap; margin-bottom: var(--ds-spacing-8); }
+    .ds-related__link { padding: var(--ds-spacing-2) var(--ds-spacing-4); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-md); font-size: var(--ds-font-size-sm); color: var(--ds-text-link-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
+    .ds-related__link:hover { border-color: var(--ds-color-primary-default); background-color: var(--ds-color-primary-muted); }
+    /* Responsive do/dont */
+    @media (max-width: 768px) { .ds-dodont { grid-template-columns: 1fr; } }
+  </style>
 </head>
 <body>
 
@@ -91,12 +123,62 @@
 </nav>
 
 <main class="ds-main">
+
+  <!-- ============================================================
+       1. HEADER
+       ============================================================ -->
   <div class="ds-section">
     <h1 class="ds-section__title">Toggle</h1>
-    <p class="ds-section__subtitle">Toggles (switches) let users turn a setting on or off instantly. Built with a styled native checkbox.</p>
+    <p class="ds-section__subtitle">Toggles (switches) let users turn a setting on or off instantly. Built with a styled native checkbox and <code>role="switch"</code>.</p>
   </div>
 
-  <!-- Default -->
+  <!-- ============================================================
+       2. WHEN TO USE / WHEN NOT TO USE
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">When to use</h2>
+    <div class="ds-callout ds-callout--success">
+      <div class="ds-callout__title">Use toggles when</div>
+      The user needs to turn an on/off setting that takes effect immediately. Dark mode, notifications, feature flags, auto-save preferences.
+    </div>
+    <div class="ds-callout ds-callout--warning">
+      <div class="ds-callout__title">Don't use toggles when</div>
+      The change requires form submission — use a <a href="checkbox.html">Checkbox</a> instead. When there are more than two options — use <a href="radio.html">Radio</a> or <a href="select.html">Select</a>.
+    </div>
+  </div>
+
+  <!-- ============================================================
+       3. ANATOMY
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Anatomy</h2>
+
+    <div class="ds-anatomy">
+      <div style="position:relative;display:inline-flex;align-items:center;gap:var(--ds-spacing-3);">
+        <!-- Visual toggle -->
+        <label class="ds-toggle-label" style="pointer-events:none;">
+          <input type="checkbox" class="ds-toggle" role="switch" checked style="pointer-events:none;">
+          Dark mode
+        </label>
+        <!-- Markers -->
+        <span class="ds-anatomy__marker" style="top:-24px;left:16px;">1</span>
+        <span class="ds-anatomy__marker" style="top:50%;left:-28px;transform:translateY(-50%);">2</span>
+        <span class="ds-anatomy__marker" style="top:50%;left:24px;transform:translateY(-50%);">3</span>
+        <span class="ds-anatomy__marker" style="bottom:-24px;right:12px;">4</span>
+      </div>
+    </div>
+
+    <div class="ds-anatomy-legend">
+      <strong>1</strong> Input (<code>.ds-toggle</code>) — styled <code>&lt;input type="checkbox"&gt;</code> with <code>role="switch"</code>.<br>
+      <strong>2</strong> Track — CSS background that changes color based on checked state.<br>
+      <strong>3</strong> Thumb — CSS pseudo-element that slides left/right.<br>
+      <strong>4</strong> Label (<code>.ds-toggle-label</code>) — wraps toggle + descriptive text.
+    </div>
+  </div>
+
+  <!-- ============================================================
+       4. VARIANTS (live previews)
+       ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title">Default</h2>
     <div class="ds-preview">
@@ -152,7 +234,9 @@
     </div>
   </div>
 
-  <!-- Sizes -->
+  <!-- ============================================================
+       5. SIZES
+       ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title">Sizes</h2>
     <div class="ds-preview">
@@ -198,7 +282,9 @@
     </div>
   </div>
 
-  <!-- Disabled -->
+  <!-- ============================================================
+       6. DISABLED
+       ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title">Disabled</h2>
     <div class="ds-preview">
@@ -235,13 +321,97 @@
     </div>
   </div>
 
-  <!-- CSS Classes -->
+  <!-- ============================================================
+       7. BEST PRACTICES (Do / Don't)
+       ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">CSS Classes</h2>
-    <table class="ds-table ds-props-table">
-      <thead>
-        <tr><th>Class</th><th>Description</th></tr>
-      </thead>
+    <h2 class="ds-subsection__title">Best practices</h2>
+
+    <div class="ds-dodont">
+      <div class="ds-dodont__item">
+        <div class="ds-dodont__preview">
+          <label class="ds-toggle-label">
+            <input type="checkbox" class="ds-toggle" role="switch" checked>
+            Dark mode
+          </label>
+        </div>
+        <div class="ds-dodont__label ds-dodont__label--do">Do</div>
+        <div class="ds-dodont__desc">Labels describe the setting: "Dark mode", "Email notifications".</div>
+      </div>
+      <div class="ds-dodont__item">
+        <div class="ds-dodont__preview">
+          <label class="ds-toggle-label">
+            <input type="checkbox" class="ds-toggle" role="switch" checked>
+            Enable dark mode
+          </label>
+        </div>
+        <div class="ds-dodont__label ds-dodont__label--dont">Don't</div>
+        <div class="ds-dodont__desc">"Enable dark mode" is redundant with the toggle state itself.</div>
+      </div>
+    </div>
+
+    <div class="ds-dodont">
+      <div class="ds-dodont__item">
+        <div class="ds-dodont__preview" style="flex-direction:column;gap:var(--ds-spacing-4);">
+          <label class="ds-toggle-label">
+            <input type="checkbox" class="ds-toggle" role="switch" checked>
+            Auto-save
+          </label>
+        </div>
+        <div class="ds-dodont__label ds-dodont__label--do">Do</div>
+        <div class="ds-dodont__desc">Place toggle right of label. Effect is immediate.</div>
+      </div>
+      <div class="ds-dodont__item">
+        <div class="ds-dodont__preview" style="flex-direction:column;gap:var(--ds-spacing-3);">
+          <label class="ds-toggle-label">
+            <input type="checkbox" class="ds-toggle" role="switch">
+            Delete all data
+          </label>
+        </div>
+        <div class="ds-dodont__label ds-dodont__label--dont">Don't</div>
+        <div class="ds-dodont__desc">Don't use toggle for actions needing confirmation. Use a Button + dialog instead.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       8. CONTENT GUIDELINES
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Content guidelines</h2>
+    <table class="ds-token-table">
+      <thead><tr><th>Rule</th><th>Example</th></tr></thead>
+      <tbody>
+        <tr><td>Use a noun phrase for the label</td><td>"Dark mode", "Auto-save", "Email notifications"</td></tr>
+        <tr><td>Don't use "Enable/Disable"</td><td>"Notifications" — not "Enable notifications"</td></tr>
+        <tr><td>Keep labels short (1-3 words)</td><td>"Auto-save" — not "Automatically save my work every 5 minutes"</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============================================================
+       9. TOKEN MAPPING
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Token mapping</h2>
+    <table class="ds-token-table">
+      <thead><tr><th>Property</th><th>Token (semantic)</th><th>CSS variable</th></tr></thead>
+      <tbody>
+        <tr><td>track (off)</td><td><code>semantic.border.default</code></td><td><code>--ds-border-default</code></td></tr>
+        <tr><td>track (on)</td><td><code>semantic.color.primary.default</code></td><td><code>--ds-color-primary-default</code></td></tr>
+        <tr><td>thumb</td><td><code>semantic.surface.default</code></td><td><code>--ds-surface-default</code></td></tr>
+        <tr><td>focus ring</td><td><code>semantic.focus.ring.*</code></td><td><code>--ds-focus-ring-width</code>, <code>--ds-focus-ring-offset</code>, <code>--ds-focus-ring-color</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============================================================
+       10. CSS CLASSES
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">CSS classes</h2>
+    <table class="ds-token-table">
+      <thead><tr><th>Class</th><th>Description</th></tr></thead>
       <tbody>
         <tr><td><code>ds-toggle</code></td><td>Custom styled switch (native checkbox)</td></tr>
         <tr><td><code>ds-toggle-label</code></td><td>Label wrapper (wraps toggle + text)</td></tr>
@@ -251,16 +421,58 @@
     </table>
   </div>
 
-  <!-- Accessibility -->
+  <!-- ============================================================
+       11. KEYBOARD INTERACTION
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Keyboard interaction</h2>
+    <table class="ds-token-table">
+      <thead><tr><th>Key</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td><code>Tab</code></td><td>Moves focus to the toggle</td></tr>
+        <tr><td><code>Space</code></td><td>Toggles on/off</td></tr>
+        <tr><td><code>Enter</code></td><td>Does NOT toggle (standard switch behavior)</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:var(--ds-spacing-2);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
+      Disabled toggles (<code>[disabled]</code>) are removed from tab order automatically by the browser.
+    </p>
+  </div>
+
+  <!-- ============================================================
+       12. ACCESSIBILITY
+       ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title">Accessibility</h2>
-    <div class="ds-a11y-note">
-      <p class="ds-a11y-note__title">Accessibility Guidelines</p>
-      <p class="ds-a11y-note__text">
-        Add <code>role="switch"</code> to the checkbox element so screen readers announce it as a switch rather than a checkbox. The native checkbox provides keyboard support (Space to toggle). A visible label should always describe what the toggle controls. Focus ring is visible on keyboard focus via <code>:focus-visible</code>.
-      </p>
+    <table class="ds-token-table">
+      <thead><tr><th>WCAG criterion</th><th>Requirement</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>4.1.2 Name, Role, Value (A)</td><td><code>role="switch"</code> + <code>aria-checked</code> managed by native checkbox</td><td>&#10003;</td></tr>
+        <tr><td>2.4.11 Focus Appearance (AA)</td><td>Focus ring visible via <code>:focus-visible</code></td><td>&#10003;</td></tr>
+        <tr><td>2.5.8 Target Size min (AA)</td><td>Label extends click target beyond the toggle itself</td><td>&#10003;</td></tr>
+        <tr><td>1.4.1 Use of Color (A)</td><td>Position + color both communicate state (thumb slides left/right)</td><td>&#10003;</td></tr>
+      </tbody>
+    </table>
+
+    <div class="ds-callout ds-callout--info" style="margin-top:var(--ds-spacing-4)">
+      <div class="ds-callout__title">ARIA attributes summary</div>
+      <code>role="switch"</code> — required on the checkbox so screen readers announce it as a switch.<br>
+      <code>aria-checked</code> — managed automatically by the native <code>&lt;input type="checkbox"&gt;</code>.<br>
+      A visible label should always describe what the toggle controls.
     </div>
   </div>
+
+  <!-- ============================================================
+       13. RELATED COMPONENTS
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Related</h2>
+    <div class="ds-related">
+      <a href="checkbox.html" class="ds-related__link">Checkbox</a>
+      <a href="radio.html" class="ds-related__link">Radio</a>
+    </div>
+  </div>
+
 </main>
 
 <script src="../js/main.js"></script>
