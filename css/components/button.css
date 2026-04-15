@@ -24,7 +24,7 @@
 
   /* Default size: md (40px) */
   height: var(--ds-button-height-md);
-  padding: 0 var(--ds-button-padding-md);
+  padding: 0 var(--ds-button-padding-x-md);
   font-size: var(--ds-button-font-size-md);
   min-width: var(--ds-button-min-target-size);
 }
@@ -54,7 +54,7 @@
    --------------------------------------------------------- */
 .ds-btn--sm {
   height: var(--ds-button-height-sm);
-  padding: 0 var(--ds-button-padding-sm);
+  padding: 0 var(--ds-button-padding-x-sm);
   font-size: var(--ds-button-font-size-sm);
   border-radius: var(--ds-button-border-radius);
 }
@@ -66,7 +66,7 @@
 
 .ds-btn--lg {
   height: var(--ds-button-height-lg);
-  padding: 0 var(--ds-button-padding-lg);
+  padding: 0 var(--ds-button-padding-x-lg);
   font-size: var(--ds-button-font-size-lg);
   border-radius: var(--ds-button-border-radius);
 }
@@ -99,17 +99,17 @@
    Variant: Toned (alpha-tinted brand color)
    --------------------------------------------------------- */
 .ds-btn--toned {
-  background-color: color-mix(in srgb, var(--ds-color-primary-default) 12%, transparent);
-  color: var(--ds-color-primary-default);
+  background-color: var(--ds-color-primary-toned-default);
+  color: var(--ds-color-primary-text);
   border-color: transparent;
 }
 
 .ds-btn--toned:hover {
-  background-color: color-mix(in srgb, var(--ds-color-primary-default) 20%, transparent);
+  background-color: var(--ds-color-primary-toned-hover);
 }
 
 .ds-btn--toned:active {
-  background-color: color-mix(in srgb, var(--ds-color-primary-default) 28%, transparent);
+  background-color: var(--ds-color-primary-toned-active);
 }
 
 /* ---------------------------------------------------------

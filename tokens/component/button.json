@@ -1,39 +1,56 @@
 {
   "component": {
     "button": {
-      "$description": "Structural tokens for the Button component. Color tokens are consumed directly from semantic (color.primary.*, feedback.*) — see CSS.",
+      "$description": "Structural tokens for the Button component. Heights, padding, font-size, and icon-size reference semantic control tokens (ADR-006). Color tokens are consumed directly from semantic (color.primary.*, feedback.*) — see CSS.",
       "height": {
         "sm": {
           "$type": "dimension",
-          "$value": "2rem",
-          "$description": "32px — meets WCAG 2.5.8 minimum 24px"
+          "$value": "{semantic.size.control.sm}",
+          "$description": "32px"
         },
         "md": {
           "$type": "dimension",
-          "$value": "2.5rem",
+          "$value": "{semantic.size.control.md}",
           "$description": "40px"
         },
         "lg": {
           "$type": "dimension",
-          "$value": "3rem",
-          "$description": "48px — meets WCAG 2.5.5 enhanced 44px touch target"
+          "$value": "{semantic.size.control.lg}",
+          "$description": "48px"
         }
       },
-      "padding": {
+      "padding-x": {
         "sm": {
           "$type": "dimension",
-          "$value": "{semantic.space.inset.md}",
+          "$value": "{semantic.space.control.padding-x.sm}",
           "$description": "12px horizontal padding"
         },
         "md": {
           "$type": "dimension",
-          "$value": "{semantic.space.inset.lg}",
+          "$value": "{semantic.space.control.padding-x.md}",
           "$description": "16px horizontal padding"
         },
         "lg": {
           "$type": "dimension",
-          "$value": "{semantic.space.component.xl}",
+          "$value": "{semantic.space.control.padding-x.lg}",
           "$description": "20px horizontal padding"
+        }
+      },
+      "padding-y": {
+        "sm": {
+          "$type": "dimension",
+          "$value": "{semantic.space.control.padding-y.sm}",
+          "$description": "8px vertical padding"
+        },
+        "md": {
+          "$type": "dimension",
+          "$value": "{semantic.space.control.padding-y.md}",
+          "$description": "10px vertical padding"
+        },
+        "lg": {
+          "$type": "dimension",
+          "$value": "{semantic.space.control.padding-y.lg}",
+          "$description": "12px vertical padding"
         }
       },
       "gap": {
@@ -52,40 +69,40 @@
       "font-size": {
         "sm": {
           "$type": "dimension",
-          "$value": "0.75rem",
-          "$description": "12px"
+          "$value": "{semantic.typography.control.font-size.sm}",
+          "$description": "0.875rem (14px)"
         },
         "md": {
           "$type": "dimension",
-          "$value": "0.875rem",
-          "$description": "14px"
+          "$value": "{semantic.typography.control.font-size.md}",
+          "$description": "0.875rem (14px)"
         },
         "lg": {
           "$type": "dimension",
-          "$value": "1rem",
-          "$description": "16px"
+          "$value": "{semantic.typography.control.font-size.lg}",
+          "$description": "1rem (16px)"
         }
       },
       "icon-size": {
         "sm": {
           "$type": "dimension",
-          "$value": "1rem",
+          "$value": "{semantic.size.control.icon.sm}",
           "$description": "16px"
         },
         "md": {
           "$type": "dimension",
-          "$value": "1.25rem",
+          "$value": "{semantic.size.control.icon.md}",
           "$description": "20px"
         },
         "lg": {
           "$type": "dimension",
-          "$value": "1.5rem",
+          "$value": "{semantic.size.control.icon.lg}",
           "$description": "24px"
         }
       },
       "min-target-size": {
         "$type": "dimension",
-        "$value": "2.75rem",
+        "$value": "{semantic.size.control.min-target}",
         "$description": "44px — WCAG 2.5.5 enhanced touch target"
       }
     }

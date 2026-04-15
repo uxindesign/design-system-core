@@ -117,20 +117,19 @@
           "$type": "color"
         },
         "toned": {
-          "$type": "color",
-          "$value": "rgba(96, 165, 250, 0.15)"
-        },
-        "toned-hover": {
-          "$type": "color",
-          "$value": "rgba(96, 165, 250, 0.25)"
-        },
-        "toned-active": {
-          "$type": "color",
-          "$value": "rgba(96, 165, 250, 0.32)"
-        },
-        "toned-disabled": {
-          "$type": "color",
-          "$value": "#2B3037"
+          "$description": "Translucent primary overlays for toned variants. ADR-007.",
+          "default": {
+            "$type": "color",
+            "$value": "{foundation.color.overlay.blue-400.15}"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "{foundation.color.overlay.blue-400.25}"
+          },
+          "active": {
+            "$type": "color",
+            "$value": "{foundation.color.overlay.blue-400.32}"
+          }
         },
         "disabled": {
           "$type": "color",
@@ -140,10 +139,6 @@
           "$type": "color",
           "$value": "rgba(255, 255, 255, 0.60)"
         },
-        "toned-disabled-fg": {
-          "$type": "color",
-          "$value": "rgba(255, 255, 255, 0.60)"
-        }
       },
       "secondary": {
         "hover": {
@@ -519,12 +514,130 @@
           "$type": "dimension",
           "$value": "{foundation.spacing.20}"
         }
+      },
+      "control": {
+        "$description": "Padding for interactive controls (Button, Input, Select). ADR-006.",
+        "padding-x": {
+          "sm": {
+            "$type": "dimension",
+            "$value": "{foundation.spacing.3}",
+            "$description": "12px"
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "{foundation.spacing.4}",
+            "$description": "16px"
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{foundation.spacing.5}",
+            "$description": "20px"
+          }
+        },
+        "padding-y": {
+          "sm": {
+            "$type": "dimension",
+            "$value": "{foundation.spacing.2}",
+            "$description": "8px"
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "{foundation.spacing.2-5}",
+            "$description": "10px"
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{foundation.spacing.3}",
+            "$description": "12px"
+          }
+        }
       }
     },
     "radius": {
       "component": {
         "$type": "dimension",
         "$value": "{foundation.radius.md}"
+      }
+    },
+    "size": {
+      "control": {
+        "$description": "Shared heights for interactive controls (Button, Input, Select). ADR-006.",
+        "sm": {
+          "$type": "dimension",
+          "$value": "{foundation.spacing.8}",
+          "$description": "32px"
+        },
+        "md": {
+          "$type": "dimension",
+          "$value": "{foundation.spacing.10}",
+          "$description": "40px"
+        },
+        "lg": {
+          "$type": "dimension",
+          "$value": "{foundation.spacing.12}",
+          "$description": "48px"
+        },
+        "icon": {
+          "sm": {
+            "$type": "dimension",
+            "$value": "{foundation.spacing.4}",
+            "$description": "16px"
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "{foundation.spacing.5}",
+            "$description": "20px"
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{foundation.spacing.6}",
+            "$description": "24px"
+          }
+        },
+        "min-target": {
+          "$type": "dimension",
+          "$value": "{foundation.spacing.11}",
+          "$description": "44px — WCAG 2.5.5 enhanced touch target"
+        }
+      }
+    },
+    "typography": {
+      "control": {
+        "$description": "Single-line text metrics for interactive controls. lineHeight = iconSize at each tier. ADR-006.",
+        "font-size": {
+          "sm": {
+            "$type": "dimension",
+            "$value": "{foundation.typography.font.size.sm}",
+            "$description": "0.875rem (14px)"
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "{foundation.typography.font.size.sm}",
+            "$description": "0.875rem (14px)"
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{foundation.typography.font.size.md}",
+            "$description": "1rem (16px)"
+          }
+        },
+        "line-height": {
+          "sm": {
+            "$type": "dimension",
+            "$value": "{foundation.typography.line.height.control.sm}",
+            "$description": "1rem (16px)"
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "{foundation.typography.line.height.control.md}",
+            "$description": "1.25rem (20px)"
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{foundation.typography.line.height.control.lg}",
+            "$description": "1.5rem (24px)"
+          }
+        }
       }
     }
   }

@@ -3,13 +3,8 @@
  */
 
 [data-mode="dark"] {
-  --ds-color-primary-toned: rgba(96, 165, 250, 0.15);
-  --ds-color-primary-toned-hover: rgba(96, 165, 250, 0.25);
-  --ds-color-primary-toned-active: rgba(96, 165, 250, 0.32);
-  --ds-color-primary-toned-disabled: #2B3037;
   --ds-color-primary-disabled: #4F637D;
   --ds-color-primary-disabled-fg: rgba(255, 255, 255, 0.60);
-  --ds-color-primary-toned-disabled-fg: rgba(255, 255, 255, 0.60);
   --ds-feedback-success-disabled: #486E55;
   --ds-feedback-success-disabled-fg: rgba(255, 255, 255, 0.60);
   --ds-feedback-error-disabled: #7B5050;
@@ -35,6 +30,9 @@
   --ds-color-primary-muted: var(--ds-color-blue-950);
   --ds-color-primary-foreground: var(--ds-color-neutral-900);
   --ds-color-primary-text: var(--ds-color-blue-400);
+  --ds-color-primary-toned-default: var(--ds-overlay-blue-400-15);
+  --ds-color-primary-toned-hover: var(--ds-overlay-blue-400-25);
+  --ds-color-primary-toned-active: var(--ds-overlay-blue-400-32);
   --ds-color-secondary-hover: var(--ds-color-purple-300);
   --ds-color-secondary-active: var(--ds-color-purple-200);
   --ds-color-secondary-subtle: var(--ds-color-purple-800);
@@ -109,7 +107,26 @@
   --ds-space-section-md: var(--ds-spacing-12);
   --ds-space-section-lg: var(--ds-spacing-16);
   --ds-space-section-xl: var(--ds-spacing-20);
+  --ds-space-control-padding-x-sm: var(--ds-spacing-3); /** 12px */
+  --ds-space-control-padding-x-md: var(--ds-spacing-4); /** 16px */
+  --ds-space-control-padding-x-lg: var(--ds-spacing-5); /** 20px */
+  --ds-space-control-padding-y-sm: var(--ds-spacing-2); /** 8px */
+  --ds-space-control-padding-y-md: var(--ds-spacing-2-5); /** 10px */
+  --ds-space-control-padding-y-lg: var(--ds-spacing-3); /** 12px */
   --ds-radius-component: var(--ds-radius-md);
+  --ds-size-control-sm: var(--ds-spacing-8); /** 32px */
+  --ds-size-control-md: var(--ds-spacing-10); /** 40px */
+  --ds-size-control-lg: var(--ds-spacing-12); /** 48px */
+  --ds-size-control-icon-sm: var(--ds-spacing-4); /** 16px */
+  --ds-size-control-icon-md: var(--ds-spacing-5); /** 20px */
+  --ds-size-control-icon-lg: var(--ds-spacing-6); /** 24px */
+  --ds-size-control-min-target: var(--ds-spacing-11); /** 44px — WCAG 2.5.5 enhanced touch target */
+  --ds-control-font-size-sm: var(--ds-font-size-sm); /** 0.875rem (14px) */
+  --ds-control-font-size-md: var(--ds-font-size-sm); /** 0.875rem (14px) */
+  --ds-control-font-size-lg: var(--ds-font-size-md); /** 1rem (16px) */
+  --ds-control-line-height-sm: var(--ds-line-height-control-sm); /** 1rem (16px) */
+  --ds-control-line-height-md: var(--ds-line-height-control-md); /** 1.25rem (20px) */
+  --ds-control-line-height-lg: var(--ds-line-height-control-lg); /** 1.5rem (24px) */
   --ds-text-link-hover: var(--ds-color-primary-hover); /** Link text on hover */
   --ds-color-primary-default: var(--ds-brand-primary);
   --ds-color-secondary-default: var(--ds-brand-secondary);

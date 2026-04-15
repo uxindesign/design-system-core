@@ -129,6 +129,12 @@
   --ds-overlay-white-40: rgba(255, 255, 255, 0.4);
   --ds-overlay-white-60: rgba(255, 255, 255, 0.6);
   --ds-overlay-white-80: rgba(255, 255, 255, 0.8);
+  --ds-overlay-blue-600-12: rgba(37, 99, 235, 0.12);
+  --ds-overlay-blue-600-20: rgba(37, 99, 235, 0.20);
+  --ds-overlay-blue-600-28: rgba(37, 99, 235, 0.28);
+  --ds-overlay-blue-400-15: rgba(96, 165, 250, 0.15);
+  --ds-overlay-blue-400-25: rgba(96, 165, 250, 0.25);
+  --ds-overlay-blue-400-32: rgba(96, 165, 250, 0.32);
   --ds-duration-fast: 150ms;
   --ds-duration-normal: 200ms;
   --ds-duration-slow: 300ms;
@@ -169,6 +175,7 @@
   --ds-spacing-8: 2rem; /** 32px */
   --ds-spacing-9: 2.25rem; /** 36px */
   --ds-spacing-10: 2.5rem; /** 40px */
+  --ds-spacing-11: 2.75rem; /** 44px — WCAG 2.5.5 enhanced touch target */
   --ds-spacing-12: 3rem; /** 48px */
   --ds-spacing-14: 3.5rem; /** 56px */
   --ds-spacing-16: 4rem; /** 64px */
@@ -209,6 +216,9 @@
   --ds-line-height-normal: 1.5;
   --ds-line-height-relaxed: 1.625;
   --ds-line-height-loose: 1.75;
+  --ds-line-height-control-sm: 1rem; /** 16px — matches icon-size sm. Single-line control line-height. */
+  --ds-line-height-control-md: 1.25rem; /** 20px — matches icon-size md. Single-line control line-height. */
+  --ds-line-height-control-lg: 1.5rem; /** 24px — matches icon-size lg. Single-line control line-height. */
   --ds-letter-spacing-tighter: -0.05em;
   --ds-letter-spacing-tight: -0.025em;
   --ds-letter-spacing-normal: 0;

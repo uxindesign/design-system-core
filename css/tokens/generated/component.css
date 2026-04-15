@@ -12,16 +12,6 @@
   --ds-avatar-icon-size-sm: 1rem; /** 16px */
   --ds-avatar-icon-size-md: 1.25rem; /** 20px */
   --ds-avatar-icon-size-lg: 1.75rem; /** 28px */
-  --ds-button-height-sm: 2rem; /** 32px — meets WCAG 2.5.8 minimum 24px */
-  --ds-button-height-md: 2.5rem; /** 40px */
-  --ds-button-height-lg: 3rem; /** 48px — meets WCAG 2.5.5 enhanced 44px touch target */
-  --ds-button-font-size-sm: 0.75rem; /** 12px */
-  --ds-button-font-size-md: 0.875rem; /** 14px */
-  --ds-button-font-size-lg: 1rem; /** 16px */
-  --ds-button-icon-size-sm: 1rem; /** 16px */
-  --ds-button-icon-size-md: 1.25rem; /** 20px */
-  --ds-button-icon-size-lg: 1.5rem; /** 24px */
-  --ds-button-min-target-size: 2.75rem; /** 44px — WCAG 2.5.5 enhanced touch target */
   --ds-checkbox-control-size-sm: 1rem; /** 16px */
   --ds-checkbox-control-size-md: 1.25rem; /** 20px */
   --ds-checkbox-control-size-lg: 1.5rem; /** 24px */
@@ -91,12 +81,25 @@
   --ds-toggle-thumb-size-lg: 1.125rem; /** 18px */
   --ds-toggle-min-target-size: 2.75rem; /** 44px — WCAG 2.5.5 */
   --ds-toggle-font-size: 0.875rem; /** 14px label */
-  --ds-button-padding-sm: var(--ds-space-inset-md); /** 12px horizontal padding */
-  --ds-button-padding-md: var(--ds-space-inset-lg); /** 16px horizontal padding */
-  --ds-button-padding-lg: var(--ds-space-component-xl); /** 20px horizontal padding */
+  --ds-button-height-sm: var(--ds-size-control-sm); /** 32px */
+  --ds-button-height-md: var(--ds-size-control-md); /** 40px */
+  --ds-button-height-lg: var(--ds-size-control-lg); /** 48px */
+  --ds-button-padding-x-sm: var(--ds-space-control-padding-x-sm); /** 12px horizontal padding */
+  --ds-button-padding-x-md: var(--ds-space-control-padding-x-md); /** 16px horizontal padding */
+  --ds-button-padding-x-lg: var(--ds-space-control-padding-x-lg); /** 20px horizontal padding */
+  --ds-button-padding-y-sm: var(--ds-space-control-padding-y-sm); /** 8px vertical padding */
+  --ds-button-padding-y-md: var(--ds-space-control-padding-y-md); /** 10px vertical padding */
+  --ds-button-padding-y-lg: var(--ds-space-control-padding-y-lg); /** 12px vertical padding */
   --ds-button-gap: var(--ds-space-gap-sm); /** 8px gap between icon and label */
   --ds-button-border-radius: var(--ds-radius-component);
   --ds-button-border-width: var(--ds-border-width-default);
+  --ds-button-font-size-sm: var(--ds-control-font-size-sm); /** 0.875rem (14px) */
+  --ds-button-font-size-md: var(--ds-control-font-size-md); /** 0.875rem (14px) */
+  --ds-button-font-size-lg: var(--ds-control-font-size-lg); /** 1rem (16px) */
+  --ds-button-icon-size-sm: var(--ds-size-control-icon-sm); /** 16px */
+  --ds-button-icon-size-md: var(--ds-size-control-icon-md); /** 20px */
+  --ds-button-icon-size-lg: var(--ds-size-control-icon-lg); /** 24px */
+  --ds-button-min-target-size: var(--ds-size-control-min-target); /** 44px — WCAG 2.5.5 enhanced touch target */
   --ds-checkbox-border-width: var(--ds-border-width-default);
   --ds-checkbox-gap: var(--ds-space-gap-sm); /** 8px between control and label */
   --ds-input-padding-sm: var(--ds-space-inset-md); /** 12px */

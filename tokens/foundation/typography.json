@@ -119,6 +119,23 @@
           "loose": {
             "$type": "number",
             "$value": "1.75"
+          },
+          "control": {
+            "sm": {
+              "$type": "dimension",
+              "$value": "1rem",
+              "$description": "16px — matches icon-size sm. Single-line control line-height."
+            },
+            "md": {
+              "$type": "dimension",
+              "$value": "1.25rem",
+              "$description": "20px — matches icon-size md. Single-line control line-height."
+            },
+            "lg": {
+              "$type": "dimension",
+              "$value": "1.5rem",
+              "$description": "24px — matches icon-size lg. Single-line control line-height."
+            }
           }
         }
       },
