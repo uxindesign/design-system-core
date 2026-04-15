@@ -4,6 +4,17 @@
 
 :root,
 [data-mode="light"] {
+  --ds-color-primary-toned: rgba(37, 99, 235, 0.12); /** Toned variant background. Figma-only pre-computed value; CSS uses color-mix(). */
+  --ds-color-primary-toned-hover: rgba(37, 99, 235, 0.20);
+  --ds-color-primary-toned-active: rgba(37, 99, 235, 0.28);
+  --ds-color-primary-toned-disabled: rgba(219, 226, 240, 0.50); /** Desaturated toned for disabled state */
+  --ds-color-primary-disabled: rgba(125, 158, 232, 0.50); /** Desaturated brand for disabled filled button */
+  --ds-color-primary-disabled-fg: rgba(255, 255, 255, 0.80);
+  --ds-color-primary-toned-disabled-fg: rgba(140, 164, 217, 0.50);
+  --ds-feedback-success-disabled: rgba(122, 184, 145, 0.50); /** Desaturated success for disabled success button */
+  --ds-feedback-success-disabled-fg: rgba(255, 255, 255, 0.80);
+  --ds-feedback-error-disabled: rgba(194, 112, 112, 0.40); /** Desaturated error for disabled danger button */
+  --ds-feedback-error-disabled-fg: rgba(255, 255, 255, 0.80);
   --ds-background-default: var(--ds-color-white); /** Page background */
   --ds-background-subtle: var(--ds-color-neutral-50); /** Subtle alternate background */
   --ds-background-muted: var(--ds-color-neutral-100);
@@ -68,6 +79,7 @@
   --ds-border-width-default: var(--ds-border-width-1);
   --ds-border-width-strong: var(--ds-border-width-2);
   --ds-border-width-focus: var(--ds-border-width-2);
+  --ds-border-focus-error: var(--ds-color-red-500); /** Focus ring color for error/danger states */
   --ds-focus-ring-width: var(--ds-border-width-2); /** Focus ring stroke width (2px) */
   --ds-focus-ring-offset: var(--ds-border-width-2); /** Gap between element and focus ring (2px) */
   --ds-overlay-subtle: var(--ds-overlay-black-5);

@@ -115,6 +115,37 @@
         "default": {
           "$value": "{foundation.brand.primary}",
           "$type": "color"
+        },
+        "toned": {
+          "$type": "color",
+          "$value": "rgba(37, 99, 235, 0.12)",
+          "$description": "Toned variant background. Figma-only pre-computed value; CSS uses color-mix()."
+        },
+        "toned-hover": {
+          "$type": "color",
+          "$value": "rgba(37, 99, 235, 0.20)"
+        },
+        "toned-active": {
+          "$type": "color",
+          "$value": "rgba(37, 99, 235, 0.28)"
+        },
+        "toned-disabled": {
+          "$type": "color",
+          "$value": "rgba(219, 226, 240, 0.50)",
+          "$description": "Desaturated toned for disabled state"
+        },
+        "disabled": {
+          "$type": "color",
+          "$value": "rgba(125, 158, 232, 0.50)",
+          "$description": "Desaturated brand for disabled filled button"
+        },
+        "disabled-fg": {
+          "$type": "color",
+          "$value": "rgba(255, 255, 255, 0.80)"
+        },
+        "toned-disabled-fg": {
+          "$type": "color",
+          "$value": "rgba(140, 164, 217, 0.50)"
         }
       },
       "secondary": {
@@ -181,6 +212,15 @@
         "default": {
           "$value": "{foundation.color.green.600}",
           "$type": "color"
+        },
+        "disabled": {
+          "$type": "color",
+          "$value": "rgba(122, 184, 145, 0.50)",
+          "$description": "Desaturated success for disabled success button"
+        },
+        "disabled-fg": {
+          "$type": "color",
+          "$value": "rgba(255, 255, 255, 0.80)"
         }
       },
       "warning": {
@@ -245,6 +285,15 @@
         "default": {
           "$value": "{foundation.color.red.600}",
           "$type": "color"
+        },
+        "disabled": {
+          "$type": "color",
+          "$value": "rgba(194, 112, 112, 0.40)",
+          "$description": "Desaturated error for disabled danger button"
+        },
+        "disabled-fg": {
+          "$type": "color",
+          "$value": "rgba(255, 255, 255, 0.80)"
         }
       },
       "info": {
@@ -320,6 +369,11 @@
           "$type": "dimension",
           "$value": "{foundation.border.width.2}"
         }
+      },
+      "focus-error": {
+        "$type": "color",
+        "$value": "{foundation.color.red.500}",
+        "$description": "Focus ring color for error/danger states"
       }
     },
     "focus": {

@@ -3,6 +3,17 @@
  */
 
 [data-mode="dark"] {
+  --ds-color-primary-toned: rgba(96, 165, 250, 0.15);
+  --ds-color-primary-toned-hover: rgba(96, 165, 250, 0.25);
+  --ds-color-primary-toned-active: rgba(96, 165, 250, 0.32);
+  --ds-color-primary-toned-disabled: #2B3037;
+  --ds-color-primary-disabled: #4F637D;
+  --ds-color-primary-disabled-fg: rgba(255, 255, 255, 0.60);
+  --ds-color-primary-toned-disabled-fg: rgba(255, 255, 255, 0.60);
+  --ds-feedback-success-disabled: #486E55;
+  --ds-feedback-success-disabled-fg: rgba(255, 255, 255, 0.60);
+  --ds-feedback-error-disabled: #7B5050;
+  --ds-feedback-error-disabled-fg: rgba(255, 255, 255, 0.60);
   --ds-background-default: var(--ds-color-neutral-950); /** Page background */
   --ds-background-subtle: var(--ds-color-neutral-900); /** Subtle alternate background */
   --ds-background-muted: var(--ds-color-neutral-800);
@@ -67,6 +78,7 @@
   --ds-border-width-default: var(--ds-border-width-1);
   --ds-border-width-strong: var(--ds-border-width-2);
   --ds-border-width-focus: var(--ds-border-width-2);
+  --ds-border-focus-error: var(--ds-color-red-400);
   --ds-overlay-subtle: var(--ds-overlay-white-5);
   --ds-overlay-default: var(--ds-overlay-white-10);
   --ds-overlay-medium: var(--ds-overlay-white-20);

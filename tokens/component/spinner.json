@@ -1,0 +1,17 @@
+{
+  "component": {
+    "spinner": {
+      "$description": "Structural tokens for Spinner/Loading component.",
+      "size": {
+        "sm": { "$type": "dimension", "$value": "1rem", "$description": "16px" },
+        "md": { "$type": "dimension", "$value": "1.5rem", "$description": "24px" },
+        "lg": { "$type": "dimension", "$value": "2rem", "$description": "32px" }
+      },
+      "stroke-width": {
+        "sm": { "$type": "dimension", "$value": "1.5px" },
+        "md": { "$type": "dimension", "$value": "2px" },
+        "lg": { "$type": "dimension", "$value": "3px" }
+      }
+    }
+  }
+}
