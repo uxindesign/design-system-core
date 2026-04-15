@@ -9,6 +9,16 @@
   --ds-feedback-success-disabled-fg: rgba(255, 255, 255, 0.60);
   --ds-feedback-error-disabled: #7B5050;
   --ds-feedback-error-disabled-fg: rgba(255, 255, 255, 0.60);
+  --ds-size-control-sm: 2rem; /** 32px. Height of sm interactive controls (Button, Input Field, Select Field). */
+  --ds-size-control-md: 2.5rem; /** 40px. Height of md interactive controls. */
+  --ds-size-control-lg: 3rem; /** 48px. Height of lg interactive controls. */
+  --ds-size-control-icon-sm: 1rem; /** 16px. Icon size inside sm controls. */
+  --ds-size-control-icon-md: 1.25rem; /** 20px. Icon size inside md controls. */
+  --ds-size-control-icon-lg: 1.5rem; /** 24px. Icon size inside lg controls. */
+  --ds-size-control-min-target: 2.75rem; /** 44px. WCAG 2.5.5 AAA touch target minimum. */
+  --ds-control-line-height-sm: 1rem; /** 16px. Matches icon-sm. height = padY*2 + lineHeight = 8+16+8 = 32. */
+  --ds-control-line-height-md: 1.25rem; /** 20px. Matches icon-md. height = 10+20+10 = 40. */
+  --ds-control-line-height-lg: 1.5rem; /** 24px. Matches icon-lg. height = 12+24+12 = 48. */
   --ds-background-default: var(--ds-color-neutral-950); /** Page background */
   --ds-background-subtle: var(--ds-color-neutral-900); /** Subtle alternate background */
   --ds-background-muted: var(--ds-color-neutral-800);
@@ -30,9 +40,9 @@
   --ds-color-primary-muted: var(--ds-color-blue-950);
   --ds-color-primary-foreground: var(--ds-color-neutral-900);
   --ds-color-primary-text: var(--ds-color-blue-400);
-  --ds-color-primary-toned-default: var(--ds-overlay-blue-400-15);
-  --ds-color-primary-toned-hover: var(--ds-overlay-blue-400-25);
-  --ds-color-primary-toned-active: var(--ds-overlay-blue-400-32);
+  --ds-color-primary-toned-default: var(--ds-overlay-blue-400-15); /** Translucent primary bg for toned variants. 15% opacity in dark. */
+  --ds-color-primary-toned-hover: var(--ds-overlay-blue-400-25); /** Toned hover in dark. 25% opacity. */
+  --ds-color-primary-toned-active: var(--ds-overlay-blue-400-32); /** Toned active in dark. 32% opacity. */
   --ds-color-secondary-hover: var(--ds-color-purple-300);
   --ds-color-secondary-active: var(--ds-color-purple-200);
   --ds-color-secondary-subtle: var(--ds-color-purple-800);
@@ -107,26 +117,16 @@
   --ds-space-section-md: var(--ds-spacing-12);
   --ds-space-section-lg: var(--ds-spacing-16);
   --ds-space-section-xl: var(--ds-spacing-20);
-  --ds-space-control-padding-x-sm: var(--ds-spacing-3); /** 12px */
-  --ds-space-control-padding-x-md: var(--ds-spacing-4); /** 16px */
-  --ds-space-control-padding-x-lg: var(--ds-spacing-5); /** 20px */
-  --ds-space-control-padding-y-sm: var(--ds-spacing-2); /** 8px */
-  --ds-space-control-padding-y-md: var(--ds-spacing-2-5); /** 10px */
-  --ds-space-control-padding-y-lg: var(--ds-spacing-3); /** 12px */
+  --ds-space-control-padding-x-sm: var(--ds-spacing-3); /** 12px. Horizontal padding for sm controls. */
+  --ds-space-control-padding-x-md: var(--ds-spacing-4); /** 16px. Horizontal padding for md controls. */
+  --ds-space-control-padding-x-lg: var(--ds-spacing-5); /** 20px. Horizontal padding for lg controls. */
+  --ds-space-control-padding-y-sm: var(--ds-spacing-2); /** 8px. Vertical padding for sm controls. */
+  --ds-space-control-padding-y-md: var(--ds-spacing-2-5); /** 10px. Vertical padding for md controls. */
+  --ds-space-control-padding-y-lg: var(--ds-spacing-3); /** 12px. Vertical padding for lg controls. */
   --ds-radius-component: var(--ds-radius-md);
-  --ds-size-control-sm: var(--ds-spacing-8); /** 32px */
-  --ds-size-control-md: var(--ds-spacing-10); /** 40px */
-  --ds-size-control-lg: var(--ds-spacing-12); /** 48px */
-  --ds-size-control-icon-sm: var(--ds-spacing-4); /** 16px */
-  --ds-size-control-icon-md: var(--ds-spacing-5); /** 20px */
-  --ds-size-control-icon-lg: var(--ds-spacing-6); /** 24px */
-  --ds-size-control-min-target: var(--ds-spacing-11); /** 44px — WCAG 2.5.5 enhanced touch target */
-  --ds-control-font-size-sm: var(--ds-font-size-sm); /** 0.875rem (14px) */
-  --ds-control-font-size-md: var(--ds-font-size-sm); /** 0.875rem (14px) */
-  --ds-control-font-size-lg: var(--ds-font-size-md); /** 1rem (16px) */
-  --ds-control-line-height-sm: var(--ds-line-height-control-sm); /** 1rem (16px) */
-  --ds-control-line-height-md: var(--ds-line-height-control-md); /** 1.25rem (20px) */
-  --ds-control-line-height-lg: var(--ds-line-height-control-lg); /** 1.5rem (24px) */
+  --ds-control-font-size-sm: var(--ds-font-size-sm); /** 14px. Font size for sm controls (Button, Input, Select). */
+  --ds-control-font-size-md: var(--ds-font-size-sm); /** 14px. Font size for md controls. */
+  --ds-control-font-size-lg: var(--ds-font-size-md); /** 16px. Font size for lg controls. */
   --ds-text-link-hover: var(--ds-color-primary-hover); /** Link text on hover */
   --ds-color-primary-default: var(--ds-brand-primary);
   --ds-color-secondary-default: var(--ds-brand-secondary);

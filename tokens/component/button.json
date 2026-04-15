@@ -104,6 +104,41 @@
         "$type": "dimension",
         "$value": "{semantic.size.control.min-target}",
         "$description": "44px — WCAG 2.5.5 enhanced touch target"
+      },
+      "background": {
+        "toned": {
+          "default": {
+            "$type": "color",
+            "$value": "{semantic.color.primary.toned.default}",
+            "$description": "Toned variant background. ADR-007."
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "{semantic.color.primary.toned.hover}"
+          },
+          "active": {
+            "$type": "color",
+            "$value": "{semantic.color.primary.toned.active}"
+          },
+          "disabled": {
+            "$type": "color",
+            "$value": "{semantic.state.disabled.background}",
+            "$description": "Opaque neutral — toned transparency not needed for disabled."
+          }
+        }
+      },
+      "foreground": {
+        "toned": {
+          "default": {
+            "$type": "color",
+            "$value": "{semantic.color.primary.text}",
+            "$description": "Text/icon color on toned background."
+          },
+          "disabled": {
+            "$type": "color",
+            "$value": "{semantic.state.disabled.foreground}"
+          }
+        }
       }
     }
   }

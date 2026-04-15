@@ -117,18 +117,20 @@
           "$type": "color"
         },
         "toned": {
-          "$description": "Translucent primary overlays for toned variants. ADR-007.",
           "default": {
             "$type": "color",
-            "$value": "{foundation.color.overlay.blue-400.15}"
+            "$value": "{foundation.color.overlay.blue-400.15}",
+            "$description": "Translucent primary bg for toned variants. 15% opacity in dark."
           },
           "hover": {
             "$type": "color",
-            "$value": "{foundation.color.overlay.blue-400.25}"
+            "$value": "{foundation.color.overlay.blue-400.25}",
+            "$description": "Toned hover in dark. 25% opacity."
           },
           "active": {
             "$type": "color",
-            "$value": "{foundation.color.overlay.blue-400.32}"
+            "$value": "{foundation.color.overlay.blue-400.32}",
+            "$description": "Toned active in dark. 32% opacity."
           }
         },
         "disabled": {
@@ -138,7 +140,7 @@
         "disabled-fg": {
           "$type": "color",
           "$value": "rgba(255, 255, 255, 0.60)"
-        },
+        }
       },
       "secondary": {
         "hover": {
@@ -516,39 +518,38 @@
         }
       },
       "control": {
-        "$description": "Padding for interactive controls (Button, Input, Select). ADR-006.",
         "padding-x": {
           "sm": {
             "$type": "dimension",
             "$value": "{foundation.spacing.3}",
-            "$description": "12px"
+            "$description": "12px. Horizontal padding for sm controls."
           },
           "md": {
             "$type": "dimension",
             "$value": "{foundation.spacing.4}",
-            "$description": "16px"
+            "$description": "16px. Horizontal padding for md controls."
           },
           "lg": {
             "$type": "dimension",
             "$value": "{foundation.spacing.5}",
-            "$description": "20px"
+            "$description": "20px. Horizontal padding for lg controls."
           }
         },
         "padding-y": {
           "sm": {
             "$type": "dimension",
             "$value": "{foundation.spacing.2}",
-            "$description": "8px"
+            "$description": "8px. Vertical padding for sm controls."
           },
           "md": {
             "$type": "dimension",
             "$value": "{foundation.spacing.2-5}",
-            "$description": "10px"
+            "$description": "10px. Vertical padding for md controls."
           },
           "lg": {
             "$type": "dimension",
             "$value": "{foundation.spacing.3}",
-            "$description": "12px"
+            "$description": "12px. Vertical padding for lg controls."
           }
         }
       }
@@ -561,81 +562,79 @@
     },
     "size": {
       "control": {
-        "$description": "Shared heights for interactive controls (Button, Input, Select). ADR-006.",
         "sm": {
           "$type": "dimension",
-          "$value": "{foundation.spacing.8}",
-          "$description": "32px"
+          "$value": "2rem",
+          "$description": "32px. Height of sm interactive controls (Button, Input Field, Select Field)."
         },
         "md": {
           "$type": "dimension",
-          "$value": "{foundation.spacing.10}",
-          "$description": "40px"
+          "$value": "2.5rem",
+          "$description": "40px. Height of md interactive controls."
         },
         "lg": {
           "$type": "dimension",
-          "$value": "{foundation.spacing.12}",
-          "$description": "48px"
+          "$value": "3rem",
+          "$description": "48px. Height of lg interactive controls."
         },
         "icon": {
           "sm": {
             "$type": "dimension",
-            "$value": "{foundation.spacing.4}",
-            "$description": "16px"
+            "$value": "1rem",
+            "$description": "16px. Icon size inside sm controls."
           },
           "md": {
             "$type": "dimension",
-            "$value": "{foundation.spacing.5}",
-            "$description": "20px"
+            "$value": "1.25rem",
+            "$description": "20px. Icon size inside md controls."
           },
           "lg": {
             "$type": "dimension",
-            "$value": "{foundation.spacing.6}",
-            "$description": "24px"
+            "$value": "1.5rem",
+            "$description": "24px. Icon size inside lg controls."
           }
         },
         "min-target": {
           "$type": "dimension",
-          "$value": "{foundation.spacing.11}",
-          "$description": "44px — WCAG 2.5.5 enhanced touch target"
+          "$value": "2.75rem",
+          "$description": "44px. WCAG 2.5.5 AAA touch target minimum."
         }
       }
     },
     "typography": {
       "control": {
-        "$description": "Single-line text metrics for interactive controls. lineHeight = iconSize at each tier. ADR-006.",
         "font-size": {
           "sm": {
             "$type": "dimension",
             "$value": "{foundation.typography.font.size.sm}",
-            "$description": "0.875rem (14px)"
+            "$description": "14px. Font size for sm controls (Button, Input, Select)."
           },
           "md": {
             "$type": "dimension",
             "$value": "{foundation.typography.font.size.sm}",
-            "$description": "0.875rem (14px)"
+            "$description": "14px. Font size for md controls."
           },
           "lg": {
             "$type": "dimension",
             "$value": "{foundation.typography.font.size.md}",
-            "$description": "1rem (16px)"
+            "$description": "16px. Font size for lg controls."
           }
         },
         "line-height": {
           "sm": {
             "$type": "dimension",
-            "$value": "{foundation.typography.line.height.control.sm}",
-            "$description": "1rem (16px)"
+            "$value": "1rem",
+            "$description": "16px. Matches icon-sm. height = padY*2 + lineHeight = 8+16+8 = 32."
           },
           "md": {
             "$type": "dimension",
-            "$value": "{foundation.typography.line.height.control.md}",
-            "$description": "1.25rem (20px)"
+            "$value": "1.25rem",
+            "$description": "20px. Matches icon-md. height = 10+20+10 = 40."
           },
           "lg": {
             "$type": "dimension",
-            "$value": "{foundation.typography.line.height.control.lg}",
-            "$description": "1.5rem (24px)"
+            "$value": "1.5rem",
+            "$description": "24px. Matches icon-lg. height = 12+24+12 = 48."
           }
         }
       }

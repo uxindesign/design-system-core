@@ -23,19 +23,19 @@
 .ds-input,
 .ds-input--md {
   height: var(--ds-input-height-md);
-  padding: 0 var(--ds-input-padding-md);
+  padding: 0 var(--ds-input-padding-x-md);
   font-size: var(--ds-input-font-size-md);
 }
 
 .ds-input--sm {
   height: var(--ds-input-height-sm);
-  padding: 0 var(--ds-input-padding-sm);
+  padding: 0 var(--ds-input-padding-x-sm);
   font-size: var(--ds-input-font-size-sm);
 }
 
 .ds-input--lg {
   height: var(--ds-input-height-lg);
-  padding: 0 var(--ds-input-padding-lg);
+  padding: 0 var(--ds-input-padding-x-lg);
   font-size: var(--ds-input-font-size-lg);
 }
 

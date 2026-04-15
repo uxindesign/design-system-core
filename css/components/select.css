@@ -23,19 +23,19 @@
 .ds-select,
 .ds-select--md {
   height: var(--ds-select-height-md);
-  padding: 0 var(--ds-select-padding-md);
+  padding: 0 var(--ds-select-padding-x-md);
   font-size: var(--ds-select-font-size-md);
 }
 
 .ds-select--sm {
   height: var(--ds-select-height-sm);
-  padding: 0 var(--ds-select-padding-sm);
+  padding: 0 var(--ds-select-padding-x-sm);
   font-size: var(--ds-select-font-size-sm);
 }
 
 .ds-select--lg {
   height: var(--ds-select-height-lg);
-  padding: 0 var(--ds-select-padding-lg);
+  padding: 0 var(--ds-select-padding-x-lg);
   font-size: var(--ds-select-font-size-lg);
 }
 
@@ -54,7 +54,7 @@
   font-family: inherit;
   cursor: pointer;
   min-width: 0;
-  padding-right: calc(var(--ds-select-arrow-size) + var(--ds-select-arrow-offset-md) + var(--ds-select-padding-md));
+  padding-right: calc(var(--ds-select-arrow-size) + var(--ds-select-arrow-offset-md) + var(--ds-select-padding-x-md));
 }
 
 .ds-select__field:invalid,

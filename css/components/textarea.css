@@ -19,17 +19,17 @@
 
 .ds-textarea,
 .ds-textarea--md {
-  padding: 0 var(--ds-textarea-padding-md);
+  padding: 0 var(--ds-textarea-padding-x-md);
   font-size: var(--ds-textarea-font-size-md);
 }
 
 .ds-textarea--sm {
-  padding: 0 var(--ds-textarea-padding-sm);
+  padding: 0 var(--ds-textarea-padding-x-sm);
   font-size: var(--ds-textarea-font-size-sm);
 }
 
 .ds-textarea--lg {
-  padding: 0 var(--ds-textarea-padding-lg);
+  padding: 0 var(--ds-textarea-padding-x-lg);
   font-size: var(--ds-textarea-font-size-lg);
 }
 
@@ -47,18 +47,18 @@
   resize: vertical;
   min-height: var(--ds-textarea-min-height-md);
   min-width: 0;
-  padding: var(--ds-spacing-3) 0;
+  padding: var(--ds-textarea-padding-y-md) 0;
   line-height: var(--ds-line-height-normal);
 }
 
 .ds-textarea--sm .ds-textarea__field {
   min-height: var(--ds-textarea-min-height-sm);
-  padding: var(--ds-spacing-2) 0;
+  padding: var(--ds-textarea-padding-y-sm) 0;
 }
 
 .ds-textarea--lg .ds-textarea__field {
   min-height: var(--ds-textarea-min-height-lg);
-  padding: var(--ds-spacing-4) 0;
+  padding: var(--ds-textarea-padding-y-lg) 0;
 }
 
 .ds-textarea__field::placeholder {
