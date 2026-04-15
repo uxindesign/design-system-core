@@ -3,4 +3,6 @@
 @import 'theme-dark.css';
 @import 'themes/theme-ocean.css';
 @import 'themes/theme-forest.css';
+@import 'generated/theme-light.css';
+@import 'generated/theme-dark.css';
 @import 'generated/component.css';
