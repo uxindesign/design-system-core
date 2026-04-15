@@ -122,6 +122,7 @@
     <ul class="ds-sidebar__nav">
       <li><a href="theming.html" class="ds-sidebar__link">Theming</a></li>
       <li><a href="accessibility.html" class="ds-sidebar__link">Accessibility</a></li>
+      <li><a href="control-sizing.html" class="ds-sidebar__link">Control Sizing</a></li>
     </ul>
   </div>
 </nav>
@@ -279,9 +280,9 @@
     <table class="ds-token-table">
       <thead><tr><th>Size</th><th>Height</th><th>Font</th><th>Padding</th><th>Touch target</th></tr></thead>
       <tbody>
-        <tr><td>Small (<code>--sm</code>)</td><td>34px</td><td>body/sm</td><td>8px (inset-sm)</td><td>34px — meets WCAG 2.5.8 min (24px)</td></tr>
-        <tr><td>Medium (<code>--md</code>)</td><td>47px</td><td>body/md</td><td>12px (inset-md)</td><td>47px — meets AAA 44px target</td></tr>
-        <tr><td>Large (<code>--lg</code>)</td><td>58px</td><td>body/lg</td><td>16px (inset-lg)</td><td>58px</td></tr>
+        <tr><td>Small (<code>--sm</code>)</td><td>32px (<code>semantic.size.control.sm</code>)</td><td><code>semantic.typography.control.font-size.sm</code></td><td><code>semantic.space.control.padding-x.sm</code></td><td>32px — meets WCAG 2.5.8 min (24px)</td></tr>
+        <tr><td>Medium (<code>--md</code>)</td><td>40px (<code>semantic.size.control.md</code>)</td><td><code>semantic.typography.control.font-size.md</code></td><td><code>semantic.space.control.padding-x.md</code></td><td>40px</td></tr>
+        <tr><td>Large (<code>--lg</code>)</td><td>48px (<code>semantic.size.control.lg</code>)</td><td><code>semantic.typography.control.font-size.lg</code></td><td><code>semantic.space.control.padding-x.lg</code></td><td>48px — meets AAA 44px target</td></tr>
       </tbody>
     </table>
   </div>
@@ -559,9 +560,15 @@
         <tr><td>text (disabled)</td><td><code>semantic.state.disabled.foreground</code></td><td><code>--ds-state-disabled-foreground</code></td></tr>
         <tr><td>border-radius</td><td><code>semantic.radius.component</code></td><td><code>--ds-radius-component</code></td></tr>
         <tr><td>focus ring</td><td><code>semantic.focus.ring.*</code></td><td><code>--ds-focus-ring-width</code>, <code>--ds-focus-ring-offset</code>, <code>--ds-focus-ring-color</code></td></tr>
-        <tr><td>padding (sm)</td><td><code>semantic.space.inset.sm</code></td><td><code>--ds-space-inset-sm</code></td></tr>
-        <tr><td>padding (md)</td><td><code>semantic.space.inset.md</code></td><td><code>--ds-space-inset-md</code></td></tr>
-        <tr><td>padding (lg)</td><td><code>semantic.space.inset.lg</code></td><td><code>--ds-space-inset-lg</code></td></tr>
+        <tr><td>height (sm)</td><td><code>semantic.size.control.sm</code></td><td><code>--ds-size-control-sm</code> (32px)</td></tr>
+        <tr><td>height (md)</td><td><code>semantic.size.control.md</code></td><td><code>--ds-size-control-md</code> (40px)</td></tr>
+        <tr><td>height (lg)</td><td><code>semantic.size.control.lg</code></td><td><code>--ds-size-control-lg</code> (48px)</td></tr>
+        <tr><td>padding-x (sm)</td><td><code>semantic.space.control.padding-x.sm</code></td><td><code>--ds-space-control-padding-x-sm</code></td></tr>
+        <tr><td>padding-x (md)</td><td><code>semantic.space.control.padding-x.md</code></td><td><code>--ds-space-control-padding-x-md</code></td></tr>
+        <tr><td>padding-x (lg)</td><td><code>semantic.space.control.padding-x.lg</code></td><td><code>--ds-space-control-padding-x-lg</code></td></tr>
+        <tr><td>font-size (sm)</td><td><code>semantic.typography.control.font-size.sm</code></td><td><code>--ds-typography-control-font-size-sm</code></td></tr>
+        <tr><td>font-size (md)</td><td><code>semantic.typography.control.font-size.md</code></td><td><code>--ds-typography-control-font-size-md</code></td></tr>
+        <tr><td>font-size (lg)</td><td><code>semantic.typography.control.font-size.lg</code></td><td><code>--ds-typography-control-font-size-lg</code></td></tr>
       </tbody>
     </table>
   </div>
@@ -578,9 +585,9 @@
         <tr><td><code>ds-select__field</code></td><td>The native <code>&lt;select&gt;</code> element</td></tr>
         <tr><td><code>ds-select__arrow</code></td><td>Custom dropdown arrow indicator</td></tr>
         <tr><td><code>ds-select__icon</code></td><td>Leading icon inside the wrapper</td></tr>
-        <tr><td><code>ds-select--sm</code></td><td>Small size (34px height)</td></tr>
-        <tr><td><code>ds-select--md</code></td><td>Medium size (47px height, default)</td></tr>
-        <tr><td><code>ds-select--lg</code></td><td>Large size (58px height)</td></tr>
+        <tr><td><code>ds-select--sm</code></td><td>Small size (32px height)</td></tr>
+        <tr><td><code>ds-select--md</code></td><td>Medium size (40px height, default)</td></tr>
+        <tr><td><code>ds-select--lg</code></td><td>Large size (48px height)</td></tr>
         <tr><td><code>ds-select--error</code></td><td>Error state with red border</td></tr>
         <tr><td><code>ds-select--disabled</code></td><td>Disabled state (or use native <code>disabled</code>)</td></tr>
         <tr><td><code>ds-select--readonly</code></td><td>Readonly visual state (combine with native <code>disabled</code>)</td></tr>

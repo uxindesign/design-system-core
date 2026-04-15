@@ -123,6 +123,7 @@
     <ul class="ds-sidebar__nav">
       <li><a href="theming.html" class="ds-sidebar__link">Theming</a></li>
       <li><a href="accessibility.html" class="ds-sidebar__link">Accessibility</a></li>
+      <li><a href="control-sizing.html" class="ds-sidebar__link">Control Sizing</a></li>
     </ul>
   </div>
 </nav>
@@ -233,13 +234,13 @@
       <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
         <div class="ds-preview__canvas ds-preview__canvas--column" style="max-width:400px">
           <div class="ds-input ds-input--sm">
-            <input type="text" class="ds-input__field" placeholder="Small (34px)">
+            <input type="text" class="ds-input__field" placeholder="Small (32px)">
           </div>
           <div class="ds-input ds-input--md">
-            <input type="text" class="ds-input__field" placeholder="Medium (47px)">
+            <input type="text" class="ds-input__field" placeholder="Medium (40px)">
           </div>
           <div class="ds-input ds-input--lg">
-            <input type="text" class="ds-input__field" placeholder="Large (58px)">
+            <input type="text" class="ds-input__field" placeholder="Large (48px)">
           </div>
         </div>
       </div>
@@ -247,15 +248,15 @@
         <div class="ds-preview__code">
           <button class="ds-preview__copy" aria-label="Copy code">Copy</button>
           <pre><code>&lt;div class="ds-input ds-input--sm"&gt;
-  &lt;input type="text" class="ds-input__field" placeholder="Small (34px)"&gt;
+  &lt;input type="text" class="ds-input__field" placeholder="Small (32px)"&gt;
 &lt;/div&gt;
 
 &lt;div class="ds-input ds-input--md"&gt;
-  &lt;input type="text" class="ds-input__field" placeholder="Medium (47px)"&gt;
+  &lt;input type="text" class="ds-input__field" placeholder="Medium (40px)"&gt;
 &lt;/div&gt;
 
 &lt;div class="ds-input ds-input--lg"&gt;
-  &lt;input type="text" class="ds-input__field" placeholder="Large (58px)"&gt;
+  &lt;input type="text" class="ds-input__field" placeholder="Large (48px)"&gt;
 &lt;/div&gt;</code></pre>
         </div>
       </div>
@@ -566,9 +567,15 @@
         <tr><td>icon color</td><td><code>semantic.text.secondary</code></td><td><code>--ds-text-secondary</code></td></tr>
         <tr><td>border-radius</td><td><code>semantic.radius.component</code></td><td><code>--ds-radius-component</code></td></tr>
         <tr><td>focus ring</td><td><code>semantic.focus.ring.*</code></td><td><code>--ds-focus-ring-width</code>, <code>--ds-focus-ring-offset</code>, <code>--ds-focus-ring-color</code></td></tr>
-        <tr><td>padding (sm)</td><td><code>semantic.space.inset.sm</code></td><td><code>--ds-space-inset-sm</code></td></tr>
-        <tr><td>padding (md)</td><td><code>semantic.space.inset.md</code></td><td><code>--ds-space-inset-md</code></td></tr>
-        <tr><td>padding (lg)</td><td><code>semantic.space.inset.lg</code></td><td><code>--ds-space-inset-lg</code></td></tr>
+        <tr><td>height (sm)</td><td><code>semantic.size.control.sm</code></td><td><code>--ds-size-control-sm</code> (32px)</td></tr>
+        <tr><td>height (md)</td><td><code>semantic.size.control.md</code></td><td><code>--ds-size-control-md</code> (40px)</td></tr>
+        <tr><td>height (lg)</td><td><code>semantic.size.control.lg</code></td><td><code>--ds-size-control-lg</code> (48px)</td></tr>
+        <tr><td>padding-x (sm)</td><td><code>semantic.space.control.padding-x.sm</code></td><td><code>--ds-space-control-padding-x-sm</code></td></tr>
+        <tr><td>padding-x (md)</td><td><code>semantic.space.control.padding-x.md</code></td><td><code>--ds-space-control-padding-x-md</code></td></tr>
+        <tr><td>padding-x (lg)</td><td><code>semantic.space.control.padding-x.lg</code></td><td><code>--ds-space-control-padding-x-lg</code></td></tr>
+        <tr><td>font-size (sm)</td><td><code>semantic.typography.control.font-size.sm</code></td><td><code>--ds-typography-control-font-size-sm</code></td></tr>
+        <tr><td>font-size (md)</td><td><code>semantic.typography.control.font-size.md</code></td><td><code>--ds-typography-control-font-size-md</code></td></tr>
+        <tr><td>font-size (lg)</td><td><code>semantic.typography.control.font-size.lg</code></td><td><code>--ds-typography-control-font-size-lg</code></td></tr>
       </tbody>
     </table>
   </div>

@@ -123,6 +123,7 @@
     <ul class="ds-sidebar__nav">
       <li><a href="theming.html" class="ds-sidebar__link">Theming</a></li>
       <li><a href="accessibility.html" class="ds-sidebar__link">Accessibility</a></li>
+      <li><a href="control-sizing.html" class="ds-sidebar__link">Control Sizing</a></li>
     </ul>
   </div>
 </nav>
@@ -267,9 +268,9 @@
     <table class="ds-token-table">
       <thead><tr><th>Size</th><th>Height</th><th>Font</th><th>Padding</th><th>Touch target</th></tr></thead>
       <tbody>
-        <tr><td>Small (<code>--sm</code>)</td><td>32px</td><td>label/sm</td><td>8px (inset-sm)</td><td>32px — meets WCAG 2.5.8 min (24px)</td></tr>
-        <tr><td>Medium (<code>--md</code>)</td><td>40px</td><td>label/md</td><td>12px (inset-md)</td><td>40px</td></tr>
-        <tr><td>Large (<code>--lg</code>)</td><td>48px</td><td>label/lg</td><td>16px (inset-lg)</td><td>48px — meets AAA 44px target</td></tr>
+        <tr><td>Small (<code>--sm</code>)</td><td>32px (<code>semantic.size.control.sm</code>)</td><td><code>semantic.typography.control.font-size.sm</code></td><td>8×12px (padding-y × padding-x)</td><td>32px — meets WCAG 2.5.8 min (24px)</td></tr>
+        <tr><td>Medium (<code>--md</code>)</td><td>40px (<code>semantic.size.control.md</code>)</td><td><code>semantic.typography.control.font-size.md</code></td><td>10×16px (padding-y × padding-x)</td><td>40px</td></tr>
+        <tr><td>Large (<code>--lg</code>)</td><td>48px (<code>semantic.size.control.lg</code>)</td><td><code>semantic.typography.control.font-size.lg</code></td><td>12×20px (padding-y × padding-x)</td><td>48px — meets AAA 44px target</td></tr>
       </tbody>
     </table>
   </div>
@@ -477,13 +478,29 @@
         <tr><td>text (disabled)</td><td><code>semantic.state.disabled.foreground</code></td><td><code>--ds-state-disabled-foreground</code></td></tr>
         <tr><td>border-radius</td><td><code>semantic.radius.component</code></td><td><code>--ds-radius-component</code></td></tr>
         <tr><td>focus ring</td><td><code>semantic.focus.ring.*</code></td><td><code>--ds-focus-ring-width</code>, <code>--ds-focus-ring-offset</code>, <code>--ds-focus-ring-color</code></td></tr>
-        <tr><td>padding (sm)</td><td><code>semantic.space.inset.sm</code></td><td><code>--ds-space-inset-sm</code></td></tr>
-        <tr><td>padding (md)</td><td><code>semantic.space.inset.md</code></td><td><code>--ds-space-inset-md</code></td></tr>
-        <tr><td>padding (lg)</td><td><code>semantic.space.inset.lg</code></td><td><code>--ds-space-inset-lg</code></td></tr>
+        <tr><td>height (sm)</td><td><code>semantic.size.control.sm</code></td><td><code>--ds-size-control-sm</code></td></tr>
+        <tr><td>height (md)</td><td><code>semantic.size.control.md</code></td><td><code>--ds-size-control-md</code></td></tr>
+        <tr><td>height (lg)</td><td><code>semantic.size.control.lg</code></td><td><code>--ds-size-control-lg</code></td></tr>
+        <tr><td>padding-x (sm)</td><td><code>semantic.space.control.padding-x.sm</code></td><td><code>--ds-space-control-padding-x-sm</code></td></tr>
+        <tr><td>padding-x (md)</td><td><code>semantic.space.control.padding-x.md</code></td><td><code>--ds-space-control-padding-x-md</code></td></tr>
+        <tr><td>padding-x (lg)</td><td><code>semantic.space.control.padding-x.lg</code></td><td><code>--ds-space-control-padding-x-lg</code></td></tr>
+        <tr><td>padding-y (sm)</td><td><code>semantic.space.control.padding-y.sm</code></td><td><code>--ds-space-control-padding-y-sm</code> (8px)</td></tr>
+        <tr><td>padding-y (md)</td><td><code>semantic.space.control.padding-y.md</code></td><td><code>--ds-space-control-padding-y-md</code> (10px)</td></tr>
+        <tr><td>padding-y (lg)</td><td><code>semantic.space.control.padding-y.lg</code></td><td><code>--ds-space-control-padding-y-lg</code> (12px)</td></tr>
         <tr><td>gap (icon ↔ label)</td><td><code>semantic.space.gap.sm</code></td><td><code>--ds-space-gap-sm</code></td></tr>
-        <tr><td>font (sm/md/lg)</td><td><code>label/sm</code>, <code>label/md</code>, <code>label/lg</code></td><td>Composite text styles</td></tr>
+        <tr><td>font-size (sm)</td><td><code>semantic.typography.control.font-size.sm</code></td><td><code>--ds-typography-control-font-size-sm</code></td></tr>
+        <tr><td>font-size (md)</td><td><code>semantic.typography.control.font-size.md</code></td><td><code>--ds-typography-control-font-size-md</code></td></tr>
+        <tr><td>font-size (lg)</td><td><code>semantic.typography.control.font-size.lg</code></td><td><code>--ds-typography-control-font-size-lg</code></td></tr>
+        <tr><td>icon-size (sm)</td><td><code>semantic.size.control.icon.sm</code></td><td><code>--ds-size-control-icon-sm</code></td></tr>
+        <tr><td>icon-size (md)</td><td><code>semantic.size.control.icon.md</code></td><td><code>--ds-size-control-icon-md</code></td></tr>
+        <tr><td>icon-size (lg)</td><td><code>semantic.size.control.icon.lg</code></td><td><code>--ds-size-control-icon-lg</code></td></tr>
       </tbody>
     </table>
+
+    <h3 style="margin-top:var(--ds-spacing-6);margin-bottom:var(--ds-spacing-3);font-size:var(--ds-font-size-md);color:var(--ds-text-default)">Toned variant</h3>
+    <div class="ds-callout ds-callout--info">
+      The <strong>Toned</strong> variant uses translucent overlay backgrounds (<code>--ds-color-primary-toned-default</code>, <code>--ds-color-primary-toned-hover</code>, <code>--ds-color-primary-toned-active</code>) instead of opaque fills. This differs from Subtle/Muted patterns which use opaque background tokens. The translucent approach lets the Toned button adapt naturally to any surface color beneath it while maintaining a consistent brand tint.
+    </div>
   </div>
 
   <!-- ============================================================

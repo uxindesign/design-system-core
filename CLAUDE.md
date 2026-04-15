@@ -16,13 +16,13 @@ Site de documentação: https://uxindesign.github.io/design-system-core/
 Três camadas, do primitivo ao semântico:
 
 ```
-Foundation (valores brutos, 192 vars)
+Foundation (valores brutos, ~212 vars — inclui 6 colored overlays ADR-007)
     ↓ alias
-Brand (3 modos: Default/Ocean/Forest, 13 vars)
+Brand (3 modos: Default/Ocean/Forest, 2 vars)
     ↓ alias
-Theme (2 modos: Light/Dark, 94 vars)
+Semantic (2 modos: Light/Dark, ~137 vars — inclui 19 control + 3 toned)
     ↓ consumo
-Componentes
+Component (~130 vars — inclui toned color tokens)
 ```
 
 ### CSS — Estrutura de Arquivos
@@ -77,6 +77,28 @@ Usam `/` como separador de grupo:
 Usam `-` como separador:
 - `--ds-color-blue-500`, `--ds-spacing-4`, `--ds-radius-md`
 - `--ds-background-default`, `--ds-text-secondary`
+
+### Control Tokens (ADR-006)
+
+Controles interativos (Button, Input, Select, Textarea) compartilham tokens dimensionais na camada semântica:
+
+- **`semantic.size.control.{sm/md/lg}`** — heights: 32/40/48px
+- **`semantic.space.control.padding-x.{sm/md/lg}`** — 12/16/20px
+- **`semantic.space.control.padding-y.{sm/md/lg}`** — 8/10/12px
+- **`semantic.typography.control.font-size.{sm/md/lg}`** — 14/14/16px
+- **`semantic.typography.control.line-height.{sm/md/lg}`** — 16/20/24px (= icon size)
+- **`semantic.size.control.icon.{sm/md/lg}`** — 16/20/24px
+
+Fórmula: `height = padding-y × 2 + line-height`
+
+Component tokens (`component.button.*`, `component.input.*`, etc.) referenciam os control tokens — nunca valores absolutos. Textarea compartilha padding-x e padding-y mas **não** height nem line-height (multi-line usa body text ratios).
+
+### Toned Colors (ADR-007)
+
+Tokens toned usam overlays coloridos com transparência (diferente de `subtle`/`muted` que são opacos):
+- **Foundation:** `color/overlay/blue-600/{12,20,28}` (light), `color/overlay/blue-400/{15,25,32}` (dark)
+- **Semantic:** `color.primary.toned.{default,hover,active}` — alias pra foundation overlays
+- **Disabled:** usa `state.disabled.*` (opaco neutro), não tokens toned específicos
 
 ---
 

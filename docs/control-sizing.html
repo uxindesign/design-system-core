@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Control Sizing — Design System</title>
+  <link rel="stylesheet" href="../css/design-system.css">
+  <link rel="stylesheet" href="layout.css">
+  <style>
+    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-sm); margin-bottom: var(--ds-spacing-8); }
+    .ds-token-table th { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-text-secondary); }
+    .ds-token-table td { padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
+    .ds-token-table code { font-size: var(--ds-font-size-xs); font-family: var(--ds-font-family-mono); }
+    .ds-callout { padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-6); font-size: var(--ds-font-size-sm); line-height: var(--ds-line-height-relaxed); color: var(--ds-text-default); }
+    .ds-callout--info { background-color: var(--ds-feedback-info-background); border: var(--ds-border-width-1) solid var(--ds-feedback-info-border); }
+    .ds-callout--warning { background-color: var(--ds-feedback-warning-background); border: var(--ds-border-width-1) solid var(--ds-feedback-warning-border); }
+    .ds-callout__title { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-1); }
+    .ds-code-block { background-color: var(--ds-color-neutral-900); color: var(--ds-color-neutral-200); padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); font-family: var(--ds-font-family-mono); font-size: var(--ds-font-size-xs); line-height: var(--ds-line-height-relaxed); overflow-x: auto; margin-bottom: var(--ds-spacing-6); white-space: pre; }
+    .ds-formula { font-family: var(--ds-font-family-mono); font-size: var(--ds-font-size-md); font-weight: var(--ds-font-weight-semibold); color: var(--ds-text-default); padding: var(--ds-spacing-4) var(--ds-spacing-6); background: var(--ds-background-subtle); border-radius: var(--ds-radius-lg); text-align: center; margin-bottom: var(--ds-spacing-6); }
+    .ds-control-demo { display: flex; gap: var(--ds-spacing-4); align-items: center; margin-bottom: var(--ds-spacing-6); flex-wrap: wrap; }
+  </style>
+</head>
+<body>
+
+<header class="ds-site-header">
+  <div style="display:flex;align-items:center;gap:var(--ds-spacing-4)">
+    <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <a href="../index.html" class="ds-site-header__brand">
+      <div class="ds-site-header__logo">DS</div>
+      <span class="ds-site-header__title">Design System</span>
+    </a>
+  </div>
+  <div class="ds-site-header__actions">
+    <div class="ds-theme-switcher">
+      <label class="ds-theme-switcher__label" for="theme-switcher">Theme</label>
+      <select class="ds-theme-switcher__select" id="theme-switcher">
+        <option value="default">Default (Blue)</option>
+        <option value="ocean">Ocean (Cyan)</option>
+        <option value="forest">Forest (Emerald)</option>
+      </select>
+    </div>
+    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode">Dark</button>
+  </div>
+</header>
+<div class="ds-sidebar-overlay" id="sidebar-overlay"></div>
+
+<nav class="ds-sidebar" id="sidebar" aria-label="Main navigation">
+  <div class="ds-sidebar__section">
+    <h2 class="ds-sidebar__heading">Overview</h2>
+    <ul class="ds-sidebar__nav">
+      <li><a href="../index.html" class="ds-sidebar__link">Getting Started</a></li>
+      <li><a href="token-architecture.html" class="ds-sidebar__link">Token Architecture</a></li>
+      <li><a href="design-principles.html" class="ds-sidebar__link">Design Principles</a></li>
+      <li><a href="changelog.html" class="ds-sidebar__link">Changelog</a></li>
+    </ul>
+  </div>
+  <div class="ds-sidebar__section">
+    <h2 class="ds-sidebar__heading">Foundations</h2>
+    <ul class="ds-sidebar__nav">
+      <li><a href="foundations.html" class="ds-sidebar__link">Overview</a></li>
+      <li><a href="foundations-colors.html" class="ds-sidebar__link">Colors</a></li>
+      <li><a href="foundations-theme-colors.html" class="ds-sidebar__link">Theme Colors</a></li>
+      <li><a href="foundations-typography.html" class="ds-sidebar__link">Typography</a></li>
+      <li><a href="foundations-spacing.html" class="ds-sidebar__link">Spacing</a></li>
+      <li><a href="foundations-radius.html" class="ds-sidebar__link">Radius</a></li>
+      <li><a href="foundations-elevation.html" class="ds-sidebar__link">Elevation</a></li>
+      <li><a href="foundations-borders.html" class="ds-sidebar__link">Borders</a></li>
+      <li><a href="foundations-motion.html" class="ds-sidebar__link">Motion</a></li>
+      <li><a href="foundations-opacity.html" class="ds-sidebar__link">Opacity</a></li>
+      <li><a href="foundations-zindex.html" class="ds-sidebar__link">Z-index</a></li>
+    </ul>
+  </div>
+  <div class="ds-sidebar__section">
+    <h2 class="ds-sidebar__heading">Components</h2>
+    <ul class="ds-sidebar__nav">
+      <li><a href="button.html" class="ds-sidebar__link">Button</a></li>
+      <li><a href="input.html" class="ds-sidebar__link">Input</a></li>
+      <li><a href="textarea.html" class="ds-sidebar__link">Textarea</a></li>
+      <li><a href="select.html" class="ds-sidebar__link">Select</a></li>
+      <li><a href="checkbox.html" class="ds-sidebar__link">Checkbox</a></li>
+      <li><a href="radio.html" class="ds-sidebar__link">Radio</a></li>
+      <li><a href="toggle.html" class="ds-sidebar__link">Toggle</a></li>
+      <li><a href="badge.html" class="ds-sidebar__link">Badge</a></li>
+      <li><a href="alert.html" class="ds-sidebar__link">Alert</a></li>
+      <li><a href="card.html" class="ds-sidebar__link">Card</a></li>
+      <li><a href="modal.html" class="ds-sidebar__link">Modal</a></li>
+      <li><a href="tooltip.html" class="ds-sidebar__link">Tooltip</a></li>
+      <li><a href="tabs.html" class="ds-sidebar__link">Tabs</a></li>
+      <li><a href="breadcrumb.html" class="ds-sidebar__link">Breadcrumb</a></li>
+      <li><a href="avatar.html" class="ds-sidebar__link">Avatar</a></li>
+      <li><a href="divider.html" class="ds-sidebar__link">Divider</a></li>
+      <li><a href="spinner.html" class="ds-sidebar__link">Spinner</a></li>
+      <li><a href="skeleton.html" class="ds-sidebar__link">Skeleton</a></li>
+      <li><a href="form-field.html" class="ds-sidebar__link">Form Field</a></li>
+    </ul>
+  </div>
+  <div class="ds-sidebar__section">
+    <h2 class="ds-sidebar__heading">Guidelines</h2>
+    <ul class="ds-sidebar__nav">
+      <li><a href="theming.html" class="ds-sidebar__link">Theming</a></li>
+      <li><a href="accessibility.html" class="ds-sidebar__link">Accessibility</a></li>
+      <li><a href="control-sizing.html" class="ds-sidebar__link ds-sidebar__link--active">Control Sizing</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="ds-main">
+  <div class="ds-section">
+    <h1 class="ds-section__title">Control Sizing</h1>
+    <p class="ds-section__subtitle">Button, Input, Select, and Textarea share a unified dimensional system. Same height, same padding, same icon size at each tier — so controls align perfectly when placed side by side. Defined in ADR-006.</p>
+  </div>
+
+  <!-- Formula -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">The formula</h2>
+    <div class="ds-formula">height = padding-y &times; 2 + line-height</div>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
+      Every interactive control follows this formula. The line-height equals the icon size at each tier, ensuring text and icons align vertically.
+    </p>
+  </div>
+
+  <!-- Size tiers -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Size tiers</h2>
+    <table class="ds-token-table">
+      <thead>
+        <tr><th>Property</th><th>Small</th><th>Medium</th><th>Large</th><th>CSS variable</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Height</strong></td><td>32px</td><td>40px</td><td>48px</td><td><code>--ds-size-control-{sm/md/lg}</code></td></tr>
+        <tr><td>Padding-x</td><td>12px</td><td>16px</td><td>20px</td><td><code>--ds-space-control-padding-x-{sm/md/lg}</code></td></tr>
+        <tr><td>Padding-y</td><td>8px</td><td>10px</td><td>12px</td><td><code>--ds-space-control-padding-y-{sm/md/lg}</code></td></tr>
+        <tr><td>Font-size</td><td>14px</td><td>14px</td><td>16px</td><td><code>--ds-typography-control-font-size-{sm/md/lg}</code></td></tr>
+        <tr><td>Line-height</td><td>16px</td><td>20px</td><td>24px</td><td><code>--ds-typography-control-line-height-{sm/md/lg}</code></td></tr>
+        <tr><td>Icon size</td><td>16px</td><td>20px</td><td>24px</td><td><code>--ds-size-control-icon-{sm/md/lg}</code></td></tr>
+        <tr><td>Min target</td><td colspan="3">44px (WCAG 2.5.5 AAA)</td><td><code>--ds-size-control-min-target</code></td></tr>
+      </tbody>
+    </table>
+
+    <div class="ds-callout ds-callout--info">
+      <div class="ds-callout__title">Validation</div>
+      sm: 8 + 16 + 8 = <strong>32</strong> &check; &nbsp;&nbsp;
+      md: 10 + 20 + 10 = <strong>40</strong> &check; &nbsp;&nbsp;
+      lg: 12 + 24 + 12 = <strong>48</strong> &check;
+    </div>
+  </div>
+
+  <!-- Live demo -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Alignment demo</h2>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">All controls at Medium size (40px) align perfectly in a row:</p>
+    <div class="ds-control-demo">
+      <button class="ds-btn ds-btn--brand ds-btn--md"><span class="ds-btn__label">Button</span></button>
+      <div class="ds-input ds-input--md" style="max-width:180px">
+        <input class="ds-input__field" type="text" placeholder="Input" />
+      </div>
+      <div class="ds-select ds-select--md" style="max-width:180px">
+        <select class="ds-select__field"><option>Select</option></select>
+        <span class="ds-select__arrow"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Which components -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Which components use it</h2>
+    <table class="ds-token-table">
+      <thead><tr><th>Component</th><th>Height</th><th>Padding-x</th><th>Padding-y</th><th>Font-size</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Button</strong></td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>All sizes, all variants</td></tr>
+        <tr><td><strong>Input</strong></td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>Field frame only (wrapper has no padding)</td></tr>
+        <tr><td><strong>Select</strong></td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>Field frame only</td></tr>
+        <tr><td><strong>Textarea</strong></td><td>&mdash;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>Height is independent (multi-line). Line-height uses body text ratios, not control line-height.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Token layers -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Token layers</h2>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">Control tokens live in the semantic layer. Component tokens reference them:</p>
+<div class="ds-code-block">/* Semantic (shared) */
+--ds-size-control-md:              2.5rem;   /* 40px */
+--ds-space-control-padding-x-md:   var(--ds-spacing-4);  /* 16px */
+--ds-space-control-padding-y-md:   var(--ds-spacing-2-5); /* 10px */
+
+/* Component (per-component alias) */
+--ds-button-height-md:     var(--ds-size-control-md);
+--ds-button-padding-x-md:  var(--ds-space-control-padding-x-md);
+--ds-input-height-md:      var(--ds-size-control-md);
+--ds-input-padding-x-md:   var(--ds-space-control-padding-x-md);</div>
+  </div>
+
+  <!-- Toned colors -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Toned colors (ADR-007)</h2>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
+      The Button "Toned" variant uses translucent colored overlays. This is different from <code>subtle</code> (opaque, palette step 100) and <code>muted</code> (opaque, palette step 50):
+    </p>
+    <table class="ds-token-table">
+      <thead><tr><th>Token pattern</th><th>Visual</th><th>Use case</th></tr></thead>
+      <tbody>
+        <tr><td><code>color.primary.subtle</code></td><td>Opaque light blue (blue-100)</td><td>Subtle backgrounds, badges</td></tr>
+        <tr><td><code>color.primary.muted</code></td><td>Opaque lighter blue (blue-50)</td><td>Muted backgrounds, selected states</td></tr>
+        <tr><td><code>color.primary.toned.*</code></td><td>Translucent blue (12-28% opacity)</td><td>Button Toned variant — surface shows through</td></tr>
+      </tbody>
+    </table>
+    <p style="color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
+      Foundation layer has colored overlay tokens (<code>--ds-overlay-blue-600-*</code> for light, <code>--ds-overlay-blue-400-*</code> for dark). Semantic tokens alias these per mode. The pattern is extensible to feedback colors when needed.
+    </p>
+  </div>
+
+  <!-- ADR reference -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Architecture decisions</h2>
+    <div class="ds-callout ds-callout--info">
+      <div class="ds-callout__title">Related ADRs</div>
+      <strong>ADR-006:</strong> Semantic control tokens — shared dimensions and typography across interactive controls.<br>
+      <strong>ADR-007:</strong> Toned color system — colored overlays in foundation, semantic toned tokens.
+    </div>
+  </div>
+</main>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

@@ -122,6 +122,7 @@
     <ul class="ds-sidebar__nav">
       <li><a href="theming.html" class="ds-sidebar__link">Theming</a></li>
       <li><a href="accessibility.html" class="ds-sidebar__link">Accessibility</a></li>
+      <li><a href="control-sizing.html" class="ds-sidebar__link">Control Sizing</a></li>
     </ul>
   </div>
 </nav>
@@ -484,6 +485,13 @@
         <tr><td>placeholder color</td><td><code>semantic.text.tertiary</code></td><td><code>--ds-text-tertiary</code></td></tr>
         <tr><td>border-radius</td><td><code>semantic.radius.component</code></td><td><code>--ds-radius-component</code></td></tr>
         <tr><td>focus ring</td><td><code>semantic.focus.ring.*</code></td><td><code>--ds-focus-ring-width</code>, <code>--ds-focus-ring-offset</code>, <code>--ds-focus-ring-color</code></td></tr>
+        <tr><td>padding-x (sm/md/lg)</td><td><code>semantic.space.control.padding-x.*</code></td><td><code>--ds-space-control-padding-x-sm/md/lg</code></td></tr>
+        <tr><td>padding-y (sm)</td><td><code>semantic.space.control.padding-y.sm</code></td><td><code>--ds-space-control-padding-y-sm</code> (8px)</td></tr>
+        <tr><td>padding-y (md)</td><td><code>semantic.space.control.padding-y.md</code></td><td><code>--ds-space-control-padding-y-md</code> (10px, was 12px)</td></tr>
+        <tr><td>padding-y (lg)</td><td><code>semantic.space.control.padding-y.lg</code></td><td><code>--ds-space-control-padding-y-lg</code> (12px, was 16px)</td></tr>
+        <tr><td>font-size (sm)</td><td><code>semantic.typography.control.font-size.sm</code></td><td><code>--ds-typography-control-font-size-sm</code></td></tr>
+        <tr><td>font-size (md)</td><td><code>semantic.typography.control.font-size.md</code></td><td><code>--ds-typography-control-font-size-md</code></td></tr>
+        <tr><td>font-size (lg)</td><td><code>semantic.typography.control.font-size.lg</code></td><td><code>--ds-typography-control-font-size-lg</code></td></tr>
         <tr><td>min-height (sm)</td><td>--</td><td><code>80px</code></td></tr>
         <tr><td>min-height (md)</td><td>--</td><td><code>120px</code></td></tr>
         <tr><td>min-height (lg)</td><td>--</td><td><code>160px</code></td></tr>
@@ -491,6 +499,9 @@
         <tr><td>counter color (over)</td><td><code>semantic.feedback.error.text</code></td><td><code>--ds-feedback-error-text</code></td></tr>
       </tbody>
     </table>
+    <p style="margin-top:var(--ds-spacing-2);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
+      <strong>Note:</strong> Height and line-height remain independent of the shared control token system. Textarea is multi-line, so it uses <code>min-height</code> per size rather than the fixed <code>semantic.size.control.*</code> heights used by single-line controls (Button, Input, Select).
+    </p>
   </div>
 
   <!-- ============================================================
