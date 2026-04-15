@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Changelog — Design System</title>
+  <link rel="stylesheet" href="../css/design-system.css">
+  <link rel="stylesheet" href="layout.css">
+  <style>
+    .ds-changelog { margin-bottom: var(--ds-spacing-16); }
+    .ds-changelog__version { display: flex; align-items: baseline; gap: var(--ds-spacing-3); margin-bottom: var(--ds-spacing-2); }
+    .ds-changelog__tag { font-size: var(--ds-font-size-sm); font-weight: var(--ds-font-weight-semibold); padding: var(--ds-spacing-0-5) var(--ds-spacing-2); border-radius: var(--ds-radius-sm); background-color: var(--ds-color-primary-subtle); color: var(--ds-color-primary-text); font-family: var(--ds-font-family-mono); }
+    .ds-changelog__date { font-size: var(--ds-font-size-sm); color: var(--ds-text-tertiary); }
+    .ds-changelog__summary { font-size: var(--ds-font-size-md); color: var(--ds-text-secondary); margin-bottom: var(--ds-spacing-4); line-height: var(--ds-line-height-relaxed); }
+    .ds-changelog__group { margin-bottom: var(--ds-spacing-6); }
+    .ds-changelog__group-title { font-size: var(--ds-font-size-sm); font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-2); display: inline-flex; align-items: center; gap: var(--ds-spacing-2); }
+    .ds-changelog__badge { font-size: 11px; font-weight: var(--ds-font-weight-semibold); padding: 1px var(--ds-spacing-1-5); border-radius: var(--ds-radius-sm); text-transform: uppercase; letter-spacing: var(--ds-letter-spacing-wider); }
+    .ds-changelog__badge--added { background-color: var(--ds-feedback-success-background); color: var(--ds-feedback-success-text); }
+    .ds-changelog__badge--changed { background-color: var(--ds-feedback-info-background); color: var(--ds-feedback-info-text); }
+    .ds-changelog__badge--fixed { background-color: var(--ds-feedback-warning-background); color: var(--ds-feedback-warning-text); }
+    .ds-changelog__badge--removed { background-color: var(--ds-feedback-error-background); color: var(--ds-feedback-error-text); }
+    .ds-changelog__list { list-style: none; padding: 0; margin: 0; }
+    .ds-changelog__list li { font-size: var(--ds-font-size-sm); color: var(--ds-text-default); padding: var(--ds-spacing-1-5) 0; border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); line-height: var(--ds-line-height-relaxed); }
+    .ds-changelog__list li:last-child { border-bottom: none; }
+    .ds-changelog__list code { font-size: var(--ds-font-size-xs); font-family: var(--ds-font-family-mono); background-color: var(--ds-background-muted); padding: 1px var(--ds-spacing-1); border-radius: var(--ds-radius-sm); }
+    .ds-changelog__divider { border: none; border-top: var(--ds-border-width-1) solid var(--ds-border-default); margin: var(--ds-spacing-10) 0; }
+  </style>
+</head>
+<body>
+
+<header class="ds-site-header">
+  <div style="display:flex;align-items:center;gap:var(--ds-spacing-4)">
+    <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <a href="../index.html" class="ds-site-header__brand">
+      <div class="ds-site-header__logo">DS</div>
+      <span class="ds-site-header__title">Design System</span>
+    </a>
+  </div>
+  <div class="ds-site-header__actions">
+    <div class="ds-theme-switcher">
+      <label class="ds-theme-switcher__label" for="theme-switcher">Theme</label>
+      <select class="ds-theme-switcher__select" id="theme-switcher">
+        <option value="default">Default (Blue)</option>
+        <option value="ocean">Ocean (Cyan)</option>
+        <option value="forest">Forest (Emerald)</option>
+      </select>
+    </div>
+    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode">Dark</button>
+  </div>
+</header>
+<div class="ds-sidebar-overlay" id="sidebar-overlay"></div>
+
+<nav class="ds-sidebar" id="sidebar" aria-label="Main navigation">
+  <div class="ds-sidebar__section">
+    <h2 class="ds-sidebar__heading">Overview</h2>
+    <ul class="ds-sidebar__nav">
+      <li><a href="../index.html" class="ds-sidebar__link">Getting Started</a></li>
+      <li><a href="token-architecture.html" class="ds-sidebar__link">Token Architecture</a></li>
+      <li><a href="design-principles.html" class="ds-sidebar__link">Design Principles</a></li>
+      <li><a href="changelog.html" class="ds-sidebar__link ds-sidebar__link--active">Changelog</a></li>
+    </ul>
+  </div>
+  <div class="ds-sidebar__section">
+    <h2 class="ds-sidebar__heading">Foundations</h2>
+    <ul class="ds-sidebar__nav">
+      <li><a href="foundations.html" class="ds-sidebar__link">Overview</a></li>
+      <li><a href="foundations-colors.html" class="ds-sidebar__link">Colors</a></li>
+      <li><a href="foundations-theme-colors.html" class="ds-sidebar__link">Theme Colors</a></li>
+      <li><a href="foundations-typography.html" class="ds-sidebar__link">Typography</a></li>
+      <li><a href="foundations-spacing.html" class="ds-sidebar__link">Spacing</a></li>
+      <li><a href="foundations-radius.html" class="ds-sidebar__link">Radius</a></li>
+      <li><a href="foundations-elevation.html" class="ds-sidebar__link">Elevation</a></li>
+      <li><a href="foundations-borders.html" class="ds-sidebar__link">Borders</a></li>
+      <li><a href="foundations-motion.html" class="ds-sidebar__link">Motion</a></li>
+      <li><a href="foundations-opacity.html" class="ds-sidebar__link">Opacity</a></li>
+      <li><a href="foundations-zindex.html" class="ds-sidebar__link">Z-index</a></li>
+    </ul>
+  </div>
+  <div class="ds-sidebar__section">
+    <h2 class="ds-sidebar__heading">Components</h2>
+    <ul class="ds-sidebar__nav">
+      <li><a href="button.html" class="ds-sidebar__link">Button</a></li>
+      <li><a href="input.html" class="ds-sidebar__link">Input</a></li>
+      <li><a href="textarea.html" class="ds-sidebar__link">Textarea</a></li>
+      <li><a href="select.html" class="ds-sidebar__link">Select</a></li>
+      <li><a href="checkbox.html" class="ds-sidebar__link">Checkbox</a></li>
+      <li><a href="radio.html" class="ds-sidebar__link">Radio</a></li>
+      <li><a href="toggle.html" class="ds-sidebar__link">Toggle</a></li>
+      <li><a href="badge.html" class="ds-sidebar__link">Badge</a></li>
+      <li><a href="alert.html" class="ds-sidebar__link">Alert</a></li>
+      <li><a href="card.html" class="ds-sidebar__link">Card</a></li>
+      <li><a href="modal.html" class="ds-sidebar__link">Modal</a></li>
+      <li><a href="tooltip.html" class="ds-sidebar__link">Tooltip</a></li>
+      <li><a href="tabs.html" class="ds-sidebar__link">Tabs</a></li>
+      <li><a href="breadcrumb.html" class="ds-sidebar__link">Breadcrumb</a></li>
+      <li><a href="avatar.html" class="ds-sidebar__link">Avatar</a></li>
+      <li><a href="divider.html" class="ds-sidebar__link">Divider</a></li>
+      <li><a href="spinner.html" class="ds-sidebar__link">Spinner</a></li>
+      <li><a href="skeleton.html" class="ds-sidebar__link">Skeleton</a></li>
+      <li><a href="form-field.html" class="ds-sidebar__link">Form Field</a></li>
+    </ul>
+  </div>
+  <div class="ds-sidebar__section">
+    <h2 class="ds-sidebar__heading">Guidelines</h2>
+    <ul class="ds-sidebar__nav">
+      <li><a href="theming.html" class="ds-sidebar__link">Theming</a></li>
+      <li><a href="accessibility.html" class="ds-sidebar__link">Accessibility</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="ds-main">
+  <div class="ds-section">
+    <h1 class="ds-section__title">Changelog</h1>
+    <p class="ds-section__subtitle">Notable changes to the design system. Follows <a href="https://keepachangelog.com/" style="color:var(--ds-text-link-default)">Keep a Changelog</a> conventions.</p>
+  </div>
+
+  <!-- ============================================================
+       v0.5.0
+       ============================================================ -->
+  <div class="ds-changelog">
+    <div class="ds-changelog__version">
+      <span class="ds-changelog__tag">v0.5.0</span>
+      <span class="ds-changelog__date">2026-04-15</span>
+    </div>
+    <p class="ds-changelog__summary">Documentation overhaul. All 19 component pages rewritten with expanded template. New foundation pages and structural pages added.</p>
+
+    <div class="ds-changelog__group">
+      <div class="ds-changelog__group-title"><span class="ds-changelog__badge ds-changelog__badge--added">added</span></div>
+      <ul class="ds-changelog__list">
+        <li>Token Architecture page — 3-layer diagram, alias chain walkthrough, naming convention, cross-format mapping</li>
+        <li>Changelog page (this page)</li>
+        <li>Foundation pages: Motion (7 tokens), Opacity (7 tokens), Z-index (6 tokens)</li>
+        <li>Expanded component template with 10 new sections: when to use, anatomy, best practices (do/don't), content guidelines, token mapping, keyboard interaction, WCAG table, Figma properties, related components</li>
+        <li>All 19 component pages rewritten using the expanded template (+5,000 lines)</li>
+        <li>Do/don't blocks with live component previews across all components</li>
+      </ul>
+    </div>
+
+    <div class="ds-changelog__group">
+      <div class="ds-changelog__group-title"><span class="ds-changelog__badge ds-changelog__badge--fixed">fixed</span></div>
+      <ul class="ds-changelog__list">
+        <li>Focus ring implementation in <code>accessibility.html</code> corrected from <code>box-shadow</code> to <code>outline</code> + <code>outline-offset</code> (aligns with ADR-005)</li>
+        <li>Removed incorrect focus ring section from <code>elevation.html</code></li>
+        <li>Component count on home page corrected to 19</li>
+      </ul>
+    </div>
+
+    <div class="ds-changelog__group">
+      <div class="ds-changelog__group-title"><span class="ds-changelog__badge ds-changelog__badge--changed">changed</span></div>
+      <ul class="ds-changelog__list">
+        <li>Sidebar updated across all 34 pages — added Motion, Opacity, Z-index, Token Architecture, Changelog links</li>
+        <li>Foundations overview: 3 new cards (Motion, Opacity, Z-index) — now 10 total</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr class="ds-changelog__divider">
+
+  <!-- ============================================================
+       v0.4.0
+       ============================================================ -->
+  <div class="ds-changelog">
+    <div class="ds-changelog__version">
+      <span class="ds-changelog__tag">v0.4.0</span>
+      <span class="ds-changelog__date">2026-04-14</span>
+    </div>
+    <p class="ds-changelog__summary">Component token layer and Figma variable alignment.</p>
+
+    <div class="ds-changelog__group">
+      <div class="ds-changelog__group-title"><span class="ds-changelog__badge ds-changelog__badge--added">added</span></div>
+      <ul class="ds-changelog__list">
+        <li>Component token JSON files: <code>button.json</code>, <code>input.json</code>, <code>textarea.json</code>, <code>select.json</code>, <code>checkbox.json</code>, <code>radio.json</code>, <code>toggle.json</code>, <code>badge.json</code>, <code>alert.json</code>, <code>card.json</code>, <code>modal.json</code> (118 tokens total)</li>
+        <li>Figma Variables reconciled across 4 collections (Foundation, Brand, Semantic, Component)</li>
+        <li>Style Dictionary build script (<code>build-tokens.mjs</code>) generating CSS in <code>css/tokens/generated/</code></li>
+        <li>Form Field component (<code>ds-field</code>) with label, helper text, required indicator, error message, character counter</li>
+      </ul>
+    </div>
+
+    <div class="ds-changelog__group">
+      <div class="ds-changelog__group-title"><span class="ds-changelog__badge ds-changelog__badge--changed">changed</span></div>
+      <ul class="ds-changelog__list">
+        <li>Token architecture target formalized: Foundation → Semantic → Component (ADR-001, ADR-005)</li>
+        <li><code>-default</code> suffix rule enforced: all <code>.default</code> tokens generate <code>-default</code> in CSS</li>
+        <li>Focus ring migrated from <code>box-shadow</code> to <code>outline</code> + <code>outline-offset</code> approach (ADR-005)</li>
+        <li>Brand sublayer formalized: 2 tokens (primary, secondary), no states, swappable per theme</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr class="ds-changelog__divider">
+
+  <!-- ============================================================
+       v0.3.0
+       ============================================================ -->
+  <div class="ds-changelog">
+    <div class="ds-changelog__version">
+      <span class="ds-changelog__tag">v0.3.0</span>
+      <span class="ds-changelog__date">2026-03</span>
+    </div>
+    <p class="ds-changelog__summary">Full component library and documentation site launch.</p>
+
+    <div class="ds-changelog__group">
+      <div class="ds-changelog__group-title"><span class="ds-changelog__badge ds-changelog__badge--added">added</span></div>
+      <ul class="ds-changelog__list">
+        <li>18 components implemented in CSS: Button, Input, Textarea, Select, Checkbox, Radio, Toggle, Badge, Alert, Card, Modal, Tooltip, Tabs, Breadcrumb, Avatar, Divider, Spinner, Skeleton</li>
+        <li>Documentation site with live previews, code blocks, theme switcher, dark mode toggle</li>
+        <li>Foundation pages: Colors, Theme Colors, Typography, Spacing, Radius, Elevation, Borders</li>
+        <li>Guidelines: Theming, Accessibility</li>
+        <li>3 themes: Default (Blue/Purple), Ocean (Cyan/Indigo), Forest (Emerald/Amber)</li>
+        <li>Light/dark mode with semantic token remapping</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr class="ds-changelog__divider">
+
+  <!-- ============================================================
+       v0.2.0
+       ============================================================ -->
+  <div class="ds-changelog">
+    <div class="ds-changelog__version">
+      <span class="ds-changelog__tag">v0.2.0</span>
+      <span class="ds-changelog__date">2026-02</span>
+    </div>
+    <p class="ds-changelog__summary">Semantic token layer and Figma variables.</p>
+
+    <div class="ds-changelog__group">
+      <div class="ds-changelog__group-title"><span class="ds-changelog__badge ds-changelog__badge--added">added</span></div>
+      <ul class="ds-changelog__list">
+        <li>94 semantic tokens (Theme layer) with Light/Dark mode values</li>
+        <li>Figma Variables: 3 collections (Foundation, Brand, Theme) with mode support</li>
+        <li>24 text styles: display, heading, body, label, caption, overline, code (Inter + DM Mono)</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr class="ds-changelog__divider">
+
+  <!-- ============================================================
+       v0.1.0
+       ============================================================ -->
+  <div class="ds-changelog">
+    <div class="ds-changelog__version">
+      <span class="ds-changelog__tag">v0.1.0</span>
+      <span class="ds-changelog__date">2026-01</span>
+    </div>
+    <p class="ds-changelog__summary">Initial foundation tokens and project setup.</p>
+
+    <div class="ds-changelog__group">
+      <div class="ds-changelog__group-title"><span class="ds-changelog__badge ds-changelog__badge--added">added</span></div>
+      <ul class="ds-changelog__list">
+        <li>Foundation tokens: 10 color palettes (50-950 scale), spacing (20 steps), radius (8 tokens), shadows, opacity, motion, stroke, z-index</li>
+        <li>CSS custom properties (<code>--ds-*</code>) for all foundation tokens</li>
+        <li>Base reset with Inter + DM Mono font loading</li>
+        <li>Repository structure: <code>css/</code>, <code>docs/</code>, <code>js/</code></li>
+      </ul>
+    </div>
+  </div>
+
+</main>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
