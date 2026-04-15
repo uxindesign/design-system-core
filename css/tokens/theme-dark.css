@@ -111,4 +111,37 @@
   --ds-state-pressed:             rgba(255, 255, 255, 0.1);
   --ds-state-disabled-background: var(--ds-color-neutral-800);
   --ds-state-disabled-foreground: var(--ds-color-neutral-600);
+
+  /* Control tokens (same values as light — mode-invariant) */
+  --ds-space-control-padding-x-sm: var(--ds-spacing-3);
+  --ds-space-control-padding-x-md: var(--ds-spacing-4);
+  --ds-space-control-padding-x-lg: var(--ds-spacing-5);
+  --ds-space-control-padding-y-sm: var(--ds-spacing-2);
+  --ds-space-control-padding-y-md: 0.625rem;
+  --ds-space-control-padding-y-lg: var(--ds-spacing-3);
+  --ds-size-control-sm:          2rem;
+  --ds-size-control-md:          2.5rem;
+  --ds-size-control-lg:          3rem;
+  --ds-size-control-icon-sm:     1rem;
+  --ds-size-control-icon-md:     1.25rem;
+  --ds-size-control-icon-lg:     1.5rem;
+  --ds-size-control-min-target:  2.75rem;
+  --ds-control-font-size-sm:     var(--ds-font-size-sm);
+  --ds-control-font-size-md:     var(--ds-font-size-sm);
+  --ds-control-font-size-lg:     var(--ds-font-size-md);
+  --ds-control-line-height-sm:   1rem;
+  --ds-control-line-height-md:   1.25rem;
+  --ds-control-line-height-lg:   1.5rem;
+
+  /* Toned + disabled per-style (dark values) */
+  --ds-color-primary-toned-default:  rgba(96, 165, 250, 0.15);
+  --ds-color-primary-toned-hover:    rgba(96, 165, 250, 0.25);
+  --ds-color-primary-toned-active:   rgba(96, 165, 250, 0.32);
+  --ds-color-primary-disabled:       #4F637D;
+  --ds-color-primary-disabled-fg:    rgba(255, 255, 255, 0.60);
+  --ds-feedback-success-disabled:    #486E55;
+  --ds-feedback-success-disabled-fg: rgba(255, 255, 255, 0.60);
+  --ds-feedback-error-disabled:      #7B5050;
+  --ds-feedback-error-disabled-fg:   rgba(255, 255, 255, 0.60);
+  --ds-border-focus-error:           var(--ds-color-red-400);
 }
