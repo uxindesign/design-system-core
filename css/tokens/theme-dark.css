@@ -106,6 +106,7 @@
   --ds-focus-ring-color: var(--ds-color-primary-default);
 
   /* State */
+  --ds-state-focus:               var(--ds-color-primary-default);
   --ds-state-hover:               rgba(255, 255, 255, 0.05);
   --ds-state-pressed:             rgba(255, 255, 255, 0.1);
   --ds-state-disabled-background: var(--ds-color-neutral-800);

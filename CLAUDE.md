@@ -7,7 +7,7 @@ Design system white-label com tokens semânticos, 18 componentes, modos Light/Da
 - **CSS** — este repositório (`uxindesign/design-system-core`, branch `main`)
 - **Figma** — https://www.figma.com/design/PRYS2kL7VdC1MtVWfZvuDN
 
-Site de documentação: https://uxindesign.github.io/design-system-core/docs/index.html
+Site de documentação: https://uxindesign.github.io/design-system-core/
 
 ---
 
