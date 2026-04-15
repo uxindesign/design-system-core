@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Token Architecture — Design System</title>
+  <link rel="stylesheet" href="../css/design-system.css">
+  <link rel="stylesheet" href="layout.css">
+  <style>
+    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-sm); margin-bottom: var(--ds-spacing-8); }
+    .ds-token-table th { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-text-secondary); }
+    .ds-token-table td { padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: top; }
+    .ds-token-table code { font-size: var(--ds-font-size-xs); font-family: var(--ds-font-family-mono); }
+    .ds-callout { padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-6); font-size: var(--ds-font-size-sm); line-height: var(--ds-line-height-relaxed); color: var(--ds-text-default); }
+    .ds-callout--info { background-color: var(--ds-feedback-info-background); border: var(--ds-border-width-1) solid var(--ds-feedback-info-border); }
+    .ds-callout--warning { background-color: var(--ds-feedback-warning-background); border: var(--ds-border-width-1) solid var(--ds-feedback-warning-border); }
+    .ds-callout__title { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-1); }
+    .ds-code-block { background-color: var(--ds-color-neutral-900); color: var(--ds-color-neutral-200); padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); font-family: var(--ds-font-family-mono); font-size: var(--ds-font-size-xs); line-height: var(--ds-line-height-relaxed); overflow-x: auto; margin-bottom: var(--ds-spacing-6); white-space: pre; }
+    /* Architecture diagram */
+    .ds-arch { display: flex; gap: var(--ds-spacing-4); margin-bottom: var(--ds-spacing-8); flex-wrap: wrap; }
+    .ds-arch__layer { flex: 1; min-width: 220px; border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg); overflow: hidden; }
+    .ds-arch__header { padding: var(--ds-spacing-3) var(--ds-spacing-4); font-weight: var(--ds-font-weight-semibold); font-size: var(--ds-font-size-sm); }
+    .ds-arch__header--fdn { background-color: var(--ds-color-primary-muted); color: var(--ds-color-primary-text); border-bottom: 2px solid var(--ds-color-primary-default); }
+    .ds-arch__header--sem { background-color: var(--ds-feedback-info-background); color: var(--ds-feedback-info-text); border-bottom: 2px solid var(--ds-feedback-info-default); }
+    .ds-arch__header--cmp { background-color: var(--ds-feedback-success-background); color: var(--ds-feedback-success-text); border-bottom: 2px solid var(--ds-feedback-success-default); }
+    .ds-arch__body { padding: var(--ds-spacing-4); font-size: var(--ds-font-size-xs); color: var(--ds-text-secondary); line-height: var(--ds-line-height-relaxed); }
+    .ds-arch__body code { font-family: var(--ds-font-family-mono); color: var(--ds-text-default); }
+    .ds-arch__arrow { display: flex; align-items: center; justify-content: center; font-size: var(--ds-font-size-xl); color: var(--ds-text-tertiary); min-width: 32px; }
+    /* Chain */
+    .ds-chain { background-color: var(--ds-background-subtle); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg); padding: var(--ds-spacing-5); margin-bottom: var(--ds-spacing-8); font-family: var(--ds-font-family-mono); font-size: var(--ds-font-size-xs); line-height: var(--ds-line-height-loose); }
+    .ds-chain__step { display: flex; align-items: center; gap: var(--ds-spacing-3); margin-bottom: var(--ds-spacing-2); }
+    .ds-chain__badge { padding: var(--ds-spacing-0-5) var(--ds-spacing-2); border-radius: var(--ds-radius-sm); font-size: 10px; font-weight: var(--ds-font-weight-semibold); text-transform: uppercase; letter-spacing: var(--ds-letter-spacing-wider); font-family: var(--ds-font-family-sans); flex-shrink: 0; }
+    .ds-chain__badge--fdn { background-color: var(--ds-color-primary-muted); color: var(--ds-color-primary-text); }
+    .ds-chain__badge--brand { background-color: var(--ds-color-secondary-muted, var(--ds-color-primary-muted)); color: var(--ds-color-secondary-text, var(--ds-color-primary-text)); }
+    .ds-chain__badge--sem { background-color: var(--ds-feedback-info-background); color: var(--ds-feedback-info-text); }
+    .ds-chain__badge--cmp { background-color: var(--ds-feedback-success-background); color: var(--ds-feedback-success-text); }
+    .ds-chain__arrow { color: var(--ds-text-tertiary); }
+  </style>
+</head>
+<body>
+
+<header class="ds-site-header">
+  <div style="display:flex;align-items:center;gap:var(--ds-spacing-4)">
+    <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <a href="../index.html" class="ds-site-header__brand">
+      <div class="ds-site-header__logo">DS</div>
+      <span class="ds-site-header__title">Design System</span>
+    </a>
+  </div>
+  <div class="ds-site-header__actions">
+    <div class="ds-theme-switcher">
+      <label class="ds-theme-switcher__label" for="theme-switcher">Theme</label>
+      <select class="ds-theme-switcher__select" id="theme-switcher">
+        <option value="default">Default (Blue)</option>
+        <option value="ocean">Ocean (Cyan)</option>
+        <option value="forest">Forest (Emerald)</option>
+      </select>
+    </div>
+    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode">Dark</button>
+  </div>
+</header>
+<div class="ds-sidebar-overlay" id="sidebar-overlay"></div>
+
+<nav class="ds-sidebar" id="sidebar" aria-label="Main navigation">
+  <div class="ds-sidebar__section">
+    <h2 class="ds-sidebar__heading">Overview</h2>
+    <ul class="ds-sidebar__nav">
+      <li><a href="../index.html" class="ds-sidebar__link">Getting Started</a></li>
+      <li><a href="token-architecture.html" class="ds-sidebar__link ds-sidebar__link--active">Token Architecture</a></li>
+    </ul>
+  </div>
+  <div class="ds-sidebar__section">
+    <h2 class="ds-sidebar__heading">Foundations</h2>
+    <ul class="ds-sidebar__nav">
+      <li><a href="foundations.html" class="ds-sidebar__link">Overview</a></li>
+      <li><a href="foundations-colors.html" class="ds-sidebar__link">Colors</a></li>
+      <li><a href="foundations-theme-colors.html" class="ds-sidebar__link">Theme Colors</a></li>
+      <li><a href="foundations-typography.html" class="ds-sidebar__link">Typography</a></li>
+      <li><a href="foundations-spacing.html" class="ds-sidebar__link">Spacing</a></li>
+      <li><a href="foundations-radius.html" class="ds-sidebar__link">Radius</a></li>
+      <li><a href="foundations-elevation.html" class="ds-sidebar__link">Elevation</a></li>
+      <li><a href="foundations-borders.html" class="ds-sidebar__link">Borders</a></li>
+      <li><a href="foundations-motion.html" class="ds-sidebar__link">Motion</a></li>
+      <li><a href="foundations-opacity.html" class="ds-sidebar__link">Opacity</a></li>
+      <li><a href="foundations-zindex.html" class="ds-sidebar__link">Z-index</a></li>
+    </ul>
+  </div>
+  <div class="ds-sidebar__section">
+    <h2 class="ds-sidebar__heading">Components</h2>
+    <ul class="ds-sidebar__nav">
+      <li><a href="button.html" class="ds-sidebar__link">Button</a></li>
+      <li><a href="input.html" class="ds-sidebar__link">Input</a></li>
+      <li><a href="textarea.html" class="ds-sidebar__link">Textarea</a></li>
+      <li><a href="select.html" class="ds-sidebar__link">Select</a></li>
+      <li><a href="checkbox.html" class="ds-sidebar__link">Checkbox</a></li>
+      <li><a href="radio.html" class="ds-sidebar__link">Radio</a></li>
+      <li><a href="toggle.html" class="ds-sidebar__link">Toggle</a></li>
+      <li><a href="badge.html" class="ds-sidebar__link">Badge</a></li>
+      <li><a href="alert.html" class="ds-sidebar__link">Alert</a></li>
+      <li><a href="card.html" class="ds-sidebar__link">Card</a></li>
+      <li><a href="modal.html" class="ds-sidebar__link">Modal</a></li>
+      <li><a href="tooltip.html" class="ds-sidebar__link">Tooltip</a></li>
+      <li><a href="tabs.html" class="ds-sidebar__link">Tabs</a></li>
+      <li><a href="breadcrumb.html" class="ds-sidebar__link">Breadcrumb</a></li>
+      <li><a href="avatar.html" class="ds-sidebar__link">Avatar</a></li>
+      <li><a href="divider.html" class="ds-sidebar__link">Divider</a></li>
+      <li><a href="spinner.html" class="ds-sidebar__link">Spinner</a></li>
+      <li><a href="skeleton.html" class="ds-sidebar__link">Skeleton</a></li>
+      <li><a href="form-field.html" class="ds-sidebar__link">Form Field</a></li>
+    </ul>
+  </div>
+  <div class="ds-sidebar__section">
+    <h2 class="ds-sidebar__heading">Guidelines</h2>
+    <ul class="ds-sidebar__nav">
+      <li><a href="theming.html" class="ds-sidebar__link">Theming</a></li>
+      <li><a href="accessibility.html" class="ds-sidebar__link">Accessibility</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="ds-main">
+  <div class="ds-section">
+    <h1 class="ds-section__title">Token Architecture</h1>
+    <p class="ds-section__subtitle">Design tokens are organized in three layers. Each layer has a specific role, and tokens in one layer reference the layer below — never the other way around.</p>
+  </div>
+
+  <!-- ============================================================
+       THREE LAYERS
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Three layers</h2>
+
+    <div class="ds-arch">
+      <div class="ds-arch__layer">
+        <div class="ds-arch__header ds-arch__header--fdn">Foundation</div>
+        <div class="ds-arch__body">
+          Raw values. The only layer with absolute values (hex, rem, px).<br><br>
+          <code>foundation.color.blue.600</code> → <code>#2563EB</code><br>
+          <code>foundation.spacing.4</code> → <code>1rem</code><br>
+          <code>foundation.radius.md</code> → <code>8px</code><br><br>
+          ~217 tokens across 10 categories.
+        </div>
+      </div>
+      <div class="ds-arch__arrow">→</div>
+      <div class="ds-arch__layer">
+        <div class="ds-arch__header ds-arch__header--sem">Semantic</div>
+        <div class="ds-arch__body">
+          Intent and meaning. References foundation via aliases. Mode-aware (light/dark).<br><br>
+          <code>semantic.color.primary.default</code> → <code>{foundation.brand.primary}</code><br>
+          <code>semantic.text.default</code> → <code>{foundation.color.neutral.900}</code> (light)<br>
+          <code>semantic.text.default</code> → <code>{foundation.color.neutral.50}</code> (dark)<br><br>
+          ~104 tokens × 2 modes.
+        </div>
+      </div>
+      <div class="ds-arch__arrow">→</div>
+      <div class="ds-arch__layer">
+        <div class="ds-arch__header ds-arch__header--cmp">Component</div>
+        <div class="ds-arch__body">
+          Per-component tokens. References semantic, never foundation.<br><br>
+          <code>component.button.background.brand.default</code> → <code>{semantic.color.primary.default}</code><br>
+          <code>component.button.padding.md</code> → <code>{semantic.space.inset.md}</code><br><br>
+          118 tokens across 11 component files.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       ALIAS CHAIN EXAMPLE
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">How an alias chain works</h2>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
+      When you press a Brand button, its background color resolves through this chain:
+    </p>
+
+    <div class="ds-chain">
+      <div class="ds-chain__step">
+        <span class="ds-chain__badge ds-chain__badge--cmp">component</span>
+        <code>button.background.brand.default</code>
+      </div>
+      <div class="ds-chain__step">
+        <span style="width:54px;display:inline-block"></span>
+        <span class="ds-chain__arrow">↓ references</span>
+      </div>
+      <div class="ds-chain__step">
+        <span class="ds-chain__badge ds-chain__badge--sem">semantic</span>
+        <code>semantic.color.primary.default</code>
+      </div>
+      <div class="ds-chain__step">
+        <span style="width:54px;display:inline-block"></span>
+        <span class="ds-chain__arrow">↓ references</span>
+      </div>
+      <div class="ds-chain__step">
+        <span class="ds-chain__badge ds-chain__badge--brand">brand</span>
+        <code>foundation.brand.primary</code>
+      </div>
+      <div class="ds-chain__step">
+        <span style="width:54px;display:inline-block"></span>
+        <span class="ds-chain__arrow">↓ references</span>
+      </div>
+      <div class="ds-chain__step">
+        <span class="ds-chain__badge ds-chain__badge--fdn">foundation</span>
+        <code>foundation.color.blue.600</code> → <strong>#2563EB</strong>
+      </div>
+    </div>
+
+    <p style="color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);margin-bottom:var(--ds-spacing-4);">
+      To rebrand, you swap <code>brand.json</code>. The entire chain updates: every component that uses <code>primary.default</code> gets the new color without touching any other file.
+    </p>
+  </div>
+
+  <!-- ============================================================
+       BRAND SUBLAYER
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Brand sublayer</h2>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
+      Brand sits inside Foundation as a bridge between palette and intent. It has only 2 tokens — no states, no modes.
+    </p>
+
+<div class="ds-code-block">{
+  "foundation": {
+    "brand": {
+      "primary":   { "$value": "{foundation.color.blue.600}" },
+      "secondary": { "$value": "{foundation.color.purple.600}" }
+    }
+  }
+}</div>
+
+    <p style="color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
+      Only <code>semantic.color.primary.default</code> references <code>foundation.brand.primary</code>. All other states (hover, active, subtle) reference the foundation palette directly, because state shifts need specific palette steps that don't follow a formula.
+    </p>
+  </div>
+
+  <!-- ============================================================
+       NAMING CONVENTION
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Naming convention</h2>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
+      Canonical pattern: <code>{layer}.{category}.{type}.{variant}.{state}</code>
+    </p>
+    <table class="ds-token-table">
+      <thead><tr><th>Format</th><th>Example</th><th>Where</th></tr></thead>
+      <tbody>
+        <tr><td>JSON path</td><td><code>foundation.color.blue.500</code></td><td>Source files (<code>tokens/</code>)</td></tr>
+        <tr><td>CSS custom property</td><td><code>--ds-color-blue-500</code></td><td>Generated by Style Dictionary</td></tr>
+        <tr><td>Figma variable</td><td><code>color/blue/500</code></td><td>Figma Variables panel</td></tr>
+      </tbody>
+    </table>
+
+    <div class="ds-callout ds-callout--warning">
+      <div class="ds-callout__title">The <code>-default</code> suffix rule</div>
+      Every token ending in <code>.default</code> generates <code>-default</code> in CSS. No exceptions, no collapsing. <code>semantic.color.primary.default</code> becomes <code>--ds-color-primary-default</code>, not <code>--ds-color-primary</code>.
+    </div>
+  </div>
+
+  <!-- ============================================================
+       LIGHT/DARK MODE
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Light/dark mode</h2>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
+      Semantic tokens have the same keys in both modes but different values. Foundation and component tokens are mode-invariant.
+    </p>
+    <table class="ds-token-table">
+      <thead><tr><th>Token</th><th>Light value</th><th>Dark value</th></tr></thead>
+      <tbody>
+        <tr><td><code>background.default</code></td><td>white</td><td>neutral-950</td></tr>
+        <tr><td><code>text.default</code></td><td>neutral-900</td><td>neutral-50</td></tr>
+        <tr><td><code>color.primary.default</code></td><td>brand.primary</td><td>brand.primary</td></tr>
+        <tr><td><code>color.primary.hover</code></td><td>blue-700</td><td>blue-300</td></tr>
+        <tr><td><code>state.hover</code></td><td>overlay-black-5</td><td>overlay-white-5</td></tr>
+        <tr><td><code>text.on-brand</code></td><td>white</td><td>neutral-900</td></tr>
+      </tbody>
+    </table>
+    <p style="color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
+      Mode-invariant tokens (same in both modes): all <code>space.*</code>, <code>radius.*</code>, <code>border.width.*</code>, <code>focus.ring.width</code>, <code>focus.ring.offset</code>.
+    </p>
+  </div>
+
+  <!-- ============================================================
+       RULES
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Rules</h2>
+    <table class="ds-token-table">
+      <thead><tr><th>#</th><th>Rule</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Component tokens reference semantic, never foundation. Exception: hover/active states that need a specific palette step.</td></tr>
+        <tr><td>2</td><td>Semantic tokens reference foundation, never hardcoded. No raw hex or rgba in the semantic layer.</td></tr>
+        <tr><td>3</td><td>Foundation is the only layer with absolute values.</td></tr>
+        <tr><td>4</td><td>Brand is part of foundation: 2 tokens (primary, secondary), no states, swappable per theme.</td></tr>
+        <tr><td>5</td><td>Every token has <code>$type</code> per DTCG spec.</td></tr>
+        <tr><td>6</td><td>Non-obvious tokens require <code>$description</code>.</td></tr>
+        <tr><td>7</td><td><code>light.json</code> and <code>dark.json</code> must have exactly the same key set.</td></tr>
+        <tr><td>8</td><td>New categories or hierarchy breaks require an ADR.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============================================================
+       CROSS-FORMAT MAPPING
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Cross-format mapping</h2>
+    <table class="ds-token-table">
+      <thead><tr><th>JSON (source of truth)</th><th>CSS (generated)</th><th>Figma Variables</th></tr></thead>
+      <tbody>
+        <tr><td><code>foundation.color.blue.500</code></td><td><code>--ds-color-blue-500</code></td><td><code>color/blue/500</code> (Foundation)</td></tr>
+        <tr><td><code>foundation.brand.primary</code></td><td><code>--ds-brand-primary</code></td><td><code>brand/primary</code> (Brand)</td></tr>
+        <tr><td><code>semantic.color.primary.default</code></td><td><code>--ds-color-primary-default</code></td><td><code>color/primary/default</code> (Semantic)</td></tr>
+        <tr><td><code>semantic.space.inset.md</code></td><td><code>--ds-space-inset-md</code></td><td><code>space/inset/md</code> (Semantic)</td></tr>
+        <tr><td><code>component.button.background.brand.default</code></td><td><code>--ds-button-bg-brand-default</code></td><td><code>button/background/brand/default</code> (Component)</td></tr>
+      </tbody>
+    </table>
+    <p style="color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
+      CSS generation is handled by Style Dictionary: direct path → name, no custom transforms.
+    </p>
+  </div>
+
+  <!-- ============================================================
+       TOKEN COUNTS
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Current token counts</h2>
+    <table class="ds-token-table">
+      <thead><tr><th>Layer</th><th>Tokens</th><th>Files</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Foundation</td><td>~217</td><td>10 JSON files (colors, brand, typography, spacing, radius, shadows, opacity, motion, stroke, z-index)</td><td>JSON + Figma vars</td></tr>
+        <tr><td>Semantic</td><td>~104 × 2 modes</td><td>light.json + dark.json</td><td>JSON + Figma vars</td></tr>
+        <tr><td>Brand</td><td>2</td><td>brand.json</td><td>JSON + Figma vars</td></tr>
+        <tr><td>Component</td><td>118</td><td>11 component files</td><td>JSON + Figma vars (binding pending)</td></tr>
+      </tbody>
+    </table>
+  </div>
+</main>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
