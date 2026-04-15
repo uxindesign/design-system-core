@@ -51,6 +51,9 @@
       <li><a href="foundations-radius.html" class="ds-sidebar__link">Radius</a></li>
       <li><a href="foundations-elevation.html" class="ds-sidebar__link">Elevation</a></li>
       <li><a href="foundations-borders.html" class="ds-sidebar__link">Borders</a></li>
+      <li><a href="foundations-motion.html" class="ds-sidebar__link">Motion</a></li>
+      <li><a href="foundations-opacity.html" class="ds-sidebar__link">Opacity</a></li>
+      <li><a href="foundations-zindex.html" class="ds-sidebar__link">Z-index</a></li>
     </ul>
   </div>
   <div class="ds-sidebar__section">
@@ -98,7 +101,7 @@
     <div class="ds-subsection">
       <h2 class="ds-subsection__title">Focus Management</h2>
       <p style="color:var(--ds-text-secondary);margin-bottom:var(--ds-spacing-4);line-height:var(--ds-line-height-relaxed);">
-        All interactive components use a double-ring focus indicator via the <code style="font-family:var(--ds-font-family-mono);background:var(--ds-background-subtle);padding:2px 6px;border-radius:var(--ds-radius-sm);">--ds-focus-ring</code> token. This approach ensures the focus ring is visible against any background color, meeting WCAG 2.2 Success Criterion 2.4.7 (Focus Visible).
+        All interactive components use an outline-based focus indicator via <code style="font-family:var(--ds-font-family-mono);background:var(--ds-background-subtle);padding:2px 6px;border-radius:var(--ds-radius-sm);">--ds-focus-ring-*</code> tokens. This approach ensures the focus ring is visible against any background color, meeting WCAG 2.2 Success Criterion 2.4.7 (Focus Visible).
       </p>
       <div class="ds-preview">
         <div class="ds-preview__tabs" role="tablist">
@@ -117,15 +120,16 @@
         <div class="ds-preview__panel" data-panel="code">
           <div class="ds-preview__code">
             <button class="ds-preview__copy" aria-label="Copy code">Copy</button>
-            <pre><code>/* Focus ring token — double ring for contrast */
---ds-focus-ring: 0 0 0 2px var(--ds-surface-default),
-                 0 0 0 4px var(--ds-color-primary-default);
+            <pre><code>/* Focus ring tokens */
+--ds-focus-ring-width: 2px;   /* outline stroke */
+--ds-focus-ring-offset: 2px;  /* gap between element and ring */
+--ds-focus-ring-color: var(--ds-color-primary-default);
 
 /* Applied via :focus-visible on all interactive elements */
 .ds-btn:focus-visible,
 .ds-input:focus-visible {
-  outline: none;
-  box-shadow: var(--ds-focus-ring);
+  outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color);
+  outline-offset: var(--ds-focus-ring-offset);
 }</code></pre>
           </div>
         </div>

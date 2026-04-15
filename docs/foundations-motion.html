@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Motion — Design System</title>
+  <link rel="stylesheet" href="../css/design-system.css">
+  <link rel="stylesheet" href="layout.css">
+  <style>
+    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-sm); margin-bottom: var(--ds-spacing-8); }
+    .ds-token-table th { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-text-secondary); }
+    .ds-token-table td { padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
+    .ds-token-table code { font-size: var(--ds-font-size-xs); font-family: var(--ds-font-family-mono); }
+    .ds-motion-demo { display: flex; align-items: center; gap: var(--ds-spacing-6); padding: var(--ds-spacing-6); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-4); background-color: var(--ds-background-default); }
+    .ds-motion-demo__box { width: 48px; height: 48px; border-radius: var(--ds-radius-md); background-color: var(--ds-color-primary-default); flex-shrink: 0; }
+    .ds-motion-demo__label { font-size: var(--ds-font-size-sm); color: var(--ds-text-secondary); min-width: 160px; }
+    .ds-motion-demo__track { flex: 1; height: 48px; background-color: var(--ds-background-subtle); border-radius: var(--ds-radius-md); position: relative; overflow: hidden; }
+    .ds-motion-demo__runner { width: 48px; height: 48px; border-radius: var(--ds-radius-md); background-color: var(--ds-color-primary-default); position: absolute; left: 0; top: 0; }
+    .ds-motion-demo:hover .ds-motion-demo__runner { left: calc(100% - 48px); }
+    .ds-motion-demo--fast .ds-motion-demo__runner { transition: left var(--ds-duration-fast) var(--ds-ease-default); }
+    .ds-motion-demo--normal .ds-motion-demo__runner { transition: left var(--ds-duration-normal) var(--ds-ease-default); }
+    .ds-motion-demo--slow .ds-motion-demo__runner { transition: left var(--ds-duration-slow) var(--ds-ease-default); }
+    .ds-motion-demo--ease-in .ds-motion-demo__runner { transition: left var(--ds-duration-normal) var(--ds-ease-in); }
+    .ds-motion-demo--ease-out .ds-motion-demo__runner { transition: left var(--ds-duration-normal) var(--ds-ease-out); }
+    .ds-motion-demo--ease-in-out .ds-motion-demo__runner { transition: left var(--ds-duration-normal) var(--ds-ease-in-out); }
+    .ds-callout { padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); background-color: var(--ds-feedback-info-background); border: var(--ds-border-width-1) solid var(--ds-feedback-info-border); margin-bottom: var(--ds-spacing-8); font-size: var(--ds-font-size-sm); line-height: var(--ds-line-height-relaxed); color: var(--ds-text-default); }
+    .ds-callout__title { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-1); }
+    .ds-code-block { background-color: var(--ds-color-neutral-900); color: var(--ds-color-neutral-200); padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); font-family: var(--ds-font-family-mono); font-size: var(--ds-font-size-xs); line-height: var(--ds-line-height-relaxed); overflow-x: auto; margin-bottom: var(--ds-spacing-6); white-space: pre; }
+  </style>
+</head>
+<body>
+
+<header class="ds-site-header">
+  <div style="display:flex;align-items:center;gap:var(--ds-spacing-4)">
+    <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <a href="../index.html" class="ds-site-header__brand">
+      <div class="ds-site-header__logo">DS</div>
+      <span class="ds-site-header__title">Design System</span>
+    </a>
+  </div>
+  <div class="ds-site-header__actions">
+    <div class="ds-theme-switcher">
+      <label class="ds-theme-switcher__label" for="theme-switcher">Theme</label>
+      <select class="ds-theme-switcher__select" id="theme-switcher">
+        <option value="default">Default (Blue)</option>
+        <option value="ocean">Ocean (Cyan)</option>
+        <option value="forest">Forest (Emerald)</option>
+      </select>
+    </div>
+    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode">Dark</button>
+  </div>
+</header>
+<div class="ds-sidebar-overlay" id="sidebar-overlay"></div>
+
+<nav class="ds-sidebar" id="sidebar" aria-label="Main navigation">
+  <div class="ds-sidebar__section">
+    <h2 class="ds-sidebar__heading">Overview</h2>
+    <ul class="ds-sidebar__nav">
+      <li><a href="../index.html" class="ds-sidebar__link">Getting Started</a></li>
+    </ul>
+  </div>
+  <div class="ds-sidebar__section">
+    <h2 class="ds-sidebar__heading">Foundations</h2>
+    <ul class="ds-sidebar__nav">
+      <li><a href="foundations.html" class="ds-sidebar__link">Overview</a></li>
+      <li><a href="foundations-colors.html" class="ds-sidebar__link">Colors</a></li>
+      <li><a href="foundations-theme-colors.html" class="ds-sidebar__link">Theme Colors</a></li>
+      <li><a href="foundations-typography.html" class="ds-sidebar__link">Typography</a></li>
+      <li><a href="foundations-spacing.html" class="ds-sidebar__link">Spacing</a></li>
+      <li><a href="foundations-radius.html" class="ds-sidebar__link">Radius</a></li>
+      <li><a href="foundations-elevation.html" class="ds-sidebar__link">Elevation</a></li>
+      <li><a href="foundations-borders.html" class="ds-sidebar__link">Borders</a></li>
+      <li><a href="foundations-motion.html" class="ds-sidebar__link ds-sidebar__link--active">Motion</a></li>
+      <li><a href="foundations-opacity.html" class="ds-sidebar__link">Opacity</a></li>
+      <li><a href="foundations-zindex.html" class="ds-sidebar__link">Z-index</a></li>
+    </ul>
+  </div>
+  <div class="ds-sidebar__section">
+    <h2 class="ds-sidebar__heading">Components</h2>
+    <ul class="ds-sidebar__nav">
+      <li><a href="button.html" class="ds-sidebar__link">Button</a></li>
+      <li><a href="input.html" class="ds-sidebar__link">Input</a></li>
+      <li><a href="textarea.html" class="ds-sidebar__link">Textarea</a></li>
+      <li><a href="select.html" class="ds-sidebar__link">Select</a></li>
+      <li><a href="checkbox.html" class="ds-sidebar__link">Checkbox</a></li>
+      <li><a href="radio.html" class="ds-sidebar__link">Radio</a></li>
+      <li><a href="toggle.html" class="ds-sidebar__link">Toggle</a></li>
+      <li><a href="badge.html" class="ds-sidebar__link">Badge</a></li>
+      <li><a href="alert.html" class="ds-sidebar__link">Alert</a></li>
+      <li><a href="card.html" class="ds-sidebar__link">Card</a></li>
+      <li><a href="modal.html" class="ds-sidebar__link">Modal</a></li>
+      <li><a href="tooltip.html" class="ds-sidebar__link">Tooltip</a></li>
+      <li><a href="tabs.html" class="ds-sidebar__link">Tabs</a></li>
+      <li><a href="breadcrumb.html" class="ds-sidebar__link">Breadcrumb</a></li>
+      <li><a href="avatar.html" class="ds-sidebar__link">Avatar</a></li>
+      <li><a href="divider.html" class="ds-sidebar__link">Divider</a></li>
+      <li><a href="spinner.html" class="ds-sidebar__link">Spinner</a></li>
+      <li><a href="skeleton.html" class="ds-sidebar__link">Skeleton</a></li>
+      <li><a href="form-field.html" class="ds-sidebar__link">Form Field</a></li>
+    </ul>
+  </div>
+  <div class="ds-sidebar__section">
+    <h2 class="ds-sidebar__heading">Guidelines</h2>
+    <ul class="ds-sidebar__nav">
+      <li><a href="theming.html" class="ds-sidebar__link">Theming</a></li>
+      <li><a href="accessibility.html" class="ds-sidebar__link">Accessibility</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="ds-main">
+  <div class="ds-section">
+    <h1 class="ds-section__title">Motion</h1>
+    <p class="ds-section__subtitle">Duration and easing tokens that control transitions and animations across all components. 7 tokens total: 3 durations + 4 easings.</p>
+  </div>
+
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Duration</h2>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">Hover over each row to see the timing in action.</p>
+
+    <div class="ds-motion-demo ds-motion-demo--fast">
+      <div class="ds-motion-demo__label"><code>--ds-duration-fast</code><br>100ms</div>
+      <div class="ds-motion-demo__track"><div class="ds-motion-demo__runner"></div></div>
+    </div>
+
+    <div class="ds-motion-demo ds-motion-demo--normal">
+      <div class="ds-motion-demo__label"><code>--ds-duration-normal</code><br>200ms</div>
+      <div class="ds-motion-demo__track"><div class="ds-motion-demo__runner"></div></div>
+    </div>
+
+    <div class="ds-motion-demo ds-motion-demo--slow">
+      <div class="ds-motion-demo__label"><code>--ds-duration-slow</code><br>300ms</div>
+      <div class="ds-motion-demo__track"><div class="ds-motion-demo__runner"></div></div>
+    </div>
+
+    <table class="ds-token-table">
+      <thead><tr><th>Token</th><th>Value</th><th>Usage</th></tr></thead>
+      <tbody>
+        <tr><td><code>--ds-duration-fast</code></td><td>100ms</td><td>Micro-interactions: color changes on hover, opacity shifts, icon swaps</td></tr>
+        <tr><td><code>--ds-duration-normal</code></td><td>200ms</td><td>Standard transitions: button states, input focus, border color changes</td></tr>
+        <tr><td><code>--ds-duration-slow</code></td><td>300ms</td><td>Larger movements: modals, sidesheets, accordion expand/collapse</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Easing</h2>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">All demos use <code>--ds-duration-normal</code> (200ms). Hover to compare curves.</p>
+
+    <div class="ds-motion-demo ds-motion-demo--normal">
+      <div class="ds-motion-demo__label"><code>--ds-ease-default</code><br>ease</div>
+      <div class="ds-motion-demo__track"><div class="ds-motion-demo__runner"></div></div>
+    </div>
+
+    <div class="ds-motion-demo ds-motion-demo--ease-in">
+      <div class="ds-motion-demo__label"><code>--ds-ease-in</code><br>ease-in</div>
+      <div class="ds-motion-demo__track"><div class="ds-motion-demo__runner"></div></div>
+    </div>
+
+    <div class="ds-motion-demo ds-motion-demo--ease-out">
+      <div class="ds-motion-demo__label"><code>--ds-ease-out</code><br>ease-out</div>
+      <div class="ds-motion-demo__track"><div class="ds-motion-demo__runner"></div></div>
+    </div>
+
+    <div class="ds-motion-demo ds-motion-demo--ease-in-out">
+      <div class="ds-motion-demo__label"><code>--ds-ease-in-out</code><br>ease-in-out</div>
+      <div class="ds-motion-demo__track"><div class="ds-motion-demo__runner"></div></div>
+    </div>
+
+    <table class="ds-token-table">
+      <thead><tr><th>Token</th><th>Value</th><th>Usage</th></tr></thead>
+      <tbody>
+        <tr><td><code>--ds-ease-default</code></td><td>ease</td><td>General-purpose: most component transitions</td></tr>
+        <tr><td><code>--ds-ease-in</code></td><td>ease-in</td><td>Elements exiting the viewport or fading out</td></tr>
+        <tr><td><code>--ds-ease-out</code></td><td>ease-out</td><td>Elements entering the viewport, modals appearing</td></tr>
+        <tr><td><code>--ds-ease-in-out</code></td><td>ease-in-out</td><td>Elements that move position within the viewport</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Usage in components</h2>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">Combine a duration token with an easing token on the CSS <code>transition</code> shorthand:</p>
+
+<div class="ds-code-block">/* Button hover transition */
+.ds-btn {
+  transition: background-color var(--ds-duration-fast) var(--ds-ease-default),
+              color var(--ds-duration-fast) var(--ds-ease-default),
+              border-color var(--ds-duration-fast) var(--ds-ease-default);
+}
+
+/* Modal enter */
+.ds-modal__content {
+  transition: opacity var(--ds-duration-slow) var(--ds-ease-out),
+              transform var(--ds-duration-slow) var(--ds-ease-out);
+}</div>
+  </div>
+
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">Reduced motion</h2>
+    <div class="ds-callout">
+      <div class="ds-callout__title">prefers-reduced-motion</div>
+      Users who enable reduced motion in their OS settings will have all transitions and animations shortened to near-zero. This is enforced globally in the base reset — individual components do not need to handle it.
+    </div>
+
+<div class="ds-code-block">@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}</div>
+
+    <p style="color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
+      WCAG reference: <strong>2.3.3 Animation from Interactions (AAA)</strong>. While the DS targets AA, this is implemented because the cost is near-zero and the impact for motion-sensitive users is significant.
+    </p>
+  </div>
+
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title">JSON (DTCG)</h2>
+<div class="ds-code-block">{
+  "foundation": {
+    "motion": {
+      "duration": {
+        "fast":   { "$type": "duration", "$value": "100ms" },
+        "normal": { "$type": "duration", "$value": "200ms" },
+        "slow":   { "$type": "duration", "$value": "300ms" }
+      },
+      "ease": {
+        "default": { "$type": "cubicBezier", "$value": "ease" },
+        "in":      { "$type": "cubicBezier", "$value": "ease-in" },
+        "out":     { "$type": "cubicBezier", "$value": "ease-out" },
+        "in-out":  { "$type": "cubicBezier", "$value": "ease-in-out" }
+      }
+    }
+  }
+}</div>
+  </div>
+</main>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
