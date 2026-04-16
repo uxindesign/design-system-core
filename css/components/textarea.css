@@ -20,17 +20,14 @@
 
 .ds-textarea,
 .ds-textarea--md {
-  padding: 0 var(--ds-textarea-padding-x-md);
   font-size: var(--ds-textarea-font-size-md);
 }
 
 .ds-textarea--sm {
-  padding: 0 var(--ds-textarea-padding-x-sm);
   font-size: var(--ds-textarea-font-size-sm);
 }
 
 .ds-textarea--lg {
-  padding: 0 var(--ds-textarea-padding-x-lg);
   font-size: var(--ds-textarea-font-size-lg);
 }
 
@@ -39,6 +36,8 @@
 
 .ds-textarea__field {
   flex: 1;
+  width: 100%;
+  box-sizing: border-box;
   border: none;
   background: transparent;
   outline: none;
@@ -48,18 +47,19 @@
   resize: vertical;
   min-height: var(--ds-textarea-min-height-md);
   min-width: 0;
-  padding: var(--ds-textarea-padding-y-md) var(--ds-spacing-1);
+  /* padding-x: wrapper padding + 4px inner offset (equivale ao TextFrame padding do Figma) */
+  padding: var(--ds-textarea-padding-y-md) calc(var(--ds-textarea-padding-x-md) + var(--ds-spacing-1));
   line-height: var(--ds-line-height-normal);
 }
 
 .ds-textarea--sm .ds-textarea__field {
   min-height: var(--ds-textarea-min-height-sm);
-  padding: var(--ds-textarea-padding-y-sm) var(--ds-spacing-1);
+  padding: var(--ds-textarea-padding-y-sm) calc(var(--ds-textarea-padding-x-sm) + var(--ds-spacing-1));
 }
 
 .ds-textarea--lg .ds-textarea__field {
   min-height: var(--ds-textarea-min-height-lg);
-  padding: var(--ds-textarea-padding-y-lg) var(--ds-spacing-1);
+  padding: var(--ds-textarea-padding-y-lg) calc(var(--ds-textarea-padding-x-lg) + var(--ds-spacing-1));
 }
 
 .ds-textarea__field::placeholder {
