@@ -14,7 +14,7 @@
   --ds-color-primary-active:       var(--ds-color-emerald-800);
   --ds-color-primary-subtle:       var(--ds-color-emerald-100);
   --ds-color-primary-muted:        var(--ds-color-emerald-50);
-  --ds-color-primary-foreground:   var(--ds-color-white);
+  --ds-color-primary-foreground:   var(--ds-color-neutral-50);
   --ds-color-primary-text:         var(--ds-color-emerald-700);
 
   /* Brand — Secondary */
@@ -23,7 +23,7 @@
   --ds-color-secondary-active:     var(--ds-color-amber-800);
   --ds-color-secondary-subtle:     var(--ds-color-amber-100);
   --ds-color-secondary-muted:      var(--ds-color-amber-50);
-  --ds-color-secondary-foreground: var(--ds-color-white);
+  --ds-color-secondary-foreground: var(--ds-color-neutral-50);
   --ds-color-secondary-text:       var(--ds-color-amber-700);
 
   /* Derived — link and focus use primary */
