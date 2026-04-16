@@ -165,31 +165,26 @@
     <h2 class="ds-subsection__title"><span data-lang="pt">Anatomia</span><span data-lang="en">Anatomy</span></h2>
 
     <div class="ds-anatomy">
-      <div style="position:relative;display:inline-flex;flex-direction:column;width:280px;">
-        <!-- Visual textarea -->
-        <div style="border:var(--ds-border-width-1) solid var(--ds-border-default);border-radius:var(--ds-radius-component);padding:var(--ds-spacing-3);min-height:80px;background:var(--ds-surface-default);position:relative;">
-          <span style="color:var(--ds-text-tertiary);font-size:var(--ds-font-size-sm);">Tell us about your experience...</span>
-          <!-- Resize handle indicator -->
-          <div style="position:absolute;bottom:4px;right:4px;width:10px;height:10px;border-right:2px solid var(--ds-border-default);border-bottom:2px solid var(--ds-border-default);"></div>
+      <div style="position:relative;width:280px;">
+        <!-- Componente real -->
+        <div class="ds-textarea">
+          <textarea class="ds-textarea__field" placeholder="Tell us about your experience..." readonly tabindex="-1" rows="3"></textarea>
         </div>
-        <!-- Counter -->
-        <span style="font-size:var(--ds-font-size-xs);color:var(--ds-text-tertiary);text-align:right;margin-top:var(--ds-spacing-1);">0 / 200</span>
         <!-- Markers -->
         <span class="ds-anatomy__marker" style="top:-12px;left:50%;transform:translateX(-50%);">1</span>
-        <span class="ds-anatomy__marker" style="top:30px;left:-28px;">2</span>
-        <span class="ds-anatomy__marker" style="bottom:20px;right:-28px;">3</span>
-        <span class="ds-anatomy__marker" style="bottom:-8px;right:50px;">4</span>
+        <span class="ds-anatomy__marker" style="top:14px;left:-28px;">2</span>
+        <span class="ds-anatomy__marker" style="bottom:-12px;right:-28px;">3</span>
       </div>
     </div>
 
     <div class="ds-anatomy-legend">
       <span data-lang="pt"><strong>1</strong> Wrapper (<code>.ds-textarea</code>) -- mesmo padrão de borda/radius do Input.<br>
       <strong>2</strong> Campo (<code>.ds-textarea__field</code>) -- o elemento nativo <code>&lt;textarea&gt;</code>.<br>
-      <strong>3</strong> Contador de caracteres (opcional, <code>.ds-field__counter</code>) -- via wrapper Form Field.<br>
-      <strong>4</strong> Alça de redimensionamento -- nativa do navegador, apenas vertical por padrão.</span><span data-lang="en"><strong>1</strong> Wrapper (<code>.ds-textarea</code>) -- same border/radius pattern as Input.<br>
+      <strong>3</strong> Alça de redimensionamento -- nativa do navegador, apenas vertical por padrão.<br>
+      <strong>Contador de caracteres</strong> (opcional, <code>.ds-field__counter</code>) -- disponível via wrapper Form Field.</span><span data-lang="en"><strong>1</strong> Wrapper (<code>.ds-textarea</code>) -- same border/radius pattern as Input.<br>
       <strong>2</strong> Field (<code>.ds-textarea__field</code>) -- the native <code>&lt;textarea&gt;</code> element.<br>
-      <strong>3</strong> Character counter (optional, <code>.ds-field__counter</code>) -- via Form Field wrapper.<br>
-      <strong>4</strong> Resize handle -- browser-native, vertical only by default.</span>
+      <strong>3</strong> Resize handle -- browser-native, vertical only by default.<br>
+      <strong>Character counter</strong> (optional, <code>.ds-field__counter</code>) -- available via Form Field wrapper.</span>
     </div>
   </div>
 
