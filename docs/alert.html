@@ -173,19 +173,21 @@
     <h2 class="ds-subsection__title"><span data-lang="pt">Anatomia</span><span data-lang="en">Anatomy</span></h2>
 
     <div class="ds-anatomy">
-      <div style="position:relative;display:inline-flex;align-items:flex-start;gap:var(--ds-spacing-3);padding:var(--ds-spacing-4);background-color:var(--ds-feedback-success-background);border:var(--ds-border-width-1) solid var(--ds-feedback-success-border);border-radius:var(--ds-radius-component);min-width:320px;">
-        <span style="color:var(--ds-feedback-success-foreground);display:flex;align-items:center;"><span class="material-symbols-outlined">check_circle</span></span>
-        <div style="flex:1;">
-          <p style="font-weight:var(--ds-font-weight-semibold);font-size:var(--ds-font-size-sm);margin:0;">Success</p>
-          <p style="font-size:var(--ds-font-size-sm);color:var(--ds-text-secondary);margin:var(--ds-spacing-1) 0 0;">Your changes have been saved.</p>
+      <div style="position:relative;min-width:320px;">
+        <div class="ds-alert ds-alert--success ds-alert--filled" role="alert" style="pointer-events:none;">
+          <span class="ds-alert__icon"><span class="material-symbols-outlined">check_circle</span></span>
+          <div class="ds-alert__content">
+            <p class="ds-alert__title">Success</p>
+            <p class="ds-alert__description">Your changes have been saved.</p>
+          </div>
+          <button class="ds-alert__close" aria-label="Dismiss alert" tabindex="-1"><span class="material-symbols-outlined">close</span></button>
         </div>
-        <button style="background:none;border:none;cursor:pointer;color:var(--ds-text-secondary);padding:0;display:flex;align-items:center;"><span class="material-symbols-outlined" style="font-size:20px">close</span></button>
         <!-- Markers -->
         <span class="ds-anatomy__marker" style="top:-12px;left:50%;transform:translateX(-50%);">1</span>
         <span class="ds-anatomy__marker" style="top:50%;left:-28px;transform:translateY(-50%);">2</span>
-        <span class="ds-anatomy__marker" style="top:12px;left:44px;">3</span>
-        <span class="ds-anatomy__marker" style="bottom:8px;left:44px;">4</span>
-        <span class="ds-anatomy__marker" style="bottom:8px;left:120px;">5</span>
+        <span class="ds-anatomy__marker" style="top:-12px;left:52px;">3</span>
+        <span class="ds-anatomy__marker" style="bottom:-12px;left:52px;">4</span>
+        <span class="ds-anatomy__marker" style="bottom:-12px;left:120px;">5</span>
         <span class="ds-anatomy__marker" style="top:50%;right:-28px;transform:translateY(-50%);">6</span>
       </div>
     </div>

@@ -163,32 +163,21 @@
     <h2 class="ds-subsection__title"><span data-lang="pt">Anatomia</span><span data-lang="en">Anatomy</span></h2>
 
     <div class="ds-anatomy">
-      <div style="position:relative;display:inline-flex;align-items:center;gap:var(--ds-spacing-2);font-size:var(--ds-font-size-sm);">
-        <!-- Nav wrapper marker -->
+      <div style="position:relative;display:inline-flex;align-items:center;pointer-events:none;">
+        <nav class="ds-breadcrumb" aria-label="Breadcrumb">
+          <a href="#" class="ds-breadcrumb__item" tabindex="-1">Home</a>
+          <span class="ds-breadcrumb__separator">/</span>
+          <a href="#" class="ds-breadcrumb__item" tabindex="-1">Products</a>
+          <span class="ds-breadcrumb__separator">/</span>
+          <span class="ds-breadcrumb__item ds-breadcrumb__item--current" aria-current="page">Sneakers</span>
+        </nav>
+        <!-- Markers -->
         <span class="ds-anatomy__marker" style="top:-28px;left:50%;transform:translateX(-50%);">1</span>
-        <!-- Link -->
-        <a href="#" style="color:var(--ds-text-link-default);text-decoration:none;position:relative;">
-          Home
-          <span class="ds-anatomy__marker" style="bottom:-24px;left:50%;transform:translateX(-50%);">4</span>
-        </a>
-        <!-- Separator -->
-        <span style="color:var(--ds-text-tertiary);position:relative;">
-          /
-          <span class="ds-anatomy__marker" style="top:-28px;left:50%;transform:translateX(-50%);">6</span>
-        </span>
-        <!-- Link -->
-        <a href="#" style="color:var(--ds-text-link-default);text-decoration:none;">Products</a>
-        <!-- Separator -->
-        <span style="color:var(--ds-text-tertiary);">/</span>
-        <!-- Current -->
-        <span style="color:var(--ds-text-secondary);position:relative;">
-          Sneakers
-          <span class="ds-anatomy__marker" style="bottom:-24px;left:50%;transform:translateX(-50%);">5</span>
-        </span>
-        <!-- List marker -->
-        <span class="ds-anatomy__marker" style="top:50%;right:-32px;transform:translateY(-50%);">2</span>
-        <!-- Item marker -->
-        <span class="ds-anatomy__marker" style="top:50%;left:-32px;transform:translateY(-50%);">3</span>
+        <span class="ds-anatomy__marker" style="top:50%;left:-28px;transform:translateY(-50%);">2</span>
+        <span class="ds-anatomy__marker" style="top:50%;right:-28px;transform:translateY(-50%);">3</span>
+        <span class="ds-anatomy__marker" style="bottom:-24px;left:14px;">4</span>
+        <span class="ds-anatomy__marker" style="bottom:-24px;right:28px;">5</span>
+        <span class="ds-anatomy__marker" style="top:-28px;left:52%;">6</span>
       </div>
     </div>
 

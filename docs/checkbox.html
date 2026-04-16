@@ -172,17 +172,16 @@
     <h2 class="ds-subsection__title"><span data-lang="pt">Anatomia</span><span data-lang="en">Anatomy</span></h2>
 
     <div class="ds-anatomy">
-      <div style="position:relative;display:inline-flex;align-items:center;gap:var(--ds-spacing-3);">
-        <!-- Visual checkbox -->
-        <div style="width:20px;height:20px;border-radius:var(--ds-radius-sm);background-color:var(--ds-color-primary-default);display:flex;align-items:center;justify-content:center;position:relative;">
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="var(--ds-text-on-brand, white)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9 10,3"></polyline></svg>
-        </div>
-        <span style="font-size:var(--ds-font-size-sm);color:var(--ds-text-default);">Option label</span>
+      <div style="position:relative;display:inline-flex;align-items:center;">
+        <label class="ds-checkbox-label">
+          <input type="checkbox" class="ds-checkbox" checked readonly tabindex="-1" style="pointer-events:none;">
+          Option label
+        </label>
         <!-- Markers -->
-        <span class="ds-anatomy__marker" style="top:-24px;left:10px;transform:translateX(-50%);">1</span>
+        <span class="ds-anatomy__marker" style="top:-24px;left:50%;transform:translateX(-50%);">1</span>
         <span class="ds-anatomy__marker" style="top:50%;left:-28px;transform:translateY(-50%);">2</span>
-        <span class="ds-anatomy__marker" style="top:50%;right:-28px;transform:translateY(-50%);">3</span>
-        <span class="ds-anatomy__marker" style="bottom:-24px;left:10px;transform:translateX(-50%);">4</span>
+        <span class="ds-anatomy__marker" style="top:-24px;left:12px;">3</span>
+        <span class="ds-anatomy__marker" style="bottom:-24px;left:12px;">4</span>
       </div>
     </div>
 

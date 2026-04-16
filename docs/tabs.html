@@ -163,21 +163,18 @@
     <h2 class="ds-subsection__title"><span data-lang="pt">Anatomia</span><span data-lang="en">Anatomy</span></h2>
 
     <div class="ds-anatomy">
-      <div style="position:relative;display:flex;flex-direction:column;width:280px;">
-        <!-- Tab list -->
-        <div style="display:flex;gap:0;border-bottom:var(--ds-border-width-2) solid var(--ds-border-default);position:relative;">
-          <div style="padding:var(--ds-spacing-3) var(--ds-spacing-4);color:var(--ds-color-primary-default);font-weight:var(--ds-font-weight-semibold);font-size:var(--ds-font-size-sm);border-bottom:2px solid var(--ds-color-primary-default);margin-bottom:-2px;position:relative;">
-            Overview
-            <span class="ds-anatomy__marker" style="top:-22px;left:50%;transform:translateX(-50%);">2</span>
-            <span class="ds-anatomy__marker" style="bottom:-22px;left:50%;transform:translateX(-50%);">3</span>
-          </div>
-          <div style="padding:var(--ds-spacing-3) var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">Settings</div>
-          <div style="padding:var(--ds-spacing-3) var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">Activity</div>
+      <div style="position:relative;display:flex;flex-direction:column;width:280px;pointer-events:none;">
+        <div class="ds-tabs" role="tablist" style="width:100%;position:relative;">
+          <button class="ds-tab ds-tab--active" role="tab" aria-selected="true" tabindex="-1">Overview</button>
+          <button class="ds-tab" role="tab" aria-selected="false" tabindex="-1">Settings</button>
+          <button class="ds-tab" role="tab" aria-selected="false" tabindex="-1">Activity</button>
+          <!-- Markers -->
           <span class="ds-anatomy__marker" style="top:-22px;left:-28px;">1</span>
+          <span class="ds-anatomy__marker" style="top:-22px;left:44px;">2</span>
+          <span class="ds-anatomy__marker" style="bottom:-22px;left:44px;">3</span>
         </div>
-        <!-- Panel -->
-        <div style="padding:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);position:relative;">
-          Panel content goes here.
+        <div class="ds-tab-panel" role="tabpanel" style="padding:var(--ds-spacing-4) 0;position:relative;">
+          <p style="margin:0;color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">Panel content goes here.</p>
           <span class="ds-anatomy__marker" style="top:50%;right:-28px;transform:translateY(-50%);">4</span>
         </div>
       </div>

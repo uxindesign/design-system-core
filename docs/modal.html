@@ -164,30 +164,29 @@
 
     <div class="ds-anatomy">
       <div style="position:relative;width:100%;max-width:400px;">
-        <!-- Visual modal skeleton -->
-        <div style="background:var(--ds-background-overlay);padding:var(--ds-spacing-6);border-radius:var(--ds-radius-lg);position:relative;">
-          <div style="background:var(--ds-surface-elevated, var(--ds-surface-default));border-radius:var(--ds-radius-lg);box-shadow:var(--ds-shadow-xl);overflow:hidden;position:relative;">
-            <div style="display:flex;justify-content:space-between;align-items:center;padding:var(--ds-spacing-4) var(--ds-spacing-5);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);">
-              <span style="font-weight:var(--ds-font-weight-semibold);font-size:var(--ds-font-size-md);color:var(--ds-text-default);">Delete item</span>
-              <span style="font-size:var(--ds-font-size-lg);color:var(--ds-text-secondary);cursor:pointer;">&times;</span>
+        <div class="ds-modal-overlay" style="position:relative;background:var(--ds-background-overlay);border-radius:var(--ds-radius-lg);padding:var(--ds-spacing-6);display:flex;align-items:center;justify-content:center;pointer-events:none;">
+          <div class="ds-modal ds-modal--sm" role="dialog" aria-modal="true" aria-labelledby="anatomy-modal-title" style="position:relative;width:100%;">
+            <div class="ds-modal__header">
+              <h3 id="anatomy-modal-title" class="ds-modal__title">Delete item</h3>
+              <button class="ds-btn ds-btn--ghost ds-btn--sm ds-btn--icon-only" aria-label="Close modal" tabindex="-1"><span class="material-symbols-outlined">close</span></button>
             </div>
-            <div style="padding:var(--ds-spacing-5);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
-              Are you sure? This action cannot be undone.
+            <div class="ds-modal__body">
+              <p style="margin:0;">Are you sure? This action cannot be undone.</p>
             </div>
-            <div style="display:flex;justify-content:flex-end;gap:var(--ds-spacing-3);padding:var(--ds-spacing-4) var(--ds-spacing-5);border-top:var(--ds-border-width-1) solid var(--ds-border-default);">
-              <span style="padding:var(--ds-spacing-2) var(--ds-spacing-4);border:var(--ds-border-width-1) solid var(--ds-border-default);border-radius:var(--ds-radius-md);font-size:var(--ds-font-size-sm);color:var(--ds-text-secondary);">Cancel</span>
-              <span style="padding:var(--ds-spacing-2) var(--ds-spacing-4);background:var(--ds-color-primary-default);color:var(--ds-text-on-brand);border-radius:var(--ds-radius-md);font-size:var(--ds-font-size-sm);">Delete</span>
+            <div class="ds-modal__footer">
+              <button class="ds-btn ds-btn--ghost ds-btn--sm" tabindex="-1">Cancel</button>
+              <button class="ds-btn ds-btn--danger ds-btn--sm" tabindex="-1">Delete</button>
             </div>
           </div>
-          <!-- Markers -->
-          <span class="ds-anatomy__marker" style="top:4px;left:4px;">1</span>
-          <span class="ds-anatomy__marker" style="top:var(--ds-spacing-8);left:50%;transform:translateX(-50%);">2</span>
-          <span class="ds-anatomy__marker" style="top:calc(var(--ds-spacing-8) + 6px);left:calc(var(--ds-spacing-6) + 8px);">3</span>
-          <span class="ds-anatomy__marker" style="top:calc(var(--ds-spacing-8) + 6px);right:calc(var(--ds-spacing-6) + 8px);">5</span>
-          <span class="ds-anatomy__marker" style="top:50%;left:calc(var(--ds-spacing-6) + 8px);transform:translateY(-50%);">4</span>
-          <span class="ds-anatomy__marker" style="bottom:calc(var(--ds-spacing-6) + 4px);right:calc(var(--ds-spacing-6) + 8px);">7</span>
-          <span class="ds-anatomy__marker" style="bottom:calc(var(--ds-spacing-6) + 4px);left:50%;transform:translateX(-50%);">6</span>
         </div>
+        <!-- Markers -->
+        <span class="ds-anatomy__marker" style="top:4px;left:4px;">1</span>
+        <span class="ds-anatomy__marker" style="top:32px;left:50%;transform:translateX(-50%);">2</span>
+        <span class="ds-anatomy__marker" style="top:32px;left:20px;">3</span>
+        <span class="ds-anatomy__marker" style="top:56px;left:20px;">4</span>
+        <span class="ds-anatomy__marker" style="top:32px;right:20px;">5</span>
+        <span class="ds-anatomy__marker" style="top:50%;left:20px;transform:translateY(-50%);">6</span>
+        <span class="ds-anatomy__marker" style="bottom:20px;right:20px;">7</span>
       </div>
     </div>
 
