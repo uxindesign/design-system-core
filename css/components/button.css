@@ -10,7 +10,7 @@
   gap: var(--ds-button-gap);
   font-family: var(--ds-font-family-sans);
   font-weight: var(--ds-font-weight-medium);
-  line-height: var(--ds-line-height-none);
+  line-height: var(--ds-control-line-height-md);
   text-decoration: none;
   border: var(--ds-button-border-width) solid transparent;
   border-radius: var(--ds-button-border-radius);
@@ -24,7 +24,7 @@
 
   /* Default size: md (40px) */
   height: var(--ds-button-height-md);
-  padding: 0 var(--ds-button-padding-x-md);
+  padding: var(--ds-button-padding-y-md) var(--ds-button-padding-x-md);
   font-size: var(--ds-button-font-size-md);
   min-width: var(--ds-button-min-target-size);
 }
@@ -54,8 +54,9 @@
    --------------------------------------------------------- */
 .ds-btn--sm {
   height: var(--ds-button-height-sm);
-  padding: 0 var(--ds-button-padding-x-sm);
+  padding: var(--ds-button-padding-y-sm) var(--ds-button-padding-x-sm);
   font-size: var(--ds-button-font-size-sm);
+  line-height: var(--ds-control-line-height-sm);
   border-radius: var(--ds-button-border-radius);
 }
 
@@ -66,8 +67,9 @@
 
 .ds-btn--lg {
   height: var(--ds-button-height-lg);
-  padding: 0 var(--ds-button-padding-x-lg);
+  padding: var(--ds-button-padding-y-lg) var(--ds-button-padding-x-lg);
   font-size: var(--ds-button-font-size-lg);
+  line-height: var(--ds-control-line-height-lg);
   border-radius: var(--ds-button-border-radius);
 }
 
@@ -100,7 +102,7 @@
    --------------------------------------------------------- */
 .ds-btn--toned {
   background-color: var(--ds-color-primary-toned-default);
-  color: var(--ds-color-primary-text);
+  color: var(--ds-color-primary-default);
   border-color: transparent;
 }
 
@@ -140,11 +142,11 @@
 }
 
 .ds-btn--ghost:hover {
-  background-color: color-mix(in srgb, var(--ds-color-primary-default) 8%, transparent);
+  background-color: var(--ds-state-hover);
 }
 
 .ds-btn--ghost:active {
-  background-color: color-mix(in srgb, var(--ds-color-primary-default) 16%, transparent);
+  background-color: var(--ds-state-pressed);
 }
 
 /* ---------------------------------------------------------
