@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +17,9 @@
     .ds-semantic-table td { padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); }
     .ds-semantic-table code { font-size: var(--ds-font-size-xs); font-family: var(--ds-font-family-mono); }
   </style>
+  <script>
+    (function(){var l=localStorage.getItem('ds-lang');if(l)document.documentElement.setAttribute('lang',l)})();
+  </script>
 </head>
 <body>
 
@@ -31,15 +34,18 @@
     </a>
   </div>
   <div class="ds-site-header__actions">
+    <select class="ds-theme-switcher__select" id="lang-switcher" aria-label="Language">
+      <option value="pt">PT</option>
+      <option value="en">EN</option>
+    </select>
     <div class="ds-theme-switcher">
-      <label class="ds-theme-switcher__label" for="theme-switcher">Theme</label>
       <select class="ds-theme-switcher__select" id="theme-switcher">
         <option value="default">Default (Blue)</option>
         <option value="ocean">Ocean (Cyan)</option>
         <option value="forest">Forest (Emerald)</option>
       </select>
     </div>
-    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode">Dark</button>
+    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode">Escuro</button>
   </div>
 </header>
 <div class="ds-sidebar-overlay" id="sidebar-overlay"></div>
@@ -106,12 +112,12 @@
 
 <main class="ds-main">
   <div class="ds-section">
-    <h1 class="ds-section__title">Spacing</h1>
-    <p class="ds-section__subtitle">A spacing scale based on a 4px base unit. Use these tokens for consistent padding, margin, and gap values throughout the interface.</p>
+    <h1 class="ds-section__title"><span data-lang="pt">Espacamento</span><span data-lang="en">Spacing</span></h1>
+    <p class="ds-section__subtitle"><span data-lang="pt">Uma escala de espacamento baseada em uma unidade de 4px. Use estes tokens para valores consistentes de padding, margin e gap em toda a interface.</span><span data-lang="en">A spacing scale based on a 4px base unit. Use these tokens for consistent padding, margin, and gap values throughout the interface.</span></p>
   </div>
 
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Spacing Scale</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Escala de Espacamento</span><span data-lang="en">Spacing Scale</span></h2>
     <div class="ds-spacing-list">
       <div class="ds-spacing-row"><div class="ds-spacing-row__token">--ds-spacing-0</div><div class="ds-spacing-row__value">0 (0px)</div><div class="ds-spacing-row__bar" style="width:0"></div></div>
       <div class="ds-spacing-row"><div class="ds-spacing-row__token">--ds-spacing-0-5</div><div class="ds-spacing-row__value">0.125rem (2px)</div><div class="ds-spacing-row__bar" style="width:2px"></div></div>
@@ -137,10 +143,10 @@
   </div>
 
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Semantic Spacing Tokens</h2>
-    <h3 style="margin:var(--ds-spacing-4) 0 var(--ds-spacing-2);color:var(--ds-text-secondary)">Inset (padding)</h3>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Tokens de Espacamento Semanticos</span><span data-lang="en">Semantic Spacing Tokens</span></h2>
+    <h3 style="margin:var(--ds-spacing-4) 0 var(--ds-spacing-2);color:var(--ds-text-secondary)"><span data-lang="pt">Inset (padding)</span><span data-lang="en">Inset (padding)</span></h3>
     <table class="ds-semantic-table">
-      <thead><tr><th>Token</th><th>Reference</th><th>Value</th></tr></thead>
+      <thead><tr><th>Token</th><th><span data-lang="pt">Referencia</span><span data-lang="en">Reference</span></th><th><span data-lang="pt">Valor</span><span data-lang="en">Value</span></th></tr></thead>
       <tbody>
         <tr><td><code>--ds-space-inset-xs</code></td><td><code>spacing-1</code></td><td>4px</td></tr>
         <tr><td><code>--ds-space-inset-sm</code></td><td><code>spacing-2</code></td><td>8px</td></tr>
@@ -151,7 +157,7 @@
     </table>
     <h3 style="margin:var(--ds-spacing-4) 0 var(--ds-spacing-2);color:var(--ds-text-secondary)">Gap</h3>
     <table class="ds-semantic-table">
-      <thead><tr><th>Token</th><th>Reference</th><th>Value</th></tr></thead>
+      <thead><tr><th>Token</th><th><span data-lang="pt">Referencia</span><span data-lang="en">Reference</span></th><th><span data-lang="pt">Valor</span><span data-lang="en">Value</span></th></tr></thead>
       <tbody>
         <tr><td><code>--ds-space-gap-xs</code></td><td><code>spacing-1</code></td><td>4px</td></tr>
         <tr><td><code>--ds-space-gap-sm</code></td><td><code>spacing-2</code></td><td>8px</td></tr>
@@ -162,7 +168,7 @@
     </table>
     <h3 style="margin:var(--ds-spacing-4) 0 var(--ds-spacing-2);color:var(--ds-text-secondary)">Component</h3>
     <table class="ds-semantic-table">
-      <thead><tr><th>Token</th><th>Reference</th><th>Value</th></tr></thead>
+      <thead><tr><th>Token</th><th><span data-lang="pt">Referencia</span><span data-lang="en">Reference</span></th><th><span data-lang="pt">Valor</span><span data-lang="en">Value</span></th></tr></thead>
       <tbody>
         <tr><td><code>--ds-space-component-xs</code></td><td><code>spacing-1</code></td><td>4px</td></tr>
         <tr><td><code>--ds-space-component-sm</code></td><td><code>spacing-2</code></td><td>8px</td></tr>
@@ -172,9 +178,9 @@
         <tr><td><code>--ds-space-component-2xl</code></td><td><code>spacing-6</code></td><td>24px</td></tr>
       </tbody>
     </table>
-    <h3 style="margin:var(--ds-spacing-4) 0 var(--ds-spacing-2);color:var(--ds-text-secondary)">Section</h3>
+    <h3 style="margin:var(--ds-spacing-4) 0 var(--ds-spacing-2);color:var(--ds-text-secondary)"><span data-lang="pt">Secao</span><span data-lang="en">Section</span></h3>
     <table class="ds-semantic-table">
-      <thead><tr><th>Token</th><th>Reference</th><th>Value</th></tr></thead>
+      <thead><tr><th>Token</th><th><span data-lang="pt">Referencia</span><span data-lang="en">Reference</span></th><th><span data-lang="pt">Valor</span><span data-lang="en">Value</span></th></tr></thead>
       <tbody>
         <tr><td><code>--ds-space-section-sm</code></td><td><code>spacing-8</code></td><td>32px</td></tr>
         <tr><td><code>--ds-space-section-md</code></td><td><code>spacing-12</code></td><td>48px</td></tr>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +18,9 @@
     .ds-token-table code { font-size: var(--ds-font-size-xs); font-family: var(--ds-font-family-mono); }
     .ds-token-swatch { width: 32px; height: 32px; border-radius: var(--ds-radius-md); border: var(--ds-border-width-1) solid var(--ds-border-default); display: inline-block; vertical-align: middle; }
   </style>
+  <script>
+    (function(){var l=localStorage.getItem('ds-lang');if(l)document.documentElement.setAttribute('lang',l)})();
+  </script>
 </head>
 <body>
 
@@ -32,15 +35,18 @@
     </a>
   </div>
   <div class="ds-site-header__actions">
+    <select class="ds-theme-switcher__select" id="lang-switcher" aria-label="Language">
+      <option value="pt">PT</option>
+      <option value="en">EN</option>
+    </select>
     <div class="ds-theme-switcher">
-      <label class="ds-theme-switcher__label" for="theme-switcher">Theme</label>
       <select class="ds-theme-switcher__select" id="theme-switcher">
         <option value="default">Default (Blue)</option>
         <option value="ocean">Ocean (Cyan)</option>
         <option value="forest">Forest (Emerald)</option>
       </select>
     </div>
-    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode">Dark</button>
+    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode">Escuro</button>
   </div>
 </header>
 <div class="ds-sidebar-overlay" id="sidebar-overlay"></div>
@@ -107,12 +113,12 @@
 
 <main class="ds-main">
   <div class="ds-section">
-    <h1 class="ds-section__title">Borders</h1>
-    <p class="ds-section__subtitle">Border width tokens and semantic border color tokens used across components for consistent visual boundaries.</p>
+    <h1 class="ds-section__title"><span data-lang="pt">Bordas</span><span data-lang="en">Borders</span></h1>
+    <p class="ds-section__subtitle"><span data-lang="pt">Tokens de largura de borda e tokens semanticos de cor de borda usados em todos os componentes para limites visuais consistentes.</span><span data-lang="en">Border width tokens and semantic border color tokens used across components for consistent visual boundaries.</span></p>
   </div>
 
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Border Widths</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Larguras de Borda</span><span data-lang="en">Border Widths</span></h2>
     <div style="margin-bottom:var(--ds-spacing-8)">
       <div class="ds-border-row">
         <div class="ds-border-row__token">--ds-border-width-0</div>
@@ -138,22 +144,22 @@
   </div>
 
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Semantic Border Widths</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Larguras de Borda Semanticas</span><span data-lang="en">Semantic Border Widths</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th>Token</th><th>Reference</th><th>Value</th><th>Usage</th></tr></thead>
+      <thead><tr><th>Token</th><th><span data-lang="pt">Referencia</span><span data-lang="en">Reference</span></th><th><span data-lang="pt">Valor</span><span data-lang="en">Value</span></th><th><span data-lang="pt">Uso</span><span data-lang="en">Usage</span></th></tr></thead>
       <tbody>
-        <tr><td><code>--ds-border-width-subtle</code></td><td><code>border-width-1</code></td><td>1px</td><td>Subtle separators</td></tr>
-        <tr><td><code>--ds-border-width-default</code></td><td><code>border-width-1</code></td><td>1px</td><td>Default component borders</td></tr>
-        <tr><td><code>--ds-border-width-strong</code></td><td><code>border-width-2</code></td><td>2px</td><td>Emphasized borders</td></tr>
-        <tr><td><code>--ds-border-width-focus</code></td><td><code>border-width-2</code></td><td>2px</td><td>Focus indicators</td></tr>
+        <tr><td><code>--ds-border-width-subtle</code></td><td><code>border-width-1</code></td><td>1px</td><td><span data-lang="pt">Separadores sutis</span><span data-lang="en">Subtle separators</span></td></tr>
+        <tr><td><code>--ds-border-width-default</code></td><td><code>border-width-1</code></td><td>1px</td><td><span data-lang="pt">Bordas padrao de componentes</span><span data-lang="en">Default component borders</span></td></tr>
+        <tr><td><code>--ds-border-width-strong</code></td><td><code>border-width-2</code></td><td>2px</td><td><span data-lang="pt">Bordas enfatizadas</span><span data-lang="en">Emphasized borders</span></td></tr>
+        <tr><td><code>--ds-border-width-focus</code></td><td><code>border-width-2</code></td><td>2px</td><td><span data-lang="pt">Indicadores de foco</span><span data-lang="en">Focus indicators</span></td></tr>
       </tbody>
     </table>
   </div>
 
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Border Colors</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Cores de Borda</span><span data-lang="en">Border Colors</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th>Swatch</th><th>Token</th><th>Light</th><th>Dark</th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Amostra</span><span data-lang="en">Swatch</span></th><th>Token</th><th>Light</th><th>Dark</th></tr></thead>
       <tbody>
         <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-border-default)"></span></td><td><code>--ds-border-default</code></td><td><code>neutral-200</code></td><td><code>neutral-700</code></td></tr>
         <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-border-strong)"></span></td><td><code>--ds-border-strong</code></td><td><code>neutral-400</code></td><td><code>neutral-500</code></td></tr>
@@ -166,9 +172,9 @@
   </div>
 
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Feedback Border Colors</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Cores de Borda de Feedback</span><span data-lang="en">Feedback Border Colors</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th>Swatch</th><th>Token</th><th>Light</th><th>Dark</th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Amostra</span><span data-lang="en">Swatch</span></th><th>Token</th><th>Light</th><th>Dark</th></tr></thead>
       <tbody>
         <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-success-border)"></span></td><td><code>--ds-feedback-success-border</code></td><td><code>green-600</code></td><td><code>green-500</code></td></tr>
         <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-warning-border)"></span></td><td><code>--ds-feedback-warning-border</code></td><td><code>amber-500</code></td><td><code>amber-400</code></td></tr>

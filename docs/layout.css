@@ -3,6 +3,17 @@
    ============================================================ */
 
 /* ---------------------------------------------------------
+   Internationalization (i18n)
+   --------------------------------------------------------- */
+/* Default: show PT, hide EN */
+[data-lang="en"] { display: none; }
+
+/* When EN is active: show EN, hide PT */
+html[lang="en"] [data-lang="en"] { display: inline; }
+html[lang="en"] [data-lang="pt"] { display: none; }
+
+
+/* ---------------------------------------------------------
    Site Header
    --------------------------------------------------------- */
 .ds-site-header {

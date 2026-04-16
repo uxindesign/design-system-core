@@ -6,6 +6,139 @@
   'use strict';
 
   /* ---------------------------------------------------------
+     Internationalization (i18n)
+     --------------------------------------------------------- */
+  var UI_STRINGS = {
+    pt: {
+      'Overview': 'Visão Geral',
+      'Foundations': 'Fundamentos',
+      'Components': 'Componentes',
+      'Guidelines': 'Diretrizes',
+      'Getting Started': 'Começando',
+      'Token Architecture': 'Arquitetura de Tokens',
+      'Design Principles': 'Princípios de Design',
+      'Changelog': 'Changelog',
+      'Colors': 'Cores',
+      'Theme Colors': 'Cores Temáticas',
+      'Typography': 'Tipografia',
+      'Spacing': 'Espaçamento',
+      'Radius': 'Radius',
+      'Elevation': 'Elevação',
+      'Borders': 'Bordas',
+      'Motion': 'Movimento',
+      'Opacity': 'Opacidade',
+      'Z-index': 'Z-index',
+      'Button': 'Botão',
+      'Input': 'Input',
+      'Textarea': 'Textarea',
+      'Select': 'Select',
+      'Checkbox': 'Checkbox',
+      'Radio': 'Radio',
+      'Toggle': 'Toggle',
+      'Badge': 'Badge',
+      'Alert': 'Alerta',
+      'Card': 'Card',
+      'Modal': 'Modal',
+      'Tooltip': 'Tooltip',
+      'Tabs': 'Abas',
+      'Breadcrumb': 'Breadcrumb',
+      'Avatar': 'Avatar',
+      'Divider': 'Divisor',
+      'Spinner': 'Spinner',
+      'Skeleton': 'Skeleton',
+      'Form Field': 'Campo de Formulário',
+      'Theming': 'Tematização',
+      'Accessibility': 'Acessibilidade',
+      'Control Sizing': 'Dimensionamento de Controles',
+      'Theme': 'Tema',
+      'Preview': 'Visualização',
+      'Code': 'Código',
+      'Copy': 'Copiar',
+      'Copied!': 'Copiado!',
+      'Do': 'Faça',
+      "Don't": 'Não faça'
+    }
+  };
+
+  function getLang() {
+    return document.documentElement.getAttribute('lang') || 'pt';
+  }
+
+  function translateSharedUI() {
+    var lang = getLang();
+    var map = UI_STRINGS[lang] || {};
+    var hasMap = Object.keys(map).length > 0;
+
+    var els = document.querySelectorAll(
+      '.ds-sidebar__heading, .ds-sidebar__link, .ds-component-card, ' +
+      '.ds-preview__tab, .ds-preview__copy'
+    );
+    els.forEach(function (el) {
+      if (!el.hasAttribute('data-i18n-src')) {
+        el.setAttribute('data-i18n-src', el.textContent.trim());
+      }
+      var src = el.getAttribute('data-i18n-src');
+      el.textContent = hasMap ? (map[src] || src) : src;
+    });
+
+    // Do/Don't labels (text only, not the class part)
+    document.querySelectorAll('.ds-dodont__label').forEach(function (el) {
+      if (!el.hasAttribute('data-i18n-src')) {
+        el.setAttribute('data-i18n-src', el.textContent.trim());
+      }
+      var src = el.getAttribute('data-i18n-src');
+      el.textContent = hasMap ? (map[src] || src) : src;
+    });
+
+    updateModeToggleText();
+    translatePageTitle();
+  }
+
+  function updateModeToggleText() {
+    var modeToggle = document.getElementById('mode-toggle');
+    if (!modeToggle) return;
+    var isDark = document.documentElement.getAttribute('data-mode') === 'dark';
+    if (getLang() === 'pt') {
+      modeToggle.textContent = isDark ? 'Claro' : 'Escuro';
+    } else {
+      modeToggle.textContent = isDark ? 'Light' : 'Dark';
+    }
+  }
+
+  function translatePageTitle() {
+    if (!document.documentElement.hasAttribute('data-i18n-title')) {
+      document.documentElement.setAttribute('data-i18n-title', document.title);
+    }
+    var original = document.documentElement.getAttribute('data-i18n-title');
+    var lang = getLang();
+    var map = UI_STRINGS[lang] || {};
+    if (Object.keys(map).length) {
+      var parts = original.split(' \u2014 ');
+      if (parts.length === 2) {
+        document.title = (map[parts[0]] || parts[0]) + ' \u2014 Design System';
+      }
+    } else {
+      document.title = original;
+    }
+  }
+
+  function initI18n() {
+    translateSharedUI();
+
+    var select = document.getElementById('lang-switcher');
+    if (!select) return;
+
+    select.value = getLang();
+
+    select.addEventListener('change', function () {
+      var newLang = this.value;
+      document.documentElement.setAttribute('lang', newLang);
+      localStorage.setItem('ds-lang', newLang);
+      translateSharedUI();
+    });
+  }
+
+  /* ---------------------------------------------------------
      Theme Switcher
      --------------------------------------------------------- */
   function initThemeSwitcher() {
@@ -38,7 +171,6 @@
       if (savedMode === 'dark') {
         document.documentElement.setAttribute('data-mode', 'dark');
         modeToggle.setAttribute('aria-pressed', 'true');
-        modeToggle.textContent = 'Light';
       }
 
       modeToggle.addEventListener('click', function () {
@@ -47,13 +179,12 @@
           document.documentElement.removeAttribute('data-mode');
           localStorage.removeItem('ds-mode');
           this.setAttribute('aria-pressed', 'false');
-          this.textContent = 'Dark';
         } else {
           document.documentElement.setAttribute('data-mode', 'dark');
           localStorage.setItem('ds-mode', 'dark');
           this.setAttribute('aria-pressed', 'true');
-          this.textContent = 'Light';
         }
+        updateModeToggleText();
       });
     }
   }
@@ -110,11 +241,13 @@
         if (!codeBlock) return;
 
         var text = codeBlock.textContent;
+        var currentBtn = btn;
         navigator.clipboard.writeText(text).then(function () {
-          var original = btn.textContent;
-          btn.textContent = 'Copied!';
+          currentBtn.textContent = getLang() === 'pt' ? 'Copiado!' : 'Copied!';
+          currentBtn.setAttribute('data-i18n-src', getLang() === 'pt' ? 'Copiado!' : 'Copied!');
           setTimeout(function () {
-            btn.textContent = original;
+            currentBtn.textContent = getLang() === 'pt' ? 'Copiar' : 'Copy';
+            currentBtn.setAttribute('data-i18n-src', getLang() === 'pt' ? 'Copiar' : 'Copy');
           }, 2000);
         });
       });
@@ -288,6 +421,7 @@
      --------------------------------------------------------- */
   document.addEventListener('DOMContentLoaded', function () {
     initThemeSwitcher();
+    initI18n();
     initMobileNav();
     initCopyButtons();
     initPreviewTabs();

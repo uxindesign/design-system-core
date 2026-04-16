@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,6 +41,9 @@
     /* Responsive do/dont */
     @media (max-width: 768px) { .ds-dodont { grid-template-columns: 1fr; } }
   </style>
+  <script>
+    (function(){var l=localStorage.getItem('ds-lang');if(l)document.documentElement.setAttribute('lang',l)})();
+  </script>
 </head>
 <body>
 
@@ -55,15 +58,18 @@
     </a>
   </div>
   <div class="ds-site-header__actions">
+    <select class="ds-theme-switcher__select" id="lang-switcher" aria-label="Language">
+      <option value="pt">PT</option>
+      <option value="en">EN</option>
+    </select>
     <div class="ds-theme-switcher">
-      <label class="ds-theme-switcher__label" for="theme-switcher">Theme</label>
       <select class="ds-theme-switcher__select" id="theme-switcher">
         <option value="default">Default (Blue)</option>
         <option value="ocean">Ocean (Cyan)</option>
         <option value="forest">Forest (Emerald)</option>
       </select>
     </div>
-    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode">Dark</button>
+    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode">Escuro</button>
   </div>
 </header>
 <div class="ds-sidebar-overlay" id="sidebar-overlay"></div>
@@ -135,32 +141,32 @@
        ============================================================ -->
   <div class="ds-section">
     <h1 class="ds-section__title">Button</h1>
-    <p class="ds-section__subtitle">Buttons trigger actions. Available in 6 styles and 3 sizes, with support for icons, loading state, and full-width layout.</p>
+    <p class="ds-section__subtitle"><span data-lang="pt">Buttons disparam ações. Disponível em 6 estilos e 3 tamanhos, com suporte a ícones, estado de carregamento e layout full-width.</span><span data-lang="en">Buttons trigger actions. Available in 6 styles and 3 sizes, with support for icons, loading state, and full-width layout.</span></p>
   </div>
 
   <!-- ============================================================
        2. WHEN TO USE / WHEN NOT TO USE
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">When to use</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Quando usar</span><span data-lang="en">When to use</span></h2>
     <div class="ds-callout ds-callout--success">
-      <div class="ds-callout__title">Use buttons when</div>
-      The user needs to trigger an action: submit a form, open a modal, confirm a decision, start a process, or perform a destructive operation. Buttons communicate what will happen when clicked.
+      <div class="ds-callout__title"><span data-lang="pt">Use buttons quando</span><span data-lang="en">Use buttons when</span></div>
+      <span data-lang="pt">O usuário precisa disparar uma ação: enviar um formulário, abrir um modal, confirmar uma decisão, iniciar um processo ou executar uma operação destrutiva. Buttons comunicam o que acontecerá ao clicar.</span><span data-lang="en">The user needs to trigger an action: submit a form, open a modal, confirm a decision, start a process, or perform a destructive operation. Buttons communicate what will happen when clicked.</span>
     </div>
     <div class="ds-callout ds-callout--warning">
-      <div class="ds-callout__title">Don't use buttons when</div>
-      The action is navigation to another page or URL — use a link (<code>&lt;a&gt;</code>) instead. Don't use buttons for inline text actions or when the visual weight would compete with the page's primary action.
+      <div class="ds-callout__title"><span data-lang="pt">Não use buttons quando</span><span data-lang="en">Don't use buttons when</span></div>
+      <span data-lang="pt">A ação é navegação para outra página ou URL — use um link (<code>&lt;a&gt;</code>). Não use buttons para ações inline de texto ou quando o peso visual competiria com a ação principal da página.</span><span data-lang="en">The action is navigation to another page or URL — use a link (<code>&lt;a&gt;</code>) instead. Don't use buttons for inline text actions or when the visual weight would compete with the page's primary action.</span>
     </div>
 
     <table class="ds-token-table">
-      <thead><tr><th>Style</th><th>Use for</th><th>Emphasis</th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Estilo</span><span data-lang="en">Style</span></th><th><span data-lang="pt">Usar para</span><span data-lang="en">Use for</span></th><th><span data-lang="pt">Ênfase</span><span data-lang="en">Emphasis</span></th></tr></thead>
       <tbody>
-        <tr><td><strong>Brand</strong></td><td>Primary action on the page. One per section, ideally one per page.</td><td>Highest</td></tr>
-        <tr><td><strong>Toned</strong></td><td>Secondary actions that need visibility but shouldn't compete with Brand.</td><td>Medium</td></tr>
-        <tr><td><strong>Outline</strong></td><td>Secondary or tertiary actions. Pairs well next to a Brand button.</td><td>Medium</td></tr>
-        <tr><td><strong>Ghost</strong></td><td>Tertiary actions, toolbar actions, or close/dismiss buttons.</td><td>Low</td></tr>
-        <tr><td><strong>Success</strong></td><td>Confirming a positive outcome: approve, complete, publish.</td><td>Contextual</td></tr>
-        <tr><td><strong>Danger</strong></td><td>Destructive actions: delete, remove, revoke. Always requires confirmation.</td><td>Contextual</td></tr>
+        <tr><td><strong>Brand</strong></td><td><span data-lang="pt">Ação principal da página. Um por seção, idealmente um por página.</span><span data-lang="en">Primary action on the page. One per section, ideally one per page.</span></td><td><span data-lang="pt">Máxima</span><span data-lang="en">Highest</span></td></tr>
+        <tr><td><strong>Toned</strong></td><td><span data-lang="pt">Ações secundárias que precisam de visibilidade mas não devem competir com Brand.</span><span data-lang="en">Secondary actions that need visibility but shouldn't compete with Brand.</span></td><td><span data-lang="pt">Média</span><span data-lang="en">Medium</span></td></tr>
+        <tr><td><strong>Outline</strong></td><td><span data-lang="pt">Ações secundárias ou terciárias. Combina bem ao lado de um button Brand.</span><span data-lang="en">Secondary or tertiary actions. Pairs well next to a Brand button.</span></td><td><span data-lang="pt">Média</span><span data-lang="en">Medium</span></td></tr>
+        <tr><td><strong>Ghost</strong></td><td><span data-lang="pt">Ações terciárias, ações de toolbar ou buttons de fechar/dispensar.</span><span data-lang="en">Tertiary actions, toolbar actions, or close/dismiss buttons.</span></td><td><span data-lang="pt">Baixa</span><span data-lang="en">Low</span></td></tr>
+        <tr><td><strong>Success</strong></td><td><span data-lang="pt">Confirmar um resultado positivo: aprovar, concluir, publicar.</span><span data-lang="en">Confirming a positive outcome: approve, complete, publish.</span></td><td><span data-lang="pt">Contextual</span><span data-lang="en">Contextual</span></td></tr>
+        <tr><td><strong>Danger</strong></td><td><span data-lang="pt">Ações destrutivas: excluir, remover, revogar. Sempre requer confirmação.</span><span data-lang="en">Destructive actions: delete, remove, revoke. Always requires confirmation.</span></td><td><span data-lang="pt">Contextual</span><span data-lang="en">Contextual</span></td></tr>
       </tbody>
     </table>
   </div>
@@ -169,7 +175,7 @@
        3. ANATOMY
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Anatomy</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Anatomia</span><span data-lang="en">Anatomy</span></h2>
 
     <div class="ds-anatomy">
       <div style="position:relative;display:inline-flex;align-items:center;">
@@ -188,11 +194,15 @@
     </div>
 
     <div class="ds-anatomy-legend">
-      <strong>1</strong> Container — background, border-radius, min-height per size.<br>
+      <span data-lang="pt"><strong>1</strong> Container — background, border-radius, min-height por tamanho.<br>
+      <strong>2</strong> Icon (opcional) — 16px, herda a cor do foreground. Posição esquerda ou direita.<br>
+      <strong>3</strong> Label (<code>.ds-btn__label</code>) — conteúdo de texto, token de fonte semântico por tamanho.<br>
+      <strong>4</strong> Padding raiz — <code>inset-sm</code> (8px) / <code>inset-md</code> (12px) / <code>inset-lg</code> (16px).<br>
+      <strong>5</strong> Padding do label — 4px adicionais (<code>inset-xs</code>) quando não há ícone, para equilíbrio óptico.</span><span data-lang="en"><strong>1</strong> Container — background, border-radius, min-height per size.<br>
       <strong>2</strong> Icon (optional) — 16px, inherits foreground color. Left or right position.<br>
       <strong>3</strong> Label (<code>.ds-btn__label</code>) — text content, semantic font token per size.<br>
       <strong>4</strong> Root padding — <code>inset-sm</code> (8px) / <code>inset-md</code> (12px) / <code>inset-lg</code> (16px).<br>
-      <strong>5</strong> Label padding — additional 4px (<code>inset-xs</code>) when no icon is present, for optical balance.
+      <strong>5</strong> Label padding — additional 4px (<code>inset-xs</code>) when no icon is present, for optical balance.</span>
     </div>
   </div>
 
@@ -200,7 +210,7 @@
        4. VARIANTS (live previews)
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Styles</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Estilos</span><span data-lang="en">Styles</span></h2>
     <div class="ds-preview">
       <div class="ds-preview__tabs">
         <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
@@ -247,7 +257,7 @@
        5. SIZES
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Sizes</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Tamanhos</span><span data-lang="en">Sizes</span></h2>
     <div class="ds-preview">
       <div class="ds-preview__tabs">
         <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
@@ -266,7 +276,7 @@
       </div>
     </div>
     <table class="ds-token-table">
-      <thead><tr><th>Size</th><th>Height</th><th>Font</th><th>Padding</th><th>Touch target</th></tr></thead>
+      <thead><tr><th>Size</th><th><span data-lang="pt">Altura</span><span data-lang="en">Height</span></th><th><span data-lang="pt">Fonte</span><span data-lang="en">Font</span></th><th>Padding</th><th>Touch target</th></tr></thead>
       <tbody>
         <tr><td>Small (<code>--sm</code>)</td><td>32px (<code>semantic.size.control.sm</code>)</td><td><code>semantic.typography.control.font-size.sm</code></td><td>8×12px (padding-y × padding-x)</td><td>32px — meets WCAG 2.5.8 min (24px)</td></tr>
         <tr><td>Medium (<code>--md</code>)</td><td>40px (<code>semantic.size.control.md</code>)</td><td><code>semantic.typography.control.font-size.md</code></td><td>10×16px (padding-y × padding-x)</td><td>40px</td></tr>
@@ -279,9 +289,9 @@
        6. STATES
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">States</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Estados</span><span data-lang="en">States</span></h2>
     <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
-      States are handled via CSS pseudo-classes (<code>:hover</code>, <code>:active</code>, <code>:focus-visible</code>, <code>[disabled]</code>), not modifier classes.
+      <span data-lang="pt">Estados são controlados via pseudo-classes CSS (<code>:hover</code>, <code>:active</code>, <code>:focus-visible</code>, <code>[disabled]</code>), não classes modificadoras.</span><span data-lang="en">States are handled via CSS pseudo-classes (<code>:hover</code>, <code>:active</code>, <code>:focus-visible</code>, <code>[disabled]</code>), not modifier classes.</span>
     </p>
     <div class="ds-preview">
       <div class="ds-preview__canvas">
@@ -293,13 +303,13 @@
       </div>
     </div>
     <table class="ds-token-table">
-      <thead><tr><th>State</th><th>CSS trigger</th><th>Visual change</th><th>Token</th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Estado</span><span data-lang="en">State</span></th><th>CSS trigger</th><th><span data-lang="pt">Mudança visual</span><span data-lang="en">Visual change</span></th><th>Token</th></tr></thead>
       <tbody>
-        <tr><td>Default</td><td>—</td><td>Primary fill</td><td><code>semantic.color.primary.default</code></td></tr>
-        <tr><td>Hover</td><td><code>:hover</code></td><td>Darker fill</td><td><code>semantic.color.primary.hover</code></td></tr>
-        <tr><td>Pressed</td><td><code>:active</code></td><td>Darkest fill</td><td><code>semantic.color.primary.active</code></td></tr>
-        <tr><td>Focused</td><td><code>:focus-visible</code></td><td>2px outline ring, 2px offset</td><td><code>semantic.focus.ring.*</code></td></tr>
-        <tr><td>Disabled</td><td><code>[disabled]</code></td><td>Muted bg + fg, no pointer events</td><td><code>semantic.state.disabled.*</code></td></tr>
+        <tr><td>Default</td><td>—</td><td><span data-lang="pt">Preenchimento primário</span><span data-lang="en">Primary fill</span></td><td><code>semantic.color.primary.default</code></td></tr>
+        <tr><td>Hover</td><td><code>:hover</code></td><td><span data-lang="pt">Preenchimento mais escuro</span><span data-lang="en">Darker fill</span></td><td><code>semantic.color.primary.hover</code></td></tr>
+        <tr><td>Pressed</td><td><code>:active</code></td><td><span data-lang="pt">Preenchimento mais escuro ainda</span><span data-lang="en">Darkest fill</span></td><td><code>semantic.color.primary.active</code></td></tr>
+        <tr><td>Focused</td><td><code>:focus-visible</code></td><td><span data-lang="pt">Anel de 2px, offset de 2px</span><span data-lang="en">2px outline ring, 2px offset</span></td><td><code>semantic.focus.ring.*</code></td></tr>
+        <tr><td>Disabled</td><td><code>[disabled]</code></td><td><span data-lang="pt">Bg + fg atenuados, sem pointer events</span><span data-lang="en">Muted bg + fg, no pointer events</span></td><td><code>semantic.state.disabled.*</code></td></tr>
       </tbody>
     </table>
   </div>
@@ -308,7 +318,7 @@
        7. COMPOSITIONS (icon, loading, full-width)
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">With icon</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Com ícone</span><span data-lang="en">With icon</span></h2>
     <div class="ds-preview">
       <div class="ds-preview__tabs">
         <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
@@ -330,7 +340,7 @@
   </div>
 
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Icon only</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Somente ícone</span><span data-lang="en">Icon only</span></h2>
     <div class="ds-preview">
       <div class="ds-preview__tabs">
         <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
@@ -355,7 +365,7 @@
   </div>
 
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Loading</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Carregamento</span><span data-lang="en">Loading</span></h2>
     <div class="ds-preview">
       <div class="ds-preview__tabs">
         <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
@@ -379,7 +389,7 @@
   </div>
 
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Full width</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Largura total</span><span data-lang="en">Full width</span></h2>
     <div class="ds-preview">
       <div class="ds-preview__tabs">
         <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
@@ -401,7 +411,7 @@
        8. BEST PRACTICES (Do / Don't)
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Best practices</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Boas práticas</span><span data-lang="en">Best practices</span></h2>
 
     <div class="ds-dodont">
       <div class="ds-dodont__item">
@@ -409,8 +419,8 @@
           <button class="ds-btn ds-btn--brand"><span class="ds-btn__label">Save changes</span></button>
           <button class="ds-btn ds-btn--outline"><span class="ds-btn__label">Cancel</span></button>
         </div>
-        <div class="ds-dodont__label ds-dodont__label--do">Do</div>
-        <div class="ds-dodont__desc">Use one Brand button per section. Pair with a lower-emphasis alternative.</div>
+        <div class="ds-dodont__label ds-dodont__label--do"><span data-lang="pt">Faça</span><span data-lang="en">Do</span></div>
+        <div class="ds-dodont__desc"><span data-lang="pt">Use um button Brand por seção. Combine com uma alternativa de menor ênfase.</span><span data-lang="en">Use one Brand button per section. Pair with a lower-emphasis alternative.</span></div>
       </div>
       <div class="ds-dodont__item">
         <div class="ds-dodont__preview">
@@ -418,8 +428,8 @@
           <button class="ds-btn ds-btn--brand"><span class="ds-btn__label">Cancel</span></button>
           <button class="ds-btn ds-btn--brand"><span class="ds-btn__label">Reset</span></button>
         </div>
-        <div class="ds-dodont__label ds-dodont__label--dont">Don't</div>
-        <div class="ds-dodont__desc">Multiple Brand buttons compete for attention and confuse priority.</div>
+        <div class="ds-dodont__label ds-dodont__label--dont"><span data-lang="pt">Não faça</span><span data-lang="en">Don't</span></div>
+        <div class="ds-dodont__desc"><span data-lang="pt">Múltiplos buttons Brand competem por atenção e confundem a prioridade.</span><span data-lang="en">Multiple Brand buttons compete for attention and confuse priority.</span></div>
       </div>
     </div>
 
@@ -429,14 +439,14 @@
           <button class="ds-btn ds-btn--danger"><span class="ds-btn__label">Delete project</span></button>
         </div>
         <div class="ds-dodont__label ds-dodont__label--do">Do</div>
-        <div class="ds-dodont__desc">Use Danger for destructive actions. Label clearly describes what will be deleted.</div>
+        <div class="ds-dodont__desc"><span data-lang="pt">Use Danger para ações destrutivas. O label descreve claramente o que será excluído.</span><span data-lang="en">Use Danger for destructive actions. Label clearly describes what will be deleted.</span></div>
       </div>
       <div class="ds-dodont__item">
         <div class="ds-dodont__preview">
           <button class="ds-btn ds-btn--danger"><span class="ds-btn__label">Submit</span></button>
         </div>
         <div class="ds-dodont__label ds-dodont__label--dont">Don't</div>
-        <div class="ds-dodont__desc">Don't use Danger for non-destructive actions. Red implies something irreversible.</div>
+        <div class="ds-dodont__desc"><span data-lang="pt">Não use Danger para ações não-destrutivas. Vermelho implica algo irreversível.</span><span data-lang="en">Don't use Danger for non-destructive actions. Red implies something irreversible.</span></div>
       </div>
     </div>
   </div>
@@ -445,16 +455,16 @@
        9. CONTENT GUIDELINES
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Content guidelines</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Diretrizes de conteúdo</span><span data-lang="en">Content guidelines</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th>Rule</th><th>Example</th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Regra</span><span data-lang="en">Rule</span></th><th><span data-lang="pt">Exemplo</span><span data-lang="en">Example</span></th></tr></thead>
       <tbody>
-        <tr><td>Use verb + noun for clarity</td><td>"Save changes", "Add item", "Delete project" — not just "Submit" or "OK"</td></tr>
-        <tr><td>Use sentence case</td><td>"Save changes" — not "Save Changes" or "SAVE CHANGES"</td></tr>
-        <tr><td>Keep labels short (1–3 words)</td><td>"Export CSV" — not "Click here to export your data as CSV"</td></tr>
-        <tr><td>Be specific about destructive actions</td><td>"Delete account" — not "Delete" or "Remove"</td></tr>
-        <tr><td>Avoid generic labels</td><td>"Confirm order" — not "Click here" or "Yes"</td></tr>
-        <tr><td>Icon-only buttons need <code>aria-label</code></td><td><code>aria-label="Close dialog"</code> — describes the action, not the icon</td></tr>
+        <tr><td><span data-lang="pt">Use verbo + substantivo para clareza</span><span data-lang="en">Use verb + noun for clarity</span></td><td><span data-lang="pt">"Save changes", "Add item", "Delete project" — não apenas "Submit" ou "OK"</span><span data-lang="en">"Save changes", "Add item", "Delete project" — not just "Submit" or "OK"</span></td></tr>
+        <tr><td><span data-lang="pt">Use sentence case</span><span data-lang="en">Use sentence case</span></td><td><span data-lang="pt">"Save changes" — não "Save Changes" ou "SAVE CHANGES"</span><span data-lang="en">"Save changes" — not "Save Changes" or "SAVE CHANGES"</span></td></tr>
+        <tr><td><span data-lang="pt">Mantenha labels curtos (1–3 palavras)</span><span data-lang="en">Keep labels short (1–3 words)</span></td><td><span data-lang="pt">"Export CSV" — não "Click here to export your data as CSV"</span><span data-lang="en">"Export CSV" — not "Click here to export your data as CSV"</span></td></tr>
+        <tr><td><span data-lang="pt">Seja específico sobre ações destrutivas</span><span data-lang="en">Be specific about destructive actions</span></td><td><span data-lang="pt">"Delete account" — não "Delete" ou "Remove"</span><span data-lang="en">"Delete account" — not "Delete" or "Remove"</span></td></tr>
+        <tr><td><span data-lang="pt">Evite labels genéricos</span><span data-lang="en">Avoid generic labels</span></td><td><span data-lang="pt">"Confirm order" — não "Click here" ou "Yes"</span><span data-lang="en">"Confirm order" — not "Click here" or "Yes"</span></td></tr>
+        <tr><td><span data-lang="pt">Buttons somente-ícone precisam de <code>aria-label</code></span><span data-lang="en">Icon-only buttons need <code>aria-label</code></span></td><td><span data-lang="pt"><code>aria-label="Close dialog"</code> — descreve a ação, não o ícone</span><span data-lang="en"><code>aria-label="Close dialog"</code> — describes the action, not the icon</span></td></tr>
       </tbody>
     </table>
   </div>
@@ -463,12 +473,12 @@
        10. TOKEN MAPPING
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Token mapping</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Mapeamento de tokens</span><span data-lang="en">Token mapping</span></h2>
     <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
-      Tokens consumed by the Brand variant. Other variants follow the same pattern using their respective color groups.
+      <span data-lang="pt">Tokens consumidos pela variante Brand. Outras variantes seguem o mesmo padrão usando seus respectivos grupos de cor.</span><span data-lang="en">Tokens consumed by the Brand variant. Other variants follow the same pattern using their respective color groups.</span>
     </p>
     <table class="ds-token-table">
-      <thead><tr><th>Property</th><th>Token (semantic)</th><th>CSS variable</th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token (semantic)</th><th><span data-lang="pt">Variável CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
       <tbody>
         <tr><td>background (default)</td><td><code>semantic.color.primary.default</code></td><td><code>--ds-color-primary-default</code></td></tr>
         <tr><td>background (hover)</td><td><code>semantic.color.primary.hover</code></td><td><code>--ds-color-primary-hover</code></td></tr>
@@ -497,9 +507,9 @@
       </tbody>
     </table>
 
-    <h3 style="margin-top:var(--ds-spacing-6);margin-bottom:var(--ds-spacing-3);font-size:var(--ds-font-size-md);color:var(--ds-text-default)">Toned variant</h3>
+    <h3 style="margin-top:var(--ds-spacing-6);margin-bottom:var(--ds-spacing-3);font-size:var(--ds-font-size-md);color:var(--ds-text-default)"><span data-lang="pt">Variante Toned</span><span data-lang="en">Toned variant</span></h3>
     <div class="ds-callout ds-callout--info">
-      The <strong>Toned</strong> variant uses translucent overlay backgrounds (<code>--ds-color-primary-toned-default</code>, <code>--ds-color-primary-toned-hover</code>, <code>--ds-color-primary-toned-active</code>) instead of opaque fills. This differs from Subtle/Muted patterns which use opaque background tokens. The translucent approach lets the Toned button adapt naturally to any surface color beneath it while maintaining a consistent brand tint.
+      <span data-lang="pt">A variante <strong>Toned</strong> usa backgrounds de overlay translúcidos (<code>--ds-color-primary-toned-default</code>, <code>--ds-color-primary-toned-hover</code>, <code>--ds-color-primary-toned-active</code>) em vez de preenchimentos opacos. Isso difere dos padrões Subtle/Muted que usam tokens de background opacos. A abordagem translúcida permite que o button Toned se adapte naturalmente a qualquer cor de superfície abaixo dele, mantendo um tint de marca consistente.</span><span data-lang="en">The <strong>Toned</strong> variant uses translucent overlay backgrounds (<code>--ds-color-primary-toned-default</code>, <code>--ds-color-primary-toned-hover</code>, <code>--ds-color-primary-toned-active</code>) instead of opaque fills. This differs from Subtle/Muted patterns which use opaque background tokens. The translucent approach lets the Toned button adapt naturally to any surface color beneath it while maintaining a consistent brand tint.</span>
     </div>
   </div>
 
@@ -507,25 +517,25 @@
        11. CSS CLASSES
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">CSS classes</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Classes CSS</span><span data-lang="en">CSS classes</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th>Class</th><th>Description</th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Classe</span><span data-lang="en">Class</span></th><th><span data-lang="pt">Descrição</span><span data-lang="en">Description</span></th></tr></thead>
       <tbody>
-        <tr><td><code>ds-btn</code></td><td>Base button class</td></tr>
-        <tr><td><code>ds-btn--brand</code></td><td>Filled with brand color (default style, can be omitted)</td></tr>
-        <tr><td><code>ds-btn--toned</code></td><td>Alpha-tinted brand background</td></tr>
-        <tr><td><code>ds-btn--outline</code></td><td>Neutral border, no brand fill</td></tr>
-        <tr><td><code>ds-btn--ghost</code></td><td>Brand text, no background or border</td></tr>
-        <tr><td><code>ds-btn--success</code></td><td>Filled with success/green color</td></tr>
-        <tr><td><code>ds-btn--danger</code></td><td>Filled with error/red color</td></tr>
-        <tr><td><code>ds-btn--sm</code></td><td>Small size (32px height)</td></tr>
-        <tr><td><code>ds-btn--md</code></td><td>Medium size (40px, default — can be omitted)</td></tr>
-        <tr><td><code>ds-btn--lg</code></td><td>Large size (48px height)</td></tr>
-        <tr><td><code>ds-btn--icon-only</code></td><td>Square button for icon-only use</td></tr>
-        <tr><td><code>ds-btn--full</code></td><td>Full-width button (100%)</td></tr>
-        <tr><td><code>ds-btn--loading</code></td><td>Loading state — hides label, shows spinner</td></tr>
-        <tr><td><code>ds-btn__label</code></td><td>Text label (child element)</td></tr>
-        <tr><td><code>ds-btn__spinner</code></td><td>Spinner container (child element, used with <code>--loading</code>)</td></tr>
+        <tr><td><code>ds-btn</code></td><td><span data-lang="pt">Classe base do button</span><span data-lang="en">Base button class</span></td></tr>
+        <tr><td><code>ds-btn--brand</code></td><td><span data-lang="pt">Preenchido com cor da marca (estilo padrão, pode ser omitido)</span><span data-lang="en">Filled with brand color (default style, can be omitted)</span></td></tr>
+        <tr><td><code>ds-btn--toned</code></td><td><span data-lang="pt">Background da marca com alpha transparente</span><span data-lang="en">Alpha-tinted brand background</span></td></tr>
+        <tr><td><code>ds-btn--outline</code></td><td><span data-lang="pt">Borda neutra, sem preenchimento de marca</span><span data-lang="en">Neutral border, no brand fill</span></td></tr>
+        <tr><td><code>ds-btn--ghost</code></td><td><span data-lang="pt">Texto da marca, sem background ou borda</span><span data-lang="en">Brand text, no background or border</span></td></tr>
+        <tr><td><code>ds-btn--success</code></td><td><span data-lang="pt">Preenchido com cor de sucesso/verde</span><span data-lang="en">Filled with success/green color</span></td></tr>
+        <tr><td><code>ds-btn--danger</code></td><td><span data-lang="pt">Preenchido com cor de erro/vermelho</span><span data-lang="en">Filled with error/red color</span></td></tr>
+        <tr><td><code>ds-btn--sm</code></td><td><span data-lang="pt">Tamanho pequeno (altura 32px)</span><span data-lang="en">Small size (32px height)</span></td></tr>
+        <tr><td><code>ds-btn--md</code></td><td><span data-lang="pt">Tamanho médio (40px, padrão — pode ser omitido)</span><span data-lang="en">Medium size (40px, default — can be omitted)</span></td></tr>
+        <tr><td><code>ds-btn--lg</code></td><td><span data-lang="pt">Tamanho grande (altura 48px)</span><span data-lang="en">Large size (48px height)</span></td></tr>
+        <tr><td><code>ds-btn--icon-only</code></td><td><span data-lang="pt">Button quadrado para uso somente-ícone</span><span data-lang="en">Square button for icon-only use</span></td></tr>
+        <tr><td><code>ds-btn--full</code></td><td><span data-lang="pt">Button de largura total (100%)</span><span data-lang="en">Full-width button (100%)</span></td></tr>
+        <tr><td><code>ds-btn--loading</code></td><td><span data-lang="pt">Estado de carregamento — oculta label, mostra spinner</span><span data-lang="en">Loading state — hides label, shows spinner</span></td></tr>
+        <tr><td><code>ds-btn__label</code></td><td><span data-lang="pt">Label de texto (elemento filho)</span><span data-lang="en">Text label (child element)</span></td></tr>
+        <tr><td><code>ds-btn__spinner</code></td><td><span data-lang="pt">Container do spinner (elemento filho, usado com <code>--loading</code>)</span><span data-lang="en">Spinner container (child element, used with <code>--loading</code>)</span></td></tr>
       </tbody>
     </table>
   </div>
@@ -534,17 +544,17 @@
        12. KEYBOARD INTERACTION
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Keyboard interaction</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Interação por teclado</span><span data-lang="en">Keyboard interaction</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th>Key</th><th>Action</th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Tecla</span><span data-lang="en">Key</span></th><th><span data-lang="pt">Ação</span><span data-lang="en">Action</span></th></tr></thead>
       <tbody>
-        <tr><td><code>Tab</code></td><td>Moves focus to the button (or past it if disabled)</td></tr>
-        <tr><td><code>Enter</code></td><td>Activates the button</td></tr>
+        <tr><td><code>Tab</code></td><td><span data-lang="pt">Move o foco para o button (ou além dele se desabilitado)</span><span data-lang="en">Moves focus to the button (or past it if disabled)</span></td></tr>
+        <tr><td><code>Enter</code></td><td><span data-lang="pt">Ativa o button</span><span data-lang="en">Activates the button</span></td></tr>
         <tr><td><code>Space</code></td><td>Activates the button</td></tr>
       </tbody>
     </table>
     <p style="margin-top:var(--ds-spacing-2);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
-      Disabled buttons (<code>[disabled]</code>) are removed from tab order automatically by the browser. Loading buttons should also set <code>aria-disabled="true"</code> to prevent interaction while preserving tab order.
+      <span data-lang="pt">Buttons desabilitados (<code>[disabled]</code>) são removidos da ordem de tabulação automaticamente pelo navegador. Buttons em carregamento também devem definir <code>aria-disabled="true"</code> para prevenir interação enquanto preservam a ordem de tabulação.</span><span data-lang="en">Disabled buttons (<code>[disabled]</code>) are removed from tab order automatically by the browser. Loading buttons should also set <code>aria-disabled="true"</code> to prevent interaction while preserving tab order.</span>
     </p>
   </div>
 
@@ -552,24 +562,26 @@
        13. ACCESSIBILITY
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Accessibility</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Acessibilidade</span><span data-lang="en">Accessibility</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th>WCAG criterion</th><th>Requirement</th><th>Status</th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Critério WCAG</span><span data-lang="en">WCAG criterion</span></th><th><span data-lang="pt">Requisito</span><span data-lang="en">Requirement</span></th><th>Status</th></tr></thead>
       <tbody>
-        <tr><td>2.4.11 Focus Appearance (AA)</td><td>Focus ring 2px + 2px gap, contrast ≥ 3:1 against adjacent colors</td><td>✓</td></tr>
-        <tr><td>2.5.8 Target Size min (AA)</td><td>Smallest size (32px) exceeds 24px minimum</td><td>✓</td></tr>
-        <tr><td>2.5.5 Target Size (AAA)</td><td>Large size (48px) meets 44px touch target</td><td>✓</td></tr>
-        <tr><td>1.4.3 Contrast (AA)</td><td>White text on Brand/Danger fill ≥ 4.5:1. Disabled exempt.</td><td>✓</td></tr>
-        <tr><td>4.1.2 Name, Role, Value (A)</td><td>Use <code>&lt;button&gt;</code> element. Icon-only requires <code>aria-label</code>.</td><td>✓</td></tr>
-        <tr><td>1.4.1 Use of Color (A)</td><td>Focused state has visible ring. Disabled has dimmed text + reduced opacity.</td><td>✓</td></tr>
+        <tr><td>2.4.11 Focus Appearance (AA)</td><td><span data-lang="pt">Focus ring 2px + gap de 2px, contraste ≥ 3:1 contra cores adjacentes</span><span data-lang="en">Focus ring 2px + 2px gap, contrast ≥ 3:1 against adjacent colors</span></td><td>✓</td></tr>
+        <tr><td>2.5.8 Target Size min (AA)</td><td><span data-lang="pt">Menor tamanho (32px) excede o mínimo de 24px</span><span data-lang="en">Smallest size (32px) exceeds 24px minimum</span></td><td>✓</td></tr>
+        <tr><td>2.5.5 Target Size (AAA)</td><td><span data-lang="pt">Tamanho grande (48px) atende ao alvo de toque de 44px</span><span data-lang="en">Large size (48px) meets 44px touch target</span></td><td>✓</td></tr>
+        <tr><td>1.4.3 Contrast (AA)</td><td><span data-lang="pt">Texto branco sobre Brand/Danger fill ≥ 4.5:1. Desabilitado isento.</span><span data-lang="en">White text on Brand/Danger fill ≥ 4.5:1. Disabled exempt.</span></td><td>✓</td></tr>
+        <tr><td>4.1.2 Name, Role, Value (A)</td><td><span data-lang="pt">Use o elemento <code>&lt;button&gt;</code>. Somente-ícone requer <code>aria-label</code>.</span><span data-lang="en">Use <code>&lt;button&gt;</code> element. Icon-only requires <code>aria-label</code>.</span></td><td>✓</td></tr>
+        <tr><td>1.4.1 Use of Color (A)</td><td><span data-lang="pt">Estado focado tem ring visível. Desabilitado tem texto esmaecido + opacidade reduzida.</span><span data-lang="en">Focused state has visible ring. Disabled has dimmed text + reduced opacity.</span></td><td>✓</td></tr>
       </tbody>
     </table>
 
     <div class="ds-callout ds-callout--info" style="margin-top:var(--ds-spacing-4)">
-      <div class="ds-callout__title">ARIA attributes summary</div>
-      <code>aria-label</code> — required on icon-only buttons.<br>
+      <div class="ds-callout__title"><span data-lang="pt">Resumo de atributos ARIA</span><span data-lang="en">ARIA attributes summary</span></div>
+      <span data-lang="pt"><code>aria-label</code> — obrigatório em buttons somente-ícone.<br>
+      <code>aria-disabled="true"</code> + <code>aria-busy="true"</code> — definido em buttons em carregamento.<br>
+      <code>disabled</code> — use o atributo nativo para buttons realmente desabilitados (removidos da ordem de tabulação).</span><span data-lang="en"><code>aria-label</code> — required on icon-only buttons.<br>
       <code>aria-disabled="true"</code> + <code>aria-busy="true"</code> — set on loading buttons.<br>
-      <code>disabled</code> — use the native attribute for truly disabled buttons (removed from tab order).
+      <code>disabled</code> — use the native attribute for truly disabled buttons (removed from tab order).</span>
     </div>
   </div>
 
@@ -579,18 +591,18 @@
   <div class="ds-subsection">
     <h2 class="ds-subsection__title">Figma</h2>
     <p style="color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);margin-bottom:var(--ds-spacing-4);">
-      The Figma component has 168+ variants across the following properties:
+      <span data-lang="pt">O componente Figma possui 168+ variantes nas seguintes propriedades:</span><span data-lang="en">The Figma component has 168+ variants across the following properties:</span>
     </p>
     <table class="ds-token-table">
-      <thead><tr><th>Property</th><th>Type</th><th>Default</th><th>Options</th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th><span data-lang="pt">Tipo</span><span data-lang="en">Type</span></th><th><span data-lang="pt">Padrão</span><span data-lang="en">Default</span></th><th><span data-lang="pt">Opções</span><span data-lang="en">Options</span></th></tr></thead>
       <tbody>
-        <tr><td>Style</td><td>Variant</td><td>Brand</td><td>Brand, Toned, Outline, Ghost, Success, Danger</td></tr>
-        <tr><td>Size</td><td>Variant</td><td>Medium</td><td>Small (32px), Medium (40px), Large (48px)</td></tr>
-        <tr><td>State</td><td>Variant</td><td>Default</td><td>Default, Hover, Pressed, Focused, Disabled</td></tr>
-        <tr><td>Icon Only</td><td>Variant</td><td>false</td><td>Default (with label), Icon Only (square)</td></tr>
+        <tr><td><span data-lang="pt">Estilo</span><span data-lang="en">Style</span></td><td>Variant</td><td>Brand</td><td>Brand, Toned, Outline, Ghost, Success, Danger</td></tr>
+        <tr><td><span data-lang="pt">Tamanho</span><span data-lang="en">Size</span></td><td>Variant</td><td>Medium</td><td>Small (32px), Medium (40px), Large (48px)</td></tr>
+        <tr><td><span data-lang="pt">Estado</span><span data-lang="en">State</span></td><td>Variant</td><td>Default</td><td>Default, Hover, Pressed, Focused, Disabled</td></tr>
+        <tr><td>Icon Only</td><td>Variant</td><td>false</td><td><span data-lang="pt">Default (com label), Icon Only (quadrado)</span><span data-lang="en">Default (with label), Icon Only (square)</span></td></tr>
         <tr><td>Loading</td><td>Boolean</td><td>false</td><td>true, false</td></tr>
-        <tr><td>Icon Left</td><td>Boolean</td><td>false</td><td>Toggles left icon slot</td></tr>
-        <tr><td>Icon Right</td><td>Boolean</td><td>false</td><td>Toggles right icon slot</td></tr>
+        <tr><td>Icon Left</td><td>Boolean</td><td>false</td><td><span data-lang="pt">Alterna o slot de ícone esquerdo</span><span data-lang="en">Toggles left icon slot</span></td></tr>
+        <tr><td>Icon Right</td><td>Boolean</td><td>false</td><td><span data-lang="pt">Alterna o slot de ícone direito</span><span data-lang="en">Toggles right icon slot</span></td></tr>
       </tbody>
     </table>
   </div>
@@ -599,7 +611,7 @@
        15. RELATED COMPONENTS
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Related</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Relacionados</span><span data-lang="en">Related</span></h2>
     <div class="ds-related">
       <a href="badge.html" class="ds-related__link">Badge</a>
       <a href="alert.html" class="ds-related__link">Alert</a>

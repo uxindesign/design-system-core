@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Theming — Design System</title>
   <link rel="stylesheet" href="../css/design-system.css">
   <link rel="stylesheet" href="layout.css">
+  <script>
+    (function(){var l=localStorage.getItem('ds-lang');if(l)document.documentElement.setAttribute('lang',l)})();
+  </script>
 </head>
 <body>
 
@@ -20,15 +23,18 @@
     </a>
   </div>
   <div class="ds-site-header__actions">
+    <select class="ds-theme-switcher__select" id="lang-switcher" aria-label="Language">
+      <option value="pt">PT</option>
+      <option value="en">EN</option>
+    </select>
     <div class="ds-theme-switcher">
-      <label class="ds-theme-switcher__label" for="theme-switcher">Theme</label>
       <select class="ds-theme-switcher__select" id="theme-switcher">
         <option value="default">Default (Blue)</option>
         <option value="ocean">Ocean (Cyan)</option>
         <option value="forest">Forest (Emerald)</option>
       </select>
     </div>
-    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode">Dark</button>
+    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode">Escuro</button>
   </div>
 </header>
 <div class="ds-sidebar-overlay" id="sidebar-overlay"></div>
@@ -96,33 +102,33 @@
 <main class="ds-main">
 
   <div class="ds-section">
-    <h1 class="ds-section__title">Theming</h1>
-    <p class="ds-section__subtitle">3 themes &times; 2 modes = 6 visual combinations. Themes change brand colors; modes switch light/dark.</p>
+    <h1 class="ds-section__title"><span data-lang="pt">Tematizacao</span><span data-lang="en">Theming</span></h1>
+    <p class="ds-section__subtitle"><span data-lang="pt">3 temas &times; 2 modos = 6 combinacoes visuais. Temas alteram as cores da marca; modos alternam light/dark.</span><span data-lang="en">3 themes &times; 2 modes = 6 visual combinations. Themes change brand colors; modes switch light/dark.</span></p>
   </div>
 
   <!-- How It Works -->
   <div class="ds-section">
     <div class="ds-subsection">
-      <h2 class="ds-subsection__title">How It Works</h2>
+      <h2 class="ds-subsection__title"><span data-lang="pt">Como funciona</span><span data-lang="en">How It Works</span></h2>
       <p style="color:var(--ds-text-secondary);margin-bottom:var(--ds-spacing-4);line-height:var(--ds-line-height-relaxed);">
-        The design system uses two HTML attributes on the root element to control appearance:
+        <span data-lang="pt">O design system usa dois atributos HTML no elemento raiz para controlar a aparencia:</span><span data-lang="en">The design system uses two HTML attributes on the root element to control appearance:</span>
       </p>
       <ul style="color:var(--ds-text-secondary);margin-bottom:var(--ds-spacing-6);padding-left:var(--ds-spacing-6);line-height:var(--ds-line-height-loose);">
-        <li><code style="font-family:var(--ds-font-family-mono);background:var(--ds-background-subtle);padding:2px 6px;border-radius:var(--ds-radius-sm);">data-theme</code> controls the brand palette (primary and secondary colors).</li>
-        <li><code style="font-family:var(--ds-font-family-mono);background:var(--ds-background-subtle);padding:2px 6px;border-radius:var(--ds-radius-sm);">data-mode</code> switches between light and dark surface/text tokens.</li>
+        <li><span data-lang="pt"><code style="font-family:var(--ds-font-family-mono);background:var(--ds-background-subtle);padding:2px 6px;border-radius:var(--ds-radius-sm);">data-theme</code> controla a paleta da marca (cores primaria e secundaria).</span><span data-lang="en"><code style="font-family:var(--ds-font-family-mono);background:var(--ds-background-subtle);padding:2px 6px;border-radius:var(--ds-radius-sm);">data-theme</code> controls the brand palette (primary and secondary colors).</span></li>
+        <li><span data-lang="pt"><code style="font-family:var(--ds-font-family-mono);background:var(--ds-background-subtle);padding:2px 6px;border-radius:var(--ds-radius-sm);">data-mode</code> alterna entre tokens de superficie/texto light e dark.</span><span data-lang="en"><code style="font-family:var(--ds-font-family-mono);background:var(--ds-background-subtle);padding:2px 6px;border-radius:var(--ds-radius-sm);">data-mode</code> switches between light and dark surface/text tokens.</span></li>
       </ul>
       <p style="color:var(--ds-text-secondary);margin-bottom:var(--ds-spacing-4);line-height:var(--ds-line-height-relaxed);">
-        Both attributes are independent and can be combined freely. All components automatically respond to changes because they reference semantic tokens, not hardcoded values.
+        <span data-lang="pt">Ambos os atributos sao independentes e podem ser combinados livremente. Todos os componentes respondem automaticamente as mudancas porque referenciam tokens semanticos, nao valores hardcoded.</span><span data-lang="en">Both attributes are independent and can be combined freely. All components automatically respond to changes because they reference semantic tokens, not hardcoded values.</span>
       </p>
     </div>
 
     <!-- Available Themes -->
     <div class="ds-subsection">
-      <h2 class="ds-subsection__title">Available Themes</h2>
+      <h2 class="ds-subsection__title"><span data-lang="pt">Temas disponiveis</span><span data-lang="en">Available Themes</span></h2>
 
       <!-- Default (Blue) -->
       <h3 style="font-size:var(--ds-font-size-md);font-weight:var(--ds-font-weight-semibold);margin-bottom:var(--ds-spacing-3);margin-top:var(--ds-spacing-6);">Default (Blue)</h3>
-      <p style="color:var(--ds-text-secondary);margin-bottom:var(--ds-spacing-3);font-size:var(--ds-font-size-sm);">No <code style="font-family:var(--ds-font-family-mono);">data-theme</code> attribute needed. Primary: Blue 600, Secondary: Purple 600.</p>
+      <p style="color:var(--ds-text-secondary);margin-bottom:var(--ds-spacing-3);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Nenhum atributo <code style="font-family:var(--ds-font-family-mono);">data-theme</code> necessario. Primary: Blue 600, Secondary: Purple 600.</span><span data-lang="en">No <code style="font-family:var(--ds-font-family-mono);">data-theme</code> attribute needed. Primary: Blue 600, Secondary: Purple 600.</span></p>
       <div class="ds-preview">
         <div class="ds-preview__tabs" role="tablist">
           <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
@@ -148,7 +154,7 @@
 
       <!-- Ocean (Cyan) -->
       <h3 style="font-size:var(--ds-font-size-md);font-weight:var(--ds-font-weight-semibold);margin-bottom:var(--ds-spacing-3);margin-top:var(--ds-spacing-6);">Ocean (Cyan)</h3>
-      <p style="color:var(--ds-text-secondary);margin-bottom:var(--ds-spacing-3);font-size:var(--ds-font-size-sm);">Primary: Cyan 600, Secondary: Indigo 600.</p>
+      <p style="color:var(--ds-text-secondary);margin-bottom:var(--ds-spacing-3);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Primary: Cyan 600, Secondary: Indigo 600.</span><span data-lang="en">Primary: Cyan 600, Secondary: Indigo 600.</span></p>
       <div class="ds-preview">
         <div class="ds-preview__tabs" role="tablist">
           <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
@@ -172,7 +178,7 @@
 
       <!-- Forest (Emerald) -->
       <h3 style="font-size:var(--ds-font-size-md);font-weight:var(--ds-font-weight-semibold);margin-bottom:var(--ds-spacing-3);margin-top:var(--ds-spacing-6);">Forest (Emerald)</h3>
-      <p style="color:var(--ds-text-secondary);margin-bottom:var(--ds-spacing-3);font-size:var(--ds-font-size-sm);">Primary: Emerald 600, Secondary: Amber 600.</p>
+      <p style="color:var(--ds-text-secondary);margin-bottom:var(--ds-spacing-3);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Primary: Emerald 600, Secondary: Amber 600.</span><span data-lang="en">Primary: Emerald 600, Secondary: Amber 600.</span></p>
       <div class="ds-preview">
         <div class="ds-preview__tabs" role="tablist">
           <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
@@ -197,9 +203,9 @@
 
     <!-- Dark Mode -->
     <div class="ds-subsection">
-      <h2 class="ds-subsection__title">Dark Mode</h2>
+      <h2 class="ds-subsection__title"><span data-lang="pt">Modo escuro</span><span data-lang="en">Dark Mode</span></h2>
       <p style="color:var(--ds-text-secondary);margin-bottom:var(--ds-spacing-4);line-height:var(--ds-line-height-relaxed);">
-        Add <code style="font-family:var(--ds-font-family-mono);background:var(--ds-background-subtle);padding:2px 6px;border-radius:var(--ds-radius-sm);">data-mode="dark"</code> to the root element. All surface, background, text, and border tokens are remapped automatically. Light is the default.
+        <span data-lang="pt">Adicione <code style="font-family:var(--ds-font-family-mono);background:var(--ds-background-subtle);padding:2px 6px;border-radius:var(--ds-radius-sm);">data-mode="dark"</code> ao elemento raiz. Todos os tokens de superficie, background, texto e borda sao remapeados automaticamente. Light e o padrao.</span><span data-lang="en">Add <code style="font-family:var(--ds-font-family-mono);background:var(--ds-background-subtle);padding:2px 6px;border-radius:var(--ds-radius-sm);">data-mode="dark"</code> to the root element. All surface, background, text, and border tokens are remapped automatically. Light is the default.</span>
       </p>
       <div class="ds-preview">
         <div class="ds-preview__tabs" role="tablist">
@@ -220,9 +226,9 @@
 
     <!-- 6 Combinations -->
     <div class="ds-subsection">
-      <h2 class="ds-subsection__title">All 6 Combinations</h2>
+      <h2 class="ds-subsection__title"><span data-lang="pt">Todas as 6 combinacoes</span><span data-lang="en">All 6 Combinations</span></h2>
       <p style="color:var(--ds-text-secondary);margin-bottom:var(--ds-spacing-6);line-height:var(--ds-line-height-relaxed);">
-        Every theme works with both modes. Here are all six combinations showing a primary button in each:
+        <span data-lang="pt">Todos os temas funcionam com ambos os modos. Aqui estao as seis combinacoes mostrando um botao primario em cada:</span><span data-lang="en">Every theme works with both modes. Here are all six combinations showing a primary button in each:</span>
       </p>
       <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));gap:var(--ds-spacing-4);margin-bottom:var(--ds-spacing-6);">
 
@@ -290,9 +296,9 @@
 
     <!-- Custom Theme -->
     <div class="ds-subsection">
-      <h2 class="ds-subsection__title">Creating a Custom Theme</h2>
+      <h2 class="ds-subsection__title"><span data-lang="pt">Criando um tema personalizado</span><span data-lang="en">Creating a Custom Theme</span></h2>
       <p style="color:var(--ds-text-secondary);margin-bottom:var(--ds-spacing-4);line-height:var(--ds-line-height-relaxed);">
-        Create your own theme by adding a new <code style="font-family:var(--ds-font-family-mono);background:var(--ds-background-subtle);padding:2px 6px;border-radius:var(--ds-radius-sm);">data-theme</code> selector that overrides the primary and secondary semantic tokens. Follow this pattern:
+        <span data-lang="pt">Crie seu proprio tema adicionando um novo seletor <code style="font-family:var(--ds-font-family-mono);background:var(--ds-background-subtle);padding:2px 6px;border-radius:var(--ds-radius-sm);">data-theme</code> que sobrescreve os tokens semanticos primario e secundario. Siga este padrao:</span><span data-lang="en">Create your own theme by adding a new <code style="font-family:var(--ds-font-family-mono);background:var(--ds-background-subtle);padding:2px 6px;border-radius:var(--ds-radius-sm);">data-theme</code> selector that overrides the primary and secondary semantic tokens. Follow this pattern:</span>
       </p>
       <div class="ds-preview">
         <div class="ds-preview__tabs" role="tablist">
@@ -341,7 +347,7 @@
         </div>
       </div>
       <p style="color:var(--ds-text-secondary);margin-top:var(--ds-spacing-4);font-size:var(--ds-font-size-sm);line-height:var(--ds-line-height-relaxed);">
-        Then apply it with <code style="font-family:var(--ds-font-family-mono);">&lt;html data-theme="sunset"&gt;</code>. Every component that uses <code style="font-family:var(--ds-font-family-mono);">--ds-color-primary-default</code> will pick up your new palette automatically.
+        <span data-lang="pt">Depois aplique com <code style="font-family:var(--ds-font-family-mono);">&lt;html data-theme="sunset"&gt;</code>. Todo componente que usa <code style="font-family:var(--ds-font-family-mono);">--ds-color-primary-default</code> adotara sua nova paleta automaticamente.</span><span data-lang="en">Then apply it with <code style="font-family:var(--ds-font-family-mono);">&lt;html data-theme="sunset"&gt;</code>. Every component that uses <code style="font-family:var(--ds-font-family-mono);">--ds-color-primary-default</code> will pick up your new palette automatically.</span>
       </p>
     </div>
   </div>

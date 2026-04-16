@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,6 +19,9 @@
     .ds-font-preview__sample { font-size: var(--ds-font-size-2xl); color: var(--ds-text-default); margin-bottom: var(--ds-spacing-1); }
     .ds-font-preview__chars { font-size: var(--ds-font-size-sm); color: var(--ds-text-tertiary); }
   </style>
+  <script>
+    (function(){var l=localStorage.getItem('ds-lang');if(l)document.documentElement.setAttribute('lang',l)})();
+  </script>
 </head>
 <body>
 
@@ -33,15 +36,18 @@
     </a>
   </div>
   <div class="ds-site-header__actions">
+    <select class="ds-theme-switcher__select" id="lang-switcher" aria-label="Language">
+      <option value="pt">PT</option>
+      <option value="en">EN</option>
+    </select>
     <div class="ds-theme-switcher">
-      <label class="ds-theme-switcher__label" for="theme-switcher">Theme</label>
       <select class="ds-theme-switcher__select" id="theme-switcher">
         <option value="default">Default (Blue)</option>
         <option value="ocean">Ocean (Cyan)</option>
         <option value="forest">Forest (Emerald)</option>
       </select>
     </div>
-    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode">Dark</button>
+    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode">Escuro</button>
   </div>
 </header>
 <div class="ds-sidebar-overlay" id="sidebar-overlay"></div>
@@ -108,13 +114,13 @@
 
 <main class="ds-main">
   <div class="ds-section">
-    <h1 class="ds-section__title">Typography</h1>
-    <p class="ds-section__subtitle">Type scale, font families, and the 24 text style utility classes that form the typographic foundation of the design system.</p>
+    <h1 class="ds-section__title"><span data-lang="pt">Tipografia</span><span data-lang="en">Typography</span></h1>
+    <p class="ds-section__subtitle"><span data-lang="pt">Escala tipografica, familias de fonte e as 24 classes utilitarias de estilo de texto que formam a base tipografica do design system.</span><span data-lang="en">Type scale, font families, and the 24 text style utility classes that form the typographic foundation of the design system.</span></p>
   </div>
 
   <!-- Font Families -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Font Families</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Familias de Fonte</span><span data-lang="en">Font Families</span></h2>
     <div class="ds-font-preview">
       <div class="ds-font-preview__name">Sans (Inter) -- <code>--ds-font-family-sans</code></div>
       <div class="ds-font-preview__sample" style="font-family:var(--ds-font-family-sans)">The quick brown fox jumps over the lazy dog</div>
@@ -129,9 +135,9 @@
 
   <!-- Font Size Scale -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Font Size Scale</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Escala de Tamanho de Fonte</span><span data-lang="en">Font Size Scale</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th>Token</th><th>rem</th><th>px</th><th>Preview</th></tr></thead>
+      <thead><tr><th>Token</th><th>rem</th><th>px</th><th><span data-lang="pt">Exemplo</span><span data-lang="en">Preview</span></th></tr></thead>
       <tbody>
         <tr><td><code>--ds-font-size-2xs</code></td><td>0.6875rem</td><td>11px</td><td><span style="font-size:0.6875rem">The quick brown fox</span></td></tr>
         <tr><td><code>--ds-font-size-xs</code></td><td>0.75rem</td><td>12px</td><td><span style="font-size:0.75rem">The quick brown fox</span></td></tr>
@@ -154,7 +160,7 @@
 
   <!-- Text Styles -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Text Styles (24 utility classes)</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Estilos de Texto (24 classes utilitarias)</span><span data-lang="en">Text Styles (24 utility classes)</span></h2>
 
     <h3 style="margin:var(--ds-spacing-4) 0 var(--ds-spacing-2);color:var(--ds-text-secondary)">Display</h3>
     <div class="ds-type-sample">

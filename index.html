@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Getting Started — Design System</title>
+  <title>Começando — Design System</title>
   <link rel="stylesheet" href="css/design-system.css">
   <link rel="stylesheet" href="docs/layout.css">
+  <script>
+    (function(){var l=localStorage.getItem('ds-lang');if(l)document.documentElement.setAttribute('lang',l)})();
+  </script>
 </head>
 <body>
 
@@ -20,15 +23,18 @@
     </a>
   </div>
   <div class="ds-site-header__actions">
+    <select class="ds-theme-switcher__select" id="lang-switcher" aria-label="Language">
+      <option value="pt">PT</option>
+      <option value="en">EN</option>
+    </select>
     <div class="ds-theme-switcher">
-      <label class="ds-theme-switcher__label" for="theme-switcher">Theme</label>
       <select class="ds-theme-switcher__select" id="theme-switcher">
         <option value="default">Default (Blue)</option>
         <option value="ocean">Ocean (Cyan)</option>
         <option value="forest">Forest (Emerald)</option>
       </select>
     </div>
-    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode">Dark</button>
+    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode">Escuro</button>
   </div>
 </header>
 <div class="ds-sidebar-overlay" id="sidebar-overlay"></div>
@@ -98,14 +104,23 @@
   <!-- Hero -->
   <div class="ds-section">
     <h1 class="ds-section__title">Design System</h1>
-    <p class="ds-section__subtitle">A white-label CSS design system with 300+ tokens, 19 components, multi-theme support, and WCAG 2.2 accessibility.</p>
+    <p class="ds-section__subtitle">
+      <span data-lang="pt">Um design system CSS white-label com 300+ tokens, 19 componentes, suporte multi-tema e acessibilidade WCAG 2.2.</span>
+      <span data-lang="en">A white-label CSS design system with 300+ tokens, 19 components, multi-theme support, and WCAG 2.2 accessibility.</span>
+    </p>
   </div>
 
   <!-- Quick Start -->
   <div class="ds-section">
     <div class="ds-subsection">
-      <h2 class="ds-subsection__title">Quick Start</h2>
-      <p style="color:var(--ds-text-secondary);margin-bottom:var(--ds-spacing-3);">Include the stylesheet in your HTML to get every component, token, and theme:</p>
+      <h2 class="ds-subsection__title">
+        <span data-lang="pt">Início Rápido</span>
+        <span data-lang="en">Quick Start</span>
+      </h2>
+      <p style="color:var(--ds-text-secondary);margin-bottom:var(--ds-spacing-3);">
+        <span data-lang="pt">Inclua a stylesheet no seu HTML para obter todos os componentes, tokens e temas:</span>
+        <span data-lang="en">Include the stylesheet in your HTML to get every component, token, and theme:</span>
+      </p>
       <div class="ds-preview">
         <div class="ds-preview__tabs" role="tablist">
           <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="code">Code</button>
@@ -121,8 +136,14 @@
 
     <!-- Dark Mode -->
     <div class="ds-subsection">
-      <h2 class="ds-subsection__title">Dark Mode</h2>
-      <p style="color:var(--ds-text-secondary);margin-bottom:var(--ds-spacing-3);">Enable dark mode by setting the <code style="font-family:var(--ds-font-family-mono);background:var(--ds-background-subtle);padding:2px 6px;border-radius:var(--ds-radius-sm);">data-mode</code> attribute on the root element:</p>
+      <h2 class="ds-subsection__title">
+        <span data-lang="pt">Modo Escuro</span>
+        <span data-lang="en">Dark Mode</span>
+      </h2>
+      <p style="color:var(--ds-text-secondary);margin-bottom:var(--ds-spacing-3);">
+        <span data-lang="pt">Ative o modo escuro definindo o atributo <code style="font-family:var(--ds-font-family-mono);background:var(--ds-background-subtle);padding:2px 6px;border-radius:var(--ds-radius-sm);">data-mode</code> no elemento raiz:</span>
+        <span data-lang="en">Enable dark mode by setting the <code style="font-family:var(--ds-font-family-mono);background:var(--ds-background-subtle);padding:2px 6px;border-radius:var(--ds-radius-sm);">data-mode</code> attribute on the root element:</span>
+      </p>
       <div class="ds-preview">
         <div class="ds-preview__tabs" role="tablist">
           <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="code">Code</button>
@@ -134,13 +155,22 @@
           </div>
         </div>
       </div>
-      <p style="color:var(--ds-text-tertiary);font-size:var(--ds-font-size-sm);">Light mode is the default. All semantic tokens automatically remap when the mode changes.</p>
+      <p style="color:var(--ds-text-tertiary);font-size:var(--ds-font-size-sm);">
+        <span data-lang="pt">O modo claro é o padrão. Todos os tokens semânticos são remapeados automaticamente quando o modo muda.</span>
+        <span data-lang="en">Light mode is the default. All semantic tokens automatically remap when the mode changes.</span>
+      </p>
     </div>
 
     <!-- Theming -->
     <div class="ds-subsection">
-      <h2 class="ds-subsection__title">Theming</h2>
-      <p style="color:var(--ds-text-secondary);margin-bottom:var(--ds-spacing-3);">Switch brand colors with the <code style="font-family:var(--ds-font-family-mono);background:var(--ds-background-subtle);padding:2px 6px;border-radius:var(--ds-radius-sm);">data-theme</code> attribute. Three themes are included:</p>
+      <h2 class="ds-subsection__title">
+        <span data-lang="pt">Tematização</span>
+        <span data-lang="en">Theming</span>
+      </h2>
+      <p style="color:var(--ds-text-secondary);margin-bottom:var(--ds-spacing-3);">
+        <span data-lang="pt">Altere as cores da marca com o atributo <code style="font-family:var(--ds-font-family-mono);background:var(--ds-background-subtle);padding:2px 6px;border-radius:var(--ds-radius-sm);">data-theme</code>. Três temas estão incluídos:</span>
+        <span data-lang="en">Switch brand colors with the <code style="font-family:var(--ds-font-family-mono);background:var(--ds-background-subtle);padding:2px 6px;border-radius:var(--ds-radius-sm);">data-theme</code> attribute. Three themes are included:</span>
+      </p>
       <div class="ds-preview">
         <div class="ds-preview__tabs" role="tablist">
           <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="code">Code</button>
@@ -159,14 +189,23 @@
           </div>
         </div>
       </div>
-      <p style="color:var(--ds-text-tertiary);font-size:var(--ds-font-size-sm);">Themes and modes combine freely: <code style="font-family:var(--ds-font-family-mono);">data-theme="ocean" data-mode="dark"</code> gives you Ocean in dark mode.</p>
+      <p style="color:var(--ds-text-tertiary);font-size:var(--ds-font-size-sm);">
+        <span data-lang="pt">Temas e modos combinam livremente: <code style="font-family:var(--ds-font-family-mono);">data-theme="ocean" data-mode="dark"</code> ativa Ocean no modo escuro.</span>
+        <span data-lang="en">Themes and modes combine freely: <code style="font-family:var(--ds-font-family-mono);">data-theme="ocean" data-mode="dark"</code> gives you Ocean in dark mode.</span>
+      </p>
     </div>
   </div>
 
   <!-- Components Grid -->
   <div class="ds-section">
-    <h2 class="ds-subsection__title">Components</h2>
-    <p style="color:var(--ds-text-secondary);margin-bottom:var(--ds-spacing-6);">19 production-ready components. Click any card to view its documentation.</p>
+    <h2 class="ds-subsection__title">
+      <span data-lang="pt">Componentes</span>
+      <span data-lang="en">Components</span>
+    </h2>
+    <p style="color:var(--ds-text-secondary);margin-bottom:var(--ds-spacing-6);">
+      <span data-lang="pt">19 componentes prontos para produção. Clique em qualquer card para ver a documentação.</span>
+      <span data-lang="en">19 production-ready components. Click any card to view its documentation.</span>
+    </p>
     <div class="ds-component-grid">
       <a class="ds-component-card" href="docs/button.html">Button</a>
       <a class="ds-component-card" href="docs/input.html">Input</a>

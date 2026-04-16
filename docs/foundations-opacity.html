@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,6 +20,9 @@
     .ds-opacity-row__value { font-size: var(--ds-font-size-xs); color: var(--ds-text-secondary); }
     .ds-code-block { background-color: var(--ds-color-neutral-900); color: var(--ds-color-neutral-200); padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); font-family: var(--ds-font-family-mono); font-size: var(--ds-font-size-xs); line-height: var(--ds-line-height-relaxed); overflow-x: auto; margin-bottom: var(--ds-spacing-6); white-space: pre; }
   </style>
+  <script>
+    (function(){var l=localStorage.getItem('ds-lang');if(l)document.documentElement.setAttribute('lang',l)})();
+  </script>
 </head>
 <body>
 
@@ -34,15 +37,18 @@
     </a>
   </div>
   <div class="ds-site-header__actions">
+    <select class="ds-theme-switcher__select" id="lang-switcher" aria-label="Language">
+      <option value="pt">PT</option>
+      <option value="en">EN</option>
+    </select>
     <div class="ds-theme-switcher">
-      <label class="ds-theme-switcher__label" for="theme-switcher">Theme</label>
       <select class="ds-theme-switcher__select" id="theme-switcher">
         <option value="default">Default (Blue)</option>
         <option value="ocean">Ocean (Cyan)</option>
         <option value="forest">Forest (Emerald)</option>
       </select>
     </div>
-    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode">Dark</button>
+    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode">Escuro</button>
   </div>
 </header>
 <div class="ds-sidebar-overlay" id="sidebar-overlay"></div>
@@ -109,69 +115,69 @@
 
 <main class="ds-main">
   <div class="ds-section">
-    <h1 class="ds-section__title">Opacity</h1>
-    <p class="ds-section__subtitle">7 opacity tokens for controlling transparency. Used in disabled states, overlays, and layered surfaces.</p>
+    <h1 class="ds-section__title"><span data-lang="pt">Opacidade</span><span data-lang="en">Opacity</span></h1>
+    <p class="ds-section__subtitle"><span data-lang="pt">7 tokens de opacidade para controlar transparencia. Usados em estados desabilitados, overlays e superficies em camadas.</span><span data-lang="en">7 opacity tokens for controlling transparency. Used in disabled states, overlays, and layered surfaces.</span></p>
   </div>
 
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Scale</h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">Each swatch shows the primary color at the given opacity over a checker pattern.</p>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Escala</span><span data-lang="en">Scale</span></h2>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Cada amostra mostra a cor primaria na opacidade indicada sobre um padrao quadriculado.</span><span data-lang="en">Each swatch shows the primary color at the given opacity over a checker pattern.</span></p>
 
     <div style="margin-bottom:var(--ds-spacing-8)">
       <div class="ds-opacity-row">
         <div class="ds-opacity-row__preview"><div class="ds-opacity-row__checker"></div><div class="ds-opacity-row__fill" style="opacity:0"></div></div>
-        <div class="ds-opacity-row__info"><span class="ds-opacity-row__token">--ds-opacity-0</span><span class="ds-opacity-row__value">0 — fully transparent</span></div>
+        <div class="ds-opacity-row__info"><span class="ds-opacity-row__token">--ds-opacity-0</span><span class="ds-opacity-row__value"><span data-lang="pt">0 -- totalmente transparente</span><span data-lang="en">0 -- fully transparent</span></span></div>
       </div>
       <div class="ds-opacity-row">
         <div class="ds-opacity-row__preview"><div class="ds-opacity-row__checker"></div><div class="ds-opacity-row__fill" style="opacity:0.05"></div></div>
-        <div class="ds-opacity-row__info"><span class="ds-opacity-row__token">--ds-opacity-5</span><span class="ds-opacity-row__value">0.05 — barely visible, subtle hover overlays</span></div>
+        <div class="ds-opacity-row__info"><span class="ds-opacity-row__token">--ds-opacity-5</span><span class="ds-opacity-row__value"><span data-lang="pt">0.05 -- quase invisivel, overlays sutis de hover</span><span data-lang="en">0.05 -- barely visible, subtle hover overlays</span></span></div>
       </div>
       <div class="ds-opacity-row">
         <div class="ds-opacity-row__preview"><div class="ds-opacity-row__checker"></div><div class="ds-opacity-row__fill" style="opacity:0.1"></div></div>
-        <div class="ds-opacity-row__info"><span class="ds-opacity-row__token">--ds-opacity-10</span><span class="ds-opacity-row__value">0.10 — pressed state overlays</span></div>
+        <div class="ds-opacity-row__info"><span class="ds-opacity-row__token">--ds-opacity-10</span><span class="ds-opacity-row__value"><span data-lang="pt">0.10 -- overlays de estado pressionado</span><span data-lang="en">0.10 -- pressed state overlays</span></span></div>
       </div>
       <div class="ds-opacity-row">
         <div class="ds-opacity-row__preview"><div class="ds-opacity-row__checker"></div><div class="ds-opacity-row__fill" style="opacity:0.25"></div></div>
-        <div class="ds-opacity-row__info"><span class="ds-opacity-row__token">--ds-opacity-25</span><span class="ds-opacity-row__value">0.25 — skeleton loading, placeholder content</span></div>
+        <div class="ds-opacity-row__info"><span class="ds-opacity-row__token">--ds-opacity-25</span><span class="ds-opacity-row__value"><span data-lang="pt">0.25 -- skeleton loading, conteudo placeholder</span><span data-lang="en">0.25 -- skeleton loading, placeholder content</span></span></div>
       </div>
       <div class="ds-opacity-row">
         <div class="ds-opacity-row__preview"><div class="ds-opacity-row__checker"></div><div class="ds-opacity-row__fill" style="opacity:0.5"></div></div>
-        <div class="ds-opacity-row__info"><span class="ds-opacity-row__token">--ds-opacity-50</span><span class="ds-opacity-row__value">0.50 — disabled foreground (text/icons)</span></div>
+        <div class="ds-opacity-row__info"><span class="ds-opacity-row__token">--ds-opacity-50</span><span class="ds-opacity-row__value"><span data-lang="pt">0.50 -- foreground desabilitado (texto/icones)</span><span data-lang="en">0.50 -- disabled foreground (text/icons)</span></span></div>
       </div>
       <div class="ds-opacity-row">
         <div class="ds-opacity-row__preview"><div class="ds-opacity-row__checker"></div><div class="ds-opacity-row__fill" style="opacity:0.75"></div></div>
-        <div class="ds-opacity-row__info"><span class="ds-opacity-row__token">--ds-opacity-75</span><span class="ds-opacity-row__value">0.75 — overlay backgrounds (modals, drawers)</span></div>
+        <div class="ds-opacity-row__info"><span class="ds-opacity-row__token">--ds-opacity-75</span><span class="ds-opacity-row__value"><span data-lang="pt">0.75 -- fundos de overlay (modais, drawers)</span><span data-lang="en">0.75 -- overlay backgrounds (modals, drawers)</span></span></div>
       </div>
       <div class="ds-opacity-row">
         <div class="ds-opacity-row__preview"><div class="ds-opacity-row__checker"></div><div class="ds-opacity-row__fill" style="opacity:1"></div></div>
-        <div class="ds-opacity-row__info"><span class="ds-opacity-row__token">--ds-opacity-100</span><span class="ds-opacity-row__value">1 — fully opaque (default)</span></div>
+        <div class="ds-opacity-row__info"><span class="ds-opacity-row__token">--ds-opacity-100</span><span class="ds-opacity-row__value"><span data-lang="pt">1 -- totalmente opaco (padrao)</span><span data-lang="en">1 -- fully opaque (default)</span></span></div>
       </div>
     </div>
   </div>
 
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Usage in the DS</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Uso no DS</span><span data-lang="en">Usage in the DS</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th>Context</th><th>Token</th><th>Why</th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Contexto</span><span data-lang="en">Context</span></th><th>Token</th><th><span data-lang="pt">Por que</span><span data-lang="en">Why</span></th></tr></thead>
       <tbody>
-        <tr><td>Disabled buttons, inputs</td><td><code>--ds-opacity-50</code></td><td>Dims the entire element while preserving its layout and size</td></tr>
-        <tr><td>Modal/dialog backdrop</td><td><code>--ds-opacity-75</code></td><td>Darkens the page behind the modal without fully hiding it</td></tr>
-        <tr><td>Skeleton loading</td><td><code>--ds-opacity-25</code></td><td>Creates subtle placeholder shapes that indicate loading</td></tr>
-        <tr><td>Ghost button hover</td><td><code>--ds-opacity-5</code></td><td>Tints the background just enough to signal interactivity</td></tr>
+        <tr><td><span data-lang="pt">Botoes e inputs desabilitados</span><span data-lang="en">Disabled buttons, inputs</span></td><td><code>--ds-opacity-50</code></td><td><span data-lang="pt">Escurece o elemento inteiro preservando seu layout e tamanho</span><span data-lang="en">Dims the entire element while preserving its layout and size</span></td></tr>
+        <tr><td><span data-lang="pt">Backdrop de modal/dialog</span><span data-lang="en">Modal/dialog backdrop</span></td><td><code>--ds-opacity-75</code></td><td><span data-lang="pt">Escurece a pagina atras do modal sem ocultando-a completamente</span><span data-lang="en">Darkens the page behind the modal without fully hiding it</span></td></tr>
+        <tr><td>Skeleton loading</td><td><code>--ds-opacity-25</code></td><td><span data-lang="pt">Cria formas placeholder sutis que indicam carregamento</span><span data-lang="en">Creates subtle placeholder shapes that indicate loading</span></td></tr>
+        <tr><td><span data-lang="pt">Hover de botao ghost</span><span data-lang="en">Ghost button hover</span></td><td><code>--ds-opacity-5</code></td><td><span data-lang="pt">Colore o fundo o suficiente para sinalizar interatividade</span><span data-lang="en">Tints the background just enough to signal interactivity</span></td></tr>
       </tbody>
     </table>
   </div>
 
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Relationship with overlay tokens</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Relacao com tokens de overlay</span><span data-lang="en">Relationship with overlay tokens</span></h2>
     <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
-      Opacity tokens control the <code>opacity</code> CSS property on an element. Overlay tokens (<code>--ds-color-overlay-black-*</code>, <code>--ds-color-overlay-white-*</code>) use <code>rgba()</code> values and are applied as <code>background-color</code>. They serve different purposes:
+      <span data-lang="pt">Tokens de opacidade controlam a propriedade CSS <code>opacity</code> de um elemento. Tokens de overlay (<code>--ds-color-overlay-black-*</code>, <code>--ds-color-overlay-white-*</code>) usam valores <code>rgba()</code> e sao aplicados como <code>background-color</code>. Servem propositos diferentes:</span><span data-lang="en">Opacity tokens control the <code>opacity</code> CSS property on an element. Overlay tokens (<code>--ds-color-overlay-black-*</code>, <code>--ds-color-overlay-white-*</code>) use <code>rgba()</code> values and are applied as <code>background-color</code>. They serve different purposes:</span>
     </p>
     <table class="ds-token-table">
-      <thead><tr><th>Approach</th><th>Token example</th><th>Affects</th><th>Use when</th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Abordagem</span><span data-lang="en">Approach</span></th><th><span data-lang="pt">Exemplo de token</span><span data-lang="en">Token example</span></th><th><span data-lang="pt">Afeta</span><span data-lang="en">Affects</span></th><th><span data-lang="pt">Usar quando</span><span data-lang="en">Use when</span></th></tr></thead>
       <tbody>
-        <tr><td>Opacity</td><td><code>--ds-opacity-50</code></td><td>Entire element + children</td><td>Disabling a complex element (button with icon + text)</td></tr>
-        <tr><td>Overlay</td><td><code>--ds-color-overlay-black-5</code></td><td>Background only</td><td>Hover/pressed tint on interactive surfaces</td></tr>
+        <tr><td>Opacity</td><td><code>--ds-opacity-50</code></td><td><span data-lang="pt">Elemento inteiro + filhos</span><span data-lang="en">Entire element + children</span></td><td><span data-lang="pt">Desabilitando um elemento complexo (botao com icone + texto)</span><span data-lang="en">Disabling a complex element (button with icon + text)</span></td></tr>
+        <tr><td>Overlay</td><td><code>--ds-color-overlay-black-5</code></td><td><span data-lang="pt">Somente fundo</span><span data-lang="en">Background only</span></td><td><span data-lang="pt">Tingimento hover/pressionado em superficies interativas</span><span data-lang="en">Hover/pressed tint on interactive surfaces</span></td></tr>
       </tbody>
     </table>
   </div>

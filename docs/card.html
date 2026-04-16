@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,6 +38,9 @@
     /* Responsive do/dont */
     @media (max-width: 768px) { .ds-dodont { grid-template-columns: 1fr; } }
   </style>
+  <script>
+    (function(){var l=localStorage.getItem('ds-lang');if(l)document.documentElement.setAttribute('lang',l)})();
+  </script>
 </head>
 <body>
 
@@ -52,15 +55,18 @@
     </a>
   </div>
   <div class="ds-site-header__actions">
+    <select class="ds-theme-switcher__select" id="lang-switcher" aria-label="Language">
+      <option value="pt">PT</option>
+      <option value="en">EN</option>
+    </select>
     <div class="ds-theme-switcher">
-      <label class="ds-theme-switcher__label" for="theme-switcher">Theme</label>
       <select class="ds-theme-switcher__select" id="theme-switcher">
         <option value="default">Default (Blue)</option>
         <option value="ocean">Ocean (Cyan)</option>
         <option value="forest">Forest (Emerald)</option>
       </select>
     </div>
-    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode">Dark</button>
+    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode">Escuro</button>
   </div>
 </header>
 <div class="ds-sidebar-overlay" id="sidebar-overlay"></div>
@@ -132,21 +138,21 @@
        ============================================================ -->
   <div class="ds-section">
     <h1 class="ds-section__title">Card</h1>
-    <p class="ds-section__subtitle">Cards group related content and actions. Available in default, outlined, and elevated variants.</p>
+    <p class="ds-section__subtitle"><span data-lang="pt">Cards agrupam conteudo e acoes relacionados. Disponiveis nas variantes default, outlined e elevated.</span><span data-lang="en">Cards group related content and actions. Available in default, outlined, and elevated variants.</span></p>
   </div>
 
   <!-- ============================================================
        2. WHEN TO USE / WHEN NOT TO USE
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">When to use</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Quando usar</span><span data-lang="en">When to use</span></h2>
     <div class="ds-callout ds-callout--success">
-      <div class="ds-callout__title">Use cards when</div>
-      Grouping related information: product listings, content previews, dashboard widgets. Cards create visual boundaries that help users scan and compare discrete pieces of content.
+      <div class="ds-callout__title"><span data-lang="pt">Use cards quando</span><span data-lang="en">Use cards when</span></div>
+      <span data-lang="pt">Agrupar informacoes relacionadas: listagens de produtos, previews de conteudo, widgets de dashboard. Cards criam limites visuais que ajudam os usuarios a escanear e comparar conteudos distintos.</span><span data-lang="en">Grouping related information: product listings, content previews, dashboard widgets. Cards create visual boundaries that help users scan and compare discrete pieces of content.</span>
     </div>
     <div class="ds-callout ds-callout--warning">
-      <div class="ds-callout__title">Don't use cards when</div>
-      Displaying a single action result (use Alert), building full-page sections (use layout primitives), or presenting dense tabular data (use a table row instead).
+      <div class="ds-callout__title"><span data-lang="pt">Nao use cards quando</span><span data-lang="en">Don't use cards when</span></div>
+      <span data-lang="pt">Exibir o resultado de uma acao unica (use Alert), construir secoes de pagina inteira (use primitivos de layout), ou apresentar dados tabulares densos (use linhas de tabela).</span><span data-lang="en">Displaying a single action result (use Alert), building full-page sections (use layout primitives), or presenting dense tabular data (use a table row instead).</span>
     </div>
   </div>
 
@@ -154,7 +160,7 @@
        3. ANATOMY
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Anatomy</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Anatomia</span><span data-lang="en">Anatomy</span></h2>
 
     <div class="ds-anatomy">
       <div style="position:relative;width:100%;max-width:320px;">
@@ -174,8 +180,9 @@
     </div>
 
     <div class="ds-anatomy-legend">
-      <strong>1</strong> Container (<code>.ds-card</code>) — surface with border-radius, optional border or shadow depending on variant.<br>
-      <strong>2</strong> Content — flexible slot. Can contain header, body, footer, images, or any combination.
+      <span data-lang="pt"><strong>1</strong> Container (<code>.ds-card</code>) — superficie com border-radius, borda ou sombra opcional dependendo da variante.<br>
+      <strong>2</strong> Conteudo — slot flexivel. Pode conter header, body, footer, imagens ou qualquer combinacao.</span><span data-lang="en"><strong>1</strong> Container (<code>.ds-card</code>) — surface with border-radius, optional border or shadow depending on variant.<br>
+      <strong>2</strong> Content — flexible slot. Can contain header, body, footer, images, or any combination.</span>
     </div>
   </div>
 
@@ -183,7 +190,7 @@
        4. VARIANTS (live previews)
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Default</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Padrao</span><span data-lang="en">Default</span></h2>
     <div class="ds-preview">
       <div class="ds-preview__tabs" role="tablist">
         <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
@@ -220,7 +227,7 @@
   </div>
 
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Outlined</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Com borda (Outlined)</span><span data-lang="en">Outlined</span></h2>
     <div class="ds-preview">
       <div class="ds-preview__tabs" role="tablist">
         <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
@@ -257,7 +264,7 @@
   </div>
 
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Elevated</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Elevado (Elevated)</span><span data-lang="en">Elevated</span></h2>
     <div class="ds-preview">
       <div class="ds-preview__tabs" role="tablist">
         <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
@@ -294,7 +301,7 @@
   </div>
 
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Comparison</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Comparacao</span><span data-lang="en">Comparison</span></h2>
     <div class="ds-preview">
       <div class="ds-preview__tabs" role="tablist">
         <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
@@ -343,7 +350,7 @@
        5. BEST PRACTICES (Do / Don't)
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Best practices</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Boas praticas</span><span data-lang="en">Best practices</span></h2>
 
     <div class="ds-dodont">
       <div class="ds-dodont__item">
@@ -351,33 +358,33 @@
           <div class="ds-card ds-card--outlined" style="padding:var(--ds-spacing-3);font-size:var(--ds-font-size-xs);">Item A</div>
           <div class="ds-card ds-card--outlined" style="padding:var(--ds-spacing-3);font-size:var(--ds-font-size-xs);">Item B</div>
         </div>
-        <div class="ds-dodont__label ds-dodont__label--do">Do</div>
-        <div class="ds-dodont__desc">Use consistent variants in the same context. All cards in a grid should share the same style.</div>
+        <div class="ds-dodont__label ds-dodont__label--do"><span data-lang="pt">Faca</span><span data-lang="en">Do</span></div>
+        <div class="ds-dodont__desc"><span data-lang="pt">Use variantes consistentes no mesmo contexto. Todos os cards em um grid devem compartilhar o mesmo estilo.</span><span data-lang="en">Use consistent variants in the same context. All cards in a grid should share the same style.</span></div>
       </div>
       <div class="ds-dodont__item">
         <div class="ds-dodont__preview" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--ds-spacing-3);">
           <div class="ds-card ds-card--default" style="padding:var(--ds-spacing-3);font-size:var(--ds-font-size-xs);">Item A</div>
           <div class="ds-card ds-card--elevated" style="padding:var(--ds-spacing-3);font-size:var(--ds-font-size-xs);">Item B</div>
         </div>
-        <div class="ds-dodont__label ds-dodont__label--dont">Don't</div>
-        <div class="ds-dodont__desc">Mix default, outlined, and elevated variants in the same grid. It creates inconsistent visual hierarchy.</div>
+        <div class="ds-dodont__label ds-dodont__label--dont"><span data-lang="pt">Nao faca</span><span data-lang="en">Don't</span></div>
+        <div class="ds-dodont__desc"><span data-lang="pt">Misturar variantes default, outlined e elevated no mesmo grid. Isso cria hierarquia visual inconsistente.</span><span data-lang="en">Mix default, outlined, and elevated variants in the same grid. It creates inconsistent visual hierarchy.</span></div>
       </div>
     </div>
 
     <div class="ds-dodont">
       <div class="ds-dodont__item">
         <div class="ds-dodont__preview" style="flex-direction:column;">
-          <span style="font-size:var(--ds-font-size-sm);color:var(--ds-text-secondary);">Outlined cards in a dense list</span>
+          <span style="font-size:var(--ds-font-size-sm);color:var(--ds-text-secondary);"><span data-lang="pt">Cards outlined em uma lista densa</span><span data-lang="en">Outlined cards in a dense list</span></span>
         </div>
-        <div class="ds-dodont__label ds-dodont__label--do">Do</div>
-        <div class="ds-dodont__desc">Use outlined for dense layouts where clear boundaries are needed. Use elevated for prominent, standalone content.</div>
+        <div class="ds-dodont__label ds-dodont__label--do"><span data-lang="pt">Faca</span><span data-lang="en">Do</span></div>
+        <div class="ds-dodont__desc"><span data-lang="pt">Use outlined para layouts densos onde limites claros sao necessarios. Use elevated para conteudo proeminente e independente.</span><span data-lang="en">Use outlined for dense layouts where clear boundaries are needed. Use elevated for prominent, standalone content.</span></div>
       </div>
       <div class="ds-dodont__item">
         <div class="ds-dodont__preview" style="flex-direction:column;">
-          <span style="font-size:var(--ds-font-size-sm);color:var(--ds-text-secondary);">Elevated card inside elevated panel</span>
+          <span style="font-size:var(--ds-font-size-sm);color:var(--ds-text-secondary);"><span data-lang="pt">Card elevated dentro de um painel elevated</span><span data-lang="en">Elevated card inside elevated panel</span></span>
         </div>
-        <div class="ds-dodont__label ds-dodont__label--dont">Don't</div>
-        <div class="ds-dodont__desc">Place elevated cards inside an already elevated container. Stacking shadows creates visual noise and breaks hierarchy.</div>
+        <div class="ds-dodont__label ds-dodont__label--dont"><span data-lang="pt">Nao faca</span><span data-lang="en">Don't</span></div>
+        <div class="ds-dodont__desc"><span data-lang="pt">Colocar cards elevated dentro de um container ja elevado. Empilhar sombras cria ruido visual e quebra a hierarquia.</span><span data-lang="en">Place elevated cards inside an already elevated container. Stacking shadows creates visual noise and breaks hierarchy.</span></div>
       </div>
     </div>
   </div>
@@ -386,13 +393,13 @@
        6. CONTENT GUIDELINES
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Content guidelines</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Diretrizes de conteudo</span><span data-lang="en">Content guidelines</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th>Rule</th><th>Example</th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Regra</span><span data-lang="en">Rule</span></th><th><span data-lang="pt">Exemplo</span><span data-lang="en">Example</span></th></tr></thead>
       <tbody>
-        <tr><td>Cards are containers — content guidelines apply to what's inside</td><td>Use semantic headings, body text, and action buttons as needed</td></tr>
-        <tr><td>Clickable cards: entire surface should be click target</td><td>Wrap content in <code>&lt;a&gt;</code> or use a single link with <code>::after</code> pseudo-element</td></tr>
-        <tr><td>Keep content scannable</td><td>Title + 1-2 lines of body text. Avoid long paragraphs inside cards.</td></tr>
+        <tr><td><span data-lang="pt">Cards sao containers — diretrizes de conteudo se aplicam ao que esta dentro</span><span data-lang="en">Cards are containers — content guidelines apply to what's inside</span></td><td><span data-lang="pt">Use headings semanticos, texto de corpo e botoes de acao conforme necessario</span><span data-lang="en">Use semantic headings, body text, and action buttons as needed</span></td></tr>
+        <tr><td><span data-lang="pt">Cards clicaveis: toda a superficie deve ser alvo de clique</span><span data-lang="en">Clickable cards: entire surface should be click target</span></td><td><span data-lang="pt">Envolva o conteudo em <code>&lt;a&gt;</code> ou use um link unico com pseudo-elemento <code>::after</code></span><span data-lang="en">Wrap content in <code>&lt;a&gt;</code> or use a single link with <code>::after</code> pseudo-element</span></td></tr>
+        <tr><td><span data-lang="pt">Mantenha o conteudo escaneavel</span><span data-lang="en">Keep content scannable</span></td><td><span data-lang="pt">Titulo + 1-2 linhas de texto de corpo. Evite paragrafos longos dentro de cards.</span><span data-lang="en">Title + 1-2 lines of body text. Avoid long paragraphs inside cards.</span></td></tr>
       </tbody>
     </table>
   </div>
@@ -401,9 +408,9 @@
        7. TOKEN MAPPING
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Token mapping</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Mapeamento de tokens</span><span data-lang="en">Token mapping</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th>Property</th><th>Token (semantic)</th><th>CSS variable</th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token (semantic)</th><th><span data-lang="pt">Variavel CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
       <tbody>
         <tr><td>background</td><td><code>semantic.surface.default</code></td><td><code>--ds-surface-default</code></td></tr>
         <tr><td>border (outlined)</td><td><code>semantic.border.default</code></td><td><code>--ds-border-default</code></td></tr>
@@ -418,18 +425,18 @@
        8. CSS CLASSES
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">CSS classes</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Classes CSS</span><span data-lang="en">CSS classes</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th>Class</th><th>Description</th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Classe</span><span data-lang="en">Class</span></th><th><span data-lang="pt">Descricao</span><span data-lang="en">Description</span></th></tr></thead>
       <tbody>
-        <tr><td><code>ds-card</code></td><td>Base card container</td></tr>
-        <tr><td><code>ds-card--default</code></td><td>Default variant with subtle border</td></tr>
-        <tr><td><code>ds-card--outlined</code></td><td>Outlined variant with stronger border</td></tr>
-        <tr><td><code>ds-card--elevated</code></td><td>Elevated variant with box shadow, no border</td></tr>
-        <tr><td><code>ds-card__header</code></td><td>Card header section</td></tr>
-        <tr><td><code>ds-card__title</code></td><td>Card title text</td></tr>
-        <tr><td><code>ds-card__subtitle</code></td><td>Card subtitle/meta text</td></tr>
-        <tr><td><code>ds-card__body</code></td><td>Card body content area</td></tr>
+        <tr><td><code>ds-card</code></td><td><span data-lang="pt">Container base do card</span><span data-lang="en">Base card container</span></td></tr>
+        <tr><td><code>ds-card--default</code></td><td><span data-lang="pt">Variante padrao com borda sutil</span><span data-lang="en">Default variant with subtle border</span></td></tr>
+        <tr><td><code>ds-card--outlined</code></td><td><span data-lang="pt">Variante outlined com borda mais forte</span><span data-lang="en">Outlined variant with stronger border</span></td></tr>
+        <tr><td><code>ds-card--elevated</code></td><td><span data-lang="pt">Variante elevated com box shadow, sem borda</span><span data-lang="en">Elevated variant with box shadow, no border</span></td></tr>
+        <tr><td><code>ds-card__header</code></td><td><span data-lang="pt">Secao de header do card</span><span data-lang="en">Card header section</span></td></tr>
+        <tr><td><code>ds-card__title</code></td><td><span data-lang="pt">Texto do titulo do card</span><span data-lang="en">Card title text</span></td></tr>
+        <tr><td><code>ds-card__subtitle</code></td><td><span data-lang="pt">Texto de subtitulo/meta do card</span><span data-lang="en">Card subtitle/meta text</span></td></tr>
+        <tr><td><code>ds-card__body</code></td><td><span data-lang="pt">Area de conteudo do corpo do card</span><span data-lang="en">Card body content area</span></td></tr>
       </tbody>
     </table>
   </div>
@@ -438,9 +445,9 @@
        9. KEYBOARD INTERACTION
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Keyboard interaction</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Interacao por teclado</span><span data-lang="en">Keyboard interaction</span></h2>
     <p style="color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);margin-bottom:var(--ds-spacing-4);">
-      Cards have no keyboard interaction by default. If the card is interactive (clickable), wrap content in an <code>&lt;a&gt;</code> element or add <code>role="link"</code> with <code>tabindex="0"</code> to make it focusable and operable via <code>Enter</code>.
+      <span data-lang="pt">Cards nao possuem interacao por teclado por padrao. Se o card for interativo (clicavel), envolva o conteudo em um elemento <code>&lt;a&gt;</code> ou adicione <code>role="link"</code> com <code>tabindex="0"</code> para torna-lo focavel e operavel via <code>Enter</code>.</span><span data-lang="en">Cards have no keyboard interaction by default. If the card is interactive (clickable), wrap content in an <code>&lt;a&gt;</code> element or add <code>role="link"</code> with <code>tabindex="0"</code> to make it focusable and operable via <code>Enter</code>.</span>
     </p>
   </div>
 
@@ -448,18 +455,18 @@
        10. ACCESSIBILITY
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Accessibility</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Acessibilidade</span><span data-lang="en">Accessibility</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th>WCAG criterion</th><th>Requirement</th><th>Status</th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Criterio WCAG</span><span data-lang="en">WCAG criterion</span></th><th><span data-lang="pt">Requisito</span><span data-lang="en">Requirement</span></th><th>Status</th></tr></thead>
       <tbody>
-        <tr><td>1.4.11 Non-text Contrast (AA)</td><td>Border or shadow must have at least 3:1 contrast against the page background</td><td>&#10003;</td></tr>
-        <tr><td>2.5.8 Target Size min (AA)</td><td>If the card is clickable, the entire surface must be the click target</td><td>&#10003;</td></tr>
+        <tr><td>1.4.11 Non-text Contrast (AA)</td><td><span data-lang="pt">Borda ou sombra deve ter pelo menos 3:1 de contraste com o fundo da pagina</span><span data-lang="en">Border or shadow must have at least 3:1 contrast against the page background</span></td><td>&#10003;</td></tr>
+        <tr><td>2.5.8 Target Size min (AA)</td><td><span data-lang="pt">Se o card for clicavel, toda a superficie deve ser o alvo de clique</span><span data-lang="en">If the card is clickable, the entire surface must be the click target</span></td><td>&#10003;</td></tr>
       </tbody>
     </table>
 
     <div class="ds-callout ds-callout--info" style="margin-top:var(--ds-spacing-4)">
-      <div class="ds-callout__title">Semantic markup</div>
-      Cards are generic containers and do not require specific ARIA roles by default. Use semantic heading tags (<code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>) for card titles to maintain proper document outline. If the entire card is clickable, wrap it in an <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code> element, or use a single link inside the card with a clear accessible name.
+      <div class="ds-callout__title"><span data-lang="pt">Markup semantico</span><span data-lang="en">Semantic markup</span></div>
+      <span data-lang="pt">Cards sao containers genericos e nao requerem roles ARIA especificos por padrao. Use tags de heading semanticos (<code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>) para titulos de cards para manter o outline adequado do documento. Se o card inteiro for clicavel, envolva-o em um elemento <code>&lt;a&gt;</code> ou <code>&lt;button&gt;</code>, ou use um unico link dentro do card com um nome acessivel claro.</span><span data-lang="en">Cards are generic containers and do not require specific ARIA roles by default. Use semantic heading tags (<code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>) for card titles to maintain proper document outline. If the entire card is clickable, wrap it in an <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code> element, or use a single link inside the card with a clear accessible name.</span>
     </div>
   </div>
 
@@ -467,7 +474,7 @@
        11. RELATED COMPONENTS
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Related</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Relacionados</span><span data-lang="en">Related</span></h2>
     <div class="ds-related">
       <a href="alert.html" class="ds-related__link">Alert</a>
       <a href="modal.html" class="ds-related__link">Modal</a>

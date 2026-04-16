@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,6 +38,9 @@
     /* Responsive do/dont */
     @media (max-width: 768px) { .ds-dodont { grid-template-columns: 1fr; } }
   </style>
+  <script>
+    (function(){var l=localStorage.getItem('ds-lang');if(l)document.documentElement.setAttribute('lang',l)})();
+  </script>
 </head>
 <body>
 
@@ -52,15 +55,18 @@
     </a>
   </div>
   <div class="ds-site-header__actions">
+    <select class="ds-theme-switcher__select" id="lang-switcher" aria-label="Language">
+      <option value="pt">PT</option>
+      <option value="en">EN</option>
+    </select>
     <div class="ds-theme-switcher">
-      <label class="ds-theme-switcher__label" for="theme-switcher">Theme</label>
       <select class="ds-theme-switcher__select" id="theme-switcher">
         <option value="default">Default (Blue)</option>
         <option value="ocean">Ocean (Cyan)</option>
         <option value="forest">Forest (Emerald)</option>
       </select>
     </div>
-    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode">Dark</button>
+    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode">Escuro</button>
   </div>
 </header>
 <div class="ds-sidebar-overlay" id="sidebar-overlay"></div>
@@ -132,21 +138,21 @@
        ============================================================ -->
   <div class="ds-section">
     <h1 class="ds-section__title">Tooltip</h1>
-    <p class="ds-section__subtitle">Small contextual labels that appear on hover or focus relative to a trigger element. Use tooltips to provide brief, supplementary information.</p>
+    <p class="ds-section__subtitle"><span data-lang="pt">Pequenos labels contextuais que aparecem ao passar o mouse ou focar em um elemento trigger. Use tooltips para fornecer informacoes breves e complementares.</span><span data-lang="en">Small contextual labels that appear on hover or focus relative to a trigger element. Use tooltips to provide brief, supplementary information.</span></p>
   </div>
 
   <!-- ============================================================
        2. WHEN TO USE / WHEN NOT TO USE
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">When to use</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Quando usar</span><span data-lang="en">When to use</span></h2>
     <div class="ds-callout ds-callout--success">
-      <div class="ds-callout__title">Use tooltips when</div>
-      Providing supplementary, non-essential info on hover or focus: icon button labels, abbreviation explanations, brief clarifications.
+      <div class="ds-callout__title"><span data-lang="pt">Use tooltips quando</span><span data-lang="en">Use tooltips when</span></div>
+      <span data-lang="pt">Fornecer informacao complementar e nao essencial ao passar o mouse ou focar: labels de botoes de icone, explicacoes de abreviacoes, esclarecimentos breves.</span><span data-lang="en">Providing supplementary, non-essential info on hover or focus: icon button labels, abbreviation explanations, brief clarifications.</span>
     </div>
     <div class="ds-callout ds-callout--warning">
-      <div class="ds-callout__title">Don't use tooltips when</div>
-      The information is essential (make it visible by default), the content is interactive — links, buttons, or forms (use Popover — future), or the content is long (use Modal).
+      <div class="ds-callout__title"><span data-lang="pt">Nao use tooltips quando</span><span data-lang="en">Don't use tooltips when</span></div>
+      <span data-lang="pt">A informacao e essencial (torne-a visivel por padrao), o conteudo e interativo — links, botoes ou formularios (use Popover — futuro), ou o conteudo e longo (use Modal).</span><span data-lang="en">The information is essential (make it visible by default), the content is interactive — links, buttons, or forms (use Popover — future), or the content is long (use Modal).</span>
     </div>
   </div>
 
@@ -154,7 +160,7 @@
        3. ANATOMY
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Anatomy</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Anatomia</span><span data-lang="en">Anatomy</span></h2>
 
     <div class="ds-anatomy">
       <div style="position:relative;display:inline-flex;flex-direction:column;align-items:center;gap:var(--ds-spacing-2);">
@@ -174,10 +180,14 @@
     </div>
 
     <div class="ds-anatomy-legend">
-      <strong>1</strong> Trigger — the element that activates the tooltip on hover/focus.<br>
+      <span data-lang="pt"><strong>1</strong> Trigger — o elemento que ativa o tooltip ao passar o mouse ou focar.<br>
+      <strong>2</strong> Container do tooltip (<code>.ds-tooltip</code>) — fundo escuro, posicionado relativo ao trigger.<br>
+      <strong>3</strong> Seta — pseudo-elemento CSS apontando para o trigger.<br>
+      <strong>4</strong> Conteúdo — somente texto, sem elementos interativos.</span>
+      <span data-lang="en"><strong>1</strong> Trigger — the element that activates the tooltip on hover/focus.<br>
       <strong>2</strong> Tooltip container (<code>.ds-tooltip</code>) — dark background, positioned relative to trigger.<br>
       <strong>3</strong> Arrow — CSS pseudo-element pointing toward the trigger.<br>
-      <strong>4</strong> Content — text only, no interactive elements.
+      <strong>4</strong> Content — text only, no interactive elements.</span>
     </div>
   </div>
 
@@ -187,8 +197,8 @@
 
   <!-- Positions -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Positions</h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">The tooltip content appears on the specified side of the trigger. The arrow (via <code>::before</code>) points toward the trigger element.</p>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Posições</span><span data-lang="en">Positions</span></h2>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">O conteúdo do tooltip aparece no lado especificado do trigger. A seta (via <code>::before</code>) aponta para o elemento trigger.</span><span data-lang="en">The tooltip content appears on the specified side of the trigger. The arrow (via <code>::before</code>) points toward the trigger element.</span></p>
     <div class="ds-preview">
       <div class="ds-preview__tabs" role="tablist">
         <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
@@ -248,8 +258,8 @@
 
   <!-- With icon buttons -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">With icon buttons</h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">Tooltips are especially useful on icon-only buttons to clarify their purpose.</p>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Com botões de ícone</span><span data-lang="en">With icon buttons</span></h2>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Tooltips são especialmente úteis em botões icon-only para esclarecer sua função.</span><span data-lang="en">Tooltips are especially useful on icon-only buttons to clarify their purpose.</span></p>
     <div class="ds-preview">
       <div class="ds-preview__tabs" role="tablist">
         <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
@@ -293,7 +303,7 @@
        5. BEST PRACTICES (Do / Don't)
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Best practices</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Boas práticas</span><span data-lang="en">Best practices</span></h2>
 
     <div class="ds-dodont">
       <div class="ds-dodont__item">
@@ -306,7 +316,7 @@
           </div>
         </div>
         <div class="ds-dodont__label ds-dodont__label--do">Do</div>
-        <div class="ds-dodont__desc">Use tooltips on icon-only buttons to clarify their purpose. Keep under 80 characters.</div>
+        <div class="ds-dodont__desc"><span data-lang="pt">Use tooltips em botões icon-only para esclarecer sua função. Mantenha abaixo de 80 caracteres.</span><span data-lang="en">Use tooltips on icon-only buttons to clarify their purpose. Keep under 80 characters.</span></div>
       </div>
       <div class="ds-dodont__item">
         <div class="ds-dodont__preview">
@@ -315,7 +325,7 @@
           </div>
         </div>
         <div class="ds-dodont__label ds-dodont__label--dont">Don't</div>
-        <div class="ds-dodont__desc">Put long content, links, buttons, or forms inside tooltips.</div>
+        <div class="ds-dodont__desc"><span data-lang="pt">Colocar conteúdo longo, links, botões ou formulários dentro de tooltips.</span><span data-lang="en">Put long content, links, buttons, or forms inside tooltips.</span></div>
       </div>
     </div>
 
@@ -330,14 +340,14 @@
           </div>
         </div>
         <div class="ds-dodont__label ds-dodont__label--do">Do</div>
-        <div class="ds-dodont__desc">Provide supplementary, non-essential information via tooltips.</div>
+        <div class="ds-dodont__desc"><span data-lang="pt">Forneça informação complementar e não essencial via tooltips.</span><span data-lang="en">Provide supplementary, non-essential information via tooltips.</span></div>
       </div>
       <div class="ds-dodont__item">
         <div class="ds-dodont__preview" style="flex-direction:column;gap:var(--ds-spacing-2);">
           <span style="font-size:var(--ds-font-size-sm);color:var(--ds-text-secondary);text-align:center;">Critical information only visible on hover</span>
         </div>
         <div class="ds-dodont__label ds-dodont__label--dont">Don't</div>
-        <div class="ds-dodont__desc">Make tooltips the only way to convey critical info. Essential content should be always visible.</div>
+        <div class="ds-dodont__desc"><span data-lang="pt">Fazer tooltips a única forma de comunicar informação crítica. Conteúdo essencial deve ser sempre visível.</span><span data-lang="en">Make tooltips the only way to convey critical info. Essential content should be always visible.</span></div>
       </div>
     </div>
   </div>
@@ -346,14 +356,14 @@
        6. CONTENT GUIDELINES
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Content guidelines</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Diretrizes de conteúdo</span><span data-lang="en">Content guidelines</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th>Rule</th><th>Example</th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Regra</span><span data-lang="en">Rule</span></th><th><span data-lang="pt">Exemplo</span><span data-lang="en">Example</span></th></tr></thead>
       <tbody>
-        <tr><td>Under 80 characters</td><td>"Edit document" — not a full paragraph</td></tr>
-        <tr><td>Sentence case</td><td>"Copy to clipboard" — not "Copy To Clipboard"</td></tr>
-        <tr><td>No period for fragments</td><td>"Delete item" — not "Delete item."</td></tr>
-        <tr><td>Text only — no interactive content</td><td>No links, buttons, or form elements inside tooltips</td></tr>
+        <tr><td><span data-lang="pt">Abaixo de 80 caracteres</span><span data-lang="en">Under 80 characters</span></td><td><span data-lang="pt">"Editar documento" — não um parágrafo inteiro</span><span data-lang="en">"Edit document" — not a full paragraph</span></td></tr>
+        <tr><td><span data-lang="pt">Caixa de sentença</span><span data-lang="en">Sentence case</span></td><td><span data-lang="pt">"Copiar para área de transferência" — não "Copiar Para Área De Transferência"</span><span data-lang="en">"Copy to clipboard" — not "Copy To Clipboard"</span></td></tr>
+        <tr><td><span data-lang="pt">Sem ponto para fragmentos</span><span data-lang="en">No period for fragments</span></td><td><span data-lang="pt">"Excluir item" — não "Excluir item."</span><span data-lang="en">"Delete item" — not "Delete item."</span></td></tr>
+        <tr><td><span data-lang="pt">Somente texto — sem conteúdo interativo</span><span data-lang="en">Text only — no interactive content</span></td><td><span data-lang="pt">Sem links, botões ou elementos de formulário dentro de tooltips</span><span data-lang="en">No links, buttons, or form elements inside tooltips</span></td></tr>
       </tbody>
     </table>
   </div>
@@ -362,12 +372,12 @@
        7. TOKEN MAPPING
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Token mapping</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Mapeamento de tokens</span><span data-lang="en">Token mapping</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th>Property</th><th>Token (semantic)</th><th>CSS variable</th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token (semantic)</th><th><span data-lang="pt">Variável CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
       <tbody>
-        <tr><td>background</td><td><code>neutral-900</code> (light mode)</td><td>---</td></tr>
-        <tr><td>text</td><td><code>white</code> (light mode)</td><td>---</td></tr>
+        <tr><td><span data-lang="pt">fundo</span><span data-lang="en">background</span></td><td><code>neutral-900</code> (light mode)</td><td>---</td></tr>
+        <tr><td><span data-lang="pt">texto</span><span data-lang="en">text</span></td><td><code>white</code> (light mode)</td><td>---</td></tr>
         <tr><td>border-radius</td><td><code>semantic.radius.sm</code></td><td><code>--ds-radius-sm</code></td></tr>
         <tr><td>z-index</td><td><code>foundation.z-index.20</code></td><td><code>--ds-z-20</code></td></tr>
       </tbody>
@@ -378,16 +388,16 @@
        8. CSS CLASSES
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">CSS classes</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Classes CSS</span><span data-lang="en">CSS classes</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th>Class</th><th>Description</th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Classe</span><span data-lang="en">Class</span></th><th><span data-lang="pt">Descrição</span><span data-lang="en">Description</span></th></tr></thead>
       <tbody>
-        <tr><td><code>ds-tooltip</code></td><td>Wrapper around trigger and tooltip content</td></tr>
-        <tr><td><code>ds-tooltip__content</code></td><td>The tooltip label element (with arrow via <code>::before</code>)</td></tr>
-        <tr><td><code>ds-tooltip--top</code></td><td>Position tooltip above the trigger</td></tr>
-        <tr><td><code>ds-tooltip--right</code></td><td>Position tooltip to the right</td></tr>
-        <tr><td><code>ds-tooltip--bottom</code></td><td>Position tooltip below the trigger</td></tr>
-        <tr><td><code>ds-tooltip--left</code></td><td>Position tooltip to the left</td></tr>
+        <tr><td><code>ds-tooltip</code></td><td><span data-lang="pt">Wrapper ao redor do trigger e conteúdo do tooltip</span><span data-lang="en">Wrapper around trigger and tooltip content</span></td></tr>
+        <tr><td><code>ds-tooltip__content</code></td><td><span data-lang="pt">O elemento label do tooltip (com seta via <code>::before</code>)</span><span data-lang="en">The tooltip label element (with arrow via <code>::before</code>)</span></td></tr>
+        <tr><td><code>ds-tooltip--top</code></td><td><span data-lang="pt">Posiciona o tooltip acima do trigger</span><span data-lang="en">Position tooltip above the trigger</span></td></tr>
+        <tr><td><code>ds-tooltip--right</code></td><td><span data-lang="pt">Posiciona o tooltip à direita</span><span data-lang="en">Position tooltip to the right</span></td></tr>
+        <tr><td><code>ds-tooltip--bottom</code></td><td><span data-lang="pt">Posiciona o tooltip abaixo do trigger</span><span data-lang="en">Position tooltip below the trigger</span></td></tr>
+        <tr><td><code>ds-tooltip--left</code></td><td><span data-lang="pt">Posiciona o tooltip à esquerda</span><span data-lang="en">Position tooltip to the left</span></td></tr>
       </tbody>
     </table>
   </div>
@@ -396,13 +406,13 @@
        9. KEYBOARD INTERACTION
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Keyboard interaction</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Interação por teclado</span><span data-lang="en">Keyboard interaction</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th>Key</th><th>Action</th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Tecla</span><span data-lang="en">Key</span></th><th><span data-lang="pt">Ação</span><span data-lang="en">Action</span></th></tr></thead>
       <tbody>
-        <tr><td><code>Tab</code> (to trigger)</td><td>Shows tooltip when trigger receives focus</td></tr>
-        <tr><td><code>Escape</code></td><td>Hides tooltip</td></tr>
-        <tr><td><code>Tab</code> (away)</td><td>Hides tooltip when focus leaves the trigger</td></tr>
+        <tr><td><code>Tab</code> <span data-lang="pt">(para o trigger)</span><span data-lang="en">(to trigger)</span></td><td><span data-lang="pt">Mostra o tooltip quando o trigger recebe foco</span><span data-lang="en">Shows tooltip when trigger receives focus</span></td></tr>
+        <tr><td><code>Escape</code></td><td><span data-lang="pt">Oculta o tooltip</span><span data-lang="en">Hides tooltip</span></td></tr>
+        <tr><td><code>Tab</code> <span data-lang="pt">(saindo)</span><span data-lang="en">(away)</span></td><td><span data-lang="pt">Oculta o tooltip quando o foco sai do trigger</span><span data-lang="en">Hides tooltip when focus leaves the trigger</span></td></tr>
       </tbody>
     </table>
   </div>
@@ -411,20 +421,23 @@
        10. ACCESSIBILITY
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Accessibility</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Acessibilidade</span><span data-lang="en">Accessibility</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th>WCAG criterion</th><th>Requirement</th><th>Status</th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Critério WCAG</span><span data-lang="en">WCAG criterion</span></th><th><span data-lang="pt">Requisito</span><span data-lang="en">Requirement</span></th><th>Status</th></tr></thead>
       <tbody>
-        <tr><td>1.4.13 Content on Hover/Focus (AA)</td><td>Tooltip must be dismissable (Escape), hoverable (mouse can enter tooltip), and persistent (stays while hovered/focused)</td><td>&#10003;</td></tr>
-        <tr><td>4.1.2 Name, Role, Value (A)</td><td>Tooltip element has <code>role="tooltip"</code>, trigger linked via <code>aria-describedby</code></td><td>&#10003;</td></tr>
+        <tr><td>1.4.13 Content on Hover/Focus (AA)</td><td><span data-lang="pt">O tooltip deve ser dispensável (Escape), acessível ao mouse (pode entrar no tooltip) e persistente (permanece enquanto hover/focus ativo)</span><span data-lang="en">Tooltip must be dismissable (Escape), hoverable (mouse can enter tooltip), and persistent (stays while hovered/focused)</span></td><td>&#10003;</td></tr>
+        <tr><td>4.1.2 Name, Role, Value (A)</td><td><span data-lang="pt">Elemento tooltip possui <code>role="tooltip"</code>, trigger vinculado via <code>aria-describedby</code></span><span data-lang="en">Tooltip element has <code>role="tooltip"</code>, trigger linked via <code>aria-describedby</code></span></td><td>&#10003;</td></tr>
       </tbody>
     </table>
 
     <div class="ds-callout ds-callout--info" style="margin-top:var(--ds-spacing-4)">
-      <div class="ds-callout__title">ARIA attributes summary</div>
-      <code>role="tooltip"</code> — on the tooltip content element.<br>
+      <div class="ds-callout__title"><span data-lang="pt">Resumo de atributos ARIA</span><span data-lang="en">ARIA attributes summary</span></div>
+      <span data-lang="pt"><code>role="tooltip"</code> — no elemento de conteúdo do tooltip.<br>
+      <code>aria-describedby</code> — no trigger, apontando para o <code>id</code> do tooltip.<br>
+      Tooltips devem aparecer tanto em <code>hover</code> quanto em <code>focus</code>, e ser dispensáveis com <code>Escape</code>.</span>
+      <span data-lang="en"><code>role="tooltip"</code> — on the tooltip content element.<br>
       <code>aria-describedby</code> — on the trigger, pointing to the tooltip's <code>id</code>.<br>
-      Tooltips must appear on both <code>hover</code> and <code>focus</code>, and be dismissible with <code>Escape</code>.
+      Tooltips must appear on both <code>hover</code> and <code>focus</code>, and be dismissible with <code>Escape</code>.</span>
     </div>
   </div>
 
@@ -432,7 +445,7 @@
        11. RELATED COMPONENTS
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Related</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Relacionados</span><span data-lang="en">Related</span></h2>
     <div class="ds-related">
       <a href="modal.html" class="ds-related__link">Modal</a>
       <a href="badge.html" class="ds-related__link">Badge</a>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,6 +21,9 @@
     .ds-principle__example--dont .ds-principle__example-label { color: var(--ds-feedback-error-text); }
     @media (max-width: 768px) { .ds-principle__examples { grid-template-columns: 1fr; } }
   </style>
+  <script>
+    (function(){var l=localStorage.getItem('ds-lang');if(l)document.documentElement.setAttribute('lang',l)})();
+  </script>
 </head>
 <body>
 
@@ -35,15 +38,18 @@
     </a>
   </div>
   <div class="ds-site-header__actions">
+    <select class="ds-theme-switcher__select" id="lang-switcher" aria-label="Language">
+      <option value="pt">PT</option>
+      <option value="en">EN</option>
+    </select>
     <div class="ds-theme-switcher">
-      <label class="ds-theme-switcher__label" for="theme-switcher">Theme</label>
       <select class="ds-theme-switcher__select" id="theme-switcher">
         <option value="default">Default (Blue)</option>
         <option value="ocean">Ocean (Cyan)</option>
         <option value="forest">Forest (Emerald)</option>
       </select>
     </div>
-    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode">Dark</button>
+    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode">Escuro</button>
   </div>
 </header>
 <div class="ds-sidebar-overlay" id="sidebar-overlay"></div>
@@ -110,102 +116,102 @@
 
 <main class="ds-main">
   <div class="ds-section">
-    <h1 class="ds-section__title">Design Principles</h1>
-    <p class="ds-section__subtitle">These principles guide every decision in the design system — from token structure to component API to documentation. When two options seem equally valid, these principles break the tie.</p>
+    <h1 class="ds-section__title"><span data-lang="pt">Principios de design</span><span data-lang="en">Design Principles</span></h1>
+    <p class="ds-section__subtitle"><span data-lang="pt">Estes principios guiam toda decisao no design system -- da estrutura de tokens a API de componentes a documentacao. Quando duas opcoes parecem igualmente validas, estes principios desempatam.</span><span data-lang="en">These principles guide every decision in the design system -- from token structure to component API to documentation. When two options seem equally valid, these principles break the tie.</span></p>
   </div>
 
   <div class="ds-principle">
     <div class="ds-principle__number">01</div>
-    <h2 class="ds-principle__title">Consistency over speed</h2>
-    <p class="ds-principle__desc">A component that's well-specified takes longer to build but prevents rework on both the design and code sides. Every component follows the same token hierarchy, the same naming convention, the same accessibility baseline. Shortcuts now become debt later.</p>
+    <h2 class="ds-principle__title"><span data-lang="pt">Consistencia acima de velocidade</span><span data-lang="en">Consistency over speed</span></h2>
+    <p class="ds-principle__desc"><span data-lang="pt">Um componente bem especificado leva mais tempo para construir, mas previne retrabalho tanto no design quanto no codigo. Todo componente segue a mesma hierarquia de tokens, a mesma convencao de nomenclatura, o mesmo baseline de acessibilidade. Atalhos agora viram divida depois.</span><span data-lang="en">A component that's well-specified takes longer to build but prevents rework on both the design and code sides. Every component follows the same token hierarchy, the same naming convention, the same accessibility baseline. Shortcuts now become debt later.</span></p>
     <div class="ds-principle__examples">
       <div class="ds-principle__example ds-principle__example--do">
-        <div class="ds-principle__example-label">Example</div>
-        All 19 components use the same focus ring implementation: <code>outline</code> + <code>outline-offset</code> with 3 shared tokens. Change one token, every component updates.
+        <div class="ds-principle__example-label"><span data-lang="pt">Exemplo</span><span data-lang="en">Example</span></div>
+        <span data-lang="pt">Todos os 19 componentes usam a mesma implementacao de focus ring: <code>outline</code> + <code>outline-offset</code> com 3 tokens compartilhados. Mude um token, todo componente atualiza.</span><span data-lang="en">All 19 components use the same focus ring implementation: <code>outline</code> + <code>outline-offset</code> with 3 shared tokens. Change one token, every component updates.</span>
       </div>
       <div class="ds-principle__example ds-principle__example--dont">
         <div class="ds-principle__example-label">Anti-pattern</div>
-        Each component implements its own focus style — some use box-shadow, some use outline, some use border. Changing the focus ring means touching 19 files.
+        <span data-lang="pt">Cada componente implementa seu proprio estilo de foco -- alguns usam box-shadow, alguns usam outline, alguns usam border. Mudar o focus ring significa tocar em 19 arquivos.</span><span data-lang="en">Each component implements its own focus style -- some use box-shadow, some use outline, some use border. Changing the focus ring means touching 19 files.</span>
       </div>
     </div>
   </div>
 
   <div class="ds-principle">
     <div class="ds-principle__number">02</div>
-    <h2 class="ds-principle__title">Accessible by default</h2>
-    <p class="ds-principle__desc">WCAG 2.2 AA is the baseline, not an aspiration. Accessibility is built into tokens (contrast-validated color pairs), components (semantic HTML, ARIA attributes, keyboard support), and documentation (every component page has a WCAG checklist). There is no "accessibility phase" — it's part of every task.</p>
+    <h2 class="ds-principle__title"><span data-lang="pt">Acessivel por padrao</span><span data-lang="en">Accessible by default</span></h2>
+    <p class="ds-principle__desc"><span data-lang="pt">WCAG 2.2 AA e o baseline, nao uma aspiracao. Acessibilidade e construida nos tokens (pares de cores validados por contraste), componentes (HTML semantico, atributos ARIA, suporte a teclado) e documentacao (toda pagina de componente tem um checklist WCAG). Nao existe "fase de acessibilidade" -- faz parte de toda tarefa.</span><span data-lang="en">WCAG 2.2 AA is the baseline, not an aspiration. Accessibility is built into tokens (contrast-validated color pairs), components (semantic HTML, ARIA attributes, keyboard support), and documentation (every component page has a WCAG checklist). There is no "accessibility phase" -- it's part of every task.</span></p>
     <div class="ds-principle__examples">
       <div class="ds-principle__example ds-principle__example--do">
-        <div class="ds-principle__example-label">Example</div>
-        The Toggle component uses <code>role="switch"</code> and native checkbox behavior, giving screen readers correct semantics and keyboard users Space to toggle — no custom JS needed.
+        <div class="ds-principle__example-label"><span data-lang="pt">Exemplo</span><span data-lang="en">Example</span></div>
+        <span data-lang="pt">O componente Toggle usa <code>role="switch"</code> e comportamento nativo de checkbox, dando a leitores de tela a semantica correta e aos usuarios de teclado Space para alternar -- sem JS customizado.</span><span data-lang="en">The Toggle component uses <code>role="switch"</code> and native checkbox behavior, giving screen readers correct semantics and keyboard users Space to toggle -- no custom JS needed.</span>
       </div>
       <div class="ds-principle__example ds-principle__example--dont">
         <div class="ds-principle__example-label">Anti-pattern</div>
-        Building a toggle with <code>&lt;div onclick&gt;</code> and adding ARIA later "when we have time." The div has no keyboard support, no role, and no checked state.
+        <span data-lang="pt">Construir um toggle com <code>&lt;div onclick&gt;</code> e adicionar ARIA depois "quando tivermos tempo." A div nao tem suporte a teclado, nenhum role e nenhum estado checked.</span><span data-lang="en">Building a toggle with <code>&lt;div onclick&gt;</code> and adding ARIA later "when we have time." The div has no keyboard support, no role, and no checked state.</span>
       </div>
     </div>
   </div>
 
   <div class="ds-principle">
     <div class="ds-principle__number">03</div>
-    <h2 class="ds-principle__title">Stack-agnostic</h2>
-    <p class="ds-principle__desc">The DS outputs CSS custom properties and vanilla HTML. No framework dependency. Tokens are defined in JSON (DTCG format) and transformed to CSS via Style Dictionary. Components use <code>.ds-*</code> classes that work with any templating layer — React, Vue, Svelte, server-rendered HTML, or plain static pages.</p>
+    <h2 class="ds-principle__title"><span data-lang="pt">Agnostico de stack</span><span data-lang="en">Stack-agnostic</span></h2>
+    <p class="ds-principle__desc"><span data-lang="pt">O DS gera CSS custom properties e HTML vanilla. Sem dependencia de framework. Tokens sao definidos em JSON (formato DTCG) e transformados para CSS via Style Dictionary. Componentes usam classes <code>.ds-*</code> que funcionam com qualquer camada de template -- React, Vue, Svelte, HTML server-rendered ou paginas estaticas.</span><span data-lang="en">The DS outputs CSS custom properties and vanilla HTML. No framework dependency. Tokens are defined in JSON (DTCG format) and transformed to CSS via Style Dictionary. Components use <code>.ds-*</code> classes that work with any templating layer -- React, Vue, Svelte, server-rendered HTML, or plain static pages.</span></p>
     <div class="ds-principle__examples">
       <div class="ds-principle__example ds-principle__example--do">
-        <div class="ds-principle__example-label">Example</div>
-        A button is <code>&lt;button class="ds-btn ds-btn--brand"&gt;</code>. It works in a Next.js app, a WordPress theme, or a static HTML page. Zero JS required for styling.
+        <div class="ds-principle__example-label"><span data-lang="pt">Exemplo</span><span data-lang="en">Example</span></div>
+        <span data-lang="pt">Um botao e <code>&lt;button class="ds-btn ds-btn--brand"&gt;</code>. Funciona em um app Next.js, um tema WordPress ou uma pagina HTML estatica. Zero JS necessario para estilizacao.</span><span data-lang="en">A button is <code>&lt;button class="ds-btn ds-btn--brand"&gt;</code>. It works in a Next.js app, a WordPress theme, or a static HTML page. Zero JS required for styling.</span>
       </div>
       <div class="ds-principle__example ds-principle__example--dont">
         <div class="ds-principle__example-label">Anti-pattern</div>
-        Components that require <code>import Button from '@ds/react'</code> to render. Teams using Vue or plain HTML can't adopt the DS without a rewrite.
+        <span data-lang="pt">Componentes que requerem <code>import Button from '@ds/react'</code> para renderizar. Times usando Vue ou HTML puro nao conseguem adotar o DS sem reescrita.</span><span data-lang="en">Components that require <code>import Button from '@ds/react'</code> to render. Teams using Vue or plain HTML can't adopt the DS without a rewrite.</span>
       </div>
     </div>
   </div>
 
   <div class="ds-principle">
     <div class="ds-principle__number">04</div>
-    <h2 class="ds-principle__title">Tokens are the contract</h2>
-    <p class="ds-principle__desc">Design tokens are the API between design and code. Figma uses variables that map 1:1 to CSS custom properties that map 1:1 to JSON source files. If a value doesn't have a token, it's either a gap in the system or an exception that needs documentation.</p>
+    <h2 class="ds-principle__title"><span data-lang="pt">Tokens sao o contrato</span><span data-lang="en">Tokens are the contract</span></h2>
+    <p class="ds-principle__desc"><span data-lang="pt">Design tokens sao a API entre design e codigo. O Figma usa variaveis que mapeiam 1:1 para CSS custom properties que mapeiam 1:1 para arquivos JSON fonte. Se um valor nao tem um token, e uma lacuna no sistema ou uma excecao que precisa de documentacao.</span><span data-lang="en">Design tokens are the API between design and code. Figma uses variables that map 1:1 to CSS custom properties that map 1:1 to JSON source files. If a value doesn't have a token, it's either a gap in the system or an exception that needs documentation.</span></p>
     <div class="ds-principle__examples">
       <div class="ds-principle__example ds-principle__example--do">
-        <div class="ds-principle__example-label">Example</div>
-        A card's border radius is <code>var(--ds-radius-lg)</code> in CSS and bound to <code>radius/lg</code> in Figma. Change the token value in JSON, rebuild, and both sides update.
+        <div class="ds-principle__example-label"><span data-lang="pt">Exemplo</span><span data-lang="en">Example</span></div>
+        <span data-lang="pt">O border radius de um card e <code>var(--ds-radius-lg)</code> no CSS e vinculado a <code>radius/lg</code> no Figma. Mude o valor do token no JSON, rebuild, e ambos os lados atualizam.</span><span data-lang="en">A card's border radius is <code>var(--ds-radius-lg)</code> in CSS and bound to <code>radius/lg</code> in Figma. Change the token value in JSON, rebuild, and both sides update.</span>
       </div>
       <div class="ds-principle__example ds-principle__example--dont">
         <div class="ds-principle__example-label">Anti-pattern</div>
-        Figma uses 12px radius, CSS uses <code>border-radius: 0.75rem</code> hardcoded. They drift apart silently and nobody notices until a visual audit.
+        <span data-lang="pt">O Figma usa 12px de radius, o CSS usa <code>border-radius: 0.75rem</code> hardcoded. Eles divergem silenciosamente e ninguem percebe ate uma auditoria visual.</span><span data-lang="en">Figma uses 12px radius, CSS uses <code>border-radius: 0.75rem</code> hardcoded. They drift apart silently and nobody notices until a visual audit.</span>
       </div>
     </div>
   </div>
 
   <div class="ds-principle">
     <div class="ds-principle__number">05</div>
-    <h2 class="ds-principle__title">Decisions are recorded</h2>
-    <p class="ds-principle__desc">Every architectural decision gets an ADR (Architecture Decision Record) in <code>docs/decisions/</code>. If there's no ADR, the decision wasn't made — it was improvised. ADRs capture context, alternatives considered, and consequences, so future contributors understand why, not just what.</p>
+    <h2 class="ds-principle__title"><span data-lang="pt">Decisoes sao registradas</span><span data-lang="en">Decisions are recorded</span></h2>
+    <p class="ds-principle__desc"><span data-lang="pt">Toda decisao de arquitetura recebe um ADR (Architecture Decision Record) em <code>docs/decisions/</code>. Se nao ha ADR, a decisao nao foi tomada -- foi improvisada. ADRs capturam contexto, alternativas consideradas e consequencias, para que futuros contribuidores entendam o porque, nao apenas o que.</span><span data-lang="en">Every architectural decision gets an ADR (Architecture Decision Record) in <code>docs/decisions/</code>. If there's no ADR, the decision wasn't made -- it was improvised. ADRs capture context, alternatives considered, and consequences, so future contributors understand why, not just what.</span></p>
     <div class="ds-principle__examples">
       <div class="ds-principle__example ds-principle__example--do">
-        <div class="ds-principle__example-label">Example</div>
-        ADR-005 documents why the focus ring uses <code>outline</code> instead of <code>box-shadow</code>, what was considered, and what the impact is on Figma implementation.
+        <div class="ds-principle__example-label"><span data-lang="pt">Exemplo</span><span data-lang="en">Example</span></div>
+        <span data-lang="pt">O ADR-005 documenta porque o focus ring usa <code>outline</code> ao inves de <code>box-shadow</code>, o que foi considerado e qual o impacto na implementacao Figma.</span><span data-lang="en">ADR-005 documents why the focus ring uses <code>outline</code> instead of <code>box-shadow</code>, what was considered, and what the impact is on Figma implementation.</span>
       </div>
       <div class="ds-principle__example ds-principle__example--dont">
         <div class="ds-principle__example-label">Anti-pattern</div>
-        Switching the focus ring approach in a commit message that says "fix focus ring" with no explanation of the reasoning or trade-offs.
+        <span data-lang="pt">Mudar a abordagem do focus ring em um commit message que diz "fix focus ring" sem nenhuma explicacao do raciocinio ou trade-offs.</span><span data-lang="en">Switching the focus ring approach in a commit message that says "fix focus ring" with no explanation of the reasoning or trade-offs.</span>
       </div>
     </div>
   </div>
 
   <div class="ds-principle">
     <div class="ds-principle__number">06</div>
-    <h2 class="ds-principle__title">Semantic over visual</h2>
-    <p class="ds-principle__desc">Tokens and class names describe purpose, not appearance. <code>--ds-feedback-error-default</code> not <code>--ds-red-600</code>. <code>ds-btn--danger</code> not <code>ds-btn--red</code>. This allows the visual expression to change (a rebrand, a new palette) without breaking the API or the mental model.</p>
+    <h2 class="ds-principle__title"><span data-lang="pt">Semantico acima de visual</span><span data-lang="en">Semantic over visual</span></h2>
+    <p class="ds-principle__desc"><span data-lang="pt">Tokens e nomes de classes descrevem proposito, nao aparencia. <code>--ds-feedback-error-default</code> nao <code>--ds-red-600</code>. <code>ds-btn--danger</code> nao <code>ds-btn--red</code>. Isso permite que a expressao visual mude (uma mudanca de marca, uma nova paleta) sem quebrar a API ou o modelo mental.</span><span data-lang="en">Tokens and class names describe purpose, not appearance. <code>--ds-feedback-error-default</code> not <code>--ds-red-600</code>. <code>ds-btn--danger</code> not <code>ds-btn--red</code>. This allows the visual expression to change (a rebrand, a new palette) without breaking the API or the mental model.</span></p>
     <div class="ds-principle__examples">
       <div class="ds-principle__example ds-principle__example--do">
-        <div class="ds-principle__example-label">Example</div>
-        Using <code>--ds-color-primary-default</code> for the brand CTA. Swapping the brand file changes blue to cyan everywhere. No CSS edits needed.
+        <div class="ds-principle__example-label"><span data-lang="pt">Exemplo</span><span data-lang="en">Example</span></div>
+        <span data-lang="pt">Usar <code>--ds-color-primary-default</code> para o CTA da marca. Trocar o arquivo da marca muda de blue para cyan em todo lugar. Nenhuma edicao CSS necessaria.</span><span data-lang="en">Using <code>--ds-color-primary-default</code> for the brand CTA. Swapping the brand file changes blue to cyan everywhere. No CSS edits needed.</span>
       </div>
       <div class="ds-principle__example ds-principle__example--dont">
         <div class="ds-principle__example-label">Anti-pattern</div>
-        Using <code>--ds-color-blue-600</code> directly in a component. When the brand switches to cyan, every reference to blue needs manual replacement.
+        <span data-lang="pt">Usar <code>--ds-color-blue-600</code> diretamente em um componente. Quando a marca muda para cyan, toda referencia a blue precisa de substituicao manual.</span><span data-lang="en">Using <code>--ds-color-blue-600</code> directly in a component. When the brand switches to cyan, every reference to blue needs manual replacement.</span>
       </div>
     </div>
   </div>

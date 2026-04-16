@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,6 +38,9 @@
     /* Responsive do/dont */
     @media (max-width: 768px) { .ds-dodont { grid-template-columns: 1fr; } }
   </style>
+  <script>
+    (function(){var l=localStorage.getItem('ds-lang');if(l)document.documentElement.setAttribute('lang',l)})();
+  </script>
 </head>
 <body>
 
@@ -52,15 +55,18 @@
     </a>
   </div>
   <div class="ds-site-header__actions">
+    <select class="ds-theme-switcher__select" id="lang-switcher" aria-label="Language">
+      <option value="pt">PT</option>
+      <option value="en">EN</option>
+    </select>
     <div class="ds-theme-switcher">
-      <label class="ds-theme-switcher__label" for="theme-switcher">Theme</label>
       <select class="ds-theme-switcher__select" id="theme-switcher">
         <option value="default">Default (Blue)</option>
         <option value="ocean">Ocean (Cyan)</option>
         <option value="forest">Forest (Emerald)</option>
       </select>
     </div>
-    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode">Dark</button>
+    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode">Escuro</button>
   </div>
 </header>
 <div class="ds-sidebar-overlay" id="sidebar-overlay"></div>
@@ -132,21 +138,21 @@
        ============================================================ -->
   <div class="ds-section">
     <h1 class="ds-section__title">Breadcrumb</h1>
-    <p class="ds-section__subtitle">Navigation aid showing the user's current location within a page hierarchy. Breadcrumbs help users understand where they are and navigate back to parent pages.</p>
+    <p class="ds-section__subtitle"><span data-lang="pt">Auxiliar de navegacao que mostra a localizacao atual do usuario dentro de uma hierarquia de paginas. Breadcrumbs ajudam os usuarios a entender onde estao e navegar de volta para paginas pai.</span><span data-lang="en">Navigation aid showing the user's current location within a page hierarchy. Breadcrumbs help users understand where they are and navigate back to parent pages.</span></p>
   </div>
 
   <!-- ============================================================
        2. WHEN TO USE / WHEN NOT TO USE
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">When to use</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Quando usar</span><span data-lang="en">When to use</span></h2>
     <div class="ds-callout ds-callout--success">
-      <div class="ds-callout__title">Use breadcrumbs when</div>
-      The site has hierarchical navigation and the user needs to see their current location and navigate back to parent pages. Ideal for content-heavy sites with 3+ levels of depth.
+      <div class="ds-callout__title"><span data-lang="pt">Use breadcrumbs quando</span><span data-lang="en">Use breadcrumbs when</span></div>
+      <span data-lang="pt">O site tem navegacao hierarquica e o usuario precisa ver sua localizacao atual e navegar de volta para paginas pai. Ideal para sites com muito conteudo com 3+ niveis de profundidade.</span><span data-lang="en">The site has hierarchical navigation and the user needs to see their current location and navigate back to parent pages. Ideal for content-heavy sites with 3+ levels of depth.</span>
     </div>
     <div class="ds-callout ds-callout--warning">
-      <div class="ds-callout__title">Don't use breadcrumbs when</div>
-      The site is flat (1-2 levels only), the flow is linear (use a back button instead), or there is only a single level above the current page.
+      <div class="ds-callout__title"><span data-lang="pt">Nao use breadcrumbs quando</span><span data-lang="en">Don't use breadcrumbs when</span></div>
+      <span data-lang="pt">O site e plano (apenas 1-2 niveis), o fluxo e linear (use um botao voltar), ou ha apenas um nivel acima da pagina atual.</span><span data-lang="en">The site is flat (1-2 levels only), the flow is linear (use a back button instead), or there is only a single level above the current page.</span>
     </div>
   </div>
 
@@ -154,7 +160,7 @@
        3. ANATOMY
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Anatomy</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Anatomia</span><span data-lang="en">Anatomy</span></h2>
 
     <div class="ds-anatomy">
       <div style="position:relative;display:inline-flex;align-items:center;gap:var(--ds-spacing-2);font-size:var(--ds-font-size-sm);">
@@ -187,12 +193,12 @@
     </div>
 
     <div class="ds-anatomy-legend">
-      <strong>1</strong> Nav — <code>&lt;nav&gt;</code> element with <code>aria-label="Breadcrumb"</code>.<br>
-      <strong>2</strong> List (<code>.ds-breadcrumb</code>) — <code>&lt;ol&gt;</code> containing breadcrumb items.<br>
-      <strong>3</strong> Item (<code>.ds-breadcrumb__item</code>) — individual breadcrumb entry.<br>
-      <strong>4</strong> Link — navigable parent pages.<br>
-      <strong>5</strong> Current (<code>.ds-breadcrumb__current</code>) — text (not a link), with <code>aria-current="page"</code>.<br>
-      <strong>6</strong> Separator — CSS-generated or decorative text between items.
+      <strong>1</strong> <span data-lang="pt">Nav — elemento <code>&lt;nav&gt;</code> com <code>aria-label="Breadcrumb"</code>.</span><span data-lang="en">Nav — <code>&lt;nav&gt;</code> element with <code>aria-label="Breadcrumb"</code>.</span><br>
+      <strong>2</strong> <span data-lang="pt">Lista (<code>.ds-breadcrumb</code>) — <code>&lt;ol&gt;</code> contendo os itens do breadcrumb.</span><span data-lang="en">List (<code>.ds-breadcrumb</code>) — <code>&lt;ol&gt;</code> containing breadcrumb items.</span><br>
+      <strong>3</strong> <span data-lang="pt">Item (<code>.ds-breadcrumb__item</code>) — entrada individual do breadcrumb.</span><span data-lang="en">Item (<code>.ds-breadcrumb__item</code>) — individual breadcrumb entry.</span><br>
+      <strong>4</strong> <span data-lang="pt">Link — paginas pai navegaveis.</span><span data-lang="en">Link — navigable parent pages.</span><br>
+      <strong>5</strong> <span data-lang="pt">Atual (<code>.ds-breadcrumb__current</code>) — texto (nao um link), com <code>aria-current="page"</code>.</span><span data-lang="en">Current (<code>.ds-breadcrumb__current</code>) — text (not a link), with <code>aria-current="page"</code>.</span><br>
+      <strong>6</strong> <span data-lang="pt">Separador — texto decorativo ou gerado via CSS entre os itens.</span><span data-lang="en">Separator — CSS-generated or decorative text between items.</span>
     </div>
   </div>
 
@@ -200,8 +206,8 @@
        4. VARIANTS (live previews)
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Basic breadcrumb</h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">A simple 3-level hierarchy. The last item is the current page and is not a link.</p>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Breadcrumb basico</span><span data-lang="en">Basic breadcrumb</span></h2>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Uma hierarquia simples de 3 niveis. O ultimo item e a pagina atual e nao e um link.</span><span data-lang="en">A simple 3-level hierarchy. The last item is the current page and is not a link.</span></p>
     <div class="ds-preview">
       <div class="ds-preview__tabs">
         <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
@@ -232,8 +238,8 @@
 
   <!-- Deep hierarchy -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Deep hierarchy</h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">A 5-level breadcrumb trail for deeply nested pages.</p>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Hierarquia profunda</span><span data-lang="en">Deep hierarchy</span></h2>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Um trail de breadcrumb de 5 niveis para paginas profundamente aninhadas.</span><span data-lang="en">A 5-level breadcrumb trail for deeply nested pages.</span></p>
     <div class="ds-preview">
       <div class="ds-preview__tabs">
         <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
@@ -272,8 +278,8 @@
 
   <!-- Two levels -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Two levels</h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">The minimum useful breadcrumb with just a parent and the current page.</p>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Dois niveis</span><span data-lang="en">Two levels</span></h2>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">O breadcrumb minimo util com apenas um pai e a pagina atual.</span><span data-lang="en">The minimum useful breadcrumb with just a parent and the current page.</span></p>
     <div class="ds-preview">
       <div class="ds-preview__tabs">
         <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
@@ -302,7 +308,7 @@
        5. BEST PRACTICES (Do / Don't)
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Best practices</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Boas praticas</span><span data-lang="en">Best practices</span></h2>
 
     <div class="ds-dodont">
       <div class="ds-dodont__item">
@@ -315,8 +321,8 @@
             <span class="ds-breadcrumb__item ds-breadcrumb__item--current" aria-current="page">Sneakers</span>
           </nav>
         </div>
-        <div class="ds-dodont__label ds-dodont__label--do">Do</div>
-        <div class="ds-dodont__desc">Show the full hierarchy path from root. Current page as text (not a link).</div>
+        <div class="ds-dodont__label ds-dodont__label--do"><span data-lang="pt">Faca</span><span data-lang="en">Do</span></div>
+        <div class="ds-dodont__desc"><span data-lang="pt">Mostre o caminho completo da hierarquia desde a raiz. Pagina atual como texto (nao um link).</span><span data-lang="en">Show the full hierarchy path from root. Current page as text (not a link).</span></div>
       </div>
       <div class="ds-dodont__item">
         <div class="ds-dodont__preview">
@@ -328,8 +334,8 @@
             <a href="#" class="ds-breadcrumb__item ds-breadcrumb__item--current">Sneakers</a>
           </nav>
         </div>
-        <div class="ds-dodont__label ds-dodont__label--dont">Don't</div>
-        <div class="ds-dodont__desc">Truncate intermediate levels. Don't make the current page clickable.</div>
+        <div class="ds-dodont__label ds-dodont__label--dont"><span data-lang="pt">Nao faca</span><span data-lang="en">Don't</span></div>
+        <div class="ds-dodont__desc"><span data-lang="pt">Truncar niveis intermediarios. Nao torne a pagina atual clicavel.</span><span data-lang="en">Truncate intermediate levels. Don't make the current page clickable.</span></div>
       </div>
     </div>
   </div>
@@ -338,13 +344,13 @@
        6. CONTENT GUIDELINES
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Content guidelines</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Diretrizes de conteudo</span><span data-lang="en">Content guidelines</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th>Rule</th><th>Example</th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Regra</span><span data-lang="en">Rule</span></th><th><span data-lang="pt">Exemplo</span><span data-lang="en">Example</span></th></tr></thead>
       <tbody>
-        <tr><td>Labels match page titles exactly</td><td>"Products" in breadcrumb matches the "Products" page title</td></tr>
-        <tr><td>Use sentence case</td><td>"Getting started" — not "Getting Started" or "GETTING STARTED"</td></tr>
-        <tr><td>Keep hierarchy to 3-5 levels</td><td>Home / Dashboard / Settings / Security — not 8+ levels deep</td></tr>
+        <tr><td><span data-lang="pt">Rotulos correspondem exatamente aos titulos das paginas</span><span data-lang="en">Labels match page titles exactly</span></td><td><span data-lang="pt">"Products" no breadcrumb corresponde ao titulo da pagina "Products"</span><span data-lang="en">"Products" in breadcrumb matches the "Products" page title</span></td></tr>
+        <tr><td><span data-lang="pt">Use caixa de frase</span><span data-lang="en">Use sentence case</span></td><td><span data-lang="pt">"Getting started" — nao "Getting Started" ou "GETTING STARTED"</span><span data-lang="en">"Getting started" — not "Getting Started" or "GETTING STARTED"</span></td></tr>
+        <tr><td><span data-lang="pt">Mantenha a hierarquia em 3-5 niveis</span><span data-lang="en">Keep hierarchy to 3-5 levels</span></td><td><span data-lang="pt">Home / Dashboard / Settings / Security — nao 8+ niveis de profundidade</span><span data-lang="en">Home / Dashboard / Settings / Security — not 8+ levels deep</span></td></tr>
       </tbody>
     </table>
   </div>
@@ -353,14 +359,14 @@
        7. TOKEN MAPPING
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Token mapping</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Mapeamento de tokens</span><span data-lang="en">Token mapping</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th>Property</th><th>Token (semantic)</th><th>CSS variable</th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token (semantic)</th><th><span data-lang="pt">Variavel CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
       <tbody>
-        <tr><td>link color</td><td><code>semantic.text.link.default</code></td><td><code>--ds-text-link-default</code></td></tr>
-        <tr><td>link hover</td><td><code>semantic.text.link.hover</code></td><td><code>--ds-text-link-hover</code></td></tr>
-        <tr><td>current text</td><td><code>semantic.text.secondary</code></td><td><code>--ds-text-secondary</code></td></tr>
-        <tr><td>separator</td><td><code>semantic.text.tertiary</code></td><td><code>--ds-text-tertiary</code></td></tr>
+        <tr><td><span data-lang="pt">cor do link</span><span data-lang="en">link color</span></td><td><code>semantic.text.link.default</code></td><td><code>--ds-text-link-default</code></td></tr>
+        <tr><td><span data-lang="pt">link hover</span><span data-lang="en">link hover</span></td><td><code>semantic.text.link.hover</code></td><td><code>--ds-text-link-hover</code></td></tr>
+        <tr><td><span data-lang="pt">texto atual</span><span data-lang="en">current text</span></td><td><code>semantic.text.secondary</code></td><td><code>--ds-text-secondary</code></td></tr>
+        <tr><td><span data-lang="pt">separador</span><span data-lang="en">separator</span></td><td><code>semantic.text.tertiary</code></td><td><code>--ds-text-tertiary</code></td></tr>
       </tbody>
     </table>
   </div>
@@ -369,14 +375,14 @@
        8. CSS CLASSES
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">CSS classes</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Classes CSS</span><span data-lang="en">CSS classes</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th>Class</th><th>Description</th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Classe</span><span data-lang="en">Class</span></th><th><span data-lang="pt">Descricao</span><span data-lang="en">Description</span></th></tr></thead>
       <tbody>
-        <tr><td><code>ds-breadcrumb</code></td><td>Breadcrumb container (use on <code>&lt;nav&gt;</code>)</td></tr>
-        <tr><td><code>ds-breadcrumb__item</code></td><td>Individual breadcrumb link or text</td></tr>
-        <tr><td><code>ds-breadcrumb__item--current</code></td><td>Current page item (non-clickable)</td></tr>
-        <tr><td><code>ds-breadcrumb__separator</code></td><td>Visual separator between items (e.g. "/")</td></tr>
+        <tr><td><code>ds-breadcrumb</code></td><td><span data-lang="pt">Container do breadcrumb (use em <code>&lt;nav&gt;</code>)</span><span data-lang="en">Breadcrumb container (use on <code>&lt;nav&gt;</code>)</span></td></tr>
+        <tr><td><code>ds-breadcrumb__item</code></td><td><span data-lang="pt">Link ou texto individual do breadcrumb</span><span data-lang="en">Individual breadcrumb link or text</span></td></tr>
+        <tr><td><code>ds-breadcrumb__item--current</code></td><td><span data-lang="pt">Item da pagina atual (nao clicavel)</span><span data-lang="en">Current page item (non-clickable)</span></td></tr>
+        <tr><td><code>ds-breadcrumb__separator</code></td><td><span data-lang="pt">Separador visual entre itens (ex: "/")</span><span data-lang="en">Visual separator between items (e.g. "/")</span></td></tr>
       </tbody>
     </table>
   </div>
@@ -385,16 +391,16 @@
        9. KEYBOARD INTERACTION
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Keyboard interaction</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Interacao por teclado</span><span data-lang="en">Keyboard interaction</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th>Key</th><th>Action</th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Tecla</span><span data-lang="en">Key</span></th><th><span data-lang="pt">Acao</span><span data-lang="en">Action</span></th></tr></thead>
       <tbody>
-        <tr><td><code>Tab</code></td><td>Moves focus between breadcrumb links (current page is not focusable)</td></tr>
-        <tr><td><code>Enter</code></td><td>Navigates to the focused link</td></tr>
+        <tr><td><code>Tab</code></td><td><span data-lang="pt">Move o foco entre os links do breadcrumb (a pagina atual nao e focavel)</span><span data-lang="en">Moves focus between breadcrumb links (current page is not focusable)</span></td></tr>
+        <tr><td><code>Enter</code></td><td><span data-lang="pt">Navega para o link focado</span><span data-lang="en">Navigates to the focused link</span></td></tr>
       </tbody>
     </table>
     <p style="margin-top:var(--ds-spacing-2);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
-      The current page item is a <code>&lt;span&gt;</code>, not a link, so it is naturally excluded from the tab order. Separators are decorative and not focusable.
+      <span data-lang="pt">O item da pagina atual e um <code>&lt;span&gt;</code>, nao um link, entao e naturalmente excluido da ordem de tabulacao. Separadores sao decorativos e nao focaveis.</span><span data-lang="en">The current page item is a <code>&lt;span&gt;</code>, not a link, so it is naturally excluded from the tab order. Separators are decorative and not focusable.</span>
     </p>
   </div>
 
@@ -402,21 +408,23 @@
        10. ACCESSIBILITY
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Accessibility</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Acessibilidade</span><span data-lang="en">Accessibility</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th>WCAG criterion</th><th>Requirement</th><th>Status</th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Criterio WCAG</span><span data-lang="en">WCAG criterion</span></th><th><span data-lang="pt">Requisito</span><span data-lang="en">Requirement</span></th><th>Status</th></tr></thead>
       <tbody>
-        <tr><td>1.3.1 Info and Relationships (A)</td><td><code>&lt;nav&gt;</code> landmark with <code>aria-label="Breadcrumb"</code>. Uses <code>&lt;ol&gt;</code> for semantic list structure.</td><td>&#10003;</td></tr>
-        <tr><td>2.4.8 Location (AAA)</td><td>Communicates user's current location within the site hierarchy.</td><td>&#10003;</td></tr>
-        <tr><td>4.1.2 Name, Role, Value (A)</td><td><code>aria-current="page"</code> on the current page item.</td><td>&#10003;</td></tr>
+        <tr><td>1.3.1 Info and Relationships (A)</td><td><span data-lang="pt">Landmark <code>&lt;nav&gt;</code> com <code>aria-label="Breadcrumb"</code>. Usa <code>&lt;ol&gt;</code> para estrutura semantica de lista.</span><span data-lang="en"><code>&lt;nav&gt;</code> landmark with <code>aria-label="Breadcrumb"</code>. Uses <code>&lt;ol&gt;</code> for semantic list structure.</span></td><td>&#10003;</td></tr>
+        <tr><td>2.4.8 Location (AAA)</td><td><span data-lang="pt">Comunica a localizacao atual do usuario dentro da hierarquia do site.</span><span data-lang="en">Communicates user's current location within the site hierarchy.</span></td><td>&#10003;</td></tr>
+        <tr><td>4.1.2 Name, Role, Value (A)</td><td><span data-lang="pt"><code>aria-current="page"</code> no item da pagina atual.</span><span data-lang="en"><code>aria-current="page"</code> on the current page item.</span></td><td>&#10003;</td></tr>
       </tbody>
     </table>
 
     <div class="ds-callout ds-callout--info" style="margin-top:var(--ds-spacing-4)">
-      <div class="ds-callout__title">ARIA attributes summary</div>
-      <code>aria-label="Breadcrumb"</code> — on the <code>&lt;nav&gt;</code> element to identify the landmark.<br>
+      <div class="ds-callout__title"><span data-lang="pt">Resumo dos atributos ARIA</span><span data-lang="en">ARIA attributes summary</span></div>
+      <span data-lang="pt"><code>aria-label="Breadcrumb"</code> — no elemento <code>&lt;nav&gt;</code> para identificar o landmark.<br>
+      <code>aria-current="page"</code> — no item da pagina atual para comunicar a localizacao a leitores de tela.<br>
+      Separadores devem ser puramente decorativos (gerados via CSS ou <code>aria-hidden="true"</code>).</span><span data-lang="en"><code>aria-label="Breadcrumb"</code> — on the <code>&lt;nav&gt;</code> element to identify the landmark.<br>
       <code>aria-current="page"</code> — on the current page item to communicate location to screen readers.<br>
-      Separators should be purely decorative (CSS-generated or <code>aria-hidden="true"</code>).
+      Separators should be purely decorative (CSS-generated or <code>aria-hidden="true"</code>).</span>
     </div>
   </div>
 
@@ -424,7 +432,7 @@
        11. RELATED COMPONENTS
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Related</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Relacionados</span><span data-lang="en">Related</span></h2>
     <div class="ds-related">
       <a href="tabs.html" class="ds-related__link">Tabs</a>
     </div>

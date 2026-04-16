@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Colors — Design System</title>
   <link rel="stylesheet" href="../css/design-system.css">
   <link rel="stylesheet" href="layout.css">
+  <script>
+    (function(){var l=localStorage.getItem('ds-lang');if(l)document.documentElement.setAttribute('lang',l)})();
+  </script>
 </head>
 <body>
 
@@ -20,15 +23,18 @@
     </a>
   </div>
   <div class="ds-site-header__actions">
+    <select class="ds-theme-switcher__select" id="lang-switcher" aria-label="Language">
+      <option value="pt">PT</option>
+      <option value="en">EN</option>
+    </select>
     <div class="ds-theme-switcher">
-      <label class="ds-theme-switcher__label" for="theme-switcher">Theme</label>
       <select class="ds-theme-switcher__select" id="theme-switcher">
         <option value="default">Default (Blue)</option>
         <option value="ocean">Ocean (Cyan)</option>
         <option value="forest">Forest (Emerald)</option>
       </select>
     </div>
-    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode">Dark</button>
+    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode">Escuro</button>
   </div>
 </header>
 <div class="ds-sidebar-overlay" id="sidebar-overlay"></div>
@@ -95,13 +101,13 @@
 
 <main class="ds-main">
   <div class="ds-section">
-    <h1 class="ds-section__title">Foundation Colors</h1>
-    <p class="ds-section__subtitle">The primitive color palette provides raw color values with no semantic meaning. These serve as the base palette referenced by semantic/theme tokens.</p>
+    <h1 class="ds-section__title"><span data-lang="pt">Cores Foundation</span><span data-lang="en">Foundation Colors</span></h1>
+    <p class="ds-section__subtitle"><span data-lang="pt">A paleta de cores primitivas fornece valores brutos de cor sem significado semantico. Servem como paleta base referenciada pelos tokens semanticos/theme.</span><span data-lang="en">The primitive color palette provides raw color values with no semantic meaning. These serve as the base palette referenced by semantic/theme tokens.</span></p>
   </div>
 
   <!-- Neutral -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Neutral (Slate scale)</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Neutral (escala Slate)</span><span data-lang="en">Neutral (Slate scale)</span></h2>
     <div class="ds-swatch-grid">
       <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#F8FAFC"></div><div class="ds-swatch__name">50</div><div class="ds-swatch__value">#F8FAFC</div></div>
       <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#F1F5F9"></div><div class="ds-swatch__name">100</div><div class="ds-swatch__value">#F1F5F9</div></div>
@@ -119,7 +125,7 @@
 
   <!-- Blue -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Blue (Primary palette)</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Blue (paleta Primary)</span><span data-lang="en">Blue (Primary palette)</span></h2>
     <div class="ds-swatch-grid">
       <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#EFF6FF"></div><div class="ds-swatch__name">50</div><div class="ds-swatch__value">#EFF6FF</div></div>
       <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#DBEAFE"></div><div class="ds-swatch__name">100</div><div class="ds-swatch__value">#DBEAFE</div></div>
@@ -137,7 +143,7 @@
 
   <!-- Purple -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Purple (Secondary palette)</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Purple (paleta Secondary)</span><span data-lang="en">Purple (Secondary palette)</span></h2>
     <div class="ds-swatch-grid">
       <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#FAF5FF"></div><div class="ds-swatch__name">50</div><div class="ds-swatch__value">#FAF5FF</div></div>
       <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#F3E8FF"></div><div class="ds-swatch__name">100</div><div class="ds-swatch__value">#F3E8FF</div></div>
@@ -155,7 +161,7 @@
 
   <!-- Red -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Red (Error / Destructive)</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Red (Erro / Destrutivo)</span><span data-lang="en">Red (Error / Destructive)</span></h2>
     <div class="ds-swatch-grid">
       <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#FEF2F2"></div><div class="ds-swatch__name">50</div><div class="ds-swatch__value">#FEF2F2</div></div>
       <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#FEE2E2"></div><div class="ds-swatch__name">100</div><div class="ds-swatch__value">#FEE2E2</div></div>
@@ -173,7 +179,7 @@
 
   <!-- Amber -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Amber (Warning)</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Amber (Alerta)</span><span data-lang="en">Amber (Warning)</span></h2>
     <div class="ds-swatch-grid">
       <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#FFFBEB"></div><div class="ds-swatch__name">50</div><div class="ds-swatch__value">#FFFBEB</div></div>
       <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#FEF3C7"></div><div class="ds-swatch__name">100</div><div class="ds-swatch__value">#FEF3C7</div></div>
@@ -191,7 +197,7 @@
 
   <!-- Green -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Green (Success)</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Green (Sucesso)</span><span data-lang="en">Green (Success)</span></h2>
     <div class="ds-swatch-grid">
       <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#F0FDF4"></div><div class="ds-swatch__name">50</div><div class="ds-swatch__value">#F0FDF4</div></div>
       <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#DCFCE7"></div><div class="ds-swatch__name">100</div><div class="ds-swatch__value">#DCFCE7</div></div>
@@ -209,7 +215,7 @@
 
   <!-- Sky -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Sky (Info)</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Sky (Informacao)</span><span data-lang="en">Sky (Info)</span></h2>
     <div class="ds-swatch-grid">
       <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#F0F9FF"></div><div class="ds-swatch__name">50</div><div class="ds-swatch__value">#F0F9FF</div></div>
       <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#E0F2FE"></div><div class="ds-swatch__name">100</div><div class="ds-swatch__value">#E0F2FE</div></div>
@@ -227,7 +233,7 @@
 
   <!-- Cyan -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Cyan (Ocean theme)</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Cyan (tema Ocean)</span><span data-lang="en">Cyan (Ocean theme)</span></h2>
     <div class="ds-swatch-grid">
       <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#ECFEFF"></div><div class="ds-swatch__name">50</div><div class="ds-swatch__value">#ECFEFF</div></div>
       <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#CFFAFE"></div><div class="ds-swatch__name">100</div><div class="ds-swatch__value">#CFFAFE</div></div>
@@ -245,7 +251,7 @@
 
   <!-- Emerald -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Emerald (Forest theme)</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Emerald (tema Forest)</span><span data-lang="en">Emerald (Forest theme)</span></h2>
     <div class="ds-swatch-grid">
       <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#ECFDF5"></div><div class="ds-swatch__name">50</div><div class="ds-swatch__value">#ECFDF5</div></div>
       <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#D1FAE5"></div><div class="ds-swatch__name">100</div><div class="ds-swatch__value">#D1FAE5</div></div>
@@ -263,7 +269,7 @@
 
   <!-- Indigo -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Indigo (Ocean theme secondary)</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Indigo (secundaria do tema Ocean)</span><span data-lang="en">Indigo (Ocean theme secondary)</span></h2>
     <div class="ds-swatch-grid">
       <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#EEF2FF"></div><div class="ds-swatch__name">50</div><div class="ds-swatch__value">#EEF2FF</div></div>
       <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#E0E7FF"></div><div class="ds-swatch__name">100</div><div class="ds-swatch__value">#E0E7FF</div></div>
@@ -281,7 +287,7 @@
 
   <!-- Absolute & Overlays -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Absolute & Overlays</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Absolutos e Overlays</span><span data-lang="en">Absolute & Overlays</span></h2>
     <div class="ds-swatch-grid">
       <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#FFFFFF"></div><div class="ds-swatch__name">White</div><div class="ds-swatch__value">#FFFFFF</div></div>
       <div class="ds-swatch"><div class="ds-swatch__color" style="background-color:#000000"></div><div class="ds-swatch__name">Black</div><div class="ds-swatch__value">#000000</div></div>

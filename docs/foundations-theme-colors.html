@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +13,9 @@
     .ds-token-table code { font-size: var(--ds-font-size-xs); font-family: var(--ds-font-family-mono); }
     .ds-token-swatch { width: 32px; height: 32px; border-radius: var(--ds-radius-md); border: var(--ds-border-width-1) solid var(--ds-border-default); display: inline-block; vertical-align: middle; }
   </style>
+  <script>
+    (function(){var l=localStorage.getItem('ds-lang');if(l)document.documentElement.setAttribute('lang',l)})();
+  </script>
 </head>
 <body>
 
@@ -27,15 +30,18 @@
     </a>
   </div>
   <div class="ds-site-header__actions">
+    <select class="ds-theme-switcher__select" id="lang-switcher" aria-label="Language">
+      <option value="pt">PT</option>
+      <option value="en">EN</option>
+    </select>
     <div class="ds-theme-switcher">
-      <label class="ds-theme-switcher__label" for="theme-switcher">Theme</label>
       <select class="ds-theme-switcher__select" id="theme-switcher">
         <option value="default">Default (Blue)</option>
         <option value="ocean">Ocean (Cyan)</option>
         <option value="forest">Forest (Emerald)</option>
       </select>
     </div>
-    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode">Dark</button>
+    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode">Escuro</button>
   </div>
 </header>
 <div class="ds-sidebar-overlay" id="sidebar-overlay"></div>
@@ -102,14 +108,14 @@
 
 <main class="ds-main">
   <div class="ds-section">
-    <h1 class="ds-section__title">Theme Colors</h1>
-    <p class="ds-section__subtitle">Semantic color tokens that adapt to light/dark mode. These reference foundation primitives and provide consistent meaning across the UI. Toggle dark mode above to see tokens change.</p>
+    <h1 class="ds-section__title"><span data-lang="pt">Cores do Tema</span><span data-lang="en">Theme Colors</span></h1>
+    <p class="ds-section__subtitle"><span data-lang="pt">Tokens de cor semanticos que se adaptam ao modo light/dark. Referenciam primitivos foundation e fornecem significado consistente na interface. Alterne o modo escuro acima para ver os tokens mudarem.</span><span data-lang="en">Semantic color tokens that adapt to light/dark mode. These reference foundation primitives and provide consistent meaning across the UI. Toggle dark mode above to see tokens change.</span></p>
   </div>
 
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Background</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Fundo</span><span data-lang="en">Background</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th>Swatch</th><th>Token</th><th>Light</th><th>Dark</th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Amostra</span><span data-lang="en">Swatch</span></th><th>Token</th><th>Light</th><th>Dark</th></tr></thead>
       <tbody>
         <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-background-default)"></span></td><td><code>--ds-background-default</code></td><td><code>white</code></td><td><code>neutral-950</code></td></tr>
         <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-background-subtle)"></span></td><td><code>--ds-background-subtle</code></td><td><code>neutral-50</code></td><td><code>neutral-900</code></td></tr>
@@ -120,9 +126,9 @@
   </div>
 
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Surface</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Superficie</span><span data-lang="en">Surface</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th>Swatch</th><th>Token</th><th>Light</th><th>Dark</th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Amostra</span><span data-lang="en">Swatch</span></th><th>Token</th><th>Light</th><th>Dark</th></tr></thead>
       <tbody>
         <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-surface-default)"></span></td><td><code>--ds-surface-default</code></td><td><code>white</code></td><td><code>neutral-900</code></td></tr>
         <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-surface-raised)"></span></td><td><code>--ds-surface-raised</code></td><td><code>white</code></td><td><code>neutral-800</code></td></tr>
@@ -132,9 +138,9 @@
   </div>
 
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Brand Primary</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Marca Primaria</span><span data-lang="en">Brand Primary</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th>Swatch</th><th>Token</th><th>Light</th><th>Dark</th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Amostra</span><span data-lang="en">Swatch</span></th><th>Token</th><th>Light</th><th>Dark</th></tr></thead>
       <tbody>
         <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-color-primary-default)"></span></td><td><code>--ds-color-primary-default</code></td><td><code>blue-600</code></td><td><code>blue-400</code></td></tr>
         <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-color-primary-hover)"></span></td><td><code>--ds-color-primary-hover</code></td><td><code>blue-700</code></td><td><code>blue-300</code></td></tr>
@@ -148,9 +154,9 @@
   </div>
 
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Brand Secondary</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Marca Secundaria</span><span data-lang="en">Brand Secondary</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th>Swatch</th><th>Token</th><th>Light</th><th>Dark</th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Amostra</span><span data-lang="en">Swatch</span></th><th>Token</th><th>Light</th><th>Dark</th></tr></thead>
       <tbody>
         <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-color-secondary-default)"></span></td><td><code>--ds-color-secondary-default</code></td><td><code>purple-600</code></td><td><code>purple-400</code></td></tr>
         <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-color-secondary-hover)"></span></td><td><code>--ds-color-secondary-hover</code></td><td><code>purple-700</code></td><td><code>purple-300</code></td></tr>
@@ -164,9 +170,9 @@
   </div>
 
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Text / Foreground</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Texto / Foreground</span><span data-lang="en">Text / Foreground</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th>Swatch</th><th>Token</th><th>Light</th><th>Dark</th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Amostra</span><span data-lang="en">Swatch</span></th><th>Token</th><th>Light</th><th>Dark</th></tr></thead>
       <tbody>
         <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-text-default)"></span></td><td><code>--ds-text-default</code></td><td><code>neutral-900</code></td><td><code>neutral-50</code></td></tr>
         <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-text-secondary)"></span></td><td><code>--ds-text-secondary</code></td><td><code>neutral-600</code></td><td><code>neutral-400</code></td></tr>
@@ -179,9 +185,9 @@
   </div>
 
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Border</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Borda</span><span data-lang="en">Border</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th>Swatch</th><th>Token</th><th>Light</th><th>Dark</th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Amostra</span><span data-lang="en">Swatch</span></th><th>Token</th><th>Light</th><th>Dark</th></tr></thead>
       <tbody>
         <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-border-default)"></span></td><td><code>--ds-border-default</code></td><td><code>neutral-200</code></td><td><code>neutral-700</code></td></tr>
         <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-border-strong)"></span></td><td><code>--ds-border-strong</code></td><td><code>neutral-400</code></td><td><code>neutral-500</code></td></tr>
@@ -193,9 +199,9 @@
   </div>
 
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Feedback -- Success</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Feedback -- Sucesso</span><span data-lang="en">Feedback -- Success</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th>Swatch</th><th>Token</th><th>Light</th><th>Dark</th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Amostra</span><span data-lang="en">Swatch</span></th><th>Token</th><th>Light</th><th>Dark</th></tr></thead>
       <tbody>
         <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-success-default)"></span></td><td><code>--ds-feedback-success-default</code></td><td><code>green-600</code></td><td><code>green-500</code></td></tr>
         <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-success-subtle)"></span></td><td><code>--ds-feedback-success-subtle</code></td><td><code>green-100</code></td><td><code>green-900</code></td></tr>
@@ -206,9 +212,9 @@
   </div>
 
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Feedback -- Warning</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Feedback -- Alerta</span><span data-lang="en">Feedback -- Warning</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th>Swatch</th><th>Token</th><th>Light</th><th>Dark</th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Amostra</span><span data-lang="en">Swatch</span></th><th>Token</th><th>Light</th><th>Dark</th></tr></thead>
       <tbody>
         <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-warning-default)"></span></td><td><code>--ds-feedback-warning-default</code></td><td><code>amber-500</code></td><td><code>amber-400</code></td></tr>
         <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-warning-subtle)"></span></td><td><code>--ds-feedback-warning-subtle</code></td><td><code>amber-100</code></td><td><code>amber-900</code></td></tr>
@@ -219,9 +225,9 @@
   </div>
 
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Feedback -- Error</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Feedback -- Erro</span><span data-lang="en">Feedback -- Error</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th>Swatch</th><th>Token</th><th>Light</th><th>Dark</th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Amostra</span><span data-lang="en">Swatch</span></th><th>Token</th><th>Light</th><th>Dark</th></tr></thead>
       <tbody>
         <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-error-default)"></span></td><td><code>--ds-feedback-error-default</code></td><td><code>red-600</code></td><td><code>red-500</code></td></tr>
         <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-error-subtle)"></span></td><td><code>--ds-feedback-error-subtle</code></td><td><code>red-100</code></td><td><code>red-900</code></td></tr>
@@ -232,9 +238,9 @@
   </div>
 
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">Feedback -- Info</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Feedback -- Informacao</span><span data-lang="en">Feedback -- Info</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th>Swatch</th><th>Token</th><th>Light</th><th>Dark</th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Amostra</span><span data-lang="en">Swatch</span></th><th>Token</th><th>Light</th><th>Dark</th></tr></thead>
       <tbody>
         <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-info-default)"></span></td><td><code>--ds-feedback-info-default</code></td><td><code>sky-600</code></td><td><code>sky-400</code></td></tr>
         <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-info-subtle)"></span></td><td><code>--ds-feedback-info-subtle</code></td><td><code>sky-100</code></td><td><code>sky-900</code></td></tr>
@@ -245,9 +251,9 @@
   </div>
 
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title">State</h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Estado</span><span data-lang="en">State</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th>Swatch</th><th>Token</th><th>Light</th><th>Dark</th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Amostra</span><span data-lang="en">Swatch</span></th><th>Token</th><th>Light</th><th>Dark</th></tr></thead>
       <tbody>
         <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-state-hover)"></span></td><td><code>--ds-state-hover</code></td><td><code>rgba(0,0,0,0.05)</code></td><td><code>rgba(255,255,255,0.05)</code></td></tr>
         <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-state-pressed)"></span></td><td><code>--ds-state-pressed</code></td><td><code>rgba(0,0,0,0.1)</code></td><td><code>rgba(255,255,255,0.1)</code></td></tr>
