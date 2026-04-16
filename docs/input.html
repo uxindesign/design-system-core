@@ -177,10 +177,10 @@
 
     <div class="ds-anatomy">
       <div style="position:relative;display:inline-flex;align-items:center;">
-        <!-- Visual input -->
-        <div style="display:inline-flex;align-items:center;gap:8px;padding:10px 12px;background-color:var(--ds-surface-default);border:1px solid var(--ds-border-default);border-radius:var(--ds-radius-component);font-size:var(--ds-font-size-sm);color:var(--ds-text-default);min-width:220px;position:relative;">
-          <span class="material-symbols-outlined" style="font-size:16px;color:var(--ds-text-secondary);">search</span>
-          <span style="color:var(--ds-text-tertiary);">Search...</span>
+        <!-- Real component -->
+        <div class="ds-input" style="min-width:220px;position:relative;">
+          <span class="ds-input__icon material-symbols-outlined">search</span>
+          <input type="text" class="ds-input__field" placeholder="Search..." readonly tabindex="-1">
         </div>
         <!-- Markers -->
         <span class="ds-anatomy__marker" style="top:-24px;left:50%;transform:translateX(-50%);">1</span>
