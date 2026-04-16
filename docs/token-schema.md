@@ -10,7 +10,7 @@
 |---------|--------|
 | Formato canônico | JSON (DTCG) em `tokens/` |
 | CSS | Gerado pelo Style Dictionary (build-tokens.mjs) em `css/tokens/generated/` |
-| Camadas | Foundation (~212 tokens) → Semantic (~137 tokens × 2 modos) → Component (~130 tokens em 11 arquivos) |
+| Camadas | Foundation (227 tokens) → Semantic (133 tokens × 2 modos) → Component (130 tokens em 11 arquivos) |
 | Foundation | 10 arquivos JSON: colors (inclui 6 colored overlays ADR-007), brand, typography (inclui 3 control line-heights ADR-006), spacing (inclui spacing.11=44px), radius, shadows, opacity, motion, stroke, z-index |
 | Semantic | light.json + dark.json, mesmas chaves, valores diferentes por modo. Inclui 19 control tokens (ADR-006) + 3 toned tokens (ADR-007) |
 | Component | 11 arquivos: button (inclui toned color tokens), input, textarea, select, checkbox, radio, toggle, badge, alert, card, modal |
