@@ -54,6 +54,29 @@ Na prática:
 
 A validação cruzada não é opcional. Tokens analisados isoladamente geram decisões que precisam ser refeitas quando outros componentes entram em escopo.
 
+### Quando um token vive em Semantic vs Component
+
+Critério operacional para decidir a camada de um novo token: a pergunta não é
+"é sobre componentes?" — é "quantos componentes consomem essa intenção?".
+
+- **Semantic** quando dois ou mais componentes consomem a mesma intenção. Mesmo
+  que a categoria seja restrita a um tipo (ex: `semantic.size.control.*` se
+  aplica só a controles interativos), o token mora em semantic porque expressa
+  intenção compartilhada. Exemplos: `semantic.border.control.*` (ADR-009),
+  `semantic.space.control.*` (ADR-006), `semantic.color.primary.toned.*` (ADR-007).
+- **Component** quando apenas um componente consome o token, ou quando há
+  override genuíno do padrão semântico. Exemplos: dimensões específicas do
+  Toggle, gap interno do Tabs.
+
+A motivação é operacional. Intenção compartilhada vivendo em component obriga
+edição em N arquivos sem garantia de consistência. Vivendo em semantic, a fonte
+é única e a propagação é automática via referência.
+
+A regra "categoria restrita não desclassifica como semantic" é deliberada. Sem
+ela, surge tentação de mover qualquer token específico de uma classe de
+componente para component, o que repõe o problema que semantic existe para
+resolver.
+
 ---
 
 ## 4. As três camadas de token têm regras de referência
@@ -143,8 +166,11 @@ Se uma decisão arquitetural não está registrada como ADR, ela não foi tomada
 | 003 | Git = verdade pra tokens/código, Figma = verdade pra design visual | Aceita |
 | 004 | WCAG 2.2 AA como piso de acessibilidade | Aceita |
 | 005 | Brand como foundation, `-default` explícito, focus ring outline | Aceita |
-| 006 | Semantic control tokens (dimensões compartilhadas entre controles) | Proposta |
-| 007 | Toned color system (overlays coloridos) | Proposta |
+| 006 | Semantic control tokens (dimensões compartilhadas entre controles) | Aceita |
+| 007 | Toned color system (overlays coloridos) | Aceita |
+| 008 | Recalibração das paletas foundation `green` e `amber` | Aceita |
+| 009 | Separação de `border.default` (decorativa) e `border.control` (funcional) | Aceita |
+| 010 | Remoção de `foundation.color.white` e `foundation.color.black` puros | Aceita |
 
 ---
 

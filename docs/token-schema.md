@@ -21,7 +21,7 @@
 ```
 tokens/
 ├── foundation/
-│   ├── colors.json         # 10 paletas × escala 50-950 + white, black, overlays + colored overlays ADR-007 (~130 tokens)
+│   ├── colors.json         # 10 paletas × escala 50-950 + overlays + colored overlays ADR-007 (sem white/black puros — ADR-010, ~120 tokens)
 │   ├── brand.json          # primary + secondary — ponte paleta→intenção (2 tokens)
 │   ├── typography.json     # Inter (sans/display) + DM Mono, sizes, weights, line-heights + control line-heights ADR-006 (~35 tokens)
 │   ├── spacing.json        # Escala com half-steps: 0, 0-5, 1, 1-5 ... 24 + spacing.11=44px (21 tokens)
@@ -52,9 +52,9 @@ tokens/
 
 Valores brutos sem opinião semântica. Únicos tokens com valores absolutos (hex, rem, px).
 
-### Colors — 10 paletas + white/black + overlays
+### Colors — 10 paletas + overlays
 
-Cada paleta: escala de 50 a 950 (11 steps). White e black como tokens separados (não parte da escala neutral). Overlays em rgba com opacidade de 5 a 80.
+Cada paleta: escala de 50 a 950 (11 steps). Extremos da escala neutral: `neutral.50` (#F8FAFC) como off-white e `neutral.950` (#070C17) como near-black. `white` e `black` puros foram removidos (ADR-010 — regra inviolável 11). Overlays em rgba com opacidade de 5 a 80. Paletas `green` e `amber` foram recalibradas para WCAG compliance no step 600 (ADR-008).
 
 ```json
 {
@@ -75,8 +75,6 @@ Cada paleta: escala de 50 a 950 (11 steps). White e black como tokens separados 
       "cyan": { "..." },
       "emerald": { "..." },
       "indigo": { "..." },
-      "white": { "$type": "color", "$value": "#FFFFFF" },
-      "black": { "$type": "color", "$value": "#000000" },
       "overlay": {
         "black": {
           "5":  { "$type": "color", "$value": "rgba(0, 0, 0, 0.05)" },
@@ -245,7 +243,7 @@ semantic.text.*            → text colors (default, secondary, tertiary, disabl
 semantic.color.primary.*   → brand primary states (default→{foundation.brand.primary}, hover, active, subtle, muted, foreground, text, toned.{default,hover,active} ADR-007)
 semantic.color.secondary.* → brand secondary/accent states (mesma estrutura, sem toned por ora)
 semantic.feedback.*        → feedback colors (success/warning/error/info, cada com: default, hover, active, subtle, background, foreground, border, text)
-semantic.border.*          → border colors (default, strong, subtle, focus, brand, error) + border.width (subtle, default, strong, focus)
+semantic.border.*          → border colors (default, strong, subtle, focus, brand, error, focus-error) + border.control.{default,hover,disabled} (ADR-009) + border.width (subtle, default, strong, focus)
 semantic.focus.ring.*      → focus ring (width, offset, color — outline approach)
 semantic.overlay.*         → overlay opacity levels (subtle, default, medium, strong)
 semantic.state.*           → interactive states (hover, pressed, focus, disabled.background, disabled.foreground)
@@ -269,7 +267,7 @@ semantic.typography.control.* → font-size e line-height para texto single-line
         "active":     { "$type": "color", "$value": "{foundation.color.blue.800}" },
         "subtle":     { "$type": "color", "$value": "{foundation.color.blue.100}" },
         "muted":      { "$type": "color", "$value": "{foundation.color.blue.50}" },
-        "foreground": { "$type": "color", "$value": "{foundation.color.white}" },
+        "foreground": { "$type": "color", "$value": "{foundation.color.neutral.50}" },
         "text":       { "$type": "color", "$value": "{foundation.color.blue.700}" },
         "toned": {
           "default": { "$type": "color", "$value": "{foundation.color.overlay.blue-600.12}", "$description": "Translucent primary bg. 12% opacity. ADR-007." },
@@ -366,12 +364,12 @@ Mesmas chaves, valores diferentes. Exemplos de inversão:
 
 | Token | Light | Dark |
 |-------|-------|------|
-| `background.default` | `{foundation.color.white}` | `{foundation.color.neutral.950}` |
+| `background.default` | `{foundation.color.neutral.50}` | `{foundation.color.neutral.950}` |
 | `text.default` | `{foundation.color.neutral.900}` | `{foundation.color.neutral.50}` |
 | `color.primary.default` | `{foundation.brand.primary}` | `{foundation.brand.primary}` |
 | `color.primary.hover` | `{foundation.color.blue.700}` | `{foundation.color.blue.300}` |
 | `state.hover` | `{foundation.color.overlay.black.5}` | `{foundation.color.overlay.white.5}` |
-| `text.on-brand` | `{foundation.color.white}` | `{foundation.color.neutral.900}` |
+| `text.on-brand` | `{foundation.color.neutral.50}` | `{foundation.color.neutral.900}` |
 | `color.primary.toned.default` | `{foundation.color.overlay.blue-600.12}` | `{foundation.color.overlay.blue-400.15}` |
 | `color.primary.toned.hover` | `{foundation.color.overlay.blue-600.20}` | `{foundation.color.overlay.blue-400.25}` |
 
@@ -380,6 +378,12 @@ Tokens mode-invariant (mesmos valores em light e dark): todos os `space.*`, `rad
 ## Component
 
 Tokens específicos por componente. Referenciam semantic, nunca foundation (exceção documentada na regra 1).
+
+> Component tokens existem para especificidades genuínas: dimensões exclusivas
+> de um componente, padrões de estado próprios, ou overrides do padrão semântico.
+> Quando uma intenção é compartilhada por dois ou mais componentes, mesmo dentro
+> de uma categoria restrita (ex: "controles interativos"), o token correto é
+> semantic. Ver system-principles.md seção 3.
 
 ```json
 {
@@ -448,6 +452,7 @@ Tokens específicos por componente. Referenciam semantic, nunca foundation (exce
 8. **Novos tokens que criam nova categoria ou quebram hierarquia exigem ADR**
 9. **light.json e dark.json devem ter exatamente o mesmo conjunto de chaves**
 10. **Todo `.default` gera `-default` no CSS** — sem exceção, sem transforms de colapso
+11. **Cores puras (#FFFFFF e #000000) não são tokens foundation** — use `neutral.50` como off-white e `neutral.950` como near-black. Casos excepcionais devem usar valor inline com `$description` justificando. (ADR-010)
 
 ## Comunicação com Figma
 
