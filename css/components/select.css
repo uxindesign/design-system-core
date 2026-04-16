@@ -54,6 +54,7 @@
   font-family: inherit;
   cursor: pointer;
   min-width: 0;
+  padding-left: var(--ds-spacing-1);
   padding-right: calc(var(--ds-select-arrow-size) + var(--ds-select-arrow-offset-md) + var(--ds-select-padding-x-md));
 }
 
@@ -94,6 +95,21 @@
 .ds-select__icon {
   flex-shrink: 0;
   color: var(--ds-text-tertiary);
+  font-size: var(--ds-size-control-icon-md);
+  width: var(--ds-size-control-icon-md);
+  height: var(--ds-size-control-icon-md);
+}
+
+.ds-select--sm .ds-select__icon {
+  font-size: var(--ds-size-control-icon-sm);
+  width: var(--ds-size-control-icon-sm);
+  height: var(--ds-size-control-icon-sm);
+}
+
+.ds-select--lg .ds-select__icon {
+  font-size: var(--ds-size-control-icon-lg);
+  width: var(--ds-size-control-icon-lg);
+  height: var(--ds-size-control-icon-lg);
 }
 
 /* States

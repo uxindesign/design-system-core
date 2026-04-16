@@ -51,6 +51,8 @@
   font-size: inherit;
   font-family: inherit;
   min-width: 0;
+  padding-left: var(--ds-spacing-1);
+  padding-right: var(--ds-spacing-1);
 }
 
 .ds-input__field::placeholder {

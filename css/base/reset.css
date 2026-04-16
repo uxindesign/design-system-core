@@ -1,6 +1,14 @@
 /* Google Fonts — Inter + DM Mono + Material Symbols */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap');
 
+/* Material Symbols — compensação de line-height (equivale ao y:-5 do Figma) e defaults da fonte variável */
+.material-symbols-outlined {
+  display: inline-block;
+  line-height: 1;
+  user-select: none;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
 *, *::before, *::after { box-sizing: border-box; }
 * { margin: 0; padding: 0; }
 html {
