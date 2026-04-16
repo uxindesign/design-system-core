@@ -98,6 +98,7 @@
   --ds-state-pressed: var(--ds-overlay-black-10);
   --ds-state-disabled-background: var(--ds-color-neutral-100);
   --ds-state-disabled-foreground: var(--ds-color-neutral-400);
+  --ds-space-inset-2xs: var(--ds-spacing-0-5); /** 2px. Compact inset for small components like Badge. */
   --ds-space-inset-xs: var(--ds-spacing-1);
   --ds-space-inset-sm: var(--ds-spacing-2);
   --ds-space-inset-md: var(--ds-spacing-3);

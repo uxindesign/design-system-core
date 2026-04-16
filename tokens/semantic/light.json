@@ -434,6 +434,11 @@
     },
     "space": {
       "inset": {
+        "2xs": {
+          "$type": "dimension",
+          "$value": "{foundation.spacing.0-5}",
+          "$description": "2px. Compact inset for small components like Badge."
+        },
         "xs": {
           "$type": "dimension",
           "$value": "{foundation.spacing.1}"
