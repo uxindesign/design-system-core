@@ -5,12 +5,14 @@
 /* ---------------------------------------------------------
    Internationalization (i18n)
    --------------------------------------------------------- */
-/* Default: show PT, hide EN */
-[data-lang="en"] { display: none; }
+/* Default: show PT, hide EN.
+   Usa body como âncora para garantir especificidade superior a qualquer
+   regra de display herdada (user agent, extensões, estilos de componente). */
+body [data-lang="en"] { display: none; }
 
 /* When EN is active: show EN, hide PT */
-html[lang="en"] [data-lang="en"] { display: inline; }
-html[lang="en"] [data-lang="pt"] { display: none; }
+html[lang="en"] body [data-lang="en"] { display: inline; }
+html[lang="en"] body [data-lang="pt"] { display: none; }
 
 
 /* ---------------------------------------------------------
