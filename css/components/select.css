@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   gap: var(--ds-select-gap);
-  border: var(--ds-select-border-width) solid var(--ds-border-default);
+  border: var(--ds-select-border-width) solid var(--ds-border-control-default);
   border-radius: var(--ds-select-border-radius);
   background: var(--ds-surface-default);
   transition: border-color var(--ds-duration-fast) var(--ds-ease-default),
@@ -101,7 +101,7 @@
 
 /* Hover */
 .ds-select:hover:not(.ds-select--disabled):not(:focus-within) {
-  border-color: var(--ds-border-strong);
+  border-color: var(--ds-border-control-hover);
 }
 
 /* Focused */
@@ -126,7 +126,7 @@
 .ds-select--disabled,
 .ds-select:has(.ds-select__field:disabled) {
   background: var(--ds-state-disabled-background);
-  border-color: var(--ds-border-subtle);
+  border-color: var(--ds-border-control-disabled);
   color: var(--ds-state-disabled-foreground);
   pointer-events: none;
 }

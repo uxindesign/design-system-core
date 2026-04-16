@@ -20,26 +20,26 @@
   --ds-control-line-height-sm: 1rem; /** 16px. Matches icon-sm. height = padY*2 + lineHeight = 8+16+8 = 32. */
   --ds-control-line-height-md: 1.25rem; /** 20px. Matches icon-md. height = 10+20+10 = 40. */
   --ds-control-line-height-lg: 1.5rem; /** 24px. Matches icon-lg. height = 12+24+12 = 48. */
-  --ds-background-default: var(--ds-color-white); /** Page background */
+  --ds-background-default: var(--ds-color-neutral-50); /** Page background */
   --ds-background-subtle: var(--ds-color-neutral-50); /** Subtle alternate background */
   --ds-background-muted: var(--ds-color-neutral-100);
   --ds-background-inverse: var(--ds-color-neutral-900);
   --ds-background-overlay: var(--ds-overlay-black-40); /** Modal/dialog overlay backdrop */
-  --ds-surface-default: var(--ds-color-white); /** Card and panel surfaces */
-  --ds-surface-raised: var(--ds-color-white); /** Elevated surface (sticky headers, raised cards) */
-  --ds-surface-overlay: var(--ds-color-white);
-  --ds-surface-elevated: var(--ds-color-white);
+  --ds-surface-default: var(--ds-color-neutral-50); /** Card and panel surfaces */
+  --ds-surface-raised: var(--ds-color-neutral-50); /** Elevated surface (sticky headers, raised cards) */
+  --ds-surface-overlay: var(--ds-color-neutral-50);
+  --ds-surface-elevated: var(--ds-color-neutral-50);
   --ds-text-default: var(--ds-color-neutral-900); /** Primary body text */
   --ds-text-secondary: var(--ds-color-neutral-600); /** Secondary/supporting text */
   --ds-text-tertiary: var(--ds-color-neutral-500);
   --ds-text-disabled: var(--ds-color-neutral-400);
-  --ds-text-inverse: var(--ds-color-white);
-  --ds-text-on-brand: var(--ds-color-white); /** Text on brand-colored backgrounds */
+  --ds-text-inverse: var(--ds-color-neutral-50);
+  --ds-text-on-brand: var(--ds-color-neutral-50); /** Text on brand-colored backgrounds */
   --ds-color-primary-hover: var(--ds-color-blue-700);
   --ds-color-primary-active: var(--ds-color-blue-800);
   --ds-color-primary-subtle: var(--ds-color-blue-100);
   --ds-color-primary-muted: var(--ds-color-blue-50);
-  --ds-color-primary-foreground: var(--ds-color-white);
+  --ds-color-primary-foreground: var(--ds-color-neutral-50);
   --ds-color-primary-text: var(--ds-color-blue-700);
   --ds-color-primary-toned-default: var(--ds-overlay-blue-600-12); /** Translucent primary bg for toned variants. 12% opacity. */
   --ds-color-primary-toned-hover: var(--ds-overlay-blue-600-20); /** Toned hover. 20% opacity. */
@@ -48,13 +48,13 @@
   --ds-color-secondary-active: var(--ds-color-purple-800);
   --ds-color-secondary-subtle: var(--ds-color-purple-100);
   --ds-color-secondary-muted: var(--ds-color-purple-50);
-  --ds-color-secondary-foreground: var(--ds-color-white);
+  --ds-color-secondary-foreground: var(--ds-color-neutral-50);
   --ds-color-secondary-text: var(--ds-color-purple-700);
   --ds-feedback-success-hover: var(--ds-color-green-700);
   --ds-feedback-success-active: var(--ds-color-green-800);
   --ds-feedback-success-subtle: var(--ds-color-green-100);
   --ds-feedback-success-background: var(--ds-color-green-50);
-  --ds-feedback-success-foreground: var(--ds-color-white);
+  --ds-feedback-success-foreground: var(--ds-color-neutral-50);
   --ds-feedback-success-border: var(--ds-color-green-600);
   --ds-feedback-success-text: var(--ds-color-green-700);
   --ds-feedback-success-default: var(--ds-color-green-600);
@@ -62,14 +62,14 @@
   --ds-feedback-warning-subtle: var(--ds-color-amber-100);
   --ds-feedback-warning-background: var(--ds-color-amber-50);
   --ds-feedback-warning-foreground: var(--ds-color-neutral-900);
-  --ds-feedback-warning-border: var(--ds-color-amber-500);
+  --ds-feedback-warning-border: var(--ds-color-amber-600); /** Upgraded from amber.500 to amber.600 (ADR-008) for consistency with error.border/info.border at step 600. Passes 3:1 vs amber.50. */
   --ds-feedback-warning-text: var(--ds-color-amber-700);
   --ds-feedback-warning-default: var(--ds-color-amber-500);
   --ds-feedback-error-hover: var(--ds-color-red-700);
   --ds-feedback-error-active: var(--ds-color-red-800);
   --ds-feedback-error-subtle: var(--ds-color-red-100);
   --ds-feedback-error-background: var(--ds-color-red-50);
-  --ds-feedback-error-foreground: var(--ds-color-white);
+  --ds-feedback-error-foreground: var(--ds-color-neutral-50);
   --ds-feedback-error-border: var(--ds-color-red-600);
   --ds-feedback-error-text: var(--ds-color-red-700);
   --ds-feedback-error-default: var(--ds-color-red-600);
@@ -80,7 +80,10 @@
   --ds-feedback-info-border: var(--ds-color-sky-600);
   --ds-feedback-info-text: var(--ds-color-sky-700);
   --ds-feedback-info-default: var(--ds-color-sky-600);
-  --ds-border-default: var(--ds-color-neutral-200);
+  --ds-border-default: var(--ds-color-neutral-300);
+  --ds-border-control-default: var(--ds-color-neutral-500); /** Border color for interactive controls (Input, Select, Textarea, Checkbox, Radio). Meets WCAG 1.4.11 (≥3:1 against control background). */
+  --ds-border-control-hover: var(--ds-color-neutral-600); /** Border on hover for interactive controls. */
+  --ds-border-control-disabled: var(--ds-color-neutral-300); /** Border for disabled controls. Exempt from contrast requirements per WCAG 1.4.3. */
   --ds-border-strong: var(--ds-color-neutral-400);
   --ds-border-subtle: var(--ds-color-neutral-100);
   --ds-border-width-subtle: var(--ds-border-width-1);

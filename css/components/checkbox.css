@@ -26,9 +26,9 @@
   -webkit-appearance: none;
   width: var(--ds-checkbox-control-size-md);
   height: var(--ds-checkbox-control-size-md);
-  border: var(--ds-checkbox-border-width) solid var(--ds-border-strong);
+  border: var(--ds-checkbox-border-width) solid var(--ds-border-control-default);
   border-radius: var(--ds-checkbox-border-radius);
-  background-color: var(--ds-color-white);
+  background-color: var(--ds-surface-default);
   cursor: pointer;
   position: relative;
   flex-shrink: 0;
@@ -44,7 +44,7 @@
   left: 6px;
   width: 5px;
   height: 10px;
-  border: solid var(--ds-color-white);
+  border: solid var(--ds-color-primary-foreground);
   border-width: 0 2px 2px 0;
   transform: rotate(45deg) scale(0);
   transition: transform var(--ds-duration-fast) var(--ds-ease-default);
@@ -77,7 +77,7 @@
   width: 10px;
   height: 2px;
   border: none;
-  background-color: var(--ds-color-white);
+  background-color: var(--ds-color-primary-foreground);
   transform: translate(-50%, -50%) scale(1);
   border-radius: 1px;
 }
@@ -91,7 +91,7 @@
 /* Disabled */
 .ds-checkbox:disabled {
   background-color: var(--ds-state-disabled-background);
-  border-color: var(--ds-border-default);
+  border-color: var(--ds-border-control-disabled);
   cursor: not-allowed;
 }
 

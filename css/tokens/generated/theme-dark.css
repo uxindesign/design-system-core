@@ -22,7 +22,7 @@
   --ds-background-default: var(--ds-color-neutral-950); /** Page background */
   --ds-background-subtle: var(--ds-color-neutral-900); /** Subtle alternate background */
   --ds-background-muted: var(--ds-color-neutral-800);
-  --ds-background-inverse: var(--ds-color-white);
+  --ds-background-inverse: var(--ds-color-neutral-50);
   --ds-background-overlay: var(--ds-overlay-black-60); /** Modal/dialog overlay backdrop */
   --ds-surface-default: var(--ds-color-neutral-900); /** Card and panel surfaces */
   --ds-surface-raised: var(--ds-color-neutral-800); /** Elevated surface (sticky headers, raised cards) */
@@ -80,6 +80,9 @@
   --ds-feedback-info-text: var(--ds-color-sky-400);
   --ds-feedback-info-default: var(--ds-color-sky-400);
   --ds-border-default: var(--ds-color-neutral-700);
+  --ds-border-control-default: var(--ds-color-neutral-500); /** Border color for interactive controls. Meets WCAG 1.4.11 (≥3:1 against dark surface). */
+  --ds-border-control-hover: var(--ds-color-neutral-400); /** Border on hover for interactive controls in dark mode. */
+  --ds-border-control-disabled: var(--ds-color-neutral-700); /** Border for disabled controls in dark mode. Exempt from contrast requirements per WCAG 1.4.3. */
   --ds-border-strong: var(--ds-color-neutral-500);
   --ds-border-subtle: var(--ds-color-neutral-800);
   --ds-border-width-subtle: var(--ds-border-width-1);

@@ -120,12 +120,12 @@
 .ds-btn--outline {
   background-color: transparent;
   color: var(--ds-text-default);
-  border-color: var(--ds-border-default);
+  border-color: var(--ds-border-control-default);
 }
 
 .ds-btn--outline:hover {
   background-color: var(--ds-background-muted);
-  border-color: var(--ds-border-strong);
+  border-color: var(--ds-border-control-hover);
 }
 
 .ds-btn--outline:active {

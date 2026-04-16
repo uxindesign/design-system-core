@@ -28,7 +28,7 @@
   width: var(--ds-toggle-track-width-md);
   height: var(--ds-toggle-track-height-md);
   background-color: var(--ds-surface-default);
-  border: var(--ds-border-width-1) solid var(--ds-border-strong);
+  border: var(--ds-border-width-1) solid var(--ds-border-control-default);
   border-radius: var(--ds-radius-full);
   cursor: pointer;
   flex-shrink: 0;
@@ -75,7 +75,7 @@
 /* Disabled */
 .ds-toggle:disabled {
   background-color: var(--ds-state-disabled-background);
-  border-color: var(--ds-border-default);
+  border-color: var(--ds-border-control-disabled);
   cursor: not-allowed;
 }
 

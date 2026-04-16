@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   gap: var(--ds-input-gap);
-  border: var(--ds-input-border-width) solid var(--ds-border-default);
+  border: var(--ds-input-border-width) solid var(--ds-border-control-default);
   border-radius: var(--ds-input-border-radius);
   background: var(--ds-surface-default);
   transition: border-color var(--ds-duration-fast) var(--ds-ease-default),
@@ -85,7 +85,7 @@
 
 /* Hover */
 .ds-input:hover:not(.ds-input--disabled):not(:focus-within) {
-  border-color: var(--ds-border-strong);
+  border-color: var(--ds-border-control-hover);
 }
 
 /* Focused */
@@ -110,7 +110,7 @@
 .ds-input--disabled,
 .ds-input:has(.ds-input__field:disabled) {
   background: var(--ds-state-disabled-background);
-  border-color: var(--ds-border-subtle);
+  border-color: var(--ds-border-control-disabled);
   color: var(--ds-state-disabled-foreground);
   pointer-events: none;
 }

@@ -44,9 +44,9 @@
   -webkit-appearance: none;
   width: var(--ds-radio-control-size-md);
   height: var(--ds-radio-control-size-md);
-  border: var(--ds-radio-border-width) solid var(--ds-border-strong);
+  border: var(--ds-radio-border-width) solid var(--ds-border-control-default);
   border-radius: var(--ds-radius-full);
-  background-color: var(--ds-color-white);
+  background-color: var(--ds-surface-default);
   cursor: pointer;
   position: relative;
   flex-shrink: 0;
@@ -62,7 +62,7 @@
   width: var(--ds-radio-dot-size-md);
   height: var(--ds-radio-dot-size-md);
   border-radius: var(--ds-radius-full);
-  background-color: var(--ds-color-white);
+  background-color: var(--ds-color-primary-foreground);
   transform: translate(-50%, -50%) scale(0);
   transition: transform var(--ds-duration-fast) var(--ds-ease-default);
 }
@@ -91,7 +91,7 @@
 /* Disabled */
 .ds-radio:disabled {
   background-color: var(--ds-state-disabled-background);
-  border-color: var(--ds-border-default);
+  border-color: var(--ds-border-control-disabled);
   cursor: not-allowed;
 }
 

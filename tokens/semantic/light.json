@@ -3,7 +3,7 @@
     "background": {
       "default": {
         "$type": "color",
-        "$value": "{foundation.color.white}",
+        "$value": "{foundation.color.neutral.50}",
         "$description": "Page background"
       },
       "subtle": {
@@ -28,21 +28,21 @@
     "surface": {
       "default": {
         "$type": "color",
-        "$value": "{foundation.color.white}",
+        "$value": "{foundation.color.neutral.50}",
         "$description": "Card and panel surfaces"
       },
       "raised": {
         "$type": "color",
-        "$value": "{foundation.color.white}",
+        "$value": "{foundation.color.neutral.50}",
         "$description": "Elevated surface (sticky headers, raised cards)"
       },
       "overlay": {
         "$type": "color",
-        "$value": "{foundation.color.white}"
+        "$value": "{foundation.color.neutral.50}"
       },
       "elevated": {
         "$type": "color",
-        "$value": "{foundation.color.white}"
+        "$value": "{foundation.color.neutral.50}"
       }
     },
     "text": {
@@ -66,7 +66,7 @@
       },
       "inverse": {
         "$type": "color",
-        "$value": "{foundation.color.white}"
+        "$value": "{foundation.color.neutral.50}"
       },
       "link": {
         "default": {
@@ -82,7 +82,7 @@
       },
       "on-brand": {
         "$type": "color",
-        "$value": "{foundation.color.white}",
+        "$value": "{foundation.color.neutral.50}",
         "$description": "Text on brand-colored backgrounds"
       }
     },
@@ -106,7 +106,7 @@
         },
         "foreground": {
           "$type": "color",
-          "$value": "{foundation.color.white}"
+          "$value": "{foundation.color.neutral.50}"
         },
         "text": {
           "$type": "color",
@@ -162,7 +162,7 @@
         },
         "foreground": {
           "$type": "color",
-          "$value": "{foundation.color.white}"
+          "$value": "{foundation.color.neutral.50}"
         },
         "text": {
           "$type": "color",
@@ -194,7 +194,7 @@
         },
         "foreground": {
           "$type": "color",
-          "$value": "{foundation.color.white}"
+          "$value": "{foundation.color.neutral.50}"
         },
         "border": {
           "$type": "color",
@@ -237,7 +237,8 @@
         },
         "border": {
           "$type": "color",
-          "$value": "{foundation.color.amber.500}"
+          "$value": "{foundation.color.amber.600}",
+          "$description": "Upgraded from amber.500 to amber.600 (ADR-008) for consistency with error.border/info.border at step 600. Passes 3:1 vs amber.50."
         },
         "text": {
           "$type": "color",
@@ -267,7 +268,7 @@
         },
         "foreground": {
           "$type": "color",
-          "$value": "{foundation.color.white}"
+          "$value": "{foundation.color.neutral.50}"
         },
         "border": {
           "$type": "color",
@@ -325,7 +326,24 @@
     "border": {
       "default": {
         "$type": "color",
-        "$value": "{foundation.color.neutral.200}"
+        "$value": "{foundation.color.neutral.300}"
+      },
+      "control": {
+        "default": {
+          "$type": "color",
+          "$value": "{foundation.color.neutral.500}",
+          "$description": "Border color for interactive controls (Input, Select, Textarea, Checkbox, Radio). Meets WCAG 1.4.11 (≥3:1 against control background)."
+        },
+        "hover": {
+          "$type": "color",
+          "$value": "{foundation.color.neutral.600}",
+          "$description": "Border on hover for interactive controls."
+        },
+        "disabled": {
+          "$type": "color",
+          "$value": "{foundation.color.neutral.300}",
+          "$description": "Border for disabled controls. Exempt from contrast requirements per WCAG 1.4.3."
+        }
       },
       "strong": {
         "$type": "color",

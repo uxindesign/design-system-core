@@ -7,7 +7,7 @@
 
 .ds-textarea {
   display: flex;
-  border: var(--ds-textarea-border-width) solid var(--ds-border-default);
+  border: var(--ds-textarea-border-width) solid var(--ds-border-control-default);
   border-radius: var(--ds-textarea-border-radius);
   background: var(--ds-surface-default);
   transition: border-color var(--ds-duration-fast) var(--ds-ease-default),
@@ -70,7 +70,7 @@
 
 /* Hover */
 .ds-textarea:hover:not(.ds-textarea--disabled):not(:focus-within) {
-  border-color: var(--ds-border-strong);
+  border-color: var(--ds-border-control-hover);
 }
 
 /* Focused */
@@ -95,7 +95,7 @@
 .ds-textarea--disabled,
 .ds-textarea:has(.ds-textarea__field:disabled) {
   background: var(--ds-state-disabled-background);
-  border-color: var(--ds-border-subtle);
+  border-color: var(--ds-border-control-disabled);
   color: var(--ds-state-disabled-foreground);
   pointer-events: none;
 }
