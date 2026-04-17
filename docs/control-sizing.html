@@ -115,24 +115,24 @@
 <main class="ds-main">
   <div class="ds-section">
     <h1 class="ds-section__title"><span data-lang="pt">Dimensionamento de controles</span><span data-lang="en">Control Sizing</span></h1>
-    <p class="ds-section__subtitle"><span data-lang="pt">Button, Input, Select e Textarea compartilham um sistema dimensional unificado. Mesma altura, mesmo padding, mesmo tamanho de icone em cada nivel -- para que os controles se alinhem perfeitamente lado a lado. Definido no ADR-006.</span><span data-lang="en">Button, Input, Select, and Textarea share a unified dimensional system. Same height, same padding, same icon size at each tier -- so controls align perfectly when placed side by side. Defined in ADR-006.</span></p>
+    <p class="ds-section__subtitle"><span data-lang="pt">Button, Input, Select e Textarea compartilham um sistema dimensional unificado. Mesma altura, mesmo padding, mesmo tamanho de ícone em cada nível -- para que os controles se alinhem perfeitamente lado a lado. Definido no ADR-006.</span><span data-lang="en">Button, Input, Select, and Textarea share a unified dimensional system. Same height, same padding, same icon size at each tier -- so controls align perfectly when placed side by side. Defined in ADR-006.</span></p>
   </div>
 
   <!-- Formula -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title"><span data-lang="pt">A formula</span><span data-lang="en">The formula</span></h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">A fórmula</span><span data-lang="en">The formula</span></h2>
     <div class="ds-formula">height = padding-y &times; 2 + line-height</div>
     <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
-      <span data-lang="pt">Todo controle interativo segue esta formula. O line-height e igual ao tamanho do icone em cada nivel, garantindo que texto e icones se alinhem verticalmente.</span><span data-lang="en">Every interactive control follows this formula. The line-height equals the icon size at each tier, ensuring text and icons align vertically.</span>
+      <span data-lang="pt">Todo controle interativo segue esta fórmula. O line-height é igual ao tamanho do ícone em cada nível, garantindo que texto e ícones se alinhem verticalmente.</span><span data-lang="en">Every interactive control follows this formula. The line-height equals the icon size at each tier, ensuring text and icons align vertically.</span>
     </p>
   </div>
 
   <!-- Size tiers -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title"><span data-lang="pt">Niveis de tamanho</span><span data-lang="en">Size tiers</span></h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Níveis de tamanho</span><span data-lang="en">Size tiers</span></h2>
     <table class="ds-token-table">
       <thead>
-        <tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Small</th><th>Medium</th><th>Large</th><th><span data-lang="pt">Variavel CSS</span><span data-lang="en">CSS variable</span></th></tr>
+        <tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Small</th><th>Medium</th><th>Large</th><th><span data-lang="pt">Variável CSS</span><span data-lang="en">CSS variable</span></th></tr>
       </thead>
       <tbody>
         <tr><td><strong><span data-lang="pt">Altura</span><span data-lang="en">Height</span></strong></td><td>32px</td><td>40px</td><td>48px</td><td><code>--ds-size-control-{sm/md/lg}</code></td></tr>
@@ -140,13 +140,13 @@
         <tr><td>Padding-y</td><td>8px</td><td>10px</td><td>12px</td><td><code>--ds-space-control-padding-y-{sm/md/lg}</code></td></tr>
         <tr><td>Font-size</td><td>14px</td><td>14px</td><td>16px</td><td><code>--ds-typography-control-font-size-{sm/md/lg}</code></td></tr>
         <tr><td>Line-height</td><td>16px</td><td>20px</td><td>24px</td><td><code>--ds-typography-control-line-height-{sm/md/lg}</code></td></tr>
-        <tr><td><span data-lang="pt">Tamanho do icone</span><span data-lang="en">Icon size</span></td><td>16px</td><td>20px</td><td>24px</td><td><code>--ds-size-control-icon-{sm/md/lg}</code></td></tr>
-        <tr><td><span data-lang="pt">Alvo minimo</span><span data-lang="en">Min target</span></td><td colspan="3">44px (WCAG 2.5.5 AAA)</td><td><code>--ds-size-control-min-target</code></td></tr>
+        <tr><td><span data-lang="pt">Tamanho do ícone</span><span data-lang="en">Icon size</span></td><td>16px</td><td>20px</td><td>24px</td><td><code>--ds-size-control-icon-{sm/md/lg}</code></td></tr>
+        <tr><td><span data-lang="pt">Alvo mínimo</span><span data-lang="en">Min target</span></td><td colspan="3">44px (WCAG 2.5.5 AAA)</td><td><code>--ds-size-control-min-target</code></td></tr>
       </tbody>
     </table>
 
     <div class="ds-callout ds-callout--info">
-      <div class="ds-callout__title"><span data-lang="pt">Validacao</span><span data-lang="en">Validation</span></div>
+      <div class="ds-callout__title"><span data-lang="pt">Validação</span><span data-lang="en">Validation</span></div>
       sm: 8 + 16 + 8 = <strong>32</strong> &check; &nbsp;&nbsp;
       md: 10 + 20 + 10 = <strong>40</strong> &check; &nbsp;&nbsp;
       lg: 12 + 24 + 12 = <strong>48</strong> &check;
@@ -173,12 +173,12 @@
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Quais componentes usam</span><span data-lang="en">Which components use it</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th><span data-lang="pt">Componente</span><span data-lang="en">Component</span></th><th><span data-lang="pt">Altura</span><span data-lang="en">Height</span></th><th>Padding-x</th><th>Padding-y</th><th>Font-size</th><th><span data-lang="pt">Observacoes</span><span data-lang="en">Notes</span></th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Componente</span><span data-lang="en">Component</span></th><th><span data-lang="pt">Altura</span><span data-lang="en">Height</span></th><th>Padding-x</th><th>Padding-y</th><th>Font-size</th><th><span data-lang="pt">Observações</span><span data-lang="en">Notes</span></th></tr></thead>
       <tbody>
         <tr><td><strong>Button</strong></td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td><span data-lang="pt">Todos os tamanhos, todas as variantes</span><span data-lang="en">All sizes, all variants</span></td></tr>
         <tr><td><strong>Input</strong></td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td><span data-lang="pt">Somente o frame do campo (wrapper sem padding)</span><span data-lang="en">Field frame only (wrapper has no padding)</span></td></tr>
         <tr><td><strong>Select</strong></td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td><span data-lang="pt">Somente o frame do campo</span><span data-lang="en">Field frame only</span></td></tr>
-        <tr><td><strong>Textarea</strong></td><td>&mdash;</td><td>&check;</td><td>&check;</td><td>&check;</td><td><span data-lang="pt">Altura e independente (multi-linha). Line-height usa ratios de body text, nao control line-height.</span><span data-lang="en">Height is independent (multi-line). Line-height uses body text ratios, not control line-height.</span></td></tr>
+        <tr><td><strong>Textarea</strong></td><td>&mdash;</td><td>&check;</td><td>&check;</td><td>&check;</td><td><span data-lang="pt">Altura é independente (multi-linha). Line-height usa ratios de body text, não control line-height.</span><span data-lang="en">Height is independent (multi-line). Line-height uses body text ratios, not control line-height.</span></td></tr>
       </tbody>
     </table>
   </div>
@@ -186,7 +186,7 @@
   <!-- Token layers -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Camadas de tokens</span><span data-lang="en">Token layers</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Tokens de controle vivem na camada semantica. Tokens de componente os referenciam:</span><span data-lang="en">Control tokens live in the semantic layer. Component tokens reference them:</span></p>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Tokens de controle vivem na camada semântica. Tokens de componente os referenciam:</span><span data-lang="en">Control tokens live in the semantic layer. Component tokens reference them:</span></p>
 <div class="ds-code-block">/* Semantic (shared) */
 --ds-size-control-md:              2.5rem;   /* 40px */
 --ds-space-control-padding-x-md:   var(--ds-spacing-4);  /* 16px */
@@ -203,28 +203,28 @@
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Cores toned (ADR-007)</span><span data-lang="en">Toned colors (ADR-007)</span></h2>
     <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
-      <span data-lang="pt">A variante "Toned" do Button usa overlays coloridos translucidos. Isso e diferente de <code>subtle</code> (opaco, step 100 da paleta) e <code>muted</code> (opaco, step 50 da paleta):</span><span data-lang="en">The Button "Toned" variant uses translucent colored overlays. This is different from <code>subtle</code> (opaque, palette step 100) and <code>muted</code> (opaque, palette step 50):</span>
+      <span data-lang="pt">A variante "Toned" do Button usa overlays coloridos translúcidos. Isso é diferente de <code>subtle</code> (opaco, step 100 da paleta) e <code>muted</code> (opaco, step 50 da paleta):</span><span data-lang="en">The Button "Toned" variant uses translucent colored overlays. This is different from <code>subtle</code> (opaque, palette step 100) and <code>muted</code> (opaque, palette step 50):</span>
     </p>
     <table class="ds-token-table">
       <thead><tr><th>Token pattern</th><th>Visual</th><th><span data-lang="pt">Uso</span><span data-lang="en">Use case</span></th></tr></thead>
       <tbody>
         <tr><td><code>color.primary.subtle</code></td><td><span data-lang="pt">Azul claro opaco (blue-100)</span><span data-lang="en">Opaque light blue (blue-100)</span></td><td><span data-lang="pt">Backgrounds sutis, badges</span><span data-lang="en">Subtle backgrounds, badges</span></td></tr>
         <tr><td><code>color.primary.muted</code></td><td><span data-lang="pt">Azul mais claro opaco (blue-50)</span><span data-lang="en">Opaque lighter blue (blue-50)</span></td><td><span data-lang="pt">Backgrounds muted, estados selecionados</span><span data-lang="en">Muted backgrounds, selected states</span></td></tr>
-        <tr><td><code>color.primary.toned.*</code></td><td><span data-lang="pt">Azul translucido (12-28% opacidade)</span><span data-lang="en">Translucent blue (12-28% opacity)</span></td><td><span data-lang="pt">Variante Toned do Button -- superficie transparece</span><span data-lang="en">Button Toned variant -- surface shows through</span></td></tr>
+        <tr><td><code>color.primary.toned.*</code></td><td><span data-lang="pt">Azul translúcido (12-28% opacidade)</span><span data-lang="en">Translucent blue (12-28% opacity)</span></td><td><span data-lang="pt">Variante Toned do Button -- superfície transparece</span><span data-lang="en">Button Toned variant -- surface shows through</span></td></tr>
       </tbody>
     </table>
     <p style="color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
-      <span data-lang="pt">A camada Foundation tem tokens de overlay colorido (<code>--ds-overlay-blue-600-*</code> para light, <code>--ds-overlay-blue-400-*</code> para dark). Tokens semanticos fazem alias destes por modo. O padrao e extensivel para cores de feedback quando necessario.</span><span data-lang="en">Foundation layer has colored overlay tokens (<code>--ds-overlay-blue-600-*</code> for light, <code>--ds-overlay-blue-400-*</code> for dark). Semantic tokens alias these per mode. The pattern is extensible to feedback colors when needed.</span>
+      <span data-lang="pt">A camada Foundation tem tokens de overlay colorido (<code>--ds-overlay-blue-600-*</code> para light, <code>--ds-overlay-blue-400-*</code> para dark). Tokens semânticos fazem alias destes por modo. O padrão é extensível para cores de feedback quando necessário.</span><span data-lang="en">Foundation layer has colored overlay tokens (<code>--ds-overlay-blue-600-*</code> for light, <code>--ds-overlay-blue-400-*</code> for dark). Semantic tokens alias these per mode. The pattern is extensible to feedback colors when needed.</span>
     </p>
   </div>
 
   <!-- ADR reference -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title"><span data-lang="pt">Decisoes de arquitetura</span><span data-lang="en">Architecture decisions</span></h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Decisões de arquitetura</span><span data-lang="en">Architecture decisions</span></h2>
     <div class="ds-callout ds-callout--info">
       <div class="ds-callout__title"><span data-lang="pt">ADRs relacionados</span><span data-lang="en">Related ADRs</span></div>
-      <span data-lang="pt"><strong>ADR-006:</strong> Tokens semanticos de controle -- dimensoes e tipografia compartilhadas entre controles interativos.<br>
-      <strong>ADR-007:</strong> Sistema de cores toned -- overlays coloridos na foundation, tokens toned semanticos.</span><span data-lang="en"><strong>ADR-006:</strong> Semantic control tokens -- shared dimensions and typography across interactive controls.<br>
+      <span data-lang="pt"><strong>ADR-006:</strong> Tokens semânticos de controle -- dimensões e tipografia compartilhadas entre controles interativos.<br>
+      <strong>ADR-007:</strong> Sistema de cores toned -- overlays coloridos na foundation, tokens toned semânticos.</span><span data-lang="en"><strong>ADR-006:</strong> Semantic control tokens -- shared dimensions and typography across interactive controls.<br>
       <strong>ADR-007:</strong> Toned color system -- colored overlays in foundation, semantic toned tokens.</span>
     </div>
   </div>

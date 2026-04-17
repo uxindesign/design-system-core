@@ -132,20 +132,20 @@
 <main class="ds-main">
   <div class="ds-section">
     <h1 class="ds-section__title"><span data-lang="pt">Arquitetura de tokens</span><span data-lang="en">Token Architecture</span></h1>
-    <p class="ds-section__subtitle"><span data-lang="pt">Design tokens sao organizados em tres camadas. Cada camada tem um papel especifico, e tokens em uma camada referenciam a camada abaixo -- nunca o contrario.</span><span data-lang="en">Design tokens are organized in three layers. Each layer has a specific role, and tokens in one layer reference the layer below -- never the other way around.</span></p>
+    <p class="ds-section__subtitle"><span data-lang="pt">Design tokens são organizados em três camadas. Cada camada tem um papel específico, e tokens em uma camada referenciam a camada abaixo -- nunca o contrário.</span><span data-lang="en">Design tokens are organized in three layers. Each layer has a specific role, and tokens in one layer reference the layer below -- never the other way around.</span></p>
   </div>
 
   <!-- ============================================================
        THREE LAYERS
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title"><span data-lang="pt">Tres camadas</span><span data-lang="en">Three layers</span></h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Três camadas</span><span data-lang="en">Three layers</span></h2>
 
     <div class="ds-arch">
       <div class="ds-arch__layer">
         <div class="ds-arch__header ds-arch__header--fdn">Foundation</div>
         <div class="ds-arch__body">
-          <span data-lang="pt">Valores brutos. A unica camada com valores absolutos (hex, rem, px).</span><span data-lang="en">Raw values. The only layer with absolute values (hex, rem, px).</span><br><br>
+          <span data-lang="pt">Valores brutos. A única camada com valores absolutos (hex, rem, px).</span><span data-lang="en">Raw values. The only layer with absolute values (hex, rem, px).</span><br><br>
           <code>foundation.color.blue.600</code> → <code>#2563EB</code><br>
           <code>foundation.spacing.4</code> → <code>1rem</code><br>
           <code>foundation.radius.md</code> → <code>8px</code><br><br>
@@ -156,7 +156,7 @@
       <div class="ds-arch__layer">
         <div class="ds-arch__header ds-arch__header--sem">Semantic</div>
         <div class="ds-arch__body">
-          <span data-lang="pt">Intencao e significado. Referencia foundation via aliases. Sensivel a modo (light/dark).</span><span data-lang="en">Intent and meaning. References foundation via aliases. Mode-aware (light/dark).</span><br><br>
+          <span data-lang="pt">Intenção e significado. Referencia foundation via aliases. Sensível a modo (light/dark).</span><span data-lang="en">Intent and meaning. References foundation via aliases. Mode-aware (light/dark).</span><br><br>
           <code>semantic.color.primary.default</code> → <code>{foundation.brand.primary}</code><br>
           <code>semantic.text.default</code> → <code>{foundation.color.neutral.900}</code> (light)<br>
           <code>semantic.text.default</code> → <code>{foundation.color.neutral.50}</code> (dark)<br><br>
@@ -182,7 +182,7 @@
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Como funciona a cadeia de alias</span><span data-lang="en">How an alias chain works</span></h2>
     <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
-      <span data-lang="pt">Quando voce clica em um botao Brand, sua cor de fundo e resolvida por esta cadeia:</span><span data-lang="en">When you press a Brand button, its background color resolves through this chain:</span>
+      <span data-lang="pt">Quando você clica em um botão Brand, sua cor de fundo é resolvida por esta cadeia:</span><span data-lang="en">When you press a Brand button, its background color resolves through this chain:</span>
     </p>
 
     <div class="ds-chain">
@@ -227,7 +227,7 @@
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Subcamada Brand</span><span data-lang="en">Brand sublayer</span></h2>
     <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
-      <span data-lang="pt">Brand fica dentro de Foundation como uma ponte entre paleta e intencao. Tem apenas 2 tokens -- sem estados, sem modos.</span><span data-lang="en">Brand sits inside Foundation as a bridge between palette and intent. It has only 2 tokens -- no states, no modes.</span>
+      <span data-lang="pt">Brand fica dentro de Foundation como uma ponte entre paleta e intenção. Tem apenas 2 tokens -- sem estados, sem modos.</span><span data-lang="en">Brand sits inside Foundation as a bridge between palette and intent. It has only 2 tokens -- no states, no modes.</span>
     </p>
 
 <div class="ds-code-block">{
@@ -240,7 +240,7 @@
 }</div>
 
     <p style="color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
-      <span data-lang="pt">Apenas <code>semantic.color.primary.default</code> referencia <code>foundation.brand.primary</code>. Todos os outros estados (hover, active, subtle) referenciam a paleta foundation diretamente, porque mudancas de estado precisam de steps especificos da paleta que nao seguem uma formula.</span><span data-lang="en">Only <code>semantic.color.primary.default</code> references <code>foundation.brand.primary</code>. All other states (hover, active, subtle) reference the foundation palette directly, because state shifts need specific palette steps that don't follow a formula.</span>
+      <span data-lang="pt">Apenas <code>semantic.color.primary.default</code> referencia <code>foundation.brand.primary</code>. Todos os outros estados (hover, active, subtle) referenciam a paleta foundation diretamente, porque mudanças de estado precisam de steps específicos da paleta que não seguem uma fórmula.</span><span data-lang="en">Only <code>semantic.color.primary.default</code> references <code>foundation.brand.primary</code>. All other states (hover, active, subtle) reference the foundation palette directly, because state shifts need specific palette steps that don't follow a formula.</span>
     </p>
   </div>
 
@@ -248,22 +248,22 @@
        NAMING CONVENTION
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title"><span data-lang="pt">Convencao de nomenclatura</span><span data-lang="en">Naming convention</span></h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Convenção de nomenclatura</span><span data-lang="en">Naming convention</span></h2>
     <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
-      <span data-lang="pt">Padrao canonico: <code>{layer}.{category}.{type}.{variant}.{state}</code></span><span data-lang="en">Canonical pattern: <code>{layer}.{category}.{type}.{variant}.{state}</code></span>
+      <span data-lang="pt">Padrão canônico: <code>{layer}.{category}.{type}.{variant}.{state}</code></span><span data-lang="en">Canonical pattern: <code>{layer}.{category}.{type}.{variant}.{state}</code></span>
     </p>
     <table class="ds-token-table">
       <thead><tr><th><span data-lang="pt">Formato</span><span data-lang="en">Format</span></th><th><span data-lang="pt">Exemplo</span><span data-lang="en">Example</span></th><th><span data-lang="pt">Onde</span><span data-lang="en">Where</span></th></tr></thead>
       <tbody>
         <tr><td><span data-lang="pt">Caminho JSON</span><span data-lang="en">JSON path</span></td><td><code>foundation.color.blue.500</code></td><td><span data-lang="pt">Arquivos fonte (<code>tokens/</code>)</span><span data-lang="en">Source files (<code>tokens/</code>)</span></td></tr>
         <tr><td><span data-lang="pt">CSS custom property</span><span data-lang="en">CSS custom property</span></td><td><code>--ds-color-blue-500</code></td><td><span data-lang="pt">Gerado pelo Style Dictionary</span><span data-lang="en">Generated by Style Dictionary</span></td></tr>
-        <tr><td><span data-lang="pt">Variavel Figma</span><span data-lang="en">Figma variable</span></td><td><code>color/blue/500</code></td><td><span data-lang="pt">Painel de Variaveis do Figma</span><span data-lang="en">Figma Variables panel</span></td></tr>
+        <tr><td><span data-lang="pt">Variável Figma</span><span data-lang="en">Figma variable</span></td><td><code>color/blue/500</code></td><td><span data-lang="pt">Painel de Variáveis do Figma</span><span data-lang="en">Figma Variables panel</span></td></tr>
       </tbody>
     </table>
 
     <div class="ds-callout ds-callout--warning">
       <div class="ds-callout__title"><span data-lang="pt">A regra do sufixo <code>-default</code></span><span data-lang="en">The <code>-default</code> suffix rule</span></div>
-      <span data-lang="pt">Todo token terminado em <code>.default</code> gera <code>-default</code> no CSS. Sem excecoes, sem colapsar. <code>semantic.color.primary.default</code> vira <code>--ds-color-primary-default</code>, nao <code>--ds-color-primary</code>.</span><span data-lang="en">Every token ending in <code>.default</code> generates <code>-default</code> in CSS. No exceptions, no collapsing. <code>semantic.color.primary.default</code> becomes <code>--ds-color-primary-default</code>, not <code>--ds-color-primary</code>.</span>
+      <span data-lang="pt">Todo token terminado em <code>.default</code> gera <code>-default</code> no CSS. Sem exceções, sem colapsar. <code>semantic.color.primary.default</code> vira <code>--ds-color-primary-default</code>, não <code>--ds-color-primary</code>.</span><span data-lang="en">Every token ending in <code>.default</code> generates <code>-default</code> in CSS. No exceptions, no collapsing. <code>semantic.color.primary.default</code> becomes <code>--ds-color-primary-default</code>, not <code>--ds-color-primary</code>.</span>
     </div>
   </div>
 
@@ -273,7 +273,7 @@
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Modo light/dark</span><span data-lang="en">Light/dark mode</span></h2>
     <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
-      <span data-lang="pt">Tokens semanticos tem as mesmas chaves em ambos os modos mas valores diferentes. Tokens de foundation e componente sao invariantes de modo.</span><span data-lang="en">Semantic tokens have the same keys in both modes but different values. Foundation and component tokens are mode-invariant.</span>
+      <span data-lang="pt">Tokens semânticos têm as mesmas chaves em ambos os modos mas valores diferentes. Tokens de foundation e componente são invariantes de modo.</span><span data-lang="en">Semantic tokens have the same keys in both modes but different values. Foundation and component tokens are mode-invariant.</span>
     </p>
     <table class="ds-token-table">
       <thead><tr><th>Token</th><th><span data-lang="pt">Valor light</span><span data-lang="en">Light value</span></th><th><span data-lang="pt">Valor dark</span><span data-lang="en">Dark value</span></th></tr></thead>
@@ -299,12 +299,12 @@
     <table class="ds-token-table">
       <thead><tr><th>#</th><th><span data-lang="pt">Regra</span><span data-lang="en">Rule</span></th></tr></thead>
       <tbody>
-        <tr><td>1</td><td><span data-lang="pt">Tokens de componente referenciam semantic, nunca foundation. Excecao: estados hover/active que precisam de um step especifico da paleta.</span><span data-lang="en">Component tokens reference semantic, never foundation. Exception: hover/active states that need a specific palette step.</span></td></tr>
-        <tr><td>2</td><td><span data-lang="pt">Tokens semanticos referenciam foundation, nunca hardcoded. Nenhum hex ou rgba bruto na camada semantica.</span><span data-lang="en">Semantic tokens reference foundation, never hardcoded. No raw hex or rgba in the semantic layer.</span></td></tr>
-        <tr><td>3</td><td><span data-lang="pt">Foundation e a unica camada com valores absolutos.</span><span data-lang="en">Foundation is the only layer with absolute values.</span></td></tr>
-        <tr><td>4</td><td><span data-lang="pt">Brand faz parte da foundation: 2 tokens (primary, secondary), sem estados, trocavel por tema.</span><span data-lang="en">Brand is part of foundation: 2 tokens (primary, secondary), no states, swappable per theme.</span></td></tr>
+        <tr><td>1</td><td><span data-lang="pt">Tokens de componente referenciam semantic, nunca foundation. Exceção: estados hover/active que precisam de um step específico da paleta.</span><span data-lang="en">Component tokens reference semantic, never foundation. Exception: hover/active states that need a specific palette step.</span></td></tr>
+        <tr><td>2</td><td><span data-lang="pt">Tokens semânticos referenciam foundation, nunca hardcoded. Nenhum hex ou rgba bruto na camada semântica.</span><span data-lang="en">Semantic tokens reference foundation, never hardcoded. No raw hex or rgba in the semantic layer.</span></td></tr>
+        <tr><td>3</td><td><span data-lang="pt">Foundation é a única camada com valores absolutos.</span><span data-lang="en">Foundation is the only layer with absolute values.</span></td></tr>
+        <tr><td>4</td><td><span data-lang="pt">Brand faz parte da foundation: 2 tokens (primary, secondary), sem estados, trocável por tema.</span><span data-lang="en">Brand is part of foundation: 2 tokens (primary, secondary), no states, swappable per theme.</span></td></tr>
         <tr><td>5</td><td><span data-lang="pt">Todo token tem <code>$type</code> conforme spec DTCG.</span><span data-lang="en">Every token has <code>$type</code> per DTCG spec.</span></td></tr>
-        <tr><td>6</td><td><span data-lang="pt">Tokens nao obvios requerem <code>$description</code>.</span><span data-lang="en">Non-obvious tokens require <code>$description</code>.</span></td></tr>
+        <tr><td>6</td><td><span data-lang="pt">Tokens não óbvios requerem <code>$description</code>.</span><span data-lang="en">Non-obvious tokens require <code>$description</code>.</span></td></tr>
         <tr><td>7</td><td><span data-lang="pt"><code>light.json</code> e <code>dark.json</code> devem ter exatamente o mesmo conjunto de chaves.</span><span data-lang="en"><code>light.json</code> and <code>dark.json</code> must have exactly the same key set.</span></td></tr>
         <tr><td>8</td><td><span data-lang="pt">Novas categorias ou quebras de hierarquia requerem um ADR.</span><span data-lang="en">New categories or hierarchy breaks require an ADR.</span></td></tr>
       </tbody>
@@ -317,7 +317,7 @@
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Mapeamento entre formatos</span><span data-lang="en">Cross-format mapping</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th><span data-lang="pt">JSON (fonte da verdade)</span><span data-lang="en">JSON (source of truth)</span></th><th><span data-lang="pt">CSS (gerado)</span><span data-lang="en">CSS (generated)</span></th><th><span data-lang="pt">Variaveis Figma</span><span data-lang="en">Figma Variables</span></th></tr></thead>
+      <thead><tr><th><span data-lang="pt">JSON (fonte da verdade)</span><span data-lang="en">JSON (source of truth)</span></th><th><span data-lang="pt">CSS (gerado)</span><span data-lang="en">CSS (generated)</span></th><th><span data-lang="pt">Variáveis Figma</span><span data-lang="en">Figma Variables</span></th></tr></thead>
       <tbody>
         <tr><td><code>foundation.color.blue.500</code></td><td><code>--ds-color-blue-500</code></td><td><code>color/blue/500</code> (Foundation)</td></tr>
         <tr><td><code>foundation.brand.primary</code></td><td><code>--ds-brand-primary</code></td><td><code>brand/primary</code> (Brand)</td></tr>
@@ -327,7 +327,7 @@
       </tbody>
     </table>
     <p style="color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
-      <span data-lang="pt">A geracao de CSS e feita pelo Style Dictionary: caminho direto → nome, sem transforms customizados.</span><span data-lang="en">CSS generation is handled by Style Dictionary: direct path → name, no custom transforms.</span>
+      <span data-lang="pt">A geração de CSS é feita pelo Style Dictionary: caminho direto → nome, sem transforms customizados.</span><span data-lang="en">CSS generation is handled by Style Dictionary: direct path → name, no custom transforms.</span>
     </p>
   </div>
 
