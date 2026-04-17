@@ -12,12 +12,12 @@
   border-radius: var(--ds-radius-sm);
   min-height: var(--ds-toggle-min-target-size);
   font-size: var(--ds-toggle-font-size);
-  color: var(--ds-text-default);
+  color: var(--ds-content-default);
   transition: background-color var(--ds-duration-fast) var(--ds-ease-default);
 }
 
 .ds-toggle-label:hover {
-  background-color: var(--ds-background-muted);
+  background-color: var(--ds-state-hover);
 }
 
 /* Hidden native checkbox */
@@ -45,24 +45,24 @@
   width: var(--ds-toggle-thumb-size-md);
   height: var(--ds-toggle-thumb-size-md);
   border-radius: var(--ds-radius-full);
-  background-color: var(--ds-text-secondary);
+  background-color: var(--ds-content-secondary);
   transition: transform var(--ds-duration-fast) var(--ds-ease-default),
               background-color var(--ds-duration-fast) var(--ds-ease-default);
 }
 
 /* Hover */
 .ds-toggle:hover:not(:disabled) {
-  border-color: var(--ds-color-primary-default);
+  border-color: var(--ds-brand-default);
 }
 
 /* Checked (On) */
 .ds-toggle:checked {
-  background-color: var(--ds-color-primary-default);
-  border-color: var(--ds-color-primary-default);
+  background-color: var(--ds-brand-default);
+  border-color: var(--ds-brand-default);
 }
 
 .ds-toggle:checked::after {
-  background-color: var(--ds-color-primary-foreground);
+  background-color: var(--ds-brand-content-contrast);
   transform: translateX(16px);
 }
 
@@ -80,7 +80,7 @@
 }
 
 .ds-toggle:disabled::after {
-  background-color: var(--ds-state-disabled-foreground);
+  background-color: var(--ds-content-disabled);
 }
 
 .ds-toggle-label:has(.ds-toggle:disabled) {

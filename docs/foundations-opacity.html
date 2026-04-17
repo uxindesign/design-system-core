@@ -8,16 +8,16 @@
   <link rel="stylesheet" href="layout.css">
   <style>
     .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-sm); margin-bottom: var(--ds-spacing-8); }
-    .ds-token-table th { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-text-secondary); }
+    .ds-token-table th { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
     .ds-token-table td { padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
     .ds-token-table code { font-size: var(--ds-font-size-xs); font-family: var(--ds-font-family-mono); }
     .ds-opacity-row { display: flex; align-items: center; gap: var(--ds-spacing-6); padding: var(--ds-spacing-4) 0; border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); }
     .ds-opacity-row__preview { width: 64px; height: 64px; border-radius: var(--ds-radius-md); position: relative; flex-shrink: 0; overflow: hidden; }
     .ds-opacity-row__checker { position: absolute; inset: 0; background-image: linear-gradient(45deg, var(--ds-color-neutral-200) 25%, transparent 25%), linear-gradient(-45deg, var(--ds-color-neutral-200) 25%, transparent 25%), linear-gradient(45deg, transparent 75%, var(--ds-color-neutral-200) 75%), linear-gradient(-45deg, transparent 75%, var(--ds-color-neutral-200) 75%); background-size: 8px 8px; background-position: 0 0, 0 4px, 4px -4px, -4px 0px; }
-    .ds-opacity-row__fill { position: absolute; inset: 0; background-color: var(--ds-color-primary-default); }
+    .ds-opacity-row__fill { position: absolute; inset: 0; background-color: var(--ds-brand-default); }
     .ds-opacity-row__info { display: flex; flex-direction: column; gap: var(--ds-spacing-0-5); }
-    .ds-opacity-row__token { font-size: var(--ds-font-size-sm); font-family: var(--ds-font-family-mono); color: var(--ds-text-default); }
-    .ds-opacity-row__value { font-size: var(--ds-font-size-xs); color: var(--ds-text-secondary); }
+    .ds-opacity-row__token { font-size: var(--ds-font-size-sm); font-family: var(--ds-font-family-mono); color: var(--ds-content-default); }
+    .ds-opacity-row__value { font-size: var(--ds-font-size-xs); color: var(--ds-content-secondary); }
     .ds-code-block { background-color: var(--ds-color-neutral-900); color: var(--ds-color-neutral-200); padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); font-family: var(--ds-font-family-mono); font-size: var(--ds-font-size-xs); line-height: var(--ds-line-height-relaxed); overflow-x: auto; margin-bottom: var(--ds-spacing-6); white-space: pre; }
   </style>
   <script>
@@ -121,7 +121,7 @@
 
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Escala</span><span data-lang="en">Scale</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Cada amostra mostra a cor primaria na opacidade indicada sobre um padrao quadriculado.</span><span data-lang="en">Each swatch shows the primary color at the given opacity over a checker pattern.</span></p>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Cada amostra mostra a cor primaria na opacidade indicada sobre um padrao quadriculado.</span><span data-lang="en">Each swatch shows the primary color at the given opacity over a checker pattern.</span></p>
 
     <div style="margin-bottom:var(--ds-spacing-8)">
       <div class="ds-opacity-row">
@@ -170,7 +170,7 @@
 
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Relacao com tokens de overlay</span><span data-lang="en">Relationship with overlay tokens</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);">
       <span data-lang="pt">Tokens de opacidade controlam a propriedade CSS <code>opacity</code> de um elemento. Tokens de overlay (<code>--ds-color-overlay-black-*</code>, <code>--ds-color-overlay-white-*</code>) usam valores <code>rgba()</code> e sao aplicados como <code>background-color</code>. Servem propositos diferentes:</span><span data-lang="en">Opacity tokens control the <code>opacity</code> CSS property on an element. Overlay tokens (<code>--ds-color-overlay-black-*</code>, <code>--ds-color-overlay-white-*</code>) use <code>rgba()</code> values and are applied as <code>background-color</code>. They serve different purposes:</span>
     </p>
     <table class="ds-token-table">

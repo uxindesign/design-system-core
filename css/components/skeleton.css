@@ -10,7 +10,7 @@
 /* Base skeleton */
 .ds-skeleton {
   display: block;
-  background-color: var(--ds-background-muted);
+  background-color: var(--ds-skeleton-fill);
   animation: ds-pulse 1.5s ease-in-out infinite;
 }
 

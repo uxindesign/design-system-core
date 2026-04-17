@@ -91,12 +91,12 @@
   --ds-button-font-size-sm: var(--ds-control-font-size-sm); /** 0.875rem (14px) */
   --ds-button-font-size-md: var(--ds-control-font-size-md); /** 0.875rem (14px) */
   --ds-button-font-size-lg: var(--ds-control-font-size-lg); /** 1rem (16px) */
-  --ds-button-background-toned-default: var(--ds-color-primary-toned-default); /** Toned variant background. ADR-007. */
-  --ds-button-background-toned-hover: var(--ds-color-primary-toned-hover);
-  --ds-button-background-toned-active: var(--ds-color-primary-toned-active);
+  --ds-button-background-toned-default: var(--ds-brand-toned-default); /** Toned variant background. ADR-007. */
+  --ds-button-background-toned-hover: var(--ds-brand-toned-hover);
+  --ds-button-background-toned-active: var(--ds-brand-toned-active);
   --ds-button-background-toned-disabled: var(--ds-state-disabled-background); /** Opaque neutral — toned transparency not needed for disabled. */
-  --ds-button-foreground-toned-default: var(--ds-color-primary-text); /** Text/icon color on toned background. */
-  --ds-button-foreground-toned-disabled: var(--ds-state-disabled-foreground);
+  --ds-button-foreground-toned-default: var(--ds-brand-content-default); /** Text/icon color on toned background. ADR-011. */
+  --ds-button-foreground-toned-disabled: var(--ds-content-disabled);
   --ds-checkbox-border-width: var(--ds-border-width-default);
   --ds-checkbox-gap: var(--ds-space-gap-sm); /** 8px between control and label */
   --ds-input-padding-x-sm: var(--ds-space-control-padding-x-sm); /** 12px */
@@ -121,6 +121,7 @@
   --ds-select-font-size-sm: var(--ds-control-font-size-sm); /** 14px */
   --ds-select-font-size-md: var(--ds-control-font-size-md); /** 14px */
   --ds-select-font-size-lg: var(--ds-control-font-size-lg); /** 16px */
+  --ds-skeleton-fill: var(--ds-state-disabled-background); /** Skeleton background fill. Neutral-100 light / neutral-800 dark. Replaces semantic.background.muted per ADR-011. */
   --ds-textarea-padding-x-sm: var(--ds-space-control-padding-x-sm); /** 12px */
   --ds-textarea-padding-x-md: var(--ds-space-control-padding-x-md); /** 16px */
   --ds-textarea-padding-x-lg: var(--ds-space-control-padding-x-lg); /** 20px */

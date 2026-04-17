@@ -8,10 +8,10 @@
   <link rel="stylesheet" href="layout.css">
   <style>
     .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-sm); margin-bottom: var(--ds-spacing-8); }
-    .ds-token-table th { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-text-secondary); }
+    .ds-token-table th { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
     .ds-token-table td { padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: top; }
     .ds-token-table code { font-size: var(--ds-font-size-xs); font-family: var(--ds-font-family-mono); }
-    .ds-callout { padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-6); font-size: var(--ds-font-size-sm); line-height: var(--ds-line-height-relaxed); color: var(--ds-text-default); }
+    .ds-callout { padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-6); font-size: var(--ds-font-size-sm); line-height: var(--ds-line-height-relaxed); color: var(--ds-content-default); }
     .ds-callout--info { background-color: var(--ds-feedback-info-background); border: var(--ds-border-width-1) solid var(--ds-feedback-info-border); }
     .ds-callout--warning { background-color: var(--ds-feedback-warning-background); border: var(--ds-border-width-1) solid var(--ds-feedback-warning-border); }
     .ds-callout__title { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-1); }
@@ -20,21 +20,21 @@
     .ds-arch { display: flex; gap: var(--ds-spacing-4); margin-bottom: var(--ds-spacing-8); flex-wrap: wrap; }
     .ds-arch__layer { flex: 1; min-width: 220px; border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg); overflow: hidden; }
     .ds-arch__header { padding: var(--ds-spacing-3) var(--ds-spacing-4); font-weight: var(--ds-font-weight-semibold); font-size: var(--ds-font-size-sm); }
-    .ds-arch__header--fdn { background-color: var(--ds-color-primary-muted); color: var(--ds-color-primary-text); border-bottom: 2px solid var(--ds-color-primary-default); }
-    .ds-arch__header--sem { background-color: var(--ds-feedback-info-background); color: var(--ds-feedback-info-text); border-bottom: 2px solid var(--ds-feedback-info-default); }
-    .ds-arch__header--cmp { background-color: var(--ds-feedback-success-background); color: var(--ds-feedback-success-text); border-bottom: 2px solid var(--ds-feedback-success-default); }
-    .ds-arch__body { padding: var(--ds-spacing-4); font-size: var(--ds-font-size-xs); color: var(--ds-text-secondary); line-height: var(--ds-line-height-relaxed); }
-    .ds-arch__body code { font-family: var(--ds-font-family-mono); color: var(--ds-text-default); }
-    .ds-arch__arrow { display: flex; align-items: center; justify-content: center; font-size: var(--ds-font-size-xl); color: var(--ds-text-tertiary); min-width: 32px; }
+    .ds-arch__header--fdn { background-color: var(--ds-state-hover); color: var(--ds-brand-content-default); border-bottom: 2px solid var(--ds-brand-default); }
+    .ds-arch__header--sem { background-color: var(--ds-feedback-info-background); color: var(--ds-feedback-info-content-default); border-bottom: 2px solid var(--ds-feedback-info-default); }
+    .ds-arch__header--cmp { background-color: var(--ds-feedback-success-background); color: var(--ds-feedback-success-content-default); border-bottom: 2px solid var(--ds-feedback-success-default); }
+    .ds-arch__body { padding: var(--ds-spacing-4); font-size: var(--ds-font-size-xs); color: var(--ds-content-secondary); line-height: var(--ds-line-height-relaxed); }
+    .ds-arch__body code { font-family: var(--ds-font-family-mono); color: var(--ds-content-default); }
+    .ds-arch__arrow { display: flex; align-items: center; justify-content: center; font-size: var(--ds-font-size-xl); color: var(--ds-content-tertiary); min-width: 32px; }
     /* Chain */
     .ds-chain { background-color: var(--ds-background-subtle); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg); padding: var(--ds-spacing-5); margin-bottom: var(--ds-spacing-8); font-family: var(--ds-font-family-mono); font-size: var(--ds-font-size-xs); line-height: var(--ds-line-height-loose); }
     .ds-chain__step { display: flex; align-items: center; gap: var(--ds-spacing-3); margin-bottom: var(--ds-spacing-2); }
     .ds-chain__badge { padding: var(--ds-spacing-0-5) var(--ds-spacing-2); border-radius: var(--ds-radius-sm); font-size: 10px; font-weight: var(--ds-font-weight-semibold); text-transform: uppercase; letter-spacing: var(--ds-letter-spacing-wider); font-family: var(--ds-font-family-sans); flex-shrink: 0; }
-    .ds-chain__badge--fdn { background-color: var(--ds-color-primary-muted); color: var(--ds-color-primary-text); }
-    .ds-chain__badge--brand { background-color: var(--ds-color-secondary-muted, var(--ds-color-primary-muted)); color: var(--ds-color-secondary-text, var(--ds-color-primary-text)); }
-    .ds-chain__badge--sem { background-color: var(--ds-feedback-info-background); color: var(--ds-feedback-info-text); }
-    .ds-chain__badge--cmp { background-color: var(--ds-feedback-success-background); color: var(--ds-feedback-success-text); }
-    .ds-chain__arrow { color: var(--ds-text-tertiary); }
+    .ds-chain__badge--fdn { background-color: var(--ds-state-hover); color: var(--ds-brand-content-default); }
+    .ds-chain__badge--brand { background-color: var(--ds-accent-subtle, var(--ds-state-hover)); color: var(--ds-accent-content-default, var(--ds-brand-content-default)); }
+    .ds-chain__badge--sem { background-color: var(--ds-feedback-info-background); color: var(--ds-feedback-info-content-default); }
+    .ds-chain__badge--cmp { background-color: var(--ds-feedback-success-background); color: var(--ds-feedback-success-content-default); }
+    .ds-chain__arrow { color: var(--ds-content-tertiary); }
   </style>
   <script>
     (function(){var l=localStorage.getItem('ds-lang');if(l)document.documentElement.setAttribute('lang',l)})();
@@ -181,7 +181,7 @@
        ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Como funciona a cadeia de alias</span><span data-lang="en">How an alias chain works</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);">
       <span data-lang="pt">Quando você clica em um botão Brand, sua cor de fundo é resolvida por esta cadeia:</span><span data-lang="en">When you press a Brand button, its background color resolves through this chain:</span>
     </p>
 
@@ -216,7 +216,7 @@
       </div>
     </div>
 
-    <p style="color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);margin-bottom:var(--ds-spacing-4);">
+    <p style="color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);margin-bottom:var(--ds-spacing-4);">
       <span data-lang="pt">Para mudar a marca, basta trocar o <code>brand.json</code>. Toda a cadeia se atualiza: cada componente que usa <code>primary.default</code> recebe a nova cor sem tocar em nenhum outro arquivo.</span><span data-lang="en">To rebrand, you swap <code>brand.json</code>. The entire chain updates: every component that uses <code>primary.default</code> gets the new color without touching any other file.</span>
     </p>
   </div>
@@ -226,7 +226,7 @@
        ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Subcamada Brand</span><span data-lang="en">Brand sublayer</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);">
       <span data-lang="pt">Brand fica dentro de Foundation como uma ponte entre paleta e intenção. Tem apenas 2 tokens -- sem estados, sem modos.</span><span data-lang="en">Brand sits inside Foundation as a bridge between palette and intent. It has only 2 tokens -- no states, no modes.</span>
     </p>
 
@@ -239,7 +239,7 @@
   }
 }</div>
 
-    <p style="color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
+    <p style="color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);">
       <span data-lang="pt">Apenas <code>semantic.color.primary.default</code> referencia <code>foundation.brand.primary</code>. Todos os outros estados (hover, active, subtle) referenciam a paleta foundation diretamente, porque mudanças de estado precisam de steps específicos da paleta que não seguem uma fórmula.</span><span data-lang="en">Only <code>semantic.color.primary.default</code> references <code>foundation.brand.primary</code>. All other states (hover, active, subtle) reference the foundation palette directly, because state shifts need specific palette steps that don't follow a formula.</span>
     </p>
   </div>
@@ -249,7 +249,7 @@
        ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Convenção de nomenclatura</span><span data-lang="en">Naming convention</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);">
       <span data-lang="pt">Padrão canônico: <code>{layer}.{category}.{type}.{variant}.{state}</code></span><span data-lang="en">Canonical pattern: <code>{layer}.{category}.{type}.{variant}.{state}</code></span>
     </p>
     <table class="ds-token-table">
@@ -263,7 +263,7 @@
 
     <div class="ds-callout ds-callout--warning">
       <div class="ds-callout__title"><span data-lang="pt">A regra do sufixo <code>-default</code></span><span data-lang="en">The <code>-default</code> suffix rule</span></div>
-      <span data-lang="pt">Todo token terminado em <code>.default</code> gera <code>-default</code> no CSS. Sem exceções, sem colapsar. <code>semantic.color.primary.default</code> vira <code>--ds-color-primary-default</code>, não <code>--ds-color-primary</code>.</span><span data-lang="en">Every token ending in <code>.default</code> generates <code>-default</code> in CSS. No exceptions, no collapsing. <code>semantic.color.primary.default</code> becomes <code>--ds-color-primary-default</code>, not <code>--ds-color-primary</code>.</span>
+      <span data-lang="pt">Todo token terminado em <code>.default</code> gera <code>-default</code> no CSS. Sem exceções, sem colapsar. <code>semantic.color.primary.default</code> vira <code>--ds-brand-default</code>, não <code>--ds-color-primary</code>.</span><span data-lang="en">Every token ending in <code>.default</code> generates <code>-default</code> in CSS. No exceptions, no collapsing. <code>semantic.color.primary.default</code> becomes <code>--ds-brand-default</code>, not <code>--ds-color-primary</code>.</span>
     </div>
   </div>
 
@@ -272,7 +272,7 @@
        ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Modo light/dark</span><span data-lang="en">Light/dark mode</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);">
       <span data-lang="pt">Tokens semânticos têm as mesmas chaves em ambos os modos mas valores diferentes. Tokens de foundation e componente são invariantes de modo.</span><span data-lang="en">Semantic tokens have the same keys in both modes but different values. Foundation and component tokens are mode-invariant.</span>
     </p>
     <table class="ds-token-table">
@@ -286,7 +286,7 @@
         <tr><td><code>text.on-brand</code></td><td>white</td><td>neutral-900</td></tr>
       </tbody>
     </table>
-    <p style="color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
+    <p style="color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);">
       <span data-lang="pt">Tokens invariantes de modo (iguais em ambos): todos os <code>space.*</code>, <code>radius.*</code>, <code>border.width.*</code>, <code>focus.ring.width</code>, <code>focus.ring.offset</code>.</span><span data-lang="en">Mode-invariant tokens (same in both modes): all <code>space.*</code>, <code>radius.*</code>, <code>border.width.*</code>, <code>focus.ring.width</code>, <code>focus.ring.offset</code>.</span>
     </p>
   </div>
@@ -321,12 +321,12 @@
       <tbody>
         <tr><td><code>foundation.color.blue.500</code></td><td><code>--ds-color-blue-500</code></td><td><code>color/blue/500</code> (Foundation)</td></tr>
         <tr><td><code>foundation.brand.primary</code></td><td><code>--ds-brand-primary</code></td><td><code>brand/primary</code> (Brand)</td></tr>
-        <tr><td><code>semantic.color.primary.default</code></td><td><code>--ds-color-primary-default</code></td><td><code>color/primary/default</code> (Semantic)</td></tr>
+        <tr><td><code>semantic.color.primary.default</code></td><td><code>--ds-brand-default</code></td><td><code>color/primary/default</code> (Semantic)</td></tr>
         <tr><td><code>semantic.space.inset.md</code></td><td><code>--ds-space-inset-md</code></td><td><code>space/inset/md</code> (Semantic)</td></tr>
         <tr><td><code>component.button.background.brand.default</code></td><td><code>--ds-button-bg-brand-default</code></td><td><code>button/background/brand/default</code> (Component)</td></tr>
       </tbody>
     </table>
-    <p style="color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
+    <p style="color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);">
       <span data-lang="pt">A geração de CSS é feita pelo Style Dictionary: caminho direto → nome, sem transforms customizados.</span><span data-lang="en">CSS generation is handled by Style Dictionary: direct path → name, no custom transforms.</span>
     </p>
   </div>

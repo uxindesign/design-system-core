@@ -9,11 +9,11 @@
   <style>
     /* Tables */
     .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-sm); margin-bottom: var(--ds-spacing-8); }
-    .ds-token-table th { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-text-secondary); }
+    .ds-token-table th { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
     .ds-token-table td { padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
     .ds-token-table code { font-size: var(--ds-font-size-xs); font-family: var(--ds-font-family-mono); }
     /* Callouts */
-    .ds-callout { padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-6); font-size: var(--ds-font-size-sm); line-height: var(--ds-line-height-relaxed); color: var(--ds-text-default); }
+    .ds-callout { padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-6); font-size: var(--ds-font-size-sm); line-height: var(--ds-line-height-relaxed); color: var(--ds-content-default); }
     .ds-callout--info { background-color: var(--ds-feedback-info-background); border: var(--ds-border-width-1) solid var(--ds-feedback-info-border); }
     .ds-callout--success { background-color: var(--ds-feedback-success-background); border: var(--ds-border-width-1) solid var(--ds-feedback-success-border); }
     .ds-callout--warning { background-color: var(--ds-feedback-warning-background); border: var(--ds-border-width-1) solid var(--ds-feedback-warning-border); }
@@ -23,18 +23,18 @@
     .ds-dodont__item { border-radius: var(--ds-radius-lg); overflow: hidden; }
     .ds-dodont__preview { padding: var(--ds-spacing-6); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg) var(--ds-radius-lg) 0 0; display: flex; flex-wrap: wrap; gap: var(--ds-spacing-3); align-items: center; justify-content: center; }
     .ds-dodont__label { padding: var(--ds-spacing-2) var(--ds-spacing-4); font-size: var(--ds-font-size-sm); font-weight: var(--ds-font-weight-semibold); }
-    .ds-dodont__label--do { background-color: var(--ds-feedback-success-background); color: var(--ds-feedback-success-text); border-top: 3px solid var(--ds-feedback-success-default); }
-    .ds-dodont__label--dont { background-color: var(--ds-feedback-error-background); color: var(--ds-feedback-error-text); border-top: 3px solid var(--ds-feedback-error-default); }
-    .ds-dodont__desc { padding: 0 var(--ds-spacing-4) var(--ds-spacing-3); font-size: var(--ds-font-size-sm); color: var(--ds-text-secondary); background-color: var(--ds-background-subtle); }
+    .ds-dodont__label--do { background-color: var(--ds-feedback-success-background); color: var(--ds-feedback-success-content-default); border-top: 3px solid var(--ds-feedback-success-default); }
+    .ds-dodont__label--dont { background-color: var(--ds-feedback-error-background); color: var(--ds-feedback-error-content-default); border-top: 3px solid var(--ds-feedback-error-default); }
+    .ds-dodont__desc { padding: 0 var(--ds-spacing-4) var(--ds-spacing-3); font-size: var(--ds-font-size-sm); color: var(--ds-content-secondary); background-color: var(--ds-background-subtle); }
     /* Anatomy */
     .ds-anatomy { padding: var(--ds-spacing-8); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-4); display: flex; align-items: center; justify-content: center; position: relative; }
-    .ds-anatomy__marker { position: absolute; width: 20px; height: 20px; border-radius: 50%; background-color: var(--ds-color-primary-default); color: var(--ds-text-on-brand); font-size: 11px; font-weight: var(--ds-font-weight-bold); display: flex; align-items: center; justify-content: center; }
-    .ds-anatomy-legend { font-size: var(--ds-font-size-sm); color: var(--ds-text-secondary); margin-bottom: var(--ds-spacing-8); line-height: var(--ds-line-height-relaxed); }
-    .ds-anatomy-legend strong { color: var(--ds-text-default); }
+    .ds-anatomy__marker { position: absolute; width: 20px; height: 20px; border-radius: 50%; background-color: var(--ds-brand-default); color: var(--ds-brand-content-contrast); font-size: 11px; font-weight: var(--ds-font-weight-bold); display: flex; align-items: center; justify-content: center; }
+    .ds-anatomy-legend { font-size: var(--ds-font-size-sm); color: var(--ds-content-secondary); margin-bottom: var(--ds-spacing-8); line-height: var(--ds-line-height-relaxed); }
+    .ds-anatomy-legend strong { color: var(--ds-content-default); }
     /* Related */
     .ds-related { display: flex; gap: var(--ds-spacing-3); flex-wrap: wrap; margin-bottom: var(--ds-spacing-8); }
-    .ds-related__link { padding: var(--ds-spacing-2) var(--ds-spacing-4); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-md); font-size: var(--ds-font-size-sm); color: var(--ds-text-link-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
-    .ds-related__link:hover { border-color: var(--ds-color-primary-default); background-color: var(--ds-color-primary-muted); }
+    .ds-related__link { padding: var(--ds-spacing-2) var(--ds-spacing-4); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-md); font-size: var(--ds-font-size-sm); color: var(--ds-content-link-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
+    .ds-related__link:hover { border-color: var(--ds-brand-default); background-color: var(--ds-state-hover); }
     /* Responsive do/dont */
     @media (max-width: 768px) { .ds-dodont { grid-template-columns: 1fr; } }
   </style>
@@ -174,7 +174,7 @@
           <span class="ds-anatomy__marker" style="bottom:-22px;left:44px;">3</span>
         </div>
         <div class="ds-tab-panel" role="tabpanel" style="padding:var(--ds-spacing-4) 0;position:relative;">
-          <p style="margin:0;color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">Panel content goes here.</p>
+          <p style="margin:0;color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);">Panel content goes here.</p>
           <span class="ds-anatomy__marker" style="top:50%;right:-28px;transform:translateY(-50%);">4</span>
         </div>
       </div>
@@ -193,7 +193,7 @@
        ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Tabs padrao</span><span data-lang="en">Default tabs</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Uma aba fica ativa, as demais ficam no estado padrao. Cada aba controla um painel correspondente.</span><span data-lang="en">One tab is active, the others are in their default state. Each tab controls a corresponding panel.</span></p>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Uma aba fica ativa, as demais ficam no estado padrao. Cada aba controla um painel correspondente.</span><span data-lang="en">One tab is active, the others are in their default state. Each tab controls a corresponding panel.</span></p>
     <div class="ds-preview">
       <div class="ds-preview__tabs">
         <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
@@ -206,7 +206,7 @@
           <button class="ds-tab" role="tab" aria-selected="false" aria-controls="panel-activity" id="tab-activity" tabindex="-1">Activity</button>
         </div>
         <div class="ds-tab-panel" role="tabpanel" id="panel-overview" aria-labelledby="tab-overview" style="padding:var(--ds-spacing-4) 0;">
-          <p style="margin:0;color:var(--ds-text-secondary);">This is the Overview panel content. It provides a summary of your account status and recent activity.</p>
+          <p style="margin:0;color:var(--ds-content-secondary);">This is the Overview panel content. It provides a summary of your account status and recent activity.</p>
         </div>
       </div>
       <div class="ds-preview__code" style="display:none">
@@ -234,7 +234,7 @@
   <!-- With disabled tab -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Com aba desabilitada</span><span data-lang="en">With disabled tab</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Uma aba desabilitada nao pode ser interagida e e ignorada durante a navegacao por teclado.</span><span data-lang="en">A disabled tab cannot be interacted with and is skipped during keyboard navigation.</span></p>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Uma aba desabilitada nao pode ser interagida e e ignorada durante a navegacao por teclado.</span><span data-lang="en">A disabled tab cannot be interacted with and is skipped during keyboard navigation.</span></p>
     <div class="ds-preview">
       <div class="ds-preview__tabs">
         <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
@@ -248,7 +248,7 @@
           <button class="ds-tab" role="tab" aria-selected="false" id="tab-security" tabindex="-1">Security</button>
         </div>
         <div class="ds-tab-panel" role="tabpanel" aria-labelledby="tab-general" style="padding:var(--ds-spacing-4) 0;">
-          <p style="margin:0;color:var(--ds-text-secondary);">General settings for your account: display name, language, and timezone preferences.</p>
+          <p style="margin:0;color:var(--ds-content-secondary);">General settings for your account: display name, language, and timezone preferences.</p>
         </div>
       </div>
       <div class="ds-preview__code" style="display:none">
@@ -263,7 +263,7 @@
   <!-- Multiple tabs -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Multiplas abas</span><span data-lang="en">Multiple tabs</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">As abas rolam horizontalmente quando excedem o container.</span><span data-lang="en">Tabs scroll horizontally when they overflow the container.</span></p>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">As abas rolam horizontalmente quando excedem o container.</span><span data-lang="en">Tabs scroll horizontally when they overflow the container.</span></p>
     <div class="ds-preview">
       <div class="ds-preview__tabs">
         <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
@@ -279,7 +279,7 @@
           <button class="ds-tab" role="tab" aria-selected="false" tabindex="-1">Wiki</button>
         </div>
         <div class="ds-tab-panel" role="tabpanel" style="padding:var(--ds-spacing-4) 0;">
-          <p style="margin:0;color:var(--ds-text-secondary);">Dashboard panel showing project metrics, recent commits, and team activity overview.</p>
+          <p style="margin:0;color:var(--ds-content-secondary);">Dashboard panel showing project metrics, recent commits, and team activity overview.</p>
         </div>
       </div>
       <div class="ds-preview__code" style="display:none">
@@ -350,9 +350,9 @@
     <table class="ds-token-table">
       <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token (semantic)</th><th><span data-lang="pt">Variavel CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
       <tbody>
-        <tr><td><span data-lang="pt">texto (inativo)</span><span data-lang="en">text (inactive)</span></td><td><code>semantic.text.secondary</code></td><td><code>--ds-text-secondary</code></td></tr>
-        <tr><td><span data-lang="pt">texto (ativo)</span><span data-lang="en">text (active)</span></td><td><code>semantic.color.primary.default</code></td><td><code>--ds-color-primary-default</code></td></tr>
-        <tr><td><span data-lang="pt">indicador ativo</span><span data-lang="en">active indicator</span></td><td><code>semantic.color.primary.default</code></td><td><code>--ds-color-primary-default</code></td></tr>
+        <tr><td><span data-lang="pt">texto (inativo)</span><span data-lang="en">text (inactive)</span></td><td><code>semantic.text.secondary</code></td><td><code>--ds-content-secondary</code></td></tr>
+        <tr><td><span data-lang="pt">texto (ativo)</span><span data-lang="en">text (active)</span></td><td><code>semantic.color.primary.default</code></td><td><code>--ds-brand-default</code></td></tr>
+        <tr><td><span data-lang="pt">indicador ativo</span><span data-lang="en">active indicator</span></td><td><code>semantic.color.primary.default</code></td><td><code>--ds-brand-default</code></td></tr>
         <tr><td><span data-lang="pt">fundo (hover)</span><span data-lang="en">background (hover)</span></td><td><code>semantic.state.hover</code></td><td><code>--ds-state-hover</code></td></tr>
         <tr><td>focus ring</td><td><code>semantic.focus.ring.*</code></td><td><code>--ds-focus-ring-width</code>, <code>--ds-focus-ring-offset</code>, <code>--ds-focus-ring-color</code></td></tr>
       </tbody>
@@ -391,7 +391,7 @@
         <tr><td><code>Tab</code> <span data-lang="pt">(da lista)</span><span data-lang="en">(from list)</span></td><td><span data-lang="pt">Move o foco para o conteudo do painel ativo</span><span data-lang="en">Moves focus into the active panel content</span></td></tr>
       </tbody>
     </table>
-    <p style="margin-top:var(--ds-spacing-2);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
+    <p style="margin-top:var(--ds-spacing-2);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);">
       <span data-lang="pt">Abas desabilitadas sao ignoradas na navegacao por setas. Apenas a aba ativa esta na sequencia <code>Tab</code> (<code>tabindex="0"</code>); todas as outras tem <code>tabindex="-1"</code>.</span><span data-lang="en">Disabled tabs are skipped during arrow key navigation. Only the active tab is in the <code>Tab</code> sequence (<code>tabindex="0"</code>); all others have <code>tabindex="-1"</code>.</span>
     </p>
   </div>

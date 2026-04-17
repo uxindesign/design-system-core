@@ -17,74 +17,74 @@
    Solid style (filled background)
    --------------------------------------------------------- */
 .ds-badge--primary.ds-badge--solid {
-  background-color: var(--ds-color-primary-default);
-  color: var(--ds-color-primary-foreground);
+  background-color: var(--ds-brand-default);
+  color: var(--ds-brand-content-contrast);
 }
 
 .ds-badge--secondary.ds-badge--solid {
-  background-color: var(--ds-color-secondary-default);
-  color: var(--ds-color-secondary-foreground);
+  background-color: var(--ds-accent-default);
+  color: var(--ds-accent-content-contrast);
 }
 
 .ds-badge--success.ds-badge--solid {
   background-color: var(--ds-feedback-success-default);
-  color: var(--ds-feedback-success-foreground);
+  color: var(--ds-feedback-success-content-contrast);
 }
 
 .ds-badge--warning.ds-badge--solid {
   background-color: var(--ds-feedback-warning-default);
-  color: var(--ds-feedback-warning-foreground);
+  color: var(--ds-feedback-warning-content-contrast);
 }
 
 .ds-badge--error.ds-badge--solid {
   background-color: var(--ds-feedback-error-default);
-  color: var(--ds-feedback-error-foreground);
+  color: var(--ds-feedback-error-content-contrast);
 }
 
 .ds-badge--info.ds-badge--solid {
   background-color: var(--ds-feedback-info-default);
-  color: var(--ds-feedback-info-foreground);
+  color: var(--ds-feedback-info-content-contrast);
 }
 
 .ds-badge--neutral.ds-badge--solid {
   background-color: var(--ds-color-neutral-600);
-  color: var(--ds-text-on-brand);
+  color: var(--ds-brand-content-contrast);
 }
 
 /* ---------------------------------------------------------
    Subtle style (light background)
    --------------------------------------------------------- */
 .ds-badge--primary.ds-badge--subtle {
-  background-color: var(--ds-color-primary-subtle);
-  color: var(--ds-color-primary-text);
+  background-color: var(--ds-brand-subtle);
+  color: var(--ds-brand-content-default);
 }
 
 .ds-badge--secondary.ds-badge--subtle {
-  background-color: var(--ds-color-secondary-subtle);
-  color: var(--ds-color-secondary-text);
+  background-color: var(--ds-accent-subtle);
+  color: var(--ds-accent-content-default);
 }
 
 .ds-badge--success.ds-badge--subtle {
   background-color: var(--ds-feedback-success-subtle);
-  color: var(--ds-feedback-success-text);
+  color: var(--ds-feedback-success-content-default);
 }
 
 .ds-badge--warning.ds-badge--subtle {
   background-color: var(--ds-feedback-warning-subtle);
-  color: var(--ds-feedback-warning-text);
+  color: var(--ds-feedback-warning-content-default);
 }
 
 .ds-badge--error.ds-badge--subtle {
   background-color: var(--ds-feedback-error-subtle);
-  color: var(--ds-feedback-error-text);
+  color: var(--ds-feedback-error-content-default);
 }
 
 .ds-badge--info.ds-badge--subtle {
   background-color: var(--ds-feedback-info-subtle);
-  color: var(--ds-feedback-info-text);
+  color: var(--ds-feedback-info-content-default);
 }
 
 .ds-badge--neutral.ds-badge--subtle {
-  background-color: var(--ds-background-muted);
-  color: var(--ds-text-secondary);
+  background-color: var(--ds-state-disabled-background);
+  color: var(--ds-content-secondary);
 }

@@ -8,16 +8,16 @@
   <link rel="stylesheet" href="layout.css">
   <style>
     .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-sm); margin-bottom: var(--ds-spacing-8); }
-    .ds-token-table th { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-text-secondary); }
+    .ds-token-table th { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
     .ds-token-table td { padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
     .ds-token-table code { font-size: var(--ds-font-size-xs); font-family: var(--ds-font-family-mono); }
     .ds-type-sample { margin-bottom: var(--ds-spacing-6); padding: var(--ds-spacing-4); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg); }
-    .ds-type-sample__preview { margin-bottom: var(--ds-spacing-2); color: var(--ds-text-default); }
-    .ds-type-sample__meta { display: flex; flex-wrap: wrap; gap: var(--ds-spacing-3); font-size: var(--ds-font-size-xs); color: var(--ds-text-secondary); font-family: var(--ds-font-family-mono); }
+    .ds-type-sample__preview { margin-bottom: var(--ds-spacing-2); color: var(--ds-content-default); }
+    .ds-type-sample__meta { display: flex; flex-wrap: wrap; gap: var(--ds-spacing-3); font-size: var(--ds-font-size-xs); color: var(--ds-content-secondary); font-family: var(--ds-font-family-mono); }
     .ds-font-preview { padding: var(--ds-spacing-6); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-4); }
-    .ds-font-preview__name { font-size: var(--ds-font-size-sm); font-weight: var(--ds-font-weight-semibold); color: var(--ds-text-secondary); margin-bottom: var(--ds-spacing-2); }
-    .ds-font-preview__sample { font-size: var(--ds-font-size-2xl); color: var(--ds-text-default); margin-bottom: var(--ds-spacing-1); }
-    .ds-font-preview__chars { font-size: var(--ds-font-size-sm); color: var(--ds-text-tertiary); }
+    .ds-font-preview__name { font-size: var(--ds-font-size-sm); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); margin-bottom: var(--ds-spacing-2); }
+    .ds-font-preview__sample { font-size: var(--ds-font-size-2xl); color: var(--ds-content-default); margin-bottom: var(--ds-spacing-1); }
+    .ds-font-preview__chars { font-size: var(--ds-font-size-sm); color: var(--ds-content-tertiary); }
   </style>
   <script>
     (function(){var l=localStorage.getItem('ds-lang');if(l)document.documentElement.setAttribute('lang',l)})();
@@ -162,7 +162,7 @@
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Estilos de Texto (24 classes utilitarias)</span><span data-lang="en">Text Styles (24 utility classes)</span></h2>
 
-    <h3 style="margin:var(--ds-spacing-4) 0 var(--ds-spacing-2);color:var(--ds-text-secondary)">Display</h3>
+    <h3 style="margin:var(--ds-spacing-4) 0 var(--ds-spacing-2);color:var(--ds-content-secondary)">Display</h3>
     <div class="ds-type-sample">
       <div class="ds-type-sample__preview ds-text-display-2xl">Display 2XL</div>
       <div class="ds-type-sample__meta"><span>.ds-text-display-2xl</span><span>bold</span><span>72px</span><span>line-height: 1.25</span><span>letter-spacing: -0.5px</span></div>
@@ -184,7 +184,7 @@
       <div class="ds-type-sample__meta"><span>.ds-text-display-sm</span><span>bold</span><span>40px</span><span>line-height: 1.25</span><span>letter-spacing: normal</span></div>
     </div>
 
-    <h3 style="margin:var(--ds-spacing-6) 0 var(--ds-spacing-2);color:var(--ds-text-secondary)">Heading</h3>
+    <h3 style="margin:var(--ds-spacing-6) 0 var(--ds-spacing-2);color:var(--ds-content-secondary)">Heading</h3>
     <div class="ds-type-sample">
       <div class="ds-type-sample__preview ds-text-heading-xl">Heading XL</div>
       <div class="ds-type-sample__meta"><span>.ds-text-heading-xl</span><span>bold</span><span>32px</span><span>line-height: 1.375</span><span>letter-spacing: -0.5px</span></div>
@@ -206,7 +206,7 @@
       <div class="ds-type-sample__meta"><span>.ds-text-heading-xs</span><span>semibold</span><span>18px</span><span>line-height: 1.375</span></div>
     </div>
 
-    <h3 style="margin:var(--ds-spacing-6) 0 var(--ds-spacing-2);color:var(--ds-text-secondary)">Body</h3>
+    <h3 style="margin:var(--ds-spacing-6) 0 var(--ds-spacing-2);color:var(--ds-content-secondary)">Body</h3>
     <div class="ds-type-sample">
       <div class="ds-type-sample__preview ds-text-body-lg">Body LG -- The quick brown fox jumps over the lazy dog.</div>
       <div class="ds-type-sample__meta"><span>.ds-text-body-lg</span><span>regular</span><span>18px</span><span>line-height: 1.5</span></div>
@@ -224,7 +224,7 @@
       <div class="ds-type-sample__meta"><span>.ds-text-body-xs</span><span>regular</span><span>12px</span><span>line-height: 1.5</span></div>
     </div>
 
-    <h3 style="margin:var(--ds-spacing-6) 0 var(--ds-spacing-2);color:var(--ds-text-secondary)">Label</h3>
+    <h3 style="margin:var(--ds-spacing-6) 0 var(--ds-spacing-2);color:var(--ds-content-secondary)">Label</h3>
     <div class="ds-type-sample">
       <div class="ds-type-sample__preview ds-text-label-lg">Label LG</div>
       <div class="ds-type-sample__meta"><span>.ds-text-label-lg</span><span>medium</span><span>16px</span><span>line-height: 1.375</span><span>letter-spacing: 0.5px</span></div>
@@ -242,7 +242,7 @@
       <div class="ds-type-sample__meta"><span>.ds-text-label-xs</span><span>medium</span><span>11px</span><span>line-height: 1.375</span><span>letter-spacing: 0.5px</span></div>
     </div>
 
-    <h3 style="margin:var(--ds-spacing-6) 0 var(--ds-spacing-2);color:var(--ds-text-secondary)">Caption</h3>
+    <h3 style="margin:var(--ds-spacing-6) 0 var(--ds-spacing-2);color:var(--ds-content-secondary)">Caption</h3>
     <div class="ds-type-sample">
       <div class="ds-type-sample__preview ds-text-caption-md">Caption MD -- Supporting text for form fields and metadata.</div>
       <div class="ds-type-sample__meta"><span>.ds-text-caption-md</span><span>regular</span><span>12px</span><span>line-height: 1.5</span></div>
@@ -252,7 +252,7 @@
       <div class="ds-type-sample__meta"><span>.ds-text-caption-sm</span><span>regular</span><span>11px</span><span>line-height: 1.5</span></div>
     </div>
 
-    <h3 style="margin:var(--ds-spacing-6) 0 var(--ds-spacing-2);color:var(--ds-text-secondary)">Overline</h3>
+    <h3 style="margin:var(--ds-spacing-6) 0 var(--ds-spacing-2);color:var(--ds-content-secondary)">Overline</h3>
     <div class="ds-type-sample">
       <div class="ds-type-sample__preview ds-text-overline-md">Overline MD</div>
       <div class="ds-type-sample__meta"><span>.ds-text-overline-md</span><span>semibold</span><span>12px</span><span>line-height: 1.375</span><span>letter-spacing: 1.5px</span><span>uppercase</span></div>
@@ -262,7 +262,7 @@
       <div class="ds-type-sample__meta"><span>.ds-text-overline-sm</span><span>semibold</span><span>11px</span><span>line-height: 1.375</span><span>letter-spacing: 1.5px</span><span>uppercase</span></div>
     </div>
 
-    <h3 style="margin:var(--ds-spacing-6) 0 var(--ds-spacing-2);color:var(--ds-text-secondary)">Code</h3>
+    <h3 style="margin:var(--ds-spacing-6) 0 var(--ds-spacing-2);color:var(--ds-content-secondary)">Code</h3>
     <div class="ds-type-sample">
       <div class="ds-type-sample__preview ds-text-code-md">const greeting = "Hello, World!";</div>
       <div class="ds-type-sample__meta"><span>.ds-text-code-md</span><span>regular</span><span>14px</span><span>line-height: 1.5</span><span>DM Mono</span></div>

@@ -13,7 +13,7 @@
    ========================================================================== */
 
 .ds-breadcrumb__item {
-  color: var(--ds-text-link-default);
+  color: var(--ds-content-link-default);
   text-decoration: none;
 }
 
@@ -31,7 +31,7 @@
    ========================================================================== */
 
 .ds-breadcrumb__item--current {
-  color: var(--ds-text-default);
+  color: var(--ds-content-default);
   font-weight: var(--ds-font-weight-medium);
   pointer-events: none;
 }
@@ -40,5 +40,5 @@
    ========================================================================== */
 
 .ds-breadcrumb__separator {
-  color: var(--ds-text-tertiary);
+  color: var(--ds-content-tertiary);
 }

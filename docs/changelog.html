@@ -9,20 +9,20 @@
   <style>
     .ds-changelog { margin-bottom: var(--ds-spacing-16); }
     .ds-changelog__version { display: flex; align-items: baseline; gap: var(--ds-spacing-3); margin-bottom: var(--ds-spacing-2); }
-    .ds-changelog__tag { font-size: var(--ds-font-size-sm); font-weight: var(--ds-font-weight-semibold); padding: var(--ds-spacing-0-5) var(--ds-spacing-2); border-radius: var(--ds-radius-sm); background-color: var(--ds-color-primary-subtle); color: var(--ds-color-primary-text); font-family: var(--ds-font-family-mono); }
-    .ds-changelog__date { font-size: var(--ds-font-size-sm); color: var(--ds-text-tertiary); }
-    .ds-changelog__summary { font-size: var(--ds-font-size-md); color: var(--ds-text-secondary); margin-bottom: var(--ds-spacing-4); line-height: var(--ds-line-height-relaxed); }
+    .ds-changelog__tag { font-size: var(--ds-font-size-sm); font-weight: var(--ds-font-weight-semibold); padding: var(--ds-spacing-0-5) var(--ds-spacing-2); border-radius: var(--ds-radius-sm); background-color: var(--ds-brand-subtle); color: var(--ds-brand-content-default); font-family: var(--ds-font-family-mono); }
+    .ds-changelog__date { font-size: var(--ds-font-size-sm); color: var(--ds-content-tertiary); }
+    .ds-changelog__summary { font-size: var(--ds-font-size-md); color: var(--ds-content-secondary); margin-bottom: var(--ds-spacing-4); line-height: var(--ds-line-height-relaxed); }
     .ds-changelog__group { margin-bottom: var(--ds-spacing-6); }
     .ds-changelog__group-title { font-size: var(--ds-font-size-sm); font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-2); display: inline-flex; align-items: center; gap: var(--ds-spacing-2); }
     .ds-changelog__badge { font-size: 11px; font-weight: var(--ds-font-weight-semibold); padding: 1px var(--ds-spacing-1-5); border-radius: var(--ds-radius-sm); text-transform: uppercase; letter-spacing: var(--ds-letter-spacing-wider); }
-    .ds-changelog__badge--added { background-color: var(--ds-feedback-success-background); color: var(--ds-feedback-success-text); }
-    .ds-changelog__badge--changed { background-color: var(--ds-feedback-info-background); color: var(--ds-feedback-info-text); }
-    .ds-changelog__badge--fixed { background-color: var(--ds-feedback-warning-background); color: var(--ds-feedback-warning-text); }
-    .ds-changelog__badge--removed { background-color: var(--ds-feedback-error-background); color: var(--ds-feedback-error-text); }
+    .ds-changelog__badge--added { background-color: var(--ds-feedback-success-background); color: var(--ds-feedback-success-content-default); }
+    .ds-changelog__badge--changed { background-color: var(--ds-feedback-info-background); color: var(--ds-feedback-info-content-default); }
+    .ds-changelog__badge--fixed { background-color: var(--ds-feedback-warning-background); color: var(--ds-feedback-warning-content-default); }
+    .ds-changelog__badge--removed { background-color: var(--ds-feedback-error-background); color: var(--ds-feedback-error-content-default); }
     .ds-changelog__list { list-style: none; padding: 0; margin: 0; }
-    .ds-changelog__list li { font-size: var(--ds-font-size-sm); color: var(--ds-text-default); padding: var(--ds-spacing-1-5) 0; border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); line-height: var(--ds-line-height-relaxed); }
+    .ds-changelog__list li { font-size: var(--ds-font-size-sm); color: var(--ds-content-default); padding: var(--ds-spacing-1-5) 0; border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); line-height: var(--ds-line-height-relaxed); }
     .ds-changelog__list li:last-child { border-bottom: none; }
-    .ds-changelog__list code { font-size: var(--ds-font-size-xs); font-family: var(--ds-font-family-mono); background-color: var(--ds-background-muted); padding: 1px var(--ds-spacing-1); border-radius: var(--ds-radius-sm); }
+    .ds-changelog__list code { font-size: var(--ds-font-size-xs); font-family: var(--ds-font-family-mono); background-color: var(--ds-state-disabled-background); padding: 1px var(--ds-spacing-1); border-radius: var(--ds-radius-sm); }
     .ds-changelog__divider { border: none; border-top: var(--ds-border-width-1) solid var(--ds-border-default); margin: var(--ds-spacing-10) 0; }
   </style>
   <script>
@@ -121,7 +121,7 @@
 <main class="ds-main">
   <div class="ds-section">
     <h1 class="ds-section__title"><span data-lang="pt">Changelog</span><span data-lang="en">Changelog</span></h1>
-    <p class="ds-section__subtitle"><span data-lang="pt">Mudanças notáveis no design system. Segue as convenções do <a href="https://keepachangelog.com/" style="color:var(--ds-text-link-default)">Keep a Changelog</a>.</span><span data-lang="en">Notable changes to the design system. Follows <a href="https://keepachangelog.com/" style="color:var(--ds-text-link-default)">Keep a Changelog</a> conventions.</span></p>
+    <p class="ds-section__subtitle"><span data-lang="pt">Mudanças notáveis no design system. Segue as convenções do <a href="https://keepachangelog.com/" style="color:var(--ds-content-link-default)">Keep a Changelog</a>.</span><span data-lang="en">Notable changes to the design system. Follows <a href="https://keepachangelog.com/" style="color:var(--ds-content-link-default)">Keep a Changelog</a> conventions.</span></p>
   </div>
 
   <!-- ============================================================

@@ -9,11 +9,11 @@
   <style>
     /* Tables */
     .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-sm); margin-bottom: var(--ds-spacing-8); }
-    .ds-token-table th { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-text-secondary); }
+    .ds-token-table th { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
     .ds-token-table td { padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
     .ds-token-table code { font-size: var(--ds-font-size-xs); font-family: var(--ds-font-family-mono); }
     /* Callouts */
-    .ds-callout { padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-6); font-size: var(--ds-font-size-sm); line-height: var(--ds-line-height-relaxed); color: var(--ds-text-default); }
+    .ds-callout { padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-6); font-size: var(--ds-font-size-sm); line-height: var(--ds-line-height-relaxed); color: var(--ds-content-default); }
     .ds-callout--info { background-color: var(--ds-feedback-info-background); border: var(--ds-border-width-1) solid var(--ds-feedback-info-border); }
     .ds-callout--success { background-color: var(--ds-feedback-success-background); border: var(--ds-border-width-1) solid var(--ds-feedback-success-border); }
     .ds-callout--warning { background-color: var(--ds-feedback-warning-background); border: var(--ds-border-width-1) solid var(--ds-feedback-warning-border); }
@@ -23,18 +23,18 @@
     .ds-dodont__item { border-radius: var(--ds-radius-lg); overflow: hidden; }
     .ds-dodont__preview { padding: var(--ds-spacing-6); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg) var(--ds-radius-lg) 0 0; display: flex; flex-wrap: wrap; gap: var(--ds-spacing-3); align-items: center; justify-content: center; }
     .ds-dodont__label { padding: var(--ds-spacing-2) var(--ds-spacing-4); font-size: var(--ds-font-size-sm); font-weight: var(--ds-font-weight-semibold); }
-    .ds-dodont__label--do { background-color: var(--ds-feedback-success-background); color: var(--ds-feedback-success-text); border-top: 3px solid var(--ds-feedback-success-default); }
-    .ds-dodont__label--dont { background-color: var(--ds-feedback-error-background); color: var(--ds-feedback-error-text); border-top: 3px solid var(--ds-feedback-error-default); }
-    .ds-dodont__desc { padding: 0 var(--ds-spacing-4) var(--ds-spacing-3); font-size: var(--ds-font-size-sm); color: var(--ds-text-secondary); background-color: var(--ds-background-subtle); }
+    .ds-dodont__label--do { background-color: var(--ds-feedback-success-background); color: var(--ds-feedback-success-content-default); border-top: 3px solid var(--ds-feedback-success-default); }
+    .ds-dodont__label--dont { background-color: var(--ds-feedback-error-background); color: var(--ds-feedback-error-content-default); border-top: 3px solid var(--ds-feedback-error-default); }
+    .ds-dodont__desc { padding: 0 var(--ds-spacing-4) var(--ds-spacing-3); font-size: var(--ds-font-size-sm); color: var(--ds-content-secondary); background-color: var(--ds-background-subtle); }
     /* Anatomy */
     .ds-anatomy { padding: var(--ds-spacing-8); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-4); display: flex; align-items: center; justify-content: center; position: relative; }
-    .ds-anatomy__marker { position: absolute; width: 20px; height: 20px; border-radius: 50%; background-color: var(--ds-color-primary-default); color: var(--ds-text-on-brand); font-size: 11px; font-weight: var(--ds-font-weight-bold); display: flex; align-items: center; justify-content: center; }
-    .ds-anatomy-legend { font-size: var(--ds-font-size-sm); color: var(--ds-text-secondary); margin-bottom: var(--ds-spacing-8); line-height: var(--ds-line-height-relaxed); }
-    .ds-anatomy-legend strong { color: var(--ds-text-default); }
+    .ds-anatomy__marker { position: absolute; width: 20px; height: 20px; border-radius: 50%; background-color: var(--ds-brand-default); color: var(--ds-brand-content-contrast); font-size: 11px; font-weight: var(--ds-font-weight-bold); display: flex; align-items: center; justify-content: center; }
+    .ds-anatomy-legend { font-size: var(--ds-font-size-sm); color: var(--ds-content-secondary); margin-bottom: var(--ds-spacing-8); line-height: var(--ds-line-height-relaxed); }
+    .ds-anatomy-legend strong { color: var(--ds-content-default); }
     /* Related */
     .ds-related { display: flex; gap: var(--ds-spacing-3); flex-wrap: wrap; margin-bottom: var(--ds-spacing-8); }
-    .ds-related__link { padding: var(--ds-spacing-2) var(--ds-spacing-4); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-md); font-size: var(--ds-font-size-sm); color: var(--ds-text-link-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
-    .ds-related__link:hover { border-color: var(--ds-color-primary-default); background-color: var(--ds-color-primary-muted); }
+    .ds-related__link { padding: var(--ds-spacing-2) var(--ds-spacing-4); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-md); font-size: var(--ds-font-size-sm); color: var(--ds-content-link-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
+    .ds-related__link:hover { border-color: var(--ds-brand-default); background-color: var(--ds-state-hover); }
     /* Responsive do/dont */
     @media (max-width: 768px) { .ds-dodont { grid-template-columns: 1fr; } }
   </style>
@@ -520,7 +520,7 @@
       <div class="ds-dodont__item">
         <div class="ds-dodont__preview" style="flex-direction:column;align-items:stretch;max-width:300px;margin:0 auto;">
           <div style="margin-bottom:var(--ds-spacing-1);">
-            <span style="font-size:var(--ds-font-size-sm);color:var(--ds-text-default);">Email</span>
+            <span style="font-size:var(--ds-font-size-sm);color:var(--ds-content-default);">Email</span>
           </div>
           <input class="ds-input__field" type="email" placeholder="you@example.com">
         </div>
@@ -581,10 +581,10 @@
     <table class="ds-token-table">
       <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token (semantic)</th><th><span data-lang="pt">Variavel CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
       <tbody>
-        <tr><td><span data-lang="pt">cor do label</span><span data-lang="en">label color</span></td><td><code>semantic.text.default</code></td><td><code>--ds-text-default</code></td></tr>
-        <tr><td><span data-lang="pt">cor do obrigatorio</span><span data-lang="en">required color</span></td><td><code>semantic.feedback.error.text</code></td><td><code>--ds-feedback-error-text</code></td></tr>
-        <tr><td><span data-lang="pt">cor do auxiliar</span><span data-lang="en">helper color</span></td><td><code>semantic.text.tertiary</code></td><td><code>--ds-text-tertiary</code></td></tr>
-        <tr><td><span data-lang="pt">cor do erro</span><span data-lang="en">error color</span></td><td><code>semantic.feedback.error.text</code></td><td><code>--ds-feedback-error-text</code></td></tr>
+        <tr><td><span data-lang="pt">cor do label</span><span data-lang="en">label color</span></td><td><code>semantic.text.default</code></td><td><code>--ds-content-default</code></td></tr>
+        <tr><td><span data-lang="pt">cor do obrigatorio</span><span data-lang="en">required color</span></td><td><code>semantic.feedback.error.text</code></td><td><code>--ds-feedback-error-content-default</code></td></tr>
+        <tr><td><span data-lang="pt">cor do auxiliar</span><span data-lang="en">helper color</span></td><td><code>semantic.text.tertiary</code></td><td><code>--ds-content-tertiary</code></td></tr>
+        <tr><td><span data-lang="pt">cor do erro</span><span data-lang="en">error color</span></td><td><code>semantic.feedback.error.text</code></td><td><code>--ds-feedback-error-content-default</code></td></tr>
         <tr><td><span data-lang="pt">espacamento (label para input)</span><span data-lang="en">spacing (label to input)</span></td><td><code>semantic.space.gap.xs</code></td><td><code>--ds-space-gap-xs</code></td></tr>
         <tr><td><span data-lang="pt">espacamento (input para auxiliar)</span><span data-lang="en">spacing (input to helper)</span></td><td><code>semantic.space.gap.xs</code></td><td><code>--ds-space-gap-xs</code></td></tr>
       </tbody>
@@ -618,7 +618,7 @@
        ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Interacao por teclado</span><span data-lang="en">Keyboard interaction</span></h2>
-    <p style="color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);margin-bottom:var(--ds-spacing-4);">
+    <p style="color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);margin-bottom:var(--ds-spacing-4);">
       <span data-lang="pt">Form Field e apenas um container de layout. Nao possui interacoes de teclado proprias. O comportamento do teclado e herdado do componente de input filho (Input, Textarea ou Select).</span><span data-lang="en">Form Field is a layout container only. It has no keyboard interactions of its own. Keyboard behavior is inherited from the child input component (Input, Textarea, or Select).</span>
     </p>
   </div>

@@ -143,8 +143,8 @@ const indexCss = `/* Auto-generated — do not edit. Run: npm run build:tokens *
 writeFileSync(`${buildPath}index.css`, indexCss);
 
 console.log('Done. Output:');
-console.log('  css/tokens/generated/foundation.css  (217 vars)');
-console.log('  css/tokens/generated/theme-light.css (104 vars)');
-console.log('  css/tokens/generated/theme-dark.css  (104 vars)');
-console.log('  css/tokens/generated/component.css   (16 vars)');
+console.log('  css/tokens/generated/foundation.css  (225 vars)');
+console.log('  css/tokens/generated/theme-light.css (132 vars)');
+console.log('  css/tokens/generated/theme-dark.css  (132 vars)');
+console.log('  css/tokens/generated/component.css   (131 vars)');
 console.log('  css/tokens/generated/index.css');

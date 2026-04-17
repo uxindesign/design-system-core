@@ -9,11 +9,11 @@
   <style>
     /* Tables */
     .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-sm); margin-bottom: var(--ds-spacing-8); }
-    .ds-token-table th { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-text-secondary); }
+    .ds-token-table th { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
     .ds-token-table td { padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
     .ds-token-table code { font-size: var(--ds-font-size-xs); font-family: var(--ds-font-family-mono); }
     /* Callouts */
-    .ds-callout { padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-6); font-size: var(--ds-font-size-sm); line-height: var(--ds-line-height-relaxed); color: var(--ds-text-default); }
+    .ds-callout { padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-6); font-size: var(--ds-font-size-sm); line-height: var(--ds-line-height-relaxed); color: var(--ds-content-default); }
     .ds-callout--info { background-color: var(--ds-feedback-info-background); border: var(--ds-border-width-1) solid var(--ds-feedback-info-border); }
     .ds-callout--success { background-color: var(--ds-feedback-success-background); border: var(--ds-border-width-1) solid var(--ds-feedback-success-border); }
     .ds-callout--warning { background-color: var(--ds-feedback-warning-background); border: var(--ds-border-width-1) solid var(--ds-feedback-warning-border); }
@@ -23,13 +23,13 @@
     .ds-dodont__item { border-radius: var(--ds-radius-lg); overflow: hidden; }
     .ds-dodont__preview { padding: var(--ds-spacing-6); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg) var(--ds-radius-lg) 0 0; display: flex; flex-wrap: wrap; gap: var(--ds-spacing-3); align-items: center; justify-content: center; }
     .ds-dodont__label { padding: var(--ds-spacing-2) var(--ds-spacing-4); font-size: var(--ds-font-size-sm); font-weight: var(--ds-font-weight-semibold); }
-    .ds-dodont__label--do { background-color: var(--ds-feedback-success-background); color: var(--ds-feedback-success-text); border-top: 3px solid var(--ds-feedback-success-default); }
-    .ds-dodont__label--dont { background-color: var(--ds-feedback-error-background); color: var(--ds-feedback-error-text); border-top: 3px solid var(--ds-feedback-error-default); }
-    .ds-dodont__desc { padding: 0 var(--ds-spacing-4) var(--ds-spacing-3); font-size: var(--ds-font-size-sm); color: var(--ds-text-secondary); background-color: var(--ds-background-subtle); }
+    .ds-dodont__label--do { background-color: var(--ds-feedback-success-background); color: var(--ds-feedback-success-content-default); border-top: 3px solid var(--ds-feedback-success-default); }
+    .ds-dodont__label--dont { background-color: var(--ds-feedback-error-background); color: var(--ds-feedback-error-content-default); border-top: 3px solid var(--ds-feedback-error-default); }
+    .ds-dodont__desc { padding: 0 var(--ds-spacing-4) var(--ds-spacing-3); font-size: var(--ds-font-size-sm); color: var(--ds-content-secondary); background-color: var(--ds-background-subtle); }
     /* Related */
     .ds-related { display: flex; gap: var(--ds-spacing-3); flex-wrap: wrap; margin-bottom: var(--ds-spacing-8); }
-    .ds-related__link { padding: var(--ds-spacing-2) var(--ds-spacing-4); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-md); font-size: var(--ds-font-size-sm); color: var(--ds-text-link-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
-    .ds-related__link:hover { border-color: var(--ds-color-primary-default); background-color: var(--ds-color-primary-muted); }
+    .ds-related__link { padding: var(--ds-spacing-2) var(--ds-spacing-4); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-md); font-size: var(--ds-font-size-sm); color: var(--ds-content-link-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
+    .ds-related__link:hover { border-color: var(--ds-brand-default); background-color: var(--ds-state-hover); }
     /* Responsive do/dont */
     @media (max-width: 768px) { .ds-dodont { grid-template-columns: 1fr; } }
   </style>
@@ -147,7 +147,7 @@
     </div>
     <div class="ds-callout ds-callout--warning">
       <div class="ds-callout__title"><span data-lang="pt">Nao use spinners quando</span><span data-lang="en">Don't use spinners when</span></div>
-      <span data-lang="pt">A estrutura do conteudo e conhecida antecipadamente (use <a href="skeleton.html" style="color:var(--ds-text-link-default)">Skeleton</a>) ou a espera e muito curta (&lt;300ms) — mostrar um spinner para operacoes breves causa desconforto.</span><span data-lang="en">The content structure is known ahead of time (use <a href="skeleton.html" style="color:var(--ds-text-link-default)">Skeleton</a> instead) or the wait is very short (&lt;300ms) -- showing a spinner for brief operations feels jarring.</span>
+      <span data-lang="pt">A estrutura do conteudo e conhecida antecipadamente (use <a href="skeleton.html" style="color:var(--ds-content-link-default)">Skeleton</a>) ou a espera e muito curta (&lt;300ms) — mostrar um spinner para operacoes breves causa desconforto.</span><span data-lang="en">The content structure is known ahead of time (use <a href="skeleton.html" style="color:var(--ds-content-link-default)">Skeleton</a> instead) or the wait is very short (&lt;300ms) -- showing a spinner for brief operations feels jarring.</span>
     </div>
   </div>
 
@@ -156,7 +156,7 @@
        ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Tamanhos</span><span data-lang="en">Sizes</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Tres tamanhos para diferentes contextos: sm (16px), md (24px), lg (32px).</span><span data-lang="en">Three sizes to suit different contexts: sm (16px), md (24px), lg (32px).</span></p>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Tres tamanhos para diferentes contextos: sm (16px), md (24px), lg (32px).</span><span data-lang="en">Three sizes to suit different contexts: sm (16px), md (24px), lg (32px).</span></p>
     <div class="ds-preview">
       <div class="ds-preview__tabs">
         <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
@@ -166,15 +166,15 @@
         <div style="display:flex;align-items:center;gap:var(--ds-spacing-8);">
           <div style="text-align:center;">
             <span class="ds-spinner ds-spinner--sm" role="status" aria-label="Loading"></span>
-            <p style="margin:var(--ds-spacing-2) 0 0;font-size:var(--ds-font-size-xs);color:var(--ds-text-secondary);">sm (16px)</p>
+            <p style="margin:var(--ds-spacing-2) 0 0;font-size:var(--ds-font-size-xs);color:var(--ds-content-secondary);">sm (16px)</p>
           </div>
           <div style="text-align:center;">
             <span class="ds-spinner ds-spinner--md" role="status" aria-label="Loading"></span>
-            <p style="margin:var(--ds-spacing-2) 0 0;font-size:var(--ds-font-size-xs);color:var(--ds-text-secondary);">md (24px)</p>
+            <p style="margin:var(--ds-spacing-2) 0 0;font-size:var(--ds-font-size-xs);color:var(--ds-content-secondary);">md (24px)</p>
           </div>
           <div style="text-align:center;">
             <span class="ds-spinner ds-spinner--lg" role="status" aria-label="Loading"></span>
-            <p style="margin:var(--ds-spacing-2) 0 0;font-size:var(--ds-font-size-xs);color:var(--ds-text-secondary);">lg (32px)</p>
+            <p style="margin:var(--ds-spacing-2) 0 0;font-size:var(--ds-font-size-xs);color:var(--ds-content-secondary);">lg (32px)</p>
           </div>
         </div>
       </div>
@@ -189,22 +189,22 @@
 
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Variantes coloridas</span><span data-lang="en">Colored variants</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Defina <code>color</code> no spinner para alterar sua aparencia.</span><span data-lang="en">Set <code>color</code> on the spinner to change its appearance.</span></p>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Defina <code>color</code> no spinner para alterar sua aparencia.</span><span data-lang="en">Set <code>color</code> on the spinner to change its appearance.</span></p>
     <div class="ds-preview">
       <div class="ds-preview__tabs">
         <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
         <button class="ds-preview__tab" data-tab="code">Code</button>
       </div>
       <div class="ds-preview__canvas ds-preview__canvas--centered">
-        <span class="ds-spinner ds-spinner--md" style="color:var(--ds-color-primary-default);" role="status" aria-label="Loading"></span>
+        <span class="ds-spinner ds-spinner--md" style="color:var(--ds-brand-default);" role="status" aria-label="Loading"></span>
         <span class="ds-spinner ds-spinner--md" style="color:var(--ds-feedback-error-default);" role="status" aria-label="Loading"></span>
         <span class="ds-spinner ds-spinner--md" style="color:var(--ds-feedback-success-default, green);" role="status" aria-label="Loading"></span>
-        <span class="ds-spinner ds-spinner--md" style="color:var(--ds-text-tertiary);" role="status" aria-label="Loading"></span>
+        <span class="ds-spinner ds-spinner--md" style="color:var(--ds-content-tertiary);" role="status" aria-label="Loading"></span>
       </div>
       <div class="ds-preview__code" style="display:none">
         <button class="ds-preview__copy">Copy</button>
         <pre><code>&lt;span class="ds-spinner ds-spinner--md"
-      style="color:var(--ds-color-primary-default);"
+      style="color:var(--ds-brand-default);"
       role="status" aria-label="Loading"&gt;&lt;/span&gt;
 
 &lt;span class="ds-spinner ds-spinner--md"
@@ -216,7 +216,7 @@
 
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Estado de carregamento no botao</span><span data-lang="en">Button loading state</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Spinners dentro de botoes indicam que uma acao esta em andamento. O botao nao e interativo enquanto carrega.</span><span data-lang="en">Spinners inside buttons indicate that an action is in progress. The button is non-interactive while loading.</span></p>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Spinners dentro de botoes indicam que uma acao esta em andamento. O botao nao e interativo enquanto carrega.</span><span data-lang="en">Spinners inside buttons indicate that an action is in progress. The button is non-interactive while loading.</span></p>
     <div class="ds-preview">
       <div class="ds-preview__tabs">
         <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
@@ -256,7 +256,7 @@
 
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Carregamento centralizado</span><span data-lang="en">Centered loading</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Use um spinner grande centralizado em um container para estados de carregamento de area completa.</span><span data-lang="en">Use a large spinner centered in a container for full-area loading states.</span></p>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Use um spinner grande centralizado em um container para estados de carregamento de area completa.</span><span data-lang="en">Use a large spinner centered in a container for full-area loading states.</span></p>
     <div class="ds-preview">
       <div class="ds-preview__tabs">
         <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
@@ -265,7 +265,7 @@
       <div class="ds-preview__canvas ds-preview__canvas--centered" style="min-height:160px;" aria-busy="true">
         <div style="text-align:center;">
           <span class="ds-spinner ds-spinner--lg" role="status" aria-label="Loading content"></span>
-          <p style="margin:var(--ds-spacing-3) 0 0;font-size:var(--ds-font-size-sm);color:var(--ds-text-secondary);">Loading content...</p>
+          <p style="margin:var(--ds-spacing-3) 0 0;font-size:var(--ds-font-size-sm);color:var(--ds-content-secondary);">Loading content...</p>
         </div>
       </div>
       <div class="ds-preview__code" style="display:none">
@@ -290,15 +290,15 @@
     <div class="ds-dodont">
       <div class="ds-dodont__item">
         <div class="ds-dodont__preview" style="flex-direction:column;">
-          <span class="ds-spinner ds-spinner--md" role="status" aria-label="Loading" style="color:var(--ds-color-primary-default);"></span>
-          <span style="font-size:var(--ds-font-size-xs);color:var(--ds-text-secondary);margin-top:var(--ds-spacing-2);">Show after 300ms delay</span>
+          <span class="ds-spinner ds-spinner--md" role="status" aria-label="Loading" style="color:var(--ds-brand-default);"></span>
+          <span style="font-size:var(--ds-font-size-xs);color:var(--ds-content-secondary);margin-top:var(--ds-spacing-2);">Show after 300ms delay</span>
         </div>
         <div class="ds-dodont__label ds-dodont__label--do">Faça</div>
         <div class="ds-dodont__desc"><span data-lang="pt">Mostre o spinner apos um atraso de 300ms para evitar um flash em operacoes rapidas.</span><span data-lang="en">Show the spinner after a 300ms delay to avoid a flash for fast operations.</span></div>
       </div>
       <div class="ds-dodont__item">
         <div class="ds-dodont__preview" style="min-height:80px;">
-          <span class="ds-spinner ds-spinner--lg" role="status" aria-label="Loading" style="color:var(--ds-text-tertiary);"></span>
+          <span class="ds-spinner ds-spinner--lg" role="status" aria-label="Loading" style="color:var(--ds-content-tertiary);"></span>
         </div>
         <div class="ds-dodont__label ds-dodont__label--dont">Não faça</div>
         <div class="ds-dodont__desc"><span data-lang="pt">Nao substitua uma pagina inteira por apenas um spinner — use Skeleton placeholders para previsualizar a estrutura do layout.</span><span data-lang="en">Don't replace an entire page with just a spinner -- use Skeleton placeholders to preview the layout structure.</span></div>
@@ -314,7 +314,7 @@
     <table class="ds-token-table">
       <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token (semantic)</th><th><span data-lang="pt">Variavel CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
       <tbody>
-        <tr><td><span data-lang="pt">cor</span><span data-lang="en">color</span></td><td><code>semantic.color.primary.default</code></td><td><code>--ds-color-primary-default</code></td></tr>
+        <tr><td><span data-lang="pt">cor</span><span data-lang="en">color</span></td><td><code>semantic.color.primary.default</code></td><td><code>--ds-brand-default</code></td></tr>
         <tr><td><span data-lang="pt">duracao da animacao</span><span data-lang="en">animation duration</span></td><td><code>foundation.motion.duration.slow</code></td><td><code>--ds-duration-slow</code></td></tr>
       </tbody>
     </table>

@@ -43,7 +43,7 @@
 .ds-modal__title {
   font-size: var(--ds-font-size-lg);
   font-weight: var(--ds-font-weight-semibold);
-  color: var(--ds-text-default);
+  color: var(--ds-content-default);
   line-height: var(--ds-line-height-tight);
 }
 
@@ -53,15 +53,15 @@
   border: none;
   padding: var(--ds-spacing-1);
   cursor: pointer;
-  color: var(--ds-text-secondary);
+  color: var(--ds-content-secondary);
   border-radius: var(--ds-radius-sm);
   transition: color var(--ds-duration-fast) var(--ds-ease-default),
               background-color var(--ds-duration-fast) var(--ds-ease-default);
 }
 
 .ds-modal__close:hover {
-  color: var(--ds-text-default);
-  background-color: var(--ds-background-muted);
+  color: var(--ds-content-default);
+  background-color: var(--ds-state-hover);
 }
 
 .ds-modal__close:focus-visible {
@@ -74,7 +74,7 @@
   padding: 0 var(--ds-spacing-4) var(--ds-spacing-4);
   overflow-y: auto;
   font-size: var(--ds-font-size-sm);
-  color: var(--ds-text-default);
+  color: var(--ds-content-default);
   line-height: var(--ds-line-height-relaxed);
 }
 

@@ -109,16 +109,16 @@
         "toned": {
           "default": {
             "$type": "color",
-            "$value": "{semantic.color.primary.toned.default}",
+            "$value": "{semantic.brand.toned.default}",
             "$description": "Toned variant background. ADR-007."
           },
           "hover": {
             "$type": "color",
-            "$value": "{semantic.color.primary.toned.hover}"
+            "$value": "{semantic.brand.toned.hover}"
           },
           "active": {
             "$type": "color",
-            "$value": "{semantic.color.primary.toned.active}"
+            "$value": "{semantic.brand.toned.active}"
           },
           "disabled": {
             "$type": "color",
@@ -131,12 +131,12 @@
         "toned": {
           "default": {
             "$type": "color",
-            "$value": "{semantic.color.primary.text}",
-            "$description": "Text/icon color on toned background."
+            "$value": "{semantic.brand.content.default}",
+            "$description": "Text/icon color on toned background. ADR-011."
           },
           "disabled": {
             "$type": "color",
-            "$value": "{semantic.state.disabled.foreground}"
+            "$value": "{semantic.content.disabled}"
           }
         }
       }

@@ -11,10 +11,6 @@
         "$value": "{foundation.color.neutral.900}",
         "$description": "Subtle alternate background"
       },
-      "muted": {
-        "$type": "color",
-        "$value": "{foundation.color.neutral.800}"
-      },
       "inverse": {
         "$type": "color",
         "$value": "{foundation.color.neutral.50}"
@@ -45,16 +41,17 @@
         "$value": "{foundation.color.neutral.600}"
       }
     },
-    "text": {
+    "content": {
+      "$description": "Conteúdo sobre superfícies neutras (background, surface). Cobre texto, ícones e shapes. ADR-011.",
       "default": {
         "$type": "color",
         "$value": "{foundation.color.neutral.50}",
-        "$description": "Primary body text"
+        "$description": "Conteúdo principal."
       },
       "secondary": {
         "$type": "color",
         "$value": "{foundation.color.neutral.400}",
-        "$description": "Secondary/supporting text"
+        "$description": "Conteúdo de ênfase reduzida."
       },
       "tertiary": {
         "$type": "color",
@@ -62,7 +59,8 @@
       },
       "disabled": {
         "$type": "color",
-        "$value": "{foundation.color.neutral.600}"
+        "$value": "{foundation.color.neutral.600}",
+        "$description": "Conteúdo em estado disabled. Isento de contraste WCAG. Unifica text/disabled e state/disabled/foreground (ADR-011)."
       },
       "inverse": {
         "$type": "color",
@@ -71,110 +69,108 @@
       "link": {
         "default": {
           "$type": "color",
-          "$value": "{semantic.color.primary.default}",
-          "$description": "Default link text color"
+          "$value": "{semantic.brand.default}",
+          "$description": "Links em estado default."
         },
         "hover": {
           "$type": "color",
-          "$value": "{semantic.color.primary.hover}",
-          "$description": "Link text on hover"
+          "$value": "{semantic.brand.hover}",
+          "$description": "Links em estado hover."
         }
-      },
-      "on-brand": {
-        "$type": "color",
-        "$value": "{foundation.color.neutral.900}",
-        "$description": "Text on brand-colored backgrounds"
       }
     },
-    "color": {
-      "primary": {
+    "brand": {
+      "$description": "Identidade da marca. Agrupa fills e conteúdo da marca. ADR-011.",
+      "default": {
+        "$type": "color",
+        "$value": "{foundation.brand.primary}",
+        "$description": "Fill brand principal."
+      },
+      "hover": {
+        "$type": "color",
+        "$value": "{foundation.color.blue.300}"
+      },
+      "active": {
+        "$type": "color",
+        "$value": "{foundation.color.blue.200}"
+      },
+      "subtle": {
+        "$type": "color",
+        "$value": "{foundation.color.blue.900}"
+      },
+      "disabled": {
+        "$type": "color",
+        "$value": "#4F637D"
+      },
+      "toned": {
+        "default": {
+          "$type": "color",
+          "$value": "{foundation.color.overlay.blue-400.15}",
+          "$description": "Translucent primary bg for toned variants. 15% opacity in dark."
+        },
         "hover": {
           "$type": "color",
-          "$value": "{foundation.color.blue.300}"
+          "$value": "{foundation.color.overlay.blue-400.25}",
+          "$description": "Toned hover in dark. 25% opacity."
         },
         "active": {
           "$type": "color",
-          "$value": "{foundation.color.blue.200}"
-        },
-        "subtle": {
-          "$type": "color",
-          "$value": "{foundation.color.blue.900}"
-        },
-        "muted": {
-          "$type": "color",
-          "$value": "{foundation.color.blue.950}"
-        },
-        "foreground": {
-          "$type": "color",
-          "$value": "{foundation.color.neutral.900}"
-        },
-        "text": {
-          "$type": "color",
-          "$value": "{foundation.color.blue.400}"
-        },
+          "$value": "{foundation.color.overlay.blue-400.32}",
+          "$description": "Toned active in dark. 32% opacity."
+        }
+      },
+      "content": {
         "default": {
-          "$value": "{foundation.brand.primary}",
-          "$type": "color"
-        },
-        "toned": {
-          "default": {
-            "$type": "color",
-            "$value": "{foundation.color.overlay.blue-400.15}",
-            "$description": "Translucent primary bg for toned variants. 15% opacity in dark."
-          },
-          "hover": {
-            "$type": "color",
-            "$value": "{foundation.color.overlay.blue-400.25}",
-            "$description": "Toned hover in dark. 25% opacity."
-          },
-          "active": {
-            "$type": "color",
-            "$value": "{foundation.color.overlay.blue-400.32}",
-            "$description": "Toned active in dark. 32% opacity."
-          }
-        },
-        "disabled": {
           "$type": "color",
-          "$value": "#4F637D"
+          "$value": "{foundation.color.blue.400}",
+          "$description": "Cor brand usada como conteúdo sobre fundo neutro/toned em dark mode."
         },
-        "disabled-fg": {
+        "contrast": {
+          "$type": "color",
+          "$value": "{foundation.color.neutral.900}",
+          "$description": "Conteúdo de alto contraste sobre fill brand sólido em dark mode. Dark text porque brand default é blue-400 (claro)."
+        },
+        "contrast-disabled": {
           "$type": "color",
           "$value": "rgba(255, 255, 255, 0.60)"
         }
+      }
+    },
+    "accent": {
+      "$description": "Cor complementar de acento visual. ADR-011.",
+      "default": {
+        "$type": "color",
+        "$value": "{foundation.brand.secondary}"
       },
-      "secondary": {
-        "hover": {
-          "$type": "color",
-          "$value": "{foundation.color.purple.300}"
-        },
-        "active": {
-          "$type": "color",
-          "$value": "{foundation.color.purple.200}"
-        },
-        "subtle": {
-          "$type": "color",
-          "$value": "{foundation.color.purple.800}"
-        },
-        "muted": {
-          "$type": "color",
-          "$value": "{foundation.color.purple.950}"
-        },
-        "foreground": {
-          "$type": "color",
-          "$value": "{foundation.color.neutral.900}"
-        },
-        "text": {
+      "hover": {
+        "$type": "color",
+        "$value": "{foundation.color.purple.300}"
+      },
+      "active": {
+        "$type": "color",
+        "$value": "{foundation.color.purple.200}"
+      },
+      "subtle": {
+        "$type": "color",
+        "$value": "{foundation.color.purple.800}"
+      },
+      "content": {
+        "default": {
           "$type": "color",
           "$value": "{foundation.color.purple.400}"
         },
-        "default": {
-          "$value": "{foundation.brand.secondary}",
-          "$type": "color"
+        "contrast": {
+          "$type": "color",
+          "$value": "{foundation.color.neutral.900}"
         }
       }
     },
     "feedback": {
       "success": {
+        "default": {
+          "$type": "color",
+          "$value": "{foundation.color.green.500}"
+        },
         "hover": {
           "$type": "color",
           "$value": "{foundation.color.green.400}"
@@ -191,32 +187,35 @@
           "$type": "color",
           "$value": "{foundation.color.green.950}"
         },
-        "foreground": {
-          "$type": "color",
-          "$value": "{foundation.color.neutral.900}"
-        },
         "border": {
           "$type": "color",
           "$value": "{foundation.color.green.500}"
-        },
-        "text": {
-          "$type": "color",
-          "$value": "{foundation.color.green.400}"
-        },
-        "default": {
-          "$value": "{foundation.color.green.500}",
-          "$type": "color"
         },
         "disabled": {
           "$type": "color",
           "$value": "#486E55"
         },
-        "disabled-fg": {
-          "$type": "color",
-          "$value": "rgba(255, 255, 255, 0.60)"
+        "content": {
+          "default": {
+            "$type": "color",
+            "$value": "{foundation.color.green.400}"
+          },
+          "contrast": {
+            "$type": "color",
+            "$value": "{foundation.color.neutral.900}",
+            "$description": "Dark text porque success default em dark é green-500 (claro)."
+          },
+          "contrast-disabled": {
+            "$type": "color",
+            "$value": "rgba(255, 255, 255, 0.60)"
+          }
         }
       },
       "warning": {
+        "default": {
+          "$type": "color",
+          "$value": "{foundation.color.amber.400}"
+        },
         "hover": {
           "$type": "color",
           "$value": "{foundation.color.amber.300}"
@@ -229,24 +228,26 @@
           "$type": "color",
           "$value": "{foundation.color.amber.950}"
         },
-        "foreground": {
-          "$type": "color",
-          "$value": "{foundation.color.neutral.900}"
-        },
         "border": {
           "$type": "color",
           "$value": "{foundation.color.amber.400}"
         },
-        "text": {
-          "$type": "color",
-          "$value": "{foundation.color.amber.400}"
-        },
-        "default": {
-          "$value": "{foundation.color.amber.400}",
-          "$type": "color"
+        "content": {
+          "default": {
+            "$type": "color",
+            "$value": "{foundation.color.amber.400}"
+          },
+          "contrast": {
+            "$type": "color",
+            "$value": "{foundation.color.neutral.900}"
+          }
         }
       },
       "error": {
+        "default": {
+          "$type": "color",
+          "$value": "{foundation.color.red.500}"
+        },
         "hover": {
           "$type": "color",
           "$value": "{foundation.color.red.400}"
@@ -263,32 +264,35 @@
           "$type": "color",
           "$value": "{foundation.color.red.950}"
         },
-        "foreground": {
-          "$type": "color",
-          "$value": "{foundation.color.neutral.900}"
-        },
         "border": {
           "$type": "color",
           "$value": "{foundation.color.red.500}"
-        },
-        "text": {
-          "$type": "color",
-          "$value": "{foundation.color.red.400}"
-        },
-        "default": {
-          "$value": "{foundation.color.red.500}",
-          "$type": "color"
         },
         "disabled": {
           "$type": "color",
           "$value": "#7B5050"
         },
-        "disabled-fg": {
-          "$type": "color",
-          "$value": "rgba(255, 255, 255, 0.60)"
+        "content": {
+          "default": {
+            "$type": "color",
+            "$value": "{foundation.color.red.400}"
+          },
+          "contrast": {
+            "$type": "color",
+            "$value": "{foundation.color.neutral.900}",
+            "$description": "Dark text porque error default em dark é red-500 (medium)."
+          },
+          "contrast-disabled": {
+            "$type": "color",
+            "$value": "rgba(255, 255, 255, 0.60)"
+          }
         }
       },
       "info": {
+        "default": {
+          "$type": "color",
+          "$value": "{foundation.color.sky.400}"
+        },
         "hover": {
           "$type": "color",
           "$value": "{foundation.color.sky.300}"
@@ -301,21 +305,19 @@
           "$type": "color",
           "$value": "{foundation.color.sky.950}"
         },
-        "foreground": {
-          "$type": "color",
-          "$value": "{foundation.color.neutral.900}"
-        },
         "border": {
           "$type": "color",
           "$value": "{foundation.color.sky.400}"
         },
-        "text": {
-          "$type": "color",
-          "$value": "{foundation.color.sky.400}"
-        },
-        "default": {
-          "$value": "{foundation.color.sky.400}",
-          "$type": "color"
+        "content": {
+          "default": {
+            "$type": "color",
+            "$value": "{foundation.color.sky.400}"
+          },
+          "contrast": {
+            "$type": "color",
+            "$value": "{foundation.color.neutral.900}"
+          }
         }
       }
     },
@@ -369,11 +371,11 @@
       },
       "focus": {
         "$type": "color",
-        "$value": "{semantic.color.primary.default}"
+        "$value": "{semantic.brand.default}"
       },
       "brand": {
         "$type": "color",
-        "$value": "{semantic.color.primary.default}"
+        "$value": "{semantic.brand.default}"
       },
       "error": {
         "$type": "color",
@@ -430,19 +432,15 @@
         "$type": "color",
         "$value": "{foundation.color.overlay.white.10}"
       },
+      "focus": {
+        "$type": "color",
+        "$value": "{semantic.brand.default}"
+      },
       "disabled": {
         "background": {
           "$type": "color",
           "$value": "{foundation.color.neutral.800}"
-        },
-        "foreground": {
-          "$type": "color",
-          "$value": "{foundation.color.neutral.600}"
         }
-      },
-      "focus": {
-        "$type": "color",
-        "$value": "{semantic.color.primary.default}"
       }
     },
     "space": {

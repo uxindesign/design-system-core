@@ -4,12 +4,12 @@
 
 :root,
 [data-mode="light"] {
-  --ds-color-primary-disabled: rgba(125, 158, 232, 0.50); /** Desaturated brand for disabled filled button */
-  --ds-color-primary-disabled-fg: rgba(255, 255, 255, 0.80);
-  --ds-feedback-success-disabled: rgba(122, 184, 145, 0.50); /** Desaturated success for disabled success button */
-  --ds-feedback-success-disabled-fg: rgba(255, 255, 255, 0.80);
-  --ds-feedback-error-disabled: rgba(194, 112, 112, 0.40); /** Desaturated error for disabled danger button */
-  --ds-feedback-error-disabled-fg: rgba(255, 255, 255, 0.80);
+  --ds-brand-disabled: rgba(125, 158, 232, 0.50); /** Fill brand em estado disabled. */
+  --ds-brand-content-contrast-disabled: rgba(255, 255, 255, 0.80); /** Conteúdo disabled sobre fill brand disabled. */
+  --ds-feedback-success-disabled: rgba(122, 184, 145, 0.50); /** Fill success disabled. */
+  --ds-feedback-success-content-contrast-disabled: rgba(255, 255, 255, 0.80); /** Conteúdo disabled sobre fill success disabled. */
+  --ds-feedback-error-disabled: rgba(194, 112, 112, 0.40); /** Fill error disabled. */
+  --ds-feedback-error-content-contrast-disabled: rgba(255, 255, 255, 0.80); /** Conteúdo disabled sobre fill error disabled. */
   --ds-size-control-sm: 2rem; /** 32px. Height of sm interactive controls (Button, Input Field, Select Field). */
   --ds-size-control-md: 2.5rem; /** 40px. Height of md interactive controls. */
   --ds-size-control-lg: 3rem; /** 48px. Height of lg interactive controls. */
@@ -22,64 +22,60 @@
   --ds-control-line-height-lg: 1.5rem; /** 24px. Matches icon-lg. height = 12+24+12 = 48. */
   --ds-background-default: var(--ds-color-neutral-50); /** Page background */
   --ds-background-subtle: var(--ds-color-neutral-50); /** Subtle alternate background */
-  --ds-background-muted: var(--ds-color-neutral-100);
   --ds-background-inverse: var(--ds-color-neutral-900);
   --ds-background-overlay: var(--ds-overlay-black-40); /** Modal/dialog overlay backdrop */
   --ds-surface-default: var(--ds-color-neutral-50); /** Card and panel surfaces */
   --ds-surface-raised: var(--ds-color-neutral-50); /** Elevated surface (sticky headers, raised cards) */
   --ds-surface-overlay: var(--ds-color-neutral-50);
   --ds-surface-elevated: var(--ds-color-neutral-50);
-  --ds-text-default: var(--ds-color-neutral-900); /** Primary body text */
-  --ds-text-secondary: var(--ds-color-neutral-600); /** Secondary/supporting text */
-  --ds-text-tertiary: var(--ds-color-neutral-500);
-  --ds-text-disabled: var(--ds-color-neutral-400);
-  --ds-text-inverse: var(--ds-color-neutral-50);
-  --ds-text-on-brand: var(--ds-color-neutral-50); /** Text on brand-colored backgrounds */
-  --ds-color-primary-hover: var(--ds-color-blue-700);
-  --ds-color-primary-active: var(--ds-color-blue-800);
-  --ds-color-primary-subtle: var(--ds-color-blue-100);
-  --ds-color-primary-muted: var(--ds-color-blue-50);
-  --ds-color-primary-foreground: var(--ds-color-neutral-50);
-  --ds-color-primary-text: var(--ds-color-blue-700);
-  --ds-color-primary-toned-default: var(--ds-overlay-blue-600-12); /** Translucent primary bg for toned variants. 12% opacity. */
-  --ds-color-primary-toned-hover: var(--ds-overlay-blue-600-20); /** Toned hover. 20% opacity. */
-  --ds-color-primary-toned-active: var(--ds-overlay-blue-600-28); /** Toned active/pressed. 28% opacity. */
-  --ds-color-secondary-hover: var(--ds-color-purple-700);
-  --ds-color-secondary-active: var(--ds-color-purple-800);
-  --ds-color-secondary-subtle: var(--ds-color-purple-100);
-  --ds-color-secondary-muted: var(--ds-color-purple-50);
-  --ds-color-secondary-foreground: var(--ds-color-neutral-50);
-  --ds-color-secondary-text: var(--ds-color-purple-700);
+  --ds-content-default: var(--ds-color-neutral-900); /** Conteúdo principal (títulos, body text, ícones primários). */
+  --ds-content-secondary: var(--ds-color-neutral-600); /** Conteúdo de ênfase reduzida (labels, helper text, ícones secundários). */
+  --ds-content-tertiary: var(--ds-color-neutral-500); /** Conteúdo de menor ênfase (placeholders, ícones decorativos). */
+  --ds-content-disabled: var(--ds-color-neutral-400); /** Conteúdo em estado disabled. Isento de contraste WCAG. Unifica text/disabled e state/disabled/foreground (ADR-011). */
+  --ds-content-inverse: var(--ds-color-neutral-50); /** Conteúdo sobre superfícies inversas (background/inverse). */
+  --ds-brand-hover: var(--ds-color-blue-700); /** Fill brand em hover. */
+  --ds-brand-active: var(--ds-color-blue-800); /** Fill brand em active/pressed. */
+  --ds-brand-subtle: var(--ds-color-blue-100); /** Fill brand de baixa ênfase (seleções, highlights). */
+  --ds-brand-toned-default: var(--ds-overlay-blue-600-12); /** Fill brand translúcido (Button Toned). 12% opacity. */
+  --ds-brand-toned-hover: var(--ds-overlay-blue-600-20); /** Toned hover. 20% opacity. */
+  --ds-brand-toned-active: var(--ds-overlay-blue-600-28); /** Toned active/pressed. 28% opacity. */
+  --ds-brand-content-default: var(--ds-color-blue-700); /** Cor brand usada como conteúdo (texto/ícone brand sobre fundo neutro, label do Toned). */
+  --ds-brand-content-contrast: var(--ds-color-neutral-50); /** Conteúdo de alto contraste sobre fill brand sólido (texto do Button Brand). Unifica color/primary/foreground e text/on-brand (ADR-011). */
+  --ds-accent-hover: var(--ds-color-purple-700); /** Acento hover. */
+  --ds-accent-active: var(--ds-color-purple-800); /** Acento active. */
+  --ds-accent-subtle: var(--ds-color-purple-100); /** Acento de baixa ênfase. */
+  --ds-accent-content-default: var(--ds-color-purple-700); /** Cor accent usada como conteúdo. */
+  --ds-accent-content-contrast: var(--ds-color-neutral-50); /** Conteúdo de alto contraste sobre fill accent sólido. */
+  --ds-feedback-success-default: var(--ds-color-green-600); /** Fill success principal. */
   --ds-feedback-success-hover: var(--ds-color-green-700);
   --ds-feedback-success-active: var(--ds-color-green-800);
   --ds-feedback-success-subtle: var(--ds-color-green-100);
   --ds-feedback-success-background: var(--ds-color-green-50);
-  --ds-feedback-success-foreground: var(--ds-color-neutral-50);
   --ds-feedback-success-border: var(--ds-color-green-600);
-  --ds-feedback-success-text: var(--ds-color-green-700);
-  --ds-feedback-success-default: var(--ds-color-green-600);
+  --ds-feedback-success-content-default: var(--ds-color-green-700); /** Cor success como conteúdo (mensagens, ícones sobre fundo claro). */
+  --ds-feedback-success-content-contrast: var(--ds-color-neutral-50); /** Conteúdo de alto contraste sobre fill success sólido. */
+  --ds-feedback-warning-default: var(--ds-color-amber-500);
   --ds-feedback-warning-hover: var(--ds-color-amber-600);
   --ds-feedback-warning-subtle: var(--ds-color-amber-100);
   --ds-feedback-warning-background: var(--ds-color-amber-50);
-  --ds-feedback-warning-foreground: var(--ds-color-neutral-900);
   --ds-feedback-warning-border: var(--ds-color-amber-600); /** Upgraded from amber.500 to amber.600 (ADR-008) for consistency with error.border/info.border at step 600. Passes 3:1 vs amber.50. */
-  --ds-feedback-warning-text: var(--ds-color-amber-700);
-  --ds-feedback-warning-default: var(--ds-color-amber-500);
+  --ds-feedback-warning-content-default: var(--ds-color-amber-700); /** Cor warning como conteúdo. */
+  --ds-feedback-warning-content-contrast: var(--ds-color-neutral-900); /** Conteúdo de alto contraste sobre fill warning sólido. Dark text porque amber-500 é claro. */
+  --ds-feedback-error-default: var(--ds-color-red-600);
   --ds-feedback-error-hover: var(--ds-color-red-700);
   --ds-feedback-error-active: var(--ds-color-red-800);
   --ds-feedback-error-subtle: var(--ds-color-red-100);
   --ds-feedback-error-background: var(--ds-color-red-50);
-  --ds-feedback-error-foreground: var(--ds-color-neutral-50);
   --ds-feedback-error-border: var(--ds-color-red-600);
-  --ds-feedback-error-text: var(--ds-color-red-700);
-  --ds-feedback-error-default: var(--ds-color-red-600);
+  --ds-feedback-error-content-default: var(--ds-color-red-700); /** Cor error como conteúdo (mensagens de erro, ícones de alerta). */
+  --ds-feedback-error-content-contrast: var(--ds-color-neutral-50); /** Conteúdo de alto contraste sobre fill error sólido. */
+  --ds-feedback-info-default: var(--ds-color-sky-600);
   --ds-feedback-info-hover: var(--ds-color-sky-700);
   --ds-feedback-info-subtle: var(--ds-color-sky-100);
   --ds-feedback-info-background: var(--ds-color-sky-50);
-  --ds-feedback-info-foreground: var(--ds-color-neutral-900);
   --ds-feedback-info-border: var(--ds-color-sky-600);
-  --ds-feedback-info-text: var(--ds-color-sky-700);
-  --ds-feedback-info-default: var(--ds-color-sky-600);
+  --ds-feedback-info-content-default: var(--ds-color-sky-700); /** Cor info como conteúdo. */
+  --ds-feedback-info-content-contrast: var(--ds-color-neutral-900); /** Conteúdo de alto contraste sobre fill info sólido. Dark text porque sky-600 é claro demais para branco. */
   --ds-border-default: var(--ds-color-neutral-300);
   --ds-border-control-default: var(--ds-color-neutral-500); /** Border color for interactive controls (Input, Select, Textarea, Checkbox, Radio). Meets WCAG 1.4.11 (≥3:1 against control background). */
   --ds-border-control-hover: var(--ds-color-neutral-600); /** Border on hover for interactive controls. */
@@ -100,7 +96,6 @@
   --ds-state-hover: var(--ds-overlay-black-5);
   --ds-state-pressed: var(--ds-overlay-black-10);
   --ds-state-disabled-background: var(--ds-color-neutral-100);
-  --ds-state-disabled-foreground: var(--ds-color-neutral-400);
   --ds-space-inset-2xs: var(--ds-spacing-0-5); /** 2px. Compact inset for small components like Badge. */
   --ds-space-inset-xs: var(--ds-spacing-1);
   --ds-space-inset-sm: var(--ds-spacing-2);
@@ -132,13 +127,13 @@
   --ds-control-font-size-sm: var(--ds-font-size-sm); /** 14px. Font size for sm controls (Button, Input, Select). */
   --ds-control-font-size-md: var(--ds-font-size-sm); /** 14px. Font size for md controls. */
   --ds-control-font-size-lg: var(--ds-font-size-md); /** 16px. Font size for lg controls. */
-  --ds-text-link-hover: var(--ds-color-primary-hover); /** Link text on hover */
-  --ds-color-primary-default: var(--ds-brand-primary);
-  --ds-color-secondary-default: var(--ds-brand-secondary);
+  --ds-content-link-hover: var(--ds-brand-hover); /** Links em estado hover. */
+  --ds-brand-default: var(--ds-brand-primary); /** Fill brand principal (Button Brand, indicadores ativos). */
+  --ds-accent-default: var(--ds-brand-secondary); /** Fill de acento (Badge Secondary). */
   --ds-border-error: var(--ds-feedback-error-default);
-  --ds-text-link-default: var(--ds-color-primary-default); /** Default link text color */
-  --ds-border-focus: var(--ds-color-primary-default);
-  --ds-border-brand: var(--ds-color-primary-default);
-  --ds-state-focus: var(--ds-color-primary-default);
+  --ds-content-link-default: var(--ds-brand-default); /** Links em estado default. */
+  --ds-border-focus: var(--ds-brand-default);
+  --ds-border-brand: var(--ds-brand-default);
+  --ds-state-focus: var(--ds-brand-default);
   --ds-focus-ring-color: var(--ds-border-focus); /** Focus ring color, maps to outline-color */
 }

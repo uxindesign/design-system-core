@@ -9,11 +9,11 @@
   <style>
     /* Tables */
     .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-sm); margin-bottom: var(--ds-spacing-8); }
-    .ds-token-table th { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-text-secondary); }
+    .ds-token-table th { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
     .ds-token-table td { padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
     .ds-token-table code { font-size: var(--ds-font-size-xs); font-family: var(--ds-font-family-mono); }
     /* Callouts */
-    .ds-callout { padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-6); font-size: var(--ds-font-size-sm); line-height: var(--ds-line-height-relaxed); color: var(--ds-text-default); }
+    .ds-callout { padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-6); font-size: var(--ds-font-size-sm); line-height: var(--ds-line-height-relaxed); color: var(--ds-content-default); }
     .ds-callout--info { background-color: var(--ds-feedback-info-background); border: var(--ds-border-width-1) solid var(--ds-feedback-info-border); }
     .ds-callout--success { background-color: var(--ds-feedback-success-background); border: var(--ds-border-width-1) solid var(--ds-feedback-success-border); }
     .ds-callout--warning { background-color: var(--ds-feedback-warning-background); border: var(--ds-border-width-1) solid var(--ds-feedback-warning-border); }
@@ -23,13 +23,13 @@
     .ds-dodont__item { border-radius: var(--ds-radius-lg); overflow: hidden; }
     .ds-dodont__preview { padding: var(--ds-spacing-6); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg) var(--ds-radius-lg) 0 0; display: flex; flex-wrap: wrap; gap: var(--ds-spacing-3); align-items: center; justify-content: center; }
     .ds-dodont__label { padding: var(--ds-spacing-2) var(--ds-spacing-4); font-size: var(--ds-font-size-sm); font-weight: var(--ds-font-weight-semibold); }
-    .ds-dodont__label--do { background-color: var(--ds-feedback-success-background); color: var(--ds-feedback-success-text); border-top: 3px solid var(--ds-feedback-success-default); }
-    .ds-dodont__label--dont { background-color: var(--ds-feedback-error-background); color: var(--ds-feedback-error-text); border-top: 3px solid var(--ds-feedback-error-default); }
-    .ds-dodont__desc { padding: 0 var(--ds-spacing-4) var(--ds-spacing-3); font-size: var(--ds-font-size-sm); color: var(--ds-text-secondary); background-color: var(--ds-background-subtle); }
+    .ds-dodont__label--do { background-color: var(--ds-feedback-success-background); color: var(--ds-feedback-success-content-default); border-top: 3px solid var(--ds-feedback-success-default); }
+    .ds-dodont__label--dont { background-color: var(--ds-feedback-error-background); color: var(--ds-feedback-error-content-default); border-top: 3px solid var(--ds-feedback-error-default); }
+    .ds-dodont__desc { padding: 0 var(--ds-spacing-4) var(--ds-spacing-3); font-size: var(--ds-font-size-sm); color: var(--ds-content-secondary); background-color: var(--ds-background-subtle); }
     /* Related */
     .ds-related { display: flex; gap: var(--ds-spacing-3); flex-wrap: wrap; margin-bottom: var(--ds-spacing-8); }
-    .ds-related__link { padding: var(--ds-spacing-2) var(--ds-spacing-4); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-md); font-size: var(--ds-font-size-sm); color: var(--ds-text-link-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
-    .ds-related__link:hover { border-color: var(--ds-color-primary-default); background-color: var(--ds-color-primary-muted); }
+    .ds-related__link { padding: var(--ds-spacing-2) var(--ds-spacing-4); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-md); font-size: var(--ds-font-size-sm); color: var(--ds-content-link-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
+    .ds-related__link:hover { border-color: var(--ds-brand-default); background-color: var(--ds-state-hover); }
     /* Responsive do/dont */
     @media (max-width: 768px) { .ds-dodont { grid-template-columns: 1fr; } }
   </style>
@@ -147,7 +147,7 @@
     </div>
     <div class="ds-callout ds-callout--warning">
       <div class="ds-callout__title"><span data-lang="pt">Nao use avatars quando</span><span data-lang="en">Don't use avatars when</span></div>
-      <span data-lang="pt">Exibindo uma imagem de conteudo (use <code>&lt;img&gt;</code>) ou criando um botao de icone (use <a href="button.html" style="color:var(--ds-text-link-default)">Button</a> com variante icon-only).</span><span data-lang="en">Displaying a content image (use <code>&lt;img&gt;</code> instead) or creating an icon button (use <a href="button.html" style="color:var(--ds-text-link-default)">Button</a> with icon-only variant).</span>
+      <span data-lang="pt">Exibindo uma imagem de conteudo (use <code>&lt;img&gt;</code>) ou criando um botao de icone (use <a href="button.html" style="color:var(--ds-content-link-default)">Button</a> com variante icon-only).</span><span data-lang="en">Displaying a content image (use <code>&lt;img&gt;</code> instead) or creating an icon button (use <a href="button.html" style="color:var(--ds-content-link-default)">Button</a> with icon-only variant).</span>
     </div>
   </div>
 
@@ -156,7 +156,7 @@
        ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Avatar com iniciais</span><span data-lang="en">Initials avatar</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Quando nenhuma imagem esta disponivel, exiba 1-2 caracteres de iniciais. Disponivel em tres tamanhos: sm (32px), md (40px), lg (56px).</span><span data-lang="en">When no image is available, display 1-2 character initials. Available in three sizes: sm (32px), md (40px), lg (56px).</span></p>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Quando nenhuma imagem esta disponivel, exiba 1-2 caracteres de iniciais. Disponivel em tres tamanhos: sm (32px), md (40px), lg (56px).</span><span data-lang="en">When no image is available, display 1-2 character initials. Available in three sizes: sm (32px), md (40px), lg (56px).</span></p>
     <div class="ds-preview">
       <div class="ds-preview__tabs">
         <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
@@ -178,7 +178,7 @@
 
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Avatar com imagem</span><span data-lang="en">Image avatar</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Quando uma imagem e fornecida, ela preenche o circulo do avatar. Sempre inclua texto <code>alt</code> descritivo.</span><span data-lang="en">When an image is provided it fills the avatar circle. Always include descriptive <code>alt</code> text.</span></p>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Quando uma imagem e fornecida, ela preenche o circulo do avatar. Sempre inclua texto <code>alt</code> descritivo.</span><span data-lang="en">When an image is provided it fills the avatar circle. Always include descriptive <code>alt</code> text.</span></p>
     <div class="ds-preview">
       <div class="ds-preview__tabs">
         <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
@@ -206,7 +206,7 @@
 
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Avatar com icone</span><span data-lang="en">Icon avatar</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Use o modificador <code>ds-avatar--icon</code> com um icone Material Symbols como fallback generico quando nenhuma imagem nem iniciais estao disponiveis.</span><span data-lang="en">Use the <code>ds-avatar--icon</code> modifier with a Material Symbols icon as a generic fallback when neither image nor initials are available.</span></p>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Use o modificador <code>ds-avatar--icon</code> com um icone Material Symbols como fallback generico quando nenhuma imagem nem iniciais estao disponiveis.</span><span data-lang="en">Use the <code>ds-avatar--icon</code> modifier with a Material Symbols icon as a generic fallback when neither image nor initials are available.</span></p>
     <div class="ds-preview">
       <div class="ds-preview__tabs">
         <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
@@ -234,7 +234,7 @@
 
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Grupo de avatars</span><span data-lang="en">Avatar group</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Exiba multiplos avatars juntos para representar uma equipe ou grupo de usuarios.</span><span data-lang="en">Display multiple avatars together to represent a team or group of users.</span></p>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Exiba multiplos avatars juntos para representar uma equipe ou grupo de usuarios.</span><span data-lang="en">Display multiple avatars together to represent a team or group of users.</span></p>
     <div class="ds-preview">
       <div class="ds-preview__tabs">
         <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
@@ -280,7 +280,7 @@
       </div>
       <div class="ds-dodont__item">
         <div class="ds-dodont__preview">
-          <span class="ds-avatar ds-avatar--md" style="background:var(--ds-background-muted);color:var(--ds-text-tertiary);">
+          <span class="ds-avatar ds-avatar--md" style="background:var(--ds-state-disabled-background);color:var(--ds-content-tertiary);">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="16" height="16" rx="2"/><line x1="2" y1="2" x2="18" y2="18"/><line x1="18" y1="2" x2="2" y2="18"/></svg>
           </span>
         </div>
@@ -298,8 +298,8 @@
     <table class="ds-token-table">
       <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token (semantic)</th><th><span data-lang="pt">Variavel CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
       <tbody>
-        <tr><td><span data-lang="pt">fundo (fallback)</span><span data-lang="en">background (fallback)</span></td><td><code>semantic.color.primary.subtle</code></td><td><code>--ds-color-primary-subtle</code></td></tr>
-        <tr><td><span data-lang="pt">texto (iniciais)</span><span data-lang="en">text (initials)</span></td><td><code>semantic.color.primary.text</code></td><td><code>--ds-color-primary-text</code></td></tr>
+        <tr><td><span data-lang="pt">fundo (fallback)</span><span data-lang="en">background (fallback)</span></td><td><code>semantic.color.primary.subtle</code></td><td><code>--ds-brand-subtle</code></td></tr>
+        <tr><td><span data-lang="pt">texto (iniciais)</span><span data-lang="en">text (initials)</span></td><td><code>semantic.color.primary.text</code></td><td><code>--ds-brand-content-default</code></td></tr>
         <tr><td>border-radius</td><td><code>foundation.radius.full</code></td><td><code>--ds-radius-full</code></td></tr>
       </tbody>
     </table>

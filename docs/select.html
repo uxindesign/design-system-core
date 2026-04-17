@@ -9,11 +9,11 @@
   <style>
     /* Tables */
     .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-sm); margin-bottom: var(--ds-spacing-8); }
-    .ds-token-table th { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-text-secondary); }
+    .ds-token-table th { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
     .ds-token-table td { padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
     .ds-token-table code { font-size: var(--ds-font-size-xs); font-family: var(--ds-font-family-mono); }
     /* Callouts */
-    .ds-callout { padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-6); font-size: var(--ds-font-size-sm); line-height: var(--ds-line-height-relaxed); color: var(--ds-text-default); }
+    .ds-callout { padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-6); font-size: var(--ds-font-size-sm); line-height: var(--ds-line-height-relaxed); color: var(--ds-content-default); }
     .ds-callout--info { background-color: var(--ds-feedback-info-background); border: var(--ds-border-width-1) solid var(--ds-feedback-info-border); }
     .ds-callout--success { background-color: var(--ds-feedback-success-background); border: var(--ds-border-width-1) solid var(--ds-feedback-success-border); }
     .ds-callout--warning { background-color: var(--ds-feedback-warning-background); border: var(--ds-border-width-1) solid var(--ds-feedback-warning-border); }
@@ -23,19 +23,19 @@
     .ds-dodont__item { border-radius: var(--ds-radius-lg); overflow: hidden; }
     .ds-dodont__preview { padding: var(--ds-spacing-6); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg) var(--ds-radius-lg) 0 0; display: flex; flex-wrap: wrap; gap: var(--ds-spacing-3); align-items: center; justify-content: center; }
     .ds-dodont__label { padding: var(--ds-spacing-2) var(--ds-spacing-4); font-size: var(--ds-font-size-sm); font-weight: var(--ds-font-weight-semibold); }
-    .ds-dodont__label--do { background-color: var(--ds-feedback-success-background); color: var(--ds-feedback-success-text); border-top: 3px solid var(--ds-feedback-success-default); }
-    .ds-dodont__label--dont { background-color: var(--ds-feedback-error-background); color: var(--ds-feedback-error-text); border-top: 3px solid var(--ds-feedback-error-default); }
-    .ds-dodont__desc { padding: 0 var(--ds-spacing-4) var(--ds-spacing-3); font-size: var(--ds-font-size-sm); color: var(--ds-text-secondary); background-color: var(--ds-background-subtle); }
+    .ds-dodont__label--do { background-color: var(--ds-feedback-success-background); color: var(--ds-feedback-success-content-default); border-top: 3px solid var(--ds-feedback-success-default); }
+    .ds-dodont__label--dont { background-color: var(--ds-feedback-error-background); color: var(--ds-feedback-error-content-default); border-top: 3px solid var(--ds-feedback-error-default); }
+    .ds-dodont__desc { padding: 0 var(--ds-spacing-4) var(--ds-spacing-3); font-size: var(--ds-font-size-sm); color: var(--ds-content-secondary); background-color: var(--ds-background-subtle); }
     /* Anatomy */
     .ds-anatomy { padding: var(--ds-spacing-8); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-4); display: flex; align-items: center; justify-content: center; position: relative; }
-    .ds-anatomy__select { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; background-color: var(--ds-surface-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-md); font-size: var(--ds-font-size-sm); color: var(--ds-text-secondary); position: relative; min-width: 220px; }
-    .ds-anatomy__marker { position: absolute; width: 20px; height: 20px; border-radius: 50%; background-color: var(--ds-color-primary-default); color: var(--ds-text-on-brand); font-size: 11px; font-weight: var(--ds-font-weight-bold); display: flex; align-items: center; justify-content: center; }
-    .ds-anatomy-legend { font-size: var(--ds-font-size-sm); color: var(--ds-text-secondary); margin-bottom: var(--ds-spacing-8); line-height: var(--ds-line-height-relaxed); }
-    .ds-anatomy-legend strong { color: var(--ds-text-default); }
+    .ds-anatomy__select { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; background-color: var(--ds-surface-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-md); font-size: var(--ds-font-size-sm); color: var(--ds-content-secondary); position: relative; min-width: 220px; }
+    .ds-anatomy__marker { position: absolute; width: 20px; height: 20px; border-radius: 50%; background-color: var(--ds-brand-default); color: var(--ds-brand-content-contrast); font-size: 11px; font-weight: var(--ds-font-weight-bold); display: flex; align-items: center; justify-content: center; }
+    .ds-anatomy-legend { font-size: var(--ds-font-size-sm); color: var(--ds-content-secondary); margin-bottom: var(--ds-spacing-8); line-height: var(--ds-line-height-relaxed); }
+    .ds-anatomy-legend strong { color: var(--ds-content-default); }
     /* Related */
     .ds-related { display: flex; gap: var(--ds-spacing-3); flex-wrap: wrap; margin-bottom: var(--ds-spacing-8); }
-    .ds-related__link { padding: var(--ds-spacing-2) var(--ds-spacing-4); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-md); font-size: var(--ds-font-size-sm); color: var(--ds-text-link-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
-    .ds-related__link:hover { border-color: var(--ds-color-primary-default); background-color: var(--ds-color-primary-muted); }
+    .ds-related__link { padding: var(--ds-spacing-2) var(--ds-spacing-4); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-md); font-size: var(--ds-font-size-sm); color: var(--ds-content-link-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
+    .ds-related__link:hover { border-color: var(--ds-brand-default); background-color: var(--ds-state-hover); }
     /* Responsive do/dont */
     @media (max-width: 768px) { .ds-dodont { grid-template-columns: 1fr; } }
   </style>
@@ -153,7 +153,7 @@
     </div>
     <div class="ds-callout ds-callout--warning">
       <div class="ds-callout__title"><span data-lang="pt">Não use Select quando</span><span data-lang="en">Don't use Select when</span></div>
-      <span data-lang="pt">Menos de 5 opções — use <a href="radio.html" style="color:var(--ds-text-link-default)">Radio</a>. Multiplas seleções permitidas — use grupo de <a href="checkbox.html" style="color:var(--ds-text-link-default)">Checkbox</a>. Usuário precisa buscar ou filtrar — use combobox (componente futuro).</span><span data-lang="en">Fewer than 5 options — use <a href="radio.html" style="color:var(--ds-text-link-default)">Radio</a> instead. Multiple selections allowed — use <a href="checkbox.html" style="color:var(--ds-text-link-default)">Checkbox group</a>. User needs to search or filter — use combobox (future component).</span>
+      <span data-lang="pt">Menos de 5 opções — use <a href="radio.html" style="color:var(--ds-content-link-default)">Radio</a>. Multiplas seleções permitidas — use grupo de <a href="checkbox.html" style="color:var(--ds-content-link-default)">Checkbox</a>. Usuário precisa buscar ou filtrar — use combobox (componente futuro).</span><span data-lang="en">Fewer than 5 options — use <a href="radio.html" style="color:var(--ds-content-link-default)">Radio</a> instead. Multiple selections allowed — use <a href="checkbox.html" style="color:var(--ds-content-link-default)">Checkbox group</a>. User needs to search or filter — use combobox (future component).</span>
     </div>
   </div>
 
@@ -341,11 +341,11 @@
        ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Estados</span><span data-lang="en">States</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);">
       <span data-lang="pt">Estados são controlados via pseudo-classes CSS (<code>:hover</code>, <code>:focus-visible</code>, <code>[disabled]</code>) e classes modificadoras para erro e somente leitura.</span><span data-lang="en">States are handled via CSS pseudo-classes (<code>:hover</code>, <code>:focus-visible</code>, <code>[disabled]</code>) and modifier classes for error and readonly.</span>
     </p>
 
-    <h3 style="margin-bottom:var(--ds-spacing-3);font-size:var(--ds-font-size-md);color:var(--ds-text-default)">Error</h3>
+    <h3 style="margin-bottom:var(--ds-spacing-3);font-size:var(--ds-font-size-md);color:var(--ds-content-default)">Error</h3>
     <div class="ds-preview">
       <div class="ds-preview__tabs" role="tablist">
         <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
@@ -385,7 +385,7 @@
       </div>
     </div>
 
-    <h3 style="margin-bottom:var(--ds-spacing-3);font-size:var(--ds-font-size-md);color:var(--ds-text-default)">Disabled</h3>
+    <h3 style="margin-bottom:var(--ds-spacing-3);font-size:var(--ds-font-size-md);color:var(--ds-content-default)">Disabled</h3>
     <div class="ds-preview">
       <div class="ds-preview__tabs" role="tablist">
         <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
@@ -414,7 +414,7 @@
       </div>
     </div>
 
-    <h3 style="margin-bottom:var(--ds-spacing-3);font-size:var(--ds-font-size-md);color:var(--ds-text-default)">Readonly</h3>
+    <h3 style="margin-bottom:var(--ds-spacing-3);font-size:var(--ds-font-size-md);color:var(--ds-content-default)">Readonly</h3>
     <div class="ds-preview">
       <div class="ds-preview__tabs" role="tablist">
         <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
@@ -525,7 +525,7 @@
           </div>
         </div>
         <div class="ds-dodont__label ds-dodont__label--dont">Não faça</div>
-        <div class="ds-dodont__desc"><span data-lang="pt">Não use select para escolhas booleanas -- use <a href="toggle.html" style="color:var(--ds-text-link-default)">Toggle</a> ou <a href="checkbox.html" style="color:var(--ds-text-link-default)">Checkbox</a>.</span><span data-lang="en">Don't use a select for boolean choices -- use <a href="toggle.html" style="color:var(--ds-text-link-default)">Toggle</a> or <a href="checkbox.html" style="color:var(--ds-text-link-default)">Checkbox</a>.</span></div>
+        <div class="ds-dodont__desc"><span data-lang="pt">Não use select para escolhas booleanas -- use <a href="toggle.html" style="color:var(--ds-content-link-default)">Toggle</a> ou <a href="checkbox.html" style="color:var(--ds-content-link-default)">Checkbox</a>.</span><span data-lang="en">Don't use a select for boolean choices -- use <a href="toggle.html" style="color:var(--ds-content-link-default)">Toggle</a> or <a href="checkbox.html" style="color:var(--ds-content-link-default)">Checkbox</a>.</span></div>
       </div>
     </div>
   </div>
@@ -552,7 +552,7 @@
        ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Mapeamento de tokens</span><span data-lang="en">Token mapping</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);">
       <span data-lang="pt">Mesmo conjunto de tokens do Input. O indicador de seta herda a cor do texto via <code>currentColor</code>.</span><span data-lang="en">Same token set as Input. The arrow indicator inherits text color via <code>currentColor</code>.</span>
     </p>
     <table class="ds-token-table">
@@ -562,11 +562,11 @@
         <tr><td>border (default)</td><td><code>semantic.border.default</code></td><td><code>--ds-border-default</code></td></tr>
         <tr><td>border (hover)</td><td><code>semantic.border.hover</code></td><td><code>--ds-border-hover</code></td></tr>
         <tr><td>border (error)</td><td><code>semantic.feedback.error.default</code></td><td><code>--ds-feedback-error-default</code></td></tr>
-        <tr><td>text color</td><td><code>semantic.text.default</code></td><td><code>--ds-text-default</code></td></tr>
-        <tr><td>placeholder color</td><td><code>semantic.text.secondary</code></td><td><code>--ds-text-secondary</code></td></tr>
+        <tr><td>text color</td><td><code>semantic.text.default</code></td><td><code>--ds-content-default</code></td></tr>
+        <tr><td>placeholder color</td><td><code>semantic.text.secondary</code></td><td><code>--ds-content-secondary</code></td></tr>
         <tr><td>arrow color</td><td>Inherits via <code>currentColor</code></td><td>---</td></tr>
         <tr><td>background (disabled)</td><td><code>semantic.state.disabled.background</code></td><td><code>--ds-state-disabled-background</code></td></tr>
-        <tr><td>text (disabled)</td><td><code>semantic.state.disabled.foreground</code></td><td><code>--ds-state-disabled-foreground</code></td></tr>
+        <tr><td>text (disabled)</td><td><code>semantic.state.disabled.foreground</code></td><td><code>--ds-content-disabled</code></td></tr>
         <tr><td>border-radius</td><td><code>semantic.radius.component</code></td><td><code>--ds-radius-component</code></td></tr>
         <tr><td>focus ring</td><td><code>semantic.focus.ring.*</code></td><td><code>--ds-focus-ring-width</code>, <code>--ds-focus-ring-offset</code>, <code>--ds-focus-ring-color</code></td></tr>
         <tr><td>height (sm)</td><td><code>semantic.size.control.sm</code></td><td><code>--ds-size-control-sm</code> (32px)</td></tr>
@@ -619,7 +619,7 @@
         <tr><td>Any letter</td><td><span data-lang="pt">Pula para a primeira opção que começa com aquela letra</span><span data-lang="en">Jumps to first option starting with that letter</span></td></tr>
       </tbody>
     </table>
-    <p style="margin-top:var(--ds-spacing-2);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);">
+    <p style="margin-top:var(--ds-spacing-2);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);">
       <span data-lang="pt">Todas as interações de teclado são tratadas nativamente pelo elemento <code>&lt;select&gt;</code>. Nenhum JavaScript customizado é necessário. Selects desabilitados são removidos da ordem de tabulação automaticamente.</span><span data-lang="en">All keyboard interactions are handled natively by the <code>&lt;select&gt;</code> element. No custom JavaScript is required. Disabled selects are removed from tab order automatically.</span>
     </p>
   </div>

@@ -18,19 +18,19 @@
 .ds-card__title {
   font-size: var(--ds-font-size-lg);
   font-weight: var(--ds-font-weight-semibold);
-  color: var(--ds-text-default);
+  color: var(--ds-content-default);
   line-height: var(--ds-line-height-tight);
 }
 
 .ds-card__subtitle {
   font-size: var(--ds-font-size-sm);
-  color: var(--ds-text-secondary);
+  color: var(--ds-content-secondary);
 }
 
 .ds-card__body {
   padding: 0 var(--ds-spacing-4) var(--ds-spacing-4);
   font-size: var(--ds-font-size-sm);
-  color: var(--ds-text-secondary);
+  color: var(--ds-content-secondary);
   line-height: var(--ds-line-height-relaxed);
 }
 

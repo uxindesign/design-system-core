@@ -4,7 +4,12 @@
       "$description": "Structural tokens for Skeleton placeholder component.",
       "text-height": { "$type": "dimension", "$value": "1rem", "$description": "16px line placeholder" },
       "circle-size": { "$type": "dimension", "$value": "2.5rem", "$description": "40px avatar placeholder" },
-      "rect-height": { "$type": "dimension", "$value": "7.5rem", "$description": "120px image/card placeholder" }
+      "rect-height": { "$type": "dimension", "$value": "7.5rem", "$description": "120px image/card placeholder" },
+      "fill": {
+        "$type": "color",
+        "$value": "{semantic.state.disabled.background}",
+        "$description": "Skeleton background fill. Neutral-100 light / neutral-800 dark. Replaces semantic.background.muted per ADR-011."
+      }
     }
   }
 }

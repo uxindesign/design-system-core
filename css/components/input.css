@@ -47,7 +47,7 @@
   border: none;
   background: transparent;
   outline: none;
-  color: var(--ds-text-default);
+  color: var(--ds-content-default);
   font-size: inherit;
   font-family: inherit;
   min-width: 0;
@@ -56,7 +56,7 @@
 }
 
 .ds-input__field::placeholder {
-  color: var(--ds-text-tertiary);
+  color: var(--ds-content-tertiary);
 }
 
 /* Icon
@@ -64,7 +64,7 @@
 
 .ds-input__icon {
   flex-shrink: 0;
-  color: var(--ds-text-tertiary);
+  color: var(--ds-content-tertiary);
   width: var(--ds-input-icon-size-md);
   height: var(--ds-input-icon-size-md);
   font-size: var(--ds-input-icon-size-md);
@@ -92,7 +92,7 @@
 
 /* Focused */
 .ds-input:focus-within {
-  border-color: var(--ds-color-primary-default);
+  border-color: var(--ds-brand-default);
   outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color);
   outline-offset: var(--ds-focus-ring-offset);
 }
@@ -113,13 +113,13 @@
 .ds-input:has(.ds-input__field:disabled) {
   background: var(--ds-state-disabled-background);
   border-color: var(--ds-border-control-disabled);
-  color: var(--ds-state-disabled-foreground);
+  color: var(--ds-content-disabled);
   pointer-events: none;
 }
 
 .ds-input--disabled .ds-input__field,
 .ds-input__field:disabled {
-  color: var(--ds-state-disabled-foreground);
+  color: var(--ds-content-disabled);
 }
 
 /* Readonly */

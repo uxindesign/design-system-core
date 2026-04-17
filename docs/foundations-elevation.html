@@ -9,10 +9,10 @@
   <style>
     .ds-elevation-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: var(--ds-spacing-6); margin-bottom: var(--ds-spacing-8); }
     .ds-elevation-card { padding: var(--ds-spacing-6); border-radius: var(--ds-radius-lg); background-color: var(--ds-surface-default); border: var(--ds-border-width-1) solid var(--ds-border-subtle); min-height: 120px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: var(--ds-spacing-2); }
-    .ds-elevation-card__name { font-size: var(--ds-font-size-sm); font-weight: var(--ds-font-weight-semibold); color: var(--ds-text-default); }
-    .ds-elevation-card__value { font-size: var(--ds-font-size-xs); color: var(--ds-text-secondary); font-family: var(--ds-font-family-mono); text-align: center; max-width: 100%; word-break: break-all; }
+    .ds-elevation-card__name { font-size: var(--ds-font-size-sm); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-default); }
+    .ds-elevation-card__value { font-size: var(--ds-font-size-xs); color: var(--ds-content-secondary); font-family: var(--ds-font-family-mono); text-align: center; max-width: 100%; word-break: break-all; }
     .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-sm); margin-bottom: var(--ds-spacing-8); }
-    .ds-token-table th { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-text-secondary); }
+    .ds-token-table th { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
     .ds-token-table td { padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); }
     .ds-token-table code { font-size: var(--ds-font-size-xs); font-family: var(--ds-font-family-mono); }
   </style>
@@ -117,7 +117,7 @@
 
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Niveis de Elevacao</span><span data-lang="en">Elevation Levels</span></h2>
-    <p style="color:var(--ds-text-secondary);margin-bottom:var(--ds-spacing-6);font-size:var(--ds-font-size-sm);line-height:var(--ds-line-height-relaxed)"><span data-lang="pt">Cada nivel combina um token de sombra (visivel no modo light) com um token de superficie (visivel no modo dark). No modo dark, maior elevacao = superficie mais clara.</span><span data-lang="en">Each level combines a shadow token (visible in light mode) with a surface token (visible in dark mode). In dark mode, higher elevation = lighter surface color.</span></p>
+    <p style="color:var(--ds-content-secondary);margin-bottom:var(--ds-spacing-6);font-size:var(--ds-font-size-sm);line-height:var(--ds-line-height-relaxed)"><span data-lang="pt">Cada nivel combina um token de sombra (visivel no modo light) com um token de superficie (visivel no modo dark). No modo dark, maior elevacao = superficie mais clara.</span><span data-lang="en">Each level combines a shadow token (visible in light mode) with a surface token (visible in dark mode). In dark mode, higher elevation = lighter surface color.</span></p>
     <table class="ds-props-table">
       <thead>
         <tr><th><span data-lang="pt">Nivel</span><span data-lang="en">Level</span></th><th><span data-lang="pt">Sombra</span><span data-lang="en">Shadow</span></th><th><span data-lang="pt">Superficie</span><span data-lang="en">Surface</span></th><th><span data-lang="pt">Superficie Dark</span><span data-lang="en">Dark Surface</span></th><th><span data-lang="pt">Componentes</span><span data-lang="en">Components</span></th></tr>
@@ -157,7 +157,7 @@
 
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Hierarquia de Superficies no Dark Mode</span><span data-lang="en">Dark Mode Surface Hierarchy</span></h2>
-    <p style="color:var(--ds-text-secondary);margin-bottom:var(--ds-spacing-6);font-size:var(--ds-font-size-sm);line-height:var(--ds-line-height-relaxed)"><span data-lang="pt">No modo dark, sombras sao pouco visiveis em fundos escuros. A elevacao e transmitida principalmente pela cor da superficie. A escala neutral fornece progressao natural de profundidade:</span><span data-lang="en">In dark mode, shadows are barely visible on dark backgrounds. Elevation is conveyed primarily through surface color. The neutral scale provides natural depth progression:</span></p>
+    <p style="color:var(--ds-content-secondary);margin-bottom:var(--ds-spacing-6);font-size:var(--ds-font-size-sm);line-height:var(--ds-line-height-relaxed)"><span data-lang="pt">No modo dark, sombras sao pouco visiveis em fundos escuros. A elevacao e transmitida principalmente pela cor da superficie. A escala neutral fornece progressao natural de profundidade:</span><span data-lang="en">In dark mode, shadows are barely visible on dark backgrounds. Elevation is conveyed primarily through surface color. The neutral scale provides natural depth progression:</span></p>
     <table class="ds-props-table">
       <thead>
         <tr><th>Token</th><th>Light</th><th>Dark</th><th><span data-lang="pt">Funcao</span><span data-lang="en">Role</span></th></tr>

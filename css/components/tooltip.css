@@ -13,7 +13,7 @@
 .ds-tooltip__content {
   position: absolute;
   background: var(--ds-background-inverse);
-  color: var(--ds-text-inverse);
+  color: var(--ds-content-inverse);
   padding: var(--ds-spacing-1) var(--ds-spacing-2);
   border-radius: var(--ds-radius-sm);
   font-size: var(--ds-font-size-sm);

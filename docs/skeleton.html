@@ -9,11 +9,11 @@
   <style>
     /* Tables */
     .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-sm); margin-bottom: var(--ds-spacing-8); }
-    .ds-token-table th { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-text-secondary); }
+    .ds-token-table th { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
     .ds-token-table td { padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
     .ds-token-table code { font-size: var(--ds-font-size-xs); font-family: var(--ds-font-family-mono); }
     /* Callouts */
-    .ds-callout { padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-6); font-size: var(--ds-font-size-sm); line-height: var(--ds-line-height-relaxed); color: var(--ds-text-default); }
+    .ds-callout { padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-6); font-size: var(--ds-font-size-sm); line-height: var(--ds-line-height-relaxed); color: var(--ds-content-default); }
     .ds-callout--info { background-color: var(--ds-feedback-info-background); border: var(--ds-border-width-1) solid var(--ds-feedback-info-border); }
     .ds-callout--success { background-color: var(--ds-feedback-success-background); border: var(--ds-border-width-1) solid var(--ds-feedback-success-border); }
     .ds-callout--warning { background-color: var(--ds-feedback-warning-background); border: var(--ds-border-width-1) solid var(--ds-feedback-warning-border); }
@@ -23,13 +23,13 @@
     .ds-dodont__item { border-radius: var(--ds-radius-lg); overflow: hidden; }
     .ds-dodont__preview { padding: var(--ds-spacing-6); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg) var(--ds-radius-lg) 0 0; display: flex; flex-wrap: wrap; gap: var(--ds-spacing-3); align-items: center; justify-content: center; }
     .ds-dodont__label { padding: var(--ds-spacing-2) var(--ds-spacing-4); font-size: var(--ds-font-size-sm); font-weight: var(--ds-font-weight-semibold); }
-    .ds-dodont__label--do { background-color: var(--ds-feedback-success-background); color: var(--ds-feedback-success-text); border-top: 3px solid var(--ds-feedback-success-default); }
-    .ds-dodont__label--dont { background-color: var(--ds-feedback-error-background); color: var(--ds-feedback-error-text); border-top: 3px solid var(--ds-feedback-error-default); }
-    .ds-dodont__desc { padding: 0 var(--ds-spacing-4) var(--ds-spacing-3); font-size: var(--ds-font-size-sm); color: var(--ds-text-secondary); background-color: var(--ds-background-subtle); }
+    .ds-dodont__label--do { background-color: var(--ds-feedback-success-background); color: var(--ds-feedback-success-content-default); border-top: 3px solid var(--ds-feedback-success-default); }
+    .ds-dodont__label--dont { background-color: var(--ds-feedback-error-background); color: var(--ds-feedback-error-content-default); border-top: 3px solid var(--ds-feedback-error-default); }
+    .ds-dodont__desc { padding: 0 var(--ds-spacing-4) var(--ds-spacing-3); font-size: var(--ds-font-size-sm); color: var(--ds-content-secondary); background-color: var(--ds-background-subtle); }
     /* Related */
     .ds-related { display: flex; gap: var(--ds-spacing-3); flex-wrap: wrap; margin-bottom: var(--ds-spacing-8); }
-    .ds-related__link { padding: var(--ds-spacing-2) var(--ds-spacing-4); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-md); font-size: var(--ds-font-size-sm); color: var(--ds-text-link-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
-    .ds-related__link:hover { border-color: var(--ds-color-primary-default); background-color: var(--ds-color-primary-muted); }
+    .ds-related__link { padding: var(--ds-spacing-2) var(--ds-spacing-4); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-md); font-size: var(--ds-font-size-sm); color: var(--ds-content-link-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
+    .ds-related__link:hover { border-color: var(--ds-brand-default); background-color: var(--ds-state-hover); }
     /* Responsive do/dont */
     @media (max-width: 768px) { .ds-dodont { grid-template-columns: 1fr; } }
   </style>
@@ -147,7 +147,7 @@
     </div>
     <div class="ds-callout ds-callout--warning">
       <div class="ds-callout__title"><span data-lang="pt">Nao use skeletons quando</span><span data-lang="en">Don't use skeletons when</span></div>
-      <span data-lang="pt">Uma unica acao esta carregando (use um <a href="spinner.html" style="color:var(--ds-text-link-default)">Spinner</a> no botao) ou quando a estrutura do conteudo e desconhecida e imprevisivel (use um Spinner).</span><span data-lang="en">A single action is loading (use a <a href="spinner.html" style="color:var(--ds-text-link-default)">Spinner</a> in the button instead) or when the content structure is unknown and unpredictable (use a Spinner).</span>
+      <span data-lang="pt">Uma unica acao esta carregando (use um <a href="spinner.html" style="color:var(--ds-content-link-default)">Spinner</a> no botao) ou quando a estrutura do conteudo e desconhecida e imprevisivel (use um Spinner).</span><span data-lang="en">A single action is loading (use a <a href="spinner.html" style="color:var(--ds-content-link-default)">Spinner</a> in the button instead) or when the content structure is unknown and unpredictable (use a Spinner).</span>
     </div>
   </div>
 
@@ -156,7 +156,7 @@
        ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Skeleton de texto</span><span data-lang="en">Text skeleton</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Representa linhas de conteudo de texto. Use larguras variadas para simular formas naturais de paragrafo.</span><span data-lang="en">Represents lines of text content. Use varying widths to simulate natural paragraph shapes.</span></p>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Representa linhas de conteudo de texto. Use larguras variadas para simular formas naturais de paragrafo.</span><span data-lang="en">Represents lines of text content. Use varying widths to simulate natural paragraph shapes.</span></p>
     <div class="ds-preview">
       <div class="ds-preview__tabs">
         <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
@@ -180,7 +180,7 @@
 
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Skeleton circular</span><span data-lang="en">Circle skeleton</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Perfeito para placeholders de avatar ou icone.</span><span data-lang="en">Perfect for avatar or icon placeholders.</span></p>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Perfeito para placeholders de avatar ou icone.</span><span data-lang="en">Perfect for avatar or icon placeholders.</span></p>
     <div class="ds-preview">
       <div class="ds-preview__tabs">
         <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
@@ -202,7 +202,7 @@
 
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Skeleton retangular</span><span data-lang="en">Rectangle skeleton</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Bloco de largura total para imagens, banners ou grandes areas de conteudo.</span><span data-lang="en">Full-width block for images, banners, or large content areas.</span></p>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Bloco de largura total para imagens, banners ou grandes areas de conteudo.</span><span data-lang="en">Full-width block for images, banners, or large content areas.</span></p>
     <div class="ds-preview">
       <div class="ds-preview__tabs">
         <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
@@ -220,7 +220,7 @@
 
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Composicao: card de perfil</span><span data-lang="en">Composition: profile card</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Combinando diferentes formas de skeleton para criar um placeholder de carregamento realista para um card de perfil.</span><span data-lang="en">Combining different skeleton shapes to create a realistic loading placeholder for a profile card.</span></p>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Combinando diferentes formas de skeleton para criar um placeholder de carregamento realista para um card de perfil.</span><span data-lang="en">Combining different skeleton shapes to create a realistic loading placeholder for a profile card.</span></p>
     <div class="ds-preview">
       <div class="ds-preview__tabs">
         <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
@@ -272,7 +272,7 @@
 
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Composicao: lista de cards</span><span data-lang="en">Composition: card list</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-text-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Um estado de carregamento para uma lista de cards de conteudo com imagem, titulo e descricao.</span><span data-lang="en">A loading state for a list of content cards with image, title, and description.</span></p>
+    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Um estado de carregamento para uma lista de cards de conteudo com imagem, titulo e descricao.</span><span data-lang="en">A loading state for a list of content cards with image, title, and description.</span></p>
     <div class="ds-preview">
       <div class="ds-preview__tabs">
         <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
@@ -361,7 +361,7 @@
     <table class="ds-token-table">
       <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token (semantic)</th><th><span data-lang="pt">Variavel CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
       <tbody>
-        <tr><td><span data-lang="pt">fundo</span><span data-lang="en">background</span></td><td><code>semantic.background.muted</code></td><td><code>--ds-background-muted</code></td></tr>
+        <tr><td><span data-lang="pt">fundo</span><span data-lang="en">background</span></td><td><code>semantic.background.muted</code></td><td><code>--ds-state-disabled-background</code></td></tr>
         <tr><td><span data-lang="pt">animacao (pulso de opacidade)</span><span data-lang="en">animation (opacity pulse)</span></td><td><code>opacity range</code></td><td><code>--ds-opacity-25</code> to <code>--ds-opacity-50</code></td></tr>
         <tr><td><span data-lang="pt">radius (texto)</span><span data-lang="en">radius (text)</span></td><td><code>semantic.radius.sm</code></td><td><code>--ds-radius-sm</code></td></tr>
         <tr><td><span data-lang="pt">radius (circulo)</span><span data-lang="en">radius (circle)</span></td><td><code>foundation.radius.full</code></td><td><code>--ds-radius-full</code></td></tr>

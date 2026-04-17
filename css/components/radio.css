@@ -15,7 +15,7 @@
 .ds-radio-group__legend {
   font-size: var(--ds-font-size-sm);
   font-weight: var(--ds-font-weight-medium);
-  color: var(--ds-text-default);
+  color: var(--ds-content-default);
   margin-bottom: var(--ds-spacing-2);
   padding: 0;
 }
@@ -30,12 +30,12 @@
   border-radius: var(--ds-radius-sm);
   min-height: var(--ds-radio-min-target-size);
   font-size: var(--ds-radio-font-size);
-  color: var(--ds-text-default);
+  color: var(--ds-content-default);
   transition: background-color var(--ds-duration-fast) var(--ds-ease-default);
 }
 
 .ds-radio-label:hover {
-  background-color: var(--ds-background-muted);
+  background-color: var(--ds-state-hover);
 }
 
 /* Custom radio */
@@ -62,20 +62,20 @@
   width: var(--ds-radio-dot-size-md);
   height: var(--ds-radio-dot-size-md);
   border-radius: var(--ds-radius-full);
-  background-color: var(--ds-color-primary-foreground);
+  background-color: var(--ds-brand-content-contrast);
   transform: translate(-50%, -50%) scale(0);
   transition: transform var(--ds-duration-fast) var(--ds-ease-default);
 }
 
 /* Hover */
 .ds-radio:hover:not(:disabled) {
-  border-color: var(--ds-color-primary-default);
+  border-color: var(--ds-brand-default);
 }
 
 /* Checked */
 .ds-radio:checked {
-  background-color: var(--ds-color-primary-default);
-  border-color: var(--ds-color-primary-default);
+  background-color: var(--ds-brand-default);
+  border-color: var(--ds-brand-default);
 }
 
 .ds-radio:checked::after {
@@ -120,12 +120,12 @@
 }
 
 .ds-radio-group--error .ds-radio-group__legend {
-  color: var(--ds-feedback-error-text);
+  color: var(--ds-feedback-error-content-default);
 }
 
 .ds-radio-group__error {
   font-size: var(--ds-font-size-xs);
-  color: var(--ds-feedback-error-text);
+  color: var(--ds-feedback-error-content-default);
   margin-top: var(--ds-spacing-1);
   display: none;
 }

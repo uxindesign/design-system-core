@@ -82,36 +82,36 @@
    Variant: Brand (filled with brand color)
    --------------------------------------------------------- */
 .ds-btn--brand {
-  background-color: var(--ds-color-primary-default);
-  color: var(--ds-color-primary-foreground);
-  border-color: var(--ds-color-primary-default);
+  background-color: var(--ds-brand-default);
+  color: var(--ds-brand-content-contrast);
+  border-color: var(--ds-brand-default);
 }
 
 .ds-btn--brand:hover {
-  background-color: var(--ds-color-primary-hover);
-  border-color: var(--ds-color-primary-hover);
+  background-color: var(--ds-brand-hover);
+  border-color: var(--ds-brand-hover);
 }
 
 .ds-btn--brand:active {
-  background-color: var(--ds-color-primary-active);
-  border-color: var(--ds-color-primary-active);
+  background-color: var(--ds-brand-active);
+  border-color: var(--ds-brand-active);
 }
 
 /* ---------------------------------------------------------
    Variant: Toned (alpha-tinted brand color)
    --------------------------------------------------------- */
 .ds-btn--toned {
-  background-color: var(--ds-color-primary-toned-default);
-  color: var(--ds-color-primary-default);
+  background-color: var(--ds-brand-toned-default);
+  color: var(--ds-brand-content-default);
   border-color: transparent;
 }
 
 .ds-btn--toned:hover {
-  background-color: var(--ds-color-primary-toned-hover);
+  background-color: var(--ds-brand-toned-hover);
 }
 
 .ds-btn--toned:active {
-  background-color: var(--ds-color-primary-toned-active);
+  background-color: var(--ds-brand-toned-active);
 }
 
 /* ---------------------------------------------------------
@@ -119,12 +119,12 @@
    --------------------------------------------------------- */
 .ds-btn--outline {
   background-color: transparent;
-  color: var(--ds-text-default);
+  color: var(--ds-content-default);
   border-color: var(--ds-border-control-default);
 }
 
 .ds-btn--outline:hover {
-  background-color: var(--ds-background-muted);
+  background-color: var(--ds-state-hover);
   border-color: var(--ds-border-control-hover);
 }
 
@@ -137,7 +137,7 @@
    --------------------------------------------------------- */
 .ds-btn--ghost {
   background-color: transparent;
-  color: var(--ds-color-primary-default);
+  color: var(--ds-brand-default);
   border-color: transparent;
 }
 
@@ -154,7 +154,7 @@
    --------------------------------------------------------- */
 .ds-btn--success {
   background-color: var(--ds-feedback-success-default);
-  color: var(--ds-feedback-success-foreground);
+  color: var(--ds-feedback-success-content-contrast);
   border-color: var(--ds-feedback-success-default);
 }
 
@@ -173,7 +173,7 @@
    --------------------------------------------------------- */
 .ds-btn--danger {
   background-color: var(--ds-feedback-error-default);
-  color: var(--ds-feedback-error-foreground);
+  color: var(--ds-feedback-error-content-contrast);
   border-color: var(--ds-feedback-error-default);
 }
 

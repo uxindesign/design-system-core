@@ -41,7 +41,7 @@
   border: none;
   background: transparent;
   outline: none;
-  color: var(--ds-text-default);
+  color: var(--ds-content-default);
   font-size: inherit;
   font-family: inherit;
   resize: vertical;
@@ -63,7 +63,7 @@
 }
 
 .ds-textarea__field::placeholder {
-  color: var(--ds-text-tertiary);
+  color: var(--ds-content-tertiary);
 }
 
 /* States
@@ -76,7 +76,7 @@
 
 /* Focused */
 .ds-textarea:focus-within {
-  border-color: var(--ds-color-primary-default);
+  border-color: var(--ds-brand-default);
   outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color);
   outline-offset: var(--ds-focus-ring-offset);
 }
@@ -97,13 +97,13 @@
 .ds-textarea:has(.ds-textarea__field:disabled) {
   background: var(--ds-state-disabled-background);
   border-color: var(--ds-border-control-disabled);
-  color: var(--ds-state-disabled-foreground);
+  color: var(--ds-content-disabled);
   pointer-events: none;
 }
 
 .ds-textarea--disabled .ds-textarea__field,
 .ds-textarea__field:disabled {
-  color: var(--ds-state-disabled-foreground);
+  color: var(--ds-content-disabled);
   resize: none;
 }
 
@@ -118,12 +118,12 @@
 
 .ds-field__counter {
   font-size: var(--ds-font-size-xs);
-  color: var(--ds-text-secondary);
+  color: var(--ds-content-secondary);
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
 .ds-field__counter--over {
-  color: var(--ds-feedback-error-text);
+  color: var(--ds-feedback-error-content-default);
   font-weight: var(--ds-font-weight-medium);
 }
