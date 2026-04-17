@@ -1,7 +1,7 @@
 # ADR-011: Reestruturação do naming de tokens semânticos de cor
 
 **Data:** 2026-04-17
-**Status:** Aceita
+**Status:** Aceita — executada em v1.5.0
 
 ## Contexto
 
