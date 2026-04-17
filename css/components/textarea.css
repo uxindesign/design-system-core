@@ -127,3 +127,36 @@
   color: var(--ds-feedback-error-content-default);
   font-weight: var(--ds-font-weight-medium);
 }
+
+/* ---------------------------------------------------------
+   Field anatomy — Label row, Required indicator
+   --------------------------------------------------------- */
+
+/*
+  Uses shared .ds-field wrapper and .ds-field__helper from input.css.
+  .ds-field__counter (above) is the character counter — separate from .ds-field__helper.
+
+  HTML structure:
+  <div class="ds-field">
+    <div class="ds-textarea__label-row">
+      <label class="ds-textarea__label" for="field-id">Rótulo</label>
+      <span class="ds-textarea__required" aria-hidden="true">*</span>
+    </div>
+    <div class="ds-textarea">
+      <textarea class="ds-textarea__field" id="field-id"
+                aria-required="true"
+                aria-describedby="field-id-helper"></textarea>
+    </div>
+    <div style="display:flex; justify-content:space-between">
+      <span class="ds-field__helper" id="field-id-helper">Texto auxiliar</span>
+      <span class="ds-field__counter">0/200</span>
+    </div>
+  </div>
+*/
+
+/*
+  Field anatomy (Label row, Required, Helper) uses shared .ds-field__* classes
+  defined in input.css. See input.css for .ds-field__label-row, .ds-field__label,
+  .ds-field__required, .ds-field__helper, .ds-field--no-label, .ds-field--no-helper.
+  .ds-field__counter (above) is the character counter — distinct from .ds-field__helper.
+*/

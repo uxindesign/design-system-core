@@ -159,3 +159,55 @@
   width: var(--ds-radio-dot-size-lg);
   height: var(--ds-radio-dot-size-lg);
 }
+
+/* ---------------------------------------------------------
+   Field anatomy — Content frame, Description, Helper Text
+   --------------------------------------------------------- */
+
+/*
+  HTML structure:
+  <label class="ds-radio-label">
+    <input type="radio" class="ds-radio">
+    <span class="ds-radio__content">
+      <span class="ds-radio__label">Rótulo</span>
+      <span class="ds-radio__description">Descrição</span>
+      <span class="ds-radio__helper">Texto auxiliar</span>
+    </span>
+  </label>
+
+  Accessibility:
+  - Label hidden + Description visible → aria-labelledby on <input> pointing to .ds-radio__description id
+  - Helper Text → aria-describedby on <input> pointing to .ds-radio__helper id
+*/
+
+/* Vertical stack: Label → Description → Helper Text */
+.ds-radio__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-spacing-1);
+  min-width: 0;
+}
+
+/* Label text (label/md: 14px medium / 20px) */
+.ds-radio__label {
+  font-size: var(--ds-font-size-sm);
+  font-weight: var(--ds-font-weight-medium);
+  line-height: var(--ds-line-height-snug);
+  color: var(--ds-content-default);
+}
+
+/* Description (body/sm: 14px regular / 22px, multiline) */
+.ds-radio__description {
+  font-size: var(--ds-font-size-sm);
+  font-weight: var(--ds-font-weight-regular);
+  line-height: var(--ds-line-height-relaxed);
+  color: var(--ds-content-default);
+  white-space: pre-wrap;
+}
+
+/* Helper text (caption/sm: 11px regular / 18px) */
+.ds-radio__helper {
+  font-size: var(--ds-font-size-xs);
+  line-height: var(--ds-line-height-normal);
+  color: var(--ds-content-secondary);
+}

@@ -156,3 +156,29 @@
 .ds-select--readonly {
   background: var(--ds-background-subtle);
 }
+
+/* ---------------------------------------------------------
+   Field anatomy — Label row, Required indicator
+   --------------------------------------------------------- */
+
+/*
+  Uses shared .ds-field wrapper and .ds-field__helper from input.css.
+
+  HTML structure:
+  <div class="ds-field">
+    <div class="ds-select__label-row">
+      <label class="ds-select__label" for="field-id">Rótulo</label>
+      <span class="ds-select__required" aria-hidden="true">*</span>
+    </div>
+    <div class="ds-select">...</div>
+    <span class="ds-field__helper" id="field-id-helper">Texto auxiliar</span>
+  </div>
+
+  Accessibility: same as .ds-input — aria-required, aria-describedby, aria-label when label hidden.
+*/
+
+/*
+  Field anatomy (Label row, Required, Helper) uses shared .ds-field__* classes
+  defined in input.css. See input.css for .ds-field__label-row, .ds-field__label,
+  .ds-field__required, .ds-field__helper, .ds-field--no-label, .ds-field--no-helper.
+*/

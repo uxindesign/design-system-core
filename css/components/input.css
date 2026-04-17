@@ -127,3 +127,78 @@
 .ds-input:has(.ds-input__field:read-only) {
   background: var(--ds-background-subtle);
 }
+
+/* ---------------------------------------------------------
+   Field anatomy — Label row, Required indicator, Helper Text
+   --------------------------------------------------------- */
+
+/*
+  HTML structure:
+  <div class="ds-field">
+    <div class="ds-input__label-row">
+      <label class="ds-input__label" for="field-id">Nome</label>
+      <span class="ds-input__required" aria-hidden="true">*</span> <!-- Required boolean -->
+    </div>
+    <div class="ds-input">
+      <input class="ds-input__field" id="field-id"
+             aria-required="true"
+             aria-describedby="field-id-helper">
+    </div>
+    <span class="ds-field__helper" id="field-id-helper">Texto auxiliar</span>
+  </div>
+
+  Accessibility:
+  - Required=true → aria-required="true" on <input> + .ds-input__required visible
+    Screen readers: include " (obrigatório)" as visually hidden text or rely on aria-required + validation
+  - Helper Text → aria-describedby on <input> pointing to .ds-field__helper id
+  - Show Label=false → add aria-label directly to <input> (label row hidden via .ds-field--no-label)
+*/
+
+/* Field wrapper: stacks label row, control, and helper vertically */
+.ds-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-spacing-1);
+  width: 100%;
+}
+
+/* Label row: label text + optional required asterisk (horizontal, gap 2px) */
+.ds-field__label-row {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+/* Label text (label/md: 14px medium / 20px) */
+.ds-field__label {
+  font-size: var(--ds-font-size-sm);
+  font-weight: var(--ds-font-weight-medium);
+  line-height: var(--ds-line-height-snug);
+  color: var(--ds-content-default);
+}
+
+/* Required asterisk — feedback/error/default, same size as label */
+.ds-field__required {
+  font-size: var(--ds-font-size-sm);
+  font-weight: var(--ds-font-weight-medium);
+  line-height: var(--ds-line-height-snug);
+  color: var(--ds-feedback-error-default);
+  user-select: none;
+}
+
+/* Helper text (caption/sm: 11px regular / 18px) */
+.ds-field__helper {
+  font-size: var(--ds-font-size-xs);
+  line-height: var(--ds-line-height-normal);
+  color: var(--ds-content-secondary);
+}
+
+/* Hide label row */
+.ds-field--no-label .ds-field__label-row {
+  display: none;
+}
+
+/* Hide helper */
+.ds-field--no-helper .ds-field__helper {
+  display: none;
+}

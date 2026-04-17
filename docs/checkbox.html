@@ -499,6 +499,28 @@
         <tr><td><code>ds-checkbox--lg</code></td><td><span data-lang="pt">Tamanho grande (24px)</span><span data-lang="en">Large size (24px)</span></td></tr>
         <tr><td><code>ds-checkbox-group--error</code></td><td><span data-lang="pt">Estado de erro para um grupo de checkboxes</span><span data-lang="en">Error state for a group of checkboxes</span></td></tr>
         <tr><td><code>ds-checkbox-group__error</code></td><td><span data-lang="pt">Texto de mensagem de erro do grupo</span><span data-lang="en">Error message text for the group</span></td></tr>
+        <tr><td><code>ds-checkbox__content</code></td><td><span data-lang="pt">Frame vertical com label, description e helper text</span><span data-lang="en">Vertical frame stacking label, description, and helper text</span></td></tr>
+        <tr><td><code>ds-checkbox__label</code></td><td><span data-lang="pt">Texto do label dentro do content frame (label/md)</span><span data-lang="en">Label text inside content frame (label/md)</span></td></tr>
+        <tr><td><code>ds-checkbox__description</code></td><td><span data-lang="pt">Texto descritivo multiline (body/sm, content/default)</span><span data-lang="en">Multiline description text (body/sm, content/default)</span></td></tr>
+        <tr><td><code>ds-checkbox__helper</code></td><td><span data-lang="pt">Texto auxiliar (caption/sm, content/secondary)</span><span data-lang="en">Helper annotation (caption/sm, content/secondary)</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============================================================
+       12b. FIGMA PROPERTIES
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title"><span data-lang="pt">Propriedades Figma</span><span data-lang="en">Figma properties</span></h2>
+    <table class="ds-token-table">
+      <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th><span data-lang="pt">Tipo</span><span data-lang="en">Type</span></th><th><span data-lang="pt">Padrão</span><span data-lang="en">Default</span></th><th><span data-lang="pt">Descrição</span><span data-lang="en">Description</span></th></tr></thead>
+      <tbody>
+        <tr><td><code>Show Label</code></td><td>Boolean</td><td><code>true</code></td><td><span data-lang="pt">Exibe ou oculta o label do controle</span><span data-lang="en">Shows or hides the control label</span></td></tr>
+        <tr><td><code>Label</code></td><td>Text</td><td>"Rótulo"</td><td><span data-lang="pt">Texto do label (label/md)</span><span data-lang="en">Label text (label/md)</span></td></tr>
+        <tr><td><code>Show Description</code></td><td>Boolean</td><td><code>false</code></td><td><span data-lang="pt">Exibe texto descritivo abaixo do label</span><span data-lang="en">Shows descriptive text below the label</span></td></tr>
+        <tr><td><code>Description</code></td><td>Text</td><td>"Texto descritivo"</td><td><span data-lang="pt">Texto multiline de descrição (body/sm)</span><span data-lang="en">Multiline description text (body/sm)</span></td></tr>
+        <tr><td><code>Show Helper Text</code></td><td>Boolean</td><td><code>false</code></td><td><span data-lang="pt">Exibe texto auxiliar abaixo da description</span><span data-lang="en">Shows helper text below the description</span></td></tr>
+        <tr><td><code>Helper Text</code></td><td>Text</td><td>"Texto auxiliar"</td><td><span data-lang="pt">Anotação em caption/sm (content/secondary)</span><span data-lang="en">Caption/sm annotation (content/secondary)</span></td></tr>
       </tbody>
     </table>
   </div>
@@ -536,6 +558,11 @@
     <div class="ds-callout ds-callout--info" style="margin-top:var(--ds-spacing-4)">
       <div class="ds-callout__title"><span data-lang="pt">Notas de implementação</span><span data-lang="en">Implementation notes</span></div>
       <span data-lang="pt">Usa <code>&lt;input type="checkbox"&gt;</code> nativo para suporte integrado a teclado e leitores de tela. O estado indeterminate deve ser definido via JavaScript (<code>el.indeterminate = true</code>). Sempre envolva checkboxes relacionados em um <code>&lt;fieldset&gt;</code> com um <code>&lt;legend&gt;</code> para fornecer contexto de grupo à tecnologia assistiva.</span><span data-lang="en">Uses native <code>&lt;input type="checkbox"&gt;</code> for built-in keyboard and screen reader support. The indeterminate state must be set via JavaScript (<code>el.indeterminate = true</code>). Always wrap related checkboxes in a <code>&lt;fieldset&gt;</code> with a <code>&lt;legend&gt;</code> to provide group context to assistive technology.</span>
+    </div>
+
+    <div class="ds-callout ds-callout--warning" style="margin-top:var(--ds-spacing-4)">
+      <div class="ds-callout__title"><span data-lang="pt">Label invisível — exige ARIA explícito</span><span data-lang="en">Invisible label — requires explicit ARIA</span></div>
+      <span data-lang="pt">Quando <code>Show Label = false</code> e <code>Show Description = true</code>, vincule o <code>&lt;input&gt;</code> à descrição via <code>aria-labelledby="id-da-description"</code>. Se nenhum dos dois estiver visível, use <code>aria-label</code> diretamente no <code>&lt;input&gt;</code>. O Helper Text deve sempre ser vinculado via <code>aria-describedby="id-do-helper"</code>.</span><span data-lang="en">When <code>Show Label = false</code> and <code>Show Description = true</code>, link the <code>&lt;input&gt;</code> to the description via <code>aria-labelledby="description-id"</code>. If neither is visible, use <code>aria-label</code> directly on the <code>&lt;input&gt;</code>. Helper Text should always be linked via <code>aria-describedby="helper-id"</code>.</span>
     </div>
   </div>
 

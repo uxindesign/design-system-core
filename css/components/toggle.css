@@ -125,3 +125,55 @@
 .ds-toggle--lg:checked::after {
   transform: translateX(20px);
 }
+
+/* ---------------------------------------------------------
+   Field anatomy — Content frame, Description, Helper Text
+   --------------------------------------------------------- */
+
+/*
+  HTML structure:
+  <label class="ds-toggle-label">
+    <input type="checkbox" role="switch" class="ds-toggle">
+    <span class="ds-toggle__content">
+      <span class="ds-toggle__label">Rótulo</span>
+      <span class="ds-toggle__description">Descrição</span>
+      <span class="ds-toggle__helper">Texto auxiliar</span>
+    </span>
+  </label>
+
+  Accessibility:
+  - Label hidden + Description visible → aria-labelledby on <input> pointing to .ds-toggle__description id
+  - Helper Text → aria-describedby on <input> pointing to .ds-toggle__helper id
+*/
+
+/* Vertical stack: Label → Description → Helper Text */
+.ds-toggle__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-spacing-1);
+  min-width: 0;
+}
+
+/* Label text (label/md: 14px medium / 20px) */
+.ds-toggle__label {
+  font-size: var(--ds-font-size-sm);
+  font-weight: var(--ds-font-weight-medium);
+  line-height: var(--ds-line-height-snug);
+  color: var(--ds-content-default);
+}
+
+/* Description (body/sm: 14px regular / 22px, multiline) */
+.ds-toggle__description {
+  font-size: var(--ds-font-size-sm);
+  font-weight: var(--ds-font-weight-regular);
+  line-height: var(--ds-line-height-relaxed);
+  color: var(--ds-content-default);
+  white-space: pre-wrap;
+}
+
+/* Helper text (caption/sm: 11px regular / 18px) */
+.ds-toggle__helper {
+  font-size: var(--ds-font-size-xs);
+  line-height: var(--ds-line-height-normal);
+  color: var(--ds-content-secondary);
+}

@@ -628,6 +628,27 @@
         <tr><td><code>ds-field__helper</code></td><td><span data-lang="pt">Texto auxiliar abaixo do input</span><span data-lang="en">Helper text below the input</span></td></tr>
         <tr><td><code>ds-field__error</code></td><td><span data-lang="pt">Mensagem de erro (exibida quando <code>ds-field--error</code> está definido)</span><span data-lang="en">Error message (shown when <code>ds-field--error</code> is set)</span></td></tr>
         <tr><td><code>ds-field--error</code></td><td><span data-lang="pt">Estado de erro no wrapper do campo</span><span data-lang="en">Error state on the field wrapper</span></td></tr>
+        <tr><td><code>ds-field__label-row</code></td><td><span data-lang="pt">Linha horizontal com label e asterisco de obrigatório</span><span data-lang="en">Horizontal row with label and required asterisk</span></td></tr>
+        <tr><td><code>ds-field__required</code></td><td><span data-lang="pt">Asterisco <code>*</code> em feedback/error/default (decorativo, aria-hidden)</span><span data-lang="en">Asterisk <code>*</code> in feedback/error/default (decorative, aria-hidden)</span></td></tr>
+        <tr><td><code>ds-field--no-label</code></td><td><span data-lang="pt">Oculta o label row quando Show Label = false</span><span data-lang="en">Hides the label row when Show Label = false</span></td></tr>
+        <tr><td><code>ds-field--no-helper</code></td><td><span data-lang="pt">Oculta o helper text quando Show Helper Text = false</span><span data-lang="en">Hides helper text when Show Helper Text = false</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============================================================
+       12b. FIGMA PROPERTIES
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title"><span data-lang="pt">Propriedades Figma</span><span data-lang="en">Figma properties</span></h2>
+    <table class="ds-token-table">
+      <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th><span data-lang="pt">Tipo</span><span data-lang="en">Type</span></th><th><span data-lang="pt">Padrão</span><span data-lang="en">Default</span></th><th><span data-lang="pt">Descrição</span><span data-lang="en">Description</span></th></tr></thead>
+      <tbody>
+        <tr><td><code>Show Label</code></td><td>Boolean</td><td><code>true</code></td><td><span data-lang="pt">Exibe ou oculta o label row (incluindo asterisco de obrigatório)</span><span data-lang="en">Shows or hides the label row (including required asterisk)</span></td></tr>
+        <tr><td><code>Label</code></td><td>Text</td><td>"Rótulo"</td><td><span data-lang="pt">Texto do label (label/md)</span><span data-lang="en">Label text (label/md)</span></td></tr>
+        <tr><td><code>Required</code></td><td>Boolean</td><td><code>false</code></td><td><span data-lang="pt">Exibe o asterisco <code>*</code> em feedback/error/default ao lado do label</span><span data-lang="en">Shows <code>*</code> in feedback/error/default next to the label</span></td></tr>
+        <tr><td><code>Show Helper Text</code></td><td>Boolean</td><td><code>true</code></td><td><span data-lang="pt">Exibe ou oculta o texto auxiliar abaixo do controle</span><span data-lang="en">Shows or hides the helper text below the control</span></td></tr>
+        <tr><td><code>Helper Text</code></td><td>Text</td><td>"Texto auxiliar"</td><td><span data-lang="pt">Anotação em caption/sm (content/secondary)</span><span data-lang="en">Caption/sm annotation (content/secondary)</span></td></tr>
       </tbody>
     </table>
   </div>
@@ -673,6 +694,11 @@
       <code>aria-invalid="true"</code> — set on the native input when in error state.<br>
       <code>aria-describedby</code> — link the input to the error message element ID so screen readers announce the error.<br>
       <code>autocomplete</code> — use appropriate values (<code>name</code>, <code>email</code>, <code>tel</code>, etc.) for personal data fields.</span>
+    </div>
+
+    <div class="ds-callout ds-callout--warning" style="margin-top:var(--ds-spacing-4)">
+      <div class="ds-callout__title"><span data-lang="pt">Required e label invisível</span><span data-lang="en">Required and invisible label</span></div>
+      <span data-lang="pt">Quando <code>Required = true</code>, adicione <code>aria-required="true"</code> no <code>&lt;input&gt;</code> — o asterisco visual (<code>.ds-field__required</code>) é decorativo (<code>aria-hidden="true"</code>). Quando <code>Show Label = false</code>, use <code>aria-label</code> no <code>&lt;input&gt;</code>. O Helper Text deve ser vinculado via <code>aria-describedby</code>.</span><span data-lang="en">When <code>Required = true</code>, add <code>aria-required="true"</code> to the <code>&lt;input&gt;</code> — the visual asterisk (<code>.ds-field__required</code>) is decorative (<code>aria-hidden="true"</code>). When <code>Show Label = false</code>, use <code>aria-label</code> on the <code>&lt;input&gt;</code>. Helper Text should be linked via <code>aria-describedby</code>.</span>
     </div>
   </div>
 
