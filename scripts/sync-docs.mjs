@@ -114,8 +114,8 @@ const generatedFiles = fs.existsSync(generatedDir)
 const indexCss = fs.existsSync(path.join(ROOT, 'css', 'tokens', 'index.css'))
   ? fs.readFileSync(path.join(ROOT, 'css', 'tokens', 'index.css'), 'utf8')
   : '';
-const pipelineClean = indexCss.includes('generated/') &&
-  !indexCss.match(/@import\s+['"](?!.*generated).*\.css/m);
+const nonGeneratedImports = (indexCss.match(/@import\s+['"][^'"]+['"]/g) || []).filter(imp => !imp.includes('generated/') && !imp.includes('themes/'));
+const pipelineClean = generatedFiles.length > 0 && nonGeneratedImports.length === 0;
 
 // ─── token-schema.md ─────────────────────────────────────────────────────────
 
@@ -188,7 +188,7 @@ console.log(`✅ token-schema.md (Foundation: ${foundationTotal}, Semantic: ${se
 // ─── component-inventory.md ───────────────────────────────────────────────────
 
 const knownComponents = [
-  { name: 'Button',      css: 'btn',        token: 'button'   },
+  { name: 'Button',      css: 'button',     token: 'button'   },
   { name: 'Input Text',  css: 'input',      token: 'input'    },
   { name: 'Textarea',    css: 'textarea',   token: 'textarea' },
   { name: 'Select',      css: 'select',     token: 'select'   },

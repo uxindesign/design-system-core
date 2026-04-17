@@ -10,11 +10,11 @@
 | [ADR-001](decisions/ADR-001-migracao-tokens.md) | Migração da arquitetura de tokens para Foundation→Semantic→Component com DTCG + Style Dictionary | Aceita | 2026-04-14 |
 | [ADR-002](decisions/ADR-002-stack-agnostica.md) | Stack agnóstica — HTML + CSS + vanilla JS como base | Aceita | 2026-04-14 |
 | [ADR-003](decisions/ADR-003-fontes-verdade.md) | Figma como autoridade de design, Git como autoridade de tokens/código | Aceita | 2026-04-14 |
-| [ADR-004](decisions/ADR-004-wcag.md) | Figma como autoridade de design, Git como autoridade de tokens/código | Aceita | 2026-04-14 |
+| [ADR-004](decisions/ADR-004-wcag.md) | WCAG 2.2 AA como padrão de acessibilidade | Aceita — `prefers-reduced-motion` pendente de implementação no CSS | 2026-04-14 |
 | [ADR-005](decisions/ADR-005-brand-foundation-e-estados-explicitos.md) | Brand como camada foundation, estados explícitos no semantic, e limpeza tipográfica | Proposta | 2026-04-14 |
 | [ADR-006](decisions/ADR-006-semantic-control-tokens.md) | Adopt semantic control tokens for shared dimensions and typography across interactive controls | Proposed | — |
 | [ADR-007](decisions/ADR-007-toned-color-system.md) | Establish toned color system with colored overlays and semantic toned tokens | Proposed | — |
 | [ADR-008](decisions/ADR-008-recalibracao-paletas-feedback.md) | Recalibração das paletas foundation `green` e `amber` | Aceita | 2026-04-16 |
 | [ADR-009](decisions/ADR-009-border-control-vs-decorative.md) | Separação de `border.default` (decorativa) e `border.control` (funcional) | Aceita | 2026-04-16 |
-| [ADR-010](decisions/ADR-010-abolir-white-black-puros.md) | Remoção de `foundation.color.white` e `foundation.color.black` puros | Aceita | 2026-04-16 |
-| [ADR-011](decisions/ADR-011-renaming-tokens-semanticos-de-cor.md) | Reestruturação do naming de tokens semânticos de cor | Aceita | 2026-04-17 |
+| [ADR-010](decisions/ADR-010-abolir-white-black-puros.md) | Remoção de `foundation.color.white` e `foundation.color.black` puros | Aceita — arquivo CSS legado pendente | 2026-04-16 |
+| [ADR-011](decisions/ADR-011-renaming-tokens-semanticos-de-cor.md) | Reestruturação do naming de tokens semânticos de cor | Aceita — executada em v1.5.0 | 2026-04-17 |

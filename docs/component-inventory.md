@@ -8,7 +8,7 @@
 
 | Componente | CSS | Tokens JSON | Figma (visual) | Figma (binding) | Stories | Docs site |
 |------------|-----|-------------|-----------------|-----------------|---------|----------|
-| Button | ⬜ | 🟢 (25) | 🟢 | 🟢 | ⬜ | 🟢 |
+| Button | 🟢 | 🟢 (25) | 🟢 | 🟢 | ⬜ | 🟢 |
 | Input Text | 🟢 | 🟢 (15) | 🟢 | 🟢 | ⬜ | 🟢 |
 | Textarea | 🟢 | 🟢 (14) | 🟢 | 🟢 | ⬜ | 🟢 |
 | Select | 🟢 | 🟢 (16) | 🟢 | 🟢 | ⬜ | 🟢 |
@@ -61,14 +61,14 @@
 | ADR-001 | Migração da arquitetura de tokens para Foundation→Semantic→Component com DTCG + Style Dictionary | Aceita |
 | ADR-002 | Stack agnóstica — HTML + CSS + vanilla JS como base | Aceita |
 | ADR-003 | Figma como autoridade de design, Git como autoridade de tokens/código | Aceita |
-| ADR-004 | Figma como autoridade de design, Git como autoridade de tokens/código | Aceita |
+| ADR-004 | WCAG 2.2 AA como padrão de acessibilidade | Aceita — `prefers-reduced-motion` pendente de implementação no CSS |
 | ADR-005 | Brand como camada foundation, estados explícitos no semantic, e limpeza tipográfica | Proposta |
 | ADR-006 | Adopt semantic control tokens for shared dimensions and typography across interactive controls | Proposed |
 | ADR-007 | Establish toned color system with colored overlays and semantic toned tokens | Proposed |
 | ADR-008 | Recalibração das paletas foundation `green` e `amber` | Aceita |
 | ADR-009 | Separação de `border.default` (decorativa) e `border.control` (funcional) | Aceita |
-| ADR-010 | Remoção de `foundation.color.white` e `foundation.color.black` puros | Aceita |
-| ADR-011 | Reestruturação do naming de tokens semânticos de cor | Aceita |
+| ADR-010 | Remoção de `foundation.color.white` e `foundation.color.black` puros | Aceita — arquivo CSS legado pendente |
+| ADR-011 | Reestruturação do naming de tokens semânticos de cor | Aceita — executada em v1.5.0 |
 
 ## Próximos milestones
 
