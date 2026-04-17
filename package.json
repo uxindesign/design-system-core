@@ -21,7 +21,8 @@
     "url": "https://github.com/uxindesign/design-system-core.git"
   },
   "scripts": {
-    "build:tokens": "node build-tokens.mjs"
+    "build:tokens": "node build-tokens.mjs",
+    "sync:docs": "node scripts/sync-docs.mjs"
   },
   "devDependencies": {
     "@tokens-studio/sd-transforms": "^2.0.3",
