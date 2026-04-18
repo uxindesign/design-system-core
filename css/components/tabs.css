@@ -35,8 +35,8 @@
 }
 
 .ds-tab:focus-visible {
-  outline: none;
-  box-shadow: var(--ds-focus-ring);
+  outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color);
+  outline-offset: var(--ds-focus-ring-offset);
   border-radius: var(--ds-radius-sm) var(--ds-radius-sm) 0 0;
 }
 
@@ -52,4 +52,11 @@
 
 .ds-tab-panel[hidden] {
   display: none;
+}
+
+/* ---------------------------------------------------------
+   Reduced motion
+   --------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .ds-tab { transition: none; }
 }
