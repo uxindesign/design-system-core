@@ -8,52 +8,48 @@
 /* --- Light mode --- */
 [data-theme="forest"],
 [data-theme="forest"][data-mode="light"] {
-  /* Brand — Primary */
-  --ds-color-primary-default:              var(--ds-color-emerald-600);
-  --ds-color-primary-hover:        var(--ds-color-emerald-700);
-  --ds-color-primary-active:       var(--ds-color-emerald-800);
-  --ds-color-primary-subtle:       var(--ds-color-emerald-100);
-  --ds-color-primary-muted:        var(--ds-color-emerald-50);
-  --ds-color-primary-foreground:   var(--ds-color-neutral-50);
-  --ds-color-primary-text:         var(--ds-color-emerald-700);
+  /* Brand (primary) */
+  --ds-brand-default:              var(--ds-color-emerald-600);
+  --ds-brand-hover:                var(--ds-color-emerald-700);
+  --ds-brand-active:               var(--ds-color-emerald-800);
+  --ds-brand-subtle:               var(--ds-color-emerald-100);
+  --ds-brand-content-contrast:     var(--ds-color-neutral-50);
+  --ds-brand-content-default:      var(--ds-color-emerald-700);
 
-  /* Brand — Secondary */
-  --ds-color-secondary-default:            var(--ds-color-amber-600);
-  --ds-color-secondary-hover:      var(--ds-color-amber-700);
-  --ds-color-secondary-active:     var(--ds-color-amber-800);
-  --ds-color-secondary-subtle:     var(--ds-color-amber-100);
-  --ds-color-secondary-muted:      var(--ds-color-amber-50);
-  --ds-color-secondary-foreground: var(--ds-color-neutral-50);
-  --ds-color-secondary-text:       var(--ds-color-amber-700);
+  /* Accent (secondary) */
+  --ds-accent-default:             var(--ds-color-amber-600);
+  --ds-accent-hover:               var(--ds-color-amber-700);
+  --ds-accent-active:              var(--ds-color-amber-800);
+  --ds-accent-subtle:              var(--ds-color-amber-100);
+  --ds-accent-content-contrast:    var(--ds-color-neutral-50);
+  --ds-accent-content-default:     var(--ds-color-amber-700);
 
   /* Derived — link and focus use primary */
-  --ds-text-link-default:       var(--ds-color-emerald-600);
-  --ds-text-link-hover: var(--ds-color-emerald-700);
+  --ds-content-link-default:       var(--ds-color-emerald-600);
+  --ds-content-link-hover:         var(--ds-color-emerald-700);
   --ds-focus-ring: 0 0 0 2px var(--ds-surface-default), 0 0 0 4px var(--ds-color-emerald-600);
 }
 
 /* --- Dark mode --- */
 [data-theme="forest"][data-mode="dark"] {
-  /* Brand — Primary */
-  --ds-color-primary-default:              var(--ds-color-emerald-400);
-  --ds-color-primary-hover:        var(--ds-color-emerald-300);
-  --ds-color-primary-active:       var(--ds-color-emerald-200);
-  --ds-color-primary-subtle:       var(--ds-color-emerald-900);
-  --ds-color-primary-muted:        var(--ds-color-emerald-950);
-  --ds-color-primary-foreground:   var(--ds-color-neutral-900);
-  --ds-color-primary-text:         var(--ds-color-emerald-400);
+  /* Brand (primary) */
+  --ds-brand-default:              var(--ds-color-emerald-400);
+  --ds-brand-hover:                var(--ds-color-emerald-300);
+  --ds-brand-active:               var(--ds-color-emerald-200);
+  --ds-brand-subtle:               var(--ds-color-emerald-900);
+  --ds-brand-content-contrast:     var(--ds-color-neutral-900);
+  --ds-brand-content-default:      var(--ds-color-emerald-400);
 
-  /* Brand — Secondary */
-  --ds-color-secondary-default:            var(--ds-color-amber-400);
-  --ds-color-secondary-hover:      var(--ds-color-amber-300);
-  --ds-color-secondary-active:     var(--ds-color-amber-200);
-  --ds-color-secondary-subtle:     var(--ds-color-amber-800);
-  --ds-color-secondary-muted:      var(--ds-color-amber-950);
-  --ds-color-secondary-foreground: var(--ds-color-neutral-900);
-  --ds-color-secondary-text:       var(--ds-color-amber-400);
+  /* Accent (secondary) */
+  --ds-accent-default:             var(--ds-color-amber-400);
+  --ds-accent-hover:               var(--ds-color-amber-300);
+  --ds-accent-active:              var(--ds-color-amber-200);
+  --ds-accent-subtle:              var(--ds-color-amber-800);
+  --ds-accent-content-contrast:    var(--ds-color-neutral-900);
+  --ds-accent-content-default:     var(--ds-color-amber-400);
 
   /* Derived */
-  --ds-text-link-default:       var(--ds-color-emerald-400);
-  --ds-text-link-hover: var(--ds-color-emerald-300);
+  --ds-content-link-default:       var(--ds-color-emerald-400);
+  --ds-content-link-hover:         var(--ds-color-emerald-300);
   --ds-focus-ring: 0 0 0 2px var(--ds-surface-default), 0 0 0 4px var(--ds-color-emerald-400);
 }
