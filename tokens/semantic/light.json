@@ -8,8 +8,8 @@
       },
       "subtle": {
         "$type": "color",
-        "$value": "{foundation.color.neutral.50}",
-        "$description": "Subtle alternate background"
+        "$value": "{foundation.color.neutral.100}",
+        "$description": "Subtle alternate background — one step darker than default to create visual separation."
       },
       "inverse": {
         "$type": "color",
