@@ -26,9 +26,7 @@
 
   /* Derived — link and focus use primary */
   --ds-content-link-default:       var(--ds-color-cyan-600);
-  --ds-content-link-hover:         var(--ds-color-cyan-700);
-  --ds-focus-ring: 0 0 0 2px var(--ds-surface-default), 0 0 0 4px var(--ds-color-cyan-600);
-}
+  --ds-content-link-hover:         var(--ds-color-cyan-700);}
 
 /* --- Dark mode --- */
 [data-theme="ocean"][data-mode="dark"] {
@@ -50,6 +48,4 @@
 
   /* Derived */
   --ds-content-link-default:       var(--ds-color-cyan-400);
-  --ds-content-link-hover:         var(--ds-color-cyan-300);
-  --ds-focus-ring: 0 0 0 2px var(--ds-surface-default), 0 0 0 4px var(--ds-color-cyan-400);
-}
+  --ds-content-link-hover:         var(--ds-color-cyan-300);}
