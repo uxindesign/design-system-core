@@ -8,5 +8,3 @@
 @import 'themes/theme-ocean.css';
 @import 'themes/theme-forest.css';
 
-/* Legacy tokens (remove when all consumers migrate to granular) */
-@import 'legacy.css';

@@ -93,8 +93,8 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
 }
 
 .ds-theme-switcher__select:focus-visible {
-  outline: none;
-  box-shadow: var(--ds-focus-ring);
+  outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color);
+  outline-offset: var(--ds-focus-ring-offset);
 }
 
 /* Mobile menu toggle */
@@ -109,8 +109,8 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
 }
 
 .ds-menu-toggle:focus-visible {
-  outline: none;
-  box-shadow: var(--ds-focus-ring);
+  outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color);
+  outline-offset: var(--ds-focus-ring-offset);
 }
 
 .ds-menu-toggle svg {
@@ -175,8 +175,8 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
 }
 
 .ds-sidebar__link:focus-visible {
-  outline: none;
-  box-shadow: var(--ds-focus-ring);
+  outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color);
+  outline-offset: var(--ds-focus-ring-offset);
 }
 
 .ds-sidebar__link--active {
@@ -290,8 +290,8 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
 }
 
 .ds-preview__copy:focus-visible {
-  outline: none;
-  box-shadow: var(--ds-focus-ring);
+  outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color);
+  outline-offset: var(--ds-focus-ring-offset);
 }
 
 /* Preview tabs (Preview / Code) */
@@ -323,8 +323,8 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
 }
 
 .ds-preview__tab:focus-visible {
-  outline: none;
-  box-shadow: var(--ds-focus-ring);
+  outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color);
+  outline-offset: var(--ds-focus-ring-offset);
 }
 
 .ds-preview__panel {
@@ -453,8 +453,8 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
 }
 
 .ds-component-card:focus-visible {
-  outline: none;
-  box-shadow: var(--ds-focus-ring);
+  outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color);
+  outline-offset: var(--ds-focus-ring-offset);
 }
 
 /* Quickstart code block */
