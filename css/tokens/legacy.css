@@ -4,9 +4,9 @@
 
 :root,
 [data-mode="light"] {
-  --ds-focus-ring: 0 0 0 2px var(--ds-surface-default), 0 0 0 4px var(--ds-color-primary-default);
+  --ds-focus-ring: 0 0 0 2px var(--ds-surface-default), 0 0 0 4px var(--ds-brand-default);
 }
 
 [data-mode="dark"] {
-  --ds-focus-ring: 0 0 0 2px var(--ds-surface-default), 0 0 0 4px var(--ds-color-primary-default);
+  --ds-focus-ring: 0 0 0 2px var(--ds-surface-default), 0 0 0 4px var(--ds-brand-default);
 }
