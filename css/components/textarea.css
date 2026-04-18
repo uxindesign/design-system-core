@@ -160,3 +160,10 @@
   .ds-field__required, .ds-field__helper, .ds-field--no-label, .ds-field--no-helper.
   .ds-field__counter (above) is the character counter — distinct from .ds-field__helper.
 */
+
+/* ---------------------------------------------------------
+   Reduced motion
+   --------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .ds-textarea { transition: none; }
+}

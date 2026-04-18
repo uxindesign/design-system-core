@@ -177,3 +177,12 @@
   line-height: var(--ds-line-height-normal);
   color: var(--ds-content-secondary);
 }
+
+/* ---------------------------------------------------------
+   Reduced motion
+   --------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .ds-toggle-label,
+  .ds-toggle,
+  .ds-toggle::after { transition: none; }
+}

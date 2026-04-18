@@ -182,3 +182,10 @@
   defined in input.css. See input.css for .ds-field__label-row, .ds-field__label,
   .ds-field__required, .ds-field__helper, .ds-field--no-label, .ds-field--no-helper.
 */
+
+/* ---------------------------------------------------------
+   Reduced motion
+   --------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .ds-select { transition: none; }
+}

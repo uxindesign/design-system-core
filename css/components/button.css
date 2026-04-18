@@ -247,3 +247,10 @@
   align-items: center;
   justify-content: center;
 }
+
+/* ---------------------------------------------------------
+   Reduced motion
+   --------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .ds-btn { transition: none; }
+}

@@ -202,3 +202,10 @@
 .ds-field--no-helper .ds-field__helper {
   display: none;
 }
+
+/* ---------------------------------------------------------
+   Reduced motion
+   --------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .ds-input { transition: none; }
+}

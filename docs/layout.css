@@ -530,3 +530,11 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
 .ds-sidebar-overlay--visible {
   display: block;
 }
+
+/* ---------------------------------------------------------
+   Reduced motion
+   --------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .ds-sidebar__link,
+  .ds-sidebar { transition: none; }
+}

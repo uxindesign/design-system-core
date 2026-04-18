@@ -211,3 +211,12 @@
   line-height: var(--ds-line-height-normal);
   color: var(--ds-content-secondary);
 }
+
+/* ---------------------------------------------------------
+   Reduced motion
+   --------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .ds-radio-label,
+  .ds-radio,
+  .ds-radio::after { transition: none; }
+}
