@@ -54,8 +54,8 @@
 }
 
 .ds-alert__close:focus-visible {
-  outline: none;
-  box-shadow: var(--ds-focus-ring);
+  outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color);
+  outline-offset: var(--ds-focus-ring-offset);
   border-radius: var(--ds-radius-sm);
 }
 
@@ -107,4 +107,11 @@
   background-color: var(--ds-feedback-info-background);
   color: var(--ds-feedback-info-content-default);
   border-left: var(--ds-border-width-4) solid var(--ds-feedback-info-default);
+}
+
+/* ---------------------------------------------------------
+   Reduced motion
+   --------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .ds-alert__close { transition: none; }
 }
