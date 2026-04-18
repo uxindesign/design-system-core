@@ -26,7 +26,8 @@
 
   /* Derived — link and focus use primary */
   --ds-content-link-default:       var(--ds-color-emerald-600);
-  --ds-content-link-hover:         var(--ds-color-emerald-700);}
+  --ds-content-link-hover:         var(--ds-color-emerald-700);
+}
 
 /* --- Dark mode --- */
 [data-theme="forest"][data-mode="dark"] {
@@ -48,4 +49,5 @@
 
   /* Derived */
   --ds-content-link-default:       var(--ds-color-emerald-400);
-  --ds-content-link-hover:         var(--ds-color-emerald-300);}
+  --ds-content-link-hover:         var(--ds-color-emerald-300);
+}
