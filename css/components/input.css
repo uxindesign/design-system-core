@@ -203,6 +203,23 @@
   display: none;
 }
 
+/* Error message */
+.ds-field__error {
+  display: none;
+  font-size: var(--ds-font-size-xs);
+  line-height: var(--ds-line-height-normal);
+  color: var(--ds-feedback-error-default);
+}
+
+/* Error state — show error message, tint label */
+.ds-field--error .ds-field__error {
+  display: block;
+}
+
+.ds-field--error .ds-field__label {
+  color: var(--ds-feedback-error-default);
+}
+
 /* ---------------------------------------------------------
    Reduced motion
    --------------------------------------------------------- */

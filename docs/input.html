@@ -150,7 +150,7 @@
         </div>
 
         <!-- 6: Error -->
-        <div class="ds-anatomy__part">
+        <div class="ds-anatomy__part ds-field--error">
           <span class="ds-anatomy__marker" style="top:50%;left:-28px;transform:translateY(-50%);">6</span>
           <span class="ds-field__error">Please enter a valid email.</span>
         </div>
@@ -315,16 +315,26 @@
       </div>
       <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
         <div class="ds-preview__canvas ds-preview__canvas--column" style="max-width:400px">
-          <div class="ds-input ds-input--error">
-            <input type="text" class="ds-input__field" value="Invalid value" aria-invalid="true">
+          <div class="ds-field ds-field--error">
+            <label class="ds-field__label" for="state-error-input">Email address</label>
+            <div class="ds-input ds-input--error">
+              <input type="email" class="ds-input__field" id="state-error-input" value="invalid-email" aria-invalid="true" aria-describedby="state-error-msg">
+            </div>
+            <span class="ds-field__error" id="state-error-msg">Please enter a valid email address.</span>
           </div>
         </div>
       </div>
       <div class="ds-preview__panel" data-panel="code">
         <div class="ds-preview__code">
           <button class="ds-preview__copy" aria-label="Copy code">Copy</button>
-          <pre><code>&lt;div class="ds-input ds-input--error"&gt;
-  &lt;input type="text" class="ds-input__field" value="Invalid value" aria-invalid="true"&gt;
+          <pre><code>&lt;div class="ds-field ds-field--error"&gt;
+  &lt;label class="ds-field__label" for="email"&gt;Email address&lt;/label&gt;
+  &lt;div class="ds-input ds-input--error"&gt;
+    &lt;input type="email" class="ds-input__field" id="email"
+           value="invalid-email" aria-invalid="true"
+           aria-describedby="email-error"&gt;
+  &lt;/div&gt;
+  &lt;span class="ds-field__error" id="email-error"&gt;Please enter a valid email address.&lt;/span&gt;
 &lt;/div&gt;</code></pre>
         </div>
       </div>
