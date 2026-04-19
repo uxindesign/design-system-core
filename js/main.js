@@ -88,7 +88,7 @@
       }).join('');
       return '<div class="ds-sidebar__section ds-sidebar__section--expanded">'
         + '<button class="ds-sidebar__heading" aria-expanded="true">'
-        + section.heading
+        + '<span class="ds-sidebar__heading-label">' + section.heading + '</span>'
         + '<svg class="ds-sidebar__chevron" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 10l5 5 5-5z"/></svg>'
         + '</button>'
         + '<ul class="ds-sidebar__nav">' + items + '</ul></div>';
@@ -171,7 +171,7 @@
     var hasMap = Object.keys(map).length > 0;
 
     var els = document.querySelectorAll(
-      '.ds-sidebar__heading, .ds-sidebar__link, .ds-component-card, ' +
+      '.ds-sidebar__heading-label, .ds-sidebar__link, .ds-component-card, ' +
       '.ds-preview__tab, .ds-preview__copy'
     );
     els.forEach(function (el) {
