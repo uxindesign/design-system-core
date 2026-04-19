@@ -68,8 +68,6 @@
     }
   ];
 
-  var ICON_CHEVRON = '<svg class="ds-sidebar__chevron" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 10l5 5 5-5z"/></svg>';
-
   function buildSidebar() {
     var sidebar = document.getElementById('sidebar');
     if (!sidebar) return;
@@ -79,10 +77,6 @@
     var current  = pathname.split('/').pop() || 'index.html';
 
     var html = NAV_DATA.map(function (section) {
-      var hasActive = section.items.some(function (item) {
-        return item.path.split('/').pop() === current;
-      });
-      var expanded = hasActive;
       var items = section.items.map(function (item) {
         var file = item.path.split('/').pop();
         var href = inDocs
@@ -92,24 +86,12 @@
         return '<li><a href="' + href + '" class="ds-sidebar__link' + active + '">'
           + item.label + '</a></li>';
       }).join('');
-      var sectionClass = 'ds-sidebar__section' + (expanded ? ' ds-sidebar__section--expanded' : '');
-      return '<div class="' + sectionClass + '">'
-        + '<button class="ds-sidebar__heading" aria-expanded="' + expanded + '">'
-        + ICON_CHEVRON + section.heading
-        + '</button>'
+      return '<div class="ds-sidebar__section">'
+        + '<h2 class="ds-sidebar__heading">' + section.heading + '</h2>'
         + '<ul class="ds-sidebar__nav">' + items + '</ul></div>';
     }).join('');
 
     sidebar.innerHTML = html;
-
-    sidebar.querySelectorAll('.ds-sidebar__heading').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var section = this.closest('.ds-sidebar__section');
-        var isExpanded = section.classList.contains('ds-sidebar__section--expanded');
-        section.classList.toggle('ds-sidebar__section--expanded', !isExpanded);
-        this.setAttribute('aria-expanded', String(!isExpanded));
-      });
-    });
   }
 
   /* ---------------------------------------------------------
