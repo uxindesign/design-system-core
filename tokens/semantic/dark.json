@@ -127,8 +127,8 @@
         },
         "contrast": {
           "$type": "color",
-          "$value": "{foundation.color.neutral.50}",
-          "$description": "Conteúdo de alto contraste sobre fill brand sólido em dark mode. White text sobre blue-600 (escuro). Ocean/Forest overrideiam para neutral-900 pois seus brand-default são 400-level (claros)."
+          "$value": "{foundation.color.neutral.900}",
+          "$description": "Conteúdo de alto contraste sobre fill brand sólido em dark mode. Dark text porque brand default é blue-400 (claro)."
         },
         "contrast-disabled": {
           "$type": "color",

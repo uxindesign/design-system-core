@@ -18,13 +18,15 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
 /* ---------------------------------------------------------
    Site Header
    --------------------------------------------------------- */
+/* --_hfg: header foreground — white in both modes on brand bg */
 .ds-site-header {
+  --_hfg: var(--ds-brand-content-contrast); /* light: neutral-50 (white) */
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   height: 64px;
-  background-color: var(--ds-brand-default);
+  background-color: var(--ds-brand-default); /* light: 600-level brand */
   border-bottom: none;
   box-shadow: none;
   display: flex;
@@ -34,12 +36,18 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
   z-index: var(--ds-z-40);
 }
 
+/* Dark mode: use darkest brand shade (900-level) — themed but clearly dark */
+[data-mode="dark"] .ds-site-header {
+  --_hfg: var(--ds-content-default); /* neutral-50 = white, always */
+  background-color: var(--ds-brand-subtle); /* dark: blue/cyan/emerald-900 */
+}
+
 .ds-site-header__brand {
   display: flex;
   align-items: center;
   gap: var(--ds-spacing-3);
   text-decoration: none;
-  color: var(--ds-brand-content-contrast);
+  color: var(--_hfg);
 }
 
 .ds-site-header__logo {
@@ -50,7 +58,7 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--ds-brand-content-contrast);
+  color: var(--_hfg);
   font-weight: var(--ds-font-weight-bold);
   font-size: var(--ds-font-size-sm);
 }
@@ -85,7 +93,7 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
   border: var(--ds-border-width-1) solid rgba(255, 255, 255, 0.35);
   border-radius: var(--ds-radius-md);
   background-color: rgba(255, 255, 255, 0.15);
-  color: var(--ds-brand-content-contrast);
+  color: var(--_hfg);
   cursor: pointer;
   appearance: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23ffffff' d='M2.5 4.5L6 8l3.5-3.5'/%3E%3C/svg%3E");
@@ -98,16 +106,16 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
   outline-offset: var(--ds-focus-ring-offset);
 }
 
-/* Mode toggle override — ghost button on brand background */
+/* Mode toggle — ghost button on brand background */
 .ds-site-header .ds-btn--ghost {
-  color: var(--ds-brand-content-contrast);
+  color: var(--_hfg);
   border-color: rgba(255, 255, 255, 0.35);
 }
 
 .ds-site-header .ds-btn--ghost:hover {
   background-color: rgba(255, 255, 255, 0.15);
   border-color: rgba(255, 255, 255, 0.5);
-  color: var(--ds-brand-content-contrast);
+  color: var(--_hfg);
 }
 
 .ds-site-header .ds-btn--ghost:focus-visible {
