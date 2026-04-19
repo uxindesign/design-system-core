@@ -24,8 +24,9 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
   left: 0;
   right: 0;
   height: 64px;
-  background-color: var(--ds-surface-raised);
-  border-bottom: var(--ds-border-width-1) solid var(--ds-border-default);
+  background-color: var(--ds-brand-default);
+  border-bottom: none;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.12);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -38,13 +39,13 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
   align-items: center;
   gap: var(--ds-spacing-3);
   text-decoration: none;
-  color: var(--ds-content-default);
+  color: var(--ds-brand-content-contrast);
 }
 
 .ds-site-header__logo {
   width: 32px;
   height: 32px;
-  background-color: var(--ds-brand-default);
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: var(--ds-radius-md);
   display: flex;
   align-items: center;
@@ -74,27 +75,43 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
 
 .ds-theme-switcher__label {
   font-size: var(--ds-font-size-sm);
-  color: var(--ds-content-secondary);
+  color: rgba(255, 255, 255, 0.75);
   font-weight: var(--ds-font-weight-medium);
 }
 
 .ds-theme-switcher__select {
   font-size: var(--ds-font-size-sm);
   padding: var(--ds-spacing-1) var(--ds-spacing-8) var(--ds-spacing-1) var(--ds-spacing-3);
-  border: var(--ds-border-width-1) solid var(--ds-border-default);
+  border: var(--ds-border-width-1) solid rgba(255, 255, 255, 0.35);
   border-radius: var(--ds-radius-md);
-  background-color: var(--ds-surface-raised);
-  color: var(--ds-content-default);
+  background-color: rgba(255, 255, 255, 0.15);
+  color: var(--ds-brand-content-contrast);
   cursor: pointer;
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2364748B' d='M2.5 4.5L6 8l3.5-3.5'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23ffffff' d='M2.5 4.5L6 8l3.5-3.5'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 8px center;
 }
 
 .ds-theme-switcher__select:focus-visible {
-  outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color);
+  outline: var(--ds-focus-ring-width) solid rgba(255, 255, 255, 0.6);
   outline-offset: var(--ds-focus-ring-offset);
+}
+
+/* Mode toggle override — ghost button on brand background */
+.ds-site-header .ds-btn--ghost {
+  color: var(--ds-brand-content-contrast);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.ds-site-header .ds-btn--ghost:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: var(--ds-brand-content-contrast);
+}
+
+.ds-site-header .ds-btn--ghost:focus-visible {
+  outline-color: rgba(255, 255, 255, 0.6);
 }
 
 /* Mobile menu toggle */
