@@ -96,10 +96,16 @@
 
     sidebar.innerHTML = html;
 
-    var activeLink = sidebar.querySelector('.ds-sidebar__link--active');
-    if (activeLink) {
-      activeLink.scrollIntoView({ block: 'nearest' });
+    var savedScroll = sessionStorage.getItem('ds-sidebar-scroll');
+    if (savedScroll !== null) {
+      sidebar.scrollTop = parseInt(savedScroll, 10);
     }
+
+    sidebar.querySelectorAll('.ds-sidebar__link').forEach(function (link) {
+      link.addEventListener('click', function () {
+        sessionStorage.setItem('ds-sidebar-scroll', sidebar.scrollTop);
+      });
+    });
 
     sidebar.querySelectorAll('.ds-sidebar__heading').forEach(function (btn) {
       btn.addEventListener('click', function () {
