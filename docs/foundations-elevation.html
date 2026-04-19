@@ -111,16 +111,16 @@
 
 <main class="ds-main">
   <div class="ds-section">
-    <h1 class="ds-section__title"><span data-lang="pt">Elevacao</span><span data-lang="en">Elevation</span></h1>
-    <p class="ds-section__subtitle"><span data-lang="pt">4 niveis de elevacao. Em light mode, sombras criam profundidade. Em dark mode, superficies progressivamente mais claras indicam elevacao -- sombras sao secundarias.</span><span data-lang="en">4 elevation levels. In light mode, shadows create depth. In dark mode, progressively lighter surfaces indicate elevation -- shadows are secondary.</span></p>
+    <h1 class="ds-section__title"><span data-lang="pt">Elevation</span><span data-lang="en">Elevation</span></h1>
+    <p class="ds-section__subtitle"><span data-lang="pt">4 níveis de elevação. Em light mode, sombras criam profundidade. Em dark mode, superfícies progressivamente mais claras indicam elevação -- sombras são secundárias.</span><span data-lang="en">4 elevation levels. In light mode, shadows create depth. In dark mode, progressively lighter surfaces indicate elevation -- shadows are secondary.</span></p>
   </div>
 
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title"><span data-lang="pt">Niveis de Elevacao</span><span data-lang="en">Elevation Levels</span></h2>
-    <p style="color:var(--ds-content-secondary);margin-bottom:var(--ds-spacing-6);font-size:var(--ds-font-size-sm);line-height:var(--ds-line-height-relaxed)"><span data-lang="pt">Cada nivel combina um token de sombra (visivel no modo light) com um token de superficie (visivel no modo dark). No modo dark, maior elevacao = superficie mais clara.</span><span data-lang="en">Each level combines a shadow token (visible in light mode) with a surface token (visible in dark mode). In dark mode, higher elevation = lighter surface color.</span></p>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Elevation Levels</span><span data-lang="en">Elevation Levels</span></h2>
+    <p style="color:var(--ds-content-secondary);margin-bottom:var(--ds-spacing-6);font-size:var(--ds-font-size-sm);line-height:var(--ds-line-height-relaxed)"><span data-lang="pt">Cada nível combina um token de sombra (visível no modo light) com um token de superfície (visível no modo dark). No modo dark, maior elevação = superfície mais clara.</span><span data-lang="en">Each level combines a shadow token (visible in light mode) with a surface token (visible in dark mode). In dark mode, higher elevation = lighter surface color.</span></p>
     <table class="ds-props-table">
       <thead>
-        <tr><th><span data-lang="pt">Nivel</span><span data-lang="en">Level</span></th><th><span data-lang="pt">Sombra</span><span data-lang="en">Shadow</span></th><th><span data-lang="pt">Superficie</span><span data-lang="en">Surface</span></th><th><span data-lang="pt">Superficie Dark</span><span data-lang="en">Dark Surface</span></th><th><span data-lang="pt">Componentes</span><span data-lang="en">Components</span></th></tr>
+        <tr><th><span data-lang="pt">Nível</span><span data-lang="en">Level</span></th><th><span data-lang="pt">Sombra</span><span data-lang="en">Shadow</span></th><th><span data-lang="pt">Superfície</span><span data-lang="en">Surface</span></th><th><span data-lang="pt">Superfície Dark</span><span data-lang="en">Dark Surface</span></th><th><span data-lang="pt">Componentes</span><span data-lang="en">Components</span></th></tr>
       </thead>
       <tbody>
         <tr>
@@ -156,15 +156,15 @@
   </div>
 
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title"><span data-lang="pt">Hierarquia de Superficies no Dark Mode</span><span data-lang="en">Dark Mode Surface Hierarchy</span></h2>
-    <p style="color:var(--ds-content-secondary);margin-bottom:var(--ds-spacing-6);font-size:var(--ds-font-size-sm);line-height:var(--ds-line-height-relaxed)"><span data-lang="pt">No modo dark, sombras sao pouco visiveis em fundos escuros. A elevacao e transmitida principalmente pela cor da superficie. A escala neutral fornece progressao natural de profundidade:</span><span data-lang="en">In dark mode, shadows are barely visible on dark backgrounds. Elevation is conveyed primarily through surface color. The neutral scale provides natural depth progression:</span></p>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Dark Mode Surface Hierarchy</span><span data-lang="en">Dark Mode Surface Hierarchy</span></h2>
+    <p style="color:var(--ds-content-secondary);margin-bottom:var(--ds-spacing-6);font-size:var(--ds-font-size-sm);line-height:var(--ds-line-height-relaxed)"><span data-lang="pt">No modo dark, sombras são pouco visíveis em fundos escuros. A elevação e transmitida principalmente pela cor da superfície. A escala neutral fornece progressao natural de profundidade:</span><span data-lang="en">In dark mode, shadows are barely visible on dark backgrounds. Elevation is conveyed primarily through surface color. The neutral scale provides natural depth progression:</span></p>
     <table class="ds-props-table">
       <thead>
         <tr><th>Token</th><th>Light</th><th>Dark</th><th><span data-lang="pt">Funcao</span><span data-lang="en">Role</span></th></tr>
       </thead>
       <tbody>
-        <tr><td><code>--ds-background-default</code></td><td>white</td><td>neutral-950</td><td><span data-lang="pt">Canvas da pagina (mais profundo)</span><span data-lang="en">Page canvas (deepest)</span></td></tr>
-        <tr><td><code>--ds-surface-default</code></td><td>white</td><td>neutral-900</td><td><span data-lang="pt">Superficie de conteudo, elementos planos</span><span data-lang="en">Content surface, flat elements</span></td></tr>
+        <tr><td><code>--ds-background-default</code></td><td>white</td><td>neutral-950</td><td><span data-lang="pt">Canvas da página (mais profundo)</span><span data-lang="en">Page canvas (deepest)</span></td></tr>
+        <tr><td><code>--ds-surface-default</code></td><td>white</td><td>neutral-900</td><td><span data-lang="pt">Superfície de conteúdo, elementos planos</span><span data-lang="en">Content surface, flat elements</span></td></tr>
         <tr><td><code>--ds-surface-raised</code></td><td>white</td><td>neutral-800</td><td><span data-lang="pt">Cards, paineis, sticky headers</span><span data-lang="en">Cards, panels, sticky headers</span></td></tr>
         <tr><td><code>--ds-surface-overlay</code></td><td>white</td><td>neutral-700</td><td>Dropdowns, popovers, FABs</td></tr>
         <tr><td><code>--ds-surface-elevated</code></td><td>white</td><td>neutral-600</td><td><span data-lang="pt">Modais, dialogs, sidesheets</span><span data-lang="en">Modals, dialogs, sidesheets</span></td></tr>
@@ -173,7 +173,7 @@
   </div>
 
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title"><span data-lang="pt">Tokens de Sombra</span><span data-lang="en">Shadow Tokens</span></h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Shadow Tokens</span><span data-lang="en">Shadow Tokens</span></h2>
     <table class="ds-props-table">
       <thead><tr><th>Token</th><th><span data-lang="pt">Valor CSS</span><span data-lang="en">CSS Value</span></th></tr></thead>
       <tbody>

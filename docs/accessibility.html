@@ -102,7 +102,7 @@
 <main class="ds-main">
 
   <div class="ds-section">
-    <h1 class="ds-section__title"><span data-lang="pt">Acessibilidade</span><span data-lang="en">Accessibility</span></h1>
+    <h1 class="ds-section__title"><span data-lang="pt">Accessibility</span><span data-lang="en">Accessibility</span></h1>
     <p class="ds-section__subtitle"><span data-lang="pt">Conformidade WCAG 2.2 AA em todos os componentes.</span><span data-lang="en">WCAG 2.2 AA compliance across all components.</span></p>
   </div>
 
@@ -111,7 +111,7 @@
     <div class="ds-subsection">
       <h2 class="ds-subsection__title"><span data-lang="pt">Gerenciamento de foco</span><span data-lang="en">Focus Management</span></h2>
       <p style="color:var(--ds-content-secondary);margin-bottom:var(--ds-spacing-4);line-height:var(--ds-line-height-relaxed);">
-        <span data-lang="pt">Todos os componentes interativos usam um indicador de foco baseado em outline via tokens <code style="font-family:var(--ds-font-family-mono);background:var(--ds-background-subtle);padding:2px 6px;border-radius:var(--ds-radius-sm);">--ds-focus-ring-*</code>. Essa abordagem garante que o focus ring seja visivel contra qualquer cor de fundo, atendendo ao Criterio de Sucesso WCAG 2.2 2.4.7 (Focus Visible).</span><span data-lang="en">All interactive components use an outline-based focus indicator via <code style="font-family:var(--ds-font-family-mono);background:var(--ds-background-subtle);padding:2px 6px;border-radius:var(--ds-radius-sm);">--ds-focus-ring-*</code> tokens. This approach ensures the focus ring is visible against any background color, meeting WCAG 2.2 Success Criterion 2.4.7 (Focus Visible).</span>
+        <span data-lang="pt">Todos os componentes interativos usam um indicador de foco baseado em outline via tokens <code style="font-family:var(--ds-font-family-mono);background:var(--ds-background-subtle);padding:2px 6px;border-radius:var(--ds-radius-sm);">--ds-focus-ring-*</code>. Essa abordagem garante que o focus ring seja visível contra qualquer cor de fundo, atendendo ao Criterio de Sucesso WCAG 2.2 2.4.7 (Focus Visible).</span><span data-lang="en">All interactive components use an outline-based focus indicator via <code style="font-family:var(--ds-font-family-mono);background:var(--ds-background-subtle);padding:2px 6px;border-radius:var(--ds-radius-sm);">--ds-focus-ring-*</code> tokens. This approach ensures the focus ring is visible against any background color, meeting WCAG 2.2 Success Criterion 2.4.7 (Focus Visible).</span>
       </p>
       <div class="ds-preview">
         <div class="ds-preview__tabs" role="tablist">
@@ -146,7 +146,7 @@
       </div>
       <div class="ds-a11y-note">
         <div class="ds-a11y-note__title"><span data-lang="pt">Por que :focus-visible?</span><span data-lang="en">Why :focus-visible?</span></div>
-        <p class="ds-a11y-note__text"><span data-lang="pt">Usamos <code style="font-family:var(--ds-font-family-mono);">:focus-visible</code> ao inves de <code style="font-family:var(--ds-font-family-mono);">:focus</code> para que o ring apareca apenas durante a navegacao por teclado, nao em cliques do mouse. Isso da aos usuarios de teclado indicadores claros sem adicionar ruido visual para usuarios de ponteiro.</span><span data-lang="en">We use <code style="font-family:var(--ds-font-family-mono);">:focus-visible</code> instead of <code style="font-family:var(--ds-font-family-mono);">:focus</code> so the ring only appears during keyboard navigation, not on mouse clicks. This gives keyboard users clear indicators without adding visual noise for pointer users.</span></p>
+        <p class="ds-a11y-note__text"><span data-lang="pt">Usamos <code style="font-family:var(--ds-font-family-mono);">:focus-visible</code> ao invés de <code style="font-family:var(--ds-font-family-mono);">:focus</code> para que o ring apareça apenas durante a navegação por teclado, não em cliques do mouse. Isso da aos usuários de teclado indicadores claros sem adicionar ruído visual para usuários de ponteiro.</span><span data-lang="en">We use <code style="font-family:var(--ds-font-family-mono);">:focus-visible</code> instead of <code style="font-family:var(--ds-font-family-mono);">:focus</code> so the ring only appears during keyboard navigation, not on mouse clicks. This gives keyboard users clear indicators without adding visual noise for pointer users.</span></p>
       </div>
     </div>
 
@@ -154,13 +154,13 @@
     <div class="ds-subsection">
       <h2 class="ds-subsection__title"><span data-lang="pt">Contraste de cores</span><span data-lang="en">Color Contrast</span></h2>
       <p style="color:var(--ds-content-secondary);margin-bottom:var(--ds-spacing-4);line-height:var(--ds-line-height-relaxed);">
-        <span data-lang="pt">Todos os pares de cores no design system atendem ou excedem os requisitos de contraste WCAG 2.2 AA em ambos os modos light e dark. No modo dark, cores de marca e feedback usam tons mais claros (nivel 400), entao os tokens de foreground automaticamente alternam para texto escuro (<code>neutral-900</code>) para manter o contraste. O token <code>text/on-brand</code> cuida disso: branco no modo light, <code>neutral-900</code> no modo dark.</span><span data-lang="en">All color pairings in the design system meet or exceed WCAG 2.2 AA contrast requirements in both light and dark modes. In dark mode, brand and feedback colors use lighter shades (400-level), so foreground tokens automatically switch to dark text (<code>neutral-900</code>) to maintain contrast. The <code>text/on-brand</code> token handles this: white in light mode, <code>neutral-900</code> in dark mode.</span>
+        <span data-lang="pt">Todos os pares de cores no design system atendem ou excedem os requisitos de contraste WCAG 2.2 AA em ambos os modos light e dark. No modo dark, cores de marca e feedback usam tons mais claros (nível 400), então os tokens de foreground automaticamente alternam para texto escuro (<code>neutral-900</code>) para manter o contraste. O token <code>text/on-brand</code> cuida disso: branco no modo light, <code>neutral-900</code> no modo dark.</span><span data-lang="en">All color pairings in the design system meet or exceed WCAG 2.2 AA contrast requirements in both light and dark modes. In dark mode, brand and feedback colors use lighter shades (400-level), so foreground tokens automatically switch to dark text (<code>neutral-900</code>) to maintain contrast. The <code>text/on-brand</code> token handles this: white in light mode, <code>neutral-900</code> in dark mode.</span>
       </p>
       <table class="ds-props-table" style="width:100%;border-collapse:collapse;">
         <thead>
           <tr>
             <th style="text-align:left;padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-2) solid var(--ds-border-default);"><span data-lang="pt">Tipo de elemento</span><span data-lang="en">Element Type</span></th>
-            <th style="text-align:left;padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-2) solid var(--ds-border-default);"><span data-lang="pt">Ratio minimo</span><span data-lang="en">Minimum Ratio</span></th>
+            <th style="text-align:left;padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-2) solid var(--ds-border-default);"><span data-lang="pt">Ratio mínimo</span><span data-lang="en">Minimum Ratio</span></th>
             <th style="text-align:left;padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-2) solid var(--ds-border-default);"><span data-lang="pt">Criterio WCAG</span><span data-lang="en">WCAG Criterion</span></th>
           </tr>
         </thead>
@@ -168,17 +168,17 @@
           <tr>
             <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><span data-lang="pt">Texto normal (&lt; 18px)</span><span data-lang="en">Normal text (&lt; 18px)</span></td>
             <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><strong>4.5 : 1</strong></td>
-            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><span data-lang="pt">1.4.3 Contraste (Minimo)</span><span data-lang="en">1.4.3 Contrast (Minimum)</span></td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><span data-lang="pt">1.4.3 Contraste (Mínimo)</span><span data-lang="en">1.4.3 Contrast (Minimum)</span></td>
           </tr>
           <tr>
             <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><span data-lang="pt">Texto grande (&ge; 18px ou 14px bold)</span><span data-lang="en">Large text (&ge; 18px or 14px bold)</span></td>
             <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><strong>3 : 1</strong></td>
-            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><span data-lang="pt">1.4.3 Contraste (Minimo)</span><span data-lang="en">1.4.3 Contrast (Minimum)</span></td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><span data-lang="pt">1.4.3 Contraste (Mínimo)</span><span data-lang="en">1.4.3 Contrast (Minimum)</span></td>
           </tr>
           <tr>
-            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><span data-lang="pt">Componentes de UI (bordas, icones)</span><span data-lang="en">UI components (borders, icons)</span></td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><span data-lang="pt">Componentes de UI (bordas, ícones)</span><span data-lang="en">UI components (borders, icons)</span></td>
             <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><strong>3 : 1</strong></td>
-            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><span data-lang="pt">1.4.11 Contraste nao-texto</span><span data-lang="en">1.4.11 Non-text Contrast</span></td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><span data-lang="pt">1.4.11 Contraste não-texto</span><span data-lang="en">1.4.11 Non-text Contrast</span></td>
           </tr>
           <tr>
             <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><span data-lang="pt">Indicadores de foco</span><span data-lang="en">Focus indicators</span></td>
@@ -191,15 +191,15 @@
 
     <!-- Keyboard Navigation -->
     <div class="ds-subsection">
-      <h2 class="ds-subsection__title"><span data-lang="pt">Navegacao por teclado</span><span data-lang="en">Keyboard Navigation</span></h2>
+      <h2 class="ds-subsection__title"><span data-lang="pt">Navegação por teclado</span><span data-lang="en">Keyboard Navigation</span></h2>
       <p style="color:var(--ds-content-secondary);margin-bottom:var(--ds-spacing-4);line-height:var(--ds-line-height-relaxed);">
-        <span data-lang="pt">Todo componente interativo e totalmente operavel via teclado. As seguintes teclas sao suportadas:</span><span data-lang="en">Every interactive component is fully operable via keyboard. The following keys are supported:</span>
+        <span data-lang="pt">Todo componente interativo e totalmente operavel via teclado. As seguintes teclas são suportadas:</span><span data-lang="en">Every interactive component is fully operable via keyboard. The following keys are supported:</span>
       </p>
       <table class="ds-props-table" style="width:100%;border-collapse:collapse;">
         <thead>
           <tr>
             <th style="text-align:left;padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-2) solid var(--ds-border-default);"><span data-lang="pt">Tecla</span><span data-lang="en">Key</span></th>
-            <th style="text-align:left;padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-2) solid var(--ds-border-default);"><span data-lang="pt">Acao</span><span data-lang="en">Action</span></th>
+            <th style="text-align:left;padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-2) solid var(--ds-border-default);"><span data-lang="pt">Ação</span><span data-lang="en">Action</span></th>
           </tr>
         </thead>
         <tbody>
@@ -213,7 +213,7 @@
           </tr>
           <tr>
             <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><kbd style="font-family:var(--ds-font-family-mono);background:var(--ds-background-subtle);padding:2px 8px;border:var(--ds-border-width-1) solid var(--ds-border-default);border-radius:var(--ds-radius-sm);font-size:var(--ds-font-size-xs);">Enter</kbd> / <kbd style="font-family:var(--ds-font-family-mono);background:var(--ds-background-subtle);padding:2px 8px;border:var(--ds-border-width-1) solid var(--ds-border-default);border-radius:var(--ds-radius-sm);font-size:var(--ds-font-size-xs);">Space</kbd></td>
-            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><span data-lang="pt">Ativar botoes, toggles, checkboxes e radio buttons</span><span data-lang="en">Activate buttons, toggles, checkboxes, and radio buttons</span></td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><span data-lang="pt">Ativar buttons, toggles, checkboxes e radio buttons</span><span data-lang="en">Activate buttons, toggles, checkboxes, and radio buttons</span></td>
           </tr>
           <tr>
             <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><kbd style="font-family:var(--ds-font-family-mono);background:var(--ds-background-subtle);padding:2px 8px;border:var(--ds-border-width-1) solid var(--ds-border-default);border-radius:var(--ds-radius-sm);font-size:var(--ds-font-size-xs);">Arrow keys</kbd></td>
@@ -229,9 +229,9 @@
 
     <!-- Reduced Motion -->
     <div class="ds-subsection">
-      <h2 class="ds-subsection__title"><span data-lang="pt">Movimento reduzido</span><span data-lang="en">Reduced Motion</span></h2>
+      <h2 class="ds-subsection__title"><span data-lang="pt">Reduced Motion</span><span data-lang="en">Reduced Motion</span></h2>
       <p style="color:var(--ds-content-secondary);margin-bottom:var(--ds-spacing-4);line-height:var(--ds-line-height-relaxed);">
-        <span data-lang="pt">Usuarios que preferem movimento reduzido (via configuracoes do SO) verao todas as transicoes e animacoes removidas ou encurtadas. Isso respeita o WCAG 2.3.3 (Animation from Interactions).</span><span data-lang="en">Users who prefer reduced motion (via OS settings) will see all transitions and animations removed or shortened. This respects WCAG 2.3.3 (Animation from Interactions).</span>
+        <span data-lang="pt">Usuários que preferem movimento reduzido (via configuracoes do SO) verao todas as transições e animações removidas ou encurtadas. Isso respeita o WCAG 2.3.3 (Animation from Interactions).</span><span data-lang="en">Users who prefer reduced motion (via OS settings) will see all transitions and animations removed or shortened. This respects WCAG 2.3.3 (Animation from Interactions).</span>
       </p>
       <div class="ds-preview">
         <div class="ds-preview__tabs" role="tablist">
@@ -259,12 +259,12 @@
     <div class="ds-subsection">
       <h2 class="ds-subsection__title"><span data-lang="pt">Alvos de toque</span><span data-lang="en">Touch Targets</span></h2>
       <p style="color:var(--ds-content-secondary);margin-bottom:var(--ds-spacing-4);line-height:var(--ds-line-height-relaxed);">
-        <span data-lang="pt">Todos os elementos interativos mantem um tamanho minimo de alvo de toque de <strong>44 &times; 44 pixels CSS</strong>, em conformidade com o WCAG 2.5.8 (Target Size). Isso se aplica a botoes, checkboxes, radio buttons, toggles e outros controles clicaveis.</span><span data-lang="en">All interactive elements maintain a minimum touch target size of <strong>44 &times; 44 CSS pixels</strong>, in line with WCAG 2.5.8 (Target Size). This applies to buttons, checkboxes, radio buttons, toggles, and other clickable controls.</span>
+        <span data-lang="pt">Todos os elementos interativos mantem um tamanho mínimo de alvo de toque de <strong>44 &times; 44 pixels CSS</strong>, em conformidade com o WCAG 2.5.8 (Target Size). Isso se aplica a buttons, checkboxes, radio buttons, toggles e outros controles clicáveis.</span><span data-lang="en">All interactive elements maintain a minimum touch target size of <strong>44 &times; 44 CSS pixels</strong>, in line with WCAG 2.5.8 (Target Size). This applies to buttons, checkboxes, radio buttons, toggles, and other clickable controls.</span>
       </p>
       <ul style="color:var(--ds-content-secondary);padding-left:var(--ds-spacing-6);line-height:var(--ds-line-height-loose);">
-        <li><span data-lang="pt">Botoes pequenos (<code style="font-family:var(--ds-font-family-mono);">ds-btn--sm</code>) usam padding para atingir a altura minima de 44px.</span><span data-lang="en">Small buttons (<code style="font-family:var(--ds-font-family-mono);">ds-btn--sm</code>) use padding to meet the 44px minimum height.</span></li>
-        <li><span data-lang="pt">Inputs de checkbox e radio tem uma area de label clicavel que satisfaz o tamanho do alvo.</span><span data-lang="en">Checkbox and radio inputs have a clickable label area that satisfies the target size.</span></li>
-        <li><span data-lang="pt">Botoes somente com icone sao dimensionados em no minimo 44px via padding interno.</span><span data-lang="en">Icon-only buttons are sized at minimum 44px via internal padding.</span></li>
+        <li><span data-lang="pt">Buttons pequenos (<code style="font-family:var(--ds-font-family-mono);">ds-btn--sm</code>) usam padding para atingir a altura mínima de 44px.</span><span data-lang="en">Small buttons (<code style="font-family:var(--ds-font-family-mono);">ds-btn--sm</code>) use padding to meet the 44px minimum height.</span></li>
+        <li><span data-lang="pt">Inputs de checkbox e radio tem uma área de label clicável que satisfaz o tamanho do alvo.</span><span data-lang="en">Checkbox and radio inputs have a clickable label area that satisfies the target size.</span></li>
+        <li><span data-lang="pt">Buttons somente com ícone são dimensionados em no mínimo 44px via padding interno.</span><span data-lang="en">Icon-only buttons are sized at minimum 44px via internal padding.</span></li>
       </ul>
     </div>
 
@@ -283,7 +283,7 @@
         </thead>
         <tbody>
           <tr>
-            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><span data-lang="pt">Button (somente icone)</span><span data-lang="en">Button (icon-only)</span></td>
+            <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><span data-lang="pt">Button (somente ícone)</span><span data-lang="en">Button (icon-only)</span></td>
             <td style="padding:var(--ds-spacing-2) var(--ds-spacing-3);border-bottom:var(--ds-border-width-1) solid var(--ds-border-default);"><code>aria-label</code></td>
           </tr>
           <tr>

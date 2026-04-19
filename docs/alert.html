@@ -138,7 +138,7 @@
        ============================================================ -->
   <div class="ds-section">
     <h1 class="ds-section__title">Alert</h1>
-    <p class="ds-section__subtitle"><span data-lang="pt">Alerts exibem mensagens contextuais importantes para os usuarios. Disponiveis em estilos filled e subtle com icones e botoes de fechar opcionais. Persistentes ate serem dispensados.</span><span data-lang="en">Alerts display important contextual messages to users. Available in filled and subtle styles with optional icons and close buttons. Persistent until dismissed.</span></p>
+    <p class="ds-section__subtitle"><span data-lang="pt">Alerts exibem mensagens contextuais importantes para os usuários. Disponíveis em estilos filled e subtle com ícones e buttons de fechar opcionais. Persistentes até serem dispensados.</span><span data-lang="en">Alerts display important contextual messages to users. Available in filled and subtle styles with optional icons and close buttons. Persistent until dismissed.</span></p>
   </div>
 
   <!-- ============================================================
@@ -148,19 +148,19 @@
     <h2 class="ds-subsection__title"><span data-lang="pt">Quando usar</span><span data-lang="en">When to use</span></h2>
     <div class="ds-callout ds-callout--success">
       <div class="ds-callout__title"><span data-lang="pt">Use alerts quando</span><span data-lang="en">Use alerts when</span></div>
-      <span data-lang="pt">Exibir uma mensagem contextual: resumo de validacao de formulario, status do sistema, confirmacao de acao ou aviso. Alerts sao persistentes ate o usuario dispensa-los.</span><span data-lang="en">Displaying a contextual message: form validation summary, system status, action confirmation, or warning. Alerts are persistent until the user dismisses them.</span>
+      <span data-lang="pt">Exibir uma mensagem contextual: resumo de validação de formulário, status do sistema, confirmação de ação ou aviso. Alerts são persistentes até o usuário dispensá-los.</span><span data-lang="en">Displaying a contextual message: form validation summary, system status, action confirmation, or warning. Alerts are persistent until the user dismisses them.</span>
     </div>
     <div class="ds-callout ds-callout--warning">
-      <div class="ds-callout__title"><span data-lang="pt">Nao use alerts quando</span><span data-lang="en">Don't use alerts when</span></div>
-      <span data-lang="pt">O feedback e transitorio (use Toast — futuro), se refere a um erro de campo unico (use Form Field), ou fornece feedback inline (use texto auxiliar).</span><span data-lang="en">The feedback is transient (use Toast — future), relates to a single field error (use Form Field), or provides inline feedback (use helper text).</span>
+      <div class="ds-callout__title"><span data-lang="pt">Não use alerts quando</span><span data-lang="en">Don't use alerts when</span></div>
+      <span data-lang="pt">O feedback e transitorio (use Toast — futuro), se refere a um erro de campo único (use Form Field), ou fornece feedback inline (use texto auxiliar).</span><span data-lang="en">The feedback is transient (use Toast — future), relates to a single field error (use Form Field), or provides inline feedback (use helper text).</span>
     </div>
 
     <table class="ds-token-table">
-      <thead><tr><th><span data-lang="pt">Tipo</span><span data-lang="en">Type</span></th><th><span data-lang="pt">Use para</span><span data-lang="en">Use for</span></th><th><span data-lang="pt">Icone</span><span data-lang="en">Icon</span></th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Tipo</span><span data-lang="en">Type</span></th><th><span data-lang="pt">Use para</span><span data-lang="en">Use for</span></th><th><span data-lang="pt">Ícone</span><span data-lang="en">Icon</span></th></tr></thead>
       <tbody>
-        <tr><td><strong>Success</strong></td><td><span data-lang="pt">Acao concluida: salvo, publicado</span><span data-lang="en">Completed action: saved, published</span></td><td><code>check_circle</code></td></tr>
-        <tr><td><strong>Warning</strong></td><td><span data-lang="pt">Nao bloqueante: sessao expirando, depreciacao</span><span data-lang="en">Non-blocking: session expiring, deprecation</span></td><td><code>warning</code></td></tr>
-        <tr><td><strong>Error</strong></td><td><span data-lang="pt">Acoes falharam: pagamento falhou, acesso negado</span><span data-lang="en">Failed actions: payment failed, access denied</span></td><td><code>error</code></td></tr>
+        <tr><td><strong>Success</strong></td><td><span data-lang="pt">Ação concluída: salvo, publicado</span><span data-lang="en">Completed action: saved, published</span></td><td><code>check_circle</code></td></tr>
+        <tr><td><strong>Warning</strong></td><td><span data-lang="pt">Não bloqueante: sessão expirando, depreciação</span><span data-lang="en">Non-blocking: session expiring, deprecation</span></td><td><code>warning</code></td></tr>
+        <tr><td><strong>Error</strong></td><td><span data-lang="pt">Ações falharam: pagamento falhou, acesso negado</span><span data-lang="en">Failed actions: payment failed, access denied</span></td><td><code>error</code></td></tr>
         <tr><td><strong>Info</strong></td><td><span data-lang="pt">Neutro: nova funcionalidade, manutencao</span><span data-lang="en">Neutral: new feature, maintenance</span></td><td><code>info</code></td></tr>
       </tbody>
     </table>
@@ -194,11 +194,11 @@
 
     <div class="ds-anatomy-legend">
       <span data-lang="pt"><strong>1</strong> Container (<code>.ds-alert</code>) — background, border-radius, padding.<br>
-      <strong>2</strong> Icone (<code>.ds-alert__icon</code>) — Material Symbol especifico do tipo, reforca o significado alem da cor.<br>
-      <strong>3</strong> Conteudo (<code>.ds-alert__content</code>) — wrapper para titulo e descricao.<br>
-      <strong>4</strong> Titulo (<code>.ds-alert__title</code>) — negrito, 1-3 palavras.<br>
+      <strong>2</strong> Ícone (<code>.ds-alert__icon</code>) — Material Symbol específico do tipo, reforça o significado além da cor.<br>
+      <strong>3</strong> Conteúdo (<code>.ds-alert__content</code>) — wrapper para título e descricao.<br>
+      <strong>4</strong> Título (<code>.ds-alert__title</code>) — negrito, 1-3 palavras.<br>
       <strong>5</strong> Descricao (<code>.ds-alert__description</code>) — o que aconteceu + o que fazer.<br>
-      <strong>6</strong> Fechar (<code>.ds-alert__close</code>) — botao de dispensar com <code>aria-label="Dismiss alert"</code>.</span><span data-lang="en"><strong>1</strong> Container (<code>.ds-alert</code>) — background, border-radius, padding.<br>
+      <strong>6</strong> Fechar (<code>.ds-alert__close</code>) — button de dispensar com <code>aria-label="Dismiss alert"</code>.</span><span data-lang="en"><strong>1</strong> Container (<code>.ds-alert</code>) — background, border-radius, padding.<br>
       <strong>2</strong> Icon (<code>.ds-alert__icon</code>) — type-specific Material Symbol, reinforces meaning beyond color.<br>
       <strong>3</strong> Content (<code>.ds-alert__content</code>) — wrapper for title and description.<br>
       <strong>4</strong> Title (<code>.ds-alert__title</code>) — bold, 1-3 words.<br>
@@ -374,7 +374,7 @@
 
   <!-- With Close Button -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title"><span data-lang="pt">Com botao de fechar</span><span data-lang="en">With Close Button</span></h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Com button de fechar</span><span data-lang="en">With Close Button</span></h2>
     <div class="ds-preview">
       <div class="ds-preview__tabs" role="tablist">
         <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
@@ -429,7 +429,7 @@
        5. BEST PRACTICES (Do / Don't)
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title"><span data-lang="pt">Boas praticas</span><span data-lang="en">Best practices</span></h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Boas práticas</span><span data-lang="en">Best practices</span></h2>
 
     <div class="ds-dodont">
       <div class="ds-dodont__item">
@@ -443,7 +443,7 @@
           </div>
         </div>
         <div class="ds-dodont__label ds-dodont__label--do">Faça</div>
-        <div class="ds-dodont__desc"><span data-lang="pt">Sempre inclua um icone — ele reforca o tipo alem da cor (WCAG 1.4.1).</span><span data-lang="en">Always include an icon — it reinforces the type beyond color (WCAG 1.4.1).</span></div>
+        <div class="ds-dodont__desc"><span data-lang="pt">Sempre inclua um ícone — ele reforça o tipo além da cor (WCAG 1.4.1).</span><span data-lang="en">Always include an icon — it reinforces the type beyond color (WCAG 1.4.1).</span></div>
       </div>
       <div class="ds-dodont__item">
         <div class="ds-dodont__preview" style="flex-direction:column;align-items:stretch;">
@@ -503,7 +503,7 @@
           </div>
         </div>
         <div class="ds-dodont__label ds-dodont__label--dont">Não faça</div>
-        <div class="ds-dodont__desc"><span data-lang="pt">Multiplos alerts filled diluem a urgencia e sobrecarregam o usuario.</span><span data-lang="en">Multiple filled alerts dilute urgency and overwhelm the user.</span></div>
+        <div class="ds-dodont__desc"><span data-lang="pt">Múltiplos alerts filled diluem a urgencia e sobrecarregam o usuário.</span><span data-lang="en">Multiple filled alerts dilute urgency and overwhelm the user.</span></div>
       </div>
     </div>
   </div>
@@ -512,13 +512,13 @@
        6. CONTENT GUIDELINES
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title"><span data-lang="pt">Diretrizes de conteudo</span><span data-lang="en">Content guidelines</span></h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Diretrizes de conteúdo</span><span data-lang="en">Content guidelines</span></h2>
     <table class="ds-token-table">
       <thead><tr><th><span data-lang="pt">Regra</span><span data-lang="en">Rule</span></th><th><span data-lang="pt">Exemplo</span><span data-lang="en">Example</span></th></tr></thead>
       <tbody>
-        <tr><td><span data-lang="pt">Titulo: 1-3 palavras, sentence case</span><span data-lang="en">Title: 1-3 words, sentence case</span></td><td>"Payment failed", "Changes saved"</td></tr>
+        <tr><td><span data-lang="pt">Título: 1-3 palavras, sentence case</span><span data-lang="en">Title: 1-3 words, sentence case</span></td><td>"Payment failed", "Changes saved"</td></tr>
         <tr><td><span data-lang="pt">Descricao: o que aconteceu + o que fazer</span><span data-lang="en">Description: what happened + what to do</span></td><td>"Your session expired. Please log in again."</td></tr>
-        <tr><td><span data-lang="pt">Botao de fechar deve ter <code>aria-label</code></span><span data-lang="en">Close button must have <code>aria-label</code></span></td><td><code>aria-label="Dismiss alert"</code></td></tr>
+        <tr><td><span data-lang="pt">Button de fechar deve ter <code>aria-label</code></span><span data-lang="en">Close button must have <code>aria-label</code></span></td><td><code>aria-label="Dismiss alert"</code></td></tr>
       </tbody>
     </table>
   </div>
@@ -529,7 +529,7 @@
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Mapeamento de tokens</span><span data-lang="en">Token mapping</span></h2>
     <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);">
-      <span data-lang="pt">Tokens mostrados para a variante success. Outros tipos (warning, error, info) seguem o mesmo padrao com seus respectivos grupos de cor de feedback.</span><span data-lang="en">Tokens shown for the success variant. Other types (warning, error, info) follow the same pattern with their respective feedback color groups.</span>
+      <span data-lang="pt">Tokens mostrados para a variante success. Outros tipos (warning, error, info) seguem o mesmo padrão com seus respectivos grupos de cor de feedback.</span><span data-lang="en">Tokens shown for the success variant. Other types (warning, error, info) follow the same pattern with their respective feedback color groups.</span>
     </p>
     <table class="ds-token-table">
       <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token (semantic)</th><th><span data-lang="pt">Variavel CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
@@ -559,11 +559,11 @@
         <tr><td><code>ds-alert--warning</code></td><td><span data-lang="pt">Variante warning (amarelo)</span><span data-lang="en">Warning variant (yellow)</span></td></tr>
         <tr><td><code>ds-alert--error</code></td><td><span data-lang="pt">Variante error (vermelho)</span><span data-lang="en">Error variant (red)</span></td></tr>
         <tr><td><code>ds-alert--info</code></td><td><span data-lang="pt">Variante info (azul)</span><span data-lang="en">Info variant (blue)</span></td></tr>
-        <tr><td><code>ds-alert__icon</code></td><td><span data-lang="pt">Container do icone</span><span data-lang="en">Icon container</span></td></tr>
-        <tr><td><code>ds-alert__content</code></td><td><span data-lang="pt">Wrapper de conteudo para titulo e descricao</span><span data-lang="en">Content wrapper for title and description</span></td></tr>
-        <tr><td><code>ds-alert__title</code></td><td><span data-lang="pt">Titulo do alert (negrito)</span><span data-lang="en">Alert title (bold)</span></td></tr>
+        <tr><td><code>ds-alert__icon</code></td><td><span data-lang="pt">Container do ícone</span><span data-lang="en">Icon container</span></td></tr>
+        <tr><td><code>ds-alert__content</code></td><td><span data-lang="pt">Wrapper de conteúdo para título e descricao</span><span data-lang="en">Content wrapper for title and description</span></td></tr>
+        <tr><td><code>ds-alert__title</code></td><td><span data-lang="pt">Título do alert (negrito)</span><span data-lang="en">Alert title (bold)</span></td></tr>
         <tr><td><code>ds-alert__description</code></td><td><span data-lang="pt">Texto de descricao do alert</span><span data-lang="en">Alert description text</span></td></tr>
-        <tr><td><code>ds-alert__close</code></td><td><span data-lang="pt">Botao de dispensar/fechar</span><span data-lang="en">Dismiss/close button</span></td></tr>
+        <tr><td><code>ds-alert__close</code></td><td><span data-lang="pt">Button de dispensar/fechar</span><span data-lang="en">Dismiss/close button</span></td></tr>
       </tbody>
     </table>
   </div>
@@ -572,13 +572,13 @@
        9. KEYBOARD INTERACTION
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title"><span data-lang="pt">Interacao por teclado</span><span data-lang="en">Keyboard interaction</span></h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Interação por teclado</span><span data-lang="en">Keyboard interaction</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th><span data-lang="pt">Tecla</span><span data-lang="en">Key</span></th><th><span data-lang="pt">Acao</span><span data-lang="en">Action</span></th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Tecla</span><span data-lang="en">Key</span></th><th><span data-lang="pt">Ação</span><span data-lang="en">Action</span></th></tr></thead>
       <tbody>
-        <tr><td><code>Tab</code></td><td><span data-lang="pt">Move o foco para o botao de fechar</span><span data-lang="en">Moves focus to the close button</span></td></tr>
-        <tr><td><code>Enter</code></td><td><span data-lang="pt">Ativa o botao de fechar</span><span data-lang="en">Activates the close button</span></td></tr>
-        <tr><td><code>Space</code></td><td><span data-lang="pt">Ativa o botao de fechar</span><span data-lang="en">Activates the close button</span></td></tr>
+        <tr><td><code>Tab</code></td><td><span data-lang="pt">Move o foco para o button de fechar</span><span data-lang="en">Moves focus to the close button</span></td></tr>
+        <tr><td><code>Enter</code></td><td><span data-lang="pt">Ativa o button de fechar</span><span data-lang="en">Activates the close button</span></td></tr>
+        <tr><td><code>Space</code></td><td><span data-lang="pt">Ativa o button de fechar</span><span data-lang="en">Activates the close button</span></td></tr>
       </tbody>
     </table>
   </div>
@@ -587,22 +587,22 @@
        10. ACCESSIBILITY
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title"><span data-lang="pt">Acessibilidade</span><span data-lang="en">Accessibility</span></h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Accessibility</span><span data-lang="en">Accessibility</span></h2>
     <table class="ds-token-table">
       <thead><tr><th><span data-lang="pt">Criterio WCAG</span><span data-lang="en">WCAG criterion</span></th><th><span data-lang="pt">Requisito</span><span data-lang="en">Requirement</span></th><th>Status</th></tr></thead>
       <tbody>
-        <tr><td>4.1.3 Status Messages (AA)</td><td><span data-lang="pt"><code>role="alert"</code> para mensagens urgentes, <code>role="status"</code> para nao urgentes</span><span data-lang="en"><code>role="alert"</code> for urgent messages, <code>role="status"</code> for non-urgent</span></td><td>&#10003;</td></tr>
-        <tr><td>1.4.1 Use of Color (A)</td><td><span data-lang="pt">Icone + texto complementam a cor — nunca cor sozinha</span><span data-lang="en">Icon + text supplement color — never color alone</span></td><td>&#10003;</td></tr>
-        <tr><td>2.4.11 Focus Appearance (AA)</td><td><span data-lang="pt">Botao de fechar tem focus ring visivel</span><span data-lang="en">Close button has visible focus ring</span></td><td>&#10003;</td></tr>
-        <tr><td>4.1.2 Name, Role, Value (A)</td><td><span data-lang="pt">Botao de fechar tem <code>aria-label="Dismiss alert"</code></span><span data-lang="en">Close button has <code>aria-label="Dismiss alert"</code></span></td><td>&#10003;</td></tr>
+        <tr><td>4.1.3 Status Messages (AA)</td><td><span data-lang="pt"><code>role="alert"</code> para mensagens urgentes, <code>role="status"</code> para não urgentes</span><span data-lang="en"><code>role="alert"</code> for urgent messages, <code>role="status"</code> for non-urgent</span></td><td>&#10003;</td></tr>
+        <tr><td>1.4.1 Use of Color (A)</td><td><span data-lang="pt">Ícone + texto complementam a cor — nunca cor sozinha</span><span data-lang="en">Icon + text supplement color — never color alone</span></td><td>&#10003;</td></tr>
+        <tr><td>2.4.11 Focus Appearance (AA)</td><td><span data-lang="pt">Button de fechar tem focus ring visível</span><span data-lang="en">Close button has visible focus ring</span></td><td>&#10003;</td></tr>
+        <tr><td>4.1.2 Name, Role, Value (A)</td><td><span data-lang="pt">Button de fechar tem <code>aria-label="Dismiss alert"</code></span><span data-lang="en">Close button has <code>aria-label="Dismiss alert"</code></span></td><td>&#10003;</td></tr>
       </tbody>
     </table>
 
     <div class="ds-callout ds-callout--info" style="margin-top:var(--ds-spacing-4)">
       <div class="ds-callout__title"><span data-lang="pt">Resumo de atributos ARIA</span><span data-lang="en">ARIA attributes summary</span></div>
       <span data-lang="pt"><code>role="alert"</code> — para mensagens urgentes/erros que devem ser anunciadas imediatamente por leitores de tela.<br>
-      <code>role="status"</code> — para mensagens informativas nao urgentes (anuncio educado).<br>
-      <code>aria-label="Dismiss alert"</code> — obrigatorio no botao de fechar.</span><span data-lang="en"><code>role="alert"</code> — for urgent/error messages that should be announced immediately by screen readers.<br>
+      <code>role="status"</code> — para mensagens informativas não urgentes (anuncio educado).<br>
+      <code>aria-label="Dismiss alert"</code> — obrigatorio no button de fechar.</span><span data-lang="en"><code>role="alert"</code> — for urgent/error messages that should be announced immediately by screen readers.<br>
       <code>role="status"</code> — for non-urgent informational messages (polite announcement).<br>
       <code>aria-label="Dismiss alert"</code> — required on the close button.</span>
     </div>
