@@ -38,6 +38,7 @@
   --ds-brand-toned-default: var(--ds-overlay-blue-400-15); /** Translucent primary bg for toned variants. 15% opacity in dark. */
   --ds-brand-toned-hover: var(--ds-overlay-blue-400-25); /** Toned hover in dark. 25% opacity. */
   --ds-brand-toned-active: var(--ds-overlay-blue-400-32); /** Toned active in dark. 32% opacity. */
+  --ds-brand-default: var(--ds-color-blue-400); /** Fill brand principal em dark mode. Blue-400 (claro) → consistente com Ocean/Forest que usam 400-level em dark. */
   --ds-brand-content-default: var(--ds-color-blue-400); /** Cor brand usada como conteúdo sobre fundo neutro/toned em dark mode. */
   --ds-brand-content-contrast: var(--ds-color-neutral-900); /** Conteúdo de alto contraste sobre fill brand sólido em dark mode. Dark text porque brand default é blue-400 (claro). */
   --ds-accent-hover: var(--ds-color-purple-300);

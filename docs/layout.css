@@ -26,7 +26,7 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
   height: 64px;
   background-color: var(--ds-brand-default);
   border-bottom: none;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -237,7 +237,7 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
 }
 
 .ds-sidebar__link--active {
-  color: var(--ds-brand-default);
+  color: var(--ds-content-default);
   border-left-color: var(--ds-brand-default);
   background-color: var(--ds-brand-subtle);
   font-weight: var(--ds-font-weight-semibold);
