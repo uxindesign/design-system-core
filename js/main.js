@@ -187,7 +187,7 @@
     if (!modeToggle) return;
     var isDark = document.documentElement.getAttribute('data-mode') === 'dark';
     if (getLang() === 'pt') {
-      modeToggle.textContent = isDark ? 'Claro' : 'Escuro';
+      modeToggle.textContent = isDark ? 'Light' : 'Dark';
     } else {
       modeToggle.textContent = isDark ? 'Light' : 'Dark';
     }
