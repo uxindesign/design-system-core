@@ -168,12 +168,17 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
 
 .ds-sidebar__chevron {
   flex-shrink: 0;
-  transition: transform var(--ds-duration-fast) var(--ds-ease-default);
-  transform: rotate(0deg);
+  font-size: 20px;
+  line-height: 1;
+  font-weight: var(--ds-font-weight-regular);
 }
 
-.ds-sidebar__section:not(.ds-sidebar__section--expanded) .ds-sidebar__chevron {
-  transform: rotate(-90deg);
+.ds-sidebar__chevron::before {
+  content: '−';
+}
+
+.ds-sidebar__section:not(.ds-sidebar__section--expanded) .ds-sidebar__chevron::before {
+  content: '+';
 }
 
 .ds-sidebar__nav {
