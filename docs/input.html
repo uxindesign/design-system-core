@@ -27,10 +27,11 @@
     .ds-dodont__label--dont { background-color: var(--ds-feedback-error-background); color: var(--ds-feedback-error-content-default); border-top: 3px solid var(--ds-feedback-error-default); }
     .ds-dodont__desc { padding: 0 var(--ds-spacing-4) var(--ds-spacing-3); font-size: var(--ds-font-size-sm); color: var(--ds-content-secondary); background-color: var(--ds-background-subtle); }
     /* Anatomy */
-    .ds-anatomy { padding: var(--ds-spacing-8); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-4); display: flex; align-items: center; justify-content: center; position: relative; }
-    .ds-anatomy__marker { position: absolute; width: 20px; height: 20px; border-radius: 50%; background-color: var(--ds-brand-default); color: var(--ds-brand-content-contrast); font-size: 11px; font-weight: var(--ds-font-weight-bold); display: flex; align-items: center; justify-content: center; }
-    .ds-anatomy-legend { font-size: var(--ds-font-size-sm); color: var(--ds-content-secondary); margin-bottom: var(--ds-spacing-8); line-height: var(--ds-line-height-relaxed); }
-    .ds-anatomy-legend strong { color: var(--ds-content-default); }
+    .ds-anatomy { padding: var(--ds-spacing-10) var(--ds-spacing-12); background-color: var(--ds-background-subtle); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-4); display: flex; align-items: center; justify-content: center; }
+    .ds-anatomy__part { position: relative; }
+    .ds-anatomy__marker { position: absolute; width: 20px; height: 20px; border-radius: 50%; background-color: var(--ds-brand-default); color: var(--ds-brand-content-contrast); font-size: 11px; font-weight: var(--ds-font-weight-bold); display: inline-flex; align-items: center; justify-content: center; z-index: 1; }
+    .ds-anatomy-legend { font-size: var(--ds-font-size-sm); color: var(--ds-content-secondary); margin-bottom: var(--ds-spacing-8); line-height: 2; }
+    .ds-anatomy-legend strong { color: var(--ds-content-default); font-weight: var(--ds-font-weight-semibold); }
     /* Code block */
     .ds-code-block { background-color: var(--ds-color-neutral-900); color: var(--ds-color-neutral-200); padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); font-family: var(--ds-font-family-mono); font-size: var(--ds-font-size-xs); line-height: var(--ds-line-height-relaxed); overflow-x: auto; margin-bottom: var(--ds-spacing-6); white-space: pre; }
     /* Related */
@@ -117,31 +118,63 @@
     <h2 class="ds-subsection__title"><span data-lang="pt">Anatomia</span><span data-lang="en">Anatomy</span></h2>
 
     <div class="ds-anatomy">
-      <div style="position:relative;display:inline-flex;align-items:center;">
-        <!-- Real component -->
-        <div class="ds-input" style="min-width:220px;position:relative;">
-          <span class="ds-input__icon material-symbols-outlined">search</span>
-          <input type="text" class="ds-input__field" placeholder="Search..." readonly tabindex="-1">
+      <div style="display:inline-flex;flex-direction:column;gap:var(--ds-spacing-1);min-width:300px;">
+
+        <!-- 4: Label -->
+        <div class="ds-anatomy__part">
+          <span class="ds-anatomy__marker" style="top:50%;left:-28px;transform:translateY(-50%);">4</span>
+          <label class="ds-field__label" style="pointer-events:none;">Email address</label>
         </div>
-        <!-- Markers -->
-        <span class="ds-anatomy__marker" style="top:-24px;left:50%;transform:translateX(-50%);">1</span>
-        <span class="ds-anatomy__marker" style="top:50%;left:-28px;transform:translateY(-50%);">2</span>
-        <span class="ds-anatomy__marker" style="top:50%;right:-28px;transform:translateY(-50%);">3</span>
+
+        <!-- 1: Wrapper (input) + 2: Icon + 3: Field -->
+        <div class="ds-anatomy__part">
+          <span class="ds-anatomy__marker" style="top:-12px;left:50%;transform:translateX(-50%);">1</span>
+          <div class="ds-input" style="position:relative;">
+            <!-- 2: Icon -->
+            <span class="ds-anatomy__part" style="position:static;">
+              <span class="ds-anatomy__marker" style="top:-12px;left:12px;">2</span>
+              <span class="ds-input__icon material-symbols-outlined">mail</span>
+            </span>
+            <!-- 3: Field -->
+            <span class="ds-anatomy__part" style="flex:1;position:relative;">
+              <span class="ds-anatomy__marker" style="top:-12px;right:12px;">3</span>
+              <input type="text" class="ds-input__field" placeholder="name@example.com" tabindex="-1" style="pointer-events:none;">
+            </span>
+          </div>
+        </div>
+
+        <!-- 5: Helper -->
+        <div class="ds-anatomy__part">
+          <span class="ds-anatomy__marker" style="top:50%;left:-28px;transform:translateY(-50%);">5</span>
+          <span class="ds-field__helper">We'll never share your email.</span>
+        </div>
+
+        <!-- 6: Error -->
+        <div class="ds-anatomy__part">
+          <span class="ds-anatomy__marker" style="top:50%;left:-28px;transform:translateY(-50%);">6</span>
+          <span class="ds-field__error">Please enter a valid email.</span>
+        </div>
+
       </div>
     </div>
 
     <div class="ds-anatomy-legend">
-      <span data-lang="pt"><strong>1</strong> Wrapper (<code>.ds-input</code>) — container com borda, radius, background.<br>
-      <strong>2</strong> Ícone (opcional, <code>.ds-input__icon</code>) — ícone à esquerda, 16px, decorativo.<br>
-      <strong>3</strong> Campo (<code>.ds-input__field</code>) — o elemento nativo <code>&lt;input&gt;</code>.<br>
-      <strong>4</strong> Label — externo, via wrapper Form Field (<code>.ds-field__label</code>).<br>
-      <strong>5</strong> Texto auxiliar — externo, via Form Field (<code>.ds-field__helper</code>).<br>
-      <strong>6</strong> Mensagem de erro — externa, via Form Field (<code>.ds-field__error</code>).</span><span data-lang="en"><strong>1</strong> Wrapper (<code>.ds-input</code>) — container with border, radius, background.<br>
-      <strong>2</strong> Icon (optional, <code>.ds-input__icon</code>) — leading icon, 16px, decorative.<br>
-      <strong>3</strong> Field (<code>.ds-input__field</code>) — the native <code>&lt;input&gt;</code> element.<br>
-      <strong>4</strong> Label — external, via Form Field wrapper (<code>.ds-field__label</code>).<br>
-      <strong>5</strong> Helper text — external, via Form Field (<code>.ds-field__helper</code>).<br>
-      <strong>6</strong> Error message — external, via Form Field (<code>.ds-field__error</code>).</span>
+      <span data-lang="pt">
+        <strong>1</strong> Wrapper (<code>.ds-input</code>) — container com borda, radius e background.<br>
+        <strong>2</strong> Ícone (opcional, <code>.ds-input__icon</code>) — ícone decorativo à esquerda.<br>
+        <strong>3</strong> Campo (<code>.ds-input__field</code>) — o elemento nativo <code>&lt;input&gt;</code>.<br>
+        <strong>4</strong> Label (<code>.ds-field__label</code>) — externo, via Form Field.<br>
+        <strong>5</strong> Texto auxiliar (<code>.ds-field__helper</code>) — externo, via Form Field.<br>
+        <strong>6</strong> Mensagem de erro (<code>.ds-field__error</code>) — externa, via Form Field.
+      </span>
+      <span data-lang="en">
+        <strong>1</strong> Wrapper (<code>.ds-input</code>) — container with border, radius and background.<br>
+        <strong>2</strong> Icon (optional, <code>.ds-input__icon</code>) — decorative leading icon.<br>
+        <strong>3</strong> Field (<code>.ds-input__field</code>) — the native <code>&lt;input&gt;</code> element.<br>
+        <strong>4</strong> Label (<code>.ds-field__label</code>) — external, via Form Field.<br>
+        <strong>5</strong> Helper text (<code>.ds-field__helper</code>) — external, via Form Field.<br>
+        <strong>6</strong> Error message (<code>.ds-field__error</code>) — external, via Form Field.
+      </span>
     </div>
   </div>
 
