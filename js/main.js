@@ -96,6 +96,11 @@
 
     sidebar.innerHTML = html;
 
+    var activeLink = sidebar.querySelector('.ds-sidebar__link--active');
+    if (activeLink) {
+      activeLink.scrollIntoView({ block: 'nearest' });
+    }
+
     sidebar.querySelectorAll('.ds-sidebar__heading').forEach(function (btn) {
       btn.addEventListener('click', function () {
         var section = this.closest('.ds-sidebar__section');
