@@ -373,7 +373,8 @@
   function initPreviewTabs() {
     document.querySelectorAll('.ds-preview').forEach(function (preview) {
       var tabs = preview.querySelectorAll('.ds-preview__tab');
-      var panels = preview.querySelectorAll('.ds-preview__panel');
+      var demo = preview.querySelector('.ds-preview__demo');
+      var code = preview.querySelector('.ds-preview__code');
 
       tabs.forEach(function (tab) {
         tab.addEventListener('click', function () {
@@ -383,17 +384,12 @@
             t.classList.remove('ds-preview__tab--active');
             t.setAttribute('aria-selected', 'false');
           });
-          panels.forEach(function (p) {
-            p.classList.remove('ds-preview__panel--active');
-          });
 
           this.classList.add('ds-preview__tab--active');
           this.setAttribute('aria-selected', 'true');
 
-          var targetPanel = preview.querySelector('[data-panel="' + target + '"]');
-          if (targetPanel) {
-            targetPanel.classList.add('ds-preview__panel--active');
-          }
+          if (demo) demo.style.display = target === 'preview' ? '' : 'none';
+          if (code) code.style.display = target === 'code'    ? '' : 'none';
         });
 
         tab.addEventListener('keydown', function (e) {
