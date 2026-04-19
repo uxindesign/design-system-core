@@ -372,9 +372,11 @@
      --------------------------------------------------------- */
   function initPreviewTabs() {
     document.querySelectorAll('.ds-preview').forEach(function (preview) {
-      var tabs    = preview.querySelectorAll('.ds-preview__tab');
-      var canvas  = preview.querySelector('.ds-preview__canvas');
-      var code    = preview.querySelector('.ds-preview__code');
+      var tabs   = preview.querySelectorAll('.ds-preview__tab');
+      var panels = preview.querySelectorAll('.ds-preview__panel'); // Pattern B
+      var canvas = preview.querySelector('.ds-preview__canvas');   // Pattern A
+      var code   = preview.querySelector('.ds-preview__code');     // Pattern A
+      var usesPanels = panels.length > 0;
 
       tabs.forEach(function (tab) {
         tab.addEventListener('click', function () {
@@ -384,12 +386,19 @@
             t.classList.remove('ds-preview__tab--active');
             t.setAttribute('aria-selected', 'false');
           });
-
           this.classList.add('ds-preview__tab--active');
           this.setAttribute('aria-selected', 'true');
 
-          if (canvas) canvas.style.display = target === 'preview' ? '' : 'none';
-          if (code)   code.style.display   = target === 'code'    ? '' : 'none';
+          if (usesPanels) {
+            // Pattern B: data-panel + ds-preview__panel--active
+            panels.forEach(function (p) {
+              p.classList.toggle('ds-preview__panel--active', p.getAttribute('data-panel') === target);
+            });
+          } else {
+            // Pattern A: canvas/code siblings with inline display
+            if (canvas) canvas.style.display = target === 'preview' ? '' : 'none';
+            if (code)   code.style.display   = target === 'code'    ? '' : 'none';
+          }
         });
 
         tab.addEventListener('keydown', function (e) {
