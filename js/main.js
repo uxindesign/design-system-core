@@ -86,12 +86,24 @@
         return '<li><a href="' + href + '" class="ds-sidebar__link' + active + '">'
           + item.label + '</a></li>';
       }).join('');
-      return '<div class="ds-sidebar__section">'
-        + '<h2 class="ds-sidebar__heading">' + section.heading + '</h2>'
+      return '<div class="ds-sidebar__section ds-sidebar__section--expanded">'
+        + '<button class="ds-sidebar__heading" aria-expanded="true">'
+        + section.heading
+        + '<svg class="ds-sidebar__chevron" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 10l5 5 5-5z"/></svg>'
+        + '</button>'
         + '<ul class="ds-sidebar__nav">' + items + '</ul></div>';
     }).join('');
 
     sidebar.innerHTML = html;
+
+    sidebar.querySelectorAll('.ds-sidebar__heading').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var section = this.closest('.ds-sidebar__section');
+        var isExpanded = section.classList.contains('ds-sidebar__section--expanded');
+        section.classList.toggle('ds-sidebar__section--expanded', !isExpanded);
+        this.setAttribute('aria-expanded', String(!isExpanded));
+      });
+    });
   }
 
   /* ---------------------------------------------------------
