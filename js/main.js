@@ -372,9 +372,9 @@
      --------------------------------------------------------- */
   function initPreviewTabs() {
     document.querySelectorAll('.ds-preview').forEach(function (preview) {
-      var tabs = preview.querySelectorAll('.ds-preview__tab');
-      var demo = preview.querySelector('.ds-preview__demo');
-      var code = preview.querySelector('.ds-preview__code');
+      var tabs    = preview.querySelectorAll('.ds-preview__tab');
+      var canvas  = preview.querySelector('.ds-preview__canvas');
+      var code    = preview.querySelector('.ds-preview__code');
 
       tabs.forEach(function (tab) {
         tab.addEventListener('click', function () {
@@ -388,8 +388,8 @@
           this.classList.add('ds-preview__tab--active');
           this.setAttribute('aria-selected', 'true');
 
-          if (demo) demo.style.display = target === 'preview' ? '' : 'none';
-          if (code) code.style.display = target === 'code'    ? '' : 'none';
+          if (canvas) canvas.style.display = target === 'preview' ? '' : 'none';
+          if (code)   code.style.display   = target === 'code'    ? '' : 'none';
         });
 
         tab.addEventListener('keydown', function (e) {
