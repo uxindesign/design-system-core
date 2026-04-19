@@ -159,7 +159,7 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
 
 .ds-sidebar__link {
   display: block;
-  padding: var(--ds-spacing-2) var(--ds-spacing-6);
+  padding: var(--ds-spacing-2) var(--ds-spacing-6) var(--ds-spacing-2) var(--ds-spacing-8);
   color: var(--ds-content-secondary);
   text-decoration: none;
   font-size: var(--ds-font-size-sm);
