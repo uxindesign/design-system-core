@@ -6,6 +6,94 @@
   'use strict';
 
   /* ---------------------------------------------------------
+     Navigation — single source of truth for the sidebar
+     --------------------------------------------------------- */
+  var NAV_DATA = [
+    {
+      heading: 'Overview',
+      items: [
+        { label: 'Getting Started', path: 'index.html' },
+        { label: 'Token Architecture', path: 'docs/token-architecture.html' },
+        { label: 'Design Principles', path: 'docs/design-principles.html' },
+        { label: 'Changelog', path: 'docs/changelog.html' }
+      ]
+    },
+    {
+      heading: 'Foundations',
+      items: [
+        { label: 'Overview',      path: 'docs/foundations.html' },
+        { label: 'Colors',        path: 'docs/foundations-colors.html' },
+        { label: 'Theme Colors',  path: 'docs/foundations-theme-colors.html' },
+        { label: 'Typography',    path: 'docs/foundations-typography.html' },
+        { label: 'Spacing',       path: 'docs/foundations-spacing.html' },
+        { label: 'Radius',        path: 'docs/foundations-radius.html' },
+        { label: 'Elevation',     path: 'docs/foundations-elevation.html' },
+        { label: 'Borders',       path: 'docs/foundations-borders.html' },
+        { label: 'Motion',        path: 'docs/foundations-motion.html' },
+        { label: 'Opacity',       path: 'docs/foundations-opacity.html' },
+        { label: 'Z-index',       path: 'docs/foundations-zindex.html' }
+      ]
+    },
+    {
+      heading: 'Components',
+      items: [
+        { label: 'Button',     path: 'docs/button.html' },
+        { label: 'Input',      path: 'docs/input.html' },
+        { label: 'Textarea',   path: 'docs/textarea.html' },
+        { label: 'Select',     path: 'docs/select.html' },
+        { label: 'Checkbox',   path: 'docs/checkbox.html' },
+        { label: 'Radio',      path: 'docs/radio.html' },
+        { label: 'Toggle',     path: 'docs/toggle.html' },
+        { label: 'Badge',      path: 'docs/badge.html' },
+        { label: 'Alert',      path: 'docs/alert.html' },
+        { label: 'Card',       path: 'docs/card.html' },
+        { label: 'Modal',      path: 'docs/modal.html' },
+        { label: 'Tooltip',    path: 'docs/tooltip.html' },
+        { label: 'Tabs',       path: 'docs/tabs.html' },
+        { label: 'Breadcrumb', path: 'docs/breadcrumb.html' },
+        { label: 'Avatar',     path: 'docs/avatar.html' },
+        { label: 'Divider',    path: 'docs/divider.html' },
+        { label: 'Spinner',    path: 'docs/spinner.html' },
+        { label: 'Skeleton',   path: 'docs/skeleton.html' },
+        { label: 'Form Field', path: 'docs/form-field.html' }
+      ]
+    },
+    {
+      heading: 'Guidelines',
+      items: [
+        { label: 'Theming',        path: 'docs/theming.html' },
+        { label: 'Accessibility',  path: 'docs/accessibility.html' },
+        { label: 'Control Sizing', path: 'docs/control-sizing.html' }
+      ]
+    }
+  ];
+
+  function buildSidebar() {
+    var sidebar = document.getElementById('sidebar');
+    if (!sidebar) return;
+
+    var pathname = window.location.pathname;
+    var inDocs   = pathname.indexOf('/docs/') !== -1;
+    var current  = pathname.split('/').pop() || 'index.html';
+
+    var html = NAV_DATA.map(function (section) {
+      var items = section.items.map(function (item) {
+        var file = item.path.split('/').pop();
+        var href = inDocs
+          ? (item.path.startsWith('docs/') ? file : '../' + item.path)
+          : item.path;
+        var active = file === current ? ' ds-sidebar__link--active' : '';
+        return '<li><a href="' + href + '" class="ds-sidebar__link' + active + '">'
+          + item.label + '</a></li>';
+      }).join('');
+      return '<div class="ds-sidebar__section"><h2 class="ds-sidebar__heading">'
+        + section.heading + '</h2><ul class="ds-sidebar__nav">' + items + '</ul></div>';
+    }).join('');
+
+    sidebar.innerHTML = html;
+  }
+
+  /* ---------------------------------------------------------
      Internationalization (i18n)
      --------------------------------------------------------- */
   var UI_STRINGS = {
@@ -328,18 +416,6 @@
     });
   }
 
-  /* ---------------------------------------------------------
-     Active Sidebar Link Highlighting
-     --------------------------------------------------------- */
-  function initActiveLink() {
-    var currentPath = window.location.pathname;
-    document.querySelectorAll('.ds-sidebar__link').forEach(function (link) {
-      var href = link.getAttribute('href');
-      if (href && currentPath.endsWith(href.replace(/^\.\.\//, '').replace(/^\.\//, ''))) {
-        link.classList.add('ds-sidebar__link--active');
-      }
-    });
-  }
 
   /* ---------------------------------------------------------
      Contrast Ratio Calculator (WCAG 2.1)
@@ -420,13 +496,13 @@
      Initialize All
      --------------------------------------------------------- */
   document.addEventListener('DOMContentLoaded', function () {
+    buildSidebar();
     initThemeSwitcher();
     initI18n();
     initMobileNav();
     initCopyButtons();
     initPreviewTabs();
     initCharCounters();
-    initActiveLink();
     initContrastBadges();
   });
 })();
