@@ -144,7 +144,7 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
   font-weight: var(--ds-font-weight-semibold);
   text-transform: uppercase;
   letter-spacing: var(--ds-letter-spacing-wider);
-  color: var(--ds-content-secondary);
+  color: var(--ds-content-default);
   margin-bottom: var(--ds-spacing-2);
 }
 
