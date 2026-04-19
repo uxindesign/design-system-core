@@ -103,7 +103,7 @@
       'Foundations': 'Foundations',
       'Components': 'Components',
       'Guidelines': 'Guidelines',
-      'Getting Started': 'Começando',
+      'Getting Started': 'Comece por aqui',
       'Token Architecture': 'Token Architecture',
       'Design Principles': 'Design Principles',
       'Changelog': 'Changelog',
