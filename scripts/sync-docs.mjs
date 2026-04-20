@@ -297,8 +297,12 @@ function slugFromAdrFilename(filename) {
   return filename.replace(/\.md$/, '').toLowerCase();
 }
 
-function wrapPage({ title, subtitle, content, base, skipSubtitle }) {
+function wrapPage({ title, subtitle, content, base, skipSubtitle, layoutHref }) {
   const basePath = base || '../';
+  // layoutHref é relativo ao arquivo gerado, não ao ROOT. Padrão: layout.css
+  // no mesmo diretório (páginas em docs/). Para docs/decisions/, quem chama
+  // passa explicitamente `layoutHref: '../layout.css'`.
+  const layoutCss = layoutHref || 'layout.css';
   const subtitleHtml = skipSubtitle
     ? ''
     : `<p class="ds-section__subtitle">${subtitle}</p>`;
@@ -309,7 +313,7 @@ function wrapPage({ title, subtitle, content, base, skipSubtitle }) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${title} — Design System</title>
   <link rel="stylesheet" href="${basePath}css/design-system.css">
-  <link rel="stylesheet" href="${basePath}docs/layout.css">
+  <link rel="stylesheet" href="${layoutCss}">
   <style>
     .ds-md-content h1, .ds-md-content h2, .ds-md-content h3 { margin-top: var(--ds-spacing-8); margin-bottom: var(--ds-spacing-3); color: var(--ds-content-default); }
     .ds-md-content h1 { font-size: var(--ds-font-size-2xl); font-weight: var(--ds-font-weight-semibold); margin-top: 0; }
@@ -384,13 +388,13 @@ ${content}
 `;
 }
 
-function renderMarkdownFile({ mdPath, outPath, title, subtitle, base }) {
+function renderMarkdownFile({ mdPath, outPath, title, subtitle, base, layoutHref }) {
   if (!fs.existsSync(mdPath)) return false;
   const md = fs.readFileSync(mdPath, 'utf8');
   // Se o MD começa com `# Título`, removemos pra não duplicar com o título do layout
   const withoutH1 = md.replace(/^#\s+.+\n+/, '');
   const content = marked.parse(withoutH1);
-  const html = wrapPage({ title, subtitle, content, base });
+  const html = wrapPage({ title, subtitle, content, base, layoutHref });
   fs.mkdirSync(path.dirname(outPath), { recursive: true });
   fs.writeFileSync(outPath, html);
   return true;
@@ -408,6 +412,7 @@ for (const adr of adrs) {
     title: `ADR-${adr.num} — ${adr.title}`,
     subtitle: `Status: <strong>${adr.status}</strong> · Data: ${adr.date}`,
     base: '../../',
+    layoutHref: '../layout.css',
   });
   if (ok) adrHtmlCount++;
 }
@@ -428,24 +433,24 @@ ${adrs.map(a => {
 `;
 fs.writeFileSync(
   path.join(decisionsDir, 'index.html'),
-  wrapPage({ title: 'Decisões arquiteturais', subtitle: 'ADRs (Architecture Decision Records) do design system.', content: adrIndexContent, base: '../../' })
+  wrapPage({ title: 'Decisões arquiteturais', subtitle: 'ADRs (Architecture Decision Records) do design system.', content: adrIndexContent, base: '../../', layoutHref: '../layout.css' })
 );
 console.log(`✅ docs/decisions/index.html`);
 
 // 3. Páginas derivadas de MDs em docs/
 const mdPages = [
-  { src: 'CHANGELOG.md', out: 'docs/changelog.html', title: 'Changelog', subtitle: 'Histórico de versões do design system.', rootRelative: true, base: '../' },
-  { src: 'docs/brand-principles.md', out: 'docs/brand-principles.html', title: 'Princípios da marca', subtitle: 'Missão, princípios, tom de voz e identidade visual.', base: '../' },
-  { src: 'docs/backlog.md', out: 'docs/backlog.html', title: 'Backlog', subtitle: 'Itens fora do escopo imediato mas que devem ser implementados.', base: '../' },
-  { src: 'docs/process-contributing.md', out: 'docs/process-contributing.html', title: 'Como contribuir', subtitle: 'Setup local, fluxo de PR, convenções de commit.', base: '../' },
-  { src: 'docs/process-versioning.md', out: 'docs/process-versioning.html', title: 'Versionamento', subtitle: 'Regras de bump de versão no design system.', base: '../' },
-  { src: 'docs/process-releasing.md', out: 'docs/process-releasing.html', title: 'Releases', subtitle: 'Passo a passo de uma release.', base: '../' },
+  { src: 'CHANGELOG.md', out: 'docs/changelog.html', title: 'Changelog', subtitle: 'Histórico de versões do design system.' },
+  { src: 'docs/brand-principles.md', out: 'docs/brand-principles.html', title: 'Princípios da marca', subtitle: 'Missão, princípios, tom de voz e identidade visual.' },
+  { src: 'docs/backlog.md', out: 'docs/backlog.html', title: 'Backlog', subtitle: 'Itens fora do escopo imediato mas que devem ser implementados.' },
+  { src: 'docs/process-contributing.md', out: 'docs/process-contributing.html', title: 'Como contribuir', subtitle: 'Setup local, fluxo de PR, convenções de commit.' },
+  { src: 'docs/process-versioning.md', out: 'docs/process-versioning.html', title: 'Versionamento', subtitle: 'Regras de bump de versão no design system.' },
+  { src: 'docs/process-releasing.md', out: 'docs/process-releasing.html', title: 'Releases', subtitle: 'Passo a passo de uma release.' },
 ];
 let mdPageCount = 0;
 for (const p of mdPages) {
   const mdPath = path.join(ROOT, p.src);
   const outPath = path.join(ROOT, p.out);
-  const ok = renderMarkdownFile({ mdPath, outPath, title: p.title, subtitle: p.subtitle, base: p.base });
+  const ok = renderMarkdownFile({ mdPath, outPath, title: p.title, subtitle: p.subtitle, base: '../', layoutHref: 'layout.css' });
   if (ok) mdPageCount++;
 }
 console.log(`✅ ${mdPageCount} páginas MD → HTML em docs/`);

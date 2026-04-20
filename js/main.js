@@ -65,6 +65,28 @@
         { label: 'Accessibility',  path: 'docs/accessibility.html' },
         { label: 'Control Sizing', path: 'docs/control-sizing.html' }
       ]
+    },
+    {
+      heading: 'Decisions',
+      items: [
+        { label: 'Overview',       path: 'docs/decisions/index.html' }
+      ]
+    },
+    {
+      heading: 'Process',
+      items: [
+        { label: 'Contributing',   path: 'docs/process-contributing.html' },
+        { label: 'Versioning',     path: 'docs/process-versioning.html' },
+        { label: 'Releasing',      path: 'docs/process-releasing.html' },
+        { label: 'Backlog',        path: 'docs/backlog.html' },
+        { label: 'Tokens sync',    path: 'docs/tokens-sync.html' }
+      ]
+    },
+    {
+      heading: 'Brand',
+      items: [
+        { label: 'Brand Principles', path: 'docs/brand-principles.html' }
+      ]
     }
   ];
 
