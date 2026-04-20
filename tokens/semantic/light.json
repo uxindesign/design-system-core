@@ -610,39 +610,39 @@
       "control": {
         "sm": {
           "$type": "dimension",
-          "$value": "2rem",
+          "$value": "{foundation.spacing.8}",
           "$description": "32px. Height of sm interactive controls (Button, Input Field, Select Field)."
         },
         "md": {
           "$type": "dimension",
-          "$value": "2.5rem",
+          "$value": "{foundation.spacing.10}",
           "$description": "40px. Height of md interactive controls."
         },
         "lg": {
           "$type": "dimension",
-          "$value": "3rem",
+          "$value": "{foundation.spacing.12}",
           "$description": "48px. Height of lg interactive controls."
         },
         "icon": {
           "sm": {
             "$type": "dimension",
-            "$value": "1rem",
+            "$value": "{foundation.spacing.4}",
             "$description": "16px. Icon size inside sm controls."
           },
           "md": {
             "$type": "dimension",
-            "$value": "1.25rem",
+            "$value": "{foundation.spacing.5}",
             "$description": "20px. Icon size inside md controls."
           },
           "lg": {
             "$type": "dimension",
-            "$value": "1.5rem",
+            "$value": "{foundation.spacing.6}",
             "$description": "24px. Icon size inside lg controls."
           }
         },
         "min-target": {
           "$type": "dimension",
-          "$value": "2.75rem",
+          "$value": "{foundation.spacing.11}",
           "$description": "44px. WCAG 2.5.5 AAA touch target minimum."
         }
       }
@@ -669,17 +669,17 @@
         "line-height": {
           "sm": {
             "$type": "dimension",
-            "$value": "1rem",
+            "$value": "{foundation.spacing.4}",
             "$description": "16px. Matches icon-sm. height = padY*2 + lineHeight = 8+16+8 = 32."
           },
           "md": {
             "$type": "dimension",
-            "$value": "1.25rem",
+            "$value": "{foundation.spacing.5}",
             "$description": "20px. Matches icon-md. height = 10+20+10 = 40."
           },
           "lg": {
             "$type": "dimension",
-            "$value": "1.5rem",
+            "$value": "{foundation.spacing.6}",
             "$description": "24px. Matches icon-lg. height = 12+24+12 = 48."
           }
         }

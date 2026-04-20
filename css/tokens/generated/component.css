@@ -66,19 +66,6 @@
   --ds-button-height-sm: var(--ds-size-control-sm); /** 32px */
   --ds-button-height-md: var(--ds-size-control-md); /** 40px */
   --ds-button-height-lg: var(--ds-size-control-lg); /** 48px */
-  --ds-button-icon-size-sm: var(--ds-size-control-icon-sm); /** 16px */
-  --ds-button-icon-size-md: var(--ds-size-control-icon-md); /** 20px */
-  --ds-button-icon-size-lg: var(--ds-size-control-icon-lg); /** 24px */
-  --ds-button-min-target-size: var(--ds-size-control-min-target); /** 44px — WCAG 2.5.5 enhanced touch target */
-  --ds-input-height-sm: var(--ds-size-control-sm); /** 32px */
-  --ds-input-height-md: var(--ds-size-control-md); /** 40px */
-  --ds-input-height-lg: var(--ds-size-control-lg); /** 48px */
-  --ds-input-icon-size-sm: var(--ds-size-control-icon-sm); /** 16px */
-  --ds-input-icon-size-md: var(--ds-size-control-icon-md); /** 20px */
-  --ds-input-icon-size-lg: var(--ds-size-control-icon-lg); /** 24px */
-  --ds-select-height-sm: var(--ds-size-control-sm); /** 32px */
-  --ds-select-height-md: var(--ds-size-control-md); /** 40px */
-  --ds-select-height-lg: var(--ds-size-control-lg); /** 48px */
   --ds-button-padding-x-sm: var(--ds-space-control-padding-x-sm); /** 12px horizontal padding */
   --ds-button-padding-x-md: var(--ds-space-control-padding-x-md); /** 16px horizontal padding */
   --ds-button-padding-x-lg: var(--ds-space-control-padding-x-lg); /** 20px horizontal padding */
@@ -91,6 +78,10 @@
   --ds-button-font-size-sm: var(--ds-control-font-size-sm); /** 0.875rem (14px) */
   --ds-button-font-size-md: var(--ds-control-font-size-md); /** 0.875rem (14px) */
   --ds-button-font-size-lg: var(--ds-control-font-size-lg); /** 1rem (16px) */
+  --ds-button-icon-size-sm: var(--ds-size-control-icon-sm); /** 16px */
+  --ds-button-icon-size-md: var(--ds-size-control-icon-md); /** 20px */
+  --ds-button-icon-size-lg: var(--ds-size-control-icon-lg); /** 24px */
+  --ds-button-min-target-size: var(--ds-size-control-min-target); /** 44px — WCAG 2.5.5 enhanced touch target */
   --ds-button-background-toned-default: var(--ds-brand-toned-default); /** Toned variant background. ADR-007. */
   --ds-button-background-toned-hover: var(--ds-brand-toned-hover);
   --ds-button-background-toned-active: var(--ds-brand-toned-active);
@@ -99,22 +90,37 @@
   --ds-button-foreground-toned-disabled: var(--ds-content-disabled);
   --ds-checkbox-border-width: var(--ds-border-width-default);
   --ds-checkbox-gap: var(--ds-space-gap-sm); /** 8px between control and label */
+  --ds-input-height-sm: var(--ds-size-control-sm); /** 32px */
+  --ds-input-height-md: var(--ds-size-control-md); /** 40px */
+  --ds-input-height-lg: var(--ds-size-control-lg); /** 48px */
   --ds-input-padding-x-sm: var(--ds-space-control-padding-x-sm); /** 12px */
   --ds-input-padding-x-md: var(--ds-space-control-padding-x-md); /** 16px */
   --ds-input-padding-x-lg: var(--ds-space-control-padding-x-lg); /** 20px */
+  --ds-input-padding-y-sm: var(--ds-space-control-padding-y-sm); /** 8px */
+  --ds-input-padding-y-md: var(--ds-space-control-padding-y-md); /** 10px */
+  --ds-input-padding-y-lg: var(--ds-space-control-padding-y-lg); /** 12px */
   --ds-input-gap: var(--ds-space-gap-sm); /** 8px gap between icon and field */
   --ds-input-border-radius: var(--ds-radius-component);
   --ds-input-border-width: var(--ds-border-width-default);
   --ds-input-font-size-sm: var(--ds-control-font-size-sm); /** 14px */
   --ds-input-font-size-md: var(--ds-control-font-size-md); /** 14px */
   --ds-input-font-size-lg: var(--ds-control-font-size-lg); /** 16px */
+  --ds-input-icon-size-sm: var(--ds-size-control-icon-sm); /** 16px */
+  --ds-input-icon-size-md: var(--ds-size-control-icon-md); /** 20px */
+  --ds-input-icon-size-lg: var(--ds-size-control-icon-lg); /** 24px */
   --ds-modal-padding: var(--ds-space-inset-lg); /** 16px */
   --ds-modal-header-gap: var(--ds-space-gap-sm); /** 8px between title and close */
   --ds-radio-border-width: var(--ds-border-width-default);
   --ds-radio-gap: var(--ds-space-gap-sm); /** 8px between control and label */
+  --ds-select-height-sm: var(--ds-size-control-sm); /** 32px */
+  --ds-select-height-md: var(--ds-size-control-md); /** 40px */
+  --ds-select-height-lg: var(--ds-size-control-lg); /** 48px */
   --ds-select-padding-x-sm: var(--ds-space-control-padding-x-sm); /** 12px */
   --ds-select-padding-x-md: var(--ds-space-control-padding-x-md); /** 16px */
   --ds-select-padding-x-lg: var(--ds-space-control-padding-x-lg); /** 20px */
+  --ds-select-padding-y-sm: var(--ds-space-control-padding-y-sm); /** 8px */
+  --ds-select-padding-y-md: var(--ds-space-control-padding-y-md); /** 10px */
+  --ds-select-padding-y-lg: var(--ds-space-control-padding-y-lg); /** 12px */
   --ds-select-gap: var(--ds-space-gap-xs); /** 4px */
   --ds-select-border-radius: var(--ds-radius-component);
   --ds-select-border-width: var(--ds-border-width-default);

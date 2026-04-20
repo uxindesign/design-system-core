@@ -10,16 +10,6 @@
   --ds-feedback-success-content-contrast-disabled: rgba(255, 255, 255, 0.80); /** Conteúdo disabled sobre fill success disabled. */
   --ds-feedback-error-disabled: rgba(194, 112, 112, 0.40); /** Fill error disabled. */
   --ds-feedback-error-content-contrast-disabled: rgba(255, 255, 255, 0.80); /** Conteúdo disabled sobre fill error disabled. */
-  --ds-size-control-sm: 2rem; /** 32px. Height of sm interactive controls (Button, Input Field, Select Field). */
-  --ds-size-control-md: 2.5rem; /** 40px. Height of md interactive controls. */
-  --ds-size-control-lg: 3rem; /** 48px. Height of lg interactive controls. */
-  --ds-size-control-icon-sm: 1rem; /** 16px. Icon size inside sm controls. */
-  --ds-size-control-icon-md: 1.25rem; /** 20px. Icon size inside md controls. */
-  --ds-size-control-icon-lg: 1.5rem; /** 24px. Icon size inside lg controls. */
-  --ds-size-control-min-target: 2.75rem; /** 44px. WCAG 2.5.5 AAA touch target minimum. */
-  --ds-control-line-height-sm: 1rem; /** 16px. Matches icon-sm. height = padY*2 + lineHeight = 8+16+8 = 32. */
-  --ds-control-line-height-md: 1.25rem; /** 20px. Matches icon-md. height = 10+20+10 = 40. */
-  --ds-control-line-height-lg: 1.5rem; /** 24px. Matches icon-lg. height = 12+24+12 = 48. */
   --ds-background-default: var(--ds-color-neutral-50); /** Page background */
   --ds-background-subtle: var(--ds-color-neutral-100); /** Subtle alternate background — one step darker than default to create visual separation. */
   --ds-background-inverse: var(--ds-color-neutral-900);
@@ -124,9 +114,19 @@
   --ds-space-control-padding-y-md: var(--ds-spacing-2-5); /** 10px. Vertical padding for md controls. */
   --ds-space-control-padding-y-lg: var(--ds-spacing-3); /** 12px. Vertical padding for lg controls. */
   --ds-radius-component: var(--ds-radius-md);
+  --ds-size-control-sm: var(--ds-spacing-8); /** 32px. Height of sm interactive controls (Button, Input Field, Select Field). */
+  --ds-size-control-md: var(--ds-spacing-10); /** 40px. Height of md interactive controls. */
+  --ds-size-control-lg: var(--ds-spacing-12); /** 48px. Height of lg interactive controls. */
+  --ds-size-control-icon-sm: var(--ds-spacing-4); /** 16px. Icon size inside sm controls. */
+  --ds-size-control-icon-md: var(--ds-spacing-5); /** 20px. Icon size inside md controls. */
+  --ds-size-control-icon-lg: var(--ds-spacing-6); /** 24px. Icon size inside lg controls. */
+  --ds-size-control-min-target: var(--ds-spacing-11); /** 44px. WCAG 2.5.5 AAA touch target minimum. */
   --ds-control-font-size-sm: var(--ds-font-size-sm); /** 14px. Font size for sm controls (Button, Input, Select). */
   --ds-control-font-size-md: var(--ds-font-size-sm); /** 14px. Font size for md controls. */
   --ds-control-font-size-lg: var(--ds-font-size-md); /** 16px. Font size for lg controls. */
+  --ds-control-line-height-sm: var(--ds-spacing-4); /** 16px. Matches icon-sm. height = padY*2 + lineHeight = 8+16+8 = 32. */
+  --ds-control-line-height-md: var(--ds-spacing-5); /** 20px. Matches icon-md. height = 10+20+10 = 40. */
+  --ds-control-line-height-lg: var(--ds-spacing-6); /** 24px. Matches icon-lg. height = 12+24+12 = 48. */
   --ds-content-link-hover: var(--ds-brand-hover); /** Links em estado hover. */
   --ds-brand-default: var(--ds-brand-primary); /** Fill brand principal (Button Brand, indicadores ativos). */
   --ds-accent-default: var(--ds-brand-secondary); /** Fill de acento (Badge Secondary). */

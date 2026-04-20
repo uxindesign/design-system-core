@@ -1,6 +1,21 @@
 # ADR-006: Adopt semantic control tokens for shared dimensions and typography across interactive controls
 **Date:** 2026-04-15
-**Status:** Proposed
+**Status:** Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.3)
+
+## Implementação
+
+A maior parte foi executada durante ADR-011:
+
+- `semantic.size.control.*`, `semantic.size.control.icon.*`, `semantic.size.control.min-target`, `semantic.space.control.padding-x.*`, `semantic.space.control.padding-y.*`, `semantic.typography.control.font-size.*`, `semantic.typography.control.line-height.*` existem em `tokens/semantic/light.json` e `dark.json`.
+- `tokens/component/button.json`, `input.json`, `select.json`, `textarea.json` referenciam os semantic control tokens. O rename `button.padding.*` → `button.padding-x.*` está aplicado.
+- CSS gerado em `css/tokens/generated/theme-*.css` e `component.css` propaga a cadeia corretamente.
+- Documentação do pattern em `docs/control-sizing.html`.
+
+Fechamento formal em 0.5.3:
+
+- `semantic.size.control.{sm,md,lg}`, `semantic.size.control.icon.{sm,md,lg}`, `semantic.size.control.min-target`, `semantic.typography.control.line-height.{sm,md,lg}` trocaram valores absolutos (`2rem` etc.) por referências a `{foundation.spacing.*}`. Mantém a cadeia token viva: se a escala de spacing mudar, estes derivam automaticamente.
+- `tokens/component/input.json` e `select.json` ganharam `padding-y` explícito apontando para `semantic.space.control.padding-y.*`.
+- `docs/control-sizing.html` ajustado: os nomes documentados `--ds-typography-control-font-size-*` e `--ds-typography-control-line-height-*` foram alinhados para `--ds-control-font-size-*` e `--ds-control-line-height-*` — os nomes que o transform `name/strip-layer` de `build-tokens.mjs` realmente emite (ele remove o segmento `typography`).
 
 ## Pré-requisitos
 

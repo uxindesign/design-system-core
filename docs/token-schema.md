@@ -2,13 +2,13 @@
 
 > Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-20. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
-> Versão atual: **0.5.2**
+> Versão atual: **0.5.3**
 
 ## Estado atual
 
 | Aspecto | Valor |
 |---------|-------|
-| Versão | 0.5.2 |
+| Versão | 0.5.3 |
 | Formato canônico | JSON (DTCG) em `tokens/` |
 | CSS gerado | Style Dictionary → `css/tokens/generated/` |
 | Pipeline | ✅ index.css importa apenas generated/ |
@@ -20,7 +20,7 @@
 |--------|--------|----------|
 | Foundation | **225** | 10 |
 | Semantic | **132 × 2 modos** | light.json + dark.json |
-| Component | **131** | 11 |
+| Component | **137** | 11 |
 
 ## Foundation (225 tokens)
 
@@ -58,17 +58,17 @@ semantic.size.*
 semantic.typography.*
 ```
 
-## Component (131 tokens)
+## Component (137 tokens)
 
 | Arquivo | Tokens |
 |---------|--------|
 | `avatar.json` | 9 |
 | `button.json` | 25 |
 | `checkbox.json` | 14 |
-| `input.json` | 15 |
+| `input.json` | 18 |
 | `modal.json` | 6 |
 | `radio.json` | 10 |
-| `select.json` | 16 |
+| `select.json` | 19 |
 | `skeleton.json` | 4 |
 | `spinner.json` | 6 |
 | `textarea.json` | 14 |
@@ -95,7 +95,7 @@ semantic.typography.*
 - **ADR-003** — Figma como autoridade de design, Git como autoridade de tokens/código (Aceita)
 - **ADR-004** — WCAG 2.2 AA como padrão de acessibilidade (Aceita — Implementada em 0.5.0)
 - **ADR-005** — Brand como camada foundation, estados explícitos no semantic, e limpeza tipográfica (Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.2))
-- **ADR-006** — Adopt semantic control tokens for shared dimensions and typography across interactive controls (Proposed)
+- **ADR-006** — Adopt semantic control tokens for shared dimensions and typography across interactive controls (Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.3))
 - **ADR-007** — Establish toned color system with colored overlays and semantic toned tokens (Proposed)
 - **ADR-008** — Recalibração das paletas foundation `green` e `amber` (Aceita — Implementada em 0.5.0)
 - **ADR-009** — Separação de `border.default` (decorativa) e `border.control` (funcional) (Aceita — Implementada em 0.5.0)

@@ -74,6 +74,20 @@
 <p>O formato é baseado em <a href="https://keepachangelog.com/pt-BR/1.1.0/">Keep a Changelog</a> e o versionamento segue <a href="https://semver.org/lang/pt-BR/">Semantic Versioning</a>.</p>
 <p>Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na faixa 0.x. Regras de bump documentadas em <code>docs/process-versioning.html</code>.</p>
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
+<h2>[0.5.3]</h2>
+<h3>Alterado</h3>
+<ul>
+<li>ADR-006 marcada como Aceita — Implementada em 0.5.0. Implementação já havia acontecido via ADR-011; fechamento formal em 0.5.3.</li>
+<li><code>semantic.size.control.*</code> e <code>semantic.typography.control.line-height.*</code> em <code>tokens/semantic/light.json</code> e <code>dark.json</code> passam a referenciar tokens <code>foundation.spacing.*</code> em vez de valores absolutos. Integridade da cadeia de tokens preservada (foundation → semantic).</li>
+</ul>
+<h3>Adicionado</h3>
+<ul>
+<li><code>component.input.padding-y.{sm,md,lg}</code> e <code>component.select.padding-y.{sm,md,lg}</code> em <code>tokens/component/input.json</code> e <code>select.json</code>, referenciando <code>semantic.space.control.padding-y.*</code>. Gera <code>--ds-input-padding-y-*</code> e <code>--ds-select-padding-y-*</code> no CSS gerado.</li>
+</ul>
+<h3>Corrigido</h3>
+<ul>
+<li><code>docs/control-sizing.html</code> — nomes das CSS vars na tabela agora batem com o que o build realmente emite: <code>--ds-control-font-size-*</code> e <code>--ds-control-line-height-*</code> (em vez de <code>--ds-typography-control-*</code>). O transform <code>name/strip-layer</code> remove o segmento <code>typography</code> do nome gerado.</li>
+</ul>
 <h2>[0.5.2]</h2>
 <h3>Alterado</h3>
 <ul>
