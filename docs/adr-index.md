@@ -11,7 +11,7 @@
 | [ADR-002](decisions/ADR-002-stack-agnostica.md) | Stack agnóstica — HTML + CSS + vanilla JS como base | Aceita | 2026-04-14 |
 | [ADR-003](decisions/ADR-003-fontes-verdade.md) | Figma como autoridade de design, Git como autoridade de tokens/código | Aceita | 2026-04-14 |
 | [ADR-004](decisions/ADR-004-wcag.md) | WCAG 2.2 AA como padrão de acessibilidade | Aceita — Implementada em 0.5.0 | 2026-04-14 |
-| [ADR-005](decisions/ADR-005-brand-foundation-e-estados-explicitos.md) | Brand como camada foundation, estados explícitos no semantic, e limpeza tipográfica | Proposta | 2026-04-14 |
+| [ADR-005](decisions/ADR-005-brand-foundation-e-estados-explicitos.md) | Brand como camada foundation, estados explícitos no semantic, e limpeza tipográfica | Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.2) | 2026-04-14 |
 | [ADR-006](decisions/ADR-006-semantic-control-tokens.md) | Adopt semantic control tokens for shared dimensions and typography across interactive controls | Proposed | — |
 | [ADR-007](decisions/ADR-007-toned-color-system.md) | Establish toned color system with colored overlays and semantic toned tokens | Proposed | — |
 | [ADR-008](decisions/ADR-008-recalibracao-paletas-feedback.md) | Recalibração das paletas foundation `green` e `amber` | Aceita — Implementada em 0.5.0 | 2026-04-16 |
