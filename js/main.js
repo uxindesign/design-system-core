@@ -95,15 +95,26 @@
     if (!sidebar) return;
 
     var pathname = window.location.pathname;
-    var inDocs   = pathname.indexOf('/docs/') !== -1;
     var current  = pathname.split('/').pop() || 'index.html';
+    // Profundidade relativa à raiz do site: 0 quando estamos em /index.html,
+    // 1 quando em /docs/foo.html, 2 quando em /docs/decisions/foo.html.
+    // Calcula contando segmentos após o basepath do projeto.
+    var segments = pathname.split('/').filter(Boolean);
+    // Remove o nome do arquivo final para contar apenas diretórios
+    var dirSegments = segments.slice(0, -1);
+    // Procura 'docs' ou 'decisions' nos segmentos finais para deduzir profundidade
+    var depth = 0;
+    if (dirSegments.indexOf('docs') !== -1) {
+      depth = dirSegments.length - dirSegments.indexOf('docs');
+    }
+    var upToRoot = depth === 0 ? '' : '../'.repeat(depth);
 
     var html = NAV_DATA.map(function (section) {
       var items = section.items.map(function (item) {
         var file = item.path.split('/').pop();
-        var href = inDocs
-          ? (item.path.startsWith('docs/') ? file : '../' + item.path)
-          : item.path;
+        // item.path é sempre relativo à raiz (ex: 'docs/button.html' ou 'index.html').
+        // href correto é upToRoot + item.path — funciona de qualquer profundidade.
+        var href = upToRoot + item.path;
         var active = file === current ? ' ds-sidebar__link--active' : '';
         return '<li><a href="' + href + '" class="ds-sidebar__link' + active + '">'
           + item.label + '</a></li>';
