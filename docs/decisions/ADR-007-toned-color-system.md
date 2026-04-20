@@ -2,6 +2,27 @@
 **Date:** 2026-04-15
 **Status:** Proposed
 
+## Pré-requisitos
+
+- ADR-005 implementada (naming do brand consolidado).
+- ADR-011 implementada (estrutura `brand/toned/*` já está em vigor no JSON).
+
+## Estimativa de esforço
+
+3 horas. 1h para adicionar os tokens de overlay colorido em `foundation/colors.json` (já presentes parcialmente — ver note abaixo), 1h para completar os tokens semânticos `brand.toned.*` nos dois modos (parte já implementada via ADR-011), 30min para atualizar `tokens/component/button.json` com os bindings corretos, 30min para Figma e validação.
+
+**Estado atual do código.** Em `tokens/foundation/colors.json` já existem `foundation.color.overlay.blue-600.{12,20,28}` e `overlay.blue-400.{15,25,32}`. `tokens/semantic/light.json` e `dark.json` já têm `semantic.brand.toned.{default,hover,active}` apontando para esses overlays. A implementação está quase pronta; ADR-007 só precisa ser fechada formalmente depois que ADR-005 consolidar o naming.
+
+## Passos concretos para sair do estado Proposta
+
+1. Revisar `tokens/foundation/colors.json` e confirmar que os 6 overlays coloridos cobrem todos os estados (default/hover/active em light e dark).
+2. Adicionar tokens equivalentes para feedback se e quando Alert ganhar variante toned (adiamento intencional — só implementar quando houver uso concreto).
+3. Atualizar `tokens/component/button.json` garantindo que `button.background.toned.*` referencia `{semantic.brand.toned.*}` (não `rgba` literal).
+4. No Figma, renomear variáveis flat (`color/primary/toned`, `-hover`, `-active`) para a hierarquia aninhada (`color/primary/toned/default`, `/hover`, `/active`).
+5. Remover `color/primary/toned-disabled` e `color/primary/toned-disabled-fg` do Figma; Button Toned disabled passa a consumir `state/disabled/*`.
+6. Executar `npm run build:tokens` e `npm run verify:tokens` para confirmar sincronia.
+7. Documentar como mudança estrutural (não breaking visual). Bump patch.
+
 ## Context
 
 The Button component has a "Toned" style variant that uses a translucent colored background (primary color at ~12% opacity). This variant already exists in the Figma file with 5 variables in the Semantic collection:

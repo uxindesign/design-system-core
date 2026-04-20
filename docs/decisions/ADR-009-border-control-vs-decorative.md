@@ -1,7 +1,13 @@
 # ADR-009: Separação de `border.default` (decorativa) e `border.control` (funcional)
 
 **Data:** 2026-04-16
-**Status:** Aceita
+**Status:** Aceita — Implementada em 0.5.0
+
+## Implementação
+
+- `semantic.border.control.{default,hover,disabled}` adicionados em `tokens/semantic/light.json` e `dark.json` via `f391f70` (`feat(tokens): add border.control semantic tokens (ADR-009)`).
+- `border.default` migrado para `neutral.300` (light) mantido `neutral.700` (dark) em `c23661f`.
+- CSS dos componentes Input, Select, Textarea, Checkbox, Radio, Toggle migrados para `--ds-border-control-*`.
 
 ## Contexto
 

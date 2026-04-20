@@ -1,7 +1,14 @@
 # ADR-011: Reestruturação do naming de tokens semânticos de cor
 
 **Data:** 2026-04-17
-**Status:** Aceita — executada em v1.5.0
+**Status:** Aceita — Implementada em 0.5.0
+
+## Implementação
+
+- Estrutura nova de tokens semânticos aplicada em `tokens/semantic/light.json` e `dark.json` em `f9f7609` (`fix(tokens): migrate theme overrides and foundation to ADR-011 naming; remove white/black (ADR-010)`).
+- `css/base/reset.css` migrado para os novos nomes em `297accf` (`fix(base): migrate reset.css tokens to ADR-011 naming`).
+- CSS regenerado via `build-tokens.mjs`.
+- `text/on-brand`, `color/primary/muted`, `color/secondary/muted`, `background/muted`, `state/disabled/foreground` eliminados conforme tabela abaixo.
 
 ## Contexto
 
@@ -113,7 +120,9 @@ Ambos apontavam para o mesmo valor (neutral-400 light / neutral-600 dark). Conso
 
 ### Bump de versão
 
-**1.4.0 → 1.5.0** (breaking change no naming de tokens semânticos de cor).
+**0.4.0 → 0.5.0** (breaking change no naming de tokens semânticos de cor).
+
+> Nota histórica: durante o desenvolvimento o pacote ficou temporariamente com versão `1.5.0` em `package.json` sem nunca ter sido publicado no npm. Em 0.5.1 a versão foi realinhada para a faixa 0.x (plano de consolidação da documentação).
 
 ## Alternativas consideradas
 

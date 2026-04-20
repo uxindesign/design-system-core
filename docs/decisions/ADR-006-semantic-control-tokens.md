@@ -2,6 +2,26 @@
 **Date:** 2026-04-15
 **Status:** Proposed
 
+## Pré-requisitos
+
+- ADR-005 implementada (foundation/brand.json existe, convenção `-default` consolidada).
+- Verificação Figma ↔ JSON em CI (ADR-003, 0.5.1).
+
+## Estimativa de esforço
+
+4 horas. 1h para adicionar os tokens semânticos control em `light.json` e `dark.json`, 1h30 para atualizar `tokens/component/button.json`, `input.json`, `select.json`, `textarea.json` para referenciar os novos tokens semânticos, 1h para normalizar dimensões dos componentes no Figma, 30min para build, verificação e validação visual.
+
+## Passos concretos para sair do estado Proposta
+
+1. Adicionar `semantic.typography.control.*`, `semantic.size.control.*`, `semantic.space.control.*` em `tokens/semantic/light.json` e `dark.json` (mesmos valores em ambos os modos).
+2. Adicionar `foundation.dimension.min-target` (2.75rem/44px) em `tokens/foundation/` se o token não existir.
+3. Atualizar `tokens/component/button.json` para referenciar os tokens semânticos novos (renomeando `padding` para `padding-x`).
+4. Atualizar `tokens/component/input.json`, `select.json`, `textarea.json` de forma análoga.
+5. Executar `npm run build:tokens` e ajustar CSS dos componentes para consumir as novas variáveis geradas (`--ds-size-control-*`, `--ds-space-control-*`, `--ds-typography-control-*`).
+6. Normalizar Figma: Button, Input Text Field, Select Field com mesma altura 32/40/48; ajustar line-height e paddingY para os valores do control token. Textarea ajusta paddingY mas mantém altura independente.
+7. Rodar `npm run verify:tokens` para confirmar coerência.
+8. Documentar como breaking change no CHANGELOG. Bump minor.
+
 ## Context
 
 The design system has 18 components, of which Button, Input Text, Select, and Textarea share the concept of "interactive control with size variants" (sm/md/lg). An audit of the Figma file reveals dimensional inconsistencies between these components:

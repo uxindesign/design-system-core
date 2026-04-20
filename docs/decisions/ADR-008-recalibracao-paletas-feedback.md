@@ -1,7 +1,13 @@
 # ADR-008: Recalibração das paletas foundation `green` e `amber`
 
 **Data:** 2026-04-16
-**Status:** Aceita
+**Status:** Aceita — Implementada em 0.5.0
+
+## Implementação
+
+- Paletas `green` e `amber` em `tokens/foundation/colors.json` atualizadas para os valores recalibrados descritos abaixo em `c23661f` (`feat(tokens): recalibrate green/amber palettes + docs + v1.4.0 (ADR-008/009/010)`).
+- Binding `feedback.warning.border` apontando para `amber.600` confirmado em `tokens/semantic/light.json`.
+- CSS regenerado via `build-tokens.mjs`.
 
 ## Contexto
 
