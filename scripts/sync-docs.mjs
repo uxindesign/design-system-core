@@ -455,12 +455,17 @@ for (const p of mdPages) {
 }
 console.log(`✅ ${mdPageCount} páginas MD → HTML em docs/`);
 
-// 4. Injeta badge de versão em index.html (placeholder <!-- VERSION -->)
+// 4. Injeta badge de versão em index.html (placeholder <!-- VERSION -->).
+// Regex captura o comentário + o texto "vX.Y.Z" opcional imediatamente
+// depois, pra substituir tudo de uma vez — sem isso, rodar sync:docs
+// mais de uma vez duplica o número de versão.
 const indexPath = path.join(ROOT, 'index.html');
 if (fs.existsSync(indexPath)) {
   let indexHtml = fs.readFileSync(indexPath, 'utf8');
-  // Substitui <!-- VERSION --> ou <!-- VERSION:x.y.z --> pelo valor atual
-  const updated = indexHtml.replace(/<!--\s*VERSION(:[^-]*)?\s*-->/g, `<!-- VERSION:${version} -->v${version}`);
+  const updated = indexHtml.replace(
+    /<!--\s*VERSION(?::[^-]*)?\s*-->(?:v\d+\.\d+\.\d+)*/g,
+    `<!-- VERSION:${version} -->v${version}`
+  );
   if (updated !== indexHtml) {
     fs.writeFileSync(indexPath, updated);
     console.log(`✅ badge de versão v${version} atualizada em index.html`);
