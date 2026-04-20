@@ -1,6 +1,6 @@
 # Design System Core — conteúdo consolidado
 
-> Versão 0.5.1. Arquivo destinado a consumo por LLMs que precisem
+> Versão 0.5.2. Arquivo destinado a consumo por LLMs que precisem
 > do design system inteiro em uma requisição. Inclui README, CONTRIBUTING,
 > CLAUDE.md, CHANGELOG, todos os MDs em docs/, todos os ADRs e um resumo
 > dos tokens. Páginas HTML-only (componentes, foundations) estão referenciadas
@@ -293,6 +293,15 @@ Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na
 
 ## [Não publicado]
 
+## [0.5.2]
+
+### Alterado
+- ADR-005 marcada como Aceita — Implementada em 0.5.0. Implementação já havia acontecido via ADR-011; fechamento formal em 0.5.2.
+
+### Corrigido
+- `scripts/tokens-verify.mjs`: função `canonicalToCssVar` agora espelha exatamente o transform `name/strip-layer` de `build-tokens.mjs`. Remove os 65 falsos positivos (`foundation.typography.font.*` e `foundation.color.overlay.*`) que mascaravam a saúde real da cadeia Figma → JSON → CSS. `npm run verify:tokens` agora reporta 0 warnings, 0 erros.
+
+
 Consolidação da documentação como fonte única de verdade. Plano em seis fases executadas na branch `consolidation/docs-ground-truth`.
 
 ### Alterado
@@ -407,7 +416,7 @@ Consolidação da documentação como fonte única de verdade. Plano em seis fas
 | [ADR-002](decisions/ADR-002-stack-agnostica.md) | Stack agnóstica — HTML + CSS + vanilla JS como base | Aceita | 2026-04-14 |
 | [ADR-003](decisions/ADR-003-fontes-verdade.md) | Figma como autoridade de design, Git como autoridade de tokens/código | Aceita | 2026-04-14 |
 | [ADR-004](decisions/ADR-004-wcag.md) | WCAG 2.2 AA como padrão de acessibilidade | Aceita — Implementada em 0.5.0 | 2026-04-14 |
-| [ADR-005](decisions/ADR-005-brand-foundation-e-estados-explicitos.md) | Brand como camada foundation, estados explícitos no semantic, e limpeza tipográfica | Proposta | 2026-04-14 |
+| [ADR-005](decisions/ADR-005-brand-foundation-e-estados-explicitos.md) | Brand como camada foundation, estados explícitos no semantic, e limpeza tipográfica | Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.2) | 2026-04-14 |
 | [ADR-006](decisions/ADR-006-semantic-control-tokens.md) | Adopt semantic control tokens for shared dimensions and typography across interactive controls | Proposed | — |
 | [ADR-007](decisions/ADR-007-toned-color-system.md) | Establish toned color system with colored overlays and semantic toned tokens | Proposed | — |
 | [ADR-008](decisions/ADR-008-recalibracao-paletas-feedback.md) | Recalibração das paletas foundation `green` e `amber` | Aceita — Implementada em 0.5.0 | 2026-04-16 |
@@ -572,7 +581,7 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 
 > Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-20. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
-> Versão atual: **0.5.1**
+> Versão atual: **0.5.2**
 
 ## Status geral
 
@@ -632,7 +641,7 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 | ADR-002 | Stack agnóstica — HTML + CSS + vanilla JS como base | Aceita |
 | ADR-003 | Figma como autoridade de design, Git como autoridade de tokens/código | Aceita |
 | ADR-004 | WCAG 2.2 AA como padrão de acessibilidade | Aceita — Implementada em 0.5.0 |
-| ADR-005 | Brand como camada foundation, estados explícitos no semantic, e limpeza tipográfica | Proposta |
+| ADR-005 | Brand como camada foundation, estados explícitos no semantic, e limpeza tipográfica | Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.2) |
 | ADR-006 | Adopt semantic control tokens for shared dimensions and typography across interactive controls | Proposed |
 | ADR-007 | Establish toned color system with colored overlays and semantic toned tokens | Proposed |
 | ADR-008 | Recalibração das paletas foundation `green` e `amber` | Aceita — Implementada em 0.5.0 |
@@ -1058,13 +1067,13 @@ Se uma decisão arquitetural não está registrada como ADR, ela não foi tomada
 
 > Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-20. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
-> Versão atual: **0.5.1**
+> Versão atual: **0.5.2**
 
 ## Estado atual
 
 | Aspecto | Valor |
 |---------|-------|
-| Versão | 0.5.1 |
+| Versão | 0.5.2 |
 | Formato canônico | JSON (DTCG) em `tokens/` |
 | CSS gerado | Style Dictionary → `css/tokens/generated/` |
 | Pipeline | ✅ index.css importa apenas generated/ |
@@ -1150,7 +1159,7 @@ semantic.typography.*
 - **ADR-002** — Stack agnóstica — HTML + CSS + vanilla JS como base (Aceita)
 - **ADR-003** — Figma como autoridade de design, Git como autoridade de tokens/código (Aceita)
 - **ADR-004** — WCAG 2.2 AA como padrão de acessibilidade (Aceita — Implementada em 0.5.0)
-- **ADR-005** — Brand como camada foundation, estados explícitos no semantic, e limpeza tipográfica (Proposta)
+- **ADR-005** — Brand como camada foundation, estados explícitos no semantic, e limpeza tipográfica (Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.2))
 - **ADR-006** — Adopt semantic control tokens for shared dimensions and typography across interactive controls (Proposed)
 - **ADR-007** — Establish toned color system with colored overlays and semantic toned tokens (Proposed)
 - **ADR-008** — Recalibração das paletas foundation `green` e `amber` (Aceita — Implementada em 0.5.0)
@@ -1366,8 +1375,18 @@ WCAG 2.2 AA é o piso obrigatório. Regras operacionais:
 # ADR-005: Brand como camada foundation, estados explícitos no semantic, e limpeza tipográfica
 
 **Data:** 2026-04-14
-**Status:** Proposta
+**Status:** Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.2)
 **Atualiza:** ADR-001 (seção sobre camada Brand)
+
+## Implementação
+
+Os três pontos do ADR foram executados via ADR-011 e commits anteriores:
+
+1. **Brand como foundation:** `tokens/foundation/brand.json` existe com `foundation.brand.primary` → `{foundation.color.blue.600}` e `foundation.brand.secondary` → `{foundation.color.purple.600}`. `tokens/semantic/light.json` e `dark.json` referenciam `{foundation.brand.primary}` e `{foundation.brand.secondary}` nos tokens `.default` (light.json linha 88, dark.json linha 86).
+2. **Sufixo `-default` explícito:** nenhum CSS de componente em `css/components/*.css` usa os nomes antigos (`--ds-color-primary`, `--ds-color-secondary`, `--ds-feedback-success` sem sufixo, etc.). Todos consomem `--ds-*-default`.
+3. **`font.size.base` removido:** `tokens/foundation/typography.json` não contém mais a chave. Zero ocorrências de `--ds-font-size-base` em qualquer CSS do repo.
+
+Fechamento formal em 0.5.2: correção do `canonicalToCssVar` em `scripts/tokens-verify.mjs` (alinhamento com o transform `name/strip-layer` de `build-tokens.mjs`), zerando 65 falsos positivos que mascaravam a verificação.
 
 ## Pré-requisitos
 
@@ -2396,6 +2415,6 @@ Verificação automática de coerência Figma ↔ JSON ↔ CSS: `scripts/tokens-
 
 ═══════════════════════════════════════════════════════════
 
-Gerado por scripts/build-llms.mjs em 2026-04-20T23:43:03.176Z
-Versão: 0.5.1
+Gerado por scripts/build-llms.mjs em 2026-04-20T23:50:04.342Z
+Versão: 0.5.2
 Site: https://uxindesign.github.io/design-system-core/
