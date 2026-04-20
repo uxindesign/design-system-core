@@ -38,7 +38,9 @@ code, pre {
 }
 
 code {
-  background-color: var(--ds-background-subtle);
+  /* overlay translúcido em vez de fundo opaco: se adapta a qualquer
+     superfície (branca, colorida, escura), sempre gerando contraste. */
+  background-color: var(--ds-overlay-default);
   padding: var(--ds-spacing-0-5) var(--ds-spacing-1);
   border-radius: var(--ds-radius-sm);
   color: var(--ds-content-link-default);
