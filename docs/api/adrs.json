@@ -1,0 +1,106 @@
+{
+  "generatedAt": "2026-04-20T12:59:41.898Z",
+  "version": "0.5.1",
+  "count": 11,
+  "adrs": [
+    {
+      "id": "ADR-001",
+      "num": 1,
+      "title": "Migração da arquitetura de tokens para Foundation→Semantic→Component com DTCG + Style Dictionary",
+      "status": "Aceita",
+      "date": "2026-04-14",
+      "sourceFile": "docs/decisions/ADR-001-migracao-tokens.md",
+      "url": "https://uxindesign.github.io/design-system-core/docs/decisions/adr-001-migracao-tokens.html"
+    },
+    {
+      "id": "ADR-002",
+      "num": 2,
+      "title": "Stack agnóstica — HTML + CSS + vanilla JS como base",
+      "status": "Aceita",
+      "date": "2026-04-14",
+      "sourceFile": "docs/decisions/ADR-002-stack-agnostica.md",
+      "url": "https://uxindesign.github.io/design-system-core/docs/decisions/adr-002-stack-agnostica.html"
+    },
+    {
+      "id": "ADR-003",
+      "num": 3,
+      "title": "Figma como autoridade de design, Git como autoridade de tokens/código",
+      "status": "Aceita",
+      "date": "2026-04-14",
+      "sourceFile": "docs/decisions/ADR-003-fontes-verdade.md",
+      "url": "https://uxindesign.github.io/design-system-core/docs/decisions/adr-003-fontes-verdade.html"
+    },
+    {
+      "id": "ADR-004",
+      "num": 4,
+      "title": "WCAG 2.2 AA como padrão de acessibilidade",
+      "status": "Aceita — Implementada em 0.5.0",
+      "date": "2026-04-14",
+      "sourceFile": "docs/decisions/ADR-004-wcag.md",
+      "url": "https://uxindesign.github.io/design-system-core/docs/decisions/adr-004-wcag.html"
+    },
+    {
+      "id": "ADR-005",
+      "num": 5,
+      "title": "Brand como camada foundation, estados explícitos no semantic, e limpeza tipográfica",
+      "status": "Proposta",
+      "date": "2026-04-14",
+      "sourceFile": "docs/decisions/ADR-005-brand-foundation-e-estados-explicitos.md",
+      "url": "https://uxindesign.github.io/design-system-core/docs/decisions/adr-005-brand-foundation-e-estados-explicitos.html"
+    },
+    {
+      "id": "ADR-006",
+      "num": 6,
+      "title": "Adopt semantic control tokens for shared dimensions and typography across interactive controls",
+      "status": "Proposed",
+      "date": "2026-04-15",
+      "sourceFile": "docs/decisions/ADR-006-semantic-control-tokens.md",
+      "url": "https://uxindesign.github.io/design-system-core/docs/decisions/adr-006-semantic-control-tokens.html"
+    },
+    {
+      "id": "ADR-007",
+      "num": 7,
+      "title": "Establish toned color system with colored overlays and semantic toned tokens",
+      "status": "Proposed",
+      "date": "2026-04-15",
+      "sourceFile": "docs/decisions/ADR-007-toned-color-system.md",
+      "url": "https://uxindesign.github.io/design-system-core/docs/decisions/adr-007-toned-color-system.html"
+    },
+    {
+      "id": "ADR-008",
+      "num": 8,
+      "title": "Recalibração das paletas foundation `green` e `amber`",
+      "status": "Aceita — Implementada em 0.5.0",
+      "date": "2026-04-16",
+      "sourceFile": "docs/decisions/ADR-008-recalibracao-paletas-feedback.md",
+      "url": "https://uxindesign.github.io/design-system-core/docs/decisions/adr-008-recalibracao-paletas-feedback.html"
+    },
+    {
+      "id": "ADR-009",
+      "num": 9,
+      "title": "Separação de `border.default` (decorativa) e `border.control` (funcional)",
+      "status": "Aceita — Implementada em 0.5.0",
+      "date": "2026-04-16",
+      "sourceFile": "docs/decisions/ADR-009-border-control-vs-decorative.md",
+      "url": "https://uxindesign.github.io/design-system-core/docs/decisions/adr-009-border-control-vs-decorative.html"
+    },
+    {
+      "id": "ADR-010",
+      "num": 10,
+      "title": "Remoção de `foundation.color.white` e `foundation.color.black` puros",
+      "status": "Aceita — Implementada em 0.5.0",
+      "date": "2026-04-16",
+      "sourceFile": "docs/decisions/ADR-010-abolir-white-black-puros.md",
+      "url": "https://uxindesign.github.io/design-system-core/docs/decisions/adr-010-abolir-white-black-puros.html"
+    },
+    {
+      "id": "ADR-011",
+      "num": 11,
+      "title": "Reestruturação do naming de tokens semânticos de cor",
+      "status": "Aceita — Implementada em 0.5.0",
+      "date": "2026-04-17",
+      "sourceFile": "docs/decisions/ADR-011-renaming-tokens-semanticos-de-cor.md",
+      "url": "https://uxindesign.github.io/design-system-core/docs/decisions/adr-011-renaming-tokens-semanticos-de-cor.html"
+    }
+  ]
+}

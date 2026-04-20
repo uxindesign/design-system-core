@@ -1,7 +1,12 @@
 # ADR-004: WCAG 2.2 AA como padrão de acessibilidade
 
 **Data:** 2026-04-14
-**Status:** Aceita — `prefers-reduced-motion` pendente de implementação no CSS
+**Status:** Aceita — Implementada em 0.5.0
+
+## Implementação
+
+- `prefers-reduced-motion` adicionado a todos os componentes com transitions em `ecc45a7` (`feat(a11y): add prefers-reduced-motion to all components with transitions (ADR-004)`).
+- Focus rings granulares e migração dos componentes remanescentes em `4a574ed`, `a1d295f`, `384cdf6`, `82b40f4` (todos 0.5.0).
 
 ## Contexto
 
@@ -41,10 +46,6 @@ WCAG 2.2 AA é o piso obrigatório. Regras operacionais:
 - Todo novo token de cor precisa ter contraste verificado antes de commit
 - Todo componente precisa de seção de acessibilidade na documentação Figma
 - CSS de componentes precisa incluir :focus-visible e prefers-reduced-motion
-
-## Pendências
-
-- [ ] `prefers-reduced-motion` ainda não implementado nos CSS de componentes com transitions (Spinner, Button, Toggle, etc.)
 
 ## Alternativas consideradas
 

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Backlog — Design System</title>
+  <link rel="stylesheet" href="../css/design-system.css">
+  <link rel="stylesheet" href="../docs/layout.css">
+  <style>
+    .ds-md-content h1, .ds-md-content h2, .ds-md-content h3 { margin-top: var(--ds-spacing-8); margin-bottom: var(--ds-spacing-3); color: var(--ds-content-default); }
+    .ds-md-content h1 { font-size: var(--ds-font-size-2xl); font-weight: var(--ds-font-weight-semibold); margin-top: 0; }
+    .ds-md-content h2 { font-size: var(--ds-font-size-xl); font-weight: var(--ds-font-weight-semibold); border-top: var(--ds-border-width-1) solid var(--ds-border-subtle); padding-top: var(--ds-spacing-6); }
+    .ds-md-content h3 { font-size: var(--ds-font-size-lg); font-weight: var(--ds-font-weight-semibold); }
+    .ds-md-content p { color: var(--ds-content-secondary); line-height: var(--ds-line-height-relaxed); margin: var(--ds-spacing-3) 0; }
+    .ds-md-content ul, .ds-md-content ol { color: var(--ds-content-secondary); line-height: var(--ds-line-height-relaxed); padding-left: var(--ds-spacing-6); margin: var(--ds-spacing-3) 0; }
+    .ds-md-content li { margin: var(--ds-spacing-1) 0; }
+    .ds-md-content code { font-family: var(--ds-font-family-mono); font-size: 0.9em; background: var(--ds-background-subtle); padding: 1px var(--ds-spacing-1); border-radius: var(--ds-radius-sm); }
+    .ds-md-content pre { background: var(--ds-background-subtle); padding: var(--ds-spacing-4); border-radius: var(--ds-radius-md); overflow-x: auto; font-size: var(--ds-font-size-sm); margin: var(--ds-spacing-4) 0; }
+    .ds-md-content pre code { background: none; padding: 0; }
+    .ds-md-content table { width: 100%; border-collapse: collapse; margin: var(--ds-spacing-4) 0; font-size: var(--ds-font-size-sm); }
+    .ds-md-content table th, .ds-md-content table td { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-1) solid var(--ds-border-default); }
+    .ds-md-content table th { font-weight: var(--ds-font-weight-semibold); background: var(--ds-background-subtle); }
+    .ds-md-content a { color: var(--ds-content-link-default); }
+    .ds-md-content a:hover { color: var(--ds-content-link-hover); }
+    .ds-md-content blockquote { border-left: 3px solid var(--ds-border-default); margin: var(--ds-spacing-4) 0; padding: var(--ds-spacing-2) var(--ds-spacing-4); color: var(--ds-content-tertiary); font-style: italic; }
+    .ds-md-content hr { border: none; border-top: var(--ds-border-width-1) solid var(--ds-border-subtle); margin: var(--ds-spacing-8) 0; }
+    .ds-md-content strong { color: var(--ds-content-default); }
+    .ds-md-generated-banner { background: var(--ds-feedback-info-background); color: var(--ds-feedback-info-content-default); padding: var(--ds-spacing-3) var(--ds-spacing-5); border-radius: var(--ds-radius-md); margin-bottom: var(--ds-spacing-6); font-size: var(--ds-font-size-sm); }
+  </style>
+  <script>
+    (function(){var l=localStorage.getItem('ds-lang');if(l)document.documentElement.setAttribute('lang',l)})();
+  </script>
+</head>
+<body>
+
+<header class="ds-site-header">
+  <div style="display:flex;align-items:center;gap:var(--ds-spacing-4)">
+    <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <a href="../index.html" class="ds-site-header__brand">
+      <div class="ds-site-header__logo">DS</div>
+      <span class="ds-site-header__title">Design System</span>
+    </a>
+  </div>
+  <div class="ds-site-header__actions">
+    <select class="ds-theme-switcher__select" id="lang-switcher" aria-label="Language">
+      <option value="pt">PT</option>
+      <option value="en">EN</option>
+    </select>
+    <select class="ds-theme-switcher__select" id="theme-switcher">
+      <option value="default">Default (Blue)</option>
+      <option value="ocean">Ocean (Cyan)</option>
+      <option value="forest">Forest (Emerald)</option>
+    </select>
+    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg> Dark</button>
+  </div>
+</header>
+<div class="ds-sidebar-overlay" id="sidebar-overlay"></div>
+<nav class="ds-sidebar" id="sidebar" aria-label="Main navigation"></nav>
+
+<main class="ds-main">
+  <div class="ds-section">
+    <h1 class="ds-section__title">Backlog</h1>
+    <p class="ds-section__subtitle">Itens fora do escopo imediato mas que devem ser implementados.</p>
+  </div>
+
+  <div class="ds-md-generated-banner">
+    Este arquivo é gerado automaticamente por <code>scripts/sync-docs.mjs</code>. Editar a fonte original, não este HTML.
+  </div>
+
+  <div class="ds-md-content">
+<p>Itens fora do escopo imediato mas que devem ser implementados. Organizados por prioridade.</p>
+<h2>Alta prioridade</h2>
+<h3>Implementar ADR-005 — Brand como foundation, <code>-default</code> explícito, limpeza tipográfica</h3>
+<p>Decisão proposta desde 2026-04-14. Pré-requisito para ADR-006 e ADR-007 saírem do estado Proposta. Ver <a href="./decisions/ADR-005-brand-foundation-e-estados-explicitos.md">ADR-005</a> para pré-requisitos, estimativa e passos concretos.</p>
+<h3>Implementar ADR-006 — Semantic control tokens compartilhados</h3>
+<p>Normalizar dimensões de Button, Input, Select e Textarea via tokens semânticos compartilhados. Depende de ADR-005. Ver <a href="./decisions/ADR-006-semantic-control-tokens.md">ADR-006</a>.</p>
+<h3>Implementar ADR-007 — Toned color system</h3>
+<p>Fechar formalmente o padrão de overlays coloridos. O código já tem a maior parte implementada. Ver <a href="./decisions/ADR-007-toned-color-system.md">ADR-007</a>.</p>
+<h3>Preencher <code>docs/brand-principles.md</code></h3>
+<p>Template existe, conteúdo real ainda não foi definido. Passa por: missão, 3 princípios de design, tom de voz, identidade visual, logo.</p>
+<h2>Média prioridade</h2>
+<h3>Comparação completa Figma ↔ JSON no <code>scripts/tokens-verify.mjs</code></h3>
+<p>Primeira versão do script confirma conectividade e coleta contagens. Próxima iteração: comparação nome-por-nome, valor-por-valor, modo-por-modo, com resolução de alias Figma e normalização de formato. Adiciona valor depois que o FIGMA_PAT está configurado como secret do CI.</p>
+<h3>Padronizar idioma dos ADR-006 e ADR-007</h3>
+<p>Estão em inglês, destoando dos outros nove que estão em português. Traduzir mantendo a estrutura.</p>
+<h3>Sincronização automatizada Figma ↔ site (Fase 7 do plano)</h3>
+<p>Script Node usando MCP remoto que sincroniza textos de documentação entre site e nodes do Figma marcados com convenção <code>&lt;sync:...&gt;</code>. Ver descrição completa em <code>docs/process-figma-sync.html</code> (a ser criado).</p>
+<h2>Baixa prioridade</h2>
+<h3>Storybook</h3>
+<p>Componente inventory marca como pendente. Hoje o site cumpre o papel de vitrine interativa. Só implementar se houver demanda explícita de time Dev consumidor.</p>
+<h3>MCP próprio do design system</h3>
+<p>Expõe tokens, componentes e guidelines via MCP para agentes. <code>llms.txt</code> + APIs JSON cobrem a maior parte dos casos. Implementar só se aparecer um caso onde MCP próprio faz diferença real.</p>
+<h3>Publicação no npm</h3>
+<p>Pacote nunca foi publicado. Decidir quando (e com qual nome de escopo) fazer o primeiro publish. Antes de publicar, validar que <code>files</code> no <code>package.json</code> cobre o que deve ser distribuído.</p>
+<h3>Revisão das páginas do Figma em estado de teste</h3>
+<p>Você mencionou que páginas vazias (Icons, Grids, Images, Templates) e resíduos nas páginas de componente (SECTION e <code>image 1</code> em Input Text, INSTANCE soltas em Button, <code>Frame 1</code> em Textarea) estão em uso para experimentos. Quando terminar os testes, decidir se preenche ou remove.</p>
+<h3>Contraste dos 65 warnings de <code>tokens-verify</code></h3>
+<p>Tokens em JSON sem CSS custom property equivalente — sobretudo overlays (<code>foundation.color.overlay.*</code>), tipografia e <code>semantic.typography.control.*</code>. Investigar caso a caso se deveriam gerar CSS var ou se a omissão é intencional (tokens intermediários).</p>
+
+  </div>
+</main>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

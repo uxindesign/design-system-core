@@ -4,6 +4,25 @@
 **Status:** Proposta
 **Atualiza:** ADR-001 (seção sobre camada Brand)
 
+## Pré-requisitos
+
+- Verificação Figma ↔ JSON em CI estável (ADR-003, introduzida em 0.5.1). Sem isso, a migração de brand para foundation pode gerar divergências silenciosas entre Figma e código.
+
+## Estimativa de esforço
+
+6 horas. Distribuídas em: 2h edição de JSONs (criar `tokens/foundation/brand.json`, ajustar referências em light/dark), 1h build e ajuste do Style Dictionary, 2h rename das CSS custom properties nos 18 componentes via script (`--ds-color-primary` → `--ds-color-primary-default` etc.), 1h atualização da coleção Brand no Figma e validação visual.
+
+## Passos concretos para sair do estado Proposta
+
+1. Criar `tokens/foundation/brand.json` com `foundation.brand.primary` e `foundation.brand.secondary` resolvendo para os valores de cada tema.
+2. Ajustar `tokens/semantic/light.json` e `dark.json`: `semantic.brand.default` e `semantic.accent.default` passam a referenciar `{foundation.brand.primary}` e `{foundation.brand.secondary}`.
+3. Remover `foundation.typography.font.size.base` de `tokens/foundation/typography.json`; substituir 7 referências CSS por `--ds-font-size-md`.
+4. Executar `npm run build:tokens` e conferir que o CSS gerado inclui todas as novas variáveis `-default`.
+5. Rodar find-and-replace em `css/components/**/*.css` para renomear as variáveis listadas na decisão.
+6. Atualizar a coleção Brand no Figma (via `use_figma`) para refletir a nova estrutura.
+7. Rodar `npm run verify:tokens` para garantir que Figma e JSON batem.
+8. Documentar no CHANGELOG como breaking change. Bump minor (0.x.y → 0.x+1.0).
+
 ## Contexto
 
 A revisão dos tokens JSON gerados na migração DTCG (ADR-001) revelou três problemas estruturais:

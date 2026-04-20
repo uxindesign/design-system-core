@@ -1,74 +1,39 @@
 # Design System Core
 
-White-label CSS design system with semantic tokens, 18 components, and light/dark mode support across 3 themes.
+[![Versão](https://img.shields.io/badge/vers%C3%A3o-0.5.1-blue)](./CHANGELOG.md) [![Licença](https://img.shields.io/badge/licen%C3%A7a-MIT-green)](./LICENSE) [![Documentação](https://img.shields.io/badge/docs-online-brightgreen)](https://uxindesign.github.io/design-system-core/)
 
-## Quick Start
+Design system white-label em CSS puro, com tokens semânticos em DTCG, 18 componentes, modos light/dark e três temas de marca (Default, Ocean, Forest). Enquanto o projeto não tiver um release oficial 1.0, ele fica na faixa 0.x.
 
-```html
-<link rel="stylesheet" href="css/design-system.css">
-```
-
-### Dark Mode
+## Instalação
 
 ```html
-<html data-mode="dark">
+<link rel="stylesheet" href="https://cdn.example.com/design-system-core@0.5.1/css/design-system.css">
 ```
 
-### Themes
+Uso local:
 
-```html
-<html data-theme="ocean">   <!-- Cyan + Indigo -->
-<html data-theme="forest">  <!-- Emerald + Amber -->
-<!-- default: Blue + Purple -->
+```bash
+git clone git@github.com:uxindesign/design-system-core.git
+cd design-system-core
+npm install
+npm run build:tokens
 ```
 
-## Tokens
+Depois serve o diretório estático (`python3 -m http.server` ou equivalente).
 
-- **178 foundation variables** — colors (10 palettes), typography (Inter + DM Mono), spacing, radius, stroke, opacity
-- **94 semantic variables** — with Light and Dark mode values
-- **3 themes** — Default (Blue/Purple), Ocean (Cyan/Indigo), Forest (Emerald/Amber)
-- All themes support both light and dark mode
+## Documentação completa
 
-## Components (18)
+Toda a documentação vive em **[uxindesign.github.io/design-system-core](https://uxindesign.github.io/design-system-core/)**. Lá estão: 18 componentes com preview ao vivo, 10 foundations, guias de tema e acessibilidade, 11 ADRs navegáveis, inventário de tokens, e consumo por IA em `/docs/llms.txt`.
 
-| Component | CSS Class | Variants |
-|-----------|-----------|----------|
-| Button | `.ds-btn` | 5 styles × 3 sizes (32/40/48) × states |
-| Input | `.ds-input` | 3 sizes (32/40/48) × states |
-| Textarea | `.ds-textarea` | 3 sizes × states |
-| Select | `.ds-select` | 3 sizes (32/40/48) × states |
-| Checkbox | `.ds-checkbox` | 3 sizes × 3 checked × states |
-| Radio | `.ds-radio` | 3 sizes × states |
-| Toggle | `.ds-toggle` | 3 sizes × states |
-| Badge | `.ds-badge` | 7 colors × 2 styles |
-| Alert | `.ds-alert` | 4 types × 2 styles |
-| Card | `.ds-card` | default / outlined / elevated |
-| Modal | `.ds-modal` | 3 sizes |
-| Tooltip | `.ds-tooltip` | 4 positions |
-| Tabs | `.ds-tabs` | active / disabled |
-| Breadcrumb | `.ds-breadcrumb` | current / link |
-| Avatar | `.ds-avatar` | 3 sizes |
-| Divider | `.ds-divider` | horizontal / vertical |
-| Spinner | `.ds-spinner` | 3 sizes |
-| Skeleton | `.ds-skeleton` | text / circle / rect |
+Links rápidos:
 
-## File Structure
+- [Getting Started](https://uxindesign.github.io/design-system-core/index.html)
+- [Token Architecture](https://uxindesign.github.io/design-system-core/docs/token-architecture.html)
+- [Component Inventory](./docs/component-inventory.md)
+- [Decisões (ADRs)](./docs/decisions/)
+- [Changelog](./CHANGELOG.md)
+- [Como contribuir](./CONTRIBUTING.md)
 
-```
-css/
-├── tokens/         # Foundation + semantic theme tokens
-│   └── themes/     # Ocean + Forest theme overrides
-├── base/           # Reset (Inter + DM Mono) + typography (24 styles)
-├── components/     # 18 component files
-├── utilities/      # Elevation + layout helpers
-└── design-system.css  # Entry point
-docs/               # HTML documentation with live examples
-```
+## Licença
 
-## Figma
-
-Design source: Figma file `PRYS2kL7VdC1MtVWfZvuDN` — 18 components, 271+ variables with CSS token coverage aligned to Figma specs.
-
-## License
-
-MIT
+MIT. Ver [LICENSE](./LICENSE).

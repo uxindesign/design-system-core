@@ -1,7 +1,14 @@
 # ADR-010: Remoção de `foundation.color.white` e `foundation.color.black` puros
 
 **Data:** 2026-04-16
-**Status:** Aceita — arquivo CSS legado pendente
+**Status:** Aceita — Implementada em 0.5.0
+
+## Implementação
+
+- `foundation.color.white` e `foundation.color.black` removidos de `tokens/foundation/colors.json` em `f9f7609` (`fix(tokens): migrate theme overrides and foundation to ADR-011 naming; remove white/black (ADR-010)`).
+- `neutral.950` suavizado para `#070C17` no mesmo commit.
+- Bindings semânticos que apontavam para `{foundation.color.white}` migrados para `{foundation.color.neutral.50}`.
+- Arquivos CSS legados removidos em `07cc24d` (`chore(tokens): remove orphaned CSS files (ADR-010 closes)`).
 
 ## Contexto
 
@@ -74,10 +81,6 @@ Todas as combinações continuam passando WCAG 1.4.3 AA (4.5:1) ou estão no lim
 `text.on-brand` e `*.foreground` que apontam para `neutral.900` permanecem como estão (já não usavam white em dark mode).
 
 `background.default`, `surface.default`, `surface.raised` apontam para `neutral.950` ou `neutral.900` (já não usavam black). Apenas o valor de `neutral.950` muda automaticamente para a nova versão suavizada.
-
-## Pendências
-
-- [ ] `css/tokens/theme-light.css` (arquivo legado fora de `generated/`) ainda referencia `--ds-color-white`. Verificar se `design-system.css` importa esse arquivo. Se sim, substituir pelo gerado e remover o legado.
 
 ## Consequências
 

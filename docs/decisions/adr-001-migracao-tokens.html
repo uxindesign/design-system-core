@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADR-001 — Migração da arquitetura de tokens para Foundation→Semantic→Component com DTCG + Style Dictionary — Design System</title>
+  <link rel="stylesheet" href="../../css/design-system.css">
+  <link rel="stylesheet" href="../../docs/layout.css">
+  <style>
+    .ds-md-content h1, .ds-md-content h2, .ds-md-content h3 { margin-top: var(--ds-spacing-8); margin-bottom: var(--ds-spacing-3); color: var(--ds-content-default); }
+    .ds-md-content h1 { font-size: var(--ds-font-size-2xl); font-weight: var(--ds-font-weight-semibold); margin-top: 0; }
+    .ds-md-content h2 { font-size: var(--ds-font-size-xl); font-weight: var(--ds-font-weight-semibold); border-top: var(--ds-border-width-1) solid var(--ds-border-subtle); padding-top: var(--ds-spacing-6); }
+    .ds-md-content h3 { font-size: var(--ds-font-size-lg); font-weight: var(--ds-font-weight-semibold); }
+    .ds-md-content p { color: var(--ds-content-secondary); line-height: var(--ds-line-height-relaxed); margin: var(--ds-spacing-3) 0; }
+    .ds-md-content ul, .ds-md-content ol { color: var(--ds-content-secondary); line-height: var(--ds-line-height-relaxed); padding-left: var(--ds-spacing-6); margin: var(--ds-spacing-3) 0; }
+    .ds-md-content li { margin: var(--ds-spacing-1) 0; }
+    .ds-md-content code { font-family: var(--ds-font-family-mono); font-size: 0.9em; background: var(--ds-background-subtle); padding: 1px var(--ds-spacing-1); border-radius: var(--ds-radius-sm); }
+    .ds-md-content pre { background: var(--ds-background-subtle); padding: var(--ds-spacing-4); border-radius: var(--ds-radius-md); overflow-x: auto; font-size: var(--ds-font-size-sm); margin: var(--ds-spacing-4) 0; }
+    .ds-md-content pre code { background: none; padding: 0; }
+    .ds-md-content table { width: 100%; border-collapse: collapse; margin: var(--ds-spacing-4) 0; font-size: var(--ds-font-size-sm); }
+    .ds-md-content table th, .ds-md-content table td { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-1) solid var(--ds-border-default); }
+    .ds-md-content table th { font-weight: var(--ds-font-weight-semibold); background: var(--ds-background-subtle); }
+    .ds-md-content a { color: var(--ds-content-link-default); }
+    .ds-md-content a:hover { color: var(--ds-content-link-hover); }
+    .ds-md-content blockquote { border-left: 3px solid var(--ds-border-default); margin: var(--ds-spacing-4) 0; padding: var(--ds-spacing-2) var(--ds-spacing-4); color: var(--ds-content-tertiary); font-style: italic; }
+    .ds-md-content hr { border: none; border-top: var(--ds-border-width-1) solid var(--ds-border-subtle); margin: var(--ds-spacing-8) 0; }
+    .ds-md-content strong { color: var(--ds-content-default); }
+    .ds-md-generated-banner { background: var(--ds-feedback-info-background); color: var(--ds-feedback-info-content-default); padding: var(--ds-spacing-3) var(--ds-spacing-5); border-radius: var(--ds-radius-md); margin-bottom: var(--ds-spacing-6); font-size: var(--ds-font-size-sm); }
+  </style>
+  <script>
+    (function(){var l=localStorage.getItem('ds-lang');if(l)document.documentElement.setAttribute('lang',l)})();
+  </script>
+</head>
+<body>
+
+<header class="ds-site-header">
+  <div style="display:flex;align-items:center;gap:var(--ds-spacing-4)">
+    <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <a href="../../index.html" class="ds-site-header__brand">
+      <div class="ds-site-header__logo">DS</div>
+      <span class="ds-site-header__title">Design System</span>
+    </a>
+  </div>
+  <div class="ds-site-header__actions">
+    <select class="ds-theme-switcher__select" id="lang-switcher" aria-label="Language">
+      <option value="pt">PT</option>
+      <option value="en">EN</option>
+    </select>
+    <select class="ds-theme-switcher__select" id="theme-switcher">
+      <option value="default">Default (Blue)</option>
+      <option value="ocean">Ocean (Cyan)</option>
+      <option value="forest">Forest (Emerald)</option>
+    </select>
+    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg> Dark</button>
+  </div>
+</header>
+<div class="ds-sidebar-overlay" id="sidebar-overlay"></div>
+<nav class="ds-sidebar" id="sidebar" aria-label="Main navigation"></nav>
+
+<main class="ds-main">
+  <div class="ds-section">
+    <h1 class="ds-section__title">ADR-001 — Migração da arquitetura de tokens para Foundation→Semantic→Component com DTCG + Style Dictionary</h1>
+    <p class="ds-section__subtitle">Status: <strong>Aceita</strong> · Data: 2026-04-14</p>
+  </div>
+
+  <div class="ds-md-generated-banner">
+    Este arquivo é gerado automaticamente por <code>scripts/sync-docs.mjs</code>. Editar a fonte original, não este HTML.
+  </div>
+
+  <div class="ds-md-content">
+<p><strong>Data:</strong> 2026-04-14
+<strong>Status:</strong> Aceita</p>
+<h2>Contexto</h2>
+<p>O DS foi construído com uma arquitetura Foundation→Brand→Theme onde:</p>
+<ul>
+<li>Foundation: 192 variáveis primitivas (cores, tipografia, spacing, radius, shadows, opacity)</li>
+<li>Brand: 13 variáveis como ponte entre 3 temas de marca (Default/Blue+Purple, Ocean/Cyan+Indigo, Forest/Emerald+Amber)</li>
+<li>Theme: 94 variáveis semânticas com modos Light e Dark</li>
+</ul>
+<p>Os tokens eram definidos manualmente em arquivos CSS (foundation.css, theme-light.css, theme-dark.css, themes/). A camada Brand servia para testar diferentes combinações de cor, mas o DS será utilizado como marca única.</p>
+<p>Problemas identificados:</p>
+<ol>
+<li>A camada Brand perde propósito sem multi-marca</li>
+<li>Não existe camada de tokens por componente — componentes consomem tokens semânticos diretamente sem abstração</li>
+<li>Tokens em CSS manual não são portáveis para outras plataformas (iOS, Android, etc.)</li>
+<li>Não há build pipeline — alterações exigem edição manual em CSS e sincronização manual com Figma Variables</li>
+</ol>
+<h2>Decisão</h2>
+<p>Migrar para arquitetura Foundation→Semantic→Component com tokens definidos em JSON (formato DTCG) e transformados via Style Dictionary.</p>
+<p><strong>Foundation</strong> (primitivos): valores brutos sem opinião semântica. Cores com escala 50-950 (11 stops), tipografia, spacing (escala 4px), radius, shadows, opacity. Equivalente direto da Foundation atual.</p>
+<p><strong>Semantic</strong> (intenção): absorve o papel da camada Theme atual + os 13 tokens de Brand. Define: surface, text, border, feedback, state, space, radius. Com modos Light e Dark. Referencia Foundation via aliases.</p>
+<p><strong>Component</strong> (aplicação): NOVA camada. Tokens específicos por componente (button.background.default, input.border.error). Referencia Semantic. Usado diretamente no código e vinculado no Figma.</p>
+<p><strong>Formato canônico:</strong> JSON com spec DTCG ($value, $type, $description). Transformado pelo Style Dictionary + @tokens-studio/sd-transforms em CSS custom properties (--ds-*).</p>
+<p><strong>Comunicação com Figma:</strong> os JSONs de token são a fonte canônica. Figma Variables são mantidas em sync via scripts ou use_figma, preservando a mesma hierarquia (Foundation collection, Semantic collection, Component collection) e mapeamento de nomes (JSON dot-notation → Figma slash-separated).</p>
+<h2>Consequências</h2>
+<ul>
+<li>CSS custom properties passam a ser GERADAS, não escritas à mão</li>
+<li>O diretório <code>css/tokens/</code> passa a ser output do Style Dictionary, não editado diretamente</li>
+<li>A pasta <code>tokens/</code> na raiz do repo é a nova fonte canônica (JSONs)</li>
+<li>A coleção &quot;Brand&quot; no Figma pode ser removida ou renomeada para &quot;Semantic&quot;</li>
+<li>Os 3 temas (Default, Ocean, Forest) deixam de ser funcionalidade core — podem ser mantidos como exemplos em <code>tokens/examples/</code></li>
+<li>Figma Variables precisam ser reestruturadas em 3 coleções: Foundation, Semantic, Component</li>
+<li>Todos os 18 componentes CSS precisam ser auditados para garantir que consomem tokens semânticos (não primitivos)</li>
+<li>O arquivo <code>package.json</code> precisa de scripts de build para Style Dictionary</li>
+</ul>
+<h2>Alternativas consideradas</h2>
+<p><strong>Manter CSS manual:</strong> Descartada porque não escala para multi-plataforma e exige sincronização manual com Figma.</p>
+<p><strong>Tokens Studio plugin:</strong> Avaliado como intermediário Figma↔Git. Descartado por enquanto porque adiciona dependência de plugin e complexidade para uma equipe de uma pessoa. O use_figma via Claude Code faz o sync de forma mais controlada. Pode ser reconsiderado quando houver mais designers na equipe.</p>
+<p><strong>Cobalt UI (alternativa ao Style Dictionary):</strong> Mais moderno, melhor suporte a DTCG nativo. Descartado por ser menos maduro e ter menos documentação/comunidade. Pode ser reconsiderado no futuro.</p>
+
+  </div>
+</main>
+
+<script src="../../js/main.js"></script>
+</body>
+</html>

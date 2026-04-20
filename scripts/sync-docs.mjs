@@ -13,6 +13,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { marked } from 'marked';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
@@ -288,5 +289,177 @@ ${adrs.map(a => `| [ADR-${a.num}](decisions/${a.file}) | ${a.title} | ${a.status
 
 fs.writeFileSync(path.join(OUTPUT_DIR, 'adr-index.md'), adrIndex);
 console.log(`✅ adr-index.md (${adrs.length} ADRs)`);
+
+// ─── Geração de HTML a partir de MDs ─────────────────────────────────────────
+
+function slugFromAdrFilename(filename) {
+  // ADR-004-wcag.md → adr-004-wcag
+  return filename.replace(/\.md$/, '').toLowerCase();
+}
+
+function wrapPage({ title, subtitle, content, base, skipSubtitle }) {
+  const basePath = base || '../';
+  const subtitleHtml = skipSubtitle
+    ? ''
+    : `<p class="ds-section__subtitle">${subtitle}</p>`;
+  return `<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${title} — Design System</title>
+  <link rel="stylesheet" href="${basePath}css/design-system.css">
+  <link rel="stylesheet" href="${basePath}docs/layout.css">
+  <style>
+    .ds-md-content h1, .ds-md-content h2, .ds-md-content h3 { margin-top: var(--ds-spacing-8); margin-bottom: var(--ds-spacing-3); color: var(--ds-content-default); }
+    .ds-md-content h1 { font-size: var(--ds-font-size-2xl); font-weight: var(--ds-font-weight-semibold); margin-top: 0; }
+    .ds-md-content h2 { font-size: var(--ds-font-size-xl); font-weight: var(--ds-font-weight-semibold); border-top: var(--ds-border-width-1) solid var(--ds-border-subtle); padding-top: var(--ds-spacing-6); }
+    .ds-md-content h3 { font-size: var(--ds-font-size-lg); font-weight: var(--ds-font-weight-semibold); }
+    .ds-md-content p { color: var(--ds-content-secondary); line-height: var(--ds-line-height-relaxed); margin: var(--ds-spacing-3) 0; }
+    .ds-md-content ul, .ds-md-content ol { color: var(--ds-content-secondary); line-height: var(--ds-line-height-relaxed); padding-left: var(--ds-spacing-6); margin: var(--ds-spacing-3) 0; }
+    .ds-md-content li { margin: var(--ds-spacing-1) 0; }
+    .ds-md-content code { font-family: var(--ds-font-family-mono); font-size: 0.9em; background: var(--ds-background-subtle); padding: 1px var(--ds-spacing-1); border-radius: var(--ds-radius-sm); }
+    .ds-md-content pre { background: var(--ds-background-subtle); padding: var(--ds-spacing-4); border-radius: var(--ds-radius-md); overflow-x: auto; font-size: var(--ds-font-size-sm); margin: var(--ds-spacing-4) 0; }
+    .ds-md-content pre code { background: none; padding: 0; }
+    .ds-md-content table { width: 100%; border-collapse: collapse; margin: var(--ds-spacing-4) 0; font-size: var(--ds-font-size-sm); }
+    .ds-md-content table th, .ds-md-content table td { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-1) solid var(--ds-border-default); }
+    .ds-md-content table th { font-weight: var(--ds-font-weight-semibold); background: var(--ds-background-subtle); }
+    .ds-md-content a { color: var(--ds-content-link-default); }
+    .ds-md-content a:hover { color: var(--ds-content-link-hover); }
+    .ds-md-content blockquote { border-left: 3px solid var(--ds-border-default); margin: var(--ds-spacing-4) 0; padding: var(--ds-spacing-2) var(--ds-spacing-4); color: var(--ds-content-tertiary); font-style: italic; }
+    .ds-md-content hr { border: none; border-top: var(--ds-border-width-1) solid var(--ds-border-subtle); margin: var(--ds-spacing-8) 0; }
+    .ds-md-content strong { color: var(--ds-content-default); }
+    .ds-md-generated-banner { background: var(--ds-feedback-info-background); color: var(--ds-feedback-info-content-default); padding: var(--ds-spacing-3) var(--ds-spacing-5); border-radius: var(--ds-radius-md); margin-bottom: var(--ds-spacing-6); font-size: var(--ds-font-size-sm); }
+  </style>
+  <script>
+    (function(){var l=localStorage.getItem('ds-lang');if(l)document.documentElement.setAttribute('lang',l)})();
+  </script>
+</head>
+<body>
+
+<header class="ds-site-header">
+  <div style="display:flex;align-items:center;gap:var(--ds-spacing-4)">
+    <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <a href="${basePath}index.html" class="ds-site-header__brand">
+      <div class="ds-site-header__logo">DS</div>
+      <span class="ds-site-header__title">Design System</span>
+    </a>
+  </div>
+  <div class="ds-site-header__actions">
+    <select class="ds-theme-switcher__select" id="lang-switcher" aria-label="Language">
+      <option value="pt">PT</option>
+      <option value="en">EN</option>
+    </select>
+    <select class="ds-theme-switcher__select" id="theme-switcher">
+      <option value="default">Default (Blue)</option>
+      <option value="ocean">Ocean (Cyan)</option>
+      <option value="forest">Forest (Emerald)</option>
+    </select>
+    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg> Dark</button>
+  </div>
+</header>
+<div class="ds-sidebar-overlay" id="sidebar-overlay"></div>
+<nav class="ds-sidebar" id="sidebar" aria-label="Main navigation"></nav>
+
+<main class="ds-main">
+  <div class="ds-section">
+    <h1 class="ds-section__title">${title}</h1>
+    ${subtitleHtml}
+  </div>
+
+  <div class="ds-md-generated-banner">
+    Este arquivo é gerado automaticamente por <code>scripts/sync-docs.mjs</code>. Editar a fonte original, não este HTML.
+  </div>
+
+  <div class="ds-md-content">
+${content}
+  </div>
+</main>
+
+<script src="${basePath}js/main.js"></script>
+</body>
+</html>
+`;
+}
+
+function renderMarkdownFile({ mdPath, outPath, title, subtitle, base }) {
+  if (!fs.existsSync(mdPath)) return false;
+  const md = fs.readFileSync(mdPath, 'utf8');
+  // Se o MD começa com `# Título`, removemos pra não duplicar com o título do layout
+  const withoutH1 = md.replace(/^#\s+.+\n+/, '');
+  const content = marked.parse(withoutH1);
+  const html = wrapPage({ title, subtitle, content, base });
+  fs.mkdirSync(path.dirname(outPath), { recursive: true });
+  fs.writeFileSync(outPath, html);
+  return true;
+}
+
+// 1. ADRs — cada arquivo MD vira um HTML em docs/decisions/
+let adrHtmlCount = 0;
+for (const adr of adrs) {
+  const mdPath = path.join(decisionsDir, adr.file);
+  const slug = slugFromAdrFilename(adr.file);
+  const outPath = path.join(decisionsDir, `${slug}.html`);
+  const ok = renderMarkdownFile({
+    mdPath,
+    outPath,
+    title: `ADR-${adr.num} — ${adr.title}`,
+    subtitle: `Status: <strong>${adr.status}</strong> · Data: ${adr.date}`,
+    base: '../../',
+  });
+  if (ok) adrHtmlCount++;
+}
+console.log(`✅ ${adrHtmlCount} ADRs renderizados em HTML`);
+
+// 2. Index dos ADRs em docs/decisions/index.html
+const adrIndexContent = `
+<p>${adrs.length} decisões registradas. HTMLs gerados automaticamente a partir dos <code>.md</code> correspondentes.</p>
+<table>
+<thead><tr><th>ADR</th><th>Título</th><th>Status</th><th>Data</th></tr></thead>
+<tbody>
+${adrs.map(a => {
+  const slug = slugFromAdrFilename(a.file);
+  return `<tr><td><a href="${slug}.html">ADR-${a.num}</a></td><td>${a.title}</td><td>${a.status}</td><td>${a.date}</td></tr>`;
+}).join('\n')}
+</tbody>
+</table>
+`;
+fs.writeFileSync(
+  path.join(decisionsDir, 'index.html'),
+  wrapPage({ title: 'Decisões arquiteturais', subtitle: 'ADRs (Architecture Decision Records) do design system.', content: adrIndexContent, base: '../../' })
+);
+console.log(`✅ docs/decisions/index.html`);
+
+// 3. Páginas derivadas de MDs em docs/
+const mdPages = [
+  { src: 'CHANGELOG.md', out: 'docs/changelog.html', title: 'Changelog', subtitle: 'Histórico de versões do design system.', rootRelative: true, base: '../' },
+  { src: 'docs/brand-principles.md', out: 'docs/brand-principles.html', title: 'Princípios da marca', subtitle: 'Missão, princípios, tom de voz e identidade visual.', base: '../' },
+  { src: 'docs/backlog.md', out: 'docs/backlog.html', title: 'Backlog', subtitle: 'Itens fora do escopo imediato mas que devem ser implementados.', base: '../' },
+  { src: 'docs/process-contributing.md', out: 'docs/process-contributing.html', title: 'Como contribuir', subtitle: 'Setup local, fluxo de PR, convenções de commit.', base: '../' },
+  { src: 'docs/process-versioning.md', out: 'docs/process-versioning.html', title: 'Versionamento', subtitle: 'Regras de bump de versão no design system.', base: '../' },
+  { src: 'docs/process-releasing.md', out: 'docs/process-releasing.html', title: 'Releases', subtitle: 'Passo a passo de uma release.', base: '../' },
+];
+let mdPageCount = 0;
+for (const p of mdPages) {
+  const mdPath = path.join(ROOT, p.src);
+  const outPath = path.join(ROOT, p.out);
+  const ok = renderMarkdownFile({ mdPath, outPath, title: p.title, subtitle: p.subtitle, base: p.base });
+  if (ok) mdPageCount++;
+}
+console.log(`✅ ${mdPageCount} páginas MD → HTML em docs/`);
+
+// 4. Injeta badge de versão em index.html (placeholder <!-- VERSION -->)
+const indexPath = path.join(ROOT, 'index.html');
+if (fs.existsSync(indexPath)) {
+  let indexHtml = fs.readFileSync(indexPath, 'utf8');
+  // Substitui <!-- VERSION --> ou <!-- VERSION:x.y.z --> pelo valor atual
+  const updated = indexHtml.replace(/<!--\s*VERSION(:[^-]*)?\s*-->/g, `<!-- VERSION:${version} -->v${version}`);
+  if (updated !== indexHtml) {
+    fs.writeFileSync(indexPath, updated);
+    console.log(`✅ badge de versão v${version} atualizada em index.html`);
+  }
+}
 
 console.log(`\n📁 Gerado em docs/ — versão ${version}`);
