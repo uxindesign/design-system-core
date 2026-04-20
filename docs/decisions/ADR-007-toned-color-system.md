@@ -1,6 +1,21 @@
 # ADR-007: Establish toned color system with colored overlays and semantic toned tokens
 **Date:** 2026-04-15
-**Status:** Proposed
+**Status:** Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.4)
+
+## Implementação
+
+Toda a camada de código foi executada durante ADR-011:
+
+- **Foundation overlays**: `tokens/foundation/colors.json` contém `foundation.color.overlay.blue-600.{12,20,28}` (light) e `foundation.color.overlay.blue-400.{15,25,32}` (dark). CSS gerado em `css/tokens/generated/foundation.css` emite `--ds-overlay-blue-600-*` e `--ds-overlay-blue-400-*`.
+- **Semantic toned**: `semantic.brand.toned.{default,hover,active}` existem em `tokens/semantic/light.json` (linhas 111–127) e `dark.json` (linhas 105–121) referenciando os overlays foundation. CSS gerado: `--ds-brand-toned-*` em `theme-light.css` e `theme-dark.css`.
+- **Component button**: `tokens/component/button.json` tem `button.background.toned.{default,hover,active,disabled}` e `button.foreground.toned.{default,disabled}`. Os estados toned apontam para `semantic.brand.toned.*`; o disabled aponta para `semantic.state.disabled.*` e `semantic.content.disabled` (opaco neutro, conforme ADR).
+- **CSS consumer**: `css/components/button.css` consome `--ds-brand-toned-*` na variante `.ds-btn--toned`. Zero rgba hardcoded.
+
+Pendente no Figma (tarefa separada):
+
+- Renomear variáveis flat `color/primary/toned`, `-hover`, `-active` → estrutura aninhada `color/primary/toned/{default,hover,active}`.
+- Deletar variáveis `color/primary/toned-disabled` e `-disabled-fg`.
+- Rebinding do Button Toned disabled para `state/disabled/background` e `state/disabled/foreground`.
 
 ## Pré-requisitos
 

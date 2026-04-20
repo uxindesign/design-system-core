@@ -74,6 +74,15 @@
 <p>O formato é baseado em <a href="https://keepachangelog.com/pt-BR/1.1.0/">Keep a Changelog</a> e o versionamento segue <a href="https://semver.org/lang/pt-BR/">Semantic Versioning</a>.</p>
 <p>Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na faixa 0.x. Regras de bump documentadas em <code>docs/process-versioning.html</code>.</p>
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
+<h2>[0.5.4]</h2>
+<h3>Alterado</h3>
+<ul>
+<li>ADR-007 marcada como Aceita — Implementada em 0.5.0. Camada de código (foundation overlays, semantic toned, component tokens, CSS do button) já havia sido executada via ADR-011; fechamento formal em 0.5.4.</li>
+</ul>
+<h3>Pendente</h3>
+<ul>
+<li>Sincronização Figma: renomeação de <code>color/primary/toned</code>, <code>-hover</code>, <code>-active</code> para hierarquia aninhada (<code>toned/default</code>, <code>toned/hover</code>, <code>toned/active</code>), remoção de <code>toned-disabled</code> e <code>toned-disabled-fg</code>, rebinding do Button Toned disabled para <code>state/disabled/*</code>. Será executado como tarefa Figma separada.</li>
+</ul>
 <h2>[0.5.3]</h2>
 <h3>Alterado</h3>
 <ul>

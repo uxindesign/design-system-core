@@ -12,9 +12,25 @@ Decisão proposta desde 2026-04-14. Pré-requisito para ADR-006 e ADR-007 saíre
 
 Normalizar dimensões de Button, Input, Select e Textarea via tokens semânticos compartilhados. Depende de ADR-005. Ver [ADR-006](./decisions/ADR-006-semantic-control-tokens.md).
 
-### Implementar ADR-007 — Toned color system
+### Sincronizar Figma com ADR-007 (toned colors)
 
-Fechar formalmente o padrão de overlays coloridos. O código já tem a maior parte implementada. Ver [ADR-007](./decisions/ADR-007-toned-color-system.md).
+ADR-007 foi fechada no código em 0.5.4 mas as variáveis Figma ainda usam naming flat. Pendências:
+
+- Renomear `color/primary/toned` → `color/primary/toned/default`
+- Renomear `color/primary/toned-hover` → `color/primary/toned/hover`
+- Renomear `color/primary/toned-active` → `color/primary/toned/active`
+- Deletar `color/primary/toned-disabled` e `color/primary/toned-disabled-fg`
+- Rebinding do Button Toned disabled para `state/disabled/background` e `state/disabled/foreground`
+
+Executável via MCP remoto do Figma (fileKey `PRYS2kL7VdC1MtVWfZvuDN`).
+
+### Revisitar rgba hardcoded em semantic tokens (dívida de ADR-011)
+
+- `semantic.brand.disabled` tem `rgba(125, 158, 232, 0.50)` (light) e `#4F637D` (dark) literais em `tokens/semantic/*.json`. Viola a regra "semantic nunca hardcoded".
+- `semantic.brand.content.contrast-disabled` tem `rgba(255, 255, 255, 0.80)` literal.
+- Mesma pattern em `feedback.*.disabled` e `feedback.*.content.contrast-disabled`.
+
+Proposta: criar tokens foundation correspondentes em `colors.json` (overlay branco/preto ou colored com 40–50%) e apontar semantic pra eles.
 
 ### Preencher `docs/brand-principles.md`
 
