@@ -62,7 +62,7 @@
 <main class="ds-main">
   <div class="ds-section">
     <h1 class="ds-section__title">ADR-007 — Establish toned color system with colored overlays and semantic toned tokens</h1>
-    <p class="ds-section__subtitle">Status: <strong>Proposed</strong> · Data: —</p>
+    <p class="ds-section__subtitle">Status: <strong>Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.4)</strong> · Data: —</p>
   </div>
 
   <div class="ds-md-generated-banner">
@@ -71,7 +71,21 @@
 
   <div class="ds-md-content">
 <p><strong>Date:</strong> 2026-04-15
-<strong>Status:</strong> Proposed</p>
+<strong>Status:</strong> Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.4)</p>
+<h2>Implementação</h2>
+<p>Toda a camada de código foi executada durante ADR-011:</p>
+<ul>
+<li><strong>Foundation overlays</strong>: <code>tokens/foundation/colors.json</code> contém <code>foundation.color.overlay.blue-600.{12,20,28}</code> (light) e <code>foundation.color.overlay.blue-400.{15,25,32}</code> (dark). CSS gerado em <code>css/tokens/generated/foundation.css</code> emite <code>--ds-overlay-blue-600-*</code> e <code>--ds-overlay-blue-400-*</code>.</li>
+<li><strong>Semantic toned</strong>: <code>semantic.brand.toned.{default,hover,active}</code> existem em <code>tokens/semantic/light.json</code> (linhas 111–127) e <code>dark.json</code> (linhas 105–121) referenciando os overlays foundation. CSS gerado: <code>--ds-brand-toned-*</code> em <code>theme-light.css</code> e <code>theme-dark.css</code>.</li>
+<li><strong>Component button</strong>: <code>tokens/component/button.json</code> tem <code>button.background.toned.{default,hover,active,disabled}</code> e <code>button.foreground.toned.{default,disabled}</code>. Os estados toned apontam para <code>semantic.brand.toned.*</code>; o disabled aponta para <code>semantic.state.disabled.*</code> e <code>semantic.content.disabled</code> (opaco neutro, conforme ADR).</li>
+<li><strong>CSS consumer</strong>: <code>css/components/button.css</code> consome <code>--ds-brand-toned-*</code> na variante <code>.ds-btn--toned</code>. Zero rgba hardcoded.</li>
+</ul>
+<p>Pendente no Figma (tarefa separada):</p>
+<ul>
+<li>Renomear variáveis flat <code>color/primary/toned</code>, <code>-hover</code>, <code>-active</code> → estrutura aninhada <code>color/primary/toned/{default,hover,active}</code>.</li>
+<li>Deletar variáveis <code>color/primary/toned-disabled</code> e <code>-disabled-fg</code>.</li>
+<li>Rebinding do Button Toned disabled para <code>state/disabled/background</code> e <code>state/disabled/foreground</code>.</li>
+</ul>
 <h2>Pré-requisitos</h2>
 <ul>
 <li>ADR-005 implementada (naming do brand consolidado).</li>
