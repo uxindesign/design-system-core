@@ -297,8 +297,12 @@ function slugFromAdrFilename(filename) {
   return filename.replace(/\.md$/, '').toLowerCase();
 }
 
-function wrapPage({ title, subtitle, content, base, skipSubtitle }) {
+function wrapPage({ title, subtitle, content, base, skipSubtitle, layoutHref }) {
   const basePath = base || '../';
+  // layoutHref é relativo ao arquivo gerado, não ao ROOT. Padrão: layout.css
+  // no mesmo diretório (páginas em docs/). Para docs/decisions/, quem chama
+  // passa explicitamente `layoutHref: '../layout.css'`.
+  const layoutCss = layoutHref || 'layout.css';
   const subtitleHtml = skipSubtitle
     ? ''
     : `<p class="ds-section__subtitle">${subtitle}</p>`;
@@ -309,7 +313,7 @@ function wrapPage({ title, subtitle, content, base, skipSubtitle }) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${title} — Design System</title>
   <link rel="stylesheet" href="${basePath}css/design-system.css">
-  <link rel="stylesheet" href="${basePath}docs/layout.css">
+  <link rel="stylesheet" href="${layoutCss}">
   <style>
     .ds-md-content h1, .ds-md-content h2, .ds-md-content h3 { margin-top: var(--ds-spacing-8); margin-bottom: var(--ds-spacing-3); color: var(--ds-content-default); }
     .ds-md-content h1 { font-size: var(--ds-font-size-2xl); font-weight: var(--ds-font-weight-semibold); margin-top: 0; }
@@ -318,9 +322,9 @@ function wrapPage({ title, subtitle, content, base, skipSubtitle }) {
     .ds-md-content p { color: var(--ds-content-secondary); line-height: var(--ds-line-height-relaxed); margin: var(--ds-spacing-3) 0; }
     .ds-md-content ul, .ds-md-content ol { color: var(--ds-content-secondary); line-height: var(--ds-line-height-relaxed); padding-left: var(--ds-spacing-6); margin: var(--ds-spacing-3) 0; }
     .ds-md-content li { margin: var(--ds-spacing-1) 0; }
-    .ds-md-content code { font-family: var(--ds-font-family-mono); font-size: 0.9em; background: var(--ds-background-subtle); padding: 1px var(--ds-spacing-1); border-radius: var(--ds-radius-sm); }
-    .ds-md-content pre { background: var(--ds-background-subtle); padding: var(--ds-spacing-4); border-radius: var(--ds-radius-md); overflow-x: auto; font-size: var(--ds-font-size-sm); margin: var(--ds-spacing-4) 0; }
-    .ds-md-content pre code { background: none; padding: 0; }
+    .ds-md-content code { font-family: var(--ds-font-family-mono); font-size: 0.9em; background: var(--ds-background-subtle); color: var(--ds-content-link-default); padding: 1px var(--ds-spacing-1); border-radius: var(--ds-radius-sm); }
+    .ds-md-content pre { background: var(--ds-color-neutral-900); color: var(--ds-color-neutral-100); padding: var(--ds-spacing-4); border-radius: var(--ds-radius-md); overflow-x: auto; font-size: var(--ds-font-size-sm); margin: var(--ds-spacing-4) 0; }
+    .ds-md-content pre code { background: none; color: inherit; padding: 0; }
     .ds-md-content table { width: 100%; border-collapse: collapse; margin: var(--ds-spacing-4) 0; font-size: var(--ds-font-size-sm); }
     .ds-md-content table th, .ds-md-content table td { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-1) solid var(--ds-border-default); }
     .ds-md-content table th { font-weight: var(--ds-font-weight-semibold); background: var(--ds-background-subtle); }
@@ -384,13 +388,13 @@ ${content}
 `;
 }
 
-function renderMarkdownFile({ mdPath, outPath, title, subtitle, base }) {
+function renderMarkdownFile({ mdPath, outPath, title, subtitle, base, layoutHref }) {
   if (!fs.existsSync(mdPath)) return false;
   const md = fs.readFileSync(mdPath, 'utf8');
   // Se o MD começa com `# Título`, removemos pra não duplicar com o título do layout
   const withoutH1 = md.replace(/^#\s+.+\n+/, '');
   const content = marked.parse(withoutH1);
-  const html = wrapPage({ title, subtitle, content, base });
+  const html = wrapPage({ title, subtitle, content, base, layoutHref });
   fs.mkdirSync(path.dirname(outPath), { recursive: true });
   fs.writeFileSync(outPath, html);
   return true;
@@ -408,6 +412,7 @@ for (const adr of adrs) {
     title: `ADR-${adr.num} — ${adr.title}`,
     subtitle: `Status: <strong>${adr.status}</strong> · Data: ${adr.date}`,
     base: '../../',
+    layoutHref: '../layout.css',
   });
   if (ok) adrHtmlCount++;
 }
@@ -428,34 +433,39 @@ ${adrs.map(a => {
 `;
 fs.writeFileSync(
   path.join(decisionsDir, 'index.html'),
-  wrapPage({ title: 'Decisões arquiteturais', subtitle: 'ADRs (Architecture Decision Records) do design system.', content: adrIndexContent, base: '../../' })
+  wrapPage({ title: 'Decisões arquiteturais', subtitle: 'ADRs (Architecture Decision Records) do design system.', content: adrIndexContent, base: '../../', layoutHref: '../layout.css' })
 );
 console.log(`✅ docs/decisions/index.html`);
 
 // 3. Páginas derivadas de MDs em docs/
 const mdPages = [
-  { src: 'CHANGELOG.md', out: 'docs/changelog.html', title: 'Changelog', subtitle: 'Histórico de versões do design system.', rootRelative: true, base: '../' },
-  { src: 'docs/brand-principles.md', out: 'docs/brand-principles.html', title: 'Princípios da marca', subtitle: 'Missão, princípios, tom de voz e identidade visual.', base: '../' },
-  { src: 'docs/backlog.md', out: 'docs/backlog.html', title: 'Backlog', subtitle: 'Itens fora do escopo imediato mas que devem ser implementados.', base: '../' },
-  { src: 'docs/process-contributing.md', out: 'docs/process-contributing.html', title: 'Como contribuir', subtitle: 'Setup local, fluxo de PR, convenções de commit.', base: '../' },
-  { src: 'docs/process-versioning.md', out: 'docs/process-versioning.html', title: 'Versionamento', subtitle: 'Regras de bump de versão no design system.', base: '../' },
-  { src: 'docs/process-releasing.md', out: 'docs/process-releasing.html', title: 'Releases', subtitle: 'Passo a passo de uma release.', base: '../' },
+  { src: 'CHANGELOG.md', out: 'docs/changelog.html', title: 'Changelog', subtitle: 'Histórico de versões do design system.' },
+  { src: 'docs/brand-principles.md', out: 'docs/brand-principles.html', title: 'Princípios da marca', subtitle: 'Missão, princípios, tom de voz e identidade visual.' },
+  { src: 'docs/backlog.md', out: 'docs/backlog.html', title: 'Backlog', subtitle: 'Itens fora do escopo imediato mas que devem ser implementados.' },
+  { src: 'docs/process-contributing.md', out: 'docs/process-contributing.html', title: 'Como contribuir', subtitle: 'Setup local, fluxo de PR, convenções de commit.' },
+  { src: 'docs/process-versioning.md', out: 'docs/process-versioning.html', title: 'Versionamento', subtitle: 'Regras de bump de versão no design system.' },
+  { src: 'docs/process-releasing.md', out: 'docs/process-releasing.html', title: 'Releases', subtitle: 'Passo a passo de uma release.' },
 ];
 let mdPageCount = 0;
 for (const p of mdPages) {
   const mdPath = path.join(ROOT, p.src);
   const outPath = path.join(ROOT, p.out);
-  const ok = renderMarkdownFile({ mdPath, outPath, title: p.title, subtitle: p.subtitle, base: p.base });
+  const ok = renderMarkdownFile({ mdPath, outPath, title: p.title, subtitle: p.subtitle, base: '../', layoutHref: 'layout.css' });
   if (ok) mdPageCount++;
 }
 console.log(`✅ ${mdPageCount} páginas MD → HTML em docs/`);
 
-// 4. Injeta badge de versão em index.html (placeholder <!-- VERSION -->)
+// 4. Injeta badge de versão em index.html (placeholder <!-- VERSION -->).
+// Regex captura o comentário + o texto "vX.Y.Z" opcional imediatamente
+// depois, pra substituir tudo de uma vez — sem isso, rodar sync:docs
+// mais de uma vez duplica o número de versão.
 const indexPath = path.join(ROOT, 'index.html');
 if (fs.existsSync(indexPath)) {
   let indexHtml = fs.readFileSync(indexPath, 'utf8');
-  // Substitui <!-- VERSION --> ou <!-- VERSION:x.y.z --> pelo valor atual
-  const updated = indexHtml.replace(/<!--\s*VERSION(:[^-]*)?\s*-->/g, `<!-- VERSION:${version} -->v${version}`);
+  const updated = indexHtml.replace(
+    /<!--\s*VERSION(?::[^-]*)?\s*-->(?:v\d+\.\d+\.\d+)*/g,
+    `<!-- VERSION:${version} -->v${version}`
+  );
   if (updated !== indexHtml) {
     fs.writeFileSync(indexPath, updated);
     console.log(`✅ badge de versão v${version} atualizada em index.html`);

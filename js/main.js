@@ -65,6 +65,28 @@
         { label: 'Accessibility',  path: 'docs/accessibility.html' },
         { label: 'Control Sizing', path: 'docs/control-sizing.html' }
       ]
+    },
+    {
+      heading: 'Decisions',
+      items: [
+        { label: 'Overview',       path: 'docs/decisions/index.html' }
+      ]
+    },
+    {
+      heading: 'Process',
+      items: [
+        { label: 'Contributing',   path: 'docs/process-contributing.html' },
+        { label: 'Versioning',     path: 'docs/process-versioning.html' },
+        { label: 'Releasing',      path: 'docs/process-releasing.html' },
+        { label: 'Backlog',        path: 'docs/backlog.html' },
+        { label: 'Tokens sync',    path: 'docs/tokens-sync.html' }
+      ]
+    },
+    {
+      heading: 'Brand',
+      items: [
+        { label: 'Brand Principles', path: 'docs/brand-principles.html' }
+      ]
     }
   ];
 
@@ -72,17 +94,32 @@
     var sidebar = document.getElementById('sidebar');
     if (!sidebar) return;
 
+    // Deriva o caminho atual relativo à raiz do site (mesma forma do NAV_DATA),
+    // para que a comparação de item ativo funcione sem colisão entre páginas
+    // com o mesmo nome de arquivo em diretórios diferentes (ex: index.html
+    // na raiz vs docs/decisions/index.html).
     var pathname = window.location.pathname;
-    var inDocs   = pathname.indexOf('/docs/') !== -1;
-    var current  = pathname.split('/').pop() || 'index.html';
+    var segments = pathname.split('/').filter(Boolean);
+    var fileName = segments.pop() || 'index.html';
+    var docsIdx  = segments.indexOf('docs');
+    var currentPath, depth;
+    if (docsIdx === -1) {
+      // Raiz do site (eventualmente dentro de um basepath do GitHub Pages).
+      currentPath = fileName;
+      depth = 0;
+    } else {
+      var relDirs = segments.slice(docsIdx);
+      currentPath = relDirs.concat([fileName]).join('/');
+      depth = relDirs.length;
+    }
+    var upToRoot = depth === 0 ? '' : '../'.repeat(depth);
 
     var html = NAV_DATA.map(function (section) {
       var items = section.items.map(function (item) {
-        var file = item.path.split('/').pop();
-        var href = inDocs
-          ? (item.path.startsWith('docs/') ? file : '../' + item.path)
-          : item.path;
-        var active = file === current ? ' ds-sidebar__link--active' : '';
+        // item.path é sempre relativo à raiz (ex: 'docs/button.html' ou 'index.html').
+        // href correto é upToRoot + item.path — funciona de qualquer profundidade.
+        var href = upToRoot + item.path;
+        var active = item.path === currentPath ? ' ds-sidebar__link--active' : '';
         return '<li><a href="' + href + '" class="ds-sidebar__link' + active + '">'
           + item.label + '</a></li>';
       }).join('');
