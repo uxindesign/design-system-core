@@ -294,11 +294,16 @@
 
     <div class="ds-callout ds-callout--info" style="margin-top:var(--ds-spacing-4)">
       <div class="ds-callout__title"><span data-lang="pt">Resumo dos atributos ARIA</span><span data-lang="en">ARIA attributes summary</span></div>
-      <span data-lang="pt"><code>role="status"</code> + <code>aria-label="Loading"</code> — obrigatorio em cada spinner para que leitores de tela anunciem o estado de carregamento.<br>
-      <code>aria-busy="true"</code> — defina no container quando o spinner substitui conteúdo.<br>
-      <code>prefers-reduced-motion</code> — o CSS do spinner respeita esta media query pausando ou reduzindo a animação.</span><span data-lang="en"><code>role="status"</code> + <code>aria-label="Loading"</code> — required on every spinner so screen readers announce the loading state.<br>
-      <code>aria-busy="true"</code> — set on the container when the spinner replaces content.<br>
-      <code>prefers-reduced-motion</code> — the spinner CSS respects this media query by pausing or reducing animation.</span>
+      <ul data-lang="pt" style="margin:var(--ds-spacing-2) 0 0;padding-left:var(--ds-spacing-6);">
+        <li><code>role="status"</code> + <code>aria-label="Loading"</code> — obrigatório em cada spinner para que leitores de tela anunciem o estado de carregamento.</li>
+        <li><code>aria-busy="true"</code> — defina no container quando o spinner substitui conteúdo.</li>
+        <li><code>prefers-reduced-motion</code> — o CSS do spinner respeita esta media query pausando ou reduzindo a animação.</li>
+      </ul>
+      <ul data-lang="en" style="margin:var(--ds-spacing-2) 0 0;padding-left:var(--ds-spacing-6);">
+        <li><code>role="status"</code> + <code>aria-label="Loading"</code> — required on every spinner so screen readers announce the loading state.</li>
+        <li><code>aria-busy="true"</code> — set on the container when the spinner replaces content.</li>
+        <li><code>prefers-reduced-motion</code> — the spinner CSS respects this media query by pausing or reducing animation.</li>
+      </ul>
     </div>
   </div>
 
