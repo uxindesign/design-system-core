@@ -94,28 +94,32 @@
     var sidebar = document.getElementById('sidebar');
     if (!sidebar) return;
 
+    // Deriva o caminho atual relativo à raiz do site (mesma forma do NAV_DATA),
+    // para que a comparação de item ativo funcione sem colisão entre páginas
+    // com o mesmo nome de arquivo em diretórios diferentes (ex: index.html
+    // na raiz vs docs/decisions/index.html).
     var pathname = window.location.pathname;
-    var current  = pathname.split('/').pop() || 'index.html';
-    // Profundidade relativa à raiz do site: 0 quando estamos em /index.html,
-    // 1 quando em /docs/foo.html, 2 quando em /docs/decisions/foo.html.
-    // Calcula contando segmentos após o basepath do projeto.
     var segments = pathname.split('/').filter(Boolean);
-    // Remove o nome do arquivo final para contar apenas diretórios
-    var dirSegments = segments.slice(0, -1);
-    // Procura 'docs' ou 'decisions' nos segmentos finais para deduzir profundidade
-    var depth = 0;
-    if (dirSegments.indexOf('docs') !== -1) {
-      depth = dirSegments.length - dirSegments.indexOf('docs');
+    var fileName = segments.pop() || 'index.html';
+    var docsIdx  = segments.indexOf('docs');
+    var currentPath, depth;
+    if (docsIdx === -1) {
+      // Raiz do site (eventualmente dentro de um basepath do GitHub Pages).
+      currentPath = fileName;
+      depth = 0;
+    } else {
+      var relDirs = segments.slice(docsIdx);
+      currentPath = relDirs.concat([fileName]).join('/');
+      depth = relDirs.length;
     }
     var upToRoot = depth === 0 ? '' : '../'.repeat(depth);
 
     var html = NAV_DATA.map(function (section) {
       var items = section.items.map(function (item) {
-        var file = item.path.split('/').pop();
         // item.path é sempre relativo à raiz (ex: 'docs/button.html' ou 'index.html').
         // href correto é upToRoot + item.path — funciona de qualquer profundidade.
         var href = upToRoot + item.path;
-        var active = file === current ? ' ds-sidebar__link--active' : '';
+        var active = item.path === currentPath ? ' ds-sidebar__link--active' : '';
         return '<li><a href="' + href + '" class="ds-sidebar__link' + active + '">'
           + item.label + '</a></li>';
       }).join('');
