@@ -62,7 +62,7 @@
 <main class="ds-main">
   <div class="ds-section">
     <h1 class="ds-section__title">ADR-006 — Adopt semantic control tokens for shared dimensions and typography across interactive controls</h1>
-    <p class="ds-section__subtitle">Status: <strong>Proposed</strong> · Data: —</p>
+    <p class="ds-section__subtitle">Status: <strong>Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.3)</strong> · Data: —</p>
   </div>
 
   <div class="ds-md-generated-banner">
@@ -71,7 +71,21 @@
 
   <div class="ds-md-content">
 <p><strong>Date:</strong> 2026-04-15
-<strong>Status:</strong> Proposed</p>
+<strong>Status:</strong> Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.3)</p>
+<h2>Implementação</h2>
+<p>A maior parte foi executada durante ADR-011:</p>
+<ul>
+<li><code>semantic.size.control.*</code>, <code>semantic.size.control.icon.*</code>, <code>semantic.size.control.min-target</code>, <code>semantic.space.control.padding-x.*</code>, <code>semantic.space.control.padding-y.*</code>, <code>semantic.typography.control.font-size.*</code>, <code>semantic.typography.control.line-height.*</code> existem em <code>tokens/semantic/light.json</code> e <code>dark.json</code>.</li>
+<li><code>tokens/component/button.json</code>, <code>input.json</code>, <code>select.json</code>, <code>textarea.json</code> referenciam os semantic control tokens. O rename <code>button.padding.*</code> → <code>button.padding-x.*</code> está aplicado.</li>
+<li>CSS gerado em <code>css/tokens/generated/theme-*.css</code> e <code>component.css</code> propaga a cadeia corretamente.</li>
+<li>Documentação do pattern em <code>docs/control-sizing.html</code>.</li>
+</ul>
+<p>Fechamento formal em 0.5.3:</p>
+<ul>
+<li><code>semantic.size.control.{sm,md,lg}</code>, <code>semantic.size.control.icon.{sm,md,lg}</code>, <code>semantic.size.control.min-target</code>, <code>semantic.typography.control.line-height.{sm,md,lg}</code> trocaram valores absolutos (<code>2rem</code> etc.) por referências a <code>{foundation.spacing.*}</code>. Mantém a cadeia token viva: se a escala de spacing mudar, estes derivam automaticamente.</li>
+<li><code>tokens/component/input.json</code> e <code>select.json</code> ganharam <code>padding-y</code> explícito apontando para <code>semantic.space.control.padding-y.*</code>.</li>
+<li><code>docs/control-sizing.html</code> ajustado: os nomes documentados <code>--ds-typography-control-font-size-*</code> e <code>--ds-typography-control-line-height-*</code> foram alinhados para <code>--ds-control-font-size-*</code> e <code>--ds-control-line-height-*</code> — os nomes que o transform <code>name/strip-layer</code> de <code>build-tokens.mjs</code> realmente emite (ele remove o segmento <code>typography</code>).</li>
+</ul>
 <h2>Pré-requisitos</h2>
 <ul>
 <li>ADR-005 implementada (foundation/brand.json existe, convenção <code>-default</code> consolidada).</li>
