@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADR-007 — Establish toned color system with colored overlays and semantic toned tokens — Design System</title>
+  <link rel="stylesheet" href="../../css/design-system.css">
+  <link rel="stylesheet" href="../../docs/layout.css">
+  <style>
+    .ds-md-content h1, .ds-md-content h2, .ds-md-content h3 { margin-top: var(--ds-spacing-8); margin-bottom: var(--ds-spacing-3); color: var(--ds-content-default); }
+    .ds-md-content h1 { font-size: var(--ds-font-size-2xl); font-weight: var(--ds-font-weight-semibold); margin-top: 0; }
+    .ds-md-content h2 { font-size: var(--ds-font-size-xl); font-weight: var(--ds-font-weight-semibold); border-top: var(--ds-border-width-1) solid var(--ds-border-subtle); padding-top: var(--ds-spacing-6); }
+    .ds-md-content h3 { font-size: var(--ds-font-size-lg); font-weight: var(--ds-font-weight-semibold); }
+    .ds-md-content p { color: var(--ds-content-secondary); line-height: var(--ds-line-height-relaxed); margin: var(--ds-spacing-3) 0; }
+    .ds-md-content ul, .ds-md-content ol { color: var(--ds-content-secondary); line-height: var(--ds-line-height-relaxed); padding-left: var(--ds-spacing-6); margin: var(--ds-spacing-3) 0; }
+    .ds-md-content li { margin: var(--ds-spacing-1) 0; }
+    .ds-md-content code { font-family: var(--ds-font-family-mono); font-size: 0.9em; background: var(--ds-background-subtle); padding: 1px var(--ds-spacing-1); border-radius: var(--ds-radius-sm); }
+    .ds-md-content pre { background: var(--ds-background-subtle); padding: var(--ds-spacing-4); border-radius: var(--ds-radius-md); overflow-x: auto; font-size: var(--ds-font-size-sm); margin: var(--ds-spacing-4) 0; }
+    .ds-md-content pre code { background: none; padding: 0; }
+    .ds-md-content table { width: 100%; border-collapse: collapse; margin: var(--ds-spacing-4) 0; font-size: var(--ds-font-size-sm); }
+    .ds-md-content table th, .ds-md-content table td { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-1) solid var(--ds-border-default); }
+    .ds-md-content table th { font-weight: var(--ds-font-weight-semibold); background: var(--ds-background-subtle); }
+    .ds-md-content a { color: var(--ds-content-link-default); }
+    .ds-md-content a:hover { color: var(--ds-content-link-hover); }
+    .ds-md-content blockquote { border-left: 3px solid var(--ds-border-default); margin: var(--ds-spacing-4) 0; padding: var(--ds-spacing-2) var(--ds-spacing-4); color: var(--ds-content-tertiary); font-style: italic; }
+    .ds-md-content hr { border: none; border-top: var(--ds-border-width-1) solid var(--ds-border-subtle); margin: var(--ds-spacing-8) 0; }
+    .ds-md-content strong { color: var(--ds-content-default); }
+    .ds-md-generated-banner { background: var(--ds-feedback-info-background); color: var(--ds-feedback-info-content-default); padding: var(--ds-spacing-3) var(--ds-spacing-5); border-radius: var(--ds-radius-md); margin-bottom: var(--ds-spacing-6); font-size: var(--ds-font-size-sm); }
+  </style>
+  <script>
+    (function(){var l=localStorage.getItem('ds-lang');if(l)document.documentElement.setAttribute('lang',l)})();
+  </script>
+</head>
+<body>
+
+<header class="ds-site-header">
+  <div style="display:flex;align-items:center;gap:var(--ds-spacing-4)">
+    <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <a href="../../index.html" class="ds-site-header__brand">
+      <div class="ds-site-header__logo">DS</div>
+      <span class="ds-site-header__title">Design System</span>
+    </a>
+  </div>
+  <div class="ds-site-header__actions">
+    <select class="ds-theme-switcher__select" id="lang-switcher" aria-label="Language">
+      <option value="pt">PT</option>
+      <option value="en">EN</option>
+    </select>
+    <select class="ds-theme-switcher__select" id="theme-switcher">
+      <option value="default">Default (Blue)</option>
+      <option value="ocean">Ocean (Cyan)</option>
+      <option value="forest">Forest (Emerald)</option>
+    </select>
+    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg> Dark</button>
+  </div>
+</header>
+<div class="ds-sidebar-overlay" id="sidebar-overlay"></div>
+<nav class="ds-sidebar" id="sidebar" aria-label="Main navigation"></nav>
+
+<main class="ds-main">
+  <div class="ds-section">
+    <h1 class="ds-section__title">ADR-007 — Establish toned color system with colored overlays and semantic toned tokens</h1>
+    <p class="ds-section__subtitle">Status: <strong>Proposed</strong> · Data: —</p>
+  </div>
+
+  <div class="ds-md-generated-banner">
+    Este arquivo é gerado automaticamente por <code>scripts/sync-docs.mjs</code>. Editar a fonte original, não este HTML.
+  </div>
+
+  <div class="ds-md-content">
+<p><strong>Date:</strong> 2026-04-15
+<strong>Status:</strong> Proposed</p>
+<h2>Pré-requisitos</h2>
+<ul>
+<li>ADR-005 implementada (naming do brand consolidado).</li>
+<li>ADR-011 implementada (estrutura <code>brand/toned/*</code> já está em vigor no JSON).</li>
+</ul>
+<h2>Estimativa de esforço</h2>
+<p>3 horas. 1h para adicionar os tokens de overlay colorido em <code>foundation/colors.json</code> (já presentes parcialmente — ver note abaixo), 1h para completar os tokens semânticos <code>brand.toned.*</code> nos dois modos (parte já implementada via ADR-011), 30min para atualizar <code>tokens/component/button.json</code> com os bindings corretos, 30min para Figma e validação.</p>
+<p><strong>Estado atual do código.</strong> Em <code>tokens/foundation/colors.json</code> já existem <code>foundation.color.overlay.blue-600.{12,20,28}</code> e <code>overlay.blue-400.{15,25,32}</code>. <code>tokens/semantic/light.json</code> e <code>dark.json</code> já têm <code>semantic.brand.toned.{default,hover,active}</code> apontando para esses overlays. A implementação está quase pronta; ADR-007 só precisa ser fechada formalmente depois que ADR-005 consolidar o naming.</p>
+<h2>Passos concretos para sair do estado Proposta</h2>
+<ol>
+<li>Revisar <code>tokens/foundation/colors.json</code> e confirmar que os 6 overlays coloridos cobrem todos os estados (default/hover/active em light e dark).</li>
+<li>Adicionar tokens equivalentes para feedback se e quando Alert ganhar variante toned (adiamento intencional — só implementar quando houver uso concreto).</li>
+<li>Atualizar <code>tokens/component/button.json</code> garantindo que <code>button.background.toned.*</code> referencia <code>{semantic.brand.toned.*}</code> (não <code>rgba</code> literal).</li>
+<li>No Figma, renomear variáveis flat (<code>color/primary/toned</code>, <code>-hover</code>, <code>-active</code>) para a hierarquia aninhada (<code>color/primary/toned/default</code>, <code>/hover</code>, <code>/active</code>).</li>
+<li>Remover <code>color/primary/toned-disabled</code> e <code>color/primary/toned-disabled-fg</code> do Figma; Button Toned disabled passa a consumir <code>state/disabled/*</code>.</li>
+<li>Executar <code>npm run build:tokens</code> e <code>npm run verify:tokens</code> para confirmar sincronia.</li>
+<li>Documentar como mudança estrutural (não breaking visual). Bump patch.</li>
+</ol>
+<h2>Context</h2>
+<p>The Button component has a &quot;Toned&quot; style variant that uses a translucent colored background (primary color at ~12% opacity). This variant already exists in the Figma file with 5 variables in the Semantic collection:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Light</th>
+<th>Dark</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>color/primary/toned</code></td>
+<td>rgba(37,99,235, 0.12)</td>
+<td>rgba(96,165,250, 0.15)</td>
+</tr>
+<tr>
+<td><code>color/primary/toned-hover</code></td>
+<td>rgba(37,99,235, 0.20)</td>
+<td>rgba(96,165,250, 0.25)</td>
+</tr>
+<tr>
+<td><code>color/primary/toned-active</code></td>
+<td>rgba(37,99,235, 0.28)</td>
+<td>rgba(96,165,250, 0.32)</td>
+</tr>
+<tr>
+<td><code>color/primary/toned-disabled</code></td>
+<td>rgba(219,226,240, 0.50)</td>
+<td>rgba(43,48,55, 1.00)</td>
+</tr>
+<tr>
+<td><code>color/primary/toned-disabled-fg</code></td>
+<td>rgba(140,164,217, 0.50)</td>
+<td>rgba(255,255,255, 0.60)</td>
+</tr>
+</tbody></table>
+<p>Problems:</p>
+<ol>
+<li>These tokens exist in Figma but <strong>not in the canonical JSON</strong>, violating the principle that JSON is the source of truth.</li>
+<li>The semantic tokens contain raw rgba values instead of referencing foundation, violating rule 2 (semantic never hardcoded).</li>
+<li>The existing semantic tokens <code>*.subtle</code> and <code>*.muted</code> use opaque colors (e.g., blue.100, blue.50), which is a different concept. Toned uses transparency, allowing the background surface to show through — crucial for layered UI.</li>
+<li>The Alert component also has a &quot;Subtle&quot; style that uses opaque light backgrounds. If an Alert &quot;Toned&quot; or &quot;Inline&quot; variant is needed in the future, the same colored overlay pattern would apply to feedback colors (success, warning, error, info).</li>
+<li>The foundation layer already has <code>overlay.black.{5,10,20,40,60,80}</code> and <code>overlay.white.{...}</code> — colored overlays are the natural extension of this pattern.</li>
+</ol>
+<h2>Decision</h2>
+<h3>1. Extend foundation overlays with colored variants</h3>
+<p>Add colored overlay tokens to <code>tokens/foundation/colors.json</code> following the existing <code>overlay.black</code> and <code>overlay.white</code> pattern:</p>
+<pre><code>foundation.color.overlay.primary.{alpha-step}
+</code></pre>
+<p>Where the base color in Light mode comes from <code>foundation.brand.primary</code> (blue-600) and in Dark mode from the dark-mode equivalent (blue-400). The alpha steps match the existing toned usage: 12, 15, 20, 25, 28, 32.</p>
+<p>However, since foundation tokens must have absolute values (rule 3) and brand.primary is already an alias, the colored overlays use the resolved palette values directly:</p>
+<pre><code class="language-json">// In colors.json
+&quot;foundation.color.overlay.blue-600.12&quot;:  { &quot;$type&quot;: &quot;color&quot;, &quot;$value&quot;: &quot;rgba(37, 99, 235, 0.12)&quot; }
+&quot;foundation.color.overlay.blue-600.20&quot;:  { &quot;$type&quot;: &quot;color&quot;, &quot;$value&quot;: &quot;rgba(37, 99, 235, 0.20)&quot; }
+&quot;foundation.color.overlay.blue-600.28&quot;:  { &quot;$type&quot;: &quot;color&quot;, &quot;$value&quot;: &quot;rgba(37, 99, 235, 0.28)&quot; }
+&quot;foundation.color.overlay.blue-400.15&quot;:  { &quot;$type&quot;: &quot;color&quot;, &quot;$value&quot;: &quot;rgba(96, 165, 250, 0.15)&quot; }
+&quot;foundation.color.overlay.blue-400.25&quot;:  { &quot;$type&quot;: &quot;color&quot;, &quot;$value&quot;: &quot;rgba(96, 165, 250, 0.25)&quot; }
+&quot;foundation.color.overlay.blue-400.32&quot;:  { &quot;$type&quot;: &quot;color&quot;, &quot;$value&quot;: &quot;rgba(96, 165, 250, 0.32)&quot; }
+</code></pre>
+<p>For feedback colors, add as needed (not now — expand when Alert Toned or similar component requires it):</p>
+<pre><code>foundation.color.overlay.red-500.12    (error toned)
+foundation.color.overlay.green-500.12  (success toned)
+foundation.color.overlay.amber-500.12  (warning toned)
+foundation.color.overlay.blue-500.12   (info toned)
+</code></pre>
+<h3>2. Create semantic toned tokens in light.json and dark.json</h3>
+<pre><code class="language-json">// In light.json
+&quot;semantic.color.primary.toned.default&quot;:  { &quot;$value&quot;: &quot;{foundation.color.overlay.blue-600.12}&quot; }
+&quot;semantic.color.primary.toned.hover&quot;:    { &quot;$value&quot;: &quot;{foundation.color.overlay.blue-600.20}&quot; }
+&quot;semantic.color.primary.toned.active&quot;:   { &quot;$value&quot;: &quot;{foundation.color.overlay.blue-600.28}&quot; }
+
+// In dark.json
+&quot;semantic.color.primary.toned.default&quot;:  { &quot;$value&quot;: &quot;{foundation.color.overlay.blue-400.15}&quot; }
+&quot;semantic.color.primary.toned.hover&quot;:    { &quot;$value&quot;: &quot;{foundation.color.overlay.blue-400.25}&quot; }
+&quot;semantic.color.primary.toned.active&quot;:   { &quot;$value&quot;: &quot;{foundation.color.overlay.blue-400.32}&quot; }
+</code></pre>
+<p>For toned disabled states, reuse existing semantic tokens:</p>
+<ul>
+<li><code>component.button.background.toned.disabled</code> → <code>{semantic.state.disabled.background}</code> (opaque neutral)</li>
+<li><code>component.button.foreground.toned.disabled</code> → <code>{semantic.state.disabled.foreground}</code> (opaque neutral)</li>
+</ul>
+<p>This avoids creating translucent disabled tokens — disabled state doesn&#39;t need the toned transparency effect, and an opaque neutral disabled state is clearer for accessibility.</p>
+<p>The existing Figma variables <code>color/primary/toned-disabled</code> and <code>color/primary/toned-disabled-fg</code> use non-standard values (not from the palette). These will be deprecated in Figma and replaced with bindings to <code>state/disabled/background</code> and <code>state/disabled/foreground</code> on the component level.</p>
+<h3>3. Text color for toned variants</h3>
+<p>The foreground (text/icon) of toned variants reuses the existing <code>semantic.color.primary.text</code> (blue-700 in light, blue-300 in dark). No new token needed for this — <code>color.primary.text</code> already exists and is the correct semantic choice for text on a translucent primary background.</p>
+<h3>4. Future expansion: feedback toned</h3>
+<p>When a toned variant is needed for Alert, Badge, or other feedback components:</p>
+<ol>
+<li>Add <code>foundation.color.overlay.{palette}.{alpha}</code> tokens for the relevant feedback palette</li>
+<li>Add <code>semantic.feedback.{type}.toned.{state}</code> tokens in light.json and dark.json</li>
+<li>Add component tokens as needed</li>
+<li>Foreground uses the existing <code>semantic.feedback.{type}.text</code> token (or <code>foreground</code> for high-contrast needs)</li>
+</ol>
+<p>This follows the same three-layer pattern, no architectural changes needed.</p>
+<h3>5. Naming convention for toned</h3>
+<p>In the semantic layer, toned states nest under the parent color group:</p>
+<pre><code>semantic.color.primary.default       (opaque, 100%)
+semantic.color.primary.hover         (opaque, darker)
+semantic.color.primary.subtle        (opaque, palette step 100)
+semantic.color.primary.muted         (opaque, palette step 50)
+semantic.color.primary.toned.default (transparent, ~12%)
+semantic.color.primary.toned.hover   (transparent, ~20%)
+semantic.color.primary.toned.active  (transparent, ~28%)
+</code></pre>
+<p>The <code>.toned</code> namespace makes the distinction clear: toned = transparent, subtle/muted = opaque light.</p>
+<p>In Figma, the existing variables are flat: <code>color/primary/toned</code>, <code>color/primary/toned-hover</code>. These should be restructured to <code>color/primary/toned/default</code>, <code>color/primary/toned/hover</code>, <code>color/primary/toned/active</code> to match the JSON hierarchy.</p>
+<p>In CSS, generated as: <code>--ds-color-primary-toned-default</code>, <code>--ds-color-primary-toned-hover</code>, <code>--ds-color-primary-toned-active</code>.</p>
+<h2>Consequences</h2>
+<ul>
+<li><strong>Tokens (Foundation):</strong> +6 colored overlay tokens in colors.json (blue-600 × 3 alphas + blue-400 × 3 alphas). More added when feedback toned is implemented.</li>
+<li><strong>Tokens (Semantic):</strong> +3 tokens per mode (toned.default, toned.hover, toned.active) in light.json and dark.json. Total +6. Removal of toned-disabled and toned-disabled-fg from semantic (moved to component level referencing existing disabled tokens).</li>
+<li><strong>Tokens (Component):</strong> button.json gains <code>background.toned.{default/hover/active/disabled}</code> and <code>foreground.toned.{default/disabled}</code> referencing the new semantic tokens.</li>
+<li><strong>CSS:</strong> New variables <code>--ds-color-primary-toned-default/hover/active</code>. New <code>--ds-overlay-blue-600-12/20/28</code>, <code>--ds-overlay-blue-400-15/25/32</code>.</li>
+<li><strong>Figma:</strong> Rename <code>color/primary/toned</code> → <code>color/primary/toned/default</code> (and hover, active). Delete <code>color/primary/toned-disabled</code> and <code>color/primary/toned-disabled-fg</code>. Update Button bindings to reference the renamed variables. The actual rgba values stay the same — this is a structural change, not visual.</li>
+<li><strong>Docs:</strong> New subsection in color documentation: &quot;Toned colors&quot;. Button docs updated to explain toned vs subtle/muted distinction. token-schema.md updated with the toned pattern.</li>
+<li><strong>Breaking changes:</strong> Figma variable rename from flat to nested. No CSS breaking change (these variables didn&#39;t exist in CSS before).</li>
+</ul>
+<h2>Alternatives considered</h2>
+<p><strong>A) Use semantic.color.primary.subtle/muted for toned variants.</strong> Discarded because subtle (blue-100) and muted (blue-50) are opaque. Toned requires transparency to layer over varying surface colors. The visual and functional distinction is real.</p>
+<p><strong>B) Put rgba values directly in the semantic layer without foundation overlays.</strong> Discarded because it violates rule 2 (semantic tokens never contain hardcoded values). The foundation overlay layer provides raw values; semantic gives them intent.</p>
+<p><strong>C) Create a separate &quot;Toned&quot; Figma variable collection.</strong> Discarded because toned is a state/variant of the primary color, not a separate system. It belongs in the same Semantic collection alongside default, hover, subtle, etc.</p>
+<p><strong>D) Use CSS opacity property instead of rgba alpha.</strong> Discarded because CSS opacity affects the entire element including text and children. rgba alpha on the background only affects the fill, leaving text at full opacity — which is the intended behavior.</p>
+
+  </div>
+</main>
+
+<script src="../../js/main.js"></script>
+</body>
+</html>

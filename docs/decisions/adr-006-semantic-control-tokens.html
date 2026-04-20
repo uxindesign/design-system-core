@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADR-006 — Adopt semantic control tokens for shared dimensions and typography across interactive controls — Design System</title>
+  <link rel="stylesheet" href="../../css/design-system.css">
+  <link rel="stylesheet" href="../../docs/layout.css">
+  <style>
+    .ds-md-content h1, .ds-md-content h2, .ds-md-content h3 { margin-top: var(--ds-spacing-8); margin-bottom: var(--ds-spacing-3); color: var(--ds-content-default); }
+    .ds-md-content h1 { font-size: var(--ds-font-size-2xl); font-weight: var(--ds-font-weight-semibold); margin-top: 0; }
+    .ds-md-content h2 { font-size: var(--ds-font-size-xl); font-weight: var(--ds-font-weight-semibold); border-top: var(--ds-border-width-1) solid var(--ds-border-subtle); padding-top: var(--ds-spacing-6); }
+    .ds-md-content h3 { font-size: var(--ds-font-size-lg); font-weight: var(--ds-font-weight-semibold); }
+    .ds-md-content p { color: var(--ds-content-secondary); line-height: var(--ds-line-height-relaxed); margin: var(--ds-spacing-3) 0; }
+    .ds-md-content ul, .ds-md-content ol { color: var(--ds-content-secondary); line-height: var(--ds-line-height-relaxed); padding-left: var(--ds-spacing-6); margin: var(--ds-spacing-3) 0; }
+    .ds-md-content li { margin: var(--ds-spacing-1) 0; }
+    .ds-md-content code { font-family: var(--ds-font-family-mono); font-size: 0.9em; background: var(--ds-background-subtle); padding: 1px var(--ds-spacing-1); border-radius: var(--ds-radius-sm); }
+    .ds-md-content pre { background: var(--ds-background-subtle); padding: var(--ds-spacing-4); border-radius: var(--ds-radius-md); overflow-x: auto; font-size: var(--ds-font-size-sm); margin: var(--ds-spacing-4) 0; }
+    .ds-md-content pre code { background: none; padding: 0; }
+    .ds-md-content table { width: 100%; border-collapse: collapse; margin: var(--ds-spacing-4) 0; font-size: var(--ds-font-size-sm); }
+    .ds-md-content table th, .ds-md-content table td { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-1) solid var(--ds-border-default); }
+    .ds-md-content table th { font-weight: var(--ds-font-weight-semibold); background: var(--ds-background-subtle); }
+    .ds-md-content a { color: var(--ds-content-link-default); }
+    .ds-md-content a:hover { color: var(--ds-content-link-hover); }
+    .ds-md-content blockquote { border-left: 3px solid var(--ds-border-default); margin: var(--ds-spacing-4) 0; padding: var(--ds-spacing-2) var(--ds-spacing-4); color: var(--ds-content-tertiary); font-style: italic; }
+    .ds-md-content hr { border: none; border-top: var(--ds-border-width-1) solid var(--ds-border-subtle); margin: var(--ds-spacing-8) 0; }
+    .ds-md-content strong { color: var(--ds-content-default); }
+    .ds-md-generated-banner { background: var(--ds-feedback-info-background); color: var(--ds-feedback-info-content-default); padding: var(--ds-spacing-3) var(--ds-spacing-5); border-radius: var(--ds-radius-md); margin-bottom: var(--ds-spacing-6); font-size: var(--ds-font-size-sm); }
+  </style>
+  <script>
+    (function(){var l=localStorage.getItem('ds-lang');if(l)document.documentElement.setAttribute('lang',l)})();
+  </script>
+</head>
+<body>
+
+<header class="ds-site-header">
+  <div style="display:flex;align-items:center;gap:var(--ds-spacing-4)">
+    <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <a href="../../index.html" class="ds-site-header__brand">
+      <div class="ds-site-header__logo">DS</div>
+      <span class="ds-site-header__title">Design System</span>
+    </a>
+  </div>
+  <div class="ds-site-header__actions">
+    <select class="ds-theme-switcher__select" id="lang-switcher" aria-label="Language">
+      <option value="pt">PT</option>
+      <option value="en">EN</option>
+    </select>
+    <select class="ds-theme-switcher__select" id="theme-switcher">
+      <option value="default">Default (Blue)</option>
+      <option value="ocean">Ocean (Cyan)</option>
+      <option value="forest">Forest (Emerald)</option>
+    </select>
+    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg> Dark</button>
+  </div>
+</header>
+<div class="ds-sidebar-overlay" id="sidebar-overlay"></div>
+<nav class="ds-sidebar" id="sidebar" aria-label="Main navigation"></nav>
+
+<main class="ds-main">
+  <div class="ds-section">
+    <h1 class="ds-section__title">ADR-006 — Adopt semantic control tokens for shared dimensions and typography across interactive controls</h1>
+    <p class="ds-section__subtitle">Status: <strong>Proposed</strong> · Data: —</p>
+  </div>
+
+  <div class="ds-md-generated-banner">
+    Este arquivo é gerado automaticamente por <code>scripts/sync-docs.mjs</code>. Editar a fonte original, não este HTML.
+  </div>
+
+  <div class="ds-md-content">
+<p><strong>Date:</strong> 2026-04-15
+<strong>Status:</strong> Proposed</p>
+<h2>Pré-requisitos</h2>
+<ul>
+<li>ADR-005 implementada (foundation/brand.json existe, convenção <code>-default</code> consolidada).</li>
+<li>Verificação Figma ↔ JSON em CI (ADR-003, 0.5.1).</li>
+</ul>
+<h2>Estimativa de esforço</h2>
+<p>4 horas. 1h para adicionar os tokens semânticos control em <code>light.json</code> e <code>dark.json</code>, 1h30 para atualizar <code>tokens/component/button.json</code>, <code>input.json</code>, <code>select.json</code>, <code>textarea.json</code> para referenciar os novos tokens semânticos, 1h para normalizar dimensões dos componentes no Figma, 30min para build, verificação e validação visual.</p>
+<h2>Passos concretos para sair do estado Proposta</h2>
+<ol>
+<li>Adicionar <code>semantic.typography.control.*</code>, <code>semantic.size.control.*</code>, <code>semantic.space.control.*</code> em <code>tokens/semantic/light.json</code> e <code>dark.json</code> (mesmos valores em ambos os modos).</li>
+<li>Adicionar <code>foundation.dimension.min-target</code> (2.75rem/44px) em <code>tokens/foundation/</code> se o token não existir.</li>
+<li>Atualizar <code>tokens/component/button.json</code> para referenciar os tokens semânticos novos (renomeando <code>padding</code> para <code>padding-x</code>).</li>
+<li>Atualizar <code>tokens/component/input.json</code>, <code>select.json</code>, <code>textarea.json</code> de forma análoga.</li>
+<li>Executar <code>npm run build:tokens</code> e ajustar CSS dos componentes para consumir as novas variáveis geradas (<code>--ds-size-control-*</code>, <code>--ds-space-control-*</code>, <code>--ds-typography-control-*</code>).</li>
+<li>Normalizar Figma: Button, Input Text Field, Select Field com mesma altura 32/40/48; ajustar line-height e paddingY para os valores do control token. Textarea ajusta paddingY mas mantém altura independente.</li>
+<li>Rodar <code>npm run verify:tokens</code> para confirmar coerência.</li>
+<li>Documentar como breaking change no CHANGELOG. Bump minor.</li>
+</ol>
+<h2>Context</h2>
+<p>The design system has 18 components, of which Button, Input Text, Select, and Textarea share the concept of &quot;interactive control with size variants&quot; (sm/md/lg). An audit of the Figma file reveals dimensional inconsistencies between these components:</p>
+<ul>
+<li><strong>Button</strong> uses paddingY 8/10/12 and heights 32/40/48.</li>
+<li><strong>Input Text/Select</strong> (Field frame) use paddingY 6/8/10 and heights 34/40/48.</li>
+<li><strong>Padding-x</strong> is consistent: 12/16/20 across all three.</li>
+<li><strong>cornerRadius</strong> is consistent: 8px across all three.</li>
+</ul>
+<p>The root cause is typography: Button label uses lineHeight 20/20/22px, while Input/Select text uses lineHeight 22/22/24px. The Input uses body-text line-heights (1.5 ratio) where it should use a tighter single-line control line-height that aligns with icon size.</p>
+<p>Additionally, the current <code>button.json</code> mixes token referencing strategies:</p>
+<ul>
+<li><code>button.padding.{sm/md/lg}</code> references semantic <code>space.inset.*</code> and <code>space.component.*</code> inconsistently.</li>
+<li><code>button.height.*</code>, <code>button.font-size.*</code>, <code>button.icon-size.*</code> use absolute values (<code>&quot;2rem&quot;</code>, <code>&quot;0.75rem&quot;</code>), violating rule 3 (only foundation has absolute values).</li>
+<li>There is no shared vocabulary between components that should be dimensionally aligned.</li>
+</ul>
+<h2>Decision</h2>
+<h3>1. Create semantic control typography tokens</h3>
+<p>A new subcategory <code>semantic.typography.control.{sm/md/lg}</code> defines font-size and line-height for single-line text inside interactive controls. Line-height equals icon size at each tier, ensuring text-icon vertical alignment.</p>
+<table>
+<thead>
+<tr>
+<th>Size</th>
+<th>fontSize</th>
+<th>lineHeight</th>
+<th>iconSize</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>sm</td>
+<td>0.875rem (14px)</td>
+<td>1rem (16px)</td>
+<td>1rem (16px)</td>
+</tr>
+<tr>
+<td>md</td>
+<td>0.875rem (14px)</td>
+<td>1.25rem (20px)</td>
+<td>1.25rem (20px)</td>
+</tr>
+<tr>
+<td>lg</td>
+<td>1rem (16px)</td>
+<td>1.5rem (24px)</td>
+<td>1.5rem (24px)</td>
+</tr>
+</tbody></table>
+<p>Tokens in <code>light.json</code> and <code>dark.json</code> (mode-invariant, same values in both):</p>
+<pre><code>semantic.typography.control.font-size.sm  → {foundation.typography.font.size.sm}   (0.875rem)
+semantic.typography.control.font-size.md  → {foundation.typography.font.size.sm}   (0.875rem)
+semantic.typography.control.font-size.lg  → {foundation.typography.font.size.md}   (1rem)
+semantic.typography.control.line-height.sm → {foundation.typography.font.size.md}  (1rem / 16px)
+semantic.typography.control.line-height.md → {foundation.typography.font.size.lg}  (1.125rem → rounds to 1.25rem / 20px)*
+semantic.typography.control.line-height.lg → {foundation.typography.font.size.2xl} (1.5rem / 24px)
+</code></pre>
+<p>*Note: 20px (1.25rem) is not in the font-size scale. If a matching foundation token doesn&#39;t exist, create <code>foundation.typography.line-height.control.md</code> with value <code>1.25rem</code>. Alternatively, use <code>foundation.spacing.5</code> (1.25rem / 20px) since the value is identical. Preferred: create a dedicated token to avoid semantic confusion between spacing and line-height.</p>
+<h3>2. Create semantic control dimensional tokens</h3>
+<pre><code>semantic.size.control.sm         → 2rem     (32px)  — references {foundation.spacing.8}
+semantic.size.control.md         → 2.5rem   (40px)  — references {foundation.spacing.10}
+semantic.size.control.lg         → 3rem     (48px)  — references {foundation.spacing.12}
+semantic.size.control.icon.sm    → 1rem     (16px)  — references {foundation.spacing.4}
+semantic.size.control.icon.md    → 1.25rem  (20px)  — references {foundation.spacing.5}
+semantic.size.control.icon.lg    → 1.5rem   (24px)  — references {foundation.spacing.6}
+semantic.size.control.min-target → 2.75rem  (44px)  — references {foundation.spacing.11}*
+
+semantic.space.control.padding-x.sm → {foundation.spacing.3}    (12px)
+semantic.space.control.padding-x.md → {foundation.spacing.4}    (16px)
+semantic.space.control.padding-x.lg → {foundation.spacing.5}    (20px)
+semantic.space.control.padding-y.sm → {foundation.spacing.2}    (8px)
+semantic.space.control.padding-y.md → {foundation.spacing.2-5}  (10px)
+semantic.space.control.padding-y.lg → {foundation.spacing.3}    (12px)
+</code></pre>
+<p>*If <code>foundation.spacing.11</code> doesn&#39;t exist (44px = 2.75rem), add it to the spacing scale, or use <code>foundation.spacing.10</code> (40px) + note that 44px is derived. Preferred: add a <code>foundation.dimension.min-target</code> token with absolute value <code>2.75rem</code>.</p>
+<p>Height formula: <code>height = padding-y * 2 + lineHeight</code>, validated at all sizes:</p>
+<ul>
+<li>sm: 8 + 16 + 8 = 32 ✓</li>
+<li>md: 10 + 20 + 10 = 40 ✓</li>
+<li>lg: 12 + 24 + 12 = 48 ✓</li>
+</ul>
+<h3>3. Update component tokens to reference semantic control tokens</h3>
+<p><code>component.button.*</code> and future <code>component.input.*</code>, <code>component.select.*</code> reference the semantic control tokens:</p>
+<pre><code>component.button.height.sm       → {semantic.size.control.sm}
+component.button.height.md       → {semantic.size.control.md}
+component.button.height.lg       → {semantic.size.control.lg}
+component.button.padding-x.sm    → {semantic.space.control.padding-x.sm}
+component.button.padding-x.md    → {semantic.space.control.padding-x.md}
+component.button.padding-x.lg    → {semantic.space.control.padding-x.lg}
+component.button.padding-y.sm    → {semantic.space.control.padding-y.sm}
+component.button.padding-y.md    → {semantic.space.control.padding-y.md}
+component.button.padding-y.lg    → {semantic.space.control.padding-y.lg}
+component.button.font-size.sm    → {semantic.typography.control.font-size.sm}
+component.button.font-size.md    → {semantic.typography.control.font-size.md}
+component.button.font-size.lg    → {semantic.typography.control.font-size.lg}
+component.button.icon-size.sm    → {semantic.size.control.icon.sm}
+component.button.icon-size.md    → {semantic.size.control.icon.md}
+component.button.icon-size.lg    → {semantic.size.control.icon.lg}
+component.button.min-target-size → {semantic.size.control.min-target}
+</code></pre>
+<p>Rename <code>button.padding.{sm/md/lg}</code> → <code>button.padding-x.{sm/md/lg}</code> to clarify axis.</p>
+<h3>4. Normalize Figma component dimensions</h3>
+<p>All interactive controls (Button, Input Text Field, Select Field) must use the same height at each size tier: 32/40/48. This requires updating Input/Select:</p>
+<ul>
+<li>Adjust text line-height from 22px to match control token (sm=16, md=20, lg=24)</li>
+<li>Adjust paddingY to match control token (sm=8, md=10, lg=12)</li>
+</ul>
+<p>Textarea shares padding tokens but not height:</p>
+<ul>
+<li>Adjust paddingY to match control token (sm stays 8, md changes 12→10, lg changes 16→12)</li>
+<li>Adjust paddingX binding to use <code>space.control.padding-x.*</code> (values stay 12/16/20)</li>
+<li>Height remains independent (FIXED or HUG content, multi-line)</li>
+<li>Line-height remains at body text ratios (multi-line text uses normal line-height, not the control line-height optimized for single-line icon alignment)</li>
+</ul>
+<h2>Consequences</h2>
+<ul>
+<li><strong>Tokens:</strong> ~18 new semantic tokens (6 size, 6 space, 6 typography). 3 button tokens renamed (padding → padding-x). ~10 button tokens updated from absolute values to semantic references. Foundation may gain 1-2 tokens (line-height 1.25rem, dimension min-target).</li>
+<li><strong>CSS:</strong> New variables <code>--ds-size-control-*</code>, <code>--ds-space-control-*</code>, <code>--ds-typography-control-*</code>. Button CSS variables renamed <code>--ds-button-padding-*</code> → <code>--ds-button-padding-x-*</code>, new <code>--ds-button-padding-y-*</code>.</li>
+<li><strong>Figma:</strong> New variables in Semantic collection: <code>size/control/*</code>, <code>space/control/*</code>, <code>typography/control/*</code>. Button, Input Text, Select, Textarea components re-bound to new variables. Input/Select Field frames adjusted to match 32/40/48 heights. Textarea paddingY adjusted from 8/12/16 to 8/10/12; height unchanged.</li>
+<li><strong>Docs:</strong> New section &quot;Control sizing&quot; documenting the shared dimensional system. Button, Input, Select pages updated. token-schema.md and component-inventory.md updated.</li>
+<li><strong>Breaking changes:</strong> <code>--ds-button-padding-sm/md/lg</code> renamed to <code>--ds-button-padding-x-sm/md/lg</code>. Migration: find-and-replace in consuming CSS.</li>
+</ul>
+<h2>Alternatives considered</h2>
+<p><strong>A) Keep button tokens referencing foundation directly (ADR proposed by other chat).</strong> Would create button.padding-y.{sm/md/lg} → foundation.spacing.* without semantic layer. Discarded because the audit shows Input, Select, and Textarea share the same dimensions — the pattern is systemic, not component-specific.</p>
+<p><strong>B) Create semantic tokens named per-component (semantic.space.component.button-height-md).</strong> Discarded because &quot;button&quot; in a semantic token name is a smell — it&#39;s a component token in disguise. The correct abstraction is &quot;control&quot;, not &quot;button&quot;.</p>
+<p><strong>C) Accept the 2px height difference between Button and Input/Select.</strong> Discarded because the difference stems from inconsistent line-heights, not intentional design. When placed side-by-side in a form (e.g., inline search with button), the misalignment is visible and incorrect.</p>
+
+  </div>
+</main>
+
+<script src="../../js/main.js"></script>
+</body>
+</html>

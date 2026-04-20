@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "@tokens-studio/sd-transforms": "^2.0.3",
+    "marked": "^18.0.2",
     "style-dictionary": "^5.4.0"
   }
 }
