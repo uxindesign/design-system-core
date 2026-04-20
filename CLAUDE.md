@@ -1,497 +1,123 @@
-# Design System — Guia para Claude Code
+# CLAUDE.md — instruções de agente
 
-## Visão Geral
+Este arquivo é lido pelo Claude Code (CLI e app) antes de qualquer operação neste repositório. Contém só o que um agente precisa pra operar corretamente: convenções, regras, acessos. A documentação do design system em si vive no site (`docs/*.html`) e não deve ser duplicada aqui.
 
-Design system white-label com tokens semânticos, 18 componentes, modos Light/Dark e 3 temas de marca (Default, Ocean, Forest). Mantido em dois artefatos sincronizados:
+## Visão geral em uma frase
 
-- **CSS** — este repositório (`uxindesign/design-system-core`, branch `main`)
-- **Figma** — https://www.figma.com/design/PRYS2kL7VdC1MtVWfZvuDN
+Design system white-label em CSS puro com tokens DTCG em JSON, 18 componentes, modos light/dark, três temas (Default, Ocean, Forest). Versionamento 0.x enquanto não houver release oficial 1.0.
 
-Site de documentação: https://uxindesign.github.io/design-system-core/
+## Fontes de verdade
 
----
+| Tipo de informação | Onde vive |
+|---|---|
+| Tokens (foundation/semantic/component) | `tokens/**/*.json` (DTCG). CSS em `css/tokens/generated/` é derivado. |
+| Código dos componentes | `css/components/*.css`. |
+| Decisões arquitetônicas | `docs/decisions/ADR-*.md`. Índice gerado em `docs/adr-index.md`. |
+| Princípios de marca | `docs/brand-principles.md`. |
+| Princípios do sistema | `docs/system-principles.md`. |
+| Arquitetura de tokens | `docs/token-architecture.html`. |
+| Tipografia, cores, spacing | `docs/foundations-*.html`. |
+| Inventário de componentes | `docs/component-inventory.md`. |
+| Temas e dark mode | `docs/theming.html`. |
+| Acessibilidade | `docs/accessibility.html`. |
+| Versões e histórico | `CHANGELOG.md` na raiz (fonte), `docs/changelog.html` (gerado). |
+| Como contribuir | `CONTRIBUTING.md`. |
+| Backlog | `docs/backlog.md`. |
 
-## Arquitetura de Tokens
+Ao responder uma pergunta sobre o sistema, vá primeiro nesses arquivos. Não reescreva de memória.
 
-Três camadas, do primitivo ao semântico:
+## Acessos
 
-```
-Foundation (valores brutos, ~212 vars — inclui 6 colored overlays ADR-007)
-    ↓ alias
-Brand (3 modos: Default/Ocean/Forest, 2 vars)
-    ↓ alias
-Semantic (2 modos: Light/Dark, ~137 vars — inclui 19 control + 3 toned)
-    ↓ consumo
-Component (~130 vars — inclui toned color tokens)
-```
+### Figma
 
-### CSS — Estrutura de Arquivos
+Dois MCPs disponíveis, ambos com autenticação ativa:
 
-```
-css/
-├── design-system.css          ← entry point (importa tudo)
-├── tokens/
-│   ├── foundation.css         ← cores primitivas, tipografia, spacing, radius, shadows, etc.
-│   ├── theme-light.css        ← tokens semânticos Light (background, text, border, feedback, state, space, radius)
-│   ├── theme-dark.css         ← overrides Dark ([data-mode="dark"])
-│   └── themes/
-│       ├── theme-ocean.css    ← marca Ocean: primary=cyan, secondary=indigo ([data-theme="ocean"])
-│       └── theme-forest.css   ← marca Forest: primary=emerald, secondary=amber ([data-theme="forest"])
-├── base/
-│   ├── reset.css              ← reset, Google Fonts (Inter + DM Mono), estilos de code/pre/table
-│   └── typography.css         ← 24 classes .ds-text-{category}-{size}
-├── components/                ← 18 arquivos CSS de componentes
-└── utilities/
-```
+- **Remoto (`mcp__51ce7e00-…`):** autenticado como UXIN (Pro/Expert). Use para leitura ampla (`get_metadata`, `get_design_context`) e escrita via Plugin API (`use_figma`). `fileKey` do DS: `PRYS2kL7VdC1MtVWfZvuDN`.
+- **Desktop Dev Mode (`mcp__Figma__*`):** requer Figma desktop aberto com Dev Mode MCP Server habilitado (Preferências → Enable Dev Mode MCP Server). Bom para ler o node atualmente selecionado com contexto de design.
 
-### Figma — Coleções de Variáveis
+Antes de chamar `use_figma`, carregar a skill `figma:figma-use`.
 
-| Coleção | Modos | Variáveis | Escopos |
-|---------|-------|-----------|---------|
-| Foundation | Value | 192 | Cores: `[]` (ocultas). Tipografia: escopos específicos (FONT_SIZE, LINE_HEIGHT, etc). Overlays: EFFECT_COLOR. Opacity: OPACITY. Spacing/radius/stroke: `[]` |
-| Brand | Default, Ocean, Forest | 13 | `[]` (camada-ponte, oculta dos pickers) |
-| Theme | Light, Dark | 94 | Semânticos: FRAME_FILL/SHAPE_FILL, TEXT_FILL, STROKE_COLOR, GAP, CORNER_RADIUS, STROKE_FLOAT conforme o token |
+### GitHub
 
-**Regra de escopos:** Foundation e Brand ficam SEMPRE ocultos (`[]`) dos pickers. Designers selecionam apenas tokens do Theme. Exceções: tipografia (sem camada semântica), overlays e opacity.
+MCP (`mcp__github__*`) usa um Personal Access Token fine-grained com escopo restrito ao repo `uxindesign/design-system-core`. Permissões: Contents read+write, Issues read+write, Pull requests read+write, Actions read, Metadata read. Sem `workflow` ou `packages`.
 
----
+Git local usa SSH (`git@github.com:uxindesign/design-system-core.git`). Zero token em URL.
 
 ## Convenções
 
-### Prefixos
+### Commits
 
-- CSS custom properties: `--ds-`
-- Classes CSS: `.ds-`
-- Classes de texto: `.ds-text-{category}-{size}` (display, heading, body, label, caption, overline, code)
-
-### Naming de Variáveis Figma
-
-Usam `/` como separador de grupo:
-- `color/blue/500`, `spacing/16`, `radius/md`
-- `background/default`, `text/secondary`, `border/brand`
-- `brand/primary`, `brand/secondary`
-- `space/inset-md`, `space/gap-lg`, `radius/component`
-
-### Naming CSS
-
-Usam `-` como separador:
-- `--ds-color-blue-500`, `--ds-spacing-4`, `--ds-radius-md`
-- `--ds-background-default`, `--ds-text-secondary`
-
-### Control Tokens (ADR-006)
-
-Controles interativos (Button, Input, Select, Textarea) compartilham tokens dimensionais na camada semântica:
-
-- **`semantic.size.control.{sm/md/lg}`** — heights: 32/40/48px
-- **`semantic.space.control.padding-x.{sm/md/lg}`** — 12/16/20px
-- **`semantic.space.control.padding-y.{sm/md/lg}`** — 8/10/12px
-- **`semantic.typography.control.font-size.{sm/md/lg}`** — 14/14/16px
-- **`semantic.typography.control.line-height.{sm/md/lg}`** — 16/20/24px (= icon size)
-- **`semantic.size.control.icon.{sm/md/lg}`** — 16/20/24px
-
-Fórmula: `height = padding-y × 2 + line-height`
-
-Component tokens (`component.button.*`, `component.input.*`, etc.) referenciam os control tokens — nunca valores absolutos. Textarea compartilha padding-x e padding-y mas **não** height nem line-height (multi-line usa body text ratios).
-
-### Toned Colors (ADR-007)
-
-Tokens toned usam overlays coloridos com transparência (diferente de `subtle`/`muted` que são opacos):
-- **Foundation:** `color/overlay/blue-600/{12,20,28}` (light), `color/overlay/blue-400/{15,25,32}` (dark)
-- **Semantic:** `color.primary.toned.{default,hover,active}` — alias pra foundation overlays
-- **Disabled:** usa `state.disabled.*` (opaco neutro), não tokens toned específicos
-
----
-
-## Regras Obrigatórias
-
-### 1. Versionamento e Changelog
-
-A cada alteração significativa (tokens, componentes, documentação):
-1. **Figma Changelog** — nova seção na página "Changelog" (node 195:153)
-2. **Figma Cover** — atualizar badge de versão + stats (node 185:3)
-3. **package.json** — bumpar campo `version` (semver)
-
-### 2. Documentação Bilíngue
-
-- **Figma** — textos sempre em **português (PT-BR)**
-- **Site GitHub Pages** (docs/) — bilíngue **PT-BR + EN** com seletor de idioma
-- Termos técnicos universais (label, placeholder, padding, icon, focus ring) podem ficar em inglês no PT-BR
-
-### 3. Contraste WCAG 2.2 AA — Obrigatório
-
-Toda combinação foreground/background deve atingir **4.5:1** (texto normal) ou **3:1** (texto grande ≥24px / ≥18.66px bold):
-
-- **`text/on-brand`** — deve ser branco em Light (fundo escuro) e **neutral-900 em Dark** (fundo claro 400-level)
-- **`brand/*/foreground`** — mesma lógica: contrastar com o `default` do respectivo modo
-- **`feedback/*/foreground`** — dark text (#0F172A) quando o feedback color é claro (400-level)
-- **`feedback/info/foreground`** — usa neutral-900 em **ambos** os modos (sky-500 e sky-400 são claros demais para branco)
-
-**Regra geral:** quando uma cor de fundo usa shade 400 ou mais claro, o foreground deve ser neutral-900. Quando usa shade 600 ou mais escuro, o foreground pode ser branco.
-
-**Ao criar novos tokens de cor**, sempre calcular o contraste antes de commitar. Cores que funcionam em Light podem falhar em Dark (e vice-versa).
-
-### 4. Escopos de Variáveis Figma
-
-Ao criar novas variáveis:
-- **Foundation colors/spacing/radius/stroke** → `[]` (ocultas)
-- **Brand** → `[]` (ocultas)
-- **Theme background/surface/feedback bg/state bg** → `["FRAME_FILL", "SHAPE_FILL"]`
-- **Theme brand primary/secondary default/hover/active** → `["FRAME_FILL", "SHAPE_FILL", "STROKE_COLOR"]`
-- **Theme text/foreground** → `["TEXT_FILL", "SHAPE_FILL"]`
-- **Theme border colors** → `["STROKE_COLOR"]`
-- **Theme border-width** → `["STROKE_FLOAT"]`
-- **Theme spacing (space/*)** → `["GAP"]`
-- **Theme radius** → `["CORNER_RADIUS"]`
-- **Foundation tipografia** → escopos específicos (`FONT_SIZE`, `FONT_FAMILY`, etc.)
-- NUNCA usar `ALL_SCOPES` — polui todos os pickers
-
-### 4. Textos de Documentação no Figma — NUNCA hardcodar
-
-Ao criar textos em páginas de documentação do Figma, **sempre** replicar o padrão das páginas existentes:
-
-1. **Aplicar text style** — títulos usam `heading/sm`, corpo e bullets usam `body/md`
-2. **Vincular fill a variável** — títulos: `text/default`, corpo/bullets: `text/secondary`
-3. **Vincular propriedades tipográficas** — fontSize, fontFamily, fontWeight, letterSpacing devem vir do text style (que já referencia variáveis Foundation)
-4. **Fills de shapes/dividers** — vincular a variáveis Theme (ex: `background/muted` para dividers)
-
-**NUNCA** definir cores com valores RGB literais (ex: `{r: 0.06, g: 0.09, b: 0.16}`) — use `setBoundVariableForPaint()` para vincular à variável correta. Sem isso, a troca de tema/modo não funciona.
-
-5. **Vincular espaçamentos a variáveis** — todo padding, gap e itemSpacing de frames de documentação DEVE usar `setBoundVariable()` com tokens de spacing Foundation (`spacing/0`, `spacing/4`, `spacing/8`, `spacing/12`, etc.)
-6. **Layout sizing** — textos em parents com auto-layout VERTICAL devem usar `layoutSizingHorizontal = 'FILL'` (nunca FIXED). Frames filhos devem usar `layoutSizingHorizontal = 'FILL'` e `layoutSizingVertical = 'HUG'`.
-
-**Como fazer no código:**
-```js
-// Text style + fill
-const style = textStyles.find(s => s.name === 'body/md');
-textNode.textStyleId = style.id;
-const paint = figma.variables.setBoundVariableForPaint(
-  { type: 'SOLID', color: { r: 0, g: 0, b: 0 } }, 'color', textSecondary
-);
-textNode.fills = [paint];
-textNode.textAutoResize = 'HEIGHT';
-textNode.layoutSizingHorizontal = 'FILL';
-
-// Spacing em frames (só vincular valores > 0)
-const spacing12 = spacingVars.find(v => v.name === 'spacing/12');
-frame.setBoundVariable('itemSpacing', spacing12);
-// NÃO vincular padding 0 a spacing/0 — deixar o valor padrão
-frame.layoutSizingHorizontal = 'FILL';
-frame.layoutSizingVertical = 'HUG';
-```
-
-**Tokens de valor zero NÃO devem ser vinculados:** `spacing/0`, `radius/0`, `stroke/0` e `shadow-none` existem na Foundation como referência, mas nunca devem ser aplicados via `setBoundVariable()`. Zero é zero — não precisa de token. O mesmo vale para `--ds-spacing-0` e `--ds-shadow-none` no CSS.
-
-### 5. Componentes Figma
-
-- `clipsContent = false` em component sets — permitir visualização de focus rings
-- Resize para abraçar todo o conteúdo incluindo overflow
-- Textos default dos componentes em PT-BR (Rótulo, Texto auxiliar, Texto placeholder)
-
-### 6. Documentação no Site (HTML) — usar tokens CSS
-
-No site GitHub Pages, todo conteúdo deve usar custom properties do design system:
-- Cores de texto: `var(--ds-text-default)`, `var(--ds-text-secondary)`
-- Backgrounds: `var(--ds-surface-default)`, `var(--ds-background-subtle)`
-- Bordas: `var(--ds-border-default)`
-- Espaçamentos: `var(--ds-spacing-*)`
-- Tipografia: `var(--ds-font-size-*)`, `var(--ds-font-weight-*)`
-- Sombras: `var(--ds-shadow-*)`
-- Radius: `var(--ds-radius-*)`
-- **NUNCA** usar hex/rgb literais em inline styles — sempre custom properties
-
-Seguir os padrões visuais existentes:
-- Cards de navegação: `border: 1px solid var(--ds-border-default)`, `border-radius: var(--ds-radius-lg)`, hover com `var(--ds-shadow-md)`
-- Blocos de código: `<pre><code>` (estilizado via reset.css — fundo `neutral-900`, texto `neutral-100`)
-- Tabelas de classes: `<table class="ds-props-table">` com `<code>` inline para nomes de classes
-- Previews de componentes: `<div class="ds-preview">` com tabs Preview/Code
-- Notas de acessibilidade: `<div class="ds-a11y-note">`
-
-### 7. Git / Deploy
-
-- Repo: `uxindesign/design-system-core` (NÃO confundir com `design-system` que é o repo antigo)
-- Branch: `main`
-- Deploy: GitHub Pages (raiz `/`)
-- URL: `https://uxindesign.github.io/design-system-core/docs/`
-- Commitar e fazer push sem pedir permissão para ações óbvias
-
----
-
-## Figma — Estrutura de Páginas
+Conventional Commits em português. Prefixos aceitos: `feat`, `fix`, `chore`, `docs`, `refactor`, `style`, `test`, `ci`. Exemplo:
 
 ```
-Cover                          ← capa com versão e stats
-Getting Started                ← guia de uso
-Theming                        ← documentação de temas
-Accessibility                  ← WCAG 2.2 AA
-Component Status               ← status de implementação
-Changelog                      ← registro de versões
---- Foundations ---
-Foundation — Colors            ← 10 paletas primitivas (neutral, blue, red, amber, green, purple, sky, cyan, emerald, indigo)
-Theme — Colors                 ← tokens semânticos (background, surface, brand, text, border, feedback, state)
-Typography                     ← 24 text styles
-Spacing                        ← 20 foundation + semânticos
-Radius                         ← 8 tokens
-Elevation                      ← 5 níveis (effect styles)
-Borders                        ← larguras + cores
---- Components ---
-Button, Input Text, Textarea, Select, Checkbox, Radio, Toggle,
-Badge, Alert, Card, Modal, Tooltip, Tabs, Breadcrumb,
-Avatar, Divider, Spinner, Skeleton
-Dark Mode Preview
---- Utilities ---
-_Utilities                     ← 30 ícones Material Symbols
+fix(tokens): recalibrar paletas green e amber para contraste 4.5:1
+
+- Novos valores em colors.json
+- Regenera CSS via build-tokens.mjs
+- Atualiza Figma Variables
+
+Co-Authored-By: ...
 ```
 
-### Figma fileKey
+### Pull requests
 
-`PRYS2kL7VdC1MtVWfZvuDN`
+Título curto em português, corpo em markdown. Seções obrigatórias: **Summary**, **Test plan**. Quando a mudança afeta decisões arquiteturais, anexar ou criar ADR em `docs/decisions/`.
 
-Usar com MCP tools: `mcp__figma__use_figma`, `mcp__figma__get_screenshot`, `mcp__figma__get_metadata`.
-Sempre carregar a skill `figma:figma-use` antes de chamar `use_figma`.
+### Idiomas
 
----
+- Textos do Figma: sempre em **PT-BR**.
+- Site: **bilíngue PT-BR + EN** via spans `<span data-lang="pt">…</span><span data-lang="en">…</span>` controlados por `[data-lang]` no `<html>`.
+- Termos técnicos universais (label, placeholder, focus ring, padding, radius) podem ficar em inglês mesmo no PT-BR.
 
-## Componentes (18)
+## Regras operacionais (não inferíveis dos arquivos)
 
-| Componente | CSS | Figma Page | Variantes |
-|---|---|---|---|
-| Button | button.css | Button | 60 |
-| Input Text | input.css | Input Text | 18 |
-| Textarea | textarea.css | Textarea | 18 |
-| Select | select.css | Select | 18 |
-| Checkbox | checkbox.css | Checkbox | 9 |
-| Radio | radio.css | Radio | 6 |
-| Toggle | toggle.css | Toggle | 6 |
-| Badge | badge.css | Badge | 14 |
-| Alert | alert.css | Alert | 8 |
-| Card | card.css | Card | 3 |
-| Modal | modal.css | Modal | 3 |
-| Tooltip | tooltip.css | Tooltip | 4 |
-| Tabs | tabs.css | Tabs | 4 |
-| Breadcrumb | breadcrumb.css | Breadcrumb | 2 |
-| Avatar | avatar.css | Avatar | — |
-| Divider | divider.css | Divider | — |
-| Spinner | spinner.css | Spinner | — |
-| Skeleton | skeleton.css | Skeleton | — |
+1. **Nunca hardcodear hex, rgb ou px em CSS de componente.** Sempre referenciar `var(--ds-…)`. O pipeline `tokens/*.json → build-tokens.mjs → css/tokens/generated/*.css` é a única fonte.
+2. **Depois de editar um JSON em `tokens/`**, rodar `npm run build:tokens`. O CI (deploy.yml) também regenera no push pra main, mas rodar localmente evita commits com CSS desatualizado.
+3. **Nunca usar `ALL_SCOPES`** em variáveis Figma. Polui todos os pickers. Usar escopos específicos (`FRAME_FILL`, `SHAPE_FILL`, `TEXT_FILL`, `STROKE_COLOR`, `GAP`, `CORNER_RADIUS`, `STROKE_FLOAT` conforme o token).
+4. **Tokens Foundation e Brand ficam ocultos dos pickers** (`hiddenFromPublishing: true`). Designers só veem tokens do Theme/Semantic.
+5. **Contraste WCAG 2.2 AA (4.5:1 texto normal, 3:1 UI)** é obrigatório em qualquer novo par foreground/background. Checar com `docs/accessibility.html` aberto ao lado. Fundo shade 400 ou mais claro pede foreground neutral-900; fundo shade 600+ pede foreground neutral-50.
+6. **Valores zero não viram tokens aplicados.** `spacing/0`, `radius/0`, `shadow-none` existem como referência em Foundation mas nunca devem ser vinculados a propriedades (use literal `0`).
+7. **Cada mudança significativa entra em `CHANGELOG.md`.** Na raiz, formato Keep a Changelog, seção `[Não publicado]` ganha a entrada antes do commit.
 
----
+## Checklist de pré-commit
 
-## Tipografia — 24 Text Styles
+- [ ] `npm run build:tokens` roda sem erro e o git fica limpo (ou com diff esperado em `css/tokens/generated/`).
+- [ ] `npm run sync:docs` atualiza `docs/adr-index.md`, `docs/token-schema.md`, `docs/component-inventory.md`.
+- [ ] Contraste validado se tokens de cor foram tocados.
+- [ ] `CHANGELOG.md` ganhou entrada em `[Não publicado]` se há mudança observável pelo consumidor.
+- [ ] Se uma decisão arquitetural mudou, tem ADR novo ou atualizado em `docs/decisions/`.
 
-Categorias: display (2xl–sm), heading (xl–xs), body (lg–xs), label (lg–xs), caption (md–sm), overline (md–sm), code (md–sm).
-
-Fontes: Inter (sans/display), DM Mono (mono).
-
-Classes CSS: `.ds-text-display-2xl`, `.ds-text-heading-lg`, `.ds-text-body-md`, etc.
-
----
-
-## Temas e Modos
-
-### CSS — Ativação
-
-```html
-<!-- Default Light (padrão) -->
-<html>
-
-<!-- Ocean Dark -->
-<html data-theme="ocean" data-mode="dark">
-
-<!-- Forest Light -->
-<html data-theme="forest">
-```
-
-### Figma — Ativação
-
-- Modo Light/Dark: alternar modo da coleção **Theme** no frame pai
-- Tema de marca: alternar modo da coleção **Brand** no frame pai
-
-### Paletas por tema
-
-| Tema | Primary | Secondary |
-|---|---|---|
-| Default | Blue | Purple |
-| Ocean | Cyan | Indigo |
-| Forest | Emerald | Amber |
-
----
-
-## Checklist de Alterações
-
-Antes de considerar uma tarefa concluída:
-
-- [ ] CSS e Figma estão sincronizados? (valores resolvidos devem ser idênticos)
-- [ ] Escopos das novas variáveis estão corretos?
-- [ ] Textos do Figma estão em PT-BR?
-- [ ] Página Theme Colors atualizada? (hex texts e swatches devem refletir os valores reais dos tokens)
-- [ ] Contraste WCAG 2.2 AA verificado para novos pares foreground/background?
-- [ ] Changelog atualizado (Figma)?
-- [ ] Versão bumpada (Figma Cover + package.json)?
-- [ ] Commit + push feitos?
-
----
-
-## Princípios de Design
-
-Os seguintes princípios orientam todas as decisões — de tokens a componentes a patterns.
-Cada decisão que contradiga um princípio precisa de ADR justificando.
-
-1. **Agnóstico de stack** — O DS é CSS puro + vanilla JS. Tokens em JSON (DTCG) transformados via Style Dictionary. Nenhuma decisão deve acoplar o DS a um framework específico.
-2. **Consistência acima de velocidade** — Um componente mal especificado gera retrabalho no Figma e no código. Definir API antes de implementar.
-3. **Acessibilidade desde o início** — WCAG 2.2 AA é piso, não teto. Não é "fase 2".
-4. **Tokens como contrato** — Tokens são a cola entre Figma e código. Toda propriedade visual deve ser resolvida via token, nunca hardcoded.
-5. **Decisão sem registro não existe** — Se não virou ADR em `docs/decisions/`, não foi decidida formalmente.
-
----
-
-## Migração de Tokens: Foundation→Brand→Theme → Foundation→Semantic→Component
-
-### Contexto
-
-A arquitetura atual (Foundation→Brand→Theme) usa Brand como ponte entre 3 temas de cor (Default, Ocean, Forest). Na evolução para um DS de marca única, a camada Brand perde propósito como seletor multi-marca e passa a ser a camada semântica.
-
-### Arquitetura alvo
+## Como a pipeline funciona
 
 ```
-Foundation (primitivos — valores brutos)
-    ↓ referência
-Semantic (intenção — surface, text, border, feedback, state)
-    ↓ referência
-Component (tokens específicos por componente — button.bg.default)
+tokens/**/*.json         (DTCG — fonte canônica)
+      │
+      │ build-tokens.mjs (Style Dictionary)
+      ▼
+css/tokens/generated/*.css  (derivado, marcado AUTO-GENERATED)
+      │
+      │ @import em design-system.css
+      ▼
+css/components/*.css     (consome as variáveis)
+      │
+      ▼
+docs/*.html              (documentação e preview)
 ```
 
-A camada Semantic herda a estrutura da atual Theme (94 vars) e absorve o que era Brand (13 vars). A camada Component é nova — não existia antes.
+No CI (`.github/workflows/deploy.yml`), `npm run build:tokens` roda em cada push pra main e auto-commita os arquivos gerados.
 
-### Formato canônico: JSON (DTCG)
-
-Tokens são definidos em JSON seguindo o formato Design Token Community Group (DTCG):
-- `$value` para valores
-- `$type` para tipo
-- `$description` para documentação
-- Referências com `{foundation.color.blue.500}`
-
-Esses JSONs são transformados pelo Style Dictionary em:
-- CSS custom properties (`--ds-*`) para o código web
-- Figma Variables (via sync script ou `use_figma`)
-- Futuramente: Swift, Kotlin, SCSS, ou o que a stack exigir
-
-### Mapeamento de nomenclatura
-
-| Contexto | Formato | Exemplo |
-|----------|---------|---------|
-| JSON (canônico) | `{nível}.{categoria}.{tipo}.{variante}` | `foundation.color.blue.500` |
-| CSS (gerado) | `--ds-{categoria}-{tipo}-{variante}` | `--ds-color-blue-500` |
-| Figma Variables | `{categoria}/{tipo}/{variante}` | `color/blue/500` |
-
-Os 3 formatos representam o mesmo token — a transformação é automática via Style Dictionary.
-
-### Referência: ADR-001
-
-Ver `docs/decisions/ADR-001-migracao-tokens.md` para contexto completo da decisão.
-
----
-
-## Style Dictionary
-
-### Instalação
+## Ferramentas disponíveis no repo
 
 ```bash
-npm install style-dictionary @tokens-studio/sd-transforms
+npm run build:tokens   # Foundation/Semantic/Component → CSS gerado
+npm run sync:docs      # Regenera inventários em docs/*.md
+# (em breve, via plano de consolidação)
+npm run verify:tokens  # Compara Figma Variables com tokens/*.json
+npm run build:api      # Gera docs/api/*.json
+npm run build:llms     # Gera docs/llms.txt e llms-full.txt
+npm run build:all      # roda todos os builds acima em ordem
 ```
 
-### Localização dos tokens
+## Quando houver dúvida
 
-```
-tokens/
-├── foundation/
-│   ├── colors.json
-│   ├── typography.json
-│   ├── spacing.json
-│   ├── radius.json
-│   ├── shadows.json
-│   └── opacity.json
-├── semantic/
-│   ├── light.json
-│   └── dark.json
-└── component/
-    ├── button.json
-    ├── input.json
-    └── [componente].json
-```
-
-### Build
-
-```bash
-npx style-dictionary build
-```
-
-Output vai para `css/tokens/` (substituindo os CSS atuais escritos à mão).
-
----
-
-## ADRs (Architecture Decision Records)
-
-Toda decisão de arquitetura é registrada em `docs/decisions/ADR-NNN-titulo.md`.
-
-Formato:
-```markdown
-# ADR-NNN: [Título]
-**Data:** YYYY-MM-DD
-**Status:** Proposta | Aceita | Substituída por ADR-NNN
-
-## Contexto
-## Decisão
-## Consequências
-## Alternativas consideradas
-```
-
-Ao trabalhar no Claude Code, ao final de cada decisão relevante, gerar o ADR e fazer commit.
-
----
-
-## Brand Guidelines
-
-Documento de marca em `brand/principles.md`. Contém:
-- Missão
-- Princípios de design (com exemplos e anti-padrões)
-- Tom de voz
-- Identidade visual (cores da marca, tipografia, logo)
-
-Este documento alimenta tanto o Claude Project (Knowledge Base) quanto o doc site.
-
----
-
-## Storybook
-
-O DS usa Storybook com `@storybook/html` para playground interativo de componentes.
-
-Cada componente tem um arquivo `.stories.js` co-locado:
-```
-components/
-├── button/
-│   ├── button.css          (pode ser symlink ou import do css/components/)
-│   └── button.stories.js
-```
-
-Stories retornam HTML strings e usam argTypes para controls interativos.
-
----
-
-## Referências de Design Systems
-
-DSs consultados durante a construção deste sistema:
-
-| DS | Organização | Referência principal |
-|----|-------------|---------------------|
-| Material Design 3 | Google | Arquitetura de tokens (ref→sys→comp) |
-| Polaris | Shopify | Documentação de padrões, guidelines de conteúdo |
-| Carbon | IBM | Tematização, spacing em mini-unit |
-| Primer | GitHub | Color modes, naming funcional |
-| Atlassian DS | Atlassian | Estados interativos, elevation |
-| Lightning | Salesforce | Padrões de componentes enterprise |
-| Spectrum | Adobe | Acessibilidade, tokens multi-plataforma |
-| Fluent 2 | Microsoft | Cross-platform, design tokens |
-| Base Web | Uber | Overrides system, composabilidade |
-| Chakra UI | Community | API de props, variants system |
-
-Notas detalhadas em `docs/references/ds-references.md`.
+Consulte, nessa ordem: `docs/decisions/adr-index.md` (decisões tomadas), `docs/system-principles.md` (princípios operacionais), `docs/token-architecture.html` (arquitetura), `docs/backlog.md` (o que ainda está por fazer). Se nenhum desses cobre, abra uma issue no GitHub ou pergunte.
