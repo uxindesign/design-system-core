@@ -23,7 +23,10 @@
   "scripts": {
     "build:tokens": "node build-tokens.mjs",
     "sync:docs": "node scripts/sync-docs.mjs",
-    "verify:tokens": "node scripts/tokens-verify.mjs"
+    "verify:tokens": "node scripts/tokens-verify.mjs",
+    "build:api": "node scripts/build-api.mjs",
+    "build:llms": "node scripts/build-llms.mjs",
+    "build:all": "npm run build:tokens && npm run sync:docs && npm run build:api && npm run build:llms && npm run verify:tokens"
   },
   "devDependencies": {
     "@tokens-studio/sd-transforms": "^2.0.3",

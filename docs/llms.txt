@@ -1,0 +1,92 @@
+# Design System Core
+
+> Design system white-label em CSS puro com tokens DTCG em JSON, 18 componentes, modos light/dark, três temas (Default, Ocean, Forest). Versão atual: 0.5.1. Enquanto não houver release oficial 1.0, o projeto fica em 0.x.
+
+Repositório: https://github.com/uxindesign/design-system-core
+Site: https://uxindesign.github.io/design-system-core/
+Arquivo completo para LLMs: https://uxindesign.github.io/design-system-core/docs/llms-full.txt
+
+## Visão geral
+
+- [Home](https://uxindesign.github.io/design-system-core/index.html): visão rápida, quick start, dark mode, temas.
+- [README](https://github.com/uxindesign/design-system-core/blob/main/README.md): instalação e navegação.
+- [Token Architecture](https://uxindesign.github.io/design-system-core/docs/token-architecture.html): arquitetura das três camadas (Foundation → Semantic → Component).
+- [Theming](https://uxindesign.github.io/design-system-core/docs/theming.html): como trocar tema e modo.
+- [Accessibility](https://uxindesign.github.io/design-system-core/docs/accessibility.html): WCAG 2.2 AA aplicada.
+- [Design Principles](https://uxindesign.github.io/design-system-core/docs/design-principles.html): princípios do sistema.
+
+## Foundations
+
+- [Colors](https://uxindesign.github.io/design-system-core/docs/foundations-colors.html)
+- [Theme Colors](https://uxindesign.github.io/design-system-core/docs/foundations-theme-colors.html)
+- [Typography](https://uxindesign.github.io/design-system-core/docs/foundations-typography.html)
+- [Spacing](https://uxindesign.github.io/design-system-core/docs/foundations-spacing.html)
+- [Radius](https://uxindesign.github.io/design-system-core/docs/foundations-radius.html)
+- [Elevation](https://uxindesign.github.io/design-system-core/docs/foundations-elevation.html)
+- [Borders](https://uxindesign.github.io/design-system-core/docs/foundations-borders.html)
+- [Motion](https://uxindesign.github.io/design-system-core/docs/foundations-motion.html)
+- [Opacity](https://uxindesign.github.io/design-system-core/docs/foundations-opacity.html)
+- [Z-index](https://uxindesign.github.io/design-system-core/docs/foundations-zindex.html)
+
+## Components
+
+- [Button](https://uxindesign.github.io/design-system-core/docs/button.html)
+- [Input](https://uxindesign.github.io/design-system-core/docs/input.html)
+- [Textarea](https://uxindesign.github.io/design-system-core/docs/textarea.html)
+- [Select](https://uxindesign.github.io/design-system-core/docs/select.html)
+- [Checkbox](https://uxindesign.github.io/design-system-core/docs/checkbox.html)
+- [Radio](https://uxindesign.github.io/design-system-core/docs/radio.html)
+- [Toggle](https://uxindesign.github.io/design-system-core/docs/toggle.html)
+- [Badge](https://uxindesign.github.io/design-system-core/docs/badge.html)
+- [Alert](https://uxindesign.github.io/design-system-core/docs/alert.html)
+- [Card](https://uxindesign.github.io/design-system-core/docs/card.html)
+- [Modal](https://uxindesign.github.io/design-system-core/docs/modal.html)
+- [Tooltip](https://uxindesign.github.io/design-system-core/docs/tooltip.html)
+- [Tabs](https://uxindesign.github.io/design-system-core/docs/tabs.html)
+- [Breadcrumb](https://uxindesign.github.io/design-system-core/docs/breadcrumb.html)
+- [Avatar](https://uxindesign.github.io/design-system-core/docs/avatar.html)
+- [Divider](https://uxindesign.github.io/design-system-core/docs/divider.html)
+- [Spinner](https://uxindesign.github.io/design-system-core/docs/spinner.html)
+- [Skeleton](https://uxindesign.github.io/design-system-core/docs/skeleton.html)
+
+## Decisões arquiteturais (ADRs)
+
+- [ADR-001 — Migração da arquitetura de tokens para Foundation→Semantic→Component com DTCG + Style Dictionary](https://uxindesign.github.io/design-system-core/docs/decisions/adr-001-migracao-tokens.html) — Aceita
+- [ADR-002 — Stack agnóstica — HTML + CSS + vanilla JS como base](https://uxindesign.github.io/design-system-core/docs/decisions/adr-002-stack-agnostica.html) — Aceita
+- [ADR-003 — Figma como autoridade de design, Git como autoridade de tokens/código](https://uxindesign.github.io/design-system-core/docs/decisions/adr-003-fontes-verdade.html) — Aceita
+- [ADR-004 — WCAG 2.2 AA como padrão de acessibilidade](https://uxindesign.github.io/design-system-core/docs/decisions/adr-004-wcag.html) — Aceita — Implementada em 0.5.0
+- [ADR-005 — Brand como camada foundation, estados explícitos no semantic, e limpeza tipográfica](https://uxindesign.github.io/design-system-core/docs/decisions/adr-005-brand-foundation-e-estados-explicitos.html) — Proposta
+- [ADR-006 — Adopt semantic control tokens for shared dimensions and typography across interactive controls](https://uxindesign.github.io/design-system-core/docs/decisions/adr-006-semantic-control-tokens.html) — Proposed
+- [ADR-007 — Establish toned color system with colored overlays and semantic toned tokens](https://uxindesign.github.io/design-system-core/docs/decisions/adr-007-toned-color-system.html) — Proposed
+- [ADR-008 — Recalibração das paletas foundation `green` e `amber`](https://uxindesign.github.io/design-system-core/docs/decisions/adr-008-recalibracao-paletas-feedback.html) — Aceita — Implementada em 0.5.0
+- [ADR-009 — Separação de `border.default` (decorativa) e `border.control` (funcional)](https://uxindesign.github.io/design-system-core/docs/decisions/adr-009-border-control-vs-decorative.html) — Aceita — Implementada em 0.5.0
+- [ADR-010 — Remoção de `foundation.color.white` e `foundation.color.black` puros](https://uxindesign.github.io/design-system-core/docs/decisions/adr-010-abolir-white-black-puros.html) — Aceita — Implementada em 0.5.0
+- [ADR-011 — Reestruturação do naming de tokens semânticos de cor](https://uxindesign.github.io/design-system-core/docs/decisions/adr-011-renaming-tokens-semanticos-de-cor.html) — Aceita — Implementada em 0.5.0
+
+## Processo
+
+- [Contributing](https://uxindesign.github.io/design-system-core/docs/process-contributing.html): setup, fluxo de PR, convenções.
+- [Versionamento](https://uxindesign.github.io/design-system-core/docs/process-versioning.html): regras de bump 0.x.
+- [Releases](https://uxindesign.github.io/design-system-core/docs/process-releasing.html): passo a passo.
+- [Changelog](https://uxindesign.github.io/design-system-core/docs/changelog.html): histórico de versões.
+- [Backlog](https://uxindesign.github.io/design-system-core/docs/backlog.html): itens fora do escopo imediato.
+
+## Marca
+
+- [Brand Principles](https://uxindesign.github.io/design-system-core/docs/brand-principles.html): missão, princípios, tom de voz, identidade.
+
+## APIs JSON (consumo programático)
+
+- [components.json](https://uxindesign.github.io/design-system-core/docs/api/components.json): 18 componentes com variantes e tokens consumidos.
+- [tokens.json](https://uxindesign.github.io/design-system-core/docs/api/tokens.json): camadas Foundation, Semantic (light/dark) e Component.
+- [adrs.json](https://uxindesign.github.io/design-system-core/docs/api/adrs.json): índice estruturado das decisões.
+- [foundations.json](https://uxindesign.github.io/design-system-core/docs/api/foundations.json): catálogo das 10 foundations.
+- [tokens-sync.json](https://uxindesign.github.io/design-system-core/docs/api/tokens-sync.json): estado de coerência Figma ↔ JSON ↔ CSS.
+
+## Figma
+
+- Arquivo: `PRYS2kL7VdC1MtVWfZvuDN` (UXIN Team, acesso via convite).
+
+---
+
+Gerado por `scripts/build-llms.mjs` em 2026-04-20T12:58:27.695Z.

@@ -1,0 +1,95 @@
+{
+  "generatedAt": "2026-04-20T12:58:27.467Z",
+  "version": "0.5.1",
+  "count": 11,
+  "foundations": [
+    {
+      "slug": "colors",
+      "name": "Colors",
+      "sourceFile": "tokens/foundation/colors.json",
+      "tokenCount": 128,
+      "url": "https://uxindesign.github.io/design-system-core/docs/foundations-colors.html",
+      "note": null
+    },
+    {
+      "slug": "theme-colors",
+      "name": "Theme Colors",
+      "sourceFile": null,
+      "tokenCount": 0,
+      "url": "https://uxindesign.github.io/design-system-core/docs/foundations-theme-colors.html",
+      "note": "Derived from semantic layer"
+    },
+    {
+      "slug": "typography",
+      "name": "Typography",
+      "sourceFile": "tokens/foundation/typography.json",
+      "tokenCount": 35,
+      "url": "https://uxindesign.github.io/design-system-core/docs/foundations-typography.html",
+      "note": null
+    },
+    {
+      "slug": "spacing",
+      "name": "Spacing",
+      "sourceFile": "tokens/foundation/spacing.json",
+      "tokenCount": 21,
+      "url": "https://uxindesign.github.io/design-system-core/docs/foundations-spacing.html",
+      "note": null
+    },
+    {
+      "slug": "radius",
+      "name": "Radius",
+      "sourceFile": "tokens/foundation/radius.json",
+      "tokenCount": 8,
+      "url": "https://uxindesign.github.io/design-system-core/docs/foundations-radius.html",
+      "note": null
+    },
+    {
+      "slug": "elevation",
+      "name": "Elevation",
+      "sourceFile": "tokens/foundation/shadows.json",
+      "tokenCount": 7,
+      "url": "https://uxindesign.github.io/design-system-core/docs/foundations-elevation.html",
+      "note": null
+    },
+    {
+      "slug": "borders",
+      "name": "Borders",
+      "sourceFile": "tokens/foundation/stroke.json",
+      "tokenCount": 4,
+      "url": "https://uxindesign.github.io/design-system-core/docs/foundations-borders.html",
+      "note": null
+    },
+    {
+      "slug": "motion",
+      "name": "Motion",
+      "sourceFile": "tokens/foundation/motion.json",
+      "tokenCount": 7,
+      "url": "https://uxindesign.github.io/design-system-core/docs/foundations-motion.html",
+      "note": null
+    },
+    {
+      "slug": "opacity",
+      "name": "Opacity",
+      "sourceFile": "tokens/foundation/opacity.json",
+      "tokenCount": 7,
+      "url": "https://uxindesign.github.io/design-system-core/docs/foundations-opacity.html",
+      "note": null
+    },
+    {
+      "slug": "z-index",
+      "name": "Z-index",
+      "sourceFile": "tokens/foundation/z-index.json",
+      "tokenCount": 6,
+      "url": "https://uxindesign.github.io/design-system-core/docs/foundations-zindex.html",
+      "note": null
+    },
+    {
+      "slug": "brand",
+      "name": "Brand",
+      "sourceFile": "tokens/foundation/brand.json",
+      "tokenCount": 2,
+      "url": null,
+      "note": null
+    }
+  ]
+}
