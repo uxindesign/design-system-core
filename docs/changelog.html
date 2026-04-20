@@ -74,14 +74,38 @@
 <p>O formato é baseado em <a href="https://keepachangelog.com/pt-BR/1.1.0/">Keep a Changelog</a> e o versionamento segue <a href="https://semver.org/lang/pt-BR/">Semantic Versioning</a>.</p>
 <p>Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na faixa 0.x. Regras de bump documentadas em <code>docs/process-versioning.html</code>.</p>
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
+<p>Consolidação da documentação como fonte única de verdade. Plano em seis fases executadas na branch <code>consolidation/docs-ground-truth</code>.</p>
 <h3>Alterado</h3>
 <ul>
 <li><code>package.json</code> realinhado para <code>0.5.1</code> (estava em <code>1.5.1</code> sem publicação no npm, divergindo do que o site exibia).</li>
+<li><code>README.md</code> reescrito curto (39 linhas, era 74), aponta pro site como fonte completa.</li>
+<li><code>CLAUDE.md</code> reescrito enxuto (123 linhas, era 498). Mantém só instruções de agente, acessos MCP, convenções, regras operacionais, checklist. Conteúdo duplicado do site foi removido.</li>
+<li><code>tokens/component/README.md</code> substituído por nota correta (era placeholder mentindo &quot;componentes ainda não foram migrados&quot;).</li>
+<li><code>docs/foundations.html</code> ganhou breadcrumb e link pra <code>token-architecture.html</code> na intro; grade de cards mantida.</li>
+<li><code>.github/workflows/deploy.yml</code> passa a rodar <code>npm run build:all</code> (tokens + docs + api + llms + verify) em cada push pra main.</li>
+<li><code>scripts/sync-docs.mjs</code> ampliado para converter MDs em HTML usando <code>marked</code>, injetar badge de versão em <code>index.html</code> e gerar <code>docs/decisions/index.html</code> + 11 HTMLs de ADR.</li>
+<li>ADRs atualizados para refletir o código real: ADR-004/008/009/010/011 marcados como &quot;Aceita — Implementada em 0.5.0&quot; com referência aos commits. ADR-003 ganhou seção &quot;Verificação automatizada&quot;. ADR-005/006/007 ganharam Pré-requisitos/Estimativa/Passos concretos.</li>
 </ul>
 <h3>Adicionado</h3>
 <ul>
 <li>Tag <code>v0.5.0-pre-consolidation</code> marcando o estado antes da consolidação.</li>
 <li><code>CHANGELOG.md</code> na raiz como fonte canônica. <code>docs/changelog.html</code> passa a ser gerado a partir deste arquivo.</li>
+<li><code>CONTRIBUTING.md</code> na raiz (setup, fluxo PR, convenções, versionamento).</li>
+<li><code>docs/brand-principles.md</code> com template para preenchimento.</li>
+<li><code>docs/backlog.md</code> listando itens fora deste plano (ADR-005/006/007, Storybook, MCP próprio, publicação npm, etc).</li>
+<li><code>docs/process-contributing.md</code>, <code>docs/process-versioning.md</code>, <code>docs/process-releasing.md</code> cobrindo fluxos.</li>
+<li><code>scripts/tokens-verify.mjs</code>: verifica coerência JSON ↔ CSS (e JSON ↔ Figma quando FIGMA_PAT definido). Três saídas: terminal, <code>docs/api/tokens-sync.json</code>, <code>docs/tokens-sync.html</code>.</li>
+<li><code>.github/workflows/verify-tokens.yml</code>: roda verify em PR e push, comenta divergências no PR.</li>
+<li><code>scripts/build-api.mjs</code>: gera <code>docs/api/components.json</code>, <code>tokens.json</code>, <code>adrs.json</code>, <code>foundations.json</code>.</li>
+<li><code>scripts/build-llms.mjs</code>: gera <code>docs/llms.txt</code> (índice) e <code>docs/llms-full.txt</code> (conteúdo consolidado, 133 KB) seguindo llmstxt.org.</li>
+<li>Scripts <code>verify:tokens</code>, <code>build:api</code>, <code>build:llms</code>, <code>build:all</code> em <code>package.json</code>.</li>
+<li><code>scripts/archive/</code> com <code>extract-tokens.js</code> e <code>add-i18n-shell.mjs</code> preservados e explicados em README.</li>
+<li>Badge de versão em <code>index.html</code> (lida do <code>package.json</code> pelo build).</li>
+<li>Links <code>&lt;link rel=&quot;alternate&quot;&gt;</code> em <code>index.html</code> apontando pros llms.txt.</li>
+</ul>
+<h3>Removido</h3>
+<ul>
+<li><code>style-dictionary.config.js</code> (legado CommonJS v4, não usado — script ativo é <code>build-tokens.mjs</code>).</li>
 </ul>
 <h2><a href="https://github.com/uxindesign/design-system-core/releases/tag/v0.5.0">0.5.0</a> — 2026-04-15</h2>
 <h3>Adicionado</h3>
