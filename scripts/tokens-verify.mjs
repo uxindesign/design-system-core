@@ -174,13 +174,20 @@ function parseCssVars(file) {
 }
 
 // Traduz nome canônico DTCG (foundation.color.neutral.50) para a CSS var
-// gerada (ds-color-neutral-50). Ver build-tokens.mjs para a lógica equivalente.
+// gerada (ds-color-neutral-50). Espelha exatamente o transform
+// `name/strip-layer` definido em build-tokens.mjs:
+//   1. Remove prefixo de camada (foundation/semantic/component).
+//   2. Se o próximo segmento for 'typography', remove também
+//      (foundation.typography.font.size.md → font-size-md).
+//   3. Se o próximo segmento for 'color' seguido de 'overlay', remove 'color'
+//      (foundation.color.overlay.black.5 → overlay-black-5).
+//      Mas mantém 'color' para paletas (foundation.color.blue.500 → color-blue-500).
 function canonicalToCssVar(name) {
-  // Remove prefixos de camada (foundation., semantic., component.) e
-  // substitui pontos por hífens. Mantém a mesma lógica do transform
-  // name/strip-layer em build-tokens.mjs.
-  const stripped = name.replace(/^(foundation|semantic|component)\./, "");
-  return "ds-" + stripped.replace(/\./g, "-");
+  const path = name.split(".");
+  path.shift(); // layer
+  if (path[0] === "typography") path.shift();
+  if (path[0] === "color" && path[1] === "overlay") path.shift();
+  return "ds-" + path.join("-");
 }
 
 function compareJsonToCss({ shared, light, dark, lightAll, darkAll }) {

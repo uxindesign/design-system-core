@@ -62,7 +62,7 @@
 <main class="ds-main">
   <div class="ds-section">
     <h1 class="ds-section__title">ADR-005 — Brand como camada foundation, estados explícitos no semantic, e limpeza tipográfica</h1>
-    <p class="ds-section__subtitle">Status: <strong>Proposta</strong> · Data: 2026-04-14</p>
+    <p class="ds-section__subtitle">Status: <strong>Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.2)</strong> · Data: 2026-04-14</p>
   </div>
 
   <div class="ds-md-generated-banner">
@@ -71,8 +71,16 @@
 
   <div class="ds-md-content">
 <p><strong>Data:</strong> 2026-04-14
-<strong>Status:</strong> Proposta
+<strong>Status:</strong> Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.2)
 <strong>Atualiza:</strong> ADR-001 (seção sobre camada Brand)</p>
+<h2>Implementação</h2>
+<p>Os três pontos do ADR foram executados via ADR-011 e commits anteriores:</p>
+<ol>
+<li><strong>Brand como foundation:</strong> <code>tokens/foundation/brand.json</code> existe com <code>foundation.brand.primary</code> → <code>{foundation.color.blue.600}</code> e <code>foundation.brand.secondary</code> → <code>{foundation.color.purple.600}</code>. <code>tokens/semantic/light.json</code> e <code>dark.json</code> referenciam <code>{foundation.brand.primary}</code> e <code>{foundation.brand.secondary}</code> nos tokens <code>.default</code> (light.json linha 88, dark.json linha 86).</li>
+<li><strong>Sufixo <code>-default</code> explícito:</strong> nenhum CSS de componente em <code>css/components/*.css</code> usa os nomes antigos (<code>--ds-color-primary</code>, <code>--ds-color-secondary</code>, <code>--ds-feedback-success</code> sem sufixo, etc.). Todos consomem <code>--ds-*-default</code>.</li>
+<li><strong><code>font.size.base</code> removido:</strong> <code>tokens/foundation/typography.json</code> não contém mais a chave. Zero ocorrências de <code>--ds-font-size-base</code> em qualquer CSS do repo.</li>
+</ol>
+<p>Fechamento formal em 0.5.2: correção do <code>canonicalToCssVar</code> em <code>scripts/tokens-verify.mjs</code> (alinhamento com o transform <code>name/strip-layer</code> de <code>build-tokens.mjs</code>), zerando 65 falsos positivos que mascaravam a verificação.</p>
 <h2>Pré-requisitos</h2>
 <ul>
 <li>Verificação Figma ↔ JSON em CI estável (ADR-003, introduzida em 0.5.1). Sem isso, a migração de brand para foundation pode gerar divergências silenciosas entre Figma e código.</li>

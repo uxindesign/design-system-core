@@ -1,8 +1,18 @@
 # ADR-005: Brand como camada foundation, estados explícitos no semantic, e limpeza tipográfica
 
 **Data:** 2026-04-14
-**Status:** Proposta
+**Status:** Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.2)
 **Atualiza:** ADR-001 (seção sobre camada Brand)
+
+## Implementação
+
+Os três pontos do ADR foram executados via ADR-011 e commits anteriores:
+
+1. **Brand como foundation:** `tokens/foundation/brand.json` existe com `foundation.brand.primary` → `{foundation.color.blue.600}` e `foundation.brand.secondary` → `{foundation.color.purple.600}`. `tokens/semantic/light.json` e `dark.json` referenciam `{foundation.brand.primary}` e `{foundation.brand.secondary}` nos tokens `.default` (light.json linha 88, dark.json linha 86).
+2. **Sufixo `-default` explícito:** nenhum CSS de componente em `css/components/*.css` usa os nomes antigos (`--ds-color-primary`, `--ds-color-secondary`, `--ds-feedback-success` sem sufixo, etc.). Todos consomem `--ds-*-default`.
+3. **`font.size.base` removido:** `tokens/foundation/typography.json` não contém mais a chave. Zero ocorrências de `--ds-font-size-base` em qualquer CSS do repo.
+
+Fechamento formal em 0.5.2: correção do `canonicalToCssVar` em `scripts/tokens-verify.mjs` (alinhamento com o transform `name/strip-layer` de `build-tokens.mjs`), zerando 65 falsos positivos que mascaravam a verificação.
 
 ## Pré-requisitos
 
