@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-20T23:50:04.165Z",
-  "version": "0.5.2",
+  "generatedAt": "2026-04-20T23:52:29.092Z",
+  "version": "0.5.3",
   "count": 11,
   "adrs": [
     {
@@ -52,7 +52,7 @@
       "id": "ADR-006",
       "num": 6,
       "title": "Adopt semantic control tokens for shared dimensions and typography across interactive controls",
-      "status": "Proposed",
+      "status": "Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.3)",
       "date": "2026-04-15",
       "sourceFile": "docs/decisions/ADR-006-semantic-control-tokens.md",
       "url": "https://uxindesign.github.io/design-system-core/docs/decisions/adr-006-semantic-control-tokens.html"

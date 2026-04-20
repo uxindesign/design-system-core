@@ -1,6 +1,6 @@
 # Design System Core — conteúdo consolidado
 
-> Versão 0.5.2. Arquivo destinado a consumo por LLMs que precisem
+> Versão 0.5.3. Arquivo destinado a consumo por LLMs que precisem
 > do design system inteiro em uma requisição. Inclui README, CONTRIBUTING,
 > CLAUDE.md, CHANGELOG, todos os MDs em docs/, todos os ADRs e um resumo
 > dos tokens. Páginas HTML-only (componentes, foundations) estão referenciadas
@@ -293,6 +293,18 @@ Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na
 
 ## [Não publicado]
 
+## [0.5.3]
+
+### Alterado
+- ADR-006 marcada como Aceita — Implementada em 0.5.0. Implementação já havia acontecido via ADR-011; fechamento formal em 0.5.3.
+- `semantic.size.control.*` e `semantic.typography.control.line-height.*` em `tokens/semantic/light.json` e `dark.json` passam a referenciar tokens `foundation.spacing.*` em vez de valores absolutos. Integridade da cadeia de tokens preservada (foundation → semantic).
+
+### Adicionado
+- `component.input.padding-y.{sm,md,lg}` e `component.select.padding-y.{sm,md,lg}` em `tokens/component/input.json` e `select.json`, referenciando `semantic.space.control.padding-y.*`. Gera `--ds-input-padding-y-*` e `--ds-select-padding-y-*` no CSS gerado.
+
+### Corrigido
+- `docs/control-sizing.html` — nomes das CSS vars na tabela agora batem com o que o build realmente emite: `--ds-control-font-size-*` e `--ds-control-line-height-*` (em vez de `--ds-typography-control-*`). O transform `name/strip-layer` remove o segmento `typography` do nome gerado.
+
 ## [0.5.2]
 
 ### Alterado
@@ -417,7 +429,7 @@ Consolidação da documentação como fonte única de verdade. Plano em seis fas
 | [ADR-003](decisions/ADR-003-fontes-verdade.md) | Figma como autoridade de design, Git como autoridade de tokens/código | Aceita | 2026-04-14 |
 | [ADR-004](decisions/ADR-004-wcag.md) | WCAG 2.2 AA como padrão de acessibilidade | Aceita — Implementada em 0.5.0 | 2026-04-14 |
 | [ADR-005](decisions/ADR-005-brand-foundation-e-estados-explicitos.md) | Brand como camada foundation, estados explícitos no semantic, e limpeza tipográfica | Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.2) | 2026-04-14 |
-| [ADR-006](decisions/ADR-006-semantic-control-tokens.md) | Adopt semantic control tokens for shared dimensions and typography across interactive controls | Proposed | — |
+| [ADR-006](decisions/ADR-006-semantic-control-tokens.md) | Adopt semantic control tokens for shared dimensions and typography across interactive controls | Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.3) | — |
 | [ADR-007](decisions/ADR-007-toned-color-system.md) | Establish toned color system with colored overlays and semantic toned tokens | Proposed | — |
 | [ADR-008](decisions/ADR-008-recalibracao-paletas-feedback.md) | Recalibração das paletas foundation `green` e `amber` | Aceita — Implementada em 0.5.0 | 2026-04-16 |
 | [ADR-009](decisions/ADR-009-border-control-vs-decorative.md) | Separação de `border.default` (decorativa) e `border.control` (funcional) | Aceita — Implementada em 0.5.0 | 2026-04-16 |
@@ -581,16 +593,16 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 
 > Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-20. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
-> Versão atual: **0.5.2**
+> Versão atual: **0.5.3**
 
 ## Status geral
 
 | Componente | CSS | Tokens JSON | Figma (visual) | Figma (binding) | Stories | Docs site |
 |------------|-----|-------------|-----------------|-----------------|---------|----------|
 | Button | 🟢 | 🟢 (25) | 🟢 | 🟢 | ⬜ | 🟢 |
-| Input Text | 🟢 | 🟢 (15) | 🟢 | 🟢 | ⬜ | 🟢 |
+| Input Text | 🟢 | 🟢 (18) | 🟢 | 🟢 | ⬜ | 🟢 |
 | Textarea | 🟢 | 🟢 (14) | 🟢 | 🟢 | ⬜ | 🟢 |
-| Select | 🟢 | 🟢 (16) | 🟢 | 🟢 | ⬜ | 🟢 |
+| Select | 🟢 | 🟢 (19) | 🟢 | 🟢 | ⬜ | 🟢 |
 | Checkbox | 🟢 | 🟢 (14) | 🟢 | 🟢 | ⬜ | 🟢 |
 | Radio | 🟢 | 🟢 (10) | 🟢 | 🟢 | ⬜ | 🟢 |
 | Toggle | 🟢 | 🟢 (12) | 🟢 | 🟢 | ⬜ | 🟢 |
@@ -621,7 +633,7 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 | Foundation | 225 | 🟢 |
 | Semantic (light) | 132 | 🟢 |
 | Semantic (dark) | 132 | 🟢 |
-| Component | 131 | 🟢 |
+| Component | 137 | 🟢 |
 
 ## Pipeline
 
@@ -642,7 +654,7 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 | ADR-003 | Figma como autoridade de design, Git como autoridade de tokens/código | Aceita |
 | ADR-004 | WCAG 2.2 AA como padrão de acessibilidade | Aceita — Implementada em 0.5.0 |
 | ADR-005 | Brand como camada foundation, estados explícitos no semantic, e limpeza tipográfica | Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.2) |
-| ADR-006 | Adopt semantic control tokens for shared dimensions and typography across interactive controls | Proposed |
+| ADR-006 | Adopt semantic control tokens for shared dimensions and typography across interactive controls | Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.3) |
 | ADR-007 | Establish toned color system with colored overlays and semantic toned tokens | Proposed |
 | ADR-008 | Recalibração das paletas foundation `green` e `amber` | Aceita — Implementada em 0.5.0 |
 | ADR-009 | Separação de `border.default` (decorativa) e `border.control` (funcional) | Aceita — Implementada em 0.5.0 |
@@ -1067,13 +1079,13 @@ Se uma decisão arquitetural não está registrada como ADR, ela não foi tomada
 
 > Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-20. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
-> Versão atual: **0.5.2**
+> Versão atual: **0.5.3**
 
 ## Estado atual
 
 | Aspecto | Valor |
 |---------|-------|
-| Versão | 0.5.2 |
+| Versão | 0.5.3 |
 | Formato canônico | JSON (DTCG) em `tokens/` |
 | CSS gerado | Style Dictionary → `css/tokens/generated/` |
 | Pipeline | ✅ index.css importa apenas generated/ |
@@ -1085,7 +1097,7 @@ Se uma decisão arquitetural não está registrada como ADR, ela não foi tomada
 |--------|--------|----------|
 | Foundation | **225** | 10 |
 | Semantic | **132 × 2 modos** | light.json + dark.json |
-| Component | **131** | 11 |
+| Component | **137** | 11 |
 
 ## Foundation (225 tokens)
 
@@ -1123,17 +1135,17 @@ semantic.size.*
 semantic.typography.*
 ```
 
-## Component (131 tokens)
+## Component (137 tokens)
 
 | Arquivo | Tokens |
 |---------|--------|
 | `avatar.json` | 9 |
 | `button.json` | 25 |
 | `checkbox.json` | 14 |
-| `input.json` | 15 |
+| `input.json` | 18 |
 | `modal.json` | 6 |
 | `radio.json` | 10 |
-| `select.json` | 16 |
+| `select.json` | 19 |
 | `skeleton.json` | 4 |
 | `spinner.json` | 6 |
 | `textarea.json` | 14 |
@@ -1160,7 +1172,7 @@ semantic.typography.*
 - **ADR-003** — Figma como autoridade de design, Git como autoridade de tokens/código (Aceita)
 - **ADR-004** — WCAG 2.2 AA como padrão de acessibilidade (Aceita — Implementada em 0.5.0)
 - **ADR-005** — Brand como camada foundation, estados explícitos no semantic, e limpeza tipográfica (Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.2))
-- **ADR-006** — Adopt semantic control tokens for shared dimensions and typography across interactive controls (Proposed)
+- **ADR-006** — Adopt semantic control tokens for shared dimensions and typography across interactive controls (Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.3))
 - **ADR-007** — Establish toned color system with colored overlays and semantic toned tokens (Proposed)
 - **ADR-008** — Recalibração das paletas foundation `green` e `amber` (Aceita — Implementada em 0.5.0)
 - **ADR-009** — Separação de `border.default` (decorativa) e `border.control` (funcional) (Aceita — Implementada em 0.5.0)
@@ -1476,7 +1488,22 @@ Manter font.size.base como alias de md: Descartada. Alias no JSON gera duas CSS 
 
 # ADR-006: Adopt semantic control tokens for shared dimensions and typography across interactive controls
 **Date:** 2026-04-15
-**Status:** Proposed
+**Status:** Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.3)
+
+## Implementação
+
+A maior parte foi executada durante ADR-011:
+
+- `semantic.size.control.*`, `semantic.size.control.icon.*`, `semantic.size.control.min-target`, `semantic.space.control.padding-x.*`, `semantic.space.control.padding-y.*`, `semantic.typography.control.font-size.*`, `semantic.typography.control.line-height.*` existem em `tokens/semantic/light.json` e `dark.json`.
+- `tokens/component/button.json`, `input.json`, `select.json`, `textarea.json` referenciam os semantic control tokens. O rename `button.padding.*` → `button.padding-x.*` está aplicado.
+- CSS gerado em `css/tokens/generated/theme-*.css` e `component.css` propaga a cadeia corretamente.
+- Documentação do pattern em `docs/control-sizing.html`.
+
+Fechamento formal em 0.5.3:
+
+- `semantic.size.control.{sm,md,lg}`, `semantic.size.control.icon.{sm,md,lg}`, `semantic.size.control.min-target`, `semantic.typography.control.line-height.{sm,md,lg}` trocaram valores absolutos (`2rem` etc.) por referências a `{foundation.spacing.*}`. Mantém a cadeia token viva: se a escala de spacing mudar, estes derivam automaticamente.
+- `tokens/component/input.json` e `select.json` ganharam `padding-y` explícito apontando para `semantic.space.control.padding-y.*`.
+- `docs/control-sizing.html` ajustado: os nomes documentados `--ds-typography-control-font-size-*` e `--ds-typography-control-line-height-*` foram alinhados para `--ds-control-font-size-*` e `--ds-control-line-height-*` — os nomes que o transform `name/strip-layer` de `build-tokens.mjs` realmente emite (ele remove o segmento `typography`).
 
 ## Pré-requisitos
 
@@ -2415,6 +2442,6 @@ Verificação automática de coerência Figma ↔ JSON ↔ CSS: `scripts/tokens-
 
 ═══════════════════════════════════════════════════════════
 
-Gerado por scripts/build-llms.mjs em 2026-04-20T23:50:04.342Z
-Versão: 0.5.2
+Gerado por scripts/build-llms.mjs em 2026-04-20T23:52:29.253Z
+Versão: 0.5.3
 Site: https://uxindesign.github.io/design-system-core/
