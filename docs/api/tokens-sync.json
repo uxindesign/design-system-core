@@ -1,0 +1,476 @@
+{
+  "generatedAt": "2026-04-20T12:51:46.365Z",
+  "totals": {
+    "jsonTokens": 620,
+    "sharedTokens": 356,
+    "lightTokens": 132,
+    "darkTokens": 132,
+    "errors": 0,
+    "warnings": 65
+  },
+  "checks": {
+    "jsonIntegrity": [],
+    "jsonVsCss": [
+      {
+        "level": "warning",
+        "token": "foundation.color.overlay.black.5",
+        "cssVar": "ds-color-overlay-black-5",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.color.overlay.black.10",
+        "cssVar": "ds-color-overlay-black-10",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.color.overlay.black.20",
+        "cssVar": "ds-color-overlay-black-20",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.color.overlay.black.40",
+        "cssVar": "ds-color-overlay-black-40",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.color.overlay.black.60",
+        "cssVar": "ds-color-overlay-black-60",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.color.overlay.black.80",
+        "cssVar": "ds-color-overlay-black-80",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.color.overlay.white.5",
+        "cssVar": "ds-color-overlay-white-5",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.color.overlay.white.10",
+        "cssVar": "ds-color-overlay-white-10",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.color.overlay.white.20",
+        "cssVar": "ds-color-overlay-white-20",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.color.overlay.white.40",
+        "cssVar": "ds-color-overlay-white-40",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.color.overlay.white.60",
+        "cssVar": "ds-color-overlay-white-60",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.color.overlay.white.80",
+        "cssVar": "ds-color-overlay-white-80",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.color.overlay.blue-600.12",
+        "cssVar": "ds-color-overlay-blue-600-12",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.color.overlay.blue-600.20",
+        "cssVar": "ds-color-overlay-blue-600-20",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.color.overlay.blue-600.28",
+        "cssVar": "ds-color-overlay-blue-600-28",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.color.overlay.blue-400.15",
+        "cssVar": "ds-color-overlay-blue-400-15",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.color.overlay.blue-400.25",
+        "cssVar": "ds-color-overlay-blue-400-25",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.color.overlay.blue-400.32",
+        "cssVar": "ds-color-overlay-blue-400-32",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.typography.font.family.sans",
+        "cssVar": "ds-typography-font-family-sans",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.typography.font.family.mono",
+        "cssVar": "ds-typography-font-family-mono",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.typography.font.family.display",
+        "cssVar": "ds-typography-font-family-display",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.typography.font.size.2xs",
+        "cssVar": "ds-typography-font-size-2xs",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.typography.font.size.xs",
+        "cssVar": "ds-typography-font-size-xs",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.typography.font.size.sm",
+        "cssVar": "ds-typography-font-size-sm",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.typography.font.size.md",
+        "cssVar": "ds-typography-font-size-md",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.typography.font.size.lg",
+        "cssVar": "ds-typography-font-size-lg",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.typography.font.size.xl",
+        "cssVar": "ds-typography-font-size-xl",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.typography.font.size.2xl",
+        "cssVar": "ds-typography-font-size-2xl",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.typography.font.size.3xl",
+        "cssVar": "ds-typography-font-size-3xl",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.typography.font.size.4xl",
+        "cssVar": "ds-typography-font-size-4xl",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.typography.font.size.5xl",
+        "cssVar": "ds-typography-font-size-5xl",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.typography.font.size.6xl",
+        "cssVar": "ds-typography-font-size-6xl",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.typography.font.size.7xl",
+        "cssVar": "ds-typography-font-size-7xl",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.typography.font.size.8xl",
+        "cssVar": "ds-typography-font-size-8xl",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.typography.font.size.9xl",
+        "cssVar": "ds-typography-font-size-9xl",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.typography.font.weight.regular",
+        "cssVar": "ds-typography-font-weight-regular",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.typography.font.weight.medium",
+        "cssVar": "ds-typography-font-weight-medium",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.typography.font.weight.semibold",
+        "cssVar": "ds-typography-font-weight-semibold",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.typography.font.weight.bold",
+        "cssVar": "ds-typography-font-weight-bold",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.typography.line.height.none",
+        "cssVar": "ds-typography-line-height-none",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.typography.line.height.tight",
+        "cssVar": "ds-typography-line-height-tight",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.typography.line.height.snug",
+        "cssVar": "ds-typography-line-height-snug",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.typography.line.height.normal",
+        "cssVar": "ds-typography-line-height-normal",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.typography.line.height.relaxed",
+        "cssVar": "ds-typography-line-height-relaxed",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.typography.line.height.loose",
+        "cssVar": "ds-typography-line-height-loose",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.typography.line.height.control.sm",
+        "cssVar": "ds-typography-line-height-control-sm",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.typography.line.height.control.md",
+        "cssVar": "ds-typography-line-height-control-md",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.typography.line.height.control.lg",
+        "cssVar": "ds-typography-line-height-control-lg",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.typography.letter.spacing.tighter",
+        "cssVar": "ds-typography-letter-spacing-tighter",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.typography.letter.spacing.tight",
+        "cssVar": "ds-typography-letter-spacing-tight",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.typography.letter.spacing.normal",
+        "cssVar": "ds-typography-letter-spacing-normal",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.typography.letter.spacing.wide",
+        "cssVar": "ds-typography-letter-spacing-wide",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "foundation.typography.letter.spacing.wider",
+        "cssVar": "ds-typography-letter-spacing-wider",
+        "mode": "shared",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "semantic.typography.control.font-size.sm",
+        "cssVar": "ds-typography-control-font-size-sm",
+        "mode": "light",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "semantic.typography.control.font-size.md",
+        "cssVar": "ds-typography-control-font-size-md",
+        "mode": "light",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "semantic.typography.control.font-size.lg",
+        "cssVar": "ds-typography-control-font-size-lg",
+        "mode": "light",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "semantic.typography.control.line-height.sm",
+        "cssVar": "ds-typography-control-line-height-sm",
+        "mode": "light",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "semantic.typography.control.line-height.md",
+        "cssVar": "ds-typography-control-line-height-md",
+        "mode": "light",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "semantic.typography.control.line-height.lg",
+        "cssVar": "ds-typography-control-line-height-lg",
+        "mode": "light",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "semantic.typography.control.font-size.sm",
+        "cssVar": "ds-typography-control-font-size-sm",
+        "mode": "dark",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "semantic.typography.control.font-size.md",
+        "cssVar": "ds-typography-control-font-size-md",
+        "mode": "dark",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "semantic.typography.control.font-size.lg",
+        "cssVar": "ds-typography-control-font-size-lg",
+        "mode": "dark",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "semantic.typography.control.line-height.sm",
+        "cssVar": "ds-typography-control-line-height-sm",
+        "mode": "dark",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "semantic.typography.control.line-height.md",
+        "cssVar": "ds-typography-control-line-height-md",
+        "mode": "dark",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      },
+      {
+        "level": "warning",
+        "token": "semantic.typography.control.line-height.lg",
+        "cssVar": "ds-typography-control-line-height-lg",
+        "mode": "dark",
+        "message": "token definido em JSON mas sem CSS custom property equivalente"
+      }
+    ],
+    "jsonVsFigma": {
+      "skipped": true,
+      "reason": "FIGMA_PAT ausente. Para ativar a verificação com Figma, exporte FIGMA_PAT=<seu-pat>.",
+      "divergences": []
+    }
+  }
+}

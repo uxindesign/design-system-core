@@ -22,7 +22,8 @@
   },
   "scripts": {
     "build:tokens": "node build-tokens.mjs",
-    "sync:docs": "node scripts/sync-docs.mjs"
+    "sync:docs": "node scripts/sync-docs.mjs",
+    "verify:tokens": "node scripts/tokens-verify.mjs"
   },
   "devDependencies": {
     "@tokens-studio/sd-transforms": "^2.0.3",

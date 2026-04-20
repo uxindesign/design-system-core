@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sincronização de tokens — Design System</title>
+<link rel="stylesheet" href="../css/design-system.css">
+<link rel="stylesheet" href="layout.css">
+<style>
+  .ds-sync-status { display:inline-flex; align-items:center; gap: var(--ds-spacing-2); padding: var(--ds-spacing-3) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); font-weight: var(--ds-font-weight-semibold); }
+  .ds-sync-status.ok { background: var(--ds-feedback-success-background); color: var(--ds-feedback-success-content-default); }
+  .ds-sync-status.error { background: var(--ds-feedback-error-background); color: var(--ds-feedback-error-content-default); }
+  .ds-sync-meta { display:flex; gap: var(--ds-spacing-6); margin-top: var(--ds-spacing-4); font-size: var(--ds-font-size-sm); color: var(--ds-content-secondary); }
+  .ds-sync-meta strong { color: var(--ds-content-default); font-weight: var(--ds-font-weight-semibold); }
+  .ds-sync-table { width:100%; border-collapse: collapse; margin-top: var(--ds-spacing-6); font-size: var(--ds-font-size-sm); }
+  .ds-sync-table th, .ds-sync-table td { text-align:left; padding: var(--ds-spacing-3); border-bottom: 1px solid var(--ds-border-default); }
+  .ds-sync-table th { font-weight: var(--ds-font-weight-semibold); background: var(--ds-background-subtle); }
+  .ds-sync-banner { background: var(--ds-feedback-info-background); color: var(--ds-feedback-info-content-default); padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-md); margin-bottom: var(--ds-spacing-6); font-size: var(--ds-font-size-sm); }
+</style>
+</head>
+<body>
+<main class="ds-main">
+  <div class="ds-section">
+    <h1 class="ds-section__title"><span data-lang="pt">Sincronização de tokens</span><span data-lang="en">Token sync status</span></h1>
+    <p class="ds-section__subtitle"><span data-lang="pt">Coerência entre JSONs canônicos, CSS gerado e Figma Variables.</span><span data-lang="en">Coherence between canonical JSON, generated CSS, and Figma Variables.</span></p>
+  </div>
+
+  <div class="ds-sync-banner">
+    <span data-lang="pt">Esta página é gerada automaticamente por <code>scripts/tokens-verify.mjs</code>. Não editar manualmente.</span>
+    <span data-lang="en">This page is generated automatically by <code>scripts/tokens-verify.mjs</code>. Do not edit by hand.</span>
+  </div>
+
+  <div class="ds-section">
+    <span class="ds-sync-status ok">Em dia</span>
+    <div class="ds-sync-meta">
+      <div><strong>Última verificação:</strong> 2026-04-20T12:51:46.365Z</div>
+      <div><strong>Tokens JSON:</strong> 620</div>
+      <div><strong>Divergências:</strong> 0</div>
+      <div><strong>Avisos:</strong> 65</div>
+    </div>
+  </div>
+
+  <div class="ds-section">
+    <h2 class="ds-subsection__title">Detalhamento</h2>
+    <table class="ds-sync-table">
+      <thead>
+        <tr><th>Checagem</th><th>Token</th><th>Mensagem</th><th>JSON</th><th>CSS</th></tr>
+      </thead>
+      <tbody><tr><td colspan="5" style="text-align:center;color:var(--ds-content-secondary)">Nenhuma divergência registrada.</td></tr></tbody>
+    </table>
+  </div>
+</main>
+</body>
+</html>
