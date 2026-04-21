@@ -1,0 +1,86 @@
+name: Sync tokens from Figma
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry-run:
+        description: "Run in dry-run mode (report only, no file changes)"
+        type: boolean
+        default: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run sync (${{ inputs.dry-run && 'dry-run' || 'write' }})
+        id: sync
+        env:
+          FIGMA_PAT: ${{ secrets.FIGMA_PAT }}
+        run: |
+          set +e
+          if [ "${{ inputs.dry-run }}" = "true" ]; then
+            node scripts/sync-tokens-from-figma.mjs | tee /tmp/sync-output.txt
+          else
+            node scripts/sync-tokens-from-figma.mjs --write | tee /tmp/sync-output.txt
+          fi
+          code=$?
+          echo "exit_code=$code" >> $GITHUB_OUTPUT
+          # Captura relatório em variável de ambiente multi-linha
+          {
+            echo "report<<SYNC_REPORT_EOF"
+            cat /tmp/sync-output.txt
+            echo "SYNC_REPORT_EOF"
+          } >> $GITHUB_OUTPUT
+          exit 0
+
+      - name: Check for changes
+        id: diff
+        if: inputs.dry-run == false
+        run: |
+          if [ -n "$(git status --porcelain tokens/ css/tokens/generated/ docs/)" ]; then
+            echo "changes=true" >> $GITHUB_OUTPUT
+          else
+            echo "changes=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create Pull Request
+        if: inputs.dry-run == false && steps.diff.outputs.changes == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: sync/tokens-from-figma-${{ github.run_id }}
+          title: "chore(tokens): sync Figma Variables → JSON"
+          body: |
+            Automated Figma → JSON sync via `scripts/sync-tokens-from-figma.mjs --write`.
+
+            ```
+            ${{ steps.sync.outputs.report }}
+            ```
+
+            Review the diff carefully before merging.
+          commit-message: |
+            chore(tokens): sync Figma Variables → JSON
+
+            Automated via .github/workflows/sync-tokens-from-figma.yml.
+
+      - name: Report dry-run
+        if: inputs.dry-run == true
+        run: |
+          echo "::notice::Dry-run complete. See logs above. Re-run with dry-run=false to apply."
+
+      - name: Report no changes
+        if: inputs.dry-run == false && steps.diff.outputs.changes == 'false'
+        run: |
+          echo "::notice::Figma and JSON are already in sync. Nothing to commit."
