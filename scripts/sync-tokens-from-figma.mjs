@@ -85,6 +85,7 @@ function fmt(v) {
 function report(diffs, issues) {
   const total = diffs.VALUE_DRIFT.length + diffs.NEW_IN_FIGMA.length + diffs.MISSING_IN_FIGMA.length;
   const aliasBroken = issues.filter((i) => i.category === "ALIAS_BROKEN").length;
+  const cssOnly = (diffs.CSS_ONLY || []).length;
 
   console.log("");
   console.log("═══ sync-tokens-from-figma ═════════════════════════════");
@@ -92,6 +93,7 @@ function report(diffs, issues) {
   console.log(`NEW_IN_FIGMA     (Figma tem, JSON não):      ${diffs.NEW_IN_FIGMA.length}`);
   console.log(`MISSING_IN_FIGMA (JSON tem, Figma não):      ${diffs.MISSING_IN_FIGMA.length}`);
   console.log(`ALIAS_BROKEN     (Figma aponta pra órfão):   ${aliasBroken}`);
+  console.log(`CSS_ONLY         (informativo, não sync):    ${cssOnly}`);
   console.log("═════════════════════════════════════════════════════════");
 
   const section = (title, items, format) => {
@@ -120,6 +122,11 @@ function report(diffs, issues) {
     "ALIAS_BROKEN",
     issues.filter((i) => i.category === "ALIAS_BROKEN"),
     (i) => `${i.token}${i.mode ? ` (${i.mode})` : ""} → alvo: ${i.target}`
+  );
+  section(
+    "CSS_ONLY (representação CSS-específica — JSON preserva, Figma aproxima)",
+    diffs.CSS_ONLY || [],
+    (d) => `${d.token}\n    Figma: ${fmt(d.figma)}\n    JSON:  ${fmt(d.json)}`
   );
 
   console.log("");

@@ -74,6 +74,36 @@
 <p>O formato é baseado em <a href="https://keepachangelog.com/pt-BR/1.1.0/">Keep a Changelog</a> e o versionamento segue <a href="https://semver.org/lang/pt-BR/">Semantic Versioning</a>.</p>
 <p>Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na faixa 0.x. Regras de bump documentadas em <code>docs/process-versioning.html</code>.</p>
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
+<h2>[0.5.11]</h2>
+<h3>Alterado (Figma — alinhamento arquitetônico + primeiro sync real)</h3>
+<p>Primeira execução end-to-end do fluxo Figma → JSON. O Figma estava arquiteturalmente defasado em relação ao JSON (que evoluiu ao longo das ADRs 001/005/006/007/011): tinha valores literais onde o JSON tinha aliases de 2–3 níveis. Decisão do time em 21/04/2026: ajustar o Figma pra espelhar a arquitetura do JSON antes de começar a usar o sync bidirecionalmente.</p>
+<p><strong>Ajustes no Figma (~162 operações):</strong></p>
+<ul>
+<li><strong>Foundation — criadas 8 variáveis</strong>: <code>color/disabled/brand-light</code>, <code>brand-dark</code>, <code>success-light</code>, <code>success-dark</code>, <code>error-light</code>, <code>error-dark</code> (ADR-007), <code>spacing/9</code> (36px), <code>spacing/11</code> (44px).</li>
+<li><strong>Foundation — renomeadas 44 variáveis</strong> de <code>font/*</code> → <code>typography/font/*</code> pra alinhar com a estrutura do JSON (<code>foundation.typography.font.*</code>).</li>
+<li><strong>Semantic — 31 rebindings</strong>: link/focus/border agora apontam pra <code>semantic.brand.*</code> via alias (antes apontavam direto pra foundation); <code>focus/ring/*</code>, <code>size/control/*</code>, <code>typography/control/*</code>, <code>*.disabled</code>, <code>*.contrast-disabled</code> viraram aliases de foundation (antes eram literais).</li>
+<li><strong>Component — 28 rebindings</strong>: <code>button/input/select/textarea</code> — height, font-size, icon-size, min-target-size viram aliases de <code>semantic.size.control.*</code> e <code>semantic.typography.control.*</code>.</li>
+<li><strong>Component — reestruturado padding</strong>: substituído <code>{comp}/padding/{sm,md,lg}</code> (unificado) por <code>{comp}/padding-x/*</code> + <code>{comp}/padding-y/*</code> em 4 componentes (24 criadas, 12 deletadas).</li>
+<li><strong>Component — 7 criadas</strong>: <code>button/background/toned/{default,hover,active,disabled}</code>, <code>button/foreground/toned/{default,disabled}</code>, <code>skeleton/fill</code>.</li>
+<li>Total Figma: <strong>489 variáveis</strong> (era 462) em 4 collections.</li>
+</ul>
+<p><strong>Sync Figma → JSON aplicado (38 VALUE_DRIFT, categoria A):</strong></p>
+<ul>
+<li>Decisões visuais mais recentes do Figma sincronizadas para <code>tokens/semantic/light.json</code> e <code>dark.json</code>. Maior parte são ajustes finos de shade — <code>brand.hover</code> blue.700 → blue.800, <code>feedback.success.border</code> green.600 → green.500, <code>background.subtle</code> neutral.100 → neutral.200, etc. CSS regenerado, docs regeneradas, zero mudanças em Foundation ou Component.</li>
+</ul>
+<h3>Adicionado</h3>
+<ul>
+<li>Categoria <strong>CSS_ONLY</strong> no <code>scripts/lib/figma-dtcg.mjs</code>: tokens com representação CSS-específica (font family stacks, weights numéricos, unidades rem) ficam marcados como informativos e <strong>não são aplicados via <code>--write</code></strong>. Evita regressão onde o Figma trocaria <code>&#39;Inter&#39;, system-ui, -apple-system,...</code> por <code>&quot;Inter&quot;</code> sozinho, weights <code>400/500/600/700</code> por <code>&quot;Regular&quot;/&quot;Medium&quot;/...</code>, e <code>0.875rem</code> por <code>14</code>. Cobre ~9 tokens em <code>foundation.typography.font.family/weight/size</code>.</li>
+<li><code>FOUNDATION_PREFIX_TO_FILE</code>: mapping atualizado de <code>font</code> → <code>typography.json</code> para <code>typography</code> (Figma agora usa prefixo <code>typography/font/*</code>).</li>
+</ul>
+<h3>Pendente (relatado mas não aplicado)</h3>
+<ul>
+<li><strong>37 tokens de line-height/letter-spacing</strong> aparecem como NEW_IN_FIGMA (23) ou MISSING_IN_FIGMA (14) porque Figma e JSON usam <strong>sistemas diferentes</strong>: Figma tem valores em PX (<code>line-height/90</code>, <code>line-height/44</code>, <code>letter-spacing/-0.5</code>); JSON tem ratios (<code>line.height.tight = 1.25</code>) e unidades rem (<code>line.height.control.sm = 1rem</code>). Não é &quot;mais recente&quot; em um lado — são conceitos divergentes. Decisão adiada: será tratada em PR separada com ADR.</li>
+</ul>
+<h3>Notas</h3>
+<ul>
+<li>Propriedade <code>hiddenFromPublishing = true</code> não pôde ser setada via <code>use_figma</code> (erro <code>Node not found</code> após create) — as 6 novas <code>color/disabled/*</code> e 2 novas <code>spacing/9|11</code> ficaram visíveis aos pickers. Ajuste manual no Figma depois.</li>
+</ul>
 <h2>[0.5.10]</h2>
 <h3>Adicionado</h3>
 <ul>

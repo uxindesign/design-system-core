@@ -8,6 +8,34 @@ Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na
 
 ## [Não publicado]
 
+## [0.5.11]
+
+### Alterado (Figma — alinhamento arquitetônico + primeiro sync real)
+
+Primeira execução end-to-end do fluxo Figma → JSON. O Figma estava arquiteturalmente defasado em relação ao JSON (que evoluiu ao longo das ADRs 001/005/006/007/011): tinha valores literais onde o JSON tinha aliases de 2–3 níveis. Decisão do time em 21/04/2026: ajustar o Figma pra espelhar a arquitetura do JSON antes de começar a usar o sync bidirecionalmente.
+
+**Ajustes no Figma (~162 operações):**
+- **Foundation — criadas 8 variáveis**: `color/disabled/brand-light`, `brand-dark`, `success-light`, `success-dark`, `error-light`, `error-dark` (ADR-007), `spacing/9` (36px), `spacing/11` (44px).
+- **Foundation — renomeadas 44 variáveis** de `font/*` → `typography/font/*` pra alinhar com a estrutura do JSON (`foundation.typography.font.*`).
+- **Semantic — 31 rebindings**: link/focus/border agora apontam pra `semantic.brand.*` via alias (antes apontavam direto pra foundation); `focus/ring/*`, `size/control/*`, `typography/control/*`, `*.disabled`, `*.contrast-disabled` viraram aliases de foundation (antes eram literais).
+- **Component — 28 rebindings**: `button/input/select/textarea` — height, font-size, icon-size, min-target-size viram aliases de `semantic.size.control.*` e `semantic.typography.control.*`.
+- **Component — reestruturado padding**: substituído `{comp}/padding/{sm,md,lg}` (unificado) por `{comp}/padding-x/*` + `{comp}/padding-y/*` em 4 componentes (24 criadas, 12 deletadas).
+- **Component — 7 criadas**: `button/background/toned/{default,hover,active,disabled}`, `button/foreground/toned/{default,disabled}`, `skeleton/fill`.
+- Total Figma: **489 variáveis** (era 462) em 4 collections.
+
+**Sync Figma → JSON aplicado (38 VALUE_DRIFT, categoria A):**
+- Decisões visuais mais recentes do Figma sincronizadas para `tokens/semantic/light.json` e `dark.json`. Maior parte são ajustes finos de shade — `brand.hover` blue.700 → blue.800, `feedback.success.border` green.600 → green.500, `background.subtle` neutral.100 → neutral.200, etc. CSS regenerado, docs regeneradas, zero mudanças em Foundation ou Component.
+
+### Adicionado
+- Categoria **CSS_ONLY** no `scripts/lib/figma-dtcg.mjs`: tokens com representação CSS-específica (font family stacks, weights numéricos, unidades rem) ficam marcados como informativos e **não são aplicados via `--write`**. Evita regressão onde o Figma trocaria `'Inter', system-ui, -apple-system,...` por `"Inter"` sozinho, weights `400/500/600/700` por `"Regular"/"Medium"/...`, e `0.875rem` por `14`. Cobre ~9 tokens em `foundation.typography.font.family/weight/size`.
+- `FOUNDATION_PREFIX_TO_FILE`: mapping atualizado de `font` → `typography.json` para `typography` (Figma agora usa prefixo `typography/font/*`).
+
+### Pendente (relatado mas não aplicado)
+- **37 tokens de line-height/letter-spacing** aparecem como NEW_IN_FIGMA (23) ou MISSING_IN_FIGMA (14) porque Figma e JSON usam **sistemas diferentes**: Figma tem valores em PX (`line-height/90`, `line-height/44`, `letter-spacing/-0.5`); JSON tem ratios (`line.height.tight = 1.25`) e unidades rem (`line.height.control.sm = 1rem`). Não é "mais recente" em um lado — são conceitos divergentes. Decisão adiada: será tratada em PR separada com ADR.
+
+### Notas
+- Propriedade `hiddenFromPublishing = true` não pôde ser setada via `use_figma` (erro `Node not found` após create) — as 6 novas `color/disabled/*` e 2 novas `spacing/9|11` ficaram visíveis aos pickers. Ajuste manual no Figma depois.
+
 ## [0.5.10]
 
 ### Adicionado
