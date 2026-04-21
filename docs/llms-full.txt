@@ -1,6 +1,6 @@
 # Design System Core — conteúdo consolidado
 
-> Versão 0.5.12. Arquivo destinado a consumo por LLMs que precisem
+> Versão 0.5.13. Arquivo destinado a consumo por LLMs que precisem
 > do design system inteiro em uma requisição. Inclui README, CONTRIBUTING,
 > CLAUDE.md, CHANGELOG, todos os MDs em docs/, todos os ADRs e um resumo
 > dos tokens. Páginas HTML-only (componentes, foundations) estão referenciadas
@@ -311,6 +311,22 @@ O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.
 Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na faixa 0.x. Regras de bump documentadas em `docs/process-versioning.html`.
 
 ## [Não publicado]
+
+## [0.5.13]
+
+### Corrigido
+Audit completo dos 9 arquivos `foundations-*.html` restantes (após PR #19 auto-gerar `theme-colors`). Descobertos 3 arquivos com drift real:
+
+- **`foundations-motion.html`**: `--ds-duration-fast` mostrava `100ms` mas CSS real é `150ms` (divergência em 2 lugares — label demo + tabela). Tabela de easings usava keywords CSS imprecisas (`ease`, `ease-in`, `ease-out`, `ease-in-out`) — o CSS real usa `cubic-bezier(0.4, 0, 0.2, 1)` etc, que **não são equivalentes** às keywords. Corrigido: duration, tabela com valores cubic-bezier reais, labels demo com descrição semântica (`padrão`, `acelerando`, `desacelerando`, `suave`) em vez de keyword enganosa.
+- **`foundations-opacity.html`**: `<code>--ds-color-overlay-black-5</code>` era **token fantasma** — o nome CSS correto é `--ds-overlay-black-5` (sem `color-`). Corrigido.
+- **`foundations-borders.html`**: duas tabelas de cores de borda (`Border Colors`, `Feedback Border Colors`) estavam com 7 valores desatualizados pós PR #18 **e** duplicavam informação já presente em `foundations-theme-colors.html` (que é auto-gerada). Removidas; substituídas por parágrafo linkando pra Theme Colors. Mantida só a tabela de `Border Widths`, que está correta.
+
+### Confirmado em dia
+`foundations-typography.html`, `foundations-spacing.html`, `foundations-radius.html`, `foundations-elevation.html`, `foundations-zindex.html`, `foundations-colors.html` — 0 drift. Os "falsos positivos" do audit automático eram tabelas conceituais (elevation mapeia "nível → combinação de tokens"; zindex mostra "uso por token"; opacity é `<div>` custom não `<table>`) que o parser genérico confundiu com tabelas de valor.
+
+### Notas
+- Princípio de não-duplicação aplicado: quando um token semântico tem seu valor canônico em `foundations-theme-colors.html`, outras páginas de foundation **não** repetem — linkam. Evita drift futuro.
+- Próximo passo: revisão equivalente nas camadas **Semantic** e **Component** (páginas de docs e Figma).
 
 ## [0.5.12]
 
@@ -751,7 +767,7 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 
 > Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-21. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
-> Versão atual: **0.5.12**
+> Versão atual: **0.5.13**
 
 ## Status geral
 
@@ -1363,13 +1379,13 @@ Se uma decisão arquitetural não está registrada como ADR, ela não foi tomada
 
 > Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-21. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
-> Versão atual: **0.5.12**
+> Versão atual: **0.5.13**
 
 ## Estado atual
 
 | Aspecto | Valor |
 |---------|-------|
-| Versão | 0.5.12 |
+| Versão | 0.5.13 |
 | Formato canônico | JSON (DTCG) em `tokens/` |
 | CSS gerado | Style Dictionary → `css/tokens/generated/` |
 | Pipeline | ✅ index.css importa apenas generated/ |
@@ -2803,6 +2819,6 @@ Verificação automática de coerência Figma ↔ JSON ↔ CSS: `scripts/tokens-
 
 ═══════════════════════════════════════════════════════════
 
-Gerado por scripts/build-llms.mjs em 2026-04-21T20:49:03.248Z
-Versão: 0.5.12
+Gerado por scripts/build-llms.mjs em 2026-04-21T21:09:13.744Z
+Versão: 0.5.13
 Site: https://uxindesign.github.io/design-system-core/
