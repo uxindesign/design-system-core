@@ -74,6 +74,44 @@
 <p>O formato é baseado em <a href="https://keepachangelog.com/pt-BR/1.1.0/">Keep a Changelog</a> e o versionamento segue <a href="https://semver.org/lang/pt-BR/">Semantic Versioning</a>.</p>
 <p>Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na faixa 0.x. Regras de bump documentadas em <code>docs/process-versioning.html</code>.</p>
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
+<h2>[0.5.14]</h2>
+<h3>Corrigido</h3>
+<p>Audit da camada Component (19 docs HTML de componentes + meta-docs) revelou <strong>49 paths token inválidos + 14 CSS vars fantasmas</strong> — todos decorrentes de naming pré-ADR-011 (renames que a camada de dados incorporou mas a doc não). Corrigido em massa:</p>
+<ul>
+<li><strong><code>semantic.color.primary.*</code> → <code>semantic.brand.*</code></strong> (ADR-011): 15+ ocorrências em avatar, badge, button, checkbox, radio, spinner, tabs, textarea, toggle, etc. Incluindo sub-renames:<ul>
+<li><code>.primary.foreground</code> → <code>.brand.content.contrast</code></li>
+<li><code>.primary.text</code> → <code>.brand.content.default</code></li>
+</ul>
+</li>
+<li><strong><code>semantic.text.*</code> → <code>semantic.content.*</code></strong> (ADR-011): em breadcrumb, button, form-field, input, select, tabs, textarea, token-architecture. Inclui <code>.text.link.*</code> → <code>.content.link.*</code>.</li>
+<li><strong><code>semantic.state.disabled.foreground</code> → <code>semantic.content.disabled</code></strong> (ADR-011): button, select.</li>
+<li><strong><code>semantic.feedback.*.foreground|text</code> → <code>semantic.feedback.*.content.default</code></strong>: alert, textarea, form-field.</li>
+<li><strong><code>semantic.border.hover</code> → <code>semantic.border.control.hover</code></strong> (ADR-009): select, textarea.</li>
+<li><strong><code>semantic.radius.*</code> → <code>foundation.radius.*</code></strong> (radius é Foundation, não Semantic): card, checkbox, modal, radio, skeleton, tooltip.</li>
+<li><strong><code>foundation.z-index.*</code> → <code>foundation.z.*</code></strong>: modal, tooltip.</li>
+<li><strong><code>foundation.motion.duration.*</code> → <code>foundation.duration.*</code></strong>: spinner.</li>
+<li><strong><code>semantic.background.muted</code> → <code>semantic.state.disabled.background</code></strong>: skeleton.</li>
+<li><strong><code>--ds-typography-control-font-size-*</code> → <code>--ds-control-font-size-*</code></strong>: button, input, select, textarea. O Style Dictionary faz strip-layer removendo <code>typography</code>; a doc mantinha o nome pre-strip.</li>
+<li><strong><code>--ds-border-hover</code> → <code>--ds-border-control-hover</code></strong>: select, textarea.</li>
+</ul>
+<p>Também em <code>docs/token-architecture.html</code>: exemplo de component token atualizado de <code>--ds-button-bg-brand-default</code> (inexistente) para <code>--ds-button-background-toned-default</code> (real, criado no PR #18).</p>
+<p>E em <code>docs/brand-principles.md</code>: <code>foundation.color.brand.primary/secondary/accent</code> → <code>foundation.brand.primary/secondary</code> (<code>.accent</code> nunca existiu — só primary e secondary em Foundation; marcado como &quot;não definido&quot; até virar ADR).</p>
+<p><strong>Total: 66 renames em 19 arquivos.</strong> Audit residual: 2 &quot;fantasmas&quot; remanescentes são bad examples didáticos intencionais (<code>--ds-red-600</code> em <code>design-principles.html</code> dizendo &quot;não use&quot; + <code>--ds-color-primary</code> em <code>token-architecture.html</code> dizendo &quot;não colapse&quot;). Ficam.</p>
+<h3>Observações do audit (não aplicadas nesta PR)</h3>
+<p><strong>Semantic: 18 tokens órfãos</strong> (declarados mas nenhum componente consome): 3 border-widths extras, 5 <code>space-inset-*</code>, 6 <code>space-component-*</code>, 4 <code>space-section-*</code>. Decisão pendente (remover / manter / caso a caso).</p>
+<p><strong>Component: 19 tokens órfãos</strong> declarados no JSON mas não consumidos pelo CSS do próprio componente:</p>
+<ul>
+<li><code>button</code> (6): <code>background/foreground-toned-*</code> (criados no PR #18, CSS ainda usa semantic direto — refatoração pendente)</li>
+<li><code>checkbox</code> (6): <code>check-width/height-sm/md/lg</code> (CSS provavelmente desenha via SVG/stroke, não consome)</li>
+<li><code>input</code>, <code>select</code> (3 cada): <code>padding-y-sm/md/lg</code> (CSS usa height pra controlar Y, não padding-y)</li>
+<li><code>modal</code> (1): <code>padding</code></li>
+</ul>
+<h3>Notas</h3>
+<ul>
+<li>Audit confirmou: <strong>11 componentes têm tokens JSON</strong>, <strong>7 não têm e consomem semantic direto</strong> (alert, badge, breadcrumb, card, divider, tabs, tooltip — arquiteturalmente OK pela ADR-001: camada component é opcional).</li>
+<li><strong>Paridade light/dark: perfeita</strong> (132 = 132, 0 divergência de tipo).</li>
+<li>Próximo passo: decisão sobre os 37 órfãos totais (18 semantic + 19 component) + audit da camada Foundation.</li>
+</ul>
 <h2>[0.5.13]</h2>
 <h3>Corrigido</h3>
 <p>Audit completo dos 9 arquivos <code>foundations-*.html</code> restantes (após PR #19 auto-gerar <code>theme-colors</code>). Descobertos 3 arquivos com drift real:</p>

@@ -8,6 +8,46 @@ Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na
 
 ## [Não publicado]
 
+## [0.5.14]
+
+### Corrigido
+Audit da camada Component (19 docs HTML de componentes + meta-docs) revelou **49 paths token inválidos + 14 CSS vars fantasmas** — todos decorrentes de naming pré-ADR-011 (renames que a camada de dados incorporou mas a doc não). Corrigido em massa:
+
+- **`semantic.color.primary.*` → `semantic.brand.*`** (ADR-011): 15+ ocorrências em avatar, badge, button, checkbox, radio, spinner, tabs, textarea, toggle, etc. Incluindo sub-renames:
+  - `.primary.foreground` → `.brand.content.contrast`
+  - `.primary.text` → `.brand.content.default`
+- **`semantic.text.*` → `semantic.content.*`** (ADR-011): em breadcrumb, button, form-field, input, select, tabs, textarea, token-architecture. Inclui `.text.link.*` → `.content.link.*`.
+- **`semantic.state.disabled.foreground` → `semantic.content.disabled`** (ADR-011): button, select.
+- **`semantic.feedback.*.foreground|text` → `semantic.feedback.*.content.default`**: alert, textarea, form-field.
+- **`semantic.border.hover` → `semantic.border.control.hover`** (ADR-009): select, textarea.
+- **`semantic.radius.*` → `foundation.radius.*`** (radius é Foundation, não Semantic): card, checkbox, modal, radio, skeleton, tooltip.
+- **`foundation.z-index.*` → `foundation.z.*`**: modal, tooltip.
+- **`foundation.motion.duration.*` → `foundation.duration.*`**: spinner.
+- **`semantic.background.muted` → `semantic.state.disabled.background`**: skeleton.
+- **`--ds-typography-control-font-size-*` → `--ds-control-font-size-*`**: button, input, select, textarea. O Style Dictionary faz strip-layer removendo `typography`; a doc mantinha o nome pre-strip.
+- **`--ds-border-hover` → `--ds-border-control-hover`**: select, textarea.
+
+Também em `docs/token-architecture.html`: exemplo de component token atualizado de `--ds-button-bg-brand-default` (inexistente) para `--ds-button-background-toned-default` (real, criado no PR #18).
+
+E em `docs/brand-principles.md`: `foundation.color.brand.primary/secondary/accent` → `foundation.brand.primary/secondary` (`.accent` nunca existiu — só primary e secondary em Foundation; marcado como "não definido" até virar ADR).
+
+**Total: 66 renames em 19 arquivos.** Audit residual: 2 "fantasmas" remanescentes são bad examples didáticos intencionais (`--ds-red-600` em `design-principles.html` dizendo "não use" + `--ds-color-primary` em `token-architecture.html` dizendo "não colapse"). Ficam.
+
+### Observações do audit (não aplicadas nesta PR)
+
+**Semantic: 18 tokens órfãos** (declarados mas nenhum componente consome): 3 border-widths extras, 5 `space-inset-*`, 6 `space-component-*`, 4 `space-section-*`. Decisão pendente (remover / manter / caso a caso).
+
+**Component: 19 tokens órfãos** declarados no JSON mas não consumidos pelo CSS do próprio componente:
+- `button` (6): `background/foreground-toned-*` (criados no PR #18, CSS ainda usa semantic direto — refatoração pendente)
+- `checkbox` (6): `check-width/height-sm/md/lg` (CSS provavelmente desenha via SVG/stroke, não consome)
+- `input`, `select` (3 cada): `padding-y-sm/md/lg` (CSS usa height pra controlar Y, não padding-y)
+- `modal` (1): `padding`
+
+### Notas
+- Audit confirmou: **11 componentes têm tokens JSON**, **7 não têm e consomem semantic direto** (alert, badge, breadcrumb, card, divider, tabs, tooltip — arquiteturalmente OK pela ADR-001: camada component é opcional).
+- **Paridade light/dark: perfeita** (132 = 132, 0 divergência de tipo).
+- Próximo passo: decisão sobre os 37 órfãos totais (18 semantic + 19 component) + audit da camada Foundation.
+
 ## [0.5.13]
 
 ### Corrigido

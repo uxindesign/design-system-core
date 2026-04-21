@@ -50,9 +50,9 @@
 ### Cores da marca
 | Role | Token | Valor | Uso |
 |------|-------|-------|-----|
-| Primary | `foundation.color.brand.primary` | [hex] | CTA, links, foco |
-| Secondary | `foundation.color.brand.secondary` | [hex] | Complementar, destaques |
-| Accent | `foundation.color.brand.accent` | [hex] | Ilustrações, detalhes |
+| Primary | `foundation.brand.primary` | [hex] | CTA, links, foco |
+| Secondary | `foundation.brand.secondary` | [hex] | Complementar, destaques |
+| ~~Accent~~ | *(não definido — foundation só tem `primary`/`secondary`. Se precisar de 3ª cor, criar em ADR)* | — | — |
 
 ### Tipografia
 | Role | Font | Fallback | Uso |
