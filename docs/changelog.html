@@ -74,7 +74,13 @@
 <p>O formato é baseado em <a href="https://keepachangelog.com/pt-BR/1.1.0/">Keep a Changelog</a> e o versionamento segue <a href="https://semver.org/lang/pt-BR/">Semantic Versioning</a>.</p>
 <p>Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na faixa 0.x. Regras de bump documentadas em <code>docs/process-versioning.html</code>.</p>
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
-<h2>[0.5.5]</h2>
+<h2>[0.5.6]</h2>
+<h3>Alterado</h3>
+<ul>
+<li>ADR-007: sincronização Figma completa. Confirmação de que o naming aninhado <code>brand/toned/{default,hover,active}</code> já vigora no arquivo Figma (migração feita durante ADR-011). Variáveis <code>color/primary/toned-*</code> antigas (flat + <code>-disabled</code>/<code>-disabled-fg</code>) não existem mais.</li>
+<li>Button variant Toned+Disabled: 6 variantes (3 tamanhos × Icon Only true/false) tinham foreground apontando para <code>brand/content/contrast-disabled</code> (errado para contexto toned com fundo neutral) ou para variável órfã. Re-vinculadas para <code>content/disabled</code> (neutral-400 opaco), conforme ADR-007. 21 rebindings no total.</li>
+<li>Item correspondente removido do backlog.</li>
+</ul>
 <h3>Alterado</h3>
 <ul>
 <li>ADR-006 e ADR-007 traduzidos inteiramente para PT-BR. Antes, partes do corpo (Context, Decision, Consequences, Alternatives considered) estavam em inglês enquanto o cabeçalho havia sido traduzido. Agora os 11 ADRs são consistentes em idioma.</li>
