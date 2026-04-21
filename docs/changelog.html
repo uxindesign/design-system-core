@@ -74,6 +74,28 @@
 <p>O formato é baseado em <a href="https://keepachangelog.com/pt-BR/1.1.0/">Keep a Changelog</a> e o versionamento segue <a href="https://semver.org/lang/pt-BR/">Semantic Versioning</a>.</p>
 <p>Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na faixa 0.x. Regras de bump documentadas em <code>docs/process-versioning.html</code>.</p>
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
+<h2>[0.5.17]</h2>
+<h3>Adicionado</h3>
+<ul>
+<li><code>semantic.space.gap.2xs</code> → <code>{foundation.spacing.0-5}</code> (2px). Gera <code>--ds-space-gap-2xs</code> no CSS. Cobre gaps muito compactos entre elementos (Label Row: label + asterisco required). Issue #24.1.</li>
+<li>Variable correspondente em Figma (<code>space/gap/2xs</code> em Semantic collection, alias pra <code>spacing/0-5</code> nos modos Light/Dark).</li>
+</ul>
+<h3>Corrigido (Figma — form controls bindings)</h3>
+<p>Fecha <strong>issue #24.1</strong>. Auditoria do Figma encontrou <strong>75 nodes com <code>itemSpacing</code> raw</strong> nos componentes Input Text, Select e Textarea. Aplicados 74 bindings (1 descartado — <code>Frame 1</code> de preview, fora de componente):</p>
+<ul>
+<li><strong>63 Label Row @ 2px</strong> → bind pra <code>semantic.space.gap.2xs</code> (token novo).</li>
+<li><strong>5 Error Message @ 4px</strong> (Input Text) → bind pra <code>semantic.space.gap.xs</code>.</li>
+<li><strong>6 Error Message @ 6px</strong> (Textarea + Select) → <strong>padronizado para 4px</strong> + bind pra <code>semantic.space.gap.xs</code>. Alinha com o padrão do Input Text (inconsistência histórica — mesma função visual, valores diferentes entre componentes da mesma família).</li>
+</ul>
+<p>Audit pós-fix: <strong>0 <code>itemSpacing</code> raw</strong> nos 3 componentes. Sync Figma↔JSON: <strong>0 drift</strong> (<code>VALUE_DRIFT=0, NEW_IN_FIGMA=0, MISSING_IN_FIGMA=0, ALIAS_BROKEN=0</code>).</p>
+<h3>Reversibilidade</h3>
+<ul>
+<li><code>.figma-revert-24.1.json</code> (gitignored): dump do estado original de todos os 74 nodes com valores raw antes do fix.</li>
+<li><code>.figma-revert-24.1.mjs</code> (gitignored): script documentando como reverter (desfazer bindings + restaurar valores raw + opcionalmente remover <code>gap.2xs</code>).</li>
+<li>Permite rollback completo se necessário.</li>
+</ul>
+<h3>Mudança visual</h3>
+<p>Error Message de Textarea e Select fica <strong>2px mais compacto</strong> (6px → 4px). Alinhamento com Input Text — bug visual histórico corrigido.</p>
 <h2>[0.5.16]</h2>
 <h3>Adicionado</h3>
 <ul>

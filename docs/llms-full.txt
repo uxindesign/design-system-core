@@ -1,6 +1,6 @@
 # Design System Core — conteúdo consolidado
 
-> Versão 0.5.16. Arquivo destinado a consumo por LLMs que precisem
+> Versão 0.5.17. Arquivo destinado a consumo por LLMs que precisem
 > do design system inteiro em uma requisição. Inclui README, CONTRIBUTING,
 > CLAUDE.md, CHANGELOG, todos os MDs em docs/, todos os ADRs e um resumo
 > dos tokens. Páginas HTML-only (componentes, foundations) estão referenciadas
@@ -351,6 +351,29 @@ O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.
 Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na faixa 0.x. Regras de bump documentadas em `docs/process-versioning.html`.
 
 ## [Não publicado]
+
+## [0.5.17]
+
+### Adicionado
+- `semantic.space.gap.2xs` → `{foundation.spacing.0-5}` (2px). Gera `--ds-space-gap-2xs` no CSS. Cobre gaps muito compactos entre elementos (Label Row: label + asterisco required). Issue #24.1.
+- Variable correspondente em Figma (`space/gap/2xs` em Semantic collection, alias pra `spacing/0-5` nos modos Light/Dark).
+
+### Corrigido (Figma — form controls bindings)
+Fecha **issue #24.1**. Auditoria do Figma encontrou **75 nodes com `itemSpacing` raw** nos componentes Input Text, Select e Textarea. Aplicados 74 bindings (1 descartado — `Frame 1` de preview, fora de componente):
+
+- **63 Label Row @ 2px** → bind pra `semantic.space.gap.2xs` (token novo).
+- **5 Error Message @ 4px** (Input Text) → bind pra `semantic.space.gap.xs`.
+- **6 Error Message @ 6px** (Textarea + Select) → **padronizado para 4px** + bind pra `semantic.space.gap.xs`. Alinha com o padrão do Input Text (inconsistência histórica — mesma função visual, valores diferentes entre componentes da mesma família).
+
+Audit pós-fix: **0 `itemSpacing` raw** nos 3 componentes. Sync Figma↔JSON: **0 drift** (`VALUE_DRIFT=0, NEW_IN_FIGMA=0, MISSING_IN_FIGMA=0, ALIAS_BROKEN=0`).
+
+### Reversibilidade
+- `.figma-revert-24.1.json` (gitignored): dump do estado original de todos os 74 nodes com valores raw antes do fix.
+- `.figma-revert-24.1.mjs` (gitignored): script documentando como reverter (desfazer bindings + restaurar valores raw + opcionalmente remover `gap.2xs`).
+- Permite rollback completo se necessário.
+
+### Mudança visual
+Error Message de Textarea e Select fica **2px mais compacto** (6px → 4px). Alinhamento com Input Text — bug visual histórico corrigido.
 
 ## [0.5.16]
 
@@ -924,7 +947,7 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 
 > Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-21. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
-> Versão atual: **0.5.16**
+> Versão atual: **0.5.17**
 
 ## Status geral
 
@@ -962,8 +985,8 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 | Coleção | Tokens | Status |
 |---------|--------|--------|
 | Foundation | 231 | 🟢 |
-| Semantic (light) | 132 | 🟢 |
-| Semantic (dark) | 132 | 🟢 |
+| Semantic (light) | 133 | 🟢 |
+| Semantic (dark) | 133 | 🟢 |
 | Component | 137 | 🟢 |
 
 ## Pipeline
@@ -1547,24 +1570,24 @@ Se uma decisão arquitetural não está registrada como ADR, ela não foi tomada
 
 > Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-21. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
-> Versão atual: **0.5.16**
+> Versão atual: **0.5.17**
 
 ## Estado atual
 
 | Aspecto | Valor |
 |---------|-------|
-| Versão | 0.5.16 |
+| Versão | 0.5.17 |
 | Formato canônico | JSON (DTCG) em `tokens/` |
 | CSS gerado | Style Dictionary → `css/tokens/generated/` |
 | Pipeline | ✅ index.css importa apenas generated/ |
-| Paridade light/dark | ✅ 132 tokens em ambos os modos |
+| Paridade light/dark | ✅ 133 tokens em ambos os modos |
 
 ## Camadas
 
 | Camada | Tokens | Arquivos |
 |--------|--------|----------|
 | Foundation | **231** | 10 |
-| Semantic | **132 × 2 modos** | light.json + dark.json |
+| Semantic | **133 × 2 modos** | light.json + dark.json |
 | Component | **137** | 11 |
 
 ## Foundation (231 tokens)
@@ -1582,7 +1605,7 @@ Se uma decisão arquitetural não está registrada como ADR, ela não foi tomada
 | `typography.json` | 35 |
 | `z-index.json` | 6 |
 
-## Semantic (132 tokens × 2 modos)
+## Semantic (133 tokens × 2 modos)
 
 Categorias raiz em light.json:
 
@@ -3085,6 +3108,6 @@ Verificação automática de coerência Figma ↔ JSON ↔ CSS: `scripts/tokens-
 
 ═══════════════════════════════════════════════════════════
 
-Gerado por scripts/build-llms.mjs em 2026-04-21T23:20:37.609Z
-Versão: 0.5.16
+Gerado por scripts/build-llms.mjs em 2026-04-21T23:54:26.159Z
+Versão: 0.5.17
 Site: https://uxindesign.github.io/design-system-core/

@@ -498,6 +498,11 @@
         }
       },
       "gap": {
+        "2xs": {
+          "$type": "dimension",
+          "$value": "{foundation.spacing.0-5}",
+          "$description": "2px. Gap muito compacto — usado em Label Row (label + asterisco required) de form controls. Issue #24.1."
+        },
         "xs": {
           "$type": "dimension",
           "$value": "{foundation.spacing.1}"

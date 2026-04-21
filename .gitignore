@@ -7,3 +7,7 @@ node_modules/
 # Figma snapshot gerado via MCP (sync Figma → JSON)
 .figma-snapshot.json
 .figma-snapshot.*.json
+
+# Dumps de revert de ações pontuais em Figma (issue #24.x)
+.figma-revert-*.json
+.figma-revert-*.mjs
