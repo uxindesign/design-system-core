@@ -246,9 +246,9 @@
     <table class="ds-token-table">
       <thead><tr><th><span data-lang="pt">Estado</span><span data-lang="en">State</span></th><th>CSS trigger</th><th><span data-lang="pt">Mudança visual</span><span data-lang="en">Visual change</span></th><th>Token</th></tr></thead>
       <tbody>
-        <tr><td>Default</td><td>—</td><td><span data-lang="pt">Preenchimento primário</span><span data-lang="en">Primary fill</span></td><td><code>semantic.color.primary.default</code></td></tr>
-        <tr><td>Hover</td><td><code>:hover</code></td><td><span data-lang="pt">Preenchimento mais escuro</span><span data-lang="en">Darker fill</span></td><td><code>semantic.color.primary.hover</code></td></tr>
-        <tr><td>Pressed</td><td><code>:active</code></td><td><span data-lang="pt">Preenchimento mais escuro ainda</span><span data-lang="en">Darkest fill</span></td><td><code>semantic.color.primary.active</code></td></tr>
+        <tr><td>Default</td><td>—</td><td><span data-lang="pt">Preenchimento primário</span><span data-lang="en">Primary fill</span></td><td><code>semantic.brand.default</code></td></tr>
+        <tr><td>Hover</td><td><code>:hover</code></td><td><span data-lang="pt">Preenchimento mais escuro</span><span data-lang="en">Darker fill</span></td><td><code>semantic.brand.hover</code></td></tr>
+        <tr><td>Pressed</td><td><code>:active</code></td><td><span data-lang="pt">Preenchimento mais escuro ainda</span><span data-lang="en">Darkest fill</span></td><td><code>semantic.brand.active</code></td></tr>
         <tr><td>Focused</td><td><code>:focus-visible</code></td><td><span data-lang="pt">Anel de 2px, offset de 2px</span><span data-lang="en">2px outline ring, 2px offset</span></td><td><code>semantic.focus.ring.*</code></td></tr>
         <tr><td>Disabled</td><td><code>[disabled]</code></td><td><span data-lang="pt">Bg + fg atenuados, sem pointer events</span><span data-lang="en">Muted bg + fg, no pointer events</span></td><td><code>semantic.state.disabled.*</code></td></tr>
       </tbody>
@@ -421,12 +421,12 @@
     <table class="ds-token-table">
       <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token (semantic)</th><th><span data-lang="pt">Variável CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
       <tbody>
-        <tr><td>background (default)</td><td><code>semantic.color.primary.default</code></td><td><code>--ds-brand-default</code></td></tr>
-        <tr><td>background (hover)</td><td><code>semantic.color.primary.hover</code></td><td><code>--ds-brand-hover</code></td></tr>
-        <tr><td>background (active)</td><td><code>semantic.color.primary.active</code></td><td><code>--ds-brand-active</code></td></tr>
+        <tr><td>background (default)</td><td><code>semantic.brand.default</code></td><td><code>--ds-brand-default</code></td></tr>
+        <tr><td>background (hover)</td><td><code>semantic.brand.hover</code></td><td><code>--ds-brand-hover</code></td></tr>
+        <tr><td>background (active)</td><td><code>semantic.brand.active</code></td><td><code>--ds-brand-active</code></td></tr>
         <tr><td>background (disabled)</td><td><code>semantic.state.disabled.background</code></td><td><code>--ds-state-disabled-background</code></td></tr>
-        <tr><td>text/icon color</td><td><code>semantic.color.primary.foreground</code></td><td><code>--ds-brand-content-contrast</code></td></tr>
-        <tr><td>text (disabled)</td><td><code>semantic.state.disabled.foreground</code></td><td><code>--ds-content-disabled</code></td></tr>
+        <tr><td>text/icon color</td><td><code>semantic.brand.content.contrast</code></td><td><code>--ds-brand-content-contrast</code></td></tr>
+        <tr><td>text (disabled)</td><td><code>semantic.content.disabled</code></td><td><code>--ds-content-disabled</code></td></tr>
         <tr><td>border-radius</td><td><code>semantic.radius.component</code></td><td><code>--ds-radius-component</code></td></tr>
         <tr><td>focus ring</td><td><code>semantic.focus.ring.*</code></td><td><code>--ds-focus-ring-width</code>, <code>--ds-focus-ring-offset</code>, <code>--ds-focus-ring-color</code></td></tr>
         <tr><td>height (sm)</td><td><code>semantic.size.control.sm</code></td><td><code>--ds-size-control-sm</code></td></tr>
@@ -439,9 +439,9 @@
         <tr><td>padding-y (md)</td><td><code>semantic.space.control.padding-y.md</code></td><td><code>--ds-space-control-padding-y-md</code> (10px)</td></tr>
         <tr><td>padding-y (lg)</td><td><code>semantic.space.control.padding-y.lg</code></td><td><code>--ds-space-control-padding-y-lg</code> (12px)</td></tr>
         <tr><td>gap (icon ↔ label)</td><td><code>semantic.space.gap.sm</code></td><td><code>--ds-space-gap-sm</code></td></tr>
-        <tr><td>font-size (sm)</td><td><code>semantic.typography.control.font-size.sm</code></td><td><code>--ds-typography-control-font-size-sm</code></td></tr>
-        <tr><td>font-size (md)</td><td><code>semantic.typography.control.font-size.md</code></td><td><code>--ds-typography-control-font-size-md</code></td></tr>
-        <tr><td>font-size (lg)</td><td><code>semantic.typography.control.font-size.lg</code></td><td><code>--ds-typography-control-font-size-lg</code></td></tr>
+        <tr><td>font-size (sm)</td><td><code>semantic.typography.control.font-size.sm</code></td><td><code>--ds-control-font-size-sm</code></td></tr>
+        <tr><td>font-size (md)</td><td><code>semantic.typography.control.font-size.md</code></td><td><code>--ds-control-font-size-md</code></td></tr>
+        <tr><td>font-size (lg)</td><td><code>semantic.typography.control.font-size.lg</code></td><td><code>--ds-control-font-size-lg</code></td></tr>
         <tr><td>icon-size (sm)</td><td><code>semantic.size.control.icon.sm</code></td><td><code>--ds-size-control-icon-sm</code></td></tr>
         <tr><td>icon-size (md)</td><td><code>semantic.size.control.icon.md</code></td><td><code>--ds-size-control-icon-md</code></td></tr>
         <tr><td>icon-size (lg)</td><td><code>semantic.size.control.icon.lg</code></td><td><code>--ds-size-control-icon-lg</code></td></tr>

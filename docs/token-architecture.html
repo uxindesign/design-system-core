@@ -99,9 +99,9 @@
         <div class="ds-arch__header ds-arch__header--sem">Semantic</div>
         <div class="ds-arch__body">
           <span data-lang="pt">Intenção e significado. Referencia foundation via aliases. Sensível a modo (light/dark).</span><span data-lang="en">Intent and meaning. References foundation via aliases. Mode-aware (light/dark).</span><br><br>
-          <code>semantic.color.primary.default</code> → <code>{foundation.brand.primary}</code><br>
-          <code>semantic.text.default</code> → <code>{foundation.color.neutral.900}</code> (light)<br>
-          <code>semantic.text.default</code> → <code>{foundation.color.neutral.50}</code> (dark)<br><br>
+          <code>semantic.brand.default</code> → <code>{foundation.brand.primary}</code><br>
+          <code>semantic.content.default</code> → <code>{foundation.color.neutral.900}</code> (light)<br>
+          <code>semantic.content.default</code> → <code>{foundation.color.neutral.50}</code> (dark)<br><br>
           <span data-lang="pt">~104 tokens × 2 modos.</span><span data-lang="en">~104 tokens × 2 modes.</span>
         </div>
       </div>
@@ -110,7 +110,7 @@
         <div class="ds-arch__header ds-arch__header--cmp">Component</div>
         <div class="ds-arch__body">
           <span data-lang="pt">Tokens por componente. Referencia semantic, nunca foundation.</span><span data-lang="en">Per-component tokens. References semantic, never foundation.</span><br><br>
-          <code>component.button.background.brand.default</code> → <code>{semantic.color.primary.default}</code><br>
+          <code>component.button.background.brand.default</code> → <code>{semantic.brand.default}</code><br>
           <code>component.button.padding.md</code> → <code>{semantic.space.inset.md}</code><br><br>
           <span data-lang="pt">118 tokens em 11 arquivos de componente.</span><span data-lang="en">118 tokens across 11 component files.</span>
         </div>
@@ -138,7 +138,7 @@
       </div>
       <div class="ds-chain__step">
         <span class="ds-chain__badge ds-chain__badge--sem">semantic</span>
-        <code>semantic.color.primary.default</code>
+        <code>semantic.brand.default</code>
       </div>
       <div class="ds-chain__step">
         <span style="width:54px;display:inline-block"></span>
@@ -182,7 +182,7 @@
 }</div>
 
     <p style="color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);">
-      <span data-lang="pt">Apenas <code>semantic.color.primary.default</code> referencia <code>foundation.brand.primary</code>. Todos os outros estados (hover, active, subtle) referenciam a paleta foundation diretamente, porque mudanças de estado precisam de steps específicos da paleta que não seguem uma fórmula.</span><span data-lang="en">Only <code>semantic.color.primary.default</code> references <code>foundation.brand.primary</code>. All other states (hover, active, subtle) reference the foundation palette directly, because state shifts need specific palette steps that don't follow a formula.</span>
+      <span data-lang="pt">Apenas <code>semantic.brand.default</code> referencia <code>foundation.brand.primary</code>. Todos os outros estados (hover, active, subtle) referenciam a paleta foundation diretamente, porque mudanças de estado precisam de steps específicos da paleta que não seguem uma fórmula.</span><span data-lang="en">Only <code>semantic.brand.default</code> references <code>foundation.brand.primary</code>. All other states (hover, active, subtle) reference the foundation palette directly, because state shifts need specific palette steps that don't follow a formula.</span>
     </p>
   </div>
 
@@ -205,7 +205,7 @@
 
     <div class="ds-callout ds-callout--warning">
       <div class="ds-callout__title"><span data-lang="pt">A regra do sufixo <code>-default</code></span><span data-lang="en">The <code>-default</code> suffix rule</span></div>
-      <span data-lang="pt">Todo token terminado em <code>.default</code> gera <code>-default</code> no CSS. Sem exceções, sem colapsar. <code>semantic.color.primary.default</code> vira <code>--ds-brand-default</code>, não <code>--ds-color-primary</code>.</span><span data-lang="en">Every token ending in <code>.default</code> generates <code>-default</code> in CSS. No exceptions, no collapsing. <code>semantic.color.primary.default</code> becomes <code>--ds-brand-default</code>, not <code>--ds-color-primary</code>.</span>
+      <span data-lang="pt">Todo token terminado em <code>.default</code> gera <code>-default</code> no CSS. Sem exceções, sem colapsar. <code>semantic.brand.default</code> vira <code>--ds-brand-default</code>, não <code>--ds-color-primary</code>.</span><span data-lang="en">Every token ending in <code>.default</code> generates <code>-default</code> in CSS. No exceptions, no collapsing. <code>semantic.brand.default</code> becomes <code>--ds-brand-default</code>, not <code>--ds-color-primary</code>.</span>
     </div>
   </div>
 
@@ -263,9 +263,9 @@
       <tbody>
         <tr><td><code>foundation.color.blue.500</code></td><td><code>--ds-color-blue-500</code></td><td><code>color/blue/500</code> (Foundation)</td></tr>
         <tr><td><code>foundation.brand.primary</code></td><td><code>--ds-brand-primary</code></td><td><code>brand/primary</code> (Brand)</td></tr>
-        <tr><td><code>semantic.color.primary.default</code></td><td><code>--ds-brand-default</code></td><td><code>color/primary/default</code> (Semantic)</td></tr>
+        <tr><td><code>semantic.brand.default</code></td><td><code>--ds-brand-default</code></td><td><code>color/primary/default</code> (Semantic)</td></tr>
         <tr><td><code>semantic.space.inset.md</code></td><td><code>--ds-space-inset-md</code></td><td><code>space/inset/md</code> (Semantic)</td></tr>
-        <tr><td><code>component.button.background.brand.default</code></td><td><code>--ds-button-bg-brand-default</code></td><td><code>button/background/brand/default</code> (Component)</td></tr>
+        <tr><td><code>component.button.background.toned.default</code></td><td><code>--ds-button-background-toned-default</code></td><td><code>button/background/toned/default</code> (Component)</td></tr>
       </tbody>
     </table>
     <p style="color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);">
