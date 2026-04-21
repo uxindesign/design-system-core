@@ -8,16 +8,19 @@ Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na
 
 ## [Não publicado]
 
-## [0.6.0]
+## [0.5.9]
 
-### Adicionado
-- **`scripts/sync-tokens-from-figma.mjs`** — canal oficial Figma → JSON, alinhado à ADR-003 revisada (Figma como autoridade). Dry-run por padrão, `--write` aplica. Apenas `VALUE_DRIFT` é aplicado automaticamente; `NEW_IN_FIGMA` e `MISSING_IN_FIGMA` exigem ação manual (prevenção de criação/remoção não-intencional).
-- **`scripts/lib/figma-dtcg.mjs`** — módulo compartilhado com lógica de fetch Figma, conversão Figma→DTCG e comparação. Reutilizado por `sync-tokens-from-figma.mjs` e `tokens-verify.mjs`.
-- **`.github/workflows/sync-tokens-from-figma.yml`** — workflow manual (`workflow_dispatch`). Suporta dry-run opcional via input. Em modo write, abre PR automático com o diff no corpo. Exige secret `FIGMA_PAT`.
-- Novos npm scripts: `sync:tokens-from-figma` (dry-run) e `sync:tokens-from-figma:write` (aplica).
+### Revertido
+- Revertido o PR #15 (0.6.0, `feat(tokens): sync Figma → JSON via script + workflow + verify refinado`). Motivo: o endpoint `GET /v1/files/:key/variables/local` da Figma REST API requer o scope `file_variables:read`, que **é exclusivo do plano Enterprise**. Nosso plano atual é Pro/Expert — o PAT não consegue emitir esse scope. Script inútil no plano atual.
+- Removidos: `scripts/sync-tokens-from-figma.mjs`, `scripts/lib/figma-dtcg.mjs`, `.github/workflows/sync-tokens-from-figma.yml`, e os npm scripts correspondentes.
+- `scripts/tokens-verify.mjs` voltou à implementação pré-0.6.0 (sem a classificação NEEDS_SYNC/DRIFT_FROM_SOURCE/VALUE_DRIFT — que dependia do módulo `lib/figma-dtcg.mjs` também revertido).
 
 ### Alterado
-- **`scripts/tokens-verify.mjs`** — comparação Figma↔JSON passa da categorização genérica anterior para as três categorias do ADR-003 revisada: `NEEDS_SYNC` (warning), `DRIFT_FROM_SOURCE` (erro) e `VALUE_DRIFT` (erro). Resolução completa de aliases Figma, normalização de dimensões (px/rem equivalentes), suporte a modos Light/Dark separados. Na fase de adaptação (14 dias), todas as categorias ficam como warning — depois `DRIFT_FROM_SOURCE` e `VALUE_DRIFT` passam a falhar o CI.
+- CLAUDE.md: ajustado para refletir que o mecanismo de propagação Figma → JSON está em reavaliação. Regra de ouro "não editar `tokens/*.json` à mão" continua valendo.
+- `docs/backlog.md`: item "Implementar o sync Figma → JSON" adicionado em alta prioridade, listando as quatro opções em aberto (plugin custom, adaptar pra MCP, Tokens Studio, upgrade Enterprise).
+
+### Mantido
+- ADR-003 revisada (Figma como autoridade canônica) continua válida — a decisão conceitual não depende do mecanismo técnico. Só o "como" ficou em aberto.
 
 ## [0.5.8]
 

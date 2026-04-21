@@ -72,6 +72,14 @@
   <div class="ds-md-content">
 <p>Itens fora do escopo imediato mas que devem ser implementados. Organizados por prioridade.</p>
 <h2>Alta prioridade</h2>
+<h3>Implementar o sync Figma → JSON (substitui a tentativa revertida em 0.5.9)</h3>
+<p>Contexto: a ADR-003 foi revisada em 0.5.8 declarando <strong>Figma como autoridade canônica</strong> dos valores de token. Em 0.6.0, o script <code>sync-tokens-from-figma.mjs</code> foi implementado via REST API (<code>GET /v1/files/:key/variables/local</code>), mas <strong>foi revertido em 0.5.9</strong> depois de descobrirmos que a API <code>file_variables:read</code> é <strong>exclusiva do plano Enterprise</strong> (nosso plano atual é Pro/Expert). A decisão arquitetônica da ADR-003 continua válida; o mecanismo técnico de sync precisa de outra abordagem.</p>
+<p>Opções a avaliar:</p>
+<p><strong>(a) Plugin Figma custom</strong> — rodaria dentro do Figma via Plugin API (que não é plano-gated). Botão &quot;Publicar variables&quot; que serializa em DTCG e faz POST/commit pra GitHub (usando GitHub App ou OAuth). Custo: 1–2 semanas de dev + manutenção própria.</p>
+<p><strong>(b) Adaptar o script revertido pra usar MCP (<code>use_figma</code>)</strong> — o MCP remoto já autenticado (UXIN Pro) consegue ler variables via Plugin API interna, sem depender do plano. A mesma lógica de <code>scripts/lib/figma-dtcg.mjs</code> (revertido em 0.5.9, disponível no git em <code>git show 9d531a8</code>) pode ser reutilizada. Limitação: só roda em sessão interativa de Claude Code; não dá pra automatizar em GitHub Actions. Custo: ~2h.</p>
+<p><strong>(c) Tokens Studio for Figma (plugin de terceiros)</strong> — plugin pago/gratuito (conforme tier) que já faz Figma → JSON + push pra Git via OAuth. Migrar as 620 Variables nativas atuais pra dentro do Tokens Studio exige reconfiguração. Ajusta <code>build-tokens.mjs</code> pro formato que ele exporta. Custo: 2–3 dias + designer precisa aprender o plugin.</p>
+<p><strong>(d) Upgrade para plano Enterprise</strong> — destrava a REST API direta, volta o script original. Decisão de negócio (≈ US$ 75/editor/mês).</p>
+<p>Decisão pendente.</p>
 <h3>Preencher <code>docs/brand-principles.md</code></h3>
 <p>Template existe, conteúdo real ainda não foi definido. Passa por: missão, 3 princípios de design, tom de voz, identidade visual, logo.</p>
 <h3>Reduzir documentação textual do Figma</h3>

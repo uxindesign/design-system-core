@@ -1,6 +1,6 @@
 {
   "name": "@uxin/design-system-core",
-  "version": "0.6.0",
+  "version": "0.5.9",
   "description": "White-label CSS design system with semantic tokens, 18 components, and light/dark mode support",
   "main": "css/design-system.css",
   "style": "css/design-system.css",
@@ -24,8 +24,6 @@
     "build:tokens": "node build-tokens.mjs",
     "sync:docs": "node scripts/sync-docs.mjs",
     "verify:tokens": "node scripts/tokens-verify.mjs",
-    "sync:tokens-from-figma": "node scripts/sync-tokens-from-figma.mjs",
-    "sync:tokens-from-figma:write": "node scripts/sync-tokens-from-figma.mjs --write",
     "build:api": "node scripts/build-api.mjs",
     "build:llms": "node scripts/build-llms.mjs",
     "build:all": "npm run build:tokens && npm run sync:docs && npm run build:api && npm run build:llms && npm run verify:tokens"
