@@ -92,6 +92,7 @@
   --ds-space-inset-md: var(--ds-spacing-3);
   --ds-space-inset-lg: var(--ds-spacing-4);
   --ds-space-inset-xl: var(--ds-spacing-6);
+  --ds-space-gap-2xs: var(--ds-spacing-0-5); /** 2px. Gap muito compacto — usado em Label Row (label + asterisco required) de form controls. Issue #24.1. */
   --ds-space-gap-xs: var(--ds-spacing-1);
   --ds-space-gap-sm: var(--ds-spacing-2);
   --ds-space-gap-md: var(--ds-spacing-3);
