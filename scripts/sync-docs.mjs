@@ -455,7 +455,288 @@ for (const p of mdPages) {
 }
 console.log(`✅ ${mdPageCount} páginas MD → HTML em docs/`);
 
-// 4. Injeta badge de versão em index.html (placeholder <!-- VERSION -->).
+// 4. Auto-gera foundations-theme-colors.html a partir do JSON semantic
+//
+// Lê tokens/semantic/{light,dark}.json + tokens/foundation/{colors,brand}.json,
+// resolve aliases recursivamente e gera tabelas por seção. Só substitui o
+// conteúdo entre <!-- AUTO-GENERATED:THEME-COLORS:START --> e :END,
+// preservando header/nav/footer editáveis à mão.
+
+const THEME_COLOR_SECTIONS = [
+  { id: 'background', pt: 'Background', en: 'Background', tokens: [
+    'semantic.background.default',
+    'semantic.background.subtle',
+    'semantic.state.disabled.background',
+    'semantic.background.inverse',
+    'semantic.background.overlay',
+  ]},
+  { id: 'surface', pt: 'Surface', en: 'Surface', tokens: [
+    'semantic.surface.default',
+    'semantic.surface.raised',
+    'semantic.surface.overlay',
+    'semantic.surface.elevated',
+  ]},
+  { id: 'brand-primary', pt: 'Brand Primary', en: 'Brand Primary', tokens: [
+    'semantic.brand.default',
+    'semantic.brand.hover',
+    'semantic.brand.active',
+    'semantic.brand.subtle',
+    'semantic.brand.disabled',
+    'semantic.brand.toned.default',
+    'semantic.brand.toned.hover',
+    'semantic.brand.toned.active',
+    'semantic.brand.content.default',
+    'semantic.brand.content.contrast',
+    'semantic.brand.content.contrast-disabled',
+  ]},
+  { id: 'brand-secondary', pt: 'Brand Secondary / Accent', en: 'Brand Secondary / Accent', tokens: [
+    'semantic.accent.default',
+    'semantic.accent.hover',
+    'semantic.accent.active',
+    'semantic.accent.subtle',
+    'semantic.accent.content.default',
+    'semantic.accent.content.contrast',
+  ]},
+  { id: 'content', pt: 'Text / Foreground', en: 'Text / Foreground', tokens: [
+    'semantic.content.default',
+    'semantic.content.secondary',
+    'semantic.content.tertiary',
+    'semantic.content.disabled',
+    'semantic.content.inverse',
+    'semantic.content.link.default',
+    'semantic.content.link.hover',
+  ]},
+  { id: 'border', pt: 'Border', en: 'Border', tokens: [
+    'semantic.border.default',
+    'semantic.border.strong',
+    'semantic.border.subtle',
+    'semantic.border.focus',
+    'semantic.border.focus-error',
+    'semantic.border.brand',
+    'semantic.border.error',
+    'semantic.border.control.default',
+    'semantic.border.control.hover',
+    'semantic.border.control.disabled',
+  ]},
+  { id: 'feedback-success', pt: 'Feedback — Success', en: 'Feedback -- Success', tokens: [
+    'semantic.feedback.success.background',
+    'semantic.feedback.success.subtle',
+    'semantic.feedback.success.default',
+    'semantic.feedback.success.hover',
+    'semantic.feedback.success.active',
+    'semantic.feedback.success.border',
+    'semantic.feedback.success.disabled',
+    'semantic.feedback.success.content.default',
+    'semantic.feedback.success.content.contrast',
+    'semantic.feedback.success.content.contrast-disabled',
+  ]},
+  { id: 'feedback-warning', pt: 'Feedback — Warning', en: 'Feedback -- Warning', tokens: [
+    'semantic.feedback.warning.background',
+    'semantic.feedback.warning.subtle',
+    'semantic.feedback.warning.default',
+    'semantic.feedback.warning.hover',
+    'semantic.feedback.warning.border',
+    'semantic.feedback.warning.content.default',
+    'semantic.feedback.warning.content.contrast',
+  ]},
+  { id: 'feedback-error', pt: 'Feedback — Error', en: 'Feedback -- Error', tokens: [
+    'semantic.feedback.error.background',
+    'semantic.feedback.error.subtle',
+    'semantic.feedback.error.default',
+    'semantic.feedback.error.hover',
+    'semantic.feedback.error.active',
+    'semantic.feedback.error.border',
+    'semantic.feedback.error.disabled',
+    'semantic.feedback.error.content.default',
+    'semantic.feedback.error.content.contrast',
+    'semantic.feedback.error.content.contrast-disabled',
+  ]},
+  { id: 'feedback-info', pt: 'Feedback — Info', en: 'Feedback -- Info', tokens: [
+    'semantic.feedback.info.background',
+    'semantic.feedback.info.subtle',
+    'semantic.feedback.info.default',
+    'semantic.feedback.info.hover',
+    'semantic.feedback.info.border',
+    'semantic.feedback.info.content.default',
+    'semantic.feedback.info.content.contrast',
+  ]},
+  { id: 'state', pt: 'State', en: 'State', tokens: [
+    'semantic.state.hover',
+    'semantic.state.pressed',
+    'semantic.state.focus',
+    'semantic.focus.ring.color',
+  ]},
+  { id: 'overlay', pt: 'Overlay', en: 'Overlay', tokens: [
+    'semantic.overlay.subtle',
+    'semantic.overlay.default',
+    'semantic.overlay.medium',
+    'semantic.overlay.strong',
+  ]},
+];
+
+// Flatten DTCG JSON: { foundation: { color: { neutral: { 50: {$value,...} } } } }
+// → { "foundation.color.neutral.50": {$value, $type, $description} }
+function flattenTokens(obj, prefix = '', acc = {}) {
+  if (!obj || typeof obj !== 'object') return acc;
+  if ('$value' in obj) { acc[prefix] = obj; return acc; }
+  for (const [k, v] of Object.entries(obj)) {
+    if (k.startsWith('$')) continue;
+    flattenTokens(v, prefix ? `${prefix}.${k}` : k, acc);
+  }
+  return acc;
+}
+
+// Segue referência `{x.y.z}` um passo de cada vez, mas para cedo nos tokens
+// "semanticamente significativos" — bate com o alias que o Style Dictionary
+// emite no CSS. Regras:
+//   - `foundation.color.*` e outros primitivos: resolve até o valor literal.
+//   - `foundation.brand.*`: para aqui (brand-primary/secondary são o switch
+//     de tema — não resolver pra blue-600 direto).
+//   - `semantic.*`: para quando chegar num semantic diferente do entry point
+//     (ex: content.link.default aponta pra brand.default → para em brand.default).
+// Retorna { finalPath, finalValue } onde finalPath é onde a cadeia parou e
+// finalValue é o valor literal se chegou num primitivo, ou null.
+function resolveAlias(startPath, tokenMap, depth = 0) {
+  if (depth > 10) return { finalPath: startPath, finalValue: null };
+  // Regra de parada: se já saí do entry point e cheguei num token "significativo"
+  // (semantic ou foundation.brand), para aqui. Isso casa com o que o CSS gerado
+  // emite — `var(--ds-brand-primary)`, `var(--ds-brand-default)`, etc.
+  if (depth > 0 && (startPath.startsWith('semantic.') || startPath.startsWith('foundation.brand.'))) {
+    return { finalPath: startPath, finalValue: null };
+  }
+  const entry = tokenMap[startPath];
+  if (!entry) return { finalPath: startPath, finalValue: null };
+  const v = entry.$value;
+  if (typeof v === 'string' && /^\{[^}]+\}$/.test(v)) {
+    return resolveAlias(v.slice(1, -1), tokenMap, depth + 1);
+  }
+  return { finalPath: startPath, finalValue: v };
+}
+
+// Converte path DTCG → nome curto exibido na doc (igual ao sufixo da CSS var
+// correspondente, quando existe). Cobre:
+//   foundation.color.neutral.50       → neutral-50
+//   foundation.color.overlay.black.5  → overlay-black-5
+//   foundation.color.disabled.brand-light → disabled-brand-light
+//   foundation.brand.primary          → brand-primary
+//   foundation.brand.secondary        → brand-secondary
+//   semantic.brand.default            → brand-default
+//   semantic.feedback.error.default   → feedback-error-default
+function resolvedShortName(path) {
+  if (path.startsWith('foundation.color.')) {
+    return path.replace(/^foundation\.color\./, '').replace(/\./g, '-');
+  }
+  if (path.startsWith('foundation.brand.')) {
+    return path.replace(/^foundation\./, '').replace(/\./g, '-');
+  }
+  if (path.startsWith('semantic.')) {
+    return path.replace(/^semantic\./, '').replace(/\./g, '-');
+  }
+  // foundation.typography.*, foundation.spacing.*, etc — retorna path sem o prefixo
+  return path.replace(/^foundation\./, '').replace(/\./g, '-');
+}
+
+// Formata valor literal pro display: rgba com alpha → formato curto.
+function formatLiteral(v) {
+  if (typeof v !== 'string') return String(v);
+  return v.replace(/\s+/g, '');
+}
+
+// semantic.brand.default → --ds-brand-default (remove camada "semantic" e
+// converte . em -). Isso casa com o naming gerado por build-tokens.mjs via
+// o transform name/strip-layer.
+function semanticToCssVar(path) {
+  return '--ds-' + path.replace(/^semantic\./, '').replace(/\./g, '-');
+}
+
+function buildThemeColorsTables() {
+  const foundationDir = path.join(ROOT, 'tokens', 'foundation');
+  const semanticDir = path.join(ROOT, 'tokens', 'semantic');
+
+  // Merge todos os foundation files em um só map
+  const foundationMap = {};
+  for (const f of fs.readdirSync(foundationDir).filter(x => x.endsWith('.json'))) {
+    const json = readJson(path.join(foundationDir, f));
+    Object.assign(foundationMap, flattenTokens(json));
+  }
+  const lightMap = flattenTokens(readJson(path.join(semanticDir, 'light.json')));
+  const darkMap = flattenTokens(readJson(path.join(semanticDir, 'dark.json')));
+
+  // Para resolver aliases no semantic, precisa de um map unificado que
+  // conhece tanto semantic quanto foundation (aliases semantic→semantic
+  // existem, ex: content.link.default → semantic.brand.default).
+  const lightAll = { ...foundationMap, ...lightMap };
+  const darkAll = { ...foundationMap, ...darkMap };
+
+  const unresolvedTokens = [];
+  const sectionsHtml = [];
+
+  for (const section of THEME_COLOR_SECTIONS) {
+    const rows = [];
+    for (const tokenPath of section.tokens) {
+      if (!lightMap[tokenPath] && !darkMap[tokenPath]) {
+        unresolvedTokens.push(tokenPath);
+        continue; // token não existe — pula
+      }
+      const { finalPath: lightFinal, finalValue: lightLiteral } = resolveAlias(tokenPath, lightAll);
+      const { finalPath: darkFinal, finalValue: darkLiteral } = resolveAlias(tokenPath, darkAll);
+
+      const lightDisplay = lightFinal.startsWith('foundation.') || lightFinal.startsWith('semantic.')
+        ? resolvedShortName(lightFinal)
+        : formatLiteral(lightLiteral);
+      const darkDisplay = darkFinal.startsWith('foundation.') || darkFinal.startsWith('semantic.')
+        ? resolvedShortName(darkFinal)
+        : formatLiteral(darkLiteral);
+
+      const cssVar = semanticToCssVar(tokenPath);
+      rows.push(`        <tr><td><span class="ds-token-swatch" style="background-color:var(${cssVar})"></span></td><td><code>${cssVar}</code></td><td><code>${lightDisplay}</code></td><td><code>${darkDisplay}</code></td></tr>`);
+    }
+    if (rows.length === 0) continue;
+    sectionsHtml.push(
+`  <div class="ds-subsection">
+    <h2 class="ds-subsection__title"><span data-lang="pt">${section.pt}</span><span data-lang="en">${section.en}</span></h2>
+    <table class="ds-token-table">
+      <thead><tr><th><span data-lang="pt">Amostra</span><span data-lang="en">Swatch</span></th><th>Token</th><th>Light</th><th>Dark</th></tr></thead>
+      <tbody>
+${rows.join('\n')}
+      </tbody>
+    </table>
+  </div>`
+    );
+  }
+
+  return { html: sectionsHtml.join('\n\n'), unresolvedTokens };
+}
+
+const themeColorsHtmlPath = path.join(ROOT, 'docs', 'foundations-theme-colors.html');
+if (fs.existsSync(themeColorsHtmlPath)) {
+  const orig = fs.readFileSync(themeColorsHtmlPath, 'utf8');
+  const markerStart = '<!-- AUTO-GENERATED:THEME-COLORS:START';
+  const markerEnd = '<!-- AUTO-GENERATED:THEME-COLORS:END -->';
+  const sIdx = orig.indexOf(markerStart);
+  const eIdx = orig.indexOf(markerEnd);
+  if (sIdx === -1 || eIdx === -1) {
+    console.warn('⚠️ foundations-theme-colors.html: marcadores AUTO-GENERATED:THEME-COLORS não encontrados. Pulando.');
+  } else {
+    const sLineEnd = orig.indexOf('\n', sIdx) + 1;
+    const before = orig.slice(0, sLineEnd);
+    const after = orig.slice(eIdx);
+    const { html: generated, unresolvedTokens } = buildThemeColorsTables();
+    const next = before + generated + '\n  ' + after;
+    if (next !== orig) {
+      fs.writeFileSync(themeColorsHtmlPath, next);
+      console.log(`✅ foundations-theme-colors.html regenerado (${THEME_COLOR_SECTIONS.length} seções)`);
+    } else {
+      console.log(`✅ foundations-theme-colors.html (já em dia)`);
+    }
+    if (unresolvedTokens.length > 0) {
+      console.warn(`⚠️ ${unresolvedTokens.length} token(s) listados mas não encontrados no JSON:`);
+      for (const t of unresolvedTokens) console.warn(`     ${t}`);
+    }
+  }
+}
+
+// 5. Injeta badge de versão em index.html (placeholder <!-- VERSION -->).
 // Regex captura o comentário + o texto "vX.Y.Z" opcional imediatamente
 // depois, pra substituir tudo de uma vez — sem isso, rodar sync:docs
 // mais de uma vez duplica o número de versão.

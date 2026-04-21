@@ -74,6 +74,28 @@
 <p>O formato é baseado em <a href="https://keepachangelog.com/pt-BR/1.1.0/">Keep a Changelog</a> e o versionamento segue <a href="https://semver.org/lang/pt-BR/">Semantic Versioning</a>.</p>
 <p>Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na faixa 0.x. Regras de bump documentadas em <code>docs/process-versioning.html</code>.</p>
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
+<h2>[0.5.12]</h2>
+<h3>Corrigido</h3>
+<ul>
+<li><strong><code>docs/foundations-theme-colors.html</code> agora é auto-gerado</strong> a partir dos JSONs <code>tokens/semantic/{light,dark}.json</code> e <code>tokens/foundation/{colors,brand}.json</code>. O arquivo era mantido à mão e acumulou drift severo: <strong>37 das 53 linhas (70%)</strong> estavam com valor errado, principalmente porque o PR #18 (0.5.11) mudou valores de semantic mas a doc não acompanhou. Problemas eliminados:<ul>
+<li>5 tokens <strong>duplicados</strong> (ex: <code>accent-subtle</code> aparecia com <code>purple-100/purple-800</code> e também com <code>purple-50/purple-950</code> — a segunda linha era fantasma).</li>
+<li>22 tokens <strong>desatualizados</strong> pós PR #18 (<code>brand.hover/active</code>, <code>feedback.*.hover/active/border</code>, <code>background.subtle</code>, <code>state.disabled.background</code>, etc).</li>
+<li>10 tokens com <strong>apelidos imprecisos</strong> (doc usava <code>white</code> em vez de <code>neutral-50</code>, <code>primary</code> em vez de <code>brand-default</code>, <code>blue-600</code> em vez de <code>brand-primary</code>).</li>
+<li>3 linhas <strong>inventadas</strong> sem correspondência no CSS real.</li>
+</ul>
+</li>
+</ul>
+<h3>Adicionado</h3>
+<ul>
+<li>Em <code>scripts/sync-docs.mjs</code>: função que lê <code>tokens/semantic/{light,dark}.json</code>, resolve aliases recursivamente respeitando a arquitetura (para em <code>foundation.brand.*</code> e em outros semantic — bate com o que o Style Dictionary emite no CSS), e gera 12 seções (Background, Surface, Brand Primary, Brand Secondary, Text/Foreground, Border, Feedback Success/Warning/Error/Info, State, Overlay) com <strong>85 tokens</strong>.</li>
+<li>Marcadores <code>&lt;!-- AUTO-GENERATED:THEME-COLORS:START|END --&gt;</code> no HTML — só a região entre eles é regenerada; header, nav, sidebar, footer continuam editáveis à mão.</li>
+<li>Audit de tokens faltando: se um token <code>$type: color</code> existe em <code>semantic/light.json</code> mas não está listado em nenhuma seção, o script avisa no console.</li>
+</ul>
+<h3>Notas</h3>
+<ul>
+<li>Daqui pra frente, toda mudança de token no JSON regenera a doc automaticamente (via <code>npm run sync:docs</code>, já no <code>build:all</code>). Drift arquitetural nessa página é estruturalmente impossível.</li>
+<li><strong>Follow-up</strong>: auditar <code>foundations-spacing.html</code>, <code>foundations-radius.html</code>, <code>foundations-typography.html</code>, <code>foundations-elevation.html</code>, <code>foundations-motion.html</code>, <code>foundations-zindex.html</code>, <code>foundations-borders.html</code>, <code>foundations-opacity.html</code> pra confirmar se estão em dia ou se têm drift similar. (Opção C do plano — próximo PR.)</li>
+</ul>
 <h2>[0.5.11]</h2>
 <h3>Alterado (Figma — alinhamento arquitetônico + primeiro sync real)</h3>
 <p>Primeira execução end-to-end do fluxo Figma → JSON. O Figma estava arquiteturalmente defasado em relação ao JSON (que evoluiu ao longo das ADRs 001/005/006/007/011): tinha valores literais onde o JSON tinha aliases de 2–3 níveis. Decisão do time em 21/04/2026: ajustar o Figma pra espelhar a arquitetura do JSON antes de começar a usar o sync bidirecionalmente.</p>
