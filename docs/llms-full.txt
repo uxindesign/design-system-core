@@ -1,6 +1,6 @@
 # Design System Core — conteúdo consolidado
 
-> Versão 0.6.0. Arquivo destinado a consumo por LLMs que precisem
+> Versão 0.5.10. Arquivo destinado a consumo por LLMs que precisem
 > do design system inteiro em uma requisição. Inclui README, CONTRIBUTING,
 > CLAUDE.md, CHANGELOG, todos os MDs em docs/, todos os ADRs e um resumo
 > dos tokens. Páginas HTML-only (componentes, foundations) estão referenciadas
@@ -250,7 +250,7 @@ Direção canônica (ADR-003 revisada em 0.5.8): **Figma Variables são a fonte 
 ```
 Figma Variables              (autoridade — designer é o autor)
       │
-      │ npm run sync:tokens-from-figma  (manual; abre PR com diff)
+      │ sync Figma → JSON    (em desenvolvimento — ver backlog)
       ▼
 tokens/**/*.json             (DTCG — consolidação canônica em Git)
       │
@@ -268,23 +268,29 @@ docs/*.html                  (documentação e preview)
 
 Regras de ouro:
 
-- **Nunca editar `tokens/*.json` à mão.** Alterações vêm do Figma via `sync:tokens-from-figma`.
-- **Sempre editar Figma Variables primeiro.** Designer decide, depois o sync propaga.
-- Exceção: PRs gerados pelo próprio script de sync editam os JSONs — é esperado, revisar o diff antes de mergar.
+- **Nunca editar `tokens/*.json` à mão.** Alterações devem vir do Figma.
+- **Sempre editar Figma Variables primeiro.** Designer decide, propagação pro JSON acontece depois.
+- **Sync Figma → JSON** acontece via MCP + script custom, disparado manualmente numa sessão Claude Code:
+  1. Agente executa `use_figma` em chunks pra dumpar as ~462 Variables em `.figma-snapshot.json` (gitignored).
+  2. `npm run sync:tokens-from-figma` (dry-run) reporta divergências em 4 categorias: VALUE_DRIFT, NEW_IN_FIGMA, MISSING_IN_FIGMA, ALIAS_BROKEN.
+  3. `npm run sync:tokens-from-figma:write` aplica VALUE_DRIFT nos JSONs e roda `build:tokens` + `sync:docs`.
+  4. Review `git diff`, abrir PR.
 
-No CI (`.github/workflows/deploy.yml`), `npm run build:tokens` roda em cada push pra main e auto-commita os arquivos CSS gerados. O sync Figma→JSON fica em `.github/workflows/sync-tokens-from-figma.yml`, disparado manualmente via `workflow_dispatch`.
+  Detalhes passo-a-passo em `docs/process-figma-sync.md`. Automação em CI depende de Enterprise ou plugin custom — ver `docs/backlog.md`.
+
+No CI (`.github/workflows/deploy.yml`), `npm run build:tokens` roda em cada push pra main e auto-commita os arquivos CSS gerados.
 
 ## Ferramentas disponíveis no repo
 
 ```bash
-npm run sync:tokens-from-figma         # dry-run: lê Figma Variables e mostra diff vs tokens/*.json
-npm run sync:tokens-from-figma:write   # aplica o diff, regenera CSS, pronto pra commitar
 npm run build:tokens                   # Foundation/Semantic/Component → CSS gerado
 npm run sync:docs                      # Regenera inventários em docs/*.md
-npm run verify:tokens                  # Classifica divergências Figma ↔ JSON (NEEDS_SYNC/DRIFT/VALUE)
+npm run verify:tokens                  # Valida coerência Figma ↔ JSON ↔ CSS (Figma check depende de FIGMA_PAT)
 npm run build:api                      # Gera docs/api/*.json
 npm run build:llms                     # Gera docs/llms.txt e llms-full.txt
 npm run build:all                      # roda build:tokens → sync:docs → build:api → build:llms → verify:tokens
+npm run sync:tokens-from-figma         # Compara .figma-snapshot.json ↔ tokens/ (dry-run, ver process-figma-sync.md)
+npm run sync:tokens-from-figma:write   # Aplica VALUE_DRIFT e regenera CSS
 ```
 
 ## Quando houver dúvida
@@ -306,16 +312,35 @@ Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na
 
 ## [Não publicado]
 
-## [0.6.0]
+## [0.5.10]
 
 ### Adicionado
-- **`scripts/sync-tokens-from-figma.mjs`** — canal oficial Figma → JSON, alinhado à ADR-003 revisada (Figma como autoridade). Dry-run por padrão, `--write` aplica. Apenas `VALUE_DRIFT` é aplicado automaticamente; `NEW_IN_FIGMA` e `MISSING_IN_FIGMA` exigem ação manual (prevenção de criação/remoção não-intencional).
-- **`scripts/lib/figma-dtcg.mjs`** — módulo compartilhado com lógica de fetch Figma, conversão Figma→DTCG e comparação. Reutilizado por `sync-tokens-from-figma.mjs` e `tokens-verify.mjs`.
-- **`.github/workflows/sync-tokens-from-figma.yml`** — workflow manual (`workflow_dispatch`). Suporta dry-run opcional via input. Em modo write, abre PR automático com o diff no corpo. Exige secret `FIGMA_PAT`.
-- Novos npm scripts: `sync:tokens-from-figma` (dry-run) e `sync:tokens-from-figma:write` (aplica).
+- `scripts/sync-tokens-from-figma.mjs` + `scripts/lib/figma-dtcg.mjs`: sync Figma → JSON baseado em snapshot gerado via MCP. Desvia da limitação da REST API (exclusiva Enterprise) usando o MCP remoto `use_figma` — agente Claude Code dumpa as ~462 Variables em `.figma-snapshot.json` (gitignored), e o script Node compara com `tokens/**/*.json` em 4 categorias: VALUE_DRIFT (auto-corrigível com `--write`), NEW_IN_FIGMA, MISSING_IN_FIGMA, ALIAS_BROKEN.
+- `docs/process-figma-sync.md`: passo-a-passo do fluxo, incluindo troubleshooting e limitações.
+- npm scripts: `sync:tokens-from-figma` (dry-run) e `sync:tokens-from-figma:write`.
+- `.figma-snapshot.json` e variações no `.gitignore` (snapshot é derivado, não vai pro repo).
 
 ### Alterado
-- **`scripts/tokens-verify.mjs`** — comparação Figma↔JSON passa da categorização genérica anterior para as três categorias do ADR-003 revisada: `NEEDS_SYNC` (warning), `DRIFT_FROM_SOURCE` (erro) e `VALUE_DRIFT` (erro). Resolução completa de aliases Figma, normalização de dimensões (px/rem equivalentes), suporte a modos Light/Dark separados. Na fase de adaptação (14 dias), todas as categorias ficam como warning — depois `DRIFT_FROM_SOURCE` e `VALUE_DRIFT` passam a falhar o CI.
+- CLAUDE.md: regras de ouro de tokens atualizadas com o fluxo MCP concreto (em vez de "mecanismo em reavaliação"). Ferramentas lista os dois scripts novos.
+- `docs/backlog.md`: item "Implementar o sync Figma → JSON" (que tinha 4 opções em aberto) substituído por "Automatizar o sync Figma → JSON em CI" — reconhece que a opção (b) MCP está implementada pro fluxo manual e mantém as outras 3 (plugin custom, Tokens Studio, Enterprise) como caminhos pra automação futura.
+
+### Notas
+- Direção canônica da ADR-003 continua: Figma é autoridade, JSON é consolidação derivada. O sync consolida essa direção na prática — mas é manual (exige sessão Claude Code), não roda em GitHub Actions.
+- `verify:tokens` não foi alterado nesse PR; continua checando coerência JSON ↔ CSS.
+
+## [0.5.9]
+
+### Revertido
+- Revertido o PR #15 (0.6.0, `feat(tokens): sync Figma → JSON via script + workflow + verify refinado`). Motivo: o endpoint `GET /v1/files/:key/variables/local` da Figma REST API requer o scope `file_variables:read`, que **é exclusivo do plano Enterprise**. Nosso plano atual é Pro/Expert — o PAT não consegue emitir esse scope. Script inútil no plano atual.
+- Removidos: `scripts/sync-tokens-from-figma.mjs`, `scripts/lib/figma-dtcg.mjs`, `.github/workflows/sync-tokens-from-figma.yml`, e os npm scripts correspondentes.
+- `scripts/tokens-verify.mjs` voltou à implementação pré-0.6.0 (sem a classificação NEEDS_SYNC/DRIFT_FROM_SOURCE/VALUE_DRIFT — que dependia do módulo `lib/figma-dtcg.mjs` também revertido).
+
+### Alterado
+- CLAUDE.md: ajustado para refletir que o mecanismo de propagação Figma → JSON está em reavaliação. Regra de ouro "não editar `tokens/*.json` à mão" continua valendo.
+- `docs/backlog.md`: item "Implementar o sync Figma → JSON" adicionado em alta prioridade, listando as quatro opções em aberto (plugin custom, adaptar pra MCP, Tokens Studio, upgrade Enterprise).
+
+### Mantido
+- ADR-003 revisada (Figma como autoridade canônica) continua válida — a decisão conceitual não depende do mecanismo técnico. Só o "como" ficou em aberto.
 
 ## [0.5.8]
 
@@ -507,6 +532,20 @@ Itens fora do escopo imediato mas que devem ser implementados. Organizados por p
 
 ## Alta prioridade
 
+### Automatizar o sync Figma → JSON em CI
+
+Em 0.5.10 implementamos a opção **(b) adaptar pra MCP** (ver `docs/process-figma-sync.md`): o agente Claude Code dumpa as Variables em `.figma-snapshot.json` via `use_figma` em chunks, e `scripts/sync-tokens-from-figma.mjs` compara/aplica divergências. Funciona, mas exige sessão interativa — não roda em GitHub Actions.
+
+Pra automatizar de verdade (disparo por webhook ou agendamento), há 3 caminhos:
+
+**(a) Plugin Figma custom** — rodaria dentro do Figma via Plugin API (que não é plano-gated). Botão "Publicar variables" que serializa em DTCG e faz POST/commit pra GitHub (usando GitHub App ou OAuth). Custo: 1–2 semanas de dev + manutenção própria.
+
+**(b) Tokens Studio for Figma (plugin de terceiros)** — plugin com free tier, que faz Figma → JSON + push pra Git via OAuth. Migrar as 462 Variables nativas atuais pra dentro do Tokens Studio exige reconfiguração. Ajusta `build-tokens.mjs` pro formato que ele exporta. Custo: 2–3 dias + designer precisa aprender o plugin.
+
+**(c) Upgrade para plano Enterprise** — destrava a REST API direta (`GET /v1/files/:key/variables/local`), possibilitando o script original revertido em 0.5.9. Decisão de negócio (≈ US$ 75/editor/mês).
+
+Enquanto o disparo manual não virar gargalo, fica como está. Revisitar quando frequência de sync aumentar ou quando o volume de divergências manuais crescer.
+
 ### Preencher `docs/brand-principles.md`
 
 Template existe, conteúdo real ainda não foi definido. Passa por: missão, 3 princípios de design, tom de voz, identidade visual, logo.
@@ -666,7 +705,7 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 
 > Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-21. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
-> Versão atual: **0.6.0**
+> Versão atual: **0.5.10**
 
 ## Status geral
 
@@ -821,6 +860,132 @@ Template em `docs/decisions/` (ver ADRs existentes como referência).
 Não edite os arquivos em `css/tokens/generated/` à mão. O CI regenera em cada push pra `main`.
 
 Detalhe completo: [token-architecture.html](./token-architecture.html) e [ADR-001](./decisions/ADR-001-migracao-tokens.md).
+
+
+═══════════════════════════════════════════════════════════
+# docs/process-figma-sync.md
+═══════════════════════════════════════════════════════════
+
+# Processo: sync Figma → JSON via MCP
+
+Como executar o sync das Figma Variables pros arquivos DTCG em `tokens/` usando o MCP remoto do Figma dentro de uma sessão Claude Code.
+
+## Contexto
+
+A ADR-003 (revisada em 0.5.8) estabelece **Figma como autoridade canônica** dos valores de token. Os JSONs em `tokens/` são consolidação derivada. Idealmente existiria um sync automático via REST API, mas `GET /v1/files/:key/variables/local` exige **plano Enterprise** (nosso plano Pro não destrava). Até termos Enterprise (ou implementarmos um plugin custom), o fluxo é manual via MCP: um agente Claude Code executa um script Plugin API que serializa as Variables num JSON temporário, e o script Node `scripts/sync-tokens-from-figma.mjs` lê esse snapshot e compara com os JSONs.
+
+**Disparo:** manual, numa sessão Claude Code com o MCP `use_figma` autenticado no workspace UXIN (Pro). Ver alternativas futuras em `docs/backlog.md` ("Implementar o sync Figma → JSON").
+
+## Pré-requisitos
+
+- Sessão Claude Code com o plugin `figma` (skill `figma:figma-use`) carregado.
+- Workspace UXIN autenticado no MCP do Figma (Pro/Expert basta; não precisa Enterprise).
+- Acesso de leitura ao arquivo `PRYS2kL7VdC1MtVWfZvuDN`.
+
+## Passo 1 — gerar o snapshot via MCP
+
+Peça ao agente Claude Code:
+
+> "Gere um snapshot das Figma Variables do design system em `.figma-snapshot.json`."
+
+O agente vai executar uma sequência de chamadas `use_figma` que:
+
+1. Lista as 4 collections (Foundation, Semantic, Brand, Component) com seus modos.
+2. Itera sobre os ~462 variable IDs em batches de ~50–60 (o MCP tem limite de ~20KB por resposta, então precisa chunkar).
+3. Para cada variável, captura `id`, `name`, `resolvedType`, `variableCollectionId`, `valuesByMode` e `description`.
+4. Agrega tudo num único arquivo `.figma-snapshot.json` no formato:
+
+```json
+{
+  "generatedAt": "2026-04-20T00:00:00.000Z",
+  "fileKey": "PRYS2kL7VdC1MtVWfZvuDN",
+  "variableCollections": {
+    "VariableCollectionId:4:2": { "id": "...", "name": "Foundation", "modes": [...], "defaultModeId": "..." },
+    ...
+  },
+  "variables": {
+    "VariableID:5:3": {
+      "id": "VariableID:5:3",
+      "name": "color/neutral/50",
+      "resolvedType": "COLOR",
+      "variableCollectionId": "VariableCollectionId:4:2",
+      "valuesByMode": { "4:0": { "r": 0.97, "g": 0.98, "b": 0.99, "a": 1 } }
+    },
+    ...
+  }
+}
+```
+
+O arquivo está em `.gitignore` e não deve ser commitado — é regenerado a cada sync.
+
+## Passo 2 — dry-run
+
+```bash
+node scripts/sync-tokens-from-figma.mjs
+```
+
+O script:
+
+1. Lê `.figma-snapshot.json` (ou `--snapshot <path>` pra outro caminho).
+2. Constrói o estado esperado dos JSONs (`tokens/foundation/`, `tokens/semantic/`, `tokens/component/`) a partir das Variables.
+3. Lê os JSONs atuais e compara.
+4. Reporta em 4 categorias:
+
+| Categoria | Significado | Ação em `--write` |
+|-----------|-------------|-------------------|
+| **VALUE_DRIFT** | Mesmo token, valor difere. | Aplica valor do Figma no JSON. |
+| **NEW_IN_FIGMA** | Figma tem, JSON não. | Não cria — revisão manual. |
+| **MISSING_IN_FIGMA** | JSON tem, Figma não. | Não deleta — revisão manual. |
+| **ALIAS_BROKEN** | Figma aponta pra variável inexistente. | Não resolve — fix no Figma. |
+
+Se tudo zerar, Figma e JSON estão em dia. Exit 0.
+
+Se tem divergências, exit 1. Review no output antes de aplicar.
+
+## Passo 3 — aplicar VALUE_DRIFT
+
+Quando os drifts representarem mudanças intencionais feitas no Figma:
+
+```bash
+node scripts/sync-tokens-from-figma.mjs --write
+```
+
+Esse modo:
+
+1. Aplica os VALUE_DRIFT sobrescrevendo `$value` nos arquivos `tokens/**/*.json` correspondentes.
+2. Roda `npm run build:tokens` pra regenerar `css/tokens/generated/*.css`.
+3. Roda `npm run sync:docs` pra atualizar docs.
+4. NEW_IN_FIGMA e MISSING_IN_FIGMA continuam reportados — requer ação manual.
+
+Review `git diff` antes de commitar. Toda mudança de token entra numa PR separada pra auditoria.
+
+## Passo 4 — commit
+
+```bash
+git add tokens/ css/tokens/generated/ docs/api/ docs/tokens-*.html
+git commit -m "sync: tokens do Figma"
+```
+
+Não commitar `.figma-snapshot.json` (está ignorado).
+
+## Troubleshooting
+
+**`Snapshot não encontrado`**: rode o Passo 1 antes.
+
+**`Snapshot inválido: faltam variables/variableCollections`**: o arquivo JSON não tem a estrutura esperada. Re-gerar no Passo 1.
+
+**ALIAS_BROKEN > 0**: alguém apagou uma variável no Figma sem atualizar os aliases. Fix no Figma e re-gerar snapshot.
+
+**Muitos NEW_IN_FIGMA / MISSING_IN_FIGMA**: possível desalinhamento do mapeamento prefix→file em `scripts/lib/figma-dtcg.mjs` (`FOUNDATION_PREFIX_TO_FILE`). Confirme que Figma e JSON usam as mesmas convenções de nome; ajuste o mapa se necessário.
+
+**Ruído de ponto flutuante** (`0.05` vs `0.05000000074505806`): a função `normalizeForCompare` arredonda pra 4 casas. Se ainda aparecer como VALUE_DRIFT, o valor realmente mudou.
+
+## Limitações
+
+- **Manual.** Não roda em CI sem Enterprise ou plugin custom. Ver `docs/backlog.md` pras alternativas.
+- **Não gera commits automáticos.** O usuário decide o que entra em `--write` e quando.
+- **Não cria nem deleta tokens** em JSON. NEW_IN_FIGMA e MISSING_IN_FIGMA exigem edição explícita pra evitar divergências acidentais.
+- **Sem resolução inteligente de rename.** Se um token for renomeado no Figma, aparece como MISSING + NEW — o operador precisa identificar e tratar manualmente.
 
 
 ═══════════════════════════════════════════════════════════
@@ -1152,13 +1317,13 @@ Se uma decisão arquitetural não está registrada como ADR, ela não foi tomada
 
 > Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-21. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
-> Versão atual: **0.6.0**
+> Versão atual: **0.5.10**
 
 ## Estado atual
 
 | Aspecto | Valor |
 |---------|-------|
-| Versão | 0.6.0 |
+| Versão | 0.5.10 |
 | Formato canônico | JSON (DTCG) em `tokens/` |
 | CSS gerado | Style Dictionary → `css/tokens/generated/` |
 | Pipeline | ✅ index.css importa apenas generated/ |
@@ -2592,6 +2757,6 @@ Verificação automática de coerência Figma ↔ JSON ↔ CSS: `scripts/tokens-
 
 ═══════════════════════════════════════════════════════════
 
-Gerado por scripts/build-llms.mjs em 2026-04-21T15:02:34.668Z
-Versão: 0.6.0
+Gerado por scripts/build-llms.mjs em 2026-04-21T16:25:04.015Z
+Versão: 0.5.10
 Site: https://uxindesign.github.io/design-system-core/

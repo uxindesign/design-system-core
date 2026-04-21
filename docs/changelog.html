@@ -74,6 +74,24 @@
 <p>O formato é baseado em <a href="https://keepachangelog.com/pt-BR/1.1.0/">Keep a Changelog</a> e o versionamento segue <a href="https://semver.org/lang/pt-BR/">Semantic Versioning</a>.</p>
 <p>Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na faixa 0.x. Regras de bump documentadas em <code>docs/process-versioning.html</code>.</p>
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
+<h2>[0.5.10]</h2>
+<h3>Adicionado</h3>
+<ul>
+<li><code>scripts/sync-tokens-from-figma.mjs</code> + <code>scripts/lib/figma-dtcg.mjs</code>: sync Figma → JSON baseado em snapshot gerado via MCP. Desvia da limitação da REST API (exclusiva Enterprise) usando o MCP remoto <code>use_figma</code> — agente Claude Code dumpa as ~462 Variables em <code>.figma-snapshot.json</code> (gitignored), e o script Node compara com <code>tokens/**/*.json</code> em 4 categorias: VALUE_DRIFT (auto-corrigível com <code>--write</code>), NEW_IN_FIGMA, MISSING_IN_FIGMA, ALIAS_BROKEN.</li>
+<li><code>docs/process-figma-sync.md</code>: passo-a-passo do fluxo, incluindo troubleshooting e limitações.</li>
+<li>npm scripts: <code>sync:tokens-from-figma</code> (dry-run) e <code>sync:tokens-from-figma:write</code>.</li>
+<li><code>.figma-snapshot.json</code> e variações no <code>.gitignore</code> (snapshot é derivado, não vai pro repo).</li>
+</ul>
+<h3>Alterado</h3>
+<ul>
+<li>CLAUDE.md: regras de ouro de tokens atualizadas com o fluxo MCP concreto (em vez de &quot;mecanismo em reavaliação&quot;). Ferramentas lista os dois scripts novos.</li>
+<li><code>docs/backlog.md</code>: item &quot;Implementar o sync Figma → JSON&quot; (que tinha 4 opções em aberto) substituído por &quot;Automatizar o sync Figma → JSON em CI&quot; — reconhece que a opção (b) MCP está implementada pro fluxo manual e mantém as outras 3 (plugin custom, Tokens Studio, Enterprise) como caminhos pra automação futura.</li>
+</ul>
+<h3>Notas</h3>
+<ul>
+<li>Direção canônica da ADR-003 continua: Figma é autoridade, JSON é consolidação derivada. O sync consolida essa direção na prática — mas é manual (exige sessão Claude Code), não roda em GitHub Actions.</li>
+<li><code>verify:tokens</code> não foi alterado nesse PR; continua checando coerência JSON ↔ CSS.</li>
+</ul>
 <h2>[0.5.9]</h2>
 <h3>Revertido</h3>
 <ul>

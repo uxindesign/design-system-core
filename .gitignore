@@ -3,3 +3,7 @@ node_modules/
 # macOS
 .DS_Store
 **/.DS_Store
+
+# Figma snapshot gerado via MCP (sync Figma → JSON)
+.figma-snapshot.json
+.figma-snapshot.*.json

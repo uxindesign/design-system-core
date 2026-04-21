@@ -114,7 +114,13 @@ Regras de ouro:
 
 - **Nunca editar `tokens/*.json` à mão.** Alterações devem vir do Figma.
 - **Sempre editar Figma Variables primeiro.** Designer decide, propagação pro JSON acontece depois.
-- O mecanismo de propagação Figma → JSON está em reavaliação (ver `docs/backlog.md` — a API REST de Variables exige plano Enterprise, o que não cabe no plano atual). Por enquanto, quando for necessário alterar tokens, fazer no Figma e abrir issue pedindo sync manual; mudança no JSON via PR só com aprovação (e com menção clara à intenção do design).
+- **Sync Figma → JSON** acontece via MCP + script custom, disparado manualmente numa sessão Claude Code:
+  1. Agente executa `use_figma` em chunks pra dumpar as ~462 Variables em `.figma-snapshot.json` (gitignored).
+  2. `npm run sync:tokens-from-figma` (dry-run) reporta divergências em 4 categorias: VALUE_DRIFT, NEW_IN_FIGMA, MISSING_IN_FIGMA, ALIAS_BROKEN.
+  3. `npm run sync:tokens-from-figma:write` aplica VALUE_DRIFT nos JSONs e roda `build:tokens` + `sync:docs`.
+  4. Review `git diff`, abrir PR.
+
+  Detalhes passo-a-passo em `docs/process-figma-sync.md`. Automação em CI depende de Enterprise ou plugin custom — ver `docs/backlog.md`.
 
 No CI (`.github/workflows/deploy.yml`), `npm run build:tokens` roda em cada push pra main e auto-commita os arquivos CSS gerados.
 
@@ -127,6 +133,8 @@ npm run verify:tokens                  # Valida coerência Figma ↔ JSON ↔ CS
 npm run build:api                      # Gera docs/api/*.json
 npm run build:llms                     # Gera docs/llms.txt e llms-full.txt
 npm run build:all                      # roda build:tokens → sync:docs → build:api → build:llms → verify:tokens
+npm run sync:tokens-from-figma         # Compara .figma-snapshot.json ↔ tokens/ (dry-run, ver process-figma-sync.md)
+npm run sync:tokens-from-figma:write   # Aplica VALUE_DRIFT e regenera CSS
 ```
 
 ## Quando houver dúvida
