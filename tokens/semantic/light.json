@@ -8,7 +8,7 @@
       },
       "subtle": {
         "$type": "color",
-        "$value": "{foundation.color.neutral.100}",
+        "$value": "{foundation.color.neutral.200}",
         "$description": "Subtle alternate background — one step darker than default to create visual separation."
       },
       "inverse": {
@@ -90,12 +90,12 @@
       },
       "hover": {
         "$type": "color",
-        "$value": "{foundation.color.blue.700}",
+        "$value": "{foundation.color.blue.800}",
         "$description": "Fill brand em hover."
       },
       "active": {
         "$type": "color",
-        "$value": "{foundation.color.blue.800}",
+        "$value": "{foundation.color.blue.900}",
         "$description": "Fill brand em active/pressed."
       },
       "subtle": {
@@ -187,11 +187,11 @@
         },
         "hover": {
           "$type": "color",
-          "$value": "{foundation.color.green.700}"
+          "$value": "{foundation.color.green.800}"
         },
         "active": {
           "$type": "color",
-          "$value": "{foundation.color.green.800}"
+          "$value": "{foundation.color.green.900}"
         },
         "subtle": {
           "$type": "color",
@@ -203,7 +203,7 @@
         },
         "border": {
           "$type": "color",
-          "$value": "{foundation.color.green.600}"
+          "$value": "{foundation.color.green.500}"
         },
         "disabled": {
           "$type": "color",
@@ -247,7 +247,7 @@
         },
         "border": {
           "$type": "color",
-          "$value": "{foundation.color.amber.600}",
+          "$value": "{foundation.color.amber.500}",
           "$description": "Upgraded from amber.500 to amber.600 (ADR-008) for consistency with error.border/info.border at step 600. Passes 3:1 vs amber.50."
         },
         "content": {
@@ -270,11 +270,11 @@
         },
         "hover": {
           "$type": "color",
-          "$value": "{foundation.color.red.700}"
+          "$value": "{foundation.color.red.800}"
         },
         "active": {
           "$type": "color",
-          "$value": "{foundation.color.red.800}"
+          "$value": "{foundation.color.red.900}"
         },
         "subtle": {
           "$type": "color",
@@ -286,7 +286,7 @@
         },
         "border": {
           "$type": "color",
-          "$value": "{foundation.color.red.600}"
+          "$value": "{foundation.color.red.500}"
         },
         "disabled": {
           "$type": "color",
@@ -314,11 +314,11 @@
       "info": {
         "default": {
           "$type": "color",
-          "$value": "{foundation.color.sky.600}"
+          "$value": "{foundation.color.sky.500}"
         },
         "hover": {
           "$type": "color",
-          "$value": "{foundation.color.sky.700}"
+          "$value": "{foundation.color.sky.600}"
         },
         "subtle": {
           "$type": "color",
@@ -330,7 +330,7 @@
         },
         "border": {
           "$type": "color",
-          "$value": "{foundation.color.sky.600}"
+          "$value": "{foundation.color.sky.500}"
         },
         "content": {
           "default": {
@@ -370,11 +370,11 @@
       },
       "strong": {
         "$type": "color",
-        "$value": "{foundation.color.neutral.400}"
+        "$value": "{foundation.color.neutral.600}"
       },
       "subtle": {
         "$type": "color",
-        "$value": "{foundation.color.neutral.100}"
+        "$value": "{foundation.color.neutral.300}"
       },
       "focus": {
         "$type": "color",
@@ -465,7 +465,7 @@
       "disabled": {
         "background": {
           "$type": "color",
-          "$value": "{foundation.color.neutral.100}"
+          "$value": "{foundation.color.neutral.200}"
         }
       }
     },

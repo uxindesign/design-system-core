@@ -16,7 +16,7 @@ export const FIGMA_FILE_KEY = "PRYS2kL7VdC1MtVWfZvuDN";
 // Prefixo do nome da variável Figma → arquivo em tokens/foundation/
 export const FOUNDATION_PREFIX_TO_FILE = {
   color: "colors.json",
-  font: "typography.json",
+  typography: "typography.json",
   spacing: "spacing.json",
   radius: "radius.json",
   opacity: "opacity.json",
@@ -304,13 +304,28 @@ export function normalizeForCompare(v) {
   return s;
 }
 
+// Tokens com representação CSS-específica no JSON (fallback stack, weight numérico,
+// unidades rem/em) que o Figma não consegue representar adequadamente. Sync pularia
+// informação importante — então só registramos como CSS_ONLY (informativo, não aplicável).
+const CSS_ONLY_TOKENS = [
+  /^foundation\.typography\.font\.family\./,
+  /^foundation\.typography\.font\.weight\./,
+  /^foundation\.typography\.font\.size\./,
+];
+
+function isCssOnlyToken(token) {
+  return CSS_ONLY_TOKENS.some((rx) => rx.test(token));
+}
+
 /**
  * Compara expected (Figma) vs actual (JSON). Retorna:
- *   { VALUE_DRIFT, NEW_IN_FIGMA, MISSING_IN_FIGMA }
- * Cada um é array de { file, token, figma?, json? }.
+ *   { VALUE_DRIFT, NEW_IN_FIGMA, MISSING_IN_FIGMA, CSS_ONLY }
+ * VALUE_DRIFT é aplicável em --write.
+ * CSS_ONLY é informativo — tokens que têm representação rica no JSON (stack,
+ * unidade rem, weight numérico) que o Figma não representa bem. Não aplicar.
  */
 export function compareStates(expected, actual) {
-  const diffs = { VALUE_DRIFT: [], NEW_IN_FIGMA: [], MISSING_IN_FIGMA: [] };
+  const diffs = { VALUE_DRIFT: [], NEW_IN_FIGMA: [], MISSING_IN_FIGMA: [], CSS_ONLY: [] };
   const allFiles = new Set([...Object.keys(expected), ...Object.keys(actual)]);
   for (const file of allFiles) {
     const exp = expected[file] || {};
@@ -325,7 +340,11 @@ export function compareStates(expected, actual) {
         diffs.MISSING_IN_FIGMA.push({ file, token: key, json: a.$value });
       } else if (e && a) {
         if (normalizeForCompare(e.$value) !== normalizeForCompare(a.$value)) {
-          diffs.VALUE_DRIFT.push({ file, token: key, figma: e.$value, json: a.$value });
+          if (isCssOnlyToken(key)) {
+            diffs.CSS_ONLY.push({ file, token: key, figma: e.$value, json: a.$value });
+          } else {
+            diffs.VALUE_DRIFT.push({ file, token: key, figma: e.$value, json: a.$value });
+          }
         }
       }
     }
