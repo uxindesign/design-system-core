@@ -1,6 +1,6 @@
 # Design System Core — conteúdo consolidado
 
-> Versão 0.5.6. Arquivo destinado a consumo por LLMs que precisem
+> Versão 0.5.7. Arquivo destinado a consumo por LLMs que precisem
 > do design system inteiro em uma requisição. Inclui README, CONTRIBUTING,
 > CLAUDE.md, CHANGELOG, todos os MDs em docs/, todos os ADRs e um resumo
 > dos tokens. Páginas HTML-only (componentes, foundations) estão referenciadas
@@ -293,6 +293,15 @@ Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na
 
 ## [Não publicado]
 
+## [0.5.7]
+
+### Adicionado
+- 6 tokens foundation novos em `tokens/foundation/colors.json`, subcategoria `color.disabled`: `brand-light`, `brand-dark`, `success-light`, `success-dark`, `error-light`, `error-dark`. Valores primitive (hex/rgba) que representam o fill disabled de cada role; viviam antes como literais na camada semantic.
+
+### Corrigido
+- `semantic.brand.disabled`, `semantic.feedback.success.disabled`, `semantic.feedback.error.disabled`, `semantic.brand.content.contrast-disabled`, `semantic.feedback.success.content.contrast-disabled`, `semantic.feedback.error.content.contrast-disabled` em `light.json` e `dark.json` — 12 tokens que tinham valores rgba/hex literais agora referenciam tokens foundation (`color.disabled.*` ou `color.overlay.white.80/60` existentes). Viola menos a regra "semantic nunca hardcoded" (ADR-001). Zero mudança visual.
+- Item correspondente removido do backlog.
+
 ## [0.5.6]
 
 ### Alterado
@@ -467,14 +476,6 @@ Itens fora do escopo imediato mas que devem ser implementados. Organizados por p
 
 ## Alta prioridade
 
-### Revisitar rgba hardcoded em semantic tokens (dívida de ADR-011)
-
-- `semantic.brand.disabled` tem `rgba(125, 158, 232, 0.50)` (light) e `#4F637D` (dark) literais em `tokens/semantic/*.json`. Viola a regra "semantic nunca hardcoded".
-- `semantic.brand.content.contrast-disabled` tem `rgba(255, 255, 255, 0.80)` literal.
-- Mesma pattern em `feedback.*.disabled` e `feedback.*.content.contrast-disabled`.
-
-Proposta: criar tokens foundation correspondentes em `colors.json` (overlay branco/preto ou colored com 40–50%) e apontar semantic pra eles.
-
 ### Preencher `docs/brand-principles.md`
 
 Template existe, conteúdo real ainda não foi definido. Passa por: missão, 3 princípios de design, tom de voz, identidade visual, logo.
@@ -605,7 +606,7 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 
 > Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-21. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
-> Versão atual: **0.5.6**
+> Versão atual: **0.5.7**
 
 ## Status geral
 
@@ -642,7 +643,7 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 
 | Coleção | Tokens | Status |
 |---------|--------|--------|
-| Foundation | 225 | 🟢 |
+| Foundation | 231 | 🟢 |
 | Semantic (light) | 132 | 🟢 |
 | Semantic (dark) | 132 | 🟢 |
 | Component | 137 | 🟢 |
@@ -1091,13 +1092,13 @@ Se uma decisão arquitetural não está registrada como ADR, ela não foi tomada
 
 > Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-21. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
-> Versão atual: **0.5.6**
+> Versão atual: **0.5.7**
 
 ## Estado atual
 
 | Aspecto | Valor |
 |---------|-------|
-| Versão | 0.5.6 |
+| Versão | 0.5.7 |
 | Formato canônico | JSON (DTCG) em `tokens/` |
 | CSS gerado | Style Dictionary → `css/tokens/generated/` |
 | Pipeline | ✅ index.css importa apenas generated/ |
@@ -1107,16 +1108,16 @@ Se uma decisão arquitetural não está registrada como ADR, ela não foi tomada
 
 | Camada | Tokens | Arquivos |
 |--------|--------|----------|
-| Foundation | **225** | 10 |
+| Foundation | **231** | 10 |
 | Semantic | **132 × 2 modos** | light.json + dark.json |
 | Component | **137** | 11 |
 
-## Foundation (225 tokens)
+## Foundation (231 tokens)
 
 | Arquivo | Tokens |
 |---------|--------|
 | `brand.json` | 2 |
-| `colors.json` | 128 |
+| `colors.json` | 134 |
 | `motion.json` | 7 |
 | `opacity.json` | 7 |
 | `radius.json` | 8 |
@@ -2476,6 +2477,6 @@ Verificação automática de coerência Figma ↔ JSON ↔ CSS: `scripts/tokens-
 
 ═══════════════════════════════════════════════════════════
 
-Gerado por scripts/build-llms.mjs em 2026-04-21T11:00:06.137Z
-Versão: 0.5.6
+Gerado por scripts/build-llms.mjs em 2026-04-21T11:02:55.317Z
+Versão: 0.5.7
 Site: https://uxindesign.github.io/design-system-core/
