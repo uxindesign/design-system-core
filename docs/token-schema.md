@@ -2,13 +2,13 @@
 
 > Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-21. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
-> Versão atual: **0.5.6**
+> Versão atual: **0.5.7**
 
 ## Estado atual
 
 | Aspecto | Valor |
 |---------|-------|
-| Versão | 0.5.6 |
+| Versão | 0.5.7 |
 | Formato canônico | JSON (DTCG) em `tokens/` |
 | CSS gerado | Style Dictionary → `css/tokens/generated/` |
 | Pipeline | ✅ index.css importa apenas generated/ |
@@ -18,16 +18,16 @@
 
 | Camada | Tokens | Arquivos |
 |--------|--------|----------|
-| Foundation | **225** | 10 |
+| Foundation | **231** | 10 |
 | Semantic | **132 × 2 modos** | light.json + dark.json |
 | Component | **137** | 11 |
 
-## Foundation (225 tokens)
+## Foundation (231 tokens)
 
 | Arquivo | Tokens |
 |---------|--------|
 | `brand.json` | 2 |
-| `colors.json` | 128 |
+| `colors.json` | 134 |
 | `motion.json` | 7 |
 | `opacity.json` | 7 |
 | `radius.json` | 8 |

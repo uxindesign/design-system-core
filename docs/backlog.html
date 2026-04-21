@@ -72,13 +72,6 @@
   <div class="ds-md-content">
 <p>Itens fora do escopo imediato mas que devem ser implementados. Organizados por prioridade.</p>
 <h2>Alta prioridade</h2>
-<h3>Revisitar rgba hardcoded em semantic tokens (dívida de ADR-011)</h3>
-<ul>
-<li><code>semantic.brand.disabled</code> tem <code>rgba(125, 158, 232, 0.50)</code> (light) e <code>#4F637D</code> (dark) literais em <code>tokens/semantic/*.json</code>. Viola a regra &quot;semantic nunca hardcoded&quot;.</li>
-<li><code>semantic.brand.content.contrast-disabled</code> tem <code>rgba(255, 255, 255, 0.80)</code> literal.</li>
-<li>Mesma pattern em <code>feedback.*.disabled</code> e <code>feedback.*.content.contrast-disabled</code>.</li>
-</ul>
-<p>Proposta: criar tokens foundation correspondentes em <code>colors.json</code> (overlay branco/preto ou colored com 40–50%) e apontar semantic pra eles.</p>
 <h3>Preencher <code>docs/brand-principles.md</code></h3>
 <p>Template existe, conteúdo real ainda não foi definido. Passa por: missão, 3 princípios de design, tom de voz, identidade visual, logo.</p>
 <h2>Média prioridade</h2>

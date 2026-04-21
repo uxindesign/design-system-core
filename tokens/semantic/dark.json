@@ -100,7 +100,7 @@
       },
       "disabled": {
         "$type": "color",
-        "$value": "#4F637D"
+        "$value": "{foundation.color.disabled.brand-dark}"
       },
       "toned": {
         "default": {
@@ -132,7 +132,7 @@
         },
         "contrast-disabled": {
           "$type": "color",
-          "$value": "rgba(255, 255, 255, 0.60)"
+          "$value": "{foundation.color.overlay.white.60}"
         }
       }
     },
@@ -193,7 +193,7 @@
         },
         "disabled": {
           "$type": "color",
-          "$value": "#486E55"
+          "$value": "{foundation.color.disabled.success-dark}"
         },
         "content": {
           "default": {
@@ -207,7 +207,7 @@
           },
           "contrast-disabled": {
             "$type": "color",
-            "$value": "rgba(255, 255, 255, 0.60)"
+            "$value": "{foundation.color.overlay.white.60}"
           }
         }
       },
@@ -270,7 +270,7 @@
         },
         "disabled": {
           "$type": "color",
-          "$value": "#7B5050"
+          "$value": "{foundation.color.disabled.error-dark}"
         },
         "content": {
           "default": {
@@ -284,7 +284,7 @@
           },
           "contrast-disabled": {
             "$type": "color",
-            "$value": "rgba(255, 255, 255, 0.60)"
+            "$value": "{foundation.color.overlay.white.60}"
           }
         }
       },

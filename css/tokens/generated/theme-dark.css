@@ -3,12 +3,6 @@
  */
 
 [data-mode="dark"] {
-  --ds-brand-disabled: #4F637D;
-  --ds-brand-content-contrast-disabled: rgba(255, 255, 255, 0.60);
-  --ds-feedback-success-disabled: #486E55;
-  --ds-feedback-success-content-contrast-disabled: rgba(255, 255, 255, 0.60);
-  --ds-feedback-error-disabled: #7B5050;
-  --ds-feedback-error-content-contrast-disabled: rgba(255, 255, 255, 0.60);
   --ds-background-default: var(--ds-color-neutral-950); /** Page background */
   --ds-background-subtle: var(--ds-color-neutral-900); /** Subtle alternate background */
   --ds-background-inverse: var(--ds-color-neutral-50);
@@ -25,11 +19,13 @@
   --ds-brand-hover: var(--ds-color-blue-300);
   --ds-brand-active: var(--ds-color-blue-200);
   --ds-brand-subtle: var(--ds-color-blue-900);
+  --ds-brand-disabled: var(--ds-color-disabled-brand-dark);
   --ds-brand-toned-default: var(--ds-overlay-blue-400-15); /** Translucent primary bg for toned variants. 15% opacity in dark. */
   --ds-brand-toned-hover: var(--ds-overlay-blue-400-25); /** Toned hover in dark. 25% opacity. */
   --ds-brand-toned-active: var(--ds-overlay-blue-400-32); /** Toned active in dark. 32% opacity. */
   --ds-brand-content-default: var(--ds-color-blue-400); /** Cor brand usada como conteúdo sobre fundo neutro/toned em dark mode. */
   --ds-brand-content-contrast: var(--ds-color-neutral-900); /** Conteúdo de alto contraste sobre fill brand sólido em dark mode. Dark text porque brand default é blue-400 (claro). */
+  --ds-brand-content-contrast-disabled: var(--ds-overlay-white-60);
   --ds-accent-hover: var(--ds-color-purple-300);
   --ds-accent-active: var(--ds-color-purple-200);
   --ds-accent-subtle: var(--ds-color-purple-800);
@@ -41,8 +37,10 @@
   --ds-feedback-success-subtle: var(--ds-color-green-900);
   --ds-feedback-success-background: var(--ds-color-green-950);
   --ds-feedback-success-border: var(--ds-color-green-500);
+  --ds-feedback-success-disabled: var(--ds-color-disabled-success-dark);
   --ds-feedback-success-content-default: var(--ds-color-green-400);
   --ds-feedback-success-content-contrast: var(--ds-color-neutral-900); /** Dark text porque success default em dark é green-500 (claro). */
+  --ds-feedback-success-content-contrast-disabled: var(--ds-overlay-white-60);
   --ds-feedback-warning-default: var(--ds-color-amber-400);
   --ds-feedback-warning-hover: var(--ds-color-amber-300);
   --ds-feedback-warning-subtle: var(--ds-color-amber-900);
@@ -56,8 +54,10 @@
   --ds-feedback-error-subtle: var(--ds-color-red-900);
   --ds-feedback-error-background: var(--ds-color-red-950);
   --ds-feedback-error-border: var(--ds-color-red-500);
+  --ds-feedback-error-disabled: var(--ds-color-disabled-error-dark);
   --ds-feedback-error-content-default: var(--ds-color-red-400);
   --ds-feedback-error-content-contrast: var(--ds-color-neutral-900); /** Dark text porque error default em dark é red-500 (medium). */
+  --ds-feedback-error-content-contrast-disabled: var(--ds-overlay-white-60);
   --ds-feedback-info-default: var(--ds-color-sky-400);
   --ds-feedback-info-hover: var(--ds-color-sky-300);
   --ds-feedback-info-subtle: var(--ds-color-sky-900);

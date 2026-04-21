@@ -74,6 +74,16 @@
 <p>O formato é baseado em <a href="https://keepachangelog.com/pt-BR/1.1.0/">Keep a Changelog</a> e o versionamento segue <a href="https://semver.org/lang/pt-BR/">Semantic Versioning</a>.</p>
 <p>Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na faixa 0.x. Regras de bump documentadas em <code>docs/process-versioning.html</code>.</p>
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
+<h2>[0.5.7]</h2>
+<h3>Adicionado</h3>
+<ul>
+<li>6 tokens foundation novos em <code>tokens/foundation/colors.json</code>, subcategoria <code>color.disabled</code>: <code>brand-light</code>, <code>brand-dark</code>, <code>success-light</code>, <code>success-dark</code>, <code>error-light</code>, <code>error-dark</code>. Valores primitive (hex/rgba) que representam o fill disabled de cada role; viviam antes como literais na camada semantic.</li>
+</ul>
+<h3>Corrigido</h3>
+<ul>
+<li><code>semantic.brand.disabled</code>, <code>semantic.feedback.success.disabled</code>, <code>semantic.feedback.error.disabled</code>, <code>semantic.brand.content.contrast-disabled</code>, <code>semantic.feedback.success.content.contrast-disabled</code>, <code>semantic.feedback.error.content.contrast-disabled</code> em <code>light.json</code> e <code>dark.json</code> — 12 tokens que tinham valores rgba/hex literais agora referenciam tokens foundation (<code>color.disabled.*</code> ou <code>color.overlay.white.80/60</code> existentes). Viola menos a regra &quot;semantic nunca hardcoded&quot; (ADR-001). Zero mudança visual.</li>
+<li>Item correspondente removido do backlog.</li>
+</ul>
 <h2>[0.5.6]</h2>
 <h3>Alterado</h3>
 <ul>

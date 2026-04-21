@@ -4,12 +4,6 @@
 
 :root,
 [data-mode="light"] {
-  --ds-brand-disabled: rgba(125, 158, 232, 0.50); /** Fill brand em estado disabled. */
-  --ds-brand-content-contrast-disabled: rgba(255, 255, 255, 0.80); /** Conteúdo disabled sobre fill brand disabled. */
-  --ds-feedback-success-disabled: rgba(122, 184, 145, 0.50); /** Fill success disabled. */
-  --ds-feedback-success-content-contrast-disabled: rgba(255, 255, 255, 0.80); /** Conteúdo disabled sobre fill success disabled. */
-  --ds-feedback-error-disabled: rgba(194, 112, 112, 0.40); /** Fill error disabled. */
-  --ds-feedback-error-content-contrast-disabled: rgba(255, 255, 255, 0.80); /** Conteúdo disabled sobre fill error disabled. */
   --ds-background-default: var(--ds-color-neutral-50); /** Page background */
   --ds-background-subtle: var(--ds-color-neutral-100); /** Subtle alternate background — one step darker than default to create visual separation. */
   --ds-background-inverse: var(--ds-color-neutral-900);
@@ -26,11 +20,13 @@
   --ds-brand-hover: var(--ds-color-blue-700); /** Fill brand em hover. */
   --ds-brand-active: var(--ds-color-blue-800); /** Fill brand em active/pressed. */
   --ds-brand-subtle: var(--ds-color-blue-100); /** Fill brand de baixa ênfase (seleções, highlights). */
+  --ds-brand-disabled: var(--ds-color-disabled-brand-light); /** Fill brand em estado disabled. */
   --ds-brand-toned-default: var(--ds-overlay-blue-600-12); /** Fill brand translúcido (Button Toned). 12% opacity. */
   --ds-brand-toned-hover: var(--ds-overlay-blue-600-20); /** Toned hover. 20% opacity. */
   --ds-brand-toned-active: var(--ds-overlay-blue-600-28); /** Toned active/pressed. 28% opacity. */
   --ds-brand-content-default: var(--ds-color-blue-700); /** Cor brand usada como conteúdo (texto/ícone brand sobre fundo neutro, label do Toned). */
   --ds-brand-content-contrast: var(--ds-color-neutral-50); /** Conteúdo de alto contraste sobre fill brand sólido (texto do Button Brand). Unifica color/primary/foreground e text/on-brand (ADR-011). */
+  --ds-brand-content-contrast-disabled: var(--ds-overlay-white-80); /** Conteúdo disabled sobre fill brand disabled. */
   --ds-accent-hover: var(--ds-color-purple-700); /** Acento hover. */
   --ds-accent-active: var(--ds-color-purple-800); /** Acento active. */
   --ds-accent-subtle: var(--ds-color-purple-100); /** Acento de baixa ênfase. */
@@ -42,8 +38,10 @@
   --ds-feedback-success-subtle: var(--ds-color-green-100);
   --ds-feedback-success-background: var(--ds-color-green-50);
   --ds-feedback-success-border: var(--ds-color-green-600);
+  --ds-feedback-success-disabled: var(--ds-color-disabled-success-light); /** Fill success disabled. */
   --ds-feedback-success-content-default: var(--ds-color-green-700); /** Cor success como conteúdo (mensagens, ícones sobre fundo claro). */
   --ds-feedback-success-content-contrast: var(--ds-color-neutral-50); /** Conteúdo de alto contraste sobre fill success sólido. */
+  --ds-feedback-success-content-contrast-disabled: var(--ds-overlay-white-80); /** Conteúdo disabled sobre fill success disabled. */
   --ds-feedback-warning-default: var(--ds-color-amber-500);
   --ds-feedback-warning-hover: var(--ds-color-amber-600);
   --ds-feedback-warning-subtle: var(--ds-color-amber-100);
@@ -57,8 +55,10 @@
   --ds-feedback-error-subtle: var(--ds-color-red-100);
   --ds-feedback-error-background: var(--ds-color-red-50);
   --ds-feedback-error-border: var(--ds-color-red-600);
+  --ds-feedback-error-disabled: var(--ds-color-disabled-error-light); /** Fill error disabled. */
   --ds-feedback-error-content-default: var(--ds-color-red-700); /** Cor error como conteúdo (mensagens de erro, ícones de alerta). */
   --ds-feedback-error-content-contrast: var(--ds-color-neutral-50); /** Conteúdo de alto contraste sobre fill error sólido. */
+  --ds-feedback-error-content-contrast-disabled: var(--ds-overlay-white-80); /** Conteúdo disabled sobre fill error disabled. */
   --ds-feedback-info-default: var(--ds-color-sky-600);
   --ds-feedback-info-hover: var(--ds-color-sky-700);
   --ds-feedback-info-subtle: var(--ds-color-sky-100);
