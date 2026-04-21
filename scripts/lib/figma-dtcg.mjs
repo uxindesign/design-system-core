@@ -1,0 +1,334 @@
+/**
+ * figma-dtcg.mjs — funções compartilhadas para ler Figma Variables e
+ * convertê-las no formato DTCG do repo. Usado por:
+ *   - scripts/sync-tokens-from-figma.mjs (sync Figma → JSON com --write)
+ *   - scripts/tokens-verify.mjs (verificação de coerência no CI)
+ *
+ * Direção canônica conforme ADR-003 revisada: Figma Variables são a
+ * autoridade. JSONs em tokens/ são consolidação derivada.
+ */
+
+import fs from "node:fs";
+import path from "node:path";
+
+export const FIGMA_FILE_KEY = "PRYS2kL7VdC1MtVWfZvuDN";
+
+// Prefixo do nome da variável Figma → arquivo em tokens/foundation/
+export const FOUNDATION_PREFIX_TO_FILE = {
+  color: "colors.json",
+  font: "typography.json",
+  spacing: "spacing.json",
+  radius: "radius.json",
+  opacity: "opacity.json",
+  border: "stroke.json",
+};
+
+// Brand tem 3 modos (Default/Ocean/Forest), só Default entra em foundation/brand.json.
+export const BRAND_MODE = "Default";
+// Component tem 1 modo "Default".
+export const COMPONENT_MODE = "Default";
+
+// ─── Obter o snapshot do Figma ───────────────────────────────────────────────
+//
+// A API REST GET /v1/files/:key/variables/local exige plano Enterprise do
+// Figma. No plano Pro (nosso caso), usamos o MCP remoto (`use_figma`) via
+// Claude Code: o agente executa um script Plugin API que dumpa as Variables
+// num JSON temporário, e este módulo lê esse arquivo.
+//
+// Formato esperado:
+//   { variables: {...}, variableCollections: {...} }
+//
+// Gerar via MCP: ver docs/process-figma-sync.md.
+
+export function readFigmaSnapshot(snapshotPath) {
+  if (!fs.existsSync(snapshotPath)) {
+    throw new Error(
+      `Snapshot não encontrado em ${snapshotPath}. Gerar via Claude Code com use_figma (ver docs/process-figma-sync.md).`
+    );
+  }
+  const raw = JSON.parse(fs.readFileSync(snapshotPath, "utf8"));
+  if (!raw.variables || !raw.variableCollections) {
+    throw new Error(`Snapshot inválido: faltam variables/variableCollections em ${snapshotPath}.`);
+  }
+  return { variables: raw.variables, variableCollections: raw.variableCollections };
+}
+
+// ─── Figma → DTCG conversion ─────────────────────────────────────────────────
+
+export function figmaNameToPath(figmaName) {
+  return figmaName.split("/").join(".");
+}
+
+export function colorToString(rgba) {
+  const { r, g, b, a } = rgba;
+  const to255 = (c) => Math.round(c * 255);
+  if (a < 0.999) {
+    return `rgba(${to255(r)}, ${to255(g)}, ${to255(b)}, ${parseFloat(a.toFixed(2))})`;
+  }
+  return (
+    "#" +
+    [r, g, b]
+      .map((c) => to255(c).toString(16).padStart(2, "0").toUpperCase())
+      .join("")
+  );
+}
+
+export function collectionToLayer(collection) {
+  if (!collection) return "unknown";
+  switch (collection.name) {
+    case "Foundation":
+      return "foundation";
+    case "Brand":
+      return "foundation";
+    case "Semantic":
+      return "semantic";
+    case "Component":
+      return "component";
+    default:
+      return collection.name.toLowerCase();
+  }
+}
+
+export function resolveValue(value, allVarsById, collectionsById) {
+  if (value == null) return null;
+
+  if (typeof value === "object" && value.type === "VARIABLE_ALIAS") {
+    const target = allVarsById[value.id];
+    if (!target) {
+      return { __error: "ALIAS_BROKEN", aliasId: value.id };
+    }
+    const targetColl = collectionsById[target.variableCollectionId];
+    const layer = collectionToLayer(targetColl);
+    const targetPath = figmaNameToPath(target.name);
+    return `{${layer}.${targetPath}}`;
+  }
+
+  if (typeof value === "object" && "r" in value && "g" in value && "b" in value) {
+    return colorToString(value);
+  }
+
+  return value;
+}
+
+export function mapDtcgType(figmaType) {
+  switch (figmaType) {
+    case "COLOR":
+      return "color";
+    case "FLOAT":
+      return "dimension";
+    case "STRING":
+      return "string";
+    case "BOOLEAN":
+      return "boolean";
+    default:
+      return "color";
+  }
+}
+
+/**
+ * Dado um Variable + collection, retorna o arquivo-alvo DTCG.
+ * Retorna { file, mode, semanticMulti? }. semanticMulti indica que
+ * gera em 2 arquivos (light.json e dark.json) — nesse caso, o caller
+ * trata separadamente.
+ */
+export function resolveTargetFile(variable, collection) {
+  if (!collection) return { file: null, mode: null };
+
+  if (collection.name === "Foundation") {
+    const prefix = variable.name.split("/")[0];
+    const file = FOUNDATION_PREFIX_TO_FILE[prefix];
+    return file ? { file: `foundation/${file}`, mode: "Value" } : { file: null, mode: null };
+  }
+
+  if (collection.name === "Brand") {
+    return { file: "foundation/brand.json", mode: BRAND_MODE };
+  }
+
+  if (collection.name === "Semantic") {
+    return { file: null, mode: null, semanticMulti: true };
+  }
+
+  if (collection.name === "Component") {
+    const prefix = variable.name.split("/")[0];
+    return { file: `component/${prefix}.json`, mode: COMPONENT_MODE };
+  }
+
+  return { file: null, mode: null };
+}
+
+/**
+ * Varre todas as Variables e constrói o estado esperado dos JSONs.
+ * Retorna { state, issues }:
+ *   state = { "foundation/colors.json": { "foundation.color.neutral.50": {$value,$type,$description} }, ... }
+ *   issues = [{ category: "ALIAS_BROKEN", token, mode, target }, ...]
+ */
+export function buildExpectedState(figmaMeta) {
+  const { variables, variableCollections } = figmaMeta;
+  const allVarsById = variables;
+  const collectionsById = variableCollections;
+  const issues = [];
+  const state = {};
+
+  for (const v of Object.values(variables)) {
+    const coll = collectionsById[v.variableCollectionId];
+    if (!coll) continue;
+    const layer = collectionToLayer(coll);
+    const canonicalPath = `${layer}.${figmaNameToPath(v.name)}`;
+    const target = resolveTargetFile(v, coll);
+
+    if (coll.name === "Semantic") {
+      for (const m of coll.modes) {
+        const file =
+          m.name === "Light" ? "semantic/light.json" :
+          m.name === "Dark" ? "semantic/dark.json" : null;
+        if (!file) continue;
+        const resolved = resolveValue(v.valuesByMode[m.modeId], allVarsById, collectionsById);
+        if (resolved && typeof resolved === "object" && resolved.__error) {
+          issues.push({ category: "ALIAS_BROKEN", token: canonicalPath, mode: m.name, target: resolved.aliasId });
+          continue;
+        }
+        if (!state[file]) state[file] = {};
+        state[file][canonicalPath] = {
+          $value: resolved,
+          $type: mapDtcgType(v.resolvedType),
+          ...(v.description ? { $description: v.description } : {}),
+        };
+      }
+      continue;
+    }
+
+    if (!target.file) continue;
+    const mode = coll.modes.find((m) => m.name === target.mode);
+    if (!mode) continue;
+    const resolved = resolveValue(v.valuesByMode[mode.modeId], allVarsById, collectionsById);
+    if (resolved && typeof resolved === "object" && resolved.__error) {
+      issues.push({ category: "ALIAS_BROKEN", token: canonicalPath, mode: target.mode, target: resolved.aliasId });
+      continue;
+    }
+    if (!state[target.file]) state[target.file] = {};
+    state[target.file][canonicalPath] = {
+      $value: resolved,
+      $type: mapDtcgType(v.resolvedType),
+      ...(v.description ? { $description: v.description } : {}),
+    };
+  }
+
+  return { state, issues };
+}
+
+// ─── Read current JSON state ────────────────────────────────────────────────
+
+export function flattenDtcg(obj, prefix = "", acc = {}) {
+  if (obj && typeof obj === "object" && "$value" in obj) {
+    acc[prefix] = obj;
+    return acc;
+  }
+  if (obj && typeof obj === "object") {
+    for (const [k, v] of Object.entries(obj)) {
+      if (k.startsWith("$")) continue;
+      flattenDtcg(v, prefix ? `${prefix}.${k}` : k, acc);
+    }
+  }
+  return acc;
+}
+
+export function readCurrentState(tokensDir) {
+  const state = {};
+  const readIfExists = (relFile) => {
+    const abs = path.join(tokensDir, relFile);
+    if (!fs.existsSync(abs)) return null;
+    return flattenDtcg(JSON.parse(fs.readFileSync(abs, "utf8")));
+  };
+  for (const f of Object.values(FOUNDATION_PREFIX_TO_FILE)) {
+    const rel = `foundation/${f}`;
+    const flat = readIfExists(rel);
+    if (flat) state[rel] = flat;
+  }
+  const brand = readIfExists("foundation/brand.json");
+  if (brand) state["foundation/brand.json"] = brand;
+  const light = readIfExists("semantic/light.json");
+  if (light) state["semantic/light.json"] = light;
+  const dark = readIfExists("semantic/dark.json");
+  if (dark) state["semantic/dark.json"] = dark;
+  const compDir = path.join(tokensDir, "component");
+  if (fs.existsSync(compDir)) {
+    for (const f of fs.readdirSync(compDir)) {
+      if (!f.endsWith(".json")) continue;
+      const rel = `component/${f}`;
+      const flat = readIfExists(rel);
+      if (flat) state[rel] = flat;
+    }
+  }
+  return state;
+}
+
+// ─── Compare ────────────────────────────────────────────────────────────────
+
+/**
+ * Converte valor de dimensão pra número em px. Retorna null se não for dimensão.
+ *   16     → 16 (Figma retorna números puros pra FLOAT)
+ *   "16px" → 16
+ *   "1rem" → 16
+ *   "1.5rem" → 24
+ */
+function asPx(v) {
+  if (typeof v === "number") return v;
+  if (typeof v !== "string") return null;
+  const s = v.trim().toLowerCase();
+  const rem = s.match(/^(-?[\d.]+)rem$/);
+  if (rem) return parseFloat(rem[1]) * 16;
+  const px = s.match(/^(-?[\d.]+)px$/);
+  if (px) return parseFloat(px[1]);
+  // Número puro em string
+  if (/^-?[\d.]+$/.test(s)) return parseFloat(s);
+  return null;
+}
+
+// Arredonda pra 4 casas decimais pra amortecer ruído de ponto flutuante do Figma
+// (ex.: 0.05 vs 0.05000000074505806) sem perder precisão útil (ex.: 1.5 ≠ 1.6).
+function roundFloat(n) {
+  return Math.round(n * 10000) / 10000;
+}
+
+export function normalizeForCompare(v) {
+  if (v == null) return "";
+  // Tenta dimensão primeiro
+  const px = asPx(v);
+  if (px != null) return `px:${roundFloat(px)}`;
+  if (typeof v === "object") return JSON.stringify(v);
+  let s = String(v).trim().toLowerCase();
+  if (/^#[0-9a-f]{3}$/.test(s)) s = "#" + s.slice(1).split("").map((c) => c + c).join("");
+  s = s.replace(/\s+/g, "");
+  // Normaliza números dentro de strings (ex.: rgba) arredondando pra 4 casas.
+  s = s.replace(/-?\d+\.\d+/g, (m) => String(roundFloat(parseFloat(m))));
+  return s;
+}
+
+/**
+ * Compara expected (Figma) vs actual (JSON). Retorna:
+ *   { VALUE_DRIFT, NEW_IN_FIGMA, MISSING_IN_FIGMA }
+ * Cada um é array de { file, token, figma?, json? }.
+ */
+export function compareStates(expected, actual) {
+  const diffs = { VALUE_DRIFT: [], NEW_IN_FIGMA: [], MISSING_IN_FIGMA: [] };
+  const allFiles = new Set([...Object.keys(expected), ...Object.keys(actual)]);
+  for (const file of allFiles) {
+    const exp = expected[file] || {};
+    const act = actual[file] || {};
+    const allKeys = new Set([...Object.keys(exp), ...Object.keys(act)]);
+    for (const key of allKeys) {
+      const e = exp[key];
+      const a = act[key];
+      if (e && !a) {
+        diffs.NEW_IN_FIGMA.push({ file, token: key, figma: e.$value });
+      } else if (!e && a) {
+        diffs.MISSING_IN_FIGMA.push({ file, token: key, json: a.$value });
+      } else if (e && a) {
+        if (normalizeForCompare(e.$value) !== normalizeForCompare(a.$value)) {
+          diffs.VALUE_DRIFT.push({ file, token: key, figma: e.$value, json: a.$value });
+        }
+      }
+    }
+  }
+  return diffs;
+}

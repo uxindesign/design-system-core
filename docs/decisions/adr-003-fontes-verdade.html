@@ -134,7 +134,7 @@ site em docs/ + Storybook (futuro)
 </ul>
 <h2>Alternativas consideradas</h2>
 <p><strong>Manter Git como source (ADR-003 original, pré-revisão).</strong> Descartada porque separa a decisão (Figma) da representação canônica (JSON), forçando sincronização em ordem não natural.</p>
-<p><strong>Tokens Studio como intermediário no Figma.</strong> Avaliada e descartada pra este momento. Tokens Studio exigiria migrar 620 Variables do formato nativo pra dentro do plugin, ajustar <code>build-tokens.mjs</code> pro formato exportado por ele, e requer que designers aprendam UI nova. Sem ganho proporcional ao custo na nossa escala atual. Reavaliar quando houver time de design maior e necessidade explícita das features do Tokens Studio (branches em tokens, temas via plugin, etc.).</p>
+<p><strong>Tokens Studio como intermediário no Figma.</strong> Avaliada e descartada pra este momento. Tokens Studio exigiria migrar 462 Variables do formato nativo pra dentro do plugin, ajustar <code>build-tokens.mjs</code> pro formato exportado por ele, e requer que designers aprendam UI nova. Sem ganho proporcional ao custo na nossa escala atual. Reavaliar quando houver time de design maior e necessidade explícita das features do Tokens Studio (branches em tokens, temas via plugin, etc.).</p>
 <p><strong>Plugin Figma custom.</strong> Descartada por ROI. Desenvolvimento + manutenção maior que o script via MCP pra o mesmo resultado funcional no cenário atual.</p>
 <p><strong>Bidirecional automático (webhook Figma).</strong> Descartada pra início. Manual garante controle e revisão. Se o fluxo manual virar gargalo, reavaliar.</p>
 <h2>Referências</h2>

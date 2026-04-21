@@ -4,21 +4,19 @@ Itens fora do escopo imediato mas que devem ser implementados. Organizados por p
 
 ## Alta prioridade
 
-### Implementar o sync Figma → JSON (substitui a tentativa revertida em 0.5.9)
+### Automatizar o sync Figma → JSON em CI
 
-Contexto: a ADR-003 foi revisada em 0.5.8 declarando **Figma como autoridade canônica** dos valores de token. Em 0.6.0, o script `sync-tokens-from-figma.mjs` foi implementado via REST API (`GET /v1/files/:key/variables/local`), mas **foi revertido em 0.5.9** depois de descobrirmos que a API `file_variables:read` é **exclusiva do plano Enterprise** (nosso plano atual é Pro/Expert). A decisão arquitetônica da ADR-003 continua válida; o mecanismo técnico de sync precisa de outra abordagem.
+Em 0.5.10 implementamos a opção **(b) adaptar pra MCP** (ver `docs/process-figma-sync.md`): o agente Claude Code dumpa as Variables em `.figma-snapshot.json` via `use_figma` em chunks, e `scripts/sync-tokens-from-figma.mjs` compara/aplica divergências. Funciona, mas exige sessão interativa — não roda em GitHub Actions.
 
-Opções a avaliar:
+Pra automatizar de verdade (disparo por webhook ou agendamento), há 3 caminhos:
 
 **(a) Plugin Figma custom** — rodaria dentro do Figma via Plugin API (que não é plano-gated). Botão "Publicar variables" que serializa em DTCG e faz POST/commit pra GitHub (usando GitHub App ou OAuth). Custo: 1–2 semanas de dev + manutenção própria.
 
-**(b) Adaptar o script revertido pra usar MCP (`use_figma`)** — o MCP remoto já autenticado (UXIN Pro) consegue ler variables via Plugin API interna, sem depender do plano. A mesma lógica de `scripts/lib/figma-dtcg.mjs` (revertido em 0.5.9, disponível no git em `git show 9d531a8`) pode ser reutilizada. Limitação: só roda em sessão interativa de Claude Code; não dá pra automatizar em GitHub Actions. Custo: ~2h.
+**(b) Tokens Studio for Figma (plugin de terceiros)** — plugin com free tier, que faz Figma → JSON + push pra Git via OAuth. Migrar as 462 Variables nativas atuais pra dentro do Tokens Studio exige reconfiguração. Ajusta `build-tokens.mjs` pro formato que ele exporta. Custo: 2–3 dias + designer precisa aprender o plugin.
 
-**(c) Tokens Studio for Figma (plugin de terceiros)** — plugin pago/gratuito (conforme tier) que já faz Figma → JSON + push pra Git via OAuth. Migrar as 620 Variables nativas atuais pra dentro do Tokens Studio exige reconfiguração. Ajusta `build-tokens.mjs` pro formato que ele exporta. Custo: 2–3 dias + designer precisa aprender o plugin.
+**(c) Upgrade para plano Enterprise** — destrava a REST API direta (`GET /v1/files/:key/variables/local`), possibilitando o script original revertido em 0.5.9. Decisão de negócio (≈ US$ 75/editor/mês).
 
-**(d) Upgrade para plano Enterprise** — destrava a REST API direta, volta o script original. Decisão de negócio (≈ US$ 75/editor/mês).
-
-Decisão pendente.
+Enquanto o disparo manual não virar gargalo, fica como está. Revisitar quando frequência de sync aumentar ou quando o volume de divergências manuais crescer.
 
 ### Preencher `docs/brand-principles.md`
 

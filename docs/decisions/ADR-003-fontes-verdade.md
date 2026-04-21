@@ -77,7 +77,7 @@ O workflow `.github/workflows/verify-tokens.yml` roda em pull requests e push pr
 
 **Manter Git como source (ADR-003 original, pré-revisão).** Descartada porque separa a decisão (Figma) da representação canônica (JSON), forçando sincronização em ordem não natural.
 
-**Tokens Studio como intermediário no Figma.** Avaliada e descartada pra este momento. Tokens Studio exigiria migrar 620 Variables do formato nativo pra dentro do plugin, ajustar `build-tokens.mjs` pro formato exportado por ele, e requer que designers aprendam UI nova. Sem ganho proporcional ao custo na nossa escala atual. Reavaliar quando houver time de design maior e necessidade explícita das features do Tokens Studio (branches em tokens, temas via plugin, etc.).
+**Tokens Studio como intermediário no Figma.** Avaliada e descartada pra este momento. Tokens Studio exigiria migrar 462 Variables do formato nativo pra dentro do plugin, ajustar `build-tokens.mjs` pro formato exportado por ele, e requer que designers aprendam UI nova. Sem ganho proporcional ao custo na nossa escala atual. Reavaliar quando houver time de design maior e necessidade explícita das features do Tokens Studio (branches em tokens, temas via plugin, etc.).
 
 **Plugin Figma custom.** Descartada por ROI. Desenvolvimento + manutenção maior que o script via MCP pra o mesmo resultado funcional no cenário atual.
 
