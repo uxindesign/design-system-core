@@ -2,7 +2,7 @@
 
 > Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-21. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
-> Versão atual: **0.5.7**
+> Versão atual: **0.5.8**
 
 ## Status geral
 
@@ -60,7 +60,7 @@
 |-----|--------|--------|
 | ADR-001 | Migração da arquitetura de tokens para Foundation→Semantic→Component com DTCG + Style Dictionary | Aceita |
 | ADR-002 | Stack agnóstica — HTML + CSS + vanilla JS como base | Aceita |
-| ADR-003 | Figma como autoridade de design, Git como autoridade de tokens/código | Aceita |
+| ADR-003 | Figma como origem canônica de tokens, Git como consolidação | Aceita — Revisada em 0.5.8 |
 | ADR-004 | WCAG 2.2 AA como padrão de acessibilidade | Aceita — Implementada em 0.5.0 |
 | ADR-005 | Brand como camada foundation, estados explícitos no semantic, e limpeza tipográfica | Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.2) |
 | ADR-006 | Tokens semânticos de controle para dimensões e tipografia compartilhadas entre controles interativos | Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.3) |

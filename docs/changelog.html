@@ -74,6 +74,13 @@
 <p>O formato é baseado em <a href="https://keepachangelog.com/pt-BR/1.1.0/">Keep a Changelog</a> e o versionamento segue <a href="https://semver.org/lang/pt-BR/">Semantic Versioning</a>.</p>
 <p>Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na faixa 0.x. Regras de bump documentadas em <code>docs/process-versioning.html</code>.</p>
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
+<h2>[0.5.8]</h2>
+<h3>Alterado</h3>
+<ul>
+<li>ADR-003 reescrita. A versão anterior declarava Git como fonte de verdade para tokens; a revisão reposiciona <strong>Figma Variables como a autoridade canônica</strong> dos valores de token. Git (<code>tokens/**/*.json</code>) passa a ser &quot;consolidação derivada em DTCG&quot; em vez de source. Fluxo canônico: Figma → sync manual → JSON → CSS → site. Decisão tomada em 21/04/2026 alinhando a prática à intenção do time (designer decide; dev consolida).</li>
+<li>CLAUDE.md: seção &quot;Como a pipeline funciona&quot; atualizada com o novo fluxo. Regras de ouro adicionadas: não editar <code>tokens/*.json</code> à mão, sempre passar pelo Figma. Lista de scripts em &quot;Ferramentas&quot; lista <code>sync:tokens-from-figma</code> (a ser implementado no próximo PR).</li>
+<li>Backlog reestruturado: item &quot;Sincronização automatizada Figma ↔ site&quot; substituído por &quot;Reduzir documentação textual do Figma&quot; (decisão concreta do time). Adicionados itens &quot;Futuro do site de documentação&quot; (Astro/Zeroheight/Supernova), &quot;Resolução de conflitos inteligente&quot; e &quot;Sincronização automática de tokens&quot; (evoluções futuras).</li>
+</ul>
 <h2>[0.5.7]</h2>
 <h3>Adicionado</h3>
 <ul>
