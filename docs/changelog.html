@@ -74,18 +74,6 @@
 <p>O formato é baseado em <a href="https://keepachangelog.com/pt-BR/1.1.0/">Keep a Changelog</a> e o versionamento segue <a href="https://semver.org/lang/pt-BR/">Semantic Versioning</a>.</p>
 <p>Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na faixa 0.x. Regras de bump documentadas em <code>docs/process-versioning.html</code>.</p>
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
-<h2>[0.6.0]</h2>
-<h3>Adicionado</h3>
-<ul>
-<li><strong><code>scripts/sync-tokens-from-figma.mjs</code></strong> — canal oficial Figma → JSON, alinhado à ADR-003 revisada (Figma como autoridade). Dry-run por padrão, <code>--write</code> aplica. Apenas <code>VALUE_DRIFT</code> é aplicado automaticamente; <code>NEW_IN_FIGMA</code> e <code>MISSING_IN_FIGMA</code> exigem ação manual (prevenção de criação/remoção não-intencional).</li>
-<li><strong><code>scripts/lib/figma-dtcg.mjs</code></strong> — módulo compartilhado com lógica de fetch Figma, conversão Figma→DTCG e comparação. Reutilizado por <code>sync-tokens-from-figma.mjs</code> e <code>tokens-verify.mjs</code>.</li>
-<li><strong><code>.github/workflows/sync-tokens-from-figma.yml</code></strong> — workflow manual (<code>workflow_dispatch</code>). Suporta dry-run opcional via input. Em modo write, abre PR automático com o diff no corpo. Exige secret <code>FIGMA_PAT</code>.</li>
-<li>Novos npm scripts: <code>sync:tokens-from-figma</code> (dry-run) e <code>sync:tokens-from-figma:write</code> (aplica).</li>
-</ul>
-<h3>Alterado</h3>
-<ul>
-<li><strong><code>scripts/tokens-verify.mjs</code></strong> — comparação Figma↔JSON passa da categorização genérica anterior para as três categorias do ADR-003 revisada: <code>NEEDS_SYNC</code> (warning), <code>DRIFT_FROM_SOURCE</code> (erro) e <code>VALUE_DRIFT</code> (erro). Resolução completa de aliases Figma, normalização de dimensões (px/rem equivalentes), suporte a modos Light/Dark separados. Na fase de adaptação (14 dias), todas as categorias ficam como warning — depois <code>DRIFT_FROM_SOURCE</code> e <code>VALUE_DRIFT</code> passam a falhar o CI.</li>
-</ul>
 <h2>[0.5.8]</h2>
 <h3>Alterado</h3>
 <ul>

@@ -29,20 +29,13 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-import {
-  FIGMA_FILE_KEY,
-  fetchFigmaVariables,
-  buildExpectedState,
-  readCurrentState,
-  compareStates,
-} from "./lib/figma-dtcg.mjs";
-
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
 const TOKENS_DIR = path.join(ROOT, "tokens");
 const CSS_DIR = path.join(ROOT, "css", "tokens", "generated");
 const OUT_JSON = path.join(ROOT, "docs", "api", "tokens-sync.json");
 const OUT_HTML = path.join(ROOT, "docs", "tokens-sync.html");
+const FIGMA_FILE_KEY = "PRYS2kL7VdC1MtVWfZvuDN";
 
 // -----------------------------------------------------------------------------
 // utilidades
@@ -252,99 +245,55 @@ function compareJsonToCss({ shared, light, dark, lightAll, darkAll }) {
 // -----------------------------------------------------------------------------
 // 3. Comparar com Figma Variables
 // -----------------------------------------------------------------------------
-//
-// Classificação alinhada com ADR-003 revisada (Figma é autoridade):
-//
-//   NEEDS_SYNC        Figma tem token que JSON não tem. Warning — rodar
-//                     sync:tokens-from-figma. Esperado após designer criar
-//                     uma Variable nova sem ter sincronizado ainda.
-//
-//   DRIFT_FROM_SOURCE JSON tem token que Figma não tem. Erro — indica
-//                     edição manual do JSON (proibida) OU Variable deletada
-//                     no Figma sem sync. Exige intervenção humana.
-//
-//   VALUE_DRIFT       Mesmo nome, valor diferente. Erro — rodar
-//                     sync:tokens-from-figma:write pra alinhar.
 
-async function compareJsonToFigma(pat) {
+async function fetchFigmaVariables(pat) {
+  const url = `https://api.figma.com/v1/files/${FIGMA_FILE_KEY}/variables/local`;
+  const res = await fetch(url, {
+    headers: { "X-Figma-Token": pat },
+  });
+  if (!res.ok) {
+    throw new Error(`Figma API retornou ${res.status}: ${await res.text()}`);
+  }
+  return res.json();
+}
+
+async function compareJsonToFigma(all, pat) {
   if (!pat) {
     return {
       skipped: true,
-      reason:
-        "FIGMA_PAT ausente. Para ativar a verificação com Figma, exporte FIGMA_PAT=<seu-pat> ou configure o secret no CI.",
+      reason: "FIGMA_PAT ausente. Para ativar a verificação com Figma, exporte FIGMA_PAT=<seu-pat>.",
       divergences: [],
-      counts: { NEEDS_SYNC: 0, DRIFT_FROM_SOURCE: 0, VALUE_DRIFT: 0, ALIAS_BROKEN: 0 },
     };
   }
-
-  let meta;
+  let figma;
   try {
-    meta = await fetchFigmaVariables(pat);
+    figma = await fetchFigmaVariables(pat);
   } catch (e) {
     return {
       skipped: true,
       reason: `Erro ao consultar Figma: ${e.message}`,
       divergences: [],
-      counts: { NEEDS_SYNC: 0, DRIFT_FROM_SOURCE: 0, VALUE_DRIFT: 0, ALIAS_BROKEN: 0 },
     };
   }
-
-  const { state: expected, issues } = buildExpectedState(meta);
-  const actual = readCurrentState(TOKENS_DIR);
-  const raw = compareStates(expected, actual);
-  const aliasBroken = issues.filter((i) => i.category === "ALIAS_BROKEN");
-
-  // Traduz categorias internas para o vocabulário do ADR-003
-  const divergences = [
-    ...raw.NEW_IN_FIGMA.map((d) => ({
-      level: "warning",
-      category: "NEEDS_SYNC",
-      token: d.token,
-      file: d.file,
-      figma: d.figma,
-      message: "Figma tem este token mas JSON ainda não — rodar npm run sync:tokens-from-figma:write",
-    })),
-    ...raw.MISSING_IN_FIGMA.map((d) => ({
-      level: "error",
-      category: "DRIFT_FROM_SOURCE",
-      token: d.token,
-      file: d.file,
-      json: d.json,
-      message:
-        "JSON tem token que Figma não tem. Indica edição manual do JSON ou Variable removida no Figma sem sync.",
-    })),
-    ...raw.VALUE_DRIFT.map((d) => ({
-      level: "error",
-      category: "VALUE_DRIFT",
-      token: d.token,
-      file: d.file,
-      figma: d.figma,
-      json: d.json,
-      message: "Valor difere entre Figma (autoridade) e JSON — rodar sync:tokens-from-figma:write",
-    })),
-    ...aliasBroken.map((i) => ({
-      level: "warning",
-      category: "ALIAS_BROKEN",
-      token: i.token,
-      mode: i.mode,
-      target: i.target,
-      message: "Variável Figma aponta pra um alias inexistente.",
-    })),
-  ];
-
+  // A API retorna meta.variables e meta.variableCollections. Precisamos
+  // mapear variáveis para um formato comparável com os tokens do JSON.
+  // A comparação plena exige resolução de alias entre variáveis Figma,
+  // escolha de modo (Light/Dark), e normalização de formato de cor —
+  // está documentada como TODO abaixo para a próxima iteração.
+  const variables = figma.meta?.variables ?? {};
+  const collections = figma.meta?.variableCollections ?? {};
   return {
     skipped: false,
     summary: {
-      figmaVariableCount: Object.keys(meta.variables).length,
-      figmaCollectionCount: Object.keys(meta.variableCollections).length,
+      figmaVariableCount: Object.keys(variables).length,
+      figmaCollectionCount: Object.keys(collections).length,
+      jsonTokenCount: Object.keys(all).length,
     },
-    divergences,
-    counts: {
-      NEEDS_SYNC: raw.NEW_IN_FIGMA.length,
-      DRIFT_FROM_SOURCE: raw.MISSING_IN_FIGMA.length,
-      VALUE_DRIFT: raw.VALUE_DRIFT.length,
-      ALIAS_BROKEN: aliasBroken.length,
-    },
+    // TODO: comparação nome-por-nome, valor-por-valor, modo-por-modo.
+    // Exige mapeamento das convenções (Figma usa / como separador, DTCG usa .)
+    // e resolução de alias. A primeira iteração apenas confirma conectividade.
+    divergences: [],
+    note: "Comparação detalhada Figma ↔ JSON pendente. Primeira iteração confirma que a API responde e coleta a contagem de variáveis.",
   };
 }
 
@@ -482,21 +431,16 @@ async function main() {
   const totalTokens = Object.keys(bundle.shared).length + Object.keys(bundle.light).length + Object.keys(bundle.dark).length;
   const jsonIntegrity = checkJsonIntegrity(bundle.lightAll, bundle.darkAll);
   const jsonVsCss = compareJsonToCss(bundle);
-  const jsonVsFigma = await compareJsonToFigma(process.env.FIGMA_PAT);
-
-  // Fase de adaptação (ADR-003 revisada em 0.5.8): DRIFT_FROM_SOURCE e
-  // VALUE_DRIFT ainda contam como WARNING no CI durante duas semanas,
-  // depois passam a ERROR. Por ora, Figma divergences não bloqueiam o
-  // CI — mas aparecem no relatório.
-  const jsonVsFigmaErrors = 0; // (jsonVsFigma.divergences || []).filter((d) => d.level === "error").length;
-  const jsonVsFigmaWarnings = (jsonVsFigma.divergences || []).length;
+  // Para a verificação Figma usa o pool combinado (light) como representativo.
+  // A comparação específica por modo será implementada junto com a resolução
+  // de alias Figma.
+  const jsonVsFigma = await compareJsonToFigma(bundle.lightAll, process.env.FIGMA_PAT);
 
   const errors = jsonIntegrity.filter((d) => d.level === "error").length +
     jsonVsCss.filter((d) => d.level === "error").length +
-    jsonVsFigmaErrors;
+    (jsonVsFigma.divergences?.length || 0);
   const warnings = jsonIntegrity.filter((d) => d.level === "warning").length +
-    jsonVsCss.filter((d) => d.level === "warning").length +
-    jsonVsFigmaWarnings;
+    jsonVsCss.filter((d) => d.level === "warning").length;
 
   const report = {
     generatedAt: new Date().toISOString(),
@@ -524,14 +468,8 @@ async function main() {
   if (jsonVsFigma.skipped) {
     console.log(`JSON ↔ Figma:     SKIP — ${jsonVsFigma.reason}`);
   } else {
-    const c = jsonVsFigma.counts;
-    const total = c.NEEDS_SYNC + c.DRIFT_FROM_SOURCE + c.VALUE_DRIFT + c.ALIAS_BROKEN;
-    if (total === 0) {
-      console.log(`JSON ↔ Figma:     OK (Figma = ${jsonVsFigma.summary.figmaVariableCount} vars, tudo em dia)`);
-    } else {
-      console.log(`JSON ↔ Figma:     ${total} divergências — NEEDS_SYNC=${c.NEEDS_SYNC} DRIFT_FROM_SOURCE=${c.DRIFT_FROM_SOURCE} VALUE_DRIFT=${c.VALUE_DRIFT} ALIAS_BROKEN=${c.ALIAS_BROKEN}`);
-      console.log("                  rodar 'npm run sync:tokens-from-figma' pra detalhes e 'npm run sync:tokens-from-figma:write' pra aplicar VALUE_DRIFT");
-    }
+    console.log(`JSON ↔ Figma:     ${jsonVsFigma.divergences.length === 0 ? "OK (smoke)" : `${jsonVsFigma.divergences.length} divergências`}`);
+    if (jsonVsFigma.note) console.log(`                  nota: ${jsonVsFigma.note}`);
   }
   console.log(`Avisos:           ${warnings}`);
   console.log(`Erros:            ${errors}`);
