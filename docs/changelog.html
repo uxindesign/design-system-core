@@ -74,6 +74,22 @@
 <p>O formato é baseado em <a href="https://keepachangelog.com/pt-BR/1.1.0/">Keep a Changelog</a> e o versionamento segue <a href="https://semver.org/lang/pt-BR/">Semantic Versioning</a>.</p>
 <p>Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na faixa 0.x. Regras de bump documentadas em <code>docs/process-versioning.html</code>.</p>
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
+<h2>[0.5.9]</h2>
+<h3>Revertido</h3>
+<ul>
+<li>Revertido o PR #15 (0.6.0, <code>feat(tokens): sync Figma → JSON via script + workflow + verify refinado</code>). Motivo: o endpoint <code>GET /v1/files/:key/variables/local</code> da Figma REST API requer o scope <code>file_variables:read</code>, que <strong>é exclusivo do plano Enterprise</strong>. Nosso plano atual é Pro/Expert — o PAT não consegue emitir esse scope. Script inútil no plano atual.</li>
+<li>Removidos: <code>scripts/sync-tokens-from-figma.mjs</code>, <code>scripts/lib/figma-dtcg.mjs</code>, <code>.github/workflows/sync-tokens-from-figma.yml</code>, e os npm scripts correspondentes.</li>
+<li><code>scripts/tokens-verify.mjs</code> voltou à implementação pré-0.6.0 (sem a classificação NEEDS_SYNC/DRIFT_FROM_SOURCE/VALUE_DRIFT — que dependia do módulo <code>lib/figma-dtcg.mjs</code> também revertido).</li>
+</ul>
+<h3>Alterado</h3>
+<ul>
+<li>CLAUDE.md: ajustado para refletir que o mecanismo de propagação Figma → JSON está em reavaliação. Regra de ouro &quot;não editar <code>tokens/*.json</code> à mão&quot; continua valendo.</li>
+<li><code>docs/backlog.md</code>: item &quot;Implementar o sync Figma → JSON&quot; adicionado em alta prioridade, listando as quatro opções em aberto (plugin custom, adaptar pra MCP, Tokens Studio, upgrade Enterprise).</li>
+</ul>
+<h3>Mantido</h3>
+<ul>
+<li>ADR-003 revisada (Figma como autoridade canônica) continua válida — a decisão conceitual não depende do mecanismo técnico. Só o &quot;como&quot; ficou em aberto.</li>
+</ul>
 <h2>[0.5.8]</h2>
 <h3>Alterado</h3>
 <ul>
