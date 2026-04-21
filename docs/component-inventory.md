@@ -1,8 +1,8 @@
 # Inventário de componentes — Design System Core
 
-> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-20. Não editar manualmente.
+> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-21. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
-> Versão atual: **0.5.4**
+> Versão atual: **0.5.5**
 
 ## Status geral
 
@@ -63,8 +63,8 @@
 | ADR-003 | Figma como autoridade de design, Git como autoridade de tokens/código | Aceita |
 | ADR-004 | WCAG 2.2 AA como padrão de acessibilidade | Aceita — Implementada em 0.5.0 |
 | ADR-005 | Brand como camada foundation, estados explícitos no semantic, e limpeza tipográfica | Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.2) |
-| ADR-006 | Adopt semantic control tokens for shared dimensions and typography across interactive controls | Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.3) |
-| ADR-007 | Establish toned color system with colored overlays and semantic toned tokens | Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.4) |
+| ADR-006 | Tokens semânticos de controle para dimensões e tipografia compartilhadas entre controles interativos | Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.3) |
+| ADR-007 | Estabelecer sistema de cores toned com overlays coloridos e tokens semânticos toned | Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.4) |
 | ADR-008 | Recalibração das paletas foundation `green` e `amber` | Aceita — Implementada em 0.5.0 |
 | ADR-009 | Separação de `border.default` (decorativa) e `border.control` (funcional) | Aceita — Implementada em 0.5.0 |
 | ADR-010 | Remoção de `foundation.color.white` e `foundation.color.black` puros | Aceita — Implementada em 0.5.0 |

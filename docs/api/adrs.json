@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-20T23:53:52.299Z",
-  "version": "0.5.4",
+  "generatedAt": "2026-04-21T10:53:34.421Z",
+  "version": "0.5.5",
   "count": 11,
   "adrs": [
     {
@@ -51,7 +51,7 @@
     {
       "id": "ADR-006",
       "num": 6,
-      "title": "Adopt semantic control tokens for shared dimensions and typography across interactive controls",
+      "title": "Tokens semânticos de controle para dimensões e tipografia compartilhadas entre controles interativos",
       "status": "Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.3)",
       "date": "2026-04-15",
       "sourceFile": "docs/decisions/ADR-006-semantic-control-tokens.md",
@@ -60,7 +60,7 @@
     {
       "id": "ADR-007",
       "num": 7,
-      "title": "Establish toned color system with colored overlays and semantic toned tokens",
+      "title": "Estabelecer sistema de cores toned com overlays coloridos e tokens semânticos toned",
       "status": "Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.4)",
       "date": "2026-04-15",
       "sourceFile": "docs/decisions/ADR-007-toned-color-system.md",
