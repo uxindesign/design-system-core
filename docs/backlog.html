@@ -72,20 +72,6 @@
   <div class="ds-md-content">
 <p>Itens fora do escopo imediato mas que devem ser implementados. Organizados por prioridade.</p>
 <h2>Alta prioridade</h2>
-<h3>Implementar ADR-005 — Brand como foundation, <code>-default</code> explícito, limpeza tipográfica</h3>
-<p>Decisão proposta desde 2026-04-14. Pré-requisito para ADR-006 e ADR-007 saírem do estado Proposta. Ver <a href="./decisions/ADR-005-brand-foundation-e-estados-explicitos.md">ADR-005</a> para pré-requisitos, estimativa e passos concretos.</p>
-<h3>Implementar ADR-006 — Semantic control tokens compartilhados</h3>
-<p>Normalizar dimensões de Button, Input, Select e Textarea via tokens semânticos compartilhados. Depende de ADR-005. Ver <a href="./decisions/ADR-006-semantic-control-tokens.md">ADR-006</a>.</p>
-<h3>Sincronizar Figma com ADR-007 (toned colors)</h3>
-<p>ADR-007 foi fechada no código em 0.5.4 mas as variáveis Figma ainda usam naming flat. Pendências:</p>
-<ul>
-<li>Renomear <code>color/primary/toned</code> → <code>color/primary/toned/default</code></li>
-<li>Renomear <code>color/primary/toned-hover</code> → <code>color/primary/toned/hover</code></li>
-<li>Renomear <code>color/primary/toned-active</code> → <code>color/primary/toned/active</code></li>
-<li>Deletar <code>color/primary/toned-disabled</code> e <code>color/primary/toned-disabled-fg</code></li>
-<li>Rebinding do Button Toned disabled para <code>state/disabled/background</code> e <code>state/disabled/foreground</code></li>
-</ul>
-<p>Executável via MCP remoto do Figma (fileKey <code>PRYS2kL7VdC1MtVWfZvuDN</code>).</p>
 <h3>Revisitar rgba hardcoded em semantic tokens (dívida de ADR-011)</h3>
 <ul>
 <li><code>semantic.brand.disabled</code> tem <code>rgba(125, 158, 232, 0.50)</code> (light) e <code>#4F637D</code> (dark) literais em <code>tokens/semantic/*.json</code>. Viola a regra &quot;semantic nunca hardcoded&quot;.</li>
@@ -98,8 +84,6 @@
 <h2>Média prioridade</h2>
 <h3>Comparação completa Figma ↔ JSON no <code>scripts/tokens-verify.mjs</code></h3>
 <p>Primeira versão do script confirma conectividade e coleta contagens. Próxima iteração: comparação nome-por-nome, valor-por-valor, modo-por-modo, com resolução de alias Figma e normalização de formato. Adiciona valor depois que o FIGMA_PAT está configurado como secret do CI.</p>
-<h3>Padronizar idioma dos ADR-006 e ADR-007</h3>
-<p>Estão em inglês, destoando dos outros nove que estão em português. Traduzir mantendo a estrutura.</p>
 <h3>Sincronização automatizada Figma ↔ site (Fase 7 do plano)</h3>
 <p>Script Node usando MCP remoto que sincroniza textos de documentação entre site e nodes do Figma marcados com convenção <code>&lt;sync:...&gt;</code>. Ver descrição completa em <code>docs/process-figma-sync.html</code> (a ser criado).</p>
 <h2>Baixa prioridade</h2>

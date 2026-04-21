@@ -1,7 +1,7 @@
 # ADR-007: Estabelecer sistema de cores toned com overlays coloridos e tokens semânticos toned
 
 **Data:** 2026-04-15
-**Status:** Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.4)
+**Status:** Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.4, sincronização Figma completa em 0.5.6)
 
 ## Implementação
 
@@ -12,11 +12,13 @@ Toda a camada de código foi executada durante ADR-011:
 - **Component button**: `tokens/component/button.json` tem `button.background.toned.{default,hover,active,disabled}` e `button.foreground.toned.{default,disabled}`. Os estados toned apontam para `semantic.brand.toned.*`; o disabled aponta para `semantic.state.disabled.*` e `semantic.content.disabled` (opaco neutro, conforme ADR).
 - **CSS consumer**: `css/components/button.css` consome `--ds-brand-toned-*` na variante `.ds-btn--toned`. Zero rgba hardcoded.
 
-Pendente no Figma (tarefa separada):
+### Sincronização Figma (0.5.6)
 
-- Renomear variáveis flat `color/primary/toned`, `-hover`, `-active` → estrutura aninhada `color/primary/toned/{default,hover,active}`.
-- Deletar variáveis `color/primary/toned-disabled` e `-disabled-fg`.
-- Rebinding do Button Toned disabled para `state/disabled/background` e `state/disabled/foreground`.
+Confirmação do estado real do arquivo Figma `PRYS2kL7VdC1MtVWfZvuDN` em 2026-04-21:
+
+- Variáveis `color/primary/toned`, `color/primary/toned-hover`, `color/primary/toned-active` (naming flat antigo) **não existem mais** — foram migradas durante ADR-011 para `brand/toned/default`, `brand/toned/hover`, `brand/toned/active` (naming aninhado) apontando para os overlays foundation corretos.
+- Variáveis `color/primary/toned-disabled` e `color/primary/toned-disabled-fg` **não existem mais** — removidas durante ADR-011.
+- **Rebinding executado em 0.5.6**: as 6 variantes Toned+Disabled do componente Button (3 tamanhos × Icon Only false/true) tinham o background correto (`state/disabled/background`) mas o foreground apontava para `brand/content/contrast-disabled` (o token para texto sobre fill brand sólido disabled) ou para uma variável órfã (`VariableID:2732:1651`). Foram re-vinculadas para `content/disabled` (neutral-400 opaco), conforme a decisão do ADR.
 
 ## Pré-requisitos
 

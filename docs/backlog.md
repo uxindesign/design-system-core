@@ -4,26 +4,6 @@ Itens fora do escopo imediato mas que devem ser implementados. Organizados por p
 
 ## Alta prioridade
 
-### Implementar ADR-005 — Brand como foundation, `-default` explícito, limpeza tipográfica
-
-Decisão proposta desde 2026-04-14. Pré-requisito para ADR-006 e ADR-007 saírem do estado Proposta. Ver [ADR-005](./decisions/ADR-005-brand-foundation-e-estados-explicitos.md) para pré-requisitos, estimativa e passos concretos.
-
-### Implementar ADR-006 — Semantic control tokens compartilhados
-
-Normalizar dimensões de Button, Input, Select e Textarea via tokens semânticos compartilhados. Depende de ADR-005. Ver [ADR-006](./decisions/ADR-006-semantic-control-tokens.md).
-
-### Sincronizar Figma com ADR-007 (toned colors)
-
-ADR-007 foi fechada no código em 0.5.4 mas as variáveis Figma ainda usam naming flat. Pendências:
-
-- Renomear `color/primary/toned` → `color/primary/toned/default`
-- Renomear `color/primary/toned-hover` → `color/primary/toned/hover`
-- Renomear `color/primary/toned-active` → `color/primary/toned/active`
-- Deletar `color/primary/toned-disabled` e `color/primary/toned-disabled-fg`
-- Rebinding do Button Toned disabled para `state/disabled/background` e `state/disabled/foreground`
-
-Executável via MCP remoto do Figma (fileKey `PRYS2kL7VdC1MtVWfZvuDN`).
-
 ### Revisitar rgba hardcoded em semantic tokens (dívida de ADR-011)
 
 - `semantic.brand.disabled` tem `rgba(125, 158, 232, 0.50)` (light) e `#4F637D` (dark) literais em `tokens/semantic/*.json`. Viola a regra "semantic nunca hardcoded".
@@ -41,10 +21,6 @@ Template existe, conteúdo real ainda não foi definido. Passa por: missão, 3 p
 ### Comparação completa Figma ↔ JSON no `scripts/tokens-verify.mjs`
 
 Primeira versão do script confirma conectividade e coleta contagens. Próxima iteração: comparação nome-por-nome, valor-por-valor, modo-por-modo, com resolução de alias Figma e normalização de formato. Adiciona valor depois que o FIGMA_PAT está configurado como secret do CI.
-
-### Padronizar idioma dos ADR-006 e ADR-007
-
-Estão em inglês, destoando dos outros nove que estão em português. Traduzir mantendo a estrutura.
 
 ### Sincronização automatizada Figma ↔ site (Fase 7 do plano)
 
