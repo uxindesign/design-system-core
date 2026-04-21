@@ -1,6 +1,6 @@
 # Design System Core — conteúdo consolidado
 
-> Versão 0.5.7. Arquivo destinado a consumo por LLMs que precisem
+> Versão 0.5.8. Arquivo destinado a consumo por LLMs que precisem
 > do design system inteiro em uma requisição. Inclui README, CONTRIBUTING,
 > CLAUDE.md, CHANGELOG, todos os MDs em docs/, todos os ADRs e um resumo
 > dos tokens. Páginas HTML-only (componentes, foundations) estão referenciadas
@@ -245,33 +245,46 @@ Título curto em português, corpo em markdown. Seções obrigatórias: **Summar
 
 ## Como a pipeline funciona
 
+Direção canônica (ADR-003 revisada em 0.5.8): **Figma Variables são a fonte de verdade de valores de token**. Git/`tokens/**/*.json` é a consolidação derivada.
+
 ```
-tokens/**/*.json         (DTCG — fonte canônica)
+Figma Variables              (autoridade — designer é o autor)
       │
-      │ build-tokens.mjs (Style Dictionary)
+      │ npm run sync:tokens-from-figma  (manual; abre PR com diff)
       ▼
-css/tokens/generated/*.css  (derivado, marcado AUTO-GENERATED)
+tokens/**/*.json             (DTCG — consolidação canônica em Git)
+      │
+      │ build-tokens.mjs     (Style Dictionary — automático no CI)
+      ▼
+css/tokens/generated/*.css   (derivado, marcado AUTO-GENERATED)
       │
       │ @import em design-system.css
       ▼
-css/components/*.css     (consome as variáveis)
+css/components/*.css         (consome as variáveis)
       │
       ▼
-docs/*.html              (documentação e preview)
+docs/*.html                  (documentação e preview)
 ```
 
-No CI (`.github/workflows/deploy.yml`), `npm run build:tokens` roda em cada push pra main e auto-commita os arquivos gerados.
+Regras de ouro:
+
+- **Nunca editar `tokens/*.json` à mão.** Alterações vêm do Figma via `sync:tokens-from-figma`.
+- **Sempre editar Figma Variables primeiro.** Designer decide, depois o sync propaga.
+- Exceção: PRs gerados pelo próprio script de sync editam os JSONs — é esperado, revisar o diff antes de mergar.
+
+No CI (`.github/workflows/deploy.yml`), `npm run build:tokens` roda em cada push pra main e auto-commita os arquivos CSS gerados. O sync Figma→JSON fica em `.github/workflows/sync-tokens-from-figma.yml`, disparado manualmente via `workflow_dispatch`.
 
 ## Ferramentas disponíveis no repo
 
 ```bash
-npm run build:tokens   # Foundation/Semantic/Component → CSS gerado
-npm run sync:docs      # Regenera inventários em docs/*.md
-# (em breve, via plano de consolidação)
-npm run verify:tokens  # Compara Figma Variables com tokens/*.json
-npm run build:api      # Gera docs/api/*.json
-npm run build:llms     # Gera docs/llms.txt e llms-full.txt
-npm run build:all      # roda todos os builds acima em ordem
+npm run sync:tokens-from-figma         # dry-run: lê Figma Variables e mostra diff vs tokens/*.json
+npm run sync:tokens-from-figma:write   # aplica o diff, regenera CSS, pronto pra commitar
+npm run build:tokens                   # Foundation/Semantic/Component → CSS gerado
+npm run sync:docs                      # Regenera inventários em docs/*.md
+npm run verify:tokens                  # Classifica divergências Figma ↔ JSON (NEEDS_SYNC/DRIFT/VALUE)
+npm run build:api                      # Gera docs/api/*.json
+npm run build:llms                     # Gera docs/llms.txt e llms-full.txt
+npm run build:all                      # roda build:tokens → sync:docs → build:api → build:llms → verify:tokens
 ```
 
 ## Quando houver dúvida
@@ -292,6 +305,13 @@ O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.
 Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na faixa 0.x. Regras de bump documentadas em `docs/process-versioning.html`.
 
 ## [Não publicado]
+
+## [0.5.8]
+
+### Alterado
+- ADR-003 reescrita. A versão anterior declarava Git como fonte de verdade para tokens; a revisão reposiciona **Figma Variables como a autoridade canônica** dos valores de token. Git (`tokens/**/*.json`) passa a ser "consolidação derivada em DTCG" em vez de source. Fluxo canônico: Figma → sync manual → JSON → CSS → site. Decisão tomada em 21/04/2026 alinhando a prática à intenção do time (designer decide; dev consolida).
+- CLAUDE.md: seção "Como a pipeline funciona" atualizada com o novo fluxo. Regras de ouro adicionadas: não editar `tokens/*.json` à mão, sempre passar pelo Figma. Lista de scripts em "Ferramentas" lista `sync:tokens-from-figma` (a ser implementado no próximo PR).
+- Backlog reestruturado: item "Sincronização automatizada Figma ↔ site" substituído por "Reduzir documentação textual do Figma" (decisão concreta do time). Adicionados itens "Futuro do site de documentação" (Astro/Zeroheight/Supernova), "Resolução de conflitos inteligente" e "Sincronização automática de tokens" (evoluções futuras).
 
 ## [0.5.7]
 
@@ -455,7 +475,7 @@ Consolidação da documentação como fonte única de verdade. Plano em seis fas
 |-----|--------|--------|------|
 | [ADR-001](decisions/ADR-001-migracao-tokens.md) | Migração da arquitetura de tokens para Foundation→Semantic→Component com DTCG + Style Dictionary | Aceita | 2026-04-14 |
 | [ADR-002](decisions/ADR-002-stack-agnostica.md) | Stack agnóstica — HTML + CSS + vanilla JS como base | Aceita | 2026-04-14 |
-| [ADR-003](decisions/ADR-003-fontes-verdade.md) | Figma como autoridade de design, Git como autoridade de tokens/código | Aceita | 2026-04-14 |
+| [ADR-003](decisions/ADR-003-fontes-verdade.md) | Figma como origem canônica de tokens, Git como consolidação | Aceita — Revisada em 0.5.8 | 2026-04-14 (original) · 2026-04-21 (revisada) |
 | [ADR-004](decisions/ADR-004-wcag.md) | WCAG 2.2 AA como padrão de acessibilidade | Aceita — Implementada em 0.5.0 | 2026-04-14 |
 | [ADR-005](decisions/ADR-005-brand-foundation-e-estados-explicitos.md) | Brand como camada foundation, estados explícitos no semantic, e limpeza tipográfica | Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.2) | 2026-04-14 |
 | [ADR-006](decisions/ADR-006-semantic-control-tokens.md) | Tokens semânticos de controle para dimensões e tipografia compartilhadas entre controles interativos | Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.3) | 2026-04-15 |
@@ -480,21 +500,50 @@ Itens fora do escopo imediato mas que devem ser implementados. Organizados por p
 
 Template existe, conteúdo real ainda não foi definido. Passa por: missão, 3 princípios de design, tom de voz, identidade visual, logo.
 
+### Reduzir documentação textual do Figma
+
+Decisão tomada em 21/04/2026 junto com a revisão da ADR-003: reduzir as páginas textuais do Figma (Introdução, Theming, Accessibility, Changelog) e concentrar a documentação de desenvolvimento no GitHub. Tarefa manual, Figma:
+
+- Esvaziar conteúdo narrativo das páginas textuais mencionadas.
+- Manter uma referência curta em cada ("Ver documentação completa: https://uxindesign.github.io/design-system-core/...").
+- Eventualmente consolidar tudo na Capa.
+- Component Status pode ficar como está (é informação visual útil no contexto Figma).
+
 ## Média prioridade
 
-### Comparação completa Figma ↔ JSON no `scripts/tokens-verify.mjs`
+### Comparação avançada Figma ↔ JSON no `scripts/tokens-verify.mjs`
 
-Primeira versão do script confirma conectividade e coleta contagens. Próxima iteração: comparação nome-por-nome, valor-por-valor, modo-por-modo, com resolução de alias Figma e normalização de formato. Adiciona valor depois que o FIGMA_PAT está configurado como secret do CI.
+A partir de 0.5.8, o script classifica divergências em `NEEDS_SYNC`, `DRIFT_FROM_SOURCE` e `VALUE_DRIFT`. Próxima iteração: resolução completa de aliases Figma e normalização de formato (hex vs rgba). Depois do FIGMA_PAT ficar configurado como secret do CI.
 
-### Sincronização automatizada Figma ↔ site (Fase 7 do plano)
+### Futuro do site de documentação
 
-Script Node usando MCP remoto que sincroniza textos de documentação entre site e nodes do Figma marcados com convenção `<sync:...>`. Ver descrição completa em `docs/process-figma-sync.html` (a ser criado).
+Avaliar opções quando a manutenção manual do site virar gargalo:
+
+- **Astro**: permite manter HTML + MDX, adiciona autor-experience sem mudar a filosofia atual.
+- **Zeroheight**: CMS especializado em design system, integração forte com Figma, custo recorrente.
+- **Supernova**: similar ao Zeroheight, com sync bidirecional Figma ↔ doc.
+- **Manter custom**: evoluir o `sync-docs.mjs` com editor WYSIWYG interno.
+
+Decisão aguarda: volume de contribuição, necessidade de editores não-técnicos, orçamento. Por ora, o fluxo MD → HTML via `marked` no `sync-docs.mjs` atende.
+
+### Sincronização automática de tokens (webhook ou agendado)
+
+A Fase 7 implementou sync manual via `workflow_dispatch`. Evoluir pra:
+
+- Webhook do Figma disparando o workflow quando Variables são modificadas.
+- Ou agendamento diário (cron) pra detectar mudanças e abrir PR.
+
+Só se o disparo manual virar gargalo.
+
+### Sincronização de textos Figma ↔ site
+
+A Fase 7 original previa. Substituída pela decisão de reduzir doc textual do Figma (item acima). Se no futuro houver demanda real de ter textos idênticos em ambos os lados, reavaliar.
 
 ## Baixa prioridade
 
 ### Storybook
 
-Componente inventory marca como pendente. Hoje o site cumpre o papel de vitrine interativa. Só implementar se houver demanda explícita de time Dev consumidor.
+Componente inventory marca como pendente. Hoje o site cumpre o papel de vitrine interativa. Só implementar se houver demanda explícita de time Dev consumidor. Integração com os tokens DTCG já gerados (formato padrão de import), sem reinventar.
 
 ### MCP próprio do design system
 
@@ -508,9 +557,9 @@ Pacote nunca foi publicado. Decidir quando (e com qual nome de escopo) fazer o p
 
 Você mencionou que páginas vazias (Icons, Grids, Images, Templates) e resíduos nas páginas de componente (SECTION e `image 1` em Input Text, INSTANCE soltas em Button, `Frame 1` em Textarea) estão em uso para experimentos. Quando terminar os testes, decidir se preenche ou remove.
 
-### Contraste dos 65 warnings de `tokens-verify`
+### Resolução de conflitos inteligente no `sync-tokens-from-figma`
 
-Tokens em JSON sem CSS custom property equivalente — sobretudo overlays (`foundation.color.overlay.*`), tipografia e `semantic.typography.control.*`. Investigar caso a caso se deveriam gerar CSS var ou se a omissão é intencional (tokens intermediários).
+Hoje o script loga e pede intervenção quando encontra ambiguidade (ex: variável renomeada no Figma vs variável nova; alias quebrado). Evoluir pra sugerir ação com heurística (ex: "detectei que `color/primary/toned` pode ter virado `brand/toned/default` com base em similaridade de valor; aplicar?").
 
 
 ═══════════════════════════════════════════════════════════
@@ -606,7 +655,7 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 
 > Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-21. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
-> Versão atual: **0.5.7**
+> Versão atual: **0.5.8**
 
 ## Status geral
 
@@ -664,7 +713,7 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 |-----|--------|--------|
 | ADR-001 | Migração da arquitetura de tokens para Foundation→Semantic→Component com DTCG + Style Dictionary | Aceita |
 | ADR-002 | Stack agnóstica — HTML + CSS + vanilla JS como base | Aceita |
-| ADR-003 | Figma como autoridade de design, Git como autoridade de tokens/código | Aceita |
+| ADR-003 | Figma como origem canônica de tokens, Git como consolidação | Aceita — Revisada em 0.5.8 |
 | ADR-004 | WCAG 2.2 AA como padrão de acessibilidade | Aceita — Implementada em 0.5.0 |
 | ADR-005 | Brand como camada foundation, estados explícitos no semantic, e limpeza tipográfica | Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.2) |
 | ADR-006 | Tokens semânticos de controle para dimensões e tipografia compartilhadas entre controles interativos | Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.3) |
@@ -1092,13 +1141,13 @@ Se uma decisão arquitetural não está registrada como ADR, ela não foi tomada
 
 > Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-21. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
-> Versão atual: **0.5.7**
+> Versão atual: **0.5.8**
 
 ## Estado atual
 
 | Aspecto | Valor |
 |---------|-------|
-| Versão | 0.5.7 |
+| Versão | 0.5.8 |
 | Formato canônico | JSON (DTCG) em `tokens/` |
 | CSS gerado | Style Dictionary → `css/tokens/generated/` |
 | Pipeline | ✅ index.css importa apenas generated/ |
@@ -1182,7 +1231,7 @@ semantic.typography.*
 
 - **ADR-001** — Migração da arquitetura de tokens para Foundation→Semantic→Component com DTCG + Style Dictionary (Aceita)
 - **ADR-002** — Stack agnóstica — HTML + CSS + vanilla JS como base (Aceita)
-- **ADR-003** — Figma como autoridade de design, Git como autoridade de tokens/código (Aceita)
+- **ADR-003** — Figma como origem canônica de tokens, Git como consolidação (Aceita — Revisada em 0.5.8)
 - **ADR-004** — WCAG 2.2 AA como padrão de acessibilidade (Aceita — Implementada em 0.5.0)
 - **ADR-005** — Brand como camada foundation, estados explícitos no semantic, e limpeza tipográfica (Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.2))
 - **ADR-006** — Tokens semânticos de controle para dimensões e tipografia compartilhadas entre controles interativos (Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.3))
@@ -1294,45 +1343,100 @@ Storybook será implementado com @storybook/html para playground de componentes 
 
 
 ═══════════════════════════════════════════════════════════
-# ADR-003 — Figma como autoridade de design, Git como autoridade de tokens/código
+# ADR-003 — Figma como origem canônica de tokens, Git como consolidação
 ═══════════════════════════════════════════════════════════
 
-# ADR-003: Figma como autoridade de design, Git como autoridade de tokens/código
+# ADR-003: Figma como origem canônica de tokens, Git como consolidação
 
-**Data:** 2026-04-14
-**Status:** Aceita
+**Data:** 2026-04-14 (original) · 2026-04-21 (revisada)
+**Status:** Aceita — Revisada em 0.5.8
 
 ## Contexto
 
-O DS é mantido em dois artefatos: Figma (componentes visuais, variables) e Git (CSS, tokens JSON, docs). Precisa haver clareza sobre qual é a fonte de verdade para cada tipo de informação.
+A versão original deste ADR (abril/2026) declarava Git como fonte de verdade para tokens (JSON) e Figma como consumidor. A direção implementada seguia essa convenção: editar JSON → `build-tokens.mjs` gera CSS → Figma era atualizado manualmente.
+
+Revisitando esta decisão em 21/04/2026 com o time, ficou claro que a direção correta do fluxo é o oposto: **as decisões de design nascem no Figma**, onde o designer explora, testa, valida e fecha valores de cor, spacing, tipografia. Essas decisões precisam virar código e documentação, não o contrário. Forçar o desenvolvedor a editar JSON e depois "sincronizar" o Figma quebra a cadeia natural designer → dev e distancia a fonte real (decisões humanas em uma ferramenta visual) da representação técnica.
+
+Esta revisão alinha a ADR à realidade desejada: **Figma Variables são a autoridade** para valores de token. JSON em `tokens/` é uma **consolidação** — um contrato em formato transportável (DTCG) que vira código, documentação e futuramente Storybook.
 
 ## Decisão
 
-- **Git** é a fonte de verdade para: tokens (JSONs), código CSS, documentação, ADRs, package.json
-- **Figma** é a fonte de verdade para: design visual de componentes (auto-layout, variantes, properties), documentação visual (pages de componentes)
-- **Tokens** são o contrato entre os dois: definidos em JSON no Git, espelhados como Variables no Figma
-- **Claude Code + use_figma** é a ferramenta de construção nos dois lados
-- Sempre que houver divergência entre Figma e CSS, o Figma prevalece para visual e o Git prevalece para valores de token
+### Fontes de verdade
+
+- **Figma Variables**: fonte canônica de todos os valores de token (cor, spacing, tipografia, radius, shadow, stroke, opacity, motion, z-index). Arquivo `PRYS2kL7VdC1MtVWfZvuDN`.
+- **Figma (frames e componentes)**: fonte canônica do design visual (auto-layout, variantes, properties, anatomy).
+- **Git (`tokens/**/*.json`)**: consolidação derivada do Figma em formato DTCG. Versionado, transportável entre plataformas.
+- **Git (`css/`, `docs/`, ADRs, código)**: fonte canônica do código e da documentação textual. Inclui `CHANGELOG.md`, `CONTRIBUTING.md`, ADRs, schemas.
+
+### Fluxo explícito
+
+```
+Figma Variables (autoridade de valor)
+       │
+       │ npm run sync:tokens-from-figma (manual, abre PR)
+       ▼
+tokens/**/*.json (DTCG, consolidação em Git)
+       │
+       │ npm run build:tokens (automático no CI)
+       ▼
+css/tokens/generated/*.css
+       │
+       │ @import em design-system.css
+       ▼
+css/components/*.css (consumo nos 18 componentes)
+       │
+       ▼
+site em docs/ + Storybook (futuro)
+```
+
+### Regras operacionais
+
+1. Mudanças de token **começam no Figma**. Designer edita a Variable, valida visualmente.
+2. Quando o designer decide que o conjunto de mudanças está fechado, alguém roda `npm run sync:tokens-from-figma` (dry-run por padrão, `--write` pra aplicar). Dispara em comando manual — não é automático.
+3. O script abre um PR com o diff pros JSONs. Revisão mínima antes do merge (nomes novos, remoções inesperadas, valores discrepantes).
+4. Após o merge, `build-tokens.mjs` regenera o CSS. CI publica o site.
+5. **Nunca editar `tokens/*.json` à mão** num commit normal. JSONs são derivados. A exceção é em PRs do próprio script de sync, onde a edição é gerada automaticamente e revisada como diff.
+6. Mudanças visuais de componente (não de token) continuam acontecendo no Figma normalmente. CSS de componente é atualizado manualmente pra refletir.
+
+### Ferramentas
+
+- **MCP remoto do Figma** (`use_figma`): canal pelo qual o script acessa as Variables. Já autenticado como UXIN Pro/Expert.
+- **`scripts/sync-tokens-from-figma.mjs`**: o script de sync. Dry-run por padrão.
+- **`scripts/tokens-verify.mjs`**: passa a interpretar divergências orientadas — Figma como autoridade.
 
 ## Verificação automatizada
 
-A partir de 0.5.1, a coerência entre Figma Variables e JSONs em `tokens/` passa a ser verificada por script em CI:
+`scripts/tokens-verify.mjs` classifica divergências em três categorias:
 
-- `scripts/tokens-verify.mjs` compara nome e valor resolvido de cada variável Figma contra o JSON correspondente, por modo.
-- Workflow `.github/workflows/verify-tokens.yml` roda em pull requests e push para main. Divergências são reportadas em três formatos: terminal, `docs/api/tokens-sync.json`, e página `docs/tokens-sync.html`.
-- Na primeira fase, o workflow não falha em divergência (fase de descoberta). Depois de estabilizar, passa a falhar o CI.
+- **NEEDS_SYNC** (warning): Figma tem uma Variable que o JSON ainda não representa. Rodar `sync:tokens-from-figma` resolve.
+- **DRIFT_FROM_SOURCE** (erro): JSON tem um token que não existe no Figma. Indica edição manual do JSON ou Variable deletada no Figma sem sync.
+- **VALUE_DRIFT** (erro): mesmo nome, valor diferente. Sincronizar.
+
+O workflow `.github/workflows/verify-tokens.yml` roda em pull requests e push pra main. Em 0.5.8, a interpretação fica em warning em todos os casos (fase de adaptação). Depois de duas semanas estáveis, `DRIFT_FROM_SOURCE` e `VALUE_DRIFT` passam a falhar o CI.
 
 ## Consequências
 
-- Mudanças de token: editar JSON → rodar Style Dictionary → atualizar Figma via use_figma.
-- Mudanças visuais de componente: ajustar no Figma → atualizar CSS para refletir.
-- A verificação automatizada torna a regra executável — deixa de depender de disciplina manual.
+- A "porta de entrada" para mudanças de tokens passa a ser o Figma. Fluxo natural pro designer.
+- Desenvolvedores que quiserem sugerir uma mudança de token abrem uma issue ou negociam com design. Não têm permissão de editar o JSON diretamente (convenção, não bloqueio técnico).
+- O CI continua rápido e simples: build-tokens depende só do JSON do repo, igual antes. Novo script é invocado manualmente, não bloqueia deploys.
+- A versão "oficial" dos tokens é a que está no Git em `tokens/` — o Figma é a autoridade mas o Git é o backup imutável e o ponto de consumo pra todo o resto da cadeia.
 
 ## Alternativas consideradas
 
-**Git como única fonte:** Descartado. Gerar componentes Figma programaticamente produz resultados estruturalmente fracos para auto-layout e variantes complexas.
+**Manter Git como source (ADR-003 original, pré-revisão).** Descartada porque separa a decisão (Figma) da representação canônica (JSON), forçando sincronização em ordem não natural.
 
-**Figma como única fonte:** Descartado. Figma não é sistema de controle de versão e tokens em Variables não são facilmente transformáveis para múltiplas plataformas.
+**Tokens Studio como intermediário no Figma.** Avaliada e descartada pra este momento. Tokens Studio exigiria migrar 620 Variables do formato nativo pra dentro do plugin, ajustar `build-tokens.mjs` pro formato exportado por ele, e requer que designers aprendam UI nova. Sem ganho proporcional ao custo na nossa escala atual. Reavaliar quando houver time de design maior e necessidade explícita das features do Tokens Studio (branches em tokens, temas via plugin, etc.).
+
+**Plugin Figma custom.** Descartada por ROI. Desenvolvimento + manutenção maior que o script via MCP pra o mesmo resultado funcional no cenário atual.
+
+**Bidirecional automático (webhook Figma).** Descartada pra início. Manual garante controle e revisão. Se o fluxo manual virar gargalo, reavaliar.
+
+## Referências
+
+- [ADR-001](./ADR-001-migracao-tokens.md) — Migração de tokens para DTCG + Style Dictionary.
+- [ADR-011](./ADR-011-renaming-tokens-semanticos-de-cor.md) — Renaming semântico que consolidou a estrutura atual do JSON.
+- `scripts/sync-tokens-from-figma.mjs` — implementação do sync (a partir de 0.5.8).
+- `scripts/tokens-verify.mjs` — verificador com interpretação revisada (a partir de 0.5.8).
 
 
 ═══════════════════════════════════════════════════════════
@@ -2477,6 +2581,6 @@ Verificação automática de coerência Figma ↔ JSON ↔ CSS: `scripts/tokens-
 
 ═══════════════════════════════════════════════════════════
 
-Gerado por scripts/build-llms.mjs em 2026-04-21T11:02:55.317Z
-Versão: 0.5.7
+Gerado por scripts/build-llms.mjs em 2026-04-21T14:32:42.196Z
+Versão: 0.5.8
 Site: https://uxindesign.github.io/design-system-core/

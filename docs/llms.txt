@@ -1,6 +1,6 @@
 # Design System Core
 
-> Design system white-label em CSS puro com tokens DTCG em JSON, 18 componentes, modos light/dark, três temas (Default, Ocean, Forest). Versão atual: 0.5.7. Enquanto não houver release oficial 1.0, o projeto fica em 0.x.
+> Design system white-label em CSS puro com tokens DTCG em JSON, 18 componentes, modos light/dark, três temas (Default, Ocean, Forest). Versão atual: 0.5.8. Enquanto não houver release oficial 1.0, o projeto fica em 0.x.
 
 Repositório: https://github.com/uxindesign/design-system-core
 Site: https://uxindesign.github.io/design-system-core/
@@ -53,7 +53,7 @@ Arquivo completo para LLMs: https://uxindesign.github.io/design-system-core/docs
 
 - [ADR-001 — Migração da arquitetura de tokens para Foundation→Semantic→Component com DTCG + Style Dictionary](https://uxindesign.github.io/design-system-core/docs/decisions/adr-001-migracao-tokens.html) — Aceita
 - [ADR-002 — Stack agnóstica — HTML + CSS + vanilla JS como base](https://uxindesign.github.io/design-system-core/docs/decisions/adr-002-stack-agnostica.html) — Aceita
-- [ADR-003 — Figma como autoridade de design, Git como autoridade de tokens/código](https://uxindesign.github.io/design-system-core/docs/decisions/adr-003-fontes-verdade.html) — Aceita
+- [ADR-003 — Figma como origem canônica de tokens, Git como consolidação](https://uxindesign.github.io/design-system-core/docs/decisions/adr-003-fontes-verdade.html) — Aceita — Revisada em 0.5.8
 - [ADR-004 — WCAG 2.2 AA como padrão de acessibilidade](https://uxindesign.github.io/design-system-core/docs/decisions/adr-004-wcag.html) — Aceita — Implementada em 0.5.0
 - [ADR-005 — Brand como camada foundation, estados explícitos no semantic, e limpeza tipográfica](https://uxindesign.github.io/design-system-core/docs/decisions/adr-005-brand-foundation-e-estados-explicitos.html) — Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.2)
 - [ADR-006 — Tokens semânticos de controle para dimensões e tipografia compartilhadas entre controles interativos](https://uxindesign.github.io/design-system-core/docs/decisions/adr-006-semantic-control-tokens.html) — Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.3)
@@ -89,4 +89,4 @@ Arquivo completo para LLMs: https://uxindesign.github.io/design-system-core/docs
 
 ---
 
-Gerado por `scripts/build-llms.mjs` em 2026-04-21T11:02:55.317Z.
+Gerado por `scripts/build-llms.mjs` em 2026-04-21T14:32:42.196Z.

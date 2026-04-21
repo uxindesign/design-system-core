@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-21T11:02:55.165Z",
-  "version": "0.5.7",
+  "generatedAt": "2026-04-21T14:32:42.029Z",
+  "version": "0.5.8",
   "count": 11,
   "adrs": [
     {
@@ -24,9 +24,9 @@
     {
       "id": "ADR-003",
       "num": 3,
-      "title": "Figma como autoridade de design, Git como autoridade de tokens/código",
-      "status": "Aceita",
-      "date": "2026-04-14",
+      "title": "Figma como origem canônica de tokens, Git como consolidação",
+      "status": "Aceita — Revisada em 0.5.8",
+      "date": "2026-04-14 (original) · 2026-04-21 (revisada)",
       "sourceFile": "docs/decisions/ADR-003-fontes-verdade.md",
       "url": "https://uxindesign.github.io/design-system-core/docs/decisions/adr-003-fontes-verdade.html"
     },
