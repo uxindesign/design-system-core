@@ -26,17 +26,23 @@ Uma mudança em qualquer manifestação que não se propague para as outras duas
 
 ## 2. Hierarquia de verdade
 
-Nem tudo tem a mesma fonte de verdade. Quando houver divergência:
+Nem tudo tem a mesma fonte de verdade. Quando houver divergência, resolve-se por tipo:
 
 | Tipo de informação | Fonte de verdade | As outras manifestações seguem |
 |---|---|---|
-| Valores de token (hex, rem, px, alias) | JSON (DTCG) no repo Git | Figma Variables espelham. CSS é gerado. Site documenta. |
-| Design visual de componente (layout, proporções, variantes) | Figma | CSS reflete. JSON de component tokens é derivado. Site documenta. |
-| Hierarquia e regras de token (naming, camadas, referências) | JSON (DTCG) + ADRs no repo Git | Figma segue a estrutura. Site documenta. |
-| Documentação de uso (quando usar, best practices, acessibilidade) | Site de docs | Figma pode ter notas visuais complementares. |
-| Decisões arquiteturais | ADRs em `docs/decisions/` | Todos os artefatos implementam. |
+| **Decisões arquiteturais** (camadas, naming, regras de referência, convenções) | **ADRs em `docs/decisions/`** | Todos os artefatos implementam. **ADR prevalece sobre tudo**, inclusive sobre Figma. |
+| **Valores de token** (hex, alpha, qual shade, qual cor) | **Figma Variables** (revisada em ADR-003, 0.5.8) | JSON em `tokens/` espelha via sync manual. CSS é gerado. Site documenta. |
+| **Arquitetura de token** (naming, camadas, referências — é uma instância do tipo anterior, mas merece destaque) | ADRs + JSON em Git como consolidação | Figma segue a arquitetura; Figma **não** pode criar camadas/naming que contradigam ADR. |
+| **Design visual de componente** (layout, proporções, variantes, anatomy) | Figma | CSS reflete. JSON de component tokens é derivado. Site documenta. |
+| **Documentação de uso** (quando usar, best practices, acessibilidade) | Site de docs em `docs/*.html` | Figma pode ter notas visuais complementares. |
 
-Regra operacional: se o Figma mostra `blue.700` pra um token que no JSON aponta pra `blue.600`, o JSON prevalece e o Figma deve ser corrigido. Se o Figma mostra um componente com border-radius de 8px e o CSS renderiza 6px, o Figma prevalece e o CSS deve ser corrigido.
+Regras operacionais:
+
+- **Arquitetura > valor**. Figma pode decidir "`brand.hover` é `blue.800` em vez de `blue.700`" (valor). Figma **não pode** decidir "vamos criar `semantic.color.primary.foreground`" se ADR-011 define que semantic de cor usa `brand.content.contrast` (arquitetura). Mudança arquitetural exige ADR antes da implementação.
+- **Figma > JSON em valor**. Quando o Figma mostra `blue.800` pra `brand.hover` e o JSON mostra `blue.700`, o Figma prevalece — rodar `npm run sync:tokens-from-figma:write` pra consolidar.
+- **Figma > CSS em design visual**. Se o Figma mostra um componente com border-radius de 8px e o CSS renderiza 6px, o Figma prevalece e o CSS deve ser corrigido.
+- **JSON > Figma em consolidação**. JSON é a fonte que alimenta build-tokens.mjs. Nenhum pipeline consome Figma direto. Então mesmo que "Figma é autoridade de valor", **nada roda sem JSON atualizado**. O sync é a ponte.
+- **Nunca editar `tokens/*.json` à mão** num commit normal. Fluxo: Figma → `sync:tokens-from-figma --write` → review do diff → PR. A exceção é em PRs do próprio script de sync, onde o JSON é gerado automaticamente e revisado como diff.
 
 ---
 
@@ -163,7 +169,7 @@ Se uma decisão arquitetural não está registrada como ADR, ela não foi tomada
 |-----|---------|--------|
 | 001 | Migração para DTCG + Style Dictionary | Aceita |
 | 002 | Stack-agnostic (HTML + CSS + vanilla JS) | Aceita |
-| 003 | Git = verdade pra tokens/código, Figma = verdade pra design visual | Aceita |
+| 003 | Figma = autoridade de valor de token, Git/JSON = consolidação canônica | Aceita (revisada em 0.5.8) |
 | 004 | WCAG 2.2 AA como piso de acessibilidade | Aceita |
 | 005 | Brand como foundation, `-default` explícito, focus ring outline | Aceita |
 | 006 | Semantic control tokens (dimensões compartilhadas entre controles) | Aceita |
@@ -171,18 +177,18 @@ Se uma decisão arquitetural não está registrada como ADR, ela não foi tomada
 | 008 | Recalibração das paletas foundation `green` e `amber` | Aceita |
 | 009 | Separação de `border.default` (decorativa) e `border.control` (funcional) | Aceita |
 | 010 | Remoção de `foundation.color.white` e `foundation.color.black` puros | Aceita |
+| 011 | Reestruturação do naming de tokens semânticos de cor (`color/primary/*` → `brand/*`; `text/*` → `content/*`) | Aceita |
 
 ---
 
 ## 7. Princípios operacionais
 
 1. **Agnóstico de stack.** CSS puro, tokens em JSON DTCG, sem acoplamento a framework. A migração futura pra React/Vue/SwiftUI será de implementação, não de redesign.
-2. **Git é a fonte de verdade para tokens e código. Figma é a fonte de verdade para design visual.** Quando divergem, cada um prevalece no seu domínio.
-3. **JSON é onde decisões convergem.** O Figma origina, o JSON formaliza, o CSS e o site consomem. Sem JSON, a decisão não está implementada.
-4. **Consistência acima de velocidade.** Componente mal especificado gera retrabalho em Figma, JSON, CSS e docs. Definir API (variantes, estados, tokens) antes de implementar.
-5. **Acessibilidade desde o início.** WCAG 2.2 AA é piso, não teto. Contrastes calculados, focus ring funcional, navegação por teclado e screen reader testados.
-6. **Decisão sem registro não existe.** Se não virou ADR, não foi decidido.
-7. **Versionamento obrigatório.** Toda alteração significativa: Figma Changelog (node 195:153), Figma Cover (node 185:3), package.json version bump.
+2. **ADR é autoridade arquitetural; Figma é autoridade de valor; JSON é consolidação.** Quando divergem, resolve por tipo: arquitetura → ADR; valor de token → Figma (sync manual consolida no JSON); design visual → Figma. **JSON nunca origina valor**, mas **nada roda sem JSON** — ele é o ponto de consumo do pipeline.
+3. **Consistência acima de velocidade.** Componente mal especificado gera retrabalho em Figma, JSON, CSS e docs. Definir API (variantes, estados, tokens) antes de implementar.
+4. **Acessibilidade desde o início.** WCAG 2.2 AA é piso, não teto. Contrastes calculados, focus ring funcional, navegação por teclado e screen reader testados.
+5. **Decisão sem registro não existe.** Se não virou ADR, não foi decidido.
+6. **Versionamento obrigatório.** Toda alteração significativa: Figma Changelog (node 195:153), Figma Cover (node 185:3), package.json version bump.
 
 ---
 

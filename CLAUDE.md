@@ -23,8 +23,21 @@ Design system white-label em CSS puro com tokens DTCG em JSON, 18 componentes, m
 | Versões e histórico | `CHANGELOG.md` na raiz (fonte), `docs/changelog.html` (gerado). |
 | Como contribuir | `CONTRIBUTING.md`. |
 | Backlog | `docs/backlog.md`. |
+| Processo do sync Figma→JSON | `docs/process-figma-sync.md`. |
 
 Ao responder uma pergunta sobre o sistema, vá primeiro nesses arquivos. Não reescreva de memória.
+
+### Hierarquia de verdade
+
+Quando há divergência entre artefatos, resolve-se por tipo de informação:
+
+1. **ADRs em `docs/decisions/`** — autoridade arquitetural. Regras de camada, naming, dependências, convenções. ADR prevalece sobre qualquer outro artefato. Mudança que contradiz ADR exige **novo ADR** (ou revisão do existente) antes da implementação.
+2. **Figma Variables** — autoridade de **valor visual** (hex, alpha, qual shade foi escolhida, qual variante). Designer decide no Figma.
+3. **`tokens/**/*.json`** — consolidação canônica em Git (DTCG). Espelha o Figma em valor; espelha os ADRs em arquitetura. É o ponto de consumo pro pipeline.
+4. **`css/tokens/generated/*.css`** — derivado do JSON. Nunca editar à mão.
+5. **`docs/*.html`, `docs/*.md`** — descritivo do estado atual. Nunca fonte de verdade.
+
+Regra operacional: arquitetura está acima de valor. Figma pode decidir "brand.hover é blue-800 em vez de blue-700" (valor), mas não pode criar `semantic.color.primary.foreground` se ADR-011 definiu que semantic de cor usa `brand.content.contrast` (arquitetura).
 
 ## Acessos
 
@@ -42,6 +55,13 @@ Antes de chamar `use_figma`, carregar a skill `figma:figma-use`.
 MCP (`mcp__github__*`) usa um Personal Access Token fine-grained com escopo restrito ao repo `uxindesign/design-system-core`. Permissões: Contents read+write, Issues read+write, Pull requests read+write, Actions read, Metadata read. Sem `workflow` ou `packages`.
 
 Git local usa SSH (`git@github.com:uxindesign/design-system-core.git`). Zero token em URL.
+
+**Limitações conhecidas do GitHub MCP:**
+
+- `create_or_update_file` exige SHA fresco do arquivo. Rodar `get_file_contents` imediatamente antes de cada update — SHAs stale causam falha silenciosa.
+- `push_files` com payload grande estoura timeout. Commitar arquivos individualmente (um tool call por arquivo) quando o commit for grande.
+- MCP **não consegue escrever** em `.github/workflows/` (restrição de API, independente do escopo do token). Usar interface web ou terminal com SSH pra arquivos de workflow.
+- `web_fetch` em `github.com/tree/…` é bloqueado por robots.txt; `raw.githubusercontent.com` é bloqueado pelo proxy. Pra ler arquivos do repo via agente, usar a própria API MCP (`get_file_contents`) ou as ferramentas locais (Read/Bash).
 
 ## Convenções
 
@@ -115,7 +135,7 @@ Regras de ouro:
 - **Nunca editar `tokens/*.json` à mão.** Alterações devem vir do Figma.
 - **Sempre editar Figma Variables primeiro.** Designer decide, propagação pro JSON acontece depois.
 - **Sync Figma → JSON** acontece via MCP + script custom, disparado manualmente numa sessão Claude Code:
-  1. Agente executa `use_figma` em chunks pra dumpar as ~462 Variables em `.figma-snapshot.json` (gitignored).
+  1. Agente executa `use_figma` em chunks pra dumpar as ~489 Variables em `.figma-snapshot.json` (gitignored).
   2. `npm run sync:tokens-from-figma` (dry-run) reporta divergências em 4 categorias: VALUE_DRIFT, NEW_IN_FIGMA, MISSING_IN_FIGMA, ALIAS_BROKEN.
   3. `npm run sync:tokens-from-figma:write` aplica VALUE_DRIFT nos JSONs e roda `build:tokens` + `sync:docs`.
   4. Review `git diff`, abrir PR.
@@ -136,6 +156,26 @@ npm run build:all                      # roda build:tokens → sync:docs → bui
 npm run sync:tokens-from-figma         # Compara .figma-snapshot.json ↔ tokens/ (dry-run, ver process-figma-sync.md)
 npm run sync:tokens-from-figma:write   # Aplica VALUE_DRIFT e regenera CSS
 ```
+
+## Protocolo de trabalho com agente
+
+Regras que o agente segue ao operar neste repo. São convenções operacionais, não técnicas — mas importantes pra não quebrar confiança.
+
+1. **Aprovação estrita por ação.** Nenhuma escrita em Figma ou repo sem sign-off explícito do usuário. Auditorias e leituras são livres; mudanças exigem OK prévio. Uma ação por vez quando há risco ou ambiguidade.
+2. **Plano antes de agir.** Apresentar escopo completo da proposta antes de executar qualquer parte. Não misturar "trabalho feito" com "trabalho pendente" no mesmo output — fica confuso o que foi aplicado.
+3. **Validar antes de afirmar.** Toda afirmação técnica sobre estado do repo ou do Figma é verificada contra o arquivo/variável real. Não inferir de documentação — docs podem estar desatualizadas. Documentação é hipótese; arquivo/API é fato.
+4. **Incremental, não bulk.** Mudanças em Figma ou tokens são escopadas e aprovadas componente por componente. Bulk update sem revisão é refeito 60% das vezes.
+5. **Tom técnico e direto.** Sem bajulação, sem suavização, sem hedging em fatos técnicos. Discordar quando discordar, com evidência. Trabalho prévio é respeitado e incrementado, não descartado.
+
+## Figma Plugin API — armadilhas operacionais
+
+Coisas que falharam silenciosamente em sessões passadas e que o agente precisa ter em conta ao chamar `use_figma`. Detalhes de chunking estão em `docs/process-figma-sync.md`.
+
+- **Ler bound variable de um paint**: usar `paint.boundVariables.color.id`, não `node.boundVariables` de nível superior. Paint carrega seu próprio binding.
+- **Trocar bound variable de `fontSize`** em text node: primeiro setar `node.fontSize` pra valor numérico raw (isso limpa bindings existentes), depois chamar `setBoundVariable` com o novo token. Exige `await figma.loadFontAsync()` antes. Pré-carregar fonts via `Promise.all(loadFontAsync)` se for loop.
+- **`setBoundVariable` pode empilhar** se a propriedade já tinha binding anterior. Limpar antes: setar pra `null` ou pra valor raw, depois rebind.
+- **Truncamento de output ~20KB**: dumps grandes de Variables quebram em chunks via slice(start, end) e agregados off-plugin. Ver `scripts/sync-tokens-from-figma.mjs` e `docs/process-figma-sync.md`.
+- **`hiddenFromPublishing = true`** após `createVariable` falha com "Node not found". Criar primeiro, setar a flag em chamada separada — ou via UI do Figma depois. Documentado nos commits do PR #17 (0.5.10) e PR #18 (0.5.11).
 
 ## Quando houver dúvida
 
