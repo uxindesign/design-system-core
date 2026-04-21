@@ -74,22 +74,46 @@
 <h2>Alta prioridade</h2>
 <h3>Preencher <code>docs/brand-principles.md</code></h3>
 <p>Template existe, conteúdo real ainda não foi definido. Passa por: missão, 3 princípios de design, tom de voz, identidade visual, logo.</p>
+<h3>Reduzir documentação textual do Figma</h3>
+<p>Decisão tomada em 21/04/2026 junto com a revisão da ADR-003: reduzir as páginas textuais do Figma (Introdução, Theming, Accessibility, Changelog) e concentrar a documentação de desenvolvimento no GitHub. Tarefa manual, Figma:</p>
+<ul>
+<li>Esvaziar conteúdo narrativo das páginas textuais mencionadas.</li>
+<li>Manter uma referência curta em cada (&quot;Ver documentação completa: <a href="https://uxindesign.github.io/design-system-core/">https://uxindesign.github.io/design-system-core/</a>...&quot;).</li>
+<li>Eventualmente consolidar tudo na Capa.</li>
+<li>Component Status pode ficar como está (é informação visual útil no contexto Figma).</li>
+</ul>
 <h2>Média prioridade</h2>
-<h3>Comparação completa Figma ↔ JSON no <code>scripts/tokens-verify.mjs</code></h3>
-<p>Primeira versão do script confirma conectividade e coleta contagens. Próxima iteração: comparação nome-por-nome, valor-por-valor, modo-por-modo, com resolução de alias Figma e normalização de formato. Adiciona valor depois que o FIGMA_PAT está configurado como secret do CI.</p>
-<h3>Sincronização automatizada Figma ↔ site (Fase 7 do plano)</h3>
-<p>Script Node usando MCP remoto que sincroniza textos de documentação entre site e nodes do Figma marcados com convenção <code>&lt;sync:...&gt;</code>. Ver descrição completa em <code>docs/process-figma-sync.html</code> (a ser criado).</p>
+<h3>Comparação avançada Figma ↔ JSON no <code>scripts/tokens-verify.mjs</code></h3>
+<p>A partir de 0.5.8, o script classifica divergências em <code>NEEDS_SYNC</code>, <code>DRIFT_FROM_SOURCE</code> e <code>VALUE_DRIFT</code>. Próxima iteração: resolução completa de aliases Figma e normalização de formato (hex vs rgba). Depois do FIGMA_PAT ficar configurado como secret do CI.</p>
+<h3>Futuro do site de documentação</h3>
+<p>Avaliar opções quando a manutenção manual do site virar gargalo:</p>
+<ul>
+<li><strong>Astro</strong>: permite manter HTML + MDX, adiciona autor-experience sem mudar a filosofia atual.</li>
+<li><strong>Zeroheight</strong>: CMS especializado em design system, integração forte com Figma, custo recorrente.</li>
+<li><strong>Supernova</strong>: similar ao Zeroheight, com sync bidirecional Figma ↔ doc.</li>
+<li><strong>Manter custom</strong>: evoluir o <code>sync-docs.mjs</code> com editor WYSIWYG interno.</li>
+</ul>
+<p>Decisão aguarda: volume de contribuição, necessidade de editores não-técnicos, orçamento. Por ora, o fluxo MD → HTML via <code>marked</code> no <code>sync-docs.mjs</code> atende.</p>
+<h3>Sincronização automática de tokens (webhook ou agendado)</h3>
+<p>A Fase 7 implementou sync manual via <code>workflow_dispatch</code>. Evoluir pra:</p>
+<ul>
+<li>Webhook do Figma disparando o workflow quando Variables são modificadas.</li>
+<li>Ou agendamento diário (cron) pra detectar mudanças e abrir PR.</li>
+</ul>
+<p>Só se o disparo manual virar gargalo.</p>
+<h3>Sincronização de textos Figma ↔ site</h3>
+<p>A Fase 7 original previa. Substituída pela decisão de reduzir doc textual do Figma (item acima). Se no futuro houver demanda real de ter textos idênticos em ambos os lados, reavaliar.</p>
 <h2>Baixa prioridade</h2>
 <h3>Storybook</h3>
-<p>Componente inventory marca como pendente. Hoje o site cumpre o papel de vitrine interativa. Só implementar se houver demanda explícita de time Dev consumidor.</p>
+<p>Componente inventory marca como pendente. Hoje o site cumpre o papel de vitrine interativa. Só implementar se houver demanda explícita de time Dev consumidor. Integração com os tokens DTCG já gerados (formato padrão de import), sem reinventar.</p>
 <h3>MCP próprio do design system</h3>
 <p>Expõe tokens, componentes e guidelines via MCP para agentes. <code>llms.txt</code> + APIs JSON cobrem a maior parte dos casos. Implementar só se aparecer um caso onde MCP próprio faz diferença real.</p>
 <h3>Publicação no npm</h3>
 <p>Pacote nunca foi publicado. Decidir quando (e com qual nome de escopo) fazer o primeiro publish. Antes de publicar, validar que <code>files</code> no <code>package.json</code> cobre o que deve ser distribuído.</p>
 <h3>Revisão das páginas do Figma em estado de teste</h3>
 <p>Você mencionou que páginas vazias (Icons, Grids, Images, Templates) e resíduos nas páginas de componente (SECTION e <code>image 1</code> em Input Text, INSTANCE soltas em Button, <code>Frame 1</code> em Textarea) estão em uso para experimentos. Quando terminar os testes, decidir se preenche ou remove.</p>
-<h3>Contraste dos 65 warnings de <code>tokens-verify</code></h3>
-<p>Tokens em JSON sem CSS custom property equivalente — sobretudo overlays (<code>foundation.color.overlay.*</code>), tipografia e <code>semantic.typography.control.*</code>. Investigar caso a caso se deveriam gerar CSS var ou se a omissão é intencional (tokens intermediários).</p>
+<h3>Resolução de conflitos inteligente no <code>sync-tokens-from-figma</code></h3>
+<p>Hoje o script loga e pede intervenção quando encontra ambiguidade (ex: variável renomeada no Figma vs variável nova; alias quebrado). Evoluir pra sugerir ação com heurística (ex: &quot;detectei que <code>color/primary/toned</code> pode ter virado <code>brand/toned/default</code> com base em similaridade de valor; aplicar?&quot;).</p>
 
   </div>
 </main>

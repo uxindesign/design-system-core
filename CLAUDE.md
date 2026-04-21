@@ -89,33 +89,46 @@ Título curto em português, corpo em markdown. Seções obrigatórias: **Summar
 
 ## Como a pipeline funciona
 
+Direção canônica (ADR-003 revisada em 0.5.8): **Figma Variables são a fonte de verdade de valores de token**. Git/`tokens/**/*.json` é a consolidação derivada.
+
 ```
-tokens/**/*.json         (DTCG — fonte canônica)
+Figma Variables              (autoridade — designer é o autor)
       │
-      │ build-tokens.mjs (Style Dictionary)
+      │ npm run sync:tokens-from-figma  (manual; abre PR com diff)
       ▼
-css/tokens/generated/*.css  (derivado, marcado AUTO-GENERATED)
+tokens/**/*.json             (DTCG — consolidação canônica em Git)
+      │
+      │ build-tokens.mjs     (Style Dictionary — automático no CI)
+      ▼
+css/tokens/generated/*.css   (derivado, marcado AUTO-GENERATED)
       │
       │ @import em design-system.css
       ▼
-css/components/*.css     (consome as variáveis)
+css/components/*.css         (consome as variáveis)
       │
       ▼
-docs/*.html              (documentação e preview)
+docs/*.html                  (documentação e preview)
 ```
 
-No CI (`.github/workflows/deploy.yml`), `npm run build:tokens` roda em cada push pra main e auto-commita os arquivos gerados.
+Regras de ouro:
+
+- **Nunca editar `tokens/*.json` à mão.** Alterações vêm do Figma via `sync:tokens-from-figma`.
+- **Sempre editar Figma Variables primeiro.** Designer decide, depois o sync propaga.
+- Exceção: PRs gerados pelo próprio script de sync editam os JSONs — é esperado, revisar o diff antes de mergar.
+
+No CI (`.github/workflows/deploy.yml`), `npm run build:tokens` roda em cada push pra main e auto-commita os arquivos CSS gerados. O sync Figma→JSON fica em `.github/workflows/sync-tokens-from-figma.yml`, disparado manualmente via `workflow_dispatch`.
 
 ## Ferramentas disponíveis no repo
 
 ```bash
-npm run build:tokens   # Foundation/Semantic/Component → CSS gerado
-npm run sync:docs      # Regenera inventários em docs/*.md
-# (em breve, via plano de consolidação)
-npm run verify:tokens  # Compara Figma Variables com tokens/*.json
-npm run build:api      # Gera docs/api/*.json
-npm run build:llms     # Gera docs/llms.txt e llms-full.txt
-npm run build:all      # roda todos os builds acima em ordem
+npm run sync:tokens-from-figma         # dry-run: lê Figma Variables e mostra diff vs tokens/*.json
+npm run sync:tokens-from-figma:write   # aplica o diff, regenera CSS, pronto pra commitar
+npm run build:tokens                   # Foundation/Semantic/Component → CSS gerado
+npm run sync:docs                      # Regenera inventários em docs/*.md
+npm run verify:tokens                  # Classifica divergências Figma ↔ JSON (NEEDS_SYNC/DRIFT/VALUE)
+npm run build:api                      # Gera docs/api/*.json
+npm run build:llms                     # Gera docs/llms.txt e llms-full.txt
+npm run build:all                      # roda build:tokens → sync:docs → build:api → build:llms → verify:tokens
 ```
 
 ## Quando houver dúvida
