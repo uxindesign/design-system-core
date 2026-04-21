@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-21T10:53:57.708Z",
-  "version": "0.5.5",
+  "generatedAt": "2026-04-21T11:00:05.973Z",
+  "version": "0.5.6",
   "count": 11,
   "adrs": [
     {
@@ -61,7 +61,7 @@
       "id": "ADR-007",
       "num": 7,
       "title": "Estabelecer sistema de cores toned com overlays coloridos e tokens semânticos toned",
-      "status": "Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.4)",
+      "status": "Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.4, sincronização Figma completa em 0.5.6)",
       "date": "2026-04-15",
       "sourceFile": "docs/decisions/ADR-007-toned-color-system.md",
       "url": "https://uxindesign.github.io/design-system-core/docs/decisions/adr-007-toned-color-system.html"

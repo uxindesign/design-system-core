@@ -1,6 +1,6 @@
 # Design System Core — conteúdo consolidado
 
-> Versão 0.5.5. Arquivo destinado a consumo por LLMs que precisem
+> Versão 0.5.6. Arquivo destinado a consumo por LLMs que precisem
 > do design system inteiro em uma requisição. Inclui README, CONTRIBUTING,
 > CLAUDE.md, CHANGELOG, todos os MDs em docs/, todos os ADRs e um resumo
 > dos tokens. Páginas HTML-only (componentes, foundations) estão referenciadas
@@ -293,7 +293,12 @@ Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na
 
 ## [Não publicado]
 
-## [0.5.5]
+## [0.5.6]
+
+### Alterado
+- ADR-007: sincronização Figma completa. Confirmação de que o naming aninhado `brand/toned/{default,hover,active}` já vigora no arquivo Figma (migração feita durante ADR-011). Variáveis `color/primary/toned-*` antigas (flat + `-disabled`/`-disabled-fg`) não existem mais.
+- Button variant Toned+Disabled: 6 variantes (3 tamanhos × Icon Only true/false) tinham foreground apontando para `brand/content/contrast-disabled` (errado para contexto toned com fundo neutral) ou para variável órfã. Re-vinculadas para `content/disabled` (neutral-400 opaco), conforme ADR-007. 21 rebindings no total.
+- Item correspondente removido do backlog.
 
 ### Alterado
 - ADR-006 e ADR-007 traduzidos inteiramente para PT-BR. Antes, partes do corpo (Context, Decision, Consequences, Alternatives considered) estavam em inglês enquanto o cabeçalho havia sido traduzido. Agora os 11 ADRs são consistentes em idioma.
@@ -445,7 +450,7 @@ Consolidação da documentação como fonte única de verdade. Plano em seis fas
 | [ADR-004](decisions/ADR-004-wcag.md) | WCAG 2.2 AA como padrão de acessibilidade | Aceita — Implementada em 0.5.0 | 2026-04-14 |
 | [ADR-005](decisions/ADR-005-brand-foundation-e-estados-explicitos.md) | Brand como camada foundation, estados explícitos no semantic, e limpeza tipográfica | Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.2) | 2026-04-14 |
 | [ADR-006](decisions/ADR-006-semantic-control-tokens.md) | Tokens semânticos de controle para dimensões e tipografia compartilhadas entre controles interativos | Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.3) | 2026-04-15 |
-| [ADR-007](decisions/ADR-007-toned-color-system.md) | Estabelecer sistema de cores toned com overlays coloridos e tokens semânticos toned | Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.4) | 2026-04-15 |
+| [ADR-007](decisions/ADR-007-toned-color-system.md) | Estabelecer sistema de cores toned com overlays coloridos e tokens semânticos toned | Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.4, sincronização Figma completa em 0.5.6) | 2026-04-15 |
 | [ADR-008](decisions/ADR-008-recalibracao-paletas-feedback.md) | Recalibração das paletas foundation `green` e `amber` | Aceita — Implementada em 0.5.0 | 2026-04-16 |
 | [ADR-009](decisions/ADR-009-border-control-vs-decorative.md) | Separação de `border.default` (decorativa) e `border.control` (funcional) | Aceita — Implementada em 0.5.0 | 2026-04-16 |
 | [ADR-010](decisions/ADR-010-abolir-white-black-puros.md) | Remoção de `foundation.color.white` e `foundation.color.black` puros | Aceita — Implementada em 0.5.0 | 2026-04-16 |
@@ -461,26 +466,6 @@ Consolidação da documentação como fonte única de verdade. Plano em seis fas
 Itens fora do escopo imediato mas que devem ser implementados. Organizados por prioridade.
 
 ## Alta prioridade
-
-### Implementar ADR-005 — Brand como foundation, `-default` explícito, limpeza tipográfica
-
-Decisão proposta desde 2026-04-14. Pré-requisito para ADR-006 e ADR-007 saírem do estado Proposta. Ver [ADR-005](./decisions/ADR-005-brand-foundation-e-estados-explicitos.md) para pré-requisitos, estimativa e passos concretos.
-
-### Implementar ADR-006 — Semantic control tokens compartilhados
-
-Normalizar dimensões de Button, Input, Select e Textarea via tokens semânticos compartilhados. Depende de ADR-005. Ver [ADR-006](./decisions/ADR-006-semantic-control-tokens.md).
-
-### Sincronizar Figma com ADR-007 (toned colors)
-
-ADR-007 foi fechada no código em 0.5.4 mas as variáveis Figma ainda usam naming flat. Pendências:
-
-- Renomear `color/primary/toned` → `color/primary/toned/default`
-- Renomear `color/primary/toned-hover` → `color/primary/toned/hover`
-- Renomear `color/primary/toned-active` → `color/primary/toned/active`
-- Deletar `color/primary/toned-disabled` e `color/primary/toned-disabled-fg`
-- Rebinding do Button Toned disabled para `state/disabled/background` e `state/disabled/foreground`
-
-Executável via MCP remoto do Figma (fileKey `PRYS2kL7VdC1MtVWfZvuDN`).
 
 ### Revisitar rgba hardcoded em semantic tokens (dívida de ADR-011)
 
@@ -499,10 +484,6 @@ Template existe, conteúdo real ainda não foi definido. Passa por: missão, 3 p
 ### Comparação completa Figma ↔ JSON no `scripts/tokens-verify.mjs`
 
 Primeira versão do script confirma conectividade e coleta contagens. Próxima iteração: comparação nome-por-nome, valor-por-valor, modo-por-modo, com resolução de alias Figma e normalização de formato. Adiciona valor depois que o FIGMA_PAT está configurado como secret do CI.
-
-### Padronizar idioma dos ADR-006 e ADR-007
-
-Estão em inglês, destoando dos outros nove que estão em português. Traduzir mantendo a estrutura.
 
 ### Sincronização automatizada Figma ↔ site (Fase 7 do plano)
 
@@ -624,7 +605,7 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 
 > Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-21. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
-> Versão atual: **0.5.5**
+> Versão atual: **0.5.6**
 
 ## Status geral
 
@@ -686,7 +667,7 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 | ADR-004 | WCAG 2.2 AA como padrão de acessibilidade | Aceita — Implementada em 0.5.0 |
 | ADR-005 | Brand como camada foundation, estados explícitos no semantic, e limpeza tipográfica | Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.2) |
 | ADR-006 | Tokens semânticos de controle para dimensões e tipografia compartilhadas entre controles interativos | Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.3) |
-| ADR-007 | Estabelecer sistema de cores toned com overlays coloridos e tokens semânticos toned | Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.4) |
+| ADR-007 | Estabelecer sistema de cores toned com overlays coloridos e tokens semânticos toned | Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.4, sincronização Figma completa em 0.5.6) |
 | ADR-008 | Recalibração das paletas foundation `green` e `amber` | Aceita — Implementada em 0.5.0 |
 | ADR-009 | Separação de `border.default` (decorativa) e `border.control` (funcional) | Aceita — Implementada em 0.5.0 |
 | ADR-010 | Remoção de `foundation.color.white` e `foundation.color.black` puros | Aceita — Implementada em 0.5.0 |
@@ -1110,13 +1091,13 @@ Se uma decisão arquitetural não está registrada como ADR, ela não foi tomada
 
 > Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-21. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
-> Versão atual: **0.5.5**
+> Versão atual: **0.5.6**
 
 ## Estado atual
 
 | Aspecto | Valor |
 |---------|-------|
-| Versão | 0.5.5 |
+| Versão | 0.5.6 |
 | Formato canônico | JSON (DTCG) em `tokens/` |
 | CSS gerado | Style Dictionary → `css/tokens/generated/` |
 | Pipeline | ✅ index.css importa apenas generated/ |
@@ -1204,7 +1185,7 @@ semantic.typography.*
 - **ADR-004** — WCAG 2.2 AA como padrão de acessibilidade (Aceita — Implementada em 0.5.0)
 - **ADR-005** — Brand como camada foundation, estados explícitos no semantic, e limpeza tipográfica (Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.2))
 - **ADR-006** — Tokens semânticos de controle para dimensões e tipografia compartilhadas entre controles interativos (Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.3))
-- **ADR-007** — Estabelecer sistema de cores toned com overlays coloridos e tokens semânticos toned (Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.4))
+- **ADR-007** — Estabelecer sistema de cores toned com overlays coloridos e tokens semânticos toned (Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.4, sincronização Figma completa em 0.5.6))
 - **ADR-008** — Recalibração das paletas foundation `green` e `amber` (Aceita — Implementada em 0.5.0)
 - **ADR-009** — Separação de `border.default` (decorativa) e `border.control` (funcional) (Aceita — Implementada em 0.5.0)
 - **ADR-010** — Remoção de `foundation.color.white` e `foundation.color.black` puros (Aceita — Implementada em 0.5.0)
@@ -1685,7 +1666,7 @@ Textarea compartilha os tokens de padding mas não a altura:
 # ADR-007: Estabelecer sistema de cores toned com overlays coloridos e tokens semânticos toned
 
 **Data:** 2026-04-15
-**Status:** Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.4)
+**Status:** Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.4, sincronização Figma completa em 0.5.6)
 
 ## Implementação
 
@@ -1696,11 +1677,13 @@ Toda a camada de código foi executada durante ADR-011:
 - **Component button**: `tokens/component/button.json` tem `button.background.toned.{default,hover,active,disabled}` e `button.foreground.toned.{default,disabled}`. Os estados toned apontam para `semantic.brand.toned.*`; o disabled aponta para `semantic.state.disabled.*` e `semantic.content.disabled` (opaco neutro, conforme ADR).
 - **CSS consumer**: `css/components/button.css` consome `--ds-brand-toned-*` na variante `.ds-btn--toned`. Zero rgba hardcoded.
 
-Pendente no Figma (tarefa separada):
+### Sincronização Figma (0.5.6)
 
-- Renomear variáveis flat `color/primary/toned`, `-hover`, `-active` → estrutura aninhada `color/primary/toned/{default,hover,active}`.
-- Deletar variáveis `color/primary/toned-disabled` e `-disabled-fg`.
-- Rebinding do Button Toned disabled para `state/disabled/background` e `state/disabled/foreground`.
+Confirmação do estado real do arquivo Figma `PRYS2kL7VdC1MtVWfZvuDN` em 2026-04-21:
+
+- Variáveis `color/primary/toned`, `color/primary/toned-hover`, `color/primary/toned-active` (naming flat antigo) **não existem mais** — foram migradas durante ADR-011 para `brand/toned/default`, `brand/toned/hover`, `brand/toned/active` (naming aninhado) apontando para os overlays foundation corretos.
+- Variáveis `color/primary/toned-disabled` e `color/primary/toned-disabled-fg` **não existem mais** — removidas durante ADR-011.
+- **Rebinding executado em 0.5.6**: as 6 variantes Toned+Disabled do componente Button (3 tamanhos × Icon Only false/true) tinham o background correto (`state/disabled/background`) mas o foreground apontava para `brand/content/contrast-disabled` (o token para texto sobre fill brand sólido disabled) ou para uma variável órfã (`VariableID:2732:1651`). Foram re-vinculadas para `content/disabled` (neutral-400 opaco), conforme a decisão do ADR.
 
 ## Pré-requisitos
 
@@ -2493,6 +2476,6 @@ Verificação automática de coerência Figma ↔ JSON ↔ CSS: `scripts/tokens-
 
 ═══════════════════════════════════════════════════════════
 
-Gerado por scripts/build-llms.mjs em 2026-04-21T10:53:57.890Z
-Versão: 0.5.5
+Gerado por scripts/build-llms.mjs em 2026-04-21T11:00:06.137Z
+Versão: 0.5.6
 Site: https://uxindesign.github.io/design-system-core/
