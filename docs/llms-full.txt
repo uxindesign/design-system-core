@@ -1,6 +1,6 @@
 # Design System Core — conteúdo consolidado
 
-> Versão 0.5.11. Arquivo destinado a consumo por LLMs que precisem
+> Versão 0.5.12. Arquivo destinado a consumo por LLMs que precisem
 > do design system inteiro em uma requisição. Inclui README, CONTRIBUTING,
 > CLAUDE.md, CHANGELOG, todos os MDs em docs/, todos os ADRs e um resumo
 > dos tokens. Páginas HTML-only (componentes, foundations) estão referenciadas
@@ -311,6 +311,24 @@ O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.
 Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na faixa 0.x. Regras de bump documentadas em `docs/process-versioning.html`.
 
 ## [Não publicado]
+
+## [0.5.12]
+
+### Corrigido
+- **`docs/foundations-theme-colors.html` agora é auto-gerado** a partir dos JSONs `tokens/semantic/{light,dark}.json` e `tokens/foundation/{colors,brand}.json`. O arquivo era mantido à mão e acumulou drift severo: **37 das 53 linhas (70%)** estavam com valor errado, principalmente porque o PR #18 (0.5.11) mudou valores de semantic mas a doc não acompanhou. Problemas eliminados:
+  - 5 tokens **duplicados** (ex: `accent-subtle` aparecia com `purple-100/purple-800` e também com `purple-50/purple-950` — a segunda linha era fantasma).
+  - 22 tokens **desatualizados** pós PR #18 (`brand.hover/active`, `feedback.*.hover/active/border`, `background.subtle`, `state.disabled.background`, etc).
+  - 10 tokens com **apelidos imprecisos** (doc usava `white` em vez de `neutral-50`, `primary` em vez de `brand-default`, `blue-600` em vez de `brand-primary`).
+  - 3 linhas **inventadas** sem correspondência no CSS real.
+
+### Adicionado
+- Em `scripts/sync-docs.mjs`: função que lê `tokens/semantic/{light,dark}.json`, resolve aliases recursivamente respeitando a arquitetura (para em `foundation.brand.*` e em outros semantic — bate com o que o Style Dictionary emite no CSS), e gera 12 seções (Background, Surface, Brand Primary, Brand Secondary, Text/Foreground, Border, Feedback Success/Warning/Error/Info, State, Overlay) com **85 tokens**.
+- Marcadores `<!-- AUTO-GENERATED:THEME-COLORS:START|END -->` no HTML — só a região entre eles é regenerada; header, nav, sidebar, footer continuam editáveis à mão.
+- Audit de tokens faltando: se um token `$type: color` existe em `semantic/light.json` mas não está listado em nenhuma seção, o script avisa no console.
+
+### Notas
+- Daqui pra frente, toda mudança de token no JSON regenera a doc automaticamente (via `npm run sync:docs`, já no `build:all`). Drift arquitetural nessa página é estruturalmente impossível.
+- **Follow-up**: auditar `foundations-spacing.html`, `foundations-radius.html`, `foundations-typography.html`, `foundations-elevation.html`, `foundations-motion.html`, `foundations-zindex.html`, `foundations-borders.html`, `foundations-opacity.html` pra confirmar se estão em dia ou se têm drift similar. (Opção C do plano — próximo PR.)
 
 ## [0.5.11]
 
@@ -733,7 +751,7 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 
 > Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-21. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
-> Versão atual: **0.5.11**
+> Versão atual: **0.5.12**
 
 ## Status geral
 
@@ -1345,13 +1363,13 @@ Se uma decisão arquitetural não está registrada como ADR, ela não foi tomada
 
 > Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-21. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
-> Versão atual: **0.5.11**
+> Versão atual: **0.5.12**
 
 ## Estado atual
 
 | Aspecto | Valor |
 |---------|-------|
-| Versão | 0.5.11 |
+| Versão | 0.5.12 |
 | Formato canônico | JSON (DTCG) em `tokens/` |
 | CSS gerado | Style Dictionary → `css/tokens/generated/` |
 | Pipeline | ✅ index.css importa apenas generated/ |
@@ -2785,6 +2803,6 @@ Verificação automática de coerência Figma ↔ JSON ↔ CSS: `scripts/tokens-
 
 ═══════════════════════════════════════════════════════════
 
-Gerado por scripts/build-llms.mjs em 2026-04-21T18:34:36.363Z
-Versão: 0.5.11
+Gerado por scripts/build-llms.mjs em 2026-04-21T20:47:42.973Z
+Versão: 0.5.12
 Site: https://uxindesign.github.io/design-system-core/

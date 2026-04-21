@@ -1,6 +1,6 @@
 {
   "name": "@uxin/design-system-core",
-  "version": "0.5.11",
+  "version": "0.5.12",
   "description": "White-label CSS design system with semantic tokens, 18 components, and light/dark mode support",
   "main": "css/design-system.css",
   "style": "css/design-system.css",
