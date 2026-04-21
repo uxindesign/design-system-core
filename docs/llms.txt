@@ -1,6 +1,6 @@
 # Design System Core
 
-> Design system white-label em CSS puro com tokens DTCG em JSON, 18 componentes, modos light/dark, três temas (Default, Ocean, Forest). Versão atual: 0.5.14. Enquanto não houver release oficial 1.0, o projeto fica em 0.x.
+> Design system white-label em CSS puro com tokens DTCG em JSON, 18 componentes, modos light/dark, três temas (Default, Ocean, Forest). Versão atual: 0.5.15. Enquanto não houver release oficial 1.0, o projeto fica em 0.x.
 
 Repositório: https://github.com/uxindesign/design-system-core
 Site: https://uxindesign.github.io/design-system-core/
@@ -89,4 +89,4 @@ Arquivo completo para LLMs: https://uxindesign.github.io/design-system-core/docs
 
 ---
 
-Gerado por `scripts/build-llms.mjs` em 2026-04-21T21:30:57.353Z.
+Gerado por `scripts/build-llms.mjs` em 2026-04-21T22:50:46.924Z.

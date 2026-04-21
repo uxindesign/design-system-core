@@ -74,6 +74,67 @@
 <p>O formato é baseado em <a href="https://keepachangelog.com/pt-BR/1.1.0/">Keep a Changelog</a> e o versionamento segue <a href="https://semver.org/lang/pt-BR/">Semantic Versioning</a>.</p>
 <p>Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na faixa 0.x. Regras de bump documentadas em <code>docs/process-versioning.html</code>.</p>
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
+<h2>[0.5.15]</h2>
+<h3>Consolidado</h3>
+<p>Auditoria do <code>CLAUDE.md</code> contra o estado real do repo + Figma + contexto externo (que vivia em workspace Claude Project). Objetivo: tornar o repo fonte única de verdade, sem ambiguidades.</p>
+<h3>Corrigido — hierarquia de verdade</h3>
+<p>Três documentos tinham posições contraditórias sobre &quot;quem é fonte de verdade&quot;:</p>
+<ul>
+<li><code>system-principles.md</code> §2 e §7.2 diziam &quot;Git/JSON é fonte de verdade pra tokens&quot; (versão pré-0.5.8)</li>
+<li><code>ADR-003</code> revisada (0.5.8) diz &quot;Figma é autoridade de valor&quot;</li>
+<li><code>CLAUDE.md</code> (desde 0.5.10) já refletia a ADR-003 revisada</li>
+</ul>
+<p>Consolidado em <strong>todas as 3 fontes</strong> com a mesma regra:</p>
+<ul>
+<li><strong>ADRs</strong> = autoridade arquitetural (camadas, naming, regras de referência)</li>
+<li><strong>Figma Variables</strong> = autoridade de valor (hex, alpha, shade, variante visual)</li>
+<li><strong><code>tokens/**/*.json</code></strong> = consolidação canônica em Git (DTCG); <strong>nada roda sem JSON atualizado</strong></li>
+<li><strong>CSS gerado</strong> = derivado do JSON</li>
+<li><strong>Docs</strong> = descritivo, nunca fonte</li>
+</ul>
+<p>Regra operacional destacada: <strong>arquitetura &gt; valor</strong>. Figma pode decidir &quot;brand.hover é blue-800 em vez de blue-700&quot;. Figma <strong>não pode</strong> criar <code>semantic.color.primary.foreground</code> se ADR-011 definiu <code>brand.content.contrast</code> — mudança arquitetural exige ADR antes da implementação.</p>
+<h3>Adicionado ao CLAUDE.md</h3>
+<ul>
+<li>Seção <strong>Hierarquia de verdade</strong> explícita (antes só estava na tabela &quot;Fontes de verdade&quot;).</li>
+<li>Seção <strong>Protocolo de trabalho com agente</strong> (5 regras): aprovação estrita por ação, plano antes de agir, validar antes de afirmar, incremental/não-bulk, tom técnico direto.</li>
+<li>Seção <strong>Figma Plugin API — armadilhas operacionais</strong>: <code>paint.boundVariables.color.id</code> (não node-level), clear-before-setBoundVariable em <code>fontSize</code>, <code>setBoundVariable</code> pode empilhar, truncamento ~20KB em dumps, <code>hiddenFromPublishing</code> falha pós-create.</li>
+<li>Subseção <strong>Limitações conhecidas do GitHub MCP</strong>: <code>create_or_update_file</code> exige SHA fresco; <code>push_files</code> grande estoura timeout; MCP não escreve em <code>.github/workflows/</code>; <code>web_fetch</code> em github.com/raw.githubusercontent.com bloqueado.</li>
+<li>Linha em &quot;Fontes de verdade&quot; pra <code>docs/process-figma-sync.md</code>.</li>
+<li>Bump &quot;~462 Variables&quot; → &quot;~489 Variables&quot; (atualiza contagem pós PR #18/0.5.11).</li>
+</ul>
+<h3>Corrigido em <code>system-principles.md</code></h3>
+<ul>
+<li>§2 reescrita com a nova hierarquia (5 linhas de regras operacionais).</li>
+<li>§6 tabela de ADRs: adicionado <strong>ADR-011</strong> (estava faltando).</li>
+<li>§6 linha de ADR-003: título atualizado pra refletir a revisão (0.5.8).</li>
+<li>§7 princípios: 7 → 6 princípios (consolidado §2 antigo &quot;Git fonte de verdade&quot; + §3 antigo &quot;JSON convergência&quot; em um único princípio #2 coerente com ADR-003 revisada).</li>
+</ul>
+<h3>Corrigido em <code>README.md</code></h3>
+<ul>
+<li>Badge <code>0.5.1</code> → <code>0.5.15</code> (defasagem de 14 versões).</li>
+<li>URL CDN de exemplo atualizada.</li>
+</ul>
+<h3>Rejeitado (diagnóstico obsoleto ou falso positivo)</h3>
+<p>Sete pontos do contexto externo foram auditados contra o repo e <strong>não precisam de ação</strong>:</p>
+<ul>
+<li>CLAUDE.md &quot;usa nome Theme&quot; → usa Semantic (obsoleto).</li>
+<li>Brand = &quot;13 vars com 3 modos&quot; → 2 vars, ADR-005 efetivada (obsoleto).</li>
+<li>&quot;Foundation 192, Theme 94&quot; → 231 Foundation, 132×2 Semantic (obsoleto).</li>
+<li>&quot;CLAUDE.md não menciona DTCG/Style Dictionary&quot; → menciona sim (obsoleto).</li>
+<li>&quot;Naming semântico antigo&quot; → ADR-011 aplicada, naming atual (obsoleto).</li>
+<li>Button &quot;60 variantes&quot; → 252 variantes (atualizar <code>component-inventory.md</code> se relevante).</li>
+<li>&quot;<code>background/subtle</code> no Figma diverge do JSON&quot; → alinhados (0 VALUE_DRIFT no sync atual — divergência foi resolvida no PR #18/0.5.11).</li>
+<li>&quot;Componentes de controle não consomem <code>--ds-size-control-*</code>&quot; → falso positivo (consomem via camada component em <code>component.css</code>; arquiteturalmente correto pela ADR-001).</li>
+</ul>
+<h3>Issues criadas no GitHub (não pertencem a documentação)</h3>
+<ul>
+<li><strong>B1</strong> — Decidir tratamento dos 37 tokens line-height/letter-spacing com sistemas divergentes (PX vs ratio/rem).</li>
+<li><strong>B3</strong> — Auditoria do Figma: bindings e variantes (quebrar por componente).</li>
+<li><strong>B5</strong> — AI-readable metadata em tokens (<code>usage</code>/<code>doNot</code>/<code>pairedTokens</code>/<code>a11y</code>/<code>components</code>).</li>
+<li><strong>B6</strong> — Adoption metrics e analytics de componentes.</li>
+<li><strong>B7</strong> — Composite typography tokens + patterns docs.</li>
+</ul>
+<p>Itens já listados em <code>docs/backlog.md</code> (Storybook, Astro/Zeroheight/Supernova) não duplicados.</p>
 <h2>[0.5.14]</h2>
 <h3>Corrigido</h3>
 <p>Audit da camada Component (19 docs HTML de componentes + meta-docs) revelou <strong>49 paths token inválidos + 14 CSS vars fantasmas</strong> — todos decorrentes de naming pré-ADR-011 (renames que a camada de dados incorporou mas a doc não). Corrigido em massa:</p>

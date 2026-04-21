@@ -8,6 +8,64 @@ Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na
 
 ## [Não publicado]
 
+## [0.5.15]
+
+### Consolidado
+Auditoria do `CLAUDE.md` contra o estado real do repo + Figma + contexto externo (que vivia em workspace Claude Project). Objetivo: tornar o repo fonte única de verdade, sem ambiguidades.
+
+### Corrigido — hierarquia de verdade
+Três documentos tinham posições contraditórias sobre "quem é fonte de verdade":
+- `system-principles.md` §2 e §7.2 diziam "Git/JSON é fonte de verdade pra tokens" (versão pré-0.5.8)
+- `ADR-003` revisada (0.5.8) diz "Figma é autoridade de valor"
+- `CLAUDE.md` (desde 0.5.10) já refletia a ADR-003 revisada
+
+Consolidado em **todas as 3 fontes** com a mesma regra:
+- **ADRs** = autoridade arquitetural (camadas, naming, regras de referência)
+- **Figma Variables** = autoridade de valor (hex, alpha, shade, variante visual)
+- **`tokens/**/*.json`** = consolidação canônica em Git (DTCG); **nada roda sem JSON atualizado**
+- **CSS gerado** = derivado do JSON
+- **Docs** = descritivo, nunca fonte
+
+Regra operacional destacada: **arquitetura > valor**. Figma pode decidir "brand.hover é blue-800 em vez de blue-700". Figma **não pode** criar `semantic.color.primary.foreground` se ADR-011 definiu `brand.content.contrast` — mudança arquitetural exige ADR antes da implementação.
+
+### Adicionado ao CLAUDE.md
+- Seção **Hierarquia de verdade** explícita (antes só estava na tabela "Fontes de verdade").
+- Seção **Protocolo de trabalho com agente** (5 regras): aprovação estrita por ação, plano antes de agir, validar antes de afirmar, incremental/não-bulk, tom técnico direto.
+- Seção **Figma Plugin API — armadilhas operacionais**: `paint.boundVariables.color.id` (não node-level), clear-before-setBoundVariable em `fontSize`, `setBoundVariable` pode empilhar, truncamento ~20KB em dumps, `hiddenFromPublishing` falha pós-create.
+- Subseção **Limitações conhecidas do GitHub MCP**: `create_or_update_file` exige SHA fresco; `push_files` grande estoura timeout; MCP não escreve em `.github/workflows/`; `web_fetch` em github.com/raw.githubusercontent.com bloqueado.
+- Linha em "Fontes de verdade" pra `docs/process-figma-sync.md`.
+- Bump "~462 Variables" → "~489 Variables" (atualiza contagem pós PR #18/0.5.11).
+
+### Corrigido em `system-principles.md`
+- §2 reescrita com a nova hierarquia (5 linhas de regras operacionais).
+- §6 tabela de ADRs: adicionado **ADR-011** (estava faltando).
+- §6 linha de ADR-003: título atualizado pra refletir a revisão (0.5.8).
+- §7 princípios: 7 → 6 princípios (consolidado §2 antigo "Git fonte de verdade" + §3 antigo "JSON convergência" em um único princípio #2 coerente com ADR-003 revisada).
+
+### Corrigido em `README.md`
+- Badge `0.5.1` → `0.5.15` (defasagem de 14 versões).
+- URL CDN de exemplo atualizada.
+
+### Rejeitado (diagnóstico obsoleto ou falso positivo)
+Sete pontos do contexto externo foram auditados contra o repo e **não precisam de ação**:
+- CLAUDE.md "usa nome Theme" → usa Semantic (obsoleto).
+- Brand = "13 vars com 3 modos" → 2 vars, ADR-005 efetivada (obsoleto).
+- "Foundation 192, Theme 94" → 231 Foundation, 132×2 Semantic (obsoleto).
+- "CLAUDE.md não menciona DTCG/Style Dictionary" → menciona sim (obsoleto).
+- "Naming semântico antigo" → ADR-011 aplicada, naming atual (obsoleto).
+- Button "60 variantes" → 252 variantes (atualizar `component-inventory.md` se relevante).
+- "`background/subtle` no Figma diverge do JSON" → alinhados (0 VALUE_DRIFT no sync atual — divergência foi resolvida no PR #18/0.5.11).
+- "Componentes de controle não consomem `--ds-size-control-*`" → falso positivo (consomem via camada component em `component.css`; arquiteturalmente correto pela ADR-001).
+
+### Issues criadas no GitHub (não pertencem a documentação)
+- **B1** — Decidir tratamento dos 37 tokens line-height/letter-spacing com sistemas divergentes (PX vs ratio/rem).
+- **B3** — Auditoria do Figma: bindings e variantes (quebrar por componente).
+- **B5** — AI-readable metadata em tokens (`usage`/`doNot`/`pairedTokens`/`a11y`/`components`).
+- **B6** — Adoption metrics e analytics de componentes.
+- **B7** — Composite typography tokens + patterns docs.
+
+Itens já listados em `docs/backlog.md` (Storybook, Astro/Zeroheight/Supernova) não duplicados.
+
 ## [0.5.14]
 
 ### Corrigido
