@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-21T14:32:42.362Z",
+  "generatedAt": "2026-04-21T15:02:06.744Z",
   "totals": {
     "jsonTokens": 632,
     "sharedTokens": 368,
@@ -13,8 +13,14 @@
     "jsonVsCss": [],
     "jsonVsFigma": {
       "skipped": true,
-      "reason": "FIGMA_PAT ausente. Para ativar a verificação com Figma, exporte FIGMA_PAT=<seu-pat>.",
-      "divergences": []
+      "reason": "FIGMA_PAT ausente. Para ativar a verificação com Figma, exporte FIGMA_PAT=<seu-pat> ou configure o secret no CI.",
+      "divergences": [],
+      "counts": {
+        "NEEDS_SYNC": 0,
+        "DRIFT_FROM_SOURCE": 0,
+        "VALUE_DRIFT": 0,
+        "ALIAS_BROKEN": 0
+      }
     }
   }
 }
