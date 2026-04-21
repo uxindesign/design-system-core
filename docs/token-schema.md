@@ -2,13 +2,13 @@
 
 > Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-21. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
-> Versão atual: **0.5.15**
+> Versão atual: **0.5.16**
 
 ## Estado atual
 
 | Aspecto | Valor |
 |---------|-------|
-| Versão | 0.5.15 |
+| Versão | 0.5.16 |
 | Formato canônico | JSON (DTCG) em `tokens/` |
 | CSS gerado | Style Dictionary → `css/tokens/generated/` |
 | Pipeline | ✅ index.css importa apenas generated/ |
@@ -101,3 +101,4 @@ semantic.typography.*
 - **ADR-009** — Separação de `border.default` (decorativa) e `border.control` (funcional) (Aceita — Implementada em 0.5.0)
 - **ADR-010** — Remoção de `foundation.color.white` e `foundation.color.black` puros (Aceita — Implementada em 0.5.0)
 - **ADR-011** — Reestruturação do naming de tokens semânticos de cor (Aceita — Implementada em 0.5.0)
+- **ADR-012** — Tokens de line-height e letter-spacing divergem por design entre Figma e JSON (Aceita)

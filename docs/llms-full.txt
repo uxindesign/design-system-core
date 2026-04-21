@@ -1,6 +1,6 @@
 # Design System Core — conteúdo consolidado
 
-> Versão 0.5.15. Arquivo destinado a consumo por LLMs que precisem
+> Versão 0.5.16. Arquivo destinado a consumo por LLMs que precisem
 > do design system inteiro em uma requisição. Inclui README, CONTRIBUTING,
 > CLAUDE.md, CHANGELOG, todos os MDs em docs/, todos os ADRs e um resumo
 > dos tokens. Páginas HTML-only (componentes, foundations) estão referenciadas
@@ -351,6 +351,24 @@ O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.
 Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na faixa 0.x. Regras de bump documentadas em `docs/process-versioning.html`.
 
 ## [Não publicado]
+
+## [0.5.16]
+
+### Adicionado
+- **ADR-012** — *Tokens de line-height e letter-spacing divergem por design entre Figma e JSON.* Formaliza que esses dois grupos de tokens são representados em unidades incompatíveis (PX no Figma vs ratio/rem/em no JSON) por limitação da Plugin API do Figma e requisito WCAG 1.4.4 do CSS. Os dois lados são canônicos em seus contextos de consumo; **não sincronizam entre si**.
+- **Categoria `BY_DESIGN`** no sync Figma → JSON. Listas `FIGMA_ONLY_PATHS` e `JSON_ONLY_PATHS` em `scripts/lib/figma-dtcg.mjs` reconhecem tokens que existem só de um lado por escolha documentada. Ficam em `BY_DESIGN` (informativo) em vez de falso-positivarem como `NEW_IN_FIGMA` ou `MISSING_IN_FIGMA`.
+
+### Corrigido (efeito do ADR-012 no sync)
+Antes: sync reportava **23 NEW_IN_FIGMA + 14 MISSING_IN_FIGMA** (37 falsos drifts) em line-height/letter-spacing, mascarando drifts reais.
+
+Depois: **0 NEW_IN_FIGMA + 0 MISSING_IN_FIGMA + 37 BY_DESIGN** (informativo). Dry-run sai com exit 0. Qualquer drift novo em typography (ex: valor real diferente em `semantic.brand.hover`) continua detectado.
+
+### Atualizado
+- `docs/process-figma-sync.md`: tabela de categorias passou de 4 pra 6 (inclui `CSS_ONLY` e `BY_DESIGN`, ambas marcadas como "não aplica em `--write`").
+- `scripts/sync-tokens-from-figma.mjs`: relatório inclui contagem e seção `BY_DESIGN` com indicação de lado (`figma-only` ou `json-only`).
+
+### Contexto operacional
+Issue #23 (origem) fica **fechada** com este PR. Questão de unificação futura via composite typography tokens fica em issue #27 (ADR-013 a abrir quando for priorizada).
 
 ## [0.5.15]
 
@@ -705,7 +723,7 @@ Consolidação da documentação como fonte única de verdade. Plano em seis fas
 > Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-21. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
 
-11 decisões registradas.
+12 decisões registradas.
 
 | ADR | Título | Status | Data |
 |-----|--------|--------|------|
@@ -720,6 +738,7 @@ Consolidação da documentação como fonte única de verdade. Plano em seis fas
 | [ADR-009](decisions/ADR-009-border-control-vs-decorative.md) | Separação de `border.default` (decorativa) e `border.control` (funcional) | Aceita — Implementada em 0.5.0 | 2026-04-16 |
 | [ADR-010](decisions/ADR-010-abolir-white-black-puros.md) | Remoção de `foundation.color.white` e `foundation.color.black` puros | Aceita — Implementada em 0.5.0 | 2026-04-16 |
 | [ADR-011](decisions/ADR-011-renaming-tokens-semanticos-de-cor.md) | Reestruturação do naming de tokens semânticos de cor | Aceita — Implementada em 0.5.0 | 2026-04-17 |
+| [ADR-012](decisions/ADR-012-typography-tokens-divergence.md) | Tokens de line-height e letter-spacing divergem por design entre Figma e JSON | Aceita | 2026-04-21 |
 
 
 ═══════════════════════════════════════════════════════════
@@ -905,7 +924,7 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 
 > Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-21. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
-> Versão atual: **0.5.15**
+> Versão atual: **0.5.16**
 
 ## Status geral
 
@@ -972,6 +991,7 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 | ADR-009 | Separação de `border.default` (decorativa) e `border.control` (funcional) | Aceita — Implementada em 0.5.0 |
 | ADR-010 | Remoção de `foundation.color.white` e `foundation.color.black` puros | Aceita — Implementada em 0.5.0 |
 | ADR-011 | Reestruturação do naming de tokens semânticos de cor | Aceita — Implementada em 0.5.0 |
+| ADR-012 | Tokens de line-height e letter-spacing divergem por design entre Figma e JSON | Aceita |
 
 ## Próximos milestones
 
@@ -1129,7 +1149,7 @@ O script:
 1. Lê `.figma-snapshot.json` (ou `--snapshot <path>` pra outro caminho).
 2. Constrói o estado esperado dos JSONs (`tokens/foundation/`, `tokens/semantic/`, `tokens/component/`) a partir das Variables.
 3. Lê os JSONs atuais e compara.
-4. Reporta em 4 categorias:
+4. Reporta em 6 categorias:
 
 | Categoria | Significado | Ação em `--write` |
 |-----------|-------------|-------------------|
@@ -1137,10 +1157,14 @@ O script:
 | **NEW_IN_FIGMA** | Figma tem, JSON não. | Não cria — revisão manual. |
 | **MISSING_IN_FIGMA** | JSON tem, Figma não. | Não deleta — revisão manual. |
 | **ALIAS_BROKEN** | Figma aponta pra variável inexistente. | Não resolve — fix no Figma. |
+| **CSS_ONLY** | Token existe dos dois lados mas representação diverge por capacidade CSS (font family stack, `rem`, weight numérico). Introduzido após PR #18 / 0.5.11. | **Não aplica** — aplicar regridiria o CSS (ex: trocaria `'Inter', system-ui, ...` por `"Inter"`; ou `0.875rem` por `14`, quebrando WCAG 1.4.4). |
+| **BY_DESIGN** | Token existe só de um lado por escolha arquitetural documentada — ver **ADR-012** (line-height/letter-spacing: PX no Figma, ratio/em no JSON). | **Não aplica** — não é drift, é arquitetura. |
 
-Se tudo zerar, Figma e JSON estão em dia. Exit 0.
+Se as 4 primeiras categorias zerarem, Figma e JSON estão em dia. Exit 0.
 
-Se tem divergências, exit 1. Review no output antes de aplicar.
+Se tem divergências reais (VALUE_DRIFT, NEW_IN_FIGMA, MISSING_IN_FIGMA), exit 1. CSS_ONLY e BY_DESIGN são informativos — não contam como divergência.
+
+Review no output antes de aplicar.
 
 ## Passo 3 — aplicar VALUE_DRIFT
 
@@ -1523,13 +1547,13 @@ Se uma decisão arquitetural não está registrada como ADR, ela não foi tomada
 
 > Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-21. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
-> Versão atual: **0.5.15**
+> Versão atual: **0.5.16**
 
 ## Estado atual
 
 | Aspecto | Valor |
 |---------|-------|
-| Versão | 0.5.15 |
+| Versão | 0.5.16 |
 | Formato canônico | JSON (DTCG) em `tokens/` |
 | CSS gerado | Style Dictionary → `css/tokens/generated/` |
 | Pipeline | ✅ index.css importa apenas generated/ |
@@ -1622,6 +1646,7 @@ semantic.typography.*
 - **ADR-009** — Separação de `border.default` (decorativa) e `border.control` (funcional) (Aceita — Implementada em 0.5.0)
 - **ADR-010** — Remoção de `foundation.color.white` e `foundation.color.black` puros (Aceita — Implementada em 0.5.0)
 - **ADR-011** — Reestruturação do naming de tokens semânticos de cor (Aceita — Implementada em 0.5.0)
+- **ADR-012** — Tokens de line-height e letter-spacing divergem por design entre Figma e JSON (Aceita)
 
 
 ═══════════════════════════════════════════════════════════
@@ -2945,6 +2970,103 @@ Rejeitada. Dobraria a quantidade de tokens de conteúdo (~15 → ~30) para resol
 
 
 ═══════════════════════════════════════════════════════════
+# ADR-012 — Tokens de line-height e letter-spacing divergem por design entre Figma e JSON
+═══════════════════════════════════════════════════════════
+
+# ADR-012: Tokens de line-height e letter-spacing divergem por design entre Figma e JSON
+
+**Data:** 2026-04-21
+**Status:** Aceita
+
+## Contexto
+
+Em 21/04/2026, durante os PRs #17-#22 (0.5.10 → 0.5.15), implementamos o sync Figma → JSON via MCP e consolidamos a hierarquia de verdade ("Figma é autoridade de valor; JSON é consolidação canônica"). Ao rodar o sync, 37 tokens de typography aparecem como divergentes:
+
+- **23 NEW_IN_FIGMA**: `typography/font/line-height/*` (`tight`, `snug`, `normal`, `relaxed`, e `16`, `18`, `20`, `22`, `24`, `26`, `28`, `34`, `40`, `44`, `50`, `60`, `70`, `80`, `90`), `typography/font/letter-spacing/*` (`tight`, `normal`, `wide`, `wider`).
+- **14 MISSING_IN_FIGMA**: `foundation.typography.line.height.*` (`none`, `tight`, `snug`, `normal`, `relaxed`, `loose`, `control.sm/md/lg`), `foundation.typography.letter.spacing.*` (`tighter`, `tight`, `normal`, `wide`, `wider`).
+
+Não é "um lado está desatualizado". Figma e JSON **representam o mesmo conceito em unidades incompatíveis** porque Figma e CSS têm capacidades diferentes:
+
+| Aspecto | Figma Variables | CSS / JSON |
+|---|---|---|
+| Unidade pra `line-height` | **PX obrigatório** (Plugin API só aceita `{unit: "PIXELS"\|"PERCENT", value: number}`) | **Ratio unitless** preferido (herdável, escalável), ou `rem`/`em` |
+| Unidade pra `letter-spacing` | **PX obrigatório** | **`em` preferido** (proporcional ao font-size) |
+| Tipagem DTCG | não há `$type: dimension` com unidade flexível | `$value: "1.25"` (ratio) ou `"0.5rem"` |
+| Consumo | 24 dos 28 text styles consomem via `boundVariables` | 20 consumos de `--ds-line-height-*` em 8 componentes CSS |
+
+**Consequência**: converter um lado pro outro causa perda real.
+
+- Converter JSON pra PX: quebra acessibilidade (WCAG 1.4.4 "Resize Text"). Elementos em `px` não escalam com o zoom de texto do browser. Elementos em `rem`/`em`/unitless escalam.
+- Converter Figma pra ratio: não funciona. A Plugin API não aceita unidade unitless em `lineHeight` de text style. O Figma registra internamente como PERCENT (`150 → 150%`) ou PIXELS, mas o binding precisa de Variable do tipo `FLOAT` com valor numérico que o Figma interpreta como px ou %.
+
+## Decisão
+
+Tokens de `line-height` e `letter-spacing` têm **representação divergente por design** entre Figma e JSON. Ambos os lados são canônicos no seu contexto de consumo.
+
+### Regra
+
+1. **Figma** mantém `typography/font/line-height/*` e `typography/font/letter-spacing/*` como autoridade para os **text styles do Figma**. Valores em PX (números puros; Figma interpreta como px quando aplicado a text node).
+2. **JSON** mantém `foundation.typography.line.height.*` e `foundation.typography.letter.spacing.*` como autoridade para o **CSS gerado**. Valores em ratio unitless (line-height) e `em` (letter-spacing).
+3. O sync Figma → JSON **não sincroniza** esses tokens — cada lado evolui independentemente dentro da sua representação.
+4. Mudanças visuais de typography que afetam os dois lados (ex: deixar um heading mais "aberto") exigem **atualização manual em ambos** — Figma via text style, JSON via `foundation/typography.json`.
+
+### Mecanismo técnico
+
+No `scripts/lib/figma-dtcg.mjs`, introduzimos duas listas de regex:
+
+```js
+const FIGMA_ONLY_PATHS = [
+  /^foundation\.typography\.font\.line-height\./,
+  /^foundation\.typography\.font\.letter-spacing\./,
+];
+const JSON_ONLY_PATHS = [
+  /^foundation\.typography\.line\.height\./,
+  /^foundation\.typography\.letter\.spacing\./,
+];
+```
+
+Na função `compareStates`:
+
+- Tokens com path casando `FIGMA_ONLY_PATHS` que seriam `NEW_IN_FIGMA` → vão pra categoria `BY_DESIGN` (informativa).
+- Tokens com path casando `JSON_ONLY_PATHS` que seriam `MISSING_IN_FIGMA` → idem.
+- Categoria `BY_DESIGN` é listada no relatório mas **não conta como drift**. Exit code 0 quando é o único resto.
+
+### Diferença semântica vs `CSS_ONLY`
+
+Este ADR introduz `BY_DESIGN`; não se confunde com a categoria `CSS_ONLY` existente:
+
+- `CSS_ONLY` (introduzido em 0.5.11 pós-PR #18): tokens que **existem dos dois lados** mas têm **valores representados diferentemente** (ex: `foundation.typography.font.family.sans` = `"Inter"` no Figma vs stack completa `'Inter', system-ui, ...` no JSON). Sync ignora a diferença de valor.
+- `BY_DESIGN` (este ADR): tokens que **existem só de um lado** por escolha arquitetural. Sync ignora a ausência do outro lado.
+
+## Consequências
+
+- Dry-run do sync sai mais limpo: `0 VALUE_DRIFT, 0 NEW_IN_FIGMA, 0 MISSING_IN_FIGMA, 0 ALIAS_BROKEN, 9 CSS_ONLY, 37 BY_DESIGN`. Divergências reais ficam visíveis sem o ruído de 37 falsos positivos.
+- Quem for ajustar typography precisa saber que os dois lados são independentes. Documentado em `docs/process-figma-sync.md` e reforçado por `$description` nos tokens afetados (follow-up).
+- Se no futuro DTCG/CSS ganharem suporte nativo a composite typography tokens (issue #27), dá pra revisitar essa decisão e unificar.
+
+## Alternativas consideradas
+
+**(a) Unificar em PX.** Remove rem/ratio do JSON, adota PX nos dois lados. Descartada por quebrar WCAG 1.4.4 e a convenção CSS moderna (unitless line-height é recomendado pela especificação CSS desde Level 2).
+
+**(b) Unificar em ratio/em.** Remove os PX do Figma. Descartada porque a Plugin API do Figma não aceita line-height unitless; e porque designer precisa trabalhar em px absoluto durante composição visual.
+
+**(c) Criar "composite typography tokens"** (DTCG `$type: typography`). Agruparia fontFamily + fontWeight + fontSize + lineHeight + letterSpacing num único token nomeado (ex: `display/2xl`). Resolve parcialmente mas exige migração grande. Movido pra issue #27 como evolução futura; não bloqueia este ADR.
+
+**(d) Duplicar tudo de um lado no outro (manter ambos, sincronizar manualmente).** Descartada — dobra o custo de manutenção e convida drift silencioso. Melhor aceitar a divergência explicitamente.
+
+## Referências
+
+- [ADR-001](./ADR-001-migracao-tokens.md) — arquitetura Foundation → Semantic → Component.
+- [ADR-003](./ADR-003-fontes-verdade.md) revisada — Figma = autoridade de valor.
+- [ADR-006](./ADR-006-semantic-control-tokens.md) — tokens semânticos de controle (inclui `typography.control.*`).
+- `docs/process-figma-sync.md` — fluxo operacional do sync.
+- Issue #23 (origem desta decisão).
+- Issue #27 — composite typography tokens (evolução futura).
+- [CSS Values and Units Level 4 §3.5](https://www.w3.org/TR/css-values-4/) — unidades relativas (rem, em).
+- [WCAG 2.2 — 1.4.4 Resize Text](https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html) — requisito de acessibilidade que justifica ratio/rem.
+
+
+═══════════════════════════════════════════════════════════
 # Tokens
 ═══════════════════════════════════════════════════════════
 
@@ -2963,6 +3085,6 @@ Verificação automática de coerência Figma ↔ JSON ↔ CSS: `scripts/tokens-
 
 ═══════════════════════════════════════════════════════════
 
-Gerado por scripts/build-llms.mjs em 2026-04-21T22:52:55.309Z
-Versão: 0.5.15
+Gerado por scripts/build-llms.mjs em 2026-04-21T23:20:37.609Z
+Versão: 0.5.16
 Site: https://uxindesign.github.io/design-system-core/

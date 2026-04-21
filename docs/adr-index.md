@@ -3,7 +3,7 @@
 > Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-21. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
 
-11 decisões registradas.
+12 decisões registradas.
 
 | ADR | Título | Status | Data |
 |-----|--------|--------|------|
@@ -18,3 +18,4 @@
 | [ADR-009](decisions/ADR-009-border-control-vs-decorative.md) | Separação de `border.default` (decorativa) e `border.control` (funcional) | Aceita — Implementada em 0.5.0 | 2026-04-16 |
 | [ADR-010](decisions/ADR-010-abolir-white-black-puros.md) | Remoção de `foundation.color.white` e `foundation.color.black` puros | Aceita — Implementada em 0.5.0 | 2026-04-16 |
 | [ADR-011](decisions/ADR-011-renaming-tokens-semanticos-de-cor.md) | Reestruturação do naming de tokens semânticos de cor | Aceita — Implementada em 0.5.0 | 2026-04-17 |
+| [ADR-012](decisions/ADR-012-typography-tokens-divergence.md) | Tokens de line-height e letter-spacing divergem por design entre Figma e JSON | Aceita | 2026-04-21 |

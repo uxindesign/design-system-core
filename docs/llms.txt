@@ -1,6 +1,6 @@
 # Design System Core
 
-> Design system white-label em CSS puro com tokens DTCG em JSON, 18 componentes, modos light/dark, três temas (Default, Ocean, Forest). Versão atual: 0.5.15. Enquanto não houver release oficial 1.0, o projeto fica em 0.x.
+> Design system white-label em CSS puro com tokens DTCG em JSON, 18 componentes, modos light/dark, três temas (Default, Ocean, Forest). Versão atual: 0.5.16. Enquanto não houver release oficial 1.0, o projeto fica em 0.x.
 
 Repositório: https://github.com/uxindesign/design-system-core
 Site: https://uxindesign.github.io/design-system-core/
@@ -62,6 +62,7 @@ Arquivo completo para LLMs: https://uxindesign.github.io/design-system-core/docs
 - [ADR-009 — Separação de `border.default` (decorativa) e `border.control` (funcional)](https://uxindesign.github.io/design-system-core/docs/decisions/adr-009-border-control-vs-decorative.html) — Aceita — Implementada em 0.5.0
 - [ADR-010 — Remoção de `foundation.color.white` e `foundation.color.black` puros](https://uxindesign.github.io/design-system-core/docs/decisions/adr-010-abolir-white-black-puros.html) — Aceita — Implementada em 0.5.0
 - [ADR-011 — Reestruturação do naming de tokens semânticos de cor](https://uxindesign.github.io/design-system-core/docs/decisions/adr-011-renaming-tokens-semanticos-de-cor.html) — Aceita — Implementada em 0.5.0
+- [ADR-012 — Tokens de line-height e letter-spacing divergem por design entre Figma e JSON](https://uxindesign.github.io/design-system-core/docs/decisions/adr-012-typography-tokens-divergence.html) — Aceita
 
 ## Processo
 
@@ -89,4 +90,4 @@ Arquivo completo para LLMs: https://uxindesign.github.io/design-system-core/docs
 
 ---
 
-Gerado por `scripts/build-llms.mjs` em 2026-04-21T22:52:55.309Z.
+Gerado por `scripts/build-llms.mjs` em 2026-04-21T23:20:37.609Z.
