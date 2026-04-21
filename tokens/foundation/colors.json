@@ -548,6 +548,39 @@
             "$description": "Blue-400 at 32% opacity. Toned active in dark mode."
           }
         }
+      },
+      "disabled": {
+        "$description": "Tint colors for disabled button fills. Pre-blended neutral-leaning values; semantic tokens brand.disabled / feedback.*.disabled alias these.",
+        "brand-light": {
+          "$type": "color",
+          "$value": "rgba(125, 158, 232, 0.50)",
+          "$description": "Disabled fill for Button Brand in light mode."
+        },
+        "brand-dark": {
+          "$type": "color",
+          "$value": "#4F637D",
+          "$description": "Disabled fill for Button Brand in dark mode (pre-blended opaque)."
+        },
+        "success-light": {
+          "$type": "color",
+          "$value": "rgba(122, 184, 145, 0.50)",
+          "$description": "Disabled fill for Button Success in light mode."
+        },
+        "success-dark": {
+          "$type": "color",
+          "$value": "#486E55",
+          "$description": "Disabled fill for Button Success in dark mode."
+        },
+        "error-light": {
+          "$type": "color",
+          "$value": "rgba(194, 112, 112, 0.40)",
+          "$description": "Disabled fill for Button Danger/Error in light mode."
+        },
+        "error-dark": {
+          "$type": "color",
+          "$value": "#7B5050",
+          "$description": "Disabled fill for Button Danger/Error in dark mode."
+        }
       }
     }
   }

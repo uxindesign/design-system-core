@@ -4,14 +4,6 @@ Itens fora do escopo imediato mas que devem ser implementados. Organizados por p
 
 ## Alta prioridade
 
-### Revisitar rgba hardcoded em semantic tokens (dívida de ADR-011)
-
-- `semantic.brand.disabled` tem `rgba(125, 158, 232, 0.50)` (light) e `#4F637D` (dark) literais em `tokens/semantic/*.json`. Viola a regra "semantic nunca hardcoded".
-- `semantic.brand.content.contrast-disabled` tem `rgba(255, 255, 255, 0.80)` literal.
-- Mesma pattern em `feedback.*.disabled` e `feedback.*.content.contrast-disabled`.
-
-Proposta: criar tokens foundation correspondentes em `colors.json` (overlay branco/preto ou colored com 40–50%) e apontar semantic pra eles.
-
 ### Preencher `docs/brand-principles.md`
 
 Template existe, conteúdo real ainda não foi definido. Passa por: missão, 3 princípios de design, tom de voz, identidade visual, logo.

@@ -105,7 +105,7 @@
       },
       "disabled": {
         "$type": "color",
-        "$value": "rgba(125, 158, 232, 0.50)",
+        "$value": "{foundation.color.disabled.brand-light}",
         "$description": "Fill brand em estado disabled."
       },
       "toned": {
@@ -138,7 +138,7 @@
         },
         "contrast-disabled": {
           "$type": "color",
-          "$value": "rgba(255, 255, 255, 0.80)",
+          "$value": "{foundation.color.overlay.white.80}",
           "$description": "Conteúdo disabled sobre fill brand disabled."
         }
       }
@@ -207,7 +207,7 @@
         },
         "disabled": {
           "$type": "color",
-          "$value": "rgba(122, 184, 145, 0.50)",
+          "$value": "{foundation.color.disabled.success-light}",
           "$description": "Fill success disabled."
         },
         "content": {
@@ -223,7 +223,7 @@
           },
           "contrast-disabled": {
             "$type": "color",
-            "$value": "rgba(255, 255, 255, 0.80)",
+            "$value": "{foundation.color.overlay.white.80}",
             "$description": "Conteúdo disabled sobre fill success disabled."
           }
         }
@@ -290,7 +290,7 @@
         },
         "disabled": {
           "$type": "color",
-          "$value": "rgba(194, 112, 112, 0.40)",
+          "$value": "{foundation.color.disabled.error-light}",
           "$description": "Fill error disabled."
         },
         "content": {
@@ -306,7 +306,7 @@
           },
           "contrast-disabled": {
             "$type": "color",
-            "$value": "rgba(255, 255, 255, 0.80)",
+            "$value": "{foundation.color.overlay.white.80}",
             "$description": "Conteúdo disabled sobre fill error disabled."
           }
         }
