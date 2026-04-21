@@ -74,6 +74,21 @@
 <p>O formato é baseado em <a href="https://keepachangelog.com/pt-BR/1.1.0/">Keep a Changelog</a> e o versionamento segue <a href="https://semver.org/lang/pt-BR/">Semantic Versioning</a>.</p>
 <p>Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na faixa 0.x. Regras de bump documentadas em <code>docs/process-versioning.html</code>.</p>
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
+<h2>[0.5.13]</h2>
+<h3>Corrigido</h3>
+<p>Audit completo dos 9 arquivos <code>foundations-*.html</code> restantes (após PR #19 auto-gerar <code>theme-colors</code>). Descobertos 3 arquivos com drift real:</p>
+<ul>
+<li><strong><code>foundations-motion.html</code></strong>: <code>--ds-duration-fast</code> mostrava <code>100ms</code> mas CSS real é <code>150ms</code> (divergência em 2 lugares — label demo + tabela). Tabela de easings usava keywords CSS imprecisas (<code>ease</code>, <code>ease-in</code>, <code>ease-out</code>, <code>ease-in-out</code>) — o CSS real usa <code>cubic-bezier(0.4, 0, 0.2, 1)</code> etc, que <strong>não são equivalentes</strong> às keywords. Corrigido: duration, tabela com valores cubic-bezier reais, labels demo com descrição semântica (<code>padrão</code>, <code>acelerando</code>, <code>desacelerando</code>, <code>suave</code>) em vez de keyword enganosa.</li>
+<li><strong><code>foundations-opacity.html</code></strong>: <code>&lt;code&gt;--ds-color-overlay-black-5&lt;/code&gt;</code> era <strong>token fantasma</strong> — o nome CSS correto é <code>--ds-overlay-black-5</code> (sem <code>color-</code>). Corrigido.</li>
+<li><strong><code>foundations-borders.html</code></strong>: duas tabelas de cores de borda (<code>Border Colors</code>, <code>Feedback Border Colors</code>) estavam com 7 valores desatualizados pós PR #18 <strong>e</strong> duplicavam informação já presente em <code>foundations-theme-colors.html</code> (que é auto-gerada). Removidas; substituídas por parágrafo linkando pra Theme Colors. Mantida só a tabela de <code>Border Widths</code>, que está correta.</li>
+</ul>
+<h3>Confirmado em dia</h3>
+<p><code>foundations-typography.html</code>, <code>foundations-spacing.html</code>, <code>foundations-radius.html</code>, <code>foundations-elevation.html</code>, <code>foundations-zindex.html</code>, <code>foundations-colors.html</code> — 0 drift. Os &quot;falsos positivos&quot; do audit automático eram tabelas conceituais (elevation mapeia &quot;nível → combinação de tokens&quot;; zindex mostra &quot;uso por token&quot;; opacity é <code>&lt;div&gt;</code> custom não <code>&lt;table&gt;</code>) que o parser genérico confundiu com tabelas de valor.</p>
+<h3>Notas</h3>
+<ul>
+<li>Princípio de não-duplicação aplicado: quando um token semântico tem seu valor canônico em <code>foundations-theme-colors.html</code>, outras páginas de foundation <strong>não</strong> repetem — linkam. Evita drift futuro.</li>
+<li>Próximo passo: revisão equivalente nas camadas <strong>Semantic</strong> e <strong>Component</strong> (páginas de docs e Figma).</li>
+</ul>
 <h2>[0.5.12]</h2>
 <h3>Corrigido</h3>
 <ul>
