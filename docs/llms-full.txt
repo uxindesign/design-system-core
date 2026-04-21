@@ -3085,6 +3085,6 @@ Verificação automática de coerência Figma ↔ JSON ↔ CSS: `scripts/tokens-
 
 ═══════════════════════════════════════════════════════════
 
-Gerado por scripts/build-llms.mjs em 2026-04-21T23:20:37.609Z
+Gerado por scripts/build-llms.mjs em 2026-04-21T23:21:12.639Z
 Versão: 0.5.16
 Site: https://uxindesign.github.io/design-system-core/
