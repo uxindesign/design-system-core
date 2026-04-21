@@ -74,6 +74,22 @@
 <p>O formato é baseado em <a href="https://keepachangelog.com/pt-BR/1.1.0/">Keep a Changelog</a> e o versionamento segue <a href="https://semver.org/lang/pt-BR/">Semantic Versioning</a>.</p>
 <p>Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na faixa 0.x. Regras de bump documentadas em <code>docs/process-versioning.html</code>.</p>
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
+<h2>[0.5.16]</h2>
+<h3>Adicionado</h3>
+<ul>
+<li><strong>ADR-012</strong> — <em>Tokens de line-height e letter-spacing divergem por design entre Figma e JSON.</em> Formaliza que esses dois grupos de tokens são representados em unidades incompatíveis (PX no Figma vs ratio/rem/em no JSON) por limitação da Plugin API do Figma e requisito WCAG 1.4.4 do CSS. Os dois lados são canônicos em seus contextos de consumo; <strong>não sincronizam entre si</strong>.</li>
+<li><strong>Categoria <code>BY_DESIGN</code></strong> no sync Figma → JSON. Listas <code>FIGMA_ONLY_PATHS</code> e <code>JSON_ONLY_PATHS</code> em <code>scripts/lib/figma-dtcg.mjs</code> reconhecem tokens que existem só de um lado por escolha documentada. Ficam em <code>BY_DESIGN</code> (informativo) em vez de falso-positivarem como <code>NEW_IN_FIGMA</code> ou <code>MISSING_IN_FIGMA</code>.</li>
+</ul>
+<h3>Corrigido (efeito do ADR-012 no sync)</h3>
+<p>Antes: sync reportava <strong>23 NEW_IN_FIGMA + 14 MISSING_IN_FIGMA</strong> (37 falsos drifts) em line-height/letter-spacing, mascarando drifts reais.</p>
+<p>Depois: <strong>0 NEW_IN_FIGMA + 0 MISSING_IN_FIGMA + 37 BY_DESIGN</strong> (informativo). Dry-run sai com exit 0. Qualquer drift novo em typography (ex: valor real diferente em <code>semantic.brand.hover</code>) continua detectado.</p>
+<h3>Atualizado</h3>
+<ul>
+<li><code>docs/process-figma-sync.md</code>: tabela de categorias passou de 4 pra 6 (inclui <code>CSS_ONLY</code> e <code>BY_DESIGN</code>, ambas marcadas como &quot;não aplica em <code>--write</code>&quot;).</li>
+<li><code>scripts/sync-tokens-from-figma.mjs</code>: relatório inclui contagem e seção <code>BY_DESIGN</code> com indicação de lado (<code>figma-only</code> ou <code>json-only</code>).</li>
+</ul>
+<h3>Contexto operacional</h3>
+<p>Issue #23 (origem) fica <strong>fechada</strong> com este PR. Questão de unificação futura via composite typography tokens fica em issue #27 (ADR-013 a abrir quando for priorizada).</p>
 <h2>[0.5.15]</h2>
 <h3>Consolidado</h3>
 <p>Auditoria do <code>CLAUDE.md</code> contra o estado real do repo + Figma + contexto externo (que vivia em workspace Claude Project). Objetivo: tornar o repo fonte única de verdade, sem ambiguidades.</p>

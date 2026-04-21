@@ -61,7 +61,7 @@ O script:
 1. Lê `.figma-snapshot.json` (ou `--snapshot <path>` pra outro caminho).
 2. Constrói o estado esperado dos JSONs (`tokens/foundation/`, `tokens/semantic/`, `tokens/component/`) a partir das Variables.
 3. Lê os JSONs atuais e compara.
-4. Reporta em 4 categorias:
+4. Reporta em 6 categorias:
 
 | Categoria | Significado | Ação em `--write` |
 |-----------|-------------|-------------------|
@@ -69,10 +69,14 @@ O script:
 | **NEW_IN_FIGMA** | Figma tem, JSON não. | Não cria — revisão manual. |
 | **MISSING_IN_FIGMA** | JSON tem, Figma não. | Não deleta — revisão manual. |
 | **ALIAS_BROKEN** | Figma aponta pra variável inexistente. | Não resolve — fix no Figma. |
+| **CSS_ONLY** | Token existe dos dois lados mas representação diverge por capacidade CSS (font family stack, `rem`, weight numérico). Introduzido após PR #18 / 0.5.11. | **Não aplica** — aplicar regridiria o CSS (ex: trocaria `'Inter', system-ui, ...` por `"Inter"`; ou `0.875rem` por `14`, quebrando WCAG 1.4.4). |
+| **BY_DESIGN** | Token existe só de um lado por escolha arquitetural documentada — ver **ADR-012** (line-height/letter-spacing: PX no Figma, ratio/em no JSON). | **Não aplica** — não é drift, é arquitetura. |
 
-Se tudo zerar, Figma e JSON estão em dia. Exit 0.
+Se as 4 primeiras categorias zerarem, Figma e JSON estão em dia. Exit 0.
 
-Se tem divergências, exit 1. Review no output antes de aplicar.
+Se tem divergências reais (VALUE_DRIFT, NEW_IN_FIGMA, MISSING_IN_FIGMA), exit 1. CSS_ONLY e BY_DESIGN são informativos — não contam como divergência.
+
+Review no output antes de aplicar.
 
 ## Passo 3 — aplicar VALUE_DRIFT
 

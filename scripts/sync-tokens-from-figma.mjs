@@ -29,6 +29,12 @@
  *   NEW_IN_FIGMA       Figma tem, JSON não. `--write` não cria — ação manual.
  *   MISSING_IN_FIGMA   JSON tem, Figma não. `--write` não deleta — ação manual.
  *   ALIAS_BROKEN       variável Figma aponta pra ID inexistente.
+ *   CSS_ONLY           token existe em ambos, mas representação diverge por
+ *                      capacidade CSS (font family stack, rem, weight numérico).
+ *                      Não aplica em `--write` (evita regressão CSS).
+ *   BY_DESIGN          token existe só em um lado por escolha arquitetural
+ *                      documentada (ADR-012 — line-height/letter-spacing em
+ *                      PX no Figma vs ratio/em no JSON). Informativo, não sync.
  *
  * Exit codes:
  *   0 — sem divergências ou --write bem sucedido.
@@ -86,6 +92,7 @@ function report(diffs, issues) {
   const total = diffs.VALUE_DRIFT.length + diffs.NEW_IN_FIGMA.length + diffs.MISSING_IN_FIGMA.length;
   const aliasBroken = issues.filter((i) => i.category === "ALIAS_BROKEN").length;
   const cssOnly = (diffs.CSS_ONLY || []).length;
+  const byDesign = (diffs.BY_DESIGN || []).length;
 
   console.log("");
   console.log("═══ sync-tokens-from-figma ═════════════════════════════");
@@ -93,7 +100,8 @@ function report(diffs, issues) {
   console.log(`NEW_IN_FIGMA     (Figma tem, JSON não):      ${diffs.NEW_IN_FIGMA.length}`);
   console.log(`MISSING_IN_FIGMA (JSON tem, Figma não):      ${diffs.MISSING_IN_FIGMA.length}`);
   console.log(`ALIAS_BROKEN     (Figma aponta pra órfão):   ${aliasBroken}`);
-  console.log(`CSS_ONLY         (informativo, não sync):    ${cssOnly}`);
+  console.log(`CSS_ONLY         (repr. CSS-específica):     ${cssOnly}`);
+  console.log(`BY_DESIGN        (divergência arquit. ADR):  ${byDesign}`);
   console.log("═════════════════════════════════════════════════════════");
 
   const section = (title, items, format) => {
@@ -127,6 +135,13 @@ function report(diffs, issues) {
     "CSS_ONLY (representação CSS-específica — JSON preserva, Figma aproxima)",
     diffs.CSS_ONLY || [],
     (d) => `${d.token}\n    Figma: ${fmt(d.figma)}\n    JSON:  ${fmt(d.json)}`
+  );
+  section(
+    "BY_DESIGN (ADR-012 — divergência arquitetural line-height/letter-spacing)",
+    diffs.BY_DESIGN || [],
+    (d) => d.side === 'figma-only'
+      ? `${d.token} = ${fmt(d.figma)} (só no Figma, ${d.side})`
+      : `${d.token} = ${fmt(d.json)} (só no JSON, ${d.side})`
   );
 
   console.log("");

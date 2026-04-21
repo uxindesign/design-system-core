@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-04-21T22:52:18.896Z",
-  "version": "0.5.15",
-  "count": 11,
+  "generatedAt": "2026-04-21T23:19:17.419Z",
+  "version": "0.5.16",
+  "count": 12,
   "adrs": [
     {
       "id": "ADR-001",
@@ -101,6 +101,15 @@
       "date": "2026-04-17",
       "sourceFile": "docs/decisions/ADR-011-renaming-tokens-semanticos-de-cor.md",
       "url": "https://uxindesign.github.io/design-system-core/docs/decisions/adr-011-renaming-tokens-semanticos-de-cor.html"
+    },
+    {
+      "id": "ADR-012",
+      "num": 12,
+      "title": "Tokens de line-height e letter-spacing divergem por design entre Figma e JSON",
+      "status": "Aceita",
+      "date": "2026-04-21",
+      "sourceFile": "docs/decisions/ADR-012-typography-tokens-divergence.md",
+      "url": "https://uxindesign.github.io/design-system-core/docs/decisions/adr-012-typography-tokens-divergence.html"
     }
   ]
 }

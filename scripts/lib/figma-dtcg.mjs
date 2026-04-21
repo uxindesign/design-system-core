@@ -317,15 +317,44 @@ function isCssOnlyToken(token) {
   return CSS_ONLY_TOKENS.some((rx) => rx.test(token));
 }
 
+// ADR-012: tokens de line-height e letter-spacing têm representação divergente
+// por design — Figma usa PX (limite da Plugin API pra lineHeight/letterSpacing
+// em text styles); JSON usa ratio unitless / rem / em (requisito CSS + WCAG
+// 1.4.4 "Resize Text"). Não sincronizam entre si; cada lado é canônico no seu
+// contexto. Vão pra categoria BY_DESIGN (informativa, 0 drift).
+const FIGMA_ONLY_PATHS = [
+  /^foundation\.typography\.font\.line-height\./,      // px absoluto nos text styles Figma
+  /^foundation\.typography\.font\.letter-spacing\./,   // px absoluto
+];
+const JSON_ONLY_PATHS = [
+  /^foundation\.typography\.line\.height\./,           // ratio / rem no CSS gerado
+  /^foundation\.typography\.letter\.spacing\./,        // em no CSS gerado
+];
+
+function isFigmaOnlyToken(token) {
+  return FIGMA_ONLY_PATHS.some((rx) => rx.test(token));
+}
+function isJsonOnlyToken(token) {
+  return JSON_ONLY_PATHS.some((rx) => rx.test(token));
+}
+
 /**
  * Compara expected (Figma) vs actual (JSON). Retorna:
- *   { VALUE_DRIFT, NEW_IN_FIGMA, MISSING_IN_FIGMA, CSS_ONLY }
- * VALUE_DRIFT é aplicável em --write.
- * CSS_ONLY é informativo — tokens que têm representação rica no JSON (stack,
- * unidade rem, weight numérico) que o Figma não representa bem. Não aplicar.
+ *   { VALUE_DRIFT, NEW_IN_FIGMA, MISSING_IN_FIGMA, CSS_ONLY, BY_DESIGN }
+ *
+ * - VALUE_DRIFT: mesmo nome, valor diferente. Aplicável em --write.
+ * - NEW_IN_FIGMA: Figma tem, JSON não. Ação manual.
+ * - MISSING_IN_FIGMA: JSON tem, Figma não. Ação manual.
+ * - CSS_ONLY (ADR-011 followup): mesmo token, representação diferente por
+ *   capacidade CSS (fallback stack, rem, weight numérico). Informativo.
+ * - BY_DESIGN (ADR-012): token existe só de um lado por escolha arquitetural
+ *   documentada (line-height/letter-spacing). Informativo, 0 drift.
  */
 export function compareStates(expected, actual) {
-  const diffs = { VALUE_DRIFT: [], NEW_IN_FIGMA: [], MISSING_IN_FIGMA: [], CSS_ONLY: [] };
+  const diffs = {
+    VALUE_DRIFT: [], NEW_IN_FIGMA: [], MISSING_IN_FIGMA: [],
+    CSS_ONLY: [], BY_DESIGN: [],
+  };
   const allFiles = new Set([...Object.keys(expected), ...Object.keys(actual)]);
   for (const file of allFiles) {
     const exp = expected[file] || {};
@@ -335,9 +364,19 @@ export function compareStates(expected, actual) {
       const e = exp[key];
       const a = act[key];
       if (e && !a) {
-        diffs.NEW_IN_FIGMA.push({ file, token: key, figma: e.$value });
+        // Token só no Figma
+        if (isFigmaOnlyToken(key)) {
+          diffs.BY_DESIGN.push({ file, token: key, side: 'figma-only', figma: e.$value });
+        } else {
+          diffs.NEW_IN_FIGMA.push({ file, token: key, figma: e.$value });
+        }
       } else if (!e && a) {
-        diffs.MISSING_IN_FIGMA.push({ file, token: key, json: a.$value });
+        // Token só no JSON
+        if (isJsonOnlyToken(key)) {
+          diffs.BY_DESIGN.push({ file, token: key, side: 'json-only', json: a.$value });
+        } else {
+          diffs.MISSING_IN_FIGMA.push({ file, token: key, json: a.$value });
+        }
       } else if (e && a) {
         if (normalizeForCompare(e.$value) !== normalizeForCompare(a.$value)) {
           if (isCssOnlyToken(key)) {
