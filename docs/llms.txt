@@ -89,4 +89,4 @@ Arquivo completo para LLMs: https://uxindesign.github.io/design-system-core/docs
 
 ---
 
-Gerado por `scripts/build-llms.mjs` em 2026-04-21T16:25:04.015Z.
+Gerado por `scripts/build-llms.mjs` em 2026-04-21T17:14:27.320Z.
