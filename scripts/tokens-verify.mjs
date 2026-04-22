@@ -5,10 +5,10 @@
  * Três checagens:
  *   1. JSONs em tokens/ — referências `{x.y.z}` resolvem, valores válidos.
  *   2. JSON ↔ CSS — tokens gerados em css/tokens/generated/*.css batem com os JSONs.
- *   3. JSON ↔ Figma Variables — valores e nomes batem com a coleção do arquivo
- *      `PRYS2kL7VdC1MtVWfZvuDN`. Requer variável de ambiente FIGMA_PAT com
- *      permissão `file_variables:read`. Se FIGMA_PAT não estiver presente,
- *      a checagem é pulada com aviso (nao falha o build).
+ *   3. JSON ↔ Figma Variables — valores e nomes batem com o snapshot Figma
+ *      em `.figma-snapshot.json` (gitignored, gerado por use_figma via Claude Code).
+ *      Se o snapshot não existir, a checagem é pulada com aviso (não falha o build).
+ *      Ver docs/process-figma-sync.md para gerar o snapshot.
  *
  * Saídas:
  *   - Terminal: tabela texto com sumário e divergências.
@@ -22,12 +22,19 @@
  *
  * Uso:
  *   node scripts/tokens-verify.mjs
- *   FIGMA_PAT=figd_xxx node scripts/tokens-verify.mjs
+ *   (sem flags — se .figma-snapshot.json existir, inclui checagem Figma ↔ JSON)
  */
 
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+
+import {
+  readFigmaSnapshot,
+  buildExpectedState,
+  readCurrentState as readFigmaCurrentState,
+  compareStates,
+} from "./lib/figma-dtcg.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
@@ -35,7 +42,7 @@ const TOKENS_DIR = path.join(ROOT, "tokens");
 const CSS_DIR = path.join(ROOT, "css", "tokens", "generated");
 const OUT_JSON = path.join(ROOT, "docs", "api", "tokens-sync.json");
 const OUT_HTML = path.join(ROOT, "docs", "tokens-sync.html");
-const FIGMA_FILE_KEY = "PRYS2kL7VdC1MtVWfZvuDN";
+const FIGMA_SNAPSHOT_PATH = path.join(ROOT, ".figma-snapshot.json");
 
 // -----------------------------------------------------------------------------
 // utilidades
@@ -243,57 +250,98 @@ function compareJsonToCss({ shared, light, dark, lightAll, darkAll }) {
 }
 
 // -----------------------------------------------------------------------------
-// 3. Comparar com Figma Variables
+// 3. Comparar com Figma Variables (via snapshot local)
 // -----------------------------------------------------------------------------
+//
+// A REST API GET /v1/files/:key/variables/local exige plano Enterprise.
+// No plano Pro (nosso caso), usamos o snapshot gerado por use_figma numa
+// sessão Claude Code (ver docs/process-figma-sync.md).
+//
+// Se .figma-snapshot.json não existir, a verificação é pulada com aviso.
+// Para gerar o snapshot: iniciar sessão Claude Code e pedir o dump de Variables.
 
-async function fetchFigmaVariables(pat) {
-  const url = `https://api.figma.com/v1/files/${FIGMA_FILE_KEY}/variables/local`;
-  const res = await fetch(url, {
-    headers: { "X-Figma-Token": pat },
-  });
-  if (!res.ok) {
-    throw new Error(`Figma API retornou ${res.status}: ${await res.text()}`);
-  }
-  return res.json();
-}
-
-async function compareJsonToFigma(all, pat) {
-  if (!pat) {
+async function compareJsonToFigma() {
+  if (!fs.existsSync(FIGMA_SNAPSHOT_PATH)) {
     return {
       skipped: true,
-      reason: "FIGMA_PAT ausente. Para ativar a verificação com Figma, exporte FIGMA_PAT=<seu-pat>.",
+      reason: "Snapshot Figma não encontrado (.figma-snapshot.json). Gerar via Claude Code (ver docs/process-figma-sync.md).",
       divergences: [],
+      diffs: null,
     };
   }
-  let figma;
+
+  let meta;
   try {
-    figma = await fetchFigmaVariables(pat);
+    meta = readFigmaSnapshot(FIGMA_SNAPSHOT_PATH);
   } catch (e) {
     return {
       skipped: true,
-      reason: `Erro ao consultar Figma: ${e.message}`,
+      reason: `Snapshot inválido: ${e.message}`,
       divergences: [],
+      diffs: null,
     };
   }
-  // A API retorna meta.variables e meta.variableCollections. Precisamos
-  // mapear variáveis para um formato comparável com os tokens do JSON.
-  // A comparação plena exige resolução de alias entre variáveis Figma,
-  // escolha de modo (Light/Dark), e normalização de formato de cor —
-  // está documentada como TODO abaixo para a próxima iteração.
-  const variables = figma.meta?.variables ?? {};
-  const collections = figma.meta?.variableCollections ?? {};
+
+  const snapshotStat = fs.statSync(FIGMA_SNAPSHOT_PATH);
+  const snapshotAgeH = Math.round((Date.now() - snapshotStat.mtimeMs) / (1000 * 60 * 60));
+
+  const { state: expected, issues } = buildExpectedState(meta);
+  const actual = readFigmaCurrentState(TOKENS_DIR);
+  const diffs = compareStates(expected, actual);
+
+  // Categorias → severidade (conforme ADR-003 revisada — Figma é fonte canônica):
+  //   VALUE_DRIFT      → error   (mesmo token, valores divergem — sync pendente)
+  //   MISSING_IN_FIGMA → error   (JSON tem, Figma não — JSON foi editado direto)
+  //   NEW_IN_FIGMA     → warning (Figma tem, JSON não — sync pendente, ação manual)
+  //   ALIAS_BROKEN     → warning (alias Figma quebrado — investigar no Figma)
+  const divergences = [
+    ...diffs.VALUE_DRIFT.map((d) => ({
+      level: "error",
+      category: "VALUE_DRIFT",
+      token: d.token,
+      message: `valor difere: Figma=${JSON.stringify(d.figma)} / JSON=${JSON.stringify(d.json)}`,
+      figma: d.figma,
+      json: d.json,
+    })),
+    ...diffs.MISSING_IN_FIGMA.map((d) => ({
+      level: "error",
+      category: "DRIFT_FROM_SOURCE",
+      token: d.token,
+      message: `existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma`,
+      json: d.json,
+    })),
+    ...diffs.NEW_IN_FIGMA.map((d) => ({
+      level: "warning",
+      category: "NEEDS_SYNC",
+      token: d.token,
+      message: `existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma`,
+      figma: d.figma,
+    })),
+    ...issues
+      .filter((i) => i.category === "ALIAS_BROKEN")
+      .map((i) => ({
+        level: "warning",
+        category: "ALIAS_BROKEN",
+        token: i.token,
+        message: `alias Figma quebrado — alvo: ${i.target}`,
+      })),
+  ];
+
   return {
     skipped: false,
+    snapshotAge: `${snapshotAgeH}h`,
     summary: {
-      figmaVariableCount: Object.keys(variables).length,
-      figmaCollectionCount: Object.keys(collections).length,
-      jsonTokenCount: Object.keys(all).length,
+      figmaVariableCount: Object.keys(meta.variables).length,
+      figmaCollectionCount: Object.keys(meta.variableCollections).length,
+      VALUE_DRIFT: diffs.VALUE_DRIFT.length,
+      NEEDS_SYNC: diffs.NEW_IN_FIGMA.length,
+      DRIFT_FROM_SOURCE: diffs.MISSING_IN_FIGMA.length,
+      ALIAS_BROKEN: issues.filter((i) => i.category === "ALIAS_BROKEN").length,
+      CSS_ONLY: (diffs.CSS_ONLY || []).length,
+      BY_DESIGN: (diffs.BY_DESIGN || []).length,
     },
-    // TODO: comparação nome-por-nome, valor-por-valor, modo-por-modo.
-    // Exige mapeamento das convenções (Figma usa / como separador, DTCG usa .)
-    // e resolução de alias. A primeira iteração apenas confirma conectividade.
-    divergences: [],
-    note: "Comparação detalhada Figma ↔ JSON pendente. Primeira iteração confirma que a API responde e coleta a contagem de variáveis.",
+    divergences,
+    diffs,
   };
 }
 
@@ -434,13 +482,17 @@ async function main() {
   // Para a verificação Figma usa o pool combinado (light) como representativo.
   // A comparação específica por modo será implementada junto com a resolução
   // de alias Figma.
-  const jsonVsFigma = await compareJsonToFigma(bundle.lightAll, process.env.FIGMA_PAT);
+  const jsonVsFigma = await compareJsonToFigma();
+
+  const figmaErrors = (jsonVsFigma.divergences ?? []).filter((d) => d.level === "error").length;
+  const figmaWarnings = (jsonVsFigma.divergences ?? []).filter((d) => d.level === "warning").length;
 
   const errors = jsonIntegrity.filter((d) => d.level === "error").length +
     jsonVsCss.filter((d) => d.level === "error").length +
-    (jsonVsFigma.divergences?.length || 0);
+    figmaErrors;
   const warnings = jsonIntegrity.filter((d) => d.level === "warning").length +
-    jsonVsCss.filter((d) => d.level === "warning").length;
+    jsonVsCss.filter((d) => d.level === "warning").length +
+    figmaWarnings;
 
   const report = {
     generatedAt: new Date().toISOString(),
@@ -468,21 +520,34 @@ async function main() {
   if (jsonVsFigma.skipped) {
     console.log(`JSON ↔ Figma:     SKIP — ${jsonVsFigma.reason}`);
   } else {
-    console.log(`JSON ↔ Figma:     ${jsonVsFigma.divergences.length === 0 ? "OK (smoke)" : `${jsonVsFigma.divergences.length} divergências`}`);
-    if (jsonVsFigma.note) console.log(`                  nota: ${jsonVsFigma.note}`);
+    const s = jsonVsFigma.summary;
+    const figmaStatus = figmaErrors === 0 && figmaWarnings === 0
+      ? "OK"
+      : `${figmaErrors} error(s) / ${figmaWarnings} warning(s)`;
+    console.log(`JSON ↔ Figma:     ${figmaStatus} — snapshot ${jsonVsFigma.snapshotAge} atrás`);
+    console.log(`  VALUE_DRIFT=${s.VALUE_DRIFT}  DRIFT_FROM_SOURCE=${s.DRIFT_FROM_SOURCE}  NEEDS_SYNC=${s.NEEDS_SYNC}  ALIAS_BROKEN=${s.ALIAS_BROKEN}  CSS_ONLY=${s.CSS_ONLY}  BY_DESIGN=${s.BY_DESIGN}`);
   }
   console.log(`Avisos:           ${warnings}`);
   console.log(`Erros:            ${errors}`);
   console.log("═════════════════════════════════════════════");
   console.log("");
 
-  if (errors > 0) {
-    console.log("Divergências:");
-    for (const d of [...jsonIntegrity, ...jsonVsCss.filter((x) => x.level === "error"), ...jsonVsFigma.divergences]) {
-      console.log(`  • [${d.level || "error"}] ${d.token}${d.cssVar ? ` → ${d.cssVar}` : ""}`);
+  if (errors > 0 || warnings > 0) {
+    const figmaDivergences = jsonVsFigma.divergences ?? [];
+    const allIssues = [
+      ...jsonIntegrity,
+      ...jsonVsCss.filter((x) => x.level === "error"),
+      ...figmaDivergences,
+    ];
+    console.log(`Divergências (${allIssues.length}):`);
+    for (const d of allIssues) {
+      const tag = d.category ? `${d.level}/${d.category}` : (d.level || "error");
+      console.log(`  • [${tag}] ${d.token}${d.cssVar ? ` → ${d.cssVar}` : ""}`);
       console.log(`      ${d.message}`);
-      if (d.json !== undefined || d.css !== undefined) {
+      if (d.json !== undefined && d.css !== undefined) {
         console.log(`      JSON: ${JSON.stringify(d.json)}  /  CSS: ${JSON.stringify(d.css)}`);
+      } else if (d.figma !== undefined && d.json !== undefined) {
+        console.log(`      Figma: ${JSON.stringify(d.figma)}  /  JSON: ${JSON.stringify(d.json)}`);
       }
     }
     console.log("");

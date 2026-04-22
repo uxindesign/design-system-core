@@ -38,8 +38,6 @@ jobs:
 
       - name: Verify tokens
         id: verify
-        env:
-          FIGMA_PAT: ${{ secrets.FIGMA_PAT }}
         run: |
           set +e
           node scripts/tokens-verify.mjs
@@ -72,7 +70,8 @@ jobs:
               body,
             });
 
-      - name: Note — Figma API usage
-        if: env.FIGMA_PAT == ''
+      - name: Note — snapshot Figma ausente
         run: |
-          echo "::notice::FIGMA_PAT secret não configurado. Verificação JSON ↔ Figma pulada. Adicione o secret em Settings → Secrets → Actions para ativar."
+          if [ ! -f .figma-snapshot.json ]; then
+            echo "::notice::Snapshot Figma não encontrado. Verificação JSON ↔ Figma pulada. Gerar via Claude Code (ver docs/process-figma-sync.md)."
+          fi
