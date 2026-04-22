@@ -74,6 +74,11 @@
 <p>O formato é baseado em <a href="https://keepachangelog.com/pt-BR/1.1.0/">Keep a Changelog</a> e o versionamento segue <a href="https://semver.org/lang/pt-BR/">Semantic Versioning</a>.</p>
 <p>Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na faixa 0.x. Regras de bump documentadas em <code>docs/process-versioning.html</code>.</p>
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
+<h3>Adicionado (tooling)</h3>
+<ul>
+<li><strong><code>scripts/lib/figma-node-audit.mjs</code></strong> — nova lib de helpers para audits de nodes Figma que têm a propriedade dividida em 4 campos individuais. Inclui <code>isStrokeWeightBound</code>, <code>bindStrokeWeight</code>, <code>classifyStrokeWeight</code> (+ equivalentes pra <code>cornerRadius</code>). Fecha <strong>#34</strong>.</li>
+<li>Seção em <code>CLAUDE.md</code> (&quot;Figma Plugin API — armadilhas&quot;) documentando que <code>strokeWeight</code> e <code>cornerRadius</code> têm binding só via 4 campos individuais, não via top-level.</li>
+</ul>
 <h3>Corrigido (Figma — elevation e focus rings)</h3>
 <p>Fecha <strong>issue #24.3</strong>. Três drifts entre Figma e o canônico (CSS + <code>docs/foundations-elevation.html</code>):</p>
 <ul>

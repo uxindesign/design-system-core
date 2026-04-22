@@ -332,6 +332,7 @@ Coisas que falharam silenciosamente em sessões passadas e que o agente precisa 
 - **`setBoundVariable` pode empilhar** se a propriedade já tinha binding anterior. Limpar antes: setar pra `null` ou pra valor raw, depois rebind.
 - **Truncamento de output ~20KB**: dumps grandes de Variables quebram em chunks via slice(start, end) e agregados off-plugin. Ver `scripts/sync-tokens-from-figma.mjs` e `docs/process-figma-sync.md`.
 - **`hiddenFromPublishing = true`** após `createVariable` falha com "Node not found". Criar primeiro, setar a flag em chamada separada — ou via UI do Figma depois. Documentado nos commits do PR #17 (0.5.10) e PR #18 (0.5.11).
+- **`strokeWeight` bindado vive em 4 campos individuais, não no top-level.** `node.setBoundVariable('strokeWeight', var)` retorna sem erro mas não aplica o binding — e `node.boundVariables.strokeWeight` é sempre `undefined`. O binding real fica em `strokeTopWeight/strokeRightWeight/strokeBottomWeight/strokeLeftWeight`. Auditar cobertura por esses 4 campos; bindar aplicando em todos. Mesma coisa pra `cornerRadius` → `topLeftRadius/topRightRadius/bottomLeftRadius/bottomRightRadius`. Use os helpers em `scripts/lib/figma-node-audit.mjs` (copiar inline em `use_figma` funciona). Descoberto em PR #31 (0.5.17) bindando 78 Focus Rings em Button + Toggle.
 
 ## Quando houver dúvida
 
@@ -351,6 +352,10 @@ O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.
 Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na faixa 0.x. Regras de bump documentadas em `docs/process-versioning.html`.
 
 ## [Não publicado]
+
+### Adicionado (tooling)
+- **`scripts/lib/figma-node-audit.mjs`** — nova lib de helpers para audits de nodes Figma que têm a propriedade dividida em 4 campos individuais. Inclui `isStrokeWeightBound`, `bindStrokeWeight`, `classifyStrokeWeight` (+ equivalentes pra `cornerRadius`). Fecha **#34**.
+- Seção em `CLAUDE.md` ("Figma Plugin API — armadilhas") documentando que `strokeWeight` e `cornerRadius` têm binding só via 4 campos individuais, não via top-level.
 
 ### Corrigido (Figma — elevation e focus rings)
 Fecha **issue #24.3**. Três drifts entre Figma e o canônico (CSS + `docs/foundations-elevation.html`):
@@ -3131,6 +3136,6 @@ Verificação automática de coerência Figma ↔ JSON ↔ CSS: `scripts/tokens-
 
 ═══════════════════════════════════════════════════════════
 
-Gerado por scripts/build-llms.mjs em 2026-04-22T09:11:40.372Z
+Gerado por scripts/build-llms.mjs em 2026-04-22T09:18:31.834Z
 Versão: 0.5.17
 Site: https://uxindesign.github.io/design-system-core/
