@@ -39,6 +39,26 @@ Quando há divergência entre artefatos, resolve-se por tipo de informação:
 
 Regra operacional: arquitetura está acima de valor. Figma pode decidir "brand.hover é blue-800 em vez de blue-700" (valor), mas não pode criar `semantic.color.primary.foreground` se ADR-011 definiu que semantic de cor usa `brand.content.contrast` (arquitetura).
 
+### Camadas de consumo de tokens (ADR-013)
+
+**Foundation nunca aparece em consumidor final.** Consumidor final = `css/components/*.css`, `css/base/*.css`, bindings em componentes Figma, exemplos em docs de uso. Só tokens Semantic ou Component podem ser consumidos lá.
+
+Cadeia permitida:
+
+```
+Foundation  ─┬─►  Semantic
+             └─►  Component    (quando não existe abstração Semantic apropriada)
+Semantic    ─┬─►  Component
+             └─►  Consumidor final
+Component   ──►  Consumidor final
+```
+
+Exceções registradas:
+- `semantic.control.*` só via Component (ADR-006 princípio 9).
+- Componente pode consumir Foundation direto quando não há equivalente Semantic (ex: `component.modal.max-width`); exige entrada explícita no Token Registry justificando.
+
+Enforcement em CI via `npm run verify:tokens`: CSS leak, Figma leak, Registry completude. Ver [ADR-013](docs/decisions/ADR-013-camadas-de-consumo-de-tokens.md) e `tokens/registry.yaml`.
+
 ## Acessos
 
 ### Figma

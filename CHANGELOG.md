@@ -8,6 +8,20 @@ Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na
 
 ## [Não publicado]
 
+### Adicionado (arquitetura — ADR-013 e Token Registry)
+
+Codificada a regra de camadas de consumo de tokens: **Foundation nunca aparece em consumidor final**. CSS de componente, bindings Figma e exemplos em docs só podem consumir Semantic ou Component. A regra sempre existiu implicitamente, mas agora está documentada formalmente e vai ganhar enforcement em CI nas próximas iterações.
+
+- `docs/decisions/ADR-013-camadas-de-consumo-de-tokens.md` — ADR novo. Cadeia permitida, exceções (`semantic.control.*` via componente apenas; componente→foundation quando não há abstração semântica), enforcement planejado em 3 checks, ligação com Token Registry.
+- `CLAUDE.md` — seção "Camadas de consumo de tokens (ADR-013)" adicionada à "Hierarquia de verdade".
+
+Token Registry como artefato vivo (inicial, skeleton):
+
+- `tokens/registry.json` — catálogo com 501 entries (Foundation 231, Semantic 133, Component 137). Campos por entry: `layer`, `type`, `references` (alias, se houver), `sentido`, `escopo`, `contexto`, `usos` (calculado), `decisao`. Inicializado com `TODO` nos campos obrigatórios — preenchimento incremental em PRs subsequentes.
+- `docs/token-registry.md` — vitrine gerada automaticamente do `registry.json`, agrupada por camada → categoria, com seção de detalhe por token (sentido, contexto, decisão, locais de uso).
+- `scripts/build-token-registry.mjs` — script com 3 modos: `--init` (cria stub entries preservando existentes), sem flag (recalcula `usos` via grep em CSS + tokens que referenciam + Figma snapshot quando disponível, e regenera o MD), `--check` (valida completude, falha com exit 1 se houver TODO ou token sem entry).
+- `package.json` — 3 scripts novos: `build:registry`, `build:registry:init`, `verify:registry`.
+
 ### Adicionado (docs — JSON/DTCG em todas as páginas de foundation)
 
 Seção "JSON (DTCG)" adicionada às 7 páginas de foundation que estavam sem ela, completando a cobertura iniciada em motion/opacity/zindex. Cada bloco reflete o token JSON real do arquivo correspondente em `tokens/foundation/`:

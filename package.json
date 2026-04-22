@@ -28,7 +28,10 @@
     "build:llms": "node scripts/build-llms.mjs",
     "build:all": "npm run build:tokens && npm run sync:docs && npm run build:api && npm run build:llms && npm run verify:tokens",
     "sync:tokens-from-figma": "node scripts/sync-tokens-from-figma.mjs",
-    "sync:tokens-from-figma:write": "node scripts/sync-tokens-from-figma.mjs --write"
+    "sync:tokens-from-figma:write": "node scripts/sync-tokens-from-figma.mjs --write",
+    "build:registry": "node scripts/build-token-registry.mjs",
+    "build:registry:init": "node scripts/build-token-registry.mjs --init",
+    "verify:registry": "node scripts/build-token-registry.mjs --check"
   },
   "devDependencies": {
     "@tokens-studio/sd-transforms": "^2.0.3",

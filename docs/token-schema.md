@@ -102,3 +102,4 @@ semantic.typography.*
 - **ADR-010** — Remoção de `foundation.color.white` e `foundation.color.black` puros (Aceita — Implementada em 0.5.0)
 - **ADR-011** — Reestruturação do naming de tokens semânticos de cor (Aceita — Implementada em 0.5.0)
 - **ADR-012** — Tokens de line-height e letter-spacing divergem por design entre Figma e JSON (Aceita)
+- **ADR-013** — Camadas de consumo de tokens — Foundation nunca direto em consumidor final (Aceita)
