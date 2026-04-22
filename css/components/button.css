@@ -8,17 +8,17 @@
   align-items: center;
   justify-content: center;
   gap: var(--ds-button-gap);
-  font-family: var(--ds-button-font-family);
+  font-family: var(--ds-body-font-family-sans);
   font-weight: var(--ds-button-font-weight);
   line-height: var(--ds-control-line-height-md);
   text-decoration: none;
-  border: var(--ds-button-border-width) solid transparent;
+  border: var(--ds-border-width-default) solid transparent;
   border-radius: var(--ds-button-border-radius);
   cursor: pointer;
-  transition: background-color var(--ds-button-transition-duration) var(--ds-button-transition-timing),
-              border-color var(--ds-button-transition-duration) var(--ds-button-transition-timing),
-              color var(--ds-button-transition-duration) var(--ds-button-transition-timing),
-              box-shadow var(--ds-button-transition-duration) var(--ds-button-transition-timing);
+  transition: background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
+              border-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
+              color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
+              box-shadow var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
   white-space: nowrap;
   user-select: none;
 
@@ -26,7 +26,7 @@
   height: var(--ds-button-height-md);
   padding: var(--ds-button-padding-y-md) var(--ds-button-padding-x-md);
   font-size: var(--ds-button-font-size-md);
-  min-width: var(--ds-button-min-target-size);
+  min-width: var(--ds-size-control-min-target);
 }
 
 .ds-btn:focus-visible {
@@ -36,7 +36,7 @@
 
 .ds-btn[disabled],
 .ds-btn--disabled {
-  opacity: var(--ds-button-opacity-disabled);
+  opacity: var(--ds-opacity-disabled);
   cursor: not-allowed;
   pointer-events: none;
 }

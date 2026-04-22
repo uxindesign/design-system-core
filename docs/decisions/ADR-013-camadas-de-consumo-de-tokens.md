@@ -84,6 +84,35 @@ O script `npm run verify:tokens` (`scripts/tokens-verify.mjs`) é estendido com 
 2. **Figma foundation leak**: scan do `.figma-snapshot.json` por bindings apontando pra variáveis da collection Foundation dentro de nodes COMPONENT/COMPONENT_SET.
 3. **Token Registry completude**: toda variável em `tokens/**/*.json` precisa ter entrada em `tokens/registry.yaml` com campos `sentido`, `contexto`, `decisao` preenchidos.
 
+### Quando criar um Component token (refinamento pós-Fase 5)
+
+A primeira execução desta ADR (Fases 0-7) criou tokens component em excesso — 151 novos, dos quais 105 eram aliases 1:1 pra Semantic/Foundation sem variação entre componentes. Exemplos: `component.button.transition-duration`, `component.input.transition-duration`, `component.checkbox.transition-duration` — todos apontando pra `{foundation.duration.fast}` e resolvendo pro mesmo valor, sem razão arquitetural pra divergir.
+
+Isso transgride a intenção da regra. Component token é camada de **decisão específica do componente**, não wrapper mecânico pra evitar Foundation no CSS.
+
+**Criar Component token apenas quando:**
+
+1. **Valor único pro componente** que não tem equivalente em Semantic.
+   Ex: `component.modal.max-width.md = 32.5rem` (nenhum Semantic cobre esse valor; é decisão visual do Modal).
+
+2. **Variação por size/state dentro do componente**, mesmo que aliase Semantic.
+   Ex: `component.button.height.{sm,md,lg}` aliasando `{semantic.size.control.*}`. Justifica porque existem 3 valores relacionados tematicamente (sizing do Button), apesar de cada um ser um alias 1:1.
+
+3. **Decisão de identidade que diverge do padrão Semantic.**
+   Ex: `component.badge.border-radius = {foundation.radius.full}` (identidade pill), `component.modal.border-radius = {foundation.radius.xl}` (elevação de modal vs `radius.component` padrão).
+
+**NÃO criar Component token quando:**
+
+- É alias 1:1 pra Semantic sem variação plausível. O CSS consome Semantic direto — isso não viola a regra, pois Semantic está acima de Foundation na cadeia.
+- O mesmo valor é compartilhado por 3+ componentes sem razão de divergir. Se nunca muda entre componentes, não é decisão de componente — é decisão sistêmica e vive em Semantic.
+- É só pra evitar que o CSS consuma `--ds-{foundation}-*` direto. Nesse caso, a solução correta é criar um Semantic que wrappa o Foundation (categoria geral) e deixar o CSS consumir Semantic, não multiplicar wrappers.
+
+**Exemplo da distinção**:
+- Motion (`duration.fast`, `ease.default`) é decisão sistêmica: sempre os mesmos valores em todo lugar. Vive em **Semantic** (`motion.duration.fast`, `motion.ease.default`), não em cada Component.
+- Border-radius é decisão **por componente** (Badge=full, Modal=xl, Button=component-default, Alert=component-default...). Vive em **Component**.
+
+Aplicação retroativa: **Fase 8** do plano de execução remove os 105 tokens redundantes criados na Fase 5.
+
 ### Token Registry
 
 Criado como parte desta ADR: arquivo único `tokens/registry.yaml` que cataloga todos os tokens do sistema (Foundation, Semantic, Component) com metadados por entrada:

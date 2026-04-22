@@ -8,11 +8,11 @@
 .ds-textarea {
   display: flex;
   width: 100%;
-  border: var(--ds-textarea-border-width) solid var(--ds-border-control-default);
+  border: var(--ds-border-width-default) solid var(--ds-border-control-default);
   border-radius: var(--ds-textarea-border-radius);
   background: var(--ds-surface-default);
-  transition: border-color var(--ds-textarea-transition-duration) var(--ds-textarea-transition-timing),
-              box-shadow var(--ds-textarea-transition-duration) var(--ds-textarea-transition-timing);
+  transition: border-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
+              box-shadow var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
 }
 
 /* Sizes
@@ -48,18 +48,18 @@
   min-height: var(--ds-textarea-min-height-md);
   min-width: 0;
   /* padding-x: wrapper padding + 4px inner offset (equivale ao TextFrame padding do Figma) */
-  padding: var(--ds-textarea-padding-y-md) calc(var(--ds-textarea-padding-x-md) + var(--ds-textarea-field-inner-padding-x));
+  padding: var(--ds-textarea-padding-y-md) calc(var(--ds-textarea-padding-x-md) + var(--ds-space-gap-xs));
   line-height: var(--ds-textarea-field-line-height);
 }
 
 .ds-textarea--sm .ds-textarea__field {
   min-height: var(--ds-textarea-min-height-sm);
-  padding: var(--ds-textarea-padding-y-sm) calc(var(--ds-textarea-padding-x-sm) + var(--ds-textarea-field-inner-padding-x));
+  padding: var(--ds-textarea-padding-y-sm) calc(var(--ds-textarea-padding-x-sm) + var(--ds-space-gap-xs));
 }
 
 .ds-textarea--lg .ds-textarea__field {
   min-height: var(--ds-textarea-min-height-lg);
-  padding: var(--ds-textarea-padding-y-lg) calc(var(--ds-textarea-padding-x-lg) + var(--ds-textarea-field-inner-padding-x));
+  padding: var(--ds-textarea-padding-y-lg) calc(var(--ds-textarea-padding-x-lg) + var(--ds-space-gap-xs));
 }
 
 .ds-textarea__field::placeholder {

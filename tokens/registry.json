@@ -398,7 +398,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.button.font-size.sm": {
       "layer": "component",
@@ -531,7 +532,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.button.background.toned.default": {
       "layer": "component",
@@ -794,7 +796,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.checkbox.gap": {
       "layer": "component",
@@ -832,7 +835,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.checkbox.font-size": {
       "layer": "component",
@@ -1064,7 +1068,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.input.font-size.sm": {
       "layer": "component",
@@ -1425,7 +1430,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.radio.gap": {
       "layer": "component",
@@ -1463,7 +1469,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.radio.font-size": {
       "layer": "component",
@@ -1695,7 +1702,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.select.font-size.sm": {
       "layer": "component",
@@ -2227,7 +2235,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.textarea.font-size.sm": {
       "layer": "component",
@@ -2493,7 +2502,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.toggle.font-size": {
       "layer": "component",
@@ -5217,22 +5227,17 @@
       "usos": {
         "css": [
           {
-            "file": "css/tokens/generated/component.css",
-            "count": 11
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
           }
         ],
         "tokens": [
-          "component.alert.transition-duration",
-          "component.button.transition-duration",
-          "component.checkbox.transition-duration",
-          "component.input.transition-duration",
-          "component.modal.transition-duration",
-          "component.radio.transition-duration",
-          "component.select.transition-duration",
-          "component.tabs.transition-duration",
-          "component.textarea.transition-duration",
-          "component.toggle.transition-duration",
-          "component.tooltip.transition-duration"
+          "semantic.motion.duration.fast",
+          "semantic.motion.duration.fast"
         ],
         "figma": []
       }
@@ -5246,8 +5251,20 @@
       "contexto": "TODO",
       "decisao": "TODO",
       "usos": {
-        "css": [],
-        "tokens": [],
+        "css": [
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "semantic.motion.duration.normal",
+          "semantic.motion.duration.normal"
+        ],
         "figma": []
       }
     },
@@ -5260,8 +5277,20 @@
       "contexto": "TODO",
       "decisao": "TODO",
       "usos": {
-        "css": [],
-        "tokens": [],
+        "css": [
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "semantic.motion.duration.slow",
+          "semantic.motion.duration.slow"
+        ],
         "figma": []
       }
     },
@@ -5276,22 +5305,17 @@
       "usos": {
         "css": [
           {
-            "file": "css/tokens/generated/component.css",
-            "count": 11
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
           }
         ],
         "tokens": [
-          "component.alert.transition-timing",
-          "component.button.transition-timing",
-          "component.checkbox.transition-timing",
-          "component.input.transition-timing",
-          "component.modal.transition-timing",
-          "component.radio.transition-timing",
-          "component.select.transition-timing",
-          "component.tabs.transition-timing",
-          "component.textarea.transition-timing",
-          "component.toggle.transition-timing",
-          "component.tooltip.transition-timing"
+          "semantic.motion.ease.default",
+          "semantic.motion.ease.default"
         ],
         "figma": []
       }
@@ -5405,15 +5429,17 @@
       "usos": {
         "css": [
           {
-            "file": "css/tokens/generated/component.css",
-            "count": 4
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
           }
         ],
         "tokens": [
-          "component.button.opacity-disabled",
-          "component.checkbox.opacity-disabled",
-          "component.radio.opacity-disabled",
-          "component.toggle.opacity-disabled"
+          "semantic.opacity.disabled",
+          "semantic.opacity.disabled"
         ],
         "figma": []
       }
@@ -5490,14 +5516,13 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 9
+            "count": 8
           }
         ],
         "tokens": [
           "component.alert.focus-border-radius",
           "component.breadcrumb.focus-border-radius",
           "component.checkbox.border-radius",
-          "component.modal.close-border-radius",
           "component.radio.label-border-radius",
           "component.skeleton.text-border-radius",
           "component.tabs.focus-border-radius",
@@ -8934,23 +8959,56 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/alert.css",
+            "count": 4
+          },
+          {
+            "file": "css/components/button.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/card.css",
+            "count": 2
+          },
+          {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/input.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/tabs.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          },
+          {
             "file": "css/tokens/generated/component.css",
-            "count": 12
+            "count": 1
           }
         ],
         "tokens": [
-          "component.alert.border-width",
-          "component.button.border-width",
-          "component.card.border-width",
-          "component.checkbox.border-width",
-          "component.divider.thickness",
-          "component.input.border-width",
-          "component.modal.border-width",
-          "component.radio.border-width",
-          "component.select.border-width",
-          "component.tabs.border-width",
-          "component.textarea.border-width",
-          "component.toggle.border-width"
+          "component.divider.thickness"
         ],
         "figma": []
       }
@@ -9544,8 +9602,36 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/alert.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/checkbox.css",
+            "count": 3
+          },
+          {
+            "file": "css/components/input.css",
+            "count": 2
+          },
+          {
+            "file": "css/components/radio.css",
+            "count": 3
+          },
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/textarea.css",
+            "count": 3
+          },
+          {
+            "file": "css/components/toggle.css",
+            "count": 2
+          },
+          {
             "file": "css/tokens/generated/component.css",
-            "count": 18
+            "count": 6
           },
           {
             "file": "css/utilities/layout.css",
@@ -9553,23 +9639,11 @@
           }
         ],
         "tokens": [
-          "component.alert.content-gap",
           "component.breadcrumb.gap",
-          "component.checkbox.label-padding-x",
-          "component.checkbox.content-gap",
-          "component.checkbox.error-margin-top",
-          "component.input.field-inner-padding-x",
           "component.input.field-gap",
           "component.modal.close-padding",
           "component.radio.group-gap",
-          "component.radio.label-padding-x",
-          "component.radio.content-gap",
-          "component.radio.error-margin-top",
           "component.select.gap",
-          "component.select.field-inner-padding-x",
-          "component.textarea.field-inner-padding-x",
-          "component.toggle.label-padding-x",
-          "component.toggle.content-gap",
           "component.tooltip.padding-y"
         ],
         "figma": []
@@ -10152,16 +10226,23 @@
       "usos": {
         "css": [
           {
-            "file": "css/tokens/generated/component.css",
-            "count": 4
+            "file": "css/components/button.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
           }
         ],
-        "tokens": [
-          "component.button.min-target-size",
-          "component.checkbox.min-target-size",
-          "component.radio.min-target-size",
-          "component.toggle.min-target-size"
-        ],
+        "tokens": [],
         "figma": []
       }
     },
@@ -10274,10 +10355,7 @@
       "decisao": "TODO",
       "usos": {
         "css": [],
-        "tokens": [
-          "component.avatar.font-family",
-          "component.button.font-family"
-        ],
+        "tokens": [],
         "figma": []
       }
     },
@@ -10291,11 +10369,7 @@
       "decisao": "TODO",
       "usos": {
         "css": [],
-        "tokens": [
-          "component.checkbox.description-font-weight",
-          "component.radio.description-font-weight",
-          "component.toggle.description-font-weight"
-        ],
+        "tokens": [],
         "figma": []
       }
     },
@@ -10313,13 +10387,9 @@
           "component.badge.font-weight",
           "component.breadcrumb.font-weight-current",
           "component.button.font-weight",
-          "component.checkbox.label-font-weight",
-          "component.input.label-font-weight",
           "component.radio.legend-font-weight",
-          "component.radio.label-font-weight",
           "component.tabs.font-weight",
-          "component.textarea.counter-font-weight",
-          "component.toggle.label-font-weight"
+          "component.textarea.counter-font-weight"
         ],
         "figma": []
       }
@@ -10335,9 +10405,7 @@
       "usos": {
         "css": [],
         "tokens": [
-          "component.avatar.font-weight",
-          "component.card.title-font-weight",
-          "component.modal.title-font-weight"
+          "component.avatar.font-weight"
         ],
         "figma": []
       }
@@ -10396,13 +10464,7 @@
         "css": [],
         "tokens": [
           "component.badge.font-size",
-          "component.checkbox.helper-font-size",
-          "component.checkbox.error-font-size",
-          "component.input.helper-font-size",
-          "component.radio.helper-font-size",
-          "component.radio.error-font-size",
           "component.textarea.counter-font-size",
-          "component.toggle.helper-font-size",
           "component.tooltip.font-size"
         ],
         "figma": []
@@ -10420,17 +10482,8 @@
         "css": [],
         "tokens": [
           "component.breadcrumb.font-size",
-          "component.card.body-font-size",
-          "component.checkbox.label-font-size",
-          "component.checkbox.description-font-size",
-          "component.input.label-font-size",
-          "component.modal.body-font-size",
           "component.radio.legend-font-size",
-          "component.radio.label-font-size",
-          "component.radio.description-font-size",
-          "component.tabs.font-size",
-          "component.toggle.label-font-size",
-          "component.toggle.description-font-size"
+          "component.tabs.font-size"
         ],
         "figma": []
       }
@@ -10459,10 +10512,7 @@
       "decisao": "TODO",
       "usos": {
         "css": [],
-        "tokens": [
-          "component.card.title-font-size",
-          "component.modal.title-font-size"
-        ],
+        "tokens": [],
         "figma": []
       }
     },
@@ -10532,14 +10582,7 @@
       "decisao": "TODO",
       "usos": {
         "css": [],
-        "tokens": [
-          "component.card.title-line-height",
-          "component.checkbox.label-line-height",
-          "component.input.label-line-height",
-          "component.modal.title-line-height",
-          "component.radio.label-line-height",
-          "component.toggle.label-line-height"
-        ],
+        "tokens": [],
         "figma": []
       }
     },
@@ -10555,16 +10598,7 @@
         "css": [],
         "tokens": [
           "component.badge.line-height",
-          "component.card.body-line-height",
-          "component.checkbox.description-line-height",
-          "component.checkbox.helper-line-height",
-          "component.input.helper-line-height",
-          "component.modal.body-line-height",
-          "component.radio.description-line-height",
-          "component.radio.helper-line-height",
-          "component.textarea.field-line-height",
-          "component.toggle.description-line-height",
-          "component.toggle.helper-line-height"
+          "component.textarea.field-line-height"
         ],
         "figma": []
       }
@@ -10666,7 +10700,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.alert.border-radius": {
       "layer": "component",
@@ -10723,7 +10758,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.alert.icon-size": {
       "layer": "component",
@@ -10761,7 +10797,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.alert.transition-timing": {
       "layer": "component",
@@ -10780,7 +10817,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.avatar.border-radius": {
       "layer": "component",
@@ -10818,7 +10856,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.avatar.font-weight": {
       "layer": "component",
@@ -11046,7 +11085,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.button.font-weight": {
       "layer": "component",
@@ -11084,7 +11124,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.button.transition-duration": {
       "layer": "component",
@@ -11103,7 +11144,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.button.transition-timing": {
       "layer": "component",
@@ -11122,7 +11164,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.card.border-radius": {
       "layer": "component",
@@ -11160,7 +11203,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.card.padding": {
       "layer": "component",
@@ -11217,7 +11261,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.card.title-font-weight": {
       "layer": "component",
@@ -11236,7 +11281,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.card.title-line-height": {
       "layer": "component",
@@ -11255,7 +11301,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.card.body-font-size": {
       "layer": "component",
@@ -11274,7 +11321,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.card.body-line-height": {
       "layer": "component",
@@ -11293,7 +11341,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.card.shadow-elevated": {
       "layer": "component",
@@ -11331,7 +11380,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.checkbox.label-padding-x": {
       "layer": "component",
@@ -11350,7 +11400,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.checkbox.content-gap": {
       "layer": "component",
@@ -11369,7 +11420,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.checkbox.error-margin-top": {
       "layer": "component",
@@ -11388,7 +11440,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.checkbox.label-font-size": {
       "layer": "component",
@@ -11407,7 +11460,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.checkbox.label-font-weight": {
       "layer": "component",
@@ -11426,7 +11480,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.checkbox.label-line-height": {
       "layer": "component",
@@ -11445,7 +11500,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.checkbox.description-font-size": {
       "layer": "component",
@@ -11464,7 +11520,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.checkbox.description-font-weight": {
       "layer": "component",
@@ -11483,7 +11540,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.checkbox.description-line-height": {
       "layer": "component",
@@ -11502,7 +11560,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.checkbox.helper-font-size": {
       "layer": "component",
@@ -11521,7 +11580,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.checkbox.helper-line-height": {
       "layer": "component",
@@ -11540,7 +11600,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.checkbox.error-font-size": {
       "layer": "component",
@@ -11559,7 +11620,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.checkbox.opacity-disabled": {
       "layer": "component",
@@ -11578,7 +11640,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.checkbox.transition-duration": {
       "layer": "component",
@@ -11597,7 +11660,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.checkbox.transition-timing": {
       "layer": "component",
@@ -11616,7 +11680,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.divider.thickness": {
       "layer": "component",
@@ -11673,7 +11738,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.input.field-gap": {
       "layer": "component",
@@ -11711,7 +11777,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.input.label-font-weight": {
       "layer": "component",
@@ -11730,7 +11797,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.input.label-line-height": {
       "layer": "component",
@@ -11749,7 +11817,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.input.helper-font-size": {
       "layer": "component",
@@ -11768,7 +11837,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.input.helper-line-height": {
       "layer": "component",
@@ -11787,7 +11857,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.input.transition-duration": {
       "layer": "component",
@@ -11806,7 +11877,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.input.transition-timing": {
       "layer": "component",
@@ -11825,7 +11897,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.modal.overlay-padding": {
       "layer": "component",
@@ -11939,7 +12012,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.modal.viewport-offset": {
       "layer": "component",
@@ -11977,7 +12051,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.modal.title-font-size": {
       "layer": "component",
@@ -11996,7 +12071,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.modal.title-font-weight": {
       "layer": "component",
@@ -12015,7 +12091,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.modal.title-line-height": {
       "layer": "component",
@@ -12034,7 +12111,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.modal.body-font-size": {
       "layer": "component",
@@ -12053,7 +12131,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.modal.body-line-height": {
       "layer": "component",
@@ -12072,7 +12151,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.modal.shadow": {
       "layer": "component",
@@ -12129,7 +12209,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.modal.transition-timing": {
       "layer": "component",
@@ -12148,7 +12229,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.radio.border-radius-full": {
       "layer": "component",
@@ -12262,7 +12344,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.radio.label-padding-x": {
       "layer": "component",
@@ -12281,7 +12364,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.radio.content-gap": {
       "layer": "component",
@@ -12300,7 +12384,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.radio.error-margin-top": {
       "layer": "component",
@@ -12319,7 +12404,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.radio.legend-font-size": {
       "layer": "component",
@@ -12376,7 +12462,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.radio.label-font-weight": {
       "layer": "component",
@@ -12395,7 +12482,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.radio.label-line-height": {
       "layer": "component",
@@ -12414,7 +12502,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.radio.description-font-size": {
       "layer": "component",
@@ -12433,7 +12522,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.radio.description-font-weight": {
       "layer": "component",
@@ -12452,7 +12542,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.radio.description-line-height": {
       "layer": "component",
@@ -12471,7 +12562,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.radio.helper-font-size": {
       "layer": "component",
@@ -12490,7 +12582,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.radio.helper-line-height": {
       "layer": "component",
@@ -12509,7 +12602,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.radio.error-font-size": {
       "layer": "component",
@@ -12528,7 +12622,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.radio.opacity-disabled": {
       "layer": "component",
@@ -12547,7 +12642,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.radio.transition-duration": {
       "layer": "component",
@@ -12566,7 +12662,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.radio.transition-timing": {
       "layer": "component",
@@ -12585,7 +12682,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.select.field-inner-padding-x": {
       "layer": "component",
@@ -12604,7 +12702,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.select.transition-duration": {
       "layer": "component",
@@ -12623,7 +12722,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.select.transition-timing": {
       "layer": "component",
@@ -12642,7 +12742,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.skeleton.text-border-radius": {
       "layer": "component",
@@ -12794,7 +12895,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.tabs.active-border-width": {
       "layer": "component",
@@ -12889,7 +12991,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.tabs.transition-timing": {
       "layer": "component",
@@ -12908,7 +13011,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.textarea.field-inner-padding-x": {
       "layer": "component",
@@ -12927,7 +13031,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.textarea.field-line-height": {
       "layer": "component",
@@ -13003,7 +13108,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.textarea.transition-timing": {
       "layer": "component",
@@ -13022,7 +13128,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.toggle.border-width": {
       "layer": "component",
@@ -13041,7 +13148,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.toggle.border-radius-full": {
       "layer": "component",
@@ -13117,7 +13225,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.toggle.content-gap": {
       "layer": "component",
@@ -13136,7 +13245,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.toggle.label-font-size": {
       "layer": "component",
@@ -13155,7 +13265,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.toggle.label-font-weight": {
       "layer": "component",
@@ -13174,7 +13285,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.toggle.label-line-height": {
       "layer": "component",
@@ -13193,7 +13305,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.toggle.description-font-size": {
       "layer": "component",
@@ -13212,7 +13325,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.toggle.description-font-weight": {
       "layer": "component",
@@ -13231,7 +13345,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.toggle.description-line-height": {
       "layer": "component",
@@ -13250,7 +13365,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.toggle.helper-font-size": {
       "layer": "component",
@@ -13269,7 +13385,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.toggle.helper-line-height": {
       "layer": "component",
@@ -13288,7 +13405,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.toggle.opacity-disabled": {
       "layer": "component",
@@ -13307,7 +13425,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.toggle.transition-duration": {
       "layer": "component",
@@ -13326,7 +13445,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.toggle.transition-timing": {
       "layer": "component",
@@ -13345,7 +13465,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.tooltip.padding-y": {
       "layer": "component",
@@ -13459,7 +13580,8 @@
         ],
         "tokens": [],
         "figma": []
-      }
+      },
+      "_stale": true
     },
     "component.tooltip.transition-timing": {
       "layer": "component",
@@ -13473,6 +13595,184 @@
         "css": [
           {
             "file": "css/components/tooltip.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      },
+      "_stale": true
+    },
+    "semantic.motion.duration.fast": {
+      "layer": "semantic",
+      "type": "duration",
+      "references": "foundation.duration.fast",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/button.css",
+            "count": 4
+          },
+          {
+            "file": "css/components/checkbox.css",
+            "count": 4
+          },
+          {
+            "file": "css/components/input.css",
+            "count": 2
+          },
+          {
+            "file": "css/components/modal.css",
+            "count": 2
+          },
+          {
+            "file": "css/components/radio.css",
+            "count": 4
+          },
+          {
+            "file": "css/components/select.css",
+            "count": 2
+          },
+          {
+            "file": "css/components/tabs.css",
+            "count": 2
+          },
+          {
+            "file": "css/components/textarea.css",
+            "count": 2
+          },
+          {
+            "file": "css/components/toggle.css",
+            "count": 5
+          },
+          {
+            "file": "css/components/tooltip.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.motion.duration.normal": {
+      "layer": "semantic",
+      "type": "duration",
+      "references": "foundation.duration.normal",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.motion.duration.slow": {
+      "layer": "semantic",
+      "type": "duration",
+      "references": "foundation.duration.slow",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.motion.ease.default": {
+      "layer": "semantic",
+      "type": "cubicBezier",
+      "references": "foundation.ease.default",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/button.css",
+            "count": 4
+          },
+          {
+            "file": "css/components/checkbox.css",
+            "count": 4
+          },
+          {
+            "file": "css/components/input.css",
+            "count": 2
+          },
+          {
+            "file": "css/components/modal.css",
+            "count": 2
+          },
+          {
+            "file": "css/components/radio.css",
+            "count": 4
+          },
+          {
+            "file": "css/components/select.css",
+            "count": 2
+          },
+          {
+            "file": "css/components/tabs.css",
+            "count": 2
+          },
+          {
+            "file": "css/components/textarea.css",
+            "count": 2
+          },
+          {
+            "file": "css/components/toggle.css",
+            "count": 5
+          },
+          {
+            "file": "css/components/tooltip.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.opacity.disabled": {
+      "layer": "semantic",
+      "type": "number",
+      "references": "foundation.opacity.50",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/button.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/radio.css",
+            "count": 2
+          },
+          {
+            "file": "css/components/toggle.css",
             "count": 1
           }
         ],

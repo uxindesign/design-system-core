@@ -27,7 +27,7 @@
   min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: var(--ds-alert-content-gap);
+  gap: var(--ds-space-gap-xs);
 }
 
 .ds-alert__title {
@@ -43,7 +43,7 @@
   cursor: pointer;
   color: inherit;
   opacity: 0.7;
-  transition: opacity var(--ds-alert-transition-duration) var(--ds-alert-transition-timing);
+  transition: opacity var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
 }
 
 .ds-alert__close:hover {
@@ -85,25 +85,25 @@
 .ds-alert--success.ds-alert--subtle {
   background-color: var(--ds-feedback-success-subtle);
   color: var(--ds-content-default);
-  border: var(--ds-alert-border-width) solid var(--ds-feedback-success-border);
+  border: var(--ds-border-width-default) solid var(--ds-feedback-success-border);
 }
 
 .ds-alert--warning.ds-alert--subtle {
   background-color: var(--ds-feedback-warning-subtle);
   color: var(--ds-content-default);
-  border: var(--ds-alert-border-width) solid var(--ds-feedback-warning-border);
+  border: var(--ds-border-width-default) solid var(--ds-feedback-warning-border);
 }
 
 .ds-alert--error.ds-alert--subtle {
   background-color: var(--ds-feedback-error-subtle);
   color: var(--ds-content-default);
-  border: var(--ds-alert-border-width) solid var(--ds-feedback-error-border);
+  border: var(--ds-border-width-default) solid var(--ds-feedback-error-border);
 }
 
 .ds-alert--info.ds-alert--subtle {
   background-color: var(--ds-feedback-info-subtle);
   color: var(--ds-content-default);
-  border: var(--ds-alert-border-width) solid var(--ds-feedback-info-border);
+  border: var(--ds-border-width-default) solid var(--ds-feedback-info-border);
 }
 
 /* Description uses secondary content tone in subtle variants */

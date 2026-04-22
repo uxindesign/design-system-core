@@ -469,6 +469,41 @@
         }
       }
     },
+    "motion": {
+      "$description": "Semantic motion tokens — ADR-013 Fase 8. Centraliza decisões de duração e easing pra componentes não duplicarem wrappers 1:1.",
+      "duration": {
+        "fast": {
+          "$type": "duration",
+          "$value": "{foundation.duration.fast}",
+          "$description": "150ms. Transições rápidas (hover, focus, active)."
+        },
+        "normal": {
+          "$type": "duration",
+          "$value": "{foundation.duration.normal}",
+          "$description": "200ms. Padrão pra transições de estado."
+        },
+        "slow": {
+          "$type": "duration",
+          "$value": "{foundation.duration.slow}",
+          "$description": "300ms. Animações enfáticas (entrada de overlay, etc)."
+        }
+      },
+      "ease": {
+        "default": {
+          "$type": "cubicBezier",
+          "$value": "{foundation.ease.default}",
+          "$description": "Curva padrão pra transições UI."
+        }
+      }
+    },
+    "opacity": {
+      "$description": "Semantic opacity tokens — ADR-013 Fase 8.",
+      "disabled": {
+        "$type": "number",
+        "$value": "{foundation.opacity.50}",
+        "$description": "50%. Aplicar em componentes em estado disabled."
+      }
+    },
     "space": {
       "inset": {
         "2xs": {

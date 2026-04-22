@@ -58,10 +58,6 @@
         "$value": "{foundation.radius.full}",
         "$description": "Circle shape"
       },
-      "font-family": {
-        "$type": "fontFamily",
-        "$value": "{semantic.typography.body.font-family.sans}"
-      },
       "font-weight": {
         "$type": "number",
         "$value": "{semantic.typography.body.font-weight.semibold}"

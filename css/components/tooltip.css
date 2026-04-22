@@ -21,7 +21,7 @@
   white-space: nowrap;
   pointer-events: none;
   z-index: var(--ds-tooltip-z-index);
-  transition: opacity var(--ds-tooltip-transition-duration) var(--ds-tooltip-transition-timing);
+  transition: opacity var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
 }
 
 /* Arrow
