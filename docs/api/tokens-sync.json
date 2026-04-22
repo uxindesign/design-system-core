@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-04-22T19:55:11.876Z",
+  "generatedAt": "2026-04-22T20:35:33.925Z",
   "totals": {
-    "jsonTokens": 674,
-    "sharedTokens": 368,
+    "jsonTokens": 825,
+    "sharedTokens": 519,
     "lightTokens": 153,
     "darkTokens": 153,
     "errors": 0,
@@ -15,14 +15,14 @@
       "skipped": false,
       "snapshotAge": "0h",
       "summary": {
-        "figmaVariableCount": 510,
+        "figmaVariableCount": 635,
         "figmaCollectionCount": 4,
         "VALUE_DRIFT": 0,
         "NEEDS_SYNC": 0,
         "DRIFT_FROM_SOURCE": 0,
         "ALIAS_BROKEN": 0,
         "CSS_ONLY": 9,
-        "BY_DESIGN": 53
+        "BY_DESIGN": 79
       },
       "divergences": [],
       "diffs": {
@@ -419,6 +419,162 @@
             "side": "divergent-alias",
             "figma": "{foundation.typography.font.line-height.40}",
             "json": "{foundation.typography.line.height.tight}"
+          },
+          {
+            "file": "component/button.json",
+            "token": "component.button.transition-duration",
+            "side": "json-only-component",
+            "json": "{foundation.duration.fast}"
+          },
+          {
+            "file": "component/button.json",
+            "token": "component.button.transition-timing",
+            "side": "json-only-component",
+            "json": "{foundation.ease.default}"
+          },
+          {
+            "file": "component/checkbox.json",
+            "token": "component.checkbox.transition-duration",
+            "side": "json-only-component",
+            "json": "{foundation.duration.fast}"
+          },
+          {
+            "file": "component/checkbox.json",
+            "token": "component.checkbox.transition-timing",
+            "side": "json-only-component",
+            "json": "{foundation.ease.default}"
+          },
+          {
+            "file": "component/input.json",
+            "token": "component.input.transition-duration",
+            "side": "json-only-component",
+            "json": "{foundation.duration.fast}"
+          },
+          {
+            "file": "component/input.json",
+            "token": "component.input.transition-timing",
+            "side": "json-only-component",
+            "json": "{foundation.ease.default}"
+          },
+          {
+            "file": "component/modal.json",
+            "token": "component.modal.shadow",
+            "side": "json-only-component",
+            "json": "{foundation.shadow.xl}"
+          },
+          {
+            "file": "component/modal.json",
+            "token": "component.modal.z-index",
+            "side": "json-only-component",
+            "json": "{foundation.z.50}"
+          },
+          {
+            "file": "component/modal.json",
+            "token": "component.modal.transition-duration",
+            "side": "json-only-component",
+            "json": "{foundation.duration.fast}"
+          },
+          {
+            "file": "component/modal.json",
+            "token": "component.modal.transition-timing",
+            "side": "json-only-component",
+            "json": "{foundation.ease.default}"
+          },
+          {
+            "file": "component/radio.json",
+            "token": "component.radio.transition-duration",
+            "side": "json-only-component",
+            "json": "{foundation.duration.fast}"
+          },
+          {
+            "file": "component/radio.json",
+            "token": "component.radio.transition-timing",
+            "side": "json-only-component",
+            "json": "{foundation.ease.default}"
+          },
+          {
+            "file": "component/select.json",
+            "token": "component.select.transition-duration",
+            "side": "json-only-component",
+            "json": "{foundation.duration.fast}"
+          },
+          {
+            "file": "component/select.json",
+            "token": "component.select.transition-timing",
+            "side": "json-only-component",
+            "json": "{foundation.ease.default}"
+          },
+          {
+            "file": "component/textarea.json",
+            "token": "component.textarea.transition-duration",
+            "side": "json-only-component",
+            "json": "{foundation.duration.fast}"
+          },
+          {
+            "file": "component/textarea.json",
+            "token": "component.textarea.transition-timing",
+            "side": "json-only-component",
+            "json": "{foundation.ease.default}"
+          },
+          {
+            "file": "component/toggle.json",
+            "token": "component.toggle.transition-duration",
+            "side": "json-only-component",
+            "json": "{foundation.duration.fast}"
+          },
+          {
+            "file": "component/toggle.json",
+            "token": "component.toggle.transition-timing",
+            "side": "json-only-component",
+            "json": "{foundation.ease.default}"
+          },
+          {
+            "file": "component/alert.json",
+            "token": "component.alert.transition-duration",
+            "side": "json-only-component",
+            "json": "{foundation.duration.fast}"
+          },
+          {
+            "file": "component/alert.json",
+            "token": "component.alert.transition-timing",
+            "side": "json-only-component",
+            "json": "{foundation.ease.default}"
+          },
+          {
+            "file": "component/card.json",
+            "token": "component.card.shadow-elevated",
+            "side": "json-only-component",
+            "json": "{foundation.shadow.sm}"
+          },
+          {
+            "file": "component/tabs.json",
+            "token": "component.tabs.transition-duration",
+            "side": "json-only-component",
+            "json": "{foundation.duration.fast}"
+          },
+          {
+            "file": "component/tabs.json",
+            "token": "component.tabs.transition-timing",
+            "side": "json-only-component",
+            "json": "{foundation.ease.default}"
+          },
+          {
+            "file": "component/tooltip.json",
+            "token": "component.tooltip.z-index",
+            "side": "json-only-component",
+            "json": "{foundation.z.50}"
+          },
+          {
+            "file": "component/tooltip.json",
+            "token": "component.tooltip.transition-duration",
+            "side": "json-only-component",
+            "json": "{foundation.duration.fast}"
+          },
+          {
+            "file": "component/tooltip.json",
+            "token": "component.tooltip.transition-timing",
+            "side": "json-only-component",
+            "json": "{foundation.ease.default}"
           }
         ]
       }

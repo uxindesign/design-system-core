@@ -1,0 +1,17 @@
+{
+  "component": {
+    "tabs": {
+      "$description": "Structural tokens for Tabs component.",
+      "padding-y": { "$type": "dimension", "$value": "{semantic.space.gap.sm}", "$description": "8px vertical padding" },
+      "padding-x": { "$type": "dimension", "$value": "{semantic.space.inset.lg}", "$description": "16px horizontal padding" },
+      "panel-padding-y": { "$type": "dimension", "$value": "{semantic.space.inset.lg}", "$description": "16px padding top/bottom for tab panel" },
+      "border-width": { "$type": "dimension", "$value": "{semantic.border.width.default}" },
+      "active-border-width": { "$type": "dimension", "$value": "{semantic.border.width.strong}", "$description": "2px active underline" },
+      "font-size": { "$type": "dimension", "$value": "{semantic.typography.body.font-size.sm}", "$description": "14px" },
+      "font-weight": { "$type": "number", "$value": "{semantic.typography.body.font-weight.medium}" },
+      "focus-border-radius": { "$type": "dimension", "$value": "{foundation.radius.sm}", "$description": "4px — focus ring corner on tab" },
+      "transition-duration": { "$type": "duration", "$value": "{foundation.duration.fast}" },
+      "transition-timing": { "$type": "cubicBezier", "$value": "{foundation.ease.default}" }
+    }
+  }
+}

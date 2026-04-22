@@ -13,8 +13,8 @@
   border: var(--ds-input-border-width) solid var(--ds-border-control-default);
   border-radius: var(--ds-input-border-radius);
   background: var(--ds-surface-default);
-  transition: border-color var(--ds-duration-fast) var(--ds-ease-default),
-              box-shadow var(--ds-duration-fast) var(--ds-ease-default);
+  transition: border-color var(--ds-input-transition-duration) var(--ds-input-transition-timing),
+              box-shadow var(--ds-input-transition-duration) var(--ds-input-transition-timing);
 }
 
 /* Sizes
@@ -51,8 +51,8 @@
   font-size: inherit;
   font-family: inherit;
   min-width: 0;
-  padding-left: var(--ds-spacing-1);
-  padding-right: var(--ds-spacing-1);
+  padding-left: var(--ds-input-field-inner-padding-x);
+  padding-right: var(--ds-input-field-inner-padding-x);
 }
 
 .ds-input__field::placeholder {
@@ -158,7 +158,7 @@
 .ds-field {
   display: flex;
   flex-direction: column;
-  gap: var(--ds-spacing-1);
+  gap: var(--ds-input-field-gap);
   width: 100%;
 }
 
@@ -171,25 +171,25 @@
 
 /* Label text (label/md: 14px medium / 20px) */
 .ds-field__label {
-  font-size: var(--ds-font-size-sm);
-  font-weight: var(--ds-font-weight-medium);
-  line-height: var(--ds-line-height-snug);
+  font-size: var(--ds-input-label-font-size);
+  font-weight: var(--ds-input-label-font-weight);
+  line-height: var(--ds-input-label-line-height);
   color: var(--ds-content-default);
 }
 
 /* Required asterisk — feedback/error/default, same size as label */
 .ds-field__required {
-  font-size: var(--ds-font-size-sm);
-  font-weight: var(--ds-font-weight-medium);
-  line-height: var(--ds-line-height-snug);
+  font-size: var(--ds-input-label-font-size);
+  font-weight: var(--ds-input-label-font-weight);
+  line-height: var(--ds-input-label-line-height);
   color: var(--ds-feedback-error-default);
   user-select: none;
 }
 
 /* Helper text (caption/sm: 11px regular / 18px) */
 .ds-field__helper {
-  font-size: var(--ds-font-size-xs);
-  line-height: var(--ds-line-height-normal);
+  font-size: var(--ds-input-helper-font-size);
+  line-height: var(--ds-input-helper-line-height);
   color: var(--ds-content-secondary);
 }
 
@@ -206,8 +206,8 @@
 /* Error message */
 .ds-field__error {
   display: none;
-  font-size: var(--ds-font-size-xs);
-  line-height: var(--ds-line-height-normal);
+  font-size: var(--ds-input-helper-font-size);
+  line-height: var(--ds-input-helper-line-height);
   color: var(--ds-feedback-error-default);
 }
 
