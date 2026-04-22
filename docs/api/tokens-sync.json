@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-04-22T18:19:23.613Z",
+  "generatedAt": "2026-04-22T19:55:11.876Z",
   "totals": {
     "jsonTokens": 674,
     "sharedTokens": 368,
     "lightTokens": 153,
     "darkTokens": 153,
-    "errors": 2,
+    "errors": 0,
     "warnings": 0
   },
   "checks": {
@@ -17,46 +17,16 @@
       "summary": {
         "figmaVariableCount": 510,
         "figmaCollectionCount": 4,
-        "VALUE_DRIFT": 2,
+        "VALUE_DRIFT": 0,
         "NEEDS_SYNC": 0,
         "DRIFT_FROM_SOURCE": 0,
         "ALIAS_BROKEN": 0,
         "CSS_ONLY": 9,
         "BY_DESIGN": 53
       },
-      "divergences": [
-        {
-          "level": "error",
-          "category": "VALUE_DRIFT",
-          "token": "component.checkbox.border-radius",
-          "message": "valor difere: Figma=4 / JSON=\"{foundation.radius.sm}\"",
-          "figma": 4,
-          "json": "{foundation.radius.sm}"
-        },
-        {
-          "level": "error",
-          "category": "VALUE_DRIFT",
-          "token": "component.modal.border-radius",
-          "message": "valor difere: Figma=16 / JSON=\"{foundation.radius.xl}\"",
-          "figma": 16,
-          "json": "{foundation.radius.xl}"
-        }
-      ],
+      "divergences": [],
       "diffs": {
-        "VALUE_DRIFT": [
-          {
-            "file": "component/checkbox.json",
-            "token": "component.checkbox.border-radius",
-            "figma": 4,
-            "json": "{foundation.radius.sm}"
-          },
-          {
-            "file": "component/modal.json",
-            "token": "component.modal.border-radius",
-            "figma": 16,
-            "json": "{foundation.radius.xl}"
-          }
-        ],
+        "VALUE_DRIFT": [],
         "NEW_IN_FIGMA": [],
         "MISSING_IN_FIGMA": [],
         "CSS_ONLY": [

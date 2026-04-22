@@ -3,66 +3,63 @@
  */
 
 :root {
-  --ds-avatar-size-sm: 2rem; /** 32px */
-  --ds-avatar-size-md: 2.5rem; /** 40px */
-  --ds-avatar-size-lg: 3.5rem; /** 56px */
-  --ds-avatar-font-size-sm: 0.75rem; /** 12px initials */
-  --ds-avatar-font-size-md: 0.875rem; /** 14px initials */
-  --ds-avatar-font-size-lg: 1.125rem; /** 18px initials */
-  --ds-avatar-icon-size-sm: 1rem; /** 16px */
-  --ds-avatar-icon-size-md: 1.25rem; /** 20px */
-  --ds-avatar-icon-size-lg: 1.75rem; /** 28px */
-  --ds-checkbox-control-size-sm: 1rem; /** 16px */
-  --ds-checkbox-control-size-md: 1.25rem; /** 20px */
-  --ds-checkbox-control-size-lg: 1.5rem; /** 24px */
-  --ds-checkbox-check-width-sm: 4px;
   --ds-checkbox-check-width-md: 5px;
-  --ds-checkbox-check-width-lg: 6px;
-  --ds-checkbox-check-height-sm: 8px;
-  --ds-checkbox-check-height-md: 10px;
-  --ds-checkbox-check-height-lg: 12px;
-  --ds-checkbox-min-target-size: 2.75rem; /** 44px — WCAG 2.5.5 */
-  --ds-checkbox-font-size: 0.875rem; /** 14px label */
   --ds-modal-max-width-sm: 25rem; /** 400px */
   --ds-modal-max-width-md: 32.5rem; /** 520px */
   --ds-modal-max-width-lg: 40rem; /** 640px */
-  --ds-radio-control-size-sm: 1rem; /** 16px */
-  --ds-radio-control-size-md: 1.25rem; /** 20px */
-  --ds-radio-control-size-lg: 1.5rem; /** 24px */
-  --ds-radio-dot-size-sm: 6px;
-  --ds-radio-dot-size-md: 8px;
-  --ds-radio-dot-size-lg: 10px;
-  --ds-radio-min-target-size: 2.75rem; /** 44px — WCAG 2.5.5 */
-  --ds-radio-font-size: 0.875rem; /** 14px label */
-  --ds-select-arrow-size: 1rem; /** 16px */
-  --ds-select-arrow-offset-sm: 0.5rem; /** 8px from right edge */
-  --ds-select-arrow-offset-md: 0.75rem; /** 12px */
-  --ds-select-arrow-offset-lg: 1rem; /** 16px */
-  --ds-skeleton-text-height: 1rem; /** 16px line placeholder */
-  --ds-skeleton-circle-size: 2.5rem; /** 40px avatar placeholder */
   --ds-skeleton-rect-height: 7.5rem; /** 120px image/card placeholder */
-  --ds-spinner-size-sm: 1rem; /** 16px */
-  --ds-spinner-size-md: 1.5rem; /** 24px */
-  --ds-spinner-size-lg: 2rem; /** 32px */
   --ds-spinner-stroke-width-sm: 1.5px;
-  --ds-spinner-stroke-width-md: 2px;
   --ds-spinner-stroke-width-lg: 3px;
   --ds-textarea-min-height-sm: 4.25rem; /** 68px */
-  --ds-textarea-min-height-md: 5rem; /** 80px */
   --ds-textarea-min-height-lg: 7rem; /** 112px */
-  --ds-toggle-track-width-sm: 1.75rem; /** 28px */
-  --ds-toggle-track-width-md: 2.25rem; /** 36px */
-  --ds-toggle-track-width-lg: 2.75rem; /** 44px */
-  --ds-toggle-track-height-sm: 1rem; /** 16px */
-  --ds-toggle-track-height-md: 1.25rem; /** 20px */
-  --ds-toggle-track-height-lg: 1.5rem; /** 24px */
-  --ds-toggle-thumb-size-sm: 0.625rem; /** 10px */
-  --ds-toggle-thumb-size-md: 0.875rem; /** 14px */
   --ds-toggle-thumb-size-lg: 1.125rem; /** 18px */
-  --ds-toggle-min-target-size: 2.75rem; /** 44px — WCAG 2.5.5 */
-  --ds-toggle-font-size: 0.875rem; /** 14px label */
+  --ds-avatar-size-sm: var(--ds-spacing-8); /** 32px */
+  --ds-avatar-size-md: var(--ds-spacing-10); /** 40px */
+  --ds-avatar-size-lg: var(--ds-spacing-14); /** 56px */
+  --ds-avatar-font-size-sm: var(--ds-font-size-xs); /** 12px initials */
+  --ds-avatar-font-size-md: var(--ds-font-size-sm); /** 14px initials */
+  --ds-avatar-font-size-lg: var(--ds-font-size-lg); /** 18px initials */
+  --ds-avatar-icon-size-sm: var(--ds-spacing-4); /** 16px */
+  --ds-avatar-icon-size-md: var(--ds-spacing-5); /** 20px */
+  --ds-avatar-icon-size-lg: var(--ds-spacing-7); /** 28px */
+  --ds-checkbox-control-size-sm: var(--ds-spacing-4); /** 16px */
+  --ds-checkbox-control-size-md: var(--ds-spacing-5); /** 20px */
+  --ds-checkbox-control-size-lg: var(--ds-spacing-6); /** 24px */
+  --ds-checkbox-check-width-sm: var(--ds-spacing-1);
+  --ds-checkbox-check-width-lg: var(--ds-spacing-1-5);
+  --ds-checkbox-check-height-sm: var(--ds-spacing-2);
+  --ds-checkbox-check-height-md: var(--ds-spacing-2-5);
+  --ds-checkbox-check-height-lg: var(--ds-spacing-3);
   --ds-checkbox-border-radius: var(--ds-radius-sm); /** 4px — smaller radius for compact control */
+  --ds-checkbox-font-size: var(--ds-font-size-sm); /** 14px label */
   --ds-modal-border-radius: var(--ds-radius-xl); /** 16px — xl radius for modal overlay */
+  --ds-radio-control-size-sm: var(--ds-spacing-4); /** 16px */
+  --ds-radio-control-size-md: var(--ds-spacing-5); /** 20px */
+  --ds-radio-control-size-lg: var(--ds-spacing-6); /** 24px */
+  --ds-radio-dot-size-sm: var(--ds-spacing-1-5);
+  --ds-radio-dot-size-md: var(--ds-spacing-2);
+  --ds-radio-dot-size-lg: var(--ds-spacing-2-5);
+  --ds-radio-font-size: var(--ds-font-size-sm); /** 14px label */
+  --ds-select-arrow-size: var(--ds-spacing-4); /** 16px */
+  --ds-select-arrow-offset-sm: var(--ds-spacing-2); /** 8px from right edge */
+  --ds-select-arrow-offset-md: var(--ds-spacing-3); /** 12px */
+  --ds-select-arrow-offset-lg: var(--ds-spacing-4); /** 16px */
+  --ds-skeleton-text-height: var(--ds-spacing-4); /** 16px line placeholder */
+  --ds-skeleton-circle-size: var(--ds-spacing-10); /** 40px avatar placeholder */
+  --ds-spinner-size-sm: var(--ds-spacing-4); /** 16px */
+  --ds-spinner-size-md: var(--ds-spacing-6); /** 24px */
+  --ds-spinner-size-lg: var(--ds-spacing-8); /** 32px */
+  --ds-spinner-stroke-width-md: var(--ds-spacing-0-5);
+  --ds-textarea-min-height-md: var(--ds-spacing-20); /** 80px */
+  --ds-toggle-track-width-sm: var(--ds-spacing-7); /** 28px */
+  --ds-toggle-track-width-md: var(--ds-spacing-9); /** 36px */
+  --ds-toggle-track-width-lg: var(--ds-spacing-11); /** 44px */
+  --ds-toggle-track-height-sm: var(--ds-spacing-4); /** 16px */
+  --ds-toggle-track-height-md: var(--ds-spacing-5); /** 20px */
+  --ds-toggle-track-height-lg: var(--ds-spacing-6); /** 24px */
+  --ds-toggle-thumb-size-sm: var(--ds-spacing-2-5); /** 10px */
+  --ds-toggle-thumb-size-md: var(--ds-spacing-3-5); /** 14px */
+  --ds-toggle-font-size: var(--ds-font-size-sm); /** 14px label */
   --ds-button-height-sm: var(--ds-size-control-sm); /** 32px */
   --ds-button-height-md: var(--ds-size-control-md); /** 40px */
   --ds-button-height-lg: var(--ds-size-control-lg); /** 48px */
@@ -90,6 +87,7 @@
   --ds-button-foreground-toned-disabled: var(--ds-content-disabled);
   --ds-checkbox-border-width: var(--ds-border-width-default);
   --ds-checkbox-gap: var(--ds-space-gap-sm); /** 8px between control and label */
+  --ds-checkbox-min-target-size: var(--ds-size-control-min-target); /** 44px — WCAG 2.5.5 */
   --ds-input-height-sm: var(--ds-size-control-sm); /** 32px */
   --ds-input-height-md: var(--ds-size-control-md); /** 40px */
   --ds-input-height-lg: var(--ds-size-control-lg); /** 48px */
@@ -112,6 +110,7 @@
   --ds-modal-header-gap: var(--ds-space-gap-sm); /** 8px between title and close */
   --ds-radio-border-width: var(--ds-border-width-default);
   --ds-radio-gap: var(--ds-space-gap-sm); /** 8px between control and label */
+  --ds-radio-min-target-size: var(--ds-size-control-min-target); /** 44px — WCAG 2.5.5 */
   --ds-select-height-sm: var(--ds-size-control-sm); /** 32px */
   --ds-select-height-md: var(--ds-size-control-md); /** 40px */
   --ds-select-height-lg: var(--ds-size-control-lg); /** 48px */
@@ -140,4 +139,5 @@
   --ds-textarea-font-size-md: var(--ds-control-font-size-md); /** 14px */
   --ds-textarea-font-size-lg: var(--ds-control-font-size-lg); /** 16px */
   --ds-toggle-gap: var(--ds-space-gap-sm); /** 8px between toggle and label */
+  --ds-toggle-min-target-size: var(--ds-size-control-min-target); /** 44px — WCAG 2.5.5 */
 }

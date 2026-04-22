@@ -5,24 +5,24 @@
       "control-size": {
         "sm": {
           "$type": "dimension",
-          "$value": "1rem",
+          "$value": "{foundation.spacing.4}",
           "$description": "16px"
         },
         "md": {
           "$type": "dimension",
-          "$value": "1.25rem",
+          "$value": "{foundation.spacing.5}",
           "$description": "20px"
         },
         "lg": {
           "$type": "dimension",
-          "$value": "1.5rem",
+          "$value": "{foundation.spacing.6}",
           "$description": "24px"
         }
       },
       "check-width": {
         "sm": {
           "$type": "dimension",
-          "$value": "4px"
+          "$value": "{foundation.spacing.1}"
         },
         "md": {
           "$type": "dimension",
@@ -30,27 +30,27 @@
         },
         "lg": {
           "$type": "dimension",
-          "$value": "6px"
+          "$value": "{foundation.spacing.1-5}"
         }
       },
       "check-height": {
         "sm": {
           "$type": "dimension",
-          "$value": "8px"
+          "$value": "{foundation.spacing.2}"
         },
         "md": {
           "$type": "dimension",
-          "$value": "10px"
+          "$value": "{foundation.spacing.2-5}"
         },
         "lg": {
           "$type": "dimension",
-          "$value": "12px"
+          "$value": "{foundation.spacing.3}"
         }
       },
       "border-radius": {
         "$type": "dimension",
         "$value": "{foundation.radius.sm}",
-        "$description": "4px \u2014 smaller radius for compact control"
+        "$description": "4px — smaller radius for compact control"
       },
       "border-width": {
         "$type": "dimension",
@@ -63,12 +63,12 @@
       },
       "min-target-size": {
         "$type": "dimension",
-        "$value": "2.75rem",
-        "$description": "44px \u2014 WCAG 2.5.5"
+        "$value": "{semantic.size.control.min-target}",
+        "$description": "44px — WCAG 2.5.5"
       },
       "font-size": {
         "$type": "dimension",
-        "$value": "0.875rem",
+        "$value": "{foundation.typography.font.size.sm}",
         "$description": "14px label"
       }
     }

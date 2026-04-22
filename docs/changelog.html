@@ -74,6 +74,20 @@
 <p>O formato é baseado em <a href="https://keepachangelog.com/pt-BR/1.1.0/">Keep a Changelog</a> e o versionamento segue <a href="https://semver.org/lang/pt-BR/">Semantic Versioning</a>.</p>
 <p>Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na faixa 0.x. Regras de bump documentadas em <code>docs/process-versioning.html</code>.</p>
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
+<h3>Adicionado (Fase 1 — expansão Semantic typography)</h3>
+<p>20 variáveis novas em <code>semantic.typography.body.*</code> no Figma e JSON, todas aliasando Foundation. Preparação pra Fase 2 (rebind dos 3.479 bindings Foundation em componentes Figma).</p>
+<ul>
+<li><code>semantic.typography.body.font-family.sans</code> → <code>{foundation.typography.font.family.sans}</code></li>
+<li><code>semantic.typography.body.font-weight.{regular, medium, semibold, bold}</code> → foundation.weight.*</li>
+<li><code>semantic.typography.body.letter-spacing.{normal, tight}</code> → foundation.letter.spacing.*</li>
+<li><code>semantic.typography.body.font-size.{xs, sm, md, lg, xl, 2xl, 3xl}</code> → foundation.size.*</li>
+<li><code>semantic.typography.body.line-height.{xs, sm, md, xl, 2xl, 3xl}</code> → foundation ratios (ADR-012: Figma usa PX, JSON usa ratio unitless)</li>
+</ul>
+<p>CSS gerado: <code>--ds-body-font-family-sans</code>, <code>--ds-body-font-weight-*</code>, <code>--ds-body-letter-spacing-*</code>, <code>--ds-body-font-size-*</code>, <code>--ds-body-line-height-*</code>. Namespace <code>body</code> pareia com <code>control</code> (ADR-006) evitando colisão com Foundation (<code>--ds-font-family-sans</code> etc.).</p>
+<h3>Corrigido</h3>
+<ul>
+<li><code>scripts/lib/figma-dtcg.mjs</code> — <code>compareStates</code> estendido com <code>isDivergentAliasByDesign</code>: tokens Semantic/Component com aliases divergentes por design (Figma <code>font.line-height.*</code> px vs JSON <code>line.height.*</code> ratio) agora são <code>BY_DESIGN</code>, não <code>VALUE_DRIFT</code>. Extensão documentada em ADR-012.</li>
+</ul>
 <h3>Adicionado (arquitetura — ADR-013 e Token Registry)</h3>
 <p>Codificada a regra de camadas de consumo de tokens: <strong>Foundation nunca aparece em consumidor final</strong>. CSS de componente, bindings Figma e exemplos em docs só podem consumir Semantic ou Component. A regra sempre existiu implicitamente, mas agora está documentada formalmente e vai ganhar enforcement em CI nas próximas iterações.</p>
 <ul>

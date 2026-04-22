@@ -8,6 +8,29 @@ Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na
 
 ## [Não publicado]
 
+### Concluído (Fases 2 e 3 — rebind + conversão de raw values)
+
+**Fase 2**: Todos os 3.479 bindings Foundation nos 51 componentes Figma rebindados pra Semantic. Divididos em 4 passes:
+- Pass 1 — Icons (30 componentes, 60 rebinds — border/width/1 + font-family/weight/letter-spacing)
+- Pass 2a — Global typography em todos componentes (2.759 rebinds — font-family, font-weight, letter-spacing, border-width)
+- Pass 2b — font-size/line-height em não-controles → body.* (268 rebinds)
+- Pass 2c — font-size/line-height em controles → control.*/body.* contextual (210 rebinds)
+- Pass 3 — cleanup com IDs corrigidos (2.073 rebinds complementares)
+- Text styles — 28 text styles locais rebindados pra Semantic (98 rebinds). Isso destravou os nodes filhos que herdavam Foundation via style.
+
+Post-audit: **0 Foundation bindings remanescentes em qualquer componente Figma**. Regra ADR-013 cumprida no lado do Figma.
+
+**Fase 3**: Das 60 variáveis raw na collection Component Figma, **50 convertidas em aliases** (Foundation.* ou Semantic.*). Exemplos:
+- `avatar/size/sm` (32) → `{foundation.spacing.8}`
+- `checkbox/border-radius` (4) → `{foundation.radius.sm}`
+- `modal/border-radius` (16) → `{foundation.radius.xl}`
+- `checkbox/min-target-size` (44) → `{semantic.size.control.min-target}` — reaproveita alias semântico existente
+- `radio/font-size`, `toggle/font-size`, etc. (14) → `{foundation.typography.font.size.sm}`
+
+**10 vars permanecem raw** como exceção explícita (ADR-013 permite quando não há equivalente Foundation): `modal/max-width/{sm,md,lg}` (400/520/640), `textarea/min-height/{sm,lg}` (68/112), `skeleton/rect-height` (120), `spinner/stroke-width/{sm,lg}` (1.5/3), `toggle/thumb-size/lg` (18), `checkbox/check-width/md` (5). Todos valores sem ponto correspondente na escala Foundation.
+
+Pós-sync: `verify:tokens` — **0 errors, 0 warnings**. Figma ↔ JSON ↔ CSS totalmente sincronizados.
+
 ### Adicionado (Fase 1 — expansão Semantic typography)
 
 20 variáveis novas em `semantic.typography.body.*` no Figma e JSON, todas aliasando Foundation. Preparação pra Fase 2 (rebind dos 3.479 bindings Foundation em componentes Figma).

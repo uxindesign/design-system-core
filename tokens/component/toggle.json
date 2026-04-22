@@ -3,23 +3,71 @@
     "toggle": {
       "$description": "Structural tokens for Toggle/Switch component.",
       "track-width": {
-        "sm": { "$type": "dimension", "$value": "1.75rem", "$description": "28px" },
-        "md": { "$type": "dimension", "$value": "2.25rem", "$description": "36px" },
-        "lg": { "$type": "dimension", "$value": "2.75rem", "$description": "44px" }
+        "sm": {
+          "$type": "dimension",
+          "$value": "{foundation.spacing.7}",
+          "$description": "28px"
+        },
+        "md": {
+          "$type": "dimension",
+          "$value": "{foundation.spacing.9}",
+          "$description": "36px"
+        },
+        "lg": {
+          "$type": "dimension",
+          "$value": "{foundation.spacing.11}",
+          "$description": "44px"
+        }
       },
       "track-height": {
-        "sm": { "$type": "dimension", "$value": "1rem", "$description": "16px" },
-        "md": { "$type": "dimension", "$value": "1.25rem", "$description": "20px" },
-        "lg": { "$type": "dimension", "$value": "1.5rem", "$description": "24px" }
+        "sm": {
+          "$type": "dimension",
+          "$value": "{foundation.spacing.4}",
+          "$description": "16px"
+        },
+        "md": {
+          "$type": "dimension",
+          "$value": "{foundation.spacing.5}",
+          "$description": "20px"
+        },
+        "lg": {
+          "$type": "dimension",
+          "$value": "{foundation.spacing.6}",
+          "$description": "24px"
+        }
       },
       "thumb-size": {
-        "sm": { "$type": "dimension", "$value": "0.625rem", "$description": "10px" },
-        "md": { "$type": "dimension", "$value": "0.875rem", "$description": "14px" },
-        "lg": { "$type": "dimension", "$value": "1.125rem", "$description": "18px" }
+        "sm": {
+          "$type": "dimension",
+          "$value": "{foundation.spacing.2-5}",
+          "$description": "10px"
+        },
+        "md": {
+          "$type": "dimension",
+          "$value": "{foundation.spacing.3-5}",
+          "$description": "14px"
+        },
+        "lg": {
+          "$type": "dimension",
+          "$value": "1.125rem",
+          "$description": "18px"
+        }
       },
-      "gap": { "$type": "dimension", "$value": "{semantic.space.gap.sm}", "$description": "8px between toggle and label" },
-      "min-target-size": { "$type": "dimension", "$value": "2.75rem", "$description": "44px — WCAG 2.5.5" },
-      "font-size": { "$type": "dimension", "$value": "0.875rem", "$description": "14px label" }
+      "gap": {
+        "$type": "dimension",
+        "$value": "{semantic.space.gap.sm}",
+        "$description": "8px between toggle and label"
+      },
+      "min-target-size": {
+        "$type": "dimension",
+        "$value": "{semantic.size.control.min-target}",
+        "$description": "44px — WCAG 2.5.5"
+      },
+      "font-size": {
+        "$type": "dimension",
+        "$value": "{foundation.typography.font.size.sm}",
+        "$description": "14px label"
+      }
     }
   }
 }
