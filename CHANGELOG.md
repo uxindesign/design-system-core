@@ -8,6 +8,10 @@ Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na
 
 ## [Não publicado]
 
+### Adicionado (tooling)
+- **`scripts/lib/figma-node-audit.mjs`** — nova lib de helpers para audits de nodes Figma que têm a propriedade dividida em 4 campos individuais. Inclui `isStrokeWeightBound`, `bindStrokeWeight`, `classifyStrokeWeight` (+ equivalentes pra `cornerRadius`). Fecha **#34**.
+- Seção em `CLAUDE.md` ("Figma Plugin API — armadilhas") documentando que `strokeWeight` e `cornerRadius` têm binding só via 4 campos individuais, não via top-level.
+
 ### Corrigido (Figma — elevation e focus rings)
 Fecha **issue #24.3**. Três drifts entre Figma e o canônico (CSS + `docs/foundations-elevation.html`):
 

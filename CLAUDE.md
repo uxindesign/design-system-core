@@ -176,6 +176,7 @@ Coisas que falharam silenciosamente em sessões passadas e que o agente precisa 
 - **`setBoundVariable` pode empilhar** se a propriedade já tinha binding anterior. Limpar antes: setar pra `null` ou pra valor raw, depois rebind.
 - **Truncamento de output ~20KB**: dumps grandes de Variables quebram em chunks via slice(start, end) e agregados off-plugin. Ver `scripts/sync-tokens-from-figma.mjs` e `docs/process-figma-sync.md`.
 - **`hiddenFromPublishing = true`** após `createVariable` falha com "Node not found". Criar primeiro, setar a flag em chamada separada — ou via UI do Figma depois. Documentado nos commits do PR #17 (0.5.10) e PR #18 (0.5.11).
+- **`strokeWeight` bindado vive em 4 campos individuais, não no top-level.** `node.setBoundVariable('strokeWeight', var)` retorna sem erro mas não aplica o binding — e `node.boundVariables.strokeWeight` é sempre `undefined`. O binding real fica em `strokeTopWeight/strokeRightWeight/strokeBottomWeight/strokeLeftWeight`. Auditar cobertura por esses 4 campos; bindar aplicando em todos. Mesma coisa pra `cornerRadius` → `topLeftRadius/topRightRadius/bottomLeftRadius/bottomRightRadius`. Use os helpers em `scripts/lib/figma-node-audit.mjs` (copiar inline em `use_figma` funciona). Descoberto em PR #31 (0.5.17) bindando 78 Focus Rings em Button + Toggle.
 
 ## Quando houver dúvida
 
