@@ -30,9 +30,15 @@ Card `--elevated` fica com sombra **ligeiramente mais sutil** (shadow-md → sha
 
 Todos gitignored.
 
+### Corrigido (tokens — elevation drift)
+Fecha **issue #33**. Figma é a fonte canônica de valores de token (ADR-003). Valores divergiam entre Figma Variables e `tokens/foundation/shadows.json`:
+
+- **`shadow.sm`** (`--ds-shadow-sm`): `0 1px 3px 0 rgba(0,0,0,0.06), 0 1px 2px 0 rgba(0,0,0,0.05)` → `0 2px 4px 0 rgba(0,0,0,0.08), 0 1px 2px 0 rgba(0,0,0,0.04)` — bate com Figma `elevation/1`.
+- **`shadow.md`** (`--ds-shadow-md`): `0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px 0 rgba(0,0,0,0.06)` → `0 4px 8px 0 rgba(0,0,0,0.08), 0 2px 4px 0 rgba(0,0,0,0.04)` — bate com Figma `elevation/2`.
+- CSS regenerado via `build:tokens` (225 vars, 132 theme vars).
+
 ### Backlog / sub-issues
 - **#32** — Refactor Card API no Figma: properties `Elevated` (BOOLEAN) e `Interactive` (BOOLEAN) desacopladas de `Style`, com `State` variant quando `Interactive=true`. Breaking change em consumidores Figma.
-- **#33** — Divergência entre `elevation/1` / `elevation/2` no Figma e `shadow-sm` / `shadow-md` no JSON (valores diferentes em radius, spread e alpha). Precisa decisão: Figma é fonte → atualizar JSON; ou JSON é fonte → atualizar Figma. ADR-003 indica **Figma como fonte canônica de valor** — mas os valores do JSON já estão em produção no CSS.
 - **#34** — Atualizar `scripts/lib/figma-dtcg.mjs`: auditar `strokeWeight` via `strokeTopWeight`/etc. em vez de `strokeWeight` top-level. Afeta detecção de cobertura em audits futuros.
 
 ## [0.5.17]
