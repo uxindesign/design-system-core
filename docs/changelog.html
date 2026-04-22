@@ -96,10 +96,16 @@
 <li><code>.figma-revert-24.3.3.json</code> — Card elevated (restaura elevation/2).</li>
 </ul>
 <p>Todos gitignored.</p>
+<h3>Corrigido (tokens — elevation drift)</h3>
+<p>Fecha <strong>issue #33</strong>. Figma é a fonte canônica de valores de token (ADR-003). Valores divergiam entre Figma Variables e <code>tokens/foundation/shadows.json</code>:</p>
+<ul>
+<li><strong><code>shadow.sm</code></strong> (<code>--ds-shadow-sm</code>): <code>0 1px 3px 0 rgba(0,0,0,0.06), 0 1px 2px 0 rgba(0,0,0,0.05)</code> → <code>0 2px 4px 0 rgba(0,0,0,0.08), 0 1px 2px 0 rgba(0,0,0,0.04)</code> — bate com Figma <code>elevation/1</code>.</li>
+<li><strong><code>shadow.md</code></strong> (<code>--ds-shadow-md</code>): <code>0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px 0 rgba(0,0,0,0.06)</code> → <code>0 4px 8px 0 rgba(0,0,0,0.08), 0 2px 4px 0 rgba(0,0,0,0.04)</code> — bate com Figma <code>elevation/2</code>.</li>
+<li>CSS regenerado via <code>build:tokens</code> (225 vars, 132 theme vars).</li>
+</ul>
 <h3>Backlog / sub-issues</h3>
 <ul>
 <li><strong>#32</strong> — Refactor Card API no Figma: properties <code>Elevated</code> (BOOLEAN) e <code>Interactive</code> (BOOLEAN) desacopladas de <code>Style</code>, com <code>State</code> variant quando <code>Interactive=true</code>. Breaking change em consumidores Figma.</li>
-<li><strong>#33</strong> — Divergência entre <code>elevation/1</code> / <code>elevation/2</code> no Figma e <code>shadow-sm</code> / <code>shadow-md</code> no JSON (valores diferentes em radius, spread e alpha). Precisa decisão: Figma é fonte → atualizar JSON; ou JSON é fonte → atualizar Figma. ADR-003 indica <strong>Figma como fonte canônica de valor</strong> — mas os valores do JSON já estão em produção no CSS.</li>
 <li><strong>#34</strong> — Atualizar <code>scripts/lib/figma-dtcg.mjs</code>: auditar <code>strokeWeight</code> via <code>strokeTopWeight</code>/etc. em vez de <code>strokeWeight</code> top-level. Afeta detecção de cobertura em audits futuros.</li>
 </ul>
 <h2>[0.5.17]</h2>
