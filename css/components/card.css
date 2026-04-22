@@ -48,7 +48,7 @@
   border: var(--ds-border-width-1) solid var(--ds-border-default);
 }
 
-/* Elevated — shadow, no border */
+/* Elevated — shadow, no border (elevation level 1 per docs/foundations-elevation.html) */
 .ds-card--elevated {
-  box-shadow: var(--ds-shadow-md);
+  box-shadow: var(--ds-shadow-sm);
 }
