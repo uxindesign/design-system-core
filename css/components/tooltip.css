@@ -16,7 +16,7 @@
   color: var(--ds-content-inverse);
   padding: var(--ds-spacing-1) var(--ds-spacing-2);
   border-radius: var(--ds-radius-sm);
-  font-size: var(--ds-font-size-sm);
+  font-size: var(--ds-font-size-xs);
   font-weight: 400;
   white-space: nowrap;
   pointer-events: none;
