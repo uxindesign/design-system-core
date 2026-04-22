@@ -127,6 +127,26 @@
   --ds-control-line-height-sm: var(--ds-spacing-4); /** 16px. Matches icon-sm. height = padY*2 + lineHeight = 8+16+8 = 32. */
   --ds-control-line-height-md: var(--ds-spacing-5); /** 20px. Matches icon-md. height = 10+20+10 = 40. */
   --ds-control-line-height-lg: var(--ds-spacing-6); /** 24px. Matches icon-lg. height = 12+24+12 = 48. */
+  --ds-body-font-family-sans: var(--ds-font-family-sans); /** Font-family sans-serif padrão do sistema. Usar em todo texto UI. */
+  --ds-body-font-weight-regular: var(--ds-font-weight-regular); /** Peso regular (400). */
+  --ds-body-font-weight-medium: var(--ds-font-weight-medium); /** Peso medium (500). */
+  --ds-body-font-weight-semibold: var(--ds-font-weight-semibold); /** Peso semibold (600). */
+  --ds-body-font-weight-bold: var(--ds-font-weight-bold); /** Peso bold (700). */
+  --ds-body-letter-spacing-normal: var(--ds-letter-spacing-normal); /** Letter-spacing neutro (0). */
+  --ds-body-letter-spacing-tight: var(--ds-letter-spacing-tight); /** Letter-spacing apertado (-0.02em). */
+  --ds-body-font-size-xs: var(--ds-font-size-xs); /** 12px. */
+  --ds-body-font-size-sm: var(--ds-font-size-sm); /** 14px. */
+  --ds-body-font-size-md: var(--ds-font-size-md); /** 16px. */
+  --ds-body-font-size-lg: var(--ds-font-size-lg); /** 18px. */
+  --ds-body-font-size-xl: var(--ds-font-size-xl); /** 20px. */
+  --ds-body-font-size-2xl: var(--ds-font-size-2xl); /** 24px. */
+  --ds-body-font-size-3xl: var(--ds-font-size-3xl); /** 30px. */
+  --ds-body-line-height-xs: var(--ds-line-height-snug); /** 1.375 ratio. */
+  --ds-body-line-height-sm: var(--ds-line-height-snug); /** 1.375 ratio. */
+  --ds-body-line-height-md: var(--ds-line-height-normal); /** 1.5 ratio. Default body. */
+  --ds-body-line-height-xl: var(--ds-line-height-normal); /** 1.5 ratio. */
+  --ds-body-line-height-2xl: var(--ds-line-height-snug); /** 1.375 ratio. */
+  --ds-body-line-height-3xl: var(--ds-line-height-tight); /** 1.25 ratio. */
   --ds-content-link-hover: var(--ds-brand-hover); /** Links em estado hover. */
   --ds-brand-default: var(--ds-brand-primary); /** Fill brand principal. */
   --ds-accent-default: var(--ds-brand-secondary);

@@ -6629,7 +6629,10 @@
       "decisao": "TODO",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "semantic.typography.body.font-family.sans",
+          "semantic.typography.body.font-family.sans"
+        ],
         "figma": []
       }
     },
@@ -6685,7 +6688,10 @@
       "decisao": "TODO",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "semantic.typography.body.font-size.xs",
+          "semantic.typography.body.font-size.xs"
+        ],
         "figma": []
       }
     },
@@ -6702,8 +6708,10 @@
         "tokens": [
           "semantic.typography.control.font-size.sm",
           "semantic.typography.control.font-size.md",
+          "semantic.typography.body.font-size.sm",
           "semantic.typography.control.font-size.sm",
-          "semantic.typography.control.font-size.md"
+          "semantic.typography.control.font-size.md",
+          "semantic.typography.body.font-size.sm"
         ],
         "figma": []
       }
@@ -6720,7 +6728,9 @@
         "css": [],
         "tokens": [
           "semantic.typography.control.font-size.lg",
-          "semantic.typography.control.font-size.lg"
+          "semantic.typography.body.font-size.md",
+          "semantic.typography.control.font-size.lg",
+          "semantic.typography.body.font-size.md"
         ],
         "figma": []
       }
@@ -6735,7 +6745,10 @@
       "decisao": "TODO",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "semantic.typography.body.font-size.lg",
+          "semantic.typography.body.font-size.lg"
+        ],
         "figma": []
       }
     },
@@ -6749,7 +6762,10 @@
       "decisao": "TODO",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "semantic.typography.body.font-size.xl",
+          "semantic.typography.body.font-size.xl"
+        ],
         "figma": []
       }
     },
@@ -6763,7 +6779,10 @@
       "decisao": "TODO",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "semantic.typography.body.font-size.2xl",
+          "semantic.typography.body.font-size.2xl"
+        ],
         "figma": []
       }
     },
@@ -6777,7 +6796,10 @@
       "decisao": "TODO",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "semantic.typography.body.font-size.3xl",
+          "semantic.typography.body.font-size.3xl"
+        ],
         "figma": []
       }
     },
@@ -6875,7 +6897,10 @@
       "decisao": "TODO",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "semantic.typography.body.font-weight.regular",
+          "semantic.typography.body.font-weight.regular"
+        ],
         "figma": []
       }
     },
@@ -6889,7 +6914,10 @@
       "decisao": "TODO",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "semantic.typography.body.font-weight.medium",
+          "semantic.typography.body.font-weight.medium"
+        ],
         "figma": []
       }
     },
@@ -6903,7 +6931,10 @@
       "decisao": "TODO",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "semantic.typography.body.font-weight.semibold",
+          "semantic.typography.body.font-weight.semibold"
+        ],
         "figma": []
       }
     },
@@ -6917,7 +6948,10 @@
       "decisao": "TODO",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "semantic.typography.body.font-weight.bold",
+          "semantic.typography.body.font-weight.bold"
+        ],
         "figma": []
       }
     },
@@ -6945,7 +6979,10 @@
       "decisao": "TODO",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "semantic.typography.body.line-height.3xl",
+          "semantic.typography.body.line-height.3xl"
+        ],
         "figma": []
       }
     },
@@ -6959,7 +6996,14 @@
       "decisao": "TODO",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "semantic.typography.body.line-height.xs",
+          "semantic.typography.body.line-height.sm",
+          "semantic.typography.body.line-height.2xl",
+          "semantic.typography.body.line-height.xs",
+          "semantic.typography.body.line-height.sm",
+          "semantic.typography.body.line-height.2xl"
+        ],
         "figma": []
       }
     },
@@ -6973,7 +7017,12 @@
       "decisao": "TODO",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "semantic.typography.body.line-height.md",
+          "semantic.typography.body.line-height.xl",
+          "semantic.typography.body.line-height.md",
+          "semantic.typography.body.line-height.xl"
+        ],
         "figma": []
       }
     },
@@ -7071,7 +7120,10 @@
       "decisao": "TODO",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "semantic.typography.body.letter-spacing.tight",
+          "semantic.typography.body.letter-spacing.tight"
+        ],
         "figma": []
       }
     },
@@ -7085,7 +7137,10 @@
       "decisao": "TODO",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "semantic.typography.body.letter-spacing.normal",
+          "semantic.typography.body.letter-spacing.normal"
+        ],
         "figma": []
       }
     },
@@ -10239,6 +10294,286 @@
       "layer": "semantic",
       "type": "dimension",
       "references": "foundation.spacing.6",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.typography.body.font-family.sans": {
+      "layer": "semantic",
+      "type": "fontFamily",
+      "references": "foundation.typography.font.family.sans",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.typography.body.font-weight.regular": {
+      "layer": "semantic",
+      "type": "number",
+      "references": "foundation.typography.font.weight.regular",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.typography.body.font-weight.medium": {
+      "layer": "semantic",
+      "type": "number",
+      "references": "foundation.typography.font.weight.medium",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.typography.body.font-weight.semibold": {
+      "layer": "semantic",
+      "type": "number",
+      "references": "foundation.typography.font.weight.semibold",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.typography.body.font-weight.bold": {
+      "layer": "semantic",
+      "type": "number",
+      "references": "foundation.typography.font.weight.bold",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.typography.body.letter-spacing.normal": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.typography.letter.spacing.normal",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.typography.body.letter-spacing.tight": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.typography.letter.spacing.tight",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.typography.body.font-size.xs": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.typography.font.size.xs",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.typography.body.font-size.sm": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.typography.font.size.sm",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.typography.body.font-size.md": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.typography.font.size.md",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.typography.body.font-size.lg": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.typography.font.size.lg",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.typography.body.font-size.xl": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.typography.font.size.xl",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.typography.body.font-size.2xl": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.typography.font.size.2xl",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.typography.body.font-size.3xl": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.typography.font.size.3xl",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.typography.body.line-height.xs": {
+      "layer": "semantic",
+      "type": "number",
+      "references": "foundation.typography.line.height.snug",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.typography.body.line-height.sm": {
+      "layer": "semantic",
+      "type": "number",
+      "references": "foundation.typography.line.height.snug",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.typography.body.line-height.md": {
+      "layer": "semantic",
+      "type": "number",
+      "references": "foundation.typography.line.height.normal",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.typography.body.line-height.xl": {
+      "layer": "semantic",
+      "type": "number",
+      "references": "foundation.typography.line.height.normal",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.typography.body.line-height.2xl": {
+      "layer": "semantic",
+      "type": "number",
+      "references": "foundation.typography.line.height.snug",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.typography.body.line-height.3xl": {
+      "layer": "semantic",
+      "type": "number",
+      "references": "foundation.typography.line.height.tight",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",

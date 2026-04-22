@@ -662,6 +662,44 @@
             "$description": "24px. Matches icon-lg. height = 12+24+12 = 48."
           }
         }
+      },
+      "body": {
+        "$description": "Typography para texto UI geral (body, labels, títulos). Fora do escopo 'control' (ADR-006). Ver ADR-013.",
+        "font-family": {
+          "sans": {
+            "$type": "fontFamily",
+            "$value": "{foundation.typography.font.family.sans}",
+            "$description": "Font-family sans-serif padrão do sistema. Usar em todo texto UI."
+          }
+        },
+        "font-weight": {
+          "regular": { "$type": "number", "$value": "{foundation.typography.font.weight.regular}", "$description": "Peso regular (400)." },
+          "medium":  { "$type": "number", "$value": "{foundation.typography.font.weight.medium}",  "$description": "Peso medium (500)." },
+          "semibold":{ "$type": "number", "$value": "{foundation.typography.font.weight.semibold}","$description": "Peso semibold (600)." },
+          "bold":    { "$type": "number", "$value": "{foundation.typography.font.weight.bold}",    "$description": "Peso bold (700)." }
+        },
+        "letter-spacing": {
+          "normal": { "$type": "dimension", "$value": "{foundation.typography.letter.spacing.normal}", "$description": "Letter-spacing neutro (0)." },
+          "tight":  { "$type": "dimension", "$value": "{foundation.typography.letter.spacing.tight}",  "$description": "Letter-spacing apertado (-0.02em)." }
+        },
+        "font-size": {
+          "xs":  { "$type": "dimension", "$value": "{foundation.typography.font.size.xs}",  "$description": "12px." },
+          "sm":  { "$type": "dimension", "$value": "{foundation.typography.font.size.sm}",  "$description": "14px." },
+          "md":  { "$type": "dimension", "$value": "{foundation.typography.font.size.md}",  "$description": "16px." },
+          "lg":  { "$type": "dimension", "$value": "{foundation.typography.font.size.lg}",  "$description": "18px." },
+          "xl":  { "$type": "dimension", "$value": "{foundation.typography.font.size.xl}",  "$description": "20px." },
+          "2xl": { "$type": "dimension", "$value": "{foundation.typography.font.size.2xl}", "$description": "24px." },
+          "3xl": { "$type": "dimension", "$value": "{foundation.typography.font.size.3xl}", "$description": "30px." }
+        },
+        "line-height": {
+          "$description": "Ratios unitless. BY_DESIGN por ADR-012 (Figma usa PX absolutos).",
+          "xs":  { "$type": "number", "$value": "{foundation.typography.line.height.snug}",   "$description": "1.375 ratio." },
+          "sm":  { "$type": "number", "$value": "{foundation.typography.line.height.snug}",   "$description": "1.375 ratio." },
+          "md":  { "$type": "number", "$value": "{foundation.typography.line.height.normal}", "$description": "1.5 ratio. Default body." },
+          "xl":  { "$type": "number", "$value": "{foundation.typography.line.height.normal}", "$description": "1.5 ratio." },
+          "2xl": { "$type": "number", "$value": "{foundation.typography.line.height.snug}",   "$description": "1.375 ratio." },
+          "3xl": { "$type": "number", "$value": "{foundation.typography.line.height.tight}",  "$description": "1.25 ratio." }
+        }
       }
     }
   }

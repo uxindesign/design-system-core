@@ -339,6 +339,24 @@ function isJsonOnlyToken(token) {
 }
 
 /**
+ * ADR-012 extended: quando um token (típico em semantic ou component) existe
+ * nos dois lados mas os valores apontam para aliases Foundation em subárvores
+ * divergentes por design — Figma em `foundation.typography.font.line-height.*`
+ * (px) vs JSON em `foundation.typography.line.height.*` (ratio); mesma coisa
+ * pra letter-spacing — classifica como BY_DESIGN em vez de VALUE_DRIFT.
+ */
+function isDivergentAliasByDesign(figmaVal, jsonVal) {
+  if (typeof figmaVal !== 'string' || typeof jsonVal !== 'string') return false;
+  const figLH = /^\{foundation\.typography\.font\.line-height\./.test(figmaVal);
+  const jsnLH = /^\{foundation\.typography\.line\.height\./.test(jsonVal);
+  if (figLH && jsnLH) return true;
+  const figLS = /^\{foundation\.typography\.font\.letter-spacing\./.test(figmaVal);
+  const jsnLS = /^\{foundation\.typography\.letter\.spacing\./.test(jsonVal);
+  if (figLS && jsnLS) return true;
+  return false;
+}
+
+/**
  * Compara expected (Figma) vs actual (JSON). Retorna:
  *   { VALUE_DRIFT, NEW_IN_FIGMA, MISSING_IN_FIGMA, CSS_ONLY, BY_DESIGN }
  *
@@ -381,6 +399,8 @@ export function compareStates(expected, actual) {
         if (normalizeForCompare(e.$value) !== normalizeForCompare(a.$value)) {
           if (isCssOnlyToken(key)) {
             diffs.CSS_ONLY.push({ file, token: key, figma: e.$value, json: a.$value });
+          } else if (isDivergentAliasByDesign(e.$value, a.$value)) {
+            diffs.BY_DESIGN.push({ file, token: key, side: 'divergent-alias', figma: e.$value, json: a.$value });
           } else {
             diffs.VALUE_DRIFT.push({ file, token: key, figma: e.$value, json: a.$value });
           }

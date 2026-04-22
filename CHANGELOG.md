@@ -8,6 +8,22 @@ Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na
 
 ## [Não publicado]
 
+### Adicionado (Fase 1 — expansão Semantic typography)
+
+20 variáveis novas em `semantic.typography.body.*` no Figma e JSON, todas aliasando Foundation. Preparação pra Fase 2 (rebind dos 3.479 bindings Foundation em componentes Figma).
+
+- `semantic.typography.body.font-family.sans` → `{foundation.typography.font.family.sans}`
+- `semantic.typography.body.font-weight.{regular, medium, semibold, bold}` → foundation.weight.*
+- `semantic.typography.body.letter-spacing.{normal, tight}` → foundation.letter.spacing.*
+- `semantic.typography.body.font-size.{xs, sm, md, lg, xl, 2xl, 3xl}` → foundation.size.*
+- `semantic.typography.body.line-height.{xs, sm, md, xl, 2xl, 3xl}` → foundation ratios (ADR-012: Figma usa PX, JSON usa ratio unitless)
+
+CSS gerado: `--ds-body-font-family-sans`, `--ds-body-font-weight-*`, `--ds-body-letter-spacing-*`, `--ds-body-font-size-*`, `--ds-body-line-height-*`. Namespace `body` pareia com `control` (ADR-006) evitando colisão com Foundation (`--ds-font-family-sans` etc.).
+
+### Corrigido
+
+- `scripts/lib/figma-dtcg.mjs` — `compareStates` estendido com `isDivergentAliasByDesign`: tokens Semantic/Component com aliases divergentes por design (Figma `font.line-height.*` px vs JSON `line.height.*` ratio) agora são `BY_DESIGN`, não `VALUE_DRIFT`. Extensão documentada em ADR-012.
+
 ### Adicionado (arquitetura — ADR-013 e Token Registry)
 
 Codificada a regra de camadas de consumo de tokens: **Foundation nunca aparece em consumidor final**. CSS de componente, bindings Figma e exemplos em docs só podem consumir Semantic ou Component. A regra sempre existiu implicitamente, mas agora está documentada formalmente e vai ganhar enforcement em CI nas próximas iterações.

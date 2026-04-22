@@ -6,9 +6,9 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Status
 
-- Total de tokens: **501**
+- Total de tokens: **521**
 - Com metadados completos: **0**
-- Pendentes (`TODO` em algum campo obrigatório): **501**
+- Pendentes (`TODO` em algum campo obrigatório): **521**
 - Completude: **0%**
 
 ## Foundation
@@ -256,27 +256,27 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 |---|---|---|---|---|
 | `foundation.typography.font.family.display` | fontFamily | — | ⚠️ TODO | 0 |
 | `foundation.typography.font.family.mono` | fontFamily | — | ⚠️ TODO | 0 |
-| `foundation.typography.font.family.sans` | fontFamily | — | ⚠️ TODO | 0 |
-| `foundation.typography.font.size.2xl` | dimension | — | ⚠️ TODO | 0 |
+| `foundation.typography.font.family.sans` | fontFamily | — | ⚠️ TODO | 2 |
+| `foundation.typography.font.size.2xl` | dimension | — | ⚠️ TODO | 2 |
 | `foundation.typography.font.size.2xs` | dimension | — | ⚠️ TODO | 0 |
-| `foundation.typography.font.size.3xl` | dimension | — | ⚠️ TODO | 0 |
+| `foundation.typography.font.size.3xl` | dimension | — | ⚠️ TODO | 2 |
 | `foundation.typography.font.size.4xl` | dimension | — | ⚠️ TODO | 0 |
 | `foundation.typography.font.size.5xl` | dimension | — | ⚠️ TODO | 0 |
 | `foundation.typography.font.size.6xl` | dimension | — | ⚠️ TODO | 0 |
 | `foundation.typography.font.size.7xl` | dimension | — | ⚠️ TODO | 0 |
 | `foundation.typography.font.size.8xl` | dimension | — | ⚠️ TODO | 0 |
 | `foundation.typography.font.size.9xl` | dimension | — | ⚠️ TODO | 0 |
-| `foundation.typography.font.size.lg` | dimension | — | ⚠️ TODO | 0 |
-| `foundation.typography.font.size.md` | dimension | — | ⚠️ TODO | 2 |
-| `foundation.typography.font.size.sm` | dimension | — | ⚠️ TODO | 4 |
-| `foundation.typography.font.size.xl` | dimension | — | ⚠️ TODO | 0 |
-| `foundation.typography.font.size.xs` | dimension | — | ⚠️ TODO | 0 |
-| `foundation.typography.font.weight.bold` | number | — | ⚠️ TODO | 0 |
-| `foundation.typography.font.weight.medium` | number | — | ⚠️ TODO | 0 |
-| `foundation.typography.font.weight.regular` | number | — | ⚠️ TODO | 0 |
-| `foundation.typography.font.weight.semibold` | number | — | ⚠️ TODO | 0 |
-| `foundation.typography.letter.spacing.normal` | dimension | — | ⚠️ TODO | 0 |
-| `foundation.typography.letter.spacing.tight` | dimension | — | ⚠️ TODO | 0 |
+| `foundation.typography.font.size.lg` | dimension | — | ⚠️ TODO | 2 |
+| `foundation.typography.font.size.md` | dimension | — | ⚠️ TODO | 4 |
+| `foundation.typography.font.size.sm` | dimension | — | ⚠️ TODO | 6 |
+| `foundation.typography.font.size.xl` | dimension | — | ⚠️ TODO | 2 |
+| `foundation.typography.font.size.xs` | dimension | — | ⚠️ TODO | 2 |
+| `foundation.typography.font.weight.bold` | number | — | ⚠️ TODO | 2 |
+| `foundation.typography.font.weight.medium` | number | — | ⚠️ TODO | 2 |
+| `foundation.typography.font.weight.regular` | number | — | ⚠️ TODO | 2 |
+| `foundation.typography.font.weight.semibold` | number | — | ⚠️ TODO | 2 |
+| `foundation.typography.letter.spacing.normal` | dimension | — | ⚠️ TODO | 2 |
+| `foundation.typography.letter.spacing.tight` | dimension | — | ⚠️ TODO | 2 |
 | `foundation.typography.letter.spacing.tighter` | dimension | — | ⚠️ TODO | 0 |
 | `foundation.typography.letter.spacing.wide` | dimension | — | ⚠️ TODO | 0 |
 | `foundation.typography.letter.spacing.wider` | dimension | — | ⚠️ TODO | 0 |
@@ -285,10 +285,10 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `foundation.typography.line.height.control.sm` | dimension | — | ⚠️ TODO | 0 |
 | `foundation.typography.line.height.loose` | number | — | ⚠️ TODO | 0 |
 | `foundation.typography.line.height.none` | number | — | ⚠️ TODO | 0 |
-| `foundation.typography.line.height.normal` | number | — | ⚠️ TODO | 0 |
+| `foundation.typography.line.height.normal` | number | — | ⚠️ TODO | 4 |
 | `foundation.typography.line.height.relaxed` | number | — | ⚠️ TODO | 0 |
-| `foundation.typography.line.height.snug` | number | — | ⚠️ TODO | 0 |
-| `foundation.typography.line.height.tight` | number | — | ⚠️ TODO | 0 |
+| `foundation.typography.line.height.snug` | number | — | ⚠️ TODO | 6 |
+| `foundation.typography.line.height.tight` | number | — | ⚠️ TODO | 2 |
 
 ### foundation.z
 
@@ -303,7 +303,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Semantic
 
-133 tokens.
+153 tokens.
 
 ### semantic.accent
 
@@ -501,6 +501,26 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
+| `semantic.typography.body.font-family.sans` | fontFamily | → `foundation.typography.font.family.sans` | ⚠️ TODO | 0 |
+| `semantic.typography.body.font-size.2xl` | dimension | → `foundation.typography.font.size.2xl` | ⚠️ TODO | 0 |
+| `semantic.typography.body.font-size.3xl` | dimension | → `foundation.typography.font.size.3xl` | ⚠️ TODO | 0 |
+| `semantic.typography.body.font-size.lg` | dimension | → `foundation.typography.font.size.lg` | ⚠️ TODO | 0 |
+| `semantic.typography.body.font-size.md` | dimension | → `foundation.typography.font.size.md` | ⚠️ TODO | 0 |
+| `semantic.typography.body.font-size.sm` | dimension | → `foundation.typography.font.size.sm` | ⚠️ TODO | 0 |
+| `semantic.typography.body.font-size.xl` | dimension | → `foundation.typography.font.size.xl` | ⚠️ TODO | 0 |
+| `semantic.typography.body.font-size.xs` | dimension | → `foundation.typography.font.size.xs` | ⚠️ TODO | 0 |
+| `semantic.typography.body.font-weight.bold` | number | → `foundation.typography.font.weight.bold` | ⚠️ TODO | 0 |
+| `semantic.typography.body.font-weight.medium` | number | → `foundation.typography.font.weight.medium` | ⚠️ TODO | 0 |
+| `semantic.typography.body.font-weight.regular` | number | → `foundation.typography.font.weight.regular` | ⚠️ TODO | 0 |
+| `semantic.typography.body.font-weight.semibold` | number | → `foundation.typography.font.weight.semibold` | ⚠️ TODO | 0 |
+| `semantic.typography.body.letter-spacing.normal` | dimension | → `foundation.typography.letter.spacing.normal` | ⚠️ TODO | 0 |
+| `semantic.typography.body.letter-spacing.tight` | dimension | → `foundation.typography.letter.spacing.tight` | ⚠️ TODO | 0 |
+| `semantic.typography.body.line-height.2xl` | number | → `foundation.typography.line.height.snug` | ⚠️ TODO | 0 |
+| `semantic.typography.body.line-height.3xl` | number | → `foundation.typography.line.height.tight` | ⚠️ TODO | 0 |
+| `semantic.typography.body.line-height.md` | number | → `foundation.typography.line.height.normal` | ⚠️ TODO | 0 |
+| `semantic.typography.body.line-height.sm` | number | → `foundation.typography.line.height.snug` | ⚠️ TODO | 0 |
+| `semantic.typography.body.line-height.xl` | number | → `foundation.typography.line.height.normal` | ⚠️ TODO | 0 |
+| `semantic.typography.body.line-height.xs` | number | → `foundation.typography.line.height.snug` | ⚠️ TODO | 0 |
 | `semantic.typography.control.font-size.lg` | dimension | → `foundation.typography.font.size.md` | ⚠️ TODO | 4 |
 | `semantic.typography.control.font-size.md` | dimension | → `foundation.typography.font.size.sm` | ⚠️ TODO | 4 |
 | `semantic.typography.control.font-size.sm` | dimension | → `foundation.typography.font.size.sm` | ⚠️ TODO | 4 |
@@ -3158,7 +3178,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - Tokens que referenciam: `semantic.typography.body.font-family.sans`, `semantic.typography.body.font-family.sans`
 
 ### `foundation.typography.font.size.2xl`
 
@@ -3169,7 +3189,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - Tokens que referenciam: `semantic.typography.body.font-size.2xl`, `semantic.typography.body.font-size.2xl`
 
 ### `foundation.typography.font.size.2xs`
 
@@ -3191,7 +3211,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - Tokens que referenciam: `semantic.typography.body.font-size.3xl`, `semantic.typography.body.font-size.3xl`
 
 ### `foundation.typography.font.size.4xl`
 
@@ -3268,7 +3288,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - Tokens que referenciam: `semantic.typography.body.font-size.lg`, `semantic.typography.body.font-size.lg`
 
 ### `foundation.typography.font.size.md`
 
@@ -3279,7 +3299,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `semantic.typography.control.font-size.lg`, `semantic.typography.control.font-size.lg`
+  - Tokens que referenciam: `semantic.typography.control.font-size.lg`, `semantic.typography.body.font-size.md`, `semantic.typography.control.font-size.lg`, `semantic.typography.body.font-size.md`
 
 ### `foundation.typography.font.size.sm`
 
@@ -3290,7 +3310,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `semantic.typography.control.font-size.sm`, `semantic.typography.control.font-size.md`, `semantic.typography.control.font-size.sm`, `semantic.typography.control.font-size.md`
+  - Tokens que referenciam: `semantic.typography.control.font-size.sm`, `semantic.typography.control.font-size.md`, `semantic.typography.body.font-size.sm`, `semantic.typography.control.font-size.sm`, `semantic.typography.control.font-size.md`, `semantic.typography.body.font-size.sm`
 
 ### `foundation.typography.font.size.xl`
 
@@ -3301,7 +3321,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - Tokens que referenciam: `semantic.typography.body.font-size.xl`, `semantic.typography.body.font-size.xl`
 
 ### `foundation.typography.font.size.xs`
 
@@ -3312,7 +3332,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - Tokens que referenciam: `semantic.typography.body.font-size.xs`, `semantic.typography.body.font-size.xs`
 
 ### `foundation.typography.font.weight.bold`
 
@@ -3323,7 +3343,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - Tokens que referenciam: `semantic.typography.body.font-weight.bold`, `semantic.typography.body.font-weight.bold`
 
 ### `foundation.typography.font.weight.medium`
 
@@ -3334,7 +3354,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - Tokens que referenciam: `semantic.typography.body.font-weight.medium`, `semantic.typography.body.font-weight.medium`
 
 ### `foundation.typography.font.weight.regular`
 
@@ -3345,7 +3365,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - Tokens que referenciam: `semantic.typography.body.font-weight.regular`, `semantic.typography.body.font-weight.regular`
 
 ### `foundation.typography.font.weight.semibold`
 
@@ -3356,7 +3376,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - Tokens que referenciam: `semantic.typography.body.font-weight.semibold`, `semantic.typography.body.font-weight.semibold`
 
 ### `foundation.typography.letter.spacing.normal`
 
@@ -3367,7 +3387,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - Tokens que referenciam: `semantic.typography.body.letter-spacing.normal`, `semantic.typography.body.letter-spacing.normal`
 
 ### `foundation.typography.letter.spacing.tight`
 
@@ -3378,7 +3398,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - Tokens que referenciam: `semantic.typography.body.letter-spacing.tight`, `semantic.typography.body.letter-spacing.tight`
 
 ### `foundation.typography.letter.spacing.tighter`
 
@@ -3477,7 +3497,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - Tokens que referenciam: `semantic.typography.body.line-height.md`, `semantic.typography.body.line-height.xl`, `semantic.typography.body.line-height.md`, `semantic.typography.body.line-height.xl`
 
 ### `foundation.typography.line.height.relaxed`
 
@@ -3499,7 +3519,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - Tokens que referenciam: `semantic.typography.body.line-height.xs`, `semantic.typography.body.line-height.sm`, `semantic.typography.body.line-height.2xl`, `semantic.typography.body.line-height.xs`, `semantic.typography.body.line-height.sm`, `semantic.typography.body.line-height.2xl`
 
 ### `foundation.typography.line.height.tight`
 
@@ -3510,7 +3530,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - Tokens que referenciam: `semantic.typography.body.line-height.3xl`, `semantic.typography.body.line-height.3xl`
 
 ### `foundation.z.0`
 
@@ -5368,6 +5388,246 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Camada**: semantic
 - **Tipo**: `color`
 - **Alias**: → `foundation.color.neutral.50`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.typography.body.font-family.sans`
+
+- **Camada**: semantic
+- **Tipo**: `fontFamily`
+- **Alias**: → `foundation.typography.font.family.sans`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.typography.body.font-size.2xl`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.typography.font.size.2xl`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.typography.body.font-size.3xl`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.typography.font.size.3xl`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.typography.body.font-size.lg`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.typography.font.size.lg`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.typography.body.font-size.md`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.typography.font.size.md`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.typography.body.font-size.sm`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.typography.font.size.sm`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.typography.body.font-size.xl`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.typography.font.size.xl`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.typography.body.font-size.xs`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.typography.font.size.xs`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.typography.body.font-weight.bold`
+
+- **Camada**: semantic
+- **Tipo**: `number`
+- **Alias**: → `foundation.typography.font.weight.bold`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.typography.body.font-weight.medium`
+
+- **Camada**: semantic
+- **Tipo**: `number`
+- **Alias**: → `foundation.typography.font.weight.medium`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.typography.body.font-weight.regular`
+
+- **Camada**: semantic
+- **Tipo**: `number`
+- **Alias**: → `foundation.typography.font.weight.regular`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.typography.body.font-weight.semibold`
+
+- **Camada**: semantic
+- **Tipo**: `number`
+- **Alias**: → `foundation.typography.font.weight.semibold`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.typography.body.letter-spacing.normal`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.typography.letter.spacing.normal`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.typography.body.letter-spacing.tight`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.typography.letter.spacing.tight`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.typography.body.line-height.2xl`
+
+- **Camada**: semantic
+- **Tipo**: `number`
+- **Alias**: → `foundation.typography.line.height.snug`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.typography.body.line-height.3xl`
+
+- **Camada**: semantic
+- **Tipo**: `number`
+- **Alias**: → `foundation.typography.line.height.tight`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.typography.body.line-height.md`
+
+- **Camada**: semantic
+- **Tipo**: `number`
+- **Alias**: → `foundation.typography.line.height.normal`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.typography.body.line-height.sm`
+
+- **Camada**: semantic
+- **Tipo**: `number`
+- **Alias**: → `foundation.typography.line.height.snug`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.typography.body.line-height.xl`
+
+- **Camada**: semantic
+- **Tipo**: `number`
+- **Alias**: → `foundation.typography.line.height.normal`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.typography.body.line-height.xs`
+
+- **Camada**: semantic
+- **Tipo**: `number`
+- **Alias**: → `foundation.typography.line.height.snug`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO

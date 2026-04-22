@@ -123,7 +123,7 @@
 <li>Mudanças visuais de typography que afetam os dois lados (ex: deixar um heading mais &quot;aberto&quot;) exigem <strong>atualização manual em ambos</strong> — Figma via text style, JSON via <code>foundation/typography.json</code>.</li>
 </ol>
 <h3>Mecanismo técnico</h3>
-<p>No <code>scripts/lib/figma-dtcg.mjs</code>, introduzimos duas listas de regex:</p>
+<p>No <code>scripts/lib/figma-dtcg.mjs</code>, introduzimos duas listas de regex para tokens Foundation que só existem em um lado:</p>
 <pre><code class="language-js">const FIGMA_ONLY_PATHS = [
   /^foundation\.typography\.font\.line-height\./,
   /^foundation\.typography\.font\.letter-spacing\./,
@@ -139,6 +139,9 @@ const JSON_ONLY_PATHS = [
 <li>Tokens com path casando <code>JSON_ONLY_PATHS</code> que seriam <code>MISSING_IN_FIGMA</code> → idem.</li>
 <li>Categoria <code>BY_DESIGN</code> é listada no relatório mas <strong>não conta como drift</strong>. Exit code 0 quando é o único resto.</li>
 </ul>
+<h3>Extensão em ADR-013 — aliases divergentes</h3>
+<p>Tokens Semantic/Component que <strong>existem nos dois lados</strong> mas apontam para Foundation em subárvores divergentes (Figma → <code>foundation.typography.font.line-height.*</code> px, JSON → <code>foundation.typography.line.height.*</code> ratio) são também classificados como <code>BY_DESIGN</code>, não <code>VALUE_DRIFT</code>. Motivo: a divergência vem da mesma razão arquitetural (Figma px vs CSS ratio) propagada através do alias. Exemplo: <code>semantic.typography.body.line-height.md</code> resolve em 24px no Figma e ratio 1.5 no CSS — ambos canônicos.</p>
+<p>Detecção via função <code>isDivergentAliasByDesign</code> em <code>figma-dtcg.mjs</code>: quando Figma alias casa <code>^{foundation.typography.font.line-height.</code> e JSON alias casa <code>^{foundation.typography.line.height.</code> (ou letter-spacing equivalente), é BY_DESIGN divergent-alias.</p>
 <h3>Diferença semântica vs <code>CSS_ONLY</code></h3>
 <p>Este ADR introduz <code>BY_DESIGN</code>; não se confunde com a categoria <code>CSS_ONLY</code> existente:</p>
 <ul>

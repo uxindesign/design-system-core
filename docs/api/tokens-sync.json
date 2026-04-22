@@ -1,21 +1,457 @@
 {
-  "generatedAt": "2026-04-22T17:52:20.693Z",
+  "generatedAt": "2026-04-22T18:19:10.380Z",
   "totals": {
-    "jsonTokens": 634,
+    "jsonTokens": 674,
     "sharedTokens": 368,
-    "lightTokens": 133,
-    "darkTokens": 133,
-    "errors": 0,
+    "lightTokens": 153,
+    "darkTokens": 153,
+    "errors": 2,
     "warnings": 0
   },
   "checks": {
     "jsonIntegrity": [],
     "jsonVsCss": [],
     "jsonVsFigma": {
-      "skipped": true,
-      "reason": "Snapshot Figma não encontrado (.figma-snapshot.json). Gerar via Claude Code (ver docs/process-figma-sync.md).",
-      "divergences": [],
-      "diffs": null
+      "skipped": false,
+      "snapshotAge": "0h",
+      "summary": {
+        "figmaVariableCount": 510,
+        "figmaCollectionCount": 4,
+        "VALUE_DRIFT": 2,
+        "NEEDS_SYNC": 0,
+        "DRIFT_FROM_SOURCE": 0,
+        "ALIAS_BROKEN": 0,
+        "CSS_ONLY": 9,
+        "BY_DESIGN": 53
+      },
+      "divergences": [
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "component.checkbox.border-radius",
+          "message": "valor difere: Figma=4 / JSON=\"{foundation.radius.sm}\"",
+          "figma": 4,
+          "json": "{foundation.radius.sm}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "component.modal.border-radius",
+          "message": "valor difere: Figma=16 / JSON=\"{foundation.radius.xl}\"",
+          "figma": 16,
+          "json": "{foundation.radius.xl}"
+        }
+      ],
+      "diffs": {
+        "VALUE_DRIFT": [
+          {
+            "file": "component/checkbox.json",
+            "token": "component.checkbox.border-radius",
+            "figma": 4,
+            "json": "{foundation.radius.sm}"
+          },
+          {
+            "file": "component/modal.json",
+            "token": "component.modal.border-radius",
+            "figma": 16,
+            "json": "{foundation.radius.xl}"
+          }
+        ],
+        "NEW_IN_FIGMA": [],
+        "MISSING_IN_FIGMA": [],
+        "CSS_ONLY": [
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.family.sans",
+            "figma": "Inter",
+            "json": "'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.family.mono",
+            "figma": "DM Mono",
+            "json": "'DM Mono', 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace"
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.family.display",
+            "figma": "Inter",
+            "json": "'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.weight.regular",
+            "figma": "Regular",
+            "json": "400"
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.weight.medium",
+            "figma": "Medium",
+            "json": "500"
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.weight.semibold",
+            "figma": "Semi Bold",
+            "json": "600"
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.weight.bold",
+            "figma": "Bold",
+            "json": "700"
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.size.xs",
+            "figma": 11,
+            "json": "0.75rem"
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.size.sm",
+            "figma": 12,
+            "json": "0.875rem"
+          }
+        ],
+        "BY_DESIGN": [
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.line-height.tight",
+            "side": "figma-only",
+            "figma": 120
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.line-height.snug",
+            "side": "figma-only",
+            "figma": 135
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.line-height.normal",
+            "side": "figma-only",
+            "figma": 150
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.line-height.relaxed",
+            "side": "figma-only",
+            "figma": 162.5
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.letter-spacing.tight",
+            "side": "figma-only",
+            "figma": -0.5
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.letter-spacing.normal",
+            "side": "figma-only",
+            "figma": 0
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.letter-spacing.wide",
+            "side": "figma-only",
+            "figma": 0.5
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.letter-spacing.wider",
+            "side": "figma-only",
+            "figma": 1.5
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.line-height.90",
+            "side": "figma-only",
+            "figma": 90
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.line-height.80",
+            "side": "figma-only",
+            "figma": 80
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.line-height.70",
+            "side": "figma-only",
+            "figma": 70
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.line-height.60",
+            "side": "figma-only",
+            "figma": 60
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.line-height.50",
+            "side": "figma-only",
+            "figma": 50
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.line-height.44",
+            "side": "figma-only",
+            "figma": 44
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.line-height.40",
+            "side": "figma-only",
+            "figma": 40
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.line-height.34",
+            "side": "figma-only",
+            "figma": 34
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.line-height.28",
+            "side": "figma-only",
+            "figma": 28
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.line-height.26",
+            "side": "figma-only",
+            "figma": 26
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.line-height.24",
+            "side": "figma-only",
+            "figma": 24
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.line-height.22",
+            "side": "figma-only",
+            "figma": 22
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.line-height.18",
+            "side": "figma-only",
+            "figma": 18
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.line-height.20",
+            "side": "figma-only",
+            "figma": 20
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.line-height.16",
+            "side": "figma-only",
+            "figma": 16
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.line.height.none",
+            "side": "json-only",
+            "json": "1"
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.line.height.tight",
+            "side": "json-only",
+            "json": "1.25"
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.line.height.snug",
+            "side": "json-only",
+            "json": "1.375"
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.line.height.normal",
+            "side": "json-only",
+            "json": "1.5"
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.line.height.relaxed",
+            "side": "json-only",
+            "json": "1.625"
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.line.height.loose",
+            "side": "json-only",
+            "json": "1.75"
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.line.height.control.sm",
+            "side": "json-only",
+            "json": "1rem"
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.line.height.control.md",
+            "side": "json-only",
+            "json": "1.25rem"
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.line.height.control.lg",
+            "side": "json-only",
+            "json": "1.5rem"
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.letter.spacing.tighter",
+            "side": "json-only",
+            "json": "-0.05em"
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.letter.spacing.tight",
+            "side": "json-only",
+            "json": "-0.025em"
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.letter.spacing.normal",
+            "side": "json-only",
+            "json": "0"
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.letter.spacing.wide",
+            "side": "json-only",
+            "json": "0.025em"
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.letter.spacing.wider",
+            "side": "json-only",
+            "json": "0.05em"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.typography.body.letter-spacing.normal",
+            "side": "divergent-alias",
+            "figma": "{foundation.typography.font.letter-spacing.normal}",
+            "json": "{foundation.typography.letter.spacing.normal}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.typography.body.letter-spacing.tight",
+            "side": "divergent-alias",
+            "figma": "{foundation.typography.font.letter-spacing.tight}",
+            "json": "{foundation.typography.letter.spacing.tight}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.typography.body.line-height.xs",
+            "side": "divergent-alias",
+            "figma": "{foundation.typography.font.line-height.16}",
+            "json": "{foundation.typography.line.height.snug}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.typography.body.line-height.sm",
+            "side": "divergent-alias",
+            "figma": "{foundation.typography.font.line-height.18}",
+            "json": "{foundation.typography.line.height.snug}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.typography.body.line-height.md",
+            "side": "divergent-alias",
+            "figma": "{foundation.typography.font.line-height.24}",
+            "json": "{foundation.typography.line.height.normal}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.typography.body.line-height.xl",
+            "side": "divergent-alias",
+            "figma": "{foundation.typography.font.line-height.28}",
+            "json": "{foundation.typography.line.height.normal}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.typography.body.line-height.2xl",
+            "side": "divergent-alias",
+            "figma": "{foundation.typography.font.line-height.34}",
+            "json": "{foundation.typography.line.height.snug}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.typography.body.line-height.3xl",
+            "side": "divergent-alias",
+            "figma": "{foundation.typography.font.line-height.40}",
+            "json": "{foundation.typography.line.height.tight}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.typography.body.letter-spacing.normal",
+            "side": "divergent-alias",
+            "figma": "{foundation.typography.font.letter-spacing.normal}",
+            "json": "{foundation.typography.letter.spacing.normal}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.typography.body.letter-spacing.tight",
+            "side": "divergent-alias",
+            "figma": "{foundation.typography.font.letter-spacing.tight}",
+            "json": "{foundation.typography.letter.spacing.tight}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.typography.body.line-height.xs",
+            "side": "divergent-alias",
+            "figma": "{foundation.typography.font.line-height.16}",
+            "json": "{foundation.typography.line.height.snug}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.typography.body.line-height.sm",
+            "side": "divergent-alias",
+            "figma": "{foundation.typography.font.line-height.18}",
+            "json": "{foundation.typography.line.height.snug}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.typography.body.line-height.md",
+            "side": "divergent-alias",
+            "figma": "{foundation.typography.font.line-height.24}",
+            "json": "{foundation.typography.line.height.normal}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.typography.body.line-height.xl",
+            "side": "divergent-alias",
+            "figma": "{foundation.typography.font.line-height.28}",
+            "json": "{foundation.typography.line.height.normal}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.typography.body.line-height.2xl",
+            "side": "divergent-alias",
+            "figma": "{foundation.typography.font.line-height.34}",
+            "json": "{foundation.typography.line.height.snug}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.typography.body.line-height.3xl",
+            "side": "divergent-alias",
+            "figma": "{foundation.typography.font.line-height.40}",
+            "json": "{foundation.typography.line.height.tight}"
+          }
+        ]
+      }
     }
   }
 }

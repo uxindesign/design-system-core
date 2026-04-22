@@ -37,7 +37,7 @@ Tokens de `line-height` e `letter-spacing` têm **representação divergente por
 
 ### Mecanismo técnico
 
-No `scripts/lib/figma-dtcg.mjs`, introduzimos duas listas de regex:
+No `scripts/lib/figma-dtcg.mjs`, introduzimos duas listas de regex para tokens Foundation que só existem em um lado:
 
 ```js
 const FIGMA_ONLY_PATHS = [
@@ -55,6 +55,12 @@ Na função `compareStates`:
 - Tokens com path casando `FIGMA_ONLY_PATHS` que seriam `NEW_IN_FIGMA` → vão pra categoria `BY_DESIGN` (informativa).
 - Tokens com path casando `JSON_ONLY_PATHS` que seriam `MISSING_IN_FIGMA` → idem.
 - Categoria `BY_DESIGN` é listada no relatório mas **não conta como drift**. Exit code 0 quando é o único resto.
+
+### Extensão em ADR-013 — aliases divergentes
+
+Tokens Semantic/Component que **existem nos dois lados** mas apontam para Foundation em subárvores divergentes (Figma → `foundation.typography.font.line-height.*` px, JSON → `foundation.typography.line.height.*` ratio) são também classificados como `BY_DESIGN`, não `VALUE_DRIFT`. Motivo: a divergência vem da mesma razão arquitetural (Figma px vs CSS ratio) propagada através do alias. Exemplo: `semantic.typography.body.line-height.md` resolve em 24px no Figma e ratio 1.5 no CSS — ambos canônicos.
+
+Detecção via função `isDivergentAliasByDesign` em `figma-dtcg.mjs`: quando Figma alias casa `^{foundation.typography.font.line-height.` e JSON alias casa `^{foundation.typography.line.height.` (ou letter-spacing equivalente), é BY_DESIGN divergent-alias.
 
 ### Diferença semântica vs `CSS_ONLY`
 
