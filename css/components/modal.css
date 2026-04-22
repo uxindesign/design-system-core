@@ -41,10 +41,10 @@
 }
 
 .ds-modal__title {
-  font-size: var(--ds-modal-title-font-size);
-  font-weight: var(--ds-modal-title-font-weight);
+  font-size: var(--ds-body-font-size-lg);
+  font-weight: var(--ds-body-font-weight-semibold);
   color: var(--ds-content-default);
-  line-height: var(--ds-modal-title-line-height);
+  line-height: var(--ds-body-line-height-sm);
 }
 
 .ds-modal__close {
@@ -55,8 +55,8 @@
   cursor: pointer;
   color: var(--ds-content-secondary);
   border-radius: var(--ds-modal-close-border-radius);
-  transition: color var(--ds-modal-transition-duration) var(--ds-modal-transition-timing),
-              background-color var(--ds-modal-transition-duration) var(--ds-modal-transition-timing);
+  transition: color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
+              background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
 }
 
 .ds-modal__close:hover {
@@ -73,9 +73,9 @@
 .ds-modal__body {
   padding: 0 var(--ds-modal-padding) var(--ds-modal-padding);
   overflow-y: auto;
-  font-size: var(--ds-modal-body-font-size);
+  font-size: var(--ds-body-font-size-sm);
   color: var(--ds-content-default);
-  line-height: var(--ds-modal-body-line-height);
+  line-height: var(--ds-body-line-height-md);
 }
 
 /* Footer */
@@ -84,7 +84,7 @@
   justify-content: flex-end;
   gap: var(--ds-modal-footer-gap);
   padding: var(--ds-modal-footer-padding-top) var(--ds-modal-padding) var(--ds-modal-padding);
-  border-top: var(--ds-modal-border-width) solid var(--ds-border-default);
+  border-top: var(--ds-border-width-default) solid var(--ds-border-default);
 }
 
 /* ---------------------------------------------------------

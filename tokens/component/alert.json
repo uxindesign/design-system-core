@@ -2,15 +2,30 @@
   "component": {
     "alert": {
       "$description": "Structural tokens for Alert component.",
-      "padding": { "$type": "dimension", "$value": "{semantic.space.inset.md}", "$description": "12px" },
-      "gap": { "$type": "dimension", "$value": "{semantic.space.gap.sm}", "$description": "8px between icon and content" },
-      "content-gap": { "$type": "dimension", "$value": "{semantic.space.gap.xs}", "$description": "4px between title and description" },
-      "border-radius": { "$type": "dimension", "$value": "{semantic.radius.component}" },
-      "focus-border-radius": { "$type": "dimension", "$value": "{foundation.radius.sm}", "$description": "4px — focus ring corner on close button" },
-      "border-width": { "$type": "dimension", "$value": "{semantic.border.width.default}" },
-      "icon-size": { "$type": "dimension", "$value": "1.25rem", "$description": "20px" },
-      "transition-duration": { "$type": "duration", "$value": "{foundation.duration.fast}" },
-      "transition-timing": { "$type": "cubicBezier", "$value": "{foundation.ease.default}" }
+      "padding": {
+        "$type": "dimension",
+        "$value": "{semantic.space.inset.md}",
+        "$description": "12px"
+      },
+      "gap": {
+        "$type": "dimension",
+        "$value": "{semantic.space.gap.sm}",
+        "$description": "8px between icon and content"
+      },
+      "border-radius": {
+        "$type": "dimension",
+        "$value": "{semantic.radius.component}"
+      },
+      "focus-border-radius": {
+        "$type": "dimension",
+        "$value": "{foundation.radius.sm}",
+        "$description": "4px — focus ring corner on close button"
+      },
+      "icon-size": {
+        "$type": "dimension",
+        "$value": "1.25rem",
+        "$description": "20px"
+      }
     }
   }
 }

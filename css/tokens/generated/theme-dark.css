@@ -85,6 +85,11 @@
   --ds-state-hover: var(--ds-overlay-white-5);
   --ds-state-pressed: var(--ds-overlay-white-10);
   --ds-state-disabled-background: var(--ds-color-neutral-900);
+  --ds-motion-duration-fast: var(--ds-duration-fast); /** 150ms. */
+  --ds-motion-duration-normal: var(--ds-duration-normal); /** 200ms. */
+  --ds-motion-duration-slow: var(--ds-duration-slow); /** 300ms. */
+  --ds-motion-ease-default: var(--ds-ease-default); /** Curva padrão. */
+  --ds-opacity-disabled: var(--ds-opacity-50); /** 50%. */
   --ds-space-inset-2xs: var(--ds-spacing-0-5); /** 2px. Compact inset for small components like Badge. */
   --ds-space-inset-xs: var(--ds-spacing-1);
   --ds-space-inset-sm: var(--ds-spacing-2);

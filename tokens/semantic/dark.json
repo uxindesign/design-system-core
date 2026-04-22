@@ -443,6 +443,21 @@
         }
       }
     },
+    "motion": {
+      "$description": "Semantic motion — ADR-013 Fase 8.",
+      "duration": {
+        "fast":   { "$type": "duration", "$value": "{foundation.duration.fast}",   "$description": "150ms." },
+        "normal": { "$type": "duration", "$value": "{foundation.duration.normal}", "$description": "200ms." },
+        "slow":   { "$type": "duration", "$value": "{foundation.duration.slow}",   "$description": "300ms." }
+      },
+      "ease": {
+        "default": { "$type": "cubicBezier", "$value": "{foundation.ease.default}", "$description": "Curva padrão." }
+      }
+    },
+    "opacity": {
+      "$description": "Semantic opacity — ADR-013 Fase 8.",
+      "disabled": { "$type": "number", "$value": "{foundation.opacity.50}", "$description": "50%." }
+    },
     "space": {
       "inset": {
         "2xs": {

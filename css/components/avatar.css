@@ -10,7 +10,7 @@
   border-radius: var(--ds-avatar-border-radius);
   background-color: var(--ds-brand-default);
   color: var(--ds-brand-content-contrast);
-  font-family: var(--ds-avatar-font-family);
+  font-family: var(--ds-body-font-family-sans);
   font-weight: var(--ds-avatar-font-weight);
   flex-shrink: 0;
   overflow: hidden;
