@@ -239,7 +239,7 @@
         <button class="ds-btn ds-btn--brand"><span class="ds-btn__label">Default</span></button>
         <button class="ds-btn ds-btn--brand" style="background-color:var(--ds-brand-hover)"><span class="ds-btn__label">Hover</span></button>
         <button class="ds-btn ds-btn--brand" style="background-color:var(--ds-brand-active)"><span class="ds-btn__label">Pressed</span></button>
-        <button class="ds-btn ds-btn--brand" style="outline:var(--ds-focus-ring-width, 2px) solid var(--ds-border-focus); outline-offset:var(--ds-focus-ring-offset, 2px)"><span class="ds-btn__label">Focused</span></button>
+        <button class="ds-btn ds-btn--brand" style="outline:var(--ds-focus-ring-width, 2px) solid var(--ds-focus-ring-color); outline-offset:var(--ds-focus-ring-offset, 2px)"><span class="ds-btn__label">Focused</span></button>
         <button class="ds-btn ds-btn--brand" disabled><span class="ds-btn__label">Disabled</span></button>
       </div>
     </div>
@@ -429,22 +429,22 @@
         <tr><td>text (disabled)</td><td><code>semantic.content.disabled</code></td><td><code>--ds-content-disabled</code></td></tr>
         <tr><td>border-radius</td><td><code>semantic.radius.component</code></td><td><code>--ds-radius-component</code></td></tr>
         <tr><td>focus ring</td><td><code>semantic.focus.ring.*</code></td><td><code>--ds-focus-ring-width</code>, <code>--ds-focus-ring-offset</code>, <code>--ds-focus-ring-color</code></td></tr>
-        <tr><td>height (sm)</td><td><code>semantic.size.control.sm</code></td><td><code>--ds-size-control-sm</code></td></tr>
-        <tr><td>height (md)</td><td><code>semantic.size.control.md</code></td><td><code>--ds-size-control-md</code></td></tr>
-        <tr><td>height (lg)</td><td><code>semantic.size.control.lg</code></td><td><code>--ds-size-control-lg</code></td></tr>
-        <tr><td>padding-x (sm)</td><td><code>semantic.space.control.padding-x.sm</code></td><td><code>--ds-space-control-padding-x-sm</code></td></tr>
-        <tr><td>padding-x (md)</td><td><code>semantic.space.control.padding-x.md</code></td><td><code>--ds-space-control-padding-x-md</code></td></tr>
-        <tr><td>padding-x (lg)</td><td><code>semantic.space.control.padding-x.lg</code></td><td><code>--ds-space-control-padding-x-lg</code></td></tr>
-        <tr><td>padding-y (sm)</td><td><code>semantic.space.control.padding-y.sm</code></td><td><code>--ds-space-control-padding-y-sm</code> (8px)</td></tr>
-        <tr><td>padding-y (md)</td><td><code>semantic.space.control.padding-y.md</code></td><td><code>--ds-space-control-padding-y-md</code> (10px)</td></tr>
-        <tr><td>padding-y (lg)</td><td><code>semantic.space.control.padding-y.lg</code></td><td><code>--ds-space-control-padding-y-lg</code> (12px)</td></tr>
-        <tr><td>gap (icon ↔ label)</td><td><code>semantic.space.gap.sm</code></td><td><code>--ds-space-gap-sm</code></td></tr>
-        <tr><td>font-size (sm)</td><td><code>semantic.typography.control.font-size.sm</code></td><td><code>--ds-control-font-size-sm</code></td></tr>
-        <tr><td>font-size (md)</td><td><code>semantic.typography.control.font-size.md</code></td><td><code>--ds-control-font-size-md</code></td></tr>
-        <tr><td>font-size (lg)</td><td><code>semantic.typography.control.font-size.lg</code></td><td><code>--ds-control-font-size-lg</code></td></tr>
-        <tr><td>icon-size (sm)</td><td><code>semantic.size.control.icon.sm</code></td><td><code>--ds-size-control-icon-sm</code></td></tr>
-        <tr><td>icon-size (md)</td><td><code>semantic.size.control.icon.md</code></td><td><code>--ds-size-control-icon-md</code></td></tr>
-        <tr><td>icon-size (lg)</td><td><code>semantic.size.control.icon.lg</code></td><td><code>--ds-size-control-icon-lg</code></td></tr>
+        <tr><td>height (sm)</td><td><code>component.button.height.sm</code></td><td><code>--ds-button-height-sm</code></td></tr>
+        <tr><td>height (md)</td><td><code>component.button.height.md</code></td><td><code>--ds-button-height-md</code></td></tr>
+        <tr><td>height (lg)</td><td><code>component.button.height.lg</code></td><td><code>--ds-button-height-lg</code></td></tr>
+        <tr><td>padding-x (sm)</td><td><code>component.button.padding-x.sm</code></td><td><code>--ds-button-padding-x-sm</code></td></tr>
+        <tr><td>padding-x (md)</td><td><code>component.button.padding-x.md</code></td><td><code>--ds-button-padding-x-md</code></td></tr>
+        <tr><td>padding-x (lg)</td><td><code>component.button.padding-x.lg</code></td><td><code>--ds-button-padding-x-lg</code></td></tr>
+        <tr><td>padding-y (sm)</td><td><code>component.button.padding-y.sm</code></td><td><code>--ds-button-padding-y-sm</code> (8px)</td></tr>
+        <tr><td>padding-y (md)</td><td><code>component.button.padding-y.md</code></td><td><code>--ds-button-padding-y-md</code> (10px)</td></tr>
+        <tr><td>padding-y (lg)</td><td><code>component.button.padding-y.lg</code></td><td><code>--ds-button-padding-y-lg</code> (12px)</td></tr>
+        <tr><td>gap (icon ↔ label)</td><td><code>component.button.gap</code></td><td><code>--ds-button-gap</code></td></tr>
+        <tr><td>font-size (sm)</td><td><code>component.button.font-size.sm</code></td><td><code>--ds-button-font-size-sm</code></td></tr>
+        <tr><td>font-size (md)</td><td><code>component.button.font-size.md</code></td><td><code>--ds-button-font-size-md</code></td></tr>
+        <tr><td>font-size (lg)</td><td><code>component.button.font-size.lg</code></td><td><code>--ds-button-font-size-lg</code></td></tr>
+        <tr><td>icon-size (sm)</td><td><code>component.button.icon-size.sm</code></td><td><code>--ds-button-icon-size-sm</code></td></tr>
+        <tr><td>icon-size (md)</td><td><code>component.button.icon-size.md</code></td><td><code>--ds-button-icon-size-md</code></td></tr>
+        <tr><td>icon-size (lg)</td><td><code>component.button.icon-size.lg</code></td><td><code>--ds-button-icon-size-lg</code></td></tr>
       </tbody>
     </table>
 

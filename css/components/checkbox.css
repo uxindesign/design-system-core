@@ -106,7 +106,7 @@
 
 /* Error state */
 .ds-checkbox-group--error .ds-checkbox {
-  border-color: var(--ds-feedback-error-default);
+  border-color: var(--ds-feedback-error-border);
 }
 
 .ds-checkbox-group--error .ds-checkbox:checked {

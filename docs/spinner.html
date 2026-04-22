@@ -111,7 +111,7 @@
             <p style="margin:var(--ds-spacing-2) 0 0;font-size:var(--ds-font-size-xs);color:var(--ds-content-secondary);">sm (16px)</p>
           </div>
           <div style="text-align:center;">
-            <span class="ds-spinner ds-spinner--md" role="status" aria-label="Loading"></span>
+            <span class="ds-spinner" role="status" aria-label="Loading"></span>
             <p style="margin:var(--ds-spacing-2) 0 0;font-size:var(--ds-font-size-xs);color:var(--ds-content-secondary);">md (24px)</p>
           </div>
           <div style="text-align:center;">
@@ -123,7 +123,7 @@
       <div class="ds-preview__code" style="display:none">
         <button class="ds-preview__copy">Copy</button>
         <pre><code>&lt;span class="ds-spinner ds-spinner--sm" role="status" aria-label="Loading"&gt;&lt;/span&gt;
-&lt;span class="ds-spinner ds-spinner--md" role="status" aria-label="Loading"&gt;&lt;/span&gt;
+&lt;span class="ds-spinner" role="status" aria-label="Loading"&gt;&lt;/span&gt;
 &lt;span class="ds-spinner ds-spinner--lg" role="status" aria-label="Loading"&gt;&lt;/span&gt;</code></pre>
       </div>
     </div>
@@ -256,7 +256,8 @@
     <table class="ds-token-table">
       <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token (semantic)</th><th><span data-lang="pt">Variavel CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
       <tbody>
-        <tr><td><span data-lang="pt">cor</span><span data-lang="en">color</span></td><td><code>semantic.brand.default</code></td><td><code>--ds-brand-default</code></td></tr>
+        <tr><td><span data-lang="pt">cor (arco ativo)</span><span data-lang="en">color (active arc)</span></td><td><code>semantic.brand.default</code></td><td><code>--ds-brand-default</code></td></tr>
+        <tr><td><span data-lang="pt">cor (trilha)</span><span data-lang="en">color (track)</span></td><td><code>semantic.border.default</code></td><td><code>--ds-border-default</code></td></tr>
         <tr><td><span data-lang="pt">duração da animação</span><span data-lang="en">animation duration</span></td><td><code>foundation.duration.slow</code></td><td><code>--ds-duration-slow</code></td></tr>
       </tbody>
     </table>
@@ -272,7 +273,7 @@
       <tbody>
         <tr><td><code>ds-spinner</code></td><td><span data-lang="pt">Classe base do spinner</span><span data-lang="en">Base spinner class</span></td></tr>
         <tr><td><code>ds-spinner--sm</code></td><td><span data-lang="pt">Tamanho pequeno (16px)</span><span data-lang="en">Small size (16px)</span></td></tr>
-        <tr><td><code>ds-spinner--md</code></td><td><span data-lang="pt">Tamanho médio (24px)</span><span data-lang="en">Medium size (24px)</span></td></tr>
+        <tr><td><span data-lang="pt">(sem modificador)</span><span data-lang="en">(no modifier)</span></td><td><span data-lang="pt">Tamanho médio (24px) — padrão na classe base <code>.ds-spinner</code>, não há <code>ds-spinner--md</code></span><span data-lang="en">Medium size (24px) — default on base class <code>.ds-spinner</code>, no <code>ds-spinner--md</code> modifier exists</span></td></tr>
         <tr><td><code>ds-spinner--lg</code></td><td><span data-lang="pt">Tamanho grande (32px)</span><span data-lang="en">Large size (32px)</span></td></tr>
       </tbody>
     </table>

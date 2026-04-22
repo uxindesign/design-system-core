@@ -88,25 +88,25 @@
 .ds-alert--success.ds-alert--subtle {
   background-color: var(--ds-feedback-success-background);
   color: var(--ds-feedback-success-content-default);
-  border-left: var(--ds-border-width-4) solid var(--ds-feedback-success-default);
+  border-left: var(--ds-border-width-4) solid var(--ds-feedback-success-border);
 }
 
 .ds-alert--warning.ds-alert--subtle {
   background-color: var(--ds-feedback-warning-background);
   color: var(--ds-feedback-warning-content-default);
-  border-left: var(--ds-border-width-4) solid var(--ds-feedback-warning-default);
+  border-left: var(--ds-border-width-4) solid var(--ds-feedback-warning-border);
 }
 
 .ds-alert--error.ds-alert--subtle {
   background-color: var(--ds-feedback-error-background);
   color: var(--ds-feedback-error-content-default);
-  border-left: var(--ds-border-width-4) solid var(--ds-feedback-error-default);
+  border-left: var(--ds-border-width-4) solid var(--ds-feedback-error-border);
 }
 
 .ds-alert--info.ds-alert--subtle {
   background-color: var(--ds-feedback-info-background);
   color: var(--ds-feedback-info-content-default);
-  border-left: var(--ds-border-width-4) solid var(--ds-feedback-info-default);
+  border-left: var(--ds-border-width-4) solid var(--ds-feedback-info-border);
 }
 
 /* ---------------------------------------------------------

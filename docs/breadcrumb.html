@@ -128,7 +128,7 @@
       <strong>2</strong> <span data-lang="pt">Lista (<code>.ds-breadcrumb</code>) — <code>&lt;ol&gt;</code> contendo os itens do breadcrumb.</span><span data-lang="en">List (<code>.ds-breadcrumb</code>) — <code>&lt;ol&gt;</code> containing breadcrumb items.</span><br>
       <strong>3</strong> <span data-lang="pt">Item (<code>.ds-breadcrumb__item</code>) — entrada individual do breadcrumb.</span><span data-lang="en">Item (<code>.ds-breadcrumb__item</code>) — individual breadcrumb entry.</span><br>
       <strong>4</strong> <span data-lang="pt">Link — páginas pai navegaveis.</span><span data-lang="en">Link — navigable parent pages.</span><br>
-      <strong>5</strong> <span data-lang="pt">Atual (<code>.ds-breadcrumb__current</code>) — texto (não um link), com <code>aria-current="page"</code>.</span><span data-lang="en">Current (<code>.ds-breadcrumb__current</code>) — text (not a link), with <code>aria-current="page"</code>.</span><br>
+      <strong>5</strong> <span data-lang="pt">Atual (<code>.ds-breadcrumb__item--current</code>) — texto (não um link), com <code>aria-current="page"</code>.</span><span data-lang="en">Current (<code>.ds-breadcrumb__item--current</code>) — text (not a link), with <code>aria-current="page"</code>.</span><br>
       <strong>6</strong> <span data-lang="pt">Separador — texto decorativo ou gerado via CSS entre os itens.</span><span data-lang="en">Separator — CSS-generated or decorative text between items.</span>
     </div>
   </div>
@@ -295,8 +295,8 @@
       <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token (semantic)</th><th><span data-lang="pt">Variavel CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
       <tbody>
         <tr><td><span data-lang="pt">cor do link</span><span data-lang="en">link color</span></td><td><code>semantic.content.link.default</code></td><td><code>--ds-content-link-default</code></td></tr>
-        <tr><td><span data-lang="pt">link hover</span><span data-lang="en">link hover</span></td><td><code>semantic.content.link.hover</code></td><td><code>--ds-content-link-hover</code></td></tr>
-        <tr><td><span data-lang="pt">texto atual</span><span data-lang="en">current text</span></td><td><code>semantic.content.secondary</code></td><td><code>--ds-content-secondary</code></td></tr>
+        <tr><td><span data-lang="pt">link hover</span><span data-lang="en">link hover</span></td><td>—</td><td><span data-lang="pt"><code>text-decoration: underline</code> (sem mudança de cor)</span><span data-lang="en"><code>text-decoration: underline</code> (no color change)</span></td></tr>
+        <tr><td><span data-lang="pt">texto atual</span><span data-lang="en">current text</span></td><td><code>semantic.content.default</code></td><td><code>--ds-content-default</code></td></tr>
         <tr><td><span data-lang="pt">separador</span><span data-lang="en">separator</span></td><td><code>semantic.content.tertiary</code></td><td><code>--ds-content-tertiary</code></td></tr>
       </tbody>
     </table>

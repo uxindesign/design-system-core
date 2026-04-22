@@ -47,7 +47,7 @@
 }
 
 .ds-badge--neutral.ds-badge--solid {
-  background-color: var(--ds-color-neutral-600);
+  background-color: var(--ds-border-strong);
   color: var(--ds-brand-content-contrast);
 }
 

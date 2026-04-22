@@ -186,7 +186,7 @@
         <div class="ds-tabs" role="tablist" aria-label="Settings tabs" style="width:100%;">
           <button class="ds-tab ds-tab--active" role="tab" aria-selected="true" id="tab-general">General</button>
           <button class="ds-tab" role="tab" aria-selected="false" id="tab-notifications" tabindex="-1">Notifications</button>
-          <button class="ds-tab ds-tab--disabled" role="tab" aria-selected="false" aria-disabled="true" tabindex="-1" disabled>Billing</button>
+          <button class="ds-tab" role="tab" aria-selected="false" aria-disabled="true" tabindex="-1" disabled>Billing</button>
           <button class="ds-tab" role="tab" aria-selected="false" id="tab-security" tabindex="-1">Security</button>
         </div>
         <div class="ds-tab-panel" role="tabpanel" aria-labelledby="tab-general" style="padding:var(--ds-spacing-4) 0;">
@@ -195,7 +195,7 @@
       </div>
       <div class="ds-preview__code" style="display:none">
         <button class="ds-preview__copy">Copy</button>
-        <pre><code>&lt;button class="ds-tab ds-tab--disabled" role="tab"
+        <pre><code>&lt;button class="ds-tab" role="tab"
         aria-selected="false" aria-disabled="true"
         tabindex="-1" disabled&gt;Billing&lt;/button&gt;</code></pre>
       </div>
@@ -312,7 +312,7 @@
         <tr><td><code>ds-tabs</code></td><td><span data-lang="pt">Container da lista de tabs</span><span data-lang="en">Tab list container</span></td></tr>
         <tr><td><code>ds-tab</code></td><td><span data-lang="pt">Button individual de tab</span><span data-lang="en">Individual tab button</span></td></tr>
         <tr><td><code>ds-tab--active</code></td><td><span data-lang="pt">Tab ativa / selecionada</span><span data-lang="en">Active / selected tab</span></td></tr>
-        <tr><td><code>ds-tab--disabled</code></td><td><span data-lang="pt">Tab desabilitada (não interativa)</span><span data-lang="en">Disabled tab (non-interactive)</span></td></tr>
+        <tr><td><code>disabled</code> <span data-lang="pt">(atributo HTML)</span><span data-lang="en">(HTML attribute)</span></td><td><span data-lang="pt">Tab desabilitada — usar o atributo nativo <code>disabled</code>; não existe classe <code>ds-tab--disabled</code></span><span data-lang="en">Disabled tab — use the native <code>disabled</code> attribute; there is no <code>ds-tab--disabled</code> class</span></td></tr>
         <tr><td><code>ds-tab-panel</code></td><td><span data-lang="pt">Área de conteúdo do painel</span><span data-lang="en">Tab panel content area</span></td></tr>
       </tbody>
     </table>

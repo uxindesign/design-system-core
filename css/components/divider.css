@@ -5,7 +5,7 @@
 /* Horizontal divider (default) */
 .ds-divider {
   border: none;
-  height: 1px;
+  height: var(--ds-border-width-1);
   width: 100%;
   background-color: var(--ds-border-default);
   margin: var(--ds-spacing-4) 0;
@@ -13,7 +13,7 @@
 
 /* Vertical divider */
 .ds-divider--vertical {
-  width: 1px;
+  width: var(--ds-border-width-1);
   height: 100%;
   margin: 0 var(--ds-spacing-4);
 }

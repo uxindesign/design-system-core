@@ -100,10 +100,29 @@
 
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Border Colors</span><span data-lang="en">Border Colors</span></h2>
-    <p style="color:var(--ds-content-secondary);">
+    <p style="color:var(--ds-content-secondary);margin-bottom:var(--ds-spacing-4);">
       <span data-lang="pt">Cores de borda semânticas (<code>--ds-border-default</code>, <code>--ds-border-focus</code>, <code>--ds-feedback-*-border</code>, etc) vivem na camada semântica e adaptam ao modo light/dark. A referência completa com valores light/dark está em <a href="foundations-theme-colors.html">Theme Colors</a>, nas seções <strong>Border</strong> e <strong>Feedback</strong>.</span>
       <span data-lang="en">Semantic border colors (<code>--ds-border-default</code>, <code>--ds-border-focus</code>, <code>--ds-feedback-*-border</code>, etc) live in the semantic layer and adapt to light/dark mode. The full reference with light/dark values is in <a href="foundations-theme-colors.html">Theme Colors</a>, under <strong>Border</strong> and <strong>Feedback</strong> sections.</span>
     </p>
+
+    <h3 style="font-size:var(--ds-font-size-sm);font-weight:var(--ds-font-weight-semibold);color:var(--ds-content-secondary);margin-bottom:var(--ds-spacing-3);"><span data-lang="pt">Bordas de controles de formulário</span><span data-lang="en">Form control borders</span></h3>
+    <table class="ds-token-table">
+      <thead><tr><th>Token</th><th><span data-lang="pt">Referencia</span><span data-lang="en">Reference</span></th><th><span data-lang="pt">Uso</span><span data-lang="en">Usage</span></th></tr></thead>
+      <tbody>
+        <tr><td><code>--ds-border-control-default</code></td><td><code>feedback.error.border / neutral-500</code></td><td><span data-lang="pt">Borda padrão de controles de formulário (Input, Select, Textarea, Checkbox, Radio). Contraste ≥ 3:1 conforme WCAG 1.4.11.</span><span data-lang="en">Default border for form controls (Input, Select, Textarea, Checkbox, Radio). ≥ 3:1 contrast per WCAG 1.4.11.</span></td></tr>
+        <tr><td><code>--ds-border-control-hover</code></td><td><code>neutral-600 (light) / neutral-400 (dark)</code></td><td><span data-lang="pt">Borda no hover de controles de formulário.</span><span data-lang="en">Border on hover for form controls.</span></td></tr>
+        <tr><td><code>--ds-border-control-disabled</code></td><td><code>neutral-300 (light) / neutral-700 (dark)</code></td><td><span data-lang="pt">Borda de controles desabilitados. Isento de contraste WCAG (1.4.3).</span><span data-lang="en">Border for disabled controls. Exempt from WCAG contrast requirements (1.4.3).</span></td></tr>
+      </tbody>
+    </table>
+
+    <h3 style="font-size:var(--ds-font-size-sm);font-weight:var(--ds-font-weight-semibold);color:var(--ds-content-secondary);margin-bottom:var(--ds-spacing-3);"><span data-lang="pt">Bordas semânticas adicionais</span><span data-lang="en">Additional semantic borders</span></h3>
+    <table class="ds-token-table">
+      <thead><tr><th>Token</th><th><span data-lang="pt">Referencia</span><span data-lang="en">Reference</span></th><th><span data-lang="pt">Uso</span><span data-lang="en">Usage</span></th></tr></thead>
+      <tbody>
+        <tr><td><code>--ds-border-error</code></td><td><code>feedback.error.border</code></td><td><span data-lang="pt">Borda de validação de erro em campos de formulário.</span><span data-lang="en">Error validation border for form fields.</span></td></tr>
+        <tr><td><code>--ds-border-brand</code></td><td><code>brand.default</code></td><td><span data-lang="pt">Borda de foco ou seleção em brand (alias de brand.default).</span><span data-lang="en">Focus or selection border in brand color (alias of brand.default).</span></td></tr>
+      </tbody>
+    </table>
   </div>
 </main>
 
