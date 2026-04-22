@@ -57,7 +57,12 @@ Exceções registradas:
 - `semantic.control.*` só via Component (ADR-006 princípio 9).
 - Componente pode consumir Foundation direto quando não há equivalente Semantic (ex: `component.modal.max-width`); exige entrada explícita no Token Registry justificando.
 
-Enforcement em CI via `npm run verify:tokens`: CSS leak, Figma leak, Registry completude. Ver [ADR-013](docs/decisions/ADR-013-camadas-de-consumo-de-tokens.md) e `tokens/registry.yaml`.
+Enforcement em CI via `npm run verify:tokens`:
+- **CSS leak**: scan `css/components/*.css` (error) e `css/base/*.css` (warning, débito — PR futuro). Zero erros hoje; 117 warnings em base/.
+- **Registry completude**: tokens em `tokens/**/*.json` precisam de entry em `tokens/registry.json`. Warning durante a migração (0% preenchido hoje); vira error quando completude atingir ~80%.
+- **Figma leak**: planejado — depende de `sync-tokens-from-figma` ganhar dump de component bindings. TODO.
+
+Ver [ADR-013](docs/decisions/ADR-013-camadas-de-consumo-de-tokens.md) e `tokens/registry.json`.
 
 ## Acessos
 
