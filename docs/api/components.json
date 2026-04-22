@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-21T23:56:24.117Z",
+  "generatedAt": "2026-04-22T09:11:40.211Z",
   "version": "0.5.17",
   "count": 18,
   "components": [
@@ -574,7 +574,7 @@
         "ds-line-height-relaxed",
         "ds-line-height-tight",
         "ds-radius-lg",
-        "ds-shadow-md",
+        "ds-shadow-sm",
         "ds-spacing-2",
         "ds-spacing-4",
         "ds-surface-default"

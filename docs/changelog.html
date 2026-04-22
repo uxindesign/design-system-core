@@ -74,6 +74,29 @@
 <p>O formato é baseado em <a href="https://keepachangelog.com/pt-BR/1.1.0/">Keep a Changelog</a> e o versionamento segue <a href="https://semver.org/lang/pt-BR/">Semantic Versioning</a>.</p>
 <p>Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na faixa 0.x. Regras de bump documentadas em <code>docs/process-versioning.html</code>.</p>
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
+<h3>Corrigido (Figma — elevation e focus rings)</h3>
+<p>Fecha <strong>issue #24.3</strong>. Três drifts entre Figma e o canônico (CSS + <code>docs/foundations-elevation.html</code>):</p>
+<ul>
+<li><strong>Modal</strong> (3 variants: Size=Small/Medium/Large): <code>effectStyleId</code> estava em <code>elevation/3</code> (shadow-lg, nível 3). Ajustado para <code>elevation/4</code> (shadow-xl, nível 4) — bate com <code>ds-modal { box-shadow: var(--ds-shadow-xl) }</code> e com a doc &quot;Modais = nível 4&quot;.</li>
+<li><strong>Effect styles <code>elevation/3</code> e <code>elevation/4</code></strong>: descrições trocadas. Agora <code>/3</code> = &quot;Sidesheets, painéis flutuantes&quot; e <code>/4</code> = &quot;Modais, dialogs, overlays&quot; — alinha com a doc.</li>
+<li><strong>Focus Rings (78 nós)</strong>: 72 em Button + 6 em Toggle com <code>strokeWeight=2</code> raw. Bindados em <code>focus/ring/width</code> (Figma Variable, alias pra <code>border/width/2</code>). API do Figma exigiu binding nos 4 campos individuais <code>strokeTopWeight/Right/Bottom/Left</code> — <code>setBoundVariable(&#39;strokeWeight&#39;, ...)</code> falha silenciosamente. Isso revela que <strong>audits anteriores subestimaram cobertura</strong>: checavam só <code>boundVariables.strokeWeight</code> (que nunca é usado). Issue #34 aberta pra atualizar <code>scripts/lib/figma-dtcg.mjs</code>.</li>
+<li><strong>Card</strong> (variante Style=Elevated): <code>effectStyleId</code> estava em <code>elevation/2</code> (shadow-md, nível 2). Ajustado para <code>elevation/1</code> (shadow-sm, nível 1) — bate com a doc &quot;Cards, painéis, sticky headers = nível 1&quot;. CSS também atualizado: <code>.ds-card--elevated { box-shadow: var(--ds-shadow-sm) }</code> (era <code>shadow-md</code>).</li>
+</ul>
+<h3>Mudança visual</h3>
+<p>Card <code>--elevated</code> fica com sombra <strong>ligeiramente mais sutil</strong> (shadow-md → shadow-sm). Modal fica com sombra <strong>mais pronunciada</strong> (shadow-lg → shadow-xl) — o CSS já usava shadow-xl, o Figma é que estava desalinhado.</p>
+<h3>Reversibilidade</h3>
+<ul>
+<li><code>.figma-revert-24.3.1.{json,mjs}</code> — Modal (restaura elevation/3 + descrições).</li>
+<li><code>.figma-revert-24.3.2.{json,mjs}</code> — Focus Rings (remove bindings dos 78 nós).</li>
+<li><code>.figma-revert-24.3.3.json</code> — Card elevated (restaura elevation/2).</li>
+</ul>
+<p>Todos gitignored.</p>
+<h3>Backlog / sub-issues</h3>
+<ul>
+<li><strong>#32</strong> — Refactor Card API no Figma: properties <code>Elevated</code> (BOOLEAN) e <code>Interactive</code> (BOOLEAN) desacopladas de <code>Style</code>, com <code>State</code> variant quando <code>Interactive=true</code>. Breaking change em consumidores Figma.</li>
+<li><strong>#33</strong> — Divergência entre <code>elevation/1</code> / <code>elevation/2</code> no Figma e <code>shadow-sm</code> / <code>shadow-md</code> no JSON (valores diferentes em radius, spread e alpha). Precisa decisão: Figma é fonte → atualizar JSON; ou JSON é fonte → atualizar Figma. ADR-003 indica <strong>Figma como fonte canônica de valor</strong> — mas os valores do JSON já estão em produção no CSS.</li>
+<li><strong>#34</strong> — Atualizar <code>scripts/lib/figma-dtcg.mjs</code>: auditar <code>strokeWeight</code> via <code>strokeTopWeight</code>/etc. em vez de <code>strokeWeight</code> top-level. Afeta detecção de cobertura em audits futuros.</li>
+</ul>
 <h2>[0.5.17]</h2>
 <h3>Adicionado</h3>
 <ul>
