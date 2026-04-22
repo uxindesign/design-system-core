@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-04-22T14:27:32.634Z",
+  "generatedAt": "2026-04-22T17:52:20.339Z",
   "version": "0.5.17",
-  "count": 12,
+  "count": 13,
   "adrs": [
     {
       "id": "ADR-001",
@@ -110,6 +110,15 @@
       "date": "2026-04-21",
       "sourceFile": "docs/decisions/ADR-012-typography-tokens-divergence.md",
       "url": "https://uxindesign.github.io/design-system-core/docs/decisions/adr-012-typography-tokens-divergence.html"
+    },
+    {
+      "id": "ADR-013",
+      "num": 13,
+      "title": "Camadas de consumo de tokens — Foundation nunca direto em consumidor final",
+      "status": "Aceita",
+      "date": "2026-04-22",
+      "sourceFile": "docs/decisions/ADR-013-camadas-de-consumo-de-tokens.md",
+      "url": "https://uxindesign.github.io/design-system-core/docs/decisions/adr-013-camadas-de-consumo-de-tokens.html"
     }
   ]
 }

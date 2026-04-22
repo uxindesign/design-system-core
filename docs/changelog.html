@@ -74,6 +74,19 @@
 <p>O formato é baseado em <a href="https://keepachangelog.com/pt-BR/1.1.0/">Keep a Changelog</a> e o versionamento segue <a href="https://semver.org/lang/pt-BR/">Semantic Versioning</a>.</p>
 <p>Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na faixa 0.x. Regras de bump documentadas em <code>docs/process-versioning.html</code>.</p>
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
+<h3>Adicionado (arquitetura — ADR-013 e Token Registry)</h3>
+<p>Codificada a regra de camadas de consumo de tokens: <strong>Foundation nunca aparece em consumidor final</strong>. CSS de componente, bindings Figma e exemplos em docs só podem consumir Semantic ou Component. A regra sempre existiu implicitamente, mas agora está documentada formalmente e vai ganhar enforcement em CI nas próximas iterações.</p>
+<ul>
+<li><code>docs/decisions/ADR-013-camadas-de-consumo-de-tokens.md</code> — ADR novo. Cadeia permitida, exceções (<code>semantic.control.*</code> via componente apenas; componente→foundation quando não há abstração semântica), enforcement planejado em 3 checks, ligação com Token Registry.</li>
+<li><code>CLAUDE.md</code> — seção &quot;Camadas de consumo de tokens (ADR-013)&quot; adicionada à &quot;Hierarquia de verdade&quot;.</li>
+</ul>
+<p>Token Registry como artefato vivo (inicial, skeleton):</p>
+<ul>
+<li><code>tokens/registry.json</code> — catálogo com 501 entries (Foundation 231, Semantic 133, Component 137). Campos por entry: <code>layer</code>, <code>type</code>, <code>references</code> (alias, se houver), <code>sentido</code>, <code>escopo</code>, <code>contexto</code>, <code>usos</code> (calculado), <code>decisao</code>. Inicializado com <code>TODO</code> nos campos obrigatórios — preenchimento incremental em PRs subsequentes.</li>
+<li><code>docs/token-registry.md</code> — vitrine gerada automaticamente do <code>registry.json</code>, agrupada por camada → categoria, com seção de detalhe por token (sentido, contexto, decisão, locais de uso).</li>
+<li><code>scripts/build-token-registry.mjs</code> — script com 3 modos: <code>--init</code> (cria stub entries preservando existentes), sem flag (recalcula <code>usos</code> via grep em CSS + tokens que referenciam + Figma snapshot quando disponível, e regenera o MD), <code>--check</code> (valida completude, falha com exit 1 se houver TODO ou token sem entry).</li>
+<li><code>package.json</code> — 3 scripts novos: <code>build:registry</code>, <code>build:registry:init</code>, <code>verify:registry</code>.</li>
+</ul>
 <h3>Adicionado (docs — JSON/DTCG em todas as páginas de foundation)</h3>
 <p>Seção &quot;JSON (DTCG)&quot; adicionada às 7 páginas de foundation que estavam sem ela, completando a cobertura iniciada em motion/opacity/zindex. Cada bloco reflete o token JSON real do arquivo correspondente em <code>tokens/foundation/</code>:</p>
 <ul>
