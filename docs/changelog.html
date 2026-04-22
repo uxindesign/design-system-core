@@ -74,6 +74,43 @@
 <p>O formato é baseado em <a href="https://keepachangelog.com/pt-BR/1.1.0/">Keep a Changelog</a> e o versionamento segue <a href="https://semver.org/lang/pt-BR/">Semantic Versioning</a>.</p>
 <p>Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na faixa 0.x. Regras de bump documentadas em <code>docs/process-versioning.html</code>.</p>
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
+<h3>Adicionado (Fase 7 — enforcement em CI)</h3>
+<p><code>scripts/tokens-verify.mjs</code> ganha 2 checks novos que rodam em CI:</p>
+<ol>
+<li><strong>CSS foundation leak</strong> — scan em <code>css/components/*.css</code> (error) e <code>css/base/*.css</code> (warning, débito transitório). Regex detecta uso direto de: <code>--ds-spacing-*</code>, <code>--ds-radius-{xs,sm,md,lg,xl,2xl,full,none}</code>, <code>--ds-border-width-[0-9]</code>, <code>--ds-font-{family,weight,size}-*</code>, <code>--ds-line-height-*</code>, <code>--ds-letter-spacing-*</code>, <code>--ds-shadow-*</code>, <code>--ds-duration-*</code>, <code>--ds-ease-*</code>, <code>--ds-opacity-[0-9]</code>, <code>--ds-z-[0-9]</code>, <code>--ds-color-*</code>.</li>
+<li><strong>Registry completude</strong> — valida que todo token em <code>tokens/**/*.json</code> tem entry em <code>tokens/registry.json</code> com campos obrigatórios. Durante migração emite warning (672 TODOs esperados). Vira error quando atingir 80% de completude.</li>
+</ol>
+<p><strong>State pós-Fase 7</strong>: verify:tokens passa com <strong>0 erros, 118 warnings</strong> (117 foundation leaks em base/ — débito pra próximo PR; 1 registry mass-TODO).</p>
+<h3>Concluído (Fase 5 — CSS + JSONs component + Figma component vars)</h3>
+<p>Fase 5 do plano ADR-013 completa: os 19 CSS de componente não consomem mais <strong>nenhum</strong> token Foundation direto. Todos os consumos são via Semantic ou Component layer.</p>
+<ul>
+<li><strong>CSS</strong>: 17 <code>css/components/*.css</code> reescritos (divider piloto já feito). Grep <code>var(--ds-(spacing-|radius-(sm|md|lg|xl|2xl|full|xs|none)|border-width-[0-9]|font-*|line-height-|letter-spacing-|shadow-|duration-|ease-|opacity-[0-9]|z-[0-9]|color-)</code> → <strong>0 matches</strong>.</li>
+<li><strong>JSON</strong>: 6 novos (alert, badge, breadcrumb, card, tabs, tooltip) + 11 expandidos. Registry cresce de 521 → 672.</li>
+<li><strong>Figma</strong>: 125 vars novas na collection Component (137 → 262), aliasando Foundation/Semantic. 26 tokens (transitions, shadows, z-index) ficam só em JSON — Figma Variables não representa essas categorias.</li>
+<li><strong>ADR-012 estendido</strong>: <code>JSON_ONLY_COMPONENT_ALIAS_TARGETS</code> em <code>figma-dtcg.mjs</code> classifica esses 26 como <code>BY_DESIGN</code> em vez de drift.</li>
+<li><strong>Verify pós-Fase 5</strong>: 0 erros, 0 warnings. CSS_ONLY=9, BY_DESIGN=79 (informativos).</li>
+</ul>
+<h3>Concluído (Fases 2 e 3 — rebind + conversão de raw values)</h3>
+<p><strong>Fase 2</strong>: Todos os 3.479 bindings Foundation nos 51 componentes Figma rebindados pra Semantic. Divididos em 4 passes:</p>
+<ul>
+<li>Pass 1 — Icons (30 componentes, 60 rebinds — border/width/1 + font-family/weight/letter-spacing)</li>
+<li>Pass 2a — Global typography em todos componentes (2.759 rebinds — font-family, font-weight, letter-spacing, border-width)</li>
+<li>Pass 2b — font-size/line-height em não-controles → body.* (268 rebinds)</li>
+<li>Pass 2c — font-size/line-height em controles → control.<em>/body.</em> contextual (210 rebinds)</li>
+<li>Pass 3 — cleanup com IDs corrigidos (2.073 rebinds complementares)</li>
+<li>Text styles — 28 text styles locais rebindados pra Semantic (98 rebinds). Isso destravou os nodes filhos que herdavam Foundation via style.</li>
+</ul>
+<p>Post-audit: <strong>0 Foundation bindings remanescentes em qualquer componente Figma</strong>. Regra ADR-013 cumprida no lado do Figma.</p>
+<p><strong>Fase 3</strong>: Das 60 variáveis raw na collection Component Figma, <strong>50 convertidas em aliases</strong> (Foundation.* ou Semantic.*). Exemplos:</p>
+<ul>
+<li><code>avatar/size/sm</code> (32) → <code>{foundation.spacing.8}</code></li>
+<li><code>checkbox/border-radius</code> (4) → <code>{foundation.radius.sm}</code></li>
+<li><code>modal/border-radius</code> (16) → <code>{foundation.radius.xl}</code></li>
+<li><code>checkbox/min-target-size</code> (44) → <code>{semantic.size.control.min-target}</code> — reaproveita alias semântico existente</li>
+<li><code>radio/font-size</code>, <code>toggle/font-size</code>, etc. (14) → <code>{foundation.typography.font.size.sm}</code></li>
+</ul>
+<p><strong>10 vars permanecem raw</strong> como exceção explícita (ADR-013 permite quando não há equivalente Foundation): <code>modal/max-width/{sm,md,lg}</code> (400/520/640), <code>textarea/min-height/{sm,lg}</code> (68/112), <code>skeleton/rect-height</code> (120), <code>spinner/stroke-width/{sm,lg}</code> (1.5/3), <code>toggle/thumb-size/lg</code> (18), <code>checkbox/check-width/md</code> (5). Todos valores sem ponto correspondente na escala Foundation.</p>
+<p>Pós-sync: <code>verify:tokens</code> — <strong>0 errors, 0 warnings</strong>. Figma ↔ JSON ↔ CSS totalmente sincronizados.</p>
 <h3>Adicionado (Fase 1 — expansão Semantic typography)</h3>
 <p>20 variáveis novas em <code>semantic.typography.body.*</code> no Figma e JSON, todas aliasando Foundation. Preparação pra Fase 2 (rebind dos 3.479 bindings Foundation em componentes Figma).</p>
 <ul>

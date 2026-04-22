@@ -8,6 +8,15 @@ Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na
 
 ## [Não publicado]
 
+### Adicionado (Fase 7 — enforcement em CI)
+
+`scripts/tokens-verify.mjs` ganha 2 checks novos que rodam em CI:
+
+1. **CSS foundation leak** — scan em `css/components/*.css` (error) e `css/base/*.css` (warning, débito transitório). Regex detecta uso direto de: `--ds-spacing-*`, `--ds-radius-{xs,sm,md,lg,xl,2xl,full,none}`, `--ds-border-width-[0-9]`, `--ds-font-{family,weight,size}-*`, `--ds-line-height-*`, `--ds-letter-spacing-*`, `--ds-shadow-*`, `--ds-duration-*`, `--ds-ease-*`, `--ds-opacity-[0-9]`, `--ds-z-[0-9]`, `--ds-color-*`.
+2. **Registry completude** — valida que todo token em `tokens/**/*.json` tem entry em `tokens/registry.json` com campos obrigatórios. Durante migração emite warning (672 TODOs esperados). Vira error quando atingir 80% de completude.
+
+**State pós-Fase 7**: verify:tokens passa com **0 erros, 118 warnings** (117 foundation leaks em base/ — débito pra próximo PR; 1 registry mass-TODO).
+
 ### Concluído (Fase 5 — CSS + JSONs component + Figma component vars)
 
 Fase 5 do plano ADR-013 completa: os 19 CSS de componente não consomem mais **nenhum** token Foundation direto. Todos os consumos são via Semantic ou Component layer.
