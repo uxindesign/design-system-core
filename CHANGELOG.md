@@ -13,7 +13,7 @@ Fecha **issue #24.3**. Três drifts entre Figma e o canônico (CSS + `docs/found
 
 - **Modal** (3 variants: Size=Small/Medium/Large): `effectStyleId` estava em `elevation/3` (shadow-lg, nível 3). Ajustado para `elevation/4` (shadow-xl, nível 4) — bate com `ds-modal { box-shadow: var(--ds-shadow-xl) }` e com a doc "Modais = nível 4".
 - **Effect styles `elevation/3` e `elevation/4`**: descrições trocadas. Agora `/3` = "Sidesheets, painéis flutuantes" e `/4` = "Modais, dialogs, overlays" — alinha com a doc.
-- **Focus Rings (78 nós)**: 72 em Button + 6 em Toggle com `strokeWeight=2` raw. Bindados em `focus/ring/width` (Figma Variable, alias pra `border/width/2`). API do Figma exigiu binding nos 4 campos individuais `strokeTopWeight/Right/Bottom/Left` — `setBoundVariable('strokeWeight', ...)` falha silenciosamente. Isso revela que **audits anteriores subestimaram cobertura**: checavam só `boundVariables.strokeWeight` (que nunca é usado). Issue #31 aberta pra atualizar `scripts/lib/figma-dtcg.mjs`.
+- **Focus Rings (78 nós)**: 72 em Button + 6 em Toggle com `strokeWeight=2` raw. Bindados em `focus/ring/width` (Figma Variable, alias pra `border/width/2`). API do Figma exigiu binding nos 4 campos individuais `strokeTopWeight/Right/Bottom/Left` — `setBoundVariable('strokeWeight', ...)` falha silenciosamente. Isso revela que **audits anteriores subestimaram cobertura**: checavam só `boundVariables.strokeWeight` (que nunca é usado). Issue #34 aberta pra atualizar `scripts/lib/figma-dtcg.mjs`.
 - **Card** (variante Style=Elevated): `effectStyleId` estava em `elevation/2` (shadow-md, nível 2). Ajustado para `elevation/1` (shadow-sm, nível 1) — bate com a doc "Cards, painéis, sticky headers = nível 1". CSS também atualizado: `.ds-card--elevated { box-shadow: var(--ds-shadow-sm) }` (era `shadow-md`).
 
 ### Mudança visual
@@ -27,9 +27,9 @@ Card `--elevated` fica com sombra **ligeiramente mais sutil** (shadow-md → sha
 Todos gitignored.
 
 ### Backlog / sub-issues
-- **#31** — Atualizar `scripts/lib/figma-dtcg.mjs`: auditar `strokeWeight` via `strokeTopWeight`/etc. em vez de `strokeWeight` top-level. Afeta detecção de cobertura em audits futuros.
 - **#32** — Refactor Card API no Figma: properties `Elevated` (BOOLEAN) e `Interactive` (BOOLEAN) desacopladas de `Style`, com `State` variant quando `Interactive=true`. Breaking change em consumidores Figma.
 - **#33** — Divergência entre `elevation/1` / `elevation/2` no Figma e `shadow-sm` / `shadow-md` no JSON (valores diferentes em radius, spread e alpha). Precisa decisão: Figma é fonte → atualizar JSON; ou JSON é fonte → atualizar Figma. ADR-003 indica **Figma como fonte canônica de valor** — mas os valores do JSON já estão em produção no CSS.
+- **#34** — Atualizar `scripts/lib/figma-dtcg.mjs`: auditar `strokeWeight` via `strokeTopWeight`/etc. em vez de `strokeWeight` top-level. Afeta detecção de cobertura em audits futuros.
 
 ## [0.5.17]
 
