@@ -8,7 +8,7 @@
         "lg": { "$type": "dimension", "$value": "40rem", "$description": "640px" }
       },
       "padding": { "$type": "dimension", "$value": "{semantic.space.inset.lg}", "$description": "16px" },
-      "border-radius": { "$type": "dimension", "$value": "1rem", "$description": "16px — xl radius for modal overlay" },
+      "border-radius": { "$type": "dimension", "$value": "{foundation.radius.xl}", "$description": "16px — xl radius for modal overlay" },
       "header-gap": { "$type": "dimension", "$value": "{semantic.space.gap.sm}", "$description": "8px between title and close" }
     }
   }

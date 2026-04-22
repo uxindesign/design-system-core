@@ -49,7 +49,7 @@
       },
       "border-radius": {
         "$type": "dimension",
-        "$value": "0.25rem",
+        "$value": "{foundation.radius.sm}",
         "$description": "4px \u2014 smaller radius for compact control"
       },
       "border-width": {

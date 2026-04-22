@@ -21,13 +21,11 @@
   --ds-checkbox-check-height-sm: 8px;
   --ds-checkbox-check-height-md: 10px;
   --ds-checkbox-check-height-lg: 12px;
-  --ds-checkbox-border-radius: 0.25rem; /** 4px — smaller radius for compact control */
   --ds-checkbox-min-target-size: 2.75rem; /** 44px — WCAG 2.5.5 */
   --ds-checkbox-font-size: 0.875rem; /** 14px label */
   --ds-modal-max-width-sm: 25rem; /** 400px */
   --ds-modal-max-width-md: 32.5rem; /** 520px */
   --ds-modal-max-width-lg: 40rem; /** 640px */
-  --ds-modal-border-radius: 1rem; /** 16px — xl radius for modal overlay */
   --ds-radio-control-size-sm: 1rem; /** 16px */
   --ds-radio-control-size-md: 1.25rem; /** 20px */
   --ds-radio-control-size-lg: 1.5rem; /** 24px */
@@ -63,6 +61,8 @@
   --ds-toggle-thumb-size-lg: 1.125rem; /** 18px */
   --ds-toggle-min-target-size: 2.75rem; /** 44px — WCAG 2.5.5 */
   --ds-toggle-font-size: 0.875rem; /** 14px label */
+  --ds-checkbox-border-radius: var(--ds-radius-sm); /** 4px — smaller radius for compact control */
+  --ds-modal-border-radius: var(--ds-radius-xl); /** 16px — xl radius for modal overlay */
   --ds-button-height-sm: var(--ds-size-control-sm); /** 32px */
   --ds-button-height-md: var(--ds-size-control-md); /** 40px */
   --ds-button-height-lg: var(--ds-size-control-lg); /** 48px */
