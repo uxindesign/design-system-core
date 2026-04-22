@@ -79,7 +79,7 @@
 <li>CSS regenerado via <code>build-tokens.mjs</code>.</li>
 </ul>
 <h2>Contexto</h2>
-<p>A auditoria de contraste das cores de feedback expôs uma assimetria nas paletas Tailwind usadas como base do DS. Os L anchors (lightness perceptual em OKLCH) variam entre famílias no mesmo step:</p>
+<p>A auditoria de contraste das cores de feedback expôs uma assimetria nas paletas de referência usadas como base do DS. Os L anchors (lightness perceptual em OKLCH) variam entre famílias no mesmo step:</p>
 <table>
 <thead>
 <tr>
@@ -116,7 +116,7 @@
 </tbody></table>
 <p>A consequência prática é que a regra implícita do DS (&quot;step 600 é a cor sólida default da família, com foreground branco em superfícies coloridas&quot;) só funciona em red e sky. Em green e amber o step 600 não atinge 4.5:1 (WCAG 1.4.3 para texto normal), o que obriga a soluções caso a caso: usar foreground neutral.900 em amber, ou apontar success.default para um step diferente do que feedback.error usa.</p>
 <p>Isso quebra duas coisas: a previsibilidade cross-family do sistema (mesmo step, mesmo comportamento) e a regra documentada nos project instructions (&quot;shade 600 ou mais escuro → foreground branco&quot;).</p>
-<p>A causa é que o Tailwind calibra cada hue para máximo chroma visível, o que empurra greens e ambers para L mais alto. Trocar steps no binding (apontar success.default para green.700) resolve pontualmente mas mantém a inconsistência de fundo: o step 600 da família green continua sendo um valor que não cumpre o contrato do sistema.</p>
+<p>A causa é que a calibração das paletas de referência por chroma máximo visível empurra greens e ambers para L mais alto. Trocar steps no binding (apontar success.default para green.700) resolve pontualmente mas mantém a inconsistência de fundo: o step 600 da família green continua sendo um valor que não cumpre o contrato do sistema.</p>
 <h2>Decisão</h2>
 <p>Recalibrar as paletas foundation <code>green</code> e <code>amber</code> mantendo o hue característico de cada família mas alinhando os L anchors aos da paleta <code>red</code> (família que já passa 4.5:1 com branco no step 600). A escala continua de 50 a 950, mantendo a mesma estrutura do schema atual.</p>
 <h3>Nova paleta <code>green</code> (hue OKLCH 150)</h3>
@@ -410,7 +410,7 @@
 <h2>Alternativas consideradas</h2>
 <p><strong>A. Trocar bindings sem recalibrar foundation.</strong></p>
 <p>Apontar <code>feedback.success.default</code> para green.700 em vez de green.600, e <code>feedback.warning.default</code> para amber.700. Resolve a falha pontual mas não resolve a inconsistência cross-family — o &quot;step 600&quot; continua significando coisas diferentes em famílias diferentes, o que viola a previsibilidade do sistema. Foi descartada.</p>
-<p><strong>B. Manter foundation Tailwind e mudar a regra do DS.</strong></p>
+<p><strong>B. Manter as paletas de referência sem recalibração e mudar a regra do DS.</strong></p>
 <p>Documentar que &quot;step 600 + foreground branco&quot; só funciona em algumas paletas, e cada família declara seu próprio &quot;default + foreground&quot;. Aumenta a carga cognitiva e contradiz o objetivo de tokens AI-readable — uma AI lendo o JSON não consegue inferir comportamento sem ler regra textual em outro lugar. Foi descartada.</p>
 <p><strong>C. Recalibrar todas as paletas (incluindo red e sky) para um padrão único.</strong></p>
 <p>Tecnicamente possível, mas red e sky já passam o critério com folga e a divergência entre L anchors é menor (0.577 vs 0.588). Recalibrar tudo aumenta o blast radius da mudança sem ganho mensurável. Descartada por escopo.</p>

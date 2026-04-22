@@ -11,7 +11,7 @@
 
 ## Contexto
 
-A auditoria de contraste das cores de feedback expôs uma assimetria nas paletas Tailwind usadas como base do DS. Os L anchors (lightness perceptual em OKLCH) variam entre famílias no mesmo step:
+A auditoria de contraste das cores de feedback expôs uma assimetria nas paletas de referência usadas como base do DS. Os L anchors (lightness perceptual em OKLCH) variam entre famílias no mesmo step:
 
 | paleta | L no step 600 | cr vs branco |
 |---|---|---|
@@ -25,7 +25,7 @@ A consequência prática é que a regra implícita do DS ("step 600 é a cor só
 
 Isso quebra duas coisas: a previsibilidade cross-family do sistema (mesmo step, mesmo comportamento) e a regra documentada nos project instructions ("shade 600 ou mais escuro → foreground branco").
 
-A causa é que o Tailwind calibra cada hue para máximo chroma visível, o que empurra greens e ambers para L mais alto. Trocar steps no binding (apontar success.default para green.700) resolve pontualmente mas mantém a inconsistência de fundo: o step 600 da família green continua sendo um valor que não cumpre o contrato do sistema.
+A causa é que a calibração das paletas de referência por chroma máximo visível empurra greens e ambers para L mais alto. Trocar steps no binding (apontar success.default para green.700) resolve pontualmente mas mantém a inconsistência de fundo: o step 600 da família green continua sendo um valor que não cumpre o contrato do sistema.
 
 ## Decisão
 
@@ -127,7 +127,7 @@ A mudança é breaking visualmente (cores diferentes do que está no ar). Não �
 
 Apontar `feedback.success.default` para green.700 em vez de green.600, e `feedback.warning.default` para amber.700. Resolve a falha pontual mas não resolve a inconsistência cross-family — o "step 600" continua significando coisas diferentes em famílias diferentes, o que viola a previsibilidade do sistema. Foi descartada.
 
-**B. Manter foundation Tailwind e mudar a regra do DS.**
+**B. Manter as paletas de referência sem recalibração e mudar a regra do DS.**
 
 Documentar que "step 600 + foreground branco" só funciona em algumas paletas, e cada família declara seu próprio "default + foreground". Aumenta a carga cognitiva e contradiz o objetivo de tokens AI-readable — uma AI lendo o JSON não consegue inferir comportamento sem ler regra textual em outro lugar. Foi descartada.
 
