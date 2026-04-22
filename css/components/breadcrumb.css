@@ -5,8 +5,8 @@
 .ds-breadcrumb {
   display: flex;
   align-items: center;
-  gap: var(--ds-space-gap-xs);
-  font-size: var(--ds-font-size-sm);
+  gap: var(--ds-breadcrumb-gap);
+  font-size: var(--ds-breadcrumb-font-size);
 }
 
 /* Item
@@ -24,7 +24,7 @@
 .ds-breadcrumb__item:focus-visible {
   outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color);
   outline-offset: var(--ds-focus-ring-offset);
-  border-radius: var(--ds-radius-sm);
+  border-radius: var(--ds-breadcrumb-focus-border-radius);
 }
 
 /* Current (last item)
@@ -32,7 +32,7 @@
 
 .ds-breadcrumb__item--current {
   color: var(--ds-content-default);
-  font-weight: var(--ds-font-weight-medium);
+  font-weight: var(--ds-breadcrumb-font-weight-current);
   pointer-events: none;
 }
 

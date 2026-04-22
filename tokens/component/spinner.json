@@ -32,6 +32,10 @@
           "$type": "dimension",
           "$value": "3px"
         }
+      },
+      "border-radius": {
+        "$type": "dimension",
+        "$value": "{foundation.radius.full}"
       }
     }
   }

@@ -5,11 +5,11 @@
 .ds-badge {
   display: inline-flex;
   align-items: center;
-  padding: var(--ds-spacing-0-5) var(--ds-spacing-2);
-  font-size: var(--ds-font-size-xs);
-  font-weight: var(--ds-font-weight-medium);
-  line-height: var(--ds-line-height-normal);
-  border-radius: var(--ds-radius-full);
+  padding: var(--ds-badge-padding-y) var(--ds-badge-padding-x);
+  font-size: var(--ds-badge-font-size);
+  font-weight: var(--ds-badge-font-weight);
+  line-height: var(--ds-badge-line-height);
+  border-radius: var(--ds-badge-border-radius);
   white-space: nowrap;
 }
 

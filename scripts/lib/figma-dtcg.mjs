@@ -331,6 +331,18 @@ const JSON_ONLY_PATHS = [
   /^foundation\.typography\.letter\.spacing\./,        // em no CSS gerado
 ];
 
+// ADR-013 extension: Component tokens whose alias targets a Foundation
+// category that Figma Variables can't represent (shadow objects, motion
+// curves/durations, z-index stacks). These tokens exist in JSON only and
+// propagate to CSS — Figma equivalent is N/A. Classified as BY_DESIGN
+// instead of DRIFT_FROM_SOURCE. To add a new category: include a regex.
+const JSON_ONLY_COMPONENT_ALIAS_TARGETS = [
+  /^\{foundation\.shadow\./,         // shadow objects — Figma effect styles only, not variables
+  /^\{foundation\.z\./,              // z-index — no Figma primitive
+  /^\{foundation\.duration\./,       // motion duration — no Figma primitive
+  /^\{foundation\.ease\./,           // cubic-bezier — no Figma primitive
+];
+
 function isFigmaOnlyToken(token) {
   return FIGMA_ONLY_PATHS.some((rx) => rx.test(token));
 }
@@ -392,6 +404,13 @@ export function compareStates(expected, actual) {
         // Token só no JSON
         if (isJsonOnlyToken(key)) {
           diffs.BY_DESIGN.push({ file, token: key, side: 'json-only', json: a.$value });
+        } else if (
+          key.startsWith('component.') &&
+          typeof a.$value === 'string' &&
+          JSON_ONLY_COMPONENT_ALIAS_TARGETS.some((rx) => rx.test(a.$value))
+        ) {
+          // Component tokens aliasing Foundation categories Figma can't represent
+          diffs.BY_DESIGN.push({ file, token: key, side: 'json-only-component', json: a.$value });
         } else {
           diffs.MISSING_IN_FIGMA.push({ file, token: key, json: a.$value });
         }

@@ -11,8 +11,8 @@
   border: var(--ds-textarea-border-width) solid var(--ds-border-control-default);
   border-radius: var(--ds-textarea-border-radius);
   background: var(--ds-surface-default);
-  transition: border-color var(--ds-duration-fast) var(--ds-ease-default),
-              box-shadow var(--ds-duration-fast) var(--ds-ease-default);
+  transition: border-color var(--ds-textarea-transition-duration) var(--ds-textarea-transition-timing),
+              box-shadow var(--ds-textarea-transition-duration) var(--ds-textarea-transition-timing);
 }
 
 /* Sizes
@@ -48,18 +48,18 @@
   min-height: var(--ds-textarea-min-height-md);
   min-width: 0;
   /* padding-x: wrapper padding + 4px inner offset (equivale ao TextFrame padding do Figma) */
-  padding: var(--ds-textarea-padding-y-md) calc(var(--ds-textarea-padding-x-md) + var(--ds-spacing-1));
-  line-height: var(--ds-line-height-normal);
+  padding: var(--ds-textarea-padding-y-md) calc(var(--ds-textarea-padding-x-md) + var(--ds-textarea-field-inner-padding-x));
+  line-height: var(--ds-textarea-field-line-height);
 }
 
 .ds-textarea--sm .ds-textarea__field {
   min-height: var(--ds-textarea-min-height-sm);
-  padding: var(--ds-textarea-padding-y-sm) calc(var(--ds-textarea-padding-x-sm) + var(--ds-spacing-1));
+  padding: var(--ds-textarea-padding-y-sm) calc(var(--ds-textarea-padding-x-sm) + var(--ds-textarea-field-inner-padding-x));
 }
 
 .ds-textarea--lg .ds-textarea__field {
   min-height: var(--ds-textarea-min-height-lg);
-  padding: var(--ds-textarea-padding-y-lg) calc(var(--ds-textarea-padding-x-lg) + var(--ds-spacing-1));
+  padding: var(--ds-textarea-padding-y-lg) calc(var(--ds-textarea-padding-x-lg) + var(--ds-textarea-field-inner-padding-x));
 }
 
 .ds-textarea__field::placeholder {
@@ -117,7 +117,7 @@
    ========================================================================== */
 
 .ds-field__counter {
-  font-size: var(--ds-font-size-xs);
+  font-size: var(--ds-textarea-counter-font-size);
   color: var(--ds-content-secondary);
   text-align: right;
   font-variant-numeric: tabular-nums;
@@ -125,7 +125,7 @@
 
 .ds-field__counter--over {
   color: var(--ds-feedback-error-content-default);
-  font-weight: var(--ds-font-weight-medium);
+  font-weight: var(--ds-textarea-counter-font-weight);
 }
 
 /* ---------------------------------------------------------

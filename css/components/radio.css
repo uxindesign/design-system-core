@@ -6,17 +6,17 @@
 .ds-radio-group {
   border: none;
   padding: 0;
-  margin: 0 0 var(--ds-spacing-4) 0;
+  margin: 0 0 var(--ds-radio-group-margin-bottom) 0;
   display: flex;
   flex-direction: column;
-  gap: var(--ds-spacing-1);
+  gap: var(--ds-radio-group-gap);
 }
 
 .ds-radio-group__legend {
-  font-size: var(--ds-font-size-sm);
-  font-weight: var(--ds-font-weight-medium);
+  font-size: var(--ds-radio-legend-font-size);
+  font-weight: var(--ds-radio-legend-font-weight);
   color: var(--ds-content-default);
-  margin-bottom: var(--ds-spacing-2);
+  margin-bottom: var(--ds-radio-group-legend-margin-bottom);
   padding: 0;
 }
 
@@ -26,12 +26,12 @@
   align-items: center;
   gap: var(--ds-radio-gap);
   cursor: pointer;
-  padding: var(--ds-spacing-1-5) var(--ds-spacing-1);
-  border-radius: var(--ds-radius-sm);
+  padding: var(--ds-radio-label-padding-y) var(--ds-radio-label-padding-x);
+  border-radius: var(--ds-radio-label-border-radius);
   min-height: var(--ds-radio-min-target-size);
   font-size: var(--ds-radio-font-size);
   color: var(--ds-content-default);
-  transition: background-color var(--ds-duration-fast) var(--ds-ease-default);
+  transition: background-color var(--ds-radio-transition-duration) var(--ds-radio-transition-timing);
 }
 
 .ds-radio-label:hover {
@@ -45,13 +45,13 @@
   width: var(--ds-radio-control-size-md);
   height: var(--ds-radio-control-size-md);
   border: var(--ds-radio-border-width) solid var(--ds-border-control-default);
-  border-radius: var(--ds-radius-full);
+  border-radius: var(--ds-radio-border-radius-full);
   background-color: var(--ds-surface-default);
   cursor: pointer;
   position: relative;
   flex-shrink: 0;
-  transition: border-color var(--ds-duration-fast) var(--ds-ease-default),
-              background-color var(--ds-duration-fast) var(--ds-ease-default);
+  transition: border-color var(--ds-radio-transition-duration) var(--ds-radio-transition-timing),
+              background-color var(--ds-radio-transition-duration) var(--ds-radio-transition-timing);
 }
 
 .ds-radio::after {
@@ -61,10 +61,10 @@
   left: 50%;
   width: var(--ds-radio-dot-size-md);
   height: var(--ds-radio-dot-size-md);
-  border-radius: var(--ds-radius-full);
+  border-radius: var(--ds-radio-border-radius-full);
   background-color: var(--ds-brand-content-contrast);
   transform: translate(-50%, -50%) scale(0);
-  transition: transform var(--ds-duration-fast) var(--ds-ease-default);
+  transition: transform var(--ds-radio-transition-duration) var(--ds-radio-transition-timing);
 }
 
 /* Hover */
@@ -97,12 +97,12 @@
 
 .ds-radio:disabled + .ds-radio-label__text,
 .ds-radio:disabled ~ * {
-  opacity: var(--ds-opacity-50);
+  opacity: var(--ds-radio-opacity-disabled);
 }
 
 .ds-radio-label:has(.ds-radio:disabled) {
   cursor: not-allowed;
-  opacity: var(--ds-opacity-50);
+  opacity: var(--ds-radio-opacity-disabled);
 }
 
 .ds-radio-label:has(.ds-radio:disabled):hover {
@@ -124,9 +124,9 @@
 }
 
 .ds-radio-group__error {
-  font-size: var(--ds-font-size-xs);
+  font-size: var(--ds-radio-error-font-size);
   color: var(--ds-feedback-error-content-default);
-  margin-top: var(--ds-spacing-1);
+  margin-top: var(--ds-radio-error-margin-top);
   display: none;
 }
 
@@ -184,31 +184,31 @@
 .ds-radio__content {
   display: flex;
   flex-direction: column;
-  gap: var(--ds-spacing-1);
+  gap: var(--ds-radio-content-gap);
   min-width: 0;
 }
 
 /* Label text (label/md: 14px medium / 20px) */
 .ds-radio__label {
-  font-size: var(--ds-font-size-sm);
-  font-weight: var(--ds-font-weight-medium);
-  line-height: var(--ds-line-height-snug);
+  font-size: var(--ds-radio-label-font-size);
+  font-weight: var(--ds-radio-label-font-weight);
+  line-height: var(--ds-radio-label-line-height);
   color: var(--ds-content-default);
 }
 
 /* Description (body/sm: 14px regular / 22px, multiline) */
 .ds-radio__description {
-  font-size: var(--ds-font-size-sm);
-  font-weight: var(--ds-font-weight-regular);
-  line-height: var(--ds-line-height-relaxed);
+  font-size: var(--ds-radio-description-font-size);
+  font-weight: var(--ds-radio-description-font-weight);
+  line-height: var(--ds-radio-description-line-height);
   color: var(--ds-content-default);
   white-space: pre-wrap;
 }
 
 /* Helper text (caption/sm: 11px regular / 18px) */
 .ds-radio__helper {
-  font-size: var(--ds-font-size-xs);
-  line-height: var(--ds-line-height-normal);
+  font-size: var(--ds-radio-helper-font-size);
+  line-height: var(--ds-radio-helper-line-height);
   color: var(--ds-content-secondary);
 }
 

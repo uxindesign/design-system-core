@@ -17,6 +17,19 @@
         "$value": "7.5rem",
         "$description": "120px image/card placeholder"
       },
+      "text-border-radius": {
+        "$type": "dimension",
+        "$value": "{foundation.radius.sm}",
+        "$description": "4px"
+      },
+      "circle-border-radius": {
+        "$type": "dimension",
+        "$value": "{foundation.radius.full}"
+      },
+      "rect-border-radius": {
+        "$type": "dimension",
+        "$value": "{semantic.radius.component}"
+      },
       "fill": {
         "$type": "color",
         "$value": "{semantic.state.disabled.background}",

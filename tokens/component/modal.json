@@ -8,8 +8,25 @@
         "lg": { "$type": "dimension", "$value": "40rem", "$description": "640px" }
       },
       "padding": { "$type": "dimension", "$value": "{semantic.space.inset.lg}", "$description": "16px" },
+      "overlay-padding": { "$type": "dimension", "$value": "{semantic.space.inset.lg}", "$description": "16px overlay breathing room" },
       "border-radius": { "$type": "dimension", "$value": "{foundation.radius.xl}", "$description": "16px — xl radius for modal overlay" },
-      "header-gap": { "$type": "dimension", "$value": "{semantic.space.gap.sm}", "$description": "8px between title and close" }
+      "header-gap": { "$type": "dimension", "$value": "{semantic.space.gap.sm}", "$description": "8px between title and close" },
+      "footer-gap": { "$type": "dimension", "$value": "{semantic.space.gap.sm}", "$description": "8px between footer buttons" },
+      "header-padding-bottom": { "$type": "dimension", "$value": "{semantic.space.gap.sm}", "$description": "8px bottom padding of header" },
+      "footer-padding-top": { "$type": "dimension", "$value": "{semantic.space.gap.sm}", "$description": "8px top padding of footer" },
+      "close-padding": { "$type": "dimension", "$value": "{semantic.space.gap.xs}", "$description": "4px padding on close button" },
+      "close-border-radius": { "$type": "dimension", "$value": "{foundation.radius.sm}", "$description": "4px corner on close" },
+      "viewport-offset": { "$type": "dimension", "$value": "{semantic.space.section.sm}", "$description": "32px — max-height = 100vh - this" },
+      "border-width": { "$type": "dimension", "$value": "{semantic.border.width.default}" },
+      "title-font-size": { "$type": "dimension", "$value": "{semantic.typography.body.font-size.lg}" },
+      "title-font-weight": { "$type": "number", "$value": "{semantic.typography.body.font-weight.semibold}" },
+      "title-line-height": { "$type": "number", "$value": "{semantic.typography.body.line-height.sm}" },
+      "body-font-size": { "$type": "dimension", "$value": "{semantic.typography.body.font-size.sm}" },
+      "body-line-height": { "$type": "number", "$value": "{semantic.typography.body.line-height.md}" },
+      "shadow": { "$type": "shadow", "$value": "{foundation.shadow.xl}" },
+      "z-index": { "$type": "number", "$value": "{foundation.z.50}" },
+      "transition-duration": { "$type": "duration", "$value": "{foundation.duration.fast}" },
+      "transition-timing": { "$type": "cubicBezier", "$value": "{foundation.ease.default}" }
     }
   }
 }

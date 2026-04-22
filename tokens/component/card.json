@@ -1,0 +1,17 @@
+{
+  "component": {
+    "card": {
+      "$description": "Structural tokens for Card component.",
+      "border-radius": { "$type": "dimension", "$value": "{foundation.radius.lg}", "$description": "12px" },
+      "border-width": { "$type": "dimension", "$value": "{semantic.border.width.default}" },
+      "padding": { "$type": "dimension", "$value": "{semantic.space.inset.lg}", "$description": "16px — header/body/footer padding" },
+      "gap": { "$type": "dimension", "$value": "{semantic.space.gap.sm}", "$description": "8px between header elements" },
+      "title-font-size": { "$type": "dimension", "$value": "{semantic.typography.body.font-size.lg}", "$description": "18px" },
+      "title-font-weight": { "$type": "number", "$value": "{semantic.typography.body.font-weight.semibold}" },
+      "title-line-height": { "$type": "number", "$value": "{semantic.typography.body.line-height.sm}" },
+      "body-font-size": { "$type": "dimension", "$value": "{semantic.typography.body.font-size.sm}", "$description": "14px" },
+      "body-line-height": { "$type": "number", "$value": "{semantic.typography.body.line-height.md}" },
+      "shadow-elevated": { "$type": "shadow", "$value": "{foundation.shadow.sm}", "$description": "Elevation level 1." }
+    }
+  }
+}

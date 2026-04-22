@@ -4,7 +4,7 @@
     "component.avatar.size.sm": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.spacing.8",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -23,7 +23,7 @@
     "component.avatar.size.md": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.spacing.10",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -42,7 +42,7 @@
     "component.avatar.size.lg": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.spacing.14",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -61,7 +61,7 @@
     "component.avatar.font-size.sm": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.typography.font.size.xs",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -80,7 +80,7 @@
     "component.avatar.font-size.md": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.typography.font.size.sm",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -99,7 +99,7 @@
     "component.avatar.font-size.lg": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.typography.font.size.lg",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -118,7 +118,7 @@
     "component.avatar.icon-size.sm": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.spacing.4",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -137,7 +137,7 @@
     "component.avatar.icon-size.md": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.spacing.5",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -156,7 +156,7 @@
     "component.avatar.icon-size.lg": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.spacing.7",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -620,7 +620,7 @@
     "component.checkbox.control-size.sm": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.spacing.4",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -639,7 +639,7 @@
     "component.checkbox.control-size.md": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.spacing.5",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -658,7 +658,7 @@
     "component.checkbox.control-size.lg": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.spacing.6",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -677,7 +677,7 @@
     "component.checkbox.check-width.sm": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.spacing.1",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -705,7 +705,7 @@
     "component.checkbox.check-width.lg": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.spacing.1-5",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -719,7 +719,7 @@
     "component.checkbox.check-height.sm": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.spacing.2",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -733,7 +733,7 @@
     "component.checkbox.check-height.md": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.spacing.2-5",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -747,7 +747,7 @@
     "component.checkbox.check-height.lg": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.spacing.3",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -770,7 +770,7 @@
         "css": [
           {
             "file": "css/components/checkbox.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [],
@@ -818,7 +818,7 @@
     "component.checkbox.min-target-size": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "semantic.size.control.min-target",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -837,7 +837,7 @@
     "component.checkbox.font-size": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.typography.font.size.sm",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -1246,7 +1246,12 @@
       "contexto": "TODO",
       "decisao": "TODO",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 6
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -1292,7 +1297,7 @@
     "component.radio.control-size.sm": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.spacing.4",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -1311,7 +1316,7 @@
     "component.radio.control-size.md": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.spacing.5",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -1330,7 +1335,7 @@
     "component.radio.control-size.lg": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.spacing.6",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -1349,7 +1354,7 @@
     "component.radio.dot-size.sm": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.spacing.1-5",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -1368,7 +1373,7 @@
     "component.radio.dot-size.md": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.spacing.2",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -1387,7 +1392,7 @@
     "component.radio.dot-size.lg": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.spacing.2-5",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -1444,7 +1449,7 @@
     "component.radio.min-target-size": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "semantic.size.control.min-target",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -1463,7 +1468,7 @@
     "component.radio.font-size": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.typography.font.size.sm",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -1752,7 +1757,7 @@
     "component.select.arrow-size": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.spacing.4",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -1771,7 +1776,7 @@
     "component.select.arrow-offset.sm": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.spacing.2",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -1790,7 +1795,7 @@
     "component.select.arrow-offset.md": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.spacing.3",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -1809,7 +1814,7 @@
     "component.select.arrow-offset.lg": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.spacing.4",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -1828,7 +1833,7 @@
     "component.skeleton.text-height": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.spacing.4",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -1847,7 +1852,7 @@
     "component.skeleton.circle-size": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.spacing.10",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -1904,7 +1909,7 @@
     "component.spinner.size.sm": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.spacing.4",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -1923,7 +1928,7 @@
     "component.spinner.size.md": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.spacing.6",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -1942,7 +1947,7 @@
     "component.spinner.size.lg": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.spacing.8",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -1980,7 +1985,7 @@
     "component.spinner.stroke-width.md": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.spacing.0-5",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -2037,7 +2042,7 @@
     "component.textarea.min-height.md": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.spacing.20",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -2284,7 +2289,7 @@
     "component.toggle.track-width.sm": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.spacing.7",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -2303,7 +2308,7 @@
     "component.toggle.track-width.md": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.spacing.9",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -2322,7 +2327,7 @@
     "component.toggle.track-width.lg": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.spacing.11",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -2341,7 +2346,7 @@
     "component.toggle.track-height.sm": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.spacing.4",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -2360,7 +2365,7 @@
     "component.toggle.track-height.md": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.spacing.5",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -2379,7 +2384,7 @@
     "component.toggle.track-height.lg": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.spacing.6",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -2398,7 +2403,7 @@
     "component.toggle.thumb-size.sm": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.spacing.2-5",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -2417,7 +2422,7 @@
     "component.toggle.thumb-size.md": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.spacing.3-5",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -2474,7 +2479,7 @@
     "component.toggle.min-target-size": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "semantic.size.control.min-target",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -2493,7 +2498,7 @@
     "component.toggle.font-size": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "foundation.typography.font.size.sm",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -5212,51 +5217,23 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/alert.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/button.css",
-            "count": 4
-          },
-          {
-            "file": "css/components/checkbox.css",
-            "count": 4
-          },
-          {
-            "file": "css/components/input.css",
-            "count": 2
-          },
-          {
-            "file": "css/components/modal.css",
-            "count": 2
-          },
-          {
-            "file": "css/components/radio.css",
-            "count": 4
-          },
-          {
-            "file": "css/components/select.css",
-            "count": 2
-          },
-          {
-            "file": "css/components/tabs.css",
-            "count": 2
-          },
-          {
-            "file": "css/components/textarea.css",
-            "count": 2
-          },
-          {
-            "file": "css/components/toggle.css",
-            "count": 5
-          },
-          {
-            "file": "css/components/tooltip.css",
-            "count": 1
+            "file": "css/tokens/generated/component.css",
+            "count": 11
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "component.alert.transition-duration",
+          "component.button.transition-duration",
+          "component.checkbox.transition-duration",
+          "component.input.transition-duration",
+          "component.modal.transition-duration",
+          "component.radio.transition-duration",
+          "component.select.transition-duration",
+          "component.tabs.transition-duration",
+          "component.textarea.transition-duration",
+          "component.toggle.transition-duration",
+          "component.tooltip.transition-duration"
+        ],
         "figma": []
       }
     },
@@ -5299,51 +5276,23 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/alert.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/button.css",
-            "count": 4
-          },
-          {
-            "file": "css/components/checkbox.css",
-            "count": 4
-          },
-          {
-            "file": "css/components/input.css",
-            "count": 2
-          },
-          {
-            "file": "css/components/modal.css",
-            "count": 2
-          },
-          {
-            "file": "css/components/radio.css",
-            "count": 4
-          },
-          {
-            "file": "css/components/select.css",
-            "count": 2
-          },
-          {
-            "file": "css/components/tabs.css",
-            "count": 2
-          },
-          {
-            "file": "css/components/textarea.css",
-            "count": 2
-          },
-          {
-            "file": "css/components/toggle.css",
-            "count": 5
-          },
-          {
-            "file": "css/components/tooltip.css",
-            "count": 1
+            "file": "css/tokens/generated/component.css",
+            "count": 11
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "component.alert.transition-timing",
+          "component.button.transition-timing",
+          "component.checkbox.transition-timing",
+          "component.input.transition-timing",
+          "component.modal.transition-timing",
+          "component.radio.transition-timing",
+          "component.select.transition-timing",
+          "component.tabs.transition-timing",
+          "component.textarea.transition-timing",
+          "component.toggle.transition-timing",
+          "component.tooltip.transition-timing"
+        ],
         "figma": []
       }
     },
@@ -5456,23 +5405,16 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/button.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/checkbox.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/radio.css",
-            "count": 2
-          },
-          {
-            "file": "css/components/toggle.css",
-            "count": 1
+            "file": "css/tokens/generated/component.css",
+            "count": 4
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "component.button.opacity-disabled",
+          "component.checkbox.opacity-disabled",
+          "component.radio.opacity-disabled",
+          "component.toggle.opacity-disabled"
+        ],
         "figma": []
       }
     },
@@ -5547,48 +5489,20 @@
             "count": 1
           },
           {
-            "file": "css/components/alert.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/breadcrumb.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/checkbox.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/modal.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/radio.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/skeleton.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/tabs.css",
-            "count": 2
-          },
-          {
-            "file": "css/components/toggle.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/tooltip.css",
-            "count": 1
-          },
-          {
             "file": "css/tokens/generated/component.css",
-            "count": 1
+            "count": 9
           }
         ],
         "tokens": [
-          "component.checkbox.border-radius"
+          "component.alert.focus-border-radius",
+          "component.breadcrumb.focus-border-radius",
+          "component.checkbox.border-radius",
+          "component.modal.close-border-radius",
+          "component.radio.label-border-radius",
+          "component.skeleton.text-border-radius",
+          "component.tabs.focus-border-radius",
+          "component.toggle.label-border-radius",
+          "component.tooltip.border-radius"
         ],
         "figma": []
       }
@@ -5603,10 +5517,6 @@
       "decisao": "TODO",
       "usos": {
         "css": [
-          {
-            "file": "css/components/skeleton.css",
-            "count": 1
-          },
           {
             "file": "css/tokens/generated/theme-dark.css",
             "count": 1
@@ -5638,11 +5548,13 @@
             "count": 1
           },
           {
-            "file": "css/components/card.css",
+            "file": "css/tokens/generated/component.css",
             "count": 1
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "component.card.border-radius"
+        ],
         "figma": []
       }
     },
@@ -5692,31 +5604,18 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/avatar.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/badge.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/radio.css",
-            "count": 2
-          },
-          {
-            "file": "css/components/skeleton.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/spinner.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/toggle.css",
-            "count": 2
+            "file": "css/tokens/generated/component.css",
+            "count": 6
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "component.avatar.border-radius",
+          "component.badge.border-radius",
+          "component.radio.border-radius-full",
+          "component.skeleton.circle-border-radius",
+          "component.spinner.border-radius",
+          "component.toggle.border-radius-full"
+        ],
         "figma": []
       }
     },
@@ -5745,7 +5644,7 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/card.css",
+            "file": "css/tokens/generated/component.css",
             "count": 1
           },
           {
@@ -5753,7 +5652,9 @@
             "count": 1
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "component.card.shadow-elevated"
+        ],
         "figma": []
       }
     },
@@ -5806,7 +5707,7 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/modal.css",
+            "file": "css/tokens/generated/component.css",
             "count": 1
           },
           {
@@ -5814,7 +5715,9 @@
             "count": 1
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "component.modal.shadow"
+        ],
         "figma": []
       }
     },
@@ -5866,7 +5769,7 @@
             "count": 1
           },
           {
-            "file": "css/components/badge.css",
+            "file": "css/tokens/generated/component.css",
             "count": 1
           },
           {
@@ -5897,40 +5800,8 @@
             "count": 1
           },
           {
-            "file": "css/components/alert.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/checkbox.css",
-            "count": 4
-          },
-          {
-            "file": "css/components/input.css",
+            "file": "css/tokens/generated/component.css",
             "count": 3
-          },
-          {
-            "file": "css/components/modal.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/radio.css",
-            "count": 5
-          },
-          {
-            "file": "css/components/select.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/textarea.css",
-            "count": 3
-          },
-          {
-            "file": "css/components/toggle.css",
-            "count": 3
-          },
-          {
-            "file": "css/components/tooltip.css",
-            "count": 1
           },
           {
             "file": "css/tokens/generated/theme-dark.css",
@@ -5942,6 +5813,7 @@
           }
         ],
         "tokens": [
+          "component.checkbox.check-width.sm",
           "semantic.space.inset.xs",
           "semantic.space.gap.xs",
           "semantic.space.component.xs",
@@ -5963,32 +5835,8 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/alert.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/badge.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/card.css",
-            "count": 2
-          },
-          {
-            "file": "css/components/modal.css",
-            "count": 3
-          },
-          {
-            "file": "css/components/radio.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/tabs.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/tooltip.css",
-            "count": 1
+            "file": "css/tokens/generated/component.css",
+            "count": 6
           },
           {
             "file": "css/tokens/generated/theme-dark.css",
@@ -6000,6 +5848,9 @@
           }
         ],
         "tokens": [
+          "component.checkbox.check-height.sm",
+          "component.radio.dot-size.md",
+          "component.select.arrow-offset.sm",
           "semantic.space.inset.sm",
           "semantic.space.gap.sm",
           "semantic.space.component.sm",
@@ -6027,8 +5878,8 @@
             "count": 1
           },
           {
-            "file": "css/components/alert.css",
-            "count": 1
+            "file": "css/tokens/generated/component.css",
+            "count": 3
           },
           {
             "file": "css/tokens/generated/theme-dark.css",
@@ -6040,6 +5891,8 @@
           }
         ],
         "tokens": [
+          "component.checkbox.check-height.lg",
+          "component.select.arrow-offset.md",
           "semantic.space.inset.md",
           "semantic.space.gap.md",
           "semantic.space.component.md",
@@ -6069,24 +5922,8 @@
             "count": 3
           },
           {
-            "file": "css/components/card.css",
-            "count": 4
-          },
-          {
-            "file": "css/components/divider.css",
-            "count": 2
-          },
-          {
-            "file": "css/components/modal.css",
-            "count": 7
-          },
-          {
-            "file": "css/components/radio.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/tabs.css",
-            "count": 2
+            "file": "css/tokens/generated/component.css",
+            "count": 8
           },
           {
             "file": "css/tokens/generated/theme-dark.css",
@@ -6098,6 +5935,14 @@
           }
         ],
         "tokens": [
+          "component.avatar.icon-size.sm",
+          "component.checkbox.control-size.sm",
+          "component.radio.control-size.sm",
+          "component.select.arrow-size",
+          "component.select.arrow-offset.lg",
+          "component.skeleton.text-height",
+          "component.spinner.size.sm",
+          "component.toggle.track-height.sm",
           "semantic.space.inset.lg",
           "semantic.space.gap.lg",
           "semantic.space.component.lg",
@@ -6125,6 +5970,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/tokens/generated/component.css",
+            "count": 4
+          },
+          {
             "file": "css/tokens/generated/theme-dark.css",
             "count": 4
           },
@@ -6134,6 +5983,10 @@
           }
         ],
         "tokens": [
+          "component.avatar.icon-size.md",
+          "component.checkbox.control-size.md",
+          "component.radio.control-size.md",
+          "component.toggle.track-height.md",
           "semantic.space.component.xl",
           "semantic.space.control.padding-x.lg",
           "semantic.size.control.icon.md",
@@ -6157,6 +6010,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/tokens/generated/component.css",
+            "count": 4
+          },
+          {
             "file": "css/tokens/generated/theme-dark.css",
             "count": 5
           },
@@ -6166,6 +6023,10 @@
           }
         ],
         "tokens": [
+          "component.checkbox.control-size.lg",
+          "component.radio.control-size.lg",
+          "component.spinner.size.md",
+          "component.toggle.track-height.lg",
           "semantic.space.inset.xl",
           "semantic.space.gap.xl",
           "semantic.space.component.2xl",
@@ -6189,8 +6050,16 @@
       "contexto": "TODO",
       "decisao": "TODO",
       "usos": {
-        "css": [],
-        "tokens": [],
+        "css": [
+          {
+            "file": "css/tokens/generated/component.css",
+            "count": 2
+          }
+        ],
+        "tokens": [
+          "component.avatar.icon-size.lg",
+          "component.toggle.track-width.sm"
+        ],
         "figma": []
       }
     },
@@ -6205,8 +6074,8 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/modal.css",
-            "count": 1
+            "file": "css/tokens/generated/component.css",
+            "count": 2
           },
           {
             "file": "css/tokens/generated/theme-dark.css",
@@ -6218,6 +6087,8 @@
           }
         ],
         "tokens": [
+          "component.avatar.size.sm",
+          "component.spinner.size.lg",
           "semantic.space.section.sm",
           "semantic.size.control.sm",
           "semantic.space.section.sm",
@@ -6235,8 +6106,15 @@
       "contexto": "TODO",
       "decisao": "TODO",
       "usos": {
-        "css": [],
-        "tokens": [],
+        "css": [
+          {
+            "file": "css/tokens/generated/component.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "component.toggle.track-width.md"
+        ],
         "figma": []
       }
     },
@@ -6251,6 +6129,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/tokens/generated/component.css",
+            "count": 2
+          },
+          {
             "file": "css/tokens/generated/theme-dark.css",
             "count": 1
           },
@@ -6260,6 +6142,8 @@
           }
         ],
         "tokens": [
+          "component.avatar.size.md",
+          "component.skeleton.circle-size",
           "semantic.size.control.md",
           "semantic.size.control.md"
         ],
@@ -6277,6 +6161,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/tokens/generated/component.css",
+            "count": 1
+          },
+          {
             "file": "css/tokens/generated/theme-dark.css",
             "count": 1
           },
@@ -6286,6 +6174,7 @@
           }
         ],
         "tokens": [
+          "component.toggle.track-width.lg",
           "semantic.size.control.min-target",
           "semantic.size.control.min-target"
         ],
@@ -6329,8 +6218,15 @@
       "contexto": "TODO",
       "decisao": "TODO",
       "usos": {
-        "css": [],
-        "tokens": [],
+        "css": [
+          {
+            "file": "css/tokens/generated/component.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "component.avatar.size.lg"
+        ],
         "figma": []
       }
     },
@@ -6371,6 +6267,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/tokens/generated/component.css",
+            "count": 1
+          },
+          {
             "file": "css/tokens/generated/theme-dark.css",
             "count": 1
           },
@@ -6380,6 +6280,7 @@
           }
         ],
         "tokens": [
+          "component.textarea.min-height.md",
           "semantic.space.section.xl",
           "semantic.space.section.xl"
         ],
@@ -6415,7 +6316,7 @@
             "count": 1
           },
           {
-            "file": "css/components/badge.css",
+            "file": "css/tokens/generated/component.css",
             "count": 1
           },
           {
@@ -6428,6 +6329,7 @@
           }
         ],
         "tokens": [
+          "component.spinner.stroke-width.md",
           "semantic.space.inset.2xs",
           "semantic.space.gap.2xs",
           "semantic.space.inset.2xs",
@@ -6447,19 +6349,14 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/checkbox.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/radio.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/toggle.css",
-            "count": 1
+            "file": "css/tokens/generated/component.css",
+            "count": 2
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "component.checkbox.check-width.lg",
+          "component.radio.dot-size.sm"
+        ],
         "figma": []
       }
     },
@@ -6474,6 +6371,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/tokens/generated/component.css",
+            "count": 3
+          },
+          {
             "file": "css/tokens/generated/theme-dark.css",
             "count": 1
           },
@@ -6483,6 +6384,9 @@
           }
         ],
         "tokens": [
+          "component.checkbox.check-height.md",
+          "component.radio.dot-size.lg",
+          "component.toggle.thumb-size.sm",
           "semantic.space.control.padding-y.md",
           "semantic.space.control.padding-y.md"
         ],
@@ -6498,8 +6402,15 @@
       "contexto": "TODO",
       "decisao": "TODO",
       "usos": {
-        "css": [],
-        "tokens": [],
+        "css": [
+          {
+            "file": "css/tokens/generated/component.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "component.toggle.thumb-size.md"
+        ],
         "figma": []
       }
     },
@@ -6529,30 +6440,6 @@
         "css": [
           {
             "file": "css/base/reset.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/alert.css",
-            "count": 4
-          },
-          {
-            "file": "css/components/card.css",
-            "count": 2
-          },
-          {
-            "file": "css/components/divider.css",
-            "count": 2
-          },
-          {
-            "file": "css/components/modal.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/tabs.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/toggle.css",
             "count": 1
           },
           {
@@ -6689,6 +6576,7 @@
       "usos": {
         "css": [],
         "tokens": [
+          "component.avatar.font-size.sm",
           "semantic.typography.body.font-size.xs",
           "semantic.typography.body.font-size.xs"
         ],
@@ -6706,6 +6594,10 @@
       "usos": {
         "css": [],
         "tokens": [
+          "component.avatar.font-size.md",
+          "component.checkbox.font-size",
+          "component.radio.font-size",
+          "component.toggle.font-size",
           "semantic.typography.control.font-size.sm",
           "semantic.typography.control.font-size.md",
           "semantic.typography.body.font-size.sm",
@@ -6746,6 +6638,7 @@
       "usos": {
         "css": [],
         "tokens": [
+          "component.avatar.font-size.lg",
           "semantic.typography.body.font-size.lg",
           "semantic.typography.body.font-size.lg"
         ],
@@ -7253,15 +7146,14 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/modal.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/tooltip.css",
-            "count": 1
+            "file": "css/tokens/generated/component.css",
+            "count": 2
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "component.modal.z-index",
+          "component.tooltip.z-index"
+        ],
         "figma": []
       }
     },
@@ -9043,16 +8935,22 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 6
+            "count": 12
           }
         ],
         "tokens": [
+          "component.alert.border-width",
           "component.button.border-width",
+          "component.card.border-width",
           "component.checkbox.border-width",
+          "component.divider.thickness",
           "component.input.border-width",
+          "component.modal.border-width",
           "component.radio.border-width",
           "component.select.border-width",
-          "component.textarea.border-width"
+          "component.tabs.border-width",
+          "component.textarea.border-width",
+          "component.toggle.border-width"
         ],
         "figma": []
       }
@@ -9066,8 +8964,15 @@
       "contexto": "TODO",
       "decisao": "TODO",
       "usos": {
-        "css": [],
-        "tokens": [],
+        "css": [
+          {
+            "file": "css/tokens/generated/component.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "component.tabs.active-border-width"
+        ],
         "figma": []
       }
     },
@@ -9513,8 +9418,15 @@
       "contexto": "TODO",
       "decisao": "TODO",
       "usos": {
-        "css": [],
-        "tokens": [],
+        "css": [
+          {
+            "file": "css/tokens/generated/component.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "component.badge.padding-y"
+        ],
         "figma": []
       }
     },
@@ -9555,8 +9467,15 @@
       "contexto": "TODO",
       "decisao": "TODO",
       "usos": {
-        "css": [],
-        "tokens": [],
+        "css": [
+          {
+            "file": "css/tokens/generated/component.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "component.alert.padding"
+        ],
         "figma": []
       }
     },
@@ -9572,11 +9491,16 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 1
+            "count": 6
           }
         ],
         "tokens": [
-          "component.modal.padding"
+          "component.card.padding",
+          "component.modal.padding",
+          "component.modal.overlay-padding",
+          "component.radio.group-margin-bottom",
+          "component.tabs.padding-x",
+          "component.tabs.panel-padding-y"
         ],
         "figma": []
       }
@@ -9620,12 +9544,8 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/breadcrumb.css",
-            "count": 1
-          },
-          {
             "file": "css/tokens/generated/component.css",
-            "count": 1
+            "count": 18
           },
           {
             "file": "css/utilities/layout.css",
@@ -9633,7 +9553,24 @@
           }
         ],
         "tokens": [
-          "component.select.gap"
+          "component.alert.content-gap",
+          "component.breadcrumb.gap",
+          "component.checkbox.label-padding-x",
+          "component.checkbox.content-gap",
+          "component.checkbox.error-margin-top",
+          "component.input.field-inner-padding-x",
+          "component.input.field-gap",
+          "component.modal.close-padding",
+          "component.radio.group-gap",
+          "component.radio.label-padding-x",
+          "component.radio.content-gap",
+          "component.radio.error-margin-top",
+          "component.select.gap",
+          "component.select.field-inner-padding-x",
+          "component.textarea.field-inner-padding-x",
+          "component.toggle.label-padding-x",
+          "component.toggle.content-gap",
+          "component.tooltip.padding-y"
         ],
         "figma": []
       }
@@ -9650,7 +9587,7 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 6
+            "count": 15
           },
           {
             "file": "css/utilities/layout.css",
@@ -9658,12 +9595,21 @@
           }
         ],
         "tokens": [
+          "component.alert.gap",
+          "component.badge.padding-x",
           "component.button.gap",
+          "component.card.gap",
           "component.checkbox.gap",
           "component.input.gap",
           "component.modal.header-gap",
+          "component.modal.footer-gap",
+          "component.modal.header-padding-bottom",
+          "component.modal.footer-padding-top",
           "component.radio.gap",
-          "component.toggle.gap"
+          "component.radio.group-legend-margin-bottom",
+          "component.tabs.padding-y",
+          "component.toggle.gap",
+          "component.tooltip.padding-x"
         ],
         "figma": []
       }
@@ -9698,11 +9644,17 @@
       "usos": {
         "css": [
           {
+            "file": "css/tokens/generated/component.css",
+            "count": 1
+          },
+          {
             "file": "css/utilities/layout.css",
             "count": 1
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "component.divider.spacing"
+        ],
         "figma": []
       }
     },
@@ -9818,8 +9770,15 @@
       "contexto": "TODO",
       "decisao": "TODO",
       "usos": {
-        "css": [],
-        "tokens": [],
+        "css": [
+          {
+            "file": "css/tokens/generated/component.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "component.modal.viewport-offset"
+        ],
         "figma": []
       }
     },
@@ -10020,18 +9979,16 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/alert.css",
-            "count": 1
-          },
-          {
             "file": "css/tokens/generated/component.css",
-            "count": 4
+            "count": 6
           }
         ],
         "tokens": [
+          "component.alert.border-radius",
           "component.button.border-radius",
           "component.input.border-radius",
           "component.select.border-radius",
+          "component.skeleton.rect-border-radius",
           "component.textarea.border-radius"
         ],
         "figma": []
@@ -10196,11 +10153,14 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 1
+            "count": 4
           }
         ],
         "tokens": [
-          "component.button.min-target-size"
+          "component.button.min-target-size",
+          "component.checkbox.min-target-size",
+          "component.radio.min-target-size",
+          "component.toggle.min-target-size"
         ],
         "figma": []
       }
@@ -10314,7 +10274,10 @@
       "decisao": "TODO",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "component.avatar.font-family",
+          "component.button.font-family"
+        ],
         "figma": []
       }
     },
@@ -10328,7 +10291,11 @@
       "decisao": "TODO",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "component.checkbox.description-font-weight",
+          "component.radio.description-font-weight",
+          "component.toggle.description-font-weight"
+        ],
         "figma": []
       }
     },
@@ -10342,7 +10309,18 @@
       "decisao": "TODO",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "component.badge.font-weight",
+          "component.breadcrumb.font-weight-current",
+          "component.button.font-weight",
+          "component.checkbox.label-font-weight",
+          "component.input.label-font-weight",
+          "component.radio.legend-font-weight",
+          "component.radio.label-font-weight",
+          "component.tabs.font-weight",
+          "component.textarea.counter-font-weight",
+          "component.toggle.label-font-weight"
+        ],
         "figma": []
       }
     },
@@ -10356,7 +10334,11 @@
       "decisao": "TODO",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "component.avatar.font-weight",
+          "component.card.title-font-weight",
+          "component.modal.title-font-weight"
+        ],
         "figma": []
       }
     },
@@ -10412,7 +10394,17 @@
       "decisao": "TODO",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "component.badge.font-size",
+          "component.checkbox.helper-font-size",
+          "component.checkbox.error-font-size",
+          "component.input.helper-font-size",
+          "component.radio.helper-font-size",
+          "component.radio.error-font-size",
+          "component.textarea.counter-font-size",
+          "component.toggle.helper-font-size",
+          "component.tooltip.font-size"
+        ],
         "figma": []
       }
     },
@@ -10426,7 +10418,20 @@
       "decisao": "TODO",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "component.breadcrumb.font-size",
+          "component.card.body-font-size",
+          "component.checkbox.label-font-size",
+          "component.checkbox.description-font-size",
+          "component.input.label-font-size",
+          "component.modal.body-font-size",
+          "component.radio.legend-font-size",
+          "component.radio.label-font-size",
+          "component.radio.description-font-size",
+          "component.tabs.font-size",
+          "component.toggle.label-font-size",
+          "component.toggle.description-font-size"
+        ],
         "figma": []
       }
     },
@@ -10454,7 +10459,10 @@
       "decisao": "TODO",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "component.card.title-font-size",
+          "component.modal.title-font-size"
+        ],
         "figma": []
       }
     },
@@ -10524,7 +10532,14 @@
       "decisao": "TODO",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "component.card.title-line-height",
+          "component.checkbox.label-line-height",
+          "component.input.label-line-height",
+          "component.modal.title-line-height",
+          "component.radio.label-line-height",
+          "component.toggle.label-line-height"
+        ],
         "figma": []
       }
     },
@@ -10538,7 +10553,19 @@
       "decisao": "TODO",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "component.badge.line-height",
+          "component.card.body-line-height",
+          "component.checkbox.description-line-height",
+          "component.checkbox.helper-line-height",
+          "component.input.helper-line-height",
+          "component.modal.body-line-height",
+          "component.radio.description-line-height",
+          "component.radio.helper-line-height",
+          "component.textarea.field-line-height",
+          "component.toggle.description-line-height",
+          "component.toggle.helper-line-height"
+        ],
         "figma": []
       }
     },
@@ -10580,6 +10607,2875 @@
       "decisao": "TODO",
       "usos": {
         "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.alert.padding": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.inset.md",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.alert.gap": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.gap.sm",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.alert.content-gap": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.gap.xs",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.alert.border-radius": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.radius.component",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.alert.focus-border-radius": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "foundation.radius.sm",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.alert.border-width": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.border.width.default",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 4
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.alert.icon-size": {
+      "layer": "component",
+      "type": "dimension",
+      "references": null,
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 3
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.alert.transition-duration": {
+      "layer": "component",
+      "type": "duration",
+      "references": "foundation.duration.fast",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.alert.transition-timing": {
+      "layer": "component",
+      "type": "cubicBezier",
+      "references": "foundation.ease.default",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.avatar.border-radius": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "foundation.radius.full",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/avatar.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.avatar.font-family": {
+      "layer": "component",
+      "type": "fontFamily",
+      "references": "semantic.typography.body.font-family.sans",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/avatar.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.avatar.font-weight": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.font-weight.semibold",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/avatar.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.badge.padding-y": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.inset.2xs",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/badge.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.badge.padding-x": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.gap.sm",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/badge.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.badge.border-radius": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "foundation.radius.full",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/badge.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.badge.font-size": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.xs",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/badge.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.badge.font-weight": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.font-weight.medium",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/badge.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.badge.line-height": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.line-height.md",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/badge.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.breadcrumb.gap": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.gap.xs",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/breadcrumb.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.breadcrumb.font-size": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.sm",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/breadcrumb.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.breadcrumb.font-weight-current": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.font-weight.medium",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/breadcrumb.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.breadcrumb.focus-border-radius": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "foundation.radius.sm",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/breadcrumb.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.font-family": {
+      "layer": "component",
+      "type": "fontFamily",
+      "references": "semantic.typography.body.font-family.sans",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/button.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.font-weight": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.font-weight.medium",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/button.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.opacity-disabled": {
+      "layer": "component",
+      "type": "number",
+      "references": "foundation.opacity.50",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/button.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.transition-duration": {
+      "layer": "component",
+      "type": "duration",
+      "references": "foundation.duration.fast",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/button.css",
+            "count": 4
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.transition-timing": {
+      "layer": "component",
+      "type": "cubicBezier",
+      "references": "foundation.ease.default",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/button.css",
+            "count": 4
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.card.border-radius": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "foundation.radius.lg",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.card.border-width": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.border.width.default",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.card.padding": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.inset.lg",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 4
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.card.gap": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.gap.sm",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.card.title-font-size": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.lg",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.card.title-font-weight": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.font-weight.semibold",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.card.title-line-height": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.line-height.sm",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.card.body-font-size": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.sm",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.card.body-line-height": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.line-height.md",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.card.shadow-elevated": {
+      "layer": "component",
+      "type": "shadow",
+      "references": "foundation.shadow.sm",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.label-padding-y": {
+      "layer": "component",
+      "type": "dimension",
+      "references": null,
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.label-padding-x": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.gap.xs",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.content-gap": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.gap.xs",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.error-margin-top": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.gap.xs",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.label-font-size": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.sm",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.label-font-weight": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.font-weight.medium",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.label-line-height": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.line-height.sm",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.description-font-size": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.sm",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.description-font-weight": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.font-weight.regular",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.description-line-height": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.line-height.md",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.helper-font-size": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.xs",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.helper-line-height": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.line-height.md",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.error-font-size": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.xs",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.opacity-disabled": {
+      "layer": "component",
+      "type": "number",
+      "references": "foundation.opacity.50",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.transition-duration": {
+      "layer": "component",
+      "type": "duration",
+      "references": "foundation.duration.fast",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 4
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.transition-timing": {
+      "layer": "component",
+      "type": "cubicBezier",
+      "references": "foundation.ease.default",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 4
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.divider.thickness": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.border.width.default",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/divider.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.divider.spacing": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.gap.lg",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/divider.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.input.field-inner-padding-x": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.gap.xs",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.input.field-gap": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.gap.xs",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.input.label-font-size": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.sm",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.input.label-font-weight": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.font-weight.medium",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.input.label-line-height": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.line-height.sm",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.input.helper-font-size": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.xs",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.input.helper-line-height": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.line-height.md",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.input.transition-duration": {
+      "layer": "component",
+      "type": "duration",
+      "references": "foundation.duration.fast",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.input.transition-timing": {
+      "layer": "component",
+      "type": "cubicBezier",
+      "references": "foundation.ease.default",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.overlay-padding": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.inset.lg",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.footer-gap": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.gap.sm",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.header-padding-bottom": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.gap.sm",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.footer-padding-top": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.gap.sm",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.close-padding": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.gap.xs",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.close-border-radius": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "foundation.radius.sm",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.viewport-offset": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.section.sm",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.border-width": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.border.width.default",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.title-font-size": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.lg",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.title-font-weight": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.font-weight.semibold",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.title-line-height": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.line-height.sm",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.body-font-size": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.sm",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.body-line-height": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.line-height.md",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.shadow": {
+      "layer": "component",
+      "type": "shadow",
+      "references": "foundation.shadow.xl",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.z-index": {
+      "layer": "component",
+      "type": "number",
+      "references": "foundation.z.50",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.transition-duration": {
+      "layer": "component",
+      "type": "duration",
+      "references": "foundation.duration.fast",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.transition-timing": {
+      "layer": "component",
+      "type": "cubicBezier",
+      "references": "foundation.ease.default",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.border-radius-full": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "foundation.radius.full",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.label-border-radius": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "foundation.radius.sm",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.group-gap": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.gap.xs",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.group-legend-margin-bottom": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.gap.sm",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.group-margin-bottom": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.inset.lg",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.label-padding-y": {
+      "layer": "component",
+      "type": "dimension",
+      "references": null,
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.label-padding-x": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.gap.xs",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.content-gap": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.gap.xs",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.error-margin-top": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.gap.xs",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.legend-font-size": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.sm",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.legend-font-weight": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.font-weight.medium",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.label-font-size": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.sm",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.label-font-weight": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.font-weight.medium",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.label-line-height": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.line-height.sm",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.description-font-size": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.sm",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.description-font-weight": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.font-weight.regular",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.description-line-height": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.line-height.md",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.helper-font-size": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.xs",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.helper-line-height": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.line-height.md",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.error-font-size": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.xs",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.opacity-disabled": {
+      "layer": "component",
+      "type": "number",
+      "references": "foundation.opacity.50",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.transition-duration": {
+      "layer": "component",
+      "type": "duration",
+      "references": "foundation.duration.fast",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 4
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.transition-timing": {
+      "layer": "component",
+      "type": "cubicBezier",
+      "references": "foundation.ease.default",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 4
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.field-inner-padding-x": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.gap.xs",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.transition-duration": {
+      "layer": "component",
+      "type": "duration",
+      "references": "foundation.duration.fast",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.transition-timing": {
+      "layer": "component",
+      "type": "cubicBezier",
+      "references": "foundation.ease.default",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.skeleton.text-border-radius": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "foundation.radius.sm",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/skeleton.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.skeleton.circle-border-radius": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "foundation.radius.full",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/skeleton.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.skeleton.rect-border-radius": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.radius.component",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/skeleton.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.spinner.border-radius": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "foundation.radius.full",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/spinner.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.tabs.padding-y": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.gap.sm",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/tabs.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.tabs.padding-x": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.inset.lg",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/tabs.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.tabs.panel-padding-y": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.inset.lg",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/tabs.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.tabs.border-width": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.border.width.default",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/tabs.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.tabs.active-border-width": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.border.width.strong",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/tabs.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.tabs.font-size": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.sm",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/tabs.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.tabs.font-weight": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.font-weight.medium",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/tabs.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.tabs.focus-border-radius": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "foundation.radius.sm",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/tabs.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.tabs.transition-duration": {
+      "layer": "component",
+      "type": "duration",
+      "references": "foundation.duration.fast",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/tabs.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.tabs.transition-timing": {
+      "layer": "component",
+      "type": "cubicBezier",
+      "references": "foundation.ease.default",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/tabs.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.field-inner-padding-x": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.gap.xs",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 3
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.field-line-height": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.line-height.md",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.counter-font-size": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.xs",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.counter-font-weight": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.font-weight.medium",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.transition-duration": {
+      "layer": "component",
+      "type": "duration",
+      "references": "foundation.duration.fast",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.transition-timing": {
+      "layer": "component",
+      "type": "cubicBezier",
+      "references": "foundation.ease.default",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.border-width": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.border.width.default",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.border-radius-full": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "foundation.radius.full",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.label-border-radius": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "foundation.radius.sm",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.label-padding-y": {
+      "layer": "component",
+      "type": "dimension",
+      "references": null,
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.label-padding-x": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.gap.xs",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.content-gap": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.gap.xs",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.label-font-size": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.sm",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.label-font-weight": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.font-weight.medium",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.label-line-height": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.line-height.sm",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.description-font-size": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.sm",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.description-font-weight": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.font-weight.regular",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.description-line-height": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.line-height.md",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.helper-font-size": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.xs",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.helper-line-height": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.line-height.md",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.opacity-disabled": {
+      "layer": "component",
+      "type": "number",
+      "references": "foundation.opacity.50",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.transition-duration": {
+      "layer": "component",
+      "type": "duration",
+      "references": "foundation.duration.fast",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 5
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.transition-timing": {
+      "layer": "component",
+      "type": "cubicBezier",
+      "references": "foundation.ease.default",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 5
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.tooltip.padding-y": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.gap.xs",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/tooltip.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.tooltip.padding-x": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.gap.sm",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/tooltip.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.tooltip.border-radius": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "foundation.radius.sm",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/tooltip.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.tooltip.font-size": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.xs",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/tooltip.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.tooltip.z-index": {
+      "layer": "component",
+      "type": "number",
+      "references": "foundation.z.50",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/tooltip.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.tooltip.transition-duration": {
+      "layer": "component",
+      "type": "duration",
+      "references": "foundation.duration.fast",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/tooltip.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.tooltip.transition-timing": {
+      "layer": "component",
+      "type": "cubicBezier",
+      "references": "foundation.ease.default",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/tooltip.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }

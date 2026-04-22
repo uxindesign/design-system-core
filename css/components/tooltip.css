@@ -14,14 +14,14 @@
   position: absolute;
   background: var(--ds-background-inverse);
   color: var(--ds-content-inverse);
-  padding: var(--ds-spacing-1) var(--ds-spacing-2);
-  border-radius: var(--ds-radius-sm);
-  font-size: var(--ds-font-size-xs);
+  padding: var(--ds-tooltip-padding-y) var(--ds-tooltip-padding-x);
+  border-radius: var(--ds-tooltip-border-radius);
+  font-size: var(--ds-tooltip-font-size);
   font-weight: 400;
   white-space: nowrap;
   pointer-events: none;
-  z-index: var(--ds-z-50);
-  transition: opacity var(--ds-duration-fast) var(--ds-ease-default);
+  z-index: var(--ds-tooltip-z-index);
+  transition: opacity var(--ds-tooltip-transition-duration) var(--ds-tooltip-transition-timing);
 }
 
 /* Arrow
