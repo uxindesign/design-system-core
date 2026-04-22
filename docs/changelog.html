@@ -74,6 +74,23 @@
 <p>O formato é baseado em <a href="https://keepachangelog.com/pt-BR/1.1.0/">Keep a Changelog</a> e o versionamento segue <a href="https://semver.org/lang/pt-BR/">Semantic Versioning</a>.</p>
 <p>Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na faixa 0.x. Regras de bump documentadas em <code>docs/process-versioning.html</code>.</p>
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
+<h3>Corrigido (CSS — alinhamento visual Alert e Tooltip com Figma)</h3>
+<p><strong>Alert (<code>css/components/alert.css</code>)</strong> — 8 divergências corrigidas após inspeção do componente Figma:</p>
+<ul>
+<li><strong>Gap</strong>: <code>spacing-3</code> (12px) → <code>spacing-2</code> (8px) — bate com <code>gap: 8</code> no Figma.</li>
+<li><strong>Padding</strong>: <code>spacing-3 spacing-4</code> (12px/16px) → <code>spacing-3</code> (12px all sides) — Figma usa padding uniforme de 12px.</li>
+<li><strong>Título font-size</strong>: herdava 14px do base → <code>font-size-xs</code> (12px) — Figma: <code>fontSize: 12</code>.</li>
+<li><strong>Título font-weight</strong>: <code>font-weight-semibold</code> (600) → <code>font-weight-bold</code> (700) — Figma: <code>Inter Bold</code>.</li>
+<li><strong>Descrição opacity</strong>: <code>opacity: 0.9</code> removida — Figma: opacity 1 em todos os layers de texto.</li>
+<li><strong>Subtle backgrounds</strong>: tokens <code>.background</code> (shade 50) → <code>.subtle</code> (shade 100) em todas as 4 variantes — Figma usa <code>feedback/*/subtle</code>.</li>
+<li><strong>Subtle text</strong>: <code>feedback/*/content-default</code> (verde/âmbar/vermelho/azul) → <code>content.default</code> + <code>content.secondary</code> para descrição — Figma usa tokens neutros no estilo sutil.</li>
+<li><strong>Subtle border</strong>: <code>border-left: border-width-4</code> (4px, só esquerda) → <code>border: border-width-1</code> (1px, 4 lados) — Figma usa <code>strokeWeight: 1</code> em todas as bordas.</li>
+</ul>
+<p><strong>Tooltip (<code>css/components/tooltip.css</code>)</strong> — 1 divergência corrigida:</p>
+<ul>
+<li><strong>Font-size</strong>: <code>font-size-sm</code> (14px) → <code>font-size-xs</code> (12px) — Figma: <code>fontSize: 12, Inter Regular</code>.</li>
+</ul>
+<p><strong>Docs</strong> (<code>docs/alert.html</code>, <code>docs/tooltip.html</code>): tabelas de token mapping atualizadas para refletir os tokens corretos.</p>
 <h3>Adicionado (tooling)</h3>
 <ul>
 <li><strong><code>scripts/lib/figma-node-audit.mjs</code></strong> — nova lib de helpers para audits de nodes Figma que têm a propriedade dividida em 4 campos individuais. Inclui <code>isStrokeWeightBound</code>, <code>bindStrokeWeight</code>, <code>classifyStrokeWeight</code> (+ equivalentes pra <code>cornerRadius</code>). Fecha <strong>#34</strong>.</li>

@@ -353,6 +353,25 @@ Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na
 
 ## [Não publicado]
 
+### Corrigido (CSS — alinhamento visual Alert e Tooltip com Figma)
+
+**Alert (`css/components/alert.css`)** — 8 divergências corrigidas após inspeção do componente Figma:
+
+- **Gap**: `spacing-3` (12px) → `spacing-2` (8px) — bate com `gap: 8` no Figma.
+- **Padding**: `spacing-3 spacing-4` (12px/16px) → `spacing-3` (12px all sides) — Figma usa padding uniforme de 12px.
+- **Título font-size**: herdava 14px do base → `font-size-xs` (12px) — Figma: `fontSize: 12`.
+- **Título font-weight**: `font-weight-semibold` (600) → `font-weight-bold` (700) — Figma: `Inter Bold`.
+- **Descrição opacity**: `opacity: 0.9` removida — Figma: opacity 1 em todos os layers de texto.
+- **Subtle backgrounds**: tokens `.background` (shade 50) → `.subtle` (shade 100) em todas as 4 variantes — Figma usa `feedback/*/subtle`.
+- **Subtle text**: `feedback/*/content-default` (verde/âmbar/vermelho/azul) → `content.default` + `content.secondary` para descrição — Figma usa tokens neutros no estilo sutil.
+- **Subtle border**: `border-left: border-width-4` (4px, só esquerda) → `border: border-width-1` (1px, 4 lados) — Figma usa `strokeWeight: 1` em todas as bordas.
+
+**Tooltip (`css/components/tooltip.css`)** — 1 divergência corrigida:
+
+- **Font-size**: `font-size-sm` (14px) → `font-size-xs` (12px) — Figma: `fontSize: 12, Inter Regular`.
+
+**Docs** (`docs/alert.html`, `docs/tooltip.html`): tabelas de token mapping atualizadas para refletir os tokens corretos.
+
 ### Adicionado (tooling)
 - **`scripts/lib/figma-node-audit.mjs`** — nova lib de helpers para audits de nodes Figma que têm a propriedade dividida em 4 campos individuais. Inclui `isStrokeWeightBound`, `bindStrokeWeight`, `classifyStrokeWeight` (+ equivalentes pra `cornerRadius`). Fecha **#34**.
 - Seção em `CLAUDE.md` ("Figma Plugin API — armadilhas") documentando que `strokeWeight` e `cornerRadius` têm binding só via 4 campos individuais, não via top-level.
@@ -3142,6 +3161,6 @@ Verificação automática de coerência Figma ↔ JSON ↔ CSS: `scripts/tokens-
 
 ═══════════════════════════════════════════════════════════
 
-Gerado por scripts/build-llms.mjs em 2026-04-22T12:47:22.189Z
+Gerado por scripts/build-llms.mjs em 2026-04-22T13:00:01.735Z
 Versão: 0.5.17
 Site: https://uxindesign.github.io/design-system-core/
