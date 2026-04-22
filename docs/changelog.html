@@ -74,6 +74,20 @@
 <p>O formato é baseado em <a href="https://keepachangelog.com/pt-BR/1.1.0/">Keep a Changelog</a> e o versionamento segue <a href="https://semver.org/lang/pt-BR/">Semantic Versioning</a>.</p>
 <p>Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na faixa 0.x. Regras de bump documentadas em <code>docs/process-versioning.html</code>.</p>
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
+<h3>Adicionado (docs — JSON/DTCG em todas as páginas de foundation)</h3>
+<p>Seção &quot;JSON (DTCG)&quot; adicionada às 7 páginas de foundation que estavam sem ela, completando a cobertura iniciada em motion/opacity/zindex. Cada bloco reflete o token JSON real do arquivo correspondente em <code>tokens/foundation/</code>:</p>
+<ul>
+<li><code>docs/foundations-borders.html</code> ← <code>tokens/foundation/stroke.json</code></li>
+<li><code>docs/foundations-colors.html</code> ← paleta neutral completa + nota das demais</li>
+<li><code>docs/foundations-elevation.html</code> ← <code>tokens/foundation/shadows.json</code> (valores recalibrados do #33)</li>
+<li><code>docs/foundations-radius.html</code> ← <code>tokens/foundation/radius.json</code></li>
+<li><code>docs/foundations-spacing.html</code> ← excerpt de <code>tokens/foundation/spacing.json</code> (steps 0–3-5 + 12/16)</li>
+<li><code>docs/foundations-theme-colors.html</code> ← excerpt de <code>tokens/semantic/light.json</code> (brand + 4 grupos feedback)</li>
+<li><code>docs/foundations-typography.html</code> ← excerpt de <code>tokens/foundation/typography.json</code> (família, size, weight, line-height)</li>
+</ul>
+<h3>Limpeza (Figma — remoção de seções dev-focused dos componentes)</h3>
+<p>Removidas as seções <code>section-tokens-utilizados</code> / <code>section-tokens</code> de 12 páginas de componente no Figma. Essas seções contêm mapeamentos CSS/token que são informação de desenvolvedor — já documentados em <code>docs/[componente].html</code>. O Figma passa a ter foco exclusivo em designer (variantes visuais, propriedades do componente, critérios de uso e acessibilidade).</p>
+<p>Páginas afetadas: Badge, Button, Checkbox, Input Text, Radio, Select, Toggle, Card, Divider, Modal, Skeleton, Spinner.</p>
 <h3>Corrigido (CSS — alinhamento visual Alert e Tooltip com Figma)</h3>
 <p><strong>Alert (<code>css/components/alert.css</code>)</strong> — 8 divergências corrigidas após inspeção do componente Figma:</p>
 <ul>

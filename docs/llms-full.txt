@@ -353,6 +353,24 @@ Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na
 
 ## [Não publicado]
 
+### Adicionado (docs — JSON/DTCG em todas as páginas de foundation)
+
+Seção "JSON (DTCG)" adicionada às 7 páginas de foundation que estavam sem ela, completando a cobertura iniciada em motion/opacity/zindex. Cada bloco reflete o token JSON real do arquivo correspondente em `tokens/foundation/`:
+
+- `docs/foundations-borders.html` ← `tokens/foundation/stroke.json`
+- `docs/foundations-colors.html` ← paleta neutral completa + nota das demais
+- `docs/foundations-elevation.html` ← `tokens/foundation/shadows.json` (valores recalibrados do #33)
+- `docs/foundations-radius.html` ← `tokens/foundation/radius.json`
+- `docs/foundations-spacing.html` ← excerpt de `tokens/foundation/spacing.json` (steps 0–3-5 + 12/16)
+- `docs/foundations-theme-colors.html` ← excerpt de `tokens/semantic/light.json` (brand + 4 grupos feedback)
+- `docs/foundations-typography.html` ← excerpt de `tokens/foundation/typography.json` (família, size, weight, line-height)
+
+### Limpeza (Figma — remoção de seções dev-focused dos componentes)
+
+Removidas as seções `section-tokens-utilizados` / `section-tokens` de 12 páginas de componente no Figma. Essas seções contêm mapeamentos CSS/token que são informação de desenvolvedor — já documentados em `docs/[componente].html`. O Figma passa a ter foco exclusivo em designer (variantes visuais, propriedades do componente, critérios de uso e acessibilidade).
+
+Páginas afetadas: Badge, Button, Checkbox, Input Text, Radio, Select, Toggle, Card, Divider, Modal, Skeleton, Spinner.
+
 ### Corrigido (CSS — alinhamento visual Alert e Tooltip com Figma)
 
 **Alert (`css/components/alert.css`)** — 8 divergências corrigidas após inspeção do componente Figma:
@@ -3161,6 +3179,6 @@ Verificação automática de coerência Figma ↔ JSON ↔ CSS: `scripts/tokens-
 
 ═══════════════════════════════════════════════════════════
 
-Gerado por scripts/build-llms.mjs em 2026-04-22T13:00:01.735Z
+Gerado por scripts/build-llms.mjs em 2026-04-22T14:01:25.705Z
 Versão: 0.5.17
 Site: https://uxindesign.github.io/design-system-core/
