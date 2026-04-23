@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-22T20:33:10.126Z",
+  "generatedAt": "2026-04-23T23:26:56.218Z",
   "version": "0.5.17",
   "count": 11,
   "foundations": [
@@ -7,7 +7,7 @@
       "slug": "colors",
       "name": "Colors",
       "sourceFile": "tokens/foundation/colors.json",
-      "tokenCount": 134,
+      "tokenCount": 145,
       "url": "https://uxindesign.github.io/design-system-core/docs/foundations-colors.html",
       "note": null
     },
@@ -87,7 +87,7 @@
       "slug": "brand",
       "name": "Brand",
       "sourceFile": "tokens/foundation/brand.json",
-      "tokenCount": 2,
+      "tokenCount": 0,
       "url": null,
       "note": null
     }

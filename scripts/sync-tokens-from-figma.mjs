@@ -68,6 +68,11 @@ const snapshotPath = path.resolve(
     : ".figma-snapshot.json"
 );
 
+if (!snapshotPath.startsWith(ROOT + path.sep) && snapshotPath !== path.join(ROOT, ".figma-snapshot.json")) {
+  console.error(`Erro: --snapshot deve apontar para um arquivo dentro do projeto (${ROOT}).`);
+  process.exit(2);
+}
+
 if (args.includes("--help") || args.includes("-h")) {
   console.log(`sync-tokens-from-figma.mjs
 

@@ -1,5 +1,5 @@
 {
-  "name": "@uxin/design-system-core",
+  "name": "design-system-core",
   "version": "0.5.17",
   "description": "White-label CSS design system with semantic tokens, 18 components, and light/dark mode support",
   "main": "css/design-system.css",
@@ -15,7 +15,7 @@
     "dark-mode"
   ],
   "author": "",
-  "license": "MIT",
+  "license": "UNLICENSED",
   "repository": {
     "type": "git",
     "url": "https://github.com/uxindesign/design-system-core.git"
@@ -31,7 +31,8 @@
     "sync:tokens-from-figma:write": "node scripts/sync-tokens-from-figma.mjs --write",
     "build:registry": "node scripts/build-token-registry.mjs",
     "build:registry:init": "node scripts/build-token-registry.mjs --init",
-    "verify:registry": "node scripts/build-token-registry.mjs --check"
+    "verify:registry": "node scripts/build-token-registry.mjs --check",
+    "security:check": "node scripts/security-check.mjs"
   },
   "devDependencies": {
     "@tokens-studio/sd-transforms": "^2.0.3",

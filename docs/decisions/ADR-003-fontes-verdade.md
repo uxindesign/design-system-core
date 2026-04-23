@@ -52,7 +52,7 @@ site em docs/ + Storybook (futuro)
 
 ### Ferramentas
 
-- **MCP remoto do Figma** (`use_figma`): canal pelo qual o script acessa as Variables. Já autenticado como UXIN Pro/Expert.
+- **MCP remoto do Figma** (`use_figma`): canal pelo qual o script acessa as Variables. Já autenticado como Design Team (Pro/Expert).
 - **`scripts/sync-tokens-from-figma.mjs`**: o script de sync. Dry-run por padrão.
 - **`scripts/tokens-verify.mjs`**: passa a interpretar divergências orientadas — Figma como autoridade.
 

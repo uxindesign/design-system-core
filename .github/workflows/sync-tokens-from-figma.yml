@@ -78,6 +78,8 @@ jobs:
 
       - name: Dry-run — comparar snapshot com tokens
         id: dryrun
+        env:
+          FIGMA_FILE_KEY: ${{ secrets.FIGMA_FILE_KEY }}
         run: |
           node scripts/sync-tokens-from-figma.mjs 2>&1 | tee /tmp/sync-dry-run.txt
           echo "exit_code=${PIPESTATUS[0]}" >> $GITHUB_OUTPUT
@@ -85,6 +87,8 @@ jobs:
       - name: Aplicar mudanças (VALUE_DRIFT)
         if: github.event.inputs.dry-run != 'true'
         id: apply
+        env:
+          FIGMA_FILE_KEY: ${{ secrets.FIGMA_FILE_KEY }}
         run: |
           node scripts/sync-tokens-from-figma.mjs --write 2>&1 | tee /tmp/sync-write.txt
           echo "exit_code=${PIPESTATUS[0]}" >> $GITHUB_OUTPUT

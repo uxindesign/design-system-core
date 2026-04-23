@@ -164,7 +164,7 @@ Descartada. Foundation leak em CSS de componente é equivalente à do Figma — 
 
 ## Plano de execução
 
-Ver `/Users/marcelldasilva/.claude/plans/groovy-snacking-acorn.md` — Fases 0-7. Divisão em 5 PRs:
+Fases 0-7. Divisão em 5 PRs:
 
 - **PR #A**: ADR-013 + Token Registry skeleton + check de completude
 - **PR #B**: Audit de reuso Semantic + expansão no Figma + sync parcial

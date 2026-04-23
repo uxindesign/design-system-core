@@ -6,12 +6,12 @@ Como executar o sync das Figma Variables pros arquivos DTCG em `tokens/` usando 
 
 A ADR-003 (revisada em 0.5.8) estabelece **Figma como autoridade canônica** dos valores de token. Os JSONs em `tokens/` são consolidação derivada. Idealmente existiria um sync automático via REST API, mas `GET /v1/files/:key/variables/local` exige **plano Enterprise** (nosso plano Pro não destrava). Até termos Enterprise (ou implementarmos um plugin custom), o fluxo é manual via MCP: um agente Claude Code executa um script Plugin API que serializa as Variables num JSON temporário, e o script Node `scripts/sync-tokens-from-figma.mjs` lê esse snapshot e compara com os JSONs.
 
-**Disparo:** manual, numa sessão Claude Code com o MCP `use_figma` autenticado no workspace UXIN (Pro). Ver alternativas futuras em `docs/backlog.md` ("Implementar o sync Figma → JSON").
+**Disparo:** manual, numa sessão Claude Code com o MCP `use_figma` autenticado no Design Team Workspace (Pro). Ver alternativas futuras em `docs/backlog.md` ("Implementar o sync Figma → JSON").
 
 ## Pré-requisitos
 
 - Sessão Claude Code com o plugin `figma` (skill `figma:figma-use`) carregado.
-- Workspace UXIN autenticado no MCP do Figma (Pro/Expert basta; não precisa Enterprise).
+- Design Team Workspace autenticado no MCP do Figma (Pro/Expert basta; não precisa Enterprise).
 - Acesso de leitura ao arquivo `PRYS2kL7VdC1MtVWfZvuDN`.
 
 ## Passo 1 — gerar o snapshot via MCP

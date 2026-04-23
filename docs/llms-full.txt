@@ -17,7 +17,7 @@ Para APIs JSON, ver https://uxindesign.github.io/design-system-core/docs/api/
 
 # Design System Core
 
-[![Versão](https://img.shields.io/badge/vers%C3%A3o-0.5.14-blue)](./CHANGELOG.md) [![Licença](https://img.shields.io/badge/licen%C3%A7a-MIT-green)](./LICENSE) [![Documentação](https://img.shields.io/badge/docs-online-brightgreen)](https://uxindesign.github.io/design-system-core/)
+[![Versão](https://img.shields.io/badge/vers%C3%A3o-0.5.14-blue)](./CHANGELOG.md) [![Licença](https://img.shields.io/badge/licen%C3%A7a-Propriet%C3%A1ria-red)](./LICENSE) [![Documentação](https://img.shields.io/badge/docs-online-brightgreen)](https://uxindesign.github.io/design-system-core/)
 
 Design system white-label em CSS puro, com tokens semânticos em DTCG, 18 componentes, modos light/dark e três temas de marca (Default, Ocean, Forest). Enquanto o projeto não tiver um release oficial 1.0, ele fica na faixa 0.x.
 
@@ -53,7 +53,7 @@ Links rápidos:
 
 ## Licença
 
-MIT. Ver [LICENSE](./LICENSE).
+Licença proprietária. Todos os direitos reservados. Ver [LICENSE](./LICENSE).
 
 
 ═══════════════════════════════════════════════════════════
@@ -151,215 +151,6 @@ WCAG 2.2 AA é piso obrigatório. Qualquer componente novo ou modificação que 
 
 
 ═══════════════════════════════════════════════════════════
-# CLAUDE.md (raiz, guia de agente)
-═══════════════════════════════════════════════════════════
-
-# CLAUDE.md — instruções de agente
-
-Este arquivo é lido pelo Claude Code (CLI e app) antes de qualquer operação neste repositório. Contém só o que um agente precisa pra operar corretamente: convenções, regras, acessos. A documentação do design system em si vive no site (`docs/*.html`) e não deve ser duplicada aqui.
-
-## Visão geral em uma frase
-
-Design system white-label em CSS puro com tokens DTCG em JSON, 18 componentes, modos light/dark, três temas (Default, Ocean, Forest). Versionamento 0.x enquanto não houver release oficial 1.0.
-
-## Fontes de verdade
-
-| Tipo de informação | Onde vive |
-|---|---|
-| Tokens (foundation/semantic/component) | `tokens/**/*.json` (DTCG). CSS em `css/tokens/generated/` é derivado. |
-| Código dos componentes | `css/components/*.css`. |
-| Decisões arquitetônicas | `docs/decisions/ADR-*.md`. Índice gerado em `docs/adr-index.md`. |
-| Princípios de marca | `docs/brand-principles.md`. |
-| Princípios do sistema | `docs/system-principles.md`. |
-| Arquitetura de tokens | `docs/token-architecture.html`. |
-| Tipografia, cores, spacing | `docs/foundations-*.html`. |
-| Inventário de componentes | `docs/component-inventory.md`. |
-| Temas e dark mode | `docs/theming.html`. |
-| Acessibilidade | `docs/accessibility.html`. |
-| Versões e histórico | `CHANGELOG.md` na raiz (fonte), `docs/changelog.html` (gerado). |
-| Como contribuir | `CONTRIBUTING.md`. |
-| Backlog | `docs/backlog.md`. |
-| Processo do sync Figma→JSON | `docs/process-figma-sync.md`. |
-
-Ao responder uma pergunta sobre o sistema, vá primeiro nesses arquivos. Não reescreva de memória.
-
-### Hierarquia de verdade
-
-Quando há divergência entre artefatos, resolve-se por tipo de informação:
-
-1. **ADRs em `docs/decisions/`** — autoridade arquitetural. Regras de camada, naming, dependências, convenções. ADR prevalece sobre qualquer outro artefato. Mudança que contradiz ADR exige **novo ADR** (ou revisão do existente) antes da implementação.
-2. **Figma Variables** — autoridade de **valor visual** (hex, alpha, qual shade foi escolhida, qual variante). Designer decide no Figma.
-3. **`tokens/**/*.json`** — consolidação canônica em Git (DTCG). Espelha o Figma em valor; espelha os ADRs em arquitetura. É o ponto de consumo pro pipeline.
-4. **`css/tokens/generated/*.css`** — derivado do JSON. Nunca editar à mão.
-5. **`docs/*.html`, `docs/*.md`** — descritivo do estado atual. Nunca fonte de verdade.
-
-Regra operacional: arquitetura está acima de valor. Figma pode decidir "brand.hover é blue-800 em vez de blue-700" (valor), mas não pode criar `semantic.color.primary.foreground` se ADR-011 definiu que semantic de cor usa `brand.content.contrast` (arquitetura).
-
-### Camadas de consumo de tokens (ADR-013)
-
-**Foundation nunca aparece em consumidor final.** Consumidor final = `css/components/*.css`, `css/base/*.css`, bindings em componentes Figma, exemplos em docs de uso. Só tokens Semantic ou Component podem ser consumidos lá.
-
-Cadeia permitida:
-
-```
-Foundation  ─┬─►  Semantic
-             └─►  Component    (quando não existe abstração Semantic apropriada)
-Semantic    ─┬─►  Component
-             └─►  Consumidor final
-Component   ──►  Consumidor final
-```
-
-Exceções registradas:
-- `semantic.control.*` só via Component (ADR-006 princípio 9).
-- Componente pode consumir Foundation direto quando não há equivalente Semantic (ex: `component.modal.max-width`); exige entrada explícita no Token Registry justificando.
-
-Enforcement em CI via `npm run verify:tokens`: CSS leak, Figma leak, Registry completude. Ver [ADR-013](docs/decisions/ADR-013-camadas-de-consumo-de-tokens.md) e `tokens/registry.yaml`.
-
-## Acessos
-
-### Figma
-
-Dois MCPs disponíveis, ambos com autenticação ativa:
-
-- **Remoto (`mcp__51ce7e00-…`):** autenticado como UXIN (Pro/Expert). Use para leitura ampla (`get_metadata`, `get_design_context`) e escrita via Plugin API (`use_figma`). `fileKey` do DS: `PRYS2kL7VdC1MtVWfZvuDN`.
-- **Desktop Dev Mode (`mcp__Figma__*`):** requer Figma desktop aberto com Dev Mode MCP Server habilitado (Preferências → Enable Dev Mode MCP Server). Bom para ler o node atualmente selecionado com contexto de design.
-
-Antes de chamar `use_figma`, carregar a skill `figma:figma-use`.
-
-### GitHub
-
-MCP (`mcp__github__*`) usa um Personal Access Token fine-grained com escopo restrito ao repo `uxindesign/design-system-core`. Permissões: Contents read+write, Issues read+write, Pull requests read+write, Actions read, Metadata read. Sem `workflow` ou `packages`.
-
-Git local usa SSH (`git@github.com:uxindesign/design-system-core.git`). Zero token em URL.
-
-**Limitações conhecidas do GitHub MCP:**
-
-- `create_or_update_file` exige SHA fresco do arquivo. Rodar `get_file_contents` imediatamente antes de cada update — SHAs stale causam falha silenciosa.
-- `push_files` com payload grande estoura timeout. Commitar arquivos individualmente (um tool call por arquivo) quando o commit for grande.
-- MCP **não consegue escrever** em `.github/workflows/` (restrição de API, independente do escopo do token). Usar interface web ou terminal com SSH pra arquivos de workflow.
-- `web_fetch` em `github.com/tree/…` é bloqueado por robots.txt; `raw.githubusercontent.com` é bloqueado pelo proxy. Pra ler arquivos do repo via agente, usar a própria API MCP (`get_file_contents`) ou as ferramentas locais (Read/Bash).
-
-## Convenções
-
-### Commits
-
-Conventional Commits em português. Prefixos aceitos: `feat`, `fix`, `chore`, `docs`, `refactor`, `style`, `test`, `ci`. Exemplo:
-
-```
-fix(tokens): recalibrar paletas green e amber para contraste 4.5:1
-
-- Novos valores em colors.json
-- Regenera CSS via build-tokens.mjs
-- Atualiza Figma Variables
-
-Co-Authored-By: ...
-```
-
-### Pull requests
-
-Título curto em português, corpo em markdown. Seções obrigatórias: **Summary**, **Test plan**. Quando a mudança afeta decisões arquiteturais, anexar ou criar ADR em `docs/decisions/`.
-
-### Idiomas
-
-- Textos do Figma: sempre em **PT-BR**.
-- Site: **bilíngue PT-BR + EN** via spans `<span data-lang="pt">…</span><span data-lang="en">…</span>` controlados por `[data-lang]` no `<html>`.
-- Termos técnicos universais (label, placeholder, focus ring, padding, radius) podem ficar em inglês mesmo no PT-BR.
-
-## Regras operacionais (não inferíveis dos arquivos)
-
-1. **Nunca hardcodear hex, rgb ou px em CSS de componente.** Sempre referenciar `var(--ds-…)`. O pipeline `tokens/*.json → build-tokens.mjs → css/tokens/generated/*.css` é a única fonte.
-2. **Depois de editar um JSON em `tokens/`**, rodar `npm run build:tokens`. O CI (deploy.yml) também regenera no push pra main, mas rodar localmente evita commits com CSS desatualizado.
-3. **Nunca usar `ALL_SCOPES`** em variáveis Figma. Polui todos os pickers. Usar escopos específicos (`FRAME_FILL`, `SHAPE_FILL`, `TEXT_FILL`, `STROKE_COLOR`, `GAP`, `CORNER_RADIUS`, `STROKE_FLOAT` conforme o token).
-4. **Tokens Foundation e Brand ficam ocultos dos pickers** (`hiddenFromPublishing: true`). Designers só veem tokens do Theme/Semantic.
-5. **Contraste WCAG 2.2 AA (4.5:1 texto normal, 3:1 UI)** é obrigatório em qualquer novo par foreground/background. Checar com `docs/accessibility.html` aberto ao lado. Fundo shade 400 ou mais claro pede foreground neutral-900; fundo shade 600+ pede foreground neutral-50.
-6. **Valores zero não viram tokens aplicados.** `spacing/0`, `radius/0`, `shadow-none` existem como referência em Foundation mas nunca devem ser vinculados a propriedades (use literal `0`).
-7. **Cada mudança significativa entra em `CHANGELOG.md`.** Na raiz, formato Keep a Changelog, seção `[Não publicado]` ganha a entrada antes do commit.
-
-## Checklist de pré-commit
-
-- [ ] `npm run build:tokens` roda sem erro e o git fica limpo (ou com diff esperado em `css/tokens/generated/`).
-- [ ] `npm run sync:docs` atualiza `docs/adr-index.md`, `docs/token-schema.md`, `docs/component-inventory.md`.
-- [ ] Contraste validado se tokens de cor foram tocados.
-- [ ] `CHANGELOG.md` ganhou entrada em `[Não publicado]` se há mudança observável pelo consumidor.
-- [ ] Se uma decisão arquitetural mudou, tem ADR novo ou atualizado em `docs/decisions/`.
-
-## Como a pipeline funciona
-
-Direção canônica (ADR-003 revisada em 0.5.8): **Figma Variables são a fonte de verdade de valores de token**. Git/`tokens/**/*.json` é a consolidação derivada.
-
-```
-Figma Variables              (autoridade — designer é o autor)
-      │
-      │ sync Figma → JSON    (em desenvolvimento — ver backlog)
-      ▼
-tokens/**/*.json             (DTCG — consolidação canônica em Git)
-      │
-      │ build-tokens.mjs     (Style Dictionary — automático no CI)
-      ▼
-css/tokens/generated/*.css   (derivado, marcado AUTO-GENERATED)
-      │
-      │ @import em design-system.css
-      ▼
-css/components/*.css         (consome as variáveis)
-      │
-      ▼
-docs/*.html                  (documentação e preview)
-```
-
-Regras de ouro:
-
-- **Nunca editar `tokens/*.json` à mão.** Alterações devem vir do Figma.
-- **Sempre editar Figma Variables primeiro.** Designer decide, propagação pro JSON acontece depois.
-- **Sync Figma → JSON** acontece via MCP + script custom, disparado manualmente numa sessão Claude Code:
-  1. Agente executa `use_figma` em chunks pra dumpar as ~489 Variables em `.figma-snapshot.json` (gitignored).
-  2. `npm run sync:tokens-from-figma` (dry-run) reporta divergências em 4 categorias: VALUE_DRIFT, NEW_IN_FIGMA, MISSING_IN_FIGMA, ALIAS_BROKEN.
-  3. `npm run sync:tokens-from-figma:write` aplica VALUE_DRIFT nos JSONs e roda `build:tokens` + `sync:docs`.
-  4. Review `git diff`, abrir PR.
-
-  Detalhes passo-a-passo em `docs/process-figma-sync.md`. Automação em CI depende de Enterprise ou plugin custom — ver `docs/backlog.md`.
-
-No CI (`.github/workflows/deploy.yml`), `npm run build:tokens` roda em cada push pra main e auto-commita os arquivos CSS gerados.
-
-## Ferramentas disponíveis no repo
-
-```bash
-npm run build:tokens                   # Foundation/Semantic/Component → CSS gerado
-npm run sync:docs                      # Regenera inventários em docs/*.md
-npm run verify:tokens                  # Valida coerência Figma ↔ JSON ↔ CSS (Figma check depende de FIGMA_PAT)
-npm run build:api                      # Gera docs/api/*.json
-npm run build:llms                     # Gera docs/llms.txt e llms-full.txt
-npm run build:all                      # roda build:tokens → sync:docs → build:api → build:llms → verify:tokens
-npm run sync:tokens-from-figma         # Compara .figma-snapshot.json ↔ tokens/ (dry-run, ver process-figma-sync.md)
-npm run sync:tokens-from-figma:write   # Aplica VALUE_DRIFT e regenera CSS
-```
-
-## Protocolo de trabalho com agente
-
-Regras que o agente segue ao operar neste repo. São convenções operacionais, não técnicas — mas importantes pra não quebrar confiança.
-
-1. **Aprovação estrita por ação.** Nenhuma escrita em Figma ou repo sem sign-off explícito do usuário. Auditorias e leituras são livres; mudanças exigem OK prévio. Uma ação por vez quando há risco ou ambiguidade.
-2. **Plano antes de agir.** Apresentar escopo completo da proposta antes de executar qualquer parte. Não misturar "trabalho feito" com "trabalho pendente" no mesmo output — fica confuso o que foi aplicado.
-3. **Validar antes de afirmar.** Toda afirmação técnica sobre estado do repo ou do Figma é verificada contra o arquivo/variável real. Não inferir de documentação — docs podem estar desatualizadas. Documentação é hipótese; arquivo/API é fato.
-4. **Incremental, não bulk.** Mudanças em Figma ou tokens são escopadas e aprovadas componente por componente. Bulk update sem revisão é refeito 60% das vezes.
-5. **Tom técnico e direto.** Sem bajulação, sem suavização, sem hedging em fatos técnicos. Discordar quando discordar, com evidência. Trabalho prévio é respeitado e incrementado, não descartado.
-
-## Figma Plugin API — armadilhas operacionais
-
-Coisas que falharam silenciosamente em sessões passadas e que o agente precisa ter em conta ao chamar `use_figma`. Detalhes de chunking estão em `docs/process-figma-sync.md`.
-
-- **Ler bound variable de um paint**: usar `paint.boundVariables.color.id`, não `node.boundVariables` de nível superior. Paint carrega seu próprio binding.
-- **Trocar bound variable de `fontSize`** em text node: primeiro setar `node.fontSize` pra valor numérico raw (isso limpa bindings existentes), depois chamar `setBoundVariable` com o novo token. Exige `await figma.loadFontAsync()` antes. Pré-carregar fonts via `Promise.all(loadFontAsync)` se for loop.
-- **`setBoundVariable` pode empilhar** se a propriedade já tinha binding anterior. Limpar antes: setar pra `null` ou pra valor raw, depois rebind.
-- **Truncamento de output ~20KB**: dumps grandes de Variables quebram em chunks via slice(start, end) e agregados off-plugin. Ver `scripts/sync-tokens-from-figma.mjs` e `docs/process-figma-sync.md`.
-- **`hiddenFromPublishing = true`** após `createVariable` falha com "Node not found". Criar primeiro, setar a flag em chamada separada — ou via UI do Figma depois. Documentado nos commits do PR #17 (0.5.10) e PR #18 (0.5.11).
-- **`strokeWeight` bindado vive em 4 campos individuais, não no top-level.** `node.setBoundVariable('strokeWeight', var)` retorna sem erro mas não aplica o binding — e `node.boundVariables.strokeWeight` é sempre `undefined`. O binding real fica em `strokeTopWeight/strokeRightWeight/strokeBottomWeight/strokeLeftWeight`. Auditar cobertura por esses 4 campos; bindar aplicando em todos. Mesma coisa pra `cornerRadius` → `topLeftRadius/topRightRadius/bottomLeftRadius/bottomRightRadius`. Use os helpers em `scripts/lib/figma-node-audit.mjs` (copiar inline em `use_figma` funciona). Descoberto em PR #31 (0.5.17) bindando 78 Focus Rings em Button + Toggle.
-
-## Quando houver dúvida
-
-Consulte, nessa ordem: `docs/decisions/adr-index.md` (decisões tomadas), `docs/system-principles.md` (princípios operacionais), `docs/token-architecture.html` (arquitetura), `docs/backlog.md` (o que ainda está por fazer). Se nenhum desses cobre, abra uma issue no GitHub ou pergunte.
-
-
-═══════════════════════════════════════════════════════════
 # CHANGELOG.md (raiz)
 ═══════════════════════════════════════════════════════════
 
@@ -372,6 +163,146 @@ O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.
 Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na faixa 0.x. Regras de bump documentadas em `docs/process-versioning.html`.
 
 ## [Não publicado]
+
+### Simplificação estrutural Semantic (ADR-014 revisão 2026-04-23)
+
+Revisão da ADR-014: estrutura action de 5 níveis (`action.{role}.{style}.{prop}.{state}`) foi substituída por **categorias peers no root Semantic** com regra de naming alinhada ao padrão Nathan Curtis (Category · Concept · Property · Variant · State) + PDF enviado pelo usuário.
+
+**Novo rational**:
+- `primary`, `toned`, `outline`, `ghost`, `link` são peers no root Semantic (sem prefix `action.`)
+- Estrutura: `{categoria}/{prop-state}` — hierarquia pasta no Figma + compound hífen no último nível
+- `bg` (abreviado) em prop-modifier; `background` reservado pra categoria root
+- `default` explícito (`bg-default`, `content-default`)
+- **Roles `secondary` e `danger` eliminados**: Button danger → `feedback.error.*` direto; Button secondary → `outline` ou `ghost`
+- **Categoria `state.*` eliminada**: hover→overlay.subtle, pressed→overlay.default, focus→focus.ring.color, disabled-background→background.disabled
+- `content.link.*` movido pra categoria peer `link.*`
+- `feedback.{role}.{state}` → `feedback.{role}.bg-{state}` (compound consistente)
+- `border.control.{state}` → `border.control-{state}` (compound)
+
+**Execução**:
+- Figma: 26 vars novas criadas (primary/toned/outline/ghost/link/bg-disabled), 66 feedback vars renomeadas compound, 3 border.control renomeadas, 60 tokens obsoletos deletados (54 action + 4 state + 2 content.link). Total rebinds: 455 em componentes + 2.785 cleanup de bindings órfãos pré-existentes.
+- JSONs: `tokens/semantic/{light,dark}.json` reescritos com script node — seções `action.*`, `state.*`, `content.link` removidas; `primary`, `toned`, `outline`, `ghost`, `link`, `background.disabled` adicionadas; `feedback` compound; `border.control` compound.
+- CSS 18 componentes: 111 substituições (`--ds-action-primary-default-background-default` → `--ds-primary-bg-default`, etc.).
+- ADR-014: seção histórica da versão antiga preservada; seção nova documenta a estrutura peer.
+
+**Resultado**:
+- Tokens CSS 25-60% mais curtos (`--ds-primary-bg-default` = 22 chars vs 50 chars antes).
+- Semantic action: 66 → 25 tokens (-62%).
+- Build e refs todas OK.
+- Remanescente: 245 broken bindings pré-existentes em `fontSize` (ID órfão 10:11, débito histórico não introduzido por esta refatoração).
+
+**Bump**: 0.6.0 → **0.7.0** (breaking — nomes action.* renomeados pra primary/toned/outline/ghost/link; roles secondary/danger eliminados).
+
+### Política de scopes em Figma Variables (consolidação 2026-04-23)
+
+Formaliza a política de scopes nas 3 collections:
+
+- **Foundation (229 vars)**: `scopes: []` (neutro) + `hiddenFromPublishing: true`. Foundation é matéria-prima consumida por Semantic via alias — nunca deve ser bindada direto em canvas. Esconder do picker é a enforcement mecânica da regra ADR-013 "Foundation nunca em consumidor final". Setar scopes específicos em Foundation mandaria o sinal oposto ("use aqui").
+- **Semantic (162 vars)**: scopes específicos por contexto — `FRAME_FILL`+`SHAPE_FILL` pra bg, `TEXT_FILL` pra content em link/primary/toned/outline/ghost, `SHAPE_FILL`+`TEXT_FILL` pra `content/*` raiz (cobre ícones), `STROKE_COLOR` pra border/*, `STROKE_FLOAT` pra border.width.* e focus.ring.width/offset, `GAP` pra space.*, `CORNER_RADIUS` pra radius.*, `WIDTH_HEIGHT` pra size.*, `FONT_SIZE`/`LINE_HEIGHT`/`FONT_FAMILY`/`FONT_STYLE`/`LETTER_SPACING` pra typography.*, `OPACITY` pra opacity.*.
+- **Component (61 vars)**: scopes específicos por contexto (dimensional — `WIDTH_HEIGHT` pra sizes, `FONT_SIZE` pra font-sizes, etc.).
+
+Motivação: consistência com CLAUDE.md ("Nunca usar ALL_SCOPES") + ADR-013 (Foundation nunca em consumidor final). Policy aplicada em todas as 452 vars das 3 collections.
+
+**Aberto** (flag pra decisão futura): `*/content-*` em categorias de ação (primary/toned/outline/ghost/link) hoje só tem `TEXT_FILL`. Se designer bindar fill de ícone dentro de button primary, o token não aparece no picker (ícone é SHAPE_FILL). Solução: adicionar `SHAPE_FILL` a esses 10 tokens. Parkado — refinamento opcional.
+
+### Refatoração ground-up (ADR-014) — action×style×prop×state + eliminação de brand/accent + themes
+
+Restruturação da camada Semantic pra resolver o bloat crônico acumulado nas Fases 2-8 do ADR-013. **Breaking change grande** — CSS de todos componentes reescrito.
+
+**Figma (fonte de verdade)**:
+- Collection `Brand` (2 vars × 3 modes Default/Ocean/Forest) → **deletada**
+- `foundation.color.brand.{50..950}` criada como paleta única (Default = Blue atual)
+- Semantic: `brand.*` (11) + `accent.*` (6) **removidos**; 66 vars `action.{primary,secondary,danger}.{default,toned,outline,ghost}.{background,content,border}.{default,hover,active,disabled}` + 5 vars `radius.{sm,md,lg,xl,full}` criadas
+- 353 bindings em nodes de 51 componentes reapontados de `semantic.brand/accent.*` pra `semantic.action.primary.*`
+- 5 consumer vars (`content.link.{default,hover}`, `border.focus`, `border.brand`, `state.focus`) reapontados pra `foundation.color.brand.*` direto
+- Component collection: 185 → **61 vars** (-124, -67%). Mantidos apenas dimensões específicas (modal.max-width, button/input/select.height, toggle/checkbox/radio/avatar sizes, skeleton, spinner, select.arrow). Wrappers 1:1 eliminados.
+
+**JSON**: `brand.json` deletado, `color.brand.*` em `colors.json`, Semantic reescritos, 7 JSONs de componente sem tokens próprios deletados (`alert, badge, breadcrumb, card, divider, tabs, tooltip` consomem Semantic direto), 11 restantes reescritos enxutos.
+
+**CSS**: 18 `css/components/*.css` reescritos pra `--ds-action-*`. `theme-ocean.css` e `theme-forest.css` deletados. Imports do `index.css` atualizado.
+
+**ADR-014** criada. ADR-013 continua válida (regra foundation→semantic→component→CSS).
+
+**Verificação**: `npm run build:tokens` sem erros. Zero Foundation bindings em componentes Figma. Zero refs obsoletos em CSS.
+
+**Bump**: 0.5.x → **0.6.0** (breaking).
+
+### Corrigido (Fase 8 — limpeza de tokens component redundantes)
+
+Reflexão crítica após Fase 5: o agente automatizou demais e criou 151 tokens component novos, dos quais 105 eram aliases 1:1 pra Semantic/Foundation sem variação entre componentes (30% de bloat). Essa limpeza corrige.
+
+**Princípio refinado** em ADR-013 (nova seção "Quando criar um Component token"):
+- Component token existe **apenas** quando há valor único pro componente, variação por size/state, OU decisão de identidade que diverge do padrão semantic
+- NÃO criar Component token quando é alias 1:1 sem variação — CSS consome Semantic direto (Semantic > Foundation na cadeia, sem leak)
+
+**Execução**:
+
+Fase 8.2 — 5 Semantic novos criados pra cobrir categorias faltantes:
+- `semantic.motion.duration.{fast,normal,slow}` → aliases pra `foundation.duration.*`
+- `semantic.motion.ease.default` → alias pra `foundation.ease.default`
+- `semantic.opacity.disabled` → alias pra `foundation.opacity.50` (também criado no Figma com scope `OPACITY`)
+
+Motion vive **JSON-only by design** (Figma Variables não suporta animações). `scripts/lib/figma-dtcg.mjs` estendido: `semantic.motion.*` agora é `BY_DESIGN` no verify.
+
+Fase 8.3+8.4 — Removidos 96 tokens component redundantes do JSON + 146 substituições CSS. Exemplos:
+- `component.X.transition-duration` (11 componentes, todos `{foundation.duration.fast}`) → removido; CSS usa `var(--ds-motion-duration-fast)` direto
+- `component.X.transition-timing` (11) → `var(--ds-motion-ease-default)`
+- `component.X.border-width` (11) → `var(--ds-border-width-default)` (semantic existente)
+- `component.X.font-family` (em 17 comps) → `var(--ds-body-font-family-sans)`
+- `component.X.opacity-disabled` (4) → `var(--ds-opacity-disabled)`
+- label/helper/description typography tokens (~30) → consomem `body.*` direto
+
+9 tokens candidatos **mantidos como wrappers** porque remover causaria Foundation leak (ex: `alert.focus-border-radius` aliasando `{foundation.radius.sm}` — não existe semantic equivalente).
+
+Fase 8.5 — Removidos 70 variables correspondentes do Figma Component collection (192 vars hoje, era 262).
+
+**Estado final**:
+- JSON tokens: 825 → **739** (-86: -96 removidos + 10 novos semantic/motion/opacity)
+- Figma Component: 262 → **185 vars** (-77)
+- Registry: 672 → **671 entries** (net -1; várias removidas, poucas adicionadas)
+- `verify:tokens`: **0 erros**, 119 warnings (117 base/ leak — débito separado; 2 registry migration)
+
+### Adicionado (Fase 7 — enforcement em CI)
+
+`scripts/tokens-verify.mjs` ganha 2 checks novos que rodam em CI:
+
+1. **CSS foundation leak** — scan em `css/components/*.css` (error) e `css/base/*.css` (warning, débito transitório). Regex detecta uso direto de: `--ds-spacing-*`, `--ds-radius-{xs,sm,md,lg,xl,2xl,full,none}`, `--ds-border-width-[0-9]`, `--ds-font-{family,weight,size}-*`, `--ds-line-height-*`, `--ds-letter-spacing-*`, `--ds-shadow-*`, `--ds-duration-*`, `--ds-ease-*`, `--ds-opacity-[0-9]`, `--ds-z-[0-9]`, `--ds-color-*`.
+2. **Registry completude** — valida que todo token em `tokens/**/*.json` tem entry em `tokens/registry.json` com campos obrigatórios. Durante migração emite warning (672 TODOs esperados). Vira error quando atingir 80% de completude.
+
+**State pós-Fase 7**: verify:tokens passa com **0 erros, 118 warnings** (117 foundation leaks em base/ — débito pra próximo PR; 1 registry mass-TODO).
+
+### Concluído (Fase 5 — CSS + JSONs component + Figma component vars)
+
+Fase 5 do plano ADR-013 completa: os 19 CSS de componente não consomem mais **nenhum** token Foundation direto. Todos os consumos são via Semantic ou Component layer.
+
+- **CSS**: 17 `css/components/*.css` reescritos (divider piloto já feito). Grep `var(--ds-(spacing-|radius-(sm|md|lg|xl|2xl|full|xs|none)|border-width-[0-9]|font-*|line-height-|letter-spacing-|shadow-|duration-|ease-|opacity-[0-9]|z-[0-9]|color-)` → **0 matches**.
+- **JSON**: 6 novos (alert, badge, breadcrumb, card, tabs, tooltip) + 11 expandidos. Registry cresce de 521 → 672.
+- **Figma**: 125 vars novas na collection Component (137 → 262), aliasando Foundation/Semantic. 26 tokens (transitions, shadows, z-index) ficam só em JSON — Figma Variables não representa essas categorias.
+- **ADR-012 estendido**: `JSON_ONLY_COMPONENT_ALIAS_TARGETS` em `figma-dtcg.mjs` classifica esses 26 como `BY_DESIGN` em vez de drift.
+- **Verify pós-Fase 5**: 0 erros, 0 warnings. CSS_ONLY=9, BY_DESIGN=79 (informativos).
+
+### Concluído (Fases 2 e 3 — rebind + conversão de raw values)
+
+**Fase 2**: Todos os 3.479 bindings Foundation nos 51 componentes Figma rebindados pra Semantic. Divididos em 4 passes:
+- Pass 1 — Icons (30 componentes, 60 rebinds — border/width/1 + font-family/weight/letter-spacing)
+- Pass 2a — Global typography em todos componentes (2.759 rebinds — font-family, font-weight, letter-spacing, border-width)
+- Pass 2b — font-size/line-height em não-controles → body.* (268 rebinds)
+- Pass 2c — font-size/line-height em controles → control.*/body.* contextual (210 rebinds)
+- Pass 3 — cleanup com IDs corrigidos (2.073 rebinds complementares)
+- Text styles — 28 text styles locais rebindados pra Semantic (98 rebinds). Isso destravou os nodes filhos que herdavam Foundation via style.
+
+Post-audit: **0 Foundation bindings remanescentes em qualquer componente Figma**. Regra ADR-013 cumprida no lado do Figma.
+
+**Fase 3**: Das 60 variáveis raw na collection Component Figma, **50 convertidas em aliases** (Foundation.* ou Semantic.*). Exemplos:
+- `avatar/size/sm` (32) → `{foundation.spacing.8}`
+- `checkbox/border-radius` (4) → `{foundation.radius.sm}`
+- `modal/border-radius` (16) → `{foundation.radius.xl}`
+- `checkbox/min-target-size` (44) → `{semantic.size.control.min-target}` — reaproveita alias semântico existente
+- `radio/font-size`, `toggle/font-size`, etc. (14) → `{foundation.typography.font.size.sm}`
+
+**10 vars permanecem raw** como exceção explícita (ADR-013 permite quando não há equivalente Foundation): `modal/max-width/{sm,md,lg}` (400/520/640), `textarea/min-height/{sm,lg}` (68/112), `skeleton/rect-height` (120), `spinner/stroke-width/{sm,lg}` (1.5/3), `toggle/thumb-size/lg` (18), `checkbox/check-width/md` (5). Todos valores sem ponto correspondente na escala Foundation.
+
+Pós-sync: `verify:tokens` — **0 errors, 0 warnings**. Figma ↔ JSON ↔ CSS totalmente sincronizados.
 
 ### Adicionado (Fase 1 — expansão Semantic typography)
 
@@ -864,10 +795,10 @@ Consolidação da documentação como fonte única de verdade. Plano em seis fas
 
 # Índice de ADRs — Design System Core
 
-> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-22. Não editar manualmente.
+> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-23. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
 
-13 decisões registradas.
+14 decisões registradas.
 
 | ADR | Título | Status | Data |
 |-----|--------|--------|------|
@@ -884,6 +815,7 @@ Consolidação da documentação como fonte única de verdade. Plano em seis fas
 | [ADR-011](decisions/ADR-011-renaming-tokens-semanticos-de-cor.md) | Reestruturação do naming de tokens semânticos de cor | Aceita — Implementada em 0.5.0 | 2026-04-17 |
 | [ADR-012](decisions/ADR-012-typography-tokens-divergence.md) | Tokens de line-height e letter-spacing divergem por design entre Figma e JSON | Aceita | 2026-04-21 |
 | [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) | Camadas de consumo de tokens — Foundation nunca direto em consumidor final | Aceita | 2026-04-22 |
+| [ADR-014](decisions/ADR-014-action-tokens-role-style.md) | Reestruturação Semantic em `action` × `style` × `prop` × `state` — eliminação de brand/accent e themes | Aceita | 2026-04-22 |
 
 
 ═══════════════════════════════════════════════════════════
@@ -1067,7 +999,7 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 
 # Inventário de componentes — Design System Core
 
-> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-22. Não editar manualmente.
+> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-23. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
 > Versão atual: **0.5.17**
 
@@ -1075,24 +1007,24 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 
 | Componente | CSS | Tokens JSON | Figma (visual) | Figma (binding) | Stories | Docs site |
 |------------|-----|-------------|-----------------|-----------------|---------|----------|
-| Button | 🟢 | 🟢 (30) | 🟢 | 🟢 | ⬜ | 🟢 |
-| Input Text | 🟢 | 🟢 (27) | 🟢 | 🟢 | ⬜ | 🟢 |
-| Textarea | 🟢 | 🟢 (20) | 🟢 | 🟢 | ⬜ | 🟢 |
-| Select | 🟢 | 🟢 (22) | 🟢 | 🟢 | ⬜ | 🟢 |
-| Checkbox | 🟢 | 🟢 (30) | 🟢 | 🟢 | ⬜ | 🟢 |
-| Radio | 🟢 | 🟢 (33) | 🟢 | 🟢 | ⬜ | 🟢 |
-| Toggle | 🟢 | 🟢 (29) | 🟢 | 🟢 | ⬜ | 🟢 |
+| Button | 🟢 | 🟢 (3) | 🟢 | 🟢 | ⬜ | 🟢 |
+| Input Text | 🟢 | 🟢 (3) | 🟢 | 🟢 | ⬜ | 🟢 |
+| Textarea | 🟢 | 🟢 (3) | 🟢 | 🟢 | ⬜ | 🟢 |
+| Select | 🟢 | 🟢 (7) | 🟢 | 🟢 | ⬜ | 🟢 |
+| Checkbox | 🟢 | 🟢 (9) | 🟢 | 🟢 | ⬜ | 🟢 |
+| Radio | 🟢 | 🟢 (6) | 🟢 | 🟢 | ⬜ | 🟢 |
+| Toggle | 🟢 | 🟢 (9) | 🟢 | 🟢 | ⬜ | 🟢 |
 | Badge | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
 | Alert | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
 | Card | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
-| Modal | 🟢 | 🟢 (23) | 🟢 | 🟢 | ⬜ | 🟢 |
+| Modal | 🟢 | 🟢 (3) | 🟢 | 🟢 | ⬜ | 🟢 |
 | Tooltip | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
 | Tabs | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
 | Breadcrumb | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
-| Avatar | 🟢 | 🟢 (12) | 🟢 | 🟢 | ⬜ | 🟢 |
+| Avatar | 🟢 | 🟢 (9) | 🟢 | 🟢 | ⬜ | 🟢 |
 | Divider | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
-| Spinner | 🟢 | 🟢 (7) | 🟢 | 🟢 | ⬜ | 🟢 |
-| Skeleton | 🟢 | 🟢 (7) | 🟢 | 🟢 | ⬜ | 🟢 |
+| Spinner | 🟢 | 🟢 (6) | 🟢 | 🟢 | ⬜ | 🟢 |
+| Skeleton | 🟢 | 🟢 (3) | 🟢 | 🟢 | ⬜ | 🟢 |
 
 **Legenda:** ⬜ Não iniciado | 🟡 Em progresso | 🟢 Completo | ⚠️ Verificar | 🔴 Precisa revisão
 
@@ -1106,10 +1038,10 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 
 | Coleção | Tokens | Status |
 |---------|--------|--------|
-| Foundation | 231 | 🟢 |
-| Semantic (light) | 153 | 🟢 |
-| Semantic (dark) | 153 | 🟢 |
-| Component | 288 | 🟢 |
+| Foundation | 240 | 🟢 |
+| Semantic (light) | 165 | 🟢 |
+| Semantic (dark) | 165 | 🟢 |
+| Component | 61 | 🟢 |
 
 ## Pipeline
 
@@ -1138,6 +1070,7 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 | ADR-011 | Reestruturação do naming de tokens semânticos de cor | Aceita — Implementada em 0.5.0 |
 | ADR-012 | Tokens de line-height e letter-spacing divergem por design entre Figma e JSON | Aceita |
 | ADR-013 | Camadas de consumo de tokens — Foundation nunca direto em consumidor final | Aceita |
+| ADR-014 | Reestruturação Semantic em `action` × `style` × `prop` × `state` — eliminação de brand/accent e themes | Aceita |
 
 ## Próximos milestones
 
@@ -1240,12 +1173,12 @@ Como executar o sync das Figma Variables pros arquivos DTCG em `tokens/` usando 
 
 A ADR-003 (revisada em 0.5.8) estabelece **Figma como autoridade canônica** dos valores de token. Os JSONs em `tokens/` são consolidação derivada. Idealmente existiria um sync automático via REST API, mas `GET /v1/files/:key/variables/local` exige **plano Enterprise** (nosso plano Pro não destrava). Até termos Enterprise (ou implementarmos um plugin custom), o fluxo é manual via MCP: um agente Claude Code executa um script Plugin API que serializa as Variables num JSON temporário, e o script Node `scripts/sync-tokens-from-figma.mjs` lê esse snapshot e compara com os JSONs.
 
-**Disparo:** manual, numa sessão Claude Code com o MCP `use_figma` autenticado no workspace UXIN (Pro). Ver alternativas futuras em `docs/backlog.md` ("Implementar o sync Figma → JSON").
+**Disparo:** manual, numa sessão Claude Code com o MCP `use_figma` autenticado no Design Team Workspace (Pro). Ver alternativas futuras em `docs/backlog.md` ("Implementar o sync Figma → JSON").
 
 ## Pré-requisitos
 
 - Sessão Claude Code com o plugin `figma` (skill `figma:figma-use`) carregado.
-- Workspace UXIN autenticado no MCP do Figma (Pro/Expert basta; não precisa Enterprise).
+- Design Team Workspace autenticado no MCP do Figma (Pro/Expert basta; não precisa Enterprise).
 - Acesso de leitura ao arquivo `PRYS2kL7VdC1MtVWfZvuDN`.
 
 ## Passo 1 — gerar o snapshot via MCP
@@ -1697,9 +1630,9 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Status
 
-- Total de tokens: **672**
+- Total de tokens: **677**
 - Com metadados completos: **0**
-- Pendentes (`TODO` em algum campo obrigatório): **672**
+- Pendentes (`TODO` em algum campo obrigatório): **677**
 - Completude: **0%**
 
 ## Foundation
@@ -1865,15 +1798,15 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `foundation.duration.fast` | duration | — | ⚠️ TODO | 12 |
-| `foundation.duration.normal` | duration | — | ⚠️ TODO | 0 |
-| `foundation.duration.slow` | duration | — | ⚠️ TODO | 0 |
+| `foundation.duration.fast` | duration | — | ⚠️ TODO | 4 |
+| `foundation.duration.normal` | duration | — | ⚠️ TODO | 4 |
+| `foundation.duration.slow` | duration | — | ⚠️ TODO | 4 |
 
 ### foundation.ease
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `foundation.ease.default` | cubicBezier | — | ⚠️ TODO | 12 |
+| `foundation.ease.default` | cubicBezier | — | ⚠️ TODO | 4 |
 | `foundation.ease.in` | cubicBezier | — | ⚠️ TODO | 0 |
 | `foundation.ease.in-out` | cubicBezier | — | ⚠️ TODO | 0 |
 | `foundation.ease.out` | cubicBezier | — | ⚠️ TODO | 0 |
@@ -1887,7 +1820,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `foundation.opacity.100` | number | — | ⚠️ TODO | 0 |
 | `foundation.opacity.25` | number | — | ⚠️ TODO | 0 |
 | `foundation.opacity.5` | number | — | ⚠️ TODO | 0 |
-| `foundation.opacity.50` | number | — | ⚠️ TODO | 5 |
+| `foundation.opacity.50` | number | — | ⚠️ TODO | 4 |
 | `foundation.opacity.75` | number | — | ⚠️ TODO | 0 |
 
 ### foundation.radius
@@ -1899,7 +1832,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `foundation.radius.lg` | dimension | — | ⚠️ TODO | 3 |
 | `foundation.radius.md` | dimension | — | ⚠️ TODO | 4 |
 | `foundation.radius.none` | dimension | — | ⚠️ TODO | 0 |
-| `foundation.radius.sm` | dimension | — | ⚠️ TODO | 11 |
+| `foundation.radius.sm` | dimension | — | ⚠️ TODO | 10 |
 | `foundation.radius.xl` | dimension | — | ⚠️ TODO | 2 |
 | `foundation.radius.xs` | dimension | — | ⚠️ TODO | 0 |
 
@@ -1919,27 +1852,27 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `foundation.spacing.0` | dimension | — | ⚠️ TODO | 3 |
-| `foundation.spacing.0-5` | dimension | — | ⚠️ TODO | 7 |
-| `foundation.spacing.1` | dimension | — | ⚠️ TODO | 9 |
-| `foundation.spacing.1-5` | dimension | — | ⚠️ TODO | 0 |
-| `foundation.spacing.10` | dimension | — | ⚠️ TODO | 4 |
-| `foundation.spacing.11` | dimension | — | ⚠️ TODO | 4 |
+| `foundation.spacing.0` | dimension | — | ⚠️ TODO | 4 |
+| `foundation.spacing.0-5` | dimension | — | ⚠️ TODO | 9 |
+| `foundation.spacing.1` | dimension | — | ⚠️ TODO | 11 |
+| `foundation.spacing.1-5` | dimension | — | ⚠️ TODO | 3 |
+| `foundation.spacing.10` | dimension | — | ⚠️ TODO | 7 |
+| `foundation.spacing.11` | dimension | — | ⚠️ TODO | 6 |
 | `foundation.spacing.12` | dimension | — | ⚠️ TODO | 6 |
-| `foundation.spacing.14` | dimension | — | ⚠️ TODO | 0 |
+| `foundation.spacing.14` | dimension | — | ⚠️ TODO | 2 |
 | `foundation.spacing.16` | dimension | — | ⚠️ TODO | 4 |
-| `foundation.spacing.2` | dimension | — | ⚠️ TODO | 10 |
-| `foundation.spacing.2-5` | dimension | — | ⚠️ TODO | 4 |
-| `foundation.spacing.20` | dimension | — | ⚠️ TODO | 4 |
+| `foundation.spacing.2` | dimension | — | ⚠️ TODO | 14 |
+| `foundation.spacing.2-5` | dimension | — | ⚠️ TODO | 8 |
+| `foundation.spacing.20` | dimension | — | ⚠️ TODO | 6 |
 | `foundation.spacing.24` | dimension | — | ⚠️ TODO | 0 |
-| `foundation.spacing.3` | dimension | — | ⚠️ TODO | 13 |
-| `foundation.spacing.3-5` | dimension | — | ⚠️ TODO | 0 |
-| `foundation.spacing.4` | dimension | — | ⚠️ TODO | 15 |
-| `foundation.spacing.5` | dimension | — | ⚠️ TODO | 10 |
-| `foundation.spacing.6` | dimension | — | ⚠️ TODO | 12 |
-| `foundation.spacing.7` | dimension | — | ⚠️ TODO | 0 |
-| `foundation.spacing.8` | dimension | — | ⚠️ TODO | 6 |
-| `foundation.spacing.9` | dimension | — | ⚠️ TODO | 0 |
+| `foundation.spacing.3` | dimension | — | ⚠️ TODO | 16 |
+| `foundation.spacing.3-5` | dimension | — | ⚠️ TODO | 2 |
+| `foundation.spacing.4` | dimension | — | ⚠️ TODO | 24 |
+| `foundation.spacing.5` | dimension | — | ⚠️ TODO | 15 |
+| `foundation.spacing.6` | dimension | — | ⚠️ TODO | 17 |
+| `foundation.spacing.7` | dimension | — | ⚠️ TODO | 3 |
+| `foundation.spacing.8` | dimension | — | ⚠️ TODO | 9 |
+| `foundation.spacing.9` | dimension | — | ⚠️ TODO | 2 |
 
 ### foundation.typography
 
@@ -1957,11 +1890,11 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `foundation.typography.font.size.7xl` | dimension | — | ⚠️ TODO | 0 |
 | `foundation.typography.font.size.8xl` | dimension | — | ⚠️ TODO | 0 |
 | `foundation.typography.font.size.9xl` | dimension | — | ⚠️ TODO | 0 |
-| `foundation.typography.font.size.lg` | dimension | — | ⚠️ TODO | 2 |
+| `foundation.typography.font.size.lg` | dimension | — | ⚠️ TODO | 3 |
 | `foundation.typography.font.size.md` | dimension | — | ⚠️ TODO | 4 |
-| `foundation.typography.font.size.sm` | dimension | — | ⚠️ TODO | 6 |
+| `foundation.typography.font.size.sm` | dimension | — | ⚠️ TODO | 10 |
 | `foundation.typography.font.size.xl` | dimension | — | ⚠️ TODO | 2 |
-| `foundation.typography.font.size.xs` | dimension | — | ⚠️ TODO | 2 |
+| `foundation.typography.font.size.xs` | dimension | — | ⚠️ TODO | 3 |
 | `foundation.typography.font.weight.bold` | number | — | ⚠️ TODO | 2 |
 | `foundation.typography.font.weight.medium` | number | — | ⚠️ TODO | 2 |
 | `foundation.typography.font.weight.regular` | number | — | ⚠️ TODO | 2 |
@@ -1994,7 +1927,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Semantic
 
-153 tokens.
+158 tokens.
 
 ### semantic.accent
 
@@ -2110,6 +2043,21 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.focus.ring.offset` | dimension | → `foundation.border.width.2` | ⚠️ TODO | 11 |
 | `semantic.focus.ring.width` | dimension | → `foundation.border.width.2` | ⚠️ TODO | 11 |
 
+### semantic.motion
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `semantic.motion.duration.fast` | duration | → `foundation.duration.fast` | ⚠️ TODO | 11 |
+| `semantic.motion.duration.normal` | duration | → `foundation.duration.normal` | ⚠️ TODO | 0 |
+| `semantic.motion.duration.slow` | duration | → `foundation.duration.slow` | ⚠️ TODO | 0 |
+| `semantic.motion.ease.default` | cubicBezier | → `foundation.ease.default` | ⚠️ TODO | 11 |
+
+### semantic.opacity
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `semantic.opacity.disabled` | number | → `foundation.opacity.50` | ⚠️ TODO | 4 |
+
 ### semantic.overlay
 
 | Token | Tipo | Alias | Sentido | Usos |
@@ -2134,7 +2082,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.size.control.icon.sm` | dimension | → `foundation.spacing.4` | ⚠️ TODO | 4 |
 | `semantic.size.control.lg` | dimension | → `foundation.spacing.12` | ⚠️ TODO | 4 |
 | `semantic.size.control.md` | dimension | → `foundation.spacing.10` | ⚠️ TODO | 4 |
-| `semantic.size.control.min-target` | dimension | → `foundation.spacing.11` | ⚠️ TODO | 2 |
+| `semantic.size.control.min-target` | dimension | → `foundation.spacing.11` | ⚠️ TODO | 4 |
 | `semantic.size.control.sm` | dimension | → `foundation.spacing.8` | ⚠️ TODO | 4 |
 
 ### semantic.space
@@ -2158,7 +2106,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.space.gap.md` | dimension | → `foundation.spacing.3` | ⚠️ TODO | 1 |
 | `semantic.space.gap.sm` | dimension | → `foundation.spacing.2` | ⚠️ TODO | 17 |
 | `semantic.space.gap.xl` | dimension | → `foundation.spacing.6` | ⚠️ TODO | 1 |
-| `semantic.space.gap.xs` | dimension | → `foundation.spacing.1` | ⚠️ TODO | 20 |
+| `semantic.space.gap.xs` | dimension | → `foundation.spacing.1` | ⚠️ TODO | 15 |
 | `semantic.space.inset.2xs` | dimension | → `foundation.spacing.0-5` | ⚠️ TODO | 2 |
 | `semantic.space.inset.lg` | dimension | → `foundation.spacing.4` | ⚠️ TODO | 7 |
 | `semantic.space.inset.md` | dimension | → `foundation.spacing.3` | ⚠️ TODO | 2 |
@@ -2192,24 +2140,24 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `semantic.typography.body.font-family.sans` | fontFamily | → `foundation.typography.font.family.sans` | ⚠️ TODO | 2 |
+| `semantic.typography.body.font-family.sans` | fontFamily | → `foundation.typography.font.family.sans` | ⚠️ TODO | 0 |
 | `semantic.typography.body.font-size.2xl` | dimension | → `foundation.typography.font.size.2xl` | ⚠️ TODO | 0 |
 | `semantic.typography.body.font-size.3xl` | dimension | → `foundation.typography.font.size.3xl` | ⚠️ TODO | 0 |
-| `semantic.typography.body.font-size.lg` | dimension | → `foundation.typography.font.size.lg` | ⚠️ TODO | 2 |
+| `semantic.typography.body.font-size.lg` | dimension | → `foundation.typography.font.size.lg` | ⚠️ TODO | 0 |
 | `semantic.typography.body.font-size.md` | dimension | → `foundation.typography.font.size.md` | ⚠️ TODO | 0 |
-| `semantic.typography.body.font-size.sm` | dimension | → `foundation.typography.font.size.sm` | ⚠️ TODO | 12 |
+| `semantic.typography.body.font-size.sm` | dimension | → `foundation.typography.font.size.sm` | ⚠️ TODO | 3 |
 | `semantic.typography.body.font-size.xl` | dimension | → `foundation.typography.font.size.xl` | ⚠️ TODO | 0 |
-| `semantic.typography.body.font-size.xs` | dimension | → `foundation.typography.font.size.xs` | ⚠️ TODO | 9 |
+| `semantic.typography.body.font-size.xs` | dimension | → `foundation.typography.font.size.xs` | ⚠️ TODO | 3 |
 | `semantic.typography.body.font-weight.bold` | number | → `foundation.typography.font.weight.bold` | ⚠️ TODO | 0 |
-| `semantic.typography.body.font-weight.medium` | number | → `foundation.typography.font.weight.medium` | ⚠️ TODO | 10 |
-| `semantic.typography.body.font-weight.regular` | number | → `foundation.typography.font.weight.regular` | ⚠️ TODO | 3 |
-| `semantic.typography.body.font-weight.semibold` | number | → `foundation.typography.font.weight.semibold` | ⚠️ TODO | 3 |
+| `semantic.typography.body.font-weight.medium` | number | → `foundation.typography.font.weight.medium` | ⚠️ TODO | 6 |
+| `semantic.typography.body.font-weight.regular` | number | → `foundation.typography.font.weight.regular` | ⚠️ TODO | 0 |
+| `semantic.typography.body.font-weight.semibold` | number | → `foundation.typography.font.weight.semibold` | ⚠️ TODO | 1 |
 | `semantic.typography.body.letter-spacing.normal` | dimension | → `foundation.typography.letter.spacing.normal` | ⚠️ TODO | 0 |
 | `semantic.typography.body.letter-spacing.tight` | dimension | → `foundation.typography.letter.spacing.tight` | ⚠️ TODO | 0 |
 | `semantic.typography.body.line-height.2xl` | number | → `foundation.typography.line.height.snug` | ⚠️ TODO | 0 |
 | `semantic.typography.body.line-height.3xl` | number | → `foundation.typography.line.height.tight` | ⚠️ TODO | 0 |
-| `semantic.typography.body.line-height.md` | number | → `foundation.typography.line.height.normal` | ⚠️ TODO | 11 |
-| `semantic.typography.body.line-height.sm` | number | → `foundation.typography.line.height.snug` | ⚠️ TODO | 6 |
+| `semantic.typography.body.line-height.md` | number | → `foundation.typography.line.height.normal` | ⚠️ TODO | 2 |
+| `semantic.typography.body.line-height.sm` | number | → `foundation.typography.line.height.snug` | ⚠️ TODO | 0 |
 | `semantic.typography.body.line-height.xl` | number | → `foundation.typography.line.height.normal` | ⚠️ TODO | 0 |
 | `semantic.typography.body.line-height.xs` | number | → `foundation.typography.line.height.snug` | ⚠️ TODO | 0 |
 | `semantic.typography.control.font-size.lg` | dimension | → `foundation.typography.font.size.md` | ⚠️ TODO | 4 |
@@ -2243,16 +2191,16 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 |---|---|---|---|---|
 | `component.avatar.border-radius` | dimension | → `foundation.radius.full` | ⚠️ TODO | 1 |
 | `component.avatar.font-family` | fontFamily | → `semantic.typography.body.font-family.sans` | ⚠️ TODO | 1 |
-| `component.avatar.font-size.lg` | dimension | — | ⚠️ TODO | 1 |
-| `component.avatar.font-size.md` | dimension | — | ⚠️ TODO | 1 |
-| `component.avatar.font-size.sm` | dimension | — | ⚠️ TODO | 1 |
+| `component.avatar.font-size.lg` | dimension | → `foundation.typography.font.size.lg` | ⚠️ TODO | 1 |
+| `component.avatar.font-size.md` | dimension | → `foundation.typography.font.size.sm` | ⚠️ TODO | 1 |
+| `component.avatar.font-size.sm` | dimension | → `foundation.typography.font.size.xs` | ⚠️ TODO | 1 |
 | `component.avatar.font-weight` | number | → `semantic.typography.body.font-weight.semibold` | ⚠️ TODO | 1 |
-| `component.avatar.icon-size.lg` | dimension | — | ⚠️ TODO | 1 |
-| `component.avatar.icon-size.md` | dimension | — | ⚠️ TODO | 1 |
-| `component.avatar.icon-size.sm` | dimension | — | ⚠️ TODO | 1 |
-| `component.avatar.size.lg` | dimension | — | ⚠️ TODO | 1 |
-| `component.avatar.size.md` | dimension | — | ⚠️ TODO | 1 |
-| `component.avatar.size.sm` | dimension | — | ⚠️ TODO | 1 |
+| `component.avatar.icon-size.lg` | dimension | → `foundation.spacing.7` | ⚠️ TODO | 1 |
+| `component.avatar.icon-size.md` | dimension | → `foundation.spacing.5` | ⚠️ TODO | 1 |
+| `component.avatar.icon-size.sm` | dimension | → `foundation.spacing.4` | ⚠️ TODO | 1 |
+| `component.avatar.size.lg` | dimension | → `foundation.spacing.14` | ⚠️ TODO | 1 |
+| `component.avatar.size.md` | dimension | → `foundation.spacing.10` | ⚠️ TODO | 1 |
+| `component.avatar.size.sm` | dimension | → `foundation.spacing.8` | ⚠️ TODO | 1 |
 
 ### component.badge
 
@@ -2330,22 +2278,22 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 |---|---|---|---|---|
 | `component.checkbox.border-radius` | dimension | → `foundation.radius.sm` | ⚠️ TODO | 1 |
 | `component.checkbox.border-width` | dimension | → `semantic.border.width.default` | ⚠️ TODO | 1 |
-| `component.checkbox.check-height.lg` | dimension | — | ⚠️ TODO | 0 |
-| `component.checkbox.check-height.md` | dimension | — | ⚠️ TODO | 0 |
-| `component.checkbox.check-height.sm` | dimension | — | ⚠️ TODO | 0 |
-| `component.checkbox.check-width.lg` | dimension | — | ⚠️ TODO | 0 |
+| `component.checkbox.check-height.lg` | dimension | → `foundation.spacing.3` | ⚠️ TODO | 0 |
+| `component.checkbox.check-height.md` | dimension | → `foundation.spacing.2-5` | ⚠️ TODO | 0 |
+| `component.checkbox.check-height.sm` | dimension | → `foundation.spacing.2` | ⚠️ TODO | 0 |
+| `component.checkbox.check-width.lg` | dimension | → `foundation.spacing.1-5` | ⚠️ TODO | 0 |
 | `component.checkbox.check-width.md` | dimension | — | ⚠️ TODO | 0 |
-| `component.checkbox.check-width.sm` | dimension | — | ⚠️ TODO | 0 |
+| `component.checkbox.check-width.sm` | dimension | → `foundation.spacing.1` | ⚠️ TODO | 0 |
 | `component.checkbox.content-gap` | dimension | → `semantic.space.gap.xs` | ⚠️ TODO | 1 |
-| `component.checkbox.control-size.lg` | dimension | — | ⚠️ TODO | 1 |
-| `component.checkbox.control-size.md` | dimension | — | ⚠️ TODO | 1 |
-| `component.checkbox.control-size.sm` | dimension | — | ⚠️ TODO | 1 |
+| `component.checkbox.control-size.lg` | dimension | → `foundation.spacing.6` | ⚠️ TODO | 1 |
+| `component.checkbox.control-size.md` | dimension | → `foundation.spacing.5` | ⚠️ TODO | 1 |
+| `component.checkbox.control-size.sm` | dimension | → `foundation.spacing.4` | ⚠️ TODO | 1 |
 | `component.checkbox.description-font-size` | dimension | → `semantic.typography.body.font-size.sm` | ⚠️ TODO | 1 |
 | `component.checkbox.description-font-weight` | number | → `semantic.typography.body.font-weight.regular` | ⚠️ TODO | 1 |
 | `component.checkbox.description-line-height` | number | → `semantic.typography.body.line-height.md` | ⚠️ TODO | 1 |
 | `component.checkbox.error-font-size` | dimension | → `semantic.typography.body.font-size.xs` | ⚠️ TODO | 1 |
 | `component.checkbox.error-margin-top` | dimension | → `semantic.space.gap.xs` | ⚠️ TODO | 1 |
-| `component.checkbox.font-size` | dimension | — | ⚠️ TODO | 1 |
+| `component.checkbox.font-size` | dimension | → `foundation.typography.font.size.sm` | ⚠️ TODO | 1 |
 | `component.checkbox.gap` | dimension | → `semantic.space.gap.sm` | ⚠️ TODO | 1 |
 | `component.checkbox.helper-font-size` | dimension | → `semantic.typography.body.font-size.xs` | ⚠️ TODO | 1 |
 | `component.checkbox.helper-line-height` | number | → `semantic.typography.body.line-height.md` | ⚠️ TODO | 1 |
@@ -2354,7 +2302,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.checkbox.label-line-height` | number | → `semantic.typography.body.line-height.sm` | ⚠️ TODO | 1 |
 | `component.checkbox.label-padding-x` | dimension | → `semantic.space.gap.xs` | ⚠️ TODO | 1 |
 | `component.checkbox.label-padding-y` | dimension | — | ⚠️ TODO | 1 |
-| `component.checkbox.min-target-size` | dimension | — | ⚠️ TODO | 1 |
+| `component.checkbox.min-target-size` | dimension | → `semantic.size.control.min-target` | ⚠️ TODO | 1 |
 | `component.checkbox.opacity-disabled` | number | → `foundation.opacity.50` | ⚠️ TODO | 1 |
 | `component.checkbox.transition-duration` | duration | → `foundation.duration.fast` | ⚠️ TODO | 1 |
 | `component.checkbox.transition-timing` | cubicBezier | → `foundation.ease.default` | ⚠️ TODO | 1 |
@@ -2433,18 +2381,18 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.radio.border-radius-full` | dimension | → `foundation.radius.full` | ⚠️ TODO | 1 |
 | `component.radio.border-width` | dimension | → `semantic.border.width.default` | ⚠️ TODO | 1 |
 | `component.radio.content-gap` | dimension | → `semantic.space.gap.xs` | ⚠️ TODO | 1 |
-| `component.radio.control-size.lg` | dimension | — | ⚠️ TODO | 1 |
-| `component.radio.control-size.md` | dimension | — | ⚠️ TODO | 1 |
-| `component.radio.control-size.sm` | dimension | — | ⚠️ TODO | 1 |
+| `component.radio.control-size.lg` | dimension | → `foundation.spacing.6` | ⚠️ TODO | 1 |
+| `component.radio.control-size.md` | dimension | → `foundation.spacing.5` | ⚠️ TODO | 1 |
+| `component.radio.control-size.sm` | dimension | → `foundation.spacing.4` | ⚠️ TODO | 1 |
 | `component.radio.description-font-size` | dimension | → `semantic.typography.body.font-size.sm` | ⚠️ TODO | 1 |
 | `component.radio.description-font-weight` | number | → `semantic.typography.body.font-weight.regular` | ⚠️ TODO | 1 |
 | `component.radio.description-line-height` | number | → `semantic.typography.body.line-height.md` | ⚠️ TODO | 1 |
-| `component.radio.dot-size.lg` | dimension | — | ⚠️ TODO | 1 |
-| `component.radio.dot-size.md` | dimension | — | ⚠️ TODO | 1 |
-| `component.radio.dot-size.sm` | dimension | — | ⚠️ TODO | 1 |
+| `component.radio.dot-size.lg` | dimension | → `foundation.spacing.2-5` | ⚠️ TODO | 1 |
+| `component.radio.dot-size.md` | dimension | → `foundation.spacing.2` | ⚠️ TODO | 1 |
+| `component.radio.dot-size.sm` | dimension | → `foundation.spacing.1-5` | ⚠️ TODO | 1 |
 | `component.radio.error-font-size` | dimension | → `semantic.typography.body.font-size.xs` | ⚠️ TODO | 1 |
 | `component.radio.error-margin-top` | dimension | → `semantic.space.gap.xs` | ⚠️ TODO | 1 |
-| `component.radio.font-size` | dimension | — | ⚠️ TODO | 1 |
+| `component.radio.font-size` | dimension | → `foundation.typography.font.size.sm` | ⚠️ TODO | 1 |
 | `component.radio.gap` | dimension | → `semantic.space.gap.sm` | ⚠️ TODO | 1 |
 | `component.radio.group-gap` | dimension | → `semantic.space.gap.xs` | ⚠️ TODO | 1 |
 | `component.radio.group-legend-margin-bottom` | dimension | → `semantic.space.gap.sm` | ⚠️ TODO | 1 |
@@ -2459,7 +2407,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.radio.label-padding-y` | dimension | — | ⚠️ TODO | 1 |
 | `component.radio.legend-font-size` | dimension | → `semantic.typography.body.font-size.sm` | ⚠️ TODO | 1 |
 | `component.radio.legend-font-weight` | number | → `semantic.typography.body.font-weight.medium` | ⚠️ TODO | 1 |
-| `component.radio.min-target-size` | dimension | — | ⚠️ TODO | 1 |
+| `component.radio.min-target-size` | dimension | → `semantic.size.control.min-target` | ⚠️ TODO | 1 |
 | `component.radio.opacity-disabled` | number | → `foundation.opacity.50` | ⚠️ TODO | 1 |
 | `component.radio.transition-duration` | duration | → `foundation.duration.fast` | ⚠️ TODO | 1 |
 | `component.radio.transition-timing` | cubicBezier | → `foundation.ease.default` | ⚠️ TODO | 1 |
@@ -2468,10 +2416,10 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `component.select.arrow-offset.lg` | dimension | — | ⚠️ TODO | 1 |
-| `component.select.arrow-offset.md` | dimension | — | ⚠️ TODO | 1 |
-| `component.select.arrow-offset.sm` | dimension | — | ⚠️ TODO | 1 |
-| `component.select.arrow-size` | dimension | — | ⚠️ TODO | 1 |
+| `component.select.arrow-offset.lg` | dimension | → `foundation.spacing.4` | ⚠️ TODO | 1 |
+| `component.select.arrow-offset.md` | dimension | → `foundation.spacing.3` | ⚠️ TODO | 1 |
+| `component.select.arrow-offset.sm` | dimension | → `foundation.spacing.2` | ⚠️ TODO | 1 |
+| `component.select.arrow-size` | dimension | → `foundation.spacing.4` | ⚠️ TODO | 1 |
 | `component.select.border-radius` | dimension | → `semantic.radius.component` | ⚠️ TODO | 1 |
 | `component.select.border-width` | dimension | → `semantic.border.width.default` | ⚠️ TODO | 1 |
 | `component.select.field-inner-padding-x` | dimension | → `semantic.space.gap.xs` | ⚠️ TODO | 1 |
@@ -2496,23 +2444,23 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `component.skeleton.circle-border-radius` | dimension | → `foundation.radius.full` | ⚠️ TODO | 1 |
-| `component.skeleton.circle-size` | dimension | — | ⚠️ TODO | 1 |
+| `component.skeleton.circle-size` | dimension | → `foundation.spacing.10` | ⚠️ TODO | 1 |
 | `component.skeleton.fill` | color | → `semantic.state.disabled.background` | ⚠️ TODO | 1 |
 | `component.skeleton.rect-border-radius` | dimension | → `semantic.radius.component` | ⚠️ TODO | 1 |
 | `component.skeleton.rect-height` | dimension | — | ⚠️ TODO | 1 |
 | `component.skeleton.text-border-radius` | dimension | → `foundation.radius.sm` | ⚠️ TODO | 1 |
-| `component.skeleton.text-height` | dimension | — | ⚠️ TODO | 1 |
+| `component.skeleton.text-height` | dimension | → `foundation.spacing.4` | ⚠️ TODO | 1 |
 
 ### component.spinner
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `component.spinner.border-radius` | dimension | → `foundation.radius.full` | ⚠️ TODO | 1 |
-| `component.spinner.size.lg` | dimension | — | ⚠️ TODO | 1 |
-| `component.spinner.size.md` | dimension | — | ⚠️ TODO | 1 |
-| `component.spinner.size.sm` | dimension | — | ⚠️ TODO | 1 |
+| `component.spinner.size.lg` | dimension | → `foundation.spacing.8` | ⚠️ TODO | 1 |
+| `component.spinner.size.md` | dimension | → `foundation.spacing.6` | ⚠️ TODO | 1 |
+| `component.spinner.size.sm` | dimension | → `foundation.spacing.4` | ⚠️ TODO | 1 |
 | `component.spinner.stroke-width.lg` | dimension | — | ⚠️ TODO | 1 |
-| `component.spinner.stroke-width.md` | dimension | — | ⚠️ TODO | 1 |
+| `component.spinner.stroke-width.md` | dimension | → `foundation.spacing.0-5` | ⚠️ TODO | 1 |
 | `component.spinner.stroke-width.sm` | dimension | — | ⚠️ TODO | 1 |
 
 ### component.tabs
@@ -2544,7 +2492,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.textarea.font-size.md` | dimension | → `semantic.typography.control.font-size.md` | ⚠️ TODO | 1 |
 | `component.textarea.font-size.sm` | dimension | → `semantic.typography.control.font-size.sm` | ⚠️ TODO | 1 |
 | `component.textarea.min-height.lg` | dimension | — | ⚠️ TODO | 1 |
-| `component.textarea.min-height.md` | dimension | — | ⚠️ TODO | 1 |
+| `component.textarea.min-height.md` | dimension | → `foundation.spacing.20` | ⚠️ TODO | 1 |
 | `component.textarea.min-height.sm` | dimension | — | ⚠️ TODO | 1 |
 | `component.textarea.padding-x.lg` | dimension | → `semantic.space.control.padding-x.lg` | ⚠️ TODO | 1 |
 | `component.textarea.padding-x.md` | dimension | → `semantic.space.control.padding-x.md` | ⚠️ TODO | 1 |
@@ -2565,7 +2513,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.toggle.description-font-size` | dimension | → `semantic.typography.body.font-size.sm` | ⚠️ TODO | 1 |
 | `component.toggle.description-font-weight` | number | → `semantic.typography.body.font-weight.regular` | ⚠️ TODO | 1 |
 | `component.toggle.description-line-height` | number | → `semantic.typography.body.line-height.md` | ⚠️ TODO | 1 |
-| `component.toggle.font-size` | dimension | — | ⚠️ TODO | 1 |
+| `component.toggle.font-size` | dimension | → `foundation.typography.font.size.sm` | ⚠️ TODO | 1 |
 | `component.toggle.gap` | dimension | → `semantic.space.gap.sm` | ⚠️ TODO | 1 |
 | `component.toggle.helper-font-size` | dimension | → `semantic.typography.body.font-size.xs` | ⚠️ TODO | 1 |
 | `component.toggle.helper-line-height` | number | → `semantic.typography.body.line-height.md` | ⚠️ TODO | 1 |
@@ -2575,17 +2523,17 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.toggle.label-line-height` | number | → `semantic.typography.body.line-height.sm` | ⚠️ TODO | 1 |
 | `component.toggle.label-padding-x` | dimension | → `semantic.space.gap.xs` | ⚠️ TODO | 1 |
 | `component.toggle.label-padding-y` | dimension | — | ⚠️ TODO | 1 |
-| `component.toggle.min-target-size` | dimension | — | ⚠️ TODO | 1 |
+| `component.toggle.min-target-size` | dimension | → `semantic.size.control.min-target` | ⚠️ TODO | 1 |
 | `component.toggle.opacity-disabled` | number | → `foundation.opacity.50` | ⚠️ TODO | 1 |
 | `component.toggle.thumb-size.lg` | dimension | — | ⚠️ TODO | 1 |
-| `component.toggle.thumb-size.md` | dimension | — | ⚠️ TODO | 1 |
-| `component.toggle.thumb-size.sm` | dimension | — | ⚠️ TODO | 1 |
-| `component.toggle.track-height.lg` | dimension | — | ⚠️ TODO | 1 |
-| `component.toggle.track-height.md` | dimension | — | ⚠️ TODO | 1 |
-| `component.toggle.track-height.sm` | dimension | — | ⚠️ TODO | 1 |
-| `component.toggle.track-width.lg` | dimension | — | ⚠️ TODO | 1 |
-| `component.toggle.track-width.md` | dimension | — | ⚠️ TODO | 1 |
-| `component.toggle.track-width.sm` | dimension | — | ⚠️ TODO | 1 |
+| `component.toggle.thumb-size.md` | dimension | → `foundation.spacing.3-5` | ⚠️ TODO | 1 |
+| `component.toggle.thumb-size.sm` | dimension | → `foundation.spacing.2-5` | ⚠️ TODO | 1 |
+| `component.toggle.track-height.lg` | dimension | → `foundation.spacing.6` | ⚠️ TODO | 1 |
+| `component.toggle.track-height.md` | dimension | → `foundation.spacing.5` | ⚠️ TODO | 1 |
+| `component.toggle.track-height.sm` | dimension | → `foundation.spacing.4` | ⚠️ TODO | 1 |
+| `component.toggle.track-width.lg` | dimension | → `foundation.spacing.11` | ⚠️ TODO | 1 |
+| `component.toggle.track-width.md` | dimension | → `foundation.spacing.9` | ⚠️ TODO | 1 |
+| `component.toggle.track-width.sm` | dimension | → `foundation.spacing.7` | ⚠️ TODO | 1 |
 | `component.toggle.transition-duration` | duration | → `foundation.duration.fast` | ⚠️ TODO | 1 |
 | `component.toggle.transition-timing` | cubicBezier | → `foundation.ease.default` | ⚠️ TODO | 1 |
 
@@ -4342,8 +4290,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (11×)
-  - Tokens que referenciam: `component.alert.transition-duration`, `component.button.transition-duration`, `component.checkbox.transition-duration`, `component.input.transition-duration`, `component.modal.transition-duration`, `component.radio.transition-duration`, `component.select.transition-duration`, `component.tabs.transition-duration`, `component.textarea.transition-duration`, `component.toggle.transition-duration`, `component.tooltip.transition-duration`
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.motion.duration.fast`, `semantic.motion.duration.fast`
 
 ### `foundation.duration.normal`
 
@@ -4354,7 +4303,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.motion.duration.normal`, `semantic.motion.duration.normal`
 
 ### `foundation.duration.slow`
 
@@ -4365,7 +4317,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.motion.duration.slow`, `semantic.motion.duration.slow`
 
 ### `foundation.ease.default`
 
@@ -4377,8 +4332,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (11×)
-  - Tokens que referenciam: `component.alert.transition-timing`, `component.button.transition-timing`, `component.checkbox.transition-timing`, `component.input.transition-timing`, `component.modal.transition-timing`, `component.radio.transition-timing`, `component.select.transition-timing`, `component.tabs.transition-timing`, `component.textarea.transition-timing`, `component.toggle.transition-timing`, `component.tooltip.transition-timing`
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.motion.ease.default`, `semantic.motion.ease.default`
 
 ### `foundation.ease.in`
 
@@ -4478,8 +4434,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (4×)
-  - Tokens que referenciam: `component.button.opacity-disabled`, `component.checkbox.opacity-disabled`, `component.radio.opacity-disabled`, `component.toggle.opacity-disabled`
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.opacity.disabled`, `semantic.opacity.disabled`
 
 ### `foundation.opacity.75`
 
@@ -4566,8 +4523,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/reset.css` (1×)
-    - `css/tokens/generated/component.css` (9×)
-  - Tokens que referenciam: `component.alert.focus-border-radius`, `component.breadcrumb.focus-border-radius`, `component.checkbox.border-radius`, `component.modal.close-border-radius`, `component.radio.label-border-radius`, `component.skeleton.text-border-radius`, `component.tabs.focus-border-radius`, `component.toggle.label-border-radius`, `component.tooltip.border-radius`
+    - `css/tokens/generated/component.css` (8×)
+  - Tokens que referenciam: `component.alert.focus-border-radius`, `component.breadcrumb.focus-border-radius`, `component.checkbox.border-radius`, `component.radio.label-border-radius`, `component.skeleton.text-border-radius`, `component.tabs.focus-border-radius`, `component.toggle.label-border-radius`, `component.tooltip.border-radius`
 
 ### `foundation.radius.xl`
 
@@ -4690,6 +4647,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/reset.css` (1×)
+    - `css/tokens/generated/component.css` (1×)
     - `css/tokens/generated/theme-dark.css` (2×)
     - `css/tokens/generated/theme-light.css` (2×)
 
@@ -4704,9 +4662,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/reset.css` (1×)
+    - `css/tokens/generated/component.css` (1×)
     - `css/tokens/generated/theme-dark.css` (2×)
     - `css/tokens/generated/theme-light.css` (2×)
-  - Tokens que referenciam: `semantic.space.inset.2xs`, `semantic.space.gap.2xs`, `semantic.space.inset.2xs`, `semantic.space.gap.2xs`
+  - Tokens que referenciam: `component.spinner.stroke-width.md`, `semantic.space.inset.2xs`, `semantic.space.gap.2xs`, `semantic.space.inset.2xs`, `semantic.space.gap.2xs`
 
 ### `foundation.spacing.1`
 
@@ -4719,9 +4678,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/reset.css` (1×)
+    - `css/tokens/generated/component.css` (3×)
     - `css/tokens/generated/theme-dark.css` (3×)
     - `css/tokens/generated/theme-light.css` (3×)
-  - Tokens que referenciam: `semantic.space.inset.xs`, `semantic.space.gap.xs`, `semantic.space.component.xs`, `semantic.space.inset.xs`, `semantic.space.gap.xs`, `semantic.space.component.xs`
+  - Tokens que referenciam: `component.checkbox.check-width.sm`, `semantic.space.inset.xs`, `semantic.space.gap.xs`, `semantic.space.component.xs`, `semantic.space.inset.xs`, `semantic.space.gap.xs`, `semantic.space.component.xs`
 
 ### `foundation.spacing.1-5`
 
@@ -4732,7 +4692,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/component.css` (2×)
+  - Tokens que referenciam: `component.checkbox.check-width.lg`, `component.radio.dot-size.sm`
 
 ### `foundation.spacing.10`
 
@@ -4744,9 +4706,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
+    - `css/tokens/generated/component.css` (2×)
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.size.control.md`, `semantic.size.control.md`
+  - Tokens que referenciam: `component.avatar.size.md`, `component.skeleton.circle-size`, `semantic.size.control.md`, `semantic.size.control.md`
 
 ### `foundation.spacing.11`
 
@@ -4758,9 +4721,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
+    - `css/tokens/generated/component.css` (1×)
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.size.control.min-target`, `semantic.size.control.min-target`
+  - Tokens que referenciam: `component.toggle.track-width.lg`, `semantic.size.control.min-target`, `semantic.size.control.min-target`
 
 ### `foundation.spacing.12`
 
@@ -4785,7 +4749,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.avatar.size.lg`
 
 ### `foundation.spacing.16`
 
@@ -4811,9 +4777,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
+    - `css/tokens/generated/component.css` (6×)
     - `css/tokens/generated/theme-dark.css` (5×)
     - `css/tokens/generated/theme-light.css` (5×)
-  - Tokens que referenciam: `semantic.space.inset.sm`, `semantic.space.gap.sm`, `semantic.space.component.sm`, `semantic.space.control.padding-y.sm`, `semantic.space.inset.sm`, `semantic.space.gap.sm`, `semantic.space.component.sm`, `semantic.space.control.padding-y.sm`
+  - Tokens que referenciam: `component.checkbox.check-height.sm`, `component.radio.dot-size.md`, `component.select.arrow-offset.sm`, `semantic.space.inset.sm`, `semantic.space.gap.sm`, `semantic.space.component.sm`, `semantic.space.control.padding-y.sm`, `semantic.space.inset.sm`, `semantic.space.gap.sm`, `semantic.space.component.sm`, `semantic.space.control.padding-y.sm`
 
 ### `foundation.spacing.2-5`
 
@@ -4825,9 +4792,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
+    - `css/tokens/generated/component.css` (3×)
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.space.control.padding-y.md`, `semantic.space.control.padding-y.md`
+  - Tokens que referenciam: `component.checkbox.check-height.md`, `component.radio.dot-size.lg`, `component.toggle.thumb-size.sm`, `semantic.space.control.padding-y.md`, `semantic.space.control.padding-y.md`
 
 ### `foundation.spacing.20`
 
@@ -4839,9 +4807,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
+    - `css/tokens/generated/component.css` (1×)
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.space.section.xl`, `semantic.space.section.xl`
+  - Tokens que referenciam: `component.textarea.min-height.md`, `semantic.space.section.xl`, `semantic.space.section.xl`
 
 ### `foundation.spacing.24`
 
@@ -4865,9 +4834,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/reset.css` (1×)
+    - `css/tokens/generated/component.css` (3×)
     - `css/tokens/generated/theme-dark.css` (5×)
     - `css/tokens/generated/theme-light.css` (5×)
-  - Tokens que referenciam: `semantic.space.inset.md`, `semantic.space.gap.md`, `semantic.space.component.md`, `semantic.space.control.padding-x.sm`, `semantic.space.control.padding-y.lg`, `semantic.space.inset.md`, `semantic.space.gap.md`, `semantic.space.component.md`, `semantic.space.control.padding-x.sm`, `semantic.space.control.padding-y.lg`
+  - Tokens que referenciam: `component.checkbox.check-height.lg`, `component.select.arrow-offset.md`, `semantic.space.inset.md`, `semantic.space.gap.md`, `semantic.space.component.md`, `semantic.space.control.padding-x.sm`, `semantic.space.control.padding-y.lg`, `semantic.space.inset.md`, `semantic.space.gap.md`, `semantic.space.component.md`, `semantic.space.control.padding-x.sm`, `semantic.space.control.padding-y.lg`
 
 ### `foundation.spacing.3-5`
 
@@ -4878,7 +4848,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.toggle.thumb-size.md`
 
 ### `foundation.spacing.4`
 
@@ -4891,9 +4863,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/reset.css` (3×)
+    - `css/tokens/generated/component.css` (8×)
     - `css/tokens/generated/theme-dark.css` (6×)
     - `css/tokens/generated/theme-light.css` (6×)
-  - Tokens que referenciam: `semantic.space.inset.lg`, `semantic.space.gap.lg`, `semantic.space.component.lg`, `semantic.space.control.padding-x.md`, `semantic.size.control.icon.sm`, `semantic.typography.control.line-height.sm`, `semantic.space.inset.lg`, `semantic.space.gap.lg`, `semantic.space.component.lg`, `semantic.space.control.padding-x.md`, `semantic.size.control.icon.sm`, `semantic.typography.control.line-height.sm`
+  - Tokens que referenciam: `component.avatar.icon-size.sm`, `component.checkbox.control-size.sm`, `component.radio.control-size.sm`, `component.select.arrow-size`, `component.select.arrow-offset.lg`, `component.skeleton.text-height`, `component.spinner.size.sm`, `component.toggle.track-height.sm`, `semantic.space.inset.lg`, `semantic.space.gap.lg`, `semantic.space.component.lg`, `semantic.space.control.padding-x.md`, `semantic.size.control.icon.sm`, `semantic.typography.control.line-height.sm`, `semantic.space.inset.lg`, `semantic.space.gap.lg`, `semantic.space.component.lg`, `semantic.space.control.padding-x.md`, `semantic.size.control.icon.sm`, `semantic.typography.control.line-height.sm`
 
 ### `foundation.spacing.5`
 
@@ -4905,9 +4878,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
+    - `css/tokens/generated/component.css` (4×)
     - `css/tokens/generated/theme-dark.css` (4×)
     - `css/tokens/generated/theme-light.css` (4×)
-  - Tokens que referenciam: `semantic.space.component.xl`, `semantic.space.control.padding-x.lg`, `semantic.size.control.icon.md`, `semantic.typography.control.line-height.md`, `semantic.space.component.xl`, `semantic.space.control.padding-x.lg`, `semantic.size.control.icon.md`, `semantic.typography.control.line-height.md`
+  - Tokens que referenciam: `component.avatar.icon-size.md`, `component.checkbox.control-size.md`, `component.radio.control-size.md`, `component.toggle.track-height.md`, `semantic.space.component.xl`, `semantic.space.control.padding-x.lg`, `semantic.size.control.icon.md`, `semantic.typography.control.line-height.md`, `semantic.space.component.xl`, `semantic.space.control.padding-x.lg`, `semantic.size.control.icon.md`, `semantic.typography.control.line-height.md`
 
 ### `foundation.spacing.6`
 
@@ -4919,9 +4893,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
+    - `css/tokens/generated/component.css` (4×)
     - `css/tokens/generated/theme-dark.css` (5×)
     - `css/tokens/generated/theme-light.css` (5×)
-  - Tokens que referenciam: `semantic.space.inset.xl`, `semantic.space.gap.xl`, `semantic.space.component.2xl`, `semantic.size.control.icon.lg`, `semantic.typography.control.line-height.lg`, `semantic.space.inset.xl`, `semantic.space.gap.xl`, `semantic.space.component.2xl`, `semantic.size.control.icon.lg`, `semantic.typography.control.line-height.lg`
+  - Tokens que referenciam: `component.checkbox.control-size.lg`, `component.radio.control-size.lg`, `component.spinner.size.md`, `component.toggle.track-height.lg`, `semantic.space.inset.xl`, `semantic.space.gap.xl`, `semantic.space.component.2xl`, `semantic.size.control.icon.lg`, `semantic.typography.control.line-height.lg`, `semantic.space.inset.xl`, `semantic.space.gap.xl`, `semantic.space.component.2xl`, `semantic.size.control.icon.lg`, `semantic.typography.control.line-height.lg`
 
 ### `foundation.spacing.7`
 
@@ -4932,7 +4907,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/component.css` (2×)
+  - Tokens que referenciam: `component.avatar.icon-size.lg`, `component.toggle.track-width.sm`
 
 ### `foundation.spacing.8`
 
@@ -4944,9 +4921,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
+    - `css/tokens/generated/component.css` (2×)
     - `css/tokens/generated/theme-dark.css` (2×)
     - `css/tokens/generated/theme-light.css` (2×)
-  - Tokens que referenciam: `semantic.space.section.sm`, `semantic.size.control.sm`, `semantic.space.section.sm`, `semantic.size.control.sm`
+  - Tokens que referenciam: `component.avatar.size.sm`, `component.spinner.size.lg`, `semantic.space.section.sm`, `semantic.size.control.sm`, `semantic.space.section.sm`, `semantic.size.control.sm`
 
 ### `foundation.spacing.9`
 
@@ -4957,7 +4935,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.toggle.track-width.md`
 
 ### `foundation.typography.font.family.display`
 
@@ -5100,7 +5080,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `semantic.typography.body.font-size.lg`, `semantic.typography.body.font-size.lg`
+  - Tokens que referenciam: `component.avatar.font-size.lg`, `semantic.typography.body.font-size.lg`, `semantic.typography.body.font-size.lg`
 
 ### `foundation.typography.font.size.md`
 
@@ -5122,7 +5102,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `semantic.typography.control.font-size.sm`, `semantic.typography.control.font-size.md`, `semantic.typography.body.font-size.sm`, `semantic.typography.control.font-size.sm`, `semantic.typography.control.font-size.md`, `semantic.typography.body.font-size.sm`
+  - Tokens que referenciam: `component.avatar.font-size.md`, `component.checkbox.font-size`, `component.radio.font-size`, `component.toggle.font-size`, `semantic.typography.control.font-size.sm`, `semantic.typography.control.font-size.md`, `semantic.typography.body.font-size.sm`, `semantic.typography.control.font-size.sm`, `semantic.typography.control.font-size.md`, `semantic.typography.body.font-size.sm`
 
 ### `foundation.typography.font.size.xl`
 
@@ -5144,7 +5124,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `semantic.typography.body.font-size.xs`, `semantic.typography.body.font-size.xs`
+  - Tokens que referenciam: `component.avatar.font-size.sm`, `semantic.typography.body.font-size.xs`, `semantic.typography.body.font-size.xs`
 
 ### `foundation.typography.font.weight.bold`
 
@@ -5703,8 +5683,19 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (12×)
-  - Tokens que referenciam: `component.alert.border-width`, `component.button.border-width`, `component.card.border-width`, `component.checkbox.border-width`, `component.divider.thickness`, `component.input.border-width`, `component.modal.border-width`, `component.radio.border-width`, `component.select.border-width`, `component.tabs.border-width`, `component.textarea.border-width`, `component.toggle.border-width`
+    - `css/components/alert.css` (4×)
+    - `css/components/button.css` (1×)
+    - `css/components/card.css` (2×)
+    - `css/components/checkbox.css` (1×)
+    - `css/components/input.css` (1×)
+    - `css/components/modal.css` (1×)
+    - `css/components/radio.css` (1×)
+    - `css/components/select.css` (1×)
+    - `css/components/tabs.css` (1×)
+    - `css/components/textarea.css` (1×)
+    - `css/components/toggle.css` (1×)
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.divider.thickness`
 
 ### `semantic.border.width.focus`
 
@@ -6566,6 +6557,92 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/textarea.css` (2×)
     - `css/components/toggle.css` (1×)
 
+### `semantic.motion.duration.fast`
+
+- **Camada**: semantic
+- **Tipo**: `duration`
+- **Alias**: → `foundation.duration.fast`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/alert.css` (1×)
+    - `css/components/button.css` (4×)
+    - `css/components/checkbox.css` (4×)
+    - `css/components/input.css` (2×)
+    - `css/components/modal.css` (2×)
+    - `css/components/radio.css` (4×)
+    - `css/components/select.css` (2×)
+    - `css/components/tabs.css` (2×)
+    - `css/components/textarea.css` (2×)
+    - `css/components/toggle.css` (5×)
+    - `css/components/tooltip.css` (1×)
+
+### `semantic.motion.duration.normal`
+
+- **Camada**: semantic
+- **Tipo**: `duration`
+- **Alias**: → `foundation.duration.normal`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.motion.duration.slow`
+
+- **Camada**: semantic
+- **Tipo**: `duration`
+- **Alias**: → `foundation.duration.slow`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.motion.ease.default`
+
+- **Camada**: semantic
+- **Tipo**: `cubicBezier`
+- **Alias**: → `foundation.ease.default`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/alert.css` (1×)
+    - `css/components/button.css` (4×)
+    - `css/components/checkbox.css` (4×)
+    - `css/components/input.css` (2×)
+    - `css/components/modal.css` (2×)
+    - `css/components/radio.css` (4×)
+    - `css/components/select.css` (2×)
+    - `css/components/tabs.css` (2×)
+    - `css/components/textarea.css` (2×)
+    - `css/components/toggle.css` (5×)
+    - `css/components/tooltip.css` (1×)
+
+### `semantic.opacity.disabled`
+
+- **Camada**: semantic
+- **Tipo**: `number`
+- **Alias**: → `foundation.opacity.50`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/button.css` (1×)
+    - `css/components/checkbox.css` (1×)
+    - `css/components/radio.css` (2×)
+    - `css/components/toggle.css` (1×)
+
 ### `semantic.overlay.default`
 
 - **Camada**: semantic
@@ -6712,8 +6789,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (1×)
-  - Tokens que referenciam: `component.button.min-target-size`
+    - `css/components/button.css` (1×)
+    - `css/components/checkbox.css` (1×)
+    - `css/components/radio.css` (1×)
+    - `css/components/toggle.css` (1×)
 
 ### `semantic.size.control.sm`
 
@@ -6964,9 +7043,16 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (18×)
+    - `css/components/alert.css` (1×)
+    - `css/components/checkbox.css` (3×)
+    - `css/components/input.css` (2×)
+    - `css/components/radio.css` (3×)
+    - `css/components/select.css` (1×)
+    - `css/components/textarea.css` (3×)
+    - `css/components/toggle.css` (2×)
+    - `css/tokens/generated/component.css` (6×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.alert.content-gap`, `component.breadcrumb.gap`, `component.checkbox.label-padding-x`, `component.checkbox.content-gap`, `component.checkbox.error-margin-top`, `component.input.field-inner-padding-x`, `component.input.field-gap`, `component.modal.close-padding`, `component.radio.group-gap`, `component.radio.label-padding-x`, `component.radio.content-gap`, `component.radio.error-margin-top`, `component.select.gap`, `component.select.field-inner-padding-x`, `component.textarea.field-inner-padding-x`, `component.toggle.label-padding-x`, `component.toggle.content-gap`, `component.tooltip.padding-y`
+  - Tokens que referenciam: `component.breadcrumb.gap`, `component.input.field-gap`, `component.modal.close-padding`, `component.radio.group-gap`, `component.select.gap`, `component.tooltip.padding-y`
 
 ### `semantic.space.inset.2xs`
 
@@ -7225,7 +7311,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `component.avatar.font-family`, `component.button.font-family`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `semantic.typography.body.font-size.2xl`
 
@@ -7261,7 +7347,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `component.card.title-font-size`, `component.modal.title-font-size`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `semantic.typography.body.font-size.md`
 
@@ -7285,7 +7371,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `component.breadcrumb.font-size`, `component.card.body-font-size`, `component.checkbox.label-font-size`, `component.checkbox.description-font-size`, `component.input.label-font-size`, `component.modal.body-font-size`, `component.radio.legend-font-size`, `component.radio.label-font-size`, `component.radio.description-font-size`, `component.tabs.font-size`, `component.toggle.label-font-size`, `component.toggle.description-font-size`
+  - Tokens que referenciam: `component.breadcrumb.font-size`, `component.radio.legend-font-size`, `component.tabs.font-size`
 
 ### `semantic.typography.body.font-size.xl`
 
@@ -7309,7 +7395,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `component.badge.font-size`, `component.checkbox.helper-font-size`, `component.checkbox.error-font-size`, `component.input.helper-font-size`, `component.radio.helper-font-size`, `component.radio.error-font-size`, `component.textarea.counter-font-size`, `component.toggle.helper-font-size`, `component.tooltip.font-size`
+  - Tokens que referenciam: `component.badge.font-size`, `component.textarea.counter-font-size`, `component.tooltip.font-size`
 
 ### `semantic.typography.body.font-weight.bold`
 
@@ -7333,7 +7419,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `component.badge.font-weight`, `component.breadcrumb.font-weight-current`, `component.button.font-weight`, `component.checkbox.label-font-weight`, `component.input.label-font-weight`, `component.radio.legend-font-weight`, `component.radio.label-font-weight`, `component.tabs.font-weight`, `component.textarea.counter-font-weight`, `component.toggle.label-font-weight`
+  - Tokens que referenciam: `component.badge.font-weight`, `component.breadcrumb.font-weight-current`, `component.button.font-weight`, `component.radio.legend-font-weight`, `component.tabs.font-weight`, `component.textarea.counter-font-weight`
 
 ### `semantic.typography.body.font-weight.regular`
 
@@ -7345,7 +7431,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `component.checkbox.description-font-weight`, `component.radio.description-font-weight`, `component.toggle.description-font-weight`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `semantic.typography.body.font-weight.semibold`
 
@@ -7357,7 +7443,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `component.avatar.font-weight`, `component.card.title-font-weight`, `component.modal.title-font-weight`
+  - Tokens que referenciam: `component.avatar.font-weight`
 
 ### `semantic.typography.body.letter-spacing.normal`
 
@@ -7417,7 +7503,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `component.badge.line-height`, `component.card.body-line-height`, `component.checkbox.description-line-height`, `component.checkbox.helper-line-height`, `component.input.helper-line-height`, `component.modal.body-line-height`, `component.radio.description-line-height`, `component.radio.helper-line-height`, `component.textarea.field-line-height`, `component.toggle.description-line-height`, `component.toggle.helper-line-height`
+  - Tokens que referenciam: `component.badge.line-height`, `component.textarea.field-line-height`
 
 ### `semantic.typography.body.line-height.sm`
 
@@ -7429,7 +7515,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `component.card.title-line-height`, `component.checkbox.label-line-height`, `component.input.label-line-height`, `component.modal.title-line-height`, `component.radio.label-line-height`, `component.toggle.label-line-height`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `semantic.typography.body.line-height.xl`
 
@@ -7673,6 +7759,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.typography.font.size.lg`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -7685,6 +7772,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.typography.font.size.sm`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -7697,6 +7785,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.typography.font.size.xs`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -7722,6 +7811,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.7`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -7734,6 +7824,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.5`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -7746,6 +7837,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.4`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -7758,6 +7850,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.14`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -7770,6 +7863,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.10`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -7782,6 +7876,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.8`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -8464,6 +8559,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.3`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -8475,6 +8571,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.2-5`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -8486,6 +8583,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.2`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -8497,6 +8595,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.1-5`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -8519,6 +8618,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.1`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -8543,6 +8643,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.6`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -8555,6 +8656,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.5`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -8567,6 +8669,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.4`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -8644,6 +8747,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.typography.font.size.sm`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -8759,6 +8863,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `semantic.size.control.min-target`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -9519,6 +9624,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.6`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -9531,6 +9637,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.5`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -9543,6 +9650,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.4`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -9594,6 +9702,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.2-5`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -9606,6 +9715,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.2`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -9618,6 +9728,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.1-5`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -9656,6 +9767,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.typography.font.size.sm`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -9849,6 +9961,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `semantic.size.control.min-target`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -9900,6 +10013,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.4`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -9912,6 +10026,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.3`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -9924,6 +10039,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.2`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -9936,6 +10052,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.4`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -10192,6 +10309,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.10`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -10255,6 +10373,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.4`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -10280,6 +10399,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.8`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -10292,6 +10412,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.6`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -10304,6 +10425,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.4`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -10328,6 +10450,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.0-5`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -10611,6 +10734,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.20`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -10817,6 +10941,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.typography.font.size.sm`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -10945,6 +11070,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `semantic.size.control.min-target`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -10982,6 +11108,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.3-5`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -10994,6 +11121,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.2-5`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -11006,6 +11134,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.6`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -11018,6 +11147,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.5`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -11030,6 +11160,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.4`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -11042,6 +11173,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.11`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -11054,6 +11186,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.9`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -11066,6 +11199,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.7`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -11198,7 +11332,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 # Token schema — Design System Core
 
-> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-22. Não editar manualmente.
+> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-23. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
 > Versão atual: **0.5.17**
 
@@ -11210,22 +11344,21 @@ Seção expandida com contexto, decisão e locais de uso.
 | Formato canônico | JSON (DTCG) em `tokens/` |
 | CSS gerado | Style Dictionary → `css/tokens/generated/` |
 | Pipeline | ✅ index.css importa apenas generated/ |
-| Paridade light/dark | ✅ 153 tokens em ambos os modos |
+| Paridade light/dark | ✅ 165 tokens em ambos os modos |
 
 ## Camadas
 
 | Camada | Tokens | Arquivos |
 |--------|--------|----------|
-| Foundation | **231** | 10 |
-| Semantic | **153 × 2 modos** | light.json + dark.json |
-| Component | **288** | 18 |
+| Foundation | **240** | 9 |
+| Semantic | **165 × 2 modos** | light.json + dark.json |
+| Component | **61** | 11 |
 
-## Foundation (231 tokens)
+## Foundation (240 tokens)
 
 | Arquivo | Tokens |
 |---------|--------|
-| `brand.json` | 2 |
-| `colors.json` | 134 |
+| `colors.json` | 145 |
 | `motion.json` | 7 |
 | `opacity.json` | 7 |
 | `radius.json` | 8 |
@@ -11235,49 +11368,46 @@ Seção expandida com contexto, decisão e locais de uso.
 | `typography.json` | 35 |
 | `z-index.json` | 6 |
 
-## Semantic (153 tokens × 2 modos)
+## Semantic (165 tokens × 2 modos)
 
 Categorias raiz em light.json:
 
 ```
-semantic.background.*
-semantic.surface.*
-semantic.content.*
-semantic.brand.*
-semantic.accent.*
+semantic.primary.*
+semantic.toned.*
+semantic.outline.*
+semantic.ghost.*
+semantic.link.*
 semantic.feedback.*
+semantic.surface.*
+semantic.background.*
+semantic.content.*
 semantic.border.*
-semantic.focus.*
 semantic.overlay.*
-semantic.state.*
+semantic.focus.*
+semantic.opacity.*
+semantic.motion.*
 semantic.space.*
-semantic.radius.*
 semantic.size.*
+semantic.radius.*
 semantic.typography.*
 ```
 
-## Component (288 tokens)
+## Component (61 tokens)
 
 | Arquivo | Tokens |
 |---------|--------|
-| `alert.json` | 9 |
-| `avatar.json` | 12 |
-| `badge.json` | 6 |
-| `breadcrumb.json` | 4 |
-| `button.json` | 30 |
-| `card.json` | 10 |
-| `checkbox.json` | 30 |
-| `divider.json` | 2 |
-| `input.json` | 27 |
-| `modal.json` | 23 |
-| `radio.json` | 33 |
-| `select.json` | 22 |
-| `skeleton.json` | 7 |
-| `spinner.json` | 7 |
-| `tabs.json` | 10 |
-| `textarea.json` | 20 |
-| `toggle.json` | 29 |
-| `tooltip.json` | 7 |
+| `avatar.json` | 9 |
+| `button.json` | 3 |
+| `checkbox.json` | 9 |
+| `input.json` | 3 |
+| `modal.json` | 3 |
+| `radio.json` | 6 |
+| `select.json` | 7 |
+| `skeleton.json` | 3 |
+| `spinner.json` | 6 |
+| `textarea.json` | 3 |
+| `toggle.json` | 9 |
 
 ## Regras invioláveis
 
@@ -11308,6 +11438,7 @@ semantic.typography.*
 - **ADR-011** — Reestruturação do naming de tokens semânticos de cor (Aceita — Implementada em 0.5.0)
 - **ADR-012** — Tokens de line-height e letter-spacing divergem por design entre Figma e JSON (Aceita)
 - **ADR-013** — Camadas de consumo de tokens — Foundation nunca direto em consumidor final (Aceita)
+- **ADR-014** — Reestruturação Semantic em `action` × `style` × `prop` × `state` — eliminação de brand/accent e themes (Aceita)
 
 
 ═══════════════════════════════════════════════════════════
@@ -11468,7 +11599,7 @@ site em docs/ + Storybook (futuro)
 
 ### Ferramentas
 
-- **MCP remoto do Figma** (`use_figma`): canal pelo qual o script acessa as Variables. Já autenticado como UXIN Pro/Expert.
+- **MCP remoto do Figma** (`use_figma`): canal pelo qual o script acessa as Variables. Já autenticado como Design Team (Pro/Expert).
 - **`scripts/sync-tokens-from-figma.mjs`**: o script de sync. Dry-run por padrão.
 - **`scripts/tokens-verify.mjs`**: passa a interpretar divergências orientadas — Figma como autoridade.
 
@@ -12838,6 +12969,35 @@ O script `npm run verify:tokens` (`scripts/tokens-verify.mjs`) é estendido com 
 2. **Figma foundation leak**: scan do `.figma-snapshot.json` por bindings apontando pra variáveis da collection Foundation dentro de nodes COMPONENT/COMPONENT_SET.
 3. **Token Registry completude**: toda variável em `tokens/**/*.json` precisa ter entrada em `tokens/registry.yaml` com campos `sentido`, `contexto`, `decisao` preenchidos.
 
+### Quando criar um Component token (refinamento pós-Fase 5)
+
+A primeira execução desta ADR (Fases 0-7) criou tokens component em excesso — 151 novos, dos quais 105 eram aliases 1:1 pra Semantic/Foundation sem variação entre componentes. Exemplos: `component.button.transition-duration`, `component.input.transition-duration`, `component.checkbox.transition-duration` — todos apontando pra `{foundation.duration.fast}` e resolvendo pro mesmo valor, sem razão arquitetural pra divergir.
+
+Isso transgride a intenção da regra. Component token é camada de **decisão específica do componente**, não wrapper mecânico pra evitar Foundation no CSS.
+
+**Criar Component token apenas quando:**
+
+1. **Valor único pro componente** que não tem equivalente em Semantic.
+   Ex: `component.modal.max-width.md = 32.5rem` (nenhum Semantic cobre esse valor; é decisão visual do Modal).
+
+2. **Variação por size/state dentro do componente**, mesmo que aliase Semantic.
+   Ex: `component.button.height.{sm,md,lg}` aliasando `{semantic.size.control.*}`. Justifica porque existem 3 valores relacionados tematicamente (sizing do Button), apesar de cada um ser um alias 1:1.
+
+3. **Decisão de identidade que diverge do padrão Semantic.**
+   Ex: `component.badge.border-radius = {foundation.radius.full}` (identidade pill), `component.modal.border-radius = {foundation.radius.xl}` (elevação de modal vs `radius.component` padrão).
+
+**NÃO criar Component token quando:**
+
+- É alias 1:1 pra Semantic sem variação plausível. O CSS consome Semantic direto — isso não viola a regra, pois Semantic está acima de Foundation na cadeia.
+- O mesmo valor é compartilhado por 3+ componentes sem razão de divergir. Se nunca muda entre componentes, não é decisão de componente — é decisão sistêmica e vive em Semantic.
+- É só pra evitar que o CSS consuma `--ds-{foundation}-*` direto. Nesse caso, a solução correta é criar um Semantic que wrappa o Foundation (categoria geral) e deixar o CSS consumir Semantic, não multiplicar wrappers.
+
+**Exemplo da distinção**:
+- Motion (`duration.fast`, `ease.default`) é decisão sistêmica: sempre os mesmos valores em todo lugar. Vive em **Semantic** (`motion.duration.fast`, `motion.ease.default`), não em cada Component.
+- Border-radius é decisão **por componente** (Badge=full, Modal=xl, Button=component-default, Alert=component-default...). Vive em **Component**.
+
+Aplicação retroativa: **Fase 8** do plano de execução remove os 105 tokens redundantes criados na Fase 5.
+
 ### Token Registry
 
 Criado como parte desta ADR: arquivo único `tokens/registry.yaml` que cataloga todos os tokens do sistema (Foundation, Semantic, Component) com metadados por entrada:
@@ -12889,7 +13049,7 @@ Descartada. Foundation leak em CSS de componente é equivalente à do Figma — 
 
 ## Plano de execução
 
-Ver `/Users/marcelldasilva/.claude/plans/groovy-snacking-acorn.md` — Fases 0-7. Divisão em 5 PRs:
+Fases 0-7. Divisão em 5 PRs:
 
 - **PR #A**: ADR-013 + Token Registry skeleton + check de completude
 - **PR #B**: Audit de reuso Semantic + expansão no Figma + sync parcial
@@ -12911,6 +13071,224 @@ Ver `/Users/marcelldasilva/.claude/plans/groovy-snacking-acorn.md` — Fases 0-7
 
 
 ═══════════════════════════════════════════════════════════
+# ADR-014 — Reestruturação Semantic em `action` × `style` × `prop` × `state` — eliminação de brand/accent e themes
+═══════════════════════════════════════════════════════════
+
+# ADR-014: Reestruturação Semantic em `action` × `style` × `prop` × `state` — eliminação de brand/accent e themes
+
+**Data:** 2026-04-22
+**Status:** Aceita
+
+## Contexto
+
+Os ADRs anteriores (ADR-011 renaming, ADR-013 camadas de consumo) mantiveram a camada Semantic dominada por `brand.*` (fills diretos da marca) + `accent.*` (complemento em purple). Com essa estrutura:
+
+- Consumidores (CSS, Figma bindings) resolviam variantes de Button misturando `brand.default`, `brand.toned.default`, `brand.content.contrast`, `border.brand`, etc. — sem padrão claro.
+- Accent era usado apenas em Badge Secondary.
+- Três paletas de brand (Default/Ocean/Forest) viviam em uma collection `Brand` no Figma com modes. Adicionavam complexidade e nunca foram requisito real do produto.
+- Na Fase 5 do ADR-013, um agente criou 151 tokens Component como wrappers 1:1 pra compensar a falta de semântica de ação. Resultado: 288 Component tokens sem decisão clara, impossível de manter.
+
+A pergunta arquitetural ficou: **como representar variantes de ação (Button brand, outline, ghost, danger, secondary neutral, etc.) em Semantic de forma que seja 1) enxuta, 2) previsível, 3) sem duplicação em Component?**
+
+## Decisão
+
+Reestruturar a camada Semantic em torno de um eixo **role × style × prop × state** específico para ações interativas, consolidar identidade da marca em uma paleta única na Foundation, e eliminar accent.
+
+### 1. Foundation — `color/brand/{50..950}` como paleta única
+
+Paleta `foundation.color.brand.*` criada com valores hex (Default = Blue atual). Designer pode reassignar os hex pra customizar a marca do projeto (futuro: color picker runtime).
+
+Remoções:
+- Collection **Brand** no Figma (modes Default/Ocean/Forest) — deletada
+- `tokens/foundation/brand.json` — deletado
+- CSS themes `theme-ocean.css` e `theme-forest.css` — deletados
+
+### 2. Semantic — categorias de ação como peers no root (pós-revisão 2026-04-23)
+
+Após revisão de estrutura com alinhamento ao PDF "Naming Tokens in Design Systems" (Nathan Curtis) e exemplos de Carbon/Polaris/Fluent, a estrutura anterior de 5 níveis `action.{role}.{style}.{prop}.{state}` foi considerada burocrática e redundante. Estrutura revisada:
+
+**Regra de naming**:
+- **Color tokens**: hierarquia pastas + compound hífen no último nível. `{categoria}/{prop-state}`.
+- **Dimensional/structural**: hierarquia ponto (escalas taxonômicas).
+- `default` explícito em vars de cor (`bg-default`, `content-default`).
+- `bg` (não `background`) em compound; `background` reservado pra categoria root.
+
+**Categorias de ação como peers no root Semantic** (sem prefix `action.`):
+
+```
+semantic.primary/{bg-default, bg-hover, bg-active, bg-disabled, content-default, content-disabled}   # solid brand
+semantic.toned/{bg-default, bg-hover, bg-active, content-default, content-disabled}                   # brand translúcido
+semantic.outline/{bg-hover, bg-active, border-default, border-hover, border-disabled, content-default, content-disabled}  # neutral
+semantic.ghost/{bg-hover, bg-active, content-default, content-disabled}                               # neutral text-only
+semantic.link/{content-default, content-hover, content-disabled}                                       # inline link branded
+```
+
+**Total**: 25 tokens (vs 66 atuais, -62%).
+
+**Eliminações**:
+- `secondary` e `danger` **não são mais roles em action**:
+  - Button "danger" consome `feedback.error.*` diretamente
+  - Button "secondary" (solid cinza) foi eliminado como estilo — visualmente vira `outline` (borda neutra) ou `ghost` (só texto)
+- `state/*` categoria eliminada:
+  - `state.hover` → `overlay.subtle`
+  - `state.pressed` → `overlay.default`
+  - `state.focus` → `focus.ring.color`
+  - `state.disabled-background` → `background.disabled`
+- `content.link.*` movido pra categoria `link.*` peer
+
+**Feedback renomeado** pra compound consistente: `feedback.success.default` → `feedback.success.bg-default`, `feedback.success.content.contrast` → `feedback.success.content-contrast`.
+
+**`border.control/*` renomeado**: `border.control.default` → `border.control-default`.
+
+### 2.1 — Versão antiga (histórico, revoada em 2026-04-23)
+
+A primeira versão do ADR-014 propunha:
+```
+semantic.action.{role: primary|secondary|danger}.{style: default|toned|outline|ghost}.{prop}.{state}
+```
+Mas gerou 66 tokens com nomes de 50+ caracteres (`--ds-action-primary-default-background-default`), "default" duplicado em vários paths, e roles repetidos (3 roles × 4 styles × props × states) sem justificativa prática.
+
+**Troca**: simplicidade e alinhamento com mercado (Carbon/Polaris compound kebab-case) vs matriz combinatória completa.
+
+(Outras hierarquias — success, info, warning — vêm on-demand quando houver variante de componente que exija.)
+
+**Styles**:
+- `default` — preenchimento sólido, alta ênfase
+- `toned` — fundo sutil com overlay translúcido, ênfase média
+- `outline` — borda + texto colorido, fundo transparente
+- `ghost` — apenas texto, sem fundo nem borda
+
+**Props × States**: cada combinação razoável é criada; combinações não aplicáveis (ex: `outline.background.default` sempre transparente) são omitidas.
+
+Total Semantic action: ~70 tokens que cobrem todas as variantes de Button/ação explicitamente.
+
+### 3. Semantic — categoria `radius` expandida
+
+```
+semantic.radius.{sm, md, lg, xl, full, component}
+```
+
+Aliases diretos de `foundation.radius.*`. `component` é alias de `md` (valor default de radius em componentes).
+
+### 4. Eliminação de `brand/accent` em Semantic
+
+- `semantic.brand.*` (11 tokens) — removidos
+- `semantic.accent.*` (6 tokens) — removidos
+
+Consumidores remapeados:
+- `semantic.content.link.*` → aponta direto a `foundation.color.brand.{600,700}` (exceção a ADR-013: Semantic consumindo Foundation é permitido; link é ação neutra-primary)
+- `semantic.border.focus`, `border.brand`, `state.focus` → mesma lógica
+- Bindings de Figma components → rebindados a `semantic.action.primary.*`
+
+### 5. Component — reduzida drasticamente (185 → ~60 vars)
+
+Component collection mantém **apenas** dimensões específicas por componente (modal.max-width, button.height, spinner.size, etc.). Wrappers 1:1 pra Semantic/Foundation eliminados.
+
+Componentes que NÃO têm tokens próprios (alert, badge, breadcrumb, card, divider, tabs, tooltip) — seus JSONs foram deletados. CSS deles consome Semantic direto.
+
+## Fluxo de consumo
+
+```
+CSS de componente
+    ↓
+semantic.action.{role}.{style}.{prop}.{state}
+    ↓
+foundation.color.{brand|neutral|red}.{step}
+```
+
+Exemplo concreto — Button brand (primary, sólido) CSS:
+
+```css
+.ds-btn--brand {
+  background-color: var(--ds-action-primary-default-background-default);
+  color: var(--ds-action-primary-default-content-default);
+}
+.ds-btn--brand:hover  { background-color: var(--ds-action-primary-default-background-hover); }
+.ds-btn--brand:active { background-color: var(--ds-action-primary-default-background-active); }
+```
+
+Button toned:
+```css
+.ds-btn--toned {
+  background-color: var(--ds-action-primary-toned-background-default);
+  color: var(--ds-action-primary-toned-content-default);
+}
+```
+
+Button danger:
+```css
+.ds-btn--danger {
+  background-color: var(--ds-action-danger-default-background-default);
+  color: var(--ds-action-danger-default-content-default);
+}
+```
+
+Semântica explícita, cadeia curta, sem wrappers intermediários.
+
+## Consequências
+
+### Positivas
+
+- **Estrutura enxuta**: Semantic action cobre TODAS variantes em ~70 tokens previsíveis
+- **Sem 3 themes**: sistema foca em 1 brand, customização runtime via color picker (projeto futuro)
+- **Component enxuto**: 60 vars justificadas (vs 185 inflado por wrappers)
+- **Consistência**: mesma estrutura role × style × prop × state aplicável pra qualquer componente novo de ação
+- **Zero Foundation leak**: nenhum bind de componente Figma ou CSS consome foundation direto
+- **Rastreabilidade**: uso de `action-danger-outline-content-hover` é autoexplicativo em grep
+
+### Negativas
+
+- **Breaking change grande**: toda a cadeia `brand.*` + `accent.*` no Semantic foi removida. CSS de componentes inteiramente reescrito.
+- **Themes removidos**: Ocean e Forest não voltam. Se alguém dependia, precisa reimplementar via override de `foundation.color.brand.*` no CSS consumidor.
+- **on-demand risk**: `action.success`, `action.warning`, `action.info` não foram criados. Se Button ganhar variante Success, precisa criar os tokens primeiro. Fricção proposital pra evitar inflação.
+
+### Bump de versão
+
+**0.5.x → 0.6.0** (breaking change em toda a estrutura Semantic).
+
+## Alternativas consideradas
+
+### (a) Manter `brand.*` e adicionar só `action.*` em paralelo
+
+Rejeitada. Duplicação de conceitos — dois tokens pra mesma cor. Não resolve o bloat.
+
+### (b) Não criar camada `action` e deixar variantes de Button resolverem no CSS
+
+Rejeitada. Viola ADR-013 (CSS consome Foundation direto ou mistura camadas). Perde intenção semântica.
+
+### (c) Manter accent como 2ª paleta configurável
+
+Rejeitada. Accent era usado só em Badge Secondary. Com elimnação de acent, Badge Secondary vira variante neutral (coerente com action.secondary).
+
+### (d) Tokens por componente (Material Design 3 style — `button.filled.container.color`)
+
+Rejeitada. É exatamente o que a Fase 5 ADR-013 fez e gerou bloat. Inviável em sistema de 18 componentes.
+
+## Referências
+
+- ADR-011: Renaming de Semantic colors (antecessor — `text/*` → `content/*`, `color/primary/*` → `brand/*`)
+- ADR-013: Camadas de consumo — Foundation nunca direto em consumidor final
+- Material Design 3: Color roles (precedent pra role-based tokens, mas não adotado por complexidade)
+- Fluent 2: Surface/content/fill composition (precedent pra separação prop × state)
+- Primer (GitHub): primer/primitives — inspiração pra estrutura enxuta
+- Figma Tokens Studio: Role/Style composition pattern
+
+## Migração
+
+- Componentes Figma: rebindados automaticamente via `use_figma` (353 bindings de fills/strokes + 5 consumer vars semantic)
+- JSONs de componente: reescritos com o subset de ~60 tokens
+- CSS componentes: 18 arquivos reescritos pra consumir nova Semantic
+- Snapshot Figma regenerado
+- `verify:tokens` passa
+
+## Reversibilidade
+
+- Arquivo Figma duplicado manualmente antes da refatoração (checkpoint)
+- `.figma-snapshot-pre-refactor.json` preservado
+- Trabalho vive em branch `refactor/tokens-ground-up`; reverter = `git revert` do PR ou reset-hard
+
+
+═══════════════════════════════════════════════════════════
 # Tokens
 ═══════════════════════════════════════════════════════════
 
@@ -12929,6 +13307,6 @@ Verificação automática de coerência Figma ↔ JSON ↔ CSS: `scripts/tokens-
 
 ═══════════════════════════════════════════════════════════
 
-Gerado por scripts/build-llms.mjs em 2026-04-22T20:33:10.354Z
+Gerado por scripts/build-llms.mjs em 2026-04-23T23:50:55.769Z
 Versão: 0.5.17
 Site: https://uxindesign.github.io/design-system-core/

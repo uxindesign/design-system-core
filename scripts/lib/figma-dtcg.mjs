@@ -11,7 +11,10 @@
 import fs from "node:fs";
 import path from "node:path";
 
-export const FIGMA_FILE_KEY = "PRYS2kL7VdC1MtVWfZvuDN";
+export const FIGMA_FILE_KEY = process.env.FIGMA_FILE_KEY || (() => {
+  process.emitWarning("FIGMA_FILE_KEY não definido via env — usando fallback. Defina a variável de ambiente para produção.", "SecurityWarning");
+  return "PRYS2kL7VdC1MtVWfZvuDN";
+})();
 
 // Prefixo do nome da variável Figma → arquivo em tokens/foundation/
 export const FOUNDATION_PREFIX_TO_FILE = {

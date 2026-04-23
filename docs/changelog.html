@@ -103,6 +103,15 @@
 <li>Remanescente: 245 broken bindings pré-existentes em <code>fontSize</code> (ID órfão 10:11, débito histórico não introduzido por esta refatoração).</li>
 </ul>
 <p><strong>Bump</strong>: 0.6.0 → <strong>0.7.0</strong> (breaking — nomes action.* renomeados pra primary/toned/outline/ghost/link; roles secondary/danger eliminados).</p>
+<h3>Política de scopes em Figma Variables (consolidação 2026-04-23)</h3>
+<p>Formaliza a política de scopes nas 3 collections:</p>
+<ul>
+<li><strong>Foundation (229 vars)</strong>: <code>scopes: []</code> (neutro) + <code>hiddenFromPublishing: true</code>. Foundation é matéria-prima consumida por Semantic via alias — nunca deve ser bindada direto em canvas. Esconder do picker é a enforcement mecânica da regra ADR-013 &quot;Foundation nunca em consumidor final&quot;. Setar scopes específicos em Foundation mandaria o sinal oposto (&quot;use aqui&quot;).</li>
+<li><strong>Semantic (162 vars)</strong>: scopes específicos por contexto — <code>FRAME_FILL</code>+<code>SHAPE_FILL</code> pra bg, <code>TEXT_FILL</code> pra content em link/primary/toned/outline/ghost, <code>SHAPE_FILL</code>+<code>TEXT_FILL</code> pra <code>content/*</code> raiz (cobre ícones), <code>STROKE_COLOR</code> pra border/<em>, <code>STROKE_FLOAT</code> pra border.width.</em> e focus.ring.width/offset, <code>GAP</code> pra space.<em>, <code>CORNER_RADIUS</code> pra radius.</em>, <code>WIDTH_HEIGHT</code> pra size.<em>, <code>FONT_SIZE</code>/<code>LINE_HEIGHT</code>/<code>FONT_FAMILY</code>/<code>FONT_STYLE</code>/<code>LETTER_SPACING</code> pra typography.</em>, <code>OPACITY</code> pra opacity.*.</li>
+<li><strong>Component (61 vars)</strong>: scopes específicos por contexto (dimensional — <code>WIDTH_HEIGHT</code> pra sizes, <code>FONT_SIZE</code> pra font-sizes, etc.).</li>
+</ul>
+<p>Motivação: consistência com CLAUDE.md (&quot;Nunca usar ALL_SCOPES&quot;) + ADR-013 (Foundation nunca em consumidor final). Policy aplicada em todas as 452 vars das 3 collections.</p>
+<p><strong>Aberto</strong> (flag pra decisão futura): <code>*/content-*</code> em categorias de ação (primary/toned/outline/ghost/link) hoje só tem <code>TEXT_FILL</code>. Se designer bindar fill de ícone dentro de button primary, o token não aparece no picker (ícone é SHAPE_FILL). Solução: adicionar <code>SHAPE_FILL</code> a esses 10 tokens. Parkado — refinamento opcional.</p>
 <h3>Refatoração ground-up (ADR-014) — action×style×prop×state + eliminação de brand/accent + themes</h3>
 <p>Restruturação da camada Semantic pra resolver o bloat crônico acumulado nas Fases 2-8 do ADR-013. <strong>Breaking change grande</strong> — CSS de todos componentes reescrito.</p>
 <p><strong>Figma (fonte de verdade)</strong>:</p>

@@ -70,7 +70,7 @@ Ver [ADR-013](docs/decisions/ADR-013-camadas-de-consumo-de-tokens.md) e `tokens/
 
 Dois MCPs disponíveis, ambos com autenticação ativa:
 
-- **Remoto (`mcp__51ce7e00-…`):** autenticado como UXIN (Pro/Expert). Use para leitura ampla (`get_metadata`, `get_design_context`) e escrita via Plugin API (`use_figma`). `fileKey` do DS: `PRYS2kL7VdC1MtVWfZvuDN`.
+- **Remoto (`mcp__51ce7e00-…`):** autenticado como Design Team (Pro/Expert). Use para leitura ampla (`get_metadata`, `get_design_context`) e escrita via Plugin API (`use_figma`). `fileKey` do DS: `PRYS2kL7VdC1MtVWfZvuDN`.
 - **Desktop Dev Mode (`mcp__Figma__*`):** requer Figma desktop aberto com Dev Mode MCP Server habilitado (Preferências → Enable Dev Mode MCP Server). Bom para ler o node atualmente selecionado com contexto de design.
 
 Antes de chamar `use_figma`, carregar a skill `figma:figma-use`.
