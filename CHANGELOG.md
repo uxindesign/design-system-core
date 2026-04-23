@@ -37,6 +37,18 @@ Revisão da ADR-014: estrutura action de 5 níveis (`action.{role}.{style}.{prop
 
 **Bump**: 0.6.0 → **0.7.0** (breaking — nomes action.* renomeados pra primary/toned/outline/ghost/link; roles secondary/danger eliminados).
 
+### Política de scopes em Figma Variables (consolidação 2026-04-23)
+
+Formaliza a política de scopes nas 3 collections:
+
+- **Foundation (229 vars)**: `scopes: []` (neutro) + `hiddenFromPublishing: true`. Foundation é matéria-prima consumida por Semantic via alias — nunca deve ser bindada direto em canvas. Esconder do picker é a enforcement mecânica da regra ADR-013 "Foundation nunca em consumidor final". Setar scopes específicos em Foundation mandaria o sinal oposto ("use aqui").
+- **Semantic (162 vars)**: scopes específicos por contexto — `FRAME_FILL`+`SHAPE_FILL` pra bg, `TEXT_FILL` pra content em link/primary/toned/outline/ghost, `SHAPE_FILL`+`TEXT_FILL` pra `content/*` raiz (cobre ícones), `STROKE_COLOR` pra border/*, `STROKE_FLOAT` pra border.width.* e focus.ring.width/offset, `GAP` pra space.*, `CORNER_RADIUS` pra radius.*, `WIDTH_HEIGHT` pra size.*, `FONT_SIZE`/`LINE_HEIGHT`/`FONT_FAMILY`/`FONT_STYLE`/`LETTER_SPACING` pra typography.*, `OPACITY` pra opacity.*.
+- **Component (61 vars)**: scopes específicos por contexto (dimensional — `WIDTH_HEIGHT` pra sizes, `FONT_SIZE` pra font-sizes, etc.).
+
+Motivação: consistência com CLAUDE.md ("Nunca usar ALL_SCOPES") + ADR-013 (Foundation nunca em consumidor final). Policy aplicada em todas as 452 vars das 3 collections.
+
+**Aberto** (flag pra decisão futura): `*/content-*` em categorias de ação (primary/toned/outline/ghost/link) hoje só tem `TEXT_FILL`. Se designer bindar fill de ícone dentro de button primary, o token não aparece no picker (ícone é SHAPE_FILL). Solução: adicionar `SHAPE_FILL` a esses 10 tokens. Parkado — refinamento opcional.
+
 ### Refatoração ground-up (ADR-014) — action×style×prop×state + eliminação de brand/accent + themes
 
 Restruturação da camada Semantic pra resolver o bloat crônico acumulado nas Fases 2-8 do ADR-013. **Breaking change grande** — CSS de todos componentes reescrito.
