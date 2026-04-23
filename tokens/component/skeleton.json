@@ -1,40 +1,10 @@
 {
   "component": {
     "skeleton": {
-      "$description": "Structural tokens for Skeleton placeholder component.",
-      "text-height": {
-        "$type": "dimension",
-        "$value": "{foundation.spacing.4}",
-        "$description": "16px line placeholder"
-      },
-      "circle-size": {
-        "$type": "dimension",
-        "$value": "{foundation.spacing.10}",
-        "$description": "40px avatar placeholder"
-      },
-      "rect-height": {
-        "$type": "dimension",
-        "$value": "7.5rem",
-        "$description": "120px image/card placeholder"
-      },
-      "text-border-radius": {
-        "$type": "dimension",
-        "$value": "{foundation.radius.sm}",
-        "$description": "4px"
-      },
-      "circle-border-radius": {
-        "$type": "dimension",
-        "$value": "{foundation.radius.full}"
-      },
-      "rect-border-radius": {
-        "$type": "dimension",
-        "$value": "{semantic.radius.component}"
-      },
-      "fill": {
-        "$type": "color",
-        "$value": "{semantic.state.disabled.background}",
-        "$description": "Skeleton background fill. Neutral-100 light / neutral-800 dark. Replaces semantic.background.muted per ADR-011."
-      }
+      "$description": "Dimensões de placeholders do Skeleton.",
+      "text-height":  { "$type": "dimension", "$value": "{foundation.spacing.4}",  "$description": "16px — altura de 1 linha de texto simulada" },
+      "circle-size":  { "$type": "dimension", "$value": "{foundation.spacing.10}", "$description": "40px — avatar circular simulado" },
+      "rect-height":  { "$type": "dimension", "$value": "7.5rem",                   "$description": "120px — placeholder de bloco (card, imagem). Valor fora da escala foundation." }
     }
   }
 }

@@ -71,110 +71,166 @@
       "link": {
         "default": {
           "$type": "color",
-          "$value": "{semantic.brand.default}",
+          "$value": "{foundation.color.brand.600}",
           "$description": "Links em estado default."
         },
         "hover": {
           "$type": "color",
-          "$value": "{semantic.brand.hover}",
+          "$value": "{foundation.color.brand.700}",
           "$description": "Links em estado hover."
         }
       }
     },
-    "brand": {
-      "$description": "Identidade da marca. Agrupa fills e conteúdo da marca. ADR-011.",
-      "default": {
-        "$type": "color",
-        "$value": "{foundation.brand.primary}",
-        "$description": "Fill brand principal (Button Brand, indicadores ativos)."
-      },
-      "hover": {
-        "$type": "color",
-        "$value": "{foundation.color.blue.800}",
-        "$description": "Fill brand em hover."
-      },
-      "active": {
-        "$type": "color",
-        "$value": "{foundation.color.blue.900}",
-        "$description": "Fill brand em active/pressed."
-      },
-      "subtle": {
-        "$type": "color",
-        "$value": "{foundation.color.blue.100}",
-        "$description": "Fill brand de baixa ênfase (seleções, highlights)."
-      },
-      "disabled": {
-        "$type": "color",
-        "$value": "{foundation.color.disabled.brand-light}",
-        "$description": "Fill brand em estado disabled."
-      },
-      "toned": {
+    "action": {
+      "$description": "Tokens de ação por hierarquia (primary/secondary/danger) × estilo (default/toned/outline/ghost) × propriedade × estado. ADR-014.",
+      "primary": {
         "default": {
-          "$type": "color",
-          "$value": "{foundation.color.overlay.blue-600.12}",
-          "$description": "Fill brand translúcido (Button Toned). 12% opacity."
+          "background": {
+            "default":  { "$type": "color", "$value": "{foundation.color.brand.600}" },
+            "hover":    { "$type": "color", "$value": "{foundation.color.brand.700}" },
+            "active":   { "$type": "color", "$value": "{foundation.color.brand.800}" },
+            "disabled": { "$type": "color", "$value": "{foundation.color.disabled.brand-light}" }
+          },
+          "content": {
+            "default":  { "$type": "color", "$value": "{foundation.color.neutral.50}" },
+            "disabled": { "$type": "color", "$value": "{foundation.color.overlay.white.80}" }
+          }
         },
-        "hover": {
-          "$type": "color",
-          "$value": "{foundation.color.overlay.blue-600.20}",
-          "$description": "Toned hover. 20% opacity."
+        "toned": {
+          "background": {
+            "default": { "$type": "color", "$value": "{foundation.color.overlay.blue-600.12}" },
+            "hover":   { "$type": "color", "$value": "{foundation.color.overlay.blue-600.20}" },
+            "active":  { "$type": "color", "$value": "{foundation.color.overlay.blue-600.28}" }
+          },
+          "content": {
+            "default":  { "$type": "color", "$value": "{foundation.color.brand.700}" },
+            "disabled": { "$type": "color", "$value": "{foundation.color.neutral.400}" }
+          }
         },
-        "active": {
-          "$type": "color",
-          "$value": "{foundation.color.overlay.blue-600.28}",
-          "$description": "Toned active/pressed. 28% opacity."
+        "outline": {
+          "background": {
+            "hover":  { "$type": "color", "$value": "{foundation.color.overlay.black.5}" },
+            "active": { "$type": "color", "$value": "{foundation.color.overlay.black.10}" }
+          },
+          "content": {
+            "default":  { "$type": "color", "$value": "{foundation.color.brand.700}" },
+            "disabled": { "$type": "color", "$value": "{foundation.color.neutral.400}" }
+          },
+          "border": {
+            "default":  { "$type": "color", "$value": "{foundation.color.brand.600}" },
+            "hover":    { "$type": "color", "$value": "{foundation.color.brand.700}" },
+            "disabled": { "$type": "color", "$value": "{foundation.color.neutral.200}" }
+          }
+        },
+        "ghost": {
+          "background": {
+            "hover":  { "$type": "color", "$value": "{foundation.color.overlay.black.5}" },
+            "active": { "$type": "color", "$value": "{foundation.color.overlay.black.10}" }
+          },
+          "content": {
+            "default":  { "$type": "color", "$value": "{foundation.color.brand.700}" },
+            "disabled": { "$type": "color", "$value": "{foundation.color.neutral.400}" }
+          }
         }
       },
-      "content": {
+      "secondary": {
         "default": {
-          "$type": "color",
-          "$value": "{foundation.color.blue.700}",
-          "$description": "Cor brand usada como conteúdo (texto/ícone brand sobre fundo neutro, label do Toned)."
+          "background": {
+            "default":  { "$type": "color", "$value": "{foundation.color.neutral.100}" },
+            "hover":    { "$type": "color", "$value": "{foundation.color.neutral.200}" },
+            "active":   { "$type": "color", "$value": "{foundation.color.neutral.300}" },
+            "disabled": { "$type": "color", "$value": "{foundation.color.neutral.50}" }
+          },
+          "content": {
+            "default":  { "$type": "color", "$value": "{foundation.color.neutral.900}" },
+            "disabled": { "$type": "color", "$value": "{foundation.color.neutral.400}" }
+          }
         },
-        "contrast": {
-          "$type": "color",
-          "$value": "{foundation.color.neutral.50}",
-          "$description": "Conteúdo de alto contraste sobre fill brand sólido (texto do Button Brand). Unifica color/primary/foreground e text/on-brand (ADR-011)."
+        "toned": {
+          "background": {
+            "default": { "$type": "color", "$value": "{foundation.color.overlay.black.5}" },
+            "hover":   { "$type": "color", "$value": "{foundation.color.overlay.black.10}" },
+            "active":  { "$type": "color", "$value": "{foundation.color.overlay.black.20}" }
+          },
+          "content": {
+            "default":  { "$type": "color", "$value": "{foundation.color.neutral.900}" },
+            "disabled": { "$type": "color", "$value": "{foundation.color.neutral.400}" }
+          }
         },
-        "contrast-disabled": {
-          "$type": "color",
-          "$value": "{foundation.color.overlay.white.80}",
-          "$description": "Conteúdo disabled sobre fill brand disabled."
+        "outline": {
+          "background": {
+            "hover":  { "$type": "color", "$value": "{foundation.color.overlay.black.5}" },
+            "active": { "$type": "color", "$value": "{foundation.color.overlay.black.10}" }
+          },
+          "content": {
+            "default":  { "$type": "color", "$value": "{foundation.color.neutral.900}" },
+            "disabled": { "$type": "color", "$value": "{foundation.color.neutral.400}" }
+          },
+          "border": {
+            "default":  { "$type": "color", "$value": "{foundation.color.neutral.400}" },
+            "hover":    { "$type": "color", "$value": "{foundation.color.neutral.600}" },
+            "disabled": { "$type": "color", "$value": "{foundation.color.neutral.200}" }
+          }
+        },
+        "ghost": {
+          "background": {
+            "hover":  { "$type": "color", "$value": "{foundation.color.overlay.black.5}" },
+            "active": { "$type": "color", "$value": "{foundation.color.overlay.black.10}" }
+          },
+          "content": {
+            "default":  { "$type": "color", "$value": "{foundation.color.neutral.900}" },
+            "disabled": { "$type": "color", "$value": "{foundation.color.neutral.400}" }
+          }
         }
-      }
-    },
-    "accent": {
-      "$description": "Cor complementar de acento visual. ADR-011.",
-      "default": {
-        "$type": "color",
-        "$value": "{foundation.brand.secondary}",
-        "$description": "Fill de acento (Badge Secondary)."
       },
-      "hover": {
-        "$type": "color",
-        "$value": "{foundation.color.purple.700}",
-        "$description": "Acento hover."
-      },
-      "active": {
-        "$type": "color",
-        "$value": "{foundation.color.purple.800}",
-        "$description": "Acento active."
-      },
-      "subtle": {
-        "$type": "color",
-        "$value": "{foundation.color.purple.100}",
-        "$description": "Acento de baixa ênfase."
-      },
-      "content": {
+      "danger": {
         "default": {
-          "$type": "color",
-          "$value": "{foundation.color.purple.700}",
-          "$description": "Cor accent usada como conteúdo."
+          "background": {
+            "default":  { "$type": "color", "$value": "{foundation.color.red.600}" },
+            "hover":    { "$type": "color", "$value": "{foundation.color.red.700}" },
+            "active":   { "$type": "color", "$value": "{foundation.color.red.800}" },
+            "disabled": { "$type": "color", "$value": "{foundation.color.disabled.error-light}" }
+          },
+          "content": {
+            "default":  { "$type": "color", "$value": "{foundation.color.neutral.50}" },
+            "disabled": { "$type": "color", "$value": "{foundation.color.overlay.white.80}" }
+          }
         },
-        "contrast": {
-          "$type": "color",
-          "$value": "{foundation.color.neutral.50}",
-          "$description": "Conteúdo de alto contraste sobre fill accent sólido."
+        "toned": {
+          "background": {
+            "default": { "$type": "color", "$value": "{foundation.color.red.100}" },
+            "hover":   { "$type": "color", "$value": "{foundation.color.red.200}" },
+            "active":  { "$type": "color", "$value": "{foundation.color.red.200}" }
+          },
+          "content": {
+            "default":  { "$type": "color", "$value": "{foundation.color.red.700}" },
+            "disabled": { "$type": "color", "$value": "{foundation.color.neutral.400}" }
+          }
+        },
+        "outline": {
+          "background": {
+            "hover":  { "$type": "color", "$value": "{foundation.color.overlay.black.5}" },
+            "active": { "$type": "color", "$value": "{foundation.color.overlay.black.10}" }
+          },
+          "content": {
+            "default":  { "$type": "color", "$value": "{foundation.color.red.700}" },
+            "disabled": { "$type": "color", "$value": "{foundation.color.neutral.400}" }
+          },
+          "border": {
+            "default":  { "$type": "color", "$value": "{foundation.color.red.600}" },
+            "hover":    { "$type": "color", "$value": "{foundation.color.red.700}" },
+            "disabled": { "$type": "color", "$value": "{foundation.color.neutral.200}" }
+          }
+        },
+        "ghost": {
+          "background": {
+            "hover":  { "$type": "color", "$value": "{foundation.color.overlay.black.5}" },
+            "active": { "$type": "color", "$value": "{foundation.color.overlay.black.10}" }
+          },
+          "content": {
+            "default":  { "$type": "color", "$value": "{foundation.color.red.700}" },
+            "disabled": { "$type": "color", "$value": "{foundation.color.neutral.400}" }
+          }
         }
       }
     },
@@ -378,11 +434,11 @@
       },
       "focus": {
         "$type": "color",
-        "$value": "{semantic.brand.default}"
+        "$value": "{foundation.color.brand.600}"
       },
       "brand": {
         "$type": "color",
-        "$value": "{semantic.brand.default}"
+        "$value": "{foundation.color.brand.600}"
       },
       "error": {
         "$type": "color",
@@ -460,7 +516,7 @@
       },
       "focus": {
         "$type": "color",
-        "$value": "{semantic.brand.default}"
+        "$value": "{foundation.color.brand.600}"
       },
       "disabled": {
         "background": {
@@ -641,10 +697,12 @@
       }
     },
     "radius": {
-      "component": {
-        "$type": "dimension",
-        "$value": "{foundation.radius.md}"
-      }
+      "component": { "$type": "dimension", "$value": "{foundation.radius.md}", "$description": "8px — radius padrão de componentes interativos." },
+      "sm":   { "$type": "dimension", "$value": "{foundation.radius.sm}",   "$description": "4px. Tags, badges, chips pequenos." },
+      "md":   { "$type": "dimension", "$value": "{foundation.radius.md}",   "$description": "8px. Cards, alerts — radius padrão médio." },
+      "lg":   { "$type": "dimension", "$value": "{foundation.radius.lg}",   "$description": "12px. Cards grandes, containers." },
+      "xl":   { "$type": "dimension", "$value": "{foundation.radius.xl}",   "$description": "16px. Modais, sheets, dialogs." },
+      "full": { "$type": "dimension", "$value": "{foundation.radius.full}", "$description": "9999px. Pills, circles, avatars." }
     },
     "size": {
       "control": {

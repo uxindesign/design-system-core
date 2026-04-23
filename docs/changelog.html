@@ -74,6 +74,22 @@
 <p>O formato é baseado em <a href="https://keepachangelog.com/pt-BR/1.1.0/">Keep a Changelog</a> e o versionamento segue <a href="https://semver.org/lang/pt-BR/">Semantic Versioning</a>.</p>
 <p>Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na faixa 0.x. Regras de bump documentadas em <code>docs/process-versioning.html</code>.</p>
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
+<h3>Refatoração ground-up (ADR-014) — action×style×prop×state + eliminação de brand/accent + themes</h3>
+<p>Restruturação da camada Semantic pra resolver o bloat crônico acumulado nas Fases 2-8 do ADR-013. <strong>Breaking change grande</strong> — CSS de todos componentes reescrito.</p>
+<p><strong>Figma (fonte de verdade)</strong>:</p>
+<ul>
+<li>Collection <code>Brand</code> (2 vars × 3 modes Default/Ocean/Forest) → <strong>deletada</strong></li>
+<li><code>foundation.color.brand.{50..950}</code> criada como paleta única (Default = Blue atual)</li>
+<li>Semantic: <code>brand.*</code> (11) + <code>accent.*</code> (6) <strong>removidos</strong>; 66 vars <code>action.{primary,secondary,danger}.{default,toned,outline,ghost}.{background,content,border}.{default,hover,active,disabled}</code> + 5 vars <code>radius.{sm,md,lg,xl,full}</code> criadas</li>
+<li>353 bindings em nodes de 51 componentes reapontados de <code>semantic.brand/accent.*</code> pra <code>semantic.action.primary.*</code></li>
+<li>5 consumer vars (<code>content.link.{default,hover}</code>, <code>border.focus</code>, <code>border.brand</code>, <code>state.focus</code>) reapontados pra <code>foundation.color.brand.*</code> direto</li>
+<li>Component collection: 185 → <strong>61 vars</strong> (-124, -67%). Mantidos apenas dimensões específicas (modal.max-width, button/input/select.height, toggle/checkbox/radio/avatar sizes, skeleton, spinner, select.arrow). Wrappers 1:1 eliminados.</li>
+</ul>
+<p><strong>JSON</strong>: <code>brand.json</code> deletado, <code>color.brand.*</code> em <code>colors.json</code>, Semantic reescritos, 7 JSONs de componente sem tokens próprios deletados (<code>alert, badge, breadcrumb, card, divider, tabs, tooltip</code> consomem Semantic direto), 11 restantes reescritos enxutos.</p>
+<p><strong>CSS</strong>: 18 <code>css/components/*.css</code> reescritos pra <code>--ds-action-*</code>. <code>theme-ocean.css</code> e <code>theme-forest.css</code> deletados. Imports do <code>index.css</code> atualizado.</p>
+<p><strong>ADR-014</strong> criada. ADR-013 continua válida (regra foundation→semantic→component→CSS).</p>
+<p><strong>Verificação</strong>: <code>npm run build:tokens</code> sem erros. Zero Foundation bindings em componentes Figma. Zero refs obsoletos em CSS.</p>
+<p><strong>Bump</strong>: 0.5.x → <strong>0.6.0</strong> (breaking).</p>
 <h3>Corrigido (Fase 8 — limpeza de tokens component redundantes)</h3>
 <p>Reflexão crítica após Fase 5: o agente automatizou demais e criou 151 tokens component novos, dos quais 105 eram aliases 1:1 pra Semantic/Foundation sem variação entre componentes (30% de bloat). Essa limpeza corrige.</p>
 <p><strong>Princípio refinado</strong> em ADR-013 (nova seção &quot;Quando criar um Component token&quot;):</p>

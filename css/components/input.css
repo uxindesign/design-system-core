@@ -9,9 +9,9 @@
 .ds-input {
   display: flex;
   align-items: center;
-  gap: var(--ds-input-gap);
+  gap: var(--ds-space-gap-sm);
   border: var(--ds-border-width-default) solid var(--ds-border-control-default);
-  border-radius: var(--ds-input-border-radius);
+  border-radius: var(--ds-radius-component);
   background: var(--ds-surface-default);
   transition: border-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
               box-shadow var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
@@ -23,20 +23,20 @@
 .ds-input,
 .ds-input--md {
   height: var(--ds-input-height-md);
-  padding: 0 var(--ds-input-padding-x-md);
-  font-size: var(--ds-input-font-size-md);
+  padding: 0 var(--ds-space-control-padding-x-md);
+  font-size: var(--ds-control-font-size-md);
 }
 
 .ds-input--sm {
   height: var(--ds-input-height-sm);
-  padding: 0 var(--ds-input-padding-x-sm);
-  font-size: var(--ds-input-font-size-sm);
+  padding: 0 var(--ds-space-control-padding-x-sm);
+  font-size: var(--ds-control-font-size-sm);
 }
 
 .ds-input--lg {
   height: var(--ds-input-height-lg);
-  padding: 0 var(--ds-input-padding-x-lg);
-  font-size: var(--ds-input-font-size-lg);
+  padding: 0 var(--ds-space-control-padding-x-lg);
+  font-size: var(--ds-control-font-size-lg);
 }
 
 /* Field
@@ -65,21 +65,21 @@
 .ds-input__icon {
   flex-shrink: 0;
   color: var(--ds-content-tertiary);
-  width: var(--ds-input-icon-size-md);
-  height: var(--ds-input-icon-size-md);
-  font-size: var(--ds-input-icon-size-md);
+  width: var(--ds-size-control-icon-md);
+  height: var(--ds-size-control-icon-md);
+  font-size: var(--ds-size-control-icon-md);
 }
 
 .ds-input--sm .ds-input__icon {
-  width: var(--ds-input-icon-size-sm);
-  height: var(--ds-input-icon-size-sm);
-  font-size: var(--ds-input-icon-size-sm);
+  width: var(--ds-size-control-icon-sm);
+  height: var(--ds-size-control-icon-sm);
+  font-size: var(--ds-size-control-icon-sm);
 }
 
 .ds-input--lg .ds-input__icon {
-  width: var(--ds-input-icon-size-lg);
-  height: var(--ds-input-icon-size-lg);
-  font-size: var(--ds-input-icon-size-lg);
+  width: var(--ds-size-control-icon-lg);
+  height: var(--ds-size-control-icon-lg);
+  font-size: var(--ds-size-control-icon-lg);
 }
 
 /* States
@@ -92,7 +92,7 @@
 
 /* Focused */
 .ds-input:focus-within {
-  border-color: var(--ds-brand-default);
+  border-color: var(--ds-border-focus);
   outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color);
   outline-offset: var(--ds-focus-ring-offset);
 }
@@ -158,7 +158,7 @@
 .ds-field {
   display: flex;
   flex-direction: column;
-  gap: var(--ds-input-field-gap);
+  gap: var(--ds-space-gap-xs);
   width: 100%;
 }
 
@@ -166,7 +166,7 @@
 .ds-field__label-row {
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: var(--ds-space-gap-2xs);
 }
 
 /* Label text (label/md: 14px medium / 20px) */

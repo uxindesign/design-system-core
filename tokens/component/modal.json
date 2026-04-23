@@ -1,76 +1,11 @@
 {
   "component": {
     "modal": {
-      "$description": "Structural tokens for Modal/Dialog component.",
+      "$description": "Max-width por tamanho. Valores específicos fora da escala de spacing (exceção ADR-013).",
       "max-width": {
-        "sm": {
-          "$type": "dimension",
-          "$value": "25rem",
-          "$description": "400px"
-        },
-        "md": {
-          "$type": "dimension",
-          "$value": "32.5rem",
-          "$description": "520px"
-        },
-        "lg": {
-          "$type": "dimension",
-          "$value": "40rem",
-          "$description": "640px"
-        }
-      },
-      "padding": {
-        "$type": "dimension",
-        "$value": "{semantic.space.inset.lg}",
-        "$description": "16px"
-      },
-      "overlay-padding": {
-        "$type": "dimension",
-        "$value": "{semantic.space.inset.lg}",
-        "$description": "16px overlay breathing room"
-      },
-      "border-radius": {
-        "$type": "dimension",
-        "$value": "{foundation.radius.xl}",
-        "$description": "16px — xl radius for modal overlay"
-      },
-      "header-gap": {
-        "$type": "dimension",
-        "$value": "{semantic.space.gap.sm}",
-        "$description": "8px between title and close"
-      },
-      "footer-gap": {
-        "$type": "dimension",
-        "$value": "{semantic.space.gap.sm}",
-        "$description": "8px between footer buttons"
-      },
-      "header-padding-bottom": {
-        "$type": "dimension",
-        "$value": "{semantic.space.gap.sm}",
-        "$description": "8px bottom padding of header"
-      },
-      "footer-padding-top": {
-        "$type": "dimension",
-        "$value": "{semantic.space.gap.sm}",
-        "$description": "8px top padding of footer"
-      },
-      "close-padding": {
-        "$type": "dimension",
-        "$value": "{semantic.space.gap.xs}",
-        "$description": "4px padding on close button"
-      },
-      "viewport-offset": {
-        "$type": "dimension",
-        "$value": "{semantic.space.section.sm}",
-        "$description": "32px — max-height = 100vh - this"
-      },
-      "shadow": {
-        "$type": "shadow",
-        "$value": "{foundation.shadow.xl}"
-      },
-      "z-index": {
-        "$type": "number",
-        "$value": "{foundation.z.50}"
+        "sm": { "$type": "dimension", "$value": "25rem",    "$description": "400px" },
+        "md": { "$type": "dimension", "$value": "32.5rem",  "$description": "520px" },
+        "lg": { "$type": "dimension", "$value": "40rem",    "$description": "640px" }
       }
     }
   }

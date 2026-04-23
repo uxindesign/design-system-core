@@ -1,80 +1,16 @@
 {
   "component": {
     "radio": {
-      "$description": "Structural tokens for Radio component.",
+      "$description": "Dimensões do Radio por tamanho.",
       "control-size": {
-        "sm": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.4}",
-          "$description": "16px"
-        },
-        "md": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.5}",
-          "$description": "20px"
-        },
-        "lg": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.6}",
-          "$description": "24px"
-        }
+        "sm": { "$type": "dimension", "$value": "{foundation.spacing.4}", "$description": "16px" },
+        "md": { "$type": "dimension", "$value": "{foundation.spacing.5}", "$description": "20px" },
+        "lg": { "$type": "dimension", "$value": "{foundation.spacing.6}", "$description": "24px" }
       },
       "dot-size": {
-        "sm": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.1-5}"
-        },
-        "md": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.2}"
-        },
-        "lg": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.2-5}"
-        }
-      },
-      "border-radius-full": {
-        "$type": "dimension",
-        "$value": "{foundation.radius.full}",
-        "$description": "Circle shape"
-      },
-      "label-border-radius": {
-        "$type": "dimension",
-        "$value": "{foundation.radius.sm}",
-        "$description": "4px on label wrapper"
-      },
-      "gap": {
-        "$type": "dimension",
-        "$value": "{semantic.space.gap.sm}",
-        "$description": "8px between control and label"
-      },
-      "group-gap": {
-        "$type": "dimension",
-        "$value": "{semantic.space.gap.xs}",
-        "$description": "4px between radios in a group"
-      },
-      "group-legend-margin-bottom": {
-        "$type": "dimension",
-        "$value": "{semantic.space.gap.sm}",
-        "$description": "8px below legend"
-      },
-      "group-margin-bottom": {
-        "$type": "dimension",
-        "$value": "{semantic.space.inset.lg}",
-        "$description": "16px below radio group"
-      },
-      "font-size": {
-        "$type": "dimension",
-        "$value": "{foundation.typography.font.size.sm}",
-        "$description": "14px label"
-      },
-      "legend-font-size": {
-        "$type": "dimension",
-        "$value": "{semantic.typography.body.font-size.sm}"
-      },
-      "legend-font-weight": {
-        "$type": "number",
-        "$value": "{semantic.typography.body.font-weight.medium}"
+        "sm": { "$type": "dimension", "$value": "{foundation.spacing.1-5}", "$description": "6px" },
+        "md": { "$type": "dimension", "$value": "{foundation.spacing.2}",   "$description": "8px" },
+        "lg": { "$type": "dimension", "$value": "{foundation.spacing.2-5}", "$description": "10px" }
       }
     }
   }

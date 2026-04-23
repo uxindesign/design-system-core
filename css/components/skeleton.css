@@ -10,7 +10,7 @@
 /* Base skeleton */
 .ds-skeleton {
   display: block;
-  background-color: var(--ds-skeleton-fill);
+  background-color: var(--ds-state-disabled-background);
   animation: ds-pulse 1.5s ease-in-out infinite;
 }
 
@@ -22,14 +22,14 @@
 .ds-skeleton--text {
   height: var(--ds-skeleton-text-height);
   width: 100%;
-  border-radius: var(--ds-skeleton-text-border-radius);
+  border-radius: var(--ds-radius-sm);
 }
 
 /* Circle skeleton */
 .ds-skeleton--circle {
   width: var(--ds-skeleton-circle-size);
   height: var(--ds-skeleton-circle-size);
-  border-radius: var(--ds-skeleton-circle-border-radius);
+  border-radius: var(--ds-radius-full);
   flex-shrink: 0;
 }
 
@@ -37,7 +37,7 @@
 .ds-skeleton--rectangle {
   width: 100%;
   height: var(--ds-skeleton-rect-height);
-  border-radius: var(--ds-skeleton-rect-border-radius);
+  border-radius: var(--ds-radius-md);
 }
 
 /* ---------------------------------------------------------

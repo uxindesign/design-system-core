@@ -6,12 +6,12 @@
 .ds-checkbox-label {
   display: inline-flex;
   align-items: center;
-  gap: var(--ds-checkbox-gap);
+  gap: var(--ds-space-gap-sm);
   cursor: pointer;
-  padding: var(--ds-checkbox-label-padding-y) var(--ds-space-gap-xs);
-  border-radius: var(--ds-checkbox-border-radius);
+  padding: var(--ds-space-gap-xs) var(--ds-space-gap-xs);
+  border-radius: var(--ds-radius-sm);
   min-height: var(--ds-size-control-min-target);
-  font-size: var(--ds-checkbox-font-size);
+  font-size: var(--ds-body-font-size-sm);
   color: var(--ds-content-default);
   transition: background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
 }
@@ -27,7 +27,7 @@
   width: var(--ds-checkbox-control-size-md);
   height: var(--ds-checkbox-control-size-md);
   border: var(--ds-border-width-default) solid var(--ds-border-control-default);
-  border-radius: var(--ds-checkbox-border-radius);
+  border-radius: var(--ds-radius-sm);
   background-color: var(--ds-surface-default);
   cursor: pointer;
   position: relative;
@@ -44,7 +44,7 @@
   left: 6px;
   width: 5px;
   height: 10px;
-  border: solid var(--ds-brand-content-contrast);
+  border: solid var(--ds-action-primary-default-content-default);
   border-width: 0 2px 2px 0;
   transform: rotate(45deg) scale(0);
   transition: transform var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
@@ -52,13 +52,13 @@
 
 /* Hover */
 .ds-checkbox:hover:not(:disabled) {
-  border-color: var(--ds-brand-default);
+  border-color: var(--ds-action-primary-default-background-default);
 }
 
 /* Checked */
 .ds-checkbox:checked {
-  background-color: var(--ds-brand-default);
-  border-color: var(--ds-brand-default);
+  background-color: var(--ds-action-primary-default-background-default);
+  border-color: var(--ds-action-primary-default-background-default);
 }
 
 .ds-checkbox:checked::after {
@@ -67,8 +67,8 @@
 
 /* Indeterminate */
 .ds-checkbox:indeterminate {
-  background-color: var(--ds-brand-default);
-  border-color: var(--ds-brand-default);
+  background-color: var(--ds-action-primary-default-background-default);
+  border-color: var(--ds-action-primary-default-background-default);
 }
 
 .ds-checkbox:indeterminate::after {
@@ -77,7 +77,7 @@
   width: 10px;
   height: 2px;
   border: none;
-  background-color: var(--ds-brand-content-contrast);
+  background-color: var(--ds-action-primary-default-content-default);
   transform: translate(-50%, -50%) scale(1);
   border-radius: 1px;
 }

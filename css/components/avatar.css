@@ -7,11 +7,11 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: var(--ds-avatar-border-radius);
-  background-color: var(--ds-brand-default);
-  color: var(--ds-brand-content-contrast);
+  border-radius: var(--ds-radius-full);
+  background-color: var(--ds-action-primary-default-background-default);
+  color: var(--ds-action-primary-default-content-default);
   font-family: var(--ds-body-font-family-sans);
-  font-weight: var(--ds-avatar-font-weight);
+  font-weight: var(--ds-body-font-weight-semibold);
   flex-shrink: 0;
   overflow: hidden;
   user-select: none;

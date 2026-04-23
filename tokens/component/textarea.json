@@ -1,90 +1,11 @@
 {
   "component": {
     "textarea": {
-      "$description": "Structural tokens for Textarea component. Shares padding-x with controls (ADR-006). Height and line-height are independent (multi-line).",
+      "$description": "Altura mínima do Textarea por tamanho. Valores específicos fora da escala de spacing (exceção ADR-013).",
       "min-height": {
-        "sm": {
-          "$type": "dimension",
-          "$value": "4.25rem",
-          "$description": "68px"
-        },
-        "md": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.20}",
-          "$description": "80px"
-        },
-        "lg": {
-          "$type": "dimension",
-          "$value": "7rem",
-          "$description": "112px"
-        }
-      },
-      "padding-x": {
-        "sm": {
-          "$type": "dimension",
-          "$value": "{semantic.space.control.padding-x.sm}",
-          "$description": "12px"
-        },
-        "md": {
-          "$type": "dimension",
-          "$value": "{semantic.space.control.padding-x.md}",
-          "$description": "16px"
-        },
-        "lg": {
-          "$type": "dimension",
-          "$value": "{semantic.space.control.padding-x.lg}",
-          "$description": "20px"
-        }
-      },
-      "padding-y": {
-        "sm": {
-          "$type": "dimension",
-          "$value": "{semantic.space.control.padding-y.sm}",
-          "$description": "8px"
-        },
-        "md": {
-          "$type": "dimension",
-          "$value": "{semantic.space.control.padding-y.md}",
-          "$description": "10px"
-        },
-        "lg": {
-          "$type": "dimension",
-          "$value": "{semantic.space.control.padding-y.lg}",
-          "$description": "12px"
-        }
-      },
-      "border-radius": {
-        "$type": "dimension",
-        "$value": "{semantic.radius.component}"
-      },
-      "font-size": {
-        "sm": {
-          "$type": "dimension",
-          "$value": "{semantic.typography.control.font-size.sm}",
-          "$description": "14px"
-        },
-        "md": {
-          "$type": "dimension",
-          "$value": "{semantic.typography.control.font-size.md}",
-          "$description": "14px"
-        },
-        "lg": {
-          "$type": "dimension",
-          "$value": "{semantic.typography.control.font-size.lg}",
-          "$description": "16px"
-        }
-      },
-      "field-line-height": {
-        "$type": "number",
-        "$value": "{semantic.typography.body.line-height.md}"
-      },
-      "counter-font-size": {
-        "$type": "dimension",
-        "$value": "{semantic.typography.body.font-size.xs}"
-      },
-      "counter-font-weight": {
-        "$type": "number",
-        "$value": "{semantic.typography.body.font-weight.medium}"
+        "sm": { "$type": "dimension", "$value": "4.25rem",                  "$description": "68px" },
+        "md": { "$type": "dimension", "$value": "{foundation.spacing.20}",  "$description": "80px" },
+        "lg": { "$type": "dimension", "$value": "7rem",                     "$description": "112px" }
       }
     }
   }

@@ -9,9 +9,9 @@
 /* Base spinner */
 .ds-spinner {
   display: inline-block;
-  border-radius: var(--ds-spinner-border-radius);
+  border-radius: var(--ds-radius-full);
   border: var(--ds-spinner-stroke-width-md) solid var(--ds-border-default);
-  border-top-color: var(--ds-brand-default);
+  border-top-color: var(--ds-action-primary-default-background-default);
   animation: ds-spin 0.6s linear infinite;
   flex-shrink: 0;
 }

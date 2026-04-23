@@ -3,8 +3,3 @@
 @import 'generated/theme-light.css';
 @import 'generated/theme-dark.css';
 @import 'generated/component.css';
-
-/* Theme overrides (manual — override brand colors per theme) */
-@import 'themes/theme-ocean.css';
-@import 'themes/theme-forest.css';
-

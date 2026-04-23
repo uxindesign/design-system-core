@@ -12,13 +12,13 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: var(--ds-tabs-padding-y) var(--ds-tabs-padding-x);
-  font-size: var(--ds-tabs-font-size);
-  font-weight: var(--ds-tabs-font-weight);
+  padding: var(--ds-space-control-padding-y-md) var(--ds-space-control-padding-x-md);
+  font-size: var(--ds-body-font-size-sm);
+  font-weight: var(--ds-body-font-weight-medium);
   color: var(--ds-content-secondary);
   background: none;
   border: none;
-  border-bottom: var(--ds-tabs-active-border-width) solid transparent;
+  border-bottom: var(--ds-border-width-strong) solid transparent;
   cursor: pointer;
   transition: color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
               border-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
@@ -30,14 +30,14 @@
 }
 
 .ds-tab--active {
-  color: var(--ds-brand-default);
-  border-bottom-color: var(--ds-brand-default);
+  color: var(--ds-action-primary-default-background-default);
+  border-bottom-color: var(--ds-action-primary-default-background-default);
 }
 
 .ds-tab:focus-visible {
   outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color);
   outline-offset: var(--ds-focus-ring-offset);
-  border-radius: var(--ds-tabs-focus-border-radius) var(--ds-tabs-focus-border-radius) 0 0;
+  border-radius: var(--ds-radius-sm) var(--ds-radius-sm) 0 0;
 }
 
 .ds-tab:disabled {
@@ -47,7 +47,7 @@
 
 /* Tab panel */
 .ds-tab-panel {
-  padding: var(--ds-tabs-panel-padding-y) 0;
+  padding: var(--ds-space-inset-lg) 0;
 }
 
 .ds-tab-panel[hidden] {

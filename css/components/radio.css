@@ -6,17 +6,17 @@
 .ds-radio-group {
   border: none;
   padding: 0;
-  margin: 0 0 var(--ds-radio-group-margin-bottom) 0;
+  margin: 0 0 var(--ds-space-component-md) 0;
   display: flex;
   flex-direction: column;
-  gap: var(--ds-radio-group-gap);
+  gap: var(--ds-space-gap-sm);
 }
 
 .ds-radio-group__legend {
-  font-size: var(--ds-radio-legend-font-size);
-  font-weight: var(--ds-radio-legend-font-weight);
+  font-size: var(--ds-body-font-size-sm);
+  font-weight: var(--ds-body-font-weight-medium);
   color: var(--ds-content-default);
-  margin-bottom: var(--ds-radio-group-legend-margin-bottom);
+  margin-bottom: var(--ds-space-gap-xs);
   padding: 0;
 }
 
@@ -24,12 +24,12 @@
 .ds-radio-label {
   display: inline-flex;
   align-items: center;
-  gap: var(--ds-radio-gap);
+  gap: var(--ds-space-gap-sm);
   cursor: pointer;
-  padding: var(--ds-radio-label-padding-y) var(--ds-space-gap-xs);
-  border-radius: var(--ds-radio-label-border-radius);
+  padding: var(--ds-space-gap-xs) var(--ds-space-gap-xs);
+  border-radius: var(--ds-radius-sm);
   min-height: var(--ds-size-control-min-target);
-  font-size: var(--ds-radio-font-size);
+  font-size: var(--ds-body-font-size-sm);
   color: var(--ds-content-default);
   transition: background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
 }
@@ -45,7 +45,7 @@
   width: var(--ds-radio-control-size-md);
   height: var(--ds-radio-control-size-md);
   border: var(--ds-border-width-default) solid var(--ds-border-control-default);
-  border-radius: var(--ds-radio-border-radius-full);
+  border-radius: var(--ds-radius-full);
   background-color: var(--ds-surface-default);
   cursor: pointer;
   position: relative;
@@ -61,21 +61,21 @@
   left: 50%;
   width: var(--ds-radio-dot-size-md);
   height: var(--ds-radio-dot-size-md);
-  border-radius: var(--ds-radio-border-radius-full);
-  background-color: var(--ds-brand-content-contrast);
+  border-radius: var(--ds-radius-full);
+  background-color: var(--ds-action-primary-default-content-default);
   transform: translate(-50%, -50%) scale(0);
   transition: transform var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
 }
 
 /* Hover */
 .ds-radio:hover:not(:disabled) {
-  border-color: var(--ds-brand-default);
+  border-color: var(--ds-action-primary-default-background-default);
 }
 
 /* Checked */
 .ds-radio:checked {
-  background-color: var(--ds-brand-default);
-  border-color: var(--ds-brand-default);
+  background-color: var(--ds-action-primary-default-background-default);
+  border-color: var(--ds-action-primary-default-background-default);
 }
 
 .ds-radio:checked::after {

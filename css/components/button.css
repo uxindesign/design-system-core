@@ -7,13 +7,13 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--ds-button-gap);
+  gap: var(--ds-space-gap-sm);
   font-family: var(--ds-body-font-family-sans);
-  font-weight: var(--ds-button-font-weight);
+  font-weight: var(--ds-body-font-weight-medium);
   line-height: var(--ds-control-line-height-md);
   text-decoration: none;
   border: var(--ds-border-width-default) solid transparent;
-  border-radius: var(--ds-button-border-radius);
+  border-radius: var(--ds-radius-component);
   cursor: pointer;
   transition: background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
               border-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
@@ -24,8 +24,8 @@
 
   /* Default size: md (40px) */
   height: var(--ds-button-height-md);
-  padding: var(--ds-button-padding-y-md) var(--ds-button-padding-x-md);
-  font-size: var(--ds-button-font-size-md);
+  padding: var(--ds-space-control-padding-y-md) var(--ds-space-control-padding-x-md);
+  font-size: var(--ds-control-font-size-md);
   min-width: var(--ds-size-control-min-target);
 }
 
@@ -43,8 +43,8 @@
 
 /* Icon inside button — default 20px (md) */
 .ds-btn__icon {
-  width: var(--ds-button-icon-size-md);
-  height: var(--ds-button-icon-size-md);
+  width: var(--ds-size-control-icon-md);
+  height: var(--ds-size-control-icon-md);
   flex-shrink: 0;
   fill: currentColor;
 }
@@ -54,99 +54,99 @@
    --------------------------------------------------------- */
 .ds-btn--sm {
   height: var(--ds-button-height-sm);
-  padding: var(--ds-button-padding-y-sm) var(--ds-button-padding-x-sm);
-  font-size: var(--ds-button-font-size-sm);
+  padding: var(--ds-space-control-padding-y-sm) var(--ds-space-control-padding-x-sm);
+  font-size: var(--ds-control-font-size-sm);
   line-height: var(--ds-control-line-height-sm);
-  border-radius: var(--ds-button-border-radius);
+  border-radius: var(--ds-radius-component);
 }
 
 .ds-btn--sm .ds-btn__icon {
-  width: var(--ds-button-icon-size-sm);
-  height: var(--ds-button-icon-size-sm);
+  width: var(--ds-size-control-icon-sm);
+  height: var(--ds-size-control-icon-sm);
 }
 
 .ds-btn--lg {
   height: var(--ds-button-height-lg);
-  padding: var(--ds-button-padding-y-lg) var(--ds-button-padding-x-lg);
-  font-size: var(--ds-button-font-size-lg);
+  padding: var(--ds-space-control-padding-y-lg) var(--ds-space-control-padding-x-lg);
+  font-size: var(--ds-control-font-size-lg);
   line-height: var(--ds-control-line-height-lg);
-  border-radius: var(--ds-button-border-radius);
+  border-radius: var(--ds-radius-component);
 }
 
 .ds-btn--lg .ds-btn__icon {
-  width: var(--ds-button-icon-size-lg);
-  height: var(--ds-button-icon-size-lg);
+  width: var(--ds-size-control-icon-lg);
+  height: var(--ds-size-control-icon-lg);
 }
 
 /* ---------------------------------------------------------
-   Variant: Brand (filled with brand color)
+   Variant: Brand (primary filled — action/primary/default)
    --------------------------------------------------------- */
 .ds-btn--brand {
-  background-color: var(--ds-brand-default);
-  color: var(--ds-brand-content-contrast);
-  border-color: var(--ds-brand-default);
+  background-color: var(--ds-action-primary-default-background-default);
+  color: var(--ds-action-primary-default-content-default);
+  border-color: var(--ds-action-primary-default-background-default);
 }
 
 .ds-btn--brand:hover {
-  background-color: var(--ds-brand-hover);
-  border-color: var(--ds-brand-hover);
+  background-color: var(--ds-action-primary-default-background-hover);
+  border-color: var(--ds-action-primary-default-background-hover);
 }
 
 .ds-btn--brand:active {
-  background-color: var(--ds-brand-active);
-  border-color: var(--ds-brand-active);
+  background-color: var(--ds-action-primary-default-background-active);
+  border-color: var(--ds-action-primary-default-background-active);
 }
 
 /* ---------------------------------------------------------
-   Variant: Toned (alpha-tinted brand color)
+   Variant: Toned (alpha-tinted primary — action/primary/toned)
    --------------------------------------------------------- */
 .ds-btn--toned {
-  background-color: var(--ds-brand-toned-default);
-  color: var(--ds-brand-content-default);
+  background-color: var(--ds-action-primary-toned-background-default);
+  color: var(--ds-action-primary-toned-content-default);
   border-color: transparent;
 }
 
 .ds-btn--toned:hover {
-  background-color: var(--ds-brand-toned-hover);
+  background-color: var(--ds-action-primary-toned-background-hover);
 }
 
 .ds-btn--toned:active {
-  background-color: var(--ds-brand-toned-active);
+  background-color: var(--ds-action-primary-toned-background-active);
 }
 
 /* ---------------------------------------------------------
-   Variant: Outline (neutral, no brand color)
+   Variant: Outline (neutral — action/secondary/outline)
    --------------------------------------------------------- */
 .ds-btn--outline {
   background-color: transparent;
-  color: var(--ds-content-default);
-  border-color: var(--ds-border-control-default);
+  color: var(--ds-action-secondary-outline-content-default);
+  border-color: var(--ds-action-secondary-outline-border-default);
 }
 
 .ds-btn--outline:hover {
-  background-color: var(--ds-state-hover);
-  border-color: var(--ds-border-control-hover);
+  background-color: var(--ds-action-secondary-outline-background-hover);
+  border-color: var(--ds-action-secondary-outline-border-hover);
 }
 
 .ds-btn--outline:active {
-  background-color: var(--ds-background-subtle);
+  background-color: var(--ds-action-secondary-outline-background-active);
 }
 
 /* ---------------------------------------------------------
-   Variant: Ghost (brand color, no background)
+   Variant: Ghost (primary color, no background — action/primary/ghost)
    --------------------------------------------------------- */
 .ds-btn--ghost {
   background-color: transparent;
-  color: var(--ds-brand-default);
+  color: var(--ds-action-primary-ghost-content-default);
   border-color: transparent;
 }
 
 .ds-btn--ghost:hover {
-  background-color: var(--ds-state-hover);
+  background-color: var(--ds-action-primary-ghost-background-hover);
 }
 
 .ds-btn--ghost:active {
-  background-color: var(--ds-state-pressed);
+  background-color: var(--ds-action-primary-ghost-background-active);
 }
 
 /* ---------------------------------------------------------
@@ -169,22 +169,22 @@
 }
 
 /* ---------------------------------------------------------
-   Variant: Danger
+   Variant: Danger (action/danger/default)
    --------------------------------------------------------- */
 .ds-btn--danger {
-  background-color: var(--ds-feedback-error-default);
-  color: var(--ds-feedback-error-content-contrast);
-  border-color: var(--ds-feedback-error-default);
+  background-color: var(--ds-action-danger-default-background-default);
+  color: var(--ds-action-danger-default-content-default);
+  border-color: var(--ds-action-danger-default-background-default);
 }
 
 .ds-btn--danger:hover {
-  background-color: var(--ds-feedback-error-hover);
-  border-color: var(--ds-feedback-error-hover);
+  background-color: var(--ds-action-danger-default-background-hover);
+  border-color: var(--ds-action-danger-default-background-hover);
 }
 
 .ds-btn--danger:active {
-  background-color: var(--ds-feedback-error-active);
-  border-color: var(--ds-feedback-error-active);
+  background-color: var(--ds-action-danger-default-background-active);
+  border-color: var(--ds-action-danger-default-background-active);
 }
 
 /* ---------------------------------------------------------
@@ -209,15 +209,15 @@
 
 /* Material Symbols inside button */
 .ds-btn .material-symbols-outlined {
-  font-size: var(--ds-button-icon-size-md);
+  font-size: var(--ds-size-control-icon-md);
 }
 
 .ds-btn--sm .material-symbols-outlined {
-  font-size: var(--ds-button-icon-size-sm);
+  font-size: var(--ds-size-control-icon-sm);
 }
 
 .ds-btn--lg .material-symbols-outlined {
-  font-size: var(--ds-button-icon-size-lg);
+  font-size: var(--ds-size-control-icon-lg);
 }
 
 /* ---------------------------------------------------------

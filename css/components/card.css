@@ -4,15 +4,15 @@
 
 .ds-card {
   background-color: var(--ds-surface-default);
-  border-radius: var(--ds-card-border-radius);
+  border-radius: var(--ds-radius-lg);
   overflow: hidden;
 }
 
 .ds-card__header {
-  padding: var(--ds-card-padding) var(--ds-card-padding) var(--ds-card-gap);
+  padding: var(--ds-space-inset-lg) var(--ds-space-inset-lg) var(--ds-space-gap-sm);
   display: flex;
   flex-direction: column;
-  gap: var(--ds-card-gap);
+  gap: var(--ds-space-gap-sm);
 }
 
 .ds-card__title {
@@ -28,7 +28,7 @@
 }
 
 .ds-card__body {
-  padding: 0 var(--ds-card-padding) var(--ds-card-padding);
+  padding: 0 var(--ds-space-inset-lg) var(--ds-space-inset-lg);
   font-size: var(--ds-body-font-size-sm);
   color: var(--ds-content-secondary);
   line-height: var(--ds-body-line-height-md);
@@ -48,7 +48,10 @@
   border: var(--ds-border-width-default) solid var(--ds-border-default);
 }
 
-/* Elevated — shadow, no border (elevation level 1 per docs/foundations-elevation.html) */
+/* Elevated — apply .ds-elevation-1 utility class alongside .ds-card--elevated.
+   Semantic elevation tokens do not exist yet post-ADR-014; the utility classes in
+   css/utilities/elevation.css (.ds-elevation-0 through .ds-elevation-4) are the
+   sanctioned consumption surface for box-shadow. */
 .ds-card--elevated {
-  box-shadow: var(--ds-card-shadow-elevated);
+  border: var(--ds-border-width-default) solid var(--ds-border-subtle);
 }

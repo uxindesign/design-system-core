@@ -1,66 +1,21 @@
 {
   "component": {
     "checkbox": {
-      "$description": "Structural tokens for Checkbox component.",
+      "$description": "Dimensões do Checkbox por tamanho.",
       "control-size": {
-        "sm": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.4}",
-          "$description": "16px"
-        },
-        "md": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.5}",
-          "$description": "20px"
-        },
-        "lg": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.6}",
-          "$description": "24px"
-        }
+        "sm": { "$type": "dimension", "$value": "{foundation.spacing.4}", "$description": "16px" },
+        "md": { "$type": "dimension", "$value": "{foundation.spacing.5}", "$description": "20px" },
+        "lg": { "$type": "dimension", "$value": "{foundation.spacing.6}", "$description": "24px" }
       },
       "check-width": {
-        "sm": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.1}"
-        },
-        "md": {
-          "$type": "dimension",
-          "$value": "5px"
-        },
-        "lg": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.1-5}"
-        }
+        "sm": { "$type": "dimension", "$value": "{foundation.spacing.1}",   "$description": "4px" },
+        "md": { "$type": "dimension", "$value": "0.3125rem",                 "$description": "5px — valor fora da escala foundation" },
+        "lg": { "$type": "dimension", "$value": "{foundation.spacing.1-5}", "$description": "6px" }
       },
       "check-height": {
-        "sm": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.2}"
-        },
-        "md": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.2-5}"
-        },
-        "lg": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.3}"
-        }
-      },
-      "border-radius": {
-        "$type": "dimension",
-        "$value": "{foundation.radius.sm}",
-        "$description": "4px — smaller radius for compact control"
-      },
-      "gap": {
-        "$type": "dimension",
-        "$value": "{semantic.space.gap.sm}",
-        "$description": "8px between control and label"
-      },
-      "font-size": {
-        "$type": "dimension",
-        "$value": "{foundation.typography.font.size.sm}",
-        "$description": "14px label"
+        "sm": { "$type": "dimension", "$value": "{foundation.spacing.2}",   "$description": "8px" },
+        "md": { "$type": "dimension", "$value": "{foundation.spacing.2-5}", "$description": "10px" },
+        "lg": { "$type": "dimension", "$value": "{foundation.spacing.3}",   "$description": "12px" }
       }
     }
   }

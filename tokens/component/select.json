@@ -1,105 +1,17 @@
 {
   "component": {
     "select": {
-      "$description": "Structural tokens for Select component. References semantic control tokens (ADR-006).",
+      "$description": "Dimensões do Select por tamanho.",
       "height": {
-        "sm": {
-          "$type": "dimension",
-          "$value": "{semantic.size.control.sm}",
-          "$description": "32px"
-        },
-        "md": {
-          "$type": "dimension",
-          "$value": "{semantic.size.control.md}",
-          "$description": "40px"
-        },
-        "lg": {
-          "$type": "dimension",
-          "$value": "{semantic.size.control.lg}",
-          "$description": "48px"
-        }
+        "sm": { "$type": "dimension", "$value": "{semantic.size.control.sm}", "$description": "32px" },
+        "md": { "$type": "dimension", "$value": "{semantic.size.control.md}", "$description": "40px" },
+        "lg": { "$type": "dimension", "$value": "{semantic.size.control.lg}", "$description": "48px" }
       },
-      "padding-x": {
-        "sm": {
-          "$type": "dimension",
-          "$value": "{semantic.space.control.padding-x.sm}",
-          "$description": "12px"
-        },
-        "md": {
-          "$type": "dimension",
-          "$value": "{semantic.space.control.padding-x.md}",
-          "$description": "16px"
-        },
-        "lg": {
-          "$type": "dimension",
-          "$value": "{semantic.space.control.padding-x.lg}",
-          "$description": "20px"
-        }
-      },
-      "padding-y": {
-        "sm": {
-          "$type": "dimension",
-          "$value": "{semantic.space.control.padding-y.sm}",
-          "$description": "8px"
-        },
-        "md": {
-          "$type": "dimension",
-          "$value": "{semantic.space.control.padding-y.md}",
-          "$description": "10px"
-        },
-        "lg": {
-          "$type": "dimension",
-          "$value": "{semantic.space.control.padding-y.lg}",
-          "$description": "12px"
-        }
-      },
-      "gap": {
-        "$type": "dimension",
-        "$value": "{semantic.space.gap.xs}",
-        "$description": "4px"
-      },
-      "border-radius": {
-        "$type": "dimension",
-        "$value": "{semantic.radius.component}"
-      },
-      "font-size": {
-        "sm": {
-          "$type": "dimension",
-          "$value": "{semantic.typography.control.font-size.sm}",
-          "$description": "14px"
-        },
-        "md": {
-          "$type": "dimension",
-          "$value": "{semantic.typography.control.font-size.md}",
-          "$description": "14px"
-        },
-        "lg": {
-          "$type": "dimension",
-          "$value": "{semantic.typography.control.font-size.lg}",
-          "$description": "16px"
-        }
-      },
-      "arrow-size": {
-        "$type": "dimension",
-        "$value": "{foundation.spacing.4}",
-        "$description": "16px"
-      },
+      "arrow-size": { "$type": "dimension", "$value": "{foundation.spacing.4}", "$description": "16px" },
       "arrow-offset": {
-        "sm": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.2}",
-          "$description": "8px from right edge"
-        },
-        "md": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.3}",
-          "$description": "12px"
-        },
-        "lg": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.4}",
-          "$description": "16px"
-        }
+        "sm": { "$type": "dimension", "$value": "{foundation.spacing.2}", "$description": "8px" },
+        "md": { "$type": "dimension", "$value": "{foundation.spacing.3}", "$description": "12px" },
+        "lg": { "$type": "dimension", "$value": "{foundation.spacing.4}", "$description": "16px" }
       }
     }
   }

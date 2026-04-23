@@ -1,66 +1,21 @@
 {
   "component": {
     "avatar": {
-      "$description": "Structural tokens for Avatar component.",
+      "$description": "Dimensões do Avatar por tamanho.",
       "size": {
-        "sm": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.8}",
-          "$description": "32px"
-        },
-        "md": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.10}",
-          "$description": "40px"
-        },
-        "lg": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.14}",
-          "$description": "56px"
-        }
+        "sm": { "$type": "dimension", "$value": "{foundation.spacing.8}",  "$description": "32px" },
+        "md": { "$type": "dimension", "$value": "{foundation.spacing.10}", "$description": "40px" },
+        "lg": { "$type": "dimension", "$value": "{foundation.spacing.14}", "$description": "56px" }
       },
       "font-size": {
-        "sm": {
-          "$type": "dimension",
-          "$value": "{foundation.typography.font.size.xs}",
-          "$description": "12px initials"
-        },
-        "md": {
-          "$type": "dimension",
-          "$value": "{foundation.typography.font.size.sm}",
-          "$description": "14px initials"
-        },
-        "lg": {
-          "$type": "dimension",
-          "$value": "{foundation.typography.font.size.lg}",
-          "$description": "18px initials"
-        }
+        "sm": { "$type": "dimension", "$value": "{foundation.typography.font.size.xs}", "$description": "12px initials" },
+        "md": { "$type": "dimension", "$value": "{foundation.typography.font.size.sm}", "$description": "14px initials" },
+        "lg": { "$type": "dimension", "$value": "{foundation.typography.font.size.lg}", "$description": "18px initials" }
       },
       "icon-size": {
-        "sm": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.4}",
-          "$description": "16px"
-        },
-        "md": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.5}",
-          "$description": "20px"
-        },
-        "lg": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.7}",
-          "$description": "28px"
-        }
-      },
-      "border-radius": {
-        "$type": "dimension",
-        "$value": "{foundation.radius.full}",
-        "$description": "Circle shape"
-      },
-      "font-weight": {
-        "$type": "number",
-        "$value": "{semantic.typography.body.font-weight.semibold}"
+        "sm": { "$type": "dimension", "$value": "{foundation.spacing.4}", "$description": "16px" },
+        "md": { "$type": "dimension", "$value": "{foundation.spacing.5}", "$description": "20px" },
+        "lg": { "$type": "dimension", "$value": "{foundation.spacing.7}", "$description": "28px" }
       }
     }
   }

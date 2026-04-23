@@ -16,21 +16,74 @@
   --ds-content-tertiary: var(--ds-color-neutral-400);
   --ds-content-disabled: var(--ds-color-neutral-600); /** Conteúdo em estado disabled. Isento de contraste WCAG. Unifica text/disabled e state/disabled/foreground (ADR-011). */
   --ds-content-inverse: var(--ds-color-neutral-900);
-  --ds-brand-hover: var(--ds-color-blue-200);
-  --ds-brand-active: var(--ds-color-blue-100);
-  --ds-brand-subtle: var(--ds-color-blue-900);
-  --ds-brand-disabled: var(--ds-color-disabled-brand-dark);
-  --ds-brand-toned-default: var(--ds-overlay-blue-400-15); /** Translucent primary bg for toned variants. 15% opacity in dark. */
-  --ds-brand-toned-hover: var(--ds-overlay-blue-400-25); /** Toned hover in dark. 25% opacity. */
-  --ds-brand-toned-active: var(--ds-overlay-blue-400-32); /** Toned active in dark. 32% opacity. */
-  --ds-brand-content-default: var(--ds-color-blue-400); /** Cor brand usada como conteúdo sobre fundo neutro/toned em dark mode. */
-  --ds-brand-content-contrast: var(--ds-color-neutral-900); /** Conteúdo de alto contraste sobre fill brand sólido em dark mode. Dark text porque brand default é blue-400 (claro). */
-  --ds-brand-content-contrast-disabled: var(--ds-overlay-white-60);
-  --ds-accent-hover: var(--ds-color-purple-300);
-  --ds-accent-active: var(--ds-color-purple-200);
-  --ds-accent-subtle: var(--ds-color-purple-800);
-  --ds-accent-content-default: var(--ds-color-purple-400);
-  --ds-accent-content-contrast: var(--ds-color-neutral-900);
+  --ds-content-link-default: var(--ds-color-brand-400); /** Links em estado default. */
+  --ds-content-link-hover: var(--ds-color-brand-300); /** Links em estado hover. */
+  --ds-action-primary-default-background-default: var(--ds-color-brand-400);
+  --ds-action-primary-default-background-hover: var(--ds-color-brand-500);
+  --ds-action-primary-default-background-active: var(--ds-color-brand-400);
+  --ds-action-primary-default-background-disabled: var(--ds-color-disabled-brand-light);
+  --ds-action-primary-default-content-default: var(--ds-color-neutral-900);
+  --ds-action-primary-default-content-disabled: var(--ds-overlay-white-80);
+  --ds-action-primary-toned-background-default: var(--ds-overlay-blue-600-12);
+  --ds-action-primary-toned-background-hover: var(--ds-overlay-blue-600-20);
+  --ds-action-primary-toned-background-active: var(--ds-overlay-blue-600-28);
+  --ds-action-primary-toned-content-default: var(--ds-color-brand-400);
+  --ds-action-primary-toned-content-disabled: var(--ds-color-neutral-600);
+  --ds-action-primary-outline-background-hover: var(--ds-overlay-black-10);
+  --ds-action-primary-outline-background-active: var(--ds-overlay-black-10);
+  --ds-action-primary-outline-content-default: var(--ds-color-brand-400);
+  --ds-action-primary-outline-content-disabled: var(--ds-color-neutral-600);
+  --ds-action-primary-outline-border-default: var(--ds-color-brand-400);
+  --ds-action-primary-outline-border-hover: var(--ds-color-brand-500);
+  --ds-action-primary-outline-border-disabled: var(--ds-color-neutral-900);
+  --ds-action-primary-ghost-background-hover: var(--ds-overlay-black-10);
+  --ds-action-primary-ghost-background-active: var(--ds-overlay-black-10);
+  --ds-action-primary-ghost-content-default: var(--ds-color-brand-400);
+  --ds-action-primary-ghost-content-disabled: var(--ds-color-neutral-600);
+  --ds-action-secondary-default-background-default: var(--ds-color-neutral-800);
+  --ds-action-secondary-default-background-hover: var(--ds-color-neutral-700);
+  --ds-action-secondary-default-background-active: var(--ds-color-neutral-600);
+  --ds-action-secondary-default-background-disabled: var(--ds-color-neutral-900);
+  --ds-action-secondary-default-content-default: var(--ds-color-neutral-50);
+  --ds-action-secondary-default-content-disabled: var(--ds-color-neutral-600);
+  --ds-action-secondary-toned-background-default: var(--ds-overlay-black-5);
+  --ds-action-secondary-toned-background-hover: var(--ds-overlay-black-10);
+  --ds-action-secondary-toned-background-active: var(--ds-overlay-black-20);
+  --ds-action-secondary-toned-content-default: var(--ds-color-neutral-50);
+  --ds-action-secondary-toned-content-disabled: var(--ds-color-neutral-600);
+  --ds-action-secondary-outline-background-hover: var(--ds-overlay-black-5);
+  --ds-action-secondary-outline-background-active: var(--ds-overlay-black-10);
+  --ds-action-secondary-outline-content-default: var(--ds-color-neutral-50);
+  --ds-action-secondary-outline-content-disabled: var(--ds-color-neutral-600);
+  --ds-action-secondary-outline-border-default: var(--ds-color-neutral-600);
+  --ds-action-secondary-outline-border-hover: var(--ds-color-neutral-400);
+  --ds-action-secondary-outline-border-disabled: var(--ds-color-neutral-800);
+  --ds-action-secondary-ghost-background-hover: var(--ds-overlay-black-5);
+  --ds-action-secondary-ghost-background-active: var(--ds-overlay-black-10);
+  --ds-action-secondary-ghost-content-default: var(--ds-color-neutral-50);
+  --ds-action-secondary-ghost-content-disabled: var(--ds-color-neutral-600);
+  --ds-action-danger-default-background-default: var(--ds-color-red-500);
+  --ds-action-danger-default-background-hover: var(--ds-color-red-600);
+  --ds-action-danger-default-background-active: var(--ds-color-red-700);
+  --ds-action-danger-default-background-disabled: var(--ds-color-disabled-error-light);
+  --ds-action-danger-default-content-default: var(--ds-color-neutral-900);
+  --ds-action-danger-default-content-disabled: var(--ds-overlay-white-80);
+  --ds-action-danger-toned-background-default: var(--ds-color-red-800);
+  --ds-action-danger-toned-background-hover: var(--ds-color-red-700);
+  --ds-action-danger-toned-background-active: var(--ds-color-red-600);
+  --ds-action-danger-toned-content-default: var(--ds-color-red-200);
+  --ds-action-danger-toned-content-disabled: var(--ds-color-neutral-600);
+  --ds-action-danger-outline-background-hover: var(--ds-overlay-black-10);
+  --ds-action-danger-outline-background-active: var(--ds-overlay-black-10);
+  --ds-action-danger-outline-content-default: var(--ds-color-red-200);
+  --ds-action-danger-outline-content-disabled: var(--ds-color-neutral-600);
+  --ds-action-danger-outline-border-default: var(--ds-color-red-500);
+  --ds-action-danger-outline-border-hover: var(--ds-color-red-500);
+  --ds-action-danger-outline-border-disabled: var(--ds-color-neutral-800);
+  --ds-action-danger-ghost-background-hover: var(--ds-overlay-black-10);
+  --ds-action-danger-ghost-background-active: var(--ds-overlay-black-10);
+  --ds-action-danger-ghost-content-default: var(--ds-color-red-200);
+  --ds-action-danger-ghost-content-disabled: var(--ds-color-neutral-600);
   --ds-feedback-success-default: var(--ds-color-green-400);
   --ds-feedback-success-hover: var(--ds-color-green-500);
   --ds-feedback-success-active: var(--ds-color-green-500);
@@ -75,6 +128,8 @@
   --ds-border-width-default: var(--ds-border-width-1);
   --ds-border-width-strong: var(--ds-border-width-2);
   --ds-border-width-focus: var(--ds-border-width-2);
+  --ds-border-focus: var(--ds-color-brand-400);
+  --ds-border-brand: var(--ds-color-brand-400);
   --ds-border-focus-error: var(--ds-color-red-400);
   --ds-overlay-subtle: var(--ds-overlay-white-5);
   --ds-overlay-default: var(--ds-overlay-white-10);
@@ -84,6 +139,7 @@
   --ds-focus-ring-offset: var(--ds-border-width-2); /** Gap between element and focus ring (2px) */
   --ds-state-hover: var(--ds-overlay-white-5);
   --ds-state-pressed: var(--ds-overlay-white-10);
+  --ds-state-focus: var(--ds-color-brand-400);
   --ds-state-disabled-background: var(--ds-color-neutral-900);
   --ds-motion-duration-fast: var(--ds-duration-fast); /** 150ms. */
   --ds-motion-duration-normal: var(--ds-duration-normal); /** 200ms. */
@@ -118,7 +174,12 @@
   --ds-space-control-padding-y-sm: var(--ds-spacing-2); /** 8px. Vertical padding for sm controls. */
   --ds-space-control-padding-y-md: var(--ds-spacing-2-5); /** 10px. Vertical padding for md controls. */
   --ds-space-control-padding-y-lg: var(--ds-spacing-3); /** 12px. Vertical padding for lg controls. */
+  --ds-radius-md: var(--ds-radius-md);
   --ds-radius-component: var(--ds-radius-md);
+  --ds-radius-sm: var(--ds-radius-sm);
+  --ds-radius-lg: var(--ds-radius-lg);
+  --ds-radius-xl: var(--ds-radius-xl);
+  --ds-radius-full: var(--ds-radius-full);
   --ds-size-control-sm: var(--ds-spacing-8); /** 32px. Height of sm interactive controls (Button, Input Field, Select Field). */
   --ds-size-control-md: var(--ds-spacing-10); /** 40px. Height of md interactive controls. */
   --ds-size-control-lg: var(--ds-spacing-12); /** 48px. Height of lg interactive controls. */
@@ -152,13 +213,6 @@
   --ds-body-line-height-xl: var(--ds-line-height-normal); /** 1.5 ratio. */
   --ds-body-line-height-2xl: var(--ds-line-height-snug); /** 1.375 ratio. */
   --ds-body-line-height-3xl: var(--ds-line-height-tight); /** 1.25 ratio. */
-  --ds-content-link-hover: var(--ds-brand-hover); /** Links em estado hover. */
-  --ds-brand-default: var(--ds-brand-primary); /** Fill brand principal. */
-  --ds-accent-default: var(--ds-brand-secondary);
   --ds-border-error: var(--ds-feedback-error-default);
-  --ds-content-link-default: var(--ds-brand-default); /** Links em estado default. */
-  --ds-border-focus: var(--ds-brand-default);
-  --ds-border-brand: var(--ds-brand-default);
-  --ds-state-focus: var(--ds-brand-default);
   --ds-focus-ring-color: var(--ds-border-focus); /** Focus ring color, maps to outline-color */
 }

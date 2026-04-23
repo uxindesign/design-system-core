@@ -8,6 +8,28 @@ Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na
 
 ## [Não publicado]
 
+### Refatoração ground-up (ADR-014) — action×style×prop×state + eliminação de brand/accent + themes
+
+Restruturação da camada Semantic pra resolver o bloat crônico acumulado nas Fases 2-8 do ADR-013. **Breaking change grande** — CSS de todos componentes reescrito.
+
+**Figma (fonte de verdade)**:
+- Collection `Brand` (2 vars × 3 modes Default/Ocean/Forest) → **deletada**
+- `foundation.color.brand.{50..950}` criada como paleta única (Default = Blue atual)
+- Semantic: `brand.*` (11) + `accent.*` (6) **removidos**; 66 vars `action.{primary,secondary,danger}.{default,toned,outline,ghost}.{background,content,border}.{default,hover,active,disabled}` + 5 vars `radius.{sm,md,lg,xl,full}` criadas
+- 353 bindings em nodes de 51 componentes reapontados de `semantic.brand/accent.*` pra `semantic.action.primary.*`
+- 5 consumer vars (`content.link.{default,hover}`, `border.focus`, `border.brand`, `state.focus`) reapontados pra `foundation.color.brand.*` direto
+- Component collection: 185 → **61 vars** (-124, -67%). Mantidos apenas dimensões específicas (modal.max-width, button/input/select.height, toggle/checkbox/radio/avatar sizes, skeleton, spinner, select.arrow). Wrappers 1:1 eliminados.
+
+**JSON**: `brand.json` deletado, `color.brand.*` em `colors.json`, Semantic reescritos, 7 JSONs de componente sem tokens próprios deletados (`alert, badge, breadcrumb, card, divider, tabs, tooltip` consomem Semantic direto), 11 restantes reescritos enxutos.
+
+**CSS**: 18 `css/components/*.css` reescritos pra `--ds-action-*`. `theme-ocean.css` e `theme-forest.css` deletados. Imports do `index.css` atualizado.
+
+**ADR-014** criada. ADR-013 continua válida (regra foundation→semantic→component→CSS).
+
+**Verificação**: `npm run build:tokens` sem erros. Zero Foundation bindings em componentes Figma. Zero refs obsoletos em CSS.
+
+**Bump**: 0.5.x → **0.6.0** (breaking).
+
 ### Corrigido (Fase 8 — limpeza de tokens component redundantes)
 
 Reflexão crítica após Fase 5: o agente automatizou demais e criou 151 tokens component novos, dos quais 105 eram aliases 1:1 pra Semantic/Foundation sem variação entre componentes (30% de bloat). Essa limpeza corrige.

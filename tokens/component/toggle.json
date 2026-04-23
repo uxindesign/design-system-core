@@ -1,82 +1,21 @@
 {
   "component": {
     "toggle": {
-      "$description": "Structural tokens for Toggle/Switch component.",
+      "$description": "Dimensões do Toggle (switch) por tamanho.",
       "track-width": {
-        "sm": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.7}",
-          "$description": "28px"
-        },
-        "md": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.9}",
-          "$description": "36px"
-        },
-        "lg": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.11}",
-          "$description": "44px"
-        }
+        "sm": { "$type": "dimension", "$value": "{foundation.spacing.7}",  "$description": "28px" },
+        "md": { "$type": "dimension", "$value": "{foundation.spacing.9}",  "$description": "36px" },
+        "lg": { "$type": "dimension", "$value": "{foundation.spacing.11}", "$description": "44px" }
       },
       "track-height": {
-        "sm": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.4}",
-          "$description": "16px"
-        },
-        "md": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.5}",
-          "$description": "20px"
-        },
-        "lg": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.6}",
-          "$description": "24px"
-        }
+        "sm": { "$type": "dimension", "$value": "{foundation.spacing.4}", "$description": "16px" },
+        "md": { "$type": "dimension", "$value": "{foundation.spacing.5}", "$description": "20px" },
+        "lg": { "$type": "dimension", "$value": "{foundation.spacing.6}", "$description": "24px" }
       },
       "thumb-size": {
-        "sm": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.2-5}",
-          "$description": "10px"
-        },
-        "md": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.3-5}",
-          "$description": "14px"
-        },
-        "lg": {
-          "$type": "dimension",
-          "$value": "1.125rem",
-          "$description": "18px"
-        }
-      },
-      "border-radius-full": {
-        "$type": "dimension",
-        "$value": "{foundation.radius.full}",
-        "$description": "Pill shape for track and thumb"
-      },
-      "label-border-radius": {
-        "$type": "dimension",
-        "$value": "{foundation.radius.sm}",
-        "$description": "4px on label wrapper"
-      },
-      "gap": {
-        "$type": "dimension",
-        "$value": "{semantic.space.gap.sm}",
-        "$description": "8px between toggle and label"
-      },
-      "label-padding-y": {
-        "$type": "dimension",
-        "$value": "0.375rem",
-        "$description": "6px vertical padding on label wrapper (spacing-1-5 legacy)"
-      },
-      "font-size": {
-        "$type": "dimension",
-        "$value": "{foundation.typography.font.size.sm}",
-        "$description": "14px label"
+        "sm": { "$type": "dimension", "$value": "{foundation.spacing.2-5}", "$description": "10px" },
+        "md": { "$type": "dimension", "$value": "{foundation.spacing.3-5}", "$description": "14px" },
+        "lg": { "$type": "dimension", "$value": "1.125rem",                  "$description": "18px — fora da escala foundation" }
       }
     }
   }

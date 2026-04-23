@@ -6,12 +6,12 @@
 .ds-toggle-label {
   display: inline-flex;
   align-items: center;
-  gap: var(--ds-toggle-gap);
+  gap: var(--ds-space-gap-sm);
   cursor: pointer;
-  padding: var(--ds-toggle-label-padding-y) var(--ds-space-gap-xs);
-  border-radius: var(--ds-toggle-label-border-radius);
+  padding: var(--ds-space-gap-xs) var(--ds-space-gap-xs);
+  border-radius: var(--ds-radius-sm);
   min-height: var(--ds-size-control-min-target);
-  font-size: var(--ds-toggle-font-size);
+  font-size: var(--ds-body-font-size-sm);
   color: var(--ds-content-default);
   transition: background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
 }
@@ -29,7 +29,7 @@
   height: var(--ds-toggle-track-height-md);
   background-color: var(--ds-surface-default);
   border: var(--ds-border-width-default) solid var(--ds-border-control-default);
-  border-radius: var(--ds-toggle-border-radius-full);
+  border-radius: var(--ds-radius-full);
   cursor: pointer;
   flex-shrink: 0;
   transition: background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
@@ -44,7 +44,7 @@
   left: 2px;
   width: var(--ds-toggle-thumb-size-md);
   height: var(--ds-toggle-thumb-size-md);
-  border-radius: var(--ds-toggle-border-radius-full);
+  border-radius: var(--ds-radius-full);
   background-color: var(--ds-content-secondary);
   transition: transform var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
               background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
@@ -52,17 +52,17 @@
 
 /* Hover */
 .ds-toggle:hover:not(:disabled) {
-  border-color: var(--ds-brand-default);
+  border-color: var(--ds-action-primary-default-background-default);
 }
 
 /* Checked (On) */
 .ds-toggle:checked {
-  background-color: var(--ds-brand-default);
-  border-color: var(--ds-brand-default);
+  background-color: var(--ds-action-primary-default-background-default);
+  border-color: var(--ds-action-primary-default-background-default);
 }
 
 .ds-toggle:checked::after {
-  background-color: var(--ds-brand-content-contrast);
+  background-color: var(--ds-action-primary-default-content-default);
   transform: translateX(16px);
 }
 

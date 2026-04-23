@@ -9,9 +9,9 @@
   position: relative;
   display: flex;
   align-items: center;
-  gap: var(--ds-select-gap);
+  gap: var(--ds-space-gap-sm);
   border: var(--ds-border-width-default) solid var(--ds-border-control-default);
-  border-radius: var(--ds-select-border-radius);
+  border-radius: var(--ds-radius-component);
   background: var(--ds-surface-default);
   transition: border-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
               box-shadow var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
@@ -23,20 +23,20 @@
 .ds-select,
 .ds-select--md {
   height: var(--ds-select-height-md);
-  padding: 0 var(--ds-select-padding-x-md);
-  font-size: var(--ds-select-font-size-md);
+  padding: 0 var(--ds-space-control-padding-x-md);
+  font-size: var(--ds-control-font-size-md);
 }
 
 .ds-select--sm {
   height: var(--ds-select-height-sm);
-  padding: 0 var(--ds-select-padding-x-sm);
-  font-size: var(--ds-select-font-size-sm);
+  padding: 0 var(--ds-space-control-padding-x-sm);
+  font-size: var(--ds-control-font-size-sm);
 }
 
 .ds-select--lg {
   height: var(--ds-select-height-lg);
-  padding: 0 var(--ds-select-padding-x-lg);
-  font-size: var(--ds-select-font-size-lg);
+  padding: 0 var(--ds-space-control-padding-x-lg);
+  font-size: var(--ds-control-font-size-lg);
 }
 
 /* Field (native select)
@@ -55,7 +55,7 @@
   cursor: pointer;
   min-width: 0;
   padding-left: var(--ds-space-gap-xs);
-  padding-right: calc(var(--ds-select-arrow-size) + var(--ds-select-arrow-offset-md) + var(--ds-select-padding-x-md));
+  padding-right: calc(var(--ds-select-arrow-size) + var(--ds-select-arrow-offset-md) + var(--ds-space-control-padding-x-md));
 }
 
 .ds-select__field:invalid,
@@ -122,7 +122,7 @@
 
 /* Focused */
 .ds-select:focus-within {
-  border-color: var(--ds-brand-default);
+  border-color: var(--ds-border-focus);
   outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color);
   outline-offset: var(--ds-focus-ring-offset);
 }
