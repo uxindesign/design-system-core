@@ -1,16 +1,16 @@
 {
   "component": {
     "spinner": {
-      "$description": "Structural tokens for Spinner/Loading component.",
+      "$description": "Dimensões do Spinner por tamanho.",
       "size": {
-        "sm": { "$type": "dimension", "$value": "1rem", "$description": "16px" },
-        "md": { "$type": "dimension", "$value": "1.5rem", "$description": "24px" },
-        "lg": { "$type": "dimension", "$value": "2rem", "$description": "32px" }
+        "sm": { "$type": "dimension", "$value": "{foundation.spacing.4}", "$description": "16px" },
+        "md": { "$type": "dimension", "$value": "{foundation.spacing.6}", "$description": "24px" },
+        "lg": { "$type": "dimension", "$value": "{foundation.spacing.8}", "$description": "32px" }
       },
       "stroke-width": {
-        "sm": { "$type": "dimension", "$value": "1.5px" },
-        "md": { "$type": "dimension", "$value": "2px" },
-        "lg": { "$type": "dimension", "$value": "3px" }
+        "sm": { "$type": "dimension", "$value": "0.09375rem", "$description": "1.5px — fora da escala foundation" },
+        "md": { "$type": "dimension", "$value": "{foundation.border.width.2}", "$description": "2px" },
+        "lg": { "$type": "dimension", "$value": "0.1875rem",  "$description": "3px — fora da escala foundation" }
       }
     }
   }

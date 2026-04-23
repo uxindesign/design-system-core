@@ -4,7 +4,7 @@
 
 .ds-tabs {
   display: flex;
-  border-bottom: var(--ds-border-width-1) solid var(--ds-border-default);
+  border-bottom: var(--ds-border-width-default) solid var(--ds-border-default);
   gap: 0;
 }
 
@@ -12,16 +12,16 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: var(--ds-spacing-2) var(--ds-spacing-4);
-  font-size: var(--ds-font-size-sm);
-  font-weight: var(--ds-font-weight-medium);
+  padding: var(--ds-space-control-padding-y-md) var(--ds-space-control-padding-x-md);
+  font-size: var(--ds-body-font-size-sm);
+  font-weight: var(--ds-body-font-weight-medium);
   color: var(--ds-content-secondary);
   background: none;
   border: none;
-  border-bottom: 2px solid transparent;
+  border-bottom: var(--ds-border-width-strong) solid transparent;
   cursor: pointer;
-  transition: color var(--ds-duration-fast) var(--ds-ease-default),
-              border-color var(--ds-duration-fast) var(--ds-ease-default);
+  transition: color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
+              border-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
   margin-bottom: -1px;
 }
 
@@ -30,8 +30,8 @@
 }
 
 .ds-tab--active {
-  color: var(--ds-brand-default);
-  border-bottom-color: var(--ds-brand-default);
+  color: var(--ds-primary-bg-default);
+  border-bottom-color: var(--ds-primary-bg-default);
 }
 
 .ds-tab:focus-visible {
@@ -47,7 +47,7 @@
 
 /* Tab panel */
 .ds-tab-panel {
-  padding: var(--ds-spacing-4) 0;
+  padding: var(--ds-space-inset-lg) 0;
 }
 
 .ds-tab-panel[hidden] {

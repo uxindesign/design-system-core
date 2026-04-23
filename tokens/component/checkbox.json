@@ -1,75 +1,21 @@
 {
   "component": {
     "checkbox": {
-      "$description": "Structural tokens for Checkbox component.",
+      "$description": "Dimensões do Checkbox por tamanho.",
       "control-size": {
-        "sm": {
-          "$type": "dimension",
-          "$value": "1rem",
-          "$description": "16px"
-        },
-        "md": {
-          "$type": "dimension",
-          "$value": "1.25rem",
-          "$description": "20px"
-        },
-        "lg": {
-          "$type": "dimension",
-          "$value": "1.5rem",
-          "$description": "24px"
-        }
+        "sm": { "$type": "dimension", "$value": "{foundation.spacing.4}", "$description": "16px" },
+        "md": { "$type": "dimension", "$value": "{foundation.spacing.5}", "$description": "20px" },
+        "lg": { "$type": "dimension", "$value": "{foundation.spacing.6}", "$description": "24px" }
       },
       "check-width": {
-        "sm": {
-          "$type": "dimension",
-          "$value": "4px"
-        },
-        "md": {
-          "$type": "dimension",
-          "$value": "5px"
-        },
-        "lg": {
-          "$type": "dimension",
-          "$value": "6px"
-        }
+        "sm": { "$type": "dimension", "$value": "{foundation.spacing.1}",   "$description": "4px" },
+        "md": { "$type": "dimension", "$value": "0.3125rem",                 "$description": "5px — valor fora da escala foundation" },
+        "lg": { "$type": "dimension", "$value": "{foundation.spacing.1-5}", "$description": "6px" }
       },
       "check-height": {
-        "sm": {
-          "$type": "dimension",
-          "$value": "8px"
-        },
-        "md": {
-          "$type": "dimension",
-          "$value": "10px"
-        },
-        "lg": {
-          "$type": "dimension",
-          "$value": "12px"
-        }
-      },
-      "border-radius": {
-        "$type": "dimension",
-        "$value": "{foundation.radius.sm}",
-        "$description": "4px \u2014 smaller radius for compact control"
-      },
-      "border-width": {
-        "$type": "dimension",
-        "$value": "{semantic.border.width.default}"
-      },
-      "gap": {
-        "$type": "dimension",
-        "$value": "{semantic.space.gap.sm}",
-        "$description": "8px between control and label"
-      },
-      "min-target-size": {
-        "$type": "dimension",
-        "$value": "2.75rem",
-        "$description": "44px \u2014 WCAG 2.5.5"
-      },
-      "font-size": {
-        "$type": "dimension",
-        "$value": "0.875rem",
-        "$description": "14px label"
+        "sm": { "$type": "dimension", "$value": "{foundation.spacing.2}",   "$description": "8px" },
+        "md": { "$type": "dimension", "$value": "{foundation.spacing.2-5}", "$description": "10px" },
+        "lg": { "$type": "dimension", "$value": "{foundation.spacing.3}",   "$description": "12px" }
       }
     }
   }

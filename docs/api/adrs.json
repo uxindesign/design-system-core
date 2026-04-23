@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-04-22T18:19:48.311Z",
+  "generatedAt": "2026-04-23T23:53:54.197Z",
   "version": "0.5.17",
-  "count": 13,
+  "count": 14,
   "adrs": [
     {
       "id": "ADR-001",
@@ -119,6 +119,15 @@
       "date": "2026-04-22",
       "sourceFile": "docs/decisions/ADR-013-camadas-de-consumo-de-tokens.md",
       "url": "https://uxindesign.github.io/design-system-core/docs/decisions/adr-013-camadas-de-consumo-de-tokens.html"
+    },
+    {
+      "id": "ADR-014",
+      "num": 14,
+      "title": "Reestruturação Semantic em `action` × `style` × `prop` × `state` — eliminação de brand/accent e themes",
+      "status": "Aceita",
+      "date": "2026-04-22",
+      "sourceFile": "docs/decisions/ADR-014-action-tokens-role-style.md",
+      "url": "https://uxindesign.github.io/design-system-core/docs/decisions/adr-014-action-tokens-role-style.html"
     }
   ]
 }

@@ -1,15 +1,12 @@
 {
   "component": {
     "modal": {
-      "$description": "Structural tokens for Modal/Dialog component.",
+      "$description": "Max-width por tamanho. Valores específicos fora da escala de spacing (exceção ADR-013).",
       "max-width": {
-        "sm": { "$type": "dimension", "$value": "25rem", "$description": "400px" },
-        "md": { "$type": "dimension", "$value": "32.5rem", "$description": "520px" },
-        "lg": { "$type": "dimension", "$value": "40rem", "$description": "640px" }
-      },
-      "padding": { "$type": "dimension", "$value": "{semantic.space.inset.lg}", "$description": "16px" },
-      "border-radius": { "$type": "dimension", "$value": "{foundation.radius.xl}", "$description": "16px — xl radius for modal overlay" },
-      "header-gap": { "$type": "dimension", "$value": "{semantic.space.gap.sm}", "$description": "8px between title and close" }
+        "sm": { "$type": "dimension", "$value": "25rem",    "$description": "400px" },
+        "md": { "$type": "dimension", "$value": "32.5rem",  "$description": "520px" },
+        "lg": { "$type": "dimension", "$value": "40rem",    "$description": "640px" }
+      }
     }
   }
 }

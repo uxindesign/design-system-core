@@ -1,6 +1,6 @@
 # Inventário de componentes — Design System Core
 
-> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-22. Não editar manualmente.
+> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-23. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
 > Versão atual: **0.5.17**
 
@@ -8,24 +8,24 @@
 
 | Componente | CSS | Tokens JSON | Figma (visual) | Figma (binding) | Stories | Docs site |
 |------------|-----|-------------|-----------------|-----------------|---------|----------|
-| Button | 🟢 | 🟢 (25) | 🟢 | 🟢 | ⬜ | 🟢 |
-| Input Text | 🟢 | 🟢 (18) | 🟢 | 🟢 | ⬜ | 🟢 |
-| Textarea | 🟢 | 🟢 (14) | 🟢 | 🟢 | ⬜ | 🟢 |
-| Select | 🟢 | 🟢 (19) | 🟢 | 🟢 | ⬜ | 🟢 |
-| Checkbox | 🟢 | 🟢 (14) | 🟢 | 🟢 | ⬜ | 🟢 |
-| Radio | 🟢 | 🟢 (10) | 🟢 | 🟢 | ⬜ | 🟢 |
-| Toggle | 🟢 | 🟢 (12) | 🟢 | 🟢 | ⬜ | 🟢 |
+| Button | 🟢 | 🟢 (3) | 🟢 | 🟢 | ⬜ | 🟢 |
+| Input Text | 🟢 | 🟢 (3) | 🟢 | 🟢 | ⬜ | 🟢 |
+| Textarea | 🟢 | 🟢 (3) | 🟢 | 🟢 | ⬜ | 🟢 |
+| Select | 🟢 | 🟢 (7) | 🟢 | 🟢 | ⬜ | 🟢 |
+| Checkbox | 🟢 | 🟢 (9) | 🟢 | 🟢 | ⬜ | 🟢 |
+| Radio | 🟢 | 🟢 (6) | 🟢 | 🟢 | ⬜ | 🟢 |
+| Toggle | 🟢 | 🟢 (9) | 🟢 | 🟢 | ⬜ | 🟢 |
 | Badge | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
 | Alert | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
 | Card | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
-| Modal | 🟢 | 🟢 (6) | 🟢 | 🟢 | ⬜ | 🟢 |
+| Modal | 🟢 | 🟢 (3) | 🟢 | 🟢 | ⬜ | 🟢 |
 | Tooltip | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
 | Tabs | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
 | Breadcrumb | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
 | Avatar | 🟢 | 🟢 (9) | 🟢 | 🟢 | ⬜ | 🟢 |
 | Divider | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
 | Spinner | 🟢 | 🟢 (6) | 🟢 | 🟢 | ⬜ | 🟢 |
-| Skeleton | 🟢 | 🟢 (4) | 🟢 | 🟢 | ⬜ | 🟢 |
+| Skeleton | 🟢 | 🟢 (3) | 🟢 | 🟢 | ⬜ | 🟢 |
 
 **Legenda:** ⬜ Não iniciado | 🟡 Em progresso | 🟢 Completo | ⚠️ Verificar | 🔴 Precisa revisão
 
@@ -39,10 +39,10 @@
 
 | Coleção | Tokens | Status |
 |---------|--------|--------|
-| Foundation | 231 | 🟢 |
-| Semantic (light) | 153 | 🟢 |
-| Semantic (dark) | 153 | 🟢 |
-| Component | 137 | 🟢 |
+| Foundation | 240 | 🟢 |
+| Semantic (light) | 165 | 🟢 |
+| Semantic (dark) | 165 | 🟢 |
+| Component | 61 | 🟢 |
 
 ## Pipeline
 
@@ -71,6 +71,7 @@
 | ADR-011 | Reestruturação do naming de tokens semânticos de cor | Aceita — Implementada em 0.5.0 |
 | ADR-012 | Tokens de line-height e letter-spacing divergem por design entre Figma e JSON | Aceita |
 | ADR-013 | Camadas de consumo de tokens — Foundation nunca direto em consumidor final | Aceita |
+| ADR-014 | Reestruturação Semantic em `action` × `style` × `prop` × `state` — eliminação de brand/accent e themes | Aceita |
 
 ## Próximos milestones
 

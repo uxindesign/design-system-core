@@ -9,12 +9,12 @@
   position: relative;
   display: flex;
   align-items: center;
-  gap: var(--ds-select-gap);
-  border: var(--ds-select-border-width) solid var(--ds-border-control-default);
-  border-radius: var(--ds-select-border-radius);
+  gap: var(--ds-space-gap-sm);
+  border: var(--ds-border-width-default) solid var(--ds-border-control-default);
+  border-radius: var(--ds-radius-component);
   background: var(--ds-surface-default);
-  transition: border-color var(--ds-duration-fast) var(--ds-ease-default),
-              box-shadow var(--ds-duration-fast) var(--ds-ease-default);
+  transition: border-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
+              box-shadow var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
 }
 
 /* Sizes
@@ -23,20 +23,20 @@
 .ds-select,
 .ds-select--md {
   height: var(--ds-select-height-md);
-  padding: 0 var(--ds-select-padding-x-md);
-  font-size: var(--ds-select-font-size-md);
+  padding: 0 var(--ds-space-control-padding-x-md);
+  font-size: var(--ds-control-font-size-md);
 }
 
 .ds-select--sm {
   height: var(--ds-select-height-sm);
-  padding: 0 var(--ds-select-padding-x-sm);
-  font-size: var(--ds-select-font-size-sm);
+  padding: 0 var(--ds-space-control-padding-x-sm);
+  font-size: var(--ds-control-font-size-sm);
 }
 
 .ds-select--lg {
   height: var(--ds-select-height-lg);
-  padding: 0 var(--ds-select-padding-x-lg);
-  font-size: var(--ds-select-font-size-lg);
+  padding: 0 var(--ds-space-control-padding-x-lg);
+  font-size: var(--ds-control-font-size-lg);
 }
 
 /* Field (native select)
@@ -54,8 +54,8 @@
   font-family: inherit;
   cursor: pointer;
   min-width: 0;
-  padding-left: var(--ds-spacing-1);
-  padding-right: calc(var(--ds-select-arrow-size) + var(--ds-select-arrow-offset-md) + var(--ds-select-padding-x-md));
+  padding-left: var(--ds-space-gap-xs);
+  padding-right: calc(var(--ds-select-arrow-size) + var(--ds-select-arrow-offset-md) + var(--ds-space-control-padding-x-md));
 }
 
 .ds-select__field:invalid,
@@ -122,26 +122,26 @@
 
 /* Focused */
 .ds-select:focus-within {
-  border-color: var(--ds-brand-default);
+  border-color: var(--ds-border-focus);
   outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color);
   outline-offset: var(--ds-focus-ring-offset);
 }
 
 /* Error */
 .ds-select--error {
-  border-color: var(--ds-feedback-error-default);
+  border-color: var(--ds-feedback-error-bg-default);
 }
 
 .ds-select--error:focus-within {
-  border-color: var(--ds-feedback-error-default);
-  outline: var(--ds-focus-ring-width) solid var(--ds-feedback-error-default);
+  border-color: var(--ds-feedback-error-bg-default);
+  outline: var(--ds-focus-ring-width) solid var(--ds-feedback-error-bg-default);
   outline-offset: var(--ds-focus-ring-offset);
 }
 
 /* Disabled */
 .ds-select--disabled,
 .ds-select:has(.ds-select__field:disabled) {
-  background: var(--ds-state-disabled-background);
+  background: var(--ds-background-disabled);
   border-color: var(--ds-border-control-disabled);
   color: var(--ds-content-disabled);
   pointer-events: none;

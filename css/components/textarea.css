@@ -8,11 +8,11 @@
 .ds-textarea {
   display: flex;
   width: 100%;
-  border: var(--ds-textarea-border-width) solid var(--ds-border-control-default);
-  border-radius: var(--ds-textarea-border-radius);
+  border: var(--ds-border-width-default) solid var(--ds-border-control-default);
+  border-radius: var(--ds-radius-component);
   background: var(--ds-surface-default);
-  transition: border-color var(--ds-duration-fast) var(--ds-ease-default),
-              box-shadow var(--ds-duration-fast) var(--ds-ease-default);
+  transition: border-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
+              box-shadow var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
 }
 
 /* Sizes
@@ -20,15 +20,15 @@
 
 .ds-textarea,
 .ds-textarea--md {
-  font-size: var(--ds-textarea-font-size-md);
+  font-size: var(--ds-control-font-size-md);
 }
 
 .ds-textarea--sm {
-  font-size: var(--ds-textarea-font-size-sm);
+  font-size: var(--ds-control-font-size-sm);
 }
 
 .ds-textarea--lg {
-  font-size: var(--ds-textarea-font-size-lg);
+  font-size: var(--ds-control-font-size-lg);
 }
 
 /* Field
@@ -48,18 +48,18 @@
   min-height: var(--ds-textarea-min-height-md);
   min-width: 0;
   /* padding-x: wrapper padding + 4px inner offset (equivale ao TextFrame padding do Figma) */
-  padding: var(--ds-textarea-padding-y-md) calc(var(--ds-textarea-padding-x-md) + var(--ds-spacing-1));
-  line-height: var(--ds-line-height-normal);
+  padding: var(--ds-space-control-padding-y-md) calc(var(--ds-space-control-padding-x-md) + var(--ds-space-gap-xs));
+  line-height: var(--ds-control-line-height-md);
 }
 
 .ds-textarea--sm .ds-textarea__field {
   min-height: var(--ds-textarea-min-height-sm);
-  padding: var(--ds-textarea-padding-y-sm) calc(var(--ds-textarea-padding-x-sm) + var(--ds-spacing-1));
+  padding: var(--ds-space-control-padding-y-sm) calc(var(--ds-space-control-padding-x-sm) + var(--ds-space-gap-xs));
 }
 
 .ds-textarea--lg .ds-textarea__field {
   min-height: var(--ds-textarea-min-height-lg);
-  padding: var(--ds-textarea-padding-y-lg) calc(var(--ds-textarea-padding-x-lg) + var(--ds-spacing-1));
+  padding: var(--ds-space-control-padding-y-lg) calc(var(--ds-space-control-padding-x-lg) + var(--ds-space-gap-xs));
 }
 
 .ds-textarea__field::placeholder {
@@ -76,26 +76,26 @@
 
 /* Focused */
 .ds-textarea:focus-within {
-  border-color: var(--ds-brand-default);
+  border-color: var(--ds-border-focus);
   outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color);
   outline-offset: var(--ds-focus-ring-offset);
 }
 
 /* Error */
 .ds-textarea--error {
-  border-color: var(--ds-feedback-error-default);
+  border-color: var(--ds-feedback-error-bg-default);
 }
 
 .ds-textarea--error:focus-within {
-  border-color: var(--ds-feedback-error-default);
-  outline: var(--ds-focus-ring-width) solid var(--ds-feedback-error-default);
+  border-color: var(--ds-feedback-error-bg-default);
+  outline: var(--ds-focus-ring-width) solid var(--ds-feedback-error-bg-default);
   outline-offset: var(--ds-focus-ring-offset);
 }
 
 /* Disabled */
 .ds-textarea--disabled,
 .ds-textarea:has(.ds-textarea__field:disabled) {
-  background: var(--ds-state-disabled-background);
+  background: var(--ds-background-disabled);
   border-color: var(--ds-border-control-disabled);
   color: var(--ds-content-disabled);
   pointer-events: none;
@@ -117,7 +117,7 @@
    ========================================================================== */
 
 .ds-field__counter {
-  font-size: var(--ds-font-size-xs);
+  font-size: var(--ds-body-font-size-xs);
   color: var(--ds-content-secondary);
   text-align: right;
   font-variant-numeric: tabular-nums;
@@ -125,7 +125,7 @@
 
 .ds-field__counter--over {
   color: var(--ds-feedback-error-content-default);
-  font-weight: var(--ds-font-weight-medium);
+  font-weight: var(--ds-body-font-weight-medium);
 }
 
 /* ---------------------------------------------------------

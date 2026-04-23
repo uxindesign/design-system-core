@@ -3,8 +3,17 @@
  */
 
 :root {
-  --ds-brand-primary: #2563EB; /** Cor base da marca. Alimenta semantic.color.primary.default. */
-  --ds-brand-secondary: #9333EA; /** Cor de acento. Alimenta semantic.color.secondary.default. */
+  --ds-color-brand-50: #EFF6FF;
+  --ds-color-brand-100: #DBEAFE;
+  --ds-color-brand-200: #BFDBFE;
+  --ds-color-brand-300: #93C5FD;
+  --ds-color-brand-400: #60A5FA;
+  --ds-color-brand-500: #3B82F6;
+  --ds-color-brand-600: #2563EB;
+  --ds-color-brand-700: #1D4ED8;
+  --ds-color-brand-800: #1E40AF;
+  --ds-color-brand-900: #1E3A8A;
+  --ds-color-brand-950: #172554;
   --ds-color-neutral-50: #F8FAFC;
   --ds-color-neutral-100: #F1F5F9;
   --ds-color-neutral-200: #E2E8F0;

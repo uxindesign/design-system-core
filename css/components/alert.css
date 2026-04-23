@@ -5,21 +5,21 @@
 .ds-alert {
   display: flex;
   align-items: flex-start;
-  gap: var(--ds-spacing-2);
-  padding: var(--ds-spacing-3);
-  border-radius: var(--ds-radius-component);
-  font-size: var(--ds-font-size-sm);
-  line-height: var(--ds-line-height-normal);
+  gap: var(--ds-space-gap-sm);
+  padding: var(--ds-space-inset-md);
+  border-radius: var(--ds-radius-md);
+  font-size: var(--ds-body-font-size-sm);
+  line-height: var(--ds-body-line-height-md);
 }
 
 .ds-alert__icon {
   flex-shrink: 0;
-  width: 20px;
-  height: 20px;
+  width: var(--ds-size-control-icon-md);
+  height: var(--ds-size-control-icon-md);
 }
 
 .ds-alert__icon .material-symbols-outlined {
-  font-size: 20px;
+  font-size: var(--ds-size-control-icon-md);
 }
 
 .ds-alert__content {
@@ -27,12 +27,12 @@
   min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: var(--ds-spacing-1);
+  gap: var(--ds-space-gap-xs);
 }
 
 .ds-alert__title {
-  font-size: var(--ds-font-size-xs);
-  font-weight: var(--ds-font-weight-bold);
+  font-size: var(--ds-body-font-size-xs);
+  font-weight: var(--ds-body-font-weight-bold);
 }
 
 .ds-alert__close {
@@ -43,7 +43,7 @@
   cursor: pointer;
   color: inherit;
   opacity: 0.7;
-  transition: opacity var(--ds-duration-fast) var(--ds-ease-default);
+  transition: opacity var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
 }
 
 .ds-alert__close:hover {
@@ -60,22 +60,22 @@
    Filled style
    --------------------------------------------------------- */
 .ds-alert--success.ds-alert--filled {
-  background-color: var(--ds-feedback-success-default);
+  background-color: var(--ds-feedback-success-bg-default);
   color: var(--ds-feedback-success-content-contrast);
 }
 
 .ds-alert--warning.ds-alert--filled {
-  background-color: var(--ds-feedback-warning-default);
+  background-color: var(--ds-feedback-warning-bg-default);
   color: var(--ds-feedback-warning-content-contrast);
 }
 
 .ds-alert--error.ds-alert--filled {
-  background-color: var(--ds-feedback-error-default);
+  background-color: var(--ds-feedback-error-bg-default);
   color: var(--ds-feedback-error-content-contrast);
 }
 
 .ds-alert--info.ds-alert--filled {
-  background-color: var(--ds-feedback-info-default);
+  background-color: var(--ds-feedback-info-bg-default);
   color: var(--ds-feedback-info-content-contrast);
 }
 
@@ -83,27 +83,27 @@
    Subtle style
    --------------------------------------------------------- */
 .ds-alert--success.ds-alert--subtle {
-  background-color: var(--ds-feedback-success-subtle);
+  background-color: var(--ds-feedback-success-bg-subtle);
   color: var(--ds-content-default);
-  border: var(--ds-border-width-1) solid var(--ds-feedback-success-border);
+  border: var(--ds-border-width-default) solid var(--ds-feedback-success-border-default);
 }
 
 .ds-alert--warning.ds-alert--subtle {
-  background-color: var(--ds-feedback-warning-subtle);
+  background-color: var(--ds-feedback-warning-bg-subtle);
   color: var(--ds-content-default);
-  border: var(--ds-border-width-1) solid var(--ds-feedback-warning-border);
+  border: var(--ds-border-width-default) solid var(--ds-feedback-warning-border-default);
 }
 
 .ds-alert--error.ds-alert--subtle {
-  background-color: var(--ds-feedback-error-subtle);
+  background-color: var(--ds-feedback-error-bg-subtle);
   color: var(--ds-content-default);
-  border: var(--ds-border-width-1) solid var(--ds-feedback-error-border);
+  border: var(--ds-border-width-default) solid var(--ds-feedback-error-border-default);
 }
 
 .ds-alert--info.ds-alert--subtle {
-  background-color: var(--ds-feedback-info-subtle);
+  background-color: var(--ds-feedback-info-bg-subtle);
   color: var(--ds-content-default);
-  border: var(--ds-border-width-1) solid var(--ds-feedback-info-border);
+  border: var(--ds-border-width-default) solid var(--ds-feedback-info-border-default);
 }
 
 /* Description uses secondary content tone in subtle variants */

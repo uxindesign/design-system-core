@@ -138,6 +138,33 @@ Component   ──►  Consumidor final
 <li><strong>Figma foundation leak</strong>: scan do <code>.figma-snapshot.json</code> por bindings apontando pra variáveis da collection Foundation dentro de nodes COMPONENT/COMPONENT_SET.</li>
 <li><strong>Token Registry completude</strong>: toda variável em <code>tokens/**/*.json</code> precisa ter entrada em <code>tokens/registry.yaml</code> com campos <code>sentido</code>, <code>contexto</code>, <code>decisao</code> preenchidos.</li>
 </ol>
+<h3>Quando criar um Component token (refinamento pós-Fase 5)</h3>
+<p>A primeira execução desta ADR (Fases 0-7) criou tokens component em excesso — 151 novos, dos quais 105 eram aliases 1:1 pra Semantic/Foundation sem variação entre componentes. Exemplos: <code>component.button.transition-duration</code>, <code>component.input.transition-duration</code>, <code>component.checkbox.transition-duration</code> — todos apontando pra <code>{foundation.duration.fast}</code> e resolvendo pro mesmo valor, sem razão arquitetural pra divergir.</p>
+<p>Isso transgride a intenção da regra. Component token é camada de <strong>decisão específica do componente</strong>, não wrapper mecânico pra evitar Foundation no CSS.</p>
+<p><strong>Criar Component token apenas quando:</strong></p>
+<ol>
+<li><p><strong>Valor único pro componente</strong> que não tem equivalente em Semantic.
+Ex: <code>component.modal.max-width.md = 32.5rem</code> (nenhum Semantic cobre esse valor; é decisão visual do Modal).</p>
+</li>
+<li><p><strong>Variação por size/state dentro do componente</strong>, mesmo que aliase Semantic.
+Ex: <code>component.button.height.{sm,md,lg}</code> aliasando <code>{semantic.size.control.*}</code>. Justifica porque existem 3 valores relacionados tematicamente (sizing do Button), apesar de cada um ser um alias 1:1.</p>
+</li>
+<li><p><strong>Decisão de identidade que diverge do padrão Semantic.</strong>
+Ex: <code>component.badge.border-radius = {foundation.radius.full}</code> (identidade pill), <code>component.modal.border-radius = {foundation.radius.xl}</code> (elevação de modal vs <code>radius.component</code> padrão).</p>
+</li>
+</ol>
+<p><strong>NÃO criar Component token quando:</strong></p>
+<ul>
+<li>É alias 1:1 pra Semantic sem variação plausível. O CSS consome Semantic direto — isso não viola a regra, pois Semantic está acima de Foundation na cadeia.</li>
+<li>O mesmo valor é compartilhado por 3+ componentes sem razão de divergir. Se nunca muda entre componentes, não é decisão de componente — é decisão sistêmica e vive em Semantic.</li>
+<li>É só pra evitar que o CSS consuma <code>--ds-{foundation}-*</code> direto. Nesse caso, a solução correta é criar um Semantic que wrappa o Foundation (categoria geral) e deixar o CSS consumir Semantic, não multiplicar wrappers.</li>
+</ul>
+<p><strong>Exemplo da distinção</strong>:</p>
+<ul>
+<li>Motion (<code>duration.fast</code>, <code>ease.default</code>) é decisão sistêmica: sempre os mesmos valores em todo lugar. Vive em <strong>Semantic</strong> (<code>motion.duration.fast</code>, <code>motion.ease.default</code>), não em cada Component.</li>
+<li>Border-radius é decisão <strong>por componente</strong> (Badge=full, Modal=xl, Button=component-default, Alert=component-default...). Vive em <strong>Component</strong>.</li>
+</ul>
+<p>Aplicação retroativa: <strong>Fase 8</strong> do plano de execução remove os 105 tokens redundantes criados na Fase 5.</p>
 <h3>Token Registry</h3>
 <p>Criado como parte desta ADR: arquivo único <code>tokens/registry.yaml</code> que cataloga todos os tokens do sistema (Foundation, Semantic, Component) com metadados por entrada:</p>
 <ul>
@@ -176,7 +203,7 @@ Component   ──►  Consumidor final
 <h3>(d) Só corrigir no Figma e deixar CSS como está</h3>
 <p>Descartada. Foundation leak em CSS de componente é equivalente à do Figma — mesma quebra de rastreabilidade e theming. Corrigir um lado e não o outro perpetua a inconsistência.</p>
 <h2>Plano de execução</h2>
-<p>Ver <code>/Users/marcelldasilva/.claude/plans/groovy-snacking-acorn.md</code> — Fases 0-7. Divisão em 5 PRs:</p>
+<p>Fases 0-7. Divisão em 5 PRs:</p>
 <ul>
 <li><strong>PR #A</strong>: ADR-013 + Token Registry skeleton + check de completude</li>
 <li><strong>PR #B</strong>: Audit de reuso Semantic + expansão no Figma + sync parcial</li>

@@ -1,9 +1,9 @@
 # Índice de ADRs — Design System Core
 
-> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-22. Não editar manualmente.
+> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-23. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
 
-13 decisões registradas.
+14 decisões registradas.
 
 | ADR | Título | Status | Data |
 |-----|--------|--------|------|
@@ -20,3 +20,4 @@
 | [ADR-011](decisions/ADR-011-renaming-tokens-semanticos-de-cor.md) | Reestruturação do naming de tokens semânticos de cor | Aceita — Implementada em 0.5.0 | 2026-04-17 |
 | [ADR-012](decisions/ADR-012-typography-tokens-divergence.md) | Tokens de line-height e letter-spacing divergem por design entre Figma e JSON | Aceita | 2026-04-21 |
 | [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) | Camadas de consumo de tokens — Foundation nunca direto em consumidor final | Aceita | 2026-04-22 |
+| [ADR-014](decisions/ADR-014-action-tokens-role-style.md) | Reestruturação Semantic em `action` × `style` × `prop` × `state` — eliminação de brand/accent e themes | Aceita | 2026-04-22 |

@@ -1,6 +1,6 @@
 # Token schema — Design System Core
 
-> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-22. Não editar manualmente.
+> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-23. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
 > Versão atual: **0.5.17**
 
@@ -12,22 +12,21 @@
 | Formato canônico | JSON (DTCG) em `tokens/` |
 | CSS gerado | Style Dictionary → `css/tokens/generated/` |
 | Pipeline | ✅ index.css importa apenas generated/ |
-| Paridade light/dark | ✅ 153 tokens em ambos os modos |
+| Paridade light/dark | ✅ 165 tokens em ambos os modos |
 
 ## Camadas
 
 | Camada | Tokens | Arquivos |
 |--------|--------|----------|
-| Foundation | **231** | 10 |
-| Semantic | **153 × 2 modos** | light.json + dark.json |
-| Component | **137** | 11 |
+| Foundation | **240** | 9 |
+| Semantic | **165 × 2 modos** | light.json + dark.json |
+| Component | **61** | 11 |
 
-## Foundation (231 tokens)
+## Foundation (240 tokens)
 
 | Arquivo | Tokens |
 |---------|--------|
-| `brand.json` | 2 |
-| `colors.json` | 134 |
+| `colors.json` | 145 |
 | `motion.json` | 7 |
 | `opacity.json` | 7 |
 | `radius.json` | 8 |
@@ -37,42 +36,46 @@
 | `typography.json` | 35 |
 | `z-index.json` | 6 |
 
-## Semantic (153 tokens × 2 modos)
+## Semantic (165 tokens × 2 modos)
 
 Categorias raiz em light.json:
 
 ```
-semantic.background.*
-semantic.surface.*
-semantic.content.*
-semantic.brand.*
-semantic.accent.*
+semantic.primary.*
+semantic.toned.*
+semantic.outline.*
+semantic.ghost.*
+semantic.link.*
 semantic.feedback.*
+semantic.surface.*
+semantic.background.*
+semantic.content.*
 semantic.border.*
-semantic.focus.*
 semantic.overlay.*
-semantic.state.*
+semantic.focus.*
+semantic.opacity.*
+semantic.motion.*
 semantic.space.*
-semantic.radius.*
 semantic.size.*
+semantic.radius.*
 semantic.typography.*
 ```
 
-## Component (137 tokens)
+## Component (61 tokens)
 
 | Arquivo | Tokens |
 |---------|--------|
 | `avatar.json` | 9 |
-| `button.json` | 25 |
-| `checkbox.json` | 14 |
-| `input.json` | 18 |
-| `modal.json` | 6 |
-| `radio.json` | 10 |
-| `select.json` | 19 |
-| `skeleton.json` | 4 |
+| `button.json` | 3 |
+| `checkbox.json` | 9 |
+| `input.json` | 3 |
+| `modal.json` | 3 |
+| `radio.json` | 6 |
+| `select.json` | 7 |
+| `skeleton.json` | 3 |
 | `spinner.json` | 6 |
-| `textarea.json` | 14 |
-| `toggle.json` | 12 |
+| `textarea.json` | 3 |
+| `toggle.json` | 9 |
 
 ## Regras invioláveis
 
@@ -103,3 +106,4 @@ semantic.typography.*
 - **ADR-011** — Reestruturação do naming de tokens semânticos de cor (Aceita — Implementada em 0.5.0)
 - **ADR-012** — Tokens de line-height e letter-spacing divergem por design entre Figma e JSON (Aceita)
 - **ADR-013** — Camadas de consumo de tokens — Foundation nunca direto em consumidor final (Aceita)
+- **ADR-014** — Reestruturação Semantic em `action` × `style` × `prop` × `state` — eliminação de brand/accent e themes (Aceita)

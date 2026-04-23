@@ -25,7 +25,11 @@ jobs:
       - name: Build everything (tokens + docs + api + llms + verify)
         env:
           FIGMA_PAT: ${{ secrets.FIGMA_PAT }}
+          FIGMA_FILE_KEY: ${{ secrets.FIGMA_FILE_KEY }}
         run: npm run build:all
+
+      - name: Security check — block sensitive content in artifacts
+        run: npm run security:check
 
       - name: Commit regenerated artifacts if changed
         run: |

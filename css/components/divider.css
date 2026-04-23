@@ -5,15 +5,15 @@
 /* Horizontal divider (default) */
 .ds-divider {
   border: none;
-  height: var(--ds-border-width-1);
+  height: var(--ds-border-width-default);
   width: 100%;
   background-color: var(--ds-border-default);
-  margin: var(--ds-spacing-4) 0;
+  margin: var(--ds-space-component-md) 0;
 }
 
 /* Vertical divider */
 .ds-divider--vertical {
-  width: var(--ds-border-width-1);
+  width: var(--ds-border-width-default);
   height: 100%;
-  margin: 0 var(--ds-spacing-4);
+  margin: 0 var(--ds-space-component-md);
 }

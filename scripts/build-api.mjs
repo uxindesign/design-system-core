@@ -22,7 +22,7 @@ const ROOT = path.resolve(__dirname, "..");
 const API_DIR = path.join(ROOT, "docs", "api");
 
 const BASE_URL = "https://uxindesign.github.io/design-system-core";
-const FIGMA_FILE_KEY = "PRYS2kL7VdC1MtVWfZvuDN";
+const FIGMA_FILE_KEY = process.env.FIGMA_FILE_KEY || "PRYS2kL7VdC1MtVWfZvuDN";
 
 function readJson(p) {
   return JSON.parse(fs.readFileSync(p, "utf8"));

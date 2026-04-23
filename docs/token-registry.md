@@ -6,9 +6,9 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Status
 
-- Total de tokens: **521**
+- Total de tokens: **677**
 - Com metadados completos: **0**
-- Pendentes (`TODO` em algum campo obrigatório): **521**
+- Pendentes (`TODO` em algum campo obrigatório): **677**
 - Completude: **0%**
 
 ## Foundation
@@ -20,7 +20,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `foundation.border.width.0` | dimension | — | ⚠️ TODO | 0 |
-| `foundation.border.width.1` | dimension | — | ⚠️ TODO | 13 |
+| `foundation.border.width.1` | dimension | — | ⚠️ TODO | 7 |
 | `foundation.border.width.2` | dimension | — | ⚠️ TODO | 10 |
 | `foundation.border.width.4` | dimension | — | ⚠️ TODO | 0 |
 
@@ -174,15 +174,15 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `foundation.duration.fast` | duration | — | ⚠️ TODO | 11 |
-| `foundation.duration.normal` | duration | — | ⚠️ TODO | 0 |
-| `foundation.duration.slow` | duration | — | ⚠️ TODO | 0 |
+| `foundation.duration.fast` | duration | — | ⚠️ TODO | 4 |
+| `foundation.duration.normal` | duration | — | ⚠️ TODO | 4 |
+| `foundation.duration.slow` | duration | — | ⚠️ TODO | 4 |
 
 ### foundation.ease
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `foundation.ease.default` | cubicBezier | — | ⚠️ TODO | 11 |
+| `foundation.ease.default` | cubicBezier | — | ⚠️ TODO | 4 |
 | `foundation.ease.in` | cubicBezier | — | ⚠️ TODO | 0 |
 | `foundation.ease.in-out` | cubicBezier | — | ⚠️ TODO | 0 |
 | `foundation.ease.out` | cubicBezier | — | ⚠️ TODO | 0 |
@@ -204,11 +204,11 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `foundation.radius.2xl` | dimension | — | ⚠️ TODO | 0 |
-| `foundation.radius.full` | dimension | — | ⚠️ TODO | 6 |
-| `foundation.radius.lg` | dimension | — | ⚠️ TODO | 2 |
-| `foundation.radius.md` | dimension | — | ⚠️ TODO | 5 |
+| `foundation.radius.full` | dimension | — | ⚠️ TODO | 7 |
+| `foundation.radius.lg` | dimension | — | ⚠️ TODO | 3 |
+| `foundation.radius.md` | dimension | — | ⚠️ TODO | 4 |
 | `foundation.radius.none` | dimension | — | ⚠️ TODO | 0 |
-| `foundation.radius.sm` | dimension | — | ⚠️ TODO | 12 |
+| `foundation.radius.sm` | dimension | — | ⚠️ TODO | 10 |
 | `foundation.radius.xl` | dimension | — | ⚠️ TODO | 2 |
 | `foundation.radius.xs` | dimension | — | ⚠️ TODO | 0 |
 
@@ -220,8 +220,8 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `foundation.shadow.lg` | shadow | — | ⚠️ TODO | 1 |
 | `foundation.shadow.md` | shadow | — | ⚠️ TODO | 1 |
 | `foundation.shadow.none` | shadow | — | ⚠️ TODO | 1 |
-| `foundation.shadow.sm` | shadow | — | ⚠️ TODO | 2 |
-| `foundation.shadow.xl` | shadow | — | ⚠️ TODO | 2 |
+| `foundation.shadow.sm` | shadow | — | ⚠️ TODO | 3 |
+| `foundation.shadow.xl` | shadow | — | ⚠️ TODO | 3 |
 | `foundation.shadow.xs` | shadow | — | ⚠️ TODO | 0 |
 
 ### foundation.spacing
@@ -229,26 +229,26 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `foundation.spacing.0` | dimension | — | ⚠️ TODO | 4 |
-| `foundation.spacing.0-5` | dimension | — | ⚠️ TODO | 8 |
-| `foundation.spacing.1` | dimension | — | ⚠️ TODO | 18 |
+| `foundation.spacing.0-5` | dimension | — | ⚠️ TODO | 9 |
+| `foundation.spacing.1` | dimension | — | ⚠️ TODO | 11 |
 | `foundation.spacing.1-5` | dimension | — | ⚠️ TODO | 3 |
-| `foundation.spacing.10` | dimension | — | ⚠️ TODO | 4 |
-| `foundation.spacing.11` | dimension | — | ⚠️ TODO | 4 |
+| `foundation.spacing.10` | dimension | — | ⚠️ TODO | 7 |
+| `foundation.spacing.11` | dimension | — | ⚠️ TODO | 6 |
 | `foundation.spacing.12` | dimension | — | ⚠️ TODO | 6 |
-| `foundation.spacing.14` | dimension | — | ⚠️ TODO | 0 |
+| `foundation.spacing.14` | dimension | — | ⚠️ TODO | 2 |
 | `foundation.spacing.16` | dimension | — | ⚠️ TODO | 4 |
-| `foundation.spacing.2` | dimension | — | ⚠️ TODO | 17 |
-| `foundation.spacing.2-5` | dimension | — | ⚠️ TODO | 4 |
-| `foundation.spacing.20` | dimension | — | ⚠️ TODO | 4 |
+| `foundation.spacing.2` | dimension | — | ⚠️ TODO | 14 |
+| `foundation.spacing.2-5` | dimension | — | ⚠️ TODO | 8 |
+| `foundation.spacing.20` | dimension | — | ⚠️ TODO | 6 |
 | `foundation.spacing.24` | dimension | — | ⚠️ TODO | 0 |
-| `foundation.spacing.3` | dimension | — | ⚠️ TODO | 14 |
-| `foundation.spacing.3-5` | dimension | — | ⚠️ TODO | 0 |
-| `foundation.spacing.4` | dimension | — | ⚠️ TODO | 20 |
-| `foundation.spacing.5` | dimension | — | ⚠️ TODO | 10 |
-| `foundation.spacing.6` | dimension | — | ⚠️ TODO | 12 |
-| `foundation.spacing.7` | dimension | — | ⚠️ TODO | 0 |
-| `foundation.spacing.8` | dimension | — | ⚠️ TODO | 7 |
-| `foundation.spacing.9` | dimension | — | ⚠️ TODO | 0 |
+| `foundation.spacing.3` | dimension | — | ⚠️ TODO | 16 |
+| `foundation.spacing.3-5` | dimension | — | ⚠️ TODO | 2 |
+| `foundation.spacing.4` | dimension | — | ⚠️ TODO | 24 |
+| `foundation.spacing.5` | dimension | — | ⚠️ TODO | 15 |
+| `foundation.spacing.6` | dimension | — | ⚠️ TODO | 17 |
+| `foundation.spacing.7` | dimension | — | ⚠️ TODO | 3 |
+| `foundation.spacing.8` | dimension | — | ⚠️ TODO | 9 |
+| `foundation.spacing.9` | dimension | — | ⚠️ TODO | 2 |
 
 ### foundation.typography
 
@@ -266,11 +266,11 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `foundation.typography.font.size.7xl` | dimension | — | ⚠️ TODO | 0 |
 | `foundation.typography.font.size.8xl` | dimension | — | ⚠️ TODO | 0 |
 | `foundation.typography.font.size.9xl` | dimension | — | ⚠️ TODO | 0 |
-| `foundation.typography.font.size.lg` | dimension | — | ⚠️ TODO | 2 |
+| `foundation.typography.font.size.lg` | dimension | — | ⚠️ TODO | 3 |
 | `foundation.typography.font.size.md` | dimension | — | ⚠️ TODO | 4 |
-| `foundation.typography.font.size.sm` | dimension | — | ⚠️ TODO | 6 |
+| `foundation.typography.font.size.sm` | dimension | — | ⚠️ TODO | 10 |
 | `foundation.typography.font.size.xl` | dimension | — | ⚠️ TODO | 2 |
-| `foundation.typography.font.size.xs` | dimension | — | ⚠️ TODO | 2 |
+| `foundation.typography.font.size.xs` | dimension | — | ⚠️ TODO | 3 |
 | `foundation.typography.font.weight.bold` | number | — | ⚠️ TODO | 2 |
 | `foundation.typography.font.weight.medium` | number | — | ⚠️ TODO | 2 |
 | `foundation.typography.font.weight.regular` | number | — | ⚠️ TODO | 2 |
@@ -299,11 +299,11 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `foundation.z.20` | number | — | ⚠️ TODO | 0 |
 | `foundation.z.30` | number | — | ⚠️ TODO | 0 |
 | `foundation.z.40` | number | — | ⚠️ TODO | 0 |
-| `foundation.z.50` | number | — | ⚠️ TODO | 2 |
+| `foundation.z.50` | number | — | ⚠️ TODO | 3 |
 
 ## Semantic
 
-153 tokens.
+158 tokens.
 
 ### semantic.accent
 
@@ -339,9 +339,9 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.border.focus-error` | color | → `foundation.color.red.500` | ⚠️ TODO | 0 |
 | `semantic.border.strong` | color | → `foundation.color.neutral.600` | ⚠️ TODO | 1 |
 | `semantic.border.subtle` | color | → `foundation.color.neutral.300` | ⚠️ TODO | 1 |
-| `semantic.border.width.default` | dimension | → `foundation.border.width.1` | ⚠️ TODO | 7 |
+| `semantic.border.width.default` | dimension | → `foundation.border.width.1` | ⚠️ TODO | 13 |
 | `semantic.border.width.focus` | dimension | → `foundation.border.width.2` | ⚠️ TODO | 0 |
-| `semantic.border.width.strong` | dimension | → `foundation.border.width.2` | ⚠️ TODO | 0 |
+| `semantic.border.width.strong` | dimension | → `foundation.border.width.2` | ⚠️ TODO | 2 |
 | `semantic.border.width.subtle` | dimension | → `foundation.border.width.1` | ⚠️ TODO | 0 |
 
 ### semantic.brand
@@ -419,6 +419,21 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.focus.ring.offset` | dimension | → `foundation.border.width.2` | ⚠️ TODO | 11 |
 | `semantic.focus.ring.width` | dimension | → `foundation.border.width.2` | ⚠️ TODO | 11 |
 
+### semantic.motion
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `semantic.motion.duration.fast` | duration | → `foundation.duration.fast` | ⚠️ TODO | 11 |
+| `semantic.motion.duration.normal` | duration | → `foundation.duration.normal` | ⚠️ TODO | 0 |
+| `semantic.motion.duration.slow` | duration | → `foundation.duration.slow` | ⚠️ TODO | 0 |
+| `semantic.motion.ease.default` | cubicBezier | → `foundation.ease.default` | ⚠️ TODO | 11 |
+
+### semantic.opacity
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `semantic.opacity.disabled` | number | → `foundation.opacity.50` | ⚠️ TODO | 4 |
+
 ### semantic.overlay
 
 | Token | Tipo | Alias | Sentido | Usos |
@@ -432,7 +447,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `semantic.radius.component` | dimension | → `foundation.radius.md` | ⚠️ TODO | 6 |
+| `semantic.radius.component` | dimension | → `foundation.radius.md` | ⚠️ TODO | 7 |
 
 ### semantic.size
 
@@ -443,7 +458,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.size.control.icon.sm` | dimension | → `foundation.spacing.4` | ⚠️ TODO | 4 |
 | `semantic.size.control.lg` | dimension | → `foundation.spacing.12` | ⚠️ TODO | 4 |
 | `semantic.size.control.md` | dimension | → `foundation.spacing.10` | ⚠️ TODO | 4 |
-| `semantic.size.control.min-target` | dimension | → `foundation.spacing.11` | ⚠️ TODO | 2 |
+| `semantic.size.control.min-target` | dimension | → `foundation.spacing.11` | ⚠️ TODO | 4 |
 | `semantic.size.control.sm` | dimension | → `foundation.spacing.8` | ⚠️ TODO | 4 |
 
 ### semantic.space
@@ -463,20 +478,20 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.space.control.padding-y.md` | dimension | → `foundation.spacing.2-5` | ⚠️ TODO | 5 |
 | `semantic.space.control.padding-y.sm` | dimension | → `foundation.spacing.2` | ⚠️ TODO | 5 |
 | `semantic.space.gap.2xs` | dimension | → `foundation.spacing.0-5` | ⚠️ TODO | 0 |
-| `semantic.space.gap.lg` | dimension | → `foundation.spacing.4` | ⚠️ TODO | 1 |
+| `semantic.space.gap.lg` | dimension | → `foundation.spacing.4` | ⚠️ TODO | 3 |
 | `semantic.space.gap.md` | dimension | → `foundation.spacing.3` | ⚠️ TODO | 1 |
-| `semantic.space.gap.sm` | dimension | → `foundation.spacing.2` | ⚠️ TODO | 8 |
+| `semantic.space.gap.sm` | dimension | → `foundation.spacing.2` | ⚠️ TODO | 17 |
 | `semantic.space.gap.xl` | dimension | → `foundation.spacing.6` | ⚠️ TODO | 1 |
-| `semantic.space.gap.xs` | dimension | → `foundation.spacing.1` | ⚠️ TODO | 4 |
-| `semantic.space.inset.2xs` | dimension | → `foundation.spacing.0-5` | ⚠️ TODO | 0 |
-| `semantic.space.inset.lg` | dimension | → `foundation.spacing.4` | ⚠️ TODO | 2 |
-| `semantic.space.inset.md` | dimension | → `foundation.spacing.3` | ⚠️ TODO | 0 |
+| `semantic.space.gap.xs` | dimension | → `foundation.spacing.1` | ⚠️ TODO | 15 |
+| `semantic.space.inset.2xs` | dimension | → `foundation.spacing.0-5` | ⚠️ TODO | 2 |
+| `semantic.space.inset.lg` | dimension | → `foundation.spacing.4` | ⚠️ TODO | 7 |
+| `semantic.space.inset.md` | dimension | → `foundation.spacing.3` | ⚠️ TODO | 2 |
 | `semantic.space.inset.sm` | dimension | → `foundation.spacing.2` | ⚠️ TODO | 0 |
 | `semantic.space.inset.xl` | dimension | → `foundation.spacing.6` | ⚠️ TODO | 0 |
 | `semantic.space.inset.xs` | dimension | → `foundation.spacing.1` | ⚠️ TODO | 0 |
 | `semantic.space.section.lg` | dimension | → `foundation.spacing.16` | ⚠️ TODO | 0 |
 | `semantic.space.section.md` | dimension | → `foundation.spacing.12` | ⚠️ TODO | 0 |
-| `semantic.space.section.sm` | dimension | → `foundation.spacing.8` | ⚠️ TODO | 0 |
+| `semantic.space.section.sm` | dimension | → `foundation.spacing.8` | ⚠️ TODO | 2 |
 | `semantic.space.section.xl` | dimension | → `foundation.spacing.20` | ⚠️ TODO | 0 |
 
 ### semantic.state
@@ -506,18 +521,18 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.typography.body.font-size.3xl` | dimension | → `foundation.typography.font.size.3xl` | ⚠️ TODO | 0 |
 | `semantic.typography.body.font-size.lg` | dimension | → `foundation.typography.font.size.lg` | ⚠️ TODO | 0 |
 | `semantic.typography.body.font-size.md` | dimension | → `foundation.typography.font.size.md` | ⚠️ TODO | 0 |
-| `semantic.typography.body.font-size.sm` | dimension | → `foundation.typography.font.size.sm` | ⚠️ TODO | 0 |
+| `semantic.typography.body.font-size.sm` | dimension | → `foundation.typography.font.size.sm` | ⚠️ TODO | 3 |
 | `semantic.typography.body.font-size.xl` | dimension | → `foundation.typography.font.size.xl` | ⚠️ TODO | 0 |
-| `semantic.typography.body.font-size.xs` | dimension | → `foundation.typography.font.size.xs` | ⚠️ TODO | 0 |
+| `semantic.typography.body.font-size.xs` | dimension | → `foundation.typography.font.size.xs` | ⚠️ TODO | 3 |
 | `semantic.typography.body.font-weight.bold` | number | → `foundation.typography.font.weight.bold` | ⚠️ TODO | 0 |
-| `semantic.typography.body.font-weight.medium` | number | → `foundation.typography.font.weight.medium` | ⚠️ TODO | 0 |
+| `semantic.typography.body.font-weight.medium` | number | → `foundation.typography.font.weight.medium` | ⚠️ TODO | 6 |
 | `semantic.typography.body.font-weight.regular` | number | → `foundation.typography.font.weight.regular` | ⚠️ TODO | 0 |
-| `semantic.typography.body.font-weight.semibold` | number | → `foundation.typography.font.weight.semibold` | ⚠️ TODO | 0 |
+| `semantic.typography.body.font-weight.semibold` | number | → `foundation.typography.font.weight.semibold` | ⚠️ TODO | 1 |
 | `semantic.typography.body.letter-spacing.normal` | dimension | → `foundation.typography.letter.spacing.normal` | ⚠️ TODO | 0 |
 | `semantic.typography.body.letter-spacing.tight` | dimension | → `foundation.typography.letter.spacing.tight` | ⚠️ TODO | 0 |
 | `semantic.typography.body.line-height.2xl` | number | → `foundation.typography.line.height.snug` | ⚠️ TODO | 0 |
 | `semantic.typography.body.line-height.3xl` | number | → `foundation.typography.line.height.tight` | ⚠️ TODO | 0 |
-| `semantic.typography.body.line-height.md` | number | → `foundation.typography.line.height.normal` | ⚠️ TODO | 0 |
+| `semantic.typography.body.line-height.md` | number | → `foundation.typography.line.height.normal` | ⚠️ TODO | 2 |
 | `semantic.typography.body.line-height.sm` | number | → `foundation.typography.line.height.snug` | ⚠️ TODO | 0 |
 | `semantic.typography.body.line-height.xl` | number | → `foundation.typography.line.height.normal` | ⚠️ TODO | 0 |
 | `semantic.typography.body.line-height.xs` | number | → `foundation.typography.line.height.snug` | ⚠️ TODO | 0 |
@@ -530,21 +545,58 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Component
 
-137 tokens.
+288 tokens.
+
+### component.alert
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `component.alert.border-radius` | dimension | → `semantic.radius.component` | ⚠️ TODO | 1 |
+| `component.alert.border-width` | dimension | → `semantic.border.width.default` | ⚠️ TODO | 1 |
+| `component.alert.content-gap` | dimension | → `semantic.space.gap.xs` | ⚠️ TODO | 1 |
+| `component.alert.focus-border-radius` | dimension | → `foundation.radius.sm` | ⚠️ TODO | 1 |
+| `component.alert.gap` | dimension | → `semantic.space.gap.sm` | ⚠️ TODO | 1 |
+| `component.alert.icon-size` | dimension | — | ⚠️ TODO | 1 |
+| `component.alert.padding` | dimension | → `semantic.space.inset.md` | ⚠️ TODO | 1 |
+| `component.alert.transition-duration` | duration | → `foundation.duration.fast` | ⚠️ TODO | 1 |
+| `component.alert.transition-timing` | cubicBezier | → `foundation.ease.default` | ⚠️ TODO | 1 |
 
 ### component.avatar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `component.avatar.font-size.lg` | dimension | — | ⚠️ TODO | 1 |
-| `component.avatar.font-size.md` | dimension | — | ⚠️ TODO | 1 |
-| `component.avatar.font-size.sm` | dimension | — | ⚠️ TODO | 1 |
-| `component.avatar.icon-size.lg` | dimension | — | ⚠️ TODO | 1 |
-| `component.avatar.icon-size.md` | dimension | — | ⚠️ TODO | 1 |
-| `component.avatar.icon-size.sm` | dimension | — | ⚠️ TODO | 1 |
-| `component.avatar.size.lg` | dimension | — | ⚠️ TODO | 1 |
-| `component.avatar.size.md` | dimension | — | ⚠️ TODO | 1 |
-| `component.avatar.size.sm` | dimension | — | ⚠️ TODO | 1 |
+| `component.avatar.border-radius` | dimension | → `foundation.radius.full` | ⚠️ TODO | 1 |
+| `component.avatar.font-family` | fontFamily | → `semantic.typography.body.font-family.sans` | ⚠️ TODO | 1 |
+| `component.avatar.font-size.lg` | dimension | → `foundation.typography.font.size.lg` | ⚠️ TODO | 1 |
+| `component.avatar.font-size.md` | dimension | → `foundation.typography.font.size.sm` | ⚠️ TODO | 1 |
+| `component.avatar.font-size.sm` | dimension | → `foundation.typography.font.size.xs` | ⚠️ TODO | 1 |
+| `component.avatar.font-weight` | number | → `semantic.typography.body.font-weight.semibold` | ⚠️ TODO | 1 |
+| `component.avatar.icon-size.lg` | dimension | → `foundation.spacing.7` | ⚠️ TODO | 1 |
+| `component.avatar.icon-size.md` | dimension | → `foundation.spacing.5` | ⚠️ TODO | 1 |
+| `component.avatar.icon-size.sm` | dimension | → `foundation.spacing.4` | ⚠️ TODO | 1 |
+| `component.avatar.size.lg` | dimension | → `foundation.spacing.14` | ⚠️ TODO | 1 |
+| `component.avatar.size.md` | dimension | → `foundation.spacing.10` | ⚠️ TODO | 1 |
+| `component.avatar.size.sm` | dimension | → `foundation.spacing.8` | ⚠️ TODO | 1 |
+
+### component.badge
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `component.badge.border-radius` | dimension | → `foundation.radius.full` | ⚠️ TODO | 1 |
+| `component.badge.font-size` | dimension | → `semantic.typography.body.font-size.xs` | ⚠️ TODO | 1 |
+| `component.badge.font-weight` | number | → `semantic.typography.body.font-weight.medium` | ⚠️ TODO | 1 |
+| `component.badge.line-height` | number | → `semantic.typography.body.line-height.md` | ⚠️ TODO | 1 |
+| `component.badge.padding-x` | dimension | → `semantic.space.gap.sm` | ⚠️ TODO | 1 |
+| `component.badge.padding-y` | dimension | → `semantic.space.inset.2xs` | ⚠️ TODO | 1 |
+
+### component.breadcrumb
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `component.breadcrumb.focus-border-radius` | dimension | → `foundation.radius.sm` | ⚠️ TODO | 1 |
+| `component.breadcrumb.font-size` | dimension | → `semantic.typography.body.font-size.sm` | ⚠️ TODO | 1 |
+| `component.breadcrumb.font-weight-current` | number | → `semantic.typography.body.font-weight.medium` | ⚠️ TODO | 1 |
+| `component.breadcrumb.gap` | dimension | → `semantic.space.gap.xs` | ⚠️ TODO | 1 |
 
 ### component.button
 
@@ -556,9 +608,11 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.button.background.toned.hover` | color | → `semantic.brand.toned.hover` | ⚠️ TODO | 0 |
 | `component.button.border-radius` | dimension | → `semantic.radius.component` | ⚠️ TODO | 1 |
 | `component.button.border-width` | dimension | → `semantic.border.width.default` | ⚠️ TODO | 1 |
+| `component.button.font-family` | fontFamily | → `semantic.typography.body.font-family.sans` | ⚠️ TODO | 1 |
 | `component.button.font-size.lg` | dimension | → `semantic.typography.control.font-size.lg` | ⚠️ TODO | 1 |
 | `component.button.font-size.md` | dimension | → `semantic.typography.control.font-size.md` | ⚠️ TODO | 1 |
 | `component.button.font-size.sm` | dimension | → `semantic.typography.control.font-size.sm` | ⚠️ TODO | 1 |
+| `component.button.font-weight` | number | → `semantic.typography.body.font-weight.medium` | ⚠️ TODO | 1 |
 | `component.button.foreground.toned.default` | color | → `semantic.brand.content.default` | ⚠️ TODO | 0 |
 | `component.button.foreground.toned.disabled` | color | → `semantic.content.disabled` | ⚠️ TODO | 0 |
 | `component.button.gap` | dimension | → `semantic.space.gap.sm` | ⚠️ TODO | 1 |
@@ -569,12 +623,30 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.button.icon-size.md` | dimension | → `semantic.size.control.icon.md` | ⚠️ TODO | 1 |
 | `component.button.icon-size.sm` | dimension | → `semantic.size.control.icon.sm` | ⚠️ TODO | 1 |
 | `component.button.min-target-size` | dimension | → `semantic.size.control.min-target` | ⚠️ TODO | 1 |
+| `component.button.opacity-disabled` | number | → `foundation.opacity.50` | ⚠️ TODO | 1 |
 | `component.button.padding-x.lg` | dimension | → `semantic.space.control.padding-x.lg` | ⚠️ TODO | 1 |
 | `component.button.padding-x.md` | dimension | → `semantic.space.control.padding-x.md` | ⚠️ TODO | 1 |
 | `component.button.padding-x.sm` | dimension | → `semantic.space.control.padding-x.sm` | ⚠️ TODO | 1 |
 | `component.button.padding-y.lg` | dimension | → `semantic.space.control.padding-y.lg` | ⚠️ TODO | 1 |
 | `component.button.padding-y.md` | dimension | → `semantic.space.control.padding-y.md` | ⚠️ TODO | 1 |
 | `component.button.padding-y.sm` | dimension | → `semantic.space.control.padding-y.sm` | ⚠️ TODO | 1 |
+| `component.button.transition-duration` | duration | → `foundation.duration.fast` | ⚠️ TODO | 1 |
+| `component.button.transition-timing` | cubicBezier | → `foundation.ease.default` | ⚠️ TODO | 1 |
+
+### component.card
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `component.card.body-font-size` | dimension | → `semantic.typography.body.font-size.sm` | ⚠️ TODO | 1 |
+| `component.card.body-line-height` | number | → `semantic.typography.body.line-height.md` | ⚠️ TODO | 1 |
+| `component.card.border-radius` | dimension | → `foundation.radius.lg` | ⚠️ TODO | 1 |
+| `component.card.border-width` | dimension | → `semantic.border.width.default` | ⚠️ TODO | 1 |
+| `component.card.gap` | dimension | → `semantic.space.gap.sm` | ⚠️ TODO | 1 |
+| `component.card.padding` | dimension | → `semantic.space.inset.lg` | ⚠️ TODO | 1 |
+| `component.card.shadow-elevated` | shadow | → `foundation.shadow.sm` | ⚠️ TODO | 1 |
+| `component.card.title-font-size` | dimension | → `semantic.typography.body.font-size.lg` | ⚠️ TODO | 1 |
+| `component.card.title-font-weight` | number | → `semantic.typography.body.font-weight.semibold` | ⚠️ TODO | 1 |
+| `component.card.title-line-height` | number | → `semantic.typography.body.line-height.sm` | ⚠️ TODO | 1 |
 
 ### component.checkbox
 
@@ -582,18 +654,41 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 |---|---|---|---|---|
 | `component.checkbox.border-radius` | dimension | → `foundation.radius.sm` | ⚠️ TODO | 1 |
 | `component.checkbox.border-width` | dimension | → `semantic.border.width.default` | ⚠️ TODO | 1 |
-| `component.checkbox.check-height.lg` | dimension | — | ⚠️ TODO | 0 |
-| `component.checkbox.check-height.md` | dimension | — | ⚠️ TODO | 0 |
-| `component.checkbox.check-height.sm` | dimension | — | ⚠️ TODO | 0 |
-| `component.checkbox.check-width.lg` | dimension | — | ⚠️ TODO | 0 |
+| `component.checkbox.check-height.lg` | dimension | → `foundation.spacing.3` | ⚠️ TODO | 0 |
+| `component.checkbox.check-height.md` | dimension | → `foundation.spacing.2-5` | ⚠️ TODO | 0 |
+| `component.checkbox.check-height.sm` | dimension | → `foundation.spacing.2` | ⚠️ TODO | 0 |
+| `component.checkbox.check-width.lg` | dimension | → `foundation.spacing.1-5` | ⚠️ TODO | 0 |
 | `component.checkbox.check-width.md` | dimension | — | ⚠️ TODO | 0 |
-| `component.checkbox.check-width.sm` | dimension | — | ⚠️ TODO | 0 |
-| `component.checkbox.control-size.lg` | dimension | — | ⚠️ TODO | 1 |
-| `component.checkbox.control-size.md` | dimension | — | ⚠️ TODO | 1 |
-| `component.checkbox.control-size.sm` | dimension | — | ⚠️ TODO | 1 |
-| `component.checkbox.font-size` | dimension | — | ⚠️ TODO | 1 |
+| `component.checkbox.check-width.sm` | dimension | → `foundation.spacing.1` | ⚠️ TODO | 0 |
+| `component.checkbox.content-gap` | dimension | → `semantic.space.gap.xs` | ⚠️ TODO | 1 |
+| `component.checkbox.control-size.lg` | dimension | → `foundation.spacing.6` | ⚠️ TODO | 1 |
+| `component.checkbox.control-size.md` | dimension | → `foundation.spacing.5` | ⚠️ TODO | 1 |
+| `component.checkbox.control-size.sm` | dimension | → `foundation.spacing.4` | ⚠️ TODO | 1 |
+| `component.checkbox.description-font-size` | dimension | → `semantic.typography.body.font-size.sm` | ⚠️ TODO | 1 |
+| `component.checkbox.description-font-weight` | number | → `semantic.typography.body.font-weight.regular` | ⚠️ TODO | 1 |
+| `component.checkbox.description-line-height` | number | → `semantic.typography.body.line-height.md` | ⚠️ TODO | 1 |
+| `component.checkbox.error-font-size` | dimension | → `semantic.typography.body.font-size.xs` | ⚠️ TODO | 1 |
+| `component.checkbox.error-margin-top` | dimension | → `semantic.space.gap.xs` | ⚠️ TODO | 1 |
+| `component.checkbox.font-size` | dimension | → `foundation.typography.font.size.sm` | ⚠️ TODO | 1 |
 | `component.checkbox.gap` | dimension | → `semantic.space.gap.sm` | ⚠️ TODO | 1 |
-| `component.checkbox.min-target-size` | dimension | — | ⚠️ TODO | 1 |
+| `component.checkbox.helper-font-size` | dimension | → `semantic.typography.body.font-size.xs` | ⚠️ TODO | 1 |
+| `component.checkbox.helper-line-height` | number | → `semantic.typography.body.line-height.md` | ⚠️ TODO | 1 |
+| `component.checkbox.label-font-size` | dimension | → `semantic.typography.body.font-size.sm` | ⚠️ TODO | 1 |
+| `component.checkbox.label-font-weight` | number | → `semantic.typography.body.font-weight.medium` | ⚠️ TODO | 1 |
+| `component.checkbox.label-line-height` | number | → `semantic.typography.body.line-height.sm` | ⚠️ TODO | 1 |
+| `component.checkbox.label-padding-x` | dimension | → `semantic.space.gap.xs` | ⚠️ TODO | 1 |
+| `component.checkbox.label-padding-y` | dimension | — | ⚠️ TODO | 1 |
+| `component.checkbox.min-target-size` | dimension | → `semantic.size.control.min-target` | ⚠️ TODO | 1 |
+| `component.checkbox.opacity-disabled` | number | → `foundation.opacity.50` | ⚠️ TODO | 1 |
+| `component.checkbox.transition-duration` | duration | → `foundation.duration.fast` | ⚠️ TODO | 1 |
+| `component.checkbox.transition-timing` | cubicBezier | → `foundation.ease.default` | ⚠️ TODO | 1 |
+
+### component.divider
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `component.divider.spacing` | dimension | → `semantic.space.gap.lg` | ⚠️ TODO | 1 |
+| `component.divider.thickness` | dimension | → `semantic.border.width.default` | ⚠️ TODO | 1 |
 
 ### component.input
 
@@ -601,6 +696,8 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 |---|---|---|---|---|
 | `component.input.border-radius` | dimension | → `semantic.radius.component` | ⚠️ TODO | 1 |
 | `component.input.border-width` | dimension | → `semantic.border.width.default` | ⚠️ TODO | 1 |
+| `component.input.field-gap` | dimension | → `semantic.space.gap.xs` | ⚠️ TODO | 1 |
+| `component.input.field-inner-padding-x` | dimension | → `semantic.space.gap.xs` | ⚠️ TODO | 1 |
 | `component.input.font-size.lg` | dimension | → `semantic.typography.control.font-size.lg` | ⚠️ TODO | 1 |
 | `component.input.font-size.md` | dimension | → `semantic.typography.control.font-size.md` | ⚠️ TODO | 1 |
 | `component.input.font-size.sm` | dimension | → `semantic.typography.control.font-size.sm` | ⚠️ TODO | 1 |
@@ -608,52 +705,100 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.input.height.lg` | dimension | → `semantic.size.control.lg` | ⚠️ TODO | 1 |
 | `component.input.height.md` | dimension | → `semantic.size.control.md` | ⚠️ TODO | 1 |
 | `component.input.height.sm` | dimension | → `semantic.size.control.sm` | ⚠️ TODO | 1 |
+| `component.input.helper-font-size` | dimension | → `semantic.typography.body.font-size.xs` | ⚠️ TODO | 1 |
+| `component.input.helper-line-height` | number | → `semantic.typography.body.line-height.md` | ⚠️ TODO | 1 |
 | `component.input.icon-size.lg` | dimension | → `semantic.size.control.icon.lg` | ⚠️ TODO | 1 |
 | `component.input.icon-size.md` | dimension | → `semantic.size.control.icon.md` | ⚠️ TODO | 1 |
 | `component.input.icon-size.sm` | dimension | → `semantic.size.control.icon.sm` | ⚠️ TODO | 1 |
+| `component.input.label-font-size` | dimension | → `semantic.typography.body.font-size.sm` | ⚠️ TODO | 1 |
+| `component.input.label-font-weight` | number | → `semantic.typography.body.font-weight.medium` | ⚠️ TODO | 1 |
+| `component.input.label-line-height` | number | → `semantic.typography.body.line-height.sm` | ⚠️ TODO | 1 |
 | `component.input.padding-x.lg` | dimension | → `semantic.space.control.padding-x.lg` | ⚠️ TODO | 1 |
 | `component.input.padding-x.md` | dimension | → `semantic.space.control.padding-x.md` | ⚠️ TODO | 1 |
 | `component.input.padding-x.sm` | dimension | → `semantic.space.control.padding-x.sm` | ⚠️ TODO | 1 |
 | `component.input.padding-y.lg` | dimension | → `semantic.space.control.padding-y.lg` | ⚠️ TODO | 0 |
 | `component.input.padding-y.md` | dimension | → `semantic.space.control.padding-y.md` | ⚠️ TODO | 0 |
 | `component.input.padding-y.sm` | dimension | → `semantic.space.control.padding-y.sm` | ⚠️ TODO | 0 |
+| `component.input.transition-duration` | duration | → `foundation.duration.fast` | ⚠️ TODO | 1 |
+| `component.input.transition-timing` | cubicBezier | → `foundation.ease.default` | ⚠️ TODO | 1 |
 
 ### component.modal
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
+| `component.modal.body-font-size` | dimension | → `semantic.typography.body.font-size.sm` | ⚠️ TODO | 1 |
+| `component.modal.body-line-height` | number | → `semantic.typography.body.line-height.md` | ⚠️ TODO | 1 |
 | `component.modal.border-radius` | dimension | → `foundation.radius.xl` | ⚠️ TODO | 1 |
+| `component.modal.border-width` | dimension | → `semantic.border.width.default` | ⚠️ TODO | 1 |
+| `component.modal.close-border-radius` | dimension | → `foundation.radius.sm` | ⚠️ TODO | 1 |
+| `component.modal.close-padding` | dimension | → `semantic.space.gap.xs` | ⚠️ TODO | 1 |
+| `component.modal.footer-gap` | dimension | → `semantic.space.gap.sm` | ⚠️ TODO | 1 |
+| `component.modal.footer-padding-top` | dimension | → `semantic.space.gap.sm` | ⚠️ TODO | 1 |
 | `component.modal.header-gap` | dimension | → `semantic.space.gap.sm` | ⚠️ TODO | 1 |
+| `component.modal.header-padding-bottom` | dimension | → `semantic.space.gap.sm` | ⚠️ TODO | 1 |
 | `component.modal.max-width.lg` | dimension | — | ⚠️ TODO | 1 |
 | `component.modal.max-width.md` | dimension | — | ⚠️ TODO | 1 |
 | `component.modal.max-width.sm` | dimension | — | ⚠️ TODO | 1 |
-| `component.modal.padding` | dimension | → `semantic.space.inset.lg` | ⚠️ TODO | 0 |
+| `component.modal.overlay-padding` | dimension | → `semantic.space.inset.lg` | ⚠️ TODO | 1 |
+| `component.modal.padding` | dimension | → `semantic.space.inset.lg` | ⚠️ TODO | 1 |
+| `component.modal.shadow` | shadow | → `foundation.shadow.xl` | ⚠️ TODO | 1 |
+| `component.modal.title-font-size` | dimension | → `semantic.typography.body.font-size.lg` | ⚠️ TODO | 1 |
+| `component.modal.title-font-weight` | number | → `semantic.typography.body.font-weight.semibold` | ⚠️ TODO | 1 |
+| `component.modal.title-line-height` | number | → `semantic.typography.body.line-height.sm` | ⚠️ TODO | 1 |
+| `component.modal.transition-duration` | duration | → `foundation.duration.fast` | ⚠️ TODO | 1 |
+| `component.modal.transition-timing` | cubicBezier | → `foundation.ease.default` | ⚠️ TODO | 1 |
+| `component.modal.viewport-offset` | dimension | → `semantic.space.section.sm` | ⚠️ TODO | 1 |
+| `component.modal.z-index` | number | → `foundation.z.50` | ⚠️ TODO | 1 |
 
 ### component.radio
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
+| `component.radio.border-radius-full` | dimension | → `foundation.radius.full` | ⚠️ TODO | 1 |
 | `component.radio.border-width` | dimension | → `semantic.border.width.default` | ⚠️ TODO | 1 |
-| `component.radio.control-size.lg` | dimension | — | ⚠️ TODO | 1 |
-| `component.radio.control-size.md` | dimension | — | ⚠️ TODO | 1 |
-| `component.radio.control-size.sm` | dimension | — | ⚠️ TODO | 1 |
-| `component.radio.dot-size.lg` | dimension | — | ⚠️ TODO | 1 |
-| `component.radio.dot-size.md` | dimension | — | ⚠️ TODO | 1 |
-| `component.radio.dot-size.sm` | dimension | — | ⚠️ TODO | 1 |
-| `component.radio.font-size` | dimension | — | ⚠️ TODO | 1 |
+| `component.radio.content-gap` | dimension | → `semantic.space.gap.xs` | ⚠️ TODO | 1 |
+| `component.radio.control-size.lg` | dimension | → `foundation.spacing.6` | ⚠️ TODO | 1 |
+| `component.radio.control-size.md` | dimension | → `foundation.spacing.5` | ⚠️ TODO | 1 |
+| `component.radio.control-size.sm` | dimension | → `foundation.spacing.4` | ⚠️ TODO | 1 |
+| `component.radio.description-font-size` | dimension | → `semantic.typography.body.font-size.sm` | ⚠️ TODO | 1 |
+| `component.radio.description-font-weight` | number | → `semantic.typography.body.font-weight.regular` | ⚠️ TODO | 1 |
+| `component.radio.description-line-height` | number | → `semantic.typography.body.line-height.md` | ⚠️ TODO | 1 |
+| `component.radio.dot-size.lg` | dimension | → `foundation.spacing.2-5` | ⚠️ TODO | 1 |
+| `component.radio.dot-size.md` | dimension | → `foundation.spacing.2` | ⚠️ TODO | 1 |
+| `component.radio.dot-size.sm` | dimension | → `foundation.spacing.1-5` | ⚠️ TODO | 1 |
+| `component.radio.error-font-size` | dimension | → `semantic.typography.body.font-size.xs` | ⚠️ TODO | 1 |
+| `component.radio.error-margin-top` | dimension | → `semantic.space.gap.xs` | ⚠️ TODO | 1 |
+| `component.radio.font-size` | dimension | → `foundation.typography.font.size.sm` | ⚠️ TODO | 1 |
 | `component.radio.gap` | dimension | → `semantic.space.gap.sm` | ⚠️ TODO | 1 |
-| `component.radio.min-target-size` | dimension | — | ⚠️ TODO | 1 |
+| `component.radio.group-gap` | dimension | → `semantic.space.gap.xs` | ⚠️ TODO | 1 |
+| `component.radio.group-legend-margin-bottom` | dimension | → `semantic.space.gap.sm` | ⚠️ TODO | 1 |
+| `component.radio.group-margin-bottom` | dimension | → `semantic.space.inset.lg` | ⚠️ TODO | 1 |
+| `component.radio.helper-font-size` | dimension | → `semantic.typography.body.font-size.xs` | ⚠️ TODO | 1 |
+| `component.radio.helper-line-height` | number | → `semantic.typography.body.line-height.md` | ⚠️ TODO | 1 |
+| `component.radio.label-border-radius` | dimension | → `foundation.radius.sm` | ⚠️ TODO | 1 |
+| `component.radio.label-font-size` | dimension | → `semantic.typography.body.font-size.sm` | ⚠️ TODO | 1 |
+| `component.radio.label-font-weight` | number | → `semantic.typography.body.font-weight.medium` | ⚠️ TODO | 1 |
+| `component.radio.label-line-height` | number | → `semantic.typography.body.line-height.sm` | ⚠️ TODO | 1 |
+| `component.radio.label-padding-x` | dimension | → `semantic.space.gap.xs` | ⚠️ TODO | 1 |
+| `component.radio.label-padding-y` | dimension | — | ⚠️ TODO | 1 |
+| `component.radio.legend-font-size` | dimension | → `semantic.typography.body.font-size.sm` | ⚠️ TODO | 1 |
+| `component.radio.legend-font-weight` | number | → `semantic.typography.body.font-weight.medium` | ⚠️ TODO | 1 |
+| `component.radio.min-target-size` | dimension | → `semantic.size.control.min-target` | ⚠️ TODO | 1 |
+| `component.radio.opacity-disabled` | number | → `foundation.opacity.50` | ⚠️ TODO | 1 |
+| `component.radio.transition-duration` | duration | → `foundation.duration.fast` | ⚠️ TODO | 1 |
+| `component.radio.transition-timing` | cubicBezier | → `foundation.ease.default` | ⚠️ TODO | 1 |
 
 ### component.select
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `component.select.arrow-offset.lg` | dimension | — | ⚠️ TODO | 1 |
-| `component.select.arrow-offset.md` | dimension | — | ⚠️ TODO | 1 |
-| `component.select.arrow-offset.sm` | dimension | — | ⚠️ TODO | 1 |
-| `component.select.arrow-size` | dimension | — | ⚠️ TODO | 1 |
+| `component.select.arrow-offset.lg` | dimension | → `foundation.spacing.4` | ⚠️ TODO | 1 |
+| `component.select.arrow-offset.md` | dimension | → `foundation.spacing.3` | ⚠️ TODO | 1 |
+| `component.select.arrow-offset.sm` | dimension | → `foundation.spacing.2` | ⚠️ TODO | 1 |
+| `component.select.arrow-size` | dimension | → `foundation.spacing.4` | ⚠️ TODO | 1 |
 | `component.select.border-radius` | dimension | → `semantic.radius.component` | ⚠️ TODO | 1 |
 | `component.select.border-width` | dimension | → `semantic.border.width.default` | ⚠️ TODO | 1 |
+| `component.select.field-inner-padding-x` | dimension | → `semantic.space.gap.xs` | ⚠️ TODO | 1 |
 | `component.select.font-size.lg` | dimension | → `semantic.typography.control.font-size.lg` | ⚠️ TODO | 1 |
 | `component.select.font-size.md` | dimension | → `semantic.typography.control.font-size.md` | ⚠️ TODO | 1 |
 | `component.select.font-size.sm` | dimension | → `semantic.typography.control.font-size.sm` | ⚠️ TODO | 1 |
@@ -667,26 +812,47 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.select.padding-y.lg` | dimension | → `semantic.space.control.padding-y.lg` | ⚠️ TODO | 0 |
 | `component.select.padding-y.md` | dimension | → `semantic.space.control.padding-y.md` | ⚠️ TODO | 0 |
 | `component.select.padding-y.sm` | dimension | → `semantic.space.control.padding-y.sm` | ⚠️ TODO | 0 |
+| `component.select.transition-duration` | duration | → `foundation.duration.fast` | ⚠️ TODO | 1 |
+| `component.select.transition-timing` | cubicBezier | → `foundation.ease.default` | ⚠️ TODO | 1 |
 
 ### component.skeleton
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `component.skeleton.circle-size` | dimension | — | ⚠️ TODO | 1 |
+| `component.skeleton.circle-border-radius` | dimension | → `foundation.radius.full` | ⚠️ TODO | 1 |
+| `component.skeleton.circle-size` | dimension | → `foundation.spacing.10` | ⚠️ TODO | 1 |
 | `component.skeleton.fill` | color | → `semantic.state.disabled.background` | ⚠️ TODO | 1 |
+| `component.skeleton.rect-border-radius` | dimension | → `semantic.radius.component` | ⚠️ TODO | 1 |
 | `component.skeleton.rect-height` | dimension | — | ⚠️ TODO | 1 |
-| `component.skeleton.text-height` | dimension | — | ⚠️ TODO | 1 |
+| `component.skeleton.text-border-radius` | dimension | → `foundation.radius.sm` | ⚠️ TODO | 1 |
+| `component.skeleton.text-height` | dimension | → `foundation.spacing.4` | ⚠️ TODO | 1 |
 
 ### component.spinner
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `component.spinner.size.lg` | dimension | — | ⚠️ TODO | 1 |
-| `component.spinner.size.md` | dimension | — | ⚠️ TODO | 1 |
-| `component.spinner.size.sm` | dimension | — | ⚠️ TODO | 1 |
+| `component.spinner.border-radius` | dimension | → `foundation.radius.full` | ⚠️ TODO | 1 |
+| `component.spinner.size.lg` | dimension | → `foundation.spacing.8` | ⚠️ TODO | 1 |
+| `component.spinner.size.md` | dimension | → `foundation.spacing.6` | ⚠️ TODO | 1 |
+| `component.spinner.size.sm` | dimension | → `foundation.spacing.4` | ⚠️ TODO | 1 |
 | `component.spinner.stroke-width.lg` | dimension | — | ⚠️ TODO | 1 |
-| `component.spinner.stroke-width.md` | dimension | — | ⚠️ TODO | 1 |
+| `component.spinner.stroke-width.md` | dimension | → `foundation.spacing.0-5` | ⚠️ TODO | 1 |
 | `component.spinner.stroke-width.sm` | dimension | — | ⚠️ TODO | 1 |
+
+### component.tabs
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `component.tabs.active-border-width` | dimension | → `semantic.border.width.strong` | ⚠️ TODO | 1 |
+| `component.tabs.border-width` | dimension | → `semantic.border.width.default` | ⚠️ TODO | 1 |
+| `component.tabs.focus-border-radius` | dimension | → `foundation.radius.sm` | ⚠️ TODO | 1 |
+| `component.tabs.font-size` | dimension | → `semantic.typography.body.font-size.sm` | ⚠️ TODO | 1 |
+| `component.tabs.font-weight` | number | → `semantic.typography.body.font-weight.medium` | ⚠️ TODO | 1 |
+| `component.tabs.padding-x` | dimension | → `semantic.space.inset.lg` | ⚠️ TODO | 1 |
+| `component.tabs.padding-y` | dimension | → `semantic.space.gap.sm` | ⚠️ TODO | 1 |
+| `component.tabs.panel-padding-y` | dimension | → `semantic.space.inset.lg` | ⚠️ TODO | 1 |
+| `component.tabs.transition-duration` | duration | → `foundation.duration.fast` | ⚠️ TODO | 1 |
+| `component.tabs.transition-timing` | cubicBezier | → `foundation.ease.default` | ⚠️ TODO | 1 |
 
 ### component.textarea
 
@@ -694,11 +860,15 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 |---|---|---|---|---|
 | `component.textarea.border-radius` | dimension | → `semantic.radius.component` | ⚠️ TODO | 1 |
 | `component.textarea.border-width` | dimension | → `semantic.border.width.default` | ⚠️ TODO | 1 |
+| `component.textarea.counter-font-size` | dimension | → `semantic.typography.body.font-size.xs` | ⚠️ TODO | 1 |
+| `component.textarea.counter-font-weight` | number | → `semantic.typography.body.font-weight.medium` | ⚠️ TODO | 1 |
+| `component.textarea.field-inner-padding-x` | dimension | → `semantic.space.gap.xs` | ⚠️ TODO | 1 |
+| `component.textarea.field-line-height` | number | → `semantic.typography.body.line-height.md` | ⚠️ TODO | 1 |
 | `component.textarea.font-size.lg` | dimension | → `semantic.typography.control.font-size.lg` | ⚠️ TODO | 1 |
 | `component.textarea.font-size.md` | dimension | → `semantic.typography.control.font-size.md` | ⚠️ TODO | 1 |
 | `component.textarea.font-size.sm` | dimension | → `semantic.typography.control.font-size.sm` | ⚠️ TODO | 1 |
 | `component.textarea.min-height.lg` | dimension | — | ⚠️ TODO | 1 |
-| `component.textarea.min-height.md` | dimension | — | ⚠️ TODO | 1 |
+| `component.textarea.min-height.md` | dimension | → `foundation.spacing.20` | ⚠️ TODO | 1 |
 | `component.textarea.min-height.sm` | dimension | — | ⚠️ TODO | 1 |
 | `component.textarea.padding-x.lg` | dimension | → `semantic.space.control.padding-x.lg` | ⚠️ TODO | 1 |
 | `component.textarea.padding-x.md` | dimension | → `semantic.space.control.padding-x.md` | ⚠️ TODO | 1 |
@@ -706,23 +876,54 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.textarea.padding-y.lg` | dimension | → `semantic.space.control.padding-y.lg` | ⚠️ TODO | 1 |
 | `component.textarea.padding-y.md` | dimension | → `semantic.space.control.padding-y.md` | ⚠️ TODO | 1 |
 | `component.textarea.padding-y.sm` | dimension | → `semantic.space.control.padding-y.sm` | ⚠️ TODO | 1 |
+| `component.textarea.transition-duration` | duration | → `foundation.duration.fast` | ⚠️ TODO | 1 |
+| `component.textarea.transition-timing` | cubicBezier | → `foundation.ease.default` | ⚠️ TODO | 1 |
 
 ### component.toggle
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `component.toggle.font-size` | dimension | — | ⚠️ TODO | 1 |
+| `component.toggle.border-radius-full` | dimension | → `foundation.radius.full` | ⚠️ TODO | 1 |
+| `component.toggle.border-width` | dimension | → `semantic.border.width.default` | ⚠️ TODO | 1 |
+| `component.toggle.content-gap` | dimension | → `semantic.space.gap.xs` | ⚠️ TODO | 1 |
+| `component.toggle.description-font-size` | dimension | → `semantic.typography.body.font-size.sm` | ⚠️ TODO | 1 |
+| `component.toggle.description-font-weight` | number | → `semantic.typography.body.font-weight.regular` | ⚠️ TODO | 1 |
+| `component.toggle.description-line-height` | number | → `semantic.typography.body.line-height.md` | ⚠️ TODO | 1 |
+| `component.toggle.font-size` | dimension | → `foundation.typography.font.size.sm` | ⚠️ TODO | 1 |
 | `component.toggle.gap` | dimension | → `semantic.space.gap.sm` | ⚠️ TODO | 1 |
-| `component.toggle.min-target-size` | dimension | — | ⚠️ TODO | 1 |
+| `component.toggle.helper-font-size` | dimension | → `semantic.typography.body.font-size.xs` | ⚠️ TODO | 1 |
+| `component.toggle.helper-line-height` | number | → `semantic.typography.body.line-height.md` | ⚠️ TODO | 1 |
+| `component.toggle.label-border-radius` | dimension | → `foundation.radius.sm` | ⚠️ TODO | 1 |
+| `component.toggle.label-font-size` | dimension | → `semantic.typography.body.font-size.sm` | ⚠️ TODO | 1 |
+| `component.toggle.label-font-weight` | number | → `semantic.typography.body.font-weight.medium` | ⚠️ TODO | 1 |
+| `component.toggle.label-line-height` | number | → `semantic.typography.body.line-height.sm` | ⚠️ TODO | 1 |
+| `component.toggle.label-padding-x` | dimension | → `semantic.space.gap.xs` | ⚠️ TODO | 1 |
+| `component.toggle.label-padding-y` | dimension | — | ⚠️ TODO | 1 |
+| `component.toggle.min-target-size` | dimension | → `semantic.size.control.min-target` | ⚠️ TODO | 1 |
+| `component.toggle.opacity-disabled` | number | → `foundation.opacity.50` | ⚠️ TODO | 1 |
 | `component.toggle.thumb-size.lg` | dimension | — | ⚠️ TODO | 1 |
-| `component.toggle.thumb-size.md` | dimension | — | ⚠️ TODO | 1 |
-| `component.toggle.thumb-size.sm` | dimension | — | ⚠️ TODO | 1 |
-| `component.toggle.track-height.lg` | dimension | — | ⚠️ TODO | 1 |
-| `component.toggle.track-height.md` | dimension | — | ⚠️ TODO | 1 |
-| `component.toggle.track-height.sm` | dimension | — | ⚠️ TODO | 1 |
-| `component.toggle.track-width.lg` | dimension | — | ⚠️ TODO | 1 |
-| `component.toggle.track-width.md` | dimension | — | ⚠️ TODO | 1 |
-| `component.toggle.track-width.sm` | dimension | — | ⚠️ TODO | 1 |
+| `component.toggle.thumb-size.md` | dimension | → `foundation.spacing.3-5` | ⚠️ TODO | 1 |
+| `component.toggle.thumb-size.sm` | dimension | → `foundation.spacing.2-5` | ⚠️ TODO | 1 |
+| `component.toggle.track-height.lg` | dimension | → `foundation.spacing.6` | ⚠️ TODO | 1 |
+| `component.toggle.track-height.md` | dimension | → `foundation.spacing.5` | ⚠️ TODO | 1 |
+| `component.toggle.track-height.sm` | dimension | → `foundation.spacing.4` | ⚠️ TODO | 1 |
+| `component.toggle.track-width.lg` | dimension | → `foundation.spacing.11` | ⚠️ TODO | 1 |
+| `component.toggle.track-width.md` | dimension | → `foundation.spacing.9` | ⚠️ TODO | 1 |
+| `component.toggle.track-width.sm` | dimension | → `foundation.spacing.7` | ⚠️ TODO | 1 |
+| `component.toggle.transition-duration` | duration | → `foundation.duration.fast` | ⚠️ TODO | 1 |
+| `component.toggle.transition-timing` | cubicBezier | → `foundation.ease.default` | ⚠️ TODO | 1 |
+
+### component.tooltip
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `component.tooltip.border-radius` | dimension | → `foundation.radius.sm` | ⚠️ TODO | 1 |
+| `component.tooltip.font-size` | dimension | → `semantic.typography.body.font-size.xs` | ⚠️ TODO | 1 |
+| `component.tooltip.padding-x` | dimension | → `semantic.space.gap.sm` | ⚠️ TODO | 1 |
+| `component.tooltip.padding-y` | dimension | → `semantic.space.gap.xs` | ⚠️ TODO | 1 |
+| `component.tooltip.transition-duration` | duration | → `foundation.duration.fast` | ⚠️ TODO | 1 |
+| `component.tooltip.transition-timing` | cubicBezier | → `foundation.ease.default` | ⚠️ TODO | 1 |
+| `component.tooltip.z-index` | number | → `foundation.z.50` | ⚠️ TODO | 1 |
 
 ---
 
@@ -752,12 +953,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/reset.css` (1×)
-    - `css/components/alert.css` (4×)
-    - `css/components/card.css` (2×)
-    - `css/components/divider.css` (2×)
-    - `css/components/modal.css` (1×)
-    - `css/components/tabs.css` (1×)
-    - `css/components/toggle.css` (1×)
     - `css/tokens/generated/theme-dark.css` (2×)
     - `css/tokens/generated/theme-light.css` (2×)
   - Tokens que referenciam: `semantic.border.width.subtle`, `semantic.border.width.default`, `semantic.border.width.subtle`, `semantic.border.width.default`
@@ -2471,17 +2666,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/components/alert.css` (1×)
-    - `css/components/button.css` (4×)
-    - `css/components/checkbox.css` (4×)
-    - `css/components/input.css` (2×)
-    - `css/components/modal.css` (2×)
-    - `css/components/radio.css` (4×)
-    - `css/components/select.css` (2×)
-    - `css/components/tabs.css` (2×)
-    - `css/components/textarea.css` (2×)
-    - `css/components/toggle.css` (5×)
-    - `css/components/tooltip.css` (1×)
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.motion.duration.fast`, `semantic.motion.duration.fast`
 
 ### `foundation.duration.normal`
 
@@ -2492,7 +2679,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.motion.duration.normal`, `semantic.motion.duration.normal`
 
 ### `foundation.duration.slow`
 
@@ -2503,7 +2693,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.motion.duration.slow`, `semantic.motion.duration.slow`
 
 ### `foundation.ease.default`
 
@@ -2515,17 +2708,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/components/alert.css` (1×)
-    - `css/components/button.css` (4×)
-    - `css/components/checkbox.css` (4×)
-    - `css/components/input.css` (2×)
-    - `css/components/modal.css` (2×)
-    - `css/components/radio.css` (4×)
-    - `css/components/select.css` (2×)
-    - `css/components/tabs.css` (2×)
-    - `css/components/textarea.css` (2×)
-    - `css/components/toggle.css` (5×)
-    - `css/components/tooltip.css` (1×)
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.motion.ease.default`, `semantic.motion.ease.default`
 
 ### `foundation.ease.in`
 
@@ -2625,10 +2810,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/components/button.css` (1×)
-    - `css/components/checkbox.css` (1×)
-    - `css/components/radio.css` (2×)
-    - `css/components/toggle.css` (1×)
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.opacity.disabled`, `semantic.opacity.disabled`
 
 ### `foundation.opacity.75`
 
@@ -2662,12 +2846,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/components/avatar.css` (1×)
-    - `css/components/badge.css` (1×)
-    - `css/components/radio.css` (2×)
-    - `css/components/skeleton.css` (1×)
-    - `css/components/spinner.css` (1×)
-    - `css/components/toggle.css` (2×)
+    - `css/tokens/generated/component.css` (6×)
+  - Tokens que referenciam: `component.avatar.border-radius`, `component.badge.border-radius`, `component.radio.border-radius-full`, `component.skeleton.circle-border-radius`, `component.spinner.border-radius`, `component.toggle.border-radius-full`
 
 ### `foundation.radius.lg`
 
@@ -2680,7 +2860,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/reset.css` (1×)
-    - `css/components/card.css` (1×)
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.card.border-radius`
 
 ### `foundation.radius.md`
 
@@ -2692,7 +2873,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/components/skeleton.css` (1×)
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
   - Tokens que referenciam: `semantic.radius.component`, `semantic.radius.component`
@@ -2719,17 +2899,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/reset.css` (1×)
-    - `css/components/alert.css` (1×)
-    - `css/components/breadcrumb.css` (1×)
-    - `css/components/checkbox.css` (1×)
-    - `css/components/modal.css` (1×)
-    - `css/components/radio.css` (1×)
-    - `css/components/skeleton.css` (1×)
-    - `css/components/tabs.css` (2×)
-    - `css/components/toggle.css` (1×)
-    - `css/components/tooltip.css` (1×)
-    - `css/tokens/generated/component.css` (1×)
-  - Tokens que referenciam: `component.checkbox.border-radius`
+    - `css/tokens/generated/component.css` (8×)
+  - Tokens que referenciam: `component.alert.focus-border-radius`, `component.breadcrumb.focus-border-radius`, `component.checkbox.border-radius`, `component.radio.label-border-radius`, `component.skeleton.text-border-radius`, `component.tabs.focus-border-radius`, `component.toggle.label-border-radius`, `component.tooltip.border-radius`
 
 ### `foundation.radius.xl`
 
@@ -2812,8 +2983,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/components/card.css` (1×)
+    - `css/tokens/generated/component.css` (1×)
     - `css/utilities/elevation.css` (1×)
+  - Tokens que referenciam: `component.card.shadow-elevated`
 
 ### `foundation.shadow.xl`
 
@@ -2825,8 +2997,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/components/modal.css` (1×)
+    - `css/tokens/generated/component.css` (1×)
     - `css/utilities/elevation.css` (1×)
+  - Tokens que referenciam: `component.modal.shadow`
 
 ### `foundation.shadow.xs`
 
@@ -2850,7 +3023,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/reset.css` (1×)
-    - `css/components/badge.css` (1×)
+    - `css/tokens/generated/component.css` (1×)
     - `css/tokens/generated/theme-dark.css` (2×)
     - `css/tokens/generated/theme-light.css` (2×)
 
@@ -2865,10 +3038,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/reset.css` (1×)
-    - `css/components/badge.css` (1×)
+    - `css/tokens/generated/component.css` (1×)
     - `css/tokens/generated/theme-dark.css` (2×)
     - `css/tokens/generated/theme-light.css` (2×)
-  - Tokens que referenciam: `semantic.space.inset.2xs`, `semantic.space.gap.2xs`, `semantic.space.inset.2xs`, `semantic.space.gap.2xs`
+  - Tokens que referenciam: `component.spinner.stroke-width.md`, `semantic.space.inset.2xs`, `semantic.space.gap.2xs`, `semantic.space.inset.2xs`, `semantic.space.gap.2xs`
 
 ### `foundation.spacing.1`
 
@@ -2881,18 +3054,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/reset.css` (1×)
-    - `css/components/alert.css` (1×)
-    - `css/components/checkbox.css` (4×)
-    - `css/components/input.css` (3×)
-    - `css/components/modal.css` (1×)
-    - `css/components/radio.css` (5×)
-    - `css/components/select.css` (1×)
-    - `css/components/textarea.css` (3×)
-    - `css/components/toggle.css` (3×)
-    - `css/components/tooltip.css` (1×)
+    - `css/tokens/generated/component.css` (3×)
     - `css/tokens/generated/theme-dark.css` (3×)
     - `css/tokens/generated/theme-light.css` (3×)
-  - Tokens que referenciam: `semantic.space.inset.xs`, `semantic.space.gap.xs`, `semantic.space.component.xs`, `semantic.space.inset.xs`, `semantic.space.gap.xs`, `semantic.space.component.xs`
+  - Tokens que referenciam: `component.checkbox.check-width.sm`, `semantic.space.inset.xs`, `semantic.space.gap.xs`, `semantic.space.component.xs`, `semantic.space.inset.xs`, `semantic.space.gap.xs`, `semantic.space.component.xs`
 
 ### `foundation.spacing.1-5`
 
@@ -2904,9 +3069,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/components/checkbox.css` (1×)
-    - `css/components/radio.css` (1×)
-    - `css/components/toggle.css` (1×)
+    - `css/tokens/generated/component.css` (2×)
+  - Tokens que referenciam: `component.checkbox.check-width.lg`, `component.radio.dot-size.sm`
 
 ### `foundation.spacing.10`
 
@@ -2918,9 +3082,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
+    - `css/tokens/generated/component.css` (2×)
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.size.control.md`, `semantic.size.control.md`
+  - Tokens que referenciam: `component.avatar.size.md`, `component.skeleton.circle-size`, `semantic.size.control.md`, `semantic.size.control.md`
 
 ### `foundation.spacing.11`
 
@@ -2932,9 +3097,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
+    - `css/tokens/generated/component.css` (1×)
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.size.control.min-target`, `semantic.size.control.min-target`
+  - Tokens que referenciam: `component.toggle.track-width.lg`, `semantic.size.control.min-target`, `semantic.size.control.min-target`
 
 ### `foundation.spacing.12`
 
@@ -2959,7 +3125,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.avatar.size.lg`
 
 ### `foundation.spacing.16`
 
@@ -2985,16 +3153,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/components/alert.css` (1×)
-    - `css/components/badge.css` (1×)
-    - `css/components/card.css` (2×)
-    - `css/components/modal.css` (3×)
-    - `css/components/radio.css` (1×)
-    - `css/components/tabs.css` (1×)
-    - `css/components/tooltip.css` (1×)
+    - `css/tokens/generated/component.css` (6×)
     - `css/tokens/generated/theme-dark.css` (5×)
     - `css/tokens/generated/theme-light.css` (5×)
-  - Tokens que referenciam: `semantic.space.inset.sm`, `semantic.space.gap.sm`, `semantic.space.component.sm`, `semantic.space.control.padding-y.sm`, `semantic.space.inset.sm`, `semantic.space.gap.sm`, `semantic.space.component.sm`, `semantic.space.control.padding-y.sm`
+  - Tokens que referenciam: `component.checkbox.check-height.sm`, `component.radio.dot-size.md`, `component.select.arrow-offset.sm`, `semantic.space.inset.sm`, `semantic.space.gap.sm`, `semantic.space.component.sm`, `semantic.space.control.padding-y.sm`, `semantic.space.inset.sm`, `semantic.space.gap.sm`, `semantic.space.component.sm`, `semantic.space.control.padding-y.sm`
 
 ### `foundation.spacing.2-5`
 
@@ -3006,9 +3168,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
+    - `css/tokens/generated/component.css` (3×)
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.space.control.padding-y.md`, `semantic.space.control.padding-y.md`
+  - Tokens que referenciam: `component.checkbox.check-height.md`, `component.radio.dot-size.lg`, `component.toggle.thumb-size.sm`, `semantic.space.control.padding-y.md`, `semantic.space.control.padding-y.md`
 
 ### `foundation.spacing.20`
 
@@ -3020,9 +3183,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
+    - `css/tokens/generated/component.css` (1×)
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.space.section.xl`, `semantic.space.section.xl`
+  - Tokens que referenciam: `component.textarea.min-height.md`, `semantic.space.section.xl`, `semantic.space.section.xl`
 
 ### `foundation.spacing.24`
 
@@ -3046,10 +3210,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/reset.css` (1×)
-    - `css/components/alert.css` (1×)
+    - `css/tokens/generated/component.css` (3×)
     - `css/tokens/generated/theme-dark.css` (5×)
     - `css/tokens/generated/theme-light.css` (5×)
-  - Tokens que referenciam: `semantic.space.inset.md`, `semantic.space.gap.md`, `semantic.space.component.md`, `semantic.space.control.padding-x.sm`, `semantic.space.control.padding-y.lg`, `semantic.space.inset.md`, `semantic.space.gap.md`, `semantic.space.component.md`, `semantic.space.control.padding-x.sm`, `semantic.space.control.padding-y.lg`
+  - Tokens que referenciam: `component.checkbox.check-height.lg`, `component.select.arrow-offset.md`, `semantic.space.inset.md`, `semantic.space.gap.md`, `semantic.space.component.md`, `semantic.space.control.padding-x.sm`, `semantic.space.control.padding-y.lg`, `semantic.space.inset.md`, `semantic.space.gap.md`, `semantic.space.component.md`, `semantic.space.control.padding-x.sm`, `semantic.space.control.padding-y.lg`
 
 ### `foundation.spacing.3-5`
 
@@ -3060,7 +3224,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.toggle.thumb-size.md`
 
 ### `foundation.spacing.4`
 
@@ -3073,14 +3239,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/reset.css` (3×)
-    - `css/components/card.css` (4×)
-    - `css/components/divider.css` (2×)
-    - `css/components/modal.css` (7×)
-    - `css/components/radio.css` (1×)
-    - `css/components/tabs.css` (2×)
+    - `css/tokens/generated/component.css` (8×)
     - `css/tokens/generated/theme-dark.css` (6×)
     - `css/tokens/generated/theme-light.css` (6×)
-  - Tokens que referenciam: `semantic.space.inset.lg`, `semantic.space.gap.lg`, `semantic.space.component.lg`, `semantic.space.control.padding-x.md`, `semantic.size.control.icon.sm`, `semantic.typography.control.line-height.sm`, `semantic.space.inset.lg`, `semantic.space.gap.lg`, `semantic.space.component.lg`, `semantic.space.control.padding-x.md`, `semantic.size.control.icon.sm`, `semantic.typography.control.line-height.sm`
+  - Tokens que referenciam: `component.avatar.icon-size.sm`, `component.checkbox.control-size.sm`, `component.radio.control-size.sm`, `component.select.arrow-size`, `component.select.arrow-offset.lg`, `component.skeleton.text-height`, `component.spinner.size.sm`, `component.toggle.track-height.sm`, `semantic.space.inset.lg`, `semantic.space.gap.lg`, `semantic.space.component.lg`, `semantic.space.control.padding-x.md`, `semantic.size.control.icon.sm`, `semantic.typography.control.line-height.sm`, `semantic.space.inset.lg`, `semantic.space.gap.lg`, `semantic.space.component.lg`, `semantic.space.control.padding-x.md`, `semantic.size.control.icon.sm`, `semantic.typography.control.line-height.sm`
 
 ### `foundation.spacing.5`
 
@@ -3092,9 +3254,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
+    - `css/tokens/generated/component.css` (4×)
     - `css/tokens/generated/theme-dark.css` (4×)
     - `css/tokens/generated/theme-light.css` (4×)
-  - Tokens que referenciam: `semantic.space.component.xl`, `semantic.space.control.padding-x.lg`, `semantic.size.control.icon.md`, `semantic.typography.control.line-height.md`, `semantic.space.component.xl`, `semantic.space.control.padding-x.lg`, `semantic.size.control.icon.md`, `semantic.typography.control.line-height.md`
+  - Tokens que referenciam: `component.avatar.icon-size.md`, `component.checkbox.control-size.md`, `component.radio.control-size.md`, `component.toggle.track-height.md`, `semantic.space.component.xl`, `semantic.space.control.padding-x.lg`, `semantic.size.control.icon.md`, `semantic.typography.control.line-height.md`, `semantic.space.component.xl`, `semantic.space.control.padding-x.lg`, `semantic.size.control.icon.md`, `semantic.typography.control.line-height.md`
 
 ### `foundation.spacing.6`
 
@@ -3106,9 +3269,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
+    - `css/tokens/generated/component.css` (4×)
     - `css/tokens/generated/theme-dark.css` (5×)
     - `css/tokens/generated/theme-light.css` (5×)
-  - Tokens que referenciam: `semantic.space.inset.xl`, `semantic.space.gap.xl`, `semantic.space.component.2xl`, `semantic.size.control.icon.lg`, `semantic.typography.control.line-height.lg`, `semantic.space.inset.xl`, `semantic.space.gap.xl`, `semantic.space.component.2xl`, `semantic.size.control.icon.lg`, `semantic.typography.control.line-height.lg`
+  - Tokens que referenciam: `component.checkbox.control-size.lg`, `component.radio.control-size.lg`, `component.spinner.size.md`, `component.toggle.track-height.lg`, `semantic.space.inset.xl`, `semantic.space.gap.xl`, `semantic.space.component.2xl`, `semantic.size.control.icon.lg`, `semantic.typography.control.line-height.lg`, `semantic.space.inset.xl`, `semantic.space.gap.xl`, `semantic.space.component.2xl`, `semantic.size.control.icon.lg`, `semantic.typography.control.line-height.lg`
 
 ### `foundation.spacing.7`
 
@@ -3119,7 +3283,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/component.css` (2×)
+  - Tokens que referenciam: `component.avatar.icon-size.lg`, `component.toggle.track-width.sm`
 
 ### `foundation.spacing.8`
 
@@ -3131,10 +3297,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/components/modal.css` (1×)
+    - `css/tokens/generated/component.css` (2×)
     - `css/tokens/generated/theme-dark.css` (2×)
     - `css/tokens/generated/theme-light.css` (2×)
-  - Tokens que referenciam: `semantic.space.section.sm`, `semantic.size.control.sm`, `semantic.space.section.sm`, `semantic.size.control.sm`
+  - Tokens que referenciam: `component.avatar.size.sm`, `component.spinner.size.lg`, `semantic.space.section.sm`, `semantic.size.control.sm`, `semantic.space.section.sm`, `semantic.size.control.sm`
 
 ### `foundation.spacing.9`
 
@@ -3145,7 +3311,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.toggle.track-width.md`
 
 ### `foundation.typography.font.family.display`
 
@@ -3288,7 +3456,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `semantic.typography.body.font-size.lg`, `semantic.typography.body.font-size.lg`
+  - Tokens que referenciam: `component.avatar.font-size.lg`, `semantic.typography.body.font-size.lg`, `semantic.typography.body.font-size.lg`
 
 ### `foundation.typography.font.size.md`
 
@@ -3310,7 +3478,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `semantic.typography.control.font-size.sm`, `semantic.typography.control.font-size.md`, `semantic.typography.body.font-size.sm`, `semantic.typography.control.font-size.sm`, `semantic.typography.control.font-size.md`, `semantic.typography.body.font-size.sm`
+  - Tokens que referenciam: `component.avatar.font-size.md`, `component.checkbox.font-size`, `component.radio.font-size`, `component.toggle.font-size`, `semantic.typography.control.font-size.sm`, `semantic.typography.control.font-size.md`, `semantic.typography.body.font-size.sm`, `semantic.typography.control.font-size.sm`, `semantic.typography.control.font-size.md`, `semantic.typography.body.font-size.sm`
 
 ### `foundation.typography.font.size.xl`
 
@@ -3332,7 +3500,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `semantic.typography.body.font-size.xs`, `semantic.typography.body.font-size.xs`
+  - Tokens que referenciam: `component.avatar.font-size.sm`, `semantic.typography.body.font-size.xs`, `semantic.typography.body.font-size.xs`
 
 ### `foundation.typography.font.weight.bold`
 
@@ -3597,8 +3765,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/components/modal.css` (1×)
-    - `css/components/tooltip.css` (1×)
+    - `css/tokens/generated/component.css` (2×)
+  - Tokens que referenciam: `component.modal.z-index`, `component.tooltip.z-index`
 
 ### `semantic.accent.active`
 
@@ -3891,8 +4059,19 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (6×)
-  - Tokens que referenciam: `component.button.border-width`, `component.checkbox.border-width`, `component.input.border-width`, `component.radio.border-width`, `component.select.border-width`, `component.textarea.border-width`
+    - `css/components/alert.css` (4×)
+    - `css/components/button.css` (1×)
+    - `css/components/card.css` (2×)
+    - `css/components/checkbox.css` (1×)
+    - `css/components/input.css` (1×)
+    - `css/components/modal.css` (1×)
+    - `css/components/radio.css` (1×)
+    - `css/components/select.css` (1×)
+    - `css/components/tabs.css` (1×)
+    - `css/components/textarea.css` (1×)
+    - `css/components/toggle.css` (1×)
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.divider.thickness`
 
 ### `semantic.border.width.focus`
 
@@ -3916,7 +4095,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.tabs.active-border-width`
 
 ### `semantic.border.width.subtle`
 
@@ -4752,6 +4933,92 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/textarea.css` (2×)
     - `css/components/toggle.css` (1×)
 
+### `semantic.motion.duration.fast`
+
+- **Camada**: semantic
+- **Tipo**: `duration`
+- **Alias**: → `foundation.duration.fast`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/alert.css` (1×)
+    - `css/components/button.css` (4×)
+    - `css/components/checkbox.css` (4×)
+    - `css/components/input.css` (2×)
+    - `css/components/modal.css` (2×)
+    - `css/components/radio.css` (4×)
+    - `css/components/select.css` (2×)
+    - `css/components/tabs.css` (2×)
+    - `css/components/textarea.css` (2×)
+    - `css/components/toggle.css` (5×)
+    - `css/components/tooltip.css` (1×)
+
+### `semantic.motion.duration.normal`
+
+- **Camada**: semantic
+- **Tipo**: `duration`
+- **Alias**: → `foundation.duration.normal`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.motion.duration.slow`
+
+- **Camada**: semantic
+- **Tipo**: `duration`
+- **Alias**: → `foundation.duration.slow`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.motion.ease.default`
+
+- **Camada**: semantic
+- **Tipo**: `cubicBezier`
+- **Alias**: → `foundation.ease.default`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/alert.css` (1×)
+    - `css/components/button.css` (4×)
+    - `css/components/checkbox.css` (4×)
+    - `css/components/input.css` (2×)
+    - `css/components/modal.css` (2×)
+    - `css/components/radio.css` (4×)
+    - `css/components/select.css` (2×)
+    - `css/components/tabs.css` (2×)
+    - `css/components/textarea.css` (2×)
+    - `css/components/toggle.css` (5×)
+    - `css/components/tooltip.css` (1×)
+
+### `semantic.opacity.disabled`
+
+- **Camada**: semantic
+- **Tipo**: `number`
+- **Alias**: → `foundation.opacity.50`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/button.css` (1×)
+    - `css/components/checkbox.css` (1×)
+    - `css/components/radio.css` (2×)
+    - `css/components/toggle.css` (1×)
+
 ### `semantic.overlay.default`
 
 - **Camada**: semantic
@@ -4811,9 +5078,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/components/alert.css` (1×)
-    - `css/tokens/generated/component.css` (4×)
-  - Tokens que referenciam: `component.button.border-radius`, `component.input.border-radius`, `component.select.border-radius`, `component.textarea.border-radius`
+    - `css/tokens/generated/component.css` (6×)
+  - Tokens que referenciam: `component.alert.border-radius`, `component.button.border-radius`, `component.input.border-radius`, `component.select.border-radius`, `component.skeleton.rect-border-radius`, `component.textarea.border-radius`
 
 ### `semantic.size.control.icon.lg`
 
@@ -4899,8 +5165,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (1×)
-  - Tokens que referenciam: `component.button.min-target-size`
+    - `css/components/button.css` (1×)
+    - `css/components/checkbox.css` (1×)
+    - `css/components/radio.css` (1×)
+    - `css/components/toggle.css` (1×)
 
 ### `semantic.size.control.sm`
 
@@ -5095,7 +5363,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
+    - `css/tokens/generated/component.css` (1×)
     - `css/utilities/layout.css` (1×)
+  - Tokens que referenciam: `component.divider.spacing`
 
 ### `semantic.space.gap.md`
 
@@ -5121,9 +5391,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (6×)
+    - `css/tokens/generated/component.css` (15×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.button.gap`, `component.checkbox.gap`, `component.input.gap`, `component.modal.header-gap`, `component.radio.gap`, `component.toggle.gap`
+  - Tokens que referenciam: `component.alert.gap`, `component.badge.padding-x`, `component.button.gap`, `component.card.gap`, `component.checkbox.gap`, `component.input.gap`, `component.modal.header-gap`, `component.modal.footer-gap`, `component.modal.header-padding-bottom`, `component.modal.footer-padding-top`, `component.radio.gap`, `component.radio.group-legend-margin-bottom`, `component.tabs.padding-y`, `component.toggle.gap`, `component.tooltip.padding-x`
 
 ### `semantic.space.gap.xl`
 
@@ -5149,10 +5419,16 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/components/breadcrumb.css` (1×)
-    - `css/tokens/generated/component.css` (1×)
+    - `css/components/alert.css` (1×)
+    - `css/components/checkbox.css` (3×)
+    - `css/components/input.css` (2×)
+    - `css/components/radio.css` (3×)
+    - `css/components/select.css` (1×)
+    - `css/components/textarea.css` (3×)
+    - `css/components/toggle.css` (2×)
+    - `css/tokens/generated/component.css` (6×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.select.gap`
+  - Tokens que referenciam: `component.breadcrumb.gap`, `component.input.field-gap`, `component.modal.close-padding`, `component.radio.group-gap`, `component.select.gap`, `component.tooltip.padding-y`
 
 ### `semantic.space.inset.2xs`
 
@@ -5164,7 +5440,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.badge.padding-y`
 
 ### `semantic.space.inset.lg`
 
@@ -5177,8 +5455,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (1×)
-  - Tokens que referenciam: `component.modal.padding`
+    - `css/tokens/generated/component.css` (6×)
+  - Tokens que referenciam: `component.card.padding`, `component.modal.padding`, `component.modal.overlay-padding`, `component.radio.group-margin-bottom`, `component.tabs.padding-x`, `component.tabs.panel-padding-y`
 
 ### `semantic.space.inset.md`
 
@@ -5190,7 +5468,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.alert.padding`
 
 ### `semantic.space.inset.sm`
 
@@ -5262,7 +5542,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.modal.viewport-offset`
 
 ### `semantic.space.section.xl`
 
@@ -5465,7 +5747,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - Tokens que referenciam: `component.breadcrumb.font-size`, `component.radio.legend-font-size`, `component.tabs.font-size`
 
 ### `semantic.typography.body.font-size.xl`
 
@@ -5489,7 +5771,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - Tokens que referenciam: `component.badge.font-size`, `component.textarea.counter-font-size`, `component.tooltip.font-size`
 
 ### `semantic.typography.body.font-weight.bold`
 
@@ -5513,7 +5795,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - Tokens que referenciam: `component.badge.font-weight`, `component.breadcrumb.font-weight-current`, `component.button.font-weight`, `component.radio.legend-font-weight`, `component.tabs.font-weight`, `component.textarea.counter-font-weight`
 
 ### `semantic.typography.body.font-weight.regular`
 
@@ -5537,7 +5819,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - Tokens que referenciam: `component.avatar.font-weight`
 
 ### `semantic.typography.body.letter-spacing.normal`
 
@@ -5597,7 +5879,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - Tokens que referenciam: `component.badge.line-height`, `component.textarea.field-line-height`
 
 ### `semantic.typography.body.line-height.sm`
 
@@ -5707,10 +5989,153 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
+### `component.alert.border-radius`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.radius.component`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/alert.css` (1×)
+
+### `component.alert.border-width`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.border.width.default`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/alert.css` (4×)
+
+### `component.alert.content-gap`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.gap.xs`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/alert.css` (1×)
+
+### `component.alert.focus-border-radius`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.radius.sm`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/alert.css` (1×)
+
+### `component.alert.gap`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.gap.sm`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/alert.css` (1×)
+
+### `component.alert.icon-size`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/alert.css` (3×)
+
+### `component.alert.padding`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.inset.md`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/alert.css` (1×)
+
+### `component.alert.transition-duration`
+
+- **Camada**: component
+- **Tipo**: `duration`
+- **Alias**: → `foundation.duration.fast`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/alert.css` (1×)
+
+### `component.alert.transition-timing`
+
+- **Camada**: component
+- **Tipo**: `cubicBezier`
+- **Alias**: → `foundation.ease.default`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/alert.css` (1×)
+
+### `component.avatar.border-radius`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.radius.full`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/avatar.css` (1×)
+
+### `component.avatar.font-family`
+
+- **Camada**: component
+- **Tipo**: `fontFamily`
+- **Alias**: → `semantic.typography.body.font-family.sans`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/avatar.css` (1×)
+
 ### `component.avatar.font-size.lg`
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.typography.font.size.lg`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -5723,6 +6148,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.typography.font.size.sm`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -5735,6 +6161,20 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.typography.font.size.xs`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/avatar.css` (1×)
+
+### `component.avatar.font-weight`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.font-weight.semibold`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -5747,6 +6187,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.7`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -5759,6 +6200,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.5`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -5771,6 +6213,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.4`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -5783,6 +6226,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.14`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -5795,6 +6239,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.10`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -5807,6 +6252,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.8`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -5814,6 +6260,136 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/avatar.css` (2×)
+
+### `component.badge.border-radius`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.radius.full`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/badge.css` (1×)
+
+### `component.badge.font-size`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.font-size.xs`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/badge.css` (1×)
+
+### `component.badge.font-weight`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.font-weight.medium`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/badge.css` (1×)
+
+### `component.badge.line-height`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.line-height.md`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/badge.css` (1×)
+
+### `component.badge.padding-x`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.gap.sm`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/badge.css` (1×)
+
+### `component.badge.padding-y`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.inset.2xs`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/badge.css` (1×)
+
+### `component.breadcrumb.focus-border-radius`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.radius.sm`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/breadcrumb.css` (1×)
+
+### `component.breadcrumb.font-size`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.font-size.sm`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/breadcrumb.css` (1×)
+
+### `component.breadcrumb.font-weight-current`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.font-weight.medium`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/breadcrumb.css` (1×)
+
+### `component.breadcrumb.gap`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.gap.xs`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/breadcrumb.css` (1×)
 
 ### `component.button.background.toned.active`
 
@@ -5889,6 +6465,19 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/button.css` (1×)
 
+### `component.button.font-family`
+
+- **Camada**: component
+- **Tipo**: `fontFamily`
+- **Alias**: → `semantic.typography.body.font-family.sans`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/button.css` (1×)
+
 ### `component.button.font-size.lg`
 
 - **Camada**: component
@@ -5920,6 +6509,19 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Camada**: component
 - **Tipo**: `dimension`
 - **Alias**: → `semantic.typography.control.font-size.sm`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/button.css` (1×)
+
+### `component.button.font-weight`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.font-weight.medium`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -6056,6 +6658,19 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/button.css` (1×)
 
+### `component.button.opacity-disabled`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `foundation.opacity.50`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/button.css` (1×)
+
 ### `component.button.padding-x.lg`
 
 - **Camada**: component
@@ -6134,6 +6749,162 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/button.css` (1×)
 
+### `component.button.transition-duration`
+
+- **Camada**: component
+- **Tipo**: `duration`
+- **Alias**: → `foundation.duration.fast`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/button.css` (4×)
+
+### `component.button.transition-timing`
+
+- **Camada**: component
+- **Tipo**: `cubicBezier`
+- **Alias**: → `foundation.ease.default`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/button.css` (4×)
+
+### `component.card.body-font-size`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.font-size.sm`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/card.css` (2×)
+
+### `component.card.body-line-height`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.line-height.md`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/card.css` (1×)
+
+### `component.card.border-radius`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.radius.lg`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/card.css` (1×)
+
+### `component.card.border-width`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.border.width.default`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/card.css` (2×)
+
+### `component.card.gap`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.gap.sm`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/card.css` (2×)
+
+### `component.card.padding`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.inset.lg`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/card.css` (4×)
+
+### `component.card.shadow-elevated`
+
+- **Camada**: component
+- **Tipo**: `shadow`
+- **Alias**: → `foundation.shadow.sm`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/card.css` (1×)
+
+### `component.card.title-font-size`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.font-size.lg`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/card.css` (1×)
+
+### `component.card.title-font-weight`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.font-weight.semibold`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/card.css` (1×)
+
+### `component.card.title-line-height`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.line-height.sm`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/card.css` (1×)
+
 ### `component.checkbox.border-radius`
 
 - **Camada**: component
@@ -6145,7 +6916,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/components/checkbox.css` (1×)
+    - `css/components/checkbox.css` (2×)
 
 ### `component.checkbox.border-width`
 
@@ -6164,6 +6935,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.3`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -6175,6 +6947,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.2-5`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -6186,6 +6959,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.2`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -6197,6 +6971,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.1-5`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -6219,6 +6994,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.1`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -6226,10 +7002,24 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
+### `component.checkbox.content-gap`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.gap.xs`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/checkbox.css` (1×)
+
 ### `component.checkbox.control-size.lg`
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.6`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -6242,6 +7032,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.5`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -6254,6 +7045,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.4`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -6262,10 +7054,76 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/checkbox.css` (2×)
 
+### `component.checkbox.description-font-size`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.font-size.sm`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/checkbox.css` (1×)
+
+### `component.checkbox.description-font-weight`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.font-weight.regular`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/checkbox.css` (1×)
+
+### `component.checkbox.description-line-height`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.line-height.md`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/checkbox.css` (1×)
+
+### `component.checkbox.error-font-size`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.font-size.xs`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/checkbox.css` (1×)
+
+### `component.checkbox.error-margin-top`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.gap.xs`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/checkbox.css` (1×)
+
 ### `component.checkbox.font-size`
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.typography.font.size.sm`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -6287,7 +7145,85 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/checkbox.css` (1×)
 
-### `component.checkbox.min-target-size`
+### `component.checkbox.helper-font-size`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.font-size.xs`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/checkbox.css` (1×)
+
+### `component.checkbox.helper-line-height`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.line-height.md`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/checkbox.css` (1×)
+
+### `component.checkbox.label-font-size`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.font-size.sm`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/checkbox.css` (1×)
+
+### `component.checkbox.label-font-weight`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.font-weight.medium`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/checkbox.css` (1×)
+
+### `component.checkbox.label-line-height`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.line-height.sm`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/checkbox.css` (1×)
+
+### `component.checkbox.label-padding-x`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.gap.xs`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/checkbox.css` (1×)
+
+### `component.checkbox.label-padding-y`
 
 - **Camada**: component
 - **Tipo**: `dimension`
@@ -6298,6 +7234,84 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/checkbox.css` (1×)
+
+### `component.checkbox.min-target-size`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.control.min-target`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/checkbox.css` (1×)
+
+### `component.checkbox.opacity-disabled`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `foundation.opacity.50`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/checkbox.css` (1×)
+
+### `component.checkbox.transition-duration`
+
+- **Camada**: component
+- **Tipo**: `duration`
+- **Alias**: → `foundation.duration.fast`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/checkbox.css` (4×)
+
+### `component.checkbox.transition-timing`
+
+- **Camada**: component
+- **Tipo**: `cubicBezier`
+- **Alias**: → `foundation.ease.default`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/checkbox.css` (4×)
+
+### `component.divider.spacing`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.gap.lg`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/divider.css` (2×)
+
+### `component.divider.thickness`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.border.width.default`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/divider.css` (2×)
 
 ### `component.input.border-radius`
 
@@ -6324,6 +7338,32 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/input.css` (1×)
+
+### `component.input.field-gap`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.gap.xs`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/input.css` (1×)
+
+### `component.input.field-inner-padding-x`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.gap.xs`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/input.css` (2×)
 
 ### `component.input.font-size.lg`
 
@@ -6416,6 +7456,32 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/input.css` (1×)
 
+### `component.input.helper-font-size`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.font-size.xs`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/input.css` (2×)
+
+### `component.input.helper-line-height`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.line-height.md`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/input.css` (2×)
+
 ### `component.input.icon-size.lg`
 
 - **Camada**: component
@@ -6454,6 +7520,45 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/input.css` (3×)
+
+### `component.input.label-font-size`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.font-size.sm`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/input.css` (2×)
+
+### `component.input.label-font-weight`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.font-weight.medium`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/input.css` (2×)
+
+### `component.input.label-line-height`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.line-height.sm`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/input.css` (2×)
 
 ### `component.input.padding-x.lg`
 
@@ -6530,6 +7635,58 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
+### `component.input.transition-duration`
+
+- **Camada**: component
+- **Tipo**: `duration`
+- **Alias**: → `foundation.duration.fast`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/input.css` (2×)
+
+### `component.input.transition-timing`
+
+- **Camada**: component
+- **Tipo**: `cubicBezier`
+- **Alias**: → `foundation.ease.default`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/input.css` (2×)
+
+### `component.modal.body-font-size`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.font-size.sm`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/modal.css` (1×)
+
+### `component.modal.body-line-height`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.line-height.md`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/modal.css` (1×)
+
 ### `component.modal.border-radius`
 
 - **Camada**: component
@@ -6543,7 +7700,85 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/modal.css` (1×)
 
+### `component.modal.border-width`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.border.width.default`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/modal.css` (1×)
+
+### `component.modal.close-border-radius`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.radius.sm`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/modal.css` (1×)
+
+### `component.modal.close-padding`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.gap.xs`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/modal.css` (1×)
+
+### `component.modal.footer-gap`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.gap.sm`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/modal.css` (1×)
+
+### `component.modal.footer-padding-top`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.gap.sm`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/modal.css` (1×)
+
 ### `component.modal.header-gap`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.gap.sm`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/modal.css` (1×)
+
+### `component.modal.header-padding-bottom`
 
 - **Camada**: component
 - **Tipo**: `dimension`
@@ -6592,6 +7827,19 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/modal.css` (1×)
 
+### `component.modal.overlay-padding`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.inset.lg`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/modal.css` (1×)
+
 ### `component.modal.padding`
 
 - **Camada**: component
@@ -6602,7 +7850,125 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/modal.css` (6×)
+
+### `component.modal.shadow`
+
+- **Camada**: component
+- **Tipo**: `shadow`
+- **Alias**: → `foundation.shadow.xl`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/modal.css` (1×)
+
+### `component.modal.title-font-size`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.font-size.lg`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/modal.css` (1×)
+
+### `component.modal.title-font-weight`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.font-weight.semibold`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/modal.css` (1×)
+
+### `component.modal.title-line-height`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.line-height.sm`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/modal.css` (1×)
+
+### `component.modal.transition-duration`
+
+- **Camada**: component
+- **Tipo**: `duration`
+- **Alias**: → `foundation.duration.fast`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/modal.css` (2×)
+
+### `component.modal.transition-timing`
+
+- **Camada**: component
+- **Tipo**: `cubicBezier`
+- **Alias**: → `foundation.ease.default`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/modal.css` (2×)
+
+### `component.modal.viewport-offset`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.section.sm`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/modal.css` (1×)
+
+### `component.modal.z-index`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `foundation.z.50`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/modal.css` (1×)
+
+### `component.radio.border-radius-full`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.radius.full`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/radio.css` (2×)
 
 ### `component.radio.border-width`
 
@@ -6617,10 +7983,24 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/radio.css` (1×)
 
+### `component.radio.content-gap`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.gap.xs`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/radio.css` (1×)
+
 ### `component.radio.control-size.lg`
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.6`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -6633,6 +8013,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.5`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -6645,6 +8026,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.4`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -6653,10 +8035,50 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/radio.css` (2×)
 
+### `component.radio.description-font-size`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.font-size.sm`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/radio.css` (1×)
+
+### `component.radio.description-font-weight`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.font-weight.regular`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/radio.css` (1×)
+
+### `component.radio.description-line-height`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.line-height.md`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/radio.css` (1×)
+
 ### `component.radio.dot-size.lg`
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.2-5`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -6669,6 +8091,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.2`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -6681,6 +8104,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.1-5`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -6689,10 +8113,37 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/radio.css` (2×)
 
+### `component.radio.error-font-size`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.font-size.xs`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/radio.css` (1×)
+
+### `component.radio.error-margin-top`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.gap.xs`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/radio.css` (1×)
+
 ### `component.radio.font-size`
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.typography.font.size.sm`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -6714,7 +8165,137 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/radio.css` (1×)
 
-### `component.radio.min-target-size`
+### `component.radio.group-gap`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.gap.xs`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/radio.css` (1×)
+
+### `component.radio.group-legend-margin-bottom`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.gap.sm`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/radio.css` (1×)
+
+### `component.radio.group-margin-bottom`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.inset.lg`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/radio.css` (1×)
+
+### `component.radio.helper-font-size`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.font-size.xs`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/radio.css` (1×)
+
+### `component.radio.helper-line-height`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.line-height.md`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/radio.css` (1×)
+
+### `component.radio.label-border-radius`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.radius.sm`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/radio.css` (1×)
+
+### `component.radio.label-font-size`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.font-size.sm`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/radio.css` (1×)
+
+### `component.radio.label-font-weight`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.font-weight.medium`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/radio.css` (1×)
+
+### `component.radio.label-line-height`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.line-height.sm`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/radio.css` (1×)
+
+### `component.radio.label-padding-x`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.gap.xs`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/radio.css` (1×)
+
+### `component.radio.label-padding-y`
 
 - **Camada**: component
 - **Tipo**: `dimension`
@@ -6726,10 +8307,89 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/radio.css` (1×)
 
+### `component.radio.legend-font-size`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.font-size.sm`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/radio.css` (1×)
+
+### `component.radio.legend-font-weight`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.font-weight.medium`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/radio.css` (1×)
+
+### `component.radio.min-target-size`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.control.min-target`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/radio.css` (1×)
+
+### `component.radio.opacity-disabled`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `foundation.opacity.50`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/radio.css` (2×)
+
+### `component.radio.transition-duration`
+
+- **Camada**: component
+- **Tipo**: `duration`
+- **Alias**: → `foundation.duration.fast`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/radio.css` (4×)
+
+### `component.radio.transition-timing`
+
+- **Camada**: component
+- **Tipo**: `cubicBezier`
+- **Alias**: → `foundation.ease.default`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/radio.css` (4×)
+
 ### `component.select.arrow-offset.lg`
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.4`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -6742,6 +8402,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.3`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -6754,6 +8415,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.2`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -6766,6 +8428,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.4`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -6792,6 +8455,19 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Camada**: component
 - **Tipo**: `dimension`
 - **Alias**: → `semantic.border.width.default`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/select.css` (1×)
+
+### `component.select.field-inner-padding-x`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.gap.xs`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -6966,10 +8642,50 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
+### `component.select.transition-duration`
+
+- **Camada**: component
+- **Tipo**: `duration`
+- **Alias**: → `foundation.duration.fast`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/select.css` (2×)
+
+### `component.select.transition-timing`
+
+- **Camada**: component
+- **Tipo**: `cubicBezier`
+- **Alias**: → `foundation.ease.default`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/select.css` (2×)
+
+### `component.skeleton.circle-border-radius`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.radius.full`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/skeleton.css` (1×)
+
 ### `component.skeleton.circle-size`
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.10`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -6991,6 +8707,19 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/skeleton.css` (1×)
 
+### `component.skeleton.rect-border-radius`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.radius.component`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/skeleton.css` (1×)
+
 ### `component.skeleton.rect-height`
 
 - **Camada**: component
@@ -7003,10 +8732,11 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/skeleton.css` (1×)
 
-### `component.skeleton.text-height`
+### `component.skeleton.text-border-radius`
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.radius.sm`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -7015,10 +8745,37 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/skeleton.css` (1×)
 
+### `component.skeleton.text-height`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.4`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/skeleton.css` (1×)
+
+### `component.spinner.border-radius`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.radius.full`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/spinner.css` (1×)
+
 ### `component.spinner.size.lg`
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.8`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -7031,6 +8788,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.6`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -7043,6 +8801,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.4`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -7067,6 +8826,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.0-5`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -7087,6 +8847,136 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/spinner.css` (1×)
 
+### `component.tabs.active-border-width`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.border.width.strong`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/tabs.css` (1×)
+
+### `component.tabs.border-width`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.border.width.default`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/tabs.css` (1×)
+
+### `component.tabs.focus-border-radius`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.radius.sm`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/tabs.css` (2×)
+
+### `component.tabs.font-size`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.font-size.sm`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/tabs.css` (1×)
+
+### `component.tabs.font-weight`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.font-weight.medium`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/tabs.css` (1×)
+
+### `component.tabs.padding-x`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.inset.lg`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/tabs.css` (1×)
+
+### `component.tabs.padding-y`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.gap.sm`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/tabs.css` (1×)
+
+### `component.tabs.panel-padding-y`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.inset.lg`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/tabs.css` (1×)
+
+### `component.tabs.transition-duration`
+
+- **Camada**: component
+- **Tipo**: `duration`
+- **Alias**: → `foundation.duration.fast`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/tabs.css` (2×)
+
+### `component.tabs.transition-timing`
+
+- **Camada**: component
+- **Tipo**: `cubicBezier`
+- **Alias**: → `foundation.ease.default`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/tabs.css` (2×)
+
 ### `component.textarea.border-radius`
 
 - **Camada**: component
@@ -7105,6 +8995,58 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Camada**: component
 - **Tipo**: `dimension`
 - **Alias**: → `semantic.border.width.default`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/textarea.css` (1×)
+
+### `component.textarea.counter-font-size`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.font-size.xs`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/textarea.css` (1×)
+
+### `component.textarea.counter-font-weight`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.font-weight.medium`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/textarea.css` (1×)
+
+### `component.textarea.field-inner-padding-x`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.gap.xs`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/textarea.css` (3×)
+
+### `component.textarea.field-line-height`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.line-height.md`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -7168,6 +9110,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.20`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -7266,10 +9209,115 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/textarea.css` (1×)
 
+### `component.textarea.transition-duration`
+
+- **Camada**: component
+- **Tipo**: `duration`
+- **Alias**: → `foundation.duration.fast`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/textarea.css` (2×)
+
+### `component.textarea.transition-timing`
+
+- **Camada**: component
+- **Tipo**: `cubicBezier`
+- **Alias**: → `foundation.ease.default`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/textarea.css` (2×)
+
+### `component.toggle.border-radius-full`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.radius.full`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/toggle.css` (2×)
+
+### `component.toggle.border-width`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.border.width.default`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/toggle.css` (1×)
+
+### `component.toggle.content-gap`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.gap.xs`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/toggle.css` (1×)
+
+### `component.toggle.description-font-size`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.font-size.sm`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/toggle.css` (1×)
+
+### `component.toggle.description-font-weight`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.font-weight.regular`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/toggle.css` (1×)
+
+### `component.toggle.description-line-height`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.line-height.md`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/toggle.css` (1×)
+
 ### `component.toggle.font-size`
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.typography.font.size.sm`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -7291,10 +9339,127 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/toggle.css` (1×)
 
+### `component.toggle.helper-font-size`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.font-size.xs`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/toggle.css` (1×)
+
+### `component.toggle.helper-line-height`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.line-height.md`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/toggle.css` (1×)
+
+### `component.toggle.label-border-radius`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.radius.sm`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/toggle.css` (1×)
+
+### `component.toggle.label-font-size`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.font-size.sm`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/toggle.css` (1×)
+
+### `component.toggle.label-font-weight`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.font-weight.medium`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/toggle.css` (1×)
+
+### `component.toggle.label-line-height`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.line-height.sm`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/toggle.css` (1×)
+
+### `component.toggle.label-padding-x`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.gap.xs`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/toggle.css` (1×)
+
+### `component.toggle.label-padding-y`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/toggle.css` (1×)
+
 ### `component.toggle.min-target-size`
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `semantic.size.control.min-target`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/toggle.css` (1×)
+
+### `component.toggle.opacity-disabled`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `foundation.opacity.50`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -7319,6 +9484,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.3-5`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -7331,6 +9497,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.2-5`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -7343,6 +9510,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.6`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -7355,6 +9523,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.5`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -7367,6 +9536,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.4`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -7379,6 +9549,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.11`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -7391,6 +9562,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.9`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -7403,6 +9575,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `foundation.spacing.7`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -7410,4 +9583,121 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/toggle.css` (1×)
+
+### `component.toggle.transition-duration`
+
+- **Camada**: component
+- **Tipo**: `duration`
+- **Alias**: → `foundation.duration.fast`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/toggle.css` (5×)
+
+### `component.toggle.transition-timing`
+
+- **Camada**: component
+- **Tipo**: `cubicBezier`
+- **Alias**: → `foundation.ease.default`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/toggle.css` (5×)
+
+### `component.tooltip.border-radius`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.radius.sm`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/tooltip.css` (1×)
+
+### `component.tooltip.font-size`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.font-size.xs`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/tooltip.css` (1×)
+
+### `component.tooltip.padding-x`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.gap.sm`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/tooltip.css` (1×)
+
+### `component.tooltip.padding-y`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.gap.xs`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/tooltip.css` (1×)
+
+### `component.tooltip.transition-duration`
+
+- **Camada**: component
+- **Tipo**: `duration`
+- **Alias**: → `foundation.duration.fast`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/tooltip.css` (1×)
+
+### `component.tooltip.transition-timing`
+
+- **Camada**: component
+- **Tipo**: `cubicBezier`
+- **Alias**: → `foundation.ease.default`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/tooltip.css` (1×)
+
+### `component.tooltip.z-index`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `foundation.z.50`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/tooltip.css` (1×)
 

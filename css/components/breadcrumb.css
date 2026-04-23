@@ -5,15 +5,15 @@
 .ds-breadcrumb {
   display: flex;
   align-items: center;
-  gap: var(--ds-space-gap-xs);
-  font-size: var(--ds-font-size-sm);
+  gap: var(--ds-space-gap-sm);
+  font-size: var(--ds-body-font-size-sm);
 }
 
 /* Item
    ========================================================================== */
 
 .ds-breadcrumb__item {
-  color: var(--ds-content-link-default);
+  color: var(--ds-link-content-default);
   text-decoration: none;
 }
 
@@ -32,7 +32,7 @@
 
 .ds-breadcrumb__item--current {
   color: var(--ds-content-default);
-  font-weight: var(--ds-font-weight-medium);
+  font-weight: var(--ds-body-font-weight-medium);
   pointer-events: none;
 }
 

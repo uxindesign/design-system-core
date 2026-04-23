@@ -6,18 +6,18 @@
 .ds-toggle-label {
   display: inline-flex;
   align-items: center;
-  gap: var(--ds-toggle-gap);
+  gap: var(--ds-space-gap-sm);
   cursor: pointer;
-  padding: var(--ds-spacing-1-5) var(--ds-spacing-1);
+  padding: var(--ds-space-gap-xs) var(--ds-space-gap-xs);
   border-radius: var(--ds-radius-sm);
-  min-height: var(--ds-toggle-min-target-size);
-  font-size: var(--ds-toggle-font-size);
+  min-height: var(--ds-size-control-min-target);
+  font-size: var(--ds-body-font-size-sm);
   color: var(--ds-content-default);
-  transition: background-color var(--ds-duration-fast) var(--ds-ease-default);
+  transition: background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
 }
 
 .ds-toggle-label:hover {
-  background-color: var(--ds-state-hover);
+  background-color: var(--ds-overlay-subtle);
 }
 
 /* Hidden native checkbox */
@@ -28,12 +28,12 @@
   width: var(--ds-toggle-track-width-md);
   height: var(--ds-toggle-track-height-md);
   background-color: var(--ds-surface-default);
-  border: var(--ds-border-width-1) solid var(--ds-border-control-default);
+  border: var(--ds-border-width-default) solid var(--ds-border-control-default);
   border-radius: var(--ds-radius-full);
   cursor: pointer;
   flex-shrink: 0;
-  transition: background-color var(--ds-duration-fast) var(--ds-ease-default),
-              border-color var(--ds-duration-fast) var(--ds-ease-default);
+  transition: background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
+              border-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
 }
 
 /* Thumb */
@@ -46,23 +46,23 @@
   height: var(--ds-toggle-thumb-size-md);
   border-radius: var(--ds-radius-full);
   background-color: var(--ds-content-secondary);
-  transition: transform var(--ds-duration-fast) var(--ds-ease-default),
-              background-color var(--ds-duration-fast) var(--ds-ease-default);
+  transition: transform var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
+              background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
 }
 
 /* Hover */
 .ds-toggle:hover:not(:disabled) {
-  border-color: var(--ds-brand-default);
+  border-color: var(--ds-primary-bg-default);
 }
 
 /* Checked (On) */
 .ds-toggle:checked {
-  background-color: var(--ds-brand-default);
-  border-color: var(--ds-brand-default);
+  background-color: var(--ds-primary-bg-default);
+  border-color: var(--ds-primary-bg-default);
 }
 
 .ds-toggle:checked::after {
-  background-color: var(--ds-brand-content-contrast);
+  background-color: var(--ds-primary-content-default);
   transform: translateX(16px);
 }
 
@@ -74,7 +74,7 @@
 
 /* Disabled */
 .ds-toggle:disabled {
-  background-color: var(--ds-state-disabled-background);
+  background-color: var(--ds-background-disabled);
   border-color: var(--ds-border-control-disabled);
   cursor: not-allowed;
 }
@@ -85,7 +85,7 @@
 
 .ds-toggle-label:has(.ds-toggle:disabled) {
   cursor: not-allowed;
-  opacity: var(--ds-opacity-50);
+  opacity: var(--ds-opacity-disabled);
 }
 
 .ds-toggle-label:has(.ds-toggle:disabled):hover {
@@ -150,31 +150,31 @@
 .ds-toggle__content {
   display: flex;
   flex-direction: column;
-  gap: var(--ds-spacing-1);
+  gap: var(--ds-space-gap-xs);
   min-width: 0;
 }
 
 /* Label text (label/md: 14px medium / 20px) */
 .ds-toggle__label {
-  font-size: var(--ds-font-size-sm);
-  font-weight: var(--ds-font-weight-medium);
-  line-height: var(--ds-line-height-snug);
+  font-size: var(--ds-body-font-size-sm);
+  font-weight: var(--ds-body-font-weight-medium);
+  line-height: var(--ds-body-line-height-sm);
   color: var(--ds-content-default);
 }
 
 /* Description (body/sm: 14px regular / 22px, multiline) */
 .ds-toggle__description {
-  font-size: var(--ds-font-size-sm);
-  font-weight: var(--ds-font-weight-regular);
-  line-height: var(--ds-line-height-relaxed);
+  font-size: var(--ds-body-font-size-sm);
+  font-weight: var(--ds-body-font-weight-regular);
+  line-height: var(--ds-body-line-height-md);
   color: var(--ds-content-default);
   white-space: pre-wrap;
 }
 
 /* Helper text (caption/sm: 11px regular / 18px) */
 .ds-toggle__helper {
-  font-size: var(--ds-font-size-xs);
-  line-height: var(--ds-line-height-normal);
+  font-size: var(--ds-body-font-size-xs);
+  line-height: var(--ds-body-line-height-md);
   color: var(--ds-content-secondary);
 }
 

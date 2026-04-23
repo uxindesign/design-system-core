@@ -1,34 +1,11 @@
 {
   "component": {
     "input": {
-      "$description": "Structural tokens for Input component. References semantic control tokens (ADR-006).",
+      "$description": "Dimensões do Input por tamanho. Consome tokens control.* via CSS.",
       "height": {
         "sm": { "$type": "dimension", "$value": "{semantic.size.control.sm}", "$description": "32px" },
         "md": { "$type": "dimension", "$value": "{semantic.size.control.md}", "$description": "40px" },
         "lg": { "$type": "dimension", "$value": "{semantic.size.control.lg}", "$description": "48px" }
-      },
-      "padding-x": {
-        "sm": { "$type": "dimension", "$value": "{semantic.space.control.padding-x.sm}", "$description": "12px" },
-        "md": { "$type": "dimension", "$value": "{semantic.space.control.padding-x.md}", "$description": "16px" },
-        "lg": { "$type": "dimension", "$value": "{semantic.space.control.padding-x.lg}", "$description": "20px" }
-      },
-      "padding-y": {
-        "sm": { "$type": "dimension", "$value": "{semantic.space.control.padding-y.sm}", "$description": "8px" },
-        "md": { "$type": "dimension", "$value": "{semantic.space.control.padding-y.md}", "$description": "10px" },
-        "lg": { "$type": "dimension", "$value": "{semantic.space.control.padding-y.lg}", "$description": "12px" }
-      },
-      "gap": { "$type": "dimension", "$value": "{semantic.space.gap.sm}", "$description": "8px gap between icon and field" },
-      "border-radius": { "$type": "dimension", "$value": "{semantic.radius.component}" },
-      "border-width": { "$type": "dimension", "$value": "{semantic.border.width.default}" },
-      "font-size": {
-        "sm": { "$type": "dimension", "$value": "{semantic.typography.control.font-size.sm}", "$description": "14px" },
-        "md": { "$type": "dimension", "$value": "{semantic.typography.control.font-size.md}", "$description": "14px" },
-        "lg": { "$type": "dimension", "$value": "{semantic.typography.control.font-size.lg}", "$description": "16px" }
-      },
-      "icon-size": {
-        "sm": { "$type": "dimension", "$value": "{semantic.size.control.icon.sm}", "$description": "16px" },
-        "md": { "$type": "dimension", "$value": "{semantic.size.control.icon.md}", "$description": "20px" },
-        "lg": { "$type": "dimension", "$value": "{semantic.size.control.icon.lg}", "$description": "24px" }
       }
     }
   }

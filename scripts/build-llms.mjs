@@ -135,7 +135,7 @@ ${adrs.map((a) => `- [ADR-${a.num} — ${a.title}](${BASE_URL}/docs/decisions/${
 
 ## Figma
 
-- Arquivo: \`PRYS2kL7VdC1MtVWfZvuDN\` (UXIN Team, acesso via convite).
+- Arquivo: \`PRYS2kL7VdC1MtVWfZvuDN\` (Design Team, acesso via convite).
 
 ---
 
@@ -159,7 +159,6 @@ function addSection(title, content) {
 // Raiz
 addSection("README.md (raiz)", readMd(path.join(ROOT, "README.md")));
 addSection("CONTRIBUTING.md (raiz)", readMd(path.join(ROOT, "CONTRIBUTING.md")));
-addSection("CLAUDE.md (raiz, guia de agente)", readMd(path.join(ROOT, "CLAUDE.md")));
 addSection("CHANGELOG.md (raiz)", readMd(path.join(ROOT, "CHANGELOG.md")));
 
 // docs/*.md (exceto decisions e subpastas)

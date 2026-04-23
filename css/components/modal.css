@@ -10,20 +10,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: var(--ds-z-50);
-  padding: var(--ds-spacing-4);
+  z-index: 50;
+  padding: var(--ds-space-inset-lg);
 }
 
 /* Dialog */
 .ds-modal {
   background-color: var(--ds-surface-elevated);
-  border-radius: var(--ds-modal-border-radius);
-  box-shadow: var(--ds-shadow-xl);
+  border-radius: var(--ds-radius-xl);
+  /* Elevation: apply .ds-elevation-4 utility alongside .ds-modal for box-shadow.
+     Semantic elevation tokens do not exist yet post-ADR-014. */
   width: 100%;
-  max-height: calc(100vh - var(--ds-spacing-8));
+  max-height: calc(100vh - var(--ds-space-section-sm));
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  border: var(--ds-border-width-default) solid var(--ds-border-subtle);
 }
 
 /* Sizes */
@@ -36,32 +38,32 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--ds-spacing-4) var(--ds-spacing-4) var(--ds-spacing-2);
-  gap: var(--ds-modal-header-gap);
+  padding: var(--ds-space-inset-lg) var(--ds-space-inset-lg) var(--ds-space-gap-sm);
+  gap: var(--ds-space-gap-sm);
 }
 
 .ds-modal__title {
-  font-size: var(--ds-font-size-lg);
-  font-weight: var(--ds-font-weight-semibold);
+  font-size: var(--ds-body-font-size-lg);
+  font-weight: var(--ds-body-font-weight-semibold);
   color: var(--ds-content-default);
-  line-height: var(--ds-line-height-tight);
+  line-height: var(--ds-body-line-height-sm);
 }
 
 .ds-modal__close {
   flex-shrink: 0;
   background: none;
   border: none;
-  padding: var(--ds-spacing-1);
+  padding: var(--ds-space-inset-xs);
   cursor: pointer;
   color: var(--ds-content-secondary);
   border-radius: var(--ds-radius-sm);
-  transition: color var(--ds-duration-fast) var(--ds-ease-default),
-              background-color var(--ds-duration-fast) var(--ds-ease-default);
+  transition: color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
+              background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
 }
 
 .ds-modal__close:hover {
   color: var(--ds-content-default);
-  background-color: var(--ds-state-hover);
+  background-color: var(--ds-overlay-subtle);
 }
 
 .ds-modal__close:focus-visible {
@@ -71,20 +73,20 @@
 
 /* Body */
 .ds-modal__body {
-  padding: 0 var(--ds-spacing-4) var(--ds-spacing-4);
+  padding: 0 var(--ds-space-inset-lg) var(--ds-space-inset-lg);
   overflow-y: auto;
-  font-size: var(--ds-font-size-sm);
+  font-size: var(--ds-body-font-size-sm);
   color: var(--ds-content-default);
-  line-height: var(--ds-line-height-relaxed);
+  line-height: var(--ds-body-line-height-md);
 }
 
 /* Footer */
 .ds-modal__footer {
   display: flex;
   justify-content: flex-end;
-  gap: var(--ds-spacing-2);
-  padding: var(--ds-spacing-2) var(--ds-spacing-4) var(--ds-spacing-4);
-  border-top: var(--ds-border-width-1) solid var(--ds-border-default);
+  gap: var(--ds-space-gap-sm);
+  padding: var(--ds-space-gap-sm) var(--ds-space-inset-lg) var(--ds-space-inset-lg);
+  border-top: var(--ds-border-width-default) solid var(--ds-border-default);
 }
 
 /* ---------------------------------------------------------

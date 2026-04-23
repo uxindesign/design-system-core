@@ -7,26 +7,26 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--ds-button-gap);
-  font-family: var(--ds-font-family-sans);
-  font-weight: var(--ds-font-weight-medium);
+  gap: var(--ds-space-gap-sm);
+  font-family: var(--ds-body-font-family-sans);
+  font-weight: var(--ds-body-font-weight-medium);
   line-height: var(--ds-control-line-height-md);
   text-decoration: none;
-  border: var(--ds-button-border-width) solid transparent;
-  border-radius: var(--ds-button-border-radius);
+  border: var(--ds-border-width-default) solid transparent;
+  border-radius: var(--ds-radius-component);
   cursor: pointer;
-  transition: background-color var(--ds-duration-fast) var(--ds-ease-default),
-              border-color var(--ds-duration-fast) var(--ds-ease-default),
-              color var(--ds-duration-fast) var(--ds-ease-default),
-              box-shadow var(--ds-duration-fast) var(--ds-ease-default);
+  transition: background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
+              border-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
+              color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
+              box-shadow var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
   white-space: nowrap;
   user-select: none;
 
   /* Default size: md (40px) */
   height: var(--ds-button-height-md);
-  padding: var(--ds-button-padding-y-md) var(--ds-button-padding-x-md);
-  font-size: var(--ds-button-font-size-md);
-  min-width: var(--ds-button-min-target-size);
+  padding: var(--ds-space-control-padding-y-md) var(--ds-space-control-padding-x-md);
+  font-size: var(--ds-control-font-size-md);
+  min-width: var(--ds-size-control-min-target);
 }
 
 .ds-btn:focus-visible {
@@ -36,15 +36,15 @@
 
 .ds-btn[disabled],
 .ds-btn--disabled {
-  opacity: var(--ds-opacity-50);
+  opacity: var(--ds-opacity-disabled);
   cursor: not-allowed;
   pointer-events: none;
 }
 
 /* Icon inside button — default 20px (md) */
 .ds-btn__icon {
-  width: var(--ds-button-icon-size-md);
-  height: var(--ds-button-icon-size-md);
+  width: var(--ds-size-control-icon-md);
+  height: var(--ds-size-control-icon-md);
   flex-shrink: 0;
   fill: currentColor;
 }
@@ -54,137 +54,137 @@
    --------------------------------------------------------- */
 .ds-btn--sm {
   height: var(--ds-button-height-sm);
-  padding: var(--ds-button-padding-y-sm) var(--ds-button-padding-x-sm);
-  font-size: var(--ds-button-font-size-sm);
+  padding: var(--ds-space-control-padding-y-sm) var(--ds-space-control-padding-x-sm);
+  font-size: var(--ds-control-font-size-sm);
   line-height: var(--ds-control-line-height-sm);
-  border-radius: var(--ds-button-border-radius);
+  border-radius: var(--ds-radius-component);
 }
 
 .ds-btn--sm .ds-btn__icon {
-  width: var(--ds-button-icon-size-sm);
-  height: var(--ds-button-icon-size-sm);
+  width: var(--ds-size-control-icon-sm);
+  height: var(--ds-size-control-icon-sm);
 }
 
 .ds-btn--lg {
   height: var(--ds-button-height-lg);
-  padding: var(--ds-button-padding-y-lg) var(--ds-button-padding-x-lg);
-  font-size: var(--ds-button-font-size-lg);
+  padding: var(--ds-space-control-padding-y-lg) var(--ds-space-control-padding-x-lg);
+  font-size: var(--ds-control-font-size-lg);
   line-height: var(--ds-control-line-height-lg);
-  border-radius: var(--ds-button-border-radius);
+  border-radius: var(--ds-radius-component);
 }
 
 .ds-btn--lg .ds-btn__icon {
-  width: var(--ds-button-icon-size-lg);
-  height: var(--ds-button-icon-size-lg);
+  width: var(--ds-size-control-icon-lg);
+  height: var(--ds-size-control-icon-lg);
 }
 
 /* ---------------------------------------------------------
-   Variant: Brand (filled with brand color)
+   Variant: Brand (primary filled — action/primary/default)
    --------------------------------------------------------- */
 .ds-btn--brand {
-  background-color: var(--ds-brand-default);
-  color: var(--ds-brand-content-contrast);
-  border-color: var(--ds-brand-default);
+  background-color: var(--ds-primary-bg-default);
+  color: var(--ds-primary-content-default);
+  border-color: var(--ds-primary-bg-default);
 }
 
 .ds-btn--brand:hover {
-  background-color: var(--ds-brand-hover);
-  border-color: var(--ds-brand-hover);
+  background-color: var(--ds-primary-bg-hover);
+  border-color: var(--ds-primary-bg-hover);
 }
 
 .ds-btn--brand:active {
-  background-color: var(--ds-brand-active);
-  border-color: var(--ds-brand-active);
+  background-color: var(--ds-primary-bg-active);
+  border-color: var(--ds-primary-bg-active);
 }
 
 /* ---------------------------------------------------------
-   Variant: Toned (alpha-tinted brand color)
+   Variant: Toned (alpha-tinted primary — action/primary/toned)
    --------------------------------------------------------- */
 .ds-btn--toned {
-  background-color: var(--ds-brand-toned-default);
-  color: var(--ds-brand-content-default);
+  background-color: var(--ds-toned-bg-default);
+  color: var(--ds-toned-content-default);
   border-color: transparent;
 }
 
 .ds-btn--toned:hover {
-  background-color: var(--ds-brand-toned-hover);
+  background-color: var(--ds-toned-bg-hover);
 }
 
 .ds-btn--toned:active {
-  background-color: var(--ds-brand-toned-active);
+  background-color: var(--ds-toned-bg-active);
 }
 
 /* ---------------------------------------------------------
-   Variant: Outline (neutral, no brand color)
+   Variant: Outline (neutral — action/secondary/outline)
    --------------------------------------------------------- */
 .ds-btn--outline {
   background-color: transparent;
-  color: var(--ds-content-default);
-  border-color: var(--ds-border-control-default);
+  color: var(--ds-outline-content-default);
+  border-color: var(--ds-outline-border-default);
 }
 
 .ds-btn--outline:hover {
-  background-color: var(--ds-state-hover);
-  border-color: var(--ds-border-control-hover);
+  background-color: var(--ds-outline-bg-hover);
+  border-color: var(--ds-outline-border-hover);
 }
 
 .ds-btn--outline:active {
-  background-color: var(--ds-background-subtle);
+  background-color: var(--ds-outline-bg-active);
 }
 
 /* ---------------------------------------------------------
-   Variant: Ghost (brand color, no background)
+   Variant: Ghost (primary color, no background — action/primary/ghost)
    --------------------------------------------------------- */
 .ds-btn--ghost {
   background-color: transparent;
-  color: var(--ds-brand-default);
+  color: var(--ds-ghost-content-default);
   border-color: transparent;
 }
 
 .ds-btn--ghost:hover {
-  background-color: var(--ds-state-hover);
+  background-color: var(--ds-ghost-bg-hover);
 }
 
 .ds-btn--ghost:active {
-  background-color: var(--ds-state-pressed);
+  background-color: var(--ds-ghost-bg-active);
 }
 
 /* ---------------------------------------------------------
    Variant: Success
    --------------------------------------------------------- */
 .ds-btn--success {
-  background-color: var(--ds-feedback-success-default);
+  background-color: var(--ds-feedback-success-bg-default);
   color: var(--ds-feedback-success-content-contrast);
-  border-color: var(--ds-feedback-success-default);
+  border-color: var(--ds-feedback-success-bg-default);
 }
 
 .ds-btn--success:hover {
-  background-color: var(--ds-feedback-success-hover);
-  border-color: var(--ds-feedback-success-hover);
+  background-color: var(--ds-feedback-success-bg-hover);
+  border-color: var(--ds-feedback-success-bg-hover);
 }
 
 .ds-btn--success:active {
-  background-color: var(--ds-feedback-success-active);
-  border-color: var(--ds-feedback-success-active);
+  background-color: var(--ds-feedback-success-bg-active);
+  border-color: var(--ds-feedback-success-bg-active);
 }
 
 /* ---------------------------------------------------------
-   Variant: Danger
+   Variant: Danger (action/danger/default)
    --------------------------------------------------------- */
 .ds-btn--danger {
-  background-color: var(--ds-feedback-error-default);
+  background-color: var(--ds-feedback-error-bg-default);
   color: var(--ds-feedback-error-content-contrast);
-  border-color: var(--ds-feedback-error-default);
+  border-color: var(--ds-feedback-error-bg-default);
 }
 
 .ds-btn--danger:hover {
-  background-color: var(--ds-feedback-error-hover);
-  border-color: var(--ds-feedback-error-hover);
+  background-color: var(--ds-feedback-error-bg-hover);
+  border-color: var(--ds-feedback-error-bg-hover);
 }
 
 .ds-btn--danger:active {
-  background-color: var(--ds-feedback-error-active);
-  border-color: var(--ds-feedback-error-active);
+  background-color: var(--ds-feedback-error-bg-active);
+  border-color: var(--ds-feedback-error-bg-active);
 }
 
 /* ---------------------------------------------------------
@@ -209,15 +209,15 @@
 
 /* Material Symbols inside button */
 .ds-btn .material-symbols-outlined {
-  font-size: var(--ds-button-icon-size-md);
+  font-size: var(--ds-size-control-icon-md);
 }
 
 .ds-btn--sm .material-symbols-outlined {
-  font-size: var(--ds-button-icon-size-sm);
+  font-size: var(--ds-size-control-icon-sm);
 }
 
 .ds-btn--lg .material-symbols-outlined {
-  font-size: var(--ds-button-icon-size-lg);
+  font-size: var(--ds-size-control-icon-lg);
 }
 
 /* ---------------------------------------------------------

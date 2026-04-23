@@ -9,29 +9,29 @@
 }
 
 .ds-card__header {
-  padding: var(--ds-spacing-4) var(--ds-spacing-4) var(--ds-spacing-2);
+  padding: var(--ds-space-inset-lg) var(--ds-space-inset-lg) var(--ds-space-gap-sm);
   display: flex;
   flex-direction: column;
-  gap: var(--ds-spacing-2);
+  gap: var(--ds-space-gap-sm);
 }
 
 .ds-card__title {
-  font-size: var(--ds-font-size-lg);
-  font-weight: var(--ds-font-weight-semibold);
+  font-size: var(--ds-body-font-size-lg);
+  font-weight: var(--ds-body-font-weight-semibold);
   color: var(--ds-content-default);
-  line-height: var(--ds-line-height-tight);
+  line-height: var(--ds-body-line-height-sm);
 }
 
 .ds-card__subtitle {
-  font-size: var(--ds-font-size-sm);
+  font-size: var(--ds-body-font-size-sm);
   color: var(--ds-content-secondary);
 }
 
 .ds-card__body {
-  padding: 0 var(--ds-spacing-4) var(--ds-spacing-4);
-  font-size: var(--ds-font-size-sm);
+  padding: 0 var(--ds-space-inset-lg) var(--ds-space-inset-lg);
+  font-size: var(--ds-body-font-size-sm);
   color: var(--ds-content-secondary);
-  line-height: var(--ds-line-height-relaxed);
+  line-height: var(--ds-body-line-height-md);
 }
 
 /* ---------------------------------------------------------
@@ -40,15 +40,18 @@
 
 /* Default — subtle border */
 .ds-card--default {
-  border: var(--ds-border-width-1) solid var(--ds-border-subtle);
+  border: var(--ds-border-width-default) solid var(--ds-border-subtle);
 }
 
 /* Outlined — stronger border */
 .ds-card--outlined {
-  border: var(--ds-border-width-1) solid var(--ds-border-default);
+  border: var(--ds-border-width-default) solid var(--ds-border-default);
 }
 
-/* Elevated — shadow, no border (elevation level 1 per docs/foundations-elevation.html) */
+/* Elevated — apply .ds-elevation-1 utility class alongside .ds-card--elevated.
+   Semantic elevation tokens do not exist yet post-ADR-014; the utility classes in
+   css/utilities/elevation.css (.ds-elevation-0 through .ds-elevation-4) are the
+   sanctioned consumption surface for box-shadow. */
 .ds-card--elevated {
-  box-shadow: var(--ds-shadow-sm);
+  border: var(--ds-border-width-default) solid var(--ds-border-subtle);
 }
