@@ -17,7 +17,7 @@
 }
 
 .ds-toggle-label:hover {
-  background-color: var(--ds-state-hover);
+  background-color: var(--ds-overlay-subtle);
 }
 
 /* Hidden native checkbox */
@@ -52,17 +52,17 @@
 
 /* Hover */
 .ds-toggle:hover:not(:disabled) {
-  border-color: var(--ds-action-primary-default-background-default);
+  border-color: var(--ds-primary-bg-default);
 }
 
 /* Checked (On) */
 .ds-toggle:checked {
-  background-color: var(--ds-action-primary-default-background-default);
-  border-color: var(--ds-action-primary-default-background-default);
+  background-color: var(--ds-primary-bg-default);
+  border-color: var(--ds-primary-bg-default);
 }
 
 .ds-toggle:checked::after {
-  background-color: var(--ds-action-primary-default-content-default);
+  background-color: var(--ds-primary-content-default);
   transform: translateX(16px);
 }
 
@@ -74,7 +74,7 @@
 
 /* Disabled */
 .ds-toggle:disabled {
-  background-color: var(--ds-state-disabled-background);
+  background-color: var(--ds-background-disabled);
   border-color: var(--ds-border-control-disabled);
   cursor: not-allowed;
 }

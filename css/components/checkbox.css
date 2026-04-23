@@ -17,7 +17,7 @@
 }
 
 .ds-checkbox-label:hover {
-  background-color: var(--ds-state-hover);
+  background-color: var(--ds-overlay-subtle);
 }
 
 /* Custom checkbox */
@@ -44,7 +44,7 @@
   left: 6px;
   width: 5px;
   height: 10px;
-  border: solid var(--ds-action-primary-default-content-default);
+  border: solid var(--ds-primary-content-default);
   border-width: 0 2px 2px 0;
   transform: rotate(45deg) scale(0);
   transition: transform var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
@@ -52,13 +52,13 @@
 
 /* Hover */
 .ds-checkbox:hover:not(:disabled) {
-  border-color: var(--ds-action-primary-default-background-default);
+  border-color: var(--ds-primary-bg-default);
 }
 
 /* Checked */
 .ds-checkbox:checked {
-  background-color: var(--ds-action-primary-default-background-default);
-  border-color: var(--ds-action-primary-default-background-default);
+  background-color: var(--ds-primary-bg-default);
+  border-color: var(--ds-primary-bg-default);
 }
 
 .ds-checkbox:checked::after {
@@ -67,8 +67,8 @@
 
 /* Indeterminate */
 .ds-checkbox:indeterminate {
-  background-color: var(--ds-action-primary-default-background-default);
-  border-color: var(--ds-action-primary-default-background-default);
+  background-color: var(--ds-primary-bg-default);
+  border-color: var(--ds-primary-bg-default);
 }
 
 .ds-checkbox:indeterminate::after {
@@ -77,7 +77,7 @@
   width: 10px;
   height: 2px;
   border: none;
-  background-color: var(--ds-action-primary-default-content-default);
+  background-color: var(--ds-primary-content-default);
   transform: translate(-50%, -50%) scale(1);
   border-radius: 1px;
 }
@@ -90,7 +90,7 @@
 
 /* Disabled */
 .ds-checkbox:disabled {
-  background-color: var(--ds-state-disabled-background);
+  background-color: var(--ds-background-disabled);
   border-color: var(--ds-border-control-disabled);
   cursor: not-allowed;
 }
@@ -106,12 +106,12 @@
 
 /* Error state */
 .ds-checkbox-group--error .ds-checkbox {
-  border-color: var(--ds-feedback-error-border);
+  border-color: var(--ds-feedback-error-border-default);
 }
 
 .ds-checkbox-group--error .ds-checkbox:checked {
-  background-color: var(--ds-feedback-error-default);
-  border-color: var(--ds-feedback-error-default);
+  background-color: var(--ds-feedback-error-bg-default);
+  border-color: var(--ds-feedback-error-bg-default);
 }
 
 .ds-checkbox-group__error {

@@ -8,8 +8,8 @@
   align-items: center;
   justify-content: center;
   border-radius: var(--ds-radius-full);
-  background-color: var(--ds-action-primary-default-background-default);
-  color: var(--ds-action-primary-default-content-default);
+  background-color: var(--ds-primary-bg-default);
+  color: var(--ds-primary-content-default);
   font-family: var(--ds-body-font-family-sans);
   font-weight: var(--ds-body-font-weight-semibold);
   flex-shrink: 0;

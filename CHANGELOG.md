@@ -8,6 +8,35 @@ Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na
 
 ## [Não publicado]
 
+### Simplificação estrutural Semantic (ADR-014 revisão 2026-04-23)
+
+Revisão da ADR-014: estrutura action de 5 níveis (`action.{role}.{style}.{prop}.{state}`) foi substituída por **categorias peers no root Semantic** com regra de naming alinhada ao padrão Nathan Curtis (Category · Concept · Property · Variant · State) + PDF enviado pelo usuário.
+
+**Novo rational**:
+- `primary`, `toned`, `outline`, `ghost`, `link` são peers no root Semantic (sem prefix `action.`)
+- Estrutura: `{categoria}/{prop-state}` — hierarquia pasta no Figma + compound hífen no último nível
+- `bg` (abreviado) em prop-modifier; `background` reservado pra categoria root
+- `default` explícito (`bg-default`, `content-default`)
+- **Roles `secondary` e `danger` eliminados**: Button danger → `feedback.error.*` direto; Button secondary → `outline` ou `ghost`
+- **Categoria `state.*` eliminada**: hover→overlay.subtle, pressed→overlay.default, focus→focus.ring.color, disabled-background→background.disabled
+- `content.link.*` movido pra categoria peer `link.*`
+- `feedback.{role}.{state}` → `feedback.{role}.bg-{state}` (compound consistente)
+- `border.control.{state}` → `border.control-{state}` (compound)
+
+**Execução**:
+- Figma: 26 vars novas criadas (primary/toned/outline/ghost/link/bg-disabled), 66 feedback vars renomeadas compound, 3 border.control renomeadas, 60 tokens obsoletos deletados (54 action + 4 state + 2 content.link). Total rebinds: 455 em componentes + 2.785 cleanup de bindings órfãos pré-existentes.
+- JSONs: `tokens/semantic/{light,dark}.json` reescritos com script node — seções `action.*`, `state.*`, `content.link` removidas; `primary`, `toned`, `outline`, `ghost`, `link`, `background.disabled` adicionadas; `feedback` compound; `border.control` compound.
+- CSS 18 componentes: 111 substituições (`--ds-action-primary-default-background-default` → `--ds-primary-bg-default`, etc.).
+- ADR-014: seção histórica da versão antiga preservada; seção nova documenta a estrutura peer.
+
+**Resultado**:
+- Tokens CSS 25-60% mais curtos (`--ds-primary-bg-default` = 22 chars vs 50 chars antes).
+- Semantic action: 66 → 25 tokens (-62%).
+- Build e refs todas OK.
+- Remanescente: 245 broken bindings pré-existentes em `fontSize` (ID órfão 10:11, débito histórico não introduzido por esta refatoração).
+
+**Bump**: 0.6.0 → **0.7.0** (breaking — nomes action.* renomeados pra primary/toned/outline/ghost/link; roles secondary/danger eliminados).
+
 ### Refatoração ground-up (ADR-014) — action×style×prop×state + eliminação de brand/accent + themes
 
 Restruturação da camada Semantic pra resolver o bloat crônico acumulado nas Fases 2-8 do ADR-013. **Breaking change grande** — CSS de todos componentes reescrito.

@@ -1,24 +1,264 @@
 {
   "semantic": {
-    "background": {
-      "default": {
+    "primary": {
+      "$description": "Ação primária (brand solid). ADR-014.",
+      "bg-default": {
         "$type": "color",
-        "$value": "{foundation.color.neutral.950}",
-        "$description": "Page background"
+        "$value": "{foundation.color.brand.400}"
       },
-      "subtle": {
+      "bg-hover": {
         "$type": "color",
-        "$value": "{foundation.color.neutral.800}",
-        "$description": "Subtle alternate background"
+        "$value": "{foundation.color.brand.500}"
       },
-      "inverse": {
+      "bg-active": {
+        "$type": "color",
+        "$value": "{foundation.color.brand.400}"
+      },
+      "bg-disabled": {
+        "$type": "color",
+        "$value": "{foundation.color.disabled.brand-light}"
+      },
+      "content-default": {
+        "$type": "color",
+        "$value": "{foundation.color.neutral.900}"
+      },
+      "content-disabled": {
+        "$type": "color",
+        "$value": "{foundation.color.overlay.white.80}"
+      }
+    },
+    "toned": {
+      "$description": "Ação brand translúcida. ADR-014.",
+      "bg-default": {
+        "$type": "color",
+        "$value": "{foundation.color.overlay.blue-600.12}"
+      },
+      "bg-hover": {
+        "$type": "color",
+        "$value": "{foundation.color.overlay.blue-600.20}"
+      },
+      "bg-active": {
+        "$type": "color",
+        "$value": "{foundation.color.overlay.blue-600.28}"
+      },
+      "content-default": {
+        "$type": "color",
+        "$value": "{foundation.color.brand.400}"
+      },
+      "content-disabled": {
+        "$type": "color",
+        "$value": "{foundation.color.neutral.600}"
+      }
+    },
+    "outline": {
+      "$description": "Ação com borda neutra. ADR-014.",
+      "bg-hover": {
+        "$type": "color",
+        "$value": "{foundation.color.overlay.black.5}"
+      },
+      "bg-active": {
+        "$type": "color",
+        "$value": "{foundation.color.overlay.black.10}"
+      },
+      "content-default": {
         "$type": "color",
         "$value": "{foundation.color.neutral.50}"
       },
-      "overlay": {
+      "content-disabled": {
         "$type": "color",
-        "$value": "{foundation.color.overlay.black.60}",
-        "$description": "Modal/dialog overlay backdrop"
+        "$value": "{foundation.color.neutral.600}"
+      },
+      "border-default": {
+        "$type": "color",
+        "$value": "{foundation.color.neutral.600}"
+      },
+      "border-hover": {
+        "$type": "color",
+        "$value": "{foundation.color.neutral.400}"
+      },
+      "border-disabled": {
+        "$type": "color",
+        "$value": "{foundation.color.neutral.800}"
+      }
+    },
+    "ghost": {
+      "$description": "Ação apenas texto (neutral). ADR-014.",
+      "bg-hover": {
+        "$type": "color",
+        "$value": "{foundation.color.overlay.black.5}"
+      },
+      "bg-active": {
+        "$type": "color",
+        "$value": "{foundation.color.overlay.black.10}"
+      },
+      "content-default": {
+        "$type": "color",
+        "$value": "{foundation.color.neutral.50}"
+      },
+      "content-disabled": {
+        "$type": "color",
+        "$value": "{foundation.color.neutral.600}"
+      }
+    },
+    "link": {
+      "$description": "Link inline (branded text). ADR-014.",
+      "content-default": {
+        "$type": "color",
+        "$value": "{foundation.color.brand.400}",
+        "$description": "Links em estado default."
+      },
+      "content-hover": {
+        "$type": "color",
+        "$value": "{foundation.color.brand.300}",
+        "$description": "Links em estado hover."
+      }
+    },
+    "feedback": {
+      "success": {
+        "bg-default": {
+          "$type": "color",
+          "$value": "{foundation.color.green.400}"
+        },
+        "bg-hover": {
+          "$type": "color",
+          "$value": "{foundation.color.green.500}"
+        },
+        "bg-active": {
+          "$type": "color",
+          "$value": "{foundation.color.green.500}"
+        },
+        "bg-subtle": {
+          "$type": "color",
+          "$value": "{foundation.color.green.700}"
+        },
+        "bg-background": {
+          "$type": "color",
+          "$value": "{foundation.color.green.900}"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{foundation.color.green.400}"
+        },
+        "bg-disabled": {
+          "$type": "color",
+          "$value": "{foundation.color.disabled.success-dark}"
+        },
+        "content-default": {
+          "$type": "color",
+          "$value": "{foundation.color.green.400}"
+        },
+        "content-contrast": {
+          "$type": "color",
+          "$value": "{foundation.color.neutral.900}",
+          "$description": "Dark text porque success default em dark é green-500 (claro)."
+        },
+        "content-contrast-disabled": {
+          "$type": "color",
+          "$value": "{foundation.color.overlay.white.60}"
+        }
+      },
+      "warning": {
+        "bg-default": {
+          "$type": "color",
+          "$value": "{foundation.color.amber.400}"
+        },
+        "bg-hover": {
+          "$type": "color",
+          "$value": "{foundation.color.amber.500}"
+        },
+        "bg-subtle": {
+          "$type": "color",
+          "$value": "{foundation.color.amber.700}"
+        },
+        "bg-background": {
+          "$type": "color",
+          "$value": "{foundation.color.amber.900}"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{foundation.color.amber.400}"
+        },
+        "content-default": {
+          "$type": "color",
+          "$value": "{foundation.color.amber.400}"
+        },
+        "content-contrast": {
+          "$type": "color",
+          "$value": "{foundation.color.neutral.900}"
+        }
+      },
+      "error": {
+        "bg-default": {
+          "$type": "color",
+          "$value": "{foundation.color.red.400}"
+        },
+        "bg-hover": {
+          "$type": "color",
+          "$value": "{foundation.color.red.500}"
+        },
+        "bg-active": {
+          "$type": "color",
+          "$value": "{foundation.color.red.400}"
+        },
+        "bg-subtle": {
+          "$type": "color",
+          "$value": "{foundation.color.red.700}"
+        },
+        "bg-background": {
+          "$type": "color",
+          "$value": "{foundation.color.red.900}"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{foundation.color.red.400}"
+        },
+        "bg-disabled": {
+          "$type": "color",
+          "$value": "{foundation.color.disabled.error-dark}"
+        },
+        "content-default": {
+          "$type": "color",
+          "$value": "{foundation.color.red.400}"
+        },
+        "content-contrast": {
+          "$type": "color",
+          "$value": "{foundation.color.neutral.900}",
+          "$description": "Dark text porque error default em dark é red-500 (medium)."
+        },
+        "content-contrast-disabled": {
+          "$type": "color",
+          "$value": "{foundation.color.overlay.white.60}"
+        }
+      },
+      "info": {
+        "bg-default": {
+          "$type": "color",
+          "$value": "{foundation.color.sky.400}"
+        },
+        "bg-hover": {
+          "$type": "color",
+          "$value": "{foundation.color.sky.500}"
+        },
+        "bg-subtle": {
+          "$type": "color",
+          "$value": "{foundation.color.sky.700}"
+        },
+        "bg-background": {
+          "$type": "color",
+          "$value": "{foundation.color.sky.900}"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{foundation.color.sky.400}"
+        },
+        "content-default": {
+          "$type": "color",
+          "$value": "{foundation.color.sky.400}"
+        },
+        "content-contrast": {
+          "$type": "color",
+          "$value": "{foundation.color.neutral.900}"
+        }
       }
     },
     "surface": {
@@ -39,6 +279,32 @@
       "elevated": {
         "$type": "color",
         "$value": "{foundation.color.neutral.600}"
+      }
+    },
+    "background": {
+      "default": {
+        "$type": "color",
+        "$value": "{foundation.color.neutral.950}",
+        "$description": "Page background"
+      },
+      "subtle": {
+        "$type": "color",
+        "$value": "{foundation.color.neutral.800}",
+        "$description": "Subtle alternate background"
+      },
+      "inverse": {
+        "$type": "color",
+        "$value": "{foundation.color.neutral.50}"
+      },
+      "overlay": {
+        "$type": "color",
+        "$value": "{foundation.color.overlay.black.60}",
+        "$description": "Modal/dialog overlay backdrop"
+      },
+      "disabled": {
+        "$type": "color",
+        "$value": "{foundation.color.neutral.800}",
+        "$description": "Background de componentes em estado disabled (antes state.disabled.background)."
       }
     },
     "content": {
@@ -65,350 +331,12 @@
       "inverse": {
         "$type": "color",
         "$value": "{foundation.color.neutral.900}"
-      },
-      "link": {
-        "default": {
-          "$type": "color",
-          "$value": "{foundation.color.brand.400}",
-          "$description": "Links em estado default."
-        },
-        "hover": {
-          "$type": "color",
-          "$value": "{foundation.color.brand.300}",
-          "$description": "Links em estado hover."
-        }
-      }
-    },
-    "action": {
-      "$description": "Dark mode — Tokens de ação por hierarquia × estilo × prop × estado. ADR-014.",
-      "primary": {
-        "default": {
-          "background": {
-            "default":  { "$type": "color", "$value": "{foundation.color.brand.400}" },
-            "hover":    { "$type": "color", "$value": "{foundation.color.brand.500}" },
-            "active":   { "$type": "color", "$value": "{foundation.color.brand.400}" },
-            "disabled": { "$type": "color", "$value": "{foundation.color.disabled.brand-light}" }
-          },
-          "content": {
-            "default":  { "$type": "color", "$value": "{foundation.color.neutral.900}" },
-            "disabled": { "$type": "color", "$value": "{foundation.color.overlay.white.80}" }
-          }
-        },
-        "toned": {
-          "background": {
-            "default": { "$type": "color", "$value": "{foundation.color.overlay.blue-600.12}" },
-            "hover":   { "$type": "color", "$value": "{foundation.color.overlay.blue-600.20}" },
-            "active":  { "$type": "color", "$value": "{foundation.color.overlay.blue-600.28}" }
-          },
-          "content": {
-            "default":  { "$type": "color", "$value": "{foundation.color.brand.400}" },
-            "disabled": { "$type": "color", "$value": "{foundation.color.neutral.600}" }
-          }
-        },
-        "outline": {
-          "background": {
-            "hover":  { "$type": "color", "$value": "{foundation.color.overlay.black.10}" },
-            "active": { "$type": "color", "$value": "{foundation.color.overlay.black.10}" }
-          },
-          "content": {
-            "default":  { "$type": "color", "$value": "{foundation.color.brand.400}" },
-            "disabled": { "$type": "color", "$value": "{foundation.color.neutral.600}" }
-          },
-          "border": {
-            "default":  { "$type": "color", "$value": "{foundation.color.brand.400}" },
-            "hover":    { "$type": "color", "$value": "{foundation.color.brand.500}" },
-            "disabled": { "$type": "color", "$value": "{foundation.color.neutral.900}" }
-          }
-        },
-        "ghost": {
-          "background": {
-            "hover":  { "$type": "color", "$value": "{foundation.color.overlay.black.10}" },
-            "active": { "$type": "color", "$value": "{foundation.color.overlay.black.10}" }
-          },
-          "content": {
-            "default":  { "$type": "color", "$value": "{foundation.color.brand.400}" },
-            "disabled": { "$type": "color", "$value": "{foundation.color.neutral.600}" }
-          }
-        }
-      },
-      "secondary": {
-        "default": {
-          "background": {
-            "default":  { "$type": "color", "$value": "{foundation.color.neutral.800}" },
-            "hover":    { "$type": "color", "$value": "{foundation.color.neutral.700}" },
-            "active":   { "$type": "color", "$value": "{foundation.color.neutral.600}" },
-            "disabled": { "$type": "color", "$value": "{foundation.color.neutral.900}" }
-          },
-          "content": {
-            "default":  { "$type": "color", "$value": "{foundation.color.neutral.50}" },
-            "disabled": { "$type": "color", "$value": "{foundation.color.neutral.600}" }
-          }
-        },
-        "toned": {
-          "background": {
-            "default": { "$type": "color", "$value": "{foundation.color.overlay.black.5}" },
-            "hover":   { "$type": "color", "$value": "{foundation.color.overlay.black.10}" },
-            "active":  { "$type": "color", "$value": "{foundation.color.overlay.black.20}" }
-          },
-          "content": {
-            "default":  { "$type": "color", "$value": "{foundation.color.neutral.50}" },
-            "disabled": { "$type": "color", "$value": "{foundation.color.neutral.600}" }
-          }
-        },
-        "outline": {
-          "background": {
-            "hover":  { "$type": "color", "$value": "{foundation.color.overlay.black.5}" },
-            "active": { "$type": "color", "$value": "{foundation.color.overlay.black.10}" }
-          },
-          "content": {
-            "default":  { "$type": "color", "$value": "{foundation.color.neutral.50}" },
-            "disabled": { "$type": "color", "$value": "{foundation.color.neutral.600}" }
-          },
-          "border": {
-            "default":  { "$type": "color", "$value": "{foundation.color.neutral.600}" },
-            "hover":    { "$type": "color", "$value": "{foundation.color.neutral.400}" },
-            "disabled": { "$type": "color", "$value": "{foundation.color.neutral.800}" }
-          }
-        },
-        "ghost": {
-          "background": {
-            "hover":  { "$type": "color", "$value": "{foundation.color.overlay.black.5}" },
-            "active": { "$type": "color", "$value": "{foundation.color.overlay.black.10}" }
-          },
-          "content": {
-            "default":  { "$type": "color", "$value": "{foundation.color.neutral.50}" },
-            "disabled": { "$type": "color", "$value": "{foundation.color.neutral.600}" }
-          }
-        }
-      },
-      "danger": {
-        "default": {
-          "background": {
-            "default":  { "$type": "color", "$value": "{foundation.color.red.500}" },
-            "hover":    { "$type": "color", "$value": "{foundation.color.red.600}" },
-            "active":   { "$type": "color", "$value": "{foundation.color.red.700}" },
-            "disabled": { "$type": "color", "$value": "{foundation.color.disabled.error-light}" }
-          },
-          "content": {
-            "default":  { "$type": "color", "$value": "{foundation.color.neutral.900}" },
-            "disabled": { "$type": "color", "$value": "{foundation.color.overlay.white.80}" }
-          }
-        },
-        "toned": {
-          "background": {
-            "default": { "$type": "color", "$value": "{foundation.color.red.800}" },
-            "hover":   { "$type": "color", "$value": "{foundation.color.red.700}" },
-            "active":  { "$type": "color", "$value": "{foundation.color.red.600}" }
-          },
-          "content": {
-            "default":  { "$type": "color", "$value": "{foundation.color.red.200}" },
-            "disabled": { "$type": "color", "$value": "{foundation.color.neutral.600}" }
-          }
-        },
-        "outline": {
-          "background": {
-            "hover":  { "$type": "color", "$value": "{foundation.color.overlay.black.10}" },
-            "active": { "$type": "color", "$value": "{foundation.color.overlay.black.10}" }
-          },
-          "content": {
-            "default":  { "$type": "color", "$value": "{foundation.color.red.200}" },
-            "disabled": { "$type": "color", "$value": "{foundation.color.neutral.600}" }
-          },
-          "border": {
-            "default":  { "$type": "color", "$value": "{foundation.color.red.500}" },
-            "hover":    { "$type": "color", "$value": "{foundation.color.red.500}" },
-            "disabled": { "$type": "color", "$value": "{foundation.color.neutral.800}" }
-          }
-        },
-        "ghost": {
-          "background": {
-            "hover":  { "$type": "color", "$value": "{foundation.color.overlay.black.10}" },
-            "active": { "$type": "color", "$value": "{foundation.color.overlay.black.10}" }
-          },
-          "content": {
-            "default":  { "$type": "color", "$value": "{foundation.color.red.200}" },
-            "disabled": { "$type": "color", "$value": "{foundation.color.neutral.600}" }
-          }
-        }
-      }
-    },
-    "feedback": {
-      "success": {
-        "default": {
-          "$type": "color",
-          "$value": "{foundation.color.green.400}"
-        },
-        "hover": {
-          "$type": "color",
-          "$value": "{foundation.color.green.500}"
-        },
-        "active": {
-          "$type": "color",
-          "$value": "{foundation.color.green.500}"
-        },
-        "subtle": {
-          "$type": "color",
-          "$value": "{foundation.color.green.700}"
-        },
-        "background": {
-          "$type": "color",
-          "$value": "{foundation.color.green.900}"
-        },
-        "border": {
-          "$type": "color",
-          "$value": "{foundation.color.green.400}"
-        },
-        "disabled": {
-          "$type": "color",
-          "$value": "{foundation.color.disabled.success-dark}"
-        },
-        "content": {
-          "default": {
-            "$type": "color",
-            "$value": "{foundation.color.green.400}"
-          },
-          "contrast": {
-            "$type": "color",
-            "$value": "{foundation.color.neutral.900}",
-            "$description": "Dark text porque success default em dark é green-500 (claro)."
-          },
-          "contrast-disabled": {
-            "$type": "color",
-            "$value": "{foundation.color.overlay.white.60}"
-          }
-        }
-      },
-      "warning": {
-        "default": {
-          "$type": "color",
-          "$value": "{foundation.color.amber.400}"
-        },
-        "hover": {
-          "$type": "color",
-          "$value": "{foundation.color.amber.500}"
-        },
-        "subtle": {
-          "$type": "color",
-          "$value": "{foundation.color.amber.700}"
-        },
-        "background": {
-          "$type": "color",
-          "$value": "{foundation.color.amber.900}"
-        },
-        "border": {
-          "$type": "color",
-          "$value": "{foundation.color.amber.400}"
-        },
-        "content": {
-          "default": {
-            "$type": "color",
-            "$value": "{foundation.color.amber.400}"
-          },
-          "contrast": {
-            "$type": "color",
-            "$value": "{foundation.color.neutral.900}"
-          }
-        }
-      },
-      "error": {
-        "default": {
-          "$type": "color",
-          "$value": "{foundation.color.red.400}"
-        },
-        "hover": {
-          "$type": "color",
-          "$value": "{foundation.color.red.500}"
-        },
-        "active": {
-          "$type": "color",
-          "$value": "{foundation.color.red.400}"
-        },
-        "subtle": {
-          "$type": "color",
-          "$value": "{foundation.color.red.700}"
-        },
-        "background": {
-          "$type": "color",
-          "$value": "{foundation.color.red.900}"
-        },
-        "border": {
-          "$type": "color",
-          "$value": "{foundation.color.red.400}"
-        },
-        "disabled": {
-          "$type": "color",
-          "$value": "{foundation.color.disabled.error-dark}"
-        },
-        "content": {
-          "default": {
-            "$type": "color",
-            "$value": "{foundation.color.red.400}"
-          },
-          "contrast": {
-            "$type": "color",
-            "$value": "{foundation.color.neutral.900}",
-            "$description": "Dark text porque error default em dark é red-500 (medium)."
-          },
-          "contrast-disabled": {
-            "$type": "color",
-            "$value": "{foundation.color.overlay.white.60}"
-          }
-        }
-      },
-      "info": {
-        "default": {
-          "$type": "color",
-          "$value": "{foundation.color.sky.400}"
-        },
-        "hover": {
-          "$type": "color",
-          "$value": "{foundation.color.sky.500}"
-        },
-        "subtle": {
-          "$type": "color",
-          "$value": "{foundation.color.sky.700}"
-        },
-        "background": {
-          "$type": "color",
-          "$value": "{foundation.color.sky.900}"
-        },
-        "border": {
-          "$type": "color",
-          "$value": "{foundation.color.sky.400}"
-        },
-        "content": {
-          "default": {
-            "$type": "color",
-            "$value": "{foundation.color.sky.400}"
-          },
-          "contrast": {
-            "$type": "color",
-            "$value": "{foundation.color.neutral.900}"
-          }
-        }
       }
     },
     "border": {
       "default": {
         "$type": "color",
         "$value": "{foundation.color.neutral.700}"
-      },
-      "control": {
-        "default": {
-          "$type": "color",
-          "$value": "{foundation.color.neutral.500}",
-          "$description": "Border color for interactive controls. Meets WCAG 1.4.11 (≥3:1 against dark surface)."
-        },
-        "hover": {
-          "$type": "color",
-          "$value": "{foundation.color.neutral.400}",
-          "$description": "Border on hover for interactive controls in dark mode."
-        },
-        "disabled": {
-          "$type": "color",
-          "$value": "{foundation.color.neutral.700}",
-          "$description": "Border for disabled controls in dark mode. Exempt from contrast requirements per WCAG 1.4.3."
-        }
       },
       "strong": {
         "$type": "color",
@@ -446,11 +374,26 @@
       },
       "error": {
         "$type": "color",
-        "$value": "{semantic.feedback.error.default}"
+        "$value": "{semantic.feedback.error.bg-default}"
       },
       "focus-error": {
         "$type": "color",
         "$value": "{foundation.color.red.400}"
+      },
+      "control-default": {
+        "$type": "color",
+        "$value": "{foundation.color.neutral.500}",
+        "$description": "Border color for interactive controls. Meets WCAG 1.4.11 (≥3:1 against dark surface)."
+      },
+      "control-hover": {
+        "$type": "color",
+        "$value": "{foundation.color.neutral.400}",
+        "$description": "Border on hover for interactive controls in dark mode."
+      },
+      "control-disabled": {
+        "$type": "color",
+        "$value": "{foundation.color.neutral.700}",
+        "$description": "Border for disabled controls in dark mode. Exempt from contrast requirements per WCAG 1.4.3."
       }
     },
     "overlay": {
@@ -490,40 +433,40 @@
         }
       }
     },
-    "state": {
-      "hover": {
-        "$type": "color",
-        "$value": "{foundation.color.overlay.white.5}"
-      },
-      "pressed": {
-        "$type": "color",
-        "$value": "{foundation.color.overlay.white.10}"
-      },
-      "focus": {
-        "$type": "color",
-        "$value": "{foundation.color.brand.400}"
-      },
+    "opacity": {
+      "$description": "Semantic opacity — ADR-013 Fase 8.",
       "disabled": {
-        "background": {
-          "$type": "color",
-          "$value": "{foundation.color.neutral.900}"
-        }
+        "$type": "number",
+        "$value": "{foundation.opacity.50}",
+        "$description": "50%."
       }
     },
     "motion": {
       "$description": "Semantic motion — ADR-013 Fase 8.",
       "duration": {
-        "fast":   { "$type": "duration", "$value": "{foundation.duration.fast}",   "$description": "150ms." },
-        "normal": { "$type": "duration", "$value": "{foundation.duration.normal}", "$description": "200ms." },
-        "slow":   { "$type": "duration", "$value": "{foundation.duration.slow}",   "$description": "300ms." }
+        "fast": {
+          "$type": "duration",
+          "$value": "{foundation.duration.fast}",
+          "$description": "150ms."
+        },
+        "normal": {
+          "$type": "duration",
+          "$value": "{foundation.duration.normal}",
+          "$description": "200ms."
+        },
+        "slow": {
+          "$type": "duration",
+          "$value": "{foundation.duration.slow}",
+          "$description": "300ms."
+        }
       },
       "ease": {
-        "default": { "$type": "cubicBezier", "$value": "{foundation.ease.default}", "$description": "Curva padrão." }
+        "default": {
+          "$type": "cubicBezier",
+          "$value": "{foundation.ease.default}",
+          "$description": "Curva padrão."
+        }
       }
-    },
-    "opacity": {
-      "$description": "Semantic opacity — ADR-013 Fase 8.",
-      "disabled": { "$type": "number", "$value": "{foundation.opacity.50}", "$description": "50%." }
     },
     "space": {
       "inset": {
@@ -661,14 +604,6 @@
         }
       }
     },
-    "radius": {
-      "component": { "$type": "dimension", "$value": "{foundation.radius.md}" },
-      "sm":   { "$type": "dimension", "$value": "{foundation.radius.sm}" },
-      "md":   { "$type": "dimension", "$value": "{foundation.radius.md}" },
-      "lg":   { "$type": "dimension", "$value": "{foundation.radius.lg}" },
-      "xl":   { "$type": "dimension", "$value": "{foundation.radius.xl}" },
-      "full": { "$type": "dimension", "$value": "{foundation.radius.full}" }
-    },
     "size": {
       "control": {
         "sm": {
@@ -708,6 +643,32 @@
           "$value": "{foundation.spacing.11}",
           "$description": "44px. WCAG 2.5.5 AAA touch target minimum."
         }
+      }
+    },
+    "radius": {
+      "component": {
+        "$type": "dimension",
+        "$value": "{foundation.radius.md}"
+      },
+      "sm": {
+        "$type": "dimension",
+        "$value": "{foundation.radius.sm}"
+      },
+      "md": {
+        "$type": "dimension",
+        "$value": "{foundation.radius.md}"
+      },
+      "lg": {
+        "$type": "dimension",
+        "$value": "{foundation.radius.lg}"
+      },
+      "xl": {
+        "$type": "dimension",
+        "$value": "{foundation.radius.xl}"
+      },
+      "full": {
+        "$type": "dimension",
+        "$value": "{foundation.radius.full}"
       }
     },
     "typography": {
@@ -757,32 +718,108 @@
           }
         },
         "font-weight": {
-          "regular": { "$type": "number", "$value": "{foundation.typography.font.weight.regular}", "$description": "Peso regular (400)." },
-          "medium":  { "$type": "number", "$value": "{foundation.typography.font.weight.medium}",  "$description": "Peso medium (500)." },
-          "semibold":{ "$type": "number", "$value": "{foundation.typography.font.weight.semibold}","$description": "Peso semibold (600)." },
-          "bold":    { "$type": "number", "$value": "{foundation.typography.font.weight.bold}",    "$description": "Peso bold (700)." }
+          "regular": {
+            "$type": "number",
+            "$value": "{foundation.typography.font.weight.regular}",
+            "$description": "Peso regular (400)."
+          },
+          "medium": {
+            "$type": "number",
+            "$value": "{foundation.typography.font.weight.medium}",
+            "$description": "Peso medium (500)."
+          },
+          "semibold": {
+            "$type": "number",
+            "$value": "{foundation.typography.font.weight.semibold}",
+            "$description": "Peso semibold (600)."
+          },
+          "bold": {
+            "$type": "number",
+            "$value": "{foundation.typography.font.weight.bold}",
+            "$description": "Peso bold (700)."
+          }
         },
         "letter-spacing": {
-          "normal": { "$type": "dimension", "$value": "{foundation.typography.letter.spacing.normal}", "$description": "Letter-spacing neutro (0)." },
-          "tight":  { "$type": "dimension", "$value": "{foundation.typography.letter.spacing.tight}",  "$description": "Letter-spacing apertado (-0.02em)." }
+          "normal": {
+            "$type": "dimension",
+            "$value": "{foundation.typography.letter.spacing.normal}",
+            "$description": "Letter-spacing neutro (0)."
+          },
+          "tight": {
+            "$type": "dimension",
+            "$value": "{foundation.typography.letter.spacing.tight}",
+            "$description": "Letter-spacing apertado (-0.02em)."
+          }
         },
         "font-size": {
-          "xs":  { "$type": "dimension", "$value": "{foundation.typography.font.size.xs}",  "$description": "12px." },
-          "sm":  { "$type": "dimension", "$value": "{foundation.typography.font.size.sm}",  "$description": "14px." },
-          "md":  { "$type": "dimension", "$value": "{foundation.typography.font.size.md}",  "$description": "16px." },
-          "lg":  { "$type": "dimension", "$value": "{foundation.typography.font.size.lg}",  "$description": "18px." },
-          "xl":  { "$type": "dimension", "$value": "{foundation.typography.font.size.xl}",  "$description": "20px." },
-          "2xl": { "$type": "dimension", "$value": "{foundation.typography.font.size.2xl}", "$description": "24px." },
-          "3xl": { "$type": "dimension", "$value": "{foundation.typography.font.size.3xl}", "$description": "30px." }
+          "xs": {
+            "$type": "dimension",
+            "$value": "{foundation.typography.font.size.xs}",
+            "$description": "12px."
+          },
+          "sm": {
+            "$type": "dimension",
+            "$value": "{foundation.typography.font.size.sm}",
+            "$description": "14px."
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "{foundation.typography.font.size.md}",
+            "$description": "16px."
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{foundation.typography.font.size.lg}",
+            "$description": "18px."
+          },
+          "xl": {
+            "$type": "dimension",
+            "$value": "{foundation.typography.font.size.xl}",
+            "$description": "20px."
+          },
+          "2xl": {
+            "$type": "dimension",
+            "$value": "{foundation.typography.font.size.2xl}",
+            "$description": "24px."
+          },
+          "3xl": {
+            "$type": "dimension",
+            "$value": "{foundation.typography.font.size.3xl}",
+            "$description": "30px."
+          }
         },
         "line-height": {
           "$description": "Ratios unitless. BY_DESIGN por ADR-012 (Figma usa PX absolutos).",
-          "xs":  { "$type": "number", "$value": "{foundation.typography.line.height.snug}",   "$description": "1.375 ratio." },
-          "sm":  { "$type": "number", "$value": "{foundation.typography.line.height.snug}",   "$description": "1.375 ratio." },
-          "md":  { "$type": "number", "$value": "{foundation.typography.line.height.normal}", "$description": "1.5 ratio. Default body." },
-          "xl":  { "$type": "number", "$value": "{foundation.typography.line.height.normal}", "$description": "1.5 ratio." },
-          "2xl": { "$type": "number", "$value": "{foundation.typography.line.height.snug}",   "$description": "1.375 ratio." },
-          "3xl": { "$type": "number", "$value": "{foundation.typography.line.height.tight}",  "$description": "1.25 ratio." }
+          "xs": {
+            "$type": "number",
+            "$value": "{foundation.typography.line.height.snug}",
+            "$description": "1.375 ratio."
+          },
+          "sm": {
+            "$type": "number",
+            "$value": "{foundation.typography.line.height.snug}",
+            "$description": "1.375 ratio."
+          },
+          "md": {
+            "$type": "number",
+            "$value": "{foundation.typography.line.height.normal}",
+            "$description": "1.5 ratio. Default body."
+          },
+          "xl": {
+            "$type": "number",
+            "$value": "{foundation.typography.line.height.normal}",
+            "$description": "1.5 ratio."
+          },
+          "2xl": {
+            "$type": "number",
+            "$value": "{foundation.typography.line.height.snug}",
+            "$description": "1.375 ratio."
+          },
+          "3xl": {
+            "$type": "number",
+            "$value": "{foundation.typography.line.height.tight}",
+            "$description": "1.25 ratio."
+          }
         }
       }
     }

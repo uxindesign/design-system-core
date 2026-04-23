@@ -30,8 +30,8 @@
 }
 
 .ds-tab--active {
-  color: var(--ds-action-primary-default-background-default);
-  border-bottom-color: var(--ds-action-primary-default-background-default);
+  color: var(--ds-primary-bg-default);
+  border-bottom-color: var(--ds-primary-bg-default);
 }
 
 .ds-tab:focus-visible {

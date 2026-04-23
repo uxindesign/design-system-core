@@ -13,7 +13,7 @@
    ========================================================================== */
 
 .ds-breadcrumb__item {
-  color: var(--ds-content-link-default);
+  color: var(--ds-link-content-default);
   text-decoration: none;
 }
 

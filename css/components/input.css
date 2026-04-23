@@ -99,19 +99,19 @@
 
 /* Error */
 .ds-input--error {
-  border-color: var(--ds-feedback-error-default);
+  border-color: var(--ds-feedback-error-bg-default);
 }
 
 .ds-input--error:focus-within {
-  border-color: var(--ds-feedback-error-default);
-  outline: var(--ds-focus-ring-width) solid var(--ds-feedback-error-default);
+  border-color: var(--ds-feedback-error-bg-default);
+  outline: var(--ds-focus-ring-width) solid var(--ds-feedback-error-bg-default);
   outline-offset: var(--ds-focus-ring-offset);
 }
 
 /* Disabled */
 .ds-input--disabled,
 .ds-input:has(.ds-input__field:disabled) {
-  background: var(--ds-state-disabled-background);
+  background: var(--ds-background-disabled);
   border-color: var(--ds-border-control-disabled);
   color: var(--ds-content-disabled);
   pointer-events: none;
@@ -182,7 +182,7 @@
   font-size: var(--ds-body-font-size-sm);
   font-weight: var(--ds-body-font-weight-medium);
   line-height: var(--ds-body-line-height-sm);
-  color: var(--ds-feedback-error-default);
+  color: var(--ds-feedback-error-bg-default);
   user-select: none;
 }
 
@@ -208,7 +208,7 @@
   display: none;
   font-size: var(--ds-body-font-size-xs);
   line-height: var(--ds-body-line-height-md);
-  color: var(--ds-feedback-error-default);
+  color: var(--ds-feedback-error-bg-default);
 }
 
 /* Error state — show error message, tint label */
@@ -217,7 +217,7 @@
 }
 
 .ds-field--error .ds-field__label {
-  color: var(--ds-feedback-error-default);
+  color: var(--ds-feedback-error-bg-default);
 }
 
 /* ---------------------------------------------------------

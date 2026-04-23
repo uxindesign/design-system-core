@@ -63,7 +63,7 @@
 
 .ds-modal__close:hover {
   color: var(--ds-content-default);
-  background-color: var(--ds-state-hover);
+  background-color: var(--ds-overlay-subtle);
 }
 
 .ds-modal__close:focus-visible {

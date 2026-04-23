@@ -35,7 +35,7 @@
 }
 
 .ds-radio-label:hover {
-  background-color: var(--ds-state-hover);
+  background-color: var(--ds-overlay-subtle);
 }
 
 /* Custom radio */
@@ -62,20 +62,20 @@
   width: var(--ds-radio-dot-size-md);
   height: var(--ds-radio-dot-size-md);
   border-radius: var(--ds-radius-full);
-  background-color: var(--ds-action-primary-default-content-default);
+  background-color: var(--ds-primary-content-default);
   transform: translate(-50%, -50%) scale(0);
   transition: transform var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
 }
 
 /* Hover */
 .ds-radio:hover:not(:disabled) {
-  border-color: var(--ds-action-primary-default-background-default);
+  border-color: var(--ds-primary-bg-default);
 }
 
 /* Checked */
 .ds-radio:checked {
-  background-color: var(--ds-action-primary-default-background-default);
-  border-color: var(--ds-action-primary-default-background-default);
+  background-color: var(--ds-primary-bg-default);
+  border-color: var(--ds-primary-bg-default);
 }
 
 .ds-radio:checked::after {
@@ -90,7 +90,7 @@
 
 /* Disabled */
 .ds-radio:disabled {
-  background-color: var(--ds-state-disabled-background);
+  background-color: var(--ds-background-disabled);
   border-color: var(--ds-border-control-disabled);
   cursor: not-allowed;
 }
@@ -111,12 +111,12 @@
 
 /* Error state */
 .ds-radio-group--error .ds-radio {
-  border-color: var(--ds-feedback-error-default);
+  border-color: var(--ds-feedback-error-bg-default);
 }
 
 .ds-radio-group--error .ds-radio:checked {
-  background-color: var(--ds-feedback-error-default);
-  border-color: var(--ds-feedback-error-default);
+  background-color: var(--ds-feedback-error-bg-default);
+  border-color: var(--ds-feedback-error-bg-default);
 }
 
 .ds-radio-group--error .ds-radio-group__legend {

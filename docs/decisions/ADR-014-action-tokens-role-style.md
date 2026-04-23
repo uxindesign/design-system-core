@@ -27,26 +27,52 @@ Remoções:
 - `tokens/foundation/brand.json` — deletado
 - CSS themes `theme-ocean.css` e `theme-forest.css` — deletados
 
-### 2. Semantic — categoria `action`
+### 2. Semantic — categorias de ação como peers no root (pós-revisão 2026-04-23)
 
-Estrutura:
+Após revisão de estrutura com alinhamento ao PDF "Naming Tokens in Design Systems" (Nathan Curtis) e exemplos de Carbon/Polaris/Fluent, a estrutura anterior de 5 níveis `action.{role}.{style}.{prop}.{state}` foi considerada burocrática e redundante. Estrutura revisada:
+
+**Regra de naming**:
+- **Color tokens**: hierarquia pastas + compound hífen no último nível. `{categoria}/{prop-state}`.
+- **Dimensional/structural**: hierarquia ponto (escalas taxonômicas).
+- `default` explícito em vars de cor (`bg-default`, `content-default`).
+- `bg` (não `background`) em compound; `background` reservado pra categoria root.
+
+**Categorias de ação como peers no root Semantic** (sem prefix `action.`):
 
 ```
-semantic.action.{role}
-               .{style}
-               .{prop}
-               .{state}
-
-role  = primary | secondary | danger
-style = default | toned | outline | ghost
-prop  = background | content | border
-state = default | hover | active | disabled
+semantic.primary/{bg-default, bg-hover, bg-active, bg-disabled, content-default, content-disabled}   # solid brand
+semantic.toned/{bg-default, bg-hover, bg-active, content-default, content-disabled}                   # brand translúcido
+semantic.outline/{bg-hover, bg-active, border-default, border-hover, border-disabled, content-default, content-disabled}  # neutral
+semantic.ghost/{bg-hover, bg-active, content-default, content-disabled}                               # neutral text-only
+semantic.link/{content-default, content-hover, content-disabled}                                       # inline link branded
 ```
 
-**Roles**:
-- `primary` — ações principais. Usa paleta brand.
-- `secondary` — ações neutras. Usa paleta neutral.
-- `danger` — ações destrutivas. Usa paleta red.
+**Total**: 25 tokens (vs 66 atuais, -62%).
+
+**Eliminações**:
+- `secondary` e `danger` **não são mais roles em action**:
+  - Button "danger" consome `feedback.error.*` diretamente
+  - Button "secondary" (solid cinza) foi eliminado como estilo — visualmente vira `outline` (borda neutra) ou `ghost` (só texto)
+- `state/*` categoria eliminada:
+  - `state.hover` → `overlay.subtle`
+  - `state.pressed` → `overlay.default`
+  - `state.focus` → `focus.ring.color`
+  - `state.disabled-background` → `background.disabled`
+- `content.link.*` movido pra categoria `link.*` peer
+
+**Feedback renomeado** pra compound consistente: `feedback.success.default` → `feedback.success.bg-default`, `feedback.success.content.contrast` → `feedback.success.content-contrast`.
+
+**`border.control/*` renomeado**: `border.control.default` → `border.control-default`.
+
+### 2.1 — Versão antiga (histórico, revoada em 2026-04-23)
+
+A primeira versão do ADR-014 propunha:
+```
+semantic.action.{role: primary|secondary|danger}.{style: default|toned|outline|ghost}.{prop}.{state}
+```
+Mas gerou 66 tokens com nomes de 50+ caracteres (`--ds-action-primary-default-background-default`), "default" duplicado em vários paths, e roles repetidos (3 roles × 4 styles × props × states) sem justificativa prática.
+
+**Troca**: simplicidade e alinhamento com mercado (Carbon/Polaris compound kebab-case) vs matriz combinatória completa.
 
 (Outras hierarquias — success, info, warning — vêm on-demand quando houver variante de componente que exija.)
 

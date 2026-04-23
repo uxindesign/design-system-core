@@ -1,24 +1,276 @@
 {
   "semantic": {
-    "background": {
-      "default": {
+    "primary": {
+      "$description": "Ação primária (brand solid). ADR-014.",
+      "bg-default": {
         "$type": "color",
-        "$value": "{foundation.color.neutral.50}",
-        "$description": "Page background"
+        "$value": "{foundation.color.brand.600}"
       },
-      "subtle": {
+      "bg-hover": {
         "$type": "color",
-        "$value": "{foundation.color.neutral.200}",
-        "$description": "Subtle alternate background — one step darker than default to create visual separation."
+        "$value": "{foundation.color.brand.700}"
       },
-      "inverse": {
+      "bg-active": {
+        "$type": "color",
+        "$value": "{foundation.color.brand.800}"
+      },
+      "bg-disabled": {
+        "$type": "color",
+        "$value": "{foundation.color.disabled.brand-light}"
+      },
+      "content-default": {
+        "$type": "color",
+        "$value": "{foundation.color.neutral.50}"
+      },
+      "content-disabled": {
+        "$type": "color",
+        "$value": "{foundation.color.overlay.white.80}"
+      }
+    },
+    "toned": {
+      "$description": "Ação brand translúcida. ADR-014.",
+      "bg-default": {
+        "$type": "color",
+        "$value": "{foundation.color.overlay.blue-600.12}"
+      },
+      "bg-hover": {
+        "$type": "color",
+        "$value": "{foundation.color.overlay.blue-600.20}"
+      },
+      "bg-active": {
+        "$type": "color",
+        "$value": "{foundation.color.overlay.blue-600.28}"
+      },
+      "content-default": {
+        "$type": "color",
+        "$value": "{foundation.color.brand.700}"
+      },
+      "content-disabled": {
+        "$type": "color",
+        "$value": "{foundation.color.neutral.400}"
+      }
+    },
+    "outline": {
+      "$description": "Ação com borda neutra. ADR-014.",
+      "bg-hover": {
+        "$type": "color",
+        "$value": "{foundation.color.overlay.black.5}"
+      },
+      "bg-active": {
+        "$type": "color",
+        "$value": "{foundation.color.overlay.black.10}"
+      },
+      "content-default": {
         "$type": "color",
         "$value": "{foundation.color.neutral.900}"
       },
-      "overlay": {
+      "content-disabled": {
         "$type": "color",
-        "$value": "{foundation.color.overlay.black.40}",
-        "$description": "Modal/dialog overlay backdrop"
+        "$value": "{foundation.color.neutral.400}"
+      },
+      "border-default": {
+        "$type": "color",
+        "$value": "{foundation.color.neutral.400}"
+      },
+      "border-hover": {
+        "$type": "color",
+        "$value": "{foundation.color.neutral.600}"
+      },
+      "border-disabled": {
+        "$type": "color",
+        "$value": "{foundation.color.neutral.200}"
+      }
+    },
+    "ghost": {
+      "$description": "Ação apenas texto (neutral). ADR-014.",
+      "bg-hover": {
+        "$type": "color",
+        "$value": "{foundation.color.overlay.black.5}"
+      },
+      "bg-active": {
+        "$type": "color",
+        "$value": "{foundation.color.overlay.black.10}"
+      },
+      "content-default": {
+        "$type": "color",
+        "$value": "{foundation.color.neutral.900}"
+      },
+      "content-disabled": {
+        "$type": "color",
+        "$value": "{foundation.color.neutral.400}"
+      }
+    },
+    "link": {
+      "$description": "Link inline (branded text). ADR-014.",
+      "content-default": {
+        "$type": "color",
+        "$value": "{foundation.color.brand.600}",
+        "$description": "Links em estado default."
+      },
+      "content-hover": {
+        "$type": "color",
+        "$value": "{foundation.color.brand.700}",
+        "$description": "Links em estado hover."
+      }
+    },
+    "feedback": {
+      "success": {
+        "bg-default": {
+          "$type": "color",
+          "$value": "{foundation.color.green.600}",
+          "$description": "Fill success principal."
+        },
+        "bg-hover": {
+          "$type": "color",
+          "$value": "{foundation.color.green.800}"
+        },
+        "bg-active": {
+          "$type": "color",
+          "$value": "{foundation.color.green.900}"
+        },
+        "bg-subtle": {
+          "$type": "color",
+          "$value": "{foundation.color.green.100}"
+        },
+        "bg-background": {
+          "$type": "color",
+          "$value": "{foundation.color.green.50}"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{foundation.color.green.500}"
+        },
+        "bg-disabled": {
+          "$type": "color",
+          "$value": "{foundation.color.disabled.success-light}",
+          "$description": "Fill success disabled."
+        },
+        "content-default": {
+          "$type": "color",
+          "$value": "{foundation.color.green.700}",
+          "$description": "Cor success como conteúdo (mensagens, ícones sobre fundo claro)."
+        },
+        "content-contrast": {
+          "$type": "color",
+          "$value": "{foundation.color.neutral.50}",
+          "$description": "Conteúdo de alto contraste sobre fill success sólido."
+        },
+        "content-contrast-disabled": {
+          "$type": "color",
+          "$value": "{foundation.color.overlay.white.80}",
+          "$description": "Conteúdo disabled sobre fill success disabled."
+        }
+      },
+      "warning": {
+        "bg-default": {
+          "$type": "color",
+          "$value": "{foundation.color.amber.500}"
+        },
+        "bg-hover": {
+          "$type": "color",
+          "$value": "{foundation.color.amber.600}"
+        },
+        "bg-subtle": {
+          "$type": "color",
+          "$value": "{foundation.color.amber.100}"
+        },
+        "bg-background": {
+          "$type": "color",
+          "$value": "{foundation.color.amber.50}"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{foundation.color.amber.500}",
+          "$description": "Upgraded from amber.500 to amber.600 (ADR-008) for consistency with error.border/info.border at step 600. Passes 3:1 vs amber.50."
+        },
+        "content-default": {
+          "$type": "color",
+          "$value": "{foundation.color.amber.700}",
+          "$description": "Cor warning como conteúdo."
+        },
+        "content-contrast": {
+          "$type": "color",
+          "$value": "{foundation.color.neutral.900}",
+          "$description": "Conteúdo de alto contraste sobre fill warning sólido. Dark text porque amber-500 é claro."
+        }
+      },
+      "error": {
+        "bg-default": {
+          "$type": "color",
+          "$value": "{foundation.color.red.600}"
+        },
+        "bg-hover": {
+          "$type": "color",
+          "$value": "{foundation.color.red.800}"
+        },
+        "bg-active": {
+          "$type": "color",
+          "$value": "{foundation.color.red.900}"
+        },
+        "bg-subtle": {
+          "$type": "color",
+          "$value": "{foundation.color.red.100}"
+        },
+        "bg-background": {
+          "$type": "color",
+          "$value": "{foundation.color.red.50}"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{foundation.color.red.500}"
+        },
+        "bg-disabled": {
+          "$type": "color",
+          "$value": "{foundation.color.disabled.error-light}",
+          "$description": "Fill error disabled."
+        },
+        "content-default": {
+          "$type": "color",
+          "$value": "{foundation.color.red.700}",
+          "$description": "Cor error como conteúdo (mensagens de erro, ícones de alerta)."
+        },
+        "content-contrast": {
+          "$type": "color",
+          "$value": "{foundation.color.neutral.50}",
+          "$description": "Conteúdo de alto contraste sobre fill error sólido."
+        },
+        "content-contrast-disabled": {
+          "$type": "color",
+          "$value": "{foundation.color.overlay.white.80}",
+          "$description": "Conteúdo disabled sobre fill error disabled."
+        }
+      },
+      "info": {
+        "bg-default": {
+          "$type": "color",
+          "$value": "{foundation.color.sky.500}"
+        },
+        "bg-hover": {
+          "$type": "color",
+          "$value": "{foundation.color.sky.600}"
+        },
+        "bg-subtle": {
+          "$type": "color",
+          "$value": "{foundation.color.sky.100}"
+        },
+        "bg-background": {
+          "$type": "color",
+          "$value": "{foundation.color.sky.50}"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{foundation.color.sky.500}"
+        },
+        "content-default": {
+          "$type": "color",
+          "$value": "{foundation.color.sky.700}",
+          "$description": "Cor info como conteúdo."
+        },
+        "content-contrast": {
+          "$type": "color",
+          "$value": "{foundation.color.neutral.900}",
+          "$description": "Conteúdo de alto contraste sobre fill info sólido. Dark text porque sky-600 é claro demais para branco."
+        }
       }
     },
     "surface": {
@@ -39,6 +291,32 @@
       "elevated": {
         "$type": "color",
         "$value": "{foundation.color.neutral.50}"
+      }
+    },
+    "background": {
+      "default": {
+        "$type": "color",
+        "$value": "{foundation.color.neutral.50}",
+        "$description": "Page background"
+      },
+      "subtle": {
+        "$type": "color",
+        "$value": "{foundation.color.neutral.200}",
+        "$description": "Subtle alternate background — one step darker than default to create visual separation."
+      },
+      "inverse": {
+        "$type": "color",
+        "$value": "{foundation.color.neutral.900}"
+      },
+      "overlay": {
+        "$type": "color",
+        "$value": "{foundation.color.overlay.black.40}",
+        "$description": "Modal/dialog overlay backdrop"
+      },
+      "disabled": {
+        "$type": "color",
+        "$value": "{foundation.color.neutral.200}",
+        "$description": "Background de componentes em estado disabled (antes state.disabled.background)."
       }
     },
     "content": {
@@ -67,362 +345,12 @@
         "$type": "color",
         "$value": "{foundation.color.neutral.50}",
         "$description": "Conteúdo sobre superfícies inversas (background/inverse)."
-      },
-      "link": {
-        "default": {
-          "$type": "color",
-          "$value": "{foundation.color.brand.600}",
-          "$description": "Links em estado default."
-        },
-        "hover": {
-          "$type": "color",
-          "$value": "{foundation.color.brand.700}",
-          "$description": "Links em estado hover."
-        }
-      }
-    },
-    "action": {
-      "$description": "Tokens de ação por hierarquia (primary/secondary/danger) × estilo (default/toned/outline/ghost) × propriedade × estado. ADR-014.",
-      "primary": {
-        "default": {
-          "background": {
-            "default":  { "$type": "color", "$value": "{foundation.color.brand.600}" },
-            "hover":    { "$type": "color", "$value": "{foundation.color.brand.700}" },
-            "active":   { "$type": "color", "$value": "{foundation.color.brand.800}" },
-            "disabled": { "$type": "color", "$value": "{foundation.color.disabled.brand-light}" }
-          },
-          "content": {
-            "default":  { "$type": "color", "$value": "{foundation.color.neutral.50}" },
-            "disabled": { "$type": "color", "$value": "{foundation.color.overlay.white.80}" }
-          }
-        },
-        "toned": {
-          "background": {
-            "default": { "$type": "color", "$value": "{foundation.color.overlay.blue-600.12}" },
-            "hover":   { "$type": "color", "$value": "{foundation.color.overlay.blue-600.20}" },
-            "active":  { "$type": "color", "$value": "{foundation.color.overlay.blue-600.28}" }
-          },
-          "content": {
-            "default":  { "$type": "color", "$value": "{foundation.color.brand.700}" },
-            "disabled": { "$type": "color", "$value": "{foundation.color.neutral.400}" }
-          }
-        },
-        "outline": {
-          "background": {
-            "hover":  { "$type": "color", "$value": "{foundation.color.overlay.black.5}" },
-            "active": { "$type": "color", "$value": "{foundation.color.overlay.black.10}" }
-          },
-          "content": {
-            "default":  { "$type": "color", "$value": "{foundation.color.brand.700}" },
-            "disabled": { "$type": "color", "$value": "{foundation.color.neutral.400}" }
-          },
-          "border": {
-            "default":  { "$type": "color", "$value": "{foundation.color.brand.600}" },
-            "hover":    { "$type": "color", "$value": "{foundation.color.brand.700}" },
-            "disabled": { "$type": "color", "$value": "{foundation.color.neutral.200}" }
-          }
-        },
-        "ghost": {
-          "background": {
-            "hover":  { "$type": "color", "$value": "{foundation.color.overlay.black.5}" },
-            "active": { "$type": "color", "$value": "{foundation.color.overlay.black.10}" }
-          },
-          "content": {
-            "default":  { "$type": "color", "$value": "{foundation.color.brand.700}" },
-            "disabled": { "$type": "color", "$value": "{foundation.color.neutral.400}" }
-          }
-        }
-      },
-      "secondary": {
-        "default": {
-          "background": {
-            "default":  { "$type": "color", "$value": "{foundation.color.neutral.100}" },
-            "hover":    { "$type": "color", "$value": "{foundation.color.neutral.200}" },
-            "active":   { "$type": "color", "$value": "{foundation.color.neutral.300}" },
-            "disabled": { "$type": "color", "$value": "{foundation.color.neutral.50}" }
-          },
-          "content": {
-            "default":  { "$type": "color", "$value": "{foundation.color.neutral.900}" },
-            "disabled": { "$type": "color", "$value": "{foundation.color.neutral.400}" }
-          }
-        },
-        "toned": {
-          "background": {
-            "default": { "$type": "color", "$value": "{foundation.color.overlay.black.5}" },
-            "hover":   { "$type": "color", "$value": "{foundation.color.overlay.black.10}" },
-            "active":  { "$type": "color", "$value": "{foundation.color.overlay.black.20}" }
-          },
-          "content": {
-            "default":  { "$type": "color", "$value": "{foundation.color.neutral.900}" },
-            "disabled": { "$type": "color", "$value": "{foundation.color.neutral.400}" }
-          }
-        },
-        "outline": {
-          "background": {
-            "hover":  { "$type": "color", "$value": "{foundation.color.overlay.black.5}" },
-            "active": { "$type": "color", "$value": "{foundation.color.overlay.black.10}" }
-          },
-          "content": {
-            "default":  { "$type": "color", "$value": "{foundation.color.neutral.900}" },
-            "disabled": { "$type": "color", "$value": "{foundation.color.neutral.400}" }
-          },
-          "border": {
-            "default":  { "$type": "color", "$value": "{foundation.color.neutral.400}" },
-            "hover":    { "$type": "color", "$value": "{foundation.color.neutral.600}" },
-            "disabled": { "$type": "color", "$value": "{foundation.color.neutral.200}" }
-          }
-        },
-        "ghost": {
-          "background": {
-            "hover":  { "$type": "color", "$value": "{foundation.color.overlay.black.5}" },
-            "active": { "$type": "color", "$value": "{foundation.color.overlay.black.10}" }
-          },
-          "content": {
-            "default":  { "$type": "color", "$value": "{foundation.color.neutral.900}" },
-            "disabled": { "$type": "color", "$value": "{foundation.color.neutral.400}" }
-          }
-        }
-      },
-      "danger": {
-        "default": {
-          "background": {
-            "default":  { "$type": "color", "$value": "{foundation.color.red.600}" },
-            "hover":    { "$type": "color", "$value": "{foundation.color.red.700}" },
-            "active":   { "$type": "color", "$value": "{foundation.color.red.800}" },
-            "disabled": { "$type": "color", "$value": "{foundation.color.disabled.error-light}" }
-          },
-          "content": {
-            "default":  { "$type": "color", "$value": "{foundation.color.neutral.50}" },
-            "disabled": { "$type": "color", "$value": "{foundation.color.overlay.white.80}" }
-          }
-        },
-        "toned": {
-          "background": {
-            "default": { "$type": "color", "$value": "{foundation.color.red.100}" },
-            "hover":   { "$type": "color", "$value": "{foundation.color.red.200}" },
-            "active":  { "$type": "color", "$value": "{foundation.color.red.200}" }
-          },
-          "content": {
-            "default":  { "$type": "color", "$value": "{foundation.color.red.700}" },
-            "disabled": { "$type": "color", "$value": "{foundation.color.neutral.400}" }
-          }
-        },
-        "outline": {
-          "background": {
-            "hover":  { "$type": "color", "$value": "{foundation.color.overlay.black.5}" },
-            "active": { "$type": "color", "$value": "{foundation.color.overlay.black.10}" }
-          },
-          "content": {
-            "default":  { "$type": "color", "$value": "{foundation.color.red.700}" },
-            "disabled": { "$type": "color", "$value": "{foundation.color.neutral.400}" }
-          },
-          "border": {
-            "default":  { "$type": "color", "$value": "{foundation.color.red.600}" },
-            "hover":    { "$type": "color", "$value": "{foundation.color.red.700}" },
-            "disabled": { "$type": "color", "$value": "{foundation.color.neutral.200}" }
-          }
-        },
-        "ghost": {
-          "background": {
-            "hover":  { "$type": "color", "$value": "{foundation.color.overlay.black.5}" },
-            "active": { "$type": "color", "$value": "{foundation.color.overlay.black.10}" }
-          },
-          "content": {
-            "default":  { "$type": "color", "$value": "{foundation.color.red.700}" },
-            "disabled": { "$type": "color", "$value": "{foundation.color.neutral.400}" }
-          }
-        }
-      }
-    },
-    "feedback": {
-      "success": {
-        "default": {
-          "$type": "color",
-          "$value": "{foundation.color.green.600}",
-          "$description": "Fill success principal."
-        },
-        "hover": {
-          "$type": "color",
-          "$value": "{foundation.color.green.800}"
-        },
-        "active": {
-          "$type": "color",
-          "$value": "{foundation.color.green.900}"
-        },
-        "subtle": {
-          "$type": "color",
-          "$value": "{foundation.color.green.100}"
-        },
-        "background": {
-          "$type": "color",
-          "$value": "{foundation.color.green.50}"
-        },
-        "border": {
-          "$type": "color",
-          "$value": "{foundation.color.green.500}"
-        },
-        "disabled": {
-          "$type": "color",
-          "$value": "{foundation.color.disabled.success-light}",
-          "$description": "Fill success disabled."
-        },
-        "content": {
-          "default": {
-            "$type": "color",
-            "$value": "{foundation.color.green.700}",
-            "$description": "Cor success como conteúdo (mensagens, ícones sobre fundo claro)."
-          },
-          "contrast": {
-            "$type": "color",
-            "$value": "{foundation.color.neutral.50}",
-            "$description": "Conteúdo de alto contraste sobre fill success sólido."
-          },
-          "contrast-disabled": {
-            "$type": "color",
-            "$value": "{foundation.color.overlay.white.80}",
-            "$description": "Conteúdo disabled sobre fill success disabled."
-          }
-        }
-      },
-      "warning": {
-        "default": {
-          "$type": "color",
-          "$value": "{foundation.color.amber.500}"
-        },
-        "hover": {
-          "$type": "color",
-          "$value": "{foundation.color.amber.600}"
-        },
-        "subtle": {
-          "$type": "color",
-          "$value": "{foundation.color.amber.100}"
-        },
-        "background": {
-          "$type": "color",
-          "$value": "{foundation.color.amber.50}"
-        },
-        "border": {
-          "$type": "color",
-          "$value": "{foundation.color.amber.500}",
-          "$description": "Upgraded from amber.500 to amber.600 (ADR-008) for consistency with error.border/info.border at step 600. Passes 3:1 vs amber.50."
-        },
-        "content": {
-          "default": {
-            "$type": "color",
-            "$value": "{foundation.color.amber.700}",
-            "$description": "Cor warning como conteúdo."
-          },
-          "contrast": {
-            "$type": "color",
-            "$value": "{foundation.color.neutral.900}",
-            "$description": "Conteúdo de alto contraste sobre fill warning sólido. Dark text porque amber-500 é claro."
-          }
-        }
-      },
-      "error": {
-        "default": {
-          "$type": "color",
-          "$value": "{foundation.color.red.600}"
-        },
-        "hover": {
-          "$type": "color",
-          "$value": "{foundation.color.red.800}"
-        },
-        "active": {
-          "$type": "color",
-          "$value": "{foundation.color.red.900}"
-        },
-        "subtle": {
-          "$type": "color",
-          "$value": "{foundation.color.red.100}"
-        },
-        "background": {
-          "$type": "color",
-          "$value": "{foundation.color.red.50}"
-        },
-        "border": {
-          "$type": "color",
-          "$value": "{foundation.color.red.500}"
-        },
-        "disabled": {
-          "$type": "color",
-          "$value": "{foundation.color.disabled.error-light}",
-          "$description": "Fill error disabled."
-        },
-        "content": {
-          "default": {
-            "$type": "color",
-            "$value": "{foundation.color.red.700}",
-            "$description": "Cor error como conteúdo (mensagens de erro, ícones de alerta)."
-          },
-          "contrast": {
-            "$type": "color",
-            "$value": "{foundation.color.neutral.50}",
-            "$description": "Conteúdo de alto contraste sobre fill error sólido."
-          },
-          "contrast-disabled": {
-            "$type": "color",
-            "$value": "{foundation.color.overlay.white.80}",
-            "$description": "Conteúdo disabled sobre fill error disabled."
-          }
-        }
-      },
-      "info": {
-        "default": {
-          "$type": "color",
-          "$value": "{foundation.color.sky.500}"
-        },
-        "hover": {
-          "$type": "color",
-          "$value": "{foundation.color.sky.600}"
-        },
-        "subtle": {
-          "$type": "color",
-          "$value": "{foundation.color.sky.100}"
-        },
-        "background": {
-          "$type": "color",
-          "$value": "{foundation.color.sky.50}"
-        },
-        "border": {
-          "$type": "color",
-          "$value": "{foundation.color.sky.500}"
-        },
-        "content": {
-          "default": {
-            "$type": "color",
-            "$value": "{foundation.color.sky.700}",
-            "$description": "Cor info como conteúdo."
-          },
-          "contrast": {
-            "$type": "color",
-            "$value": "{foundation.color.neutral.900}",
-            "$description": "Conteúdo de alto contraste sobre fill info sólido. Dark text porque sky-600 é claro demais para branco."
-          }
-        }
       }
     },
     "border": {
       "default": {
         "$type": "color",
         "$value": "{foundation.color.neutral.300}"
-      },
-      "control": {
-        "default": {
-          "$type": "color",
-          "$value": "{foundation.color.neutral.500}",
-          "$description": "Border color for interactive controls (Input, Select, Textarea, Checkbox, Radio). Meets WCAG 1.4.11 (≥3:1 against control background)."
-        },
-        "hover": {
-          "$type": "color",
-          "$value": "{foundation.color.neutral.600}",
-          "$description": "Border on hover for interactive controls."
-        },
-        "disabled": {
-          "$type": "color",
-          "$value": "{foundation.color.neutral.300}",
-          "$description": "Border for disabled controls. Exempt from contrast requirements per WCAG 1.4.3."
-        }
       },
       "strong": {
         "$type": "color",
@@ -442,7 +370,7 @@
       },
       "error": {
         "$type": "color",
-        "$value": "{semantic.feedback.error.default}"
+        "$value": "{semantic.feedback.error.bg-default}"
       },
       "width": {
         "subtle": {
@@ -466,6 +394,39 @@
         "$type": "color",
         "$value": "{foundation.color.red.500}",
         "$description": "Focus ring color for error/danger states"
+      },
+      "control-default": {
+        "$type": "color",
+        "$value": "{foundation.color.neutral.500}",
+        "$description": "Border color for interactive controls (Input, Select, Textarea, Checkbox, Radio). Meets WCAG 1.4.11 (≥3:1 against control background)."
+      },
+      "control-hover": {
+        "$type": "color",
+        "$value": "{foundation.color.neutral.600}",
+        "$description": "Border on hover for interactive controls."
+      },
+      "control-disabled": {
+        "$type": "color",
+        "$value": "{foundation.color.neutral.300}",
+        "$description": "Border for disabled controls. Exempt from contrast requirements per WCAG 1.4.3."
+      }
+    },
+    "overlay": {
+      "subtle": {
+        "$type": "color",
+        "$value": "{foundation.color.overlay.black.5}"
+      },
+      "default": {
+        "$type": "color",
+        "$value": "{foundation.color.overlay.black.10}"
+      },
+      "medium": {
+        "$type": "color",
+        "$value": "{foundation.color.overlay.black.20}"
+      },
+      "strong": {
+        "$type": "color",
+        "$value": "{foundation.color.overlay.black.40}"
       }
     },
     "focus": {
@@ -487,42 +448,12 @@
         }
       }
     },
-    "overlay": {
-      "subtle": {
-        "$type": "color",
-        "$value": "{foundation.color.overlay.black.5}"
-      },
-      "default": {
-        "$type": "color",
-        "$value": "{foundation.color.overlay.black.10}"
-      },
-      "medium": {
-        "$type": "color",
-        "$value": "{foundation.color.overlay.black.20}"
-      },
-      "strong": {
-        "$type": "color",
-        "$value": "{foundation.color.overlay.black.40}"
-      }
-    },
-    "state": {
-      "hover": {
-        "$type": "color",
-        "$value": "{foundation.color.overlay.black.5}"
-      },
-      "pressed": {
-        "$type": "color",
-        "$value": "{foundation.color.overlay.black.10}"
-      },
-      "focus": {
-        "$type": "color",
-        "$value": "{foundation.color.brand.600}"
-      },
+    "opacity": {
+      "$description": "Semantic opacity tokens — ADR-013 Fase 8.",
       "disabled": {
-        "background": {
-          "$type": "color",
-          "$value": "{foundation.color.neutral.200}"
-        }
+        "$type": "number",
+        "$value": "{foundation.opacity.50}",
+        "$description": "50%. Aplicar em componentes em estado disabled."
       }
     },
     "motion": {
@@ -550,14 +481,6 @@
           "$value": "{foundation.ease.default}",
           "$description": "Curva padrão pra transições UI."
         }
-      }
-    },
-    "opacity": {
-      "$description": "Semantic opacity tokens — ADR-013 Fase 8.",
-      "disabled": {
-        "$type": "number",
-        "$value": "{foundation.opacity.50}",
-        "$description": "50%. Aplicar em componentes em estado disabled."
       }
     },
     "space": {
@@ -696,14 +619,6 @@
         }
       }
     },
-    "radius": {
-      "component": { "$type": "dimension", "$value": "{foundation.radius.md}", "$description": "8px — radius padrão de componentes interativos." },
-      "sm":   { "$type": "dimension", "$value": "{foundation.radius.sm}",   "$description": "4px. Tags, badges, chips pequenos." },
-      "md":   { "$type": "dimension", "$value": "{foundation.radius.md}",   "$description": "8px. Cards, alerts — radius padrão médio." },
-      "lg":   { "$type": "dimension", "$value": "{foundation.radius.lg}",   "$description": "12px. Cards grandes, containers." },
-      "xl":   { "$type": "dimension", "$value": "{foundation.radius.xl}",   "$description": "16px. Modais, sheets, dialogs." },
-      "full": { "$type": "dimension", "$value": "{foundation.radius.full}", "$description": "9999px. Pills, circles, avatars." }
-    },
     "size": {
       "control": {
         "sm": {
@@ -743,6 +658,38 @@
           "$value": "{foundation.spacing.11}",
           "$description": "44px. WCAG 2.5.5 AAA touch target minimum."
         }
+      }
+    },
+    "radius": {
+      "component": {
+        "$type": "dimension",
+        "$value": "{foundation.radius.md}",
+        "$description": "8px — radius padrão de componentes interativos."
+      },
+      "sm": {
+        "$type": "dimension",
+        "$value": "{foundation.radius.sm}",
+        "$description": "4px. Tags, badges, chips pequenos."
+      },
+      "md": {
+        "$type": "dimension",
+        "$value": "{foundation.radius.md}",
+        "$description": "8px. Cards, alerts — radius padrão médio."
+      },
+      "lg": {
+        "$type": "dimension",
+        "$value": "{foundation.radius.lg}",
+        "$description": "12px. Cards grandes, containers."
+      },
+      "xl": {
+        "$type": "dimension",
+        "$value": "{foundation.radius.xl}",
+        "$description": "16px. Modais, sheets, dialogs."
+      },
+      "full": {
+        "$type": "dimension",
+        "$value": "{foundation.radius.full}",
+        "$description": "9999px. Pills, circles, avatars."
       }
     },
     "typography": {

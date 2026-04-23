@@ -91,24 +91,47 @@
 <li><code>tokens/foundation/brand.json</code> — deletado</li>
 <li>CSS themes <code>theme-ocean.css</code> e <code>theme-forest.css</code> — deletados</li>
 </ul>
-<h3>2. Semantic — categoria <code>action</code></h3>
-<p>Estrutura:</p>
-<pre><code>semantic.action.{role}
-               .{style}
-               .{prop}
-               .{state}
-
-role  = primary | secondary | danger
-style = default | toned | outline | ghost
-prop  = background | content | border
-state = default | hover | active | disabled
-</code></pre>
-<p><strong>Roles</strong>:</p>
+<h3>2. Semantic — categorias de ação como peers no root (pós-revisão 2026-04-23)</h3>
+<p>Após revisão de estrutura com alinhamento ao PDF &quot;Naming Tokens in Design Systems&quot; (Nathan Curtis) e exemplos de Carbon/Polaris/Fluent, a estrutura anterior de 5 níveis <code>action.{role}.{style}.{prop}.{state}</code> foi considerada burocrática e redundante. Estrutura revisada:</p>
+<p><strong>Regra de naming</strong>:</p>
 <ul>
-<li><code>primary</code> — ações principais. Usa paleta brand.</li>
-<li><code>secondary</code> — ações neutras. Usa paleta neutral.</li>
-<li><code>danger</code> — ações destrutivas. Usa paleta red.</li>
+<li><strong>Color tokens</strong>: hierarquia pastas + compound hífen no último nível. <code>{categoria}/{prop-state}</code>.</li>
+<li><strong>Dimensional/structural</strong>: hierarquia ponto (escalas taxonômicas).</li>
+<li><code>default</code> explícito em vars de cor (<code>bg-default</code>, <code>content-default</code>).</li>
+<li><code>bg</code> (não <code>background</code>) em compound; <code>background</code> reservado pra categoria root.</li>
 </ul>
+<p><strong>Categorias de ação como peers no root Semantic</strong> (sem prefix <code>action.</code>):</p>
+<pre><code>semantic.primary/{bg-default, bg-hover, bg-active, bg-disabled, content-default, content-disabled}   # solid brand
+semantic.toned/{bg-default, bg-hover, bg-active, content-default, content-disabled}                   # brand translúcido
+semantic.outline/{bg-hover, bg-active, border-default, border-hover, border-disabled, content-default, content-disabled}  # neutral
+semantic.ghost/{bg-hover, bg-active, content-default, content-disabled}                               # neutral text-only
+semantic.link/{content-default, content-hover, content-disabled}                                       # inline link branded
+</code></pre>
+<p><strong>Total</strong>: 25 tokens (vs 66 atuais, -62%).</p>
+<p><strong>Eliminações</strong>:</p>
+<ul>
+<li><code>secondary</code> e <code>danger</code> <strong>não são mais roles em action</strong>:<ul>
+<li>Button &quot;danger&quot; consome <code>feedback.error.*</code> diretamente</li>
+<li>Button &quot;secondary&quot; (solid cinza) foi eliminado como estilo — visualmente vira <code>outline</code> (borda neutra) ou <code>ghost</code> (só texto)</li>
+</ul>
+</li>
+<li><code>state/*</code> categoria eliminada:<ul>
+<li><code>state.hover</code> → <code>overlay.subtle</code></li>
+<li><code>state.pressed</code> → <code>overlay.default</code></li>
+<li><code>state.focus</code> → <code>focus.ring.color</code></li>
+<li><code>state.disabled-background</code> → <code>background.disabled</code></li>
+</ul>
+</li>
+<li><code>content.link.*</code> movido pra categoria <code>link.*</code> peer</li>
+</ul>
+<p><strong>Feedback renomeado</strong> pra compound consistente: <code>feedback.success.default</code> → <code>feedback.success.bg-default</code>, <code>feedback.success.content.contrast</code> → <code>feedback.success.content-contrast</code>.</p>
+<p><strong><code>border.control/*</code> renomeado</strong>: <code>border.control.default</code> → <code>border.control-default</code>.</p>
+<h3>2.1 — Versão antiga (histórico, revoada em 2026-04-23)</h3>
+<p>A primeira versão do ADR-014 propunha:</p>
+<pre><code>semantic.action.{role: primary|secondary|danger}.{style: default|toned|outline|ghost}.{prop}.{state}
+</code></pre>
+<p>Mas gerou 66 tokens com nomes de 50+ caracteres (<code>--ds-action-primary-default-background-default</code>), &quot;default&quot; duplicado em vários paths, e roles repetidos (3 roles × 4 styles × props × states) sem justificativa prática.</p>
+<p><strong>Troca</strong>: simplicidade e alinhamento com mercado (Carbon/Polaris compound kebab-case) vs matriz combinatória completa.</p>
 <p>(Outras hierarquias — success, info, warning — vêm on-demand quando houver variante de componente que exija.)</p>
 <p><strong>Styles</strong>:</p>
 <ul>

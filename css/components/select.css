@@ -129,19 +129,19 @@
 
 /* Error */
 .ds-select--error {
-  border-color: var(--ds-feedback-error-default);
+  border-color: var(--ds-feedback-error-bg-default);
 }
 
 .ds-select--error:focus-within {
-  border-color: var(--ds-feedback-error-default);
-  outline: var(--ds-focus-ring-width) solid var(--ds-feedback-error-default);
+  border-color: var(--ds-feedback-error-bg-default);
+  outline: var(--ds-focus-ring-width) solid var(--ds-feedback-error-bg-default);
   outline-offset: var(--ds-focus-ring-offset);
 }
 
 /* Disabled */
 .ds-select--disabled,
 .ds-select:has(.ds-select__field:disabled) {
-  background: var(--ds-state-disabled-background);
+  background: var(--ds-background-disabled);
   border-color: var(--ds-border-control-disabled);
   color: var(--ds-content-disabled);
   pointer-events: none;
