@@ -8,33 +8,33 @@
   <link rel="stylesheet" href="layout.css">
   <style>
     /* Tables */
-    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-sm); margin-bottom: var(--ds-spacing-8); }
-    .ds-token-table th { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
-    .ds-token-table td { padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
-    .ds-token-table code { font-size: var(--ds-font-size-xs); font-family: var(--ds-font-family-mono); }
+    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-14); margin-bottom: var(--ds-spacing-32); }
+    .ds-token-table th { text-align: left; padding: var(--ds-spacing-8) var(--ds-spacing-12); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
+    .ds-token-table td { padding: var(--ds-spacing-8) var(--ds-spacing-12); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
+    .ds-token-table code { font-size: var(--ds-font-size-12); font-family: var(--ds-font-family-mono); }
     /* Callouts */
-    .ds-callout { padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-6); font-size: var(--ds-font-size-sm); line-height: var(--ds-line-height-relaxed); color: var(--ds-content-default); }
+    .ds-callout { padding: var(--ds-spacing-16) var(--ds-spacing-20); border-radius: var(--ds-radius-12); margin-bottom: var(--ds-spacing-24); font-size: var(--ds-font-size-14); line-height: var(--ds-line-height-relaxed); color: var(--ds-content-default); }
     .ds-callout--info { background-color: var(--ds-feedback-info-background); border: var(--ds-border-width-1) solid var(--ds-feedback-info-border); }
     .ds-callout--success { background-color: var(--ds-feedback-success-background); border: var(--ds-border-width-1) solid var(--ds-feedback-success-border); }
     .ds-callout--warning { background-color: var(--ds-feedback-warning-background); border: var(--ds-border-width-1) solid var(--ds-feedback-warning-border); }
-    .ds-callout__title { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-1); }
+    .ds-callout__title { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-4); }
     /* Do/Don't */
-    .ds-dodont { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ds-spacing-4); margin-bottom: var(--ds-spacing-8); }
-    .ds-dodont__item { border-radius: var(--ds-radius-lg); overflow: hidden; }
-    .ds-dodont__preview { padding: var(--ds-spacing-6); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg) var(--ds-radius-lg) 0 0; display: flex; flex-wrap: wrap; gap: var(--ds-spacing-3); align-items: center; justify-content: center; }
-    .ds-dodont__label { padding: var(--ds-spacing-2) var(--ds-spacing-4); font-size: var(--ds-font-size-sm); font-weight: var(--ds-font-weight-semibold); }
+    .ds-dodont { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ds-spacing-16); margin-bottom: var(--ds-spacing-32); }
+    .ds-dodont__item { border-radius: var(--ds-radius-12); overflow: hidden; }
+    .ds-dodont__preview { padding: var(--ds-spacing-24); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-12) var(--ds-radius-12) 0 0; display: flex; flex-wrap: wrap; gap: var(--ds-spacing-12); align-items: center; justify-content: center; }
+    .ds-dodont__label { padding: var(--ds-spacing-8) var(--ds-spacing-16); font-size: var(--ds-font-size-14); font-weight: var(--ds-font-weight-semibold); }
     .ds-dodont__label--do { background-color: var(--ds-feedback-success-background); color: var(--ds-feedback-success-content-default); border-top: 3px solid var(--ds-feedback-success-default); }
     .ds-dodont__label--dont { background-color: var(--ds-feedback-error-background); color: var(--ds-feedback-error-content-default); border-top: 3px solid var(--ds-feedback-error-default); }
-    .ds-dodont__desc { padding: 0 var(--ds-spacing-4) var(--ds-spacing-3); font-size: var(--ds-font-size-sm); color: var(--ds-content-secondary); background-color: var(--ds-background-subtle); }
+    .ds-dodont__desc { padding: 0 var(--ds-spacing-16) var(--ds-spacing-12); font-size: var(--ds-font-size-14); color: var(--ds-content-secondary); background-color: var(--ds-background-subtle); }
     /* Anatomy */
-    .ds-anatomy { padding: var(--ds-spacing-8); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-4); display: flex; align-items: center; justify-content: center; position: relative; }
-    .ds-anatomy__marker { position: absolute; width: 20px; height: 20px; border-radius: 50%; background-color: var(--ds-brand-default); color: var(--ds-brand-content-contrast); font-size: 11px; font-weight: var(--ds-font-weight-bold); display: flex; align-items: center; justify-content: center; }
-    .ds-anatomy-legend { font-size: var(--ds-font-size-sm); color: var(--ds-content-secondary); margin-bottom: var(--ds-spacing-8); line-height: var(--ds-line-height-relaxed); }
+    .ds-anatomy { padding: var(--ds-spacing-32); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-12); margin-bottom: var(--ds-spacing-16); display: flex; align-items: center; justify-content: center; position: relative; }
+    .ds-anatomy__marker { position: absolute; width: 20px; height: 20px; border-radius: 50%; background-color: var(--ds-primary-bg-default); color: var(--ds-primary-content-default); font-size: 11px; font-weight: var(--ds-font-weight-bold); display: flex; align-items: center; justify-content: center; }
+    .ds-anatomy-legend { font-size: var(--ds-font-size-14); color: var(--ds-content-secondary); margin-bottom: var(--ds-spacing-32); line-height: var(--ds-line-height-relaxed); }
     .ds-anatomy-legend strong { color: var(--ds-content-default); }
     /* Related */
-    .ds-related { display: flex; gap: var(--ds-spacing-3); flex-wrap: wrap; margin-bottom: var(--ds-spacing-8); }
-    .ds-related__link { padding: var(--ds-spacing-2) var(--ds-spacing-4); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-md); font-size: var(--ds-font-size-sm); color: var(--ds-content-link-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
-    .ds-related__link:hover { border-color: var(--ds-brand-default); background-color: var(--ds-state-hover); }
+    .ds-related { display: flex; gap: var(--ds-spacing-12); flex-wrap: wrap; margin-bottom: var(--ds-spacing-32); }
+    .ds-related__link { padding: var(--ds-spacing-8) var(--ds-spacing-16); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-8); font-size: var(--ds-font-size-14); color: var(--ds-content-link-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
+    .ds-related__link:hover { border-color: var(--ds-primary-bg-default); background-color: var(--ds-overlay-subtle); }
     /* Responsive do/dont */
     @media (max-width: 768px) { .ds-dodont { grid-template-columns: 1fr; } }
   </style>
@@ -45,7 +45,7 @@
 <body>
 
 <header class="ds-site-header">
-  <div style="display:flex;align-items:center;gap:var(--ds-spacing-4)">
+  <div style="display:flex;align-items:center;gap:var(--ds-spacing-16)">
     <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>
@@ -105,7 +105,7 @@
     <h2 class="ds-subsection__title"><span data-lang="pt">Anatomia</span><span data-lang="en">Anatomy</span></h2>
 
     <div class="ds-anatomy">
-      <div style="position:relative;display:inline-flex;align-items:center;gap:var(--ds-spacing-3);">
+      <div style="position:relative;display:inline-flex;align-items:center;gap:var(--ds-spacing-12);">
         <!-- Visual toggle -->
         <label class="ds-toggle-label" style="pointer-events:none;">
           <input type="checkbox" class="ds-toggle" role="switch" checked style="pointer-events:none;">
@@ -306,7 +306,7 @@
 
     <div class="ds-dodont">
       <div class="ds-dodont__item">
-        <div class="ds-dodont__preview" style="flex-direction:column;gap:var(--ds-spacing-4);">
+        <div class="ds-dodont__preview" style="flex-direction:column;gap:var(--ds-spacing-16);">
           <label class="ds-toggle-label">
             <input type="checkbox" class="ds-toggle" role="switch" checked>
             Auto-save
@@ -316,7 +316,7 @@
         <div class="ds-dodont__desc"><span data-lang="pt">Posicione o toggle a direita do label. O efeito e imediato.</span><span data-lang="en">Place toggle right of label. Effect is immediate.</span></div>
       </div>
       <div class="ds-dodont__item">
-        <div class="ds-dodont__preview" style="flex-direction:column;gap:var(--ds-spacing-3);">
+        <div class="ds-dodont__preview" style="flex-direction:column;gap:var(--ds-spacing-12);">
           <label class="ds-toggle-label">
             <input type="checkbox" class="ds-toggle" role="switch">
             Delete all data
@@ -410,7 +410,7 @@
         <tr><td><code>Enter</code></td><td><span data-lang="pt">NÃO alterna (comportamento padrão de switch)</span><span data-lang="en">Does NOT toggle (standard switch behavior)</span></td></tr>
       </tbody>
     </table>
-    <p style="margin-top:var(--ds-spacing-2);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);">
+    <p style="margin-top:var(--ds-spacing-8);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);">
       <span data-lang="pt">Toggles desabilitados (<code>[disabled]</code>) são removidos da ordem de tabulação automaticamente pelo navegador.</span><span data-lang="en">Disabled toggles (<code>[disabled]</code>) are removed from tab order automatically by the browser.</span>
     </p>
   </div>
@@ -430,7 +430,7 @@
       </tbody>
     </table>
 
-    <div class="ds-callout ds-callout--info" style="margin-top:var(--ds-spacing-4)">
+    <div class="ds-callout ds-callout--info" style="margin-top:var(--ds-spacing-16)">
       <div class="ds-callout__title"><span data-lang="pt">Resumo de atributos ARIA</span><span data-lang="en">ARIA attributes summary</span></div>
       <span data-lang="pt"><code>role="switch"</code> — obrigatório no checkbox para que leitores de tela o anunciem como switch.<br>
       <code>aria-checked</code> — gerenciado automaticamente pelo <code>&lt;input type="checkbox"&gt;</code> nativo.<br>
@@ -439,7 +439,7 @@
       A visible label should always describe what the toggle controls.</span>
     </div>
 
-    <div class="ds-callout ds-callout--warning" style="margin-top:var(--ds-spacing-4)">
+    <div class="ds-callout ds-callout--warning" style="margin-top:var(--ds-spacing-16)">
       <div class="ds-callout__title"><span data-lang="pt">Label invisível — exige ARIA explícito</span><span data-lang="en">Invisible label — requires explicit ARIA</span></div>
       <span data-lang="pt">Quando <code>Show Label = false</code> e <code>Show Description = true</code>, vincule o <code>&lt;input&gt;</code> à descrição via <code>aria-labelledby="id-da-description"</code>. Se nenhum dos dois estiver visível, use <code>aria-label</code> diretamente no <code>&lt;input&gt;</code>. O Helper Text deve sempre ser vinculado via <code>aria-describedby="id-do-helper"</code>.</span><span data-lang="en">When <code>Show Label = false</code> and <code>Show Description = true</code>, link the <code>&lt;input&gt;</code> to the description via <code>aria-labelledby="description-id"</code>. If neither is visible, use <code>aria-label</code> directly on the <code>&lt;input&gt;</code>. Helper Text should always be linked via <code>aria-describedby="helper-id"</code>.</span>
     </div>

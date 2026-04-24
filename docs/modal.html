@@ -8,33 +8,33 @@
   <link rel="stylesheet" href="layout.css">
   <style>
     /* Tables */
-    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-sm); margin-bottom: var(--ds-spacing-8); }
-    .ds-token-table th { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
-    .ds-token-table td { padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
-    .ds-token-table code { font-size: var(--ds-font-size-xs); font-family: var(--ds-font-family-mono); }
+    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-14); margin-bottom: var(--ds-spacing-32); }
+    .ds-token-table th { text-align: left; padding: var(--ds-spacing-8) var(--ds-spacing-12); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
+    .ds-token-table td { padding: var(--ds-spacing-8) var(--ds-spacing-12); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
+    .ds-token-table code { font-size: var(--ds-font-size-12); font-family: var(--ds-font-family-mono); }
     /* Callouts */
-    .ds-callout { padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-6); font-size: var(--ds-font-size-sm); line-height: var(--ds-line-height-relaxed); color: var(--ds-content-default); }
+    .ds-callout { padding: var(--ds-spacing-16) var(--ds-spacing-20); border-radius: var(--ds-radius-12); margin-bottom: var(--ds-spacing-24); font-size: var(--ds-font-size-14); line-height: var(--ds-line-height-relaxed); color: var(--ds-content-default); }
     .ds-callout--info { background-color: var(--ds-feedback-info-background); border: var(--ds-border-width-1) solid var(--ds-feedback-info-border); }
     .ds-callout--success { background-color: var(--ds-feedback-success-background); border: var(--ds-border-width-1) solid var(--ds-feedback-success-border); }
     .ds-callout--warning { background-color: var(--ds-feedback-warning-background); border: var(--ds-border-width-1) solid var(--ds-feedback-warning-border); }
-    .ds-callout__title { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-1); }
+    .ds-callout__title { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-4); }
     /* Do/Don't */
-    .ds-dodont { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ds-spacing-4); margin-bottom: var(--ds-spacing-8); }
-    .ds-dodont__item { border-radius: var(--ds-radius-lg); overflow: hidden; }
-    .ds-dodont__preview { padding: var(--ds-spacing-6); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg) var(--ds-radius-lg) 0 0; display: flex; flex-wrap: wrap; gap: var(--ds-spacing-3); align-items: center; justify-content: center; }
-    .ds-dodont__label { padding: var(--ds-spacing-2) var(--ds-spacing-4); font-size: var(--ds-font-size-sm); font-weight: var(--ds-font-weight-semibold); }
+    .ds-dodont { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ds-spacing-16); margin-bottom: var(--ds-spacing-32); }
+    .ds-dodont__item { border-radius: var(--ds-radius-12); overflow: hidden; }
+    .ds-dodont__preview { padding: var(--ds-spacing-24); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-12) var(--ds-radius-12) 0 0; display: flex; flex-wrap: wrap; gap: var(--ds-spacing-12); align-items: center; justify-content: center; }
+    .ds-dodont__label { padding: var(--ds-spacing-8) var(--ds-spacing-16); font-size: var(--ds-font-size-14); font-weight: var(--ds-font-weight-semibold); }
     .ds-dodont__label--do { background-color: var(--ds-feedback-success-background); color: var(--ds-feedback-success-content-default); border-top: 3px solid var(--ds-feedback-success-default); }
     .ds-dodont__label--dont { background-color: var(--ds-feedback-error-background); color: var(--ds-feedback-error-content-default); border-top: 3px solid var(--ds-feedback-error-default); }
-    .ds-dodont__desc { padding: 0 var(--ds-spacing-4) var(--ds-spacing-3); font-size: var(--ds-font-size-sm); color: var(--ds-content-secondary); background-color: var(--ds-background-subtle); }
+    .ds-dodont__desc { padding: 0 var(--ds-spacing-16) var(--ds-spacing-12); font-size: var(--ds-font-size-14); color: var(--ds-content-secondary); background-color: var(--ds-background-subtle); }
     /* Anatomy */
-    .ds-anatomy { padding: var(--ds-spacing-8); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-4); display: flex; align-items: center; justify-content: center; position: relative; }
-    .ds-anatomy__marker { position: absolute; width: 20px; height: 20px; border-radius: 50%; background-color: var(--ds-brand-default); color: var(--ds-brand-content-contrast); font-size: 11px; font-weight: var(--ds-font-weight-bold); display: flex; align-items: center; justify-content: center; }
-    .ds-anatomy-legend { font-size: var(--ds-font-size-sm); color: var(--ds-content-secondary); margin-bottom: var(--ds-spacing-8); line-height: var(--ds-line-height-relaxed); }
+    .ds-anatomy { padding: var(--ds-spacing-32); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-12); margin-bottom: var(--ds-spacing-16); display: flex; align-items: center; justify-content: center; position: relative; }
+    .ds-anatomy__marker { position: absolute; width: 20px; height: 20px; border-radius: 50%; background-color: var(--ds-primary-bg-default); color: var(--ds-primary-content-default); font-size: 11px; font-weight: var(--ds-font-weight-bold); display: flex; align-items: center; justify-content: center; }
+    .ds-anatomy-legend { font-size: var(--ds-font-size-14); color: var(--ds-content-secondary); margin-bottom: var(--ds-spacing-32); line-height: var(--ds-line-height-relaxed); }
     .ds-anatomy-legend strong { color: var(--ds-content-default); }
     /* Related */
-    .ds-related { display: flex; gap: var(--ds-spacing-3); flex-wrap: wrap; margin-bottom: var(--ds-spacing-8); }
-    .ds-related__link { padding: var(--ds-spacing-2) var(--ds-spacing-4); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-md); font-size: var(--ds-font-size-sm); color: var(--ds-content-link-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
-    .ds-related__link:hover { border-color: var(--ds-brand-default); background-color: var(--ds-state-hover); }
+    .ds-related { display: flex; gap: var(--ds-spacing-12); flex-wrap: wrap; margin-bottom: var(--ds-spacing-32); }
+    .ds-related__link { padding: var(--ds-spacing-8) var(--ds-spacing-16); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-8); font-size: var(--ds-font-size-14); color: var(--ds-content-link-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
+    .ds-related__link:hover { border-color: var(--ds-primary-bg-default); background-color: var(--ds-overlay-subtle); }
     /* Responsive do/dont */
     @media (max-width: 768px) { .ds-dodont { grid-template-columns: 1fr; } }
   </style>
@@ -45,7 +45,7 @@
 <body>
 
 <header class="ds-site-header">
-  <div style="display:flex;align-items:center;gap:var(--ds-spacing-4)">
+  <div style="display:flex;align-items:center;gap:var(--ds-spacing-16)">
     <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>
@@ -106,7 +106,7 @@
 
     <div class="ds-anatomy">
       <div style="position:relative;width:100%;max-width:400px;">
-        <div class="ds-modal-overlay" style="position:relative;background:var(--ds-background-overlay);border-radius:var(--ds-radius-lg);padding:var(--ds-spacing-6);display:flex;align-items:center;justify-content:center;pointer-events:none;">
+        <div class="ds-modal-overlay" style="position:relative;background:var(--ds-background-overlay);border-radius:var(--ds-radius-12);padding:var(--ds-spacing-24);display:flex;align-items:center;justify-content:center;pointer-events:none;">
           <div class="ds-modal ds-modal--sm" role="dialog" aria-modal="true" aria-labelledby="anatomy-modal-title" style="position:relative;width:100%;">
             <div class="ds-modal__header">
               <h3 id="anatomy-modal-title" class="ds-modal__title">Delete item</h3>
@@ -161,7 +161,7 @@
       </div>
       <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
         <div class="ds-preview__canvas ds-preview__canvas--column">
-          <div class="ds-modal-overlay" style="position:relative;background:var(--ds-background-overlay);border-radius:var(--ds-radius-lg);padding:var(--ds-spacing-8);display:flex;align-items:center;justify-content:center;width:100%;">
+          <div class="ds-modal-overlay" style="position:relative;background:var(--ds-background-overlay);border-radius:var(--ds-radius-12);padding:var(--ds-spacing-32);display:flex;align-items:center;justify-content:center;width:100%;">
             <div class="ds-modal ds-modal--sm" role="dialog" aria-modal="true" aria-labelledby="modal-sm-title" style="position:relative;width:100%;max-width:400px;">
               <div class="ds-modal__header">
                 <h3 id="modal-sm-title" style="margin:0;">Delete item</h3>
@@ -212,7 +212,7 @@
       </div>
       <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
         <div class="ds-preview__canvas ds-preview__canvas--column">
-          <div class="ds-modal-overlay" style="position:relative;background:var(--ds-background-overlay);border-radius:var(--ds-radius-lg);padding:var(--ds-spacing-8);display:flex;align-items:center;justify-content:center;width:100%;">
+          <div class="ds-modal-overlay" style="position:relative;background:var(--ds-background-overlay);border-radius:var(--ds-radius-12);padding:var(--ds-spacing-32);display:flex;align-items:center;justify-content:center;width:100%;">
             <div class="ds-modal ds-modal--md" role="dialog" aria-modal="true" aria-labelledby="modal-md-title" style="position:relative;width:100%;max-width:520px;">
               <div class="ds-modal__header">
                 <h3 id="modal-md-title" style="margin:0;">Edit profile</h3>
@@ -264,7 +264,7 @@
       </div>
       <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
         <div class="ds-preview__canvas ds-preview__canvas--column">
-          <div class="ds-modal-overlay" style="position:relative;background:var(--ds-background-overlay);border-radius:var(--ds-radius-lg);padding:var(--ds-spacing-8);display:flex;align-items:center;justify-content:center;width:100%;">
+          <div class="ds-modal-overlay" style="position:relative;background:var(--ds-background-overlay);border-radius:var(--ds-radius-12);padding:var(--ds-spacing-32);display:flex;align-items:center;justify-content:center;width:100%;">
             <div class="ds-modal ds-modal--lg" role="dialog" aria-modal="true" aria-labelledby="modal-lg-title" style="position:relative;width:100%;max-width:640px;">
               <div class="ds-modal__header">
                 <h3 id="modal-lg-title" style="margin:0;">Terms of service</h3>
@@ -315,7 +315,7 @@
     <div class="ds-dodont">
       <div class="ds-dodont__item">
         <div class="ds-dodont__preview" style="flex-direction:column;">
-          <div style="display:flex;gap:var(--ds-spacing-3);">
+          <div style="display:flex;gap:var(--ds-spacing-12);">
             <button class="ds-btn ds-btn--ghost ds-btn--sm">Cancel</button>
             <button class="ds-btn ds-btn--brand ds-btn--sm">Save changes</button>
           </div>
@@ -325,7 +325,7 @@
       </div>
       <div class="ds-dodont__item">
         <div class="ds-dodont__preview" style="flex-direction:column;">
-          <div style="display:flex;gap:var(--ds-spacing-3);">
+          <div style="display:flex;gap:var(--ds-spacing-12);">
             <button class="ds-btn ds-btn--brand ds-btn--sm">Cancel</button>
             <button class="ds-btn ds-btn--brand ds-btn--sm">Save</button>
           </div>
@@ -338,14 +338,14 @@
     <div class="ds-dodont">
       <div class="ds-dodont__item">
         <div class="ds-dodont__preview" style="flex-direction:column;">
-          <span style="font-size:var(--ds-font-size-sm);color:var(--ds-content-secondary);"><span data-lang="pt">Modal pequeno para confirmacoes</span><span data-lang="en">Small modal for confirmations</span></span>
+          <span style="font-size:var(--ds-font-size-14);color:var(--ds-content-secondary);"><span data-lang="pt">Modal pequeno para confirmacoes</span><span data-lang="en">Small modal for confirmations</span></span>
         </div>
         <div class="ds-dodont__label ds-dodont__label--do">Faça</div>
         <div class="ds-dodont__desc"><span data-lang="pt">Use o menor tamanho que cabe. Small para confirmacoes, medium para formulários, large para conteúdo longo.</span><span data-lang="en">Use the smallest size that fits. Small for confirmations, medium for forms, large for long content.</span></div>
       </div>
       <div class="ds-dodont__item">
         <div class="ds-dodont__preview" style="flex-direction:column;">
-          <span style="font-size:var(--ds-font-size-sm);color:var(--ds-content-secondary);"><span data-lang="pt">Modal large para "Tem certeza?"</span><span data-lang="en">Large modal for "Are you sure?"</span></span>
+          <span style="font-size:var(--ds-font-size-14);color:var(--ds-content-secondary);"><span data-lang="pt">Modal large para "Tem certeza?"</span><span data-lang="en">Large modal for "Are you sure?"</span></span>
         </div>
         <div class="ds-dodont__label ds-dodont__label--dont">Não faça</div>
         <div class="ds-dodont__desc"><span data-lang="pt">Modals large para confirmacoes simples desperdicam espaco e adicionam peso visual desnecessário.</span><span data-lang="en">Large modals for simple confirmations waste space and add unnecessary visual weight.</span></div>
@@ -355,14 +355,14 @@
     <div class="ds-dodont">
       <div class="ds-dodont__item">
         <div class="ds-dodont__preview" style="flex-direction:column;">
-          <span style="font-size:var(--ds-font-size-sm);color:var(--ds-content-secondary);"><span data-lang="pt">Foco preso dentro + retorna ao fechar</span><span data-lang="en">Focus trapped inside + returns on close</span></span>
+          <span style="font-size:var(--ds-font-size-14);color:var(--ds-content-secondary);"><span data-lang="pt">Foco preso dentro + retorna ao fechar</span><span data-lang="en">Focus trapped inside + returns on close</span></span>
         </div>
         <div class="ds-dodont__label ds-dodont__label--do">Faça</div>
         <div class="ds-dodont__desc"><span data-lang="pt">Retorne o foco ao elemento que disparou o modal ao fechar. Feche com Escape e clique no backdrop para ações não destrutivas.</span><span data-lang="en">Return focus to the trigger element on close. Close on Escape and backdrop click for non-destructive actions.</span></div>
       </div>
       <div class="ds-dodont__item">
         <div class="ds-dodont__preview" style="flex-direction:column;">
-          <span style="font-size:var(--ds-font-size-sm);color:var(--ds-content-secondary);"><span data-lang="pt">Clique no backdrop fecha modal destrutivo</span><span data-lang="en">Backdrop click closes destructive modal</span></span>
+          <span style="font-size:var(--ds-font-size-14);color:var(--ds-content-secondary);"><span data-lang="pt">Clique no backdrop fecha modal destrutivo</span><span data-lang="en">Backdrop click closes destructive modal</span></span>
         </div>
         <div class="ds-dodont__label ds-dodont__label--dont">Não faça</div>
         <div class="ds-dodont__desc"><span data-lang="pt">Deixar o foco escapar do modal. Fechar com clique no backdrop para ações destrutivas (o usuário pode perder dados acidentalmente).</span><span data-lang="en">Let focus escape the modal. Close on backdrop click for destructive actions (user might lose data accidentally).</span></div>
@@ -399,8 +399,8 @@
         <tr><td>surface</td><td><code>semantic.surface.elevated</code></td><td><code>--ds-surface-elevated</code></td></tr>
         <tr><td>shadow</td><td><code>foundation.shadow.xl</code></td><td><code>--ds-shadow-xl</code></td></tr>
         <tr><td>z-index (overlay)</td><td><code>foundation.z.50</code></td><td><code>--ds-z-50</code></td></tr>
-        <tr><td>border-radius</td><td><code>component.modal.border-radius</code></td><td><code>--ds-modal-border-radius</code> <span data-lang="pt">(valor: <code>--ds-radius-xl</code>, 16px)</span><span data-lang="en">(value: <code>--ds-radius-xl</code>, 16px)</span></td></tr>
-        <tr><td>padding</td><td><code>semantic.space.inset.lg</code></td><td><code>--ds-space-inset-lg</code></td></tr>
+        <tr><td>border-radius</td><td><code>component.modal.border-radius</code></td><td><code>--ds-modal-border-radius</code> <span data-lang="pt">(valor: <code>--ds-radius-16</code>, 16px)</span><span data-lang="en">(value: <code>--ds-radius-16</code>, 16px)</span></td></tr>
+        <tr><td>padding</td><td><code>semantic.space.inset.lg</code></td><td><code>--ds-space-lg</code></td></tr>
       </tbody>
     </table>
   </div>
@@ -441,7 +441,7 @@
         <tr><td><code>Enter</code></td><td><span data-lang="pt">Ativa o button focado</span><span data-lang="en">Activates the focused button</span></td></tr>
       </tbody>
     </table>
-    <p style="margin-top:var(--ds-spacing-2);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);">
+    <p style="margin-top:var(--ds-spacing-8);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);">
       <span data-lang="pt">O foco deve ser preso dentro do modal enquanto estiver aberto. Quando o modal fechar, o foco deve retornar ao elemento que o disparou.</span><span data-lang="en">Focus must be trapped inside the modal while it is open. When the modal closes, focus must return to the element that triggered it.</span>
     </p>
   </div>
@@ -461,7 +461,7 @@
       </tbody>
     </table>
 
-    <div class="ds-callout ds-callout--info" style="margin-top:var(--ds-spacing-4)">
+    <div class="ds-callout ds-callout--info" style="margin-top:var(--ds-spacing-16)">
       <div class="ds-callout__title"><span data-lang="pt">Resumo de atributos ARIA</span><span data-lang="en">ARIA attributes summary</span></div>
       <span data-lang="pt"><code>role="dialog"</code> — identifica o modal como um diálogo.<br>
       <code>aria-modal="true"</code> — informa a tecnologia assistiva que o conteúdo atras do modal esta inerte.<br>

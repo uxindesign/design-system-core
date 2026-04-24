@@ -26,15 +26,15 @@ Essa regra **nunca foi codificada explicitamente** e por isso **não é respeita
 
 ### No CSS (derivado)
 
-- Todos os 19 arquivos em `css/components/*.css` consomem Foundation direto em: spacing (`var(--ds-spacing-3)`), radius não-component (`var(--ds-radius-md)`), border-width (`var(--ds-border-width-1)`), typography (`var(--ds-font-size-sm)`, `var(--ds-font-weight-medium)`, `var(--ds-line-height-normal)`), shadow, motion, opacity, z-index.
+- Todos os 19 arquivos em `css/components/*.css` consomem Foundation direto em: spacing (`var(--ds-spacing-12)`), radius não-component (`var(--ds-radius-8)`), border-width (`var(--ds-border-width-1)`), typography (`var(--ds-font-size-14)`, `var(--ds-font-weight-medium)`, `var(--ds-line-height-normal)`), shadow, motion, opacity, z-index.
 - Cor é o único domínio limpo: zero uso de `var(--ds-color-*)` raw.
 
 ### Por que isso importa
 
 O sistema perdeu propriedades arquiteturais importantes:
 
-1. **Rastreabilidade quebra.** Um valor `0.75rem` no CSS pode vir de `--ds-spacing-3` direto, ou via `--ds-space-inset-md` → `foundation.spacing.3`. O primeiro não carrega intenção; o segundo carrega. Buscar "onde usamos o inset médio" com grep falha no primeiro caso.
-2. **Theming fica rígido.** Pra mudar o inset médio global de 12px pra 10px, teria que ir token por token no CSS substituindo `--ds-spacing-3` por `--ds-spacing-2-5` caso a caso. Com Semantic, muda `space/inset/md` num lugar e propaga.
+1. **Rastreabilidade quebra.** Um valor `0.75rem` no CSS pode vir de `--ds-spacing-12` direto, ou via `--ds-space-md` → `foundation.spacing.3`. O primeiro não carrega intenção; o segundo carrega. Buscar "onde usamos o inset médio" com grep falha no primeiro caso.
+2. **Theming fica rígido.** Pra mudar o inset médio global de 12px pra 10px, teria que ir token por token no CSS substituindo `--ds-spacing-12` por `--ds-spacing-10` caso a caso. Com Semantic, muda `space/inset/md` num lugar e propaga.
 3. **Dois consumidores divergem.** Figma binda `typography/font/weight/medium` direto; CSS usa `var(--ds-font-weight-medium)`. Quando alguém quiser mudar "peso médio" pra `semibold` em contextos de label de controle, precisa fazer hunt manual nos dois lados. Com Semantic `typography/control/font-weight`, muda uma vez.
 
 ## Decisão
@@ -68,7 +68,7 @@ Consumidor final **só** vê Semantic e Component. Nunca Foundation.
 
 ### Exceção explícita — `semantic.control.*` (ADR-006)
 
-Já codificado em ADR-006 princípio 9 e reforçado em ADR-011: a subcategoria `semantic.control.*` (dimensions, typography, padding compartilhados entre Button, Input, Select, Textarea) **só pode ser consumida via tokens de Componente**, nunca direto por CSS. Button, Input etc. definem `button.height.md → {semantic.size.control.md}`; o CSS consome `var(--ds-button-height-md)`, não `var(--ds-size-control-md)`.
+Já codificado em ADR-006 princípio 9 e reforçado em ADR-011: a subcategoria `semantic.control.*` (dimensions, typography, padding compartilhados entre Button, Input, Select, Textarea) **só pode ser consumida via tokens de Componente**, nunca direto por CSS. Button, Input etc. definem `button.height.md → {semantic.size.control.md}`; o CSS consome `var(--ds-size-control-md)`, não `var(--ds-size-control-md)`.
 
 Essa exceção não contraria ADR-013 — é uma restrição **adicional**, específica da subcategoria "control".
 

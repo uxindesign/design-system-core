@@ -8,33 +8,33 @@
   <link rel="stylesheet" href="layout.css">
   <style>
     /* Tables */
-    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-sm); margin-bottom: var(--ds-spacing-8); }
-    .ds-token-table th { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
-    .ds-token-table td { padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
-    .ds-token-table code { font-size: var(--ds-font-size-xs); font-family: var(--ds-font-family-mono); }
+    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-14); margin-bottom: var(--ds-spacing-32); }
+    .ds-token-table th { text-align: left; padding: var(--ds-spacing-8) var(--ds-spacing-12); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
+    .ds-token-table td { padding: var(--ds-spacing-8) var(--ds-spacing-12); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
+    .ds-token-table code { font-size: var(--ds-font-size-12); font-family: var(--ds-font-family-mono); }
     /* Callouts */
-    .ds-callout { padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-6); font-size: var(--ds-font-size-sm); line-height: var(--ds-line-height-relaxed); color: var(--ds-content-default); }
+    .ds-callout { padding: var(--ds-spacing-16) var(--ds-spacing-20); border-radius: var(--ds-radius-12); margin-bottom: var(--ds-spacing-24); font-size: var(--ds-font-size-14); line-height: var(--ds-line-height-relaxed); color: var(--ds-content-default); }
     .ds-callout--info { background-color: var(--ds-feedback-info-background); border: var(--ds-border-width-1) solid var(--ds-feedback-info-border); }
     .ds-callout--success { background-color: var(--ds-feedback-success-background); border: var(--ds-border-width-1) solid var(--ds-feedback-success-border); }
     .ds-callout--warning { background-color: var(--ds-feedback-warning-background); border: var(--ds-border-width-1) solid var(--ds-feedback-warning-border); }
-    .ds-callout__title { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-1); }
+    .ds-callout__title { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-4); }
     /* Do/Don't */
-    .ds-dodont { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ds-spacing-4); margin-bottom: var(--ds-spacing-8); }
-    .ds-dodont__item { border-radius: var(--ds-radius-lg); overflow: hidden; }
-    .ds-dodont__preview { padding: var(--ds-spacing-6); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg) var(--ds-radius-lg) 0 0; display: flex; flex-wrap: wrap; gap: var(--ds-spacing-3); align-items: center; justify-content: center; }
-    .ds-dodont__label { padding: var(--ds-spacing-2) var(--ds-spacing-4); font-size: var(--ds-font-size-sm); font-weight: var(--ds-font-weight-semibold); }
+    .ds-dodont { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ds-spacing-16); margin-bottom: var(--ds-spacing-32); }
+    .ds-dodont__item { border-radius: var(--ds-radius-12); overflow: hidden; }
+    .ds-dodont__preview { padding: var(--ds-spacing-24); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-12) var(--ds-radius-12) 0 0; display: flex; flex-wrap: wrap; gap: var(--ds-spacing-12); align-items: center; justify-content: center; }
+    .ds-dodont__label { padding: var(--ds-spacing-8) var(--ds-spacing-16); font-size: var(--ds-font-size-14); font-weight: var(--ds-font-weight-semibold); }
     .ds-dodont__label--do { background-color: var(--ds-feedback-success-background); color: var(--ds-feedback-success-content-default); border-top: 3px solid var(--ds-feedback-success-default); }
     .ds-dodont__label--dont { background-color: var(--ds-feedback-error-background); color: var(--ds-feedback-error-content-default); border-top: 3px solid var(--ds-feedback-error-default); }
-    .ds-dodont__desc { padding: 0 var(--ds-spacing-4) var(--ds-spacing-3); font-size: var(--ds-font-size-sm); color: var(--ds-content-secondary); background-color: var(--ds-background-subtle); }
+    .ds-dodont__desc { padding: 0 var(--ds-spacing-16) var(--ds-spacing-12); font-size: var(--ds-font-size-14); color: var(--ds-content-secondary); background-color: var(--ds-background-subtle); }
     /* Anatomy */
-    .ds-anatomy { padding: var(--ds-spacing-8); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-4); display: flex; align-items: center; justify-content: center; position: relative; }
-    .ds-anatomy__marker { position: absolute; width: 20px; height: 20px; border-radius: 50%; background-color: var(--ds-brand-default); color: var(--ds-brand-content-contrast); font-size: 11px; font-weight: var(--ds-font-weight-bold); display: flex; align-items: center; justify-content: center; }
-    .ds-anatomy-legend { font-size: var(--ds-font-size-sm); color: var(--ds-content-secondary); margin-bottom: var(--ds-spacing-8); line-height: var(--ds-line-height-relaxed); }
+    .ds-anatomy { padding: var(--ds-spacing-32); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-12); margin-bottom: var(--ds-spacing-16); display: flex; align-items: center; justify-content: center; position: relative; }
+    .ds-anatomy__marker { position: absolute; width: 20px; height: 20px; border-radius: 50%; background-color: var(--ds-primary-bg-default); color: var(--ds-primary-content-default); font-size: 11px; font-weight: var(--ds-font-weight-bold); display: flex; align-items: center; justify-content: center; }
+    .ds-anatomy-legend { font-size: var(--ds-font-size-14); color: var(--ds-content-secondary); margin-bottom: var(--ds-spacing-32); line-height: var(--ds-line-height-relaxed); }
     .ds-anatomy-legend strong { color: var(--ds-content-default); }
     /* Related */
-    .ds-related { display: flex; gap: var(--ds-spacing-3); flex-wrap: wrap; margin-bottom: var(--ds-spacing-8); }
-    .ds-related__link { padding: var(--ds-spacing-2) var(--ds-spacing-4); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-md); font-size: var(--ds-font-size-sm); color: var(--ds-content-link-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
-    .ds-related__link:hover { border-color: var(--ds-brand-default); background-color: var(--ds-state-hover); }
+    .ds-related { display: flex; gap: var(--ds-spacing-12); flex-wrap: wrap; margin-bottom: var(--ds-spacing-32); }
+    .ds-related__link { padding: var(--ds-spacing-8) var(--ds-spacing-16); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-8); font-size: var(--ds-font-size-14); color: var(--ds-content-link-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
+    .ds-related__link:hover { border-color: var(--ds-primary-bg-default); background-color: var(--ds-overlay-subtle); }
     /* Responsive do/dont */
     @media (max-width: 768px) { .ds-dodont { grid-template-columns: 1fr; } }
   </style>
@@ -45,7 +45,7 @@
 <body>
 
 <header class="ds-site-header">
-  <div style="display:flex;align-items:center;gap:var(--ds-spacing-4)">
+  <div style="display:flex;align-items:center;gap:var(--ds-spacing-16)">
     <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>
@@ -389,9 +389,9 @@
       </div>
       <div class="ds-dodont__item">
         <div class="ds-dodont__preview" style="flex-direction:column;align-items:stretch;">
-          <div style="padding:var(--ds-spacing-4);background-color:var(--ds-feedback-success-default);border-radius:var(--ds-radius-component);color:var(--ds-brand-content-contrast);font-size:var(--ds-font-size-sm);width:100%">
+          <div style="padding:var(--ds-spacing-16);background-color:var(--ds-feedback-success-default);border-radius:var(--ds-radius-md);color:var(--ds-primary-content-default);font-size:var(--ds-font-size-14);width:100%">
             <p style="font-weight:var(--ds-font-weight-semibold);margin:0;">Saved</p>
-            <p style="margin:var(--ds-spacing-1) 0 0;">Changes saved successfully.</p>
+            <p style="margin:var(--ds-spacing-4) 0 0;">Changes saved successfully.</p>
           </div>
         </div>
         <div class="ds-dodont__label ds-dodont__label--dont">Não faça</div>
@@ -401,7 +401,7 @@
 
     <div class="ds-dodont">
       <div class="ds-dodont__item">
-        <div class="ds-dodont__preview" style="flex-direction:column;align-items:stretch;gap:var(--ds-spacing-3);">
+        <div class="ds-dodont__preview" style="flex-direction:column;align-items:stretch;gap:var(--ds-spacing-12);">
           <div class="ds-alert ds-alert--error ds-alert--filled" role="alert" style="width:100%">
             <span class="ds-alert__icon"><span class="material-symbols-outlined">error</span></span>
             <div class="ds-alert__content">
@@ -421,7 +421,7 @@
         <div class="ds-dodont__desc"><span data-lang="pt">Use filled para mensagens de alta prioridade, subtle para informativas.</span><span data-lang="en">Use filled for high-priority messages, subtle for informational ones.</span></div>
       </div>
       <div class="ds-dodont__item">
-        <div class="ds-dodont__preview" style="flex-direction:column;align-items:stretch;gap:var(--ds-spacing-3);">
+        <div class="ds-dodont__preview" style="flex-direction:column;align-items:stretch;gap:var(--ds-spacing-12);">
           <div class="ds-alert ds-alert--error ds-alert--filled" role="alert" style="width:100%">
             <span class="ds-alert__icon"><span class="material-symbols-outlined">error</span></span>
             <div class="ds-alert__content">
@@ -470,7 +470,7 @@
        ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Mapeamento de tokens</span><span data-lang="en">Token mapping</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);">
+    <p style="margin-bottom:var(--ds-spacing-16);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);">
       <span data-lang="pt">Tokens mostrados para a variante success. Outros tipos (warning, error, info) seguem o mesmo padrão com seus respectivos grupos de cor de feedback.</span><span data-lang="en">Tokens shown for the success variant. Other types (warning, error, info) follow the same pattern with their respective feedback color groups.</span>
     </p>
     <table class="ds-token-table">
@@ -482,10 +482,10 @@
         <tr><td>text (success filled)</td><td><code>semantic.feedback.success.content.contrast</code></td><td><code>--ds-feedback-success-content-contrast</code></td></tr>
         <tr><td>text title (subtle)</td><td><code>semantic.content.default</code></td><td><code>--ds-content-default</code></td></tr>
         <tr><td>text description (subtle)</td><td><code>semantic.content.secondary</code></td><td><code>--ds-content-secondary</code></td></tr>
-        <tr><td>border-radius</td><td><code>semantic.radius.component</code></td><td><code>--ds-radius-component</code></td></tr>
-        <tr><td>padding (all sides)</td><td><code>foundation.spacing.3</code></td><td><code>--ds-spacing-3</code></td></tr>
-        <tr><td>gap</td><td><code>foundation.spacing.2</code></td><td><code>--ds-spacing-2</code></td></tr>
-        <tr><td>title font-size</td><td><code>foundation.typography.font.size.xs</code></td><td><code>--ds-font-size-xs</code></td></tr>
+        <tr><td>border-radius</td><td><code>semantic.radius.component</code></td><td><code>--ds-radius-md</code></td></tr>
+        <tr><td>padding (all sides)</td><td><code>foundation.spacing.3</code></td><td><code>--ds-spacing-12</code></td></tr>
+        <tr><td>gap</td><td><code>foundation.spacing.2</code></td><td><code>--ds-spacing-8</code></td></tr>
+        <tr><td>title font-size</td><td><code>foundation.typography.font.size.xs</code></td><td><code>--ds-font-size-12</code></td></tr>
         <tr><td>title font-weight</td><td><code>foundation.typography.font.weight.bold</code></td><td><code>--ds-font-weight-bold</code></td></tr>
       </tbody>
     </table>
@@ -545,7 +545,7 @@
       </tbody>
     </table>
 
-    <div class="ds-callout ds-callout--info" style="margin-top:var(--ds-spacing-4)">
+    <div class="ds-callout ds-callout--info" style="margin-top:var(--ds-spacing-16)">
       <div class="ds-callout__title"><span data-lang="pt">Resumo de atributos ARIA</span><span data-lang="en">ARIA attributes summary</span></div>
       <span data-lang="pt"><code>role="alert"</code> — para mensagens urgentes/erros que devem ser anunciadas imediatamente por leitores de tela.<br>
       <code>role="status"</code> — para mensagens informativas não urgentes (anuncio educado).<br>

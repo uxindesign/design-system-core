@@ -7,18 +7,18 @@
   <link rel="stylesheet" href="../css/design-system.css">
   <link rel="stylesheet" href="layout.css">
   <style>
-    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-sm); margin-bottom: var(--ds-spacing-8); }
-    .ds-token-table th { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
-    .ds-token-table td { padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
-    .ds-token-table code { font-size: var(--ds-font-size-xs); font-family: var(--ds-font-family-mono); }
-    .ds-type-sample { margin-bottom: var(--ds-spacing-6); padding: var(--ds-spacing-4); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg); }
-    .ds-type-sample__preview { margin-bottom: var(--ds-spacing-2); color: var(--ds-content-default); }
-    .ds-type-sample__meta { display: flex; flex-wrap: wrap; gap: var(--ds-spacing-3); font-size: var(--ds-font-size-xs); color: var(--ds-content-secondary); font-family: var(--ds-font-family-mono); }
-    .ds-font-preview { padding: var(--ds-spacing-6); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-4); }
-    .ds-font-preview__name { font-size: var(--ds-font-size-sm); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); margin-bottom: var(--ds-spacing-2); }
-    .ds-font-preview__sample { font-size: var(--ds-font-size-2xl); color: var(--ds-content-default); margin-bottom: var(--ds-spacing-1); }
-    .ds-font-preview__chars { font-size: var(--ds-font-size-sm); color: var(--ds-content-tertiary); }
-    .ds-code-block { background-color: var(--ds-color-neutral-900); color: var(--ds-color-neutral-200); padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); font-family: var(--ds-font-family-mono); font-size: var(--ds-font-size-xs); line-height: var(--ds-line-height-relaxed); overflow-x: auto; margin-bottom: var(--ds-spacing-6); white-space: pre; }
+    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-14); margin-bottom: var(--ds-spacing-32); }
+    .ds-token-table th { text-align: left; padding: var(--ds-spacing-8) var(--ds-spacing-12); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
+    .ds-token-table td { padding: var(--ds-spacing-8) var(--ds-spacing-12); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
+    .ds-token-table code { font-size: var(--ds-font-size-12); font-family: var(--ds-font-family-mono); }
+    .ds-type-sample { margin-bottom: var(--ds-spacing-24); padding: var(--ds-spacing-16); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-12); }
+    .ds-type-sample__preview { margin-bottom: var(--ds-spacing-8); color: var(--ds-content-default); }
+    .ds-type-sample__meta { display: flex; flex-wrap: wrap; gap: var(--ds-spacing-12); font-size: var(--ds-font-size-12); color: var(--ds-content-secondary); font-family: var(--ds-font-family-mono); }
+    .ds-font-preview { padding: var(--ds-spacing-24); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-12); margin-bottom: var(--ds-spacing-16); }
+    .ds-font-preview__name { font-size: var(--ds-font-size-14); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); margin-bottom: var(--ds-spacing-8); }
+    .ds-font-preview__sample { font-size: var(--ds-font-size-24); color: var(--ds-content-default); margin-bottom: var(--ds-spacing-4); }
+    .ds-font-preview__chars { font-size: var(--ds-font-size-14); color: var(--ds-content-tertiary); }
+    .ds-code-block { background-color: var(--ds-color-neutral-900); color: var(--ds-color-neutral-200); padding: var(--ds-spacing-16) var(--ds-spacing-20); border-radius: var(--ds-radius-12); font-family: var(--ds-font-family-mono); font-size: var(--ds-font-size-12); line-height: var(--ds-line-height-relaxed); overflow-x: auto; margin-bottom: var(--ds-spacing-24); white-space: pre; }
   </style>
   <script>
     (function(){var l=localStorage.getItem('ds-lang');if(l)document.documentElement.setAttribute('lang',l)})();
@@ -27,7 +27,7 @@
 <body>
 
 <header class="ds-site-header">
-  <div style="display:flex;align-items:center;gap:var(--ds-spacing-4)">
+  <div style="display:flex;align-items:center;gap:var(--ds-spacing-16)">
     <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>
@@ -82,20 +82,20 @@
     <table class="ds-token-table">
       <thead><tr><th>Token</th><th>rem</th><th>px</th><th><span data-lang="pt">Exemplo</span><span data-lang="en">Preview</span></th></tr></thead>
       <tbody>
-        <tr><td><code>--ds-font-size-2xs</code></td><td>0.6875rem</td><td>11px</td><td><span style="font-size:0.6875rem">The quick brown fox</span></td></tr>
-        <tr><td><code>--ds-font-size-xs</code></td><td>0.75rem</td><td>12px</td><td><span style="font-size:0.75rem">The quick brown fox</span></td></tr>
-        <tr><td><code>--ds-font-size-sm</code></td><td>0.875rem</td><td>14px</td><td><span style="font-size:0.875rem">The quick brown fox</span></td></tr>
-        <tr><td><code>--ds-font-size-md</code></td><td>1rem</td><td>16px</td><td><span style="font-size:1rem">The quick brown fox</span></td></tr>
-        <tr><td><code>--ds-font-size-lg</code></td><td>1.125rem</td><td>18px</td><td><span style="font-size:1.125rem">The quick brown fox</span></td></tr>
-        <tr><td><code>--ds-font-size-xl</code></td><td>1.25rem</td><td>20px</td><td><span style="font-size:1.25rem">The quick brown fox</span></td></tr>
-        <tr><td><code>--ds-font-size-2xl</code></td><td>1.5rem</td><td>24px</td><td><span style="font-size:1.5rem">The quick brown fox</span></td></tr>
-        <tr><td><code>--ds-font-size-3xl</code></td><td>1.75rem</td><td>28px</td><td><span style="font-size:1.75rem">The quick brown fox</span></td></tr>
-        <tr><td><code>--ds-font-size-4xl</code></td><td>2rem</td><td>32px</td><td><span style="font-size:2rem">The quick brown fox</span></td></tr>
-        <tr><td><code>--ds-font-size-5xl</code></td><td>2.5rem</td><td>40px</td><td><span style="font-size:2.5rem">Aa</span></td></tr>
-        <tr><td><code>--ds-font-size-6xl</code></td><td>3rem</td><td>48px</td><td><span style="font-size:3rem">Aa</span></td></tr>
-        <tr><td><code>--ds-font-size-7xl</code></td><td>3.5rem</td><td>56px</td><td><span style="font-size:3.5rem">Aa</span></td></tr>
-        <tr><td><code>--ds-font-size-8xl</code></td><td>4rem</td><td>64px</td><td><span style="font-size:4rem">Aa</span></td></tr>
-        <tr><td><code>--ds-font-size-9xl</code></td><td>4.5rem</td><td>72px</td><td><span style="font-size:4.5rem">Aa</span></td></tr>
+        <tr><td><code>--ds-font-size-11</code></td><td>0.6875rem</td><td>11px</td><td><span style="font-size:0.6875rem">The quick brown fox</span></td></tr>
+        <tr><td><code>--ds-font-size-12</code></td><td>0.75rem</td><td>12px</td><td><span style="font-size:0.75rem">The quick brown fox</span></td></tr>
+        <tr><td><code>--ds-font-size-14</code></td><td>0.875rem</td><td>14px</td><td><span style="font-size:0.875rem">The quick brown fox</span></td></tr>
+        <tr><td><code>--ds-font-size-16</code></td><td>1rem</td><td>16px</td><td><span style="font-size:1rem">The quick brown fox</span></td></tr>
+        <tr><td><code>--ds-font-size-18</code></td><td>1.125rem</td><td>18px</td><td><span style="font-size:1.125rem">The quick brown fox</span></td></tr>
+        <tr><td><code>--ds-font-size-20</code></td><td>1.25rem</td><td>20px</td><td><span style="font-size:1.25rem">The quick brown fox</span></td></tr>
+        <tr><td><code>--ds-font-size-24</code></td><td>1.5rem</td><td>24px</td><td><span style="font-size:1.5rem">The quick brown fox</span></td></tr>
+        <tr><td><code>--ds-font-size-28</code></td><td>1.75rem</td><td>28px</td><td><span style="font-size:1.75rem">The quick brown fox</span></td></tr>
+        <tr><td><code>--ds-font-size-32</code></td><td>2rem</td><td>32px</td><td><span style="font-size:2rem">The quick brown fox</span></td></tr>
+        <tr><td><code>--ds-font-size-40</code></td><td>2.5rem</td><td>40px</td><td><span style="font-size:2.5rem">Aa</span></td></tr>
+        <tr><td><code>--ds-font-size-48</code></td><td>3rem</td><td>48px</td><td><span style="font-size:3rem">Aa</span></td></tr>
+        <tr><td><code>--ds-font-size-56</code></td><td>3.5rem</td><td>56px</td><td><span style="font-size:3.5rem">Aa</span></td></tr>
+        <tr><td><code>--ds-font-size-64</code></td><td>4rem</td><td>64px</td><td><span style="font-size:4rem">Aa</span></td></tr>
+        <tr><td><code>--ds-font-size-72</code></td><td>4.5rem</td><td>72px</td><td><span style="font-size:4.5rem">Aa</span></td></tr>
       </tbody>
     </table>
   </div>
@@ -104,7 +104,7 @@
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Text Styles (24 utility classes)</span><span data-lang="en">Text Styles (24 utility classes)</span></h2>
 
-    <h3 style="margin:var(--ds-spacing-4) 0 var(--ds-spacing-2);color:var(--ds-content-secondary)">Display</h3>
+    <h3 style="margin:var(--ds-spacing-16) 0 var(--ds-spacing-8);color:var(--ds-content-secondary)">Display</h3>
     <div class="ds-type-sample">
       <div class="ds-type-sample__preview ds-text-display-2xl">Display 2XL</div>
       <div class="ds-type-sample__meta"><span>.ds-text-display-2xl</span><span>bold</span><span>72px</span><span>line-height: 1.25</span><span>letter-spacing: -0.5px</span></div>
@@ -126,7 +126,7 @@
       <div class="ds-type-sample__meta"><span>.ds-text-display-sm</span><span>bold</span><span>40px</span><span>line-height: 1.25</span><span>letter-spacing: normal</span></div>
     </div>
 
-    <h3 style="margin:var(--ds-spacing-6) 0 var(--ds-spacing-2);color:var(--ds-content-secondary)">Heading</h3>
+    <h3 style="margin:var(--ds-spacing-24) 0 var(--ds-spacing-8);color:var(--ds-content-secondary)">Heading</h3>
     <div class="ds-type-sample">
       <div class="ds-type-sample__preview ds-text-heading-xl">Heading XL</div>
       <div class="ds-type-sample__meta"><span>.ds-text-heading-xl</span><span>bold</span><span>32px</span><span>line-height: 1.375</span><span>letter-spacing: -0.5px</span></div>
@@ -148,7 +148,7 @@
       <div class="ds-type-sample__meta"><span>.ds-text-heading-xs</span><span>semibold</span><span>18px</span><span>line-height: 1.375</span></div>
     </div>
 
-    <h3 style="margin:var(--ds-spacing-6) 0 var(--ds-spacing-2);color:var(--ds-content-secondary)">Body</h3>
+    <h3 style="margin:var(--ds-spacing-24) 0 var(--ds-spacing-8);color:var(--ds-content-secondary)">Body</h3>
     <div class="ds-type-sample">
       <div class="ds-type-sample__preview ds-text-body-lg">Body LG -- The quick brown fox jumps over the lazy dog.</div>
       <div class="ds-type-sample__meta"><span>.ds-text-body-lg</span><span>regular</span><span>18px</span><span>line-height: 1.5</span></div>
@@ -166,7 +166,7 @@
       <div class="ds-type-sample__meta"><span>.ds-text-body-xs</span><span>regular</span><span>12px</span><span>line-height: 1.5</span></div>
     </div>
 
-    <h3 style="margin:var(--ds-spacing-6) 0 var(--ds-spacing-2);color:var(--ds-content-secondary)">Label</h3>
+    <h3 style="margin:var(--ds-spacing-24) 0 var(--ds-spacing-8);color:var(--ds-content-secondary)">Label</h3>
     <div class="ds-type-sample">
       <div class="ds-type-sample__preview ds-text-label-lg">Label LG</div>
       <div class="ds-type-sample__meta"><span>.ds-text-label-lg</span><span>medium</span><span>16px</span><span>line-height: 1.375</span><span>letter-spacing: 0.5px</span></div>
@@ -184,7 +184,7 @@
       <div class="ds-type-sample__meta"><span>.ds-text-label-xs</span><span>medium</span><span>11px</span><span>line-height: 1.375</span><span>letter-spacing: 0.5px</span></div>
     </div>
 
-    <h3 style="margin:var(--ds-spacing-6) 0 var(--ds-spacing-2);color:var(--ds-content-secondary)">Caption</h3>
+    <h3 style="margin:var(--ds-spacing-24) 0 var(--ds-spacing-8);color:var(--ds-content-secondary)">Caption</h3>
     <div class="ds-type-sample">
       <div class="ds-type-sample__preview ds-text-caption-md">Caption MD -- Supporting text for form fields and metadata.</div>
       <div class="ds-type-sample__meta"><span>.ds-text-caption-md</span><span>regular</span><span>12px</span><span>line-height: 1.5</span></div>
@@ -194,7 +194,7 @@
       <div class="ds-type-sample__meta"><span>.ds-text-caption-sm</span><span>regular</span><span>11px</span><span>line-height: 1.5</span></div>
     </div>
 
-    <h3 style="margin:var(--ds-spacing-6) 0 var(--ds-spacing-2);color:var(--ds-content-secondary)">Overline</h3>
+    <h3 style="margin:var(--ds-spacing-24) 0 var(--ds-spacing-8);color:var(--ds-content-secondary)">Overline</h3>
     <div class="ds-type-sample">
       <div class="ds-type-sample__preview ds-text-overline-md">Overline MD</div>
       <div class="ds-type-sample__meta"><span>.ds-text-overline-md</span><span>semibold</span><span>12px</span><span>line-height: 1.375</span><span>letter-spacing: 1.5px</span><span>uppercase</span></div>
@@ -204,7 +204,7 @@
       <div class="ds-type-sample__meta"><span>.ds-text-overline-sm</span><span>semibold</span><span>11px</span><span>line-height: 1.375</span><span>letter-spacing: 1.5px</span><span>uppercase</span></div>
     </div>
 
-    <h3 style="margin:var(--ds-spacing-6) 0 var(--ds-spacing-2);color:var(--ds-content-secondary)">Code</h3>
+    <h3 style="margin:var(--ds-spacing-24) 0 var(--ds-spacing-8);color:var(--ds-content-secondary)">Code</h3>
     <div class="ds-type-sample">
       <div class="ds-type-sample__preview ds-text-code-md">const greeting = "Hello, World!";</div>
       <div class="ds-type-sample__meta"><span>.ds-text-code-md</span><span>regular</span><span>14px</span><span>line-height: 1.5</span><span>DM Mono</span></div>

@@ -8,28 +8,28 @@
   <link rel="stylesheet" href="layout.css">
   <style>
     /* Tables */
-    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-sm); margin-bottom: var(--ds-spacing-8); }
-    .ds-token-table th { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
-    .ds-token-table td { padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
-    .ds-token-table code { font-size: var(--ds-font-size-xs); font-family: var(--ds-font-family-mono); }
+    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-14); margin-bottom: var(--ds-spacing-32); }
+    .ds-token-table th { text-align: left; padding: var(--ds-spacing-8) var(--ds-spacing-12); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
+    .ds-token-table td { padding: var(--ds-spacing-8) var(--ds-spacing-12); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
+    .ds-token-table code { font-size: var(--ds-font-size-12); font-family: var(--ds-font-family-mono); }
     /* Callouts */
-    .ds-callout { padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-6); font-size: var(--ds-font-size-sm); line-height: var(--ds-line-height-relaxed); color: var(--ds-content-default); }
+    .ds-callout { padding: var(--ds-spacing-16) var(--ds-spacing-20); border-radius: var(--ds-radius-12); margin-bottom: var(--ds-spacing-24); font-size: var(--ds-font-size-14); line-height: var(--ds-line-height-relaxed); color: var(--ds-content-default); }
     .ds-callout--info { background-color: var(--ds-feedback-info-background); border: var(--ds-border-width-1) solid var(--ds-feedback-info-border); }
     .ds-callout--success { background-color: var(--ds-feedback-success-background); border: var(--ds-border-width-1) solid var(--ds-feedback-success-border); }
     .ds-callout--warning { background-color: var(--ds-feedback-warning-background); border: var(--ds-border-width-1) solid var(--ds-feedback-warning-border); }
-    .ds-callout__title { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-1); }
+    .ds-callout__title { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-4); }
     /* Do/Don't */
-    .ds-dodont { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ds-spacing-4); margin-bottom: var(--ds-spacing-8); }
-    .ds-dodont__item { border-radius: var(--ds-radius-lg); overflow: hidden; }
-    .ds-dodont__preview { padding: var(--ds-spacing-6); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg) var(--ds-radius-lg) 0 0; display: flex; flex-wrap: wrap; gap: var(--ds-spacing-3); align-items: center; justify-content: center; }
-    .ds-dodont__label { padding: var(--ds-spacing-2) var(--ds-spacing-4); font-size: var(--ds-font-size-sm); font-weight: var(--ds-font-weight-semibold); }
+    .ds-dodont { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ds-spacing-16); margin-bottom: var(--ds-spacing-32); }
+    .ds-dodont__item { border-radius: var(--ds-radius-12); overflow: hidden; }
+    .ds-dodont__preview { padding: var(--ds-spacing-24); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-12) var(--ds-radius-12) 0 0; display: flex; flex-wrap: wrap; gap: var(--ds-spacing-12); align-items: center; justify-content: center; }
+    .ds-dodont__label { padding: var(--ds-spacing-8) var(--ds-spacing-16); font-size: var(--ds-font-size-14); font-weight: var(--ds-font-weight-semibold); }
     .ds-dodont__label--do { background-color: var(--ds-feedback-success-background); color: var(--ds-feedback-success-content-default); border-top: 3px solid var(--ds-feedback-success-default); }
     .ds-dodont__label--dont { background-color: var(--ds-feedback-error-background); color: var(--ds-feedback-error-content-default); border-top: 3px solid var(--ds-feedback-error-default); }
-    .ds-dodont__desc { padding: 0 var(--ds-spacing-4) var(--ds-spacing-3); font-size: var(--ds-font-size-sm); color: var(--ds-content-secondary); background-color: var(--ds-background-subtle); }
+    .ds-dodont__desc { padding: 0 var(--ds-spacing-16) var(--ds-spacing-12); font-size: var(--ds-font-size-14); color: var(--ds-content-secondary); background-color: var(--ds-background-subtle); }
     /* Related */
-    .ds-related { display: flex; gap: var(--ds-spacing-3); flex-wrap: wrap; margin-bottom: var(--ds-spacing-8); }
-    .ds-related__link { padding: var(--ds-spacing-2) var(--ds-spacing-4); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-md); font-size: var(--ds-font-size-sm); color: var(--ds-content-link-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
-    .ds-related__link:hover { border-color: var(--ds-brand-default); background-color: var(--ds-state-hover); }
+    .ds-related { display: flex; gap: var(--ds-spacing-12); flex-wrap: wrap; margin-bottom: var(--ds-spacing-32); }
+    .ds-related__link { padding: var(--ds-spacing-8) var(--ds-spacing-16); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-8); font-size: var(--ds-font-size-14); color: var(--ds-content-link-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
+    .ds-related__link:hover { border-color: var(--ds-primary-bg-default); background-color: var(--ds-overlay-subtle); }
     /* Responsive do/dont */
     @media (max-width: 768px) { .ds-dodont { grid-template-columns: 1fr; } }
   </style>
@@ -40,7 +40,7 @@
 <body>
 
 <header class="ds-site-header">
-  <div style="display:flex;align-items:center;gap:var(--ds-spacing-4)">
+  <div style="display:flex;align-items:center;gap:var(--ds-spacing-16)">
     <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>
@@ -98,16 +98,16 @@
        ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Divider horizontal</span><span data-lang="en">Horizontal divider</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">O divider padrão ocupa toda a largura do container e adiciona separação vertical entre o conteúdo.</span><span data-lang="en">The default divider spans the full width of its container and adds vertical separation between content.</span></p>
+    <p style="margin-bottom:var(--ds-spacing-16);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);"><span data-lang="pt">O divider padrão ocupa toda a largura do container e adiciona separação vertical entre o conteúdo.</span><span data-lang="en">The default divider spans the full width of its container and adds vertical separation between content.</span></p>
     <div class="ds-preview">
       <div class="ds-preview__tabs">
         <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
         <button class="ds-preview__tab" data-tab="code">Code</button>
       </div>
       <div class="ds-preview__canvas ds-preview__canvas--column" style="gap:0;">
-        <p style="margin:0;padding:var(--ds-spacing-4) 0;color:var(--ds-content-secondary);">Content above the divider</p>
+        <p style="margin:0;padding:var(--ds-spacing-16) 0;color:var(--ds-content-secondary);">Content above the divider</p>
         <hr class="ds-divider">
-        <p style="margin:0;padding:var(--ds-spacing-4) 0;color:var(--ds-content-secondary);">Content below the divider</p>
+        <p style="margin:0;padding:var(--ds-spacing-16) 0;color:var(--ds-content-secondary);">Content below the divider</p>
       </div>
       <div class="ds-preview__code" style="display:none">
         <button class="ds-preview__copy">Copy</button>
@@ -120,26 +120,26 @@
 
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Em uma lista</span><span data-lang="en">In a list</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Dividers entre itens de lista criam agrupamento visual.</span><span data-lang="en">Dividers between list items create visual grouping.</span></p>
+    <p style="margin-bottom:var(--ds-spacing-16);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);"><span data-lang="pt">Dividers entre itens de lista criam agrupamento visual.</span><span data-lang="en">Dividers between list items create visual grouping.</span></p>
     <div class="ds-preview">
       <div class="ds-preview__tabs">
         <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
         <button class="ds-preview__tab" data-tab="code">Code</button>
       </div>
       <div class="ds-preview__canvas ds-preview__canvas--column" style="gap:0;max-width:400px;">
-        <div style="padding:var(--ds-spacing-3) 0;">
+        <div style="padding:var(--ds-spacing-12) 0;">
           <p style="margin:0;font-weight:var(--ds-font-weight-medium);">Notifications</p>
-          <p style="margin:var(--ds-spacing-1) 0 0;font-size:var(--ds-font-size-sm);color:var(--ds-content-secondary);">Manage your notification preferences</p>
+          <p style="margin:var(--ds-spacing-4) 0 0;font-size:var(--ds-font-size-14);color:var(--ds-content-secondary);">Manage your notification preferences</p>
         </div>
         <hr class="ds-divider">
-        <div style="padding:var(--ds-spacing-3) 0;">
+        <div style="padding:var(--ds-spacing-12) 0;">
           <p style="margin:0;font-weight:var(--ds-font-weight-medium);">Privacy</p>
-          <p style="margin:var(--ds-spacing-1) 0 0;font-size:var(--ds-font-size-sm);color:var(--ds-content-secondary);">Control who can see your profile</p>
+          <p style="margin:var(--ds-spacing-4) 0 0;font-size:var(--ds-font-size-14);color:var(--ds-content-secondary);">Control who can see your profile</p>
         </div>
         <hr class="ds-divider">
-        <div style="padding:var(--ds-spacing-3) 0;">
+        <div style="padding:var(--ds-spacing-12) 0;">
           <p style="margin:0;font-weight:var(--ds-font-weight-medium);">Security</p>
-          <p style="margin:var(--ds-spacing-1) 0 0;font-size:var(--ds-font-size-sm);color:var(--ds-content-secondary);">Two-factor authentication and password</p>
+          <p style="margin:var(--ds-spacing-4) 0 0;font-size:var(--ds-font-size-14);color:var(--ds-content-secondary);">Two-factor authentication and password</p>
         </div>
       </div>
       <div class="ds-preview__code" style="display:none">
@@ -159,7 +159,7 @@
 
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Divider vertical</span><span data-lang="en">Vertical divider</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Use <code>ds-divider--vertical</code> dentro de um flex container para separar itens horizontalmente.</span><span data-lang="en">Use <code>ds-divider--vertical</code> inside a flex container to separate items horizontally.</span></p>
+    <p style="margin-bottom:var(--ds-spacing-16);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);"><span data-lang="pt">Use <code>ds-divider--vertical</code> dentro de um flex container para separar itens horizontalmente.</span><span data-lang="en">Use <code>ds-divider--vertical</code> inside a flex container to separate items horizontally.</span></p>
     <div class="ds-preview">
       <div class="ds-preview__tabs">
         <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
@@ -174,7 +174,7 @@
       </div>
       <div class="ds-preview__code" style="display:none">
         <button class="ds-preview__copy">Copy</button>
-        <pre><code>&lt;div style="display:flex;align-items:center;gap:var(--ds-spacing-4);"&gt;
+        <pre><code>&lt;div style="display:flex;align-items:center;gap:var(--ds-spacing-16);"&gt;
   &lt;span&gt;Left&lt;/span&gt;
   &lt;hr class="ds-divider ds-divider--vertical"&gt;
   &lt;span&gt;Center&lt;/span&gt;
@@ -187,14 +187,14 @@
 
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Em uma toolbar</span><span data-lang="en">In a toolbar</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Dividers verticais separam grupos de ações em uma toolbar.</span><span data-lang="en">Vertical dividers separate groups of actions in a toolbar.</span></p>
+    <p style="margin-bottom:var(--ds-spacing-16);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);"><span data-lang="pt">Dividers verticais separam grupos de ações em uma toolbar.</span><span data-lang="en">Vertical dividers separate groups of actions in a toolbar.</span></p>
     <div class="ds-preview">
       <div class="ds-preview__tabs">
         <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
         <button class="ds-preview__tab" data-tab="code">Code</button>
       </div>
       <div class="ds-preview__canvas ds-preview__canvas--centered">
-        <div style="display:flex;align-items:center;gap:var(--ds-spacing-2);">
+        <div style="display:flex;align-items:center;gap:var(--ds-spacing-8);">
           <button class="ds-btn ds-btn--ghost ds-btn--sm">Cut</button>
           <button class="ds-btn ds-btn--ghost ds-btn--sm">Copy</button>
           <button class="ds-btn ds-btn--ghost ds-btn--sm">Paste</button>
@@ -205,7 +205,7 @@
       </div>
       <div class="ds-preview__code" style="display:none">
         <button class="ds-preview__copy">Copy</button>
-        <pre><code>&lt;div style="display:flex;align-items:center;gap:var(--ds-spacing-2);"&gt;
+        <pre><code>&lt;div style="display:flex;align-items:center;gap:var(--ds-spacing-8);"&gt;
   &lt;button class="ds-btn ds-btn--ghost ds-btn--sm"&gt;Cut&lt;/button&gt;
   &lt;button class="ds-btn ds-btn--ghost ds-btn--sm"&gt;Copy&lt;/button&gt;
   &lt;button class="ds-btn ds-btn--ghost ds-btn--sm"&gt;Paste&lt;/button&gt;
@@ -226,24 +226,24 @@
     <div class="ds-dodont">
       <div class="ds-dodont__item">
         <div class="ds-dodont__preview" style="flex-direction:column;gap:0;">
-          <p style="margin:0;padding:var(--ds-spacing-3) 0;font-size:var(--ds-font-size-sm);color:var(--ds-content-secondary);">Section A</p>
+          <p style="margin:0;padding:var(--ds-spacing-12) 0;font-size:var(--ds-font-size-14);color:var(--ds-content-secondary);">Section A</p>
           <hr class="ds-divider" style="width:100%;">
-          <p style="margin:0;padding:var(--ds-spacing-3) 0;font-size:var(--ds-font-size-sm);color:var(--ds-content-secondary);">Section B</p>
+          <p style="margin:0;padding:var(--ds-spacing-12) 0;font-size:var(--ds-font-size-14);color:var(--ds-content-secondary);">Section B</p>
         </div>
         <div class="ds-dodont__label ds-dodont__label--do">Faça</div>
         <div class="ds-dodont__desc"><span data-lang="pt">Use dividers horizontais entre blocos de conteúdo e dividers verticais entre itens inline.</span><span data-lang="en">Use horizontal dividers between content blocks and vertical dividers between inline items.</span></div>
       </div>
       <div class="ds-dodont__item">
         <div class="ds-dodont__preview" style="flex-direction:column;gap:0;">
-          <p style="margin:0;padding:var(--ds-spacing-2) 0;font-size:var(--ds-font-size-sm);color:var(--ds-content-secondary);">Item 1</p>
+          <p style="margin:0;padding:var(--ds-spacing-8) 0;font-size:var(--ds-font-size-14);color:var(--ds-content-secondary);">Item 1</p>
           <hr class="ds-divider" style="width:100%;">
-          <p style="margin:0;padding:var(--ds-spacing-2) 0;font-size:var(--ds-font-size-sm);color:var(--ds-content-secondary);">Item 2</p>
+          <p style="margin:0;padding:var(--ds-spacing-8) 0;font-size:var(--ds-font-size-14);color:var(--ds-content-secondary);">Item 2</p>
           <hr class="ds-divider" style="width:100%;">
-          <p style="margin:0;padding:var(--ds-spacing-2) 0;font-size:var(--ds-font-size-sm);color:var(--ds-content-secondary);">Item 3</p>
+          <p style="margin:0;padding:var(--ds-spacing-8) 0;font-size:var(--ds-font-size-14);color:var(--ds-content-secondary);">Item 3</p>
           <hr class="ds-divider" style="width:100%;">
-          <p style="margin:0;padding:var(--ds-spacing-2) 0;font-size:var(--ds-font-size-sm);color:var(--ds-content-secondary);">Item 4</p>
+          <p style="margin:0;padding:var(--ds-spacing-8) 0;font-size:var(--ds-font-size-14);color:var(--ds-content-secondary);">Item 4</p>
           <hr class="ds-divider" style="width:100%;">
-          <p style="margin:0;padding:var(--ds-spacing-2) 0;font-size:var(--ds-font-size-sm);color:var(--ds-content-secondary);">Item 5</p>
+          <p style="margin:0;padding:var(--ds-spacing-8) 0;font-size:var(--ds-font-size-14);color:var(--ds-content-secondary);">Item 5</p>
         </div>
         <div class="ds-dodont__label ds-dodont__label--dont">Não faça</div>
         <div class="ds-dodont__desc"><span data-lang="pt">Não coloque um divider entre cada item da lista — isso adiciona ruído visual e reduz a legibilidade.</span><span data-lang="en">Don't place a divider between every single list item -- it adds visual noise and reduces readability.</span></div>
@@ -293,7 +293,7 @@
       </tbody>
     </table>
 
-    <div class="ds-callout ds-callout--info" style="margin-top:var(--ds-spacing-4)">
+    <div class="ds-callout ds-callout--info" style="margin-top:var(--ds-spacing-16)">
       <div class="ds-callout__title"><span data-lang="pt">Prefira HTML semântico</span><span data-lang="en">Prefer semantic HTML</span></div>
       <span data-lang="pt">Use <code>&lt;hr class="ds-divider"&gt;</code> em vez de um <code>&lt;div&gt;</code> estilizado. O elemento <code>&lt;hr&gt;</code> tem <code>role="separator"</code> implicito, então nenhum ARIA extra é necessario.</span><span data-lang="en">Use <code>&lt;hr class="ds-divider"&gt;</code> instead of a styled <code>&lt;div&gt;</code>. The <code>&lt;hr&gt;</code> element has implicit <code>role="separator"</code>, so no extra ARIA is needed.</span>
     </div>

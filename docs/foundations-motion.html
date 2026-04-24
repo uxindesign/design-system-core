@@ -7,15 +7,15 @@
   <link rel="stylesheet" href="../css/design-system.css">
   <link rel="stylesheet" href="layout.css">
   <style>
-    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-sm); margin-bottom: var(--ds-spacing-8); }
-    .ds-token-table th { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
-    .ds-token-table td { padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
-    .ds-token-table code { font-size: var(--ds-font-size-xs); font-family: var(--ds-font-family-mono); }
-    .ds-motion-demo { display: flex; align-items: center; gap: var(--ds-spacing-6); padding: var(--ds-spacing-6); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-4); background-color: var(--ds-background-default); }
-    .ds-motion-demo__box { width: 48px; height: 48px; border-radius: var(--ds-radius-md); background-color: var(--ds-brand-default); flex-shrink: 0; }
-    .ds-motion-demo__label { font-size: var(--ds-font-size-sm); color: var(--ds-content-secondary); min-width: 160px; }
-    .ds-motion-demo__track { flex: 1; height: 48px; background-color: var(--ds-background-subtle); border-radius: var(--ds-radius-md); position: relative; overflow: hidden; }
-    .ds-motion-demo__runner { width: 48px; height: 48px; border-radius: var(--ds-radius-md); background-color: var(--ds-brand-default); position: absolute; left: 0; top: 0; }
+    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-14); margin-bottom: var(--ds-spacing-32); }
+    .ds-token-table th { text-align: left; padding: var(--ds-spacing-8) var(--ds-spacing-12); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
+    .ds-token-table td { padding: var(--ds-spacing-8) var(--ds-spacing-12); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
+    .ds-token-table code { font-size: var(--ds-font-size-12); font-family: var(--ds-font-family-mono); }
+    .ds-motion-demo { display: flex; align-items: center; gap: var(--ds-spacing-24); padding: var(--ds-spacing-24); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-12); margin-bottom: var(--ds-spacing-16); background-color: var(--ds-background-default); }
+    .ds-motion-demo__box { width: 48px; height: 48px; border-radius: var(--ds-radius-8); background-color: var(--ds-primary-bg-default); flex-shrink: 0; }
+    .ds-motion-demo__label { font-size: var(--ds-font-size-14); color: var(--ds-content-secondary); min-width: 160px; }
+    .ds-motion-demo__track { flex: 1; height: 48px; background-color: var(--ds-background-subtle); border-radius: var(--ds-radius-8); position: relative; overflow: hidden; }
+    .ds-motion-demo__runner { width: 48px; height: 48px; border-radius: var(--ds-radius-8); background-color: var(--ds-primary-bg-default); position: absolute; left: 0; top: 0; }
     .ds-motion-demo:hover .ds-motion-demo__runner { left: calc(100% - 48px); }
     .ds-motion-demo--fast .ds-motion-demo__runner { transition: left var(--ds-duration-fast) var(--ds-ease-default); }
     .ds-motion-demo--normal .ds-motion-demo__runner { transition: left var(--ds-duration-normal) var(--ds-ease-default); }
@@ -23,9 +23,9 @@
     .ds-motion-demo--ease-in .ds-motion-demo__runner { transition: left var(--ds-duration-normal) var(--ds-ease-in); }
     .ds-motion-demo--ease-out .ds-motion-demo__runner { transition: left var(--ds-duration-normal) var(--ds-ease-out); }
     .ds-motion-demo--ease-in-out .ds-motion-demo__runner { transition: left var(--ds-duration-normal) var(--ds-ease-in-out); }
-    .ds-callout { padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); background-color: var(--ds-feedback-info-background); border: var(--ds-border-width-1) solid var(--ds-feedback-info-border); margin-bottom: var(--ds-spacing-8); font-size: var(--ds-font-size-sm); line-height: var(--ds-line-height-relaxed); color: var(--ds-content-default); }
-    .ds-callout__title { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-1); }
-    .ds-code-block { background-color: var(--ds-color-neutral-900); color: var(--ds-color-neutral-200); padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); font-family: var(--ds-font-family-mono); font-size: var(--ds-font-size-xs); line-height: var(--ds-line-height-relaxed); overflow-x: auto; margin-bottom: var(--ds-spacing-6); white-space: pre; }
+    .ds-callout { padding: var(--ds-spacing-16) var(--ds-spacing-20); border-radius: var(--ds-radius-12); background-color: var(--ds-feedback-info-background); border: var(--ds-border-width-1) solid var(--ds-feedback-info-border); margin-bottom: var(--ds-spacing-32); font-size: var(--ds-font-size-14); line-height: var(--ds-line-height-relaxed); color: var(--ds-content-default); }
+    .ds-callout__title { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-4); }
+    .ds-code-block { background-color: var(--ds-color-neutral-900); color: var(--ds-color-neutral-200); padding: var(--ds-spacing-16) var(--ds-spacing-20); border-radius: var(--ds-radius-12); font-family: var(--ds-font-family-mono); font-size: var(--ds-font-size-12); line-height: var(--ds-line-height-relaxed); overflow-x: auto; margin-bottom: var(--ds-spacing-24); white-space: pre; }
   </style>
   <script>
     (function(){var l=localStorage.getItem('ds-lang');if(l)document.documentElement.setAttribute('lang',l)})();
@@ -34,7 +34,7 @@
 <body>
 
 <header class="ds-site-header">
-  <div style="display:flex;align-items:center;gap:var(--ds-spacing-4)">
+  <div style="display:flex;align-items:center;gap:var(--ds-spacing-16)">
     <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>
@@ -70,7 +70,7 @@
 
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Duration</span><span data-lang="en">Duration</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Passe o mouse sobre cada linha para ver o timing em ação.</span><span data-lang="en">Hover over each row to see the timing in action.</span></p>
+    <p style="margin-bottom:var(--ds-spacing-16);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);"><span data-lang="pt">Passe o mouse sobre cada linha para ver o timing em ação.</span><span data-lang="en">Hover over each row to see the timing in action.</span></p>
 
     <div class="ds-motion-demo ds-motion-demo--fast">
       <div class="ds-motion-demo__label"><code>--ds-duration-fast</code><br>150ms</div>
@@ -99,7 +99,7 @@
 
   <div class="ds-subsection">
     <h2 class="ds-subsection__title">Easing</h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Todos os demos usam <code>--ds-duration-normal</code> (200ms). Passe o mouse para comparar curvas.</span><span data-lang="en">All demos use <code>--ds-duration-normal</code> (200ms). Hover to compare curves.</span></p>
+    <p style="margin-bottom:var(--ds-spacing-16);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);"><span data-lang="pt">Todos os demos usam <code>--ds-duration-normal</code> (200ms). Passe o mouse para comparar curvas.</span><span data-lang="en">All demos use <code>--ds-duration-normal</code> (200ms). Hover to compare curves.</span></p>
 
     <div class="ds-motion-demo ds-motion-demo--normal">
       <div class="ds-motion-demo__label"><code>--ds-ease-default</code><br><span data-lang="pt">padrão</span><span data-lang="en">default</span></div>
@@ -134,7 +134,7 @@
 
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Uso em componentes</span><span data-lang="en">Usage in components</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Combine um token de duração com um token de easing na propriedade CSS <code>transition</code>:</span><span data-lang="en">Combine a duration token with an easing token on the CSS <code>transition</code> shorthand:</span></p>
+    <p style="margin-bottom:var(--ds-spacing-16);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);"><span data-lang="pt">Combine um token de duração com um token de easing na propriedade CSS <code>transition</code>:</span><span data-lang="en">Combine a duration token with an easing token on the CSS <code>transition</code> shorthand:</span></p>
 
 <div class="ds-code-block">/* Button hover transition */
 .ds-btn {
@@ -168,7 +168,7 @@
   }
 }</div>
 
-    <p style="color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);">
+    <p style="color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);">
       <span data-lang="pt">Referencia WCAG: <strong>2.3.3 Animation from Interactions (AAA)</strong>. Embora o DS tenha como alvo AA, isto e implementado porque o custo e quase zero e o impacto para usuários sensiveis a movimento e significativo.</span><span data-lang="en">WCAG reference: <strong>2.3.3 Animation from Interactions (AAA)</strong>. While the DS targets AA, this is implemented because the cost is near-zero and the impact for motion-sensitive users is significant.</span>
     </p>
   </div>

@@ -7,16 +7,16 @@
   <link rel="stylesheet" href="../css/design-system.css">
   <link rel="stylesheet" href="layout.css">
   <style>
-    .ds-principle { margin-bottom: var(--ds-spacing-10); padding-bottom: var(--ds-spacing-10); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); }
+    .ds-principle { margin-bottom: var(--ds-spacing-40); padding-bottom: var(--ds-spacing-40); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); }
     .ds-principle:last-child { border-bottom: none; }
-    .ds-principle__number { font-size: var(--ds-font-size-sm); font-weight: var(--ds-font-weight-semibold); color: var(--ds-brand-default); font-family: var(--ds-font-family-mono); margin-bottom: var(--ds-spacing-1); }
-    .ds-principle__title { font-size: var(--ds-font-size-xl); font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-2); }
-    .ds-principle__desc { font-size: var(--ds-font-size-md); color: var(--ds-content-secondary); line-height: var(--ds-line-height-relaxed); margin-bottom: var(--ds-spacing-4); }
-    .ds-principle__examples { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ds-spacing-4); }
-    .ds-principle__example { padding: var(--ds-spacing-4); border-radius: var(--ds-radius-lg); font-size: var(--ds-font-size-sm); line-height: var(--ds-line-height-relaxed); }
+    .ds-principle__number { font-size: var(--ds-font-size-14); font-weight: var(--ds-font-weight-semibold); color: var(--ds-primary-bg-default); font-family: var(--ds-font-family-mono); margin-bottom: var(--ds-spacing-4); }
+    .ds-principle__title { font-size: var(--ds-font-size-20); font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-8); }
+    .ds-principle__desc { font-size: var(--ds-font-size-16); color: var(--ds-content-secondary); line-height: var(--ds-line-height-relaxed); margin-bottom: var(--ds-spacing-16); }
+    .ds-principle__examples { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ds-spacing-16); }
+    .ds-principle__example { padding: var(--ds-spacing-16); border-radius: var(--ds-radius-12); font-size: var(--ds-font-size-14); line-height: var(--ds-line-height-relaxed); }
     .ds-principle__example--do { background-color: var(--ds-feedback-success-background); border: var(--ds-border-width-1) solid var(--ds-feedback-success-border); }
     .ds-principle__example--dont { background-color: var(--ds-feedback-error-background); border: var(--ds-border-width-1) solid var(--ds-feedback-error-border); }
-    .ds-principle__example-label { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-1); }
+    .ds-principle__example-label { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-4); }
     .ds-principle__example--do .ds-principle__example-label { color: var(--ds-feedback-success-content-default); }
     .ds-principle__example--dont .ds-principle__example-label { color: var(--ds-feedback-error-content-default); }
     @media (max-width: 768px) { .ds-principle__examples { grid-template-columns: 1fr; } }
@@ -28,7 +28,7 @@
 <body>
 
 <header class="ds-site-header">
-  <div style="display:flex;align-items:center;gap:var(--ds-spacing-4)">
+  <div style="display:flex;align-items:center;gap:var(--ds-spacing-16)">
     <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>
@@ -117,7 +117,7 @@
     <div class="ds-principle__examples">
       <div class="ds-principle__example ds-principle__example--do">
         <div class="ds-principle__example-label"><span data-lang="pt">Exemplo</span><span data-lang="en">Example</span></div>
-        <span data-lang="pt">O border radius de um card é <code>var(--ds-radius-lg)</code> no CSS e vinculado a <code>radius/lg</code> no Figma. Mude o valor do token no JSON, rebuild, e ambos os lados atualizam.</span><span data-lang="en">A card's border radius is <code>var(--ds-radius-lg)</code> in CSS and bound to <code>radius/lg</code> in Figma. Change the token value in JSON, rebuild, and both sides update.</span>
+        <span data-lang="pt">O border radius de um card é <code>var(--ds-radius-12)</code> no CSS e vinculado a <code>radius/lg</code> no Figma. Mude o valor do token no JSON, rebuild, e ambos os lados atualizam.</span><span data-lang="en">A card's border radius is <code>var(--ds-radius-12)</code> in CSS and bound to <code>radius/lg</code> in Figma. Change the token value in JSON, rebuild, and both sides update.</span>
       </div>
       <div class="ds-principle__example ds-principle__example--dont">
         <div class="ds-principle__example-label">Anti-pattern</div>

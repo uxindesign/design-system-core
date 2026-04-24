@@ -7,25 +7,25 @@
   <link rel="stylesheet" href="../../css/design-system.css">
   <link rel="stylesheet" href="../layout.css">
   <style>
-    .ds-md-content h1, .ds-md-content h2, .ds-md-content h3 { margin-top: var(--ds-spacing-8); margin-bottom: var(--ds-spacing-3); color: var(--ds-content-default); }
-    .ds-md-content h1 { font-size: var(--ds-font-size-2xl); font-weight: var(--ds-font-weight-semibold); margin-top: 0; }
-    .ds-md-content h2 { font-size: var(--ds-font-size-xl); font-weight: var(--ds-font-weight-semibold); border-top: var(--ds-border-width-1) solid var(--ds-border-subtle); padding-top: var(--ds-spacing-6); }
-    .ds-md-content h3 { font-size: var(--ds-font-size-lg); font-weight: var(--ds-font-weight-semibold); }
-    .ds-md-content p { color: var(--ds-content-secondary); line-height: var(--ds-line-height-relaxed); margin: var(--ds-spacing-3) 0; }
-    .ds-md-content ul, .ds-md-content ol { color: var(--ds-content-secondary); line-height: var(--ds-line-height-relaxed); padding-left: var(--ds-spacing-6); margin: var(--ds-spacing-3) 0; }
-    .ds-md-content li { margin: var(--ds-spacing-1) 0; }
-    .ds-md-content code { font-family: var(--ds-font-family-mono); font-size: 0.9em; background: var(--ds-background-subtle); color: var(--ds-content-link-default); padding: 1px var(--ds-spacing-1); border-radius: var(--ds-radius-sm); }
-    .ds-md-content pre { background: var(--ds-color-neutral-900); color: var(--ds-color-neutral-100); padding: var(--ds-spacing-4); border-radius: var(--ds-radius-md); overflow-x: auto; font-size: var(--ds-font-size-sm); margin: var(--ds-spacing-4) 0; }
+    .ds-md-content h1, .ds-md-content h2, .ds-md-content h3 { margin-top: var(--ds-spacing-32); margin-bottom: var(--ds-spacing-12); color: var(--ds-content-default); }
+    .ds-md-content h1 { font-size: var(--ds-font-size-24); font-weight: var(--ds-font-weight-semibold); margin-top: 0; }
+    .ds-md-content h2 { font-size: var(--ds-font-size-20); font-weight: var(--ds-font-weight-semibold); border-top: var(--ds-border-width-1) solid var(--ds-border-subtle); padding-top: var(--ds-spacing-24); }
+    .ds-md-content h3 { font-size: var(--ds-font-size-18); font-weight: var(--ds-font-weight-semibold); }
+    .ds-md-content p { color: var(--ds-content-secondary); line-height: var(--ds-line-height-relaxed); margin: var(--ds-spacing-12) 0; }
+    .ds-md-content ul, .ds-md-content ol { color: var(--ds-content-secondary); line-height: var(--ds-line-height-relaxed); padding-left: var(--ds-spacing-24); margin: var(--ds-spacing-12) 0; }
+    .ds-md-content li { margin: var(--ds-spacing-4) 0; }
+    .ds-md-content code { font-family: var(--ds-font-family-mono); font-size: 0.9em; background: var(--ds-background-subtle); color: var(--ds-content-link-default); padding: 1px var(--ds-spacing-4); border-radius: var(--ds-radius-4); }
+    .ds-md-content pre { background: var(--ds-color-neutral-900); color: var(--ds-color-neutral-100); padding: var(--ds-spacing-16); border-radius: var(--ds-radius-8); overflow-x: auto; font-size: var(--ds-font-size-14); margin: var(--ds-spacing-16) 0; }
     .ds-md-content pre code { background: none; color: inherit; padding: 0; }
-    .ds-md-content table { width: 100%; border-collapse: collapse; margin: var(--ds-spacing-4) 0; font-size: var(--ds-font-size-sm); }
-    .ds-md-content table th, .ds-md-content table td { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-1) solid var(--ds-border-default); }
+    .ds-md-content table { width: 100%; border-collapse: collapse; margin: var(--ds-spacing-16) 0; font-size: var(--ds-font-size-14); }
+    .ds-md-content table th, .ds-md-content table td { text-align: left; padding: var(--ds-spacing-8) var(--ds-spacing-12); border-bottom: var(--ds-border-width-1) solid var(--ds-border-default); }
     .ds-md-content table th { font-weight: var(--ds-font-weight-semibold); background: var(--ds-background-subtle); }
     .ds-md-content a { color: var(--ds-content-link-default); }
     .ds-md-content a:hover { color: var(--ds-content-link-hover); }
-    .ds-md-content blockquote { border-left: 3px solid var(--ds-border-default); margin: var(--ds-spacing-4) 0; padding: var(--ds-spacing-2) var(--ds-spacing-4); color: var(--ds-content-tertiary); font-style: italic; }
-    .ds-md-content hr { border: none; border-top: var(--ds-border-width-1) solid var(--ds-border-subtle); margin: var(--ds-spacing-8) 0; }
+    .ds-md-content blockquote { border-left: 3px solid var(--ds-border-default); margin: var(--ds-spacing-16) 0; padding: var(--ds-spacing-8) var(--ds-spacing-16); color: var(--ds-content-tertiary); font-style: italic; }
+    .ds-md-content hr { border: none; border-top: var(--ds-border-width-1) solid var(--ds-border-subtle); margin: var(--ds-spacing-32) 0; }
     .ds-md-content strong { color: var(--ds-content-default); }
-    .ds-md-generated-banner { background: var(--ds-feedback-info-background); color: var(--ds-feedback-info-content-default); padding: var(--ds-spacing-3) var(--ds-spacing-5); border-radius: var(--ds-radius-md); margin-bottom: var(--ds-spacing-6); font-size: var(--ds-font-size-sm); }
+    .ds-md-generated-banner { background: var(--ds-feedback-info-background); color: var(--ds-feedback-info-content-default); padding: var(--ds-spacing-12) var(--ds-spacing-20); border-radius: var(--ds-radius-8); margin-bottom: var(--ds-spacing-24); font-size: var(--ds-font-size-14); }
   </style>
   <script>
     (function(){var l=localStorage.getItem('ds-lang');if(l)document.documentElement.setAttribute('lang',l)})();
@@ -34,7 +34,7 @@
 <body>
 
 <header class="ds-site-header">
-  <div style="display:flex;align-items:center;gap:var(--ds-spacing-4)">
+  <div style="display:flex;align-items:center;gap:var(--ds-spacing-16)">
     <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>
@@ -94,14 +94,14 @@
 </ul>
 <h3>No CSS (derivado)</h3>
 <ul>
-<li>Todos os 19 arquivos em <code>css/components/*.css</code> consomem Foundation direto em: spacing (<code>var(--ds-spacing-3)</code>), radius não-component (<code>var(--ds-radius-md)</code>), border-width (<code>var(--ds-border-width-1)</code>), typography (<code>var(--ds-font-size-sm)</code>, <code>var(--ds-font-weight-medium)</code>, <code>var(--ds-line-height-normal)</code>), shadow, motion, opacity, z-index.</li>
+<li>Todos os 19 arquivos em <code>css/components/*.css</code> consomem Foundation direto em: spacing (<code>var(--ds-spacing-12)</code>), radius não-component (<code>var(--ds-radius-8)</code>), border-width (<code>var(--ds-border-width-1)</code>), typography (<code>var(--ds-font-size-14)</code>, <code>var(--ds-font-weight-medium)</code>, <code>var(--ds-line-height-normal)</code>), shadow, motion, opacity, z-index.</li>
 <li>Cor é o único domínio limpo: zero uso de <code>var(--ds-color-*)</code> raw.</li>
 </ul>
 <h3>Por que isso importa</h3>
 <p>O sistema perdeu propriedades arquiteturais importantes:</p>
 <ol>
-<li><strong>Rastreabilidade quebra.</strong> Um valor <code>0.75rem</code> no CSS pode vir de <code>--ds-spacing-3</code> direto, ou via <code>--ds-space-inset-md</code> → <code>foundation.spacing.3</code>. O primeiro não carrega intenção; o segundo carrega. Buscar &quot;onde usamos o inset médio&quot; com grep falha no primeiro caso.</li>
-<li><strong>Theming fica rígido.</strong> Pra mudar o inset médio global de 12px pra 10px, teria que ir token por token no CSS substituindo <code>--ds-spacing-3</code> por <code>--ds-spacing-2-5</code> caso a caso. Com Semantic, muda <code>space/inset/md</code> num lugar e propaga.</li>
+<li><strong>Rastreabilidade quebra.</strong> Um valor <code>0.75rem</code> no CSS pode vir de <code>--ds-spacing-12</code> direto, ou via <code>--ds-space-md</code> → <code>foundation.spacing.3</code>. O primeiro não carrega intenção; o segundo carrega. Buscar &quot;onde usamos o inset médio&quot; com grep falha no primeiro caso.</li>
+<li><strong>Theming fica rígido.</strong> Pra mudar o inset médio global de 12px pra 10px, teria que ir token por token no CSS substituindo <code>--ds-spacing-12</code> por <code>--ds-spacing-10</code> caso a caso. Com Semantic, muda <code>space/inset/md</code> num lugar e propaga.</li>
 <li><strong>Dois consumidores divergem.</strong> Figma binda <code>typography/font/weight/medium</code> direto; CSS usa <code>var(--ds-font-weight-medium)</code>. Quando alguém quiser mudar &quot;peso médio&quot; pra <code>semibold</code> em contextos de label de controle, precisa fazer hunt manual nos dois lados. Com Semantic <code>typography/control/font-weight</code>, muda uma vez.</li>
 </ol>
 <h2>Decisão</h2>
@@ -127,7 +127,7 @@ Component   ──►  Consumidor final
 </code></pre>
 <p>Consumidor final <strong>só</strong> vê Semantic e Component. Nunca Foundation.</p>
 <h3>Exceção explícita — <code>semantic.control.*</code> (ADR-006)</h3>
-<p>Já codificado em ADR-006 princípio 9 e reforçado em ADR-011: a subcategoria <code>semantic.control.*</code> (dimensions, typography, padding compartilhados entre Button, Input, Select, Textarea) <strong>só pode ser consumida via tokens de Componente</strong>, nunca direto por CSS. Button, Input etc. definem <code>button.height.md → {semantic.size.control.md}</code>; o CSS consome <code>var(--ds-button-height-md)</code>, não <code>var(--ds-size-control-md)</code>.</p>
+<p>Já codificado em ADR-006 princípio 9 e reforçado em ADR-011: a subcategoria <code>semantic.control.*</code> (dimensions, typography, padding compartilhados entre Button, Input, Select, Textarea) <strong>só pode ser consumida via tokens de Componente</strong>, nunca direto por CSS. Button, Input etc. definem <code>button.height.md → {semantic.size.control.md}</code>; o CSS consome <code>var(--ds-size-control-md)</code>, não <code>var(--ds-size-control-md)</code>.</p>
 <p>Essa exceção não contraria ADR-013 — é uma restrição <strong>adicional</strong>, específica da subcategoria &quot;control&quot;.</p>
 <h3>Exceção condicional — valores de Componente sem abstração Semantic</h3>
 <p>Alguns valores são genuinamente específicos de um componente e não têm equivalente abstrato Semantic. Exemplos: <code>modal.max-width</code>, <code>avatar.icon-size</code>, <code>textarea.min-height</code>. Nesses casos, o token de Componente pode referenciar Foundation direto (<code>component.modal.max-width.md → foundation.spacing.20</code>) ou carregar valor raw quando não houver ponto na escala Foundation (<code>modal.max-width.sm = 25rem</code>). Quando o valor raw for necessário, a entrada no Token Registry (ver abaixo) deve explicitar a decisão.</p>
