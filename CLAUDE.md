@@ -4,7 +4,7 @@ Este arquivo é lido pelo Claude Code (CLI e app) antes de qualquer operação n
 
 ## Visão geral em uma frase
 
-Design system white-label em CSS puro com tokens DTCG em JSON, 18 componentes, modos light/dark, três temas (Default, Ocean, Forest). Versionamento 0.x enquanto não houver release oficial 1.0.
+Design system white-label em CSS puro com tokens DTCG em JSON, 18 componentes, modos light/dark, paleta brand única customizável. Arquitetura **2-layer** (Foundation + Semantic) — Component collection eliminada em 0.7.0. Versionamento 0.x enquanto não houver release oficial 1.0.
 
 ## Fontes de verdade
 
@@ -39,23 +39,19 @@ Quando há divergência entre artefatos, resolve-se por tipo de informação:
 
 Regra operacional: arquitetura está acima de valor. Figma pode decidir "brand.hover é blue-800 em vez de blue-700" (valor), mas não pode criar `semantic.color.primary.foreground` se ADR-011 definiu que semantic de cor usa `brand.content.contrast` (arquitetura).
 
-### Camadas de consumo de tokens (ADR-013)
+### Camadas de consumo de tokens (2-layer, pós-0.7.0)
 
-**Foundation nunca aparece em consumidor final.** Consumidor final = `css/components/*.css`, `css/base/*.css`, bindings em componentes Figma, exemplos em docs de uso. Só tokens Semantic ou Component podem ser consumidos lá.
+**Foundation nunca aparece em consumidor final.** Consumidor final = `css/components/*.css`, `css/base/*.css`, bindings em componentes Figma, exemplos em docs de uso. Só tokens Semantic podem ser consumidos lá.
 
 Cadeia permitida:
 
 ```
-Foundation  ─┬─►  Semantic
-             └─►  Component    (quando não existe abstração Semantic apropriada)
-Semantic    ─┬─►  Component
-             └─►  Consumidor final
-Component   ──►  Consumidor final
+Foundation  ──►  Semantic  ──►  Consumidor final
 ```
 
-Exceções registradas:
-- `semantic.control.*` só via Component (ADR-006 princípio 9).
-- Componente pode consumir Foundation direto quando não há equivalente Semantic (ex: `component.modal.max-width`); exige entrada explícita no Token Registry justificando.
+Component collection foi eliminada em 0.7.0 — a abstração não justificava o overhead (61 tokens, todos sem consumer direto). Tokens que eram Component agora vivem em Semantic (ex: `size.avatar.*`, `size.modal.*`, `size.toggle.*`).
+
+Foundation naming é **numérico/neutro** (`radius/8`, `spacing/16`, `font/size/14`), Semantic é **intent** (`radius.md`, `space.sm`, `typography.body.font-size.sm`) — naming distinto entre camadas evita redundância.
 
 Enforcement em CI via `npm run verify:tokens`:
 - **CSS leak**: scan `css/components/*.css` (error) e `css/base/*.css` (warning, débito — PR futuro). Zero erros hoje; 117 warnings em base/.
@@ -119,9 +115,9 @@ Título curto em português, corpo em markdown. Seções obrigatórias: **Summar
 1. **Nunca hardcodear hex, rgb ou px em CSS de componente.** Sempre referenciar `var(--ds-…)`. O pipeline `tokens/*.json → build-tokens.mjs → css/tokens/generated/*.css` é a única fonte.
 2. **Depois de editar um JSON em `tokens/`**, rodar `npm run build:tokens`. O CI (deploy.yml) também regenera no push pra main, mas rodar localmente evita commits com CSS desatualizado.
 3. **Nunca usar `ALL_SCOPES`** em variáveis Figma. Polui todos os pickers. Usar escopos específicos (`FRAME_FILL`, `SHAPE_FILL`, `TEXT_FILL`, `STROKE_COLOR`, `GAP`, `CORNER_RADIUS`, `STROKE_FLOAT` conforme o token).
-4. **Tokens Foundation e Brand ficam ocultos dos pickers** (`hiddenFromPublishing: true`). Designers só veem tokens do Theme/Semantic.
+4. **Foundation protegida de 2 formas:** (a) `scopes: []` (esconde dos pickers internos do arquivo DS), (b) `hiddenFromPublishing: true` (esconde da library publicada para arquivos consumidores). **API de `hiddenFromPublishing` está quebrada via MCP** (plugin API throw "Node not found" em toda variable) — **setar manualmente via UI do Figma** (Variables panel → bulk-select → Hide from publishing). Gotcha documentado nos PRs #17/#18; regrediu após mudança no MCP proxy.
 5. **Contraste WCAG 2.2 AA (4.5:1 texto normal, 3:1 UI)** é obrigatório em qualquer novo par foreground/background. Checar com `docs/accessibility.html` aberto ao lado. Fundo shade 400 ou mais claro pede foreground neutral-900; fundo shade 600+ pede foreground neutral-50.
-6. **Valores zero não viram tokens aplicados.** `spacing/0`, `radius/0`, `shadow-none` existem como referência em Foundation mas nunca devem ser vinculados a propriedades (use literal `0`).
+6. **Valores zero não viram tokens.** Use literal `0` no CSS. Foundation não tem `spacing/0`, `radius/0`, `opacity/0`, `border/width/0` — eliminados em 0.7.0.
 7. **Cada mudança significativa entra em `CHANGELOG.md`.** Na raiz, formato Keep a Changelog, seção `[Não publicado]` ganha a entrada antes do commit.
 
 ## Checklist de pré-commit

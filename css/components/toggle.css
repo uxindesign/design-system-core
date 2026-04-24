@@ -6,10 +6,10 @@
 .ds-toggle-label {
   display: inline-flex;
   align-items: center;
-  gap: var(--ds-space-gap-sm);
+  gap: var(--ds-space-sm);
   cursor: pointer;
-  padding: var(--ds-space-gap-xs) var(--ds-space-gap-xs);
-  border-radius: var(--ds-radius-sm);
+  padding: var(--ds-space-xs) var(--ds-space-xs);
+  border-radius: var(--ds-radius-4);
   min-height: var(--ds-size-control-min-target);
   font-size: var(--ds-body-font-size-sm);
   color: var(--ds-content-default);
@@ -25,11 +25,11 @@
   appearance: none;
   -webkit-appearance: none;
   position: relative;
-  width: var(--ds-toggle-track-width-md);
-  height: var(--ds-toggle-track-height-md);
+  width: var(--ds-size-toggle-track-width-md);
+  height: var(--ds-size-control-icon-md);
   background-color: var(--ds-surface-default);
   border: var(--ds-border-width-default) solid var(--ds-border-control-default);
-  border-radius: var(--ds-radius-full);
+  border-radius: var(--ds-radius-9999);
   cursor: pointer;
   flex-shrink: 0;
   transition: background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
@@ -42,9 +42,9 @@
   position: absolute;
   top: 2px;
   left: 2px;
-  width: var(--ds-toggle-thumb-size-md);
-  height: var(--ds-toggle-thumb-size-md);
-  border-radius: var(--ds-radius-full);
+  width: 14px;
+  height: 14px;
+  border-radius: var(--ds-radius-9999);
   background-color: var(--ds-content-secondary);
   transition: transform var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
               background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
@@ -98,13 +98,13 @@
 
 /* Small */
 .ds-toggle--sm {
-  width: var(--ds-toggle-track-width-sm);
-  height: var(--ds-toggle-track-height-sm);
+  width: var(--ds-size-toggle-track-width-sm);
+  height: var(--ds-size-control-icon-sm);
 }
 
 .ds-toggle--sm::after {
-  width: var(--ds-toggle-thumb-size-sm);
-  height: var(--ds-toggle-thumb-size-sm);
+  width: 10px;
+  height: 10px;
 }
 
 .ds-toggle--sm:checked::after {
@@ -113,13 +113,13 @@
 
 /* Large */
 .ds-toggle--lg {
-  width: var(--ds-toggle-track-width-lg);
-  height: var(--ds-toggle-track-height-lg);
+  width: var(--ds-size-toggle-track-width-lg);
+  height: var(--ds-size-control-icon-lg);
 }
 
 .ds-toggle--lg::after {
-  width: var(--ds-toggle-thumb-size-lg);
-  height: var(--ds-toggle-thumb-size-lg);
+  width: 18px;
+  height: 18px;
 }
 
 .ds-toggle--lg:checked::after {
@@ -150,7 +150,7 @@
 .ds-toggle__content {
   display: flex;
   flex-direction: column;
-  gap: var(--ds-space-gap-xs);
+  gap: var(--ds-space-xs);
   min-width: 0;
 }
 

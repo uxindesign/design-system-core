@@ -107,44 +107,22 @@ const semanticDark = new StyleDictionary({
   }
 });
 
-// ─── Component ───
-const component = new StyleDictionary({
-  log,
-  include: ['tokens/foundation/**/*.json', 'tokens/semantic/light.json'],
-  source: ['tokens/component/**/*.json'],
-  platforms: {
-    css: {
-      transforms,
-      buildPath,
-      files: [{
-        destination: 'component.css',
-        format: 'css/variables',
-        filter: (token) => token.path[0] === 'component',
-        options: { selector: ':root', outputReferences: true }
-      }]
-    }
-  }
-});
-
 // ─── Build ───
 console.log('Building tokens...');
 await foundation.buildAllPlatforms();
 await semanticLight.buildAllPlatforms();
 await semanticDark.buildAllPlatforms();
-await component.buildAllPlatforms();
 
 // ─── Generate index.css ───
 const indexCss = `/* Auto-generated — do not edit. Run: npm run build:tokens */
 @import 'foundation.css';
 @import 'theme-light.css';
 @import 'theme-dark.css';
-@import 'component.css';
 `;
 writeFileSync(`${buildPath}index.css`, indexCss);
 
-console.log('Done. Output:');
-console.log('  css/tokens/generated/foundation.css  (225 vars)');
-console.log('  css/tokens/generated/theme-light.css (132 vars)');
-console.log('  css/tokens/generated/theme-dark.css  (132 vars)');
-console.log('  css/tokens/generated/component.css   (131 vars)');
+console.log('Done. Output (2-layer — Component collection eliminated):');
+console.log('  css/tokens/generated/foundation.css');
+console.log('  css/tokens/generated/theme-light.css');
+console.log('  css/tokens/generated/theme-dark.css');
 console.log('  css/tokens/generated/index.css');

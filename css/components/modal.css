@@ -11,13 +11,13 @@
   align-items: center;
   justify-content: center;
   z-index: 50;
-  padding: var(--ds-space-inset-lg);
+  padding: var(--ds-space-lg);
 }
 
 /* Dialog */
 .ds-modal {
   background-color: var(--ds-surface-elevated);
-  border-radius: var(--ds-radius-xl);
+  border-radius: var(--ds-radius-16);
   /* Elevation: apply .ds-elevation-4 utility alongside .ds-modal for box-shadow.
      Semantic elevation tokens do not exist yet post-ADR-014. */
   width: 100%;
@@ -29,17 +29,17 @@
 }
 
 /* Sizes */
-.ds-modal--sm { max-width: var(--ds-modal-max-width-sm); }
-.ds-modal--md { max-width: var(--ds-modal-max-width-md); }
-.ds-modal--lg { max-width: var(--ds-modal-max-width-lg); }
+.ds-modal--sm { max-width: var(--ds-size-modal-max-width-sm); }
+.ds-modal--md { max-width: var(--ds-size-modal-max-width-md); }
+.ds-modal--lg { max-width: var(--ds-size-modal-max-width-lg); }
 
 /* Header */
 .ds-modal__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--ds-space-inset-lg) var(--ds-space-inset-lg) var(--ds-space-gap-sm);
-  gap: var(--ds-space-gap-sm);
+  padding: var(--ds-space-lg) var(--ds-space-lg) var(--ds-space-sm);
+  gap: var(--ds-space-sm);
 }
 
 .ds-modal__title {
@@ -53,10 +53,10 @@
   flex-shrink: 0;
   background: none;
   border: none;
-  padding: var(--ds-space-inset-xs);
+  padding: var(--ds-space-xs);
   cursor: pointer;
   color: var(--ds-content-secondary);
-  border-radius: var(--ds-radius-sm);
+  border-radius: var(--ds-radius-4);
   transition: color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
               background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
 }
@@ -73,7 +73,7 @@
 
 /* Body */
 .ds-modal__body {
-  padding: 0 var(--ds-space-inset-lg) var(--ds-space-inset-lg);
+  padding: 0 var(--ds-space-lg) var(--ds-space-lg);
   overflow-y: auto;
   font-size: var(--ds-body-font-size-sm);
   color: var(--ds-content-default);
@@ -84,8 +84,8 @@
 .ds-modal__footer {
   display: flex;
   justify-content: flex-end;
-  gap: var(--ds-space-gap-sm);
-  padding: var(--ds-space-gap-sm) var(--ds-space-inset-lg) var(--ds-space-inset-lg);
+  gap: var(--ds-space-sm);
+  padding: var(--ds-space-sm) var(--ds-space-lg) var(--ds-space-lg);
   border-top: var(--ds-border-width-default) solid var(--ds-border-default);
 }
 

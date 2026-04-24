@@ -4,7 +4,7 @@
     "component.avatar.size.sm": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.spacing.8",
+      "references": "foundation.spacing.32",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -23,7 +23,7 @@
     "component.avatar.size.md": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.spacing.10",
+      "references": "foundation.spacing.40",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -42,7 +42,7 @@
     "component.avatar.size.lg": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.spacing.14",
+      "references": "foundation.spacing.56",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -61,7 +61,7 @@
     "component.avatar.font-size.sm": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.typography.font.size.xs",
+      "references": "foundation.typography.font.size.11",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -80,7 +80,7 @@
     "component.avatar.font-size.md": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.typography.font.size.sm",
+      "references": "foundation.typography.font.size.12",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -99,7 +99,7 @@
     "component.avatar.font-size.lg": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.typography.font.size.lg",
+      "references": "foundation.typography.font.size.18",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -118,7 +118,7 @@
     "component.avatar.icon-size.sm": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.spacing.4",
+      "references": "foundation.spacing.16",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -137,7 +137,7 @@
     "component.avatar.icon-size.md": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.spacing.5",
+      "references": "foundation.spacing.20",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -156,7 +156,7 @@
     "component.avatar.icon-size.lg": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.spacing.7",
+      "references": "foundation.spacing.28",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -622,7 +622,7 @@
     "component.checkbox.control-size.sm": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.spacing.4",
+      "references": "foundation.spacing.16",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -641,7 +641,7 @@
     "component.checkbox.control-size.md": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.spacing.5",
+      "references": "foundation.spacing.20",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -660,7 +660,7 @@
     "component.checkbox.control-size.lg": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.spacing.6",
+      "references": "foundation.spacing.24",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -679,7 +679,7 @@
     "component.checkbox.check-width.sm": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.spacing.1",
+      "references": "foundation.spacing.4",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -707,7 +707,7 @@
     "component.checkbox.check-width.lg": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.spacing.1-5",
+      "references": "foundation.spacing.6",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -721,7 +721,7 @@
     "component.checkbox.check-height.sm": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.spacing.2",
+      "references": "foundation.spacing.8",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -735,7 +735,7 @@
     "component.checkbox.check-height.md": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.spacing.2-5",
+      "references": "foundation.spacing.10",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -749,7 +749,7 @@
     "component.checkbox.check-height.lg": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.spacing.3",
+      "references": "foundation.spacing.12",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -763,7 +763,7 @@
     "component.checkbox.border-radius": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.radius.sm",
+      "references": "foundation.radius.4",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -841,7 +841,7 @@
     "component.checkbox.font-size": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.typography.font.size.sm",
+      "references": "foundation.typography.font.size.12",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -1264,7 +1264,7 @@
     "component.modal.border-radius": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.radius.xl",
+      "references": "foundation.radius.16",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -1302,7 +1302,7 @@
     "component.radio.control-size.sm": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.spacing.4",
+      "references": "foundation.spacing.16",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -1321,7 +1321,7 @@
     "component.radio.control-size.md": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.spacing.5",
+      "references": "foundation.spacing.20",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -1340,7 +1340,7 @@
     "component.radio.control-size.lg": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.spacing.6",
+      "references": "foundation.spacing.24",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -1359,7 +1359,7 @@
     "component.radio.dot-size.sm": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.spacing.1-5",
+      "references": "foundation.spacing.6",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -1378,7 +1378,7 @@
     "component.radio.dot-size.md": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.spacing.2",
+      "references": "foundation.spacing.8",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -1397,7 +1397,7 @@
     "component.radio.dot-size.lg": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.spacing.2-5",
+      "references": "foundation.spacing.10",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -1475,7 +1475,7 @@
     "component.radio.font-size": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.typography.font.size.sm",
+      "references": "foundation.typography.font.size.12",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -1765,7 +1765,7 @@
     "component.select.arrow-size": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.spacing.4",
+      "references": "foundation.spacing.16",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -1784,7 +1784,7 @@
     "component.select.arrow-offset.sm": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.spacing.2",
+      "references": "foundation.spacing.8",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -1803,7 +1803,7 @@
     "component.select.arrow-offset.md": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.spacing.3",
+      "references": "foundation.spacing.12",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -1822,7 +1822,7 @@
     "component.select.arrow-offset.lg": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.spacing.4",
+      "references": "foundation.spacing.16",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -1841,7 +1841,7 @@
     "component.skeleton.text-height": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.spacing.4",
+      "references": "foundation.spacing.16",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -1860,7 +1860,7 @@
     "component.skeleton.circle-size": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.spacing.10",
+      "references": "foundation.spacing.40",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -1917,7 +1917,7 @@
     "component.spinner.size.sm": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.spacing.4",
+      "references": "foundation.spacing.16",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -1936,7 +1936,7 @@
     "component.spinner.size.md": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.spacing.6",
+      "references": "foundation.spacing.24",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -1955,7 +1955,7 @@
     "component.spinner.size.lg": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.spacing.8",
+      "references": "foundation.spacing.32",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -1993,7 +1993,7 @@
     "component.spinner.stroke-width.md": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.spacing.0-5",
+      "references": "foundation.spacing.2",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -2050,7 +2050,7 @@
     "component.textarea.min-height.md": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.spacing.20",
+      "references": "foundation.spacing.80",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -2298,7 +2298,7 @@
     "component.toggle.track-width.sm": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.spacing.7",
+      "references": "foundation.spacing.28",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -2317,7 +2317,7 @@
     "component.toggle.track-width.md": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.spacing.9",
+      "references": "foundation.spacing.36",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -2336,7 +2336,7 @@
     "component.toggle.track-width.lg": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.spacing.11",
+      "references": "foundation.spacing.44",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -2355,7 +2355,7 @@
     "component.toggle.track-height.sm": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.spacing.4",
+      "references": "foundation.spacing.16",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -2374,7 +2374,7 @@
     "component.toggle.track-height.md": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.spacing.5",
+      "references": "foundation.spacing.20",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -2393,7 +2393,7 @@
     "component.toggle.track-height.lg": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.spacing.6",
+      "references": "foundation.spacing.24",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -2412,7 +2412,7 @@
     "component.toggle.thumb-size.sm": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.spacing.2-5",
+      "references": "foundation.spacing.10",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -2431,7 +2431,7 @@
     "component.toggle.thumb-size.md": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.spacing.3-5",
+      "references": "foundation.spacing.14",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -2508,7 +2508,7 @@
     "component.toggle.font-size": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.typography.font.size.sm",
+      "references": "foundation.typography.font.size.12",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -5472,7 +5472,7 @@
         "figma": []
       }
     },
-    "foundation.radius.none": {
+    "foundation.radius.0": {
       "layer": "foundation",
       "type": "dimension",
       "references": null,
@@ -5486,7 +5486,7 @@
         "figma": []
       }
     },
-    "foundation.radius.xs": {
+    "foundation.radius.2": {
       "layer": "foundation",
       "type": "dimension",
       "references": null,
@@ -5500,7 +5500,7 @@
         "figma": []
       }
     },
-    "foundation.radius.sm": {
+    "foundation.radius.4": {
       "layer": "foundation",
       "type": "dimension",
       "references": null,
@@ -5532,7 +5532,7 @@
         "figma": []
       }
     },
-    "foundation.radius.md": {
+    "foundation.radius.8": {
       "layer": "foundation",
       "type": "dimension",
       "references": null,
@@ -5558,7 +5558,7 @@
         "figma": []
       }
     },
-    "foundation.radius.lg": {
+    "foundation.radius.12": {
       "layer": "foundation",
       "type": "dimension",
       "references": null,
@@ -5583,7 +5583,7 @@
         "figma": []
       }
     },
-    "foundation.radius.xl": {
+    "foundation.radius.16": {
       "layer": "foundation",
       "type": "dimension",
       "references": null,
@@ -5604,7 +5604,7 @@
         "figma": []
       }
     },
-    "foundation.radius.2xl": {
+    "foundation.radius.24": {
       "layer": "foundation",
       "type": "dimension",
       "references": null,
@@ -5618,7 +5618,7 @@
         "figma": []
       }
     },
-    "foundation.radius.full": {
+    "foundation.radius.9999": {
       "layer": "foundation",
       "type": "dimension",
       "references": null,
@@ -5810,7 +5810,7 @@
         "figma": []
       }
     },
-    "foundation.spacing.1": {
+    "foundation.spacing.4": {
       "layer": "foundation",
       "type": "dimension",
       "references": null,
@@ -5849,7 +5849,7 @@
         "figma": []
       }
     },
-    "foundation.spacing.2": {
+    "foundation.spacing.8": {
       "layer": "foundation",
       "type": "dimension",
       "references": null,
@@ -5888,7 +5888,7 @@
         "figma": []
       }
     },
-    "foundation.spacing.3": {
+    "foundation.spacing.12": {
       "layer": "foundation",
       "type": "dimension",
       "references": null,
@@ -5932,7 +5932,7 @@
         "figma": []
       }
     },
-    "foundation.spacing.4": {
+    "foundation.spacing.16": {
       "layer": "foundation",
       "type": "dimension",
       "references": null,
@@ -5984,7 +5984,7 @@
         "figma": []
       }
     },
-    "foundation.spacing.5": {
+    "foundation.spacing.20": {
       "layer": "foundation",
       "type": "dimension",
       "references": null,
@@ -6024,7 +6024,7 @@
         "figma": []
       }
     },
-    "foundation.spacing.6": {
+    "foundation.spacing.24": {
       "layer": "foundation",
       "type": "dimension",
       "references": null,
@@ -6066,7 +6066,7 @@
         "figma": []
       }
     },
-    "foundation.spacing.7": {
+    "foundation.spacing.28": {
       "layer": "foundation",
       "type": "dimension",
       "references": null,
@@ -6088,7 +6088,7 @@
         "figma": []
       }
     },
-    "foundation.spacing.8": {
+    "foundation.spacing.32": {
       "layer": "foundation",
       "type": "dimension",
       "references": null,
@@ -6122,7 +6122,7 @@
         "figma": []
       }
     },
-    "foundation.spacing.9": {
+    "foundation.spacing.36": {
       "layer": "foundation",
       "type": "dimension",
       "references": null,
@@ -6143,7 +6143,7 @@
         "figma": []
       }
     },
-    "foundation.spacing.10": {
+    "foundation.spacing.40": {
       "layer": "foundation",
       "type": "dimension",
       "references": null,
@@ -6175,7 +6175,7 @@
         "figma": []
       }
     },
-    "foundation.spacing.11": {
+    "foundation.spacing.44": {
       "layer": "foundation",
       "type": "dimension",
       "references": null,
@@ -6206,7 +6206,7 @@
         "figma": []
       }
     },
-    "foundation.spacing.12": {
+    "foundation.spacing.48": {
       "layer": "foundation",
       "type": "dimension",
       "references": null,
@@ -6234,7 +6234,7 @@
         "figma": []
       }
     },
-    "foundation.spacing.14": {
+    "foundation.spacing.56": {
       "layer": "foundation",
       "type": "dimension",
       "references": null,
@@ -6255,7 +6255,7 @@
         "figma": []
       }
     },
-    "foundation.spacing.16": {
+    "foundation.spacing.64": {
       "layer": "foundation",
       "type": "dimension",
       "references": null,
@@ -6281,7 +6281,7 @@
         "figma": []
       }
     },
-    "foundation.spacing.20": {
+    "foundation.spacing.80": {
       "layer": "foundation",
       "type": "dimension",
       "references": null,
@@ -6312,7 +6312,7 @@
         "figma": []
       }
     },
-    "foundation.spacing.24": {
+    "foundation.spacing.96": {
       "layer": "foundation",
       "type": "dimension",
       "references": null,
@@ -6326,7 +6326,7 @@
         "figma": []
       }
     },
-    "foundation.spacing.0-5": {
+    "foundation.spacing.2": {
       "layer": "foundation",
       "type": "dimension",
       "references": null,
@@ -6363,7 +6363,7 @@
         "figma": []
       }
     },
-    "foundation.spacing.1-5": {
+    "foundation.spacing.6": {
       "layer": "foundation",
       "type": "dimension",
       "references": null,
@@ -6385,7 +6385,7 @@
         "figma": []
       }
     },
-    "foundation.spacing.2-5": {
+    "foundation.spacing.10": {
       "layer": "foundation",
       "type": "dimension",
       "references": null,
@@ -6418,7 +6418,7 @@
         "figma": []
       }
     },
-    "foundation.spacing.3-5": {
+    "foundation.spacing.14": {
       "layer": "foundation",
       "type": "dimension",
       "references": null,
@@ -6576,7 +6576,7 @@
         "figma": []
       }
     },
-    "foundation.typography.font.size.2xs": {
+    "foundation.typography.font.size.11": {
       "layer": "foundation",
       "type": "dimension",
       "references": null,
@@ -6590,7 +6590,7 @@
         "figma": []
       }
     },
-    "foundation.typography.font.size.xs": {
+    "foundation.typography.font.size.11": {
       "layer": "foundation",
       "type": "dimension",
       "references": null,
@@ -6608,7 +6608,7 @@
         "figma": []
       }
     },
-    "foundation.typography.font.size.sm": {
+    "foundation.typography.font.size.12": {
       "layer": "foundation",
       "type": "dimension",
       "references": null,
@@ -6633,7 +6633,7 @@
         "figma": []
       }
     },
-    "foundation.typography.font.size.md": {
+    "foundation.typography.font.size.16": {
       "layer": "foundation",
       "type": "dimension",
       "references": null,
@@ -6652,7 +6652,7 @@
         "figma": []
       }
     },
-    "foundation.typography.font.size.lg": {
+    "foundation.typography.font.size.18": {
       "layer": "foundation",
       "type": "dimension",
       "references": null,
@@ -6670,7 +6670,7 @@
         "figma": []
       }
     },
-    "foundation.typography.font.size.xl": {
+    "foundation.typography.font.size.20": {
       "layer": "foundation",
       "type": "dimension",
       "references": null,
@@ -6687,7 +6687,7 @@
         "figma": []
       }
     },
-    "foundation.typography.font.size.2xl": {
+    "foundation.typography.font.size.24": {
       "layer": "foundation",
       "type": "dimension",
       "references": null,
@@ -6704,7 +6704,7 @@
         "figma": []
       }
     },
-    "foundation.typography.font.size.3xl": {
+    "foundation.typography.font.size.28": {
       "layer": "foundation",
       "type": "dimension",
       "references": null,
@@ -6721,7 +6721,7 @@
         "figma": []
       }
     },
-    "foundation.typography.font.size.4xl": {
+    "foundation.typography.font.size.32": {
       "layer": "foundation",
       "type": "dimension",
       "references": null,
@@ -6735,7 +6735,7 @@
         "figma": []
       }
     },
-    "foundation.typography.font.size.5xl": {
+    "foundation.typography.font.size.40": {
       "layer": "foundation",
       "type": "dimension",
       "references": null,
@@ -6749,7 +6749,7 @@
         "figma": []
       }
     },
-    "foundation.typography.font.size.6xl": {
+    "foundation.typography.font.size.48": {
       "layer": "foundation",
       "type": "dimension",
       "references": null,
@@ -6763,7 +6763,7 @@
         "figma": []
       }
     },
-    "foundation.typography.font.size.7xl": {
+    "foundation.typography.font.size.56": {
       "layer": "foundation",
       "type": "dimension",
       "references": null,
@@ -6777,7 +6777,7 @@
         "figma": []
       }
     },
-    "foundation.typography.font.size.8xl": {
+    "foundation.typography.font.size.64": {
       "layer": "foundation",
       "type": "dimension",
       "references": null,
@@ -6791,7 +6791,7 @@
         "figma": []
       }
     },
-    "foundation.typography.font.size.9xl": {
+    "foundation.typography.font.size.72": {
       "layer": "foundation",
       "type": "dimension",
       "references": null,
@@ -9470,7 +9470,7 @@
     "semantic.space.inset.2xs": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.spacing.0-5",
+      "references": "foundation.spacing.2",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -9491,7 +9491,7 @@
     "semantic.space.inset.xs": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.spacing.1",
+      "references": "foundation.spacing.4",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -9505,7 +9505,7 @@
     "semantic.space.inset.sm": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.spacing.2",
+      "references": "foundation.spacing.8",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -9519,7 +9519,7 @@
     "semantic.space.inset.md": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.spacing.3",
+      "references": "foundation.spacing.12",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -9540,7 +9540,7 @@
     "semantic.space.inset.lg": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.spacing.4",
+      "references": "foundation.spacing.16",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -9566,7 +9566,7 @@
     "semantic.space.inset.xl": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.spacing.6",
+      "references": "foundation.spacing.24",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -9580,7 +9580,7 @@
     "semantic.space.gap.2xs": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.spacing.0-5",
+      "references": "foundation.spacing.2",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -9594,7 +9594,7 @@
     "semantic.space.gap.xs": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.spacing.1",
+      "references": "foundation.spacing.4",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -9652,7 +9652,7 @@
     "semantic.space.gap.sm": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.spacing.2",
+      "references": "foundation.spacing.8",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -9691,7 +9691,7 @@
     "semantic.space.gap.md": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.spacing.3",
+      "references": "foundation.spacing.12",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -9710,7 +9710,7 @@
     "semantic.space.gap.lg": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.spacing.4",
+      "references": "foundation.spacing.16",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -9735,7 +9735,7 @@
     "semantic.space.gap.xl": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.spacing.6",
+      "references": "foundation.spacing.24",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -9754,7 +9754,7 @@
     "semantic.space.component.xs": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.spacing.1",
+      "references": "foundation.spacing.4",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -9768,7 +9768,7 @@
     "semantic.space.component.sm": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.spacing.2",
+      "references": "foundation.spacing.8",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -9782,7 +9782,7 @@
     "semantic.space.component.md": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.spacing.3",
+      "references": "foundation.spacing.12",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -9796,7 +9796,7 @@
     "semantic.space.component.lg": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.spacing.4",
+      "references": "foundation.spacing.16",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -9810,7 +9810,7 @@
     "semantic.space.component.xl": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.spacing.5",
+      "references": "foundation.spacing.20",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -9824,7 +9824,7 @@
     "semantic.space.component.2xl": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.spacing.6",
+      "references": "foundation.spacing.24",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -9838,7 +9838,7 @@
     "semantic.space.section.sm": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.spacing.8",
+      "references": "foundation.spacing.32",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -9859,7 +9859,7 @@
     "semantic.space.section.md": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.spacing.12",
+      "references": "foundation.spacing.48",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -9873,7 +9873,7 @@
     "semantic.space.section.lg": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.spacing.16",
+      "references": "foundation.spacing.64",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -9887,7 +9887,7 @@
     "semantic.space.section.xl": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.spacing.20",
+      "references": "foundation.spacing.80",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -9901,7 +9901,7 @@
     "semantic.space.control.padding-x.sm": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.spacing.3",
+      "references": "foundation.spacing.12",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -9925,7 +9925,7 @@
     "semantic.space.control.padding-x.md": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.spacing.4",
+      "references": "foundation.spacing.16",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -9949,7 +9949,7 @@
     "semantic.space.control.padding-x.lg": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.spacing.5",
+      "references": "foundation.spacing.20",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -9973,7 +9973,7 @@
     "semantic.space.control.padding-y.sm": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.spacing.2",
+      "references": "foundation.spacing.8",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -9997,7 +9997,7 @@
     "semantic.space.control.padding-y.md": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.spacing.2-5",
+      "references": "foundation.spacing.10",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -10021,7 +10021,7 @@
     "semantic.space.control.padding-y.lg": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.spacing.3",
+      "references": "foundation.spacing.12",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -10045,7 +10045,7 @@
     "semantic.radius.component": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.radius.md",
+      "references": "foundation.radius.8",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -10071,7 +10071,7 @@
     "semantic.size.control.sm": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.spacing.8",
+      "references": "foundation.spacing.32",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -10094,7 +10094,7 @@
     "semantic.size.control.md": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.spacing.10",
+      "references": "foundation.spacing.40",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -10117,7 +10117,7 @@
     "semantic.size.control.lg": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.spacing.12",
+      "references": "foundation.spacing.48",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -10140,7 +10140,7 @@
     "semantic.size.control.icon.sm": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.spacing.4",
+      "references": "foundation.spacing.16",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -10166,7 +10166,7 @@
     "semantic.size.control.icon.md": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.spacing.5",
+      "references": "foundation.spacing.20",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -10192,7 +10192,7 @@
     "semantic.size.control.icon.lg": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.spacing.6",
+      "references": "foundation.spacing.24",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -10218,7 +10218,7 @@
     "semantic.size.control.min-target": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.spacing.11",
+      "references": "foundation.spacing.44",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -10249,7 +10249,7 @@
     "semantic.typography.control.font-size.sm": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.typography.font.size.sm",
+      "references": "foundation.typography.font.size.12",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -10268,7 +10268,7 @@
     "semantic.typography.control.font-size.md": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.typography.font.size.sm",
+      "references": "foundation.typography.font.size.12",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -10287,7 +10287,7 @@
     "semantic.typography.control.font-size.lg": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.typography.font.size.md",
+      "references": "foundation.typography.font.size.16",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -10306,7 +10306,7 @@
     "semantic.typography.control.line-height.sm": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.spacing.4",
+      "references": "foundation.spacing.16",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -10320,7 +10320,7 @@
     "semantic.typography.control.line-height.md": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.spacing.5",
+      "references": "foundation.spacing.20",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -10334,7 +10334,7 @@
     "semantic.typography.control.line-height.lg": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.spacing.6",
+      "references": "foundation.spacing.24",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -10455,7 +10455,7 @@
     "semantic.typography.body.font-size.xs": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.typography.font.size.xs",
+      "references": "foundation.typography.font.size.11",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -10473,7 +10473,7 @@
     "semantic.typography.body.font-size.sm": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.typography.font.size.sm",
+      "references": "foundation.typography.font.size.12",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -10491,7 +10491,7 @@
     "semantic.typography.body.font-size.md": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.typography.font.size.md",
+      "references": "foundation.typography.font.size.16",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -10505,7 +10505,7 @@
     "semantic.typography.body.font-size.lg": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.typography.font.size.lg",
+      "references": "foundation.typography.font.size.18",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -10519,7 +10519,7 @@
     "semantic.typography.body.font-size.xl": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.typography.font.size.xl",
+      "references": "foundation.typography.font.size.20",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -10533,7 +10533,7 @@
     "semantic.typography.body.font-size.2xl": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.typography.font.size.2xl",
+      "references": "foundation.typography.font.size.24",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -10547,7 +10547,7 @@
     "semantic.typography.body.font-size.3xl": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "foundation.typography.font.size.3xl",
+      "references": "foundation.typography.font.size.28",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -10725,7 +10725,7 @@
     "component.alert.focus-border-radius": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.radius.sm",
+      "references": "foundation.radius.4",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -10823,7 +10823,7 @@
     "component.avatar.border-radius": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.radius.full",
+      "references": "foundation.radius.9999",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -10919,7 +10919,7 @@
     "component.badge.border-radius": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.radius.full",
+      "references": "foundation.radius.9999",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -11052,7 +11052,7 @@
     "component.breadcrumb.focus-border-radius": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.radius.sm",
+      "references": "foundation.radius.4",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -11170,7 +11170,7 @@
     "component.card.border-radius": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.radius.lg",
+      "references": "foundation.radius.12",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -11998,7 +11998,7 @@
     "component.modal.close-border-radius": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.radius.sm",
+      "references": "foundation.radius.4",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -12235,7 +12235,7 @@
     "component.radio.border-radius-full": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.radius.full",
+      "references": "foundation.radius.9999",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -12254,7 +12254,7 @@
     "component.radio.label-border-radius": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.radius.sm",
+      "references": "foundation.radius.4",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -12748,7 +12748,7 @@
     "component.skeleton.text-border-radius": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.radius.sm",
+      "references": "foundation.radius.4",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -12767,7 +12767,7 @@
     "component.skeleton.circle-border-radius": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.radius.full",
+      "references": "foundation.radius.9999",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -12805,7 +12805,7 @@
     "component.spinner.border-radius": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.radius.full",
+      "references": "foundation.radius.9999",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -12958,7 +12958,7 @@
     "component.tabs.focus-border-radius": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.radius.sm",
+      "references": "foundation.radius.4",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -13154,7 +13154,7 @@
     "component.toggle.border-radius-full": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.radius.full",
+      "references": "foundation.radius.9999",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -13173,7 +13173,7 @@
     "component.toggle.label-border-radius": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.radius.sm",
+      "references": "foundation.radius.4",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
@@ -13509,7 +13509,7 @@
     "component.tooltip.border-radius": {
       "layer": "component",
       "type": "dimension",
-      "references": "foundation.radius.sm",
+      "references": "foundation.radius.4",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",

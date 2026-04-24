@@ -9,9 +9,9 @@
   position: relative;
   display: flex;
   align-items: center;
-  gap: var(--ds-space-gap-sm);
+  gap: var(--ds-space-sm);
   border: var(--ds-border-width-default) solid var(--ds-border-control-default);
-  border-radius: var(--ds-radius-component);
+  border-radius: var(--ds-radius-md);
   background: var(--ds-surface-default);
   transition: border-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
               box-shadow var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
@@ -22,19 +22,19 @@
 
 .ds-select,
 .ds-select--md {
-  height: var(--ds-select-height-md);
+  height: var(--ds-size-control-md);
   padding: 0 var(--ds-space-control-padding-x-md);
   font-size: var(--ds-control-font-size-md);
 }
 
 .ds-select--sm {
-  height: var(--ds-select-height-sm);
+  height: var(--ds-size-control-sm);
   padding: 0 var(--ds-space-control-padding-x-sm);
   font-size: var(--ds-control-font-size-sm);
 }
 
 .ds-select--lg {
-  height: var(--ds-select-height-lg);
+  height: var(--ds-size-control-lg);
   padding: 0 var(--ds-space-control-padding-x-lg);
   font-size: var(--ds-control-font-size-lg);
 }
@@ -54,8 +54,8 @@
   font-family: inherit;
   cursor: pointer;
   min-width: 0;
-  padding-left: var(--ds-space-gap-xs);
-  padding-right: calc(var(--ds-select-arrow-size) + var(--ds-select-arrow-offset-md) + var(--ds-space-control-padding-x-md));
+  padding-left: var(--ds-space-xs);
+  padding-right: calc(var(--ds-size-control-icon-sm) + var(--ds-space-md) + var(--ds-space-control-padding-x-md));
 }
 
 .ds-select__field:invalid,
@@ -68,12 +68,12 @@
 
 .ds-select__arrow {
   position: absolute;
-  right: var(--ds-select-arrow-offset-md);
+  right: var(--ds-space-md);
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
-  width: var(--ds-select-arrow-size);
-  height: var(--ds-select-arrow-size);
+  width: var(--ds-size-control-icon-sm);
+  height: var(--ds-size-control-icon-sm);
   color: var(--ds-content-tertiary);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
@@ -82,11 +82,11 @@
 }
 
 .ds-select--sm .ds-select__arrow {
-  right: var(--ds-select-arrow-offset-sm);
+  right: var(--ds-space-sm);
 }
 
 .ds-select--lg .ds-select__arrow {
-  right: var(--ds-select-arrow-offset-lg);
+  right: var(--ds-space-lg);
 }
 
 /* Icon

@@ -4,15 +4,15 @@
 
 .ds-card {
   background-color: var(--ds-surface-default);
-  border-radius: var(--ds-radius-lg);
+  border-radius: var(--ds-radius-12);
   overflow: hidden;
 }
 
 .ds-card__header {
-  padding: var(--ds-space-inset-lg) var(--ds-space-inset-lg) var(--ds-space-gap-sm);
+  padding: var(--ds-space-lg) var(--ds-space-lg) var(--ds-space-sm);
   display: flex;
   flex-direction: column;
-  gap: var(--ds-space-gap-sm);
+  gap: var(--ds-space-sm);
 }
 
 .ds-card__title {
@@ -28,7 +28,7 @@
 }
 
 .ds-card__body {
-  padding: 0 var(--ds-space-inset-lg) var(--ds-space-inset-lg);
+  padding: 0 var(--ds-space-lg) var(--ds-space-lg);
   font-size: var(--ds-body-font-size-sm);
   color: var(--ds-content-secondary);
   line-height: var(--ds-body-line-height-md);

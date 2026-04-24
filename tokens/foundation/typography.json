@@ -14,65 +14,79 @@
           "display": {
             "$type": "fontFamily",
             "$value": "'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
-            "$description": "Same as sans. Separated for future flexibility if display font diverges."
+            "$description": "Same as sans today. Reserved slot for future distinct display/heading font."
           }
         },
         "size": {
-          "2xs": {
+          "11": {
             "$type": "dimension",
-            "$value": "0.6875rem"
+            "$value": "0.6875rem",
+            "$description": "11px"
           },
-          "xs": {
+          "12": {
             "$type": "dimension",
-            "$value": "0.75rem"
+            "$value": "0.75rem",
+            "$description": "12px"
           },
-          "sm": {
+          "14": {
             "$type": "dimension",
-            "$value": "0.875rem"
+            "$value": "0.875rem",
+            "$description": "14px"
           },
-          "md": {
+          "16": {
             "$type": "dimension",
-            "$value": "1rem"
+            "$value": "1rem",
+            "$description": "16px"
           },
-          "lg": {
+          "18": {
             "$type": "dimension",
-            "$value": "1.125rem"
+            "$value": "1.125rem",
+            "$description": "18px"
           },
-          "xl": {
+          "20": {
             "$type": "dimension",
-            "$value": "1.25rem"
+            "$value": "1.25rem",
+            "$description": "20px"
           },
-          "2xl": {
+          "24": {
             "$type": "dimension",
-            "$value": "1.5rem"
+            "$value": "1.5rem",
+            "$description": "24px"
           },
-          "3xl": {
+          "28": {
             "$type": "dimension",
-            "$value": "1.75rem"
+            "$value": "1.75rem",
+            "$description": "28px"
           },
-          "4xl": {
+          "32": {
             "$type": "dimension",
-            "$value": "2rem"
+            "$value": "2rem",
+            "$description": "32px"
           },
-          "5xl": {
+          "40": {
             "$type": "dimension",
-            "$value": "2.5rem"
+            "$value": "2.5rem",
+            "$description": "40px"
           },
-          "6xl": {
+          "48": {
             "$type": "dimension",
-            "$value": "3rem"
+            "$value": "3rem",
+            "$description": "48px"
           },
-          "7xl": {
+          "56": {
             "$type": "dimension",
-            "$value": "3.5rem"
+            "$value": "3.5rem",
+            "$description": "56px"
           },
-          "8xl": {
+          "64": {
             "$type": "dimension",
-            "$value": "4rem"
+            "$value": "4rem",
+            "$description": "64px"
           },
-          "9xl": {
+          "72": {
             "$type": "dimension",
-            "$value": "4.5rem"
+            "$value": "4.5rem",
+            "$description": "72px"
           }
         },
         "weight": {

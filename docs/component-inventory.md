@@ -1,6 +1,6 @@
 # Inventário de componentes — Design System Core
 
-> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-23. Não editar manualmente.
+> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-24. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
 > Versão atual: **0.5.17**
 
@@ -8,24 +8,24 @@
 
 | Componente | CSS | Tokens JSON | Figma (visual) | Figma (binding) | Stories | Docs site |
 |------------|-----|-------------|-----------------|-----------------|---------|----------|
-| Button | 🟢 | 🟢 (3) | 🟢 | 🟢 | ⬜ | 🟢 |
-| Input Text | 🟢 | 🟢 (3) | 🟢 | 🟢 | ⬜ | 🟢 |
-| Textarea | 🟢 | 🟢 (3) | 🟢 | 🟢 | ⬜ | 🟢 |
-| Select | 🟢 | 🟢 (7) | 🟢 | 🟢 | ⬜ | 🟢 |
-| Checkbox | 🟢 | 🟢 (9) | 🟢 | 🟢 | ⬜ | 🟢 |
-| Radio | 🟢 | 🟢 (6) | 🟢 | 🟢 | ⬜ | 🟢 |
-| Toggle | 🟢 | 🟢 (9) | 🟢 | 🟢 | ⬜ | 🟢 |
+| Button | 🟢 | ⚠️ | 🟢 | 🟢 | ⬜ | 🟢 |
+| Input Text | 🟢 | ⚠️ | 🟢 | 🟢 | ⬜ | 🟢 |
+| Textarea | 🟢 | ⚠️ | 🟢 | 🟢 | ⬜ | 🟢 |
+| Select | 🟢 | ⚠️ | 🟢 | 🟢 | ⬜ | 🟢 |
+| Checkbox | 🟢 | ⚠️ | 🟢 | 🟢 | ⬜ | 🟢 |
+| Radio | 🟢 | ⚠️ | 🟢 | 🟢 | ⬜ | 🟢 |
+| Toggle | 🟢 | ⚠️ | 🟢 | 🟢 | ⬜ | 🟢 |
 | Badge | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
 | Alert | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
 | Card | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
-| Modal | 🟢 | 🟢 (3) | 🟢 | 🟢 | ⬜ | 🟢 |
+| Modal | 🟢 | ⚠️ | 🟢 | 🟢 | ⬜ | 🟢 |
 | Tooltip | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
 | Tabs | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
 | Breadcrumb | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
-| Avatar | 🟢 | 🟢 (9) | 🟢 | 🟢 | ⬜ | 🟢 |
+| Avatar | 🟢 | ⚠️ | 🟢 | 🟢 | ⬜ | 🟢 |
 | Divider | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
-| Spinner | 🟢 | 🟢 (6) | 🟢 | 🟢 | ⬜ | 🟢 |
-| Skeleton | 🟢 | 🟢 (3) | 🟢 | 🟢 | ⬜ | 🟢 |
+| Spinner | 🟢 | ⚠️ | 🟢 | 🟢 | ⬜ | 🟢 |
+| Skeleton | 🟢 | ⚠️ | 🟢 | 🟢 | ⬜ | 🟢 |
 
 **Legenda:** ⬜ Não iniciado | 🟡 Em progresso | 🟢 Completo | ⚠️ Verificar | 🔴 Precisa revisão
 
@@ -39,10 +39,10 @@
 
 | Coleção | Tokens | Status |
 |---------|--------|--------|
-| Foundation | 240 | 🟢 |
-| Semantic (light) | 165 | 🟢 |
-| Semantic (dark) | 165 | 🟢 |
-| Component | 61 | 🟢 |
+| Foundation | 236 | 🟢 |
+| Semantic (light) | 171 | 🟢 |
+| Semantic (dark) | 171 | 🟢 |
+| Component | 0 | 🟢 |
 
 ## Pipeline
 
@@ -50,7 +50,7 @@
 |-------|--------|
 | JSON (DTCG) canônico | 🟢 `tokens/` |
 | Style Dictionary | 🟢 `build-tokens.mjs` |
-| CSS gerado | 🟢 5 arquivos em `css/tokens/generated/` |
+| CSS gerado | 🟢 4 arquivos em `css/tokens/generated/` |
 | Import pipeline | 🟢 index.css importa apenas generated/ |
 | Figma binding | 🟢 18 componentes vinculados |
 

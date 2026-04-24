@@ -5,7 +5,7 @@
 .ds-breadcrumb {
   display: flex;
   align-items: center;
-  gap: var(--ds-space-gap-sm);
+  gap: var(--ds-space-sm);
   font-size: var(--ds-body-font-size-sm);
 }
 
@@ -24,7 +24,7 @@
 .ds-breadcrumb__item:focus-visible {
   outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color);
   outline-offset: var(--ds-focus-ring-offset);
-  border-radius: var(--ds-radius-sm);
+  border-radius: var(--ds-radius-4);
 }
 
 /* Current (last item)

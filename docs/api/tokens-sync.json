@@ -1,32 +1,22 @@
 {
-  "generatedAt": "2026-04-23T13:14:40.006Z",
+  "generatedAt": "2026-04-24T20:33:40.318Z",
   "totals": {
-    "jsonTokens": 631,
-    "sharedTokens": 301,
-    "lightTokens": 165,
-    "darkTokens": 165,
-    "errors": 177,
-    "warnings": 365
+    "jsonTokens": 578,
+    "sharedTokens": 236,
+    "lightTokens": 171,
+    "darkTokens": 171,
+    "errors": 310,
+    "warnings": 497
   },
   "checks": {
     "jsonIntegrity": [],
-    "jsonVsCss": [
-      {
-        "level": "error",
-        "token": "component.spinner.stroke-width.sm",
-        "cssVar": "ds-spinner-stroke-width-sm",
-        "mode": "shared",
-        "json": "0.09375rem",
-        "css": "0.0938rem",
-        "message": "valor do CSS gerado difere do JSON"
-      }
-    ],
+    "jsonVsCss": [],
     "cssFoundationLeak": [
       {
         "level": "error",
         "scope": "components",
-        "file": "css/components/alert.css",
-        "line": 10,
+        "file": "css/components/button.css",
+        "line": 16,
         "column": 18,
         "match": "var(--ds-radius-md)",
         "message": "Foundation token consumido direto: var(--ds-radius-md). Use Semantic/Component layer (ADR-013)."
@@ -34,134 +24,8 @@
       {
         "level": "error",
         "scope": "components",
-        "file": "css/components/alert.css",
-        "line": 56,
-        "column": 18,
-        "match": "var(--ds-radius-sm)",
-        "message": "Foundation token consumido direto: var(--ds-radius-sm). Use Semantic/Component layer (ADR-013)."
-      },
-      {
-        "level": "error",
-        "scope": "components",
-        "file": "css/components/avatar.css",
-        "line": 10,
-        "column": 18,
-        "match": "var(--ds-radius-full)",
-        "message": "Foundation token consumido direto: var(--ds-radius-full). Use Semantic/Component layer (ADR-013)."
-      },
-      {
-        "level": "error",
-        "scope": "components",
-        "file": "css/components/badge.css",
-        "line": 12,
-        "column": 18,
-        "match": "var(--ds-radius-sm)",
-        "message": "Foundation token consumido direto: var(--ds-radius-sm). Use Semantic/Component layer (ADR-013)."
-      },
-      {
-        "level": "error",
-        "scope": "components",
-        "file": "css/components/breadcrumb.css",
-        "line": 27,
-        "column": 18,
-        "match": "var(--ds-radius-sm)",
-        "message": "Foundation token consumido direto: var(--ds-radius-sm). Use Semantic/Component layer (ADR-013)."
-      },
-      {
-        "level": "error",
-        "scope": "components",
-        "file": "css/components/card.css",
-        "line": 7,
-        "column": 18,
-        "match": "var(--ds-radius-lg)",
-        "message": "Foundation token consumido direto: var(--ds-radius-lg). Use Semantic/Component layer (ADR-013)."
-      },
-      {
-        "level": "error",
-        "scope": "components",
-        "file": "css/components/checkbox.css",
-        "line": 12,
-        "column": 18,
-        "match": "var(--ds-radius-sm)",
-        "message": "Foundation token consumido direto: var(--ds-radius-sm). Use Semantic/Component layer (ADR-013)."
-      },
-      {
-        "level": "error",
-        "scope": "components",
-        "file": "css/components/checkbox.css",
-        "line": 30,
-        "column": 18,
-        "match": "var(--ds-radius-sm)",
-        "message": "Foundation token consumido direto: var(--ds-radius-sm). Use Semantic/Component layer (ADR-013)."
-      },
-      {
-        "level": "error",
-        "scope": "components",
-        "file": "css/components/modal.css",
-        "line": 20,
-        "column": 18,
-        "match": "var(--ds-radius-xl)",
-        "message": "Foundation token consumido direto: var(--ds-radius-xl). Use Semantic/Component layer (ADR-013)."
-      },
-      {
-        "level": "error",
-        "scope": "components",
-        "file": "css/components/modal.css",
-        "line": 59,
-        "column": 18,
-        "match": "var(--ds-radius-sm)",
-        "message": "Foundation token consumido direto: var(--ds-radius-sm). Use Semantic/Component layer (ADR-013)."
-      },
-      {
-        "level": "error",
-        "scope": "components",
-        "file": "css/components/radio.css",
-        "line": 30,
-        "column": 18,
-        "match": "var(--ds-radius-sm)",
-        "message": "Foundation token consumido direto: var(--ds-radius-sm). Use Semantic/Component layer (ADR-013)."
-      },
-      {
-        "level": "error",
-        "scope": "components",
-        "file": "css/components/radio.css",
-        "line": 48,
-        "column": 18,
-        "match": "var(--ds-radius-full)",
-        "message": "Foundation token consumido direto: var(--ds-radius-full). Use Semantic/Component layer (ADR-013)."
-      },
-      {
-        "level": "error",
-        "scope": "components",
-        "file": "css/components/radio.css",
-        "line": 64,
-        "column": 18,
-        "match": "var(--ds-radius-full)",
-        "message": "Foundation token consumido direto: var(--ds-radius-full). Use Semantic/Component layer (ADR-013)."
-      },
-      {
-        "level": "error",
-        "scope": "components",
-        "file": "css/components/skeleton.css",
-        "line": 25,
-        "column": 18,
-        "match": "var(--ds-radius-sm)",
-        "message": "Foundation token consumido direto: var(--ds-radius-sm). Use Semantic/Component layer (ADR-013)."
-      },
-      {
-        "level": "error",
-        "scope": "components",
-        "file": "css/components/skeleton.css",
-        "line": 32,
-        "column": 18,
-        "match": "var(--ds-radius-full)",
-        "message": "Foundation token consumido direto: var(--ds-radius-full). Use Semantic/Component layer (ADR-013)."
-      },
-      {
-        "level": "error",
-        "scope": "components",
-        "file": "css/components/skeleton.css",
-        "line": 40,
+        "file": "css/components/button.css",
+        "line": 60,
         "column": 18,
         "match": "var(--ds-radius-md)",
         "message": "Foundation token consumido direto: var(--ds-radius-md). Use Semantic/Component layer (ADR-013)."
@@ -169,65 +33,38 @@
       {
         "level": "error",
         "scope": "components",
-        "file": "css/components/spinner.css",
+        "file": "css/components/button.css",
+        "line": 73,
+        "column": 18,
+        "match": "var(--ds-radius-md)",
+        "message": "Foundation token consumido direto: var(--ds-radius-md). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "error",
+        "scope": "components",
+        "file": "css/components/input.css",
+        "line": 14,
+        "column": 18,
+        "match": "var(--ds-radius-md)",
+        "message": "Foundation token consumido direto: var(--ds-radius-md). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "error",
+        "scope": "components",
+        "file": "css/components/select.css",
+        "line": 14,
+        "column": 18,
+        "match": "var(--ds-radius-md)",
+        "message": "Foundation token consumido direto: var(--ds-radius-md). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "error",
+        "scope": "components",
+        "file": "css/components/textarea.css",
         "line": 12,
         "column": 18,
-        "match": "var(--ds-radius-full)",
-        "message": "Foundation token consumido direto: var(--ds-radius-full). Use Semantic/Component layer (ADR-013)."
-      },
-      {
-        "level": "error",
-        "scope": "components",
-        "file": "css/components/tabs.css",
-        "line": 40,
-        "column": 18,
-        "match": "var(--ds-radius-sm)",
-        "message": "Foundation token consumido direto: var(--ds-radius-sm). Use Semantic/Component layer (ADR-013)."
-      },
-      {
-        "level": "error",
-        "scope": "components",
-        "file": "css/components/tabs.css",
-        "line": 40,
-        "column": 38,
-        "match": "var(--ds-radius-sm)",
-        "message": "Foundation token consumido direto: var(--ds-radius-sm). Use Semantic/Component layer (ADR-013)."
-      },
-      {
-        "level": "error",
-        "scope": "components",
-        "file": "css/components/toggle.css",
-        "line": 12,
-        "column": 18,
-        "match": "var(--ds-radius-sm)",
-        "message": "Foundation token consumido direto: var(--ds-radius-sm). Use Semantic/Component layer (ADR-013)."
-      },
-      {
-        "level": "error",
-        "scope": "components",
-        "file": "css/components/toggle.css",
-        "line": 32,
-        "column": 18,
-        "match": "var(--ds-radius-full)",
-        "message": "Foundation token consumido direto: var(--ds-radius-full). Use Semantic/Component layer (ADR-013)."
-      },
-      {
-        "level": "error",
-        "scope": "components",
-        "file": "css/components/toggle.css",
-        "line": 47,
-        "column": 18,
-        "match": "var(--ds-radius-full)",
-        "message": "Foundation token consumido direto: var(--ds-radius-full). Use Semantic/Component layer (ADR-013)."
-      },
-      {
-        "level": "error",
-        "scope": "components",
-        "file": "css/components/tooltip.css",
-        "line": 18,
-        "column": 18,
-        "match": "var(--ds-radius-sm)",
-        "message": "Foundation token consumido direto: var(--ds-radius-sm). Use Semantic/Component layer (ADR-013)."
+        "match": "var(--ds-radius-md)",
+        "message": "Foundation token consumido direto: var(--ds-radius-md). Use Semantic/Component layer (ADR-013)."
       },
       {
         "level": "warning",
@@ -244,8 +81,8 @@
         "file": "css/base/reset.css",
         "line": 23,
         "column": 14,
-        "match": "var(--ds-font-size-md)",
-        "message": "Foundation token consumido direto: var(--ds-font-size-md). Use Semantic/Component layer (ADR-013)."
+        "match": "var(--ds-font-size-16)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-16). Use Semantic/Component layer (ADR-013)."
       },
       {
         "level": "warning",
@@ -271,8 +108,8 @@
         "file": "css/base/reset.css",
         "line": 37,
         "column": 14,
-        "match": "var(--ds-font-size-sm)",
-        "message": "Foundation token consumido direto: var(--ds-font-size-sm). Use Semantic/Component layer (ADR-013)."
+        "match": "var(--ds-font-size-14)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-14). Use Semantic/Component layer (ADR-013)."
       },
       {
         "level": "warning",
@@ -280,26 +117,17 @@
         "file": "css/base/reset.css",
         "line": 42,
         "column": 12,
-        "match": "var(--ds-spacing-0-5)",
-        "message": "Foundation token consumido direto: var(--ds-spacing-0-5). Use Semantic/Component layer (ADR-013)."
+        "match": "var(--ds-spacing-2)",
+        "message": "Foundation token consumido direto: var(--ds-spacing-2). Use Semantic/Component layer (ADR-013)."
       },
       {
         "level": "warning",
         "scope": "base",
         "file": "css/base/reset.css",
         "line": 42,
-        "column": 34,
-        "match": "var(--ds-spacing-1)",
-        "message": "Foundation token consumido direto: var(--ds-spacing-1). Use Semantic/Component layer (ADR-013)."
-      },
-      {
-        "level": "warning",
-        "scope": "base",
-        "file": "css/base/reset.css",
-        "line": 43,
-        "column": 18,
-        "match": "var(--ds-radius-sm)",
-        "message": "Foundation token consumido direto: var(--ds-radius-sm). Use Semantic/Component layer (ADR-013)."
+        "column": 32,
+        "match": "var(--ds-spacing-4)",
+        "message": "Foundation token consumido direto: var(--ds-spacing-4). Use Semantic/Component layer (ADR-013)."
       },
       {
         "level": "warning",
@@ -325,17 +153,8 @@
         "file": "css/base/reset.css",
         "line": 50,
         "column": 12,
-        "match": "var(--ds-spacing-4)",
-        "message": "Foundation token consumido direto: var(--ds-spacing-4). Use Semantic/Component layer (ADR-013)."
-      },
-      {
-        "level": "warning",
-        "scope": "base",
-        "file": "css/base/reset.css",
-        "line": 51,
-        "column": 18,
-        "match": "var(--ds-radius-lg)",
-        "message": "Foundation token consumido direto: var(--ds-radius-lg). Use Semantic/Component layer (ADR-013)."
+        "match": "var(--ds-spacing-16)",
+        "message": "Foundation token consumido direto: var(--ds-spacing-16). Use Semantic/Component layer (ADR-013)."
       },
       {
         "level": "warning",
@@ -343,8 +162,8 @@
         "file": "css/base/reset.css",
         "line": 53,
         "column": 18,
-        "match": "var(--ds-spacing-4)",
-        "message": "Foundation token consumido direto: var(--ds-spacing-4). Use Semantic/Component layer (ADR-013)."
+        "match": "var(--ds-spacing-16)",
+        "message": "Foundation token consumido direto: var(--ds-spacing-16). Use Semantic/Component layer (ADR-013)."
       },
       {
         "level": "warning",
@@ -352,8 +171,8 @@
         "file": "css/base/reset.css",
         "line": 60,
         "column": 14,
-        "match": "var(--ds-font-size-sm)",
-        "message": "Foundation token consumido direto: var(--ds-font-size-sm). Use Semantic/Component layer (ADR-013)."
+        "match": "var(--ds-font-size-14)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-14). Use Semantic/Component layer (ADR-013)."
       },
       {
         "level": "warning",
@@ -361,17 +180,17 @@
         "file": "css/base/reset.css",
         "line": 72,
         "column": 12,
-        "match": "var(--ds-spacing-3)",
-        "message": "Foundation token consumido direto: var(--ds-spacing-3). Use Semantic/Component layer (ADR-013)."
+        "match": "var(--ds-spacing-12)",
+        "message": "Foundation token consumido direto: var(--ds-spacing-12). Use Semantic/Component layer (ADR-013)."
       },
       {
         "level": "warning",
         "scope": "base",
         "file": "css/base/reset.css",
         "line": 72,
-        "column": 32,
-        "match": "var(--ds-spacing-4)",
-        "message": "Foundation token consumido direto: var(--ds-spacing-4). Use Semantic/Component layer (ADR-013)."
+        "column": 33,
+        "match": "var(--ds-spacing-16)",
+        "message": "Foundation token consumido direto: var(--ds-spacing-16). Use Semantic/Component layer (ADR-013)."
       },
       {
         "level": "warning",
@@ -397,8 +216,8 @@
         "file": "css/base/reset.css",
         "line": 79,
         "column": 14,
-        "match": "var(--ds-font-size-sm)",
-        "message": "Foundation token consumido direto: var(--ds-font-size-sm). Use Semantic/Component layer (ADR-013)."
+        "match": "var(--ds-font-size-14)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-14). Use Semantic/Component layer (ADR-013)."
       },
       {
         "level": "warning",
@@ -433,8 +252,8 @@
         "file": "css/base/typography.css",
         "line": 14,
         "column": 14,
-        "match": "var(--ds-font-size-9xl)",
-        "message": "Foundation token consumido direto: var(--ds-font-size-9xl). Use Semantic/Component layer (ADR-013)."
+        "match": "var(--ds-font-size-72)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-72). Use Semantic/Component layer (ADR-013)."
       },
       {
         "level": "warning",
@@ -469,8 +288,8 @@
         "file": "css/base/typography.css",
         "line": 22,
         "column": 14,
-        "match": "var(--ds-font-size-8xl)",
-        "message": "Foundation token consumido direto: var(--ds-font-size-8xl). Use Semantic/Component layer (ADR-013)."
+        "match": "var(--ds-font-size-64)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-64). Use Semantic/Component layer (ADR-013)."
       },
       {
         "level": "warning",
@@ -505,8 +324,8 @@
         "file": "css/base/typography.css",
         "line": 30,
         "column": 14,
-        "match": "var(--ds-font-size-7xl)",
-        "message": "Foundation token consumido direto: var(--ds-font-size-7xl). Use Semantic/Component layer (ADR-013)."
+        "match": "var(--ds-font-size-56)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-56). Use Semantic/Component layer (ADR-013)."
       },
       {
         "level": "warning",
@@ -541,8 +360,8 @@
         "file": "css/base/typography.css",
         "line": 38,
         "column": 14,
-        "match": "var(--ds-font-size-6xl)",
-        "message": "Foundation token consumido direto: var(--ds-font-size-6xl). Use Semantic/Component layer (ADR-013)."
+        "match": "var(--ds-font-size-48)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-48). Use Semantic/Component layer (ADR-013)."
       },
       {
         "level": "warning",
@@ -577,8 +396,8 @@
         "file": "css/base/typography.css",
         "line": 46,
         "column": 14,
-        "match": "var(--ds-font-size-5xl)",
-        "message": "Foundation token consumido direto: var(--ds-font-size-5xl). Use Semantic/Component layer (ADR-013)."
+        "match": "var(--ds-font-size-40)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-40). Use Semantic/Component layer (ADR-013)."
       },
       {
         "level": "warning",
@@ -622,8 +441,8 @@
         "file": "css/base/typography.css",
         "line": 60,
         "column": 14,
-        "match": "var(--ds-font-size-4xl)",
-        "message": "Foundation token consumido direto: var(--ds-font-size-4xl). Use Semantic/Component layer (ADR-013)."
+        "match": "var(--ds-font-size-32)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-32). Use Semantic/Component layer (ADR-013)."
       },
       {
         "level": "warning",
@@ -658,8 +477,8 @@
         "file": "css/base/typography.css",
         "line": 68,
         "column": 14,
-        "match": "var(--ds-font-size-3xl)",
-        "message": "Foundation token consumido direto: var(--ds-font-size-3xl). Use Semantic/Component layer (ADR-013)."
+        "match": "var(--ds-font-size-28)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-28). Use Semantic/Component layer (ADR-013)."
       },
       {
         "level": "warning",
@@ -694,8 +513,8 @@
         "file": "css/base/typography.css",
         "line": 76,
         "column": 14,
-        "match": "var(--ds-font-size-2xl)",
-        "message": "Foundation token consumido direto: var(--ds-font-size-2xl). Use Semantic/Component layer (ADR-013)."
+        "match": "var(--ds-font-size-24)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-24). Use Semantic/Component layer (ADR-013)."
       },
       {
         "level": "warning",
@@ -730,8 +549,8 @@
         "file": "css/base/typography.css",
         "line": 83,
         "column": 14,
-        "match": "var(--ds-font-size-xl)",
-        "message": "Foundation token consumido direto: var(--ds-font-size-xl). Use Semantic/Component layer (ADR-013)."
+        "match": "var(--ds-font-size-20)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-20). Use Semantic/Component layer (ADR-013)."
       },
       {
         "level": "warning",
@@ -766,8 +585,8 @@
         "file": "css/base/typography.css",
         "line": 90,
         "column": 14,
-        "match": "var(--ds-font-size-lg)",
-        "message": "Foundation token consumido direto: var(--ds-font-size-lg). Use Semantic/Component layer (ADR-013)."
+        "match": "var(--ds-font-size-18)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-18). Use Semantic/Component layer (ADR-013)."
       },
       {
         "level": "warning",
@@ -802,8 +621,8 @@
         "file": "css/base/typography.css",
         "line": 101,
         "column": 14,
-        "match": "var(--ds-font-size-lg)",
-        "message": "Foundation token consumido direto: var(--ds-font-size-lg). Use Semantic/Component layer (ADR-013)."
+        "match": "var(--ds-font-size-18)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-18). Use Semantic/Component layer (ADR-013)."
       },
       {
         "level": "warning",
@@ -838,8 +657,8 @@
         "file": "css/base/typography.css",
         "line": 108,
         "column": 14,
-        "match": "var(--ds-font-size-md)",
-        "message": "Foundation token consumido direto: var(--ds-font-size-md). Use Semantic/Component layer (ADR-013)."
+        "match": "var(--ds-font-size-16)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-16). Use Semantic/Component layer (ADR-013)."
       },
       {
         "level": "warning",
@@ -874,8 +693,8 @@
         "file": "css/base/typography.css",
         "line": 115,
         "column": 14,
-        "match": "var(--ds-font-size-sm)",
-        "message": "Foundation token consumido direto: var(--ds-font-size-sm). Use Semantic/Component layer (ADR-013)."
+        "match": "var(--ds-font-size-14)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-14). Use Semantic/Component layer (ADR-013)."
       },
       {
         "level": "warning",
@@ -910,8 +729,8 @@
         "file": "css/base/typography.css",
         "line": 122,
         "column": 14,
-        "match": "var(--ds-font-size-xs)",
-        "message": "Foundation token consumido direto: var(--ds-font-size-xs). Use Semantic/Component layer (ADR-013)."
+        "match": "var(--ds-font-size-12)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-12). Use Semantic/Component layer (ADR-013)."
       },
       {
         "level": "warning",
@@ -946,8 +765,8 @@
         "file": "css/base/typography.css",
         "line": 134,
         "column": 14,
-        "match": "var(--ds-font-size-md)",
-        "message": "Foundation token consumido direto: var(--ds-font-size-md). Use Semantic/Component layer (ADR-013)."
+        "match": "var(--ds-font-size-16)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-16). Use Semantic/Component layer (ADR-013)."
       },
       {
         "level": "warning",
@@ -982,8 +801,8 @@
         "file": "css/base/typography.css",
         "line": 142,
         "column": 14,
-        "match": "var(--ds-font-size-sm)",
-        "message": "Foundation token consumido direto: var(--ds-font-size-sm). Use Semantic/Component layer (ADR-013)."
+        "match": "var(--ds-font-size-14)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-14). Use Semantic/Component layer (ADR-013)."
       },
       {
         "level": "warning",
@@ -1018,8 +837,8 @@
         "file": "css/base/typography.css",
         "line": 150,
         "column": 14,
-        "match": "var(--ds-font-size-xs)",
-        "message": "Foundation token consumido direto: var(--ds-font-size-xs). Use Semantic/Component layer (ADR-013)."
+        "match": "var(--ds-font-size-12)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-12). Use Semantic/Component layer (ADR-013)."
       },
       {
         "level": "warning",
@@ -1054,8 +873,8 @@
         "file": "css/base/typography.css",
         "line": 158,
         "column": 14,
-        "match": "var(--ds-font-size-2xs)",
-        "message": "Foundation token consumido direto: var(--ds-font-size-2xs). Use Semantic/Component layer (ADR-013)."
+        "match": "var(--ds-font-size-11)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-11). Use Semantic/Component layer (ADR-013)."
       },
       {
         "level": "warning",
@@ -1090,8 +909,8 @@
         "file": "css/base/typography.css",
         "line": 170,
         "column": 14,
-        "match": "var(--ds-font-size-xs)",
-        "message": "Foundation token consumido direto: var(--ds-font-size-xs). Use Semantic/Component layer (ADR-013)."
+        "match": "var(--ds-font-size-12)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-12). Use Semantic/Component layer (ADR-013)."
       },
       {
         "level": "warning",
@@ -1126,8 +945,8 @@
         "file": "css/base/typography.css",
         "line": 177,
         "column": 14,
-        "match": "var(--ds-font-size-2xs)",
-        "message": "Foundation token consumido direto: var(--ds-font-size-2xs). Use Semantic/Component layer (ADR-013)."
+        "match": "var(--ds-font-size-11)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-11). Use Semantic/Component layer (ADR-013)."
       },
       {
         "level": "warning",
@@ -1162,8 +981,8 @@
         "file": "css/base/typography.css",
         "line": 189,
         "column": 14,
-        "match": "var(--ds-font-size-xs)",
-        "message": "Foundation token consumido direto: var(--ds-font-size-xs). Use Semantic/Component layer (ADR-013)."
+        "match": "var(--ds-font-size-12)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-12). Use Semantic/Component layer (ADR-013)."
       },
       {
         "level": "warning",
@@ -1198,8 +1017,8 @@
         "file": "css/base/typography.css",
         "line": 198,
         "column": 14,
-        "match": "var(--ds-font-size-2xs)",
-        "message": "Foundation token consumido direto: var(--ds-font-size-2xs). Use Semantic/Component layer (ADR-013)."
+        "match": "var(--ds-font-size-11)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-11). Use Semantic/Component layer (ADR-013)."
       },
       {
         "level": "warning",
@@ -1234,8 +1053,8 @@
         "file": "css/base/typography.css",
         "line": 211,
         "column": 14,
-        "match": "var(--ds-font-size-sm)",
-        "message": "Foundation token consumido direto: var(--ds-font-size-sm). Use Semantic/Component layer (ADR-013)."
+        "match": "var(--ds-font-size-14)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-14). Use Semantic/Component layer (ADR-013)."
       },
       {
         "level": "warning",
@@ -1270,8 +1089,8 @@
         "file": "css/base/typography.css",
         "line": 218,
         "column": 14,
-        "match": "var(--ds-font-size-xs)",
-        "message": "Foundation token consumido direto: var(--ds-font-size-xs). Use Semantic/Component layer (ADR-013)."
+        "match": "var(--ds-font-size-12)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-12). Use Semantic/Component layer (ADR-013)."
       },
       {
         "level": "warning",
@@ -1286,7 +1105,7 @@
     "registryCompleteness": [
       {
         "level": "error",
-        "message": "78 tokens em tokens/ sem entry em registry.json. Rode `npm run build:registry:init`.",
+        "message": "104 tokens em tokens/ sem entry em registry.json. Rode `npm run build:registry:init`.",
         "sample": [
           "foundation.color.brand.50",
           "foundation.color.brand.100",
@@ -1297,7 +1116,18 @@
       },
       {
         "level": "warning",
-        "message": "388 entries com campos TODO (sentido/contexto/decisao). Preencha incrementalmente.",
+        "message": "303 entries com campos TODO (sentido/contexto/decisao). Preencha incrementalmente.",
+        "sample": [
+          "foundation.color.neutral.50",
+          "foundation.color.neutral.100",
+          "foundation.color.neutral.200",
+          "foundation.color.neutral.300",
+          "foundation.color.neutral.400"
+        ]
+      },
+      {
+        "level": "warning",
+        "message": "373 entries em registry.json sem token correspondente em tokens/ (stale).",
         "sample": [
           "component.avatar.size.sm",
           "component.avatar.size.md",
@@ -1305,36 +1135,113 @@
           "component.avatar.font-size.sm",
           "component.avatar.font-size.md"
         ]
-      },
-      {
-        "level": "warning",
-        "message": "289 entries em registry.json sem token correspondente em tokens/ (stale).",
-        "sample": [
-          "component.button.padding-x.sm",
-          "component.button.padding-x.md",
-          "component.button.padding-x.lg",
-          "component.button.padding-y.sm",
-          "component.button.padding-y.md"
-        ]
       }
     ],
     "jsonVsFigma": {
       "skipped": false,
-      "snapshotAge": "16h",
+      "snapshotAge": "47h",
       "summary": {
         "figmaVariableCount": 559,
         "figmaCollectionCount": 4,
-        "VALUE_DRIFT": 7,
-        "NEEDS_SYNC": 246,
-        "DRIFT_FROM_SOURCE": 145,
+        "VALUE_DRIFT": 77,
+        "NEEDS_SYNC": 380,
+        "DRIFT_FROM_SOURCE": 226,
         "ALIAS_BROKEN": 0,
-        "CSS_ONLY": 9,
+        "CSS_ONLY": 7,
         "BY_DESIGN": 61
       },
       "divergences": [
         {
           "level": "error",
           "category": "VALUE_DRIFT",
+          "token": "foundation.spacing.2",
+          "message": "valor difere: Figma=8 / JSON=\"0.125rem\"",
+          "figma": 8,
+          "json": "0.125rem"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "foundation.spacing.4",
+          "message": "valor difere: Figma=16 / JSON=\"0.25rem\"",
+          "figma": 16,
+          "json": "0.25rem"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "foundation.spacing.6",
+          "message": "valor difere: Figma=24 / JSON=\"0.375rem\"",
+          "figma": 24,
+          "json": "0.375rem"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "foundation.spacing.8",
+          "message": "valor difere: Figma=32 / JSON=\"0.5rem\"",
+          "figma": 32,
+          "json": "0.5rem"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "foundation.spacing.10",
+          "message": "valor difere: Figma=40 / JSON=\"0.625rem\"",
+          "figma": 40,
+          "json": "0.625rem"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "foundation.spacing.12",
+          "message": "valor difere: Figma=48 / JSON=\"0.75rem\"",
+          "figma": 48,
+          "json": "0.75rem"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "foundation.spacing.14",
+          "message": "valor difere: Figma=56 / JSON=\"0.875rem\"",
+          "figma": 56,
+          "json": "0.875rem"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "foundation.spacing.16",
+          "message": "valor difere: Figma=64 / JSON=\"1rem\"",
+          "figma": 64,
+          "json": "1rem"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "foundation.spacing.20",
+          "message": "valor difere: Figma=80 / JSON=\"1.25rem\"",
+          "figma": 80,
+          "json": "1.25rem"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "foundation.spacing.24",
+          "message": "valor difere: Figma=96 / JSON=\"1.5rem\"",
+          "figma": 96,
+          "json": "1.5rem"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.border.subtle",
+          "message": "valor difere: Figma=\"{foundation.color.neutral.300}\" / JSON=\"{foundation.color.neutral.200}\"",
+          "figma": "{foundation.color.neutral.300}",
+          "json": "{foundation.color.neutral.200}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
           "token": "semantic.border.focus",
           "message": "valor difere: Figma=\"{semantic.brand.default}\" / JSON=\"{foundation.color.brand.600}\"",
           "figma": "{semantic.brand.default}",
@@ -1351,10 +1258,250 @@
         {
           "level": "error",
           "category": "VALUE_DRIFT",
+          "token": "semantic.space.section.sm",
+          "message": "valor difere: Figma=\"{foundation.spacing.8}\" / JSON=\"{foundation.spacing.32}\"",
+          "figma": "{foundation.spacing.8}",
+          "json": "{foundation.spacing.32}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.space.section.md",
+          "message": "valor difere: Figma=\"{foundation.spacing.12}\" / JSON=\"{foundation.spacing.48}\"",
+          "figma": "{foundation.spacing.12}",
+          "json": "{foundation.spacing.48}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.space.section.lg",
+          "message": "valor difere: Figma=\"{foundation.spacing.16}\" / JSON=\"{foundation.spacing.64}\"",
+          "figma": "{foundation.spacing.16}",
+          "json": "{foundation.spacing.64}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.space.section.xl",
+          "message": "valor difere: Figma=\"{foundation.spacing.20}\" / JSON=\"{foundation.spacing.80}\"",
+          "figma": "{foundation.spacing.20}",
+          "json": "{foundation.spacing.80}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
           "token": "semantic.border.error",
           "message": "valor difere: Figma=\"{semantic.feedback.error.default}\" / JSON=\"{semantic.feedback.error.bg-default}\"",
           "figma": "{semantic.feedback.error.default}",
           "json": "{semantic.feedback.error.bg-default}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.size.control.sm",
+          "message": "valor difere: Figma=\"{foundation.spacing.8}\" / JSON=\"{foundation.spacing.32}\"",
+          "figma": "{foundation.spacing.8}",
+          "json": "{foundation.spacing.32}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.size.control.md",
+          "message": "valor difere: Figma=\"{foundation.spacing.10}\" / JSON=\"{foundation.spacing.40}\"",
+          "figma": "{foundation.spacing.10}",
+          "json": "{foundation.spacing.40}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.size.control.lg",
+          "message": "valor difere: Figma=\"{foundation.spacing.12}\" / JSON=\"{foundation.spacing.48}\"",
+          "figma": "{foundation.spacing.12}",
+          "json": "{foundation.spacing.48}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.size.control.icon.sm",
+          "message": "valor difere: Figma=\"{foundation.spacing.4}\" / JSON=\"{foundation.spacing.16}\"",
+          "figma": "{foundation.spacing.4}",
+          "json": "{foundation.spacing.16}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.size.control.icon.md",
+          "message": "valor difere: Figma=\"{foundation.spacing.5}\" / JSON=\"{foundation.spacing.20}\"",
+          "figma": "{foundation.spacing.5}",
+          "json": "{foundation.spacing.20}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.size.control.icon.lg",
+          "message": "valor difere: Figma=\"{foundation.spacing.6}\" / JSON=\"{foundation.spacing.24}\"",
+          "figma": "{foundation.spacing.6}",
+          "json": "{foundation.spacing.24}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.size.control.min-target",
+          "message": "valor difere: Figma=\"{foundation.spacing.11}\" / JSON=\"{foundation.spacing.44}\"",
+          "figma": "{foundation.spacing.11}",
+          "json": "{foundation.spacing.44}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.space.control.padding-x.sm",
+          "message": "valor difere: Figma=\"{foundation.spacing.3}\" / JSON=\"{foundation.spacing.12}\"",
+          "figma": "{foundation.spacing.3}",
+          "json": "{foundation.spacing.12}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.space.control.padding-x.md",
+          "message": "valor difere: Figma=\"{foundation.spacing.4}\" / JSON=\"{foundation.spacing.16}\"",
+          "figma": "{foundation.spacing.4}",
+          "json": "{foundation.spacing.16}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.space.control.padding-x.lg",
+          "message": "valor difere: Figma=\"{foundation.spacing.5}\" / JSON=\"{foundation.spacing.20}\"",
+          "figma": "{foundation.spacing.5}",
+          "json": "{foundation.spacing.20}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.space.control.padding-y.sm",
+          "message": "valor difere: Figma=\"{foundation.spacing.2}\" / JSON=\"{foundation.spacing.8}\"",
+          "figma": "{foundation.spacing.2}",
+          "json": "{foundation.spacing.8}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.space.control.padding-y.md",
+          "message": "valor difere: Figma=\"{foundation.spacing.2-5}\" / JSON=\"{foundation.spacing.10}\"",
+          "figma": "{foundation.spacing.2-5}",
+          "json": "{foundation.spacing.10}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.space.control.padding-y.lg",
+          "message": "valor difere: Figma=\"{foundation.spacing.3}\" / JSON=\"{foundation.spacing.12}\"",
+          "figma": "{foundation.spacing.3}",
+          "json": "{foundation.spacing.12}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.typography.control.font-size.sm",
+          "message": "valor difere: Figma=\"{foundation.typography.font.size.sm}\" / JSON=\"{foundation.typography.font.size.12}\"",
+          "figma": "{foundation.typography.font.size.sm}",
+          "json": "{foundation.typography.font.size.12}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.typography.control.font-size.md",
+          "message": "valor difere: Figma=\"{foundation.typography.font.size.sm}\" / JSON=\"{foundation.typography.font.size.12}\"",
+          "figma": "{foundation.typography.font.size.sm}",
+          "json": "{foundation.typography.font.size.12}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.typography.control.font-size.lg",
+          "message": "valor difere: Figma=\"{foundation.typography.font.size.md}\" / JSON=\"{foundation.typography.font.size.16}\"",
+          "figma": "{foundation.typography.font.size.md}",
+          "json": "{foundation.typography.font.size.16}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.typography.control.line-height.sm",
+          "message": "valor difere: Figma=\"{foundation.spacing.4}\" / JSON=\"{foundation.spacing.16}\"",
+          "figma": "{foundation.spacing.4}",
+          "json": "{foundation.spacing.16}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.typography.control.line-height.md",
+          "message": "valor difere: Figma=\"{foundation.spacing.5}\" / JSON=\"{foundation.spacing.20}\"",
+          "figma": "{foundation.spacing.5}",
+          "json": "{foundation.spacing.20}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.typography.control.line-height.lg",
+          "message": "valor difere: Figma=\"{foundation.spacing.6}\" / JSON=\"{foundation.spacing.24}\"",
+          "figma": "{foundation.spacing.6}",
+          "json": "{foundation.spacing.24}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.typography.body.font-size.xs",
+          "message": "valor difere: Figma=\"{foundation.typography.font.size.xs}\" / JSON=\"{foundation.typography.font.size.11}\"",
+          "figma": "{foundation.typography.font.size.xs}",
+          "json": "{foundation.typography.font.size.11}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.typography.body.font-size.sm",
+          "message": "valor difere: Figma=\"{foundation.typography.font.size.sm}\" / JSON=\"{foundation.typography.font.size.12}\"",
+          "figma": "{foundation.typography.font.size.sm}",
+          "json": "{foundation.typography.font.size.12}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.typography.body.font-size.md",
+          "message": "valor difere: Figma=\"{foundation.typography.font.size.md}\" / JSON=\"{foundation.typography.font.size.16}\"",
+          "figma": "{foundation.typography.font.size.md}",
+          "json": "{foundation.typography.font.size.16}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.typography.body.font-size.lg",
+          "message": "valor difere: Figma=\"{foundation.typography.font.size.lg}\" / JSON=\"{foundation.typography.font.size.18}\"",
+          "figma": "{foundation.typography.font.size.lg}",
+          "json": "{foundation.typography.font.size.18}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.typography.body.font-size.xl",
+          "message": "valor difere: Figma=\"{foundation.typography.font.size.xl}\" / JSON=\"{foundation.typography.font.size.20}\"",
+          "figma": "{foundation.typography.font.size.xl}",
+          "json": "{foundation.typography.font.size.20}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.typography.body.font-size.2xl",
+          "message": "valor difere: Figma=\"{foundation.typography.font.size.2xl}\" / JSON=\"{foundation.typography.font.size.24}\"",
+          "figma": "{foundation.typography.font.size.2xl}",
+          "json": "{foundation.typography.font.size.24}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.typography.body.font-size.3xl",
+          "message": "valor difere: Figma=\"{foundation.typography.font.size.3xl}\" / JSON=\"{foundation.typography.font.size.28}\"",
+          "figma": "{foundation.typography.font.size.3xl}",
+          "json": "{foundation.typography.font.size.28}"
         },
         {
           "level": "error",
@@ -1375,6 +1522,38 @@
         {
           "level": "error",
           "category": "VALUE_DRIFT",
+          "token": "semantic.space.section.sm",
+          "message": "valor difere: Figma=\"{foundation.spacing.8}\" / JSON=\"{foundation.spacing.32}\"",
+          "figma": "{foundation.spacing.8}",
+          "json": "{foundation.spacing.32}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.space.section.md",
+          "message": "valor difere: Figma=\"{foundation.spacing.12}\" / JSON=\"{foundation.spacing.48}\"",
+          "figma": "{foundation.spacing.12}",
+          "json": "{foundation.spacing.48}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.space.section.lg",
+          "message": "valor difere: Figma=\"{foundation.spacing.16}\" / JSON=\"{foundation.spacing.64}\"",
+          "figma": "{foundation.spacing.16}",
+          "json": "{foundation.spacing.64}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.space.section.xl",
+          "message": "valor difere: Figma=\"{foundation.spacing.20}\" / JSON=\"{foundation.spacing.80}\"",
+          "figma": "{foundation.spacing.20}",
+          "json": "{foundation.spacing.80}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
           "token": "semantic.border.error",
           "message": "valor difere: Figma=\"{semantic.feedback.error.default}\" / JSON=\"{semantic.feedback.error.bg-default}\"",
           "figma": "{semantic.feedback.error.default}",
@@ -1383,10 +1562,210 @@
         {
           "level": "error",
           "category": "VALUE_DRIFT",
-          "token": "component.spinner.stroke-width.md",
-          "message": "valor difere: Figma=\"{foundation.spacing.0-5}\" / JSON=\"{foundation.border.width.2}\"",
-          "figma": "{foundation.spacing.0-5}",
-          "json": "{foundation.border.width.2}"
+          "token": "semantic.size.control.sm",
+          "message": "valor difere: Figma=\"{foundation.spacing.8}\" / JSON=\"{foundation.spacing.32}\"",
+          "figma": "{foundation.spacing.8}",
+          "json": "{foundation.spacing.32}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.size.control.md",
+          "message": "valor difere: Figma=\"{foundation.spacing.10}\" / JSON=\"{foundation.spacing.40}\"",
+          "figma": "{foundation.spacing.10}",
+          "json": "{foundation.spacing.40}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.size.control.lg",
+          "message": "valor difere: Figma=\"{foundation.spacing.12}\" / JSON=\"{foundation.spacing.48}\"",
+          "figma": "{foundation.spacing.12}",
+          "json": "{foundation.spacing.48}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.size.control.icon.sm",
+          "message": "valor difere: Figma=\"{foundation.spacing.4}\" / JSON=\"{foundation.spacing.16}\"",
+          "figma": "{foundation.spacing.4}",
+          "json": "{foundation.spacing.16}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.size.control.icon.md",
+          "message": "valor difere: Figma=\"{foundation.spacing.5}\" / JSON=\"{foundation.spacing.20}\"",
+          "figma": "{foundation.spacing.5}",
+          "json": "{foundation.spacing.20}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.size.control.icon.lg",
+          "message": "valor difere: Figma=\"{foundation.spacing.6}\" / JSON=\"{foundation.spacing.24}\"",
+          "figma": "{foundation.spacing.6}",
+          "json": "{foundation.spacing.24}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.size.control.min-target",
+          "message": "valor difere: Figma=\"{foundation.spacing.11}\" / JSON=\"{foundation.spacing.44}\"",
+          "figma": "{foundation.spacing.11}",
+          "json": "{foundation.spacing.44}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.space.control.padding-x.sm",
+          "message": "valor difere: Figma=\"{foundation.spacing.3}\" / JSON=\"{foundation.spacing.12}\"",
+          "figma": "{foundation.spacing.3}",
+          "json": "{foundation.spacing.12}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.space.control.padding-x.md",
+          "message": "valor difere: Figma=\"{foundation.spacing.4}\" / JSON=\"{foundation.spacing.16}\"",
+          "figma": "{foundation.spacing.4}",
+          "json": "{foundation.spacing.16}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.space.control.padding-x.lg",
+          "message": "valor difere: Figma=\"{foundation.spacing.5}\" / JSON=\"{foundation.spacing.20}\"",
+          "figma": "{foundation.spacing.5}",
+          "json": "{foundation.spacing.20}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.space.control.padding-y.sm",
+          "message": "valor difere: Figma=\"{foundation.spacing.2}\" / JSON=\"{foundation.spacing.8}\"",
+          "figma": "{foundation.spacing.2}",
+          "json": "{foundation.spacing.8}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.space.control.padding-y.md",
+          "message": "valor difere: Figma=\"{foundation.spacing.2-5}\" / JSON=\"{foundation.spacing.10}\"",
+          "figma": "{foundation.spacing.2-5}",
+          "json": "{foundation.spacing.10}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.space.control.padding-y.lg",
+          "message": "valor difere: Figma=\"{foundation.spacing.3}\" / JSON=\"{foundation.spacing.12}\"",
+          "figma": "{foundation.spacing.3}",
+          "json": "{foundation.spacing.12}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.typography.control.font-size.sm",
+          "message": "valor difere: Figma=\"{foundation.typography.font.size.sm}\" / JSON=\"{foundation.typography.font.size.12}\"",
+          "figma": "{foundation.typography.font.size.sm}",
+          "json": "{foundation.typography.font.size.12}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.typography.control.font-size.md",
+          "message": "valor difere: Figma=\"{foundation.typography.font.size.sm}\" / JSON=\"{foundation.typography.font.size.12}\"",
+          "figma": "{foundation.typography.font.size.sm}",
+          "json": "{foundation.typography.font.size.12}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.typography.control.font-size.lg",
+          "message": "valor difere: Figma=\"{foundation.typography.font.size.md}\" / JSON=\"{foundation.typography.font.size.16}\"",
+          "figma": "{foundation.typography.font.size.md}",
+          "json": "{foundation.typography.font.size.16}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.typography.control.line-height.sm",
+          "message": "valor difere: Figma=\"{foundation.spacing.4}\" / JSON=\"{foundation.spacing.16}\"",
+          "figma": "{foundation.spacing.4}",
+          "json": "{foundation.spacing.16}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.typography.control.line-height.md",
+          "message": "valor difere: Figma=\"{foundation.spacing.5}\" / JSON=\"{foundation.spacing.20}\"",
+          "figma": "{foundation.spacing.5}",
+          "json": "{foundation.spacing.20}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.typography.control.line-height.lg",
+          "message": "valor difere: Figma=\"{foundation.spacing.6}\" / JSON=\"{foundation.spacing.24}\"",
+          "figma": "{foundation.spacing.6}",
+          "json": "{foundation.spacing.24}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.typography.body.font-size.xs",
+          "message": "valor difere: Figma=\"{foundation.typography.font.size.xs}\" / JSON=\"{foundation.typography.font.size.11}\"",
+          "figma": "{foundation.typography.font.size.xs}",
+          "json": "{foundation.typography.font.size.11}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.typography.body.font-size.sm",
+          "message": "valor difere: Figma=\"{foundation.typography.font.size.sm}\" / JSON=\"{foundation.typography.font.size.12}\"",
+          "figma": "{foundation.typography.font.size.sm}",
+          "json": "{foundation.typography.font.size.12}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.typography.body.font-size.md",
+          "message": "valor difere: Figma=\"{foundation.typography.font.size.md}\" / JSON=\"{foundation.typography.font.size.16}\"",
+          "figma": "{foundation.typography.font.size.md}",
+          "json": "{foundation.typography.font.size.16}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.typography.body.font-size.lg",
+          "message": "valor difere: Figma=\"{foundation.typography.font.size.lg}\" / JSON=\"{foundation.typography.font.size.18}\"",
+          "figma": "{foundation.typography.font.size.lg}",
+          "json": "{foundation.typography.font.size.18}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.typography.body.font-size.xl",
+          "message": "valor difere: Figma=\"{foundation.typography.font.size.xl}\" / JSON=\"{foundation.typography.font.size.20}\"",
+          "figma": "{foundation.typography.font.size.xl}",
+          "json": "{foundation.typography.font.size.20}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.typography.body.font-size.2xl",
+          "message": "valor difere: Figma=\"{foundation.typography.font.size.2xl}\" / JSON=\"{foundation.typography.font.size.24}\"",
+          "figma": "{foundation.typography.font.size.2xl}",
+          "json": "{foundation.typography.font.size.24}"
+        },
+        {
+          "level": "error",
+          "category": "VALUE_DRIFT",
+          "token": "semantic.typography.body.font-size.3xl",
+          "message": "valor difere: Figma=\"{foundation.typography.font.size.3xl}\" / JSON=\"{foundation.typography.font.size.28}\"",
+          "figma": "{foundation.typography.font.size.3xl}",
+          "json": "{foundation.typography.font.size.28}"
         },
         {
           "level": "error",
@@ -1464,6 +1843,223 @@
           "token": "foundation.color.brand.950",
           "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
           "json": "#172554"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "foundation.spacing.28",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "1.75rem"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "foundation.spacing.32",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "2rem"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "foundation.spacing.36",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "2.25rem"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "foundation.spacing.40",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "2.5rem"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "foundation.spacing.44",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "2.75rem"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "foundation.spacing.48",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "3rem"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "foundation.spacing.56",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "3.5rem"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "foundation.spacing.64",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "4rem"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "foundation.spacing.80",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "5rem"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "foundation.spacing.96",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "6rem"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "foundation.radius.2",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "0.125rem"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "foundation.radius.4",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "0.25rem"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "foundation.radius.8",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "0.5rem"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "foundation.radius.12",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "0.75rem"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "foundation.radius.16",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "1rem"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "foundation.radius.24",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "1.5rem"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "foundation.radius.9999",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "9999px"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "foundation.typography.font.size.11",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "0.6875rem"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "foundation.typography.font.size.12",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "0.75rem"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "foundation.typography.font.size.14",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "0.875rem"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "foundation.typography.font.size.16",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "1rem"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "foundation.typography.font.size.18",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "1.125rem"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "foundation.typography.font.size.20",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "1.25rem"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "foundation.typography.font.size.24",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "1.5rem"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "foundation.typography.font.size.28",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "1.75rem"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "foundation.typography.font.size.32",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "2rem"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "foundation.typography.font.size.40",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "2.5rem"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "foundation.typography.font.size.48",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "3rem"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "foundation.typography.font.size.56",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "3.5rem"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "foundation.typography.font.size.64",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "4rem"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "foundation.typography.font.size.72",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "4.5rem"
         },
         {
           "level": "error",
@@ -1902,37 +2498,212 @@
         {
           "level": "error",
           "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.space.2xs",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{foundation.spacing.2}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.space.xs",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{foundation.spacing.4}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.space.sm",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{foundation.spacing.8}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.space.md",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{foundation.spacing.12}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.space.lg",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{foundation.spacing.16}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.space.xl",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{foundation.spacing.20}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.space.2xl",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{foundation.spacing.24}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.size.avatar.sm",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{foundation.spacing.32}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.size.avatar.md",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{foundation.spacing.40}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.size.avatar.lg",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{foundation.spacing.56}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.size.avatar.icon.sm",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{foundation.spacing.16}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.size.avatar.icon.md",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{foundation.spacing.20}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.size.avatar.icon.lg",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{foundation.spacing.28}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.size.modal.max-width.sm",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "25rem"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.size.modal.max-width.md",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "32.5rem"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.size.modal.max-width.lg",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "40rem"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.size.spinner.md",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{foundation.spacing.24}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.size.spinner.lg",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{foundation.spacing.32}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.size.skeleton.rect-height",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "7.5rem"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.size.textarea.min-height.sm",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "4.25rem"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.size.textarea.min-height.md",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{foundation.spacing.80}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.size.textarea.min-height.lg",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "7rem"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.size.toggle.track-width.sm",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{foundation.spacing.28}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.size.toggle.track-width.md",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{foundation.spacing.36}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.size.toggle.track-width.lg",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{foundation.spacing.44}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
           "token": "semantic.radius.sm",
           "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
-          "json": "{foundation.radius.sm}"
+          "json": "{foundation.radius.4}"
         },
         {
           "level": "error",
           "category": "DRIFT_FROM_SOURCE",
           "token": "semantic.radius.md",
           "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
-          "json": "{foundation.radius.md}"
+          "json": "{foundation.radius.8}"
         },
         {
           "level": "error",
           "category": "DRIFT_FROM_SOURCE",
           "token": "semantic.radius.lg",
           "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
-          "json": "{foundation.radius.lg}"
+          "json": "{foundation.radius.12}"
         },
         {
           "level": "error",
           "category": "DRIFT_FROM_SOURCE",
           "token": "semantic.radius.xl",
           "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
-          "json": "{foundation.radius.xl}"
+          "json": "{foundation.radius.16}"
         },
         {
           "level": "error",
           "category": "DRIFT_FROM_SOURCE",
           "token": "semantic.radius.full",
           "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
-          "json": "{foundation.radius.full}"
+          "json": "{foundation.radius.9999}"
         },
         {
           "level": "error",
@@ -2371,37 +3142,212 @@
         {
           "level": "error",
           "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.space.2xs",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{foundation.spacing.2}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.space.xs",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{foundation.spacing.4}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.space.sm",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{foundation.spacing.8}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.space.md",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{foundation.spacing.12}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.space.lg",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{foundation.spacing.16}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.space.xl",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{foundation.spacing.20}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.space.2xl",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{foundation.spacing.24}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.size.avatar.sm",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{foundation.spacing.32}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.size.avatar.md",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{foundation.spacing.40}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.size.avatar.lg",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{foundation.spacing.56}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.size.avatar.icon.sm",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{foundation.spacing.16}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.size.avatar.icon.md",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{foundation.spacing.20}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.size.avatar.icon.lg",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{foundation.spacing.28}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.size.modal.max-width.sm",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "25rem"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.size.modal.max-width.md",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "32.5rem"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.size.modal.max-width.lg",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "40rem"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.size.spinner.md",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{foundation.spacing.24}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.size.spinner.lg",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{foundation.spacing.32}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.size.skeleton.rect-height",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "7.5rem"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.size.textarea.min-height.sm",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "4.25rem"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.size.textarea.min-height.md",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{foundation.spacing.80}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.size.textarea.min-height.lg",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "7rem"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.size.toggle.track-width.sm",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{foundation.spacing.28}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.size.toggle.track-width.md",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{foundation.spacing.36}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "semantic.size.toggle.track-width.lg",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{foundation.spacing.44}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
           "token": "semantic.radius.sm",
           "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
-          "json": "{foundation.radius.sm}"
+          "json": "{foundation.radius.4}"
         },
         {
           "level": "error",
           "category": "DRIFT_FROM_SOURCE",
           "token": "semantic.radius.md",
           "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
-          "json": "{foundation.radius.md}"
+          "json": "{foundation.radius.8}"
         },
         {
           "level": "error",
           "category": "DRIFT_FROM_SOURCE",
           "token": "semantic.radius.lg",
           "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
-          "json": "{foundation.radius.lg}"
+          "json": "{foundation.radius.12}"
         },
         {
           "level": "error",
           "category": "DRIFT_FROM_SOURCE",
           "token": "semantic.radius.xl",
           "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
-          "json": "{foundation.radius.xl}"
+          "json": "{foundation.radius.16}"
         },
         {
           "level": "error",
           "category": "DRIFT_FROM_SOURCE",
           "token": "semantic.radius.full",
           "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
-          "json": "{foundation.radius.full}"
+          "json": "{foundation.radius.9999}"
         },
         {
           "level": "warning",
@@ -2416,6 +3362,251 @@
           "token": "foundation.brand.secondary",
           "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
           "figma": "{foundation.color.purple.600}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "foundation.opacity.0",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 0
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "foundation.spacing.0",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 0
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "foundation.spacing.0-5",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 2
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "foundation.spacing.1",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 4
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "foundation.spacing.1-5",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 6
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "foundation.spacing.2-5",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 10
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "foundation.spacing.3",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 12
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "foundation.spacing.3-5",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 14
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "foundation.spacing.5",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 20
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "foundation.spacing.7",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 28
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "foundation.spacing.9",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 36
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "foundation.spacing.11",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 44
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "foundation.radius.none",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 0
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "foundation.radius.xs",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 2
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "foundation.radius.sm",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 4
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "foundation.radius.md",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 8
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "foundation.radius.lg",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 12
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "foundation.radius.xl",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 16
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "foundation.radius.2xl",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 24
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "foundation.radius.full",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 9999
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "foundation.border.width.0",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 0
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "foundation.typography.font.size.xs",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 11
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "foundation.typography.font.size.sm",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 12
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "foundation.typography.font.size.md",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 16
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "foundation.typography.font.size.lg",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 18
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "foundation.typography.font.size.xl",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 20
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "foundation.typography.font.size.2xl",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 24
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "foundation.typography.font.size.3xl",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 28
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "foundation.typography.font.size.4xl",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 32
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "foundation.typography.font.size.5xl",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 40
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "foundation.typography.font.size.6xl",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 48
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "foundation.typography.font.size.7xl",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 56
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "foundation.typography.font.size.8xl",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 64
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "foundation.typography.font.size.9xl",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 72
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "foundation.typography.font.size.2xs",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 11
         },
         {
           "level": "warning",
@@ -2679,6 +3870,125 @@
         {
           "level": "warning",
           "category": "NEEDS_SYNC",
+          "token": "semantic.space.inset.xs",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.1}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "semantic.space.inset.sm",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.2}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "semantic.space.inset.md",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.3}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "semantic.space.inset.lg",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.4}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "semantic.space.inset.xl",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.6}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "semantic.space.gap.xs",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.1}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "semantic.space.gap.sm",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.2}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "semantic.space.gap.md",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.3}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "semantic.space.gap.lg",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.4}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "semantic.space.gap.xl",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.6}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "semantic.space.component.xs",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.1}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "semantic.space.component.sm",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.2}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "semantic.space.component.md",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.3}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "semantic.space.component.lg",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.4}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "semantic.space.component.xl",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.5}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "semantic.space.component.2xl",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.6}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "semantic.radius.component",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.radius.md}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
           "token": "semantic.accent.default",
           "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
           "figma": "{foundation.brand.secondary}"
@@ -2819,6 +4129,13 @@
         {
           "level": "warning",
           "category": "NEEDS_SYNC",
+          "token": "semantic.space.inset.2xs",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.0-5}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
           "token": "semantic.border.control.default",
           "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
           "figma": "{foundation.color.neutral.500}"
@@ -2836,6 +4153,13 @@
           "token": "semantic.border.control.disabled",
           "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
           "figma": "{foundation.color.neutral.300}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "semantic.space.gap.2xs",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.0-5}"
         },
         {
           "level": "warning",
@@ -3099,6 +4423,125 @@
         {
           "level": "warning",
           "category": "NEEDS_SYNC",
+          "token": "semantic.space.inset.xs",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.1}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "semantic.space.inset.sm",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.2}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "semantic.space.inset.md",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.3}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "semantic.space.inset.lg",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.4}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "semantic.space.inset.xl",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.6}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "semantic.space.gap.xs",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.1}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "semantic.space.gap.sm",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.2}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "semantic.space.gap.md",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.3}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "semantic.space.gap.lg",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.4}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "semantic.space.gap.xl",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.6}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "semantic.space.component.xs",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.1}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "semantic.space.component.sm",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.2}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "semantic.space.component.md",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.3}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "semantic.space.component.lg",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.4}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "semantic.space.component.xl",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.5}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "semantic.space.component.2xl",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.6}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "semantic.radius.component",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.radius.md}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
           "token": "semantic.accent.default",
           "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
           "figma": "{foundation.brand.secondary}"
@@ -3239,6 +4682,13 @@
         {
           "level": "warning",
           "category": "NEEDS_SYNC",
+          "token": "semantic.space.inset.2xs",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.0-5}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
           "token": "semantic.border.control.default",
           "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
           "figma": "{foundation.color.neutral.500}"
@@ -3256,6 +4706,34 @@
           "token": "semantic.border.control.disabled",
           "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
           "figma": "{foundation.color.neutral.700}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "semantic.space.gap.2xs",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.0-5}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.button.height.sm",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.size.control.sm}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.button.height.md",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.size.control.md}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.button.height.lg",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.size.control.lg}"
         },
         {
           "level": "warning",
@@ -3407,6 +4885,69 @@
         {
           "level": "warning",
           "category": "NEEDS_SYNC",
+          "token": "component.avatar.size.sm",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.8}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.avatar.size.md",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.10}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.avatar.size.lg",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.14}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.avatar.font-size.sm",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.typography.font.size.xs}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.avatar.font-size.md",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.typography.font.size.sm}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.avatar.font-size.lg",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.typography.font.size.lg}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.avatar.icon-size.sm",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.4}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.avatar.icon-size.md",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.5}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.avatar.icon-size.lg",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.7}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
           "token": "component.avatar.border-radius",
           "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
           "figma": "{foundation.radius.full}"
@@ -3417,6 +4958,69 @@
           "token": "component.avatar.font-weight",
           "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
           "figma": "{semantic.typography.body.font-weight.semibold}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.checkbox.control-size.sm",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.4}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.checkbox.control-size.md",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.5}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.checkbox.control-size.lg",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.6}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.checkbox.check-width.sm",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.1}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.checkbox.check-width.md",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 5
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.checkbox.check-width.lg",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.1-5}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.checkbox.check-height.sm",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.2}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.checkbox.check-height.md",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.2-5}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.checkbox.check-height.lg",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.3}"
         },
         {
           "level": "warning",
@@ -3438,6 +5042,27 @@
           "token": "component.checkbox.font-size",
           "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
           "figma": "{foundation.typography.font.size.sm}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.input.height.sm",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.size.control.sm}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.input.height.md",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.size.control.md}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.input.height.lg",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.size.control.lg}"
         },
         {
           "level": "warning",
@@ -3547,6 +5172,27 @@
         {
           "level": "warning",
           "category": "NEEDS_SYNC",
+          "token": "component.modal.max-width.sm",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 400
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.modal.max-width.md",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 520
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.modal.max-width.lg",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 640
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
           "token": "component.modal.padding",
           "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
           "figma": "{semantic.space.inset.lg}"
@@ -3606,6 +5252,48 @@
           "token": "component.modal.viewport-offset",
           "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
           "figma": "{semantic.space.section.sm}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.radio.control-size.sm",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.4}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.radio.control-size.md",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.5}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.radio.control-size.lg",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.6}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.radio.dot-size.sm",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.1-5}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.radio.dot-size.md",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.2}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.radio.dot-size.lg",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.2-5}"
         },
         {
           "level": "warning",
@@ -3673,6 +5361,27 @@
         {
           "level": "warning",
           "category": "NEEDS_SYNC",
+          "token": "component.select.height.sm",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.size.control.sm}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.select.height.md",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.size.control.md}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.select.height.lg",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.size.control.lg}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
           "token": "component.select.gap",
           "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
           "figma": "{semantic.space.gap.xs}"
@@ -3704,6 +5413,34 @@
           "token": "component.select.font-size.lg",
           "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
           "figma": "{semantic.typography.control.font-size.lg}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.select.arrow-size",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.4}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.select.arrow-offset.sm",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.2}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.select.arrow-offset.md",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.3}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.select.arrow-offset.lg",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.4}"
         },
         {
           "level": "warning",
@@ -3750,6 +5487,27 @@
         {
           "level": "warning",
           "category": "NEEDS_SYNC",
+          "token": "component.skeleton.text-height",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.4}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.skeleton.circle-size",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.10}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.skeleton.rect-height",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 120
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
           "token": "component.skeleton.fill",
           "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
           "figma": "{semantic.state.disabled.background}"
@@ -3778,9 +5536,72 @@
         {
           "level": "warning",
           "category": "NEEDS_SYNC",
+          "token": "component.spinner.size.sm",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.4}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.spinner.size.md",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.6}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.spinner.size.lg",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.8}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.spinner.stroke-width.sm",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 1.5
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.spinner.stroke-width.md",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.0-5}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.spinner.stroke-width.lg",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 3
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
           "token": "component.spinner.border-radius",
           "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
           "figma": "{foundation.radius.full}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.textarea.min-height.sm",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 68
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.textarea.min-height.md",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.20}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.textarea.min-height.lg",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 112
         },
         {
           "level": "warning",
@@ -3872,6 +5693,69 @@
           "token": "component.textarea.counter-font-weight",
           "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
           "figma": "{semantic.typography.body.font-weight.medium}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.toggle.track-width.sm",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.7}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.toggle.track-width.md",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.9}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.toggle.track-width.lg",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.11}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.toggle.track-height.sm",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.4}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.toggle.track-height.md",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.5}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.toggle.track-height.lg",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.6}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.toggle.thumb-size.sm",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.2-5}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.toggle.thumb-size.md",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{foundation.spacing.3-5}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.toggle.thumb-size.lg",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": 18
         },
         {
           "level": "warning",
@@ -4129,6 +6013,72 @@
       "diffs": {
         "VALUE_DRIFT": [
           {
+            "file": "foundation/spacing.json",
+            "token": "foundation.spacing.2",
+            "figma": 8,
+            "json": "0.125rem"
+          },
+          {
+            "file": "foundation/spacing.json",
+            "token": "foundation.spacing.4",
+            "figma": 16,
+            "json": "0.25rem"
+          },
+          {
+            "file": "foundation/spacing.json",
+            "token": "foundation.spacing.6",
+            "figma": 24,
+            "json": "0.375rem"
+          },
+          {
+            "file": "foundation/spacing.json",
+            "token": "foundation.spacing.8",
+            "figma": 32,
+            "json": "0.5rem"
+          },
+          {
+            "file": "foundation/spacing.json",
+            "token": "foundation.spacing.10",
+            "figma": 40,
+            "json": "0.625rem"
+          },
+          {
+            "file": "foundation/spacing.json",
+            "token": "foundation.spacing.12",
+            "figma": 48,
+            "json": "0.75rem"
+          },
+          {
+            "file": "foundation/spacing.json",
+            "token": "foundation.spacing.14",
+            "figma": 56,
+            "json": "0.875rem"
+          },
+          {
+            "file": "foundation/spacing.json",
+            "token": "foundation.spacing.16",
+            "figma": 64,
+            "json": "1rem"
+          },
+          {
+            "file": "foundation/spacing.json",
+            "token": "foundation.spacing.20",
+            "figma": 80,
+            "json": "1.25rem"
+          },
+          {
+            "file": "foundation/spacing.json",
+            "token": "foundation.spacing.24",
+            "figma": 96,
+            "json": "1.5rem"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.border.subtle",
+            "figma": "{foundation.color.neutral.300}",
+            "json": "{foundation.color.neutral.200}"
+          },
+          {
             "file": "semantic/light.json",
             "token": "semantic.border.focus",
             "figma": "{semantic.brand.default}",
@@ -4142,9 +6092,189 @@
           },
           {
             "file": "semantic/light.json",
+            "token": "semantic.space.section.sm",
+            "figma": "{foundation.spacing.8}",
+            "json": "{foundation.spacing.32}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.space.section.md",
+            "figma": "{foundation.spacing.12}",
+            "json": "{foundation.spacing.48}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.space.section.lg",
+            "figma": "{foundation.spacing.16}",
+            "json": "{foundation.spacing.64}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.space.section.xl",
+            "figma": "{foundation.spacing.20}",
+            "json": "{foundation.spacing.80}"
+          },
+          {
+            "file": "semantic/light.json",
             "token": "semantic.border.error",
             "figma": "{semantic.feedback.error.default}",
             "json": "{semantic.feedback.error.bg-default}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.size.control.sm",
+            "figma": "{foundation.spacing.8}",
+            "json": "{foundation.spacing.32}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.size.control.md",
+            "figma": "{foundation.spacing.10}",
+            "json": "{foundation.spacing.40}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.size.control.lg",
+            "figma": "{foundation.spacing.12}",
+            "json": "{foundation.spacing.48}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.size.control.icon.sm",
+            "figma": "{foundation.spacing.4}",
+            "json": "{foundation.spacing.16}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.size.control.icon.md",
+            "figma": "{foundation.spacing.5}",
+            "json": "{foundation.spacing.20}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.size.control.icon.lg",
+            "figma": "{foundation.spacing.6}",
+            "json": "{foundation.spacing.24}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.size.control.min-target",
+            "figma": "{foundation.spacing.11}",
+            "json": "{foundation.spacing.44}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.space.control.padding-x.sm",
+            "figma": "{foundation.spacing.3}",
+            "json": "{foundation.spacing.12}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.space.control.padding-x.md",
+            "figma": "{foundation.spacing.4}",
+            "json": "{foundation.spacing.16}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.space.control.padding-x.lg",
+            "figma": "{foundation.spacing.5}",
+            "json": "{foundation.spacing.20}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.space.control.padding-y.sm",
+            "figma": "{foundation.spacing.2}",
+            "json": "{foundation.spacing.8}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.space.control.padding-y.md",
+            "figma": "{foundation.spacing.2-5}",
+            "json": "{foundation.spacing.10}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.space.control.padding-y.lg",
+            "figma": "{foundation.spacing.3}",
+            "json": "{foundation.spacing.12}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.typography.control.font-size.sm",
+            "figma": "{foundation.typography.font.size.sm}",
+            "json": "{foundation.typography.font.size.12}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.typography.control.font-size.md",
+            "figma": "{foundation.typography.font.size.sm}",
+            "json": "{foundation.typography.font.size.12}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.typography.control.font-size.lg",
+            "figma": "{foundation.typography.font.size.md}",
+            "json": "{foundation.typography.font.size.16}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.typography.control.line-height.sm",
+            "figma": "{foundation.spacing.4}",
+            "json": "{foundation.spacing.16}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.typography.control.line-height.md",
+            "figma": "{foundation.spacing.5}",
+            "json": "{foundation.spacing.20}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.typography.control.line-height.lg",
+            "figma": "{foundation.spacing.6}",
+            "json": "{foundation.spacing.24}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.typography.body.font-size.xs",
+            "figma": "{foundation.typography.font.size.xs}",
+            "json": "{foundation.typography.font.size.11}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.typography.body.font-size.sm",
+            "figma": "{foundation.typography.font.size.sm}",
+            "json": "{foundation.typography.font.size.12}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.typography.body.font-size.md",
+            "figma": "{foundation.typography.font.size.md}",
+            "json": "{foundation.typography.font.size.16}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.typography.body.font-size.lg",
+            "figma": "{foundation.typography.font.size.lg}",
+            "json": "{foundation.typography.font.size.18}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.typography.body.font-size.xl",
+            "figma": "{foundation.typography.font.size.xl}",
+            "json": "{foundation.typography.font.size.20}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.typography.body.font-size.2xl",
+            "figma": "{foundation.typography.font.size.2xl}",
+            "json": "{foundation.typography.font.size.24}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.typography.body.font-size.3xl",
+            "figma": "{foundation.typography.font.size.3xl}",
+            "json": "{foundation.typography.font.size.28}"
           },
           {
             "file": "semantic/dark.json",
@@ -4160,15 +6290,189 @@
           },
           {
             "file": "semantic/dark.json",
+            "token": "semantic.space.section.sm",
+            "figma": "{foundation.spacing.8}",
+            "json": "{foundation.spacing.32}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.space.section.md",
+            "figma": "{foundation.spacing.12}",
+            "json": "{foundation.spacing.48}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.space.section.lg",
+            "figma": "{foundation.spacing.16}",
+            "json": "{foundation.spacing.64}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.space.section.xl",
+            "figma": "{foundation.spacing.20}",
+            "json": "{foundation.spacing.80}"
+          },
+          {
+            "file": "semantic/dark.json",
             "token": "semantic.border.error",
             "figma": "{semantic.feedback.error.default}",
             "json": "{semantic.feedback.error.bg-default}"
           },
           {
-            "file": "component/spinner.json",
-            "token": "component.spinner.stroke-width.md",
-            "figma": "{foundation.spacing.0-5}",
-            "json": "{foundation.border.width.2}"
+            "file": "semantic/dark.json",
+            "token": "semantic.size.control.sm",
+            "figma": "{foundation.spacing.8}",
+            "json": "{foundation.spacing.32}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.size.control.md",
+            "figma": "{foundation.spacing.10}",
+            "json": "{foundation.spacing.40}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.size.control.lg",
+            "figma": "{foundation.spacing.12}",
+            "json": "{foundation.spacing.48}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.size.control.icon.sm",
+            "figma": "{foundation.spacing.4}",
+            "json": "{foundation.spacing.16}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.size.control.icon.md",
+            "figma": "{foundation.spacing.5}",
+            "json": "{foundation.spacing.20}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.size.control.icon.lg",
+            "figma": "{foundation.spacing.6}",
+            "json": "{foundation.spacing.24}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.size.control.min-target",
+            "figma": "{foundation.spacing.11}",
+            "json": "{foundation.spacing.44}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.space.control.padding-x.sm",
+            "figma": "{foundation.spacing.3}",
+            "json": "{foundation.spacing.12}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.space.control.padding-x.md",
+            "figma": "{foundation.spacing.4}",
+            "json": "{foundation.spacing.16}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.space.control.padding-x.lg",
+            "figma": "{foundation.spacing.5}",
+            "json": "{foundation.spacing.20}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.space.control.padding-y.sm",
+            "figma": "{foundation.spacing.2}",
+            "json": "{foundation.spacing.8}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.space.control.padding-y.md",
+            "figma": "{foundation.spacing.2-5}",
+            "json": "{foundation.spacing.10}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.space.control.padding-y.lg",
+            "figma": "{foundation.spacing.3}",
+            "json": "{foundation.spacing.12}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.typography.control.font-size.sm",
+            "figma": "{foundation.typography.font.size.sm}",
+            "json": "{foundation.typography.font.size.12}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.typography.control.font-size.md",
+            "figma": "{foundation.typography.font.size.sm}",
+            "json": "{foundation.typography.font.size.12}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.typography.control.font-size.lg",
+            "figma": "{foundation.typography.font.size.md}",
+            "json": "{foundation.typography.font.size.16}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.typography.control.line-height.sm",
+            "figma": "{foundation.spacing.4}",
+            "json": "{foundation.spacing.16}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.typography.control.line-height.md",
+            "figma": "{foundation.spacing.5}",
+            "json": "{foundation.spacing.20}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.typography.control.line-height.lg",
+            "figma": "{foundation.spacing.6}",
+            "json": "{foundation.spacing.24}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.typography.body.font-size.xs",
+            "figma": "{foundation.typography.font.size.xs}",
+            "json": "{foundation.typography.font.size.11}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.typography.body.font-size.sm",
+            "figma": "{foundation.typography.font.size.sm}",
+            "json": "{foundation.typography.font.size.12}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.typography.body.font-size.md",
+            "figma": "{foundation.typography.font.size.md}",
+            "json": "{foundation.typography.font.size.16}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.typography.body.font-size.lg",
+            "figma": "{foundation.typography.font.size.lg}",
+            "json": "{foundation.typography.font.size.18}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.typography.body.font-size.xl",
+            "figma": "{foundation.typography.font.size.xl}",
+            "json": "{foundation.typography.font.size.20}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.typography.body.font-size.2xl",
+            "figma": "{foundation.typography.font.size.2xl}",
+            "json": "{foundation.typography.font.size.24}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.typography.body.font-size.3xl",
+            "figma": "{foundation.typography.font.size.3xl}",
+            "json": "{foundation.typography.font.size.28}"
           }
         ],
         "NEW_IN_FIGMA": [
@@ -4181,6 +6485,181 @@
             "file": "foundation/brand.json",
             "token": "foundation.brand.secondary",
             "figma": "{foundation.color.purple.600}"
+          },
+          {
+            "file": "foundation/opacity.json",
+            "token": "foundation.opacity.0",
+            "figma": 0
+          },
+          {
+            "file": "foundation/spacing.json",
+            "token": "foundation.spacing.0",
+            "figma": 0
+          },
+          {
+            "file": "foundation/spacing.json",
+            "token": "foundation.spacing.0-5",
+            "figma": 2
+          },
+          {
+            "file": "foundation/spacing.json",
+            "token": "foundation.spacing.1",
+            "figma": 4
+          },
+          {
+            "file": "foundation/spacing.json",
+            "token": "foundation.spacing.1-5",
+            "figma": 6
+          },
+          {
+            "file": "foundation/spacing.json",
+            "token": "foundation.spacing.2-5",
+            "figma": 10
+          },
+          {
+            "file": "foundation/spacing.json",
+            "token": "foundation.spacing.3",
+            "figma": 12
+          },
+          {
+            "file": "foundation/spacing.json",
+            "token": "foundation.spacing.3-5",
+            "figma": 14
+          },
+          {
+            "file": "foundation/spacing.json",
+            "token": "foundation.spacing.5",
+            "figma": 20
+          },
+          {
+            "file": "foundation/spacing.json",
+            "token": "foundation.spacing.7",
+            "figma": 28
+          },
+          {
+            "file": "foundation/spacing.json",
+            "token": "foundation.spacing.9",
+            "figma": 36
+          },
+          {
+            "file": "foundation/spacing.json",
+            "token": "foundation.spacing.11",
+            "figma": 44
+          },
+          {
+            "file": "foundation/radius.json",
+            "token": "foundation.radius.none",
+            "figma": 0
+          },
+          {
+            "file": "foundation/radius.json",
+            "token": "foundation.radius.xs",
+            "figma": 2
+          },
+          {
+            "file": "foundation/radius.json",
+            "token": "foundation.radius.sm",
+            "figma": 4
+          },
+          {
+            "file": "foundation/radius.json",
+            "token": "foundation.radius.md",
+            "figma": 8
+          },
+          {
+            "file": "foundation/radius.json",
+            "token": "foundation.radius.lg",
+            "figma": 12
+          },
+          {
+            "file": "foundation/radius.json",
+            "token": "foundation.radius.xl",
+            "figma": 16
+          },
+          {
+            "file": "foundation/radius.json",
+            "token": "foundation.radius.2xl",
+            "figma": 24
+          },
+          {
+            "file": "foundation/radius.json",
+            "token": "foundation.radius.full",
+            "figma": 9999
+          },
+          {
+            "file": "foundation/stroke.json",
+            "token": "foundation.border.width.0",
+            "figma": 0
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.size.xs",
+            "figma": 11
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.size.sm",
+            "figma": 12
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.size.md",
+            "figma": 16
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.size.lg",
+            "figma": 18
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.size.xl",
+            "figma": 20
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.size.2xl",
+            "figma": 24
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.size.3xl",
+            "figma": 28
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.size.4xl",
+            "figma": 32
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.size.5xl",
+            "figma": 40
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.size.6xl",
+            "figma": 48
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.size.7xl",
+            "figma": 56
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.size.8xl",
+            "figma": 64
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.size.9xl",
+            "figma": 72
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.size.2xs",
+            "figma": 11
           },
           {
             "file": "semantic/light.json",
@@ -4369,6 +6848,91 @@
           },
           {
             "file": "semantic/light.json",
+            "token": "semantic.space.inset.xs",
+            "figma": "{foundation.spacing.1}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.space.inset.sm",
+            "figma": "{foundation.spacing.2}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.space.inset.md",
+            "figma": "{foundation.spacing.3}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.space.inset.lg",
+            "figma": "{foundation.spacing.4}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.space.inset.xl",
+            "figma": "{foundation.spacing.6}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.space.gap.xs",
+            "figma": "{foundation.spacing.1}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.space.gap.sm",
+            "figma": "{foundation.spacing.2}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.space.gap.md",
+            "figma": "{foundation.spacing.3}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.space.gap.lg",
+            "figma": "{foundation.spacing.4}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.space.gap.xl",
+            "figma": "{foundation.spacing.6}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.space.component.xs",
+            "figma": "{foundation.spacing.1}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.space.component.sm",
+            "figma": "{foundation.spacing.2}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.space.component.md",
+            "figma": "{foundation.spacing.3}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.space.component.lg",
+            "figma": "{foundation.spacing.4}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.space.component.xl",
+            "figma": "{foundation.spacing.5}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.space.component.2xl",
+            "figma": "{foundation.spacing.6}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.radius.component",
+            "figma": "{foundation.radius.md}"
+          },
+          {
+            "file": "semantic/light.json",
             "token": "semantic.accent.default",
             "figma": "{foundation.brand.secondary}"
           },
@@ -4469,6 +7033,11 @@
           },
           {
             "file": "semantic/light.json",
+            "token": "semantic.space.inset.2xs",
+            "figma": "{foundation.spacing.0-5}"
+          },
+          {
+            "file": "semantic/light.json",
             "token": "semantic.border.control.default",
             "figma": "{foundation.color.neutral.500}"
           },
@@ -4481,6 +7050,11 @@
             "file": "semantic/light.json",
             "token": "semantic.border.control.disabled",
             "figma": "{foundation.color.neutral.300}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.space.gap.2xs",
+            "figma": "{foundation.spacing.0-5}"
           },
           {
             "file": "semantic/dark.json",
@@ -4669,6 +7243,91 @@
           },
           {
             "file": "semantic/dark.json",
+            "token": "semantic.space.inset.xs",
+            "figma": "{foundation.spacing.1}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.space.inset.sm",
+            "figma": "{foundation.spacing.2}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.space.inset.md",
+            "figma": "{foundation.spacing.3}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.space.inset.lg",
+            "figma": "{foundation.spacing.4}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.space.inset.xl",
+            "figma": "{foundation.spacing.6}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.space.gap.xs",
+            "figma": "{foundation.spacing.1}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.space.gap.sm",
+            "figma": "{foundation.spacing.2}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.space.gap.md",
+            "figma": "{foundation.spacing.3}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.space.gap.lg",
+            "figma": "{foundation.spacing.4}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.space.gap.xl",
+            "figma": "{foundation.spacing.6}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.space.component.xs",
+            "figma": "{foundation.spacing.1}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.space.component.sm",
+            "figma": "{foundation.spacing.2}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.space.component.md",
+            "figma": "{foundation.spacing.3}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.space.component.lg",
+            "figma": "{foundation.spacing.4}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.space.component.xl",
+            "figma": "{foundation.spacing.5}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.space.component.2xl",
+            "figma": "{foundation.spacing.6}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.radius.component",
+            "figma": "{foundation.radius.md}"
+          },
+          {
+            "file": "semantic/dark.json",
             "token": "semantic.accent.default",
             "figma": "{foundation.brand.secondary}"
           },
@@ -4769,6 +7428,11 @@
           },
           {
             "file": "semantic/dark.json",
+            "token": "semantic.space.inset.2xs",
+            "figma": "{foundation.spacing.0-5}"
+          },
+          {
+            "file": "semantic/dark.json",
             "token": "semantic.border.control.default",
             "figma": "{foundation.color.neutral.500}"
           },
@@ -4781,6 +7445,26 @@
             "file": "semantic/dark.json",
             "token": "semantic.border.control.disabled",
             "figma": "{foundation.color.neutral.700}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.space.gap.2xs",
+            "figma": "{foundation.spacing.0-5}"
+          },
+          {
+            "file": "component/button.json",
+            "token": "component.button.height.sm",
+            "figma": "{semantic.size.control.sm}"
+          },
+          {
+            "file": "component/button.json",
+            "token": "component.button.height.md",
+            "figma": "{semantic.size.control.md}"
+          },
+          {
+            "file": "component/button.json",
+            "token": "component.button.height.lg",
+            "figma": "{semantic.size.control.lg}"
           },
           {
             "file": "component/button.json",
@@ -4889,6 +7573,51 @@
           },
           {
             "file": "component/avatar.json",
+            "token": "component.avatar.size.sm",
+            "figma": "{foundation.spacing.8}"
+          },
+          {
+            "file": "component/avatar.json",
+            "token": "component.avatar.size.md",
+            "figma": "{foundation.spacing.10}"
+          },
+          {
+            "file": "component/avatar.json",
+            "token": "component.avatar.size.lg",
+            "figma": "{foundation.spacing.14}"
+          },
+          {
+            "file": "component/avatar.json",
+            "token": "component.avatar.font-size.sm",
+            "figma": "{foundation.typography.font.size.xs}"
+          },
+          {
+            "file": "component/avatar.json",
+            "token": "component.avatar.font-size.md",
+            "figma": "{foundation.typography.font.size.sm}"
+          },
+          {
+            "file": "component/avatar.json",
+            "token": "component.avatar.font-size.lg",
+            "figma": "{foundation.typography.font.size.lg}"
+          },
+          {
+            "file": "component/avatar.json",
+            "token": "component.avatar.icon-size.sm",
+            "figma": "{foundation.spacing.4}"
+          },
+          {
+            "file": "component/avatar.json",
+            "token": "component.avatar.icon-size.md",
+            "figma": "{foundation.spacing.5}"
+          },
+          {
+            "file": "component/avatar.json",
+            "token": "component.avatar.icon-size.lg",
+            "figma": "{foundation.spacing.7}"
+          },
+          {
+            "file": "component/avatar.json",
             "token": "component.avatar.border-radius",
             "figma": "{foundation.radius.full}"
           },
@@ -4896,6 +7625,51 @@
             "file": "component/avatar.json",
             "token": "component.avatar.font-weight",
             "figma": "{semantic.typography.body.font-weight.semibold}"
+          },
+          {
+            "file": "component/checkbox.json",
+            "token": "component.checkbox.control-size.sm",
+            "figma": "{foundation.spacing.4}"
+          },
+          {
+            "file": "component/checkbox.json",
+            "token": "component.checkbox.control-size.md",
+            "figma": "{foundation.spacing.5}"
+          },
+          {
+            "file": "component/checkbox.json",
+            "token": "component.checkbox.control-size.lg",
+            "figma": "{foundation.spacing.6}"
+          },
+          {
+            "file": "component/checkbox.json",
+            "token": "component.checkbox.check-width.sm",
+            "figma": "{foundation.spacing.1}"
+          },
+          {
+            "file": "component/checkbox.json",
+            "token": "component.checkbox.check-width.md",
+            "figma": 5
+          },
+          {
+            "file": "component/checkbox.json",
+            "token": "component.checkbox.check-width.lg",
+            "figma": "{foundation.spacing.1-5}"
+          },
+          {
+            "file": "component/checkbox.json",
+            "token": "component.checkbox.check-height.sm",
+            "figma": "{foundation.spacing.2}"
+          },
+          {
+            "file": "component/checkbox.json",
+            "token": "component.checkbox.check-height.md",
+            "figma": "{foundation.spacing.2-5}"
+          },
+          {
+            "file": "component/checkbox.json",
+            "token": "component.checkbox.check-height.lg",
+            "figma": "{foundation.spacing.3}"
           },
           {
             "file": "component/checkbox.json",
@@ -4911,6 +7685,21 @@
             "file": "component/checkbox.json",
             "token": "component.checkbox.font-size",
             "figma": "{foundation.typography.font.size.sm}"
+          },
+          {
+            "file": "component/input.json",
+            "token": "component.input.height.sm",
+            "figma": "{semantic.size.control.sm}"
+          },
+          {
+            "file": "component/input.json",
+            "token": "component.input.height.md",
+            "figma": "{semantic.size.control.md}"
+          },
+          {
+            "file": "component/input.json",
+            "token": "component.input.height.lg",
+            "figma": "{semantic.size.control.lg}"
           },
           {
             "file": "component/input.json",
@@ -4989,6 +7778,21 @@
           },
           {
             "file": "component/modal.json",
+            "token": "component.modal.max-width.sm",
+            "figma": 400
+          },
+          {
+            "file": "component/modal.json",
+            "token": "component.modal.max-width.md",
+            "figma": 520
+          },
+          {
+            "file": "component/modal.json",
+            "token": "component.modal.max-width.lg",
+            "figma": 640
+          },
+          {
+            "file": "component/modal.json",
             "token": "component.modal.padding",
             "figma": "{semantic.space.inset.lg}"
           },
@@ -5031,6 +7835,36 @@
             "file": "component/modal.json",
             "token": "component.modal.viewport-offset",
             "figma": "{semantic.space.section.sm}"
+          },
+          {
+            "file": "component/radio.json",
+            "token": "component.radio.control-size.sm",
+            "figma": "{foundation.spacing.4}"
+          },
+          {
+            "file": "component/radio.json",
+            "token": "component.radio.control-size.md",
+            "figma": "{foundation.spacing.5}"
+          },
+          {
+            "file": "component/radio.json",
+            "token": "component.radio.control-size.lg",
+            "figma": "{foundation.spacing.6}"
+          },
+          {
+            "file": "component/radio.json",
+            "token": "component.radio.dot-size.sm",
+            "figma": "{foundation.spacing.1-5}"
+          },
+          {
+            "file": "component/radio.json",
+            "token": "component.radio.dot-size.md",
+            "figma": "{foundation.spacing.2}"
+          },
+          {
+            "file": "component/radio.json",
+            "token": "component.radio.dot-size.lg",
+            "figma": "{foundation.spacing.2-5}"
           },
           {
             "file": "component/radio.json",
@@ -5079,6 +7913,21 @@
           },
           {
             "file": "component/select.json",
+            "token": "component.select.height.sm",
+            "figma": "{semantic.size.control.sm}"
+          },
+          {
+            "file": "component/select.json",
+            "token": "component.select.height.md",
+            "figma": "{semantic.size.control.md}"
+          },
+          {
+            "file": "component/select.json",
+            "token": "component.select.height.lg",
+            "figma": "{semantic.size.control.lg}"
+          },
+          {
+            "file": "component/select.json",
             "token": "component.select.gap",
             "figma": "{semantic.space.gap.xs}"
           },
@@ -5101,6 +7950,26 @@
             "file": "component/select.json",
             "token": "component.select.font-size.lg",
             "figma": "{semantic.typography.control.font-size.lg}"
+          },
+          {
+            "file": "component/select.json",
+            "token": "component.select.arrow-size",
+            "figma": "{foundation.spacing.4}"
+          },
+          {
+            "file": "component/select.json",
+            "token": "component.select.arrow-offset.sm",
+            "figma": "{foundation.spacing.2}"
+          },
+          {
+            "file": "component/select.json",
+            "token": "component.select.arrow-offset.md",
+            "figma": "{foundation.spacing.3}"
+          },
+          {
+            "file": "component/select.json",
+            "token": "component.select.arrow-offset.lg",
+            "figma": "{foundation.spacing.4}"
           },
           {
             "file": "component/select.json",
@@ -5134,6 +8003,21 @@
           },
           {
             "file": "component/skeleton.json",
+            "token": "component.skeleton.text-height",
+            "figma": "{foundation.spacing.4}"
+          },
+          {
+            "file": "component/skeleton.json",
+            "token": "component.skeleton.circle-size",
+            "figma": "{foundation.spacing.10}"
+          },
+          {
+            "file": "component/skeleton.json",
+            "token": "component.skeleton.rect-height",
+            "figma": 120
+          },
+          {
+            "file": "component/skeleton.json",
             "token": "component.skeleton.fill",
             "figma": "{semantic.state.disabled.background}"
           },
@@ -5154,8 +8038,53 @@
           },
           {
             "file": "component/spinner.json",
+            "token": "component.spinner.size.sm",
+            "figma": "{foundation.spacing.4}"
+          },
+          {
+            "file": "component/spinner.json",
+            "token": "component.spinner.size.md",
+            "figma": "{foundation.spacing.6}"
+          },
+          {
+            "file": "component/spinner.json",
+            "token": "component.spinner.size.lg",
+            "figma": "{foundation.spacing.8}"
+          },
+          {
+            "file": "component/spinner.json",
+            "token": "component.spinner.stroke-width.sm",
+            "figma": 1.5
+          },
+          {
+            "file": "component/spinner.json",
+            "token": "component.spinner.stroke-width.md",
+            "figma": "{foundation.spacing.0-5}"
+          },
+          {
+            "file": "component/spinner.json",
+            "token": "component.spinner.stroke-width.lg",
+            "figma": 3
+          },
+          {
+            "file": "component/spinner.json",
             "token": "component.spinner.border-radius",
             "figma": "{foundation.radius.full}"
+          },
+          {
+            "file": "component/textarea.json",
+            "token": "component.textarea.min-height.sm",
+            "figma": 68
+          },
+          {
+            "file": "component/textarea.json",
+            "token": "component.textarea.min-height.md",
+            "figma": "{foundation.spacing.20}"
+          },
+          {
+            "file": "component/textarea.json",
+            "token": "component.textarea.min-height.lg",
+            "figma": 112
           },
           {
             "file": "component/textarea.json",
@@ -5221,6 +8150,51 @@
             "file": "component/textarea.json",
             "token": "component.textarea.counter-font-weight",
             "figma": "{semantic.typography.body.font-weight.medium}"
+          },
+          {
+            "file": "component/toggle.json",
+            "token": "component.toggle.track-width.sm",
+            "figma": "{foundation.spacing.7}"
+          },
+          {
+            "file": "component/toggle.json",
+            "token": "component.toggle.track-width.md",
+            "figma": "{foundation.spacing.9}"
+          },
+          {
+            "file": "component/toggle.json",
+            "token": "component.toggle.track-width.lg",
+            "figma": "{foundation.spacing.11}"
+          },
+          {
+            "file": "component/toggle.json",
+            "token": "component.toggle.track-height.sm",
+            "figma": "{foundation.spacing.4}"
+          },
+          {
+            "file": "component/toggle.json",
+            "token": "component.toggle.track-height.md",
+            "figma": "{foundation.spacing.5}"
+          },
+          {
+            "file": "component/toggle.json",
+            "token": "component.toggle.track-height.lg",
+            "figma": "{foundation.spacing.6}"
+          },
+          {
+            "file": "component/toggle.json",
+            "token": "component.toggle.thumb-size.sm",
+            "figma": "{foundation.spacing.2-5}"
+          },
+          {
+            "file": "component/toggle.json",
+            "token": "component.toggle.thumb-size.md",
+            "figma": "{foundation.spacing.3-5}"
+          },
+          {
+            "file": "component/toggle.json",
+            "token": "component.toggle.thumb-size.lg",
+            "figma": 18
           },
           {
             "file": "component/toggle.json",
@@ -5458,6 +8432,161 @@
             "file": "foundation/colors.json",
             "token": "foundation.color.brand.950",
             "json": "#172554"
+          },
+          {
+            "file": "foundation/spacing.json",
+            "token": "foundation.spacing.28",
+            "json": "1.75rem"
+          },
+          {
+            "file": "foundation/spacing.json",
+            "token": "foundation.spacing.32",
+            "json": "2rem"
+          },
+          {
+            "file": "foundation/spacing.json",
+            "token": "foundation.spacing.36",
+            "json": "2.25rem"
+          },
+          {
+            "file": "foundation/spacing.json",
+            "token": "foundation.spacing.40",
+            "json": "2.5rem"
+          },
+          {
+            "file": "foundation/spacing.json",
+            "token": "foundation.spacing.44",
+            "json": "2.75rem"
+          },
+          {
+            "file": "foundation/spacing.json",
+            "token": "foundation.spacing.48",
+            "json": "3rem"
+          },
+          {
+            "file": "foundation/spacing.json",
+            "token": "foundation.spacing.56",
+            "json": "3.5rem"
+          },
+          {
+            "file": "foundation/spacing.json",
+            "token": "foundation.spacing.64",
+            "json": "4rem"
+          },
+          {
+            "file": "foundation/spacing.json",
+            "token": "foundation.spacing.80",
+            "json": "5rem"
+          },
+          {
+            "file": "foundation/spacing.json",
+            "token": "foundation.spacing.96",
+            "json": "6rem"
+          },
+          {
+            "file": "foundation/radius.json",
+            "token": "foundation.radius.2",
+            "json": "0.125rem"
+          },
+          {
+            "file": "foundation/radius.json",
+            "token": "foundation.radius.4",
+            "json": "0.25rem"
+          },
+          {
+            "file": "foundation/radius.json",
+            "token": "foundation.radius.8",
+            "json": "0.5rem"
+          },
+          {
+            "file": "foundation/radius.json",
+            "token": "foundation.radius.12",
+            "json": "0.75rem"
+          },
+          {
+            "file": "foundation/radius.json",
+            "token": "foundation.radius.16",
+            "json": "1rem"
+          },
+          {
+            "file": "foundation/radius.json",
+            "token": "foundation.radius.24",
+            "json": "1.5rem"
+          },
+          {
+            "file": "foundation/radius.json",
+            "token": "foundation.radius.9999",
+            "json": "9999px"
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.size.11",
+            "json": "0.6875rem"
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.size.12",
+            "json": "0.75rem"
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.size.14",
+            "json": "0.875rem"
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.size.16",
+            "json": "1rem"
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.size.18",
+            "json": "1.125rem"
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.size.20",
+            "json": "1.25rem"
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.size.24",
+            "json": "1.5rem"
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.size.28",
+            "json": "1.75rem"
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.size.32",
+            "json": "2rem"
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.size.40",
+            "json": "2.5rem"
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.size.48",
+            "json": "3rem"
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.size.56",
+            "json": "3.5rem"
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.size.64",
+            "json": "4rem"
+          },
+          {
+            "file": "foundation/typography.json",
+            "token": "foundation.typography.font.size.72",
+            "json": "4.5rem"
           },
           {
             "file": "semantic/light.json",
@@ -5771,28 +8900,153 @@
           },
           {
             "file": "semantic/light.json",
+            "token": "semantic.space.2xs",
+            "json": "{foundation.spacing.2}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.space.xs",
+            "json": "{foundation.spacing.4}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.space.sm",
+            "json": "{foundation.spacing.8}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.space.md",
+            "json": "{foundation.spacing.12}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.space.lg",
+            "json": "{foundation.spacing.16}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.space.xl",
+            "json": "{foundation.spacing.20}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.space.2xl",
+            "json": "{foundation.spacing.24}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.size.avatar.sm",
+            "json": "{foundation.spacing.32}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.size.avatar.md",
+            "json": "{foundation.spacing.40}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.size.avatar.lg",
+            "json": "{foundation.spacing.56}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.size.avatar.icon.sm",
+            "json": "{foundation.spacing.16}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.size.avatar.icon.md",
+            "json": "{foundation.spacing.20}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.size.avatar.icon.lg",
+            "json": "{foundation.spacing.28}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.size.modal.max-width.sm",
+            "json": "25rem"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.size.modal.max-width.md",
+            "json": "32.5rem"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.size.modal.max-width.lg",
+            "json": "40rem"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.size.spinner.md",
+            "json": "{foundation.spacing.24}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.size.spinner.lg",
+            "json": "{foundation.spacing.32}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.size.skeleton.rect-height",
+            "json": "7.5rem"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.size.textarea.min-height.sm",
+            "json": "4.25rem"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.size.textarea.min-height.md",
+            "json": "{foundation.spacing.80}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.size.textarea.min-height.lg",
+            "json": "7rem"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.size.toggle.track-width.sm",
+            "json": "{foundation.spacing.28}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.size.toggle.track-width.md",
+            "json": "{foundation.spacing.36}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.size.toggle.track-width.lg",
+            "json": "{foundation.spacing.44}"
+          },
+          {
+            "file": "semantic/light.json",
             "token": "semantic.radius.sm",
-            "json": "{foundation.radius.sm}"
+            "json": "{foundation.radius.4}"
           },
           {
             "file": "semantic/light.json",
             "token": "semantic.radius.md",
-            "json": "{foundation.radius.md}"
+            "json": "{foundation.radius.8}"
           },
           {
             "file": "semantic/light.json",
             "token": "semantic.radius.lg",
-            "json": "{foundation.radius.lg}"
+            "json": "{foundation.radius.12}"
           },
           {
             "file": "semantic/light.json",
             "token": "semantic.radius.xl",
-            "json": "{foundation.radius.xl}"
+            "json": "{foundation.radius.16}"
           },
           {
             "file": "semantic/light.json",
             "token": "semantic.radius.full",
-            "json": "{foundation.radius.full}"
+            "json": "{foundation.radius.9999}"
           },
           {
             "file": "semantic/dark.json",
@@ -6106,28 +9360,153 @@
           },
           {
             "file": "semantic/dark.json",
+            "token": "semantic.space.2xs",
+            "json": "{foundation.spacing.2}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.space.xs",
+            "json": "{foundation.spacing.4}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.space.sm",
+            "json": "{foundation.spacing.8}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.space.md",
+            "json": "{foundation.spacing.12}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.space.lg",
+            "json": "{foundation.spacing.16}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.space.xl",
+            "json": "{foundation.spacing.20}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.space.2xl",
+            "json": "{foundation.spacing.24}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.size.avatar.sm",
+            "json": "{foundation.spacing.32}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.size.avatar.md",
+            "json": "{foundation.spacing.40}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.size.avatar.lg",
+            "json": "{foundation.spacing.56}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.size.avatar.icon.sm",
+            "json": "{foundation.spacing.16}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.size.avatar.icon.md",
+            "json": "{foundation.spacing.20}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.size.avatar.icon.lg",
+            "json": "{foundation.spacing.28}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.size.modal.max-width.sm",
+            "json": "25rem"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.size.modal.max-width.md",
+            "json": "32.5rem"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.size.modal.max-width.lg",
+            "json": "40rem"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.size.spinner.md",
+            "json": "{foundation.spacing.24}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.size.spinner.lg",
+            "json": "{foundation.spacing.32}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.size.skeleton.rect-height",
+            "json": "7.5rem"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.size.textarea.min-height.sm",
+            "json": "4.25rem"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.size.textarea.min-height.md",
+            "json": "{foundation.spacing.80}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.size.textarea.min-height.lg",
+            "json": "7rem"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.size.toggle.track-width.sm",
+            "json": "{foundation.spacing.28}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.size.toggle.track-width.md",
+            "json": "{foundation.spacing.36}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.size.toggle.track-width.lg",
+            "json": "{foundation.spacing.44}"
+          },
+          {
+            "file": "semantic/dark.json",
             "token": "semantic.radius.sm",
-            "json": "{foundation.radius.sm}"
+            "json": "{foundation.radius.4}"
           },
           {
             "file": "semantic/dark.json",
             "token": "semantic.radius.md",
-            "json": "{foundation.radius.md}"
+            "json": "{foundation.radius.8}"
           },
           {
             "file": "semantic/dark.json",
             "token": "semantic.radius.lg",
-            "json": "{foundation.radius.lg}"
+            "json": "{foundation.radius.12}"
           },
           {
             "file": "semantic/dark.json",
             "token": "semantic.radius.xl",
-            "json": "{foundation.radius.xl}"
+            "json": "{foundation.radius.16}"
           },
           {
             "file": "semantic/dark.json",
             "token": "semantic.radius.full",
-            "json": "{foundation.radius.full}"
+            "json": "{foundation.radius.9999}"
           }
         ],
         "CSS_ONLY": [
@@ -6172,18 +9551,6 @@
             "token": "foundation.typography.font.weight.bold",
             "figma": "Bold",
             "json": "700"
-          },
-          {
-            "file": "foundation/typography.json",
-            "token": "foundation.typography.font.size.xs",
-            "figma": 11,
-            "json": "0.75rem"
-          },
-          {
-            "file": "foundation/typography.json",
-            "token": "foundation.typography.font.size.sm",
-            "figma": 12,
-            "json": "0.875rem"
           }
         ],
         "BY_DESIGN": [
