@@ -7,25 +7,25 @@
   <link rel="stylesheet" href="../css/design-system.css">
   <link rel="stylesheet" href="layout.css">
   <style>
-    .ds-md-content h1, .ds-md-content h2, .ds-md-content h3 { margin-top: var(--ds-spacing-32); margin-bottom: var(--ds-spacing-12); color: var(--ds-content-default); }
-    .ds-md-content h1 { font-size: var(--ds-font-size-24); font-weight: var(--ds-font-weight-semibold); margin-top: 0; }
-    .ds-md-content h2 { font-size: var(--ds-font-size-20); font-weight: var(--ds-font-weight-semibold); border-top: var(--ds-border-width-1) solid var(--ds-border-subtle); padding-top: var(--ds-spacing-24); }
-    .ds-md-content h3 { font-size: var(--ds-font-size-18); font-weight: var(--ds-font-weight-semibold); }
-    .ds-md-content p { color: var(--ds-content-secondary); line-height: var(--ds-line-height-relaxed); margin: var(--ds-spacing-12) 0; }
-    .ds-md-content ul, .ds-md-content ol { color: var(--ds-content-secondary); line-height: var(--ds-line-height-relaxed); padding-left: var(--ds-spacing-24); margin: var(--ds-spacing-12) 0; }
-    .ds-md-content li { margin: var(--ds-spacing-4) 0; }
-    .ds-md-content code { font-family: var(--ds-font-family-mono); font-size: 0.9em; background: var(--ds-background-subtle); color: var(--ds-content-link-default); padding: 1px var(--ds-spacing-4); border-radius: var(--ds-radius-4); }
-    .ds-md-content pre { background: var(--ds-color-neutral-900); color: var(--ds-color-neutral-100); padding: var(--ds-spacing-16); border-radius: var(--ds-radius-8); overflow-x: auto; font-size: var(--ds-font-size-14); margin: var(--ds-spacing-16) 0; }
+    .ds-md-content h1, .ds-md-content h2, .ds-md-content h3 { margin-top: var(--ds-spacing-8); margin-bottom: var(--ds-spacing-3); color: var(--ds-content-default); }
+    .ds-md-content h1 { font-size: var(--ds-font-size-2xl); font-weight: var(--ds-font-weight-semibold); margin-top: 0; }
+    .ds-md-content h2 { font-size: var(--ds-font-size-xl); font-weight: var(--ds-font-weight-semibold); border-top: var(--ds-border-width-1) solid var(--ds-border-subtle); padding-top: var(--ds-spacing-6); }
+    .ds-md-content h3 { font-size: var(--ds-font-size-lg); font-weight: var(--ds-font-weight-semibold); }
+    .ds-md-content p { color: var(--ds-content-secondary); line-height: var(--ds-line-height-relaxed); margin: var(--ds-spacing-3) 0; }
+    .ds-md-content ul, .ds-md-content ol { color: var(--ds-content-secondary); line-height: var(--ds-line-height-relaxed); padding-left: var(--ds-spacing-6); margin: var(--ds-spacing-3) 0; }
+    .ds-md-content li { margin: var(--ds-spacing-1) 0; }
+    .ds-md-content code { font-family: var(--ds-font-family-mono); font-size: 0.9em; background: var(--ds-background-subtle); color: var(--ds-content-link-default); padding: 1px var(--ds-spacing-1); border-radius: var(--ds-radius-sm); }
+    .ds-md-content pre { background: var(--ds-color-neutral-900); color: var(--ds-color-neutral-100); padding: var(--ds-spacing-4); border-radius: var(--ds-radius-md); overflow-x: auto; font-size: var(--ds-font-size-sm); margin: var(--ds-spacing-4) 0; }
     .ds-md-content pre code { background: none; color: inherit; padding: 0; }
-    .ds-md-content table { width: 100%; border-collapse: collapse; margin: var(--ds-spacing-16) 0; font-size: var(--ds-font-size-14); }
-    .ds-md-content table th, .ds-md-content table td { text-align: left; padding: var(--ds-spacing-8) var(--ds-spacing-12); border-bottom: var(--ds-border-width-1) solid var(--ds-border-default); }
+    .ds-md-content table { width: 100%; border-collapse: collapse; margin: var(--ds-spacing-4) 0; font-size: var(--ds-font-size-sm); }
+    .ds-md-content table th, .ds-md-content table td { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-1) solid var(--ds-border-default); }
     .ds-md-content table th { font-weight: var(--ds-font-weight-semibold); background: var(--ds-background-subtle); }
     .ds-md-content a { color: var(--ds-content-link-default); }
     .ds-md-content a:hover { color: var(--ds-content-link-hover); }
-    .ds-md-content blockquote { border-left: 3px solid var(--ds-border-default); margin: var(--ds-spacing-16) 0; padding: var(--ds-spacing-8) var(--ds-spacing-16); color: var(--ds-content-tertiary); font-style: italic; }
-    .ds-md-content hr { border: none; border-top: var(--ds-border-width-1) solid var(--ds-border-subtle); margin: var(--ds-spacing-32) 0; }
+    .ds-md-content blockquote { border-left: 3px solid var(--ds-border-default); margin: var(--ds-spacing-4) 0; padding: var(--ds-spacing-2) var(--ds-spacing-4); color: var(--ds-content-tertiary); font-style: italic; }
+    .ds-md-content hr { border: none; border-top: var(--ds-border-width-1) solid var(--ds-border-subtle); margin: var(--ds-spacing-8) 0; }
     .ds-md-content strong { color: var(--ds-content-default); }
-    .ds-md-generated-banner { background: var(--ds-feedback-info-background); color: var(--ds-feedback-info-content-default); padding: var(--ds-spacing-12) var(--ds-spacing-20); border-radius: var(--ds-radius-8); margin-bottom: var(--ds-spacing-24); font-size: var(--ds-font-size-14); }
+    .ds-md-generated-banner { background: var(--ds-feedback-info-background); color: var(--ds-feedback-info-content-default); padding: var(--ds-spacing-3) var(--ds-spacing-5); border-radius: var(--ds-radius-md); margin-bottom: var(--ds-spacing-6); font-size: var(--ds-font-size-sm); }
   </style>
   <script>
     (function(){var l=localStorage.getItem('ds-lang');if(l)document.documentElement.setAttribute('lang',l)})();
@@ -34,7 +34,7 @@
 <body>
 
 <header class="ds-site-header">
-  <div style="display:flex;align-items:center;gap:var(--ds-spacing-16)">
+  <div style="display:flex;align-items:center;gap:var(--ds-spacing-4)">
     <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>
@@ -74,6 +74,55 @@
 <p>O formato é baseado em <a href="https://keepachangelog.com/pt-BR/1.1.0/">Keep a Changelog</a> e o versionamento segue <a href="https://semver.org/lang/pt-BR/">Semantic Versioning</a>.</p>
 <p>Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na faixa 0.x. Regras de bump documentadas em <code>docs/process-versioning.html</code>.</p>
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
+<h3>Migração para 2-layer + Foundation numeric naming (2026-04-24)</h3>
+<p><strong>Mudança arquitetural grande.</strong> Elimina camada Component e renomeia Foundation para naming numérico direto.</p>
+<p><strong>Figma (fonte de verdade):</strong></p>
+<ul>
+<li>Collection <code>Component</code> (61 tokens) <strong>deletada</strong> — era dead code (zero nodes bindados, só aliases sem consumer)</li>
+<li>Foundation renomeado pra numérico direto (40 vars):<ul>
+<li><code>radius/{xs,sm,md,lg,xl,2xl,full}</code> → <code>radius/{2,4,8,12,16,24,9999}</code></li>
+<li><code>typography/font/size/{xs..9xl}</code> → <code>typography/font/size/{11,12,14,16,18,20,24,28,32,40,48,56,64,72}</code></li>
+<li><code>spacing/{0-5,1,1-5,2,...,24}</code> → <code>spacing/{2,4,6,8,...,96}</code> (valor direto no nome)</li>
+</ul>
+</li>
+<li>10 órfãos deletados: <code>spacing/0</code>, <code>radius/none</code>, <code>border/width/0</code>, <code>opacity/0</code>, <code>typography/font/line-height/{tight,snug,normal,relaxed}</code> (% values off-grid), <code>typography/font/size/2xs</code> (duplicata xs=11)</li>
+<li>Criado <code>typography/font/size/14</code> (fixa 3 text styles com binding quebrado pré-existente a ID <code>10:11</code> deletado)</li>
+<li>Semantic — nova escala única <code>space/{2xs..2xl}</code> (7 tokens) dissolvendo <code>space.inset/gap/component</code> (18 tokens deletados, 2.960 bindings rebindadas)</li>
+<li>Semantic — novos size tokens (<code>size.avatar.*</code>, <code>size.modal.*</code>, <code>size.spinner.*</code>, <code>size.skeleton.*</code>, <code>size.textarea.*</code>, <code>size.toggle.*</code>) absorvem o que era Component</li>
+<li><code>semantic.radius.component</code> deletado (alias 1:1 pra md, redundante). <code>radius/full</code> mantém naming &quot;full&quot; em Semantic, aponta pra <code>foundation.radius.9999</code></li>
+<li><code>border/subtle</code> Light recalibrado: era idêntico a <code>border/default</code> (neutral/300) → agora <code>neutral/200</code> (escala coerente subtle &lt; default &lt; strong)</li>
+<li>Fonts <code>typography/font/family/{mono,display}</code> mantidas como reserva (hoje <code>mono</code>=&quot;DM Mono&quot;, <code>display</code>=&quot;Inter&quot; = slot para futura heading font)</li>
+<li>Foundation escopos: <code>scopes: []</code> em todos os 221 tokens (esconde dos pickers internos)</li>
+<li><strong>Pendente manual</strong>: <code>hiddenFromPublishing: true</code> em todos Foundation via UI do Figma (API do plugin quebrada via MCP)</li>
+</ul>
+<p><strong>Repo (derivado):</strong></p>
+<ul>
+<li><code>tokens/component/*</code> — pasta deletada (11 arquivos removidos)</li>
+<li><code>tokens/foundation/*.json</code> — reescrito com naming numérico</li>
+<li><code>tokens/semantic/{light,dark}.json</code> — space consolidado, novos size/*, border.subtle recalibrado light, radius.component removido</li>
+<li><code>css/components/*.css</code> — 143 refs atualizadas pra consumir novos tokens Semantic; vector internals (<code>radio-dot</code>, <code>toggle-thumb</code>, <code>spinner-stroke</code>, <code>checkbox-check</code>) viraram literais px porque são pintura interna de vetor, não token</li>
+<li><code>css/base/*.css</code> — 43 refs atualizadas pro novo naming numérico Foundation</li>
+<li><code>build-tokens.mjs</code> — remove build target <code>component.css</code> (collection não existe)</li>
+<li>CSS gerado sem <code>component.css</code> (só <code>foundation.css</code> + <code>theme-{light,dark}.css</code> + <code>index.css</code>)</li>
+</ul>
+<p><strong>Contagem:</strong></p>
+<ul>
+<li>Foundation: 229 → <strong>221 tokens</strong> (9 deletados, 1 criado = -8 net)</li>
+<li>Semantic: 158 → <strong>165 tokens</strong> (+7 net: novo space +7, novos size +18, eliminados space antigos -18)</li>
+<li>Component: 61 → <strong>0</strong> (collection deletada)</li>
+<li><strong>Total tokens: 448 → 386 (-62, -14%)</strong></li>
+<li>CSS vars geradas: 566 (foundation 236 + theme-light 165 + theme-dark 165)</li>
+</ul>
+<p><strong>Build + verify:</strong></p>
+<ul>
+<li><code>build:tokens</code> passa sem reference errors</li>
+<li><code>JSON integrity</code>: OK. <code>JSON ↔ CSS</code>: OK</li>
+<li>Broken refs Figma em componentes produção: <strong>0</strong> (Button/Input/Modal/Avatar/etc)</li>
+<li>Broken refs em páginas de documentação: 3.851 (dívida pré-existente acumulada de PRs anteriores; cleanup em PR separado)</li>
+<li>Button Style=Success legacy — 168 refs a library externa deprecated (fora do escopo; decisão pendente)</li>
+<li><code>verify:tokens</code>: 6 falsos-positivos &quot;CSS leak&quot; de <code>var(--ds-radius-md)</code> — script ainda assume 3-layer; <code>semantic.radius.md</code> É o consumer-final no 2-layer (não é leak). Script precisa update.</li>
+</ul>
+<p><strong>Bump</strong>: 0.6.0 → <strong>0.7.0</strong> (breaking grande — Component deletada + Foundation renamed; consumers precisam atualizar)</p>
 <h3>Simplificação estrutural Semantic (ADR-014 revisão 2026-04-23)</h3>
 <p>Revisão da ADR-014: estrutura action de 5 níveis (<code>action.{role}.{style}.{prop}.{state}</code>) foi substituída por <strong>categorias peers no root Semantic</strong> com regra de naming alinhada ao padrão Nathan Curtis (Category · Concept · Property · Variant · State) + PDF enviado pelo usuário.</p>
 <p><strong>Novo rational</strong>:</p>
@@ -293,7 +342,7 @@
 <h2>[0.5.17]</h2>
 <h3>Adicionado</h3>
 <ul>
-<li><code>semantic.space.gap.2xs</code> → <code>{foundation.spacing.0-5}</code> (2px). Gera <code>--ds-space-2xs</code> no CSS. Cobre gaps muito compactos entre elementos (Label Row: label + asterisco required). Issue #24.1.</li>
+<li><code>semantic.space.gap.2xs</code> → <code>{foundation.spacing.0-5}</code> (2px). Gera <code>--ds-space-gap-2xs</code> no CSS. Cobre gaps muito compactos entre elementos (Label Row: label + asterisco required). Issue #24.1.</li>
 <li>Variable correspondente em Figma (<code>space/gap/2xs</code> em Semantic collection, alias pra <code>spacing/0-5</code> nos modos Light/Dark).</li>
 </ul>
 <h3>Corrigido (Figma — form controls bindings)</h3>
