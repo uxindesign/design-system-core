@@ -19,24 +19,24 @@
 
 /* Default size: md */
 .ds-avatar {
-  width: var(--ds-avatar-size-md);
-  height: var(--ds-avatar-size-md);
-  font-size: var(--ds-avatar-font-size-md);
+  width: var(--ds-size-avatar-md);
+  height: var(--ds-size-avatar-md);
+  font-size: var(--ds-body-font-size-sm);
 }
 
 /* ---------------------------------------------------------
    Sizes
    --------------------------------------------------------- */
 .ds-avatar--sm {
-  width: var(--ds-avatar-size-sm);
-  height: var(--ds-avatar-size-sm);
-  font-size: var(--ds-avatar-font-size-sm);
+  width: var(--ds-size-avatar-sm);
+  height: var(--ds-size-avatar-sm);
+  font-size: var(--ds-body-font-size-xs);
 }
 
 .ds-avatar--lg {
-  width: var(--ds-avatar-size-lg);
-  height: var(--ds-avatar-size-lg);
-  font-size: var(--ds-avatar-font-size-lg);
+  width: var(--ds-size-avatar-lg);
+  height: var(--ds-size-avatar-lg);
+  font-size: var(--ds-body-font-size-lg);
 }
 
 /* ---------------------------------------------------------
@@ -52,13 +52,13 @@
 
 /* Icon avatar */
 .ds-avatar--icon .material-symbols-outlined {
-  font-size: var(--ds-avatar-icon-size-md);
+  font-size: var(--ds-size-avatar-icon-md);
 }
 
 .ds-avatar--sm.ds-avatar--icon .material-symbols-outlined {
-  font-size: var(--ds-avatar-icon-size-sm);
+  font-size: var(--ds-size-avatar-icon-sm);
 }
 
 .ds-avatar--lg.ds-avatar--icon .material-symbols-outlined {
-  font-size: var(--ds-avatar-icon-size-lg);
+  font-size: var(--ds-size-avatar-icon-lg);
 }

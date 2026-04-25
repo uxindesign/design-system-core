@@ -7,12 +7,12 @@
   <link rel="stylesheet" href="../css/design-system.css">
   <link rel="stylesheet" href="layout.css">
   <style>
-    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-sm); margin-bottom: var(--ds-spacing-8); }
-    .ds-token-table th { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
-    .ds-token-table td { padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
-    .ds-token-table code { font-size: var(--ds-font-size-xs); font-family: var(--ds-font-family-mono); }
-    .ds-token-swatch { width: 32px; height: 32px; border-radius: var(--ds-radius-md); border: var(--ds-border-width-1) solid var(--ds-border-default); display: inline-block; vertical-align: middle; }
-    .ds-code-block { background-color: var(--ds-color-neutral-900); color: var(--ds-color-neutral-200); padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); font-family: var(--ds-font-family-mono); font-size: var(--ds-font-size-xs); line-height: var(--ds-line-height-relaxed); overflow-x: auto; margin-bottom: var(--ds-spacing-6); white-space: pre; }
+    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-14); margin-bottom: var(--ds-spacing-32); }
+    .ds-token-table th { text-align: left; padding: var(--ds-spacing-8) var(--ds-spacing-12); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
+    .ds-token-table td { padding: var(--ds-spacing-8) var(--ds-spacing-12); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
+    .ds-token-table code { font-size: var(--ds-font-size-12); font-family: var(--ds-font-family-mono); }
+    .ds-token-swatch { width: 32px; height: 32px; border-radius: var(--ds-radius-8); border: var(--ds-border-width-1) solid var(--ds-border-default); display: inline-block; vertical-align: middle; }
+    .ds-code-block { background-color: var(--ds-color-neutral-900); color: var(--ds-color-neutral-200); padding: var(--ds-spacing-16) var(--ds-spacing-20); border-radius: var(--ds-radius-12); font-family: var(--ds-font-family-mono); font-size: var(--ds-font-size-12); line-height: var(--ds-line-height-relaxed); overflow-x: auto; margin-bottom: var(--ds-spacing-24); white-space: pre; }
   </style>
   <script>
     (function(){var l=localStorage.getItem('ds-lang');if(l)document.documentElement.setAttribute('lang',l)})();
@@ -21,7 +21,7 @@
 <body>
 
 <header class="ds-site-header">
-  <div style="display:flex;align-items:center;gap:var(--ds-spacing-4)">
+  <div style="display:flex;align-items:center;gap:var(--ds-spacing-16)">
     <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>
@@ -35,13 +35,6 @@
       <option value="pt">PT</option>
       <option value="en">EN</option>
     </select>
-    <div class="ds-theme-switcher">
-      <select class="ds-theme-switcher__select" id="theme-switcher">
-        <option value="default">Default (Blue)</option>
-        <option value="ocean">Ocean (Cyan)</option>
-        <option value="forest">Forest (Emerald)</option>
-      </select>
-    </div>
     <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg> Dark</button>
   </div>
 </header>
@@ -63,6 +56,7 @@
       <tbody>
         <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-background-default)"></span></td><td><code>--ds-background-default</code></td><td><code>neutral-50</code></td><td><code>neutral-950</code></td></tr>
         <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-background-subtle)"></span></td><td><code>--ds-background-subtle</code></td><td><code>neutral-200</code></td><td><code>neutral-800</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-background-disabled)"></span></td><td><code>--ds-background-disabled</code></td><td><code>neutral-200</code></td><td><code>neutral-800</code></td></tr>
         <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-background-inverse)"></span></td><td><code>--ds-background-inverse</code></td><td><code>neutral-900</code></td><td><code>neutral-50</code></td></tr>
         <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-background-overlay)"></span></td><td><code>--ds-background-overlay</code></td><td><code>overlay-black-40</code></td><td><code>overlay-black-60</code></td></tr>
       </tbody>
@@ -83,6 +77,64 @@
   </div>
 
   <div class="ds-subsection">
+    <h2 class="ds-subsection__title"><span data-lang="pt">Primary (Brand)</span><span data-lang="en">Primary (Brand)</span></h2>
+    <table class="ds-token-table">
+      <thead><tr><th><span data-lang="pt">Amostra</span><span data-lang="en">Swatch</span></th><th>Token</th><th>Light</th><th>Dark</th></tr></thead>
+      <tbody>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-primary-bg-default)"></span></td><td><code>--ds-primary-bg-default</code></td><td><code>brand-600</code></td><td><code>brand-400</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-primary-bg-hover)"></span></td><td><code>--ds-primary-bg-hover</code></td><td><code>brand-700</code></td><td><code>brand-500</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-primary-bg-active)"></span></td><td><code>--ds-primary-bg-active</code></td><td><code>brand-800</code></td><td><code>brand-400</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-primary-bg-disabled)"></span></td><td><code>--ds-primary-bg-disabled</code></td><td><code>disabled-brand-light</code></td><td><code>disabled-brand-light</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-primary-content-default)"></span></td><td><code>--ds-primary-content-default</code></td><td><code>neutral-50</code></td><td><code>neutral-900</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-primary-content-disabled)"></span></td><td><code>--ds-primary-content-disabled</code></td><td><code>overlay-white-80</code></td><td><code>overlay-white-80</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title"><span data-lang="pt">Toned</span><span data-lang="en">Toned</span></h2>
+    <table class="ds-token-table">
+      <thead><tr><th><span data-lang="pt">Amostra</span><span data-lang="en">Swatch</span></th><th>Token</th><th>Light</th><th>Dark</th></tr></thead>
+      <tbody>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-toned-bg-default)"></span></td><td><code>--ds-toned-bg-default</code></td><td><code>overlay-blue-600-12</code></td><td><code>overlay-blue-600-12</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-toned-bg-hover)"></span></td><td><code>--ds-toned-bg-hover</code></td><td><code>overlay-blue-600-20</code></td><td><code>overlay-blue-600-20</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-toned-bg-active)"></span></td><td><code>--ds-toned-bg-active</code></td><td><code>overlay-blue-600-28</code></td><td><code>overlay-blue-600-28</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-toned-content-default)"></span></td><td><code>--ds-toned-content-default</code></td><td><code>brand-700</code></td><td><code>brand-400</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-toned-content-disabled)"></span></td><td><code>--ds-toned-content-disabled</code></td><td><code>neutral-400</code></td><td><code>neutral-600</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title"><span data-lang="pt">Outline</span><span data-lang="en">Outline</span></h2>
+    <table class="ds-token-table">
+      <thead><tr><th><span data-lang="pt">Amostra</span><span data-lang="en">Swatch</span></th><th>Token</th><th>Light</th><th>Dark</th></tr></thead>
+      <tbody>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-outline-bg-hover)"></span></td><td><code>--ds-outline-bg-hover</code></td><td><code>overlay-black-5</code></td><td><code>overlay-black-5</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-outline-bg-active)"></span></td><td><code>--ds-outline-bg-active</code></td><td><code>overlay-black-10</code></td><td><code>overlay-black-10</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-outline-border-default)"></span></td><td><code>--ds-outline-border-default</code></td><td><code>neutral-400</code></td><td><code>neutral-600</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-outline-border-hover)"></span></td><td><code>--ds-outline-border-hover</code></td><td><code>neutral-600</code></td><td><code>neutral-400</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-outline-border-disabled)"></span></td><td><code>--ds-outline-border-disabled</code></td><td><code>neutral-200</code></td><td><code>neutral-800</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-outline-content-default)"></span></td><td><code>--ds-outline-content-default</code></td><td><code>neutral-900</code></td><td><code>neutral-50</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-outline-content-disabled)"></span></td><td><code>--ds-outline-content-disabled</code></td><td><code>neutral-400</code></td><td><code>neutral-600</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title"><span data-lang="pt">Ghost</span><span data-lang="en">Ghost</span></h2>
+    <table class="ds-token-table">
+      <thead><tr><th><span data-lang="pt">Amostra</span><span data-lang="en">Swatch</span></th><th>Token</th><th>Light</th><th>Dark</th></tr></thead>
+      <tbody>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-ghost-bg-hover)"></span></td><td><code>--ds-ghost-bg-hover</code></td><td><code>overlay-black-5</code></td><td><code>overlay-black-5</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-ghost-bg-active)"></span></td><td><code>--ds-ghost-bg-active</code></td><td><code>overlay-black-10</code></td><td><code>overlay-black-10</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-ghost-content-default)"></span></td><td><code>--ds-ghost-content-default</code></td><td><code>neutral-900</code></td><td><code>neutral-50</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-ghost-content-disabled)"></span></td><td><code>--ds-ghost-content-disabled</code></td><td><code>neutral-400</code></td><td><code>neutral-600</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Text / Foreground</span><span data-lang="en">Text / Foreground</span></h2>
     <table class="ds-token-table">
       <thead><tr><th><span data-lang="pt">Amostra</span><span data-lang="en">Swatch</span></th><th>Token</th><th>Light</th><th>Dark</th></tr></thead>
@@ -92,6 +144,8 @@
         <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-content-tertiary)"></span></td><td><code>--ds-content-tertiary</code></td><td><code>neutral-500</code></td><td><code>neutral-400</code></td></tr>
         <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-content-disabled)"></span></td><td><code>--ds-content-disabled</code></td><td><code>neutral-400</code></td><td><code>neutral-600</code></td></tr>
         <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-content-inverse)"></span></td><td><code>--ds-content-inverse</code></td><td><code>neutral-50</code></td><td><code>neutral-900</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-link-content-default)"></span></td><td><code>--ds-link-content-default</code></td><td><code>brand-600</code></td><td><code>brand-400</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-link-content-hover)"></span></td><td><code>--ds-link-content-hover</code></td><td><code>brand-700</code></td><td><code>brand-300</code></td></tr>
       </tbody>
     </table>
   </div>
@@ -103,27 +157,86 @@
       <tbody>
         <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-border-default)"></span></td><td><code>--ds-border-default</code></td><td><code>neutral-300</code></td><td><code>neutral-700</code></td></tr>
         <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-border-strong)"></span></td><td><code>--ds-border-strong</code></td><td><code>neutral-600</code></td><td><code>neutral-500</code></td></tr>
-        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-border-subtle)"></span></td><td><code>--ds-border-subtle</code></td><td><code>neutral-300</code></td><td><code>neutral-800</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-border-subtle)"></span></td><td><code>--ds-border-subtle</code></td><td><code>neutral-200</code></td><td><code>neutral-800</code></td></tr>
         <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-border-focus)"></span></td><td><code>--ds-border-focus</code></td><td><code>brand-600</code></td><td><code>brand-400</code></td></tr>
         <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-border-focus-error)"></span></td><td><code>--ds-border-focus-error</code></td><td><code>red-500</code></td><td><code>red-400</code></td></tr>
         <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-border-brand)"></span></td><td><code>--ds-border-brand</code></td><td><code>brand-600</code></td><td><code>brand-400</code></td></tr>
         <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-border-error)"></span></td><td><code>--ds-border-error</code></td><td><code>feedback-error-bg-default</code></td><td><code>feedback-error-bg-default</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-border-control-default)"></span></td><td><code>--ds-border-control-default</code></td><td><code>neutral-500</code></td><td><code>neutral-500</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-border-control-hover)"></span></td><td><code>--ds-border-control-hover</code></td><td><code>neutral-600</code></td><td><code>neutral-400</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-border-control-disabled)"></span></td><td><code>--ds-border-control-disabled</code></td><td><code>neutral-300</code></td><td><code>neutral-700</code></td></tr>
       </tbody>
     </table>
   </div>
 
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title"><span data-lang="pt">State</span><span data-lang="en">State</span></h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Feedback — Success</span><span data-lang="en">Feedback -- Success</span></h2>
     <table class="ds-token-table">
       <thead><tr><th><span data-lang="pt">Amostra</span><span data-lang="en">Swatch</span></th><th>Token</th><th>Light</th><th>Dark</th></tr></thead>
       <tbody>
-        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-focus-ring-color)"></span></td><td><code>--ds-focus-ring-color</code></td><td><code>border-focus</code></td><td><code>border-focus</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-success-bg-default)"></span></td><td><code>--ds-feedback-success-bg-default</code></td><td><code>green-600</code></td><td><code>green-400</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-success-bg-subtle)"></span></td><td><code>--ds-feedback-success-bg-subtle</code></td><td><code>green-100</code></td><td><code>green-700</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-success-bg-hover)"></span></td><td><code>--ds-feedback-success-bg-hover</code></td><td><code>green-800</code></td><td><code>green-500</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-success-bg-active)"></span></td><td><code>--ds-feedback-success-bg-active</code></td><td><code>green-900</code></td><td><code>green-500</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-success-bg-disabled)"></span></td><td><code>--ds-feedback-success-bg-disabled</code></td><td><code>disabled-success-light</code></td><td><code>disabled-success-dark</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-success-border-default)"></span></td><td><code>--ds-feedback-success-border-default</code></td><td><code>green-500</code></td><td><code>green-400</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-success-content-default)"></span></td><td><code>--ds-feedback-success-content-default</code></td><td><code>green-700</code></td><td><code>green-400</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-success-content-contrast)"></span></td><td><code>--ds-feedback-success-content-contrast</code></td><td><code>neutral-50</code></td><td><code>neutral-900</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-success-content-contrast-disabled)"></span></td><td><code>--ds-feedback-success-content-contrast-disabled</code></td><td><code>overlay-white-80</code></td><td><code>overlay-white-60</code></td></tr>
       </tbody>
     </table>
   </div>
 
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title"><span data-lang="pt">Overlay</span><span data-lang="en">Overlay</span></h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Feedback — Warning</span><span data-lang="en">Feedback -- Warning</span></h2>
+    <table class="ds-token-table">
+      <thead><tr><th><span data-lang="pt">Amostra</span><span data-lang="en">Swatch</span></th><th>Token</th><th>Light</th><th>Dark</th></tr></thead>
+      <tbody>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-warning-bg-default)"></span></td><td><code>--ds-feedback-warning-bg-default</code></td><td><code>amber-500</code></td><td><code>amber-400</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-warning-bg-subtle)"></span></td><td><code>--ds-feedback-warning-bg-subtle</code></td><td><code>amber-100</code></td><td><code>amber-700</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-warning-bg-hover)"></span></td><td><code>--ds-feedback-warning-bg-hover</code></td><td><code>amber-600</code></td><td><code>amber-500</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-warning-border-default)"></span></td><td><code>--ds-feedback-warning-border-default</code></td><td><code>amber-500</code></td><td><code>amber-400</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-warning-content-default)"></span></td><td><code>--ds-feedback-warning-content-default</code></td><td><code>amber-700</code></td><td><code>amber-400</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-warning-content-contrast)"></span></td><td><code>--ds-feedback-warning-content-contrast</code></td><td><code>neutral-900</code></td><td><code>neutral-900</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title"><span data-lang="pt">Feedback — Error</span><span data-lang="en">Feedback -- Error</span></h2>
+    <table class="ds-token-table">
+      <thead><tr><th><span data-lang="pt">Amostra</span><span data-lang="en">Swatch</span></th><th>Token</th><th>Light</th><th>Dark</th></tr></thead>
+      <tbody>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-error-bg-default)"></span></td><td><code>--ds-feedback-error-bg-default</code></td><td><code>red-600</code></td><td><code>red-400</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-error-bg-subtle)"></span></td><td><code>--ds-feedback-error-bg-subtle</code></td><td><code>red-100</code></td><td><code>red-700</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-error-bg-hover)"></span></td><td><code>--ds-feedback-error-bg-hover</code></td><td><code>red-800</code></td><td><code>red-500</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-error-bg-active)"></span></td><td><code>--ds-feedback-error-bg-active</code></td><td><code>red-900</code></td><td><code>red-400</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-error-bg-disabled)"></span></td><td><code>--ds-feedback-error-bg-disabled</code></td><td><code>disabled-error-light</code></td><td><code>disabled-error-dark</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-error-border-default)"></span></td><td><code>--ds-feedback-error-border-default</code></td><td><code>red-500</code></td><td><code>red-400</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-error-content-default)"></span></td><td><code>--ds-feedback-error-content-default</code></td><td><code>red-700</code></td><td><code>red-400</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-error-content-contrast)"></span></td><td><code>--ds-feedback-error-content-contrast</code></td><td><code>neutral-50</code></td><td><code>neutral-900</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-error-content-contrast-disabled)"></span></td><td><code>--ds-feedback-error-content-contrast-disabled</code></td><td><code>overlay-white-80</code></td><td><code>overlay-white-60</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title"><span data-lang="pt">Feedback — Info</span><span data-lang="en">Feedback -- Info</span></h2>
+    <table class="ds-token-table">
+      <thead><tr><th><span data-lang="pt">Amostra</span><span data-lang="en">Swatch</span></th><th>Token</th><th>Light</th><th>Dark</th></tr></thead>
+      <tbody>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-info-bg-default)"></span></td><td><code>--ds-feedback-info-bg-default</code></td><td><code>sky-500</code></td><td><code>sky-400</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-info-bg-subtle)"></span></td><td><code>--ds-feedback-info-bg-subtle</code></td><td><code>sky-100</code></td><td><code>sky-700</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-info-bg-hover)"></span></td><td><code>--ds-feedback-info-bg-hover</code></td><td><code>sky-600</code></td><td><code>sky-500</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-info-border-default)"></span></td><td><code>--ds-feedback-info-border-default</code></td><td><code>sky-500</code></td><td><code>sky-400</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-info-content-default)"></span></td><td><code>--ds-feedback-info-content-default</code></td><td><code>sky-700</code></td><td><code>sky-400</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-feedback-info-content-contrast)"></span></td><td><code>--ds-feedback-info-content-contrast</code></td><td><code>neutral-900</code></td><td><code>neutral-900</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title"><span data-lang="pt">Overlay & Focus</span><span data-lang="en">Overlay & Focus</span></h2>
     <table class="ds-token-table">
       <thead><tr><th><span data-lang="pt">Amostra</span><span data-lang="en">Swatch</span></th><th>Token</th><th>Light</th><th>Dark</th></tr></thead>
       <tbody>
@@ -131,6 +244,7 @@
         <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-overlay-default)"></span></td><td><code>--ds-overlay-default</code></td><td><code>overlay-black-10</code></td><td><code>overlay-white-10</code></td></tr>
         <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-overlay-medium)"></span></td><td><code>--ds-overlay-medium</code></td><td><code>overlay-black-20</code></td><td><code>overlay-white-20</code></td></tr>
         <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-overlay-strong)"></span></td><td><code>--ds-overlay-strong</code></td><td><code>overlay-black-40</code></td><td><code>overlay-white-40</code></td></tr>
+        <tr><td><span class="ds-token-swatch" style="background-color:var(--ds-focus-ring-color)"></span></td><td><code>--ds-focus-ring-color</code></td><td><code>border-focus</code></td><td><code>border-focus</code></td></tr>
       </tbody>
     </table>
   </div>
@@ -142,7 +256,7 @@
 {
   "semantic": {
     "brand": {
-      "default": { "$type": "color", "$value": "{foundation.brand.primary}" },
+      "default": { "$type": "color", "$value": "{semantic.primary.bg-default}" },
       "hover":   { "$type": "color", "$value": "{foundation.color.blue.800}" },
       "active":  { "$type": "color", "$value": "{foundation.color.blue.900}" },
       "subtle":  { "$type": "color", "$value": "{foundation.color.blue.100}" },

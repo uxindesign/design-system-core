@@ -27,13 +27,6 @@
       <option value="pt">PT</option>
       <option value="en">EN</option>
     </select>
-    <div class="ds-theme-switcher">
-      <select class="ds-theme-switcher__select" id="theme-switcher">
-        <option value="default">Default (Blue)</option>
-        <option value="ocean">Ocean (Cyan)</option>
-        <option value="forest">Forest (Emerald)</option>
-      </select>
-    </div>
     <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg> Dark</button>
   </div>
 </header>
@@ -45,7 +38,7 @@
 
   <!-- Hero -->
   <div class="ds-section">
-    <h1 class="ds-section__title">Design System <span style="display:inline-block;font-size:0.45em;vertical-align:middle;padding:var(--ds-spacing-1) var(--ds-spacing-2);border-radius:var(--ds-radius-sm);background:var(--ds-brand-subtle);color:var(--ds-brand-content-default);font-family:var(--ds-font-family-mono);font-weight:var(--ds-font-weight-semibold);margin-left:var(--ds-spacing-2);"><!-- VERSION:0.5.17 -->v0.5.17</span></h1>
+    <h1 class="ds-section__title">Design System <span style="display:inline-block;font-size:0.45em;vertical-align:middle;padding:var(--ds-spacing-4) var(--ds-spacing-8);border-radius:var(--ds-radius-sm);background:var(--ds-toned-bg-default);color:var(--ds-toned-content-default);font-family:var(--ds-body-font-family-sans);font-weight:var(--ds-body-font-weight-semibold);margin-left:var(--ds-spacing-8);"><!-- VERSION:0.7.0 -->v0.7.0</span></h1>
     <p class="ds-section__subtitle">
       <span data-lang="pt">Um design system CSS white-label com 300+ tokens, 19 componentes, suporte multi-tema e acessibilidade WCAG 2.2.</span>
       <span data-lang="en">A white-label CSS design system with 300+ tokens, 19 components, multi-theme support, and WCAG 2.2 accessibility.</span>
@@ -103,39 +96,6 @@
       </p>
     </div>
 
-    <!-- Theming -->
-    <div class="ds-subsection">
-      <h2 class="ds-subsection__title">
-        <span data-lang="pt">Theming</span>
-        <span data-lang="en">Theming</span>
-      </h2>
-      <p style="color:var(--ds-content-secondary);margin-bottom:var(--ds-spacing-3);">
-        <span data-lang="pt">Altere as cores da marca com o atributo <code style="font-family:var(--ds-font-family-mono);background:var(--ds-background-subtle);padding:2px 6px;border-radius:var(--ds-radius-sm);">data-theme</code>. Três temas estão incluídos:</span>
-        <span data-lang="en">Switch brand colors with the <code style="font-family:var(--ds-font-family-mono);background:var(--ds-background-subtle);padding:2px 6px;border-radius:var(--ds-radius-sm);">data-theme</code> attribute. Three themes are included:</span>
-      </p>
-      <div class="ds-preview">
-        <div class="ds-preview__tabs" role="tablist">
-          <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="code">Code</button>
-        </div>
-        <div class="ds-preview__panel ds-preview__panel--active" data-panel="code">
-          <div class="ds-preview__code" style="border-top:none;">
-            <button class="ds-preview__copy" aria-label="Copy code">Copy</button>
-            <pre><code>&lt;!-- Default theme (Blue) — no attribute needed --&gt;
-&lt;html&gt;
-
-&lt;!-- Ocean theme (Cyan) --&gt;
-&lt;html data-theme="ocean"&gt;
-
-&lt;!-- Forest theme (Emerald) --&gt;
-&lt;html data-theme="forest"&gt;</code></pre>
-          </div>
-        </div>
-      </div>
-      <p style="color:var(--ds-content-tertiary);font-size:var(--ds-font-size-sm);">
-        <span data-lang="pt">Temas e modos combinam livremente: <code style="font-family:var(--ds-font-family-mono);">data-theme="ocean" data-mode="dark"</code> ativa Ocean no modo escuro.</span>
-        <span data-lang="en">Themes and modes combine freely: <code style="font-family:var(--ds-font-family-mono);">data-theme="ocean" data-mode="dark"</code> gives you Ocean in dark mode.</span>
-      </p>
-    </div>
   </div>
 
   <!-- Components Grid -->

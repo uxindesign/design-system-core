@@ -10,7 +10,7 @@
 .ds-spinner {
   display: inline-block;
   border-radius: var(--ds-radius-full);
-  border: var(--ds-spinner-stroke-width-md) solid var(--ds-border-default);
+  border: 2px solid var(--ds-border-default);
   border-top-color: var(--ds-primary-bg-default);
   animation: ds-spin 0.6s linear infinite;
   flex-shrink: 0;
@@ -18,23 +18,23 @@
 
 /* Default size: md */
 .ds-spinner {
-  width: var(--ds-spinner-size-md);
-  height: var(--ds-spinner-size-md);
+  width: var(--ds-size-spinner-md);
+  height: var(--ds-size-spinner-md);
 }
 
 /* ---------------------------------------------------------
    Sizes
    --------------------------------------------------------- */
 .ds-spinner--sm {
-  width: var(--ds-spinner-size-sm);
-  height: var(--ds-spinner-size-sm);
-  border-width: var(--ds-spinner-stroke-width-sm);
+  width: var(--ds-size-control-icon-sm);
+  height: var(--ds-size-control-icon-sm);
+  border-width: 1.5px;
 }
 
 .ds-spinner--lg {
-  width: var(--ds-spinner-size-lg);
-  height: var(--ds-spinner-size-lg);
-  border-width: var(--ds-spinner-stroke-width-lg);
+  width: var(--ds-size-spinner-lg);
+  height: var(--ds-size-spinner-lg);
+  border-width: 3px;
 }
 
 /* ---------------------------------------------------------

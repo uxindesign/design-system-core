@@ -47,7 +47,7 @@
 
 /* Tab panel */
 .ds-tab-panel {
-  padding: var(--ds-space-inset-lg) 0;
+  padding: var(--ds-space-lg) 0;
 }
 
 .ds-tab-panel[hidden] {

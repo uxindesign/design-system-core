@@ -26,7 +26,7 @@ Fechamento formal em 0.5.2: correção do `canonicalToCssVar` em `scripts/tokens
 
 1. Criar `tokens/foundation/brand.json` com `foundation.brand.primary` e `foundation.brand.secondary` resolvendo para os valores de cada tema.
 2. Ajustar `tokens/semantic/light.json` e `dark.json`: `semantic.brand.default` e `semantic.accent.default` passam a referenciar `{foundation.brand.primary}` e `{foundation.brand.secondary}`.
-3. Remover `foundation.typography.font.size.base` de `tokens/foundation/typography.json`; substituir 7 referências CSS por `--ds-font-size-md`.
+3. Remover `foundation.typography.font.size.base` de `tokens/foundation/typography.json`; substituir 7 referências CSS por `--ds-font-size-16`.
 4. Executar `npm run build:tokens` e conferir que o CSS gerado inclui todas as novas variáveis `-default`.
 5. Rodar find-and-replace em `css/components/**/*.css` para renomear as variáveis listadas na decisão.
 6. Atualizar a coleção Brand no Figma (via `use_figma`) para refletir a nova estrutura.
@@ -76,7 +76,7 @@ O rename CSS (~80 substituições em componentes) acontece quando o Style Dictio
 
 ### 3. Remover font.size.base, manter font.size.md
 
-Remover foundation.typography.font.size.base do JSON. A escala tipográfica fica consistente com t-shirt sizes: 2xs, xs, sm, md, lg, xl, 2xl, ... 9xl. O rename das 7 referências CSS (--ds-font-size-base → --ds-font-size-md) acontece junto com o rename do item 2.
+Remover foundation.typography.font.size.base do JSON. A escala tipográfica fica consistente com t-shirt sizes: 2xs, xs, sm, md, lg, xl, 2xl, ... 9xl. O rename das 7 referências CSS (--ds-font-size-base → --ds-font-size-16) acontece junto com o rename do item 2.
 
 ## Consequências
 

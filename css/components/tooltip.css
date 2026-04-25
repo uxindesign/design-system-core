@@ -14,7 +14,7 @@
   position: absolute;
   background: var(--ds-background-inverse);
   color: var(--ds-content-inverse);
-  padding: var(--ds-space-inset-xs) var(--ds-space-inset-sm);
+  padding: var(--ds-space-xs) var(--ds-space-sm);
   border-radius: var(--ds-radius-sm);
   font-size: var(--ds-body-font-size-xs);
   font-weight: var(--ds-body-font-weight-regular);

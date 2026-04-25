@@ -315,25 +315,25 @@ function wrapPage({ title, subtitle, content, base, skipSubtitle, layoutHref }) 
   <link rel="stylesheet" href="${basePath}css/design-system.css">
   <link rel="stylesheet" href="${layoutCss}">
   <style>
-    .ds-md-content h1, .ds-md-content h2, .ds-md-content h3 { margin-top: var(--ds-spacing-8); margin-bottom: var(--ds-spacing-3); color: var(--ds-content-default); }
-    .ds-md-content h1 { font-size: var(--ds-font-size-2xl); font-weight: var(--ds-font-weight-semibold); margin-top: 0; }
-    .ds-md-content h2 { font-size: var(--ds-font-size-xl); font-weight: var(--ds-font-weight-semibold); border-top: var(--ds-border-width-1) solid var(--ds-border-subtle); padding-top: var(--ds-spacing-6); }
-    .ds-md-content h3 { font-size: var(--ds-font-size-lg); font-weight: var(--ds-font-weight-semibold); }
-    .ds-md-content p { color: var(--ds-content-secondary); line-height: var(--ds-line-height-relaxed); margin: var(--ds-spacing-3) 0; }
-    .ds-md-content ul, .ds-md-content ol { color: var(--ds-content-secondary); line-height: var(--ds-line-height-relaxed); padding-left: var(--ds-spacing-6); margin: var(--ds-spacing-3) 0; }
-    .ds-md-content li { margin: var(--ds-spacing-1) 0; }
-    .ds-md-content code { font-family: var(--ds-font-family-mono); font-size: 0.9em; background: var(--ds-background-subtle); color: var(--ds-content-link-default); padding: 1px var(--ds-spacing-1); border-radius: var(--ds-radius-sm); }
-    .ds-md-content pre { background: var(--ds-color-neutral-900); color: var(--ds-color-neutral-100); padding: var(--ds-spacing-4); border-radius: var(--ds-radius-md); overflow-x: auto; font-size: var(--ds-font-size-sm); margin: var(--ds-spacing-4) 0; }
+    .ds-md-content h1, .ds-md-content h2, .ds-md-content h3 { margin-top: var(--ds-spacing-32); margin-bottom: var(--ds-spacing-12); color: var(--ds-content-default); }
+    .ds-md-content h1 { font-size: var(--ds-body-font-size-2xl); font-weight: var(--ds-body-font-weight-semibold); margin-top: 0; }
+    .ds-md-content h2 { font-size: var(--ds-body-font-size-xl); font-weight: var(--ds-body-font-weight-semibold); border-top: var(--ds-border-width-1) solid var(--ds-border-subtle); padding-top: var(--ds-spacing-24); }
+    .ds-md-content h3 { font-size: var(--ds-body-font-size-lg); font-weight: var(--ds-body-font-weight-semibold); }
+    .ds-md-content p { color: var(--ds-content-secondary); line-height: var(--ds-body-line-height-md); margin: var(--ds-spacing-12) 0; }
+    .ds-md-content ul, .ds-md-content ol { color: var(--ds-content-secondary); line-height: var(--ds-body-line-height-md); padding-left: var(--ds-spacing-24); margin: var(--ds-spacing-12) 0; }
+    .ds-md-content li { margin: var(--ds-spacing-4) 0; }
+    .ds-md-content code { font-family: var(--ds-font-family-mono); font-size: 0.9em; background: var(--ds-background-subtle); color: var(--ds-link-content-default); padding: 1px var(--ds-spacing-4); border-radius: var(--ds-radius-sm); }
+    .ds-md-content pre { background: var(--ds-background-inverse); color: var(--ds-content-inverse); padding: var(--ds-spacing-16); border-radius: var(--ds-radius-md); overflow-x: auto; font-size: var(--ds-body-font-size-sm); margin: var(--ds-spacing-16) 0; }
     .ds-md-content pre code { background: none; color: inherit; padding: 0; }
-    .ds-md-content table { width: 100%; border-collapse: collapse; margin: var(--ds-spacing-4) 0; font-size: var(--ds-font-size-sm); }
-    .ds-md-content table th, .ds-md-content table td { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-1) solid var(--ds-border-default); }
-    .ds-md-content table th { font-weight: var(--ds-font-weight-semibold); background: var(--ds-background-subtle); }
-    .ds-md-content a { color: var(--ds-content-link-default); }
-    .ds-md-content a:hover { color: var(--ds-content-link-hover); }
-    .ds-md-content blockquote { border-left: 3px solid var(--ds-border-default); margin: var(--ds-spacing-4) 0; padding: var(--ds-spacing-2) var(--ds-spacing-4); color: var(--ds-content-tertiary); font-style: italic; }
-    .ds-md-content hr { border: none; border-top: var(--ds-border-width-1) solid var(--ds-border-subtle); margin: var(--ds-spacing-8) 0; }
+    .ds-md-content table { width: 100%; border-collapse: collapse; margin: var(--ds-spacing-16) 0; font-size: var(--ds-body-font-size-sm); }
+    .ds-md-content table th, .ds-md-content table td { text-align: left; padding: var(--ds-spacing-8) var(--ds-spacing-12); border-bottom: var(--ds-border-width-1) solid var(--ds-border-default); }
+    .ds-md-content table th { font-weight: var(--ds-body-font-weight-semibold); background: var(--ds-background-subtle); }
+    .ds-md-content a { color: var(--ds-link-content-default); }
+    .ds-md-content a:hover { color: var(--ds-link-content-hover); }
+    .ds-md-content blockquote { border-left: 3px solid var(--ds-border-default); margin: var(--ds-spacing-16) 0; padding: var(--ds-spacing-8) var(--ds-spacing-16); color: var(--ds-content-tertiary); font-style: italic; }
+    .ds-md-content hr { border: none; border-top: var(--ds-border-width-1) solid var(--ds-border-subtle); margin: var(--ds-spacing-32) 0; }
     .ds-md-content strong { color: var(--ds-content-default); }
-    .ds-md-generated-banner { background: var(--ds-feedback-info-background); color: var(--ds-feedback-info-content-default); padding: var(--ds-spacing-3) var(--ds-spacing-5); border-radius: var(--ds-radius-md); margin-bottom: var(--ds-spacing-6); font-size: var(--ds-font-size-sm); }
+    .ds-md-generated-banner { background: var(--ds-feedback-info-bg-default); color: var(--ds-feedback-info-content-default); padding: var(--ds-spacing-12) var(--ds-spacing-20); border-radius: var(--ds-radius-md); margin-bottom: var(--ds-spacing-24); font-size: var(--ds-body-font-size-sm); }
   </style>
   <script>
     (function(){var l=localStorage.getItem('ds-lang');if(l)document.documentElement.setAttribute('lang',l)})();
@@ -342,7 +342,7 @@ function wrapPage({ title, subtitle, content, base, skipSubtitle, layoutHref }) 
 <body>
 
 <header class="ds-site-header">
-  <div style="display:flex;align-items:center;gap:var(--ds-spacing-4)">
+  <div style="display:flex;align-items:center;gap:var(--ds-spacing-16)">
     <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>
@@ -462,11 +462,18 @@ console.log(`✅ ${mdPageCount} páginas MD → HTML em docs/`);
 // conteúdo entre <!-- AUTO-GENERATED:THEME-COLORS:START --> e :END,
 // preservando header/nav/footer editáveis à mão.
 
+// Paths atualizados pra 2-layer + ADR-014 (action tokens role/style):
+// - brand.* eliminado → primary.* / toned.*
+// - accent.* eliminado (não havia no MVP)
+// - content.link.* → link.content-* (peer pattern)
+// - feedback.{role}.background → feedback.{role}.bg-default (compound)
+// - state.* eliminado → overlay.* (já listado abaixo)
+// - border.control.* → border.control-* (flat)
 const THEME_COLOR_SECTIONS = [
   { id: 'background', pt: 'Background', en: 'Background', tokens: [
     'semantic.background.default',
     'semantic.background.subtle',
-    'semantic.state.disabled.background',
+    'semantic.background.disabled',
     'semantic.background.inverse',
     'semantic.background.overlay',
   ]},
@@ -476,26 +483,35 @@ const THEME_COLOR_SECTIONS = [
     'semantic.surface.overlay',
     'semantic.surface.elevated',
   ]},
-  { id: 'brand-primary', pt: 'Brand Primary', en: 'Brand Primary', tokens: [
-    'semantic.brand.default',
-    'semantic.brand.hover',
-    'semantic.brand.active',
-    'semantic.brand.subtle',
-    'semantic.brand.disabled',
-    'semantic.brand.toned.default',
-    'semantic.brand.toned.hover',
-    'semantic.brand.toned.active',
-    'semantic.brand.content.default',
-    'semantic.brand.content.contrast',
-    'semantic.brand.content.contrast-disabled',
+  { id: 'primary', pt: 'Primary (Brand)', en: 'Primary (Brand)', tokens: [
+    'semantic.primary.bg-default',
+    'semantic.primary.bg-hover',
+    'semantic.primary.bg-active',
+    'semantic.primary.bg-disabled',
+    'semantic.primary.content-default',
+    'semantic.primary.content-disabled',
   ]},
-  { id: 'brand-secondary', pt: 'Brand Secondary / Accent', en: 'Brand Secondary / Accent', tokens: [
-    'semantic.accent.default',
-    'semantic.accent.hover',
-    'semantic.accent.active',
-    'semantic.accent.subtle',
-    'semantic.accent.content.default',
-    'semantic.accent.content.contrast',
+  { id: 'toned', pt: 'Toned', en: 'Toned', tokens: [
+    'semantic.toned.bg-default',
+    'semantic.toned.bg-hover',
+    'semantic.toned.bg-active',
+    'semantic.toned.content-default',
+    'semantic.toned.content-disabled',
+  ]},
+  { id: 'outline', pt: 'Outline', en: 'Outline', tokens: [
+    'semantic.outline.bg-hover',
+    'semantic.outline.bg-active',
+    'semantic.outline.border-default',
+    'semantic.outline.border-hover',
+    'semantic.outline.border-disabled',
+    'semantic.outline.content-default',
+    'semantic.outline.content-disabled',
+  ]},
+  { id: 'ghost', pt: 'Ghost', en: 'Ghost', tokens: [
+    'semantic.ghost.bg-hover',
+    'semantic.ghost.bg-active',
+    'semantic.ghost.content-default',
+    'semantic.ghost.content-disabled',
   ]},
   { id: 'content', pt: 'Text / Foreground', en: 'Text / Foreground', tokens: [
     'semantic.content.default',
@@ -503,8 +519,8 @@ const THEME_COLOR_SECTIONS = [
     'semantic.content.tertiary',
     'semantic.content.disabled',
     'semantic.content.inverse',
-    'semantic.content.link.default',
-    'semantic.content.link.hover',
+    'semantic.link.content-default',
+    'semantic.link.content-hover',
   ]},
   { id: 'border', pt: 'Border', en: 'Border', tokens: [
     'semantic.border.default',
@@ -514,63 +530,54 @@ const THEME_COLOR_SECTIONS = [
     'semantic.border.focus-error',
     'semantic.border.brand',
     'semantic.border.error',
-    'semantic.border.control.default',
-    'semantic.border.control.hover',
-    'semantic.border.control.disabled',
+    'semantic.border.control-default',
+    'semantic.border.control-hover',
+    'semantic.border.control-disabled',
   ]},
   { id: 'feedback-success', pt: 'Feedback — Success', en: 'Feedback -- Success', tokens: [
-    'semantic.feedback.success.background',
-    'semantic.feedback.success.subtle',
-    'semantic.feedback.success.default',
-    'semantic.feedback.success.hover',
-    'semantic.feedback.success.active',
-    'semantic.feedback.success.border',
-    'semantic.feedback.success.disabled',
-    'semantic.feedback.success.content.default',
-    'semantic.feedback.success.content.contrast',
-    'semantic.feedback.success.content.contrast-disabled',
+    'semantic.feedback.success.bg-default',
+    'semantic.feedback.success.bg-subtle',
+    'semantic.feedback.success.bg-hover',
+    'semantic.feedback.success.bg-active',
+    'semantic.feedback.success.bg-disabled',
+    'semantic.feedback.success.border-default',
+    'semantic.feedback.success.content-default',
+    'semantic.feedback.success.content-contrast',
+    'semantic.feedback.success.content-contrast-disabled',
   ]},
   { id: 'feedback-warning', pt: 'Feedback — Warning', en: 'Feedback -- Warning', tokens: [
-    'semantic.feedback.warning.background',
-    'semantic.feedback.warning.subtle',
-    'semantic.feedback.warning.default',
-    'semantic.feedback.warning.hover',
-    'semantic.feedback.warning.border',
-    'semantic.feedback.warning.content.default',
-    'semantic.feedback.warning.content.contrast',
+    'semantic.feedback.warning.bg-default',
+    'semantic.feedback.warning.bg-subtle',
+    'semantic.feedback.warning.bg-hover',
+    'semantic.feedback.warning.border-default',
+    'semantic.feedback.warning.content-default',
+    'semantic.feedback.warning.content-contrast',
   ]},
   { id: 'feedback-error', pt: 'Feedback — Error', en: 'Feedback -- Error', tokens: [
-    'semantic.feedback.error.background',
-    'semantic.feedback.error.subtle',
-    'semantic.feedback.error.default',
-    'semantic.feedback.error.hover',
-    'semantic.feedback.error.active',
-    'semantic.feedback.error.border',
-    'semantic.feedback.error.disabled',
-    'semantic.feedback.error.content.default',
-    'semantic.feedback.error.content.contrast',
-    'semantic.feedback.error.content.contrast-disabled',
+    'semantic.feedback.error.bg-default',
+    'semantic.feedback.error.bg-subtle',
+    'semantic.feedback.error.bg-hover',
+    'semantic.feedback.error.bg-active',
+    'semantic.feedback.error.bg-disabled',
+    'semantic.feedback.error.border-default',
+    'semantic.feedback.error.content-default',
+    'semantic.feedback.error.content-contrast',
+    'semantic.feedback.error.content-contrast-disabled',
   ]},
   { id: 'feedback-info', pt: 'Feedback — Info', en: 'Feedback -- Info', tokens: [
-    'semantic.feedback.info.background',
-    'semantic.feedback.info.subtle',
-    'semantic.feedback.info.default',
-    'semantic.feedback.info.hover',
-    'semantic.feedback.info.border',
-    'semantic.feedback.info.content.default',
-    'semantic.feedback.info.content.contrast',
+    'semantic.feedback.info.bg-default',
+    'semantic.feedback.info.bg-subtle',
+    'semantic.feedback.info.bg-hover',
+    'semantic.feedback.info.border-default',
+    'semantic.feedback.info.content-default',
+    'semantic.feedback.info.content-contrast',
   ]},
-  { id: 'state', pt: 'State', en: 'State', tokens: [
-    'semantic.state.hover',
-    'semantic.state.pressed',
-    'semantic.state.focus',
-    'semantic.focus.ring.color',
-  ]},
-  { id: 'overlay', pt: 'Overlay', en: 'Overlay', tokens: [
+  { id: 'overlay', pt: 'Overlay & Focus', en: 'Overlay & Focus', tokens: [
     'semantic.overlay.subtle',
     'semantic.overlay.default',
     'semantic.overlay.medium',
     'semantic.overlay.strong',
+    'semantic.focus.ring.color',
   ]},
 ];
 

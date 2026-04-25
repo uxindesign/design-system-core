@@ -358,7 +358,7 @@
       },
       "subtle": {
         "$type": "color",
-        "$value": "{foundation.color.neutral.300}"
+        "$value": "{foundation.color.neutral.200}"
       },
       "focus": {
         "$type": "color",
@@ -484,136 +484,91 @@
       }
     },
     "space": {
-      "inset": {
-        "2xs": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.0-5}",
-          "$description": "2px. Compact inset for small components like Badge."
-        },
-        "xs": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.1}"
-        },
-        "sm": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.2}"
-        },
-        "md": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.3}"
-        },
-        "lg": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.4}"
-        },
-        "xl": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.6}"
-        }
+      "2xs": {
+        "$type": "dimension",
+        "$value": "{foundation.spacing.2}",
+        "$description": "2px"
       },
-      "gap": {
-        "2xs": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.0-5}",
-          "$description": "2px. Gap muito compacto — usado em Label Row (label + asterisco required) de form controls. Issue #24.1."
-        },
-        "xs": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.1}"
-        },
-        "sm": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.2}"
-        },
-        "md": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.3}"
-        },
-        "lg": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.4}"
-        },
-        "xl": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.6}"
-        }
+      "xs": {
+        "$type": "dimension",
+        "$value": "{foundation.spacing.4}",
+        "$description": "4px"
       },
-      "component": {
-        "xs": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.1}"
-        },
-        "sm": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.2}"
-        },
-        "md": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.3}"
-        },
-        "lg": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.4}"
-        },
-        "xl": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.5}"
-        },
-        "2xl": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.6}"
-        }
+      "sm": {
+        "$type": "dimension",
+        "$value": "{foundation.spacing.8}",
+        "$description": "8px"
+      },
+      "md": {
+        "$type": "dimension",
+        "$value": "{foundation.spacing.12}",
+        "$description": "12px"
+      },
+      "lg": {
+        "$type": "dimension",
+        "$value": "{foundation.spacing.16}",
+        "$description": "16px"
+      },
+      "xl": {
+        "$type": "dimension",
+        "$value": "{foundation.spacing.20}",
+        "$description": "20px"
+      },
+      "2xl": {
+        "$type": "dimension",
+        "$value": "{foundation.spacing.24}",
+        "$description": "24px"
       },
       "section": {
         "sm": {
           "$type": "dimension",
-          "$value": "{foundation.spacing.8}"
+          "$value": "{foundation.spacing.32}"
         },
         "md": {
           "$type": "dimension",
-          "$value": "{foundation.spacing.12}"
+          "$value": "{foundation.spacing.48}"
         },
         "lg": {
           "$type": "dimension",
-          "$value": "{foundation.spacing.16}"
+          "$value": "{foundation.spacing.64}"
         },
         "xl": {
           "$type": "dimension",
-          "$value": "{foundation.spacing.20}"
+          "$value": "{foundation.spacing.80}"
         }
       },
       "control": {
         "padding-x": {
           "sm": {
             "$type": "dimension",
-            "$value": "{foundation.spacing.3}",
+            "$value": "{foundation.spacing.12}",
             "$description": "12px. Horizontal padding for sm controls."
           },
           "md": {
             "$type": "dimension",
-            "$value": "{foundation.spacing.4}",
+            "$value": "{foundation.spacing.16}",
             "$description": "16px. Horizontal padding for md controls."
           },
           "lg": {
             "$type": "dimension",
-            "$value": "{foundation.spacing.5}",
+            "$value": "{foundation.spacing.20}",
             "$description": "20px. Horizontal padding for lg controls."
           }
         },
         "padding-y": {
           "sm": {
             "$type": "dimension",
-            "$value": "{foundation.spacing.2}",
+            "$value": "{foundation.spacing.8}",
             "$description": "8px. Vertical padding for sm controls."
           },
           "md": {
             "$type": "dimension",
-            "$value": "{foundation.spacing.2-5}",
+            "$value": "{foundation.spacing.10}",
             "$description": "10px. Vertical padding for md controls."
           },
           "lg": {
             "$type": "dimension",
-            "$value": "{foundation.spacing.3}",
+            "$value": "{foundation.spacing.12}",
             "$description": "12px. Vertical padding for lg controls."
           }
         }
@@ -623,72 +578,177 @@
       "control": {
         "sm": {
           "$type": "dimension",
-          "$value": "{foundation.spacing.8}",
+          "$value": "{foundation.spacing.32}",
           "$description": "32px. Height of sm interactive controls (Button, Input Field, Select Field)."
         },
         "md": {
           "$type": "dimension",
-          "$value": "{foundation.spacing.10}",
+          "$value": "{foundation.spacing.40}",
           "$description": "40px. Height of md interactive controls."
         },
         "lg": {
           "$type": "dimension",
-          "$value": "{foundation.spacing.12}",
+          "$value": "{foundation.spacing.48}",
           "$description": "48px. Height of lg interactive controls."
         },
         "icon": {
           "sm": {
             "$type": "dimension",
-            "$value": "{foundation.spacing.4}",
+            "$value": "{foundation.spacing.16}",
             "$description": "16px. Icon size inside sm controls."
           },
           "md": {
             "$type": "dimension",
-            "$value": "{foundation.spacing.5}",
+            "$value": "{foundation.spacing.20}",
             "$description": "20px. Icon size inside md controls."
           },
           "lg": {
             "$type": "dimension",
-            "$value": "{foundation.spacing.6}",
+            "$value": "{foundation.spacing.24}",
             "$description": "24px. Icon size inside lg controls."
           }
         },
         "min-target": {
           "$type": "dimension",
-          "$value": "{foundation.spacing.11}",
+          "$value": "{foundation.spacing.44}",
           "$description": "44px. WCAG 2.5.5 AAA touch target minimum."
+        }
+      },
+      "avatar": {
+        "sm": {
+          "$type": "dimension",
+          "$value": "{foundation.spacing.32}",
+          "$description": "32px"
+        },
+        "md": {
+          "$type": "dimension",
+          "$value": "{foundation.spacing.40}",
+          "$description": "40px"
+        },
+        "lg": {
+          "$type": "dimension",
+          "$value": "{foundation.spacing.56}",
+          "$description": "56px"
+        },
+        "icon": {
+          "sm": {
+            "$type": "dimension",
+            "$value": "{foundation.spacing.16}",
+            "$description": "16px"
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "{foundation.spacing.20}",
+            "$description": "20px"
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{foundation.spacing.28}",
+            "$description": "28px"
+          }
+        }
+      },
+      "modal": {
+        "max-width": {
+          "sm": {
+            "$type": "dimension",
+            "$value": "25rem",
+            "$description": "400px"
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "32.5rem",
+            "$description": "520px"
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "40rem",
+            "$description": "640px"
+          }
+        }
+      },
+      "spinner": {
+        "md": {
+          "$type": "dimension",
+          "$value": "{foundation.spacing.24}",
+          "$description": "24px"
+        },
+        "lg": {
+          "$type": "dimension",
+          "$value": "{foundation.spacing.32}",
+          "$description": "32px"
+        }
+      },
+      "skeleton": {
+        "rect-height": {
+          "$type": "dimension",
+          "$value": "7.5rem",
+          "$description": "120px"
+        }
+      },
+      "textarea": {
+        "min-height": {
+          "sm": {
+            "$type": "dimension",
+            "$value": "4.25rem",
+            "$description": "68px"
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "{foundation.spacing.80}",
+            "$description": "80px"
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "7rem",
+            "$description": "112px"
+          }
+        }
+      },
+      "toggle": {
+        "track-width": {
+          "sm": {
+            "$type": "dimension",
+            "$value": "{foundation.spacing.28}",
+            "$description": "28px"
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "{foundation.spacing.36}",
+            "$description": "36px"
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{foundation.spacing.44}",
+            "$description": "44px"
+          }
         }
       }
     },
     "radius": {
-      "component": {
-        "$type": "dimension",
-        "$value": "{foundation.radius.md}",
-        "$description": "8px — radius padrão de componentes interativos."
-      },
       "sm": {
         "$type": "dimension",
-        "$value": "{foundation.radius.sm}",
+        "$value": "{foundation.radius.4}",
         "$description": "4px. Tags, badges, chips pequenos."
       },
       "md": {
         "$type": "dimension",
-        "$value": "{foundation.radius.md}",
+        "$value": "{foundation.radius.8}",
         "$description": "8px. Cards, alerts — radius padrão médio."
       },
       "lg": {
         "$type": "dimension",
-        "$value": "{foundation.radius.lg}",
+        "$value": "{foundation.radius.12}",
         "$description": "12px. Cards grandes, containers."
       },
       "xl": {
         "$type": "dimension",
-        "$value": "{foundation.radius.xl}",
+        "$value": "{foundation.radius.16}",
         "$description": "16px. Modais, sheets, dialogs."
       },
       "full": {
         "$type": "dimension",
-        "$value": "{foundation.radius.full}",
+        "$value": "{foundation.radius.9999}",
         "$description": "9999px. Pills, circles, avatars."
       }
     },
@@ -697,34 +757,34 @@
         "font-size": {
           "sm": {
             "$type": "dimension",
-            "$value": "{foundation.typography.font.size.sm}",
+            "$value": "{foundation.typography.font.size.14}",
             "$description": "14px. Font size for sm controls (Button, Input, Select)."
           },
           "md": {
             "$type": "dimension",
-            "$value": "{foundation.typography.font.size.sm}",
+            "$value": "{foundation.typography.font.size.14}",
             "$description": "14px. Font size for md controls."
           },
           "lg": {
             "$type": "dimension",
-            "$value": "{foundation.typography.font.size.md}",
+            "$value": "{foundation.typography.font.size.16}",
             "$description": "16px. Font size for lg controls."
           }
         },
         "line-height": {
           "sm": {
             "$type": "dimension",
-            "$value": "{foundation.spacing.4}",
+            "$value": "{foundation.spacing.16}",
             "$description": "16px. Matches icon-sm. height = padY*2 + lineHeight = 8+16+8 = 32."
           },
           "md": {
             "$type": "dimension",
-            "$value": "{foundation.spacing.5}",
+            "$value": "{foundation.spacing.20}",
             "$description": "20px. Matches icon-md. height = 10+20+10 = 40."
           },
           "lg": {
             "$type": "dimension",
-            "$value": "{foundation.spacing.6}",
+            "$value": "{foundation.spacing.24}",
             "$description": "24px. Matches icon-lg. height = 12+24+12 = 48."
           }
         }
@@ -775,38 +835,38 @@
         "font-size": {
           "xs": {
             "$type": "dimension",
-            "$value": "{foundation.typography.font.size.xs}",
+            "$value": "{foundation.typography.font.size.12}",
             "$description": "12px. Helper text, caption, legenda."
           },
           "sm": {
             "$type": "dimension",
-            "$value": "{foundation.typography.font.size.sm}",
+            "$value": "{foundation.typography.font.size.14}",
             "$description": "14px. Body padrão, labels, descrições."
           },
           "md": {
             "$type": "dimension",
-            "$value": "{foundation.typography.font.size.md}",
+            "$value": "{foundation.typography.font.size.16}",
             "$description": "16px. Body confortável, títulos menores."
           },
           "lg": {
             "$type": "dimension",
-            "$value": "{foundation.typography.font.size.lg}",
+            "$value": "{foundation.typography.font.size.18}",
             "$description": "18px. Subtítulos, avatar labels."
           },
           "xl": {
             "$type": "dimension",
-            "$value": "{foundation.typography.font.size.xl}",
+            "$value": "{foundation.typography.font.size.20}",
             "$description": "20px. Títulos de card, headings H3."
           },
           "2xl": {
             "$type": "dimension",
-            "$value": "{foundation.typography.font.size.2xl}",
+            "$value": "{foundation.typography.font.size.24}",
             "$description": "24px. Headings H2, títulos de modal."
           },
           "3xl": {
             "$type": "dimension",
-            "$value": "{foundation.typography.font.size.3xl}",
-            "$description": "30px. Headings H1, display."
+            "$value": "{foundation.typography.font.size.28}",
+            "$description": "28px. Headings H1, display."
           }
         },
         "line-height": {

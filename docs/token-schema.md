@@ -1,42 +1,42 @@
 # Token schema — Design System Core
 
-> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-23. Não editar manualmente.
+> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-25. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
-> Versão atual: **0.5.17**
+> Versão atual: **0.7.0**
 
 ## Estado atual
 
 | Aspecto | Valor |
 |---------|-------|
-| Versão | 0.5.17 |
+| Versão | 0.7.0 |
 | Formato canônico | JSON (DTCG) em `tokens/` |
 | CSS gerado | Style Dictionary → `css/tokens/generated/` |
 | Pipeline | ✅ index.css importa apenas generated/ |
-| Paridade light/dark | ✅ 165 tokens em ambos os modos |
+| Paridade light/dark | ✅ 171 tokens em ambos os modos |
 
 ## Camadas
 
 | Camada | Tokens | Arquivos |
 |--------|--------|----------|
-| Foundation | **240** | 9 |
-| Semantic | **165 × 2 modos** | light.json + dark.json |
-| Component | **61** | 11 |
+| Foundation | **236** | 9 |
+| Semantic | **171 × 2 modos** | light.json + dark.json |
+| Component | **0** | 0 |
 
-## Foundation (240 tokens)
+## Foundation (236 tokens)
 
 | Arquivo | Tokens |
 |---------|--------|
 | `colors.json` | 145 |
 | `motion.json` | 7 |
-| `opacity.json` | 7 |
-| `radius.json` | 8 |
+| `opacity.json` | 6 |
+| `radius.json` | 7 |
 | `shadows.json` | 7 |
-| `spacing.json` | 21 |
-| `stroke.json` | 4 |
+| `spacing.json` | 20 |
+| `stroke.json` | 3 |
 | `typography.json` | 35 |
 | `z-index.json` | 6 |
 
-## Semantic (165 tokens × 2 modos)
+## Semantic (171 tokens × 2 modos)
 
 Categorias raiz em light.json:
 
@@ -61,21 +61,11 @@ semantic.radius.*
 semantic.typography.*
 ```
 
-## Component (61 tokens)
+## Component (0 tokens)
 
 | Arquivo | Tokens |
 |---------|--------|
-| `avatar.json` | 9 |
-| `button.json` | 3 |
-| `checkbox.json` | 9 |
-| `input.json` | 3 |
-| `modal.json` | 3 |
-| `radio.json` | 6 |
-| `select.json` | 7 |
-| `skeleton.json` | 3 |
-| `spinner.json` | 6 |
-| `textarea.json` | 3 |
-| `toggle.json` | 9 |
+
 
 ## Regras invioláveis
 

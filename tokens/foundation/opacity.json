@@ -1,10 +1,6 @@
 {
   "foundation": {
     "opacity": {
-      "0": {
-        "$type": "number",
-        "$value": 0
-      },
       "5": {
         "$type": "number",
         "$value": 0.05

@@ -4,6 +4,12 @@
 
 :root,
 [data-mode="light"] {
+  --ds-size-modal-max-width-sm: 25rem; /** 400px */
+  --ds-size-modal-max-width-md: 32.5rem; /** 520px */
+  --ds-size-modal-max-width-lg: 40rem; /** 640px */
+  --ds-size-skeleton-rect-height: 7.5rem; /** 120px */
+  --ds-size-textarea-min-height-sm: 4.25rem; /** 68px */
+  --ds-size-textarea-min-height-lg: 7rem; /** 112px */
   --ds-primary-bg-default: var(--ds-color-brand-600);
   --ds-primary-bg-hover: var(--ds-color-brand-700);
   --ds-primary-bg-active: var(--ds-color-brand-800);
@@ -78,7 +84,7 @@
   --ds-content-inverse: var(--ds-color-neutral-50); /** Conteúdo sobre superfícies inversas (background/inverse). */
   --ds-border-default: var(--ds-color-neutral-300);
   --ds-border-strong: var(--ds-color-neutral-600);
-  --ds-border-subtle: var(--ds-color-neutral-300);
+  --ds-border-subtle: var(--ds-color-neutral-200);
   --ds-border-focus: var(--ds-color-brand-600);
   --ds-border-brand: var(--ds-color-brand-600);
   --ds-border-width-subtle: var(--ds-border-width-1);
@@ -100,53 +106,53 @@
   --ds-motion-duration-normal: var(--ds-duration-normal); /** 200ms. Padrão pra transições de estado. */
   --ds-motion-duration-slow: var(--ds-duration-slow); /** 300ms. Animações enfáticas (entrada de overlay, etc). */
   --ds-motion-ease-default: var(--ds-ease-default); /** Curva padrão pra transições UI. */
-  --ds-space-inset-2xs: var(--ds-spacing-0-5); /** 2px. Compact inset for small components like Badge. */
-  --ds-space-inset-xs: var(--ds-spacing-1);
-  --ds-space-inset-sm: var(--ds-spacing-2);
-  --ds-space-inset-md: var(--ds-spacing-3);
-  --ds-space-inset-lg: var(--ds-spacing-4);
-  --ds-space-inset-xl: var(--ds-spacing-6);
-  --ds-space-gap-2xs: var(--ds-spacing-0-5); /** 2px. Gap muito compacto — usado em Label Row (label + asterisco required) de form controls. Issue #24.1. */
-  --ds-space-gap-xs: var(--ds-spacing-1);
-  --ds-space-gap-sm: var(--ds-spacing-2);
-  --ds-space-gap-md: var(--ds-spacing-3);
-  --ds-space-gap-lg: var(--ds-spacing-4);
-  --ds-space-gap-xl: var(--ds-spacing-6);
-  --ds-space-component-xs: var(--ds-spacing-1);
-  --ds-space-component-sm: var(--ds-spacing-2);
-  --ds-space-component-md: var(--ds-spacing-3);
-  --ds-space-component-lg: var(--ds-spacing-4);
-  --ds-space-component-xl: var(--ds-spacing-5);
-  --ds-space-component-2xl: var(--ds-spacing-6);
-  --ds-space-section-sm: var(--ds-spacing-8);
-  --ds-space-section-md: var(--ds-spacing-12);
-  --ds-space-section-lg: var(--ds-spacing-16);
-  --ds-space-section-xl: var(--ds-spacing-20);
-  --ds-space-control-padding-x-sm: var(--ds-spacing-3); /** 12px. Horizontal padding for sm controls. */
-  --ds-space-control-padding-x-md: var(--ds-spacing-4); /** 16px. Horizontal padding for md controls. */
-  --ds-space-control-padding-x-lg: var(--ds-spacing-5); /** 20px. Horizontal padding for lg controls. */
-  --ds-space-control-padding-y-sm: var(--ds-spacing-2); /** 8px. Vertical padding for sm controls. */
-  --ds-space-control-padding-y-md: var(--ds-spacing-2-5); /** 10px. Vertical padding for md controls. */
-  --ds-space-control-padding-y-lg: var(--ds-spacing-3); /** 12px. Vertical padding for lg controls. */
-  --ds-size-control-sm: var(--ds-spacing-8); /** 32px. Height of sm interactive controls (Button, Input Field, Select Field). */
-  --ds-size-control-md: var(--ds-spacing-10); /** 40px. Height of md interactive controls. */
-  --ds-size-control-lg: var(--ds-spacing-12); /** 48px. Height of lg interactive controls. */
-  --ds-size-control-icon-sm: var(--ds-spacing-4); /** 16px. Icon size inside sm controls. */
-  --ds-size-control-icon-md: var(--ds-spacing-5); /** 20px. Icon size inside md controls. */
-  --ds-size-control-icon-lg: var(--ds-spacing-6); /** 24px. Icon size inside lg controls. */
-  --ds-size-control-min-target: var(--ds-spacing-11); /** 44px. WCAG 2.5.5 AAA touch target minimum. */
-  --ds-radius-component: var(--ds-radius-md); /** 8px — radius padrão de componentes interativos. */
-  --ds-radius-sm: var(--ds-radius-sm); /** 4px. Tags, badges, chips pequenos. */
-  --ds-radius-md: var(--ds-radius-md); /** 8px. Cards, alerts — radius padrão médio. */
-  --ds-radius-lg: var(--ds-radius-lg); /** 12px. Cards grandes, containers. */
-  --ds-radius-xl: var(--ds-radius-xl); /** 16px. Modais, sheets, dialogs. */
-  --ds-radius-full: var(--ds-radius-full); /** 9999px. Pills, circles, avatars. */
-  --ds-control-font-size-sm: var(--ds-font-size-sm); /** 14px. Font size for sm controls (Button, Input, Select). */
-  --ds-control-font-size-md: var(--ds-font-size-sm); /** 14px. Font size for md controls. */
-  --ds-control-font-size-lg: var(--ds-font-size-md); /** 16px. Font size for lg controls. */
-  --ds-control-line-height-sm: var(--ds-spacing-4); /** 16px. Matches icon-sm. height = padY*2 + lineHeight = 8+16+8 = 32. */
-  --ds-control-line-height-md: var(--ds-spacing-5); /** 20px. Matches icon-md. height = 10+20+10 = 40. */
-  --ds-control-line-height-lg: var(--ds-spacing-6); /** 24px. Matches icon-lg. height = 12+24+12 = 48. */
+  --ds-space-2xs: var(--ds-spacing-2); /** 2px */
+  --ds-space-xs: var(--ds-spacing-4); /** 4px */
+  --ds-space-sm: var(--ds-spacing-8); /** 8px */
+  --ds-space-md: var(--ds-spacing-12); /** 12px */
+  --ds-space-lg: var(--ds-spacing-16); /** 16px */
+  --ds-space-xl: var(--ds-spacing-20); /** 20px */
+  --ds-space-2xl: var(--ds-spacing-24); /** 24px */
+  --ds-space-section-sm: var(--ds-spacing-32);
+  --ds-space-section-md: var(--ds-spacing-48);
+  --ds-space-section-lg: var(--ds-spacing-64);
+  --ds-space-section-xl: var(--ds-spacing-80);
+  --ds-space-control-padding-x-sm: var(--ds-spacing-12); /** 12px. Horizontal padding for sm controls. */
+  --ds-space-control-padding-x-md: var(--ds-spacing-16); /** 16px. Horizontal padding for md controls. */
+  --ds-space-control-padding-x-lg: var(--ds-spacing-20); /** 20px. Horizontal padding for lg controls. */
+  --ds-space-control-padding-y-sm: var(--ds-spacing-8); /** 8px. Vertical padding for sm controls. */
+  --ds-space-control-padding-y-md: var(--ds-spacing-10); /** 10px. Vertical padding for md controls. */
+  --ds-space-control-padding-y-lg: var(--ds-spacing-12); /** 12px. Vertical padding for lg controls. */
+  --ds-size-control-sm: var(--ds-spacing-32); /** 32px. Height of sm interactive controls (Button, Input Field, Select Field). */
+  --ds-size-control-md: var(--ds-spacing-40); /** 40px. Height of md interactive controls. */
+  --ds-size-control-lg: var(--ds-spacing-48); /** 48px. Height of lg interactive controls. */
+  --ds-size-control-icon-sm: var(--ds-spacing-16); /** 16px. Icon size inside sm controls. */
+  --ds-size-control-icon-md: var(--ds-spacing-20); /** 20px. Icon size inside md controls. */
+  --ds-size-control-icon-lg: var(--ds-spacing-24); /** 24px. Icon size inside lg controls. */
+  --ds-size-control-min-target: var(--ds-spacing-44); /** 44px. WCAG 2.5.5 AAA touch target minimum. */
+  --ds-size-avatar-sm: var(--ds-spacing-32); /** 32px */
+  --ds-size-avatar-md: var(--ds-spacing-40); /** 40px */
+  --ds-size-avatar-lg: var(--ds-spacing-56); /** 56px */
+  --ds-size-avatar-icon-sm: var(--ds-spacing-16); /** 16px */
+  --ds-size-avatar-icon-md: var(--ds-spacing-20); /** 20px */
+  --ds-size-avatar-icon-lg: var(--ds-spacing-28); /** 28px */
+  --ds-size-spinner-md: var(--ds-spacing-24); /** 24px */
+  --ds-size-spinner-lg: var(--ds-spacing-32); /** 32px */
+  --ds-size-textarea-min-height-md: var(--ds-spacing-80); /** 80px */
+  --ds-size-toggle-track-width-sm: var(--ds-spacing-28); /** 28px */
+  --ds-size-toggle-track-width-md: var(--ds-spacing-36); /** 36px */
+  --ds-size-toggle-track-width-lg: var(--ds-spacing-44); /** 44px */
+  --ds-radius-sm: var(--ds-radius-4); /** 4px. Tags, badges, chips pequenos. */
+  --ds-radius-md: var(--ds-radius-8); /** 8px. Cards, alerts — radius padrão médio. */
+  --ds-radius-lg: var(--ds-radius-12); /** 12px. Cards grandes, containers. */
+  --ds-radius-xl: var(--ds-radius-16); /** 16px. Modais, sheets, dialogs. */
+  --ds-radius-full: var(--ds-radius-9999); /** 9999px. Pills, circles, avatars. */
+  --ds-control-font-size-sm: var(--ds-font-size-14); /** 14px. Font size for sm controls (Button, Input, Select). */
+  --ds-control-font-size-md: var(--ds-font-size-14); /** 14px. Font size for md controls. */
+  --ds-control-font-size-lg: var(--ds-font-size-16); /** 16px. Font size for lg controls. */
+  --ds-control-line-height-sm: var(--ds-spacing-16); /** 16px. Matches icon-sm. height = padY*2 + lineHeight = 8+16+8 = 32. */
+  --ds-control-line-height-md: var(--ds-spacing-20); /** 20px. Matches icon-md. height = 10+20+10 = 40. */
+  --ds-control-line-height-lg: var(--ds-spacing-24); /** 24px. Matches icon-lg. height = 12+24+12 = 48. */
   --ds-body-font-family-sans: var(--ds-font-family-sans); /** Font-family sans-serif padrão do sistema. Usar em todo texto UI. */
   --ds-body-font-weight-regular: var(--ds-font-weight-regular); /** Peso regular (400). Usar em body text, descrições, placeholders. */
   --ds-body-font-weight-medium: var(--ds-font-weight-medium); /** Peso medium (500). Usar em labels, links secundários, ênfase leve. */
@@ -154,13 +160,13 @@
   --ds-body-font-weight-bold: var(--ds-font-weight-bold); /** Peso bold (700). Usar em títulos de destaque e em negrito inline dentro de body text. */
   --ds-body-letter-spacing-normal: var(--ds-letter-spacing-normal); /** Letter-spacing neutro (0). Padrão pra body text e UI. */
   --ds-body-letter-spacing-tight: var(--ds-letter-spacing-tight); /** Letter-spacing apertado (-0.02em). Usar em display/headings grandes. */
-  --ds-body-font-size-xs: var(--ds-font-size-xs); /** 12px. Helper text, caption, legenda. */
-  --ds-body-font-size-sm: var(--ds-font-size-sm); /** 14px. Body padrão, labels, descrições. */
-  --ds-body-font-size-md: var(--ds-font-size-md); /** 16px. Body confortável, títulos menores. */
-  --ds-body-font-size-lg: var(--ds-font-size-lg); /** 18px. Subtítulos, avatar labels. */
-  --ds-body-font-size-xl: var(--ds-font-size-xl); /** 20px. Títulos de card, headings H3. */
-  --ds-body-font-size-2xl: var(--ds-font-size-2xl); /** 24px. Headings H2, títulos de modal. */
-  --ds-body-font-size-3xl: var(--ds-font-size-3xl); /** 30px. Headings H1, display. */
+  --ds-body-font-size-xs: var(--ds-font-size-12); /** 12px. Helper text, caption, legenda. */
+  --ds-body-font-size-sm: var(--ds-font-size-14); /** 14px. Body padrão, labels, descrições. */
+  --ds-body-font-size-md: var(--ds-font-size-16); /** 16px. Body confortável, títulos menores. */
+  --ds-body-font-size-lg: var(--ds-font-size-18); /** 18px. Subtítulos, avatar labels. */
+  --ds-body-font-size-xl: var(--ds-font-size-20); /** 20px. Títulos de card, headings H3. */
+  --ds-body-font-size-2xl: var(--ds-font-size-24); /** 24px. Headings H2, títulos de modal. */
+  --ds-body-font-size-3xl: var(--ds-font-size-28); /** 28px. Headings H1, display. */
   --ds-body-line-height-xs: var(--ds-line-height-snug); /** 1.375 ratio. Pareia com body/font-size/xs (12px) ≈ 16.5px. Figma: 16px. */
   --ds-body-line-height-sm: var(--ds-line-height-snug); /** 1.375 ratio. Pareia com body/font-size/sm (14px) ≈ 19px. Figma: 18px. */
   --ds-body-line-height-md: var(--ds-line-height-normal); /** 1.5 ratio. Pareia com body/font-size/md (16px) = 24px. Substitui usos antigos de 22 e 24 (ADR-013). Figma: 24px. */

@@ -8,35 +8,35 @@
   <link rel="stylesheet" href="layout.css">
   <style>
     /* Tables */
-    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-sm); margin-bottom: var(--ds-spacing-8); }
-    .ds-token-table th { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
-    .ds-token-table td { padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
-    .ds-token-table code { font-size: var(--ds-font-size-xs); font-family: var(--ds-font-family-mono); }
+    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-14); margin-bottom: var(--ds-spacing-32); }
+    .ds-token-table th { text-align: left; padding: var(--ds-spacing-8) var(--ds-spacing-12); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
+    .ds-token-table td { padding: var(--ds-spacing-8) var(--ds-spacing-12); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
+    .ds-token-table code { font-size: var(--ds-font-size-12); font-family: var(--ds-font-family-mono); }
     /* Callouts */
-    .ds-callout { padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-6); font-size: var(--ds-font-size-sm); line-height: var(--ds-line-height-relaxed); color: var(--ds-content-default); }
-    .ds-callout--info { background-color: var(--ds-feedback-info-background); border: var(--ds-border-width-1) solid var(--ds-feedback-info-border); }
-    .ds-callout--success { background-color: var(--ds-feedback-success-background); border: var(--ds-border-width-1) solid var(--ds-feedback-success-border); }
-    .ds-callout--warning { background-color: var(--ds-feedback-warning-background); border: var(--ds-border-width-1) solid var(--ds-feedback-warning-border); }
-    .ds-callout__title { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-1); }
+    .ds-callout { padding: var(--ds-spacing-16) var(--ds-spacing-20); border-radius: var(--ds-radius-12); margin-bottom: var(--ds-spacing-24); font-size: var(--ds-font-size-14); line-height: var(--ds-line-height-relaxed); color: var(--ds-content-default); }
+    .ds-callout--info { background-color: var(--ds-feedback-info-bg-background); border: var(--ds-border-width-1) solid var(--ds-feedback-info-border-default); }
+    .ds-callout--success { background-color: var(--ds-feedback-success-bg-background); border: var(--ds-border-width-1) solid var(--ds-feedback-success-border-default); }
+    .ds-callout--warning { background-color: var(--ds-feedback-warning-bg-background); border: var(--ds-border-width-1) solid var(--ds-feedback-warning-border-default); }
+    .ds-callout__title { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-4); }
     /* Do/Don't */
-    .ds-dodont { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ds-spacing-4); margin-bottom: var(--ds-spacing-8); }
-    .ds-dodont__item { border-radius: var(--ds-radius-lg); overflow: hidden; }
-    .ds-dodont__preview { padding: var(--ds-spacing-6); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg) var(--ds-radius-lg) 0 0; display: flex; flex-wrap: wrap; gap: var(--ds-spacing-3); align-items: center; justify-content: center; }
-    .ds-dodont__label { padding: var(--ds-spacing-2) var(--ds-spacing-4); font-size: var(--ds-font-size-sm); font-weight: var(--ds-font-weight-semibold); }
-    .ds-dodont__label--do { background-color: var(--ds-feedback-success-background); color: var(--ds-feedback-success-content-default); border-top: 3px solid var(--ds-feedback-success-default); }
-    .ds-dodont__label--dont { background-color: var(--ds-feedback-error-background); color: var(--ds-feedback-error-content-default); border-top: 3px solid var(--ds-feedback-error-default); }
-    .ds-dodont__desc { padding: 0 var(--ds-spacing-4) var(--ds-spacing-3); font-size: var(--ds-font-size-sm); color: var(--ds-content-secondary); background-color: var(--ds-background-subtle); }
+    .ds-dodont { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ds-spacing-16); margin-bottom: var(--ds-spacing-32); }
+    .ds-dodont__item { border-radius: var(--ds-radius-12); overflow: hidden; }
+    .ds-dodont__preview { padding: var(--ds-spacing-24); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-12) var(--ds-radius-12) 0 0; display: flex; flex-wrap: wrap; gap: var(--ds-spacing-12); align-items: center; justify-content: center; }
+    .ds-dodont__label { padding: var(--ds-spacing-8) var(--ds-spacing-16); font-size: var(--ds-font-size-14); font-weight: var(--ds-font-weight-semibold); }
+    .ds-dodont__label--do { background-color: var(--ds-feedback-success-bg-background); color: var(--ds-feedback-success-content-default); border-top: 3px solid var(--ds-feedback-success-bg-background); }
+    .ds-dodont__label--dont { background-color: var(--ds-feedback-error-bg-background); color: var(--ds-feedback-error-content-default); border-top: 3px solid var(--ds-feedback-error-bg-background); }
+    .ds-dodont__desc { padding: 0 var(--ds-spacing-16) var(--ds-spacing-12); font-size: var(--ds-font-size-14); color: var(--ds-content-secondary); background-color: var(--ds-background-subtle); }
     /* Anatomy */
-    .ds-anatomy { padding: var(--ds-spacing-8); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-4); display: flex; align-items: center; justify-content: center; position: relative; }
-    .ds-anatomy__marker { position: absolute; width: 20px; height: 20px; border-radius: 50%; background-color: var(--ds-brand-default); color: var(--ds-brand-content-contrast); font-size: 11px; font-weight: var(--ds-font-weight-bold); display: flex; align-items: center; justify-content: center; }
-    .ds-anatomy-legend { font-size: var(--ds-font-size-sm); color: var(--ds-content-secondary); margin-bottom: var(--ds-spacing-8); line-height: var(--ds-line-height-relaxed); }
+    .ds-anatomy { padding: var(--ds-spacing-32); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-12); margin-bottom: var(--ds-spacing-16); display: flex; align-items: center; justify-content: center; position: relative; }
+    .ds-anatomy__marker { position: absolute; width: 20px; height: 20px; border-radius: 50%; background-color: var(--ds-primary-bg-default); color: var(--ds-primary-content-default); font-size: 11px; font-weight: var(--ds-font-weight-bold); display: flex; align-items: center; justify-content: center; }
+    .ds-anatomy-legend { font-size: var(--ds-font-size-14); color: var(--ds-content-secondary); margin-bottom: var(--ds-spacing-32); line-height: var(--ds-line-height-relaxed); }
     .ds-anatomy-legend strong { color: var(--ds-content-default); }
     /* Code block */
-    .ds-code-block { background-color: var(--ds-color-neutral-900); color: var(--ds-color-neutral-200); padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); font-family: var(--ds-font-family-mono); font-size: var(--ds-font-size-xs); line-height: var(--ds-line-height-relaxed); overflow-x: auto; margin-bottom: var(--ds-spacing-6); white-space: pre; }
+    .ds-code-block { background-color: var(--ds-color-neutral-900); color: var(--ds-color-neutral-200); padding: var(--ds-spacing-16) var(--ds-spacing-20); border-radius: var(--ds-radius-12); font-family: var(--ds-font-family-mono); font-size: var(--ds-font-size-12); line-height: var(--ds-line-height-relaxed); overflow-x: auto; margin-bottom: var(--ds-spacing-24); white-space: pre; }
     /* Related */
-    .ds-related { display: flex; gap: var(--ds-spacing-3); flex-wrap: wrap; margin-bottom: var(--ds-spacing-8); }
-    .ds-related__link { padding: var(--ds-spacing-2) var(--ds-spacing-4); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-md); font-size: var(--ds-font-size-sm); color: var(--ds-content-link-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
-    .ds-related__link:hover { border-color: var(--ds-brand-default); background-color: var(--ds-state-hover); }
+    .ds-related { display: flex; gap: var(--ds-spacing-12); flex-wrap: wrap; margin-bottom: var(--ds-spacing-32); }
+    .ds-related__link { padding: var(--ds-spacing-8) var(--ds-spacing-16); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-8); font-size: var(--ds-font-size-14); color: var(--ds-link-content-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
+    .ds-related__link:hover { border-color: var(--ds-primary-bg-default); background-color: var(--ds-overlay-subtle); }
     /* Responsive do/dont */
     @media (max-width: 768px) { .ds-dodont { grid-template-columns: 1fr; } }
   </style>
@@ -47,7 +47,7 @@
 <body>
 
 <header class="ds-site-header">
-  <div style="display:flex;align-items:center;gap:var(--ds-spacing-4)">
+  <div style="display:flex;align-items:center;gap:var(--ds-spacing-16)">
     <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>
@@ -61,13 +61,6 @@
       <option value="pt">PT</option>
       <option value="en">EN</option>
     </select>
-    <div class="ds-theme-switcher">
-      <select class="ds-theme-switcher__select" id="theme-switcher">
-        <option value="default">Default (Blue)</option>
-        <option value="ocean">Ocean (Cyan)</option>
-        <option value="forest">Forest (Emerald)</option>
-      </select>
-    </div>
     <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg> Dark</button>
   </div>
 </header>
@@ -416,7 +409,7 @@
        ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Mapeamento de tokens</span><span data-lang="en">Token mapping</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);">
+    <p style="margin-bottom:var(--ds-spacing-16);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);">
       <span data-lang="pt">Mesmos tokens do Input, mais tokens específicos de min-height e contador do textarea.</span><span data-lang="en">Same tokens as Input, plus textarea-specific min-height and counter tokens.</span>
     </p>
     <table class="ds-token-table">
@@ -424,12 +417,12 @@
       <tbody>
         <tr><td>background</td><td><code>semantic.surface.default</code></td><td><code>--ds-surface-default</code></td></tr>
         <tr><td>border</td><td><code>semantic.border.default</code></td><td><code>--ds-border-default</code></td></tr>
-        <tr><td>border (hover)</td><td><code>semantic.border.control.hover</code></td><td><code>--ds-border-control-hover</code></td></tr>
-        <tr><td>border (focus)</td><td><code>semantic.brand.default</code></td><td><code>--ds-brand-default</code></td></tr>
-        <tr><td>border (error)</td><td><code>semantic.feedback.error.default</code></td><td><code>--ds-feedback-error-default</code></td></tr>
+        <tr><td>border (hover)</td><td><code>semantic.border.control-hover</code></td><td><code>--ds-border-control-hover</code></td></tr>
+        <tr><td>border (focus)</td><td><code>semantic.primary.bg-default</code></td><td><code>--ds-primary-bg-default</code></td></tr>
+        <tr><td>border (error)</td><td><code>semantic.feedback.error.bg-default</code></td><td><code>--ds-feedback-error-bg-default</code></td></tr>
         <tr><td>text color</td><td><code>semantic.content.default</code></td><td><code>--ds-content-default</code></td></tr>
         <tr><td>placeholder color</td><td><code>semantic.content.tertiary</code></td><td><code>--ds-content-tertiary</code></td></tr>
-        <tr><td>border-radius</td><td><code>semantic.radius.component</code></td><td><code>--ds-radius-component</code></td></tr>
+        <tr><td>border-radius</td><td><code>semantic.radius.component</code></td><td><code>--ds-radius-md</code></td></tr>
         <tr><td>focus ring</td><td><code>semantic.focus.ring.*</code></td><td><code>--ds-focus-ring-width</code>, <code>--ds-focus-ring-offset</code>, <code>--ds-focus-ring-color</code></td></tr>
         <tr><td>padding-x (sm/md/lg)</td><td><code>semantic.space.control.padding-x.*</code></td><td><code>--ds-space-control-padding-x-sm/md/lg</code></td></tr>
         <tr><td>padding-y (sm)</td><td><code>semantic.space.control.padding-y.sm</code></td><td><code>--ds-space-control-padding-y-sm</code> (8px)</td></tr>
@@ -442,10 +435,10 @@
         <tr><td>min-height (md)</td><td>--</td><td><code>120px</code></td></tr>
         <tr><td>min-height (lg)</td><td>--</td><td><code>160px</code></td></tr>
         <tr><td>counter color</td><td><code>semantic.content.secondary</code></td><td><code>--ds-content-secondary</code></td></tr>
-        <tr><td>counter color (over)</td><td><code>semantic.feedback.error.content.default</code></td><td><code>--ds-feedback-error-content-default</code></td></tr>
+        <tr><td>counter color (over)</td><td><code>semantic.feedback.error.content-default</code></td><td><code>--ds-feedback-error-content-default</code></td></tr>
       </tbody>
     </table>
-    <p style="margin-top:var(--ds-spacing-2);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);">
+    <p style="margin-top:var(--ds-spacing-8);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);">
       <span data-lang="pt"><strong>Nota:</strong> Height e line-height permanecem independentes do sistema compartilhado de tokens de controle. Textarea é multilinha, então usa <code>min-height</code> por tamanho em vez dos heights fixos <code>semantic.size.control.*</code> usados por controles de linha única (Button, Input, Select).</span><span data-lang="en"><strong>Note:</strong> Height and line-height remain independent of the shared control token system. Textarea is multi-line, so it uses <code>min-height</code> per size rather than the fixed <code>semantic.size.control.*</code> heights used by single-line controls (Button, Input, Select).</span>
     </p>
   </div>
@@ -506,7 +499,7 @@
         <tr><td><span data-lang="pt">Qualquer caractere</span><span data-lang="en">Any character</span></td><td><span data-lang="pt">Digita no campo</span><span data-lang="en">Types into the field</span></td></tr>
       </tbody>
     </table>
-    <p style="margin-top:var(--ds-spacing-2);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);">
+    <p style="margin-top:var(--ds-spacing-8);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);">
       <span data-lang="pt">Diferente de inputs de linha única, pressionar <code>Enter</code> dentro de um textarea cria uma nova linha em vez de enviar o formulário. Este é o comportamento nativo do navegador.</span><span data-lang="en">Unlike single-line inputs, pressing <code>Enter</code> inside a textarea creates a new line instead of submitting the form. This is native browser behavior.</span>
     </p>
   </div>
@@ -529,7 +522,7 @@
       </tbody>
     </table>
 
-    <div class="ds-callout ds-callout--info" style="margin-top:var(--ds-spacing-4)">
+    <div class="ds-callout ds-callout--info" style="margin-top:var(--ds-spacing-16)">
       <div class="ds-callout__title"><span data-lang="pt">Resumo de atributos ARIA</span><span data-lang="en">ARIA attributes summary</span></div>
       <span data-lang="pt"><code>aria-invalid="true"</code> -- definido quando o campo tem erro de validação.<br>
       <code>aria-describedby</code> -- referencia o ID do elemento de mensagem de erro ou texto auxiliar.<br>
@@ -540,7 +533,7 @@
       If <code>maxlength</code> is set on the native element, browsers enforce the limit -- no JS validation needed.</span>
     </div>
 
-    <div class="ds-callout ds-callout--warning" style="margin-top:var(--ds-spacing-4)">
+    <div class="ds-callout ds-callout--warning" style="margin-top:var(--ds-spacing-16)">
       <div class="ds-callout__title"><span data-lang="pt">Required e label invisível</span><span data-lang="en">Required and invisible label</span></div>
       <span data-lang="pt">Quando <code>Required = true</code>, adicione <code>aria-required="true"</code> no <code>&lt;textarea&gt;</code> — o asterisco visual (<code>.ds-field__required</code>) é decorativo (<code>aria-hidden="true"</code>). Quando <code>Show Label = false</code>, use <code>aria-label</code> no <code>&lt;textarea&gt;</code>. O Helper Text deve ser vinculado via <code>aria-describedby</code>.</span><span data-lang="en">When <code>Required = true</code>, add <code>aria-required="true"</code> to the <code>&lt;textarea&gt;</code> — the visual asterisk (<code>.ds-field__required</code>) is decorative (<code>aria-hidden="true"</code>). When <code>Show Label = false</code>, use <code>aria-label</code> on the <code>&lt;textarea&gt;</code>. Helper Text should be linked via <code>aria-describedby</code>.</span>
     </div>

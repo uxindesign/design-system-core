@@ -165,24 +165,33 @@ function checkJsonIntegrity(lightAll, darkAll) {
 }
 
 // -----------------------------------------------------------------------------
-// 1b. CSS foundation leak — ADR-013
+// 1b. CSS foundation leak — ADR-013 (atualizado pra 2-layer + naming numérico, 0.7.0)
 //
 // Component CSS (`css/components/*.css`) e base CSS (`css/base/*.css`) não
-// podem consumir tokens Foundation direto. Só Semantic ou Component.
-// Ver ADR-013. Padrões proibidos:
-//   --ds-spacing-*           (exceto se refatorado pra semantic ou component)
-//   --ds-radius-{sm,md,lg,xl,2xl,xs,none,full}  (radius-component OK)
-//   --ds-border-width-{0,1,2,4,8}               (border-width-default OK)
-//   --ds-font-size-*, --ds-font-family-*, --ds-font-weight-*
-//   --ds-line-height-*, --ds-letter-spacing-*
-//   --ds-shadow-{xs,sm,md,lg,xl}
-//   --ds-duration-*, --ds-ease-*
-//   --ds-opacity-[0-9]*
-//   --ds-z-[0-9]*
-//   --ds-color-*  (paletas raw)
+// podem consumir tokens Foundation direto. Só Semantic.
+//
+// Pós-migração 2-layer (0.7.0):
+//   Foundation usa naming NUMÉRICO   (radius-8, spacing-16, font-size-14)
+//   Semantic   usa naming T-SHIRT    (radius-md, space-sm, body-font-size-sm)
+//
+// Padrões proibidos (= Foundation direto):
+//   --ds-spacing-{N}                 (numérico) — Semantic equivalente: space-{2xs..2xl}
+//   --ds-radius-{N}                  (numérico) — Semantic equivalente: radius-{xs..2xl,full}
+//   --ds-font-size-{N}               (numérico) — Semantic: body-font-size-* / control-font-size-*
+//   --ds-border-width-{N}            (numérico) — Semantic: border-width-default
+//   --ds-font-family-{sans,display,mono}        — Semantic: body-font-family-sans
+//   --ds-font-weight-{regular,medium,semibold,bold} — Semantic: body-font-weight-*
+//   --ds-line-height-{none,tight,snug,normal,relaxed,loose} — Semantic: body-line-height-*
+//   --ds-letter-spacing-{tight,normal,wide}     — Semantic: body-letter-spacing-*
+//   --ds-shadow-{xs,sm,md,lg,xl,2xl,none}       — sem Semantic equivalente hoje
+//   --ds-duration-{fast,normal,slow}            — sem Semantic
+//   --ds-ease-{default,in,out,in-out,linear}    — sem Semantic
+//   --ds-opacity-{N}                            — sem Semantic
+//   --ds-z-{N}                                  — Semantic: z-{base,sticky,modal,...}
+//   --ds-color-{family}-{N}                     — Semantic semantic intent (primary, neutral, etc.)
 // -----------------------------------------------------------------------------
 
-const FOUNDATION_LEAK_RE = /var\(\s*--ds-(?:spacing-[0-9-]+|radius-(?:xs|sm|md|lg|xl|2xl|none|full)|border-width-[0-9]+|font-family-[a-z]+|font-weight-[a-z]+|font-size-[0-9a-z]+|line-height-[a-z]+|letter-spacing-[a-z]+|shadow-(?:xs|sm|md|lg|xl)|duration-[a-z]+|ease-[a-z-]+|opacity-[0-9]+|z-[0-9]+|color-[a-z]+-[0-9]+)[a-z0-9-]*\s*\)/gi;
+const FOUNDATION_LEAK_RE = /var\(\s*--ds-(?:spacing-[0-9]+|radius-[0-9]+|border-width-[0-9]+|font-family-(?:sans|display|mono)|font-weight-(?:regular|medium|semibold|bold)|font-size-[0-9]+|line-height-(?:none|tight|snug|normal|relaxed|loose)|letter-spacing-(?:tight|normal|wide)|shadow-(?:xs|sm|md|lg|xl|2xl|none)|duration-(?:fast|normal|slow)|ease-(?:default|in|out|in-out|linear)|opacity-[0-9]+|z-[0-9]+|color-[a-z]+-[0-9]+)\s*\)/gi;
 
 function scanCssFileForLeaks(filePath) {
   const content = fs.readFileSync(filePath, "utf8");
@@ -541,15 +550,15 @@ function writeHtmlReport(report) {
 <link rel="stylesheet" href="../css/design-system.css">
 <link rel="stylesheet" href="layout.css">
 <style>
-  .ds-sync-status { display:inline-flex; align-items:center; gap: var(--ds-spacing-2); padding: var(--ds-spacing-3) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); font-weight: var(--ds-font-weight-semibold); }
-  .ds-sync-status.ok { background: var(--ds-feedback-success-background); color: var(--ds-feedback-success-content-default); }
-  .ds-sync-status.error { background: var(--ds-feedback-error-background); color: var(--ds-feedback-error-content-default); }
-  .ds-sync-meta { display:flex; gap: var(--ds-spacing-6); margin-top: var(--ds-spacing-4); font-size: var(--ds-font-size-sm); color: var(--ds-content-secondary); }
-  .ds-sync-meta strong { color: var(--ds-content-default); font-weight: var(--ds-font-weight-semibold); }
-  .ds-sync-table { width:100%; border-collapse: collapse; margin-top: var(--ds-spacing-6); font-size: var(--ds-font-size-sm); }
-  .ds-sync-table th, .ds-sync-table td { text-align:left; padding: var(--ds-spacing-3); border-bottom: 1px solid var(--ds-border-default); }
-  .ds-sync-table th { font-weight: var(--ds-font-weight-semibold); background: var(--ds-background-subtle); }
-  .ds-sync-banner { background: var(--ds-feedback-info-background); color: var(--ds-feedback-info-content-default); padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-md); margin-bottom: var(--ds-spacing-6); font-size: var(--ds-font-size-sm); }
+  .ds-sync-status { display:inline-flex; align-items:center; gap: var(--ds-spacing-8); padding: var(--ds-spacing-12) var(--ds-spacing-20); border-radius: var(--ds-radius-lg); font-weight: var(--ds-body-font-weight-semibold); }
+  .ds-sync-status.ok { background: var(--ds-feedback-success-bg-default); color: var(--ds-feedback-success-content-default); }
+  .ds-sync-status.error { background: var(--ds-feedback-error-bg-default); color: var(--ds-feedback-error-content-default); }
+  .ds-sync-meta { display:flex; gap: var(--ds-spacing-24); margin-top: var(--ds-spacing-16); font-size: var(--ds-body-font-size-sm); color: var(--ds-content-secondary); }
+  .ds-sync-meta strong { color: var(--ds-content-default); font-weight: var(--ds-body-font-weight-semibold); }
+  .ds-sync-table { width:100%; border-collapse: collapse; margin-top: var(--ds-spacing-24); font-size: var(--ds-body-font-size-sm); }
+  .ds-sync-table th, .ds-sync-table td { text-align:left; padding: var(--ds-spacing-12); border-bottom: 1px solid var(--ds-border-default); }
+  .ds-sync-table th { font-weight: var(--ds-body-font-weight-semibold); background: var(--ds-background-subtle); }
+  .ds-sync-banner { background: var(--ds-feedback-info-bg-default); color: var(--ds-feedback-info-content-default); padding: var(--ds-spacing-16) var(--ds-spacing-20); border-radius: var(--ds-radius-md); margin-bottom: var(--ds-spacing-24); font-size: var(--ds-body-font-size-sm); }
 </style>
 <script>
   (function(){var l=localStorage.getItem('ds-lang');if(l)document.documentElement.setAttribute('lang',l)})();
@@ -558,7 +567,7 @@ function writeHtmlReport(report) {
 <body>
 
 <header class="ds-site-header">
-  <div style="display:flex;align-items:center;gap:var(--ds-spacing-4)">
+  <div style="display:flex;align-items:center;gap:var(--ds-spacing-16)">
     <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>

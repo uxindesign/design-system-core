@@ -8,34 +8,34 @@
   <link rel="stylesheet" href="layout.css">
   <style>
     /* Tables */
-    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-sm); margin-bottom: var(--ds-spacing-8); }
-    .ds-token-table th { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
-    .ds-token-table td { padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
-    .ds-token-table code { font-size: var(--ds-font-size-xs); font-family: var(--ds-font-family-mono); }
+    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-14); margin-bottom: var(--ds-spacing-32); }
+    .ds-token-table th { text-align: left; padding: var(--ds-spacing-8) var(--ds-spacing-12); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
+    .ds-token-table td { padding: var(--ds-spacing-8) var(--ds-spacing-12); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
+    .ds-token-table code { font-size: var(--ds-font-size-12); font-family: var(--ds-font-family-mono); }
     /* Callouts */
-    .ds-callout { padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-6); font-size: var(--ds-font-size-sm); line-height: var(--ds-line-height-relaxed); color: var(--ds-content-default); }
-    .ds-callout--info { background-color: var(--ds-feedback-info-background); border: var(--ds-border-width-1) solid var(--ds-feedback-info-border); }
-    .ds-callout--success { background-color: var(--ds-feedback-success-background); border: var(--ds-border-width-1) solid var(--ds-feedback-success-border); }
-    .ds-callout--warning { background-color: var(--ds-feedback-warning-background); border: var(--ds-border-width-1) solid var(--ds-feedback-warning-border); }
-    .ds-callout__title { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-1); }
+    .ds-callout { padding: var(--ds-spacing-16) var(--ds-spacing-20); border-radius: var(--ds-radius-12); margin-bottom: var(--ds-spacing-24); font-size: var(--ds-font-size-14); line-height: var(--ds-line-height-relaxed); color: var(--ds-content-default); }
+    .ds-callout--info { background-color: var(--ds-feedback-info-bg-background); border: var(--ds-border-width-1) solid var(--ds-feedback-info-border-default); }
+    .ds-callout--success { background-color: var(--ds-feedback-success-bg-background); border: var(--ds-border-width-1) solid var(--ds-feedback-success-border-default); }
+    .ds-callout--warning { background-color: var(--ds-feedback-warning-bg-background); border: var(--ds-border-width-1) solid var(--ds-feedback-warning-border-default); }
+    .ds-callout__title { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-4); }
     /* Do/Don't */
-    .ds-dodont { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ds-spacing-4); margin-bottom: var(--ds-spacing-8); }
-    .ds-dodont__item { border-radius: var(--ds-radius-lg); overflow: hidden; }
-    .ds-dodont__preview { padding: var(--ds-spacing-6); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg) var(--ds-radius-lg) 0 0; display: flex; flex-wrap: wrap; gap: var(--ds-spacing-3); align-items: center; justify-content: center; }
-    .ds-dodont__label { padding: var(--ds-spacing-2) var(--ds-spacing-4); font-size: var(--ds-font-size-sm); font-weight: var(--ds-font-weight-semibold); }
-    .ds-dodont__label--do { background-color: var(--ds-feedback-success-background); color: var(--ds-feedback-success-content-default); border-top: 3px solid var(--ds-feedback-success-default); }
-    .ds-dodont__label--dont { background-color: var(--ds-feedback-error-background); color: var(--ds-feedback-error-content-default); border-top: 3px solid var(--ds-feedback-error-default); }
-    .ds-dodont__desc { padding: 0 var(--ds-spacing-4) var(--ds-spacing-3); font-size: var(--ds-font-size-sm); color: var(--ds-content-secondary); background-color: var(--ds-background-subtle); }
+    .ds-dodont { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ds-spacing-16); margin-bottom: var(--ds-spacing-32); }
+    .ds-dodont__item { border-radius: var(--ds-radius-12); overflow: hidden; }
+    .ds-dodont__preview { padding: var(--ds-spacing-24); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-12) var(--ds-radius-12) 0 0; display: flex; flex-wrap: wrap; gap: var(--ds-spacing-12); align-items: center; justify-content: center; }
+    .ds-dodont__label { padding: var(--ds-spacing-8) var(--ds-spacing-16); font-size: var(--ds-font-size-14); font-weight: var(--ds-font-weight-semibold); }
+    .ds-dodont__label--do { background-color: var(--ds-feedback-success-bg-background); color: var(--ds-feedback-success-content-default); border-top: 3px solid var(--ds-feedback-success-bg-background); }
+    .ds-dodont__label--dont { background-color: var(--ds-feedback-error-bg-background); color: var(--ds-feedback-error-content-default); border-top: 3px solid var(--ds-feedback-error-bg-background); }
+    .ds-dodont__desc { padding: 0 var(--ds-spacing-16) var(--ds-spacing-12); font-size: var(--ds-font-size-14); color: var(--ds-content-secondary); background-color: var(--ds-background-subtle); }
     /* Anatomy */
-    .ds-anatomy { padding: var(--ds-spacing-8); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg); margin-bottom: var(--ds-spacing-4); display: flex; align-items: center; justify-content: center; position: relative; }
-    .ds-anatomy__select { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; background-color: var(--ds-surface-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-md); font-size: var(--ds-font-size-sm); color: var(--ds-content-secondary); position: relative; min-width: 220px; }
-    .ds-anatomy__marker { position: absolute; width: 20px; height: 20px; border-radius: 50%; background-color: var(--ds-brand-default); color: var(--ds-brand-content-contrast); font-size: 11px; font-weight: var(--ds-font-weight-bold); display: flex; align-items: center; justify-content: center; }
-    .ds-anatomy-legend { font-size: var(--ds-font-size-sm); color: var(--ds-content-secondary); margin-bottom: var(--ds-spacing-8); line-height: var(--ds-line-height-relaxed); }
+    .ds-anatomy { padding: var(--ds-spacing-32); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-12); margin-bottom: var(--ds-spacing-16); display: flex; align-items: center; justify-content: center; position: relative; }
+    .ds-anatomy__select { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; background-color: var(--ds-surface-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-8); font-size: var(--ds-font-size-14); color: var(--ds-content-secondary); position: relative; min-width: 220px; }
+    .ds-anatomy__marker { position: absolute; width: 20px; height: 20px; border-radius: 50%; background-color: var(--ds-primary-bg-default); color: var(--ds-primary-content-default); font-size: 11px; font-weight: var(--ds-font-weight-bold); display: flex; align-items: center; justify-content: center; }
+    .ds-anatomy-legend { font-size: var(--ds-font-size-14); color: var(--ds-content-secondary); margin-bottom: var(--ds-spacing-32); line-height: var(--ds-line-height-relaxed); }
     .ds-anatomy-legend strong { color: var(--ds-content-default); }
     /* Related */
-    .ds-related { display: flex; gap: var(--ds-spacing-3); flex-wrap: wrap; margin-bottom: var(--ds-spacing-8); }
-    .ds-related__link { padding: var(--ds-spacing-2) var(--ds-spacing-4); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-md); font-size: var(--ds-font-size-sm); color: var(--ds-content-link-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
-    .ds-related__link:hover { border-color: var(--ds-brand-default); background-color: var(--ds-state-hover); }
+    .ds-related { display: flex; gap: var(--ds-spacing-12); flex-wrap: wrap; margin-bottom: var(--ds-spacing-32); }
+    .ds-related__link { padding: var(--ds-spacing-8) var(--ds-spacing-16); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-8); font-size: var(--ds-font-size-14); color: var(--ds-link-content-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
+    .ds-related__link:hover { border-color: var(--ds-primary-bg-default); background-color: var(--ds-overlay-subtle); }
     /* Responsive do/dont */
     @media (max-width: 768px) { .ds-dodont { grid-template-columns: 1fr; } }
   </style>
@@ -46,7 +46,7 @@
 <body>
 
 <header class="ds-site-header">
-  <div style="display:flex;align-items:center;gap:var(--ds-spacing-4)">
+  <div style="display:flex;align-items:center;gap:var(--ds-spacing-16)">
     <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>
@@ -60,13 +60,6 @@
       <option value="pt">PT</option>
       <option value="en">EN</option>
     </select>
-    <div class="ds-theme-switcher">
-      <select class="ds-theme-switcher__select" id="theme-switcher">
-        <option value="default">Default (Blue)</option>
-        <option value="ocean">Ocean (Cyan)</option>
-        <option value="forest">Forest (Emerald)</option>
-      </select>
-    </div>
     <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg> Dark</button>
   </div>
 </header>
@@ -95,7 +88,7 @@
     </div>
     <div class="ds-callout ds-callout--warning">
       <div class="ds-callout__title"><span data-lang="pt">Não use Select quando</span><span data-lang="en">Don't use Select when</span></div>
-      <span data-lang="pt">Menos de 5 opções — use <a href="radio.html" style="color:var(--ds-content-link-default)">Radio</a>. Múltiplas seleções permitidas — use grupo de <a href="checkbox.html" style="color:var(--ds-content-link-default)">Checkbox</a>. Usuário precisa buscar ou filtrar — use combobox (componente futuro).</span><span data-lang="en">Fewer than 5 options — use <a href="radio.html" style="color:var(--ds-content-link-default)">Radio</a> instead. Multiple selections allowed — use <a href="checkbox.html" style="color:var(--ds-content-link-default)">Checkbox group</a>. User needs to search or filter — use combobox (future component).</span>
+      <span data-lang="pt">Menos de 5 opções — use <a href="radio.html" style="color:var(--ds-link-content-default)">Radio</a>. Múltiplas seleções permitidas — use grupo de <a href="checkbox.html" style="color:var(--ds-link-content-default)">Checkbox</a>. Usuário precisa buscar ou filtrar — use combobox (componente futuro).</span><span data-lang="en">Fewer than 5 options — use <a href="radio.html" style="color:var(--ds-link-content-default)">Radio</a> instead. Multiple selections allowed — use <a href="checkbox.html" style="color:var(--ds-link-content-default)">Checkbox group</a>. User needs to search or filter — use combobox (future component).</span>
     </div>
   </div>
 
@@ -283,11 +276,11 @@
        ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Estados</span><span data-lang="en">States</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);">
+    <p style="margin-bottom:var(--ds-spacing-16);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);">
       <span data-lang="pt">Estados são controlados via pseudo-classes CSS (<code>:hover</code>, <code>:focus-visible</code>, <code>[disabled]</code>) e classes modificadoras para erro e somente leitura.</span><span data-lang="en">States are handled via CSS pseudo-classes (<code>:hover</code>, <code>:focus-visible</code>, <code>[disabled]</code>) and modifier classes for error and readonly.</span>
     </p>
 
-    <h3 style="margin-bottom:var(--ds-spacing-3);font-size:var(--ds-font-size-md);color:var(--ds-content-default)">Error</h3>
+    <h3 style="margin-bottom:var(--ds-spacing-12);font-size:var(--ds-font-size-16);color:var(--ds-content-default)">Error</h3>
     <div class="ds-preview">
       <div class="ds-preview__tabs" role="tablist">
         <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
@@ -327,7 +320,7 @@
       </div>
     </div>
 
-    <h3 style="margin-bottom:var(--ds-spacing-3);font-size:var(--ds-font-size-md);color:var(--ds-content-default)">Disabled</h3>
+    <h3 style="margin-bottom:var(--ds-spacing-12);font-size:var(--ds-font-size-16);color:var(--ds-content-default)">Disabled</h3>
     <div class="ds-preview">
       <div class="ds-preview__tabs" role="tablist">
         <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
@@ -356,7 +349,7 @@
       </div>
     </div>
 
-    <h3 style="margin-bottom:var(--ds-spacing-3);font-size:var(--ds-font-size-md);color:var(--ds-content-default)">Readonly</h3>
+    <h3 style="margin-bottom:var(--ds-spacing-12);font-size:var(--ds-font-size-16);color:var(--ds-content-default)">Readonly</h3>
     <div class="ds-preview">
       <div class="ds-preview__tabs" role="tablist">
         <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
@@ -386,15 +379,15 @@
       </div>
     </div>
 
-    <table class="ds-token-table" style="margin-top:var(--ds-spacing-4)">
+    <table class="ds-token-table" style="margin-top:var(--ds-spacing-16)">
       <thead><tr><th>State</th><th>CSS trigger</th><th>Visual change</th><th>Token</th></tr></thead>
       <tbody>
         <tr><td>Default</td><td>---</td><td>Neutral border</td><td><code>semantic.border.default</code></td></tr>
-        <tr><td>Hover</td><td><code>:hover</code></td><td>Darker border</td><td><code>semantic.border.control.hover</code></td></tr>
+        <tr><td>Hover</td><td><code>:hover</code></td><td>Darker border</td><td><code>semantic.border.control-hover</code></td></tr>
         <tr><td>Focused</td><td><code>:focus-visible</code></td><td>2px outline ring, 2px offset</td><td><code>semantic.focus.ring.*</code></td></tr>
-        <tr><td>Error</td><td><code>.ds-select--error</code></td><td>Red border</td><td><code>semantic.feedback.error.default</code></td></tr>
-        <tr><td>Disabled</td><td><code>[disabled]</code></td><td>Muted bg + fg, no pointer events</td><td><code>semantic.state.disabled.*</code></td></tr>
-        <tr><td>Readonly</td><td><code>.ds-select--readonly</code> + <code>[disabled]</code></td><td>No border change, full opacity text</td><td><code>semantic.state.readonly.*</code></td></tr>
+        <tr><td>Error</td><td><code>.ds-select--error</code></td><td>Red border</td><td><code>semantic.feedback.error.bg-default</code></td></tr>
+        <tr><td>Disabled</td><td><code>[disabled]</code></td><td>Muted bg + fg, no pointer events</td><td><code>semantic.background.disabled</code></td></tr>
+        <tr><td>Readonly</td><td><code>.ds-select--readonly</code> + <code>[disabled]</code></td><td>No border change, full opacity text</td><td><code>semantic.background.disabled</code></td></tr>
       </tbody>
     </table>
   </div>
@@ -467,7 +460,7 @@
           </div>
         </div>
         <div class="ds-dodont__label ds-dodont__label--dont">Não faça</div>
-        <div class="ds-dodont__desc"><span data-lang="pt">Não use select para escolhas booleanas -- use <a href="toggle.html" style="color:var(--ds-content-link-default)">Toggle</a> ou <a href="checkbox.html" style="color:var(--ds-content-link-default)">Checkbox</a>.</span><span data-lang="en">Don't use a select for boolean choices -- use <a href="toggle.html" style="color:var(--ds-content-link-default)">Toggle</a> or <a href="checkbox.html" style="color:var(--ds-content-link-default)">Checkbox</a>.</span></div>
+        <div class="ds-dodont__desc"><span data-lang="pt">Não use select para escolhas booleanas -- use <a href="toggle.html" style="color:var(--ds-link-content-default)">Toggle</a> ou <a href="checkbox.html" style="color:var(--ds-link-content-default)">Checkbox</a>.</span><span data-lang="en">Don't use a select for boolean choices -- use <a href="toggle.html" style="color:var(--ds-link-content-default)">Toggle</a> or <a href="checkbox.html" style="color:var(--ds-link-content-default)">Checkbox</a>.</span></div>
       </div>
     </div>
   </div>
@@ -494,7 +487,7 @@
        ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Mapeamento de tokens</span><span data-lang="en">Token mapping</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);">
+    <p style="margin-bottom:var(--ds-spacing-16);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);">
       <span data-lang="pt">Mesmo conjunto de tokens do Input. O indicador de seta herda a cor do texto via <code>currentColor</code>.</span><span data-lang="en">Same token set as Input. The arrow indicator inherits text color via <code>currentColor</code>.</span>
     </p>
     <table class="ds-token-table">
@@ -502,14 +495,14 @@
       <tbody>
         <tr><td>background</td><td><code>semantic.surface.default</code></td><td><code>--ds-surface-default</code></td></tr>
         <tr><td>border (default)</td><td><code>semantic.border.default</code></td><td><code>--ds-border-default</code></td></tr>
-        <tr><td>border (hover)</td><td><code>semantic.border.control.hover</code></td><td><code>--ds-border-control-hover</code></td></tr>
-        <tr><td>border (error)</td><td><code>semantic.feedback.error.default</code></td><td><code>--ds-feedback-error-default</code></td></tr>
+        <tr><td>border (hover)</td><td><code>semantic.border.control-hover</code></td><td><code>--ds-border-control-hover</code></td></tr>
+        <tr><td>border (error)</td><td><code>semantic.feedback.error.bg-default</code></td><td><code>--ds-feedback-error-bg-default</code></td></tr>
         <tr><td>text color</td><td><code>semantic.content.default</code></td><td><code>--ds-content-default</code></td></tr>
         <tr><td>placeholder color</td><td><code>semantic.content.tertiary</code></td><td><code>--ds-content-tertiary</code></td></tr>
         <tr><td>arrow color</td><td>Inherits via <code>currentColor</code></td><td>---</td></tr>
-        <tr><td>background (disabled)</td><td><code>semantic.state.disabled.background</code></td><td><code>--ds-state-disabled-background</code></td></tr>
+        <tr><td>background (disabled)</td><td><code>semantic.background.disabled</code></td><td><code>--ds-background-disabled</code></td></tr>
         <tr><td>text (disabled)</td><td><code>semantic.content.disabled</code></td><td><code>--ds-content-disabled</code></td></tr>
-        <tr><td>border-radius</td><td><code>semantic.radius.component</code></td><td><code>--ds-radius-component</code></td></tr>
+        <tr><td>border-radius</td><td><code>semantic.radius.component</code></td><td><code>--ds-radius-md</code></td></tr>
         <tr><td>focus ring</td><td><code>semantic.focus.ring.*</code></td><td><code>--ds-focus-ring-width</code>, <code>--ds-focus-ring-offset</code>, <code>--ds-focus-ring-color</code></td></tr>
         <tr><td>height (sm)</td><td><code>semantic.size.control.sm</code></td><td><code>--ds-size-control-sm</code> (32px)</td></tr>
         <tr><td>height (md)</td><td><code>semantic.size.control.md</code></td><td><code>--ds-size-control-md</code> (40px)</td></tr>
@@ -582,7 +575,7 @@
         <tr><td>Any letter</td><td><span data-lang="pt">Pula para a primeira opção que começa com aquela letra</span><span data-lang="en">Jumps to first option starting with that letter</span></td></tr>
       </tbody>
     </table>
-    <p style="margin-top:var(--ds-spacing-2);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);">
+    <p style="margin-top:var(--ds-spacing-8);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);">
       <span data-lang="pt">Todas as interações de teclado são tratadas nativamente pelo elemento <code>&lt;select&gt;</code>. Nenhum JavaScript customizado é necessário. Selects desabilitados são removidos da ordem de tabulação automaticamente.</span><span data-lang="en">All keyboard interactions are handled natively by the <code>&lt;select&gt;</code> element. No custom JavaScript is required. Disabled selects are removed from tab order automatically.</span>
     </p>
   </div>
@@ -605,14 +598,14 @@
       </tbody>
     </table>
 
-    <div class="ds-callout ds-callout--info" style="margin-top:var(--ds-spacing-4)">
+    <div class="ds-callout ds-callout--info" style="margin-top:var(--ds-spacing-16)">
       <div class="ds-callout__title"><span data-lang="pt">Notas de implementação</span><span data-lang="en">Implementation notes</span></div>
       <span data-lang="pt">A seta customizada (<code>.ds-select__arrow</code>) usa <code>pointer-events: none</code> -- é puramente decorativa e não interfere com interação de clique ou teclado.<br><br>
       O <code>&lt;select&gt;</code> nativo não possui atributo <code>readonly</code>. O DS usa <code>disabled</code> combinado com a classe <code>ds-select--readonly</code> para diferenciação visual. Diferente de disabled, readonly deve comunicar visualmente que o valor está definido mas não é editável.</span><span data-lang="en">The custom arrow (<code>.ds-select__arrow</code>) uses <code>pointer-events: none</code> -- it is purely decorative and does not interfere with click or keyboard interaction.<br><br>
       Native <code>&lt;select&gt;</code> has no <code>readonly</code> attribute. The DS uses <code>disabled</code> combined with the <code>ds-select--readonly</code> class for visual differentiation. Unlike disabled, readonly should visually communicate that the value is set but not editable.</span>
     </div>
 
-    <div class="ds-callout ds-callout--warning" style="margin-top:var(--ds-spacing-4)">
+    <div class="ds-callout ds-callout--warning" style="margin-top:var(--ds-spacing-16)">
       <div class="ds-callout__title"><span data-lang="pt">Required e label invisível</span><span data-lang="en">Required and invisible label</span></div>
       <span data-lang="pt">Quando <code>Required = true</code>, adicione <code>aria-required="true"</code> no <code>&lt;select&gt;</code> — o asterisco visual (<code>.ds-field__required</code>) é decorativo (<code>aria-hidden="true"</code>). Quando <code>Show Label = false</code>, use <code>aria-label</code> no <code>&lt;select&gt;</code>. O Helper Text deve ser vinculado via <code>aria-describedby</code>.</span><span data-lang="en">When <code>Required = true</code>, add <code>aria-required="true"</code> to the <code>&lt;select&gt;</code> — the visual asterisk (<code>.ds-field__required</code>) is decorative (<code>aria-hidden="true"</code>). When <code>Show Label = false</code>, use <code>aria-label</code> on the <code>&lt;select&gt;</code>. Helper Text should be linked via <code>aria-describedby</code>.</span>
     </div>

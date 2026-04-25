@@ -8,6 +8,93 @@ Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na
 
 ## [Não publicado]
 
+### Pós-merge — fixes do site de docs (2026-04-25)
+
+Trabalho de cleanup pós-migração 2-layer aplicado direto na branch antes do merge:
+
+**Causas raiz consertadas:**
+- `css/tokens/index.css` importava `generated/component.css` (deletado em 0.7.0). Browser falha silenciosa em `@import` quebrado podia comprometer carga de imports subsequentes.
+- Aliases `body.font-size.{xs,sm}` e `control.font-size.{sm,md}` apontavam para Foundation **um step menor** que a description prometia (xs→11px em vez de 12px, sm→12px em vez de 14px). Causou todas as labels e body text dos componentes saírem menores que o intencionado em light + dark.
+- `border-default-default` (sufixo duplicado) gerado por bug em script de rename — corrigido em 4 tokens feedback border.
+
+**Visual / componente:**
+- Card `--elevated` agora aplica `box-shadow: var(--ds-shadow-sm)` direto (antes dependia de utility class `.ds-elevation-1` não aplicada nos exemplos)
+- Modal close usava `.ds-btn--ghost.--icon-only` com `&times;` em 4 lugares — substituído pela classe `.ds-modal__close` (definida no CSS) com ícone `material-symbols`
+
+**Conteúdo de docs:**
+- 47 HTMLs (excluindo `changelog`, `decisions/`, `llms-full`): refs antigos removidos. Patterns: `--ds-brand-*` → `--ds-primary-*` / `--ds-toned-*`, `--ds-content-link-*` → `--ds-link-content-*`, `--ds-feedback-*-{background,subtle,default,...}` → `*-bg-{background,subtle,default,...}`, `--ds-state-*` → `--ds-overlay-*` / `--ds-focus-ring-color` / `--ds-background-disabled`, `--ds-spacing-0-5` → `--ds-spacing-2`, `--ds-neutral-50` → `--ds-color-neutral-50`
+- DTCG paths em tabelas atualizadas: `foundation.{spacing,radius,typography.font.size}.{t-shirt}` → `{numérico}` (ex: `foundation.radius.sm` → `foundation.radius.4`)
+- `token-architecture.html` reescrita: 3 camadas → 2 camadas, cadeia de alias COMPONENT→SEMANTIC→BRAND→FOUNDATION → SEMANTIC→FOUNDATION, removida seção "Brand Sublayer" (foundation.brand não existe)
+- `theming.html` simplificada: removidas Default/Ocean/Forest (Ocean e Forest nunca tiveram CSS implementado), virou paleta única + dark mode + guia de tema customizado
+- `foundations-spacing.html`: tabelas Inset/Gap/Component (eliminadas) → escala única `space.{2xs..2xl}` + `space.section.*`. Spacing scale sem `spacing-0`/`spacing-0-5`
+- `foundations-radius.html`: tabela com Foundation (numérico) + Semantic (t-shirt como aliases). Removido `radius-none`
+- `foundations-borders.html`: removido `--ds-border-width-0` da scale visual
+- `foundations-opacity.html`: removido `--ds-opacity-0` da scale visual
+- `card.html`: "Comparacao" → "Comparação"
+
+**Geradores:**
+- `scripts/sync-docs.mjs`: `THEME_COLOR_SECTIONS` reescrito com paths atuais (primary, toned, outline, ghost, link, feedback compound). Inline CSS dos ADRs renderizados também atualizado
+- `scripts/tokens-verify.mjs`: regex `FOUNDATION_LEAK_RE` atualizada para naming numérico (radius-N, spacing-N, font-size-N) — antes pegava t-shirt que agora é Semantic. Inline CSS da `tokens-sync.html` atualizado
+- `scripts/build-api.mjs`: removida leitura de `tokens/component/`, `COMPONENTS` array sem campo `token`
+- `scripts/build-llms.mjs`: nota sobre 2-layer
+
+**UI da homepage e topbar:**
+- Theme switcher (Default/Ocean/Forest) **removido** de 35 HTMLs — Ocean e Forest nunca foram implementados em CSS, opções eram cosméticas
+- Seção "Theming" da homepage removida (redundante; theming.html cobre)
+- Badge `v0.5.17` → `v0.7.0` com tokens corretos (`--ds-toned-*` e `--ds-spacing-{4,8}` em vez dos deletados `--ds-brand-subtle`, `--ds-spacing-{1,2}`)
+
+**Registry/CSS leak:**
+- `tokens/registry.json`: removidas 288 entries `layer="component"` (stale) + 85 entries com paths Foundation/Semantic eliminados (foundation.brand.*, foundation.opacity.0, foundation.radius.0, foundation.spacing.0)
+- 23 leaks reais detectados em `css/components/*.css` pela regex atualizada (radius-{4,8,12,16,9999} consumidos direto) → trocados por Semantic (radius-{sm,md,lg,xl,full})
+
+**Resultado verify:tokens (CI sem snapshot):** 0 erros, 118 warnings (117 base/ leak debt + 1 registry TODOs migração).
+
+### Migração para 2-layer + Foundation numeric naming (2026-04-24)
+
+**Mudança arquitetural grande.** Elimina camada Component e renomeia Foundation para naming numérico direto.
+
+**Figma (fonte de verdade):**
+- Collection `Component` (61 tokens) **deletada** — era dead code (zero nodes bindados, só aliases sem consumer)
+- Foundation renomeado pra numérico direto (40 vars):
+  - `radius/{xs,sm,md,lg,xl,2xl,full}` → `radius/{2,4,8,12,16,24,9999}`
+  - `typography/font/size/{xs..9xl}` → `typography/font/size/{11,12,14,16,18,20,24,28,32,40,48,56,64,72}`
+  - `spacing/{0-5,1,1-5,2,...,24}` → `spacing/{2,4,6,8,...,96}` (valor direto no nome)
+- 10 órfãos deletados: `spacing/0`, `radius/none`, `border/width/0`, `opacity/0`, `typography/font/line-height/{tight,snug,normal,relaxed}` (% values off-grid), `typography/font/size/2xs` (duplicata xs=11)
+- Criado `typography/font/size/14` (fixa 3 text styles com binding quebrado pré-existente a ID `10:11` deletado)
+- Semantic — nova escala única `space/{2xs..2xl}` (7 tokens) dissolvendo `space.inset/gap/component` (18 tokens deletados, 2.960 bindings rebindadas)
+- Semantic — novos size tokens (`size.avatar.*`, `size.modal.*`, `size.spinner.*`, `size.skeleton.*`, `size.textarea.*`, `size.toggle.*`) absorvem o que era Component
+- `semantic.radius.component` deletado (alias 1:1 pra md, redundante). `radius/full` mantém naming "full" em Semantic, aponta pra `foundation.radius.9999`
+- `border/subtle` Light recalibrado: era idêntico a `border/default` (neutral/300) → agora `neutral/200` (escala coerente subtle < default < strong)
+- Fonts `typography/font/family/{mono,display}` mantidas como reserva (hoje `mono`="DM Mono", `display`="Inter" = slot para futura heading font)
+- Foundation escopos: `scopes: []` em todos os 221 tokens (esconde dos pickers internos)
+- **Pendente manual**: `hiddenFromPublishing: true` em todos Foundation via UI do Figma (API do plugin quebrada via MCP)
+
+**Repo (derivado):**
+- `tokens/component/*` — pasta deletada (11 arquivos removidos)
+- `tokens/foundation/*.json` — reescrito com naming numérico
+- `tokens/semantic/{light,dark}.json` — space consolidado, novos size/*, border.subtle recalibrado light, radius.component removido
+- `css/components/*.css` — 143 refs atualizadas pra consumir novos tokens Semantic; vector internals (`radio-dot`, `toggle-thumb`, `spinner-stroke`, `checkbox-check`) viraram literais px porque são pintura interna de vetor, não token
+- `css/base/*.css` — 43 refs atualizadas pro novo naming numérico Foundation
+- `build-tokens.mjs` — remove build target `component.css` (collection não existe)
+- CSS gerado sem `component.css` (só `foundation.css` + `theme-{light,dark}.css` + `index.css`)
+
+**Contagem:**
+- Foundation: 229 → **221 tokens** (9 deletados, 1 criado = -8 net)
+- Semantic: 158 → **165 tokens** (+7 net: novo space +7, novos size +18, eliminados space antigos -18)
+- Component: 61 → **0** (collection deletada)
+- **Total tokens: 448 → 386 (-62, -14%)**
+- CSS vars geradas: 566 (foundation 236 + theme-light 165 + theme-dark 165)
+
+**Build + verify:**
+- `build:tokens` passa sem reference errors
+- `JSON integrity`: OK. `JSON ↔ CSS`: OK
+- Broken refs Figma em componentes produção: **0** (Button/Input/Modal/Avatar/etc)
+- Broken refs em páginas de documentação: 3.851 (dívida pré-existente acumulada de PRs anteriores; cleanup em PR separado)
+- Button Style=Success legacy — 168 refs a library externa deprecated (fora do escopo; decisão pendente)
+- `verify:tokens`: 6 falsos-positivos "CSS leak" de `var(--ds-radius-md)` — script ainda assume 3-layer; `semantic.radius.md` É o consumer-final no 2-layer (não é leak). Script precisa update.
+
+**Bump**: 0.6.0 → **0.7.0** (breaking grande — Component deletada + Foundation renamed; consumers precisam atualizar)
+
 ### Simplificação estrutural Semantic (ADR-014 revisão 2026-04-23)
 
 Revisão da ADR-014: estrutura action de 5 níveis (`action.{role}.{style}.{prop}.{state}`) foi substituída por **categorias peers no root Semantic** com regra de naming alinhada ao padrão Nathan Curtis (Category · Concept · Property · Variant · State) + PDF enviado pelo usuário.

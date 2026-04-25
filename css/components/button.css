@@ -7,13 +7,13 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--ds-space-gap-sm);
+  gap: var(--ds-space-sm);
   font-family: var(--ds-body-font-family-sans);
   font-weight: var(--ds-body-font-weight-medium);
   line-height: var(--ds-control-line-height-md);
   text-decoration: none;
   border: var(--ds-border-width-default) solid transparent;
-  border-radius: var(--ds-radius-component);
+  border-radius: var(--ds-radius-md);
   cursor: pointer;
   transition: background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
               border-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
@@ -23,7 +23,7 @@
   user-select: none;
 
   /* Default size: md (40px) */
-  height: var(--ds-button-height-md);
+  height: var(--ds-size-control-md);
   padding: var(--ds-space-control-padding-y-md) var(--ds-space-control-padding-x-md);
   font-size: var(--ds-control-font-size-md);
   min-width: var(--ds-size-control-min-target);
@@ -53,11 +53,11 @@
    Sizes
    --------------------------------------------------------- */
 .ds-btn--sm {
-  height: var(--ds-button-height-sm);
+  height: var(--ds-size-control-sm);
   padding: var(--ds-space-control-padding-y-sm) var(--ds-space-control-padding-x-sm);
   font-size: var(--ds-control-font-size-sm);
   line-height: var(--ds-control-line-height-sm);
-  border-radius: var(--ds-radius-component);
+  border-radius: var(--ds-radius-md);
 }
 
 .ds-btn--sm .ds-btn__icon {
@@ -66,11 +66,11 @@
 }
 
 .ds-btn--lg {
-  height: var(--ds-button-height-lg);
+  height: var(--ds-size-control-lg);
   padding: var(--ds-space-control-padding-y-lg) var(--ds-space-control-padding-x-lg);
   font-size: var(--ds-control-font-size-lg);
   line-height: var(--ds-control-line-height-lg);
-  border-radius: var(--ds-radius-component);
+  border-radius: var(--ds-radius-md);
 }
 
 .ds-btn--lg .ds-btn__icon {
@@ -196,15 +196,15 @@
 }
 
 .ds-btn--icon-only.ds-btn--sm {
-  width: var(--ds-button-height-sm);
+  width: var(--ds-size-control-sm);
 }
 
 .ds-btn--icon-only:not(.ds-btn--sm):not(.ds-btn--lg) {
-  width: var(--ds-button-height-md);
+  width: var(--ds-size-control-md);
 }
 
 .ds-btn--icon-only.ds-btn--lg {
-  width: var(--ds-button-height-lg);
+  width: var(--ds-size-control-lg);
 }
 
 /* Material Symbols inside button */

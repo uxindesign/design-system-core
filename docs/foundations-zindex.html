@@ -7,21 +7,21 @@
   <link rel="stylesheet" href="../css/design-system.css">
   <link rel="stylesheet" href="layout.css">
   <style>
-    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-sm); margin-bottom: var(--ds-spacing-8); }
-    .ds-token-table th { text-align: left; padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
-    .ds-token-table td { padding: var(--ds-spacing-2) var(--ds-spacing-3); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
-    .ds-token-table code { font-size: var(--ds-font-size-xs); font-family: var(--ds-font-family-mono); }
-    .ds-zindex-stack { position: relative; height: 320px; margin-bottom: var(--ds-spacing-8); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-lg); overflow: hidden; background-color: var(--ds-background-default); }
-    .ds-zindex-layer { position: absolute; border-radius: var(--ds-radius-md); display: flex; align-items: flex-start; justify-content: flex-start; padding: var(--ds-spacing-3); font-size: var(--ds-font-size-xs); font-family: var(--ds-font-family-mono); border: var(--ds-border-width-1) solid; }
+    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-14); margin-bottom: var(--ds-spacing-32); }
+    .ds-token-table th { text-align: left; padding: var(--ds-spacing-8) var(--ds-spacing-12); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
+    .ds-token-table td { padding: var(--ds-spacing-8) var(--ds-spacing-12); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
+    .ds-token-table code { font-size: var(--ds-font-size-12); font-family: var(--ds-font-family-mono); }
+    .ds-zindex-stack { position: relative; height: 320px; margin-bottom: var(--ds-spacing-32); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-12); overflow: hidden; background-color: var(--ds-background-default); }
+    .ds-zindex-layer { position: absolute; border-radius: var(--ds-radius-8); display: flex; align-items: flex-start; justify-content: flex-start; padding: var(--ds-spacing-12); font-size: var(--ds-font-size-12); font-family: var(--ds-font-family-mono); border: var(--ds-border-width-1) solid; }
     .ds-zindex-layer--0 { left: 16px; top: 16px; width: calc(100% - 32px); height: calc(100% - 32px); background-color: var(--ds-background-subtle); border-color: var(--ds-border-default); color: var(--ds-content-secondary); z-index: 0; }
     .ds-zindex-layer--10 { left: 32px; top: 48px; width: 240px; height: 200px; background-color: var(--ds-surface-raised); border-color: var(--ds-border-default); color: var(--ds-content-default); z-index: 10; box-shadow: var(--ds-shadow-sm); }
     .ds-zindex-layer--20 { left: 100px; top: 80px; width: 240px; height: 160px; background-color: var(--ds-surface-overlay); border-color: var(--ds-border-default); color: var(--ds-content-default); z-index: 20; box-shadow: var(--ds-shadow-md); }
     .ds-zindex-layer--30 { right: 48px; top: 40px; width: 200px; height: 120px; background-color: var(--ds-surface-elevated); border-color: var(--ds-border-default); color: var(--ds-content-default); z-index: 30; box-shadow: var(--ds-shadow-lg); }
-    .ds-zindex-layer--40 { left: 50%; top: 50%; transform: translate(-50%, -50%); width: 260px; height: 100px; background-color: var(--ds-surface-default); border-color: var(--ds-brand-default); color: var(--ds-content-default); z-index: 40; box-shadow: var(--ds-shadow-xl); }
-    .ds-zindex-layer--50 { right: 16px; bottom: 16px; width: 160px; height: 48px; display: flex; align-items: center; justify-content: center; background-color: var(--ds-brand-default); border-color: var(--ds-brand-default); color: var(--ds-brand-content-contrast); z-index: 50; box-shadow: var(--ds-shadow-lg); }
-    .ds-callout { padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); background-color: var(--ds-feedback-warning-background); border: var(--ds-border-width-1) solid var(--ds-feedback-warning-border); margin-bottom: var(--ds-spacing-8); font-size: var(--ds-font-size-sm); line-height: var(--ds-line-height-relaxed); color: var(--ds-content-default); }
-    .ds-callout__title { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-1); }
-    .ds-code-block { background-color: var(--ds-color-neutral-900); color: var(--ds-color-neutral-200); padding: var(--ds-spacing-4) var(--ds-spacing-5); border-radius: var(--ds-radius-lg); font-family: var(--ds-font-family-mono); font-size: var(--ds-font-size-xs); line-height: var(--ds-line-height-relaxed); overflow-x: auto; margin-bottom: var(--ds-spacing-6); white-space: pre; }
+    .ds-zindex-layer--40 { left: 50%; top: 50%; transform: translate(-50%, -50%); width: 260px; height: 100px; background-color: var(--ds-surface-default); border-color: var(--ds-primary-bg-default); color: var(--ds-content-default); z-index: 40; box-shadow: var(--ds-shadow-xl); }
+    .ds-zindex-layer--50 { right: 16px; bottom: 16px; width: 160px; height: 48px; display: flex; align-items: center; justify-content: center; background-color: var(--ds-primary-bg-default); border-color: var(--ds-primary-bg-default); color: var(--ds-primary-content-default); z-index: 50; box-shadow: var(--ds-shadow-lg); }
+    .ds-callout { padding: var(--ds-spacing-16) var(--ds-spacing-20); border-radius: var(--ds-radius-12); background-color: var(--ds-feedback-warning-bg-background); border: var(--ds-border-width-1) solid var(--ds-feedback-warning-border-default); margin-bottom: var(--ds-spacing-32); font-size: var(--ds-font-size-14); line-height: var(--ds-line-height-relaxed); color: var(--ds-content-default); }
+    .ds-callout__title { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-4); }
+    .ds-code-block { background-color: var(--ds-color-neutral-900); color: var(--ds-color-neutral-200); padding: var(--ds-spacing-16) var(--ds-spacing-20); border-radius: var(--ds-radius-12); font-family: var(--ds-font-family-mono); font-size: var(--ds-font-size-12); line-height: var(--ds-line-height-relaxed); overflow-x: auto; margin-bottom: var(--ds-spacing-24); white-space: pre; }
   </style>
   <script>
     (function(){var l=localStorage.getItem('ds-lang');if(l)document.documentElement.setAttribute('lang',l)})();
@@ -30,7 +30,7 @@
 <body>
 
 <header class="ds-site-header">
-  <div style="display:flex;align-items:center;gap:var(--ds-spacing-4)">
+  <div style="display:flex;align-items:center;gap:var(--ds-spacing-16)">
     <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>
@@ -44,13 +44,6 @@
       <option value="pt">PT</option>
       <option value="en">EN</option>
     </select>
-    <div class="ds-theme-switcher">
-      <select class="ds-theme-switcher__select" id="theme-switcher">
-        <option value="default">Default (Blue)</option>
-        <option value="ocean">Ocean (Cyan)</option>
-        <option value="forest">Forest (Emerald)</option>
-      </select>
-    </div>
     <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg> Dark</button>
   </div>
 </header>
@@ -66,7 +59,7 @@
 
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Contexto de empilhamento</span><span data-lang="en">Stacking context</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);"><span data-lang="pt">Representação visual de como as camadas se empilham. Maior z-index = mais proximo do usuário.</span><span data-lang="en">Visual representation of how layers stack. Higher z-index = closer to the user.</span></p>
+    <p style="margin-bottom:var(--ds-spacing-16);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);"><span data-lang="pt">Representação visual de como as camadas se empilham. Maior z-index = mais proximo do usuário.</span><span data-lang="en">Visual representation of how layers stack. Higher z-index = closer to the user.</span></p>
 
     <div class="ds-zindex-stack">
       <div class="ds-zindex-layer ds-zindex-layer--0"><span data-lang="pt">z-0 · conteúdo da página</span><span data-lang="en">z-0 · page content</span></div>
@@ -95,7 +88,7 @@
 
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Relação com elevação</span><span data-lang="en">Relationship with elevation</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-4);color:var(--ds-content-secondary);font-size:var(--ds-font-size-sm);">
+    <p style="margin-bottom:var(--ds-spacing-16);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);">
       <span data-lang="pt">Z-index controla a ordem de empilhamento. Elevação (sombras + superfícies) controla a profundidade visual. Frequentemente se correlacionam, mas são sistemas independentes:</span><span data-lang="en">Z-index controls stacking order. Elevation (shadows + surfaces) controls visual depth. They often correlate but are independent systems:</span>
     </p>
     <table class="ds-token-table">

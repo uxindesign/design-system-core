@@ -20,7 +20,7 @@ html {
 }
 body {
   font-family: var(--ds-font-family-sans);
-  font-size: var(--ds-font-size-md);
+  font-size: var(--ds-font-size-16);
   line-height: var(--ds-line-height-normal);
   color: var(--ds-content-default);
   background-color: var(--ds-background-default);
@@ -34,30 +34,30 @@ p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
    --------------------------------------------------------- */
 code, pre {
   font-family: var(--ds-font-family-mono);
-  font-size: var(--ds-font-size-sm);
+  font-size: var(--ds-font-size-14);
 }
 
 code {
   background-color: var(--ds-background-subtle);
-  padding: var(--ds-spacing-0-5) var(--ds-spacing-1);
-  border-radius: var(--ds-radius-sm);
+  padding: var(--ds-spacing-2) var(--ds-spacing-4);
+  border-radius: var(--ds-radius-4);
   color: var(--ds-content-link-default);
 }
 
 pre {
   background-color: var(--ds-color-neutral-900);
   color: var(--ds-color-neutral-100);
-  padding: var(--ds-spacing-4);
-  border-radius: var(--ds-radius-lg);
+  padding: var(--ds-spacing-16);
+  border-radius: var(--ds-radius-12);
   overflow-x: auto;
-  margin-bottom: var(--ds-spacing-4);
+  margin-bottom: var(--ds-spacing-16);
 }
 
 pre code {
   background: none;
   padding: 0;
   color: inherit;
-  font-size: var(--ds-font-size-sm);
+  font-size: var(--ds-font-size-14);
 }
 
 /* ---------------------------------------------------------
@@ -69,14 +69,14 @@ table {
 }
 
 th, td {
-  padding: var(--ds-spacing-3) var(--ds-spacing-4);
+  padding: var(--ds-spacing-12) var(--ds-spacing-16);
   text-align: left;
   border-bottom: var(--ds-border-width-1) solid var(--ds-border-default);
 }
 
 th {
   font-weight: var(--ds-font-weight-semibold);
-  font-size: var(--ds-font-size-sm);
+  font-size: var(--ds-font-size-14);
   color: var(--ds-content-secondary);
   text-transform: uppercase;
   letter-spacing: var(--ds-letter-spacing-wide);
