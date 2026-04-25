@@ -17,7 +17,8 @@
 /* Dialog */
 .ds-modal {
   background-color: var(--ds-surface-elevated);
-  border-radius: var(--ds-radius-xl);
+  /* Figma: radius/lg (12px) — não xl (16px). */
+  border-radius: var(--ds-radius-lg);
   /* Elevation: apply .ds-elevation-4 utility alongside .ds-modal for box-shadow.
      Semantic elevation tokens do not exist yet post-ADR-014. */
   width: 100%;

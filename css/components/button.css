@@ -9,7 +9,8 @@
   justify-content: center;
   gap: var(--ds-space-sm);
   font-family: var(--ds-body-font-family-sans);
-  font-weight: var(--ds-body-font-weight-medium);
+  /* Figma: button label = Inter Bold (700) em todos os tamanhos */
+  font-weight: var(--ds-body-font-weight-bold);
   line-height: var(--ds-control-line-height-md);
   text-decoration: none;
   border: var(--ds-border-width-default) solid transparent;
@@ -58,6 +59,8 @@
   font-size: var(--ds-control-font-size-sm);
   line-height: var(--ds-control-line-height-sm);
   border-radius: var(--ds-radius-md);
+  /* Figma: gap entre ícone e label no Small é 4px (space-xs) */
+  gap: var(--ds-space-xs);
 }
 
 .ds-btn--sm .ds-btn__icon {
