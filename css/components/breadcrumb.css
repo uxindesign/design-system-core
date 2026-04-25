@@ -24,7 +24,7 @@
 .ds-breadcrumb__item:focus-visible {
   outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color);
   outline-offset: var(--ds-focus-ring-offset);
-  border-radius: var(--ds-radius-4);
+  border-radius: var(--ds-radius-sm);
 }
 
 /* Current (last item)

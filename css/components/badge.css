@@ -9,7 +9,7 @@
   font-size: var(--ds-body-font-size-xs);
   font-weight: var(--ds-body-font-weight-medium);
   line-height: var(--ds-body-line-height-xs);
-  border-radius: var(--ds-radius-4);
+  border-radius: var(--ds-radius-sm);
   white-space: nowrap;
 }
 

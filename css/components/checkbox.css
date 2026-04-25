@@ -9,7 +9,7 @@
   gap: var(--ds-space-sm);
   cursor: pointer;
   padding: var(--ds-space-xs) var(--ds-space-xs);
-  border-radius: var(--ds-radius-4);
+  border-radius: var(--ds-radius-sm);
   min-height: var(--ds-size-control-min-target);
   font-size: var(--ds-body-font-size-sm);
   color: var(--ds-content-default);
@@ -27,7 +27,7 @@
   width: var(--ds-size-control-icon-md);
   height: var(--ds-size-control-icon-md);
   border: var(--ds-border-width-default) solid var(--ds-border-control-default);
-  border-radius: var(--ds-radius-4);
+  border-radius: var(--ds-radius-sm);
   background-color: var(--ds-surface-default);
   cursor: pointer;
   position: relative;

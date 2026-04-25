@@ -17,7 +17,7 @@
 /* Dialog */
 .ds-modal {
   background-color: var(--ds-surface-elevated);
-  border-radius: var(--ds-radius-16);
+  border-radius: var(--ds-radius-xl);
   /* Elevation: apply .ds-elevation-4 utility alongside .ds-modal for box-shadow.
      Semantic elevation tokens do not exist yet post-ADR-014. */
   width: 100%;
@@ -56,7 +56,7 @@
   padding: var(--ds-space-xs);
   cursor: pointer;
   color: var(--ds-content-secondary);
-  border-radius: var(--ds-radius-4);
+  border-radius: var(--ds-radius-sm);
   transition: color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
               background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
 }

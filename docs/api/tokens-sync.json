@@ -1,71 +1,17 @@
 {
-  "generatedAt": "2026-04-24T20:33:40.318Z",
+  "generatedAt": "2026-04-25T15:30:49.278Z",
   "totals": {
     "jsonTokens": 578,
     "sharedTokens": 236,
     "lightTokens": 171,
     "darkTokens": 171,
-    "errors": 310,
-    "warnings": 497
+    "errors": 304,
+    "warnings": 499
   },
   "checks": {
     "jsonIntegrity": [],
     "jsonVsCss": [],
     "cssFoundationLeak": [
-      {
-        "level": "error",
-        "scope": "components",
-        "file": "css/components/button.css",
-        "line": 16,
-        "column": 18,
-        "match": "var(--ds-radius-md)",
-        "message": "Foundation token consumido direto: var(--ds-radius-md). Use Semantic/Component layer (ADR-013)."
-      },
-      {
-        "level": "error",
-        "scope": "components",
-        "file": "css/components/button.css",
-        "line": 60,
-        "column": 18,
-        "match": "var(--ds-radius-md)",
-        "message": "Foundation token consumido direto: var(--ds-radius-md). Use Semantic/Component layer (ADR-013)."
-      },
-      {
-        "level": "error",
-        "scope": "components",
-        "file": "css/components/button.css",
-        "line": 73,
-        "column": 18,
-        "match": "var(--ds-radius-md)",
-        "message": "Foundation token consumido direto: var(--ds-radius-md). Use Semantic/Component layer (ADR-013)."
-      },
-      {
-        "level": "error",
-        "scope": "components",
-        "file": "css/components/input.css",
-        "line": 14,
-        "column": 18,
-        "match": "var(--ds-radius-md)",
-        "message": "Foundation token consumido direto: var(--ds-radius-md). Use Semantic/Component layer (ADR-013)."
-      },
-      {
-        "level": "error",
-        "scope": "components",
-        "file": "css/components/select.css",
-        "line": 14,
-        "column": 18,
-        "match": "var(--ds-radius-md)",
-        "message": "Foundation token consumido direto: var(--ds-radius-md). Use Semantic/Component layer (ADR-013)."
-      },
-      {
-        "level": "error",
-        "scope": "components",
-        "file": "css/components/textarea.css",
-        "line": 12,
-        "column": 18,
-        "match": "var(--ds-radius-md)",
-        "message": "Foundation token consumido direto: var(--ds-radius-md). Use Semantic/Component layer (ADR-013)."
-      },
       {
         "level": "warning",
         "scope": "base",
@@ -133,6 +79,15 @@
         "level": "warning",
         "scope": "base",
         "file": "css/base/reset.css",
+        "line": 43,
+        "column": 18,
+        "match": "var(--ds-radius-4)",
+        "message": "Foundation token consumido direto: var(--ds-radius-4). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/reset.css",
         "line": 48,
         "column": 21,
         "match": "var(--ds-color-neutral-900)",
@@ -155,6 +110,15 @@
         "column": 12,
         "match": "var(--ds-spacing-16)",
         "message": "Foundation token consumido direto: var(--ds-spacing-16). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/reset.css",
+        "line": 51,
+        "column": 18,
+        "match": "var(--ds-radius-12)",
+        "message": "Foundation token consumido direto: var(--ds-radius-12). Use Semantic/Component layer (ADR-013)."
       },
       {
         "level": "warning",
@@ -1139,7 +1103,7 @@
     ],
     "jsonVsFigma": {
       "skipped": false,
-      "snapshotAge": "47h",
+      "snapshotAge": "66h",
       "summary": {
         "figmaVariableCount": 559,
         "figmaCollectionCount": 4,
