@@ -2,7 +2,7 @@
 
 > Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-25. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
-> Versão atual: **0.5.17**
+> Versão atual: **0.7.0**
 
 ## Status geral
 

@@ -48,10 +48,10 @@
   border: var(--ds-border-width-default) solid var(--ds-border-default);
 }
 
-/* Elevated — apply .ds-elevation-1 utility class alongside .ds-card--elevated.
-   Semantic elevation tokens do not exist yet post-ADR-014; the utility classes in
-   css/utilities/elevation.css (.ds-elevation-0 through .ds-elevation-4) are the
-   sanctioned consumption surface for box-shadow. */
+/* Elevated — borda sutil + sombra. Foundation token leak documentado:
+   shadow-sm é consumido direto porque não há token Semantic equivalente
+   (TODO: criar semantic.elevation.card como alias para foundation.shadow.sm). */
 .ds-card--elevated {
   border: var(--ds-border-width-default) solid var(--ds-border-subtle);
+  box-shadow: var(--ds-shadow-sm);
 }

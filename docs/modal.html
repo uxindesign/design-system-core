@@ -59,13 +59,6 @@
       <option value="pt">PT</option>
       <option value="en">EN</option>
     </select>
-    <div class="ds-theme-switcher">
-      <select class="ds-theme-switcher__select" id="theme-switcher">
-        <option value="default">Default (Blue)</option>
-        <option value="ocean">Ocean (Cyan)</option>
-        <option value="forest">Forest (Emerald)</option>
-      </select>
-    </div>
     <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg> Dark</button>
   </div>
 </header>
@@ -110,7 +103,7 @@
           <div class="ds-modal ds-modal--sm" role="dialog" aria-modal="true" aria-labelledby="anatomy-modal-title" style="position:relative;width:100%;">
             <div class="ds-modal__header">
               <h3 id="anatomy-modal-title" class="ds-modal__title">Delete item</h3>
-              <button class="ds-btn ds-btn--ghost ds-btn--sm ds-btn--icon-only" aria-label="Close modal" tabindex="-1"><span class="material-symbols-outlined">close</span></button>
+              <button class="ds-modal__close" aria-label="Close modal" tabindex="-1"><span class="material-symbols-outlined" style="font-size:20px">close</span></button>
             </div>
             <div class="ds-modal__body">
               <p style="margin:0;">Are you sure? This action cannot be undone.</p>
@@ -165,7 +158,7 @@
             <div class="ds-modal ds-modal--sm" role="dialog" aria-modal="true" aria-labelledby="modal-sm-title" style="position:relative;width:100%;max-width:400px;">
               <div class="ds-modal__header">
                 <h3 id="modal-sm-title" style="margin:0;">Delete item</h3>
-                <button class="ds-btn ds-btn--ghost ds-btn--sm ds-btn--icon-only" aria-label="Close modal">&times;</button>
+                <button class="ds-modal__close" aria-label="Close modal"><span class="material-symbols-outlined" style="font-size:20px">close</span></button>
               </div>
               <div class="ds-modal__body">
                 <p style="margin:0;">Are you sure you want to delete this item? This action cannot be undone.</p>
@@ -216,7 +209,7 @@
             <div class="ds-modal ds-modal--md" role="dialog" aria-modal="true" aria-labelledby="modal-md-title" style="position:relative;width:100%;max-width:520px;">
               <div class="ds-modal__header">
                 <h3 id="modal-md-title" style="margin:0;">Edit profile</h3>
-                <button class="ds-btn ds-btn--ghost ds-btn--sm ds-btn--icon-only" aria-label="Close modal">&times;</button>
+                <button class="ds-modal__close" aria-label="Close modal"><span class="material-symbols-outlined" style="font-size:20px">close</span></button>
               </div>
               <div class="ds-modal__body">
                 <p style="margin:0 0 12px;">Update your personal information below. Changes will be saved immediately.</p>
@@ -268,7 +261,7 @@
             <div class="ds-modal ds-modal--lg" role="dialog" aria-modal="true" aria-labelledby="modal-lg-title" style="position:relative;width:100%;max-width:640px;">
               <div class="ds-modal__header">
                 <h3 id="modal-lg-title" style="margin:0;">Terms of service</h3>
-                <button class="ds-btn ds-btn--ghost ds-btn--sm ds-btn--icon-only" aria-label="Close modal">&times;</button>
+                <button class="ds-modal__close" aria-label="Close modal"><span class="material-symbols-outlined" style="font-size:20px">close</span></button>
               </div>
               <div class="ds-modal__body">
                 <p style="margin:0 0 8px;">Please read and accept the following terms before continuing. By using our service you agree to comply with all policies outlined in this document.</p>

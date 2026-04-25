@@ -57,13 +57,6 @@
       <option value="pt">PT</option>
       <option value="en">EN</option>
     </select>
-    <div class="ds-theme-switcher">
-      <select class="ds-theme-switcher__select" id="theme-switcher">
-        <option value="default">Default (Blue)</option>
-        <option value="ocean">Ocean (Cyan)</option>
-        <option value="forest">Forest (Emerald)</option>
-      </select>
-    </div>
     <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg> Dark</button>
   </div>
 </header>
@@ -74,45 +67,36 @@
 <main class="ds-main">
   <div class="ds-section">
     <h1 class="ds-section__title"><span data-lang="pt">Token Architecture</span><span data-lang="en">Token Architecture</span></h1>
-    <p class="ds-section__subtitle"><span data-lang="pt">Design tokens são organizados em três camadas. Cada camada tem um papel específico, e tokens em uma camada referenciam a camada abaixo -- nunca o contrário.</span><span data-lang="en">Design tokens are organized in three layers. Each layer has a specific role, and tokens in one layer reference the layer below -- never the other way around.</span></p>
+    <p class="ds-section__subtitle"><span data-lang="pt">Design tokens são organizados em duas camadas (desde 0.7.0). Cada camada tem um papel específico — Semantic referencia Foundation, nunca o contrário.</span><span data-lang="en">Design tokens are organized in two layers (since 0.7.0). Each layer has a specific role — Semantic references Foundation, never the other way around.</span></p>
   </div>
 
   <!-- ============================================================
        THREE LAYERS
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title"><span data-lang="pt">Três camadas</span><span data-lang="en">Three layers</span></h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Duas camadas</span><span data-lang="en">Two layers</span></h2>
+    <p style="margin-bottom:var(--ds-spacing-16);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);"><span data-lang="pt">A camada Component foi eliminada em <strong>0.7.0</strong> — não justificava o overhead (61 tokens, todos sem consumer direto). Tokens que eram Component foram absorvidos por Semantic (ex: <code>size.avatar.*</code>, <code>size.modal.*</code>).</span><span data-lang="en">The Component layer was eliminated in <strong>0.7.0</strong> — the overhead wasn't justified (61 tokens, all without direct consumers). Tokens that were Component were absorbed into Semantic (e.g., <code>size.avatar.*</code>, <code>size.modal.*</code>).</span></p>
 
     <div class="ds-arch">
       <div class="ds-arch__layer">
         <div class="ds-arch__header ds-arch__header--fdn">Foundation</div>
         <div class="ds-arch__body">
-          <span data-lang="pt">Valores brutos. A única camada com valores absolutos (hex, rem, px).</span><span data-lang="en">Raw values. The only layer with absolute values (hex, rem, px).</span><br><br>
+          <span data-lang="pt">Valores brutos com naming numérico. A única camada com valores absolutos (hex, rem, px).</span><span data-lang="en">Raw values with numeric naming. The only layer with absolute values (hex, rem, px).</span><br><br>
           <code>foundation.color.blue.600</code> → <code>#2563EB</code><br>
-          <code>foundation.spacing.64</code> → <code>1rem</code><br>
+          <code>foundation.spacing.16</code> → <code>1rem</code><br>
           <code>foundation.radius.8</code> → <code>8px</code><br><br>
-          <span data-lang="pt">~217 tokens em 10 categorias.</span><span data-lang="en">~217 tokens across 10 categories.</span>
+          <span data-lang="pt">236 tokens em 9 categorias. Hidden from publishing.</span><span data-lang="en">236 tokens across 9 categories. Hidden from publishing.</span>
         </div>
       </div>
       <div class="ds-arch__arrow">→</div>
       <div class="ds-arch__layer">
         <div class="ds-arch__header ds-arch__header--sem">Semantic</div>
         <div class="ds-arch__body">
-          <span data-lang="pt">Intenção e significado. Referencia foundation via aliases. Sensível a modo (light/dark).</span><span data-lang="en">Intent and meaning. References foundation via aliases. Mode-aware (light/dark).</span><br><br>
-          <code>semantic.primary.bg-default</code> → <code>{semantic.primary.bg-default}</code><br>
+          <span data-lang="pt">Intenção e significado, com naming t-shirt (sm/md/lg). Referencia foundation via aliases. Sensível a modo (light/dark).</span><span data-lang="en">Intent and meaning, with t-shirt naming (sm/md/lg). References foundation via aliases. Mode-aware (light/dark).</span><br><br>
+          <code>semantic.primary.bg-default</code> → <code>{foundation.color.blue.600}</code><br>
           <code>semantic.content.default</code> → <code>{foundation.color.neutral.900}</code> (light)<br>
           <code>semantic.content.default</code> → <code>{foundation.color.neutral.50}</code> (dark)<br><br>
-          <span data-lang="pt">~104 tokens × 2 modos.</span><span data-lang="en">~104 tokens × 2 modes.</span>
-        </div>
-      </div>
-      <div class="ds-arch__arrow">→</div>
-      <div class="ds-arch__layer">
-        <div class="ds-arch__header ds-arch__header--cmp">Component</div>
-        <div class="ds-arch__body">
-          <span data-lang="pt">Tokens por componente. Referencia semantic, nunca foundation.</span><span data-lang="en">Per-component tokens. References semantic, never foundation.</span><br><br>
-          <code>component.button.background.brand.default</code> → <code>{semantic.primary.bg-default}</code><br>
-          <code>component.button.padding.md</code> → <code>{semantic.space.inset.md}</code><br><br>
-          <span data-lang="pt">118 tokens em 11 arquivos de componente.</span><span data-lang="en">118 tokens across 11 component files.</span>
+          <span data-lang="pt">171 tokens × 2 modos.</span><span data-lang="en">171 tokens × 2 modes.</span>
         </div>
       </div>
     </div>
@@ -124,28 +108,12 @@
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Como funciona a cadeia de alias</span><span data-lang="en">How an alias chain works</span></h2>
     <p style="margin-bottom:var(--ds-spacing-16);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);">
-      <span data-lang="pt">Quando você clica em um button Brand, sua cor de fundo é resolvida por esta cadeia:</span><span data-lang="en">When you press a Brand button, its background color resolves through this chain:</span>
+      <span data-lang="pt">Quando você clica em um button Primary, sua cor de fundo é resolvida por esta cadeia:</span><span data-lang="en">When you press a Primary button, its background color resolves through this chain:</span>
     </p>
 
     <div class="ds-chain">
       <div class="ds-chain__step">
-        <span class="ds-chain__badge ds-chain__badge--cmp">component</span>
-        <code>button.background.brand.default</code>
-      </div>
-      <div class="ds-chain__step">
-        <span style="width:54px;display:inline-block"></span>
-        <span class="ds-chain__arrow">↓ references</span>
-      </div>
-      <div class="ds-chain__step">
         <span class="ds-chain__badge ds-chain__badge--sem">semantic</span>
-        <code>semantic.primary.bg-default</code>
-      </div>
-      <div class="ds-chain__step">
-        <span style="width:54px;display:inline-block"></span>
-        <span class="ds-chain__arrow">↓ references</span>
-      </div>
-      <div class="ds-chain__step">
-        <span class="ds-chain__badge ds-chain__badge--brand">brand</span>
         <code>semantic.primary.bg-default</code>
       </div>
       <div class="ds-chain__step">
@@ -159,30 +127,7 @@
     </div>
 
     <p style="color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);margin-bottom:var(--ds-spacing-16);">
-      <span data-lang="pt">Para mudar a marca, basta trocar o <code>brand.json</code>. Toda a cadeia se atualiza: cada componente que usa <code>primary.default</code> recebe a nova cor sem tocar em nenhum outro arquivo.</span><span data-lang="en">To rebrand, you swap <code>brand.json</code>. The entire chain updates: every component that uses <code>primary.default</code> gets the new color without touching any other file.</span>
-    </p>
-  </div>
-
-  <!-- ============================================================
-       BRAND SUBLAYER
-       ============================================================ -->
-  <div class="ds-subsection">
-    <h2 class="ds-subsection__title"><span data-lang="pt">Brand Sublayer</span><span data-lang="en">Brand sublayer</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-16);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);">
-      <span data-lang="pt">Brand fica dentro de Foundation como uma ponte entre paleta e intenção. Tem apenas 2 tokens -- sem estados, sem modos.</span><span data-lang="en">Brand sits inside Foundation as a bridge between palette and intent. It has only 2 tokens -- no states, no modes.</span>
-    </p>
-
-<div class="ds-code-block">{
-  "foundation": {
-    "brand": {
-      "primary":   { "$value": "{foundation.color.blue.600}" },
-      "secondary": { "$value": "{foundation.color.purple.600}" }
-    }
-  }
-}</div>
-
-    <p style="color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);">
-      <span data-lang="pt">Apenas <code>semantic.primary.bg-default</code> referencia <code>semantic.primary.bg-default</code>. Todos os outros estados (hover, active, subtle) referenciam a paleta foundation diretamente, porque mudanças de estado precisam de steps específicos da paleta que não seguem uma fórmula.</span><span data-lang="en">Only <code>semantic.primary.bg-default</code> references <code>semantic.primary.bg-default</code>. All other states (hover, active, subtle) reference the foundation palette directly, because state shifts need specific palette steps that don't follow a formula.</span>
+      <span data-lang="pt">Para trocar a cor primária, basta apontar <code>semantic.primary.bg-default</code> pra outra entrada Foundation (<code>foundation.color.cyan.600</code>, <code>foundation.color.emerald.600</code>, etc.) — Semantic resolve no <code>:root</code> e Light/Dark sobrescrevem via <code>[data-mode]</code>.</span><span data-lang="en">To change the primary color, point <code>semantic.primary.bg-default</code> to another Foundation entry (<code>foundation.color.cyan.600</code>, <code>foundation.color.emerald.600</code>, etc.) — Semantic resolves at <code>:root</code> and Light/Dark override via <code>[data-mode]</code>.</span>
     </p>
   </div>
 
@@ -220,12 +165,12 @@
     <table class="ds-token-table">
       <thead><tr><th>Token</th><th><span data-lang="pt">Valor light</span><span data-lang="en">Light value</span></th><th><span data-lang="pt">Valor dark</span><span data-lang="en">Dark value</span></th></tr></thead>
       <tbody>
-        <tr><td><code>background.default</code></td><td>white</td><td>neutral-950</td></tr>
+        <tr><td><code>background.default</code></td><td>neutral-50</td><td>neutral-950</td></tr>
         <tr><td><code>content.default</code></td><td>neutral-900</td><td>neutral-50</td></tr>
-        <tr><td><code>brand.default</code></td><td>brand.primary</td><td>brand.primary</td></tr>
-        <tr><td><code>brand.hover</code></td><td>blue-700</td><td>blue-300</td></tr>
-        <tr><td><code>state.hover</code></td><td>overlay-black-5</td><td>overlay-white-5</td></tr>
-        <tr><td><code>brand.content.contrast</code></td><td>white</td><td>neutral-900</td></tr>
+        <tr><td><code>primary.bg-default</code></td><td>blue-600</td><td>blue-400</td></tr>
+        <tr><td><code>primary.bg-hover</code></td><td>blue-700</td><td>blue-300</td></tr>
+        <tr><td><code>overlay.subtle</code></td><td>overlay-black-5</td><td>overlay-white-5</td></tr>
+        <tr><td><code>primary.content-default</code></td><td>white</td><td>neutral-900</td></tr>
       </tbody>
     </table>
     <p style="color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);">
@@ -241,10 +186,10 @@
     <table class="ds-token-table">
       <thead><tr><th>#</th><th><span data-lang="pt">Regra</span><span data-lang="en">Rule</span></th></tr></thead>
       <tbody>
-        <tr><td>1</td><td><span data-lang="pt">Tokens de componente referenciam semantic, nunca foundation. Exceção: estados hover/active que precisam de um step específico da paleta.</span><span data-lang="en">Component tokens reference semantic, never foundation. Exception: hover/active states that need a specific palette step.</span></td></tr>
-        <tr><td>2</td><td><span data-lang="pt">Tokens semânticos referenciam foundation, nunca hardcoded. Nenhum hex ou rgba bruto na camada semântica.</span><span data-lang="en">Semantic tokens reference foundation, never hardcoded. No raw hex or rgba in the semantic layer.</span></td></tr>
-        <tr><td>3</td><td><span data-lang="pt">Foundation é a única camada com valores absolutos.</span><span data-lang="en">Foundation is the only layer with absolute values.</span></td></tr>
-        <tr><td>4</td><td><span data-lang="pt">Brand faz parte da foundation: 2 tokens (primary, secondary), sem estados, trocável por tema.</span><span data-lang="en">Brand is part of foundation: 2 tokens (primary, secondary), no states, swappable per theme.</span></td></tr>
+        <tr><td>1</td><td><span data-lang="pt">Consumidores finais (CSS de componente, base, bindings Figma) só consomem Semantic — nunca Foundation direto.</span><span data-lang="en">Final consumers (component CSS, base CSS, Figma bindings) only consume Semantic — never Foundation directly.</span></td></tr>
+        <tr><td>2</td><td><span data-lang="pt">Tokens semânticos referenciam foundation, nunca hardcoded. Nenhum hex ou rgba bruto na camada semântica (exceto rgba documentados em ADR).</span><span data-lang="en">Semantic tokens reference foundation, never hardcoded. No raw hex or rgba in the semantic layer (except rgba documented in ADR).</span></td></tr>
+        <tr><td>3</td><td><span data-lang="pt">Foundation é a única camada com valores absolutos. Naming numérico (radius-8, spacing-16) — não t-shirt.</span><span data-lang="en">Foundation is the only layer with absolute values. Numeric naming (radius-8, spacing-16) — not t-shirt.</span></td></tr>
+        <tr><td>4</td><td><span data-lang="pt">Semantic usa naming t-shirt (radius-md, space-sm) — distinto de Foundation pra evitar redundância.</span><span data-lang="en">Semantic uses t-shirt naming (radius-md, space-sm) — distinct from Foundation to avoid redundancy.</span></td></tr>
         <tr><td>5</td><td><span data-lang="pt">Todo token tem <code>$type</code> conforme spec DTCG.</span><span data-lang="en">Every token has <code>$type</code> per DTCG spec.</span></td></tr>
         <tr><td>6</td><td><span data-lang="pt">Tokens não óbvios requerem <code>$description</code>.</span><span data-lang="en">Non-obvious tokens require <code>$description</code>.</span></td></tr>
         <tr><td>7</td><td><span data-lang="pt"><code>light.json</code> e <code>dark.json</code> devem ter exatamente o mesmo conjunto de chaves.</span><span data-lang="en"><code>light.json</code> and <code>dark.json</code> must have exactly the same key set.</span></td></tr>
@@ -262,10 +207,10 @@
       <thead><tr><th><span data-lang="pt">JSON (fonte da verdade)</span><span data-lang="en">JSON (source of truth)</span></th><th><span data-lang="pt">CSS (gerado)</span><span data-lang="en">CSS (generated)</span></th><th><span data-lang="pt">Variáveis Figma</span><span data-lang="en">Figma Variables</span></th></tr></thead>
       <tbody>
         <tr><td><code>foundation.color.blue.500</code></td><td><code>--ds-color-blue-500</code></td><td><code>color/blue/500</code> (Foundation)</td></tr>
-        <tr><td><code>semantic.primary.bg-default</code></td><td><code>--ds-primary-bg-default</code></td><td><code>brand/primary</code> (Brand)</td></tr>
-        <tr><td><code>semantic.primary.bg-default</code></td><td><code>--ds-primary-bg-default</code></td><td><code>brand/default</code> (Semantic)</td></tr>
-        <tr><td><code>semantic.space.inset.md</code></td><td><code>--ds-space-md</code></td><td><code>space/inset/md</code> (Semantic)</td></tr>
-        <tr><td><code>component.button.background.toned.default</code></td><td><code>--ds-button-background-toned-default</code></td><td><code>button/background/toned/default</code> (Component)</td></tr>
+        <tr><td><code>foundation.spacing.16</code></td><td><code>--ds-spacing-16</code></td><td><code>spacing/16</code> (Foundation)</td></tr>
+        <tr><td><code>semantic.primary.bg-default</code></td><td><code>--ds-primary-bg-default</code></td><td><code>primary/background/default</code> (Semantic)</td></tr>
+        <tr><td><code>semantic.space.md</code></td><td><code>--ds-space-md</code></td><td><code>space/md</code> (Semantic)</td></tr>
+        <tr><td><code>semantic.size.avatar.md</code></td><td><code>--ds-size-avatar-md</code></td><td><code>size/avatar/md</code> (Semantic)</td></tr>
       </tbody>
     </table>
     <p style="color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);">
@@ -281,10 +226,8 @@
     <table class="ds-token-table">
       <thead><tr><th><span data-lang="pt">Camada</span><span data-lang="en">Layer</span></th><th>Tokens</th><th><span data-lang="pt">Arquivos</span><span data-lang="en">Files</span></th><th>Status</th></tr></thead>
       <tbody>
-        <tr><td>Foundation</td><td>~217</td><td><span data-lang="pt">10 arquivos JSON (colors, brand, typography, spacing, radius, shadows, opacity, motion, stroke, z-index)</span><span data-lang="en">10 JSON files (colors, brand, typography, spacing, radius, shadows, opacity, motion, stroke, z-index)</span></td><td>JSON + Figma vars</td></tr>
-        <tr><td>Semantic</td><td><span data-lang="pt">~104 × 2 modos</span><span data-lang="en">~104 × 2 modes</span></td><td>light.json + dark.json</td><td>JSON + Figma vars</td></tr>
-        <tr><td>Brand</td><td>2</td><td>brand.json</td><td>JSON + Figma vars</td></tr>
-        <tr><td>Component</td><td>118</td><td><span data-lang="pt">11 arquivos de componente</span><span data-lang="en">11 component files</span></td><td><span data-lang="pt">JSON + Figma vars (binding pendente)</span><span data-lang="en">JSON + Figma vars (binding pending)</span></td></tr>
+        <tr><td>Foundation</td><td>236</td><td><span data-lang="pt">9 arquivos JSON (colors, typography, spacing, radius, shadows, opacity, motion, stroke, z-index)</span><span data-lang="en">9 JSON files (colors, typography, spacing, radius, shadows, opacity, motion, stroke, z-index)</span></td><td>JSON + Figma vars (hidden)</td></tr>
+        <tr><td>Semantic</td><td><span data-lang="pt">171 × 2 modos</span><span data-lang="en">171 × 2 modes</span></td><td>light.json + dark.json</td><td>JSON + Figma vars</td></tr>
       </tbody>
     </table>
   </div>
