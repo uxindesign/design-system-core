@@ -56,6 +56,14 @@ Quando há divergência entre artefatos, resolve-se por tipo de informação:
 3. Se houver gap (Figma tem variable que CSS não consome, ou vice-versa), reporte e proponha alinhamento antes de continuar.
 4. Se o Figma usa valor literal (sem binding) onde devia haver variable — issue separada: o Figma precisa ser hardenado primeiro. Não inventar variable só no CSS.
 
+**Regra operacional 4 — Text Styles são autoritários para tipografia.** Componentes Figma controlam tipografia via **Text Styles** (preset semântico nomeado tipo `body/sm`, `label/md`), não via variables individuais por prop:
+
+- **Antes de tocar tipografia em qualquer texto de componente**, liste os Text Styles existentes (`figma.getLocalTextStylesAsync()`).
+- Cada Text Style **interno binda Variables Semantic** (fontSize, fontFamily, fontStyle, lineHeight, letterSpacing). Se algum Text Style binda Foundation direto, isso é leak — corrigir.
+- Texto de componente recebe `textStyleId`, **não bindings individuais por prop**. Mistura dos dois é débito (resolve sequência de prioridade ambígua).
+- Quando criar texto novo, escolha o Text Style apropriado pela combinação `(fontSize, fontWeight, fontFamily)` e aplique via `setTextStyleIdAsync`. Limpe bindings individuais (`setBoundVariable(prop, null)`) para Text Style ser autoritário.
+- Cadeia de propagação: Variables → Text Styles → Component texts → CSS. CSS pode emitir utility classes (`.ds-text-body-sm`) que aliasam Variables, ou os componentes consomem direto via `var()`.
+
 ### Camadas de consumo de tokens (2-layer, pós-0.7.0)
 
 **Foundation nunca aparece em consumidor final.** Consumidor final = `css/components/*.css`, `css/base/*.css`, bindings em componentes Figma, exemplos em docs de uso. Só tokens Semantic podem ser consumidos lá.
