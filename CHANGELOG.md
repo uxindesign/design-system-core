@@ -8,6 +8,35 @@ Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na
 
 ## [Não publicado]
 
+### Text Styles Figma — padrão único de tipografia (2026-04-25, sequência)
+
+Eu havia introduzido inconsistência: aplicado variables Semantic individualmente nos 477 textos sem inspecionar Text Styles existentes. Resultado: 3 padrões coexistindo (textos com Text Style, textos com variables individuais, Text Styles sem variables bindadas). O usuário sinalizou; corrigido aqui.
+
+**Estado anterior** (da etapa anterior do dia):
+- 28 Text Styles existiam, 109 textos os usavam, 477 com variables individuais.
+- Text Styles tinham vários Foundation leaks internos (display/*, heading/xl, body/sm, label/md, code/*, etc.) e 4 control/* sem bindings.
+
+**Mudanças:**
+
+Figma — Text Styles refatorados:
+- `body/sm` fontSize: Foundation→Semantic (typography/body/font-size/sm)
+- `label/md` fontSize: Foundation→Semantic
+- `code/md` fontSize+fontFamily: Foundation→Semantic
+- `code/sm` fontFamily: Foundation→Semantic (criado `typography/body/font-family/mono`)
+- `heading/xs` lineHeight: Foundation→Semantic body/line-height/lg
+- 4 control/* Text Styles (label-sm/lg, body-sm/md): bindings completos adicionados (fontFamily, fontStyle, fontSize, lineHeight, letterSpacing — todos a Semantic).
+- Text Styles `display/*` e `heading/xl` continuam com Foundation leak (não usados em components production, só showcase pages — fora do escopo desta etapa).
+
+Figma — Text Styles aplicados nos 465 textos sem:
+- Mapeamento por (fontSize, fontWeight): label/md, body/sm, caption/sm, body/md, label/xs, body/lg.
+- Variable bindings individuais limpas após aplicar Text Style (fontSize/fontFamily/fontStyle/lineHeight/letterSpacing setBoundVariable null) — assim Text Style passa a ser autoritário.
+
+**Estado final** (verificado via audit Plugin API):
+- 574/574 (100%) textos de component com Text Style aplicado.
+- 0 Foundation leaks via Text Styles.
+- 0 textos com variables individuais.
+- Padrão único: Variables → Text Styles → Component texts.
+
 ### Alinhamento Figma ↔ JSON ↔ CSS — fonte única de verdade (2026-04-25)
 
 Reorganização estrutural pesada. Figma era a fonte mas JSON/CSS divergia em 3 dimensões: estrutura de naming (compound vs hierárquico), valores de typography (escala desalinhada), e Foundation leaks em consumidor. Esta entrada reverte essa dívida 1:1 com Figma.
