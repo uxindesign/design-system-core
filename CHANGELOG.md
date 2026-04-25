@@ -8,6 +8,47 @@ Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na
 
 ## [Não publicado]
 
+### Pós-merge — fixes do site de docs (2026-04-25)
+
+Trabalho de cleanup pós-migração 2-layer aplicado direto na branch antes do merge:
+
+**Causas raiz consertadas:**
+- `css/tokens/index.css` importava `generated/component.css` (deletado em 0.7.0). Browser falha silenciosa em `@import` quebrado podia comprometer carga de imports subsequentes.
+- Aliases `body.font-size.{xs,sm}` e `control.font-size.{sm,md}` apontavam para Foundation **um step menor** que a description prometia (xs→11px em vez de 12px, sm→12px em vez de 14px). Causou todas as labels e body text dos componentes saírem menores que o intencionado em light + dark.
+- `border-default-default` (sufixo duplicado) gerado por bug em script de rename — corrigido em 4 tokens feedback border.
+
+**Visual / componente:**
+- Card `--elevated` agora aplica `box-shadow: var(--ds-shadow-sm)` direto (antes dependia de utility class `.ds-elevation-1` não aplicada nos exemplos)
+- Modal close usava `.ds-btn--ghost.--icon-only` com `&times;` em 4 lugares — substituído pela classe `.ds-modal__close` (definida no CSS) com ícone `material-symbols`
+
+**Conteúdo de docs:**
+- 47 HTMLs (excluindo `changelog`, `decisions/`, `llms-full`): refs antigos removidos. Patterns: `--ds-brand-*` → `--ds-primary-*` / `--ds-toned-*`, `--ds-content-link-*` → `--ds-link-content-*`, `--ds-feedback-*-{background,subtle,default,...}` → `*-bg-{background,subtle,default,...}`, `--ds-state-*` → `--ds-overlay-*` / `--ds-focus-ring-color` / `--ds-background-disabled`, `--ds-spacing-0-5` → `--ds-spacing-2`, `--ds-neutral-50` → `--ds-color-neutral-50`
+- DTCG paths em tabelas atualizadas: `foundation.{spacing,radius,typography.font.size}.{t-shirt}` → `{numérico}` (ex: `foundation.radius.sm` → `foundation.radius.4`)
+- `token-architecture.html` reescrita: 3 camadas → 2 camadas, cadeia de alias COMPONENT→SEMANTIC→BRAND→FOUNDATION → SEMANTIC→FOUNDATION, removida seção "Brand Sublayer" (foundation.brand não existe)
+- `theming.html` simplificada: removidas Default/Ocean/Forest (Ocean e Forest nunca tiveram CSS implementado), virou paleta única + dark mode + guia de tema customizado
+- `foundations-spacing.html`: tabelas Inset/Gap/Component (eliminadas) → escala única `space.{2xs..2xl}` + `space.section.*`. Spacing scale sem `spacing-0`/`spacing-0-5`
+- `foundations-radius.html`: tabela com Foundation (numérico) + Semantic (t-shirt como aliases). Removido `radius-none`
+- `foundations-borders.html`: removido `--ds-border-width-0` da scale visual
+- `foundations-opacity.html`: removido `--ds-opacity-0` da scale visual
+- `card.html`: "Comparacao" → "Comparação"
+
+**Geradores:**
+- `scripts/sync-docs.mjs`: `THEME_COLOR_SECTIONS` reescrito com paths atuais (primary, toned, outline, ghost, link, feedback compound). Inline CSS dos ADRs renderizados também atualizado
+- `scripts/tokens-verify.mjs`: regex `FOUNDATION_LEAK_RE` atualizada para naming numérico (radius-N, spacing-N, font-size-N) — antes pegava t-shirt que agora é Semantic. Inline CSS da `tokens-sync.html` atualizado
+- `scripts/build-api.mjs`: removida leitura de `tokens/component/`, `COMPONENTS` array sem campo `token`
+- `scripts/build-llms.mjs`: nota sobre 2-layer
+
+**UI da homepage e topbar:**
+- Theme switcher (Default/Ocean/Forest) **removido** de 35 HTMLs — Ocean e Forest nunca foram implementados em CSS, opções eram cosméticas
+- Seção "Theming" da homepage removida (redundante; theming.html cobre)
+- Badge `v0.5.17` → `v0.7.0` com tokens corretos (`--ds-toned-*` e `--ds-spacing-{4,8}` em vez dos deletados `--ds-brand-subtle`, `--ds-spacing-{1,2}`)
+
+**Registry/CSS leak:**
+- `tokens/registry.json`: removidas 288 entries `layer="component"` (stale) + 85 entries com paths Foundation/Semantic eliminados (foundation.brand.*, foundation.opacity.0, foundation.radius.0, foundation.spacing.0)
+- 23 leaks reais detectados em `css/components/*.css` pela regex atualizada (radius-{4,8,12,16,9999} consumidos direto) → trocados por Semantic (radius-{sm,md,lg,xl,full})
+
+**Resultado verify:tokens (CI sem snapshot):** 0 erros, 118 warnings (117 base/ leak debt + 1 registry TODOs migração).
+
 ### Migração para 2-layer + Foundation numeric naming (2026-04-24)
 
 **Mudança arquitetural grande.** Elimina camada Component e renomeia Foundation para naming numérico direto.
