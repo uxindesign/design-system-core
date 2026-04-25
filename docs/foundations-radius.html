@@ -63,44 +63,39 @@
     <h2 class="ds-subsection__title"><span data-lang="pt">Visual Reference</span><span data-lang="en">Visual Reference</span></h2>
     <div class="ds-radius-grid">
       <div class="ds-radius-item">
-        <div class="ds-radius-item__box" style="border-radius:0"></div>
-        <div class="ds-radius-item__name">none</div>
-        <div class="ds-radius-item__value">0</div>
-      </div>
-      <div class="ds-radius-item">
         <div class="ds-radius-item__box" style="border-radius:0.125rem"></div>
-        <div class="ds-radius-item__name">xs</div>
+        <div class="ds-radius-item__name">2</div>
         <div class="ds-radius-item__value">0.125rem (2px)</div>
       </div>
       <div class="ds-radius-item">
         <div class="ds-radius-item__box" style="border-radius:0.25rem"></div>
-        <div class="ds-radius-item__name">sm</div>
+        <div class="ds-radius-item__name">4</div>
         <div class="ds-radius-item__value">0.25rem (4px)</div>
       </div>
       <div class="ds-radius-item">
         <div class="ds-radius-item__box" style="border-radius:0.5rem"></div>
-        <div class="ds-radius-item__name">md</div>
+        <div class="ds-radius-item__name">8</div>
         <div class="ds-radius-item__value">0.5rem (8px)</div>
       </div>
       <div class="ds-radius-item">
         <div class="ds-radius-item__box" style="border-radius:0.75rem"></div>
-        <div class="ds-radius-item__name">lg</div>
+        <div class="ds-radius-item__name">12</div>
         <div class="ds-radius-item__value">0.75rem (12px)</div>
       </div>
       <div class="ds-radius-item">
         <div class="ds-radius-item__box" style="border-radius:1rem"></div>
-        <div class="ds-radius-item__name">xl</div>
+        <div class="ds-radius-item__name">16</div>
         <div class="ds-radius-item__value">1rem (16px)</div>
       </div>
       <div class="ds-radius-item">
         <div class="ds-radius-item__box" style="border-radius:1.5rem"></div>
-        <div class="ds-radius-item__name">2xl</div>
+        <div class="ds-radius-item__name">24</div>
         <div class="ds-radius-item__value">1.5rem (24px)</div>
       </div>
       <div class="ds-radius-item">
         <div class="ds-radius-item__box" style="border-radius:9999px"></div>
-        <div class="ds-radius-item__name">full</div>
-        <div class="ds-radius-item__value">9999px</div>
+        <div class="ds-radius-item__name">9999</div>
+        <div class="ds-radius-item__value">9999px (pill/circle)</div>
       </div>
     </div>
   </div>
@@ -110,16 +105,20 @@
     <table class="ds-token-table">
       <thead><tr><th>Token</th><th><span data-lang="pt">Valor</span><span data-lang="en">Value</span></th><th>Pixels</th><th><span data-lang="pt">Uso</span><span data-lang="en">Usage</span></th></tr></thead>
       <tbody>
-        <tr><td><code>--ds-radius-none</code></td><td>0</td><td>0px</td><td><span data-lang="pt">Sem arredondamento</span><span data-lang="en">No rounding</span></td></tr>
+        <tr><td colspan="4" style="padding:var(--ds-spacing-12);background-color:var(--ds-background-subtle);font-size:var(--ds-font-size-12);font-weight:var(--ds-font-weight-semibold);color:var(--ds-content-secondary);text-transform:uppercase;letter-spacing:0.05em;"><span data-lang="pt">Foundation (naming numérico)</span><span data-lang="en">Foundation (numeric naming)</span></td></tr>
         <tr><td><code>--ds-radius-2</code></td><td>0.125rem</td><td>2px</td><td><span data-lang="pt">Arredondamento sutil para elementos pequenos</span><span data-lang="en">Subtle rounding for small elements</span></td></tr>
         <tr><td><code>--ds-radius-4</code></td><td>0.25rem</td><td>4px</td><td>Badges, tags</td></tr>
         <tr><td><code>--ds-radius-8</code></td><td>0.5rem</td><td>8px</td><td><span data-lang="pt">Buttons, inputs, radius padrão de componentes</span><span data-lang="en">Buttons, inputs, default component radius</span></td></tr>
         <tr><td><code>--ds-radius-12</code></td><td>0.75rem</td><td>12px</td><td><span data-lang="pt">Cards, modais, containers maiores</span><span data-lang="en">Cards, modals, larger containers</span></td></tr>
         <tr><td><code>--ds-radius-16</code></td><td>1rem</td><td>16px</td><td><span data-lang="pt">Containers proeminentes</span><span data-lang="en">Prominent containers</span></td></tr>
-        <tr><td><code>--ds-radius-24</code></td><td>1.5rem</td><td>24px</td><td><span data-lang="pt">Secoes hero, cards grandes</span><span data-lang="en">Hero sections, large cards</span></td></tr>
-        <tr><td><code>--ds-radius-9999</code></td><td>9999px</td><td>--</td><td><span data-lang="pt">Circulos, pills</span><span data-lang="en">Circles, pills</span></td></tr>
-        <tr><td colspan="4" style="padding:var(--ds-spacing-12);background-color:var(--ds-background-subtle);font-size:var(--ds-font-size-12);font-weight:var(--ds-font-weight-semibold);color:var(--ds-content-secondary);text-transform:uppercase;letter-spacing:0.05em;"><span data-lang="pt">Alias semântico (camada semântica/tema — não é token de foundation)</span><span data-lang="en">Semantic alias (semantic/theme layer — not a foundation token)</span></td></tr>
-        <tr><td><code>--ds-radius-md</code></td><td>var(--ds-radius-8)</td><td>8px</td><td><span data-lang="pt">Alias semântico para o radius padrão de componentes interativos. Vive na camada semântica (theme-light/dark.css), não na foundation.</span><span data-lang="en">Semantic alias for the default radius of interactive components. Lives in the semantic layer (theme-light/dark.css), not in foundation.</span></td></tr>
+        <tr><td><code>--ds-radius-24</code></td><td>1.5rem</td><td>24px</td><td><span data-lang="pt">Seções hero, cards grandes</span><span data-lang="en">Hero sections, large cards</span></td></tr>
+        <tr><td><code>--ds-radius-9999</code></td><td>9999px</td><td>—</td><td><span data-lang="pt">Círculos, pills</span><span data-lang="en">Circles, pills</span></td></tr>
+        <tr><td colspan="4" style="padding:var(--ds-spacing-12);background-color:var(--ds-background-subtle);font-size:var(--ds-font-size-12);font-weight:var(--ds-font-weight-semibold);color:var(--ds-content-secondary);text-transform:uppercase;letter-spacing:0.05em;"><span data-lang="pt">Semantic (t-shirt — alias para Foundation)</span><span data-lang="en">Semantic (t-shirt — alias for Foundation)</span></td></tr>
+        <tr><td><code>--ds-radius-sm</code></td><td>var(--ds-radius-4)</td><td>4px</td><td><span data-lang="pt">Tags, badges, chips pequenos</span><span data-lang="en">Tags, badges, small chips</span></td></tr>
+        <tr><td><code>--ds-radius-md</code></td><td>var(--ds-radius-8)</td><td>8px</td><td><span data-lang="pt">Cards, alerts — radius padrão médio</span><span data-lang="en">Cards, alerts — default medium radius</span></td></tr>
+        <tr><td><code>--ds-radius-lg</code></td><td>var(--ds-radius-12)</td><td>12px</td><td><span data-lang="pt">Cards grandes, containers</span><span data-lang="en">Large cards, containers</span></td></tr>
+        <tr><td><code>--ds-radius-xl</code></td><td>var(--ds-radius-16)</td><td>16px</td><td><span data-lang="pt">Modais, sheets, dialogs</span><span data-lang="en">Modals, sheets, dialogs</span></td></tr>
+        <tr><td><code>--ds-radius-full</code></td><td>var(--ds-radius-9999)</td><td>9999px</td><td><span data-lang="pt">Pills, circles, avatars</span><span data-lang="en">Pills, circles, avatars</span></td></tr>
       </tbody>
     </table>
   </div>
@@ -129,14 +128,13 @@
 <div class="ds-code-block">{
   "foundation": {
     "radius": {
-      "none": { "$type": "dimension", "$value": "0" },
-      "xs":   { "$type": "dimension", "$value": "0.125rem" },
-      "sm":   { "$type": "dimension", "$value": "0.25rem" },
-      "md":   { "$type": "dimension", "$value": "0.5rem" },
-      "lg":   { "$type": "dimension", "$value": "0.75rem" },
-      "xl":   { "$type": "dimension", "$value": "1rem" },
-      "2xl":  { "$type": "dimension", "$value": "1.5rem" },
-      "full": { "$type": "dimension", "$value": "9999px" }
+      "2":    { "$type": "dimension", "$value": "0.125rem" },
+      "4":    { "$type": "dimension", "$value": "0.25rem" },
+      "8":    { "$type": "dimension", "$value": "0.5rem" },
+      "12":   { "$type": "dimension", "$value": "0.75rem" },
+      "16":   { "$type": "dimension", "$value": "1rem" },
+      "24":   { "$type": "dimension", "$value": "1.5rem" },
+      "9999": { "$type": "dimension", "$value": "9999px" }
     }
   }
 }</div>
