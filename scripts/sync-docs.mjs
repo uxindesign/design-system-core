@@ -605,10 +605,10 @@ function flattenTokens(obj, prefix = '', acc = {}) {
 // finalValue é o valor literal se chegou num primitivo, ou null.
 function resolveAlias(startPath, tokenMap, depth = 0) {
   if (depth > 10) return { finalPath: startPath, finalValue: null };
-  // Regra de parada: se já saí do entry point e cheguei num token "significativo"
-  // (semantic ou foundation.brand), para aqui. Isso casa com o que o CSS gerado
-  // emite — `var(--ds-brand-primary)`, `var(--ds-brand-default)`, etc.
-  if (depth > 0 && (startPath.startsWith('semantic.') || startPath.startsWith('foundation.brand.'))) {
+  // Regra de parada: se já saí do entry point e cheguei num token Semantic,
+  // para aqui. Isso casa com o que o CSS gerado emite (semantic vira var
+  // direto). foundation.brand.* foi eliminado em 0.7.0.
+  if (depth > 0 && startPath.startsWith('semantic.')) {
     return { finalPath: startPath, finalValue: null };
   }
   const entry = tokenMap[startPath];

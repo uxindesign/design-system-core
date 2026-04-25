@@ -41,7 +41,7 @@ code {
   background-color: var(--ds-background-subtle);
   padding: var(--ds-spacing-2) var(--ds-spacing-4);
   border-radius: var(--ds-radius-4);
-  color: var(--ds-content-link-default);
+  color: var(--ds-link-content-default);
 }
 
 pre {

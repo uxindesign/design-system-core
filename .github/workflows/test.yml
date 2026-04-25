@@ -1,0 +1,49 @@
+name: Test
+
+on:
+  pull_request:
+    paths:
+      - "tokens/**"
+      - "css/**"
+      - "docs/**"
+      - "scripts/**"
+      - "build-tokens.mjs"
+      - "package.json"
+      - ".github/workflows/test.yml"
+  push:
+    branches: [main]
+    paths:
+      - "tokens/**"
+      - "css/**"
+      - "docs/**"
+      - "scripts/**"
+      - "build-tokens.mjs"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build tokens (necessário pro test-css-references comparar)
+        run: npm run build:tokens
+
+      - name: Token integrity (aliases, descriptions, modes)
+        run: node scripts/test-token-integrity.mjs
+
+      - name: CSS reference resolution (var() + @import)
+        run: node scripts/test-css-references.mjs
+
+      - name: Generator output (sync-docs, tokens-verify, build-llms)
+        run: node scripts/test-generators.mjs
+
+      - name: Self-test (provoca regressões e valida que detectores pegam)
+        run: node scripts/test-self.mjs

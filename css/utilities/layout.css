@@ -64,23 +64,23 @@
    -------------------------------------------------------------------------- */
 
 .ds-gap-xs {
-  gap: var(--ds-space-gap-xs);
+  gap: var(--ds-space-xs);
 }
 
 .ds-gap-sm {
-  gap: var(--ds-space-gap-sm);
+  gap: var(--ds-space-sm);
 }
 
 .ds-gap-md {
-  gap: var(--ds-space-gap-md);
+  gap: var(--ds-space-md);
 }
 
 .ds-gap-lg {
-  gap: var(--ds-space-gap-lg);
+  gap: var(--ds-space-lg);
 }
 
 .ds-gap-xl {
-  gap: var(--ds-space-gap-xl);
+  gap: var(--ds-space-xl);
 }
 
 /* --------------------------------------------------------------------------
