@@ -12,8 +12,8 @@
     .ds-token-table td { padding: var(--ds-spacing-8) var(--ds-spacing-12); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: top; }
     .ds-token-table code { font-size: var(--ds-font-size-12); font-family: var(--ds-font-family-mono); }
     .ds-callout { padding: var(--ds-spacing-16) var(--ds-spacing-20); border-radius: var(--ds-radius-12); margin-bottom: var(--ds-spacing-24); font-size: var(--ds-font-size-14); line-height: var(--ds-line-height-relaxed); color: var(--ds-content-default); }
-    .ds-callout--info { background-color: var(--ds-feedback-info-bg-default); border: var(--ds-border-width-1) solid var(--ds-feedback-info-border-default-default); }
-    .ds-callout--warning { background-color: var(--ds-feedback-warning-bg-default); border: var(--ds-border-width-1) solid var(--ds-feedback-warning-border-default-default); }
+    .ds-callout--info { background-color: var(--ds-feedback-info-bg-background); border: var(--ds-border-width-1) solid var(--ds-feedback-info-border-default); }
+    .ds-callout--warning { background-color: var(--ds-feedback-warning-bg-background); border: var(--ds-border-width-1) solid var(--ds-feedback-warning-border-default); }
     .ds-callout__title { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-4); }
     .ds-code-block { background-color: var(--ds-color-neutral-900); color: var(--ds-color-neutral-200); padding: var(--ds-spacing-16) var(--ds-spacing-20); border-radius: var(--ds-radius-12); font-family: var(--ds-font-family-mono); font-size: var(--ds-font-size-12); line-height: var(--ds-line-height-relaxed); overflow-x: auto; margin-bottom: var(--ds-spacing-24); white-space: pre; }
     /* Architecture diagram */
@@ -21,8 +21,8 @@
     .ds-arch__layer { flex: 1; min-width: 220px; border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-12); overflow: hidden; }
     .ds-arch__header { padding: var(--ds-spacing-12) var(--ds-spacing-16); font-weight: var(--ds-font-weight-semibold); font-size: var(--ds-font-size-14); }
     .ds-arch__header--fdn { background-color: var(--ds-overlay-subtle); color: var(--ds-primary-content-default); border-bottom: 2px solid var(--ds-primary-bg-default); }
-    .ds-arch__header--sem { background-color: var(--ds-feedback-info-bg-default); color: var(--ds-feedback-info-content-default); border-bottom: 2px solid var(--ds-feedback-info-bg-default); }
-    .ds-arch__header--cmp { background-color: var(--ds-feedback-success-bg-default); color: var(--ds-feedback-success-content-default); border-bottom: 2px solid var(--ds-feedback-success-bg-default); }
+    .ds-arch__header--sem { background-color: var(--ds-feedback-info-bg-background); color: var(--ds-feedback-info-content-default); border-bottom: 2px solid var(--ds-feedback-info-bg-background); }
+    .ds-arch__header--cmp { background-color: var(--ds-feedback-success-bg-background); color: var(--ds-feedback-success-content-default); border-bottom: 2px solid var(--ds-feedback-success-bg-background); }
     .ds-arch__body { padding: var(--ds-spacing-16); font-size: var(--ds-font-size-12); color: var(--ds-content-secondary); line-height: var(--ds-line-height-relaxed); }
     .ds-arch__body code { font-family: var(--ds-font-family-mono); color: var(--ds-content-default); }
     .ds-arch__arrow { display: flex; align-items: center; justify-content: center; font-size: var(--ds-font-size-20); color: var(--ds-content-tertiary); min-width: 32px; }
@@ -32,8 +32,8 @@
     .ds-chain__badge { padding: var(--ds-spacing-2) var(--ds-spacing-8); border-radius: var(--ds-radius-4); font-size: 10px; font-weight: var(--ds-font-weight-semibold); text-transform: uppercase; letter-spacing: var(--ds-letter-spacing-wider); font-family: var(--ds-font-family-sans); flex-shrink: 0; }
     .ds-chain__badge--fdn { background-color: var(--ds-overlay-subtle); color: var(--ds-primary-content-default); }
     .ds-chain__badge--brand { background-color: var(--ds-toned-bg-default, var(--ds-overlay-subtle)); color: var(--ds-toned-content-default, var(--ds-primary-content-default)); }
-    .ds-chain__badge--sem { background-color: var(--ds-feedback-info-bg-default); color: var(--ds-feedback-info-content-default); }
-    .ds-chain__badge--cmp { background-color: var(--ds-feedback-success-bg-default); color: var(--ds-feedback-success-content-default); }
+    .ds-chain__badge--sem { background-color: var(--ds-feedback-info-bg-background); color: var(--ds-feedback-info-content-default); }
+    .ds-chain__badge--cmp { background-color: var(--ds-feedback-success-bg-background); color: var(--ds-feedback-success-content-default); }
     .ds-chain__arrow { color: var(--ds-content-tertiary); }
   </style>
   <script>
