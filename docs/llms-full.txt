@@ -164,6 +164,52 @@ Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na
 
 ## [Não publicado]
 
+### Migração para 2-layer + Foundation numeric naming (2026-04-24)
+
+**Mudança arquitetural grande.** Elimina camada Component e renomeia Foundation para naming numérico direto.
+
+**Figma (fonte de verdade):**
+- Collection `Component` (61 tokens) **deletada** — era dead code (zero nodes bindados, só aliases sem consumer)
+- Foundation renomeado pra numérico direto (40 vars):
+  - `radius/{xs,sm,md,lg,xl,2xl,full}` → `radius/{2,4,8,12,16,24,9999}`
+  - `typography/font/size/{xs..9xl}` → `typography/font/size/{11,12,14,16,18,20,24,28,32,40,48,56,64,72}`
+  - `spacing/{0-5,1,1-5,2,...,24}` → `spacing/{2,4,6,8,...,96}` (valor direto no nome)
+- 10 órfãos deletados: `spacing/0`, `radius/none`, `border/width/0`, `opacity/0`, `typography/font/line-height/{tight,snug,normal,relaxed}` (% values off-grid), `typography/font/size/2xs` (duplicata xs=11)
+- Criado `typography/font/size/14` (fixa 3 text styles com binding quebrado pré-existente a ID `10:11` deletado)
+- Semantic — nova escala única `space/{2xs..2xl}` (7 tokens) dissolvendo `space.inset/gap/component` (18 tokens deletados, 2.960 bindings rebindadas)
+- Semantic — novos size tokens (`size.avatar.*`, `size.modal.*`, `size.spinner.*`, `size.skeleton.*`, `size.textarea.*`, `size.toggle.*`) absorvem o que era Component
+- `semantic.radius.component` deletado (alias 1:1 pra md, redundante). `radius/full` mantém naming "full" em Semantic, aponta pra `foundation.radius.9999`
+- `border/subtle` Light recalibrado: era idêntico a `border/default` (neutral/300) → agora `neutral/200` (escala coerente subtle < default < strong)
+- Fonts `typography/font/family/{mono,display}` mantidas como reserva (hoje `mono`="DM Mono", `display`="Inter" = slot para futura heading font)
+- Foundation escopos: `scopes: []` em todos os 221 tokens (esconde dos pickers internos)
+- **Pendente manual**: `hiddenFromPublishing: true` em todos Foundation via UI do Figma (API do plugin quebrada via MCP)
+
+**Repo (derivado):**
+- `tokens/component/*` — pasta deletada (11 arquivos removidos)
+- `tokens/foundation/*.json` — reescrito com naming numérico
+- `tokens/semantic/{light,dark}.json` — space consolidado, novos size/*, border.subtle recalibrado light, radius.component removido
+- `css/components/*.css` — 143 refs atualizadas pra consumir novos tokens Semantic; vector internals (`radio-dot`, `toggle-thumb`, `spinner-stroke`, `checkbox-check`) viraram literais px porque são pintura interna de vetor, não token
+- `css/base/*.css` — 43 refs atualizadas pro novo naming numérico Foundation
+- `build-tokens.mjs` — remove build target `component.css` (collection não existe)
+- CSS gerado sem `component.css` (só `foundation.css` + `theme-{light,dark}.css` + `index.css`)
+
+**Contagem:**
+- Foundation: 229 → **221 tokens** (9 deletados, 1 criado = -8 net)
+- Semantic: 158 → **165 tokens** (+7 net: novo space +7, novos size +18, eliminados space antigos -18)
+- Component: 61 → **0** (collection deletada)
+- **Total tokens: 448 → 386 (-62, -14%)**
+- CSS vars geradas: 566 (foundation 236 + theme-light 165 + theme-dark 165)
+
+**Build + verify:**
+- `build:tokens` passa sem reference errors
+- `JSON integrity`: OK. `JSON ↔ CSS`: OK
+- Broken refs Figma em componentes produção: **0** (Button/Input/Modal/Avatar/etc)
+- Broken refs em páginas de documentação: 3.851 (dívida pré-existente acumulada de PRs anteriores; cleanup em PR separado)
+- Button Style=Success legacy — 168 refs a library externa deprecated (fora do escopo; decisão pendente)
+- `verify:tokens`: 6 falsos-positivos "CSS leak" de `var(--ds-radius-md)` — script ainda assume 3-layer; `semantic.radius.md` É o consumer-final no 2-layer (não é leak). Script precisa update.
+
+**Bump**: 0.6.0 → **0.7.0** (breaking grande — Component deletada + Foundation renamed; consumers precisam atualizar)
+
 ### Simplificação estrutural Semantic (ADR-014 revisão 2026-04-23)
 
 Revisão da ADR-014: estrutura action de 5 níveis (`action.{role}.{style}.{prop}.{state}`) foi substituída por **categorias peers no root Semantic** com regra de naming alinhada ao padrão Nathan Curtis (Category · Concept · Property · Variant · State) + PDF enviado pelo usuário.
@@ -795,7 +841,7 @@ Consolidação da documentação como fonte única de verdade. Plano em seis fas
 
 # Índice de ADRs — Design System Core
 
-> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-23. Não editar manualmente.
+> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-25. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
 
 14 decisões registradas.
@@ -999,7 +1045,7 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 
 # Inventário de componentes — Design System Core
 
-> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-23. Não editar manualmente.
+> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-25. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
 > Versão atual: **0.5.17**
 
@@ -1007,24 +1053,24 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 
 | Componente | CSS | Tokens JSON | Figma (visual) | Figma (binding) | Stories | Docs site |
 |------------|-----|-------------|-----------------|-----------------|---------|----------|
-| Button | 🟢 | 🟢 (3) | 🟢 | 🟢 | ⬜ | 🟢 |
-| Input Text | 🟢 | 🟢 (3) | 🟢 | 🟢 | ⬜ | 🟢 |
-| Textarea | 🟢 | 🟢 (3) | 🟢 | 🟢 | ⬜ | 🟢 |
-| Select | 🟢 | 🟢 (7) | 🟢 | 🟢 | ⬜ | 🟢 |
-| Checkbox | 🟢 | 🟢 (9) | 🟢 | 🟢 | ⬜ | 🟢 |
-| Radio | 🟢 | 🟢 (6) | 🟢 | 🟢 | ⬜ | 🟢 |
-| Toggle | 🟢 | 🟢 (9) | 🟢 | 🟢 | ⬜ | 🟢 |
+| Button | 🟢 | ⚠️ | 🟢 | 🟢 | ⬜ | 🟢 |
+| Input Text | 🟢 | ⚠️ | 🟢 | 🟢 | ⬜ | 🟢 |
+| Textarea | 🟢 | ⚠️ | 🟢 | 🟢 | ⬜ | 🟢 |
+| Select | 🟢 | ⚠️ | 🟢 | 🟢 | ⬜ | 🟢 |
+| Checkbox | 🟢 | ⚠️ | 🟢 | 🟢 | ⬜ | 🟢 |
+| Radio | 🟢 | ⚠️ | 🟢 | 🟢 | ⬜ | 🟢 |
+| Toggle | 🟢 | ⚠️ | 🟢 | 🟢 | ⬜ | 🟢 |
 | Badge | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
 | Alert | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
 | Card | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
-| Modal | 🟢 | 🟢 (3) | 🟢 | 🟢 | ⬜ | 🟢 |
+| Modal | 🟢 | ⚠️ | 🟢 | 🟢 | ⬜ | 🟢 |
 | Tooltip | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
 | Tabs | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
 | Breadcrumb | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
-| Avatar | 🟢 | 🟢 (9) | 🟢 | 🟢 | ⬜ | 🟢 |
+| Avatar | 🟢 | ⚠️ | 🟢 | 🟢 | ⬜ | 🟢 |
 | Divider | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
-| Spinner | 🟢 | 🟢 (6) | 🟢 | 🟢 | ⬜ | 🟢 |
-| Skeleton | 🟢 | 🟢 (3) | 🟢 | 🟢 | ⬜ | 🟢 |
+| Spinner | 🟢 | ⚠️ | 🟢 | 🟢 | ⬜ | 🟢 |
+| Skeleton | 🟢 | ⚠️ | 🟢 | 🟢 | ⬜ | 🟢 |
 
 **Legenda:** ⬜ Não iniciado | 🟡 Em progresso | 🟢 Completo | ⚠️ Verificar | 🔴 Precisa revisão
 
@@ -1038,10 +1084,10 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 
 | Coleção | Tokens | Status |
 |---------|--------|--------|
-| Foundation | 240 | 🟢 |
-| Semantic (light) | 165 | 🟢 |
-| Semantic (dark) | 165 | 🟢 |
-| Component | 61 | 🟢 |
+| Foundation | 236 | 🟢 |
+| Semantic (light) | 171 | 🟢 |
+| Semantic (dark) | 171 | 🟢 |
+| Component | 0 | 🟢 |
 
 ## Pipeline
 
@@ -1049,7 +1095,7 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 |-------|--------|
 | JSON (DTCG) canônico | 🟢 `tokens/` |
 | Style Dictionary | 🟢 `build-tokens.mjs` |
-| CSS gerado | 🟢 5 arquivos em `css/tokens/generated/` |
+| CSS gerado | 🟢 4 arquivos em `css/tokens/generated/` |
 | Import pipeline | 🟢 index.css importa apenas generated/ |
 | Figma binding | 🟢 18 componentes vinculados |
 
@@ -11332,7 +11378,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 # Token schema — Design System Core
 
-> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-23. Não editar manualmente.
+> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-25. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
 > Versão atual: **0.5.17**
 
@@ -11344,31 +11390,31 @@ Seção expandida com contexto, decisão e locais de uso.
 | Formato canônico | JSON (DTCG) em `tokens/` |
 | CSS gerado | Style Dictionary → `css/tokens/generated/` |
 | Pipeline | ✅ index.css importa apenas generated/ |
-| Paridade light/dark | ✅ 165 tokens em ambos os modos |
+| Paridade light/dark | ✅ 171 tokens em ambos os modos |
 
 ## Camadas
 
 | Camada | Tokens | Arquivos |
 |--------|--------|----------|
-| Foundation | **240** | 9 |
-| Semantic | **165 × 2 modos** | light.json + dark.json |
-| Component | **61** | 11 |
+| Foundation | **236** | 9 |
+| Semantic | **171 × 2 modos** | light.json + dark.json |
+| Component | **0** | 0 |
 
-## Foundation (240 tokens)
+## Foundation (236 tokens)
 
 | Arquivo | Tokens |
 |---------|--------|
 | `colors.json` | 145 |
 | `motion.json` | 7 |
-| `opacity.json` | 7 |
-| `radius.json` | 8 |
+| `opacity.json` | 6 |
+| `radius.json` | 7 |
 | `shadows.json` | 7 |
-| `spacing.json` | 21 |
-| `stroke.json` | 4 |
+| `spacing.json` | 20 |
+| `stroke.json` | 3 |
 | `typography.json` | 35 |
 | `z-index.json` | 6 |
 
-## Semantic (165 tokens × 2 modos)
+## Semantic (171 tokens × 2 modos)
 
 Categorias raiz em light.json:
 
@@ -11393,21 +11439,11 @@ semantic.radius.*
 semantic.typography.*
 ```
 
-## Component (61 tokens)
+## Component (0 tokens)
 
 | Arquivo | Tokens |
 |---------|--------|
-| `avatar.json` | 9 |
-| `button.json` | 3 |
-| `checkbox.json` | 9 |
-| `input.json` | 3 |
-| `modal.json` | 3 |
-| `radio.json` | 6 |
-| `select.json` | 7 |
-| `skeleton.json` | 3 |
-| `spinner.json` | 6 |
-| `textarea.json` | 3 |
-| `toggle.json` | 9 |
+
 
 ## Regras invioláveis
 
@@ -11728,7 +11764,7 @@ Fechamento formal em 0.5.2: correção do `canonicalToCssVar` em `scripts/tokens
 
 1. Criar `tokens/foundation/brand.json` com `foundation.brand.primary` e `foundation.brand.secondary` resolvendo para os valores de cada tema.
 2. Ajustar `tokens/semantic/light.json` e `dark.json`: `semantic.brand.default` e `semantic.accent.default` passam a referenciar `{foundation.brand.primary}` e `{foundation.brand.secondary}`.
-3. Remover `foundation.typography.font.size.base` de `tokens/foundation/typography.json`; substituir 7 referências CSS por `--ds-font-size-md`.
+3. Remover `foundation.typography.font.size.base` de `tokens/foundation/typography.json`; substituir 7 referências CSS por `--ds-font-size-16`.
 4. Executar `npm run build:tokens` e conferir que o CSS gerado inclui todas as novas variáveis `-default`.
 5. Rodar find-and-replace em `css/components/**/*.css` para renomear as variáveis listadas na decisão.
 6. Atualizar a coleção Brand no Figma (via `use_figma`) para refletir a nova estrutura.
@@ -11778,7 +11814,7 @@ O rename CSS (~80 substituições em componentes) acontece quando o Style Dictio
 
 ### 3. Remover font.size.base, manter font.size.md
 
-Remover foundation.typography.font.size.base do JSON. A escala tipográfica fica consistente com t-shirt sizes: 2xs, xs, sm, md, lg, xl, 2xl, ... 9xl. O rename das 7 referências CSS (--ds-font-size-base → --ds-font-size-md) acontece junto com o rename do item 2.
+Remover foundation.typography.font.size.base do JSON. A escala tipográfica fica consistente com t-shirt sizes: 2xs, xs, sm, md, lg, xl, 2xl, ... 9xl. O rename das 7 referências CSS (--ds-font-size-base → --ds-font-size-16) acontece junto com o rename do item 2.
 
 ## Consequências
 
@@ -12911,15 +12947,15 @@ Essa regra **nunca foi codificada explicitamente** e por isso **não é respeita
 
 ### No CSS (derivado)
 
-- Todos os 19 arquivos em `css/components/*.css` consomem Foundation direto em: spacing (`var(--ds-spacing-3)`), radius não-component (`var(--ds-radius-md)`), border-width (`var(--ds-border-width-1)`), typography (`var(--ds-font-size-sm)`, `var(--ds-font-weight-medium)`, `var(--ds-line-height-normal)`), shadow, motion, opacity, z-index.
+- Todos os 19 arquivos em `css/components/*.css` consomem Foundation direto em: spacing (`var(--ds-spacing-12)`), radius não-component (`var(--ds-radius-8)`), border-width (`var(--ds-border-width-1)`), typography (`var(--ds-font-size-14)`, `var(--ds-font-weight-medium)`, `var(--ds-line-height-normal)`), shadow, motion, opacity, z-index.
 - Cor é o único domínio limpo: zero uso de `var(--ds-color-*)` raw.
 
 ### Por que isso importa
 
 O sistema perdeu propriedades arquiteturais importantes:
 
-1. **Rastreabilidade quebra.** Um valor `0.75rem` no CSS pode vir de `--ds-spacing-3` direto, ou via `--ds-space-inset-md` → `foundation.spacing.3`. O primeiro não carrega intenção; o segundo carrega. Buscar "onde usamos o inset médio" com grep falha no primeiro caso.
-2. **Theming fica rígido.** Pra mudar o inset médio global de 12px pra 10px, teria que ir token por token no CSS substituindo `--ds-spacing-3` por `--ds-spacing-2-5` caso a caso. Com Semantic, muda `space/inset/md` num lugar e propaga.
+1. **Rastreabilidade quebra.** Um valor `0.75rem` no CSS pode vir de `--ds-spacing-12` direto, ou via `--ds-space-md` → `foundation.spacing.3`. O primeiro não carrega intenção; o segundo carrega. Buscar "onde usamos o inset médio" com grep falha no primeiro caso.
+2. **Theming fica rígido.** Pra mudar o inset médio global de 12px pra 10px, teria que ir token por token no CSS substituindo `--ds-spacing-12` por `--ds-spacing-10` caso a caso. Com Semantic, muda `space/inset/md` num lugar e propaga.
 3. **Dois consumidores divergem.** Figma binda `typography/font/weight/medium` direto; CSS usa `var(--ds-font-weight-medium)`. Quando alguém quiser mudar "peso médio" pra `semibold` em contextos de label de controle, precisa fazer hunt manual nos dois lados. Com Semantic `typography/control/font-weight`, muda uma vez.
 
 ## Decisão
@@ -12953,7 +12989,7 @@ Consumidor final **só** vê Semantic e Component. Nunca Foundation.
 
 ### Exceção explícita — `semantic.control.*` (ADR-006)
 
-Já codificado em ADR-006 princípio 9 e reforçado em ADR-011: a subcategoria `semantic.control.*` (dimensions, typography, padding compartilhados entre Button, Input, Select, Textarea) **só pode ser consumida via tokens de Componente**, nunca direto por CSS. Button, Input etc. definem `button.height.md → {semantic.size.control.md}`; o CSS consome `var(--ds-button-height-md)`, não `var(--ds-size-control-md)`.
+Já codificado em ADR-006 princípio 9 e reforçado em ADR-011: a subcategoria `semantic.control.*` (dimensions, typography, padding compartilhados entre Button, Input, Select, Textarea) **só pode ser consumida via tokens de Componente**, nunca direto por CSS. Button, Input etc. definem `button.height.md → {semantic.size.control.md}`; o CSS consome `var(--ds-size-control-md)`, não `var(--ds-size-control-md)`.
 
 Essa exceção não contraria ADR-013 — é uma restrição **adicional**, específica da subcategoria "control".
 
@@ -13292,12 +13328,12 @@ Rejeitada. É exatamente o que a Fase 5 ADR-013 fez e gerou bloat. Inviável em 
 # Tokens
 ═══════════════════════════════════════════════════════════
 
-Total por camada (ver docs/api/tokens.json para valores completos):
+Total por camada (ver docs/api/tokens.json para valores completos).
+Arquitetura **2-layer** desde 0.7.0 — Component collection eliminada.
 
 - Foundation: ver `tokens/foundation/`
 - Semantic (light): ver `tokens/semantic/light.json`
 - Semantic (dark): ver `tokens/semantic/dark.json`
-- Component: ver `tokens/component/`
 
 Formato canônico: DTCG (Design Token Community Group).
 Transformação: `build-tokens.mjs` usa Style Dictionary pra gerar `css/tokens/generated/*.css`.
@@ -13307,6 +13343,6 @@ Verificação automática de coerência Figma ↔ JSON ↔ CSS: `scripts/tokens-
 
 ═══════════════════════════════════════════════════════════
 
-Gerado por scripts/build-llms.mjs em 2026-04-23T23:53:54.292Z
+Gerado por scripts/build-llms.mjs em 2026-04-25T15:35:30.302Z
 Versão: 0.5.17
 Site: https://uxindesign.github.io/design-system-core/

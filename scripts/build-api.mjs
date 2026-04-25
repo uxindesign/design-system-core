@@ -39,25 +39,27 @@ const now = new Date().toISOString();
 // components.json
 // -----------------------------------------------------------------------------
 
+// Component layer eliminada em 0.7.0 — tokens migrados pra Semantic.
+// `token` em cada entry agora não aponta pra arquivo (lookup via CSS).
 const COMPONENTS = [
-  { name: "Button", slug: "button", css: "button.css", html: "button.html", token: "button.json" },
-  { name: "Input Text", slug: "input", css: "input.css", html: "input.html", token: "input.json" },
-  { name: "Textarea", slug: "textarea", css: "textarea.css", html: "textarea.html", token: "textarea.json" },
-  { name: "Select", slug: "select", css: "select.css", html: "select.html", token: "select.json" },
-  { name: "Checkbox", slug: "checkbox", css: "checkbox.css", html: "checkbox.html", token: "checkbox.json" },
-  { name: "Radio", slug: "radio", css: "radio.css", html: "radio.html", token: "radio.json" },
-  { name: "Toggle", slug: "toggle", css: "toggle.css", html: "toggle.html", token: "toggle.json" },
-  { name: "Badge", slug: "badge", css: "badge.css", html: "badge.html", token: null },
-  { name: "Alert", slug: "alert", css: "alert.css", html: "alert.html", token: null },
-  { name: "Card", slug: "card", css: "card.css", html: "card.html", token: null },
-  { name: "Modal", slug: "modal", css: "modal.css", html: "modal.html", token: "modal.json" },
-  { name: "Tooltip", slug: "tooltip", css: "tooltip.css", html: "tooltip.html", token: null },
-  { name: "Tabs", slug: "tabs", css: "tabs.css", html: "tabs.html", token: null },
-  { name: "Breadcrumb", slug: "breadcrumb", css: "breadcrumb.css", html: "breadcrumb.html", token: null },
-  { name: "Avatar", slug: "avatar", css: "avatar.css", html: "avatar.html", token: "avatar.json" },
-  { name: "Divider", slug: "divider", css: "divider.css", html: "divider.html", token: null },
-  { name: "Spinner", slug: "spinner", css: "spinner.css", html: "spinner.html", token: "spinner.json" },
-  { name: "Skeleton", slug: "skeleton", css: "skeleton.css", html: "skeleton.html", token: "skeleton.json" },
+  { name: "Button", slug: "button", css: "button.css", html: "button.html" },
+  { name: "Input Text", slug: "input", css: "input.css", html: "input.html" },
+  { name: "Textarea", slug: "textarea", css: "textarea.css", html: "textarea.html" },
+  { name: "Select", slug: "select", css: "select.css", html: "select.html" },
+  { name: "Checkbox", slug: "checkbox", css: "checkbox.css", html: "checkbox.html" },
+  { name: "Radio", slug: "radio", css: "radio.css", html: "radio.html" },
+  { name: "Toggle", slug: "toggle", css: "toggle.css", html: "toggle.html" },
+  { name: "Badge", slug: "badge", css: "badge.css", html: "badge.html" },
+  { name: "Alert", slug: "alert", css: "alert.css", html: "alert.html" },
+  { name: "Card", slug: "card", css: "card.css", html: "card.html" },
+  { name: "Modal", slug: "modal", css: "modal.css", html: "modal.html" },
+  { name: "Tooltip", slug: "tooltip", css: "tooltip.css", html: "tooltip.html" },
+  { name: "Tabs", slug: "tabs", css: "tabs.css", html: "tabs.html" },
+  { name: "Breadcrumb", slug: "breadcrumb", css: "breadcrumb.css", html: "breadcrumb.html" },
+  { name: "Avatar", slug: "avatar", css: "avatar.css", html: "avatar.html" },
+  { name: "Divider", slug: "divider", css: "divider.css", html: "divider.html" },
+  { name: "Spinner", slug: "spinner", css: "spinner.css", html: "spinner.html" },
+  { name: "Skeleton", slug: "skeleton", css: "skeleton.css", html: "skeleton.html" },
 ];
 
 function extractTokensFromCss(cssPath) {
@@ -82,17 +84,14 @@ function extractVariantsFromCss(cssPath) {
 
 const components = COMPONENTS.map((c) => {
   const cssPath = path.join(ROOT, "css", "components", c.css);
-  const tokenJsonPath = c.token ? path.join(ROOT, "tokens", "component", c.token) : null;
   return {
     name: c.name,
     slug: c.slug,
     url: `${BASE_URL}/docs/${c.html}`,
     cssClass: `ds-${c.slug === "input" ? "input" : c.slug}`,
     cssFile: `css/components/${c.css}`,
-    tokenFile: c.token ? `tokens/component/${c.token}` : null,
     tokens: extractTokensFromCss(cssPath),
     variants: extractVariantsFromCss(cssPath),
-    hasComponentTokens: !!(tokenJsonPath && fs.existsSync(tokenJsonPath)),
     figma: {
       fileKey: FIGMA_FILE_KEY,
       page: c.name,
@@ -128,7 +127,6 @@ function flattenTokens(obj, prefix = "", acc = {}) {
 
 const tokensRoot = path.join(ROOT, "tokens");
 const foundationTokens = {};
-const componentTokens = {};
 const semanticLight = {};
 const semanticDark = {};
 
@@ -136,10 +134,8 @@ for (const f of fs.readdirSync(path.join(tokensRoot, "foundation")).filter((x) =
   const data = readJson(path.join(tokensRoot, "foundation", f));
   Object.assign(foundationTokens, flattenTokens(data));
 }
-for (const f of fs.readdirSync(path.join(tokensRoot, "component")).filter((x) => x.endsWith(".json"))) {
-  const data = readJson(path.join(tokensRoot, "component", f));
-  Object.assign(componentTokens, flattenTokens(data));
-}
+// Component layer eliminada em 0.7.0 (2-layer: Foundation + Semantic).
+// Tokens que eram Component agora vivem em Semantic (size.avatar.*, size.modal.*, etc.).
 Object.assign(semanticLight, flattenTokens(readJson(path.join(tokensRoot, "semantic", "light.json"))));
 Object.assign(semanticDark, flattenTokens(readJson(path.join(tokensRoot, "semantic", "dark.json"))));
 
@@ -150,13 +146,11 @@ writeJson(path.join(API_DIR, "tokens.json"), {
     foundation: Object.keys(foundationTokens).length,
     semanticLight: Object.keys(semanticLight).length,
     semanticDark: Object.keys(semanticDark).length,
-    component: Object.keys(componentTokens).length,
   },
   foundation: foundationTokens,
   semantic: { light: semanticLight, dark: semanticDark },
-  component: componentTokens,
 });
-console.log(`✅ docs/api/tokens.json (${Object.keys(foundationTokens).length + Object.keys(componentTokens).length + Object.keys(semanticLight).length * 2} tokens)`);
+console.log(`✅ docs/api/tokens.json (${Object.keys(foundationTokens).length + Object.keys(semanticLight).length * 2} tokens)`);
 
 // -----------------------------------------------------------------------------
 // adrs.json

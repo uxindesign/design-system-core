@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-23T23:53:54.197Z",
+  "generatedAt": "2026-04-25T15:35:30.078Z",
   "version": "0.5.17",
   "count": 18,
   "components": [
@@ -9,14 +9,10 @@
       "url": "https://uxindesign.github.io/design-system-core/docs/button.html",
       "cssClass": "ds-button",
       "cssFile": "css/components/button.css",
-      "tokenFile": "tokens/component/button.json",
       "tokens": [
         "ds-body-font-family-sans",
         "ds-body-font-weight-medium",
         "ds-border-width-default",
-        "ds-button-height-lg",
-        "ds-button-height-md",
-        "ds-button-height-sm",
         "ds-control-font-size-lg",
         "ds-control-font-size-md",
         "ds-control-font-size-sm",
@@ -49,18 +45,21 @@
         "ds-primary-bg-default",
         "ds-primary-bg-hover",
         "ds-primary-content-default",
-        "ds-radius-component",
+        "ds-radius-md",
         "ds-size-control-icon-lg",
         "ds-size-control-icon-md",
         "ds-size-control-icon-sm",
+        "ds-size-control-lg",
+        "ds-size-control-md",
         "ds-size-control-min-target",
+        "ds-size-control-sm",
         "ds-space-control-padding-x-lg",
         "ds-space-control-padding-x-md",
         "ds-space-control-padding-x-sm",
         "ds-space-control-padding-y-lg",
         "ds-space-control-padding-y-md",
         "ds-space-control-padding-y-sm",
-        "ds-space-gap-sm",
+        "ds-space-sm",
         "ds-toned-bg-active",
         "ds-toned-bg-default",
         "ds-toned-bg-hover",
@@ -80,7 +79,6 @@
         "success",
         "toned"
       ],
-      "hasComponentTokens": true,
       "figma": {
         "fileKey": "PRYS2kL7VdC1MtVWfZvuDN",
         "page": "Button"
@@ -92,7 +90,6 @@
       "url": "https://uxindesign.github.io/design-system-core/docs/input.html",
       "cssClass": "ds-input",
       "cssFile": "css/components/input.css",
-      "tokenFile": "tokens/component/input.json",
       "tokens": [
         "ds-background-disabled",
         "ds-background-subtle",
@@ -117,21 +114,21 @@
         "ds-focus-ring-color",
         "ds-focus-ring-offset",
         "ds-focus-ring-width",
-        "ds-input-height-lg",
-        "ds-input-height-md",
-        "ds-input-height-sm",
         "ds-motion-duration-fast",
         "ds-motion-ease-default",
-        "ds-radius-component",
+        "ds-radius-md",
         "ds-size-control-icon-lg",
         "ds-size-control-icon-md",
         "ds-size-control-icon-sm",
+        "ds-size-control-lg",
+        "ds-size-control-md",
+        "ds-size-control-sm",
+        "ds-space-2xs",
         "ds-space-control-padding-x-lg",
         "ds-space-control-padding-x-md",
         "ds-space-control-padding-x-sm",
-        "ds-space-gap-2xs",
-        "ds-space-gap-sm",
-        "ds-space-gap-xs",
+        "ds-space-sm",
+        "ds-space-xs",
         "ds-surface-default"
       ],
       "variants": [
@@ -144,7 +141,6 @@
         "readonly",
         "sm"
       ],
-      "hasComponentTokens": true,
       "figma": {
         "fileKey": "PRYS2kL7VdC1MtVWfZvuDN",
         "page": "Input Text"
@@ -156,7 +152,6 @@
       "url": "https://uxindesign.github.io/design-system-core/docs/textarea.html",
       "cssClass": "ds-textarea",
       "cssFile": "css/components/textarea.css",
-      "tokenFile": "tokens/component/textarea.json",
       "tokens": [
         "ds-background-disabled",
         "ds-background-subtle",
@@ -182,18 +177,18 @@
         "ds-focus-ring-width",
         "ds-motion-duration-fast",
         "ds-motion-ease-default",
-        "ds-radius-component",
+        "ds-radius-md",
+        "ds-size-textarea-min-height-lg",
+        "ds-size-textarea-min-height-md",
+        "ds-size-textarea-min-height-sm",
         "ds-space-control-padding-x-lg",
         "ds-space-control-padding-x-md",
         "ds-space-control-padding-x-sm",
         "ds-space-control-padding-y-lg",
         "ds-space-control-padding-y-md",
         "ds-space-control-padding-y-sm",
-        "ds-space-gap-xs",
-        "ds-surface-default",
-        "ds-textarea-min-height-lg",
-        "ds-textarea-min-height-md",
-        "ds-textarea-min-height-sm"
+        "ds-space-xs",
+        "ds-surface-default"
       ],
       "variants": [
         "disabled",
@@ -205,7 +200,6 @@
         "readonly",
         "sm"
       ],
-      "hasComponentTokens": true,
       "figma": {
         "fileKey": "PRYS2kL7VdC1MtVWfZvuDN",
         "page": "Textarea"
@@ -217,7 +211,6 @@
       "url": "https://uxindesign.github.io/design-system-core/docs/select.html",
       "cssClass": "ds-select",
       "cssFile": "css/components/select.css",
-      "tokenFile": "tokens/component/select.json",
       "tokens": [
         "ds-background-disabled",
         "ds-background-subtle",
@@ -238,22 +231,20 @@
         "ds-focus-ring-width",
         "ds-motion-duration-fast",
         "ds-motion-ease-default",
-        "ds-radius-component",
-        "ds-select-arrow-offset-lg",
-        "ds-select-arrow-offset-md",
-        "ds-select-arrow-offset-sm",
-        "ds-select-arrow-size",
-        "ds-select-height-lg",
-        "ds-select-height-md",
-        "ds-select-height-sm",
+        "ds-radius-md",
         "ds-size-control-icon-lg",
         "ds-size-control-icon-md",
         "ds-size-control-icon-sm",
+        "ds-size-control-lg",
+        "ds-size-control-md",
+        "ds-size-control-sm",
         "ds-space-control-padding-x-lg",
         "ds-space-control-padding-x-md",
         "ds-space-control-padding-x-sm",
-        "ds-space-gap-sm",
-        "ds-space-gap-xs",
+        "ds-space-lg",
+        "ds-space-md",
+        "ds-space-sm",
+        "ds-space-xs",
         "ds-surface-default"
       ],
       "variants": [
@@ -266,7 +257,6 @@
         "readonly",
         "sm"
       ],
-      "hasComponentTokens": true,
       "figma": {
         "fileKey": "PRYS2kL7VdC1MtVWfZvuDN",
         "page": "Select"
@@ -278,7 +268,6 @@
       "url": "https://uxindesign.github.io/design-system-core/docs/checkbox.html",
       "cssClass": "ds-checkbox",
       "cssFile": "css/components/checkbox.css",
-      "tokenFile": "tokens/component/checkbox.json",
       "tokens": [
         "ds-background-disabled",
         "ds-body-font-size-sm",
@@ -290,9 +279,6 @@
         "ds-border-control-default",
         "ds-border-control-disabled",
         "ds-border-width-default",
-        "ds-checkbox-control-size-lg",
-        "ds-checkbox-control-size-md",
-        "ds-checkbox-control-size-sm",
         "ds-content-default",
         "ds-content-secondary",
         "ds-feedback-error-bg-default",
@@ -308,9 +294,12 @@
         "ds-primary-bg-default",
         "ds-primary-content-default",
         "ds-radius-sm",
+        "ds-size-control-icon-lg",
+        "ds-size-control-icon-md",
+        "ds-size-control-icon-sm",
         "ds-size-control-min-target",
-        "ds-space-gap-sm",
-        "ds-space-gap-xs",
+        "ds-space-sm",
+        "ds-space-xs",
         "ds-surface-default"
       ],
       "variants": [
@@ -318,7 +307,6 @@
         "lg",
         "sm"
       ],
-      "hasComponentTokens": true,
       "figma": {
         "fileKey": "PRYS2kL7VdC1MtVWfZvuDN",
         "page": "Checkbox"
@@ -330,7 +318,6 @@
       "url": "https://uxindesign.github.io/design-system-core/docs/radio.html",
       "cssClass": "ds-radio",
       "cssFile": "css/components/radio.css",
-      "tokenFile": "tokens/component/radio.json",
       "tokens": [
         "ds-background-disabled",
         "ds-body-font-size-sm",
@@ -355,18 +342,15 @@
         "ds-overlay-subtle",
         "ds-primary-bg-default",
         "ds-primary-content-default",
-        "ds-radio-control-size-lg",
-        "ds-radio-control-size-md",
-        "ds-radio-control-size-sm",
-        "ds-radio-dot-size-lg",
-        "ds-radio-dot-size-md",
-        "ds-radio-dot-size-sm",
         "ds-radius-full",
         "ds-radius-sm",
+        "ds-size-control-icon-lg",
+        "ds-size-control-icon-md",
+        "ds-size-control-icon-sm",
         "ds-size-control-min-target",
-        "ds-space-component-md",
-        "ds-space-gap-sm",
-        "ds-space-gap-xs",
+        "ds-space-md",
+        "ds-space-sm",
+        "ds-space-xs",
         "ds-surface-default"
       ],
       "variants": [
@@ -374,7 +358,6 @@
         "lg",
         "sm"
       ],
-      "hasComponentTokens": true,
       "figma": {
         "fileKey": "PRYS2kL7VdC1MtVWfZvuDN",
         "page": "Radio"
@@ -386,7 +369,6 @@
       "url": "https://uxindesign.github.io/design-system-core/docs/toggle.html",
       "cssClass": "ds-toggle",
       "cssFile": "css/components/toggle.css",
-      "tokenFile": "tokens/component/toggle.json",
       "tokens": [
         "ds-background-disabled",
         "ds-body-font-size-sm",
@@ -412,25 +394,21 @@
         "ds-primary-content-default",
         "ds-radius-full",
         "ds-radius-sm",
+        "ds-size-control-icon-lg",
+        "ds-size-control-icon-md",
+        "ds-size-control-icon-sm",
         "ds-size-control-min-target",
-        "ds-space-gap-sm",
-        "ds-space-gap-xs",
-        "ds-surface-default",
-        "ds-toggle-thumb-size-lg",
-        "ds-toggle-thumb-size-md",
-        "ds-toggle-thumb-size-sm",
-        "ds-toggle-track-height-lg",
-        "ds-toggle-track-height-md",
-        "ds-toggle-track-height-sm",
-        "ds-toggle-track-width-lg",
-        "ds-toggle-track-width-md",
-        "ds-toggle-track-width-sm"
+        "ds-size-toggle-track-width-lg",
+        "ds-size-toggle-track-width-md",
+        "ds-size-toggle-track-width-sm",
+        "ds-space-sm",
+        "ds-space-xs",
+        "ds-surface-default"
       ],
       "variants": [
         "lg",
         "sm"
       ],
-      "hasComponentTokens": true,
       "figma": {
         "fileKey": "PRYS2kL7VdC1MtVWfZvuDN",
         "page": "Toggle"
@@ -442,7 +420,6 @@
       "url": "https://uxindesign.github.io/design-system-core/docs/badge.html",
       "cssClass": "ds-badge",
       "cssFile": "css/components/badge.css",
-      "tokenFile": null,
       "tokens": [
         "ds-background-disabled",
         "ds-body-font-size-xs",
@@ -473,8 +450,8 @@
         "ds-primary-bg-default",
         "ds-primary-content-default",
         "ds-radius-sm",
-        "ds-space-inset-2xs",
-        "ds-space-inset-sm",
+        "ds-space-2xs",
+        "ds-space-sm",
         "ds-toned-bg-default",
         "ds-toned-content-default"
       ],
@@ -489,7 +466,6 @@
         "success",
         "warning"
       ],
-      "hasComponentTokens": false,
       "figma": {
         "fileKey": "PRYS2kL7VdC1MtVWfZvuDN",
         "page": "Badge"
@@ -501,7 +477,6 @@
       "url": "https://uxindesign.github.io/design-system-core/docs/alert.html",
       "cssClass": "ds-alert",
       "cssFile": "css/components/alert.css",
-      "tokenFile": null,
       "tokens": [
         "ds-body-font-size-sm",
         "ds-body-font-size-xs",
@@ -534,9 +509,9 @@
         "ds-radius-md",
         "ds-radius-sm",
         "ds-size-control-icon-md",
-        "ds-space-gap-sm",
-        "ds-space-gap-xs",
-        "ds-space-inset-md"
+        "ds-space-md",
+        "ds-space-sm",
+        "ds-space-xs"
       ],
       "variants": [
         "error",
@@ -546,7 +521,6 @@
         "success",
         "warning"
       ],
-      "hasComponentTokens": false,
       "figma": {
         "fileKey": "PRYS2kL7VdC1MtVWfZvuDN",
         "page": "Alert"
@@ -558,7 +532,6 @@
       "url": "https://uxindesign.github.io/design-system-core/docs/card.html",
       "cssClass": "ds-card",
       "cssFile": "css/components/card.css",
-      "tokenFile": null,
       "tokens": [
         "ds-body-font-size-lg",
         "ds-body-font-size-sm",
@@ -571,8 +544,8 @@
         "ds-content-default",
         "ds-content-secondary",
         "ds-radius-lg",
-        "ds-space-gap-sm",
-        "ds-space-inset-lg",
+        "ds-space-lg",
+        "ds-space-sm",
         "ds-surface-default"
       ],
       "variants": [
@@ -580,7 +553,6 @@
         "elevated",
         "outlined"
       ],
-      "hasComponentTokens": false,
       "figma": {
         "fileKey": "PRYS2kL7VdC1MtVWfZvuDN",
         "page": "Card"
@@ -592,7 +564,6 @@
       "url": "https://uxindesign.github.io/design-system-core/docs/modal.html",
       "cssClass": "ds-modal",
       "cssFile": "css/components/modal.css",
-      "tokenFile": "tokens/component/modal.json",
       "tokens": [
         "ds-background-overlay",
         "ds-body-font-size-lg",
@@ -608,18 +579,18 @@
         "ds-focus-ring-color",
         "ds-focus-ring-offset",
         "ds-focus-ring-width",
-        "ds-modal-max-width-lg",
-        "ds-modal-max-width-md",
-        "ds-modal-max-width-sm",
         "ds-motion-duration-fast",
         "ds-motion-ease-default",
         "ds-overlay-subtle",
         "ds-radius-sm",
         "ds-radius-xl",
-        "ds-space-gap-sm",
-        "ds-space-inset-lg",
-        "ds-space-inset-xs",
+        "ds-size-modal-max-width-lg",
+        "ds-size-modal-max-width-md",
+        "ds-size-modal-max-width-sm",
+        "ds-space-lg",
         "ds-space-section-sm",
+        "ds-space-sm",
+        "ds-space-xs",
         "ds-surface-elevated"
       ],
       "variants": [
@@ -627,7 +598,6 @@
         "md",
         "sm"
       ],
-      "hasComponentTokens": true,
       "figma": {
         "fileKey": "PRYS2kL7VdC1MtVWfZvuDN",
         "page": "Modal"
@@ -639,7 +609,6 @@
       "url": "https://uxindesign.github.io/design-system-core/docs/tooltip.html",
       "cssClass": "ds-tooltip",
       "cssFile": "css/components/tooltip.css",
-      "tokenFile": null,
       "tokens": [
         "ds-background-inverse",
         "ds-body-font-size-xs",
@@ -648,8 +617,8 @@
         "ds-motion-duration-fast",
         "ds-motion-ease-default",
         "ds-radius-sm",
-        "ds-space-inset-sm",
-        "ds-space-inset-xs"
+        "ds-space-sm",
+        "ds-space-xs"
       ],
       "variants": [
         "bottom",
@@ -657,7 +626,6 @@
         "right",
         "top"
       ],
-      "hasComponentTokens": false,
       "figma": {
         "fileKey": "PRYS2kL7VdC1MtVWfZvuDN",
         "page": "Tooltip"
@@ -669,7 +637,6 @@
       "url": "https://uxindesign.github.io/design-system-core/docs/tabs.html",
       "cssClass": "ds-tabs",
       "cssFile": "css/components/tabs.css",
-      "tokenFile": null,
       "tokens": [
         "ds-body-font-size-sm",
         "ds-body-font-weight-medium",
@@ -688,12 +655,11 @@
         "ds-radius-sm",
         "ds-space-control-padding-x-md",
         "ds-space-control-padding-y-md",
-        "ds-space-inset-lg"
+        "ds-space-lg"
       ],
       "variants": [
         "active"
       ],
-      "hasComponentTokens": false,
       "figma": {
         "fileKey": "PRYS2kL7VdC1MtVWfZvuDN",
         "page": "Tabs"
@@ -705,7 +671,6 @@
       "url": "https://uxindesign.github.io/design-system-core/docs/breadcrumb.html",
       "cssClass": "ds-breadcrumb",
       "cssFile": "css/components/breadcrumb.css",
-      "tokenFile": null,
       "tokens": [
         "ds-body-font-size-sm",
         "ds-body-font-weight-medium",
@@ -716,10 +681,9 @@
         "ds-focus-ring-width",
         "ds-link-content-default",
         "ds-radius-sm",
-        "ds-space-gap-sm"
+        "ds-space-sm"
       ],
       "variants": [],
-      "hasComponentTokens": false,
       "figma": {
         "fileKey": "PRYS2kL7VdC1MtVWfZvuDN",
         "page": "Breadcrumb"
@@ -731,29 +695,27 @@
       "url": "https://uxindesign.github.io/design-system-core/docs/avatar.html",
       "cssClass": "ds-avatar",
       "cssFile": "css/components/avatar.css",
-      "tokenFile": "tokens/component/avatar.json",
       "tokens": [
-        "ds-avatar-font-size-lg",
-        "ds-avatar-font-size-md",
-        "ds-avatar-font-size-sm",
-        "ds-avatar-icon-size-lg",
-        "ds-avatar-icon-size-md",
-        "ds-avatar-icon-size-sm",
-        "ds-avatar-size-lg",
-        "ds-avatar-size-md",
-        "ds-avatar-size-sm",
         "ds-body-font-family-sans",
+        "ds-body-font-size-lg",
+        "ds-body-font-size-sm",
+        "ds-body-font-size-xs",
         "ds-body-font-weight-semibold",
         "ds-primary-bg-default",
         "ds-primary-content-default",
-        "ds-radius-full"
+        "ds-radius-full",
+        "ds-size-avatar-icon-lg",
+        "ds-size-avatar-icon-md",
+        "ds-size-avatar-icon-sm",
+        "ds-size-avatar-lg",
+        "ds-size-avatar-md",
+        "ds-size-avatar-sm"
       ],
       "variants": [
         "icon",
         "lg",
         "sm"
       ],
-      "hasComponentTokens": true,
       "figma": {
         "fileKey": "PRYS2kL7VdC1MtVWfZvuDN",
         "page": "Avatar"
@@ -765,16 +727,14 @@
       "url": "https://uxindesign.github.io/design-system-core/docs/divider.html",
       "cssClass": "ds-divider",
       "cssFile": "css/components/divider.css",
-      "tokenFile": null,
       "tokens": [
         "ds-border-default",
         "ds-border-width-default",
-        "ds-space-component-md"
+        "ds-space-md"
       ],
       "variants": [
         "vertical"
       ],
-      "hasComponentTokens": false,
       "figma": {
         "fileKey": "PRYS2kL7VdC1MtVWfZvuDN",
         "page": "Divider"
@@ -786,23 +746,18 @@
       "url": "https://uxindesign.github.io/design-system-core/docs/spinner.html",
       "cssClass": "ds-spinner",
       "cssFile": "css/components/spinner.css",
-      "tokenFile": "tokens/component/spinner.json",
       "tokens": [
         "ds-border-default",
         "ds-primary-bg-default",
         "ds-radius-full",
-        "ds-spinner-size-lg",
-        "ds-spinner-size-md",
-        "ds-spinner-size-sm",
-        "ds-spinner-stroke-width-lg",
-        "ds-spinner-stroke-width-md",
-        "ds-spinner-stroke-width-sm"
+        "ds-size-control-icon-sm",
+        "ds-size-spinner-lg",
+        "ds-size-spinner-md"
       ],
       "variants": [
         "lg",
         "sm"
       ],
-      "hasComponentTokens": true,
       "figma": {
         "fileKey": "PRYS2kL7VdC1MtVWfZvuDN",
         "page": "Spinner"
@@ -814,22 +769,20 @@
       "url": "https://uxindesign.github.io/design-system-core/docs/skeleton.html",
       "cssClass": "ds-skeleton",
       "cssFile": "css/components/skeleton.css",
-      "tokenFile": "tokens/component/skeleton.json",
       "tokens": [
         "ds-background-disabled",
         "ds-radius-full",
         "ds-radius-md",
         "ds-radius-sm",
-        "ds-skeleton-circle-size",
-        "ds-skeleton-rect-height",
-        "ds-skeleton-text-height"
+        "ds-size-control-icon-sm",
+        "ds-size-control-md",
+        "ds-size-skeleton-rect-height"
       ],
       "variants": [
         "circle",
         "rectangle",
         "text"
       ],
-      "hasComponentTokens": true,
       "figma": {
         "fileKey": "PRYS2kL7VdC1MtVWfZvuDN",
         "page": "Skeleton"

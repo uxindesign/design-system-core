@@ -175,12 +175,12 @@ for (const adr of adrs) {
 
 // Resumo de tokens
 const tokensMd = `
-Total por camada (ver docs/api/tokens.json para valores completos):
+Total por camada (ver docs/api/tokens.json para valores completos).
+Arquitetura **2-layer** desde 0.7.0 — Component collection eliminada.
 
 - Foundation: ver \`tokens/foundation/\`
 - Semantic (light): ver \`tokens/semantic/light.json\`
 - Semantic (dark): ver \`tokens/semantic/dark.json\`
-- Component: ver \`tokens/component/\`
 
 Formato canônico: DTCG (Design Token Community Group).
 Transformação: \`build-tokens.mjs\` usa Style Dictionary pra gerar \`css/tokens/generated/*.css\`.

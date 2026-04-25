@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-23T23:53:54.197Z",
+  "generatedAt": "2026-04-25T15:35:30.078Z",
   "version": "0.5.17",
   "count": 11,
   "foundations": [
@@ -31,7 +31,7 @@
       "slug": "spacing",
       "name": "Spacing",
       "sourceFile": "tokens/foundation/spacing.json",
-      "tokenCount": 21,
+      "tokenCount": 20,
       "url": "https://uxindesign.github.io/design-system-core/docs/foundations-spacing.html",
       "note": null
     },
@@ -39,7 +39,7 @@
       "slug": "radius",
       "name": "Radius",
       "sourceFile": "tokens/foundation/radius.json",
-      "tokenCount": 8,
+      "tokenCount": 7,
       "url": "https://uxindesign.github.io/design-system-core/docs/foundations-radius.html",
       "note": null
     },
@@ -55,7 +55,7 @@
       "slug": "borders",
       "name": "Borders",
       "sourceFile": "tokens/foundation/stroke.json",
-      "tokenCount": 4,
+      "tokenCount": 3,
       "url": "https://uxindesign.github.io/design-system-core/docs/foundations-borders.html",
       "note": null
     },
@@ -71,7 +71,7 @@
       "slug": "opacity",
       "name": "Opacity",
       "sourceFile": "tokens/foundation/opacity.json",
-      "tokenCount": 7,
+      "tokenCount": 6,
       "url": "https://uxindesign.github.io/design-system-core/docs/foundations-opacity.html",
       "note": null
     },
