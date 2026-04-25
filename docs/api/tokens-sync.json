@@ -1,17 +1,26 @@
 {
-  "generatedAt": "2026-04-25T17:47:27.071Z",
+  "generatedAt": "2026-04-25T17:55:39.728Z",
   "totals": {
     "jsonTokens": 578,
     "sharedTokens": 236,
     "lightTokens": 171,
     "darkTokens": 171,
-    "errors": 0,
+    "errors": 1,
     "warnings": 118
   },
   "checks": {
     "jsonIntegrity": [],
     "jsonVsCss": [],
     "cssFoundationLeak": [
+      {
+        "level": "error",
+        "scope": "components",
+        "file": "css/components/card.css",
+        "line": 56,
+        "column": 15,
+        "match": "var(--ds-shadow-sm)",
+        "message": "Foundation token consumido direto: var(--ds-shadow-sm). Use Semantic/Component layer (ADR-013)."
+      },
       {
         "level": "warning",
         "scope": "base",
