@@ -14,9 +14,9 @@
     .ds-token-table code { font-size: var(--ds-font-size-12); font-family: var(--ds-font-family-mono); }
     /* Callouts */
     .ds-callout { padding: var(--ds-spacing-16) var(--ds-spacing-20); border-radius: var(--ds-radius-12); margin-bottom: var(--ds-spacing-24); font-size: var(--ds-font-size-14); line-height: var(--ds-line-height-relaxed); color: var(--ds-content-default); }
-    .ds-callout--info { background-color: var(--ds-feedback-info-bg-default); border: var(--ds-border-width-1) solid var(--ds-feedback-info-border-default); }
-    .ds-callout--success { background-color: var(--ds-feedback-success-bg-default); border: var(--ds-border-width-1) solid var(--ds-feedback-success-border-default); }
-    .ds-callout--warning { background-color: var(--ds-feedback-warning-bg-default); border: var(--ds-border-width-1) solid var(--ds-feedback-warning-border-default); }
+    .ds-callout--info { background-color: var(--ds-feedback-info-bg-default); border: var(--ds-border-width-1) solid var(--ds-feedback-info-border-default-default); }
+    .ds-callout--success { background-color: var(--ds-feedback-success-bg-default); border: var(--ds-border-width-1) solid var(--ds-feedback-success-border-default-default); }
+    .ds-callout--warning { background-color: var(--ds-feedback-warning-bg-default); border: var(--ds-border-width-1) solid var(--ds-feedback-warning-border-default-default); }
     .ds-callout__title { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-4); }
     /* Do/Don't */
     .ds-dodont { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ds-spacing-16); margin-bottom: var(--ds-spacing-32); }
@@ -246,11 +246,11 @@
     <table class="ds-token-table">
       <thead><tr><th><span data-lang="pt">Estado</span><span data-lang="en">State</span></th><th>CSS trigger</th><th><span data-lang="pt">Mudança visual</span><span data-lang="en">Visual change</span></th><th>Token</th></tr></thead>
       <tbody>
-        <tr><td>Default</td><td>—</td><td><span data-lang="pt">Preenchimento primário</span><span data-lang="en">Primary fill</span></td><td><code>semantic.brand.default</code></td></tr>
-        <tr><td>Hover</td><td><code>:hover</code></td><td><span data-lang="pt">Preenchimento mais escuro</span><span data-lang="en">Darker fill</span></td><td><code>semantic.brand.hover</code></td></tr>
-        <tr><td>Pressed</td><td><code>:active</code></td><td><span data-lang="pt">Preenchimento mais escuro ainda</span><span data-lang="en">Darkest fill</span></td><td><code>semantic.brand.active</code></td></tr>
+        <tr><td>Default</td><td>—</td><td><span data-lang="pt">Preenchimento primário</span><span data-lang="en">Primary fill</span></td><td><code>semantic.primary.bg-default</code></td></tr>
+        <tr><td>Hover</td><td><code>:hover</code></td><td><span data-lang="pt">Preenchimento mais escuro</span><span data-lang="en">Darker fill</span></td><td><code>semantic.primary.bg-hover</code></td></tr>
+        <tr><td>Pressed</td><td><code>:active</code></td><td><span data-lang="pt">Preenchimento mais escuro ainda</span><span data-lang="en">Darkest fill</span></td><td><code>semantic.primary.bg-active</code></td></tr>
         <tr><td>Focused</td><td><code>:focus-visible</code></td><td><span data-lang="pt">Anel de 2px, offset de 2px</span><span data-lang="en">2px outline ring, 2px offset</span></td><td><code>semantic.focus.ring.*</code></td></tr>
-        <tr><td>Disabled</td><td><code>[disabled]</code></td><td><span data-lang="pt">Bg + fg atenuados, sem pointer events</span><span data-lang="en">Muted bg + fg, no pointer events</span></td><td><code>semantic.state.disabled.*</code></td></tr>
+        <tr><td>Disabled</td><td><code>[disabled]</code></td><td><span data-lang="pt">Bg + fg atenuados, sem pointer events</span><span data-lang="en">Muted bg + fg, no pointer events</span></td><td><code>semantic.background.disabled</code></td></tr>
       </tbody>
     </table>
   </div>
@@ -421,11 +421,11 @@
     <table class="ds-token-table">
       <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token (semantic)</th><th><span data-lang="pt">Variável CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
       <tbody>
-        <tr><td>background (default)</td><td><code>semantic.brand.default</code></td><td><code>--ds-brand-default</code></td></tr>
-        <tr><td>background (hover)</td><td><code>semantic.brand.hover</code></td><td><code>--ds-brand-hover</code></td></tr>
-        <tr><td>background (active)</td><td><code>semantic.brand.active</code></td><td><code>--ds-brand-active</code></td></tr>
-        <tr><td>background (disabled)</td><td><code>semantic.state.disabled.background</code></td><td><code>--ds-state-disabled-background</code></td></tr>
-        <tr><td>text/icon color</td><td><code>semantic.brand.content.contrast</code></td><td><code>--ds-brand-content-contrast</code></td></tr>
+        <tr><td>background (default)</td><td><code>semantic.primary.bg-default</code></td><td><code>--ds-primary-bg-default</code></td></tr>
+        <tr><td>background (hover)</td><td><code>semantic.primary.bg-hover</code></td><td><code>--ds-primary-bg-hover</code></td></tr>
+        <tr><td>background (active)</td><td><code>semantic.primary.bg-active</code></td><td><code>--ds-primary-bg-active</code></td></tr>
+        <tr><td>background (disabled)</td><td><code>semantic.background.disabled</code></td><td><code>--ds-background-disabled</code></td></tr>
+        <tr><td>text/icon color</td><td><code>semantic.primary.content-default</code></td><td><code>--ds-primary-content-default</code></td></tr>
         <tr><td>text (disabled)</td><td><code>semantic.content.disabled</code></td><td><code>--ds-content-disabled</code></td></tr>
         <tr><td>border-radius</td><td><code>semantic.radius.component</code></td><td><code>--ds-radius-md</code></td></tr>
         <tr><td>focus ring</td><td><code>semantic.focus.ring.*</code></td><td><code>--ds-focus-ring-width</code>, <code>--ds-focus-ring-offset</code>, <code>--ds-focus-ring-color</code></td></tr>
@@ -450,7 +450,7 @@
 
     <h3 style="margin-top:var(--ds-spacing-24);margin-bottom:var(--ds-spacing-12);font-size:var(--ds-font-size-16);color:var(--ds-content-default)"><span data-lang="pt">Variante Toned</span><span data-lang="en">Toned variant</span></h3>
     <div class="ds-callout ds-callout--info">
-      <span data-lang="pt">A variante <strong>Toned</strong> usa backgrounds de overlay translúcidos (<code>--ds-brand-toned-default</code>, <code>--ds-brand-toned-hover</code>, <code>--ds-brand-toned-active</code>) em vez de preenchimentos opacos. Isso difere dos padrões Subtle/Muted que usam tokens de background opacos. A abordagem translúcida permite que o button Toned se adapte naturalmente a qualquer cor de superfície abaixo dele, mantendo um tint de marca consistente.</span><span data-lang="en">The <strong>Toned</strong> variant uses translucent overlay backgrounds (<code>--ds-brand-toned-default</code>, <code>--ds-brand-toned-hover</code>, <code>--ds-brand-toned-active</code>) instead of opaque fills. This differs from Subtle/Muted patterns which use opaque background tokens. The translucent approach lets the Toned button adapt naturally to any surface color beneath it while maintaining a consistent brand tint.</span>
+      <span data-lang="pt">A variante <strong>Toned</strong> usa backgrounds de overlay translúcidos (<code>--ds-toned-bg-default</code>, <code>--ds-toned-bg-hover</code>, <code>--ds-toned-bg-active</code>) em vez de preenchimentos opacos. Isso difere dos padrões Subtle/Muted que usam tokens de background opacos. A abordagem translúcida permite que o button Toned se adapte naturalmente a qualquer cor de superfície abaixo dele, mantendo um tint de marca consistente.</span><span data-lang="en">The <strong>Toned</strong> variant uses translucent overlay backgrounds (<code>--ds-toned-bg-default</code>, <code>--ds-toned-bg-hover</code>, <code>--ds-toned-bg-active</code>) instead of opaque fills. This differs from Subtle/Muted patterns which use opaque background tokens. The translucent approach lets the Toned button adapt naturally to any surface color beneath it while maintaining a consistent brand tint.</span>
     </div>
   </div>
 

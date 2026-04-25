@@ -14,9 +14,9 @@
     .ds-token-table code { font-size: var(--ds-font-size-12); font-family: var(--ds-font-family-mono); }
     /* Callouts */
     .ds-callout { padding: var(--ds-spacing-16) var(--ds-spacing-20); border-radius: var(--ds-radius-12); margin-bottom: var(--ds-spacing-24); font-size: var(--ds-font-size-14); line-height: var(--ds-line-height-relaxed); color: var(--ds-content-default); }
-    .ds-callout--info { background-color: var(--ds-feedback-info-bg-default); border: var(--ds-border-width-1) solid var(--ds-feedback-info-border-default); }
-    .ds-callout--success { background-color: var(--ds-feedback-success-bg-default); border: var(--ds-border-width-1) solid var(--ds-feedback-success-border-default); }
-    .ds-callout--warning { background-color: var(--ds-feedback-warning-bg-default); border: var(--ds-border-width-1) solid var(--ds-feedback-warning-border-default); }
+    .ds-callout--info { background-color: var(--ds-feedback-info-bg-default); border: var(--ds-border-width-1) solid var(--ds-feedback-info-border-default-default); }
+    .ds-callout--success { background-color: var(--ds-feedback-success-bg-default); border: var(--ds-border-width-1) solid var(--ds-feedback-success-border-default-default); }
+    .ds-callout--warning { background-color: var(--ds-feedback-warning-bg-default); border: var(--ds-border-width-1) solid var(--ds-feedback-warning-border-default-default); }
     .ds-callout__title { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-4); }
     /* Do/Don't */
     .ds-dodont { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ds-spacing-16); margin-bottom: var(--ds-spacing-32); }
@@ -140,7 +140,7 @@
       <div class="ds-preview__canvas ds-preview__canvas--centered">
         <span class="ds-spinner ds-spinner--md" style="color:var(--ds-primary-bg-default);" role="status" aria-label="Loading"></span>
         <span class="ds-spinner ds-spinner--md" style="color:var(--ds-feedback-error-bg-default);" role="status" aria-label="Loading"></span>
-        <span class="ds-spinner ds-spinner--md" style="color:var(--ds-feedback-success-default, green);" role="status" aria-label="Loading"></span>
+        <span class="ds-spinner ds-spinner--md" style="color:var(--ds-feedback-success-bg-default, green);" role="status" aria-label="Loading"></span>
         <span class="ds-spinner ds-spinner--md" style="color:var(--ds-content-tertiary);" role="status" aria-label="Loading"></span>
       </div>
       <div class="ds-preview__code" style="display:none">
@@ -256,7 +256,7 @@
     <table class="ds-token-table">
       <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token (semantic)</th><th><span data-lang="pt">Variavel CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
       <tbody>
-        <tr><td><span data-lang="pt">cor (arco ativo)</span><span data-lang="en">color (active arc)</span></td><td><code>semantic.brand.default</code></td><td><code>--ds-brand-default</code></td></tr>
+        <tr><td><span data-lang="pt">cor (arco ativo)</span><span data-lang="en">color (active arc)</span></td><td><code>semantic.primary.bg-default</code></td><td><code>--ds-primary-bg-default</code></td></tr>
         <tr><td><span data-lang="pt">cor (trilha)</span><span data-lang="en">color (track)</span></td><td><code>semantic.border.default</code></td><td><code>--ds-border-default</code></td></tr>
         <tr><td><span data-lang="pt">duração da animação</span><span data-lang="en">animation duration</span></td><td><code>foundation.duration.slow</code></td><td><code>--ds-duration-slow</code></td></tr>
       </tbody>

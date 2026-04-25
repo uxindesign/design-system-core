@@ -251,37 +251,37 @@
             <button class="ds-preview__copy" aria-label="Copy code">Copy</button>
             <pre><code>/* Custom "Sunset" theme */
 [data-theme="sunset"] {
-  --ds-brand-default:        #EA580C; /* Orange 600 */
-  --ds-brand-hover:  #C2410C; /* Orange 700 */
-  --ds-brand-active: #9A3412; /* Orange 800 */
-  --ds-brand-subtle: #FED7AA; /* Orange 200 */
-  --ds-state-hover:  #FFF7ED; /* Orange 50  */
-  --ds-brand-content-default:   #C2410C; /* Orange 700 */
+  --ds-primary-bg-default:        #EA580C; /* Orange 600 */
+  --ds-primary-bg-hover:  #C2410C; /* Orange 700 */
+  --ds-primary-bg-active: #9A3412; /* Orange 800 */
+  --ds-toned-bg-default: #FED7AA; /* Orange 200 */
+  --ds-overlay-subtle:  #FFF7ED; /* Orange 50  */
+  --ds-toned-content-default:   #C2410C; /* Orange 700 */
 
-  --ds-accent-default:        #DB2777; /* Pink 600 */
-  --ds-accent-hover:  #BE185D; /* Pink 700 */
-  --ds-accent-active: #9D174D; /* Pink 800 */
-  --ds-accent-subtle: #FBCFE8; /* Pink 200 */
-  --ds-accent-subtle:  #FDF2F8; /* Pink 50  */
-  --ds-accent-content-default:   #BE185D; /* Pink 700 */
+  --ds-primary-bg-default:        #DB2777; /* Pink 600 */
+  --ds-primary-bg-hover:  #BE185D; /* Pink 700 */
+  --ds-primary-bg-active: #9D174D; /* Pink 800 */
+  --ds-toned-bg-default: #FBCFE8; /* Pink 200 */
+  --ds-toned-bg-default:  #FDF2F8; /* Pink 50  */
+  --ds-toned-content-default:   #BE185D; /* Pink 700 */
 
-  --ds-content-link-default:       #EA580C;
-  --ds-content-link-hover: #C2410C;
+  --ds-link-content-default:       #EA580C;
+  --ds-link-content-hover: #C2410C;
   --ds-focus-ring: 0 0 0 2px var(--ds-surface-default),
                    0 0 0 4px #EA580C;
 }
 
 /* Optional: dark-mode adjustments for your theme */
 [data-theme="sunset"][data-mode="dark"] {
-  --ds-brand-default:        #FB923C; /* Orange 400 */
-  --ds-brand-hover:  #FDBA74; /* Orange 300 */
-  --ds-brand-active: #FED7AA; /* Orange 200 */
-  --ds-brand-subtle: #7C2D12; /* Orange 900 */
-  --ds-state-hover:  #7C2D12;
-  --ds-brand-content-default:   #FB923C;
+  --ds-primary-bg-default:        #FB923C; /* Orange 400 */
+  --ds-primary-bg-hover:  #FDBA74; /* Orange 300 */
+  --ds-primary-bg-active: #FED7AA; /* Orange 200 */
+  --ds-toned-bg-default: #7C2D12; /* Orange 900 */
+  --ds-overlay-subtle:  #7C2D12;
+  --ds-toned-content-default:   #FB923C;
 
-  --ds-content-link-default:       #FB923C;
-  --ds-content-link-hover: #FDBA74;
+  --ds-link-content-default:       #FB923C;
+  --ds-link-content-hover: #FDBA74;
   --ds-focus-ring: 0 0 0 2px var(--ds-surface-default),
                    0 0 0 4px #FB923C;
 }</code></pre>
@@ -289,7 +289,7 @@
         </div>
       </div>
       <p style="color:var(--ds-content-secondary);margin-top:var(--ds-spacing-16);font-size:var(--ds-font-size-14);line-height:var(--ds-line-height-relaxed);">
-        <span data-lang="pt">Depois aplique com <code style="font-family:var(--ds-font-family-mono);">&lt;html data-theme="sunset"&gt;</code>. Todo componente que usa <code style="font-family:var(--ds-font-family-mono);">--ds-brand-default</code> adotará sua nova paleta automaticamente.</span><span data-lang="en">Then apply it with <code style="font-family:var(--ds-font-family-mono);">&lt;html data-theme="sunset"&gt;</code>. Every component that uses <code style="font-family:var(--ds-font-family-mono);">--ds-brand-default</code> will pick up your new palette automatically.</span>
+        <span data-lang="pt">Depois aplique com <code style="font-family:var(--ds-font-family-mono);">&lt;html data-theme="sunset"&gt;</code>. Todo componente que usa <code style="font-family:var(--ds-font-family-mono);">--ds-primary-bg-default</code> adotará sua nova paleta automaticamente.</span><span data-lang="en">Then apply it with <code style="font-family:var(--ds-font-family-mono);">&lt;html data-theme="sunset"&gt;</code>. Every component that uses <code style="font-family:var(--ds-font-family-mono);">--ds-primary-bg-default</code> will pick up your new palette automatically.</span>
       </p>
     </div>
   </div>
