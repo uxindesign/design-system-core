@@ -2,22 +2,6 @@
   "semantic": {
     "primary": {
       "$description": "Ação primária (brand solid). ADR-014.",
-      "bg-default": {
-        "$type": "color",
-        "$value": "{foundation.color.brand.400}"
-      },
-      "bg-hover": {
-        "$type": "color",
-        "$value": "{foundation.color.brand.500}"
-      },
-      "bg-active": {
-        "$type": "color",
-        "$value": "{foundation.color.brand.400}"
-      },
-      "bg-disabled": {
-        "$type": "color",
-        "$value": "{foundation.color.disabled.brand-light}"
-      },
       "content-default": {
         "$type": "color",
         "$value": "{foundation.color.neutral.900}"
@@ -25,22 +9,28 @@
       "content-disabled": {
         "$type": "color",
         "$value": "{foundation.color.overlay.white.80}"
+      },
+      "background": {
+        "default": {
+          "$type": "color",
+          "$value": "{foundation.color.brand.400}"
+        },
+        "hover": {
+          "$type": "color",
+          "$value": "{foundation.color.brand.500}"
+        },
+        "active": {
+          "$type": "color",
+          "$value": "{foundation.color.brand.400}"
+        },
+        "disabled": {
+          "$type": "color",
+          "$value": "{foundation.color.disabled.brand-light}"
+        }
       }
     },
     "toned": {
       "$description": "Ação brand translúcida. ADR-014.",
-      "bg-default": {
-        "$type": "color",
-        "$value": "{foundation.color.overlay.blue-600.12}"
-      },
-      "bg-hover": {
-        "$type": "color",
-        "$value": "{foundation.color.overlay.blue-600.20}"
-      },
-      "bg-active": {
-        "$type": "color",
-        "$value": "{foundation.color.overlay.blue-600.28}"
-      },
       "content-default": {
         "$type": "color",
         "$value": "{foundation.color.brand.400}"
@@ -48,18 +38,24 @@
       "content-disabled": {
         "$type": "color",
         "$value": "{foundation.color.neutral.600}"
+      },
+      "background": {
+        "default": {
+          "$type": "color",
+          "$value": "{foundation.color.overlay.blue-600.12}"
+        },
+        "hover": {
+          "$type": "color",
+          "$value": "{foundation.color.overlay.blue-600.20}"
+        },
+        "active": {
+          "$type": "color",
+          "$value": "{foundation.color.overlay.blue-600.28}"
+        }
       }
     },
     "outline": {
       "$description": "Ação com borda neutra. ADR-014.",
-      "bg-hover": {
-        "$type": "color",
-        "$value": "{foundation.color.overlay.black.5}"
-      },
-      "bg-active": {
-        "$type": "color",
-        "$value": "{foundation.color.overlay.black.10}"
-      },
       "content-default": {
         "$type": "color",
         "$value": "{foundation.color.neutral.50}"
@@ -79,18 +75,20 @@
       "border-disabled": {
         "$type": "color",
         "$value": "{foundation.color.neutral.800}"
+      },
+      "background": {
+        "hover": {
+          "$type": "color",
+          "$value": "{foundation.color.overlay.black.5}"
+        },
+        "active": {
+          "$type": "color",
+          "$value": "{foundation.color.overlay.black.10}"
+        }
       }
     },
     "ghost": {
       "$description": "Ação apenas texto (neutral). ADR-014.",
-      "bg-hover": {
-        "$type": "color",
-        "$value": "{foundation.color.overlay.black.5}"
-      },
-      "bg-active": {
-        "$type": "color",
-        "$value": "{foundation.color.overlay.black.10}"
-      },
       "content-default": {
         "$type": "color",
         "$value": "{foundation.color.neutral.50}"
@@ -98,6 +96,16 @@
       "content-disabled": {
         "$type": "color",
         "$value": "{foundation.color.neutral.600}"
+      },
+      "background": {
+        "hover": {
+          "$type": "color",
+          "$value": "{foundation.color.overlay.black.5}"
+        },
+        "active": {
+          "$type": "color",
+          "$value": "{foundation.color.overlay.black.10}"
+        }
       }
     },
     "link": {
@@ -115,33 +123,9 @@
     },
     "feedback": {
       "success": {
-        "bg-default": {
-          "$type": "color",
-          "$value": "{foundation.color.green.400}"
-        },
-        "bg-hover": {
-          "$type": "color",
-          "$value": "{foundation.color.green.500}"
-        },
-        "bg-active": {
-          "$type": "color",
-          "$value": "{foundation.color.green.500}"
-        },
-        "bg-subtle": {
-          "$type": "color",
-          "$value": "{foundation.color.green.700}"
-        },
-        "bg-background": {
-          "$type": "color",
-          "$value": "{foundation.color.green.900}"
-        },
         "border-default": {
           "$type": "color",
           "$value": "{foundation.color.green.400}"
-        },
-        "bg-disabled": {
-          "$type": "color",
-          "$value": "{foundation.color.disabled.success-dark}"
         },
         "content-default": {
           "$type": "color",
@@ -155,25 +139,31 @@
         "content-contrast-disabled": {
           "$type": "color",
           "$value": "{foundation.color.overlay.white.60}"
+        },
+        "background": {
+          "default": {
+            "$type": "color",
+            "$value": "{foundation.color.green.400}"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "{foundation.color.green.500}"
+          },
+          "active": {
+            "$type": "color",
+            "$value": "{foundation.color.green.500}"
+          },
+          "subtle": {
+            "$type": "color",
+            "$value": "{foundation.color.green.700}"
+          },
+          "disabled": {
+            "$type": "color",
+            "$value": "{foundation.color.disabled.success-dark}"
+          }
         }
       },
       "warning": {
-        "bg-default": {
-          "$type": "color",
-          "$value": "{foundation.color.amber.400}"
-        },
-        "bg-hover": {
-          "$type": "color",
-          "$value": "{foundation.color.amber.500}"
-        },
-        "bg-subtle": {
-          "$type": "color",
-          "$value": "{foundation.color.amber.700}"
-        },
-        "bg-background": {
-          "$type": "color",
-          "$value": "{foundation.color.amber.900}"
-        },
         "border-default": {
           "$type": "color",
           "$value": "{foundation.color.amber.400}"
@@ -185,36 +175,26 @@
         "content-contrast": {
           "$type": "color",
           "$value": "{foundation.color.neutral.900}"
+        },
+        "background": {
+          "default": {
+            "$type": "color",
+            "$value": "{foundation.color.amber.400}"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "{foundation.color.amber.500}"
+          },
+          "subtle": {
+            "$type": "color",
+            "$value": "{foundation.color.amber.700}"
+          }
         }
       },
       "error": {
-        "bg-default": {
-          "$type": "color",
-          "$value": "{foundation.color.red.400}"
-        },
-        "bg-hover": {
-          "$type": "color",
-          "$value": "{foundation.color.red.500}"
-        },
-        "bg-active": {
-          "$type": "color",
-          "$value": "{foundation.color.red.400}"
-        },
-        "bg-subtle": {
-          "$type": "color",
-          "$value": "{foundation.color.red.700}"
-        },
-        "bg-background": {
-          "$type": "color",
-          "$value": "{foundation.color.red.900}"
-        },
         "border-default": {
           "$type": "color",
           "$value": "{foundation.color.red.400}"
-        },
-        "bg-disabled": {
-          "$type": "color",
-          "$value": "{foundation.color.disabled.error-dark}"
         },
         "content-default": {
           "$type": "color",
@@ -228,25 +208,31 @@
         "content-contrast-disabled": {
           "$type": "color",
           "$value": "{foundation.color.overlay.white.60}"
+        },
+        "background": {
+          "default": {
+            "$type": "color",
+            "$value": "{foundation.color.red.400}"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "{foundation.color.red.500}"
+          },
+          "active": {
+            "$type": "color",
+            "$value": "{foundation.color.red.400}"
+          },
+          "subtle": {
+            "$type": "color",
+            "$value": "{foundation.color.red.700}"
+          },
+          "disabled": {
+            "$type": "color",
+            "$value": "{foundation.color.disabled.error-dark}"
+          }
         }
       },
       "info": {
-        "bg-default": {
-          "$type": "color",
-          "$value": "{foundation.color.sky.400}"
-        },
-        "bg-hover": {
-          "$type": "color",
-          "$value": "{foundation.color.sky.500}"
-        },
-        "bg-subtle": {
-          "$type": "color",
-          "$value": "{foundation.color.sky.700}"
-        },
-        "bg-background": {
-          "$type": "color",
-          "$value": "{foundation.color.sky.900}"
-        },
         "border-default": {
           "$type": "color",
           "$value": "{foundation.color.sky.400}"
@@ -258,6 +244,20 @@
         "content-contrast": {
           "$type": "color",
           "$value": "{foundation.color.neutral.900}"
+        },
+        "background": {
+          "default": {
+            "$type": "color",
+            "$value": "{foundation.color.sky.400}"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "{foundation.color.sky.500}"
+          },
+          "subtle": {
+            "$type": "color",
+            "$value": "{foundation.color.sky.700}"
+          }
         }
       }
     },
@@ -374,7 +374,7 @@
       },
       "error": {
         "$type": "color",
-        "$value": "{semantic.feedback.error.bg-default}"
+        "$value": "{semantic.feedback.error.background.default}"
       },
       "focus-error": {
         "$type": "color",
@@ -710,6 +710,16 @@
         }
       }
     },
+    "shadow": {
+      "card": {
+        "$type": "shadow",
+        "$value": "{foundation.shadow.sm}"
+      },
+      "modal": {
+        "$type": "shadow",
+        "$value": "{foundation.shadow.xl}"
+      }
+    },
     "radius": {
       "sm": {
         "$type": "dimension",
@@ -729,7 +739,7 @@
       },
       "full": {
         "$type": "dimension",
-        "$value": "{foundation.radius.9999}"
+        "$value": "{foundation.radius.999}"
       }
     },
     "typography": {
@@ -813,15 +823,20 @@
           }
         },
         "font-size": {
+          "2xs": {
+            "$type": "dimension",
+            "$value": "{foundation.typography.font.size.11}",
+            "$description": "11px. Caption, micro-text. Use sparingly — abaixo do mínimo recomendado WCAG 1.4.4."
+          },
           "xs": {
             "$type": "dimension",
             "$value": "{foundation.typography.font.size.12}",
-            "$description": "12px."
+            "$description": "12px. Helper text, captions, secondary labels."
           },
           "sm": {
             "$type": "dimension",
             "$value": "{foundation.typography.font.size.14}",
-            "$description": "14px."
+            "$description": "14px. Body padrão, labels, descrições. WCAG 1.4.4 compliant."
           },
           "md": {
             "$type": "dimension",
@@ -851,35 +866,45 @@
         },
         "line-height": {
           "$description": "Ratios unitless. BY_DESIGN por ADR-012 (Figma usa PX absolutos).",
+          "2xs": {
+            "$type": "dimension",
+            "$value": "{foundation.typography.line.height.16}",
+            "$description": "16px. Pareia com body/font-size/2xs (11px) — ratio ~1.45."
+          },
           "xs": {
-            "$type": "number",
-            "$value": "{foundation.typography.line.height.snug}",
-            "$description": "1.375 ratio."
+            "$type": "dimension",
+            "$value": "{foundation.typography.line.height.18}",
+            "$description": "18px. Pareia com body/font-size/xs (12px) — ratio 1.5."
           },
           "sm": {
-            "$type": "number",
-            "$value": "{foundation.typography.line.height.snug}",
-            "$description": "1.375 ratio."
+            "$type": "dimension",
+            "$value": "{foundation.typography.line.height.20}",
+            "$description": "20px. Pareia com body/font-size/sm (14px) — ratio 1.43."
           },
           "md": {
-            "$type": "number",
-            "$value": "{foundation.typography.line.height.normal}",
-            "$description": "1.5 ratio. Default body."
+            "$type": "dimension",
+            "$value": "{foundation.typography.line.height.24}",
+            "$description": "24px. Pareia com body/font-size/md (16px) — ratio 1.5."
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{foundation.typography.line.height.28}",
+            "$description": "28px. Pareia com body/font-size/lg (18px) — ratio 1.55."
           },
           "xl": {
-            "$type": "number",
-            "$value": "{foundation.typography.line.height.normal}",
-            "$description": "1.5 ratio."
+            "$type": "dimension",
+            "$value": "{foundation.typography.line.height.28}",
+            "$description": "28px. Pareia com body/font-size/xl (20px) — ratio 1.4."
           },
           "2xl": {
-            "$type": "number",
-            "$value": "{foundation.typography.line.height.snug}",
-            "$description": "1.375 ratio."
+            "$type": "dimension",
+            "$value": "{foundation.typography.line.height.34}",
+            "$description": "34px. Pareia com body/font-size/2xl (24px)."
           },
           "3xl": {
-            "$type": "number",
-            "$value": "{foundation.typography.line.height.tight}",
-            "$description": "1.25 ratio."
+            "$type": "dimension",
+            "$value": "{foundation.typography.line.height.40}",
+            "$description": "40px. Pareia com body/font-size/3xl (28px)."
           }
         }
       }

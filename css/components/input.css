@@ -99,12 +99,12 @@
 
 /* Error */
 .ds-input--error {
-  border-color: var(--ds-feedback-error-bg-default);
+  border-color: var(--ds-feedback-error-background-default);
 }
 
 .ds-input--error:focus-within {
-  border-color: var(--ds-feedback-error-bg-default);
-  outline: var(--ds-focus-ring-width) solid var(--ds-feedback-error-bg-default);
+  border-color: var(--ds-feedback-error-background-default);
+  outline: var(--ds-focus-ring-width) solid var(--ds-feedback-error-background-default);
   outline-offset: var(--ds-focus-ring-offset);
 }
 
@@ -182,7 +182,7 @@
   font-size: var(--ds-body-font-size-sm);
   font-weight: var(--ds-body-font-weight-medium);
   line-height: var(--ds-body-line-height-sm);
-  color: var(--ds-feedback-error-bg-default);
+  color: var(--ds-feedback-error-background-default);
   user-select: none;
 }
 
@@ -208,7 +208,7 @@
   display: none;
   font-size: var(--ds-body-font-size-xs);
   line-height: var(--ds-body-line-height-md);
-  color: var(--ds-feedback-error-bg-default);
+  color: var(--ds-feedback-error-background-default);
 }
 
 /* Error state — show error message, tint label */
@@ -217,7 +217,7 @@
 }
 
 .ds-field--error .ds-field__label {
-  color: var(--ds-feedback-error-bg-default);
+  color: var(--ds-feedback-error-background-default);
 }
 
 /* ---------------------------------------------------------

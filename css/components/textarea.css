@@ -83,12 +83,12 @@
 
 /* Error */
 .ds-textarea--error {
-  border-color: var(--ds-feedback-error-bg-default);
+  border-color: var(--ds-feedback-error-background-default);
 }
 
 .ds-textarea--error:focus-within {
-  border-color: var(--ds-feedback-error-bg-default);
-  outline: var(--ds-focus-ring-width) solid var(--ds-feedback-error-bg-default);
+  border-color: var(--ds-feedback-error-background-default);
+  outline: var(--ds-focus-ring-width) solid var(--ds-feedback-error-background-default);
   outline-offset: var(--ds-focus-ring-offset);
 }
 

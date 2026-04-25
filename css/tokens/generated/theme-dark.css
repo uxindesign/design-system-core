@@ -9,64 +9,60 @@
   --ds-size-skeleton-rect-height: 7.5rem; /** 120px */
   --ds-size-textarea-min-height-sm: 4.25rem; /** 68px */
   --ds-size-textarea-min-height-lg: 7rem; /** 112px */
-  --ds-primary-bg-default: var(--ds-color-brand-400);
-  --ds-primary-bg-hover: var(--ds-color-brand-500);
-  --ds-primary-bg-active: var(--ds-color-brand-400);
-  --ds-primary-bg-disabled: var(--ds-color-disabled-brand-light);
   --ds-primary-content-default: var(--ds-color-neutral-900);
   --ds-primary-content-disabled: var(--ds-overlay-white-80);
-  --ds-toned-bg-default: var(--ds-overlay-blue-600-12);
-  --ds-toned-bg-hover: var(--ds-overlay-blue-600-20);
-  --ds-toned-bg-active: var(--ds-overlay-blue-600-28);
+  --ds-primary-background-default: var(--ds-color-brand-400);
+  --ds-primary-background-hover: var(--ds-color-brand-500);
+  --ds-primary-background-active: var(--ds-color-brand-400);
+  --ds-primary-background-disabled: var(--ds-color-disabled-brand-light);
   --ds-toned-content-default: var(--ds-color-brand-400);
   --ds-toned-content-disabled: var(--ds-color-neutral-600);
-  --ds-outline-bg-hover: var(--ds-overlay-black-5);
-  --ds-outline-bg-active: var(--ds-overlay-black-10);
+  --ds-toned-background-default: var(--ds-overlay-blue-600-12);
+  --ds-toned-background-hover: var(--ds-overlay-blue-600-20);
+  --ds-toned-background-active: var(--ds-overlay-blue-600-28);
   --ds-outline-content-default: var(--ds-color-neutral-50);
   --ds-outline-content-disabled: var(--ds-color-neutral-600);
   --ds-outline-border-default: var(--ds-color-neutral-600);
   --ds-outline-border-hover: var(--ds-color-neutral-400);
   --ds-outline-border-disabled: var(--ds-color-neutral-800);
-  --ds-ghost-bg-hover: var(--ds-overlay-black-5);
-  --ds-ghost-bg-active: var(--ds-overlay-black-10);
+  --ds-outline-background-hover: var(--ds-overlay-black-5);
+  --ds-outline-background-active: var(--ds-overlay-black-10);
   --ds-ghost-content-default: var(--ds-color-neutral-50);
   --ds-ghost-content-disabled: var(--ds-color-neutral-600);
+  --ds-ghost-background-hover: var(--ds-overlay-black-5);
+  --ds-ghost-background-active: var(--ds-overlay-black-10);
   --ds-link-content-default: var(--ds-color-brand-400); /** Links em estado default. */
   --ds-link-content-hover: var(--ds-color-brand-300); /** Links em estado hover. */
-  --ds-feedback-success-bg-default: var(--ds-color-green-400);
-  --ds-feedback-success-bg-hover: var(--ds-color-green-500);
-  --ds-feedback-success-bg-active: var(--ds-color-green-500);
-  --ds-feedback-success-bg-subtle: var(--ds-color-green-700);
-  --ds-feedback-success-bg-background: var(--ds-color-green-900);
   --ds-feedback-success-border-default: var(--ds-color-green-400);
-  --ds-feedback-success-bg-disabled: var(--ds-color-disabled-success-dark);
   --ds-feedback-success-content-default: var(--ds-color-green-400);
   --ds-feedback-success-content-contrast: var(--ds-color-neutral-900); /** Dark text porque success default em dark é green-500 (claro). */
   --ds-feedback-success-content-contrast-disabled: var(--ds-overlay-white-60);
-  --ds-feedback-warning-bg-default: var(--ds-color-amber-400);
-  --ds-feedback-warning-bg-hover: var(--ds-color-amber-500);
-  --ds-feedback-warning-bg-subtle: var(--ds-color-amber-700);
-  --ds-feedback-warning-bg-background: var(--ds-color-amber-900);
+  --ds-feedback-success-background-default: var(--ds-color-green-400);
+  --ds-feedback-success-background-hover: var(--ds-color-green-500);
+  --ds-feedback-success-background-active: var(--ds-color-green-500);
+  --ds-feedback-success-background-subtle: var(--ds-color-green-700);
+  --ds-feedback-success-background-disabled: var(--ds-color-disabled-success-dark);
   --ds-feedback-warning-border-default: var(--ds-color-amber-400);
   --ds-feedback-warning-content-default: var(--ds-color-amber-400);
   --ds-feedback-warning-content-contrast: var(--ds-color-neutral-900);
-  --ds-feedback-error-bg-default: var(--ds-color-red-400);
-  --ds-feedback-error-bg-hover: var(--ds-color-red-500);
-  --ds-feedback-error-bg-active: var(--ds-color-red-400);
-  --ds-feedback-error-bg-subtle: var(--ds-color-red-700);
-  --ds-feedback-error-bg-background: var(--ds-color-red-900);
+  --ds-feedback-warning-background-default: var(--ds-color-amber-400);
+  --ds-feedback-warning-background-hover: var(--ds-color-amber-500);
+  --ds-feedback-warning-background-subtle: var(--ds-color-amber-700);
   --ds-feedback-error-border-default: var(--ds-color-red-400);
-  --ds-feedback-error-bg-disabled: var(--ds-color-disabled-error-dark);
   --ds-feedback-error-content-default: var(--ds-color-red-400);
   --ds-feedback-error-content-contrast: var(--ds-color-neutral-900); /** Dark text porque error default em dark é red-500 (medium). */
   --ds-feedback-error-content-contrast-disabled: var(--ds-overlay-white-60);
-  --ds-feedback-info-bg-default: var(--ds-color-sky-400);
-  --ds-feedback-info-bg-hover: var(--ds-color-sky-500);
-  --ds-feedback-info-bg-subtle: var(--ds-color-sky-700);
-  --ds-feedback-info-bg-background: var(--ds-color-sky-900);
+  --ds-feedback-error-background-default: var(--ds-color-red-400);
+  --ds-feedback-error-background-hover: var(--ds-color-red-500);
+  --ds-feedback-error-background-active: var(--ds-color-red-400);
+  --ds-feedback-error-background-subtle: var(--ds-color-red-700);
+  --ds-feedback-error-background-disabled: var(--ds-color-disabled-error-dark);
   --ds-feedback-info-border-default: var(--ds-color-sky-400);
   --ds-feedback-info-content-default: var(--ds-color-sky-400);
   --ds-feedback-info-content-contrast: var(--ds-color-neutral-900);
+  --ds-feedback-info-background-default: var(--ds-color-sky-400);
+  --ds-feedback-info-background-hover: var(--ds-color-sky-500);
+  --ds-feedback-info-background-subtle: var(--ds-color-sky-700);
   --ds-surface-default: var(--ds-color-neutral-900); /** Card and panel surfaces */
   --ds-surface-raised: var(--ds-color-neutral-800); /** Elevated surface (sticky headers, raised cards) */
   --ds-surface-overlay: var(--ds-color-neutral-700);
@@ -141,11 +137,13 @@
   --ds-size-toggle-track-width-sm: var(--ds-spacing-28); /** 28px */
   --ds-size-toggle-track-width-md: var(--ds-spacing-36); /** 36px */
   --ds-size-toggle-track-width-lg: var(--ds-spacing-44); /** 44px */
+  --ds-shadow-card: var(--ds-shadow-sm);
+  --ds-shadow-modal: var(--ds-shadow-xl);
   --ds-radius-sm: var(--ds-radius-4);
   --ds-radius-md: var(--ds-radius-8);
   --ds-radius-lg: var(--ds-radius-12);
   --ds-radius-xl: var(--ds-radius-16);
-  --ds-radius-full: var(--ds-radius-9999);
+  --ds-radius-full: var(--ds-radius-999);
   --ds-control-font-size-sm: var(--ds-font-size-14); /** 14px. Font size for sm controls (Button, Input, Select). */
   --ds-control-font-size-md: var(--ds-font-size-14); /** 14px. Font size for md controls. */
   --ds-control-font-size-lg: var(--ds-font-size-16); /** 16px. Font size for lg controls. */
@@ -159,19 +157,22 @@
   --ds-body-font-weight-bold: var(--ds-font-weight-bold); /** Peso bold (700). */
   --ds-body-letter-spacing-normal: var(--ds-letter-spacing-normal); /** Letter-spacing neutro (0). */
   --ds-body-letter-spacing-tight: var(--ds-letter-spacing-tight); /** Letter-spacing apertado (-0.02em). */
-  --ds-body-font-size-xs: var(--ds-font-size-12); /** 12px. */
-  --ds-body-font-size-sm: var(--ds-font-size-14); /** 14px. */
+  --ds-body-font-size-2xs: var(--ds-font-size-11); /** 11px. Caption, micro-text. Use sparingly — abaixo do mínimo recomendado WCAG 1.4.4. */
+  --ds-body-font-size-xs: var(--ds-font-size-12); /** 12px. Helper text, captions, secondary labels. */
+  --ds-body-font-size-sm: var(--ds-font-size-14); /** 14px. Body padrão, labels, descrições. WCAG 1.4.4 compliant. */
   --ds-body-font-size-md: var(--ds-font-size-16); /** 16px. */
   --ds-body-font-size-lg: var(--ds-font-size-18); /** 18px. */
   --ds-body-font-size-xl: var(--ds-font-size-20); /** 20px. */
   --ds-body-font-size-2xl: var(--ds-font-size-24); /** 24px. */
   --ds-body-font-size-3xl: var(--ds-font-size-28); /** 28px. */
-  --ds-body-line-height-xs: var(--ds-line-height-snug); /** 1.375 ratio. */
-  --ds-body-line-height-sm: var(--ds-line-height-snug); /** 1.375 ratio. */
-  --ds-body-line-height-md: var(--ds-line-height-normal); /** 1.5 ratio. Default body. */
-  --ds-body-line-height-xl: var(--ds-line-height-normal); /** 1.5 ratio. */
-  --ds-body-line-height-2xl: var(--ds-line-height-snug); /** 1.375 ratio. */
-  --ds-body-line-height-3xl: var(--ds-line-height-tight); /** 1.25 ratio. */
-  --ds-border-error: var(--ds-feedback-error-bg-default);
+  --ds-body-line-height-2xs: var(--ds-line-height-16); /** 16px. Pareia com body/font-size/2xs (11px) — ratio ~1.45. */
+  --ds-body-line-height-xs: var(--ds-line-height-18); /** 18px. Pareia com body/font-size/xs (12px) — ratio 1.5. */
+  --ds-body-line-height-sm: var(--ds-line-height-20); /** 20px. Pareia com body/font-size/sm (14px) — ratio 1.43. */
+  --ds-body-line-height-md: var(--ds-line-height-24); /** 24px. Pareia com body/font-size/md (16px) — ratio 1.5. */
+  --ds-body-line-height-lg: var(--ds-line-height-28); /** 28px. Pareia com body/font-size/lg (18px) — ratio 1.55. */
+  --ds-body-line-height-xl: var(--ds-line-height-28); /** 28px. Pareia com body/font-size/xl (20px) — ratio 1.4. */
+  --ds-body-line-height-2xl: var(--ds-line-height-34); /** 34px. Pareia com body/font-size/2xl (24px). */
+  --ds-body-line-height-3xl: var(--ds-line-height-40); /** 40px. Pareia com body/font-size/3xl (28px). */
+  --ds-border-error: var(--ds-feedback-error-background-default);
   --ds-focus-ring-color: var(--ds-border-focus); /** Focus ring color, maps to outline-color */
 }

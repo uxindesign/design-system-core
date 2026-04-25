@@ -10,64 +10,60 @@
   --ds-size-skeleton-rect-height: 7.5rem; /** 120px */
   --ds-size-textarea-min-height-sm: 4.25rem; /** 68px */
   --ds-size-textarea-min-height-lg: 7rem; /** 112px */
-  --ds-primary-bg-default: var(--ds-color-brand-600);
-  --ds-primary-bg-hover: var(--ds-color-brand-700);
-  --ds-primary-bg-active: var(--ds-color-brand-800);
-  --ds-primary-bg-disabled: var(--ds-color-disabled-brand-light);
   --ds-primary-content-default: var(--ds-color-neutral-50);
   --ds-primary-content-disabled: var(--ds-overlay-white-80);
-  --ds-toned-bg-default: var(--ds-overlay-blue-600-12);
-  --ds-toned-bg-hover: var(--ds-overlay-blue-600-20);
-  --ds-toned-bg-active: var(--ds-overlay-blue-600-28);
+  --ds-primary-background-default: var(--ds-color-brand-600);
+  --ds-primary-background-hover: var(--ds-color-brand-700);
+  --ds-primary-background-active: var(--ds-color-brand-800);
+  --ds-primary-background-disabled: var(--ds-color-disabled-brand-light);
   --ds-toned-content-default: var(--ds-color-brand-700);
   --ds-toned-content-disabled: var(--ds-color-neutral-400);
-  --ds-outline-bg-hover: var(--ds-overlay-black-5);
-  --ds-outline-bg-active: var(--ds-overlay-black-10);
+  --ds-toned-background-default: var(--ds-overlay-blue-600-12);
+  --ds-toned-background-hover: var(--ds-overlay-blue-600-20);
+  --ds-toned-background-active: var(--ds-overlay-blue-600-28);
   --ds-outline-content-default: var(--ds-color-neutral-900);
   --ds-outline-content-disabled: var(--ds-color-neutral-400);
   --ds-outline-border-default: var(--ds-color-neutral-400);
   --ds-outline-border-hover: var(--ds-color-neutral-600);
   --ds-outline-border-disabled: var(--ds-color-neutral-200);
-  --ds-ghost-bg-hover: var(--ds-overlay-black-5);
-  --ds-ghost-bg-active: var(--ds-overlay-black-10);
+  --ds-outline-background-hover: var(--ds-overlay-black-5);
+  --ds-outline-background-active: var(--ds-overlay-black-10);
   --ds-ghost-content-default: var(--ds-color-neutral-900);
   --ds-ghost-content-disabled: var(--ds-color-neutral-400);
+  --ds-ghost-background-hover: var(--ds-overlay-black-5);
+  --ds-ghost-background-active: var(--ds-overlay-black-10);
   --ds-link-content-default: var(--ds-color-brand-600); /** Links em estado default. */
   --ds-link-content-hover: var(--ds-color-brand-700); /** Links em estado hover. */
-  --ds-feedback-success-bg-default: var(--ds-color-green-600); /** Fill success principal. */
-  --ds-feedback-success-bg-hover: var(--ds-color-green-800);
-  --ds-feedback-success-bg-active: var(--ds-color-green-900);
-  --ds-feedback-success-bg-subtle: var(--ds-color-green-100);
-  --ds-feedback-success-bg-background: var(--ds-color-green-50);
   --ds-feedback-success-border-default: var(--ds-color-green-500);
-  --ds-feedback-success-bg-disabled: var(--ds-color-disabled-success-light); /** Fill success disabled. */
   --ds-feedback-success-content-default: var(--ds-color-green-700); /** Cor success como conteúdo (mensagens, ícones sobre fundo claro). */
   --ds-feedback-success-content-contrast: var(--ds-color-neutral-50); /** Conteúdo de alto contraste sobre fill success sólido. */
   --ds-feedback-success-content-contrast-disabled: var(--ds-overlay-white-80); /** Conteúdo disabled sobre fill success disabled. */
-  --ds-feedback-warning-bg-default: var(--ds-color-amber-500);
-  --ds-feedback-warning-bg-hover: var(--ds-color-amber-600);
-  --ds-feedback-warning-bg-subtle: var(--ds-color-amber-100);
-  --ds-feedback-warning-bg-background: var(--ds-color-amber-50);
+  --ds-feedback-success-background-default: var(--ds-color-green-600); /** Fill success principal. */
+  --ds-feedback-success-background-hover: var(--ds-color-green-800);
+  --ds-feedback-success-background-active: var(--ds-color-green-900);
+  --ds-feedback-success-background-subtle: var(--ds-color-green-100);
+  --ds-feedback-success-background-disabled: var(--ds-color-disabled-success-light); /** Fill success disabled. */
   --ds-feedback-warning-border-default: var(--ds-color-amber-500); /** Upgraded from amber.500 to amber.600 (ADR-008) for consistency with error.border/info.border at step 600. Passes 3:1 vs amber.50. */
   --ds-feedback-warning-content-default: var(--ds-color-amber-700); /** Cor warning como conteúdo. */
   --ds-feedback-warning-content-contrast: var(--ds-color-neutral-900); /** Conteúdo de alto contraste sobre fill warning sólido. Dark text porque amber-500 é claro. */
-  --ds-feedback-error-bg-default: var(--ds-color-red-600);
-  --ds-feedback-error-bg-hover: var(--ds-color-red-800);
-  --ds-feedback-error-bg-active: var(--ds-color-red-900);
-  --ds-feedback-error-bg-subtle: var(--ds-color-red-100);
-  --ds-feedback-error-bg-background: var(--ds-color-red-50);
+  --ds-feedback-warning-background-default: var(--ds-color-amber-500);
+  --ds-feedback-warning-background-hover: var(--ds-color-amber-600);
+  --ds-feedback-warning-background-subtle: var(--ds-color-amber-100);
   --ds-feedback-error-border-default: var(--ds-color-red-500);
-  --ds-feedback-error-bg-disabled: var(--ds-color-disabled-error-light); /** Fill error disabled. */
   --ds-feedback-error-content-default: var(--ds-color-red-700); /** Cor error como conteúdo (mensagens de erro, ícones de alerta). */
   --ds-feedback-error-content-contrast: var(--ds-color-neutral-50); /** Conteúdo de alto contraste sobre fill error sólido. */
   --ds-feedback-error-content-contrast-disabled: var(--ds-overlay-white-80); /** Conteúdo disabled sobre fill error disabled. */
-  --ds-feedback-info-bg-default: var(--ds-color-sky-500);
-  --ds-feedback-info-bg-hover: var(--ds-color-sky-600);
-  --ds-feedback-info-bg-subtle: var(--ds-color-sky-100);
-  --ds-feedback-info-bg-background: var(--ds-color-sky-50);
+  --ds-feedback-error-background-default: var(--ds-color-red-600);
+  --ds-feedback-error-background-hover: var(--ds-color-red-800);
+  --ds-feedback-error-background-active: var(--ds-color-red-900);
+  --ds-feedback-error-background-subtle: var(--ds-color-red-100);
+  --ds-feedback-error-background-disabled: var(--ds-color-disabled-error-light); /** Fill error disabled. */
   --ds-feedback-info-border-default: var(--ds-color-sky-500);
   --ds-feedback-info-content-default: var(--ds-color-sky-700); /** Cor info como conteúdo. */
   --ds-feedback-info-content-contrast: var(--ds-color-neutral-900); /** Conteúdo de alto contraste sobre fill info sólido. Dark text porque sky-600 é claro demais para branco. */
+  --ds-feedback-info-background-default: var(--ds-color-sky-500);
+  --ds-feedback-info-background-hover: var(--ds-color-sky-600);
+  --ds-feedback-info-background-subtle: var(--ds-color-sky-100);
   --ds-surface-default: var(--ds-color-neutral-50); /** Card and panel surfaces */
   --ds-surface-raised: var(--ds-color-neutral-50); /** Elevated surface (sticky headers, raised cards) */
   --ds-surface-overlay: var(--ds-color-neutral-50);
@@ -142,11 +138,13 @@
   --ds-size-toggle-track-width-sm: var(--ds-spacing-28); /** 28px */
   --ds-size-toggle-track-width-md: var(--ds-spacing-36); /** 36px */
   --ds-size-toggle-track-width-lg: var(--ds-spacing-44); /** 44px */
+  --ds-shadow-card: var(--ds-shadow-sm); /** Elevação leve de cards. */
+  --ds-shadow-modal: var(--ds-shadow-xl); /** Elevação forte de modais e popovers. */
   --ds-radius-sm: var(--ds-radius-4); /** 4px. Tags, badges, chips pequenos. */
   --ds-radius-md: var(--ds-radius-8); /** 8px. Cards, alerts — radius padrão médio. */
   --ds-radius-lg: var(--ds-radius-12); /** 12px. Cards grandes, containers. */
   --ds-radius-xl: var(--ds-radius-16); /** 16px. Modais, sheets, dialogs. */
-  --ds-radius-full: var(--ds-radius-9999); /** 9999px. Pills, circles, avatars. */
+  --ds-radius-full: var(--ds-radius-999); /** Pill/circle. Aliases foundation.radius.999. */
   --ds-control-font-size-sm: var(--ds-font-size-14); /** 14px. Font size for sm controls (Button, Input, Select). */
   --ds-control-font-size-md: var(--ds-font-size-14); /** 14px. Font size for md controls. */
   --ds-control-font-size-lg: var(--ds-font-size-16); /** 16px. Font size for lg controls. */
@@ -160,19 +158,22 @@
   --ds-body-font-weight-bold: var(--ds-font-weight-bold); /** Peso bold (700). Usar em títulos de destaque e em negrito inline dentro de body text. */
   --ds-body-letter-spacing-normal: var(--ds-letter-spacing-normal); /** Letter-spacing neutro (0). Padrão pra body text e UI. */
   --ds-body-letter-spacing-tight: var(--ds-letter-spacing-tight); /** Letter-spacing apertado (-0.02em). Usar em display/headings grandes. */
-  --ds-body-font-size-xs: var(--ds-font-size-12); /** 12px. Helper text, caption, legenda. */
-  --ds-body-font-size-sm: var(--ds-font-size-14); /** 14px. Body padrão, labels, descrições. */
+  --ds-body-font-size-2xs: var(--ds-font-size-11); /** 11px. Caption, micro-text. Use sparingly — abaixo do mínimo recomendado WCAG 1.4.4. */
+  --ds-body-font-size-xs: var(--ds-font-size-12); /** 12px. Helper text, captions, secondary labels. */
+  --ds-body-font-size-sm: var(--ds-font-size-14); /** 14px. Body padrão, labels, descrições. WCAG 1.4.4 compliant. */
   --ds-body-font-size-md: var(--ds-font-size-16); /** 16px. Body confortável, títulos menores. */
   --ds-body-font-size-lg: var(--ds-font-size-18); /** 18px. Subtítulos, avatar labels. */
   --ds-body-font-size-xl: var(--ds-font-size-20); /** 20px. Títulos de card, headings H3. */
   --ds-body-font-size-2xl: var(--ds-font-size-24); /** 24px. Headings H2, títulos de modal. */
   --ds-body-font-size-3xl: var(--ds-font-size-28); /** 28px. Headings H1, display. */
-  --ds-body-line-height-xs: var(--ds-line-height-snug); /** 1.375 ratio. Pareia com body/font-size/xs (12px) ≈ 16.5px. Figma: 16px. */
-  --ds-body-line-height-sm: var(--ds-line-height-snug); /** 1.375 ratio. Pareia com body/font-size/sm (14px) ≈ 19px. Figma: 18px. */
-  --ds-body-line-height-md: var(--ds-line-height-normal); /** 1.5 ratio. Pareia com body/font-size/md (16px) = 24px. Substitui usos antigos de 22 e 24 (ADR-013). Figma: 24px. */
-  --ds-body-line-height-xl: var(--ds-line-height-normal); /** 1.5 ratio. Pareia com body/font-size/xl (20px) = 30px. Figma: 28px. */
-  --ds-body-line-height-2xl: var(--ds-line-height-snug); /** 1.375 ratio. Pareia com body/font-size/2xl (24px) = 33px. Figma: 34px. */
-  --ds-body-line-height-3xl: var(--ds-line-height-tight); /** 1.25 ratio. Pareia com body/font-size/3xl (30px) = 37.5px. Figma: 40px. */
-  --ds-border-error: var(--ds-feedback-error-bg-default);
+  --ds-body-line-height-2xs: var(--ds-line-height-16); /** 16px. Pareia com body/font-size/2xs (11px) — ratio ~1.45. */
+  --ds-body-line-height-xs: var(--ds-line-height-18); /** 18px. Pareia com body/font-size/xs (12px) — ratio 1.5. */
+  --ds-body-line-height-sm: var(--ds-line-height-20); /** 20px. Pareia com body/font-size/sm (14px) — ratio 1.43. */
+  --ds-body-line-height-md: var(--ds-line-height-24); /** 24px. Pareia com body/font-size/md (16px) — ratio 1.5. */
+  --ds-body-line-height-lg: var(--ds-line-height-28); /** 28px. Pareia com body/font-size/lg (18px) — ratio 1.55. */
+  --ds-body-line-height-xl: var(--ds-line-height-28); /** 28px. Pareia com body/font-size/xl (20px) — ratio 1.4. */
+  --ds-body-line-height-2xl: var(--ds-line-height-34); /** 34px. Pareia com body/font-size/2xl (24px). */
+  --ds-body-line-height-3xl: var(--ds-line-height-40); /** 40px. Pareia com body/font-size/3xl (28px). */
+  --ds-border-error: var(--ds-feedback-error-background-default);
   --ds-focus-ring-color: var(--ds-border-focus); /** Focus ring color, maps to outline-color */
 }

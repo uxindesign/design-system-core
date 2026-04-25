@@ -1,26 +1,17 @@
 {
-  "generatedAt": "2026-04-25T17:55:39.728Z",
+  "generatedAt": "2026-04-25T22:17:48.333Z",
   "totals": {
-    "jsonTokens": 578,
-    "sharedTokens": 236,
-    "lightTokens": 171,
-    "darkTokens": 171,
+    "jsonTokens": 595,
+    "sharedTokens": 251,
+    "lightTokens": 172,
+    "darkTokens": 172,
     "errors": 1,
-    "warnings": 118
+    "warnings": 119
   },
   "checks": {
     "jsonIntegrity": [],
     "jsonVsCss": [],
     "cssFoundationLeak": [
-      {
-        "level": "error",
-        "scope": "components",
-        "file": "css/components/card.css",
-        "line": 56,
-        "column": 15,
-        "match": "var(--ds-shadow-sm)",
-        "message": "Foundation token consumido direto: var(--ds-shadow-sm). Use Semantic/Component layer (ADR-013)."
-      },
       {
         "level": "warning",
         "scope": "base",
@@ -1077,14 +1068,36 @@
     ],
     "registryCompleteness": [
       {
+        "level": "error",
+        "message": "48 tokens em tokens/ sem entry em registry.json. Rode `npm run build:registry:init`.",
+        "sample": [
+          "foundation.radius.999",
+          "foundation.typography.line.height.16",
+          "foundation.typography.line.height.18",
+          "foundation.typography.line.height.20",
+          "foundation.typography.line.height.22"
+        ]
+      },
+      {
         "level": "warning",
-        "message": "407 entries com campos TODO (sentido/contexto/decisao). Preencha incrementalmente.",
+        "message": "375 entries com campos TODO (sentido/contexto/decisao). Preencha incrementalmente.",
         "sample": [
           "foundation.color.neutral.50",
           "foundation.color.neutral.100",
           "foundation.color.neutral.200",
           "foundation.color.neutral.300",
           "foundation.color.neutral.400"
+        ]
+      },
+      {
+        "level": "warning",
+        "message": "32 entries em registry.json sem token correspondente em tokens/ (stale).",
+        "sample": [
+          "foundation.radius.9999",
+          "semantic.primary.bg-default",
+          "semantic.primary.bg-hover",
+          "semantic.primary.bg-active",
+          "semantic.primary.bg-disabled"
         ]
       }
     ],

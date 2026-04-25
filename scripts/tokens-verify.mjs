@@ -551,14 +551,14 @@ function writeHtmlReport(report) {
 <link rel="stylesheet" href="layout.css">
 <style>
   .ds-sync-status { display:inline-flex; align-items:center; gap: var(--ds-spacing-8); padding: var(--ds-spacing-12) var(--ds-spacing-20); border-radius: var(--ds-radius-lg); font-weight: var(--ds-body-font-weight-semibold); }
-  .ds-sync-status.ok { background: var(--ds-feedback-success-bg-default); color: var(--ds-feedback-success-content-default); }
-  .ds-sync-status.error { background: var(--ds-feedback-error-bg-default); color: var(--ds-feedback-error-content-default); }
+  .ds-sync-status.ok { background: var(--ds-feedback-success-background-default); color: var(--ds-feedback-success-content-default); }
+  .ds-sync-status.error { background: var(--ds-feedback-error-background-default); color: var(--ds-feedback-error-content-default); }
   .ds-sync-meta { display:flex; gap: var(--ds-spacing-24); margin-top: var(--ds-spacing-16); font-size: var(--ds-body-font-size-sm); color: var(--ds-content-secondary); }
   .ds-sync-meta strong { color: var(--ds-content-default); font-weight: var(--ds-body-font-weight-semibold); }
   .ds-sync-table { width:100%; border-collapse: collapse; margin-top: var(--ds-spacing-24); font-size: var(--ds-body-font-size-sm); }
   .ds-sync-table th, .ds-sync-table td { text-align:left; padding: var(--ds-spacing-12); border-bottom: 1px solid var(--ds-border-default); }
   .ds-sync-table th { font-weight: var(--ds-body-font-weight-semibold); background: var(--ds-background-subtle); }
-  .ds-sync-banner { background: var(--ds-feedback-info-bg-default); color: var(--ds-feedback-info-content-default); padding: var(--ds-spacing-16) var(--ds-spacing-20); border-radius: var(--ds-radius-md); margin-bottom: var(--ds-spacing-24); font-size: var(--ds-body-font-size-sm); }
+  .ds-sync-banner { background: var(--ds-feedback-info-background-default); color: var(--ds-feedback-info-content-default); padding: var(--ds-spacing-16) var(--ds-spacing-20); border-radius: var(--ds-radius-md); margin-bottom: var(--ds-spacing-24); font-size: var(--ds-body-font-size-sm); }
 </style>
 <script>
   (function(){var l=localStorage.getItem('ds-lang');if(l)document.documentElement.setAttribute('lang',l)})();

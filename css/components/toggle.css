@@ -52,13 +52,13 @@
 
 /* Hover */
 .ds-toggle:hover:not(:disabled) {
-  border-color: var(--ds-primary-bg-default);
+  border-color: var(--ds-primary-background-default);
 }
 
 /* Checked (On) */
 .ds-toggle:checked {
-  background-color: var(--ds-primary-bg-default);
-  border-color: var(--ds-primary-bg-default);
+  background-color: var(--ds-primary-background-default);
+  border-color: var(--ds-primary-background-default);
 }
 
 .ds-toggle:checked::after {

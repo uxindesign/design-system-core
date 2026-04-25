@@ -8,6 +8,44 @@ Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na
 
 ## [Não publicado]
 
+### Alinhamento Figma ↔ JSON ↔ CSS — fonte única de verdade (2026-04-25)
+
+Reorganização estrutural pesada. Figma era a fonte mas JSON/CSS divergia em 3 dimensões: estrutura de naming (compound vs hierárquico), valores de typography (escala desalinhada), e Foundation leaks em consumidor. Esta entrada reverte essa dívida 1:1 com Figma.
+
+**Princípio arquitetural reforçado** (CLAUDE.md atualizado):
+- Figma é fonte única de verdade — vars, valores, hierarquia, bindings.
+- Propagação: Figma → JSON → CSS → consumer, unidirecional.
+- Componente NUNCA consome Foundation direto. Sempre Semantic.
+- Texto de componente Figma NUNCA tem prop visual sem binding.
+
+**Figma (write — 1.200+ mutations):**
+- Adicionado `typography/body/font-size/2xs` (11px), reorganizada escala body para sm=14, xs=12, 2xs=11. Pareou line-heights: `body/line-height/2xs=16`, `lg=28` (novos), `xs=18`, `sm=20` (remap).
+- 753 bindings de componentes rebindados pra preservar valores visuais originais durante o remap (consumers que precisavam de 11/12/14/16/18/etc. agora apontam pra Semantic correto).
+- 133 multi-style runs em textos consolidados em single run via `setRangeFontSize` + `setBoundVariable`. **Zero Foundation leaks em componente.**
+- 613 bindings adicionados em props que estavam hardcoded: `fontFamily`, `letterSpacing`, `fontStyle`, `fontSize`, `lineHeight` em todos os textos de componente.
+- 27 frame `itemSpacing`/`padding` bindados (Radio/Toggle Content + outros).
+- 4 arrows criados nas variants de Tooltip (Position=top/bottom/left/right) — antes não existiam.
+
+**JSON (sync-from-Figma):**
+- `tokens/foundation/typography.json`: adicionados `line.height.{16,18,20,22,24,26,28,34,40,44,50,60,70,80,90}` em rem (1:1 com Figma). Ratios legacy mantidas pra `css/base/`.
+- `tokens/foundation/radius.json`: `9999` → `999` (espelha Figma).
+- `tokens/semantic/{light,dark}.json`:
+  - Body font-size: `2xs=11, xs=12, sm=14` (descriptions corrigidas, alias rem-based).
+  - Body line-height: 8 entradas com aliases pra `foundation.typography.line.height.{16,18,20,24,28,28,34,40}`.
+  - **Naming compound `bg-*` → hierárquico `background.*`** em primary, toned, outline, ghost, feedback.{success,info,warning,error}. Espelha Figma.
+  - Removido `feedback.X.background.background` (não existia em Figma; substituído por `subtle` no consumer).
+  - Adicionado `semantic.shadow.{card,modal}` aliasando `foundation.shadow.{sm,xl}`.
+  - `radius.full` aliasa `foundation.radius.999`.
+
+**CSS (regenerado + atualizado consumer):**
+- `css/tokens/generated/*.css` regenerado.
+- 425 refs `--ds-*-bg-*` → `--ds-*-background-*` em `css/components/`, `docs/**/*.html`, `scripts/`.
+- 147 refs `--ds-feedback-*-background-background` (do compound `bg-background`) → `--ds-feedback-*-background-subtle`.
+- Card `--elevated` agora usa `var(--ds-shadow-card)` (Semantic) em vez de Foundation direto.
+- Modal: removido `border-top` no footer e `border-bottom` no header (Figma não tem).
+
+**Verify:** 0 erros de coerência, 0 Foundation leaks em components/, 119 warnings (118 base/ leak debt pré-existente + 1 registry TODOs migração).
+
 ### Pós-merge — fixes do site de docs (2026-04-25)
 
 Trabalho de cleanup pós-migração 2-layer aplicado direto na branch antes do merge:

@@ -167,7 +167,7 @@
   --ds-radius-12: 0.75rem; /** 12px */
   --ds-radius-16: 1rem; /** 16px */
   --ds-radius-24: 1.5rem; /** 24px */
-  --ds-radius-9999: 9999px; /** Full — pill/circle */
+  --ds-radius-999: 9999px; /** Pill/circle. Token name follows Figma. */
   --ds-shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --ds-shadow-sm: 0 2px 4px 0 rgba(0, 0, 0, 0.08), 0 1px 2px 0 rgba(0, 0, 0, 0.04);
   --ds-shadow-md: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.04);
@@ -219,12 +219,27 @@
   --ds-font-weight-medium: 500;
   --ds-font-weight-semibold: 600;
   --ds-font-weight-bold: 700;
-  --ds-line-height-none: 1;
-  --ds-line-height-tight: 1.25;
-  --ds-line-height-snug: 1.375;
-  --ds-line-height-normal: 1.5;
-  --ds-line-height-relaxed: 1.625;
-  --ds-line-height-loose: 1.75;
+  --ds-line-height-16: 1rem; /** 16px */
+  --ds-line-height-18: 1.125rem; /** 18px */
+  --ds-line-height-20: 1.25rem; /** 20px */
+  --ds-line-height-22: 1.375rem; /** 22px */
+  --ds-line-height-24: 1.5rem; /** 24px */
+  --ds-line-height-26: 1.625rem; /** 26px */
+  --ds-line-height-28: 1.75rem; /** 28px */
+  --ds-line-height-34: 2.125rem; /** 34px */
+  --ds-line-height-40: 2.5rem; /** 40px */
+  --ds-line-height-44: 2.75rem; /** 44px */
+  --ds-line-height-50: 3.125rem; /** 50px */
+  --ds-line-height-60: 3.75rem; /** 60px */
+  --ds-line-height-70: 4.375rem; /** 70px */
+  --ds-line-height-80: 5rem; /** 80px */
+  --ds-line-height-90: 5.625rem; /** 90px */
+  --ds-line-height-none: 1; /** Ratio legacy. Use em base/*.css apenas. Componente prefere numérico. */
+  --ds-line-height-tight: 1.25; /** Ratio legacy. Use em base/*.css apenas. */
+  --ds-line-height-snug: 1.375; /** Ratio legacy. Use em base/*.css apenas. */
+  --ds-line-height-normal: 1.5; /** Ratio legacy. Use em base/*.css apenas. */
+  --ds-line-height-relaxed: 1.625; /** Ratio legacy. Use em base/*.css apenas. */
+  --ds-line-height-loose: 1.75; /** Ratio legacy. Use em base/*.css apenas. */
   --ds-line-height-control-sm: 1rem; /** 16px — matches icon-size sm. Single-line control line-height. */
   --ds-line-height-control-md: 1.25rem; /** 20px — matches icon-size md. Single-line control line-height. */
   --ds-line-height-control-lg: 1.5rem; /** 24px — matches icon-size lg. Single-line control line-height. */

@@ -32,12 +32,29 @@ Ao responder uma pergunta sobre o sistema, vá primeiro nesses arquivos. Não re
 Quando há divergência entre artefatos, resolve-se por tipo de informação:
 
 1. **ADRs em `docs/decisions/`** — autoridade arquitetural. Regras de camada, naming, dependências, convenções. ADR prevalece sobre qualquer outro artefato. Mudança que contradiz ADR exige **novo ADR** (ou revisão do existente) antes da implementação.
-2. **Figma Variables** — autoridade de **valor visual** (hex, alpha, qual shade foi escolhida, qual variante). Designer decide no Figma.
-3. **`tokens/**/*.json`** — consolidação canônica em Git (DTCG). Espelha o Figma em valor; espelha os ADRs em arquitetura. É o ponto de consumo pro pipeline.
+2. **Figma** — autoridade de **valor visual + estrutura de tokens aplicados**. Inclui: hex/alpha das variables, qual variable está bindada em cada propriedade de cada componente, naming dessas variables, hierarquia de pastas. Designer decide no Figma.
+3. **`tokens/**/*.json`** — consolidação canônica em Git (DTCG). Espelha o Figma em valor **e em estrutura**; espelha os ADRs em arquitetura. É o ponto de consumo pro pipeline.
 4. **`css/tokens/generated/*.css`** — derivado do JSON. Nunca editar à mão.
-5. **`docs/*.html`, `docs/*.md`** — descritivo do estado atual. Nunca fonte de verdade.
+5. **`css/components/*.css` e `css/base/*.css`** — consomem `var(--ds-X)` espelhando os bindings que o componente equivalente tem no Figma. Não inventar tokens novos no consumidor; consultar o Figma e bindar igual.
+6. **`docs/*.html`, `docs/*.md`** — descritivo do estado atual. Nunca fonte de verdade.
 
-Regra operacional: arquitetura está acima de valor. Figma pode decidir "brand.hover é blue-800 em vez de blue-700" (valor), mas não pode criar `semantic.color.primary.foreground` se ADR-011 definiu que semantic de cor usa `brand.content.contrast` (arquitetura).
+**Regra operacional 1 — arquitetura está acima de valor.** Figma pode decidir "primary.bg.hover é blue-800 em vez de blue-700" (valor) sem ADR. Mas não pode criar `semantic.color.primary.foreground` se ADR-011 definiu que semantic de cor usa `primary.content-default` (arquitetura): isso exige ADR.
+
+**Regra operacional 2 — espelhar a estrutura, não só o valor.** "Parecer com o Figma" não basta. Quando trabalhar em um componente:
+
+- Antes de mudar CSS, **leia os bindings do componente equivalente no Figma** (via `use_figma` Plugin API ou `mcp__51ce7e00-…__get_variable_defs`).
+- Para cada propriedade do CSS (height, padding, gap, font-size, line-height, font-weight, color, radius, etc.), **a variable bindada no Figma define qual `var(--ds-X)` o CSS deve consumir**.
+- Se a variable existe no Figma mas não no JSON, **adicione no JSON com o mesmo nome/path/valor** e regenere o CSS — não invente alternativa.
+- Se o CSS consome um token que **não está bindado em nada no Figma**, esse token é suspeito: ou está faltando o binding no Figma, ou o token não devia existir.
+- Mudança de variable no Figma propaga: Figma → `tokens/**/*.json` → `css/tokens/generated/*.css` → componentes/base já consomem automaticamente. Em sentido inverso (mudar CSS sem tocar Figma) é **proibido** sem ADR.
+- **Snapshots/screenshots não são fonte de verdade.** São auxiliares pra detectar regressão. A fonte é a variable bindada no node Figma equivalente.
+
+**Regra operacional 3 — auditoria sistemática.** Em qualquer trabalho que toque um componente, antes de mexer:
+
+1. Liste TODAS as variables do componente equivalente no Figma (todos os tamanhos, todos os estados, todos os subnodes — incluindo textos).
+2. Compare contra o que o CSS atual consome.
+3. Se houver gap (Figma tem variable que CSS não consome, ou vice-versa), reporte e proponha alinhamento antes de continuar.
+4. Se o Figma usa valor literal (sem binding) onde devia haver variable — issue separada: o Figma precisa ser hardenado primeiro. Não inventar variable só no CSS.
 
 ### Camadas de consumo de tokens (2-layer, pós-0.7.0)
 

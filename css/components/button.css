@@ -85,36 +85,36 @@
    Variant: Brand (primary filled — action/primary/default)
    --------------------------------------------------------- */
 .ds-btn--brand {
-  background-color: var(--ds-primary-bg-default);
+  background-color: var(--ds-primary-background-default);
   color: var(--ds-primary-content-default);
-  border-color: var(--ds-primary-bg-default);
+  border-color: var(--ds-primary-background-default);
 }
 
 .ds-btn--brand:hover {
-  background-color: var(--ds-primary-bg-hover);
-  border-color: var(--ds-primary-bg-hover);
+  background-color: var(--ds-primary-background-hover);
+  border-color: var(--ds-primary-background-hover);
 }
 
 .ds-btn--brand:active {
-  background-color: var(--ds-primary-bg-active);
-  border-color: var(--ds-primary-bg-active);
+  background-color: var(--ds-primary-background-active);
+  border-color: var(--ds-primary-background-active);
 }
 
 /* ---------------------------------------------------------
    Variant: Toned (alpha-tinted primary — action/primary/toned)
    --------------------------------------------------------- */
 .ds-btn--toned {
-  background-color: var(--ds-toned-bg-default);
+  background-color: var(--ds-toned-background-default);
   color: var(--ds-toned-content-default);
   border-color: transparent;
 }
 
 .ds-btn--toned:hover {
-  background-color: var(--ds-toned-bg-hover);
+  background-color: var(--ds-toned-background-hover);
 }
 
 .ds-btn--toned:active {
-  background-color: var(--ds-toned-bg-active);
+  background-color: var(--ds-toned-background-active);
 }
 
 /* ---------------------------------------------------------
@@ -127,12 +127,12 @@
 }
 
 .ds-btn--outline:hover {
-  background-color: var(--ds-outline-bg-hover);
+  background-color: var(--ds-outline-background-hover);
   border-color: var(--ds-outline-border-hover);
 }
 
 .ds-btn--outline:active {
-  background-color: var(--ds-outline-bg-active);
+  background-color: var(--ds-outline-background-active);
 }
 
 /* ---------------------------------------------------------
@@ -145,49 +145,49 @@
 }
 
 .ds-btn--ghost:hover {
-  background-color: var(--ds-ghost-bg-hover);
+  background-color: var(--ds-ghost-background-hover);
 }
 
 .ds-btn--ghost:active {
-  background-color: var(--ds-ghost-bg-active);
+  background-color: var(--ds-ghost-background-active);
 }
 
 /* ---------------------------------------------------------
    Variant: Success
    --------------------------------------------------------- */
 .ds-btn--success {
-  background-color: var(--ds-feedback-success-bg-default);
+  background-color: var(--ds-feedback-success-background-default);
   color: var(--ds-feedback-success-content-contrast);
-  border-color: var(--ds-feedback-success-bg-default);
+  border-color: var(--ds-feedback-success-background-default);
 }
 
 .ds-btn--success:hover {
-  background-color: var(--ds-feedback-success-bg-hover);
-  border-color: var(--ds-feedback-success-bg-hover);
+  background-color: var(--ds-feedback-success-background-hover);
+  border-color: var(--ds-feedback-success-background-hover);
 }
 
 .ds-btn--success:active {
-  background-color: var(--ds-feedback-success-bg-active);
-  border-color: var(--ds-feedback-success-bg-active);
+  background-color: var(--ds-feedback-success-background-active);
+  border-color: var(--ds-feedback-success-background-active);
 }
 
 /* ---------------------------------------------------------
    Variant: Danger (action/danger/default)
    --------------------------------------------------------- */
 .ds-btn--danger {
-  background-color: var(--ds-feedback-error-bg-default);
+  background-color: var(--ds-feedback-error-background-default);
   color: var(--ds-feedback-error-content-contrast);
-  border-color: var(--ds-feedback-error-bg-default);
+  border-color: var(--ds-feedback-error-background-default);
 }
 
 .ds-btn--danger:hover {
-  background-color: var(--ds-feedback-error-bg-hover);
-  border-color: var(--ds-feedback-error-bg-hover);
+  background-color: var(--ds-feedback-error-background-hover);
+  border-color: var(--ds-feedback-error-background-hover);
 }
 
 .ds-btn--danger:active {
-  background-color: var(--ds-feedback-error-bg-active);
-  border-color: var(--ds-feedback-error-bg-active);
+  background-color: var(--ds-feedback-error-background-active);
+  border-color: var(--ds-feedback-error-background-active);
 }
 
 /* ---------------------------------------------------------

@@ -48,10 +48,8 @@
   border: var(--ds-border-width-default) solid var(--ds-border-default);
 }
 
-/* Elevated — borda sutil + sombra. Foundation token leak documentado:
-   shadow-sm é consumido direto porque não há token Semantic equivalente
-   (TODO: criar semantic.elevation.card como alias para foundation.shadow.sm). */
+/* Elevated — borda sutil + sombra semântica. */
 .ds-card--elevated {
   border: var(--ds-border-width-default) solid var(--ds-border-subtle);
-  box-shadow: var(--ds-shadow-sm);
+  box-shadow: var(--ds-shadow-card);
 }

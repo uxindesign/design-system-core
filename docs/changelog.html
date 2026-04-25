@@ -25,7 +25,7 @@
     .ds-md-content blockquote { border-left: 3px solid var(--ds-border-default); margin: var(--ds-spacing-16) 0; padding: var(--ds-spacing-8) var(--ds-spacing-16); color: var(--ds-content-tertiary); font-style: italic; }
     .ds-md-content hr { border: none; border-top: var(--ds-border-width-1) solid var(--ds-border-subtle); margin: var(--ds-spacing-32) 0; }
     .ds-md-content strong { color: var(--ds-content-default); }
-    .ds-md-generated-banner { background: var(--ds-feedback-info-bg-default); color: var(--ds-feedback-info-content-default); padding: var(--ds-spacing-12) var(--ds-spacing-20); border-radius: var(--ds-radius-md); margin-bottom: var(--ds-spacing-24); font-size: var(--ds-body-font-size-sm); }
+    .ds-md-generated-banner { background: var(--ds-feedback-info-background-default); color: var(--ds-feedback-info-content-default); padding: var(--ds-spacing-12) var(--ds-spacing-20); border-radius: var(--ds-radius-md); margin-bottom: var(--ds-spacing-24); font-size: var(--ds-body-font-size-sm); }
   </style>
   <script>
     (function(){var l=localStorage.getItem('ds-lang');if(l)document.documentElement.setAttribute('lang',l)})();
@@ -74,6 +74,91 @@
 <p>O formato é baseado em <a href="https://keepachangelog.com/pt-BR/1.1.0/">Keep a Changelog</a> e o versionamento segue <a href="https://semver.org/lang/pt-BR/">Semantic Versioning</a>.</p>
 <p>Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na faixa 0.x. Regras de bump documentadas em <code>docs/process-versioning.html</code>.</p>
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
+<h3>Alinhamento Figma ↔ JSON ↔ CSS — fonte única de verdade (2026-04-25)</h3>
+<p>Reorganização estrutural pesada. Figma era a fonte mas JSON/CSS divergia em 3 dimensões: estrutura de naming (compound vs hierárquico), valores de typography (escala desalinhada), e Foundation leaks em consumidor. Esta entrada reverte essa dívida 1:1 com Figma.</p>
+<p><strong>Princípio arquitetural reforçado</strong> (CLAUDE.md atualizado):</p>
+<ul>
+<li>Figma é fonte única de verdade — vars, valores, hierarquia, bindings.</li>
+<li>Propagação: Figma → JSON → CSS → consumer, unidirecional.</li>
+<li>Componente NUNCA consome Foundation direto. Sempre Semantic.</li>
+<li>Texto de componente Figma NUNCA tem prop visual sem binding.</li>
+</ul>
+<p><strong>Figma (write — 1.200+ mutations):</strong></p>
+<ul>
+<li>Adicionado <code>typography/body/font-size/2xs</code> (11px), reorganizada escala body para sm=14, xs=12, 2xs=11. Pareou line-heights: <code>body/line-height/2xs=16</code>, <code>lg=28</code> (novos), <code>xs=18</code>, <code>sm=20</code> (remap).</li>
+<li>753 bindings de componentes rebindados pra preservar valores visuais originais durante o remap (consumers que precisavam de 11/12/14/16/18/etc. agora apontam pra Semantic correto).</li>
+<li>133 multi-style runs em textos consolidados em single run via <code>setRangeFontSize</code> + <code>setBoundVariable</code>. <strong>Zero Foundation leaks em componente.</strong></li>
+<li>613 bindings adicionados em props que estavam hardcoded: <code>fontFamily</code>, <code>letterSpacing</code>, <code>fontStyle</code>, <code>fontSize</code>, <code>lineHeight</code> em todos os textos de componente.</li>
+<li>27 frame <code>itemSpacing</code>/<code>padding</code> bindados (Radio/Toggle Content + outros).</li>
+<li>4 arrows criados nas variants de Tooltip (Position=top/bottom/left/right) — antes não existiam.</li>
+</ul>
+<p><strong>JSON (sync-from-Figma):</strong></p>
+<ul>
+<li><code>tokens/foundation/typography.json</code>: adicionados <code>line.height.{16,18,20,22,24,26,28,34,40,44,50,60,70,80,90}</code> em rem (1:1 com Figma). Ratios legacy mantidas pra <code>css/base/</code>.</li>
+<li><code>tokens/foundation/radius.json</code>: <code>9999</code> → <code>999</code> (espelha Figma).</li>
+<li><code>tokens/semantic/{light,dark}.json</code>:<ul>
+<li>Body font-size: <code>2xs=11, xs=12, sm=14</code> (descriptions corrigidas, alias rem-based).</li>
+<li>Body line-height: 8 entradas com aliases pra <code>foundation.typography.line.height.{16,18,20,24,28,28,34,40}</code>.</li>
+<li><strong>Naming compound <code>bg-*</code> → hierárquico <code>background.*</code></strong> em primary, toned, outline, ghost, feedback.{success,info,warning,error}. Espelha Figma.</li>
+<li>Removido <code>feedback.X.background.background</code> (não existia em Figma; substituído por <code>subtle</code> no consumer).</li>
+<li>Adicionado <code>semantic.shadow.{card,modal}</code> aliasando <code>foundation.shadow.{sm,xl}</code>.</li>
+<li><code>radius.full</code> aliasa <code>foundation.radius.999</code>.</li>
+</ul>
+</li>
+</ul>
+<p><strong>CSS (regenerado + atualizado consumer):</strong></p>
+<ul>
+<li><code>css/tokens/generated/*.css</code> regenerado.</li>
+<li>425 refs <code>--ds-*-bg-*</code> → <code>--ds-*-background-*</code> em <code>css/components/</code>, <code>docs/**/*.html</code>, <code>scripts/</code>.</li>
+<li>147 refs <code>--ds-feedback-*-background-background</code> (do compound <code>bg-background</code>) → <code>--ds-feedback-*-background-subtle</code>.</li>
+<li>Card <code>--elevated</code> agora usa <code>var(--ds-shadow-card)</code> (Semantic) em vez de Foundation direto.</li>
+<li>Modal: removido <code>border-top</code> no footer e <code>border-bottom</code> no header (Figma não tem).</li>
+</ul>
+<p><strong>Verify:</strong> 0 erros de coerência, 0 Foundation leaks em components/, 119 warnings (118 base/ leak debt pré-existente + 1 registry TODOs migração).</p>
+<h3>Pós-merge — fixes do site de docs (2026-04-25)</h3>
+<p>Trabalho de cleanup pós-migração 2-layer aplicado direto na branch antes do merge:</p>
+<p><strong>Causas raiz consertadas:</strong></p>
+<ul>
+<li><code>css/tokens/index.css</code> importava <code>generated/component.css</code> (deletado em 0.7.0). Browser falha silenciosa em <code>@import</code> quebrado podia comprometer carga de imports subsequentes.</li>
+<li>Aliases <code>body.font-size.{xs,sm}</code> e <code>control.font-size.{sm,md}</code> apontavam para Foundation <strong>um step menor</strong> que a description prometia (xs→11px em vez de 12px, sm→12px em vez de 14px). Causou todas as labels e body text dos componentes saírem menores que o intencionado em light + dark.</li>
+<li><code>border-default-default</code> (sufixo duplicado) gerado por bug em script de rename — corrigido em 4 tokens feedback border.</li>
+</ul>
+<p><strong>Visual / componente:</strong></p>
+<ul>
+<li>Card <code>--elevated</code> agora aplica <code>box-shadow: var(--ds-shadow-sm)</code> direto (antes dependia de utility class <code>.ds-elevation-1</code> não aplicada nos exemplos)</li>
+<li>Modal close usava <code>.ds-btn--ghost.--icon-only</code> com <code>&amp;times;</code> em 4 lugares — substituído pela classe <code>.ds-modal__close</code> (definida no CSS) com ícone <code>material-symbols</code></li>
+</ul>
+<p><strong>Conteúdo de docs:</strong></p>
+<ul>
+<li>47 HTMLs (excluindo <code>changelog</code>, <code>decisions/</code>, <code>llms-full</code>): refs antigos removidos. Patterns: <code>--ds-brand-*</code> → <code>--ds-primary-*</code> / <code>--ds-toned-*</code>, <code>--ds-content-link-*</code> → <code>--ds-link-content-*</code>, <code>--ds-feedback-*-{background,subtle,default,...}</code> → <code>*-bg-{background,subtle,default,...}</code>, <code>--ds-state-*</code> → <code>--ds-overlay-*</code> / <code>--ds-focus-ring-color</code> / <code>--ds-background-disabled</code>, <code>--ds-spacing-0-5</code> → <code>--ds-spacing-2</code>, <code>--ds-neutral-50</code> → <code>--ds-color-neutral-50</code></li>
+<li>DTCG paths em tabelas atualizadas: <code>foundation.{spacing,radius,typography.font.size}.{t-shirt}</code> → <code>{numérico}</code> (ex: <code>foundation.radius.sm</code> → <code>foundation.radius.4</code>)</li>
+<li><code>token-architecture.html</code> reescrita: 3 camadas → 2 camadas, cadeia de alias COMPONENT→SEMANTIC→BRAND→FOUNDATION → SEMANTIC→FOUNDATION, removida seção &quot;Brand Sublayer&quot; (foundation.brand não existe)</li>
+<li><code>theming.html</code> simplificada: removidas Default/Ocean/Forest (Ocean e Forest nunca tiveram CSS implementado), virou paleta única + dark mode + guia de tema customizado</li>
+<li><code>foundations-spacing.html</code>: tabelas Inset/Gap/Component (eliminadas) → escala única <code>space.{2xs..2xl}</code> + <code>space.section.*</code>. Spacing scale sem <code>spacing-0</code>/<code>spacing-0-5</code></li>
+<li><code>foundations-radius.html</code>: tabela com Foundation (numérico) + Semantic (t-shirt como aliases). Removido <code>radius-none</code></li>
+<li><code>foundations-borders.html</code>: removido <code>--ds-border-width-0</code> da scale visual</li>
+<li><code>foundations-opacity.html</code>: removido <code>--ds-opacity-0</code> da scale visual</li>
+<li><code>card.html</code>: &quot;Comparacao&quot; → &quot;Comparação&quot;</li>
+</ul>
+<p><strong>Geradores:</strong></p>
+<ul>
+<li><code>scripts/sync-docs.mjs</code>: <code>THEME_COLOR_SECTIONS</code> reescrito com paths atuais (primary, toned, outline, ghost, link, feedback compound). Inline CSS dos ADRs renderizados também atualizado</li>
+<li><code>scripts/tokens-verify.mjs</code>: regex <code>FOUNDATION_LEAK_RE</code> atualizada para naming numérico (radius-N, spacing-N, font-size-N) — antes pegava t-shirt que agora é Semantic. Inline CSS da <code>tokens-sync.html</code> atualizado</li>
+<li><code>scripts/build-api.mjs</code>: removida leitura de <code>tokens/component/</code>, <code>COMPONENTS</code> array sem campo <code>token</code></li>
+<li><code>scripts/build-llms.mjs</code>: nota sobre 2-layer</li>
+</ul>
+<p><strong>UI da homepage e topbar:</strong></p>
+<ul>
+<li>Theme switcher (Default/Ocean/Forest) <strong>removido</strong> de 35 HTMLs — Ocean e Forest nunca foram implementados em CSS, opções eram cosméticas</li>
+<li>Seção &quot;Theming&quot; da homepage removida (redundante; theming.html cobre)</li>
+<li>Badge <code>v0.5.17</code> → <code>v0.7.0</code> com tokens corretos (<code>--ds-toned-*</code> e <code>--ds-spacing-{4,8}</code> em vez dos deletados <code>--ds-brand-subtle</code>, <code>--ds-spacing-{1,2}</code>)</li>
+</ul>
+<p><strong>Registry/CSS leak:</strong></p>
+<ul>
+<li><code>tokens/registry.json</code>: removidas 288 entries <code>layer=&quot;component&quot;</code> (stale) + 85 entries com paths Foundation/Semantic eliminados (foundation.brand.*, foundation.opacity.0, foundation.radius.0, foundation.spacing.0)</li>
+<li>23 leaks reais detectados em <code>css/components/*.css</code> pela regex atualizada (radius-{4,8,12,16,9999} consumidos direto) → trocados por Semantic (radius-{sm,md,lg,xl,full})</li>
+</ul>
+<p><strong>Resultado verify:tokens (CI sem snapshot):</strong> 0 erros, 118 warnings (117 base/ leak debt + 1 registry TODOs migração).</p>
 <h3>Migração para 2-layer + Foundation numeric naming (2026-04-24)</h3>
 <p><strong>Mudança arquitetural grande.</strong> Elimina camada Component e renomeia Foundation para naming numérico direto.</p>
 <p><strong>Figma (fonte de verdade):</strong></p>

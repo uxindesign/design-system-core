@@ -14,22 +14,22 @@
     .ds-token-table code { font-size: var(--ds-font-size-12); font-family: var(--ds-font-family-mono); }
     /* Callouts */
     .ds-callout { padding: var(--ds-spacing-16) var(--ds-spacing-20); border-radius: var(--ds-radius-12); margin-bottom: var(--ds-spacing-24); font-size: var(--ds-font-size-14); line-height: var(--ds-line-height-relaxed); color: var(--ds-content-default); }
-    .ds-callout--info { background-color: var(--ds-feedback-info-bg-background); border: var(--ds-border-width-1) solid var(--ds-feedback-info-border-default); }
-    .ds-callout--success { background-color: var(--ds-feedback-success-bg-background); border: var(--ds-border-width-1) solid var(--ds-feedback-success-border-default); }
-    .ds-callout--warning { background-color: var(--ds-feedback-warning-bg-background); border: var(--ds-border-width-1) solid var(--ds-feedback-warning-border-default); }
+    .ds-callout--info { background-color: var(--ds-feedback-info-background-subtle); border: var(--ds-border-width-1) solid var(--ds-feedback-info-border-default); }
+    .ds-callout--success { background-color: var(--ds-feedback-success-background-subtle); border: var(--ds-border-width-1) solid var(--ds-feedback-success-border-default); }
+    .ds-callout--warning { background-color: var(--ds-feedback-warning-background-subtle); border: var(--ds-border-width-1) solid var(--ds-feedback-warning-border-default); }
     .ds-callout__title { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-4); }
     /* Do/Don't */
     .ds-dodont { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ds-spacing-16); margin-bottom: var(--ds-spacing-32); }
     .ds-dodont__item { border-radius: var(--ds-radius-12); overflow: hidden; }
     .ds-dodont__preview { padding: var(--ds-spacing-24); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-12) var(--ds-radius-12) 0 0; display: flex; flex-wrap: wrap; gap: var(--ds-spacing-12); align-items: center; justify-content: center; }
     .ds-dodont__label { padding: var(--ds-spacing-8) var(--ds-spacing-16); font-size: var(--ds-font-size-14); font-weight: var(--ds-font-weight-semibold); }
-    .ds-dodont__label--do { background-color: var(--ds-feedback-success-bg-background); color: var(--ds-feedback-success-content-default); border-top: 3px solid var(--ds-feedback-success-bg-background); }
-    .ds-dodont__label--dont { background-color: var(--ds-feedback-error-bg-background); color: var(--ds-feedback-error-content-default); border-top: 3px solid var(--ds-feedback-error-bg-background); }
+    .ds-dodont__label--do { background-color: var(--ds-feedback-success-background-subtle); color: var(--ds-feedback-success-content-default); border-top: 3px solid var(--ds-feedback-success-background-subtle); }
+    .ds-dodont__label--dont { background-color: var(--ds-feedback-error-background-subtle); color: var(--ds-feedback-error-content-default); border-top: 3px solid var(--ds-feedback-error-background-subtle); }
     .ds-dodont__desc { padding: 0 var(--ds-spacing-16) var(--ds-spacing-12); font-size: var(--ds-font-size-14); color: var(--ds-content-secondary); background-color: var(--ds-background-subtle); }
     /* Anatomy */
     .ds-anatomy { padding: var(--ds-spacing-32); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-12); margin-bottom: var(--ds-spacing-16); display: flex; align-items: center; justify-content: center; position: relative; }
-    .ds-anatomy__btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; background-color: var(--ds-primary-bg-default); color: var(--ds-primary-content-default); border-radius: var(--ds-radius-8); font-weight: var(--ds-font-weight-semibold); font-size: var(--ds-font-size-14); position: relative; }
-    .ds-anatomy__marker { position: absolute; width: 20px; height: 20px; border-radius: 50%; background-color: var(--ds-primary-bg-default); color: var(--ds-primary-content-default); font-size: 11px; font-weight: var(--ds-font-weight-bold); display: flex; align-items: center; justify-content: center; }
+    .ds-anatomy__btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; background-color: var(--ds-primary-background-default); color: var(--ds-primary-content-default); border-radius: var(--ds-radius-8); font-weight: var(--ds-font-weight-semibold); font-size: var(--ds-font-size-14); position: relative; }
+    .ds-anatomy__marker { position: absolute; width: 20px; height: 20px; border-radius: 50%; background-color: var(--ds-primary-background-default); color: var(--ds-primary-content-default); font-size: 11px; font-weight: var(--ds-font-weight-bold); display: flex; align-items: center; justify-content: center; }
     .ds-anatomy-legend { font-size: var(--ds-font-size-14); color: var(--ds-content-secondary); margin-bottom: var(--ds-spacing-32); line-height: var(--ds-line-height-relaxed); }
     .ds-anatomy-legend strong { color: var(--ds-content-default); }
     /* Code block */
@@ -37,7 +37,7 @@
     /* Related */
     .ds-related { display: flex; gap: var(--ds-spacing-12); flex-wrap: wrap; margin-bottom: var(--ds-spacing-32); }
     .ds-related__link { padding: var(--ds-spacing-8) var(--ds-spacing-16); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-8); font-size: var(--ds-font-size-14); color: var(--ds-link-content-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
-    .ds-related__link:hover { border-color: var(--ds-primary-bg-default); background-color: var(--ds-overlay-subtle); }
+    .ds-related__link:hover { border-color: var(--ds-primary-background-default); background-color: var(--ds-overlay-subtle); }
     /* Responsive do/dont */
     @media (max-width: 768px) { .ds-dodont { grid-template-columns: 1fr; } }
   </style>
@@ -230,8 +230,8 @@
     <div class="ds-preview">
       <div class="ds-preview__canvas">
         <button class="ds-btn ds-btn--brand"><span class="ds-btn__label">Default</span></button>
-        <button class="ds-btn ds-btn--brand" style="background-color:var(--ds-primary-bg-hover)"><span class="ds-btn__label">Hover</span></button>
-        <button class="ds-btn ds-btn--brand" style="background-color:var(--ds-primary-bg-active)"><span class="ds-btn__label">Pressed</span></button>
+        <button class="ds-btn ds-btn--brand" style="background-color:var(--ds-primary-background-hover)"><span class="ds-btn__label">Hover</span></button>
+        <button class="ds-btn ds-btn--brand" style="background-color:var(--ds-primary-background-active)"><span class="ds-btn__label">Pressed</span></button>
         <button class="ds-btn ds-btn--brand" style="outline:var(--ds-focus-ring-width, 2px) solid var(--ds-focus-ring-color); outline-offset:var(--ds-focus-ring-offset, 2px)"><span class="ds-btn__label">Focused</span></button>
         <button class="ds-btn ds-btn--brand" disabled><span class="ds-btn__label">Disabled</span></button>
       </div>
@@ -414,9 +414,9 @@
     <table class="ds-token-table">
       <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token (semantic)</th><th><span data-lang="pt">Variável CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
       <tbody>
-        <tr><td>background (default)</td><td><code>semantic.primary.bg-default</code></td><td><code>--ds-primary-bg-default</code></td></tr>
-        <tr><td>background (hover)</td><td><code>semantic.primary.bg-hover</code></td><td><code>--ds-primary-bg-hover</code></td></tr>
-        <tr><td>background (active)</td><td><code>semantic.primary.bg-active</code></td><td><code>--ds-primary-bg-active</code></td></tr>
+        <tr><td>background (default)</td><td><code>semantic.primary.bg-default</code></td><td><code>--ds-primary-background-default</code></td></tr>
+        <tr><td>background (hover)</td><td><code>semantic.primary.bg-hover</code></td><td><code>--ds-primary-background-hover</code></td></tr>
+        <tr><td>background (active)</td><td><code>semantic.primary.bg-active</code></td><td><code>--ds-primary-background-active</code></td></tr>
         <tr><td>background (disabled)</td><td><code>semantic.background.disabled</code></td><td><code>--ds-background-disabled</code></td></tr>
         <tr><td>text/icon color</td><td><code>semantic.primary.content-default</code></td><td><code>--ds-primary-content-default</code></td></tr>
         <tr><td>text (disabled)</td><td><code>semantic.content.disabled</code></td><td><code>--ds-content-disabled</code></td></tr>
@@ -443,7 +443,7 @@
 
     <h3 style="margin-top:var(--ds-spacing-24);margin-bottom:var(--ds-spacing-12);font-size:var(--ds-font-size-16);color:var(--ds-content-default)"><span data-lang="pt">Variante Toned</span><span data-lang="en">Toned variant</span></h3>
     <div class="ds-callout ds-callout--info">
-      <span data-lang="pt">A variante <strong>Toned</strong> usa backgrounds de overlay translúcidos (<code>--ds-toned-bg-default</code>, <code>--ds-toned-bg-hover</code>, <code>--ds-toned-bg-active</code>) em vez de preenchimentos opacos. Isso difere dos padrões Subtle/Muted que usam tokens de background opacos. A abordagem translúcida permite que o button Toned se adapte naturalmente a qualquer cor de superfície abaixo dele, mantendo um tint de marca consistente.</span><span data-lang="en">The <strong>Toned</strong> variant uses translucent overlay backgrounds (<code>--ds-toned-bg-default</code>, <code>--ds-toned-bg-hover</code>, <code>--ds-toned-bg-active</code>) instead of opaque fills. This differs from Subtle/Muted patterns which use opaque background tokens. The translucent approach lets the Toned button adapt naturally to any surface color beneath it while maintaining a consistent brand tint.</span>
+      <span data-lang="pt">A variante <strong>Toned</strong> usa backgrounds de overlay translúcidos (<code>--ds-toned-background-default</code>, <code>--ds-toned-background-hover</code>, <code>--ds-toned-background-active</code>) em vez de preenchimentos opacos. Isso difere dos padrões Subtle/Muted que usam tokens de background opacos. A abordagem translúcida permite que o button Toned se adapte naturalmente a qualquer cor de superfície abaixo dele, mantendo um tint de marca consistente.</span><span data-lang="en">The <strong>Toned</strong> variant uses translucent overlay backgrounds (<code>--ds-toned-background-default</code>, <code>--ds-toned-background-hover</code>, <code>--ds-toned-background-active</code>) instead of opaque fills. This differs from Subtle/Muted patterns which use opaque background tokens. The translucent approach lets the Toned button adapt naturally to any surface color beneath it while maintaining a consistent brand tint.</span>
     </div>
   </div>
 

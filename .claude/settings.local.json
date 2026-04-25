@@ -6,7 +6,8 @@
       "Bash(git commit -m ':*)",
       "Bash(npm run *)",
       "Bash(git checkout *)",
-      "mcp__51ce7e00-4f3f-440c-a9bf-f0ad3bf8e5c2__use_figma"
+      "mcp__51ce7e00-4f3f-440c-a9bf-f0ad3bf8e5c2__use_figma",
+      "Bash(node /tmp/rename-aliases.mjs)"
     ]
   },
   "enableAllProjectMcpServers": true,

@@ -69,13 +69,13 @@
 
 /* Hover */
 .ds-radio:hover:not(:disabled) {
-  border-color: var(--ds-primary-bg-default);
+  border-color: var(--ds-primary-background-default);
 }
 
 /* Checked */
 .ds-radio:checked {
-  background-color: var(--ds-primary-bg-default);
-  border-color: var(--ds-primary-bg-default);
+  background-color: var(--ds-primary-background-default);
+  border-color: var(--ds-primary-background-default);
 }
 
 .ds-radio:checked::after {
@@ -111,12 +111,12 @@
 
 /* Error state */
 .ds-radio-group--error .ds-radio {
-  border-color: var(--ds-feedback-error-bg-default);
+  border-color: var(--ds-feedback-error-background-default);
 }
 
 .ds-radio-group--error .ds-radio:checked {
-  background-color: var(--ds-feedback-error-bg-default);
-  border-color: var(--ds-feedback-error-bg-default);
+  background-color: var(--ds-feedback-error-background-default);
+  border-color: var(--ds-feedback-error-background-default);
 }
 
 .ds-radio-group--error .ds-radio-group__legend {

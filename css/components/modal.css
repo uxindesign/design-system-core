@@ -87,7 +87,7 @@
   justify-content: flex-end;
   gap: var(--ds-space-sm);
   padding: var(--ds-space-sm) var(--ds-space-lg) var(--ds-space-lg);
-  border-top: var(--ds-border-width-default) solid var(--ds-border-default);
+  /* Figma: footer não tem divider/border-top. */
 }
 
 /* ---------------------------------------------------------
