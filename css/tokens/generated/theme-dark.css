@@ -136,12 +136,14 @@
   --ds-control-line-height-md: var(--ds-dimension-20); /** 20px. Matches icon-md. height = 10+20+10 = 40. */
   --ds-control-line-height-lg: var(--ds-dimension-24); /** 24px. Matches icon-lg. height = 12+24+12 = 48. */
   --ds-body-font-family-sans: var(--ds-font-family-sans); /** Font-family sans-serif padrão do sistema. Usar em todo texto UI. */
+  --ds-body-font-family-mono: var(--ds-font-family-mono); /** Monospace pra code blocks e snippets. Espelha Figma typography/body/font-family/mono. */
   --ds-body-font-weight-regular: var(--ds-font-weight-regular); /** Peso regular (400). */
   --ds-body-font-weight-medium: var(--ds-font-weight-medium); /** Peso medium (500). */
   --ds-body-font-weight-semibold: var(--ds-font-weight-semibold); /** Peso semibold (600). */
   --ds-body-font-weight-bold: var(--ds-font-weight-bold); /** Peso bold (700). */
   --ds-body-letter-spacing-normal: var(--ds-letter-spacing-normal); /** Letter-spacing neutro (0). */
   --ds-body-letter-spacing-tight: var(--ds-letter-spacing-tight); /** Letter-spacing apertado (-0.02em). */
+  --ds-body-letter-spacing-wider: var(--ds-letter-spacing-wider); /** Letter-spacing expandido (1.5px). Usado em overline/uppercase. Espelha Figma typography/body/letter-spacing/wider. */
   --ds-body-font-size-2xs: var(--ds-font-size-11); /** 11px. Caption, micro-text. Use sparingly — abaixo do mínimo recomendado WCAG 1.4.4. */
   --ds-body-font-size-xs: var(--ds-font-size-12); /** 12px. Helper text, captions, secondary labels. */
   --ds-body-font-size-sm: var(--ds-font-size-14); /** 14px. Body padrão, labels, descrições. WCAG 1.4.4 compliant. */
