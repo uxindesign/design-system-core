@@ -25,7 +25,9 @@
     .ds-dodont__label { padding: var(--ds-dimension-8) var(--ds-dimension-16); font-size: var(--ds-font-size-14); font-weight: var(--ds-font-weight-semibold); }
     .ds-dodont__label--do { background-color: var(--ds-feedback-success-background-subtle); color: var(--ds-feedback-success-content-default); border-top: 3px solid var(--ds-feedback-success-background-subtle); }
     .ds-dodont__label--dont { background-color: var(--ds-feedback-error-background-subtle); color: var(--ds-feedback-error-content-default); border-top: 3px solid var(--ds-feedback-error-background-subtle); }
-    .ds-dodont__desc { padding: 0 var(--ds-dimension-16) var(--ds-dimension-12); font-size: var(--ds-font-size-14); color: var(--ds-content-secondary); background-color: var(--ds-background-subtle); }
+    .ds-dodont__desc { padding: var(--ds-dimension-12) var(--ds-dimension-16); font-size: var(--ds-font-size-14); color: var(--ds-content-default); }
+    .ds-dodont__item:has(.ds-dodont__label--do) .ds-dodont__desc { background-color: var(--ds-feedback-success-background-subtle); }
+    .ds-dodont__item:has(.ds-dodont__label--dont) .ds-dodont__desc { background-color: var(--ds-feedback-error-background-subtle); }
     /* Anatomy */
     .ds-anatomy { padding: var(--ds-dimension-32); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-12); margin-bottom: var(--ds-dimension-16); display: flex; align-items: center; justify-content: center; position: relative; }
     .ds-anatomy__marker { position: absolute; width: 20px; height: 20px; border-radius: 50%; background-color: var(--ds-primary-background-default); color: var(--ds-primary-content-default); font-size: 11px; font-weight: var(--ds-font-weight-bold); display: flex; align-items: center; justify-content: center; }
@@ -411,7 +413,7 @@
       <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token (semantic)</th><th><span data-lang="pt">Variável CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
       <tbody>
         <tr><td>border (unchecked)</td><td><code>semantic.border.default</code></td><td><code>--ds-border-default</code></td></tr>
-        <tr><td>background (checked)</td><td><code>semantic.primary.bg-default</code></td><td><code>--ds-primary-background-default</code></td></tr>
+        <tr><td>background (checked)</td><td><code>semantic.primary.background.default</code></td><td><code>--ds-primary-background-default</code></td></tr>
         <tr><td>checkmark color</td><td><code>semantic.primary.content-default</code></td><td><code>--ds-primary-content-default</code></td></tr>
         <tr><td>border (error)</td><td><code>semantic.feedback.error.border-default</code></td><td><code>--ds-feedback-error-border-default</code></td></tr>
         <tr><td>focus ring</td><td><code>semantic.focus.ring.*</code></td><td><code>--ds-focus-ring-width</code>, <code>--ds-focus-ring-offset</code>, <code>--ds-focus-ring-color</code></td></tr>

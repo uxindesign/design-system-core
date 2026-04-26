@@ -25,7 +25,9 @@
     .ds-dodont__label { padding: var(--ds-dimension-8) var(--ds-dimension-16); font-size: var(--ds-font-size-14); font-weight: var(--ds-font-weight-semibold); }
     .ds-dodont__label--do { background-color: var(--ds-feedback-success-background-subtle); color: var(--ds-feedback-success-content-default); border-top: 3px solid var(--ds-feedback-success-background-subtle); }
     .ds-dodont__label--dont { background-color: var(--ds-feedback-error-background-subtle); color: var(--ds-feedback-error-content-default); border-top: 3px solid var(--ds-feedback-error-background-subtle); }
-    .ds-dodont__desc { padding: 0 var(--ds-dimension-16) var(--ds-dimension-12); font-size: var(--ds-font-size-14); color: var(--ds-content-secondary); background-color: var(--ds-background-subtle); }
+    .ds-dodont__desc { padding: var(--ds-dimension-12) var(--ds-dimension-16); font-size: var(--ds-font-size-14); color: var(--ds-content-default); }
+    .ds-dodont__item:has(.ds-dodont__label--do) .ds-dodont__desc { background-color: var(--ds-feedback-success-background-subtle); }
+    .ds-dodont__item:has(.ds-dodont__label--dont) .ds-dodont__desc { background-color: var(--ds-feedback-error-background-subtle); }
     /* Anatomy */
     .ds-anatomy { padding: var(--ds-dimension-32); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-12); margin-bottom: var(--ds-dimension-16); display: flex; align-items: center; justify-content: center; position: relative; }
     .ds-anatomy__btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; background-color: var(--ds-primary-background-default); color: var(--ds-primary-content-default); border-radius: var(--ds-radius-8); font-weight: var(--ds-font-weight-semibold); font-size: var(--ds-font-size-14); position: relative; }
@@ -239,7 +241,7 @@
     <table class="ds-token-table">
       <thead><tr><th><span data-lang="pt">Estado</span><span data-lang="en">State</span></th><th>CSS trigger</th><th><span data-lang="pt">Mudança visual</span><span data-lang="en">Visual change</span></th><th>Token</th></tr></thead>
       <tbody>
-        <tr><td>Default</td><td>—</td><td><span data-lang="pt">Preenchimento primário</span><span data-lang="en">Primary fill</span></td><td><code>semantic.primary.bg-default</code></td></tr>
+        <tr><td>Default</td><td>—</td><td><span data-lang="pt">Preenchimento primário</span><span data-lang="en">Primary fill</span></td><td><code>semantic.primary.background.default</code></td></tr>
         <tr><td>Hover</td><td><code>:hover</code></td><td><span data-lang="pt">Preenchimento mais escuro</span><span data-lang="en">Darker fill</span></td><td><code>semantic.primary.bg-hover</code></td></tr>
         <tr><td>Pressed</td><td><code>:active</code></td><td><span data-lang="pt">Preenchimento mais escuro ainda</span><span data-lang="en">Darkest fill</span></td><td><code>semantic.primary.bg-active</code></td></tr>
         <tr><td>Focused</td><td><code>:focus-visible</code></td><td><span data-lang="pt">Anel de 2px, offset de 2px</span><span data-lang="en">2px outline ring, 2px offset</span></td><td><code>semantic.focus.ring.*</code></td></tr>
@@ -414,7 +416,7 @@
     <table class="ds-token-table">
       <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token (semantic)</th><th><span data-lang="pt">Variável CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
       <tbody>
-        <tr><td>background (default)</td><td><code>semantic.primary.bg-default</code></td><td><code>--ds-primary-background-default</code></td></tr>
+        <tr><td>background (default)</td><td><code>semantic.primary.background.default</code></td><td><code>--ds-primary-background-default</code></td></tr>
         <tr><td>background (hover)</td><td><code>semantic.primary.bg-hover</code></td><td><code>--ds-primary-background-hover</code></td></tr>
         <tr><td>background (active)</td><td><code>semantic.primary.bg-active</code></td><td><code>--ds-primary-background-active</code></td></tr>
         <tr><td>background (disabled)</td><td><code>semantic.background.disabled</code></td><td><code>--ds-background-disabled</code></td></tr>

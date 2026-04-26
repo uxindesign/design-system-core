@@ -25,7 +25,9 @@
     .ds-dodont__label { padding: var(--ds-dimension-8) var(--ds-dimension-16); font-size: var(--ds-font-size-14); font-weight: var(--ds-font-weight-semibold); }
     .ds-dodont__label--do { background-color: var(--ds-feedback-success-background-subtle); color: var(--ds-feedback-success-content-default); border-top: 3px solid var(--ds-feedback-success-background-subtle); }
     .ds-dodont__label--dont { background-color: var(--ds-feedback-error-background-subtle); color: var(--ds-feedback-error-content-default); border-top: 3px solid var(--ds-feedback-error-background-subtle); }
-    .ds-dodont__desc { padding: 0 var(--ds-dimension-16) var(--ds-dimension-12); font-size: var(--ds-font-size-14); color: var(--ds-content-secondary); background-color: var(--ds-background-subtle); }
+    .ds-dodont__desc { padding: var(--ds-dimension-12) var(--ds-dimension-16); font-size: var(--ds-font-size-14); color: var(--ds-content-default); }
+    .ds-dodont__item:has(.ds-dodont__label--do) .ds-dodont__desc { background-color: var(--ds-feedback-success-background-subtle); }
+    .ds-dodont__item:has(.ds-dodont__label--dont) .ds-dodont__desc { background-color: var(--ds-feedback-error-background-subtle); }
     /* Anatomy */
     .ds-anatomy { padding: var(--ds-dimension-40) var(--ds-dimension-48); background-color: var(--ds-background-subtle); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-12); margin-bottom: var(--ds-dimension-16); display: flex; align-items: center; justify-content: center; }
     .ds-anatomy__part { position: relative; }

@@ -20,7 +20,7 @@
     .ds-arch { display: flex; gap: var(--ds-dimension-16); margin-bottom: var(--ds-dimension-32); flex-wrap: wrap; }
     .ds-arch__layer { flex: 1; min-width: 220px; border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-12); overflow: hidden; }
     .ds-arch__header { padding: var(--ds-dimension-12) var(--ds-dimension-16); font-weight: var(--ds-font-weight-semibold); font-size: var(--ds-font-size-14); }
-    .ds-arch__header--fdn { background-color: var(--ds-overlay-subtle); color: var(--ds-primary-content-default); border-bottom: 2px solid var(--ds-primary-background-default); }
+    .ds-arch__header--fdn { background-color: var(--ds-feedback-info-background-subtle); color: var(--ds-feedback-info-content-default); border-bottom: 2px solid var(--ds-feedback-info-border-default); }
     .ds-arch__header--sem { background-color: var(--ds-feedback-info-background-subtle); color: var(--ds-feedback-info-content-default); border-bottom: 2px solid var(--ds-feedback-info-background-subtle); }
     .ds-arch__header--cmp { background-color: var(--ds-feedback-success-background-subtle); color: var(--ds-feedback-success-content-default); border-bottom: 2px solid var(--ds-feedback-success-background-subtle); }
     .ds-arch__body { padding: var(--ds-dimension-16); font-size: var(--ds-font-size-12); color: var(--ds-content-secondary); line-height: var(--ds-line-height-relaxed); }
@@ -30,7 +30,7 @@
     .ds-chain { background-color: var(--ds-background-subtle); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-12); padding: var(--ds-dimension-20); margin-bottom: var(--ds-dimension-32); font-family: var(--ds-font-family-mono); font-size: var(--ds-font-size-12); line-height: var(--ds-line-height-loose); }
     .ds-chain__step { display: flex; align-items: center; gap: var(--ds-dimension-12); margin-bottom: var(--ds-dimension-8); }
     .ds-chain__badge { padding: var(--ds-dimension-2) var(--ds-dimension-8); border-radius: var(--ds-radius-4); font-size: 10px; font-weight: var(--ds-font-weight-semibold); text-transform: uppercase; letter-spacing: var(--ds-letter-spacing-wider); font-family: var(--ds-font-family-sans); flex-shrink: 0; }
-    .ds-chain__badge--fdn { background-color: var(--ds-overlay-subtle); color: var(--ds-primary-content-default); }
+    .ds-chain__badge--fdn { background-color: var(--ds-feedback-info-background-subtle); color: var(--ds-feedback-info-content-default); border: var(--ds-border-width-default) solid var(--ds-feedback-info-border-default); }
     .ds-chain__badge--brand { background-color: var(--ds-toned-background-default, var(--ds-overlay-subtle)); color: var(--ds-toned-content-default, var(--ds-primary-content-default)); }
     .ds-chain__badge--sem { background-color: var(--ds-feedback-info-background-subtle); color: var(--ds-feedback-info-content-default); }
     .ds-chain__badge--cmp { background-color: var(--ds-feedback-success-background-subtle); color: var(--ds-feedback-success-content-default); }
@@ -93,7 +93,7 @@
         <div class="ds-arch__header ds-arch__header--sem">Semantic</div>
         <div class="ds-arch__body">
           <span data-lang="pt">Intenção e significado, com naming t-shirt (sm/md/lg). Referencia foundation via aliases. Sensível a modo (light/dark).</span><span data-lang="en">Intent and meaning, with t-shirt naming (sm/md/lg). References foundation via aliases. Mode-aware (light/dark).</span><br><br>
-          <code>semantic.primary.bg-default</code> → <code>{foundation.color.blue.600}</code><br>
+          <code>semantic.primary.background.default</code> → <code>{foundation.color.blue.600}</code><br>
           <code>semantic.content.default</code> → <code>{foundation.color.neutral.900}</code> (light)<br>
           <code>semantic.content.default</code> → <code>{foundation.color.neutral.50}</code> (dark)<br><br>
           <span data-lang="pt">171 tokens × 2 modos.</span><span data-lang="en">171 tokens × 2 modes.</span>
@@ -114,7 +114,7 @@
     <div class="ds-chain">
       <div class="ds-chain__step">
         <span class="ds-chain__badge ds-chain__badge--sem">semantic</span>
-        <code>semantic.primary.bg-default</code>
+        <code>semantic.primary.background.default</code>
       </div>
       <div class="ds-chain__step">
         <span style="width:54px;display:inline-block"></span>
@@ -127,7 +127,7 @@
     </div>
 
     <p style="color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);margin-bottom:var(--ds-dimension-16);">
-      <span data-lang="pt">Para trocar a cor primária, basta apontar <code>semantic.primary.bg-default</code> pra outra entrada Foundation (<code>foundation.color.cyan.600</code>, <code>foundation.color.emerald.600</code>, etc.) — Semantic resolve no <code>:root</code> e Light/Dark sobrescrevem via <code>[data-mode]</code>.</span><span data-lang="en">To change the primary color, point <code>semantic.primary.bg-default</code> to another Foundation entry (<code>foundation.color.cyan.600</code>, <code>foundation.color.emerald.600</code>, etc.) — Semantic resolves at <code>:root</code> and Light/Dark override via <code>[data-mode]</code>.</span>
+      <span data-lang="pt">Para trocar a cor primária, basta apontar <code>semantic.primary.background.default</code> pra outra entrada Foundation (<code>foundation.color.cyan.600</code>, <code>foundation.color.emerald.600</code>, etc.) — Semantic resolve no <code>:root</code> e Light/Dark sobrescrevem via <code>[data-mode]</code>.</span><span data-lang="en">To change the primary color, point <code>semantic.primary.background.default</code> to another Foundation entry (<code>foundation.color.cyan.600</code>, <code>foundation.color.emerald.600</code>, etc.) — Semantic resolves at <code>:root</code> and Light/Dark override via <code>[data-mode]</code>.</span>
     </p>
   </div>
 
@@ -150,7 +150,7 @@
 
     <div class="ds-callout ds-callout--warning">
       <div class="ds-callout__title"><span data-lang="pt">A regra do sufixo <code>-default</code></span><span data-lang="en">The <code>-default</code> suffix rule</span></div>
-      <span data-lang="pt">Todo token terminado em <code>.default</code> gera <code>-default</code> no CSS. Sem exceções, sem colapsar. <code>semantic.primary.bg-default</code> vira <code>--ds-primary-background-default</code>, não <code>--ds-color-primary</code>.</span><span data-lang="en">Every token ending in <code>.default</code> generates <code>-default</code> in CSS. No exceptions, no collapsing. <code>semantic.primary.bg-default</code> becomes <code>--ds-primary-background-default</code>, not <code>--ds-color-primary</code>.</span>
+      <span data-lang="pt">Todo token terminado em <code>.default</code> gera <code>-default</code> no CSS. Sem exceções, sem colapsar. <code>semantic.primary.background.default</code> vira <code>--ds-primary-background-default</code>, não <code>--ds-color-primary</code>.</span><span data-lang="en">Every token ending in <code>.default</code> generates <code>-default</code> in CSS. No exceptions, no collapsing. <code>semantic.primary.background.default</code> becomes <code>--ds-primary-background-default</code>, not <code>--ds-color-primary</code>.</span>
     </div>
   </div>
 
@@ -167,7 +167,7 @@
       <tbody>
         <tr><td><code>background.default</code></td><td>neutral-50</td><td>neutral-950</td></tr>
         <tr><td><code>content.default</code></td><td>neutral-900</td><td>neutral-50</td></tr>
-        <tr><td><code>primary.bg-default</code></td><td>blue-600</td><td>blue-400</td></tr>
+        <tr><td><code>primary.background.default</code></td><td>blue-600</td><td>blue-400</td></tr>
         <tr><td><code>primary.bg-hover</code></td><td>blue-700</td><td>blue-300</td></tr>
         <tr><td><code>overlay.subtle</code></td><td>overlay-black-5</td><td>overlay-white-5</td></tr>
         <tr><td><code>primary.content-default</code></td><td>white</td><td>neutral-900</td></tr>
@@ -208,7 +208,7 @@
       <tbody>
         <tr><td><code>foundation.color.blue.500</code></td><td><code>--ds-color-blue-500</code></td><td><code>color/blue/500</code> (Foundation)</td></tr>
         <tr><td><code>foundation.spacing.16</code></td><td><code>--ds-dimension-16</code></td><td><code>spacing/16</code> (Foundation)</td></tr>
-        <tr><td><code>semantic.primary.bg-default</code></td><td><code>--ds-primary-background-default</code></td><td><code>primary/background/default</code> (Semantic)</td></tr>
+        <tr><td><code>semantic.primary.background.default</code></td><td><code>--ds-primary-background-default</code></td><td><code>primary/background/default</code> (Semantic)</td></tr>
         <tr><td><code>semantic.space.md</code></td><td><code>--ds-space-md</code></td><td><code>space/md</code> (Semantic)</td></tr>
         <tr><td><code>semantic.size.avatar.md</code></td><td><code>--ds-size-xl</code></td><td><code>size/avatar/md</code> (Semantic)</td></tr>
       </tbody>

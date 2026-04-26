@@ -25,7 +25,9 @@
     .ds-dodont__label { padding: var(--ds-dimension-8) var(--ds-dimension-16); font-size: var(--ds-font-size-14); font-weight: var(--ds-font-weight-semibold); }
     .ds-dodont__label--do { background-color: var(--ds-feedback-success-background-subtle); color: var(--ds-feedback-success-content-default); border-top: 3px solid var(--ds-feedback-success-background-subtle); }
     .ds-dodont__label--dont { background-color: var(--ds-feedback-error-background-subtle); color: var(--ds-feedback-error-content-default); border-top: 3px solid var(--ds-feedback-error-background-subtle); }
-    .ds-dodont__desc { padding: 0 var(--ds-dimension-16) var(--ds-dimension-12); font-size: var(--ds-font-size-14); color: var(--ds-content-secondary); background-color: var(--ds-background-subtle); }
+    .ds-dodont__desc { padding: var(--ds-dimension-12) var(--ds-dimension-16); font-size: var(--ds-font-size-14); color: var(--ds-content-default); }
+    .ds-dodont__item:has(.ds-dodont__label--do) .ds-dodont__desc { background-color: var(--ds-feedback-success-background-subtle); }
+    .ds-dodont__item:has(.ds-dodont__label--dont) .ds-dodont__desc { background-color: var(--ds-feedback-error-background-subtle); }
     /* Related */
     .ds-related { display: flex; gap: var(--ds-dimension-12); flex-wrap: wrap; margin-bottom: var(--ds-dimension-32); }
     .ds-related__link { padding: var(--ds-dimension-8) var(--ds-dimension-16); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-8); font-size: var(--ds-font-size-14); color: var(--ds-link-content-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
@@ -249,7 +251,7 @@
     <table class="ds-token-table">
       <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token (semantic)</th><th><span data-lang="pt">Variavel CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
       <tbody>
-        <tr><td><span data-lang="pt">cor (arco ativo)</span><span data-lang="en">color (active arc)</span></td><td><code>semantic.primary.bg-default</code></td><td><code>--ds-primary-background-default</code></td></tr>
+        <tr><td><span data-lang="pt">cor (arco ativo)</span><span data-lang="en">color (active arc)</span></td><td><code>semantic.primary.background.default</code></td><td><code>--ds-primary-background-default</code></td></tr>
         <tr><td><span data-lang="pt">cor (trilha)</span><span data-lang="en">color (track)</span></td><td><code>semantic.border.default</code></td><td><code>--ds-border-default</code></td></tr>
         <tr><td><span data-lang="pt">duração da animação</span><span data-lang="en">animation duration</span></td><td><code>foundation.duration.slow</code></td><td><code>--ds-duration-slow</code></td></tr>
       </tbody>
