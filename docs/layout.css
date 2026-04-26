@@ -603,3 +603,203 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
   .ds-sidebar__link,
   .ds-sidebar { transition: none; }
 }
+
+/* ============================================================
+   DOCS UTILITY CLASSES
+   ============================================================
+   Componentes de documentação compartilhados entre todas as
+   páginas em docs/. Antes estavam duplicados inline em cada
+   docs/*.html — centralizados aqui em 0.8.x para fix único.
+   ============================================================ */
+
+/* ---------------------------------------------------------
+   Tabelas de tokens (usadas em foundations-* e component pages)
+   --------------------------------------------------------- */
+.ds-token-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--ds-body-font-size-sm);
+  margin-bottom: var(--ds-dimension-32);
+}
+
+.ds-token-table th {
+  text-align: left;
+  padding: var(--ds-dimension-8) var(--ds-dimension-12);
+  border-bottom: var(--ds-border-width-2) solid var(--ds-border-default);
+  font-weight: var(--ds-body-font-weight-semibold);
+  color: var(--ds-content-secondary);
+}
+
+.ds-token-table td {
+  padding: var(--ds-dimension-8) var(--ds-dimension-12);
+  border-bottom: var(--ds-border-width-default) solid var(--ds-border-subtle);
+  vertical-align: middle;
+}
+
+.ds-token-table code {
+  font-size: var(--ds-body-font-size-xs);
+  font-family: var(--ds-font-family-mono);
+}
+
+/* ---------------------------------------------------------
+   Callouts (info / success / warning)
+   --------------------------------------------------------- */
+.ds-callout {
+  padding: var(--ds-dimension-16) var(--ds-dimension-20);
+  border-radius: var(--ds-radius-lg);
+  margin-bottom: var(--ds-dimension-24);
+  font-size: var(--ds-body-font-size-sm);
+  line-height: var(--ds-body-line-height-sm);
+  color: var(--ds-content-default);
+}
+
+.ds-callout--info {
+  background-color: var(--ds-feedback-info-background-subtle);
+  border: var(--ds-border-width-default) solid var(--ds-feedback-info-border-default);
+}
+
+.ds-callout--success {
+  background-color: var(--ds-feedback-success-background-subtle);
+  border: var(--ds-border-width-default) solid var(--ds-feedback-success-border-default);
+}
+
+.ds-callout--warning {
+  background-color: var(--ds-feedback-warning-background-subtle);
+  border: var(--ds-border-width-default) solid var(--ds-feedback-warning-border-default);
+}
+
+.ds-callout__title {
+  font-weight: var(--ds-body-font-weight-semibold);
+  margin-bottom: var(--ds-dimension-4);
+}
+
+/* ---------------------------------------------------------
+   Do / Don't (cards comparativos)
+   --------------------------------------------------------- */
+.ds-dodont {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--ds-dimension-16);
+  margin-bottom: var(--ds-dimension-32);
+}
+
+.ds-dodont__item {
+  border-radius: var(--ds-radius-lg);
+  overflow: hidden;
+  border: var(--ds-border-width-default) solid var(--ds-border-default);
+}
+
+.ds-dodont__preview {
+  padding: var(--ds-dimension-24);
+  background-color: var(--ds-background-default);
+  border-bottom: var(--ds-border-width-default) solid var(--ds-border-default);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--ds-dimension-12);
+  align-items: center;
+  justify-content: center;
+}
+
+.ds-dodont__label {
+  padding: var(--ds-dimension-8) var(--ds-dimension-16);
+  font-size: var(--ds-body-font-size-sm);
+  font-weight: var(--ds-body-font-weight-semibold);
+}
+
+.ds-dodont__label--do {
+  background-color: var(--ds-feedback-success-background-subtle);
+  color: var(--ds-feedback-success-content-default);
+  border-top: 3px solid var(--ds-feedback-success-background-subtle);
+}
+
+.ds-dodont__label--dont {
+  background-color: var(--ds-feedback-error-background-subtle);
+  color: var(--ds-feedback-error-content-default);
+  border-top: 3px solid var(--ds-feedback-error-background-subtle);
+}
+
+.ds-dodont__desc {
+  padding: var(--ds-dimension-12) var(--ds-dimension-16);
+  font-size: var(--ds-body-font-size-sm);
+  color: var(--ds-content-default);
+}
+
+.ds-dodont__item:has(.ds-dodont__label--do) .ds-dodont__desc {
+  background-color: var(--ds-feedback-success-background-subtle);
+}
+
+.ds-dodont__item:has(.ds-dodont__label--dont) .ds-dodont__desc {
+  background-color: var(--ds-feedback-error-background-subtle);
+}
+
+@media (max-width: 768px) {
+  .ds-dodont {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------------------------------------------------------
+   Anatomy (component anatomy preview)
+   --------------------------------------------------------- */
+.ds-anatomy {
+  padding: var(--ds-dimension-32);
+  background-color: var(--ds-background-default);
+  border: var(--ds-border-width-default) solid var(--ds-border-default);
+  border-radius: var(--ds-radius-lg);
+  margin-bottom: var(--ds-dimension-16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.ds-anatomy__marker {
+  position: absolute;
+  width: var(--ds-size-sm);
+  height: var(--ds-size-sm);
+  border-radius: var(--ds-radius-full);
+  background-color: var(--ds-primary-background-default);
+  color: var(--ds-primary-content-default);
+  font-size: var(--ds-body-font-size-2xs);
+  font-weight: var(--ds-body-font-weight-bold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ds-anatomy-legend {
+  font-size: var(--ds-body-font-size-sm);
+  color: var(--ds-content-secondary);
+  margin-bottom: var(--ds-dimension-32);
+  line-height: var(--ds-body-line-height-md);
+}
+
+.ds-anatomy-legend strong {
+  color: var(--ds-content-default);
+}
+
+/* ---------------------------------------------------------
+   Related (cards de links pra tópicos relacionados)
+   --------------------------------------------------------- */
+.ds-related {
+  display: flex;
+  gap: var(--ds-dimension-12);
+  flex-wrap: wrap;
+  margin-bottom: var(--ds-dimension-32);
+}
+
+.ds-related__link {
+  padding: var(--ds-dimension-8) var(--ds-dimension-16);
+  border: var(--ds-border-width-default) solid var(--ds-border-default);
+  border-radius: var(--ds-radius-md);
+  font-size: var(--ds-body-font-size-sm);
+  color: var(--ds-link-content-default);
+  text-decoration: none;
+  transition: border-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
+              background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
+}
+
+.ds-related__link:hover {
+  border-color: var(--ds-primary-background-default);
+  background-color: var(--ds-overlay-subtle);
+}
