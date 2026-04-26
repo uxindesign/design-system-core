@@ -16,7 +16,6 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { execSync } from "node:child_process";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
@@ -34,20 +33,6 @@ function writeJson(p, data) {
 }
 
 const pkg = readJson(path.join(ROOT, "package.json"));
-// Use latest git commit ISO date — deterministic per commit, evita ruído
-// de timestamp em CI re-runs e mantém artefatos reproduzíveis.
-const now = (() => {
-  try {
-    const seconds = parseInt(
-      execSync("git log -1 --format=%ct", { cwd: ROOT, stdio: ["ignore", "pipe", "ignore"] })
-        .toString().trim(),
-      10
-    );
-    return new Date(seconds * 1000).toISOString();
-  } catch (e) {
-    return new Date().toISOString();
-  }
-})();
 
 // -----------------------------------------------------------------------------
 // components.json
@@ -114,7 +99,6 @@ const components = COMPONENTS.map((c) => {
 });
 
 writeJson(path.join(API_DIR, "components.json"), {
-  generatedAt: now,
   version: pkg.version,
   count: components.length,
   components,
@@ -154,7 +138,6 @@ Object.assign(semanticLight, flattenTokens(readJson(path.join(tokensRoot, "seman
 Object.assign(semanticDark, flattenTokens(readJson(path.join(tokensRoot, "semantic", "dark.json"))));
 
 writeJson(path.join(API_DIR, "tokens.json"), {
-  generatedAt: now,
   version: pkg.version,
   counts: {
     foundation: Object.keys(foundationTokens).length,
@@ -195,7 +178,6 @@ const adrs = adrFiles.map((f) => {
 });
 
 writeJson(path.join(API_DIR, "adrs.json"), {
-  generatedAt: now,
   version: pkg.version,
   count: adrs.length,
   adrs,
@@ -234,7 +216,6 @@ const foundations = FOUNDATIONS_META.map((f) => {
 });
 
 writeJson(path.join(API_DIR, "foundations.json"), {
-  generatedAt: now,
   version: pkg.version,
   count: foundations.length,
   foundations,

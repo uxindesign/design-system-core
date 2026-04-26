@@ -26,7 +26,6 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { execSync } from "node:child_process";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
@@ -42,19 +41,6 @@ function readMd(p) {
 }
 
 const pkg = readJson(path.join(ROOT, "package.json"));
-// Determinístico: ISO date do último commit. Evita CI gerar diff só por timestamp.
-const now = (() => {
-  try {
-    const seconds = parseInt(
-      execSync("git log -1 --format=%ct", { cwd: ROOT, stdio: ["ignore", "pipe", "ignore"] })
-        .toString().trim(),
-      10
-    );
-    return new Date(seconds * 1000).toISOString();
-  } catch (e) {
-    return new Date().toISOString();
-  }
-})();
 
 // -----------------------------------------------------------------------------
 // llms.txt — índice
@@ -152,7 +138,7 @@ ${adrs.map((a) => `- [ADR-${a.num} — ${a.title}](${BASE_URL}/docs/decisions/${
 
 ---
 
-Gerado por \`scripts/build-llms.mjs\` em ${now}.
+Gerado por \`scripts/build-llms.mjs\`. Versão atual: ${pkg.version}.
 `;
 
 fs.writeFileSync(path.join(DOCS_DIR, "llms.txt"), llmsTxt);
@@ -203,7 +189,7 @@ Verificação automática de coerência Figma ↔ JSON ↔ CSS: \`scripts/tokens
 addSection("Tokens", tokensMd);
 
 // Rodapé
-sections.push(`\n\n═══════════════════════════════════════════════════════════\n\nGerado por scripts/build-llms.mjs em ${now}\nVersão: ${pkg.version}\nSite: ${BASE_URL}/\n`);
+sections.push(`\n\n═══════════════════════════════════════════════════════════\n\nGerado por scripts/build-llms.mjs.\nVersão: ${pkg.version}\nSite: ${BASE_URL}/\n`);
 
 const llmsFull = `# Design System Core — conteúdo consolidado
 

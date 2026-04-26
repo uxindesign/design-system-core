@@ -28,7 +28,6 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { execSync } from "node:child_process";
 
 import {
   readFigmaSnapshot,
@@ -39,20 +38,8 @@ import {
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
+const pkg = JSON.parse(fs.readFileSync(path.join(ROOT, "package.json"), "utf8"));
 
-// Determinístico: ISO date do último commit. Evita CI gerar diff só por timestamp.
-const REPORT_TIMESTAMP = (() => {
-  try {
-    const seconds = parseInt(
-      execSync("git log -1 --format=%ct", { cwd: ROOT, stdio: ["ignore", "pipe", "ignore"] })
-        .toString().trim(),
-      10
-    );
-    return new Date(seconds * 1000).toISOString();
-  } catch (e) {
-    return new Date().toISOString();
-  }
-})();
 const TOKENS_DIR = path.join(ROOT, "tokens");
 const CSS_DIR = path.join(ROOT, "css", "tokens", "generated");
 const OUT_JSON = path.join(ROOT, "docs", "api", "tokens-sync.json");
@@ -621,7 +608,7 @@ function writeHtmlReport(report) {
   <div class="ds-section">
     <span class="ds-sync-status ${status.klass}">${status.label}</span>
     <div class="ds-sync-meta">
-      <div><strong>Última verificação:</strong> ${report.generatedAt}</div>
+      <div><strong>Versão:</strong> ${report.version || ""}</div>
       <div><strong>Tokens JSON:</strong> ${report.totals.jsonTokens}</div>
       <div><strong>Divergências:</strong> ${report.totals.errors}</div>
       <div><strong>Avisos:</strong> ${report.totals.warnings}</div>
@@ -678,7 +665,7 @@ async function main() {
     figmaWarnings;
 
   const report = {
-    generatedAt: REPORT_TIMESTAMP,
+    version: pkg.version,
     totals: {
       jsonTokens: totalTokens,
       sharedTokens: Object.keys(bundle.shared).length,
