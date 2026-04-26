@@ -28,6 +28,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { execSync } from "node:child_process";
 
 import {
   readFigmaSnapshot,
@@ -38,6 +39,16 @@ import {
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
+
+// Determinístico: ISO date do último commit. Evita CI gerar diff só por timestamp.
+const REPORT_TIMESTAMP = (() => {
+  try {
+    return execSync("git log -1 --format=%cI", { cwd: ROOT, stdio: ["ignore", "pipe", "ignore"] })
+      .toString().trim();
+  } catch (e) {
+    return new Date().toISOString();
+  }
+})();
 const TOKENS_DIR = path.join(ROOT, "tokens");
 const CSS_DIR = path.join(ROOT, "css", "tokens", "generated");
 const OUT_JSON = path.join(ROOT, "docs", "api", "tokens-sync.json");
@@ -663,7 +674,7 @@ async function main() {
     figmaWarnings;
 
   const report = {
-    generatedAt: new Date().toISOString(),
+    generatedAt: REPORT_TIMESTAMP,
     totals: {
       jsonTokens: totalTokens,
       sharedTokens: Object.keys(bundle.shared).length,

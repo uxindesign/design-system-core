@@ -16,6 +16,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { execSync } from "node:child_process";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
@@ -33,7 +34,16 @@ function writeJson(p, data) {
 }
 
 const pkg = readJson(path.join(ROOT, "package.json"));
-const now = new Date().toISOString();
+// Use latest git commit ISO date — deterministic per commit, evita ruído
+// de timestamp em CI re-runs e mantém artefatos reproduzíveis.
+const now = (() => {
+  try {
+    return execSync("git log -1 --format=%cI", { cwd: ROOT, stdio: ["ignore", "pipe", "ignore"] })
+      .toString().trim();
+  } catch (e) {
+    return new Date().toISOString();
+  }
+})();
 
 // -----------------------------------------------------------------------------
 // components.json
