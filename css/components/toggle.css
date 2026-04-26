@@ -20,13 +20,13 @@
   background-color: var(--ds-overlay-subtle);
 }
 
-/* Hidden native checkbox */
+/* Hidden native checkbox — DEFAULT = Medium (Figma: 40×22 track, 16×16 thumb) */
 .ds-toggle {
   appearance: none;
   -webkit-appearance: none;
   position: relative;
-  width: var(--ds-size-xl);
-  height: var(--ds-size-sm);
+  width: var(--ds-size-xl); /* 40px */
+  height: 22px; /* literal — Figma usa 22px sem variable bindada */
   background-color: var(--ds-surface-default);
   border: var(--ds-border-width-default) solid var(--ds-border-control-default);
   border-radius: var(--ds-radius-full);
@@ -36,14 +36,14 @@
               border-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
 }
 
-/* Thumb */
+/* Thumb (md default 16×16) */
 .ds-toggle::after {
   content: '';
   position: absolute;
   top: 2px;
   left: 2px;
-  width: 14px;
-  height: 14px;
+  width: var(--ds-size-xs); /* 16px */
+  height: var(--ds-size-xs);
   border-radius: var(--ds-radius-full);
   background-color: var(--ds-content-secondary);
   transition: transform var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
@@ -63,7 +63,7 @@
 
 .ds-toggle:checked::after {
   background-color: var(--ds-primary-content-default);
-  transform: translateX(16px);
+  transform: translateX(20px); /* md: 40 - 16 - 4 = 20 */
 }
 
 /* Focus */
@@ -96,34 +96,34 @@
    Sizes
    --------------------------------------------------------- */
 
-/* Small */
+/* Small (Figma: 32×18 track, 12×12 thumb) */
 .ds-toggle--sm {
-  width: var(--ds-size-md);
-  height: var(--ds-size-xs);
+  width: var(--ds-size-lg); /* 32px */
+  height: 18px; /* literal — Figma usa 18px sem variable bindada */
 }
 
 .ds-toggle--sm::after {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
 }
 
 .ds-toggle--sm:checked::after {
-  transform: translateX(12px);
+  transform: translateX(16px); /* sm: 32 - 12 - 4 = 16 */
 }
 
-/* Large */
+/* Large (Figma: 48×26 track, 20×20 thumb) */
 .ds-toggle--lg {
-  width: var(--ds-size-2xl);
-  height: var(--ds-size-md);
+  width: var(--ds-size-2xl); /* 48px */
+  height: 26px; /* literal — Figma usa 26px sem variable bindada */
 }
 
 .ds-toggle--lg::after {
-  width: 18px;
-  height: 18px;
+  width: var(--ds-size-sm); /* 20px */
+  height: var(--ds-size-sm);
 }
 
 .ds-toggle--lg:checked::after {
-  transform: translateX(20px);
+  transform: translateX(24px); /* lg: 48 - 20 - 4 = 24 */
 }
 
 /* ---------------------------------------------------------

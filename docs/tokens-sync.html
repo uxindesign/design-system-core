@@ -7,15 +7,18 @@
 <link rel="stylesheet" href="../css/design-system.css">
 <link rel="stylesheet" href="layout.css">
 <style>
-  .ds-sync-status { display:inline-flex; align-items:center; gap: var(--ds-dimension-8); padding: var(--ds-dimension-12) var(--ds-dimension-20); border-radius: var(--ds-radius-lg); font-weight: var(--ds-body-font-weight-semibold); }
-  .ds-sync-status.ok { background: var(--ds-feedback-success-background-default); color: var(--ds-feedback-success-content-default); }
-  .ds-sync-status.error { background: var(--ds-feedback-error-background-default); color: var(--ds-feedback-error-content-default); }
+  /* Status badge — usa o componente Badge do DS, não Button */
+  .ds-sync-status { display:inline-flex; align-items:center; gap: var(--ds-dimension-8); padding: var(--ds-dimension-2) var(--ds-dimension-8); border-radius: var(--ds-radius-full); font-size: var(--ds-body-font-size-sm); font-weight: var(--ds-body-font-weight-semibold); }
+  .ds-sync-status.ok { background: var(--ds-feedback-success-background-subtle); color: var(--ds-feedback-success-content-default); border: var(--ds-border-width-default) solid var(--ds-feedback-success-border-default); }
+  .ds-sync-status.error { background: var(--ds-feedback-error-background-subtle); color: var(--ds-feedback-error-content-default); border: var(--ds-border-width-default) solid var(--ds-feedback-error-border-default); }
   .ds-sync-meta { display:flex; gap: var(--ds-dimension-24); margin-top: var(--ds-dimension-16); font-size: var(--ds-body-font-size-sm); color: var(--ds-content-secondary); }
   .ds-sync-meta strong { color: var(--ds-content-default); font-weight: var(--ds-body-font-weight-semibold); }
   .ds-sync-table { width:100%; border-collapse: collapse; margin-top: var(--ds-dimension-24); font-size: var(--ds-body-font-size-sm); }
   .ds-sync-table th, .ds-sync-table td { text-align:left; padding: var(--ds-dimension-12); border-bottom: 1px solid var(--ds-border-default); }
   .ds-sync-table th { font-weight: var(--ds-body-font-weight-semibold); background: var(--ds-background-subtle); }
-  .ds-sync-banner { background: var(--ds-feedback-info-background-default); color: var(--ds-feedback-info-content-default); padding: var(--ds-dimension-16) var(--ds-dimension-20); border-radius: var(--ds-radius-md); margin-bottom: var(--ds-dimension-24); font-size: var(--ds-body-font-size-sm); }
+  /* Banner info — usa subtle bg pra <code> ter contraste */
+  .ds-sync-banner { background: var(--ds-feedback-info-background-subtle); color: var(--ds-feedback-info-content-default); border: var(--ds-border-width-default) solid var(--ds-feedback-info-border-default); padding: var(--ds-dimension-16) var(--ds-dimension-20); border-radius: var(--ds-radius-md); margin-bottom: var(--ds-dimension-24); font-size: var(--ds-body-font-size-sm); }
+  .ds-sync-banner code { background: var(--ds-surface-default); color: var(--ds-feedback-info-content-default); padding: var(--ds-dimension-2) var(--ds-dimension-6); border-radius: var(--ds-radius-sm); font-family: var(--ds-body-font-family-sans); font-size: 0.9em; border: var(--ds-border-width-default) solid var(--ds-feedback-info-border-default); }
 </style>
 <script>
   (function(){var l=localStorage.getItem('ds-lang');if(l)document.documentElement.setAttribute('lang',l)})();
@@ -37,11 +40,6 @@
     <select class="ds-theme-switcher__select" id="lang-switcher" aria-label="Language">
       <option value="pt">PT</option>
       <option value="en">EN</option>
-    </select>
-    <select class="ds-theme-switcher__select" id="theme-switcher">
-      <option value="default">Default (Blue)</option>
-      <option value="ocean">Ocean (Cyan)</option>
-      <option value="forest">Forest (Emerald)</option>
     </select>
     <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg> Dark</button>
   </div>

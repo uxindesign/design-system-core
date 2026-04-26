@@ -140,16 +140,11 @@
         <button class="ds-preview__tab" role="tab" aria-selected="false" data-tab="code">Code</button>
       </div>
       <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
-        <div class="ds-preview__canvas ds-preview__canvas--centered" style="gap:var(--ds-dimension-64);padding:var(--ds-dimension-64) var(--ds-dimension-32);">
+        <div class="ds-preview__canvas" style="display:grid;grid-template-columns:repeat(2, 1fr);gap:var(--ds-dimension-96) var(--ds-dimension-128);padding:var(--ds-dimension-64) var(--ds-dimension-96);justify-items:center;align-items:center;">
 
           <div class="ds-tooltip ds-tooltip--top">
             <button class="ds-btn ds-btn--outline ds-btn--sm" aria-describedby="tip-top">Top</button>
             <span class="ds-tooltip__content" id="tip-top" role="tooltip">Tooltip on top</span>
-          </div>
-
-          <div class="ds-tooltip ds-tooltip--right">
-            <button class="ds-btn ds-btn--outline ds-btn--sm" aria-describedby="tip-right">Right</button>
-            <span class="ds-tooltip__content" id="tip-right" role="tooltip">Tooltip on right</span>
           </div>
 
           <div class="ds-tooltip ds-tooltip--bottom">
@@ -160,6 +155,11 @@
           <div class="ds-tooltip ds-tooltip--left">
             <button class="ds-btn ds-btn--outline ds-btn--sm" aria-describedby="tip-left">Left</button>
             <span class="ds-tooltip__content" id="tip-left" role="tooltip">Tooltip on left</span>
+          </div>
+
+          <div class="ds-tooltip ds-tooltip--right">
+            <button class="ds-btn ds-btn--outline ds-btn--sm" aria-describedby="tip-right">Right</button>
+            <span class="ds-tooltip__content" id="tip-right" role="tooltip">Tooltip on right</span>
           </div>
 
         </div>
