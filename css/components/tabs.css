@@ -8,13 +8,17 @@
   gap: 0;
 }
 
+/* Tab — Figma: padding pl/pr space/lg, pt space/md (12), pb 0
+   Label: label/md (14px Bold / 20px), default content/secondary, hover content/default */
 .ds-tab {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: var(--ds-space-control-padding-10) var(--ds-space-lg);
+  padding: var(--ds-space-md) var(--ds-space-lg);
+  padding-bottom: 0;
   font-size: var(--ds-body-font-size-sm);
-  font-weight: var(--ds-body-font-weight-medium);
+  font-weight: var(--ds-body-font-weight-bold);
+  line-height: var(--ds-body-line-height-sm);
   color: var(--ds-content-secondary);
   background: none;
   border: none;

@@ -2,12 +2,13 @@
    COMPONENT: Divider
    ============================================================ */
 
-/* Horizontal divider (default) */
+/* Horizontal divider (default) — Figma: fill border/subtle, radius/md */
 .ds-divider {
   border: none;
   height: var(--ds-border-width-default);
   width: 100%;
-  background-color: var(--ds-border-default);
+  background-color: var(--ds-border-subtle);
+  border-radius: var(--ds-radius-md);
   margin: var(--ds-space-md) 0;
 }
 

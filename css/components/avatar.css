@@ -11,13 +11,13 @@
   background-color: var(--ds-primary-background-default);
   color: var(--ds-primary-content-default);
   font-family: var(--ds-body-font-family-sans);
-  font-weight: var(--ds-body-font-weight-semibold);
+  font-weight: var(--ds-body-font-weight-bold);
   flex-shrink: 0;
   overflow: hidden;
   user-select: none;
 }
 
-/* Default size: md */
+/* Default size: md (Figma: 40×40, label/md = 14px Bold) */
 .ds-avatar {
   width: var(--ds-size-xl);
   height: var(--ds-size-xl);
@@ -30,7 +30,7 @@
 .ds-avatar--sm {
   width: var(--ds-size-lg);
   height: var(--ds-size-lg);
-  font-size: var(--ds-body-font-size-xs);
+  font-size: var(--ds-body-font-size-sm);
 }
 
 .ds-avatar--lg {

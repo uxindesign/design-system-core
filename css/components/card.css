@@ -15,23 +15,28 @@
   gap: var(--ds-space-sm);
 }
 
+/* Title — heading/sm: 20px SemiBold / 28px (Figma) */
 .ds-card__title {
-  font-size: var(--ds-body-font-size-lg);
+  font-size: var(--ds-body-font-size-xl);
   font-weight: var(--ds-body-font-weight-semibold);
   color: var(--ds-content-default);
-  line-height: var(--ds-body-line-height-sm);
+  line-height: var(--ds-body-line-height-xl);
 }
 
+/* Subtitle — label/md: 14px Bold / 20px (Figma) */
 .ds-card__subtitle {
   font-size: var(--ds-body-font-size-sm);
+  font-weight: var(--ds-body-font-weight-bold);
+  line-height: var(--ds-body-line-height-sm);
   color: var(--ds-content-secondary);
 }
 
+/* Body — body/sm: 14px Regular / 20px (Figma) */
 .ds-card__body {
   padding: 0 var(--ds-space-lg) var(--ds-space-lg);
   font-size: var(--ds-body-font-size-sm);
   color: var(--ds-content-secondary);
-  line-height: var(--ds-body-line-height-md);
+  line-height: var(--ds-body-line-height-sm);
 }
 
 /* ---------------------------------------------------------

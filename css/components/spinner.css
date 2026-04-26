@@ -6,11 +6,11 @@
   to { transform: rotate(360deg); }
 }
 
-/* Base spinner */
+/* Base spinner — Figma: track border/subtle, indicator border/brand */
 .ds-spinner {
   display: inline-block;
   border-radius: var(--ds-radius-full);
-  border: 2px solid var(--ds-border-default);
+  border: 2px solid var(--ds-border-subtle);
   border-top-color: var(--ds-primary-background-default);
   animation: ds-spin 0.6s linear infinite;
   flex-shrink: 0;

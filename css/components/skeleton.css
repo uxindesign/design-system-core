@@ -7,10 +7,10 @@
   50% { opacity: 0.4; }
 }
 
-/* Base skeleton */
+/* Base skeleton — Figma: fill background/subtle */
 .ds-skeleton {
   display: block;
-  background-color: var(--ds-background-disabled);
+  background-color: var(--ds-background-subtle);
   animation: ds-pulse 1.5s ease-in-out infinite;
 }
 
@@ -18,11 +18,11 @@
    Variants
    --------------------------------------------------------- */
 
-/* Text skeleton */
+/* Text skeleton — Figma: 12px height, radius/md */
 .ds-skeleton--text {
-  height: var(--ds-size-xs);
+  height: var(--ds-dimension-12);
   width: 100%;
-  border-radius: var(--ds-radius-sm);
+  border-radius: var(--ds-radius-md);
 }
 
 /* Circle skeleton */

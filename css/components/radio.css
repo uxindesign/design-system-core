@@ -188,19 +188,19 @@
   min-width: 0;
 }
 
-/* Label text (label/md: 14px medium / 20px) */
+/* Label text (label/md: 14px Bold / 20px) */
 .ds-radio__label {
   font-size: var(--ds-body-font-size-sm);
-  font-weight: var(--ds-body-font-weight-medium);
+  font-weight: var(--ds-body-font-weight-bold);
   line-height: var(--ds-body-line-height-sm);
   color: var(--ds-content-default);
 }
 
-/* Description (body/sm: 14px regular / 22px, multiline) */
+/* Description (body/sm: 14px Regular / 20px) */
 .ds-radio__description {
   font-size: var(--ds-body-font-size-sm);
   font-weight: var(--ds-body-font-weight-regular);
-  line-height: var(--ds-body-line-height-md);
+  line-height: var(--ds-body-line-height-sm);
   color: var(--ds-content-default);
   white-space: pre-wrap;
 }

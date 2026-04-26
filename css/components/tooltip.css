@@ -10,14 +10,17 @@
 /* Tooltip content
    ========================================================================== */
 
+/* Content — Figma: padding space/sm × space/xs, radius/sm,
+   bg background/inverse, label body/sm (14/20) */
 .ds-tooltip__content {
   position: absolute;
   background: var(--ds-background-inverse);
   color: var(--ds-content-inverse);
   padding: var(--ds-space-xs) var(--ds-space-sm);
   border-radius: var(--ds-radius-sm);
-  font-size: var(--ds-body-font-size-xs);
+  font-size: var(--ds-body-font-size-sm);
   font-weight: var(--ds-body-font-weight-regular);
+  line-height: var(--ds-body-line-height-sm);
   white-space: nowrap;
   pointer-events: none;
   z-index: 40;

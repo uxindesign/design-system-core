@@ -7,15 +7,19 @@
   align-items: flex-start;
   gap: var(--ds-space-sm);
   padding: var(--ds-space-md);
-  border-radius: var(--ds-radius-md);
+  border-radius: var(--ds-radius-lg);
   font-size: var(--ds-body-font-size-sm);
-  line-height: var(--ds-body-line-height-md);
+  line-height: var(--ds-body-line-height-sm);
 }
 
+/* Icon — Figma: container size/md (24), glyph 20 (size/sm) */
 .ds-alert__icon {
   flex-shrink: 0;
-  width: var(--ds-size-sm);
-  height: var(--ds-size-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--ds-size-md);
+  height: var(--ds-size-md);
 }
 
 .ds-alert__icon .material-symbols-outlined {
@@ -30,9 +34,11 @@
   gap: var(--ds-space-xs);
 }
 
+/* Title — label/md: 14px Bold / 20px */
 .ds-alert__title {
-  font-size: var(--ds-body-font-size-xs);
+  font-size: var(--ds-body-font-size-sm);
   font-weight: var(--ds-body-font-weight-bold);
+  line-height: var(--ds-body-line-height-sm);
 }
 
 .ds-alert__close {
