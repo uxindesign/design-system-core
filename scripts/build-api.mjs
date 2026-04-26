@@ -38,8 +38,12 @@ const pkg = readJson(path.join(ROOT, "package.json"));
 // de timestamp em CI re-runs e mantém artefatos reproduzíveis.
 const now = (() => {
   try {
-    return execSync("git log -1 --format=%cI", { cwd: ROOT, stdio: ["ignore", "pipe", "ignore"] })
-      .toString().trim();
+    const seconds = parseInt(
+      execSync("git log -1 --format=%ct", { cwd: ROOT, stdio: ["ignore", "pipe", "ignore"] })
+        .toString().trim(),
+      10
+    );
+    return new Date(seconds * 1000).toISOString();
   } catch (e) {
     return new Date().toISOString();
   }

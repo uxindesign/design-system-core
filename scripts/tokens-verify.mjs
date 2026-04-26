@@ -43,8 +43,12 @@ const ROOT = path.resolve(__dirname, "..");
 // Determinístico: ISO date do último commit. Evita CI gerar diff só por timestamp.
 const REPORT_TIMESTAMP = (() => {
   try {
-    return execSync("git log -1 --format=%cI", { cwd: ROOT, stdio: ["ignore", "pipe", "ignore"] })
-      .toString().trim();
+    const seconds = parseInt(
+      execSync("git log -1 --format=%ct", { cwd: ROOT, stdio: ["ignore", "pipe", "ignore"] })
+        .toString().trim(),
+      10
+    );
+    return new Date(seconds * 1000).toISOString();
   } catch (e) {
     return new Date().toISOString();
   }
