@@ -64,6 +64,14 @@ Quando há divergência entre artefatos, resolve-se por tipo de informação:
 - Quando criar texto novo, escolha o Text Style apropriado pela combinação `(fontSize, fontWeight, fontFamily)` e aplique via `setTextStyleIdAsync`. Limpe bindings individuais (`setBoundVariable(prop, null)`) para Text Style ser autoritário.
 - Cadeia de propagação: Variables → Text Styles → Component texts → CSS. CSS pode emitir utility classes (`.ds-text-body-sm`) que aliasam Variables, ou os componentes consomem direto via `var()`.
 
+**Regra operacional 5 — Figma é fonte de verdade absoluta. Quando o usuário pedir algo que diverge do Figma, alertar antes de aplicar.** Não basta executar — o agente deve **comparar o pedido contra o estado atual do Figma e levantar a divergência explicitamente**, antes de qualquer escrita.
+
+- Toda solicitação que toque valor visual ou estrutura (token consumido, dimensão, cor, raio, padding, gap, weight, family, line-height) **passa por inspeção do Figma equivalente primeiro** via `use_figma` ou `get_variable_defs`.
+- Se o pedido bate com Figma → aplicar. Se diverge → **parar e relatar**: "no Figma esse componente usa X (valor + variable), você pediu Y. Quer (a) atualizar o Figma primeiro, (b) seguir mesmo assim sabendo que vai gerar drift, ou (c) abrir ADR pra mudar a regra?"
+- Suposições vagas do tipo "deve estar igual ao que tem no CSS" ou "deve ser igual ao que era antes" **não substituem a inspeção real do Figma**. CSS e código documentam o estado anterior, não o estado atual de verdade.
+- Mudança de Figma → propaga pra JSON → CSS → consumidor. Sentido inverso (mudar CSS pra acomodar pedido sem checar Figma) é **proibido**, vira drift silencioso.
+- Quando o usuário pede uma mudança que requer mexer no Figma também: confirma antes de modificar Figma; idealmente o usuário faz a mudança no Figma e o agente espelha.
+
 ### Camadas de consumo de tokens (2-layer, pós-0.7.0)
 
 **Foundation nunca aparece em consumidor final.** Consumidor final = `css/components/*.css`, `css/base/*.css`, bindings em componentes Figma, exemplos em docs de uso. Só tokens Semantic podem ser consumidos lá.
