@@ -22,20 +22,20 @@
 
 .ds-input,
 .ds-input--md {
-  height: var(--ds-size-control-md);
-  padding: 0 var(--ds-space-control-padding-x-md);
+  height: var(--ds-size-xl);
+  padding: 0 var(--ds-space-lg);
   font-size: var(--ds-control-font-size-md);
 }
 
 .ds-input--sm {
-  height: var(--ds-size-control-sm);
-  padding: 0 var(--ds-space-control-padding-x-sm);
+  height: var(--ds-size-lg);
+  padding: 0 var(--ds-space-md);
   font-size: var(--ds-control-font-size-sm);
 }
 
 .ds-input--lg {
-  height: var(--ds-size-control-lg);
-  padding: 0 var(--ds-space-control-padding-x-lg);
+  height: var(--ds-size-2xl);
+  padding: 0 var(--ds-space-xl);
   font-size: var(--ds-control-font-size-lg);
 }
 
@@ -65,21 +65,21 @@
 .ds-input__icon {
   flex-shrink: 0;
   color: var(--ds-content-tertiary);
-  width: var(--ds-size-control-icon-md);
-  height: var(--ds-size-control-icon-md);
-  font-size: var(--ds-size-control-icon-md);
+  width: var(--ds-size-sm);
+  height: var(--ds-size-sm);
+  font-size: var(--ds-size-sm);
 }
 
 .ds-input--sm .ds-input__icon {
-  width: var(--ds-size-control-icon-sm);
-  height: var(--ds-size-control-icon-sm);
-  font-size: var(--ds-size-control-icon-sm);
+  width: var(--ds-size-xs);
+  height: var(--ds-size-xs);
+  font-size: var(--ds-size-xs);
 }
 
 .ds-input--lg .ds-input__icon {
-  width: var(--ds-size-control-icon-lg);
-  height: var(--ds-size-control-icon-lg);
-  font-size: var(--ds-size-control-icon-lg);
+  width: var(--ds-size-md);
+  height: var(--ds-size-md);
+  font-size: var(--ds-size-md);
 }
 
 /* States

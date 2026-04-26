@@ -10,7 +10,7 @@
   cursor: pointer;
   padding: var(--ds-space-xs) var(--ds-space-xs);
   border-radius: var(--ds-radius-sm);
-  min-height: var(--ds-size-control-min-target);
+  min-height: var(--ds-size-2xl);
   font-size: var(--ds-body-font-size-sm);
   color: var(--ds-content-default);
   transition: background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
@@ -24,8 +24,8 @@
 .ds-checkbox {
   appearance: none;
   -webkit-appearance: none;
-  width: var(--ds-size-control-icon-md);
-  height: var(--ds-size-control-icon-md);
+  width: var(--ds-size-sm);
+  height: var(--ds-size-sm);
   border: var(--ds-border-width-default) solid var(--ds-border-control-default);
   border-radius: var(--ds-radius-sm);
   background-color: var(--ds-surface-default);
@@ -131,8 +131,8 @@
 
 /* Small */
 .ds-checkbox--sm {
-  width: var(--ds-size-control-icon-sm);
-  height: var(--ds-size-control-icon-sm);
+  width: var(--ds-size-xs);
+  height: var(--ds-size-xs);
 }
 
 .ds-checkbox--sm::after {
@@ -150,8 +150,8 @@
 
 /* Large */
 .ds-checkbox--lg {
-  width: var(--ds-size-control-icon-lg);
-  height: var(--ds-size-control-icon-lg);
+  width: var(--ds-size-md);
+  height: var(--ds-size-md);
 }
 
 .ds-checkbox--lg::after {

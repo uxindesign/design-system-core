@@ -196,7 +196,7 @@ const FOUNDATIONS_META = [
   { slug: "colors", name: "Colors", file: "colors.json", url: "foundations-colors.html" },
   { slug: "theme-colors", name: "Theme Colors", file: null, url: "foundations-theme-colors.html", note: "Derived from semantic layer" },
   { slug: "typography", name: "Typography", file: "typography.json", url: "foundations-typography.html" },
-  { slug: "spacing", name: "Spacing", file: "spacing.json", url: "foundations-spacing.html" },
+  { slug: "dimension", name: "Dimension", file: "dimension.json", url: "foundations-spacing.html" },
   { slug: "radius", name: "Radius", file: "radius.json", url: "foundations-radius.html" },
   { slug: "elevation", name: "Elevation", file: "shadows.json", url: "foundations-elevation.html" },
   { slug: "borders", name: "Borders", file: "stroke.json", url: "foundations-borders.html" },

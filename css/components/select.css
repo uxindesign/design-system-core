@@ -22,20 +22,20 @@
 
 .ds-select,
 .ds-select--md {
-  height: var(--ds-size-control-md);
-  padding: 0 var(--ds-space-control-padding-x-md);
+  height: var(--ds-size-xl);
+  padding: 0 var(--ds-space-lg);
   font-size: var(--ds-control-font-size-md);
 }
 
 .ds-select--sm {
-  height: var(--ds-size-control-sm);
-  padding: 0 var(--ds-space-control-padding-x-sm);
+  height: var(--ds-size-lg);
+  padding: 0 var(--ds-space-md);
   font-size: var(--ds-control-font-size-sm);
 }
 
 .ds-select--lg {
-  height: var(--ds-size-control-lg);
-  padding: 0 var(--ds-space-control-padding-x-lg);
+  height: var(--ds-size-2xl);
+  padding: 0 var(--ds-space-xl);
   font-size: var(--ds-control-font-size-lg);
 }
 
@@ -55,7 +55,7 @@
   cursor: pointer;
   min-width: 0;
   padding-left: var(--ds-space-xs);
-  padding-right: calc(var(--ds-size-control-icon-sm) + var(--ds-space-md) + var(--ds-space-control-padding-x-md));
+  padding-right: calc(var(--ds-size-xs) + var(--ds-space-md) + var(--ds-space-lg));
 }
 
 .ds-select__field:invalid,
@@ -72,8 +72,8 @@
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
-  width: var(--ds-size-control-icon-sm);
-  height: var(--ds-size-control-icon-sm);
+  width: var(--ds-size-xs);
+  height: var(--ds-size-xs);
   color: var(--ds-content-tertiary);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
@@ -95,21 +95,21 @@
 .ds-select__icon {
   flex-shrink: 0;
   color: var(--ds-content-tertiary);
-  font-size: var(--ds-size-control-icon-md);
-  width: var(--ds-size-control-icon-md);
-  height: var(--ds-size-control-icon-md);
+  font-size: var(--ds-size-sm);
+  width: var(--ds-size-sm);
+  height: var(--ds-size-sm);
 }
 
 .ds-select--sm .ds-select__icon {
-  font-size: var(--ds-size-control-icon-sm);
-  width: var(--ds-size-control-icon-sm);
-  height: var(--ds-size-control-icon-sm);
+  font-size: var(--ds-size-xs);
+  width: var(--ds-size-xs);
+  height: var(--ds-size-xs);
 }
 
 .ds-select--lg .ds-select__icon {
-  font-size: var(--ds-size-control-icon-lg);
-  width: var(--ds-size-control-icon-lg);
-  height: var(--ds-size-control-icon-lg);
+  font-size: var(--ds-size-md);
+  width: var(--ds-size-md);
+  height: var(--ds-size-md);
 }
 
 /* States

@@ -105,8 +105,8 @@ withMutation(
 console.log('[5] orphan-css-ref in generator detection...');
 withMutation(
   'scripts/sync-docs.mjs',
-  'var(--ds-spacing-12)',
-  'var(--ds-spacing-nonexistent)',
+  'var(--ds-dimension-12)',
+  'var(--ds-dimension-nonexistent)',
   () => {
     const code = runTest('scripts/test-generators.mjs');
     if (code === 0) failures.push('test-generators did NOT detect orphan in generator');

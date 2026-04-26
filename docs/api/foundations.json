@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-25T22:17:47.869Z",
-  "version": "0.7.0",
+  "generatedAt": "2026-04-26T06:55:02.935Z",
+  "version": "0.8.0",
   "count": 11,
   "foundations": [
     {
@@ -23,15 +23,15 @@
       "slug": "typography",
       "name": "Typography",
       "sourceFile": "tokens/foundation/typography.json",
-      "tokenCount": 50,
+      "tokenCount": 54,
       "url": "https://uxindesign.github.io/design-system-core/docs/foundations-typography.html",
       "note": null
     },
     {
-      "slug": "spacing",
-      "name": "Spacing",
-      "sourceFile": "tokens/foundation/spacing.json",
-      "tokenCount": 20,
+      "slug": "dimension",
+      "name": "Dimension",
+      "sourceFile": "tokens/foundation/dimension.json",
+      "tokenCount": 27,
       "url": "https://uxindesign.github.io/design-system-core/docs/foundations-spacing.html",
       "note": null
     },

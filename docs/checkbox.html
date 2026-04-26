@@ -8,32 +8,32 @@
   <link rel="stylesheet" href="layout.css">
   <style>
     /* Tables */
-    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-14); margin-bottom: var(--ds-spacing-32); }
-    .ds-token-table th { text-align: left; padding: var(--ds-spacing-8) var(--ds-spacing-12); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
-    .ds-token-table td { padding: var(--ds-spacing-8) var(--ds-spacing-12); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
+    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-14); margin-bottom: var(--ds-dimension-32); }
+    .ds-token-table th { text-align: left; padding: var(--ds-dimension-8) var(--ds-dimension-12); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
+    .ds-token-table td { padding: var(--ds-dimension-8) var(--ds-dimension-12); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
     .ds-token-table code { font-size: var(--ds-font-size-12); font-family: var(--ds-font-family-mono); }
     /* Callouts */
-    .ds-callout { padding: var(--ds-spacing-16) var(--ds-spacing-20); border-radius: var(--ds-radius-12); margin-bottom: var(--ds-spacing-24); font-size: var(--ds-font-size-14); line-height: var(--ds-line-height-relaxed); color: var(--ds-content-default); }
+    .ds-callout { padding: var(--ds-dimension-16) var(--ds-dimension-20); border-radius: var(--ds-radius-12); margin-bottom: var(--ds-dimension-24); font-size: var(--ds-font-size-14); line-height: var(--ds-line-height-relaxed); color: var(--ds-content-default); }
     .ds-callout--info { background-color: var(--ds-feedback-info-background-subtle); border: var(--ds-border-width-1) solid var(--ds-feedback-info-border-default); }
     .ds-callout--success { background-color: var(--ds-feedback-success-background-subtle); border: var(--ds-border-width-1) solid var(--ds-feedback-success-border-default); }
     .ds-callout--warning { background-color: var(--ds-feedback-warning-background-subtle); border: var(--ds-border-width-1) solid var(--ds-feedback-warning-border-default); }
-    .ds-callout__title { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-4); }
+    .ds-callout__title { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-dimension-4); }
     /* Do/Don't */
-    .ds-dodont { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ds-spacing-16); margin-bottom: var(--ds-spacing-32); }
+    .ds-dodont { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ds-dimension-16); margin-bottom: var(--ds-dimension-32); }
     .ds-dodont__item { border-radius: var(--ds-radius-12); overflow: hidden; }
-    .ds-dodont__preview { padding: var(--ds-spacing-24); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-12) var(--ds-radius-12) 0 0; display: flex; flex-wrap: wrap; gap: var(--ds-spacing-12); align-items: center; justify-content: center; }
-    .ds-dodont__label { padding: var(--ds-spacing-8) var(--ds-spacing-16); font-size: var(--ds-font-size-14); font-weight: var(--ds-font-weight-semibold); }
+    .ds-dodont__preview { padding: var(--ds-dimension-24); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-12) var(--ds-radius-12) 0 0; display: flex; flex-wrap: wrap; gap: var(--ds-dimension-12); align-items: center; justify-content: center; }
+    .ds-dodont__label { padding: var(--ds-dimension-8) var(--ds-dimension-16); font-size: var(--ds-font-size-14); font-weight: var(--ds-font-weight-semibold); }
     .ds-dodont__label--do { background-color: var(--ds-feedback-success-background-subtle); color: var(--ds-feedback-success-content-default); border-top: 3px solid var(--ds-feedback-success-background-subtle); }
     .ds-dodont__label--dont { background-color: var(--ds-feedback-error-background-subtle); color: var(--ds-feedback-error-content-default); border-top: 3px solid var(--ds-feedback-error-background-subtle); }
-    .ds-dodont__desc { padding: 0 var(--ds-spacing-16) var(--ds-spacing-12); font-size: var(--ds-font-size-14); color: var(--ds-content-secondary); background-color: var(--ds-background-subtle); }
+    .ds-dodont__desc { padding: 0 var(--ds-dimension-16) var(--ds-dimension-12); font-size: var(--ds-font-size-14); color: var(--ds-content-secondary); background-color: var(--ds-background-subtle); }
     /* Anatomy */
-    .ds-anatomy { padding: var(--ds-spacing-32); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-12); margin-bottom: var(--ds-spacing-16); display: flex; align-items: center; justify-content: center; position: relative; }
+    .ds-anatomy { padding: var(--ds-dimension-32); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-12); margin-bottom: var(--ds-dimension-16); display: flex; align-items: center; justify-content: center; position: relative; }
     .ds-anatomy__marker { position: absolute; width: 20px; height: 20px; border-radius: 50%; background-color: var(--ds-primary-background-default); color: var(--ds-primary-content-default); font-size: 11px; font-weight: var(--ds-font-weight-bold); display: flex; align-items: center; justify-content: center; }
-    .ds-anatomy-legend { font-size: var(--ds-font-size-14); color: var(--ds-content-secondary); margin-bottom: var(--ds-spacing-32); line-height: var(--ds-line-height-relaxed); }
+    .ds-anatomy-legend { font-size: var(--ds-font-size-14); color: var(--ds-content-secondary); margin-bottom: var(--ds-dimension-32); line-height: var(--ds-line-height-relaxed); }
     .ds-anatomy-legend strong { color: var(--ds-content-default); }
     /* Related */
-    .ds-related { display: flex; gap: var(--ds-spacing-12); flex-wrap: wrap; margin-bottom: var(--ds-spacing-32); }
-    .ds-related__link { padding: var(--ds-spacing-8) var(--ds-spacing-16); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-8); font-size: var(--ds-font-size-14); color: var(--ds-link-content-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
+    .ds-related { display: flex; gap: var(--ds-dimension-12); flex-wrap: wrap; margin-bottom: var(--ds-dimension-32); }
+    .ds-related__link { padding: var(--ds-dimension-8) var(--ds-dimension-16); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-8); font-size: var(--ds-font-size-14); color: var(--ds-link-content-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
     .ds-related__link:hover { border-color: var(--ds-primary-background-default); background-color: var(--ds-overlay-subtle); }
     /* Responsive do/dont */
     @media (max-width: 768px) { .ds-dodont { grid-template-columns: 1fr; } }
@@ -45,7 +45,7 @@
 <body>
 
 <header class="ds-site-header">
-  <div style="display:flex;align-items:center;gap:var(--ds-spacing-16)">
+  <div style="display:flex;align-items:center;gap:var(--ds-dimension-16)">
     <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>
@@ -266,7 +266,7 @@
       <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
         <div class="ds-preview__canvas ds-preview__canvas--column">
           <fieldset class="ds-checkbox-group--error" style="border:none;padding:0;margin:0">
-            <legend style="font-size:var(--ds-font-size-14);font-weight:var(--ds-font-weight-medium);margin-bottom:var(--ds-spacing-8);color:var(--ds-feedback-error-content-default)">Select at least one option</legend>
+            <legend style="font-size:var(--ds-font-size-14);font-weight:var(--ds-font-weight-medium);margin-bottom:var(--ds-dimension-8);color:var(--ds-feedback-error-content-default)">Select at least one option</legend>
             <label class="ds-checkbox-label">
               <input type="checkbox" class="ds-checkbox">
               Option A
@@ -348,7 +348,7 @@
       <div class="ds-dodont__item">
         <div class="ds-dodont__preview" style="flex-direction:column;align-items:flex-start;">
           <fieldset style="border:none;padding:0;margin:0;">
-            <legend style="font-size:var(--ds-font-size-14);font-weight:var(--ds-font-weight-medium);margin-bottom:var(--ds-spacing-8);">Interests</legend>
+            <legend style="font-size:var(--ds-font-size-14);font-weight:var(--ds-font-weight-medium);margin-bottom:var(--ds-dimension-8);">Interests</legend>
             <label class="ds-checkbox-label"><input type="checkbox" class="ds-checkbox" checked> Design</label>
             <label class="ds-checkbox-label"><input type="checkbox" class="ds-checkbox"> Development</label>
           </fieldset>
@@ -490,12 +490,12 @@
       </tbody>
     </table>
 
-    <div class="ds-callout ds-callout--info" style="margin-top:var(--ds-spacing-16)">
+    <div class="ds-callout ds-callout--info" style="margin-top:var(--ds-dimension-16)">
       <div class="ds-callout__title"><span data-lang="pt">Notas de implementação</span><span data-lang="en">Implementation notes</span></div>
       <span data-lang="pt">Usa <code>&lt;input type="checkbox"&gt;</code> nativo para suporte integrado a teclado e leitores de tela. O estado indeterminate deve ser definido via JavaScript (<code>el.indeterminate = true</code>). Sempre envolva checkboxes relacionados em um <code>&lt;fieldset&gt;</code> com um <code>&lt;legend&gt;</code> para fornecer contexto de grupo à tecnologia assistiva.</span><span data-lang="en">Uses native <code>&lt;input type="checkbox"&gt;</code> for built-in keyboard and screen reader support. The indeterminate state must be set via JavaScript (<code>el.indeterminate = true</code>). Always wrap related checkboxes in a <code>&lt;fieldset&gt;</code> with a <code>&lt;legend&gt;</code> to provide group context to assistive technology.</span>
     </div>
 
-    <div class="ds-callout ds-callout--warning" style="margin-top:var(--ds-spacing-16)">
+    <div class="ds-callout ds-callout--warning" style="margin-top:var(--ds-dimension-16)">
       <div class="ds-callout__title"><span data-lang="pt">Label invisível — exige ARIA explícito</span><span data-lang="en">Invisible label — requires explicit ARIA</span></div>
       <span data-lang="pt">Quando <code>Show Label = false</code> e <code>Show Description = true</code>, vincule o <code>&lt;input&gt;</code> à descrição via <code>aria-labelledby="id-da-description"</code>. Se nenhum dos dois estiver visível, use <code>aria-label</code> diretamente no <code>&lt;input&gt;</code>. O Helper Text deve sempre ser vinculado via <code>aria-describedby="id-do-helper"</code>.</span><span data-lang="en">When <code>Show Label = false</code> and <code>Show Description = true</code>, link the <code>&lt;input&gt;</code> to the description via <code>aria-labelledby="description-id"</code>. If neither is visible, use <code>aria-label</code> directly on the <code>&lt;input&gt;</code>. Helper Text should always be linked via <code>aria-describedby="helper-id"</code>.</span>
     </div>

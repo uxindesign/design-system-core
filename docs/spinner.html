@@ -8,27 +8,27 @@
   <link rel="stylesheet" href="layout.css">
   <style>
     /* Tables */
-    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-14); margin-bottom: var(--ds-spacing-32); }
-    .ds-token-table th { text-align: left; padding: var(--ds-spacing-8) var(--ds-spacing-12); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
-    .ds-token-table td { padding: var(--ds-spacing-8) var(--ds-spacing-12); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
+    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-14); margin-bottom: var(--ds-dimension-32); }
+    .ds-token-table th { text-align: left; padding: var(--ds-dimension-8) var(--ds-dimension-12); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
+    .ds-token-table td { padding: var(--ds-dimension-8) var(--ds-dimension-12); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
     .ds-token-table code { font-size: var(--ds-font-size-12); font-family: var(--ds-font-family-mono); }
     /* Callouts */
-    .ds-callout { padding: var(--ds-spacing-16) var(--ds-spacing-20); border-radius: var(--ds-radius-12); margin-bottom: var(--ds-spacing-24); font-size: var(--ds-font-size-14); line-height: var(--ds-line-height-relaxed); color: var(--ds-content-default); }
+    .ds-callout { padding: var(--ds-dimension-16) var(--ds-dimension-20); border-radius: var(--ds-radius-12); margin-bottom: var(--ds-dimension-24); font-size: var(--ds-font-size-14); line-height: var(--ds-line-height-relaxed); color: var(--ds-content-default); }
     .ds-callout--info { background-color: var(--ds-feedback-info-background-subtle); border: var(--ds-border-width-1) solid var(--ds-feedback-info-border-default); }
     .ds-callout--success { background-color: var(--ds-feedback-success-background-subtle); border: var(--ds-border-width-1) solid var(--ds-feedback-success-border-default); }
     .ds-callout--warning { background-color: var(--ds-feedback-warning-background-subtle); border: var(--ds-border-width-1) solid var(--ds-feedback-warning-border-default); }
-    .ds-callout__title { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-4); }
+    .ds-callout__title { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-dimension-4); }
     /* Do/Don't */
-    .ds-dodont { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ds-spacing-16); margin-bottom: var(--ds-spacing-32); }
+    .ds-dodont { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ds-dimension-16); margin-bottom: var(--ds-dimension-32); }
     .ds-dodont__item { border-radius: var(--ds-radius-12); overflow: hidden; }
-    .ds-dodont__preview { padding: var(--ds-spacing-24); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-12) var(--ds-radius-12) 0 0; display: flex; flex-wrap: wrap; gap: var(--ds-spacing-12); align-items: center; justify-content: center; }
-    .ds-dodont__label { padding: var(--ds-spacing-8) var(--ds-spacing-16); font-size: var(--ds-font-size-14); font-weight: var(--ds-font-weight-semibold); }
+    .ds-dodont__preview { padding: var(--ds-dimension-24); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-12) var(--ds-radius-12) 0 0; display: flex; flex-wrap: wrap; gap: var(--ds-dimension-12); align-items: center; justify-content: center; }
+    .ds-dodont__label { padding: var(--ds-dimension-8) var(--ds-dimension-16); font-size: var(--ds-font-size-14); font-weight: var(--ds-font-weight-semibold); }
     .ds-dodont__label--do { background-color: var(--ds-feedback-success-background-subtle); color: var(--ds-feedback-success-content-default); border-top: 3px solid var(--ds-feedback-success-background-subtle); }
     .ds-dodont__label--dont { background-color: var(--ds-feedback-error-background-subtle); color: var(--ds-feedback-error-content-default); border-top: 3px solid var(--ds-feedback-error-background-subtle); }
-    .ds-dodont__desc { padding: 0 var(--ds-spacing-16) var(--ds-spacing-12); font-size: var(--ds-font-size-14); color: var(--ds-content-secondary); background-color: var(--ds-background-subtle); }
+    .ds-dodont__desc { padding: 0 var(--ds-dimension-16) var(--ds-dimension-12); font-size: var(--ds-font-size-14); color: var(--ds-content-secondary); background-color: var(--ds-background-subtle); }
     /* Related */
-    .ds-related { display: flex; gap: var(--ds-spacing-12); flex-wrap: wrap; margin-bottom: var(--ds-spacing-32); }
-    .ds-related__link { padding: var(--ds-spacing-8) var(--ds-spacing-16); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-8); font-size: var(--ds-font-size-14); color: var(--ds-link-content-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
+    .ds-related { display: flex; gap: var(--ds-dimension-12); flex-wrap: wrap; margin-bottom: var(--ds-dimension-32); }
+    .ds-related__link { padding: var(--ds-dimension-8) var(--ds-dimension-16); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-8); font-size: var(--ds-font-size-14); color: var(--ds-link-content-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
     .ds-related__link:hover { border-color: var(--ds-primary-background-default); background-color: var(--ds-overlay-subtle); }
     /* Responsive do/dont */
     @media (max-width: 768px) { .ds-dodont { grid-template-columns: 1fr; } }
@@ -40,7 +40,7 @@
 <body>
 
 <header class="ds-site-header">
-  <div style="display:flex;align-items:center;gap:var(--ds-spacing-16)">
+  <div style="display:flex;align-items:center;gap:var(--ds-dimension-16)">
     <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>
@@ -91,25 +91,25 @@
        ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Tamanhos</span><span data-lang="en">Sizes</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-16);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);"><span data-lang="pt">Três tamanhos para diferentes contextos: sm (16px), md (24px), lg (32px).</span><span data-lang="en">Three sizes to suit different contexts: sm (16px), md (24px), lg (32px).</span></p>
+    <p style="margin-bottom:var(--ds-dimension-16);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);"><span data-lang="pt">Três tamanhos para diferentes contextos: sm (16px), md (24px), lg (32px).</span><span data-lang="en">Three sizes to suit different contexts: sm (16px), md (24px), lg (32px).</span></p>
     <div class="ds-preview">
       <div class="ds-preview__tabs">
         <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
         <button class="ds-preview__tab" data-tab="code">Code</button>
       </div>
       <div class="ds-preview__canvas ds-preview__canvas--centered">
-        <div style="display:flex;align-items:center;gap:var(--ds-spacing-32);">
+        <div style="display:flex;align-items:center;gap:var(--ds-dimension-32);">
           <div style="text-align:center;">
             <span class="ds-spinner ds-spinner--sm" role="status" aria-label="Loading"></span>
-            <p style="margin:var(--ds-spacing-8) 0 0;font-size:var(--ds-font-size-12);color:var(--ds-content-secondary);">sm (16px)</p>
+            <p style="margin:var(--ds-dimension-8) 0 0;font-size:var(--ds-font-size-12);color:var(--ds-content-secondary);">sm (16px)</p>
           </div>
           <div style="text-align:center;">
             <span class="ds-spinner" role="status" aria-label="Loading"></span>
-            <p style="margin:var(--ds-spacing-8) 0 0;font-size:var(--ds-font-size-12);color:var(--ds-content-secondary);">md (24px)</p>
+            <p style="margin:var(--ds-dimension-8) 0 0;font-size:var(--ds-font-size-12);color:var(--ds-content-secondary);">md (24px)</p>
           </div>
           <div style="text-align:center;">
             <span class="ds-spinner ds-spinner--lg" role="status" aria-label="Loading"></span>
-            <p style="margin:var(--ds-spacing-8) 0 0;font-size:var(--ds-font-size-12);color:var(--ds-content-secondary);">lg (32px)</p>
+            <p style="margin:var(--ds-dimension-8) 0 0;font-size:var(--ds-font-size-12);color:var(--ds-content-secondary);">lg (32px)</p>
           </div>
         </div>
       </div>
@@ -124,7 +124,7 @@
 
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Variantes coloridas</span><span data-lang="en">Colored variants</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-16);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);"><span data-lang="pt">Defina <code>color</code> no spinner para alterar sua aparencia.</span><span data-lang="en">Set <code>color</code> on the spinner to change its appearance.</span></p>
+    <p style="margin-bottom:var(--ds-dimension-16);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);"><span data-lang="pt">Defina <code>color</code> no spinner para alterar sua aparencia.</span><span data-lang="en">Set <code>color</code> on the spinner to change its appearance.</span></p>
     <div class="ds-preview">
       <div class="ds-preview__tabs">
         <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
@@ -151,7 +151,7 @@
 
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Estado de carregamento no button</span><span data-lang="en">Button loading state</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-16);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);"><span data-lang="pt">Spinners dentro de buttons indicam que uma ação está em andamento. O button não e interativo enquanto carrega.</span><span data-lang="en">Spinners inside buttons indicate that an action is in progress. The button is non-interactive while loading.</span></p>
+    <p style="margin-bottom:var(--ds-dimension-16);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);"><span data-lang="pt">Spinners dentro de buttons indicam que uma ação está em andamento. O button não e interativo enquanto carrega.</span><span data-lang="en">Spinners inside buttons indicate that an action is in progress. The button is non-interactive while loading.</span></p>
     <div class="ds-preview">
       <div class="ds-preview__tabs">
         <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
@@ -191,7 +191,7 @@
 
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Carregamento centralizado</span><span data-lang="en">Centered loading</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-16);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);"><span data-lang="pt">Use um spinner grande centralizado em um container para estados de carregamento de área completa.</span><span data-lang="en">Use a large spinner centered in a container for full-area loading states.</span></p>
+    <p style="margin-bottom:var(--ds-dimension-16);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);"><span data-lang="pt">Use um spinner grande centralizado em um container para estados de carregamento de área completa.</span><span data-lang="en">Use a large spinner centered in a container for full-area loading states.</span></p>
     <div class="ds-preview">
       <div class="ds-preview__tabs">
         <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
@@ -200,7 +200,7 @@
       <div class="ds-preview__canvas ds-preview__canvas--centered" style="min-height:160px;" aria-busy="true">
         <div style="text-align:center;">
           <span class="ds-spinner ds-spinner--lg" role="status" aria-label="Loading content"></span>
-          <p style="margin:var(--ds-spacing-12) 0 0;font-size:var(--ds-font-size-14);color:var(--ds-content-secondary);">Loading content...</p>
+          <p style="margin:var(--ds-dimension-12) 0 0;font-size:var(--ds-font-size-14);color:var(--ds-content-secondary);">Loading content...</p>
         </div>
       </div>
       <div class="ds-preview__code" style="display:none">
@@ -226,7 +226,7 @@
       <div class="ds-dodont__item">
         <div class="ds-dodont__preview" style="flex-direction:column;">
           <span class="ds-spinner ds-spinner--md" role="status" aria-label="Loading" style="color:var(--ds-primary-background-default);"></span>
-          <span style="font-size:var(--ds-font-size-12);color:var(--ds-content-secondary);margin-top:var(--ds-spacing-8);">Show after 300ms delay</span>
+          <span style="font-size:var(--ds-font-size-12);color:var(--ds-content-secondary);margin-top:var(--ds-dimension-8);">Show after 300ms delay</span>
         </div>
         <div class="ds-dodont__label ds-dodont__label--do">Faça</div>
         <div class="ds-dodont__desc"><span data-lang="pt">Mostre o spinner após um atraso de 300ms para evitar um flash em operações rapidas.</span><span data-lang="en">Show the spinner after a 300ms delay to avoid a flash for fast operations.</span></div>
@@ -286,7 +286,7 @@
       </tbody>
     </table>
 
-    <div class="ds-callout ds-callout--info" style="margin-top:var(--ds-spacing-16)">
+    <div class="ds-callout ds-callout--info" style="margin-top:var(--ds-dimension-16)">
       <div class="ds-callout__title"><span data-lang="pt">Resumo dos atributos ARIA</span><span data-lang="en">ARIA attributes summary</span></div>
       <span data-lang="pt"><code>role="status"</code> + <code>aria-label="Loading"</code> — obrigatorio em cada spinner para que leitores de tela anunciem o estado de carregamento.<br>
       <code>aria-busy="true"</code> — defina no container quando o spinner substitui conteúdo.<br>

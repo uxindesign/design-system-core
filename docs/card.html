@@ -8,32 +8,32 @@
   <link rel="stylesheet" href="layout.css">
   <style>
     /* Tables */
-    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-14); margin-bottom: var(--ds-spacing-32); }
-    .ds-token-table th { text-align: left; padding: var(--ds-spacing-8) var(--ds-spacing-12); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
-    .ds-token-table td { padding: var(--ds-spacing-8) var(--ds-spacing-12); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
+    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-14); margin-bottom: var(--ds-dimension-32); }
+    .ds-token-table th { text-align: left; padding: var(--ds-dimension-8) var(--ds-dimension-12); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
+    .ds-token-table td { padding: var(--ds-dimension-8) var(--ds-dimension-12); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
     .ds-token-table code { font-size: var(--ds-font-size-12); font-family: var(--ds-font-family-mono); }
     /* Callouts */
-    .ds-callout { padding: var(--ds-spacing-16) var(--ds-spacing-20); border-radius: var(--ds-radius-12); margin-bottom: var(--ds-spacing-24); font-size: var(--ds-font-size-14); line-height: var(--ds-line-height-relaxed); color: var(--ds-content-default); }
+    .ds-callout { padding: var(--ds-dimension-16) var(--ds-dimension-20); border-radius: var(--ds-radius-12); margin-bottom: var(--ds-dimension-24); font-size: var(--ds-font-size-14); line-height: var(--ds-line-height-relaxed); color: var(--ds-content-default); }
     .ds-callout--info { background-color: var(--ds-feedback-info-background-subtle); border: var(--ds-border-width-1) solid var(--ds-feedback-info-border-default); }
     .ds-callout--success { background-color: var(--ds-feedback-success-background-subtle); border: var(--ds-border-width-1) solid var(--ds-feedback-success-border-default); }
     .ds-callout--warning { background-color: var(--ds-feedback-warning-background-subtle); border: var(--ds-border-width-1) solid var(--ds-feedback-warning-border-default); }
-    .ds-callout__title { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-4); }
+    .ds-callout__title { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-dimension-4); }
     /* Do/Don't */
-    .ds-dodont { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ds-spacing-16); margin-bottom: var(--ds-spacing-32); }
+    .ds-dodont { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ds-dimension-16); margin-bottom: var(--ds-dimension-32); }
     .ds-dodont__item { border-radius: var(--ds-radius-12); overflow: hidden; }
-    .ds-dodont__preview { padding: var(--ds-spacing-24); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-12) var(--ds-radius-12) 0 0; display: flex; flex-wrap: wrap; gap: var(--ds-spacing-12); align-items: center; justify-content: center; }
-    .ds-dodont__label { padding: var(--ds-spacing-8) var(--ds-spacing-16); font-size: var(--ds-font-size-14); font-weight: var(--ds-font-weight-semibold); }
+    .ds-dodont__preview { padding: var(--ds-dimension-24); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-12) var(--ds-radius-12) 0 0; display: flex; flex-wrap: wrap; gap: var(--ds-dimension-12); align-items: center; justify-content: center; }
+    .ds-dodont__label { padding: var(--ds-dimension-8) var(--ds-dimension-16); font-size: var(--ds-font-size-14); font-weight: var(--ds-font-weight-semibold); }
     .ds-dodont__label--do { background-color: var(--ds-feedback-success-background-subtle); color: var(--ds-feedback-success-content-default); border-top: 3px solid var(--ds-feedback-success-background-subtle); }
     .ds-dodont__label--dont { background-color: var(--ds-feedback-error-background-subtle); color: var(--ds-feedback-error-content-default); border-top: 3px solid var(--ds-feedback-error-background-subtle); }
-    .ds-dodont__desc { padding: 0 var(--ds-spacing-16) var(--ds-spacing-12); font-size: var(--ds-font-size-14); color: var(--ds-content-secondary); background-color: var(--ds-background-subtle); }
+    .ds-dodont__desc { padding: 0 var(--ds-dimension-16) var(--ds-dimension-12); font-size: var(--ds-font-size-14); color: var(--ds-content-secondary); background-color: var(--ds-background-subtle); }
     /* Anatomy */
-    .ds-anatomy { padding: var(--ds-spacing-32); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-12); margin-bottom: var(--ds-spacing-16); display: flex; align-items: center; justify-content: center; position: relative; }
+    .ds-anatomy { padding: var(--ds-dimension-32); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-12); margin-bottom: var(--ds-dimension-16); display: flex; align-items: center; justify-content: center; position: relative; }
     .ds-anatomy__marker { position: absolute; width: 20px; height: 20px; border-radius: 50%; background-color: var(--ds-primary-background-default); color: var(--ds-primary-content-default); font-size: 11px; font-weight: var(--ds-font-weight-bold); display: flex; align-items: center; justify-content: center; }
-    .ds-anatomy-legend { font-size: var(--ds-font-size-14); color: var(--ds-content-secondary); margin-bottom: var(--ds-spacing-32); line-height: var(--ds-line-height-relaxed); }
+    .ds-anatomy-legend { font-size: var(--ds-font-size-14); color: var(--ds-content-secondary); margin-bottom: var(--ds-dimension-32); line-height: var(--ds-line-height-relaxed); }
     .ds-anatomy-legend strong { color: var(--ds-content-default); }
     /* Related */
-    .ds-related { display: flex; gap: var(--ds-spacing-12); flex-wrap: wrap; margin-bottom: var(--ds-spacing-32); }
-    .ds-related__link { padding: var(--ds-spacing-8) var(--ds-spacing-16); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-8); font-size: var(--ds-font-size-14); color: var(--ds-link-content-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
+    .ds-related { display: flex; gap: var(--ds-dimension-12); flex-wrap: wrap; margin-bottom: var(--ds-dimension-32); }
+    .ds-related__link { padding: var(--ds-dimension-8) var(--ds-dimension-16); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-8); font-size: var(--ds-font-size-14); color: var(--ds-link-content-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
     .ds-related__link:hover { border-color: var(--ds-primary-background-default); background-color: var(--ds-overlay-subtle); }
     /* Responsive do/dont */
     @media (max-width: 768px) { .ds-dodont { grid-template-columns: 1fr; } }
@@ -45,7 +45,7 @@
 <body>
 
 <header class="ds-site-header">
-  <div style="display:flex;align-items:center;gap:var(--ds-spacing-16)">
+  <div style="display:flex;align-items:center;gap:var(--ds-dimension-16)">
     <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>
@@ -243,7 +243,7 @@
         <button class="ds-preview__tab" role="tab" aria-selected="false" data-tab="code">Code</button>
       </div>
       <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
-        <div class="ds-preview__canvas" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--ds-spacing-16);width:100%">
+        <div class="ds-preview__canvas" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--ds-dimension-16);width:100%">
           <div class="ds-card ds-card--default">
             <div class="ds-card__header">
               <h3 class="ds-card__title">Default</h3>
@@ -289,17 +289,17 @@
 
     <div class="ds-dodont">
       <div class="ds-dodont__item">
-        <div class="ds-dodont__preview" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--ds-spacing-12);">
-          <div class="ds-card ds-card--outlined" style="padding:var(--ds-spacing-12);font-size:var(--ds-font-size-12);">Item A</div>
-          <div class="ds-card ds-card--outlined" style="padding:var(--ds-spacing-12);font-size:var(--ds-font-size-12);">Item B</div>
+        <div class="ds-dodont__preview" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--ds-dimension-12);">
+          <div class="ds-card ds-card--outlined" style="padding:var(--ds-dimension-12);font-size:var(--ds-font-size-12);">Item A</div>
+          <div class="ds-card ds-card--outlined" style="padding:var(--ds-dimension-12);font-size:var(--ds-font-size-12);">Item B</div>
         </div>
         <div class="ds-dodont__label ds-dodont__label--do">Faça</div>
         <div class="ds-dodont__desc"><span data-lang="pt">Use variantes consistentes no mesmo contexto. Todos os cards em um grid devem compartilhar o mesmo estilo.</span><span data-lang="en">Use consistent variants in the same context. All cards in a grid should share the same style.</span></div>
       </div>
       <div class="ds-dodont__item">
-        <div class="ds-dodont__preview" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--ds-spacing-12);">
-          <div class="ds-card ds-card--default" style="padding:var(--ds-spacing-12);font-size:var(--ds-font-size-12);">Item A</div>
-          <div class="ds-card ds-card--elevated" style="padding:var(--ds-spacing-12);font-size:var(--ds-font-size-12);">Item B</div>
+        <div class="ds-dodont__preview" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--ds-dimension-12);">
+          <div class="ds-card ds-card--default" style="padding:var(--ds-dimension-12);font-size:var(--ds-font-size-12);">Item A</div>
+          <div class="ds-card ds-card--elevated" style="padding:var(--ds-dimension-12);font-size:var(--ds-font-size-12);">Item B</div>
         </div>
         <div class="ds-dodont__label ds-dodont__label--dont">Não faça</div>
         <div class="ds-dodont__desc"><span data-lang="pt">Misturar variantes default, outlined e elevated no mesmo grid. Isso cria hierarquia visual inconsistente.</span><span data-lang="en">Mix default, outlined, and elevated variants in the same grid. It creates inconsistent visual hierarchy.</span></div>
@@ -352,8 +352,8 @@
         <tr><td>border (outlined variant)</td><td><code>semantic.border.default</code></td><td><code>--ds-border-default</code></td></tr>
         <tr><td>shadow (elevated)</td><td><code>foundation.shadow.sm</code></td><td><code>--ds-shadow-sm</code></td></tr>
         <tr><td>border-radius</td><td><code>foundation.radius.12</code></td><td><code>--ds-radius-12</code></td></tr>
-        <tr><td><code>.ds-card__header</code> padding</td><td>—</td><td><code>--ds-spacing-16</code> (top/sides) / <code>--ds-spacing-8</code> (bottom)</td></tr>
-        <tr><td><code>.ds-card__body</code> padding</td><td>—</td><td><code>0 --ds-spacing-16 --ds-spacing-16</code></td></tr>
+        <tr><td><code>.ds-card__header</code> padding</td><td>—</td><td><code>--ds-dimension-16</code> (top/sides) / <code>--ds-dimension-8</code> (bottom)</td></tr>
+        <tr><td><code>.ds-card__body</code> padding</td><td>—</td><td><code>0 --ds-dimension-16 --ds-dimension-16</code></td></tr>
       </tbody>
     </table>
   </div>
@@ -383,7 +383,7 @@
        ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Interação por teclado</span><span data-lang="en">Keyboard interaction</span></h2>
-    <p style="color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);margin-bottom:var(--ds-spacing-16);">
+    <p style="color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);margin-bottom:var(--ds-dimension-16);">
       <span data-lang="pt">Cards não possuem interação por teclado por padrão. Se o card for interativo (clicável), envolva o conteúdo em um elemento <code>&lt;a&gt;</code> ou adicione <code>role="link"</code> com <code>tabindex="0"</code> para torná-lo focável é operável via <code>Enter</code>.</span><span data-lang="en">Cards have no keyboard interaction by default. If the card is interactive (clickable), wrap content in an <code>&lt;a&gt;</code> element or add <code>role="link"</code> with <code>tabindex="0"</code> to make it focusable and operable via <code>Enter</code>.</span>
     </p>
   </div>
@@ -401,7 +401,7 @@
       </tbody>
     </table>
 
-    <div class="ds-callout ds-callout--info" style="margin-top:var(--ds-spacing-16)">
+    <div class="ds-callout ds-callout--info" style="margin-top:var(--ds-dimension-16)">
       <div class="ds-callout__title"><span data-lang="pt">Markup semântico</span><span data-lang="en">Semantic markup</span></div>
       <span data-lang="pt">Cards são containers genericos e não requerem roles ARIA específicos por padrão. Use tags de heading semânticos (<code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>) para títulos de cards para manter o outline adequado do documento. Se o card inteiro for clicável, envolva-o em um elemento <code>&lt;a&gt;</code> ou <code>&lt;button&gt;</code>, ou use um único link dentro do card com um nome acessível claro.</span><span data-lang="en">Cards are generic containers and do not require specific ARIA roles by default. Use semantic heading tags (<code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>) for card titles to maintain proper document outline. If the entire card is clickable, wrap it in an <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code> element, or use a single link inside the card with a clear accessible name.</span>
     </div>

@@ -24,10 +24,10 @@
   user-select: none;
 
   /* Default size: md (40px) */
-  height: var(--ds-size-control-md);
-  padding: var(--ds-space-control-padding-y-md) var(--ds-space-control-padding-x-md);
+  height: var(--ds-size-xl);
+  padding: var(--ds-space-control-padding-10) var(--ds-space-lg);
   font-size: var(--ds-control-font-size-md);
-  min-width: var(--ds-size-control-min-target);
+  min-width: var(--ds-size-2xl);
 }
 
 .ds-btn:focus-visible {
@@ -44,8 +44,8 @@
 
 /* Icon inside button — default 20px (md) */
 .ds-btn__icon {
-  width: var(--ds-size-control-icon-md);
-  height: var(--ds-size-control-icon-md);
+  width: var(--ds-size-sm);
+  height: var(--ds-size-sm);
   flex-shrink: 0;
   fill: currentColor;
 }
@@ -54,8 +54,8 @@
    Sizes
    --------------------------------------------------------- */
 .ds-btn--sm {
-  height: var(--ds-size-control-sm);
-  padding: var(--ds-space-control-padding-y-sm) var(--ds-space-control-padding-x-sm);
+  height: var(--ds-size-lg);
+  padding: var(--ds-space-sm) var(--ds-space-md);
   font-size: var(--ds-control-font-size-sm);
   line-height: var(--ds-control-line-height-sm);
   border-radius: var(--ds-radius-md);
@@ -64,21 +64,21 @@
 }
 
 .ds-btn--sm .ds-btn__icon {
-  width: var(--ds-size-control-icon-sm);
-  height: var(--ds-size-control-icon-sm);
+  width: var(--ds-size-xs);
+  height: var(--ds-size-xs);
 }
 
 .ds-btn--lg {
-  height: var(--ds-size-control-lg);
-  padding: var(--ds-space-control-padding-y-lg) var(--ds-space-control-padding-x-lg);
+  height: var(--ds-size-2xl);
+  padding: var(--ds-space-md) var(--ds-space-xl);
   font-size: var(--ds-control-font-size-lg);
   line-height: var(--ds-control-line-height-lg);
   border-radius: var(--ds-radius-md);
 }
 
 .ds-btn--lg .ds-btn__icon {
-  width: var(--ds-size-control-icon-lg);
-  height: var(--ds-size-control-icon-lg);
+  width: var(--ds-size-md);
+  height: var(--ds-size-md);
 }
 
 /* ---------------------------------------------------------
@@ -199,28 +199,28 @@
 }
 
 .ds-btn--icon-only.ds-btn--sm {
-  width: var(--ds-size-control-sm);
+  width: var(--ds-size-lg);
 }
 
 .ds-btn--icon-only:not(.ds-btn--sm):not(.ds-btn--lg) {
-  width: var(--ds-size-control-md);
+  width: var(--ds-size-xl);
 }
 
 .ds-btn--icon-only.ds-btn--lg {
-  width: var(--ds-size-control-lg);
+  width: var(--ds-size-2xl);
 }
 
 /* Material Symbols inside button */
 .ds-btn .material-symbols-outlined {
-  font-size: var(--ds-size-control-icon-md);
+  font-size: var(--ds-size-sm);
 }
 
 .ds-btn--sm .material-symbols-outlined {
-  font-size: var(--ds-size-control-icon-sm);
+  font-size: var(--ds-size-xs);
 }
 
 .ds-btn--lg .material-symbols-outlined {
-  font-size: var(--ds-size-control-icon-lg);
+  font-size: var(--ds-size-md);
 }
 
 /* ---------------------------------------------------------

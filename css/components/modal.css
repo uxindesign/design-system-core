@@ -30,9 +30,9 @@
 }
 
 /* Sizes */
-.ds-modal--sm { max-width: var(--ds-size-modal-max-width-sm); }
-.ds-modal--md { max-width: var(--ds-size-modal-max-width-md); }
-.ds-modal--lg { max-width: var(--ds-size-modal-max-width-lg); }
+.ds-modal--sm { max-width: var(--ds-size-layout-sm); }
+.ds-modal--md { max-width: var(--ds-size-layout-md); }
+.ds-modal--lg { max-width: var(--ds-size-layout-md); }
 
 /* Header */
 .ds-modal__header {

@@ -7,16 +7,16 @@
   <link rel="stylesheet" href="../css/design-system.css">
   <link rel="stylesheet" href="layout.css">
   <style>
-    .ds-principle { margin-bottom: var(--ds-spacing-40); padding-bottom: var(--ds-spacing-40); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); }
+    .ds-principle { margin-bottom: var(--ds-dimension-40); padding-bottom: var(--ds-dimension-40); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); }
     .ds-principle:last-child { border-bottom: none; }
-    .ds-principle__number { font-size: var(--ds-font-size-14); font-weight: var(--ds-font-weight-semibold); color: var(--ds-primary-background-default); font-family: var(--ds-font-family-mono); margin-bottom: var(--ds-spacing-4); }
-    .ds-principle__title { font-size: var(--ds-font-size-20); font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-8); }
-    .ds-principle__desc { font-size: var(--ds-font-size-16); color: var(--ds-content-secondary); line-height: var(--ds-line-height-relaxed); margin-bottom: var(--ds-spacing-16); }
-    .ds-principle__examples { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ds-spacing-16); }
-    .ds-principle__example { padding: var(--ds-spacing-16); border-radius: var(--ds-radius-12); font-size: var(--ds-font-size-14); line-height: var(--ds-line-height-relaxed); }
+    .ds-principle__number { font-size: var(--ds-font-size-14); font-weight: var(--ds-font-weight-semibold); color: var(--ds-primary-background-default); font-family: var(--ds-font-family-mono); margin-bottom: var(--ds-dimension-4); }
+    .ds-principle__title { font-size: var(--ds-font-size-20); font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-dimension-8); }
+    .ds-principle__desc { font-size: var(--ds-font-size-16); color: var(--ds-content-secondary); line-height: var(--ds-line-height-relaxed); margin-bottom: var(--ds-dimension-16); }
+    .ds-principle__examples { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ds-dimension-16); }
+    .ds-principle__example { padding: var(--ds-dimension-16); border-radius: var(--ds-radius-12); font-size: var(--ds-font-size-14); line-height: var(--ds-line-height-relaxed); }
     .ds-principle__example--do { background-color: var(--ds-feedback-success-background-subtle); border: var(--ds-border-width-1) solid var(--ds-feedback-success-border-default); }
     .ds-principle__example--dont { background-color: var(--ds-feedback-error-background-subtle); border: var(--ds-border-width-1) solid var(--ds-feedback-error-border-default); }
-    .ds-principle__example-label { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-4); }
+    .ds-principle__example-label { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-dimension-4); }
     .ds-principle__example--do .ds-principle__example-label { color: var(--ds-feedback-success-content-default); }
     .ds-principle__example--dont .ds-principle__example-label { color: var(--ds-feedback-error-content-default); }
     @media (max-width: 768px) { .ds-principle__examples { grid-template-columns: 1fr; } }
@@ -28,7 +28,7 @@
 <body>
 
 <header class="ds-site-header">
-  <div style="display:flex;align-items:center;gap:var(--ds-spacing-16)">
+  <div style="display:flex;align-items:center;gap:var(--ds-dimension-16)">
     <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>

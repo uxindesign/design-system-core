@@ -1,6 +1,7 @@
 {
   "foundation": {
-    "spacing": {
+    "dimension": {
+      "$description": "Numeric dimension scale — base 4px grid. Source of truth for all px-based dimensions (size, space, padding, gap). Mirrors Figma `dimension/N` namespace. ADR-013 (2-layer architecture).",
       "2": {
         "$type": "dimension",
         "$value": "0.125rem",
@@ -24,7 +25,7 @@
       "10": {
         "$type": "dimension",
         "$value": "0.625rem",
-        "$description": "10px"
+        "$description": "10px — control deviation (vertical padding md). Off-grid by design."
       },
       "12": {
         "$type": "dimension",
@@ -100,6 +101,41 @@
         "$type": "dimension",
         "$value": "6rem",
         "$description": "96px"
+      },
+      "128": {
+        "$type": "dimension",
+        "$value": "8rem",
+        "$description": "128px"
+      },
+      "320": {
+        "$type": "dimension",
+        "$value": "20rem",
+        "$description": "320px — layout scale"
+      },
+      "480": {
+        "$type": "dimension",
+        "$value": "30rem",
+        "$description": "480px — layout scale"
+      },
+      "640": {
+        "$type": "dimension",
+        "$value": "40rem",
+        "$description": "640px — layout scale"
+      },
+      "800": {
+        "$type": "dimension",
+        "$value": "50rem",
+        "$description": "800px — layout scale"
+      },
+      "1024": {
+        "$type": "dimension",
+        "$value": "64rem",
+        "$description": "1024px — layout scale"
+      },
+      "1280": {
+        "$type": "dimension",
+        "$value": "80rem",
+        "$description": "1280px — layout scale"
       }
     }
   }

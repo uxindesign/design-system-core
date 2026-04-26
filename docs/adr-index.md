@@ -1,9 +1,9 @@
 # Índice de ADRs — Design System Core
 
-> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-25. Não editar manualmente.
+> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-26. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
 
-14 decisões registradas.
+15 decisões registradas.
 
 | ADR | Título | Status | Data |
 |-----|--------|--------|------|
@@ -12,7 +12,7 @@
 | [ADR-003](decisions/ADR-003-fontes-verdade.md) | Figma como origem canônica de tokens, Git como consolidação | Aceita — Revisada em 0.5.8 | 2026-04-14 (original) · 2026-04-21 (revisada) |
 | [ADR-004](decisions/ADR-004-wcag.md) | WCAG 2.2 AA como padrão de acessibilidade | Aceita — Implementada em 0.5.0 | 2026-04-14 |
 | [ADR-005](decisions/ADR-005-brand-foundation-e-estados-explicitos.md) | Brand como camada foundation, estados explícitos no semantic, e limpeza tipográfica | Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.2) | 2026-04-14 |
-| [ADR-006](decisions/ADR-006-semantic-control-tokens.md) | Tokens semânticos de controle para dimensões e tipografia compartilhadas entre controles interativos | Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.3) | 2026-04-15 |
+| [ADR-006](decisions/ADR-006-semantic-control-tokens.md) | Tokens semânticos de controle para dimensões e tipografia compartilhadas entre controles interativos | Parcialmente substituída — `size.control.*` e `space.control.padding-{x,y}.*` substituídos por escala `size.{xs..5xl}` + `space.{xs..2xl}` + `space.control.padding.10` em **ADR-015** (2026-04-26). `typography.control.*` permanece vigente. | 2026-04-15 |
 | [ADR-007](decisions/ADR-007-toned-color-system.md) | Estabelecer sistema de cores toned com overlays coloridos e tokens semânticos toned | Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.4, sincronização Figma completa em 0.5.6) | 2026-04-15 |
 | [ADR-008](decisions/ADR-008-recalibracao-paletas-feedback.md) | Recalibração das paletas foundation `green` e `amber` | Aceita — Implementada em 0.5.0 | 2026-04-16 |
 | [ADR-009](decisions/ADR-009-border-control-vs-decorative.md) | Separação de `border.default` (decorativa) e `border.control` (funcional) | Aceita — Implementada em 0.5.0 | 2026-04-16 |
@@ -21,3 +21,4 @@
 | [ADR-012](decisions/ADR-012-typography-tokens-divergence.md) | Tokens de line-height e letter-spacing divergem por design entre Figma e JSON | Aceita | 2026-04-21 |
 | [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) | Camadas de consumo de tokens — Foundation nunca direto em consumidor final | Aceita | 2026-04-22 |
 | [ADR-014](decisions/ADR-014-action-tokens-role-style.md) | Reestruturação Semantic em `action` × `style` × `prop` × `state` — eliminação de brand/accent e themes | Aceita | 2026-04-22 |
+| [ADR-015](decisions/ADR-015-unificacao-de-size-e-dimension.md) | — Unificação da escala size, eliminação de tokens component-specific e renomeação spacing→dimension | Aceito | 2026-04-26 |

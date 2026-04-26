@@ -1,6 +1,6 @@
 {
   "name": "design-system-core",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "White-label CSS design system, 2-layer (Foundation + Semantic), 18 components, light/dark mode",
   "main": "css/design-system.css",
   "style": "css/design-system.css",

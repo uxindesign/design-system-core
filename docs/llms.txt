@@ -1,6 +1,6 @@
 # Design System Core
 
-> Design system white-label em CSS puro com tokens DTCG em JSON, 18 componentes, modos light/dark, três temas (Default, Ocean, Forest). Versão atual: 0.7.0. Enquanto não houver release oficial 1.0, o projeto fica em 0.x.
+> Design system white-label em CSS puro com tokens DTCG em JSON, 18 componentes, modos light/dark, três temas (Default, Ocean, Forest). Versão atual: 0.8.0. Enquanto não houver release oficial 1.0, o projeto fica em 0.x.
 
 Repositório: https://github.com/uxindesign/design-system-core
 Site: https://uxindesign.github.io/design-system-core/
@@ -56,7 +56,7 @@ Arquivo completo para LLMs: https://uxindesign.github.io/design-system-core/docs
 - [ADR-003 — Figma como origem canônica de tokens, Git como consolidação](https://uxindesign.github.io/design-system-core/docs/decisions/adr-003-fontes-verdade.html) — Aceita — Revisada em 0.5.8
 - [ADR-004 — WCAG 2.2 AA como padrão de acessibilidade](https://uxindesign.github.io/design-system-core/docs/decisions/adr-004-wcag.html) — Aceita — Implementada em 0.5.0
 - [ADR-005 — Brand como camada foundation, estados explícitos no semantic, e limpeza tipográfica](https://uxindesign.github.io/design-system-core/docs/decisions/adr-005-brand-foundation-e-estados-explicitos.html) — Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.2)
-- [ADR-006 — Tokens semânticos de controle para dimensões e tipografia compartilhadas entre controles interativos](https://uxindesign.github.io/design-system-core/docs/decisions/adr-006-semantic-control-tokens.html) — Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.3)
+- [ADR-006 — Tokens semânticos de controle para dimensões e tipografia compartilhadas entre controles interativos](https://uxindesign.github.io/design-system-core/docs/decisions/adr-006-semantic-control-tokens.html) — Parcialmente substituída — `size.control.*` e `space.control.padding-{x,y}.*` substituídos por escala `size.{xs..5xl}` + `space.{xs..2xl}` + `space.control.padding.10` em **ADR-015** (2026-04-26). `typography.control.*` permanece vigente.
 - [ADR-007 — Estabelecer sistema de cores toned com overlays coloridos e tokens semânticos toned](https://uxindesign.github.io/design-system-core/docs/decisions/adr-007-toned-color-system.html) — Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.4, sincronização Figma completa em 0.5.6)
 - [ADR-008 — Recalibração das paletas foundation `green` e `amber`](https://uxindesign.github.io/design-system-core/docs/decisions/adr-008-recalibracao-paletas-feedback.html) — Aceita — Implementada em 0.5.0
 - [ADR-009 — Separação de `border.default` (decorativa) e `border.control` (funcional)](https://uxindesign.github.io/design-system-core/docs/decisions/adr-009-border-control-vs-decorative.html) — Aceita — Implementada em 0.5.0
@@ -65,6 +65,7 @@ Arquivo completo para LLMs: https://uxindesign.github.io/design-system-core/docs
 - [ADR-012 — Tokens de line-height e letter-spacing divergem por design entre Figma e JSON](https://uxindesign.github.io/design-system-core/docs/decisions/adr-012-typography-tokens-divergence.html) — Aceita
 - [ADR-013 — Camadas de consumo de tokens — Foundation nunca direto em consumidor final](https://uxindesign.github.io/design-system-core/docs/decisions/adr-013-camadas-de-consumo-de-tokens.html) — Aceita
 - [ADR-014 — Reestruturação Semantic em `action` × `style` × `prop` × `state` — eliminação de brand/accent e themes](https://uxindesign.github.io/design-system-core/docs/decisions/adr-014-action-tokens-role-style.html) — Aceita
+- [ADR-015 — — Unificação da escala size, eliminação de tokens component-specific e renomeação spacing→dimension](https://uxindesign.github.io/design-system-core/docs/decisions/adr-015-unificacao-de-size-e-dimension.html) — Aceito
 
 ## Processo
 
@@ -92,4 +93,4 @@ Arquivo completo para LLMs: https://uxindesign.github.io/design-system-core/docs
 
 ---
 
-Gerado por `scripts/build-llms.mjs` em 2026-04-25T22:17:48.095Z.
+Gerado por `scripts/build-llms.mjs` em 2026-04-26T06:55:03.158Z.

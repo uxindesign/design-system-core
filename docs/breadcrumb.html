@@ -8,32 +8,32 @@
   <link rel="stylesheet" href="layout.css">
   <style>
     /* Tables */
-    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-14); margin-bottom: var(--ds-spacing-32); }
-    .ds-token-table th { text-align: left; padding: var(--ds-spacing-8) var(--ds-spacing-12); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
-    .ds-token-table td { padding: var(--ds-spacing-8) var(--ds-spacing-12); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
+    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-14); margin-bottom: var(--ds-dimension-32); }
+    .ds-token-table th { text-align: left; padding: var(--ds-dimension-8) var(--ds-dimension-12); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
+    .ds-token-table td { padding: var(--ds-dimension-8) var(--ds-dimension-12); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
     .ds-token-table code { font-size: var(--ds-font-size-12); font-family: var(--ds-font-family-mono); }
     /* Callouts */
-    .ds-callout { padding: var(--ds-spacing-16) var(--ds-spacing-20); border-radius: var(--ds-radius-12); margin-bottom: var(--ds-spacing-24); font-size: var(--ds-font-size-14); line-height: var(--ds-line-height-relaxed); color: var(--ds-content-default); }
+    .ds-callout { padding: var(--ds-dimension-16) var(--ds-dimension-20); border-radius: var(--ds-radius-12); margin-bottom: var(--ds-dimension-24); font-size: var(--ds-font-size-14); line-height: var(--ds-line-height-relaxed); color: var(--ds-content-default); }
     .ds-callout--info { background-color: var(--ds-feedback-info-background-subtle); border: var(--ds-border-width-1) solid var(--ds-feedback-info-border-default); }
     .ds-callout--success { background-color: var(--ds-feedback-success-background-subtle); border: var(--ds-border-width-1) solid var(--ds-feedback-success-border-default); }
     .ds-callout--warning { background-color: var(--ds-feedback-warning-background-subtle); border: var(--ds-border-width-1) solid var(--ds-feedback-warning-border-default); }
-    .ds-callout__title { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-4); }
+    .ds-callout__title { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-dimension-4); }
     /* Do/Don't */
-    .ds-dodont { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ds-spacing-16); margin-bottom: var(--ds-spacing-32); }
+    .ds-dodont { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ds-dimension-16); margin-bottom: var(--ds-dimension-32); }
     .ds-dodont__item { border-radius: var(--ds-radius-12); overflow: hidden; }
-    .ds-dodont__preview { padding: var(--ds-spacing-24); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-12) var(--ds-radius-12) 0 0; display: flex; flex-wrap: wrap; gap: var(--ds-spacing-12); align-items: center; justify-content: center; }
-    .ds-dodont__label { padding: var(--ds-spacing-8) var(--ds-spacing-16); font-size: var(--ds-font-size-14); font-weight: var(--ds-font-weight-semibold); }
+    .ds-dodont__preview { padding: var(--ds-dimension-24); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-12) var(--ds-radius-12) 0 0; display: flex; flex-wrap: wrap; gap: var(--ds-dimension-12); align-items: center; justify-content: center; }
+    .ds-dodont__label { padding: var(--ds-dimension-8) var(--ds-dimension-16); font-size: var(--ds-font-size-14); font-weight: var(--ds-font-weight-semibold); }
     .ds-dodont__label--do { background-color: var(--ds-feedback-success-background-subtle); color: var(--ds-feedback-success-content-default); border-top: 3px solid var(--ds-feedback-success-background-subtle); }
     .ds-dodont__label--dont { background-color: var(--ds-feedback-error-background-subtle); color: var(--ds-feedback-error-content-default); border-top: 3px solid var(--ds-feedback-error-background-subtle); }
-    .ds-dodont__desc { padding: 0 var(--ds-spacing-16) var(--ds-spacing-12); font-size: var(--ds-font-size-14); color: var(--ds-content-secondary); background-color: var(--ds-background-subtle); }
+    .ds-dodont__desc { padding: 0 var(--ds-dimension-16) var(--ds-dimension-12); font-size: var(--ds-font-size-14); color: var(--ds-content-secondary); background-color: var(--ds-background-subtle); }
     /* Anatomy */
-    .ds-anatomy { padding: var(--ds-spacing-32); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-12); margin-bottom: var(--ds-spacing-16); display: flex; align-items: center; justify-content: center; position: relative; }
+    .ds-anatomy { padding: var(--ds-dimension-32); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-12); margin-bottom: var(--ds-dimension-16); display: flex; align-items: center; justify-content: center; position: relative; }
     .ds-anatomy__marker { position: absolute; width: 20px; height: 20px; border-radius: 50%; background-color: var(--ds-primary-background-default); color: var(--ds-primary-content-default); font-size: 11px; font-weight: var(--ds-font-weight-bold); display: flex; align-items: center; justify-content: center; }
-    .ds-anatomy-legend { font-size: var(--ds-font-size-14); color: var(--ds-content-secondary); margin-bottom: var(--ds-spacing-32); line-height: var(--ds-line-height-relaxed); }
+    .ds-anatomy-legend { font-size: var(--ds-font-size-14); color: var(--ds-content-secondary); margin-bottom: var(--ds-dimension-32); line-height: var(--ds-line-height-relaxed); }
     .ds-anatomy-legend strong { color: var(--ds-content-default); }
     /* Related */
-    .ds-related { display: flex; gap: var(--ds-spacing-12); flex-wrap: wrap; margin-bottom: var(--ds-spacing-32); }
-    .ds-related__link { padding: var(--ds-spacing-8) var(--ds-spacing-16); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-8); font-size: var(--ds-font-size-14); color: var(--ds-link-content-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
+    .ds-related { display: flex; gap: var(--ds-dimension-12); flex-wrap: wrap; margin-bottom: var(--ds-dimension-32); }
+    .ds-related__link { padding: var(--ds-dimension-8) var(--ds-dimension-16); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-8); font-size: var(--ds-font-size-14); color: var(--ds-link-content-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
     .ds-related__link:hover { border-color: var(--ds-primary-background-default); background-color: var(--ds-overlay-subtle); }
     /* Responsive do/dont */
     @media (max-width: 768px) { .ds-dodont { grid-template-columns: 1fr; } }
@@ -45,7 +45,7 @@
 <body>
 
 <header class="ds-site-header">
-  <div style="display:flex;align-items:center;gap:var(--ds-spacing-16)">
+  <div style="display:flex;align-items:center;gap:var(--ds-dimension-16)">
     <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>
@@ -131,7 +131,7 @@
        ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Breadcrumb basico</span><span data-lang="en">Basic breadcrumb</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-16);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);"><span data-lang="pt">Uma hierarquia simples de 3 níveis. O ultimo item é a página atual e não e um link.</span><span data-lang="en">A simple 3-level hierarchy. The last item is the current page and is not a link.</span></p>
+    <p style="margin-bottom:var(--ds-dimension-16);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);"><span data-lang="pt">Uma hierarquia simples de 3 níveis. O ultimo item é a página atual e não e um link.</span><span data-lang="en">A simple 3-level hierarchy. The last item is the current page and is not a link.</span></p>
     <div class="ds-preview">
       <div class="ds-preview__tabs">
         <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
@@ -163,7 +163,7 @@
   <!-- Deep hierarchy -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Hierarquia profunda</span><span data-lang="en">Deep hierarchy</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-16);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);"><span data-lang="pt">Um trail de breadcrumb de 5 níveis para páginas profundamente aninhadas.</span><span data-lang="en">A 5-level breadcrumb trail for deeply nested pages.</span></p>
+    <p style="margin-bottom:var(--ds-dimension-16);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);"><span data-lang="pt">Um trail de breadcrumb de 5 níveis para páginas profundamente aninhadas.</span><span data-lang="en">A 5-level breadcrumb trail for deeply nested pages.</span></p>
     <div class="ds-preview">
       <div class="ds-preview__tabs">
         <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
@@ -203,7 +203,7 @@
   <!-- Two levels -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Dois níveis</span><span data-lang="en">Two levels</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-16);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);"><span data-lang="pt">O breadcrumb mínimo util com apenas um pai é a página atual.</span><span data-lang="en">The minimum useful breadcrumb with just a parent and the current page.</span></p>
+    <p style="margin-bottom:var(--ds-dimension-16);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);"><span data-lang="pt">O breadcrumb mínimo util com apenas um pai é a página atual.</span><span data-lang="en">The minimum useful breadcrumb with just a parent and the current page.</span></p>
     <div class="ds-preview">
       <div class="ds-preview__tabs">
         <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
@@ -323,7 +323,7 @@
         <tr><td><code>Enter</code></td><td><span data-lang="pt">Navega para o link focado</span><span data-lang="en">Navigates to the focused link</span></td></tr>
       </tbody>
     </table>
-    <p style="margin-top:var(--ds-spacing-8);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);">
+    <p style="margin-top:var(--ds-dimension-8);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);">
       <span data-lang="pt">O item da página atual e um <code>&lt;span&gt;</code>, não um link, então e naturalmente excluido da ordem de tabulacao. Separadores são decorativos e não focáveis.</span><span data-lang="en">The current page item is a <code>&lt;span&gt;</code>, not a link, so it is naturally excluded from the tab order. Separators are decorative and not focusable.</span>
     </p>
   </div>
@@ -342,7 +342,7 @@
       </tbody>
     </table>
 
-    <div class="ds-callout ds-callout--info" style="margin-top:var(--ds-spacing-16)">
+    <div class="ds-callout ds-callout--info" style="margin-top:var(--ds-dimension-16)">
       <div class="ds-callout__title"><span data-lang="pt">Resumo dos atributos ARIA</span><span data-lang="en">ARIA attributes summary</span></div>
       <span data-lang="pt"><code>aria-label="Breadcrumb"</code> — no elemento <code>&lt;nav&gt;</code> para identificar o landmark.<br>
       <code>aria-current="page"</code> — no item da página atual para comunicar a localização a leitores de tela.<br>

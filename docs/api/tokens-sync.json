@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-25T22:17:48.333Z",
+  "generatedAt": "2026-04-26T06:55:03.394Z",
   "totals": {
-    "jsonTokens": 595,
-    "sharedTokens": 251,
-    "lightTokens": 172,
-    "darkTokens": 172,
-    "errors": 1,
-    "warnings": 119
+    "jsonTokens": 600,
+    "sharedTokens": 262,
+    "lightTokens": 169,
+    "darkTokens": 169,
+    "errors": 0,
+    "warnings": 113
   },
   "checks": {
     "jsonIntegrity": [],
@@ -61,24 +61,6 @@
         "level": "warning",
         "scope": "base",
         "file": "css/base/reset.css",
-        "line": 42,
-        "column": 12,
-        "match": "var(--ds-spacing-2)",
-        "message": "Foundation token consumido direto: var(--ds-spacing-2). Use Semantic/Component layer (ADR-013)."
-      },
-      {
-        "level": "warning",
-        "scope": "base",
-        "file": "css/base/reset.css",
-        "line": 42,
-        "column": 32,
-        "match": "var(--ds-spacing-4)",
-        "message": "Foundation token consumido direto: var(--ds-spacing-4). Use Semantic/Component layer (ADR-013)."
-      },
-      {
-        "level": "warning",
-        "scope": "base",
-        "file": "css/base/reset.css",
         "line": 43,
         "column": 18,
         "match": "var(--ds-radius-4)",
@@ -106,15 +88,6 @@
         "level": "warning",
         "scope": "base",
         "file": "css/base/reset.css",
-        "line": 50,
-        "column": 12,
-        "match": "var(--ds-spacing-16)",
-        "message": "Foundation token consumido direto: var(--ds-spacing-16). Use Semantic/Component layer (ADR-013)."
-      },
-      {
-        "level": "warning",
-        "scope": "base",
-        "file": "css/base/reset.css",
         "line": 51,
         "column": 18,
         "match": "var(--ds-radius-12)",
@@ -124,37 +97,10 @@
         "level": "warning",
         "scope": "base",
         "file": "css/base/reset.css",
-        "line": 53,
-        "column": 18,
-        "match": "var(--ds-spacing-16)",
-        "message": "Foundation token consumido direto: var(--ds-spacing-16). Use Semantic/Component layer (ADR-013)."
-      },
-      {
-        "level": "warning",
-        "scope": "base",
-        "file": "css/base/reset.css",
         "line": 60,
         "column": 14,
         "match": "var(--ds-font-size-14)",
         "message": "Foundation token consumido direto: var(--ds-font-size-14). Use Semantic/Component layer (ADR-013)."
-      },
-      {
-        "level": "warning",
-        "scope": "base",
-        "file": "css/base/reset.css",
-        "line": 72,
-        "column": 12,
-        "match": "var(--ds-spacing-12)",
-        "message": "Foundation token consumido direto: var(--ds-spacing-12). Use Semantic/Component layer (ADR-013)."
-      },
-      {
-        "level": "warning",
-        "scope": "base",
-        "file": "css/base/reset.css",
-        "line": 72,
-        "column": 33,
-        "match": "var(--ds-spacing-16)",
-        "message": "Foundation token consumido direto: var(--ds-spacing-16). Use Semantic/Component layer (ADR-013)."
       },
       {
         "level": "warning",
@@ -1068,19 +1014,8 @@
     ],
     "registryCompleteness": [
       {
-        "level": "error",
-        "message": "48 tokens em tokens/ sem entry em registry.json. Rode `npm run build:registry:init`.",
-        "sample": [
-          "foundation.radius.999",
-          "foundation.typography.line.height.16",
-          "foundation.typography.line.height.18",
-          "foundation.typography.line.height.20",
-          "foundation.typography.line.height.22"
-        ]
-      },
-      {
         "level": "warning",
-        "message": "375 entries com campos TODO (sentido/contexto/decisao). Preencha incrementalmente.",
+        "message": "431 entries com campos TODO (sentido/contexto/decisao). Preencha incrementalmente.",
         "sample": [
           "foundation.color.neutral.50",
           "foundation.color.neutral.100",
@@ -1091,13 +1026,13 @@
       },
       {
         "level": "warning",
-        "message": "32 entries em registry.json sem token correspondente em tokens/ (stale).",
+        "message": "83 entries em registry.json sem token correspondente em tokens/ (stale).",
         "sample": [
           "foundation.radius.9999",
-          "semantic.primary.bg-default",
-          "semantic.primary.bg-hover",
-          "semantic.primary.bg-active",
-          "semantic.primary.bg-disabled"
+          "foundation.spacing.4",
+          "foundation.spacing.8",
+          "foundation.spacing.12",
+          "foundation.spacing.16"
         ]
       }
     ],

@@ -1,7 +1,9 @@
 # ADR-006: Tokens semânticos de controle para dimensões e tipografia compartilhadas entre controles interativos
 
 **Data:** 2026-04-15
-**Status:** Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.3)
+**Status:** Parcialmente substituída — `size.control.*` e `space.control.padding-{x,y}.*` substituídos por escala `size.{xs..5xl}` + `space.{xs..2xl}` + `space.control.padding.10` em **ADR-015** (2026-04-26). `typography.control.*` permanece vigente.
+
+> **Nota:** Esta ADR introduziu `semantic.size.control.*` e `semantic.space.control.padding-{x,y}.*` como tokens compartilhados entre controles. Em 2026-04-26, ADR-015 unificou a escala de dimensão num namespace genérico `size.{xs..5xl}` (e `size.layout.{xs..2xl}` para containers), eliminando a maioria dos tokens `*.control.*`. A regra agora: `control.*` só é usado para valores que **fogem** da escala genérica. Veja ADR-015.
 
 ## Implementação
 

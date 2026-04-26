@@ -4,12 +4,6 @@
 
 :root,
 [data-mode="light"] {
-  --ds-size-modal-max-width-sm: 25rem; /** 400px */
-  --ds-size-modal-max-width-md: 32.5rem; /** 520px */
-  --ds-size-modal-max-width-lg: 40rem; /** 640px */
-  --ds-size-skeleton-rect-height: 7.5rem; /** 120px */
-  --ds-size-textarea-min-height-sm: 4.25rem; /** 68px */
-  --ds-size-textarea-min-height-lg: 7rem; /** 112px */
   --ds-primary-content-default: var(--ds-color-neutral-50);
   --ds-primary-content-disabled: var(--ds-overlay-white-80);
   --ds-primary-background-default: var(--ds-color-brand-600);
@@ -102,42 +96,33 @@
   --ds-motion-duration-normal: var(--ds-duration-normal); /** 200ms. Padrão pra transições de estado. */
   --ds-motion-duration-slow: var(--ds-duration-slow); /** 300ms. Animações enfáticas (entrada de overlay, etc). */
   --ds-motion-ease-default: var(--ds-ease-default); /** Curva padrão pra transições UI. */
-  --ds-space-2xs: var(--ds-spacing-2); /** 2px */
-  --ds-space-xs: var(--ds-spacing-4); /** 4px */
-  --ds-space-sm: var(--ds-spacing-8); /** 8px */
-  --ds-space-md: var(--ds-spacing-12); /** 12px */
-  --ds-space-lg: var(--ds-spacing-16); /** 16px */
-  --ds-space-xl: var(--ds-spacing-20); /** 20px */
-  --ds-space-2xl: var(--ds-spacing-24); /** 24px */
-  --ds-space-section-sm: var(--ds-spacing-32);
-  --ds-space-section-md: var(--ds-spacing-48);
-  --ds-space-section-lg: var(--ds-spacing-64);
-  --ds-space-section-xl: var(--ds-spacing-80);
-  --ds-space-control-padding-x-sm: var(--ds-spacing-12); /** 12px. Horizontal padding for sm controls. */
-  --ds-space-control-padding-x-md: var(--ds-spacing-16); /** 16px. Horizontal padding for md controls. */
-  --ds-space-control-padding-x-lg: var(--ds-spacing-20); /** 20px. Horizontal padding for lg controls. */
-  --ds-space-control-padding-y-sm: var(--ds-spacing-8); /** 8px. Vertical padding for sm controls. */
-  --ds-space-control-padding-y-md: var(--ds-spacing-10); /** 10px. Vertical padding for md controls. */
-  --ds-space-control-padding-y-lg: var(--ds-spacing-12); /** 12px. Vertical padding for lg controls. */
-  --ds-size-control-sm: var(--ds-spacing-32); /** 32px. Height of sm interactive controls (Button, Input Field, Select Field). */
-  --ds-size-control-md: var(--ds-spacing-40); /** 40px. Height of md interactive controls. */
-  --ds-size-control-lg: var(--ds-spacing-48); /** 48px. Height of lg interactive controls. */
-  --ds-size-control-icon-sm: var(--ds-spacing-16); /** 16px. Icon size inside sm controls. */
-  --ds-size-control-icon-md: var(--ds-spacing-20); /** 20px. Icon size inside md controls. */
-  --ds-size-control-icon-lg: var(--ds-spacing-24); /** 24px. Icon size inside lg controls. */
-  --ds-size-control-min-target: var(--ds-spacing-44); /** 44px. WCAG 2.5.5 AAA touch target minimum. */
-  --ds-size-avatar-sm: var(--ds-spacing-32); /** 32px */
-  --ds-size-avatar-md: var(--ds-spacing-40); /** 40px */
-  --ds-size-avatar-lg: var(--ds-spacing-56); /** 56px */
-  --ds-size-avatar-icon-sm: var(--ds-spacing-16); /** 16px */
-  --ds-size-avatar-icon-md: var(--ds-spacing-20); /** 20px */
-  --ds-size-avatar-icon-lg: var(--ds-spacing-28); /** 28px */
-  --ds-size-spinner-md: var(--ds-spacing-24); /** 24px */
-  --ds-size-spinner-lg: var(--ds-spacing-32); /** 32px */
-  --ds-size-textarea-min-height-md: var(--ds-spacing-80); /** 80px */
-  --ds-size-toggle-track-width-sm: var(--ds-spacing-28); /** 28px */
-  --ds-size-toggle-track-width-md: var(--ds-spacing-36); /** 36px */
-  --ds-size-toggle-track-width-lg: var(--ds-spacing-44); /** 44px */
+  --ds-space-2xs: var(--ds-dimension-2); /** 2px */
+  --ds-space-xs: var(--ds-dimension-4); /** 4px */
+  --ds-space-sm: var(--ds-dimension-8); /** 8px */
+  --ds-space-md: var(--ds-dimension-12); /** 12px */
+  --ds-space-lg: var(--ds-dimension-16); /** 16px */
+  --ds-space-xl: var(--ds-dimension-20); /** 20px */
+  --ds-space-2xl: var(--ds-dimension-24); /** 24px */
+  --ds-space-section-sm: var(--ds-dimension-32);
+  --ds-space-section-md: var(--ds-dimension-48);
+  --ds-space-section-lg: var(--ds-dimension-64);
+  --ds-space-section-xl: var(--ds-dimension-80);
+  --ds-space-control-padding-10: var(--ds-dimension-10); /** 10px. Padding-Y vertical de controles (Input/Button md). Único valor de control que foge da escala space (xs–2xl). */
+  --ds-size-xs: var(--ds-dimension-16); /** 16px. Inline icon em body text, indicator pequeno. */
+  --ds-size-sm: var(--ds-dimension-20); /** 20px. Icon padrão em controle, checkbox/radio sm. */
+  --ds-size-md: var(--ds-dimension-24); /** 24px. Icon grande, checkbox/radio md, avatar icon. */
+  --ds-size-lg: var(--ds-dimension-32); /** 32px. Control height sm, avatar md, spinner padrão. */
+  --ds-size-xl: var(--ds-dimension-40); /** 40px. Control height md (Button/Input/Select default), avatar lg. */
+  --ds-size-2xl: var(--ds-dimension-48); /** 48px. Control height lg, touch target a11y, avatar xl. */
+  --ds-size-3xl: var(--ds-dimension-64); /** 64px. Avatar 2xl, textarea sm, image placeholder. */
+  --ds-size-4xl: var(--ds-dimension-96); /** 96px. Textarea md, skeleton card. */
+  --ds-size-5xl: var(--ds-dimension-128); /** 128px. Textarea lg, skeleton hero. */
+  --ds-size-layout-xs: var(--ds-dimension-320); /** 320px. Mobile container, dropdown menu wide. */
+  --ds-size-layout-sm: var(--ds-dimension-480); /** 480px. Modal sm (form simples). */
+  --ds-size-layout-md: var(--ds-dimension-640); /** 640px. Modal md, content max-width. */
+  --ds-size-layout-lg: var(--ds-dimension-800); /** 800px. Modal lg, narrow page. */
+  --ds-size-layout-xl: var(--ds-dimension-1024); /** 1024px. Page container default. */
+  --ds-size-layout-2xl: var(--ds-dimension-1280); /** 1280px. Page max-width. */
   --ds-shadow-card: var(--ds-shadow-sm); /** Elevação leve de cards. */
   --ds-shadow-modal: var(--ds-shadow-xl); /** Elevação forte de modais e popovers. */
   --ds-radius-sm: var(--ds-radius-4); /** 4px. Tags, badges, chips pequenos. */
@@ -148,9 +133,9 @@
   --ds-control-font-size-sm: var(--ds-font-size-14); /** 14px. Font size for sm controls (Button, Input, Select). */
   --ds-control-font-size-md: var(--ds-font-size-14); /** 14px. Font size for md controls. */
   --ds-control-font-size-lg: var(--ds-font-size-16); /** 16px. Font size for lg controls. */
-  --ds-control-line-height-sm: var(--ds-spacing-16); /** 16px. Matches icon-sm. height = padY*2 + lineHeight = 8+16+8 = 32. */
-  --ds-control-line-height-md: var(--ds-spacing-20); /** 20px. Matches icon-md. height = 10+20+10 = 40. */
-  --ds-control-line-height-lg: var(--ds-spacing-24); /** 24px. Matches icon-lg. height = 12+24+12 = 48. */
+  --ds-control-line-height-sm: var(--ds-dimension-16); /** 16px. Matches icon-sm. height = padY*2 + lineHeight = 8+16+8 = 32. */
+  --ds-control-line-height-md: var(--ds-dimension-20); /** 20px. Matches icon-md. height = 10+20+10 = 40. */
+  --ds-control-line-height-lg: var(--ds-dimension-24); /** 24px. Matches icon-lg. height = 12+24+12 = 48. */
   --ds-body-font-family-sans: var(--ds-font-family-sans); /** Font-family sans-serif padrão do sistema. Usar em todo texto UI. */
   --ds-body-font-weight-regular: var(--ds-font-weight-regular); /** Peso regular (400). Usar em body text, descrições, placeholders. */
   --ds-body-font-weight-medium: var(--ds-font-weight-medium); /** Peso medium (500). Usar em labels, links secundários, ênfase leve. */
@@ -166,14 +151,26 @@
   --ds-body-font-size-xl: var(--ds-font-size-20); /** 20px. Títulos de card, headings H3. */
   --ds-body-font-size-2xl: var(--ds-font-size-24); /** 24px. Headings H2, títulos de modal. */
   --ds-body-font-size-3xl: var(--ds-font-size-28); /** 28px. Headings H1, display. */
+  --ds-body-font-size-4xl: var(--ds-font-size-32); /** 32px. Heading xl, display. */
+  --ds-body-font-size-5xl: var(--ds-font-size-40); /** 40px. Display sm. */
+  --ds-body-font-size-6xl: var(--ds-font-size-48); /** 48px. Display md. */
+  --ds-body-font-size-7xl: var(--ds-font-size-56); /** 56px. Display lg. */
+  --ds-body-font-size-8xl: var(--ds-font-size-64); /** 64px. Display xl. */
+  --ds-body-font-size-9xl: var(--ds-font-size-72); /** 72px. Display 2xl. */
   --ds-body-line-height-2xs: var(--ds-line-height-16); /** 16px. Pareia com body/font-size/2xs (11px) — ratio ~1.45. */
   --ds-body-line-height-xs: var(--ds-line-height-18); /** 18px. Pareia com body/font-size/xs (12px) — ratio 1.5. */
   --ds-body-line-height-sm: var(--ds-line-height-20); /** 20px. Pareia com body/font-size/sm (14px) — ratio 1.43. */
   --ds-body-line-height-md: var(--ds-line-height-24); /** 24px. Pareia com body/font-size/md (16px) — ratio 1.5. */
   --ds-body-line-height-lg: var(--ds-line-height-28); /** 28px. Pareia com body/font-size/lg (18px) — ratio 1.55. */
-  --ds-body-line-height-xl: var(--ds-line-height-28); /** 28px. Pareia com body/font-size/xl (20px) — ratio 1.4. */
+  --ds-body-line-height-xl: var(--ds-line-height-32); /** 32px. Pareia com body/font-size/xl (20px) — ratio 1.6. */
   --ds-body-line-height-2xl: var(--ds-line-height-34); /** 34px. Pareia com body/font-size/2xl (24px). */
   --ds-body-line-height-3xl: var(--ds-line-height-40); /** 40px. Pareia com body/font-size/3xl (28px). */
+  --ds-body-line-height-4xl: var(--ds-line-height-44); /** 44px. Pareia com body/font-size/4xl (32px). */
+  --ds-body-line-height-5xl: var(--ds-line-height-48); /** 48px. Pareia com body/font-size/5xl (40px). */
+  --ds-body-line-height-6xl: var(--ds-line-height-64); /** 64px. Pareia com body/font-size/6xl (48px). */
+  --ds-body-line-height-7xl: var(--ds-line-height-72); /** 72px. Pareia com body/font-size/7xl (56px). */
+  --ds-body-line-height-8xl: var(--ds-line-height-80); /** 80px. Pareia com body/font-size/8xl (64px). */
+  --ds-body-line-height-9xl: var(--ds-line-height-90); /** 90px. Pareia com body/font-size/9xl (72px). */
   --ds-border-error: var(--ds-feedback-error-background-default);
   --ds-focus-ring-color: var(--ds-border-focus); /** Focus ring color, maps to outline-color */
 }

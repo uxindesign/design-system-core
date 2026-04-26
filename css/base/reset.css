@@ -39,7 +39,7 @@ code, pre {
 
 code {
   background-color: var(--ds-background-subtle);
-  padding: var(--ds-spacing-2) var(--ds-spacing-4);
+  padding: var(--ds-dimension-2) var(--ds-dimension-4);
   border-radius: var(--ds-radius-4);
   color: var(--ds-link-content-default);
 }
@@ -47,10 +47,10 @@ code {
 pre {
   background-color: var(--ds-color-neutral-900);
   color: var(--ds-color-neutral-100);
-  padding: var(--ds-spacing-16);
+  padding: var(--ds-dimension-16);
   border-radius: var(--ds-radius-12);
   overflow-x: auto;
-  margin-bottom: var(--ds-spacing-16);
+  margin-bottom: var(--ds-dimension-16);
 }
 
 pre code {
@@ -69,7 +69,7 @@ table {
 }
 
 th, td {
-  padding: var(--ds-spacing-12) var(--ds-spacing-16);
+  padding: var(--ds-dimension-12) var(--ds-dimension-16);
   text-align: left;
   border-bottom: var(--ds-border-width-1) solid var(--ds-border-default);
 }

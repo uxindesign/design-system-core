@@ -19,8 +19,8 @@
 
 /* Default size: md */
 .ds-avatar {
-  width: var(--ds-size-avatar-md);
-  height: var(--ds-size-avatar-md);
+  width: var(--ds-size-xl);
+  height: var(--ds-size-xl);
   font-size: var(--ds-body-font-size-sm);
 }
 
@@ -28,14 +28,14 @@
    Sizes
    --------------------------------------------------------- */
 .ds-avatar--sm {
-  width: var(--ds-size-avatar-sm);
-  height: var(--ds-size-avatar-sm);
+  width: var(--ds-size-lg);
+  height: var(--ds-size-lg);
   font-size: var(--ds-body-font-size-xs);
 }
 
 .ds-avatar--lg {
-  width: var(--ds-size-avatar-lg);
-  height: var(--ds-size-avatar-lg);
+  width: var(--ds-size-3xl);
+  height: var(--ds-size-3xl);
   font-size: var(--ds-body-font-size-lg);
 }
 
@@ -52,13 +52,13 @@
 
 /* Icon avatar */
 .ds-avatar--icon .material-symbols-outlined {
-  font-size: var(--ds-size-avatar-icon-md);
+  font-size: var(--ds-size-sm);
 }
 
 .ds-avatar--sm.ds-avatar--icon .material-symbols-outlined {
-  font-size: var(--ds-size-avatar-icon-sm);
+  font-size: var(--ds-size-xs);
 }
 
 .ds-avatar--lg.ds-avatar--icon .material-symbols-outlined {
-  font-size: var(--ds-size-avatar-icon-lg);
+  font-size: var(--ds-size-md);
 }

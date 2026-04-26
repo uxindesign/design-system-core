@@ -7,16 +7,16 @@
   <link rel="stylesheet" href="../css/design-system.css">
   <link rel="stylesheet" href="layout.css">
   <style>
-    .ds-radius-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: var(--ds-spacing-16); margin-bottom: var(--ds-spacing-32); }
+    .ds-radius-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: var(--ds-dimension-16); margin-bottom: var(--ds-dimension-32); }
     .ds-radius-item { text-align: center; }
-    .ds-radius-item__box { width: 100%; aspect-ratio: 1; border: var(--ds-border-width-2) solid var(--ds-border-brand); background-color: var(--ds-toned-background-default); margin-bottom: var(--ds-spacing-8); }
+    .ds-radius-item__box { width: 100%; aspect-ratio: 1; border: var(--ds-border-width-2) solid var(--ds-border-brand); background-color: var(--ds-toned-background-default); margin-bottom: var(--ds-dimension-8); }
     .ds-radius-item__name { font-size: var(--ds-font-size-12); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-default); }
     .ds-radius-item__value { font-size: var(--ds-font-size-12); color: var(--ds-content-secondary); font-family: var(--ds-font-family-mono); }
-    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-14); margin-bottom: var(--ds-spacing-32); }
-    .ds-token-table th { text-align: left; padding: var(--ds-spacing-8) var(--ds-spacing-12); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
-    .ds-token-table td { padding: var(--ds-spacing-8) var(--ds-spacing-12); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); }
+    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-14); margin-bottom: var(--ds-dimension-32); }
+    .ds-token-table th { text-align: left; padding: var(--ds-dimension-8) var(--ds-dimension-12); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
+    .ds-token-table td { padding: var(--ds-dimension-8) var(--ds-dimension-12); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); }
     .ds-token-table code { font-size: var(--ds-font-size-12); font-family: var(--ds-font-family-mono); }
-    .ds-code-block { background-color: var(--ds-color-neutral-900); color: var(--ds-color-neutral-200); padding: var(--ds-spacing-16) var(--ds-spacing-20); border-radius: var(--ds-radius-12); font-family: var(--ds-font-family-mono); font-size: var(--ds-font-size-12); line-height: var(--ds-line-height-relaxed); overflow-x: auto; margin-bottom: var(--ds-spacing-24); white-space: pre; }
+    .ds-code-block { background-color: var(--ds-color-neutral-900); color: var(--ds-color-neutral-200); padding: var(--ds-dimension-16) var(--ds-dimension-20); border-radius: var(--ds-radius-12); font-family: var(--ds-font-family-mono); font-size: var(--ds-font-size-12); line-height: var(--ds-line-height-relaxed); overflow-x: auto; margin-bottom: var(--ds-dimension-24); white-space: pre; }
   </style>
   <script>
     (function(){var l=localStorage.getItem('ds-lang');if(l)document.documentElement.setAttribute('lang',l)})();
@@ -25,7 +25,7 @@
 <body>
 
 <header class="ds-site-header">
-  <div style="display:flex;align-items:center;gap:var(--ds-spacing-16)">
+  <div style="display:flex;align-items:center;gap:var(--ds-dimension-16)">
     <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>
@@ -98,7 +98,7 @@
     <table class="ds-token-table">
       <thead><tr><th>Token</th><th><span data-lang="pt">Valor</span><span data-lang="en">Value</span></th><th>Pixels</th><th><span data-lang="pt">Uso</span><span data-lang="en">Usage</span></th></tr></thead>
       <tbody>
-        <tr><td colspan="4" style="padding:var(--ds-spacing-12);background-color:var(--ds-background-subtle);font-size:var(--ds-font-size-12);font-weight:var(--ds-font-weight-semibold);color:var(--ds-content-secondary);text-transform:uppercase;letter-spacing:0.05em;"><span data-lang="pt">Foundation (naming numérico)</span><span data-lang="en">Foundation (numeric naming)</span></td></tr>
+        <tr><td colspan="4" style="padding:var(--ds-dimension-12);background-color:var(--ds-background-subtle);font-size:var(--ds-font-size-12);font-weight:var(--ds-font-weight-semibold);color:var(--ds-content-secondary);text-transform:uppercase;letter-spacing:0.05em;"><span data-lang="pt">Foundation (naming numérico)</span><span data-lang="en">Foundation (numeric naming)</span></td></tr>
         <tr><td><code>--ds-radius-2</code></td><td>0.125rem</td><td>2px</td><td><span data-lang="pt">Arredondamento sutil para elementos pequenos</span><span data-lang="en">Subtle rounding for small elements</span></td></tr>
         <tr><td><code>--ds-radius-4</code></td><td>0.25rem</td><td>4px</td><td>Badges, tags</td></tr>
         <tr><td><code>--ds-radius-8</code></td><td>0.5rem</td><td>8px</td><td><span data-lang="pt">Buttons, inputs, radius padrão de componentes</span><span data-lang="en">Buttons, inputs, default component radius</span></td></tr>
@@ -106,7 +106,7 @@
         <tr><td><code>--ds-radius-16</code></td><td>1rem</td><td>16px</td><td><span data-lang="pt">Containers proeminentes</span><span data-lang="en">Prominent containers</span></td></tr>
         <tr><td><code>--ds-radius-24</code></td><td>1.5rem</td><td>24px</td><td><span data-lang="pt">Seções hero, cards grandes</span><span data-lang="en">Hero sections, large cards</span></td></tr>
         <tr><td><code>--ds-radius-999</code></td><td>9999px</td><td>—</td><td><span data-lang="pt">Círculos, pills</span><span data-lang="en">Circles, pills</span></td></tr>
-        <tr><td colspan="4" style="padding:var(--ds-spacing-12);background-color:var(--ds-background-subtle);font-size:var(--ds-font-size-12);font-weight:var(--ds-font-weight-semibold);color:var(--ds-content-secondary);text-transform:uppercase;letter-spacing:0.05em;"><span data-lang="pt">Semantic (t-shirt — alias para Foundation)</span><span data-lang="en">Semantic (t-shirt — alias for Foundation)</span></td></tr>
+        <tr><td colspan="4" style="padding:var(--ds-dimension-12);background-color:var(--ds-background-subtle);font-size:var(--ds-font-size-12);font-weight:var(--ds-font-weight-semibold);color:var(--ds-content-secondary);text-transform:uppercase;letter-spacing:0.05em;"><span data-lang="pt">Semantic (t-shirt — alias para Foundation)</span><span data-lang="en">Semantic (t-shirt — alias for Foundation)</span></td></tr>
         <tr><td><code>--ds-radius-sm</code></td><td>var(--ds-radius-4)</td><td>4px</td><td><span data-lang="pt">Tags, badges, chips pequenos</span><span data-lang="en">Tags, badges, small chips</span></td></tr>
         <tr><td><code>--ds-radius-md</code></td><td>var(--ds-radius-8)</td><td>8px</td><td><span data-lang="pt">Cards, alerts — radius padrão médio</span><span data-lang="en">Cards, alerts — default medium radius</span></td></tr>
         <tr><td><code>--ds-radius-lg</code></td><td>var(--ds-radius-12)</td><td>12px</td><td><span data-lang="pt">Cards grandes, containers</span><span data-lang="en">Large cards, containers</span></td></tr>

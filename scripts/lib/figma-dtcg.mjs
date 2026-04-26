@@ -20,7 +20,7 @@ export const FIGMA_FILE_KEY = process.env.FIGMA_FILE_KEY || (() => {
 export const FOUNDATION_PREFIX_TO_FILE = {
   color: "colors.json",
   typography: "typography.json",
-  spacing: "spacing.json",
+  dimension: "dimension.json",
   radius: "radius.json",
   opacity: "opacity.json",
   border: "stroke.json",

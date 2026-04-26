@@ -7,16 +7,16 @@
   <link rel="stylesheet" href="../css/design-system.css">
   <link rel="stylesheet" href="layout.css">
   <style>
-    .ds-spacing-row { display: flex; align-items: center; gap: var(--ds-spacing-16); padding: var(--ds-spacing-8) 0; border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); }
+    .ds-spacing-row { display: flex; align-items: center; gap: var(--ds-dimension-16); padding: var(--ds-dimension-8) 0; border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); }
     .ds-spacing-row__token { width: 200px; font-size: var(--ds-font-size-12); font-family: var(--ds-font-family-mono); color: var(--ds-content-default); flex-shrink: 0; }
     .ds-spacing-row__value { width: 120px; font-size: var(--ds-font-size-12); color: var(--ds-content-secondary); flex-shrink: 0; }
     .ds-spacing-row__bar { height: 16px; background-color: var(--ds-primary-background-default); border-radius: var(--ds-radius-2); opacity: 0.7; }
-    .ds-spacing-list { margin-bottom: var(--ds-spacing-32); }
-    .ds-semantic-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-14); margin-bottom: var(--ds-spacing-32); }
-    .ds-semantic-table th { text-align: left; padding: var(--ds-spacing-8) var(--ds-spacing-12); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
-    .ds-semantic-table td { padding: var(--ds-spacing-8) var(--ds-spacing-12); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); }
+    .ds-spacing-list { margin-bottom: var(--ds-dimension-32); }
+    .ds-semantic-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-14); margin-bottom: var(--ds-dimension-32); }
+    .ds-semantic-table th { text-align: left; padding: var(--ds-dimension-8) var(--ds-dimension-12); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
+    .ds-semantic-table td { padding: var(--ds-dimension-8) var(--ds-dimension-12); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); }
     .ds-semantic-table code { font-size: var(--ds-font-size-12); font-family: var(--ds-font-family-mono); }
-    .ds-code-block { background-color: var(--ds-color-neutral-900); color: var(--ds-color-neutral-200); padding: var(--ds-spacing-16) var(--ds-spacing-20); border-radius: var(--ds-radius-12); font-family: var(--ds-font-family-mono); font-size: var(--ds-font-size-12); line-height: var(--ds-line-height-relaxed); overflow-x: auto; margin-bottom: var(--ds-spacing-24); white-space: pre; }
+    .ds-code-block { background-color: var(--ds-color-neutral-900); color: var(--ds-color-neutral-200); padding: var(--ds-dimension-16) var(--ds-dimension-20); border-radius: var(--ds-radius-12); font-family: var(--ds-font-family-mono); font-size: var(--ds-font-size-12); line-height: var(--ds-line-height-relaxed); overflow-x: auto; margin-bottom: var(--ds-dimension-24); white-space: pre; }
   </style>
   <script>
     (function(){var l=localStorage.getItem('ds-lang');if(l)document.documentElement.setAttribute('lang',l)})();
@@ -25,7 +25,7 @@
 <body>
 
 <header class="ds-site-header">
-  <div style="display:flex;align-items:center;gap:var(--ds-spacing-16)">
+  <div style="display:flex;align-items:center;gap:var(--ds-dimension-16)">
     <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>
@@ -55,33 +55,33 @@
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Spacing Scale</span><span data-lang="en">Spacing Scale</span></h2>
     <div class="ds-spacing-list">
-      <div class="ds-spacing-row"><div class="ds-spacing-row__token">--ds-spacing-2</div><div class="ds-spacing-row__value">0.125rem (2px)</div><div class="ds-spacing-row__bar" style="width:2px"></div></div>
-      <div class="ds-spacing-row"><div class="ds-spacing-row__token">--ds-spacing-4</div><div class="ds-spacing-row__value">0.25rem (4px)</div><div class="ds-spacing-row__bar" style="width:4px"></div></div>
-      <div class="ds-spacing-row"><div class="ds-spacing-row__token">--ds-spacing-6</div><div class="ds-spacing-row__value">0.375rem (6px)</div><div class="ds-spacing-row__bar" style="width:6px"></div></div>
-      <div class="ds-spacing-row"><div class="ds-spacing-row__token">--ds-spacing-8</div><div class="ds-spacing-row__value">0.5rem (8px)</div><div class="ds-spacing-row__bar" style="width:8px"></div></div>
-      <div class="ds-spacing-row"><div class="ds-spacing-row__token">--ds-spacing-10</div><div class="ds-spacing-row__value">0.625rem (10px)</div><div class="ds-spacing-row__bar" style="width:10px"></div></div>
-      <div class="ds-spacing-row"><div class="ds-spacing-row__token">--ds-spacing-12</div><div class="ds-spacing-row__value">0.75rem (12px)</div><div class="ds-spacing-row__bar" style="width:12px"></div></div>
-      <div class="ds-spacing-row"><div class="ds-spacing-row__token">--ds-spacing-14</div><div class="ds-spacing-row__value">0.875rem (14px)</div><div class="ds-spacing-row__bar" style="width:14px"></div></div>
-      <div class="ds-spacing-row"><div class="ds-spacing-row__token">--ds-spacing-16</div><div class="ds-spacing-row__value">1rem (16px)</div><div class="ds-spacing-row__bar" style="width:16px"></div></div>
-      <div class="ds-spacing-row"><div class="ds-spacing-row__token">--ds-spacing-20</div><div class="ds-spacing-row__value">1.25rem (20px)</div><div class="ds-spacing-row__bar" style="width:20px"></div></div>
-      <div class="ds-spacing-row"><div class="ds-spacing-row__token">--ds-spacing-24</div><div class="ds-spacing-row__value">1.5rem (24px)</div><div class="ds-spacing-row__bar" style="width:24px"></div></div>
-      <div class="ds-spacing-row"><div class="ds-spacing-row__token">--ds-spacing-28</div><div class="ds-spacing-row__value">1.75rem (28px)</div><div class="ds-spacing-row__bar" style="width:28px"></div></div>
-      <div class="ds-spacing-row"><div class="ds-spacing-row__token">--ds-spacing-32</div><div class="ds-spacing-row__value">2rem (32px)</div><div class="ds-spacing-row__bar" style="width:32px"></div></div>
-      <div class="ds-spacing-row"><div class="ds-spacing-row__token">--ds-spacing-36</div><div class="ds-spacing-row__value">2.25rem (36px)</div><div class="ds-spacing-row__bar" style="width:36px"></div></div>
-      <div class="ds-spacing-row"><div class="ds-spacing-row__token">--ds-spacing-40</div><div class="ds-spacing-row__value">2.5rem (40px)</div><div class="ds-spacing-row__bar" style="width:40px"></div></div>
-      <div class="ds-spacing-row"><div class="ds-spacing-row__token">--ds-spacing-44</div><div class="ds-spacing-row__value">2.75rem (44px)</div><div class="ds-spacing-row__bar" style="width:44px"></div></div>
-      <div class="ds-spacing-row"><div class="ds-spacing-row__token">--ds-spacing-48</div><div class="ds-spacing-row__value">3rem (48px)</div><div class="ds-spacing-row__bar" style="width:48px"></div></div>
-      <div class="ds-spacing-row"><div class="ds-spacing-row__token">--ds-spacing-56</div><div class="ds-spacing-row__value">3.5rem (56px)</div><div class="ds-spacing-row__bar" style="width:56px"></div></div>
-      <div class="ds-spacing-row"><div class="ds-spacing-row__token">--ds-spacing-64</div><div class="ds-spacing-row__value">4rem (64px)</div><div class="ds-spacing-row__bar" style="width:64px"></div></div>
-      <div class="ds-spacing-row"><div class="ds-spacing-row__token">--ds-spacing-80</div><div class="ds-spacing-row__value">5rem (80px)</div><div class="ds-spacing-row__bar" style="width:80px"></div></div>
-      <div class="ds-spacing-row"><div class="ds-spacing-row__token">--ds-spacing-96</div><div class="ds-spacing-row__value">6rem (96px)</div><div class="ds-spacing-row__bar" style="width:96px"></div></div>
+      <div class="ds-spacing-row"><div class="ds-spacing-row__token">--ds-dimension-2</div><div class="ds-spacing-row__value">0.125rem (2px)</div><div class="ds-spacing-row__bar" style="width:2px"></div></div>
+      <div class="ds-spacing-row"><div class="ds-spacing-row__token">--ds-dimension-4</div><div class="ds-spacing-row__value">0.25rem (4px)</div><div class="ds-spacing-row__bar" style="width:4px"></div></div>
+      <div class="ds-spacing-row"><div class="ds-spacing-row__token">--ds-dimension-6</div><div class="ds-spacing-row__value">0.375rem (6px)</div><div class="ds-spacing-row__bar" style="width:6px"></div></div>
+      <div class="ds-spacing-row"><div class="ds-spacing-row__token">--ds-dimension-8</div><div class="ds-spacing-row__value">0.5rem (8px)</div><div class="ds-spacing-row__bar" style="width:8px"></div></div>
+      <div class="ds-spacing-row"><div class="ds-spacing-row__token">--ds-dimension-10</div><div class="ds-spacing-row__value">0.625rem (10px)</div><div class="ds-spacing-row__bar" style="width:10px"></div></div>
+      <div class="ds-spacing-row"><div class="ds-spacing-row__token">--ds-dimension-12</div><div class="ds-spacing-row__value">0.75rem (12px)</div><div class="ds-spacing-row__bar" style="width:12px"></div></div>
+      <div class="ds-spacing-row"><div class="ds-spacing-row__token">--ds-dimension-14</div><div class="ds-spacing-row__value">0.875rem (14px)</div><div class="ds-spacing-row__bar" style="width:14px"></div></div>
+      <div class="ds-spacing-row"><div class="ds-spacing-row__token">--ds-dimension-16</div><div class="ds-spacing-row__value">1rem (16px)</div><div class="ds-spacing-row__bar" style="width:16px"></div></div>
+      <div class="ds-spacing-row"><div class="ds-spacing-row__token">--ds-dimension-20</div><div class="ds-spacing-row__value">1.25rem (20px)</div><div class="ds-spacing-row__bar" style="width:20px"></div></div>
+      <div class="ds-spacing-row"><div class="ds-spacing-row__token">--ds-dimension-24</div><div class="ds-spacing-row__value">1.5rem (24px)</div><div class="ds-spacing-row__bar" style="width:24px"></div></div>
+      <div class="ds-spacing-row"><div class="ds-spacing-row__token">--ds-dimension-28</div><div class="ds-spacing-row__value">1.75rem (28px)</div><div class="ds-spacing-row__bar" style="width:28px"></div></div>
+      <div class="ds-spacing-row"><div class="ds-spacing-row__token">--ds-dimension-32</div><div class="ds-spacing-row__value">2rem (32px)</div><div class="ds-spacing-row__bar" style="width:32px"></div></div>
+      <div class="ds-spacing-row"><div class="ds-spacing-row__token">--ds-dimension-36</div><div class="ds-spacing-row__value">2.25rem (36px)</div><div class="ds-spacing-row__bar" style="width:36px"></div></div>
+      <div class="ds-spacing-row"><div class="ds-spacing-row__token">--ds-dimension-40</div><div class="ds-spacing-row__value">2.5rem (40px)</div><div class="ds-spacing-row__bar" style="width:40px"></div></div>
+      <div class="ds-spacing-row"><div class="ds-spacing-row__token">--ds-dimension-44</div><div class="ds-spacing-row__value">2.75rem (44px)</div><div class="ds-spacing-row__bar" style="width:44px"></div></div>
+      <div class="ds-spacing-row"><div class="ds-spacing-row__token">--ds-dimension-48</div><div class="ds-spacing-row__value">3rem (48px)</div><div class="ds-spacing-row__bar" style="width:48px"></div></div>
+      <div class="ds-spacing-row"><div class="ds-spacing-row__token">--ds-dimension-56</div><div class="ds-spacing-row__value">3.5rem (56px)</div><div class="ds-spacing-row__bar" style="width:56px"></div></div>
+      <div class="ds-spacing-row"><div class="ds-spacing-row__token">--ds-dimension-64</div><div class="ds-spacing-row__value">4rem (64px)</div><div class="ds-spacing-row__bar" style="width:64px"></div></div>
+      <div class="ds-spacing-row"><div class="ds-spacing-row__token">--ds-dimension-80</div><div class="ds-spacing-row__value">5rem (80px)</div><div class="ds-spacing-row__bar" style="width:80px"></div></div>
+      <div class="ds-spacing-row"><div class="ds-spacing-row__token">--ds-dimension-96</div><div class="ds-spacing-row__value">6rem (96px)</div><div class="ds-spacing-row__bar" style="width:96px"></div></div>
     </div>
   </div>
 
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Semantic Spacing Tokens</span><span data-lang="en">Semantic Spacing Tokens</span></h2>
-    <p style="color:var(--ds-content-secondary);margin-bottom:var(--ds-spacing-16)"><span data-lang="pt">Em 0.7.0 (2-layer) as escalas <code>inset</code>/<code>gap</code>/<code>component</code> foram consolidadas em uma única escala <code>space</code>. Cada token aliasa um valor Foundation.</span><span data-lang="en">In 0.7.0 (2-layer) the <code>inset</code>/<code>gap</code>/<code>component</code> scales were consolidated into a single <code>space</code> scale. Each token aliases a Foundation value.</span></p>
-    <h3 style="margin:var(--ds-spacing-16) 0 var(--ds-spacing-8);color:var(--ds-content-secondary)"><span data-lang="pt">Escala única (padding, gap, margin entre componentes)</span><span data-lang="en">Single scale (padding, gap, margin between components)</span></h3>
+    <p style="color:var(--ds-content-secondary);margin-bottom:var(--ds-dimension-16)"><span data-lang="pt">Em 0.7.0 (2-layer) as escalas <code>inset</code>/<code>gap</code>/<code>component</code> foram consolidadas em uma única escala <code>space</code>. Cada token aliasa um valor Foundation.</span><span data-lang="en">In 0.7.0 (2-layer) the <code>inset</code>/<code>gap</code>/<code>component</code> scales were consolidated into a single <code>space</code> scale. Each token aliases a Foundation value.</span></p>
+    <h3 style="margin:var(--ds-dimension-16) 0 var(--ds-dimension-8);color:var(--ds-content-secondary)"><span data-lang="pt">Escala única (padding, gap, margin entre componentes)</span><span data-lang="en">Single scale (padding, gap, margin between components)</span></h3>
     <table class="ds-semantic-table">
       <thead><tr><th>Token</th><th><span data-lang="pt">Referencia Foundation</span><span data-lang="en">Foundation reference</span></th><th><span data-lang="pt">Valor</span><span data-lang="en">Value</span></th></tr></thead>
       <tbody>
@@ -94,7 +94,7 @@
         <tr><td><code>--ds-space-2xl</code></td><td><code>spacing-24</code></td><td>24px</td></tr>
       </tbody>
     </table>
-    <h3 style="margin:var(--ds-spacing-16) 0 var(--ds-spacing-8);color:var(--ds-content-secondary)"><span data-lang="pt">Seção (espaçamento entre seções/blocos grandes)</span><span data-lang="en">Section (spacing between sections/large blocks)</span></h3>
+    <h3 style="margin:var(--ds-dimension-16) 0 var(--ds-dimension-8);color:var(--ds-content-secondary)"><span data-lang="pt">Seção (espaçamento entre seções/blocos grandes)</span><span data-lang="en">Section (spacing between sections/large blocks)</span></h3>
     <table class="ds-semantic-table">
       <thead><tr><th>Token</th><th><span data-lang="pt">Referencia Foundation</span><span data-lang="en">Foundation reference</span></th><th><span data-lang="pt">Valor</span><span data-lang="en">Value</span></th></tr></thead>
       <tbody>

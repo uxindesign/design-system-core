@@ -7,25 +7,25 @@
   <link rel="stylesheet" href="../css/design-system.css">
   <link rel="stylesheet" href="layout.css">
   <style>
-    .ds-md-content h1, .ds-md-content h2, .ds-md-content h3 { margin-top: var(--ds-spacing-32); margin-bottom: var(--ds-spacing-12); color: var(--ds-content-default); }
+    .ds-md-content h1, .ds-md-content h2, .ds-md-content h3 { margin-top: var(--ds-dimension-32); margin-bottom: var(--ds-dimension-12); color: var(--ds-content-default); }
     .ds-md-content h1 { font-size: var(--ds-body-font-size-2xl); font-weight: var(--ds-body-font-weight-semibold); margin-top: 0; }
-    .ds-md-content h2 { font-size: var(--ds-body-font-size-xl); font-weight: var(--ds-body-font-weight-semibold); border-top: var(--ds-border-width-1) solid var(--ds-border-subtle); padding-top: var(--ds-spacing-24); }
+    .ds-md-content h2 { font-size: var(--ds-body-font-size-xl); font-weight: var(--ds-body-font-weight-semibold); border-top: var(--ds-border-width-1) solid var(--ds-border-subtle); padding-top: var(--ds-dimension-24); }
     .ds-md-content h3 { font-size: var(--ds-body-font-size-lg); font-weight: var(--ds-body-font-weight-semibold); }
-    .ds-md-content p { color: var(--ds-content-secondary); line-height: var(--ds-body-line-height-md); margin: var(--ds-spacing-12) 0; }
-    .ds-md-content ul, .ds-md-content ol { color: var(--ds-content-secondary); line-height: var(--ds-body-line-height-md); padding-left: var(--ds-spacing-24); margin: var(--ds-spacing-12) 0; }
-    .ds-md-content li { margin: var(--ds-spacing-4) 0; }
-    .ds-md-content code { font-family: var(--ds-font-family-mono); font-size: 0.9em; background: var(--ds-background-subtle); color: var(--ds-link-content-default); padding: 1px var(--ds-spacing-4); border-radius: var(--ds-radius-sm); }
-    .ds-md-content pre { background: var(--ds-background-inverse); color: var(--ds-content-inverse); padding: var(--ds-spacing-16); border-radius: var(--ds-radius-md); overflow-x: auto; font-size: var(--ds-body-font-size-sm); margin: var(--ds-spacing-16) 0; }
+    .ds-md-content p { color: var(--ds-content-secondary); line-height: var(--ds-body-line-height-md); margin: var(--ds-dimension-12) 0; }
+    .ds-md-content ul, .ds-md-content ol { color: var(--ds-content-secondary); line-height: var(--ds-body-line-height-md); padding-left: var(--ds-dimension-24); margin: var(--ds-dimension-12) 0; }
+    .ds-md-content li { margin: var(--ds-dimension-4) 0; }
+    .ds-md-content code { font-family: var(--ds-font-family-mono); font-size: 0.9em; background: var(--ds-background-subtle); color: var(--ds-link-content-default); padding: 1px var(--ds-dimension-4); border-radius: var(--ds-radius-sm); }
+    .ds-md-content pre { background: var(--ds-background-inverse); color: var(--ds-content-inverse); padding: var(--ds-dimension-16); border-radius: var(--ds-radius-md); overflow-x: auto; font-size: var(--ds-body-font-size-sm); margin: var(--ds-dimension-16) 0; }
     .ds-md-content pre code { background: none; color: inherit; padding: 0; }
-    .ds-md-content table { width: 100%; border-collapse: collapse; margin: var(--ds-spacing-16) 0; font-size: var(--ds-body-font-size-sm); }
-    .ds-md-content table th, .ds-md-content table td { text-align: left; padding: var(--ds-spacing-8) var(--ds-spacing-12); border-bottom: var(--ds-border-width-1) solid var(--ds-border-default); }
+    .ds-md-content table { width: 100%; border-collapse: collapse; margin: var(--ds-dimension-16) 0; font-size: var(--ds-body-font-size-sm); }
+    .ds-md-content table th, .ds-md-content table td { text-align: left; padding: var(--ds-dimension-8) var(--ds-dimension-12); border-bottom: var(--ds-border-width-1) solid var(--ds-border-default); }
     .ds-md-content table th { font-weight: var(--ds-body-font-weight-semibold); background: var(--ds-background-subtle); }
     .ds-md-content a { color: var(--ds-link-content-default); }
     .ds-md-content a:hover { color: var(--ds-link-content-hover); }
-    .ds-md-content blockquote { border-left: 3px solid var(--ds-border-default); margin: var(--ds-spacing-16) 0; padding: var(--ds-spacing-8) var(--ds-spacing-16); color: var(--ds-content-tertiary); font-style: italic; }
-    .ds-md-content hr { border: none; border-top: var(--ds-border-width-1) solid var(--ds-border-subtle); margin: var(--ds-spacing-32) 0; }
+    .ds-md-content blockquote { border-left: 3px solid var(--ds-border-default); margin: var(--ds-dimension-16) 0; padding: var(--ds-dimension-8) var(--ds-dimension-16); color: var(--ds-content-tertiary); font-style: italic; }
+    .ds-md-content hr { border: none; border-top: var(--ds-border-width-1) solid var(--ds-border-subtle); margin: var(--ds-dimension-32) 0; }
     .ds-md-content strong { color: var(--ds-content-default); }
-    .ds-md-generated-banner { background: var(--ds-feedback-info-background-default); color: var(--ds-feedback-info-content-default); padding: var(--ds-spacing-12) var(--ds-spacing-20); border-radius: var(--ds-radius-md); margin-bottom: var(--ds-spacing-24); font-size: var(--ds-body-font-size-sm); }
+    .ds-md-generated-banner { background: var(--ds-feedback-info-background-default); color: var(--ds-feedback-info-content-default); padding: var(--ds-dimension-12) var(--ds-dimension-20); border-radius: var(--ds-radius-md); margin-bottom: var(--ds-dimension-24); font-size: var(--ds-body-font-size-sm); }
   </style>
   <script>
     (function(){var l=localStorage.getItem('ds-lang');if(l)document.documentElement.setAttribute('lang',l)})();
@@ -34,7 +34,7 @@
 <body>
 
 <header class="ds-site-header">
-  <div style="display:flex;align-items:center;gap:var(--ds-spacing-16)">
+  <div style="display:flex;align-items:center;gap:var(--ds-dimension-16)">
     <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>
@@ -71,37 +71,72 @@
 
   <div class="ds-md-content">
 <p>O design system usa <a href="https://semver.org/lang/pt-BR/">Semantic Versioning</a>. Enquanto não houver release oficial 1.0, tudo fica na faixa <strong>0.x</strong>.</p>
-<h2>Regras</h2>
+<h2>Regras de bump</h2>
 <table>
 <thead>
 <tr>
-<th>Tipo de bump</th>
+<th>Tipo</th>
 <th>Quando</th>
 <th>Exemplo</th>
 </tr>
 </thead>
 <tbody><tr>
 <td><strong>Patch</strong> (0.5.0 → 0.5.1)</td>
-<td>Correção, ajuste de documentação, melhoria interna sem impacto visível.</td>
-<td>Corrigir um bug de CSS. Regenerar um inventário.</td>
+<td>Correção pontual, ajuste de documentação, melhoria interna sem impacto visível, regeneração de artefato derivado.</td>
+<td>Fix de CSS de um componente. Regenerar inventário. Corrigir um typo em ADR.</td>
 </tr>
 <tr>
 <td><strong>Minor</strong> (0.5.1 → 0.6.0)</td>
-<td>Adição de funcionalidade compatível. Novo componente, novo token semântico, nova foundation.</td>
-<td>Adicionar componente Dropdown. Criar <code>semantic.feedback.toned.*</code>.</td>
-</tr>
-<tr>
-<td><strong>Breaking</strong> (ainda em 0.x)</td>
-<td>Remoção ou renomeação de token/classe/API. Qualquer mudança que quebre consumidores.</td>
-<td>Renomear <code>text/on-brand</code> para <code>brand/content/contrast</code>.</td>
+<td>Adição compatível <strong>ou</strong> breaking change (em 0.x). Pacote coerente: novo componente, nova foundation, refator arquitetural com ADR, migração relevante.</td>
+<td>Adicionar componente Dropdown. Renomear <code>foundation.spacing</code> → <code>foundation.dimension</code>. Eliminar uma camada de tokens.</td>
 </tr>
 <tr>
 <td><strong>Major</strong> (→ 1.0.0)</td>
-<td>Só quando houver release oficial da marca, decidido explicitamente.</td>
+<td>Release oficial da marca, decidido explicitamente.</td>
 <td>Primeiro lançamento público estável.</td>
 </tr>
 </tbody></table>
-<p>Em 0.x, bumps minor cobrem tanto adições compatíveis quanto breaking changes — é a convenção do <a href="https://semver.org/lang/pt-BR/#spec-item-4">semver em versões iniciais</a>.</p>
+<p>Em 0.x, bumps <strong>minor cobrem breaking changes</strong> — convenção do <a href="https://semver.org/lang/pt-BR/#spec-item-4">semver em versões iniciais</a>. Não há bump major até a 1.0.</p>
+<h2>Quando bumpar — gatilhos explícitos</h2>
+<p>Bump não é por commit nem por sessão de trabalho. É por <strong>release</strong> — entrega coerente que vale a pena marcar. Três gatilhos:</p>
+<h3>1. Mudança considerável (preferencial)</h3>
+<p>Bumpa quando ocorre <strong>uma das seguintes</strong>, ainda que isolada:</p>
+<ul>
+<li>Novo ADR aceito que muda arquitetura ou contrato.</li>
+<li>Renomeação de namespace/token público (breaking).</li>
+<li>Novo componente shipado (não em rascunho).</li>
+<li>Eliminação ou consolidação de camada de tokens (ex: ADR-013 eliminou Component, ADR-015 unificou size).</li>
+<li>Mudança de fonte de verdade (ex: ADR-003 revisado).</li>
+</ul>
+<p>Esses são por si só dignos de uma release minor. Não acumular com outras mudanças &quot;pra justificar&quot;.</p>
+<h3>2. Feature completa</h3>
+<p>Bumpa quando um conjunto de mudanças <strong>fecha</strong> uma feature — não em pedaços. Exemplo: adicionar Theming requer foundation + semantic + componentes adaptados + docs. Tudo junto numa minor.</p>
+<h3>3. Cadência temporal (fallback)</h3>
+<p>Se há acúmulo de patches sem trigger arquitetural ou feature por <strong>mais de 2 semanas</strong>, faça uma minor consolidando o que houve. Evita <code>[Não publicado]</code> virar dump infinito.</p>
+<h2>Quando NÃO bumpar</h2>
+<p>Não bumpa em:</p>
+<ul>
+<li>Trabalho em andamento (não shipado).</li>
+<li>Cleanup parcial, ajustes de WIP.</li>
+<li>Cada commit isolado de uma sessão de trabalho.</li>
+<li>Documentação interna (CLAUDE.md, scripts internos).</li>
+<li>Regeneração automática por CI.</li>
+<li>Refactor de scripts sem impacto observável.</li>
+</ul>
+<p>Esses commits vão pra <code>[Não publicado]</code> no CHANGELOG e ficam acumulando até o próximo trigger.</p>
+<h2>CHANGELOG — uma entrada por release</h2>
+<p><code>[Não publicado]</code> é staging. Todas as mudanças desde a última release vão pra lá, <strong>agrupadas por tema</strong> (não por commit). Quando bumpa, a seção inteira vira <code>[x.y.z] — AAAA-MM-DD</code> e nasce um novo <code>[Não publicado]</code> vazio.</p>
+<p>Más práticas a evitar:</p>
+<ul>
+<li>❌ Subseções fragmentadas pra cada ajuste do dia.</li>
+<li>❌ Bump de versão pra cada commit.</li>
+<li>❌ &quot;Mudanças não publicadas&quot; tendo 10 datas diferentes — sinal de que faltou release.</li>
+</ul>
+<p>Boa prática:</p>
+<ul>
+<li>✅ Uma entrada por release, agrupada em <strong>Adicionado / Mudado / Corrigido / Removido</strong>.</li>
+<li>✅ Cada item tem 1-2 linhas explicando <strong>por quê</strong> (não só o quê).</li>
+</ul>
 <h2>Cadeia única de versão</h2>
 <p>Três lugares exibem a versão e <strong>precisam bater</strong>:</p>
 <ul>
@@ -112,22 +147,24 @@
 <p>Se os três baterem, a documentação está em dia. Se divergirem, algo no pipeline está quebrado.</p>
 <h2>Fluxo de bump</h2>
 <ol>
-<li>Confirmar que <code>CHANGELOG.md</code> tem uma seção <code>[Não publicado]</code> com as mudanças desde a última release.</li>
+<li>Confirmar que <code>CHANGELOG.md</code> tem uma seção <code>[Não publicado]</code> com as mudanças desde a última release, <strong>consolidadas</strong> (não fragmentadas).</li>
 <li>Renomear <code>[Não publicado]</code> para <code>[x.y.z] — AAAA-MM-DD</code>.</li>
 <li>Adicionar nova seção vazia <code>[Não publicado]</code> no topo para mudanças futuras.</li>
 <li>Ajustar <code>package.json</code> com a versão nova.</li>
+<li>Rodar <code>npm run build:all</code> pra regenerar artefatos derivados.</li>
 <li>Commit: <code>chore(release): x.y.z</code>.</li>
 <li>Criar tag: <code>git tag -a vx.y.z -m &quot;Release x.y.z&quot;</code>.</li>
 <li>Push com tag: <code>git push origin main vx.y.z</code>.</li>
-<li>CI regenera artefatos derivados (CSS, <code>docs/changelog.html</code>, APIs JSON, <code>llms.txt</code>) e publica no GitHub Pages automaticamente.</li>
+<li>CI regenera CSS/changelog HTML/APIs/llms.txt e publica no GitHub Pages.</li>
 </ol>
 <h2>O que não conta como versionável</h2>
 <ul>
-<li>Mudanças em <code>CLAUDE.md</code> (é documentação interna para agentes, não consumida por humanos externos).</li>
-<li>Mudanças em arquivos dentro de <code>scripts/archive/</code>.</li>
-<li>Mudanças em workflows CI a não ser que alterem o comportamento do deploy.</li>
+<li>Mudanças em <code>CLAUDE.md</code> (documentação interna para agentes).</li>
+<li>Mudanças em <code>scripts/archive/</code>.</li>
+<li>Workflows CI sem impacto no deploy.</li>
+<li>Atualizações de <code>.gitignore</code>, configs locais.</li>
 </ul>
-<p>Essas podem ir em commits <code>docs:</code>, <code>chore:</code>, <code>ci:</code> sem bump.</p>
+<p>Esses podem ir em commits <code>docs:</code>, <code>chore:</code>, <code>ci:</code> sem bump.</p>
 
   </div>
 </main>

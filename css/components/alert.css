@@ -14,12 +14,12 @@
 
 .ds-alert__icon {
   flex-shrink: 0;
-  width: var(--ds-size-control-icon-md);
-  height: var(--ds-size-control-icon-md);
+  width: var(--ds-size-sm);
+  height: var(--ds-size-sm);
 }
 
 .ds-alert__icon .material-symbols-outlined {
-  font-size: var(--ds-size-control-icon-md);
+  font-size: var(--ds-size-sm);
 }
 
 .ds-alert__content {

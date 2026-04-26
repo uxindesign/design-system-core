@@ -20,15 +20,15 @@
 
 /* Text skeleton */
 .ds-skeleton--text {
-  height: var(--ds-size-control-icon-sm);
+  height: var(--ds-size-xs);
   width: 100%;
   border-radius: var(--ds-radius-sm);
 }
 
 /* Circle skeleton */
 .ds-skeleton--circle {
-  width: var(--ds-size-control-md);
-  height: var(--ds-size-control-md);
+  width: var(--ds-size-xl);
+  height: var(--ds-size-xl);
   border-radius: var(--ds-radius-full);
   flex-shrink: 0;
 }
@@ -36,7 +36,7 @@
 /* Rectangle skeleton */
 .ds-skeleton--rectangle {
   width: 100%;
-  height: var(--ds-size-skeleton-rect-height);
+  height: var(--ds-size-5xl);
   border-radius: var(--ds-radius-md);
 }
 

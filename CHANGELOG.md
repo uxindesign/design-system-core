@@ -8,399 +8,57 @@ Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na
 
 ## [Não publicado]
 
-### Text Styles Figma — padrão único de tipografia (2026-04-25, sequência)
-
-Eu havia introduzido inconsistência: aplicado variables Semantic individualmente nos 477 textos sem inspecionar Text Styles existentes. Resultado: 3 padrões coexistindo (textos com Text Style, textos com variables individuais, Text Styles sem variables bindadas). O usuário sinalizou; corrigido aqui.
-
-**Estado anterior** (da etapa anterior do dia):
-- 28 Text Styles existiam, 109 textos os usavam, 477 com variables individuais.
-- Text Styles tinham vários Foundation leaks internos (display/*, heading/xl, body/sm, label/md, code/*, etc.) e 4 control/* sem bindings.
-
-**Mudanças:**
-
-Figma — Text Styles refatorados:
-- `body/sm` fontSize: Foundation→Semantic (typography/body/font-size/sm)
-- `label/md` fontSize: Foundation→Semantic
-- `code/md` fontSize+fontFamily: Foundation→Semantic
-- `code/sm` fontFamily: Foundation→Semantic (criado `typography/body/font-family/mono`)
-- `heading/xs` lineHeight: Foundation→Semantic body/line-height/lg
-- 4 control/* Text Styles (label-sm/lg, body-sm/md): bindings completos adicionados (fontFamily, fontStyle, fontSize, lineHeight, letterSpacing — todos a Semantic).
-- Text Styles `display/*` e `heading/xl` continuam com Foundation leak (não usados em components production, só showcase pages — fora do escopo desta etapa).
-
-Figma — Text Styles aplicados nos 465 textos sem:
-- Mapeamento por (fontSize, fontWeight): label/md, body/sm, caption/sm, body/md, label/xs, body/lg.
-- Variable bindings individuais limpas após aplicar Text Style (fontSize/fontFamily/fontStyle/lineHeight/letterSpacing setBoundVariable null) — assim Text Style passa a ser autoritário.
-
-**Estado final** (verificado via audit Plugin API):
-- 574/574 (100%) textos de component com Text Style aplicado.
-- 0 Foundation leaks via Text Styles.
-- 0 textos com variables individuais.
-- Padrão único: Variables → Text Styles → Component texts.
-
-### Alinhamento Figma ↔ JSON ↔ CSS — fonte única de verdade (2026-04-25)
-
-Reorganização estrutural pesada. Figma era a fonte mas JSON/CSS divergia em 3 dimensões: estrutura de naming (compound vs hierárquico), valores de typography (escala desalinhada), e Foundation leaks em consumidor. Esta entrada reverte essa dívida 1:1 com Figma.
-
-**Princípio arquitetural reforçado** (CLAUDE.md atualizado):
-- Figma é fonte única de verdade — vars, valores, hierarquia, bindings.
-- Propagação: Figma → JSON → CSS → consumer, unidirecional.
-- Componente NUNCA consome Foundation direto. Sempre Semantic.
-- Texto de componente Figma NUNCA tem prop visual sem binding.
-
-**Figma (write — 1.200+ mutations):**
-- Adicionado `typography/body/font-size/2xs` (11px), reorganizada escala body para sm=14, xs=12, 2xs=11. Pareou line-heights: `body/line-height/2xs=16`, `lg=28` (novos), `xs=18`, `sm=20` (remap).
-- 753 bindings de componentes rebindados pra preservar valores visuais originais durante o remap (consumers que precisavam de 11/12/14/16/18/etc. agora apontam pra Semantic correto).
-- 133 multi-style runs em textos consolidados em single run via `setRangeFontSize` + `setBoundVariable`. **Zero Foundation leaks em componente.**
-- 613 bindings adicionados em props que estavam hardcoded: `fontFamily`, `letterSpacing`, `fontStyle`, `fontSize`, `lineHeight` em todos os textos de componente.
-- 27 frame `itemSpacing`/`padding` bindados (Radio/Toggle Content + outros).
-- 4 arrows criados nas variants de Tooltip (Position=top/bottom/left/right) — antes não existiam.
-
-**JSON (sync-from-Figma):**
-- `tokens/foundation/typography.json`: adicionados `line.height.{16,18,20,22,24,26,28,34,40,44,50,60,70,80,90}` em rem (1:1 com Figma). Ratios legacy mantidas pra `css/base/`.
-- `tokens/foundation/radius.json`: `9999` → `999` (espelha Figma).
-- `tokens/semantic/{light,dark}.json`:
-  - Body font-size: `2xs=11, xs=12, sm=14` (descriptions corrigidas, alias rem-based).
-  - Body line-height: 8 entradas com aliases pra `foundation.typography.line.height.{16,18,20,24,28,28,34,40}`.
-  - **Naming compound `bg-*` → hierárquico `background.*`** em primary, toned, outline, ghost, feedback.{success,info,warning,error}. Espelha Figma.
-  - Removido `feedback.X.background.background` (não existia em Figma; substituído por `subtle` no consumer).
-  - Adicionado `semantic.shadow.{card,modal}` aliasando `foundation.shadow.{sm,xl}`.
-  - `radius.full` aliasa `foundation.radius.999`.
-
-**CSS (regenerado + atualizado consumer):**
-- `css/tokens/generated/*.css` regenerado.
-- 425 refs `--ds-*-bg-*` → `--ds-*-background-*` em `css/components/`, `docs/**/*.html`, `scripts/`.
-- 147 refs `--ds-feedback-*-background-background` (do compound `bg-background`) → `--ds-feedback-*-background-subtle`.
-- Card `--elevated` agora usa `var(--ds-shadow-card)` (Semantic) em vez de Foundation direto.
-- Modal: removido `border-top` no footer e `border-bottom` no header (Figma não tem).
-
-**Verify:** 0 erros de coerência, 0 Foundation leaks em components/, 119 warnings (118 base/ leak debt pré-existente + 1 registry TODOs migração).
-
-### Pós-merge — fixes do site de docs (2026-04-25)
-
-Trabalho de cleanup pós-migração 2-layer aplicado direto na branch antes do merge:
-
-**Causas raiz consertadas:**
-- `css/tokens/index.css` importava `generated/component.css` (deletado em 0.7.0). Browser falha silenciosa em `@import` quebrado podia comprometer carga de imports subsequentes.
-- Aliases `body.font-size.{xs,sm}` e `control.font-size.{sm,md}` apontavam para Foundation **um step menor** que a description prometia (xs→11px em vez de 12px, sm→12px em vez de 14px). Causou todas as labels e body text dos componentes saírem menores que o intencionado em light + dark.
-- `border-default-default` (sufixo duplicado) gerado por bug em script de rename — corrigido em 4 tokens feedback border.
-
-**Visual / componente:**
-- Card `--elevated` agora aplica `box-shadow: var(--ds-shadow-sm)` direto (antes dependia de utility class `.ds-elevation-1` não aplicada nos exemplos)
-- Modal close usava `.ds-btn--ghost.--icon-only` com `&times;` em 4 lugares — substituído pela classe `.ds-modal__close` (definida no CSS) com ícone `material-symbols`
-
-**Conteúdo de docs:**
-- 47 HTMLs (excluindo `changelog`, `decisions/`, `llms-full`): refs antigos removidos. Patterns: `--ds-brand-*` → `--ds-primary-*` / `--ds-toned-*`, `--ds-content-link-*` → `--ds-link-content-*`, `--ds-feedback-*-{background,subtle,default,...}` → `*-bg-{background,subtle,default,...}`, `--ds-state-*` → `--ds-overlay-*` / `--ds-focus-ring-color` / `--ds-background-disabled`, `--ds-spacing-0-5` → `--ds-spacing-2`, `--ds-neutral-50` → `--ds-color-neutral-50`
-- DTCG paths em tabelas atualizadas: `foundation.{spacing,radius,typography.font.size}.{t-shirt}` → `{numérico}` (ex: `foundation.radius.sm` → `foundation.radius.4`)
-- `token-architecture.html` reescrita: 3 camadas → 2 camadas, cadeia de alias COMPONENT→SEMANTIC→BRAND→FOUNDATION → SEMANTIC→FOUNDATION, removida seção "Brand Sublayer" (foundation.brand não existe)
-- `theming.html` simplificada: removidas Default/Ocean/Forest (Ocean e Forest nunca tiveram CSS implementado), virou paleta única + dark mode + guia de tema customizado
-- `foundations-spacing.html`: tabelas Inset/Gap/Component (eliminadas) → escala única `space.{2xs..2xl}` + `space.section.*`. Spacing scale sem `spacing-0`/`spacing-0-5`
-- `foundations-radius.html`: tabela com Foundation (numérico) + Semantic (t-shirt como aliases). Removido `radius-none`
-- `foundations-borders.html`: removido `--ds-border-width-0` da scale visual
-- `foundations-opacity.html`: removido `--ds-opacity-0` da scale visual
-- `card.html`: "Comparacao" → "Comparação"
-
-**Geradores:**
-- `scripts/sync-docs.mjs`: `THEME_COLOR_SECTIONS` reescrito com paths atuais (primary, toned, outline, ghost, link, feedback compound). Inline CSS dos ADRs renderizados também atualizado
-- `scripts/tokens-verify.mjs`: regex `FOUNDATION_LEAK_RE` atualizada para naming numérico (radius-N, spacing-N, font-size-N) — antes pegava t-shirt que agora é Semantic. Inline CSS da `tokens-sync.html` atualizado
-- `scripts/build-api.mjs`: removida leitura de `tokens/component/`, `COMPONENTS` array sem campo `token`
-- `scripts/build-llms.mjs`: nota sobre 2-layer
-
-**UI da homepage e topbar:**
-- Theme switcher (Default/Ocean/Forest) **removido** de 35 HTMLs — Ocean e Forest nunca foram implementados em CSS, opções eram cosméticas
-- Seção "Theming" da homepage removida (redundante; theming.html cobre)
-- Badge `v0.5.17` → `v0.7.0` com tokens corretos (`--ds-toned-*` e `--ds-spacing-{4,8}` em vez dos deletados `--ds-brand-subtle`, `--ds-spacing-{1,2}`)
-
-**Registry/CSS leak:**
-- `tokens/registry.json`: removidas 288 entries `layer="component"` (stale) + 85 entries com paths Foundation/Semantic eliminados (foundation.brand.*, foundation.opacity.0, foundation.radius.0, foundation.spacing.0)
-- 23 leaks reais detectados em `css/components/*.css` pela regex atualizada (radius-{4,8,12,16,9999} consumidos direto) → trocados por Semantic (radius-{sm,md,lg,xl,full})
-
-**Resultado verify:tokens (CI sem snapshot):** 0 erros, 118 warnings (117 base/ leak debt + 1 registry TODOs migração).
-
-### Migração para 2-layer + Foundation numeric naming (2026-04-24)
-
-**Mudança arquitetural grande.** Elimina camada Component e renomeia Foundation para naming numérico direto.
-
-**Figma (fonte de verdade):**
-- Collection `Component` (61 tokens) **deletada** — era dead code (zero nodes bindados, só aliases sem consumer)
-- Foundation renomeado pra numérico direto (40 vars):
-  - `radius/{xs,sm,md,lg,xl,2xl,full}` → `radius/{2,4,8,12,16,24,9999}`
-  - `typography/font/size/{xs..9xl}` → `typography/font/size/{11,12,14,16,18,20,24,28,32,40,48,56,64,72}`
-  - `spacing/{0-5,1,1-5,2,...,24}` → `spacing/{2,4,6,8,...,96}` (valor direto no nome)
-- 10 órfãos deletados: `spacing/0`, `radius/none`, `border/width/0`, `opacity/0`, `typography/font/line-height/{tight,snug,normal,relaxed}` (% values off-grid), `typography/font/size/2xs` (duplicata xs=11)
-- Criado `typography/font/size/14` (fixa 3 text styles com binding quebrado pré-existente a ID `10:11` deletado)
-- Semantic — nova escala única `space/{2xs..2xl}` (7 tokens) dissolvendo `space.inset/gap/component` (18 tokens deletados, 2.960 bindings rebindadas)
-- Semantic — novos size tokens (`size.avatar.*`, `size.modal.*`, `size.spinner.*`, `size.skeleton.*`, `size.textarea.*`, `size.toggle.*`) absorvem o que era Component
-- `semantic.radius.component` deletado (alias 1:1 pra md, redundante). `radius/full` mantém naming "full" em Semantic, aponta pra `foundation.radius.9999`
-- `border/subtle` Light recalibrado: era idêntico a `border/default` (neutral/300) → agora `neutral/200` (escala coerente subtle < default < strong)
-- Fonts `typography/font/family/{mono,display}` mantidas como reserva (hoje `mono`="DM Mono", `display`="Inter" = slot para futura heading font)
-- Foundation escopos: `scopes: []` em todos os 221 tokens (esconde dos pickers internos)
-- **Pendente manual**: `hiddenFromPublishing: true` em todos Foundation via UI do Figma (API do plugin quebrada via MCP)
-
-**Repo (derivado):**
-- `tokens/component/*` — pasta deletada (11 arquivos removidos)
-- `tokens/foundation/*.json` — reescrito com naming numérico
-- `tokens/semantic/{light,dark}.json` — space consolidado, novos size/*, border.subtle recalibrado light, radius.component removido
-- `css/components/*.css` — 143 refs atualizadas pra consumir novos tokens Semantic; vector internals (`radio-dot`, `toggle-thumb`, `spinner-stroke`, `checkbox-check`) viraram literais px porque são pintura interna de vetor, não token
-- `css/base/*.css` — 43 refs atualizadas pro novo naming numérico Foundation
-- `build-tokens.mjs` — remove build target `component.css` (collection não existe)
-- CSS gerado sem `component.css` (só `foundation.css` + `theme-{light,dark}.css` + `index.css`)
-
-**Contagem:**
-- Foundation: 229 → **221 tokens** (9 deletados, 1 criado = -8 net)
-- Semantic: 158 → **165 tokens** (+7 net: novo space +7, novos size +18, eliminados space antigos -18)
-- Component: 61 → **0** (collection deletada)
-- **Total tokens: 448 → 386 (-62, -14%)**
-- CSS vars geradas: 566 (foundation 236 + theme-light 165 + theme-dark 165)
-
-**Build + verify:**
-- `build:tokens` passa sem reference errors
-- `JSON integrity`: OK. `JSON ↔ CSS`: OK
-- Broken refs Figma em componentes produção: **0** (Button/Input/Modal/Avatar/etc)
-- Broken refs em páginas de documentação: 3.851 (dívida pré-existente acumulada de PRs anteriores; cleanup em PR separado)
-- Button Style=Success legacy — 168 refs a library externa deprecated (fora do escopo; decisão pendente)
-- `verify:tokens`: 6 falsos-positivos "CSS leak" de `var(--ds-radius-md)` — script ainda assume 3-layer; `semantic.radius.md` É o consumer-final no 2-layer (não é leak). Script precisa update.
-
-**Bump**: 0.6.0 → **0.7.0** (breaking grande — Component deletada + Foundation renamed; consumers precisam atualizar)
-
-### Simplificação estrutural Semantic (ADR-014 revisão 2026-04-23)
-
-Revisão da ADR-014: estrutura action de 5 níveis (`action.{role}.{style}.{prop}.{state}`) foi substituída por **categorias peers no root Semantic** com regra de naming alinhada ao padrão Nathan Curtis (Category · Concept · Property · Variant · State) + PDF enviado pelo usuário.
-
-**Novo rational**:
-- `primary`, `toned`, `outline`, `ghost`, `link` são peers no root Semantic (sem prefix `action.`)
-- Estrutura: `{categoria}/{prop-state}` — hierarquia pasta no Figma + compound hífen no último nível
-- `bg` (abreviado) em prop-modifier; `background` reservado pra categoria root
-- `default` explícito (`bg-default`, `content-default`)
-- **Roles `secondary` e `danger` eliminados**: Button danger → `feedback.error.*` direto; Button secondary → `outline` ou `ghost`
-- **Categoria `state.*` eliminada**: hover→overlay.subtle, pressed→overlay.default, focus→focus.ring.color, disabled-background→background.disabled
-- `content.link.*` movido pra categoria peer `link.*`
-- `feedback.{role}.{state}` → `feedback.{role}.bg-{state}` (compound consistente)
-- `border.control.{state}` → `border.control-{state}` (compound)
-
-**Execução**:
-- Figma: 26 vars novas criadas (primary/toned/outline/ghost/link/bg-disabled), 66 feedback vars renomeadas compound, 3 border.control renomeadas, 60 tokens obsoletos deletados (54 action + 4 state + 2 content.link). Total rebinds: 455 em componentes + 2.785 cleanup de bindings órfãos pré-existentes.
-- JSONs: `tokens/semantic/{light,dark}.json` reescritos com script node — seções `action.*`, `state.*`, `content.link` removidas; `primary`, `toned`, `outline`, `ghost`, `link`, `background.disabled` adicionadas; `feedback` compound; `border.control` compound.
-- CSS 18 componentes: 111 substituições (`--ds-action-primary-default-background-default` → `--ds-primary-bg-default`, etc.).
-- ADR-014: seção histórica da versão antiga preservada; seção nova documenta a estrutura peer.
-
-**Resultado**:
-- Tokens CSS 25-60% mais curtos (`--ds-primary-bg-default` = 22 chars vs 50 chars antes).
-- Semantic action: 66 → 25 tokens (-62%).
-- Build e refs todas OK.
-- Remanescente: 245 broken bindings pré-existentes em `fontSize` (ID órfão 10:11, débito histórico não introduzido por esta refatoração).
-
-**Bump**: 0.6.0 → **0.7.0** (breaking — nomes action.* renomeados pra primary/toned/outline/ghost/link; roles secondary/danger eliminados).
-
-### Política de scopes em Figma Variables (consolidação 2026-04-23)
-
-Formaliza a política de scopes nas 3 collections:
-
-- **Foundation (229 vars)**: `scopes: []` (neutro) + `hiddenFromPublishing: true`. Foundation é matéria-prima consumida por Semantic via alias — nunca deve ser bindada direto em canvas. Esconder do picker é a enforcement mecânica da regra ADR-013 "Foundation nunca em consumidor final". Setar scopes específicos em Foundation mandaria o sinal oposto ("use aqui").
-- **Semantic (162 vars)**: scopes específicos por contexto — `FRAME_FILL`+`SHAPE_FILL` pra bg, `TEXT_FILL` pra content em link/primary/toned/outline/ghost, `SHAPE_FILL`+`TEXT_FILL` pra `content/*` raiz (cobre ícones), `STROKE_COLOR` pra border/*, `STROKE_FLOAT` pra border.width.* e focus.ring.width/offset, `GAP` pra space.*, `CORNER_RADIUS` pra radius.*, `WIDTH_HEIGHT` pra size.*, `FONT_SIZE`/`LINE_HEIGHT`/`FONT_FAMILY`/`FONT_STYLE`/`LETTER_SPACING` pra typography.*, `OPACITY` pra opacity.*.
-- **Component (61 vars)**: scopes específicos por contexto (dimensional — `WIDTH_HEIGHT` pra sizes, `FONT_SIZE` pra font-sizes, etc.).
-
-Motivação: consistência com CLAUDE.md ("Nunca usar ALL_SCOPES") + ADR-013 (Foundation nunca em consumidor final). Policy aplicada em todas as 452 vars das 3 collections.
-
-**Aberto** (flag pra decisão futura): `*/content-*` em categorias de ação (primary/toned/outline/ghost/link) hoje só tem `TEXT_FILL`. Se designer bindar fill de ícone dentro de button primary, o token não aparece no picker (ícone é SHAPE_FILL). Solução: adicionar `SHAPE_FILL` a esses 10 tokens. Parkado — refinamento opcional.
-
-### Refatoração ground-up (ADR-014) — action×style×prop×state + eliminação de brand/accent + themes
-
-Restruturação da camada Semantic pra resolver o bloat crônico acumulado nas Fases 2-8 do ADR-013. **Breaking change grande** — CSS de todos componentes reescrito.
-
-**Figma (fonte de verdade)**:
-- Collection `Brand` (2 vars × 3 modes Default/Ocean/Forest) → **deletada**
-- `foundation.color.brand.{50..950}` criada como paleta única (Default = Blue atual)
-- Semantic: `brand.*` (11) + `accent.*` (6) **removidos**; 66 vars `action.{primary,secondary,danger}.{default,toned,outline,ghost}.{background,content,border}.{default,hover,active,disabled}` + 5 vars `radius.{sm,md,lg,xl,full}` criadas
-- 353 bindings em nodes de 51 componentes reapontados de `semantic.brand/accent.*` pra `semantic.action.primary.*`
-- 5 consumer vars (`content.link.{default,hover}`, `border.focus`, `border.brand`, `state.focus`) reapontados pra `foundation.color.brand.*` direto
-- Component collection: 185 → **61 vars** (-124, -67%). Mantidos apenas dimensões específicas (modal.max-width, button/input/select.height, toggle/checkbox/radio/avatar sizes, skeleton, spinner, select.arrow). Wrappers 1:1 eliminados.
-
-**JSON**: `brand.json` deletado, `color.brand.*` em `colors.json`, Semantic reescritos, 7 JSONs de componente sem tokens próprios deletados (`alert, badge, breadcrumb, card, divider, tabs, tooltip` consomem Semantic direto), 11 restantes reescritos enxutos.
-
-**CSS**: 18 `css/components/*.css` reescritos pra `--ds-action-*`. `theme-ocean.css` e `theme-forest.css` deletados. Imports do `index.css` atualizado.
-
-**ADR-014** criada. ADR-013 continua válida (regra foundation→semantic→component→CSS).
-
-**Verificação**: `npm run build:tokens` sem erros. Zero Foundation bindings em componentes Figma. Zero refs obsoletos em CSS.
-
-**Bump**: 0.5.x → **0.6.0** (breaking).
-
-### Corrigido (Fase 8 — limpeza de tokens component redundantes)
-
-Reflexão crítica após Fase 5: o agente automatizou demais e criou 151 tokens component novos, dos quais 105 eram aliases 1:1 pra Semantic/Foundation sem variação entre componentes (30% de bloat). Essa limpeza corrige.
-
-**Princípio refinado** em ADR-013 (nova seção "Quando criar um Component token"):
-- Component token existe **apenas** quando há valor único pro componente, variação por size/state, OU decisão de identidade que diverge do padrão semantic
-- NÃO criar Component token quando é alias 1:1 sem variação — CSS consome Semantic direto (Semantic > Foundation na cadeia, sem leak)
-
-**Execução**:
-
-Fase 8.2 — 5 Semantic novos criados pra cobrir categorias faltantes:
-- `semantic.motion.duration.{fast,normal,slow}` → aliases pra `foundation.duration.*`
-- `semantic.motion.ease.default` → alias pra `foundation.ease.default`
-- `semantic.opacity.disabled` → alias pra `foundation.opacity.50` (também criado no Figma com scope `OPACITY`)
-
-Motion vive **JSON-only by design** (Figma Variables não suporta animações). `scripts/lib/figma-dtcg.mjs` estendido: `semantic.motion.*` agora é `BY_DESIGN` no verify.
-
-Fase 8.3+8.4 — Removidos 96 tokens component redundantes do JSON + 146 substituições CSS. Exemplos:
-- `component.X.transition-duration` (11 componentes, todos `{foundation.duration.fast}`) → removido; CSS usa `var(--ds-motion-duration-fast)` direto
-- `component.X.transition-timing` (11) → `var(--ds-motion-ease-default)`
-- `component.X.border-width` (11) → `var(--ds-border-width-default)` (semantic existente)
-- `component.X.font-family` (em 17 comps) → `var(--ds-body-font-family-sans)`
-- `component.X.opacity-disabled` (4) → `var(--ds-opacity-disabled)`
-- label/helper/description typography tokens (~30) → consomem `body.*` direto
-
-9 tokens candidatos **mantidos como wrappers** porque remover causaria Foundation leak (ex: `alert.focus-border-radius` aliasando `{foundation.radius.sm}` — não existe semantic equivalente).
-
-Fase 8.5 — Removidos 70 variables correspondentes do Figma Component collection (192 vars hoje, era 262).
-
-**Estado final**:
-- JSON tokens: 825 → **739** (-86: -96 removidos + 10 novos semantic/motion/opacity)
-- Figma Component: 262 → **185 vars** (-77)
-- Registry: 672 → **671 entries** (net -1; várias removidas, poucas adicionadas)
-- `verify:tokens`: **0 erros**, 119 warnings (117 base/ leak — débito separado; 2 registry migration)
-
-### Adicionado (Fase 7 — enforcement em CI)
-
-`scripts/tokens-verify.mjs` ganha 2 checks novos que rodam em CI:
-
-1. **CSS foundation leak** — scan em `css/components/*.css` (error) e `css/base/*.css` (warning, débito transitório). Regex detecta uso direto de: `--ds-spacing-*`, `--ds-radius-{xs,sm,md,lg,xl,2xl,full,none}`, `--ds-border-width-[0-9]`, `--ds-font-{family,weight,size}-*`, `--ds-line-height-*`, `--ds-letter-spacing-*`, `--ds-shadow-*`, `--ds-duration-*`, `--ds-ease-*`, `--ds-opacity-[0-9]`, `--ds-z-[0-9]`, `--ds-color-*`.
-2. **Registry completude** — valida que todo token em `tokens/**/*.json` tem entry em `tokens/registry.json` com campos obrigatórios. Durante migração emite warning (672 TODOs esperados). Vira error quando atingir 80% de completude.
-
-**State pós-Fase 7**: verify:tokens passa com **0 erros, 118 warnings** (117 foundation leaks em base/ — débito pra próximo PR; 1 registry mass-TODO).
-
-### Concluído (Fase 5 — CSS + JSONs component + Figma component vars)
-
-Fase 5 do plano ADR-013 completa: os 19 CSS de componente não consomem mais **nenhum** token Foundation direto. Todos os consumos são via Semantic ou Component layer.
-
-- **CSS**: 17 `css/components/*.css` reescritos (divider piloto já feito). Grep `var(--ds-(spacing-|radius-(sm|md|lg|xl|2xl|full|xs|none)|border-width-[0-9]|font-*|line-height-|letter-spacing-|shadow-|duration-|ease-|opacity-[0-9]|z-[0-9]|color-)` → **0 matches**.
-- **JSON**: 6 novos (alert, badge, breadcrumb, card, tabs, tooltip) + 11 expandidos. Registry cresce de 521 → 672.
-- **Figma**: 125 vars novas na collection Component (137 → 262), aliasando Foundation/Semantic. 26 tokens (transitions, shadows, z-index) ficam só em JSON — Figma Variables não representa essas categorias.
-- **ADR-012 estendido**: `JSON_ONLY_COMPONENT_ALIAS_TARGETS` em `figma-dtcg.mjs` classifica esses 26 como `BY_DESIGN` em vez de drift.
-- **Verify pós-Fase 5**: 0 erros, 0 warnings. CSS_ONLY=9, BY_DESIGN=79 (informativos).
-
-### Concluído (Fases 2 e 3 — rebind + conversão de raw values)
-
-**Fase 2**: Todos os 3.479 bindings Foundation nos 51 componentes Figma rebindados pra Semantic. Divididos em 4 passes:
-- Pass 1 — Icons (30 componentes, 60 rebinds — border/width/1 + font-family/weight/letter-spacing)
-- Pass 2a — Global typography em todos componentes (2.759 rebinds — font-family, font-weight, letter-spacing, border-width)
-- Pass 2b — font-size/line-height em não-controles → body.* (268 rebinds)
-- Pass 2c — font-size/line-height em controles → control.*/body.* contextual (210 rebinds)
-- Pass 3 — cleanup com IDs corrigidos (2.073 rebinds complementares)
-- Text styles — 28 text styles locais rebindados pra Semantic (98 rebinds). Isso destravou os nodes filhos que herdavam Foundation via style.
-
-Post-audit: **0 Foundation bindings remanescentes em qualquer componente Figma**. Regra ADR-013 cumprida no lado do Figma.
-
-**Fase 3**: Das 60 variáveis raw na collection Component Figma, **50 convertidas em aliases** (Foundation.* ou Semantic.*). Exemplos:
-- `avatar/size/sm` (32) → `{foundation.spacing.8}`
-- `checkbox/border-radius` (4) → `{foundation.radius.sm}`
-- `modal/border-radius` (16) → `{foundation.radius.xl}`
-- `checkbox/min-target-size` (44) → `{semantic.size.control.min-target}` — reaproveita alias semântico existente
-- `radio/font-size`, `toggle/font-size`, etc. (14) → `{foundation.typography.font.size.sm}`
-
-**10 vars permanecem raw** como exceção explícita (ADR-013 permite quando não há equivalente Foundation): `modal/max-width/{sm,md,lg}` (400/520/640), `textarea/min-height/{sm,lg}` (68/112), `skeleton/rect-height` (120), `spinner/stroke-width/{sm,lg}` (1.5/3), `toggle/thumb-size/lg` (18), `checkbox/check-width/md` (5). Todos valores sem ponto correspondente na escala Foundation.
-
-Pós-sync: `verify:tokens` — **0 errors, 0 warnings**. Figma ↔ JSON ↔ CSS totalmente sincronizados.
-
-### Adicionado (Fase 1 — expansão Semantic typography)
-
-20 variáveis novas em `semantic.typography.body.*` no Figma e JSON, todas aliasando Foundation. Preparação pra Fase 2 (rebind dos 3.479 bindings Foundation em componentes Figma).
-
-- `semantic.typography.body.font-family.sans` → `{foundation.typography.font.family.sans}`
-- `semantic.typography.body.font-weight.{regular, medium, semibold, bold}` → foundation.weight.*
-- `semantic.typography.body.letter-spacing.{normal, tight}` → foundation.letter.spacing.*
-- `semantic.typography.body.font-size.{xs, sm, md, lg, xl, 2xl, 3xl}` → foundation.size.*
-- `semantic.typography.body.line-height.{xs, sm, md, xl, 2xl, 3xl}` → foundation ratios (ADR-012: Figma usa PX, JSON usa ratio unitless)
-
-CSS gerado: `--ds-body-font-family-sans`, `--ds-body-font-weight-*`, `--ds-body-letter-spacing-*`, `--ds-body-font-size-*`, `--ds-body-line-height-*`. Namespace `body` pareia com `control` (ADR-006) evitando colisão com Foundation (`--ds-font-family-sans` etc.).
+(Nada ainda — próxima release acumulará aqui.)
+
+## [0.8.0] — 2026-04-26
+
+Release que consolida o trabalho pós-merge do 2-layer (PR #41) até a unificação da escala de dimensão. Sequência de ajustes que ocorreu na prática em sub-etapas é apresentada aqui agrupada por tipo. Detalhamento técnico nos ADRs **013** (2-layer), **014** (action × style × prop × state), **015** (size unification).
+
+### Adicionado
+
+- **ADR-015** — unificação da escala de dimensão. Nova `semantic.size.{xs..5xl}` (16/20/24/32/40/48/64/96/128px) cobre tudo dentro de componente; `semantic.size.layout.{xs..2xl}` (320/480/640/800/1024/1280px) cobre containers. Substitui ~25 tokens component-specific.
+- `foundation.dimension.*` — escala numérica primitiva (renomeação de `foundation.spacing.*`, +7 entries: 128, 320, 480, 640, 800, 1024, 1280).
+- `semantic.typography.body.{font-size,line-height}.{4xl..9xl}` — escala completa para text styles display/heading. Foundation ganhou `line.height.{32, 48, 64, 72}`.
+- Sistema de testes automatizado (`scripts/test-token-integrity.mjs`, `test-css-references.mjs`, `test-generators.mjs`, `test-self.mjs`) validando coerência JSON↔CSS↔HTML, incluindo meta-test que provoca regressões e valida que detectores pegam.
+- CI workflow `.github/workflows/test.yml` rodando os testes em cada push.
+- Política de versionamento explícita em `docs/process-versioning.md`: triggers (mudança considerável / feature completa / cadência ≤2 semanas), regras do que NÃO bumpa, formato consolidado de CHANGELOG.
+
+### Mudado
+
+- **Naming Foundation:** `foundation.spacing.N` → `foundation.dimension.N`. CSS gerado: `--ds-spacing-N` → `--ds-dimension-N`. Espelha Figma (que já adotou `dimension/N`).
+- **`size.control.*` → namespace de exceção**, não namespace genérico. `control.*` agora só existe para valores que **fogem** da escala genérica (ex: `space.control.padding.10` = 10px único deviation).
+- 2.062 bindings em componentes Figma rebound de zombies legados (`size/control/*`, `space/control/padding/{x,y}-*`, `size/lg0`, `border/width/focus` duplicado) → escala unificada.
+- ~50 refs em `css/components/*.css`, `css/base/*.css`, `docs/*.html`, `docs/layout.css`, `index.html`, scripts internos atualizadas para os novos vars.
+- Touch target a11y: 44px → 48px (`size.control.min-target` → `size.2xl`). Passa Material 48px guideline além de WCAG 2.5.5 AAA (44px).
+- Avatar lg: 56px → 64px (`size.3xl`). Modal sm/md: 400/520 → 480/640 (`size.layout.sm/md`). Toggle track-width: 28/36/44 → 24/40/48. Textarea min-heights: 68/80/112 → 64/96/128. Ajustes para alinhar componentes à escala única.
+- ADR-006 marcada como **parcialmente substituída** por ADR-015 (parte de `size.control.*` e `space.control.padding-{x,y}.*`). `typography.control.*` permanece vigente.
+- 740 textos de componentes Figma ganharam Text Style aplicado (estado pré-existente: 1.665 textos sem style). Match exato por (fontFamily, fontStyle, fontSize, lineHeight). Material Icons preservados (não recebem text style por design).
 
 ### Corrigido
 
-- `scripts/lib/figma-dtcg.mjs` — `compareStates` estendido com `isDivergentAliasByDesign`: tokens Semantic/Component com aliases divergentes por design (Figma `font.line-height.*` px vs JSON `line.height.*` ratio) agora são `BY_DESIGN`, não `VALUE_DRIFT`. Extensão documentada em ADR-012.
+- Duplicata `body.line-height.lg` e `xl` (ambos aliasavam `line.height.28`). Corrigido: `xl` → `line.height.32` espelhando Figma. JSON estava fora de sincronia.
+- `body.font-size` e `line-height`: JSON tinha 8 entries (`2xs..3xl`), Figma tem 14 (`2xs..9xl`). Adicionados os 6 faltantes em ambos.
+- Site de docs: refs CSS quebradas pós-migração 2-layer (44 arquivos `docs/*.html` com `--ds-spacing-*` e legados `--ds-size-control-*` etc.) atualizadas para os nomes vigentes.
+- `card --elevated`: passa a consumir `var(--ds-shadow-card)` (Semantic) em vez de Foundation direto.
+- Modal: removido `border-bottom` no header e `border-top` no footer (não existiam no Figma).
+- Tooltip: arrows criados nas 4 variants (Position=top/bottom/left/right) — antes não existiam.
+- `tokens/registry.json`: 107 entries adicionadas via `build:registry:init`. Eliminado o erro de completude no `verify:tokens`.
 
-### Adicionado (arquitetura — ADR-013 e Token Registry)
+### Removido
 
-Codificada a regra de camadas de consumo de tokens: **Foundation nunca aparece em consumidor final**. CSS de componente, bindings Figma e exemplos em docs só podem consumir Semantic ou Component. A regra sempre existiu implicitamente, mas agora está documentada formalmente e vai ganhar enforcement em CI nas próximas iterações.
+- `semantic.size.{avatar, control, modal, skeleton, spinner, textarea, toggle}.*` — 25 tokens component-specific. Vestígio da Component layer eliminada em ADR-013.
+- `semantic.space.control.padding-{x,y}.{sm,md,lg}` — 6 tokens. Substituídos por `space.{sm, md, lg, xl}` direto (8/12/16/20px) + `space.control.padding.10` (10px, único deviation).
+- `tokens/foundation/spacing.json` — renomeado para `dimension.json`.
 
-- `docs/decisions/ADR-013-camadas-de-consumo-de-tokens.md` — ADR novo. Cadeia permitida, exceções (`semantic.control.*` via componente apenas; componente→foundation quando não há abstração semântica), enforcement planejado em 3 checks, ligação com Token Registry.
-- `CLAUDE.md` — seção "Camadas de consumo de tokens (ADR-013)" adicionada à "Hierarquia de verdade".
+### Notas de migração
 
-Token Registry como artefato vivo (inicial, skeleton):
+- 0.7.0 → 0.8.0 é breaking. Consumidores externos do CSS gerado precisam atualizar references aos vars renomeados (na prática este repo é o único consumer hoje).
+- Reversibilidade: rebind reverso é possível por valor. Branch atual contém todo o trabalho testado e funcional.
+- `verify:tokens` continua reportando 111 warnings em `css/base/*.css` (Foundation leak). Débito pré-existente, fora do escopo desta release. PR futuro.
 
-- `tokens/registry.json` — catálogo com 501 entries (Foundation 231, Semantic 133, Component 137). Campos por entry: `layer`, `type`, `references` (alias, se houver), `sentido`, `escopo`, `contexto`, `usos` (calculado), `decisao`. Inicializado com `TODO` nos campos obrigatórios — preenchimento incremental em PRs subsequentes.
-- `docs/token-registry.md` — vitrine gerada automaticamente do `registry.json`, agrupada por camada → categoria, com seção de detalhe por token (sentido, contexto, decisão, locais de uso).
-- `scripts/build-token-registry.mjs` — script com 3 modos: `--init` (cria stub entries preservando existentes), sem flag (recalcula `usos` via grep em CSS + tokens que referenciam + Figma snapshot quando disponível, e regenera o MD), `--check` (valida completude, falha com exit 1 se houver TODO ou token sem entry).
-- `package.json` — 3 scripts novos: `build:registry`, `build:registry:init`, `verify:registry`.
+### Sobre versão
 
-### Adicionado (docs — JSON/DTCG em todas as páginas de foundation)
-
-Seção "JSON (DTCG)" adicionada às 7 páginas de foundation que estavam sem ela, completando a cobertura iniciada em motion/opacity/zindex. Cada bloco reflete o token JSON real do arquivo correspondente em `tokens/foundation/`:
-
-- `docs/foundations-borders.html` ← `tokens/foundation/stroke.json`
-- `docs/foundations-colors.html` ← paleta neutral completa + nota das demais
-- `docs/foundations-elevation.html` ← `tokens/foundation/shadows.json` (valores recalibrados do #33)
-- `docs/foundations-radius.html` ← `tokens/foundation/radius.json`
-- `docs/foundations-spacing.html` ← excerpt de `tokens/foundation/spacing.json` (steps 0–3-5 + 12/16)
-- `docs/foundations-theme-colors.html` ← excerpt de `tokens/semantic/light.json` (brand + 4 grupos feedback)
-- `docs/foundations-typography.html` ← excerpt de `tokens/foundation/typography.json` (família, size, weight, line-height)
-
-### Limpeza (Figma — remoção de seções dev-focused dos componentes)
-
-Removidas as seções `section-tokens-utilizados` / `section-tokens` de 12 páginas de componente no Figma. Essas seções contêm mapeamentos CSS/token que são informação de desenvolvedor — já documentados em `docs/[componente].html`. O Figma passa a ter foco exclusivo em designer (variantes visuais, propriedades do componente, critérios de uso e acessibilidade).
-
-Páginas afetadas: Badge, Button, Checkbox, Input Text, Radio, Select, Toggle, Card, Divider, Modal, Skeleton, Spinner.
-
-### Corrigido (CSS — alinhamento visual Alert e Tooltip com Figma)
-
-**Alert (`css/components/alert.css`)** — 8 divergências corrigidas após inspeção do componente Figma:
-
-- **Gap**: `spacing-3` (12px) → `spacing-2` (8px) — bate com `gap: 8` no Figma.
-- **Padding**: `spacing-3 spacing-4` (12px/16px) → `spacing-3` (12px all sides) — Figma usa padding uniforme de 12px.
-- **Título font-size**: herdava 14px do base → `font-size-xs` (12px) — Figma: `fontSize: 12`.
-- **Título font-weight**: `font-weight-semibold` (600) → `font-weight-bold` (700) — Figma: `Inter Bold`.
-- **Descrição opacity**: `opacity: 0.9` removida — Figma: opacity 1 em todos os layers de texto.
-- **Subtle backgrounds**: tokens `.background` (shade 50) → `.subtle` (shade 100) em todas as 4 variantes — Figma usa `feedback/*/subtle`.
-- **Subtle text**: `feedback/*/content-default` (verde/âmbar/vermelho/azul) → `content.default` + `content.secondary` para descrição — Figma usa tokens neutros no estilo sutil.
-- **Subtle border**: `border-left: border-width-4` (4px, só esquerda) → `border: border-width-1` (1px, 4 lados) — Figma usa `strokeWeight: 1` em todas as bordas.
-
-**Tooltip (`css/components/tooltip.css`)** — 1 divergência corrigida:
-
-- **Font-size**: `font-size-sm` (14px) → `font-size-xs` (12px) — Figma: `fontSize: 12, Inter Regular`.
-
-**Docs** (`docs/alert.html`, `docs/tooltip.html`): tabelas de token mapping atualizadas para refletir os tokens corretos.
-
-### Adicionado (tooling)
-- **`scripts/lib/figma-node-audit.mjs`** — nova lib de helpers para audits de nodes Figma que têm a propriedade dividida em 4 campos individuais. Inclui `isStrokeWeightBound`, `bindStrokeWeight`, `classifyStrokeWeight` (+ equivalentes pra `cornerRadius`). Fecha **#34**.
-- Seção em `CLAUDE.md` ("Figma Plugin API — armadilhas") documentando que `strokeWeight` e `cornerRadius` têm binding só via 4 campos individuais, não via top-level.
-
-### Corrigido (Figma — elevation e focus rings)
-Fecha **issue #24.3**. Três drifts entre Figma e o canônico (CSS + `docs/foundations-elevation.html`):
-
-- **Modal** (3 variants: Size=Small/Medium/Large): `effectStyleId` estava em `elevation/3` (shadow-lg, nível 3). Ajustado para `elevation/4` (shadow-xl, nível 4) — bate com `ds-modal { box-shadow: var(--ds-shadow-xl) }` e com a doc "Modais = nível 4".
-- **Effect styles `elevation/3` e `elevation/4`**: descrições trocadas. Agora `/3` = "Sidesheets, painéis flutuantes" e `/4` = "Modais, dialogs, overlays" — alinha com a doc.
-- **Focus Rings (78 nós)**: 72 em Button + 6 em Toggle com `strokeWeight=2` raw. Bindados em `focus/ring/width` (Figma Variable, alias pra `border/width/2`). API do Figma exigiu binding nos 4 campos individuais `strokeTopWeight/Right/Bottom/Left` — `setBoundVariable('strokeWeight', ...)` falha silenciosamente. Isso revela que **audits anteriores subestimaram cobertura**: checavam só `boundVariables.strokeWeight` (que nunca é usado). Issue #34 aberta pra atualizar `scripts/lib/figma-dtcg.mjs`.
-- **Card** (variante Style=Elevated): `effectStyleId` estava em `elevation/2` (shadow-md, nível 2). Ajustado para `elevation/1` (shadow-sm, nível 1) — bate com a doc "Cards, painéis, sticky headers = nível 1". CSS também atualizado: `.ds-card--elevated { box-shadow: var(--ds-shadow-sm) }` (era `shadow-md`).
-
-### Mudança visual
-Card `--elevated` fica com sombra **ligeiramente mais sutil** (shadow-md → shadow-sm). Modal fica com sombra **mais pronunciada** (shadow-lg → shadow-xl) — o CSS já usava shadow-xl, o Figma é que estava desalinhado.
-
-### Reversibilidade
-- `.figma-revert-24.3.1.{json,mjs}` — Modal (restaura elevation/3 + descrições).
-- `.figma-revert-24.3.2.{json,mjs}` — Focus Rings (remove bindings dos 78 nós).
-- `.figma-revert-24.3.3.json` — Card elevated (restaura elevation/2).
-
-Todos gitignored.
-
-### Corrigido (tokens — elevation drift)
-Fecha **issue #33**. Figma é a fonte canônica de valores de token (ADR-003). Valores divergiam entre Figma Variables e `tokens/foundation/shadows.json`:
-
-- **`shadow.sm`** (`--ds-shadow-sm`): `0 1px 3px 0 rgba(0,0,0,0.06), 0 1px 2px 0 rgba(0,0,0,0.05)` → `0 2px 4px 0 rgba(0,0,0,0.08), 0 1px 2px 0 rgba(0,0,0,0.04)` — bate com Figma `elevation/1`.
-- **`shadow.md`** (`--ds-shadow-md`): `0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px 0 rgba(0,0,0,0.06)` → `0 4px 8px 0 rgba(0,0,0,0.08), 0 2px 4px 0 rgba(0,0,0,0.04)` — bate com Figma `elevation/2`.
-- CSS regenerado via `build:tokens` (225 vars, 132 theme vars).
-
-### Backlog / sub-issues
-- **#32** — Refactor Card API no Figma: properties `Elevated` (BOOLEAN) e `Interactive` (BOOLEAN) desacopladas de `Style`, com `State` variant quando `Interactive=true`. Breaking change em consumidores Figma.
-- **#34** — Atualizar `scripts/lib/figma-dtcg.mjs`: auditar `strokeWeight` via `strokeTopWeight`/etc. em vez de `strokeWeight` top-level. Afeta detecção de cobertura em audits futuros.
+A versão **0.7.0** foi tagueada via PR #41 (2026-04-24) cobrindo a migração 2-layer mas sem entrada formal de CHANGELOG. Toda a substância dessa entrega + cleanup posterior + size unification está consolidada nesta entrada **0.8.0**. A política de versionamento foi formalizada em `docs/process-versioning.md` para evitar fragmentação futura.
 
 ## [0.5.17]
 

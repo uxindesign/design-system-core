@@ -18,22 +18,22 @@
 
 /* Default size: md */
 .ds-spinner {
-  width: var(--ds-size-spinner-md);
-  height: var(--ds-size-spinner-md);
+  width: var(--ds-size-md);
+  height: var(--ds-size-md);
 }
 
 /* ---------------------------------------------------------
    Sizes
    --------------------------------------------------------- */
 .ds-spinner--sm {
-  width: var(--ds-size-control-icon-sm);
-  height: var(--ds-size-control-icon-sm);
+  width: var(--ds-size-xs);
+  height: var(--ds-size-xs);
   border-width: 1.5px;
 }
 
 .ds-spinner--lg {
-  width: var(--ds-size-spinner-lg);
-  height: var(--ds-size-spinner-lg);
+  width: var(--ds-size-lg);
+  height: var(--ds-size-lg);
   border-width: 3px;
 }
 

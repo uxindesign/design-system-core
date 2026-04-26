@@ -175,7 +175,7 @@ function checkJsonIntegrity(lightAll, darkAll) {
 //   Semantic   usa naming T-SHIRT    (radius-md, space-sm, body-font-size-sm)
 //
 // Padrões proibidos (= Foundation direto):
-//   --ds-spacing-{N}                 (numérico) — Semantic equivalente: space-{2xs..2xl}
+//   --ds-dimension-{N}                 (numérico) — Semantic equivalente: space-{2xs..2xl}
 //   --ds-radius-{N}                  (numérico) — Semantic equivalente: radius-{xs..2xl,full}
 //   --ds-font-size-{N}               (numérico) — Semantic: body-font-size-* / control-font-size-*
 //   --ds-border-width-{N}            (numérico) — Semantic: border-width-default
@@ -550,15 +550,15 @@ function writeHtmlReport(report) {
 <link rel="stylesheet" href="../css/design-system.css">
 <link rel="stylesheet" href="layout.css">
 <style>
-  .ds-sync-status { display:inline-flex; align-items:center; gap: var(--ds-spacing-8); padding: var(--ds-spacing-12) var(--ds-spacing-20); border-radius: var(--ds-radius-lg); font-weight: var(--ds-body-font-weight-semibold); }
+  .ds-sync-status { display:inline-flex; align-items:center; gap: var(--ds-dimension-8); padding: var(--ds-dimension-12) var(--ds-dimension-20); border-radius: var(--ds-radius-lg); font-weight: var(--ds-body-font-weight-semibold); }
   .ds-sync-status.ok { background: var(--ds-feedback-success-background-default); color: var(--ds-feedback-success-content-default); }
   .ds-sync-status.error { background: var(--ds-feedback-error-background-default); color: var(--ds-feedback-error-content-default); }
-  .ds-sync-meta { display:flex; gap: var(--ds-spacing-24); margin-top: var(--ds-spacing-16); font-size: var(--ds-body-font-size-sm); color: var(--ds-content-secondary); }
+  .ds-sync-meta { display:flex; gap: var(--ds-dimension-24); margin-top: var(--ds-dimension-16); font-size: var(--ds-body-font-size-sm); color: var(--ds-content-secondary); }
   .ds-sync-meta strong { color: var(--ds-content-default); font-weight: var(--ds-body-font-weight-semibold); }
-  .ds-sync-table { width:100%; border-collapse: collapse; margin-top: var(--ds-spacing-24); font-size: var(--ds-body-font-size-sm); }
-  .ds-sync-table th, .ds-sync-table td { text-align:left; padding: var(--ds-spacing-12); border-bottom: 1px solid var(--ds-border-default); }
+  .ds-sync-table { width:100%; border-collapse: collapse; margin-top: var(--ds-dimension-24); font-size: var(--ds-body-font-size-sm); }
+  .ds-sync-table th, .ds-sync-table td { text-align:left; padding: var(--ds-dimension-12); border-bottom: 1px solid var(--ds-border-default); }
   .ds-sync-table th { font-weight: var(--ds-body-font-weight-semibold); background: var(--ds-background-subtle); }
-  .ds-sync-banner { background: var(--ds-feedback-info-background-default); color: var(--ds-feedback-info-content-default); padding: var(--ds-spacing-16) var(--ds-spacing-20); border-radius: var(--ds-radius-md); margin-bottom: var(--ds-spacing-24); font-size: var(--ds-body-font-size-sm); }
+  .ds-sync-banner { background: var(--ds-feedback-info-background-default); color: var(--ds-feedback-info-content-default); padding: var(--ds-dimension-16) var(--ds-dimension-20); border-radius: var(--ds-radius-md); margin-bottom: var(--ds-dimension-24); font-size: var(--ds-body-font-size-sm); }
 </style>
 <script>
   (function(){var l=localStorage.getItem('ds-lang');if(l)document.documentElement.setAttribute('lang',l)})();
@@ -567,7 +567,7 @@ function writeHtmlReport(report) {
 <body>
 
 <header class="ds-site-header">
-  <div style="display:flex;align-items:center;gap:var(--ds-spacing-16)">
+  <div style="display:flex;align-items:center;gap:var(--ds-dimension-16)">
     <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>

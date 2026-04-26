@@ -45,21 +45,21 @@
   font-size: inherit;
   font-family: inherit;
   resize: vertical;
-  min-height: var(--ds-size-textarea-min-height-md);
+  min-height: var(--ds-size-4xl);
   min-width: 0;
   /* padding-x: wrapper padding + 4px inner offset (equivale ao TextFrame padding do Figma) */
-  padding: var(--ds-space-control-padding-y-md) calc(var(--ds-space-control-padding-x-md) + var(--ds-space-xs));
+  padding: var(--ds-space-control-padding-10) calc(var(--ds-space-lg) + var(--ds-space-xs));
   line-height: var(--ds-control-line-height-md);
 }
 
 .ds-textarea--sm .ds-textarea__field {
-  min-height: var(--ds-size-textarea-min-height-sm);
-  padding: var(--ds-space-control-padding-y-sm) calc(var(--ds-space-control-padding-x-sm) + var(--ds-space-xs));
+  min-height: var(--ds-size-3xl);
+  padding: var(--ds-space-sm) calc(var(--ds-space-md) + var(--ds-space-xs));
 }
 
 .ds-textarea--lg .ds-textarea__field {
-  min-height: var(--ds-size-textarea-min-height-lg);
-  padding: var(--ds-space-control-padding-y-lg) calc(var(--ds-space-control-padding-x-lg) + var(--ds-space-xs));
+  min-height: var(--ds-size-5xl);
+  padding: var(--ds-space-md) calc(var(--ds-space-xl) + var(--ds-space-xs));
 }
 
 .ds-textarea__field::placeholder {

@@ -471,242 +471,146 @@
     "space": {
       "2xs": {
         "$type": "dimension",
-        "$value": "{foundation.spacing.2}",
+        "$value": "{foundation.dimension.2}",
         "$description": "2px"
       },
       "xs": {
         "$type": "dimension",
-        "$value": "{foundation.spacing.4}",
+        "$value": "{foundation.dimension.4}",
         "$description": "4px"
       },
       "sm": {
         "$type": "dimension",
-        "$value": "{foundation.spacing.8}",
+        "$value": "{foundation.dimension.8}",
         "$description": "8px"
       },
       "md": {
         "$type": "dimension",
-        "$value": "{foundation.spacing.12}",
+        "$value": "{foundation.dimension.12}",
         "$description": "12px"
       },
       "lg": {
         "$type": "dimension",
-        "$value": "{foundation.spacing.16}",
+        "$value": "{foundation.dimension.16}",
         "$description": "16px"
       },
       "xl": {
         "$type": "dimension",
-        "$value": "{foundation.spacing.20}",
+        "$value": "{foundation.dimension.20}",
         "$description": "20px"
       },
       "2xl": {
         "$type": "dimension",
-        "$value": "{foundation.spacing.24}",
+        "$value": "{foundation.dimension.24}",
         "$description": "24px"
       },
       "section": {
         "sm": {
           "$type": "dimension",
-          "$value": "{foundation.spacing.32}"
+          "$value": "{foundation.dimension.32}"
         },
         "md": {
           "$type": "dimension",
-          "$value": "{foundation.spacing.48}"
+          "$value": "{foundation.dimension.48}"
         },
         "lg": {
           "$type": "dimension",
-          "$value": "{foundation.spacing.64}"
+          "$value": "{foundation.dimension.64}"
         },
         "xl": {
           "$type": "dimension",
-          "$value": "{foundation.spacing.80}"
+          "$value": "{foundation.dimension.80}"
         }
       },
       "control": {
-        "padding-x": {
-          "sm": {
+        "$description": "Tokens de space específicos para controles que fogem da escala genérica (control deviations).",
+        "padding": {
+          "10": {
             "$type": "dimension",
-            "$value": "{foundation.spacing.12}",
-            "$description": "12px. Horizontal padding for sm controls."
-          },
-          "md": {
-            "$type": "dimension",
-            "$value": "{foundation.spacing.16}",
-            "$description": "16px. Horizontal padding for md controls."
-          },
-          "lg": {
-            "$type": "dimension",
-            "$value": "{foundation.spacing.20}",
-            "$description": "20px. Horizontal padding for lg controls."
-          }
-        },
-        "padding-y": {
-          "sm": {
-            "$type": "dimension",
-            "$value": "{foundation.spacing.8}",
-            "$description": "8px. Vertical padding for sm controls."
-          },
-          "md": {
-            "$type": "dimension",
-            "$value": "{foundation.spacing.10}",
-            "$description": "10px. Vertical padding for md controls."
-          },
-          "lg": {
-            "$type": "dimension",
-            "$value": "{foundation.spacing.12}",
-            "$description": "12px. Vertical padding for lg controls."
+            "$value": "{foundation.dimension.10}",
+            "$description": "10px. Padding-Y vertical de controles (Input/Button md). Único valor de control que foge da escala space (xs–2xl)."
           }
         }
       }
     },
     "size": {
-      "control": {
+      "$description": "Escala genérica de dimensão estrutural — t-shirt sizing para tudo dentro de componente (ícones, indicators, controles, avatars, spinners, textareas, skeletons). Substitui a antiga subdivisão em namespaces de componente. ADR-015.",
+      "xs": {
+        "$type": "dimension",
+        "$value": "{foundation.dimension.16}",
+        "$description": "16px. Inline icon em body text, indicator pequeno."
+      },
+      "sm": {
+        "$type": "dimension",
+        "$value": "{foundation.dimension.20}",
+        "$description": "20px. Icon padrão em controle, checkbox/radio sm."
+      },
+      "md": {
+        "$type": "dimension",
+        "$value": "{foundation.dimension.24}",
+        "$description": "24px. Icon grande, checkbox/radio md, avatar icon."
+      },
+      "lg": {
+        "$type": "dimension",
+        "$value": "{foundation.dimension.32}",
+        "$description": "32px. Control height sm, avatar md, spinner padrão."
+      },
+      "xl": {
+        "$type": "dimension",
+        "$value": "{foundation.dimension.40}",
+        "$description": "40px. Control height md (Button/Input/Select default), avatar lg."
+      },
+      "2xl": {
+        "$type": "dimension",
+        "$value": "{foundation.dimension.48}",
+        "$description": "48px. Control height lg, touch target a11y, avatar xl."
+      },
+      "3xl": {
+        "$type": "dimension",
+        "$value": "{foundation.dimension.64}",
+        "$description": "64px. Avatar 2xl, textarea sm, image placeholder."
+      },
+      "4xl": {
+        "$type": "dimension",
+        "$value": "{foundation.dimension.96}",
+        "$description": "96px. Textarea md, skeleton card."
+      },
+      "5xl": {
+        "$type": "dimension",
+        "$value": "{foundation.dimension.128}",
+        "$description": "128px. Textarea lg, skeleton hero."
+      },
+      "layout": {
+        "$description": "Escala layout — containers, modal widths, sidebars, page max-widths.",
+        "xs": {
+          "$type": "dimension",
+          "$value": "{foundation.dimension.320}",
+          "$description": "320px. Mobile container, dropdown menu wide."
+        },
         "sm": {
           "$type": "dimension",
-          "$value": "{foundation.spacing.32}",
-          "$description": "32px. Height of sm interactive controls (Button, Input Field, Select Field)."
+          "$value": "{foundation.dimension.480}",
+          "$description": "480px. Modal sm (form simples)."
         },
         "md": {
           "$type": "dimension",
-          "$value": "{foundation.spacing.40}",
-          "$description": "40px. Height of md interactive controls."
+          "$value": "{foundation.dimension.640}",
+          "$description": "640px. Modal md, content max-width."
         },
         "lg": {
           "$type": "dimension",
-          "$value": "{foundation.spacing.48}",
-          "$description": "48px. Height of lg interactive controls."
+          "$value": "{foundation.dimension.800}",
+          "$description": "800px. Modal lg, narrow page."
         },
-        "icon": {
-          "sm": {
-            "$type": "dimension",
-            "$value": "{foundation.spacing.16}",
-            "$description": "16px. Icon size inside sm controls."
-          },
-          "md": {
-            "$type": "dimension",
-            "$value": "{foundation.spacing.20}",
-            "$description": "20px. Icon size inside md controls."
-          },
-          "lg": {
-            "$type": "dimension",
-            "$value": "{foundation.spacing.24}",
-            "$description": "24px. Icon size inside lg controls."
-          }
+        "xl": {
+          "$type": "dimension",
+          "$value": "{foundation.dimension.1024}",
+          "$description": "1024px. Page container default."
         },
-        "min-target": {
+        "2xl": {
           "$type": "dimension",
-          "$value": "{foundation.spacing.44}",
-          "$description": "44px. WCAG 2.5.5 AAA touch target minimum."
-        }
-      },
-      "avatar": {
-        "sm": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.32}",
-          "$description": "32px"
-        },
-        "md": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.40}",
-          "$description": "40px"
-        },
-        "lg": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.56}",
-          "$description": "56px"
-        },
-        "icon": {
-          "sm": {
-            "$type": "dimension",
-            "$value": "{foundation.spacing.16}",
-            "$description": "16px"
-          },
-          "md": {
-            "$type": "dimension",
-            "$value": "{foundation.spacing.20}",
-            "$description": "20px"
-          },
-          "lg": {
-            "$type": "dimension",
-            "$value": "{foundation.spacing.28}",
-            "$description": "28px"
-          }
-        }
-      },
-      "modal": {
-        "max-width": {
-          "sm": {
-            "$type": "dimension",
-            "$value": "25rem",
-            "$description": "400px"
-          },
-          "md": {
-            "$type": "dimension",
-            "$value": "32.5rem",
-            "$description": "520px"
-          },
-          "lg": {
-            "$type": "dimension",
-            "$value": "40rem",
-            "$description": "640px"
-          }
-        }
-      },
-      "spinner": {
-        "md": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.24}",
-          "$description": "24px"
-        },
-        "lg": {
-          "$type": "dimension",
-          "$value": "{foundation.spacing.32}",
-          "$description": "32px"
-        }
-      },
-      "skeleton": {
-        "rect-height": {
-          "$type": "dimension",
-          "$value": "7.5rem",
-          "$description": "120px"
-        }
-      },
-      "textarea": {
-        "min-height": {
-          "sm": {
-            "$type": "dimension",
-            "$value": "4.25rem",
-            "$description": "68px"
-          },
-          "md": {
-            "$type": "dimension",
-            "$value": "{foundation.spacing.80}",
-            "$description": "80px"
-          },
-          "lg": {
-            "$type": "dimension",
-            "$value": "7rem",
-            "$description": "112px"
-          }
-        }
-      },
-      "toggle": {
-        "track-width": {
-          "sm": {
-            "$type": "dimension",
-            "$value": "{foundation.spacing.28}",
-            "$description": "28px"
-          },
-          "md": {
-            "$type": "dimension",
-            "$value": "{foundation.spacing.36}",
-            "$description": "36px"
-          },
-          "lg": {
-            "$type": "dimension",
-            "$value": "{foundation.spacing.44}",
-            "$description": "44px"
-          }
+          "$value": "{foundation.dimension.1280}",
+          "$description": "1280px. Page max-width."
         }
       }
     },
@@ -764,17 +668,17 @@
         "line-height": {
           "sm": {
             "$type": "dimension",
-            "$value": "{foundation.spacing.16}",
+            "$value": "{foundation.dimension.16}",
             "$description": "16px. Matches icon-sm. height = padY*2 + lineHeight = 8+16+8 = 32."
           },
           "md": {
             "$type": "dimension",
-            "$value": "{foundation.spacing.20}",
+            "$value": "{foundation.dimension.20}",
             "$description": "20px. Matches icon-md. height = 10+20+10 = 40."
           },
           "lg": {
             "$type": "dimension",
-            "$value": "{foundation.spacing.24}",
+            "$value": "{foundation.dimension.24}",
             "$description": "24px. Matches icon-lg. height = 12+24+12 = 48."
           }
         }
@@ -862,6 +766,36 @@
             "$type": "dimension",
             "$value": "{foundation.typography.font.size.28}",
             "$description": "28px."
+          },
+          "4xl": {
+            "$type": "dimension",
+            "$value": "{foundation.typography.font.size.32}",
+            "$description": "32px. Heading xl, display."
+          },
+          "5xl": {
+            "$type": "dimension",
+            "$value": "{foundation.typography.font.size.40}",
+            "$description": "40px. Display sm."
+          },
+          "6xl": {
+            "$type": "dimension",
+            "$value": "{foundation.typography.font.size.48}",
+            "$description": "48px. Display md."
+          },
+          "7xl": {
+            "$type": "dimension",
+            "$value": "{foundation.typography.font.size.56}",
+            "$description": "56px. Display lg."
+          },
+          "8xl": {
+            "$type": "dimension",
+            "$value": "{foundation.typography.font.size.64}",
+            "$description": "64px. Display xl."
+          },
+          "9xl": {
+            "$type": "dimension",
+            "$value": "{foundation.typography.font.size.72}",
+            "$description": "72px. Display 2xl."
           }
         },
         "line-height": {
@@ -893,8 +827,8 @@
           },
           "xl": {
             "$type": "dimension",
-            "$value": "{foundation.typography.line.height.28}",
-            "$description": "28px. Pareia com body/font-size/xl (20px) — ratio 1.4."
+            "$value": "{foundation.typography.line.height.32}",
+            "$description": "32px. Pareia com body/font-size/xl (20px) — ratio 1.6."
           },
           "2xl": {
             "$type": "dimension",
@@ -905,6 +839,36 @@
             "$type": "dimension",
             "$value": "{foundation.typography.line.height.40}",
             "$description": "40px. Pareia com body/font-size/3xl (28px)."
+          },
+          "4xl": {
+            "$type": "dimension",
+            "$value": "{foundation.typography.line.height.44}",
+            "$description": "44px. Pareia com body/font-size/4xl (32px)."
+          },
+          "5xl": {
+            "$type": "dimension",
+            "$value": "{foundation.typography.line.height.48}",
+            "$description": "48px. Pareia com body/font-size/5xl (40px)."
+          },
+          "6xl": {
+            "$type": "dimension",
+            "$value": "{foundation.typography.line.height.64}",
+            "$description": "64px. Pareia com body/font-size/6xl (48px)."
+          },
+          "7xl": {
+            "$type": "dimension",
+            "$value": "{foundation.typography.line.height.72}",
+            "$description": "72px. Pareia com body/font-size/7xl (56px)."
+          },
+          "8xl": {
+            "$type": "dimension",
+            "$value": "{foundation.typography.line.height.80}",
+            "$description": "80px. Pareia com body/font-size/8xl (64px)."
+          },
+          "9xl": {
+            "$type": "dimension",
+            "$value": "{foundation.typography.line.height.90}",
+            "$description": "90px. Pareia com body/font-size/9xl (72px)."
           }
         }
       }

@@ -148,6 +148,33 @@
   --ds-color-disabled-success-dark: #486E55; /** Disabled fill for Button Success in dark mode. */
   --ds-color-disabled-error-light: rgba(194, 112, 112, 0.40); /** Disabled fill for Button Danger/Error in light mode. */
   --ds-color-disabled-error-dark: #7B5050; /** Disabled fill for Button Danger/Error in dark mode. */
+  --ds-dimension-2: 0.125rem; /** 2px */
+  --ds-dimension-4: 0.25rem; /** 4px */
+  --ds-dimension-6: 0.375rem; /** 6px */
+  --ds-dimension-8: 0.5rem; /** 8px */
+  --ds-dimension-10: 0.625rem; /** 10px — control deviation (vertical padding md). Off-grid by design. */
+  --ds-dimension-12: 0.75rem; /** 12px */
+  --ds-dimension-14: 0.875rem; /** 14px */
+  --ds-dimension-16: 1rem; /** 16px */
+  --ds-dimension-20: 1.25rem; /** 20px */
+  --ds-dimension-24: 1.5rem; /** 24px */
+  --ds-dimension-28: 1.75rem; /** 28px */
+  --ds-dimension-32: 2rem; /** 32px */
+  --ds-dimension-36: 2.25rem; /** 36px */
+  --ds-dimension-40: 2.5rem; /** 40px */
+  --ds-dimension-44: 2.75rem; /** 44px — WCAG 2.5.5 enhanced touch target */
+  --ds-dimension-48: 3rem; /** 48px */
+  --ds-dimension-56: 3.5rem; /** 56px */
+  --ds-dimension-64: 4rem; /** 64px */
+  --ds-dimension-80: 5rem; /** 80px */
+  --ds-dimension-96: 6rem; /** 96px */
+  --ds-dimension-128: 8rem; /** 128px */
+  --ds-dimension-320: 20rem; /** 320px — layout scale */
+  --ds-dimension-480: 30rem; /** 480px — layout scale */
+  --ds-dimension-640: 40rem; /** 640px — layout scale */
+  --ds-dimension-800: 50rem; /** 800px — layout scale */
+  --ds-dimension-1024: 64rem; /** 1024px — layout scale */
+  --ds-dimension-1280: 80rem; /** 1280px — layout scale */
   --ds-duration-fast: 150ms;
   --ds-duration-normal: 200ms;
   --ds-duration-slow: 300ms;
@@ -175,26 +202,6 @@
   --ds-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -2px rgba(0, 0, 0, 0.1);
   --ds-shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   --ds-shadow-none: none;
-  --ds-spacing-2: 0.125rem; /** 2px */
-  --ds-spacing-4: 0.25rem; /** 4px */
-  --ds-spacing-6: 0.375rem; /** 6px */
-  --ds-spacing-8: 0.5rem; /** 8px */
-  --ds-spacing-10: 0.625rem; /** 10px */
-  --ds-spacing-12: 0.75rem; /** 12px */
-  --ds-spacing-14: 0.875rem; /** 14px */
-  --ds-spacing-16: 1rem; /** 16px */
-  --ds-spacing-20: 1.25rem; /** 20px */
-  --ds-spacing-24: 1.5rem; /** 24px */
-  --ds-spacing-28: 1.75rem; /** 28px */
-  --ds-spacing-32: 2rem; /** 32px */
-  --ds-spacing-36: 2.25rem; /** 36px */
-  --ds-spacing-40: 2.5rem; /** 40px */
-  --ds-spacing-44: 2.75rem; /** 44px — WCAG 2.5.5 enhanced touch target */
-  --ds-spacing-48: 3rem; /** 48px */
-  --ds-spacing-56: 3.5rem; /** 56px */
-  --ds-spacing-64: 4rem; /** 64px */
-  --ds-spacing-80: 5rem; /** 80px */
-  --ds-spacing-96: 6rem; /** 96px */
   --ds-border-width-1: 1px;
   --ds-border-width-2: 2px;
   --ds-border-width-4: 4px;
@@ -226,12 +233,16 @@
   --ds-line-height-24: 1.5rem; /** 24px */
   --ds-line-height-26: 1.625rem; /** 26px */
   --ds-line-height-28: 1.75rem; /** 28px */
+  --ds-line-height-32: 2rem; /** 32px. Pareia com font.size.20 (xl). */
   --ds-line-height-34: 2.125rem; /** 34px */
   --ds-line-height-40: 2.5rem; /** 40px */
   --ds-line-height-44: 2.75rem; /** 44px */
+  --ds-line-height-48: 3rem; /** 48px. Pareia com font.size.40 (5xl). */
   --ds-line-height-50: 3.125rem; /** 50px */
   --ds-line-height-60: 3.75rem; /** 60px */
+  --ds-line-height-64: 4rem; /** 64px. Pareia com font.size.48 (6xl). */
   --ds-line-height-70: 4.375rem; /** 70px */
+  --ds-line-height-72: 4.5rem; /** 72px. Pareia com font.size.56 (7xl). */
   --ds-line-height-80: 5rem; /** 80px */
   --ds-line-height-90: 5.625rem; /** 90px */
   --ds-line-height-none: 1; /** Ratio legacy. Use em base/*.css apenas. Componente prefere numérico. */

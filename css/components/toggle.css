@@ -10,7 +10,7 @@
   cursor: pointer;
   padding: var(--ds-space-xs) var(--ds-space-xs);
   border-radius: var(--ds-radius-sm);
-  min-height: var(--ds-size-control-min-target);
+  min-height: var(--ds-size-2xl);
   font-size: var(--ds-body-font-size-sm);
   color: var(--ds-content-default);
   transition: background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
@@ -25,8 +25,8 @@
   appearance: none;
   -webkit-appearance: none;
   position: relative;
-  width: var(--ds-size-toggle-track-width-md);
-  height: var(--ds-size-control-icon-md);
+  width: var(--ds-size-xl);
+  height: var(--ds-size-sm);
   background-color: var(--ds-surface-default);
   border: var(--ds-border-width-default) solid var(--ds-border-control-default);
   border-radius: var(--ds-radius-full);
@@ -98,8 +98,8 @@
 
 /* Small */
 .ds-toggle--sm {
-  width: var(--ds-size-toggle-track-width-sm);
-  height: var(--ds-size-control-icon-sm);
+  width: var(--ds-size-md);
+  height: var(--ds-size-xs);
 }
 
 .ds-toggle--sm::after {
@@ -113,8 +113,8 @@
 
 /* Large */
 .ds-toggle--lg {
-  width: var(--ds-size-toggle-track-width-lg);
-  height: var(--ds-size-control-icon-lg);
+  width: var(--ds-size-2xl);
+  height: var(--ds-size-md);
 }
 
 .ds-toggle--lg::after {

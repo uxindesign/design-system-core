@@ -8,35 +8,35 @@
   <link rel="stylesheet" href="layout.css">
   <style>
     /* Tables */
-    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-14); margin-bottom: var(--ds-spacing-32); }
-    .ds-token-table th { text-align: left; padding: var(--ds-spacing-8) var(--ds-spacing-12); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
-    .ds-token-table td { padding: var(--ds-spacing-8) var(--ds-spacing-12); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
+    .ds-token-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-14); margin-bottom: var(--ds-dimension-32); }
+    .ds-token-table th { text-align: left; padding: var(--ds-dimension-8) var(--ds-dimension-12); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
+    .ds-token-table td { padding: var(--ds-dimension-8) var(--ds-dimension-12); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); vertical-align: middle; }
     .ds-token-table code { font-size: var(--ds-font-size-12); font-family: var(--ds-font-family-mono); }
     /* Callouts */
-    .ds-callout { padding: var(--ds-spacing-16) var(--ds-spacing-20); border-radius: var(--ds-radius-12); margin-bottom: var(--ds-spacing-24); font-size: var(--ds-font-size-14); line-height: var(--ds-line-height-relaxed); color: var(--ds-content-default); }
+    .ds-callout { padding: var(--ds-dimension-16) var(--ds-dimension-20); border-radius: var(--ds-radius-12); margin-bottom: var(--ds-dimension-24); font-size: var(--ds-font-size-14); line-height: var(--ds-line-height-relaxed); color: var(--ds-content-default); }
     .ds-callout--info { background-color: var(--ds-feedback-info-background-subtle); border: var(--ds-border-width-1) solid var(--ds-feedback-info-border-default); }
     .ds-callout--success { background-color: var(--ds-feedback-success-background-subtle); border: var(--ds-border-width-1) solid var(--ds-feedback-success-border-default); }
     .ds-callout--warning { background-color: var(--ds-feedback-warning-background-subtle); border: var(--ds-border-width-1) solid var(--ds-feedback-warning-border-default); }
-    .ds-callout__title { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-spacing-4); }
+    .ds-callout__title { font-weight: var(--ds-font-weight-semibold); margin-bottom: var(--ds-dimension-4); }
     /* Do/Don't */
-    .ds-dodont { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ds-spacing-16); margin-bottom: var(--ds-spacing-32); }
+    .ds-dodont { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ds-dimension-16); margin-bottom: var(--ds-dimension-32); }
     .ds-dodont__item { border-radius: var(--ds-radius-12); overflow: hidden; }
-    .ds-dodont__preview { padding: var(--ds-spacing-24); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-12) var(--ds-radius-12) 0 0; display: flex; flex-wrap: wrap; gap: var(--ds-spacing-12); align-items: center; justify-content: center; }
-    .ds-dodont__label { padding: var(--ds-spacing-8) var(--ds-spacing-16); font-size: var(--ds-font-size-14); font-weight: var(--ds-font-weight-semibold); }
+    .ds-dodont__preview { padding: var(--ds-dimension-24); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-12) var(--ds-radius-12) 0 0; display: flex; flex-wrap: wrap; gap: var(--ds-dimension-12); align-items: center; justify-content: center; }
+    .ds-dodont__label { padding: var(--ds-dimension-8) var(--ds-dimension-16); font-size: var(--ds-font-size-14); font-weight: var(--ds-font-weight-semibold); }
     .ds-dodont__label--do { background-color: var(--ds-feedback-success-background-subtle); color: var(--ds-feedback-success-content-default); border-top: 3px solid var(--ds-feedback-success-background-subtle); }
     .ds-dodont__label--dont { background-color: var(--ds-feedback-error-background-subtle); color: var(--ds-feedback-error-content-default); border-top: 3px solid var(--ds-feedback-error-background-subtle); }
-    .ds-dodont__desc { padding: 0 var(--ds-spacing-16) var(--ds-spacing-12); font-size: var(--ds-font-size-14); color: var(--ds-content-secondary); background-color: var(--ds-background-subtle); }
+    .ds-dodont__desc { padding: 0 var(--ds-dimension-16) var(--ds-dimension-12); font-size: var(--ds-font-size-14); color: var(--ds-content-secondary); background-color: var(--ds-background-subtle); }
     /* Anatomy */
-    .ds-anatomy { padding: var(--ds-spacing-32); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-12); margin-bottom: var(--ds-spacing-16); display: flex; align-items: center; justify-content: center; position: relative; }
+    .ds-anatomy { padding: var(--ds-dimension-32); background-color: var(--ds-background-default); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-12); margin-bottom: var(--ds-dimension-16); display: flex; align-items: center; justify-content: center; position: relative; }
     .ds-anatomy__btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; background-color: var(--ds-primary-background-default); color: var(--ds-primary-content-default); border-radius: var(--ds-radius-8); font-weight: var(--ds-font-weight-semibold); font-size: var(--ds-font-size-14); position: relative; }
     .ds-anatomy__marker { position: absolute; width: 20px; height: 20px; border-radius: 50%; background-color: var(--ds-primary-background-default); color: var(--ds-primary-content-default); font-size: 11px; font-weight: var(--ds-font-weight-bold); display: flex; align-items: center; justify-content: center; }
-    .ds-anatomy-legend { font-size: var(--ds-font-size-14); color: var(--ds-content-secondary); margin-bottom: var(--ds-spacing-32); line-height: var(--ds-line-height-relaxed); }
+    .ds-anatomy-legend { font-size: var(--ds-font-size-14); color: var(--ds-content-secondary); margin-bottom: var(--ds-dimension-32); line-height: var(--ds-line-height-relaxed); }
     .ds-anatomy-legend strong { color: var(--ds-content-default); }
     /* Code block */
-    .ds-code-block { background-color: var(--ds-color-neutral-900); color: var(--ds-color-neutral-200); padding: var(--ds-spacing-16) var(--ds-spacing-20); border-radius: var(--ds-radius-12); font-family: var(--ds-font-family-mono); font-size: var(--ds-font-size-12); line-height: var(--ds-line-height-relaxed); overflow-x: auto; margin-bottom: var(--ds-spacing-24); white-space: pre; }
+    .ds-code-block { background-color: var(--ds-color-neutral-900); color: var(--ds-color-neutral-200); padding: var(--ds-dimension-16) var(--ds-dimension-20); border-radius: var(--ds-radius-12); font-family: var(--ds-font-family-mono); font-size: var(--ds-font-size-12); line-height: var(--ds-line-height-relaxed); overflow-x: auto; margin-bottom: var(--ds-dimension-24); white-space: pre; }
     /* Related */
-    .ds-related { display: flex; gap: var(--ds-spacing-12); flex-wrap: wrap; margin-bottom: var(--ds-spacing-32); }
-    .ds-related__link { padding: var(--ds-spacing-8) var(--ds-spacing-16); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-8); font-size: var(--ds-font-size-14); color: var(--ds-link-content-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
+    .ds-related { display: flex; gap: var(--ds-dimension-12); flex-wrap: wrap; margin-bottom: var(--ds-dimension-32); }
+    .ds-related__link { padding: var(--ds-dimension-8) var(--ds-dimension-16); border: var(--ds-border-width-1) solid var(--ds-border-default); border-radius: var(--ds-radius-8); font-size: var(--ds-font-size-14); color: var(--ds-link-content-default); text-decoration: none; transition: border-color var(--ds-duration-fast) var(--ds-ease-default), background-color var(--ds-duration-fast) var(--ds-ease-default); }
     .ds-related__link:hover { border-color: var(--ds-primary-background-default); background-color: var(--ds-overlay-subtle); }
     /* Responsive do/dont */
     @media (max-width: 768px) { .ds-dodont { grid-template-columns: 1fr; } }
@@ -48,7 +48,7 @@
 <body>
 
 <header class="ds-site-header">
-  <div style="display:flex;align-items:center;gap:var(--ds-spacing-16)">
+  <div style="display:flex;align-items:center;gap:var(--ds-dimension-16)">
     <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>
@@ -224,7 +224,7 @@
        ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Estados</span><span data-lang="en">States</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-16);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);">
+    <p style="margin-bottom:var(--ds-dimension-16);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);">
       <span data-lang="pt">Estados são controlados via pseudo-classes CSS (<code>:hover</code>, <code>:active</code>, <code>:focus-visible</code>, <code>[disabled]</code>), não classes modificadoras.</span><span data-lang="en">States are handled via CSS pseudo-classes (<code>:hover</code>, <code>:active</code>, <code>:focus-visible</code>, <code>[disabled]</code>), not modifier classes.</span>
     </p>
     <div class="ds-preview">
@@ -408,7 +408,7 @@
        ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Mapeamento de tokens</span><span data-lang="en">Token mapping</span></h2>
-    <p style="margin-bottom:var(--ds-spacing-16);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);">
+    <p style="margin-bottom:var(--ds-dimension-16);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);">
       <span data-lang="pt">Tokens consumidos pela variante Brand. Outras variantes seguem o mesmo padrão usando seus respectivos grupos de cor.</span><span data-lang="en">Tokens consumed by the Brand variant. Other variants follow the same pattern using their respective color groups.</span>
     </p>
     <table class="ds-token-table">
@@ -441,7 +441,7 @@
       </tbody>
     </table>
 
-    <h3 style="margin-top:var(--ds-spacing-24);margin-bottom:var(--ds-spacing-12);font-size:var(--ds-font-size-16);color:var(--ds-content-default)"><span data-lang="pt">Variante Toned</span><span data-lang="en">Toned variant</span></h3>
+    <h3 style="margin-top:var(--ds-dimension-24);margin-bottom:var(--ds-dimension-12);font-size:var(--ds-font-size-16);color:var(--ds-content-default)"><span data-lang="pt">Variante Toned</span><span data-lang="en">Toned variant</span></h3>
     <div class="ds-callout ds-callout--info">
       <span data-lang="pt">A variante <strong>Toned</strong> usa backgrounds de overlay translúcidos (<code>--ds-toned-background-default</code>, <code>--ds-toned-background-hover</code>, <code>--ds-toned-background-active</code>) em vez de preenchimentos opacos. Isso difere dos padrões Subtle/Muted que usam tokens de background opacos. A abordagem translúcida permite que o button Toned se adapte naturalmente a qualquer cor de superfície abaixo dele, mantendo um tint de marca consistente.</span><span data-lang="en">The <strong>Toned</strong> variant uses translucent overlay backgrounds (<code>--ds-toned-background-default</code>, <code>--ds-toned-background-hover</code>, <code>--ds-toned-background-active</code>) instead of opaque fills. This differs from Subtle/Muted patterns which use opaque background tokens. The translucent approach lets the Toned button adapt naturally to any surface color beneath it while maintaining a consistent brand tint.</span>
     </div>
@@ -487,7 +487,7 @@
         <tr><td><code>Space</code></td><td>Activates the button</td></tr>
       </tbody>
     </table>
-    <p style="margin-top:var(--ds-spacing-8);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);">
+    <p style="margin-top:var(--ds-dimension-8);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);">
       <span data-lang="pt">Buttons desabilitados (<code>[disabled]</code>) são removidos da ordem de tabulação automaticamente pelo navegador. Buttons em carregamento também devem definir <code>aria-disabled="true"</code> para prevenir interação enquanto preservam a ordem de tabulação.</span><span data-lang="en">Disabled buttons (<code>[disabled]</code>) are removed from tab order automatically by the browser. Loading buttons should also set <code>aria-disabled="true"</code> to prevent interaction while preserving tab order.</span>
     </p>
   </div>
@@ -509,7 +509,7 @@
       </tbody>
     </table>
 
-    <div class="ds-callout ds-callout--info" style="margin-top:var(--ds-spacing-16)">
+    <div class="ds-callout ds-callout--info" style="margin-top:var(--ds-dimension-16)">
       <div class="ds-callout__title"><span data-lang="pt">Resumo de atributos ARIA</span><span data-lang="en">ARIA attributes summary</span></div>
       <span data-lang="pt"><code>aria-label</code> — obrigatório em buttons somente-ícone.<br>
       <code>aria-disabled="true"</code> + <code>aria-busy="true"</code> — definido em buttons em carregamento.<br>
@@ -524,7 +524,7 @@
        ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title">Figma</h2>
-    <p style="color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);margin-bottom:var(--ds-spacing-16);">
+    <p style="color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);margin-bottom:var(--ds-dimension-16);">
       <span data-lang="pt">O componente Figma possui 168+ variantes nas seguintes propriedades:</span><span data-lang="en">The Figma component has 168+ variants across the following properties:</span>
     </p>
     <table class="ds-token-table">

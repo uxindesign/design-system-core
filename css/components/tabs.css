@@ -12,7 +12,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: var(--ds-space-control-padding-y-md) var(--ds-space-control-padding-x-md);
+  padding: var(--ds-space-control-padding-10) var(--ds-space-lg);
   font-size: var(--ds-body-font-size-sm);
   font-weight: var(--ds-body-font-weight-medium);
   color: var(--ds-content-secondary);
