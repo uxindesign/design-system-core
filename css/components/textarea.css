@@ -47,19 +47,21 @@
   resize: vertical;
   min-height: var(--ds-size-4xl);
   min-width: 0;
-  /* padding-x: wrapper padding + 4px inner offset (equivale ao TextFrame padding do Figma) */
-  padding: var(--ds-space-control-padding-10) calc(var(--ds-space-lg) + var(--ds-space-xs));
+  /* Figma Textarea Field: padding pl/pr=space/lg (16), pt/pb=space/control/padding/10 (10) */
+  padding: var(--ds-space-control-padding-10) var(--ds-space-lg);
   line-height: var(--ds-control-line-height-md);
 }
 
 .ds-textarea--sm .ds-textarea__field {
   min-height: var(--ds-size-3xl);
-  padding: var(--ds-space-sm) calc(var(--ds-space-md) + var(--ds-space-xs));
+  /* Figma Textarea sm Field: pl/pr=space/md (12), pt/pb=space/sm (8) */
+  padding: var(--ds-space-sm) var(--ds-space-md);
 }
 
 .ds-textarea--lg .ds-textarea__field {
   min-height: var(--ds-size-5xl);
-  padding: var(--ds-space-md) calc(var(--ds-space-xl) + var(--ds-space-xs));
+  /* Figma Textarea lg Field: pl/pr=space/xl (20), pt/pb=space/md (12) */
+  padding: var(--ds-space-md) var(--ds-space-xl);
 }
 
 .ds-textarea__field::placeholder {

@@ -183,7 +183,6 @@
         "ds-space-md",
         "ds-space-sm",
         "ds-space-xl",
-        "ds-space-xs",
         "ds-surface-default"
       ],
       "variants": [
@@ -414,9 +413,9 @@
       "cssFile": "css/components/badge.css",
       "tokens": [
         "ds-background-disabled",
-        "ds-body-font-size-xs",
-        "ds-body-font-weight-medium",
-        "ds-body-line-height-xs",
+        "ds-body-font-size-sm",
+        "ds-body-font-weight-bold",
+        "ds-body-line-height-sm",
         "ds-border-strong",
         "ds-content-inverse",
         "ds-content-secondary",
@@ -441,9 +440,10 @@
         "ds-outline-content-default",
         "ds-primary-background-default",
         "ds-primary-content-default",
-        "ds-radius-sm",
+        "ds-radius-full",
         "ds-space-2xs",
         "ds-space-sm",
+        "ds-space-xs",
         "ds-toned-background-default",
         "ds-toned-content-default"
       ],
@@ -663,15 +663,14 @@
       "cssFile": "css/components/breadcrumb.css",
       "tokens": [
         "ds-body-font-size-sm",
-        "ds-body-font-weight-medium",
-        "ds-content-default",
-        "ds-content-tertiary",
+        "ds-body-font-weight-bold",
+        "ds-content-secondary",
         "ds-focus-ring-color",
         "ds-focus-ring-offset",
         "ds-focus-ring-width",
-        "ds-link-content-default",
-        "ds-radius-sm",
-        "ds-space-sm"
+        "ds-primary-background-default",
+        "ds-radius-md",
+        "ds-space-xs"
       ],
       "variants": [],
       "figma": {

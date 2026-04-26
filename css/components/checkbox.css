@@ -205,11 +205,11 @@
   color: var(--ds-content-default);
 }
 
-/* Description (body/sm: 14px regular / 22px, multiline) */
+/* Description (body/sm: 14px regular / 20px) */
 .ds-checkbox__description {
   font-size: var(--ds-body-font-size-sm);
   font-weight: var(--ds-body-font-weight-regular);
-  line-height: var(--ds-body-line-height-md);
+  line-height: var(--ds-body-line-height-sm);
   color: var(--ds-content-default);
   white-space: pre-wrap;
 }

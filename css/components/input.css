@@ -62,24 +62,25 @@
 /* Icon
    ========================================================================== */
 
+/* Icon container: sempre size-md (24×24) por Figma — glyph dentro escala
+   por size de input. Container fixo dá breathing room consistente. */
 .ds-input__icon {
   flex-shrink: 0;
   color: var(--ds-content-tertiary);
-  width: var(--ds-size-sm);
-  height: var(--ds-size-sm);
-  font-size: var(--ds-size-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--ds-size-md);
+  height: var(--ds-size-md);
+  font-size: var(--ds-size-sm); /* glyph 20px (md default) */
 }
 
 .ds-input--sm .ds-input__icon {
-  width: var(--ds-size-xs);
-  height: var(--ds-size-xs);
-  font-size: var(--ds-size-xs);
+  font-size: var(--ds-size-xs); /* glyph 16px */
 }
 
 .ds-input--lg .ds-input__icon {
-  width: var(--ds-size-md);
-  height: var(--ds-size-md);
-  font-size: var(--ds-size-md);
+  font-size: var(--ds-size-md); /* glyph 24px */
 }
 
 /* States
