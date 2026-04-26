@@ -690,6 +690,11 @@
             "$type": "fontFamily",
             "$value": "{foundation.typography.font.family.sans}",
             "$description": "Font-family sans-serif padrão do sistema. Usar em todo texto UI."
+          },
+          "mono": {
+            "$type": "fontFamily",
+            "$value": "{foundation.typography.font.family.mono}",
+            "$description": "Monospace pra code blocks e snippets. Espelha Figma typography/body/font-family/mono."
           }
         },
         "font-weight": {
@@ -724,6 +729,11 @@
             "$type": "dimension",
             "$value": "{foundation.typography.letter.spacing.tight}",
             "$description": "Letter-spacing apertado (-0.02em)."
+          },
+          "wider": {
+            "$type": "dimension",
+            "$value": "{foundation.typography.letter.spacing.wider}",
+            "$description": "Letter-spacing expandido (1.5px). Usado em overline/uppercase. Espelha Figma typography/body/letter-spacing/wider."
           }
         },
         "font-size": {

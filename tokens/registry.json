@@ -9325,6 +9325,34 @@
         "tokens": [],
         "figma": []
       }
+    },
+    "semantic.typography.body.font-family.mono": {
+      "layer": "semantic",
+      "type": "fontFamily",
+      "references": "foundation.typography.font.family.mono",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.typography.body.letter-spacing.wider": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.typography.letter.spacing.wider",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
     }
   }
 }

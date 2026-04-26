@@ -12,14 +12,14 @@
 | Formato canônico | JSON (DTCG) em `tokens/` |
 | CSS gerado | Style Dictionary → `css/tokens/generated/` |
 | Pipeline | ✅ index.css importa apenas generated/ |
-| Paridade light/dark | ✅ 169 tokens em ambos os modos |
+| Paridade light/dark | ✅ 171 tokens em ambos os modos |
 
 ## Camadas
 
 | Camada | Tokens | Arquivos |
 |--------|--------|----------|
 | Foundation | **262** | 9 |
-| Semantic | **169 × 2 modos** | light.json + dark.json |
+| Semantic | **171 × 2 modos** | light.json + dark.json |
 | Component | **0** | 0 |
 
 ## Foundation (262 tokens)
@@ -36,7 +36,7 @@
 | `typography.json` | 54 |
 | `z-index.json` | 6 |
 
-## Semantic (169 tokens × 2 modos)
+## Semantic (171 tokens × 2 modos)
 
 Categorias raiz em light.json:
 
