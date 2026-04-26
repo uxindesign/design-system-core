@@ -2,7 +2,7 @@
 
 > Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-26. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
-> Versão atual: **0.8.0**
+> Versão atual: **1.0.0-beta.1**
 
 ## Status geral
 
@@ -70,8 +70,8 @@
 | ADR-010 | Remoção de `foundation.color.white` e `foundation.color.black` puros | Aceita — Implementada em 0.5.0 |
 | ADR-011 | Reestruturação do naming de tokens semânticos de cor | Aceita — Implementada em 0.5.0 |
 | ADR-012 | Tokens de line-height e letter-spacing divergem por design entre Figma e JSON | Aceita |
-| ADR-013 | Camadas de consumo de tokens — Foundation nunca direto em consumidor final | Aceita |
-| ADR-014 | Reestruturação Semantic em `action` × `style` × `prop` × `state` — eliminação de brand/accent e themes | Aceita |
+| ADR-013 | Camadas de consumo de tokens — Foundation nunca direto em consumidor final | Aceita — implementada em 0.7.0 (Component layer eliminada) e fechada em 1.0.0-beta.1 (0 leaks Foundation em `css/components/*.css` e `css/base/*.css`) |
+| ADR-014 | Reestruturação Semantic em `action` × `style` × `prop` × `state` — eliminação de brand/accent e themes | Aceita — implementada em 0.7.0 e estabilizada em 1.0.0-beta.1 |
 | ADR-015 | — Unificação da escala size, eliminação de tokens component-specific e renomeação spacing→dimension | Aceito |
 
 ## Próximos milestones

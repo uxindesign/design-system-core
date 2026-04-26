@@ -4,11 +4,66 @@ Todas as mudanças notáveis deste design system são registradas aqui.
 
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/) e o versionamento segue [Semantic Versioning](https://semver.org/lang/pt-BR/).
 
-Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na faixa 0.x. Regras de bump documentadas em `docs/process-versioning.html`.
+A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incrementam `1.0.0-beta.N` até decisão do owner pra dropping do tag → `1.0.0` oficial. Tags 0.x permanecem como histórico pré-beta. Regras em `docs/process-versioning.html`.
 
 ## [Não publicado]
 
 (Nada ainda — próxima release acumulará aqui.)
+
+## [1.0.0-beta.1] — 2026-04-26
+
+Primeiro release em fase beta. Consolida todo trabalho pós-0.8.0: alinhamento de 14 componentes restantes com Figma, refactor de inline styles dos docs, descriptions designer-focused nos 18 component sets Figma, eliminação de 111 leaks Foundation em `css/base/`, fix de problemas visuais persistentes (Toggle pixel offset, dodont border, callouts, header washed, version badge, code contraste, theme switcher legado, tooltip docs grid). Marca a transição do versionamento 0.x para a fase beta de 1.0.
+
+### Adicionado
+
+- **Política de versionamento beta** (`docs/process-versioning.md`): schema `1.0.0-beta.N` substitui o 0.x até dropping decidido pelo owner. Cadência pack-based + fallback 2 semanas. Critérios de maturidade pra 1.0 documentados como guia (não gate).
+- **Regra Operacional 5** em `CLAUDE.md`: "Figma é fonte de verdade absoluta. Quando o usuário pedir algo que diverge do Figma, alertar antes de aplicar." Inspeção do Figma vira pré-requisito de qualquer mudança que toque valor visual ou estrutura de token.
+- **Centralização de utility classes de docs** em `docs/layout.css`: callouts, dodont, anatomy, related, tables. Antes duplicados inline em 19+ arquivos `docs/*.html`. Future fix em uma edição.
+- **Documentation links nos 18 component sets Figma**: cada um aponta pro site de docs correspondente.
+- **17 descriptions designer-focused** reescritas (template Quando usar / Variantes / Constraints) nos componentes Figma.
+- **`semantic.typography.body.font-family.mono`** + **`semantic.typography.body.letter-spacing.wider`** sincronizados pra JSON (já existiam em Figma — JSON estava out-of-sync).
+
+### Mudado
+
+- **14 componentes alinhados 1:1 com Figma vs CSS**: Badge, Breadcrumb, Checkbox, Input, Textarea, Alert, Avatar, Card, Divider, Radio, Skeleton, Spinner, Tabs, Tooltip. Drift visual aceito como alinhamento Figma (line-heights heading, font-weight medium→bold em label/*, icon container size-md fixo, etc.).
+- **Toggle pixel-perfect**: dimensions Sm 32×18, Md 40×22, Lg 48×26 com thumbs 12/16/20 e gap 3px (era 2px). Eliminada o offset de 1px à direita que persistia.
+- **`css/base/typography.css` reescrito**: 24 utility classes `.ds-text-*` agora consomem 100% Semantic, alinhadas 1:1 com Text Styles do Figma. 21 classes restantes (3 deletadas alinhando com Figma).
+- **`css/base/reset.css`**: 14 substituições Foundation→Semantic. body/code/pre/table consomem `--ds-body-*`. `pre` usa `--ds-background-inverse` / `--ds-content-inverse` em vez de neutral-900/100 direto.
+- **`docs/layout.css`** ganha section "DOCS UTILITY CLASSES" centralizando estilos antes duplicados inline.
+- **CI `deploy.yml`**: removida etapa "Commit regenerated artifacts" que tentava push como bot e falhava na branch protection. Agora só valida drift e falha com mensagem clara se artefatos commitados não baterem com `build:all`.
+- **`docs/foundations-typography.html`**: 3 showcase rows removidas (Label SM, Caption MD, Caption SM) alinhando com deleção dos Text Styles correspondentes em Figma.
+- **`tokens/registry.json`**: 83 entries stale removidas (referências a tokens deletados nas migrações 2-layer e size unification).
+- **Toggle/Avatar descriptions Figma** atualizadas refletindo specs 0.8.0 (Toggle 32/40/48, Avatar lg 64).
+- **ADRs históricos atualizados** com notas de evolução: ADR-006 (parcialmente substituída por ADR-015), ADR-013 (estabilizada como 2-layer em 1.0.0-beta.1), ADR-014 (estabilizada).
+
+### Corrigido
+
+- **Toggle Sm sem pill shape e thumb deslocado** — track + thumb dimensions alinhadas exatamente com Figma.
+- **"Não faça" / "Faça" callouts** sem border completo e com bg desconectado do label tint. `.ds-dodont__item` ganha border + `:has()` pra desc herdar tint do label.
+- **"Foundation" header washed em token-architecture.html** — `.ds-arch__header--fdn` trocado de `--ds-overlay-subtle` (5% black, quase invisível) pra `--ds-feedback-info-background-subtle` + border tinted.
+- **Badge de versão sem fundo** em index.html — ref antiga `--ds-toned-bg-default` corrigida pra `--ds-toned-background-default`.
+- **Tooltip docs com tooltips overlapping** no canvas — layout grid 2x2 com gaps generosos. Position Right da coluna esquerda não colide mais com Position Left da coluna direita.
+- **Tokens-sync page**: "Em dia" deixa de imitar Button (solid bg+contrast color) e vira badge feedback-success-bg-subtle. Banner info ganha código inline com contraste legível (surface bg + border).
+- **Theme switcher (Default/Ocean/Forest)** removido do header — só Default existe nos tokens. lang-switcher (PT/EN) preservado.
+- **574 textos de components Figma sem textStyleId** corrigidos: aplicação por matching (family, style, fontSize, lineHeight) + detecção de contexto (Field/Text Frame → control/* style). Resultado: 100% Inter coverage em components, 367 Material Icons preservados como design intent.
+- **Foundation header em chain__badge--fdn** mesmo fix que arch__header — bg tinted em vez de overlay-subtle.
+- **`generatedAt` em artefatos derivados** removido — torna build determinístico, eliminando drift CI.
+- **Duplicata `body.line-height.lg`/`xl`** corrigida (xl agora 32px espelhando Figma; antes era 28 igual lg).
+
+### Removido
+
+- **111 leaks Foundation em `css/base/`** — todos migrados pra Semantic. `verify:tokens` reporta `CSS leak: OK` em components AND base.
+- **3 utility classes** sem Text Style counterpart no Figma: `.ds-text-label-sm`, `.ds-text-caption-md`, `.ds-text-caption-sm`.
+- **Form Field** da lista de components — `.ds-field*` permanece como utility interna do Input. `index.html` lista 18 components consistentes (era 19 com Form Field órfão). `docs/form-field.html` removido. Refs em "Related" sections de 6 docs HTML removidas.
+- **Inline styles duplicados** em 19+ docs HTML — extraídos pra `docs/layout.css`. ~89KB economizados.
+- **Theme switcher dropdown** do header (3 opções legadas).
+- **`.ds-md-generated-banner` Foundation leak** — ganha border tinted e código inline com surface bg.
+
+### Sobre versão
+
+Esta é a **transição do 0.x para fase beta**. Tags `v0.5.0` até `v0.8.0` permanecem válidas como histórico pré-beta. A partir daqui, releases são `1.0.0-beta.N` até decisão do owner pra dropping do tag → `1.0.0` oficial.
+
+A entrada **[0.8.0] — 2026-04-26** abaixo é o último release pré-beta e ficou consolidando o trabalho pós-2-layer migration. Nada antes dela mudou.
 
 ## [0.8.0] — 2026-04-26
 

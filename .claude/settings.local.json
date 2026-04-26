@@ -7,7 +7,11 @@
       "Bash(npm run *)",
       "Bash(git checkout *)",
       "mcp__51ce7e00-4f3f-440c-a9bf-f0ad3bf8e5c2__use_figma",
-      "Bash(node /tmp/rename-aliases.mjs)"
+      "Bash(node /tmp/rename-aliases.mjs)",
+      "WebSearch",
+      "WebFetch(domain:primer.style)",
+      "WebFetch(domain:samiamdesigns.substack.com)",
+      "Bash(node -e ' *)"
     ]
   },
   "enableAllProjectMcpServers": true,

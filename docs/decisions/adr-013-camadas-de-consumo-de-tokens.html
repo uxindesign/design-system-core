@@ -58,7 +58,7 @@
 <main class="ds-main">
   <div class="ds-section">
     <h1 class="ds-section__title">ADR-013 — Camadas de consumo de tokens — Foundation nunca direto em consumidor final</h1>
-    <p class="ds-section__subtitle">Status: <strong>Aceita</strong> · Data: 2026-04-22</p>
+    <p class="ds-section__subtitle">Status: <strong>Aceita — implementada em 0.7.0 (Component layer eliminada) e fechada em 1.0.0-beta.1 (0 leaks Foundation em `css/components/*.css` e `css/base/*.css`)</strong> · Data: 2026-04-22</p>
   </div>
 
   <div class="ds-md-generated-banner">
@@ -67,7 +67,10 @@
 
   <div class="ds-md-content">
 <p><strong>Data:</strong> 2026-04-22
-<strong>Status:</strong> Aceita</p>
+<strong>Status:</strong> Aceita — implementada em 0.7.0 (Component layer eliminada) e fechada em 1.0.0-beta.1 (0 leaks Foundation em <code>css/components/*.css</code> e <code>css/base/*.css</code>)</p>
+<blockquote>
+<p><strong>Atualização (2026-04-26):</strong> Arquitetura final estabilizada como <strong>2-layer (Foundation + Semantic)</strong>. Component collection foi eliminada em 0.7.0. ADR-015 unificou a escala de dimensão dentro de Semantic. Em 1.0.0-beta.1, todos os 111 leaks Foundation em <code>css/base/</code> foram migrados pra Semantic, fechando o débito original deste ADR. Resultado: <code>verify:tokens</code> reporta <code>CSS leak: OK</code> em ambas as camadas (components + base).</p>
+</blockquote>
 <h2>Contexto</h2>
 <p>O sistema tem três camadas de tokens, hierárquicas:</p>
 <ol>

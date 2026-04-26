@@ -58,7 +58,7 @@
 <main class="ds-main">
   <div class="ds-section">
     <h1 class="ds-section__title">ADR-014 — Reestruturação Semantic em `action` × `style` × `prop` × `state` — eliminação de brand/accent e themes</h1>
-    <p class="ds-section__subtitle">Status: <strong>Aceita</strong> · Data: 2026-04-22</p>
+    <p class="ds-section__subtitle">Status: <strong>Aceita — implementada em 0.7.0 e estabilizada em 1.0.0-beta.1</strong> · Data: 2026-04-22</p>
   </div>
 
   <div class="ds-md-generated-banner">
@@ -67,7 +67,10 @@
 
   <div class="ds-md-content">
 <p><strong>Data:</strong> 2026-04-22
-<strong>Status:</strong> Aceita</p>
+<strong>Status:</strong> Aceita — implementada em 0.7.0 e estabilizada em 1.0.0-beta.1</p>
+<blockquote>
+<p><strong>Atualização (2026-04-26):</strong> Naming <code>bg-*</code> → <code>background.*</code> aplicado em todos os tokens Semantic. Theme switcher (Default/Ocean/Forest) removido em 0.8.0 — tokens suportam single brand customizável conforme decidido aqui. ADR-015 (unificação de size) é evolução natural desta estrutura action × style × prop, estendida para dimensões.</p>
+</blockquote>
 <h2>Contexto</h2>
 <p>Os ADRs anteriores (ADR-011 renaming, ADR-013 camadas de consumo) mantiveram a camada Semantic dominada por <code>brand.*</code> (fills diretos da marca) + <code>accent.*</code> (complemento em purple). Com essa estrutura:</p>
 <ul>

@@ -1,7 +1,9 @@
 # ADR-014: Reestruturação Semantic em `action` × `style` × `prop` × `state` — eliminação de brand/accent e themes
 
 **Data:** 2026-04-22
-**Status:** Aceita
+**Status:** Aceita — implementada em 0.7.0 e estabilizada em 1.0.0-beta.1
+
+> **Atualização (2026-04-26):** Naming `bg-*` → `background.*` aplicado em todos os tokens Semantic. Theme switcher (Default/Ocean/Forest) removido em 0.8.0 — tokens suportam single brand customizável conforme decidido aqui. ADR-015 (unificação de size) é evolução natural desta estrutura action × style × prop, estendida para dimensões.
 
 ## Contexto
 

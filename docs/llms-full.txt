@@ -1,6 +1,6 @@
 # Design System Core — conteúdo consolidado
 
-> Versão 0.8.0. Arquivo destinado a consumo por LLMs que precisem
+> Versão 1.0.0-beta.1. Arquivo destinado a consumo por LLMs que precisem
 > do design system inteiro em uma requisição. Inclui README, CONTRIBUTING,
 > CLAUDE.md, CHANGELOG, todos os MDs em docs/, todos os ADRs e um resumo
 > dos tokens. Páginas HTML-only (componentes, foundations) estão referenciadas
@@ -160,11 +160,66 @@ Todas as mudanças notáveis deste design system são registradas aqui.
 
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/) e o versionamento segue [Semantic Versioning](https://semver.org/lang/pt-BR/).
 
-Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na faixa 0.x. Regras de bump documentadas em `docs/process-versioning.html`.
+A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incrementam `1.0.0-beta.N` até decisão do owner pra dropping do tag → `1.0.0` oficial. Tags 0.x permanecem como histórico pré-beta. Regras em `docs/process-versioning.html`.
 
 ## [Não publicado]
 
 (Nada ainda — próxima release acumulará aqui.)
+
+## [1.0.0-beta.1] — 2026-04-26
+
+Primeiro release em fase beta. Consolida todo trabalho pós-0.8.0: alinhamento de 14 componentes restantes com Figma, refactor de inline styles dos docs, descriptions designer-focused nos 18 component sets Figma, eliminação de 111 leaks Foundation em `css/base/`, fix de problemas visuais persistentes (Toggle pixel offset, dodont border, callouts, header washed, version badge, code contraste, theme switcher legado, tooltip docs grid). Marca a transição do versionamento 0.x para a fase beta de 1.0.
+
+### Adicionado
+
+- **Política de versionamento beta** (`docs/process-versioning.md`): schema `1.0.0-beta.N` substitui o 0.x até dropping decidido pelo owner. Cadência pack-based + fallback 2 semanas. Critérios de maturidade pra 1.0 documentados como guia (não gate).
+- **Regra Operacional 5** em `CLAUDE.md`: "Figma é fonte de verdade absoluta. Quando o usuário pedir algo que diverge do Figma, alertar antes de aplicar." Inspeção do Figma vira pré-requisito de qualquer mudança que toque valor visual ou estrutura de token.
+- **Centralização de utility classes de docs** em `docs/layout.css`: callouts, dodont, anatomy, related, tables. Antes duplicados inline em 19+ arquivos `docs/*.html`. Future fix em uma edição.
+- **Documentation links nos 18 component sets Figma**: cada um aponta pro site de docs correspondente.
+- **17 descriptions designer-focused** reescritas (template Quando usar / Variantes / Constraints) nos componentes Figma.
+- **`semantic.typography.body.font-family.mono`** + **`semantic.typography.body.letter-spacing.wider`** sincronizados pra JSON (já existiam em Figma — JSON estava out-of-sync).
+
+### Mudado
+
+- **14 componentes alinhados 1:1 com Figma vs CSS**: Badge, Breadcrumb, Checkbox, Input, Textarea, Alert, Avatar, Card, Divider, Radio, Skeleton, Spinner, Tabs, Tooltip. Drift visual aceito como alinhamento Figma (line-heights heading, font-weight medium→bold em label/*, icon container size-md fixo, etc.).
+- **Toggle pixel-perfect**: dimensions Sm 32×18, Md 40×22, Lg 48×26 com thumbs 12/16/20 e gap 3px (era 2px). Eliminada o offset de 1px à direita que persistia.
+- **`css/base/typography.css` reescrito**: 24 utility classes `.ds-text-*` agora consomem 100% Semantic, alinhadas 1:1 com Text Styles do Figma. 21 classes restantes (3 deletadas alinhando com Figma).
+- **`css/base/reset.css`**: 14 substituições Foundation→Semantic. body/code/pre/table consomem `--ds-body-*`. `pre` usa `--ds-background-inverse` / `--ds-content-inverse` em vez de neutral-900/100 direto.
+- **`docs/layout.css`** ganha section "DOCS UTILITY CLASSES" centralizando estilos antes duplicados inline.
+- **CI `deploy.yml`**: removida etapa "Commit regenerated artifacts" que tentava push como bot e falhava na branch protection. Agora só valida drift e falha com mensagem clara se artefatos commitados não baterem com `build:all`.
+- **`docs/foundations-typography.html`**: 3 showcase rows removidas (Label SM, Caption MD, Caption SM) alinhando com deleção dos Text Styles correspondentes em Figma.
+- **`tokens/registry.json`**: 83 entries stale removidas (referências a tokens deletados nas migrações 2-layer e size unification).
+- **Toggle/Avatar descriptions Figma** atualizadas refletindo specs 0.8.0 (Toggle 32/40/48, Avatar lg 64).
+- **ADRs históricos atualizados** com notas de evolução: ADR-006 (parcialmente substituída por ADR-015), ADR-013 (estabilizada como 2-layer em 1.0.0-beta.1), ADR-014 (estabilizada).
+
+### Corrigido
+
+- **Toggle Sm sem pill shape e thumb deslocado** — track + thumb dimensions alinhadas exatamente com Figma.
+- **"Não faça" / "Faça" callouts** sem border completo e com bg desconectado do label tint. `.ds-dodont__item` ganha border + `:has()` pra desc herdar tint do label.
+- **"Foundation" header washed em token-architecture.html** — `.ds-arch__header--fdn` trocado de `--ds-overlay-subtle` (5% black, quase invisível) pra `--ds-feedback-info-background-subtle` + border tinted.
+- **Badge de versão sem fundo** em index.html — ref antiga `--ds-toned-bg-default` corrigida pra `--ds-toned-background-default`.
+- **Tooltip docs com tooltips overlapping** no canvas — layout grid 2x2 com gaps generosos. Position Right da coluna esquerda não colide mais com Position Left da coluna direita.
+- **Tokens-sync page**: "Em dia" deixa de imitar Button (solid bg+contrast color) e vira badge feedback-success-bg-subtle. Banner info ganha código inline com contraste legível (surface bg + border).
+- **Theme switcher (Default/Ocean/Forest)** removido do header — só Default existe nos tokens. lang-switcher (PT/EN) preservado.
+- **574 textos de components Figma sem textStyleId** corrigidos: aplicação por matching (family, style, fontSize, lineHeight) + detecção de contexto (Field/Text Frame → control/* style). Resultado: 100% Inter coverage em components, 367 Material Icons preservados como design intent.
+- **Foundation header em chain__badge--fdn** mesmo fix que arch__header — bg tinted em vez de overlay-subtle.
+- **`generatedAt` em artefatos derivados** removido — torna build determinístico, eliminando drift CI.
+- **Duplicata `body.line-height.lg`/`xl`** corrigida (xl agora 32px espelhando Figma; antes era 28 igual lg).
+
+### Removido
+
+- **111 leaks Foundation em `css/base/`** — todos migrados pra Semantic. `verify:tokens` reporta `CSS leak: OK` em components AND base.
+- **3 utility classes** sem Text Style counterpart no Figma: `.ds-text-label-sm`, `.ds-text-caption-md`, `.ds-text-caption-sm`.
+- **Form Field** da lista de components — `.ds-field*` permanece como utility interna do Input. `index.html` lista 18 components consistentes (era 19 com Form Field órfão). `docs/form-field.html` removido. Refs em "Related" sections de 6 docs HTML removidas.
+- **Inline styles duplicados** em 19+ docs HTML — extraídos pra `docs/layout.css`. ~89KB economizados.
+- **Theme switcher dropdown** do header (3 opções legadas).
+- **`.ds-md-generated-banner` Foundation leak** — ganha border tinted e código inline com surface bg.
+
+### Sobre versão
+
+Esta é a **transição do 0.x para fase beta**. Tags `v0.5.0` até `v0.8.0` permanecem válidas como histórico pré-beta. A partir daqui, releases são `1.0.0-beta.N` até decisão do owner pra dropping do tag → `1.0.0` oficial.
+
+A entrada **[0.8.0] — 2026-04-26** abaixo é o último release pré-beta e ficou consolidando o trabalho pós-2-layer migration. Nada antes dela mudou.
 
 ## [0.8.0] — 2026-04-26
 
@@ -626,8 +681,8 @@ Consolidação da documentação como fonte única de verdade. Plano em seis fas
 | [ADR-010](decisions/ADR-010-abolir-white-black-puros.md) | Remoção de `foundation.color.white` e `foundation.color.black` puros | Aceita — Implementada em 0.5.0 | 2026-04-16 |
 | [ADR-011](decisions/ADR-011-renaming-tokens-semanticos-de-cor.md) | Reestruturação do naming de tokens semânticos de cor | Aceita — Implementada em 0.5.0 | 2026-04-17 |
 | [ADR-012](decisions/ADR-012-typography-tokens-divergence.md) | Tokens de line-height e letter-spacing divergem por design entre Figma e JSON | Aceita | 2026-04-21 |
-| [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) | Camadas de consumo de tokens — Foundation nunca direto em consumidor final | Aceita | 2026-04-22 |
-| [ADR-014](decisions/ADR-014-action-tokens-role-style.md) | Reestruturação Semantic em `action` × `style` × `prop` × `state` — eliminação de brand/accent e themes | Aceita | 2026-04-22 |
+| [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) | Camadas de consumo de tokens — Foundation nunca direto em consumidor final | Aceita — implementada em 0.7.0 (Component layer eliminada) e fechada em 1.0.0-beta.1 (0 leaks Foundation em `css/components/*.css` e `css/base/*.css`) | 2026-04-22 |
+| [ADR-014](decisions/ADR-014-action-tokens-role-style.md) | Reestruturação Semantic em `action` × `style` × `prop` × `state` — eliminação de brand/accent e themes | Aceita — implementada em 0.7.0 e estabilizada em 1.0.0-beta.1 | 2026-04-22 |
 | [ADR-015](decisions/ADR-015-unificacao-de-size-e-dimension.md) | — Unificação da escala size, eliminação de tokens component-specific e renomeação spacing→dimension | Aceito | 2026-04-26 |
 
 
@@ -1066,7 +1121,7 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 
 > Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-26. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
-> Versão atual: **0.8.0**
+> Versão atual: **1.0.0-beta.1**
 
 ## Status geral
 
@@ -1134,8 +1189,8 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 | ADR-010 | Remoção de `foundation.color.white` e `foundation.color.black` puros | Aceita — Implementada em 0.5.0 |
 | ADR-011 | Reestruturação do naming de tokens semânticos de cor | Aceita — Implementada em 0.5.0 |
 | ADR-012 | Tokens de line-height e letter-spacing divergem por design entre Figma e JSON | Aceita |
-| ADR-013 | Camadas de consumo de tokens — Foundation nunca direto em consumidor final | Aceita |
-| ADR-014 | Reestruturação Semantic em `action` × `style` × `prop` × `state` — eliminação de brand/accent e themes | Aceita |
+| ADR-013 | Camadas de consumo de tokens — Foundation nunca direto em consumidor final | Aceita — implementada em 0.7.0 (Component layer eliminada) e fechada em 1.0.0-beta.1 (0 leaks Foundation em `css/components/*.css` e `css/base/*.css`) |
+| ADR-014 | Reestruturação Semantic em `action` × `style` × `prop` × `state` — eliminação de brand/accent e themes | Aceita — implementada em 0.7.0 e estabilizada em 1.0.0-beta.1 |
 | ADR-015 | — Unificação da escala size, eliminação de tokens component-specific e renomeação spacing→dimension | Aceito |
 
 ## Próximos milestones
@@ -1429,91 +1484,121 @@ Ainda não fazemos. Pacote está no backlog para ser publicado quando a decisão
 
 # Versionamento
 
-O design system usa [Semantic Versioning](https://semver.org/lang/pt-BR/). Enquanto não houver release oficial 1.0, tudo fica na faixa **0.x**.
+O design system usa [Semantic Versioning](https://semver.org/lang/pt-BR/). Atualmente está em **fase beta de 1.0** — todas as releases são `1.0.0-beta.N` até o lançamento oficial decidido pelo design owner.
 
-## Regras de bump
+## Política de versionamento — fase beta (atual)
 
-| Tipo | Quando | Exemplo |
-|---|---|---|
-| **Patch** (0.5.0 → 0.5.1) | Correção pontual, ajuste de documentação, melhoria interna sem impacto visível, regeneração de artefato derivado. | Fix de CSS de um componente. Regenerar inventário. Corrigir um typo em ADR. |
-| **Minor** (0.5.1 → 0.6.0) | Adição compatível **ou** breaking change (em 0.x). Pacote coerente: novo componente, nova foundation, refator arquitetural com ADR, migração relevante. | Adicionar componente Dropdown. Renomear `foundation.spacing` → `foundation.dimension`. Eliminar uma camada de tokens. |
-| **Major** (→ 1.0.0) | Release oficial da marca, decidido explicitamente. | Primeiro lançamento público estável. |
+Cada release **incrementa N** em `1.0.0-beta.N`. Não há "minor" ou "patch" durante o beta — todo release é igualmente um snapshot do estado do sistema:
 
-Em 0.x, bumps **minor cobrem breaking changes** — convenção do [semver em versões iniciais](https://semver.org/lang/pt-BR/#spec-item-4). Não há bump major até a 1.0.
+```
+v0.8.0  ←  último release pré-beta (histórico)
+v1.0.0-beta.1  ←  primeiro release beta (consolida pós-0.8.0)
+v1.0.0-beta.2
+v1.0.0-beta.3
+...
+v1.0.0-rc.1   ←  release candidate (decisão do owner)
+v1.0.0        ←  oficial (decisão do owner)
+```
 
-## Quando bumpar — gatilhos explícitos
+**Não existe release** durante a fase beta. CHANGELOG agrupa o trabalho do incremento e tag git marca o ponto.
 
-Bump não é por commit nem por sessão de trabalho. É por **release** — entrega coerente que vale a pena marcar. Três gatilhos:
+### Quando bumpar (trigger)
 
-### 1. Mudança considerável (preferencial)
+Bump pra próximo `beta.N` é por **pacote coerente** + fallback de tempo:
 
-Bumpa quando ocorre **uma das seguintes**, ainda que isolada:
+#### 1. Mudança considerável (preferencial)
+Bumpa quando ocorre **uma das seguintes** desde o último beta, ainda que isolada:
+- Novo ADR aceito que muda arquitetura ou contrato
+- Renomeação de namespace/token público (breaking)
+- Novo componente shipado (não em rascunho)
+- Eliminação ou consolidação de camada de tokens
+- Mudança de fonte de verdade
+- Migração estrutural relevante (ex: alinhamento Figma de N componentes)
 
-- Novo ADR aceito que muda arquitetura ou contrato.
-- Renomeação de namespace/token público (breaking).
-- Novo componente shipado (não em rascunho).
-- Eliminação ou consolidação de camada de tokens (ex: ADR-013 eliminou Component, ADR-015 unificou size).
-- Mudança de fonte de verdade (ex: ADR-003 revisado).
+#### 2. Feature completa
+Bumpa quando um conjunto de mudanças **fecha** uma feature — não em pedaços. Exemplo: adicionar Theming requer foundation + semantic + componentes adaptados + docs.
 
-Esses são por si só dignos de uma release minor. Não acumular com outras mudanças "pra justificar".
+#### 3. Cadência temporal (fallback)
+Se há acúmulo de patches sem trigger arquitetural ou feature por **mais de 2 semanas**, faça um bump consolidando o que houve. Evita `[Não publicado]` virar dump infinito.
 
-### 2. Feature completa
-
-Bumpa quando um conjunto de mudanças **fecha** uma feature — não em pedaços. Exemplo: adicionar Theming requer foundation + semantic + componentes adaptados + docs. Tudo junto numa minor.
-
-### 3. Cadência temporal (fallback)
-
-Se há acúmulo de patches sem trigger arquitetural ou feature por **mais de 2 semanas**, faça uma minor consolidando o que houve. Evita `[Não publicado]` virar dump infinito.
-
-## Quando NÃO bumpar
-
-Não bumpa em:
+### Quando NÃO bumpar
 
 - Trabalho em andamento (não shipado).
 - Cleanup parcial, ajustes de WIP.
-- Cada commit isolado de uma sessão de trabalho.
+- Cada commit isolado de uma sessão.
 - Documentação interna (CLAUDE.md, scripts internos).
 - Regeneração automática por CI.
 - Refactor de scripts sem impacto observável.
 
-Esses commits vão pra `[Não publicado]` no CHANGELOG e ficam acumulando até o próximo trigger.
+## Política pós-1.0 (futuro)
+
+Quando o owner decidir que está pronto, drop do beta tag → `1.0.0` oficial. A partir daí, **semver normal**:
+
+| Tipo | Exemplo | Quando |
+|---|---|---|
+| **Patch** | 1.0.1 | Correção pontual, ajuste interno sem impacto visível. |
+| **Minor** | 1.1.0 | Adição compatível (novo componente, nova foundation, novo token). |
+| **Major** | 2.0.0 | Breaking change (renomeação ou remoção de token/classe/API). |
+
+## Critérios de maturidade pra dropping do beta (guia, não gate)
+
+1.0 oficial é **decisão do design owner**, não gate técnico. Esta lista funciona como guia de maturidade — não bloqueia release, mas marca prontidão técnica:
+
+### Arquitetura ✅ satisfeitos em 1.0.0-beta.1
+- [x] 0 erros em `verify:tokens`
+- [x] 0 leaks Foundation em `css/components/*.css`
+- [x] 0 leaks Foundation em `css/base/*.css`
+- [x] 18 componentes auditados Figma vs CSS (alinhamento 1:1)
+- [x] 100% Text Style coverage em textos non-Material de components Figma
+- [x] Descriptions designer-focused nos 18 component sets Figma
+
+### Pendente pra futuras betas
+- [ ] **Form Field** definido (component completo OU explicitamente fora de escopo) — _resolvido em beta.1: fora de escopo_
+- [ ] **`docs/brand-principles.md`** preenchido com conteúdo real
+- [ ] **`.figma-snapshot.json`** gerado e check JSON↔Figma rodando no CI
+- [ ] **ADRs históricos** atualizados com notas de evolução — _parcial em beta.1: 006/013/014 atualizados_
+- [ ] **`docs/process-figma-sync.md`** atualizado pra naming atual
+- [ ] **`tokens/registry.json`** sem warnings (entries com TODO preenchidos)
+- [ ] **Visual regression tests** (playwright + screenshot diff) — _nice-to-have_
+- [ ] **A11y tests** por componente (axe-core) — _nice-to-have_
+- [ ] **Sync Figma→JSON automatizado** em CI — _depende de Enterprise/plugin_
+
+## Cadeia única de versão
+
+Quatro lugares exibem a versão e **precisam bater**:
+
+- `package.json` (campo `version`).
+- `CHANGELOG.md` (última entrada não rotulada como `[Não publicado]`).
+- Badge no topo de `index.html` (injetada pelo build).
+- Tag git (`git tag -a v1.0.0-beta.N`).
+
+Se os quatro baterem, a documentação está em dia. Se divergirem, algo no pipeline está quebrado.
 
 ## CHANGELOG — uma entrada por release
 
-`[Não publicado]` é staging. Todas as mudanças desde a última release vão pra lá, **agrupadas por tema** (não por commit). Quando bumpa, a seção inteira vira `[x.y.z] — AAAA-MM-DD` e nasce um novo `[Não publicado]` vazio.
+`[Não publicado]` é staging. Todas as mudanças desde a última release vão pra lá, **agrupadas por tema** (Adicionado / Mudado / Corrigido / Removido). Quando bumpa, a seção inteira vira `[1.0.0-beta.N] — AAAA-MM-DD` e nasce um novo `[Não publicado]` vazio.
 
 Más práticas a evitar:
-
 - ❌ Subseções fragmentadas pra cada ajuste do dia.
 - ❌ Bump de versão pra cada commit.
 - ❌ "Mudanças não publicadas" tendo 10 datas diferentes — sinal de que faltou release.
 
 Boa prática:
-
 - ✅ Uma entrada por release, agrupada em **Adicionado / Mudado / Corrigido / Removido**.
-- ✅ Cada item tem 1-2 linhas explicando **por quê** (não só o quê).
-
-## Cadeia única de versão
-
-Três lugares exibem a versão e **precisam bater**:
-
-- `package.json` (campo `version`).
-- `CHANGELOG.md` (última entrada não rotulada como `[Não publicado]`).
-- Badge no topo de `index.html` (injetada pelo build).
-
-Se os três baterem, a documentação está em dia. Se divergirem, algo no pipeline está quebrado.
+- ✅ Cada item tem 1-2 linhas explicando **por quê**.
 
 ## Fluxo de bump
 
-1. Confirmar que `CHANGELOG.md` tem uma seção `[Não publicado]` com as mudanças desde a última release, **consolidadas** (não fragmentadas).
-2. Renomear `[Não publicado]` para `[x.y.z] — AAAA-MM-DD`.
-3. Adicionar nova seção vazia `[Não publicado]` no topo para mudanças futuras.
+1. Confirmar que `CHANGELOG.md` tem `[Não publicado]` consolidada (não fragmentada).
+2. Renomear `[Não publicado]` para `[1.0.0-beta.N] — AAAA-MM-DD`.
+3. Adicionar nova seção vazia `[Não publicado]` no topo.
 4. Ajustar `package.json` com a versão nova.
-5. Rodar `npm run build:all` pra regenerar artefatos derivados.
-6. Commit: `chore(release): x.y.z`.
-7. Criar tag: `git tag -a vx.y.z -m "Release x.y.z"`.
-8. Push com tag: `git push origin main vx.y.z`.
-9. CI regenera CSS/changelog HTML/APIs/llms.txt e publica no GitHub Pages.
+5. Atualizar badge em `index.html` (`<!-- VERSION:1.0.0-beta.N -->`).
+6. Rodar `npm run build:all` — regenerar artefatos derivados.
+7. Commit: `chore(release): 1.0.0-beta.N`.
+8. Criar tag: `git tag -a v1.0.0-beta.N -m "Release 1.0.0-beta.N"`.
+9. Push com tag: `git push origin main v1.0.0-beta.N`.
+10. CI regenera CSS/changelog HTML/APIs/llms.txt e publica no GitHub Pages.
 
 ## O que não conta como versionável
 
@@ -1523,6 +1608,12 @@ Se os três baterem, a documentação está em dia. Se divergirem, algo no pipel
 - Atualizações de `.gitignore`, configs locais.
 
 Esses podem ir em commits `docs:`, `chore:`, `ci:` sem bump.
+
+## Histórico — versionamento pré-beta (0.x)
+
+Antes da fase beta, o sistema usava 0.x.y com bumps minor/patch. Tags `v0.5.0..v0.8.0` permanecem válidas. CHANGELOG preserva todas as entradas históricas. A partir de `v1.0.0-beta.1`, o esquema beta substitui o 0.x.
+
+A transição não envolve rewrite de história — o 0.8.0 simplesmente foi o último 0.x antes de entrar em beta.
 
 
 ═══════════════════════════════════════════════════════════
@@ -11453,13 +11544,13 @@ Seção expandida com contexto, decisão e locais de uso.
 
 > Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-26. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
-> Versão atual: **0.8.0**
+> Versão atual: **1.0.0-beta.1**
 
 ## Estado atual
 
 | Aspecto | Valor |
 |---------|-------|
-| Versão | 0.8.0 |
+| Versão | 1.0.0-beta.1 |
 | Formato canônico | JSON (DTCG) em `tokens/` |
 | CSS gerado | Style Dictionary → `css/tokens/generated/` |
 | Pipeline | ✅ index.css importa apenas generated/ |
@@ -11547,8 +11638,8 @@ semantic.typography.*
 - **ADR-010** — Remoção de `foundation.color.white` e `foundation.color.black` puros (Aceita — Implementada em 0.5.0)
 - **ADR-011** — Reestruturação do naming de tokens semânticos de cor (Aceita — Implementada em 0.5.0)
 - **ADR-012** — Tokens de line-height e letter-spacing divergem por design entre Figma e JSON (Aceita)
-- **ADR-013** — Camadas de consumo de tokens — Foundation nunca direto em consumidor final (Aceita)
-- **ADR-014** — Reestruturação Semantic em `action` × `style` × `prop` × `state` — eliminação de brand/accent e themes (Aceita)
+- **ADR-013** — Camadas de consumo de tokens — Foundation nunca direto em consumidor final (Aceita — implementada em 0.7.0 (Component layer eliminada) e fechada em 1.0.0-beta.1 (0 leaks Foundation em `css/components/*.css` e `css/base/*.css`))
+- **ADR-014** — Reestruturação Semantic em `action` × `style` × `prop` × `state` — eliminação de brand/accent e themes (Aceita — implementada em 0.7.0 e estabilizada em 1.0.0-beta.1)
 - **ADR-015** — — Unificação da escala size, eliminação de tokens component-specific e renomeação spacing→dimension (Aceito)
 
 
@@ -12999,7 +13090,9 @@ Este ADR introduz `BY_DESIGN`; não se confunde com a categoria `CSS_ONLY` exist
 # ADR-013: Camadas de consumo de tokens — Foundation nunca direto em consumidor final
 
 **Data:** 2026-04-22
-**Status:** Aceita
+**Status:** Aceita — implementada em 0.7.0 (Component layer eliminada) e fechada em 1.0.0-beta.1 (0 leaks Foundation em `css/components/*.css` e `css/base/*.css`)
+
+> **Atualização (2026-04-26):** Arquitetura final estabilizada como **2-layer (Foundation + Semantic)**. Component collection foi eliminada em 0.7.0. ADR-015 unificou a escala de dimensão dentro de Semantic. Em 1.0.0-beta.1, todos os 111 leaks Foundation em `css/base/` foram migrados pra Semantic, fechando o débito original deste ADR. Resultado: `verify:tokens` reporta `CSS leak: OK` em ambas as camadas (components + base).
 
 ## Contexto
 
@@ -13190,7 +13283,9 @@ Fases 0-7. Divisão em 5 PRs:
 # ADR-014: Reestruturação Semantic em `action` × `style` × `prop` × `state` — eliminação de brand/accent e themes
 
 **Data:** 2026-04-22
-**Status:** Aceita
+**Status:** Aceita — implementada em 0.7.0 e estabilizada em 1.0.0-beta.1
+
+> **Atualização (2026-04-26):** Naming `bg-*` → `background.*` aplicado em todos os tokens Semantic. Theme switcher (Default/Ocean/Forest) removido em 0.8.0 — tokens suportam single brand customizável conforme decidido aqui. ADR-015 (unificação de size) é evolução natural desta estrutura action × style × prop, estendida para dimensões.
 
 ## Contexto
 
@@ -13538,5 +13633,5 @@ Verificação automática de coerência Figma ↔ JSON ↔ CSS: `scripts/tokens-
 ═══════════════════════════════════════════════════════════
 
 Gerado por scripts/build-llms.mjs.
-Versão: 0.8.0
+Versão: 1.0.0-beta.1
 Site: https://uxindesign.github.io/design-system-core/

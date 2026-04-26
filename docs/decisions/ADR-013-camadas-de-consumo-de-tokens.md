@@ -1,7 +1,9 @@
 # ADR-013: Camadas de consumo de tokens — Foundation nunca direto em consumidor final
 
 **Data:** 2026-04-22
-**Status:** Aceita
+**Status:** Aceita — implementada em 0.7.0 (Component layer eliminada) e fechada em 1.0.0-beta.1 (0 leaks Foundation em `css/components/*.css` e `css/base/*.css`)
+
+> **Atualização (2026-04-26):** Arquitetura final estabilizada como **2-layer (Foundation + Semantic)**. Component collection foi eliminada em 0.7.0. ADR-015 unificou a escala de dimensão dentro de Semantic. Em 1.0.0-beta.1, todos os 111 leaks Foundation em `css/base/` foram migrados pra Semantic, fechando o débito original deste ADR. Resultado: `verify:tokens` reporta `CSS leak: OK` em ambas as camadas (components + base).
 
 ## Contexto
 

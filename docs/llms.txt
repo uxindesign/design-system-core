@@ -1,6 +1,6 @@
 # Design System Core
 
-> Design system white-label em CSS puro com tokens DTCG em JSON, 18 componentes, modos light/dark, três temas (Default, Ocean, Forest). Versão atual: 0.8.0. Enquanto não houver release oficial 1.0, o projeto fica em 0.x.
+> Design system white-label em CSS puro com tokens DTCG em JSON, 18 componentes, modos light/dark, três temas (Default, Ocean, Forest). Versão atual: 1.0.0-beta.1. Enquanto não houver release oficial 1.0, o projeto fica em 0.x.
 
 Repositório: https://github.com/uxindesign/design-system-core
 Site: https://uxindesign.github.io/design-system-core/
@@ -63,8 +63,8 @@ Arquivo completo para LLMs: https://uxindesign.github.io/design-system-core/docs
 - [ADR-010 — Remoção de `foundation.color.white` e `foundation.color.black` puros](https://uxindesign.github.io/design-system-core/docs/decisions/adr-010-abolir-white-black-puros.html) — Aceita — Implementada em 0.5.0
 - [ADR-011 — Reestruturação do naming de tokens semânticos de cor](https://uxindesign.github.io/design-system-core/docs/decisions/adr-011-renaming-tokens-semanticos-de-cor.html) — Aceita — Implementada em 0.5.0
 - [ADR-012 — Tokens de line-height e letter-spacing divergem por design entre Figma e JSON](https://uxindesign.github.io/design-system-core/docs/decisions/adr-012-typography-tokens-divergence.html) — Aceita
-- [ADR-013 — Camadas de consumo de tokens — Foundation nunca direto em consumidor final](https://uxindesign.github.io/design-system-core/docs/decisions/adr-013-camadas-de-consumo-de-tokens.html) — Aceita
-- [ADR-014 — Reestruturação Semantic em `action` × `style` × `prop` × `state` — eliminação de brand/accent e themes](https://uxindesign.github.io/design-system-core/docs/decisions/adr-014-action-tokens-role-style.html) — Aceita
+- [ADR-013 — Camadas de consumo de tokens — Foundation nunca direto em consumidor final](https://uxindesign.github.io/design-system-core/docs/decisions/adr-013-camadas-de-consumo-de-tokens.html) — Aceita — implementada em 0.7.0 (Component layer eliminada) e fechada em 1.0.0-beta.1 (0 leaks Foundation em `css/components/*.css` e `css/base/*.css`)
+- [ADR-014 — Reestruturação Semantic em `action` × `style` × `prop` × `state` — eliminação de brand/accent e themes](https://uxindesign.github.io/design-system-core/docs/decisions/adr-014-action-tokens-role-style.html) — Aceita — implementada em 0.7.0 e estabilizada em 1.0.0-beta.1
 - [ADR-015 — — Unificação da escala size, eliminação de tokens component-specific e renomeação spacing→dimension](https://uxindesign.github.io/design-system-core/docs/decisions/adr-015-unificacao-de-size-e-dimension.html) — Aceito
 
 ## Processo
@@ -93,4 +93,4 @@ Arquivo completo para LLMs: https://uxindesign.github.io/design-system-core/docs
 
 ---
 
-Gerado por `scripts/build-llms.mjs`. Versão atual: 0.8.0.
+Gerado por `scripts/build-llms.mjs`. Versão atual: 1.0.0-beta.1.
