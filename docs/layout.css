@@ -36,11 +36,12 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
   z-index: var(--ds-z-50);
 }
 
-/* Dark mode: solid elevated surface (sticky-header semantic). --ds-toned-background-default
-   resolves to a 12% overlay in dark, deixando o conteúdo passar por trás da topbar. */
+/* Dark mode: brand-900 sólido. Mantém identidade da marca e separa visualmente
+   da sidebar (que usa --ds-surface-raised). Foundation aqui é OK — docs/layout.css
+   é chrome do site de docs, não componente reutilizável. */
 [data-mode="dark"] .ds-site-header {
   --_hfg: var(--ds-content-default); /* neutral-50 = white, always */
-  background-color: var(--ds-surface-raised);
+  background-color: var(--ds-color-brand-900);
 }
 
 .ds-site-header__brand {
