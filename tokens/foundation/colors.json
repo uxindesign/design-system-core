@@ -2,18 +2,51 @@
   "foundation": {
     "color": {
       "brand": {
-        "$description": "Paleta da marca. Default = Blue. Designer pode customizar editando os hex. Substitui a collection Brand com modes (Default/Ocean/Forest) — removida em ADR-014.",
-        "50":  { "$type": "color", "$value": "#EFF6FF" },
-        "100": { "$type": "color", "$value": "#DBEAFE" },
-        "200": { "$type": "color", "$value": "#BFDBFE" },
-        "300": { "$type": "color", "$value": "#93C5FD" },
-        "400": { "$type": "color", "$value": "#60A5FA" },
-        "500": { "$type": "color", "$value": "#3B82F6" },
-        "600": { "$type": "color", "$value": "#2563EB" },
-        "700": { "$type": "color", "$value": "#1D4ED8" },
-        "800": { "$type": "color", "$value": "#1E40AF" },
-        "900": { "$type": "color", "$value": "#1E3A8A" },
-        "950": { "$type": "color", "$value": "#172554" }
+        "50": {
+          "$type": "color",
+          "$value": "#EFF6FF"
+        },
+        "100": {
+          "$type": "color",
+          "$value": "#DBEAFE"
+        },
+        "200": {
+          "$type": "color",
+          "$value": "#BFDBFE"
+        },
+        "300": {
+          "$type": "color",
+          "$value": "#93C5FD"
+        },
+        "400": {
+          "$type": "color",
+          "$value": "#60A5FA"
+        },
+        "500": {
+          "$type": "color",
+          "$value": "#3B82F6"
+        },
+        "600": {
+          "$type": "color",
+          "$value": "#2563EB"
+        },
+        "700": {
+          "$type": "color",
+          "$value": "#1D4ED8"
+        },
+        "800": {
+          "$type": "color",
+          "$value": "#1E40AF"
+        },
+        "900": {
+          "$type": "color",
+          "$value": "#1E3A8A"
+        },
+        "950": {
+          "$type": "color",
+          "$value": "#172554"
+        },
+        "$description": "Paleta da marca. Default = Blue. Designer pode customizar editando os hex. Substitui a collection Brand com modes (Default/Ocean/Forest) — removida em ADR-014."
       },
       "neutral": {
         "50": {
@@ -572,7 +605,7 @@
         },
         "brand-dark": {
           "$type": "color",
-          "$value": "#4F637D",
+          "$value": "rgba(79, 99, 125, 0.4)",
           "$description": "Disabled fill for Button Brand in dark mode (pre-blended opaque)."
         },
         "success-light": {
@@ -582,7 +615,7 @@
         },
         "success-dark": {
           "$type": "color",
-          "$value": "#486E55",
+          "$value": "rgba(72, 110, 85, 0.4)",
           "$description": "Disabled fill for Button Success in dark mode."
         },
         "error-light": {
@@ -592,7 +625,7 @@
         },
         "error-dark": {
           "$type": "color",
-          "$value": "#7B5050",
+          "$value": "rgba(123, 80, 80, 0.4)",
           "$description": "Disabled fill for Button Danger/Error in dark mode."
         }
       }

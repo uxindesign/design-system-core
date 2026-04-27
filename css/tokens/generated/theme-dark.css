@@ -14,50 +14,51 @@
   --ds-toned-background-default: var(--ds-overlay-blue-600-12);
   --ds-toned-background-hover: var(--ds-overlay-blue-600-20);
   --ds-toned-background-active: var(--ds-overlay-blue-600-28);
-  --ds-outline-content-default: var(--ds-color-neutral-50);
+  --ds-outline-content-default: var(--ds-color-neutral-300);
   --ds-outline-content-disabled: var(--ds-color-neutral-600);
-  --ds-outline-border-default: var(--ds-color-neutral-600);
-  --ds-outline-border-hover: var(--ds-color-neutral-400);
+  --ds-outline-border-default: var(--ds-color-neutral-500);
+  --ds-outline-border-hover: var(--ds-color-neutral-300);
   --ds-outline-border-disabled: var(--ds-color-neutral-800);
-  --ds-outline-background-hover: var(--ds-overlay-black-5);
+  --ds-outline-background-hover: var(--ds-overlay-black-10);
   --ds-outline-background-active: var(--ds-overlay-black-10);
   --ds-ghost-content-default: var(--ds-color-neutral-50);
   --ds-ghost-content-disabled: var(--ds-color-neutral-600);
-  --ds-ghost-background-hover: var(--ds-overlay-black-5);
+  --ds-ghost-background-hover: var(--ds-overlay-black-10);
   --ds-ghost-background-active: var(--ds-overlay-black-10);
   --ds-link-content-default: var(--ds-color-brand-400); /** Links em estado default. */
   --ds-link-content-hover: var(--ds-color-brand-300); /** Links em estado hover. */
   --ds-link-content-active: var(--ds-color-brand-200); /** Links em estado pressed (mousedown/active). Brand step abaixo de hover. */
+  --ds-link-content-disabled: var(--ds-color-neutral-600); /** Links em estado disabled. */
   --ds-feedback-success-border-default: var(--ds-color-green-400);
   --ds-feedback-success-content-default: var(--ds-color-green-400);
   --ds-feedback-success-content-contrast: var(--ds-color-neutral-900); /** Dark text porque success default em dark é green-500 (claro). */
-  --ds-feedback-success-content-contrast-disabled: var(--ds-overlay-white-60);
+  --ds-feedback-success-content-disabled: var(--ds-overlay-white-60); /** Conteúdo success disabled. */
   --ds-feedback-success-background-default: var(--ds-color-green-400);
   --ds-feedback-success-background-hover: var(--ds-color-green-500);
   --ds-feedback-success-background-active: var(--ds-color-green-500);
-  --ds-feedback-success-background-subtle: var(--ds-color-green-700);
+  --ds-feedback-success-background-subtle: var(--ds-color-green-900);
   --ds-feedback-success-background-disabled: var(--ds-color-disabled-success-dark);
   --ds-feedback-warning-border-default: var(--ds-color-amber-400);
   --ds-feedback-warning-content-default: var(--ds-color-amber-400);
   --ds-feedback-warning-content-contrast: var(--ds-color-neutral-900);
   --ds-feedback-warning-background-default: var(--ds-color-amber-400);
   --ds-feedback-warning-background-hover: var(--ds-color-amber-500);
-  --ds-feedback-warning-background-subtle: var(--ds-color-amber-700);
+  --ds-feedback-warning-background-subtle: var(--ds-color-amber-900);
   --ds-feedback-error-border-default: var(--ds-color-red-400);
   --ds-feedback-error-content-default: var(--ds-color-red-400);
   --ds-feedback-error-content-contrast: var(--ds-color-neutral-900); /** Dark text porque error default em dark é red-500 (medium). */
-  --ds-feedback-error-content-contrast-disabled: var(--ds-overlay-white-60);
+  --ds-feedback-error-content-disabled: var(--ds-overlay-white-60); /** Conteúdo error disabled. */
   --ds-feedback-error-background-default: var(--ds-color-red-400);
   --ds-feedback-error-background-hover: var(--ds-color-red-500);
   --ds-feedback-error-background-active: var(--ds-color-red-400);
-  --ds-feedback-error-background-subtle: var(--ds-color-red-700);
+  --ds-feedback-error-background-subtle: var(--ds-color-red-900);
   --ds-feedback-error-background-disabled: var(--ds-color-disabled-error-dark);
   --ds-feedback-info-border-default: var(--ds-color-sky-400);
   --ds-feedback-info-content-default: var(--ds-color-sky-400);
   --ds-feedback-info-content-contrast: var(--ds-color-neutral-900);
   --ds-feedback-info-background-default: var(--ds-color-sky-400);
   --ds-feedback-info-background-hover: var(--ds-color-sky-500);
-  --ds-feedback-info-background-subtle: var(--ds-color-sky-700);
+  --ds-feedback-info-background-subtle: var(--ds-color-sky-900);
   --ds-surface-default: var(--ds-color-neutral-900); /** Card and panel surfaces */
   --ds-surface-raised: var(--ds-color-neutral-800); /** Elevated surface (sticky headers, raised cards) */
   --ds-surface-overlay: var(--ds-color-neutral-700);
@@ -75,13 +76,14 @@
   --ds-border-default: var(--ds-color-neutral-700);
   --ds-border-strong: var(--ds-color-neutral-500);
   --ds-border-subtle: var(--ds-color-neutral-800);
-  --ds-border-width-subtle: var(--ds-border-width-1);
+  --ds-border-inverse: var(--ds-color-neutral-900); /** Borda usada sobre fundos invertidos (claros em dark mode). */
   --ds-border-width-default: var(--ds-border-width-1);
   --ds-border-width-strong: var(--ds-border-width-2);
   --ds-border-width-focus: var(--ds-border-width-2);
-  --ds-border-focus: var(--ds-color-brand-400);
+  --ds-border-focus: var(--ds-color-brand-500);
   --ds-border-brand: var(--ds-color-brand-400);
-  --ds-border-focus-error: var(--ds-color-red-400);
+  --ds-border-error: var(--ds-color-red-400);
+  --ds-border-focus-error: var(--ds-color-red-500);
   --ds-border-control-default: var(--ds-color-neutral-500); /** Border color for interactive controls. Meets WCAG 1.4.11 (≥3:1 against dark surface). */
   --ds-border-control-hover: var(--ds-color-neutral-400); /** Border on hover for interactive controls in dark mode. */
   --ds-border-control-disabled: var(--ds-color-neutral-700); /** Border for disabled controls in dark mode. Exempt from contrast requirements per WCAG 1.4.3. */
@@ -89,8 +91,6 @@
   --ds-overlay-default: var(--ds-overlay-white-10);
   --ds-overlay-medium: var(--ds-overlay-white-20);
   --ds-overlay-strong: var(--ds-overlay-white-40);
-  --ds-focus-ring-width: var(--ds-border-width-2); /** Focus ring stroke width (2px) */
-  --ds-focus-ring-offset: var(--ds-border-width-2); /** Gap between element and focus ring (2px) */
   --ds-opacity-disabled: var(--ds-opacity-50); /** 50%. */
   --ds-motion-duration-fast: var(--ds-duration-fast); /** 150ms. */
   --ds-motion-duration-normal: var(--ds-duration-normal); /** 200ms. */
@@ -130,12 +130,6 @@
   --ds-radius-lg: var(--ds-radius-12);
   --ds-radius-xl: var(--ds-radius-16);
   --ds-radius-full: var(--ds-radius-999);
-  --ds-control-font-size-sm: var(--ds-font-size-14); /** 14px. Font size for sm controls (Button, Input, Select). */
-  --ds-control-font-size-md: var(--ds-font-size-14); /** 14px. Font size for md controls. */
-  --ds-control-font-size-lg: var(--ds-font-size-16); /** 16px. Font size for lg controls. */
-  --ds-control-line-height-sm: var(--ds-dimension-16); /** 16px. Matches icon-sm. height = padY*2 + lineHeight = 8+16+8 = 32. */
-  --ds-control-line-height-md: var(--ds-dimension-20); /** 20px. Matches icon-md. height = 10+20+10 = 40. */
-  --ds-control-line-height-lg: var(--ds-dimension-24); /** 24px. Matches icon-lg. height = 12+24+12 = 48. */
   --ds-body-font-family-sans: var(--ds-font-family-sans); /** Font-family sans-serif padrão do sistema. Usar em todo texto UI. */
   --ds-body-font-family-mono: var(--ds-font-family-mono); /** Monospace pra code blocks e snippets. Espelha Figma typography/body/font-family/mono. */
   --ds-body-font-weight-regular: var(--ds-font-weight-regular); /** Peso regular (400). */
@@ -173,6 +167,4 @@
   --ds-body-line-height-7xl: var(--ds-line-height-72); /** 72px. Pareia com body/font-size/7xl (56px). */
   --ds-body-line-height-8xl: var(--ds-line-height-80); /** 80px. Pareia com body/font-size/8xl (64px). */
   --ds-body-line-height-9xl: var(--ds-line-height-90); /** 90px. Pareia com body/font-size/9xl (72px). */
-  --ds-border-error: var(--ds-feedback-error-background-default);
-  --ds-focus-ring-color: var(--ds-border-focus); /** Focus ring color, maps to outline-color */
 }

@@ -70,8 +70,40 @@
 <p>O formato é baseado em <a href="https://keepachangelog.com/pt-BR/1.1.0/">Keep a Changelog</a> e o versionamento segue <a href="https://semver.org/lang/pt-BR/">Semantic Versioning</a>.</p>
 <p>A partir de <code>1.0.0-beta.1</code>, o sistema entrou em <strong>fase beta</strong> — releases incrementam <code>1.0.0-beta.N</code> até decisão do owner pra dropping do tag → <code>1.0.0</code> oficial. Tags 0.x permanecem como histórico pré-beta. Regras em <code>docs/process-versioning.html</code>.</p>
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
+<h3>Adicionado</h3>
+<ul>
+<li><strong>CI check Figma↔JSON via <code>.figma-snapshot.json</code></strong> — <code>verify:tokens</code> agora compara JSON do repo contra snapshot das 387 Variables Figma e falha em divergência. Snapshot gerado por <code>use_figma</code> em batches (~50KB cada), gitignored. Ver <code>docs/process-figma-sync.md</code>.</li>
+</ul>
+<h3>Mudado</h3>
+<ul>
+<li><strong>Reconciliação Figma↔JSON completa.</strong> 23 tokens com VALUE_DRIFT corrigidos pra refletir Figma como autoridade de valor (ADR-003):<ul>
+<li><code>foundation.color.disabled.{brand,success,error}-dark</code> ganharam alpha (estavam sem em hex). <code>foundation.radius.999</code> corrigido (<code>9999px</code> → <code>999</code>).</li>
+<li>Semantic: <code>outline.{border-default,border-hover,content-default}</code>, <code>link.{content-default,content-hover}</code>, <code>border.{focus,focus-error,error}</code>, <code>outline.background.hover</code>, <code>ghost.background.hover</code>, <code>feedback.{success,warning,error,info}.background.subtle</code> (dark) — todos os aliases atualizados pra refletir escolhas de cor do Figma.</li>
+</ul>
+</li>
+<li><strong>4 tokens semantic novos</strong> adicionados pra alinhar com Figma: <code>link.content-disabled</code>, <code>border.inverse</code>, <code>feedback.{success,error}.content-disabled</code> (light + dark).</li>
+<li><strong>Refatoração de Foundation→Semantic em CSS de componentes</strong> (12 arquivos). Componentes não consomem mais Foundation direto via <code>--ds-focus-ring-*</code> ou <code>--ds-control-*</code>:<ul>
+<li>Focus ring → <code>--ds-border-focus</code> + <code>--ds-border-width-focus</code> (mesmo valor pra offset). Bate com Figma <code>border/focus</code> e <code>border/width/focus</code>.</li>
+<li>Control typography → <code>--ds-body-font-size-{sm,md}</code> + <code>--ds-body-line-height-{2xs,sm,md}</code> espelhando Text Styles <code>control/label-md</code>, <code>label/md</code>, <code>label/lg</code> que Figma aplica nos componentes.</li>
+</ul>
+</li>
+<li><strong><code>background/overlay</code> dark mode no Figma</strong> rebindado de <code>overlay/white/40</code> para <code>overlay/black/60</code> (alinhamento com mercado: Material/Bootstrap/Tailwind usam ~50-60% black em modal scrim).</li>
+<li><strong>Variable nova <code>link/content/active</code> no Figma</strong> (Semantic, scope TEXT_FILL): light alias <code>brand.800</code>, dark alias <code>brand.200</code>. Espelha <code>semantic.link.content-active</code> adicionado em beta.3 — JSON e Figma agora convergem.</li>
+</ul>
+<h3>Removido</h3>
+<ul>
+<li><strong>Tokens Semantic redundantes ou sem consumer real</strong>:<ul>
+<li><code>semantic.focus.ring.{width,offset,color}</code> — substituídos por <code>border.focus</code> e <code>border.width.focus</code> que Figma já tem.</li>
+<li><code>semantic.typography.control.{font-size,line-height}.{sm,md,lg}</code> — Figma não tem Variables <code>control/typography/*</code>; usa Text Styles <code>control/*</code> que bindam Semantic <code>body/*</code>. CSS migrado pra <code>body.*</code> direto.</li>
+<li><code>semantic.feedback.{success,error}.content-contrast-disabled</code> — sem consumer no CSS.</li>
+<li><code>semantic.border.width.subtle</code> — sem consumer no CSS.</li>
+</ul>
+</li>
+</ul>
 <h3>Corrigido</h3>
 <ul>
+<li><strong><code>scripts/lib/figma-dtcg.mjs</code></strong>: normalizer Figma↔JSON colapsa hífen→ponto em paths (<code>primary.content-default</code> ↔ <code>primary.content.default</code>). Antes inflava 119 falsos positivos.</li>
+<li><strong><code>scripts/tokens-verify.mjs</code></strong>: <code>normalize()</code> reconhece equivalência entre número puro (Figma Float) e string <code>Npx</code>/<code>Nrem</code> (CSS gerado). Antes flagava <code>999 ≠ &quot;999px&quot;</code> como drift.</li>
 <li><strong>Topbar do site sempre acima de todo conteúdo de página</strong> (<code>docs/layout.css</code>, <code>docs/foundations-zindex.html</code>):<ul>
 <li>Topbar (e sidebar mobile + overlay) sobem para <code>calc(var(--ds-z-50) + 10)</code> (= 60), acima de toda a escala <code>--ds-z-*</code> (que termina em 50/toast). Antes, com header em <code>--ds-z-50</code>, conteúdo de página com z-50 empatava e podia paintar por cima via DOM order.</li>
 <li><strong>Demo de z-index</strong> ganhou <code>isolation: isolate</code> no <code>.ds-zindex-stack</code> — o container era <code>position: relative</code> sem <code>z-index</code>, então não criava stacking context, e o card <code>.ds-zindex-layer--50</code> escapava pra raiz e atravessava a topbar quando o demo era rolado pra baixo da topbar. Com <code>isolation</code>, a escala 0–50 fica local ao demo (que era a intenção).</li>

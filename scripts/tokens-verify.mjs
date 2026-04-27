@@ -104,7 +104,17 @@ function normalize(value) {
     if (value.__error) return `ERROR:${value.__error}`;
     return JSON.stringify(value);
   }
+  // Dimension equivalence: número puro (vindo do Figma como Float) e string
+  // "Npx"/"Nrem" representam o mesmo valor visual. Style Dictionary emite
+  // unit no CSS; JSON pode ter número raw (espelhando Figma). Normaliza pra
+  // forma "px:N" pra comparação.
+  if (typeof value === "number") return `px:${value}`;
   let v = String(value).trim().toLowerCase();
+  const remMatch = v.match(/^(-?[\d.]+)rem$/);
+  if (remMatch) return `px:${parseFloat(remMatch[1]) * 16}`;
+  const pxMatch = v.match(/^(-?[\d.]+)px$/);
+  if (pxMatch) return `px:${parseFloat(pxMatch[1])}`;
+  if (/^-?[\d.]+$/.test(v)) return `px:${parseFloat(v)}`;
   // #fff -> #ffffff
   if (/^#[0-9a-f]{3}$/.test(v)) {
     v = "#" + v.slice(1).split("").map((c) => c + c).join("");

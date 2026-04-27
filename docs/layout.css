@@ -106,8 +106,8 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
 }
 
 .ds-theme-switcher__select:focus-visible {
-  outline: var(--ds-focus-ring-width) solid rgba(255, 255, 255, 0.6);
-  outline-offset: var(--ds-focus-ring-offset);
+  outline: var(--ds-border-width-focus) solid rgba(255, 255, 255, 0.6);
+  outline-offset: var(--ds-border-width-focus);
 }
 
 /* Mode toggle — ghost button on brand background */
@@ -142,8 +142,8 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
 }
 
 .ds-menu-toggle:focus-visible {
-  outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color);
-  outline-offset: var(--ds-focus-ring-offset);
+  outline: var(--ds-border-width-focus) solid var(--ds-border-focus);
+  outline-offset: var(--ds-border-width-focus);
 }
 
 .ds-menu-toggle svg {
@@ -194,8 +194,8 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
 }
 
 .ds-sidebar__heading:focus-visible {
-  outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color);
-  outline-offset: var(--ds-focus-ring-offset);
+  outline: var(--ds-border-width-focus) solid var(--ds-border-focus);
+  outline-offset: var(--ds-border-width-focus);
   border-radius: var(--ds-radius-4);
 }
 
@@ -248,8 +248,8 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
 }
 
 .ds-sidebar__link:focus-visible {
-  outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color);
-  outline-offset: var(--ds-focus-ring-offset);
+  outline: var(--ds-border-width-focus) solid var(--ds-border-focus);
+  outline-offset: var(--ds-border-width-focus);
 }
 
 .ds-sidebar__link--active {
@@ -363,8 +363,8 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
 }
 
 .ds-preview__copy:focus-visible {
-  outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color);
-  outline-offset: var(--ds-focus-ring-offset);
+  outline: var(--ds-border-width-focus) solid var(--ds-border-focus);
+  outline-offset: var(--ds-border-width-focus);
 }
 
 /* Preview tabs (Preview / Code) */
@@ -396,8 +396,8 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
 }
 
 .ds-preview__tab:focus-visible {
-  outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color);
-  outline-offset: var(--ds-focus-ring-offset);
+  outline: var(--ds-border-width-focus) solid var(--ds-border-focus);
+  outline-offset: var(--ds-border-width-focus);
 }
 
 .ds-preview__panel {
@@ -526,8 +526,8 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
 }
 
 .ds-component-card:focus-visible {
-  outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color);
-  outline-offset: var(--ds-focus-ring-offset);
+  outline: var(--ds-border-width-focus) solid var(--ds-border-focus);
+  outline-offset: var(--ds-border-width-focus);
 }
 
 /* Quickstart code block */

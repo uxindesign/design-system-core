@@ -1,160 +1,163 @@
 # Token Registry
 
-> Gerado automaticamente por `scripts/build-token-registry.mjs` em 2026-04-22. Não editar à mão — edite `tokens/registry.json` e rode `npm run build:registry`.
+> Gerado automaticamente por `scripts/build-token-registry.mjs` em 2026-04-27. Não editar à mão — edite `tokens/registry.json` e rode `npm run build:registry`.
 
 Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra arquitetural de camadas.
 
 ## Status
 
-- Total de tokens: **677**
+- Total de tokens: **438**
 - Com metadados completos: **0**
-- Pendentes (`TODO` em algum campo obrigatório): **677**
+- Pendentes (`TODO` em algum campo obrigatório): **438**
 - Completude: **0%**
 
 ## Foundation
 
-231 tokens.
+262 tokens.
 
 ### foundation.border
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `foundation.border.width.0` | dimension | — | ⚠️ TODO | 0 |
-| `foundation.border.width.1` | dimension | — | ⚠️ TODO | 7 |
-| `foundation.border.width.2` | dimension | — | ⚠️ TODO | 10 |
+| `foundation.border.width.1` | dimension | — | ⚠️ TODO | 4 |
+| `foundation.border.width.2` | dimension | — | ⚠️ TODO | 6 |
 | `foundation.border.width.4` | dimension | — | ⚠️ TODO | 0 |
-
-### foundation.brand
-
-| Token | Tipo | Alias | Sentido | Usos |
-|---|---|---|---|---|
-| `foundation.brand.primary` | color | → `foundation.color.blue.600` | ⚠️ TODO | 4 |
-| `foundation.brand.secondary` | color | → `foundation.color.purple.600` | ⚠️ TODO | 4 |
 
 ### foundation.color
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `foundation.color.amber.100` | color | — | ⚠️ TODO | 3 |
-| `foundation.color.amber.200` | color | — | ⚠️ TODO | 1 |
-| `foundation.color.amber.300` | color | — | ⚠️ TODO | 1 |
-| `foundation.color.amber.400` | color | — | ⚠️ TODO | 5 |
-| `foundation.color.amber.50` | color | — | ⚠️ TODO | 2 |
+| `foundation.color.amber.100` | color | — | ⚠️ TODO | 2 |
+| `foundation.color.amber.200` | color | — | ⚠️ TODO | 0 |
+| `foundation.color.amber.300` | color | — | ⚠️ TODO | 0 |
+| `foundation.color.amber.400` | color | — | ⚠️ TODO | 4 |
+| `foundation.color.amber.50` | color | — | ⚠️ TODO | 0 |
 | `foundation.color.amber.500` | color | — | ⚠️ TODO | 5 |
-| `foundation.color.amber.600` | color | — | ⚠️ TODO | 3 |
-| `foundation.color.amber.700` | color | — | ⚠️ TODO | 5 |
-| `foundation.color.amber.800` | color | — | ⚠️ TODO | 1 |
+| `foundation.color.amber.600` | color | — | ⚠️ TODO | 2 |
+| `foundation.color.amber.700` | color | — | ⚠️ TODO | 2 |
+| `foundation.color.amber.800` | color | — | ⚠️ TODO | 0 |
 | `foundation.color.amber.900` | color | — | ⚠️ TODO | 2 |
 | `foundation.color.amber.950` | color | — | ⚠️ TODO | 0 |
-| `foundation.color.blue.100` | color | — | ⚠️ TODO | 4 |
-| `foundation.color.blue.200` | color | — | ⚠️ TODO | 2 |
+| `foundation.color.blue.100` | color | — | ⚠️ TODO | 0 |
+| `foundation.color.blue.200` | color | — | ⚠️ TODO | 0 |
 | `foundation.color.blue.300` | color | — | ⚠️ TODO | 0 |
-| `foundation.color.blue.400` | color | — | ⚠️ TODO | 2 |
+| `foundation.color.blue.400` | color | — | ⚠️ TODO | 0 |
 | `foundation.color.blue.50` | color | — | ⚠️ TODO | 0 |
 | `foundation.color.blue.500` | color | — | ⚠️ TODO | 0 |
-| `foundation.color.blue.600` | color | — | ⚠️ TODO | 1 |
-| `foundation.color.blue.700` | color | — | ⚠️ TODO | 2 |
-| `foundation.color.blue.800` | color | — | ⚠️ TODO | 2 |
-| `foundation.color.blue.900` | color | — | ⚠️ TODO | 4 |
+| `foundation.color.blue.600` | color | — | ⚠️ TODO | 0 |
+| `foundation.color.blue.700` | color | — | ⚠️ TODO | 0 |
+| `foundation.color.blue.800` | color | — | ⚠️ TODO | 0 |
+| `foundation.color.blue.900` | color | — | ⚠️ TODO | 0 |
 | `foundation.color.blue.950` | color | — | ⚠️ TODO | 0 |
-| `foundation.color.cyan.100` | color | — | ⚠️ TODO | 1 |
-| `foundation.color.cyan.200` | color | — | ⚠️ TODO | 1 |
-| `foundation.color.cyan.300` | color | — | ⚠️ TODO | 1 |
-| `foundation.color.cyan.400` | color | — | ⚠️ TODO | 1 |
+| `foundation.color.brand.100` | color | — | ⚠️ TODO | 0 |
+| `foundation.color.brand.200` | color | — | ⚠️ TODO | 2 |
+| `foundation.color.brand.300` | color | — | ⚠️ TODO | 2 |
+| `foundation.color.brand.400` | color | — | ⚠️ TODO | 6 |
+| `foundation.color.brand.50` | color | — | ⚠️ TODO | 0 |
+| `foundation.color.brand.500` | color | — | ⚠️ TODO | 5 |
+| `foundation.color.brand.600` | color | — | ⚠️ TODO | 3 |
+| `foundation.color.brand.700` | color | — | ⚠️ TODO | 4 |
+| `foundation.color.brand.800` | color | — | ⚠️ TODO | 4 |
+| `foundation.color.brand.900` | color | — | ⚠️ TODO | 0 |
+| `foundation.color.brand.950` | color | — | ⚠️ TODO | 0 |
+| `foundation.color.cyan.100` | color | — | ⚠️ TODO | 0 |
+| `foundation.color.cyan.200` | color | — | ⚠️ TODO | 0 |
+| `foundation.color.cyan.300` | color | — | ⚠️ TODO | 0 |
+| `foundation.color.cyan.400` | color | — | ⚠️ TODO | 0 |
 | `foundation.color.cyan.50` | color | — | ⚠️ TODO | 0 |
 | `foundation.color.cyan.500` | color | — | ⚠️ TODO | 0 |
-| `foundation.color.cyan.600` | color | — | ⚠️ TODO | 1 |
-| `foundation.color.cyan.700` | color | — | ⚠️ TODO | 1 |
-| `foundation.color.cyan.800` | color | — | ⚠️ TODO | 1 |
-| `foundation.color.cyan.900` | color | — | ⚠️ TODO | 1 |
+| `foundation.color.cyan.600` | color | — | ⚠️ TODO | 0 |
+| `foundation.color.cyan.700` | color | — | ⚠️ TODO | 0 |
+| `foundation.color.cyan.800` | color | — | ⚠️ TODO | 0 |
+| `foundation.color.cyan.900` | color | — | ⚠️ TODO | 0 |
 | `foundation.color.cyan.950` | color | — | ⚠️ TODO | 0 |
-| `foundation.color.disabled.brand-dark` | color | — | ⚠️ TODO | 2 |
-| `foundation.color.disabled.brand-light` | color | — | ⚠️ TODO | 2 |
+| `foundation.color.disabled.brand-dark` | color | — | ⚠️ TODO | 0 |
+| `foundation.color.disabled.brand-light` | color | — | ⚠️ TODO | 4 |
 | `foundation.color.disabled.error-dark` | color | — | ⚠️ TODO | 2 |
 | `foundation.color.disabled.error-light` | color | — | ⚠️ TODO | 2 |
 | `foundation.color.disabled.success-dark` | color | — | ⚠️ TODO | 2 |
 | `foundation.color.disabled.success-light` | color | — | ⚠️ TODO | 2 |
-| `foundation.color.emerald.100` | color | — | ⚠️ TODO | 1 |
-| `foundation.color.emerald.200` | color | — | ⚠️ TODO | 1 |
-| `foundation.color.emerald.300` | color | — | ⚠️ TODO | 1 |
-| `foundation.color.emerald.400` | color | — | ⚠️ TODO | 1 |
+| `foundation.color.emerald.100` | color | — | ⚠️ TODO | 0 |
+| `foundation.color.emerald.200` | color | — | ⚠️ TODO | 0 |
+| `foundation.color.emerald.300` | color | — | ⚠️ TODO | 0 |
+| `foundation.color.emerald.400` | color | — | ⚠️ TODO | 0 |
 | `foundation.color.emerald.50` | color | — | ⚠️ TODO | 0 |
 | `foundation.color.emerald.500` | color | — | ⚠️ TODO | 0 |
-| `foundation.color.emerald.600` | color | — | ⚠️ TODO | 1 |
-| `foundation.color.emerald.700` | color | — | ⚠️ TODO | 1 |
-| `foundation.color.emerald.800` | color | — | ⚠️ TODO | 1 |
-| `foundation.color.emerald.900` | color | — | ⚠️ TODO | 1 |
+| `foundation.color.emerald.600` | color | — | ⚠️ TODO | 0 |
+| `foundation.color.emerald.700` | color | — | ⚠️ TODO | 0 |
+| `foundation.color.emerald.800` | color | — | ⚠️ TODO | 0 |
+| `foundation.color.emerald.900` | color | — | ⚠️ TODO | 0 |
 | `foundation.color.emerald.950` | color | — | ⚠️ TODO | 0 |
 | `foundation.color.green.100` | color | — | ⚠️ TODO | 2 |
 | `foundation.color.green.200` | color | — | ⚠️ TODO | 0 |
 | `foundation.color.green.300` | color | — | ⚠️ TODO | 0 |
 | `foundation.color.green.400` | color | — | ⚠️ TODO | 4 |
-| `foundation.color.green.50` | color | — | ⚠️ TODO | 2 |
+| `foundation.color.green.50` | color | — | ⚠️ TODO | 0 |
 | `foundation.color.green.500` | color | — | ⚠️ TODO | 5 |
 | `foundation.color.green.600` | color | — | ⚠️ TODO | 2 |
-| `foundation.color.green.700` | color | — | ⚠️ TODO | 4 |
+| `foundation.color.green.700` | color | — | ⚠️ TODO | 2 |
 | `foundation.color.green.800` | color | — | ⚠️ TODO | 2 |
 | `foundation.color.green.900` | color | — | ⚠️ TODO | 4 |
 | `foundation.color.green.950` | color | — | ⚠️ TODO | 0 |
-| `foundation.color.indigo.100` | color | — | ⚠️ TODO | 1 |
-| `foundation.color.indigo.200` | color | — | ⚠️ TODO | 1 |
-| `foundation.color.indigo.300` | color | — | ⚠️ TODO | 1 |
-| `foundation.color.indigo.400` | color | — | ⚠️ TODO | 1 |
+| `foundation.color.indigo.100` | color | — | ⚠️ TODO | 0 |
+| `foundation.color.indigo.200` | color | — | ⚠️ TODO | 0 |
+| `foundation.color.indigo.300` | color | — | ⚠️ TODO | 0 |
+| `foundation.color.indigo.400` | color | — | ⚠️ TODO | 0 |
 | `foundation.color.indigo.50` | color | — | ⚠️ TODO | 0 |
 | `foundation.color.indigo.500` | color | — | ⚠️ TODO | 0 |
-| `foundation.color.indigo.600` | color | — | ⚠️ TODO | 1 |
-| `foundation.color.indigo.700` | color | — | ⚠️ TODO | 1 |
-| `foundation.color.indigo.800` | color | — | ⚠️ TODO | 1 |
+| `foundation.color.indigo.600` | color | — | ⚠️ TODO | 0 |
+| `foundation.color.indigo.700` | color | — | ⚠️ TODO | 0 |
+| `foundation.color.indigo.800` | color | — | ⚠️ TODO | 0 |
 | `foundation.color.indigo.900` | color | — | ⚠️ TODO | 0 |
 | `foundation.color.indigo.950` | color | — | ⚠️ TODO | 0 |
-| `foundation.color.neutral.100` | color | — | ⚠️ TODO | 1 |
-| `foundation.color.neutral.200` | color | — | ⚠️ TODO | 3 |
-| `foundation.color.neutral.300` | color | — | ⚠️ TODO | 4 |
-| `foundation.color.neutral.400` | color | — | ⚠️ TODO | 6 |
-| `foundation.color.neutral.50` | color | — | ⚠️ TODO | 16 |
-| `foundation.color.neutral.500` | color | — | ⚠️ TODO | 6 |
-| `foundation.color.neutral.600` | color | — | ⚠️ TODO | 7 |
-| `foundation.color.neutral.700` | color | — | ⚠️ TODO | 4 |
-| `foundation.color.neutral.800` | color | — | ⚠️ TODO | 4 |
-| `foundation.color.neutral.900` | color | — | ⚠️ TODO | 18 |
+| `foundation.color.neutral.100` | color | — | ⚠️ TODO | 0 |
+| `foundation.color.neutral.200` | color | — | ⚠️ TODO | 5 |
+| `foundation.color.neutral.300` | color | — | ⚠️ TODO | 6 |
+| `foundation.color.neutral.400` | color | — | ⚠️ TODO | 10 |
+| `foundation.color.neutral.50` | color | — | ⚠️ TODO | 15 |
+| `foundation.color.neutral.500` | color | — | ⚠️ TODO | 8 |
+| `foundation.color.neutral.600` | color | — | ⚠️ TODO | 11 |
+| `foundation.color.neutral.700` | color | — | ⚠️ TODO | 7 |
+| `foundation.color.neutral.800` | color | — | ⚠️ TODO | 6 |
+| `foundation.color.neutral.900` | color | — | ⚠️ TODO | 15 |
 | `foundation.color.neutral.950` | color | — | ⚠️ TODO | 2 |
-| `foundation.color.overlay.black.10` | color | — | ⚠️ TODO | 2 |
+| `foundation.color.overlay.black.10` | color | — | ⚠️ TODO | 7 |
 | `foundation.color.overlay.black.20` | color | — | ⚠️ TODO | 1 |
 | `foundation.color.overlay.black.40` | color | — | ⚠️ TODO | 2 |
-| `foundation.color.overlay.black.5` | color | — | ⚠️ TODO | 2 |
+| `foundation.color.overlay.black.5` | color | — | ⚠️ TODO | 3 |
 | `foundation.color.overlay.black.60` | color | — | ⚠️ TODO | 1 |
 | `foundation.color.overlay.black.80` | color | — | ⚠️ TODO | 0 |
-| `foundation.color.overlay.blue-400.15` | color | — | ⚠️ TODO | 1 |
-| `foundation.color.overlay.blue-400.25` | color | — | ⚠️ TODO | 1 |
-| `foundation.color.overlay.blue-400.32` | color | — | ⚠️ TODO | 1 |
-| `foundation.color.overlay.blue-600.12` | color | — | ⚠️ TODO | 1 |
-| `foundation.color.overlay.blue-600.20` | color | — | ⚠️ TODO | 1 |
-| `foundation.color.overlay.blue-600.28` | color | — | ⚠️ TODO | 1 |
-| `foundation.color.overlay.white.10` | color | — | ⚠️ TODO | 2 |
+| `foundation.color.overlay.blue-400.15` | color | — | ⚠️ TODO | 0 |
+| `foundation.color.overlay.blue-400.25` | color | — | ⚠️ TODO | 0 |
+| `foundation.color.overlay.blue-400.32` | color | — | ⚠️ TODO | 0 |
+| `foundation.color.overlay.blue-600.12` | color | — | ⚠️ TODO | 2 |
+| `foundation.color.overlay.blue-600.20` | color | — | ⚠️ TODO | 2 |
+| `foundation.color.overlay.blue-600.28` | color | — | ⚠️ TODO | 2 |
+| `foundation.color.overlay.white.10` | color | — | ⚠️ TODO | 1 |
 | `foundation.color.overlay.white.20` | color | — | ⚠️ TODO | 1 |
 | `foundation.color.overlay.white.40` | color | — | ⚠️ TODO | 1 |
-| `foundation.color.overlay.white.5` | color | — | ⚠️ TODO | 2 |
-| `foundation.color.overlay.white.60` | color | — | ⚠️ TODO | 3 |
-| `foundation.color.overlay.white.80` | color | — | ⚠️ TODO | 3 |
-| `foundation.color.purple.100` | color | — | ⚠️ TODO | 2 |
-| `foundation.color.purple.200` | color | — | ⚠️ TODO | 2 |
-| `foundation.color.purple.300` | color | — | ⚠️ TODO | 2 |
-| `foundation.color.purple.400` | color | — | ⚠️ TODO | 2 |
+| `foundation.color.overlay.white.5` | color | — | ⚠️ TODO | 1 |
+| `foundation.color.overlay.white.60` | color | — | ⚠️ TODO | 2 |
+| `foundation.color.overlay.white.80` | color | — | ⚠️ TODO | 4 |
+| `foundation.color.purple.100` | color | — | ⚠️ TODO | 0 |
+| `foundation.color.purple.200` | color | — | ⚠️ TODO | 0 |
+| `foundation.color.purple.300` | color | — | ⚠️ TODO | 0 |
+| `foundation.color.purple.400` | color | — | ⚠️ TODO | 0 |
 | `foundation.color.purple.50` | color | — | ⚠️ TODO | 0 |
 | `foundation.color.purple.500` | color | — | ⚠️ TODO | 0 |
-| `foundation.color.purple.600` | color | — | ⚠️ TODO | 1 |
-| `foundation.color.purple.700` | color | — | ⚠️ TODO | 3 |
-| `foundation.color.purple.800` | color | — | ⚠️ TODO | 4 |
+| `foundation.color.purple.600` | color | — | ⚠️ TODO | 0 |
+| `foundation.color.purple.700` | color | — | ⚠️ TODO | 0 |
+| `foundation.color.purple.800` | color | — | ⚠️ TODO | 0 |
 | `foundation.color.purple.900` | color | — | ⚠️ TODO | 0 |
 | `foundation.color.purple.950` | color | — | ⚠️ TODO | 0 |
 | `foundation.color.red.100` | color | — | ⚠️ TODO | 2 |
 | `foundation.color.red.200` | color | — | ⚠️ TODO | 0 |
 | `foundation.color.red.300` | color | — | ⚠️ TODO | 0 |
 | `foundation.color.red.400` | color | — | ⚠️ TODO | 6 |
-| `foundation.color.red.50` | color | — | ⚠️ TODO | 2 |
-| `foundation.color.red.500` | color | — | ⚠️ TODO | 5 |
-| `foundation.color.red.600` | color | — | ⚠️ TODO | 2 |
-| `foundation.color.red.700` | color | — | ⚠️ TODO | 4 |
+| `foundation.color.red.50` | color | — | ⚠️ TODO | 0 |
+| `foundation.color.red.500` | color | — | ⚠️ TODO | 6 |
+| `foundation.color.red.600` | color | — | ⚠️ TODO | 3 |
+| `foundation.color.red.700` | color | — | ⚠️ TODO | 2 |
 | `foundation.color.red.800` | color | — | ⚠️ TODO | 2 |
 | `foundation.color.red.900` | color | — | ⚠️ TODO | 4 |
 | `foundation.color.red.950` | color | — | ⚠️ TODO | 0 |
@@ -162,13 +165,45 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `foundation.color.sky.200` | color | — | ⚠️ TODO | 0 |
 | `foundation.color.sky.300` | color | — | ⚠️ TODO | 0 |
 | `foundation.color.sky.400` | color | — | ⚠️ TODO | 4 |
-| `foundation.color.sky.50` | color | — | ⚠️ TODO | 2 |
+| `foundation.color.sky.50` | color | — | ⚠️ TODO | 0 |
 | `foundation.color.sky.500` | color | — | ⚠️ TODO | 5 |
 | `foundation.color.sky.600` | color | — | ⚠️ TODO | 2 |
-| `foundation.color.sky.700` | color | — | ⚠️ TODO | 4 |
+| `foundation.color.sky.700` | color | — | ⚠️ TODO | 2 |
 | `foundation.color.sky.800` | color | — | ⚠️ TODO | 0 |
 | `foundation.color.sky.900` | color | — | ⚠️ TODO | 2 |
 | `foundation.color.sky.950` | color | — | ⚠️ TODO | 0 |
+
+### foundation.dimension
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `foundation.dimension.10` | dimension | — | ⚠️ TODO | 4 |
+| `foundation.dimension.1024` | dimension | — | ⚠️ TODO | 4 |
+| `foundation.dimension.12` | dimension | — | ⚠️ TODO | 6 |
+| `foundation.dimension.128` | dimension | — | ⚠️ TODO | 4 |
+| `foundation.dimension.1280` | dimension | — | ⚠️ TODO | 4 |
+| `foundation.dimension.14` | dimension | — | ⚠️ TODO | 0 |
+| `foundation.dimension.16` | dimension | — | ⚠️ TODO | 7 |
+| `foundation.dimension.2` | dimension | — | ⚠️ TODO | 5 |
+| `foundation.dimension.20` | dimension | — | ⚠️ TODO | 6 |
+| `foundation.dimension.24` | dimension | — | ⚠️ TODO | 6 |
+| `foundation.dimension.28` | dimension | — | ⚠️ TODO | 0 |
+| `foundation.dimension.32` | dimension | — | ⚠️ TODO | 6 |
+| `foundation.dimension.320` | dimension | — | ⚠️ TODO | 4 |
+| `foundation.dimension.36` | dimension | — | ⚠️ TODO | 0 |
+| `foundation.dimension.4` | dimension | — | ⚠️ TODO | 5 |
+| `foundation.dimension.40` | dimension | — | ⚠️ TODO | 4 |
+| `foundation.dimension.44` | dimension | — | ⚠️ TODO | 0 |
+| `foundation.dimension.48` | dimension | — | ⚠️ TODO | 6 |
+| `foundation.dimension.480` | dimension | — | ⚠️ TODO | 4 |
+| `foundation.dimension.56` | dimension | — | ⚠️ TODO | 0 |
+| `foundation.dimension.6` | dimension | — | ⚠️ TODO | 0 |
+| `foundation.dimension.64` | dimension | — | ⚠️ TODO | 6 |
+| `foundation.dimension.640` | dimension | — | ⚠️ TODO | 4 |
+| `foundation.dimension.8` | dimension | — | ⚠️ TODO | 4 |
+| `foundation.dimension.80` | dimension | — | ⚠️ TODO | 4 |
+| `foundation.dimension.800` | dimension | — | ⚠️ TODO | 4 |
+| `foundation.dimension.96` | dimension | — | ⚠️ TODO | 4 |
 
 ### foundation.duration
 
@@ -191,7 +226,6 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `foundation.opacity.0` | number | — | ⚠️ TODO | 0 |
 | `foundation.opacity.10` | number | — | ⚠️ TODO | 0 |
 | `foundation.opacity.100` | number | — | ⚠️ TODO | 0 |
 | `foundation.opacity.25` | number | — | ⚠️ TODO | 0 |
@@ -203,14 +237,13 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `foundation.radius.2xl` | dimension | — | ⚠️ TODO | 0 |
-| `foundation.radius.full` | dimension | — | ⚠️ TODO | 7 |
-| `foundation.radius.lg` | dimension | — | ⚠️ TODO | 3 |
-| `foundation.radius.md` | dimension | — | ⚠️ TODO | 4 |
-| `foundation.radius.none` | dimension | — | ⚠️ TODO | 0 |
-| `foundation.radius.sm` | dimension | — | ⚠️ TODO | 10 |
-| `foundation.radius.xl` | dimension | — | ⚠️ TODO | 2 |
-| `foundation.radius.xs` | dimension | — | ⚠️ TODO | 0 |
+| `foundation.radius.12` | dimension | — | ⚠️ TODO | 4 |
+| `foundation.radius.16` | dimension | — | ⚠️ TODO | 4 |
+| `foundation.radius.2` | dimension | — | ⚠️ TODO | 0 |
+| `foundation.radius.24` | dimension | — | ⚠️ TODO | 0 |
+| `foundation.radius.4` | dimension | — | ⚠️ TODO | 4 |
+| `foundation.radius.8` | dimension | — | ⚠️ TODO | 4 |
+| `foundation.radius.999` | dimension | — | ⚠️ TODO | 4 |
 
 ### foundation.shadow
 
@@ -220,57 +253,31 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `foundation.shadow.lg` | shadow | — | ⚠️ TODO | 1 |
 | `foundation.shadow.md` | shadow | — | ⚠️ TODO | 1 |
 | `foundation.shadow.none` | shadow | — | ⚠️ TODO | 1 |
-| `foundation.shadow.sm` | shadow | — | ⚠️ TODO | 3 |
-| `foundation.shadow.xl` | shadow | — | ⚠️ TODO | 3 |
+| `foundation.shadow.sm` | shadow | — | ⚠️ TODO | 5 |
+| `foundation.shadow.xl` | shadow | — | ⚠️ TODO | 5 |
 | `foundation.shadow.xs` | shadow | — | ⚠️ TODO | 0 |
-
-### foundation.spacing
-
-| Token | Tipo | Alias | Sentido | Usos |
-|---|---|---|---|---|
-| `foundation.spacing.0` | dimension | — | ⚠️ TODO | 4 |
-| `foundation.spacing.0-5` | dimension | — | ⚠️ TODO | 9 |
-| `foundation.spacing.1` | dimension | — | ⚠️ TODO | 11 |
-| `foundation.spacing.1-5` | dimension | — | ⚠️ TODO | 3 |
-| `foundation.spacing.10` | dimension | — | ⚠️ TODO | 7 |
-| `foundation.spacing.11` | dimension | — | ⚠️ TODO | 6 |
-| `foundation.spacing.12` | dimension | — | ⚠️ TODO | 6 |
-| `foundation.spacing.14` | dimension | — | ⚠️ TODO | 2 |
-| `foundation.spacing.16` | dimension | — | ⚠️ TODO | 4 |
-| `foundation.spacing.2` | dimension | — | ⚠️ TODO | 14 |
-| `foundation.spacing.2-5` | dimension | — | ⚠️ TODO | 8 |
-| `foundation.spacing.20` | dimension | — | ⚠️ TODO | 6 |
-| `foundation.spacing.24` | dimension | — | ⚠️ TODO | 0 |
-| `foundation.spacing.3` | dimension | — | ⚠️ TODO | 16 |
-| `foundation.spacing.3-5` | dimension | — | ⚠️ TODO | 2 |
-| `foundation.spacing.4` | dimension | — | ⚠️ TODO | 24 |
-| `foundation.spacing.5` | dimension | — | ⚠️ TODO | 15 |
-| `foundation.spacing.6` | dimension | — | ⚠️ TODO | 17 |
-| `foundation.spacing.7` | dimension | — | ⚠️ TODO | 3 |
-| `foundation.spacing.8` | dimension | — | ⚠️ TODO | 9 |
-| `foundation.spacing.9` | dimension | — | ⚠️ TODO | 2 |
 
 ### foundation.typography
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `foundation.typography.font.family.display` | fontFamily | — | ⚠️ TODO | 0 |
-| `foundation.typography.font.family.mono` | fontFamily | — | ⚠️ TODO | 0 |
+| `foundation.typography.font.family.mono` | fontFamily | — | ⚠️ TODO | 2 |
 | `foundation.typography.font.family.sans` | fontFamily | — | ⚠️ TODO | 2 |
-| `foundation.typography.font.size.2xl` | dimension | — | ⚠️ TODO | 2 |
-| `foundation.typography.font.size.2xs` | dimension | — | ⚠️ TODO | 0 |
-| `foundation.typography.font.size.3xl` | dimension | — | ⚠️ TODO | 2 |
-| `foundation.typography.font.size.4xl` | dimension | — | ⚠️ TODO | 0 |
-| `foundation.typography.font.size.5xl` | dimension | — | ⚠️ TODO | 0 |
-| `foundation.typography.font.size.6xl` | dimension | — | ⚠️ TODO | 0 |
-| `foundation.typography.font.size.7xl` | dimension | — | ⚠️ TODO | 0 |
-| `foundation.typography.font.size.8xl` | dimension | — | ⚠️ TODO | 0 |
-| `foundation.typography.font.size.9xl` | dimension | — | ⚠️ TODO | 0 |
-| `foundation.typography.font.size.lg` | dimension | — | ⚠️ TODO | 3 |
-| `foundation.typography.font.size.md` | dimension | — | ⚠️ TODO | 4 |
-| `foundation.typography.font.size.sm` | dimension | — | ⚠️ TODO | 10 |
-| `foundation.typography.font.size.xl` | dimension | — | ⚠️ TODO | 2 |
-| `foundation.typography.font.size.xs` | dimension | — | ⚠️ TODO | 3 |
+| `foundation.typography.font.size.11` | dimension | — | ⚠️ TODO | 2 |
+| `foundation.typography.font.size.12` | dimension | — | ⚠️ TODO | 2 |
+| `foundation.typography.font.size.14` | dimension | — | ⚠️ TODO | 2 |
+| `foundation.typography.font.size.16` | dimension | — | ⚠️ TODO | 2 |
+| `foundation.typography.font.size.18` | dimension | — | ⚠️ TODO | 2 |
+| `foundation.typography.font.size.20` | dimension | — | ⚠️ TODO | 2 |
+| `foundation.typography.font.size.24` | dimension | — | ⚠️ TODO | 2 |
+| `foundation.typography.font.size.28` | dimension | — | ⚠️ TODO | 2 |
+| `foundation.typography.font.size.32` | dimension | — | ⚠️ TODO | 2 |
+| `foundation.typography.font.size.40` | dimension | — | ⚠️ TODO | 2 |
+| `foundation.typography.font.size.48` | dimension | — | ⚠️ TODO | 2 |
+| `foundation.typography.font.size.56` | dimension | — | ⚠️ TODO | 2 |
+| `foundation.typography.font.size.64` | dimension | — | ⚠️ TODO | 2 |
+| `foundation.typography.font.size.72` | dimension | — | ⚠️ TODO | 2 |
 | `foundation.typography.font.weight.bold` | number | — | ⚠️ TODO | 2 |
 | `foundation.typography.font.weight.medium` | number | — | ⚠️ TODO | 2 |
 | `foundation.typography.font.weight.regular` | number | — | ⚠️ TODO | 2 |
@@ -279,16 +286,35 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `foundation.typography.letter.spacing.tight` | dimension | — | ⚠️ TODO | 2 |
 | `foundation.typography.letter.spacing.tighter` | dimension | — | ⚠️ TODO | 0 |
 | `foundation.typography.letter.spacing.wide` | dimension | — | ⚠️ TODO | 0 |
-| `foundation.typography.letter.spacing.wider` | dimension | — | ⚠️ TODO | 0 |
+| `foundation.typography.letter.spacing.wider` | dimension | — | ⚠️ TODO | 2 |
+| `foundation.typography.line.height.16` | dimension | — | ⚠️ TODO | 2 |
+| `foundation.typography.line.height.18` | dimension | — | ⚠️ TODO | 2 |
+| `foundation.typography.line.height.20` | dimension | — | ⚠️ TODO | 2 |
+| `foundation.typography.line.height.22` | dimension | — | ⚠️ TODO | 0 |
+| `foundation.typography.line.height.24` | dimension | — | ⚠️ TODO | 2 |
+| `foundation.typography.line.height.26` | dimension | — | ⚠️ TODO | 0 |
+| `foundation.typography.line.height.28` | dimension | — | ⚠️ TODO | 2 |
+| `foundation.typography.line.height.32` | dimension | — | ⚠️ TODO | 2 |
+| `foundation.typography.line.height.34` | dimension | — | ⚠️ TODO | 2 |
+| `foundation.typography.line.height.40` | dimension | — | ⚠️ TODO | 2 |
+| `foundation.typography.line.height.44` | dimension | — | ⚠️ TODO | 2 |
+| `foundation.typography.line.height.48` | dimension | — | ⚠️ TODO | 2 |
+| `foundation.typography.line.height.50` | dimension | — | ⚠️ TODO | 0 |
+| `foundation.typography.line.height.60` | dimension | — | ⚠️ TODO | 0 |
+| `foundation.typography.line.height.64` | dimension | — | ⚠️ TODO | 2 |
+| `foundation.typography.line.height.70` | dimension | — | ⚠️ TODO | 0 |
+| `foundation.typography.line.height.72` | dimension | — | ⚠️ TODO | 2 |
+| `foundation.typography.line.height.80` | dimension | — | ⚠️ TODO | 2 |
+| `foundation.typography.line.height.90` | dimension | — | ⚠️ TODO | 2 |
 | `foundation.typography.line.height.control.lg` | dimension | — | ⚠️ TODO | 0 |
 | `foundation.typography.line.height.control.md` | dimension | — | ⚠️ TODO | 0 |
 | `foundation.typography.line.height.control.sm` | dimension | — | ⚠️ TODO | 0 |
 | `foundation.typography.line.height.loose` | number | — | ⚠️ TODO | 0 |
 | `foundation.typography.line.height.none` | number | — | ⚠️ TODO | 0 |
-| `foundation.typography.line.height.normal` | number | — | ⚠️ TODO | 4 |
+| `foundation.typography.line.height.normal` | number | — | ⚠️ TODO | 0 |
 | `foundation.typography.line.height.relaxed` | number | — | ⚠️ TODO | 0 |
-| `foundation.typography.line.height.snug` | number | — | ⚠️ TODO | 6 |
-| `foundation.typography.line.height.tight` | number | — | ⚠️ TODO | 2 |
+| `foundation.typography.line.height.snug` | number | — | ⚠️ TODO | 0 |
+| `foundation.typography.line.height.tight` | number | — | ⚠️ TODO | 0 |
 
 ### foundation.z
 
@@ -299,29 +325,19 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `foundation.z.20` | number | — | ⚠️ TODO | 0 |
 | `foundation.z.30` | number | — | ⚠️ TODO | 0 |
 | `foundation.z.40` | number | — | ⚠️ TODO | 0 |
-| `foundation.z.50` | number | — | ⚠️ TODO | 3 |
+| `foundation.z.50` | number | — | ⚠️ TODO | 0 |
 
 ## Semantic
 
-158 tokens.
-
-### semantic.accent
-
-| Token | Tipo | Alias | Sentido | Usos |
-|---|---|---|---|---|
-| `semantic.accent.active` | color | → `foundation.color.purple.800` | ⚠️ TODO | 0 |
-| `semantic.accent.content.contrast` | color | → `foundation.color.neutral.50` | ⚠️ TODO | 1 |
-| `semantic.accent.content.default` | color | → `foundation.color.purple.700` | ⚠️ TODO | 1 |
-| `semantic.accent.default` | color | → `foundation.brand.secondary` | ⚠️ TODO | 1 |
-| `semantic.accent.hover` | color | → `foundation.color.purple.700` | ⚠️ TODO | 0 |
-| `semantic.accent.subtle` | color | → `foundation.color.purple.100` | ⚠️ TODO | 1 |
+176 tokens.
 
 ### semantic.background
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `semantic.background.default` | color | → `foundation.color.neutral.50` | ⚠️ TODO | 1 |
-| `semantic.background.inverse` | color | → `foundation.color.neutral.900` | ⚠️ TODO | 1 |
+| `semantic.background.disabled` | color | → `foundation.color.neutral.200` | ⚠️ TODO | 7 |
+| `semantic.background.inverse` | color | → `foundation.color.neutral.900` | ⚠️ TODO | 2 |
 | `semantic.background.overlay` | color | → `foundation.color.overlay.black.40` | ⚠️ TODO | 1 |
 | `semantic.background.subtle` | color | → `foundation.color.neutral.200` | ⚠️ TODO | 5 |
 
@@ -329,87 +345,68 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `semantic.border.brand` | color | → `semantic.brand.default` | ⚠️ TODO | 0 |
-| `semantic.border.control.default` | color | → `foundation.color.neutral.500` | ⚠️ TODO | 7 |
-| `semantic.border.control.disabled` | color | → `foundation.color.neutral.300` | ⚠️ TODO | 6 |
-| `semantic.border.control.hover` | color | → `foundation.color.neutral.600` | ⚠️ TODO | 4 |
-| `semantic.border.default` | color | → `foundation.color.neutral.300` | ⚠️ TODO | 6 |
-| `semantic.border.error` | color | → `semantic.feedback.error.default` | ⚠️ TODO | 0 |
-| `semantic.border.focus` | color | → `semantic.brand.default` | ⚠️ TODO | 4 |
+| `semantic.border.brand` | color | → `foundation.color.brand.600` | ⚠️ TODO | 0 |
+| `semantic.border.control-default` | color | → `foundation.color.neutral.500` | ⚠️ TODO | 6 |
+| `semantic.border.control-disabled` | color | → `foundation.color.neutral.300` | ⚠️ TODO | 6 |
+| `semantic.border.control-hover` | color | → `foundation.color.neutral.600` | ⚠️ TODO | 3 |
+| `semantic.border.default` | color | → `foundation.color.neutral.300` | ⚠️ TODO | 3 |
+| `semantic.border.error` | color | → `foundation.color.red.600` | ⚠️ TODO | 0 |
+| `semantic.border.focus` | color | → `foundation.color.brand.500` | ⚠️ TODO | 12 |
 | `semantic.border.focus-error` | color | → `foundation.color.red.500` | ⚠️ TODO | 0 |
+| `semantic.border.inverse` | color | → `foundation.color.neutral.50` | ⚠️ TODO | 0 |
 | `semantic.border.strong` | color | → `foundation.color.neutral.600` | ⚠️ TODO | 1 |
-| `semantic.border.subtle` | color | → `foundation.color.neutral.300` | ⚠️ TODO | 1 |
+| `semantic.border.subtle` | color | → `foundation.color.neutral.200` | ⚠️ TODO | 4 |
 | `semantic.border.width.default` | dimension | → `foundation.border.width.1` | ⚠️ TODO | 13 |
-| `semantic.border.width.focus` | dimension | → `foundation.border.width.2` | ⚠️ TODO | 0 |
-| `semantic.border.width.strong` | dimension | → `foundation.border.width.2` | ⚠️ TODO | 2 |
+| `semantic.border.width.focus` | dimension | → `foundation.border.width.2` | ⚠️ TODO | 12 |
+| `semantic.border.width.strong` | dimension | → `foundation.border.width.2` | ⚠️ TODO | 1 |
 | `semantic.border.width.subtle` | dimension | → `foundation.border.width.1` | ⚠️ TODO | 0 |
-
-### semantic.brand
-
-| Token | Tipo | Alias | Sentido | Usos |
-|---|---|---|---|---|
-| `semantic.brand.active` | color | → `foundation.color.blue.900` | ⚠️ TODO | 1 |
-| `semantic.brand.content.contrast` | color | → `foundation.color.neutral.50` | ⚠️ TODO | 6 |
-| `semantic.brand.content.contrast-disabled` | color | → `foundation.color.overlay.white.80` | ⚠️ TODO | 0 |
-| `semantic.brand.content.default` | color | → `foundation.color.blue.700` | ⚠️ TODO | 4 |
-| `semantic.brand.default` | color | → `foundation.brand.primary` | ⚠️ TODO | 21 |
-| `semantic.brand.disabled` | color | → `foundation.color.disabled.brand-light` | ⚠️ TODO | 0 |
-| `semantic.brand.hover` | color | → `foundation.color.blue.800` | ⚠️ TODO | 5 |
-| `semantic.brand.subtle` | color | → `foundation.color.blue.100` | ⚠️ TODO | 1 |
-| `semantic.brand.toned.active` | color | → `foundation.color.overlay.blue-600.28` | ⚠️ TODO | 3 |
-| `semantic.brand.toned.default` | color | → `foundation.color.overlay.blue-600.12` | ⚠️ TODO | 3 |
-| `semantic.brand.toned.hover` | color | → `foundation.color.overlay.blue-600.20` | ⚠️ TODO | 3 |
 
 ### semantic.content
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `semantic.content.default` | color | → `foundation.color.neutral.900` | ⚠️ TODO | 13 |
-| `semantic.content.disabled` | color | → `foundation.color.neutral.400` | ⚠️ TODO | 7 |
-| `semantic.content.inverse` | color | → `foundation.color.neutral.50` | ⚠️ TODO | 1 |
-| `semantic.content.link.default` | color | → `semantic.brand.default` | ⚠️ TODO | 2 |
-| `semantic.content.link.hover` | color | → `semantic.brand.hover` | ⚠️ TODO | 0 |
-| `semantic.content.secondary` | color | → `foundation.color.neutral.600` | ⚠️ TODO | 11 |
-| `semantic.content.tertiary` | color | → `foundation.color.neutral.500` | ⚠️ TODO | 4 |
+| `semantic.content.default` | color | → `foundation.color.neutral.900` | ⚠️ TODO | 11 |
+| `semantic.content.disabled` | color | → `foundation.color.neutral.400` | ⚠️ TODO | 5 |
+| `semantic.content.inverse` | color | → `foundation.color.neutral.50` | ⚠️ TODO | 3 |
+| `semantic.content.secondary` | color | → `foundation.color.neutral.600` | ⚠️ TODO | 12 |
+| `semantic.content.tertiary` | color | → `foundation.color.neutral.500` | ⚠️ TODO | 3 |
 
 ### semantic.feedback
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `semantic.feedback.error.active` | color | → `foundation.color.red.900` | ⚠️ TODO | 1 |
-| `semantic.feedback.error.background` | color | → `foundation.color.red.50` | ⚠️ TODO | 0 |
-| `semantic.feedback.error.border` | color | → `foundation.color.red.500` | ⚠️ TODO | 2 |
-| `semantic.feedback.error.content.contrast` | color | → `foundation.color.neutral.50` | ⚠️ TODO | 3 |
-| `semantic.feedback.error.content.contrast-disabled` | color | → `foundation.color.overlay.white.80` | ⚠️ TODO | 0 |
-| `semantic.feedback.error.content.default` | color | → `foundation.color.red.700` | ⚠️ TODO | 4 |
-| `semantic.feedback.error.default` | color | → `foundation.color.red.600` | ⚠️ TODO | 12 |
-| `semantic.feedback.error.disabled` | color | → `foundation.color.disabled.error-light` | ⚠️ TODO | 0 |
-| `semantic.feedback.error.hover` | color | → `foundation.color.red.800` | ⚠️ TODO | 1 |
-| `semantic.feedback.error.subtle` | color | → `foundation.color.red.100` | ⚠️ TODO | 2 |
-| `semantic.feedback.info.background` | color | → `foundation.color.sky.50` | ⚠️ TODO | 0 |
-| `semantic.feedback.info.border` | color | → `foundation.color.sky.500` | ⚠️ TODO | 1 |
-| `semantic.feedback.info.content.contrast` | color | → `foundation.color.neutral.900` | ⚠️ TODO | 2 |
-| `semantic.feedback.info.content.default` | color | → `foundation.color.sky.700` | ⚠️ TODO | 1 |
-| `semantic.feedback.info.default` | color | → `foundation.color.sky.500` | ⚠️ TODO | 2 |
-| `semantic.feedback.info.hover` | color | → `foundation.color.sky.600` | ⚠️ TODO | 0 |
-| `semantic.feedback.info.subtle` | color | → `foundation.color.sky.100` | ⚠️ TODO | 2 |
-| `semantic.feedback.success.active` | color | → `foundation.color.green.900` | ⚠️ TODO | 1 |
-| `semantic.feedback.success.background` | color | → `foundation.color.green.50` | ⚠️ TODO | 0 |
-| `semantic.feedback.success.border` | color | → `foundation.color.green.500` | ⚠️ TODO | 1 |
-| `semantic.feedback.success.content.contrast` | color | → `foundation.color.neutral.50` | ⚠️ TODO | 3 |
-| `semantic.feedback.success.content.contrast-disabled` | color | → `foundation.color.overlay.white.80` | ⚠️ TODO | 0 |
-| `semantic.feedback.success.content.default` | color | → `foundation.color.green.700` | ⚠️ TODO | 1 |
-| `semantic.feedback.success.default` | color | → `foundation.color.green.600` | ⚠️ TODO | 3 |
-| `semantic.feedback.success.disabled` | color | → `foundation.color.disabled.success-light` | ⚠️ TODO | 0 |
-| `semantic.feedback.success.hover` | color | → `foundation.color.green.800` | ⚠️ TODO | 1 |
-| `semantic.feedback.success.subtle` | color | → `foundation.color.green.100` | ⚠️ TODO | 2 |
-| `semantic.feedback.warning.background` | color | → `foundation.color.amber.50` | ⚠️ TODO | 0 |
-| `semantic.feedback.warning.border` | color | → `foundation.color.amber.500` | ⚠️ TODO | 1 |
-| `semantic.feedback.warning.content.contrast` | color | → `foundation.color.neutral.900` | ⚠️ TODO | 2 |
-| `semantic.feedback.warning.content.default` | color | → `foundation.color.amber.700` | ⚠️ TODO | 1 |
-| `semantic.feedback.warning.default` | color | → `foundation.color.amber.500` | ⚠️ TODO | 2 |
-| `semantic.feedback.warning.hover` | color | → `foundation.color.amber.600` | ⚠️ TODO | 0 |
-| `semantic.feedback.warning.subtle` | color | → `foundation.color.amber.100` | ⚠️ TODO | 2 |
+| `semantic.feedback.error.background.active` | color | → `foundation.color.red.900` | ⚠️ TODO | 1 |
+| `semantic.feedback.error.background.default` | color | → `foundation.color.red.600` | ⚠️ TODO | 8 |
+| `semantic.feedback.error.background.disabled` | color | → `foundation.color.disabled.error-light` | ⚠️ TODO | 0 |
+| `semantic.feedback.error.background.hover` | color | → `foundation.color.red.800` | ⚠️ TODO | 1 |
+| `semantic.feedback.error.background.subtle` | color | → `foundation.color.red.100` | ⚠️ TODO | 2 |
+| `semantic.feedback.error.border-default` | color | → `foundation.color.red.500` | ⚠️ TODO | 2 |
+| `semantic.feedback.error.content-contrast` | color | → `foundation.color.neutral.50` | ⚠️ TODO | 3 |
+| `semantic.feedback.error.content-contrast-disabled` | color | → `foundation.color.overlay.white.60` | ⚠️ TODO | 0 |
+| `semantic.feedback.error.content-default` | color | → `foundation.color.red.700` | ⚠️ TODO | 4 |
+| `semantic.feedback.error.content-disabled` | color | → `foundation.color.overlay.white.80` | ⚠️ TODO | 0 |
+| `semantic.feedback.info.background.default` | color | → `foundation.color.sky.500` | ⚠️ TODO | 2 |
+| `semantic.feedback.info.background.hover` | color | → `foundation.color.sky.600` | ⚠️ TODO | 0 |
+| `semantic.feedback.info.background.subtle` | color | → `foundation.color.sky.100` | ⚠️ TODO | 2 |
+| `semantic.feedback.info.border-default` | color | → `foundation.color.sky.500` | ⚠️ TODO | 1 |
+| `semantic.feedback.info.content-contrast` | color | → `foundation.color.neutral.900` | ⚠️ TODO | 2 |
+| `semantic.feedback.info.content-default` | color | → `foundation.color.sky.700` | ⚠️ TODO | 1 |
+| `semantic.feedback.success.background.active` | color | → `foundation.color.green.900` | ⚠️ TODO | 1 |
+| `semantic.feedback.success.background.default` | color | → `foundation.color.green.600` | ⚠️ TODO | 3 |
+| `semantic.feedback.success.background.disabled` | color | → `foundation.color.disabled.success-light` | ⚠️ TODO | 0 |
+| `semantic.feedback.success.background.hover` | color | → `foundation.color.green.800` | ⚠️ TODO | 1 |
+| `semantic.feedback.success.background.subtle` | color | → `foundation.color.green.100` | ⚠️ TODO | 2 |
+| `semantic.feedback.success.border-default` | color | → `foundation.color.green.500` | ⚠️ TODO | 1 |
+| `semantic.feedback.success.content-contrast` | color | → `foundation.color.neutral.50` | ⚠️ TODO | 3 |
+| `semantic.feedback.success.content-contrast-disabled` | color | → `foundation.color.overlay.white.60` | ⚠️ TODO | 0 |
+| `semantic.feedback.success.content-default` | color | → `foundation.color.green.700` | ⚠️ TODO | 1 |
+| `semantic.feedback.success.content-disabled` | color | → `foundation.color.overlay.white.80` | ⚠️ TODO | 0 |
+| `semantic.feedback.warning.background.default` | color | → `foundation.color.amber.500` | ⚠️ TODO | 2 |
+| `semantic.feedback.warning.background.hover` | color | → `foundation.color.amber.600` | ⚠️ TODO | 0 |
+| `semantic.feedback.warning.background.subtle` | color | → `foundation.color.amber.100` | ⚠️ TODO | 2 |
+| `semantic.feedback.warning.border-default` | color | → `foundation.color.amber.500` | ⚠️ TODO | 1 |
+| `semantic.feedback.warning.content-contrast` | color | → `foundation.color.neutral.900` | ⚠️ TODO | 2 |
+| `semantic.feedback.warning.content-default` | color | → `foundation.color.amber.700` | ⚠️ TODO | 1 |
 
 ### semantic.focus
 
@@ -419,20 +416,50 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.focus.ring.offset` | dimension | → `foundation.border.width.2` | ⚠️ TODO | 11 |
 | `semantic.focus.ring.width` | dimension | → `foundation.border.width.2` | ⚠️ TODO | 11 |
 
+### semantic.ghost
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `semantic.ghost.background.active` | color | → `foundation.color.overlay.black.10` | ⚠️ TODO | 1 |
+| `semantic.ghost.background.hover` | color | → `foundation.color.overlay.black.5` | ⚠️ TODO | 1 |
+| `semantic.ghost.content-default` | color | → `foundation.color.neutral.900` | ⚠️ TODO | 1 |
+| `semantic.ghost.content-disabled` | color | → `foundation.color.neutral.400` | ⚠️ TODO | 0 |
+
+### semantic.link
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `semantic.link.content-active` | color | → `foundation.color.brand.800` | ⚠️ TODO | 1 |
+| `semantic.link.content-default` | color | → `foundation.color.brand.700` | ⚠️ TODO | 2 |
+| `semantic.link.content-disabled` | color | → `foundation.color.neutral.400` | ⚠️ TODO | 0 |
+| `semantic.link.content-hover` | color | → `foundation.color.brand.800` | ⚠️ TODO | 1 |
+
 ### semantic.motion
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `semantic.motion.duration.fast` | duration | → `foundation.duration.fast` | ⚠️ TODO | 11 |
+| `semantic.motion.duration.fast` | duration | → `foundation.duration.fast` | ⚠️ TODO | 12 |
 | `semantic.motion.duration.normal` | duration | → `foundation.duration.normal` | ⚠️ TODO | 0 |
 | `semantic.motion.duration.slow` | duration | → `foundation.duration.slow` | ⚠️ TODO | 0 |
-| `semantic.motion.ease.default` | cubicBezier | → `foundation.ease.default` | ⚠️ TODO | 11 |
+| `semantic.motion.ease.default` | cubicBezier | → `foundation.ease.default` | ⚠️ TODO | 12 |
 
 ### semantic.opacity
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `semantic.opacity.disabled` | number | → `foundation.opacity.50` | ⚠️ TODO | 4 |
+
+### semantic.outline
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `semantic.outline.background.active` | color | → `foundation.color.overlay.black.10` | ⚠️ TODO | 1 |
+| `semantic.outline.background.hover` | color | → `foundation.color.overlay.black.5` | ⚠️ TODO | 2 |
+| `semantic.outline.border-default` | color | → `foundation.color.neutral.500` | ⚠️ TODO | 2 |
+| `semantic.outline.border-disabled` | color | → `foundation.color.neutral.200` | ⚠️ TODO | 0 |
+| `semantic.outline.border-hover` | color | → `foundation.color.neutral.700` | ⚠️ TODO | 1 |
+| `semantic.outline.content-default` | color | → `foundation.color.neutral.700` | ⚠️ TODO | 2 |
+| `semantic.outline.content-disabled` | color | → `foundation.color.neutral.400` | ⚠️ TODO | 0 |
 
 ### semantic.overlay
 
@@ -441,67 +468,72 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.overlay.default` | color | → `foundation.color.overlay.black.10` | ⚠️ TODO | 0 |
 | `semantic.overlay.medium` | color | → `foundation.color.overlay.black.20` | ⚠️ TODO | 0 |
 | `semantic.overlay.strong` | color | → `foundation.color.overlay.black.40` | ⚠️ TODO | 0 |
-| `semantic.overlay.subtle` | color | → `foundation.color.overlay.black.5` | ⚠️ TODO | 0 |
+| `semantic.overlay.subtle` | color | → `foundation.color.overlay.black.5` | ⚠️ TODO | 4 |
+
+### semantic.primary
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `semantic.primary.background.active` | color | → `foundation.color.brand.800` | ⚠️ TODO | 1 |
+| `semantic.primary.background.default` | color | → `foundation.color.brand.600` | ⚠️ TODO | 9 |
+| `semantic.primary.background.disabled` | color | → `foundation.color.disabled.brand-light` | ⚠️ TODO | 0 |
+| `semantic.primary.background.hover` | color | → `foundation.color.brand.700` | ⚠️ TODO | 1 |
+| `semantic.primary.content-default` | color | → `foundation.color.neutral.50` | ⚠️ TODO | 6 |
+| `semantic.primary.content-disabled` | color | → `foundation.color.overlay.white.80` | ⚠️ TODO | 0 |
 
 ### semantic.radius
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `semantic.radius.component` | dimension | → `foundation.radius.md` | ⚠️ TODO | 7 |
+| `semantic.radius.full` | dimension | → `foundation.radius.999` | ⚠️ TODO | 6 |
+| `semantic.radius.lg` | dimension | → `foundation.radius.12` | ⚠️ TODO | 4 |
+| `semantic.radius.md` | dimension | → `foundation.radius.8` | ⚠️ TODO | 7 |
+| `semantic.radius.sm` | dimension | → `foundation.radius.4` | ⚠️ TODO | 9 |
+| `semantic.radius.xl` | dimension | → `foundation.radius.16` | ⚠️ TODO | 0 |
+
+### semantic.shadow
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `semantic.shadow.card` | shadow | → `foundation.shadow.sm` | ⚠️ TODO | 1 |
+| `semantic.shadow.modal` | shadow | → `foundation.shadow.xl` | ⚠️ TODO | 0 |
 
 ### semantic.size
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `semantic.size.control.icon.lg` | dimension | → `foundation.spacing.6` | ⚠️ TODO | 4 |
-| `semantic.size.control.icon.md` | dimension | → `foundation.spacing.5` | ⚠️ TODO | 4 |
-| `semantic.size.control.icon.sm` | dimension | → `foundation.spacing.4` | ⚠️ TODO | 4 |
-| `semantic.size.control.lg` | dimension | → `foundation.spacing.12` | ⚠️ TODO | 4 |
-| `semantic.size.control.md` | dimension | → `foundation.spacing.10` | ⚠️ TODO | 4 |
-| `semantic.size.control.min-target` | dimension | → `foundation.spacing.11` | ⚠️ TODO | 4 |
-| `semantic.size.control.sm` | dimension | → `foundation.spacing.8` | ⚠️ TODO | 4 |
+| `semantic.size.2xl` | dimension | → `foundation.dimension.48` | ⚠️ TODO | 6 |
+| `semantic.size.3xl` | dimension | → `foundation.dimension.64` | ⚠️ TODO | 2 |
+| `semantic.size.4xl` | dimension | → `foundation.dimension.96` | ⚠️ TODO | 1 |
+| `semantic.size.5xl` | dimension | → `foundation.dimension.128` | ⚠️ TODO | 2 |
+| `semantic.size.layout.2xl` | dimension | → `foundation.dimension.1280` | ⚠️ TODO | 0 |
+| `semantic.size.layout.lg` | dimension | → `foundation.dimension.800` | ⚠️ TODO | 0 |
+| `semantic.size.layout.md` | dimension | → `foundation.dimension.640` | ⚠️ TODO | 1 |
+| `semantic.size.layout.sm` | dimension | → `foundation.dimension.480` | ⚠️ TODO | 1 |
+| `semantic.size.layout.xl` | dimension | → `foundation.dimension.1024` | ⚠️ TODO | 0 |
+| `semantic.size.layout.xs` | dimension | → `foundation.dimension.320` | ⚠️ TODO | 0 |
+| `semantic.size.lg` | dimension | → `foundation.dimension.32` | ⚠️ TODO | 6 |
+| `semantic.size.md` | dimension | → `foundation.dimension.24` | ⚠️ TODO | 8 |
+| `semantic.size.sm` | dimension | → `foundation.dimension.20` | ⚠️ TODO | 8 |
+| `semantic.size.xl` | dimension | → `foundation.dimension.40` | ⚠️ TODO | 6 |
+| `semantic.size.xs` | dimension | → `foundation.dimension.16` | ⚠️ TODO | 8 |
 
 ### semantic.space
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `semantic.space.component.2xl` | dimension | → `foundation.spacing.6` | ⚠️ TODO | 0 |
-| `semantic.space.component.lg` | dimension | → `foundation.spacing.4` | ⚠️ TODO | 0 |
-| `semantic.space.component.md` | dimension | → `foundation.spacing.3` | ⚠️ TODO | 0 |
-| `semantic.space.component.sm` | dimension | → `foundation.spacing.2` | ⚠️ TODO | 0 |
-| `semantic.space.component.xl` | dimension | → `foundation.spacing.5` | ⚠️ TODO | 0 |
-| `semantic.space.component.xs` | dimension | → `foundation.spacing.1` | ⚠️ TODO | 0 |
-| `semantic.space.control.padding-x.lg` | dimension | → `foundation.spacing.5` | ⚠️ TODO | 5 |
-| `semantic.space.control.padding-x.md` | dimension | → `foundation.spacing.4` | ⚠️ TODO | 5 |
-| `semantic.space.control.padding-x.sm` | dimension | → `foundation.spacing.3` | ⚠️ TODO | 5 |
-| `semantic.space.control.padding-y.lg` | dimension | → `foundation.spacing.3` | ⚠️ TODO | 5 |
-| `semantic.space.control.padding-y.md` | dimension | → `foundation.spacing.2-5` | ⚠️ TODO | 5 |
-| `semantic.space.control.padding-y.sm` | dimension | → `foundation.spacing.2` | ⚠️ TODO | 5 |
-| `semantic.space.gap.2xs` | dimension | → `foundation.spacing.0-5` | ⚠️ TODO | 0 |
-| `semantic.space.gap.lg` | dimension | → `foundation.spacing.4` | ⚠️ TODO | 3 |
-| `semantic.space.gap.md` | dimension | → `foundation.spacing.3` | ⚠️ TODO | 1 |
-| `semantic.space.gap.sm` | dimension | → `foundation.spacing.2` | ⚠️ TODO | 17 |
-| `semantic.space.gap.xl` | dimension | → `foundation.spacing.6` | ⚠️ TODO | 1 |
-| `semantic.space.gap.xs` | dimension | → `foundation.spacing.1` | ⚠️ TODO | 15 |
-| `semantic.space.inset.2xs` | dimension | → `foundation.spacing.0-5` | ⚠️ TODO | 2 |
-| `semantic.space.inset.lg` | dimension | → `foundation.spacing.4` | ⚠️ TODO | 7 |
-| `semantic.space.inset.md` | dimension | → `foundation.spacing.3` | ⚠️ TODO | 2 |
-| `semantic.space.inset.sm` | dimension | → `foundation.spacing.2` | ⚠️ TODO | 0 |
-| `semantic.space.inset.xl` | dimension | → `foundation.spacing.6` | ⚠️ TODO | 0 |
-| `semantic.space.inset.xs` | dimension | → `foundation.spacing.1` | ⚠️ TODO | 0 |
-| `semantic.space.section.lg` | dimension | → `foundation.spacing.16` | ⚠️ TODO | 0 |
-| `semantic.space.section.md` | dimension | → `foundation.spacing.12` | ⚠️ TODO | 0 |
-| `semantic.space.section.sm` | dimension | → `foundation.spacing.8` | ⚠️ TODO | 2 |
-| `semantic.space.section.xl` | dimension | → `foundation.spacing.20` | ⚠️ TODO | 0 |
-
-### semantic.state
-
-| Token | Tipo | Alias | Sentido | Usos |
-|---|---|---|---|---|
-| `semantic.state.disabled.background` | color | → `foundation.color.neutral.200` | ⚠️ TODO | 10 |
-| `semantic.state.focus` | color | → `semantic.brand.default` | ⚠️ TODO | 0 |
-| `semantic.state.hover` | color | → `foundation.color.overlay.black.5` | ⚠️ TODO | 5 |
-| `semantic.state.pressed` | color | → `foundation.color.overlay.black.10` | ⚠️ TODO | 1 |
+| `semantic.space.2xl` | dimension | → `foundation.dimension.24` | ⚠️ TODO | 0 |
+| `semantic.space.2xs` | dimension | → `foundation.dimension.2` | ⚠️ TODO | 2 |
+| `semantic.space.control.padding.10` | dimension | → `foundation.dimension.10` | ⚠️ TODO | 2 |
+| `semantic.space.lg` | dimension | → `foundation.dimension.16` | ⚠️ TODO | 8 |
+| `semantic.space.md` | dimension | → `foundation.dimension.12` | ⚠️ TODO | 9 |
+| `semantic.space.section.lg` | dimension | → `foundation.dimension.64` | ⚠️ TODO | 0 |
+| `semantic.space.section.md` | dimension | → `foundation.dimension.48` | ⚠️ TODO | 0 |
+| `semantic.space.section.sm` | dimension | → `foundation.dimension.32` | ⚠️ TODO | 1 |
+| `semantic.space.section.xl` | dimension | → `foundation.dimension.80` | ⚠️ TODO | 0 |
+| `semantic.space.sm` | dimension | → `foundation.dimension.8` | ⚠️ TODO | 13 |
+| `semantic.space.xl` | dimension | → `foundation.dimension.20` | ⚠️ TODO | 5 |
+| `semantic.space.xs` | dimension | → `foundation.dimension.4` | ⚠️ TODO | 12 |
 
 ### semantic.surface
 
@@ -512,435 +544,75 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.surface.overlay` | color | → `foundation.color.neutral.50` | ⚠️ TODO | 0 |
 | `semantic.surface.raised` | color | → `foundation.color.neutral.50` | ⚠️ TODO | 0 |
 
+### semantic.toned
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `semantic.toned.background.active` | color | → `foundation.color.overlay.blue-600.28` | ⚠️ TODO | 1 |
+| `semantic.toned.background.default` | color | → `foundation.color.overlay.blue-600.12` | ⚠️ TODO | 2 |
+| `semantic.toned.background.hover` | color | → `foundation.color.overlay.blue-600.20` | ⚠️ TODO | 1 |
+| `semantic.toned.content-default` | color | → `foundation.color.brand.700` | ⚠️ TODO | 2 |
+| `semantic.toned.content-disabled` | color | → `foundation.color.neutral.400` | ⚠️ TODO | 0 |
+
 ### semantic.typography
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
+| `semantic.typography.body.font-family.mono` | fontFamily | → `foundation.typography.font.family.mono` | ⚠️ TODO | 0 |
 | `semantic.typography.body.font-family.sans` | fontFamily | → `foundation.typography.font.family.sans` | ⚠️ TODO | 0 |
-| `semantic.typography.body.font-size.2xl` | dimension | → `foundation.typography.font.size.2xl` | ⚠️ TODO | 0 |
-| `semantic.typography.body.font-size.3xl` | dimension | → `foundation.typography.font.size.3xl` | ⚠️ TODO | 0 |
-| `semantic.typography.body.font-size.lg` | dimension | → `foundation.typography.font.size.lg` | ⚠️ TODO | 0 |
-| `semantic.typography.body.font-size.md` | dimension | → `foundation.typography.font.size.md` | ⚠️ TODO | 0 |
-| `semantic.typography.body.font-size.sm` | dimension | → `foundation.typography.font.size.sm` | ⚠️ TODO | 3 |
-| `semantic.typography.body.font-size.xl` | dimension | → `foundation.typography.font.size.xl` | ⚠️ TODO | 0 |
-| `semantic.typography.body.font-size.xs` | dimension | → `foundation.typography.font.size.xs` | ⚠️ TODO | 3 |
+| `semantic.typography.body.font-size.2xl` | dimension | → `foundation.typography.font.size.24` | ⚠️ TODO | 0 |
+| `semantic.typography.body.font-size.2xs` | dimension | → `foundation.typography.font.size.11` | ⚠️ TODO | 0 |
+| `semantic.typography.body.font-size.3xl` | dimension | → `foundation.typography.font.size.28` | ⚠️ TODO | 0 |
+| `semantic.typography.body.font-size.4xl` | dimension | → `foundation.typography.font.size.32` | ⚠️ TODO | 0 |
+| `semantic.typography.body.font-size.5xl` | dimension | → `foundation.typography.font.size.40` | ⚠️ TODO | 0 |
+| `semantic.typography.body.font-size.6xl` | dimension | → `foundation.typography.font.size.48` | ⚠️ TODO | 0 |
+| `semantic.typography.body.font-size.7xl` | dimension | → `foundation.typography.font.size.56` | ⚠️ TODO | 0 |
+| `semantic.typography.body.font-size.8xl` | dimension | → `foundation.typography.font.size.64` | ⚠️ TODO | 0 |
+| `semantic.typography.body.font-size.9xl` | dimension | → `foundation.typography.font.size.72` | ⚠️ TODO | 0 |
+| `semantic.typography.body.font-size.lg` | dimension | → `foundation.typography.font.size.18` | ⚠️ TODO | 0 |
+| `semantic.typography.body.font-size.md` | dimension | → `foundation.typography.font.size.16` | ⚠️ TODO | 0 |
+| `semantic.typography.body.font-size.sm` | dimension | → `foundation.typography.font.size.14` | ⚠️ TODO | 0 |
+| `semantic.typography.body.font-size.xl` | dimension | → `foundation.typography.font.size.20` | ⚠️ TODO | 0 |
+| `semantic.typography.body.font-size.xs` | dimension | → `foundation.typography.font.size.12` | ⚠️ TODO | 0 |
 | `semantic.typography.body.font-weight.bold` | number | → `foundation.typography.font.weight.bold` | ⚠️ TODO | 0 |
-| `semantic.typography.body.font-weight.medium` | number | → `foundation.typography.font.weight.medium` | ⚠️ TODO | 6 |
+| `semantic.typography.body.font-weight.medium` | number | → `foundation.typography.font.weight.medium` | ⚠️ TODO | 0 |
 | `semantic.typography.body.font-weight.regular` | number | → `foundation.typography.font.weight.regular` | ⚠️ TODO | 0 |
-| `semantic.typography.body.font-weight.semibold` | number | → `foundation.typography.font.weight.semibold` | ⚠️ TODO | 1 |
+| `semantic.typography.body.font-weight.semibold` | number | → `foundation.typography.font.weight.semibold` | ⚠️ TODO | 0 |
 | `semantic.typography.body.letter-spacing.normal` | dimension | → `foundation.typography.letter.spacing.normal` | ⚠️ TODO | 0 |
 | `semantic.typography.body.letter-spacing.tight` | dimension | → `foundation.typography.letter.spacing.tight` | ⚠️ TODO | 0 |
-| `semantic.typography.body.line-height.2xl` | number | → `foundation.typography.line.height.snug` | ⚠️ TODO | 0 |
-| `semantic.typography.body.line-height.3xl` | number | → `foundation.typography.line.height.tight` | ⚠️ TODO | 0 |
-| `semantic.typography.body.line-height.md` | number | → `foundation.typography.line.height.normal` | ⚠️ TODO | 2 |
-| `semantic.typography.body.line-height.sm` | number | → `foundation.typography.line.height.snug` | ⚠️ TODO | 0 |
-| `semantic.typography.body.line-height.xl` | number | → `foundation.typography.line.height.normal` | ⚠️ TODO | 0 |
-| `semantic.typography.body.line-height.xs` | number | → `foundation.typography.line.height.snug` | ⚠️ TODO | 0 |
-| `semantic.typography.control.font-size.lg` | dimension | → `foundation.typography.font.size.md` | ⚠️ TODO | 4 |
-| `semantic.typography.control.font-size.md` | dimension | → `foundation.typography.font.size.sm` | ⚠️ TODO | 4 |
-| `semantic.typography.control.font-size.sm` | dimension | → `foundation.typography.font.size.sm` | ⚠️ TODO | 4 |
-| `semantic.typography.control.line-height.lg` | dimension | → `foundation.spacing.6` | ⚠️ TODO | 0 |
-| `semantic.typography.control.line-height.md` | dimension | → `foundation.spacing.5` | ⚠️ TODO | 0 |
-| `semantic.typography.control.line-height.sm` | dimension | → `foundation.spacing.4` | ⚠️ TODO | 0 |
+| `semantic.typography.body.letter-spacing.wider` | dimension | → `foundation.typography.letter.spacing.wider` | ⚠️ TODO | 0 |
+| `semantic.typography.body.line-height.2xl` | dimension | → `foundation.typography.line.height.34` | ⚠️ TODO | 0 |
+| `semantic.typography.body.line-height.2xs` | dimension | → `foundation.typography.line.height.16` | ⚠️ TODO | 0 |
+| `semantic.typography.body.line-height.3xl` | dimension | → `foundation.typography.line.height.40` | ⚠️ TODO | 0 |
+| `semantic.typography.body.line-height.4xl` | dimension | → `foundation.typography.line.height.44` | ⚠️ TODO | 0 |
+| `semantic.typography.body.line-height.5xl` | dimension | → `foundation.typography.line.height.48` | ⚠️ TODO | 0 |
+| `semantic.typography.body.line-height.6xl` | dimension | → `foundation.typography.line.height.64` | ⚠️ TODO | 0 |
+| `semantic.typography.body.line-height.7xl` | dimension | → `foundation.typography.line.height.72` | ⚠️ TODO | 0 |
+| `semantic.typography.body.line-height.8xl` | dimension | → `foundation.typography.line.height.80` | ⚠️ TODO | 0 |
+| `semantic.typography.body.line-height.9xl` | dimension | → `foundation.typography.line.height.90` | ⚠️ TODO | 0 |
+| `semantic.typography.body.line-height.lg` | dimension | → `foundation.typography.line.height.28` | ⚠️ TODO | 0 |
+| `semantic.typography.body.line-height.md` | dimension | → `foundation.typography.line.height.24` | ⚠️ TODO | 0 |
+| `semantic.typography.body.line-height.sm` | dimension | → `foundation.typography.line.height.20` | ⚠️ TODO | 0 |
+| `semantic.typography.body.line-height.xl` | dimension | → `foundation.typography.line.height.32` | ⚠️ TODO | 0 |
+| `semantic.typography.body.line-height.xs` | dimension | → `foundation.typography.line.height.18` | ⚠️ TODO | 0 |
+| `semantic.typography.control.font-size.lg` | dimension | → `foundation.typography.font.size.16` | ⚠️ TODO | 4 |
+| `semantic.typography.control.font-size.md` | dimension | → `foundation.typography.font.size.12` | ⚠️ TODO | 4 |
+| `semantic.typography.control.font-size.sm` | dimension | → `foundation.typography.font.size.12` | ⚠️ TODO | 4 |
+| `semantic.typography.control.line-height.lg` | dimension | → `foundation.spacing.24` | ⚠️ TODO | 0 |
+| `semantic.typography.control.line-height.md` | dimension | → `foundation.spacing.20` | ⚠️ TODO | 0 |
+| `semantic.typography.control.line-height.sm` | dimension | → `foundation.spacing.16` | ⚠️ TODO | 0 |
 
 ## Component
 
-288 tokens.
+0 tokens.
 
-### component.alert
-
-| Token | Tipo | Alias | Sentido | Usos |
-|---|---|---|---|---|
-| `component.alert.border-radius` | dimension | → `semantic.radius.component` | ⚠️ TODO | 1 |
-| `component.alert.border-width` | dimension | → `semantic.border.width.default` | ⚠️ TODO | 1 |
-| `component.alert.content-gap` | dimension | → `semantic.space.gap.xs` | ⚠️ TODO | 1 |
-| `component.alert.focus-border-radius` | dimension | → `foundation.radius.sm` | ⚠️ TODO | 1 |
-| `component.alert.gap` | dimension | → `semantic.space.gap.sm` | ⚠️ TODO | 1 |
-| `component.alert.icon-size` | dimension | — | ⚠️ TODO | 1 |
-| `component.alert.padding` | dimension | → `semantic.space.inset.md` | ⚠️ TODO | 1 |
-| `component.alert.transition-duration` | duration | → `foundation.duration.fast` | ⚠️ TODO | 1 |
-| `component.alert.transition-timing` | cubicBezier | → `foundation.ease.default` | ⚠️ TODO | 1 |
-
-### component.avatar
-
-| Token | Tipo | Alias | Sentido | Usos |
-|---|---|---|---|---|
-| `component.avatar.border-radius` | dimension | → `foundation.radius.full` | ⚠️ TODO | 1 |
-| `component.avatar.font-family` | fontFamily | → `semantic.typography.body.font-family.sans` | ⚠️ TODO | 1 |
-| `component.avatar.font-size.lg` | dimension | → `foundation.typography.font.size.lg` | ⚠️ TODO | 1 |
-| `component.avatar.font-size.md` | dimension | → `foundation.typography.font.size.sm` | ⚠️ TODO | 1 |
-| `component.avatar.font-size.sm` | dimension | → `foundation.typography.font.size.xs` | ⚠️ TODO | 1 |
-| `component.avatar.font-weight` | number | → `semantic.typography.body.font-weight.semibold` | ⚠️ TODO | 1 |
-| `component.avatar.icon-size.lg` | dimension | → `foundation.spacing.7` | ⚠️ TODO | 1 |
-| `component.avatar.icon-size.md` | dimension | → `foundation.spacing.5` | ⚠️ TODO | 1 |
-| `component.avatar.icon-size.sm` | dimension | → `foundation.spacing.4` | ⚠️ TODO | 1 |
-| `component.avatar.size.lg` | dimension | → `foundation.spacing.14` | ⚠️ TODO | 1 |
-| `component.avatar.size.md` | dimension | → `foundation.spacing.10` | ⚠️ TODO | 1 |
-| `component.avatar.size.sm` | dimension | → `foundation.spacing.8` | ⚠️ TODO | 1 |
-
-### component.badge
-
-| Token | Tipo | Alias | Sentido | Usos |
-|---|---|---|---|---|
-| `component.badge.border-radius` | dimension | → `foundation.radius.full` | ⚠️ TODO | 1 |
-| `component.badge.font-size` | dimension | → `semantic.typography.body.font-size.xs` | ⚠️ TODO | 1 |
-| `component.badge.font-weight` | number | → `semantic.typography.body.font-weight.medium` | ⚠️ TODO | 1 |
-| `component.badge.line-height` | number | → `semantic.typography.body.line-height.md` | ⚠️ TODO | 1 |
-| `component.badge.padding-x` | dimension | → `semantic.space.gap.sm` | ⚠️ TODO | 1 |
-| `component.badge.padding-y` | dimension | → `semantic.space.inset.2xs` | ⚠️ TODO | 1 |
-
-### component.breadcrumb
-
-| Token | Tipo | Alias | Sentido | Usos |
-|---|---|---|---|---|
-| `component.breadcrumb.focus-border-radius` | dimension | → `foundation.radius.sm` | ⚠️ TODO | 1 |
-| `component.breadcrumb.font-size` | dimension | → `semantic.typography.body.font-size.sm` | ⚠️ TODO | 1 |
-| `component.breadcrumb.font-weight-current` | number | → `semantic.typography.body.font-weight.medium` | ⚠️ TODO | 1 |
-| `component.breadcrumb.gap` | dimension | → `semantic.space.gap.xs` | ⚠️ TODO | 1 |
-
-### component.button
-
-| Token | Tipo | Alias | Sentido | Usos |
-|---|---|---|---|---|
-| `component.button.background.toned.active` | color | → `semantic.brand.toned.active` | ⚠️ TODO | 0 |
-| `component.button.background.toned.default` | color | → `semantic.brand.toned.default` | ⚠️ TODO | 0 |
-| `component.button.background.toned.disabled` | color | → `semantic.state.disabled.background` | ⚠️ TODO | 0 |
-| `component.button.background.toned.hover` | color | → `semantic.brand.toned.hover` | ⚠️ TODO | 0 |
-| `component.button.border-radius` | dimension | → `semantic.radius.component` | ⚠️ TODO | 1 |
-| `component.button.border-width` | dimension | → `semantic.border.width.default` | ⚠️ TODO | 1 |
-| `component.button.font-family` | fontFamily | → `semantic.typography.body.font-family.sans` | ⚠️ TODO | 1 |
-| `component.button.font-size.lg` | dimension | → `semantic.typography.control.font-size.lg` | ⚠️ TODO | 1 |
-| `component.button.font-size.md` | dimension | → `semantic.typography.control.font-size.md` | ⚠️ TODO | 1 |
-| `component.button.font-size.sm` | dimension | → `semantic.typography.control.font-size.sm` | ⚠️ TODO | 1 |
-| `component.button.font-weight` | number | → `semantic.typography.body.font-weight.medium` | ⚠️ TODO | 1 |
-| `component.button.foreground.toned.default` | color | → `semantic.brand.content.default` | ⚠️ TODO | 0 |
-| `component.button.foreground.toned.disabled` | color | → `semantic.content.disabled` | ⚠️ TODO | 0 |
-| `component.button.gap` | dimension | → `semantic.space.gap.sm` | ⚠️ TODO | 1 |
-| `component.button.height.lg` | dimension | → `semantic.size.control.lg` | ⚠️ TODO | 1 |
-| `component.button.height.md` | dimension | → `semantic.size.control.md` | ⚠️ TODO | 1 |
-| `component.button.height.sm` | dimension | → `semantic.size.control.sm` | ⚠️ TODO | 1 |
-| `component.button.icon-size.lg` | dimension | → `semantic.size.control.icon.lg` | ⚠️ TODO | 1 |
-| `component.button.icon-size.md` | dimension | → `semantic.size.control.icon.md` | ⚠️ TODO | 1 |
-| `component.button.icon-size.sm` | dimension | → `semantic.size.control.icon.sm` | ⚠️ TODO | 1 |
-| `component.button.min-target-size` | dimension | → `semantic.size.control.min-target` | ⚠️ TODO | 1 |
-| `component.button.opacity-disabled` | number | → `foundation.opacity.50` | ⚠️ TODO | 1 |
-| `component.button.padding-x.lg` | dimension | → `semantic.space.control.padding-x.lg` | ⚠️ TODO | 1 |
-| `component.button.padding-x.md` | dimension | → `semantic.space.control.padding-x.md` | ⚠️ TODO | 1 |
-| `component.button.padding-x.sm` | dimension | → `semantic.space.control.padding-x.sm` | ⚠️ TODO | 1 |
-| `component.button.padding-y.lg` | dimension | → `semantic.space.control.padding-y.lg` | ⚠️ TODO | 1 |
-| `component.button.padding-y.md` | dimension | → `semantic.space.control.padding-y.md` | ⚠️ TODO | 1 |
-| `component.button.padding-y.sm` | dimension | → `semantic.space.control.padding-y.sm` | ⚠️ TODO | 1 |
-| `component.button.transition-duration` | duration | → `foundation.duration.fast` | ⚠️ TODO | 1 |
-| `component.button.transition-timing` | cubicBezier | → `foundation.ease.default` | ⚠️ TODO | 1 |
-
-### component.card
-
-| Token | Tipo | Alias | Sentido | Usos |
-|---|---|---|---|---|
-| `component.card.body-font-size` | dimension | → `semantic.typography.body.font-size.sm` | ⚠️ TODO | 1 |
-| `component.card.body-line-height` | number | → `semantic.typography.body.line-height.md` | ⚠️ TODO | 1 |
-| `component.card.border-radius` | dimension | → `foundation.radius.lg` | ⚠️ TODO | 1 |
-| `component.card.border-width` | dimension | → `semantic.border.width.default` | ⚠️ TODO | 1 |
-| `component.card.gap` | dimension | → `semantic.space.gap.sm` | ⚠️ TODO | 1 |
-| `component.card.padding` | dimension | → `semantic.space.inset.lg` | ⚠️ TODO | 1 |
-| `component.card.shadow-elevated` | shadow | → `foundation.shadow.sm` | ⚠️ TODO | 1 |
-| `component.card.title-font-size` | dimension | → `semantic.typography.body.font-size.lg` | ⚠️ TODO | 1 |
-| `component.card.title-font-weight` | number | → `semantic.typography.body.font-weight.semibold` | ⚠️ TODO | 1 |
-| `component.card.title-line-height` | number | → `semantic.typography.body.line-height.sm` | ⚠️ TODO | 1 |
-
-### component.checkbox
-
-| Token | Tipo | Alias | Sentido | Usos |
-|---|---|---|---|---|
-| `component.checkbox.border-radius` | dimension | → `foundation.radius.sm` | ⚠️ TODO | 1 |
-| `component.checkbox.border-width` | dimension | → `semantic.border.width.default` | ⚠️ TODO | 1 |
-| `component.checkbox.check-height.lg` | dimension | → `foundation.spacing.3` | ⚠️ TODO | 0 |
-| `component.checkbox.check-height.md` | dimension | → `foundation.spacing.2-5` | ⚠️ TODO | 0 |
-| `component.checkbox.check-height.sm` | dimension | → `foundation.spacing.2` | ⚠️ TODO | 0 |
-| `component.checkbox.check-width.lg` | dimension | → `foundation.spacing.1-5` | ⚠️ TODO | 0 |
-| `component.checkbox.check-width.md` | dimension | — | ⚠️ TODO | 0 |
-| `component.checkbox.check-width.sm` | dimension | → `foundation.spacing.1` | ⚠️ TODO | 0 |
-| `component.checkbox.content-gap` | dimension | → `semantic.space.gap.xs` | ⚠️ TODO | 1 |
-| `component.checkbox.control-size.lg` | dimension | → `foundation.spacing.6` | ⚠️ TODO | 1 |
-| `component.checkbox.control-size.md` | dimension | → `foundation.spacing.5` | ⚠️ TODO | 1 |
-| `component.checkbox.control-size.sm` | dimension | → `foundation.spacing.4` | ⚠️ TODO | 1 |
-| `component.checkbox.description-font-size` | dimension | → `semantic.typography.body.font-size.sm` | ⚠️ TODO | 1 |
-| `component.checkbox.description-font-weight` | number | → `semantic.typography.body.font-weight.regular` | ⚠️ TODO | 1 |
-| `component.checkbox.description-line-height` | number | → `semantic.typography.body.line-height.md` | ⚠️ TODO | 1 |
-| `component.checkbox.error-font-size` | dimension | → `semantic.typography.body.font-size.xs` | ⚠️ TODO | 1 |
-| `component.checkbox.error-margin-top` | dimension | → `semantic.space.gap.xs` | ⚠️ TODO | 1 |
-| `component.checkbox.font-size` | dimension | → `foundation.typography.font.size.sm` | ⚠️ TODO | 1 |
-| `component.checkbox.gap` | dimension | → `semantic.space.gap.sm` | ⚠️ TODO | 1 |
-| `component.checkbox.helper-font-size` | dimension | → `semantic.typography.body.font-size.xs` | ⚠️ TODO | 1 |
-| `component.checkbox.helper-line-height` | number | → `semantic.typography.body.line-height.md` | ⚠️ TODO | 1 |
-| `component.checkbox.label-font-size` | dimension | → `semantic.typography.body.font-size.sm` | ⚠️ TODO | 1 |
-| `component.checkbox.label-font-weight` | number | → `semantic.typography.body.font-weight.medium` | ⚠️ TODO | 1 |
-| `component.checkbox.label-line-height` | number | → `semantic.typography.body.line-height.sm` | ⚠️ TODO | 1 |
-| `component.checkbox.label-padding-x` | dimension | → `semantic.space.gap.xs` | ⚠️ TODO | 1 |
-| `component.checkbox.label-padding-y` | dimension | — | ⚠️ TODO | 1 |
-| `component.checkbox.min-target-size` | dimension | → `semantic.size.control.min-target` | ⚠️ TODO | 1 |
-| `component.checkbox.opacity-disabled` | number | → `foundation.opacity.50` | ⚠️ TODO | 1 |
-| `component.checkbox.transition-duration` | duration | → `foundation.duration.fast` | ⚠️ TODO | 1 |
-| `component.checkbox.transition-timing` | cubicBezier | → `foundation.ease.default` | ⚠️ TODO | 1 |
-
-### component.divider
-
-| Token | Tipo | Alias | Sentido | Usos |
-|---|---|---|---|---|
-| `component.divider.spacing` | dimension | → `semantic.space.gap.lg` | ⚠️ TODO | 1 |
-| `component.divider.thickness` | dimension | → `semantic.border.width.default` | ⚠️ TODO | 1 |
-
-### component.input
-
-| Token | Tipo | Alias | Sentido | Usos |
-|---|---|---|---|---|
-| `component.input.border-radius` | dimension | → `semantic.radius.component` | ⚠️ TODO | 1 |
-| `component.input.border-width` | dimension | → `semantic.border.width.default` | ⚠️ TODO | 1 |
-| `component.input.field-gap` | dimension | → `semantic.space.gap.xs` | ⚠️ TODO | 1 |
-| `component.input.field-inner-padding-x` | dimension | → `semantic.space.gap.xs` | ⚠️ TODO | 1 |
-| `component.input.font-size.lg` | dimension | → `semantic.typography.control.font-size.lg` | ⚠️ TODO | 1 |
-| `component.input.font-size.md` | dimension | → `semantic.typography.control.font-size.md` | ⚠️ TODO | 1 |
-| `component.input.font-size.sm` | dimension | → `semantic.typography.control.font-size.sm` | ⚠️ TODO | 1 |
-| `component.input.gap` | dimension | → `semantic.space.gap.sm` | ⚠️ TODO | 1 |
-| `component.input.height.lg` | dimension | → `semantic.size.control.lg` | ⚠️ TODO | 1 |
-| `component.input.height.md` | dimension | → `semantic.size.control.md` | ⚠️ TODO | 1 |
-| `component.input.height.sm` | dimension | → `semantic.size.control.sm` | ⚠️ TODO | 1 |
-| `component.input.helper-font-size` | dimension | → `semantic.typography.body.font-size.xs` | ⚠️ TODO | 1 |
-| `component.input.helper-line-height` | number | → `semantic.typography.body.line-height.md` | ⚠️ TODO | 1 |
-| `component.input.icon-size.lg` | dimension | → `semantic.size.control.icon.lg` | ⚠️ TODO | 1 |
-| `component.input.icon-size.md` | dimension | → `semantic.size.control.icon.md` | ⚠️ TODO | 1 |
-| `component.input.icon-size.sm` | dimension | → `semantic.size.control.icon.sm` | ⚠️ TODO | 1 |
-| `component.input.label-font-size` | dimension | → `semantic.typography.body.font-size.sm` | ⚠️ TODO | 1 |
-| `component.input.label-font-weight` | number | → `semantic.typography.body.font-weight.medium` | ⚠️ TODO | 1 |
-| `component.input.label-line-height` | number | → `semantic.typography.body.line-height.sm` | ⚠️ TODO | 1 |
-| `component.input.padding-x.lg` | dimension | → `semantic.space.control.padding-x.lg` | ⚠️ TODO | 1 |
-| `component.input.padding-x.md` | dimension | → `semantic.space.control.padding-x.md` | ⚠️ TODO | 1 |
-| `component.input.padding-x.sm` | dimension | → `semantic.space.control.padding-x.sm` | ⚠️ TODO | 1 |
-| `component.input.padding-y.lg` | dimension | → `semantic.space.control.padding-y.lg` | ⚠️ TODO | 0 |
-| `component.input.padding-y.md` | dimension | → `semantic.space.control.padding-y.md` | ⚠️ TODO | 0 |
-| `component.input.padding-y.sm` | dimension | → `semantic.space.control.padding-y.sm` | ⚠️ TODO | 0 |
-| `component.input.transition-duration` | duration | → `foundation.duration.fast` | ⚠️ TODO | 1 |
-| `component.input.transition-timing` | cubicBezier | → `foundation.ease.default` | ⚠️ TODO | 1 |
-
-### component.modal
-
-| Token | Tipo | Alias | Sentido | Usos |
-|---|---|---|---|---|
-| `component.modal.body-font-size` | dimension | → `semantic.typography.body.font-size.sm` | ⚠️ TODO | 1 |
-| `component.modal.body-line-height` | number | → `semantic.typography.body.line-height.md` | ⚠️ TODO | 1 |
-| `component.modal.border-radius` | dimension | → `foundation.radius.xl` | ⚠️ TODO | 1 |
-| `component.modal.border-width` | dimension | → `semantic.border.width.default` | ⚠️ TODO | 1 |
-| `component.modal.close-border-radius` | dimension | → `foundation.radius.sm` | ⚠️ TODO | 1 |
-| `component.modal.close-padding` | dimension | → `semantic.space.gap.xs` | ⚠️ TODO | 1 |
-| `component.modal.footer-gap` | dimension | → `semantic.space.gap.sm` | ⚠️ TODO | 1 |
-| `component.modal.footer-padding-top` | dimension | → `semantic.space.gap.sm` | ⚠️ TODO | 1 |
-| `component.modal.header-gap` | dimension | → `semantic.space.gap.sm` | ⚠️ TODO | 1 |
-| `component.modal.header-padding-bottom` | dimension | → `semantic.space.gap.sm` | ⚠️ TODO | 1 |
-| `component.modal.max-width.lg` | dimension | — | ⚠️ TODO | 1 |
-| `component.modal.max-width.md` | dimension | — | ⚠️ TODO | 1 |
-| `component.modal.max-width.sm` | dimension | — | ⚠️ TODO | 1 |
-| `component.modal.overlay-padding` | dimension | → `semantic.space.inset.lg` | ⚠️ TODO | 1 |
-| `component.modal.padding` | dimension | → `semantic.space.inset.lg` | ⚠️ TODO | 1 |
-| `component.modal.shadow` | shadow | → `foundation.shadow.xl` | ⚠️ TODO | 1 |
-| `component.modal.title-font-size` | dimension | → `semantic.typography.body.font-size.lg` | ⚠️ TODO | 1 |
-| `component.modal.title-font-weight` | number | → `semantic.typography.body.font-weight.semibold` | ⚠️ TODO | 1 |
-| `component.modal.title-line-height` | number | → `semantic.typography.body.line-height.sm` | ⚠️ TODO | 1 |
-| `component.modal.transition-duration` | duration | → `foundation.duration.fast` | ⚠️ TODO | 1 |
-| `component.modal.transition-timing` | cubicBezier | → `foundation.ease.default` | ⚠️ TODO | 1 |
-| `component.modal.viewport-offset` | dimension | → `semantic.space.section.sm` | ⚠️ TODO | 1 |
-| `component.modal.z-index` | number | → `foundation.z.50` | ⚠️ TODO | 1 |
-
-### component.radio
-
-| Token | Tipo | Alias | Sentido | Usos |
-|---|---|---|---|---|
-| `component.radio.border-radius-full` | dimension | → `foundation.radius.full` | ⚠️ TODO | 1 |
-| `component.radio.border-width` | dimension | → `semantic.border.width.default` | ⚠️ TODO | 1 |
-| `component.radio.content-gap` | dimension | → `semantic.space.gap.xs` | ⚠️ TODO | 1 |
-| `component.radio.control-size.lg` | dimension | → `foundation.spacing.6` | ⚠️ TODO | 1 |
-| `component.radio.control-size.md` | dimension | → `foundation.spacing.5` | ⚠️ TODO | 1 |
-| `component.radio.control-size.sm` | dimension | → `foundation.spacing.4` | ⚠️ TODO | 1 |
-| `component.radio.description-font-size` | dimension | → `semantic.typography.body.font-size.sm` | ⚠️ TODO | 1 |
-| `component.radio.description-font-weight` | number | → `semantic.typography.body.font-weight.regular` | ⚠️ TODO | 1 |
-| `component.radio.description-line-height` | number | → `semantic.typography.body.line-height.md` | ⚠️ TODO | 1 |
-| `component.radio.dot-size.lg` | dimension | → `foundation.spacing.2-5` | ⚠️ TODO | 1 |
-| `component.radio.dot-size.md` | dimension | → `foundation.spacing.2` | ⚠️ TODO | 1 |
-| `component.radio.dot-size.sm` | dimension | → `foundation.spacing.1-5` | ⚠️ TODO | 1 |
-| `component.radio.error-font-size` | dimension | → `semantic.typography.body.font-size.xs` | ⚠️ TODO | 1 |
-| `component.radio.error-margin-top` | dimension | → `semantic.space.gap.xs` | ⚠️ TODO | 1 |
-| `component.radio.font-size` | dimension | → `foundation.typography.font.size.sm` | ⚠️ TODO | 1 |
-| `component.radio.gap` | dimension | → `semantic.space.gap.sm` | ⚠️ TODO | 1 |
-| `component.radio.group-gap` | dimension | → `semantic.space.gap.xs` | ⚠️ TODO | 1 |
-| `component.radio.group-legend-margin-bottom` | dimension | → `semantic.space.gap.sm` | ⚠️ TODO | 1 |
-| `component.radio.group-margin-bottom` | dimension | → `semantic.space.inset.lg` | ⚠️ TODO | 1 |
-| `component.radio.helper-font-size` | dimension | → `semantic.typography.body.font-size.xs` | ⚠️ TODO | 1 |
-| `component.radio.helper-line-height` | number | → `semantic.typography.body.line-height.md` | ⚠️ TODO | 1 |
-| `component.radio.label-border-radius` | dimension | → `foundation.radius.sm` | ⚠️ TODO | 1 |
-| `component.radio.label-font-size` | dimension | → `semantic.typography.body.font-size.sm` | ⚠️ TODO | 1 |
-| `component.radio.label-font-weight` | number | → `semantic.typography.body.font-weight.medium` | ⚠️ TODO | 1 |
-| `component.radio.label-line-height` | number | → `semantic.typography.body.line-height.sm` | ⚠️ TODO | 1 |
-| `component.radio.label-padding-x` | dimension | → `semantic.space.gap.xs` | ⚠️ TODO | 1 |
-| `component.radio.label-padding-y` | dimension | — | ⚠️ TODO | 1 |
-| `component.radio.legend-font-size` | dimension | → `semantic.typography.body.font-size.sm` | ⚠️ TODO | 1 |
-| `component.radio.legend-font-weight` | number | → `semantic.typography.body.font-weight.medium` | ⚠️ TODO | 1 |
-| `component.radio.min-target-size` | dimension | → `semantic.size.control.min-target` | ⚠️ TODO | 1 |
-| `component.radio.opacity-disabled` | number | → `foundation.opacity.50` | ⚠️ TODO | 1 |
-| `component.radio.transition-duration` | duration | → `foundation.duration.fast` | ⚠️ TODO | 1 |
-| `component.radio.transition-timing` | cubicBezier | → `foundation.ease.default` | ⚠️ TODO | 1 |
-
-### component.select
-
-| Token | Tipo | Alias | Sentido | Usos |
-|---|---|---|---|---|
-| `component.select.arrow-offset.lg` | dimension | → `foundation.spacing.4` | ⚠️ TODO | 1 |
-| `component.select.arrow-offset.md` | dimension | → `foundation.spacing.3` | ⚠️ TODO | 1 |
-| `component.select.arrow-offset.sm` | dimension | → `foundation.spacing.2` | ⚠️ TODO | 1 |
-| `component.select.arrow-size` | dimension | → `foundation.spacing.4` | ⚠️ TODO | 1 |
-| `component.select.border-radius` | dimension | → `semantic.radius.component` | ⚠️ TODO | 1 |
-| `component.select.border-width` | dimension | → `semantic.border.width.default` | ⚠️ TODO | 1 |
-| `component.select.field-inner-padding-x` | dimension | → `semantic.space.gap.xs` | ⚠️ TODO | 1 |
-| `component.select.font-size.lg` | dimension | → `semantic.typography.control.font-size.lg` | ⚠️ TODO | 1 |
-| `component.select.font-size.md` | dimension | → `semantic.typography.control.font-size.md` | ⚠️ TODO | 1 |
-| `component.select.font-size.sm` | dimension | → `semantic.typography.control.font-size.sm` | ⚠️ TODO | 1 |
-| `component.select.gap` | dimension | → `semantic.space.gap.xs` | ⚠️ TODO | 1 |
-| `component.select.height.lg` | dimension | → `semantic.size.control.lg` | ⚠️ TODO | 1 |
-| `component.select.height.md` | dimension | → `semantic.size.control.md` | ⚠️ TODO | 1 |
-| `component.select.height.sm` | dimension | → `semantic.size.control.sm` | ⚠️ TODO | 1 |
-| `component.select.padding-x.lg` | dimension | → `semantic.space.control.padding-x.lg` | ⚠️ TODO | 1 |
-| `component.select.padding-x.md` | dimension | → `semantic.space.control.padding-x.md` | ⚠️ TODO | 1 |
-| `component.select.padding-x.sm` | dimension | → `semantic.space.control.padding-x.sm` | ⚠️ TODO | 1 |
-| `component.select.padding-y.lg` | dimension | → `semantic.space.control.padding-y.lg` | ⚠️ TODO | 0 |
-| `component.select.padding-y.md` | dimension | → `semantic.space.control.padding-y.md` | ⚠️ TODO | 0 |
-| `component.select.padding-y.sm` | dimension | → `semantic.space.control.padding-y.sm` | ⚠️ TODO | 0 |
-| `component.select.transition-duration` | duration | → `foundation.duration.fast` | ⚠️ TODO | 1 |
-| `component.select.transition-timing` | cubicBezier | → `foundation.ease.default` | ⚠️ TODO | 1 |
-
-### component.skeleton
-
-| Token | Tipo | Alias | Sentido | Usos |
-|---|---|---|---|---|
-| `component.skeleton.circle-border-radius` | dimension | → `foundation.radius.full` | ⚠️ TODO | 1 |
-| `component.skeleton.circle-size` | dimension | → `foundation.spacing.10` | ⚠️ TODO | 1 |
-| `component.skeleton.fill` | color | → `semantic.state.disabled.background` | ⚠️ TODO | 1 |
-| `component.skeleton.rect-border-radius` | dimension | → `semantic.radius.component` | ⚠️ TODO | 1 |
-| `component.skeleton.rect-height` | dimension | — | ⚠️ TODO | 1 |
-| `component.skeleton.text-border-radius` | dimension | → `foundation.radius.sm` | ⚠️ TODO | 1 |
-| `component.skeleton.text-height` | dimension | → `foundation.spacing.4` | ⚠️ TODO | 1 |
-
-### component.spinner
-
-| Token | Tipo | Alias | Sentido | Usos |
-|---|---|---|---|---|
-| `component.spinner.border-radius` | dimension | → `foundation.radius.full` | ⚠️ TODO | 1 |
-| `component.spinner.size.lg` | dimension | → `foundation.spacing.8` | ⚠️ TODO | 1 |
-| `component.spinner.size.md` | dimension | → `foundation.spacing.6` | ⚠️ TODO | 1 |
-| `component.spinner.size.sm` | dimension | → `foundation.spacing.4` | ⚠️ TODO | 1 |
-| `component.spinner.stroke-width.lg` | dimension | — | ⚠️ TODO | 1 |
-| `component.spinner.stroke-width.md` | dimension | → `foundation.spacing.0-5` | ⚠️ TODO | 1 |
-| `component.spinner.stroke-width.sm` | dimension | — | ⚠️ TODO | 1 |
-
-### component.tabs
-
-| Token | Tipo | Alias | Sentido | Usos |
-|---|---|---|---|---|
-| `component.tabs.active-border-width` | dimension | → `semantic.border.width.strong` | ⚠️ TODO | 1 |
-| `component.tabs.border-width` | dimension | → `semantic.border.width.default` | ⚠️ TODO | 1 |
-| `component.tabs.focus-border-radius` | dimension | → `foundation.radius.sm` | ⚠️ TODO | 1 |
-| `component.tabs.font-size` | dimension | → `semantic.typography.body.font-size.sm` | ⚠️ TODO | 1 |
-| `component.tabs.font-weight` | number | → `semantic.typography.body.font-weight.medium` | ⚠️ TODO | 1 |
-| `component.tabs.padding-x` | dimension | → `semantic.space.inset.lg` | ⚠️ TODO | 1 |
-| `component.tabs.padding-y` | dimension | → `semantic.space.gap.sm` | ⚠️ TODO | 1 |
-| `component.tabs.panel-padding-y` | dimension | → `semantic.space.inset.lg` | ⚠️ TODO | 1 |
-| `component.tabs.transition-duration` | duration | → `foundation.duration.fast` | ⚠️ TODO | 1 |
-| `component.tabs.transition-timing` | cubicBezier | → `foundation.ease.default` | ⚠️ TODO | 1 |
-
-### component.textarea
-
-| Token | Tipo | Alias | Sentido | Usos |
-|---|---|---|---|---|
-| `component.textarea.border-radius` | dimension | → `semantic.radius.component` | ⚠️ TODO | 1 |
-| `component.textarea.border-width` | dimension | → `semantic.border.width.default` | ⚠️ TODO | 1 |
-| `component.textarea.counter-font-size` | dimension | → `semantic.typography.body.font-size.xs` | ⚠️ TODO | 1 |
-| `component.textarea.counter-font-weight` | number | → `semantic.typography.body.font-weight.medium` | ⚠️ TODO | 1 |
-| `component.textarea.field-inner-padding-x` | dimension | → `semantic.space.gap.xs` | ⚠️ TODO | 1 |
-| `component.textarea.field-line-height` | number | → `semantic.typography.body.line-height.md` | ⚠️ TODO | 1 |
-| `component.textarea.font-size.lg` | dimension | → `semantic.typography.control.font-size.lg` | ⚠️ TODO | 1 |
-| `component.textarea.font-size.md` | dimension | → `semantic.typography.control.font-size.md` | ⚠️ TODO | 1 |
-| `component.textarea.font-size.sm` | dimension | → `semantic.typography.control.font-size.sm` | ⚠️ TODO | 1 |
-| `component.textarea.min-height.lg` | dimension | — | ⚠️ TODO | 1 |
-| `component.textarea.min-height.md` | dimension | → `foundation.spacing.20` | ⚠️ TODO | 1 |
-| `component.textarea.min-height.sm` | dimension | — | ⚠️ TODO | 1 |
-| `component.textarea.padding-x.lg` | dimension | → `semantic.space.control.padding-x.lg` | ⚠️ TODO | 1 |
-| `component.textarea.padding-x.md` | dimension | → `semantic.space.control.padding-x.md` | ⚠️ TODO | 1 |
-| `component.textarea.padding-x.sm` | dimension | → `semantic.space.control.padding-x.sm` | ⚠️ TODO | 1 |
-| `component.textarea.padding-y.lg` | dimension | → `semantic.space.control.padding-y.lg` | ⚠️ TODO | 1 |
-| `component.textarea.padding-y.md` | dimension | → `semantic.space.control.padding-y.md` | ⚠️ TODO | 1 |
-| `component.textarea.padding-y.sm` | dimension | → `semantic.space.control.padding-y.sm` | ⚠️ TODO | 1 |
-| `component.textarea.transition-duration` | duration | → `foundation.duration.fast` | ⚠️ TODO | 1 |
-| `component.textarea.transition-timing` | cubicBezier | → `foundation.ease.default` | ⚠️ TODO | 1 |
-
-### component.toggle
-
-| Token | Tipo | Alias | Sentido | Usos |
-|---|---|---|---|---|
-| `component.toggle.border-radius-full` | dimension | → `foundation.radius.full` | ⚠️ TODO | 1 |
-| `component.toggle.border-width` | dimension | → `semantic.border.width.default` | ⚠️ TODO | 1 |
-| `component.toggle.content-gap` | dimension | → `semantic.space.gap.xs` | ⚠️ TODO | 1 |
-| `component.toggle.description-font-size` | dimension | → `semantic.typography.body.font-size.sm` | ⚠️ TODO | 1 |
-| `component.toggle.description-font-weight` | number | → `semantic.typography.body.font-weight.regular` | ⚠️ TODO | 1 |
-| `component.toggle.description-line-height` | number | → `semantic.typography.body.line-height.md` | ⚠️ TODO | 1 |
-| `component.toggle.font-size` | dimension | → `foundation.typography.font.size.sm` | ⚠️ TODO | 1 |
-| `component.toggle.gap` | dimension | → `semantic.space.gap.sm` | ⚠️ TODO | 1 |
-| `component.toggle.helper-font-size` | dimension | → `semantic.typography.body.font-size.xs` | ⚠️ TODO | 1 |
-| `component.toggle.helper-line-height` | number | → `semantic.typography.body.line-height.md` | ⚠️ TODO | 1 |
-| `component.toggle.label-border-radius` | dimension | → `foundation.radius.sm` | ⚠️ TODO | 1 |
-| `component.toggle.label-font-size` | dimension | → `semantic.typography.body.font-size.sm` | ⚠️ TODO | 1 |
-| `component.toggle.label-font-weight` | number | → `semantic.typography.body.font-weight.medium` | ⚠️ TODO | 1 |
-| `component.toggle.label-line-height` | number | → `semantic.typography.body.line-height.sm` | ⚠️ TODO | 1 |
-| `component.toggle.label-padding-x` | dimension | → `semantic.space.gap.xs` | ⚠️ TODO | 1 |
-| `component.toggle.label-padding-y` | dimension | — | ⚠️ TODO | 1 |
-| `component.toggle.min-target-size` | dimension | → `semantic.size.control.min-target` | ⚠️ TODO | 1 |
-| `component.toggle.opacity-disabled` | number | → `foundation.opacity.50` | ⚠️ TODO | 1 |
-| `component.toggle.thumb-size.lg` | dimension | — | ⚠️ TODO | 1 |
-| `component.toggle.thumb-size.md` | dimension | → `foundation.spacing.3-5` | ⚠️ TODO | 1 |
-| `component.toggle.thumb-size.sm` | dimension | → `foundation.spacing.2-5` | ⚠️ TODO | 1 |
-| `component.toggle.track-height.lg` | dimension | → `foundation.spacing.6` | ⚠️ TODO | 1 |
-| `component.toggle.track-height.md` | dimension | → `foundation.spacing.5` | ⚠️ TODO | 1 |
-| `component.toggle.track-height.sm` | dimension | → `foundation.spacing.4` | ⚠️ TODO | 1 |
-| `component.toggle.track-width.lg` | dimension | → `foundation.spacing.11` | ⚠️ TODO | 1 |
-| `component.toggle.track-width.md` | dimension | → `foundation.spacing.9` | ⚠️ TODO | 1 |
-| `component.toggle.track-width.sm` | dimension | → `foundation.spacing.7` | ⚠️ TODO | 1 |
-| `component.toggle.transition-duration` | duration | → `foundation.duration.fast` | ⚠️ TODO | 1 |
-| `component.toggle.transition-timing` | cubicBezier | → `foundation.ease.default` | ⚠️ TODO | 1 |
-
-### component.tooltip
-
-| Token | Tipo | Alias | Sentido | Usos |
-|---|---|---|---|---|
-| `component.tooltip.border-radius` | dimension | → `foundation.radius.sm` | ⚠️ TODO | 1 |
-| `component.tooltip.font-size` | dimension | → `semantic.typography.body.font-size.xs` | ⚠️ TODO | 1 |
-| `component.tooltip.padding-x` | dimension | → `semantic.space.gap.sm` | ⚠️ TODO | 1 |
-| `component.tooltip.padding-y` | dimension | → `semantic.space.gap.xs` | ⚠️ TODO | 1 |
-| `component.tooltip.transition-duration` | duration | → `foundation.duration.fast` | ⚠️ TODO | 1 |
-| `component.tooltip.transition-timing` | cubicBezier | → `foundation.ease.default` | ⚠️ TODO | 1 |
-| `component.tooltip.z-index` | number | → `foundation.z.50` | ⚠️ TODO | 1 |
+_Nenhuma entrada._
 
 ---
 
 ## Detalhes por token
 
 Seção expandida com contexto, decisão e locais de uso.
-
-### `foundation.border.width.0`
-
-- **Camada**: foundation
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.border.width.1`
 
@@ -952,10 +624,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/base/reset.css` (1×)
-    - `css/tokens/generated/theme-dark.css` (2×)
-    - `css/tokens/generated/theme-light.css` (2×)
-  - Tokens que referenciam: `semantic.border.width.subtle`, `semantic.border.width.default`, `semantic.border.width.subtle`, `semantic.border.width.default`
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.border.width.default`, `semantic.border.width.default`
 
 ### `foundation.border.width.2`
 
@@ -967,9 +638,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-dark.css` (4×)
-    - `css/tokens/generated/theme-light.css` (4×)
-  - Tokens que referenciam: `semantic.border.width.strong`, `semantic.border.width.focus`, `semantic.focus.ring.width`, `semantic.focus.ring.offset`, `semantic.border.width.strong`, `semantic.border.width.focus`, `semantic.focus.ring.width`, `semantic.focus.ring.offset`
+    - `css/tokens/generated/theme-dark.css` (2×)
+    - `css/tokens/generated/theme-light.css` (2×)
+  - Tokens que referenciam: `semantic.border.width.strong`, `semantic.border.width.focus`, `semantic.border.width.strong`, `semantic.border.width.focus`
 
 ### `foundation.border.width.4`
 
@@ -982,36 +653,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
-### `foundation.brand.primary`
-
-- **Camada**: foundation
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.blue.600`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/tokens/generated/theme-dark.css` (1×)
-    - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.brand.default`, `semantic.brand.default`
-
-### `foundation.brand.secondary`
-
-- **Camada**: foundation
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.purple.600`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/tokens/generated/theme-dark.css` (1×)
-    - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.accent.default`, `semantic.accent.default`
-
 ### `foundation.color.amber.100`
 
 - **Camada**: foundation
@@ -1023,8 +664,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-light.css` (1×)
-    - `css/tokens/themes/theme-forest.css` (1×)
-  - Tokens que referenciam: `semantic.feedback.warning.subtle`
+  - Tokens que referenciam: `semantic.feedback.warning.background.subtle`
 
 ### `foundation.color.amber.200`
 
@@ -1035,8 +675,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/themes/theme-forest.css` (1×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.amber.300`
 
@@ -1047,8 +686,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/themes/theme-forest.css` (1×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.amber.400`
 
@@ -1061,8 +699,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (3×)
-    - `css/tokens/themes/theme-forest.css` (2×)
-  - Tokens que referenciam: `semantic.feedback.warning.default`, `semantic.feedback.warning.border`, `semantic.feedback.warning.content.default`
+  - Tokens que referenciam: `semantic.feedback.warning.border-default`, `semantic.feedback.warning.content-default`, `semantic.feedback.warning.background.default`
 
 ### `foundation.color.amber.50`
 
@@ -1073,9 +710,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.feedback.warning.background`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.amber.500`
 
@@ -1089,7 +724,7 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (2×)
-  - Tokens que referenciam: `semantic.feedback.warning.hover`, `semantic.feedback.warning.default`, `semantic.feedback.warning.border`
+  - Tokens que referenciam: `semantic.feedback.warning.background.hover`, `semantic.feedback.warning.border-default`, `semantic.feedback.warning.background.default`
 
 ### `foundation.color.amber.600`
 
@@ -1102,8 +737,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-light.css` (1×)
-    - `css/tokens/themes/theme-forest.css` (1×)
-  - Tokens que referenciam: `semantic.feedback.warning.hover`
+  - Tokens que referenciam: `semantic.feedback.warning.background.hover`
 
 ### `foundation.color.amber.700`
 
@@ -1115,10 +749,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-    - `css/tokens/themes/theme-forest.css` (2×)
-  - Tokens que referenciam: `semantic.feedback.warning.subtle`, `semantic.feedback.warning.content.default`
+  - Tokens que referenciam: `semantic.feedback.warning.content-default`
 
 ### `foundation.color.amber.800`
 
@@ -1129,8 +761,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/themes/theme-forest.css` (2×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.amber.900`
 
@@ -1143,7 +774,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (1×)
-  - Tokens que referenciam: `semantic.feedback.warning.background`
+  - Tokens que referenciam: `semantic.feedback.warning.background.subtle`
 
 ### `foundation.color.amber.950`
 
@@ -1165,10 +796,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/generated/theme-dark.css` (1×)
-    - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.brand.active`, `semantic.brand.subtle`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.blue.200`
 
@@ -1179,9 +807,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/generated/theme-dark.css` (1×)
-  - Tokens que referenciam: `semantic.brand.hover`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.blue.300`
 
@@ -1203,9 +829,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/generated/theme-dark.css` (1×)
-  - Tokens que referenciam: `semantic.brand.content.default`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.blue.50`
 
@@ -1238,7 +862,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `foundation.brand.primary`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.blue.700`
 
@@ -1249,9 +873,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.brand.content.default`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.blue.800`
 
@@ -1262,9 +884,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.brand.hover`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.blue.900`
 
@@ -1275,12 +895,145 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/generated/theme-dark.css` (1×)
-    - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.brand.subtle`, `semantic.brand.active`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.blue.950`
+
+- **Camada**: foundation
+- **Tipo**: `color`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `foundation.color.brand.100`
+
+- **Camada**: foundation
+- **Tipo**: `color`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `foundation.color.brand.200`
+
+- **Camada**: foundation
+- **Tipo**: `color`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (1×)
+  - Tokens que referenciam: `semantic.link.content-active`
+
+### `foundation.color.brand.300`
+
+- **Camada**: foundation
+- **Tipo**: `color`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (1×)
+  - Tokens que referenciam: `semantic.link.content-hover`
+
+### `foundation.color.brand.400`
+
+- **Camada**: foundation
+- **Tipo**: `color`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (5×)
+  - Tokens que referenciam: `semantic.primary.background.default`, `semantic.primary.background.active`, `semantic.toned.content-default`, `semantic.link.content-default`, `semantic.border.brand`
+
+### `foundation.color.brand.50`
+
+- **Camada**: foundation
+- **Tipo**: `color`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `foundation.color.brand.500`
+
+- **Camada**: foundation
+- **Tipo**: `color`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (2×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.primary.background.hover`, `semantic.border.focus`, `semantic.border.focus`
+
+### `foundation.color.brand.600`
+
+- **Camada**: foundation
+- **Tipo**: `color`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/tokens/generated/theme-light.css` (2×)
+  - Tokens que referenciam: `semantic.primary.background.default`, `semantic.border.brand`
+
+### `foundation.color.brand.700`
+
+- **Camada**: foundation
+- **Tipo**: `color`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/tokens/generated/theme-light.css` (3×)
+  - Tokens que referenciam: `semantic.primary.background.hover`, `semantic.toned.content-default`, `semantic.link.content-default`
+
+### `foundation.color.brand.800`
+
+- **Camada**: foundation
+- **Tipo**: `color`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/tokens/generated/theme-light.css` (3×)
+  - Tokens que referenciam: `semantic.primary.background.active`, `semantic.link.content-hover`, `semantic.link.content-active`
+
+### `foundation.color.brand.900`
+
+- **Camada**: foundation
+- **Tipo**: `color`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `foundation.color.brand.950`
 
 - **Camada**: foundation
 - **Tipo**: `color`
@@ -1300,8 +1053,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/themes/theme-ocean.css` (1×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.cyan.200`
 
@@ -1312,8 +1064,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/themes/theme-ocean.css` (1×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.cyan.300`
 
@@ -1324,8 +1075,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/themes/theme-ocean.css` (2×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.cyan.400`
 
@@ -1336,8 +1086,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/themes/theme-ocean.css` (3×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.cyan.50`
 
@@ -1370,8 +1119,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/themes/theme-ocean.css` (2×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.cyan.700`
 
@@ -1382,8 +1130,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/themes/theme-ocean.css` (3×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.cyan.800`
 
@@ -1394,8 +1141,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/themes/theme-ocean.css` (1×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.cyan.900`
 
@@ -1406,8 +1152,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/themes/theme-ocean.css` (1×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.cyan.950`
 
@@ -1429,9 +1174,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/generated/theme-dark.css` (1×)
-  - Tokens que referenciam: `semantic.brand.disabled`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.disabled.brand-light`
 
@@ -1443,8 +1186,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
+    - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.brand.disabled`
+  - Tokens que referenciam: `semantic.primary.background.disabled`, `semantic.primary.background.disabled`
 
 ### `foundation.color.disabled.error-dark`
 
@@ -1457,7 +1201,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (1×)
-  - Tokens que referenciam: `semantic.feedback.error.disabled`
+  - Tokens que referenciam: `semantic.feedback.error.background.disabled`
 
 ### `foundation.color.disabled.error-light`
 
@@ -1470,7 +1214,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.feedback.error.disabled`
+  - Tokens que referenciam: `semantic.feedback.error.background.disabled`
 
 ### `foundation.color.disabled.success-dark`
 
@@ -1483,7 +1227,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (1×)
-  - Tokens que referenciam: `semantic.feedback.success.disabled`
+  - Tokens que referenciam: `semantic.feedback.success.background.disabled`
 
 ### `foundation.color.disabled.success-light`
 
@@ -1496,7 +1240,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.feedback.success.disabled`
+  - Tokens que referenciam: `semantic.feedback.success.background.disabled`
 
 ### `foundation.color.emerald.100`
 
@@ -1507,8 +1251,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/themes/theme-forest.css` (1×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.emerald.200`
 
@@ -1519,8 +1262,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/themes/theme-forest.css` (1×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.emerald.300`
 
@@ -1531,8 +1273,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/themes/theme-forest.css` (2×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.emerald.400`
 
@@ -1543,8 +1284,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/themes/theme-forest.css` (3×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.emerald.50`
 
@@ -1577,8 +1317,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/themes/theme-forest.css` (2×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.emerald.700`
 
@@ -1589,8 +1328,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/themes/theme-forest.css` (3×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.emerald.800`
 
@@ -1601,8 +1339,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/themes/theme-forest.css` (1×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.emerald.900`
 
@@ -1613,8 +1350,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/themes/theme-forest.css` (1×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.emerald.950`
 
@@ -1638,7 +1374,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.feedback.success.subtle`
+  - Tokens que referenciam: `semantic.feedback.success.background.subtle`
 
 ### `foundation.color.green.200`
 
@@ -1673,7 +1409,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (3×)
-  - Tokens que referenciam: `semantic.feedback.success.default`, `semantic.feedback.success.border`, `semantic.feedback.success.content.default`
+  - Tokens que referenciam: `semantic.feedback.success.border-default`, `semantic.feedback.success.content-default`, `semantic.feedback.success.background.default`
 
 ### `foundation.color.green.50`
 
@@ -1684,9 +1420,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.feedback.success.background`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.green.500`
 
@@ -1700,7 +1434,7 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/tokens/generated/theme-dark.css` (2×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.feedback.success.hover`, `semantic.feedback.success.active`, `semantic.feedback.success.border`
+  - Tokens que referenciam: `semantic.feedback.success.background.hover`, `semantic.feedback.success.background.active`, `semantic.feedback.success.border-default`
 
 ### `foundation.color.green.600`
 
@@ -1713,7 +1447,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.feedback.success.default`
+  - Tokens que referenciam: `semantic.feedback.success.background.default`
 
 ### `foundation.color.green.700`
 
@@ -1725,9 +1459,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.feedback.success.subtle`, `semantic.feedback.success.content.default`
+  - Tokens que referenciam: `semantic.feedback.success.content-default`
 
 ### `foundation.color.green.800`
 
@@ -1740,7 +1473,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.feedback.success.hover`
+  - Tokens que referenciam: `semantic.feedback.success.background.hover`
 
 ### `foundation.color.green.900`
 
@@ -1754,7 +1487,7 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.feedback.success.background`, `semantic.feedback.success.active`
+  - Tokens que referenciam: `semantic.feedback.success.background.subtle`, `semantic.feedback.success.background.active`
 
 ### `foundation.color.green.950`
 
@@ -1776,8 +1509,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/themes/theme-ocean.css` (1×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.indigo.200`
 
@@ -1788,8 +1520,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/themes/theme-ocean.css` (1×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.indigo.300`
 
@@ -1800,8 +1531,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/themes/theme-ocean.css` (1×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.indigo.400`
 
@@ -1812,8 +1542,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/themes/theme-ocean.css` (2×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.indigo.50`
 
@@ -1846,8 +1575,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/themes/theme-ocean.css` (1×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.indigo.700`
 
@@ -1858,8 +1586,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/themes/theme-ocean.css` (2×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.indigo.800`
 
@@ -1870,8 +1597,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/themes/theme-ocean.css` (2×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.indigo.900`
 
@@ -1904,8 +1630,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/base/reset.css` (1×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.neutral.200`
 
@@ -1917,8 +1642,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-light.css` (2×)
-  - Tokens que referenciam: `semantic.background.subtle`, `semantic.state.disabled.background`
+    - `css/tokens/generated/theme-light.css` (4×)
+  - Tokens que referenciam: `semantic.outline.border-disabled`, `semantic.background.subtle`, `semantic.background.disabled`, `semantic.border.subtle`
 
 ### `foundation.color.neutral.300`
 
@@ -1930,8 +1655,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-light.css` (3×)
-  - Tokens que referenciam: `semantic.border.default`, `semantic.border.control.disabled`, `semantic.border.subtle`
+    - `css/tokens/generated/theme-dark.css` (2×)
+    - `css/tokens/generated/theme-light.css` (2×)
+  - Tokens que referenciam: `semantic.outline.content-default`, `semantic.outline.border-hover`, `semantic.border.default`, `semantic.border.control-disabled`
 
 ### `foundation.color.neutral.400`
 
@@ -1944,8 +1670,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (3×)
-    - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.content.secondary`, `semantic.content.tertiary`, `semantic.border.control.hover`, `semantic.content.disabled`
+    - `css/tokens/generated/theme-light.css` (5×)
+  - Tokens que referenciam: `semantic.content.secondary`, `semantic.content.tertiary`, `semantic.border.control-hover`, `semantic.toned.content-disabled`, `semantic.outline.content-disabled`, `semantic.ghost.content-disabled`, `semantic.link.content-disabled`, `semantic.content.disabled`
 
 ### `foundation.color.neutral.50`
 
@@ -1957,11 +1683,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-dark.css` (2×)
+    - `css/tokens/generated/theme-dark.css` (3×)
     - `css/tokens/generated/theme-light.css` (10×)
-    - `css/tokens/themes/theme-forest.css` (2×)
-    - `css/tokens/themes/theme-ocean.css` (2×)
-  - Tokens que referenciam: `semantic.background.inverse`, `semantic.content.default`, `semantic.background.default`, `semantic.surface.default`, `semantic.surface.raised`, `semantic.surface.overlay`, `semantic.surface.elevated`, `semantic.content.inverse`, `semantic.brand.content.contrast`, `semantic.accent.content.contrast`, `semantic.feedback.success.content.contrast`, `semantic.feedback.error.content.contrast`
+  - Tokens que referenciam: `semantic.ghost.content-default`, `semantic.background.inverse`, `semantic.content.default`, `semantic.primary.content-default`, `semantic.feedback.success.content-contrast`, `semantic.feedback.error.content-contrast`, `semantic.surface.default`, `semantic.surface.raised`, `semantic.surface.overlay`, `semantic.surface.elevated`, `semantic.background.default`, `semantic.content.inverse`, `semantic.border.inverse`
 
 ### `foundation.color.neutral.500`
 
@@ -1973,9 +1697,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-dark.css` (2×)
-    - `css/tokens/generated/theme-light.css` (2×)
-  - Tokens que referenciam: `semantic.border.control.default`, `semantic.border.strong`, `semantic.content.tertiary`, `semantic.border.control.default`
+    - `css/tokens/generated/theme-dark.css` (3×)
+    - `css/tokens/generated/theme-light.css` (3×)
+  - Tokens que referenciam: `semantic.outline.border-default`, `semantic.border.strong`, `semantic.border.control-default`, `semantic.outline.border-default`, `semantic.content.tertiary`, `semantic.border.control-default`
 
 ### `foundation.color.neutral.600`
 
@@ -1987,9 +1711,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-dark.css` (2×)
+    - `css/tokens/generated/theme-dark.css` (6×)
     - `css/tokens/generated/theme-light.css` (3×)
-  - Tokens que referenciam: `semantic.surface.elevated`, `semantic.content.disabled`, `semantic.content.secondary`, `semantic.border.control.hover`, `semantic.border.strong`
+  - Tokens que referenciam: `semantic.toned.content-disabled`, `semantic.outline.content-disabled`, `semantic.ghost.content-disabled`, `semantic.link.content-disabled`, `semantic.surface.elevated`, `semantic.content.disabled`, `semantic.content.secondary`, `semantic.border.strong`, `semantic.border.control-hover`
 
 ### `foundation.color.neutral.700`
 
@@ -2002,7 +1726,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (3×)
-  - Tokens que referenciam: `semantic.surface.overlay`, `semantic.border.default`, `semantic.border.control.disabled`
+    - `css/tokens/generated/theme-light.css` (2×)
+  - Tokens que referenciam: `semantic.surface.overlay`, `semantic.border.default`, `semantic.border.control-disabled`, `semantic.outline.content-default`, `semantic.outline.border-hover`
 
 ### `foundation.color.neutral.800`
 
@@ -2014,8 +1739,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-dark.css` (3×)
-  - Tokens que referenciam: `semantic.background.subtle`, `semantic.surface.raised`, `semantic.border.subtle`
+    - `css/tokens/generated/theme-dark.css` (5×)
+  - Tokens que referenciam: `semantic.outline.border-disabled`, `semantic.surface.raised`, `semantic.background.subtle`, `semantic.background.disabled`, `semantic.border.subtle`
 
 ### `foundation.color.neutral.900`
 
@@ -2027,12 +1752,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/base/reset.css` (1×)
-    - `css/tokens/generated/theme-dark.css` (9×)
-    - `css/tokens/generated/theme-light.css` (4×)
-    - `css/tokens/themes/theme-forest.css` (2×)
-    - `css/tokens/themes/theme-ocean.css` (2×)
-  - Tokens que referenciam: `semantic.surface.default`, `semantic.content.inverse`, `semantic.brand.content.contrast`, `semantic.accent.content.contrast`, `semantic.feedback.success.content.contrast`, `semantic.feedback.warning.content.contrast`, `semantic.feedback.error.content.contrast`, `semantic.feedback.info.content.contrast`, `semantic.state.disabled.background`, `semantic.background.inverse`, `semantic.content.default`, `semantic.feedback.warning.content.contrast`, `semantic.feedback.info.content.contrast`
+    - `css/tokens/generated/theme-dark.css` (8×)
+    - `css/tokens/generated/theme-light.css` (5×)
+  - Tokens que referenciam: `semantic.primary.content-default`, `semantic.feedback.success.content-contrast`, `semantic.feedback.warning.content-contrast`, `semantic.feedback.error.content-contrast`, `semantic.feedback.info.content-contrast`, `semantic.surface.default`, `semantic.content.inverse`, `semantic.border.inverse`, `semantic.ghost.content-default`, `semantic.feedback.warning.content-contrast`, `semantic.feedback.info.content-contrast`, `semantic.background.inverse`, `semantic.content.default`
 
 ### `foundation.color.neutral.950`
 
@@ -2056,7 +1778,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `semantic.overlay.default`, `semantic.state.pressed`
+  - Tokens que referenciam: `semantic.outline.background.hover`, `semantic.outline.background.active`, `semantic.ghost.background.hover`, `semantic.ghost.background.active`, `semantic.outline.background.active`, `semantic.ghost.background.active`, `semantic.overlay.default`
 
 ### `foundation.color.overlay.black.20`
 
@@ -2089,7 +1811,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `semantic.overlay.subtle`, `semantic.state.hover`
+  - Tokens que referenciam: `semantic.outline.background.hover`, `semantic.ghost.background.hover`, `semantic.overlay.subtle`
 
 ### `foundation.color.overlay.black.60`
 
@@ -2122,7 +1844,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `semantic.brand.toned.default`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.overlay.blue-400.25`
 
@@ -2133,7 +1855,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `semantic.brand.toned.hover`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.overlay.blue-400.32`
 
@@ -2144,7 +1866,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `semantic.brand.toned.active`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.overlay.blue-600.12`
 
@@ -2155,7 +1877,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `semantic.brand.toned.default`
+  - Tokens que referenciam: `semantic.toned.background.default`, `semantic.toned.background.default`
 
 ### `foundation.color.overlay.blue-600.20`
 
@@ -2166,7 +1888,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `semantic.brand.toned.hover`
+  - Tokens que referenciam: `semantic.toned.background.hover`, `semantic.toned.background.hover`
 
 ### `foundation.color.overlay.blue-600.28`
 
@@ -2177,7 +1899,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `semantic.brand.toned.active`
+  - Tokens que referenciam: `semantic.toned.background.active`, `semantic.toned.background.active`
 
 ### `foundation.color.overlay.white.10`
 
@@ -2188,7 +1910,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `semantic.overlay.default`, `semantic.state.pressed`
+  - Tokens que referenciam: `semantic.overlay.default`
 
 ### `foundation.color.overlay.white.20`
 
@@ -2221,7 +1943,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `semantic.overlay.subtle`, `semantic.state.hover`
+  - Tokens que referenciam: `semantic.overlay.subtle`
 
 ### `foundation.color.overlay.white.60`
 
@@ -2232,7 +1954,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `semantic.brand.content.contrast-disabled`, `semantic.feedback.success.content.contrast-disabled`, `semantic.feedback.error.content.contrast-disabled`
+  - Tokens que referenciam: `semantic.feedback.success.content-disabled`, `semantic.feedback.error.content-disabled`
 
 ### `foundation.color.overlay.white.80`
 
@@ -2243,7 +1965,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `semantic.brand.content.contrast-disabled`, `semantic.feedback.success.content.contrast-disabled`, `semantic.feedback.error.content.contrast-disabled`
+  - Tokens que referenciam: `semantic.primary.content-disabled`, `semantic.primary.content-disabled`, `semantic.feedback.success.content-disabled`, `semantic.feedback.error.content-disabled`
 
 ### `foundation.color.purple.100`
 
@@ -2254,9 +1976,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.accent.subtle`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.purple.200`
 
@@ -2267,9 +1987,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/generated/theme-dark.css` (1×)
-  - Tokens que referenciam: `semantic.accent.active`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.purple.300`
 
@@ -2280,9 +1998,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/generated/theme-dark.css` (1×)
-  - Tokens que referenciam: `semantic.accent.hover`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.purple.400`
 
@@ -2293,9 +2009,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/generated/theme-dark.css` (1×)
-  - Tokens que referenciam: `semantic.accent.content.default`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.purple.50`
 
@@ -2328,7 +2042,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `foundation.brand.secondary`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.purple.700`
 
@@ -2339,9 +2053,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/generated/theme-light.css` (2×)
-  - Tokens que referenciam: `semantic.accent.hover`, `semantic.accent.content.default`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.purple.800`
 
@@ -2352,10 +2064,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/generated/theme-dark.css` (1×)
-    - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.accent.subtle`, `semantic.accent.active`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.purple.900`
 
@@ -2390,7 +2099,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.feedback.error.subtle`
+  - Tokens que referenciam: `semantic.feedback.error.background.subtle`
 
 ### `foundation.color.red.200`
 
@@ -2425,7 +2134,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (5×)
-  - Tokens que referenciam: `semantic.feedback.error.default`, `semantic.feedback.error.active`, `semantic.feedback.error.border`, `semantic.feedback.error.content.default`, `semantic.border.focus-error`
+  - Tokens que referenciam: `semantic.feedback.error.border-default`, `semantic.feedback.error.content-default`, `semantic.feedback.error.background.default`, `semantic.feedback.error.background.active`, `semantic.border.error`
 
 ### `foundation.color.red.50`
 
@@ -2436,9 +2145,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.feedback.error.background`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.red.500`
 
@@ -2450,9 +2157,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-dark.css` (2×)
     - `css/tokens/generated/theme-light.css` (2×)
-  - Tokens que referenciam: `semantic.feedback.error.hover`, `semantic.feedback.error.border`, `semantic.border.focus-error`
+  - Tokens que referenciam: `semantic.feedback.error.background.hover`, `semantic.border.focus-error`, `semantic.feedback.error.border-default`, `semantic.border.focus-error`
 
 ### `foundation.color.red.600`
 
@@ -2464,8 +2171,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.feedback.error.default`
+    - `css/tokens/generated/theme-light.css` (2×)
+  - Tokens que referenciam: `semantic.feedback.error.background.default`, `semantic.border.error`
 
 ### `foundation.color.red.700`
 
@@ -2477,9 +2184,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.feedback.error.subtle`, `semantic.feedback.error.content.default`
+  - Tokens que referenciam: `semantic.feedback.error.content-default`
 
 ### `foundation.color.red.800`
 
@@ -2492,7 +2198,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.feedback.error.hover`
+  - Tokens que referenciam: `semantic.feedback.error.background.hover`
 
 ### `foundation.color.red.900`
 
@@ -2506,7 +2212,7 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.feedback.error.background`, `semantic.feedback.error.active`
+  - Tokens que referenciam: `semantic.feedback.error.background.subtle`, `semantic.feedback.error.background.active`
 
 ### `foundation.color.red.950`
 
@@ -2530,7 +2236,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.feedback.info.subtle`
+  - Tokens que referenciam: `semantic.feedback.info.background.subtle`
 
 ### `foundation.color.sky.200`
 
@@ -2565,7 +2271,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (3×)
-  - Tokens que referenciam: `semantic.feedback.info.default`, `semantic.feedback.info.border`, `semantic.feedback.info.content.default`
+  - Tokens que referenciam: `semantic.feedback.info.border-default`, `semantic.feedback.info.content-default`, `semantic.feedback.info.background.default`
 
 ### `foundation.color.sky.50`
 
@@ -2576,9 +2282,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.feedback.info.background`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.sky.500`
 
@@ -2592,7 +2296,7 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (2×)
-  - Tokens que referenciam: `semantic.feedback.info.hover`, `semantic.feedback.info.default`, `semantic.feedback.info.border`
+  - Tokens que referenciam: `semantic.feedback.info.background.hover`, `semantic.feedback.info.border-default`, `semantic.feedback.info.background.default`
 
 ### `foundation.color.sky.600`
 
@@ -2605,7 +2309,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.feedback.info.hover`
+  - Tokens que referenciam: `semantic.feedback.info.background.hover`
 
 ### `foundation.color.sky.700`
 
@@ -2617,9 +2321,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.feedback.info.subtle`, `semantic.feedback.info.content.default`
+  - Tokens que referenciam: `semantic.feedback.info.content-default`
 
 ### `foundation.color.sky.800`
 
@@ -2643,7 +2346,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (1×)
-  - Tokens que referenciam: `semantic.feedback.info.background`
+  - Tokens que referenciam: `semantic.feedback.info.background.subtle`
 
 ### `foundation.color.sky.950`
 
@@ -2655,6 +2358,371 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
+
+### `foundation.dimension.10`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.space.control.padding.10`, `semantic.space.control.padding.10`
+
+### `foundation.dimension.1024`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.size.layout.xl`, `semantic.size.layout.xl`
+
+### `foundation.dimension.12`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/base/reset.css` (1×)
+    - `css/components/skeleton.css` (1×)
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.space.md`, `semantic.space.md`
+
+### `foundation.dimension.128`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.size.5xl`, `semantic.size.5xl`
+
+### `foundation.dimension.1280`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.size.layout.2xl`, `semantic.size.layout.2xl`
+
+### `foundation.dimension.14`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `foundation.dimension.16`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/base/reset.css` (3×)
+    - `css/tokens/generated/theme-dark.css` (2×)
+    - `css/tokens/generated/theme-light.css` (2×)
+  - Tokens que referenciam: `semantic.space.lg`, `semantic.size.xs`, `semantic.space.lg`, `semantic.size.xs`
+
+### `foundation.dimension.2`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/base/reset.css` (1×)
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.space.2xs`, `semantic.space.2xs`
+
+### `foundation.dimension.20`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (2×)
+    - `css/tokens/generated/theme-light.css` (2×)
+  - Tokens que referenciam: `semantic.space.xl`, `semantic.size.sm`, `semantic.space.xl`, `semantic.size.sm`
+
+### `foundation.dimension.24`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (2×)
+    - `css/tokens/generated/theme-light.css` (2×)
+  - Tokens que referenciam: `semantic.space.2xl`, `semantic.size.md`, `semantic.space.2xl`, `semantic.size.md`
+
+### `foundation.dimension.28`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `foundation.dimension.32`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (2×)
+    - `css/tokens/generated/theme-light.css` (2×)
+  - Tokens que referenciam: `semantic.space.section.sm`, `semantic.size.lg`, `semantic.space.section.sm`, `semantic.size.lg`
+
+### `foundation.dimension.320`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.size.layout.xs`, `semantic.size.layout.xs`
+
+### `foundation.dimension.36`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `foundation.dimension.4`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/base/reset.css` (1×)
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.space.xs`, `semantic.space.xs`
+
+### `foundation.dimension.40`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.size.xl`, `semantic.size.xl`
+
+### `foundation.dimension.44`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `foundation.dimension.48`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (2×)
+    - `css/tokens/generated/theme-light.css` (2×)
+  - Tokens que referenciam: `semantic.space.section.md`, `semantic.size.2xl`, `semantic.space.section.md`, `semantic.size.2xl`
+
+### `foundation.dimension.480`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.size.layout.sm`, `semantic.size.layout.sm`
+
+### `foundation.dimension.56`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `foundation.dimension.6`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `foundation.dimension.64`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (2×)
+    - `css/tokens/generated/theme-light.css` (2×)
+  - Tokens que referenciam: `semantic.space.section.lg`, `semantic.size.3xl`, `semantic.space.section.lg`, `semantic.size.3xl`
+
+### `foundation.dimension.640`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.size.layout.md`, `semantic.size.layout.md`
+
+### `foundation.dimension.8`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.space.sm`, `semantic.space.sm`
+
+### `foundation.dimension.80`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.space.section.xl`, `semantic.space.section.xl`
+
+### `foundation.dimension.800`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.size.layout.lg`, `semantic.size.layout.lg`
+
+### `foundation.dimension.96`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.size.4xl`, `semantic.size.4xl`
 
 ### `foundation.duration.fast`
 
@@ -2745,17 +2813,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
-### `foundation.opacity.0`
-
-- **Camada**: foundation
-- **Tipo**: `number`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
 ### `foundation.opacity.10`
 
 - **Camada**: foundation
@@ -2825,45 +2882,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
-### `foundation.radius.2xl`
-
-- **Camada**: foundation
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `foundation.radius.full`
-
-- **Camada**: foundation
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/tokens/generated/component.css` (6×)
-  - Tokens que referenciam: `component.avatar.border-radius`, `component.badge.border-radius`, `component.radio.border-radius-full`, `component.skeleton.circle-border-radius`, `component.spinner.border-radius`, `component.toggle.border-radius-full`
-
-### `foundation.radius.lg`
-
-- **Camada**: foundation
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/base/reset.css` (1×)
-    - `css/tokens/generated/component.css` (1×)
-  - Tokens que referenciam: `component.card.border-radius`
-
-### `foundation.radius.md`
+### `foundation.radius.12`
 
 - **Camada**: foundation
 - **Tipo**: `dimension`
@@ -2875,9 +2894,23 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.radius.component`, `semantic.radius.component`
+  - Tokens que referenciam: `semantic.radius.lg`, `semantic.radius.lg`
 
-### `foundation.radius.none`
+### `foundation.radius.16`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.radius.xl`, `semantic.radius.xl`
+
+### `foundation.radius.2`
 
 - **Camada**: foundation
 - **Tipo**: `dimension`
@@ -2888,34 +2921,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
-### `foundation.radius.sm`
-
-- **Camada**: foundation
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/base/reset.css` (1×)
-    - `css/tokens/generated/component.css` (8×)
-  - Tokens que referenciam: `component.alert.focus-border-radius`, `component.breadcrumb.focus-border-radius`, `component.checkbox.border-radius`, `component.radio.label-border-radius`, `component.skeleton.text-border-radius`, `component.tabs.focus-border-radius`, `component.toggle.label-border-radius`, `component.tooltip.border-radius`
-
-### `foundation.radius.xl`
-
-- **Camada**: foundation
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/tokens/generated/component.css` (1×)
-  - Tokens que referenciam: `component.modal.border-radius`
-
-### `foundation.radius.xs`
+### `foundation.radius.24`
 
 - **Camada**: foundation
 - **Tipo**: `dimension`
@@ -2925,6 +2931,48 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
+
+### `foundation.radius.4`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.radius.sm`, `semantic.radius.sm`
+
+### `foundation.radius.8`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.radius.md`, `semantic.radius.md`
+
+### `foundation.radius.999`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.radius.full`, `semantic.radius.full`
 
 ### `foundation.shadow.2xl`
 
@@ -2983,9 +3031,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (1×)
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
     - `css/utilities/elevation.css` (1×)
-  - Tokens que referenciam: `component.card.shadow-elevated`
+  - Tokens que referenciam: `semantic.shadow.card`, `semantic.shadow.card`
 
 ### `foundation.shadow.xl`
 
@@ -2997,9 +3046,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (1×)
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
     - `css/utilities/elevation.css` (1×)
-  - Tokens que referenciam: `component.modal.shadow`
+  - Tokens que referenciam: `semantic.shadow.modal`, `semantic.shadow.modal`
 
 ### `foundation.shadow.xs`
 
@@ -3011,309 +3061,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
-
-### `foundation.spacing.0`
-
-- **Camada**: foundation
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/base/reset.css` (1×)
-    - `css/tokens/generated/component.css` (1×)
-    - `css/tokens/generated/theme-dark.css` (2×)
-    - `css/tokens/generated/theme-light.css` (2×)
-
-### `foundation.spacing.0-5`
-
-- **Camada**: foundation
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/base/reset.css` (1×)
-    - `css/tokens/generated/component.css` (1×)
-    - `css/tokens/generated/theme-dark.css` (2×)
-    - `css/tokens/generated/theme-light.css` (2×)
-  - Tokens que referenciam: `component.spinner.stroke-width.md`, `semantic.space.inset.2xs`, `semantic.space.gap.2xs`, `semantic.space.inset.2xs`, `semantic.space.gap.2xs`
-
-### `foundation.spacing.1`
-
-- **Camada**: foundation
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/base/reset.css` (1×)
-    - `css/tokens/generated/component.css` (3×)
-    - `css/tokens/generated/theme-dark.css` (3×)
-    - `css/tokens/generated/theme-light.css` (3×)
-  - Tokens que referenciam: `component.checkbox.check-width.sm`, `semantic.space.inset.xs`, `semantic.space.gap.xs`, `semantic.space.component.xs`, `semantic.space.inset.xs`, `semantic.space.gap.xs`, `semantic.space.component.xs`
-
-### `foundation.spacing.1-5`
-
-- **Camada**: foundation
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/tokens/generated/component.css` (2×)
-  - Tokens que referenciam: `component.checkbox.check-width.lg`, `component.radio.dot-size.sm`
-
-### `foundation.spacing.10`
-
-- **Camada**: foundation
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/tokens/generated/component.css` (2×)
-    - `css/tokens/generated/theme-dark.css` (1×)
-    - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `component.avatar.size.md`, `component.skeleton.circle-size`, `semantic.size.control.md`, `semantic.size.control.md`
-
-### `foundation.spacing.11`
-
-- **Camada**: foundation
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/tokens/generated/component.css` (1×)
-    - `css/tokens/generated/theme-dark.css` (1×)
-    - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `component.toggle.track-width.lg`, `semantic.size.control.min-target`, `semantic.size.control.min-target`
-
-### `foundation.spacing.12`
-
-- **Camada**: foundation
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/tokens/generated/theme-dark.css` (2×)
-    - `css/tokens/generated/theme-light.css` (2×)
-  - Tokens que referenciam: `semantic.space.section.md`, `semantic.size.control.lg`, `semantic.space.section.md`, `semantic.size.control.lg`
-
-### `foundation.spacing.14`
-
-- **Camada**: foundation
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/tokens/generated/component.css` (1×)
-  - Tokens que referenciam: `component.avatar.size.lg`
-
-### `foundation.spacing.16`
-
-- **Camada**: foundation
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/tokens/generated/theme-dark.css` (1×)
-    - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.space.section.lg`, `semantic.space.section.lg`
-
-### `foundation.spacing.2`
-
-- **Camada**: foundation
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/tokens/generated/component.css` (6×)
-    - `css/tokens/generated/theme-dark.css` (5×)
-    - `css/tokens/generated/theme-light.css` (5×)
-  - Tokens que referenciam: `component.checkbox.check-height.sm`, `component.radio.dot-size.md`, `component.select.arrow-offset.sm`, `semantic.space.inset.sm`, `semantic.space.gap.sm`, `semantic.space.component.sm`, `semantic.space.control.padding-y.sm`, `semantic.space.inset.sm`, `semantic.space.gap.sm`, `semantic.space.component.sm`, `semantic.space.control.padding-y.sm`
-
-### `foundation.spacing.2-5`
-
-- **Camada**: foundation
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/tokens/generated/component.css` (3×)
-    - `css/tokens/generated/theme-dark.css` (1×)
-    - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `component.checkbox.check-height.md`, `component.radio.dot-size.lg`, `component.toggle.thumb-size.sm`, `semantic.space.control.padding-y.md`, `semantic.space.control.padding-y.md`
-
-### `foundation.spacing.20`
-
-- **Camada**: foundation
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/tokens/generated/component.css` (1×)
-    - `css/tokens/generated/theme-dark.css` (1×)
-    - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `component.textarea.min-height.md`, `semantic.space.section.xl`, `semantic.space.section.xl`
-
-### `foundation.spacing.24`
-
-- **Camada**: foundation
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `foundation.spacing.3`
-
-- **Camada**: foundation
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/base/reset.css` (1×)
-    - `css/tokens/generated/component.css` (3×)
-    - `css/tokens/generated/theme-dark.css` (5×)
-    - `css/tokens/generated/theme-light.css` (5×)
-  - Tokens que referenciam: `component.checkbox.check-height.lg`, `component.select.arrow-offset.md`, `semantic.space.inset.md`, `semantic.space.gap.md`, `semantic.space.component.md`, `semantic.space.control.padding-x.sm`, `semantic.space.control.padding-y.lg`, `semantic.space.inset.md`, `semantic.space.gap.md`, `semantic.space.component.md`, `semantic.space.control.padding-x.sm`, `semantic.space.control.padding-y.lg`
-
-### `foundation.spacing.3-5`
-
-- **Camada**: foundation
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/tokens/generated/component.css` (1×)
-  - Tokens que referenciam: `component.toggle.thumb-size.md`
-
-### `foundation.spacing.4`
-
-- **Camada**: foundation
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/base/reset.css` (3×)
-    - `css/tokens/generated/component.css` (8×)
-    - `css/tokens/generated/theme-dark.css` (6×)
-    - `css/tokens/generated/theme-light.css` (6×)
-  - Tokens que referenciam: `component.avatar.icon-size.sm`, `component.checkbox.control-size.sm`, `component.radio.control-size.sm`, `component.select.arrow-size`, `component.select.arrow-offset.lg`, `component.skeleton.text-height`, `component.spinner.size.sm`, `component.toggle.track-height.sm`, `semantic.space.inset.lg`, `semantic.space.gap.lg`, `semantic.space.component.lg`, `semantic.space.control.padding-x.md`, `semantic.size.control.icon.sm`, `semantic.typography.control.line-height.sm`, `semantic.space.inset.lg`, `semantic.space.gap.lg`, `semantic.space.component.lg`, `semantic.space.control.padding-x.md`, `semantic.size.control.icon.sm`, `semantic.typography.control.line-height.sm`
-
-### `foundation.spacing.5`
-
-- **Camada**: foundation
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/tokens/generated/component.css` (4×)
-    - `css/tokens/generated/theme-dark.css` (4×)
-    - `css/tokens/generated/theme-light.css` (4×)
-  - Tokens que referenciam: `component.avatar.icon-size.md`, `component.checkbox.control-size.md`, `component.radio.control-size.md`, `component.toggle.track-height.md`, `semantic.space.component.xl`, `semantic.space.control.padding-x.lg`, `semantic.size.control.icon.md`, `semantic.typography.control.line-height.md`, `semantic.space.component.xl`, `semantic.space.control.padding-x.lg`, `semantic.size.control.icon.md`, `semantic.typography.control.line-height.md`
-
-### `foundation.spacing.6`
-
-- **Camada**: foundation
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/tokens/generated/component.css` (4×)
-    - `css/tokens/generated/theme-dark.css` (5×)
-    - `css/tokens/generated/theme-light.css` (5×)
-  - Tokens que referenciam: `component.checkbox.control-size.lg`, `component.radio.control-size.lg`, `component.spinner.size.md`, `component.toggle.track-height.lg`, `semantic.space.inset.xl`, `semantic.space.gap.xl`, `semantic.space.component.2xl`, `semantic.size.control.icon.lg`, `semantic.typography.control.line-height.lg`, `semantic.space.inset.xl`, `semantic.space.gap.xl`, `semantic.space.component.2xl`, `semantic.size.control.icon.lg`, `semantic.typography.control.line-height.lg`
-
-### `foundation.spacing.7`
-
-- **Camada**: foundation
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/tokens/generated/component.css` (2×)
-  - Tokens que referenciam: `component.avatar.icon-size.lg`, `component.toggle.track-width.sm`
-
-### `foundation.spacing.8`
-
-- **Camada**: foundation
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/tokens/generated/component.css` (2×)
-    - `css/tokens/generated/theme-dark.css` (2×)
-    - `css/tokens/generated/theme-light.css` (2×)
-  - Tokens que referenciam: `component.avatar.size.sm`, `component.spinner.size.lg`, `semantic.space.section.sm`, `semantic.size.control.sm`, `semantic.space.section.sm`, `semantic.size.control.sm`
-
-### `foundation.spacing.9`
-
-- **Camada**: foundation
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/tokens/generated/component.css` (1×)
-  - Tokens que referenciam: `component.toggle.track-width.md`
 
 ### `foundation.typography.font.family.display`
 
@@ -3335,7 +3082,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - Tokens que referenciam: `semantic.typography.body.font-family.mono`, `semantic.typography.body.font-family.mono`
 
 ### `foundation.typography.font.family.sans`
 
@@ -3348,7 +3095,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - Tokens que referenciam: `semantic.typography.body.font-family.sans`, `semantic.typography.body.font-family.sans`
 
-### `foundation.typography.font.size.2xl`
+### `foundation.typography.font.size.11`
 
 - **Camada**: foundation
 - **Tipo**: `dimension`
@@ -3357,20 +3104,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `semantic.typography.body.font-size.2xl`, `semantic.typography.body.font-size.2xl`
+  - Tokens que referenciam: `semantic.typography.body.font-size.2xs`, `semantic.typography.body.font-size.2xs`
 
-### `foundation.typography.font.size.2xs`
-
-- **Camada**: foundation
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `foundation.typography.font.size.3xl`
+### `foundation.typography.font.size.12`
 
 - **Camada**: foundation
 - **Tipo**: `dimension`
@@ -3379,20 +3115,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `semantic.typography.body.font-size.3xl`, `semantic.typography.body.font-size.3xl`
+  - Tokens que referenciam: `semantic.typography.body.font-size.xs`, `semantic.typography.body.font-size.xs`
 
-### `foundation.typography.font.size.4xl`
-
-- **Camada**: foundation
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `foundation.typography.font.size.5xl`
+### `foundation.typography.font.size.14`
 
 - **Camada**: foundation
 - **Tipo**: `dimension`
@@ -3401,20 +3126,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - Tokens que referenciam: `semantic.typography.body.font-size.sm`, `semantic.typography.body.font-size.sm`
 
-### `foundation.typography.font.size.6xl`
-
-- **Camada**: foundation
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `foundation.typography.font.size.7xl`
+### `foundation.typography.font.size.16`
 
 - **Camada**: foundation
 - **Tipo**: `dimension`
@@ -3423,20 +3137,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - Tokens que referenciam: `semantic.typography.body.font-size.md`, `semantic.typography.body.font-size.md`
 
-### `foundation.typography.font.size.8xl`
-
-- **Camada**: foundation
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `foundation.typography.font.size.9xl`
+### `foundation.typography.font.size.18`
 
 - **Camada**: foundation
 - **Tipo**: `dimension`
@@ -3445,42 +3148,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - Tokens que referenciam: `semantic.typography.body.font-size.lg`, `semantic.typography.body.font-size.lg`
 
-### `foundation.typography.font.size.lg`
-
-- **Camada**: foundation
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - Tokens que referenciam: `component.avatar.font-size.lg`, `semantic.typography.body.font-size.lg`, `semantic.typography.body.font-size.lg`
-
-### `foundation.typography.font.size.md`
-
-- **Camada**: foundation
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - Tokens que referenciam: `semantic.typography.control.font-size.lg`, `semantic.typography.body.font-size.md`, `semantic.typography.control.font-size.lg`, `semantic.typography.body.font-size.md`
-
-### `foundation.typography.font.size.sm`
-
-- **Camada**: foundation
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - Tokens que referenciam: `component.avatar.font-size.md`, `component.checkbox.font-size`, `component.radio.font-size`, `component.toggle.font-size`, `semantic.typography.control.font-size.sm`, `semantic.typography.control.font-size.md`, `semantic.typography.body.font-size.sm`, `semantic.typography.control.font-size.sm`, `semantic.typography.control.font-size.md`, `semantic.typography.body.font-size.sm`
-
-### `foundation.typography.font.size.xl`
+### `foundation.typography.font.size.20`
 
 - **Camada**: foundation
 - **Tipo**: `dimension`
@@ -3491,7 +3161,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - Tokens que referenciam: `semantic.typography.body.font-size.xl`, `semantic.typography.body.font-size.xl`
 
-### `foundation.typography.font.size.xs`
+### `foundation.typography.font.size.24`
 
 - **Camada**: foundation
 - **Tipo**: `dimension`
@@ -3500,7 +3170,84 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `component.avatar.font-size.sm`, `semantic.typography.body.font-size.xs`, `semantic.typography.body.font-size.xs`
+  - Tokens que referenciam: `semantic.typography.body.font-size.2xl`, `semantic.typography.body.font-size.2xl`
+
+### `foundation.typography.font.size.28`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - Tokens que referenciam: `semantic.typography.body.font-size.3xl`, `semantic.typography.body.font-size.3xl`
+
+### `foundation.typography.font.size.32`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - Tokens que referenciam: `semantic.typography.body.font-size.4xl`, `semantic.typography.body.font-size.4xl`
+
+### `foundation.typography.font.size.40`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - Tokens que referenciam: `semantic.typography.body.font-size.5xl`, `semantic.typography.body.font-size.5xl`
+
+### `foundation.typography.font.size.48`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - Tokens que referenciam: `semantic.typography.body.font-size.6xl`, `semantic.typography.body.font-size.6xl`
+
+### `foundation.typography.font.size.56`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - Tokens que referenciam: `semantic.typography.body.font-size.7xl`, `semantic.typography.body.font-size.7xl`
+
+### `foundation.typography.font.size.64`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - Tokens que referenciam: `semantic.typography.body.font-size.8xl`, `semantic.typography.body.font-size.8xl`
+
+### `foundation.typography.font.size.72`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - Tokens que referenciam: `semantic.typography.body.font-size.9xl`, `semantic.typography.body.font-size.9xl`
 
 ### `foundation.typography.font.weight.bold`
 
@@ -3599,7 +3346,216 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
+  - Tokens que referenciam: `semantic.typography.body.letter-spacing.wider`, `semantic.typography.body.letter-spacing.wider`
+
+### `foundation.typography.line.height.16`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - Tokens que referenciam: `semantic.typography.body.line-height.2xs`, `semantic.typography.body.line-height.2xs`
+
+### `foundation.typography.line.height.18`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - Tokens que referenciam: `semantic.typography.body.line-height.xs`, `semantic.typography.body.line-height.xs`
+
+### `foundation.typography.line.height.20`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - Tokens que referenciam: `semantic.typography.body.line-height.sm`, `semantic.typography.body.line-height.sm`
+
+### `foundation.typography.line.height.22`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
+
+### `foundation.typography.line.height.24`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - Tokens que referenciam: `semantic.typography.body.line-height.md`, `semantic.typography.body.line-height.md`
+
+### `foundation.typography.line.height.26`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `foundation.typography.line.height.28`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - Tokens que referenciam: `semantic.typography.body.line-height.lg`, `semantic.typography.body.line-height.lg`
+
+### `foundation.typography.line.height.32`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - Tokens que referenciam: `semantic.typography.body.line-height.xl`, `semantic.typography.body.line-height.xl`
+
+### `foundation.typography.line.height.34`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - Tokens que referenciam: `semantic.typography.body.line-height.2xl`, `semantic.typography.body.line-height.2xl`
+
+### `foundation.typography.line.height.40`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - Tokens que referenciam: `semantic.typography.body.line-height.3xl`, `semantic.typography.body.line-height.3xl`
+
+### `foundation.typography.line.height.44`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - Tokens que referenciam: `semantic.typography.body.line-height.4xl`, `semantic.typography.body.line-height.4xl`
+
+### `foundation.typography.line.height.48`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - Tokens que referenciam: `semantic.typography.body.line-height.5xl`, `semantic.typography.body.line-height.5xl`
+
+### `foundation.typography.line.height.50`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `foundation.typography.line.height.60`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `foundation.typography.line.height.64`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - Tokens que referenciam: `semantic.typography.body.line-height.6xl`, `semantic.typography.body.line-height.6xl`
+
+### `foundation.typography.line.height.70`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `foundation.typography.line.height.72`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - Tokens que referenciam: `semantic.typography.body.line-height.7xl`, `semantic.typography.body.line-height.7xl`
+
+### `foundation.typography.line.height.80`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - Tokens que referenciam: `semantic.typography.body.line-height.8xl`, `semantic.typography.body.line-height.8xl`
+
+### `foundation.typography.line.height.90`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - Tokens que referenciam: `semantic.typography.body.line-height.9xl`, `semantic.typography.body.line-height.9xl`
 
 ### `foundation.typography.line.height.control.lg`
 
@@ -3665,7 +3621,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `semantic.typography.body.line-height.md`, `semantic.typography.body.line-height.xl`, `semantic.typography.body.line-height.md`, `semantic.typography.body.line-height.xl`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.typography.line.height.relaxed`
 
@@ -3687,7 +3643,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `semantic.typography.body.line-height.xs`, `semantic.typography.body.line-height.sm`, `semantic.typography.body.line-height.2xl`, `semantic.typography.body.line-height.xs`, `semantic.typography.body.line-height.sm`, `semantic.typography.body.line-height.2xl`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.typography.line.height.tight`
 
@@ -3698,7 +3654,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `semantic.typography.body.line-height.3xl`, `semantic.typography.body.line-height.3xl`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.z.0`
 
@@ -3764,85 +3720,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - CSS:
-    - `css/tokens/generated/component.css` (2×)
-  - Tokens que referenciam: `component.modal.z-index`, `component.tooltip.z-index`
-
-### `semantic.accent.active`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.purple.800`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
-
-### `semantic.accent.content.contrast`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.neutral.50`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/badge.css` (1×)
-
-### `semantic.accent.content.default`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.purple.700`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/badge.css` (1×)
-
-### `semantic.accent.default`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.brand.secondary`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/badge.css` (1×)
-
-### `semantic.accent.hover`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.purple.700`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `semantic.accent.subtle`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.purple.100`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/badge.css` (1×)
 
 ### `semantic.background.default`
 
@@ -3857,6 +3735,25 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/base/reset.css` (1×)
 
+### `semantic.background.disabled`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.neutral.200`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/badge.css` (1×)
+    - `css/components/checkbox.css` (1×)
+    - `css/components/input.css` (1×)
+    - `css/components/radio.css` (1×)
+    - `css/components/select.css` (1×)
+    - `css/components/textarea.css` (1×)
+    - `css/components/toggle.css` (1×)
+
 ### `semantic.background.inverse`
 
 - **Camada**: semantic
@@ -3868,6 +3765,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
+    - `css/base/reset.css` (1×)
     - `css/components/tooltip.css` (5×)
 
 ### `semantic.background.overlay`
@@ -3895,16 +3793,16 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/reset.css` (1×)
-    - `css/components/button.css` (1×)
     - `css/components/input.css` (1×)
     - `css/components/select.css` (1×)
+    - `css/components/skeleton.css` (1×)
     - `css/components/textarea.css` (1×)
 
 ### `semantic.border.brand`
 
 - **Camada**: semantic
 - **Tipo**: `color`
-- **Alias**: → `semantic.brand.default`
+- **Alias**: → `foundation.color.brand.600`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -3912,7 +3810,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
-### `semantic.border.control.default`
+### `semantic.border.control-default`
 
 - **Camada**: semantic
 - **Tipo**: `color`
@@ -3923,7 +3821,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/components/button.css` (1×)
     - `css/components/checkbox.css` (1×)
     - `css/components/input.css` (1×)
     - `css/components/radio.css` (1×)
@@ -3931,7 +3828,7 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/textarea.css` (1×)
     - `css/components/toggle.css` (1×)
 
-### `semantic.border.control.disabled`
+### `semantic.border.control-disabled`
 
 - **Camada**: semantic
 - **Tipo**: `color`
@@ -3949,7 +3846,7 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/textarea.css` (1×)
     - `css/components/toggle.css` (1×)
 
-### `semantic.border.control.hover`
+### `semantic.border.control-hover`
 
 - **Camada**: semantic
 - **Tipo**: `color`
@@ -3960,7 +3857,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/components/button.css` (1×)
     - `css/components/input.css` (1×)
     - `css/components/select.css` (1×)
     - `css/components/textarea.css` (1×)
@@ -3978,16 +3874,13 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/base/reset.css` (1×)
     - `css/components/card.css` (1×)
-    - `css/components/divider.css` (1×)
-    - `css/components/modal.css` (1×)
-    - `css/components/spinner.css` (1×)
     - `css/components/tabs.css` (1×)
 
 ### `semantic.border.error`
 
 - **Camada**: semantic
 - **Tipo**: `color`
-- **Alias**: → `semantic.feedback.error.default`
+- **Alias**: → `foundation.color.red.600`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -3999,22 +3892,43 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: semantic
 - **Tipo**: `color`
-- **Alias**: → `semantic.brand.default`
+- **Alias**: → `foundation.color.brand.500`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-dark.css` (1×)
-    - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.focus.ring.color`, `semantic.focus.ring.color`
+    - `css/components/alert.css` (1×)
+    - `css/components/breadcrumb.css` (1×)
+    - `css/components/button.css` (1×)
+    - `css/components/checkbox.css` (1×)
+    - `css/components/input.css` (2×)
+    - `css/components/link.css` (1×)
+    - `css/components/modal.css` (1×)
+    - `css/components/radio.css` (1×)
+    - `css/components/select.css` (2×)
+    - `css/components/tabs.css` (1×)
+    - `css/components/textarea.css` (2×)
+    - `css/components/toggle.css` (1×)
 
 ### `semantic.border.focus-error`
 
 - **Camada**: semantic
 - **Tipo**: `color`
 - **Alias**: → `foundation.color.red.500`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.border.inverse`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.neutral.50`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -4039,14 +3953,17 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: semantic
 - **Tipo**: `color`
-- **Alias**: → `foundation.color.neutral.300`
+- **Alias**: → `foundation.color.neutral.200`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/components/card.css` (1×)
+    - `css/components/card.css` (2×)
+    - `css/components/divider.css` (1×)
+    - `css/components/modal.css` (1×)
+    - `css/components/spinner.css` (1×)
 
 ### `semantic.border.width.default`
 
@@ -4059,10 +3976,12 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
+    - `css/base/reset.css` (1×)
     - `css/components/alert.css` (4×)
     - `css/components/button.css` (1×)
-    - `css/components/card.css` (2×)
+    - `css/components/card.css` (3×)
     - `css/components/checkbox.css` (1×)
+    - `css/components/divider.css` (2×)
     - `css/components/input.css` (1×)
     - `css/components/modal.css` (1×)
     - `css/components/radio.css` (1×)
@@ -4070,8 +3989,6 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/tabs.css` (1×)
     - `css/components/textarea.css` (1×)
     - `css/components/toggle.css` (1×)
-    - `css/tokens/generated/component.css` (1×)
-  - Tokens que referenciam: `component.divider.thickness`
 
 ### `semantic.border.width.focus`
 
@@ -4083,7 +4000,19 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/alert.css` (2×)
+    - `css/components/breadcrumb.css` (2×)
+    - `css/components/button.css` (2×)
+    - `css/components/checkbox.css` (2×)
+    - `css/components/input.css` (4×)
+    - `css/components/link.css` (1×)
+    - `css/components/modal.css` (2×)
+    - `css/components/radio.css` (2×)
+    - `css/components/select.css` (4×)
+    - `css/components/tabs.css` (2×)
+    - `css/components/textarea.css` (4×)
+    - `css/components/toggle.css` (2×)
 
 ### `semantic.border.width.strong`
 
@@ -4096,8 +4025,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (1×)
-  - Tokens que referenciam: `component.tabs.active-border-width`
+    - `css/components/tabs.css` (1×)
 
 ### `semantic.border.width.subtle`
 
@@ -4110,177 +4038,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
-
-### `semantic.brand.active`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.blue.900`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/button.css` (2×)
-
-### `semantic.brand.content.contrast`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.neutral.50`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/avatar.css` (1×)
-    - `css/components/badge.css` (2×)
-    - `css/components/button.css` (1×)
-    - `css/components/checkbox.css` (2×)
-    - `css/components/radio.css` (1×)
-    - `css/components/toggle.css` (1×)
-
-### `semantic.brand.content.contrast-disabled`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.overlay.white.80`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `semantic.brand.content.default`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.blue.700`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/badge.css` (1×)
-    - `css/components/button.css` (1×)
-    - `css/tokens/generated/component.css` (1×)
-  - Tokens que referenciam: `component.button.foreground.toned.default`
-
-### `semantic.brand.default`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.brand.primary`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/avatar.css` (1×)
-    - `css/components/badge.css` (1×)
-    - `css/components/button.css` (3×)
-    - `css/components/checkbox.css` (5×)
-    - `css/components/input.css` (1×)
-    - `css/components/radio.css` (3×)
-    - `css/components/select.css` (1×)
-    - `css/components/spinner.css` (1×)
-    - `css/components/tabs.css` (2×)
-    - `css/components/textarea.css` (1×)
-    - `css/components/toggle.css` (3×)
-    - `css/tokens/generated/theme-dark.css` (4×)
-    - `css/tokens/generated/theme-light.css` (4×)
-  - Tokens que referenciam: `semantic.content.link.default`, `semantic.border.focus`, `semantic.border.brand`, `semantic.state.focus`, `semantic.content.link.default`, `semantic.border.focus`, `semantic.border.brand`, `semantic.state.focus`
-
-### `semantic.brand.disabled`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.disabled.brand-light`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `semantic.brand.hover`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.blue.800`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/button.css` (2×)
-    - `css/tokens/generated/theme-dark.css` (1×)
-    - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.content.link.hover`, `semantic.content.link.hover`
-
-### `semantic.brand.subtle`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.blue.100`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/badge.css` (1×)
-
-### `semantic.brand.toned.active`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.overlay.blue-600.28`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/button.css` (1×)
-    - `css/tokens/generated/component.css` (1×)
-  - Tokens que referenciam: `component.button.background.toned.active`
-
-### `semantic.brand.toned.default`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.overlay.blue-600.12`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/button.css` (1×)
-    - `css/tokens/generated/component.css` (1×)
-  - Tokens que referenciam: `component.button.background.toned.default`
-
-### `semantic.brand.toned.hover`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.overlay.blue-600.20`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/button.css` (1×)
-    - `css/tokens/generated/component.css` (1×)
-  - Tokens que referenciam: `component.button.background.toned.hover`
 
 ### `semantic.content.default`
 
@@ -4295,8 +4052,6 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/base/reset.css` (1×)
     - `css/components/alert.css` (4×)
-    - `css/components/breadcrumb.css` (1×)
-    - `css/components/button.css` (1×)
     - `css/components/card.css` (1×)
     - `css/components/checkbox.css` (3×)
     - `css/components/input.css` (2×)
@@ -4323,8 +4078,6 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/tabs.css` (1×)
     - `css/components/textarea.css` (2×)
     - `css/components/toggle.css` (1×)
-    - `css/tokens/generated/component.css` (1×)
-  - Tokens que referenciam: `component.button.foreground.toned.disabled`
 
 ### `semantic.content.inverse`
 
@@ -4337,33 +4090,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/components/tooltip.css` (1×)
-
-### `semantic.content.link.default`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `semantic.brand.default`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
     - `css/base/reset.css` (1×)
-    - `css/components/breadcrumb.css` (1×)
-
-### `semantic.content.link.hover`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `semantic.brand.hover`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+    - `css/components/badge.css` (1×)
+    - `css/components/tooltip.css` (1×)
 
 ### `semantic.content.secondary`
 
@@ -4379,6 +4108,7 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/base/reset.css` (1×)
     - `css/components/alert.css` (1×)
     - `css/components/badge.css` (1×)
+    - `css/components/breadcrumb.css` (2×)
     - `css/components/card.css` (2×)
     - `css/components/checkbox.css` (1×)
     - `css/components/input.css` (1×)
@@ -4399,12 +4129,11 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/components/breadcrumb.css` (1×)
     - `css/components/input.css` (2×)
     - `css/components/select.css` (3×)
     - `css/components/textarea.css` (1×)
 
-### `semantic.feedback.error.active`
+### `semantic.feedback.error.background.active`
 
 - **Camada**: semantic
 - **Tipo**: `color`
@@ -4417,76 +4146,7 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/button.css` (2×)
 
-### `semantic.feedback.error.background`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.red.50`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `semantic.feedback.error.border`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.red.500`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/alert.css` (1×)
-    - `css/components/checkbox.css` (1×)
-
-### `semantic.feedback.error.content.contrast`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.neutral.50`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/alert.css` (1×)
-    - `css/components/badge.css` (1×)
-    - `css/components/button.css` (1×)
-
-### `semantic.feedback.error.content.contrast-disabled`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.overlay.white.80`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `semantic.feedback.error.content.default`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.red.700`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/badge.css` (1×)
-    - `css/components/checkbox.css` (1×)
-    - `css/components/radio.css` (2×)
-    - `css/components/textarea.css` (1×)
-
-### `semantic.feedback.error.default`
+### `semantic.feedback.error.background.default`
 
 - **Camada**: semantic
 - **Tipo**: `color`
@@ -4505,11 +4165,8 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/radio.css` (3×)
     - `css/components/select.css` (3×)
     - `css/components/textarea.css` (3×)
-    - `css/tokens/generated/theme-dark.css` (1×)
-    - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.border.error`, `semantic.border.error`
 
-### `semantic.feedback.error.disabled`
+### `semantic.feedback.error.background.disabled`
 
 - **Camada**: semantic
 - **Tipo**: `color`
@@ -4521,7 +4178,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
-### `semantic.feedback.error.hover`
+### `semantic.feedback.error.background.hover`
 
 - **Camada**: semantic
 - **Tipo**: `color`
@@ -4534,7 +4191,7 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/button.css` (2×)
 
-### `semantic.feedback.error.subtle`
+### `semantic.feedback.error.background.subtle`
 
 - **Camada**: semantic
 - **Tipo**: `color`
@@ -4548,23 +4205,11 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/alert.css` (1×)
     - `css/components/badge.css` (1×)
 
-### `semantic.feedback.info.background`
+### `semantic.feedback.error.border-default`
 
 - **Camada**: semantic
 - **Tipo**: `color`
-- **Alias**: → `foundation.color.sky.50`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `semantic.feedback.info.border`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.sky.500`
+- **Alias**: → `foundation.color.red.500`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -4572,113 +4217,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/alert.css` (1×)
+    - `css/components/checkbox.css` (1×)
 
-### `semantic.feedback.info.content.contrast`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.neutral.900`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/alert.css` (1×)
-    - `css/components/badge.css` (1×)
-
-### `semantic.feedback.info.content.default`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.sky.700`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/badge.css` (1×)
-
-### `semantic.feedback.info.default`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.sky.500`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/alert.css` (1×)
-    - `css/components/badge.css` (1×)
-
-### `semantic.feedback.info.hover`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.sky.600`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `semantic.feedback.info.subtle`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.sky.100`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/alert.css` (1×)
-    - `css/components/badge.css` (1×)
-
-### `semantic.feedback.success.active`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.green.900`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/button.css` (2×)
-
-### `semantic.feedback.success.background`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.green.50`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `semantic.feedback.success.border`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.green.500`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/alert.css` (1×)
-
-### `semantic.feedback.success.content.contrast`
+### `semantic.feedback.error.content-contrast`
 
 - **Camada**: semantic
 - **Tipo**: `color`
@@ -4693,7 +4234,35 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/badge.css` (1×)
     - `css/components/button.css` (1×)
 
-### `semantic.feedback.success.content.contrast-disabled`
+### `semantic.feedback.error.content-contrast-disabled`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.overlay.white.60`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.feedback.error.content-default`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.red.700`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/badge.css` (1×)
+    - `css/components/checkbox.css` (1×)
+    - `css/components/radio.css` (2×)
+    - `css/components/textarea.css` (1×)
+
+### `semantic.feedback.error.content-disabled`
 
 - **Camada**: semantic
 - **Tipo**: `color`
@@ -4705,11 +4274,78 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
-### `semantic.feedback.success.content.default`
+### `semantic.feedback.info.background.default`
 
 - **Camada**: semantic
 - **Tipo**: `color`
-- **Alias**: → `foundation.color.green.700`
+- **Alias**: → `foundation.color.sky.500`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/alert.css` (1×)
+    - `css/components/badge.css` (1×)
+
+### `semantic.feedback.info.background.hover`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.sky.600`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.feedback.info.background.subtle`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.sky.100`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/alert.css` (1×)
+    - `css/components/badge.css` (1×)
+
+### `semantic.feedback.info.border-default`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.sky.500`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/alert.css` (1×)
+
+### `semantic.feedback.info.content-contrast`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.neutral.900`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/alert.css` (1×)
+    - `css/components/badge.css` (1×)
+
+### `semantic.feedback.info.content-default`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.sky.700`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -4718,7 +4354,20 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/badge.css` (1×)
 
-### `semantic.feedback.success.default`
+### `semantic.feedback.success.background.active`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.green.900`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/button.css` (2×)
+
+### `semantic.feedback.success.background.default`
 
 - **Camada**: semantic
 - **Tipo**: `color`
@@ -4733,7 +4382,7 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/badge.css` (1×)
     - `css/components/button.css` (2×)
 
-### `semantic.feedback.success.disabled`
+### `semantic.feedback.success.background.disabled`
 
 - **Camada**: semantic
 - **Tipo**: `color`
@@ -4745,7 +4394,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
-### `semantic.feedback.success.hover`
+### `semantic.feedback.success.background.hover`
 
 - **Camada**: semantic
 - **Tipo**: `color`
@@ -4758,7 +4407,7 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/button.css` (2×)
 
-### `semantic.feedback.success.subtle`
+### `semantic.feedback.success.background.subtle`
 
 - **Camada**: semantic
 - **Tipo**: `color`
@@ -4772,11 +4421,39 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/alert.css` (1×)
     - `css/components/badge.css` (1×)
 
-### `semantic.feedback.warning.background`
+### `semantic.feedback.success.border-default`
 
 - **Camada**: semantic
 - **Tipo**: `color`
-- **Alias**: → `foundation.color.amber.50`
+- **Alias**: → `foundation.color.green.500`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/alert.css` (1×)
+
+### `semantic.feedback.success.content-contrast`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.neutral.50`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/alert.css` (1×)
+    - `css/components/badge.css` (1×)
+    - `css/components/button.css` (1×)
+
+### `semantic.feedback.success.content-contrast-disabled`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.overlay.white.60`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -4784,7 +4461,72 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
-### `semantic.feedback.warning.border`
+### `semantic.feedback.success.content-default`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.green.700`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/badge.css` (1×)
+
+### `semantic.feedback.success.content-disabled`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.overlay.white.80`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.feedback.warning.background.default`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.amber.500`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/alert.css` (1×)
+    - `css/components/badge.css` (1×)
+
+### `semantic.feedback.warning.background.hover`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.amber.600`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.feedback.warning.background.subtle`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.amber.100`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/alert.css` (1×)
+    - `css/components/badge.css` (1×)
+
+### `semantic.feedback.warning.border-default`
 
 - **Camada**: semantic
 - **Tipo**: `color`
@@ -4797,7 +4539,7 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/alert.css` (1×)
 
-### `semantic.feedback.warning.content.contrast`
+### `semantic.feedback.warning.content-contrast`
 
 - **Camada**: semantic
 - **Tipo**: `color`
@@ -4811,7 +4553,7 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/alert.css` (1×)
     - `css/components/badge.css` (1×)
 
-### `semantic.feedback.warning.content.default`
+### `semantic.feedback.warning.content-default`
 
 - **Camada**: semantic
 - **Tipo**: `color`
@@ -4822,46 +4564,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/components/badge.css` (1×)
-
-### `semantic.feedback.warning.default`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.amber.500`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/alert.css` (1×)
-    - `css/components/badge.css` (1×)
-
-### `semantic.feedback.warning.hover`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.amber.600`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `semantic.feedback.warning.subtle`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.amber.100`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/alert.css` (1×)
     - `css/components/badge.css` (1×)
 
 ### `semantic.focus.ring.color`
@@ -4933,6 +4635,109 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/textarea.css` (2×)
     - `css/components/toggle.css` (1×)
 
+### `semantic.ghost.background.active`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.overlay.black.10`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/button.css` (1×)
+
+### `semantic.ghost.background.hover`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.overlay.black.5`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/button.css` (1×)
+
+### `semantic.ghost.content-default`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.neutral.900`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/button.css` (1×)
+
+### `semantic.ghost.content-disabled`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.neutral.400`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.link.content-active`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.brand.800`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/link.css` (1×)
+
+### `semantic.link.content-default`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.brand.700`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/base/reset.css` (1×)
+    - `css/components/link.css` (1×)
+
+### `semantic.link.content-disabled`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.neutral.400`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.link.content-hover`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.brand.800`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/link.css` (1×)
+
 ### `semantic.motion.duration.fast`
 
 - **Camada**: semantic
@@ -4948,6 +4753,7 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/button.css` (4×)
     - `css/components/checkbox.css` (4×)
     - `css/components/input.css` (2×)
+    - `css/components/link.css` (1×)
     - `css/components/modal.css` (2×)
     - `css/components/radio.css` (4×)
     - `css/components/select.css` (2×)
@@ -4995,6 +4801,7 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/button.css` (4×)
     - `css/components/checkbox.css` (4×)
     - `css/components/input.css` (2×)
+    - `css/components/link.css` (1×)
     - `css/components/modal.css` (2×)
     - `css/components/radio.css` (4×)
     - `css/components/select.css` (2×)
@@ -5018,6 +4825,98 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/checkbox.css` (1×)
     - `css/components/radio.css` (2×)
     - `css/components/toggle.css` (1×)
+
+### `semantic.outline.background.active`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.overlay.black.10`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/button.css` (1×)
+
+### `semantic.outline.background.hover`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.overlay.black.5`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/badge.css` (1×)
+    - `css/components/button.css` (1×)
+
+### `semantic.outline.border-default`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.neutral.500`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/badge.css` (1×)
+    - `css/components/button.css` (1×)
+
+### `semantic.outline.border-disabled`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.neutral.200`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.outline.border-hover`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.neutral.700`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/button.css` (1×)
+
+### `semantic.outline.content-default`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.neutral.700`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/badge.css` (2×)
+    - `css/components/button.css` (1×)
+
+### `semantic.outline.content-disabled`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.neutral.400`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `semantic.overlay.default`
 
@@ -5065,130 +4964,51 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `semantic.radius.component`
-
-- **Camada**: semantic
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.radius.md`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (6×)
-  - Tokens que referenciam: `component.alert.border-radius`, `component.button.border-radius`, `component.input.border-radius`, `component.select.border-radius`, `component.skeleton.rect-border-radius`, `component.textarea.border-radius`
-
-### `semantic.size.control.icon.lg`
-
-- **Camada**: semantic
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.6`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (3×)
-    - `css/tokens/generated/component.css` (2×)
-  - Tokens que referenciam: `component.button.icon-size.lg`, `component.input.icon-size.lg`
-
-### `semantic.size.control.icon.md`
-
-- **Camada**: semantic
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.5`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (3×)
-    - `css/tokens/generated/component.css` (2×)
-  - Tokens que referenciam: `component.button.icon-size.md`, `component.input.icon-size.md`
-
-### `semantic.size.control.icon.sm`
-
-- **Camada**: semantic
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.4`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (3×)
-    - `css/tokens/generated/component.css` (2×)
-  - Tokens que referenciam: `component.button.icon-size.sm`, `component.input.icon-size.sm`
-
-### `semantic.size.control.lg`
-
-- **Camada**: semantic
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.12`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/tokens/generated/component.css` (3×)
-  - Tokens que referenciam: `component.button.height.lg`, `component.input.height.lg`, `component.select.height.lg`
-
-### `semantic.size.control.md`
-
-- **Camada**: semantic
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.10`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/tokens/generated/component.css` (3×)
-  - Tokens que referenciam: `component.button.height.md`, `component.input.height.md`, `component.select.height.md`
-
-### `semantic.size.control.min-target`
-
-- **Camada**: semantic
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.11`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/button.css` (1×)
     - `css/components/checkbox.css` (1×)
+    - `css/components/modal.css` (1×)
     - `css/components/radio.css` (1×)
     - `css/components/toggle.css` (1×)
 
-### `semantic.size.control.sm`
+### `semantic.primary.background.active`
 
 - **Camada**: semantic
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.8`
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.brand.800`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (3×)
-  - Tokens que referenciam: `component.button.height.sm`, `component.input.height.sm`, `component.select.height.sm`
+    - `css/components/button.css` (2×)
 
-### `semantic.space.component.2xl`
+### `semantic.primary.background.default`
 
 - **Camada**: semantic
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.6`
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.brand.600`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/avatar.css` (1×)
+    - `css/components/badge.css` (1×)
+    - `css/components/breadcrumb.css` (1×)
+    - `css/components/button.css` (2×)
+    - `css/components/checkbox.css` (5×)
+    - `css/components/radio.css` (3×)
+    - `css/components/spinner.css` (1×)
+    - `css/components/tabs.css` (2×)
+    - `css/components/toggle.css` (3×)
+
+### `semantic.primary.background.disabled`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.disabled.brand-light`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -5196,11 +5016,42 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
-### `semantic.space.component.lg`
+### `semantic.primary.background.hover`
 
 - **Camada**: semantic
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.4`
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.brand.700`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/button.css` (2×)
+
+### `semantic.primary.content-default`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.neutral.50`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/avatar.css` (1×)
+    - `css/components/badge.css` (1×)
+    - `css/components/button.css` (1×)
+    - `css/components/checkbox.css` (2×)
+    - `css/components/radio.css` (1×)
+    - `css/components/toggle.css` (1×)
+
+### `semantic.primary.content-disabled`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.overlay.white.80`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -5208,11 +5059,85 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
-### `semantic.space.component.md`
+### `semantic.radius.full`
 
 - **Camada**: semantic
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.3`
+- **Alias**: → `foundation.radius.999`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/avatar.css` (1×)
+    - `css/components/badge.css` (1×)
+    - `css/components/radio.css` (2×)
+    - `css/components/skeleton.css` (1×)
+    - `css/components/spinner.css` (1×)
+    - `css/components/toggle.css` (2×)
+
+### `semantic.radius.lg`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.radius.12`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/base/reset.css` (1×)
+    - `css/components/alert.css` (1×)
+    - `css/components/card.css` (1×)
+    - `css/components/modal.css` (1×)
+
+### `semantic.radius.md`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.radius.8`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/breadcrumb.css` (1×)
+    - `css/components/button.css` (3×)
+    - `css/components/divider.css` (1×)
+    - `css/components/input.css` (1×)
+    - `css/components/select.css` (1×)
+    - `css/components/skeleton.css` (2×)
+    - `css/components/textarea.css` (1×)
+
+### `semantic.radius.sm`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.radius.4`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/base/reset.css` (1×)
+    - `css/components/alert.css` (1×)
+    - `css/components/checkbox.css` (2×)
+    - `css/components/link.css` (1×)
+    - `css/components/modal.css` (1×)
+    - `css/components/radio.css` (1×)
+    - `css/components/tabs.css` (2×)
+    - `css/components/toggle.css` (1×)
+    - `css/components/tooltip.css` (1×)
+
+### `semantic.radius.xl`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.radius.16`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -5220,11 +5145,24 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
-### `semantic.space.component.sm`
+### `semantic.shadow.card`
 
 - **Camada**: semantic
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.2`
+- **Tipo**: `shadow`
+- **Alias**: → `foundation.shadow.sm`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/card.css` (1×)
+
+### `semantic.shadow.modal`
+
+- **Camada**: semantic
+- **Tipo**: `shadow`
+- **Alias**: → `foundation.shadow.xl`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -5232,11 +5170,70 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
-### `semantic.space.component.xl`
+### `semantic.size.2xl`
 
 - **Camada**: semantic
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.5`
+- **Alias**: → `foundation.dimension.48`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/button.css` (3×)
+    - `css/components/checkbox.css` (1×)
+    - `css/components/input.css` (1×)
+    - `css/components/radio.css` (1×)
+    - `css/components/select.css` (1×)
+    - `css/components/toggle.css` (2×)
+
+### `semantic.size.3xl`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.dimension.64`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/avatar.css` (2×)
+    - `css/components/textarea.css` (1×)
+
+### `semantic.size.4xl`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.dimension.96`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/textarea.css` (1×)
+
+### `semantic.size.5xl`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.dimension.128`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/skeleton.css` (1×)
+    - `css/components/textarea.css` (1×)
+
+### `semantic.size.layout.2xl`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.dimension.1280`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -5244,11 +5241,11 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
-### `semantic.space.component.xs`
+### `semantic.size.layout.lg`
 
 - **Camada**: semantic
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.1`
+- **Alias**: → `foundation.dimension.800`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -5256,95 +5253,37 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
-### `semantic.space.control.padding-x.lg`
+### `semantic.size.layout.md`
 
 - **Camada**: semantic
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.5`
+- **Alias**: → `foundation.dimension.640`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (4×)
-  - Tokens que referenciam: `component.button.padding-x.lg`, `component.input.padding-x.lg`, `component.select.padding-x.lg`, `component.textarea.padding-x.lg`
+    - `css/components/modal.css` (2×)
 
-### `semantic.space.control.padding-x.md`
+### `semantic.size.layout.sm`
 
 - **Camada**: semantic
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.4`
+- **Alias**: → `foundation.dimension.480`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (4×)
-  - Tokens que referenciam: `component.button.padding-x.md`, `component.input.padding-x.md`, `component.select.padding-x.md`, `component.textarea.padding-x.md`
+    - `css/components/modal.css` (1×)
 
-### `semantic.space.control.padding-x.sm`
-
-- **Camada**: semantic
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.3`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/tokens/generated/component.css` (4×)
-  - Tokens que referenciam: `component.button.padding-x.sm`, `component.input.padding-x.sm`, `component.select.padding-x.sm`, `component.textarea.padding-x.sm`
-
-### `semantic.space.control.padding-y.lg`
+### `semantic.size.layout.xl`
 
 - **Camada**: semantic
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.3`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/tokens/generated/component.css` (4×)
-  - Tokens que referenciam: `component.button.padding-y.lg`, `component.input.padding-y.lg`, `component.select.padding-y.lg`, `component.textarea.padding-y.lg`
-
-### `semantic.space.control.padding-y.md`
-
-- **Camada**: semantic
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.2-5`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/tokens/generated/component.css` (4×)
-  - Tokens que referenciam: `component.button.padding-y.md`, `component.input.padding-y.md`, `component.select.padding-y.md`, `component.textarea.padding-y.md`
-
-### `semantic.space.control.padding-y.sm`
-
-- **Camada**: semantic
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.2`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/tokens/generated/component.css` (4×)
-  - Tokens que referenciam: `component.button.padding-y.sm`, `component.input.padding-y.sm`, `component.select.padding-y.sm`, `component.textarea.padding-y.sm`
-
-### `semantic.space.gap.2xs`
-
-- **Camada**: semantic
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.0-5`
+- **Alias**: → `foundation.dimension.1024`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -5352,67 +5291,61 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
-### `semantic.space.gap.lg`
+### `semantic.size.layout.xs`
 
 - **Camada**: semantic
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.4`
+- **Alias**: → `foundation.dimension.320`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.size.lg`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.dimension.32`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (1×)
-    - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.divider.spacing`
+    - `css/components/avatar.css` (2×)
+    - `css/components/button.css` (2×)
+    - `css/components/input.css` (1×)
+    - `css/components/select.css` (1×)
+    - `css/components/spinner.css` (2×)
+    - `css/components/toggle.css` (1×)
 
-### `semantic.space.gap.md`
+### `semantic.size.md`
 
 - **Camada**: semantic
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.3`
+- **Alias**: → `foundation.dimension.24`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/utilities/layout.css` (1×)
+    - `css/components/alert.css` (2×)
+    - `css/components/avatar.css` (1×)
+    - `css/components/button.css` (3×)
+    - `css/components/checkbox.css` (2×)
+    - `css/components/input.css` (3×)
+    - `css/components/radio.css` (2×)
+    - `css/components/select.css` (3×)
+    - `css/components/spinner.css` (2×)
 
-### `semantic.space.gap.sm`
-
-- **Camada**: semantic
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.2`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/tokens/generated/component.css` (15×)
-    - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.alert.gap`, `component.badge.padding-x`, `component.button.gap`, `component.card.gap`, `component.checkbox.gap`, `component.input.gap`, `component.modal.header-gap`, `component.modal.footer-gap`, `component.modal.header-padding-bottom`, `component.modal.footer-padding-top`, `component.radio.gap`, `component.radio.group-legend-margin-bottom`, `component.tabs.padding-y`, `component.toggle.gap`, `component.tooltip.padding-x`
-
-### `semantic.space.gap.xl`
+### `semantic.size.sm`
 
 - **Camada**: semantic
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.6`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/utilities/layout.css` (1×)
-
-### `semantic.space.gap.xs`
-
-- **Camada**: semantic
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.1`
+- **Alias**: → `foundation.dimension.20`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -5420,99 +5353,138 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/alert.css` (1×)
-    - `css/components/checkbox.css` (3×)
-    - `css/components/input.css` (2×)
-    - `css/components/radio.css` (3×)
-    - `css/components/select.css` (1×)
-    - `css/components/textarea.css` (3×)
+    - `css/components/avatar.css` (1×)
+    - `css/components/button.css` (3×)
+    - `css/components/checkbox.css` (2×)
+    - `css/components/input.css` (1×)
+    - `css/components/radio.css` (2×)
+    - `css/components/select.css` (3×)
     - `css/components/toggle.css` (2×)
-    - `css/tokens/generated/component.css` (6×)
+
+### `semantic.size.xl`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.dimension.40`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/avatar.css` (2×)
+    - `css/components/button.css` (2×)
+    - `css/components/input.css` (1×)
+    - `css/components/select.css` (1×)
+    - `css/components/skeleton.css` (2×)
+    - `css/components/toggle.css` (1×)
+
+### `semantic.size.xs`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.dimension.16`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/avatar.css` (1×)
+    - `css/components/button.css` (3×)
+    - `css/components/checkbox.css` (2×)
+    - `css/components/input.css` (1×)
+    - `css/components/radio.css` (2×)
+    - `css/components/select.css` (6×)
+    - `css/components/spinner.css` (2×)
+    - `css/components/toggle.css` (2×)
+
+### `semantic.space.2xl`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.dimension.24`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.space.2xs`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.dimension.2`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/badge.css` (1×)
+    - `css/components/input.css` (1×)
+
+### `semantic.space.control.padding.10`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.dimension.10`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/button.css` (1×)
+    - `css/components/textarea.css` (1×)
+
+### `semantic.space.lg`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.dimension.16`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/button.css` (1×)
+    - `css/components/card.css` (4×)
+    - `css/components/input.css` (1×)
+    - `css/components/modal.css` (7×)
+    - `css/components/select.css` (3×)
+    - `css/components/tabs.css` (2×)
+    - `css/components/textarea.css` (1×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.breadcrumb.gap`, `component.input.field-gap`, `component.modal.close-padding`, `component.radio.group-gap`, `component.select.gap`, `component.tooltip.padding-y`
 
-### `semantic.space.inset.2xs`
+### `semantic.space.md`
 
 - **Camada**: semantic
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.0-5`
+- **Alias**: → `foundation.dimension.12`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (1×)
-  - Tokens que referenciam: `component.badge.padding-y`
-
-### `semantic.space.inset.lg`
-
-- **Camada**: semantic
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.4`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/tokens/generated/component.css` (6×)
-  - Tokens que referenciam: `component.card.padding`, `component.modal.padding`, `component.modal.overlay-padding`, `component.radio.group-margin-bottom`, `component.tabs.padding-x`, `component.tabs.panel-padding-y`
-
-### `semantic.space.inset.md`
-
-- **Camada**: semantic
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.3`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/tokens/generated/component.css` (1×)
-  - Tokens que referenciam: `component.alert.padding`
-
-### `semantic.space.inset.sm`
-
-- **Camada**: semantic
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.2`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `semantic.space.inset.xl`
-
-- **Camada**: semantic
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.6`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `semantic.space.inset.xs`
-
-- **Camada**: semantic
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.1`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+    - `css/components/alert.css` (1×)
+    - `css/components/button.css` (2×)
+    - `css/components/divider.css` (2×)
+    - `css/components/input.css` (1×)
+    - `css/components/radio.css` (1×)
+    - `css/components/select.css` (3×)
+    - `css/components/tabs.css` (1×)
+    - `css/components/textarea.css` (2×)
+    - `css/utilities/layout.css` (1×)
 
 ### `semantic.space.section.lg`
 
 - **Camada**: semantic
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.16`
+- **Alias**: → `foundation.dimension.64`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -5524,7 +5496,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: semantic
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.12`
+- **Alias**: → `foundation.dimension.48`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -5536,21 +5508,20 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: semantic
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.8`
+- **Alias**: → `foundation.dimension.32`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (1×)
-  - Tokens que referenciam: `component.modal.viewport-offset`
+    - `css/components/modal.css` (1×)
 
 ### `semantic.space.section.xl`
 
 - **Camada**: semantic
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.20`
+- **Alias**: → `foundation.dimension.80`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -5558,61 +5529,36 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
-### `semantic.state.disabled.background`
+### `semantic.space.sm`
 
 - **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.neutral.200`
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.dimension.8`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
+    - `css/components/alert.css` (1×)
     - `css/components/badge.css` (1×)
+    - `css/components/button.css` (2×)
+    - `css/components/card.css` (2×)
     - `css/components/checkbox.css` (1×)
     - `css/components/input.css` (1×)
-    - `css/components/radio.css` (1×)
-    - `css/components/select.css` (1×)
+    - `css/components/modal.css` (4×)
+    - `css/components/radio.css` (2×)
+    - `css/components/select.css` (2×)
     - `css/components/textarea.css` (1×)
     - `css/components/toggle.css` (1×)
-    - `css/tokens/generated/component.css` (2×)
-  - Tokens que referenciam: `component.button.background.toned.disabled`, `component.skeleton.fill`
+    - `css/components/tooltip.css` (1×)
+    - `css/utilities/layout.css` (1×)
 
-### `semantic.state.focus`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `semantic.brand.default`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `semantic.state.hover`
+### `semantic.space.xl`
 
 - **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.overlay.black.5`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/button.css` (2×)
-    - `css/components/checkbox.css` (1×)
-    - `css/components/modal.css` (1×)
-    - `css/components/radio.css` (1×)
-    - `css/components/toggle.css` (1×)
-
-### `semantic.state.pressed`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.overlay.black.10`
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.dimension.20`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -5620,6 +5566,34 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/button.css` (1×)
+    - `css/components/input.css` (1×)
+    - `css/components/select.css` (1×)
+    - `css/components/textarea.css` (1×)
+    - `css/utilities/layout.css` (1×)
+
+### `semantic.space.xs`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.dimension.4`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/alert.css` (1×)
+    - `css/components/badge.css` (1×)
+    - `css/components/breadcrumb.css` (1×)
+    - `css/components/button.css` (1×)
+    - `css/components/checkbox.css` (4×)
+    - `css/components/input.css` (3×)
+    - `css/components/modal.css` (1×)
+    - `css/components/radio.css` (5×)
+    - `css/components/select.css` (1×)
+    - `css/components/toggle.css` (3×)
+    - `css/components/tooltip.css` (1×)
+    - `css/utilities/layout.css` (1×)
 
 ### `semantic.surface.default`
 
@@ -5677,6 +5651,84 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
+### `semantic.toned.background.active`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.overlay.blue-600.28`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/button.css` (1×)
+
+### `semantic.toned.background.default`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.overlay.blue-600.12`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/badge.css` (1×)
+    - `css/components/button.css` (1×)
+
+### `semantic.toned.background.hover`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.overlay.blue-600.20`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/button.css` (1×)
+
+### `semantic.toned.content-default`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.brand.700`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/badge.css` (1×)
+    - `css/components/button.css` (1×)
+
+### `semantic.toned.content-disabled`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.neutral.400`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.typography.body.font-family.mono`
+
+- **Camada**: semantic
+- **Tipo**: `fontFamily`
+- **Alias**: → `foundation.typography.font.family.mono`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
 ### `semantic.typography.body.font-family.sans`
 
 - **Camada**: semantic
@@ -5693,7 +5745,19 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: semantic
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.typography.font.size.2xl`
+- **Alias**: → `foundation.typography.font.size.24`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.typography.body.font-size.2xs`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.typography.font.size.11`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -5705,7 +5769,79 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: semantic
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.typography.font.size.3xl`
+- **Alias**: → `foundation.typography.font.size.28`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.typography.body.font-size.4xl`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.typography.font.size.32`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.typography.body.font-size.5xl`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.typography.font.size.40`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.typography.body.font-size.6xl`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.typography.font.size.48`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.typography.body.font-size.7xl`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.typography.font.size.56`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.typography.body.font-size.8xl`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.typography.font.size.64`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.typography.body.font-size.9xl`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.typography.font.size.72`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -5717,7 +5853,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: semantic
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.typography.font.size.lg`
+- **Alias**: → `foundation.typography.font.size.18`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -5729,7 +5865,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: semantic
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.typography.font.size.md`
+- **Alias**: → `foundation.typography.font.size.16`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -5741,19 +5877,19 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: semantic
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.typography.font.size.sm`
+- **Alias**: → `foundation.typography.font.size.14`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `component.breadcrumb.font-size`, `component.radio.legend-font-size`, `component.tabs.font-size`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `semantic.typography.body.font-size.xl`
 
 - **Camada**: semantic
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.typography.font.size.xl`
+- **Alias**: → `foundation.typography.font.size.20`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -5765,13 +5901,13 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: semantic
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.typography.font.size.xs`
+- **Alias**: → `foundation.typography.font.size.12`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `component.badge.font-size`, `component.textarea.counter-font-size`, `component.tooltip.font-size`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `semantic.typography.body.font-weight.bold`
 
@@ -5795,7 +5931,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `component.badge.font-weight`, `component.breadcrumb.font-weight-current`, `component.button.font-weight`, `component.radio.legend-font-weight`, `component.tabs.font-weight`, `component.textarea.counter-font-weight`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `semantic.typography.body.font-weight.regular`
 
@@ -5819,7 +5955,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `component.avatar.font-weight`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `semantic.typography.body.letter-spacing.normal`
 
@@ -5845,11 +5981,35 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
+### `semantic.typography.body.letter-spacing.wider`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.typography.letter.spacing.wider`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
 ### `semantic.typography.body.line-height.2xl`
 
 - **Camada**: semantic
-- **Tipo**: `number`
-- **Alias**: → `foundation.typography.line.height.snug`
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.typography.line.height.34`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.typography.body.line-height.2xs`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.typography.line.height.16`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -5860,8 +6020,92 @@ Seção expandida com contexto, decisão e locais de uso.
 ### `semantic.typography.body.line-height.3xl`
 
 - **Camada**: semantic
-- **Tipo**: `number`
-- **Alias**: → `foundation.typography.line.height.tight`
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.typography.line.height.40`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.typography.body.line-height.4xl`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.typography.line.height.44`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.typography.body.line-height.5xl`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.typography.line.height.48`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.typography.body.line-height.6xl`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.typography.line.height.64`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.typography.body.line-height.7xl`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.typography.line.height.72`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.typography.body.line-height.8xl`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.typography.line.height.80`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.typography.body.line-height.9xl`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.typography.line.height.90`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.typography.body.line-height.lg`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.typography.line.height.28`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -5872,20 +6116,20 @@ Seção expandida com contexto, decisão e locais de uso.
 ### `semantic.typography.body.line-height.md`
 
 - **Camada**: semantic
-- **Tipo**: `number`
-- **Alias**: → `foundation.typography.line.height.normal`
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.typography.line.height.24`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `component.badge.line-height`, `component.textarea.field-line-height`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `semantic.typography.body.line-height.sm`
 
 - **Camada**: semantic
-- **Tipo**: `number`
-- **Alias**: → `foundation.typography.line.height.snug`
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.typography.line.height.20`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -5896,8 +6140,8 @@ Seção expandida com contexto, decisão e locais de uso.
 ### `semantic.typography.body.line-height.xl`
 
 - **Camada**: semantic
-- **Tipo**: `number`
-- **Alias**: → `foundation.typography.line.height.normal`
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.typography.line.height.32`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -5908,8 +6152,8 @@ Seção expandida com contexto, decisão e locais de uso.
 ### `semantic.typography.body.line-height.xs`
 
 - **Camada**: semantic
-- **Tipo**: `number`
-- **Alias**: → `foundation.typography.line.height.snug`
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.typography.line.height.18`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -5921,7 +6165,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: semantic
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.typography.font.size.md`
+- **Alias**: → `foundation.typography.font.size.16`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -5933,7 +6177,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: semantic
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.typography.font.size.sm`
+- **Alias**: → `foundation.typography.font.size.12`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -5945,7 +6189,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: semantic
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.typography.font.size.sm`
+- **Alias**: → `foundation.typography.font.size.12`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -5957,7 +6201,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: semantic
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.6`
+- **Alias**: → `foundation.spacing.24`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -5969,7 +6213,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: semantic
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.5`
+- **Alias**: → `foundation.spacing.20`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
@@ -5981,3723 +6225,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: semantic
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.4`
+- **Alias**: → `foundation.spacing.16`
 - **Sentido**: TODO
 - **Escopo**: —
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.alert.border-radius`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.radius.component`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/alert.css` (1×)
-
-### `component.alert.border-width`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.border.width.default`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/alert.css` (4×)
-
-### `component.alert.content-gap`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.gap.xs`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/alert.css` (1×)
-
-### `component.alert.focus-border-radius`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.radius.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/alert.css` (1×)
-
-### `component.alert.gap`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.gap.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/alert.css` (1×)
-
-### `component.alert.icon-size`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/alert.css` (3×)
-
-### `component.alert.padding`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.inset.md`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/alert.css` (1×)
-
-### `component.alert.transition-duration`
-
-- **Camada**: component
-- **Tipo**: `duration`
-- **Alias**: → `foundation.duration.fast`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/alert.css` (1×)
-
-### `component.alert.transition-timing`
-
-- **Camada**: component
-- **Tipo**: `cubicBezier`
-- **Alias**: → `foundation.ease.default`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/alert.css` (1×)
-
-### `component.avatar.border-radius`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.radius.full`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/avatar.css` (1×)
-
-### `component.avatar.font-family`
-
-- **Camada**: component
-- **Tipo**: `fontFamily`
-- **Alias**: → `semantic.typography.body.font-family.sans`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/avatar.css` (1×)
-
-### `component.avatar.font-size.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.typography.font.size.lg`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/avatar.css` (1×)
-
-### `component.avatar.font-size.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.typography.font.size.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/avatar.css` (1×)
-
-### `component.avatar.font-size.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.typography.font.size.xs`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/avatar.css` (1×)
-
-### `component.avatar.font-weight`
-
-- **Camada**: component
-- **Tipo**: `number`
-- **Alias**: → `semantic.typography.body.font-weight.semibold`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/avatar.css` (1×)
-
-### `component.avatar.icon-size.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.7`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/avatar.css` (1×)
-
-### `component.avatar.icon-size.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.5`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/avatar.css` (1×)
-
-### `component.avatar.icon-size.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.4`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/avatar.css` (1×)
-
-### `component.avatar.size.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.14`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/avatar.css` (2×)
-
-### `component.avatar.size.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.10`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/avatar.css` (2×)
-
-### `component.avatar.size.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.8`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/avatar.css` (2×)
-
-### `component.badge.border-radius`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.radius.full`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/badge.css` (1×)
-
-### `component.badge.font-size`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.xs`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/badge.css` (1×)
-
-### `component.badge.font-weight`
-
-- **Camada**: component
-- **Tipo**: `number`
-- **Alias**: → `semantic.typography.body.font-weight.medium`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/badge.css` (1×)
-
-### `component.badge.line-height`
-
-- **Camada**: component
-- **Tipo**: `number`
-- **Alias**: → `semantic.typography.body.line-height.md`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/badge.css` (1×)
-
-### `component.badge.padding-x`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.gap.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/badge.css` (1×)
-
-### `component.badge.padding-y`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.inset.2xs`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/badge.css` (1×)
-
-### `component.breadcrumb.focus-border-radius`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.radius.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/breadcrumb.css` (1×)
-
-### `component.breadcrumb.font-size`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/breadcrumb.css` (1×)
-
-### `component.breadcrumb.font-weight-current`
-
-- **Camada**: component
-- **Tipo**: `number`
-- **Alias**: → `semantic.typography.body.font-weight.medium`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/breadcrumb.css` (1×)
-
-### `component.breadcrumb.gap`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.gap.xs`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/breadcrumb.css` (1×)
-
-### `component.button.background.toned.active`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.brand.toned.active`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.button.background.toned.default`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.brand.toned.default`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.button.background.toned.disabled`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.state.disabled.background`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.button.background.toned.hover`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.brand.toned.hover`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.button.border-radius`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.radius.component`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/button.css` (3×)
-
-### `component.button.border-width`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.border.width.default`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/button.css` (1×)
-
-### `component.button.font-family`
-
-- **Camada**: component
-- **Tipo**: `fontFamily`
-- **Alias**: → `semantic.typography.body.font-family.sans`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/button.css` (1×)
-
-### `component.button.font-size.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.control.font-size.lg`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/button.css` (1×)
-
-### `component.button.font-size.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.control.font-size.md`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/button.css` (1×)
-
-### `component.button.font-size.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.control.font-size.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/button.css` (1×)
-
-### `component.button.font-weight`
-
-- **Camada**: component
-- **Tipo**: `number`
-- **Alias**: → `semantic.typography.body.font-weight.medium`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/button.css` (1×)
-
-### `component.button.foreground.toned.default`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.brand.content.default`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.button.foreground.toned.disabled`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.content.disabled`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.button.gap`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.gap.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/button.css` (1×)
-
-### `component.button.height.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.size.control.lg`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/button.css` (2×)
-
-### `component.button.height.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.size.control.md`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/button.css` (2×)
-
-### `component.button.height.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.size.control.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/button.css` (2×)
-
-### `component.button.icon-size.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.size.control.icon.lg`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/button.css` (3×)
-
-### `component.button.icon-size.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.size.control.icon.md`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/button.css` (3×)
-
-### `component.button.icon-size.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.size.control.icon.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/button.css` (3×)
-
-### `component.button.min-target-size`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.size.control.min-target`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/button.css` (1×)
-
-### `component.button.opacity-disabled`
-
-- **Camada**: component
-- **Tipo**: `number`
-- **Alias**: → `foundation.opacity.50`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/button.css` (1×)
-
-### `component.button.padding-x.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.control.padding-x.lg`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/button.css` (1×)
-
-### `component.button.padding-x.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.control.padding-x.md`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/button.css` (1×)
-
-### `component.button.padding-x.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.control.padding-x.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/button.css` (1×)
-
-### `component.button.padding-y.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.control.padding-y.lg`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/button.css` (1×)
-
-### `component.button.padding-y.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.control.padding-y.md`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/button.css` (1×)
-
-### `component.button.padding-y.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.control.padding-y.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/button.css` (1×)
-
-### `component.button.transition-duration`
-
-- **Camada**: component
-- **Tipo**: `duration`
-- **Alias**: → `foundation.duration.fast`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/button.css` (4×)
-
-### `component.button.transition-timing`
-
-- **Camada**: component
-- **Tipo**: `cubicBezier`
-- **Alias**: → `foundation.ease.default`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/button.css` (4×)
-
-### `component.card.body-font-size`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/card.css` (2×)
-
-### `component.card.body-line-height`
-
-- **Camada**: component
-- **Tipo**: `number`
-- **Alias**: → `semantic.typography.body.line-height.md`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/card.css` (1×)
-
-### `component.card.border-radius`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.radius.lg`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/card.css` (1×)
-
-### `component.card.border-width`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.border.width.default`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/card.css` (2×)
-
-### `component.card.gap`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.gap.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/card.css` (2×)
-
-### `component.card.padding`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.inset.lg`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/card.css` (4×)
-
-### `component.card.shadow-elevated`
-
-- **Camada**: component
-- **Tipo**: `shadow`
-- **Alias**: → `foundation.shadow.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/card.css` (1×)
-
-### `component.card.title-font-size`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.lg`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/card.css` (1×)
-
-### `component.card.title-font-weight`
-
-- **Camada**: component
-- **Tipo**: `number`
-- **Alias**: → `semantic.typography.body.font-weight.semibold`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/card.css` (1×)
-
-### `component.card.title-line-height`
-
-- **Camada**: component
-- **Tipo**: `number`
-- **Alias**: → `semantic.typography.body.line-height.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/card.css` (1×)
-
-### `component.checkbox.border-radius`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.radius.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/checkbox.css` (2×)
-
-### `component.checkbox.border-width`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.border.width.default`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/checkbox.css` (1×)
-
-### `component.checkbox.check-height.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.3`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.checkbox.check-height.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.2-5`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.checkbox.check-height.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.2`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.checkbox.check-width.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.1-5`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.checkbox.check-width.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.checkbox.check-width.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.1`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.checkbox.content-gap`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.gap.xs`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/checkbox.css` (1×)
-
-### `component.checkbox.control-size.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.6`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/checkbox.css` (2×)
-
-### `component.checkbox.control-size.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.5`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/checkbox.css` (2×)
-
-### `component.checkbox.control-size.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.4`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/checkbox.css` (2×)
-
-### `component.checkbox.description-font-size`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/checkbox.css` (1×)
-
-### `component.checkbox.description-font-weight`
-
-- **Camada**: component
-- **Tipo**: `number`
-- **Alias**: → `semantic.typography.body.font-weight.regular`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/checkbox.css` (1×)
-
-### `component.checkbox.description-line-height`
-
-- **Camada**: component
-- **Tipo**: `number`
-- **Alias**: → `semantic.typography.body.line-height.md`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/checkbox.css` (1×)
-
-### `component.checkbox.error-font-size`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.xs`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/checkbox.css` (1×)
-
-### `component.checkbox.error-margin-top`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.gap.xs`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/checkbox.css` (1×)
-
-### `component.checkbox.font-size`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.typography.font.size.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/checkbox.css` (1×)
-
-### `component.checkbox.gap`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.gap.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/checkbox.css` (1×)
-
-### `component.checkbox.helper-font-size`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.xs`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/checkbox.css` (1×)
-
-### `component.checkbox.helper-line-height`
-
-- **Camada**: component
-- **Tipo**: `number`
-- **Alias**: → `semantic.typography.body.line-height.md`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/checkbox.css` (1×)
-
-### `component.checkbox.label-font-size`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/checkbox.css` (1×)
-
-### `component.checkbox.label-font-weight`
-
-- **Camada**: component
-- **Tipo**: `number`
-- **Alias**: → `semantic.typography.body.font-weight.medium`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/checkbox.css` (1×)
-
-### `component.checkbox.label-line-height`
-
-- **Camada**: component
-- **Tipo**: `number`
-- **Alias**: → `semantic.typography.body.line-height.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/checkbox.css` (1×)
-
-### `component.checkbox.label-padding-x`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.gap.xs`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/checkbox.css` (1×)
-
-### `component.checkbox.label-padding-y`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/checkbox.css` (1×)
-
-### `component.checkbox.min-target-size`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.size.control.min-target`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/checkbox.css` (1×)
-
-### `component.checkbox.opacity-disabled`
-
-- **Camada**: component
-- **Tipo**: `number`
-- **Alias**: → `foundation.opacity.50`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/checkbox.css` (1×)
-
-### `component.checkbox.transition-duration`
-
-- **Camada**: component
-- **Tipo**: `duration`
-- **Alias**: → `foundation.duration.fast`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/checkbox.css` (4×)
-
-### `component.checkbox.transition-timing`
-
-- **Camada**: component
-- **Tipo**: `cubicBezier`
-- **Alias**: → `foundation.ease.default`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/checkbox.css` (4×)
-
-### `component.divider.spacing`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.gap.lg`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/divider.css` (2×)
-
-### `component.divider.thickness`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.border.width.default`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/divider.css` (2×)
-
-### `component.input.border-radius`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.radius.component`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (1×)
-
-### `component.input.border-width`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.border.width.default`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (1×)
-
-### `component.input.field-gap`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.gap.xs`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (1×)
-
-### `component.input.field-inner-padding-x`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.gap.xs`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (2×)
-
-### `component.input.font-size.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.control.font-size.lg`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (1×)
-
-### `component.input.font-size.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.control.font-size.md`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (1×)
-
-### `component.input.font-size.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.control.font-size.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (1×)
-
-### `component.input.gap`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.gap.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (1×)
-
-### `component.input.height.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.size.control.lg`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (1×)
-
-### `component.input.height.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.size.control.md`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (1×)
-
-### `component.input.height.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.size.control.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (1×)
-
-### `component.input.helper-font-size`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.xs`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (2×)
-
-### `component.input.helper-line-height`
-
-- **Camada**: component
-- **Tipo**: `number`
-- **Alias**: → `semantic.typography.body.line-height.md`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (2×)
-
-### `component.input.icon-size.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.size.control.icon.lg`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (3×)
-
-### `component.input.icon-size.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.size.control.icon.md`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (3×)
-
-### `component.input.icon-size.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.size.control.icon.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (3×)
-
-### `component.input.label-font-size`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (2×)
-
-### `component.input.label-font-weight`
-
-- **Camada**: component
-- **Tipo**: `number`
-- **Alias**: → `semantic.typography.body.font-weight.medium`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (2×)
-
-### `component.input.label-line-height`
-
-- **Camada**: component
-- **Tipo**: `number`
-- **Alias**: → `semantic.typography.body.line-height.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (2×)
-
-### `component.input.padding-x.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.control.padding-x.lg`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (1×)
-
-### `component.input.padding-x.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.control.padding-x.md`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (1×)
-
-### `component.input.padding-x.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.control.padding-x.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (1×)
-
-### `component.input.padding-y.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.control.padding-y.lg`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.input.padding-y.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.control.padding-y.md`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.input.padding-y.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.control.padding-y.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.input.transition-duration`
-
-- **Camada**: component
-- **Tipo**: `duration`
-- **Alias**: → `foundation.duration.fast`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (2×)
-
-### `component.input.transition-timing`
-
-- **Camada**: component
-- **Tipo**: `cubicBezier`
-- **Alias**: → `foundation.ease.default`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (2×)
-
-### `component.modal.body-font-size`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.body-line-height`
-
-- **Camada**: component
-- **Tipo**: `number`
-- **Alias**: → `semantic.typography.body.line-height.md`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.border-radius`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.radius.xl`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.border-width`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.border.width.default`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.close-border-radius`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.radius.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.close-padding`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.gap.xs`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.footer-gap`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.gap.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.footer-padding-top`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.gap.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.header-gap`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.gap.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.header-padding-bottom`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.gap.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.max-width.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.max-width.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.max-width.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.overlay-padding`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.inset.lg`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.padding`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.inset.lg`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (6×)
-
-### `component.modal.shadow`
-
-- **Camada**: component
-- **Tipo**: `shadow`
-- **Alias**: → `foundation.shadow.xl`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.title-font-size`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.lg`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.title-font-weight`
-
-- **Camada**: component
-- **Tipo**: `number`
-- **Alias**: → `semantic.typography.body.font-weight.semibold`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.title-line-height`
-
-- **Camada**: component
-- **Tipo**: `number`
-- **Alias**: → `semantic.typography.body.line-height.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.transition-duration`
-
-- **Camada**: component
-- **Tipo**: `duration`
-- **Alias**: → `foundation.duration.fast`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (2×)
-
-### `component.modal.transition-timing`
-
-- **Camada**: component
-- **Tipo**: `cubicBezier`
-- **Alias**: → `foundation.ease.default`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (2×)
-
-### `component.modal.viewport-offset`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.section.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.z-index`
-
-- **Camada**: component
-- **Tipo**: `number`
-- **Alias**: → `foundation.z.50`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.radio.border-radius-full`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.radius.full`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/radio.css` (2×)
-
-### `component.radio.border-width`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.border.width.default`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/radio.css` (1×)
-
-### `component.radio.content-gap`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.gap.xs`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/radio.css` (1×)
-
-### `component.radio.control-size.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.6`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/radio.css` (2×)
-
-### `component.radio.control-size.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.5`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/radio.css` (2×)
-
-### `component.radio.control-size.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.4`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/radio.css` (2×)
-
-### `component.radio.description-font-size`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/radio.css` (1×)
-
-### `component.radio.description-font-weight`
-
-- **Camada**: component
-- **Tipo**: `number`
-- **Alias**: → `semantic.typography.body.font-weight.regular`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/radio.css` (1×)
-
-### `component.radio.description-line-height`
-
-- **Camada**: component
-- **Tipo**: `number`
-- **Alias**: → `semantic.typography.body.line-height.md`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/radio.css` (1×)
-
-### `component.radio.dot-size.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.2-5`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/radio.css` (2×)
-
-### `component.radio.dot-size.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.2`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/radio.css` (2×)
-
-### `component.radio.dot-size.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.1-5`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/radio.css` (2×)
-
-### `component.radio.error-font-size`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.xs`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/radio.css` (1×)
-
-### `component.radio.error-margin-top`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.gap.xs`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/radio.css` (1×)
-
-### `component.radio.font-size`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.typography.font.size.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/radio.css` (1×)
-
-### `component.radio.gap`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.gap.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/radio.css` (1×)
-
-### `component.radio.group-gap`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.gap.xs`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/radio.css` (1×)
-
-### `component.radio.group-legend-margin-bottom`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.gap.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/radio.css` (1×)
-
-### `component.radio.group-margin-bottom`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.inset.lg`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/radio.css` (1×)
-
-### `component.radio.helper-font-size`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.xs`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/radio.css` (1×)
-
-### `component.radio.helper-line-height`
-
-- **Camada**: component
-- **Tipo**: `number`
-- **Alias**: → `semantic.typography.body.line-height.md`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/radio.css` (1×)
-
-### `component.radio.label-border-radius`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.radius.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/radio.css` (1×)
-
-### `component.radio.label-font-size`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/radio.css` (1×)
-
-### `component.radio.label-font-weight`
-
-- **Camada**: component
-- **Tipo**: `number`
-- **Alias**: → `semantic.typography.body.font-weight.medium`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/radio.css` (1×)
-
-### `component.radio.label-line-height`
-
-- **Camada**: component
-- **Tipo**: `number`
-- **Alias**: → `semantic.typography.body.line-height.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/radio.css` (1×)
-
-### `component.radio.label-padding-x`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.gap.xs`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/radio.css` (1×)
-
-### `component.radio.label-padding-y`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/radio.css` (1×)
-
-### `component.radio.legend-font-size`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/radio.css` (1×)
-
-### `component.radio.legend-font-weight`
-
-- **Camada**: component
-- **Tipo**: `number`
-- **Alias**: → `semantic.typography.body.font-weight.medium`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/radio.css` (1×)
-
-### `component.radio.min-target-size`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.size.control.min-target`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/radio.css` (1×)
-
-### `component.radio.opacity-disabled`
-
-- **Camada**: component
-- **Tipo**: `number`
-- **Alias**: → `foundation.opacity.50`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/radio.css` (2×)
-
-### `component.radio.transition-duration`
-
-- **Camada**: component
-- **Tipo**: `duration`
-- **Alias**: → `foundation.duration.fast`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/radio.css` (4×)
-
-### `component.radio.transition-timing`
-
-- **Camada**: component
-- **Tipo**: `cubicBezier`
-- **Alias**: → `foundation.ease.default`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/radio.css` (4×)
-
-### `component.select.arrow-offset.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.4`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (1×)
-
-### `component.select.arrow-offset.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.3`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (2×)
-
-### `component.select.arrow-offset.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.2`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (1×)
-
-### `component.select.arrow-size`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.4`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (3×)
-
-### `component.select.border-radius`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.radius.component`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (1×)
-
-### `component.select.border-width`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.border.width.default`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (1×)
-
-### `component.select.field-inner-padding-x`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.gap.xs`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (1×)
-
-### `component.select.font-size.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.control.font-size.lg`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (1×)
-
-### `component.select.font-size.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.control.font-size.md`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (1×)
-
-### `component.select.font-size.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.control.font-size.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (1×)
-
-### `component.select.gap`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.gap.xs`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (1×)
-
-### `component.select.height.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.size.control.lg`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (1×)
-
-### `component.select.height.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.size.control.md`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (1×)
-
-### `component.select.height.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.size.control.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (1×)
-
-### `component.select.padding-x.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.control.padding-x.lg`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (1×)
-
-### `component.select.padding-x.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.control.padding-x.md`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (2×)
-
-### `component.select.padding-x.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.control.padding-x.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (1×)
-
-### `component.select.padding-y.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.control.padding-y.lg`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.select.padding-y.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.control.padding-y.md`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.select.padding-y.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.control.padding-y.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.select.transition-duration`
-
-- **Camada**: component
-- **Tipo**: `duration`
-- **Alias**: → `foundation.duration.fast`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (2×)
-
-### `component.select.transition-timing`
-
-- **Camada**: component
-- **Tipo**: `cubicBezier`
-- **Alias**: → `foundation.ease.default`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (2×)
-
-### `component.skeleton.circle-border-radius`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.radius.full`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/skeleton.css` (1×)
-
-### `component.skeleton.circle-size`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.10`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/skeleton.css` (2×)
-
-### `component.skeleton.fill`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.state.disabled.background`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/skeleton.css` (1×)
-
-### `component.skeleton.rect-border-radius`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.radius.component`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/skeleton.css` (1×)
-
-### `component.skeleton.rect-height`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/skeleton.css` (1×)
-
-### `component.skeleton.text-border-radius`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.radius.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/skeleton.css` (1×)
-
-### `component.skeleton.text-height`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.4`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/skeleton.css` (1×)
-
-### `component.spinner.border-radius`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.radius.full`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/spinner.css` (1×)
-
-### `component.spinner.size.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.8`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/spinner.css` (2×)
-
-### `component.spinner.size.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.6`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/spinner.css` (2×)
-
-### `component.spinner.size.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.4`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/spinner.css` (2×)
-
-### `component.spinner.stroke-width.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/spinner.css` (1×)
-
-### `component.spinner.stroke-width.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.0-5`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/spinner.css` (1×)
-
-### `component.spinner.stroke-width.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/spinner.css` (1×)
-
-### `component.tabs.active-border-width`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.border.width.strong`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/tabs.css` (1×)
-
-### `component.tabs.border-width`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.border.width.default`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/tabs.css` (1×)
-
-### `component.tabs.focus-border-radius`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.radius.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/tabs.css` (2×)
-
-### `component.tabs.font-size`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/tabs.css` (1×)
-
-### `component.tabs.font-weight`
-
-- **Camada**: component
-- **Tipo**: `number`
-- **Alias**: → `semantic.typography.body.font-weight.medium`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/tabs.css` (1×)
-
-### `component.tabs.padding-x`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.inset.lg`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/tabs.css` (1×)
-
-### `component.tabs.padding-y`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.gap.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/tabs.css` (1×)
-
-### `component.tabs.panel-padding-y`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.inset.lg`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/tabs.css` (1×)
-
-### `component.tabs.transition-duration`
-
-- **Camada**: component
-- **Tipo**: `duration`
-- **Alias**: → `foundation.duration.fast`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/tabs.css` (2×)
-
-### `component.tabs.transition-timing`
-
-- **Camada**: component
-- **Tipo**: `cubicBezier`
-- **Alias**: → `foundation.ease.default`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/tabs.css` (2×)
-
-### `component.textarea.border-radius`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.radius.component`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/textarea.css` (1×)
-
-### `component.textarea.border-width`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.border.width.default`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/textarea.css` (1×)
-
-### `component.textarea.counter-font-size`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.xs`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/textarea.css` (1×)
-
-### `component.textarea.counter-font-weight`
-
-- **Camada**: component
-- **Tipo**: `number`
-- **Alias**: → `semantic.typography.body.font-weight.medium`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/textarea.css` (1×)
-
-### `component.textarea.field-inner-padding-x`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.gap.xs`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/textarea.css` (3×)
-
-### `component.textarea.field-line-height`
-
-- **Camada**: component
-- **Tipo**: `number`
-- **Alias**: → `semantic.typography.body.line-height.md`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/textarea.css` (1×)
-
-### `component.textarea.font-size.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.control.font-size.lg`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/textarea.css` (1×)
-
-### `component.textarea.font-size.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.control.font-size.md`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/textarea.css` (1×)
-
-### `component.textarea.font-size.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.control.font-size.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/textarea.css` (1×)
-
-### `component.textarea.min-height.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/textarea.css` (1×)
-
-### `component.textarea.min-height.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.20`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/textarea.css` (1×)
-
-### `component.textarea.min-height.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/textarea.css` (1×)
-
-### `component.textarea.padding-x.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.control.padding-x.lg`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/textarea.css` (1×)
-
-### `component.textarea.padding-x.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.control.padding-x.md`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/textarea.css` (1×)
-
-### `component.textarea.padding-x.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.control.padding-x.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/textarea.css` (1×)
-
-### `component.textarea.padding-y.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.control.padding-y.lg`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/textarea.css` (1×)
-
-### `component.textarea.padding-y.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.control.padding-y.md`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/textarea.css` (1×)
-
-### `component.textarea.padding-y.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.control.padding-y.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/textarea.css` (1×)
-
-### `component.textarea.transition-duration`
-
-- **Camada**: component
-- **Tipo**: `duration`
-- **Alias**: → `foundation.duration.fast`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/textarea.css` (2×)
-
-### `component.textarea.transition-timing`
-
-- **Camada**: component
-- **Tipo**: `cubicBezier`
-- **Alias**: → `foundation.ease.default`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/textarea.css` (2×)
-
-### `component.toggle.border-radius-full`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.radius.full`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/toggle.css` (2×)
-
-### `component.toggle.border-width`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.border.width.default`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/toggle.css` (1×)
-
-### `component.toggle.content-gap`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.gap.xs`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/toggle.css` (1×)
-
-### `component.toggle.description-font-size`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/toggle.css` (1×)
-
-### `component.toggle.description-font-weight`
-
-- **Camada**: component
-- **Tipo**: `number`
-- **Alias**: → `semantic.typography.body.font-weight.regular`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/toggle.css` (1×)
-
-### `component.toggle.description-line-height`
-
-- **Camada**: component
-- **Tipo**: `number`
-- **Alias**: → `semantic.typography.body.line-height.md`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/toggle.css` (1×)
-
-### `component.toggle.font-size`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.typography.font.size.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/toggle.css` (1×)
-
-### `component.toggle.gap`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.gap.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/toggle.css` (1×)
-
-### `component.toggle.helper-font-size`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.xs`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/toggle.css` (1×)
-
-### `component.toggle.helper-line-height`
-
-- **Camada**: component
-- **Tipo**: `number`
-- **Alias**: → `semantic.typography.body.line-height.md`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/toggle.css` (1×)
-
-### `component.toggle.label-border-radius`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.radius.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/toggle.css` (1×)
-
-### `component.toggle.label-font-size`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/toggle.css` (1×)
-
-### `component.toggle.label-font-weight`
-
-- **Camada**: component
-- **Tipo**: `number`
-- **Alias**: → `semantic.typography.body.font-weight.medium`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/toggle.css` (1×)
-
-### `component.toggle.label-line-height`
-
-- **Camada**: component
-- **Tipo**: `number`
-- **Alias**: → `semantic.typography.body.line-height.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/toggle.css` (1×)
-
-### `component.toggle.label-padding-x`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.gap.xs`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/toggle.css` (1×)
-
-### `component.toggle.label-padding-y`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/toggle.css` (1×)
-
-### `component.toggle.min-target-size`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.size.control.min-target`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/toggle.css` (1×)
-
-### `component.toggle.opacity-disabled`
-
-- **Camada**: component
-- **Tipo**: `number`
-- **Alias**: → `foundation.opacity.50`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/toggle.css` (1×)
-
-### `component.toggle.thumb-size.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/toggle.css` (2×)
-
-### `component.toggle.thumb-size.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.3-5`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/toggle.css` (2×)
-
-### `component.toggle.thumb-size.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.2-5`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/toggle.css` (2×)
-
-### `component.toggle.track-height.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.6`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/toggle.css` (1×)
-
-### `component.toggle.track-height.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.5`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/toggle.css` (1×)
-
-### `component.toggle.track-height.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.4`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/toggle.css` (1×)
-
-### `component.toggle.track-width.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.11`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/toggle.css` (1×)
-
-### `component.toggle.track-width.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.9`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/toggle.css` (1×)
-
-### `component.toggle.track-width.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.spacing.7`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/toggle.css` (1×)
-
-### `component.toggle.transition-duration`
-
-- **Camada**: component
-- **Tipo**: `duration`
-- **Alias**: → `foundation.duration.fast`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/toggle.css` (5×)
-
-### `component.toggle.transition-timing`
-
-- **Camada**: component
-- **Tipo**: `cubicBezier`
-- **Alias**: → `foundation.ease.default`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/toggle.css` (5×)
-
-### `component.tooltip.border-radius`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.radius.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/tooltip.css` (1×)
-
-### `component.tooltip.font-size`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.xs`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/tooltip.css` (1×)
-
-### `component.tooltip.padding-x`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.gap.sm`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/tooltip.css` (1×)
-
-### `component.tooltip.padding-y`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.gap.xs`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/tooltip.css` (1×)
-
-### `component.tooltip.transition-duration`
-
-- **Camada**: component
-- **Tipo**: `duration`
-- **Alias**: → `foundation.duration.fast`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/tooltip.css` (1×)
-
-### `component.tooltip.transition-timing`
-
-- **Camada**: component
-- **Tipo**: `cubicBezier`
-- **Alias**: → `foundation.ease.default`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/tooltip.css` (1×)
-
-### `component.tooltip.z-index`
-
-- **Camada**: component
-- **Tipo**: `number`
-- **Alias**: → `foundation.z.50`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/tooltip.css` (1×)
 

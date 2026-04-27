@@ -57,8 +57,8 @@
 }
 
 .ds-alert__close:focus-visible {
-  outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color);
-  outline-offset: var(--ds-focus-ring-offset);
+  outline: var(--ds-border-width-focus) solid var(--ds-border-focus);
+  outline-offset: var(--ds-border-width-focus);
   border-radius: var(--ds-radius-sm);
 }
 

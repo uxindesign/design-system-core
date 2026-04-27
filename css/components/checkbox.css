@@ -84,8 +84,8 @@
 
 /* Focus */
 .ds-checkbox:focus-visible {
-  outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color);
-  outline-offset: var(--ds-focus-ring-offset);
+  outline: var(--ds-border-width-focus) solid var(--ds-border-focus);
+  outline-offset: var(--ds-border-width-focus);
 }
 
 /* Disabled */

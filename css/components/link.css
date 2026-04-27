@@ -24,7 +24,7 @@
 /* :visited intencionalmente omitido — decisão do owner */
 
 .ds-link:focus-visible {
-  outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color);
+  outline: var(--ds-border-width-focus) solid var(--ds-border-focus);
   outline-offset: 2px;
   border-radius: var(--ds-radius-sm);
 }

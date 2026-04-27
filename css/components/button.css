@@ -11,7 +11,7 @@
   font-family: var(--ds-body-font-family-sans);
   /* Figma: button label = Inter Bold (700) em todos os tamanhos */
   font-weight: var(--ds-body-font-weight-bold);
-  line-height: var(--ds-control-line-height-md);
+  line-height: var(--ds-body-line-height-sm);
   text-decoration: none;
   border: var(--ds-border-width-default) solid transparent;
   border-radius: var(--ds-radius-md);
@@ -26,13 +26,13 @@
   /* Default size: md (40px) */
   height: var(--ds-size-xl);
   padding: var(--ds-space-control-padding-10) var(--ds-space-lg);
-  font-size: var(--ds-control-font-size-md);
+  font-size: var(--ds-body-font-size-sm);
   min-width: var(--ds-size-2xl);
 }
 
 .ds-btn:focus-visible {
-  outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color);
-  outline-offset: var(--ds-focus-ring-offset);
+  outline: var(--ds-border-width-focus) solid var(--ds-border-focus);
+  outline-offset: var(--ds-border-width-focus);
 }
 
 .ds-btn[disabled],
@@ -56,8 +56,8 @@
 .ds-btn--sm {
   height: var(--ds-size-lg);
   padding: var(--ds-space-sm) var(--ds-space-md);
-  font-size: var(--ds-control-font-size-sm);
-  line-height: var(--ds-control-line-height-sm);
+  font-size: var(--ds-body-font-size-sm);
+  line-height: var(--ds-body-line-height-2xs);
   border-radius: var(--ds-radius-md);
   /* Figma: gap entre ícone e label no Small é 4px (space-xs) */
   gap: var(--ds-space-xs);
@@ -71,8 +71,8 @@
 .ds-btn--lg {
   height: var(--ds-size-2xl);
   padding: var(--ds-space-md) var(--ds-space-xl);
-  font-size: var(--ds-control-font-size-lg);
-  line-height: var(--ds-control-line-height-lg);
+  font-size: var(--ds-body-font-size-md);
+  line-height: var(--ds-body-line-height-md);
   border-radius: var(--ds-radius-md);
 }
 

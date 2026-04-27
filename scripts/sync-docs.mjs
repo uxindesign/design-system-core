@@ -539,7 +539,7 @@ const THEME_COLOR_SECTIONS = [
     'semantic.feedback.success.border-default',
     'semantic.feedback.success.content-default',
     'semantic.feedback.success.content-contrast',
-    'semantic.feedback.success.content-contrast-disabled',
+    'semantic.feedback.success.content-disabled',
   ]},
   { id: 'feedback-warning', pt: 'Feedback — Warning', en: 'Feedback -- Warning', tokens: [
     'semantic.feedback.warning.background.default',
@@ -558,7 +558,7 @@ const THEME_COLOR_SECTIONS = [
     'semantic.feedback.error.border-default',
     'semantic.feedback.error.content-default',
     'semantic.feedback.error.content-contrast',
-    'semantic.feedback.error.content-contrast-disabled',
+    'semantic.feedback.error.content-disabled',
   ]},
   { id: 'feedback-info', pt: 'Feedback — Info', en: 'Feedback -- Info', tokens: [
     'semantic.feedback.info.background.default',
@@ -573,7 +573,7 @@ const THEME_COLOR_SECTIONS = [
     'semantic.overlay.default',
     'semantic.overlay.medium',
     'semantic.overlay.strong',
-    'semantic.focus.ring.color',
+    'semantic.border.focus',
   ]},
 ];
 

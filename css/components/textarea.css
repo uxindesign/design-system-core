@@ -20,15 +20,15 @@
 
 .ds-textarea,
 .ds-textarea--md {
-  font-size: var(--ds-control-font-size-md);
+  font-size: var(--ds-body-font-size-sm);
 }
 
 .ds-textarea--sm {
-  font-size: var(--ds-control-font-size-sm);
+  font-size: var(--ds-body-font-size-sm);
 }
 
 .ds-textarea--lg {
-  font-size: var(--ds-control-font-size-lg);
+  font-size: var(--ds-body-font-size-md);
 }
 
 /* Field
@@ -49,7 +49,7 @@
   min-width: 0;
   /* Figma Textarea Field: padding pl/pr=space/lg (16), pt/pb=space/control/padding/10 (10) */
   padding: var(--ds-space-control-padding-10) var(--ds-space-lg);
-  line-height: var(--ds-control-line-height-md);
+  line-height: var(--ds-body-line-height-sm);
 }
 
 .ds-textarea--sm .ds-textarea__field {
@@ -79,8 +79,8 @@
 /* Focused */
 .ds-textarea:focus-within {
   border-color: var(--ds-border-focus);
-  outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color);
-  outline-offset: var(--ds-focus-ring-offset);
+  outline: var(--ds-border-width-focus) solid var(--ds-border-focus);
+  outline-offset: var(--ds-border-width-focus);
 }
 
 /* Error */
@@ -90,8 +90,8 @@
 
 .ds-textarea--error:focus-within {
   border-color: var(--ds-feedback-error-background-default);
-  outline: var(--ds-focus-ring-width) solid var(--ds-feedback-error-background-default);
-  outline-offset: var(--ds-focus-ring-offset);
+  outline: var(--ds-border-width-focus) solid var(--ds-feedback-error-background-default);
+  outline-offset: var(--ds-border-width-focus);
 }
 
 /* Disabled */

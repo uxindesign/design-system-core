@@ -58,7 +58,7 @@
       "$description": "Ação com borda neutra. ADR-014.",
       "content-default": {
         "$type": "color",
-        "$value": "{foundation.color.neutral.900}"
+        "$value": "{foundation.color.neutral.700}"
       },
       "content-disabled": {
         "$type": "color",
@@ -66,11 +66,11 @@
       },
       "border-default": {
         "$type": "color",
-        "$value": "{foundation.color.neutral.400}"
+        "$value": "{foundation.color.neutral.500}"
       },
       "border-hover": {
         "$type": "color",
-        "$value": "{foundation.color.neutral.600}"
+        "$value": "{foundation.color.neutral.700}"
       },
       "border-disabled": {
         "$type": "color",
@@ -112,18 +112,23 @@
       "$description": "Link inline (branded text). ADR-014.",
       "content-default": {
         "$type": "color",
-        "$value": "{foundation.color.brand.600}",
+        "$value": "{foundation.color.brand.700}",
         "$description": "Links em estado default."
       },
       "content-hover": {
         "$type": "color",
-        "$value": "{foundation.color.brand.700}",
+        "$value": "{foundation.color.brand.800}",
         "$description": "Links em estado hover."
       },
       "content-active": {
         "$type": "color",
         "$value": "{foundation.color.brand.800}",
         "$description": "Links em estado pressed (mousedown/active). Brand step abaixo de hover."
+      },
+      "content-disabled": {
+        "$type": "color",
+        "$value": "{foundation.color.neutral.400}",
+        "$description": "Links em estado disabled."
       }
     },
     "feedback": {
@@ -142,10 +147,10 @@
           "$value": "{foundation.color.neutral.50}",
           "$description": "Conteúdo de alto contraste sobre fill success sólido."
         },
-        "content-contrast-disabled": {
+        "content-disabled": {
           "$type": "color",
           "$value": "{foundation.color.overlay.white.80}",
-          "$description": "Conteúdo disabled sobre fill success disabled."
+          "$description": "Conteúdo success disabled."
         },
         "background": {
           "default": {
@@ -218,10 +223,10 @@
           "$value": "{foundation.color.neutral.50}",
           "$description": "Conteúdo de alto contraste sobre fill error sólido."
         },
-        "content-contrast-disabled": {
+        "content-disabled": {
           "$type": "color",
           "$value": "{foundation.color.overlay.white.80}",
-          "$description": "Conteúdo disabled sobre fill error disabled."
+          "$description": "Conteúdo error disabled."
         },
         "background": {
           "default": {
@@ -315,7 +320,7 @@
       },
       "overlay": {
         "$type": "color",
-        "$value": "{foundation.color.overlay.black.40}",
+        "$value": "{foundation.color.overlay.black.60}",
         "$description": "Modal/dialog overlay backdrop"
       },
       "disabled": {
@@ -365,9 +370,14 @@
         "$type": "color",
         "$value": "{foundation.color.neutral.200}"
       },
+      "inverse": {
+        "$type": "color",
+        "$value": "{foundation.color.neutral.50}",
+        "$description": "Borda usada sobre fundos invertidos (escuros em light mode)."
+      },
       "focus": {
         "$type": "color",
-        "$value": "{foundation.color.brand.600}"
+        "$value": "{foundation.color.brand.500}"
       },
       "brand": {
         "$type": "color",
@@ -375,13 +385,9 @@
       },
       "error": {
         "$type": "color",
-        "$value": "{semantic.feedback.error.background.default}"
+        "$value": "{foundation.color.red.600}"
       },
       "width": {
-        "subtle": {
-          "$type": "dimension",
-          "$value": "{foundation.border.width.1}"
-        },
         "default": {
           "$type": "dimension",
           "$value": "{foundation.border.width.1}"
@@ -432,25 +438,6 @@
       "strong": {
         "$type": "color",
         "$value": "{foundation.color.overlay.black.40}"
-      }
-    },
-    "focus": {
-      "ring": {
-        "width": {
-          "$type": "dimension",
-          "$value": "{foundation.border.width.2}",
-          "$description": "Focus ring stroke width (2px)"
-        },
-        "offset": {
-          "$type": "dimension",
-          "$value": "{foundation.border.width.2}",
-          "$description": "Gap between element and focus ring (2px)"
-        },
-        "color": {
-          "$type": "color",
-          "$value": "{semantic.border.focus}",
-          "$description": "Focus ring color, maps to outline-color"
-        }
       }
     },
     "opacity": {
@@ -675,42 +662,6 @@
       }
     },
     "typography": {
-      "control": {
-        "font-size": {
-          "sm": {
-            "$type": "dimension",
-            "$value": "{foundation.typography.font.size.14}",
-            "$description": "14px. Font size for sm controls (Button, Input, Select)."
-          },
-          "md": {
-            "$type": "dimension",
-            "$value": "{foundation.typography.font.size.14}",
-            "$description": "14px. Font size for md controls."
-          },
-          "lg": {
-            "$type": "dimension",
-            "$value": "{foundation.typography.font.size.16}",
-            "$description": "16px. Font size for lg controls."
-          }
-        },
-        "line-height": {
-          "sm": {
-            "$type": "dimension",
-            "$value": "{foundation.dimension.16}",
-            "$description": "16px. Matches icon-sm. height = padY*2 + lineHeight = 8+16+8 = 32."
-          },
-          "md": {
-            "$type": "dimension",
-            "$value": "{foundation.dimension.20}",
-            "$description": "20px. Matches icon-md. height = 10+20+10 = 40."
-          },
-          "lg": {
-            "$type": "dimension",
-            "$value": "{foundation.dimension.24}",
-            "$description": "24px. Matches icon-lg. height = 12+24+12 = 48."
-          }
-        }
-      },
       "body": {
         "$description": "Typography para texto UI geral (body, labels, títulos). Fora do escopo 'control' (ADR-006). Ver ADR-013.",
         "font-family": {

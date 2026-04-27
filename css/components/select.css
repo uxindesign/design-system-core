@@ -24,19 +24,19 @@
 .ds-select--md {
   height: var(--ds-size-xl);
   padding: 0 var(--ds-space-lg);
-  font-size: var(--ds-control-font-size-md);
+  font-size: var(--ds-body-font-size-sm);
 }
 
 .ds-select--sm {
   height: var(--ds-size-lg);
   padding: 0 var(--ds-space-md);
-  font-size: var(--ds-control-font-size-sm);
+  font-size: var(--ds-body-font-size-sm);
 }
 
 .ds-select--lg {
   height: var(--ds-size-2xl);
   padding: 0 var(--ds-space-xl);
-  font-size: var(--ds-control-font-size-lg);
+  font-size: var(--ds-body-font-size-md);
 }
 
 /* Field (native select)
@@ -123,8 +123,8 @@
 /* Focused */
 .ds-select:focus-within {
   border-color: var(--ds-border-focus);
-  outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color);
-  outline-offset: var(--ds-focus-ring-offset);
+  outline: var(--ds-border-width-focus) solid var(--ds-border-focus);
+  outline-offset: var(--ds-border-width-focus);
 }
 
 /* Error */
@@ -134,8 +134,8 @@
 
 .ds-select--error:focus-within {
   border-color: var(--ds-feedback-error-background-default);
-  outline: var(--ds-focus-ring-width) solid var(--ds-feedback-error-background-default);
-  outline-offset: var(--ds-focus-ring-offset);
+  outline: var(--ds-border-width-focus) solid var(--ds-feedback-error-background-default);
+  outline-offset: var(--ds-border-width-focus);
 }
 
 /* Disabled */

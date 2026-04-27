@@ -8,8 +8,34 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 
 ## [Não publicado]
 
+### Adicionado
+
+- **CI check Figma↔JSON via `.figma-snapshot.json`** — `verify:tokens` agora compara JSON do repo contra snapshot das 387 Variables Figma e falha em divergência. Snapshot gerado por `use_figma` em batches (~50KB cada), gitignored. Ver `docs/process-figma-sync.md`.
+
+### Mudado
+
+- **Reconciliação Figma↔JSON completa.** 23 tokens com VALUE_DRIFT corrigidos pra refletir Figma como autoridade de valor (ADR-003):
+  - `foundation.color.disabled.{brand,success,error}-dark` ganharam alpha (estavam sem em hex). `foundation.radius.999` corrigido (`9999px` → `999`).
+  - Semantic: `outline.{border-default,border-hover,content-default}`, `link.{content-default,content-hover}`, `border.{focus,focus-error,error}`, `outline.background.hover`, `ghost.background.hover`, `feedback.{success,warning,error,info}.background.subtle` (dark) — todos os aliases atualizados pra refletir escolhas de cor do Figma.
+- **4 tokens semantic novos** adicionados pra alinhar com Figma: `link.content-disabled`, `border.inverse`, `feedback.{success,error}.content-disabled` (light + dark).
+- **Refatoração de Foundation→Semantic em CSS de componentes** (12 arquivos). Componentes não consomem mais Foundation direto via `--ds-focus-ring-*` ou `--ds-control-*`:
+  - Focus ring → `--ds-border-focus` + `--ds-border-width-focus` (mesmo valor pra offset). Bate com Figma `border/focus` e `border/width/focus`.
+  - Control typography → `--ds-body-font-size-{sm,md}` + `--ds-body-line-height-{2xs,sm,md}` espelhando Text Styles `control/label-md`, `label/md`, `label/lg` que Figma aplica nos componentes.
+- **`background/overlay` em ambos modos no Figma** unificados em `overlay/black/60`. Antes: light=`black/40`, dark=`white/40` (contraditório). Agora ambos consistentes em 60% black, alinhado com mercado (Material/Bootstrap/Tailwind usam ~50-60% black em modal scrim).
+- **Variable nova `link/content/active` no Figma** (Semantic, scope TEXT_FILL): light alias `brand.800`, dark alias `brand.200`. Espelha `semantic.link.content-active` adicionado em beta.3 — JSON e Figma agora convergem.
+
+### Removido
+
+- **Tokens Semantic redundantes ou sem consumer real**:
+  - `semantic.focus.ring.{width,offset,color}` — substituídos por `border.focus` e `border.width.focus` que Figma já tem.
+  - `semantic.typography.control.{font-size,line-height}.{sm,md,lg}` — Figma não tem Variables `control/typography/*`; usa Text Styles `control/*` que bindam Semantic `body/*`. CSS migrado pra `body.*` direto.
+  - `semantic.feedback.{success,error}.content-contrast-disabled` — sem consumer no CSS.
+  - `semantic.border.width.subtle` — sem consumer no CSS.
+
 ### Corrigido
 
+- **`scripts/lib/figma-dtcg.mjs`**: normalizer Figma↔JSON colapsa hífen→ponto em paths (`primary.content-default` ↔ `primary.content.default`). Antes inflava 119 falsos positivos.
+- **`scripts/tokens-verify.mjs`**: `normalize()` reconhece equivalência entre número puro (Figma Float) e string `Npx`/`Nrem` (CSS gerado). Antes flagava `999 ≠ "999px"` como drift.
 - **Topbar do site sempre acima de todo conteúdo de página** (`docs/layout.css`, `docs/foundations-zindex.html`):
   - Topbar (e sidebar mobile + overlay) sobem para `calc(var(--ds-z-50) + 10)` (= 60), acima de toda a escala `--ds-z-*` (que termina em 50/toast). Antes, com header em `--ds-z-50`, conteúdo de página com z-50 empatava e podia paintar por cima via DOM order.
   - **Demo de z-index** ganhou `isolation: isolate` no `.ds-zindex-stack` — o container era `position: relative` sem `z-index`, então não criava stacking context, e o card `.ds-zindex-layer--50` escapava pra raiz e atravessava a topbar quando o demo era rolado pra baixo da topbar. Com `isolation`, a escala 0–50 fica local ao demo (que era a intenção).

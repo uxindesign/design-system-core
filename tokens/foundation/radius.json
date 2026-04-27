@@ -33,7 +33,7 @@
       },
       "999": {
         "$type": "dimension",
-        "$value": "9999px",
+        "$value": 999,
         "$description": "Pill/circle. Token name follows Figma."
       }
     }

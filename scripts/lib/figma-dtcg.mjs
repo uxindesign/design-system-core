@@ -304,7 +304,23 @@ export function normalizeForCompare(v) {
   s = s.replace(/\s+/g, "");
   // Normaliza números dentro de strings (ex.: rgba) arredondando pra 4 casas.
   s = s.replace(/-?\d+\.\d+/g, (m) => String(roundFloat(parseFloat(m))));
+  // Normaliza hífens dentro de aliases DTCG ({foundation.color.brand-light} ↔
+  // {foundation.color.brand.light}). Figma usa "/" → "." na conversão pra path,
+  // enquanto JSON pode ter chaves kebab ("content-default"). Pra equivalência
+  // semântica entre ambos os lados, colapsamos hífen em ponto dentro de
+  // referências entre chaves.
+  s = s.replace(/\{([^}]+)\}/g, (_, inner) => `{${inner.replace(/-/g, ".")}}`);
   return s;
+}
+
+/**
+ * Normaliza um path DTCG para forma canônica unificando o separador entre Figma
+ * e JSON. Figma converte `a/b/c` → `a.b.c`. JSON pode armazenar `a.b-c` (com
+ * último segmento kebab) representando o mesmo token. Esta função colapsa todos
+ * os hífens em pontos pra que ambas as origens produzam a mesma chave.
+ */
+export function canonicalPathKey(path) {
+  return path.replace(/-/g, ".");
 }
 
 // Tokens com representação CSS-específica no JSON (fallback stack, weight numérico,
@@ -334,6 +350,11 @@ const JSON_ONLY_PATHS = [
   /^foundation\.typography\.letter\.spacing\./,        // em no CSS gerado
   // ADR-013 Fase 8: semantic wrappers pra categorias Foundation JSON-only
   /^semantic\.motion\./,                               // motion (Figma não representa)
+  // 2xs (11px) é micro-text usado em docs/layout.css. Figma omite por estar
+  // abaixo do mínimo recomendado WCAG 1.4.4 (12px); CSS mantém pra meta-info.
+  /^foundation\.typography\.font\.size\.11$/,
+  /^semantic\.typography\.body\.font-size\.2xs$/,
+  /^semantic\.typography\.body\.line-height\.2xs$/,
 ];
 
 // ADR-013 extension: Semantic/Component tokens whose alias targets a
@@ -395,10 +416,23 @@ export function compareStates(expected, actual) {
   for (const file of allFiles) {
     const exp = expected[file] || {};
     const act = actual[file] || {};
-    const allKeys = new Set([...Object.keys(exp), ...Object.keys(act)]);
-    for (const key of allKeys) {
-      const e = exp[key];
-      const a = act[key];
+    // Build canonical lookup tables. Figma e JSON podem usar separadores
+    // diferentes pro mesmo token (ex.: `primary.content.default` vs
+    // `primary.content-default`). Indexa-se cada lado por chave canônica
+    // (hífen→ponto) preservando a chave original pra reporting/--write.
+    const expByCanon = new Map();
+    for (const k of Object.keys(exp)) expByCanon.set(canonicalPathKey(k), k);
+    const actByCanon = new Map();
+    for (const k of Object.keys(act)) actByCanon.set(canonicalPathKey(k), k);
+    const allCanon = new Set([...expByCanon.keys(), ...actByCanon.keys()]);
+    for (const canonKey of allCanon) {
+      const expKey = expByCanon.get(canonKey);
+      const actKey = actByCanon.get(canonKey);
+      // Pra reporting, usa a chave do JSON se existir (preserva forma kebab),
+      // senão a chave do Figma.
+      const key = actKey || expKey;
+      const e = expKey ? exp[expKey] : undefined;
+      const a = actKey ? act[actKey] : undefined;
       if (e && !a) {
         // Token só no Figma
         if (isFigmaOnlyToken(key)) {
