@@ -28,6 +28,7 @@
   --ds-ghost-background-active: var(--ds-overlay-black-10);
   --ds-link-content-default: var(--ds-color-brand-600); /** Links em estado default. */
   --ds-link-content-hover: var(--ds-color-brand-700); /** Links em estado hover. */
+  --ds-link-content-active: var(--ds-color-brand-800); /** Links em estado pressed (mousedown/active). Brand step abaixo de hover. */
   --ds-feedback-success-border-default: var(--ds-color-green-500);
   --ds-feedback-success-content-default: var(--ds-color-green-700); /** Cor success como conteúdo (mensagens, ícones sobre fundo claro). */
   --ds-feedback-success-content-contrast: var(--ds-color-neutral-50); /** Conteúdo de alto contraste sobre fill success sólido. */

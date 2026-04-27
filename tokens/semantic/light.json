@@ -119,6 +119,11 @@
         "$type": "color",
         "$value": "{foundation.color.brand.700}",
         "$description": "Links em estado hover."
+      },
+      "content-active": {
+        "$type": "color",
+        "$value": "{foundation.color.brand.800}",
+        "$description": "Links em estado pressed (mousedown/active). Brand step abaixo de hover."
       }
     },
     "feedback": {

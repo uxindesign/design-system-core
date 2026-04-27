@@ -8,12 +8,39 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 
 ## [Não publicado]
 
+(Nada ainda — próxima release acumulará aqui.)
+
+## [1.0.0-beta.3] — 2026-04-27
+
+Link como text style (não Button variant) com estados WCAG/W3C completos. Topbar fixes do site de docs. Modal Cancel rebind no Figma alinhando com decisão de manter Cancel como Ghost Button.
+
+### Adicionado
+
+- **`.ds-link` CSS class** (`css/components/link.css`) — text style pra hyperlinks inline em prosa, bold + underline, herdando dimensões de `body/*`. 4 sizes (`xs`/`sm`/`md`/`lg`) com line-heights pareados. Estados WCAG/W3C: `:hover`, `:active`, `:focus-visible`. `:visited` intencionalmente omitido (decisão do owner — Material 3/Apple HIG omitem em conteúdo curado).
+- **Token `semantic.link.content-active`** (`brand.800` light / `brand.200` dark) — pressed state distinto de hover. Estados existentes `content-default` e `content-hover` mantidos.
+- **4 Text Styles `link/{xs,sm,md,lg}` em Figma** com bindings completos (fontSize, lineHeight, fontFamily, fontStyle Bold, letterSpacing) + `textDecoration: UNDERLINE` direto no Text Style (Figma Plugin API suporta). Cor aplicada em consumidor via `link/content/default` (Text Styles não armazenam fills).
+- **Showcase rows pra Link** em `docs/foundations-typography.html` — 4 sizes documentados com tokens.
+
+### Mudado
+
+- **Modal Cancel button no Figma** rebindado em todas as 3 variants (Sm/Md/Lg): label color e glyph fills de `link/content/default` → `ghost/content/default`. Cancel volta a ser visualmente Ghost neutral (alinha com `.ds-btn--ghost` já em uso no CSS).
+- **Capa Figma**: badge versão `v1.0.0-beta.1` → `v1.0.0-beta.3` (pulou beta.2). Estilos de Texto count `25 → 29` (+4 link styles).
+- **Changelog Figma**: nova entrada `v1.0.0-beta.3 — Abril 2026` com 7 bullets.
+
 ### Corrigido
 
 - **Topbar do site de docs** (`docs/layout.css`): três bugs visuais corrigidos:
   - **Hamburger mobile**: `.ds-menu-toggle` usava `--ds-content-default` (escuro em light mode) sobre fundo brand. Agora consome `--_hfg`, ficando branco em ambos os modos. Hover ganhou estado.
   - **Z-index**: topbar subia até `--ds-z-40`, ficando no mesmo nível de modais (`z-40`) e abaixo de toasts (`z-50`). Conteúdo da página passava por cima da topbar. Subido para `--ds-z-50`. `.ds-sidebar-overlay` também foi pra `--ds-z-50` para cobrir a topbar quando o drawer mobile abrir (ordem DOM mantém header → overlay → sidebar).
   - **Dark mode com transparência**: header dark usava `--ds-toned-background-default`, que resolve para `--ds-overlay-blue-600-12` (12% alpha), deixando o conteúdo passar por trás. Trocado por `--ds-color-brand-900` (sólido, mantém identidade da marca e separa visualmente da sidebar — que usa `--ds-surface-raised`).
+
+### Removido
+
+- **`.ds-btn--link` variant** revertido de `css/components/button.css`. Adicionado erroneamente em beta.2 — Link não é Button variant (overlap com Ghost), é text style. Substituído por `.ds-link` em arquivo dedicado.
+
+### Sobre versão
+
+Beta.3 corrige decisão arquitetural de beta.2 (Link como Button variant) e adiciona pattern correto (Link como text style com estados WCAG/W3C completos). Topbar fixes do owner consolidados nesta release.
 
 ## [1.0.0-beta.2] — 2026-04-27
 

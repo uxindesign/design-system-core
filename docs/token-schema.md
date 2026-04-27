@@ -2,24 +2,24 @@
 
 > Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-27. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
-> Versão atual: **1.0.0-beta.2**
+> Versão atual: **1.0.0-beta.3**
 
 ## Estado atual
 
 | Aspecto | Valor |
 |---------|-------|
-| Versão | 1.0.0-beta.2 |
+| Versão | 1.0.0-beta.3 |
 | Formato canônico | JSON (DTCG) em `tokens/` |
 | CSS gerado | Style Dictionary → `css/tokens/generated/` |
 | Pipeline | ✅ index.css importa apenas generated/ |
-| Paridade light/dark | ✅ 171 tokens em ambos os modos |
+| Paridade light/dark | ✅ 172 tokens em ambos os modos |
 
 ## Camadas
 
 | Camada | Tokens | Arquivos |
 |--------|--------|----------|
 | Foundation | **262** | 9 |
-| Semantic | **171 × 2 modos** | light.json + dark.json |
+| Semantic | **172 × 2 modos** | light.json + dark.json |
 | Component | **0** | 0 |
 
 ## Foundation (262 tokens)
@@ -36,7 +36,7 @@
 | `typography.json` | 54 |
 | `z-index.json` | 6 |
 
-## Semantic (171 tokens × 2 modos)
+## Semantic (172 tokens × 2 modos)
 
 Categorias raiz em light.json:
 

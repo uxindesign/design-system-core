@@ -2,7 +2,7 @@
 
 > Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-27. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
-> Versão atual: **1.0.0-beta.2**
+> Versão atual: **1.0.0-beta.3**
 
 ## Status geral
 
@@ -40,8 +40,8 @@
 | Coleção | Tokens | Status |
 |---------|--------|--------|
 | Foundation | 262 | 🟢 |
-| Semantic (light) | 171 | 🟢 |
-| Semantic (dark) | 171 | 🟢 |
+| Semantic (light) | 172 | 🟢 |
+| Semantic (dark) | 172 | 🟢 |
 | Component | 0 | 🟢 |
 
 ## Pipeline

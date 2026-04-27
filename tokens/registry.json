@@ -7690,6 +7690,20 @@
         "tokens": [],
         "figma": []
       }
+    },
+    "semantic.link.content-active": {
+      "layer": "semantic",
+      "type": "color",
+      "references": "foundation.color.brand.200",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
     }
   }
 }

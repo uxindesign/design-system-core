@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0-beta.3",
   "count": 18,
   "components": [
     {
@@ -32,8 +32,6 @@
         "ds-ghost-background-active",
         "ds-ghost-background-hover",
         "ds-ghost-content-default",
-        "ds-link-content-default",
-        "ds-link-content-hover",
         "ds-motion-duration-fast",
         "ds-motion-ease-default",
         "ds-opacity-disabled",
@@ -72,7 +70,6 @@
         "ghost",
         "icon-only",
         "lg",
-        "link",
         "loading",
         "outline",
         "sm",

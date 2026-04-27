@@ -71,6 +71,36 @@
 <p>A partir de <code>1.0.0-beta.1</code>, o sistema entrou em <strong>fase beta</strong> — releases incrementam <code>1.0.0-beta.N</code> até decisão do owner pra dropping do tag → <code>1.0.0</code> oficial. Tags 0.x permanecem como histórico pré-beta. Regras em <code>docs/process-versioning.html</code>.</p>
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
 <p>(Nada ainda — próxima release acumulará aqui.)</p>
+<h2>[1.0.0-beta.3] — 2026-04-27</h2>
+<p>Link como text style (não Button variant) com estados WCAG/W3C completos. Topbar fixes do site de docs. Modal Cancel rebind no Figma alinhando com decisão de manter Cancel como Ghost Button.</p>
+<h3>Adicionado</h3>
+<ul>
+<li><strong><code>.ds-link</code> CSS class</strong> (<code>css/components/link.css</code>) — text style pra hyperlinks inline em prosa, bold + underline, herdando dimensões de <code>body/*</code>. 4 sizes (<code>xs</code>/<code>sm</code>/<code>md</code>/<code>lg</code>) com line-heights pareados. Estados WCAG/W3C: <code>:hover</code>, <code>:active</code>, <code>:focus-visible</code>. <code>:visited</code> intencionalmente omitido (decisão do owner — Material 3/Apple HIG omitem em conteúdo curado).</li>
+<li><strong>Token <code>semantic.link.content-active</code></strong> (<code>brand.800</code> light / <code>brand.200</code> dark) — pressed state distinto de hover. Estados existentes <code>content-default</code> e <code>content-hover</code> mantidos.</li>
+<li><strong>4 Text Styles <code>link/{xs,sm,md,lg}</code> em Figma</strong> com bindings completos (fontSize, lineHeight, fontFamily, fontStyle Bold, letterSpacing) + <code>textDecoration: UNDERLINE</code> direto no Text Style (Figma Plugin API suporta). Cor aplicada em consumidor via <code>link/content/default</code> (Text Styles não armazenam fills).</li>
+<li><strong>Showcase rows pra Link</strong> em <code>docs/foundations-typography.html</code> — 4 sizes documentados com tokens.</li>
+</ul>
+<h3>Mudado</h3>
+<ul>
+<li><strong>Modal Cancel button no Figma</strong> rebindado em todas as 3 variants (Sm/Md/Lg): label color e glyph fills de <code>link/content/default</code> → <code>ghost/content/default</code>. Cancel volta a ser visualmente Ghost neutral (alinha com <code>.ds-btn--ghost</code> já em uso no CSS).</li>
+<li><strong>Capa Figma</strong>: badge versão <code>v1.0.0-beta.1</code> → <code>v1.0.0-beta.3</code> (pulou beta.2). Estilos de Texto count <code>25 → 29</code> (+4 link styles).</li>
+<li><strong>Changelog Figma</strong>: nova entrada <code>v1.0.0-beta.3 — Abril 2026</code> com 7 bullets.</li>
+</ul>
+<h3>Corrigido</h3>
+<ul>
+<li><strong>Topbar do site de docs</strong> (<code>docs/layout.css</code>): três bugs visuais corrigidos:<ul>
+<li><strong>Hamburger mobile</strong>: <code>.ds-menu-toggle</code> usava <code>--ds-content-default</code> (escuro em light mode) sobre fundo brand. Agora consome <code>--_hfg</code>, ficando branco em ambos os modos. Hover ganhou estado.</li>
+<li><strong>Z-index</strong>: topbar subia até <code>--ds-z-40</code>, ficando no mesmo nível de modais (<code>z-40</code>) e abaixo de toasts (<code>z-50</code>). Conteúdo da página passava por cima da topbar. Subido para <code>--ds-z-50</code>. <code>.ds-sidebar-overlay</code> também foi pra <code>--ds-z-50</code> para cobrir a topbar quando o drawer mobile abrir (ordem DOM mantém header → overlay → sidebar).</li>
+<li><strong>Dark mode com transparência</strong>: header dark usava <code>--ds-toned-background-default</code>, que resolve para <code>--ds-overlay-blue-600-12</code> (12% alpha), deixando o conteúdo passar por trás. Trocado por <code>--ds-color-brand-900</code> (sólido, mantém identidade da marca e separa visualmente da sidebar — que usa <code>--ds-surface-raised</code>).</li>
+</ul>
+</li>
+</ul>
+<h3>Removido</h3>
+<ul>
+<li><strong><code>.ds-btn--link</code> variant</strong> revertido de <code>css/components/button.css</code>. Adicionado erroneamente em beta.2 — Link não é Button variant (overlap com Ghost), é text style. Substituído por <code>.ds-link</code> em arquivo dedicado.</li>
+</ul>
+<h3>Sobre versão</h3>
+<p>Beta.3 corrige decisão arquitetural de beta.2 (Link como Button variant) e adiciona pattern correto (Link como text style com estados WCAG/W3C completos). Topbar fixes do owner consolidados nesta release.</p>
 <h2>[1.0.0-beta.2] — 2026-04-27</h2>
 <p>Sincronização Figma↔código: alinhamento de utilities/textStyles per size + nova variant <code>.ds-btn--link</code> espelhando padrão de DS modernos (Material Text Button, Atlassian Link Button, Polaris Plain). Atualização da documentação no Figma (Capa + Changelog) refletindo o estado atual.</p>
 <h3>Adicionado</h3>

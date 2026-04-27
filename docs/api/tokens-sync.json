@@ -1,10 +1,10 @@
 {
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0-beta.3",
   "totals": {
-    "jsonTokens": 604,
+    "jsonTokens": 606,
     "sharedTokens": 262,
-    "lightTokens": 171,
-    "darkTokens": 171,
+    "lightTokens": 172,
+    "darkTokens": 172,
     "errors": 0,
     "warnings": 1
   },
@@ -15,7 +15,7 @@
     "registryCompleteness": [
       {
         "level": "warning",
-        "message": "433 entries com campos TODO (sentido/contexto/decisao). Preencha incrementalmente.",
+        "message": "434 entries com campos TODO (sentido/contexto/decisao). Preencha incrementalmente.",
         "sample": [
           "foundation.color.neutral.50",
           "foundation.color.neutral.100",
