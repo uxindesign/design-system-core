@@ -33,7 +33,9 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
   align-items: center;
   justify-content: space-between;
   padding: 0 var(--ds-dimension-24);
-  z-index: var(--ds-z-50);
+  /* Chrome do site fica acima de toda a escala --ds-z-* (que vai até 50/toast).
+     +10 garante que conteúdo da página jamais sobreponha a topbar. */
+  z-index: calc(var(--ds-z-50) + 10);
 }
 
 /* Dark mode: brand-900 sólido. Mantém identidade da marca e separa visualmente
@@ -568,7 +570,9 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
   .ds-sidebar {
     transform: translateX(-100%);
     transition: transform var(--ds-duration-slow) var(--ds-ease-default);
-    z-index: var(--ds-z-50);
+    /* Acompanha a topbar no nível de chrome — DOM order (header → overlay → sidebar)
+       garante o empilhamento correto quando o drawer abre. */
+    z-index: calc(var(--ds-z-50) + 10);
   }
 
   .ds-sidebar--open {
@@ -589,14 +593,14 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
   }
 }
 
-/* Overlay for mobile sidebar — sits above topbar (z-50) e abaixo do drawer (mesmo z-50, mas
-   depois no DOM). DOM order: header → overlay → sidebar, todos em z-50. */
+/* Overlay for mobile sidebar — mesmo nível de chrome da topbar; DOM order
+   (header → overlay → sidebar) define o empilhamento. */
 .ds-sidebar-overlay {
   display: none;
   position: fixed;
   inset: 0;
   background-color: var(--ds-background-overlay);
-  z-index: var(--ds-z-50);
+  z-index: calc(var(--ds-z-50) + 10);
 }
 
 .ds-sidebar-overlay--visible {
