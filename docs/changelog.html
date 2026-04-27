@@ -73,15 +73,7 @@
 <h3>Adicionado</h3>
 <ul>
 <li><strong>CI check Figma↔JSON via <code>.figma-snapshot.json</code></strong> — <code>verify:tokens</code> agora compara JSON do repo contra snapshot das 387 Variables Figma e falha em divergência. Snapshot gerado por <code>use_figma</code> em batches (~50KB cada), gitignored. Ver <code>docs/process-figma-sync.md</code>.</li>
-<li><strong>Redesign visual das seções &quot;Duas camadas&quot; e &quot;Como funciona a cadeia de alias&quot;</strong> em <code>docs/token-architecture.html</code>:<ul>
-<li><strong>Cards diferenciados por papel</strong>: Foundation com acento neutro (<code>--ds-content-secondary</code>), Semantic com acento brand (<code>--ds-primary-background-default</code>). Antes os dois usavam <code>--ds-feedback-info-background-subtle</code> no header e ficavam idênticos visualmente — contradizia o ponto da página.</li>
-<li><strong>Chips de contagem</strong> (<code>236 tokens</code>, <code>171 × 2 modos</code>) ao lado do nome de cada layer, em pill com mono.</li>
-<li><strong>Exemplos em rows formatadas</strong> (key · arrow · value) com bg <code>--ds-background-subtle</code> e tags <code>LIGHT</code>/<code>DARK</code> pra tokens mode-aware.</li>
-<li><strong>Connector com SVG arrow</strong> + linha dashed entre os cards, em vez de seta <code>→</code> em texto.</li>
-<li><strong>Cadeia de alias</strong> virou diagrama com rail vertical + dot por step (Semantic outline → Foundation outline → Valor filled brand). Step final inclui swatch de cor real ao lado do hex, deixando explícito que a cadeia termina num valor visual.</li>
-<li>Tudo em <code>--ds-surface-raised</code> + <code>--ds-shadow-sm</code>, dando peso de &quot;diagrama arquitetural&quot; em vez de callout washed.</li>
-</ul>
-</li>
+<li><strong>Redesign da seção &quot;Camadas e cadeia de alias&quot;</strong> em <code>docs/token-architecture.html</code>. Duas seções viraram uma. Foundation primeiro (01), Semantic depois (02), em dois cards lado-a-lado usando o vocabulário visual do site (<code>--ds-radius-12</code>, <code>--ds-border-default</code>, <code>--ds-surface-default</code>, <code>&lt;code&gt;</code> inline padrão). Sem componente novo, sem display all-caps, sem chips, sem swatches/ícones. A cadeia de alias virou um parágrafo prosaico abaixo dos cards (já implícita no card 02 via aliases <code>{color.blue.600}</code>). Card usa <code>--ds-surface-default</code> (não <code>--ds-surface-raised</code>) pra contrastar com o <code>&lt;code&gt;</code> inline em dark mode (que usa <code>--ds-background-subtle</code> ≡ <code>--ds-surface-raised</code> ≡ neutral-800).</li>
 </ul>
 <h3>Mudado</h3>
 <ul>
@@ -113,6 +105,7 @@
 <ul>
 <li><strong><code>scripts/lib/figma-dtcg.mjs</code></strong>: normalizer Figma↔JSON colapsa hífen→ponto em paths (<code>primary.content-default</code> ↔ <code>primary.content.default</code>). Antes inflava 119 falsos positivos.</li>
 <li><strong><code>scripts/tokens-verify.mjs</code></strong>: <code>normalize()</code> reconhece equivalência entre número puro (Figma Float) e string <code>Npx</code>/<code>Nrem</code> (CSS gerado). Antes flagava <code>999 ≠ &quot;999px&quot;</code> como drift.</li>
+<li><strong><code>.ds-code-block</code> regredido sem estilo</strong> desde o refactor <code>d5c4fd2</code> (extração de inline styles): a regra CSS não foi migrada pra <code>docs/layout.css</code>, então os blocos JSON DTCG em todas as páginas de foundations apareciam como prosa solta. Recolocada em layout.css usando <code>--ds-background-inverse</code> + <code>--ds-content-inverse</code> (mesma paleta do <code>&lt;pre&gt;</code> global em <code>reset.css</code>).</li>
 <li><strong>Topbar do site sempre acima de todo conteúdo de página</strong> (<code>docs/layout.css</code>, <code>docs/foundations-zindex.html</code>):<ul>
 <li>Topbar (e sidebar mobile + overlay) sobem para <code>calc(var(--ds-z-50) + 10)</code> (= 60), acima de toda a escala <code>--ds-z-*</code> (que termina em 50/toast). Antes, com header em <code>--ds-z-50</code>, conteúdo de página com z-50 empatava e podia paintar por cima via DOM order.</li>
 <li><strong>Demo de z-index</strong> ganhou <code>isolation: isolate</code> no <code>.ds-zindex-stack</code> — o container era <code>position: relative</code> sem <code>z-index</code>, então não criava stacking context, e o card <code>.ds-zindex-layer--50</code> escapava pra raiz e atravessava a topbar quando o demo era rolado pra baixo da topbar. Com <code>isolation</code>, a escala 0–50 fica local ao demo (que era a intenção).</li>

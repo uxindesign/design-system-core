@@ -653,6 +653,22 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
 }
 
 /* ---------------------------------------------------------
+   Code block (DTCG JSON em foundations-*, anywhere a code dump is needed)
+   --------------------------------------------------------- */
+.ds-code-block {
+  background-color: var(--ds-background-inverse);
+  color: var(--ds-content-inverse);
+  padding: var(--ds-dimension-16) var(--ds-dimension-20);
+  border-radius: var(--ds-radius-lg);
+  font-family: var(--ds-font-family-mono);
+  font-size: var(--ds-body-font-size-xs);
+  line-height: var(--ds-line-height-relaxed);
+  overflow-x: auto;
+  margin-bottom: var(--ds-dimension-24);
+  white-space: pre;
+}
+
+/* ---------------------------------------------------------
    Callouts (info / success / warning)
    --------------------------------------------------------- */
 .ds-callout {

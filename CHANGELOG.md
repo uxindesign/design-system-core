@@ -11,13 +11,7 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 ### Adicionado
 
 - **CI check Figma↔JSON via `.figma-snapshot.json`** — `verify:tokens` agora compara JSON do repo contra snapshot das 387 Variables Figma e falha em divergência. Snapshot gerado por `use_figma` em batches (~50KB cada), gitignored. Ver `docs/process-figma-sync.md`.
-- **Redesign visual das seções "Duas camadas" e "Como funciona a cadeia de alias"** em `docs/token-architecture.html`:
-  - **Cards diferenciados por papel**: Foundation com acento neutro (`--ds-content-secondary`), Semantic com acento brand (`--ds-primary-background-default`). Antes os dois usavam `--ds-feedback-info-background-subtle` no header e ficavam idênticos visualmente — contradizia o ponto da página.
-  - **Chips de contagem** (`236 tokens`, `171 × 2 modos`) ao lado do nome de cada layer, em pill com mono.
-  - **Exemplos em rows formatadas** (key · arrow · value) com bg `--ds-background-subtle` e tags `LIGHT`/`DARK` pra tokens mode-aware.
-  - **Connector com SVG arrow** + linha dashed entre os cards, em vez de seta `→` em texto.
-  - **Cadeia de alias** virou diagrama com rail vertical + dot por step (Semantic outline → Foundation outline → Valor filled brand). Step final inclui swatch de cor real ao lado do hex, deixando explícito que a cadeia termina num valor visual.
-  - Tudo em `--ds-surface-raised` + `--ds-shadow-sm`, dando peso de "diagrama arquitetural" em vez de callout washed.
+- **Redesign da seção "Camadas e cadeia de alias"** em `docs/token-architecture.html`. Duas seções viraram uma. Foundation primeiro (01), Semantic depois (02), em dois cards lado-a-lado usando o vocabulário visual do site (`--ds-radius-12`, `--ds-border-default`, `--ds-surface-default`, `<code>` inline padrão). Sem componente novo, sem display all-caps, sem chips, sem swatches/ícones. A cadeia de alias virou um parágrafo prosaico abaixo dos cards (já implícita no card 02 via aliases `{color.blue.600}`). Card usa `--ds-surface-default` (não `--ds-surface-raised`) pra contrastar com o `<code>` inline em dark mode (que usa `--ds-background-subtle` ≡ `--ds-surface-raised` ≡ neutral-800).
 
 ### Mudado
 
@@ -43,6 +37,7 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 
 - **`scripts/lib/figma-dtcg.mjs`**: normalizer Figma↔JSON colapsa hífen→ponto em paths (`primary.content-default` ↔ `primary.content.default`). Antes inflava 119 falsos positivos.
 - **`scripts/tokens-verify.mjs`**: `normalize()` reconhece equivalência entre número puro (Figma Float) e string `Npx`/`Nrem` (CSS gerado). Antes flagava `999 ≠ "999px"` como drift.
+- **`.ds-code-block` regredido sem estilo** desde o refactor `d5c4fd2` (extração de inline styles): a regra CSS não foi migrada pra `docs/layout.css`, então os blocos JSON DTCG em todas as páginas de foundations apareciam como prosa solta. Recolocada em layout.css usando `--ds-background-inverse` + `--ds-content-inverse` (mesma paleta do `<pre>` global em `reset.css`).
 - **Topbar do site sempre acima de todo conteúdo de página** (`docs/layout.css`, `docs/foundations-zindex.html`):
   - Topbar (e sidebar mobile + overlay) sobem para `calc(var(--ds-z-50) + 10)` (= 60), acima de toda a escala `--ds-z-*` (que termina em 50/toast). Antes, com header em `--ds-z-50`, conteúdo de página com z-50 empatava e podia paintar por cima via DOM order.
   - **Demo de z-index** ganhou `isolation: isolate` no `.ds-zindex-stack` — o container era `position: relative` sem `z-index`, então não criava stacking context, e o card `.ds-zindex-layer--50` escapava pra raiz e atravessava a topbar quando o demo era rolado pra baixo da topbar. Com `isolation`, a escala 0–50 fica local ao demo (que era a intenção).
