@@ -34,6 +34,7 @@ const modeArg = arg('--mode');
 const jsonOut = arg('--json');
 const port = parseInt(arg('--port') || '8765', 10);
 const updateBaseline = args.includes('--update-baseline');
+const useServer = args.includes('--server'); // default: file:// (mais robusto em CI Linux)
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 const BASELINE_PATH = path.join(ROOT, '.a11y-baseline.json');
@@ -63,18 +64,28 @@ async function waitForPort(p, timeoutMs = 5000) {
   return false;
 }
 
-// Subir servidor local
-const server = spawn('python3', ['-m', 'http.server', String(port)], {
-  cwd: ROOT,
-  stdio: ['ignore', 'ignore', 'pipe']
-});
-server.on('error', (e) => { console.error('server failed:', e.message); process.exit(2); });
+// Build URL pra navegação. file:// é mais robusto em CI (sem dependência de
+// servidor) — usado por padrão. --server força http.server pra debug local.
+function buildUrl(file) {
+  if (useServer) return `http://localhost:${port}/${file}`;
+  return `file://${path.join(ROOT, file)}`;
+}
 
-const ready = await waitForPort(port);
-if (!ready) {
-  console.error(`Servidor não subiu na porta ${port} em 5s.`);
-  server.kill();
-  process.exit(2);
+// Subir servidor local só se --server explícito
+let server = null;
+if (useServer) {
+  server = spawn('python3', ['-m', 'http.server', String(port)], {
+    cwd: ROOT,
+    stdio: ['ignore', 'ignore', 'pipe']
+  });
+  server.on('error', (e) => { console.error('server failed:', e.message); process.exit(2); });
+
+  const ready = await waitForPort(port);
+  if (!ready) {
+    console.error(`Servidor não subiu na porta ${port} em 5s.`);
+    server.kill();
+    process.exit(2);
+  }
 }
 
 let exitCode = 0;
@@ -106,20 +117,33 @@ try {
   let runIdx = 0;
   const totalRuns = pages.length * modes.length;
 
+  // CI runners (Linux) podem ser mais lentos que Mac local — timeout maior + retry.
+  const NAV_TIMEOUT = 30000;
+  const NAV_RETRIES = 2;
+
   for (const file of pages) {
     for (const mode of modes) {
       runIdx++;
       process.stdout.write(`\r[${runIdx}/${totalRuns}] ${file} (${mode})${' '.repeat(20)}`);
-      try {
-        await page.goto(`http://localhost:${port}/${file}`, { waitUntil: 'domcontentloaded', timeout: 10000 });
-        await page.evaluate((m) => document.documentElement.dataset.mode = m, mode);
-        await page.waitForTimeout(100); // pequeno settle
-        const r = await new AxeBuilder({ page })
-          .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'])
-          .analyze();
-        results.push({ file, mode, violations: r.violations });
-      } catch (e) {
-        results.push({ file, mode, violations: [], error: e.message });
+      let lastErr = null;
+      let success = false;
+      for (let attempt = 0; attempt <= NAV_RETRIES && !success; attempt++) {
+        try {
+          await page.goto(buildUrl(file), { waitUntil: 'domcontentloaded', timeout: NAV_TIMEOUT });
+          await page.evaluate((m) => document.documentElement.dataset.mode = m, mode);
+          await page.waitForTimeout(100); // pequeno settle
+          const r = await new AxeBuilder({ page })
+            .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'])
+            .analyze();
+          results.push({ file, mode, violations: r.violations });
+          success = true;
+        } catch (e) {
+          lastErr = e;
+          if (attempt < NAV_RETRIES) await page.waitForTimeout(500); // pequena pausa antes do retry
+        }
+      }
+      if (!success) {
+        results.push({ file, mode, violations: [], error: lastErr?.message || 'unknown' });
       }
     }
   }
@@ -246,7 +270,7 @@ try {
     console.log(`\n✅ PASS — ${currentFingerprints.size} violação(ões) na baseline aceita; 0 novas`);
   }
 } finally {
-  server.kill();
+  if (server) server.kill();
   // server takes a moment to release port; not blocking
 }
 
