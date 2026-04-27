@@ -653,7 +653,12 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
 }
 
 /* ---------------------------------------------------------
-   Code block (DTCG JSON em foundations-*, anywhere a code dump is needed)
+   Code block (DTCG JSON em foundations-*, anywhere a code dump is needed).
+   Usa os mesmos semantics que o <pre> global em reset.css.
+   TODO: code blocks deveriam ser "always dark" em ambos os modos (padrão
+   terminal/editor), mas não temos semantic pra isso. Issue: precisamos
+   de `code.background.default` + `code.content.default` via ADR. Por
+   enquanto, --ds-background-inverse flipa em dark (sintoma conhecido).
    --------------------------------------------------------- */
 .ds-code-block {
   background-color: var(--ds-background-inverse);
