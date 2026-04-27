@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-beta.2",
   "count": 18,
   "components": [
     {
@@ -32,6 +32,8 @@
         "ds-ghost-background-active",
         "ds-ghost-background-hover",
         "ds-ghost-content-default",
+        "ds-link-content-default",
+        "ds-link-content-hover",
         "ds-motion-duration-fast",
         "ds-motion-ease-default",
         "ds-opacity-disabled",
@@ -70,6 +72,7 @@
         "ghost",
         "icon-only",
         "lg",
+        "link",
         "loading",
         "outline",
         "sm",
@@ -313,11 +316,13 @@
       "cssFile": "css/components/radio.css",
       "tokens": [
         "ds-background-disabled",
+        "ds-body-font-size-md",
         "ds-body-font-size-sm",
         "ds-body-font-size-xs",
         "ds-body-font-weight-bold",
         "ds-body-font-weight-medium",
         "ds-body-font-weight-regular",
+        "ds-body-line-height-2xs",
         "ds-body-line-height-md",
         "ds-body-line-height-sm",
         "ds-border-control-default",
@@ -414,9 +419,9 @@
       "cssFile": "css/components/badge.css",
       "tokens": [
         "ds-background-disabled",
-        "ds-body-font-size-sm",
+        "ds-body-font-size-xs",
         "ds-body-font-weight-bold",
-        "ds-body-line-height-sm",
+        "ds-body-line-height-xs",
         "ds-border-strong",
         "ds-content-inverse",
         "ds-content-secondary",

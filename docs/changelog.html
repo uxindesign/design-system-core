@@ -71,6 +71,26 @@
 <p>A partir de <code>1.0.0-beta.1</code>, o sistema entrou em <strong>fase beta</strong> — releases incrementam <code>1.0.0-beta.N</code> até decisão do owner pra dropping do tag → <code>1.0.0</code> oficial. Tags 0.x permanecem como histórico pré-beta. Regras em <code>docs/process-versioning.html</code>.</p>
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
 <p>(Nada ainda — próxima release acumulará aqui.)</p>
+<h2>[1.0.0-beta.2] — 2026-04-27</h2>
+<p>Sincronização Figma↔código: alinhamento de utilities/textStyles per size + nova variant <code>.ds-btn--link</code> espelhando padrão de DS modernos (Material Text Button, Atlassian Link Button, Polaris Plain). Atualização da documentação no Figma (Capa + Changelog) refletindo o estado atual.</p>
+<h3>Adicionado</h3>
+<ul>
+<li><strong><code>.ds-btn--link</code> variant</strong> em <code>css/components/button.css</code>: button text-only com cor <code>link/content/default</code>, sem background/border, underline em hover. Cobre o padrão Modal Cancel e ações de baixa ênfase. Espelha Material 3 (Text Button), Atlassian (Link Button), Polaris (Plain), Spectrum (style=text).</li>
+</ul>
+<h3>Mudado</h3>
+<ul>
+<li><strong>Badge label</strong> alinhado com Figma: <code>font-size sm (14)</code> → <code>xs (12)</code> + <code>line-height sm (20)</code> → <code>xs (18)</code>. Match exato com textStyle <code>label/xs</code> que Figma agora usa.</li>
+<li><strong>Radio label</strong> ganhou variants per size: Sm usa <code>control/label-md</code> (14/16), Md usa <code>label/md</code> (14/20), Lg usa <code>label/lg</code> (16/24). Antes CSS aplicava 14/20 em todos os tamanhos. Implementado via <code>:has()</code> selector.</li>
+<li><strong>Figma Capa atualizada</strong>: badge de versão <code>v0.5.17</code> → <code>v1.0.0-beta.1</code>. Counts atualizados (Coleções 4→2 após eliminação Component layer, Estilos de Texto 24→25, Tokens 285+→386).</li>
+<li><strong>Figma Changelog</strong>: nova entrada <code>v1.0.0-beta.1 — Abril 2026</code> espelhando CHANGELOG.md do repo. A partir daqui versionamento Figma e código alinhados.</li>
+</ul>
+<h3>Documentação</h3>
+<ul>
+<li><strong>Política de versionamento beta</strong> estabilizada: schema <code>1.0.0-beta.N</code> substitui 0.x até decisão do owner pra dropping → <code>1.0.0</code> oficial. Detalhes em <code>docs/process-versioning.md</code>.</li>
+<li><strong>Style=Link variant em Figma</strong> identificado como pendente (~60 variants × Style/Size/State/booleans). Deferido pra sessão dedicada com escopo Figma. CSS já tem <code>.ds-btn--link</code> pronto pra consumir quando variant existir.</li>
+</ul>
+<h3>Sobre versão</h3>
+<p>Beta.2 fecha pendências do beta.1 (descrições/counts Figma desatualizados, drift Badge/Radio per size). Próxima beta deve focar em snapshot Figma (CI Figma↔JSON), Style=Link variants no Figma, e brand-principles.md.</p>
 <h2>[1.0.0-beta.1] — 2026-04-26</h2>
 <p>Primeiro release em fase beta. Consolida todo trabalho pós-0.8.0: alinhamento de 14 componentes restantes com Figma, refactor de inline styles dos docs, descriptions designer-focused nos 18 component sets Figma, eliminação de 111 leaks Foundation em <code>css/base/</code>, fix de problemas visuais persistentes (Toggle pixel offset, dodont border, callouts, header washed, version badge, code contraste, theme switcher legado, tooltip docs grid). Marca a transição do versionamento 0.x para a fase beta de 1.0.</p>
 <h3>Adicionado</h3>

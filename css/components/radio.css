@@ -188,12 +188,23 @@
   min-width: 0;
 }
 
-/* Label text (label/md: 14px Bold / 20px) */
+/* Label text — defaults para Md size (label/md: 14px Bold / 20px) */
 .ds-radio__label {
   font-size: var(--ds-body-font-size-sm);
   font-weight: var(--ds-body-font-weight-bold);
   line-height: var(--ds-body-line-height-sm);
   color: var(--ds-content-default);
+}
+
+/* Sm size: label = control/label-md (14px Bold / 16px) */
+.ds-radio-label:has(.ds-radio--sm) .ds-radio__label {
+  line-height: var(--ds-body-line-height-2xs);
+}
+
+/* Lg size: label = label/lg (16px Bold / 24px) */
+.ds-radio-label:has(.ds-radio--lg) .ds-radio__label {
+  font-size: var(--ds-body-font-size-md);
+  line-height: var(--ds-body-line-height-md);
 }
 
 /* Description (body/sm: 14px Regular / 20px) */

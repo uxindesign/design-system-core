@@ -7,9 +7,10 @@
   align-items: center;
   gap: var(--ds-space-xs);
   padding: var(--ds-space-2xs) var(--ds-space-sm);
-  font-size: var(--ds-body-font-size-sm);
+  /* Figma: Badge label = Inter Bold 12 / 18 (label/xs) */
+  font-size: var(--ds-body-font-size-xs);
   font-weight: var(--ds-body-font-weight-bold);
-  line-height: var(--ds-body-line-height-sm);
+  line-height: var(--ds-body-line-height-xs);
   border-radius: var(--ds-radius-full);
   white-space: nowrap;
 }

@@ -191,6 +191,28 @@
 }
 
 /* ---------------------------------------------------------
+   Variant: Link (text-only com cor link/brand — action de baixa ênfase)
+   Padrão semelhante a Atlassian "appearance=link", Material "Text Button",
+   Polaris "Plain Button", Spectrum "Button style=text".
+   Usado em Modal Cancel, ações inline destrutivas, navegação intra-página.
+   Não usar quando ação requer navegação externa — use <a> com .ds-link.
+   --------------------------------------------------------- */
+.ds-btn--link {
+  background-color: transparent;
+  color: var(--ds-link-content-default);
+  border-color: transparent;
+}
+
+.ds-btn--link:hover {
+  color: var(--ds-link-content-hover);
+  text-decoration: underline;
+}
+
+.ds-btn--link:active {
+  color: var(--ds-link-content-hover);
+}
+
+/* ---------------------------------------------------------
    Icon Only
    --------------------------------------------------------- */
 .ds-btn--icon-only {
