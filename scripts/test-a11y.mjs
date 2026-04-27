@@ -131,7 +131,11 @@ try {
         try {
           await page.goto(buildUrl(file), { waitUntil: 'domcontentloaded', timeout: NAV_TIMEOUT });
           await page.evaluate((m) => document.documentElement.dataset.mode = m, mode);
-          await page.waitForTimeout(100); // pequeno settle
+          // Aguarda fontes carregarem (axe color-contrast é sensível a timing)
+          // antes de capturar — sem isso, scan pode flagar contrastes
+          // intermitentes durante o swap font-display.
+          await page.evaluate(() => document.fonts && document.fonts.ready);
+          await page.waitForTimeout(200);
           const r = await new AxeBuilder({ page })
             .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'])
             .analyze();
