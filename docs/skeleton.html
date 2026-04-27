@@ -70,14 +70,14 @@
         <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
         <button class="ds-preview__tab" data-tab="code">Code</button>
       </div>
-      <div class="ds-preview__canvas ds-preview__canvas--column" aria-busy="true" aria-label="Loading text content">
+      <div class="ds-preview__canvas ds-preview__canvas--column" role="status" aria-busy="true" aria-label="Loading text content">
         <div class="ds-skeleton ds-skeleton--text" style="width:100%;height:14px;"></div>
         <div class="ds-skeleton ds-skeleton--text" style="width:85%;height:14px;"></div>
         <div class="ds-skeleton ds-skeleton--text" style="width:70%;height:14px;"></div>
       </div>
       <div class="ds-preview__code" style="display:none">
         <button class="ds-preview__copy">Copy</button>
-        <pre><code>&lt;div aria-busy="true" aria-label="Loading text content"&gt;
+        <pre tabindex="0"><code>&lt;div aria-busy="true" aria-label="Loading text content"&gt;
   &lt;div class="ds-skeleton ds-skeleton--text" style="width:100%;height:14px;"&gt;&lt;/div&gt;
   &lt;div class="ds-skeleton ds-skeleton--text" style="width:85%;height:14px;"&gt;&lt;/div&gt;
   &lt;div class="ds-skeleton ds-skeleton--text" style="width:70%;height:14px;"&gt;&lt;/div&gt;
@@ -94,14 +94,14 @@
         <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
         <button class="ds-preview__tab" data-tab="code">Code</button>
       </div>
-      <div class="ds-preview__canvas ds-preview__canvas--centered" aria-busy="true" aria-label="Loading avatars">
+      <div class="ds-preview__canvas ds-preview__canvas--centered" role="status" aria-busy="true" aria-label="Loading avatars">
         <div class="ds-skeleton ds-skeleton--circle" style="width:32px;height:32px;"></div>
         <div class="ds-skeleton ds-skeleton--circle" style="width:40px;height:40px;"></div>
         <div class="ds-skeleton ds-skeleton--circle" style="width:56px;height:56px;"></div>
       </div>
       <div class="ds-preview__code" style="display:none">
         <button class="ds-preview__copy">Copy</button>
-        <pre><code>&lt;div class="ds-skeleton ds-skeleton--circle" style="width:32px;height:32px;"&gt;&lt;/div&gt;
+        <pre tabindex="0"><code>&lt;div class="ds-skeleton ds-skeleton--circle" style="width:32px;height:32px;"&gt;&lt;/div&gt;
 &lt;div class="ds-skeleton ds-skeleton--circle" style="width:40px;height:40px;"&gt;&lt;/div&gt;
 &lt;div class="ds-skeleton ds-skeleton--circle" style="width:56px;height:56px;"&gt;&lt;/div&gt;</code></pre>
       </div>
@@ -116,12 +116,12 @@
         <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
         <button class="ds-preview__tab" data-tab="code">Code</button>
       </div>
-      <div class="ds-preview__canvas ds-preview__canvas--column" aria-busy="true" aria-label="Loading image">
+      <div class="ds-preview__canvas ds-preview__canvas--column" role="status" aria-busy="true" aria-label="Loading image">
         <div class="ds-skeleton ds-skeleton--rectangle" style="width:100%;height:120px;"></div>
       </div>
       <div class="ds-preview__code" style="display:none">
         <button class="ds-preview__copy">Copy</button>
-        <pre><code>&lt;div class="ds-skeleton ds-skeleton--rectangle" style="width:100%;height:120px;"&gt;&lt;/div&gt;</code></pre>
+        <pre tabindex="0"><code>&lt;div class="ds-skeleton ds-skeleton--rectangle" style="width:100%;height:120px;"&gt;&lt;/div&gt;</code></pre>
       </div>
     </div>
   </div>
@@ -135,7 +135,7 @@
         <button class="ds-preview__tab" data-tab="code">Code</button>
       </div>
       <div class="ds-preview__canvas ds-preview__canvas--centered">
-        <div style="border:var(--ds-border-width-1) solid var(--ds-border-default);border-radius:var(--ds-radius-12);padding:var(--ds-dimension-24);width:100%;max-width:360px;display:flex;flex-direction:column;gap:var(--ds-dimension-16);" aria-busy="true" aria-label="Loading profile card">
+        <div role="status" style="border:var(--ds-border-width-1) solid var(--ds-border-default);border-radius:var(--ds-radius-12);padding:var(--ds-dimension-24);width:100%;max-width:360px;display:flex;flex-direction:column;gap:var(--ds-dimension-16);" aria-busy="true" aria-label="Loading profile card">
           <!-- Avatar + name row -->
           <div style="display:flex;align-items:center;gap:var(--ds-dimension-12);">
             <div class="ds-skeleton ds-skeleton--circle" style="width:48px;height:48px;flex-shrink:0;"></div>
@@ -159,7 +159,7 @@
       </div>
       <div class="ds-preview__code" style="display:none">
         <button class="ds-preview__copy">Copy</button>
-        <pre><code>&lt;div aria-busy="true" aria-label="Loading profile card"&gt;
+        <pre tabindex="0"><code>&lt;div aria-busy="true" aria-label="Loading profile card"&gt;
   &lt;!-- Avatar + name --&gt;
   &lt;div style="display:flex;align-items:center;gap:var(--ds-dimension-12);"&gt;
     &lt;div class="ds-skeleton ds-skeleton--circle" style="width:48px;height:48px;"&gt;&lt;/div&gt;
@@ -186,7 +186,7 @@
         <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
         <button class="ds-preview__tab" data-tab="code">Code</button>
       </div>
-      <div class="ds-preview__canvas" aria-busy="true" aria-label="Loading card list">
+      <div class="ds-preview__canvas" role="status" aria-busy="true" aria-label="Loading card list">
         <div style="border:var(--ds-border-width-1) solid var(--ds-border-default);border-radius:var(--ds-radius-12);padding:var(--ds-dimension-16);width:100%;max-width:280px;display:flex;flex-direction:column;gap:var(--ds-dimension-12);">
           <div class="ds-skeleton ds-skeleton--rectangle" style="height:140px;border-radius:var(--ds-radius-8);"></div>
           <div class="ds-skeleton ds-skeleton--text" style="width:60%;height:16px;"></div>
@@ -215,7 +215,7 @@
       </div>
       <div class="ds-preview__code" style="display:none">
         <button class="ds-preview__copy">Copy</button>
-        <pre><code>&lt;div aria-busy="true" aria-label="Loading card list"&gt;
+        <pre tabindex="0"><code>&lt;div aria-busy="true" aria-label="Loading card list"&gt;
   &lt;div class="card"&gt;
     &lt;div class="ds-skeleton ds-skeleton--rectangle" style="height:140px;"&gt;&lt;/div&gt;
     &lt;div class="ds-skeleton ds-skeleton--text" style="width:60%;height:16px;"&gt;&lt;/div&gt;

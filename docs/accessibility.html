@@ -65,7 +65,7 @@
         <div class="ds-preview__panel" data-panel="code">
           <div class="ds-preview__code">
             <button class="ds-preview__copy" aria-label="Copy code">Copy</button>
-            <pre><code>/* Focus ring tokens */
+            <pre tabindex="0"><code>/* Focus ring tokens */
 --ds-focus-ring-width: 2px;   /* outline stroke */
 --ds-focus-ring-offset: 2px;  /* gap between element and ring */
 --ds-focus-ring-color: var(--ds-primary-background-default);
@@ -175,7 +175,7 @@
         <div class="ds-preview__panel ds-preview__panel--active" data-panel="code">
           <div class="ds-preview__code" style="border-top:none;">
             <button class="ds-preview__copy" aria-label="Copy code">Copy</button>
-            <pre><code>@media (prefers-reduced-motion: reduce) {
+            <pre tabindex="0"><code>@media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
@@ -263,6 +263,25 @@
           </tr>
         </tbody>
       </table>
+    </div>
+  </div>
+
+  <!-- Automated testing -->
+  <div class="ds-section">
+    <h2 class="ds-subsection__title"><span data-lang="pt">Validação automatizada</span><span data-lang="en">Automated validation</span></h2>
+    <p style="color:var(--ds-content-secondary);margin-bottom:var(--ds-dimension-16);line-height:var(--ds-line-height-relaxed);">
+      <span data-lang="pt">CI roda <strong>axe-core</strong> via Playwright em todas as páginas de docs (light + dark mode) e bloqueia merges em violações novas <code>critical</code> ou <code>serious</code>. Tags WCAG: 2A, 2AA, 2.1A, 2.1AA, 2.2AA. Violações conhecidas são fixadas em <code>.a11y-baseline.json</code> pra permitir progresso incremental — meta é reduzir o conjunto a cada PR que toque o componente afetado.</span>
+      <span data-lang="en">CI runs <strong>axe-core</strong> via Playwright on all docs pages (light + dark) and blocks merges on new <code>critical</code> or <code>serious</code> violations. WCAG tags: 2A, 2AA, 2.1A, 2.1AA, 2.2AA. Known violations are pinned in <code>.a11y-baseline.json</code> for incremental progress — goal is to reduce the set on each PR that touches the affected component.</span>
+    </p>
+    <div class="ds-preview">
+      <div class="ds-preview__panel ds-preview__panel--active" data-panel="code">
+        <div class="ds-preview__code" style="border-top:none;">
+          <pre tabindex="0"><code>npm run test:a11y                       # full scan, falha em violações novas
+npm run test:a11y -- --filter button    # filtra por nome de página
+npm run test:a11y -- --mode dark        # só um modo
+npm run test:a11y -- --update-baseline  # após corrigir, atualiza .a11y-baseline.json</code></pre>
+        </div>
+      </div>
     </div>
   </div>
 

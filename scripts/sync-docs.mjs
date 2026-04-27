@@ -389,7 +389,14 @@ function renderMarkdownFile({ mdPath, outPath, title, subtitle, base, layoutHref
   const md = fs.readFileSync(mdPath, 'utf8');
   // Se o MD começa com `# Título`, removemos pra não duplicar com o título do layout
   const withoutH1 = md.replace(/^#\s+.+\n+/, '');
-  const content = marked.parse(withoutH1);
+  let content = marked.parse(withoutH1);
+  // a11y: marked emite `<input disabled type="checkbox">` em task lists; sem
+  // `<label>` associado quebra o axe rule `label`. Esses checkboxes são
+  // decorativos (markdown task list, não form input) — marca como aria-hidden.
+  content = content.replace(/<input\b([^>]*?)\btype="checkbox"([^>]*?)>/g, (m, pre, post) => {
+    if (/aria-hidden=/.test(m)) return m;
+    return `<input${pre}type="checkbox"${post} aria-hidden="true">`;
+  });
   const html = wrapPage({ title, subtitle, content, base, layoutHref });
   fs.mkdirSync(path.dirname(outPath), { recursive: true });
   fs.writeFileSync(outPath, html);

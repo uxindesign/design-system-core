@@ -86,3 +86,22 @@ Bump no `package.json` sempre acompanha entrada em `CHANGELOG.md`.
 ## Acessibilidade
 
 WCAG 2.2 AA é piso obrigatório. Qualquer componente novo ou modificação que afete cor, contraste, foco ou navegação por teclado precisa ser validado. Ver [docs/accessibility.html](./docs/accessibility.html) e [ADR-004](./docs/decisions/ADR-004-wcag.md).
+
+### A11y testing automatizado
+
+```bash
+npm run test:a11y                       # roda axe-core contra docs/* em light + dark
+npm run test:a11y -- --filter button    # filtra por nome de página
+npm run test:a11y -- --mode dark        # só um modo
+npm run test:a11y -- --json out.json    # dump JSON pra CI
+```
+
+O teste:
+- Sobe `python3 -m http.server` na porta 8765
+- Lança Chromium headless via Playwright
+- Roda axe-core com tags `wcag2a, wcag2aa, wcag21a, wcag21aa, wcag22aa`
+- Compara resultados contra `.a11y-baseline.json` (violações conhecidas e aceitas como débito incremental)
+- **Falha se houver violações NOVAS** (não na baseline) com impact `critical` ou `serious`
+- Permite progresso: ao corrigir violações da baseline, rode `npm run test:a11y -- --update-baseline` pra reduzir o conjunto aceito
+
+Atualmente baseline tem ~424 fingerprints (color-contrast em demos legacy + dois pre-existentes scrollable-region-focusable). A meta é reduzir incrementalmente. Não bloqueie merge tentando zerar de uma vez — fix conforme tocar nos componentes/páginas afetadas.

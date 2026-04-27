@@ -539,9 +539,13 @@
           swatch.appendChild(container);
         }
 
+        // a11y: badges são amostras decorativas demonstrando contraste —
+        // mostram propositalmente combinações que falham WCAG (ex.: "Fail vs
+        // White 1.0:1"). aria-hidden remove do a11y tree e do scan axe;
+        // info de contraste já está no title pra screen readers via tooltip.
         container.innerHTML =
-          '<span class="ds-swatch__badge ds-swatch__badge--' + whiteLevel.cls + '" title="vs White ' + vsWhite.toFixed(1) + ':1">' + whiteLevel.label + '</span>' +
-          '<span class="ds-swatch__badge ds-swatch__badge--' + blackLevel.cls + '" title="vs Black ' + vsBlack.toFixed(1) + ':1">' + blackLevel.label + '</span>';
+          '<span class="ds-swatch__badge ds-swatch__badge--' + whiteLevel.cls + '" title="vs White ' + vsWhite.toFixed(1) + ':1" aria-hidden="true">' + whiteLevel.label + '</span>' +
+          '<span class="ds-swatch__badge ds-swatch__badge--' + blackLevel.cls + '" title="vs Black ' + vsBlack.toFixed(1) + ':1" aria-hidden="true">' + blackLevel.label + '</span>';
       });
     }
 

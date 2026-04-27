@@ -69,7 +69,7 @@
       <div style="position:relative;display:inline-flex;align-items:center;min-width:240px;">
         <div class="ds-select" style="width:100%;">
           <span class="ds-select__icon material-symbols-outlined">language</span>
-          <select class="ds-select__field" tabindex="-1" style="pointer-events:none;">
+          <select class="ds-select__field" aria-label="Select example" tabindex="-1" style="pointer-events:none;">
             <option>Choose a country</option>
           </select>
           <span class="ds-select__arrow"></span>
@@ -106,7 +106,7 @@
       <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
         <div class="ds-preview__canvas ds-preview__canvas--column" style="max-width:400px">
           <div class="ds-select">
-            <select class="ds-select__field">
+            <select class="ds-select__field" aria-label="Select example">
               <option value="" disabled selected>Choose an option</option>
               <option value="1">Option One</option>
               <option value="2">Option Two</option>
@@ -119,7 +119,7 @@
       <div class="ds-preview__panel" data-panel="code">
         <div class="ds-preview__code">
           <button class="ds-preview__copy" aria-label="Copy code">Copy</button>
-          <pre><code>&lt;div class="ds-select"&gt;
+          <pre tabindex="0"><code>&lt;div class="ds-select"&gt;
   &lt;select class="ds-select__field"&gt;
     &lt;option value="" disabled selected&gt;Choose an option&lt;/option&gt;
     &lt;option value="1"&gt;Option One&lt;/option&gt;
@@ -146,21 +146,21 @@
       <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
         <div class="ds-preview__canvas ds-preview__canvas--column" style="max-width:400px">
           <div class="ds-select ds-select--sm">
-            <select class="ds-select__field">
+            <select class="ds-select__field" aria-label="Select example">
               <option>Small (34px)</option>
               <option>Option A</option>
             </select>
             <span class="ds-select__arrow"></span>
           </div>
           <div class="ds-select ds-select--md">
-            <select class="ds-select__field">
+            <select class="ds-select__field" aria-label="Select example">
               <option>Medium (47px)</option>
               <option>Option A</option>
             </select>
             <span class="ds-select__arrow"></span>
           </div>
           <div class="ds-select ds-select--lg">
-            <select class="ds-select__field">
+            <select class="ds-select__field" aria-label="Select example">
               <option>Large (58px)</option>
               <option>Option A</option>
             </select>
@@ -171,7 +171,7 @@
       <div class="ds-preview__panel" data-panel="code">
         <div class="ds-preview__code">
           <button class="ds-preview__copy" aria-label="Copy code">Copy</button>
-          <pre><code>&lt;div class="ds-select ds-select--sm"&gt;
+          <pre tabindex="0"><code>&lt;div class="ds-select ds-select--sm"&gt;
   &lt;select class="ds-select__field"&gt;...&lt;/select&gt;
   &lt;span class="ds-select__arrow"&gt;&lt;/span&gt;
 &lt;/div&gt;
@@ -212,7 +212,7 @@
         <div class="ds-preview__canvas ds-preview__canvas--column" style="max-width:400px">
           <div class="ds-select">
             <span class="ds-select__icon material-symbols-outlined">language</span>
-            <select class="ds-select__field">
+            <select class="ds-select__field" aria-label="Select example">
               <option>English</option>
               <option>Portuguese</option>
               <option>Spanish</option>
@@ -224,7 +224,7 @@
       <div class="ds-preview__panel" data-panel="code">
         <div class="ds-preview__code">
           <button class="ds-preview__copy" aria-label="Copy code">Copy</button>
-          <pre><code>&lt;div class="ds-select"&gt;
+          <pre tabindex="0"><code>&lt;div class="ds-select"&gt;
   &lt;span class="ds-select__icon material-symbols-outlined"&gt;language&lt;/span&gt;
   &lt;select class="ds-select__field"&gt;
     &lt;option&gt;English&lt;/option&gt;
@@ -258,7 +258,7 @@
           <div class="ds-field ds-field--error">
             <label class="ds-field__label" for="demo-country">Country<span class="ds-field__required">*</span></label>
             <div class="ds-select ds-select--error">
-              <select class="ds-select__field" id="demo-country" aria-invalid="true" aria-describedby="country-error">
+              <select class="ds-select__field" aria-label="Select example" id="demo-country" aria-invalid="true" aria-describedby="country-error">
                 <option value="" disabled selected>Select a country</option>
                 <option>Brazil</option>
                 <option>United States</option>
@@ -272,7 +272,7 @@
       <div class="ds-preview__panel" data-panel="code">
         <div class="ds-preview__code">
           <button class="ds-preview__copy" aria-label="Copy code">Copy</button>
-          <pre><code>&lt;div class="ds-field ds-field--error"&gt;
+          <pre tabindex="0"><code>&lt;div class="ds-field ds-field--error"&gt;
   &lt;label class="ds-field__label" for="country"&gt;Country&lt;span class="ds-field__required"&gt;*&lt;/span&gt;&lt;/label&gt;
   &lt;div class="ds-select ds-select--error"&gt;
     &lt;select class="ds-select__field" id="country" aria-invalid="true" aria-describedby="country-error"&gt;
@@ -296,7 +296,7 @@
       <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
         <div class="ds-preview__canvas ds-preview__canvas--column" style="max-width:400px">
           <div class="ds-select">
-            <select class="ds-select__field" disabled>
+            <select class="ds-select__field" aria-label="Select example" disabled>
               <option>Disabled option</option>
             </select>
             <span class="ds-select__arrow"></span>
@@ -306,7 +306,7 @@
       <div class="ds-preview__panel" data-panel="code">
         <div class="ds-preview__code">
           <button class="ds-preview__copy" aria-label="Copy code">Copy</button>
-          <pre><code>&lt;div class="ds-select"&gt;
+          <pre tabindex="0"><code>&lt;div class="ds-select"&gt;
   &lt;select class="ds-select__field" disabled&gt;
     &lt;option&gt;Disabled option&lt;/option&gt;
   &lt;/select&gt;
@@ -325,7 +325,7 @@
       <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
         <div class="ds-preview__canvas ds-preview__canvas--column" style="max-width:400px">
           <div class="ds-select ds-select--readonly">
-            <select class="ds-select__field" disabled>
+            <select class="ds-select__field" aria-label="Select example" disabled>
               <option>Read-only value</option>
             </select>
             <span class="ds-select__arrow"></span>
@@ -335,7 +335,7 @@
       <div class="ds-preview__panel" data-panel="code">
         <div class="ds-preview__code">
           <button class="ds-preview__copy" aria-label="Copy code">Copy</button>
-          <pre><code>&lt;!-- Native select has no readonly; use disabled + ds-select--readonly for styling --&gt;
+          <pre tabindex="0"><code>&lt;!-- Native select has no readonly; use disabled + ds-select--readonly for styling --&gt;
 &lt;div class="ds-select ds-select--readonly"&gt;
   &lt;select class="ds-select__field" disabled&gt;
     &lt;option&gt;Read-only value&lt;/option&gt;
@@ -369,7 +369,7 @@
       <div class="ds-dodont__item">
         <div class="ds-dodont__preview">
           <div class="ds-select" style="width:100%;max-width:260px">
-            <select class="ds-select__field">
+            <select class="ds-select__field" aria-label="Select example">
               <option value="" disabled selected>Choose a country</option>
               <option>Argentina</option>
               <option>Brazil</option>
@@ -384,7 +384,7 @@
       <div class="ds-dodont__item">
         <div class="ds-dodont__preview">
           <div class="ds-select" style="width:100%;max-width:260px">
-            <select class="ds-select__field">
+            <select class="ds-select__field" aria-label="Select example">
               <option selected>Argentina</option>
               <option>Brazil</option>
               <option>Chile</option>
@@ -401,7 +401,7 @@
       <div class="ds-dodont__item">
         <div class="ds-dodont__preview">
           <div class="ds-select" style="width:100%;max-width:260px">
-            <select class="ds-select__field">
+            <select class="ds-select__field" aria-label="Select example">
               <option value="" disabled selected>Choose a country</option>
               <option>Argentina</option>
               <option>Brazil</option>
@@ -418,7 +418,7 @@
       <div class="ds-dodont__item">
         <div class="ds-dodont__preview">
           <div class="ds-select" style="width:100%;max-width:260px">
-            <select class="ds-select__field">
+            <select class="ds-select__field" aria-label="Select example">
               <option value="" disabled selected>Enable notifications?</option>
               <option>Yes</option>
               <option>No</option>
