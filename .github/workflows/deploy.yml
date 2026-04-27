@@ -31,6 +31,15 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ hashFiles('package-lock.json') }}
+
+      - name: Install Playwright Chromium (necessário pro test-a11y em build:all)
+        run: npx playwright install --with-deps chromium
+
       - name: Build everything (tokens + docs + api + llms + verify)
         env:
           FIGMA_PAT: ${{ secrets.FIGMA_PAT }}
