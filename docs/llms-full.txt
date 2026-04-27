@@ -149,6 +149,25 @@ Bump no `package.json` sempre acompanha entrada em `CHANGELOG.md`.
 
 WCAG 2.2 AA é piso obrigatório. Qualquer componente novo ou modificação que afete cor, contraste, foco ou navegação por teclado precisa ser validado. Ver [docs/accessibility.html](./docs/accessibility.html) e [ADR-004](./docs/decisions/ADR-004-wcag.md).
 
+### A11y testing automatizado
+
+```bash
+npm run test:a11y                       # roda axe-core contra docs/* em light + dark
+npm run test:a11y -- --filter button    # filtra por nome de página
+npm run test:a11y -- --mode dark        # só um modo
+npm run test:a11y -- --json out.json    # dump JSON pra CI
+```
+
+O teste:
+- Sobe `python3 -m http.server` na porta 8765
+- Lança Chromium headless via Playwright
+- Roda axe-core com tags `wcag2a, wcag2aa, wcag21a, wcag21aa, wcag22aa`
+- Compara resultados contra `.a11y-baseline.json` (violações conhecidas e aceitas como débito incremental)
+- **Falha se houver violações NOVAS** (não na baseline) com impact `critical` ou `serious`
+- Permite progresso: ao corrigir violações da baseline, rode `npm run test:a11y -- --update-baseline` pra reduzir o conjunto aceito
+
+Atualmente baseline tem ~424 fingerprints (color-contrast em demos legacy + dois pre-existentes scrollable-region-focusable). A meta é reduzir incrementalmente. Não bloqueie merge tentando zerar de uma vez — fix conforme tocar nos componentes/páginas afetadas.
+
 
 ═══════════════════════════════════════════════════════════
 # CHANGELOG.md (raiz)
@@ -166,6 +185,8 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 
 ### Adicionado
 
+- **A11y testing automatizado via axe-core + Playwright** (`scripts/test-a11y.mjs`). Roda contra todas as 42 páginas docs em light + dark (84 runs) com tags WCAG 2A, 2AA, 2.1A, 2.1AA, 2.2AA. Bloqueia CI em violações NOVAS (não-baseline) com impact `critical` ou `serious`. Baseline atual em `.a11y-baseline.json` (424 fingerprints) — meta é reduzir incrementalmente. Comando: `npm run test:a11y` (também rodando em `npm test`).
+  - Fixes preventivos no setup: skeleton previews ganharam `role="status"`; markdown task list checkboxes em process-*.html marcados `aria-hidden="true"` via post-process em `sync-docs.mjs`; loading buttons em `docs/button.html` com `aria-label` + `aria-busy`; demos com `<input>`, `<select>`, `<textarea>` sem label receberam `aria-label`; "Don't" examples em checkbox demos receberam atributo `inert` pra axe pular; swatch contrast badges em `js/main.js` marcados `aria-hidden="true"` (são demonstrações educativas de mau contraste); `<pre>` com código longo recebeu `tabindex="0"` (scrollable-region-focusable); `<dl>` malformado em token-architecture virou `<div>`.
 - **CI check Figma↔JSON via `.figma-snapshot.json`** — `verify:tokens` agora compara JSON do repo contra snapshot das 387 Variables Figma e falha em divergência. Snapshot gerado por `use_figma` em batches (~50KB cada), gitignored. Ver `docs/process-figma-sync.md`.
 - **Redesign da seção "Camadas e cadeia de alias"** em `docs/token-architecture.html`. Duas seções viraram uma. Foundation primeiro (01), Semantic depois (02), em dois cards lado-a-lado usando o vocabulário visual do site (`--ds-radius-12`, `--ds-border-default`, `--ds-surface-default`, `<code>` inline padrão). Sem componente novo, sem display all-caps, sem chips, sem swatches/ícones. A cadeia de alias virou um parágrafo prosaico abaixo dos cards (já implícita no card 02 via aliases `{color.blue.600}`). Card usa `--ds-surface-default` (não `--ds-surface-raised`) pra contrastar com o `<code>` inline em dark mode (que usa `--ds-background-subtle` ≡ `--ds-surface-raised` ≡ neutral-800).
 
@@ -193,7 +214,9 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 
 - **`scripts/lib/figma-dtcg.mjs`**: normalizer Figma↔JSON colapsa hífen→ponto em paths (`primary.content-default` ↔ `primary.content.default`). Antes inflava 119 falsos positivos.
 - **`scripts/tokens-verify.mjs`**: `normalize()` reconhece equivalência entre número puro (Figma Float) e string `Npx`/`Nrem` (CSS gerado). Antes flagava `999 ≠ "999px"` como drift.
-- **`.ds-code-block` regredido sem estilo** desde o refactor `d5c4fd2` (extração de inline styles): a regra CSS não foi migrada pra `docs/layout.css`, então os blocos JSON DTCG em todas as páginas de foundations apareciam como prosa solta. Recolocada em layout.css usando `--ds-background-inverse` + `--ds-content-inverse` (mesma paleta do `<pre>` global em `reset.css`).
+- **Code blocks sempre escuros no docs site** (`docs/layout.css`):
+  - **`.ds-code-block` regredido sem estilo** desde `d5c4fd2`: regra CSS não foi migrada pra `layout.css`. Recolocada com `--ds-color-neutral-900` + `--ds-color-neutral-50` (sempre escuro, padrão universal de terminal/editor).
+  - **`<pre>` global em `reset.css`** usa `--ds-background-inverse`, que flipa pra branco em dark mode — deixava `.ds-preview__code pre` brancos em dark. Override em `main.ds-main pre` força escuro nos dois modos. Foundation direto é aceito aqui por ser estrutura do site de docs (não componente do DS).
 - **Topbar do site sempre acima de todo conteúdo de página** (`docs/layout.css`, `docs/foundations-zindex.html`):
   - Topbar (e sidebar mobile + overlay) sobem para `calc(var(--ds-z-50) + 10)` (= 60), acima de toda a escala `--ds-z-*` (que termina em 50/toast). Antes, com header em `--ds-z-50`, conteúdo de página com z-50 empatava e podia paintar por cima via DOM order.
   - **Demo de z-index** ganhou `isolation: isolate` no `.ds-zindex-stack` — o container era `position: relative` sem `z-index`, então não criava stacking context, e o card `.ds-zindex-layer--50` escapava pra raiz e atravessava a topbar quando o demo era rolado pra baixo da topbar. Com `isolation`, a escala 0–50 fica local ao demo (que era a intenção).
