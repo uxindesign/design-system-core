@@ -11,6 +11,13 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 ### Adicionado
 
 - **CI check Figma↔JSON via `.figma-snapshot.json`** — `verify:tokens` agora compara JSON do repo contra snapshot das 387 Variables Figma e falha em divergência. Snapshot gerado por `use_figma` em batches (~50KB cada), gitignored. Ver `docs/process-figma-sync.md`.
+- **Redesign visual das seções "Duas camadas" e "Como funciona a cadeia de alias"** em `docs/token-architecture.html`:
+  - **Cards diferenciados por papel**: Foundation com acento neutro (`--ds-content-secondary`), Semantic com acento brand (`--ds-primary-background-default`). Antes os dois usavam `--ds-feedback-info-background-subtle` no header e ficavam idênticos visualmente — contradizia o ponto da página.
+  - **Chips de contagem** (`236 tokens`, `171 × 2 modos`) ao lado do nome de cada layer, em pill com mono.
+  - **Exemplos em rows formatadas** (key · arrow · value) com bg `--ds-background-subtle` e tags `LIGHT`/`DARK` pra tokens mode-aware.
+  - **Connector com SVG arrow** + linha dashed entre os cards, em vez de seta `→` em texto.
+  - **Cadeia de alias** virou diagrama com rail vertical + dot por step (Semantic outline → Foundation outline → Valor filled brand). Step final inclui swatch de cor real ao lado do hex, deixando explícito que a cadeia termina num valor visual.
+  - Tudo em `--ds-surface-raised` + `--ds-shadow-sm`, dando peso de "diagrama arquitetural" em vez de callout washed.
 
 ### Mudado
 

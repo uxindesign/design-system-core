@@ -73,6 +73,15 @@
 <h3>Adicionado</h3>
 <ul>
 <li><strong>CI check Figma↔JSON via <code>.figma-snapshot.json</code></strong> — <code>verify:tokens</code> agora compara JSON do repo contra snapshot das 387 Variables Figma e falha em divergência. Snapshot gerado por <code>use_figma</code> em batches (~50KB cada), gitignored. Ver <code>docs/process-figma-sync.md</code>.</li>
+<li><strong>Redesign visual das seções &quot;Duas camadas&quot; e &quot;Como funciona a cadeia de alias&quot;</strong> em <code>docs/token-architecture.html</code>:<ul>
+<li><strong>Cards diferenciados por papel</strong>: Foundation com acento neutro (<code>--ds-content-secondary</code>), Semantic com acento brand (<code>--ds-primary-background-default</code>). Antes os dois usavam <code>--ds-feedback-info-background-subtle</code> no header e ficavam idênticos visualmente — contradizia o ponto da página.</li>
+<li><strong>Chips de contagem</strong> (<code>236 tokens</code>, <code>171 × 2 modos</code>) ao lado do nome de cada layer, em pill com mono.</li>
+<li><strong>Exemplos em rows formatadas</strong> (key · arrow · value) com bg <code>--ds-background-subtle</code> e tags <code>LIGHT</code>/<code>DARK</code> pra tokens mode-aware.</li>
+<li><strong>Connector com SVG arrow</strong> + linha dashed entre os cards, em vez de seta <code>→</code> em texto.</li>
+<li><strong>Cadeia de alias</strong> virou diagrama com rail vertical + dot por step (Semantic outline → Foundation outline → Valor filled brand). Step final inclui swatch de cor real ao lado do hex, deixando explícito que a cadeia termina num valor visual.</li>
+<li>Tudo em <code>--ds-surface-raised</code> + <code>--ds-shadow-sm</code>, dando peso de &quot;diagrama arquitetural&quot; em vez de callout washed.</li>
+</ul>
+</li>
 </ul>
 <h3>Mudado</h3>
 <ul>
@@ -87,7 +96,7 @@
 <li>Control typography → <code>--ds-body-font-size-{sm,md}</code> + <code>--ds-body-line-height-{2xs,sm,md}</code> espelhando Text Styles <code>control/label-md</code>, <code>label/md</code>, <code>label/lg</code> que Figma aplica nos componentes.</li>
 </ul>
 </li>
-<li><strong><code>background/overlay</code> dark mode no Figma</strong> rebindado de <code>overlay/white/40</code> para <code>overlay/black/60</code> (alinhamento com mercado: Material/Bootstrap/Tailwind usam ~50-60% black em modal scrim).</li>
+<li><strong><code>background/overlay</code> em ambos modos no Figma</strong> unificados em <code>overlay/black/60</code>. Antes: light=<code>black/40</code>, dark=<code>white/40</code> (contraditório). Agora ambos consistentes em 60% black, alinhado com mercado (Material/Bootstrap/Tailwind usam ~50-60% black em modal scrim).</li>
 <li><strong>Variable nova <code>link/content/active</code> no Figma</strong> (Semantic, scope TEXT_FILL): light alias <code>brand.800</code>, dark alias <code>brand.200</code>. Espelha <code>semantic.link.content-active</code> adicionado em beta.3 — JSON e Figma agora convergem.</li>
 </ul>
 <h3>Removido</h3>
