@@ -33,13 +33,14 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
   align-items: center;
   justify-content: space-between;
   padding: 0 var(--ds-dimension-24);
-  z-index: var(--ds-z-40);
+  z-index: var(--ds-z-50);
 }
 
-/* Dark mode: use darkest brand shade (900-level) — themed but clearly dark */
+/* Dark mode: solid elevated surface (sticky-header semantic). --ds-toned-background-default
+   resolves to a 12% overlay in dark, deixando o conteúdo passar por trás da topbar. */
 [data-mode="dark"] .ds-site-header {
   --_hfg: var(--ds-content-default); /* neutral-50 = white, always */
-  background-color: var(--ds-toned-background-default); /* dark: blue/cyan/emerald-900 */
+  background-color: var(--ds-surface-raised);
 }
 
 .ds-site-header__brand {
@@ -129,8 +130,12 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
   border: none;
   padding: var(--ds-dimension-8);
   cursor: pointer;
-  color: var(--ds-content-default);
+  color: var(--_hfg);
   border-radius: var(--ds-radius-8);
+}
+
+.ds-menu-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 .ds-menu-toggle:focus-visible {
@@ -583,13 +588,14 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
   }
 }
 
-/* Overlay for mobile sidebar */
+/* Overlay for mobile sidebar — sits above topbar (z-50) e abaixo do drawer (mesmo z-50, mas
+   depois no DOM). DOM order: header → overlay → sidebar, todos em z-50. */
 .ds-sidebar-overlay {
   display: none;
   position: fixed;
   inset: 0;
   background-color: var(--ds-background-overlay);
-  z-index: var(--ds-z-40);
+  z-index: var(--ds-z-50);
 }
 
 .ds-sidebar-overlay--visible {

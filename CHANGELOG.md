@@ -8,7 +8,12 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 
 ## [Não publicado]
 
-(Nada ainda — próxima release acumulará aqui.)
+### Corrigido
+
+- **Topbar do site de docs** (`docs/layout.css`): três bugs visuais corrigidos:
+  - **Hamburger mobile**: `.ds-menu-toggle` usava `--ds-content-default` (escuro em light mode) sobre fundo brand. Agora consome `--_hfg`, ficando branco em ambos os modos. Hover ganhou estado.
+  - **Z-index**: topbar subia até `--ds-z-40`, ficando no mesmo nível de modais (`z-40`) e abaixo de toasts (`z-50`). Conteúdo da página passava por cima da topbar. Subido para `--ds-z-50`. `.ds-sidebar-overlay` também foi pra `--ds-z-50` para cobrir a topbar quando o drawer mobile abrir (ordem DOM mantém header → overlay → sidebar).
+  - **Dark mode com transparência**: header dark usava `--ds-toned-background-default`, que resolve para `--ds-overlay-blue-600-12` (12% alpha), deixando o conteúdo passar por trás. Trocado por `--ds-surface-raised` (sólido, semantic de "elevated surface" definido pra sticky headers).
 
 ## [1.0.0-beta.2] — 2026-04-27
 
