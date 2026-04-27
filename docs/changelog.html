@@ -70,7 +70,14 @@
 <p>O formato é baseado em <a href="https://keepachangelog.com/pt-BR/1.1.0/">Keep a Changelog</a> e o versionamento segue <a href="https://semver.org/lang/pt-BR/">Semantic Versioning</a>.</p>
 <p>A partir de <code>1.0.0-beta.1</code>, o sistema entrou em <strong>fase beta</strong> — releases incrementam <code>1.0.0-beta.N</code> até decisão do owner pra dropping do tag → <code>1.0.0</code> oficial. Tags 0.x permanecem como histórico pré-beta. Regras em <code>docs/process-versioning.html</code>.</p>
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
-<p>(Nada ainda — próxima release acumulará aqui.)</p>
+<h3>Corrigido</h3>
+<ul>
+<li><strong>Topbar do site sempre acima de todo conteúdo de página</strong> (<code>docs/layout.css</code>, <code>docs/foundations-zindex.html</code>):<ul>
+<li>Topbar (e sidebar mobile + overlay) sobem para <code>calc(var(--ds-z-50) + 10)</code> (= 60), acima de toda a escala <code>--ds-z-*</code> (que termina em 50/toast). Antes, com header em <code>--ds-z-50</code>, conteúdo de página com z-50 empatava e podia paintar por cima via DOM order.</li>
+<li><strong>Demo de z-index</strong> ganhou <code>isolation: isolate</code> no <code>.ds-zindex-stack</code> — o container era <code>position: relative</code> sem <code>z-index</code>, então não criava stacking context, e o card <code>.ds-zindex-layer--50</code> escapava pra raiz e atravessava a topbar quando o demo era rolado pra baixo da topbar. Com <code>isolation</code>, a escala 0–50 fica local ao demo (que era a intenção).</li>
+</ul>
+</li>
+</ul>
 <h2>[1.0.0-beta.3] — 2026-04-27</h2>
 <p>Link como text style (não Button variant) com estados WCAG/W3C completos. Topbar fixes do site de docs. Modal Cancel rebind no Figma alinhando com decisão de manter Cancel como Ghost Button.</p>
 <h3>Adicionado</h3>
