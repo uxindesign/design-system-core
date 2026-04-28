@@ -35,18 +35,6 @@
       ]
     },
     {
-      heading: 'Forms',
-      items: [
-        { label: 'Form Field', path: 'docs/form-field.html' },
-        { label: 'Input',      path: 'docs/input.html' },
-        { label: 'Textarea',   path: 'docs/textarea.html' },
-        { label: 'Select',     path: 'docs/select.html' },
-        { label: 'Checkbox',   path: 'docs/checkbox.html' },
-        { label: 'Radio',      path: 'docs/radio.html' },
-        { label: 'Toggle',     path: 'docs/toggle.html' }
-      ]
-    },
-    {
       heading: 'Components',
       items: [
         { label: 'Alert',      path: 'docs/alert.html' },
@@ -56,6 +44,18 @@
         { label: 'Button',     path: 'docs/button.html' },
         { label: 'Card',       path: 'docs/card.html' },
         { label: 'Divider',    path: 'docs/divider.html' },
+        {
+          label: 'Form',
+          children: [
+            { label: 'Form Field', path: 'docs/form-field.html' },
+            { label: 'Input',      path: 'docs/input.html' },
+            { label: 'Textarea',   path: 'docs/textarea.html' },
+            { label: 'Select',     path: 'docs/select.html' },
+            { label: 'Checkbox',   path: 'docs/checkbox.html' },
+            { label: 'Radio',      path: 'docs/radio.html' },
+            { label: 'Toggle',     path: 'docs/toggle.html' }
+          ]
+        },
         { label: 'Modal',      path: 'docs/modal.html' },
         { label: 'Skeleton',   path: 'docs/skeleton.html' },
         { label: 'Spinner',    path: 'docs/spinner.html' },
@@ -119,15 +119,31 @@
     }
     var upToRoot = depth === 0 ? '' : '../'.repeat(depth);
 
+    function renderLeafItem(item) {
+      var href = upToRoot + item.path;
+      var active = item.path === currentPath ? ' ds-sidebar__link--active' : '';
+      return '<li><a href="' + href + '" class="ds-sidebar__link' + active + '">'
+        + item.label + '</a></li>';
+    }
+
+    function renderItem(item) {
+      if (item.children) {
+        var hasActiveChild = item.children.some(function (c) { return c.path === currentPath; });
+        var childrenHtml = item.children.map(renderLeafItem).join('');
+        var expandedClass = hasActiveChild ? ' ds-sidebar__group--expanded' : '';
+        var expandedAttr = hasActiveChild ? 'true' : 'false';
+        return '<li class="ds-sidebar__group' + expandedClass + '">'
+          + '<button class="ds-sidebar__group-toggle" aria-expanded="' + expandedAttr + '">'
+          + '<span class="ds-sidebar__group-label">' + item.label + '</span>'
+          + '<span class="ds-sidebar__group-chevron" aria-hidden="true"></span>'
+          + '</button>'
+          + '<ul class="ds-sidebar__sub-nav">' + childrenHtml + '</ul></li>';
+      }
+      return renderLeafItem(item);
+    }
+
     var html = NAV_DATA.map(function (section) {
-      var items = section.items.map(function (item) {
-        // item.path é sempre relativo à raiz (ex: 'docs/button.html' ou 'index.html').
-        // href correto é upToRoot + item.path — funciona de qualquer profundidade.
-        var href = upToRoot + item.path;
-        var active = item.path === currentPath ? ' ds-sidebar__link--active' : '';
-        return '<li><a href="' + href + '" class="ds-sidebar__link' + active + '">'
-          + item.label + '</a></li>';
-      }).join('');
+      var items = section.items.map(renderItem).join('');
       return '<div class="ds-sidebar__section ds-sidebar__section--expanded">'
         + '<button class="ds-sidebar__heading" aria-expanded="true">'
         + '<span class="ds-sidebar__heading-label">' + section.heading + '</span>'
@@ -154,6 +170,15 @@
         var section = this.closest('.ds-sidebar__section');
         var isExpanded = section.classList.contains('ds-sidebar__section--expanded');
         section.classList.toggle('ds-sidebar__section--expanded', !isExpanded);
+        this.setAttribute('aria-expanded', String(!isExpanded));
+      });
+    });
+
+    sidebar.querySelectorAll('.ds-sidebar__group-toggle').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var group = this.closest('.ds-sidebar__group');
+        var isExpanded = group.classList.contains('ds-sidebar__group--expanded');
+        group.classList.toggle('ds-sidebar__group--expanded', !isExpanded);
         this.setAttribute('aria-expanded', String(!isExpanded));
       });
     });

@@ -260,6 +260,78 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
 }
 
 /* ---------------------------------------------------------
+   Sidebar — Nested groups (Form > children)
+   --------------------------------------------------------- */
+.ds-sidebar__group {
+  list-style: none;
+}
+
+.ds-sidebar__group-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: var(--ds-dimension-8) var(--ds-dimension-24) var(--ds-dimension-8) calc(var(--ds-dimension-24) + 20px);
+  color: var(--ds-content-secondary);
+  font-size: var(--ds-font-size-14);
+  font-weight: var(--ds-font-weight-medium);
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+  border-left: 3px solid transparent;
+  transition: color var(--ds-duration-fast) var(--ds-ease-default),
+              background-color var(--ds-duration-fast) var(--ds-ease-default);
+}
+
+.ds-sidebar__group-toggle:hover {
+  color: var(--ds-content-default);
+  background-color: var(--ds-overlay-subtle);
+}
+
+.ds-sidebar__group-toggle:focus-visible {
+  outline: var(--ds-border-width-focus) solid var(--ds-border-focus);
+  outline-offset: calc(var(--ds-border-width-focus) * -1);
+}
+
+.ds-sidebar__group-chevron {
+  flex-shrink: 0;
+  font-size: 14px;
+  line-height: 1;
+  color: var(--ds-content-tertiary);
+  transition: transform var(--ds-duration-fast) var(--ds-ease-default);
+}
+
+.ds-sidebar__group-chevron::before {
+  content: '›';
+  display: inline-block;
+}
+
+.ds-sidebar__group--expanded .ds-sidebar__group-chevron {
+  transform: rotate(90deg);
+}
+
+.ds-sidebar__sub-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height var(--ds-duration-normal) var(--ds-ease-default);
+}
+
+.ds-sidebar__group--expanded .ds-sidebar__sub-nav {
+  max-height: 600px;
+}
+
+/* Sub-items: indent extra (alinha visualmente com o label do parent) */
+.ds-sidebar__sub-nav .ds-sidebar__link {
+  padding-left: calc(var(--ds-dimension-24) + 20px + var(--ds-dimension-16));
+  font-size: var(--ds-font-size-14);
+}
+
+/* ---------------------------------------------------------
    Main Content
    --------------------------------------------------------- */
 .ds-main {
