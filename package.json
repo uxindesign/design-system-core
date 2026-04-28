@@ -30,6 +30,8 @@
     "test": "node scripts/test-token-integrity.mjs && node scripts/test-css-references.mjs && node scripts/test-generators.mjs && node scripts/test-a11y.mjs",
     "test:self": "node scripts/test-self.mjs",
     "test:a11y": "node scripts/test-a11y.mjs",
+    "test:visual": "node scripts/test-visual.mjs",
+    "test:visual:update": "node scripts/test-visual.mjs --update",
     "sync:tokens-from-figma": "node scripts/sync-tokens-from-figma.mjs",
     "sync:tokens-from-figma:write": "node scripts/sync-tokens-from-figma.mjs --write",
     "build:registry": "node scripts/build-token-registry.mjs",
@@ -41,7 +43,9 @@
     "@axe-core/playwright": "^4.11.2",
     "@tokens-studio/sd-transforms": "^2.0.3",
     "marked": "^18.0.2",
+    "pixelmatch": "^7.1.0",
     "playwright": "^1.59.1",
+    "pngjs": "^7.0.0",
     "style-dictionary": "^5.4.0"
   }
 }

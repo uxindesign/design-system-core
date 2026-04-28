@@ -87,6 +87,19 @@ Bump no `package.json` sempre acompanha entrada em `CHANGELOG.md`.
 
 WCAG 2.2 AA é piso obrigatório. Qualquer componente novo ou modificação que afete cor, contraste, foco ou navegação por teclado precisa ser validado. Ver [docs/accessibility.html](./docs/accessibility.html) e [ADR-004](./docs/decisions/ADR-004-wcag.md).
 
+### Visual regression testing
+
+```bash
+npm run test:visual                    # compara docs/* contra tests/visual/baseline/
+npm run test:visual -- --filter button # filtra por nome
+npm run test:visual -- --mode dark     # só um modo
+npm run test:visual:update             # regenera baseline (após mudança visual intencional)
+```
+
+Roda em 31 páginas × 2 modos = 62 screenshots full-page. Compara com baseline em `tests/visual/baseline/` (versionado). Threshold: 0.5% pixel diff (tolera anti-aliasing). Diff visualizável em `tests/visual/diff/<page>-<mode>.png` quando falha.
+
+Não roda em CI ainda — fonts via Google Fonts CDN podem renderizar diferentes em Linux runner vs Mac local. Use localmente antes de PR pra detectar regressões. Quando atualizar baseline, **inspeção visual obrigatória** (abra os PNGs antes de commitar) pra confirmar mudança é intencional.
+
 ### A11y testing automatizado
 
 ```bash

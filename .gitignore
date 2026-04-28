@@ -16,3 +16,7 @@ node_modules/
 # Dumps de revert de ações pontuais em Figma (issue #24.x)
 .figma-revert-*.json
 .figma-revert-*.mjs
+
+# Visual regression — baseline é versionado, mas actual e diff não
+tests/visual/actual/
+tests/visual/diff/
