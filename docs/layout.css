@@ -202,17 +202,15 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
 .ds-sidebar__chevron,
 .ds-sidebar__group-chevron {
   flex-shrink: 0;
-  font-size: 18px;
-  line-height: 1;
-  font-weight: var(--ds-font-weight-regular);
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
   color: var(--ds-content-tertiary);
   transition: transform var(--ds-duration-fast) var(--ds-ease-default);
-}
-
-.ds-sidebar__chevron::before,
-.ds-sidebar__group-chevron::before {
-  content: '▾';
-  display: inline-block;
 }
 
 .ds-sidebar__section--expanded .ds-sidebar__chevron,

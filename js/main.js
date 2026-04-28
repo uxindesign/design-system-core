@@ -135,7 +135,7 @@
         return '<li class="ds-sidebar__group' + expandedClass + '">'
           + '<button class="ds-sidebar__group-toggle" aria-expanded="' + expandedAttr + '">'
           + '<span class="ds-sidebar__group-label">' + item.label + '</span>'
-          + '<span class="ds-sidebar__group-chevron" aria-hidden="true"></span>'
+          + '<svg class="ds-sidebar__group-chevron" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>'
           + '</button>'
           + '<ul class="ds-sidebar__sub-nav">' + childrenHtml + '</ul></li>';
       }
@@ -147,7 +147,7 @@
       return '<div class="ds-sidebar__section ds-sidebar__section--expanded">'
         + '<button class="ds-sidebar__heading" aria-expanded="true">'
         + '<span class="ds-sidebar__heading-label">' + section.heading + '</span>'
-        + '<span class="ds-sidebar__chevron" aria-hidden="true"></span>'
+        + '<svg class="ds-sidebar__chevron" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>'
         + '</button>'
         + '<ul class="ds-sidebar__nav">' + items + '</ul></div>';
     }).join('');
