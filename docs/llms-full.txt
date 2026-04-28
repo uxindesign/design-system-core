@@ -1,6 +1,6 @@
 # Design System Core — conteúdo consolidado
 
-> Versão 1.0.0-beta.3. Arquivo destinado a consumo por LLMs que precisem
+> Versão 1.0.0-beta.4. Arquivo destinado a consumo por LLMs que precisem
 > do design system inteiro em uma requisição. Inclui README, CONTRIBUTING,
 > CLAUDE.md, CHANGELOG, todos os MDs em docs/, todos os ADRs e um resumo
 > dos tokens. Páginas HTML-only (componentes, foundations) estão referenciadas
@@ -195,6 +195,10 @@ O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.
 A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incrementam `1.0.0-beta.N` até decisão do owner pra dropping do tag → `1.0.0` oficial. Tags 0.x permanecem como histórico pré-beta. Regras em `docs/process-versioning.html`.
 
 ## [Não publicado]
+
+## [1.0.0-beta.4] — 2026-04-28
+
+Production-grade hardening: reconciliação completa Figma↔JSON com CI gate, a11y testing automatizado (axe-core + Playwright) com baseline lock, visual regression testing (pixelmatch), token registry 100% documentado (sentido/contexto/decisão pra cada token), refactor Foundation→Semantic em 12 components, redesign de token-architecture.
 
 ### Adicionado
 
@@ -1247,7 +1251,7 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 
 > Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-28. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
-> Versão atual: **1.0.0-beta.3**
+> Versão atual: **1.0.0-beta.4**
 
 ## Status geral
 
@@ -8008,13 +8012,13 @@ Seção expandida com contexto, decisão e locais de uso.
 
 > Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-28. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
-> Versão atual: **1.0.0-beta.3**
+> Versão atual: **1.0.0-beta.4**
 
 ## Estado atual
 
 | Aspecto | Valor |
 |---------|-------|
-| Versão | 1.0.0-beta.3 |
+| Versão | 1.0.0-beta.4 |
 | Formato canônico | JSON (DTCG) em `tokens/` |
 | CSS gerado | Style Dictionary → `css/tokens/generated/` |
 | Pipeline | ✅ index.css importa apenas generated/ |
@@ -10096,5 +10100,5 @@ Verificação automática de coerência Figma ↔ JSON ↔ CSS: `scripts/tokens-
 ═══════════════════════════════════════════════════════════
 
 Gerado por scripts/build-llms.mjs.
-Versão: 1.0.0-beta.3
+Versão: 1.0.0-beta.4
 Site: https://uxindesign.github.io/design-system-core/

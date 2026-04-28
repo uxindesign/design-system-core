@@ -70,6 +70,8 @@
 <p>O formato é baseado em <a href="https://keepachangelog.com/pt-BR/1.1.0/">Keep a Changelog</a> e o versionamento segue <a href="https://semver.org/lang/pt-BR/">Semantic Versioning</a>.</p>
 <p>A partir de <code>1.0.0-beta.1</code>, o sistema entrou em <strong>fase beta</strong> — releases incrementam <code>1.0.0-beta.N</code> até decisão do owner pra dropping do tag → <code>1.0.0</code> oficial. Tags 0.x permanecem como histórico pré-beta. Regras em <code>docs/process-versioning.html</code>.</p>
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
+<h2>[1.0.0-beta.4] — 2026-04-28</h2>
+<p>Production-grade hardening: reconciliação completa Figma↔JSON com CI gate, a11y testing automatizado (axe-core + Playwright) com baseline lock, visual regression testing (pixelmatch), token registry 100% documentado (sentido/contexto/decisão pra cada token), refactor Foundation→Semantic em 12 components, redesign de token-architecture.</p>
 <h3>Adicionado</h3>
 <ul>
 <li><strong>Visual regression testing via Playwright + pixelmatch</strong> (<code>scripts/test-visual.mjs</code>). Captura full-page de 31 páginas × 2 modos = 62 screenshots e compara contra baseline versionado em <code>tests/visual/baseline/</code> (~27MB). Threshold 0.5% pixel diff tolera anti-aliasing, bloqueia mudanças visuais reais. Diff visualizável em <code>tests/visual/diff/</code> (gitignored). Comando: <code>npm run test:visual</code> (local-only — fonts via Google Fonts CDN renderizam levemente diferente Linux vs Mac, então não rodando em CI ainda).</li>

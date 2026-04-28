@@ -8,6 +8,10 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 
 ## [Não publicado]
 
+## [1.0.0-beta.4] — 2026-04-28
+
+Production-grade hardening: reconciliação completa Figma↔JSON com CI gate, a11y testing automatizado (axe-core + Playwright) com baseline lock, visual regression testing (pixelmatch), token registry 100% documentado (sentido/contexto/decisão pra cada token), refactor Foundation→Semantic em 12 components, redesign de token-architecture.
+
 ### Adicionado
 
 - **Visual regression testing via Playwright + pixelmatch** (`scripts/test-visual.mjs`). Captura full-page de 31 páginas × 2 modos = 62 screenshots e compara contra baseline versionado em `tests/visual/baseline/` (~27MB). Threshold 0.5% pixel diff tolera anti-aliasing, bloqueia mudanças visuais reais. Diff visualizável em `tests/visual/diff/` (gitignored). Comando: `npm run test:visual` (local-only — fonts via Google Fonts CDN renderizam levemente diferente Linux vs Mac, então não rodando em CI ainda).
