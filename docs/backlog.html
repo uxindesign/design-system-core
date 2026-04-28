@@ -107,6 +107,10 @@
 <h3>Sincronização de textos Figma ↔ site</h3>
 <p>A Fase 7 original previa. Substituída pela decisão de reduzir doc textual do Figma (item acima). Se no futuro houver demanda real de ter textos idênticos em ambos os lados, reavaliar.</p>
 <h2>Baixa prioridade</h2>
+<h3>Form Field como Component dedicado no Figma</h3>
+<p>Hoje (Pattern A): cada controle Figma — Input Text, Select, Textarea, Checkbox, Radio — encapsula label/helper/error/required internamente. Form Field existe no CSS (<code>.ds-field*</code>) e na doc (<code>docs/form-field.html</code>) como wrapper standalone, mas não há Component Figma dedicado — criar um seria duplicar o que cada controle já tem.</p>
+<p>Avaliar mudança pra Pattern B (Carbon/Polaris/Atlassian): extrair label/helper/error dos controles Figma, criar Component Form Field standalone com slot pra qualquer controle, recompor cada doc. Custo: refactor profundo de 5 components Figma + repensar bindings de Text Style + atualizar 5+ docs HTML. Benefício: source of truth do wrapping pattern em um lugar só, alinhamento com DS de referência.</p>
+<p>Trigger pra revisitar: pedido explícito de consumidor que precise compor controles custom (ex: combobox, color-picker) usando o wrapping nativo, ou observação de drift em a11y patterns entre Input/Select/Textarea.</p>
 <h3>Storybook</h3>
 <p>Componente inventory marca como pendente. Hoje o site cumpre o papel de vitrine interativa. Só implementar se houver demanda explícita de time Dev consumidor. Integração com os tokens DTCG já gerados (formato padrão de import), sem reinventar.</p>
 <h3>MCP próprio do design system</h3>

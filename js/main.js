@@ -35,6 +35,18 @@
       ]
     },
     {
+      heading: 'Forms',
+      items: [
+        { label: 'Form Field', path: 'docs/form-field.html' },
+        { label: 'Input',      path: 'docs/input.html' },
+        { label: 'Textarea',   path: 'docs/textarea.html' },
+        { label: 'Select',     path: 'docs/select.html' },
+        { label: 'Checkbox',   path: 'docs/checkbox.html' },
+        { label: 'Radio',      path: 'docs/radio.html' },
+        { label: 'Toggle',     path: 'docs/toggle.html' }
+      ]
+    },
+    {
       heading: 'Components',
       items: [
         { label: 'Alert',      path: 'docs/alert.html' },
@@ -43,18 +55,11 @@
         { label: 'Breadcrumb', path: 'docs/breadcrumb.html' },
         { label: 'Button',     path: 'docs/button.html' },
         { label: 'Card',       path: 'docs/card.html' },
-        { label: 'Checkbox',   path: 'docs/checkbox.html' },
         { label: 'Divider',    path: 'docs/divider.html' },
-        { label: 'Form Field', path: 'docs/form-field.html' },
-        { label: 'Input',      path: 'docs/input.html' },
         { label: 'Modal',      path: 'docs/modal.html' },
-        { label: 'Radio',      path: 'docs/radio.html' },
-        { label: 'Select',     path: 'docs/select.html' },
         { label: 'Skeleton',   path: 'docs/skeleton.html' },
         { label: 'Spinner',    path: 'docs/spinner.html' },
         { label: 'Tabs',       path: 'docs/tabs.html' },
-        { label: 'Textarea',   path: 'docs/textarea.html' },
-        { label: 'Toggle',     path: 'docs/toggle.html' },
         { label: 'Tooltip',    path: 'docs/tooltip.html' }
       ]
     },

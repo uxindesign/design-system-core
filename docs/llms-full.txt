@@ -1151,6 +1151,14 @@ A Fase 7 original previa. Substituída pela decisão de reduzir doc textual do F
 
 ## Baixa prioridade
 
+### Form Field como Component dedicado no Figma
+
+Hoje (Pattern A): cada controle Figma — Input Text, Select, Textarea, Checkbox, Radio — encapsula label/helper/error/required internamente. Form Field existe no CSS (`.ds-field*`) e na doc (`docs/form-field.html`) como wrapper standalone, mas não há Component Figma dedicado — criar um seria duplicar o que cada controle já tem.
+
+Avaliar mudança pra Pattern B (Carbon/Polaris/Atlassian): extrair label/helper/error dos controles Figma, criar Component Form Field standalone com slot pra qualquer controle, recompor cada doc. Custo: refactor profundo de 5 components Figma + repensar bindings de Text Style + atualizar 5+ docs HTML. Benefício: source of truth do wrapping pattern em um lugar só, alinhamento com DS de referência.
+
+Trigger pra revisitar: pedido explícito de consumidor que precise compor controles custom (ex: combobox, color-picker) usando o wrapping nativo, ou observação de drift em a11y patterns entre Input/Select/Textarea.
+
 ### Storybook
 
 Componente inventory marca como pendente. Hoje o site cumpre o papel de vitrine interativa. Só implementar se houver demanda explícita de time Dev consumidor. Integração com os tokens DTCG já gerados (formato padrão de import), sem reinventar.
