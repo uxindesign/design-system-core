@@ -6,7 +6,7 @@
     "lightTokens": 164,
     "darkTokens": 164,
     "errors": 0,
-    "warnings": 2
+    "warnings": 1
   },
   "checks": {
     "jsonIntegrity": [],
@@ -22,17 +22,6 @@
           "foundation.color.neutral.200",
           "foundation.color.neutral.300",
           "foundation.color.neutral.400"
-        ]
-      },
-      {
-        "level": "warning",
-        "message": "12 entries em registry.json sem token correspondente em tokens/ (stale).",
-        "sample": [
-          "semantic.border.width.subtle",
-          "semantic.focus.ring.width",
-          "semantic.focus.ring.offset",
-          "semantic.focus.ring.color",
-          "semantic.typography.control.font-size.sm"
         ]
       }
     ],

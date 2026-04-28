@@ -16,8 +16,6 @@
     "color-contrast|docs/alert.html|dark|.ds-subsection:nth-child(5) > .ds-preview > .ds-preview__panel--active.ds-preview__panel[data-panel=\"preview\"] > .ds-preview__canvas.ds-preview__canvas--column > .ds-alert--success.ds-alert--subtle[role=\"alert\"] > .ds-alert__content > .ds-alert__description",
     "color-contrast|docs/alert.html|dark|.ds-subsection:nth-child(6) > .ds-preview > .ds-preview__panel--active.ds-preview__panel[data-panel=\"preview\"] > .ds-preview__canvas.ds-preview__canvas--column > .ds-alert--success.ds-alert--subtle[role=\"alert\"] > .ds-alert__content > .ds-alert__description",
     "color-contrast|docs/alert.html|dark|div[role=\"status\"] > .ds-alert__content > .ds-alert__description",
-    "color-contrast|docs/alert.html|light|.ds-alert--info.ds-alert--filled[role=\"alert\"] > .ds-alert__close[aria-label=\"Dismiss alert\"] > .material-symbols-outlined",
-    "color-contrast|docs/alert.html|light|.ds-alert--success.ds-alert--filled[role=\"alert\"] > .ds-alert__close[aria-label=\"Dismiss alert\"] > .material-symbols-outlined",
     "color-contrast|docs/alert.html|light|.ds-site-header__logo",
     "color-contrast|docs/alert.html|light|.ds-subsection:nth-child(4) > .ds-preview > .ds-preview__tabs[role=\"tablist\"] > .ds-preview__tab--active[data-tab=\"preview\"][data-i18n-src$=\"Preview\"]",
     "color-contrast|docs/alert.html|light|.ds-subsection:nth-child(5) > .ds-preview > .ds-preview__tabs[role=\"tablist\"] > .ds-preview__tab--active[data-tab=\"preview\"][data-i18n-src$=\"Preview\"]",
