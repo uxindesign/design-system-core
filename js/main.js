@@ -119,6 +119,24 @@
     }
     var upToRoot = depth === 0 ? '' : '../'.repeat(depth);
 
+    // Estado de expand/collapse persiste entre navegações em localStorage.
+    // Default: aberto (true) pra todas as sections e groups. Usuário só
+    // explicita preferência quando colapsa algo. Reset state apagando a key.
+    var STATE_KEY = 'ds-sidebar-state';
+    function loadState() {
+      try { return JSON.parse(localStorage.getItem(STATE_KEY) || '{}') || {}; }
+      catch { return {}; }
+    }
+    function saveState(state) {
+      try { localStorage.setItem(STATE_KEY, JSON.stringify(state)); }
+      catch { /* storage cheio ou disabled — ignora */ }
+    }
+    function isExpandedDefault(key) {
+      var state = loadState();
+      // Default true (aberto) quando não há preferência salva.
+      return state[key] === undefined ? true : state[key] === true;
+    }
+
     function renderLeafItem(item) {
       var href = upToRoot + item.path;
       var active = item.path === currentPath ? ' ds-sidebar__link--active' : '';
@@ -129,11 +147,14 @@
     function renderItem(item) {
       if (item.children) {
         var hasActiveChild = item.children.some(function (c) { return c.path === currentPath; });
+        var stateKey = 'group:' + item.label;
+        // Auto-expand se houver child ativo (override do estado salvo) OR
+        // se preferência salva (default true) é aberto.
+        var expanded = hasActiveChild || isExpandedDefault(stateKey);
         var childrenHtml = item.children.map(renderLeafItem).join('');
-        var expandedClass = hasActiveChild ? ' ds-sidebar__group--expanded' : '';
-        var expandedAttr = hasActiveChild ? 'true' : 'false';
-        return '<li class="ds-sidebar__group' + expandedClass + '">'
-          + '<button class="ds-sidebar__group-toggle" aria-expanded="' + expandedAttr + '">'
+        var expandedClass = expanded ? ' ds-sidebar__group--expanded' : '';
+        return '<li class="ds-sidebar__group' + expandedClass + '" data-state-key="' + stateKey + '">'
+          + '<button class="ds-sidebar__group-toggle" aria-expanded="' + expanded + '">'
           + '<span class="ds-sidebar__group-label">' + item.label + '</span>'
           + '<svg class="ds-sidebar__group-chevron" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>'
           + '</button>'
@@ -143,9 +164,12 @@
     }
 
     var html = NAV_DATA.map(function (section) {
+      var stateKey = 'section:' + section.heading;
+      var expanded = isExpandedDefault(stateKey);
       var items = section.items.map(renderItem).join('');
-      return '<div class="ds-sidebar__section ds-sidebar__section--expanded">'
-        + '<button class="ds-sidebar__heading" aria-expanded="true">'
+      var expandedClass = expanded ? ' ds-sidebar__section--expanded' : '';
+      return '<div class="ds-sidebar__section' + expandedClass + '" data-state-key="' + stateKey + '">'
+        + '<button class="ds-sidebar__heading" aria-expanded="' + expanded + '">'
         + '<span class="ds-sidebar__heading-label">' + section.heading + '</span>'
         + '<svg class="ds-sidebar__chevron" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>'
         + '</button>'
@@ -165,12 +189,19 @@
       });
     });
 
+    function persistToggle(key, expanded) {
+      var state = loadState();
+      state[key] = expanded;
+      saveState(state);
+    }
+
     sidebar.querySelectorAll('.ds-sidebar__heading').forEach(function (btn) {
       btn.addEventListener('click', function () {
         var section = this.closest('.ds-sidebar__section');
         var isExpanded = section.classList.contains('ds-sidebar__section--expanded');
         section.classList.toggle('ds-sidebar__section--expanded', !isExpanded);
         this.setAttribute('aria-expanded', String(!isExpanded));
+        persistToggle(section.getAttribute('data-state-key'), !isExpanded);
       });
     });
 
@@ -180,6 +211,7 @@
         var isExpanded = group.classList.contains('ds-sidebar__group--expanded');
         group.classList.toggle('ds-sidebar__group--expanded', !isExpanded);
         this.setAttribute('aria-expanded', String(!isExpanded));
+        persistToggle(group.getAttribute('data-state-key'), !isExpanded);
       });
     });
   }

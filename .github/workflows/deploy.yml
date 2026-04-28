@@ -11,10 +11,12 @@ on:
 # Se este job falhar, o site continua servindo o último deploy bem-sucedido
 # (Pages é independente). O dev é notificado para corrigir.
 #
-# Política: artefatos derivados (css/tokens/generated/, docs/api/, docs/llms*)
-# são commitados pelo dev localmente após `npm run build:all`. CI apenas valida
-# que `build:all` produz o mesmo output do que está commitado — se divergir,
-# falha com mensagem clara.
+# Política: artefatos derivados são commitados pelo dev localmente após
+# `npm run build:all`. CI valida apenas o que é determinístico:
+# `css/tokens/generated/` (Style Dictionary, sem dependências de ambiente).
+# Outros derivados em `docs/` (api/, llms*, tokens-sync*) podem regenerar
+# diferente no CI por dependerem de `.figma-snapshot.json` local ou de
+# ordens não-determinísticas — drift cosmético lá é aceitável.
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -49,15 +51,15 @@ jobs:
       - name: Security check — block sensitive content in artifacts
         run: npm run security:check
 
-      - name: Verify generated artifacts match committed state
+      - name: Verify generated CSS tokens match committed state
         run: |
-          # tokens-sync.{json,html} são excluídos do diff porque dependem de
-          # .figma-snapshot.json (gitignored) — local com snapshot gera output
-          # rico, CI sem snapshot gera output minimal. Diferença é esperada.
-          if ! git diff --quiet css/tokens/generated/ docs/ ':!docs/api/tokens-sync.json' ':!docs/tokens-sync.html'; then
-            echo "::error::Artefatos derivados em css/tokens/generated/ ou docs/ não batem com o que foi commitado."
-            echo "::error::Rode 'npm run build:all' localmente, commit o diff e re-push."
-            git diff --stat css/tokens/generated/ docs/ ':!docs/api/tokens-sync.json' ':!docs/tokens-sync.html'
+          # Apenas css/tokens/generated/ é validado: Style Dictionary é
+          # determinístico, então drift aqui = dev esqueceu de rodar
+          # `npm run build:tokens` antes do push. Sinal alto, ruído zero.
+          if ! git diff --quiet css/tokens/generated/; then
+            echo "::error::CSS gerado de tokens não bate com o que foi commitado."
+            echo "::error::Rode 'npm run build:tokens' localmente, commit o diff e re-push."
+            git diff --stat css/tokens/generated/
             exit 1
           fi
-          echo "✅ Artefatos commitados batem com o output de build:all."
+          echo "✅ CSS gerado de tokens bate com o output de build:tokens."
