@@ -8,6 +8,20 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 
 ## [Não publicado]
 
+### Adicionado
+
+- **Form Field restaurado como component #19**. Reverte simplificação anterior que tirou Form Field da lista — Form Field é padrão first-class em todo DS sério (Material, Polaris, Carbon, Chakra), é onde a a11y de form se materializa (label↔control association, aria-describedby, aria-invalid). Entregas:
+  - `css/components/form-field.css` (extraído de `input.css`) — wrapper standalone `.ds-field` + sub-classes `.ds-field__label-row`, `.ds-field__label`, `.ds-field__required`, `.ds-field__helper`, `.ds-field__error` e modificadores `.ds-field--error`, `.ds-field--no-label`, `.ds-field--no-helper`. CSS já existia, agora tem arquivo dedicado e import explícito em `components/index.css`.
+  - `docs/form-field.html` — doc completa com when-to-use, anatomy (5 partes numeradas), uso básico, required state, error state com `aria-invalid` + `role="alert"`, composição com Select/Textarea, checklist de a11y WCAG 2.2 (1.3.1, 3.3.2 etc), reference table de classes.
+  - Sidebar (`js/main.js`), `index.html` grid, `index.html` count 18→19, `scripts/sync-docs.mjs` knownComponents, e refs em `process-versioning.md`/`system-principles.md`/`build-llms.mjs`/`CONTRIBUTING.md`.
+  - A11y baseline atualizado (5 fingerprints novos, todos inerências de template — logo + tabs já aceitos em outras páginas).
+  - Visual regression baseline criado pra form-field.html (light + dark).
+  - **Figma**: page placeholder criada em `🧩  Components → ❖  Form Field`. Component dedicado (variants, properties, slots) marcado como TODO de authoring session.
+
+### Corrigido
+
+- **Sidebar 404 em "Form Field"** — entry em `js/main.js` tinha sido órfã quando Form Field foi removido. Corrigido restaurando-o como component first-class (acima).
+
 ## [1.0.0-beta.4] — 2026-04-28
 
 Production-grade hardening: reconciliação completa Figma↔JSON com CI gate, a11y testing automatizado (axe-core + Playwright) com baseline lock, visual regression testing (pixelmatch), token registry 100% documentado (sentido/contexto/decisão pra cada token), refactor Foundation→Semantic em 12 components, redesign de token-architecture.

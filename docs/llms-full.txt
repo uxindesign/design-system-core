@@ -131,7 +131,7 @@ Formato:
 
 ## Pipeline de tokens
 
-Tokens vivem em `tokens/**/*.json` (formato DTCG) e são a fonte de verdade. `build-tokens.mjs` transforma em CSS custom properties prefixadas com `--ds-*` em `css/tokens/generated/`. O CSS dos 18 componentes em `css/components/*.css` consome essas variáveis. **Não edite os arquivos em `css/tokens/generated/` à mão.** Eles são regenerados no CI em cada push pra `main`.
+Tokens vivem em `tokens/**/*.json` (formato DTCG) e são a fonte de verdade. `build-tokens.mjs` transforma em CSS custom properties prefixadas com `--ds-*` em `css/tokens/generated/`. O CSS dos 19 componentes em `css/components/*.css` consome essas variáveis. **Não edite os arquivos em `css/tokens/generated/` à mão.** Eles são regenerados no CI em cada push pra `main`.
 
 Detalhes completos em [docs/token-architecture.html](./docs/token-architecture.html) e [ADR-001](./docs/decisions/ADR-001-migracao-tokens.md).
 
@@ -195,6 +195,20 @@ O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.
 A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incrementam `1.0.0-beta.N` até decisão do owner pra dropping do tag → `1.0.0` oficial. Tags 0.x permanecem como histórico pré-beta. Regras em `docs/process-versioning.html`.
 
 ## [Não publicado]
+
+### Adicionado
+
+- **Form Field restaurado como component #19**. Reverte simplificação anterior que tirou Form Field da lista — Form Field é padrão first-class em todo DS sério (Material, Polaris, Carbon, Chakra), é onde a a11y de form se materializa (label↔control association, aria-describedby, aria-invalid). Entregas:
+  - `css/components/form-field.css` (extraído de `input.css`) — wrapper standalone `.ds-field` + sub-classes `.ds-field__label-row`, `.ds-field__label`, `.ds-field__required`, `.ds-field__helper`, `.ds-field__error` e modificadores `.ds-field--error`, `.ds-field--no-label`, `.ds-field--no-helper`. CSS já existia, agora tem arquivo dedicado e import explícito em `components/index.css`.
+  - `docs/form-field.html` — doc completa com when-to-use, anatomy (5 partes numeradas), uso básico, required state, error state com `aria-invalid` + `role="alert"`, composição com Select/Textarea, checklist de a11y WCAG 2.2 (1.3.1, 3.3.2 etc), reference table de classes.
+  - Sidebar (`js/main.js`), `index.html` grid, `index.html` count 18→19, `scripts/sync-docs.mjs` knownComponents, e refs em `process-versioning.md`/`system-principles.md`/`build-llms.mjs`/`CONTRIBUTING.md`.
+  - A11y baseline atualizado (5 fingerprints novos, todos inerências de template — logo + tabs já aceitos em outras páginas).
+  - Visual regression baseline criado pra form-field.html (light + dark).
+  - **Figma**: page placeholder criada em `🧩  Components → ❖  Form Field`. Component dedicado (variants, properties, slots) marcado como TODO de authoring session.
+
+### Corrigido
+
+- **Sidebar 404 em "Form Field"** — entry em `js/main.js` tinha sido órfã quando Form Field foi removido. Corrigido restaurando-o como component first-class (acima).
 
 ## [1.0.0-beta.4] — 2026-04-28
 
@@ -1273,6 +1287,7 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 | Breadcrumb | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
 | Avatar | 🟢 | ⚠️ | 🟢 | 🟢 | ⬜ | 🟢 |
 | Divider | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
+| Form Field | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
 | Spinner | 🟢 | ⚠️ | 🟢 | 🟢 | ⬜ | 🟢 |
 | Skeleton | 🟢 | ⚠️ | 🟢 | 🟢 | ⬜ | 🟢 |
 
@@ -1301,7 +1316,7 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 | Style Dictionary | 🟢 `build-tokens.mjs` |
 | CSS gerado | 🟢 4 arquivos em `css/tokens/generated/` |
 | Import pipeline | 🟢 index.css importa apenas generated/ |
-| Figma binding | 🟢 18 componentes vinculados |
+| Figma binding | 🟢 19 componentes vinculados |
 
 ## ADRs
 
@@ -1325,7 +1340,7 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 
 ## Próximos milestones
 
-1. **Storybook** — setup + stories para 18 componentes (vanilla JS)
+1. **Storybook** — setup + stories para 19 componentes (vanilla JS)
 2. **prefers-reduced-motion** — media query nos componentes com transitions (ADR-004 pendente)
 3. **CSS legado** — verificar/remover `css/tokens/theme-light.css` (ADR-010 pendente)
 4. **Novos componentes** — Dropdown, Combobox, Pagination, Table
@@ -1678,7 +1693,7 @@ Quando o owner decidir que está pronto, drop do beta tag → `1.0.0` oficial. A
 - [x] 0 erros em `verify:tokens`
 - [x] 0 leaks Foundation em `css/components/*.css`
 - [x] 0 leaks Foundation em `css/base/*.css`
-- [x] 18 componentes auditados Figma vs CSS (alinhamento 1:1)
+- [x] 19 componentes auditados Figma vs CSS (alinhamento 1:1)
 - [x] 100% Text Style coverage em textos non-Material de components Figma
 - [x] Descriptions designer-focused nos 18 component sets Figma
 
@@ -1806,7 +1821,7 @@ Quando um token é criado, renomeado, removido ou tem seu valor alterado, o impa
 
 Na prática:
 
-- Antes de alterar `semantic.color.primary.hover`, verificar quais dos 18 componentes usam esse token (Button, Input, Select, Checkbox, Toggle, Tabs, links, etc.).
+- Antes de alterar `semantic.color.primary.hover`, verificar quais dos 19 componentes usam esse token (Button, Input, Select, Checkbox, Toggle, Tabs, links, etc.).
 - Antes de criar um novo token semântico, verificar se o conceito é genuinamente reutilizável por múltiplos componentes. Se só um componente precisa, é token de componente — não semântico.
 - Antes de propor tokens dimensionais (height, padding, font-size), auditar os componentes que compartilham estrutura similar. Exemplo: Button, Input, Select e Textarea compartilham controles interativos com sizes sm/md/lg — tokens dimensionais devem refletir isso (ver ADR-006).
 

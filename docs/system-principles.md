@@ -54,7 +54,7 @@ Quando um token é criado, renomeado, removido ou tem seu valor alterado, o impa
 
 Na prática:
 
-- Antes de alterar `semantic.color.primary.hover`, verificar quais dos 18 componentes usam esse token (Button, Input, Select, Checkbox, Toggle, Tabs, links, etc.).
+- Antes de alterar `semantic.color.primary.hover`, verificar quais dos 19 componentes usam esse token (Button, Input, Select, Checkbox, Toggle, Tabs, links, etc.).
 - Antes de criar um novo token semântico, verificar se o conceito é genuinamente reutilizável por múltiplos componentes. Se só um componente precisa, é token de componente — não semântico.
 - Antes de propor tokens dimensionais (height, padding, font-size), auditar os componentes que compartilham estrutura similar. Exemplo: Button, Input, Select e Textarea compartilham controles interativos com sizes sm/md/lg — tokens dimensionais devem refletir isso (ver ADR-006).
 

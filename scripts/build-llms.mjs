@@ -85,7 +85,7 @@ const FOUNDATIONS = [
 
 const llmsTxt = `# Design System Core
 
-> Design system white-label em CSS puro com tokens DTCG em JSON, 18 componentes, modos light/dark, três temas (Default, Ocean, Forest). Versão atual: ${pkg.version}. Enquanto não houver release oficial 1.0, o projeto fica em 0.x.
+> Design system white-label em CSS puro com tokens DTCG em JSON, 19 componentes, modos light/dark, três temas (Default, Ocean, Forest). Versão atual: ${pkg.version}. Enquanto não houver release oficial 1.0, o projeto fica em 0.x.
 
 Repositório: https://github.com/uxindesign/design-system-core
 Site: ${BASE_URL}/
@@ -126,7 +126,7 @@ ${adrs.map((a) => `- [ADR-${a.num} — ${a.title}](${BASE_URL}/docs/decisions/${
 
 ## APIs JSON (consumo programático)
 
-- [components.json](${BASE_URL}/docs/api/components.json): 18 componentes com variantes e tokens consumidos.
+- [components.json](${BASE_URL}/docs/api/components.json): 19 componentes com variantes e tokens consumidos.
 - [tokens.json](${BASE_URL}/docs/api/tokens.json): camadas Foundation, Semantic (light/dark) e Component.
 - [adrs.json](${BASE_URL}/docs/api/adrs.json): índice estruturado das decisões.
 - [foundations.json](${BASE_URL}/docs/api/foundations.json): catálogo das 10 foundations.

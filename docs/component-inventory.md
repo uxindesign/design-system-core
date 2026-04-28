@@ -24,6 +24,7 @@
 | Breadcrumb | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
 | Avatar | 🟢 | ⚠️ | 🟢 | 🟢 | ⬜ | 🟢 |
 | Divider | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
+| Form Field | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
 | Spinner | 🟢 | ⚠️ | 🟢 | 🟢 | ⬜ | 🟢 |
 | Skeleton | 🟢 | ⚠️ | 🟢 | 🟢 | ⬜ | 🟢 |
 
@@ -52,7 +53,7 @@
 | Style Dictionary | 🟢 `build-tokens.mjs` |
 | CSS gerado | 🟢 4 arquivos em `css/tokens/generated/` |
 | Import pipeline | 🟢 index.css importa apenas generated/ |
-| Figma binding | 🟢 18 componentes vinculados |
+| Figma binding | 🟢 19 componentes vinculados |
 
 ## ADRs
 
@@ -76,7 +77,7 @@
 
 ## Próximos milestones
 
-1. **Storybook** — setup + stories para 18 componentes (vanilla JS)
+1. **Storybook** — setup + stories para 19 componentes (vanilla JS)
 2. **prefers-reduced-motion** — media query nos componentes com transitions (ADR-004 pendente)
 3. **CSS legado** — verificar/remover `css/tokens/theme-light.css` (ADR-010 pendente)
 4. **Novos componentes** — Dropdown, Combobox, Pagination, Table

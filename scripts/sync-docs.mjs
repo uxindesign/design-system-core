@@ -205,6 +205,7 @@ const knownComponents = [
   { name: 'Breadcrumb',  css: 'breadcrumb', token: null       },
   { name: 'Avatar',      css: 'avatar',     token: 'avatar'   },
   { name: 'Divider',     css: 'divider',    token: null       },
+  { name: 'Form Field',  css: 'form-field', token: null       },
   { name: 'Spinner',     css: 'spinner',    token: 'spinner'  },
   { name: 'Skeleton',    css: 'skeleton',   token: 'skeleton' },
 ];
@@ -254,7 +255,7 @@ ${rows.join('\n')}
 | Style Dictionary | 🟢 \`build-tokens.mjs\` |
 | CSS gerado | ${generatedFiles.length > 0 ? `🟢 ${generatedFiles.length} arquivos em \`css/tokens/generated/\`` : '⚠️ generated/ vazio'} |
 | Import pipeline | ${pipelineClean ? '🟢 index.css importa apenas generated/' : '⚠️ ainda importa legados'} |
-| Figma binding | 🟢 18 componentes vinculados |
+| Figma binding | 🟢 19 componentes vinculados |
 
 ## ADRs
 
@@ -264,7 +265,7 @@ ${adrs.map(a => `| ADR-${a.num} | ${a.title} | ${a.status} |`).join('\n')}
 
 ## Próximos milestones
 
-1. **Storybook** — setup + stories para 18 componentes (vanilla JS)
+1. **Storybook** — setup + stories para 19 componentes (vanilla JS)
 2. **prefers-reduced-motion** — media query nos componentes com transitions (ADR-004 pendente)
 3. **CSS legado** — verificar/remover \`css/tokens/theme-light.css\` (ADR-010 pendente)
 4. **Novos componentes** — Dropdown, Combobox, Pagination, Table

@@ -64,7 +64,7 @@ Quando o owner decidir que está pronto, drop do beta tag → `1.0.0` oficial. A
 - [x] 0 erros em `verify:tokens`
 - [x] 0 leaks Foundation em `css/components/*.css`
 - [x] 0 leaks Foundation em `css/base/*.css`
-- [x] 18 componentes auditados Figma vs CSS (alinhamento 1:1)
+- [x] 19 componentes auditados Figma vs CSS (alinhamento 1:1)
 - [x] 100% Text Style coverage em textos non-Material de components Figma
 - [x] Descriptions designer-focused nos 18 component sets Figma
 

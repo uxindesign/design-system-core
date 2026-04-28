@@ -70,6 +70,22 @@
 <p>O formato é baseado em <a href="https://keepachangelog.com/pt-BR/1.1.0/">Keep a Changelog</a> e o versionamento segue <a href="https://semver.org/lang/pt-BR/">Semantic Versioning</a>.</p>
 <p>A partir de <code>1.0.0-beta.1</code>, o sistema entrou em <strong>fase beta</strong> — releases incrementam <code>1.0.0-beta.N</code> até decisão do owner pra dropping do tag → <code>1.0.0</code> oficial. Tags 0.x permanecem como histórico pré-beta. Regras em <code>docs/process-versioning.html</code>.</p>
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
+<h3>Adicionado</h3>
+<ul>
+<li><strong>Form Field restaurado como component #19</strong>. Reverte simplificação anterior que tirou Form Field da lista — Form Field é padrão first-class em todo DS sério (Material, Polaris, Carbon, Chakra), é onde a a11y de form se materializa (label↔control association, aria-describedby, aria-invalid). Entregas:<ul>
+<li><code>css/components/form-field.css</code> (extraído de <code>input.css</code>) — wrapper standalone <code>.ds-field</code> + sub-classes <code>.ds-field__label-row</code>, <code>.ds-field__label</code>, <code>.ds-field__required</code>, <code>.ds-field__helper</code>, <code>.ds-field__error</code> e modificadores <code>.ds-field--error</code>, <code>.ds-field--no-label</code>, <code>.ds-field--no-helper</code>. CSS já existia, agora tem arquivo dedicado e import explícito em <code>components/index.css</code>.</li>
+<li><code>docs/form-field.html</code> — doc completa com when-to-use, anatomy (5 partes numeradas), uso básico, required state, error state com <code>aria-invalid</code> + <code>role=&quot;alert&quot;</code>, composição com Select/Textarea, checklist de a11y WCAG 2.2 (1.3.1, 3.3.2 etc), reference table de classes.</li>
+<li>Sidebar (<code>js/main.js</code>), <code>index.html</code> grid, <code>index.html</code> count 18→19, <code>scripts/sync-docs.mjs</code> knownComponents, e refs em <code>process-versioning.md</code>/<code>system-principles.md</code>/<code>build-llms.mjs</code>/<code>CONTRIBUTING.md</code>.</li>
+<li>A11y baseline atualizado (5 fingerprints novos, todos inerências de template — logo + tabs já aceitos em outras páginas).</li>
+<li>Visual regression baseline criado pra form-field.html (light + dark).</li>
+<li><strong>Figma</strong>: page placeholder criada em <code>🧩  Components → ❖  Form Field</code>. Component dedicado (variants, properties, slots) marcado como TODO de authoring session.</li>
+</ul>
+</li>
+</ul>
+<h3>Corrigido</h3>
+<ul>
+<li><strong>Sidebar 404 em &quot;Form Field&quot;</strong> — entry em <code>js/main.js</code> tinha sido órfã quando Form Field foi removido. Corrigido restaurando-o como component first-class (acima).</li>
+</ul>
 <h2>[1.0.0-beta.4] — 2026-04-28</h2>
 <p>Production-grade hardening: reconciliação completa Figma↔JSON com CI gate, a11y testing automatizado (axe-core + Playwright) com baseline lock, visual regression testing (pixelmatch), token registry 100% documentado (sentido/contexto/decisão pra cada token), refactor Foundation→Semantic em 12 components, redesign de token-architecture.</p>
 <h3>Adicionado</h3>
