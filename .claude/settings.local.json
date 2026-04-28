@@ -11,7 +11,9 @@
       "WebSearch",
       "WebFetch(domain:primer.style)",
       "WebFetch(domain:samiamdesigns.substack.com)",
-      "Bash(node -e ' *)"
+      "Bash(node -e ' *)",
+      "Bash(gh run *)",
+      "Bash(python3 -c ' *)"
     ]
   },
   "enableAllProjectMcpServers": true,
