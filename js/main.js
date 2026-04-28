@@ -45,7 +45,6 @@
         { label: 'Card',       path: 'docs/card.html' },
         { label: 'Checkbox',   path: 'docs/checkbox.html' },
         { label: 'Divider',    path: 'docs/divider.html' },
-        { label: 'Form Field', path: 'docs/form-field.html' },
         { label: 'Input',      path: 'docs/input.html' },
         { label: 'Modal',      path: 'docs/modal.html' },
         { label: 'Radio',      path: 'docs/radio.html' },
