@@ -6,25 +6,13 @@
     "lightTokens": 164,
     "darkTokens": 164,
     "errors": 0,
-    "warnings": 1
+    "warnings": 0
   },
   "checks": {
     "jsonIntegrity": [],
     "jsonVsCss": [],
     "cssFoundationLeak": [],
-    "registryCompleteness": [
-      {
-        "level": "warning",
-        "message": "426 entries com campos TODO (sentido/contexto/decisao). Preencha incrementalmente.",
-        "sample": [
-          "foundation.color.neutral.50",
-          "foundation.color.neutral.100",
-          "foundation.color.neutral.200",
-          "foundation.color.neutral.300",
-          "foundation.color.neutral.400"
-        ]
-      }
-    ],
+    "registryCompleteness": [],
     "jsonVsFigma": {
       "skipped": true,
       "reason": "Snapshot Figma não encontrado (.figma-snapshot.json). Gerar via Claude Code (ver docs/process-figma-sync.md).",
