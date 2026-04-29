@@ -198,6 +198,16 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 
 ### Adicionado
 
+- **`docs/foundations-colors.html` agora exibe contraste WCAG por swatch no formato Figma.** Cada swatch das 10 paletas Foundation + Brand alias mostra `vs White X.X:1` e `vs Black X.X:1` com badge `AAA / AA / AA Large / Fail` — paridade com a página Foundation — Colors do Figma. Layout do swatch redesenhado pra card com info section (token name, hex, divider, duas linhas de contraste). Razões WCAG calculadas deterministicamente a partir do Foundation JSON (formula 2.1) e validadas contra os valores reportados no Figma (zero divergência). Hex hardcodados (`style="background-color:#XXX"`) substituídos por `var(--ds-color-...)` em todos os swatches — referência direta à Foundation, sem drift entre página e tokens.
+- **Cobertura de overlay/disabled na página Foundation Colors.** Adicionadas seções "Overlays" (Black/White × {5,10,20,40,60,80}%), "Toned overlays (Brand)" (blue-600 × {12,20,28}, blue-400 × {15,25,32}) e "Disabled fills" ({brand,success,error} × {light,dark}) — antes a página só mostrava 5 stops de Black overlay e omitia White, toned e disabled, criando gap entre `tokens/foundation/colors.json` e o que a doc exibe. Renderizadas sobre xadrez pra indicar transparência. Seção "Brand (alias customizável)" também adicionada.
+- `.ds-swatch__info`, `.ds-swatch__divider`, `.ds-swatch__contrast-row`, `.ds-swatch__contrast-label`, `.ds-swatch__contrast-ratio`, `.ds-swatch__color--checker`, `.ds-swatch__overlay` em `docs/layout.css` pra suportar o novo layout de card.
+
+### Drift detectado (requer ação no Figma)
+
+- **Página de documentação `Foundation — Colors` no Figma está stale para `green/*`, `amber/*` e `neutral/950`.** Os retângulos coloridos e labels hex daquela página exibem Tailwind defaults antigos (ex: green/500 mostra `#22C55E`, amber/500 mostra `#F59E0B`, neutral/950 mostra `#050C1A`), enquanto as Variables Figma reais (e o JSON) já estão recalibrados pra WCAG 4.5:1 (`#009F42`, `#BB7500`, `#070C17`). Validado contra `.figma-snapshot.json`: Variables ↔ JSON estão 100% alinhadas (`verify:tokens` passa com 0 drift). A correção é repopular os swatches da página de doc do Figma a partir das Variables atuais — os retângulos foram pintados com hex literal antes da recalibração e nunca refrescados. Não afeta consumidores; é só a doc visual do Figma. Pendente: sessão de Figma authoring pra regenerar as 33 swatches stale (11 green + 11 amber + 1 neutral/950 — total 33 retângulos).
+
+### Adicionado
+
 - **Form Field restaurado como component #19**. Reverte simplificação anterior que tirou Form Field da lista — Form Field é padrão first-class em todo DS sério (Material, Polaris, Carbon, Chakra), é onde a a11y de form se materializa (label↔control association, aria-describedby, aria-invalid). Entregas:
   - `css/components/form-field.css` (extraído de `input.css`) — wrapper standalone `.ds-field` + sub-classes `.ds-field__label-row`, `.ds-field__label`, `.ds-field__required`, `.ds-field__helper`, `.ds-field__error` e modificadores `.ds-field--error`, `.ds-field--no-label`, `.ds-field--no-helper`. CSS já existia, agora tem arquivo dedicado e import explícito em `components/index.css`.
   - `docs/form-field.html` — doc completa com when-to-use, anatomy (5 partes numeradas), uso básico, required state, error state com `aria-invalid` + `role="alert"`, composição com Select/Textarea, checklist de a11y WCAG 2.2 (1.3.1, 3.3.2 etc), reference table de classes.
@@ -806,7 +816,7 @@ Consolidação da documentação como fonte única de verdade. Plano em seis fas
 
 # Índice de ADRs — Design System Core
 
-> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-28. Não editar manualmente.
+> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-29. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
 
 15 decisões registradas.
@@ -1271,7 +1281,7 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 
 # Inventário de componentes — Design System Core
 
-> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-28. Não editar manualmente.
+> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-29. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
 > Versão atual: **1.0.0-beta.4**
 
@@ -8033,7 +8043,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 # Token schema — Design System Core
 
-> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-28. Não editar manualmente.
+> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-29. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
 > Versão atual: **1.0.0-beta.4**
 
