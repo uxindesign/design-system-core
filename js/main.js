@@ -547,85 +547,6 @@
 
 
   /* ---------------------------------------------------------
-     Contrast Ratio Calculator (WCAG 2.1)
-     --------------------------------------------------------- */
-  function initContrastBadges() {
-    var swatches = document.querySelectorAll('.ds-swatch__color');
-    if (!swatches.length) return;
-
-    function sRGBtoLinear(c) {
-      return c <= 0.04045 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
-    }
-
-    function luminance(r, g, b) {
-      return 0.2126 * sRGBtoLinear(r / 255) + 0.7152 * sRGBtoLinear(g / 255) + 0.0722 * sRGBtoLinear(b / 255);
-    }
-
-    function contrastRatio(l1, l2) {
-      var lighter = Math.max(l1, l2);
-      var darker = Math.min(l1, l2);
-      return (lighter + 0.05) / (darker + 0.05);
-    }
-
-    function wcagLevel(ratio) {
-      if (ratio >= 7) return { label: 'AAA', cls: 'aaa' };
-      if (ratio >= 4.5) return { label: 'AA', cls: 'aa' };
-      if (ratio >= 3) return { label: 'AA+', cls: 'aa-large' };
-      return { label: 'Fail', cls: 'fail' };
-    }
-
-    function parseColor(str) {
-      var m = str.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/);
-      if (m) return { r: parseInt(m[1]), g: parseInt(m[2]), b: parseInt(m[3]) };
-      return null;
-    }
-
-    function updateSwatches() {
-      swatches.forEach(function (el) {
-        var computed = getComputedStyle(el).backgroundColor;
-        var color = parseColor(computed);
-        if (!color) return;
-
-        var lum = luminance(color.r, color.g, color.b);
-        var vsWhite = contrastRatio(1, lum);
-        var vsBlack = contrastRatio(lum, 0);
-        var whiteLevel = wcagLevel(vsWhite);
-        var blackLevel = wcagLevel(vsBlack);
-
-        // Find or create contrast container
-        var swatch = el.parentElement;
-        var container = swatch.querySelector('.ds-swatch__contrast');
-        if (!container) {
-          container = document.createElement('div');
-          container.className = 'ds-swatch__contrast';
-          swatch.appendChild(container);
-        }
-
-        // a11y: badges são amostras decorativas demonstrando contraste —
-        // mostram propositalmente combinações que falham WCAG (ex.: "Fail vs
-        // White 1.0:1"). aria-hidden remove do a11y tree e do scan axe;
-        // info de contraste já está no title pra screen readers via tooltip.
-        container.innerHTML =
-          '<span class="ds-swatch__badge ds-swatch__badge--' + whiteLevel.cls + '" title="vs White ' + vsWhite.toFixed(1) + ':1" aria-hidden="true">' + whiteLevel.label + '</span>' +
-          '<span class="ds-swatch__badge ds-swatch__badge--' + blackLevel.cls + '" title="vs Black ' + vsBlack.toFixed(1) + ':1" aria-hidden="true">' + blackLevel.label + '</span>';
-      });
-    }
-
-    // Run on load and on theme/mode change
-    updateSwatches();
-
-    // Re-compute when theme or mode changes
-    var observer = new MutationObserver(function (mutations) {
-      mutations.forEach(function (m) {
-        if (m.attributeName === 'data-theme' || m.attributeName === 'data-mode') {
-          setTimeout(updateSwatches, 50);
-        }
-      });
-    });
-    observer.observe(document.documentElement, { attributes: true });
-  }
-
-  /* ---------------------------------------------------------
      Initialize All
      --------------------------------------------------------- */
   document.addEventListener('DOMContentLoaded', function () {
@@ -636,6 +557,5 @@
     initCopyButtons();
     initPreviewTabs();
     initCharCounters();
-    initContrastBadges();
   });
 })();
