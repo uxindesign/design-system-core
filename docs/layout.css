@@ -517,19 +517,20 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
   gap: var(--ds-dimension-4);
 }
 
-.ds-swatch__name {
-  font-size: var(--ds-font-size-12);
-  font-weight: var(--ds-font-weight-semibold);
-  color: var(--ds-content-default);
-  font-family: var(--ds-font-family-mono);
-  word-break: break-all;
-  line-height: 1.3;
+.ds-swatch__name,
+.ds-swatch__value {
+  display: block;
+  line-height: 1.4;
 }
 
-.ds-swatch__value {
+.ds-swatch__name code,
+.ds-swatch__value code {
+  display: inline-block;
   font-size: var(--ds-font-size-11);
-  color: var(--ds-content-secondary);
-  font-family: var(--ds-font-family-mono);
+  word-break: break-all;
+  white-space: normal;
+  max-width: 100%;
+  line-height: 1.4;
 }
 
 .ds-swatch__divider {
