@@ -14,6 +14,21 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 - **Cobertura de overlay/disabled na página Foundation Colors.** Adicionadas seções "Overlays" (Black/White × {5,10,20,40,60,80}%), "Toned overlays (Brand)" (blue-600 × {12,20,28}, blue-400 × {15,25,32}) e "Disabled fills" ({brand,success,error} × {light,dark}) — antes a página só mostrava 5 stops de Black overlay e omitia White, toned e disabled, criando gap entre `tokens/foundation/colors.json` e o que a doc exibe. Renderizadas sobre xadrez pra indicar transparência. Seção "Brand (alias customizável)" também adicionada.
 - `.ds-swatch__info`, `.ds-swatch__divider`, `.ds-swatch__contrast-row`, `.ds-swatch__contrast-label`, `.ds-swatch__contrast-ratio`, `.ds-swatch__color--checker`, `.ds-swatch__overlay` em `docs/layout.css` pra suportar o novo layout de card.
 
+### Mudado
+
+- **`docs/foundations-colors.html` reordenado e renomeado pra espelhar a collection Foundation no Figma.** Ordem antes (Neutral, Blue, Purple, Red, Amber, Green, Sky, Cyan, Emerald, Indigo + Brand alias no fim) → ordem agora (Brand, Neutral, Green, Amber, Red, Blue, Purple, Sky, Cyan, Emerald, Indigo) matching `Foundation.variableIds[]`. Section labels limpos: removidos refs obsoletos a "(escala Slate)", "(paleta Primary)", "(paleta Secondary)", "(tema Ocean)", "(tema Forest)", "(secundária do tema Ocean)" — themes Default/Ocean/Forest foram deletados em ADR-014, palettes Primary/Secondary não existem mais. Section labels mantém só descrição semântica útil onde aplica (Green = Sucesso, Amber = Alerta, Red = Erro, Sky = Informação). Disabled fills + Overlays movidos pra final (matching ordem no Figma collection).
+- **Página `Foundation — Colors` no Figma reordenada pra match collection order.** Sections antes em ordem `Neutral, Green, Amber, Red, Blue, Purple, Sky, Cyan, Emerald, Indigo`. Já estava quase certa, mas descrição de Neutral atualizada de "Escala de cinzas" pra "Escala neutra" (consistência terminológica).
+
+### Histórico Tailwind sinalizado
+
+Projeto não usa Tailwind. Referências históricas remanescentes (não removidas — pra revisão do owner):
+- `tokens/foundation/colors.json` + `css/tokens/generated/foundation.css`: paletas `blue/*`, `purple/*`, `cyan/*`, `emerald/*`, `indigo/*` (55 vars) — zero consumer em CSS de componente, restos do sistema de themes Default/Ocean/Forest pré-0.8.0 (ADR-014). Brand é a paleta canonical agora.
+- `tokens/registry.json` + `scripts/populate-registry.mjs`: 27 ocorrências de "escala Tailwind-compatível" em campos `decisao`. Descrição factual da convenção 50–950, mas pode ser reescrita como "escala 50–950 padronizada".
+- `docs/decisions/ADR-001-migracao-tokens.md` + `ADR-005-brand-foundation-e-estados-explicitos.md`: mencionam themes Default/Ocean/Forest. ADRs históricos — preservar como registro, marcar como superseded por ADR-014 se ainda não está.
+- `docs/foundations.html`: exemplos hardcoded `var(--ds-color-blue-500)` e `var(--ds-color-purple-500)` em demo de tokens. Trocar por `--ds-color-brand-500`.
+- `docs/token-architecture.html`: exemplo `--ds-color-blue-500` em coluna de exemplo. Trocar por `--ds-color-brand-500`.
+- `docs/design-principles.html`: anti-padrão usa frase "When the brand switches to cyan" — substituir cyan por exemplo neutro (ex: "different brand color").
+
 ### Drift detectado (requer ação no Figma)
 
 - **Página de documentação `Foundation — Colors` no Figma está stale para `green/*`, `amber/*` e `neutral/950`.** Os retângulos coloridos e labels hex daquela página exibem Tailwind defaults antigos (ex: green/500 mostra `#22C55E`, amber/500 mostra `#F59E0B`, neutral/950 mostra `#050C1A`), enquanto as Variables Figma reais (e o JSON) já estão recalibrados pra WCAG 4.5:1 (`#009F42`, `#BB7500`, `#070C17`). Validado contra `.figma-snapshot.json`: Variables ↔ JSON estão 100% alinhadas (`verify:tokens` passa com 0 drift). A correção é repopular os swatches da página de doc do Figma a partir das Variables atuais — os retângulos foram pintados com hex literal antes da recalibração e nunca refrescados. Não afeta consumidores; é só a doc visual do Figma. Pendente: sessão de Figma authoring pra regenerar as 33 swatches stale (11 green + 11 amber + 1 neutral/950 — total 33 retângulos).

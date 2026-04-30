@@ -37,12 +37,131 @@
 <main class="ds-main">
   <div class="ds-section">
     <h1 class="ds-section__title"><span data-lang="pt">Foundation Colors</span><span data-lang="en">Foundation Colors</span></h1>
-    <p class="ds-section__subtitle"><span data-lang="pt">Paleta de cores primitivas. Valores brutos sem significado semântico — os tokens semânticos (Theme) referenciam esta coleção via alias. Cada swatch indica contraste WCAG 2.2 contra White e Black: <strong>AAA</strong> ≥ 7:1, <strong>AA</strong> ≥ 4.5:1, <strong>AA Large</strong> ≥ 3:1, <strong>Fail</strong> &lt; 3:1.</span><span data-lang="en">Primitive color palette. Raw values with no semantic meaning — Theme tokens alias this collection. Each swatch shows WCAG 2.2 contrast against White and Black: <strong>AAA</strong> ≥ 7:1, <strong>AA</strong> ≥ 4.5:1, <strong>AA Large</strong> ≥ 3:1, <strong>Fail</strong> &lt; 3:1.</span></p>
+    <p class="ds-section__subtitle"><span data-lang="pt">Paleta de cores primitivas. Valores brutos sem significado semântico — os tokens semânticos (Theme) referenciam esta coleção via alias. Ordem espelha a collection Foundation no Figma. Cada swatch indica contraste WCAG 2.2 contra White e Black: <strong>AAA</strong> ≥ 7:1, <strong>AA</strong> ≥ 4.5:1, <strong>AA Large</strong> ≥ 3:1, <strong>Fail</strong> &lt; 3:1.</span><span data-lang="en">Primitive color palette. Raw values with no semantic meaning — Theme tokens alias this collection. Order mirrors the Foundation collection in Figma. Each swatch shows WCAG 2.2 contrast against White and Black: <strong>AAA</strong> ≥ 7:1, <strong>AA</strong> ≥ 4.5:1, <strong>AA Large</strong> ≥ 3:1, <strong>Fail</strong> &lt; 3:1.</span></p>
+  </div>
+
+  <!-- Brand -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title"><span data-lang="pt">Brand</span><span data-lang="en">Brand</span></h2>
+    <p class="ds-subsection__subtitle"><span data-lang="pt">Paleta da marca. Default = Blue. O designer customiza o produto editando os hex de <code>color/brand/*</code>.</span><span data-lang="en">Brand palette. Default = Blue. Designer customizes the product by editing the hex of <code>color/brand/*</code>.</span></p>
+    <div class="ds-swatch-grid">
+      <div class="ds-swatch">
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-brand-50)"></div>
+        <div class="ds-swatch__info">
+          <div class="ds-swatch__name">50</div>
+          <div class="ds-swatch__value">#EFF6FF</div>
+          <div class="ds-swatch__divider"></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">1.1:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">19.3:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
+        </div>
+      </div>
+      <div class="ds-swatch">
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-brand-100)"></div>
+        <div class="ds-swatch__info">
+          <div class="ds-swatch__name">100</div>
+          <div class="ds-swatch__value">#DBEAFE</div>
+          <div class="ds-swatch__divider"></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">1.2:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">17.2:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
+        </div>
+      </div>
+      <div class="ds-swatch">
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-brand-200)"></div>
+        <div class="ds-swatch__info">
+          <div class="ds-swatch__name">200</div>
+          <div class="ds-swatch__value">#BFDBFE</div>
+          <div class="ds-swatch__divider"></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">1.4:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">14.8:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
+        </div>
+      </div>
+      <div class="ds-swatch">
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-brand-300)"></div>
+        <div class="ds-swatch__info">
+          <div class="ds-swatch__name">300</div>
+          <div class="ds-swatch__value">#93C5FD</div>
+          <div class="ds-swatch__divider"></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">1.8:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">11.6:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
+        </div>
+      </div>
+      <div class="ds-swatch">
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-brand-400)"></div>
+        <div class="ds-swatch__info">
+          <div class="ds-swatch__name">400</div>
+          <div class="ds-swatch__value">#60A5FA</div>
+          <div class="ds-swatch__divider"></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">2.5:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">8.3:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
+        </div>
+      </div>
+      <div class="ds-swatch">
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-brand-500)"></div>
+        <div class="ds-swatch__info">
+          <div class="ds-swatch__name">500</div>
+          <div class="ds-swatch__value">#3B82F6</div>
+          <div class="ds-swatch__divider"></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">3.7:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa-large">AA Large</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">5.7:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa">AA</span></div>
+        </div>
+      </div>
+      <div class="ds-swatch">
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-brand-600)"></div>
+        <div class="ds-swatch__info">
+          <div class="ds-swatch__name">600</div>
+          <div class="ds-swatch__value">#2563EB</div>
+          <div class="ds-swatch__divider"></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">5.2:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa">AA</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">4.1:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa-large">AA Large</span></div>
+        </div>
+      </div>
+      <div class="ds-swatch">
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-brand-700)"></div>
+        <div class="ds-swatch__info">
+          <div class="ds-swatch__name">700</div>
+          <div class="ds-swatch__value">#1D4ED8</div>
+          <div class="ds-swatch__divider"></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">6.7:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa">AA</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">3.1:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa-large">AA Large</span></div>
+        </div>
+      </div>
+      <div class="ds-swatch">
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-brand-800)"></div>
+        <div class="ds-swatch__info">
+          <div class="ds-swatch__name">800</div>
+          <div class="ds-swatch__value">#1E40AF</div>
+          <div class="ds-swatch__divider"></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">8.7:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">2.4:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
+        </div>
+      </div>
+      <div class="ds-swatch">
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-brand-900)"></div>
+        <div class="ds-swatch__info">
+          <div class="ds-swatch__name">900</div>
+          <div class="ds-swatch__value">#1E3A8A</div>
+          <div class="ds-swatch__divider"></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">10.4:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">2.0:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
+        </div>
+      </div>
+      <div class="ds-swatch">
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-brand-950)"></div>
+        <div class="ds-swatch__info">
+          <div class="ds-swatch__name">950</div>
+          <div class="ds-swatch__value">#172554</div>
+          <div class="ds-swatch__divider"></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">14.7:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">1.4:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Neutral -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title"><span data-lang="pt">Neutral (escala Slate)</span><span data-lang="en">Neutral (Slate scale)</span></h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Neutral</span><span data-lang="en">Neutral</span></h2>
+    <p class="ds-subsection__subtitle"><span data-lang="pt">Escala neutra de cinzas para superfícies, textos, bordas e ícones.</span><span data-lang="en">Neutral grayscale for surfaces, text, borders and icons.</span></p>
     <div class="ds-swatch-grid">
       <div class="ds-swatch">
         <div class="ds-swatch__color" style="background-color:var(--ds-color-neutral-50)"></div>
@@ -157,351 +276,117 @@
     </div>
   </div>
 
-  <!-- Blue -->
+  <!-- Green -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title"><span data-lang="pt">Blue (paleta Primary)</span><span data-lang="en">Blue (Primary palette)</span></h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Green (Sucesso)</span><span data-lang="en">Green (Success)</span></h2>
     <div class="ds-swatch-grid">
       <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-blue-50)"></div>
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-green-50)"></div>
         <div class="ds-swatch__info">
           <div class="ds-swatch__name">50</div>
-          <div class="ds-swatch__value">#EFF6FF</div>
+          <div class="ds-swatch__value">#EDF9EF</div>
           <div class="ds-swatch__divider"></div>
           <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">1.1:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">19.3:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">19.4:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
         </div>
       </div>
       <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-blue-100)"></div>
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-green-100)"></div>
         <div class="ds-swatch__info">
           <div class="ds-swatch__name">100</div>
-          <div class="ds-swatch__value">#DBEAFE</div>
+          <div class="ds-swatch__value">#D5F2D9</div>
           <div class="ds-swatch__divider"></div>
           <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">1.2:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">17.2:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">17.5:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
         </div>
       </div>
       <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-blue-200)"></div>
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-green-200)"></div>
         <div class="ds-swatch__info">
           <div class="ds-swatch__name">200</div>
-          <div class="ds-swatch__value">#BFDBFE</div>
+          <div class="ds-swatch__value">#AEE6B9</div>
           <div class="ds-swatch__divider"></div>
           <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">1.4:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
           <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">14.8:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
         </div>
       </div>
       <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-blue-300)"></div>
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-green-300)"></div>
         <div class="ds-swatch__info">
           <div class="ds-swatch__name">300</div>
-          <div class="ds-swatch__value">#93C5FD</div>
-          <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">1.8:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">11.6:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
-        </div>
-      </div>
-      <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-blue-400)"></div>
-        <div class="ds-swatch__info">
-          <div class="ds-swatch__name">400</div>
-          <div class="ds-swatch__value">#60A5FA</div>
-          <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">2.5:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">8.3:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
-        </div>
-      </div>
-      <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-blue-500)"></div>
-        <div class="ds-swatch__info">
-          <div class="ds-swatch__name">500</div>
-          <div class="ds-swatch__value">#3B82F6</div>
-          <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">3.7:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa-large">AA Large</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">5.7:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa">AA</span></div>
-        </div>
-      </div>
-      <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-blue-600)"></div>
-        <div class="ds-swatch__info">
-          <div class="ds-swatch__name">600</div>
-          <div class="ds-swatch__value">#2563EB</div>
-          <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">5.2:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa">AA</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">4.1:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa-large">AA Large</span></div>
-        </div>
-      </div>
-      <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-blue-700)"></div>
-        <div class="ds-swatch__info">
-          <div class="ds-swatch__name">700</div>
-          <div class="ds-swatch__value">#1D4ED8</div>
-          <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">6.7:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa">AA</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">3.1:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa-large">AA Large</span></div>
-        </div>
-      </div>
-      <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-blue-800)"></div>
-        <div class="ds-swatch__info">
-          <div class="ds-swatch__name">800</div>
-          <div class="ds-swatch__value">#1E40AF</div>
-          <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">8.7:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">2.4:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
-        </div>
-      </div>
-      <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-blue-900)"></div>
-        <div class="ds-swatch__info">
-          <div class="ds-swatch__name">900</div>
-          <div class="ds-swatch__value">#1E3A8A</div>
-          <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">10.4:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">2.0:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
-        </div>
-      </div>
-      <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-blue-950)"></div>
-        <div class="ds-swatch__info">
-          <div class="ds-swatch__name">950</div>
-          <div class="ds-swatch__value">#172554</div>
-          <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">14.7:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">1.4:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Purple -->
-  <div class="ds-subsection">
-    <h2 class="ds-subsection__title"><span data-lang="pt">Purple (paleta Secondary)</span><span data-lang="en">Purple (Secondary palette)</span></h2>
-    <div class="ds-swatch-grid">
-      <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-purple-50)"></div>
-        <div class="ds-swatch__info">
-          <div class="ds-swatch__name">50</div>
-          <div class="ds-swatch__value">#FAF5FF</div>
-          <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">1.1:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">19.6:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
-        </div>
-      </div>
-      <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-purple-100)"></div>
-        <div class="ds-swatch__info">
-          <div class="ds-swatch__name">100</div>
-          <div class="ds-swatch__value">#F3E8FF</div>
-          <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">1.2:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">17.8:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
-        </div>
-      </div>
-      <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-purple-200)"></div>
-        <div class="ds-swatch__info">
-          <div class="ds-swatch__name">200</div>
-          <div class="ds-swatch__value">#E9D5FF</div>
-          <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">1.4:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">15.4:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
-        </div>
-      </div>
-      <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-purple-300)"></div>
-        <div class="ds-swatch__info">
-          <div class="ds-swatch__name">300</div>
-          <div class="ds-swatch__value">#D8B4FE</div>
-          <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">1.8:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">11.9:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
-        </div>
-      </div>
-      <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-purple-400)"></div>
-        <div class="ds-swatch__info">
-          <div class="ds-swatch__name">400</div>
-          <div class="ds-swatch__value">#C084FC</div>
-          <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">2.6:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">7.9:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
-        </div>
-      </div>
-      <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-purple-500)"></div>
-        <div class="ds-swatch__info">
-          <div class="ds-swatch__name">500</div>
-          <div class="ds-swatch__value">#A855F7</div>
-          <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">4.0:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa-large">AA Large</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">5.3:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa">AA</span></div>
-        </div>
-      </div>
-      <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-purple-600)"></div>
-        <div class="ds-swatch__info">
-          <div class="ds-swatch__name">600</div>
-          <div class="ds-swatch__value">#9333EA</div>
-          <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">5.4:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa">AA</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">3.9:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa-large">AA Large</span></div>
-        </div>
-      </div>
-      <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-purple-700)"></div>
-        <div class="ds-swatch__info">
-          <div class="ds-swatch__name">700</div>
-          <div class="ds-swatch__value">#7E22CE</div>
-          <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">7.0:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa">AA</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">3.0:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa-large">AA Large</span></div>
-        </div>
-      </div>
-      <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-purple-800)"></div>
-        <div class="ds-swatch__info">
-          <div class="ds-swatch__name">800</div>
-          <div class="ds-swatch__value">#6B21A8</div>
-          <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">8.7:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">2.4:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
-        </div>
-      </div>
-      <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-purple-900)"></div>
-        <div class="ds-swatch__info">
-          <div class="ds-swatch__name">900</div>
-          <div class="ds-swatch__value">#581C87</div>
-          <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">10.9:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">1.9:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
-        </div>
-      </div>
-      <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-purple-950)"></div>
-        <div class="ds-swatch__info">
-          <div class="ds-swatch__name">950</div>
-          <div class="ds-swatch__value">#3B0764</div>
-          <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">15.0:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">1.4:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Red -->
-  <div class="ds-subsection">
-    <h2 class="ds-subsection__title"><span data-lang="pt">Red (Erro / Destrutivo)</span><span data-lang="en">Red (Error / Destructive)</span></h2>
-    <div class="ds-swatch-grid">
-      <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-red-50)"></div>
-        <div class="ds-swatch__info">
-          <div class="ds-swatch__name">50</div>
-          <div class="ds-swatch__value">#FEF2F2</div>
-          <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">1.1:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">19.2:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
-        </div>
-      </div>
-      <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-red-100)"></div>
-        <div class="ds-swatch__info">
-          <div class="ds-swatch__name">100</div>
-          <div class="ds-swatch__value">#FEE2E2</div>
-          <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">1.2:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">17.2:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
-        </div>
-      </div>
-      <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-red-200)"></div>
-        <div class="ds-swatch__info">
-          <div class="ds-swatch__name">200</div>
-          <div class="ds-swatch__value">#FECACA</div>
-          <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">1.4:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">14.5:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
-        </div>
-      </div>
-      <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-red-300)"></div>
-        <div class="ds-swatch__info">
-          <div class="ds-swatch__name">300</div>
-          <div class="ds-swatch__value">#FCA5A5</div>
+          <div class="ds-swatch__value">#75D28B</div>
           <div class="ds-swatch__divider"></div>
           <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">1.9:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">11.1:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">11.3:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
         </div>
       </div>
       <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-red-400)"></div>
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-green-400)"></div>
         <div class="ds-swatch__info">
           <div class="ds-swatch__name">400</div>
-          <div class="ds-swatch__value">#F87171</div>
+          <div class="ds-swatch__value">#30B65D</div>
           <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">2.8:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">7.6:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">2.6:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">8.0:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
         </div>
       </div>
       <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-red-500)"></div>
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-green-500)"></div>
         <div class="ds-swatch__info">
           <div class="ds-swatch__name">500</div>
-          <div class="ds-swatch__value">#EF4444</div>
+          <div class="ds-swatch__value">#009F42</div>
           <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">3.8:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa-large">AA Large</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">5.6:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa">AA</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">3.5:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa-large">AA Large</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">6.0:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa">AA</span></div>
         </div>
       </div>
       <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-red-600)"></div>
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-green-600)"></div>
         <div class="ds-swatch__info">
           <div class="ds-swatch__name">600</div>
-          <div class="ds-swatch__value">#DC2626</div>
+          <div class="ds-swatch__value">#008535</div>
           <div class="ds-swatch__divider"></div>
           <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">4.8:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa">AA</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">4.3:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa-large">AA Large</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">4.4:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa-large">AA Large</span></div>
         </div>
       </div>
       <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-red-700)"></div>
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-green-700)"></div>
         <div class="ds-swatch__info">
           <div class="ds-swatch__name">700</div>
-          <div class="ds-swatch__value">#B91C1C</div>
+          <div class="ds-swatch__value">#006F2D</div>
           <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">6.5:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa">AA</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">3.2:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa-large">AA Large</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">6.3:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa">AA</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">3.3:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa-large">AA Large</span></div>
         </div>
       </div>
       <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-red-800)"></div>
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-green-800)"></div>
         <div class="ds-swatch__info">
           <div class="ds-swatch__name">800</div>
-          <div class="ds-swatch__value">#991B1B</div>
+          <div class="ds-swatch__value">#035926</div>
           <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">8.3:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">8.5:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
           <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">2.5:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
         </div>
       </div>
       <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-red-900)"></div>
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-green-900)"></div>
         <div class="ds-swatch__info">
           <div class="ds-swatch__name">900</div>
-          <div class="ds-swatch__value">#7F1D1D</div>
+          <div class="ds-swatch__value">#07461E</div>
           <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">10.0:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">2.1:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">11.0:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">1.9:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
         </div>
       </div>
       <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-red-950)"></div>
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-green-950)"></div>
         <div class="ds-swatch__info">
           <div class="ds-swatch__name">950</div>
-          <div class="ds-swatch__value">#450A0A</div>
+          <div class="ds-swatch__value">#02240C</div>
           <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">16.1:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">16.7:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
           <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">1.3:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
         </div>
       </div>
@@ -625,118 +510,352 @@
     </div>
   </div>
 
-  <!-- Green -->
+  <!-- Red -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title"><span data-lang="pt">Green (Sucesso)</span><span data-lang="en">Green (Success)</span></h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Red (Erro)</span><span data-lang="en">Red (Error)</span></h2>
     <div class="ds-swatch-grid">
       <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-green-50)"></div>
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-red-50)"></div>
         <div class="ds-swatch__info">
           <div class="ds-swatch__name">50</div>
-          <div class="ds-swatch__value">#EDF9EF</div>
+          <div class="ds-swatch__value">#FEF2F2</div>
           <div class="ds-swatch__divider"></div>
           <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">1.1:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">19.4:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">19.2:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
         </div>
       </div>
       <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-green-100)"></div>
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-red-100)"></div>
         <div class="ds-swatch__info">
           <div class="ds-swatch__name">100</div>
-          <div class="ds-swatch__value">#D5F2D9</div>
+          <div class="ds-swatch__value">#FEE2E2</div>
           <div class="ds-swatch__divider"></div>
           <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">1.2:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">17.5:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">17.2:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
         </div>
       </div>
       <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-green-200)"></div>
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-red-200)"></div>
         <div class="ds-swatch__info">
           <div class="ds-swatch__name">200</div>
-          <div class="ds-swatch__value">#AEE6B9</div>
+          <div class="ds-swatch__value">#FECACA</div>
+          <div class="ds-swatch__divider"></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">1.4:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">14.5:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
+        </div>
+      </div>
+      <div class="ds-swatch">
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-red-300)"></div>
+        <div class="ds-swatch__info">
+          <div class="ds-swatch__name">300</div>
+          <div class="ds-swatch__value">#FCA5A5</div>
+          <div class="ds-swatch__divider"></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">1.9:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">11.1:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
+        </div>
+      </div>
+      <div class="ds-swatch">
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-red-400)"></div>
+        <div class="ds-swatch__info">
+          <div class="ds-swatch__name">400</div>
+          <div class="ds-swatch__value">#F87171</div>
+          <div class="ds-swatch__divider"></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">2.8:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">7.6:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
+        </div>
+      </div>
+      <div class="ds-swatch">
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-red-500)"></div>
+        <div class="ds-swatch__info">
+          <div class="ds-swatch__name">500</div>
+          <div class="ds-swatch__value">#EF4444</div>
+          <div class="ds-swatch__divider"></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">3.8:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa-large">AA Large</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">5.6:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa">AA</span></div>
+        </div>
+      </div>
+      <div class="ds-swatch">
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-red-600)"></div>
+        <div class="ds-swatch__info">
+          <div class="ds-swatch__name">600</div>
+          <div class="ds-swatch__value">#DC2626</div>
+          <div class="ds-swatch__divider"></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">4.8:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa">AA</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">4.3:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa-large">AA Large</span></div>
+        </div>
+      </div>
+      <div class="ds-swatch">
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-red-700)"></div>
+        <div class="ds-swatch__info">
+          <div class="ds-swatch__name">700</div>
+          <div class="ds-swatch__value">#B91C1C</div>
+          <div class="ds-swatch__divider"></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">6.5:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa">AA</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">3.2:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa-large">AA Large</span></div>
+        </div>
+      </div>
+      <div class="ds-swatch">
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-red-800)"></div>
+        <div class="ds-swatch__info">
+          <div class="ds-swatch__name">800</div>
+          <div class="ds-swatch__value">#991B1B</div>
+          <div class="ds-swatch__divider"></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">8.3:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">2.5:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
+        </div>
+      </div>
+      <div class="ds-swatch">
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-red-900)"></div>
+        <div class="ds-swatch__info">
+          <div class="ds-swatch__name">900</div>
+          <div class="ds-swatch__value">#7F1D1D</div>
+          <div class="ds-swatch__divider"></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">10.0:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">2.1:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
+        </div>
+      </div>
+      <div class="ds-swatch">
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-red-950)"></div>
+        <div class="ds-swatch__info">
+          <div class="ds-swatch__name">950</div>
+          <div class="ds-swatch__value">#450A0A</div>
+          <div class="ds-swatch__divider"></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">16.1:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">1.3:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Blue -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title"><span data-lang="pt">Blue</span><span data-lang="en">Blue</span></h2>
+    <div class="ds-swatch-grid">
+      <div class="ds-swatch">
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-blue-50)"></div>
+        <div class="ds-swatch__info">
+          <div class="ds-swatch__name">50</div>
+          <div class="ds-swatch__value">#EFF6FF</div>
+          <div class="ds-swatch__divider"></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">1.1:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">19.3:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
+        </div>
+      </div>
+      <div class="ds-swatch">
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-blue-100)"></div>
+        <div class="ds-swatch__info">
+          <div class="ds-swatch__name">100</div>
+          <div class="ds-swatch__value">#DBEAFE</div>
+          <div class="ds-swatch__divider"></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">1.2:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">17.2:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
+        </div>
+      </div>
+      <div class="ds-swatch">
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-blue-200)"></div>
+        <div class="ds-swatch__info">
+          <div class="ds-swatch__name">200</div>
+          <div class="ds-swatch__value">#BFDBFE</div>
           <div class="ds-swatch__divider"></div>
           <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">1.4:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
           <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">14.8:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
         </div>
       </div>
       <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-green-300)"></div>
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-blue-300)"></div>
         <div class="ds-swatch__info">
           <div class="ds-swatch__name">300</div>
-          <div class="ds-swatch__value">#75D28B</div>
+          <div class="ds-swatch__value">#93C5FD</div>
           <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">1.9:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">11.3:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">1.8:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">11.6:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
         </div>
       </div>
       <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-green-400)"></div>
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-blue-400)"></div>
         <div class="ds-swatch__info">
           <div class="ds-swatch__name">400</div>
-          <div class="ds-swatch__value">#30B65D</div>
+          <div class="ds-swatch__value">#60A5FA</div>
           <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">2.6:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">8.0:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">2.5:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">8.3:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
         </div>
       </div>
       <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-green-500)"></div>
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-blue-500)"></div>
         <div class="ds-swatch__info">
           <div class="ds-swatch__name">500</div>
-          <div class="ds-swatch__value">#009F42</div>
+          <div class="ds-swatch__value">#3B82F6</div>
           <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">3.5:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa-large">AA Large</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">6.0:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa">AA</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">3.7:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa-large">AA Large</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">5.7:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa">AA</span></div>
         </div>
       </div>
       <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-green-600)"></div>
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-blue-600)"></div>
         <div class="ds-swatch__info">
           <div class="ds-swatch__name">600</div>
-          <div class="ds-swatch__value">#008535</div>
+          <div class="ds-swatch__value">#2563EB</div>
           <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">4.8:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa">AA</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">4.4:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa-large">AA Large</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">5.2:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa">AA</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">4.1:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa-large">AA Large</span></div>
         </div>
       </div>
       <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-green-700)"></div>
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-blue-700)"></div>
         <div class="ds-swatch__info">
           <div class="ds-swatch__name">700</div>
-          <div class="ds-swatch__value">#006F2D</div>
+          <div class="ds-swatch__value">#1D4ED8</div>
           <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">6.3:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa">AA</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">3.3:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa-large">AA Large</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">6.7:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa">AA</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">3.1:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa-large">AA Large</span></div>
         </div>
       </div>
       <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-green-800)"></div>
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-blue-800)"></div>
         <div class="ds-swatch__info">
           <div class="ds-swatch__name">800</div>
-          <div class="ds-swatch__value">#035926</div>
+          <div class="ds-swatch__value">#1E40AF</div>
           <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">8.5:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">2.5:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">8.7:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">2.4:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
         </div>
       </div>
       <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-green-900)"></div>
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-blue-900)"></div>
         <div class="ds-swatch__info">
           <div class="ds-swatch__name">900</div>
-          <div class="ds-swatch__value">#07461E</div>
+          <div class="ds-swatch__value">#1E3A8A</div>
           <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">11.0:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">10.4:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">2.0:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
+        </div>
+      </div>
+      <div class="ds-swatch">
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-blue-950)"></div>
+        <div class="ds-swatch__info">
+          <div class="ds-swatch__name">950</div>
+          <div class="ds-swatch__value">#172554</div>
+          <div class="ds-swatch__divider"></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">14.7:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">1.4:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Purple -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title"><span data-lang="pt">Purple</span><span data-lang="en">Purple</span></h2>
+    <div class="ds-swatch-grid">
+      <div class="ds-swatch">
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-purple-50)"></div>
+        <div class="ds-swatch__info">
+          <div class="ds-swatch__name">50</div>
+          <div class="ds-swatch__value">#FAF5FF</div>
+          <div class="ds-swatch__divider"></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">1.1:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">19.6:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
+        </div>
+      </div>
+      <div class="ds-swatch">
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-purple-100)"></div>
+        <div class="ds-swatch__info">
+          <div class="ds-swatch__name">100</div>
+          <div class="ds-swatch__value">#F3E8FF</div>
+          <div class="ds-swatch__divider"></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">1.2:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">17.8:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
+        </div>
+      </div>
+      <div class="ds-swatch">
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-purple-200)"></div>
+        <div class="ds-swatch__info">
+          <div class="ds-swatch__name">200</div>
+          <div class="ds-swatch__value">#E9D5FF</div>
+          <div class="ds-swatch__divider"></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">1.4:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">15.4:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
+        </div>
+      </div>
+      <div class="ds-swatch">
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-purple-300)"></div>
+        <div class="ds-swatch__info">
+          <div class="ds-swatch__name">300</div>
+          <div class="ds-swatch__value">#D8B4FE</div>
+          <div class="ds-swatch__divider"></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">1.8:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">11.9:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
+        </div>
+      </div>
+      <div class="ds-swatch">
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-purple-400)"></div>
+        <div class="ds-swatch__info">
+          <div class="ds-swatch__name">400</div>
+          <div class="ds-swatch__value">#C084FC</div>
+          <div class="ds-swatch__divider"></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">2.6:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">7.9:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
+        </div>
+      </div>
+      <div class="ds-swatch">
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-purple-500)"></div>
+        <div class="ds-swatch__info">
+          <div class="ds-swatch__name">500</div>
+          <div class="ds-swatch__value">#A855F7</div>
+          <div class="ds-swatch__divider"></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">4.0:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa-large">AA Large</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">5.3:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa">AA</span></div>
+        </div>
+      </div>
+      <div class="ds-swatch">
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-purple-600)"></div>
+        <div class="ds-swatch__info">
+          <div class="ds-swatch__name">600</div>
+          <div class="ds-swatch__value">#9333EA</div>
+          <div class="ds-swatch__divider"></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">5.4:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa">AA</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">3.9:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa-large">AA Large</span></div>
+        </div>
+      </div>
+      <div class="ds-swatch">
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-purple-700)"></div>
+        <div class="ds-swatch__info">
+          <div class="ds-swatch__name">700</div>
+          <div class="ds-swatch__value">#7E22CE</div>
+          <div class="ds-swatch__divider"></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">7.0:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa">AA</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">3.0:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa-large">AA Large</span></div>
+        </div>
+      </div>
+      <div class="ds-swatch">
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-purple-800)"></div>
+        <div class="ds-swatch__info">
+          <div class="ds-swatch__name">800</div>
+          <div class="ds-swatch__value">#6B21A8</div>
+          <div class="ds-swatch__divider"></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">8.7:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">2.4:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
+        </div>
+      </div>
+      <div class="ds-swatch">
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-purple-900)"></div>
+        <div class="ds-swatch__info">
+          <div class="ds-swatch__name">900</div>
+          <div class="ds-swatch__value">#581C87</div>
+          <div class="ds-swatch__divider"></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">10.9:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
           <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">1.9:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
         </div>
       </div>
       <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-green-950)"></div>
+        <div class="ds-swatch__color" style="background-color:var(--ds-color-purple-950)"></div>
         <div class="ds-swatch__info">
           <div class="ds-swatch__name">950</div>
-          <div class="ds-swatch__value">#02240C</div>
+          <div class="ds-swatch__value">#3B0764</div>
           <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">16.7:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">1.3:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">15.0:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
+          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">1.4:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
         </div>
       </div>
     </div>
@@ -861,7 +980,7 @@
 
   <!-- Cyan -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title"><span data-lang="pt">Cyan (tema Ocean)</span><span data-lang="en">Cyan (Ocean theme)</span></h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Cyan</span><span data-lang="en">Cyan</span></h2>
     <div class="ds-swatch-grid">
       <div class="ds-swatch">
         <div class="ds-swatch__color" style="background-color:var(--ds-color-cyan-50)"></div>
@@ -978,7 +1097,7 @@
 
   <!-- Emerald -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title"><span data-lang="pt">Emerald (tema Forest)</span><span data-lang="en">Emerald (Forest theme)</span></h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Emerald</span><span data-lang="en">Emerald</span></h2>
     <div class="ds-swatch-grid">
       <div class="ds-swatch">
         <div class="ds-swatch__color" style="background-color:var(--ds-color-emerald-50)"></div>
@@ -1095,7 +1214,7 @@
 
   <!-- Indigo -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title"><span data-lang="pt">Indigo (secundária do tema Ocean)</span><span data-lang="en">Indigo (Ocean theme secondary)</span></h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Indigo</span><span data-lang="en">Indigo</span></h2>
     <div class="ds-swatch-grid">
       <div class="ds-swatch">
         <div class="ds-swatch__color" style="background-color:var(--ds-color-indigo-50)"></div>
@@ -1210,140 +1329,51 @@
     </div>
   </div>
 
-  <!-- Brand alias -->
+  <!-- Disabled fills -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title"><span data-lang="pt">Brand (alias customizável)</span><span data-lang="en">Brand (customizable alias)</span></h2>
-    <p class="ds-subsection__subtitle"><span data-lang="pt">Paleta da marca. Default = Blue. O designer customiza o produto editando os hex de <code>foundation/color/brand/*</code>. Substitui a antiga collection Brand com modes (ADR-014).</span><span data-lang="en">Brand palette. Default = Blue. Designer customizes the product by editing the hex of <code>foundation/color/brand/*</code>. Replaces the legacy Brand collection with modes (ADR-014).</span></p>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Disabled fills</span><span data-lang="en">Disabled fills</span></h2>
+    <p class="ds-subsection__subtitle"><span data-lang="pt">Tints pré-blendados para fills de botão disabled. Tokens semânticos <code>primary.background.disabled</code> e <code>feedback.*.background.disabled</code> aliasam estes valores.</span><span data-lang="en">Pre-blended tints for disabled button fills. Semantic tokens <code>primary.background.disabled</code> and <code>feedback.*.background.disabled</code> alias these values.</span></p>
     <div class="ds-swatch-grid">
       <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-brand-50)"></div>
+        <div class="ds-swatch__color ds-swatch__color--checker"><span class="ds-swatch__overlay" style="background-color:var(--ds-color-disabled-brand-light)"></span></div>
         <div class="ds-swatch__info">
-          <div class="ds-swatch__name">50</div>
-          <div class="ds-swatch__value">#EFF6FF</div>
-          <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">1.1:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">19.3:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
+          <div class="ds-swatch__name">Brand · light</div>
+          <div class="ds-swatch__value">--ds-color-disabled-brand-light</div>
         </div>
       </div>
       <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-brand-100)"></div>
+        <div class="ds-swatch__color ds-swatch__color--checker"><span class="ds-swatch__overlay" style="background-color:var(--ds-color-disabled-brand-dark)"></span></div>
         <div class="ds-swatch__info">
-          <div class="ds-swatch__name">100</div>
-          <div class="ds-swatch__value">#DBEAFE</div>
-          <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">1.2:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">17.2:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
+          <div class="ds-swatch__name">Brand · dark</div>
+          <div class="ds-swatch__value">--ds-color-disabled-brand-dark</div>
         </div>
       </div>
       <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-brand-200)"></div>
+        <div class="ds-swatch__color ds-swatch__color--checker"><span class="ds-swatch__overlay" style="background-color:var(--ds-color-disabled-success-light)"></span></div>
         <div class="ds-swatch__info">
-          <div class="ds-swatch__name">200</div>
-          <div class="ds-swatch__value">#BFDBFE</div>
-          <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">1.4:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">14.8:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
+          <div class="ds-swatch__name">Success · light</div>
+          <div class="ds-swatch__value">--ds-color-disabled-success-light</div>
         </div>
       </div>
       <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-brand-300)"></div>
+        <div class="ds-swatch__color ds-swatch__color--checker"><span class="ds-swatch__overlay" style="background-color:var(--ds-color-disabled-success-dark)"></span></div>
         <div class="ds-swatch__info">
-          <div class="ds-swatch__name">300</div>
-          <div class="ds-swatch__value">#93C5FD</div>
-          <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">1.8:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">11.6:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
+          <div class="ds-swatch__name">Success · dark</div>
+          <div class="ds-swatch__value">--ds-color-disabled-success-dark</div>
         </div>
       </div>
       <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-brand-400)"></div>
+        <div class="ds-swatch__color ds-swatch__color--checker"><span class="ds-swatch__overlay" style="background-color:var(--ds-color-disabled-error-light)"></span></div>
         <div class="ds-swatch__info">
-          <div class="ds-swatch__name">400</div>
-          <div class="ds-swatch__value">#60A5FA</div>
-          <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">2.5:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">8.3:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
+          <div class="ds-swatch__name">Error · light</div>
+          <div class="ds-swatch__value">--ds-color-disabled-error-light</div>
         </div>
       </div>
       <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-brand-500)"></div>
+        <div class="ds-swatch__color ds-swatch__color--checker"><span class="ds-swatch__overlay" style="background-color:var(--ds-color-disabled-error-dark)"></span></div>
         <div class="ds-swatch__info">
-          <div class="ds-swatch__name">500</div>
-          <div class="ds-swatch__value">#3B82F6</div>
-          <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">3.7:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa-large">AA Large</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">5.7:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa">AA</span></div>
-        </div>
-      </div>
-      <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-brand-600)"></div>
-        <div class="ds-swatch__info">
-          <div class="ds-swatch__name">600</div>
-          <div class="ds-swatch__value">#2563EB</div>
-          <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">5.2:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa">AA</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">4.1:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa-large">AA Large</span></div>
-        </div>
-      </div>
-      <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-brand-700)"></div>
-        <div class="ds-swatch__info">
-          <div class="ds-swatch__name">700</div>
-          <div class="ds-swatch__value">#1D4ED8</div>
-          <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">6.7:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa">AA</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">3.1:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aa-large">AA Large</span></div>
-        </div>
-      </div>
-      <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-brand-800)"></div>
-        <div class="ds-swatch__info">
-          <div class="ds-swatch__name">800</div>
-          <div class="ds-swatch__value">#1E40AF</div>
-          <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">8.7:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">2.4:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
-        </div>
-      </div>
-      <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-brand-900)"></div>
-        <div class="ds-swatch__info">
-          <div class="ds-swatch__name">900</div>
-          <div class="ds-swatch__value">#1E3A8A</div>
-          <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">10.4:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">2.0:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
-        </div>
-      </div>
-      <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:var(--ds-color-brand-950)"></div>
-        <div class="ds-swatch__info">
-          <div class="ds-swatch__name">950</div>
-          <div class="ds-swatch__value">#172554</div>
-          <div class="ds-swatch__divider"></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs White</span><span class="ds-swatch__contrast-ratio">14.7:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--aaa">AAA</span></div>
-          <div class="ds-swatch__contrast-row"><span class="ds-swatch__contrast-label">vs Black</span><span class="ds-swatch__contrast-ratio">1.4:1</span><span aria-hidden="true" class="ds-swatch__badge ds-swatch__badge--fail">Fail</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Absolute -->
-  <div class="ds-subsection">
-    <h2 class="ds-subsection__title"><span data-lang="pt">Absolutos</span><span data-lang="en">Absolutes</span></h2>
-    <div class="ds-swatch-grid">
-      <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:#FFFFFF"></div>
-        <div class="ds-swatch__info">
-          <div class="ds-swatch__name">White</div>
-          <div class="ds-swatch__value">#FFFFFF</div>
-        </div>
-      </div>
-      <div class="ds-swatch">
-        <div class="ds-swatch__color" style="background-color:#000000"></div>
-        <div class="ds-swatch__info">
-          <div class="ds-swatch__name">Black</div>
-          <div class="ds-swatch__value">#000000</div>
+          <div class="ds-swatch__name">Error · dark</div>
+          <div class="ds-swatch__value">--ds-color-disabled-error-dark</div>
         </div>
       </div>
     </div>
@@ -1438,104 +1468,68 @@
           <div class="ds-swatch__value">--ds-overlay-white-80</div>
         </div>
       </div>
-    </div>
-  </div>
-
-  <!-- Toned overlays -->
-  <div class="ds-subsection">
-    <h2 class="ds-subsection__title"><span data-lang="pt">Toned overlays (Brand)</span><span data-lang="en">Toned overlays (Brand)</span></h2>
-    <p class="ds-subsection__subtitle"><span data-lang="pt">Overlays tingidos com brand para estados toned (default/hover/active) em fundos light e dark.</span><span data-lang="en">Brand-tinted overlays for toned states (default/hover/active) on light and dark backgrounds.</span></p>
-    <div class="ds-swatch-grid">
       <div class="ds-swatch">
         <div class="ds-swatch__color ds-swatch__color--checker"><span class="ds-swatch__overlay" style="background-color:var(--ds-overlay-blue-600-12)"></span></div>
         <div class="ds-swatch__info">
-          <div class="ds-swatch__name">Light · default</div>
+          <div class="ds-swatch__name">Brand · light · default</div>
           <div class="ds-swatch__value">--ds-overlay-blue-600-12</div>
         </div>
       </div>
       <div class="ds-swatch">
         <div class="ds-swatch__color ds-swatch__color--checker"><span class="ds-swatch__overlay" style="background-color:var(--ds-overlay-blue-600-20)"></span></div>
         <div class="ds-swatch__info">
-          <div class="ds-swatch__name">Light · hover</div>
+          <div class="ds-swatch__name">Brand · light · hover</div>
           <div class="ds-swatch__value">--ds-overlay-blue-600-20</div>
         </div>
       </div>
       <div class="ds-swatch">
         <div class="ds-swatch__color ds-swatch__color--checker"><span class="ds-swatch__overlay" style="background-color:var(--ds-overlay-blue-600-28)"></span></div>
         <div class="ds-swatch__info">
-          <div class="ds-swatch__name">Light · active</div>
+          <div class="ds-swatch__name">Brand · light · active</div>
           <div class="ds-swatch__value">--ds-overlay-blue-600-28</div>
         </div>
       </div>
       <div class="ds-swatch">
         <div class="ds-swatch__color ds-swatch__color--checker"><span class="ds-swatch__overlay" style="background-color:var(--ds-overlay-blue-400-15)"></span></div>
         <div class="ds-swatch__info">
-          <div class="ds-swatch__name">Dark · default</div>
+          <div class="ds-swatch__name">Brand · dark · default</div>
           <div class="ds-swatch__value">--ds-overlay-blue-400-15</div>
         </div>
       </div>
       <div class="ds-swatch">
         <div class="ds-swatch__color ds-swatch__color--checker"><span class="ds-swatch__overlay" style="background-color:var(--ds-overlay-blue-400-25)"></span></div>
         <div class="ds-swatch__info">
-          <div class="ds-swatch__name">Dark · hover</div>
+          <div class="ds-swatch__name">Brand · dark · hover</div>
           <div class="ds-swatch__value">--ds-overlay-blue-400-25</div>
         </div>
       </div>
       <div class="ds-swatch">
         <div class="ds-swatch__color ds-swatch__color--checker"><span class="ds-swatch__overlay" style="background-color:var(--ds-overlay-blue-400-32)"></span></div>
         <div class="ds-swatch__info">
-          <div class="ds-swatch__name">Dark · active</div>
+          <div class="ds-swatch__name">Brand · dark · active</div>
           <div class="ds-swatch__value">--ds-overlay-blue-400-32</div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Disabled fills -->
+  <!-- Absolutos (White/Black) -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title"><span data-lang="pt">Disabled fills</span><span data-lang="en">Disabled fills</span></h2>
-    <p class="ds-subsection__subtitle"><span data-lang="pt">Tints pré-blendados para fills de botão disabled. Tokens semânticos <code>brand.disabled</code> e <code>feedback.*.disabled</code> aliasam estes valores.</span><span data-lang="en">Pre-blended tints for disabled button fills. Semantic tokens <code>brand.disabled</code> and <code>feedback.*.disabled</code> alias these values.</span></p>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Absolutos</span><span data-lang="en">Absolutes</span></h2>
+    <p class="ds-subsection__subtitle"><span data-lang="pt">Valores absolutos não-tokenizados. Use só quando intenção é literal (ex.: bordas que precisam ser exatamente brancas/pretas, não sujeitas a theme).</span><span data-lang="en">Non-tokenized absolute values. Use only when intent is literal (e.g., borders that must be exactly white/black, not theme-bound).</span></p>
     <div class="ds-swatch-grid">
       <div class="ds-swatch">
-        <div class="ds-swatch__color ds-swatch__color--checker"><span class="ds-swatch__overlay" style="background-color:var(--ds-color-disabled-brand-light)"></span></div>
+        <div class="ds-swatch__color" style="background-color:#FFFFFF"></div>
         <div class="ds-swatch__info">
-          <div class="ds-swatch__name">Brand · light</div>
-          <div class="ds-swatch__value">--ds-color-disabled-brand-light</div>
+          <div class="ds-swatch__name">White</div>
+          <div class="ds-swatch__value">#FFFFFF</div>
         </div>
       </div>
       <div class="ds-swatch">
-        <div class="ds-swatch__color ds-swatch__color--checker"><span class="ds-swatch__overlay" style="background-color:var(--ds-color-disabled-brand-dark)"></span></div>
+        <div class="ds-swatch__color" style="background-color:#000000"></div>
         <div class="ds-swatch__info">
-          <div class="ds-swatch__name">Brand · dark</div>
-          <div class="ds-swatch__value">--ds-color-disabled-brand-dark</div>
-        </div>
-      </div>
-      <div class="ds-swatch">
-        <div class="ds-swatch__color ds-swatch__color--checker"><span class="ds-swatch__overlay" style="background-color:var(--ds-color-disabled-success-light)"></span></div>
-        <div class="ds-swatch__info">
-          <div class="ds-swatch__name">Success · light</div>
-          <div class="ds-swatch__value">--ds-color-disabled-success-light</div>
-        </div>
-      </div>
-      <div class="ds-swatch">
-        <div class="ds-swatch__color ds-swatch__color--checker"><span class="ds-swatch__overlay" style="background-color:var(--ds-color-disabled-success-dark)"></span></div>
-        <div class="ds-swatch__info">
-          <div class="ds-swatch__name">Success · dark</div>
-          <div class="ds-swatch__value">--ds-color-disabled-success-dark</div>
-        </div>
-      </div>
-      <div class="ds-swatch">
-        <div class="ds-swatch__color ds-swatch__color--checker"><span class="ds-swatch__overlay" style="background-color:var(--ds-color-disabled-error-light)"></span></div>
-        <div class="ds-swatch__info">
-          <div class="ds-swatch__name">Error · light</div>
-          <div class="ds-swatch__value">--ds-color-disabled-error-light</div>
-        </div>
-      </div>
-      <div class="ds-swatch">
-        <div class="ds-swatch__color ds-swatch__color--checker"><span class="ds-swatch__overlay" style="background-color:var(--ds-color-disabled-error-dark)"></span></div>
-        <div class="ds-swatch__info">
-          <div class="ds-swatch__name">Error · dark</div>
-          <div class="ds-swatch__value">--ds-color-disabled-error-dark</div>
+          <div class="ds-swatch__name">Black</div>
+          <div class="ds-swatch__value">#000000</div>
         </div>
       </div>
     </div>
