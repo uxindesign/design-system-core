@@ -59,7 +59,7 @@ function populateFoundation(key, e) {
     return {
       sentido: `Tom ${step} da paleta ${family}. ${stepDescription(step)}`,
       contexto: `Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (\`primary.*\`, \`feedback.${family === 'green' ? 'success' : family === 'red' ? 'error' : family === 'amber' ? 'warning' : 'info'}.*\`, \`content.*\`, \`background.*\`).`,
-      decisao: `Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.`,
+      decisao: `Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.`,
       escopo: ['fill', 'stroke', 'text'],
     };
   }

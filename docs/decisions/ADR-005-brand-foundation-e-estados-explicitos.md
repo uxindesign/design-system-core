@@ -1,7 +1,7 @@
 # ADR-005: Brand como camada foundation, estados explícitos no semantic, e limpeza tipográfica
 
 **Data:** 2026-04-14
-**Status:** Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.2)
+**Status:** Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.2). Superseded por [ADR-014](ADR-014-action-tokens-role-style.md): collection Brand (modes Default/Ocean/Forest) deletada em 0.8.0, Brand virou paleta única customizável dentro da Foundation.
 **Atualiza:** ADR-001 (seção sobre camada Brand)
 
 ## Implementação

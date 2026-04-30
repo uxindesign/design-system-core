@@ -1,7 +1,7 @@
 # ADR-001: Migração da arquitetura de tokens para Foundation→Semantic→Component com DTCG + Style Dictionary
 
 **Data:** 2026-04-14
-**Status:** Aceita
+**Status:** Aceita — superseded em parte por [ADR-014](ADR-014-action-tokens-role-style.md) (themes Default/Ocean/Forest removidos em 0.8.0; Brand virou paleta única customizável)
 
 ## Contexto
 

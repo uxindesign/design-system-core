@@ -1,6 +1,6 @@
 # Token Registry
 
-> Gerado automaticamente por `scripts/build-token-registry.mjs` em 2026-04-28. Não editar à mão — edite `tokens/registry.json` e rode `npm run build:registry`.
+> Gerado automaticamente por `scripts/build-token-registry.mjs` em 2026-04-30. Não editar à mão — edite `tokens/registry.json` e rode `npm run build:registry`.
 
 Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra arquitetural de camadas.
 
@@ -364,7 +364,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `semantic.content.default` | color | → `foundation.color.neutral.900` | Texto primário — body, headings, labels principais. | 11 |
+| `semantic.content.default` | color | → `foundation.color.neutral.900` | Texto primário — body, headings, labels principais. | 12 |
 | `semantic.content.disabled` | color | → `foundation.color.neutral.400` | Texto disabled — controles e items inativos. | 5 |
 | `semantic.content.inverse` | color | → `foundation.color.neutral.50` | Texto invertido — sobre background.inverse (tooltips, badges escuros em light). | 3 |
 | `semantic.content.secondary` | color | → `foundation.color.neutral.600` | Texto secundário — descrições, helper text, meta-info. | 12 |
@@ -375,7 +375,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `semantic.feedback.error.background.active` | color | → `foundation.color.red.900` | Fill de feedback erro (vermelho) em estado active. | 1 |
-| `semantic.feedback.error.background.default` | color | → `foundation.color.red.600` | Fill de feedback erro (vermelho) em estado default. | 8 |
+| `semantic.feedback.error.background.default` | color | → `foundation.color.red.600` | Fill de feedback erro (vermelho) em estado default. | 9 |
 | `semantic.feedback.error.background.disabled` | color | → `foundation.color.disabled.error-light` | Fill de feedback erro (vermelho) em estado disabled. | 0 |
 | `semantic.feedback.error.background.hover` | color | → `foundation.color.red.800` | Fill de feedback erro (vermelho) em estado hover. | 1 |
 | `semantic.feedback.error.background.subtle` | color | → `foundation.color.red.100` | Fill de feedback erro (vermelho) em estado subtle. | 2 |
@@ -522,7 +522,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.space.section.xl` | dimension | → `foundation.dimension.80` | Spacing token section.xl. | 0 |
 | `semantic.space.sm` | dimension | → `foundation.dimension.8` | Spacing token sm. | 13 |
 | `semantic.space.xl` | dimension | → `foundation.dimension.20` | Spacing token xl. | 5 |
-| `semantic.space.xs` | dimension | → `foundation.dimension.4` | Spacing token xs. | 12 |
+| `semantic.space.xs` | dimension | → `foundation.dimension.4` | Spacing token xs. | 13 |
 
 ### semantic.surface
 
@@ -643,7 +643,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 100 da paleta amber. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.warning.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-light.css` (1×)
@@ -656,7 +656,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 200 da paleta amber. Tom claro — backgrounds secundários, borders subtle.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.warning.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -667,7 +667,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 300 da paleta amber. Tom médio-claro — borders default, foregrounds em dark mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.warning.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -678,7 +678,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 400 da paleta amber. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.warning.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (3×)
@@ -691,7 +691,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 50 da paleta amber. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.warning.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -702,7 +702,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 500 da paleta amber. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.warning.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (1×)
@@ -716,7 +716,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 600 da paleta amber. Tom forte — fills primários, brand fills.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.warning.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-light.css` (1×)
@@ -729,7 +729,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 700 da paleta amber. Tom escuro — text on light, hover de fills brand.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.warning.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-light.css` (1×)
@@ -742,7 +742,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 800 da paleta amber. Tom muito escuro — emphasis text, active states.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.warning.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -753,7 +753,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 900 da paleta amber. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.warning.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (1×)
@@ -766,7 +766,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 950 da paleta amber. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.warning.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -777,7 +777,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 100 da paleta blue. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -788,7 +788,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 200 da paleta blue. Tom claro — backgrounds secundários, borders subtle.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -799,7 +799,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 300 da paleta blue. Tom médio-claro — borders default, foregrounds em dark mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -810,7 +810,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 400 da paleta blue. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -821,7 +821,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 50 da paleta blue. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -832,7 +832,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 500 da paleta blue. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -843,7 +843,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 600 da paleta blue. Tom forte — fills primários, brand fills.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -854,7 +854,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 700 da paleta blue. Tom escuro — text on light, hover de fills brand.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -865,7 +865,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 800 da paleta blue. Tom muito escuro — emphasis text, active states.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -876,7 +876,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 900 da paleta blue. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -887,7 +887,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 950 da paleta blue. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -898,7 +898,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 100 da paleta brand. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -909,7 +909,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 200 da paleta brand. Tom claro — backgrounds secundários, borders subtle.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (1×)
@@ -922,7 +922,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 300 da paleta brand. Tom médio-claro — borders default, foregrounds em dark mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (1×)
@@ -935,7 +935,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 400 da paleta brand. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (5×)
@@ -948,7 +948,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 50 da paleta brand. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -959,7 +959,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 500 da paleta brand. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (2×)
@@ -973,7 +973,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 600 da paleta brand. Tom forte — fills primários, brand fills.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-light.css` (2×)
@@ -986,7 +986,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 700 da paleta brand. Tom escuro — text on light, hover de fills brand.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-light.css` (3×)
@@ -999,7 +999,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 800 da paleta brand. Tom muito escuro — emphasis text, active states.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-light.css` (3×)
@@ -1012,7 +1012,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 900 da paleta brand. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -1023,7 +1023,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 950 da paleta brand. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -1034,7 +1034,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 100 da paleta cyan. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -1045,7 +1045,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 200 da paleta cyan. Tom claro — backgrounds secundários, borders subtle.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -1056,7 +1056,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 300 da paleta cyan. Tom médio-claro — borders default, foregrounds em dark mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -1067,7 +1067,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 400 da paleta cyan. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -1078,7 +1078,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 50 da paleta cyan. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -1089,7 +1089,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 500 da paleta cyan. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -1100,7 +1100,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 600 da paleta cyan. Tom forte — fills primários, brand fills.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -1111,7 +1111,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 700 da paleta cyan. Tom escuro — text on light, hover de fills brand.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -1122,7 +1122,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 800 da paleta cyan. Tom muito escuro — emphasis text, active states.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -1133,7 +1133,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 900 da paleta cyan. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -1144,7 +1144,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 950 da paleta cyan. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -1232,7 +1232,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 100 da paleta emerald. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -1243,7 +1243,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 200 da paleta emerald. Tom claro — backgrounds secundários, borders subtle.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -1254,7 +1254,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 300 da paleta emerald. Tom médio-claro — borders default, foregrounds em dark mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -1265,7 +1265,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 400 da paleta emerald. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -1276,7 +1276,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 50 da paleta emerald. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -1287,7 +1287,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 500 da paleta emerald. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -1298,7 +1298,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 600 da paleta emerald. Tom forte — fills primários, brand fills.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -1309,7 +1309,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 700 da paleta emerald. Tom escuro — text on light, hover de fills brand.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -1320,7 +1320,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 800 da paleta emerald. Tom muito escuro — emphasis text, active states.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -1331,7 +1331,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 900 da paleta emerald. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -1342,7 +1342,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 950 da paleta emerald. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -1353,7 +1353,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 100 da paleta green. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.success.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-light.css` (1×)
@@ -1366,7 +1366,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 200 da paleta green. Tom claro — backgrounds secundários, borders subtle.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.success.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -1377,7 +1377,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 300 da paleta green. Tom médio-claro — borders default, foregrounds em dark mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.success.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -1388,7 +1388,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 400 da paleta green. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.success.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (3×)
@@ -1401,7 +1401,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 50 da paleta green. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.success.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -1412,7 +1412,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 500 da paleta green. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.success.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (2×)
@@ -1426,7 +1426,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 600 da paleta green. Tom forte — fills primários, brand fills.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.success.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-light.css` (1×)
@@ -1439,7 +1439,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 700 da paleta green. Tom escuro — text on light, hover de fills brand.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.success.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-light.css` (1×)
@@ -1452,7 +1452,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 800 da paleta green. Tom muito escuro — emphasis text, active states.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.success.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-light.css` (1×)
@@ -1465,7 +1465,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 900 da paleta green. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.success.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (1×)
@@ -1479,7 +1479,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 950 da paleta green. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.success.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -1490,7 +1490,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 100 da paleta indigo. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -1501,7 +1501,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 200 da paleta indigo. Tom claro — backgrounds secundários, borders subtle.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -1512,7 +1512,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 300 da paleta indigo. Tom médio-claro — borders default, foregrounds em dark mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -1523,7 +1523,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 400 da paleta indigo. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -1534,7 +1534,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 50 da paleta indigo. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -1545,7 +1545,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 500 da paleta indigo. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -1556,7 +1556,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 600 da paleta indigo. Tom forte — fills primários, brand fills.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -1567,7 +1567,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 700 da paleta indigo. Tom escuro — text on light, hover de fills brand.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -1578,7 +1578,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 800 da paleta indigo. Tom muito escuro — emphasis text, active states.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -1589,7 +1589,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 900 da paleta indigo. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -1600,7 +1600,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 950 da paleta indigo. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -1611,7 +1611,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 100 da paleta neutral. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -1622,7 +1622,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 200 da paleta neutral. Tom claro — backgrounds secundários, borders subtle.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-light.css` (4×)
@@ -1635,7 +1635,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 300 da paleta neutral. Tom médio-claro — borders default, foregrounds em dark mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (2×)
@@ -1649,7 +1649,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 400 da paleta neutral. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (3×)
@@ -1663,7 +1663,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 50 da paleta neutral. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (3×)
@@ -1677,7 +1677,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 500 da paleta neutral. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (3×)
@@ -1691,7 +1691,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 600 da paleta neutral. Tom forte — fills primários, brand fills.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (6×)
@@ -1705,7 +1705,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 700 da paleta neutral. Tom escuro — text on light, hover de fills brand.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (3×)
@@ -1719,7 +1719,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 800 da paleta neutral. Tom muito escuro — emphasis text, active states.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (5×)
@@ -1732,7 +1732,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 900 da paleta neutral. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (8×)
@@ -1746,7 +1746,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 950 da paleta neutral. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (1×)
@@ -1957,7 +1957,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 100 da paleta purple. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -1968,7 +1968,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 200 da paleta purple. Tom claro — backgrounds secundários, borders subtle.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -1979,7 +1979,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 300 da paleta purple. Tom médio-claro — borders default, foregrounds em dark mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -1990,7 +1990,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 400 da paleta purple. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -2001,7 +2001,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 50 da paleta purple. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -2012,7 +2012,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 500 da paleta purple. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -2023,7 +2023,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 600 da paleta purple. Tom forte — fills primários, brand fills.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -2034,7 +2034,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 700 da paleta purple. Tom escuro — text on light, hover de fills brand.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -2045,7 +2045,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 800 da paleta purple. Tom muito escuro — emphasis text, active states.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -2056,7 +2056,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 900 da paleta purple. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -2067,7 +2067,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 950 da paleta purple. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -2078,7 +2078,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 100 da paleta red. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.error.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-light.css` (1×)
@@ -2091,7 +2091,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 200 da paleta red. Tom claro — backgrounds secundários, borders subtle.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.error.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -2102,7 +2102,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 300 da paleta red. Tom médio-claro — borders default, foregrounds em dark mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.error.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -2113,7 +2113,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 400 da paleta red. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.error.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (5×)
@@ -2126,7 +2126,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 50 da paleta red. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.error.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -2137,7 +2137,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 500 da paleta red. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.error.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (2×)
@@ -2151,7 +2151,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 600 da paleta red. Tom forte — fills primários, brand fills.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.error.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-light.css` (2×)
@@ -2164,7 +2164,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 700 da paleta red. Tom escuro — text on light, hover de fills brand.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.error.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-light.css` (1×)
@@ -2177,7 +2177,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 800 da paleta red. Tom muito escuro — emphasis text, active states.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.error.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-light.css` (1×)
@@ -2190,7 +2190,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 900 da paleta red. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.error.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (1×)
@@ -2204,7 +2204,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 950 da paleta red. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.error.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -2215,7 +2215,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 100 da paleta sky. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-light.css` (1×)
@@ -2228,7 +2228,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 200 da paleta sky. Tom claro — backgrounds secundários, borders subtle.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -2239,7 +2239,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 300 da paleta sky. Tom médio-claro — borders default, foregrounds em dark mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -2250,7 +2250,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 400 da paleta sky. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (3×)
@@ -2263,7 +2263,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 50 da paleta sky. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -2274,7 +2274,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 500 da paleta sky. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (1×)
@@ -2288,7 +2288,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 600 da paleta sky. Tom forte — fills primários, brand fills.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-light.css` (1×)
@@ -2301,7 +2301,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 700 da paleta sky. Tom escuro — text on light, hover de fills brand.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-light.css` (1×)
@@ -2314,7 +2314,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 800 da paleta sky. Tom muito escuro — emphasis text, active states.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -2325,7 +2325,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 900 da paleta sky. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (1×)
@@ -2338,7 +2338,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tom 950 da paleta sky. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
-- **Decisão**: Step da escala Tailwind-compatível. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
+- **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -4025,7 +4025,8 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/alert.css` (4×)
     - `css/components/card.css` (1×)
     - `css/components/checkbox.css` (3×)
-    - `css/components/input.css` (2×)
+    - `css/components/form-field.css` (1×)
+    - `css/components/input.css` (1×)
     - `css/components/modal.css` (3×)
     - `css/components/radio.css` (4×)
     - `css/components/select.css` (1×)
@@ -4082,7 +4083,7 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/breadcrumb.css` (2×)
     - `css/components/card.css` (2×)
     - `css/components/checkbox.css` (1×)
-    - `css/components/input.css` (1×)
+    - `css/components/form-field.css` (1×)
     - `css/components/modal.css` (1×)
     - `css/components/radio.css` (1×)
     - `css/components/tabs.css` (1×)
@@ -4132,7 +4133,8 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/badge.css` (1×)
     - `css/components/button.css` (2×)
     - `css/components/checkbox.css` (2×)
-    - `css/components/input.css` (6×)
+    - `css/components/form-field.css` (3×)
+    - `css/components/input.css` (3×)
     - `css/components/radio.css` (3×)
     - `css/components/select.css` (3×)
     - `css/components/textarea.css` (3×)
@@ -5301,7 +5303,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/badge.css` (1×)
-    - `css/components/input.css` (1×)
+    - `css/components/form-field.css` (1×)
 
 ### `semantic.space.control.padding.10`
 
@@ -5465,7 +5467,8 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/breadcrumb.css` (1×)
     - `css/components/button.css` (1×)
     - `css/components/checkbox.css` (4×)
-    - `css/components/input.css` (3×)
+    - `css/components/form-field.css` (1×)
+    - `css/components/input.css` (2×)
     - `css/components/modal.css` (1×)
     - `css/components/radio.css` (5×)
     - `css/components/select.css` (1×)

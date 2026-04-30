@@ -19,15 +19,16 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 - **`docs/foundations-colors.html` reordenado e renomeado pra espelhar a collection Foundation no Figma.** Ordem antes (Neutral, Blue, Purple, Red, Amber, Green, Sky, Cyan, Emerald, Indigo + Brand alias no fim) → ordem agora (Brand, Neutral, Green, Amber, Red, Blue, Purple, Sky, Cyan, Emerald, Indigo) matching `Foundation.variableIds[]`. Section labels limpos: removidos refs obsoletos a "(escala Slate)", "(paleta Primary)", "(paleta Secondary)", "(tema Ocean)", "(tema Forest)", "(secundária do tema Ocean)" — themes Default/Ocean/Forest foram deletados em ADR-014, palettes Primary/Secondary não existem mais. Section labels mantém só descrição semântica útil onde aplica (Green = Sucesso, Amber = Alerta, Red = Erro, Sky = Informação). Disabled fills + Overlays movidos pra final (matching ordem no Figma collection).
 - **Página `Foundation — Colors` no Figma reordenada pra match collection order.** Sections antes em ordem `Neutral, Green, Amber, Red, Blue, Purple, Sky, Cyan, Emerald, Indigo`. Já estava quase certa, mas descrição de Neutral atualizada de "Escala de cinzas" pra "Escala neutra" (consistência terminológica).
 
-### Histórico Tailwind sinalizado
+### Histórico Tailwind removido
 
-Projeto não usa Tailwind. Referências históricas remanescentes (não removidas — pra revisão do owner):
-- `tokens/foundation/colors.json` + `css/tokens/generated/foundation.css`: paletas `blue/*`, `purple/*`, `cyan/*`, `emerald/*`, `indigo/*` (55 vars) — zero consumer em CSS de componente, restos do sistema de themes Default/Ocean/Forest pré-0.8.0 (ADR-014). Brand é a paleta canonical agora.
-- `tokens/registry.json` + `scripts/populate-registry.mjs`: 27 ocorrências de "escala Tailwind-compatível" em campos `decisao`. Descrição factual da convenção 50–950, mas pode ser reescrita como "escala 50–950 padronizada".
-- `docs/decisions/ADR-001-migracao-tokens.md` + `ADR-005-brand-foundation-e-estados-explicitos.md`: mencionam themes Default/Ocean/Forest. ADRs históricos — preservar como registro, marcar como superseded por ADR-014 se ainda não está.
-- `docs/foundations.html`: exemplos hardcoded `var(--ds-color-blue-500)` e `var(--ds-color-purple-500)` em demo de tokens. Trocar por `--ds-color-brand-500`.
-- `docs/token-architecture.html`: exemplo `--ds-color-blue-500` em coluna de exemplo. Trocar por `--ds-color-brand-500`.
-- `docs/design-principles.html`: anti-padrão usa frase "When the brand switches to cyan" — substituir cyan por exemplo neutro (ex: "different brand color").
+Projeto não usa Tailwind. Citações que poderiam gerar confusão foram limpas:
+- `tokens/registry.json` (121 ocorrências) + `scripts/populate-registry.mjs` (1 template) — "escala Tailwind-compatível" → "escala 50–950 padronizada". `docs/token-registry.md` regenerado via `npm run build:registry`.
+- `docs/decisions/ADR-001` e `ADR-005` — header **Status** atualizado anotando supersession por ADR-014 (themes Default/Ocean/Forest deletados em 0.8.0). Conteúdo histórico preservado por convenção ADR.
+- `docs/foundations.html` — swatches demo de Foundation Colors trocadas: `--ds-color-blue-500` + `--ds-color-purple-500` → `--ds-color-brand-500` + `--ds-color-neutral-500`.
+- `docs/token-architecture.html` — exemplos `foundation.color.blue.500` / `--ds-color-blue-500` / `color/blue/500` → `brand.500` em todas as colunas.
+- `docs/design-principles.html` — anti-pattern reescrito: "When the brand switches to cyan, every reference to blue needs manual replacement" → "Foundation tokens skip the Semantic layer — every brand, hierarchy or state change needs manual replacement".
+
+Paletas Foundation `blue/purple/cyan/emerald/indigo` (55 vars) **não removidas** — restos pré-0.8.0 com 0 consumer em CSS de componente, mas ainda existem na collection Foundation/JSON. Decisão de deletar fica pra sessão futura (afeta Figma + JSON + regenera CSS).
 
 ### Drift detectado (requer ação no Figma)
 
