@@ -1,6 +1,14 @@
 /* ============================================================
    COMPONENT: Form Field — wrapper composite pra Input/Select/Textarea/etc
 
+   ⚠ CSS-ONLY (ADR-017): Form Field NÃO existe no Figma e NÃO deve ser
+   authorado lá. Componentes Figma de form (Input Text, Select, Textarea,
+   Checkbox, Radio, Toggle) já carregam Label + Required + Helper Text +
+   Description inline em cada variant. Form Field só existe no CSS porque
+   HTML não tem elemento "form control" composto — precisamos compor
+   <label> + control + helper + error com IDs e ARIA. Auditorias Figma↔Repo
+   devem ignorar este componente como "faltando no Figma".
+
    Junta os 5 elementos que precisam estar visualmente alinhados E
    acessivelmente conectados:
 

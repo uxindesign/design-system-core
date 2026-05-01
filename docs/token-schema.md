@@ -94,3 +94,4 @@ semantic.z.*
 - **ADR-014** — Reestruturação Semantic em `action` × `style` × `prop` × `state` — eliminação de brand/accent e themes (Aceita — implementada em 0.7.0 e estabilizada em 1.0.0-beta.1)
 - **ADR-015** — — Unificação da escala size, eliminação de tokens component-specific e renomeação spacing→dimension (Aceito)
 - **ADR-016** — — Tokens sem equivalência no Figma (CSS-only) (Aceito)
+- **ADR-017** — — Componentes CSS-only (sem equivalência no Figma) (Aceito)

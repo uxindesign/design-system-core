@@ -170,6 +170,9 @@ console.log(`✅ token-schema.md (Foundation: ${foundationTotal}, Semantic: ${se
 
 // ─── component-inventory.md ───────────────────────────────────────────────────
 
+// `cssOnly: true` → componente é wrapper de markup HTML que não tem (e não
+// precisa ter) equivalente Figma porque os componentes Figma equivalentes já
+// carregam Label/Required/Helper/Error inline em cada variant. Ver ADR-017.
 const knownComponents = [
   { name: 'Button',      css: 'button'     },
   { name: 'Input Text',  css: 'input'      },
@@ -187,13 +190,16 @@ const knownComponents = [
   { name: 'Breadcrumb',  css: 'breadcrumb' },
   { name: 'Avatar',      css: 'avatar'     },
   { name: 'Divider',     css: 'divider'    },
-  { name: 'Form Field',  css: 'form-field' },
+  { name: 'Form Field',  css: 'form-field', cssOnly: true },
   { name: 'Spinner',     css: 'spinner'    },
   { name: 'Skeleton',    css: 'skeleton'   },
 ];
 
 const rows = knownComponents.map(c => {
   const hasCss = cssComponents.includes(c.css);
+  if (c.cssOnly) {
+    return `| ${c.name} | ${hasCss ? '🟢' : '⬜'} | — (CSS-only, ADR-017) | — | ⬜ | 🟢 |`;
+  }
   return `| ${c.name} | ${hasCss ? '🟢' : '⬜'} | 🟢 | 🟢 | ⬜ | 🟢 |`;
 });
 
@@ -209,12 +215,13 @@ const inventory = `# Inventário de componentes — Design System Core
 |------------|-----|-----------------|-----------------|---------|----------|
 ${rows.join('\n')}
 
-**Legenda:** ⬜ Não iniciado | 🟡 Em progresso | 🟢 Completo | ⚠️ Verificar | 🔴 Precisa revisão
+**Legenda:** ⬜ Não iniciado | 🟡 Em progresso | 🟢 Completo | ⚠️ Verificar | 🔴 Precisa revisão | — Não aplicável
 
 **Nota sobre binding:**
 - Button: fills (brand + toned), padding-x/y, height, radius, gap, border-width, focus ring via semantic vars
 - Input Text / Select / Textarea: label usa \`content/default\`, label row com asterisco Required, control tokens
 - Checkbox / Radio / Toggle: Content frame vertical (Label + Description + Helper Text), booleans show/hide
+- **Form Field**: CSS-only (ADR-017). Não tem (e não deve ter) equivalente Figma — componentes Figma de form (Input, Select, Textarea, Checkbox, Radio, Toggle) já carregam Label + Required + Helper inline em cada variant. Form Field só existe no CSS porque HTML não tem elemento "form control" composto.
 - Demais: fills, strokes, radius, spacing via tokens semânticos
 
 ## Resumo de tokens

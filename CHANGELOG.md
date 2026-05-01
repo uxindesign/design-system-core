@@ -8,6 +8,10 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 
 ## [Não publicado]
 
+### Adicionado
+
+- **ADR-017 — Componentes CSS-only (sem equivalência no Figma).** Análogo de ADR-016 para componentes. Codifica que **Form Field** (`css/components/form-field.css`) existe só no CSS porque HTML não tem elemento "form control" composto — precisamos compor `<label>` + control + helper + error com IDs e ARIA. Cada componente Figma de form (Input Text, Select, Textarea, Checkbox, Radio, Toggle) já carrega Label + Required + Helper + Description inline em cada variant; authorar Form Field no Figma criaria duplicação. Auditorias Figma↔Repo devem ignorar componentes marcados `cssOnly: true` ao reportar "faltando no Figma". Propagado para: `scripts/sync-docs.mjs` (`knownComponents` ganha flag `cssOnly`; tabela de inventário mostra "— (CSS-only, ADR-017)" em vez de status Figma; nota explicativa adicionada), `docs/component-inventory.md` (regerada), `css/components/form-field.css` (comentário no topo), `AGENTS.md` (seção dedicada após source of truth de tokens), `audit/audit-report.md` (P0-3 reclassificado).
+
 ### Corrigido
 
 - **Badge Neutral Solid alinhado ao Figma** — CSS estava usando `border-strong` + `content-inverse` (fundo escuro + texto claro), enquanto Figma binda `surface/default` + `content/default` (fundo claro + texto escuro). Inversão visual entre design e produto. CSS atualizado pra espelhar Figma. Decidido como item P0-1 da auditoria.

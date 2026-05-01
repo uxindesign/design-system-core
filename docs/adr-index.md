@@ -3,7 +3,7 @@
 > Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-05-01. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
 
-16 decisões registradas.
+17 decisões registradas.
 
 | ADR | Título | Status | Data |
 |-----|--------|--------|------|
@@ -23,3 +23,4 @@
 | [ADR-014](decisions/ADR-014-action-tokens-role-style.md) | Reestruturação Semantic em `action` × `style` × `prop` × `state` — eliminação de brand/accent e themes | Aceita — implementada em 0.7.0 e estabilizada em 1.0.0-beta.1 | 2026-04-22 |
 | [ADR-015](decisions/ADR-015-unificacao-de-size-e-dimension.md) | — Unificação da escala size, eliminação de tokens component-specific e renomeação spacing→dimension | Aceito | 2026-04-26 |
 | [ADR-016](decisions/ADR-016-tokens-sem-equivalencia-no-figma.md) | — Tokens sem equivalência no Figma (CSS-only) | Aceito | 2026-04-30 |
+| [ADR-017](decisions/ADR-017-componentes-css-only.md) | — Componentes CSS-only (sem equivalência no Figma) | Aceito | 2026-04-30 |

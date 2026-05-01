@@ -72,6 +72,18 @@
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
 <h3>Adicionado</h3>
 <ul>
+<li><strong>ADR-017 — Componentes CSS-only (sem equivalência no Figma).</strong> Análogo de ADR-016 para componentes. Codifica que <strong>Form Field</strong> (<code>css/components/form-field.css</code>) existe só no CSS porque HTML não tem elemento &quot;form control&quot; composto — precisamos compor <code>&lt;label&gt;</code> + control + helper + error com IDs e ARIA. Cada componente Figma de form (Input Text, Select, Textarea, Checkbox, Radio, Toggle) já carrega Label + Required + Helper + Description inline em cada variant; authorar Form Field no Figma criaria duplicação. Auditorias Figma↔Repo devem ignorar componentes marcados <code>cssOnly: true</code> ao reportar &quot;faltando no Figma&quot;. Propagado para: <code>scripts/sync-docs.mjs</code> (<code>knownComponents</code> ganha flag <code>cssOnly</code>; tabela de inventário mostra &quot;— (CSS-only, ADR-017)&quot; em vez de status Figma; nota explicativa adicionada), <code>docs/component-inventory.md</code> (regerada), <code>css/components/form-field.css</code> (comentário no topo), <code>AGENTS.md</code> (seção dedicada após source of truth de tokens), <code>audit/audit-report.md</code> (P0-3 reclassificado).</li>
+</ul>
+<h3>Corrigido</h3>
+<ul>
+<li><strong>Badge Neutral Solid alinhado ao Figma</strong> — CSS estava usando <code>border-strong</code> + <code>content-inverse</code> (fundo escuro + texto claro), enquanto Figma binda <code>surface/default</code> + <code>content/default</code> (fundo claro + texto escuro). Inversão visual entre design e produto. CSS atualizado pra espelhar Figma. Decidido como item P0-1 da auditoria.</li>
+</ul>
+<h3>Removido</h3>
+<ul>
+<li><strong>Badge Secondary (Solid + Subtle) eliminado</strong> — não temos mais cores secundárias no DS, então a variante perdeu propósito. Remoção aplicada em <code>css/components/badge.css</code> (regras <code>.ds-badge--secondary.ds-badge--solid</code> e <code>.ds-badge--secondary.ds-badge--subtle</code>), <code>docs/badge.html</code> (preview, code snippet e tabela de classes), <code>.a11y-baseline.json</code> (fingerprints de contraste light/dark), e Figma (variants <code>Color=Secondary, Style=Solid</code> e <code>Color=Secondary, Style=Subtle</code> removidas — Badge component agora tem 12 variants em vez de 14). Decidido como item P0-2 da auditoria Figma↔Repo.</li>
+</ul>
+<h3>Adicionado</h3>
+<ul>
 <li><strong><code>AGENTS.md</code> na raiz — fonte canônica multi-IA.</strong> Adota o padrão emergente <a href="https://agents.md/">agents.md</a> (OpenAI Codex, Cursor, Aider, Sourcegraph Amp, Factory, Jules) para que qualquer agente IA — não só Claude Code — saiba como operar no repo. Cobre forbidden actions (top, scannable), source of truth por categoria de token (Figma-canônica vs CSS-only ADR-016), workflows comuns (adicionar token, refatorar componente, sync Figma→JSON, criar ADR), verification protocol antes de commit, convenções de commit/branch/PR, glossário, e ordem de consulta para dúvidas.</li>
 <li><strong><code>GEMINI.md</code> na raiz</strong> — pointer fino para <code>AGENTS.md</code> + adições específicas do Gemini CLI (limitações sem MCP Figma/GitHub direto, co-author de commit).</li>
 <li><strong><code>CLAUDE.md</code> refatorado</strong> para pointer fino + Claude-specifics (MCPs Figma/GitHub, gotchas Plugin API, skills relevantes, precedência de instruções repo vs memória). Conteúdo transversal migrado para <code>AGENTS.md</code>.</li>

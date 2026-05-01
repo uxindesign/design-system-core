@@ -58,6 +58,16 @@ A regra "Figma é fonte de verdade" **não é universal**. Depende da categoria 
 
 **Antes de editar QUALQUER token**, identifique a categoria. Se está em dúvida, rode preflight e leia `docs/decisions/ADR-016-tokens-sem-equivalencia-no-figma.md`.
 
+### Componentes CSS-only (sem equivalência no Figma)
+
+Análogo a categorias CSS-only de tokens, alguns **componentes** existem só no CSS porque sua razão de existir é uma necessidade de markup HTML/DOM, não uma decisão visual. ADR-017 codifica isso.
+
+| Componente CSS-only | Por quê |
+|---|---|
+| **Form Field** (`css/components/form-field.css`) | Wrapper para compor `<label>` + control + helper + error com IDs e ARIA. Cada componente Figma de form (Input Text, Select, Textarea, Checkbox, Radio, Toggle) já carrega Label + Required + Helper + Description **inline em cada variant**. Authorar Form Field no Figma criaria duplicação visual. |
+
+**Implicação para auditoria Figma↔Repo**: componentes marcados `cssOnly: true` em `scripts/sync-docs.mjs` (`knownComponents`) **não são drift** quando ausentes no Figma. Tratar como "faltando" é falso-positivo. Adicionar componente novo à lista exige amend de ADR-017.
+
 ### Hierarquia geral quando há divergência entre artefatos
 
 1. **ADR** — autoridade arquitetural. ADR prevalece sobre Figma e código. Mudança que contradiz ADR exige novo ADR antes da implementação.

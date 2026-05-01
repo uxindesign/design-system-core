@@ -24,16 +24,17 @@
 | Breadcrumb | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
 | Avatar | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
 | Divider | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
-| Form Field | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
+| Form Field | 🟢 | — (CSS-only, ADR-017) | — | ⬜ | 🟢 |
 | Spinner | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
 | Skeleton | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
 
-**Legenda:** ⬜ Não iniciado | 🟡 Em progresso | 🟢 Completo | ⚠️ Verificar | 🔴 Precisa revisão
+**Legenda:** ⬜ Não iniciado | 🟡 Em progresso | 🟢 Completo | ⚠️ Verificar | 🔴 Precisa revisão | — Não aplicável
 
 **Nota sobre binding:**
 - Button: fills (brand + toned), padding-x/y, height, radius, gap, border-width, focus ring via semantic vars
 - Input Text / Select / Textarea: label usa `content/default`, label row com asterisco Required, control tokens
 - Checkbox / Radio / Toggle: Content frame vertical (Label + Description + Helper Text), booleans show/hide
+- **Form Field**: CSS-only (ADR-017). Não tem (e não deve ter) equivalente Figma — componentes Figma de form (Input, Select, Textarea, Checkbox, Radio, Toggle) já carregam Label + Required + Helper inline em cada variant. Form Field só existe no CSS porque HTML não tem elemento "form control" composto.
 - Demais: fills, strokes, radius, spacing via tokens semânticos
 
 ## Resumo de tokens
@@ -74,6 +75,7 @@
 | ADR-014 | Reestruturação Semantic em `action` × `style` × `prop` × `state` — eliminação de brand/accent e themes | Aceita — implementada em 0.7.0 e estabilizada em 1.0.0-beta.1 |
 | ADR-015 | — Unificação da escala size, eliminação de tokens component-specific e renomeação spacing→dimension | Aceito |
 | ADR-016 | — Tokens sem equivalência no Figma (CSS-only) | Aceito |
+| ADR-017 | — Componentes CSS-only (sem equivalência no Figma) | Aceito |
 
 ## Próximos milestones
 

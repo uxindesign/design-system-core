@@ -67,11 +67,11 @@ Componente fica com aparência **inversa** entre Figma e produto. Decisão: qual
 
 Figma renderiza Secondary visualmente igual a Primary (mesmos tokens). CSS renderiza Secondary com aparência de outline. Um dos dois precisa ser corrigido — provavelmente o Figma deveria usar tokens distintos para Secondary, ou a Secondary deveria não existir como variante separada.
 
-#### P0-3. Form Field — não existe no Figma
+#### ~~P0-3. Form Field — não existe no Figma~~ → RECLASSIFICADO como CSS-only (ADR-017)
 
-`css/components/form-field.css` define `.ds-field`, `.ds-field__label`, `.ds-field__required`, `.ds-field__helper`, `.ds-field__error` com a11y completa. No Figma, página placeholder existe mas componente não foi authorado (CHANGELOG menciona "TODO de authoring session").
+**Não é drift.** Form Field é CSS-only por design: HTML não tem elemento "form control" composto, então o wrapper `.ds-field` existe pra compor `<label>` + control + helper + error com IDs e ARIA. Cada componente Figma de form (Input Text, Select, Textarea, Checkbox, Radio, Toggle) já carrega Label + Required + Helper + Description **inline em cada variant** — authorar Form Field no Figma criaria duplicação visual sem ganho.
 
-Implicação: design não tem fonte visual canônica. Designers precisam improvisar wrapper toda vez. Ação: criar componente Form Field no Figma com slots Label / Control / Helper / Error e variants `--error` / `--no-label`.
+Codificado em ADR-017 e propagado para `scripts/sync-docs.mjs` (`knownComponents` com `cssOnly: true`), `docs/component-inventory.md` (mostra "— (CSS-only, ADR-017)" em vez de status Figma), `css/components/form-field.css` (comentário no topo) e AGENTS.md (seção dedicada).
 
 ---
 
