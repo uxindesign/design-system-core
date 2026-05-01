@@ -17,7 +17,6 @@
 /* Dialog */
 .ds-modal {
   background-color: var(--ds-surface-elevated);
-  /* Figma: radius/lg (12px) — não xl (16px). */
   border-radius: var(--ds-radius-lg);
   /* Elevation: apply .ds-elevation-4 utility alongside .ds-modal for box-shadow.
      Semantic elevation tokens do not exist yet post-ADR-014. */
@@ -26,13 +25,12 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  border: var(--ds-border-width-default) solid var(--ds-border-subtle);
 }
 
 /* Sizes */
 .ds-modal--sm { max-width: var(--ds-size-layout-sm); }
 .ds-modal--md { max-width: var(--ds-size-layout-md); }
-.ds-modal--lg { max-width: var(--ds-size-layout-md); }
+.ds-modal--lg { max-width: var(--ds-size-layout-lg); }
 
 /* Header */
 .ds-modal__header {
@@ -44,10 +42,21 @@
 }
 
 .ds-modal__title {
-  font-size: var(--ds-body-font-size-lg);
+  margin: 0;
+  font-size: var(--ds-body-font-size-xl);
   font-weight: var(--ds-body-font-weight-semibold);
   color: var(--ds-content-default);
-  line-height: var(--ds-body-line-height-sm);
+  line-height: var(--ds-body-line-height-xl);
+}
+
+.ds-modal--md .ds-modal__title {
+  font-size: var(--ds-body-font-size-2xl);
+  line-height: var(--ds-body-line-height-2xl);
+}
+
+.ds-modal--lg .ds-modal__title {
+  font-size: var(--ds-body-font-size-3xl);
+  line-height: var(--ds-body-line-height-3xl);
 }
 
 .ds-modal__close {

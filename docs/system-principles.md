@@ -16,8 +16,8 @@ O design system existe em três lugares ao mesmo tempo. Nenhum deles é o DS soz
 
 | Manifestação | Papel | O que vive aqui |
 |---|---|---|
-| Figma | Origem visual. Onde componentes são desenhados, variantes definidas, e decisões visuais testadas. | Componentes, variáveis (Foundation, Brand, Semantic, Component), text styles, páginas de documentação visual. |
-| JSON (DTCG) | Convergência canônica. Onde todas as decisões de token se materializam em formato consumível por qualquer plataforma. | Arquivos em `tokens/foundation/`, `tokens/semantic/`, `tokens/component/`. Transformados pelo Style Dictionary em CSS e futuramente em outros formatos. |
+| Figma | Origem visual. Onde componentes são desenhados, variantes definidas, e decisões visuais testadas. | Componentes, variáveis (Foundation, Semantic), text styles, páginas de documentação visual. |
+| JSON (DTCG) | Convergência canônica. Onde todas as decisões de token se materializam em formato consumível por qualquer plataforma. | Arquivos em `tokens/foundation/` e `tokens/semantic/`. Transformados pelo Style Dictionary em CSS e futuramente em outros formatos. |
 | Site de docs | Superfície de consumo. Onde designers e devs consultam uso, variantes, tokens, acessibilidade e exemplos. | Páginas HTML, bilíngues PT-BR + EN. |
 
 Uma mudança em qualquer manifestação que não se propague para as outras duas é uma inconsistência, e inconsistência é defeito.
@@ -33,7 +33,7 @@ Nem tudo tem a mesma fonte de verdade. Quando houver divergência, resolve-se po
 | **Decisões arquiteturais** (camadas, naming, regras de referência, convenções) | **ADRs em `docs/decisions/`** | Todos os artefatos implementam. **ADR prevalece sobre tudo**, inclusive sobre Figma. |
 | **Valores de token** (hex, alpha, qual shade, qual cor) | **Figma Variables** (revisada em ADR-003, 0.5.8) | JSON em `tokens/` espelha via sync manual. CSS é gerado. Site documenta. |
 | **Arquitetura de token** (naming, camadas, referências — é uma instância do tipo anterior, mas merece destaque) | ADRs + JSON em Git como consolidação | Figma segue a arquitetura; Figma **não** pode criar camadas/naming que contradigam ADR. |
-| **Design visual de componente** (layout, proporções, variantes, anatomy) | Figma | CSS reflete. JSON de component tokens é derivado. Site documenta. |
+| **Design visual de componente** (layout, proporções, variantes, anatomy) | Figma | CSS reflete usando tokens semânticos. Site documenta. |
 | **Documentação de uso** (quando usar, best practices, acessibilidade) | Site de docs em `docs/*.html` | Figma pode ter notas visuais complementares. |
 
 Regras operacionais:
@@ -42,7 +42,7 @@ Regras operacionais:
 - **Figma > JSON em valor**. Quando o Figma mostra `blue.800` pra `brand.hover` e o JSON mostra `blue.700`, o Figma prevalece — rodar `npm run sync:tokens-from-figma:write` pra consolidar.
 - **Figma > CSS em design visual**. Se o Figma mostra um componente com border-radius de 8px e o CSS renderiza 6px, o Figma prevalece e o CSS deve ser corrigido.
 - **JSON > Figma em consolidação**. JSON é a fonte que alimenta build-tokens.mjs. Nenhum pipeline consome Figma direto. Então mesmo que "Figma é autoridade de valor", **nada roda sem JSON atualizado**. O sync é a ponte.
-- **Nunca editar `tokens/*.json` à mão** num commit normal. Fluxo: Figma → `sync:tokens-from-figma --write` → review do diff → PR. A exceção é em PRs do próprio script de sync, onde o JSON é gerado automaticamente e revisado como diff.
+- **Nunca editar `tokens/*.json` à mão** num commit normal. Fluxo: Figma → `sync:tokens-from-figma --write` → review do diff → PR. Duas exceções: (a) PRs do próprio script de sync, onde o JSON é gerado automaticamente; (b) categorias CSS-only definidas em [ADR-016](./decisions/ADR-016-tokens-sem-equivalencia-no-figma.md) — `motion.*`, `z.*`, `shadow.*` — que vivem só em JSON porque Figma não as representa como Variables.
 
 ---
 
@@ -60,7 +60,7 @@ Na prática:
 
 A validação cruzada não é opcional. Tokens analisados isoladamente geram decisões que precisam ser refeitas quando outros componentes entram em escopo.
 
-### Quando um token vive em Semantic vs Component
+### Quando criar um token em Semantic
 
 Critério operacional para decidir a camada de um novo token: a pergunta não é
 "é sobre componentes?" — é "quantos componentes consomem essa intenção?".
@@ -70,9 +70,10 @@ Critério operacional para decidir a camada de um novo token: a pergunta não é
   aplica só a controles interativos), o token mora em semantic porque expressa
   intenção compartilhada. Exemplos: `semantic.border.control.*` (ADR-009),
   `semantic.space.control.*` (ADR-006), `semantic.color.primary.toned.*` (ADR-007).
-- **Component** quando apenas um componente consome o token, ou quando há
-  override genuíno do padrão semântico. Exemplos: dimensões específicas do
-  Toggle, gap interno do Tabs.
+- **Semantic** também para decisões específicas de componente quando elas
+  precisam ser consumidas por CSS, Figma bindings ou docs. A camada Component
+  foi eliminada; se a intenção ainda não existe em Semantic, criar um semantic
+  token antes de aplicar no consumidor final.
 
 A motivação é operacional. Intenção compartilhada vivendo em component obriga
 edição em N arquivos sem garantia de consistência. Vivendo em semantic, a fonte
@@ -85,22 +86,20 @@ resolver.
 
 ---
 
-## 4. As três camadas de token têm regras de referência
+## 4. As duas camadas de token têm regras de referência
 
 ```
 Foundation (valores absolutos: hex, rem, px)
     ↑ referenciada por
 Semantic (intenção: aliases pra foundation, modo light/dark)
-    ↑ referenciada por
-Component (específico: aliases pra semantic)
 ```
 
 Regras invioláveis (detalhadas em `token-schema.md`):
 
 - Foundation é a única camada com valores absolutos.
 - Semantic referencia foundation, nunca valores hardcoded.
-- Component referencia semantic. Exceção documentada: estados hover/active que precisam de step específico da paleta podem referenciar foundation diretamente (ver regra 1 do token-schema.md).
-- Valores absolutos na camada component são proibidos. Se não existe token semântico adequado e a referência direta a foundation é necessária, ela deve ser justificada com `$description`.
+- Consumidores finais (CSS, Figma bindings e docs de componente) consomem semantic tokens, nunca foundation direto.
+- Textos em componentes Figma usam text styles; não devem bindar typography variables diretamente.
 - Novos tokens que criam categorias ou quebram hierarquia exigem ADR.
 
 ---
@@ -110,9 +109,9 @@ Regras invioláveis (detalhadas em `token-schema.md`):
 ### Fluxo de mudança por tipo
 
 **Mudança de token (valor, nome, estrutura):**
-1. Editar JSON em `tokens/` (fonte canônica)
+1. Ajustar Figma Variables quando a mudança é visual ou de valor
 2. Rodar Style Dictionary → CSS gerado
-3. Atualizar Figma Variables via use_figma ou Tokens Studio
+3. Consolidar JSON em `tokens/` via fluxo de sync Figma → JSON
 4. Validar que componentes CSS e Figma renderizam igual
 5. Atualizar site de docs se afeta página de tokens ou componente
 

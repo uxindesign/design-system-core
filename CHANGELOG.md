@@ -10,6 +10,26 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 
 ### Adicionado
 
+- **ADR-016 — Tokens sem equivalência no Figma (CSS-only).** Codifica que `motion.*` (duration + ease), `z.*` (z-index) e `shadow.*` vivem só em JSON porque Figma não as representa como Variables (Smart Animate é runtime, layer order não é z-index, shadow é Effect Style não-bindável). JSON é fonte de verdade para essas categorias; edição direta é permitida e esperada. Para todas as outras (`color`, `dimension`, `radius`, `opacity`, `border-width`, `typography` etc.), vale a regra padrão de ADR-003 (Figma é fonte). Critério de carve-out: nenhuma representação Figma OU representação não-bindável (Effect Style). `sync:tokens-from-figma` ignora essas categorias ao reportar `MISSING_IN_FIGMA`. Propagado para `CLAUDE.md` (regra operacional 1), `docs/system-principles.md` (hierarquia de verdade), `docs/token-architecture.html` (nova seção), `CONTRIBUTING.md` (pipeline de tokens) e `docs/process-figma-sync.md` (categoria BY_DESIGN).
+- **Token semantic novo: `z.tooltip` → `{foundation.z.40}`.** Light + dark (mode-invariant). CSS gerado: `--ds-z-tooltip`. Consumido por `tooltip.css` em substituição ao `z-index: 40` literal anterior. Edição direta no JSON é legítima sob ADR-016.
+
+### Mudado
+
+- **Documentação consolidada para arquitetura 2-layer (Foundation → Semantic).** Remoção de referências stale à camada Component, deletada em 0.7.0 mas ainda mencionada em vários lugares:
+  - `README.md` — versão atualizada de 0.5.14 → 1.0.0-beta.4 (alinha com `package.json`); descrição "três temas" → "paleta brand única customizável"; "18 componentes" → "19"; "11 ADRs" → "15".
+  - `docs/decisions/ADR-013-camadas-de-consumo-de-tokens.md` (+ HTML regerado) — reescrita refletindo 2-layer; remove cadeia de Component, atualiza exemplos e exceções para o estado vigente.
+  - `docs/system-principles.md` — seção "três camadas" → "duas camadas"; tabela de fontes de verdade limpa; texto sobre when-to-create token simplificado.
+  - `docs/token-schema.md` — remove linha Component da tabela de camadas; renumera "Regras invioláveis" para incluir "text styles autoritários para tipografia".
+  - `docs/process-figma-sync.md` — "4 collections" → "2 collections" (Foundation, Semantic).
+  - `docs/component-inventory.md` — coluna "Tokens JSON" removida; Component count removido; nota de binding ajustada.
+  - `docs/token-architecture.html` — corrige nomes de tokens stale (`--ds-dimension-20`/`--ds-font-size-14` → `--ds-space-xl`/`--ds-body-font-size-sm`; `primary.bg-hover` → `primary.background.hover`; `size.avatar.md` → `size.lg`).
+  - `docs/llms.txt` + `docs/llms-full.txt` + `scripts/build-llms.mjs` — descrição "três temas" → "paleta brand única"; "três camadas" → "2-layer".
+  - `scripts/sync-docs.mjs` — para de gerar seção Component em `token-schema.md`.
+- **Card `--elevated` agora usa `surface-raised` em vez de border subtle**, espelhando o componente Figma (raised surface + semantic card shadow, sem stroke).
+- **Modal**: remove border default; tamanho `--lg` agora usa `layout-lg` (era duplicata de `md`); título escala por size (xl/2xl/3xl) com line-heights pareados.
+- **Spinner**: consome `border-width-strong`, `border-brand`, `motion-duration-slow` + `motion-ease-default`, `opacity-disabled`. Variante nova `--on-color` para uso sobre fundos de marca (overlay-medium + border-inverse). Remove valores `border-width: 1.5px/3px` hardcoded.
+- **Tooltip**: consome `--ds-z-tooltip` (novo, ver Adicionado), `--ds-primary-content-default` para foreground, e `--ds-space-xs/sm` no lugar dos `4px/6px` literais nas setas.
+
 - **`docs/foundations-colors.html` agora exibe contraste WCAG por swatch no formato Figma.** Cada swatch das 10 paletas Foundation + Brand alias mostra `vs White X.X:1` e `vs Black X.X:1` com badge `AAA / AA / AA Large / Fail` — paridade com a página Foundation — Colors do Figma. Layout do swatch redesenhado pra card com info section (token name, hex, divider, duas linhas de contraste). Razões WCAG calculadas deterministicamente a partir do Foundation JSON (formula 2.1) e validadas contra os valores reportados no Figma (zero divergência). Hex hardcodados (`style="background-color:#XXX"`) substituídos por `var(--ds-color-...)` em todos os swatches — referência direta à Foundation, sem drift entre página e tokens.
 - **Cobertura de overlay/disabled na página Foundation Colors.** Adicionadas seções "Overlays" (Black/White × {5,10,20,40,60,80}%), "Toned overlays (Brand)" (blue-600 × {12,20,28}, blue-400 × {15,25,32}) e "Disabled fills" ({brand,success,error} × {light,dark}) — antes a página só mostrava 5 stops de Black overlay e omitia White, toned e disabled, criando gap entre `tokens/foundation/colors.json` e o que a doc exibe. Renderizadas sobre xadrez pra indicar transparência. Seção "Brand (alias customizável)" também adicionada.
 - `.ds-swatch__info`, `.ds-swatch__divider`, `.ds-swatch__contrast-row`, `.ds-swatch__contrast-label`, `.ds-swatch__contrast-ratio`, `.ds-swatch__color--checker`, `.ds-swatch__overlay` em `docs/layout.css` pra suportar o novo layout de card.

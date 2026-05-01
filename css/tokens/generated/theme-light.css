@@ -168,4 +168,5 @@
   --ds-body-line-height-7xl: var(--ds-line-height-72); /** 72px. Pareia com body/font-size/7xl (56px). */
   --ds-body-line-height-8xl: var(--ds-line-height-80); /** 80px. Pareia com body/font-size/8xl (64px). */
   --ds-body-line-height-9xl: var(--ds-line-height-90); /** 90px. Pareia com body/font-size/9xl (72px). */
+  --ds-z-tooltip: var(--ds-z-40); /** Stack layer para tooltips e floating labels não modais. */
 }

@@ -15,7 +15,7 @@
   gap: var(--ds-space-sm);
 }
 
-/* Title — heading/sm: 20px SemiBold / 28px (Figma) */
+/* Title — heading/sm in Figma */
 .ds-card__title {
   font-size: var(--ds-body-font-size-xl);
   font-weight: var(--ds-body-font-weight-semibold);
@@ -23,7 +23,7 @@
   line-height: var(--ds-body-line-height-xl);
 }
 
-/* Subtitle — label/md: 14px Bold / 20px (Figma) */
+/* Subtitle — label/md in Figma */
 .ds-card__subtitle {
   font-size: var(--ds-body-font-size-sm);
   font-weight: var(--ds-body-font-weight-bold);
@@ -31,7 +31,7 @@
   color: var(--ds-content-secondary);
 }
 
-/* Body — body/sm: 14px Regular / 20px (Figma) */
+/* Body — body/sm in Figma */
 .ds-card__body {
   padding: 0 var(--ds-space-lg) var(--ds-space-lg);
   font-size: var(--ds-body-font-size-sm);
@@ -53,8 +53,8 @@
   border: var(--ds-border-width-default) solid var(--ds-border-default);
 }
 
-/* Elevated — borda sutil + sombra semântica. */
+/* Elevated — raised surface + semantic card shadow, no stroke in Figma. */
 .ds-card--elevated {
-  border: var(--ds-border-width-default) solid var(--ds-border-subtle);
+  background-color: var(--ds-surface-raised);
   box-shadow: var(--ds-shadow-card);
 }

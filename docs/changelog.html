@@ -72,9 +72,38 @@
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
 <h3>Adicionado</h3>
 <ul>
-<li><strong><code>docs/foundations-colors.html</code> agora exibe contraste WCAG por swatch no formato Figma.</strong> Cada swatch das 10 paletas Foundation + Brand alias mostra <code>vs White X.X:1</code> e <code>vs Black X.X:1</code> com badge <code>AAA / AA / AA Large / Fail</code> — paridade com a página Foundation — Colors do Figma. Layout do swatch redesenhado pra card com info section (token name, hex, divider, duas linhas de contraste). Razões WCAG calculadas deterministicamente a partir do Foundation JSON (formula 2.1) e validadas contra os valores reportados no Figma (zero divergência). Hex hardcodados (<code>style=&quot;background-color:#XXX&quot;</code>) substituídos por <code>var(--ds-color-...)</code> em todos os swatches — referência direta à Foundation, sem drift entre página e tokens.</li>
-<li><strong>Cobertura de overlay/disabled na página Foundation Colors.</strong> Adicionadas seções &quot;Overlays&quot; (Black/White × {5,10,20,40,60,80}%), &quot;Toned overlays (Brand)&quot; (blue-600 × {12,20,28}, blue-400 × {15,25,32}) e &quot;Disabled fills&quot; ({brand,success,error} × {light,dark}) — antes a página só mostrava 5 stops de Black overlay e omitia White, toned e disabled, criando gap entre <code>tokens/foundation/colors.json</code> e o que a doc exibe. Renderizadas sobre xadrez pra indicar transparência. Seção &quot;Brand (alias customizável)&quot; também adicionada.</li>
-<li><code>.ds-swatch__info</code>, <code>.ds-swatch__divider</code>, <code>.ds-swatch__contrast-row</code>, <code>.ds-swatch__contrast-label</code>, <code>.ds-swatch__contrast-ratio</code>, <code>.ds-swatch__color--checker</code>, <code>.ds-swatch__overlay</code> em <code>docs/layout.css</code> pra suportar o novo layout de card.</li>
+<li><strong>ADR-016 — Tokens sem equivalência no Figma (CSS-only).</strong> Codifica que <code>motion.*</code> (duration + ease), <code>z.*</code> (z-index) e <code>shadow.*</code> vivem só em JSON porque Figma não as representa como Variables (Smart Animate é runtime, layer order não é z-index, shadow é Effect Style não-bindável). JSON é fonte de verdade para essas categorias; edição direta é permitida e esperada. Para todas as outras (<code>color</code>, <code>dimension</code>, <code>radius</code>, <code>opacity</code>, <code>border-width</code>, <code>typography</code> etc.), vale a regra padrão de ADR-003 (Figma é fonte). Critério de carve-out: nenhuma representação Figma OU representação não-bindável (Effect Style). <code>sync:tokens-from-figma</code> ignora essas categorias ao reportar <code>MISSING_IN_FIGMA</code>. Propagado para <code>CLAUDE.md</code> (regra operacional 1), <code>docs/system-principles.md</code> (hierarquia de verdade), <code>docs/token-architecture.html</code> (nova seção), <code>CONTRIBUTING.md</code> (pipeline de tokens) e <code>docs/process-figma-sync.md</code> (categoria BY_DESIGN).</li>
+<li><strong>Token semantic novo: <code>z.tooltip</code> → <code>{foundation.z.40}</code>.</strong> Light + dark (mode-invariant). CSS gerado: <code>--ds-z-tooltip</code>. Consumido por <code>tooltip.css</code> em substituição ao <code>z-index: 40</code> literal anterior. Edição direta no JSON é legítima sob ADR-016.</li>
+</ul>
+<h3>Mudado</h3>
+<ul>
+<li><p><strong>Documentação consolidada para arquitetura 2-layer (Foundation → Semantic).</strong> Remoção de referências stale à camada Component, deletada em 0.7.0 mas ainda mencionada em vários lugares:</p>
+<ul>
+<li><code>README.md</code> — versão atualizada de 0.5.14 → 1.0.0-beta.4 (alinha com <code>package.json</code>); descrição &quot;três temas&quot; → &quot;paleta brand única customizável&quot;; &quot;18 componentes&quot; → &quot;19&quot;; &quot;11 ADRs&quot; → &quot;15&quot;.</li>
+<li><code>docs/decisions/ADR-013-camadas-de-consumo-de-tokens.md</code> (+ HTML regerado) — reescrita refletindo 2-layer; remove cadeia de Component, atualiza exemplos e exceções para o estado vigente.</li>
+<li><code>docs/system-principles.md</code> — seção &quot;três camadas&quot; → &quot;duas camadas&quot;; tabela de fontes de verdade limpa; texto sobre when-to-create token simplificado.</li>
+<li><code>docs/token-schema.md</code> — remove linha Component da tabela de camadas; renumera &quot;Regras invioláveis&quot; para incluir &quot;text styles autoritários para tipografia&quot;.</li>
+<li><code>docs/process-figma-sync.md</code> — &quot;4 collections&quot; → &quot;2 collections&quot; (Foundation, Semantic).</li>
+<li><code>docs/component-inventory.md</code> — coluna &quot;Tokens JSON&quot; removida; Component count removido; nota de binding ajustada.</li>
+<li><code>docs/token-architecture.html</code> — corrige nomes de tokens stale (<code>--ds-dimension-20</code>/<code>--ds-font-size-14</code> → <code>--ds-space-xl</code>/<code>--ds-body-font-size-sm</code>; <code>primary.bg-hover</code> → <code>primary.background.hover</code>; <code>size.avatar.md</code> → <code>size.lg</code>).</li>
+<li><code>docs/llms.txt</code> + <code>docs/llms-full.txt</code> + <code>scripts/build-llms.mjs</code> — descrição &quot;três temas&quot; → &quot;paleta brand única&quot;; &quot;três camadas&quot; → &quot;2-layer&quot;.</li>
+<li><code>scripts/sync-docs.mjs</code> — para de gerar seção Component em <code>token-schema.md</code>.</li>
+</ul>
+</li>
+<li><p><strong>Card <code>--elevated</code> agora usa <code>surface-raised</code> em vez de border subtle</strong>, espelhando o componente Figma (raised surface + semantic card shadow, sem stroke).</p>
+</li>
+<li><p><strong>Modal</strong>: remove border default; tamanho <code>--lg</code> agora usa <code>layout-lg</code> (era duplicata de <code>md</code>); título escala por size (xl/2xl/3xl) com line-heights pareados.</p>
+</li>
+<li><p><strong>Spinner</strong>: consome <code>border-width-strong</code>, <code>border-brand</code>, <code>motion-duration-slow</code> + <code>motion-ease-default</code>, <code>opacity-disabled</code>. Variante nova <code>--on-color</code> para uso sobre fundos de marca (overlay-medium + border-inverse). Remove valores <code>border-width: 1.5px/3px</code> hardcoded.</p>
+</li>
+<li><p><strong>Tooltip</strong>: consome <code>--ds-z-tooltip</code> (novo, ver Adicionado), <code>--ds-primary-content-default</code> para foreground, e <code>--ds-space-xs/sm</code> no lugar dos <code>4px/6px</code> literais nas setas.</p>
+</li>
+<li><p><strong><code>docs/foundations-colors.html</code> agora exibe contraste WCAG por swatch no formato Figma.</strong> Cada swatch das 10 paletas Foundation + Brand alias mostra <code>vs White X.X:1</code> e <code>vs Black X.X:1</code> com badge <code>AAA / AA / AA Large / Fail</code> — paridade com a página Foundation — Colors do Figma. Layout do swatch redesenhado pra card com info section (token name, hex, divider, duas linhas de contraste). Razões WCAG calculadas deterministicamente a partir do Foundation JSON (formula 2.1) e validadas contra os valores reportados no Figma (zero divergência). Hex hardcodados (<code>style=&quot;background-color:#XXX&quot;</code>) substituídos por <code>var(--ds-color-...)</code> em todos os swatches — referência direta à Foundation, sem drift entre página e tokens.</p>
+</li>
+<li><p><strong>Cobertura de overlay/disabled na página Foundation Colors.</strong> Adicionadas seções &quot;Overlays&quot; (Black/White × {5,10,20,40,60,80}%), &quot;Toned overlays (Brand)&quot; (blue-600 × {12,20,28}, blue-400 × {15,25,32}) e &quot;Disabled fills&quot; ({brand,success,error} × {light,dark}) — antes a página só mostrava 5 stops de Black overlay e omitia White, toned e disabled, criando gap entre <code>tokens/foundation/colors.json</code> e o que a doc exibe. Renderizadas sobre xadrez pra indicar transparência. Seção &quot;Brand (alias customizável)&quot; também adicionada.</p>
+</li>
+<li><p><code>.ds-swatch__info</code>, <code>.ds-swatch__divider</code>, <code>.ds-swatch__contrast-row</code>, <code>.ds-swatch__contrast-label</code>, <code>.ds-swatch__contrast-ratio</code>, <code>.ds-swatch__color--checker</code>, <code>.ds-swatch__overlay</code> em <code>docs/layout.css</code> pra suportar o novo layout de card.</p>
+</li>
 </ul>
 <h3>Mudado</h3>
 <ul>

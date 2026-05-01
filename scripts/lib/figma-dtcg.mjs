@@ -348,8 +348,10 @@ const FIGMA_ONLY_PATHS = [
 const JSON_ONLY_PATHS = [
   /^foundation\.typography\.line\.height\./,           // ratio / rem no CSS gerado
   /^foundation\.typography\.letter\.spacing\./,        // em no CSS gerado
-  // ADR-013 Fase 8: semantic wrappers pra categorias Foundation JSON-only
-  /^semantic\.motion\./,                               // motion (Figma não representa)
+  // ADR-016: categorias CSS-only sem equivalência Figma Variable
+  /^semantic\.motion\./,                               // motion (runtime — Smart Animate)
+  /^semantic\.z\./,                                    // z-index (Figma usa layer order)
+  /^semantic\.shadow\./,                               // shadow (Figma Effect Style, não Variable)
   // 2xs (11px) é micro-text usado em docs/layout.css. Figma omite por estar
   // abaixo do mínimo recomendado WCAG 1.4.4 (12px); CSS mantém pra meta-info.
   /^foundation\.typography\.font\.size\.11$/,
@@ -357,17 +359,20 @@ const JSON_ONLY_PATHS = [
   /^semantic\.typography\.body\.line-height\.2xs$/,
 ];
 
-// ADR-013 extension: Semantic/Component tokens whose alias targets a
-// Foundation category that Figma Variables can't represent (shadow objects,
-// motion curves/durations, z-index stacks). These tokens exist in JSON only
-// and propagate to CSS — Figma equivalent is N/A. Classified as BY_DESIGN
-// instead of DRIFT_FROM_SOURCE. To add a new category: include a regex.
+// ADR-016: Semantic/Component tokens whose alias targets a Foundation
+// category that Figma Variables can't represent (shadow objects, motion
+// curves/durations, z-index stacks). These tokens exist in JSON only and
+// propagate to CSS — Figma equivalent is N/A. Classified as BY_DESIGN
+// instead of DRIFT_FROM_SOURCE. To add a new category: include a regex
+// AND amend ADR-016.
 const JSON_ONLY_COMPONENT_ALIAS_TARGETS = [
-  /^\{foundation\.shadow\./,         // shadow objects — Figma effect styles only, not variables
+  /^\{foundation\.shadow\./,         // shadow objects — Figma Effect Styles only, not Variables
   /^\{foundation\.z\./,              // z-index — no Figma primitive
   /^\{foundation\.duration\./,       // motion duration — no Figma primitive
   /^\{foundation\.ease\./,           // cubic-bezier — no Figma primitive
-  /^\{semantic\.motion\./,           // semantic wrappers pra motion (ADR-013 Fase 8)
+  /^\{semantic\.motion\./,           // semantic wrappers pra motion
+  /^\{semantic\.z\./,                // semantic wrappers pra z-index
+  /^\{semantic\.shadow\./,           // semantic wrappers pra shadow
 ];
 
 function isFigmaOnlyToken(token) {

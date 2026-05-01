@@ -13,7 +13,7 @@
 <body>
 
 <header class="ds-site-header">
-  <div style="display:flex;align-items:center;gap:var(--ds-dimension-16)">
+  <div style="display:flex;align-items:center;gap:var(--ds-space-lg)">
     <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>
@@ -66,7 +66,7 @@
     <h2 class="ds-subsection__title"><span data-lang="pt">Anatomia</span><span data-lang="en">Anatomy</span></h2>
 
     <div class="ds-anatomy">
-      <div style="position:relative;width:100%;max-width:320px;">
+      <div style="position:relative;width:100%;max-width:var(--ds-size-layout-xs);">
         <div class="ds-card ds-card--outlined" style="position:relative;">
           <div class="ds-card__header">
             <h3 class="ds-card__title">Card Title</h3>
@@ -77,8 +77,8 @@
           </div>
         </div>
         <!-- Markers -->
-        <span class="ds-anatomy__marker" style="top:-10px;left:-10px;">1</span>
-        <span class="ds-anatomy__marker" style="top:50%;right:-10px;transform:translateY(-50%);">2</span>
+        <span class="ds-anatomy__marker" style="top:calc(var(--ds-space-md) * -1);left:calc(var(--ds-space-md) * -1);">1</span>
+        <span class="ds-anatomy__marker" style="top:50%;right:calc(var(--ds-space-md) * -1);transform:translateY(-50%);">2</span>
       </div>
     </div>
 
@@ -100,7 +100,7 @@
         <button class="ds-preview__tab" role="tab" aria-selected="false" data-tab="code">Code</button>
       </div>
       <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
-        <div class="ds-preview__canvas" style="max-width:360px">
+        <div class="ds-preview__canvas" style="max-width:var(--ds-size-layout-xs)">
           <div class="ds-card ds-card--default">
             <div class="ds-card__header">
               <h3 class="ds-card__title">Card Title</h3>
@@ -137,7 +137,7 @@
         <button class="ds-preview__tab" role="tab" aria-selected="false" data-tab="code">Code</button>
       </div>
       <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
-        <div class="ds-preview__canvas" style="max-width:360px">
+        <div class="ds-preview__canvas" style="max-width:var(--ds-size-layout-xs)">
           <div class="ds-card ds-card--outlined">
             <div class="ds-card__header">
               <h3 class="ds-card__title">Outlined Card</h3>
@@ -174,14 +174,14 @@
         <button class="ds-preview__tab" role="tab" aria-selected="false" data-tab="code">Code</button>
       </div>
       <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
-        <div class="ds-preview__canvas" style="max-width:360px">
+        <div class="ds-preview__canvas" style="max-width:var(--ds-size-layout-xs)">
           <div class="ds-card ds-card--elevated">
             <div class="ds-card__header">
               <h3 class="ds-card__title">Elevated Card</h3>
-              <p class="ds-card__subtitle">With a box shadow</p>
+              <p class="ds-card__subtitle">Raised surface</p>
             </div>
             <div class="ds-card__body">
-              <p>Elevated cards use a shadow instead of a border to create visual depth and hierarchy on the page.</p>
+              <p>Elevated cards use a raised surface and shadow instead of a border to create visual depth and hierarchy.</p>
             </div>
           </div>
         </div>
@@ -192,10 +192,10 @@
           <pre tabindex="0"><code>&lt;div class="ds-card ds-card--elevated"&gt;
   &lt;div class="ds-card__header"&gt;
     &lt;h3 class="ds-card__title"&gt;Elevated Card&lt;/h3&gt;
-    &lt;p class="ds-card__subtitle"&gt;With a box shadow&lt;/p&gt;
+    &lt;p class="ds-card__subtitle"&gt;Raised surface&lt;/p&gt;
   &lt;/div&gt;
   &lt;div class="ds-card__body"&gt;
-    &lt;p&gt;Elevated cards use a shadow for visual depth.&lt;/p&gt;
+    &lt;p&gt;Elevated cards use a raised surface and shadow.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
         </div>
@@ -211,7 +211,7 @@
         <button class="ds-preview__tab" role="tab" aria-selected="false" data-tab="code">Code</button>
       </div>
       <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
-        <div class="ds-preview__canvas" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--ds-dimension-16);width:100%">
+        <div class="ds-preview__canvas" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(var(--ds-size-layout-xs),1fr));gap:var(--ds-space-lg);width:100%">
           <div class="ds-card ds-card--default">
             <div class="ds-card__header">
               <h3 class="ds-card__title">Default</h3>
@@ -233,7 +233,7 @@
               <h3 class="ds-card__title">Elevated</h3>
             </div>
             <div class="ds-card__body">
-              <p>Box shadow.</p>
+              <p>Raised surface.</p>
             </div>
           </div>
         </div>
@@ -257,17 +257,17 @@
 
     <div class="ds-dodont">
       <div class="ds-dodont__item">
-        <div class="ds-dodont__preview" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--ds-dimension-12);">
-          <div class="ds-card ds-card--outlined" style="padding:var(--ds-dimension-12);font-size:var(--ds-font-size-12);">Item A</div>
-          <div class="ds-card ds-card--outlined" style="padding:var(--ds-dimension-12);font-size:var(--ds-font-size-12);">Item B</div>
+        <div class="ds-dodont__preview" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--ds-space-md);">
+          <div class="ds-card ds-card--outlined" style="padding:var(--ds-space-md);font-size:var(--ds-body-font-size-xs);">Item A</div>
+          <div class="ds-card ds-card--outlined" style="padding:var(--ds-space-md);font-size:var(--ds-body-font-size-xs);">Item B</div>
         </div>
         <div class="ds-dodont__label ds-dodont__label--do">Faça</div>
         <div class="ds-dodont__desc"><span data-lang="pt">Use variantes consistentes no mesmo contexto. Todos os cards em um grid devem compartilhar o mesmo estilo.</span><span data-lang="en">Use consistent variants in the same context. All cards in a grid should share the same style.</span></div>
       </div>
       <div class="ds-dodont__item">
-        <div class="ds-dodont__preview" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--ds-dimension-12);">
-          <div class="ds-card ds-card--default" style="padding:var(--ds-dimension-12);font-size:var(--ds-font-size-12);">Item A</div>
-          <div class="ds-card ds-card--elevated" style="padding:var(--ds-dimension-12);font-size:var(--ds-font-size-12);">Item B</div>
+        <div class="ds-dodont__preview" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--ds-space-md);">
+          <div class="ds-card ds-card--default" style="padding:var(--ds-space-md);font-size:var(--ds-body-font-size-xs);">Item A</div>
+          <div class="ds-card ds-card--elevated" style="padding:var(--ds-space-md);font-size:var(--ds-body-font-size-xs);">Item B</div>
         </div>
         <div class="ds-dodont__label ds-dodont__label--dont">Não faça</div>
         <div class="ds-dodont__desc"><span data-lang="pt">Misturar variantes default, outlined e elevated no mesmo grid. Isso cria hierarquia visual inconsistente.</span><span data-lang="en">Mix default, outlined, and elevated variants in the same grid. It creates inconsistent visual hierarchy.</span></div>
@@ -277,14 +277,14 @@
     <div class="ds-dodont">
       <div class="ds-dodont__item">
         <div class="ds-dodont__preview" style="flex-direction:column;">
-          <span style="font-size:var(--ds-font-size-14);color:var(--ds-content-secondary);"><span data-lang="pt">Cards outlined em uma lista densa</span><span data-lang="en">Outlined cards in a dense list</span></span>
+          <span style="font-size:var(--ds-body-font-size-sm);color:var(--ds-content-secondary);"><span data-lang="pt">Cards outlined em uma lista densa</span><span data-lang="en">Outlined cards in a dense list</span></span>
         </div>
         <div class="ds-dodont__label ds-dodont__label--do">Faça</div>
         <div class="ds-dodont__desc"><span data-lang="pt">Use outlined para layouts densos onde limites claros são necessarios. Use elevated para conteúdo proeminente e independente.</span><span data-lang="en">Use outlined for dense layouts where clear boundaries are needed. Use elevated for prominent, standalone content.</span></div>
       </div>
       <div class="ds-dodont__item">
         <div class="ds-dodont__preview" style="flex-direction:column;">
-          <span style="font-size:var(--ds-font-size-14);color:var(--ds-content-secondary);"><span data-lang="pt">Card elevated dentro de um painel elevated</span><span data-lang="en">Elevated card inside elevated panel</span></span>
+          <span style="font-size:var(--ds-body-font-size-sm);color:var(--ds-content-secondary);"><span data-lang="pt">Card elevated dentro de um painel elevated</span><span data-lang="en">Elevated card inside elevated panel</span></span>
         </div>
         <div class="ds-dodont__label ds-dodont__label--dont">Não faça</div>
         <div class="ds-dodont__desc"><span data-lang="pt">Colocar cards elevated dentro de um container ja elevado. Empilhar sombras cria ruído visual e quebra a hierarquia.</span><span data-lang="en">Place elevated cards inside an already elevated container. Stacking shadows creates visual noise and breaks hierarchy.</span></div>
@@ -316,12 +316,13 @@
       <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token (semantic)</th><th><span data-lang="pt">Variavel CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
       <tbody>
         <tr><td>background</td><td><code>semantic.surface.default</code></td><td><code>--ds-surface-default</code></td></tr>
+        <tr><td>background (elevated variant)</td><td><code>semantic.surface.raised</code></td><td><code>--ds-surface-raised</code></td></tr>
         <tr><td>border (default variant)</td><td><code>semantic.border.subtle</code></td><td><code>--ds-border-subtle</code></td></tr>
         <tr><td>border (outlined variant)</td><td><code>semantic.border.default</code></td><td><code>--ds-border-default</code></td></tr>
-        <tr><td>shadow (elevated)</td><td><code>foundation.shadow.sm</code></td><td><code>--ds-shadow-sm</code></td></tr>
-        <tr><td>border-radius</td><td><code>foundation.radius.12</code></td><td><code>--ds-radius-12</code></td></tr>
-        <tr><td><code>.ds-card__header</code> padding</td><td>—</td><td><code>--ds-dimension-16</code> (top/sides) / <code>--ds-dimension-8</code> (bottom)</td></tr>
-        <tr><td><code>.ds-card__body</code> padding</td><td>—</td><td><code>0 --ds-dimension-16 --ds-dimension-16</code></td></tr>
+        <tr><td>shadow (elevated)</td><td><code>semantic.shadow.card</code></td><td><code>--ds-shadow-card</code></td></tr>
+        <tr><td>border-radius</td><td><code>semantic.radius.lg</code></td><td><code>--ds-radius-lg</code></td></tr>
+        <tr><td><code>.ds-card__header</code> padding</td><td><code>semantic.space.lg</code> / <code>semantic.space.sm</code></td><td><code>--ds-space-lg</code> / <code>--ds-space-sm</code></td></tr>
+        <tr><td><code>.ds-card__body</code> padding</td><td><code>semantic.space.lg</code></td><td><code>--ds-space-lg</code></td></tr>
       </tbody>
     </table>
   </div>
@@ -351,7 +352,7 @@
        ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Interação por teclado</span><span data-lang="en">Keyboard interaction</span></h2>
-    <p style="color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);margin-bottom:var(--ds-dimension-16);">
+    <p style="color:var(--ds-content-secondary);font-size:var(--ds-body-font-size-sm);margin-bottom:var(--ds-space-lg);">
       <span data-lang="pt">Cards não possuem interação por teclado por padrão. Se o card for interativo (clicável), envolva o conteúdo em um elemento <code>&lt;a&gt;</code> ou adicione <code>role="link"</code> com <code>tabindex="0"</code> para torná-lo focável é operável via <code>Enter</code>.</span><span data-lang="en">Cards have no keyboard interaction by default. If the card is interactive (clickable), wrap content in an <code>&lt;a&gt;</code> element or add <code>role="link"</code> with <code>tabindex="0"</code> to make it focusable and operable via <code>Enter</code>.</span>
     </p>
   </div>
@@ -369,7 +370,7 @@
       </tbody>
     </table>
 
-    <div class="ds-callout ds-callout--info" style="margin-top:var(--ds-dimension-16)">
+    <div class="ds-callout ds-callout--info" style="margin-top:var(--ds-space-lg)">
       <div class="ds-callout__title"><span data-lang="pt">Markup semântico</span><span data-lang="en">Semantic markup</span></div>
       <span data-lang="pt">Cards são containers genericos e não requerem roles ARIA específicos por padrão. Use tags de heading semânticos (<code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>) para títulos de cards para manter o outline adequado do documento. Se o card inteiro for clicável, envolva-o em um elemento <code>&lt;a&gt;</code> ou <code>&lt;button&gt;</code>, ou use um único link dentro do card com um nome acessível claro.</span><span data-lang="en">Cards are generic containers and do not require specific ARIA roles by default. Use semantic heading tags (<code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>) for card titles to maintain proper document outline. If the entire card is clickable, wrap it in an <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code> element, or use a single link inside the card with a clear accessible name.</span>
     </div>

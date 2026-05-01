@@ -69,18 +69,6 @@ const darkRoot = darkJson ? darkJson[Object.keys(darkJson)[0]] : null;
 const darkTotal = darkRoot ? countTokens(darkRoot) : 0;
 const paridadeOk = semanticTotal === darkTotal;
 
-// Component
-const componentDir = path.join(ROOT, 'tokens', 'component');
-const componentFiles = fs.existsSync(componentDir)
-  ? fs.readdirSync(componentDir).filter(f => f.endsWith('.json'))
-  : [];
-const componentStats = componentFiles.map(f => {
-  const json = readJson(path.join(componentDir, f));
-  const root = json ? json[Object.keys(json)[0]] : null;
-  return { file: f, name: path.basename(f, '.json'), count: root ? countTokens(root) : 0 };
-});
-const componentTotal = componentStats.reduce((s, f) => s + f.count, 0);
-
 // CSS components
 const cssComponentsDir = path.join(ROOT, 'css', 'components');
 const cssComponents = fs.existsSync(cssComponentsDir)
@@ -142,7 +130,6 @@ const tokenSchema = `# Token schema — Design System Core
 |--------|--------|----------|
 | Foundation | **${foundationTotal}** | ${foundationFiles.length} |
 | Semantic | **${semanticTotal} × 2 modos** | light.json + dark.json |
-| Component | **${componentTotal}** | ${componentFiles.length} |
 
 ## Foundation (${foundationTotal} tokens)
 
@@ -158,25 +145,20 @@ Categorias raiz em light.json:
 ${semanticCategories.map(c => `semantic.${c}.*`).join('\n')}
 \`\`\`
 
-## Component (${componentTotal} tokens)
-
-| Arquivo | Tokens |
-|---------|--------|
-${componentStats.map(f => `| \`${f.file}\` | ${f.count} |`).join('\n')}
-
 ## Regras invioláveis
 
-1. Component → Semantic, nunca Foundation
+1. Consumidores finais (CSS, Figma bindings e docs de componente) consomem Semantic, nunca Foundation direto
 2. Semantic → Foundation, nunca hardcoded
 3. Foundation é a única camada com valores absolutos
 4. Brand é Foundation — 2 tokens, sem estados, ponto de troca por tema
 5. Todo token tem \`$type\` conforme DTCG spec
 6. Tokens não óbvios têm \`$description\`
-7. Tokens de valor zero não são vinculados via setBoundVariable() no Figma
-8. Novas categorias ou quebras de hierarquia exigem ADR
-9. light.json e dark.json têm exatamente o mesmo conjunto de chaves
-10. Todo \`.default\` gera sufixo \`-default\` no CSS
-11. Cores puras (#FFF/#000) não são tokens foundation (ADR-010)
+7. Textos em componentes Figma usam text styles; não bind direto de typography vars
+8. Tokens de valor zero não são vinculados via setBoundVariable() no Figma
+9. Novas categorias ou quebras de hierarquia exigem ADR
+10. light.json e dark.json têm exatamente o mesmo conjunto de chaves
+11. Todo \`.default\` gera sufixo \`-default\` no CSS
+12. Cores puras (#FFF/#000) não são tokens foundation (ADR-010)
 
 ## ADRs relacionados
 
@@ -184,38 +166,35 @@ ${adrs.map(a => `- **ADR-${a.num}** — ${a.title} (${a.status})`).join('\n')}
 `;
 
 fs.writeFileSync(path.join(OUTPUT_DIR, 'token-schema.md'), tokenSchema);
-console.log(`✅ token-schema.md (Foundation: ${foundationTotal}, Semantic: ${semanticTotal}×2, Component: ${componentTotal})`);
+console.log(`✅ token-schema.md (Foundation: ${foundationTotal}, Semantic: ${semanticTotal}×2)`);
 
 // ─── component-inventory.md ───────────────────────────────────────────────────
 
 const knownComponents = [
-  { name: 'Button',      css: 'button',     token: 'button'   },
-  { name: 'Input Text',  css: 'input',      token: 'input'    },
-  { name: 'Textarea',    css: 'textarea',   token: 'textarea' },
-  { name: 'Select',      css: 'select',     token: 'select'   },
-  { name: 'Checkbox',    css: 'checkbox',   token: 'checkbox' },
-  { name: 'Radio',       css: 'radio',      token: 'radio'    },
-  { name: 'Toggle',      css: 'toggle',     token: 'toggle'   },
-  { name: 'Badge',       css: 'badge',      token: null       },
-  { name: 'Alert',       css: 'alert',      token: null       },
-  { name: 'Card',        css: 'card',       token: null       },
-  { name: 'Modal',       css: 'modal',      token: 'modal'    },
-  { name: 'Tooltip',     css: 'tooltip',    token: null       },
-  { name: 'Tabs',        css: 'tabs',       token: null       },
-  { name: 'Breadcrumb',  css: 'breadcrumb', token: null       },
-  { name: 'Avatar',      css: 'avatar',     token: 'avatar'   },
-  { name: 'Divider',     css: 'divider',    token: null       },
-  { name: 'Form Field',  css: 'form-field', token: null       },
-  { name: 'Spinner',     css: 'spinner',    token: 'spinner'  },
-  { name: 'Skeleton',    css: 'skeleton',   token: 'skeleton' },
+  { name: 'Button',      css: 'button'     },
+  { name: 'Input Text',  css: 'input'      },
+  { name: 'Textarea',    css: 'textarea'   },
+  { name: 'Select',      css: 'select'     },
+  { name: 'Checkbox',    css: 'checkbox'   },
+  { name: 'Radio',       css: 'radio'      },
+  { name: 'Toggle',      css: 'toggle'     },
+  { name: 'Badge',       css: 'badge'      },
+  { name: 'Alert',       css: 'alert'      },
+  { name: 'Card',        css: 'card'       },
+  { name: 'Modal',       css: 'modal'      },
+  { name: 'Tooltip',     css: 'tooltip'    },
+  { name: 'Tabs',        css: 'tabs'       },
+  { name: 'Breadcrumb',  css: 'breadcrumb' },
+  { name: 'Avatar',      css: 'avatar'     },
+  { name: 'Divider',     css: 'divider'    },
+  { name: 'Form Field',  css: 'form-field' },
+  { name: 'Spinner',     css: 'spinner'    },
+  { name: 'Skeleton',    css: 'skeleton'   },
 ];
 
 const rows = knownComponents.map(c => {
   const hasCss = cssComponents.includes(c.css);
-  const hasJson = c.token && componentFiles.includes(`${c.token}.json`);
-  const count = c.token ? (componentStats.find(s => s.name === c.token)?.count || 0) : 0;
-  const jsonStatus = c.token ? (hasJson ? `🟢 (${count})` : '⚠️') : '—';
-  return `| ${c.name} | ${hasCss ? '🟢' : '⬜'} | ${jsonStatus} | 🟢 | 🟢 | ⬜ | 🟢 |`;
+  return `| ${c.name} | ${hasCss ? '🟢' : '⬜'} | 🟢 | 🟢 | ⬜ | 🟢 |`;
 });
 
 const inventory = `# Inventário de componentes — Design System Core
@@ -226,14 +205,14 @@ const inventory = `# Inventário de componentes — Design System Core
 
 ## Status geral
 
-| Componente | CSS | Tokens JSON | Figma (visual) | Figma (binding) | Stories | Docs site |
-|------------|-----|-------------|-----------------|-----------------|---------|----------|
+| Componente | CSS | Figma (visual) | Figma (binding) | Stories | Docs site |
+|------------|-----|-----------------|-----------------|---------|----------|
 ${rows.join('\n')}
 
 **Legenda:** ⬜ Não iniciado | 🟡 Em progresso | 🟢 Completo | ⚠️ Verificar | 🔴 Precisa revisão
 
 **Nota sobre binding:**
-- Button: fills (brand + toned), padding-x/y, height, radius, gap, border-width, focus ring via vars Component/Semantic
+- Button: fills (brand + toned), padding-x/y, height, radius, gap, border-width, focus ring via semantic vars
 - Input Text / Select / Textarea: label usa \`content/default\`, label row com asterisco Required, control tokens
 - Checkbox / Radio / Toggle: Content frame vertical (Label + Description + Helper Text), booleans show/hide
 - Demais: fills, strokes, radius, spacing via tokens semânticos
@@ -245,7 +224,6 @@ ${rows.join('\n')}
 | Foundation | ${foundationTotal} | 🟢 |
 | Semantic (light) | ${semanticTotal} | 🟢 |
 | Semantic (dark) | ${darkTotal} | ${paridadeOk ? '🟢' : '⚠️'} |
-| Component | ${componentTotal} | 🟢 |
 
 ## Pipeline
 

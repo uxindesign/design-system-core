@@ -840,6 +840,13 @@
           }
         }
       }
+    },
+    "z": {
+      "tooltip": {
+        "$type": "number",
+        "$value": "{foundation.z.40}",
+        "$description": "Stack layer para tooltips e floating labels não modais."
+      }
     }
   }
 }

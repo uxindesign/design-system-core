@@ -22,8 +22,8 @@ Peça ao agente Claude Code:
 
 O agente vai executar uma sequência de chamadas `use_figma` que:
 
-1. Lista as 4 collections (Foundation, Semantic, Brand, Component) com seus modos.
-2. Itera sobre os ~462 variable IDs em batches de ~50–60 (o MCP tem limite de ~20KB por resposta, então precisa chunkar).
+1. Lista as 2 collections atuais (Foundation, Semantic) com seus modos.
+2. Itera sobre as variables do arquivo em batches pequenos (o MCP tem limite de resposta, então precisa chunkar).
 3. Para cada variável, captura `id`, `name`, `resolvedType`, `variableCollectionId`, `valuesByMode` e `description`.
 4. Agrega tudo num único arquivo `.figma-snapshot.json` no formato:
 
@@ -59,7 +59,7 @@ node scripts/sync-tokens-from-figma.mjs
 O script:
 
 1. Lê `.figma-snapshot.json` (ou `--snapshot <path>` pra outro caminho).
-2. Constrói o estado esperado dos JSONs (`tokens/foundation/`, `tokens/semantic/`, `tokens/component/`) a partir das Variables.
+2. Constrói o estado esperado dos JSONs (`tokens/foundation/`, `tokens/semantic/`) a partir das Variables.
 3. Lê os JSONs atuais e compara.
 4. Reporta em 6 categorias:
 
@@ -70,7 +70,7 @@ O script:
 | **MISSING_IN_FIGMA** | JSON tem, Figma não. | Não deleta — revisão manual. |
 | **ALIAS_BROKEN** | Figma aponta pra variável inexistente. | Não resolve — fix no Figma. |
 | **CSS_ONLY** | Token existe dos dois lados mas representação diverge por capacidade CSS (font family stack, `rem`, weight numérico). Introduzido após PR #18 / 0.5.11. | **Não aplica** — aplicar regridiria o CSS (ex: trocaria `'Inter', system-ui, ...` por `"Inter"`; ou `0.875rem` por `14`, quebrando WCAG 1.4.4). |
-| **BY_DESIGN** | Token existe só de um lado por escolha arquitetural documentada — ver **ADR-012** (line-height/letter-spacing: PX no Figma, ratio/em no JSON). | **Não aplica** — não é drift, é arquitetura. |
+| **BY_DESIGN** | Token existe só de um lado por escolha arquitetural documentada — ver **ADR-012** (line-height/letter-spacing: PX no Figma, ratio/em no JSON) e **ADR-016** (categorias CSS-only `motion.*`, `z.*`, `shadow.*` vivem só no JSON porque Figma não as representa como Variables). | **Não aplica** — não é drift, é arquitetura. |
 
 Se as 4 primeiras categorias zerarem, Figma e JSON estão em dia. Exit 0.
 

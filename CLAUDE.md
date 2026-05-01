@@ -186,8 +186,8 @@ docs/*.html                  (documentação e preview)
 
 Regras de ouro:
 
-- **Nunca editar `tokens/*.json` à mão.** Alterações devem vir do Figma.
-- **Sempre editar Figma Variables primeiro.** Designer decide, propagação pro JSON acontece depois.
+- **Nunca editar `tokens/*.json` à mão**, **exceto** as categorias CSS-only listadas em ADR-016 (`motion.*`, `z.*`, `shadow.*`). Para todas as outras categorias, alterações devem vir do Figma.
+- **Sempre editar Figma Variables primeiro** — exceto categorias CSS-only, onde o JSON é canônico (ADR-016).
 - **Sync Figma → JSON** acontece via MCP + script custom, disparado manualmente numa sessão Claude Code:
   1. Agente executa `use_figma` em chunks pra dumpar as ~489 Variables em `.figma-snapshot.json` (gitignored).
   2. `npm run sync:tokens-from-figma` (dry-run) reporta divergências em 4 categorias: VALUE_DRIFT, NEW_IN_FIGMA, MISSING_IN_FIGMA, ALIAS_BROKEN.

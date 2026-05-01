@@ -69,7 +69,12 @@ Formato:
 
 ## Pipeline de tokens
 
-Tokens vivem em `tokens/**/*.json` (formato DTCG) e são a fonte de verdade. `build-tokens.mjs` transforma em CSS custom properties prefixadas com `--ds-*` em `css/tokens/generated/`. O CSS dos 19 componentes em `css/components/*.css` consome essas variáveis. **Não edite os arquivos em `css/tokens/generated/` à mão.** Eles são regenerados no CI em cada push pra `main`.
+Tokens vivem em `tokens/**/*.json` (formato DTCG). `build-tokens.mjs` transforma em CSS custom properties prefixadas com `--ds-*` em `css/tokens/generated/`. O CSS dos 19 componentes em `css/components/*.css` consome essas variáveis. **Não edite os arquivos em `css/tokens/generated/` à mão.** Eles são regenerados no CI em cada push pra `main`.
+
+**Fonte de verdade dos tokens depende da categoria** (ver [ADR-003](./docs/decisions/ADR-003-fontes-verdade.md) e [ADR-016](./docs/decisions/ADR-016-tokens-sem-equivalencia-no-figma.md)):
+
+- **Figma é fonte** para categorias com Variable nativa: `color`, `dimension`, `radius`, `opacity`, `border-width`, `typography`. Edite no Figma, rode `npm run sync:tokens-from-figma:write` para propagar pro JSON.
+- **JSON é fonte** para categorias CSS-only sem equivalência Figma: `motion.*`, `z.*`, `shadow.*`. Edite o JSON direto e rode `npm run build:tokens`.
 
 Detalhes completos em [docs/token-architecture.html](./docs/token-architecture.html) e [ADR-001](./docs/decisions/ADR-001-migracao-tokens.md).
 

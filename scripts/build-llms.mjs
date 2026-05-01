@@ -85,7 +85,7 @@ const FOUNDATIONS = [
 
 const llmsTxt = `# Design System Core
 
-> Design system white-label em CSS puro com tokens DTCG em JSON, 19 componentes, modos light/dark, três temas (Default, Ocean, Forest). Versão atual: ${pkg.version}. Enquanto não houver release oficial 1.0, o projeto fica em 0.x.
+> Design system white-label em CSS puro com tokens DTCG em JSON, 19 componentes, modos light/dark e paleta brand única customizável. Versão atual: ${pkg.version}.
 
 Repositório: https://github.com/uxindesign/design-system-core
 Site: ${BASE_URL}/
@@ -93,10 +93,10 @@ Arquivo completo para LLMs: ${BASE_URL}/docs/llms-full.txt
 
 ## Visão geral
 
-- [Home](${BASE_URL}/index.html): visão rápida, quick start, dark mode, temas.
+- [Home](${BASE_URL}/index.html): visão rápida, quick start e dark mode.
 - [README](https://github.com/uxindesign/design-system-core/blob/main/README.md): instalação e navegação.
-- [Token Architecture](${BASE_URL}/docs/token-architecture.html): arquitetura das três camadas (Foundation → Semantic → Component).
-- [Theming](${BASE_URL}/docs/theming.html): como trocar tema e modo.
+- [Token Architecture](${BASE_URL}/docs/token-architecture.html): arquitetura 2-layer (Foundation → Semantic).
+- [Theming](${BASE_URL}/docs/theming.html): como customizar brand e alternar modo.
 - [Accessibility](${BASE_URL}/docs/accessibility.html): WCAG 2.2 AA aplicada.
 - [Design Principles](${BASE_URL}/docs/design-principles.html): princípios do sistema.
 
@@ -127,7 +127,7 @@ ${adrs.map((a) => `- [ADR-${a.num} — ${a.title}](${BASE_URL}/docs/decisions/${
 ## APIs JSON (consumo programático)
 
 - [components.json](${BASE_URL}/docs/api/components.json): 19 componentes com variantes e tokens consumidos.
-- [tokens.json](${BASE_URL}/docs/api/tokens.json): camadas Foundation, Semantic (light/dark) e Component.
+- [tokens.json](${BASE_URL}/docs/api/tokens.json): camadas Foundation e Semantic (light/dark).
 - [adrs.json](${BASE_URL}/docs/api/adrs.json): índice estruturado das decisões.
 - [foundations.json](${BASE_URL}/docs/api/foundations.json): catálogo das 10 foundations.
 - [tokens-sync.json](${BASE_URL}/docs/api/tokens-sync.json): estado de coerência Figma ↔ JSON ↔ CSS.

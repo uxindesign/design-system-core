@@ -1,37 +1,37 @@
 # Inventário de componentes — Design System Core
 
-> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-30. Não editar manualmente.
+> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-05-01. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
 > Versão atual: **1.0.0-beta.4**
 
 ## Status geral
 
-| Componente | CSS | Tokens JSON | Figma (visual) | Figma (binding) | Stories | Docs site |
-|------------|-----|-------------|-----------------|-----------------|---------|----------|
-| Button | 🟢 | ⚠️ | 🟢 | 🟢 | ⬜ | 🟢 |
-| Input Text | 🟢 | ⚠️ | 🟢 | 🟢 | ⬜ | 🟢 |
-| Textarea | 🟢 | ⚠️ | 🟢 | 🟢 | ⬜ | 🟢 |
-| Select | 🟢 | ⚠️ | 🟢 | 🟢 | ⬜ | 🟢 |
-| Checkbox | 🟢 | ⚠️ | 🟢 | 🟢 | ⬜ | 🟢 |
-| Radio | 🟢 | ⚠️ | 🟢 | 🟢 | ⬜ | 🟢 |
-| Toggle | 🟢 | ⚠️ | 🟢 | 🟢 | ⬜ | 🟢 |
-| Badge | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
-| Alert | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
-| Card | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
-| Modal | 🟢 | ⚠️ | 🟢 | 🟢 | ⬜ | 🟢 |
-| Tooltip | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
-| Tabs | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
-| Breadcrumb | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
-| Avatar | 🟢 | ⚠️ | 🟢 | 🟢 | ⬜ | 🟢 |
-| Divider | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
-| Form Field | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
-| Spinner | 🟢 | ⚠️ | 🟢 | 🟢 | ⬜ | 🟢 |
-| Skeleton | 🟢 | ⚠️ | 🟢 | 🟢 | ⬜ | 🟢 |
+| Componente | CSS | Figma (visual) | Figma (binding) | Stories | Docs site |
+|------------|-----|-----------------|-----------------|---------|----------|
+| Button | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
+| Input Text | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
+| Textarea | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
+| Select | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
+| Checkbox | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
+| Radio | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
+| Toggle | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
+| Badge | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
+| Alert | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
+| Card | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
+| Modal | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
+| Tooltip | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
+| Tabs | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
+| Breadcrumb | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
+| Avatar | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
+| Divider | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
+| Form Field | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
+| Spinner | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
+| Skeleton | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
 
 **Legenda:** ⬜ Não iniciado | 🟡 Em progresso | 🟢 Completo | ⚠️ Verificar | 🔴 Precisa revisão
 
 **Nota sobre binding:**
-- Button: fills (brand + toned), padding-x/y, height, radius, gap, border-width, focus ring via vars Component/Semantic
+- Button: fills (brand + toned), padding-x/y, height, radius, gap, border-width, focus ring via semantic vars
 - Input Text / Select / Textarea: label usa `content/default`, label row com asterisco Required, control tokens
 - Checkbox / Radio / Toggle: Content frame vertical (Label + Description + Helper Text), booleans show/hide
 - Demais: fills, strokes, radius, spacing via tokens semânticos
@@ -41,9 +41,8 @@
 | Coleção | Tokens | Status |
 |---------|--------|--------|
 | Foundation | 262 | 🟢 |
-| Semantic (light) | 164 | 🟢 |
-| Semantic (dark) | 164 | 🟢 |
-| Component | 0 | 🟢 |
+| Semantic (light) | 165 | 🟢 |
+| Semantic (dark) | 165 | 🟢 |
 
 ## Pipeline
 
@@ -74,6 +73,7 @@
 | ADR-013 | Camadas de consumo de tokens — Foundation nunca direto em consumidor final | Aceita — implementada em 0.7.0 (Component layer eliminada) e fechada em 1.0.0-beta.1 (0 leaks Foundation em `css/components/*.css` e `css/base/*.css`) |
 | ADR-014 | Reestruturação Semantic em `action` × `style` × `prop` × `state` — eliminação de brand/accent e themes | Aceita — implementada em 0.7.0 e estabilizada em 1.0.0-beta.1 |
 | ADR-015 | — Unificação da escala size, eliminação de tokens component-specific e renomeação spacing→dimension | Aceito |
+| ADR-016 | — Tokens sem equivalência no Figma (CSS-only) | Aceito |
 
 ## Próximos milestones
 

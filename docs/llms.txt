@@ -1,6 +1,6 @@
 # Design System Core
 
-> Design system white-label em CSS puro com tokens DTCG em JSON, 19 componentes, modos light/dark, três temas (Default, Ocean, Forest). Versão atual: 1.0.0-beta.4. Enquanto não houver release oficial 1.0, o projeto fica em 0.x.
+> Design system white-label em CSS puro com tokens DTCG em JSON, 19 componentes, modos light/dark e paleta brand única customizável. Versão atual: 1.0.0-beta.4.
 
 Repositório: https://github.com/uxindesign/design-system-core
 Site: https://uxindesign.github.io/design-system-core/
@@ -8,10 +8,10 @@ Arquivo completo para LLMs: https://uxindesign.github.io/design-system-core/docs
 
 ## Visão geral
 
-- [Home](https://uxindesign.github.io/design-system-core/index.html): visão rápida, quick start, dark mode, temas.
+- [Home](https://uxindesign.github.io/design-system-core/index.html): visão rápida, quick start e dark mode.
 - [README](https://github.com/uxindesign/design-system-core/blob/main/README.md): instalação e navegação.
-- [Token Architecture](https://uxindesign.github.io/design-system-core/docs/token-architecture.html): arquitetura das três camadas (Foundation → Semantic → Component).
-- [Theming](https://uxindesign.github.io/design-system-core/docs/theming.html): como trocar tema e modo.
+- [Token Architecture](https://uxindesign.github.io/design-system-core/docs/token-architecture.html): arquitetura 2-layer (Foundation → Semantic).
+- [Theming](https://uxindesign.github.io/design-system-core/docs/theming.html): como customizar brand e alternar modo.
 - [Accessibility](https://uxindesign.github.io/design-system-core/docs/accessibility.html): WCAG 2.2 AA aplicada.
 - [Design Principles](https://uxindesign.github.io/design-system-core/docs/design-principles.html): princípios do sistema.
 
@@ -82,7 +82,7 @@ Arquivo completo para LLMs: https://uxindesign.github.io/design-system-core/docs
 ## APIs JSON (consumo programático)
 
 - [components.json](https://uxindesign.github.io/design-system-core/docs/api/components.json): 19 componentes com variantes e tokens consumidos.
-- [tokens.json](https://uxindesign.github.io/design-system-core/docs/api/tokens.json): camadas Foundation, Semantic (light/dark) e Component.
+- [tokens.json](https://uxindesign.github.io/design-system-core/docs/api/tokens.json): camadas Foundation e Semantic (light/dark).
 - [adrs.json](https://uxindesign.github.io/design-system-core/docs/api/adrs.json): índice estruturado das decisões.
 - [foundations.json](https://uxindesign.github.io/design-system-core/docs/api/foundations.json): catálogo das 10 foundations.
 - [tokens-sync.json](https://uxindesign.github.io/design-system-core/docs/api/tokens-sync.json): estado de coerência Figma ↔ JSON ↔ CSS.

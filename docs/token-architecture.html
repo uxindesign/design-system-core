@@ -110,7 +110,7 @@
        ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Camadas e cadeia de alias</span><span data-lang="en">Layers and alias chain</span></h2>
-    <p style="margin-bottom:var(--ds-dimension-20);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);"><span data-lang="pt">Duas camadas, uma direção: <strong>Foundation</strong> guarda valores brutos; <strong>Semantic</strong> aliasa Foundation com nomes de intenção. Componentes consomem só Semantic. Component foi eliminada em 0.7.0.</span><span data-lang="en">Two layers, one direction: <strong>Foundation</strong> holds raw values; <strong>Semantic</strong> aliases Foundation with intent names. Components only consume Semantic. Component was eliminated in 0.7.0.</span></p>
+    <p style="margin-bottom:var(--ds-space-xl);color:var(--ds-content-secondary);font-size:var(--ds-body-font-size-sm);"><span data-lang="pt">Duas camadas, uma direção: <strong>Foundation</strong> guarda valores brutos; <strong>Semantic</strong> aliasa Foundation com nomes de intenção. Componentes consomem só Semantic. Component foi eliminada em 0.7.0.</span><span data-lang="en">Two layers, one direction: <strong>Foundation</strong> holds raw values; <strong>Semantic</strong> aliases Foundation with intent names. Components only consume Semantic. Component was eliminated in 0.7.0.</span></p>
 
     <div class="ds-layers">
       <article class="ds-layer">
@@ -169,8 +169,8 @@
        ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Modo light/dark</span><span data-lang="en">Light/dark mode</span></h2>
-    <p style="margin-bottom:var(--ds-dimension-16);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);">
-      <span data-lang="pt">Tokens semânticos têm as mesmas chaves em ambos os modos mas valores diferentes. Tokens de foundation e componente são invariantes de modo.</span><span data-lang="en">Semantic tokens have the same keys in both modes but different values. Foundation and component tokens are mode-invariant.</span>
+    <p style="margin-bottom:var(--ds-space-lg);color:var(--ds-content-secondary);font-size:var(--ds-body-font-size-sm);">
+      <span data-lang="pt">Tokens semânticos têm as mesmas chaves em ambos os modos mas valores diferentes. Tokens de foundation são invariantes de modo.</span><span data-lang="en">Semantic tokens have the same keys in both modes but different values. Foundation tokens are mode-invariant.</span>
     </p>
     <table class="ds-token-table">
       <thead><tr><th>Token</th><th><span data-lang="pt">Valor light</span><span data-lang="en">Light value</span></th><th><span data-lang="pt">Valor dark</span><span data-lang="en">Dark value</span></th></tr></thead>
@@ -178,12 +178,12 @@
         <tr><td><code>background.default</code></td><td>neutral-50</td><td>neutral-950</td></tr>
         <tr><td><code>content.default</code></td><td>neutral-900</td><td>neutral-50</td></tr>
         <tr><td><code>primary.background.default</code></td><td>blue-600</td><td>blue-400</td></tr>
-        <tr><td><code>primary.bg-hover</code></td><td>blue-700</td><td>blue-300</td></tr>
+        <tr><td><code>primary.background.hover</code></td><td>blue-700</td><td>blue-300</td></tr>
         <tr><td><code>overlay.subtle</code></td><td>overlay-black-5</td><td>overlay-white-5</td></tr>
         <tr><td><code>primary.content-default</code></td><td>white</td><td>neutral-900</td></tr>
       </tbody>
     </table>
-    <p style="color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);">
+    <p style="color:var(--ds-content-secondary);font-size:var(--ds-body-font-size-sm);">
       <span data-lang="pt">Tokens invariantes de modo (iguais em ambos): todos os <code>space.*</code>, <code>radius.*</code>, <code>border.width.*</code>, <code>focus.ring.width</code>, <code>focus.ring.offset</code>.</span><span data-lang="en">Mode-invariant tokens (same in both modes): all <code>space.*</code>, <code>radius.*</code>, <code>border.width.*</code>, <code>focus.ring.width</code>, <code>focus.ring.offset</code>.</span>
     </p>
   </div>
@@ -214,18 +214,36 @@
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Mapeamento entre formatos</span><span data-lang="en">Cross-format mapping</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th><span data-lang="pt">JSON (fonte da verdade)</span><span data-lang="en">JSON (source of truth)</span></th><th><span data-lang="pt">CSS (gerado)</span><span data-lang="en">CSS (generated)</span></th><th><span data-lang="pt">Variáveis Figma</span><span data-lang="en">Figma Variables</span></th></tr></thead>
+      <thead><tr><th><span data-lang="pt">JSON (consolidação)</span><span data-lang="en">JSON (consolidation)</span></th><th><span data-lang="pt">CSS (gerado)</span><span data-lang="en">CSS (generated)</span></th><th><span data-lang="pt">Variáveis Figma</span><span data-lang="en">Figma Variables</span></th></tr></thead>
       <tbody>
         <tr><td><code>foundation.color.brand.500</code></td><td><code>--ds-color-brand-500</code></td><td><code>color/brand/500</code> (Foundation)</td></tr>
         <tr><td><code>foundation.spacing.16</code></td><td><code>--ds-dimension-16</code></td><td><code>spacing/16</code> (Foundation)</td></tr>
         <tr><td><code>semantic.primary.background.default</code></td><td><code>--ds-primary-background-default</code></td><td><code>primary/background/default</code> (Semantic)</td></tr>
         <tr><td><code>semantic.space.md</code></td><td><code>--ds-space-md</code></td><td><code>space/md</code> (Semantic)</td></tr>
-        <tr><td><code>semantic.size.avatar.md</code></td><td><code>--ds-size-xl</code></td><td><code>size/avatar/md</code> (Semantic)</td></tr>
+        <tr><td><code>semantic.size.lg</code></td><td><code>--ds-size-lg</code></td><td><code>size/lg</code> (Semantic)</td></tr>
       </tbody>
     </table>
-    <p style="color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);">
+    <p style="color:var(--ds-content-secondary);font-size:var(--ds-body-font-size-sm);">
       <span data-lang="pt">A geração de CSS é feita pelo Style Dictionary: caminho direto → nome, sem transforms customizados.</span><span data-lang="en">CSS generation is handled by Style Dictionary: direct path → name, no custom transforms.</span>
     </p>
+  </div>
+
+  <!-- ============================================================
+       CSS-ONLY CARVE-OUT (ADR-016)
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title"><span data-lang="pt">Categorias CSS-only (sem equivalência no Figma)</span><span data-lang="en">CSS-only categories (no Figma equivalent)</span></h2>
+    <p style="margin-bottom:var(--ds-space-lg);color:var(--ds-content-secondary);font-size:var(--ds-body-font-size-sm);">
+      <span data-lang="pt">Nem toda categoria de token tem representação nativa em Figma Variables. Para essas, o JSON é fonte de verdade — não o Figma. Ver <a href="decisions/adr-016-tokens-sem-equivalencia-no-figma.html">ADR-016</a>.</span><span data-lang="en">Not every token category has a native Figma Variable representation. For those, JSON is the source of truth — not Figma. See <a href="decisions/adr-016-tokens-sem-equivalencia-no-figma.html">ADR-016</a>.</span>
+    </p>
+    <table class="ds-token-table">
+      <thead><tr><th><span data-lang="pt">Categoria</span><span data-lang="en">Category</span></th><th><span data-lang="pt">Equivalência Figma</span><span data-lang="en">Figma equivalent</span></th><th><span data-lang="pt">Fonte de verdade</span><span data-lang="en">Source of truth</span></th></tr></thead>
+      <tbody>
+        <tr><td><code>motion.*</code> (duration, ease)</td><td><span data-lang="pt">Nenhuma — Smart Animate é runtime, não token</span><span data-lang="en">None — Smart Animate is runtime, not token</span></td><td>JSON</td></tr>
+        <tr><td><code>z.*</code> (z-index)</td><td><span data-lang="pt">Nenhuma — Figma usa ordem de camada</span><span data-lang="en">None — Figma uses layer order</span></td><td>JSON</td></tr>
+        <tr><td><code>shadow.*</code></td><td><span data-lang="pt">Effect Style (não Variable bindável)</span><span data-lang="en">Effect Style (not a bindable Variable)</span></td><td><span data-lang="pt">JSON (canônico para CSS); Effect Styles refletem manualmente para preview</span><span data-lang="en">JSON (canonical for CSS); Effect Styles are mirrored manually for preview</span></td></tr>
+      </tbody>
+    </table>
   </div>
 
   <!-- ============================================================

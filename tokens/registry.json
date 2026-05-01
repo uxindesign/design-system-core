@@ -9907,6 +9907,22 @@
         "tokens": [],
         "figma": []
       }
+    },
+    "semantic.z.tooltip": {
+      "layer": "semantic",
+      "type": "number",
+      "references": "{foundation.z.40}",
+      "sentido": "Stack layer para tooltips e floating labels não modais.",
+      "escopo": [
+        "z-index"
+      ],
+      "contexto": "Consumido por tooltip.css e floating labels não-modais (popovers leves). Modais usam stack maior; toasts ficam acima de modal.",
+      "decisao": "Aliasa foundation.z.40. Tooltip vive acima de UI mas abaixo de modal/toast. Token CSS-only (ADR-016): z-index não tem equivalente Figma Variable.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
     }
   }
 }

@@ -72,13 +72,12 @@
 <p><strong>Atualização (2026-04-26):</strong> Arquitetura final estabilizada como <strong>2-layer (Foundation + Semantic)</strong>. Component collection foi eliminada em 0.7.0. ADR-015 unificou a escala de dimensão dentro de Semantic. Em 1.0.0-beta.1, todos os 111 leaks Foundation em <code>css/base/</code> foram migrados pra Semantic, fechando o débito original deste ADR. Resultado: <code>verify:tokens</code> reporta <code>CSS leak: OK</code> em ambas as camadas (components + base).</p>
 </blockquote>
 <h2>Contexto</h2>
-<p>O sistema tem três camadas de tokens, hierárquicas:</p>
+<p>O sistema começou com três camadas de tokens, mas a arquitetura vigente é 2-layer:</p>
 <ol>
 <li><strong>Foundation</strong> — valores crus, escalas primitivas (<code>spacing/3 = 0.75rem</code>, <code>color/blue/600</code>, <code>radius/sm</code>, <code>shadow/md</code>, <code>duration/fast</code>). Sem significado funcional, só quantidade.</li>
 <li><strong>Semantic</strong> — aliases com intenção de uso (<code>brand/default</code>, <code>content/secondary</code>, <code>border/width/default</code>, <code>space/inset/md</code>, <code>typography/control/font-size/md</code>).</li>
-<li><strong>Component</strong> — tokens específicos de um componente (<code>button/height/md</code>, <code>modal/max-width/lg</code>).</li>
 </ol>
-<p>A regra implícita da arquitetura sempre foi que consumidores finais — CSS de componente, bindings em componentes Figma, docs de uso — operam em cima de Semantic ou Component, não de Foundation direto. Foundation existe pra <strong>abastecer as camadas superiores</strong>, não pra ser consumido direto.</p>
+<p>A regra vigente é que consumidores finais — CSS de componente, bindings em componentes Figma, docs de uso — operam em cima de Semantic, não de Foundation direto e não de valores hardcoded. Foundation existe pra <strong>abastecer Semantic</strong>, não pra ser consumido direto.</p>
 <p>Essa regra <strong>nunca foi codificada explicitamente</strong> e por isso <strong>não é respeitada hoje</strong>. Auditoria em 22/04/2026:</p>
 <h3>No Figma (fonte de verdade — ADR-003)</h3>
 <ul>
@@ -89,7 +88,7 @@
 <li>Restante: opacity, z-index, shadow, motion, radius — Semantic não tem aliases pra essas categorias.</li>
 </ul>
 </li>
-<li>Collection <strong>Component</strong> tem 60 variáveis com valores literais raw (ex: <code>avatar/size/sm = 32</code>) em vez de aliases. Duplicam valores Foundation sem cadeia rastreável.</li>
+<li>A antiga collection <strong>Component</strong> tinha variáveis com valores literais raw (ex: <code>avatar/size/sm = 32</code>) em vez de aliases. Essa camada foi eliminada em 0.7.0.</li>
 </ul>
 <h3>No CSS (derivado)</h3>
 <ul>
@@ -105,7 +104,7 @@
 </ol>
 <h2>Decisão</h2>
 <h3>A regra</h3>
-<p><strong>Foundation só pode ser consumido por outros tokens.</strong> Isso é: o único lugar onde <code>foundation.*</code> aparece como referência é dentro de outro <code>$value: &quot;{foundation.*}&quot;</code> em arquivos JSON de <code>tokens/semantic/</code> ou <code>tokens/component/</code>, ou dentro de alias de Variable Figma em coleções Semantic/Component.</p>
+<p><strong>Foundation só pode ser consumido por Semantic.</strong> Isso é: o único lugar onde <code>foundation.*</code> aparece como referência é dentro de outro <code>$value: &quot;{foundation.*}&quot;</code> em arquivos JSON de <code>tokens/semantic/</code>, ou dentro de alias de Variable Figma na coleção Semantic.</p>
 <p><strong>Foundation nunca aparece em consumidor final</strong>, ou seja:</p>
 <ul>
 <li>Nenhum <code>var(--ds-{foundation-name}-*)</code> em <code>css/components/*.css</code> ou <code>css/base/*.css</code>.</li>
@@ -113,23 +112,14 @@
 <li>Nenhuma referência em código de docs a token Foundation (exceto nas próprias páginas de <code>foundations-*.html</code> que documentam a escala).</li>
 </ul>
 <h3>Cadeia permitida</h3>
-<pre><code>Foundation  ─┬─►  Semantic
-             └─►  Component    (Component pode referenciar Foundation direto quando
-                                não existe abstração Semantic apropriada — ex:
-                                component.modal.max-width referenciando foundation.spacing.*,
-                                porque &quot;max-width de modal&quot; não é conceito Semantic)
-
-Semantic    ─┬─►  Component
-             └─►  Consumidor final   (CSS, Figma binding)
-
-Component   ──►  Consumidor final
+<pre><code>Foundation  ──►  Semantic  ──►  Consumidor final
+                          (CSS, Figma binding, docs de componente)
 </code></pre>
-<p>Consumidor final <strong>só</strong> vê Semantic e Component. Nunca Foundation.</p>
+<p>Consumidor final <strong>só</strong> vê Semantic. Nunca Foundation, nunca valor hardcoded.</p>
 <h3>Exceção explícita — <code>semantic.control.*</code> (ADR-006)</h3>
-<p>Já codificado em ADR-006 princípio 9 e reforçado em ADR-011: a subcategoria <code>semantic.control.*</code> (dimensions, typography, padding compartilhados entre Button, Input, Select, Textarea) <strong>só pode ser consumida via tokens de Componente</strong>, nunca direto por CSS. Button, Input etc. definem <code>button.height.md → {semantic.size.control.md}</code>; o CSS consome <code>var(--ds-size-control-md)</code>, não <code>var(--ds-size-control-md)</code>.</p>
-<p>Essa exceção não contraria ADR-013 — é uma restrição <strong>adicional</strong>, específica da subcategoria &quot;control&quot;.</p>
-<h3>Exceção condicional — valores de Componente sem abstração Semantic</h3>
-<p>Alguns valores são genuinamente específicos de um componente e não têm equivalente abstrato Semantic. Exemplos: <code>modal.max-width</code>, <code>avatar.icon-size</code>, <code>textarea.min-height</code>. Nesses casos, o token de Componente pode referenciar Foundation direto (<code>component.modal.max-width.md → foundation.spacing.20</code>) ou carregar valor raw quando não houver ponto na escala Foundation (<code>modal.max-width.sm = 25rem</code>). Quando o valor raw for necessário, a entrada no Token Registry (ver abaixo) deve explicitar a decisão.</p>
+<p>Já codificado em ADR-006 e depois simplificado por ADR-015: dimensões e tipografia compartilhadas entre controles interativos vivem em Semantic. Button, Input, Select e Textarea consomem os semantic tokens finais diretamente.</p>
+<h3>Valores específicos de componente</h3>
+<p>Alguns valores são genuinamente específicos de um componente e não têm equivalente abstrato Semantic no momento da auditoria. Exemplos: <code>modal.max-width</code>, <code>avatar.icon-size</code>, <code>textarea.min-height</code>. Na arquitetura vigente, isso não autoriza hardcode nem consumo direto de Foundation: primeiro cria-se ou reaproveita-se um token Semantic com intenção adequada, depois CSS/Figma/docs consomem esse token.</p>
 <h3>Enforcement automatizado</h3>
 <p>O script <code>npm run verify:tokens</code> (<code>scripts/tokens-verify.mjs</code>) é estendido com três checks que falham o CI:</p>
 <ol>
@@ -137,35 +127,35 @@ Component   ──►  Consumidor final
 <li><strong>Figma foundation leak</strong>: scan do <code>.figma-snapshot.json</code> por bindings apontando pra variáveis da collection Foundation dentro de nodes COMPONENT/COMPONENT_SET.</li>
 <li><strong>Token Registry completude</strong>: toda variável em <code>tokens/**/*.json</code> precisa ter entrada em <code>tokens/registry.yaml</code> com campos <code>sentido</code>, <code>contexto</code>, <code>decisao</code> preenchidos.</li>
 </ol>
-<h3>Quando criar um Component token (refinamento pós-Fase 5)</h3>
+<h3>Quando criar um token Semantic para uma necessidade de componente</h3>
 <p>A primeira execução desta ADR (Fases 0-7) criou tokens component em excesso — 151 novos, dos quais 105 eram aliases 1:1 pra Semantic/Foundation sem variação entre componentes. Exemplos: <code>component.button.transition-duration</code>, <code>component.input.transition-duration</code>, <code>component.checkbox.transition-duration</code> — todos apontando pra <code>{foundation.duration.fast}</code> e resolvendo pro mesmo valor, sem razão arquitetural pra divergir.</p>
-<p>Isso transgride a intenção da regra. Component token é camada de <strong>decisão específica do componente</strong>, não wrapper mecânico pra evitar Foundation no CSS.</p>
-<p><strong>Criar Component token apenas quando:</strong></p>
+<p>Isso transgrediu a intenção da regra e motivou a eliminação da camada Component. Token Semantic é a camada de intenção compartilhada ou consumível.</p>
+<p><strong>Criar ou reaproveitar Semantic token quando:</strong></p>
 <ol>
-<li><p><strong>Valor único pro componente</strong> que não tem equivalente em Semantic.
-Ex: <code>component.modal.max-width.md = 32.5rem</code> (nenhum Semantic cobre esse valor; é decisão visual do Modal).</p>
+<li><p><strong>Um consumidor final precisa de um valor visual.</strong>
+Ex: <code>modal</code> usa <code>semantic.size.layout.{sm,md,lg}</code> para largura máxima.</p>
 </li>
-<li><p><strong>Variação por size/state dentro do componente</strong>, mesmo que aliase Semantic.
-Ex: <code>component.button.height.{sm,md,lg}</code> aliasando <code>{semantic.size.control.*}</code>. Justifica porque existem 3 valores relacionados tematicamente (sizing do Button), apesar de cada um ser um alias 1:1.</p>
+<li><p><strong>Há variação por size/state dentro de um padrão reutilizável.</strong>
+Ex: controles interativos usam semantic tokens de tamanho/spacing/typography.</p>
 </li>
-<li><p><strong>Decisão de identidade que diverge do padrão Semantic.</strong>
-Ex: <code>component.badge.border-radius = {foundation.radius.full}</code> (identidade pill), <code>component.modal.border-radius = {foundation.radius.xl}</code> (elevação de modal vs <code>radius.component</code> padrão).</p>
+<li><p><strong>A decisão parece específica, mas pode nomear uma intenção.</strong>
+Ex: <code>radius.full</code>, <code>radius.lg</code>, <code>shadow.lg</code>, <code>size.layout.lg</code>.</p>
 </li>
 </ol>
-<p><strong>NÃO criar Component token quando:</strong></p>
+<p><strong>NÃO fazer:</strong></p>
 <ul>
-<li>É alias 1:1 pra Semantic sem variação plausível. O CSS consome Semantic direto — isso não viola a regra, pois Semantic está acima de Foundation na cadeia.</li>
-<li>O mesmo valor é compartilhado por 3+ componentes sem razão de divergir. Se nunca muda entre componentes, não é decisão de componente — é decisão sistêmica e vive em Semantic.</li>
-<li>É só pra evitar que o CSS consuma <code>--ds-{foundation}-*</code> direto. Nesse caso, a solução correta é criar um Semantic que wrappa o Foundation (categoria geral) e deixar o CSS consumir Semantic, não multiplicar wrappers.</li>
+<li>Criar wrapper mecânico por componente.</li>
+<li>Usar Foundation direto em CSS/Figma/docs.</li>
+<li>Usar valor literal em consumidor final quando existe Semantic equivalente.</li>
 </ul>
 <p><strong>Exemplo da distinção</strong>:</p>
 <ul>
 <li>Motion (<code>duration.fast</code>, <code>ease.default</code>) é decisão sistêmica: sempre os mesmos valores em todo lugar. Vive em <strong>Semantic</strong> (<code>motion.duration.fast</code>, <code>motion.ease.default</code>), não em cada Component.</li>
-<li>Border-radius é decisão <strong>por componente</strong> (Badge=full, Modal=xl, Button=component-default, Alert=component-default...). Vive em <strong>Component</strong>.</li>
+<li>Border-radius é intenção semântica de forma (<code>radius.sm/md/lg/full</code>) e o componente escolhe o semantic token aplicável.</li>
 </ul>
 <p>Aplicação retroativa: <strong>Fase 8</strong> do plano de execução remove os 105 tokens redundantes criados na Fase 5.</p>
 <h3>Token Registry</h3>
-<p>Criado como parte desta ADR: arquivo único <code>tokens/registry.yaml</code> que cataloga todos os tokens do sistema (Foundation, Semantic, Component) com metadados por entrada:</p>
+<p>Criado como parte desta ADR: arquivo único <code>tokens/registry.yaml</code> que cataloga todos os tokens do sistema (Foundation, Semantic) com metadados por entrada:</p>
 <ul>
 <li><code>layer</code> — camada da arquitetura</li>
 <li><code>type</code> — tipo DTCG</li>
@@ -190,13 +180,13 @@ Ex: <code>component.badge.border-radius = {foundation.radius.full}</code> (ident
 <ul>
 <li><strong>Trabalho grande de remediação</strong>: ~3.500 bindings Figma pra rebind, 19 CSS de componente pra reescrever, ~20-30 Semantic novas pra criar. Estimado em 17-24h, dividido em 5 PRs.</li>
 <li><strong>Processo de sync mais rígido</strong>: adicionar variável nova no Figma agora exige entrada no registry com metadados obrigatórios antes do sync completar. Fricção proposital pra forçar intenção.</li>
-<li><strong>Exceções precisam ser bem delimitadas</strong>: a exceção condicional pra Componente consumir Foundation direto (ex: <code>modal.max-width</code>) cria espaço pra abuso. Enforcement tolera Component→Foundation mas exige documentação explícita no Registry.</li>
+<li><strong>Sem atalhos para exceções</strong>: quando um componente precisar de uma intenção nova, a decisão deve virar Semantic antes de aparecer em CSS/Figma/docs.</li>
 </ul>
 <h2>Alternativas consideradas</h2>
 <h3>(a) Aceitar o estado atual e só documentar</h3>
 <p>Descartada. Rastreabilidade quebrada não é aceitável num sistema que se propõe white-label e teme ter usuários diferentes com necessidades de customização diferente.</p>
-<h3>(b) Também proibir Component → Foundation</h3>
-<p>Descartada. Componentes têm valores inerentemente específicos (max-width de modal, min-height de textarea) sem equivalente abstrato Semantic. Forçar passagem por Semantic aí cria tokens Semantic artificiais que só um componente usa — piora o sistema em vez de melhorar.</p>
+<h3>(b) Manter Component → Foundation como exceção</h3>
+<p>Descartada na arquitetura vigente. Componentes têm valores específicos, mas o custo de manter uma camada Component ou permitir Foundation direto é maior que o benefício. Se a intenção é necessária no produto, ela deve ser nomeada em Semantic.</p>
 <h3>(c) Criar camada adicional entre Foundation e Semantic (ex: &quot;Alias&quot;)</h3>
 <p>Descartada. Três camadas já são o suficiente; adicionar uma quarta complica o modelo mental sem resolver o problema real. O problema é Foundation aparecendo em consumidor final, não a arquitetura de camadas em si.</p>
 <h3>(d) Só corrigir no Figma e deixar CSS como está</h3>
@@ -206,16 +196,16 @@ Ex: <code>component.badge.border-radius = {foundation.radius.full}</code> (ident
 <ul>
 <li><strong>PR #A</strong>: ADR-013 + Token Registry skeleton + check de completude</li>
 <li><strong>PR #B</strong>: Audit de reuso Semantic + expansão no Figma + sync parcial</li>
-<li><strong>PR #C</strong>: Rebind de 3.479 bindings Figma + 60 raw values em Component</li>
-<li><strong>PR #D</strong>: 7 JSONs de componente novos + 19 CSS atualizados + checks de leak</li>
+<li><strong>PR #C</strong>: Rebind de 3.479 bindings Figma + remoção de raw values da antiga collection Component</li>
+<li><strong>PR #D</strong>: Semantic tokens necessários + 19 CSS atualizados + checks de leak</li>
 <li><strong>PR #E</strong>: Docs finais + integração registry↔sync</li>
 </ul>
 <h2>Referências</h2>
 <ul>
-<li><a href="./ADR-001-migracao-tokens.md">ADR-001</a> — arquitetura Foundation → Semantic → Component original.</li>
+<li><a href="./ADR-001-migracao-tokens.md">ADR-001</a> — arquitetura Foundation → Semantic → Component original, superseded pela estabilização 2-layer.</li>
 <li><a href="./ADR-003-fontes-verdade.md">ADR-003</a> — Figma como autoridade de valor.</li>
 <li><a href="./ADR-005-brand-foundation-e-estados-explicitos.md">ADR-005</a> — brand como foundation, convenção <code>-default</code>.</li>
-<li><a href="./ADR-006-semantic-control-tokens.md">ADR-006</a> — <code>semantic.control.*</code> só via Componente (exceção mantida).</li>
+<li><a href="./ADR-006-semantic-control-tokens.md">ADR-006</a> — tokens de controle, parcialmente substituídos pela simplificação de ADR-015.</li>
 <li><a href="./ADR-011-renaming-tokens-semanticos-de-cor.md">ADR-011</a> — renaming de semantic de cor; princípio 9 é o precedente direto deste ADR.</li>
 <li><code>tokens/registry.yaml</code> — Token Registry (artefato criado por esta ADR).</li>
 <li><code>scripts/tokens-verify.mjs</code> — checks de enforcement.</li>

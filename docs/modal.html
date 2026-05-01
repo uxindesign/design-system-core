@@ -13,7 +13,7 @@
 <body>
 
 <header class="ds-site-header">
-  <div style="display:flex;align-items:center;gap:var(--ds-dimension-16)">
+  <div style="display:flex;align-items:center;gap:var(--ds-space-lg)">
     <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>
@@ -66,12 +66,12 @@
     <h2 class="ds-subsection__title"><span data-lang="pt">Anatomia</span><span data-lang="en">Anatomy</span></h2>
 
     <div class="ds-anatomy">
-      <div style="position:relative;width:100%;max-width:400px;">
-        <div class="ds-modal-overlay" style="position:relative;background:var(--ds-background-overlay);border-radius:var(--ds-radius-12);padding:var(--ds-dimension-24);display:flex;align-items:center;justify-content:center;pointer-events:none;">
+      <div style="position:relative;width:100%;max-width:var(--ds-size-layout-sm);">
+        <div class="ds-modal-overlay" style="position:relative;background:var(--ds-background-overlay);border-radius:var(--ds-radius-lg);padding:var(--ds-space-2xl);display:flex;align-items:center;justify-content:center;pointer-events:none;">
           <div class="ds-modal ds-modal--sm" role="dialog" aria-modal="true" aria-labelledby="anatomy-modal-title" style="position:relative;width:100%;">
             <div class="ds-modal__header">
               <h3 id="anatomy-modal-title" class="ds-modal__title">Delete item</h3>
-              <button class="ds-modal__close" aria-label="Close modal" tabindex="-1"><span class="material-symbols-outlined" style="font-size:20px">close</span></button>
+              <button class="ds-modal__close" aria-label="Close modal" tabindex="-1"><span class="material-symbols-outlined" style="font-size:var(--ds-size-sm)">close</span></button>
             </div>
             <div class="ds-modal__body">
               <p style="margin:0;">Are you sure? This action cannot be undone.</p>
@@ -83,13 +83,13 @@
           </div>
         </div>
         <!-- Markers -->
-        <span class="ds-anatomy__marker" style="top:4px;left:4px;">1</span>
-        <span class="ds-anatomy__marker" style="top:32px;left:50%;transform:translateX(-50%);">2</span>
-        <span class="ds-anatomy__marker" style="top:32px;left:20px;">3</span>
-        <span class="ds-anatomy__marker" style="top:56px;left:20px;">4</span>
-        <span class="ds-anatomy__marker" style="top:32px;right:20px;">5</span>
-        <span class="ds-anatomy__marker" style="top:50%;left:20px;transform:translateY(-50%);">6</span>
-        <span class="ds-anatomy__marker" style="bottom:20px;right:20px;">7</span>
+        <span class="ds-anatomy__marker" style="top:var(--ds-space-xs);left:var(--ds-space-xs);">1</span>
+        <span class="ds-anatomy__marker" style="top:var(--ds-space-section-sm);left:50%;transform:translateX(-50%);">2</span>
+        <span class="ds-anatomy__marker" style="top:var(--ds-space-section-sm);left:var(--ds-space-xl);">3</span>
+        <span class="ds-anatomy__marker" style="top:calc(var(--ds-space-section-sm) + var(--ds-space-2xl));left:var(--ds-space-xl);">4</span>
+        <span class="ds-anatomy__marker" style="top:var(--ds-space-section-sm);right:var(--ds-space-xl);">5</span>
+        <span class="ds-anatomy__marker" style="top:50%;left:var(--ds-space-xl);transform:translateY(-50%);">6</span>
+        <span class="ds-anatomy__marker" style="bottom:var(--ds-space-xl);right:var(--ds-space-xl);">7</span>
       </div>
     </div>
 
@@ -114,7 +114,7 @@
        4. SIZES (live previews)
        ============================================================ -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title"><span data-lang="pt">Pequeno (400px)</span><span data-lang="en">Small (400px)</span></h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Pequeno (480px)</span><span data-lang="en">Small (480px)</span></h2>
     <div class="ds-preview">
       <div class="ds-preview__tabs" role="tablist">
         <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
@@ -122,11 +122,11 @@
       </div>
       <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
         <div class="ds-preview__canvas ds-preview__canvas--column">
-          <div class="ds-modal-overlay" style="position:relative;background:var(--ds-background-overlay);border-radius:var(--ds-radius-12);padding:var(--ds-dimension-32);display:flex;align-items:center;justify-content:center;width:100%;">
-            <div class="ds-modal ds-modal--sm" role="dialog" aria-modal="true" aria-labelledby="modal-sm-title" style="position:relative;width:100%;max-width:400px;">
+          <div class="ds-modal-overlay" style="position:relative;background:var(--ds-background-overlay);border-radius:var(--ds-radius-lg);padding:var(--ds-space-section-sm);display:flex;align-items:center;justify-content:center;width:100%;">
+            <div class="ds-modal ds-modal--sm" role="dialog" aria-modal="true" aria-labelledby="modal-sm-title" style="position:relative;width:100%;">
               <div class="ds-modal__header">
                 <h3 id="modal-sm-title" style="margin:0;">Delete item</h3>
-                <button class="ds-modal__close" aria-label="Close modal"><span class="material-symbols-outlined" style="font-size:20px">close</span></button>
+                <button class="ds-modal__close" aria-label="Close modal"><span class="material-symbols-outlined" style="font-size:var(--ds-size-sm)">close</span></button>
               </div>
               <div class="ds-modal__body">
                 <p style="margin:0;">Are you sure you want to delete this item? This action cannot be undone.</p>
@@ -165,7 +165,7 @@
   </div>
 
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title"><span data-lang="pt">Medio (520px)</span><span data-lang="en">Medium (520px)</span></h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Medio (640px)</span><span data-lang="en">Medium (640px)</span></h2>
     <div class="ds-preview">
       <div class="ds-preview__tabs" role="tablist">
         <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
@@ -173,14 +173,14 @@
       </div>
       <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
         <div class="ds-preview__canvas ds-preview__canvas--column">
-          <div class="ds-modal-overlay" style="position:relative;background:var(--ds-background-overlay);border-radius:var(--ds-radius-12);padding:var(--ds-dimension-32);display:flex;align-items:center;justify-content:center;width:100%;">
-            <div class="ds-modal ds-modal--md" role="dialog" aria-modal="true" aria-labelledby="modal-md-title" style="position:relative;width:100%;max-width:520px;">
+          <div class="ds-modal-overlay" style="position:relative;background:var(--ds-background-overlay);border-radius:var(--ds-radius-lg);padding:var(--ds-space-section-sm);display:flex;align-items:center;justify-content:center;width:100%;">
+            <div class="ds-modal ds-modal--md" role="dialog" aria-modal="true" aria-labelledby="modal-md-title" style="position:relative;width:100%;">
               <div class="ds-modal__header">
                 <h3 id="modal-md-title" style="margin:0;">Edit profile</h3>
-                <button class="ds-modal__close" aria-label="Close modal"><span class="material-symbols-outlined" style="font-size:20px">close</span></button>
+                <button class="ds-modal__close" aria-label="Close modal"><span class="material-symbols-outlined" style="font-size:var(--ds-size-sm)">close</span></button>
               </div>
               <div class="ds-modal__body">
-                <p style="margin:0 0 12px;">Update your personal information below. Changes will be saved immediately.</p>
+                <p style="margin:0 0 var(--ds-space-md);">Update your personal information below. Changes will be saved immediately.</p>
                 <input class="ds-input__field" type="text" placeholder="Full name" style="width:100%;">
               </div>
               <div class="ds-modal__footer">
@@ -217,7 +217,7 @@
   </div>
 
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title"><span data-lang="pt">Grande (640px)</span><span data-lang="en">Large (640px)</span></h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Grande (800px)</span><span data-lang="en">Large (800px)</span></h2>
     <div class="ds-preview">
       <div class="ds-preview__tabs" role="tablist">
         <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
@@ -225,14 +225,14 @@
       </div>
       <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
         <div class="ds-preview__canvas ds-preview__canvas--column">
-          <div class="ds-modal-overlay" style="position:relative;background:var(--ds-background-overlay);border-radius:var(--ds-radius-12);padding:var(--ds-dimension-32);display:flex;align-items:center;justify-content:center;width:100%;">
-            <div class="ds-modal ds-modal--lg" role="dialog" aria-modal="true" aria-labelledby="modal-lg-title" style="position:relative;width:100%;max-width:640px;">
+          <div class="ds-modal-overlay" style="position:relative;background:var(--ds-background-overlay);border-radius:var(--ds-radius-lg);padding:var(--ds-space-section-sm);display:flex;align-items:center;justify-content:center;width:100%;">
+            <div class="ds-modal ds-modal--lg" role="dialog" aria-modal="true" aria-labelledby="modal-lg-title" style="position:relative;width:100%;">
               <div class="ds-modal__header">
                 <h3 id="modal-lg-title" style="margin:0;">Terms of service</h3>
-                <button class="ds-modal__close" aria-label="Close modal"><span class="material-symbols-outlined" style="font-size:20px">close</span></button>
+                <button class="ds-modal__close" aria-label="Close modal"><span class="material-symbols-outlined" style="font-size:var(--ds-size-sm)">close</span></button>
               </div>
               <div class="ds-modal__body">
-                <p style="margin:0 0 8px;">Please read and accept the following terms before continuing. By using our service you agree to comply with all policies outlined in this document.</p>
+                <p style="margin:0 0 var(--ds-space-sm);">Please read and accept the following terms before continuing. By using our service you agree to comply with all policies outlined in this document.</p>
                 <p style="margin:0;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
               </div>
               <div class="ds-modal__footer">
@@ -276,7 +276,7 @@
     <div class="ds-dodont">
       <div class="ds-dodont__item">
         <div class="ds-dodont__preview" style="flex-direction:column;">
-          <div style="display:flex;gap:var(--ds-dimension-12);">
+          <div style="display:flex;gap:var(--ds-space-md);">
             <button class="ds-btn ds-btn--ghost ds-btn--sm">Cancel</button>
             <button class="ds-btn ds-btn--brand ds-btn--sm">Save changes</button>
           </div>
@@ -286,7 +286,7 @@
       </div>
       <div class="ds-dodont__item">
         <div class="ds-dodont__preview" style="flex-direction:column;">
-          <div style="display:flex;gap:var(--ds-dimension-12);">
+          <div style="display:flex;gap:var(--ds-space-md);">
             <button class="ds-btn ds-btn--brand ds-btn--sm">Cancel</button>
             <button class="ds-btn ds-btn--brand ds-btn--sm">Save</button>
           </div>
@@ -299,14 +299,14 @@
     <div class="ds-dodont">
       <div class="ds-dodont__item">
         <div class="ds-dodont__preview" style="flex-direction:column;">
-          <span style="font-size:var(--ds-font-size-14);color:var(--ds-content-secondary);"><span data-lang="pt">Modal pequeno para confirmacoes</span><span data-lang="en">Small modal for confirmations</span></span>
+          <span style="font-size:var(--ds-body-font-size-sm);color:var(--ds-content-secondary);"><span data-lang="pt">Modal pequeno para confirmacoes</span><span data-lang="en">Small modal for confirmations</span></span>
         </div>
         <div class="ds-dodont__label ds-dodont__label--do">Faça</div>
         <div class="ds-dodont__desc"><span data-lang="pt">Use o menor tamanho que cabe. Small para confirmacoes, medium para formulários, large para conteúdo longo.</span><span data-lang="en">Use the smallest size that fits. Small for confirmations, medium for forms, large for long content.</span></div>
       </div>
       <div class="ds-dodont__item">
         <div class="ds-dodont__preview" style="flex-direction:column;">
-          <span style="font-size:var(--ds-font-size-14);color:var(--ds-content-secondary);"><span data-lang="pt">Modal large para "Tem certeza?"</span><span data-lang="en">Large modal for "Are you sure?"</span></span>
+          <span style="font-size:var(--ds-body-font-size-sm);color:var(--ds-content-secondary);"><span data-lang="pt">Modal large para "Tem certeza?"</span><span data-lang="en">Large modal for "Are you sure?"</span></span>
         </div>
         <div class="ds-dodont__label ds-dodont__label--dont">Não faça</div>
         <div class="ds-dodont__desc"><span data-lang="pt">Modals large para confirmacoes simples desperdicam espaco e adicionam peso visual desnecessário.</span><span data-lang="en">Large modals for simple confirmations waste space and add unnecessary visual weight.</span></div>
@@ -316,14 +316,14 @@
     <div class="ds-dodont">
       <div class="ds-dodont__item">
         <div class="ds-dodont__preview" style="flex-direction:column;">
-          <span style="font-size:var(--ds-font-size-14);color:var(--ds-content-secondary);"><span data-lang="pt">Foco preso dentro + retorna ao fechar</span><span data-lang="en">Focus trapped inside + returns on close</span></span>
+          <span style="font-size:var(--ds-body-font-size-sm);color:var(--ds-content-secondary);"><span data-lang="pt">Foco preso dentro + retorna ao fechar</span><span data-lang="en">Focus trapped inside + returns on close</span></span>
         </div>
         <div class="ds-dodont__label ds-dodont__label--do">Faça</div>
         <div class="ds-dodont__desc"><span data-lang="pt">Retorne o foco ao elemento que disparou o modal ao fechar. Feche com Escape e clique no backdrop para ações não destrutivas.</span><span data-lang="en">Return focus to the trigger element on close. Close on Escape and backdrop click for non-destructive actions.</span></div>
       </div>
       <div class="ds-dodont__item">
         <div class="ds-dodont__preview" style="flex-direction:column;">
-          <span style="font-size:var(--ds-font-size-14);color:var(--ds-content-secondary);"><span data-lang="pt">Clique no backdrop fecha modal destrutivo</span><span data-lang="en">Backdrop click closes destructive modal</span></span>
+          <span style="font-size:var(--ds-body-font-size-sm);color:var(--ds-content-secondary);"><span data-lang="pt">Clique no backdrop fecha modal destrutivo</span><span data-lang="en">Backdrop click closes destructive modal</span></span>
         </div>
         <div class="ds-dodont__label ds-dodont__label--dont">Não faça</div>
         <div class="ds-dodont__desc"><span data-lang="pt">Deixar o foco escapar do modal. Fechar com clique no backdrop para ações destrutivas (o usuário pode perder dados acidentalmente).</span><span data-lang="en">Let focus escape the modal. Close on backdrop click for destructive actions (user might lose data accidentally).</span></div>
@@ -358,10 +358,11 @@
       <tbody>
         <tr><td>overlay background</td><td><code>semantic.background.overlay</code></td><td><code>--ds-background-overlay</code></td></tr>
         <tr><td>surface</td><td><code>semantic.surface.elevated</code></td><td><code>--ds-surface-elevated</code></td></tr>
-        <tr><td>shadow</td><td><code>foundation.shadow.xl</code></td><td><code>--ds-shadow-xl</code></td></tr>
-        <tr><td>z-index (overlay)</td><td><code>foundation.z.50</code></td><td><code>--ds-z-50</code></td></tr>
-        <tr><td>border-radius</td><td><code>component.modal.border-radius</code></td><td><code>--ds-modal-border-radius</code> <span data-lang="pt">(valor: <code>--ds-radius-16</code>, 16px)</span><span data-lang="en">(value: <code>--ds-radius-16</code>, 16px)</span></td></tr>
-        <tr><td>padding</td><td><code>semantic.space.inset.lg</code></td><td><code>--ds-space-lg</code></td></tr>
+        <tr><td>border-radius</td><td><code>semantic.radius.lg</code></td><td><code>--ds-radius-lg</code></td></tr>
+        <tr><td>padding</td><td><code>semantic.space.lg</code></td><td><code>--ds-space-lg</code></td></tr>
+        <tr><td>max-width (sm)</td><td><code>semantic.size.layout.sm</code></td><td><code>--ds-size-layout-sm</code></td></tr>
+        <tr><td>max-width (md)</td><td><code>semantic.size.layout.md</code></td><td><code>--ds-size-layout-md</code></td></tr>
+        <tr><td>max-width (lg)</td><td><code>semantic.size.layout.lg</code></td><td><code>--ds-size-layout-lg</code></td></tr>
       </tbody>
     </table>
   </div>
@@ -376,9 +377,9 @@
       <tbody>
         <tr><td><code>ds-modal-overlay</code></td><td><span data-lang="pt">Overlay backdrop em tela cheia</span><span data-lang="en">Full-screen backdrop overlay</span></td></tr>
         <tr><td><code>ds-modal</code></td><td><span data-lang="pt">Container do diálogo modal</span><span data-lang="en">Modal dialog container</span></td></tr>
-        <tr><td><code>ds-modal--sm</code></td><td><span data-lang="pt">Tamanho pequeno (max-width 400px)</span><span data-lang="en">Small size (max-width 400px)</span></td></tr>
-        <tr><td><code>ds-modal--md</code></td><td><span data-lang="pt">Tamanho médio (max-width 520px)</span><span data-lang="en">Medium size (max-width 520px)</span></td></tr>
-        <tr><td><code>ds-modal--lg</code></td><td><span data-lang="pt">Tamanho grande (max-width 640px)</span><span data-lang="en">Large size (max-width 640px)</span></td></tr>
+        <tr><td><code>ds-modal--sm</code></td><td><span data-lang="pt">Tamanho pequeno (<code>--ds-size-layout-sm</code>)</span><span data-lang="en">Small size (<code>--ds-size-layout-sm</code>)</span></td></tr>
+        <tr><td><code>ds-modal--md</code></td><td><span data-lang="pt">Tamanho médio (<code>--ds-size-layout-md</code>)</span><span data-lang="en">Medium size (<code>--ds-size-layout-md</code>)</span></td></tr>
+        <tr><td><code>ds-modal--lg</code></td><td><span data-lang="pt">Tamanho grande (<code>--ds-size-layout-lg</code>)</span><span data-lang="en">Large size (<code>--ds-size-layout-lg</code>)</span></td></tr>
         <tr><td><code>ds-modal__header</code></td><td><span data-lang="pt">Área de header com título e button de fechar</span><span data-lang="en">Header area with title and close button</span></td></tr>
         <tr><td><code>ds-modal__title</code></td><td><span data-lang="pt">Texto do título do modal</span><span data-lang="en">Modal title text</span></td></tr>
         <tr><td><code>ds-modal__close</code></td><td><span data-lang="pt">Button de fechar no header</span><span data-lang="en">Close button in the header</span></td></tr>
@@ -402,7 +403,7 @@
         <tr><td><code>Enter</code></td><td><span data-lang="pt">Ativa o button focado</span><span data-lang="en">Activates the focused button</span></td></tr>
       </tbody>
     </table>
-    <p style="margin-top:var(--ds-dimension-8);color:var(--ds-content-secondary);font-size:var(--ds-font-size-14);">
+    <p style="margin-top:var(--ds-space-sm);color:var(--ds-content-secondary);font-size:var(--ds-body-font-size-sm);">
       <span data-lang="pt">O foco deve ser preso dentro do modal enquanto estiver aberto. Quando o modal fechar, o foco deve retornar ao elemento que o disparou.</span><span data-lang="en">Focus must be trapped inside the modal while it is open. When the modal closes, focus must return to the element that triggered it.</span>
     </p>
   </div>
@@ -422,7 +423,7 @@
       </tbody>
     </table>
 
-    <div class="ds-callout ds-callout--info" style="margin-top:var(--ds-dimension-16)">
+    <div class="ds-callout ds-callout--info" style="margin-top:var(--ds-space-lg)">
       <div class="ds-callout__title"><span data-lang="pt">Resumo de atributos ARIA</span><span data-lang="en">ARIA attributes summary</span></div>
       <span data-lang="pt"><code>role="dialog"</code> — identifica o modal como um diálogo.<br>
       <code>aria-modal="true"</code> — informa a tecnologia assistiva que o conteúdo atras do modal esta inerte.<br>
