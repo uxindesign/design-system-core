@@ -56,6 +56,14 @@ O arquivo está em `.gitignore` e não deve ser commitado — é regenerado a ca
 node scripts/sync-tokens-from-figma.mjs
 ```
 
+Para gates de release ou qualquer validação que precise representar o Figma vivo, use:
+
+```bash
+node scripts/sync-tokens-from-figma.mjs --require-fresh
+```
+
+Esse modo falha se `.figma-snapshot.json` tiver mais de 24h. Sem a flag, o script ainda roda e compara normalmente, mas imprime aviso de snapshot stale. Isso evita interpretar `VALUE_DRIFT=0` como “Figma vivo está em dia” quando a comparação foi feita contra um dump antigo.
+
 O script:
 
 1. Lê `.figma-snapshot.json` (ou `--snapshot <path>` pra outro caminho).
@@ -107,6 +115,8 @@ Não commitar `.figma-snapshot.json` (está ignorado).
 ## Troubleshooting
 
 **`Snapshot não encontrado`**: rode o Passo 1 antes.
+
+**`Snapshot stale`**: `.figma-snapshot.json` tem mais de 24h. Regenerar via `use_figma` antes de concluir sync, release ou auditoria Figma-canônica. `VALUE_DRIFT=0` com snapshot stale significa apenas que JSON e snapshot antigo batem.
 
 **`Snapshot inválido: faltam variables/variableCollections`**: o arquivo JSON não tem a estrutura esperada. Re-gerar no Passo 1.
 

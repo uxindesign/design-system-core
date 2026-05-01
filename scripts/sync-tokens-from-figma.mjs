@@ -23,6 +23,7 @@
  *   node scripts/sync-tokens-from-figma.mjs                                  (dry-run, lê .figma-snapshot.json)
  *   node scripts/sync-tokens-from-figma.mjs --write                          (aplica VALUE_DRIFT e regenera CSS)
  *   node scripts/sync-tokens-from-figma.mjs --snapshot path/to/other.json    (snapshot em outro caminho)
+ *   node scripts/sync-tokens-from-figma.mjs --require-fresh                  (falha se snapshot >24h)
  *
  * Categorias (mesmas usadas em tokens-verify.mjs):
  *   VALUE_DRIFT        mesmo nome, valor diferente. `--write` corrige.
@@ -60,6 +61,8 @@ const TOKENS_DIR = path.join(ROOT, "tokens");
 
 const args = process.argv.slice(2);
 const isWrite = args.includes("--write");
+const requireFresh = args.includes("--require-fresh");
+const STALE_SNAPSHOT_HOURS = 24;
 const snapshotFlagIdx = args.indexOf("--snapshot");
 const snapshotPath = path.resolve(
   ROOT,
@@ -80,10 +83,21 @@ Uso:
   node scripts/sync-tokens-from-figma.mjs                                  # dry-run
   node scripts/sync-tokens-from-figma.mjs --write                          # aplica
   node scripts/sync-tokens-from-figma.mjs --snapshot path/to/dump.json     # snapshot alternativo
+  node scripts/sync-tokens-from-figma.mjs --require-fresh                  # exige snapshot <=24h
 
 Espera um snapshot em .figma-snapshot.json (ou --snapshot <path>) no formato
 gerado pelo helper MCP. Ver docs/process-figma-sync.md pra detalhes.`);
   process.exit(0);
+}
+
+function snapshotFreshness(file) {
+  const stat = fs.statSync(file);
+  const ageMs = Date.now() - stat.mtimeMs;
+  const ageHours = Math.round(ageMs / (1000 * 60 * 60));
+  return {
+    ageHours,
+    stale: ageMs > STALE_SNAPSHOT_HOURS * 60 * 60 * 1000,
+  };
 }
 
 // ─── Report ─────────────────────────────────────────────────────────────────
@@ -189,6 +203,15 @@ function applyValueDrifts(drifts) {
 
 async function main() {
   console.log(`Lendo snapshot Figma em ${path.relative(ROOT, snapshotPath)}...`);
+  const freshness = snapshotFreshness(snapshotPath);
+  if (freshness.stale) {
+    const msg = `.figma-snapshot.json está stale (${freshness.ageHours}h > ${STALE_SNAPSHOT_HOURS}h). Regenerar via use_figma antes de concluir sync/release.`;
+    if (requireFresh) {
+      console.error(`Erro: ${msg}`);
+      process.exit(2);
+    }
+    console.warn(`Aviso: ${msg}`);
+  }
   const meta = readFigmaSnapshot(snapshotPath);
   console.log(
     `  ${Object.keys(meta.variables).length} variables em ${Object.keys(meta.variableCollections).length} collections`

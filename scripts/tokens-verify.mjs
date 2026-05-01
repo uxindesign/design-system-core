@@ -8,6 +8,8 @@
  *   3. JSON ↔ Figma Variables — valores e nomes batem com o snapshot Figma
  *      em `.figma-snapshot.json` (gitignored, gerado por use_figma via Claude Code).
  *      Se o snapshot não existir, a checagem é pulada com aviso (não falha o build).
+ *      Se o snapshot tiver mais de 24h, a checagem roda mas reporta warning
+ *      para evitar falsa segurança com VALUE_DRIFT=0 sobre dado antigo.
  *      Ver docs/process-figma-sync.md para gerar o snapshot.
  *
  * Saídas:
@@ -45,6 +47,7 @@ const CSS_DIR = path.join(ROOT, "css", "tokens", "generated");
 const OUT_JSON = path.join(ROOT, "docs", "api", "tokens-sync.json");
 const OUT_HTML = path.join(ROOT, "docs", "tokens-sync.html");
 const FIGMA_SNAPSHOT_PATH = path.join(ROOT, ".figma-snapshot.json");
+const STALE_SNAPSHOT_HOURS = 24;
 
 // -----------------------------------------------------------------------------
 // utilidades
@@ -458,6 +461,7 @@ async function compareJsonToFigma() {
 
   const snapshotStat = fs.statSync(FIGMA_SNAPSHOT_PATH);
   const snapshotAgeH = Math.round((Date.now() - snapshotStat.mtimeMs) / (1000 * 60 * 60));
+  const snapshotIsStale = snapshotAgeH > STALE_SNAPSHOT_HOURS;
 
   const { state: expected, issues } = buildExpectedState(meta);
   const actual = readFigmaCurrentState(TOKENS_DIR);
@@ -469,6 +473,12 @@ async function compareJsonToFigma() {
   //   NEW_IN_FIGMA     → warning (Figma tem, JSON não — sync pendente, ação manual)
   //   ALIAS_BROKEN     → warning (alias Figma quebrado — investigar no Figma)
   const divergences = [
+    ...(snapshotIsStale ? [{
+      level: "warning",
+      category: "STALE_SNAPSHOT",
+      token: ".figma-snapshot.json",
+      message: `snapshot Figma tem ${snapshotAgeH}h (> ${STALE_SNAPSHOT_HOURS}h). Regenerar via use_figma antes de concluir sync/release.`,
+    }] : []),
     ...diffs.VALUE_DRIFT.map((d) => ({
       level: "error",
       category: "VALUE_DRIFT",
@@ -504,6 +514,8 @@ async function compareJsonToFigma() {
   return {
     skipped: false,
     snapshotAge: `${snapshotAgeH}h`,
+    snapshotFreshness: snapshotIsStale ? "stale" : "fresh",
+    snapshotMaxAgeHours: STALE_SNAPSHOT_HOURS,
     summary: {
       figmaVariableCount: Object.keys(meta.variables).length,
       figmaCollectionCount: Object.keys(meta.variableCollections).length,
@@ -530,9 +542,11 @@ function writeJsonReport(report) {
 
 function writeHtmlReport(report) {
   const status =
-    report.totals.errors === 0
-      ? { label: "Em dia", klass: "ok" }
-      : { label: `${report.totals.errors} divergência(s)`, klass: "error" };
+    report.totals.errors > 0
+      ? { label: `${report.totals.errors} divergência(s)`, klass: "error" }
+      : report.totals.warnings > 0
+      ? { label: `${report.totals.warnings} aviso(s)`, klass: "warning" }
+      : { label: "Em dia", klass: "ok" };
   const rows = [
     ...report.checks.jsonIntegrity.map((d) => ({ check: "JSON integrity", ...d })),
     ...report.checks.jsonVsCss.filter((d) => d.level === "error").map((d) => ({ check: "JSON ↔ CSS", ...d })),
@@ -565,12 +579,14 @@ function writeHtmlReport(report) {
   /* Status badge — usa o componente Badge do DS, não Button */
   .ds-sync-status { display:inline-flex; align-items:center; gap: var(--ds-dimension-8); padding: var(--ds-dimension-2) var(--ds-dimension-8); border-radius: var(--ds-radius-full); font-size: var(--ds-body-font-size-sm); font-weight: var(--ds-body-font-weight-semibold); }
   .ds-sync-status.ok { background: var(--ds-feedback-success-background-subtle); color: var(--ds-feedback-success-content-default); border: var(--ds-border-width-default) solid var(--ds-feedback-success-border-default); }
+  .ds-sync-status.warning { background: var(--ds-feedback-warning-background-subtle); color: var(--ds-feedback-warning-content-default); border: var(--ds-border-width-default) solid var(--ds-feedback-warning-border-default); }
   .ds-sync-status.error { background: var(--ds-feedback-error-background-subtle); color: var(--ds-feedback-error-content-default); border: var(--ds-border-width-default) solid var(--ds-feedback-error-border-default); }
   .ds-sync-meta { display:flex; gap: var(--ds-dimension-24); margin-top: var(--ds-dimension-16); font-size: var(--ds-body-font-size-sm); color: var(--ds-content-secondary); }
   .ds-sync-meta strong { color: var(--ds-content-default); font-weight: var(--ds-body-font-weight-semibold); }
   .ds-sync-table { width:100%; border-collapse: collapse; margin-top: var(--ds-dimension-24); font-size: var(--ds-body-font-size-sm); }
-  .ds-sync-table th, .ds-sync-table td { text-align:left; padding: var(--ds-dimension-12); border-bottom: 1px solid var(--ds-border-default); }
+  .ds-sync-table th, .ds-sync-table td { text-align:left; padding: var(--ds-dimension-12); border-bottom: 1px solid var(--ds-border-default); color: var(--ds-content-default); }
   .ds-sync-table th { font-weight: var(--ds-body-font-weight-semibold); background: var(--ds-background-subtle); }
+  .ds-sync-table code { background: var(--ds-surface-raised); color: var(--ds-content-default); border: var(--ds-border-width-default) solid var(--ds-border-subtle); padding: var(--ds-dimension-2) var(--ds-dimension-6); border-radius: var(--ds-radius-sm); }
   /* Banner info — usa subtle bg pra <code> ter contraste */
   .ds-sync-banner { background: var(--ds-feedback-info-background-subtle); color: var(--ds-feedback-info-content-default); border: var(--ds-border-width-default) solid var(--ds-feedback-info-border-default); padding: var(--ds-dimension-16) var(--ds-dimension-20); border-radius: var(--ds-radius-md); margin-bottom: var(--ds-dimension-24); font-size: var(--ds-body-font-size-sm); }
   .ds-sync-banner code { background: var(--ds-surface-default); color: var(--ds-feedback-info-content-default); padding: var(--ds-dimension-2) var(--ds-dimension-6); border-radius: var(--ds-radius-sm); font-family: var(--ds-body-font-family-sans); font-size: 0.9em; border: var(--ds-border-width-default) solid var(--ds-feedback-info-border-default); }
