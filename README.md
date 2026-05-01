@@ -33,6 +33,7 @@ Links rápidos:
 - [Decisões (ADRs)](./docs/decisions/)
 - [Changelog](./CHANGELOG.md)
 - [Como contribuir](./CONTRIBUTING.md)
+- [Instruções para agentes IA](./AGENTS.md) — canônico (Claude Code, Codex, Gemini, Cursor, etc.)
 
 ## Licença
 

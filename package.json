@@ -37,7 +37,8 @@
     "build:registry": "node scripts/build-token-registry.mjs",
     "build:registry:init": "node scripts/build-token-registry.mjs --init",
     "verify:registry": "node scripts/build-token-registry.mjs --check",
-    "security:check": "node scripts/security-check.mjs"
+    "security:check": "node scripts/security-check.mjs",
+    "agent:preflight": "node scripts/agent-preflight.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.11.2",

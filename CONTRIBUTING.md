@@ -2,6 +2,8 @@
 
 Obrigado pelo interesse em contribuir com o Design System Core. Este documento é curto de propósito. Para contexto profundo, consulte a [documentação](https://uxindesign.github.io/design-system-core/).
 
+> **Usando uma IA para contribuir?** Comece por [`AGENTS.md`](./AGENTS.md) — fonte canônica de instruções para qualquer agente (Claude Code, Codex, Gemini, Cursor, Aider). Cobre forbidden actions, source of truth por categoria, workflows, e protocol de verificação. Adições por agente: [`CLAUDE.md`](./CLAUDE.md), [`GEMINI.md`](./GEMINI.md).
+
 ## Setup local
 
 ```bash
