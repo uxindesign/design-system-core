@@ -8,6 +8,10 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 
 ## [Não publicado]
 
+### Removido
+
+- **Badge Secondary (Solid + Subtle) eliminado** — não temos mais cores secundárias no DS, então a variante perdeu propósito. Remoção aplicada em `css/components/badge.css` (regras `.ds-badge--secondary.ds-badge--solid` e `.ds-badge--secondary.ds-badge--subtle`), `docs/badge.html` (preview, code snippet e tabela de classes), `.a11y-baseline.json` (fingerprints de contraste light/dark), e Figma (variants `Color=Secondary, Style=Solid` e `Color=Secondary, Style=Subtle` removidas — Badge component agora tem 12 variants em vez de 14). Decidido como item P0-2 da auditoria Figma↔Repo.
+
 ### Adicionado
 
 - **`AGENTS.md` na raiz — fonte canônica multi-IA.** Adota o padrão emergente [agents.md](https://agents.md/) (OpenAI Codex, Cursor, Aider, Sourcegraph Amp, Factory, Jules) para que qualquer agente IA — não só Claude Code — saiba como operar no repo. Cobre forbidden actions (top, scannable), source of truth por categoria de token (Figma-canônica vs CSS-only ADR-016), workflows comuns (adicionar token, refatorar componente, sync Figma→JSON, criar ADR), verification protocol antes de commit, convenções de commit/branch/PR, glossário, e ordem de consulta para dúvidas.

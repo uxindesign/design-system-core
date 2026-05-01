@@ -23,11 +23,6 @@
   color: var(--ds-primary-content-default);
 }
 
-.ds-badge--secondary.ds-badge--solid {
-  background-color: var(--ds-outline-border-default);
-  color: var(--ds-outline-content-default);
-}
-
 .ds-badge--success.ds-badge--solid {
   background-color: var(--ds-feedback-success-background-default);
   color: var(--ds-feedback-success-content-contrast);
@@ -59,11 +54,6 @@
 .ds-badge--primary.ds-badge--subtle {
   background-color: var(--ds-toned-background-default);
   color: var(--ds-toned-content-default);
-}
-
-.ds-badge--secondary.ds-badge--subtle {
-  background-color: var(--ds-outline-background-hover);
-  color: var(--ds-outline-content-default);
 }
 
 .ds-badge--success.ds-badge--subtle {

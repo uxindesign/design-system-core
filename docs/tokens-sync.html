@@ -10,12 +10,14 @@
   /* Status badge — usa o componente Badge do DS, não Button */
   .ds-sync-status { display:inline-flex; align-items:center; gap: var(--ds-dimension-8); padding: var(--ds-dimension-2) var(--ds-dimension-8); border-radius: var(--ds-radius-full); font-size: var(--ds-body-font-size-sm); font-weight: var(--ds-body-font-weight-semibold); }
   .ds-sync-status.ok { background: var(--ds-feedback-success-background-subtle); color: var(--ds-feedback-success-content-default); border: var(--ds-border-width-default) solid var(--ds-feedback-success-border-default); }
+  .ds-sync-status.warning { background: var(--ds-feedback-warning-background-subtle); color: var(--ds-feedback-warning-content-default); border: var(--ds-border-width-default) solid var(--ds-feedback-warning-border-default); }
   .ds-sync-status.error { background: var(--ds-feedback-error-background-subtle); color: var(--ds-feedback-error-content-default); border: var(--ds-border-width-default) solid var(--ds-feedback-error-border-default); }
   .ds-sync-meta { display:flex; gap: var(--ds-dimension-24); margin-top: var(--ds-dimension-16); font-size: var(--ds-body-font-size-sm); color: var(--ds-content-secondary); }
   .ds-sync-meta strong { color: var(--ds-content-default); font-weight: var(--ds-body-font-weight-semibold); }
   .ds-sync-table { width:100%; border-collapse: collapse; margin-top: var(--ds-dimension-24); font-size: var(--ds-body-font-size-sm); }
-  .ds-sync-table th, .ds-sync-table td { text-align:left; padding: var(--ds-dimension-12); border-bottom: 1px solid var(--ds-border-default); }
+  .ds-sync-table th, .ds-sync-table td { text-align:left; padding: var(--ds-dimension-12); border-bottom: 1px solid var(--ds-border-default); color: var(--ds-content-default); }
   .ds-sync-table th { font-weight: var(--ds-body-font-weight-semibold); background: var(--ds-background-subtle); }
+  .ds-sync-table code { background: var(--ds-surface-raised); color: var(--ds-content-default); border: var(--ds-border-width-default) solid var(--ds-border-subtle); padding: var(--ds-dimension-2) var(--ds-dimension-6); border-radius: var(--ds-radius-sm); }
   /* Banner info — usa subtle bg pra <code> ter contraste */
   .ds-sync-banner { background: var(--ds-feedback-info-background-subtle); color: var(--ds-feedback-info-content-default); border: var(--ds-border-width-default) solid var(--ds-feedback-info-border-default); padding: var(--ds-dimension-16) var(--ds-dimension-20); border-radius: var(--ds-radius-md); margin-bottom: var(--ds-dimension-24); font-size: var(--ds-body-font-size-sm); }
   .ds-sync-banner code { background: var(--ds-surface-default); color: var(--ds-feedback-info-content-default); padding: var(--ds-dimension-2) var(--ds-dimension-6); border-radius: var(--ds-radius-sm); font-family: var(--ds-body-font-family-sans); font-size: 0.9em; border: var(--ds-border-width-default) solid var(--ds-feedback-info-border-default); }
@@ -59,12 +61,12 @@
   </div>
 
   <div class="ds-section">
-    <span class="ds-sync-status ok">Em dia</span>
+    <span class="ds-sync-status warning">1 aviso(s)</span>
     <div class="ds-sync-meta">
       <div><strong>Versão:</strong> 1.0.0-beta.4</div>
       <div><strong>Tokens JSON:</strong> 592</div>
       <div><strong>Divergências:</strong> 0</div>
-      <div><strong>Avisos:</strong> 0</div>
+      <div><strong>Avisos:</strong> 1</div>
     </div>
   </div>
 
@@ -74,7 +76,14 @@
       <thead>
         <tr><th>Checagem</th><th>Token</th><th>Mensagem</th><th>JSON</th><th>CSS</th></tr>
       </thead>
-      <tbody><tr><td colspan="5" style="text-align:center;color:var(--ds-content-secondary)">Nenhuma divergência registrada.</td></tr></tbody>
+      <tbody>
+    <tr>
+      <td><code>JSON ↔ Figma</code></td>
+      <td><code>.figma-snapshot.json</code></td>
+      <td>snapshot Figma tem 74h (> 24h). Regenerar via use_figma antes de concluir sync/release.</td>
+      <td><code>—</code></td>
+      <td><code>—</code></td>
+    </tr></tbody>
     </table>
   </div>
 </main>
