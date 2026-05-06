@@ -77,6 +77,7 @@
 }
 
 .ds-badge--neutral.ds-badge--subtle {
-  background-color: var(--ds-background-disabled);
+  background-color: var(--ds-surface-default);
   color: var(--ds-content-default);
+  border: var(--ds-border-width-default) solid var(--ds-border-default);
 }
