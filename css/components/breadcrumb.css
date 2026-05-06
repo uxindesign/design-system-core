@@ -32,7 +32,7 @@
    ========================================================================== */
 
 .ds-breadcrumb__item--current {
-  color: var(--ds-content-secondary);
+  color: var(--ds-content-default);
   pointer-events: none;
 }
 
@@ -40,5 +40,5 @@
    ========================================================================== */
 
 .ds-breadcrumb__separator {
-  color: var(--ds-content-secondary);
+  color: var(--ds-content-default);
 }

@@ -94,7 +94,7 @@
   <!-- WRAPPING FORM CONTROLS -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Encapsulando controles</span><span data-lang="en">Wrapping form controls</span></h2>
-    <p style="color:var(--ds-content-secondary);margin-bottom:var(--ds-dimension-16);"><span data-lang="pt">Form Field é agnóstico ao tipo de controle. Funciona com Input, Textarea e Select via <code>label[for]</code>. Pra grupos (Checkbox/Radio), use <code>&lt;fieldset&gt;</code> + <code>&lt;legend&gt;</code> em vez de label/for individual — semantica de grupo é diferente da semantica de controle único.</span><span data-lang="en">Form Field is control-agnostic. Works with Input, Textarea, and Select via <code>label[for]</code>. For groups (Checkbox/Radio), use <code>&lt;fieldset&gt;</code> + <code>&lt;legend&gt;</code> instead of individual label/for — group semantics differ from single-control semantics.</span></p>
+    <p style="color:var(--ds-content-default);margin-bottom:var(--ds-dimension-16);"><span data-lang="pt">Form Field é agnóstico ao tipo de controle. Funciona com Input, Textarea e Select via <code>label[for]</code>. Pra grupos (Checkbox/Radio), use <code>&lt;fieldset&gt;</code> + <code>&lt;legend&gt;</code> em vez de label/for individual — semantica de grupo é diferente da semantica de controle único.</span><span data-lang="en">Form Field is control-agnostic. Works with Input, Textarea, and Select via <code>label[for]</code>. For groups (Checkbox/Radio), use <code>&lt;fieldset&gt;</code> + <code>&lt;legend&gt;</code> instead of individual label/for — group semantics differ from single-control semantics.</span></p>
     <div class="ds-preview">
       <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
         <div class="ds-preview__canvas ds-preview__canvas--column" style="gap:var(--ds-dimension-24);max-width:480px;">
@@ -162,13 +162,13 @@
         </div>
       </div>
     </div>
-    <p style="color:var(--ds-content-tertiary);font-size:var(--ds-body-font-size-xs);margin-top:var(--ds-dimension-8);"><span data-lang="pt">Note: para grupos, <code>aria-describedby</code> vai no container do grupo; <code>&lt;legend&gt;</code> substitui <code>&lt;label&gt;</code>. O wrapper <code>&lt;fieldset class="ds-field"&gt;</code> herda o gap vertical igual ao Input.</span><span data-lang="en">Note: for groups, <code>aria-describedby</code> goes on the group container; <code>&lt;legend&gt;</code> replaces <code>&lt;label&gt;</code>. The <code>&lt;fieldset class="ds-field"&gt;</code> wrapper inherits the same vertical gap as Input.</span></p>
+    <p style="color:var(--ds-content-subtle);font-size:var(--ds-body-font-size-xs);margin-top:var(--ds-dimension-8);"><span data-lang="pt">Note: para grupos, <code>aria-describedby</code> vai no container do grupo; <code>&lt;legend&gt;</code> substitui <code>&lt;label&gt;</code>. O wrapper <code>&lt;fieldset class="ds-field"&gt;</code> herda o gap vertical igual ao Input.</span><span data-lang="en">Note: for groups, <code>aria-describedby</code> goes on the group container; <code>&lt;legend&gt;</code> replaces <code>&lt;label&gt;</code>. The <code>&lt;fieldset class="ds-field"&gt;</code> wrapper inherits the same vertical gap as Input.</span></p>
   </div>
 
   <!-- ERROR STATE -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Error state</span><span data-lang="en">Error state</span></h2>
-    <p style="color:var(--ds-content-secondary);margin-bottom:var(--ds-dimension-16);"><span data-lang="pt">Adicione <code>.ds-field--error</code> no wrapper, <code>aria-invalid="true"</code> + <code>aria-describedby</code> no controle apontando pro id do error. <code>role="alert"</code> no error garante anúncio imediato pra screen readers.</span><span data-lang="en">Add <code>.ds-field--error</code> on the wrapper, <code>aria-invalid="true"</code> + <code>aria-describedby</code> on the control pointing to the error's id. <code>role="alert"</code> on the error ensures immediate screen reader announcement.</span></p>
+    <p style="color:var(--ds-content-default);margin-bottom:var(--ds-dimension-16);"><span data-lang="pt">Adicione <code>.ds-field--error</code> no wrapper, <code>aria-invalid="true"</code> + <code>aria-describedby</code> no controle apontando pro id do error. <code>role="alert"</code> no error garante anúncio imediato pra screen readers.</span><span data-lang="en">Add <code>.ds-field--error</code> on the wrapper, <code>aria-invalid="true"</code> + <code>aria-describedby</code> on the control pointing to the error's id. <code>role="alert"</code> on the error ensures immediate screen reader announcement.</span></p>
     <div class="ds-preview">
       <div class="ds-preview__tabs" role="tablist">
         <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
@@ -215,7 +215,7 @@
   <!-- ACCESSIBILITY CHECKLIST -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Checklist de acessibilidade</span><span data-lang="en">Accessibility checklist</span></h2>
-    <ul style="color:var(--ds-content-default);line-height:var(--ds-body-line-height-md);padding-left:var(--ds-dimension-20);">
+    <ul style="color:var(--ds-content-strong);line-height:var(--ds-body-line-height-md);padding-left:var(--ds-dimension-20);">
       <li><span data-lang="pt"><code>label</code> com <code>for=</code> matching o <code>id</code> do controle (WCAG 1.3.1, 3.3.2).</span><span data-lang="en"><code>label</code> with <code>for=</code> matching the control's <code>id</code> (WCAG 1.3.1, 3.3.2).</span></li>
       <li><span data-lang="pt">Required: <code>aria-required="true"</code> no controle. Asterisco visual com <code>aria-hidden="true"</code>.</span><span data-lang="en">Required: <code>aria-required="true"</code> on the control. Visual asterisk with <code>aria-hidden="true"</code>.</span></li>
       <li><span data-lang="pt">Helper text: <code>aria-describedby</code> no controle apontando pro <code>id</code> do helper.</span><span data-lang="en">Helper text: <code>aria-describedby</code> on the control pointing to helper's <code>id</code>.</span></li>

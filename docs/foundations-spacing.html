@@ -8,12 +8,12 @@
   <link rel="stylesheet" href="layout.css">
   <style>
     .ds-spacing-row { display: flex; align-items: center; gap: var(--ds-dimension-16); padding: var(--ds-dimension-8) 0; border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); }
-    .ds-spacing-row__token { width: 200px; font-size: var(--ds-font-size-12); font-family: var(--ds-font-family-mono); color: var(--ds-content-default); flex-shrink: 0; }
-    .ds-spacing-row__value { width: 120px; font-size: var(--ds-font-size-12); color: var(--ds-content-secondary); flex-shrink: 0; }
+    .ds-spacing-row__token { width: 200px; font-size: var(--ds-font-size-12); font-family: var(--ds-font-family-mono); color: var(--ds-content-strong); flex-shrink: 0; }
+    .ds-spacing-row__value { width: 120px; font-size: var(--ds-font-size-12); color: var(--ds-content-default); flex-shrink: 0; }
     .ds-spacing-row__bar { height: 16px; background-color: var(--ds-primary-background-default); border-radius: var(--ds-radius-2); opacity: 0.7; }
     .ds-spacing-list { margin-bottom: var(--ds-dimension-32); }
     .ds-semantic-table { width: 100%; border-collapse: collapse; font-size: var(--ds-font-size-14); margin-bottom: var(--ds-dimension-32); }
-    .ds-semantic-table th { text-align: left; padding: var(--ds-dimension-8) var(--ds-dimension-12); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-secondary); }
+    .ds-semantic-table th { text-align: left; padding: var(--ds-dimension-8) var(--ds-dimension-12); border-bottom: var(--ds-border-width-2) solid var(--ds-border-default); font-weight: var(--ds-font-weight-semibold); color: var(--ds-content-default); }
     .ds-semantic-table td { padding: var(--ds-dimension-8) var(--ds-dimension-12); border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle); }
     .ds-semantic-table code { font-size: var(--ds-font-size-12); font-family: var(--ds-font-family-mono); }
   </style>
@@ -79,8 +79,8 @@
 
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Semantic Spacing Tokens</span><span data-lang="en">Semantic Spacing Tokens</span></h2>
-    <p style="color:var(--ds-content-secondary);margin-bottom:var(--ds-dimension-16)"><span data-lang="pt">Em 0.7.0 (2-layer) as escalas <code>inset</code>/<code>gap</code>/<code>component</code> foram consolidadas em uma única escala <code>space</code>. Cada token aliasa um valor Foundation.</span><span data-lang="en">In 0.7.0 (2-layer) the <code>inset</code>/<code>gap</code>/<code>component</code> scales were consolidated into a single <code>space</code> scale. Each token aliases a Foundation value.</span></p>
-    <h3 style="margin:var(--ds-dimension-16) 0 var(--ds-dimension-8);color:var(--ds-content-secondary)"><span data-lang="pt">Escala única (padding, gap, margin entre componentes)</span><span data-lang="en">Single scale (padding, gap, margin between components)</span></h3>
+    <p style="color:var(--ds-content-default);margin-bottom:var(--ds-dimension-16)"><span data-lang="pt">Em 0.7.0 (2-layer) as escalas <code>inset</code>/<code>gap</code>/<code>component</code> foram consolidadas em uma única escala <code>space</code>. Cada token aliasa um valor Foundation.</span><span data-lang="en">In 0.7.0 (2-layer) the <code>inset</code>/<code>gap</code>/<code>component</code> scales were consolidated into a single <code>space</code> scale. Each token aliases a Foundation value.</span></p>
+    <h3 style="margin:var(--ds-dimension-16) 0 var(--ds-dimension-8);color:var(--ds-content-default)"><span data-lang="pt">Escala única (padding, gap, margin entre componentes)</span><span data-lang="en">Single scale (padding, gap, margin between components)</span></h3>
     <table class="ds-semantic-table">
       <thead><tr><th>Token</th><th><span data-lang="pt">Referencia Foundation</span><span data-lang="en">Foundation reference</span></th><th><span data-lang="pt">Valor</span><span data-lang="en">Value</span></th></tr></thead>
       <tbody>
@@ -93,7 +93,7 @@
         <tr><td><code>--ds-space-2xl</code></td><td><code>spacing-24</code></td><td>24px</td></tr>
       </tbody>
     </table>
-    <h3 style="margin:var(--ds-dimension-16) 0 var(--ds-dimension-8);color:var(--ds-content-secondary)"><span data-lang="pt">Seção (espaçamento entre seções/blocos grandes)</span><span data-lang="en">Section (spacing between sections/large blocks)</span></h3>
+    <h3 style="margin:var(--ds-dimension-16) 0 var(--ds-dimension-8);color:var(--ds-content-default)"><span data-lang="pt">Seção (espaçamento entre seções/blocos grandes)</span><span data-lang="en">Section (spacing between sections/large blocks)</span></h3>
     <table class="ds-semantic-table">
       <thead><tr><th>Token</th><th><span data-lang="pt">Referencia Foundation</span><span data-lang="en">Foundation reference</span></th><th><span data-lang="pt">Valor</span><span data-lang="en">Value</span></th></tr></thead>
       <tbody>

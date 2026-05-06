@@ -144,8 +144,8 @@
           }
         ],
         "tokens": [
-          "semantic.content.secondary",
-          "semantic.content.tertiary",
+          "semantic.content.default",
+          "semantic.content.subtle",
           "semantic.border.control-hover",
           "semantic.toned.content-disabled",
           "semantic.outline.content-disabled",
@@ -184,7 +184,7 @@
           "semantic.border.strong",
           "semantic.border.control-default",
           "semantic.outline.border-default",
-          "semantic.content.tertiary",
+          "semantic.content.subtle",
           "semantic.border.control-default"
         ],
         "figma": []
@@ -220,7 +220,7 @@
           "semantic.link.content-disabled",
           "semantic.surface.elevated",
           "semantic.content.disabled",
-          "semantic.content.secondary",
+          "semantic.content.default",
           "semantic.border.strong",
           "semantic.border.control-hover"
         ],
@@ -4411,7 +4411,7 @@
         "figma": []
       }
     },
-    "semantic.content.default": {
+    "semantic.content.strong": {
       "layer": "semantic",
       "type": "color",
       "references": "foundation.color.neutral.900",
@@ -4477,7 +4477,7 @@
         "figma": []
       }
     },
-    "semantic.content.secondary": {
+    "semantic.content.default": {
       "layer": "semantic",
       "type": "color",
       "references": "foundation.color.neutral.600",
@@ -4543,7 +4543,7 @@
         "figma": []
       }
     },
-    "semantic.content.tertiary": {
+    "semantic.content.subtle": {
       "layer": "semantic",
       "type": "color",
       "references": "foundation.color.neutral.500",

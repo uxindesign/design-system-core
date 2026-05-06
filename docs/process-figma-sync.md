@@ -1,20 +1,67 @@
-# Processo: sync Figma → JSON via MCP
+# Processo: sync Figma → JSON via snapshot
 
-Como executar o sync das Figma Variables pros arquivos DTCG em `tokens/` usando o MCP remoto do Figma dentro de uma sessão Claude Code.
+Como executar o sync das Figma Variables pros arquivos DTCG em `tokens/`. O caminho preferencial é o plugin local `figma-plugin/snapshot-exporter`; o caminho via MCP continua como fallback quando o plugin não estiver instalado.
 
 ## Contexto
 
-A ADR-003 (revisada em 0.5.8) estabelece **Figma como autoridade canônica** dos valores de token. Os JSONs em `tokens/` são consolidação derivada. Idealmente existiria um sync automático via REST API, mas `GET /v1/files/:key/variables/local` exige **plano Enterprise** (nosso plano Pro não destrava). Até termos Enterprise (ou implementarmos um plugin custom), o fluxo é manual via MCP: um agente Claude Code executa um script Plugin API que serializa as Variables num JSON temporário, e o script Node `scripts/sync-tokens-from-figma.mjs` lê esse snapshot e compara com os JSONs.
+A ADR-003 (revisada em 0.5.8) estabelece **Figma como autoridade canônica** dos valores de token. Os JSONs em `tokens/` são consolidação derivada. Idealmente existiria um sync automático via REST API, mas `GET /v1/files/:key/variables/local` exige **plano Enterprise** (nosso plano Pro não destrava). No plano atual, o fluxo usa snapshot local: o plugin Figma `figma-plugin/snapshot-exporter` serializa as Variables num JSON temporário, e o script Node `scripts/sync-tokens-from-figma.mjs` lê esse snapshot e compara com os JSONs.
 
-**Disparo:** manual, numa sessão Claude Code com o MCP `use_figma` autenticado no Design Team Workspace (Pro). Ver alternativas futuras em `docs/backlog.md` ("Implementar o sync Figma → JSON").
+**Disparo:** manual, dentro do Figma Desktop. Ver alternativas futuras em `docs/backlog.md` ("Automatizar o sync Figma → JSON em CI").
 
 ## Pré-requisitos
 
-- Sessão Claude Code com o plugin `figma` (skill `figma:figma-use`) carregado.
-- Design Team Workspace autenticado no MCP do Figma (Pro/Expert basta; não precisa Enterprise).
+- Figma Desktop com plugin local instalado a partir de `figma-plugin/snapshot-exporter/manifest.json`.
 - Acesso de leitura ao arquivo `PRYS2kL7VdC1MtVWfZvuDN`.
 
-## Passo 1 — gerar o snapshot via MCP
+## Passo 1 — verificar via plugin
+
+Na primeira vez:
+
+1. No Figma Desktop, abra **Plugins → Development → Import plugin from manifest...**.
+2. Selecione `figma-plugin/snapshot-exporter/manifest.json`.
+
+Uso normal:
+
+1. Abra o arquivo DS Core (`PRYS2kL7VdC1MtVWfZvuDN`).
+2. Rode **DS Core Snapshot Exporter**.
+3. Clique em **Verificar com repo publicado**.
+4. Leia a mensagem no plugin.
+
+Esse modo compara as Variables vivas do Figma com `docs/api/tokens.json` publicado em GitHub Pages. Não precisa terminal, arquivo local ou servidor local.
+
+Para fluxo de release ou auditoria que precisa comparar contra o working tree local, use o fallback manual: clique em **Baixar .figma-snapshot.json**, coloque o arquivo na raiz do repo e siga o Passo 2.
+
+O plugin:
+
+1. Lista as collections locais (Foundation, Semantic) com seus modos.
+2. Itera sobre todas as variables locais do arquivo.
+3. Para cada variável, captura `id`, `name`, `resolvedType`, `variableCollectionId`, `valuesByMode`, `description`, `scopes` e metadados seguros.
+4. Preserva aliases como `{ "type": "VARIABLE_ALIAS", "id": "..." }`.
+5. Agrega tudo num único arquivo `.figma-snapshot.json` no formato:
+
+```json
+{
+  "generatedAt": "2026-04-20T00:00:00.000Z",
+  "generator": { "name": "DS Core Snapshot Exporter", "version": "0.1.0" },
+  "fileKey": "PRYS2kL7VdC1MtVWfZvuDN",
+  "variableCollections": {
+    "VariableCollectionId:4:2": { "id": "...", "name": "Foundation", "modes": [...], "defaultModeId": "..." }
+  },
+  "variables": {
+    "VariableID:5:3": {
+      "id": "VariableID:5:3",
+      "name": "color/neutral/50",
+      "resolvedType": "COLOR",
+      "variableCollectionId": "VariableCollectionId:4:2",
+      "valuesByMode": { "4:0": { "r": 0.97, "g": 0.98, "b": 0.99, "a": 1 } }
+    }
+  }
+}
+```
+
+O arquivo `.figma-snapshot.json` está em `.gitignore` e não deve ser commitado — é regenerado a cada sync.
+
+### Fallback — gerar via MCP
 
 Peça ao agente Claude Code:
 

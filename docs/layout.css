@@ -42,7 +42,7 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
    da sidebar (que usa --ds-surface-raised). Foundation aqui é OK — docs/layout.css
    é chrome do site de docs, não componente reutilizável. */
 [data-mode="dark"] .ds-site-header {
-  --_hfg: var(--ds-content-default); /* neutral-50 = white, always */
+  --_hfg: var(--ds-content-strong); /* neutral-50 = white, always */
   background-color: var(--ds-color-brand-900);
 }
 
@@ -185,7 +185,7 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
   font-weight: var(--ds-font-weight-semibold);
   text-transform: uppercase;
   letter-spacing: var(--ds-letter-spacing-wider);
-  color: var(--ds-content-default);
+  color: var(--ds-content-strong);
   text-align: left;
 }
 
@@ -209,7 +209,7 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
-  color: var(--ds-content-tertiary);
+  color: var(--ds-content-subtle);
   transition: transform var(--ds-duration-fast) var(--ds-ease-default);
 }
 
@@ -237,7 +237,7 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
 .ds-sidebar__link {
   display: block;
   padding: var(--ds-dimension-8) var(--ds-dimension-24) var(--ds-dimension-8) calc(var(--ds-dimension-24) + 20px);
-  color: var(--ds-content-secondary);
+  color: var(--ds-content-default);
   text-decoration: none;
   font-size: var(--ds-font-size-14);
   font-weight: var(--ds-font-weight-medium);
@@ -247,7 +247,7 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
 }
 
 .ds-sidebar__link:hover {
-  color: var(--ds-content-default);
+  color: var(--ds-content-strong);
   background-color: var(--ds-overlay-subtle);
 }
 
@@ -257,7 +257,7 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
 }
 
 .ds-sidebar__link--active {
-  color: var(--ds-content-default);
+  color: var(--ds-content-strong);
   border-left-color: var(--ds-primary-background-default);
   background-color: var(--ds-toned-background-default);
   font-weight: var(--ds-font-weight-semibold);
@@ -278,7 +278,7 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
   background: none;
   border: none;
   padding: var(--ds-dimension-8) var(--ds-dimension-24) var(--ds-dimension-8) calc(var(--ds-dimension-24) + 20px);
-  color: var(--ds-content-secondary);
+  color: var(--ds-content-default);
   font-size: var(--ds-font-size-14);
   font-weight: var(--ds-font-weight-medium);
   font-family: inherit;
@@ -290,7 +290,7 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
 }
 
 .ds-sidebar__group-toggle:hover {
-  color: var(--ds-content-default);
+  color: var(--ds-content-strong);
   background-color: var(--ds-overlay-subtle);
 }
 
@@ -345,7 +345,7 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
 
 .ds-section__subtitle {
   font-size: var(--ds-font-size-18);
-  color: var(--ds-content-secondary);
+  color: var(--ds-content-default);
   margin-bottom: var(--ds-dimension-32);
   line-height: var(--ds-line-height-relaxed);
 }
@@ -437,7 +437,7 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
   padding: var(--ds-dimension-8) var(--ds-dimension-16);
   font-size: var(--ds-font-size-14);
   font-weight: var(--ds-font-weight-medium);
-  color: var(--ds-content-secondary);
+  color: var(--ds-content-default);
   background: none;
   border: none;
   cursor: pointer;
@@ -446,7 +446,7 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
 }
 
 .ds-preview__tab:hover {
-  color: var(--ds-content-default);
+  color: var(--ds-content-strong);
 }
 
 .ds-preview__tab--active {
@@ -544,7 +544,7 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
   align-items: center;
   gap: var(--ds-dimension-4);
   font-size: var(--ds-font-size-11);
-  color: var(--ds-content-secondary);
+  color: var(--ds-content-default);
   line-height: 1.4;
 }
 
@@ -554,7 +554,7 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
 
 .ds-swatch__contrast-ratio {
   font-family: var(--ds-font-family-mono);
-  color: var(--ds-content-default);
+  color: var(--ds-content-strong);
   margin-left: auto;
   margin-right: var(--ds-dimension-4);
 }
@@ -616,7 +616,7 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
 
 .ds-a11y-note__text {
   font-size: var(--ds-font-size-14);
-  color: var(--ds-content-default);
+  color: var(--ds-content-strong);
   margin-bottom: 0;
 }
 
@@ -635,7 +635,7 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
   border: var(--ds-border-width-1) solid var(--ds-border-default);
   border-radius: var(--ds-radius-8);
   text-decoration: none;
-  color: var(--ds-content-default);
+  color: var(--ds-content-strong);
   font-weight: var(--ds-font-weight-medium);
   font-size: var(--ds-font-size-16);
   transition: border-color var(--ds-duration-fast) var(--ds-ease-default),
@@ -760,7 +760,7 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
   padding: var(--ds-dimension-8) var(--ds-dimension-12);
   border-bottom: var(--ds-border-width-2) solid var(--ds-border-default);
   font-weight: var(--ds-body-font-weight-semibold);
-  color: var(--ds-content-secondary);
+  color: var(--ds-content-default);
 }
 
 .ds-token-table td {
@@ -809,7 +809,7 @@ main.ds-main pre {
   margin-bottom: var(--ds-dimension-24);
   font-size: var(--ds-body-font-size-sm);
   line-height: var(--ds-body-line-height-sm);
-  color: var(--ds-content-default);
+  color: var(--ds-content-strong);
 }
 
 .ds-callout--info {
@@ -880,7 +880,7 @@ main.ds-main pre {
 .ds-dodont__desc {
   padding: var(--ds-dimension-12) var(--ds-dimension-16);
   font-size: var(--ds-body-font-size-sm);
-  color: var(--ds-content-default);
+  color: var(--ds-content-strong);
 }
 
 .ds-dodont__item:has(.ds-dodont__label--do) .ds-dodont__desc {
@@ -928,13 +928,13 @@ main.ds-main pre {
 
 .ds-anatomy-legend {
   font-size: var(--ds-body-font-size-sm);
-  color: var(--ds-content-secondary);
+  color: var(--ds-content-default);
   margin-bottom: var(--ds-dimension-32);
   line-height: var(--ds-body-line-height-md);
 }
 
 .ds-anatomy-legend strong {
-  color: var(--ds-content-default);
+  color: var(--ds-content-strong);
 }
 
 /* ---------------------------------------------------------

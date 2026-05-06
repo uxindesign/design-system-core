@@ -22,7 +22,7 @@ body {
   font-family: var(--ds-body-font-family-sans);
   font-size: var(--ds-body-font-size-md);
   line-height: var(--ds-body-line-height-md);
-  color: var(--ds-content-default);
+  color: var(--ds-content-strong);
   background-color: var(--ds-background-default);
 }
 img, picture, video, canvas, svg { display: block; max-width: 100%; }
@@ -77,7 +77,7 @@ th, td {
 th {
   font-weight: var(--ds-body-font-weight-semibold);
   font-size: var(--ds-body-font-size-sm);
-  color: var(--ds-content-secondary);
+  color: var(--ds-content-default);
   text-transform: uppercase;
   letter-spacing: var(--ds-body-letter-spacing-normal);
 }

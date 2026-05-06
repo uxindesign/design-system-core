@@ -11,8 +11,8 @@
     .ds-md-content h1 { font-size: var(--ds-body-font-size-2xl); font-weight: var(--ds-body-font-weight-semibold); margin-top: 0; }
     .ds-md-content h2 { font-size: var(--ds-body-font-size-xl); font-weight: var(--ds-body-font-weight-semibold); border-top: var(--ds-border-width-1) solid var(--ds-border-subtle); padding-top: var(--ds-dimension-24); }
     .ds-md-content h3 { font-size: var(--ds-body-font-size-lg); font-weight: var(--ds-body-font-weight-semibold); }
-    .ds-md-content p { color: var(--ds-content-secondary); line-height: var(--ds-body-line-height-md); margin: var(--ds-dimension-12) 0; }
-    .ds-md-content ul, .ds-md-content ol { color: var(--ds-content-secondary); line-height: var(--ds-body-line-height-md); padding-left: var(--ds-dimension-24); margin: var(--ds-dimension-12) 0; }
+    .ds-md-content p { color: var(--ds-content-default); line-height: var(--ds-body-line-height-md); margin: var(--ds-dimension-12) 0; }
+    .ds-md-content ul, .ds-md-content ol { color: var(--ds-content-default); line-height: var(--ds-body-line-height-md); padding-left: var(--ds-dimension-24); margin: var(--ds-dimension-12) 0; }
     .ds-md-content li { margin: var(--ds-dimension-4) 0; }
     .ds-md-content code { font-family: var(--ds-font-family-mono); font-size: 0.9em; background: var(--ds-background-subtle); color: var(--ds-link-content-default); padding: 1px var(--ds-dimension-4); border-radius: var(--ds-radius-sm); }
     .ds-md-content pre { background: var(--ds-background-inverse); color: var(--ds-content-inverse); padding: var(--ds-dimension-16); border-radius: var(--ds-radius-md); overflow-x: auto; font-size: var(--ds-body-font-size-sm); margin: var(--ds-dimension-16) 0; }
@@ -22,7 +22,7 @@
     .ds-md-content table th { font-weight: var(--ds-body-font-weight-semibold); background: var(--ds-background-subtle); }
     .ds-md-content a { color: var(--ds-link-content-default); }
     .ds-md-content a:hover { color: var(--ds-link-content-hover); }
-    .ds-md-content blockquote { border-left: 3px solid var(--ds-border-default); margin: var(--ds-dimension-16) 0; padding: var(--ds-dimension-8) var(--ds-dimension-16); color: var(--ds-content-tertiary); font-style: italic; }
+    .ds-md-content blockquote { border-left: 3px solid var(--ds-border-default); margin: var(--ds-dimension-16) 0; padding: var(--ds-dimension-8) var(--ds-dimension-16); color: var(--ds-content-subtle); font-style: italic; }
     .ds-md-content hr { border: none; border-top: var(--ds-border-width-1) solid var(--ds-border-subtle); margin: var(--ds-dimension-32) 0; }
     .ds-md-content strong { color: var(--ds-content-default); }
     .ds-md-generated-banner { background: var(--ds-feedback-info-background-subtle); color: var(--ds-feedback-info-content-default); border: var(--ds-border-width-default) solid var(--ds-feedback-info-border-default); padding: var(--ds-dimension-12) var(--ds-dimension-20); border-radius: var(--ds-radius-md); margin-bottom: var(--ds-dimension-24); font-size: var(--ds-body-font-size-sm); }
@@ -67,7 +67,7 @@
 
   <div class="ds-md-content">
 
-<p>17 decisões registradas. HTMLs gerados automaticamente a partir dos <code>.md</code> correspondentes.</p>
+<p>18 decisões registradas. HTMLs gerados automaticamente a partir dos <code>.md</code> correspondentes.</p>
 <table>
 <thead><tr><th>ADR</th><th>Título</th><th>Status</th><th>Data</th></tr></thead>
 <tbody>
@@ -88,6 +88,7 @@
 <tr><td><a href="adr-015-unificacao-de-size-e-dimension.html">ADR-015</a></td><td>— Unificação da escala size, eliminação de tokens component-specific e renomeação spacing→dimension</td><td>Aceito</td><td>2026-04-26</td></tr>
 <tr><td><a href="adr-016-tokens-sem-equivalencia-no-figma.html">ADR-016</a></td><td>— Tokens sem equivalência no Figma (CSS-only)</td><td>Aceito</td><td>2026-04-30</td></tr>
 <tr><td><a href="adr-017-componentes-css-only.html">ADR-017</a></td><td>— Componentes CSS-only (sem equivalência no Figma)</td><td>Aceito</td><td>2026-04-30</td></tr>
+<tr><td><a href="adr-018-content-naming-strong-default-subtle.html">ADR-018</a></td><td>— Renomear `content.{default,secondary,tertiary}` para `content.{strong,default,subtle}`</td><td>Aceito</td><td>2026-05-06</td></tr>
 </tbody>
 </table>
 

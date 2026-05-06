@@ -45,7 +45,7 @@
   margin: 0;
   font-size: var(--ds-body-font-size-xl);
   font-weight: var(--ds-body-font-weight-semibold);
-  color: var(--ds-content-default);
+  color: var(--ds-content-strong);
   line-height: var(--ds-body-line-height-xl);
 }
 
@@ -65,14 +65,14 @@
   border: none;
   padding: var(--ds-space-xs);
   cursor: pointer;
-  color: var(--ds-content-secondary);
+  color: var(--ds-content-default);
   border-radius: var(--ds-radius-sm);
   transition: color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
               background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
 }
 
 .ds-modal__close:hover {
-  color: var(--ds-content-default);
+  color: var(--ds-content-strong);
   background-color: var(--ds-overlay-subtle);
 }
 
@@ -86,7 +86,7 @@
   padding: 0 var(--ds-space-lg) var(--ds-space-lg);
   overflow-y: auto;
   font-size: var(--ds-body-font-size-sm);
-  color: var(--ds-content-default);
+  color: var(--ds-content-strong);
   line-height: var(--ds-body-line-height-md);
 }
 

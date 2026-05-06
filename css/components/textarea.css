@@ -41,7 +41,7 @@
   border: none;
   background: transparent;
   outline: none;
-  color: var(--ds-content-default);
+  color: var(--ds-content-strong);
   font-size: inherit;
   font-family: inherit;
   resize: vertical;
@@ -65,7 +65,7 @@
 }
 
 .ds-textarea__field::placeholder {
-  color: var(--ds-content-tertiary);
+  color: var(--ds-content-subtle);
 }
 
 /* States
@@ -120,7 +120,7 @@
 
 .ds-field__counter {
   font-size: var(--ds-body-font-size-xs);
-  color: var(--ds-content-secondary);
+  color: var(--ds-content-default);
   text-align: right;
   font-variant-numeric: tabular-nums;
 }

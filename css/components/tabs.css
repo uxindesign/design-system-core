@@ -19,7 +19,7 @@
   font-size: var(--ds-body-font-size-sm);
   font-weight: var(--ds-body-font-weight-bold);
   line-height: var(--ds-body-line-height-sm);
-  color: var(--ds-content-secondary);
+  color: var(--ds-content-default);
   background: none;
   border: none;
   border-bottom: var(--ds-border-width-strong) solid transparent;
@@ -30,7 +30,7 @@
 }
 
 .ds-tab:hover:not(:disabled):not(.ds-tab--active) {
-  color: var(--ds-content-default);
+  color: var(--ds-content-strong);
 }
 
 .ds-tab--active {

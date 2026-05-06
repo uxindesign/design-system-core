@@ -565,7 +565,7 @@ function writeHtmlReport(report) {
     </tr>`
         )
         .join("")
-    : `<tr><td colspan="5" style="text-align:center;color:var(--ds-content-secondary)">Nenhuma divergência registrada.</td></tr>`;
+    : `<tr><td colspan="5" style="text-align:center;color:var(--ds-content-default)">Nenhuma divergência registrada.</td></tr>`;
 
   const html = `<!DOCTYPE html>
 <html lang="pt">
@@ -581,7 +581,7 @@ function writeHtmlReport(report) {
   .ds-sync-status.ok { background: var(--ds-feedback-success-background-subtle); color: var(--ds-feedback-success-content-default); border: var(--ds-border-width-default) solid var(--ds-feedback-success-border-default); }
   .ds-sync-status.warning { background: var(--ds-feedback-warning-background-subtle); color: var(--ds-feedback-warning-content-default); border: var(--ds-border-width-default) solid var(--ds-feedback-warning-border-default); }
   .ds-sync-status.error { background: var(--ds-feedback-error-background-subtle); color: var(--ds-feedback-error-content-default); border: var(--ds-border-width-default) solid var(--ds-feedback-error-border-default); }
-  .ds-sync-meta { display:flex; gap: var(--ds-dimension-24); margin-top: var(--ds-dimension-16); font-size: var(--ds-body-font-size-sm); color: var(--ds-content-secondary); }
+  .ds-sync-meta { display:flex; gap: var(--ds-dimension-24); margin-top: var(--ds-dimension-16); font-size: var(--ds-body-font-size-sm); color: var(--ds-content-default); }
   .ds-sync-meta strong { color: var(--ds-content-default); font-weight: var(--ds-body-font-weight-semibold); }
   .ds-sync-table { width:100%; border-collapse: collapse; margin-top: var(--ds-dimension-24); font-size: var(--ds-body-font-size-sm); }
   .ds-sync-table th, .ds-sync-table td { text-align:left; padding: var(--ds-dimension-12); border-bottom: 1px solid var(--ds-border-default); color: var(--ds-content-default); }

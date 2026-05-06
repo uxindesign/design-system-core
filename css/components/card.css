@@ -19,7 +19,7 @@
 .ds-card__title {
   font-size: var(--ds-body-font-size-xl);
   font-weight: var(--ds-body-font-weight-semibold);
-  color: var(--ds-content-default);
+  color: var(--ds-content-strong);
   line-height: var(--ds-body-line-height-xl);
 }
 
@@ -28,14 +28,14 @@
   font-size: var(--ds-body-font-size-sm);
   font-weight: var(--ds-body-font-weight-bold);
   line-height: var(--ds-body-line-height-sm);
-  color: var(--ds-content-secondary);
+  color: var(--ds-content-default);
 }
 
 /* Body — body/sm in Figma */
 .ds-card__body {
   padding: 0 var(--ds-space-lg) var(--ds-space-lg);
   font-size: var(--ds-body-font-size-sm);
-  color: var(--ds-content-secondary);
+  color: var(--ds-content-default);
   line-height: var(--ds-body-line-height-sm);
 }
 

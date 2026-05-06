@@ -10,7 +10,7 @@
 O sistema começou com três camadas de tokens, mas a arquitetura vigente é 2-layer:
 
 1. **Foundation** — valores crus, escalas primitivas (`spacing/3 = 0.75rem`, `color/blue/600`, `radius/sm`, `shadow/md`, `duration/fast`). Sem significado funcional, só quantidade.
-2. **Semantic** — aliases com intenção de uso (`brand/default`, `content/secondary`, `border/width/default`, `space/inset/md`, `typography/control/font-size/md`).
+2. **Semantic** — aliases com intenção de uso (`brand/default`, `content/default`, `border/width/default`, `space/inset/md`, `typography/control/font-size/md`).
 
 A regra vigente é que consumidores finais — CSS de componente, bindings em componentes Figma, docs de uso — operam em cima de Semantic, não de Foundation direto e não de valores hardcoded. Foundation existe pra **abastecer Semantic**, não pra ser consumido direto.
 

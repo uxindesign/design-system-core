@@ -90,31 +90,31 @@
    --------------------------------------------------------- */
 .ds-alert--success.ds-alert--subtle {
   background-color: var(--ds-feedback-success-background-subtle);
-  color: var(--ds-content-default);
+  color: var(--ds-content-strong);
   border: var(--ds-border-width-default) solid var(--ds-feedback-success-border-default);
 }
 
 .ds-alert--warning.ds-alert--subtle {
   background-color: var(--ds-feedback-warning-background-subtle);
-  color: var(--ds-content-default);
+  color: var(--ds-content-strong);
   border: var(--ds-border-width-default) solid var(--ds-feedback-warning-border-default);
 }
 
 .ds-alert--error.ds-alert--subtle {
   background-color: var(--ds-feedback-error-background-subtle);
-  color: var(--ds-content-default);
+  color: var(--ds-content-strong);
   border: var(--ds-border-width-default) solid var(--ds-feedback-error-border-default);
 }
 
 .ds-alert--info.ds-alert--subtle {
   background-color: var(--ds-feedback-info-background-subtle);
-  color: var(--ds-content-default);
+  color: var(--ds-content-strong);
   border: var(--ds-border-width-default) solid var(--ds-feedback-info-border-default);
 }
 
 /* Description uses secondary content tone in subtle variants */
 .ds-alert--subtle .ds-alert__description {
-  color: var(--ds-content-secondary);
+  color: var(--ds-content-default);
 }
 
 /* ---------------------------------------------------------

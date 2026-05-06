@@ -12,7 +12,7 @@
   border-radius: var(--ds-radius-sm);
   min-height: var(--ds-size-2xl);
   font-size: var(--ds-body-font-size-sm);
-  color: var(--ds-content-default);
+  color: var(--ds-content-strong);
   transition: background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
 }
 
@@ -45,7 +45,7 @@
   width: var(--ds-size-xs); /* 16px */
   height: var(--ds-size-xs);
   border-radius: var(--ds-radius-full);
-  background-color: var(--ds-content-secondary);
+  background-color: var(--ds-content-default);
   transition: transform var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
               background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
 }
@@ -159,7 +159,7 @@
   font-size: var(--ds-body-font-size-sm);
   font-weight: var(--ds-body-font-weight-medium);
   line-height: var(--ds-body-line-height-sm);
-  color: var(--ds-content-default);
+  color: var(--ds-content-strong);
 }
 
 /* Description (body/sm: 14px regular / 22px, multiline) */
@@ -167,7 +167,7 @@
   font-size: var(--ds-body-font-size-sm);
   font-weight: var(--ds-body-font-weight-regular);
   line-height: var(--ds-body-line-height-md);
-  color: var(--ds-content-default);
+  color: var(--ds-content-strong);
   white-space: pre-wrap;
 }
 
@@ -175,7 +175,7 @@
 .ds-toggle__helper {
   font-size: var(--ds-body-font-size-xs);
   line-height: var(--ds-body-line-height-md);
-  color: var(--ds-content-secondary);
+  color: var(--ds-content-default);
 }
 
 /* ---------------------------------------------------------

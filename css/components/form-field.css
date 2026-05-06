@@ -61,7 +61,7 @@
   font-size: var(--ds-body-font-size-sm);
   font-weight: var(--ds-body-font-weight-medium);
   line-height: var(--ds-body-line-height-sm);
-  color: var(--ds-content-default);
+  color: var(--ds-content-strong);
 }
 
 /* Required asterisk — error color, decorative (aria-hidden no markup) */
@@ -77,7 +77,7 @@
 .ds-field__helper {
   font-size: var(--ds-body-font-size-xs);
   line-height: var(--ds-body-line-height-md);
-  color: var(--ds-content-secondary);
+  color: var(--ds-content-default);
 }
 
 /* Error message (default hidden; mostrado em .ds-field--error) */

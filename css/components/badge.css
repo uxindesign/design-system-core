@@ -45,7 +45,7 @@
 
 .ds-badge--neutral.ds-badge--solid {
   background-color: var(--ds-surface-default);
-  color: var(--ds-content-default);
+  color: var(--ds-content-strong);
 }
 
 /* ---------------------------------------------------------
@@ -78,5 +78,5 @@
 
 .ds-badge--neutral.ds-badge--subtle {
   background-color: var(--ds-background-disabled);
-  color: var(--ds-content-secondary);
+  color: var(--ds-content-default);
 }

@@ -1,12 +1,12 @@
 {
   "version": "1.0.0-beta.4",
-  "count": 15,
+  "count": 18,
   "adrs": [
     {
       "id": "ADR-001",
       "num": 1,
       "title": "Migração da arquitetura de tokens para Foundation→Semantic→Component com DTCG + Style Dictionary",
-      "status": "Aceita",
+      "status": "Aceita — superseded em parte por [ADR-014](ADR-014-action-tokens-role-style.md) (themes Default/Ocean/Forest removidos em 0.8.0; Brand virou paleta única customizável)",
       "date": "2026-04-14",
       "sourceFile": "docs/decisions/ADR-001-migracao-tokens.md",
       "url": "https://uxindesign.github.io/design-system-core/docs/decisions/adr-001-migracao-tokens.html"
@@ -42,7 +42,7 @@
       "id": "ADR-005",
       "num": 5,
       "title": "Brand como camada foundation, estados explícitos no semantic, e limpeza tipográfica",
-      "status": "Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.2)",
+      "status": "Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.2). Superseded por [ADR-014](ADR-014-action-tokens-role-style.md): collection Brand (modes Default/Ocean/Forest) deletada em 0.8.0, Brand virou paleta única customizável dentro da Foundation.",
       "date": "2026-04-14",
       "sourceFile": "docs/decisions/ADR-005-brand-foundation-e-estados-explicitos.md",
       "url": "https://uxindesign.github.io/design-system-core/docs/decisions/adr-005-brand-foundation-e-estados-explicitos.html"
@@ -136,6 +136,33 @@
       "date": "2026-04-26",
       "sourceFile": "docs/decisions/ADR-015-unificacao-de-size-e-dimension.md",
       "url": "https://uxindesign.github.io/design-system-core/docs/decisions/adr-015-unificacao-de-size-e-dimension.html"
+    },
+    {
+      "id": "ADR-016",
+      "num": 16,
+      "title": "— Tokens sem equivalência no Figma (CSS-only)",
+      "status": "Aceito",
+      "date": "2026-04-30",
+      "sourceFile": "docs/decisions/ADR-016-tokens-sem-equivalencia-no-figma.md",
+      "url": "https://uxindesign.github.io/design-system-core/docs/decisions/adr-016-tokens-sem-equivalencia-no-figma.html"
+    },
+    {
+      "id": "ADR-017",
+      "num": 17,
+      "title": "— Componentes CSS-only (sem equivalência no Figma)",
+      "status": "Aceito",
+      "date": "2026-04-30",
+      "sourceFile": "docs/decisions/ADR-017-componentes-css-only.md",
+      "url": "https://uxindesign.github.io/design-system-core/docs/decisions/adr-017-componentes-css-only.html"
+    },
+    {
+      "id": "ADR-018",
+      "num": 18,
+      "title": "— Renomear `content.{default,secondary,tertiary}` para `content.{strong,default,subtle}`",
+      "status": "Aceito",
+      "date": "2026-05-06",
+      "sourceFile": "docs/decisions/ADR-018-content-naming-strong-default-subtle.md",
+      "url": "https://uxindesign.github.io/design-system-core/docs/decisions/adr-018-content-naming-strong-default-subtle.html"
     }
   ]
 }

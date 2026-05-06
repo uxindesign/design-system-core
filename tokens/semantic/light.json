@@ -331,20 +331,20 @@
     },
     "content": {
       "$description": "Conteúdo sobre superfícies neutras (background, surface). Cobre texto, ícones e shapes. ADR-011.",
-      "default": {
+      "strong": {
         "$type": "color",
         "$value": "{foundation.color.neutral.900}",
-        "$description": "Conteúdo principal (títulos, body text, ícones primários)."
+        "$description": "Conteúdo de ênfase máxima (títulos, badge labels, modal title, active tab). Tom mais escuro/claro da escala."
       },
-      "secondary": {
+      "default": {
         "$type": "color",
         "$value": "{foundation.color.neutral.600}",
-        "$description": "Conteúdo de ênfase reduzida (labels, helper text, ícones secundários)."
+        "$description": "Conteúdo padrão (body text, descriptions, form labels). Use este na maioria dos casos."
       },
-      "tertiary": {
+      "subtle": {
         "$type": "color",
         "$value": "{foundation.color.neutral.500}",
-        "$description": "Conteúdo de menor ênfase (placeholders, ícones decorativos)."
+        "$description": "Conteúdo de ênfase reduzida (placeholders, ícones decorativos, helper text)."
       },
       "disabled": {
         "$type": "color",
