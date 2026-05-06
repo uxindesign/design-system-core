@@ -17,6 +17,8 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 
 ### Corrigido
 
+- **Badge Subtle (Success/Warning/Error/Info): Figma rebindado de `feedback/X/background/default` para `feedback/X/content/default` na cor do Label.** Figma usava token de **background** como cor de texto — uso semanticamente errado da Variable. CSS já consumia `feedback-X-content-default` (correto, com calibração WCAG pra texto). Rebind via `use_figma` em 4 variants (Success Subtle, Warning Subtle, Error Subtle, Info Subtle). Resolve P1-2 e mantém paralelismo com Solid: Solid usa `content/contrast` (texto sobre fundo escuro), Subtle usa `content/default` (texto sobre fundo claro).
+
 - **Badge Neutral Subtle alinhado ao Figma** — CSS estava usando `background-disabled` (semanticamente errado pra um Neutral) e sem stroke. Agora usa `surface-default` + `content-default` + `border-default` (1px), espelhando exatamente o que Figma binda. Stroke é o que distingue Subtle de Solid no Neutral (ambos compartilham `surface-default`). Decidido como item P1-1 da auditoria.
 
 - **Badge Neutral Solid alinhado ao Figma** — CSS estava usando `border-strong` + `content-inverse` (fundo escuro + texto claro), enquanto Figma binda `surface/default` + `content/default` (fundo claro + texto escuro). Inversão visual entre design e produto. CSS atualizado pra espelhar Figma. Decidido como item P0-1 da auditoria.
