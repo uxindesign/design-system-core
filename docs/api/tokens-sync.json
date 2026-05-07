@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-beta.4",
   "totals": {
-    "jsonTokens": 613,
-    "sharedTokens": 267,
+    "jsonTokens": 611,
+    "sharedTokens": 265,
     "lightTokens": 173,
     "darkTokens": 173,
     "errors": 0,
@@ -16,7 +16,7 @@
     "docTokenDrift": [],
     "jsonVsFigma": {
       "skipped": false,
-      "snapshotAge": "0h",
+      "snapshotAge": "2h",
       "snapshotFreshness": "fresh",
       "snapshotMaxAgeHours": 24,
       "summary": {

@@ -3138,32 +3138,16 @@
         "figma": []
       }
     },
-    "foundation.shadow.xs": {
-      "layer": "foundation",
-      "type": "shadow",
-      "references": null,
-      "sentido": "Sombra de elevação xs.",
-      "escopo": [
-        "box-shadow"
-      ],
-      "contexto": "Use via Semantic `surface.{raised|overlay|elevated}` ou em modais/dropdowns. Não aplique direto em texto.",
-      "decisao": "Escala xs (cards), sm (popovers), md (dropdowns), lg (drawers), xl (modals), 2xl (max elevation).",
-      "usos": {
-        "css": [],
-        "tokens": [],
-        "figma": []
-      }
-    },
     "foundation.shadow.sm": {
       "layer": "foundation",
       "type": "shadow",
       "references": null,
-      "sentido": "Sombra de elevação sm.",
+      "sentido": "Sombra de elevação 1 (sutil).",
       "escopo": [
         "box-shadow"
       ],
-      "contexto": "Use via Semantic `surface.{raised|overlay|elevated}` ou em modais/dropdowns. Não aplique direto em texto.",
-      "decisao": "Escala xs (cards), sm (popovers), md (dropdowns), lg (drawers), xl (modals), 2xl (max elevation).",
+      "contexto": "Use via utilities `.ds-elevation-1..4`, semantic shadow aliases ou componentes que documentem elevação. Não aplique direto em texto.",
+      "decisao": "Escala oficial de elevation alinhada ao Figma: elevation/1..4 mapeia para shadow.sm/md/lg/xl. shadow.none é reset técnico para elevation-0; não há token oculto sem Effect Style correspondente.",
       "usos": {
         "css": [
           {
@@ -3190,12 +3174,12 @@
       "layer": "foundation",
       "type": "shadow",
       "references": null,
-      "sentido": "Sombra de elevação md.",
+      "sentido": "Sombra de elevação 2 (elevado).",
       "escopo": [
         "box-shadow"
       ],
-      "contexto": "Use via Semantic `surface.{raised|overlay|elevated}` ou em modais/dropdowns. Não aplique direto em texto.",
-      "decisao": "Escala xs (cards), sm (popovers), md (dropdowns), lg (drawers), xl (modals), 2xl (max elevation).",
+      "contexto": "Use via utilities `.ds-elevation-1..4`, semantic shadow aliases ou componentes que documentem elevação. Não aplique direto em texto.",
+      "decisao": "Escala oficial de elevation alinhada ao Figma: elevation/1..4 mapeia para shadow.sm/md/lg/xl. shadow.none é reset técnico para elevation-0; não há token oculto sem Effect Style correspondente.",
       "usos": {
         "css": [
           {
@@ -3211,12 +3195,12 @@
       "layer": "foundation",
       "type": "shadow",
       "references": null,
-      "sentido": "Sombra de elevação lg.",
+      "sentido": "Sombra de elevação 3 (flutuante).",
       "escopo": [
         "box-shadow"
       ],
-      "contexto": "Use via Semantic `surface.{raised|overlay|elevated}` ou em modais/dropdowns. Não aplique direto em texto.",
-      "decisao": "Escala xs (cards), sm (popovers), md (dropdowns), lg (drawers), xl (modals), 2xl (max elevation).",
+      "contexto": "Use via utilities `.ds-elevation-1..4`, semantic shadow aliases ou componentes que documentem elevação. Não aplique direto em texto.",
+      "decisao": "Escala oficial de elevation alinhada ao Figma: elevation/1..4 mapeia para shadow.sm/md/lg/xl. shadow.none é reset técnico para elevation-0; não há token oculto sem Effect Style correspondente.",
       "usos": {
         "css": [
           {
@@ -3232,12 +3216,12 @@
       "layer": "foundation",
       "type": "shadow",
       "references": null,
-      "sentido": "Sombra de elevação xl.",
+      "sentido": "Sombra de elevação 4 (destaque).",
       "escopo": [
         "box-shadow"
       ],
-      "contexto": "Use via Semantic `surface.{raised|overlay|elevated}` ou em modais/dropdowns. Não aplique direto em texto.",
-      "decisao": "Escala xs (cards), sm (popovers), md (dropdowns), lg (drawers), xl (modals), 2xl (max elevation).",
+      "contexto": "Use via utilities `.ds-elevation-1..4`, semantic shadow aliases ou componentes que documentem elevação. Não aplique direto em texto.",
+      "decisao": "Escala oficial de elevation alinhada ao Figma: elevation/1..4 mapeia para shadow.sm/md/lg/xl. shadow.none é reset técnico para elevation-0; não há token oculto sem Effect Style correspondente.",
       "usos": {
         "css": [
           {
@@ -3260,32 +3244,16 @@
         "figma": []
       }
     },
-    "foundation.shadow.2xl": {
-      "layer": "foundation",
-      "type": "shadow",
-      "references": null,
-      "sentido": "Sombra de elevação 2xl.",
-      "escopo": [
-        "box-shadow"
-      ],
-      "contexto": "Use via Semantic `surface.{raised|overlay|elevated}` ou em modais/dropdowns. Não aplique direto em texto.",
-      "decisao": "Escala xs (cards), sm (popovers), md (dropdowns), lg (drawers), xl (modals), 2xl (max elevation).",
-      "usos": {
-        "css": [],
-        "tokens": [],
-        "figma": []
-      }
-    },
     "foundation.shadow.none": {
       "layer": "foundation",
       "type": "shadow",
       "references": null,
-      "sentido": "Sem sombra (level 0 de elevação).",
+      "sentido": "Sem sombra (nível 0 técnico de elevação).",
       "escopo": [
         "box-shadow"
       ],
-      "contexto": "Use via Semantic `surface.flat` ou em estados disabled.",
-      "decisao": "Token explícito pra reset — facilita override em variants.",
+      "contexto": "Use via `.ds-elevation-0` para resetar sombra. Não há Effect Style Figma porque ausência de sombra não precisa de preview publicado.",
+      "decisao": "Exceção técnica mantida para reset CSS, equivalente ao nível 0. Dimension-0 segue o mesmo racional: útil no código, sem necessidade de representação visual Figma.",
       "usos": {
         "css": [
           {

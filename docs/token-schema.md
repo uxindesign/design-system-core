@@ -18,10 +18,10 @@
 
 | Camada | Tokens | Arquivos |
 |--------|--------|----------|
-| Foundation | **267** | 9 |
+| Foundation | **265** | 9 |
 | Semantic | **173 × 2 modos** | light.json + dark.json |
 
-## Foundation (267 tokens)
+## Foundation (265 tokens)
 
 | Arquivo | Tokens |
 |---------|--------|
@@ -30,7 +30,7 @@
 | `motion.json` | 10 |
 | `opacity.json` | 6 |
 | `radius.json` | 7 |
-| `shadows.json` | 7 |
+| `shadows.json` | 5 |
 | `stroke.json` | 3 |
 | `typography.json` | 54 |
 | `z-index.json` | 6 |
