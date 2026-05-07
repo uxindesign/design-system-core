@@ -4,18 +4,17 @@
 
 .ds-tabs {
   display: flex;
-  border-bottom: var(--ds-border-width-default) solid var(--ds-border-default);
+  border-bottom: var(--ds-border-width-default) solid var(--ds-overlay-default);
   gap: 0;
 }
 
 /* Tab — Figma: padding pl/pr space/lg, pt space/md (12), pb 0
-   Label: label/md (14px Bold / 20px), default content/secondary, hover content/default */
+   Gap: 10px before the 2px indicator; Label: label/md (14px Bold / 20px) */
 .ds-tab {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: var(--ds-space-md) var(--ds-space-lg);
-  padding-bottom: 0;
+  padding: var(--ds-space-md) var(--ds-space-lg) var(--ds-space-control-padding-10);
   font-size: var(--ds-body-font-size-sm);
   font-weight: var(--ds-body-font-weight-bold);
   line-height: var(--ds-body-line-height-sm);
@@ -23,6 +22,7 @@
   background: none;
   border: none;
   border-bottom: var(--ds-border-width-strong) solid transparent;
+  border-radius: var(--ds-radius-md);
   cursor: pointer;
   transition: color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
               border-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
@@ -41,7 +41,6 @@
 .ds-tab:focus-visible {
   outline: var(--ds-border-width-focus) solid var(--ds-border-focus);
   outline-offset: var(--ds-border-width-focus);
-  border-radius: var(--ds-radius-sm) var(--ds-radius-sm) 0 0;
 }
 
 .ds-tab:disabled {

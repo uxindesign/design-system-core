@@ -9,6 +9,7 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 ## [Não publicado]
 
 ### Corrigido
+- **Tabs alinhado ao dump Figma de `Tab Item` + `Tab Bar`.** CSS agora espelha o gap de 10px antes do indicador ativo (`--ds-space-control-padding-10`), usa divider `--ds-overlay-default` como o `Tab Bar`, e aplica radius `md` no focus ring. Docs de Tabs atualizadas para remover tokens antigos (`content.secondary`, `focus.ring.*`, `overlay.subtle`) e documentar o mapeamento atual. Resolve #21 da auditoria Figma↔Repo.
 - **Required asterisk de Input Text, Select e Textarea usa token semântico de conteúdo de erro.** Figma rebindado em 48 nós `Required` (`12` Input Text, `18` Select, `18` Textarea) de `feedback/error/background/default` para `feedback/error/content/default`. CSS compartilhado `.ds-field__required`, `.ds-field__error` e `.ds-field--error .ds-field__label` agora consome `--ds-feedback-error-content-default`, evitando token de background como cor de texto. Resolve #20 / P3-3 da auditoria Figma↔Repo.
 - Referências órfãs de motion em docs (`--ds-duration-normal`) substituídas por `--ds-duration-moderate`, alinhando `foundations-motion.html` e `docs/layout.css` à escala atual (`instant/fast/moderate/slow/slower`) e liberando `npm test`.
 - Referências órfãs de tokens de cor (`content-secondary`, `content-tertiary`) no `index.html` que causavam falha no pipeline de CI.
