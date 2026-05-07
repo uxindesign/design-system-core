@@ -17,6 +17,8 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 
 ### Corrigido
 
+- **Modal Large title agora aplica `letter-spacing/tight`** (espelha binding do Figma). Para títulos grandes (3xl), tight letter-spacing otimiza legibilidade visual. Resolve P1-4 da auditoria.
+
 - **Button: glyph icon escala por size (sm=20, md/lg=24) + Icon Only com padding simétrico.** Antes: glyph hardcoded em todas as variants (boundVar=null), Icon Only com `padding: 0` e paddings assimétricos no Figma (pl/pr ≠ pt/pb). Agora:
   - **Glyph fontSize bindado** em 270 nodes via `use_figma`: sm Buttons → `size/sm` (20), md/lg Buttons → `size/md` (24).
   - **Icon Only paddings simétricos** em 108 variants Figma: sm → `space/control/padding/6` (6px), md → `space/sm` (8px), lg → `space/md` (12px). Cálculo: (button - icon) / 2 centraliza icon.

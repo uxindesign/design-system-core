@@ -57,6 +57,8 @@
 .ds-modal--lg .ds-modal__title {
   font-size: var(--ds-body-font-size-3xl);
   line-height: var(--ds-body-line-height-3xl);
+  /* Figma: title em modal lg usa letter-spacing tight pra otimizar legibilidade em font-size grande */
+  letter-spacing: var(--ds-body-letter-spacing-tight);
 }
 
 .ds-modal__close {
