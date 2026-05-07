@@ -10,6 +10,7 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 
 ### Corrigido
 - Referências órfãs de tokens de cor (`content-secondary`, `content-tertiary`) no `index.html` que causavam falha no pipeline de CI.
+- **Spinner: revertido animation duration/timing para `0.6s linear`.** Em rodada anterior eu (Claude) tinha trocado por `motion-duration-slow` (300ms) + `motion-ease-default`, semantizando indevidamente. Resultado: rotação 2x mais rápida e oscilante (ease quebra rotação constante). Tokens `motion.duration.*` são pra transições de estado (150-300ms), não pra loops contínuos. Spinner precisa de literal `0.6s linear` por design — comentário adicionado no CSS explicando.
 - **Field paddings horizontais descem um nível em Input/Select/Textarea.** User feedback: paddings laterais aparentavam maiores que deveriam. Aplicado em Figma + CSS:
   - sm: `space.md` (12) → `space.sm` (8)
   - md: `space.lg` (16) → `space.md` (12)
