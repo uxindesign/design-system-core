@@ -176,7 +176,7 @@ CSS Avatar `--md`: `font-size: body-font-size-sm`. CSS espelha Figma. Mas faz se
 
 Provavelmente designer esqueceu de bumpar Medium pra `font-size/md` (16px). Confirmar com você.
 
-#### P2-4. Modal Footer button heights — não escalam no CSS
+#### ~~P2-4. Modal Footer button heights~~ → RECLASSIFICADO como WONTFIX (decisão consciente)
 
 | Size | Figma button height |
 |---|---|
@@ -184,7 +184,9 @@ Provavelmente designer esqueceu de bumpar Medium pra `font-size/md` (16px). Conf
 | Medium | `size/xl` (40px) — md |
 | Large | `size/2xl` (48px) — lg |
 
-CSS não força tamanho de Button quando dentro de Modal. Provavelmente OK (consumidor controla qual classe de Button passar). Mas Figma sugere padrão.
+CSS não força tamanho de Button quando dentro de Modal — **decisão correta**. Consumidor controla via `.ds-btn--sm/--lg` quando renderiza o footer. Material/Polaris seguem mesmo padrão; Ant Design força mas é exceção. Figma prescreve sm/md/lg como **recomendação visual** pra mockups, não como CSS constraint.
+
+Decisão: **wontfix**. Mantém padrão de indústria; consumer-driven sizing.
 
 #### P2-5. Spinner `--on-color` — variant só no CSS
 

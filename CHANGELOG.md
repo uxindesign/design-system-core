@@ -24,6 +24,8 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 
 - **Description + Helper Text adicionados em Checkbox/Radio/Toggle (CSS).** Figma já tinha esses como slots opt-in (boolean `Show Description`/`Show Helper Text`); CSS implementava só Label. Agora os 3 componentes ganham wrapper item (`.ds-checkbox-item`, `.ds-radio-item`, `.ds-toggle-item`) com flex column + classes filhas `__description` (sm + regular + content/strong) e `__helper` (xs + regular + content/default). Indent calculado pra alinhar com label, passando o control + gap. Resolve P2-2 da auditoria.
 
+- **P2-4 (Modal Footer button heights) reclassificado como wontfix.** Modal CSS não força size de Button (decisão consciente, padrão Material/Polaris). Consumer controla via `.ds-btn--sm/--lg`. Figma prescreve sm/md/lg como recomendação visual pra mockups, não como CSS constraint.
+
 - **P2-1 (letter-spacing morto sistêmico) reclassificado como wontfix.** Investigação revelou que `css/base/reset.css:82` aplica `letter-spacing: var(--ds-body-letter-spacing-normal)` globalmente; todo texto herda via cascade. Figma bindings explícitos são redundantes mas não causam drift visual. Limpar ~600+ bindings sem ganho visual não justifica o trabalho. Modal Large title é exceção (tight, fix em P1-4).
 
 - **Breadcrumb Item Link agora usa `link.content-default`** (era `primary.background.default`, token de background usado como text). Adicionado `:hover` → `link.content-hover` e `:active` → `link.content-active` no CSS. Figma rebindado via `use_figma` no Label do State=Link. Resolve P1-8 da auditoria.
