@@ -453,6 +453,11 @@
           "$type": "duration",
           "$value": "{foundation.duration.slow}",
           "$description": "300ms."
+        },
+        "slower": {
+          "$type": "duration",
+          "$value": "{foundation.duration.slower}",
+          "$description": "600ms. Loops contínuos (Spinner). Não usar pra transições de estado — para isso, fast/normal/slow."
         }
       },
       "ease": {
@@ -460,6 +465,11 @@
           "$type": "cubicBezier",
           "$value": "{foundation.ease.default}",
           "$description": "Curva padrão."
+        },
+        "linear": {
+          "$type": "cubicBezier",
+          "$value": "{foundation.ease.linear}",
+          "$description": "Curva linear (velocidade constante). Para loops como Spinner. Não usar pra transições de estado — para isso, ease.default."
         }
       }
     },

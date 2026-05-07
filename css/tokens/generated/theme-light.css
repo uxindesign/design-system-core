@@ -96,7 +96,9 @@
   --ds-motion-duration-fast: var(--ds-duration-fast); /** 150ms. Transições rápidas (hover, focus, active). */
   --ds-motion-duration-normal: var(--ds-duration-normal); /** 200ms. Padrão pra transições de estado. */
   --ds-motion-duration-slow: var(--ds-duration-slow); /** 300ms. Animações enfáticas (entrada de overlay, etc). */
+  --ds-motion-duration-slower: var(--ds-duration-slower); /** 600ms. Loops contínuos (Spinner). Não usar pra transições de estado — para isso, fast/normal/slow. */
   --ds-motion-ease-default: var(--ds-ease-default); /** Curva padrão pra transições UI. */
+  --ds-motion-ease-linear: var(--ds-ease-linear); /** Curva linear (velocidade constante). Para loops como Spinner. Não usar pra transições de estado — para isso, ease.default. */
   --ds-space-2xs: var(--ds-dimension-2); /** 2px */
   --ds-space-xs: var(--ds-dimension-4); /** 4px */
   --ds-space-sm: var(--ds-dimension-8); /** 8px */

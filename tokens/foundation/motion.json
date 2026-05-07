@@ -13,6 +13,11 @@
       "slow": {
         "$value": "300ms",
         "$type": "duration"
+      },
+      "slower": {
+        "$value": "600ms",
+        "$type": "duration",
+        "$description": "600ms. Loops contínuos (Spinner) e animações enfáticas longas."
       }
     },
     "ease": {
@@ -52,6 +57,16 @@
           1
         ],
         "$type": "cubicBezier"
+      },
+      "linear": {
+        "$value": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "$type": "cubicBezier",
+        "$description": "Curva linear. Para loops onde velocidade constante é necessária (Spinner)."
       }
     }
   }

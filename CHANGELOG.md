@@ -10,6 +10,13 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 
 ### Corrigido
 - Referências órfãs de tokens de cor (`content-secondary`, `content-tertiary`) no `index.html` que causavam falha no pipeline de CI.
+- **Spinner: nova rotação tokenizada (`motion-duration-slower` + `motion-ease-linear`)**, em vez do `0.6s linear` literal. Tokens criados pra cobrir o caso de loops contínuos que `motion-duration.{fast,normal,slow}` (150-300ms, transições de estado) não atende. Doc `foundations-motion.html` já documentava `slower=600ms` e `ease.linear` mas JSON estava sem — agora alinhado:
+  - `foundation.duration.slower = 600ms`
+  - `foundation.ease.linear = [0,0,1,1]`
+  - `semantic.motion.duration.slower → {foundation.duration.slower}`
+  - `semantic.motion.ease.linear → {foundation.ease.linear}`
+  - Registry com 4 entries novas; per ADR-016 (motion CSS-only) edição direta no JSON é legítima.
+
 - **Spinner: revertido animation duration/timing para `0.6s linear`.** Em rodada anterior eu (Claude) tinha trocado por `motion-duration-slow` (300ms) + `motion-ease-default`, semantizando indevidamente. Resultado: rotação 2x mais rápida e oscilante (ease quebra rotação constante). Tokens `motion.duration.*` são pra transições de estado (150-300ms), não pra loops contínuos. Spinner precisa de literal `0.6s linear` por design — comentário adicionado no CSS explicando.
 - **Field paddings horizontais descem um nível em Input/Select/Textarea.** User feedback: paddings laterais aparentavam maiores que deveriam. Aplicado em Figma + CSS:
   - sm: `space.md` (12) → `space.sm` (8)

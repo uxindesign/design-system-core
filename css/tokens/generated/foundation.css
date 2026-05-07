@@ -178,10 +178,12 @@
   --ds-duration-fast: 150ms;
   --ds-duration-normal: 200ms;
   --ds-duration-slow: 300ms;
+  --ds-duration-slower: 600ms; /** 600ms. Loops contínuos (Spinner) e animações enfáticas longas. */
   --ds-ease-default: cubic-bezier(0.4, 0, 0.2, 1);
   --ds-ease-in: cubic-bezier(0.4, 0, 1, 1);
   --ds-ease-out: cubic-bezier(0, 0, 0.2, 1);
   --ds-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ds-ease-linear: cubic-bezier(0, 0, 1, 1); /** Curva linear. Para loops onde velocidade constante é necessária (Spinner). */
   --ds-opacity-5: 0.05;
   --ds-opacity-10: 0.1;
   --ds-opacity-25: 0.25;

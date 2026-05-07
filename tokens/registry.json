@@ -9939,6 +9939,70 @@
         "tokens": [],
         "figma": []
       }
+    },
+    "foundation.duration.slower": {
+      "layer": "foundation",
+      "type": "duration",
+      "references": null,
+      "sentido": "600ms. Loops contínuos (Spinner) e animações enfáticas longas.",
+      "escopo": [
+        "transition"
+      ],
+      "contexto": "Consumido via semantic.motion.duration.slower. Não usar pra transições de estado.",
+      "decisao": "Doc foundations-motion.html já documentava — token criado em 2026-05-07 alinhando JSON com doc.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "foundation.ease.linear": {
+      "layer": "foundation",
+      "type": "cubicBezier",
+      "references": null,
+      "sentido": "Curva linear (velocidade constante).",
+      "escopo": [
+        "transition"
+      ],
+      "contexto": "Consumido via semantic.motion.ease.linear. Para loops contínuos onde aceleração quebra a percepção (Spinner).",
+      "decisao": "Doc foundations-motion.html já documentava como [0,0,1,1].",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.motion.duration.slower": {
+      "layer": "semantic",
+      "type": "duration",
+      "references": "{foundation.duration.slower}",
+      "sentido": "600ms para loops contínuos.",
+      "escopo": [
+        "transition"
+      ],
+      "contexto": "Spinner principalmente; quaisquer outros loops que precisem de duração maior que 300ms.",
+      "decisao": "ADR-016 (motion CSS-only). Edição direta no JSON é legítima.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.motion.ease.linear": {
+      "layer": "semantic",
+      "type": "cubicBezier",
+      "references": "{foundation.ease.linear}",
+      "sentido": "Curva linear pra loops onde aceleração quebra rotação constante.",
+      "escopo": [
+        "transition"
+      ],
+      "contexto": "Spinner. ease.default tem curva, errado pra loop.",
+      "decisao": "ADR-016 (motion CSS-only).",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
     }
   }
 }

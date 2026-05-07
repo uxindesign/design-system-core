@@ -1,10 +1,10 @@
 {
   "version": "1.0.0-beta.4",
   "totals": {
-    "jsonTokens": 594,
-    "sharedTokens": 262,
-    "lightTokens": 166,
-    "darkTokens": 166,
+    "jsonTokens": 600,
+    "sharedTokens": 264,
+    "lightTokens": 168,
+    "darkTokens": 168,
     "errors": 0,
     "warnings": 0
   },
@@ -26,7 +26,7 @@
         "DRIFT_FROM_SOURCE": 0,
         "ALIAS_BROKEN": 0,
         "CSS_ONLY": 7,
-        "BY_DESIGN": 106
+        "BY_DESIGN": 110
       },
       "divergences": [],
       "diffs": {
@@ -553,9 +553,21 @@
           },
           {
             "file": "semantic/light.json",
+            "token": "semantic.motion.duration.slower",
+            "side": "json-only",
+            "json": "{foundation.duration.slower}"
+          },
+          {
+            "file": "semantic/light.json",
             "token": "semantic.motion.ease.default",
             "side": "json-only",
             "json": "{foundation.ease.default}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.motion.ease.linear",
+            "side": "json-only",
+            "json": "{foundation.ease.linear}"
           },
           {
             "file": "semantic/light.json",
@@ -720,9 +732,21 @@
           },
           {
             "file": "semantic/dark.json",
+            "token": "semantic.motion.duration.slower",
+            "side": "json-only",
+            "json": "{foundation.duration.slower}"
+          },
+          {
+            "file": "semantic/dark.json",
             "token": "semantic.motion.ease.default",
             "side": "json-only",
             "json": "{foundation.ease.default}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.motion.ease.linear",
+            "side": "json-only",
+            "json": "{foundation.ease.linear}"
           },
           {
             "file": "semantic/dark.json",
