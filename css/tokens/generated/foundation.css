@@ -175,13 +175,16 @@
   --ds-dimension-800: 50rem; /** 800px — layout scale */
   --ds-dimension-1024: 64rem; /** 1024px — layout scale */
   --ds-dimension-1280: 80rem; /** 1280px — layout scale */
-  --ds-duration-fast: 150ms;
-  --ds-duration-normal: 200ms;
-  --ds-duration-slow: 300ms;
-  --ds-ease-default: cubic-bezier(0.4, 0, 0.2, 1);
-  --ds-ease-in: cubic-bezier(0.4, 0, 1, 1);
-  --ds-ease-out: cubic-bezier(0, 0, 0.2, 1);
-  --ds-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ds-duration-instant: 0ms; /** 0ms. Sem animação (raro — sobrescrever em prefers-reduced-motion ou disable explícito). */
+  --ds-duration-fast: 150ms; /** 150ms. Transições rápidas (hover, focus, active). */
+  --ds-duration-moderate: 250ms; /** 250ms. Transições de estado mais elaboradas (toggle, drawer, expand/collapse). */
+  --ds-duration-slow: 400ms; /** 400ms. Animações enfáticas (entrada de overlay, modal, popover). */
+  --ds-duration-slower: 600ms; /** 600ms. Loops contínuos (Spinner) e animações enfáticas longas. */
+  --ds-ease-default: cubic-bezier(0.4, 0, 0.2, 1); /** Curva padrão pra transições UI. Mesmo valor de in-out — alias de conveniência. */
+  --ds-ease-in: cubic-bezier(0.4, 0, 1, 1); /** Aceleração no início, sem desaceleração. Use pra elementos saindo da tela. */
+  --ds-ease-out: cubic-bezier(0, 0, 0.2, 1); /** Sem aceleração, desaceleração no final. Use pra elementos entrando na tela. */
+  --ds-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1); /** Aceleração + desaceleração. Padrão Material; mesmo valor de default. */
+  --ds-ease-linear: cubic-bezier(0, 0, 1, 1); /** Curva linear (velocidade constante). Para loops onde aceleração quebra a percepção (Spinner). */
   --ds-opacity-5: 0.05;
   --ds-opacity-10: 0.1;
   --ds-opacity-25: 0.25;

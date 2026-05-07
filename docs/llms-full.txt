@@ -50,6 +50,7 @@ Links rápidos:
 - [Decisões (ADRs)](./docs/decisions/)
 - [Changelog](./CHANGELOG.md)
 - [Como contribuir](./CONTRIBUTING.md)
+- [Instruções para agentes IA](./AGENTS.md) — canônico (Claude Code, Codex, Gemini, Cursor, etc.)
 
 ## Licença
 
@@ -63,6 +64,8 @@ Licença proprietária. Todos os direitos reservados. Ver [LICENSE](./LICENSE).
 # Como contribuir
 
 Obrigado pelo interesse em contribuir com o Design System Core. Este documento é curto de propósito. Para contexto profundo, consulte a [documentação](https://uxindesign.github.io/design-system-core/).
+
+> **Usando uma IA para contribuir?** Comece por [`AGENTS.md`](./AGENTS.md) — fonte canônica de instruções para qualquer agente (Claude Code, Codex, Gemini, Cursor, Aider). Cobre forbidden actions, source of truth por categoria, workflows, e protocol de verificação. Adições por agente: [`CLAUDE.md`](./CLAUDE.md), [`GEMINI.md`](./GEMINI.md).
 
 ## Setup local
 
@@ -131,7 +134,12 @@ Formato:
 
 ## Pipeline de tokens
 
-Tokens vivem em `tokens/**/*.json` (formato DTCG) e são a fonte de verdade. `build-tokens.mjs` transforma em CSS custom properties prefixadas com `--ds-*` em `css/tokens/generated/`. O CSS dos 19 componentes em `css/components/*.css` consome essas variáveis. **Não edite os arquivos em `css/tokens/generated/` à mão.** Eles são regenerados no CI em cada push pra `main`.
+Tokens vivem em `tokens/**/*.json` (formato DTCG). `build-tokens.mjs` transforma em CSS custom properties prefixadas com `--ds-*` em `css/tokens/generated/`. O CSS dos 19 componentes em `css/components/*.css` consome essas variáveis. **Não edite os arquivos em `css/tokens/generated/` à mão.** Eles são regenerados no CI em cada push pra `main`.
+
+**Fonte de verdade dos tokens depende da categoria** (ver [ADR-003](./docs/decisions/ADR-003-fontes-verdade.md) e [ADR-016](./docs/decisions/ADR-016-tokens-sem-equivalencia-no-figma.md)):
+
+- **Figma é fonte** para categorias com Variable nativa: `color`, `dimension`, `radius`, `opacity`, `border-width`, `typography`. Edite no Figma, rode `npm run sync:tokens-from-figma:write` para propagar pro JSON.
+- **JSON é fonte** para categorias CSS-only sem equivalência Figma: `motion.*`, `z.*`, `shadow.*`. Edite o JSON direto e rode `npm run build:tokens`.
 
 Detalhes completos em [docs/token-architecture.html](./docs/token-architecture.html) e [ADR-001](./docs/decisions/ADR-001-migracao-tokens.md).
 
@@ -196,7 +204,120 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 
 ## [Não publicado]
 
+### Corrigido
+- **Required asterisk de Input Text, Select e Textarea usa token semântico de conteúdo de erro.** Figma rebindado em 48 nós `Required` (`12` Input Text, `18` Select, `18` Textarea) de `feedback/error/background/default` para `feedback/error/content/default`. CSS compartilhado `.ds-field__required`, `.ds-field__error` e `.ds-field--error .ds-field__label` agora consome `--ds-feedback-error-content-default`, evitando token de background como cor de texto. Resolve #20 / P3-3 da auditoria Figma↔Repo.
+- Referências órfãs de motion em docs (`--ds-duration-normal`) substituídas por `--ds-duration-moderate`, alinhando `foundations-motion.html` e `docs/layout.css` à escala atual (`instant/fast/moderate/slow/slower`) e liberando `npm test`.
+- Referências órfãs de tokens de cor (`content-secondary`, `content-tertiary`) no `index.html` que causavam falha no pipeline de CI.
+- **Alert Subtle icon glyph tematizado por feedback** (Success/Warning/Error/Info). Antes: ícone inheritava `color: content-default` do wrapper — saía cinza, sem distinção visual. Agora segue Figma: glyph usa `feedback/X/content/default` em CSS + Figma rebindado de `feedback/X/background/default` (token de bg usado como text — uso semanticamente errado, mesmo padrão de P1-2). 4 variants Figma rebindadas via `use_figma`. Resolve P2-6.
+
+- **Doc ↔ JSON drift check em `verify:tokens`** (`scripts/lib/doc-token-drift.mjs`). Detecta automaticamente quando doc descreve tokens/valores que JSON não tem — exatamente o sintoma que escondeu a drift de motion por meses. Categorias: `DOC_ONLY_TOKEN` (error — doc cita token inexistente), `VALUE_MISMATCH` (warning — doc e JSON com valores diferentes), `JSON_ONLY_TOKEN` (info). Roda automaticamente em `npm run verify:tokens`. Limpou 3 drifts pré-existentes durante implementação:
+  - `foundation.border.width.0` removido de `foundations-borders.html` (token zero eliminado em 0.7.0).
+  - `foundation.opacity.0` removido de `foundations-opacity.html` (idem).
+  - `foundation.radius.9999` em `foundations-radius.html` corrigido pra `999` (typo histórico).
+
+- **Motion completo: JSON alinhado com doc `foundations-motion.html`** (eliminada drift histórica). Antes: doc descrevia 5 durations × 5 easings; JSON tinha 3 durations × 1 ease com nomes/valores divergentes. Agora alinhado:
+  - **Durations** (foundation + semantic): `instant` (0ms), `fast` (150ms), `moderate` (250ms — substitui `normal=200`, renomeado + recalibrado), `slow` (400ms — recalibrado de 300), `slower` (600ms).
+  - **Easings** (foundation já tinha; semantic estava só com `default`): `default`, `in`, `out`, `in-out`, `linear` (5 curves).
+  - **Removidos**: `foundation.duration.normal` e `semantic.motion.duration.normal` (zero consumers em CSS — eram tokens órfãos).
+  - **Impacto em consumers**: zero — todos os 30 usos em CSS de componente eram `motion-duration-fast` (mesmo valor 150ms) e 1 de `motion-duration-slower` (Spinner). `normal` e `slow` (antigo 300) tinham 0 usos.
+  - Registry atualizado com 8 entries novas + 3 ajustes; per ADR-016 (motion CSS-only) edição direta no JSON é legítima.
+
+- **Spinner: nova rotação tokenizada (`motion-duration-slower` + `motion-ease-linear`)**, em vez do `0.6s linear` literal. Tokens criados pra cobrir o caso de loops contínuos que `motion-duration.{fast,normal,slow}` (150-300ms, transições de estado) não atende. Doc `foundations-motion.html` já documentava `slower=600ms` e `ease.linear` mas JSON estava sem — agora alinhado:
+  - `foundation.duration.slower = 600ms`
+  - `foundation.ease.linear = [0,0,1,1]`
+  - `semantic.motion.duration.slower → {foundation.duration.slower}`
+  - `semantic.motion.ease.linear → {foundation.ease.linear}`
+  - Registry com 4 entries novas; per ADR-016 (motion CSS-only) edição direta no JSON é legítima.
+
+- **Spinner: revertido animation duration/timing para `0.6s linear`.** Em rodada anterior eu (Claude) tinha trocado por `motion-duration-slow` (300ms) + `motion-ease-default`, semantizando indevidamente. Resultado: rotação 2x mais rápida e oscilante (ease quebra rotação constante). Tokens `motion.duration.*` são pra transições de estado (150-300ms), não pra loops contínuos. Spinner precisa de literal `0.6s linear` por design — comentário adicionado no CSS explicando.
+- **Field paddings horizontais descem um nível em Input/Select/Textarea.** User feedback: paddings laterais aparentavam maiores que deveriam. Aplicado em Figma + CSS:
+  - sm: `space.md` (12) → `space.sm` (8)
+  - md: `space.lg` (16) → `space.md` (12)
+  - lg: `space.xl` (20) → `space.lg` (16)
+  - Figma: 108 paddings rebindados (Input Text, Select, Textarea × 3 sizes × variants).
+  - CSS: input.css, select.css, textarea.css atualizados.
+  - Verticais ficam como estão.
+
 ### Adicionado
+
+- **ADR-018 — Renomear `content.{default,secondary,tertiary}` para `content.{strong,default,subtle}`.** Único conjunto de tokens do DS com naming ordinal foi alinhado ao vocabulário descritivo das demais categorias (`border.{strong,default,subtle}`, `surface.*`, `background.*`). Strict rename — valores 100% preservados, só nomes mudaram. Migração: keys em `tokens/semantic/{light,dark}.json`, entries em `tokens/registry.json`, `--ds-content-*` em CSS de componente/base e em HTMLs/MDs de docs (sed-replace via 3 passos com placeholder pra evitar clash), Variables `content/{default,secondary,tertiary}` na collection Semantic do Figma via `use_figma` (bindings auto-seguem por ID). `npm run build:tokens` + `build:api` + `sync:docs` regeneram derivados. Decisão tomada durante #4 P1-1 da auditoria Figma↔Repo, quando `content/secondary` apareceu como text token do Badge Neutral Subtle.
+
+- **ADR-017 — Componentes CSS-only (sem equivalência no Figma).** Análogo de ADR-016 para componentes. Codifica que **Form Field** (`css/components/form-field.css`) existe só no CSS porque HTML não tem elemento "form control" composto — precisamos compor `<label>` + control + helper + error com IDs e ARIA. Cada componente Figma de form (Input Text, Select, Textarea, Checkbox, Radio, Toggle) já carrega Label + Required + Helper + Description inline em cada variant; authorar Form Field no Figma criaria duplicação. Auditorias Figma↔Repo devem ignorar componentes marcados `cssOnly: true` ao reportar "faltando no Figma". Propagado para: `scripts/sync-docs.mjs` (`knownComponents` ganha flag `cssOnly`; tabela de inventário mostra "— (CSS-only, ADR-017)" em vez de status Figma; nota explicativa adicionada), `docs/component-inventory.md` (regerada), `css/components/form-field.css` (comentário no topo), `AGENTS.md` (seção dedicada após source of truth de tokens), `audit/audit-report.md` (P0-3 reclassificado).
+- **Plugin local `figma-plugin/snapshot-exporter` para exportar `.figma-snapshot.json` direto do Figma.** MVP seguro antes de webhook/PR automático: lê Variables locais via Plugin API, preserva collections, modes, aliases e metadados mínimos, permite baixar/copiar o snapshot no formato já consumido por `scripts/sync-tokens-from-figma.mjs`. `docs/process-figma-sync.md` passa a tratar o plugin como caminho preferencial e MCP como fallback.
+
+### Corrigido
+
+- **Avatar Initials font-size escala 14/16/20 com weight matching (sm/md/lg).** Antes: Md tinha mesma font-size do Sm (14) — bug Figma. Lg tinha drift CSS (font-lg=18 vs Figma font-xl=20) e weight diferente (CSS bold vs Figma semibold). Aplicado:
+  - Figma: Avatar Initials Medium fontSize → `typography/body/font-size/md` (16) via `use_figma`.
+  - CSS: `.ds-avatar` default md `font-sm → font-md`; `.ds-avatar--lg font-lg → font-xl + font-weight semibold`.
+  - Resolve P2-3 da auditoria.
+
+- **Description + Helper Text adicionados em Checkbox/Radio/Toggle (CSS).** Figma já tinha esses como slots opt-in (boolean `Show Description`/`Show Helper Text`); CSS implementava só Label. Agora os 3 componentes ganham wrapper item (`.ds-checkbox-item`, `.ds-radio-item`, `.ds-toggle-item`) com flex column + classes filhas `__description` (sm + regular + content/strong) e `__helper` (xs + regular + content/default). Indent calculado pra alinhar com label, passando o control + gap. Resolve P2-2 da auditoria.
+
+- **P2-5 (Spinner --on-color) reclassificado como falso positivo.** Re-dump completo mostra Figma TEM `Style=On Color` (sm/md/lg) com tokens batendo 1:1 com CSS (`overlay/medium` + `border/inverse`). Auditoria original amostrou só `Style=Default, Size=Small` — conclusão errada. Sistema correto.
+
+- **P2-4 (Modal Footer button heights) reclassificado como wontfix.** Modal CSS não força size de Button (decisão consciente, padrão Material/Polaris). Consumer controla via `.ds-btn--sm/--lg`. Figma prescreve sm/md/lg como recomendação visual pra mockups, não como CSS constraint.
+
+- **P2-1 (letter-spacing morto sistêmico) reclassificado como wontfix.** Investigação revelou que `css/base/reset.css:82` aplica `letter-spacing: var(--ds-body-letter-spacing-normal)` globalmente; todo texto herda via cascade. Figma bindings explícitos são redundantes mas não causam drift visual. Limpar ~600+ bindings sem ganho visual não justifica o trabalho. Modal Large title é exceção (tight, fix em P1-4).
+
+- **Breadcrumb Item Link agora usa `link.content-default`** (era `primary.background.default`, token de background usado como text). Adicionado `:hover` → `link.content-hover` e `:active` → `link.content-active` no CSS. Figma rebindado via `use_figma` no Label do State=Link. Resolve P1-8 da auditoria.
+
+- **Select chevron + leading icon escalam por size (sm=20, md/lg=24)** alinhando ao padrão do Button glyph. Antes: chevron sempre 16px no CSS; Figma chevron glyph hardcoded 16/20/24 (um step menor que Button). Agora ambos seguem 20/24/24:
+  - Figma: 18 chevron glyph TEXT nodes rebindados via `use_figma` — sm → `size/sm`, md/lg → `size/md`.
+  - CSS `.ds-select__arrow`: default md = 24px, sm = 20px, lg = sem override (usa default).
+  - CSS `.ds-select__icon` (leading icon): mesma escala.
+  - Resolve P1-7 da auditoria.
+
+- **Input + Select Field text em size Small alinhados ao Figma**: font-size `body/sm` (14px) → `body/xs` (12px) + line-height `body/sm` → `body/2xs`. Textarea já estava alinhado (Figma sm = 14px). Resolve P1-6 da auditoria.
+
+- **Modal body agora escala typography por size** (espelha Figma): sm → `font-size sm + line-height sm`, md → `font-size md + line-height md`, lg → `font-size lg + line-height xl`. Antes `.ds-modal__body` era estático em sm/md mistura. Resolve P1-5 da auditoria.
+
+- **Modal Large title agora aplica `letter-spacing/tight`** (espelha binding do Figma). Para títulos grandes (3xl), tight letter-spacing otimiza legibilidade visual. Resolve P1-4 da auditoria.
+
+- **Button: glyph icon escala por size (sm=20, md/lg=24) + Icon Only com padding simétrico.** Antes: glyph hardcoded em todas as variants (boundVar=null), Icon Only com `padding: 0` e paddings assimétricos no Figma (pl/pr ≠ pt/pb). Agora:
+  - **Glyph fontSize bindado** em 270 nodes via `use_figma`: sm Buttons → `size/sm` (20), md/lg Buttons → `size/md` (24).
+  - **Icon Only paddings simétricos** em 108 variants Figma: sm → `space/control/padding/6` (6px), md → `space/sm` (8px), lg → `space/md` (12px). Cálculo: (button - icon) / 2 centraliza icon.
+  - **Token novo: `semantic.space.control.padding.6`** (alias `foundation.dimension.6`) — único valor entre `xs` (4) e `sm` (8) na escala. Segue padrão de `space.control.padding.10` (ADR-006/015).
+  - **CSS atualizado**: `.ds-btn__icon` default 20→24, sm 16→20, lg sem mudança. Material Symbols glyph idem. `.ds-btn--icon-only` ganha paddings por size em vez de `padding: 0`.
+  - Decidido como P1-3 da auditoria.
+
+- **Badge Subtle (Success/Warning/Error/Info): Figma rebindado de `feedback/X/background/default` para `feedback/X/content/default` na cor do Label.** Figma usava token de **background** como cor de texto — uso semanticamente errado da Variable. CSS já consumia `feedback-X-content-default` (correto, com calibração WCAG pra texto). Rebind via `use_figma` em 4 variants (Success Subtle, Warning Subtle, Error Subtle, Info Subtle). Resolve P1-2 e mantém paralelismo com Solid: Solid usa `content/contrast` (texto sobre fundo escuro), Subtle usa `content/default` (texto sobre fundo claro).
+
+- **Badge Neutral Subtle alinhado ao Figma** — CSS estava usando `background-disabled` (semanticamente errado pra um Neutral) e sem stroke. Agora usa `surface-default` + `content-default` + `border-default` (1px), espelhando exatamente o que Figma binda. Stroke é o que distingue Subtle de Solid no Neutral (ambos compartilham `surface-default`). Decidido como item P1-1 da auditoria.
+
+- **Badge Neutral Solid alinhado ao Figma** — CSS estava usando `border-strong` + `content-inverse` (fundo escuro + texto claro), enquanto Figma binda `surface/default` + `content/default` (fundo claro + texto escuro). Inversão visual entre design e produto. CSS atualizado pra espelhar Figma. Decidido como item P0-1 da auditoria.
+
+### Removido
+
+- **Badge Secondary (Solid + Subtle) eliminado** — não temos mais cores secundárias no DS, então a variante perdeu propósito. Remoção aplicada em `css/components/badge.css` (regras `.ds-badge--secondary.ds-badge--solid` e `.ds-badge--secondary.ds-badge--subtle`), `docs/badge.html` (preview, code snippet e tabela de classes), `.a11y-baseline.json` (fingerprints de contraste light/dark), e Figma (variants `Color=Secondary, Style=Solid` e `Color=Secondary, Style=Subtle` removidas — Badge component agora tem 12 variants em vez de 14). Decidido como item P0-2 da auditoria Figma↔Repo.
+
+### Adicionado
+
+- **`AGENTS.md` na raiz — fonte canônica multi-IA.** Adota o padrão emergente [agents.md](https://agents.md/) (OpenAI Codex, Cursor, Aider, Sourcegraph Amp, Factory, Jules) para que qualquer agente IA — não só Claude Code — saiba como operar no repo. Cobre forbidden actions (top, scannable), source of truth por categoria de token (Figma-canônica vs CSS-only ADR-016), workflows comuns (adicionar token, refatorar componente, sync Figma→JSON, criar ADR), verification protocol antes de commit, convenções de commit/branch/PR, glossário, e ordem de consulta para dúvidas.
+- **`GEMINI.md` na raiz** — pointer fino para `AGENTS.md` + adições específicas do Gemini CLI (limitações sem MCP Figma/GitHub direto, co-author de commit).
+- **`CLAUDE.md` refatorado** para pointer fino + Claude-specifics (MCPs Figma/GitHub, gotchas Plugin API, skills relevantes, precedência de instruções repo vs memória). Conteúdo transversal migrado para `AGENTS.md`.
+- **`scripts/agent-preflight.mjs` + `npm run agent:preflight`** — sanity check rodável como primeira ação de uma sessão. Reporta branch, dirty/clean, ahead/behind, idade do `.figma-snapshot.json`, último resultado de `verify:tokens` (lido de `docs/api/tokens-sync.json`), estado do `[Não publicado]` no CHANGELOG, e versão atual. Não bloqueia — informa o que precisa de atenção antes de qualquer escrita. Documentado na seção 0 de AGENTS.md como obrigatório.
+- **README e CONTRIBUTING apontam para AGENTS.md** — entry no índice de docs do README + nota de abertura no CONTRIBUTING para colaboradores que estão usando IA.
+- **Gotchas de Figma authoring migrados para CLAUDE.md** (Plugin API): `COMPONENT_SET` precisa de `clipsContent=false` + size que abrace focus rings/drop shadows; não ativar `clipsContent=true` em frames de componente sem necessidade. Antes vivia só em memória user-level do Claude — agora documentado no repo.
+- **ADR-016 — Tokens sem equivalência no Figma (CSS-only).** Codifica que `motion.*` (duration + ease), `z.*` (z-index) e `shadow.*` vivem só em JSON porque Figma não as representa como Variables (Smart Animate é runtime, layer order não é z-index, shadow é Effect Style não-bindável). JSON é fonte de verdade para essas categorias; edição direta é permitida e esperada. Para todas as outras (`color`, `dimension`, `radius`, `opacity`, `border-width`, `typography` etc.), vale a regra padrão de ADR-003 (Figma é fonte). Critério de carve-out: nenhuma representação Figma OU representação não-bindável (Effect Style). `sync:tokens-from-figma` ignora essas categorias ao reportar `MISSING_IN_FIGMA`. Propagado para `CLAUDE.md` (regra operacional 1), `docs/system-principles.md` (hierarquia de verdade), `docs/token-architecture.html` (nova seção), `CONTRIBUTING.md` (pipeline de tokens) e `docs/process-figma-sync.md` (categoria BY_DESIGN).
+- **Token semantic novo: `z.tooltip` → `{foundation.z.40}`.** Light + dark (mode-invariant). CSS gerado: `--ds-z-tooltip`. Consumido por `tooltip.css` em substituição ao `z-index: 40` literal anterior. Edição direta no JSON é legítima sob ADR-016.
+
+### Mudado
+
+- **Documentação consolidada para arquitetura 2-layer (Foundation → Semantic).** Remoção de referências stale à camada Component, deletada em 0.7.0 mas ainda mencionada em vários lugares:
+  - `README.md` — versão atualizada de 0.5.14 → 1.0.0-beta.4 (alinha com `package.json`); descrição "três temas" → "paleta brand única customizável"; "18 componentes" → "19"; "11 ADRs" → "15".
+  - `docs/decisions/ADR-013-camadas-de-consumo-de-tokens.md` (+ HTML regerado) — reescrita refletindo 2-layer; remove cadeia de Component, atualiza exemplos e exceções para o estado vigente.
+  - `docs/system-principles.md` — seção "três camadas" → "duas camadas"; tabela de fontes de verdade limpa; texto sobre when-to-create token simplificado.
+  - `docs/token-schema.md` — remove linha Component da tabela de camadas; renumera "Regras invioláveis" para incluir "text styles autoritários para tipografia".
+  - `docs/process-figma-sync.md` — "4 collections" → "2 collections" (Foundation, Semantic).
+  - `docs/component-inventory.md` — coluna "Tokens JSON" removida; Component count removido; nota de binding ajustada.
+  - `docs/token-architecture.html` — corrige nomes de tokens stale (`--ds-dimension-20`/`--ds-font-size-14` → `--ds-space-xl`/`--ds-body-font-size-sm`; `primary.bg-hover` → `primary.background.hover`; `size.avatar.md` → `size.lg`).
+  - `docs/llms.txt` + `docs/llms-full.txt` + `scripts/build-llms.mjs` — descrição "três temas" → "paleta brand única"; "três camadas" → "2-layer".
+  - `scripts/sync-docs.mjs` — para de gerar seção Component em `token-schema.md`.
+- **Card `--elevated` agora usa `surface-raised` em vez de border subtle**, espelhando o componente Figma (raised surface + semantic card shadow, sem stroke).
+- **Modal**: remove border default; tamanho `--lg` agora usa `layout-lg` (era duplicata de `md`); título escala por size (xl/2xl/3xl) com line-heights pareados.
+- **Spinner**: consome `border-width-strong`, `border-brand`, `motion-duration-slow` + `motion-ease-default`, `opacity-disabled`. Variante nova `--on-color` para uso sobre fundos de marca (overlay-medium + border-inverse). Remove valores `border-width: 1.5px/3px` hardcoded.
+- **Tooltip**: consome `--ds-z-tooltip` (novo, ver Adicionado), `--ds-primary-content-default` para foreground, e `--ds-space-xs/sm` no lugar dos `4px/6px` literais nas setas.
 
 - **`docs/foundations-colors.html` agora exibe contraste WCAG por swatch no formato Figma.** Cada swatch das 10 paletas Foundation + Brand alias mostra `vs White X.X:1` e `vs Black X.X:1` com badge `AAA / AA / AA Large / Fail` — paridade com a página Foundation — Colors do Figma. Layout do swatch redesenhado pra card com info section (token name, hex, divider, duas linhas de contraste). Razões WCAG calculadas deterministicamente a partir do Foundation JSON (formula 2.1) e validadas contra os valores reportados no Figma (zero divergência). Hex hardcodados (`style="background-color:#XXX"`) substituídos por `var(--ds-color-...)` em todos os swatches — referência direta à Foundation, sem drift entre página e tokens.
 - **Cobertura de overlay/disabled na página Foundation Colors.** Adicionadas seções "Overlays" (Black/White × {5,10,20,40,60,80}%), "Toned overlays (Brand)" (blue-600 × {12,20,28}, blue-400 × {15,25,32}) e "Disabled fills" ({brand,success,error} × {light,dark}) — antes a página só mostrava 5 stops de Black overlay e omitia White, toned e disabled, criando gap entre `tokens/foundation/colors.json` e o que a doc exibe. Renderizadas sobre xadrez pra indicar transparência. Seção "Brand (alias customizável)" também adicionada.
@@ -833,10 +954,10 @@ Consolidação da documentação como fonte única de verdade. Plano em seis fas
 
 # Índice de ADRs — Design System Core
 
-> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-30. Não editar manualmente.
+> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-05-07. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
 
-15 decisões registradas.
+18 decisões registradas.
 
 | ADR | Título | Status | Data |
 |-----|--------|--------|------|
@@ -855,6 +976,9 @@ Consolidação da documentação como fonte única de verdade. Plano em seis fas
 | [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) | Camadas de consumo de tokens — Foundation nunca direto em consumidor final | Aceita — implementada em 0.7.0 (Component layer eliminada) e fechada em 1.0.0-beta.1 (0 leaks Foundation em `css/components/*.css` e `css/base/*.css`) | 2026-04-22 |
 | [ADR-014](decisions/ADR-014-action-tokens-role-style.md) | Reestruturação Semantic em `action` × `style` × `prop` × `state` — eliminação de brand/accent e themes | Aceita — implementada em 0.7.0 e estabilizada em 1.0.0-beta.1 | 2026-04-22 |
 | [ADR-015](decisions/ADR-015-unificacao-de-size-e-dimension.md) | — Unificação da escala size, eliminação de tokens component-specific e renomeação spacing→dimension | Aceito | 2026-04-26 |
+| [ADR-016](decisions/ADR-016-tokens-sem-equivalencia-no-figma.md) | — Tokens sem equivalência no Figma (CSS-only) | Aceito | 2026-04-30 |
+| [ADR-017](decisions/ADR-017-componentes-css-only.md) | — Componentes CSS-only (sem equivalência no Figma) | Aceito | 2026-04-30 |
+| [ADR-018](decisions/ADR-018-content-naming-strong-default-subtle.md) | — Renomear `content.{default,secondary,tertiary}` para `content.{strong,default,subtle}` | Aceito | 2026-05-06 |
 
 
 ═══════════════════════════════════════════════════════════
@@ -1298,7 +1422,7 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 
 # Inventário de componentes — Design System Core
 
-> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-30. Não editar manualmente.
+> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-05-07. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
 > Versão atual: **1.0.0-beta.4**
 
@@ -1322,25 +1446,26 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 | Breadcrumb | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
 | Avatar | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
 | Divider | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
-| Form Field | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
+| Form Field | 🟢 | — (CSS-only, ADR-017) | — | ⬜ | 🟢 |
 | Spinner | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
 | Skeleton | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
 
-**Legenda:** ⬜ Não iniciado | 🟡 Em progresso | 🟢 Completo | ⚠️ Verificar | 🔴 Precisa revisão
+**Legenda:** ⬜ Não iniciado | 🟡 Em progresso | 🟢 Completo | ⚠️ Verificar | 🔴 Precisa revisão | — Não aplicável
 
 **Nota sobre binding:**
 - Button: fills (brand + toned), padding-x/y, height, radius, gap, border-width, focus ring via semantic vars
 - Input Text / Select / Textarea: label usa `content/default`, label row com asterisco Required, control tokens
 - Checkbox / Radio / Toggle: Content frame vertical (Label + Description + Helper Text), booleans show/hide
+- **Form Field**: CSS-only (ADR-017). Não tem (e não deve ter) equivalente Figma — componentes Figma de form (Input, Select, Textarea, Checkbox, Radio, Toggle) já carregam Label + Required + Helper inline em cada variant. Form Field só existe no CSS porque HTML não tem elemento "form control" composto.
 - Demais: fills, strokes, radius, spacing via tokens semânticos
 
 ## Resumo de tokens
 
 | Coleção | Tokens | Status |
 |---------|--------|--------|
-| Foundation | 262 | 🟢 |
-| Semantic (light) | 165 | 🟢 |
-| Semantic (dark) | 165 | 🟢 |
+| Foundation | 265 | 🟢 |
+| Semantic (light) | 172 | 🟢 |
+| Semantic (dark) | 172 | 🟢 |
 
 ## Pipeline
 
@@ -1371,6 +1496,9 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 | ADR-013 | Camadas de consumo de tokens — Foundation nunca direto em consumidor final | Aceita — implementada em 0.7.0 (Component layer eliminada) e fechada em 1.0.0-beta.1 (0 leaks Foundation em `css/components/*.css` e `css/base/*.css`) |
 | ADR-014 | Reestruturação Semantic em `action` × `style` × `prop` × `state` — eliminação de brand/accent e themes | Aceita — implementada em 0.7.0 e estabilizada em 1.0.0-beta.1 |
 | ADR-015 | — Unificação da escala size, eliminação de tokens component-specific e renomeação spacing→dimension | Aceito |
+| ADR-016 | — Tokens sem equivalência no Figma (CSS-only) | Aceito |
+| ADR-017 | — Componentes CSS-only (sem equivalência no Figma) | Aceito |
+| ADR-018 | — Renomear `content.{default,secondary,tertiary}` para `content.{strong,default,subtle}` | Aceito |
 
 ## Próximos milestones
 
@@ -1465,23 +1593,70 @@ Detalhe completo: [token-architecture.html](./token-architecture.html) e [ADR-00
 # docs/process-figma-sync.md
 ═══════════════════════════════════════════════════════════
 
-# Processo: sync Figma → JSON via MCP
+# Processo: sync Figma → JSON via snapshot
 
-Como executar o sync das Figma Variables pros arquivos DTCG em `tokens/` usando o MCP remoto do Figma dentro de uma sessão Claude Code.
+Como executar o sync das Figma Variables pros arquivos DTCG em `tokens/`. O caminho preferencial é o plugin local `figma-plugin/snapshot-exporter`; o caminho via MCP continua como fallback quando o plugin não estiver instalado.
 
 ## Contexto
 
-A ADR-003 (revisada em 0.5.8) estabelece **Figma como autoridade canônica** dos valores de token. Os JSONs em `tokens/` são consolidação derivada. Idealmente existiria um sync automático via REST API, mas `GET /v1/files/:key/variables/local` exige **plano Enterprise** (nosso plano Pro não destrava). Até termos Enterprise (ou implementarmos um plugin custom), o fluxo é manual via MCP: um agente Claude Code executa um script Plugin API que serializa as Variables num JSON temporário, e o script Node `scripts/sync-tokens-from-figma.mjs` lê esse snapshot e compara com os JSONs.
+A ADR-003 (revisada em 0.5.8) estabelece **Figma como autoridade canônica** dos valores de token. Os JSONs em `tokens/` são consolidação derivada. Idealmente existiria um sync automático via REST API, mas `GET /v1/files/:key/variables/local` exige **plano Enterprise** (nosso plano Pro não destrava). No plano atual, o fluxo usa snapshot local: o plugin Figma `figma-plugin/snapshot-exporter` serializa as Variables num JSON temporário, e o script Node `scripts/sync-tokens-from-figma.mjs` lê esse snapshot e compara com os JSONs.
 
-**Disparo:** manual, numa sessão Claude Code com o MCP `use_figma` autenticado no Design Team Workspace (Pro). Ver alternativas futuras em `docs/backlog.md` ("Implementar o sync Figma → JSON").
+**Disparo:** manual, dentro do Figma Desktop. Ver alternativas futuras em `docs/backlog.md` ("Automatizar o sync Figma → JSON em CI").
 
 ## Pré-requisitos
 
-- Sessão Claude Code com o plugin `figma` (skill `figma:figma-use`) carregado.
-- Design Team Workspace autenticado no MCP do Figma (Pro/Expert basta; não precisa Enterprise).
+- Figma Desktop com plugin local instalado a partir de `figma-plugin/snapshot-exporter/manifest.json`.
 - Acesso de leitura ao arquivo `PRYS2kL7VdC1MtVWfZvuDN`.
 
-## Passo 1 — gerar o snapshot via MCP
+## Passo 1 — verificar via plugin
+
+Na primeira vez:
+
+1. No Figma Desktop, abra **Plugins → Development → Import plugin from manifest...**.
+2. Selecione `figma-plugin/snapshot-exporter/manifest.json`.
+
+Uso normal:
+
+1. Abra o arquivo DS Core (`PRYS2kL7VdC1MtVWfZvuDN`).
+2. Rode **DS Core Snapshot Exporter**.
+3. Clique em **Verificar com repo publicado**.
+4. Leia a mensagem no plugin.
+
+Esse modo compara as Variables vivas do Figma com `docs/api/tokens.json` publicado em GitHub Pages. Não precisa terminal, arquivo local ou servidor local.
+
+Para fluxo de release ou auditoria que precisa comparar contra o working tree local, use o fallback manual: clique em **Baixar .figma-snapshot.json**, coloque o arquivo na raiz do repo e siga o Passo 2.
+
+O plugin:
+
+1. Lista as collections locais (Foundation, Semantic) com seus modos.
+2. Itera sobre todas as variables locais do arquivo.
+3. Para cada variável, captura `id`, `name`, `resolvedType`, `variableCollectionId`, `valuesByMode`, `description`, `scopes` e metadados seguros.
+4. Preserva aliases como `{ "type": "VARIABLE_ALIAS", "id": "..." }`.
+5. Agrega tudo num único arquivo `.figma-snapshot.json` no formato:
+
+```json
+{
+  "generatedAt": "2026-04-20T00:00:00.000Z",
+  "generator": { "name": "DS Core Snapshot Exporter", "version": "0.1.0" },
+  "fileKey": "PRYS2kL7VdC1MtVWfZvuDN",
+  "variableCollections": {
+    "VariableCollectionId:4:2": { "id": "...", "name": "Foundation", "modes": [...], "defaultModeId": "..." }
+  },
+  "variables": {
+    "VariableID:5:3": {
+      "id": "VariableID:5:3",
+      "name": "color/neutral/50",
+      "resolvedType": "COLOR",
+      "variableCollectionId": "VariableCollectionId:4:2",
+      "valuesByMode": { "4:0": { "r": 0.97, "g": 0.98, "b": 0.99, "a": 1 } }
+    }
+  }
+}
+```
+
+O arquivo `.figma-snapshot.json` está em `.gitignore` e não deve ser commitado — é regenerado a cada sync.
+
+### Fallback — gerar via MCP
 
 Peça ao agente Claude Code:
 
@@ -1523,6 +1698,14 @@ O arquivo está em `.gitignore` e não deve ser commitado — é regenerado a ca
 node scripts/sync-tokens-from-figma.mjs
 ```
 
+Para gates de release ou qualquer validação que precise representar o Figma vivo, use:
+
+```bash
+node scripts/sync-tokens-from-figma.mjs --require-fresh
+```
+
+Esse modo falha se `.figma-snapshot.json` tiver mais de 24h. Sem a flag, o script ainda roda e compara normalmente, mas imprime aviso de snapshot stale. Isso evita interpretar `VALUE_DRIFT=0` como “Figma vivo está em dia” quando a comparação foi feita contra um dump antigo.
+
 O script:
 
 1. Lê `.figma-snapshot.json` (ou `--snapshot <path>` pra outro caminho).
@@ -1537,7 +1720,7 @@ O script:
 | **MISSING_IN_FIGMA** | JSON tem, Figma não. | Não deleta — revisão manual. |
 | **ALIAS_BROKEN** | Figma aponta pra variável inexistente. | Não resolve — fix no Figma. |
 | **CSS_ONLY** | Token existe dos dois lados mas representação diverge por capacidade CSS (font family stack, `rem`, weight numérico). Introduzido após PR #18 / 0.5.11. | **Não aplica** — aplicar regridiria o CSS (ex: trocaria `'Inter', system-ui, ...` por `"Inter"`; ou `0.875rem` por `14`, quebrando WCAG 1.4.4). |
-| **BY_DESIGN** | Token existe só de um lado por escolha arquitetural documentada — ver **ADR-012** (line-height/letter-spacing: PX no Figma, ratio/em no JSON). | **Não aplica** — não é drift, é arquitetura. |
+| **BY_DESIGN** | Token existe só de um lado por escolha arquitetural documentada — ver **ADR-012** (line-height/letter-spacing: PX no Figma, ratio/em no JSON) e **ADR-016** (categorias CSS-only `motion.*`, `z.*`, `shadow.*` vivem só no JSON porque Figma não as representa como Variables). | **Não aplica** — não é drift, é arquitetura. |
 
 Se as 4 primeiras categorias zerarem, Figma e JSON estão em dia. Exit 0.
 
@@ -1574,6 +1757,8 @@ Não commitar `.figma-snapshot.json` (está ignorado).
 ## Troubleshooting
 
 **`Snapshot não encontrado`**: rode o Passo 1 antes.
+
+**`Snapshot stale`**: `.figma-snapshot.json` tem mais de 24h. Regenerar via `use_figma` antes de concluir sync, release ou auditoria Figma-canônica. `VALUE_DRIFT=0` com snapshot stale significa apenas que JSON e snapshot antigo batem.
 
 **`Snapshot inválido: faltam variables/variableCollections`**: o arquivo JSON não tem a estrutura esperada. Re-gerar no Passo 1.
 
@@ -1843,7 +2028,7 @@ Regras operacionais:
 - **Figma > JSON em valor**. Quando o Figma mostra `blue.800` pra `brand.hover` e o JSON mostra `blue.700`, o Figma prevalece — rodar `npm run sync:tokens-from-figma:write` pra consolidar.
 - **Figma > CSS em design visual**. Se o Figma mostra um componente com border-radius de 8px e o CSS renderiza 6px, o Figma prevalece e o CSS deve ser corrigido.
 - **JSON > Figma em consolidação**. JSON é a fonte que alimenta build-tokens.mjs. Nenhum pipeline consome Figma direto. Então mesmo que "Figma é autoridade de valor", **nada roda sem JSON atualizado**. O sync é a ponte.
-- **Nunca editar `tokens/*.json` à mão** num commit normal. Fluxo: Figma → `sync:tokens-from-figma --write` → review do diff → PR. A exceção é em PRs do próprio script de sync, onde o JSON é gerado automaticamente e revisado como diff.
+- **Nunca editar `tokens/*.json` à mão** num commit normal. Fluxo: Figma → `sync:tokens-from-figma --write` → review do diff → PR. Duas exceções: (a) PRs do próprio script de sync, onde o JSON é gerado automaticamente; (b) categorias CSS-only definidas em [ADR-016](./decisions/ADR-016-tokens-sem-equivalencia-no-figma.md) — `motion.*`, `z.*`, `shadow.*` — que vivem só em JSON porque Figma não as representa como Variables.
 
 ---
 
@@ -8061,7 +8246,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 # Token schema — Design System Core
 
-> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-04-30. Não editar manualmente.
+> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-05-07. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
 > Versão atual: **1.0.0-beta.4**
 
@@ -8073,22 +8258,22 @@ Seção expandida com contexto, decisão e locais de uso.
 | Formato canônico | JSON (DTCG) em `tokens/` |
 | CSS gerado | Style Dictionary → `css/tokens/generated/` |
 | Pipeline | ✅ index.css importa apenas generated/ |
-| Paridade light/dark | ✅ 165 tokens em ambos os modos |
+| Paridade light/dark | ✅ 172 tokens em ambos os modos |
 
 ## Camadas
 
 | Camada | Tokens | Arquivos |
 |--------|--------|----------|
-| Foundation | **262** | 9 |
-| Semantic | **165 × 2 modos** | light.json + dark.json |
+| Foundation | **265** | 9 |
+| Semantic | **172 × 2 modos** | light.json + dark.json |
 
-## Foundation (262 tokens)
+## Foundation (265 tokens)
 
 | Arquivo | Tokens |
 |---------|--------|
 | `colors.json` | 145 |
 | `dimension.json` | 27 |
-| `motion.json` | 7 |
+| `motion.json` | 10 |
 | `opacity.json` | 6 |
 | `radius.json` | 7 |
 | `shadows.json` | 7 |
@@ -8096,7 +8281,7 @@ Seção expandida com contexto, decisão e locais de uso.
 | `typography.json` | 54 |
 | `z-index.json` | 6 |
 
-## Semantic (165 tokens × 2 modos)
+## Semantic (172 tokens × 2 modos)
 
 Categorias raiz em light.json:
 
@@ -8119,6 +8304,7 @@ semantic.size.*
 semantic.shadow.*
 semantic.radius.*
 semantic.typography.*
+semantic.z.*
 ```
 
 ## Regras invioláveis
@@ -8153,6 +8339,9 @@ semantic.typography.*
 - **ADR-013** — Camadas de consumo de tokens — Foundation nunca direto em consumidor final (Aceita — implementada em 0.7.0 (Component layer eliminada) e fechada em 1.0.0-beta.1 (0 leaks Foundation em `css/components/*.css` e `css/base/*.css`))
 - **ADR-014** — Reestruturação Semantic em `action` × `style` × `prop` × `state` — eliminação de brand/accent e themes (Aceita — implementada em 0.7.0 e estabilizada em 1.0.0-beta.1)
 - **ADR-015** — — Unificação da escala size, eliminação de tokens component-specific e renomeação spacing→dimension (Aceito)
+- **ADR-016** — — Tokens sem equivalência no Figma (CSS-only) (Aceito)
+- **ADR-017** — — Componentes CSS-only (sem equivalência no Figma) (Aceito)
+- **ADR-018** — — Renomear `content.{default,secondary,tertiary}` para `content.{strong,default,subtle}` (Aceito)
 
 
 ═══════════════════════════════════════════════════════════
@@ -9611,7 +9800,7 @@ Este ADR introduz `BY_DESIGN`; não se confunde com a categoria `CSS_ONLY` exist
 O sistema começou com três camadas de tokens, mas a arquitetura vigente é 2-layer:
 
 1. **Foundation** — valores crus, escalas primitivas (`spacing/3 = 0.75rem`, `color/blue/600`, `radius/sm`, `shadow/md`, `duration/fast`). Sem significado funcional, só quantidade.
-2. **Semantic** — aliases com intenção de uso (`brand/default`, `content/secondary`, `border/width/default`, `space/inset/md`, `typography/control/font-size/md`).
+2. **Semantic** — aliases com intenção de uso (`brand/default`, `content/default`, `border/width/default`, `space/inset/md`, `typography/control/font-size/md`).
 
 A regra vigente é que consumidores finais — CSS de componente, bindings em componentes Figma, docs de uso — operam em cima de Semantic, não de Foundation direto e não de valores hardcoded. Foundation existe pra **abastecer Semantic**, não pra ser consumido direto.
 
@@ -10112,6 +10301,279 @@ A unificação obrigou alguns valores antigos a se aproximarem dos degraus da es
 ## Reversibilidade
 
 Mudança grande mas mecânica: rebind reverso é possível por valor. Branch isolada e testada antes de qualquer publicação. JSON é fonte de verdade derivado de Figma — recriar tokens antigos é trivial se necessário.
+
+
+═══════════════════════════════════════════════════════════
+# ADR-016 — — Tokens sem equivalência no Figma (CSS-only)
+═══════════════════════════════════════════════════════════
+
+# ADR-016 — Tokens sem equivalência no Figma (CSS-only)
+
+- **Status:** Aceito
+- **Data:** 2026-04-30
+- **Relaciona:** ADR-003 (Figma como fonte de verdade), ADR-013 (2-layer architecture)
+
+## Contexto
+
+ADR-003 define Figma Variables como fonte de verdade de **valores de token**, com JSON consolidando o que vive no Figma e CSS sendo derivado. A regra operacional consequente — "nunca editar `tokens/*.json` à mão; alterações vêm do Figma" — assume que toda categoria de token tem representação nativa em Figma Variables.
+
+**Nem toda categoria tem.** Há propriedades CSS que o Figma não expressa como Variable:
+
+| Categoria | Equivalência Figma | Status |
+|---|---|---|
+| `color`, `dimension`, `radius`, `opacity`, `border-width`, `typography` | Variables nativas | Figma é fonte de verdade |
+| `shadow` | **Effect Styles** (não Variables) — Figma trata sombra como style composto, não como variável bindável | Dupla fonte: Effect Style para preview visual, JSON para CSS |
+| `motion` (`duration`, `ease`) | Nenhuma — Smart Animate é runtime, não token | **JSON é fonte de verdade** |
+| `z-index` | Nenhuma — Figma usa ordem de camada, não z-index numérico | **JSON é fonte de verdade** |
+
+Forçar essas categorias para o Figma é cargo culting da regra: cria Variables que ninguém binda a nada, polui pickers, e desvia a edição da fonte real (CSS de componente que consome).
+
+A regra "Figma é fonte de verdade" deveria ter sido escrita "**Figma é fonte de verdade para propriedades que Figma sabe representar nativamente**". Esta ADR codifica essa qualificação.
+
+## Decisão
+
+### Categorias CSS-only (JSON canônico)
+
+As seguintes categorias **vivem só em JSON** (`tokens/foundation/*.json`, `tokens/semantic/*.json`) e CSS gerado. Não existem como Figma Variables. Edição direta no JSON é permitida e esperada:
+
+- **`motion.*`** — `foundation.duration.{fast,normal,slow}`, `foundation.ease.{default,...}`, e qualquer alias semantic correspondente
+- **`z.*`** — `foundation.z.{0,10,20,30,40,50}`, `semantic.z.{tooltip,modal,...}`
+- **`shadow.*`** (parcial) — `foundation.shadow.{sm,md,lg,xl,2xl}` é canônico no JSON. O Figma mantém `elevation/1..4` como Effect Styles para preview visual e composição em mockups, mas a fonte da CSS é o JSON. Quando os dois divergem, JSON ganha; Effect Styles são atualizados manualmente para refletir.
+
+### Categorias Figma-canônicas (regra padrão)
+
+Para todas as demais categorias — `color`, `dimension`, `radius`, `opacity`, `border-width`, `typography`, `space`, `size`, `surface`, `background`, `content`, `border`, etc. — **vale a regra padrão de ADR-003**: Figma é fonte de verdade, JSON espelha via sync, edição direta no JSON é proibida.
+
+### Enforcement
+
+- `npm run sync:tokens-from-figma` ignora categorias CSS-only ao comparar Figma vs JSON. Não reporta `MISSING_IN_FIGMA` para tokens em `motion.*`, `z.*`, `shadow.*`.
+- `npm run verify:tokens` valida normalmente: tokens CSS-only ainda precisam de `$type`, `$value`, alias chain válida, paridade light/dark.
+- Adicionar uma nova categoria à lista CSS-only **exige nova ADR ou amendment a esta**. A presunção continua sendo "Figma é fonte"; a exceção precisa ser justificada.
+
+### Critério para adicionar categoria à lista
+
+Uma categoria é CSS-only quando atende **um dos dois**:
+
+1. **Nenhuma representação Figma**: a propriedade CSS não tem conceito equivalente em Figma (z-index, transition timing).
+2. **Representação Figma não-bindável**: a propriedade existe em Figma mas como style composto não-variável (shadow → Effect Style). Nesse caso, JSON é canônico para CSS; o objeto Figma é mantido manualmente para preview.
+
+Categorias que têm Variable Figma — mesmo se subutilizadas hoje — **não** entram na lista. Elas são débito de adoção, não exceção arquitetural.
+
+## Consequências
+
+- **Designers** podem ignorar Variables do Figma para motion/z-index/shadow. Quando um componente Figma precisar mostrar shadow, usa Effect Style local (`elevation/1..4`) — não há Variable a bindar.
+- **Devs/IAs** podem editar `tokens/foundation/{motion,z-index,shadows}.json` e `tokens/semantic/*.json` (entradas em `motion.*`, `z.*`, `shadow.*`) diretamente, rodar `npm run build:tokens`, commitar. Não exige passagem pelo Figma.
+- **Sync Figma → JSON** continua sendo o caminho para todas as outras categorias. A lista CSS-only é uma exceção pequena e bem delimitada.
+- **Drift histórico**: as paletas Foundation `blue/purple/cyan/emerald/indigo` (55 vars no JSON, 0 consumers no Figma) **não** entram na lista. Elas são débito de remoção, não CSS-only — categoria `color` tem representação Figma plena.
+
+## Alternativas consideradas
+
+### (a) Forçar todas as categorias para o Figma
+
+Descartada. Criar Variables sem uso real polui o sistema, força designers a navegar por categorias irrelevantes, e ainda assim não resolve shadow (que conceitualmente é Effect Style).
+
+### (b) Mover essas categorias para arquivo separado fora de `tokens/`
+
+Descartada. JSON DTCG é o formato canônico do design system inteiro; criar segundo formato/local fragmenta o pipeline. Style Dictionary, registry, llms.txt, todos esperam encontrar em `tokens/`.
+
+### (c) Implementar shadow como Variables no Figma via composição
+
+Descartada. Figma Variables não suportam composição shadow nativamente. Workarounds (variable por offset/blur/spread) são frágeis e quebram preview ao publicar library.
+
+## Referências
+
+- [ADR-003](./ADR-003-fontes-verdade.md) — Figma como fonte de valor (regra geral, agora qualificada).
+- [ADR-013](./ADR-013-camadas-de-consumo-de-tokens.md) — arquitetura 2-layer (Foundation → Semantic).
+- `tokens/foundation/{motion,shadows,z-index}.json` — categorias cobertas por esta ADR.
+- `docs/system-principles.md` — princípio "Hierarquia de verdade" atualizado para refletir esta exceção.
+- `CLAUDE.md` — regra operacional de edição de JSON atualizada.
+
+
+═══════════════════════════════════════════════════════════
+# ADR-017 — — Componentes CSS-only (sem equivalência no Figma)
+═══════════════════════════════════════════════════════════
+
+# ADR-017 — Componentes CSS-only (sem equivalência no Figma)
+
+- **Status:** Aceito
+- **Data:** 2026-04-30
+- **Relaciona:** ADR-003 (Figma como fonte de verdade), ADR-016 (Tokens sem equivalência no Figma)
+
+## Contexto
+
+A regra geral do DS (ADR-003) é que componentes existem em Figma como fonte canônica de design e são espelhados em CSS. ADR-016 já documentou que algumas **categorias de token** não têm equivalência Figma e vivem só em JSON. Esta ADR documenta o análogo para **componentes**: alguns componentes existem só no CSS porque sua razão de existir é uma característica do HTML/DOM que não tem equivalente em Figma.
+
+O caso concreto é **Form Field** (`.ds-field`):
+
+- No **HTML**, não existe um elemento "form control composto" — para construir um campo acessível precisamos compor `<label>` + `<input/select/textarea>` + `<span>` (helper) + `<span role="alert">` (error), com `for=`, `aria-describedby`, `aria-invalid` ligando os pedaços. Form Field é o wrapper CSS que dá esse composto consistente.
+- No **Figma**, cada componente de form (Input Text, Select, Textarea, Checkbox, Radio, Toggle) já carrega **Label, Required, Helper Text e Description inline em cada variant**. Designer não precisa compor — ele coloca o componente Input no canvas e Label + Required + Helper já aparecem. O wrapper só existiria no Figma para repetir o que cada componente já tem.
+
+Tratamentos errados que essa ADR previne:
+
+- Auditor reclama que "Form Field não existe no Figma" e classifica como **drift / componente faltando**. Não é. É decisão arquitetural.
+- Designer/dev tenta authorar Form Field no Figma para "completar paridade". Cria duplicação visual e bind ambíguo.
+- IA repete a auditoria sem contexto e refaz a mesma classificação errada.
+
+## Decisão
+
+### Componentes CSS-only
+
+Um componente é classificado como **CSS-only** quando:
+
+1. Sua razão de existir é uma necessidade de composição/markup do HTML/DOM, não uma decisão visual.
+2. Os componentes Figma equivalentes já cobrem visualmente tudo o que o componente CSS-only cobre estruturalmente.
+3. Authorar o componente no Figma criaria duplicação ou ambiguidade de bind, sem agregar valor visual.
+
+Esses componentes:
+
+- **Existem em** `css/components/*.css` e `docs/<componente>.html`.
+- **Não existem no Figma** e **não devem ser authorados lá**.
+- Têm seu equivalente visual coberto pelos componentes Figma de granularidade adequada (Form Field ↔ Input/Select/Textarea/Checkbox/Radio/Toggle, cada um já com Label/Required/Helper/Description inline).
+
+### Lista atual de componentes CSS-only
+
+| Componente | CSS file | Razão |
+|---|---|---|
+| **Form Field** | `css/components/form-field.css` | Wrapper para compor `<label>` + control + helper + error em HTML. Cada componente Figma de form já carrega esses elementos inline em cada variant. |
+
+Adicionar componente novo à lista exige amend desta ADR.
+
+### Marcação no inventário
+
+`scripts/sync-docs.mjs` marca componentes CSS-only com `cssOnly: true` no array `knownComponents`. A tabela em `docs/component-inventory.md` mostra `— (CSS-only, ADR-017)` em vez de status Figma para esses componentes. A nota explicativa fica visível na seção "Nota sobre binding".
+
+### Verificação
+
+`npm run verify:tokens` e auditorias futuras Figma↔Repo **devem ignorar** componentes marcados `cssOnly: true` ao reportar "componente faltando no Figma". O sinal de drift só vale para componentes que esperamos ter equivalência Figma.
+
+## Consequências
+
+- **Designers** sabem que não precisam authorar Form Field. Para usar uma campo de form em mockup, instanciam Input/Select/Textarea direto, que já mostram Label/Required/Helper.
+- **Devs** continuam consumindo `.ds-field` no HTML para acessibilidade composta. Sem mudança na API de uso.
+- **IAs / auditores** não classificam Form Field como drift quando comparam Figma vs Repo. Auditoria filtra por `cssOnly`.
+- **Adicionar futuros CSS-only**: precisa amend desta ADR + entrada em `knownComponents`. Exemplos potenciais (não decididos hoje): Field Group, Stack, Cluster — primitivos de layout que HTML/CSS expressa com flex/grid mas Figma resolve via auto-layout no próprio componente.
+
+## Alternativas consideradas
+
+### (a) Authorar Form Field no Figma para "paridade"
+
+Descartada. Cria duplicação visual: o que o designer vê no Form Field do Figma seria igual ao que ele já vê em Input/Select/etc. Mais variants pra manter, mais bindings pra auditar, sem ganho visual ou de comunicação.
+
+### (b) Remover Form Field do CSS e fazer cada componente carregar tudo (mirror do Figma)
+
+Descartada. HTML não tem essa composição embutida — Input só renderiza o `<input>`. Sem o wrapper, cada uso precisa replicar markup com label + helper + error + IDs + ARIA. Decisão errada para acessibilidade e ergonomia de dev.
+
+### (c) Não classificar e tolerar a divergência
+
+Descartada. Sem classificação explícita, toda auditoria nova gera o mesmo falso-positivo. Não é decisão custosa de codificar — uma flag `cssOnly: true` resolve.
+
+## Referências
+
+- [ADR-003](./ADR-003-fontes-verdade.md) — Figma como fonte de verdade (regra geral).
+- [ADR-016](./ADR-016-tokens-sem-equivalencia-no-figma.md) — análogo desta ADR para tokens.
+- `css/components/form-field.css` — implementação canônica.
+- `docs/form-field.html` — doc de uso, anatomy, a11y.
+- `scripts/sync-docs.mjs` — mecanismo de marcação no inventário.
+
+
+═══════════════════════════════════════════════════════════
+# ADR-018 — — Renomear `content.{default,secondary,tertiary}` para `content.{strong,default,subtle}`
+═══════════════════════════════════════════════════════════
+
+# ADR-018 — Renomear `content.{default,secondary,tertiary}` para `content.{strong,default,subtle}`
+
+- **Status:** Aceito
+- **Data:** 2026-05-06
+- **Relaciona:** ADR-011 (renaming de tokens semânticos de cor original)
+
+## Contexto
+
+`semantic.content.*` era o **único conjunto de tokens do DS com naming ordinal** (`secondary`, `tertiary` = 2º, 3º). Todas as outras categorias semânticas usam intent descritivo:
+
+- `border.{default, subtle, strong, ...}`
+- `surface.{default, raised, elevated, overlay}`
+- `background.{default, subtle, disabled, inverse}`
+
+`content.secondary` e `content.tertiary` quebravam essa convenção, comunicando posição em vez de peso visual. Em revisão de design tokens, a inconsistência ficou aparente: por que `border.subtle` mas `content.secondary`? Ambos são "menos prominente" — devem usar o mesmo vocabulário.
+
+Desafio adicional: o que `content.default` representava — conteúdo de ênfase máxima (títulos, body forte) — não está no eixo "ordinal" nem no eixo "subtle/strong". `default` é uma **âncora** ("o caso padrão"), não um nível na escala. O sistema usa `default` consistentemente como âncora em todas as categorias (`border.default`, `surface.default`, etc.) — então `default` precisa significar "body text, o caso padrão", não "texto de ênfase máxima".
+
+## Decisão
+
+Renomear:
+
+| Antes | Depois | Valor (não muda) | Uso típico |
+|---|---|---|---|
+| `content.default` | **`content.strong`** | `neutral.900` (light) / `neutral.50` (dark) | Títulos, badge labels solid, modal/card title, active tab — texto que precisa "pop" |
+| `content.secondary` | **`content.default`** | `neutral.600` (light) / `neutral.400` (dark) | Body text, descriptions, form labels — o caso padrão (use este na maioria dos casos) |
+| `content.tertiary` | **`content.subtle`** | `neutral.500` (light) / `neutral.400` (dark) | Placeholders, ícones decorativos, helper text |
+
+`content.disabled` e `content.inverse` ficam como estavam (não estão no eixo de ênfase).
+
+### Estratégia de migração
+
+**Strict rename — valores 100% preservados.** Cada uso de `--ds-content-default` no CSS foi migrado para `--ds-content-strong` (mantendo o tom mais escuro). Cada uso de `--ds-content-secondary` foi migrado para `--ds-content-default` (mantendo neutral-600). Cada `--ds-content-tertiary` virou `--ds-content-subtle` (mantendo neutral-500).
+
+Visual outcome **idêntico ao pré-migration** — só os nomes mudaram.
+
+Nenhuma re-avaliação caso-a-caso de "este consumer devia ser strong ou default?" foi feita nesta ADR. Isso é decisão de design separada por componente, sem urgência arquitetural.
+
+### Ordem de execução
+
+1. Rename keys em `tokens/semantic/{light,dark}.json`
+2. Rename keys em `tokens/registry.json`
+3. `npm run build:tokens` — regenera CSS (variables CSS renomeadas automaticamente)
+4. `sed`-replace de `--ds-content-{default,secondary,tertiary}` → `--ds-content-{strong,default,subtle}` em `css/components/*.css`, `css/base/*.css`, `docs/**/*.html`, `docs/**/*.md` (total: ~70 arquivos, ~150+ ocorrências)
+5. Rename Variables `content/{default,secondary,tertiary}` → `content/{strong,default,subtle}` na collection Semantic do Figma via `use_figma` (passou por nome temporário pra evitar clash). Bindings de componentes auto-seguem por ID.
+6. `npm run build:api` — regenera `docs/api/components.json` e `tokens.json` com nomes novos
+7. `npm run sync:docs` — regenera inventários
+
+### Não-decisão: mistura morfológica `default + strong/subtle`
+
+Foi questionado se `default` está na mesma "linha morfológica" de `strong` e `subtle`. **Não está**: `strong` e `subtle` são adjetivos de intensidade (gradiente de ênfase), enquanto `default` é substantivo de status/papel ("o caso padrão"). Decidimos **manter a mistura** porque:
+
+- `default` cumpre a função de **âncora** em todas as categorias do DS (`border.default`, `surface.default`, `background.default`). Mudar `default` em uma categoria sem mudar nas outras quebraria a consistência funcional.
+- Atlassian, Polaris, Carbon, Material — todos os DSs grandes usam `default` como âncora junto com adjetivos de gradiente nas mesmas categorias. É padrão de indústria reconhecido.
+- A consistência **funcional** (default = âncora em todo lugar) já existe e é o que importa pra dev/designer escolher token rapidamente. Buscar consistência morfológica pura custaria meses (renomear `default` em todas as categorias) e ganharia pouco.
+
+## Consequências
+
+- **Vocabulário consistente** entre `border` e `content` (e demais categorias gradiente). Designer/dev consulta um padrão único.
+- **Zero impacto visual** — valores não mudaram, só nomes.
+- **Documentação tem que ser atualizada** caso mencione `content.secondary` ou `content.tertiary` por nome — feito via sed nas docs HTMLs e MDs.
+- **ADRs antigas** ainda referenciam `content.secondary`/`content.tertiary` em texto narrativo. Não atualizadas (são histórico — descrevem decisão tomada na época). Apenas tabelas de "estado atual" foram corrigidas.
+
+## Alternativas consideradas
+
+### (a) Manter `default / secondary / tertiary`
+
+Descartada. É o único conjunto ordinal do DS — quebra padrão estabelecido em `border`, `surface`, `background`.
+
+### (b) `default / muted / subtle`
+
+Descartada por feedback do owner ("não usamos mais muted"). Não é vocabulário ativo do DS.
+
+### (c) `default / subtle / subtlest` (padrão Atlassian, superlativo)
+
+Descartada. Mantém `default` como mais forte e adiciona dois subtle — mas perde a expressividade de "strong" pra textos de ênfase, e "subtlest" é palavra rara.
+
+### (d) `default / caption / placeholder` (purpose-based, padrão Carbon)
+
+Descartada. Naming purpose-based não escala — `placeholder` não cobre todos os usos de `tertiary` (icon de chevron Select, etc.). Naming gradiente (`subtle`) é mais geral.
+
+### (e) `default / subtle / subdued` (padrão Polaris)
+
+Descartada. `subdued` é palavra menos usada no projeto e não traz vantagem sobre `subtle` (mesma intensidade conceitual).
+
+### (f) `strong / regular / subtle` (consistência morfológica total — Caminho 2)
+
+Descartada por escopo. Exigiria renomear `default` em **todas** as categorias do DS (`border.default → border.regular`, etc.) — meses de migração. Aceitamos a mistura morfológica `default + strong/subtle` como padrão de indústria.
+
+## Referências
+
+- [ADR-011](./ADR-011-renaming-tokens-semanticos-de-cor.md) — primeira reestruturação do naming semântico de cor.
+- `tokens/semantic/light.json` + `dark.json` — fonte canônica.
+- Auditoria Figma↔Repo (`audit/audit-report.md`) — descobriu o problema durante #4 (Badge Neutral Subtle).
 
 
 ═══════════════════════════════════════════════════════════

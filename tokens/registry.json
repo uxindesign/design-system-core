@@ -2880,46 +2880,17 @@
         "figma": []
       }
     },
-    "foundation.duration.normal": {
-      "layer": "foundation",
-      "type": "duration",
-      "references": null,
-      "sentido": "Duração de transição normal.",
-      "escopo": [
-        "transition-duration",
-        "animation-duration"
-      ],
-      "contexto": "Use via Semantic `motion.duration.*` em transition/animation CSS.",
-      "decisao": "250ms (state changes)",
-      "usos": {
-        "css": [
-          {
-            "file": "css/tokens/generated/theme-dark.css",
-            "count": 1
-          },
-          {
-            "file": "css/tokens/generated/theme-light.css",
-            "count": 1
-          }
-        ],
-        "tokens": [
-          "semantic.motion.duration.normal",
-          "semantic.motion.duration.normal"
-        ],
-        "figma": []
-      }
-    },
     "foundation.duration.slow": {
       "layer": "foundation",
       "type": "duration",
       "references": null,
-      "sentido": "Duração de transição slow.",
+      "sentido": "400ms para animações enfáticas.",
       "escopo": [
         "transition-duration",
         "animation-duration"
       ],
       "contexto": "Use via Semantic `motion.duration.*` em transition/animation CSS.",
-      "decisao": "400ms (modals)",
+      "decisao": "Recalibrado de 300ms para 400ms em 2026-05-07 (alinhamento com doc).",
       "usos": {
         "css": [
           {
@@ -2971,13 +2942,12 @@
       "layer": "foundation",
       "type": "cubicBezier",
       "references": null,
-      "sentido": "Curva cubic-bezier in.",
+      "sentido": "Aceleração no início, sem desaceleração.",
       "escopo": [
-        "transition-timing-function",
-        "animation-timing-function"
+        "transition"
       ],
-      "contexto": "Pareada com duration via Semantic `motion.ease.*`.",
-      "decisao": "Acelera no início — para elementos saindo.",
+      "contexto": "Elementos saindo da tela.",
+      "decisao": "Doc foundations-motion.html documentava; alinhado em 2026-05-07.",
       "usos": {
         "css": [],
         "tokens": [],
@@ -2988,13 +2958,12 @@
       "layer": "foundation",
       "type": "cubicBezier",
       "references": null,
-      "sentido": "Curva cubic-bezier out.",
+      "sentido": "Desaceleração no final.",
       "escopo": [
-        "transition-timing-function",
-        "animation-timing-function"
+        "transition"
       ],
-      "contexto": "Pareada com duration via Semantic `motion.ease.*`.",
-      "decisao": "Desacelera no fim — para elementos entrando.",
+      "contexto": "Elementos entrando na tela.",
+      "decisao": "Doc foundations-motion.html documentava; alinhado em 2026-05-07.",
       "usos": {
         "css": [],
         "tokens": [],
@@ -3005,13 +2974,12 @@
       "layer": "foundation",
       "type": "cubicBezier",
       "references": null,
-      "sentido": "Curva cubic-bezier in-out.",
+      "sentido": "Aceleração + desaceleração. Mesmo valor de default — alias semântico.",
       "escopo": [
-        "transition-timing-function",
-        "animation-timing-function"
+        "transition"
       ],
-      "contexto": "Pareada com duration via Semantic `motion.ease.*`.",
-      "decisao": "Acelera e desacelera — para elementos persistentes.",
+      "contexto": "Padrão Material; usar quando quiser explicitar a curva.",
+      "decisao": "Doc foundations-motion.html documentava; alinhado em 2026-05-07.",
       "usos": {
         "css": [],
         "tokens": [],
@@ -5543,28 +5511,11 @@
         "figma": []
       }
     },
-    "semantic.motion.duration.normal": {
-      "layer": "semantic",
-      "type": "duration",
-      "references": "foundation.duration.normal",
-      "sentido": "Semantic wrapper pra motion.",
-      "escopo": [
-        "transition",
-        "animation"
-      ],
-      "contexto": "Use em `transition`/`animation` (motion) ou `opacity` (states disabled).",
-      "decisao": "Aliasado a Foundation foundation.duration.normal.",
-      "usos": {
-        "css": [],
-        "tokens": [],
-        "figma": []
-      }
-    },
     "semantic.motion.duration.slow": {
       "layer": "semantic",
       "type": "duration",
       "references": "foundation.duration.slow",
-      "sentido": "Semantic wrapper pra motion.",
+      "sentido": "400ms para animações enfáticas.",
       "escopo": [
         "transition",
         "animation"
@@ -9934,6 +9885,182 @@
       ],
       "contexto": "Consumido por .ds-btn--icon-only.ds-btn--sm. (32 - 20) / 2 = 6px.",
       "decisao": "Único valor entre xs(4) e sm(8) que foge da escala space. Segue padrão de space.control.padding.10 (ADR-006/015).",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "foundation.duration.slower": {
+      "layer": "foundation",
+      "type": "duration",
+      "references": null,
+      "sentido": "600ms. Loops contínuos (Spinner) e animações enfáticas longas.",
+      "escopo": [
+        "transition"
+      ],
+      "contexto": "Consumido via semantic.motion.duration.slower. Não usar pra transições de estado.",
+      "decisao": "Doc foundations-motion.html já documentava — token criado em 2026-05-07 alinhando JSON com doc.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "foundation.ease.linear": {
+      "layer": "foundation",
+      "type": "cubicBezier",
+      "references": null,
+      "sentido": "Curva linear (velocidade constante).",
+      "escopo": [
+        "transition"
+      ],
+      "contexto": "Consumido via semantic.motion.ease.linear. Para loops contínuos onde aceleração quebra a percepção (Spinner).",
+      "decisao": "Doc foundations-motion.html já documentava como [0,0,1,1].",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.motion.duration.slower": {
+      "layer": "semantic",
+      "type": "duration",
+      "references": "{foundation.duration.slower}",
+      "sentido": "600ms para loops contínuos.",
+      "escopo": [
+        "transition"
+      ],
+      "contexto": "Spinner principalmente; quaisquer outros loops que precisem de duração maior que 300ms.",
+      "decisao": "ADR-016 (motion CSS-only). Edição direta no JSON é legítima.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.motion.ease.linear": {
+      "layer": "semantic",
+      "type": "cubicBezier",
+      "references": "{foundation.ease.linear}",
+      "sentido": "Curva linear pra loops onde aceleração quebra rotação constante.",
+      "escopo": [
+        "transition"
+      ],
+      "contexto": "Spinner. ease.default tem curva, errado pra loop.",
+      "decisao": "ADR-016 (motion CSS-only).",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "foundation.duration.instant": {
+      "layer": "foundation",
+      "type": "duration",
+      "references": null,
+      "sentido": "0ms. Sem animação.",
+      "escopo": [
+        "transition"
+      ],
+      "contexto": "Raro — sobrescrever em prefers-reduced-motion ou disable explícito.",
+      "decisao": "Doc foundations-motion.html documentava; alinhado em 2026-05-07.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "foundation.duration.moderate": {
+      "layer": "foundation",
+      "type": "duration",
+      "references": null,
+      "sentido": "250ms para transições mais elaboradas.",
+      "escopo": [
+        "transition"
+      ],
+      "contexto": "Toggle, drawer, expand/collapse.",
+      "decisao": "Doc foundations-motion.html documentava; substitui o antigo `normal=200ms` (renomeado + recalibrado).",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.motion.duration.instant": {
+      "layer": "semantic",
+      "type": "duration",
+      "references": "{foundation.duration.instant}",
+      "sentido": "0ms.",
+      "escopo": [
+        "transition"
+      ],
+      "contexto": "Disable explícito.",
+      "decisao": "ADR-016.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.motion.duration.moderate": {
+      "layer": "semantic",
+      "type": "duration",
+      "references": "{foundation.duration.moderate}",
+      "sentido": "250ms.",
+      "escopo": [
+        "transition"
+      ],
+      "contexto": "Toggle, drawer, expand/collapse.",
+      "decisao": "ADR-016. Substitui o antigo motion.duration.normal.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.motion.ease.in": {
+      "layer": "semantic",
+      "type": "cubicBezier",
+      "references": "{foundation.ease.in}",
+      "sentido": "Aceleração no início.",
+      "escopo": [
+        "transition"
+      ],
+      "contexto": "Elementos saindo.",
+      "decisao": "ADR-016.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.motion.ease.out": {
+      "layer": "semantic",
+      "type": "cubicBezier",
+      "references": "{foundation.ease.out}",
+      "sentido": "Desaceleração no final.",
+      "escopo": [
+        "transition"
+      ],
+      "contexto": "Elementos entrando.",
+      "decisao": "ADR-016.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.motion.ease.in-out": {
+      "layer": "semantic",
+      "type": "cubicBezier",
+      "references": "{foundation.ease.in-out}",
+      "sentido": "Aceleração + desaceleração.",
+      "escopo": [
+        "transition"
+      ],
+      "contexto": "Mesmo valor de default.",
+      "decisao": "ADR-016.",
       "usos": {
         "css": [],
         "tokens": [],

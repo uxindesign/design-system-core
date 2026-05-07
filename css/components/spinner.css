@@ -12,7 +12,11 @@
   border-radius: var(--ds-radius-full);
   border: var(--ds-border-width-strong) solid var(--ds-border-subtle);
   border-top-color: var(--ds-border-brand);
-  animation: ds-spin var(--ds-motion-duration-slow) var(--ds-motion-ease-default) infinite;
+  /* motion.duration.slower (600ms) e motion.ease.linear são tokens
+     dedicados a loops contínuos. NÃO usar duration.fast/normal/slow
+     (são pra transições de estado, 150-300ms) nem ease.default (curva
+     quebra rotação constante). */
+  animation: ds-spin var(--ds-motion-duration-slower) var(--ds-motion-ease-linear) infinite;
   flex-shrink: 0;
 }
 

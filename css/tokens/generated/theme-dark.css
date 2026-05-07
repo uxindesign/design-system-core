@@ -92,10 +92,16 @@
   --ds-overlay-medium: var(--ds-overlay-white-20);
   --ds-overlay-strong: var(--ds-overlay-white-40);
   --ds-opacity-disabled: var(--ds-opacity-50); /** 50%. */
-  --ds-motion-duration-fast: var(--ds-duration-fast); /** 150ms. */
-  --ds-motion-duration-normal: var(--ds-duration-normal); /** 200ms. */
-  --ds-motion-duration-slow: var(--ds-duration-slow); /** 300ms. */
-  --ds-motion-ease-default: var(--ds-ease-default); /** Curva padrão. */
+  --ds-motion-duration-instant: var(--ds-duration-instant); /** 0ms — sem animação. */
+  --ds-motion-duration-fast: var(--ds-duration-fast); /** 150ms — hover, focus, active. */
+  --ds-motion-duration-moderate: var(--ds-duration-moderate); /** 250ms — toggle, drawer, expand/collapse. */
+  --ds-motion-duration-slow: var(--ds-duration-slow); /** 400ms — entrada de overlay, modal, popover. */
+  --ds-motion-duration-slower: var(--ds-duration-slower); /** 600ms — loops contínuos (Spinner). */
+  --ds-motion-ease-default: var(--ds-ease-default); /** Curva padrão (= in-out). */
+  --ds-motion-ease-in: var(--ds-ease-in); /** Aceleração no início. Elementos saindo da tela. */
+  --ds-motion-ease-out: var(--ds-ease-out); /** Desaceleração no final. Elementos entrando na tela. */
+  --ds-motion-ease-in-out: var(--ds-ease-in-out); /** Aceleração + desaceleração. Mesmo valor de default. */
+  --ds-motion-ease-linear: var(--ds-ease-linear); /** Velocidade constante. Loops (Spinner). */
   --ds-space-2xs: var(--ds-dimension-2); /** 2px */
   --ds-space-xs: var(--ds-dimension-4); /** 4px */
   --ds-space-sm: var(--ds-dimension-8); /** 8px */

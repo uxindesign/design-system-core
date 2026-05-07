@@ -673,6 +673,7 @@ async function main() {
   // A comparação específica por modo será implementada junto com a resolução
   // de alias Figma.
   const jsonVsFigma = await compareJsonToFigma();
+  const docTokenDrift = (await import("./lib/doc-token-drift.mjs")).checkDocTokenDrift();
 
   const figmaErrors = (jsonVsFigma.divergences ?? []).filter((d) => d.level === "error").length;
   const figmaWarnings = (jsonVsFigma.divergences ?? []).filter((d) => d.level === "warning").length;
@@ -681,11 +682,13 @@ async function main() {
     jsonVsCss.filter((d) => d.level === "error").length +
     cssFoundationLeak.filter((d) => d.level === "error").length +
     registryCompleteness.filter((d) => d.level === "error").length +
+    docTokenDrift.filter((d) => d.level === "error").length +
     figmaErrors;
   const warnings = jsonIntegrity.filter((d) => d.level === "warning").length +
     jsonVsCss.filter((d) => d.level === "warning").length +
     cssFoundationLeak.filter((d) => d.level === "warning").length +
     registryCompleteness.filter((d) => d.level === "warning").length +
+    docTokenDrift.filter((d) => d.level === "warning").length +
     figmaWarnings;
 
   const report = {
@@ -703,6 +706,7 @@ async function main() {
       jsonVsCss,
       cssFoundationLeak,
       registryCompleteness,
+      docTokenDrift,
       jsonVsFigma,
     },
   };
@@ -725,6 +729,12 @@ async function main() {
     : regErrors > 0 ? `${regErrors} erros`
     : `${regWarnings} warnings (migração em curso)`;
   console.log(`Registry:         ${regLabel}`);
+  const docDriftErrors = docTokenDrift.filter((d) => d.level === "error").length;
+  const docDriftWarnings = docTokenDrift.filter((d) => d.level === "warning").length;
+  const docDriftLabel = docDriftErrors === 0 && docDriftWarnings === 0 ? "OK"
+    : docDriftErrors > 0 ? `${docDriftErrors} doc-only token(s) (doc descreve sistema que JSON não tem)`
+    : `${docDriftWarnings} value mismatch(es) entre doc e JSON`;
+  console.log(`Doc ↔ JSON:       ${docDriftLabel}`);
   if (jsonVsFigma.skipped) {
     console.log(`JSON ↔ Figma:     SKIP — ${jsonVsFigma.reason}`);
   } else {

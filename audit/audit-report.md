@@ -188,11 +188,13 @@ CSS não força tamanho de Button quando dentro de Modal — **decisão correta*
 
 Decisão: **wontfix**. Mantém padrão de indústria; consumer-driven sizing.
 
-#### P2-5. Spinner `--on-color` — variant só no CSS
+#### ~~P2-5. Spinner `--on-color`~~ → FALSO POSITIVO (variant existe no Figma)
 
-Variant adicionada por nós nesta sessão para uso em fundos coloridos. Figma não tem essa variant. **Reverse drift** — CSS extra que Figma não cobre.
+**Falso positivo da auditoria.** Re-dump completo do Spinner mostra que Figma TEM `Style=On Color` (3 variants: sm/md/lg), com tokens batendo 1:1 com CSS:
+- Track: `overlay/medium` (= `--ds-overlay-medium`)
+- Indicator: `border/inverse` (= `--ds-border-inverse`)
 
-Decisão: criar a variant no Figma ou remover do CSS. Sem uso real ainda — pode ser removida temporariamente até designer authorar.
+Minha auditoria original só amostrou `Style=Default, Size=Small` — concluiu errado. CSS e Figma estão alinhados.
 
 #### P2-6. Alert Subtle — icon glyph color
 
@@ -223,8 +225,8 @@ Por ADR-016 ambos podem coexistir (shadow é Effect Style, JSON é fonte CSS). M
 
 #### P3-3. Required asterisk text token
 
-- Form Field `__required`, Input/Select/Textarea Required: usa `feedback/error/background/default` como cor de texto
-- Mesmo padrão semântico errado do Breadcrumb (background usado como text)
+- Resolvido nesta continuação: Form Field `__required` e os nós Figma `Required` de Input/Select/Textarea usam `feedback/error/content/default` como cor de texto
+- Antes repetia o mesmo padrão semântico errado do Breadcrumb (background usado como text)
 
 ---
 
@@ -314,6 +316,68 @@ Ordem sugerida (de mais danoso visualmente para menos):
 4. Atualizar `audit/audit-report.md` com checks completados
 
 ---
+
+## Status de execução (2026-05-07) — handoff para próximo agente
+
+**Concluídos (17/19 itens da auditoria + 3 extras):**
+
+| Item | Status | Commit(s) |
+|---|---|---|
+| P0-1 Badge Neutral Solid | ✅ aplicado | `0a73fa0` |
+| P0-2 Badge Secondary | ✅ removido completamente | `40cb73d` |
+| P0-3 Form Field | ✅ reclassificado CSS-only via ADR-017 | `776f5f5` |
+| P1-1 Badge Neutral Subtle | ✅ aplicado | `d9f9cde` |
+| P1-2 Badge Subtle feedback | ✅ Figma rebindado | `68657b4` |
+| P1-3 Button icons | ✅ 20/24/24 + Icon Only paddings + token novo `space.control.padding.6` | `e5039bb` |
+| P1-4 Modal Title Large letter-spacing | ✅ aplicado | `39763e5` |
+| P1-5 Modal body typography | ✅ escala por size | `4b99ff6` |
+| P1-6 Input/Select/Textarea Field text Small | ✅ aplicado | `5131689` + `14f9105` |
+| P1-7 Select chevron | ✅ 20/24/24 alinhado com Button | `bb6fbad` |
+| P1-8 Breadcrumb token | ✅ usa `link.content-default` | `90b385f` + `b17a16d` |
+| P2-1 Letter-spacing morto | ✅ wontfix (reset.css cascadeia) | `199d33c` |
+| P2-2 Description+Helper em Checkbox/Radio/Toggle | ✅ classes adicionadas | `9fcc899` |
+| P2-3 Avatar Initials Medium | ✅ 14/16/20 + weight semibold lg | `ec1faf4` |
+| P2-4 Modal Footer button heights | ✅ wontfix (consumer-driven) | `8be7dcf` |
+| P2-5 Spinner --on-color | ✅ falso positivo (existe em Figma) + revert + tokenização | `061bfb1` |
+| P2-6 Alert Subtle icon color | ✅ tematizado | `f999b02` |
+| P3-3 Required asterisk token semantic | ✅ Figma rebindado + CSS usa `feedback-error-content-default` | nesta continuação |
+
+**Extras descobertos durante execução (todos resolvidos):**
+- Field paddings descem um nível (Input/Select/Textarea sm/md/lg) — `6d61409` + `393b666`
+- Spinner rotação revertida pra 0.6s linear → tokenizada (`motion-duration-slower`/`motion-ease-linear`) — `b512e9f` + `061bfb1`
+- Motion completo: 5 durations × 5 eases (era 3 × 1) — `90cfe3e`
+- Doc↔JSON drift check em `verify:tokens` + 3 drifts históricos limpos (`border.width.0`, `opacity.0`, `radius.9999`) — `736271b`
+- Rename `content.{default,secondary,tertiary}` → `{strong,default,subtle}` (ADR-018) — `2ce9cc2`
+
+**Pendentes para próxima sessão / próximo agente:**
+
+| # | Item | Escopo | Esforço |
+|---|---|---|---|
+| #18 | P3-1 — Foundation `disabled/*` naming | Decidir convenção (slash vs hyphen). Figma tem 8 vars `disabled/brand/dark` etc; JSON tem 6 `disabled.brand-dark` etc. + 2 toned faltam no JSON | 1h |
+| #19 | P3-2 — Effect Style elevation/N vs JSON shadow.{sm..2xl} | Alinhar scale entre Figma Effect Styles (`elevation/1..4`) e JSON shadow tokens (sm/md/lg/xl/2xl/none/card) | 30min |
+| #21 | Auditar Tab Item + Tab Bar | Figma split em 2 components (não auditados deeply). Dump + comparação com `tabs.css` | 1h |
+
+**Como continuar (qualquer agente Codex/Gemini/Claude):**
+
+```bash
+cd ~/design-system-core
+npm run agent:preflight
+# → leia AGENTS.md (e CLAUDE.md ou GEMINI.md conforme o agente)
+# → leia esta seção do audit-report.md
+# → escolha pendência da tabela acima
+```
+
+MCP é protocolo aberto — Codex e Gemini, se configurados localmente com Figma + GitHub MCPs, têm o mesmo acesso que Claude Code. Verifique sua config; se faltar algo, restrições documentadas em `GEMINI.md` / `CLAUDE.md` aplicam.
+
+PR aberto: [#43](https://github.com/uxindesign/design-system-core/pull/43) consolidando esta auditoria. Próximas pendências (P3-1, P3-2, Tab audit) podem ir em nova branch após merge.
+
+---
+
+## Pós-auditoria — débitos de doc/JSON resolvidos
+
+Inconsistências descobertas durante execução dos itens P0-P3 que não estavam no inventário inicial:
+
+- **Motion drift doc/JSON resolvido** (descoberto durante #16 P2-5). `docs/foundations-motion.html` documentava sistema completo (5 durations × 5 easings) mas JSON tinha 3 durations × 1 ease com valores/nomes divergentes (slow=300 vs doc 400, normal vs moderate, sem instant/in/out/in-out). JSON alinhado com doc em 2026-05-07. Zero impacto em consumers (tokens divergentes eram órfãos).
 
 ## Pendências desta auditoria
 

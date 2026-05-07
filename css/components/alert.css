@@ -26,6 +26,22 @@
   font-size: var(--ds-size-sm);
 }
 
+/* Icon color em Subtle — tematizado por feedback (Figma binda
+   feedback/X/content/default no glyph). Em Filled, icon herda
+   `color` do wrapper que já é content-contrast. */
+.ds-alert--success.ds-alert--subtle .ds-alert__icon {
+  color: var(--ds-feedback-success-content-default);
+}
+.ds-alert--warning.ds-alert--subtle .ds-alert__icon {
+  color: var(--ds-feedback-warning-content-default);
+}
+.ds-alert--error.ds-alert--subtle .ds-alert__icon {
+  color: var(--ds-feedback-error-content-default);
+}
+.ds-alert--info.ds-alert--subtle .ds-alert__icon {
+  color: var(--ds-feedback-info-content-default);
+}
+
 .ds-alert__content {
   flex: 1;
   min-width: 0;

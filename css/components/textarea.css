@@ -47,21 +47,21 @@
   resize: vertical;
   min-height: var(--ds-size-4xl);
   min-width: 0;
-  /* Figma Textarea Field: padding pl/pr=space/lg (16), pt/pb=space/control/padding/10 (10) */
-  padding: var(--ds-space-control-padding-10) var(--ds-space-lg);
+  /* Figma Textarea Field md (pós descida): pl/pr=space/md (12), pt/pb=space/control/padding/10 (10) */
+  padding: var(--ds-space-control-padding-10) var(--ds-space-md);
   line-height: var(--ds-body-line-height-sm);
 }
 
 .ds-textarea--sm .ds-textarea__field {
   min-height: var(--ds-size-3xl);
-  /* Figma Textarea sm Field: pl/pr=space/md (12), pt/pb=space/sm (8) */
-  padding: var(--ds-space-sm) var(--ds-space-md);
+  /* Figma Textarea sm Field (pós descida): pl/pr=space/sm (8), pt/pb=space/sm (8) */
+  padding: var(--ds-space-sm) var(--ds-space-sm);
 }
 
 .ds-textarea--lg .ds-textarea__field {
   min-height: var(--ds-size-5xl);
-  /* Figma Textarea lg Field: pl/pr=space/xl (20), pt/pb=space/md (12) */
-  padding: var(--ds-space-md) var(--ds-space-xl);
+  /* Figma Textarea lg Field (pós descida): pl/pr=space/lg (16), pt/pb=space/md (12) */
+  padding: var(--ds-space-md) var(--ds-space-lg);
 }
 
 .ds-textarea__field::placeholder {

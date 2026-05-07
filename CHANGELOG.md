@@ -9,7 +9,38 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 ## [Não publicado]
 
 ### Corrigido
+- **Required asterisk de Input Text, Select e Textarea usa token semântico de conteúdo de erro.** Figma rebindado em 48 nós `Required` (`12` Input Text, `18` Select, `18` Textarea) de `feedback/error/background/default` para `feedback/error/content/default`. CSS compartilhado `.ds-field__required`, `.ds-field__error` e `.ds-field--error .ds-field__label` agora consome `--ds-feedback-error-content-default`, evitando token de background como cor de texto. Resolve #20 / P3-3 da auditoria Figma↔Repo.
+- Referências órfãs de motion em docs (`--ds-duration-normal`) substituídas por `--ds-duration-moderate`, alinhando `foundations-motion.html` e `docs/layout.css` à escala atual (`instant/fast/moderate/slow/slower`) e liberando `npm test`.
 - Referências órfãs de tokens de cor (`content-secondary`, `content-tertiary`) no `index.html` que causavam falha no pipeline de CI.
+- **Alert Subtle icon glyph tematizado por feedback** (Success/Warning/Error/Info). Antes: ícone inheritava `color: content-default` do wrapper — saía cinza, sem distinção visual. Agora segue Figma: glyph usa `feedback/X/content/default` em CSS + Figma rebindado de `feedback/X/background/default` (token de bg usado como text — uso semanticamente errado, mesmo padrão de P1-2). 4 variants Figma rebindadas via `use_figma`. Resolve P2-6.
+
+- **Doc ↔ JSON drift check em `verify:tokens`** (`scripts/lib/doc-token-drift.mjs`). Detecta automaticamente quando doc descreve tokens/valores que JSON não tem — exatamente o sintoma que escondeu a drift de motion por meses. Categorias: `DOC_ONLY_TOKEN` (error — doc cita token inexistente), `VALUE_MISMATCH` (warning — doc e JSON com valores diferentes), `JSON_ONLY_TOKEN` (info). Roda automaticamente em `npm run verify:tokens`. Limpou 3 drifts pré-existentes durante implementação:
+  - `foundation.border.width.0` removido de `foundations-borders.html` (token zero eliminado em 0.7.0).
+  - `foundation.opacity.0` removido de `foundations-opacity.html` (idem).
+  - `foundation.radius.9999` em `foundations-radius.html` corrigido pra `999` (typo histórico).
+
+- **Motion completo: JSON alinhado com doc `foundations-motion.html`** (eliminada drift histórica). Antes: doc descrevia 5 durations × 5 easings; JSON tinha 3 durations × 1 ease com nomes/valores divergentes. Agora alinhado:
+  - **Durations** (foundation + semantic): `instant` (0ms), `fast` (150ms), `moderate` (250ms — substitui `normal=200`, renomeado + recalibrado), `slow` (400ms — recalibrado de 300), `slower` (600ms).
+  - **Easings** (foundation já tinha; semantic estava só com `default`): `default`, `in`, `out`, `in-out`, `linear` (5 curves).
+  - **Removidos**: `foundation.duration.normal` e `semantic.motion.duration.normal` (zero consumers em CSS — eram tokens órfãos).
+  - **Impacto em consumers**: zero — todos os 30 usos em CSS de componente eram `motion-duration-fast` (mesmo valor 150ms) e 1 de `motion-duration-slower` (Spinner). `normal` e `slow` (antigo 300) tinham 0 usos.
+  - Registry atualizado com 8 entries novas + 3 ajustes; per ADR-016 (motion CSS-only) edição direta no JSON é legítima.
+
+- **Spinner: nova rotação tokenizada (`motion-duration-slower` + `motion-ease-linear`)**, em vez do `0.6s linear` literal. Tokens criados pra cobrir o caso de loops contínuos que `motion-duration.{fast,normal,slow}` (150-300ms, transições de estado) não atende. Doc `foundations-motion.html` já documentava `slower=600ms` e `ease.linear` mas JSON estava sem — agora alinhado:
+  - `foundation.duration.slower = 600ms`
+  - `foundation.ease.linear = [0,0,1,1]`
+  - `semantic.motion.duration.slower → {foundation.duration.slower}`
+  - `semantic.motion.ease.linear → {foundation.ease.linear}`
+  - Registry com 4 entries novas; per ADR-016 (motion CSS-only) edição direta no JSON é legítima.
+
+- **Spinner: revertido animation duration/timing para `0.6s linear`.** Em rodada anterior eu (Claude) tinha trocado por `motion-duration-slow` (300ms) + `motion-ease-default`, semantizando indevidamente. Resultado: rotação 2x mais rápida e oscilante (ease quebra rotação constante). Tokens `motion.duration.*` são pra transições de estado (150-300ms), não pra loops contínuos. Spinner precisa de literal `0.6s linear` por design — comentário adicionado no CSS explicando.
+- **Field paddings horizontais descem um nível em Input/Select/Textarea.** User feedback: paddings laterais aparentavam maiores que deveriam. Aplicado em Figma + CSS:
+  - sm: `space.md` (12) → `space.sm` (8)
+  - md: `space.lg` (16) → `space.md` (12)
+  - lg: `space.xl` (20) → `space.lg` (16)
+  - Figma: 108 paddings rebindados (Input Text, Select, Textarea × 3 sizes × variants).
+  - CSS: input.css, select.css, textarea.css atualizados.
+  - Verticais ficam como estão.
 
 ### Adicionado
 
@@ -26,6 +57,8 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
   - Resolve P2-3 da auditoria.
 
 - **Description + Helper Text adicionados em Checkbox/Radio/Toggle (CSS).** Figma já tinha esses como slots opt-in (boolean `Show Description`/`Show Helper Text`); CSS implementava só Label. Agora os 3 componentes ganham wrapper item (`.ds-checkbox-item`, `.ds-radio-item`, `.ds-toggle-item`) com flex column + classes filhas `__description` (sm + regular + content/strong) e `__helper` (xs + regular + content/default). Indent calculado pra alinhar com label, passando o control + gap. Resolve P2-2 da auditoria.
+
+- **P2-5 (Spinner --on-color) reclassificado como falso positivo.** Re-dump completo mostra Figma TEM `Style=On Color` (sm/md/lg) com tokens batendo 1:1 com CSS (`overlay/medium` + `border/inverse`). Auditoria original amostrou só `Style=Default, Size=Small` — conclusão errada. Sistema correto.
 
 - **P2-4 (Modal Footer button heights) reclassificado como wontfix.** Modal CSS não força size de Button (decisão consciente, padrão Material/Polaris). Consumer controla via `.ds-btn--sm/--lg`. Figma prescreve sm/md/lg como recomendação visual pra mockups, não como CSS constraint.
 
