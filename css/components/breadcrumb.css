@@ -14,12 +14,17 @@
    ========================================================================== */
 
 .ds-breadcrumb__item {
-  color: var(--ds-primary-background-default);
+  color: var(--ds-link-content-default);
   text-decoration: none;
 }
 
 .ds-breadcrumb__item:hover {
+  color: var(--ds-link-content-hover);
   text-decoration: underline;
+}
+
+.ds-breadcrumb__item:active {
+  color: var(--ds-link-content-active);
 }
 
 .ds-breadcrumb__item:focus-visible {
