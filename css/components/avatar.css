@@ -17,15 +17,15 @@
   user-select: none;
 }
 
-/* Default size: md (Figma: 40×40, label/md = 14px Bold) */
+/* Default size: md (Figma: 40×40, initials font-md=16 Bold) */
 .ds-avatar {
   width: var(--ds-size-xl);
   height: var(--ds-size-xl);
-  font-size: var(--ds-body-font-size-sm);
+  font-size: var(--ds-body-font-size-md);
 }
 
 /* ---------------------------------------------------------
-   Sizes
+   Sizes — Figma scale 14/16/20 (sm/md/lg)
    --------------------------------------------------------- */
 .ds-avatar--sm {
   width: var(--ds-size-lg);
@@ -36,7 +36,9 @@
 .ds-avatar--lg {
   width: var(--ds-size-3xl);
   height: var(--ds-size-3xl);
-  font-size: var(--ds-body-font-size-lg);
+  font-size: var(--ds-body-font-size-xl);
+  /* Figma: lg usa semibold (sm/md ficam com bold default) */
+  font-weight: var(--ds-body-font-weight-semibold);
 }
 
 /* ---------------------------------------------------------
