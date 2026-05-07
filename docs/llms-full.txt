@@ -1466,7 +1466,7 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 
 | Coleção | Tokens | Status |
 |---------|--------|--------|
-| Foundation | 267 | 🟢 |
+| Foundation | 265 | 🟢 |
 | Semantic (light) | 173 | 🟢 |
 | Semantic (dark) | 173 | 🟢 |
 
@@ -8465,10 +8465,10 @@ Seção expandida com contexto, decisão e locais de uso.
 
 | Camada | Tokens | Arquivos |
 |--------|--------|----------|
-| Foundation | **267** | 9 |
+| Foundation | **265** | 9 |
 | Semantic | **173 × 2 modos** | light.json + dark.json |
 
-## Foundation (267 tokens)
+## Foundation (265 tokens)
 
 | Arquivo | Tokens |
 |---------|--------|
@@ -8477,7 +8477,7 @@ Seção expandida com contexto, decisão e locais de uso.
 | `motion.json` | 10 |
 | `opacity.json` | 6 |
 | `radius.json` | 7 |
-| `shadows.json` | 7 |
+| `shadows.json` | 5 |
 | `stroke.json` | 3 |
 | `typography.json` | 54 |
 | `z-index.json` | 6 |
