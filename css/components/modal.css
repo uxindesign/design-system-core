@@ -83,13 +83,27 @@
   outline-offset: var(--ds-border-width-focus);
 }
 
-/* Body */
+/* Body — escala por size do modal (espelha Figma):
+   sm → font-size sm + line-height sm
+   md → font-size md + line-height md
+   lg → font-size lg + line-height xl */
 .ds-modal__body {
   padding: 0 var(--ds-space-lg) var(--ds-space-lg);
   overflow-y: auto;
-  font-size: var(--ds-body-font-size-sm);
   color: var(--ds-content-strong);
+  /* default sm */
+  font-size: var(--ds-body-font-size-sm);
+  line-height: var(--ds-body-line-height-sm);
+}
+
+.ds-modal--md .ds-modal__body {
+  font-size: var(--ds-body-font-size-md);
   line-height: var(--ds-body-line-height-md);
+}
+
+.ds-modal--lg .ds-modal__body {
+  font-size: var(--ds-body-font-size-lg);
+  line-height: var(--ds-body-line-height-xl);
 }
 
 /* Footer */

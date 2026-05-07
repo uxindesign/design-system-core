@@ -17,6 +17,8 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 
 ### Corrigido
 
+- **Modal body agora escala typography por size** (espelha Figma): sm → `font-size sm + line-height sm`, md → `font-size md + line-height md`, lg → `font-size lg + line-height xl`. Antes `.ds-modal__body` era estático em sm/md mistura. Resolve P1-5 da auditoria.
+
 - **Modal Large title agora aplica `letter-spacing/tight`** (espelha binding do Figma). Para títulos grandes (3xl), tight letter-spacing otimiza legibilidade visual. Resolve P1-4 da auditoria.
 
 - **Button: glyph icon escala por size (sm=20, md/lg=24) + Icon Only com padding simétrico.** Antes: glyph hardcoded em todas as variants (boundVar=null), Icon Only com `padding: 0` e paddings assimétricos no Figma (pl/pr ≠ pt/pb). Agora:
