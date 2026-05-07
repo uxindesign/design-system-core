@@ -17,6 +17,8 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 
 ### Corrigido
 
+- **Input + Select Field text em size Small alinhados ao Figma**: font-size `body/sm` (14px) → `body/xs` (12px) + line-height `body/sm` → `body/2xs`. Textarea já estava alinhado (Figma sm = 14px). Resolve P1-6 da auditoria.
+
 - **Modal body agora escala typography por size** (espelha Figma): sm → `font-size sm + line-height sm`, md → `font-size md + line-height md`, lg → `font-size lg + line-height xl`. Antes `.ds-modal__body` era estático em sm/md mistura. Resolve P1-5 da auditoria.
 
 - **Modal Large title agora aplica `letter-spacing/tight`** (espelha binding do Figma). Para títulos grandes (3xl), tight letter-spacing otimiza legibilidade visual. Resolve P1-4 da auditoria.
