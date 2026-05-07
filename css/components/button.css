@@ -44,8 +44,8 @@
 
 /* Icon inside button — default 20px (md) */
 .ds-btn__icon {
-  width: var(--ds-size-sm);
-  height: var(--ds-size-sm);
+  width: var(--ds-size-md);
+  height: var(--ds-size-md);
   flex-shrink: 0;
   fill: currentColor;
 }
@@ -64,8 +64,8 @@
 }
 
 .ds-btn--sm .ds-btn__icon {
-  width: var(--ds-size-xs);
-  height: var(--ds-size-xs);
+  width: var(--ds-size-sm);
+  height: var(--ds-size-sm);
 }
 
 .ds-btn--lg {
@@ -76,10 +76,7 @@
   border-radius: var(--ds-radius-md);
 }
 
-.ds-btn--lg .ds-btn__icon {
-  width: var(--ds-size-md);
-  height: var(--ds-size-md);
-}
+/* lg: icon stays size-md (24px), same as default — no override needed */
 
 /* ---------------------------------------------------------
    Variant: Brand (primary filled — action/primary/default)
@@ -194,34 +191,37 @@
    Icon Only
    --------------------------------------------------------- */
 .ds-btn--icon-only {
-  padding: 0;
   aspect-ratio: 1;
 }
 
 .ds-btn--icon-only.ds-btn--sm {
   width: var(--ds-size-lg);
+  /* (32 - 20) / 2 = 6px simétrico */
+  padding: var(--ds-space-control-padding-6);
 }
 
 .ds-btn--icon-only:not(.ds-btn--sm):not(.ds-btn--lg) {
   width: var(--ds-size-xl);
+  /* (40 - 24) / 2 = 8px simétrico */
+  padding: var(--ds-space-sm);
 }
 
 .ds-btn--icon-only.ds-btn--lg {
   width: var(--ds-size-2xl);
+  /* (48 - 24) / 2 = 12px simétrico */
+  padding: var(--ds-space-md);
 }
 
-/* Material Symbols inside button */
+/* Material Symbols inside button — glyph escala por size do button (sm=20, md/lg=24) */
 .ds-btn .material-symbols-outlined {
-  font-size: var(--ds-size-sm);
+  font-size: var(--ds-size-md);
 }
 
 .ds-btn--sm .material-symbols-outlined {
-  font-size: var(--ds-size-xs);
+  font-size: var(--ds-size-sm);
 }
 
-.ds-btn--lg .material-symbols-outlined {
-  font-size: var(--ds-size-md);
-}
+/* lg usa default md (24) — sem override */
 
 /* ---------------------------------------------------------
    Full Width

@@ -81,7 +81,21 @@
 </ul>
 <h3>Corrigido</h3>
 <ul>
-<li><strong>Badge Neutral Solid alinhado ao Figma</strong> — CSS estava usando <code>border-strong</code> + <code>content-inverse</code> (fundo escuro + texto claro), enquanto Figma binda <code>surface/default</code> + <code>content/default</code> (fundo claro + texto escuro). Inversão visual entre design e produto. CSS atualizado pra espelhar Figma. Decidido como item P0-1 da auditoria.</li>
+<li><p><strong>Button: glyph icon escala por size (sm=20, md/lg=24) + Icon Only com padding simétrico.</strong> Antes: glyph hardcoded em todas as variants (boundVar=null), Icon Only com <code>padding: 0</code> e paddings assimétricos no Figma (pl/pr ≠ pt/pb). Agora:</p>
+<ul>
+<li><strong>Glyph fontSize bindado</strong> em 270 nodes via <code>use_figma</code>: sm Buttons → <code>size/sm</code> (20), md/lg Buttons → <code>size/md</code> (24).</li>
+<li><strong>Icon Only paddings simétricos</strong> em 108 variants Figma: sm → <code>space/control/padding/6</code> (6px), md → <code>space/sm</code> (8px), lg → <code>space/md</code> (12px). Cálculo: (button - icon) / 2 centraliza icon.</li>
+<li><strong>Token novo: <code>semantic.space.control.padding.6</code></strong> (alias <code>foundation.dimension.6</code>) — único valor entre <code>xs</code> (4) e <code>sm</code> (8) na escala. Segue padrão de <code>space.control.padding.10</code> (ADR-006/015).</li>
+<li><strong>CSS atualizado</strong>: <code>.ds-btn__icon</code> default 20→24, sm 16→20, lg sem mudança. Material Symbols glyph idem. <code>.ds-btn--icon-only</code> ganha paddings por size em vez de <code>padding: 0</code>.</li>
+<li>Decidido como P1-3 da auditoria.</li>
+</ul>
+</li>
+<li><p><strong>Badge Subtle (Success/Warning/Error/Info): Figma rebindado de <code>feedback/X/background/default</code> para <code>feedback/X/content/default</code> na cor do Label.</strong> Figma usava token de <strong>background</strong> como cor de texto — uso semanticamente errado da Variable. CSS já consumia <code>feedback-X-content-default</code> (correto, com calibração WCAG pra texto). Rebind via <code>use_figma</code> em 4 variants (Success Subtle, Warning Subtle, Error Subtle, Info Subtle). Resolve P1-2 e mantém paralelismo com Solid: Solid usa <code>content/contrast</code> (texto sobre fundo escuro), Subtle usa <code>content/default</code> (texto sobre fundo claro).</p>
+</li>
+<li><p><strong>Badge Neutral Subtle alinhado ao Figma</strong> — CSS estava usando <code>background-disabled</code> (semanticamente errado pra um Neutral) e sem stroke. Agora usa <code>surface-default</code> + <code>content-default</code> + <code>border-default</code> (1px), espelhando exatamente o que Figma binda. Stroke é o que distingue Subtle de Solid no Neutral (ambos compartilham <code>surface-default</code>). Decidido como item P1-1 da auditoria.</p>
+</li>
+<li><p><strong>Badge Neutral Solid alinhado ao Figma</strong> — CSS estava usando <code>border-strong</code> + <code>content-inverse</code> (fundo escuro + texto claro), enquanto Figma binda <code>surface/default</code> + <code>content/default</code> (fundo claro + texto escuro). Inversão visual entre design e produto. CSS atualizado pra espelhar Figma. Decidido como item P0-1 da auditoria.</p>
+</li>
 </ul>
 <h3>Removido</h3>
 <ul>

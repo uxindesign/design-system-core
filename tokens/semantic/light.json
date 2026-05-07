@@ -536,6 +536,11 @@
             "$type": "dimension",
             "$value": "{foundation.dimension.10}",
             "$description": "10px. Padding-Y vertical de controles (Input/Button md). Único valor de control que foge da escala space (xs–2xl)."
+          },
+          "6": {
+            "$type": "dimension",
+            "$value": "{foundation.dimension.6}",
+            "$description": "6px. Padding simétrico de Icon Only sm Button. Único valor de control entre xs(4) e sm(8) que foge da escala space."
           }
         }
       }

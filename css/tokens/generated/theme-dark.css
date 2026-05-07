@@ -107,6 +107,7 @@
   --ds-space-section-md: var(--ds-dimension-48);
   --ds-space-section-lg: var(--ds-dimension-64);
   --ds-space-section-xl: var(--ds-dimension-80);
+  --ds-space-control-padding-6: var(--ds-dimension-6); /** 6px. Padding simétrico de Icon Only sm Button. Único valor de control entre xs(4) e sm(8) que foge da escala space. */
   --ds-space-control-padding-10: var(--ds-dimension-10); /** 10px. Padding-Y vertical de controles (Input/Button md). Único valor de control que foge da escala space (xs–2xl). */
   --ds-size-xs: var(--ds-dimension-16); /** 16px. Inline icon em body text, indicator pequeno. */
   --ds-size-sm: var(--ds-dimension-20); /** 20px. Icon padrão em controle, checkbox/radio sm. */

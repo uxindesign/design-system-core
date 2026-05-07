@@ -9923,6 +9923,22 @@
         "tokens": [],
         "figma": []
       }
+    },
+    "semantic.space.control.padding.6": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "{foundation.dimension.6}",
+      "sentido": "Padding simétrico de Icon Only sm Button.",
+      "escopo": [
+        "padding"
+      ],
+      "contexto": "Consumido por .ds-btn--icon-only.ds-btn--sm. (32 - 20) / 2 = 6px.",
+      "decisao": "Único valor entre xs(4) e sm(8) que foge da escala space. Segue padrão de space.control.padding.10 (ADR-006/015).",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
     }
   }
 }

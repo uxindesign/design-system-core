@@ -17,6 +17,13 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 
 ### Corrigido
 
+- **Button: glyph icon escala por size (sm=20, md/lg=24) + Icon Only com padding simétrico.** Antes: glyph hardcoded em todas as variants (boundVar=null), Icon Only com `padding: 0` e paddings assimétricos no Figma (pl/pr ≠ pt/pb). Agora:
+  - **Glyph fontSize bindado** em 270 nodes via `use_figma`: sm Buttons → `size/sm` (20), md/lg Buttons → `size/md` (24).
+  - **Icon Only paddings simétricos** em 108 variants Figma: sm → `space/control/padding/6` (6px), md → `space/sm` (8px), lg → `space/md` (12px). Cálculo: (button - icon) / 2 centraliza icon.
+  - **Token novo: `semantic.space.control.padding.6`** (alias `foundation.dimension.6`) — único valor entre `xs` (4) e `sm` (8) na escala. Segue padrão de `space.control.padding.10` (ADR-006/015).
+  - **CSS atualizado**: `.ds-btn__icon` default 20→24, sm 16→20, lg sem mudança. Material Symbols glyph idem. `.ds-btn--icon-only` ganha paddings por size em vez de `padding: 0`.
+  - Decidido como P1-3 da auditoria.
+
 - **Badge Subtle (Success/Warning/Error/Info): Figma rebindado de `feedback/X/background/default` para `feedback/X/content/default` na cor do Label.** Figma usava token de **background** como cor de texto — uso semanticamente errado da Variable. CSS já consumia `feedback-X-content-default` (correto, com calibração WCAG pra texto). Rebind via `use_figma` em 4 variants (Success Subtle, Warning Subtle, Error Subtle, Info Subtle). Resolve P1-2 e mantém paralelismo com Solid: Solid usa `content/contrast` (texto sobre fundo escuro), Subtle usa `content/default` (texto sobre fundo claro).
 
 - **Badge Neutral Subtle alinhado ao Figma** — CSS estava usando `background-disabled` (semanticamente errado pra um Neutral) e sem stroke. Agora usa `surface-default` + `content-default` + `border-default` (1px), espelhando exatamente o que Figma binda. Stroke é o que distingue Subtle de Solid no Neutral (ambos compartilham `surface-default`). Decidido como item P1-1 da auditoria.
