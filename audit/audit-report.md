@@ -144,7 +144,7 @@ Tecnicamente "consistente" Figma↔CSS, mas ambos usam token errado por convenç
 
 ### 🟡 P2 — binding morto / débito sistêmico / nuance
 
-#### P2-1. Letter-spacing morto — sistêmico em TODOS os componentes
+#### ~~P2-1. Letter-spacing morto~~ → RECLASSIFICADO como WONTFIX (não é drift visual)
 
 Figma binda `typography/body/letter-spacing/normal` em **todo** texto de componente (Button, Modal, Card, Input, Tooltip, Badge, Alert, Avatar, Checkbox, Radio, Toggle, Select, Textarea, Breadcrumb, Tabs).
 
@@ -152,9 +152,11 @@ CSS de componente **nunca** consome `--ds-body-letter-spacing-*`.
 
 Valor é 0 em todos os tokens, então visualmente não muda nada. Mas é binding morto.
 
-Opções:
-- (a) Aplicar `letter-spacing: var(--ds-body-letter-spacing-normal)` em todos os textos no CSS (consistência)
-- (b) Remover binding do Figma (Variables ficam mais limpas)
+**Não é drift visual.** `css/base/reset.css:82` já aplica `letter-spacing: var(--ds-body-letter-spacing-normal)` globalmente. Todo texto em componente herda via cascade — incluindo elementos com bindings Figma explícitos. O resultado renderizado é idêntico ao que Figma intenta.
+
+Decisão: **wontfix**. Limpar ~600+ bindings no Figma só pra eliminar redundância sem ganho visual não justifica o trabalho. Os Figma bindings são "explícitos mas redundantes" — não causam drift.
+
+Modal Large title é a única exceção (usa `letter-spacing/tight`, aplicado em CSS via P1-4 fix).
 
 #### P2-2. Description + Helper Text faltam no CSS para Checkbox/Radio/Toggle
 
