@@ -73,8 +73,9 @@
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
-  width: var(--ds-size-xs);
-  height: var(--ds-size-xs);
+  /* default md: 24px (escala como Button glyph 20/24/24) */
+  width: var(--ds-size-md);
+  height: var(--ds-size-md);
   color: var(--ds-content-subtle);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
@@ -83,10 +84,13 @@
 }
 
 .ds-select--sm .ds-select__arrow {
+  width: var(--ds-size-sm);
+  height: var(--ds-size-sm);
   right: var(--ds-space-sm);
 }
 
 .ds-select--lg .ds-select__arrow {
+  /* lg usa default md (24) — sem override de size */
   right: var(--ds-space-lg);
 }
 
@@ -96,22 +100,19 @@
 .ds-select__icon {
   flex-shrink: 0;
   color: var(--ds-content-subtle);
+  /* default md: 24px (escala como Button glyph 20/24/24) */
+  font-size: var(--ds-size-md);
+  width: var(--ds-size-md);
+  height: var(--ds-size-md);
+}
+
+.ds-select--sm .ds-select__icon {
   font-size: var(--ds-size-sm);
   width: var(--ds-size-sm);
   height: var(--ds-size-sm);
 }
 
-.ds-select--sm .ds-select__icon {
-  font-size: var(--ds-size-xs);
-  width: var(--ds-size-xs);
-  height: var(--ds-size-xs);
-}
-
-.ds-select--lg .ds-select__icon {
-  font-size: var(--ds-size-md);
-  width: var(--ds-size-md);
-  height: var(--ds-size-md);
-}
+/* lg usa default md (24) — sem override */
 
 /* States
    ========================================================================== */
