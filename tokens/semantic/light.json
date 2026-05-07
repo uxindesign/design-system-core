@@ -25,7 +25,7 @@
         },
         "disabled": {
           "$type": "color",
-          "$value": "{foundation.color.disabled.brand-light}"
+          "$value": "{foundation.color.disabled.brand.light}"
         }
       }
     },
@@ -51,6 +51,10 @@
         "active": {
           "$type": "color",
           "$value": "{foundation.color.overlay.blue-600.28}"
+        },
+        "disabled": {
+          "$type": "color",
+          "$value": "{foundation.color.disabled.brand.toned.light}"
         }
       }
     },
@@ -172,7 +176,7 @@
           },
           "disabled": {
             "$type": "color",
-            "$value": "{foundation.color.disabled.success-light}",
+            "$value": "{foundation.color.disabled.success.light}",
             "$description": "Fill success disabled."
           }
         }
@@ -247,7 +251,7 @@
           },
           "disabled": {
             "$type": "color",
-            "$value": "{foundation.color.disabled.error-light}",
+            "$value": "{foundation.color.disabled.error.light}",
             "$description": "Fill error disabled."
           }
         }

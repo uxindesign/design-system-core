@@ -14,8 +14,8 @@ Auditoria sistemática dos 19 componentes contra suas implementações no Figma 
 | Drifts P3 (cosmético / convenção) | **3** |
 | Componentes faltando no Figma | **1** (Form Field) |
 | Tokens semanticamente mal usados | **2** (Breadcrumb, Required asterisk) |
-| Tokens faltando no JSON (presentes no Figma) | **2** (`disabled/brand/toned/{dark,light}`) |
-| Naming inconsistente JSON↔Figma | **1 categoria** (`disabled/*`) |
+| Tokens faltando no JSON (presentes no Figma) | **0** (P3-1 resolvido em 2026-05-07) |
+| Naming inconsistente JSON↔Figma | **0 categorias** (P3-1 resolvido em 2026-05-07) |
 
 ---
 
@@ -209,12 +209,14 @@ Resultado: ícone fica preto/cinza no Alert Subtle, em vez de tematizado.
 
 #### P3-1. Foundation `disabled/*` naming
 
+**Resolvido em 2026-05-07.** Decisão: manter Figma como fonte canônica (`color.*`) e alinhar JSON à hierarquia de folders `/`, conforme ADR-011. O JSON agora usa paths aninhados (`disabled.brand.light`, `disabled.brand.toned.light`, etc.) e inclui os 2 tokens toned que faltavam.
+
 | Lado | Padrão | Exemplo |
 |---|---|---|
 | Figma | folder `/` | `disabled/brand/dark` |
-| JSON | flat `-` | `disabled/brand-dark` |
+| JSON | nested DTCG | `disabled.brand.dark` |
 
-8 tokens no Figma vs 6 no JSON. JSON falta `disabled/brand/toned/{dark,light}`.
+Estado atual: 8 tokens no Figma e 8 tokens no JSON, incluindo `disabled/brand/toned/{dark,light}`.
 
 #### P3-2. Effect Styles `elevation/N` vs JSON `shadow.{sm,md,lg,...}`
 
@@ -342,6 +344,7 @@ Ordem sugerida (de mais danoso visualmente para menos):
 | P2-6 Alert Subtle icon color | ✅ tematizado | `f999b02` |
 | P3-3 Required asterisk token semantic | ✅ Figma rebindado + CSS usa `feedback-error-content-default` | nesta continuação |
 | Tab Item + Tab Bar | ✅ dump completo + CSS alinhado | nesta continuação |
+| P3-1 Foundation `disabled/*` naming | ✅ JSON alinhado à hierarquia Figma + `toned.background.disabled` adicionado | nesta continuação |
 
 **Extras descobertos durante execução (todos resolvidos):**
 - Field paddings descem um nível (Input/Select/Textarea sm/md/lg) — `6d61409` + `393b666`
@@ -354,7 +357,6 @@ Ordem sugerida (de mais danoso visualmente para menos):
 
 | # | Item | Escopo | Esforço |
 |---|---|---|---|
-| #18 | P3-1 — Foundation `disabled/*` naming | Decidir convenção (slash vs hyphen). Figma tem 8 vars `disabled/brand/dark` etc; JSON tem 6 `disabled.brand-dark` etc. + 2 toned faltam no JSON | 1h |
 | #19 | P3-2 — Effect Style elevation/N vs JSON shadow.{sm..2xl} | Alinhar scale entre Figma Effect Styles (`elevation/1..4`) e JSON shadow tokens (sm/md/lg/xl/2xl/none/card) | 30min |
 
 **Como continuar (qualquer agente Codex/Gemini/Claude):**
