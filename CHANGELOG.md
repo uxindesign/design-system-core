@@ -10,6 +10,11 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 
 ### Corrigido
 - Referências órfãs de tokens de cor (`content-secondary`, `content-tertiary`) no `index.html` que causavam falha no pipeline de CI.
+- **Doc ↔ JSON drift check em `verify:tokens`** (`scripts/lib/doc-token-drift.mjs`). Detecta automaticamente quando doc descreve tokens/valores que JSON não tem — exatamente o sintoma que escondeu a drift de motion por meses. Categorias: `DOC_ONLY_TOKEN` (error — doc cita token inexistente), `VALUE_MISMATCH` (warning — doc e JSON com valores diferentes), `JSON_ONLY_TOKEN` (info). Roda automaticamente em `npm run verify:tokens`. Limpou 3 drifts pré-existentes durante implementação:
+  - `foundation.border.width.0` removido de `foundations-borders.html` (token zero eliminado em 0.7.0).
+  - `foundation.opacity.0` removido de `foundations-opacity.html` (idem).
+  - `foundation.radius.9999` em `foundations-radius.html` corrigido pra `999` (typo histórico).
+
 - **Motion completo: JSON alinhado com doc `foundations-motion.html`** (eliminada drift histórica). Antes: doc descrevia 5 durations × 5 easings; JSON tinha 3 durations × 1 ease com nomes/valores divergentes. Agora alinhado:
   - **Durations** (foundation + semantic): `instant` (0ms), `fast` (150ms), `moderate` (250ms — substitui `normal=200`, renomeado + recalibrado), `slow` (400ms — recalibrado de 300), `slower` (600ms).
   - **Easings** (foundation já tinha; semantic estava só com `default`): `default`, `in`, `out`, `in-out`, `linear` (5 curves).

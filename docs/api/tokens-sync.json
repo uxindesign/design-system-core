@@ -13,6 +13,7 @@
     "jsonVsCss": [],
     "cssFoundationLeak": [],
     "registryCompleteness": [],
+    "docTokenDrift": [],
     "jsonVsFigma": {
       "skipped": false,
       "snapshotAge": "8h",
