@@ -30,7 +30,8 @@
 .ds-select--sm {
   height: var(--ds-size-lg);
   padding: 0 var(--ds-space-md);
-  font-size: var(--ds-body-font-size-sm);
+  font-size: var(--ds-body-font-size-xs);
+  line-height: var(--ds-body-line-height-2xs);
 }
 
 .ds-select--lg {
