@@ -12,7 +12,10 @@
   border-radius: var(--ds-radius-full);
   border: var(--ds-border-width-strong) solid var(--ds-border-subtle);
   border-top-color: var(--ds-border-brand);
-  animation: ds-spin var(--ds-motion-duration-slow) var(--ds-motion-ease-default) infinite;
+  /* 0.6s linear é literal por design: motion.duration.* são pra transições
+     de estado (150-300ms), não pra loops contínuos; ease curva quebra a
+     rotação constante que um spinner precisa. */
+  animation: ds-spin 0.6s linear infinite;
   flex-shrink: 0;
 }
 
