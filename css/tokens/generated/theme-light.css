@@ -93,12 +93,16 @@
   --ds-overlay-medium: var(--ds-overlay-black-20);
   --ds-overlay-strong: var(--ds-overlay-black-40);
   --ds-opacity-disabled: var(--ds-opacity-50); /** 50%. Aplicar em componentes em estado disabled. */
-  --ds-motion-duration-fast: var(--ds-duration-fast); /** 150ms. Transições rápidas (hover, focus, active). */
-  --ds-motion-duration-normal: var(--ds-duration-normal); /** 200ms. Padrão pra transições de estado. */
-  --ds-motion-duration-slow: var(--ds-duration-slow); /** 300ms. Animações enfáticas (entrada de overlay, etc). */
-  --ds-motion-duration-slower: var(--ds-duration-slower); /** 600ms. Loops contínuos (Spinner). Não usar pra transições de estado — para isso, fast/normal/slow. */
-  --ds-motion-ease-default: var(--ds-ease-default); /** Curva padrão pra transições UI. */
-  --ds-motion-ease-linear: var(--ds-ease-linear); /** Curva linear (velocidade constante). Para loops como Spinner. Não usar pra transições de estado — para isso, ease.default. */
+  --ds-motion-duration-instant: var(--ds-duration-instant); /** 0ms — sem animação. */
+  --ds-motion-duration-fast: var(--ds-duration-fast); /** 150ms — hover, focus, active. */
+  --ds-motion-duration-moderate: var(--ds-duration-moderate); /** 250ms — toggle, drawer, expand/collapse. */
+  --ds-motion-duration-slow: var(--ds-duration-slow); /** 400ms — entrada de overlay, modal, popover. */
+  --ds-motion-duration-slower: var(--ds-duration-slower); /** 600ms — loops contínuos (Spinner). */
+  --ds-motion-ease-default: var(--ds-ease-default); /** Curva padrão (= in-out). */
+  --ds-motion-ease-in: var(--ds-ease-in); /** Aceleração no início. Elementos saindo da tela. */
+  --ds-motion-ease-out: var(--ds-ease-out); /** Desaceleração no final. Elementos entrando na tela. */
+  --ds-motion-ease-in-out: var(--ds-ease-in-out); /** Aceleração + desaceleração. Mesmo valor de default. */
+  --ds-motion-ease-linear: var(--ds-ease-linear); /** Velocidade constante. Loops (Spinner). */
   --ds-space-2xs: var(--ds-dimension-2); /** 2px */
   --ds-space-xs: var(--ds-dimension-4); /** 4px */
   --ds-space-sm: var(--ds-dimension-8); /** 8px */

@@ -317,6 +317,12 @@ Ordem sugerida (de mais danoso visualmente para menos):
 
 ---
 
+## Pós-auditoria — débitos de doc/JSON resolvidos
+
+Inconsistências descobertas durante execução dos itens P0-P3 que não estavam no inventário inicial:
+
+- **Motion drift doc/JSON resolvido** (descoberto durante #16 P2-5). `docs/foundations-motion.html` documentava sistema completo (5 durations × 5 easings) mas JSON tinha 3 durations × 1 ease com valores/nomes divergentes (slow=300 vs doc 400, normal vs moderate, sem instant/in/out/in-out). JSON alinhado com doc em 2026-05-07. Zero impacto em consumers (tokens divergentes eram órfãos).
+
 ## Pendências desta auditoria
 
 - **Tab Item + Tab Bar**: não fiz dump dedicado (Figma não acha como `Tabs` único). Próxima sessão: 1 call específica.

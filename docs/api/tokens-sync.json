@@ -1,10 +1,10 @@
 {
   "version": "1.0.0-beta.4",
   "totals": {
-    "jsonTokens": 600,
-    "sharedTokens": 264,
-    "lightTokens": 168,
-    "darkTokens": 168,
+    "jsonTokens": 609,
+    "sharedTokens": 265,
+    "lightTokens": 172,
+    "darkTokens": 172,
     "errors": 0,
     "warnings": 0
   },
@@ -26,7 +26,7 @@
         "DRIFT_FROM_SOURCE": 0,
         "ALIAS_BROKEN": 0,
         "CSS_ONLY": 7,
-        "BY_DESIGN": 110
+        "BY_DESIGN": 118
       },
       "divergences": [],
       "diffs": {
@@ -535,15 +535,21 @@
           },
           {
             "file": "semantic/light.json",
+            "token": "semantic.motion.duration.instant",
+            "side": "json-only",
+            "json": "{foundation.duration.instant}"
+          },
+          {
+            "file": "semantic/light.json",
             "token": "semantic.motion.duration.fast",
             "side": "json-only",
             "json": "{foundation.duration.fast}"
           },
           {
             "file": "semantic/light.json",
-            "token": "semantic.motion.duration.normal",
+            "token": "semantic.motion.duration.moderate",
             "side": "json-only",
-            "json": "{foundation.duration.normal}"
+            "json": "{foundation.duration.moderate}"
           },
           {
             "file": "semantic/light.json",
@@ -562,6 +568,24 @@
             "token": "semantic.motion.ease.default",
             "side": "json-only",
             "json": "{foundation.ease.default}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.motion.ease.in",
+            "side": "json-only",
+            "json": "{foundation.ease.in}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.motion.ease.out",
+            "side": "json-only",
+            "json": "{foundation.ease.out}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.motion.ease.in-out",
+            "side": "json-only",
+            "json": "{foundation.ease.in-out}"
           },
           {
             "file": "semantic/light.json",
@@ -714,15 +738,21 @@
           },
           {
             "file": "semantic/dark.json",
+            "token": "semantic.motion.duration.instant",
+            "side": "json-only",
+            "json": "{foundation.duration.instant}"
+          },
+          {
+            "file": "semantic/dark.json",
             "token": "semantic.motion.duration.fast",
             "side": "json-only",
             "json": "{foundation.duration.fast}"
           },
           {
             "file": "semantic/dark.json",
-            "token": "semantic.motion.duration.normal",
+            "token": "semantic.motion.duration.moderate",
             "side": "json-only",
-            "json": "{foundation.duration.normal}"
+            "json": "{foundation.duration.moderate}"
           },
           {
             "file": "semantic/dark.json",
@@ -741,6 +771,24 @@
             "token": "semantic.motion.ease.default",
             "side": "json-only",
             "json": "{foundation.ease.default}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.motion.ease.in",
+            "side": "json-only",
+            "json": "{foundation.ease.in}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.motion.ease.out",
+            "side": "json-only",
+            "json": "{foundation.ease.out}"
+          },
+          {
+            "file": "semantic/dark.json",
+            "token": "semantic.motion.ease.in-out",
+            "side": "json-only",
+            "json": "{foundation.ease.in-out}"
           },
           {
             "file": "semantic/dark.json",

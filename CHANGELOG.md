@@ -10,6 +10,13 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 
 ### Corrigido
 - Referências órfãs de tokens de cor (`content-secondary`, `content-tertiary`) no `index.html` que causavam falha no pipeline de CI.
+- **Motion completo: JSON alinhado com doc `foundations-motion.html`** (eliminada drift histórica). Antes: doc descrevia 5 durations × 5 easings; JSON tinha 3 durations × 1 ease com nomes/valores divergentes. Agora alinhado:
+  - **Durations** (foundation + semantic): `instant` (0ms), `fast` (150ms), `moderate` (250ms — substitui `normal=200`, renomeado + recalibrado), `slow` (400ms — recalibrado de 300), `slower` (600ms).
+  - **Easings** (foundation já tinha; semantic estava só com `default`): `default`, `in`, `out`, `in-out`, `linear` (5 curves).
+  - **Removidos**: `foundation.duration.normal` e `semantic.motion.duration.normal` (zero consumers em CSS — eram tokens órfãos).
+  - **Impacto em consumers**: zero — todos os 30 usos em CSS de componente eram `motion-duration-fast` (mesmo valor 150ms) e 1 de `motion-duration-slower` (Spinner). `normal` e `slow` (antigo 300) tinham 0 usos.
+  - Registry atualizado com 8 entries novas + 3 ajustes; per ADR-016 (motion CSS-only) edição direta no JSON é legítima.
+
 - **Spinner: nova rotação tokenizada (`motion-duration-slower` + `motion-ease-linear`)**, em vez do `0.6s linear` literal. Tokens criados pra cobrir o caso de loops contínuos que `motion-duration.{fast,normal,slow}` (150-300ms, transições de estado) não atende. Doc `foundations-motion.html` já documentava `slower=600ms` e `ease.linear` mas JSON estava sem — agora alinhado:
   - `foundation.duration.slower = 600ms`
   - `foundation.ease.linear = [0,0,1,1]`

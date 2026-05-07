@@ -439,37 +439,57 @@
     "motion": {
       "$description": "Semantic motion — ADR-013 Fase 8.",
       "duration": {
+        "instant": {
+          "$type": "duration",
+          "$value": "{foundation.duration.instant}",
+          "$description": "0ms — sem animação."
+        },
         "fast": {
           "$type": "duration",
           "$value": "{foundation.duration.fast}",
-          "$description": "150ms."
+          "$description": "150ms — hover, focus, active."
         },
-        "normal": {
+        "moderate": {
           "$type": "duration",
-          "$value": "{foundation.duration.normal}",
-          "$description": "200ms."
+          "$value": "{foundation.duration.moderate}",
+          "$description": "250ms — toggle, drawer, expand/collapse."
         },
         "slow": {
           "$type": "duration",
           "$value": "{foundation.duration.slow}",
-          "$description": "300ms."
+          "$description": "400ms — entrada de overlay, modal, popover."
         },
         "slower": {
           "$type": "duration",
           "$value": "{foundation.duration.slower}",
-          "$description": "600ms. Loops contínuos (Spinner). Não usar pra transições de estado — para isso, fast/normal/slow."
+          "$description": "600ms — loops contínuos (Spinner)."
         }
       },
       "ease": {
         "default": {
           "$type": "cubicBezier",
           "$value": "{foundation.ease.default}",
-          "$description": "Curva padrão."
+          "$description": "Curva padrão (= in-out)."
+        },
+        "in": {
+          "$type": "cubicBezier",
+          "$value": "{foundation.ease.in}",
+          "$description": "Aceleração no início. Elementos saindo da tela."
+        },
+        "out": {
+          "$type": "cubicBezier",
+          "$value": "{foundation.ease.out}",
+          "$description": "Desaceleração no final. Elementos entrando na tela."
+        },
+        "in-out": {
+          "$type": "cubicBezier",
+          "$value": "{foundation.ease.in-out}",
+          "$description": "Aceleração + desaceleração. Mesmo valor de default."
         },
         "linear": {
           "$type": "cubicBezier",
           "$value": "{foundation.ease.linear}",
-          "$description": "Curva linear (velocidade constante). Para loops como Spinner. Não usar pra transições de estado — para isso, ease.default."
+          "$description": "Velocidade constante. Loops (Spinner)."
         }
       }
     },
