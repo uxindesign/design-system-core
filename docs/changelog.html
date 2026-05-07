@@ -72,6 +72,8 @@
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
 <h3>Corrigido</h3>
 <ul>
+<li><p><strong>Tabs alinhado ao dump Figma de <code>Tab Item</code> + <code>Tab Bar</code>.</strong> CSS agora espelha o gap de 10px antes do indicador ativo (<code>--ds-space-control-padding-10</code>), usa divider <code>--ds-overlay-default</code> como o <code>Tab Bar</code>, e aplica radius <code>md</code> no focus ring. Docs de Tabs atualizadas para remover tokens antigos (<code>content.secondary</code>, <code>focus.ring.*</code>, <code>overlay.subtle</code>) e documentar o mapeamento atual. Resolve #21 da auditoria Figma↔Repo.</p>
+</li>
 <li><p><strong>Required asterisk de Input Text, Select e Textarea usa token semântico de conteúdo de erro.</strong> Figma rebindado em 48 nós <code>Required</code> (<code>12</code> Input Text, <code>18</code> Select, <code>18</code> Textarea) de <code>feedback/error/background/default</code> para <code>feedback/error/content/default</code>. CSS compartilhado <code>.ds-field__required</code>, <code>.ds-field__error</code> e <code>.ds-field--error .ds-field__label</code> agora consome <code>--ds-feedback-error-content-default</code>, evitando token de background como cor de texto. Resolve #20 / P3-3 da auditoria Figma↔Repo.</p>
 </li>
 <li><p>Referências órfãs de motion em docs (<code>--ds-duration-normal</code>) substituídas por <code>--ds-duration-moderate</code>, alinhando <code>foundations-motion.html</code> e <code>docs/layout.css</code> à escala atual (<code>instant/fast/moderate/slow/slower</code>) e liberando <code>npm test</code>.</p>

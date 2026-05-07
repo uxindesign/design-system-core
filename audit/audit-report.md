@@ -35,7 +35,7 @@ Auditoria sistemática dos 19 componentes contra suas implementações no Figma 
 | 10 | **Card** | 3 | `card.css` | ✓ OK | (post-fix) |
 | 11 | **Modal** | 3 | `modal.css` | ⚠ DRIFT | letter-spacing tight no Title Large; body content typography por size |
 | 12 | **Tooltip** | 4 | `tooltip.css` | ✓ OK | (post-fix) |
-| 13 | **Tabs** | Tab Item + Tab Bar (split) | `tabs.css` | ⏳ A verificar | dump separado de Tab Item necessário |
+| 13 | **Tabs** | Tab Item + Tab Bar (split) | `tabs.css` | ✓ OK | Tab Item + Tab Bar auditados e alinhados |
 | 14 | **Breadcrumb** | "Breadcrumb Item" 2 var | `breadcrumb.css` | 🔴 TOKEN MISUSE | Label usa `primary/background/default` como text color |
 | 15 | **Avatar** | 6 | `avatar.css` | ⚠ POSSIBLE FIGMA BUG | Initials Medium = mesma font-size de Small |
 | 16 | **Divider** | 2 | `divider.css` | ✓ OK | — |
@@ -311,7 +311,7 @@ Ordem sugerida (de mais danoso visualmente para menos):
 **Esforço: 30min.**
 
 1. `npm run verify:tokens` zera erros e BY_DESIGN cai (alguns drifts viram by-design via novos tokens)
-2. Auditar Tab Item + Tab Bar (não fizemos hoje — split component, requer dump separado)
+2. Tab Item + Tab Bar auditados nesta continuação; CSS alinhado ao dump Figma.
 3. Testes visuais (`npm run test:visual`) reaplicam baseline
 4. Atualizar `audit/audit-report.md` com checks completados
 
@@ -319,7 +319,7 @@ Ordem sugerida (de mais danoso visualmente para menos):
 
 ## Status de execução (2026-05-07) — handoff para próximo agente
 
-**Concluídos (17/19 itens da auditoria + 3 extras):**
+**Concluídos (18 itens da auditoria + 3 extras; 2 pendências de decisão):**
 
 | Item | Status | Commit(s) |
 |---|---|---|
@@ -341,6 +341,7 @@ Ordem sugerida (de mais danoso visualmente para menos):
 | P2-5 Spinner --on-color | ✅ falso positivo (existe em Figma) + revert + tokenização | `061bfb1` |
 | P2-6 Alert Subtle icon color | ✅ tematizado | `f999b02` |
 | P3-3 Required asterisk token semantic | ✅ Figma rebindado + CSS usa `feedback-error-content-default` | nesta continuação |
+| Tab Item + Tab Bar | ✅ dump completo + CSS alinhado | nesta continuação |
 
 **Extras descobertos durante execução (todos resolvidos):**
 - Field paddings descem um nível (Input/Select/Textarea sm/md/lg) — `6d61409` + `393b666`
@@ -355,7 +356,6 @@ Ordem sugerida (de mais danoso visualmente para menos):
 |---|---|---|---|
 | #18 | P3-1 — Foundation `disabled/*` naming | Decidir convenção (slash vs hyphen). Figma tem 8 vars `disabled/brand/dark` etc; JSON tem 6 `disabled.brand-dark` etc. + 2 toned faltam no JSON | 1h |
 | #19 | P3-2 — Effect Style elevation/N vs JSON shadow.{sm..2xl} | Alinhar scale entre Figma Effect Styles (`elevation/1..4`) e JSON shadow tokens (sm/md/lg/xl/2xl/none/card) | 30min |
-| #21 | Auditar Tab Item + Tab Bar | Figma split em 2 components (não auditados deeply). Dump + comparação com `tabs.css` | 1h |
 
 **Como continuar (qualquer agente Codex/Gemini/Claude):**
 
@@ -369,7 +369,7 @@ npm run agent:preflight
 
 MCP é protocolo aberto — Codex e Gemini, se configurados localmente com Figma + GitHub MCPs, têm o mesmo acesso que Claude Code. Verifique sua config; se faltar algo, restrições documentadas em `GEMINI.md` / `CLAUDE.md` aplicam.
 
-PR aberto: [#43](https://github.com/uxindesign/design-system-core/pull/43) consolidando esta auditoria. Próximas pendências (P3-1, P3-2, Tab audit) podem ir em nova branch após merge.
+PR #43 mergeado em `main`. Próximas pendências (P3-1, P3-2) podem ir em nova branch a partir de `main`.
 
 ---
 
@@ -381,6 +381,6 @@ Inconsistências descobertas durante execução dos itens P0-P3 que não estavam
 
 ## Pendências desta auditoria
 
-- **Tab Item + Tab Bar**: não fiz dump dedicado (Figma não acha como `Tabs` único). Próxima sessão: 1 call específica.
+- **Tab Item + Tab Bar**: dump dedicado feito nesta continuação; CSS alinhado ao gap/indicator, divider e focus radius do Figma.
 - **Snapshot Figma**: rodar fresh dump de Variables (atual tem 3d). `verify:tokens` continua passando, mas vale.
 - **Variants edge case** não inspecionados em alguns componentes: Button (216 variants — só Brand/Sm/Default lido), Checkbox indeterminate, Toggle disabled+on, Input estados Filled/Error/Disabled/Readonly. Padrões devem repetir mas vale conferir antes de fix.
