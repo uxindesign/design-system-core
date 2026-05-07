@@ -10,6 +10,8 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 
 ### Corrigido
 - Referências órfãs de tokens de cor (`content-secondary`, `content-tertiary`) no `index.html` que causavam falha no pipeline de CI.
+- **Alert Subtle icon glyph tematizado por feedback** (Success/Warning/Error/Info). Antes: ícone inheritava `color: content-default` do wrapper — saía cinza, sem distinção visual. Agora segue Figma: glyph usa `feedback/X/content/default` em CSS + Figma rebindado de `feedback/X/background/default` (token de bg usado como text — uso semanticamente errado, mesmo padrão de P1-2). 4 variants Figma rebindadas via `use_figma`. Resolve P2-6.
+
 - **Doc ↔ JSON drift check em `verify:tokens`** (`scripts/lib/doc-token-drift.mjs`). Detecta automaticamente quando doc descreve tokens/valores que JSON não tem — exatamente o sintoma que escondeu a drift de motion por meses. Categorias: `DOC_ONLY_TOKEN` (error — doc cita token inexistente), `VALUE_MISMATCH` (warning — doc e JSON com valores diferentes), `JSON_ONLY_TOKEN` (info). Roda automaticamente em `npm run verify:tokens`. Limpou 3 drifts pré-existentes durante implementação:
   - `foundation.border.width.0` removido de `foundations-borders.html` (token zero eliminado em 0.7.0).
   - `foundation.opacity.0` removido de `foundations-opacity.html` (idem).
