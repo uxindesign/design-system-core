@@ -10,6 +10,13 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 
 ### Corrigido
 - Referências órfãs de tokens de cor (`content-secondary`, `content-tertiary`) no `index.html` que causavam falha no pipeline de CI.
+- **Field paddings horizontais descem um nível em Input/Select/Textarea.** User feedback: paddings laterais aparentavam maiores que deveriam. Aplicado em Figma + CSS:
+  - sm: `space.md` (12) → `space.sm` (8)
+  - md: `space.lg` (16) → `space.md` (12)
+  - lg: `space.xl` (20) → `space.lg` (16)
+  - Figma: 108 paddings rebindados (Input Text, Select, Textarea × 3 sizes × variants).
+  - CSS: input.css, select.css, textarea.css atualizados.
+  - Verticais ficam como estão.
 
 ### Adicionado
 
