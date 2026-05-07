@@ -1,10 +1,10 @@
 {
   "version": "1.0.0-beta.4",
   "totals": {
-    "jsonTokens": 609,
-    "sharedTokens": 265,
-    "lightTokens": 172,
-    "darkTokens": 172,
+    "jsonTokens": 613,
+    "sharedTokens": 267,
+    "lightTokens": 173,
+    "darkTokens": 173,
     "errors": 0,
     "warnings": 0
   },
@@ -16,11 +16,11 @@
     "docTokenDrift": [],
     "jsonVsFigma": {
       "skipped": false,
-      "snapshotAge": "14h",
+      "snapshotAge": "0h",
       "snapshotFreshness": "fresh",
       "snapshotMaxAgeHours": 24,
       "summary": {
-        "figmaVariableCount": 389,
+        "figmaVariableCount": 392,
         "figmaCollectionCount": 2,
         "VALUE_DRIFT": 0,
         "NEEDS_SYNC": 0,

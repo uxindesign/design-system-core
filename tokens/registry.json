@@ -27,7 +27,7 @@
         "tokens": [
           "semantic.ghost.content-default",
           "semantic.background.inverse",
-          "semantic.content.default",
+          "semantic.content.strong",
           "semantic.primary.content-default",
           "semantic.feedback.success.content-contrast",
           "semantic.feedback.error.content-contrast",
@@ -325,7 +325,7 @@
           "semantic.feedback.warning.content-contrast",
           "semantic.feedback.info.content-contrast",
           "semantic.background.inverse",
-          "semantic.content.default"
+          "semantic.content.strong"
         ],
         "figma": []
       }
@@ -2715,142 +2715,6 @@
         "figma": []
       }
     },
-    "foundation.color.disabled.brand-light": {
-      "layer": "foundation",
-      "type": "color",
-      "references": null,
-      "sentido": "Cor de fill disabled pra ações brand-light em undefined mode. Translúcida sobre superfície base.",
-      "escopo": [
-        "fill"
-      ],
-      "contexto": "Aplicado via Semantic brand-light.background.disabled. Não use direto em componente.",
-      "decisao": "Alpha de 40–50% sobre tom base preserva forma do botão sem competir visualmente — sinaliza não-interativo sem sumir.",
-      "usos": {
-        "css": [
-          {
-            "file": "css/tokens/generated/theme-dark.css",
-            "count": 1
-          },
-          {
-            "file": "css/tokens/generated/theme-light.css",
-            "count": 1
-          }
-        ],
-        "tokens": [
-          "semantic.primary.background.disabled",
-          "semantic.primary.background.disabled"
-        ],
-        "figma": []
-      }
-    },
-    "foundation.color.disabled.brand-dark": {
-      "layer": "foundation",
-      "type": "color",
-      "references": null,
-      "sentido": "Cor de fill disabled pra ações brand-dark em undefined mode. Translúcida sobre superfície base.",
-      "escopo": [
-        "fill"
-      ],
-      "contexto": "Aplicado via Semantic brand-dark.background.disabled. Não use direto em componente.",
-      "decisao": "Alpha de 40–50% sobre tom base preserva forma do botão sem competir visualmente — sinaliza não-interativo sem sumir.",
-      "usos": {
-        "css": [],
-        "tokens": [],
-        "figma": []
-      }
-    },
-    "foundation.color.disabled.success-light": {
-      "layer": "foundation",
-      "type": "color",
-      "references": null,
-      "sentido": "Cor de fill disabled pra ações success-light em undefined mode. Translúcida sobre superfície base.",
-      "escopo": [
-        "fill"
-      ],
-      "contexto": "Aplicado via Semantic success-light.background.disabled. Não use direto em componente.",
-      "decisao": "Alpha de 40–50% sobre tom base preserva forma do botão sem competir visualmente — sinaliza não-interativo sem sumir.",
-      "usos": {
-        "css": [
-          {
-            "file": "css/tokens/generated/theme-light.css",
-            "count": 1
-          }
-        ],
-        "tokens": [
-          "semantic.feedback.success.background.disabled"
-        ],
-        "figma": []
-      }
-    },
-    "foundation.color.disabled.success-dark": {
-      "layer": "foundation",
-      "type": "color",
-      "references": null,
-      "sentido": "Cor de fill disabled pra ações success-dark em undefined mode. Translúcida sobre superfície base.",
-      "escopo": [
-        "fill"
-      ],
-      "contexto": "Aplicado via Semantic success-dark.background.disabled. Não use direto em componente.",
-      "decisao": "Alpha de 40–50% sobre tom base preserva forma do botão sem competir visualmente — sinaliza não-interativo sem sumir.",
-      "usos": {
-        "css": [
-          {
-            "file": "css/tokens/generated/theme-dark.css",
-            "count": 1
-          }
-        ],
-        "tokens": [
-          "semantic.feedback.success.background.disabled"
-        ],
-        "figma": []
-      }
-    },
-    "foundation.color.disabled.error-light": {
-      "layer": "foundation",
-      "type": "color",
-      "references": null,
-      "sentido": "Cor de fill disabled pra ações error-light em undefined mode. Translúcida sobre superfície base.",
-      "escopo": [
-        "fill"
-      ],
-      "contexto": "Aplicado via Semantic error-light.background.disabled. Não use direto em componente.",
-      "decisao": "Alpha de 40–50% sobre tom base preserva forma do botão sem competir visualmente — sinaliza não-interativo sem sumir.",
-      "usos": {
-        "css": [
-          {
-            "file": "css/tokens/generated/theme-light.css",
-            "count": 1
-          }
-        ],
-        "tokens": [
-          "semantic.feedback.error.background.disabled"
-        ],
-        "figma": []
-      }
-    },
-    "foundation.color.disabled.error-dark": {
-      "layer": "foundation",
-      "type": "color",
-      "references": null,
-      "sentido": "Cor de fill disabled pra ações error-dark em undefined mode. Translúcida sobre superfície base.",
-      "escopo": [
-        "fill"
-      ],
-      "contexto": "Aplicado via Semantic error-dark.background.disabled. Não use direto em componente.",
-      "decisao": "Alpha de 40–50% sobre tom base preserva forma do botão sem competir visualmente — sinaliza não-interativo sem sumir.",
-      "usos": {
-        "css": [
-          {
-            "file": "css/tokens/generated/theme-dark.css",
-            "count": 1
-          }
-        ],
-        "tokens": [
-          "semantic.feedback.error.background.disabled"
-        ],
-        "figma": []
-      }
-    },
     "foundation.duration.fast": {
       "layer": "foundation",
       "type": "duration",
@@ -2949,8 +2813,20 @@
       "contexto": "Elementos saindo da tela.",
       "decisao": "Doc foundations-motion.html documentava; alinhado em 2026-05-07.",
       "usos": {
-        "css": [],
-        "tokens": [],
+        "css": [
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 2
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 2
+          }
+        ],
+        "tokens": [
+          "semantic.motion.ease.in",
+          "semantic.motion.ease.in"
+        ],
         "figma": []
       }
     },
@@ -2965,8 +2841,20 @@
       "contexto": "Elementos entrando na tela.",
       "decisao": "Doc foundations-motion.html documentava; alinhado em 2026-05-07.",
       "usos": {
-        "css": [],
-        "tokens": [],
+        "css": [
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "semantic.motion.ease.out",
+          "semantic.motion.ease.out"
+        ],
         "figma": []
       }
     },
@@ -2981,8 +2869,20 @@
       "contexto": "Padrão Material; usar quando quiser explicitar a curva.",
       "decisao": "Doc foundations-motion.html documentava; alinhado em 2026-05-07.",
       "usos": {
-        "css": [],
-        "tokens": [],
+        "css": [
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "semantic.motion.ease.in-out",
+          "semantic.motion.ease.in-out"
+        ],
         "figma": []
       }
     },
@@ -4156,8 +4056,20 @@
       "contexto": "Use via Semantic `z.{base|dropdown|...}`. Componentes top-level (modal, toast, drawer) consomem direto.",
       "decisao": "Escala 0–50 em steps de 10 reserva slots intermediários (5, 15) pra ajustes finos sem refator. Topbar do site usa calc(var(--ds-z-50) + 10) = 60.",
       "usos": {
-        "css": [],
-        "tokens": [],
+        "css": [
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "semantic.z.tooltip",
+          "semantic.z.tooltip"
+        ],
         "figma": []
       }
     },
@@ -4294,6 +4206,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/badge.css",
+            "count": 2
+          },
+          {
             "file": "css/components/card.css",
             "count": 1
           },
@@ -4337,7 +4253,12 @@
       "contexto": "Use em painéis, cards, modais. Pareado com shadow.",
       "decisao": "Alias resolvido em foundation.color.neutral.50.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -4401,12 +4322,16 @@
             "count": 4
           },
           {
+            "file": "css/components/badge.css",
+            "count": 1
+          },
+          {
             "file": "css/components/card.css",
             "count": 1
           },
           {
             "file": "css/components/checkbox.css",
-            "count": 3
+            "count": 4
           },
           {
             "file": "css/components/form-field.css",
@@ -4422,7 +4347,7 @@
           },
           {
             "file": "css/components/radio.css",
-            "count": 4
+            "count": 5
           },
           {
             "file": "css/components/select.css",
@@ -4438,7 +4363,7 @@
           },
           {
             "file": "css/components/toggle.css",
-            "count": 3
+            "count": 4
           }
         ],
         "tokens": [],
@@ -4480,7 +4405,7 @@
           },
           {
             "file": "css/components/checkbox.css",
-            "count": 1
+            "count": 2
           },
           {
             "file": "css/components/form-field.css",
@@ -4492,7 +4417,7 @@
           },
           {
             "file": "css/components/radio.css",
-            "count": 1
+            "count": 2
           },
           {
             "file": "css/components/tabs.css",
@@ -4504,7 +4429,7 @@
           },
           {
             "file": "css/components/toggle.css",
-            "count": 2
+            "count": 3
           }
         ],
         "tokens": [],
@@ -4595,14 +4520,6 @@
           {
             "file": "css/base/reset.css",
             "count": 1
-          },
-          {
-            "file": "css/components/badge.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/tooltip.css",
-            "count": 1
           }
         ],
         "tokens": [],
@@ -4627,11 +4544,11 @@
             "count": 1
           },
           {
-            "file": "css/components/card.css",
+            "file": "css/components/badge.css",
             "count": 1
           },
           {
-            "file": "css/components/tabs.css",
+            "file": "css/components/card.css",
             "count": 1
           }
         ],
@@ -4651,12 +4568,7 @@
       "contexto": "Use em `border-color` ou `outline-color`. Pareado com border-width apropriado.",
       "decisao": "Aliasado a foundation.color.neutral.600.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/badge.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -4676,14 +4588,10 @@
         "css": [
           {
             "file": "css/components/card.css",
-            "count": 2
-          },
-          {
-            "file": "css/components/divider.css",
             "count": 1
           },
           {
-            "file": "css/components/modal.css",
+            "file": "css/components/divider.css",
             "count": 1
           },
           {
@@ -4716,12 +4624,16 @@
             "count": 4
           },
           {
+            "file": "css/components/badge.css",
+            "count": 1
+          },
+          {
             "file": "css/components/button.css",
             "count": 1
           },
           {
             "file": "css/components/card.css",
-            "count": 3
+            "count": 2
           },
           {
             "file": "css/components/checkbox.css",
@@ -4733,10 +4645,6 @@
           },
           {
             "file": "css/components/input.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/modal.css",
             "count": 1
           },
           {
@@ -4776,6 +4684,10 @@
       "decisao": "Alias direto a Foundation foundation.border.width.2.",
       "usos": {
         "css": [
+          {
+            "file": "css/components/spinner.css",
+            "count": 1
+          },
           {
             "file": "css/components/tabs.css",
             "count": 1
@@ -4928,7 +4840,12 @@
       "contexto": "Use em `border-color` ou `outline-color`. Pareado com border-width apropriado.",
       "decisao": "Aliasado a foundation.color.brand.600.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/spinner.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -5011,7 +4928,12 @@
       "contexto": "Use em scrims de modal, dropdowns, drawers.",
       "decisao": "Aliasado a Foundation foundation.color.overlay.black.10.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/tabs.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -5027,7 +4949,12 @@
       "contexto": "Use em scrims de modal, dropdowns, drawers.",
       "decisao": "Aliasado a Foundation foundation.color.overlay.black.20.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/spinner.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -5619,6 +5546,10 @@
             "count": 2
           },
           {
+            "file": "css/components/spinner.css",
+            "count": 1
+          },
+          {
             "file": "css/components/toggle.css",
             "count": 1
           }
@@ -5944,6 +5875,10 @@
           {
             "file": "css/components/toggle.css",
             "count": 1
+          },
+          {
+            "file": "css/components/tooltip.css",
+            "count": 1
           }
         ],
         "tokens": [],
@@ -6024,10 +5959,6 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/badge.css",
-            "count": 2
-          },
-          {
             "file": "css/components/button.css",
             "count": 1
           }
@@ -6065,10 +5996,6 @@
       "decisao": "Aliasado a foundation.color.neutral.500 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).",
       "usos": {
         "css": [
-          {
-            "file": "css/components/badge.css",
-            "count": 1
-          },
           {
             "file": "css/components/button.css",
             "count": 1
@@ -6172,6 +6099,10 @@
             "count": 1
           },
           {
+            "file": "css/components/breadcrumb.css",
+            "count": 1
+          },
+          {
             "file": "css/components/link.css",
             "count": 1
           }
@@ -6193,6 +6124,10 @@
       "decisao": "Aliasado a foundation.color.brand.800 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).",
       "usos": {
         "css": [
+          {
+            "file": "css/components/breadcrumb.css",
+            "count": 1
+          },
           {
             "file": "css/components/link.css",
             "count": 1
@@ -6236,6 +6171,10 @@
       "decisao": "Aliasado a foundation.color.green.700.",
       "usos": {
         "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 1
+          },
           {
             "file": "css/components/badge.css",
             "count": 1
@@ -6310,6 +6249,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/alert.css",
+            "count": 1
+          },
+          {
             "file": "css/components/badge.css",
             "count": 1
           }
@@ -6383,12 +6326,20 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/alert.css",
+            "count": 1
+          },
+          {
             "file": "css/components/badge.css",
             "count": 1
           },
           {
             "file": "css/components/checkbox.css",
             "count": 1
+          },
+          {
+            "file": "css/components/form-field.css",
+            "count": 3
           },
           {
             "file": "css/components/radio.css",
@@ -6468,6 +6419,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/alert.css",
+            "count": 1
+          },
+          {
             "file": "css/components/badge.css",
             "count": 1
           }
@@ -6514,10 +6469,6 @@
       "decisao": "Aliasado a foundation.color.neutral.200 (light) — Semantic encapsula a decisão de qual tom da paleta usar.",
       "usos": {
         "css": [
-          {
-            "file": "css/components/badge.css",
-            "count": 1
-          },
           {
             "file": "css/components/checkbox.css",
             "count": 1
@@ -6680,7 +6631,19 @@
             "count": 1
           },
           {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          },
+          {
             "file": "css/components/form-field.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/toggle.css",
             "count": 1
           }
         ],
@@ -6720,7 +6683,7 @@
           },
           {
             "file": "css/components/checkbox.css",
-            "count": 4
+            "count": 6
           },
           {
             "file": "css/components/form-field.css",
@@ -6736,7 +6699,7 @@
           },
           {
             "file": "css/components/radio.css",
-            "count": 5
+            "count": 7
           },
           {
             "file": "css/components/select.css",
@@ -6744,11 +6707,11 @@
           },
           {
             "file": "css/components/toggle.css",
-            "count": 3
+            "count": 5
           },
           {
             "file": "css/components/tooltip.css",
-            "count": 1
+            "count": 2
           },
           {
             "file": "css/utilities/layout.css",
@@ -6783,7 +6746,7 @@
           },
           {
             "file": "css/components/button.css",
-            "count": 2
+            "count": 3
           },
           {
             "file": "css/components/card.css",
@@ -6791,11 +6754,11 @@
           },
           {
             "file": "css/components/checkbox.css",
-            "count": 1
+            "count": 3
           },
           {
             "file": "css/components/input.css",
-            "count": 1
+            "count": 2
           },
           {
             "file": "css/components/modal.css",
@@ -6803,23 +6766,23 @@
           },
           {
             "file": "css/components/radio.css",
-            "count": 2
+            "count": 4
           },
           {
             "file": "css/components/select.css",
-            "count": 2
+            "count": 3
           },
           {
             "file": "css/components/textarea.css",
-            "count": 1
+            "count": 2
           },
           {
             "file": "css/components/toggle.css",
-            "count": 1
+            "count": 3
           },
           {
             "file": "css/components/tooltip.css",
-            "count": 1
+            "count": 5
           },
           {
             "file": "css/utilities/layout.css",
@@ -6850,7 +6813,7 @@
           },
           {
             "file": "css/components/button.css",
-            "count": 2
+            "count": 3
           },
           {
             "file": "css/components/divider.css",
@@ -6955,18 +6918,6 @@
             "count": 1
           },
           {
-            "file": "css/components/input.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/select.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/textarea.css",
-            "count": 1
-          },
-          {
             "file": "css/utilities/layout.css",
             "count": 1
           }
@@ -7030,10 +6981,6 @@
             "count": 1
           },
           {
-            "file": "css/components/tabs.css",
-            "count": 2
-          },
-          {
             "file": "css/components/toggle.css",
             "count": 1
           },
@@ -7081,6 +7028,10 @@
           {
             "file": "css/components/skeleton.css",
             "count": 2
+          },
+          {
+            "file": "css/components/tabs.css",
+            "count": 1
           },
           {
             "file": "css/components/textarea.css",
@@ -7262,8 +7213,20 @@
       "contexto": "Use via Semantic `space.*` (gap/padding) ou `size.*` (width/height). Componentes não consomem direto.",
       "decisao": "Step da escala 2/4/6/8/10/12/14/16/20/24/28/32/36/40/44/48 — múltiplos de 2 e 4 cobrem todas as densidades de UI.",
       "usos": {
-        "css": [],
-        "tokens": [],
+        "css": [
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "semantic.space.control.padding.6",
+          "semantic.space.control.padding.6"
+        ],
         "figma": []
       }
     },
@@ -8346,10 +8309,6 @@
             "count": 1
           },
           {
-            "file": "css/components/breadcrumb.css",
-            "count": 1
-          },
-          {
             "file": "css/components/button.css",
             "count": 2
           },
@@ -8360,10 +8319,6 @@
           {
             "file": "css/components/radio.css",
             "count": 3
-          },
-          {
-            "file": "css/components/spinner.css",
-            "count": 1
           },
           {
             "file": "css/components/tabs.css",
@@ -8423,13 +8378,13 @@
     "semantic.primary.background.disabled": {
       "layer": "semantic",
       "type": "color",
-      "references": "foundation.color.disabled.brand-light",
+      "references": "foundation.color.disabled.brand.light",
       "sentido": "Fill de ação primária (brand solid) em estado disabled.",
       "escopo": [
         "background-color"
       ],
       "contexto": "Aplicado em `.ds-btn--primary` ou em consumidores Figma equivalentes.",
-      "decisao": "Aliasado a foundation.color.disabled.brand-light — escolha de tom feita no Figma (ADR-014: action × style × prop × state).",
+      "decisao": "Aliasado a foundation.color.disabled.brand.light — escolha de tom feita no Figma (ADR-014: action × style × prop × state).",
       "usos": {
         "css": [],
         "tokens": [],
@@ -8515,10 +8470,6 @@
       "decisao": "Aliasado a foundation.color.overlay.black.5 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).",
       "usos": {
         "css": [
-          {
-            "file": "css/components/badge.css",
-            "count": 1
-          },
           {
             "file": "css/components/button.css",
             "count": 1
@@ -8690,13 +8641,13 @@
     "semantic.feedback.success.background.disabled": {
       "layer": "semantic",
       "type": "color",
-      "references": "foundation.color.disabled.success-light",
+      "references": "foundation.color.disabled.success.light",
       "sentido": "Fill de feedback sucesso (verde) em estado disabled.",
       "escopo": [
         "background-color"
       ],
       "contexto": "Use em alerts, badges, mensagens de validação, ícones de status. Pareado com Foundation green.* via alias.",
-      "decisao": "Aliasado a foundation.color.disabled.success-light.",
+      "decisao": "Aliasado a foundation.color.disabled.success.light em light e success.dark em dark, conforme aliases de modo no Figma.",
       "usos": {
         "css": [],
         "tokens": [],
@@ -8798,10 +8749,6 @@
             "count": 2
           },
           {
-            "file": "css/components/form-field.css",
-            "count": 3
-          },
-          {
             "file": "css/components/input.css",
             "count": 3
           },
@@ -8892,13 +8839,13 @@
     "semantic.feedback.error.background.disabled": {
       "layer": "semantic",
       "type": "color",
-      "references": "foundation.color.disabled.error-light",
+      "references": "foundation.color.disabled.error.light",
       "sentido": "Fill de feedback erro (vermelho) em estado disabled.",
       "escopo": [
         "background-color"
       ],
       "contexto": "Use em alerts, badges, mensagens de validação, ícones de status. Pareado com Foundation red.* via alias.",
-      "decisao": "Aliasado a foundation.color.disabled.error-light.",
+      "decisao": "Aliasado a foundation.color.disabled.error.light em light e error.dark em dark, conforme aliases de modo no Figma.",
       "usos": {
         "css": [],
         "tokens": [],
@@ -8990,6 +8937,10 @@
             "count": 1
           },
           {
+            "file": "css/components/tabs.css",
+            "count": 1
+          },
+          {
             "file": "css/components/textarea.css",
             "count": 1
           }
@@ -9016,10 +8967,6 @@
             "count": 1
           },
           {
-            "file": "css/components/button.css",
-            "count": 3
-          },
-          {
             "file": "css/components/checkbox.css",
             "count": 2
           },
@@ -9033,7 +8980,7 @@
           },
           {
             "file": "css/components/select.css",
-            "count": 6
+            "count": 1
           },
           {
             "file": "css/components/spinner.css",
@@ -9075,7 +9022,7 @@
           },
           {
             "file": "css/components/checkbox.css",
-            "count": 2
+            "count": 4
           },
           {
             "file": "css/components/input.css",
@@ -9083,11 +9030,11 @@
           },
           {
             "file": "css/components/radio.css",
-            "count": 2
+            "count": 4
           },
           {
             "file": "css/components/select.css",
-            "count": 3
+            "count": 5
           },
           {
             "file": "css/components/toggle.css",
@@ -9137,7 +9084,7 @@
           },
           {
             "file": "css/components/select.css",
-            "count": 3
+            "count": 5
           },
           {
             "file": "css/components/spinner.css",
@@ -9225,7 +9172,7 @@
           },
           {
             "file": "css/components/toggle.css",
-            "count": 1
+            "count": 3
           }
         ],
         "tokens": [],
@@ -9402,7 +9349,7 @@
         "css": [
           {
             "file": "css/components/modal.css",
-            "count": 2
+            "count": 1
           }
         ],
         "tokens": [],
@@ -9421,7 +9368,12 @@
       "contexto": "Use em `width`, `height` ou pra ícones, controles, layouts.",
       "decisao": "Aliasado a Foundation foundation.dimension.800.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -9783,6 +9735,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/breadcrumb.css",
+            "count": 1
+          },
+          {
             "file": "css/components/link.css",
             "count": 1
           }
@@ -9854,7 +9810,12 @@
       "contexto": "Use em `border-color` ou `outline-color`. Pareado com border-width apropriado.",
       "decisao": "Aliasado a foundation.color.neutral.50.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/spinner.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -9862,7 +9823,7 @@
     "semantic.z.tooltip": {
       "layer": "semantic",
       "type": "number",
-      "references": "{foundation.z.40}",
+      "references": "foundation.z.40",
       "sentido": "Stack layer para tooltips e floating labels não modais.",
       "escopo": [
         "z-index"
@@ -9870,7 +9831,12 @@
       "contexto": "Consumido por tooltip.css e floating labels não-modais (popovers leves). Modais usam stack maior; toasts ficam acima de modal.",
       "decisao": "Aliasa foundation.z.40. Tooltip vive acima de UI mas abaixo de modal/toast. Token CSS-only (ADR-016): z-index não tem equivalente Figma Variable.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/tooltip.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -9878,7 +9844,7 @@
     "semantic.space.control.padding.6": {
       "layer": "semantic",
       "type": "dimension",
-      "references": "{foundation.dimension.6}",
+      "references": "foundation.dimension.6",
       "sentido": "Padding simétrico de Icon Only sm Button.",
       "escopo": [
         "padding"
@@ -9886,7 +9852,12 @@
       "contexto": "Consumido por .ds-btn--icon-only.ds-btn--sm. (32 - 20) / 2 = 6px.",
       "decisao": "Único valor entre xs(4) e sm(8) que foge da escala space. Segue padrão de space.control.padding.10 (ADR-006/015).",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/button.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -9902,8 +9873,20 @@
       "contexto": "Consumido via semantic.motion.duration.slower. Não usar pra transições de estado.",
       "decisao": "Doc foundations-motion.html já documentava — token criado em 2026-05-07 alinhando JSON com doc.",
       "usos": {
-        "css": [],
-        "tokens": [],
+        "css": [
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "semantic.motion.duration.slower",
+          "semantic.motion.duration.slower"
+        ],
         "figma": []
       }
     },
@@ -9918,15 +9901,27 @@
       "contexto": "Consumido via semantic.motion.ease.linear. Para loops contínuos onde aceleração quebra a percepção (Spinner).",
       "decisao": "Doc foundations-motion.html já documentava como [0,0,1,1].",
       "usos": {
-        "css": [],
-        "tokens": [],
+        "css": [
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "semantic.motion.ease.linear",
+          "semantic.motion.ease.linear"
+        ],
         "figma": []
       }
     },
     "semantic.motion.duration.slower": {
       "layer": "semantic",
       "type": "duration",
-      "references": "{foundation.duration.slower}",
+      "references": "foundation.duration.slower",
       "sentido": "600ms para loops contínuos.",
       "escopo": [
         "transition"
@@ -9934,7 +9929,12 @@
       "contexto": "Spinner principalmente; quaisquer outros loops que precisem de duração maior que 300ms.",
       "decisao": "ADR-016 (motion CSS-only). Edição direta no JSON é legítima.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/spinner.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -9942,7 +9942,7 @@
     "semantic.motion.ease.linear": {
       "layer": "semantic",
       "type": "cubicBezier",
-      "references": "{foundation.ease.linear}",
+      "references": "foundation.ease.linear",
       "sentido": "Curva linear pra loops onde aceleração quebra rotação constante.",
       "escopo": [
         "transition"
@@ -9950,7 +9950,12 @@
       "contexto": "Spinner. ease.default tem curva, errado pra loop.",
       "decisao": "ADR-016 (motion CSS-only).",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/spinner.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -9966,8 +9971,20 @@
       "contexto": "Raro — sobrescrever em prefers-reduced-motion ou disable explícito.",
       "decisao": "Doc foundations-motion.html documentava; alinhado em 2026-05-07.",
       "usos": {
-        "css": [],
-        "tokens": [],
+        "css": [
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "semantic.motion.duration.instant",
+          "semantic.motion.duration.instant"
+        ],
         "figma": []
       }
     },
@@ -9982,15 +9999,27 @@
       "contexto": "Toggle, drawer, expand/collapse.",
       "decisao": "Doc foundations-motion.html documentava; substitui o antigo `normal=200ms` (renomeado + recalibrado).",
       "usos": {
-        "css": [],
-        "tokens": [],
+        "css": [
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "semantic.motion.duration.moderate",
+          "semantic.motion.duration.moderate"
+        ],
         "figma": []
       }
     },
     "semantic.motion.duration.instant": {
       "layer": "semantic",
       "type": "duration",
-      "references": "{foundation.duration.instant}",
+      "references": "foundation.duration.instant",
       "sentido": "0ms.",
       "escopo": [
         "transition"
@@ -10006,7 +10035,7 @@
     "semantic.motion.duration.moderate": {
       "layer": "semantic",
       "type": "duration",
-      "references": "{foundation.duration.moderate}",
+      "references": "foundation.duration.moderate",
       "sentido": "250ms.",
       "escopo": [
         "transition"
@@ -10022,7 +10051,7 @@
     "semantic.motion.ease.in": {
       "layer": "semantic",
       "type": "cubicBezier",
-      "references": "{foundation.ease.in}",
+      "references": "foundation.ease.in",
       "sentido": "Aceleração no início.",
       "escopo": [
         "transition"
@@ -10038,7 +10067,7 @@
     "semantic.motion.ease.out": {
       "layer": "semantic",
       "type": "cubicBezier",
-      "references": "{foundation.ease.out}",
+      "references": "foundation.ease.out",
       "sentido": "Desaceleração no final.",
       "escopo": [
         "transition"
@@ -10054,13 +10083,211 @@
     "semantic.motion.ease.in-out": {
       "layer": "semantic",
       "type": "cubicBezier",
-      "references": "{foundation.ease.in-out}",
+      "references": "foundation.ease.in-out",
       "sentido": "Aceleração + desaceleração.",
       "escopo": [
         "transition"
       ],
       "contexto": "Mesmo valor de default.",
       "decisao": "ADR-016.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "foundation.color.disabled.brand.light": {
+      "layer": "foundation",
+      "type": "color",
+      "references": null,
+      "sentido": "Cor de fill disabled para ações brand em light mode.",
+      "escopo": [
+        "fill"
+      ],
+      "contexto": "Aplicado via Semantic primary.background.disabled. Não use direto em componente.",
+      "decisao": "Nome aninhado espelha Figma color/disabled/... e ADR-011 (sem achatamento com hífen). Alpha preserva forma do botão sem competir visualmente — sinaliza não-interativo sem sumir.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "semantic.primary.background.disabled",
+          "semantic.primary.background.disabled"
+        ],
+        "figma": []
+      }
+    },
+    "foundation.color.disabled.brand.dark": {
+      "layer": "foundation",
+      "type": "color",
+      "references": null,
+      "sentido": "Cor de fill disabled para ações brand em dark mode.",
+      "escopo": [
+        "fill"
+      ],
+      "contexto": "Reservado para aliases brand disabled quando o modo dark exigir tom específico. Não use direto em componente.",
+      "decisao": "Nome aninhado espelha Figma color/disabled/... e ADR-011 (sem achatamento com hífen). Alpha preserva forma do botão sem competir visualmente — sinaliza não-interativo sem sumir.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "foundation.color.disabled.brand.toned.light": {
+      "layer": "foundation",
+      "type": "color",
+      "references": null,
+      "sentido": "Cor de fill disabled para ações brand toned em light mode.",
+      "escopo": [
+        "fill"
+      ],
+      "contexto": "Aplicado via Semantic toned.background.disabled. Não use direto em componente.",
+      "decisao": "Nome aninhado espelha Figma color/disabled/... e ADR-011 (sem achatamento com hífen). Alpha preserva forma do botão sem competir visualmente — sinaliza não-interativo sem sumir.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "semantic.toned.background.disabled"
+        ],
+        "figma": []
+      }
+    },
+    "foundation.color.disabled.brand.toned.dark": {
+      "layer": "foundation",
+      "type": "color",
+      "references": null,
+      "sentido": "Cor de fill disabled para ações brand toned em dark mode.",
+      "escopo": [
+        "fill"
+      ],
+      "contexto": "Aplicado via Semantic toned.background.disabled. Não use direto em componente.",
+      "decisao": "Nome aninhado espelha Figma color/disabled/... e ADR-011 (sem achatamento com hífen). Alpha preserva forma do botão sem competir visualmente — sinaliza não-interativo sem sumir.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "semantic.toned.background.disabled"
+        ],
+        "figma": []
+      }
+    },
+    "foundation.color.disabled.success.light": {
+      "layer": "foundation",
+      "type": "color",
+      "references": null,
+      "sentido": "Cor de fill disabled para feedback success em light mode.",
+      "escopo": [
+        "fill"
+      ],
+      "contexto": "Aplicado via Semantic feedback.success.background.disabled. Não use direto em componente.",
+      "decisao": "Nome aninhado espelha Figma color/disabled/... e ADR-011 (sem achatamento com hífen). Alpha preserva forma do botão sem competir visualmente — sinaliza não-interativo sem sumir.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "semantic.feedback.success.background.disabled"
+        ],
+        "figma": []
+      }
+    },
+    "foundation.color.disabled.success.dark": {
+      "layer": "foundation",
+      "type": "color",
+      "references": null,
+      "sentido": "Cor de fill disabled para feedback success em dark mode.",
+      "escopo": [
+        "fill"
+      ],
+      "contexto": "Aplicado via Semantic feedback.success.background.disabled. Não use direto em componente.",
+      "decisao": "Nome aninhado espelha Figma color/disabled/... e ADR-011 (sem achatamento com hífen). Alpha preserva forma do botão sem competir visualmente — sinaliza não-interativo sem sumir.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "semantic.feedback.success.background.disabled"
+        ],
+        "figma": []
+      }
+    },
+    "foundation.color.disabled.error.light": {
+      "layer": "foundation",
+      "type": "color",
+      "references": null,
+      "sentido": "Cor de fill disabled para feedback error em light mode.",
+      "escopo": [
+        "fill"
+      ],
+      "contexto": "Aplicado via Semantic feedback.error.background.disabled. Não use direto em componente.",
+      "decisao": "Nome aninhado espelha Figma color/disabled/... e ADR-011 (sem achatamento com hífen). Alpha preserva forma do botão sem competir visualmente — sinaliza não-interativo sem sumir.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "semantic.feedback.error.background.disabled"
+        ],
+        "figma": []
+      }
+    },
+    "foundation.color.disabled.error.dark": {
+      "layer": "foundation",
+      "type": "color",
+      "references": null,
+      "sentido": "Cor de fill disabled para feedback error em dark mode.",
+      "escopo": [
+        "fill"
+      ],
+      "contexto": "Aplicado via Semantic feedback.error.background.disabled. Não use direto em componente.",
+      "decisao": "Nome aninhado espelha Figma color/disabled/... e ADR-011 (sem achatamento com hífen). Alpha preserva forma do botão sem competir visualmente — sinaliza não-interativo sem sumir.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "semantic.feedback.error.background.disabled"
+        ],
+        "figma": []
+      }
+    },
+    "semantic.toned.background.disabled": {
+      "layer": "semantic",
+      "type": "color",
+      "references": "foundation.color.disabled.brand.toned.light",
+      "sentido": "Fill de ação brand translúcida em estado disabled.",
+      "escopo": [
+        "background-color"
+      ],
+      "contexto": "Aplicado em `.ds-btn--toned` ou em consumidores Figma equivalentes.",
+      "decisao": "Aliasado a foundation.color.disabled.brand.toned.light em light e brand.toned.dark em dark, conforme Figma. Adicionado para fechar paridade do estado disabled toned.",
       "usos": {
         "css": [],
         "tokens": [],

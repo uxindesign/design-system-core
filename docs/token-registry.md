@@ -1,19 +1,19 @@
 # Token Registry
 
-> Gerado automaticamente por `scripts/build-token-registry.mjs` em 2026-04-30. Não editar à mão — edite `tokens/registry.json` e rode `npm run build:registry`.
+> Gerado automaticamente por `scripts/build-token-registry.mjs` em 2026-05-07. Não editar à mão — edite `tokens/registry.json` e rode `npm run build:registry`.
 
 Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra arquitetural de camadas.
 
 ## Status
 
-- Total de tokens: **426**
-- Com metadados completos: **426**
+- Total de tokens: **440**
+- Com metadados completos: **440**
 - Pendentes (`TODO` em algum campo obrigatório): **0**
 - Completude: **100%**
 
 ## Foundation
 
-262 tokens.
+267 tokens.
 
 ### foundation.border
 
@@ -71,12 +71,14 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `foundation.color.cyan.800` | color | — | Tom 800 da paleta cyan. Tom muito escuro — emphasis text, active states. | 0 |
 | `foundation.color.cyan.900` | color | — | Tom 900 da paleta cyan. Tom extremo — surfaces escuras, body text em light mode. | 0 |
 | `foundation.color.cyan.950` | color | — | Tom 950 da paleta cyan. Tom extremo — surfaces escuras, body text em light mode. | 0 |
-| `foundation.color.disabled.brand-dark` | color | — | Cor de fill disabled pra ações brand-dark em undefined mode. Translúcida sobre superfície base. | 0 |
-| `foundation.color.disabled.brand-light` | color | — | Cor de fill disabled pra ações brand-light em undefined mode. Translúcida sobre superfície base. | 4 |
-| `foundation.color.disabled.error-dark` | color | — | Cor de fill disabled pra ações error-dark em undefined mode. Translúcida sobre superfície base. | 2 |
-| `foundation.color.disabled.error-light` | color | — | Cor de fill disabled pra ações error-light em undefined mode. Translúcida sobre superfície base. | 2 |
-| `foundation.color.disabled.success-dark` | color | — | Cor de fill disabled pra ações success-dark em undefined mode. Translúcida sobre superfície base. | 2 |
-| `foundation.color.disabled.success-light` | color | — | Cor de fill disabled pra ações success-light em undefined mode. Translúcida sobre superfície base. | 2 |
+| `foundation.color.disabled.brand.dark` | color | — | Cor de fill disabled para ações brand em dark mode. | 0 |
+| `foundation.color.disabled.brand.light` | color | — | Cor de fill disabled para ações brand em light mode. | 4 |
+| `foundation.color.disabled.brand.toned.dark` | color | — | Cor de fill disabled para ações brand toned em dark mode. | 2 |
+| `foundation.color.disabled.brand.toned.light` | color | — | Cor de fill disabled para ações brand toned em light mode. | 2 |
+| `foundation.color.disabled.error.dark` | color | — | Cor de fill disabled para feedback error em dark mode. | 2 |
+| `foundation.color.disabled.error.light` | color | — | Cor de fill disabled para feedback error em light mode. | 2 |
+| `foundation.color.disabled.success.dark` | color | — | Cor de fill disabled para feedback success em dark mode. | 2 |
+| `foundation.color.disabled.success.light` | color | — | Cor de fill disabled para feedback success em light mode. | 2 |
 | `foundation.color.emerald.100` | color | — | Tom 100 da paleta emerald. Tom muito claro — backgrounds, hover states sutis em light mode. | 0 |
 | `foundation.color.emerald.200` | color | — | Tom 200 da paleta emerald. Tom claro — backgrounds secundários, borders subtle. | 0 |
 | `foundation.color.emerald.300` | color | — | Tom 300 da paleta emerald. Tom médio-claro — borders default, foregrounds em dark mode. | 0 |
@@ -197,7 +199,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `foundation.dimension.48` | dimension | — | Dimensão fixa de 48px (3rem). | 6 |
 | `foundation.dimension.480` | dimension | — | Dimensão fixa de 480px (30rem). | 4 |
 | `foundation.dimension.56` | dimension | — | Dimensão fixa de 56px (3.5rem). | 0 |
-| `foundation.dimension.6` | dimension | — | Dimensão fixa de 6px (0.375rem). | 0 |
+| `foundation.dimension.6` | dimension | — | Dimensão fixa de 6px (0.375rem). | 4 |
 | `foundation.dimension.64` | dimension | — | Dimensão fixa de 64px (4rem). | 6 |
 | `foundation.dimension.640` | dimension | — | Dimensão fixa de 640px (40rem). | 4 |
 | `foundation.dimension.8` | dimension | — | Dimensão fixa de 8px (0.5rem). | 4 |
@@ -210,17 +212,20 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `foundation.duration.fast` | duration | — | Duração de transição fast. | 4 |
-| `foundation.duration.normal` | duration | — | Duração de transição normal. | 4 |
-| `foundation.duration.slow` | duration | — | Duração de transição slow. | 4 |
+| `foundation.duration.instant` | duration | — | 0ms. Sem animação. | 4 |
+| `foundation.duration.moderate` | duration | — | 250ms para transições mais elaboradas. | 4 |
+| `foundation.duration.slow` | duration | — | 400ms para animações enfáticas. | 4 |
+| `foundation.duration.slower` | duration | — | 600ms. Loops contínuos (Spinner) e animações enfáticas longas. | 4 |
 
 ### foundation.ease
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `foundation.ease.default` | cubicBezier | — | Curva cubic-bezier default. | 4 |
-| `foundation.ease.in` | cubicBezier | — | Curva cubic-bezier in. | 0 |
-| `foundation.ease.in-out` | cubicBezier | — | Curva cubic-bezier in-out. | 0 |
-| `foundation.ease.out` | cubicBezier | — | Curva cubic-bezier out. | 0 |
+| `foundation.ease.in` | cubicBezier | — | Aceleração no início, sem desaceleração. | 4 |
+| `foundation.ease.in-out` | cubicBezier | — | Aceleração + desaceleração. Mesmo valor de default — alias semântico. | 4 |
+| `foundation.ease.linear` | cubicBezier | — | Curva linear (velocidade constante). | 4 |
+| `foundation.ease.out` | cubicBezier | — | Desaceleração no final. | 4 |
 
 ### foundation.opacity
 
@@ -324,19 +329,19 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `foundation.z.10` | number | — | Z-index camada 10 (dropdown/popover). | 0 |
 | `foundation.z.20` | number | — | Z-index camada 20 (sticky header/overlay). | 0 |
 | `foundation.z.30` | number | — | Z-index camada 30 (drawer). | 0 |
-| `foundation.z.40` | number | — | Z-index camada 40 (modal). | 0 |
+| `foundation.z.40` | number | — | Z-index camada 40 (modal). | 4 |
 | `foundation.z.50` | number | — | Z-index camada 50 (toast/snackbar). | 0 |
 
 ## Semantic
 
-164 tokens.
+173 tokens.
 
 ### semantic.background
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `semantic.background.default` | color | → `foundation.color.neutral.50` | Background base do app — superfície neutra mais comum. | 1 |
-| `semantic.background.disabled` | color | → `foundation.color.neutral.200` | Background pra estados disabled — neutral subtle. | 7 |
+| `semantic.background.disabled` | color | → `foundation.color.neutral.200` | Background pra estados disabled — neutral subtle. | 6 |
 | `semantic.background.inverse` | color | → `foundation.color.neutral.900` | Background invertido — usado em tooltips, snackbars, dark badges em light mode. | 2 |
 | `semantic.background.overlay` | color | → `foundation.color.overlay.black.60` | Scrim de modal/drawer — escurece o fundo pra focar o overlay. | 1 |
 | `semantic.background.subtle` | color | → `foundation.color.neutral.200` | Background levemente diferenciado — chips, código inline, áreas secundárias. | 5 |
@@ -345,7 +350,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `semantic.border.brand` | color | → `foundation.color.brand.600` | Borda brand — emphasis branded. | 0 |
+| `semantic.border.brand` | color | → `foundation.color.brand.600` | Borda brand — emphasis branded. | 1 |
 | `semantic.border.control-default` | color | → `foundation.color.neutral.500` | Border control-default. | 6 |
 | `semantic.border.control-disabled` | color | → `foundation.color.neutral.300` | Border control-disabled. | 6 |
 | `semantic.border.control-hover` | color | → `foundation.color.neutral.600` | Border control-hover. | 3 |
@@ -353,57 +358,57 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.border.error` | color | → `foundation.color.red.600` | Borda de erro — input invalid. | 0 |
 | `semantic.border.focus` | color | → `foundation.color.brand.500` | Focus ring color (WCAG 2.4.7). | 12 |
 | `semantic.border.focus-error` | color | → `foundation.color.red.500` | Focus ring em estado error (apenas em focus, não default). | 0 |
-| `semantic.border.inverse` | color | → `foundation.color.neutral.50` | Borda invertida — sobre dark surfaces em light mode. | 0 |
-| `semantic.border.strong` | color | → `foundation.color.neutral.600` | Borda neutra forte — emphasis em separadores. | 1 |
-| `semantic.border.subtle` | color | → `foundation.color.neutral.200` | Borda neutra sutil — chips, code blocks. | 4 |
+| `semantic.border.inverse` | color | → `foundation.color.neutral.50` | Borda invertida — sobre dark surfaces em light mode. | 1 |
+| `semantic.border.strong` | color | → `foundation.color.neutral.600` | Borda neutra forte — emphasis em separadores. | 0 |
+| `semantic.border.subtle` | color | → `foundation.color.neutral.200` | Borda neutra sutil — chips, code blocks. | 3 |
 | `semantic.border.width.default` | dimension | → `foundation.border.width.1` | Border-width default. | 13 |
 | `semantic.border.width.focus` | dimension | → `foundation.border.width.2` | Border-width focus. | 12 |
-| `semantic.border.width.strong` | dimension | → `foundation.border.width.2` | Border-width strong. | 1 |
+| `semantic.border.width.strong` | dimension | → `foundation.border.width.2` | Border-width strong. | 2 |
 
 ### semantic.content
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `semantic.content.default` | color | → `foundation.color.neutral.900` | Texto primário — body, headings, labels principais. | 12 |
+| `semantic.content.default` | color | → `foundation.color.neutral.600` | Texto secundário — descrições, helper text, meta-info. | 12 |
 | `semantic.content.disabled` | color | → `foundation.color.neutral.400` | Texto disabled — controles e items inativos. | 5 |
-| `semantic.content.inverse` | color | → `foundation.color.neutral.50` | Texto invertido — sobre background.inverse (tooltips, badges escuros em light). | 3 |
-| `semantic.content.secondary` | color | → `foundation.color.neutral.600` | Texto secundário — descrições, helper text, meta-info. | 12 |
-| `semantic.content.tertiary` | color | → `foundation.color.neutral.500` | Texto terciário — caption, footnote, timestamps. | 3 |
+| `semantic.content.inverse` | color | → `foundation.color.neutral.50` | Texto invertido — sobre background.inverse (tooltips, badges escuros em light). | 1 |
+| `semantic.content.strong` | color | → `foundation.color.neutral.900` | Texto primário — body, headings, labels principais. | 13 |
+| `semantic.content.subtle` | color | → `foundation.color.neutral.500` | Texto terciário — caption, footnote, timestamps. | 3 |
 
 ### semantic.feedback
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `semantic.feedback.error.background.active` | color | → `foundation.color.red.900` | Fill de feedback erro (vermelho) em estado active. | 1 |
-| `semantic.feedback.error.background.default` | color | → `foundation.color.red.600` | Fill de feedback erro (vermelho) em estado default. | 9 |
-| `semantic.feedback.error.background.disabled` | color | → `foundation.color.disabled.error-light` | Fill de feedback erro (vermelho) em estado disabled. | 0 |
+| `semantic.feedback.error.background.default` | color | → `foundation.color.red.600` | Fill de feedback erro (vermelho) em estado default. | 8 |
+| `semantic.feedback.error.background.disabled` | color | → `foundation.color.disabled.error.light` | Fill de feedback erro (vermelho) em estado disabled. | 0 |
 | `semantic.feedback.error.background.hover` | color | → `foundation.color.red.800` | Fill de feedback erro (vermelho) em estado hover. | 1 |
 | `semantic.feedback.error.background.subtle` | color | → `foundation.color.red.100` | Fill de feedback erro (vermelho) em estado subtle. | 2 |
 | `semantic.feedback.error.border-default` | color | → `foundation.color.red.500` | Borda de feedback erro (vermelho) em estado default. | 2 |
 | `semantic.feedback.error.content-contrast` | color | → `foundation.color.neutral.50` | Cor de feedback erro (vermelho) em estado contrast. | 3 |
-| `semantic.feedback.error.content-default` | color | → `foundation.color.red.700` | Cor de feedback erro (vermelho) em estado default. | 4 |
+| `semantic.feedback.error.content-default` | color | → `foundation.color.red.700` | Cor de feedback erro (vermelho) em estado default. | 6 |
 | `semantic.feedback.error.content-disabled` | color | → `foundation.color.overlay.white.80` | Cor de feedback erro (vermelho) em estado disabled. | 0 |
 | `semantic.feedback.info.background.default` | color | → `foundation.color.sky.500` | Fill de feedback informação (azul) em estado default. | 2 |
 | `semantic.feedback.info.background.hover` | color | → `foundation.color.sky.600` | Fill de feedback informação (azul) em estado hover. | 0 |
 | `semantic.feedback.info.background.subtle` | color | → `foundation.color.sky.100` | Fill de feedback informação (azul) em estado subtle. | 2 |
 | `semantic.feedback.info.border-default` | color | → `foundation.color.sky.500` | Borda de feedback informação (azul) em estado default. | 1 |
 | `semantic.feedback.info.content-contrast` | color | → `foundation.color.neutral.900` | Cor de feedback informação (azul) em estado contrast. | 2 |
-| `semantic.feedback.info.content-default` | color | → `foundation.color.sky.700` | Cor de feedback informação (azul) em estado default. | 1 |
+| `semantic.feedback.info.content-default` | color | → `foundation.color.sky.700` | Cor de feedback informação (azul) em estado default. | 2 |
 | `semantic.feedback.success.background.active` | color | → `foundation.color.green.900` | Fill de feedback sucesso (verde) em estado active. | 1 |
 | `semantic.feedback.success.background.default` | color | → `foundation.color.green.600` | Fill de feedback sucesso (verde) em estado default. | 3 |
-| `semantic.feedback.success.background.disabled` | color | → `foundation.color.disabled.success-light` | Fill de feedback sucesso (verde) em estado disabled. | 0 |
+| `semantic.feedback.success.background.disabled` | color | → `foundation.color.disabled.success.light` | Fill de feedback sucesso (verde) em estado disabled. | 0 |
 | `semantic.feedback.success.background.hover` | color | → `foundation.color.green.800` | Fill de feedback sucesso (verde) em estado hover. | 1 |
 | `semantic.feedback.success.background.subtle` | color | → `foundation.color.green.100` | Fill de feedback sucesso (verde) em estado subtle. | 2 |
 | `semantic.feedback.success.border-default` | color | → `foundation.color.green.500` | Borda de feedback sucesso (verde) em estado default. | 1 |
 | `semantic.feedback.success.content-contrast` | color | → `foundation.color.neutral.50` | Cor de feedback sucesso (verde) em estado contrast. | 3 |
-| `semantic.feedback.success.content-default` | color | → `foundation.color.green.700` | Cor de feedback sucesso (verde) em estado default. | 1 |
+| `semantic.feedback.success.content-default` | color | → `foundation.color.green.700` | Cor de feedback sucesso (verde) em estado default. | 2 |
 | `semantic.feedback.success.content-disabled` | color | → `foundation.color.overlay.white.80` | Cor de feedback sucesso (verde) em estado disabled. | 0 |
 | `semantic.feedback.warning.background.default` | color | → `foundation.color.amber.500` | Fill de feedback aviso (âmbar) em estado default. | 2 |
 | `semantic.feedback.warning.background.hover` | color | → `foundation.color.amber.600` | Fill de feedback aviso (âmbar) em estado hover. | 0 |
 | `semantic.feedback.warning.background.subtle` | color | → `foundation.color.amber.100` | Fill de feedback aviso (âmbar) em estado subtle. | 2 |
 | `semantic.feedback.warning.border-default` | color | → `foundation.color.amber.500` | Borda de feedback aviso (âmbar) em estado default. | 1 |
 | `semantic.feedback.warning.content-contrast` | color | → `foundation.color.neutral.900` | Cor de feedback aviso (âmbar) em estado contrast. | 2 |
-| `semantic.feedback.warning.content-default` | color | → `foundation.color.amber.700` | Cor de feedback aviso (âmbar) em estado default. | 1 |
+| `semantic.feedback.warning.content-default` | color | → `foundation.color.amber.700` | Cor de feedback aviso (âmbar) em estado default. | 2 |
 
 ### semantic.ghost
 
@@ -418,44 +423,50 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `semantic.link.content-active` | color | → `foundation.color.brand.800` | Cor de texto/ícone de link inline (branded text) em estado active. | 1 |
-| `semantic.link.content-default` | color | → `foundation.color.brand.700` | Cor de texto/ícone de link inline (branded text) em estado default. | 2 |
+| `semantic.link.content-active` | color | → `foundation.color.brand.800` | Cor de texto/ícone de link inline (branded text) em estado active. | 2 |
+| `semantic.link.content-default` | color | → `foundation.color.brand.700` | Cor de texto/ícone de link inline (branded text) em estado default. | 3 |
 | `semantic.link.content-disabled` | color | → `foundation.color.neutral.400` | Cor de texto/ícone de link inline (branded text) em estado disabled. | 0 |
-| `semantic.link.content-hover` | color | → `foundation.color.brand.800` | Cor de texto/ícone de link inline (branded text) em estado hover. | 1 |
+| `semantic.link.content-hover` | color | → `foundation.color.brand.800` | Cor de texto/ícone de link inline (branded text) em estado hover. | 2 |
 
 ### semantic.motion
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `semantic.motion.duration.fast` | duration | → `foundation.duration.fast` | Semantic wrapper pra motion. | 12 |
-| `semantic.motion.duration.normal` | duration | → `foundation.duration.normal` | Semantic wrapper pra motion. | 0 |
-| `semantic.motion.duration.slow` | duration | → `foundation.duration.slow` | Semantic wrapper pra motion. | 0 |
+| `semantic.motion.duration.instant` | duration | → `foundation.duration.instant` | 0ms. | 0 |
+| `semantic.motion.duration.moderate` | duration | → `foundation.duration.moderate` | 250ms. | 0 |
+| `semantic.motion.duration.slow` | duration | → `foundation.duration.slow` | 400ms para animações enfáticas. | 0 |
+| `semantic.motion.duration.slower` | duration | → `foundation.duration.slower` | 600ms para loops contínuos. | 1 |
 | `semantic.motion.ease.default` | cubicBezier | → `foundation.ease.default` | Semantic wrapper pra motion. | 12 |
+| `semantic.motion.ease.in` | cubicBezier | → `foundation.ease.in` | Aceleração no início. | 0 |
+| `semantic.motion.ease.in-out` | cubicBezier | → `foundation.ease.in-out` | Aceleração + desaceleração. | 0 |
+| `semantic.motion.ease.linear` | cubicBezier | → `foundation.ease.linear` | Curva linear pra loops onde aceleração quebra rotação constante. | 1 |
+| `semantic.motion.ease.out` | cubicBezier | → `foundation.ease.out` | Desaceleração no final. | 0 |
 
 ### semantic.opacity
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `semantic.opacity.disabled` | number | → `foundation.opacity.50` | Semantic wrapper pra opacity. | 4 |
+| `semantic.opacity.disabled` | number | → `foundation.opacity.50` | Semantic wrapper pra opacity. | 5 |
 
 ### semantic.outline
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `semantic.outline.background.active` | color | → `foundation.color.overlay.black.10` | Fill de ação com borda neutra em estado active. | 1 |
-| `semantic.outline.background.hover` | color | → `foundation.color.overlay.black.5` | Fill de ação com borda neutra em estado hover. | 2 |
-| `semantic.outline.border-default` | color | → `foundation.color.neutral.500` | Borda de ação com borda neutra em estado default. | 2 |
+| `semantic.outline.background.hover` | color | → `foundation.color.overlay.black.5` | Fill de ação com borda neutra em estado hover. | 1 |
+| `semantic.outline.border-default` | color | → `foundation.color.neutral.500` | Borda de ação com borda neutra em estado default. | 1 |
 | `semantic.outline.border-disabled` | color | → `foundation.color.neutral.200` | Borda de ação com borda neutra em estado disabled. | 0 |
 | `semantic.outline.border-hover` | color | → `foundation.color.neutral.700` | Borda de ação com borda neutra em estado hover. | 1 |
-| `semantic.outline.content-default` | color | → `foundation.color.neutral.700` | Cor de texto/ícone de ação com borda neutra em estado default. | 2 |
+| `semantic.outline.content-default` | color | → `foundation.color.neutral.700` | Cor de texto/ícone de ação com borda neutra em estado default. | 1 |
 | `semantic.outline.content-disabled` | color | → `foundation.color.neutral.400` | Cor de texto/ícone de ação com borda neutra em estado disabled. | 0 |
 
 ### semantic.overlay
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `semantic.overlay.default` | color | → `foundation.color.overlay.black.10` | Overlay default — translúcido sobre conteúdo. | 0 |
-| `semantic.overlay.medium` | color | → `foundation.color.overlay.black.20` | Overlay medium — translúcido sobre conteúdo. | 0 |
+| `semantic.overlay.default` | color | → `foundation.color.overlay.black.10` | Overlay default — translúcido sobre conteúdo. | 1 |
+| `semantic.overlay.medium` | color | → `foundation.color.overlay.black.20` | Overlay medium — translúcido sobre conteúdo. | 1 |
 | `semantic.overlay.strong` | color | → `foundation.color.overlay.black.40` | Overlay strong — translúcido sobre conteúdo. | 0 |
 | `semantic.overlay.subtle` | color | → `foundation.color.overlay.black.5` | Overlay subtle — translúcido sobre conteúdo. | 4 |
 
@@ -464,10 +475,10 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `semantic.primary.background.active` | color | → `foundation.color.brand.800` | Fill de ação primária (brand solid) em estado active. | 1 |
-| `semantic.primary.background.default` | color | → `foundation.color.brand.600` | Fill de ação primária (brand solid) em estado default. | 9 |
-| `semantic.primary.background.disabled` | color | → `foundation.color.disabled.brand-light` | Fill de ação primária (brand solid) em estado disabled. | 0 |
+| `semantic.primary.background.default` | color | → `foundation.color.brand.600` | Fill de ação primária (brand solid) em estado default. | 7 |
+| `semantic.primary.background.disabled` | color | → `foundation.color.disabled.brand.light` | Fill de ação primária (brand solid) em estado disabled. | 0 |
 | `semantic.primary.background.hover` | color | → `foundation.color.brand.700` | Fill de ação primária (brand solid) em estado hover. | 1 |
-| `semantic.primary.content-default` | color | → `foundation.color.neutral.50` | Cor de texto/ícone de ação primária (brand solid) em estado default. | 6 |
+| `semantic.primary.content-default` | color | → `foundation.color.neutral.50` | Cor de texto/ícone de ação primária (brand solid) em estado default. | 7 |
 | `semantic.primary.content-disabled` | color | → `foundation.color.overlay.white.80` | Cor de texto/ícone de ação primária (brand solid) em estado disabled. | 0 |
 
 ### semantic.radius
@@ -476,8 +487,8 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 |---|---|---|---|---|
 | `semantic.radius.full` | dimension | → `foundation.radius.999` | Radius semantic full. | 6 |
 | `semantic.radius.lg` | dimension | → `foundation.radius.12` | Radius semantic lg. | 4 |
-| `semantic.radius.md` | dimension | → `foundation.radius.8` | Radius semantic md. | 7 |
-| `semantic.radius.sm` | dimension | → `foundation.radius.4` | Radius semantic sm. | 9 |
+| `semantic.radius.md` | dimension | → `foundation.radius.8` | Radius semantic md. | 8 |
+| `semantic.radius.sm` | dimension | → `foundation.radius.4` | Radius semantic sm. | 8 |
 | `semantic.radius.xl` | dimension | → `foundation.radius.16` | Radius semantic xl. | 0 |
 
 ### semantic.shadow
@@ -496,7 +507,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.size.4xl` | dimension | → `foundation.dimension.96` | Size token 4xl. | 1 |
 | `semantic.size.5xl` | dimension | → `foundation.dimension.128` | Size token 5xl. | 2 |
 | `semantic.size.layout.2xl` | dimension | → `foundation.dimension.1280` | Size token layout.2xl. | 0 |
-| `semantic.size.layout.lg` | dimension | → `foundation.dimension.800` | Size token layout.lg. | 0 |
+| `semantic.size.layout.lg` | dimension | → `foundation.dimension.800` | Size token layout.lg. | 1 |
 | `semantic.size.layout.md` | dimension | → `foundation.dimension.640` | Size token layout.md. | 1 |
 | `semantic.size.layout.sm` | dimension | → `foundation.dimension.480` | Size token layout.sm. | 1 |
 | `semantic.size.layout.xl` | dimension | → `foundation.dimension.1024` | Size token layout.xl. | 0 |
@@ -505,15 +516,16 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.size.md` | dimension | → `foundation.dimension.24` | Size token md. | 8 |
 | `semantic.size.sm` | dimension | → `foundation.dimension.20` | Size token sm. | 8 |
 | `semantic.size.xl` | dimension | → `foundation.dimension.40` | Size token xl. | 6 |
-| `semantic.size.xs` | dimension | → `foundation.dimension.16` | Size token xs. | 8 |
+| `semantic.size.xs` | dimension | → `foundation.dimension.16` | Size token xs. | 7 |
 
 ### semantic.space
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `semantic.space.2xl` | dimension | → `foundation.dimension.24` | Spacing token 2xl. | 0 |
-| `semantic.space.2xs` | dimension | → `foundation.dimension.2` | Spacing token 2xs. | 2 |
-| `semantic.space.control.padding.10` | dimension | → `foundation.dimension.10` | Spacing token control.padding.10. | 2 |
+| `semantic.space.2xs` | dimension | → `foundation.dimension.2` | Spacing token 2xs. | 5 |
+| `semantic.space.control.padding.10` | dimension | → `foundation.dimension.10` | Spacing token control.padding.10. | 3 |
+| `semantic.space.control.padding.6` | dimension | → `foundation.dimension.6` | Padding simétrico de Icon Only sm Button. | 1 |
 | `semantic.space.lg` | dimension | → `foundation.dimension.16` | Spacing token lg. | 8 |
 | `semantic.space.md` | dimension | → `foundation.dimension.12` | Spacing token md. | 9 |
 | `semantic.space.section.lg` | dimension | → `foundation.dimension.64` | Spacing token section.lg. | 0 |
@@ -521,17 +533,17 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.space.section.sm` | dimension | → `foundation.dimension.32` | Spacing token section.sm. | 1 |
 | `semantic.space.section.xl` | dimension | → `foundation.dimension.80` | Spacing token section.xl. | 0 |
 | `semantic.space.sm` | dimension | → `foundation.dimension.8` | Spacing token sm. | 13 |
-| `semantic.space.xl` | dimension | → `foundation.dimension.20` | Spacing token xl. | 5 |
+| `semantic.space.xl` | dimension | → `foundation.dimension.20` | Spacing token xl. | 2 |
 | `semantic.space.xs` | dimension | → `foundation.dimension.4` | Spacing token xs. | 13 |
 
 ### semantic.surface
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `semantic.surface.default` | color | → `foundation.color.neutral.50` | Surface default — superfície base. | 7 |
+| `semantic.surface.default` | color | → `foundation.color.neutral.50` | Surface default — superfície base. | 8 |
 | `semantic.surface.elevated` | color | → `foundation.color.neutral.50` | Surface elevated — superfície altamente elevada (modal). | 1 |
 | `semantic.surface.overlay` | color | → `foundation.color.neutral.50` | Surface overlay — superfície sobre overlay (popover). | 0 |
-| `semantic.surface.raised` | color | → `foundation.color.neutral.50` | Surface raised — superfície elevada (cards). | 0 |
+| `semantic.surface.raised` | color | → `foundation.color.neutral.50` | Surface raised — superfície elevada (cards). | 1 |
 
 ### semantic.toned
 
@@ -539,6 +551,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 |---|---|---|---|---|
 | `semantic.toned.background.active` | color | → `foundation.color.overlay.blue-600.28` | Fill de ação brand translúcida em estado active. | 1 |
 | `semantic.toned.background.default` | color | → `foundation.color.overlay.blue-600.12` | Fill de ação brand translúcida em estado default. | 2 |
+| `semantic.toned.background.disabled` | color | → `foundation.color.disabled.brand.toned.light` | Fill de ação brand translúcida em estado disabled. | 0 |
 | `semantic.toned.background.hover` | color | → `foundation.color.overlay.blue-600.20` | Fill de ação brand translúcida em estado hover. | 1 |
 | `semantic.toned.content-default` | color | → `foundation.color.brand.700` | Cor de texto/ícone de ação brand translúcida em estado default. | 2 |
 | `semantic.toned.content-disabled` | color | → `foundation.color.neutral.400` | Cor de texto/ícone de ação brand translúcida em estado disabled. | 0 |
@@ -584,6 +597,12 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.typography.body.line-height.sm` | dimension | → `foundation.typography.line.height.20` | line-height sm pra texto UI geral. | 0 |
 | `semantic.typography.body.line-height.xl` | dimension | → `foundation.typography.line.height.32` | line-height xl pra texto UI geral. | 0 |
 | `semantic.typography.body.line-height.xs` | dimension | → `foundation.typography.line.height.18` | line-height xs pra texto UI geral. | 0 |
+
+### semantic.z
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `semantic.z.tooltip` | number | → `foundation.z.40` | Stack layer para tooltips e floating labels não modais. | 1 |
 
 ## Component
 
@@ -1148,78 +1167,104 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
-### `foundation.color.disabled.brand-dark`
+### `foundation.color.disabled.brand.dark`
 
 - **Camada**: foundation
 - **Tipo**: `color`
-- **Sentido**: Cor de fill disabled pra ações brand-dark em undefined mode. Translúcida sobre superfície base.
+- **Sentido**: Cor de fill disabled para ações brand em dark mode.
 - **Escopo**: fill
-- **Contexto**: Aplicado via Semantic brand-dark.background.disabled. Não use direto em componente.
-- **Decisão**: Alpha de 40–50% sobre tom base preserva forma do botão sem competir visualmente — sinaliza não-interativo sem sumir.
+- **Contexto**: Reservado para aliases brand disabled quando o modo dark exigir tom específico. Não use direto em componente.
+- **Decisão**: Nome aninhado espelha Figma color/disabled/... e ADR-011 (sem achatamento com hífen). Alpha preserva forma do botão sem competir visualmente — sinaliza não-interativo sem sumir.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
-### `foundation.color.disabled.brand-light`
+### `foundation.color.disabled.brand.light`
 
 - **Camada**: foundation
 - **Tipo**: `color`
-- **Sentido**: Cor de fill disabled pra ações brand-light em undefined mode. Translúcida sobre superfície base.
+- **Sentido**: Cor de fill disabled para ações brand em light mode.
 - **Escopo**: fill
-- **Contexto**: Aplicado via Semantic brand-light.background.disabled. Não use direto em componente.
-- **Decisão**: Alpha de 40–50% sobre tom base preserva forma do botão sem competir visualmente — sinaliza não-interativo sem sumir.
+- **Contexto**: Aplicado via Semantic primary.background.disabled. Não use direto em componente.
+- **Decisão**: Nome aninhado espelha Figma color/disabled/... e ADR-011 (sem achatamento com hífen). Alpha preserva forma do botão sem competir visualmente — sinaliza não-interativo sem sumir.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
   - Tokens que referenciam: `semantic.primary.background.disabled`, `semantic.primary.background.disabled`
 
-### `foundation.color.disabled.error-dark`
+### `foundation.color.disabled.brand.toned.dark`
 
 - **Camada**: foundation
 - **Tipo**: `color`
-- **Sentido**: Cor de fill disabled pra ações error-dark em undefined mode. Translúcida sobre superfície base.
+- **Sentido**: Cor de fill disabled para ações brand toned em dark mode.
 - **Escopo**: fill
-- **Contexto**: Aplicado via Semantic error-dark.background.disabled. Não use direto em componente.
-- **Decisão**: Alpha de 40–50% sobre tom base preserva forma do botão sem competir visualmente — sinaliza não-interativo sem sumir.
+- **Contexto**: Aplicado via Semantic toned.background.disabled. Não use direto em componente.
+- **Decisão**: Nome aninhado espelha Figma color/disabled/... e ADR-011 (sem achatamento com hífen). Alpha preserva forma do botão sem competir visualmente — sinaliza não-interativo sem sumir.
+- **Usos**:
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (1×)
+  - Tokens que referenciam: `semantic.toned.background.disabled`
+
+### `foundation.color.disabled.brand.toned.light`
+
+- **Camada**: foundation
+- **Tipo**: `color`
+- **Sentido**: Cor de fill disabled para ações brand toned em light mode.
+- **Escopo**: fill
+- **Contexto**: Aplicado via Semantic toned.background.disabled. Não use direto em componente.
+- **Decisão**: Nome aninhado espelha Figma color/disabled/... e ADR-011 (sem achatamento com hífen). Alpha preserva forma do botão sem competir visualmente — sinaliza não-interativo sem sumir.
+- **Usos**:
+  - CSS:
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.toned.background.disabled`
+
+### `foundation.color.disabled.error.dark`
+
+- **Camada**: foundation
+- **Tipo**: `color`
+- **Sentido**: Cor de fill disabled para feedback error em dark mode.
+- **Escopo**: fill
+- **Contexto**: Aplicado via Semantic feedback.error.background.disabled. Não use direto em componente.
+- **Decisão**: Nome aninhado espelha Figma color/disabled/... e ADR-011 (sem achatamento com hífen). Alpha preserva forma do botão sem competir visualmente — sinaliza não-interativo sem sumir.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (1×)
   - Tokens que referenciam: `semantic.feedback.error.background.disabled`
 
-### `foundation.color.disabled.error-light`
+### `foundation.color.disabled.error.light`
 
 - **Camada**: foundation
 - **Tipo**: `color`
-- **Sentido**: Cor de fill disabled pra ações error-light em undefined mode. Translúcida sobre superfície base.
+- **Sentido**: Cor de fill disabled para feedback error em light mode.
 - **Escopo**: fill
-- **Contexto**: Aplicado via Semantic error-light.background.disabled. Não use direto em componente.
-- **Decisão**: Alpha de 40–50% sobre tom base preserva forma do botão sem competir visualmente — sinaliza não-interativo sem sumir.
+- **Contexto**: Aplicado via Semantic feedback.error.background.disabled. Não use direto em componente.
+- **Decisão**: Nome aninhado espelha Figma color/disabled/... e ADR-011 (sem achatamento com hífen). Alpha preserva forma do botão sem competir visualmente — sinaliza não-interativo sem sumir.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-light.css` (1×)
   - Tokens que referenciam: `semantic.feedback.error.background.disabled`
 
-### `foundation.color.disabled.success-dark`
+### `foundation.color.disabled.success.dark`
 
 - **Camada**: foundation
 - **Tipo**: `color`
-- **Sentido**: Cor de fill disabled pra ações success-dark em undefined mode. Translúcida sobre superfície base.
+- **Sentido**: Cor de fill disabled para feedback success em dark mode.
 - **Escopo**: fill
-- **Contexto**: Aplicado via Semantic success-dark.background.disabled. Não use direto em componente.
-- **Decisão**: Alpha de 40–50% sobre tom base preserva forma do botão sem competir visualmente — sinaliza não-interativo sem sumir.
+- **Contexto**: Aplicado via Semantic feedback.success.background.disabled. Não use direto em componente.
+- **Decisão**: Nome aninhado espelha Figma color/disabled/... e ADR-011 (sem achatamento com hífen). Alpha preserva forma do botão sem competir visualmente — sinaliza não-interativo sem sumir.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (1×)
   - Tokens que referenciam: `semantic.feedback.success.background.disabled`
 
-### `foundation.color.disabled.success-light`
+### `foundation.color.disabled.success.light`
 
 - **Camada**: foundation
 - **Tipo**: `color`
-- **Sentido**: Cor de fill disabled pra ações success-light em undefined mode. Translúcida sobre superfície base.
+- **Sentido**: Cor de fill disabled para feedback success em light mode.
 - **Escopo**: fill
-- **Contexto**: Aplicado via Semantic success-light.background.disabled. Não use direto em componente.
-- **Decisão**: Alpha de 40–50% sobre tom base preserva forma do botão sem competir visualmente — sinaliza não-interativo sem sumir.
+- **Contexto**: Aplicado via Semantic feedback.success.background.disabled. Não use direto em componente.
+- **Decisão**: Nome aninhado espelha Figma color/disabled/... e ADR-011 (sem achatamento com hífen). Alpha preserva forma do botão sem competir visualmente — sinaliza não-interativo sem sumir.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-light.css` (1×)
@@ -1654,7 +1699,7 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/tokens/generated/theme-dark.css` (3×)
     - `css/tokens/generated/theme-light.css` (5×)
-  - Tokens que referenciam: `semantic.content.secondary`, `semantic.content.tertiary`, `semantic.border.control-hover`, `semantic.toned.content-disabled`, `semantic.outline.content-disabled`, `semantic.ghost.content-disabled`, `semantic.link.content-disabled`, `semantic.content.disabled`
+  - Tokens que referenciam: `semantic.content.default`, `semantic.content.subtle`, `semantic.border.control-hover`, `semantic.toned.content-disabled`, `semantic.outline.content-disabled`, `semantic.ghost.content-disabled`, `semantic.link.content-disabled`, `semantic.content.disabled`
 
 ### `foundation.color.neutral.50`
 
@@ -1668,7 +1713,7 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/tokens/generated/theme-dark.css` (3×)
     - `css/tokens/generated/theme-light.css` (10×)
-  - Tokens que referenciam: `semantic.ghost.content-default`, `semantic.background.inverse`, `semantic.content.default`, `semantic.primary.content-default`, `semantic.feedback.success.content-contrast`, `semantic.feedback.error.content-contrast`, `semantic.surface.default`, `semantic.surface.raised`, `semantic.surface.overlay`, `semantic.surface.elevated`, `semantic.background.default`, `semantic.content.inverse`, `semantic.border.inverse`
+  - Tokens que referenciam: `semantic.ghost.content-default`, `semantic.background.inverse`, `semantic.content.strong`, `semantic.primary.content-default`, `semantic.feedback.success.content-contrast`, `semantic.feedback.error.content-contrast`, `semantic.surface.default`, `semantic.surface.raised`, `semantic.surface.overlay`, `semantic.surface.elevated`, `semantic.background.default`, `semantic.content.inverse`, `semantic.border.inverse`
 
 ### `foundation.color.neutral.500`
 
@@ -1682,7 +1727,7 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/tokens/generated/theme-dark.css` (3×)
     - `css/tokens/generated/theme-light.css` (3×)
-  - Tokens que referenciam: `semantic.outline.border-default`, `semantic.border.strong`, `semantic.border.control-default`, `semantic.outline.border-default`, `semantic.content.tertiary`, `semantic.border.control-default`
+  - Tokens que referenciam: `semantic.outline.border-default`, `semantic.border.strong`, `semantic.border.control-default`, `semantic.outline.border-default`, `semantic.content.subtle`, `semantic.border.control-default`
 
 ### `foundation.color.neutral.600`
 
@@ -1696,7 +1741,7 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/tokens/generated/theme-dark.css` (6×)
     - `css/tokens/generated/theme-light.css` (3×)
-  - Tokens que referenciam: `semantic.toned.content-disabled`, `semantic.outline.content-disabled`, `semantic.ghost.content-disabled`, `semantic.link.content-disabled`, `semantic.surface.elevated`, `semantic.content.disabled`, `semantic.content.secondary`, `semantic.border.strong`, `semantic.border.control-hover`
+  - Tokens que referenciam: `semantic.toned.content-disabled`, `semantic.outline.content-disabled`, `semantic.ghost.content-disabled`, `semantic.link.content-disabled`, `semantic.surface.elevated`, `semantic.content.disabled`, `semantic.content.default`, `semantic.border.strong`, `semantic.border.control-hover`
 
 ### `foundation.color.neutral.700`
 
@@ -1737,7 +1782,7 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/tokens/generated/theme-dark.css` (8×)
     - `css/tokens/generated/theme-light.css` (5×)
-  - Tokens que referenciam: `semantic.primary.content-default`, `semantic.feedback.success.content-contrast`, `semantic.feedback.warning.content-contrast`, `semantic.feedback.error.content-contrast`, `semantic.feedback.info.content-contrast`, `semantic.surface.default`, `semantic.content.inverse`, `semantic.border.inverse`, `semantic.ghost.content-default`, `semantic.feedback.warning.content-contrast`, `semantic.feedback.info.content-contrast`, `semantic.background.inverse`, `semantic.content.default`
+  - Tokens que referenciam: `semantic.primary.content-default`, `semantic.feedback.success.content-contrast`, `semantic.feedback.warning.content-contrast`, `semantic.feedback.error.content-contrast`, `semantic.feedback.info.content-contrast`, `semantic.surface.default`, `semantic.content.inverse`, `semantic.border.inverse`, `semantic.ghost.content-default`, `semantic.feedback.warning.content-contrast`, `semantic.feedback.info.content-contrast`, `semantic.background.inverse`, `semantic.content.strong`
 
 ### `foundation.color.neutral.950`
 
@@ -2621,7 +2666,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Use via Semantic `space.*` (gap/padding) ou `size.*` (width/height). Componentes não consomem direto.
 - **Decisão**: Step da escala 2/4/6/8/10/12/14/16/20/24/28/32/36/40/44/48 — múltiplos de 2 e 4 cobrem todas as densidades de UI.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.space.control.padding.6`, `semantic.space.control.padding.6`
 
 ### `foundation.dimension.64`
 
@@ -2721,33 +2769,61 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/tokens/generated/theme-light.css` (1×)
   - Tokens que referenciam: `semantic.motion.duration.fast`, `semantic.motion.duration.fast`
 
-### `foundation.duration.normal`
+### `foundation.duration.instant`
 
 - **Camada**: foundation
 - **Tipo**: `duration`
-- **Sentido**: Duração de transição normal.
-- **Escopo**: transition-duration, animation-duration
-- **Contexto**: Use via Semantic `motion.duration.*` em transition/animation CSS.
-- **Decisão**: 250ms (state changes)
+- **Sentido**: 0ms. Sem animação.
+- **Escopo**: transition
+- **Contexto**: Raro — sobrescrever em prefers-reduced-motion ou disable explícito.
+- **Decisão**: Doc foundations-motion.html documentava; alinhado em 2026-05-07.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.motion.duration.normal`, `semantic.motion.duration.normal`
+  - Tokens que referenciam: `semantic.motion.duration.instant`, `semantic.motion.duration.instant`
+
+### `foundation.duration.moderate`
+
+- **Camada**: foundation
+- **Tipo**: `duration`
+- **Sentido**: 250ms para transições mais elaboradas.
+- **Escopo**: transition
+- **Contexto**: Toggle, drawer, expand/collapse.
+- **Decisão**: Doc foundations-motion.html documentava; substitui o antigo `normal=200ms` (renomeado + recalibrado).
+- **Usos**:
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.motion.duration.moderate`, `semantic.motion.duration.moderate`
 
 ### `foundation.duration.slow`
 
 - **Camada**: foundation
 - **Tipo**: `duration`
-- **Sentido**: Duração de transição slow.
+- **Sentido**: 400ms para animações enfáticas.
 - **Escopo**: transition-duration, animation-duration
 - **Contexto**: Use via Semantic `motion.duration.*` em transition/animation CSS.
-- **Decisão**: 400ms (modals)
+- **Decisão**: Recalibrado de 300ms para 400ms em 2026-05-07 (alinhamento com doc).
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
   - Tokens que referenciam: `semantic.motion.duration.slow`, `semantic.motion.duration.slow`
+
+### `foundation.duration.slower`
+
+- **Camada**: foundation
+- **Tipo**: `duration`
+- **Sentido**: 600ms. Loops contínuos (Spinner) e animações enfáticas longas.
+- **Escopo**: transition
+- **Contexto**: Consumido via semantic.motion.duration.slower. Não usar pra transições de estado.
+- **Decisão**: Doc foundations-motion.html já documentava — token criado em 2026-05-07 alinhando JSON com doc.
+- **Usos**:
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.motion.duration.slower`, `semantic.motion.duration.slower`
 
 ### `foundation.ease.default`
 
@@ -2767,34 +2843,57 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: foundation
 - **Tipo**: `cubicBezier`
-- **Sentido**: Curva cubic-bezier in.
-- **Escopo**: transition-timing-function, animation-timing-function
-- **Contexto**: Pareada com duration via Semantic `motion.ease.*`.
-- **Decisão**: Acelera no início — para elementos saindo.
+- **Sentido**: Aceleração no início, sem desaceleração.
+- **Escopo**: transition
+- **Contexto**: Elementos saindo da tela.
+- **Decisão**: Doc foundations-motion.html documentava; alinhado em 2026-05-07.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (2×)
+    - `css/tokens/generated/theme-light.css` (2×)
+  - Tokens que referenciam: `semantic.motion.ease.in`, `semantic.motion.ease.in`
 
 ### `foundation.ease.in-out`
 
 - **Camada**: foundation
 - **Tipo**: `cubicBezier`
-- **Sentido**: Curva cubic-bezier in-out.
-- **Escopo**: transition-timing-function, animation-timing-function
-- **Contexto**: Pareada com duration via Semantic `motion.ease.*`.
-- **Decisão**: Acelera e desacelera — para elementos persistentes.
+- **Sentido**: Aceleração + desaceleração. Mesmo valor de default — alias semântico.
+- **Escopo**: transition
+- **Contexto**: Padrão Material; usar quando quiser explicitar a curva.
+- **Decisão**: Doc foundations-motion.html documentava; alinhado em 2026-05-07.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.motion.ease.in-out`, `semantic.motion.ease.in-out`
+
+### `foundation.ease.linear`
+
+- **Camada**: foundation
+- **Tipo**: `cubicBezier`
+- **Sentido**: Curva linear (velocidade constante).
+- **Escopo**: transition
+- **Contexto**: Consumido via semantic.motion.ease.linear. Para loops contínuos onde aceleração quebra a percepção (Spinner).
+- **Decisão**: Doc foundations-motion.html já documentava como [0,0,1,1].
+- **Usos**:
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.motion.ease.linear`, `semantic.motion.ease.linear`
 
 ### `foundation.ease.out`
 
 - **Camada**: foundation
 - **Tipo**: `cubicBezier`
-- **Sentido**: Curva cubic-bezier out.
-- **Escopo**: transition-timing-function, animation-timing-function
-- **Contexto**: Pareada com duration via Semantic `motion.ease.*`.
-- **Decisão**: Desacelera no fim — para elementos entrando.
+- **Sentido**: Desaceleração no final.
+- **Escopo**: transition
+- **Contexto**: Elementos entrando na tela.
+- **Decisão**: Doc foundations-motion.html documentava; alinhado em 2026-05-07.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.motion.ease.out`, `semantic.motion.ease.out`
 
 ### `foundation.opacity.10`
 
@@ -3692,7 +3791,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Use via Semantic `z.{base|dropdown|...}`. Componentes top-level (modal, toast, drawer) consomem direto.
 - **Decisão**: Escala 0–50 em steps de 10 reserva slots intermediários (5, 15) pra ajustes finos sem refator. Topbar do site usa calc(var(--ds-z-50) + 10) = 60.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.z.tooltip`, `semantic.z.tooltip`
 
 ### `foundation.z.50`
 
@@ -3729,7 +3831,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a foundation.color.neutral.200 (light) — Semantic encapsula a decisão de qual tom da paleta usar.
 - **Usos**:
   - CSS:
-    - `css/components/badge.css` (1×)
     - `css/components/checkbox.css` (1×)
     - `css/components/input.css` (1×)
     - `css/components/radio.css` (1×)
@@ -3791,7 +3892,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Use em `border-color` ou `outline-color`. Pareado com border-width apropriado.
 - **Decisão**: Aliasado a foundation.color.brand.600.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/spinner.css` (1×)
 
 ### `semantic.border.control-default`
 
@@ -3856,8 +3958,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/reset.css` (1×)
+    - `css/components/badge.css` (1×)
     - `css/components/card.css` (1×)
-    - `css/components/tabs.css` (1×)
 
 ### `semantic.border.error`
 
@@ -3917,7 +4019,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Use em `border-color` ou `outline-color`. Pareado com border-width apropriado.
 - **Decisão**: Aliasado a foundation.color.neutral.50.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/spinner.css` (1×)
 
 ### `semantic.border.strong`
 
@@ -3929,8 +4032,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Use em `border-color` ou `outline-color`. Pareado com border-width apropriado.
 - **Decisão**: Aliasado a foundation.color.neutral.600.
 - **Usos**:
-  - CSS:
-    - `css/components/badge.css` (1×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `semantic.border.subtle`
 
@@ -3943,9 +4045,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a foundation.color.neutral.200.
 - **Usos**:
   - CSS:
-    - `css/components/card.css` (2×)
+    - `css/components/card.css` (1×)
     - `css/components/divider.css` (1×)
-    - `css/components/modal.css` (1×)
     - `css/components/spinner.css` (1×)
 
 ### `semantic.border.width.default`
@@ -3961,12 +4062,12 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/base/reset.css` (1×)
     - `css/components/alert.css` (4×)
+    - `css/components/badge.css` (1×)
     - `css/components/button.css` (1×)
-    - `css/components/card.css` (3×)
+    - `css/components/card.css` (2×)
     - `css/components/checkbox.css` (1×)
     - `css/components/divider.css` (2×)
     - `css/components/input.css` (1×)
-    - `css/components/modal.css` (1×)
     - `css/components/radio.css` (1×)
     - `css/components/select.css` (1×)
     - `css/components/tabs.css` (1×)
@@ -4008,28 +4109,29 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Alias direto a Foundation foundation.border.width.2.
 - **Usos**:
   - CSS:
+    - `css/components/spinner.css` (1×)
     - `css/components/tabs.css` (1×)
 
 ### `semantic.content.default`
 
 - **Camada**: semantic
 - **Tipo**: `color`
-- **Alias**: → `foundation.color.neutral.900`
-- **Sentido**: Texto primário — body, headings, labels principais.
+- **Alias**: → `foundation.color.neutral.600`
+- **Sentido**: Texto secundário — descrições, helper text, meta-info.
 - **Escopo**: color, fill
 - **Contexto**: Aplicado em `color` de texto. Pareado com background apropriado pra atender contraste WCAG AA (4.5:1 normal, 3:1 large).
-- **Decisão**: Aliasado a foundation.color.neutral.900.
+- **Decisão**: Aliasado a foundation.color.neutral.600.
 - **Usos**:
   - CSS:
     - `css/base/reset.css` (1×)
-    - `css/components/alert.css` (4×)
-    - `css/components/card.css` (1×)
-    - `css/components/checkbox.css` (3×)
+    - `css/components/alert.css` (1×)
+    - `css/components/badge.css` (1×)
+    - `css/components/breadcrumb.css` (2×)
+    - `css/components/card.css` (2×)
+    - `css/components/checkbox.css` (2×)
     - `css/components/form-field.css` (1×)
-    - `css/components/input.css` (1×)
-    - `css/components/modal.css` (3×)
-    - `css/components/radio.css` (4×)
-    - `css/components/select.css` (1×)
+    - `css/components/modal.css` (1×)
+    - `css/components/radio.css` (2×)
     - `css/components/tabs.css` (1×)
     - `css/components/textarea.css` (1×)
     - `css/components/toggle.css` (3×)
@@ -4063,34 +4165,33 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/reset.css` (1×)
-    - `css/components/badge.css` (1×)
-    - `css/components/tooltip.css` (1×)
 
-### `semantic.content.secondary`
+### `semantic.content.strong`
 
 - **Camada**: semantic
 - **Tipo**: `color`
-- **Alias**: → `foundation.color.neutral.600`
-- **Sentido**: Texto secundário — descrições, helper text, meta-info.
+- **Alias**: → `foundation.color.neutral.900`
+- **Sentido**: Texto primário — body, headings, labels principais.
 - **Escopo**: color, fill
 - **Contexto**: Aplicado em `color` de texto. Pareado com background apropriado pra atender contraste WCAG AA (4.5:1 normal, 3:1 large).
-- **Decisão**: Aliasado a foundation.color.neutral.600.
+- **Decisão**: Aliasado a foundation.color.neutral.900.
 - **Usos**:
   - CSS:
     - `css/base/reset.css` (1×)
-    - `css/components/alert.css` (1×)
+    - `css/components/alert.css` (4×)
     - `css/components/badge.css` (1×)
-    - `css/components/breadcrumb.css` (2×)
-    - `css/components/card.css` (2×)
-    - `css/components/checkbox.css` (1×)
+    - `css/components/card.css` (1×)
+    - `css/components/checkbox.css` (4×)
     - `css/components/form-field.css` (1×)
-    - `css/components/modal.css` (1×)
-    - `css/components/radio.css` (1×)
+    - `css/components/input.css` (1×)
+    - `css/components/modal.css` (3×)
+    - `css/components/radio.css` (5×)
+    - `css/components/select.css` (1×)
     - `css/components/tabs.css` (1×)
     - `css/components/textarea.css` (1×)
-    - `css/components/toggle.css` (2×)
+    - `css/components/toggle.css` (4×)
 
-### `semantic.content.tertiary`
+### `semantic.content.subtle`
 
 - **Camada**: semantic
 - **Tipo**: `color`
@@ -4133,7 +4234,6 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/badge.css` (1×)
     - `css/components/button.css` (2×)
     - `css/components/checkbox.css` (2×)
-    - `css/components/form-field.css` (3×)
     - `css/components/input.css` (3×)
     - `css/components/radio.css` (3×)
     - `css/components/select.css` (3×)
@@ -4143,11 +4243,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: semantic
 - **Tipo**: `color`
-- **Alias**: → `foundation.color.disabled.error-light`
+- **Alias**: → `foundation.color.disabled.error.light`
 - **Sentido**: Fill de feedback erro (vermelho) em estado disabled.
 - **Escopo**: background-color
 - **Contexto**: Use em alerts, badges, mensagens de validação, ícones de status. Pareado com Foundation red.* via alias.
-- **Decisão**: Aliasado a foundation.color.disabled.error-light.
+- **Decisão**: Aliasado a foundation.color.disabled.error.light em light e error.dark em dark, conforme aliases de modo no Figma.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -4218,8 +4318,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a foundation.color.red.700.
 - **Usos**:
   - CSS:
+    - `css/components/alert.css` (1×)
     - `css/components/badge.css` (1×)
     - `css/components/checkbox.css` (1×)
+    - `css/components/form-field.css` (3×)
     - `css/components/radio.css` (2×)
     - `css/components/textarea.css` (1×)
 
@@ -4313,6 +4415,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a foundation.color.sky.700.
 - **Usos**:
   - CSS:
+    - `css/components/alert.css` (1×)
     - `css/components/badge.css` (1×)
 
 ### `semantic.feedback.success.background.active`
@@ -4347,11 +4450,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: semantic
 - **Tipo**: `color`
-- **Alias**: → `foundation.color.disabled.success-light`
+- **Alias**: → `foundation.color.disabled.success.light`
 - **Sentido**: Fill de feedback sucesso (verde) em estado disabled.
 - **Escopo**: background-color
 - **Contexto**: Use em alerts, badges, mensagens de validação, ícones de status. Pareado com Foundation green.* via alias.
-- **Decisão**: Aliasado a foundation.color.disabled.success-light.
+- **Decisão**: Aliasado a foundation.color.disabled.success.light em light e success.dark em dark, conforme aliases de modo no Figma.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -4421,6 +4524,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a foundation.color.green.700.
 - **Usos**:
   - CSS:
+    - `css/components/alert.css` (1×)
     - `css/components/badge.css` (1×)
 
 ### `semantic.feedback.success.content-disabled`
@@ -4513,6 +4617,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a foundation.color.amber.700.
 - **Usos**:
   - CSS:
+    - `css/components/alert.css` (1×)
     - `css/components/badge.css` (1×)
 
 ### `semantic.ghost.background.active`
@@ -4577,6 +4682,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a foundation.color.brand.800 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
+    - `css/components/breadcrumb.css` (1×)
     - `css/components/link.css` (1×)
 
 ### `semantic.link.content-default`
@@ -4591,6 +4697,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/reset.css` (1×)
+    - `css/components/breadcrumb.css` (1×)
     - `css/components/link.css` (1×)
 
 ### `semantic.link.content-disabled`
@@ -4616,6 +4723,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a foundation.color.brand.800 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
+    - `css/components/breadcrumb.css` (1×)
     - `css/components/link.css` (1×)
 
 ### `semantic.motion.duration.fast`
@@ -4642,15 +4750,27 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/toggle.css` (5×)
     - `css/components/tooltip.css` (1×)
 
-### `semantic.motion.duration.normal`
+### `semantic.motion.duration.instant`
 
 - **Camada**: semantic
 - **Tipo**: `duration`
-- **Alias**: → `foundation.duration.normal`
-- **Sentido**: Semantic wrapper pra motion.
-- **Escopo**: transition, animation
-- **Contexto**: Use em `transition`/`animation` (motion) ou `opacity` (states disabled).
-- **Decisão**: Aliasado a Foundation foundation.duration.normal.
+- **Alias**: → `foundation.duration.instant`
+- **Sentido**: 0ms.
+- **Escopo**: transition
+- **Contexto**: Disable explícito.
+- **Decisão**: ADR-016.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.motion.duration.moderate`
+
+- **Camada**: semantic
+- **Tipo**: `duration`
+- **Alias**: → `foundation.duration.moderate`
+- **Sentido**: 250ms.
+- **Escopo**: transition
+- **Contexto**: Toggle, drawer, expand/collapse.
+- **Decisão**: ADR-016. Substitui o antigo motion.duration.normal.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -4659,12 +4779,25 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Camada**: semantic
 - **Tipo**: `duration`
 - **Alias**: → `foundation.duration.slow`
-- **Sentido**: Semantic wrapper pra motion.
+- **Sentido**: 400ms para animações enfáticas.
 - **Escopo**: transition, animation
 - **Contexto**: Use em `transition`/`animation` (motion) ou `opacity` (states disabled).
 - **Decisão**: Aliasado a Foundation foundation.duration.slow.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.motion.duration.slower`
+
+- **Camada**: semantic
+- **Tipo**: `duration`
+- **Alias**: → `foundation.duration.slower`
+- **Sentido**: 600ms para loops contínuos.
+- **Escopo**: transition
+- **Contexto**: Spinner principalmente; quaisquer outros loops que precisem de duração maior que 300ms.
+- **Decisão**: ADR-016 (motion CSS-only). Edição direta no JSON é legítima.
+- **Usos**:
+  - CSS:
+    - `css/components/spinner.css` (1×)
 
 ### `semantic.motion.ease.default`
 
@@ -4690,6 +4823,55 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/toggle.css` (5×)
     - `css/components/tooltip.css` (1×)
 
+### `semantic.motion.ease.in`
+
+- **Camada**: semantic
+- **Tipo**: `cubicBezier`
+- **Alias**: → `foundation.ease.in`
+- **Sentido**: Aceleração no início.
+- **Escopo**: transition
+- **Contexto**: Elementos saindo.
+- **Decisão**: ADR-016.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.motion.ease.in-out`
+
+- **Camada**: semantic
+- **Tipo**: `cubicBezier`
+- **Alias**: → `foundation.ease.in-out`
+- **Sentido**: Aceleração + desaceleração.
+- **Escopo**: transition
+- **Contexto**: Mesmo valor de default.
+- **Decisão**: ADR-016.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.motion.ease.linear`
+
+- **Camada**: semantic
+- **Tipo**: `cubicBezier`
+- **Alias**: → `foundation.ease.linear`
+- **Sentido**: Curva linear pra loops onde aceleração quebra rotação constante.
+- **Escopo**: transition
+- **Contexto**: Spinner. ease.default tem curva, errado pra loop.
+- **Decisão**: ADR-016 (motion CSS-only).
+- **Usos**:
+  - CSS:
+    - `css/components/spinner.css` (1×)
+
+### `semantic.motion.ease.out`
+
+- **Camada**: semantic
+- **Tipo**: `cubicBezier`
+- **Alias**: → `foundation.ease.out`
+- **Sentido**: Desaceleração no final.
+- **Escopo**: transition
+- **Contexto**: Elementos entrando.
+- **Decisão**: ADR-016.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
 ### `semantic.opacity.disabled`
 
 - **Camada**: semantic
@@ -4704,6 +4886,7 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/button.css` (1×)
     - `css/components/checkbox.css` (1×)
     - `css/components/radio.css` (2×)
+    - `css/components/spinner.css` (1×)
     - `css/components/toggle.css` (1×)
 
 ### `semantic.outline.background.active`
@@ -4730,7 +4913,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a foundation.color.overlay.black.5 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
-    - `css/components/badge.css` (1×)
     - `css/components/button.css` (1×)
 
 ### `semantic.outline.border-default`
@@ -4744,7 +4926,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a foundation.color.neutral.500 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
-    - `css/components/badge.css` (1×)
     - `css/components/button.css` (1×)
 
 ### `semantic.outline.border-disabled`
@@ -4783,7 +4964,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a foundation.color.neutral.700 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
-    - `css/components/badge.css` (2×)
     - `css/components/button.css` (1×)
 
 ### `semantic.outline.content-disabled`
@@ -4808,7 +4988,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Use em scrims de modal, dropdowns, drawers.
 - **Decisão**: Aliasado a Foundation foundation.color.overlay.black.10.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/tabs.css` (1×)
 
 ### `semantic.overlay.medium`
 
@@ -4820,7 +5001,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Use em scrims de modal, dropdowns, drawers.
 - **Decisão**: Aliasado a Foundation foundation.color.overlay.black.20.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/spinner.css` (1×)
 
 ### `semantic.overlay.strong`
 
@@ -4876,11 +5058,9 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/avatar.css` (1×)
     - `css/components/badge.css` (1×)
-    - `css/components/breadcrumb.css` (1×)
     - `css/components/button.css` (2×)
     - `css/components/checkbox.css` (5×)
     - `css/components/radio.css` (3×)
-    - `css/components/spinner.css` (1×)
     - `css/components/tabs.css` (2×)
     - `css/components/toggle.css` (3×)
 
@@ -4888,11 +5068,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: semantic
 - **Tipo**: `color`
-- **Alias**: → `foundation.color.disabled.brand-light`
+- **Alias**: → `foundation.color.disabled.brand.light`
 - **Sentido**: Fill de ação primária (brand solid) em estado disabled.
 - **Escopo**: background-color
 - **Contexto**: Aplicado em `.ds-btn--primary` ou em consumidores Figma equivalentes.
-- **Decisão**: Aliasado a foundation.color.disabled.brand-light — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
+- **Decisão**: Aliasado a foundation.color.disabled.brand.light — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -4926,6 +5106,7 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/checkbox.css` (2×)
     - `css/components/radio.css` (1×)
     - `css/components/toggle.css` (1×)
+    - `css/components/tooltip.css` (1×)
 
 ### `semantic.primary.content-disabled`
 
@@ -4990,6 +5171,7 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/input.css` (1×)
     - `css/components/select.css` (1×)
     - `css/components/skeleton.css` (2×)
+    - `css/components/tabs.css` (1×)
     - `css/components/textarea.css` (1×)
 
 ### `semantic.radius.sm`
@@ -5009,7 +5191,6 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/link.css` (1×)
     - `css/components/modal.css` (1×)
     - `css/components/radio.css` (1×)
-    - `css/components/tabs.css` (2×)
     - `css/components/toggle.css` (1×)
     - `css/components/tooltip.css` (1×)
 
@@ -5131,7 +5312,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Use em `width`, `height` ou pra ícones, controles, layouts.
 - **Decisão**: Aliasado a Foundation foundation.dimension.800.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/modal.css` (1×)
 
 ### `semantic.size.layout.md`
 
@@ -5144,7 +5326,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.dimension.640.
 - **Usos**:
   - CSS:
-    - `css/components/modal.css` (2×)
+    - `css/components/modal.css` (1×)
 
 ### `semantic.size.layout.sm`
 
@@ -5218,7 +5400,7 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/checkbox.css` (2×)
     - `css/components/input.css` (3×)
     - `css/components/radio.css` (2×)
-    - `css/components/select.css` (3×)
+    - `css/components/select.css` (5×)
     - `css/components/spinner.css` (2×)
 
 ### `semantic.size.sm`
@@ -5235,10 +5417,10 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/alert.css` (1×)
     - `css/components/avatar.css` (1×)
     - `css/components/button.css` (3×)
-    - `css/components/checkbox.css` (2×)
+    - `css/components/checkbox.css` (4×)
     - `css/components/input.css` (1×)
-    - `css/components/radio.css` (2×)
-    - `css/components/select.css` (3×)
+    - `css/components/radio.css` (4×)
+    - `css/components/select.css` (5×)
     - `css/components/toggle.css` (2×)
 
 ### `semantic.size.xl`
@@ -5257,7 +5439,7 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/input.css` (1×)
     - `css/components/select.css` (1×)
     - `css/components/skeleton.css` (2×)
-    - `css/components/toggle.css` (1×)
+    - `css/components/toggle.css` (3×)
 
 ### `semantic.size.xs`
 
@@ -5271,11 +5453,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/avatar.css` (1×)
-    - `css/components/button.css` (3×)
     - `css/components/checkbox.css` (2×)
     - `css/components/input.css` (1×)
     - `css/components/radio.css` (2×)
-    - `css/components/select.css` (6×)
+    - `css/components/select.css` (1×)
     - `css/components/spinner.css` (2×)
     - `css/components/toggle.css` (2×)
 
@@ -5303,7 +5484,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/badge.css` (1×)
+    - `css/components/checkbox.css` (1×)
     - `css/components/form-field.css` (1×)
+    - `css/components/radio.css` (1×)
+    - `css/components/toggle.css` (1×)
 
 ### `semantic.space.control.padding.10`
 
@@ -5317,7 +5501,21 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/button.css` (1×)
+    - `css/components/tabs.css` (1×)
     - `css/components/textarea.css` (1×)
+
+### `semantic.space.control.padding.6`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.dimension.6`
+- **Sentido**: Padding simétrico de Icon Only sm Button.
+- **Escopo**: padding
+- **Contexto**: Consumido por .ds-btn--icon-only.ds-btn--sm. (32 - 20) / 2 = 6px.
+- **Decisão**: Único valor entre xs(4) e sm(8) que foge da escala space. Segue padrão de space.control.padding.10 (ADR-006/015).
+- **Usos**:
+  - CSS:
+    - `css/components/button.css` (1×)
 
 ### `semantic.space.lg`
 
@@ -5351,7 +5549,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/alert.css` (1×)
-    - `css/components/button.css` (2×)
+    - `css/components/button.css` (3×)
     - `css/components/divider.css` (2×)
     - `css/components/input.css` (1×)
     - `css/components/radio.css` (1×)
@@ -5422,16 +5620,16 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/alert.css` (1×)
     - `css/components/badge.css` (1×)
-    - `css/components/button.css` (2×)
+    - `css/components/button.css` (3×)
     - `css/components/card.css` (2×)
-    - `css/components/checkbox.css` (1×)
-    - `css/components/input.css` (1×)
+    - `css/components/checkbox.css` (3×)
+    - `css/components/input.css` (2×)
     - `css/components/modal.css` (4×)
-    - `css/components/radio.css` (2×)
-    - `css/components/select.css` (2×)
-    - `css/components/textarea.css` (1×)
-    - `css/components/toggle.css` (1×)
-    - `css/components/tooltip.css` (1×)
+    - `css/components/radio.css` (4×)
+    - `css/components/select.css` (3×)
+    - `css/components/textarea.css` (2×)
+    - `css/components/toggle.css` (3×)
+    - `css/components/tooltip.css` (5×)
     - `css/utilities/layout.css` (1×)
 
 ### `semantic.space.xl`
@@ -5446,9 +5644,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/button.css` (1×)
-    - `css/components/input.css` (1×)
-    - `css/components/select.css` (1×)
-    - `css/components/textarea.css` (1×)
     - `css/utilities/layout.css` (1×)
 
 ### `semantic.space.xs`
@@ -5466,14 +5661,14 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/badge.css` (1×)
     - `css/components/breadcrumb.css` (1×)
     - `css/components/button.css` (1×)
-    - `css/components/checkbox.css` (4×)
+    - `css/components/checkbox.css` (6×)
     - `css/components/form-field.css` (1×)
     - `css/components/input.css` (2×)
     - `css/components/modal.css` (1×)
-    - `css/components/radio.css` (5×)
+    - `css/components/radio.css` (7×)
     - `css/components/select.css` (1×)
-    - `css/components/toggle.css` (3×)
-    - `css/components/tooltip.css` (1×)
+    - `css/components/toggle.css` (5×)
+    - `css/components/tooltip.css` (2×)
     - `css/utilities/layout.css` (1×)
 
 ### `semantic.surface.default`
@@ -5487,6 +5682,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Alias resolvido em foundation.color.neutral.50.
 - **Usos**:
   - CSS:
+    - `css/components/badge.css` (2×)
     - `css/components/card.css` (1×)
     - `css/components/checkbox.css` (1×)
     - `css/components/input.css` (1×)
@@ -5530,7 +5726,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Use em painéis, cards, modais. Pareado com shadow.
 - **Decisão**: Alias resolvido em foundation.color.neutral.50.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/card.css` (1×)
 
 ### `semantic.toned.background.active`
 
@@ -5558,6 +5755,18 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/badge.css` (1×)
     - `css/components/button.css` (1×)
+
+### `semantic.toned.background.disabled`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.disabled.brand.toned.light`
+- **Sentido**: Fill de ação brand translúcida em estado disabled.
+- **Escopo**: background-color
+- **Contexto**: Aplicado em `.ds-btn--toned` ou em consumidores Figma equivalentes.
+- **Decisão**: Aliasado a foundation.color.disabled.brand.toned.light em light e brand.toned.dark em dark, conforme Figma. Adicionado para fechar paridade do estado disabled toned.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `semantic.toned.background.hover`
 
@@ -6041,4 +6250,17 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.typography.line.height.18.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.z.tooltip`
+
+- **Camada**: semantic
+- **Tipo**: `number`
+- **Alias**: → `foundation.z.40`
+- **Sentido**: Stack layer para tooltips e floating labels não modais.
+- **Escopo**: z-index
+- **Contexto**: Consumido por tooltip.css e floating labels não-modais (popovers leves). Modais usam stack maior; toasts ficam acima de modal.
+- **Decisão**: Aliasa foundation.z.40. Tooltip vive acima de UI mas abaixo de modal/toast. Token CSS-only (ADR-016): z-index não tem equivalente Figma Variable.
+- **Usos**:
+  - CSS:
+    - `css/components/tooltip.css` (1×)
 
