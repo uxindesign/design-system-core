@@ -41,7 +41,7 @@
 
 | Coleção | Tokens | Status |
 |---------|--------|--------|
-| Foundation | 267 | 🟢 |
+| Foundation | 265 | 🟢 |
 | Semantic (light) | 173 | 🟢 |
 | Semantic (dark) | 173 | 🟢 |
 

@@ -220,8 +220,9 @@ Estado atual: 8 tokens no Figma e 8 tokens no JSON, incluindo `disabled/brand/to
 
 #### P3-2. Effect Styles `elevation/N` vs JSON `shadow.{sm,md,lg,...}`
 
+- **Resolvido em 2026-05-07.** Decisão: manter `elevation/1..4` no Figma e `shadow.{sm,md,lg,xl}` no JSON/CSS com mapping documentado; remover `shadow.xs` e `shadow.2xl` por não terem uso nem Effect Style correspondente; manter `shadow.none` como reset técnico de `.ds-elevation-0`.
 - Figma: `elevation/1..4` (numérico, 4 styles)
-- JSON: `shadow.{sm, md, lg, xl, 2xl, none, card}` (t-shirt + extras)
+- JSON: `shadow.{sm, md, lg, xl, none}` + `semantic.shadow.{card,modal}`
 
 Por ADR-016 ambos podem coexistir (shadow é Effect Style, JSON é fonte CSS). Mas naming divergente confunde dev↔design.
 
@@ -357,7 +358,6 @@ Ordem sugerida (de mais danoso visualmente para menos):
 
 | # | Item | Escopo | Esforço |
 |---|---|---|---|
-| #19 | P3-2 — Effect Style elevation/N vs JSON shadow.{sm..2xl} | Alinhar scale entre Figma Effect Styles (`elevation/1..4`) e JSON shadow tokens (sm/md/lg/xl/2xl/none/card) | 30min |
 
 **Como continuar (qualquer agente Codex/Gemini/Claude):**
 

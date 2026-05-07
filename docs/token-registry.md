@@ -6,14 +6,14 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Status
 
-- Total de tokens: **440**
-- Com metadados completos: **440**
+- Total de tokens: **438**
+- Com metadados completos: **438**
 - Pendentes (`TODO` em algum campo obrigatório): **0**
 - Completude: **100%**
 
 ## Foundation
 
-267 tokens.
+265 tokens.
 
 ### foundation.border
 
@@ -254,13 +254,11 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `foundation.shadow.2xl` | shadow | — | Sombra de elevação 2xl. | 0 |
-| `foundation.shadow.lg` | shadow | — | Sombra de elevação lg. | 1 |
-| `foundation.shadow.md` | shadow | — | Sombra de elevação md. | 1 |
-| `foundation.shadow.none` | shadow | — | Sem sombra (level 0 de elevação). | 1 |
-| `foundation.shadow.sm` | shadow | — | Sombra de elevação sm. | 5 |
-| `foundation.shadow.xl` | shadow | — | Sombra de elevação xl. | 5 |
-| `foundation.shadow.xs` | shadow | — | Sombra de elevação xs. | 0 |
+| `foundation.shadow.lg` | shadow | — | Sombra de elevação 3 (flutuante). | 1 |
+| `foundation.shadow.md` | shadow | — | Sombra de elevação 2 (elevado). | 1 |
+| `foundation.shadow.none` | shadow | — | Sem sombra (nível 0 técnico de elevação). | 1 |
+| `foundation.shadow.sm` | shadow | — | Sombra de elevação 1 (sutil). | 5 |
+| `foundation.shadow.xl` | shadow | — | Sombra de elevação 4 (destaque). | 5 |
 
 ### foundation.typography
 
@@ -3056,25 +3054,14 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/tokens/generated/theme-light.css` (1×)
   - Tokens que referenciam: `semantic.radius.full`, `semantic.radius.full`
 
-### `foundation.shadow.2xl`
-
-- **Camada**: foundation
-- **Tipo**: `shadow`
-- **Sentido**: Sombra de elevação 2xl.
-- **Escopo**: box-shadow
-- **Contexto**: Use via Semantic `surface.{raised|overlay|elevated}` ou em modais/dropdowns. Não aplique direto em texto.
-- **Decisão**: Escala xs (cards), sm (popovers), md (dropdowns), lg (drawers), xl (modals), 2xl (max elevation).
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
 ### `foundation.shadow.lg`
 
 - **Camada**: foundation
 - **Tipo**: `shadow`
-- **Sentido**: Sombra de elevação lg.
+- **Sentido**: Sombra de elevação 3 (flutuante).
 - **Escopo**: box-shadow
-- **Contexto**: Use via Semantic `surface.{raised|overlay|elevated}` ou em modais/dropdowns. Não aplique direto em texto.
-- **Decisão**: Escala xs (cards), sm (popovers), md (dropdowns), lg (drawers), xl (modals), 2xl (max elevation).
+- **Contexto**: Use via utilities `.ds-elevation-1..4`, semantic shadow aliases ou componentes que documentem elevação. Não aplique direto em texto.
+- **Decisão**: Escala oficial de elevation alinhada ao Figma: elevation/1..4 mapeia para shadow.sm/md/lg/xl. shadow.none é reset técnico para elevation-0; não há token oculto sem Effect Style correspondente.
 - **Usos**:
   - CSS:
     - `css/utilities/elevation.css` (1×)
@@ -3083,10 +3070,10 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: foundation
 - **Tipo**: `shadow`
-- **Sentido**: Sombra de elevação md.
+- **Sentido**: Sombra de elevação 2 (elevado).
 - **Escopo**: box-shadow
-- **Contexto**: Use via Semantic `surface.{raised|overlay|elevated}` ou em modais/dropdowns. Não aplique direto em texto.
-- **Decisão**: Escala xs (cards), sm (popovers), md (dropdowns), lg (drawers), xl (modals), 2xl (max elevation).
+- **Contexto**: Use via utilities `.ds-elevation-1..4`, semantic shadow aliases ou componentes que documentem elevação. Não aplique direto em texto.
+- **Decisão**: Escala oficial de elevation alinhada ao Figma: elevation/1..4 mapeia para shadow.sm/md/lg/xl. shadow.none é reset técnico para elevation-0; não há token oculto sem Effect Style correspondente.
 - **Usos**:
   - CSS:
     - `css/utilities/elevation.css` (1×)
@@ -3095,10 +3082,10 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: foundation
 - **Tipo**: `shadow`
-- **Sentido**: Sem sombra (level 0 de elevação).
+- **Sentido**: Sem sombra (nível 0 técnico de elevação).
 - **Escopo**: box-shadow
-- **Contexto**: Use via Semantic `surface.flat` ou em estados disabled.
-- **Decisão**: Token explícito pra reset — facilita override em variants.
+- **Contexto**: Use via `.ds-elevation-0` para resetar sombra. Não há Effect Style Figma porque ausência de sombra não precisa de preview publicado.
+- **Decisão**: Exceção técnica mantida para reset CSS, equivalente ao nível 0. Dimension-0 segue o mesmo racional: útil no código, sem necessidade de representação visual Figma.
 - **Usos**:
   - CSS:
     - `css/utilities/elevation.css` (1×)
@@ -3107,10 +3094,10 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: foundation
 - **Tipo**: `shadow`
-- **Sentido**: Sombra de elevação sm.
+- **Sentido**: Sombra de elevação 1 (sutil).
 - **Escopo**: box-shadow
-- **Contexto**: Use via Semantic `surface.{raised|overlay|elevated}` ou em modais/dropdowns. Não aplique direto em texto.
-- **Decisão**: Escala xs (cards), sm (popovers), md (dropdowns), lg (drawers), xl (modals), 2xl (max elevation).
+- **Contexto**: Use via utilities `.ds-elevation-1..4`, semantic shadow aliases ou componentes que documentem elevação. Não aplique direto em texto.
+- **Decisão**: Escala oficial de elevation alinhada ao Figma: elevation/1..4 mapeia para shadow.sm/md/lg/xl. shadow.none é reset técnico para elevation-0; não há token oculto sem Effect Style correspondente.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (1×)
@@ -3122,27 +3109,16 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: foundation
 - **Tipo**: `shadow`
-- **Sentido**: Sombra de elevação xl.
+- **Sentido**: Sombra de elevação 4 (destaque).
 - **Escopo**: box-shadow
-- **Contexto**: Use via Semantic `surface.{raised|overlay|elevated}` ou em modais/dropdowns. Não aplique direto em texto.
-- **Decisão**: Escala xs (cards), sm (popovers), md (dropdowns), lg (drawers), xl (modals), 2xl (max elevation).
+- **Contexto**: Use via utilities `.ds-elevation-1..4`, semantic shadow aliases ou componentes que documentem elevação. Não aplique direto em texto.
+- **Decisão**: Escala oficial de elevation alinhada ao Figma: elevation/1..4 mapeia para shadow.sm/md/lg/xl. shadow.none é reset técnico para elevation-0; não há token oculto sem Effect Style correspondente.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
     - `css/utilities/elevation.css` (1×)
   - Tokens que referenciam: `semantic.shadow.modal`, `semantic.shadow.modal`
-
-### `foundation.shadow.xs`
-
-- **Camada**: foundation
-- **Tipo**: `shadow`
-- **Sentido**: Sombra de elevação xs.
-- **Escopo**: box-shadow
-- **Contexto**: Use via Semantic `surface.{raised|overlay|elevated}` ou em modais/dropdowns. Não aplique direto em texto.
-- **Decisão**: Escala xs (cards), sm (popovers), md (dropdowns), lg (drawers), xl (modals), 2xl (max elevation).
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.typography.font.family.display`
 

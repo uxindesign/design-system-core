@@ -47,44 +47,56 @@
 <main class="ds-main">
   <div class="ds-section">
     <h1 class="ds-section__title"><span data-lang="pt">Elevation</span><span data-lang="en">Elevation</span></h1>
-    <p class="ds-section__subtitle"><span data-lang="pt">4 níveis de elevação. Em light mode, sombras criam profundidade. Em dark mode, superfícies progressivamente mais claras indicam elevação -- sombras são secundárias.</span><span data-lang="en">4 elevation levels. In light mode, shadows create depth. In dark mode, progressively lighter surfaces indicate elevation -- shadows are secondary.</span></p>
+    <p class="ds-section__subtitle"><span data-lang="pt">4 níveis oficiais de elevação mais o nível 0 técnico. Em light mode, sombras criam profundidade. Em dark mode, superfícies progressivamente mais claras indicam elevação -- sombras são secundárias.</span><span data-lang="en">4 official elevation levels plus the technical level 0. In light mode, shadows create depth. In dark mode, progressively lighter surfaces indicate elevation -- shadows are secondary.</span></p>
   </div>
 
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Elevation Levels</span><span data-lang="en">Elevation Levels</span></h2>
-    <p style="color:var(--ds-content-default);margin-bottom:var(--ds-dimension-24);font-size:var(--ds-font-size-14);line-height:var(--ds-line-height-relaxed)"><span data-lang="pt">Cada nível combina um token de sombra (visível no modo light) com um token de superfície (visível no modo dark). No modo dark, maior elevação = superfície mais clara.</span><span data-lang="en">Each level combines a shadow token (visible in light mode) with a surface token (visible in dark mode). In dark mode, higher elevation = lighter surface color.</span></p>
+    <p style="color:var(--ds-content-default);margin-bottom:var(--ds-dimension-24);font-size:var(--ds-font-size-14);line-height:var(--ds-line-height-relaxed)"><span data-lang="pt">Cada nível combina um Effect Style no Figma, uma utility CSS, um token de sombra (visível no modo light) e um token de superfície (visível no modo dark). No modo dark, maior elevação = superfície mais clara. O nível 0 existe apenas no CSS para resetar sombra.</span><span data-lang="en">Each level combines a Figma Effect Style, a CSS utility, a shadow token (visible in light mode), and a surface token (visible in dark mode). In dark mode, higher elevation = lighter surface color. Level 0 exists only in CSS to reset shadow.</span></p>
     <table class="ds-props-table">
       <thead>
-        <tr><th><span data-lang="pt">Nível</span><span data-lang="en">Level</span></th><th><span data-lang="pt">Sombra</span><span data-lang="en">Shadow</span></th><th><span data-lang="pt">Superfície</span><span data-lang="en">Surface</span></th><th><span data-lang="pt">Superfície Dark</span><span data-lang="en">Dark Surface</span></th><th><span data-lang="pt">Componentes</span><span data-lang="en">Components</span></th></tr>
+        <tr><th><span data-lang="pt">Nível</span><span data-lang="en">Level</span></th><th>Figma</th><th>CSS</th><th><span data-lang="pt">Sombra</span><span data-lang="en">Shadow</span></th><th><span data-lang="pt">Superfície</span><span data-lang="en">Surface</span></th><th><span data-lang="pt">Papel</span><span data-lang="en">Role</span></th></tr>
       </thead>
       <tbody>
         <tr>
+          <td><strong>0</strong></td>
+          <td><span data-lang="pt">Sem Effect Style</span><span data-lang="en">No Effect Style</span></td>
+          <td><code>.ds-elevation-0</code></td>
+          <td><code>--ds-shadow-none</code></td>
+          <td><code>--ds-surface-default</code></td>
+          <td><span data-lang="pt">Estado plano/reset de sombra.</span><span data-lang="en">Flat state/shadow reset.</span></td>
+        </tr>
+        <tr>
           <td><strong><span data-lang="pt">1 -- Sutil</span><span data-lang="en">1 -- Subtle</span></strong></td>
+          <td><code>elevation/1</code></td>
+          <td><code>.ds-elevation-1</code></td>
           <td><code>--ds-shadow-sm</code></td>
           <td><code>--ds-surface-raised</code></td>
-          <td>neutral-800</td>
-          <td><span data-lang="pt">Cards, paineis, sticky headers</span><span data-lang="en">Cards, panels, sticky headers</span></td>
+          <td><span data-lang="pt">Elevação sutil para cards, painéis e sticky headers.</span><span data-lang="en">Subtle elevation for cards, panels, and sticky headers.</span></td>
         </tr>
         <tr>
           <td><strong><span data-lang="pt">2 -- Elevado</span><span data-lang="en">2 -- Elevated</span></strong></td>
+          <td><code>elevation/2</code></td>
+          <td><code>.ds-elevation-2</code></td>
           <td><code>--ds-shadow-md</code></td>
           <td><code>--ds-surface-overlay</code></td>
-          <td>neutral-700</td>
-          <td>Dropdowns, popovers, FABs</td>
+          <td>Dropdowns, popovers, FABs.</td>
         </tr>
         <tr>
           <td><strong><span data-lang="pt">3 -- Flutuante</span><span data-lang="en">3 -- Floating</span></strong></td>
+          <td><code>elevation/3</code></td>
+          <td><code>.ds-elevation-3</code></td>
           <td><code>--ds-shadow-lg</code></td>
           <td><code>--ds-surface-elevated</code></td>
-          <td>neutral-600</td>
-          <td><span data-lang="pt">Sidesheets, paineis flutuantes</span><span data-lang="en">Sidesheets, floating panels</span></td>
+          <td><span data-lang="pt">Sidesheets e painéis flutuantes.</span><span data-lang="en">Sidesheets and floating panels.</span></td>
         </tr>
         <tr>
           <td><strong><span data-lang="pt">4 -- Destaque</span><span data-lang="en">4 -- Prominent</span></strong></td>
+          <td><code>elevation/4</code></td>
+          <td><code>.ds-elevation-4</code></td>
           <td><code>--ds-shadow-xl</code></td>
           <td><code>--ds-surface-elevated</code></td>
-          <td>neutral-600</td>
-          <td><span data-lang="pt">Modais, dialogs</span><span data-lang="en">Modals, dialogs</span></td>
+          <td><span data-lang="pt">Modais, dialogs e overlays prioritários.</span><span data-lang="en">Modals, dialogs, and priority overlays.</span></td>
         </tr>
       </tbody>
     </table>
@@ -109,13 +121,15 @@
 
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Shadow Tokens</span><span data-lang="en">Shadow Tokens</span></h2>
+    <p style="color:var(--ds-content-default);margin-bottom:var(--ds-dimension-24);font-size:var(--ds-font-size-14);line-height:var(--ds-line-height-relaxed)"><span data-lang="pt">Os parâmetros abaixo espelham os Effect Styles publicados no Figma: <code>elevation/1</code> a <code>elevation/4</code>. <code>--ds-shadow-none</code> é o reset técnico para <code>.ds-elevation-0</code>.</span><span data-lang="en">The parameters below mirror the published Figma Effect Styles: <code>elevation/1</code> through <code>elevation/4</code>. <code>--ds-shadow-none</code> is the technical reset for <code>.ds-elevation-0</code>.</span></p>
     <table class="ds-props-table">
-      <thead><tr><th>Token</th><th><span data-lang="pt">Valor CSS</span><span data-lang="en">CSS Value</span></th></tr></thead>
+      <thead><tr><th>Figma</th><th>Token</th><th><span data-lang="pt">Valor CSS</span><span data-lang="en">CSS Value</span></th></tr></thead>
       <tbody>
-        <tr><td><code>--ds-shadow-sm</code></td><td><code>0 2px 4px 0 rgba(0, 0, 0, 0.08), 0 1px 2px 0 rgba(0, 0, 0, 0.04)</code></td></tr>
-        <tr><td><code>--ds-shadow-md</code></td><td><code>0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.04)</code></td></tr>
-        <tr><td><code>--ds-shadow-lg</code></td><td><code>0 10px 15px -3px rgba(0,0,0,0.12), 0 4px 6px -2px rgba(0,0,0,0.08)</code></td></tr>
-        <tr><td><code>--ds-shadow-xl</code></td><td><code>0 20px 25px -5px rgba(0,0,0,0.15), 0 8px 10px -2px rgba(0,0,0,0.1)</code></td></tr>
+        <tr><td><code>elevation/1</code></td><td><code>--ds-shadow-sm</code></td><td><code>0 2px 4px 0 rgba(0, 0, 0, 0.08), 0 1px 2px 0 rgba(0, 0, 0, 0.04)</code></td></tr>
+        <tr><td><code>elevation/2</code></td><td><code>--ds-shadow-md</code></td><td><code>0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.04)</code></td></tr>
+        <tr><td><code>elevation/3</code></td><td><code>--ds-shadow-lg</code></td><td><code>0 10px 15px -3px rgba(0, 0, 0, 0.12), 0 4px 6px -2px rgba(0, 0, 0, 0.08)</code></td></tr>
+        <tr><td><code>elevation/4</code></td><td><code>--ds-shadow-xl</code></td><td><code>0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -2px rgba(0, 0, 0, 0.1)</code></td></tr>
+        <tr><td>--</td><td><code>--ds-shadow-none</code></td><td><code>none</code></td></tr>
       </tbody>
     </table>
   </div>
@@ -125,12 +139,10 @@
 <div class="ds-code-block">{
   "foundation": {
     "shadow": {
-      "xs":  { "$type": "shadow", "$value": "0 1px 2px 0 rgba(0, 0, 0, 0.05)" },
       "sm":  { "$type": "shadow", "$value": "0 2px 4px 0 rgba(0, 0, 0, 0.08), 0 1px 2px 0 rgba(0, 0, 0, 0.04)" },
       "md":  { "$type": "shadow", "$value": "0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.04)" },
       "lg":  { "$type": "shadow", "$value": "0 10px 15px -3px rgba(0, 0, 0, 0.12), 0 4px 6px -2px rgba(0, 0, 0, 0.08)" },
       "xl":  { "$type": "shadow", "$value": "0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -2px rgba(0, 0, 0, 0.1)" },
-      "2xl": { "$type": "shadow", "$value": "0 25px 50px -12px rgba(0, 0, 0, 0.25)" },
       "none":{ "$type": "shadow", "$value": "none" }
     }
   }
