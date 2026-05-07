@@ -2,6 +2,33 @@
    COMPONENT: Radio Button
    ============================================================ */
 
+/* Item wrapper — agrupa radio label + description + helper text
+   verticalmente. Use quando precisar de Description/Helper opt-in
+   (matches Figma "Show Description"/"Show Helper Text" booleans). */
+.ds-radio-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-space-2xs);
+}
+
+/* Description text — mesmo size do label, regular (Figma) */
+.ds-radio-description {
+  font-size: var(--ds-body-font-size-sm);
+  font-weight: var(--ds-body-font-weight-regular);
+  line-height: var(--ds-body-line-height-sm);
+  color: var(--ds-content-strong);
+  padding-left: calc(var(--ds-size-sm) + var(--ds-space-sm) + var(--ds-space-xs));
+}
+
+/* Helper text — menor + mais sutil que description (Figma) */
+.ds-radio-helper {
+  font-size: var(--ds-body-font-size-xs);
+  font-weight: var(--ds-body-font-weight-regular);
+  line-height: var(--ds-body-line-height-xs);
+  color: var(--ds-content-default);
+  padding-left: calc(var(--ds-size-sm) + var(--ds-space-sm) + var(--ds-space-xs));
+}
+
 /* Radio group container */
 .ds-radio-group {
   border: none;

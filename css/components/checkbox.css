@@ -2,6 +2,34 @@
    COMPONENT: Checkbox
    ============================================================ */
 
+/* Item wrapper — agrupa checkbox label + description + helper text
+   verticalmente. Use quando precisar de Description/Helper opt-in
+   (matches Figma "Show Description"/"Show Helper Text" booleans). */
+.ds-checkbox-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-space-2xs);
+}
+
+/* Description text — abaixo do label, mesmo size, regular weight (Figma) */
+.ds-checkbox-description {
+  font-size: var(--ds-body-font-size-sm);
+  font-weight: var(--ds-body-font-weight-regular);
+  line-height: var(--ds-body-line-height-sm);
+  color: var(--ds-content-strong);
+  /* indent pra alinhar com label, passando o checkbox + gap */
+  padding-left: calc(var(--ds-size-sm) + var(--ds-space-sm) + var(--ds-space-xs));
+}
+
+/* Helper text — menor + mais sutil que description (Figma) */
+.ds-checkbox-helper {
+  font-size: var(--ds-body-font-size-xs);
+  font-weight: var(--ds-body-font-weight-regular);
+  line-height: var(--ds-body-line-height-xs);
+  color: var(--ds-content-default);
+  padding-left: calc(var(--ds-size-sm) + var(--ds-space-sm) + var(--ds-space-xs));
+}
+
 /* Checkbox label wrapper */
 .ds-checkbox-label {
   display: inline-flex;

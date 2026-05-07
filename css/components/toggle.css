@@ -2,6 +2,34 @@
    COMPONENT: Toggle / Switch
    ============================================================ */
 
+/* Item wrapper — agrupa toggle label + description + helper text
+   verticalmente. Use quando precisar de Description/Helper opt-in
+   (matches Figma "Show Description"/"Show Helper Text" booleans). */
+.ds-toggle-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-space-2xs);
+}
+
+/* Description — mesmo size do label, regular weight (Figma) */
+.ds-toggle-description {
+  font-size: var(--ds-body-font-size-sm);
+  font-weight: var(--ds-body-font-weight-regular);
+  line-height: var(--ds-body-line-height-sm);
+  color: var(--ds-content-strong);
+  /* indent passa o track do toggle (md default = size-xl) + gap */
+  padding-left: calc(var(--ds-size-xl) + var(--ds-space-sm) + var(--ds-space-xs));
+}
+
+/* Helper — menor + mais sutil que description (Figma) */
+.ds-toggle-helper {
+  font-size: var(--ds-body-font-size-xs);
+  font-weight: var(--ds-body-font-weight-regular);
+  line-height: var(--ds-body-line-height-xs);
+  color: var(--ds-content-default);
+  padding-left: calc(var(--ds-size-xl) + var(--ds-space-sm) + var(--ds-space-xs));
+}
+
 /* Toggle label wrapper */
 .ds-toggle-label {
   display: inline-flex;
