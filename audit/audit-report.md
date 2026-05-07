@@ -188,11 +188,13 @@ CSS não força tamanho de Button quando dentro de Modal — **decisão correta*
 
 Decisão: **wontfix**. Mantém padrão de indústria; consumer-driven sizing.
 
-#### P2-5. Spinner `--on-color` — variant só no CSS
+#### ~~P2-5. Spinner `--on-color`~~ → FALSO POSITIVO (variant existe no Figma)
 
-Variant adicionada por nós nesta sessão para uso em fundos coloridos. Figma não tem essa variant. **Reverse drift** — CSS extra que Figma não cobre.
+**Falso positivo da auditoria.** Re-dump completo do Spinner mostra que Figma TEM `Style=On Color` (3 variants: sm/md/lg), com tokens batendo 1:1 com CSS:
+- Track: `overlay/medium` (= `--ds-overlay-medium`)
+- Indicator: `border/inverse` (= `--ds-border-inverse`)
 
-Decisão: criar a variant no Figma ou remover do CSS. Sem uso real ainda — pode ser removida temporariamente até designer authorar.
+Minha auditoria original só amostrou `Style=Default, Size=Small` — concluiu errado. CSS e Figma estão alinhados.
 
 #### P2-6. Alert Subtle — icon glyph color
 
