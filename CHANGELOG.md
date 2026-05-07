@@ -17,6 +17,8 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 
 ### Corrigido
 
+- **Breadcrumb Item Link agora usa `link.content-default`** (era `primary.background.default`, token de background usado como text). Adicionado `:hover` → `link.content-hover` e `:active` → `link.content-active` no CSS. Figma rebindado via `use_figma` no Label do State=Link. Resolve P1-8 da auditoria.
+
 - **Select chevron + leading icon escalam por size (sm=20, md/lg=24)** alinhando ao padrão do Button glyph. Antes: chevron sempre 16px no CSS; Figma chevron glyph hardcoded 16/20/24 (um step menor que Button). Agora ambos seguem 20/24/24:
   - Figma: 18 chevron glyph TEXT nodes rebindados via `use_figma` — sm → `size/sm`, md/lg → `size/md`.
   - CSS `.ds-select__arrow`: default md = 24px, sm = 20px, lg = sem override (usa default).
