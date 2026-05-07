@@ -225,8 +225,8 @@ Por ADR-016 ambos podem coexistir (shadow é Effect Style, JSON é fonte CSS). M
 
 #### P3-3. Required asterisk text token
 
-- Form Field `__required`, Input/Select/Textarea Required: usa `feedback/error/background/default` como cor de texto
-- Mesmo padrão semântico errado do Breadcrumb (background usado como text)
+- Resolvido nesta continuação: Form Field `__required` e os nós Figma `Required` de Input/Select/Textarea usam `feedback/error/content/default` como cor de texto
+- Antes repetia o mesmo padrão semântico errado do Breadcrumb (background usado como text)
 
 ---
 
@@ -319,7 +319,7 @@ Ordem sugerida (de mais danoso visualmente para menos):
 
 ## Status de execução (2026-05-07) — handoff para próximo agente
 
-**Concluídos (16/19 itens da auditoria + 3 extras):**
+**Concluídos (17/19 itens da auditoria + 3 extras):**
 
 | Item | Status | Commit(s) |
 |---|---|---|
@@ -340,6 +340,7 @@ Ordem sugerida (de mais danoso visualmente para menos):
 | P2-4 Modal Footer button heights | ✅ wontfix (consumer-driven) | `8be7dcf` |
 | P2-5 Spinner --on-color | ✅ falso positivo (existe em Figma) + revert + tokenização | `061bfb1` |
 | P2-6 Alert Subtle icon color | ✅ tematizado | `f999b02` |
+| P3-3 Required asterisk token semantic | ✅ Figma rebindado + CSS usa `feedback-error-content-default` | nesta continuação |
 
 **Extras descobertos durante execução (todos resolvidos):**
 - Field paddings descem um nível (Input/Select/Textarea sm/md/lg) — `6d61409` + `393b666`
@@ -354,7 +355,6 @@ Ordem sugerida (de mais danoso visualmente para menos):
 |---|---|---|---|
 | #18 | P3-1 — Foundation `disabled/*` naming | Decidir convenção (slash vs hyphen). Figma tem 8 vars `disabled/brand/dark` etc; JSON tem 6 `disabled.brand-dark` etc. + 2 toned faltam no JSON | 1h |
 | #19 | P3-2 — Effect Style elevation/N vs JSON shadow.{sm..2xl} | Alinhar scale entre Figma Effect Styles (`elevation/1..4`) e JSON shadow tokens (sm/md/lg/xl/2xl/none/card) | 30min |
-| #20 | P3-3 — Required asterisk token semantic | Form Field `__required` + Input/Select/Textarea Required usam `feedback/error/background/default` como cor de TEXTO. Mesmo padrão errado do Breadcrumb. Resolução tipo P1-8 | 30min |
 | #21 | Auditar Tab Item + Tab Bar | Figma split em 2 components (não auditados deeply). Dump + comparação com `tabs.css` | 1h |
 
 **Como continuar (qualquer agente Codex/Gemini/Claude):**
@@ -369,7 +369,7 @@ npm run agent:preflight
 
 MCP é protocolo aberto — Codex e Gemini, se configurados localmente com Figma + GitHub MCPs, têm o mesmo acesso que Claude Code. Verifique sua config; se faltar algo, restrições documentadas em `GEMINI.md` / `CLAUDE.md` aplicam.
 
-PR aberto: [#43](https://github.com/uxindesign/design-system-core/pull/43) consolidando esta auditoria. Próximas pendências (P3-1, P3-2, P3-3, Tab audit) podem ir em nova branch após merge.
+PR aberto: [#43](https://github.com/uxindesign/design-system-core/pull/43) consolidando esta auditoria. Próximas pendências (P3-1, P3-2, Tab audit) podem ir em nova branch após merge.
 
 ---
 

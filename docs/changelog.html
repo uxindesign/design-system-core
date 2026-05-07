@@ -70,6 +70,54 @@
 <p>O formato é baseado em <a href="https://keepachangelog.com/pt-BR/1.1.0/">Keep a Changelog</a> e o versionamento segue <a href="https://semver.org/lang/pt-BR/">Semantic Versioning</a>.</p>
 <p>A partir de <code>1.0.0-beta.1</code>, o sistema entrou em <strong>fase beta</strong> — releases incrementam <code>1.0.0-beta.N</code> até decisão do owner pra dropping do tag → <code>1.0.0</code> oficial. Tags 0.x permanecem como histórico pré-beta. Regras em <code>docs/process-versioning.html</code>.</p>
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
+<h3>Corrigido</h3>
+<ul>
+<li><p><strong>Required asterisk de Input Text, Select e Textarea usa token semântico de conteúdo de erro.</strong> Figma rebindado em 48 nós <code>Required</code> (<code>12</code> Input Text, <code>18</code> Select, <code>18</code> Textarea) de <code>feedback/error/background/default</code> para <code>feedback/error/content/default</code>. CSS compartilhado <code>.ds-field__required</code>, <code>.ds-field__error</code> e <code>.ds-field--error .ds-field__label</code> agora consome <code>--ds-feedback-error-content-default</code>, evitando token de background como cor de texto. Resolve #20 / P3-3 da auditoria Figma↔Repo.</p>
+</li>
+<li><p>Referências órfãs de motion em docs (<code>--ds-duration-normal</code>) substituídas por <code>--ds-duration-moderate</code>, alinhando <code>foundations-motion.html</code> e <code>docs/layout.css</code> à escala atual (<code>instant/fast/moderate/slow/slower</code>) e liberando <code>npm test</code>.</p>
+</li>
+<li><p>Referências órfãs de tokens de cor (<code>content-secondary</code>, <code>content-tertiary</code>) no <code>index.html</code> que causavam falha no pipeline de CI.</p>
+</li>
+<li><p><strong>Alert Subtle icon glyph tematizado por feedback</strong> (Success/Warning/Error/Info). Antes: ícone inheritava <code>color: content-default</code> do wrapper — saía cinza, sem distinção visual. Agora segue Figma: glyph usa <code>feedback/X/content/default</code> em CSS + Figma rebindado de <code>feedback/X/background/default</code> (token de bg usado como text — uso semanticamente errado, mesmo padrão de P1-2). 4 variants Figma rebindadas via <code>use_figma</code>. Resolve P2-6.</p>
+</li>
+<li><p><strong>Doc ↔ JSON drift check em <code>verify:tokens</code></strong> (<code>scripts/lib/doc-token-drift.mjs</code>). Detecta automaticamente quando doc descreve tokens/valores que JSON não tem — exatamente o sintoma que escondeu a drift de motion por meses. Categorias: <code>DOC_ONLY_TOKEN</code> (error — doc cita token inexistente), <code>VALUE_MISMATCH</code> (warning — doc e JSON com valores diferentes), <code>JSON_ONLY_TOKEN</code> (info). Roda automaticamente em <code>npm run verify:tokens</code>. Limpou 3 drifts pré-existentes durante implementação:</p>
+<ul>
+<li><code>foundation.border.width.0</code> removido de <code>foundations-borders.html</code> (token zero eliminado em 0.7.0).</li>
+<li><code>foundation.opacity.0</code> removido de <code>foundations-opacity.html</code> (idem).</li>
+<li><code>foundation.radius.9999</code> em <code>foundations-radius.html</code> corrigido pra <code>999</code> (typo histórico).</li>
+</ul>
+</li>
+<li><p><strong>Motion completo: JSON alinhado com doc <code>foundations-motion.html</code></strong> (eliminada drift histórica). Antes: doc descrevia 5 durations × 5 easings; JSON tinha 3 durations × 1 ease com nomes/valores divergentes. Agora alinhado:</p>
+<ul>
+<li><strong>Durations</strong> (foundation + semantic): <code>instant</code> (0ms), <code>fast</code> (150ms), <code>moderate</code> (250ms — substitui <code>normal=200</code>, renomeado + recalibrado), <code>slow</code> (400ms — recalibrado de 300), <code>slower</code> (600ms).</li>
+<li><strong>Easings</strong> (foundation já tinha; semantic estava só com <code>default</code>): <code>default</code>, <code>in</code>, <code>out</code>, <code>in-out</code>, <code>linear</code> (5 curves).</li>
+<li><strong>Removidos</strong>: <code>foundation.duration.normal</code> e <code>semantic.motion.duration.normal</code> (zero consumers em CSS — eram tokens órfãos).</li>
+<li><strong>Impacto em consumers</strong>: zero — todos os 30 usos em CSS de componente eram <code>motion-duration-fast</code> (mesmo valor 150ms) e 1 de <code>motion-duration-slower</code> (Spinner). <code>normal</code> e <code>slow</code> (antigo 300) tinham 0 usos.</li>
+<li>Registry atualizado com 8 entries novas + 3 ajustes; per ADR-016 (motion CSS-only) edição direta no JSON é legítima.</li>
+</ul>
+</li>
+<li><p><strong>Spinner: nova rotação tokenizada (<code>motion-duration-slower</code> + <code>motion-ease-linear</code>)</strong>, em vez do <code>0.6s linear</code> literal. Tokens criados pra cobrir o caso de loops contínuos que <code>motion-duration.{fast,normal,slow}</code> (150-300ms, transições de estado) não atende. Doc <code>foundations-motion.html</code> já documentava <code>slower=600ms</code> e <code>ease.linear</code> mas JSON estava sem — agora alinhado:</p>
+<ul>
+<li><code>foundation.duration.slower = 600ms</code></li>
+<li><code>foundation.ease.linear = [0,0,1,1]</code></li>
+<li><code>semantic.motion.duration.slower → {foundation.duration.slower}</code></li>
+<li><code>semantic.motion.ease.linear → {foundation.ease.linear}</code></li>
+<li>Registry com 4 entries novas; per ADR-016 (motion CSS-only) edição direta no JSON é legítima.</li>
+</ul>
+</li>
+<li><p><strong>Spinner: revertido animation duration/timing para <code>0.6s linear</code>.</strong> Em rodada anterior eu (Claude) tinha trocado por <code>motion-duration-slow</code> (300ms) + <code>motion-ease-default</code>, semantizando indevidamente. Resultado: rotação 2x mais rápida e oscilante (ease quebra rotação constante). Tokens <code>motion.duration.*</code> são pra transições de estado (150-300ms), não pra loops contínuos. Spinner precisa de literal <code>0.6s linear</code> por design — comentário adicionado no CSS explicando.</p>
+</li>
+<li><p><strong>Field paddings horizontais descem um nível em Input/Select/Textarea.</strong> User feedback: paddings laterais aparentavam maiores que deveriam. Aplicado em Figma + CSS:</p>
+<ul>
+<li>sm: <code>space.md</code> (12) → <code>space.sm</code> (8)</li>
+<li>md: <code>space.lg</code> (16) → <code>space.md</code> (12)</li>
+<li>lg: <code>space.xl</code> (20) → <code>space.lg</code> (16)</li>
+<li>Figma: 108 paddings rebindados (Input Text, Select, Textarea × 3 sizes × variants).</li>
+<li>CSS: input.css, select.css, textarea.css atualizados.</li>
+<li>Verticais ficam como estão.</li>
+</ul>
+</li>
+</ul>
 <h3>Adicionado</h3>
 <ul>
 <li><p><strong>ADR-018 — Renomear <code>content.{default,secondary,tertiary}</code> para <code>content.{strong,default,subtle}</code>.</strong> Único conjunto de tokens do DS com naming ordinal foi alinhado ao vocabulário descritivo das demais categorias (<code>border.{strong,default,subtle}</code>, <code>surface.*</code>, <code>background.*</code>). Strict rename — valores 100% preservados, só nomes mudaram. Migração: keys em <code>tokens/semantic/{light,dark}.json</code>, entries em <code>tokens/registry.json</code>, <code>--ds-content-*</code> em CSS de componente/base e em HTMLs/MDs de docs (sed-replace via 3 passos com placeholder pra evitar clash), Variables <code>content/{default,secondary,tertiary}</code> na collection Semantic do Figma via <code>use_figma</code> (bindings auto-seguem por ID). <code>npm run build:tokens</code> + <code>build:api</code> + <code>sync:docs</code> regeneram derivados. Decisão tomada durante #4 P1-1 da auditoria Figma↔Repo, quando <code>content/secondary</code> apareceu como text token do Badge Neutral Subtle.</p>
@@ -81,6 +129,37 @@
 </ul>
 <h3>Corrigido</h3>
 <ul>
+<li><p><strong>Avatar Initials font-size escala 14/16/20 com weight matching (sm/md/lg).</strong> Antes: Md tinha mesma font-size do Sm (14) — bug Figma. Lg tinha drift CSS (font-lg=18 vs Figma font-xl=20) e weight diferente (CSS bold vs Figma semibold). Aplicado:</p>
+<ul>
+<li>Figma: Avatar Initials Medium fontSize → <code>typography/body/font-size/md</code> (16) via <code>use_figma</code>.</li>
+<li>CSS: <code>.ds-avatar</code> default md <code>font-sm → font-md</code>; <code>.ds-avatar--lg font-lg → font-xl + font-weight semibold</code>.</li>
+<li>Resolve P2-3 da auditoria.</li>
+</ul>
+</li>
+<li><p><strong>Description + Helper Text adicionados em Checkbox/Radio/Toggle (CSS).</strong> Figma já tinha esses como slots opt-in (boolean <code>Show Description</code>/<code>Show Helper Text</code>); CSS implementava só Label. Agora os 3 componentes ganham wrapper item (<code>.ds-checkbox-item</code>, <code>.ds-radio-item</code>, <code>.ds-toggle-item</code>) com flex column + classes filhas <code>__description</code> (sm + regular + content/strong) e <code>__helper</code> (xs + regular + content/default). Indent calculado pra alinhar com label, passando o control + gap. Resolve P2-2 da auditoria.</p>
+</li>
+<li><p><strong>P2-5 (Spinner --on-color) reclassificado como falso positivo.</strong> Re-dump completo mostra Figma TEM <code>Style=On Color</code> (sm/md/lg) com tokens batendo 1:1 com CSS (<code>overlay/medium</code> + <code>border/inverse</code>). Auditoria original amostrou só <code>Style=Default, Size=Small</code> — conclusão errada. Sistema correto.</p>
+</li>
+<li><p><strong>P2-4 (Modal Footer button heights) reclassificado como wontfix.</strong> Modal CSS não força size de Button (decisão consciente, padrão Material/Polaris). Consumer controla via <code>.ds-btn--sm/--lg</code>. Figma prescreve sm/md/lg como recomendação visual pra mockups, não como CSS constraint.</p>
+</li>
+<li><p><strong>P2-1 (letter-spacing morto sistêmico) reclassificado como wontfix.</strong> Investigação revelou que <code>css/base/reset.css:82</code> aplica <code>letter-spacing: var(--ds-body-letter-spacing-normal)</code> globalmente; todo texto herda via cascade. Figma bindings explícitos são redundantes mas não causam drift visual. Limpar ~600+ bindings sem ganho visual não justifica o trabalho. Modal Large title é exceção (tight, fix em P1-4).</p>
+</li>
+<li><p><strong>Breadcrumb Item Link agora usa <code>link.content-default</code></strong> (era <code>primary.background.default</code>, token de background usado como text). Adicionado <code>:hover</code> → <code>link.content-hover</code> e <code>:active</code> → <code>link.content-active</code> no CSS. Figma rebindado via <code>use_figma</code> no Label do State=Link. Resolve P1-8 da auditoria.</p>
+</li>
+<li><p><strong>Select chevron + leading icon escalam por size (sm=20, md/lg=24)</strong> alinhando ao padrão do Button glyph. Antes: chevron sempre 16px no CSS; Figma chevron glyph hardcoded 16/20/24 (um step menor que Button). Agora ambos seguem 20/24/24:</p>
+<ul>
+<li>Figma: 18 chevron glyph TEXT nodes rebindados via <code>use_figma</code> — sm → <code>size/sm</code>, md/lg → <code>size/md</code>.</li>
+<li>CSS <code>.ds-select__arrow</code>: default md = 24px, sm = 20px, lg = sem override (usa default).</li>
+<li>CSS <code>.ds-select__icon</code> (leading icon): mesma escala.</li>
+<li>Resolve P1-7 da auditoria.</li>
+</ul>
+</li>
+<li><p><strong>Input + Select Field text em size Small alinhados ao Figma</strong>: font-size <code>body/sm</code> (14px) → <code>body/xs</code> (12px) + line-height <code>body/sm</code> → <code>body/2xs</code>. Textarea já estava alinhado (Figma sm = 14px). Resolve P1-6 da auditoria.</p>
+</li>
+<li><p><strong>Modal body agora escala typography por size</strong> (espelha Figma): sm → <code>font-size sm + line-height sm</code>, md → <code>font-size md + line-height md</code>, lg → <code>font-size lg + line-height xl</code>. Antes <code>.ds-modal__body</code> era estático em sm/md mistura. Resolve P1-5 da auditoria.</p>
+</li>
+<li><p><strong>Modal Large title agora aplica <code>letter-spacing/tight</code></strong> (espelha binding do Figma). Para títulos grandes (3xl), tight letter-spacing otimiza legibilidade visual. Resolve P1-4 da auditoria.</p>
+</li>
 <li><p><strong>Button: glyph icon escala por size (sm=20, md/lg=24) + Icon Only com padding simétrico.</strong> Antes: glyph hardcoded em todas as variants (boundVar=null), Icon Only com <code>padding: 0</code> e paddings assimétricos no Figma (pl/pr ≠ pt/pb). Agora:</p>
 <ul>
 <li><strong>Glyph fontSize bindado</strong> em 270 nodes via <code>use_figma</code>: sm Buttons → <code>size/sm</code> (20), md/lg Buttons → <code>size/md</code> (24).</li>

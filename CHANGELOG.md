@@ -9,6 +9,8 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 ## [Não publicado]
 
 ### Corrigido
+- **Required asterisk de Input Text, Select e Textarea usa token semântico de conteúdo de erro.** Figma rebindado em 48 nós `Required` (`12` Input Text, `18` Select, `18` Textarea) de `feedback/error/background/default` para `feedback/error/content/default`. CSS compartilhado `.ds-field__required`, `.ds-field__error` e `.ds-field--error .ds-field__label` agora consome `--ds-feedback-error-content-default`, evitando token de background como cor de texto. Resolve #20 / P3-3 da auditoria Figma↔Repo.
+- Referências órfãs de motion em docs (`--ds-duration-normal`) substituídas por `--ds-duration-moderate`, alinhando `foundations-motion.html` e `docs/layout.css` à escala atual (`instant/fast/moderate/slow/slower`) e liberando `npm test`.
 - Referências órfãs de tokens de cor (`content-secondary`, `content-tertiary`) no `index.html` que causavam falha no pipeline de CI.
 - **Alert Subtle icon glyph tematizado por feedback** (Success/Warning/Error/Info). Antes: ícone inheritava `color: content-default` do wrapper — saía cinza, sem distinção visual. Agora segue Figma: glyph usa `feedback/X/content/default` em CSS + Figma rebindado de `feedback/X/background/default` (token de bg usado como text — uso semanticamente errado, mesmo padrão de P1-2). 4 variants Figma rebindadas via `use_figma`. Resolve P2-6.
 

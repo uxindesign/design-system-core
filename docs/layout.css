@@ -223,7 +223,7 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
   padding: 0;
   overflow: hidden;
   max-height: 0;
-  transition: max-height var(--ds-duration-normal) var(--ds-ease-default);
+  transition: max-height var(--ds-duration-moderate) var(--ds-ease-default);
 }
 
 .ds-sidebar__section--expanded .ds-sidebar__nav {
@@ -305,7 +305,7 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
   margin: 0;
   overflow: hidden;
   max-height: 0;
-  transition: max-height var(--ds-duration-normal) var(--ds-ease-default);
+  transition: max-height var(--ds-duration-moderate) var(--ds-ease-default);
 }
 
 .ds-sidebar__group--expanded .ds-sidebar__sub-nav {
