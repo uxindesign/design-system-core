@@ -367,7 +367,9 @@ npm run agent:preflight
 # → escolha pendência da tabela acima
 ```
 
-Branch atual: `fix/orphan-tokens-index-html` (mistura escopos — abrir PR antes de continuar; nova branch pra os 4 itens pendentes).
+MCP é protocolo aberto — Codex e Gemini, se configurados localmente com Figma + GitHub MCPs, têm o mesmo acesso que Claude Code. Verifique sua config; se faltar algo, restrições documentadas em `GEMINI.md` / `CLAUDE.md` aplicam.
+
+PR aberto: [#43](https://github.com/uxindesign/design-system-core/pull/43) consolidando esta auditoria. Próximas pendências (P3-1, P3-2, P3-3, Tab audit) podem ir em nova branch após merge.
 
 ---
 
