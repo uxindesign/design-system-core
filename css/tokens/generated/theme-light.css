@@ -4,6 +4,10 @@
 
 :root,
 [data-mode="light"] {
+  --ds-control-toggle-height-sm: var(--ds-dimension-16);
+  --ds-control-toggle-height-md: var(--ds-dimension-24);
+  --ds-control-toggle-height-lg: var(--ds-dimension-32);
+  --ds-control-toggle-thumb-gap: var(--ds-dimension-2);
   --ds-primary-content-default: var(--ds-color-neutral-50);
   --ds-primary-content-disabled: var(--ds-overlay-white-80);
   --ds-primary-background-default: var(--ds-color-brand-600);

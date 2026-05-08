@@ -1,15 +1,15 @@
 # Token Registry
 
-> Gerado automaticamente por `scripts/build-token-registry.mjs` em 2026-05-07. Não editar à mão — edite `tokens/registry.json` e rode `npm run build:registry`.
+> Gerado automaticamente por `scripts/build-token-registry.mjs` em 2026-05-08. Não editar à mão — edite `tokens/registry.json` e rode `npm run build:registry`.
 
 Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra arquitetural de camadas.
 
 ## Status
 
-- Total de tokens: **438**
+- Total de tokens: **442**
 - Com metadados completos: **438**
-- Pendentes (`TODO` em algum campo obrigatório): **0**
-- Completude: **100%**
+- Pendentes (`TODO` em algum campo obrigatório): **4**
+- Completude: **99%**
 
 ## Foundation
 
@@ -185,12 +185,12 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `foundation.dimension.128` | dimension | — | Dimensão fixa de 128px (8rem). | 4 |
 | `foundation.dimension.1280` | dimension | — | Dimensão fixa de 1280px (80rem). | 4 |
 | `foundation.dimension.14` | dimension | — | Dimensão fixa de 14px (0.875rem). | 0 |
-| `foundation.dimension.16` | dimension | — | Dimensão fixa de 16px (1rem). | 7 |
-| `foundation.dimension.2` | dimension | — | Dimensão fixa de 2px (0.125rem). | 5 |
+| `foundation.dimension.16` | dimension | — | Dimensão fixa de 16px (1rem). | 9 |
+| `foundation.dimension.2` | dimension | — | Dimensão fixa de 2px (0.125rem). | 7 |
 | `foundation.dimension.20` | dimension | — | Dimensão fixa de 20px (1.25rem). | 6 |
-| `foundation.dimension.24` | dimension | — | Dimensão fixa de 24px (1.5rem). | 6 |
+| `foundation.dimension.24` | dimension | — | Dimensão fixa de 24px (1.5rem). | 8 |
 | `foundation.dimension.28` | dimension | — | Dimensão fixa de 28px (1.75rem). | 0 |
-| `foundation.dimension.32` | dimension | — | Dimensão fixa de 32px (2rem). | 6 |
+| `foundation.dimension.32` | dimension | — | Dimensão fixa de 32px (2rem). | 8 |
 | `foundation.dimension.320` | dimension | — | Dimensão fixa de 320px (20rem). | 4 |
 | `foundation.dimension.36` | dimension | — | Dimensão fixa de 36px (2.25rem). | 0 |
 | `foundation.dimension.4` | dimension | — | Dimensão fixa de 4px (0.25rem). | 5 |
@@ -332,7 +332,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Semantic
 
-173 tokens.
+177 tokens.
 
 ### semantic.background
 
@@ -372,6 +372,15 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.content.inverse` | color | → `foundation.color.neutral.50` | Texto invertido — sobre background.inverse (tooltips, badges escuros em light). | 1 |
 | `semantic.content.strong` | color | → `foundation.color.neutral.900` | Texto primário — body, headings, labels principais. | 13 |
 | `semantic.content.subtle` | color | → `foundation.color.neutral.500` | Texto terciário — caption, footnote, timestamps. | 3 |
+
+### semantic.control
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `semantic.control.toggle.height.lg` | dimension | → `foundation.dimension.32` | ⚠️ TODO | 0 |
+| `semantic.control.toggle.height.md` | dimension | → `foundation.dimension.24` | ⚠️ TODO | 0 |
+| `semantic.control.toggle.height.sm` | dimension | → `foundation.dimension.16` | ⚠️ TODO | 0 |
+| `semantic.control.toggle.thumb.gap` | dimension | → `foundation.dimension.2` | ⚠️ TODO | 0 |
 
 ### semantic.feedback
 
@@ -521,7 +530,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `semantic.space.2xl` | dimension | → `foundation.dimension.24` | Spacing token 2xl. | 0 |
-| `semantic.space.2xs` | dimension | → `foundation.dimension.2` | Spacing token 2xs. | 5 |
+| `semantic.space.2xs` | dimension | → `foundation.dimension.2` | Spacing token 2xs. | 4 |
 | `semantic.space.control.padding.10` | dimension | → `foundation.dimension.10` | Spacing token control.padding.10. | 3 |
 | `semantic.space.control.padding.6` | dimension | → `foundation.dimension.6` | Padding simétrico de Icon Only sm Button. | 1 |
 | `semantic.space.lg` | dimension | → `foundation.dimension.16` | Spacing token lg. | 8 |
@@ -2479,9 +2488,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/reset.css` (3×)
-    - `css/tokens/generated/theme-dark.css` (2×)
-    - `css/tokens/generated/theme-light.css` (2×)
-  - Tokens que referenciam: `semantic.space.lg`, `semantic.size.xs`, `semantic.space.lg`, `semantic.size.xs`
+    - `css/tokens/generated/theme-dark.css` (3×)
+    - `css/tokens/generated/theme-light.css` (3×)
+  - Tokens que referenciam: `semantic.control.toggle.height.sm`, `semantic.space.lg`, `semantic.size.xs`, `semantic.control.toggle.height.sm`, `semantic.space.lg`, `semantic.size.xs`
 
 ### `foundation.dimension.2`
 
@@ -2494,9 +2503,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/reset.css` (1×)
-    - `css/tokens/generated/theme-dark.css` (1×)
-    - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.space.2xs`, `semantic.space.2xs`
+    - `css/tokens/generated/theme-dark.css` (2×)
+    - `css/tokens/generated/theme-light.css` (2×)
+  - Tokens que referenciam: `semantic.control.toggle.thumb.gap`, `semantic.space.2xs`, `semantic.control.toggle.thumb.gap`, `semantic.space.2xs`
 
 ### `foundation.dimension.20`
 
@@ -2522,9 +2531,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Step da escala 2/4/6/8/10/12/14/16/20/24/28/32/36/40/44/48 — múltiplos de 2 e 4 cobrem todas as densidades de UI.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-dark.css` (2×)
-    - `css/tokens/generated/theme-light.css` (2×)
-  - Tokens que referenciam: `semantic.space.2xl`, `semantic.size.md`, `semantic.space.2xl`, `semantic.size.md`
+    - `css/tokens/generated/theme-dark.css` (3×)
+    - `css/tokens/generated/theme-light.css` (3×)
+  - Tokens que referenciam: `semantic.control.toggle.height.md`, `semantic.space.2xl`, `semantic.size.md`, `semantic.control.toggle.height.md`, `semantic.space.2xl`, `semantic.size.md`
 
 ### `foundation.dimension.28`
 
@@ -2547,9 +2556,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Step da escala 2/4/6/8/10/12/14/16/20/24/28/32/36/40/44/48 — múltiplos de 2 e 4 cobrem todas as densidades de UI.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-dark.css` (2×)
-    - `css/tokens/generated/theme-light.css` (2×)
-  - Tokens que referenciam: `semantic.space.section.sm`, `semantic.size.lg`, `semantic.space.section.sm`, `semantic.size.lg`
+    - `css/tokens/generated/theme-dark.css` (3×)
+    - `css/tokens/generated/theme-light.css` (3×)
+  - Tokens que referenciam: `semantic.control.toggle.height.lg`, `semantic.space.section.sm`, `semantic.size.lg`, `semantic.control.toggle.height.lg`, `semantic.space.section.sm`, `semantic.size.lg`
 
 ### `foundation.dimension.320`
 
@@ -4110,7 +4119,7 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/radio.css` (2×)
     - `css/components/tabs.css` (1×)
     - `css/components/textarea.css` (1×)
-    - `css/components/toggle.css` (3×)
+    - `css/components/toggle.css` (2×)
 
 ### `semantic.content.disabled`
 
@@ -4165,7 +4174,7 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/select.css` (1×)
     - `css/components/tabs.css` (1×)
     - `css/components/textarea.css` (1×)
-    - `css/components/toggle.css` (4×)
+    - `css/components/toggle.css` (3×)
 
 ### `semantic.content.subtle`
 
@@ -4181,6 +4190,54 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/input.css` (2×)
     - `css/components/select.css` (3×)
     - `css/components/textarea.css` (1×)
+
+### `semantic.control.toggle.height.lg`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.dimension.32`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.control.toggle.height.md`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.dimension.24`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.control.toggle.height.sm`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.dimension.16`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.control.toggle.thumb.gap`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.dimension.2`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `semantic.feedback.error.background.active`
 
@@ -5223,7 +5280,7 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/input.css` (1×)
     - `css/components/radio.css` (1×)
     - `css/components/select.css` (1×)
-    - `css/components/toggle.css` (2×)
+    - `css/components/toggle.css` (1×)
 
 ### `semantic.size.3xl`
 
@@ -5397,7 +5454,7 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/input.css` (1×)
     - `css/components/radio.css` (4×)
     - `css/components/select.css` (5×)
-    - `css/components/toggle.css` (2×)
+    - `css/components/toggle.css` (1×)
 
 ### `semantic.size.xl`
 
@@ -5415,7 +5472,7 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/input.css` (1×)
     - `css/components/select.css` (1×)
     - `css/components/skeleton.css` (2×)
-    - `css/components/toggle.css` (3×)
+    - `css/components/toggle.css` (1×)
 
 ### `semantic.size.xs`
 
@@ -5434,7 +5491,7 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/radio.css` (2×)
     - `css/components/select.css` (1×)
     - `css/components/spinner.css` (2×)
-    - `css/components/toggle.css` (2×)
+    - `css/components/toggle.css` (1×)
 
 ### `semantic.space.2xl`
 
@@ -5463,7 +5520,6 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/checkbox.css` (1×)
     - `css/components/form-field.css` (1×)
     - `css/components/radio.css` (1×)
-    - `css/components/toggle.css` (1×)
 
 ### `semantic.space.control.padding.10`
 
@@ -5604,7 +5660,7 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/radio.css` (4×)
     - `css/components/select.css` (3×)
     - `css/components/textarea.css` (2×)
-    - `css/components/toggle.css` (3×)
+    - `css/components/toggle.css` (1×)
     - `css/components/tooltip.css` (5×)
     - `css/utilities/layout.css` (1×)
 
@@ -5643,7 +5699,7 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/modal.css` (1×)
     - `css/components/radio.css` (7×)
     - `css/components/select.css` (1×)
-    - `css/components/toggle.css` (5×)
+    - `css/components/toggle.css` (2×)
     - `css/components/tooltip.css` (2×)
     - `css/utilities/layout.css` (1×)
 

@@ -7,11 +7,14 @@
  * O Toggle segue o padrão "Content Frame". O interruptor (track) fica à esquerda
  * e o conteúdo (Label + Desc + Helper) fica à direita em uma coluna flex.
  * Alinhamento é sempre TOP (flex-start) para suportar textos multilinha.
+ *
+ * ESCALA DIMENSIONAL (ADR-013/015):
+ * Sm: 16px, Md: 24px, Lg: 32px (Grade 4px).
  */
 
 .ds-toggle-label {
   display: inline-flex;
-  align-items: flex-start; /* Figma: items-start */
+  align-items: flex-start;
   gap: var(--ds-space-sm);
   cursor: pointer;
   padding: var(--ds-space-xs);
@@ -39,10 +42,13 @@
               border-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
 
   /* Variáveis internas para geometria baseada no Figma Md (Default) */
-  --toggle-width: var(--ds-size-xl); /* 40px */
-  --toggle-height: 22px; /* Literal (não há token na grade 4px) */
-  --thumb-size: var(--ds-size-xs);   /* 16px */
-  --thumb-gap: 2px;                  /* Figma Md gap interno */
+  /* Largura é tipicamente ~2x a altura ou fixa por escala size */
+  --toggle-height: var(--ds-control-toggle-height-md); /* 24px */
+  --toggle-width: var(--ds-size-xl);                  /* 40px - Proporção harmônica */
+  --thumb-gap: var(--ds-control-toggle-thumb-gap);     /* 2px */
+  
+  /* Thumb size calculado: Altura total - (2 * gap) - (2 * border) */
+  --thumb-size: calc(var(--toggle-height) - (var(--thumb-gap) * 2) - (var(--ds-border-width-default) * 2));
 
   width: var(--toggle-width);
   height: var(--toggle-height);
@@ -57,8 +63,8 @@
   width: var(--thumb-size);
   height: var(--thumb-size);
   border-radius: var(--ds-radius-full);
-  background-color: var(--ds-content-default); /* ADR-018: content-secondary -> content-default */
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12); /* Figma shadow */
+  background-color: var(--ds-content-default);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
   transition: transform var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
               background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
 }
@@ -76,8 +82,8 @@
 
 .ds-toggle:checked::after {
   background-color: var(--ds-primary-content-default);
-  /* Cálculo dinâmico: largura - thumb - (2 * gap) */
-  transform: translateX(calc(var(--toggle-width) - var(--thumb-size) - (var(--thumb-gap) * 2)));
+  /* Cálculo dinâmico e simétrico corrigido */
+  transform: translateX(calc(var(--toggle-width) - var(--thumb-size) - (var(--thumb-gap) * 2) - (var(--ds-border-width-default) * 2)));
 }
 
 /* Focus State */
@@ -103,23 +109,19 @@
 }
 
 /* ---------------------------------------------------------
-   Sizes (Figma Specs)
+   Sizes (Figma Specs - Grid 4px)
    --------------------------------------------------------- */
 
-/* Small (32×18 track, 12×12 thumb, 2px gap) */
+/* Small (16px height) */
 .ds-toggle--sm {
-  --toggle-width: var(--ds-size-lg); /* 32px */
-  --toggle-height: 18px;
-  --thumb-size: 12px;
-  --thumb-gap: 2px;
+  --toggle-height: var(--ds-control-toggle-height-sm); /* 16px */
+  --toggle-width: var(--ds-size-lg);                   /* 32px */
 }
 
-/* Large (48×26 track, 20×20 thumb, 2px gap) */
+/* Large (32px height) */
 .ds-toggle--lg {
-  --toggle-width: var(--ds-size-2xl); /* 48px */
-  --toggle-height: 26px;
-  --thumb-size: var(--ds-size-sm);    /* 20px */
-  --thumb-gap: 2px;
+  --toggle-height: var(--ds-control-toggle-height-lg); /* 32px */
+  --toggle-width: var(--ds-size-2xl);                  /* 48px */
 }
 
 /* ---------------------------------------------------------
@@ -131,8 +133,7 @@
   flex-direction: column;
   gap: var(--ds-space-xs);
   min-width: 0;
-  /* Alinha baseline do label com o topo do track */
-  padding-top: 1px; 
+  padding-top: 2px; /* Alinhamento visual com o topo do track */
 }
 
 /* Label text (label/md: 14px bold) */

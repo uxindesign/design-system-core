@@ -4331,7 +4331,7 @@
           },
           {
             "file": "css/components/toggle.css",
-            "count": 4
+            "count": 3
           }
         ],
         "tokens": [],
@@ -4397,7 +4397,7 @@
           },
           {
             "file": "css/components/toggle.css",
-            "count": 3
+            "count": 2
           }
         ],
         "tokens": [],
@@ -6609,10 +6609,6 @@
           {
             "file": "css/components/radio.css",
             "count": 1
-          },
-          {
-            "file": "css/components/toggle.css",
-            "count": 1
           }
         ],
         "tokens": [],
@@ -6675,7 +6671,7 @@
           },
           {
             "file": "css/components/toggle.css",
-            "count": 5
+            "count": 2
           },
           {
             "file": "css/components/tooltip.css",
@@ -6746,7 +6742,7 @@
           },
           {
             "file": "css/components/toggle.css",
-            "count": 3
+            "count": 1
           },
           {
             "file": "css/components/tooltip.css",
@@ -7120,15 +7116,17 @@
           },
           {
             "file": "css/tokens/generated/theme-dark.css",
-            "count": 1
+            "count": 2
           },
           {
             "file": "css/tokens/generated/theme-light.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [
+          "semantic.control.toggle.thumb.gap",
           "semantic.space.2xs",
+          "semantic.control.toggle.thumb.gap",
           "semantic.space.2xs"
         ],
         "figma": []
@@ -7334,16 +7332,18 @@
           },
           {
             "file": "css/tokens/generated/theme-dark.css",
-            "count": 2
+            "count": 3
           },
           {
             "file": "css/tokens/generated/theme-light.css",
-            "count": 2
+            "count": 3
           }
         ],
         "tokens": [
+          "semantic.control.toggle.height.sm",
           "semantic.space.lg",
           "semantic.size.xs",
+          "semantic.control.toggle.height.sm",
           "semantic.space.lg",
           "semantic.size.xs"
         ],
@@ -7398,16 +7398,18 @@
         "css": [
           {
             "file": "css/tokens/generated/theme-dark.css",
-            "count": 2
+            "count": 3
           },
           {
             "file": "css/tokens/generated/theme-light.css",
-            "count": 2
+            "count": 3
           }
         ],
         "tokens": [
+          "semantic.control.toggle.height.md",
           "semantic.space.2xl",
           "semantic.size.md",
+          "semantic.control.toggle.height.md",
           "semantic.space.2xl",
           "semantic.size.md"
         ],
@@ -7448,16 +7450,18 @@
         "css": [
           {
             "file": "css/tokens/generated/theme-dark.css",
-            "count": 2
+            "count": 3
           },
           {
             "file": "css/tokens/generated/theme-light.css",
-            "count": 2
+            "count": 3
           }
         ],
         "tokens": [
+          "semantic.control.toggle.height.lg",
           "semantic.space.section.sm",
           "semantic.size.lg",
+          "semantic.control.toggle.height.lg",
           "semantic.space.section.sm",
           "semantic.size.lg"
         ],
@@ -8956,7 +8960,7 @@
           },
           {
             "file": "css/components/toggle.css",
-            "count": 2
+            "count": 1
           }
         ],
         "tokens": [],
@@ -9006,7 +9010,7 @@
           },
           {
             "file": "css/components/toggle.css",
-            "count": 2
+            "count": 1
           }
         ],
         "tokens": [],
@@ -9140,7 +9144,7 @@
           },
           {
             "file": "css/components/toggle.css",
-            "count": 3
+            "count": 1
           }
         ],
         "tokens": [],
@@ -9182,7 +9186,7 @@
           },
           {
             "file": "css/components/toggle.css",
-            "count": 2
+            "count": 1
           }
         ],
         "tokens": [],
@@ -10256,6 +10260,62 @@
       ],
       "contexto": "Aplicado em `.ds-btn--toned` ou em consumidores Figma equivalentes.",
       "decisao": "Aliasado a foundation.color.disabled.brand.toned.light em light e brand.toned.dark em dark, conforme Figma. Adicionado para fechar paridade do estado disabled toned.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.control.toggle.height.sm": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.dimension.16",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.control.toggle.height.md": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.dimension.24",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.control.toggle.height.lg": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.dimension.32",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.control.toggle.thumb.gap": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.dimension.2",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
       "usos": {
         "css": [],
         "tokens": [],
