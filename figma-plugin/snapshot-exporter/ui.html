@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>DS Core Snapshot Exporter</title>
+    <title>Design System Snapshot Exporter</title>
     <style>
       :root {
         color-scheme: light dark;
@@ -98,6 +98,30 @@
         gap: 8px;
       }
 
+      .result-summary {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+
+      .result-summary__row {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        padding-top: 6px;
+        border-top: 1px solid var(--figma-color-border);
+      }
+
+      .result-summary__label {
+        color: var(--figma-color-text-secondary);
+      }
+
+      .result-summary__value {
+        color: var(--figma-color-text);
+        font-weight: 600;
+        text-align: right;
+      }
+
       button {
         min-height: 32px;
         padding: 0 12px;
@@ -154,7 +178,7 @@
   <body>
     <main>
       <header>
-        <h1>DS Core Snapshot Exporter</h1>
+        <h1>Design System Snapshot Exporter</h1>
         <p>Exporta Figma Variables locais no formato esperado por <code>scripts/sync-tokens-from-figma.mjs</code>.</p>
       </header>
 
@@ -174,6 +198,7 @@
 
       <section class="panel result">
         <p id="result">Clique em "Verificar com repo publicado" para comparar este Figma com a última versão publicada do DS.</p>
+        <div id="result-summary" class="result-summary" hidden></div>
         <pre id="result-output" hidden></pre>
       </section>
 
@@ -186,6 +211,7 @@
       const fileWarningEl = document.getElementById("file-warning");
       const previewEl = document.getElementById("preview");
       const resultEl = document.getElementById("result");
+      const resultSummaryEl = document.getElementById("result-summary");
       const resultOutputEl = document.getElementById("result-output");
       const checkButton = document.getElementById("check");
       const downloadButton = document.getElementById("download");
@@ -240,6 +266,8 @@
         if (!snapshot) return;
         checkButton.disabled = true;
         setResult("Comparando com repo publicado...", "");
+        resultSummaryEl.hidden = true;
+        resultSummaryEl.innerHTML = "";
         resultOutputEl.hidden = true;
         resultOutputEl.textContent = "";
 
@@ -248,11 +276,7 @@
           if (!response.ok) throw new Error(`HTTP ${response.status}`);
           const published = await response.json();
           const result = compareSnapshotToPublished(snapshot, published);
-          setResult(result.ok
-            ? `Sincronizado com repo publicado (${published.version}).`
-            : `Há divergências contra o repo publicado (${published.version}).`,
-            result.ok ? "ready" : "error"
-          );
+          renderCheckResult(published, result);
           if (result.output) {
             resultOutputEl.hidden = false;
             resultOutputEl.textContent = result.output;
@@ -287,6 +311,8 @@
         snapshot = null;
         snapshotText = "";
         setResult("Clique em \"Verificar com repo publicado\" para comparar este Figma com a última versão publicada do DS.", "");
+        resultSummaryEl.hidden = true;
+        resultSummaryEl.innerHTML = "";
         resultOutputEl.hidden = true;
         resultOutputEl.textContent = "";
         setStatus("Regenerando snapshot...", "");
@@ -311,7 +337,7 @@
 
         if (summary.fileKey && summary.fileKey !== summary.expectedFileKey) {
           fileWarningEl.hidden = false;
-          fileWarningEl.textContent = "Atenção: este arquivo Figma não é o DS Core esperado.";
+          fileWarningEl.textContent = "Atenção: este arquivo Figma não é o Design System esperado.";
         } else {
           fileWarningEl.hidden = true;
           fileWarningEl.textContent = "";
@@ -330,6 +356,31 @@
         else delete resultEl.dataset.state;
       }
 
+      function renderCheckResult(published, result) {
+        setResult(result.ok ? "Figma igual ao publicado." : result.humanMessage, result.ok ? "ready" : "error");
+
+        const rows = [
+          ["Versão publicada", published.version || "desconhecida"],
+          ["Tokens comparados", String(result.comparableCount)],
+          ["Divergências reais", String(result.totalIssues)],
+        ];
+
+        if (!result.ok) {
+          for (const [kind, count] of Object.entries(result.issueCounts)) {
+            if (count > 0) rows.push([labelForIssueKind(kind), String(count)]);
+          }
+          rows.push(["Próximo passo", result.nextStep]);
+        }
+
+        resultSummaryEl.innerHTML = rows.map(([label, value]) => `
+          <div class="result-summary__row">
+            <span class="result-summary__label">${escapeHtml(label)}</span>
+            <span class="result-summary__value">${escapeHtml(value)}</span>
+          </div>
+        `).join("");
+        resultSummaryEl.hidden = false;
+      }
+
       function compareSnapshotToPublished(figmaSnapshot, published) {
         const figmaState = buildComparableState(figmaSnapshot);
         const publishedState = {
@@ -346,15 +397,58 @@
         ];
 
         const visible = issues.slice(0, 30);
+        const issueCounts = countIssues(issues);
         const output = issues.length === 0
-          ? `${figmaState.comparableCount} tokens comparáveis OK. ${figmaState.ignoredCount} diferenças arquiteturais ignoradas.`
+          ? `${figmaState.comparableCount} tokens comparáveis OK.`
           : [
               `${issues.length} divergência(s) encontrada(s). Mostrando ${visible.length}.`,
+              "",
+              `Leitura: ${humanMessageForIssues(issueCounts)}`,
+              `Próximo passo: ${nextStepForIssues(issueCounts)}`,
               "",
               ...visible.map(formatIssue),
             ].join("\n");
 
-        return { ok: issues.length === 0, output };
+        return {
+          ok: issues.length === 0,
+          output,
+          comparableCount: figmaState.comparableCount,
+          totalIssues: issues.length,
+          issueCounts,
+          humanMessage: humanMessageForIssues(issueCounts),
+          nextStep: nextStepForIssues(issueCounts),
+        };
+      }
+
+      function countIssues(issues) {
+        return issues.reduce((acc, issue) => {
+          acc[issue.kind] = (acc[issue.kind] || 0) + 1;
+          return acc;
+        }, {});
+      }
+
+      function humanMessageForIssues(counts) {
+        if (counts.ALIAS_BROKEN) return "Há alias quebrado no Figma.";
+        if ((counts.VALUE_DRIFT || counts.NEW_IN_FIGMA) && !counts.MISSING_IN_FIGMA) return "Figma tem mudanças ainda não publicadas.";
+        if (counts.MISSING_IN_FIGMA && !(counts.VALUE_DRIFT || counts.NEW_IN_FIGMA)) return "Repo publicado tem tokens que não aparecem no Figma.";
+        return "Figma e repo publicado estão diferentes.";
+      }
+
+      function nextStepForIssues(counts) {
+        if (counts.ALIAS_BROKEN) return "Corrigir alias no Figma antes de sincronizar.";
+        if (counts.VALUE_DRIFT || counts.NEW_IN_FIGMA) return "Revisar com pessoa técnica e decidir se vira sync/release.";
+        if (counts.MISSING_IN_FIGMA) return "Confirmar se foi remoção intencional ou exceção documentada.";
+        return "Copiar o detalhe e classificar as divergências.";
+      }
+
+      function labelForIssueKind(kind) {
+        const labels = {
+          VALUE_DRIFT: "Valor diferente",
+          NEW_IN_FIGMA: "Só no Figma",
+          MISSING_IN_FIGMA: "Só no repo",
+          ALIAS_BROKEN: "Alias quebrado",
+        };
+        return labels[kind] || kind;
       }
 
       function buildComparableState(figmaSnapshot) {
@@ -407,27 +501,45 @@
 
       function compareMap(group, figmaMap, publishedMap) {
         const issues = [];
+        const figmaByCanonical = indexByCanonicalPath(figmaMap);
+        const publishedByCanonical = indexByCanonicalPath(publishedMap);
 
-        for (const [token, figmaValue] of Object.entries(figmaMap)) {
-          if (ignoreFigmaOnly(token)) continue;
-          const publishedToken = publishedMap[token];
+        for (const [canonicalToken, figmaToken] of figmaByCanonical.entries()) {
+          if (isFigmaOnlyToken(canonicalToken)) continue;
+          const repoToken = publishedByCanonical.get(canonicalToken);
+          const figmaValue = figmaMap[figmaToken];
+          const publishedToken = repoToken ? publishedMap[repoToken] : null;
+          const displayToken = repoToken || figmaToken;
+
           if (!publishedToken) {
-            issues.push({ kind: "NEW_IN_FIGMA", group, token, figma: figmaValue });
+            issues.push({ kind: "NEW_IN_FIGMA", group, token: displayToken, figma: figmaValue });
             continue;
           }
-          if (!valuesEquivalent(token, figmaValue, publishedToken.value)) {
-            issues.push({ kind: "VALUE_DRIFT", group, token, figma: figmaValue, repo: publishedToken.value });
+          if (!valuesEquivalent(canonicalToken, figmaValue, publishedToken.value)) {
+            issues.push({ kind: "VALUE_DRIFT", group, token: displayToken, figma: figmaValue, repo: publishedToken.value });
           }
         }
 
-        for (const token of Object.keys(publishedMap)) {
-          if (ignoreJsonOnly(token)) continue;
-          if (!(token in figmaMap)) {
-            issues.push({ kind: "MISSING_IN_FIGMA", group, token, repo: publishedMap[token].value });
+        for (const [canonicalToken, repoToken] of publishedByCanonical.entries()) {
+          if (isJsonOnlyToken(canonicalToken)) continue;
+          if (!figmaByCanonical.has(canonicalToken)) {
+            issues.push({ kind: "MISSING_IN_FIGMA", group, token: repoToken, repo: publishedMap[repoToken].value });
           }
         }
 
         return issues;
+      }
+
+      function indexByCanonicalPath(map) {
+        const indexed = new Map();
+        for (const token of Object.keys(map)) {
+          indexed.set(canonicalPathKey(token), token);
+        }
+        return indexed;
+      }
+
+      function canonicalPathKey(token) {
+        return token.replace(/-/g, ".");
       }
 
       function resolveSnapshotValue(value, variables, collections) {
@@ -467,14 +579,60 @@
 
       function valuesEquivalent(token, figmaValue, repoValue) {
         if (ignoreCssRepresentationDiff(token)) return true;
-        return normalizeValue(figmaValue) === normalizeValue(repoValue);
+        if (isDivergentAliasByDesign(figmaValue, repoValue)) return true;
+        return normalizeValue(token, figmaValue) === normalizeValue(token, repoValue);
       }
 
-      function normalizeValue(value) {
+      function normalizeValue(token, value) {
         if (value == null) return "";
+        if (isPxLikeToken(token)) {
+          const px = toPx(value);
+          if (px != null) return `px:${Number(px.toFixed(4))}`;
+        }
         if (typeof value === "number") return `number:${Number(value.toFixed(4))}`;
         if (typeof value === "boolean") return `boolean:${value}`;
-        return String(value).trim().replace(/\s+/g, "").toLowerCase();
+        return String(value)
+          .trim()
+          .replace(/\s+/g, "")
+          .toLowerCase()
+          .replace(/-?\d+\.\d+/g, (match) => String(Number(Number(match).toFixed(4))))
+          .replace(/\{([^}]+)\}/g, (_, inner) => `{${inner.replace(/-/g, ".")}}`);
+      }
+
+      function isPxLikeToken(token) {
+        return [
+          /^foundation\.dimension\./,
+          /^foundation\.radius\./,
+          /^foundation\.border\.width\./,
+          /^foundation\.typography\.font\.size\./,
+          /^semantic\.space\./,
+          /^semantic\.radius\./,
+          /^semantic\.border\.width\./,
+          /^semantic\.(body|control)\.font\.size\./,
+          /^semantic\.size\./,
+        ].some((pattern) => pattern.test(token));
+      }
+
+      function toPx(value) {
+        if (typeof value === "number") return value;
+        const raw = String(value).trim().toLowerCase();
+        const rem = raw.match(/^(-?[\d.]+)rem$/);
+        if (rem) return Number(rem[1]) * 16;
+        const px = raw.match(/^(-?[\d.]+)px$/);
+        if (px) return Number(px[1]);
+        if (/^-?[\d.]+$/.test(raw)) return Number(raw);
+        return null;
+      }
+
+      function isDivergentAliasByDesign(figmaValue, repoValue) {
+        if (typeof figmaValue !== "string" || typeof repoValue !== "string") return false;
+        const figmaLineHeight = /^\{foundation\.typography\.font\.line-height\./.test(figmaValue);
+        const repoLineHeight = /^\{foundation\.typography\.line\.height\./.test(repoValue);
+        if (figmaLineHeight && repoLineHeight) return true;
+
+        const figmaLetterSpacing = /^\{foundation\.typography\.font\.letter-spacing\./.test(figmaValue);
+        const repoLetterSpacing = /^\{foundation\.typography\.letter\.spacing\./.test(repoValue);
+        return figmaLetterSpacing && repoLetterSpacing;
       }
 
       function ignoreCssRepresentationDiff(token) {
@@ -489,12 +647,25 @@
         ].includes(token);
       }
 
-      function ignoreFigmaOnly(token) {
-        return /^foundation\.typography\.font\.(letter-spacing|line-height)\./.test(token);
+      function isFigmaOnlyToken(token) {
+        return /^foundation\.typography\.font\.(letter\.spacing|line\.height)\./.test(token);
       }
 
-      function ignoreJsonOnly(token) {
-        return /^(foundation|semantic)\.(motion|z|shadow)\./.test(token);
+      function isJsonOnlyToken(token) {
+        return [
+          /^foundation\.typography\.line\.height\./,
+          /^foundation\.typography\.letter\.spacing\./,
+          /^foundation\.typography\.font\.size\.11$/,
+          /^foundation\.duration\./,
+          /^foundation\.ease\./,
+          /^foundation\.shadow\./,
+          /^foundation\.z\./,
+          /^semantic\.motion\./,
+          /^semantic\.z\./,
+          /^semantic\.shadow\./,
+          /^semantic\.typography\.body\.font\.size\.2xs$/,
+          /^semantic\.typography\.body\.line\.height\.2xs$/,
+        ].some((pattern) => pattern.test(token));
       }
 
       function formatIssue(issue) {

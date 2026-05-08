@@ -48,7 +48,7 @@ async function exportSnapshot() {
   const snapshot = {
     generatedAt: new Date().toISOString(),
     generator: {
-      name: "DS Core Snapshot Exporter",
+      name: "Design System Snapshot Exporter",
       version: "0.1.0",
       source: "figma-plugin/snapshot-exporter",
     },
