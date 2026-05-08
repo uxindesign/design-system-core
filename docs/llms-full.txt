@@ -245,6 +245,8 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 
 ### Adicionado
 
+- **Auditoria estrutural da documentação** (`audit/docs-structure-audit.md`). Classifica páginas por tipo (Foundation, Component, Process, System), identifica inconsistências editoriais e define uma sequência recomendada de PRs para normalização.
+
 - **ADR-018 — Renomear `content.{default,secondary,tertiary}` para `content.{strong,default,subtle}`.** Único conjunto de tokens do DS com naming ordinal foi alinhado ao vocabulário descritivo das demais categorias (`border.{strong,default,subtle}`, `surface.*`, `background.*`). Strict rename — valores 100% preservados, só nomes mudaram. Migração: keys em `tokens/semantic/{light,dark}.json`, entries em `tokens/registry.json`, `--ds-content-*` em CSS de componente/base e em HTMLs/MDs de docs (sed-replace via 3 passos com placeholder pra evitar clash), Variables `content/{default,secondary,tertiary}` na collection Semantic do Figma via `use_figma` (bindings auto-seguem por ID). `npm run build:tokens` + `build:api` + `sync:docs` regeneram derivados. Decisão tomada durante #4 P1-1 da auditoria Figma↔Repo, quando `content/secondary` apareceu como text token do Badge Neutral Subtle.
 
 - **ADR-017 — Componentes CSS-only (sem equivalência no Figma).** Análogo de ADR-016 para componentes. Codifica que **Form Field** (`css/components/form-field.css`) existe só no CSS porque HTML não tem elemento "form control" composto — precisamos compor `<label>` + control + helper + error com IDs e ARIA. Cada componente Figma de form (Input Text, Select, Textarea, Checkbox, Radio, Toggle) já carrega Label + Required + Helper + Description inline em cada variant; authorar Form Field no Figma criaria duplicação. Auditorias Figma↔Repo devem ignorar componentes marcados `cssOnly: true` ao reportar "faltando no Figma". Propagado para: `scripts/sync-docs.mjs` (`knownComponents` ganha flag `cssOnly`; tabela de inventário mostra "— (CSS-only, ADR-017)" em vez de status Figma; nota explicativa adicionada), `docs/component-inventory.md` (regerada), `css/components/form-field.css` (comentário no topo), `AGENTS.md` (seção dedicada após source of truth de tokens), `audit/audit-report.md` (P0-3 reclassificado).
@@ -959,7 +961,7 @@ Consolidação da documentação como fonte única de verdade. Plano em seis fas
 
 # Índice de ADRs — Design System Core
 
-> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-05-07. Não editar manualmente.
+> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-05-08. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
 
 18 decisões registradas.
@@ -1427,7 +1429,7 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 
 # Inventário de componentes — Design System Core
 
-> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-05-07. Não editar manualmente.
+> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-05-08. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
 > Versão atual: **1.0.0-beta.4**
 
@@ -8449,7 +8451,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 # Token schema — Design System Core
 
-> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-05-07. Não editar manualmente.
+> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-05-08. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
 > Versão atual: **1.0.0-beta.4**
 
