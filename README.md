@@ -23,12 +23,13 @@ Depois serve o diretório estático (`python3 -m http.server` ou equivalente).
 
 ## Documentação completa
 
-Toda a documentação vive em **[uxindesign.github.io/design-system-core](https://uxindesign.github.io/design-system-core/)**. Lá estão: 19 componentes com preview ao vivo, 10 foundations, guias de tema e acessibilidade, 15 ADRs navegáveis, inventário de tokens, e consumo por IA em `/docs/llms.txt`.
+Toda a documentação vive em **[uxindesign.github.io/design-system-core](https://uxindesign.github.io/design-system-core/)**. Lá estão: 19 componentes com preview ao vivo, 10 foundations, guias de tema, acessibilidade e documentação, 18 ADRs navegáveis, inventário de tokens, e consumo por IA em `/docs/llms.txt`.
 
 Links rápidos:
 
 - [Getting Started](https://uxindesign.github.io/design-system-core/index.html)
 - [Token Architecture](https://uxindesign.github.io/design-system-core/docs/token-architecture.html)
+- [Documentation Guidelines](https://uxindesign.github.io/design-system-core/docs/documentation-guidelines.html)
 - [Component Inventory](./docs/component-inventory.md)
 - [Decisões (ADRs)](./docs/decisions/)
 - [Changelog](./CHANGELOG.md)

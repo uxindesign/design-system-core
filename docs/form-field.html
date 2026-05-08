@@ -53,6 +53,10 @@
       <div class="ds-callout__title"><span data-lang="pt">Não use Form Field quando</span><span data-lang="en">Don't use Form Field when</span></div>
       <span data-lang="pt">O controle não precisa de label visível (ex: search input no header com ícone, com <code>aria-label</code> direto no controle). Mesmo assim, considere usar Form Field com <code>--no-label</code> pra manter consistência de espaçamento.</span><span data-lang="en">The control doesn't need a visible label (e.g., search input in header with icon, using <code>aria-label</code> directly). Even so, consider Form Field with <code>--no-label</code> to keep spacing consistent.</span>
     </div>
+    <div class="ds-callout ds-callout--info">
+      <div class="ds-callout__title">CSS-only (ADR-017)</div>
+      <span data-lang="pt">Form Field não tem equivalente Figma dedicado. Ele existe para compor markup HTML/ARIA; Input, Select, Textarea, Checkbox, Radio e Toggle já carregam seus elementos de label/helper nas variants Figma.</span><span data-lang="en">Form Field has no dedicated Figma equivalent. It exists to compose HTML/ARIA markup; Input, Select, Textarea, Checkbox, Radio, and Toggle already include label/helper elements in their Figma variants.</span>
+    </div>
   </div>
 
   <!-- ANATOMY -->
@@ -212,6 +216,21 @@
     </div>
   </div>
 
+  <!-- BEST PRACTICES -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title"><span data-lang="pt">Boas práticas</span><span data-lang="en">Best practices</span></h2>
+    <div class="ds-dodont">
+      <div class="ds-dodont__item ds-dodont__item--do">
+        <div class="ds-dodont__label">Do</div>
+        <div class="ds-dodont__desc"><span data-lang="pt">Use <code>label[for]</code>, <code>id</code> e <code>aria-describedby</code> para conectar visual e semântica.</span><span data-lang="en">Use <code>label[for]</code>, <code>id</code>, and <code>aria-describedby</code> to connect visuals and semantics.</span></div>
+      </div>
+      <div class="ds-dodont__item ds-dodont__item--dont">
+        <div class="ds-dodont__label">Don't</div>
+        <div class="ds-dodont__desc"><span data-lang="pt">Não replique Form Field como componente Figma separado; isso duplicaria elementos já presentes nas variants dos controles.</span><span data-lang="en">Do not replicate Form Field as a separate Figma component; that would duplicate elements already present in control variants.</span></div>
+      </div>
+    </div>
+  </div>
+
   <!-- ACCESSIBILITY CHECKLIST -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Checklist de acessibilidade</span><span data-lang="en">Accessibility checklist</span></h2>
@@ -225,11 +244,27 @@
     </ul>
   </div>
 
+  <!-- TOKEN MAPPING -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title"><span data-lang="pt">Mapeamento de tokens</span><span data-lang="en">Token mapping</span></h2>
+    <table class="ds-token-table">
+      <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token (semantic)</th><th><span data-lang="pt">Variável CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
+      <tbody>
+        <tr><td>gap</td><td><code>semantic.space.xs</code></td><td><code>--ds-space-xs</code></td></tr>
+        <tr><td>label color</td><td><code>semantic.content.strong</code></td><td><code>--ds-content-strong</code></td></tr>
+        <tr><td>helper color</td><td><code>semantic.content.default</code></td><td><code>--ds-content-default</code></td></tr>
+        <tr><td>required/error color</td><td><code>semantic.feedback.error.content.default</code></td><td><code>--ds-feedback-error-content-default</code></td></tr>
+        <tr><td>label typography</td><td><code>semantic.body.*.sm</code></td><td><code>--ds-body-font-size-sm</code> / <code>--ds-body-line-height-sm</code></td></tr>
+        <tr><td>helper typography</td><td><code>semantic.body.*.xs</code></td><td><code>--ds-body-font-size-xs</code> / <code>--ds-body-line-height-md</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
   <!-- API REFERENCE -->
   <div class="ds-subsection">
-    <h2 class="ds-subsection__title"><span data-lang="pt">Classes</span><span data-lang="en">Classes</span></h2>
+    <h2 class="ds-subsection__title"><span data-lang="pt">Classes CSS</span><span data-lang="en">CSS classes</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th>Class</th><th><span data-lang="pt">Uso</span><span data-lang="en">Usage</span></th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Classe</span><span data-lang="en">Class</span></th><th><span data-lang="pt">Uso</span><span data-lang="en">Usage</span></th></tr></thead>
       <tbody>
         <tr><td><code>ds-field</code></td><td><span data-lang="pt">Wrapper. Stack vertical com gap consistente.</span><span data-lang="en">Wrapper. Vertical stack with consistent gap.</span></td></tr>
         <tr><td><code>ds-field__label-row</code></td><td><span data-lang="pt">Linha do label + required (horizontal).</span><span data-lang="en">Label + required row (horizontal).</span></td></tr>
@@ -242,6 +277,19 @@
         <tr><td><code>ds-field--no-helper</code></td><td><span data-lang="pt">Modificador: esconde helper.</span><span data-lang="en">Modifier: hides helper.</span></td></tr>
       </tbody>
     </table>
+  </div>
+
+  <!-- RELATED -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title"><span data-lang="pt">Relacionados</span><span data-lang="en">Related</span></h2>
+    <div class="ds-related">
+      <a class="ds-related__link" href="input.html">Input</a>
+      <a class="ds-related__link" href="select.html">Select</a>
+      <a class="ds-related__link" href="textarea.html">Textarea</a>
+      <a class="ds-related__link" href="checkbox.html">Checkbox</a>
+      <a class="ds-related__link" href="radio.html">Radio</a>
+      <a class="ds-related__link" href="toggle.html">Toggle</a>
+    </div>
   </div>
 
 </main>

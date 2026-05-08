@@ -10,6 +10,18 @@ A documentação tem boa cobertura funcional, mas ainda não tem uma convenção
 
 O problema não é que todas as páginas sejam diferentes. Foundations, Components, Process e System pages têm finalidades diferentes e devem ter estruturas diferentes. O problema é que essa diferença ainda não está documentada como contrato editorial.
 
+## Status de execução (2026-05-08)
+
+| Achado | Status | Evidência |
+|---|---|---|
+| `brand-principles` é placeholder público | Pendente por decisão | Fora deste ajuste a pedido do usuário. |
+| Contrato editorial versionado | Concluído | `docs/documentation-guidelines.md` + página publicada em `docs/documentation-guidelines.html`. |
+| Labels de tabelas variam | Concluído | Labels normalizados para `Variável CSS`, `Descrição`, `Critério WCAG`, `Função` e `Referência`. |
+| Component pages com exceções não declaradas | Concluído | `Avatar`, `Divider`, `Skeleton` e `Spinner` ganharam anatomia curta; `Form Field` declara o contrato CSS-only e suas relações. |
+| Entry points com metadados stale | Concluído | `README.md` atualizado para 18 ADRs e link para o guia editorial. |
+| Generated vs authored pouco óbvio | Concluído | Guia editorial documenta páginas authored/generated e comandos de regeneração. |
+| Nome do produto | Concluído | Guia editorial fixa `Design System Core` como nome do projeto; `Design System` fica restrito a label visual curta do shell. |
+
 ## Metodologia
 
 Leituras e verificações feitas nesta sessão:
@@ -303,4 +315,3 @@ Escopo:
 - Carbon Design System: componentes separam Usage, Style, Code e Accessibility; specs visuais detalham element/property/token.
 
 Esses benchmarks não devem ser copiados literalmente. Eles sustentam a separação editorial entre Foundations, Components e Process/System pages.
-

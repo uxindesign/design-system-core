@@ -60,7 +60,22 @@
   </div>
 
   <!-- ============================================================
-       3. VARIANTS (live previews)
+       3. ANATOMY
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title"><span data-lang="pt">Anatomia</span><span data-lang="en">Anatomy</span></h2>
+    <div class="ds-anatomy-legend">
+      <span data-lang="pt"><strong>1</strong> Shape (<code>.ds-skeleton</code>) — bloco visual sem conteúdo semântico próprio.<br>
+      <strong>2</strong> Variante de forma — text, circle ou rectangle.<br>
+      <strong>3</strong> Container de loading — aplica <code>aria-busy="true"</code> no conteúdo que está sendo carregado; shapes individuais podem usar <code>aria-hidden="true"</code>.</span>
+      <span data-lang="en"><strong>1</strong> Shape (<code>.ds-skeleton</code>) — visual block with no semantic content of its own.<br>
+      <strong>2</strong> Shape variant — text, circle, or rectangle.<br>
+      <strong>3</strong> Loading container — apply <code>aria-busy="true"</code> to the content being loaded; individual shapes can use <code>aria-hidden="true"</code>.</span>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       4. VARIANTS (live previews)
        ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Skeleton de texto</span><span data-lang="en">Text skeleton</span></h2>
@@ -267,7 +282,7 @@
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Mapeamento de tokens</span><span data-lang="en">Token mapping</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token (semantic)</th><th><span data-lang="pt">Variavel CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token (semantic)</th><th><span data-lang="pt">Variável CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
       <tbody>
         <tr><td><span data-lang="pt">fundo</span><span data-lang="en">background</span></td><td><code>semantic.background.disabled</code></td><td><code>--ds-background-disabled</code></td></tr>
         <tr><td><span data-lang="pt">animação (pulso de opacidade)</span><span data-lang="en">animation (opacity pulse)</span></td><td><span data-lang="pt">valores literais (sem token)</span><span data-lang="en">literal values (no token)</span></td><td><span data-lang="pt"><code>opacity: 1</code> → <code>0.4</code> → <code>1</code> (keyframe @ds-pulse)</span><span data-lang="en"><code>opacity: 1</code> → <code>0.4</code> → <code>1</code> (keyframe @ds-pulse)</span></td></tr>
@@ -283,7 +298,7 @@
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Classes CSS</span><span data-lang="en">CSS classes</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th><span data-lang="pt">Classe</span><span data-lang="en">Class</span></th><th><span data-lang="pt">Descricao</span><span data-lang="en">Description</span></th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Classe</span><span data-lang="en">Class</span></th><th><span data-lang="pt">Descrição</span><span data-lang="en">Description</span></th></tr></thead>
       <tbody>
         <tr><td><code>ds-skeleton</code></td><td><span data-lang="pt">Classe base do skeleton com animação de pulso</span><span data-lang="en">Base skeleton class with pulse animation</span></td></tr>
         <tr><td><code>ds-skeleton--text</code></td><td><span data-lang="pt">Placeholder de linha de texto (border-radius pequeno)</span><span data-lang="en">Text line placeholder (small border-radius)</span></td></tr>
@@ -299,7 +314,7 @@
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Accessibility</span><span data-lang="en">Accessibility</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th><span data-lang="pt">Criterio WCAG</span><span data-lang="en">WCAG criterion</span></th><th><span data-lang="pt">Requisito</span><span data-lang="en">Requirement</span></th><th>Status</th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Critério WCAG</span><span data-lang="en">WCAG criterion</span></th><th><span data-lang="pt">Requisito</span><span data-lang="en">Requirement</span></th><th>Status</th></tr></thead>
       <tbody>
         <tr><td>4.1.2 Name, Role, Value (A)</td><td><span data-lang="pt"><code>aria-busy="true"</code> no container de carregamento + <code>aria-label</code> descrevendo o que esta carregando</span><span data-lang="en"><code>aria-busy="true"</code> on the loading container + <code>aria-label</code> describing what is loading</span></td><td>&#10003;</td></tr>
         <tr><td>1.3.1 Info and Relationships (A)</td><td><span data-lang="pt"><code>aria-hidden="true"</code> em elementos skeleton individuais (são decorativos)</span><span data-lang="en"><code>aria-hidden="true"</code> on individual skeleton elements (they are decorative)</span></td><td>&#10003;</td></tr>
