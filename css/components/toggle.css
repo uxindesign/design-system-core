@@ -2,59 +2,34 @@
    COMPONENT: Toggle / Switch
    ============================================================ */
 
-/* Item wrapper — agrupa toggle label + description + helper text
-   verticalmente. Use quando precisar de Description/Helper opt-in
-   (matches Figma "Show Description"/"Show Helper Text" booleans). */
-.ds-toggle-item {
-  display: flex;
-  flex-direction: column;
-  gap: var(--ds-space-2xs);
-}
+/**
+ * LÓGICA DE ALINHAMENTO (Figma spec):
+ * O Toggle segue o padrão "Content Frame". O interruptor (track) fica à esquerda
+ * e o conteúdo (Label + Desc + Helper) fica à direita em uma coluna flex.
+ * Alinhamento é sempre TOP (flex-start) para suportar textos multilinha.
+ */
 
-/* Description — mesmo size do label, regular weight (Figma) */
-.ds-toggle-description {
-  font-size: var(--ds-body-font-size-sm);
-  font-weight: var(--ds-body-font-weight-regular);
-  line-height: var(--ds-body-line-height-sm);
-  color: var(--ds-content-strong);
-  /* indent passa o track do toggle (md default = size-xl) + gap */
-  padding-left: calc(var(--ds-size-xl) + var(--ds-space-sm) + var(--ds-space-xs));
-}
-
-/* Helper — menor + mais sutil que description (Figma) */
-.ds-toggle-helper {
-  font-size: var(--ds-body-font-size-xs);
-  font-weight: var(--ds-body-font-weight-regular);
-  line-height: var(--ds-body-line-height-xs);
-  color: var(--ds-content-default);
-  padding-left: calc(var(--ds-size-xl) + var(--ds-space-sm) + var(--ds-space-xs));
-}
-
-/* Toggle label wrapper */
 .ds-toggle-label {
   display: inline-flex;
-  align-items: center;
+  align-items: flex-start; /* Figma: items-start */
   gap: var(--ds-space-sm);
   cursor: pointer;
-  padding: var(--ds-space-xs) var(--ds-space-xs);
+  padding: var(--ds-space-xs);
   border-radius: var(--ds-radius-sm);
-  min-height: var(--ds-size-2xl);
-  font-size: var(--ds-body-font-size-sm);
   color: var(--ds-content-strong);
   transition: background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
+  user-select: none;
 }
 
-.ds-toggle-label:hover {
+.ds-toggle-label:hover:not(:has(.ds-toggle:disabled)) {
   background-color: var(--ds-overlay-subtle);
 }
 
-/* Hidden native checkbox — DEFAULT = Medium (Figma: 40×22 track, 16×16 thumb) */
+/* Track — Hidden native checkbox styled */
 .ds-toggle {
   appearance: none;
   -webkit-appearance: none;
   position: relative;
-  width: var(--ds-size-xl); /* 40px */
-  height: 22px; /* literal — Figma usa 22px sem variable bindada */
   background-color: var(--ds-surface-default);
   border: var(--ds-border-width-default) solid var(--ds-border-control-default);
   border-radius: var(--ds-radius-full);
@@ -62,28 +37,38 @@
   flex-shrink: 0;
   transition: background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
               border-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
+
+  /* Variáveis internas para geometria baseada no Figma Md (Default) */
+  --toggle-width: var(--ds-size-xl); /* 40px */
+  --toggle-height: 22px; /* Literal (não há token na grade 4px) */
+  --thumb-size: var(--ds-size-xs);   /* 16px */
+  --thumb-gap: 2px;                  /* Figma Md gap interno */
+
+  width: var(--toggle-width);
+  height: var(--toggle-height);
 }
 
-/* Thumb (md default 16×16). Figma: gap 3px em todos os lados */
+/* Thumb */
 .ds-toggle::after {
   content: '';
   position: absolute;
-  top: 3px;
-  left: 3px;
-  width: var(--ds-size-xs); /* 16px */
-  height: var(--ds-size-xs);
+  top: var(--thumb-gap);
+  left: var(--thumb-gap);
+  width: var(--thumb-size);
+  height: var(--thumb-size);
   border-radius: var(--ds-radius-full);
-  background-color: var(--ds-content-default);
+  background-color: var(--ds-content-default); /* ADR-018: content-secondary -> content-default */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12); /* Figma shadow */
   transition: transform var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
               background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
 }
 
-/* Hover */
+/* Hover State */
 .ds-toggle:hover:not(:disabled) {
   border-color: var(--ds-primary-background-default);
 }
 
-/* Checked (On) */
+/* Checked (On) State */
 .ds-toggle:checked {
   background-color: var(--ds-primary-background-default);
   border-color: var(--ds-primary-background-default);
@@ -91,16 +76,17 @@
 
 .ds-toggle:checked::after {
   background-color: var(--ds-primary-content-default);
-  transform: translateX(18px); /* md: track 40 - thumb 16 - gap 6 (3+3) = 18 */
+  /* Cálculo dinâmico: largura - thumb - (2 * gap) */
+  transform: translateX(calc(var(--toggle-width) - var(--thumb-size) - (var(--thumb-gap) * 2)));
 }
 
-/* Focus */
+/* Focus State */
 .ds-toggle:focus-visible {
   outline: var(--ds-border-width-focus) solid var(--ds-border-focus);
   outline-offset: var(--ds-border-width-focus);
 }
 
-/* Disabled */
+/* Disabled State */
 .ds-toggle:disabled {
   background-color: var(--ds-background-disabled);
   border-color: var(--ds-border-control-disabled);
@@ -116,93 +102,60 @@
   opacity: var(--ds-opacity-disabled);
 }
 
-.ds-toggle-label:has(.ds-toggle:disabled):hover {
-  background-color: transparent;
-}
-
 /* ---------------------------------------------------------
-   Sizes
+   Sizes (Figma Specs)
    --------------------------------------------------------- */
 
-/* Small (Figma: 32×18 track, 12×12 thumb) */
+/* Small (32×18 track, 12×12 thumb, 2px gap) */
 .ds-toggle--sm {
-  width: var(--ds-size-lg); /* 32px */
-  height: 18px; /* literal — Figma usa 18px sem variable bindada */
+  --toggle-width: var(--ds-size-lg); /* 32px */
+  --toggle-height: 18px;
+  --thumb-size: 12px;
+  --thumb-gap: 2px;
 }
 
-.ds-toggle--sm::after {
-  width: 12px;
-  height: 12px;
-}
-
-.ds-toggle--sm:checked::after {
-  transform: translateX(14px); /* sm: track 32 - thumb 12 - gap 6 = 14 */
-}
-
-/* Large (Figma: 48×26 track, 20×20 thumb) */
+/* Large (48×26 track, 20×20 thumb, 2px gap) */
 .ds-toggle--lg {
-  width: var(--ds-size-2xl); /* 48px */
-  height: 26px; /* literal — Figma usa 26px sem variable bindada */
-}
-
-.ds-toggle--lg::after {
-  width: var(--ds-size-sm); /* 20px */
-  height: var(--ds-size-sm);
-}
-
-.ds-toggle--lg:checked::after {
-  transform: translateX(22px); /* lg: track 48 - thumb 20 - gap 6 = 22 */
+  --toggle-width: var(--ds-size-2xl); /* 48px */
+  --toggle-height: 26px;
+  --thumb-size: var(--ds-size-sm);    /* 20px */
+  --thumb-gap: 2px;
 }
 
 /* ---------------------------------------------------------
-   Field anatomy — Content frame, Description, Helper Text
+   Content Frame Anatomy
    --------------------------------------------------------- */
 
-/*
-  HTML structure:
-  <label class="ds-toggle-label">
-    <input type="checkbox" role="switch" class="ds-toggle">
-    <span class="ds-toggle__content">
-      <span class="ds-toggle__label">Rótulo</span>
-      <span class="ds-toggle__description">Descrição</span>
-      <span class="ds-toggle__helper">Texto auxiliar</span>
-    </span>
-  </label>
-
-  Accessibility:
-  - Label hidden + Description visible → aria-labelledby on <input> pointing to .ds-toggle__description id
-  - Helper Text → aria-describedby on <input> pointing to .ds-toggle__helper id
-*/
-
-/* Vertical stack: Label → Description → Helper Text */
 .ds-toggle__content {
   display: flex;
   flex-direction: column;
   gap: var(--ds-space-xs);
   min-width: 0;
+  /* Alinha baseline do label com o topo do track */
+  padding-top: 1px; 
 }
 
-/* Label text (label/md: 14px medium / 20px) */
+/* Label text (label/md: 14px bold) */
 .ds-toggle__label {
   font-size: var(--ds-body-font-size-sm);
-  font-weight: var(--ds-body-font-weight-medium);
+  font-weight: var(--ds-body-font-weight-bold);
   line-height: var(--ds-body-line-height-sm);
   color: var(--ds-content-strong);
 }
 
-/* Description (body/sm: 14px regular / 22px, multiline) */
+/* Description (body/sm: 14px regular) */
 .ds-toggle__description {
   font-size: var(--ds-body-font-size-sm);
   font-weight: var(--ds-body-font-weight-regular);
-  line-height: var(--ds-body-line-height-md);
+  line-height: var(--ds-body-line-height-sm);
   color: var(--ds-content-strong);
   white-space: pre-wrap;
 }
 
-/* Helper text (caption/sm: 11px regular / 18px) */
+/* Helper text (caption/sm: 11px regular) */
 .ds-toggle__helper {
   font-size: var(--ds-body-font-size-xs);
-  line-height: var(--ds-body-line-height-md);
+  line-height: var(--ds-body-line-height-xs);
   color: var(--ds-content-default);
 }
 
