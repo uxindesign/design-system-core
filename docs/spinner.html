@@ -60,7 +60,22 @@
   </div>
 
   <!-- ============================================================
-       3. VARIANTS (live previews)
+       3. ANATOMY
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title"><span data-lang="pt">Anatomia</span><span data-lang="en">Anatomy</span></h2>
+    <div class="ds-anatomy-legend">
+      <span data-lang="pt"><strong>1</strong> Container (<code>.ds-spinner</code>) — elemento inline flex com tamanho tokenizado.<br>
+      <strong>2</strong> Ring — borda circular animada por rotação linear.<br>
+      <strong>3</strong> Size/style modifiers — <code>--sm</code>, <code>--md</code>, <code>--lg</code> e <code>--on-color</code>.</span>
+      <span data-lang="en"><strong>1</strong> Container (<code>.ds-spinner</code>) — inline-flex element with tokenized size.<br>
+      <strong>2</strong> Ring — circular border animated with linear rotation.<br>
+      <strong>3</strong> Size/style modifiers — <code>--sm</code>, <code>--md</code>, <code>--lg</code>, and <code>--on-color</code>.</span>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       4. VARIANTS (live previews)
        ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Tamanhos</span><span data-lang="en">Sizes</span></h2>
@@ -218,7 +233,7 @@
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Mapeamento de tokens</span><span data-lang="en">Token mapping</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token (semantic)</th><th><span data-lang="pt">Variavel CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token (semantic)</th><th><span data-lang="pt">Variável CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
       <tbody>
         <tr><td><span data-lang="pt">indicador default</span><span data-lang="en">default indicator</span></td><td><code>semantic.border.brand</code></td><td><code>--ds-border-brand</code></td></tr>
         <tr><td><span data-lang="pt">trilha default</span><span data-lang="en">default track</span></td><td><code>semantic.border.subtle</code></td><td><code>--ds-border-subtle</code></td></tr>
@@ -237,7 +252,7 @@
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Classes CSS</span><span data-lang="en">CSS classes</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th><span data-lang="pt">Classe</span><span data-lang="en">Class</span></th><th><span data-lang="pt">Descricao</span><span data-lang="en">Description</span></th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Classe</span><span data-lang="en">Class</span></th><th><span data-lang="pt">Descrição</span><span data-lang="en">Description</span></th></tr></thead>
       <tbody>
         <tr><td><code>ds-spinner</code></td><td><span data-lang="pt">Classe base do spinner</span><span data-lang="en">Base spinner class</span></td></tr>
         <tr><td><code>ds-spinner--sm</code></td><td><span data-lang="pt">Tamanho pequeno (<code>--ds-size-xs</code>)</span><span data-lang="en">Small size (<code>--ds-size-xs</code>)</span></td></tr>
@@ -254,7 +269,7 @@
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Accessibility</span><span data-lang="en">Accessibility</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th><span data-lang="pt">Criterio WCAG</span><span data-lang="en">WCAG criterion</span></th><th><span data-lang="pt">Requisito</span><span data-lang="en">Requirement</span></th><th>Status</th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Critério WCAG</span><span data-lang="en">WCAG criterion</span></th><th><span data-lang="pt">Requisito</span><span data-lang="en">Requirement</span></th><th>Status</th></tr></thead>
       <tbody>
         <tr><td>4.1.2 Name, Role, Value (A)</td><td><span data-lang="pt"><code>role="status"</code> + <code>aria-label="Loading"</code> em cada spinner</span><span data-lang="en"><code>role="status"</code> + <code>aria-label="Loading"</code> on every spinner</span></td><td>&#10003;</td></tr>
         <tr><td>2.3.1 Three Flashes (A)</td><td><span data-lang="pt">A animação e uma rotacao continua, não piscante</span><span data-lang="en">Animation is a continuous rotation, not flashing</span></td><td>&#10003;</td></tr>

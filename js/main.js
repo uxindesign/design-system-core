@@ -68,7 +68,8 @@
       items: [
         { label: 'Theming',        path: 'docs/theming.html' },
         { label: 'Accessibility',  path: 'docs/accessibility.html' },
-        { label: 'Control Sizing', path: 'docs/control-sizing.html' }
+        { label: 'Control Sizing', path: 'docs/control-sizing.html' },
+        { label: 'Documentation',  path: 'docs/documentation-guidelines.html' }
       ]
     },
     {

@@ -57,14 +57,18 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
 .ds-site-header__logo {
   width: 32px;
   height: 32px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--_hfg);
   border-radius: var(--ds-radius-8);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--_hfg);
+  color: var(--ds-primary-background-default);
   font-weight: var(--ds-font-weight-bold);
   font-size: var(--ds-font-size-14);
+}
+
+[data-mode="dark"] .ds-site-header__logo {
+  color: var(--ds-color-brand-900);
 }
 
 .ds-site-header__title {
@@ -450,13 +454,20 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
 }
 
 .ds-preview__tab--active {
-  color: var(--ds-primary-background-default);
-  border-bottom-color: var(--ds-primary-background-default);
+  color: var(--ds-link-content-default);
+  border-bottom-color: var(--ds-link-content-default);
 }
 
 .ds-preview__tab:focus-visible {
   outline: var(--ds-border-width-focus) solid var(--ds-border-focus);
   outline-offset: var(--ds-border-width-focus);
+}
+
+/* Markdown-generated pages define this banner inline; keep text contrast
+   accessible from the shared docs stylesheet. */
+body .ds-md-generated-banner,
+body .ds-md-generated-banner code {
+  color: var(--ds-content-strong);
 }
 
 .ds-preview__panel {

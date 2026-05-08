@@ -9,6 +9,7 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 ## [Não publicado]
 
 ### Corrigido
+- **Documentação normalizada conforme auditoria estrutural.** Labels de tabela foram padronizados (`Variável CSS`, `Descrição`, `Critério WCAG`, `Função`, `Referência`), README atualizado para 18 ADRs, páginas simples de componentes ganharam anatomia curta, `Form Field` declara o contrato CSS-only na própria página, e referências stale a `semantic.content.secondary/tertiary` foram migradas para `semantic.content.default/subtle`.
 - **Escala de Elevation/Shadow oficializada em 4 níveis + reset.** Removidos `foundation.shadow.xs` e `foundation.shadow.2xl` por não terem uso nem Effect Style correspondente. `foundation.shadow.{sm,md,lg,xl}` preserva exatamente os parâmetros dos Effect Styles Figma `elevation/1..4`, e `foundation.shadow.none` permanece como reset técnico de `.ds-elevation-0`. A página de Elevation agora documenta o papel de cada nível e o mapping Figma ↔ CSS. Resolve #19 / P3-2 da auditoria Figma↔Repo.
 - **Documentação de Elevation mantém nomes oficiais numéricos.** A tabela de `foundations-elevation.html` agora mostra apenas os níveis `0` a `4` como nomes oficiais, sem rótulos descritivos não existentes no Figma/JSON.
 - **Documentação de Elevation separa conceito de utility CSS.** A tabela principal agora segue o padrão de Foundation (`Nível`, Figma, sombra, surface recomendada e papel), enquanto `.ds-elevation-*` fica documentado como utility auxiliar que aplica apenas `box-shadow`.
@@ -49,6 +50,7 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 
 ### Adicionado
 
+- **Guia editorial de documentação** (`docs/documentation-guidelines.md`). Define templates para páginas Foundation, Component, Process e System, exceções permitidas, labels oficiais de tabela e regra authored vs generated.
 - **Auditoria estrutural da documentação** (`audit/docs-structure-audit.md`). Classifica páginas por tipo (Foundation, Component, Process, System), identifica inconsistências editoriais e define uma sequência recomendada de PRs para normalização.
 
 - **ADR-018 — Renomear `content.{default,secondary,tertiary}` para `content.{strong,default,subtle}`.** Único conjunto de tokens do DS com naming ordinal foi alinhado ao vocabulário descritivo das demais categorias (`border.{strong,default,subtle}`, `surface.*`, `background.*`). Strict rename — valores 100% preservados, só nomes mudaram. Migração: keys em `tokens/semantic/{light,dark}.json`, entries em `tokens/registry.json`, `--ds-content-*` em CSS de componente/base e em HTMLs/MDs de docs (sed-replace via 3 passos com placeholder pra evitar clash), Variables `content/{default,secondary,tertiary}` na collection Semantic do Figma via `use_figma` (bindings auto-seguem por ID). `npm run build:tokens` + `build:api` + `sync:docs` regeneram derivados. Decisão tomada durante #4 P1-1 da auditoria Figma↔Repo, quando `content/secondary` apareceu como text token do Badge Neutral Subtle.
