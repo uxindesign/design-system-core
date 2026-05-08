@@ -6,7 +6,7 @@
     "lightTokens": 177,
     "darkTokens": 177,
     "errors": 8,
-    "warnings": 1
+    "warnings": 2
   },
   "checks": {
     "jsonIntegrity": [],
@@ -27,8 +27,8 @@
     "docTokenDrift": [],
     "jsonVsFigma": {
       "skipped": false,
-      "snapshotAge": "10h",
-      "snapshotFreshness": "fresh",
+      "snapshotAge": "32h",
+      "snapshotFreshness": "stale",
       "snapshotMaxAgeHours": 24,
       "summary": {
         "figmaVariableCount": 392,
@@ -41,6 +41,12 @@
         "BY_DESIGN": 118
       },
       "divergences": [
+        {
+          "level": "warning",
+          "category": "STALE_SNAPSHOT",
+          "token": ".figma-snapshot.json",
+          "message": "snapshot Figma tem 32h (> 24h). Regenerar via use_figma antes de concluir sync/release."
+        },
         {
           "level": "error",
           "category": "DRIFT_FROM_SOURCE",
