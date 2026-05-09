@@ -8,7 +8,7 @@
           "lg": { "$type": "dimension", "$value": "{foundation.dimension.32}" }
         },
         "width": {
-          "sm": { "$type": "dimension", "$value": "{foundation.dimension.32}" },
+          "sm": { "$type": "dimension", "$value": "{foundation.dimension.28}" },
           "md": { "$type": "dimension", "$value": "{foundation.dimension.44}" },
           "lg": { "$type": "dimension", "$value": "{foundation.dimension.56}" }
         },
