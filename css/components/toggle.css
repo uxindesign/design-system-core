@@ -9,7 +9,8 @@
  * Alinhamento é sempre TOP (flex-start) para suportar textos multilinha.
  *
  * ESCALA DIMENSIONAL (ADR-013/015):
- * Sm: 16px, Md: 24px, Lg: 32px (Grade 4px).
+ * Proporção corrigida (aprox 1.8x - 2x):
+ * Sm: 32x16px | Md: 44x24px | Lg: 56x32px (Grade 4px).
  */
 
 .ds-toggle-label {
@@ -41,10 +42,9 @@
   transition: background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
               border-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
 
-  /* Variáveis internas para geometria baseada no Figma Md (Default) */
-  /* Largura é tipicamente ~2x a altura ou fixa por escala size */
+  /* Variáveis internas baseadas nos novos Semantic Control Tokens */
   --toggle-height: var(--ds-control-toggle-height-md); /* 24px */
-  --toggle-width: var(--ds-size-xl);                  /* 40px - Proporção harmônica */
+  --toggle-width: var(--ds-control-toggle-width-md);   /* 44px */
   --thumb-gap: var(--ds-control-toggle-thumb-gap);     /* 2px */
   
   /* Thumb size calculado: Altura total - (2 * gap) - (2 * border) */
@@ -82,7 +82,7 @@
 
 .ds-toggle:checked::after {
   background-color: var(--ds-primary-content-default);
-  /* Cálculo dinâmico e simétrico corrigido */
+  /* Cálculo dinâmico e simétrico com largura corrigida */
   transform: translateX(calc(var(--toggle-width) - var(--thumb-size) - (var(--thumb-gap) * 2) - (var(--ds-border-width-default) * 2)));
 }
 
@@ -112,16 +112,16 @@
    Sizes (Figma Specs - Grid 4px)
    --------------------------------------------------------- */
 
-/* Small (16px height) */
+/* Small (32x16px) */
 .ds-toggle--sm {
   --toggle-height: var(--ds-control-toggle-height-sm); /* 16px */
-  --toggle-width: var(--ds-size-lg);                   /* 32px */
+  --toggle-width: var(--ds-control-toggle-width-sm);   /* 32px */
 }
 
-/* Large (32px height) */
+/* Large (56x32px) */
 .ds-toggle--lg {
   --toggle-height: var(--ds-control-toggle-height-lg); /* 32px */
-  --toggle-width: var(--ds-size-2xl);                  /* 48px */
+  --toggle-width: var(--ds-control-toggle-width-lg);   /* 56px */
 }
 
 /* ---------------------------------------------------------
@@ -133,7 +133,7 @@
   flex-direction: column;
   gap: var(--ds-space-xs);
   min-width: 0;
-  padding-top: 2px; /* Alinhamento visual com o topo do track */
+  padding-top: 2px;
 }
 
 /* Label text (label/md: 14px bold) */

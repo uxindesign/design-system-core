@@ -1,6 +1,6 @@
 # Token schema — Design System Core
 
-> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-05-08. Não editar manualmente.
+> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-05-09. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
 > Versão atual: **1.0.0-beta.4**
 
@@ -12,14 +12,14 @@
 | Formato canônico | JSON (DTCG) em `tokens/` |
 | CSS gerado | Style Dictionary → `css/tokens/generated/` |
 | Pipeline | ✅ index.css importa apenas generated/ |
-| Paridade light/dark | ✅ 177 tokens em ambos os modos |
+| Paridade light/dark | ✅ 180 tokens em ambos os modos |
 
 ## Camadas
 
 | Camada | Tokens | Arquivos |
 |--------|--------|----------|
 | Foundation | **265** | 9 |
-| Semantic | **177 × 2 modos** | light.json + dark.json |
+| Semantic | **180 × 2 modos** | light.json + dark.json |
 
 ## Foundation (265 tokens)
 
@@ -35,7 +35,7 @@
 | `typography.json` | 54 |
 | `z-index.json` | 6 |
 
-## Semantic (177 tokens × 2 modos)
+## Semantic (180 tokens × 2 modos)
 
 Categorias raiz em light.json:
 

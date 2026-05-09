@@ -7,6 +7,11 @@
           "md": { "$type": "dimension", "$value": "{foundation.dimension.24}" },
           "lg": { "$type": "dimension", "$value": "{foundation.dimension.32}" }
         },
+        "width": {
+          "sm": { "$type": "dimension", "$value": "{foundation.dimension.32}" },
+          "md": { "$type": "dimension", "$value": "{foundation.dimension.44}" },
+          "lg": { "$type": "dimension", "$value": "{foundation.dimension.56}" }
+        },
         "thumb": {
           "gap": { "$type": "dimension", "$value": "{foundation.dimension.2}" }
         }

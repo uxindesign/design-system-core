@@ -4633,7 +4633,7 @@
           },
           {
             "file": "css/components/toggle.css",
-            "count": 1
+            "count": 3
           }
         ],
         "tokens": [],
@@ -7450,18 +7450,20 @@
         "css": [
           {
             "file": "css/tokens/generated/theme-dark.css",
-            "count": 3
+            "count": 4
           },
           {
             "file": "css/tokens/generated/theme-light.css",
-            "count": 3
+            "count": 4
           }
         ],
         "tokens": [
           "semantic.control.toggle.height.lg",
+          "semantic.control.toggle.width.sm",
           "semantic.space.section.sm",
           "semantic.size.lg",
           "semantic.control.toggle.height.lg",
+          "semantic.control.toggle.width.sm",
           "semantic.space.section.sm",
           "semantic.size.lg"
         ],
@@ -7529,8 +7531,20 @@
       "contexto": "Use via Semantic `space.*` (gap/padding) ou `size.*` (width/height). Componentes não consomem direto.",
       "decisao": "Step da escala 2/4/6/8/10/12/14/16/20/24/28/32/36/40/44/48 — múltiplos de 2 e 4 cobrem todas as densidades de UI.",
       "usos": {
-        "css": [],
-        "tokens": [],
+        "css": [
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "semantic.control.toggle.width.md",
+          "semantic.control.toggle.width.md"
+        ],
         "figma": []
       }
     },
@@ -7579,8 +7593,20 @@
       "contexto": "Use via Semantic `space.*` (gap/padding) ou `size.*` (width/height). Componentes não consomem direto.",
       "decisao": "Step da escala 2/4/6/8/10/12/14/16/20/24/28/32/36/40/44/48 — múltiplos de 2 e 4 cobrem todas as densidades de UI.",
       "usos": {
-        "css": [],
-        "tokens": [],
+        "css": [
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "semantic.control.toggle.width.lg",
+          "semantic.control.toggle.width.lg"
+        ],
         "figma": []
       }
     },
@@ -8957,10 +8983,6 @@
           {
             "file": "css/components/spinner.css",
             "count": 2
-          },
-          {
-            "file": "css/components/toggle.css",
-            "count": 1
           }
         ],
         "tokens": [],
@@ -9007,10 +9029,6 @@
           {
             "file": "css/components/select.css",
             "count": 5
-          },
-          {
-            "file": "css/components/toggle.css",
-            "count": 1
           }
         ],
         "tokens": [],
@@ -10275,7 +10293,12 @@
       "contexto": "TODO",
       "decisao": "TODO",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -10289,7 +10312,12 @@
       "contexto": "TODO",
       "decisao": "TODO",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -10303,7 +10331,12 @@
       "contexto": "TODO",
       "decisao": "TODO",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -10312,6 +10345,53 @@
       "layer": "semantic",
       "type": "dimension",
       "references": "foundation.dimension.2",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.control.toggle.width.sm": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.dimension.32",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.control.toggle.width.md": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.dimension.44",
+      "sentido": "TODO",
+      "escopo": [],
+      "contexto": "TODO",
+      "decisao": "TODO",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.control.toggle.width.lg": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.dimension.56",
       "sentido": "TODO",
       "escopo": [],
       "contexto": "TODO",
