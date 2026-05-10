@@ -73,11 +73,11 @@
       transition: background var(--ds-duration-fast) var(--ds-ease-default);
     }
     .tpl-nav-item:hover {
-      background: var(--ds-surface-sunken);
+      background: var(--ds-background-subtle);
     }
     .tpl-nav-item--active {
-      background: var(--ds-primary-background-toned);
-      color: var(--ds-primary-content-default);
+      background: var(--ds-toned-background-default);
+      color: var(--ds-toned-content-default);
     }
     .tpl-nav-icon {
       width: var(--ds-size-md);
@@ -87,7 +87,7 @@
     .tpl-content {
       overflow-y: auto;
       padding: var(--ds-space-section-sm) var(--ds-space-2xl);
-      background: var(--ds-surface-sunken);
+      background: var(--ds-background-subtle);
       display: flex;
       flex-direction: column;
       gap: var(--ds-space-2xl);
@@ -260,6 +260,7 @@
             <option>Últimos 7 dias</option>
             <option>Este ano</option>
           </select>
+          <span class="ds-select__arrow"></span>
         </div>
         <button class="ds-btn ds-btn--brand ds-btn--sm">
           Exportar

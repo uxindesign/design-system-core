@@ -40,14 +40,14 @@
     .tpl-signup-brand-logo {
       width: var(--ds-size-3xl);
       height: var(--ds-size-3xl);
-      background: var(--ds-primary-background-strong);
+      background: var(--ds-primary-background-hover);
       border-radius: var(--ds-radius-lg);
       display: flex;
       align-items: center;
       justify-content: center;
     }
     .tpl-signup-testimonial {
-      background: var(--ds-primary-background-strong);
+      background: var(--ds-primary-background-hover);
       border-radius: var(--ds-radius-lg);
       padding: var(--ds-space-xl);
       display: flex;
@@ -107,17 +107,17 @@
       </div>
 
       <div>
-        <h2 class="ds-text-heading-xl" style="color:var(--ds-primary-content-on-strong)">
+        <h2 class="ds-text-heading-xl" style="color:var(--ds-primary-content-default)">
           O design system que escala com seu time
         </h2>
-        <p class="ds-text-body-md" style="color:var(--ds-primary-content-on-strong);opacity:0.8;margin-top:var(--ds-space-md)">
+        <p class="ds-text-body-md" style="color:var(--ds-primary-content-default);opacity:0.8;margin-top:var(--ds-space-md)">
           300+ tokens, 19 componentes, suporte light/dark. Tudo pronto para consumir.
         </p>
       </div>
 
       <!-- Depoimento -->
       <blockquote class="tpl-signup-testimonial">
-        <p class="ds-text-body-md" style="color:var(--ds-primary-content-on-strong)">
+        <p class="ds-text-body-md" style="color:var(--ds-primary-content-default)">
           "Reduziu nosso tempo de prototipagem em 60%. Os tokens fazem o modo escuro funcionar sem nenhum esforço extra."
         </p>
         <footer class="ds-flex ds-items-center ds-gap-md">
@@ -125,8 +125,8 @@
             <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
           </div>
           <div>
-            <p class="ds-text-label-md" style="color:var(--ds-primary-content-on-strong)">Ana Souza</p>
-            <p class="ds-text-body-xs" style="color:var(--ds-primary-content-on-strong);opacity:0.7">Lead Designer, Acme Corp</p>
+            <p class="ds-text-label-md" style="color:var(--ds-primary-content-default)">Ana Souza</p>
+            <p class="ds-text-body-xs" style="color:var(--ds-primary-content-default);opacity:0.7">Lead Designer, Acme Corp</p>
           </div>
         </footer>
       </blockquote>
@@ -234,6 +234,7 @@
                 <option value="product">Product Manager</option>
                 <option value="other">Outro</option>
               </select>
+              <span class="ds-select__arrow"></span>
             </div>
           </div>
         </div>
@@ -260,34 +261,23 @@
         </div>
 
         <!-- Aceite dos termos -->
-        <div class="ds-checkbox-group" role="group" aria-labelledby="signup-terms-label">
-          <span class="ds-sr-only" id="signup-terms-label">Termos e condições</span>
-          <div class="ds-checkbox-item">
+        <div class="ds-checkbox-group" role="group" aria-label="Termos e condições">
+          <label class="ds-checkbox-label">
             <input
               type="checkbox"
               class="ds-checkbox"
-              id="signup-terms"
               required
               aria-required="true"
-              aria-describedby="signup-terms-desc"
             >
-            <label class="ds-checkbox-label" for="signup-terms">
-              Concordo com os
-              <a href="#" class="ds-link">Termos de Uso</a>
-              e a
-              <a href="#" class="ds-link">Política de Privacidade</a>
-            </label>
-          </div>
-          <div class="ds-checkbox-item">
-            <input
-              type="checkbox"
-              class="ds-checkbox"
-              id="signup-newsletter"
-            >
-            <label class="ds-checkbox-label" for="signup-newsletter">
-              Quero receber novidades e atualizações por e-mail
-            </label>
-          </div>
+            Concordo com os
+            <a href="#" class="ds-link">Termos de Uso</a>
+            e a
+            <a href="#" class="ds-link">Política de Privacidade</a>
+          </label>
+          <label class="ds-checkbox-label">
+            <input type="checkbox" class="ds-checkbox">
+            Quero receber novidades e atualizações por e-mail
+          </label>
         </div>
 
         <!-- Submit -->

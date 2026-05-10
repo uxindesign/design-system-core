@@ -52,7 +52,7 @@
       margin: 0 auto;
     }
     .tpl-lp-section--alt {
-      background: var(--ds-surface-sunken);
+      background: var(--ds-background-subtle);
     }
     .tpl-lp-section--brand {
       background: var(--ds-primary-background-default);
@@ -97,12 +97,12 @@
     .tpl-feature-icon {
       width: var(--ds-size-3xl);
       height: var(--ds-size-3xl);
-      background: var(--ds-primary-background-toned);
+      background: var(--ds-toned-background-default);
       border-radius: var(--ds-radius-lg);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--ds-primary-content-default);
+      color: var(--ds-toned-content-default);
       flex-shrink: 0;
     }
     /* Como funciona */
@@ -286,7 +286,7 @@
   <section class="tpl-lp-section tpl-lp-section--alt" id="features" aria-labelledby="features-title">
     <div class="tpl-lp-section-inner">
       <div class="ds-flex ds-flex-col ds-items-center ds-gap-lg" style="text-align:center">
-        <span class="ds-text-overline-md" style="color:var(--ds-primary-content-default)">Funcionalidades</span>
+        <span class="ds-text-overline-md" style="color:var(--ds-toned-content-default)">Funcionalidades</span>
         <h2 class="ds-text-heading-xl" id="features-title">Tudo que você precisa, pronto para usar</h2>
         <p class="ds-text-body-lg" style="color:var(--ds-content-subtle);max-width:var(--ds-size-layout-md)">
           Tokens gerados automaticamente do Figma, componentes testados com axe-core, documentação viva.
@@ -375,14 +375,14 @@
   <section class="tpl-lp-section" id="how-it-works" aria-labelledby="how-title">
     <div class="tpl-lp-section-inner">
       <div class="ds-flex ds-flex-col ds-items-center ds-gap-lg" style="text-align:center">
-        <span class="ds-text-overline-md" style="color:var(--ds-primary-content-default)">Como funciona</span>
+        <span class="ds-text-overline-md" style="color:var(--ds-toned-content-default)">Como funciona</span>
         <h2 class="ds-text-heading-xl" id="how-title">Em 3 passos</h2>
       </div>
 
       <div class="tpl-steps">
         <div class="tpl-step">
           <div class="tpl-step-number" aria-hidden="true">
-            <span class="ds-text-heading-sm" style="color:var(--ds-primary-content-on-strong)">1</span>
+            <span class="ds-text-heading-sm" style="color:var(--ds-primary-content-default)">1</span>
           </div>
           <h3 class="ds-text-heading-sm">Instale</h3>
           <p class="ds-text-body-sm" style="color:var(--ds-content-subtle)">
@@ -392,7 +392,7 @@
         </div>
         <div class="tpl-step">
           <div class="tpl-step-number" aria-hidden="true">
-            <span class="ds-text-heading-sm" style="color:var(--ds-primary-content-on-strong)">2</span>
+            <span class="ds-text-heading-sm" style="color:var(--ds-primary-content-default)">2</span>
           </div>
           <h3 class="ds-text-heading-sm">Componha</h3>
           <p class="ds-text-body-sm" style="color:var(--ds-content-subtle)">
@@ -402,7 +402,7 @@
         </div>
         <div class="tpl-step">
           <div class="tpl-step-number" aria-hidden="true">
-            <span class="ds-text-heading-sm" style="color:var(--ds-primary-content-on-strong)">3</span>
+            <span class="ds-text-heading-sm" style="color:var(--ds-primary-content-default)">3</span>
           </div>
           <h3 class="ds-text-heading-sm">Personalize</h3>
           <p class="ds-text-body-sm" style="color:var(--ds-content-subtle)">
@@ -487,7 +487,7 @@
   <section class="tpl-lp-section" id="pricing" aria-labelledby="pricing-title">
     <div class="tpl-lp-section-inner">
       <div class="ds-flex ds-flex-col ds-items-center ds-gap-lg" style="text-align:center">
-        <span class="ds-text-overline-md" style="color:var(--ds-primary-content-default)">Preços</span>
+        <span class="ds-text-overline-md" style="color:var(--ds-toned-content-default)">Preços</span>
         <h2 class="ds-text-heading-xl" id="pricing-title">Simples e transparente</h2>
         <p class="ds-text-body-lg" style="color:var(--ds-content-subtle)">Sem surpresas. Mude de plano quando quiser.</p>
       </div>
@@ -589,10 +589,10 @@
   <!-- CTA final -->
   <section class="tpl-lp-section tpl-lp-section--brand" aria-labelledby="cta-title">
     <div class="tpl-cta-content">
-      <h2 class="ds-text-display-md" style="color:var(--ds-primary-content-on-strong)" id="cta-title">
+      <h2 class="ds-text-display-md" style="color:var(--ds-primary-content-default)" id="cta-title">
         Pronto para começar?
       </h2>
-      <p class="ds-text-body-lg" style="color:var(--ds-primary-content-on-strong);opacity:0.85">
+      <p class="ds-text-body-lg" style="color:var(--ds-primary-content-default);opacity:0.85">
         Crie sua conta grátis e comece a usar em minutos.
       </p>
       <form class="tpl-cta-form" aria-label="Formulário de cadastro rápido" novalidate>
@@ -608,11 +608,11 @@
           </div>
         </div>
         <button class="ds-btn ds-btn--outline ds-btn--lg" type="submit"
-          style="color:var(--ds-primary-content-on-strong);border-color:var(--ds-primary-content-on-strong)">
+          style="color:var(--ds-primary-content-default);border-color:var(--ds-primary-content-default)">
           Começar grátis
         </button>
       </form>
-      <p class="ds-text-body-xs" style="color:var(--ds-primary-content-on-strong);opacity:0.7">
+      <p class="ds-text-body-xs" style="color:var(--ds-primary-content-default);opacity:0.7">
         Sem cartão de crédito. Cancele quando quiser.
       </p>
     </div>
