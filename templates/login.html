@@ -12,13 +12,12 @@
     })();
   </script>
   <style>
-    /* Estrutura de página — usa exclusivamente tokens DS */
     .tpl-login-page {
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: var(--ds-background-subtle);
+      background: var(--ds-surface-default);
       padding: var(--ds-space-section-sm);
     }
     .tpl-login-box {
@@ -26,13 +25,7 @@
       max-width: var(--ds-size-layout-xs);
       display: flex;
       flex-direction: column;
-      gap: var(--ds-space-2xl);
-    }
-    .tpl-login-brand {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: var(--ds-space-sm);
+      gap: var(--ds-space-xl);
     }
     .tpl-login-form {
       display: flex;
@@ -49,22 +42,16 @@
 <main class="tpl-login-page" id="main-content">
   <div class="tpl-login-box">
 
-    <!-- Marca -->
-    <div class="tpl-login-brand">
-      <div class="ds-site-header__logo" aria-hidden="true">DS</div>
-      <p class="ds-text-body-sm" style="color:var(--ds-content-subtle)">Design System</p>
-    </div>
-
     <!-- Card de login -->
-    <div class="ds-card ds-card--outlined" role="region" aria-labelledby="login-title">
+    <div class="ds-card ds-card--elevated" role="region" aria-labelledby="login-title">
       <div class="ds-card__header">
-        <h1 class="ds-card__title ds-text-heading-md" id="login-title">Bem-vindo de volta</h1>
-        <p class="ds-card__subtitle ds-text-body-sm">Acesse sua conta para continuar</p>
+        <h1 class="ds-card__title ds-text-heading-lg" id="login-title">Entrar</h1>
+        <p class="ds-card__subtitle ds-text-body-md">Acesse sua conta para continuar</p>
       </div>
       <div class="ds-card__body">
-        <form class="tpl-login-form" novalidate>
+        <form class="tpl-login-form" novalidate id="login-form">
 
-          <div class="ds-field">
+          <div class="ds-field" id="field-email">
             <div class="ds-field__label-row">
               <label class="ds-field__label" for="login-email">E-mail</label>
             </div>
@@ -77,39 +64,35 @@
                 autocomplete="email"
                 required
                 aria-required="true"
+                aria-describedby="email-error"
               >
             </div>
+            <p class="ds-field__error" id="email-error" role="alert" aria-live="polite">Informe um e-mail válido</p>
           </div>
 
-          <div class="ds-field">
+          <div class="ds-field" id="field-password">
             <div class="ds-field__label-row">
               <label class="ds-field__label" for="login-password">Senha</label>
+              <a href="#" class="ds-link ds-text-body-sm">Esqueci minha senha</a>
             </div>
             <div class="ds-input">
               <input
                 class="ds-input__field"
                 id="login-password"
                 type="password"
-                placeholder="••••••••"
+                placeholder="Mínimo 8 caracteres"
                 autocomplete="current-password"
                 required
                 aria-required="true"
+                aria-describedby="password-error"
               >
             </div>
-            <div class="ds-field__helper">
-              <a href="#" class="ds-link">Esqueci minha senha</a>
-            </div>
+            <p class="ds-field__error" id="password-error" role="alert" aria-live="polite">A senha deve ter pelo menos 8 caracteres</p>
           </div>
 
-          <div class="ds-flex ds-flex-col ds-gap-md">
-            <button class="ds-btn ds-btn--brand ds-w-full" type="submit">
-              Entrar
-            </button>
-            <div class="ds-divider"></div>
-            <button class="ds-btn ds-btn--outline ds-w-full" type="button">
-              Entrar com Google
-            </button>
-          </div>
+          <button class="ds-btn ds-btn--brand ds-w-full" type="submit">
+            Entrar
+          </button>
 
         </form>
       </div>
@@ -119,12 +102,56 @@
     <div class="tpl-login-footer">
       <p class="ds-text-body-sm" style="color:var(--ds-content-subtle)">
         Não tem uma conta?
-        <a href="#" class="ds-link">Cadastre-se</a>
+        <a href="signup.html" class="ds-link">Cadastre-se grátis</a>
       </p>
     </div>
 
   </div>
 </main>
+
+<script>
+  (function () {
+    var form = document.getElementById('login-form');
+    var emailInput = document.getElementById('login-email');
+    var passwordInput = document.getElementById('login-password');
+
+    function showError(fieldId, inputEl, show) {
+      var field = document.getElementById(fieldId);
+      if (show) {
+        field.classList.add('ds-field--error');
+        inputEl.closest('.ds-input').classList.add('ds-input--error');
+        inputEl.setAttribute('aria-invalid', 'true');
+      } else {
+        field.classList.remove('ds-field--error');
+        inputEl.closest('.ds-input').classList.remove('ds-input--error');
+        inputEl.setAttribute('aria-invalid', 'false');
+      }
+    }
+
+    function validateEmail() {
+      var ok = emailInput.value.trim() !== '' && /\S+@\S+\.\S+/.test(emailInput.value);
+      showError('field-email', emailInput, !ok);
+      return ok;
+    }
+
+    function validatePassword() {
+      var ok = passwordInput.value.length >= 8;
+      showError('field-password', passwordInput, !ok);
+      return ok;
+    }
+
+    emailInput.addEventListener('blur', validateEmail);
+    passwordInput.addEventListener('blur', validatePassword);
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var ok = validateEmail() & validatePassword();
+      if (ok) {
+        /* submit logic goes here */
+      }
+    });
+  })();
+</script>
 
 </body>
 </html>
