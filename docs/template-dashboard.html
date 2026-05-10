@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Template: Dashboard — Design System</title>
+  <link rel="stylesheet" href="../css/design-system.css">
+  <link rel="stylesheet" href="layout.css">
+  <script>
+    (function(){var l=localStorage.getItem('ds-lang');if(l)document.documentElement.setAttribute('lang',l)})();
+  </script>
+</head>
+<body>
+
+<header class="ds-site-header">
+  <div style="display:flex;align-items:center;gap:var(--ds-space-lg)">
+    <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <a href="../index.html" class="ds-site-header__brand">
+      <div class="ds-site-header__logo">DS</div>
+      <span class="ds-site-header__title">Design System</span>
+    </a>
+  </div>
+  <div class="ds-site-header__actions">
+    <select class="ds-theme-switcher__select" id="lang-switcher" aria-label="Language">
+      <option value="pt">PT</option>
+      <option value="en">EN</option>
+    </select>
+    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg> Dark</button>
+  </div>
+</header>
+<div class="ds-sidebar-overlay" id="sidebar-overlay"></div>
+<nav class="ds-sidebar" id="sidebar" aria-label="Main navigation"></nav>
+
+<main class="ds-main">
+
+  <div class="ds-section">
+    <h1 class="ds-section__title"><span data-lang="pt">Template: Dashboard</span><span data-lang="en">Template: Dashboard</span></h1>
+    <p class="ds-section__subtitle">
+      <span data-lang="pt">Interface interna com navegação lateral fixa, topbar com busca, cards de estatísticas rápidas, tabela de dados e feed de atividade.</span>
+      <span data-lang="en">Internal interface with fixed sidebar navigation, search topbar, quick stat cards, data table, and activity feed.</span>
+    </p>
+  </div>
+
+  <div class="ds-subsection">
+    <div style="display:flex;align-items:center;gap:var(--ds-space-md);margin-bottom:var(--ds-space-lg)">
+      <h2 class="ds-subsection__title" style="margin-bottom:0"><span data-lang="pt">Visualização</span><span data-lang="en">Preview</span></h2>
+      <a href="../templates/dashboard.html" target="_blank" rel="noopener" class="ds-btn ds-btn--outline ds-btn--sm">
+        <span data-lang="pt">Abrir em tela cheia</span><span data-lang="en">Open fullscreen</span>
+      </a>
+    </div>
+    <div class="ds-callout ds-callout--info">
+      <div class="ds-callout__title"><span data-lang="pt">Layout de aplicação</span><span data-lang="en">Application layout</span></div>
+      <span data-lang="pt">O dashboard usa <code>display: grid</code> com 2 colunas (sidebar 320px + conteúdo) e 2 linhas (topbar 48px + conteúdo). A estrutura de grade e as dimensões usam exclusivamente tokens <code>var(--ds-dimension-*)</code> e <code>var(--ds-size-*)</code>.</span>
+      <span data-lang="en">The dashboard uses <code>display: grid</code> with 2 columns (320px sidebar + content) and 2 rows (48px topbar + content). Grid structure and dimensions use only <code>var(--ds-dimension-*)</code> and <code>var(--ds-size-*)</code> tokens.</span>
+    </div>
+  </div>
+
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title"><span data-lang="pt">Componentes usados</span><span data-lang="en">Components used</span></h2>
+    <table class="ds-token-table">
+      <thead>
+        <tr>
+          <th><span data-lang="pt">Componente</span><span data-lang="en">Component</span></th>
+          <th><span data-lang="pt">Classe</span><span data-lang="en">Class</span></th>
+          <th><span data-lang="pt">Papel no template</span><span data-lang="en">Role in template</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Input (sm)</td><td><code>ds-input ds-input--sm</code></td><td><span data-lang="pt">Campo de busca no topbar</span><span data-lang="en">Search field in topbar</span></td></tr>
+        <tr><td>Button (ghost, icon-only)</td><td><code>ds-btn ds-btn--ghost ds-btn--icon-only</code></td><td><span data-lang="pt">Ícone de notificações</span><span data-lang="en">Notifications icon</span></td></tr>
+        <tr><td>Avatar (sm)</td><td><code>ds-avatar ds-avatar--sm</code></td><td><span data-lang="pt">Foto do usuário logado e linhas da tabela</span><span data-lang="en">Logged user photo and table rows</span></td></tr>
+        <tr><td>Card (elevated)</td><td><code>ds-card ds-card--elevated</code></td><td><span data-lang="pt">Stat cards de métricas</span><span data-lang="en">Metric stat cards</span></td></tr>
+        <tr><td>Card (outlined)</td><td><code>ds-card ds-card--outlined</code></td><td><span data-lang="pt">Tabela de usuários e feed de atividade</span><span data-lang="en">Users table and activity feed</span></td></tr>
+        <tr><td>Badge</td><td><code>ds-badge ds-badge--{variant} ds-badge--subtle</code></td><td><span data-lang="pt">Status de usuários e variação de métricas</span><span data-lang="en">User statuses and metric deltas</span></td></tr>
+        <tr><td>Button (brand, sm)</td><td><code>ds-btn ds-btn--brand ds-btn--sm</code></td><td><span data-lang="pt">Ação "Exportar"</span><span data-lang="en">"Export" action</span></td></tr>
+        <tr><td>Button (ghost, sm)</td><td><code>ds-btn ds-btn--ghost ds-btn--sm</code></td><td><span data-lang="pt">Links "Ver todos"</span><span data-lang="en">"View all" links</span></td></tr>
+        <tr><td>Select (sm)</td><td><code>ds-select ds-select--sm</code></td><td><span data-lang="pt">Filtro de período</span><span data-lang="en">Period filter</span></td></tr>
+        <tr><td>Alert (info)</td><td><code>ds-alert ds-alert--info ds-alert--subtle</code></td><td><span data-lang="pt">Entrada de sistema no feed</span><span data-lang="en">System entry in feed</span></td></tr>
+        <tr><td>Divider</td><td><code>ds-divider</code></td><td><span data-lang="pt">Separador de seções na sidebar</span><span data-lang="en">Sidebar section separator</span></td></tr>
+        <tr><td>Typography</td><td><code>ds-text-display-md</code>, <code>ds-text-label-*</code>, etc.</td><td><span data-lang="pt">Hierarquia textual nos stat cards</span><span data-lang="en">Text hierarchy in stat cards</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title"><span data-lang="pt">Anatomia do layout</span><span data-lang="en">Layout anatomy</span></h2>
+    <div class="ds-preview">
+      <div class="ds-preview__tabs" role="tablist">
+        <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
+        <button class="ds-preview__tab" role="tab" aria-selected="false" data-tab="code">Code</button>
+      </div>
+      <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
+        <div class="ds-preview__canvas">
+          <div class="ds-alert ds-alert--info ds-alert--subtle">
+            <span data-lang="pt">Estrutura de grid: <code>grid-template-columns: var(--ds-dimension-320) 1fr</code> × <code>grid-template-rows: var(--ds-size-2xl) 1fr</code>. O topbar span toda a largura via <code>grid-column: 1 / -1</code>.</span>
+            <span data-lang="en">Grid structure: <code>grid-template-columns: var(--ds-dimension-320) 1fr</code> × <code>grid-template-rows: var(--ds-size-2xl) 1fr</code>. Topbar spans full width via <code>grid-column: 1 / -1</code>.</span>
+          </div>
+        </div>
+      </div>
+      <div class="ds-preview__panel" data-panel="code">
+        <div class="ds-preview__code">
+          <button class="ds-preview__copy" aria-label="Copy code">Copy</button>
+          <pre tabindex="0"><code>&lt;!-- Estrutura base do dashboard --&gt;
+&lt;div class="tpl-dashboard"&gt;
+  &lt;!-- grid-template-columns: var(--ds-dimension-320) 1fr --&gt;
+  &lt;!-- grid-template-rows: var(--ds-size-2xl) 1fr --&gt;
+
+  &lt;header class="tpl-topbar"&gt;
+    &lt;!-- grid-column: 1 / -1 — ocupa toda a largura --&gt;
+    &lt;div class="tpl-topbar-brand"&gt;...&lt;/div&gt;
+    &lt;div role="search"&gt;
+      &lt;div class="ds-input ds-input--sm"&gt;
+        &lt;input class="ds-input__field" type="search" aria-label="Buscar"&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="tpl-topbar-actions"&gt;
+      &lt;button class="ds-btn ds-btn--ghost ds-btn--sm ds-btn--icon-only"
+        aria-label="Notificações"&gt;...&lt;/button&gt;
+      &lt;div class="ds-avatar ds-avatar--sm ds-avatar--icon"&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+
+  &lt;nav class="tpl-sidebar" aria-label="Navegação principal"&gt;
+    &lt;!-- Links com aria-current="page" no item ativo --&gt;
+    &lt;a href="#" class="tpl-nav-item tpl-nav-item--active" aria-current="page"&gt;
+      Dashboard
+    &lt;/a&gt;
+  &lt;/nav&gt;
+
+  &lt;main class="tpl-content"&gt;
+    &lt;!-- Stat cards --&gt;
+    &lt;div class="ds-card ds-card--elevated"&gt;
+      &lt;div class="ds-card__header"&gt;
+        &lt;p class="ds-card__subtitle"&gt;Usuários ativos&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="ds-card__body"&gt;
+        &lt;span class="ds-text-display-md"&gt;2.847&lt;/span&gt;
+        &lt;span class="ds-badge ds-badge--success ds-badge--subtle"&gt;+12%&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/main&gt;
+
+&lt;/div&gt;</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title"><span data-lang="pt">Boas práticas</span><span data-lang="en">Best practices</span></h2>
+    <table class="ds-token-table">
+      <thead><tr><th><span data-lang="pt">Prática</span><span data-lang="en">Practice</span></th><th><span data-lang="pt">Razão</span><span data-lang="en">Reason</span></th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span data-lang="pt">Use <code>aria-current="page"</code> no item ativo da sidebar</span><span data-lang="en">Use <code>aria-current="page"</code> on the active sidebar item</span></td>
+          <td><span data-lang="pt">Leitores de tela anunciam a página atual sem depender da aparência visual</span><span data-lang="en">Screen readers announce the current page without relying on visual appearance</span></td>
+        </tr>
+        <tr>
+          <td><span data-lang="pt">Envolva a busca em <code>role="search"</code></span><span data-lang="en">Wrap search in <code>role="search"</code></span></td>
+          <td><span data-lang="pt">Cria um landmark de busca navegável via teclado</span><span data-lang="en">Creates a keyboard-navigable search landmark</span></td>
+        </tr>
+        <tr>
+          <td><span data-lang="pt">Use <code>tabindex="0"</code> em tabelas com overflow horizontal</span><span data-lang="en">Use <code>tabindex="0"</code> on horizontally-scrollable tables</span></td>
+          <td><span data-lang="pt">Permite que usuários de teclado rolem a tabela sem mouse (WCAG 2.1 SC 2.1.1)</span><span data-lang="en">Allows keyboard users to scroll the table without a mouse (WCAG 2.1 SC 2.1.1)</span></td>
+        </tr>
+        <tr>
+          <td><span data-lang="pt">Use <code>scope="col"</code> nos <code>&lt;th&gt;</code> de tabela</span><span data-lang="en">Use <code>scope="col"</code> on table <code>&lt;th&gt;</code> elements</span></td>
+          <td><span data-lang="pt">Associa cabeçalho à coluna para leitores de tela</span><span data-lang="en">Associates header to column for screen readers</span></td>
+        </tr>
+        <tr>
+          <td><span data-lang="pt">Agrupe stat cards em <code>&lt;section&gt;</code> com <code>aria-labelledby</code></span><span data-lang="en">Group stat cards in a <code>&lt;section&gt;</code> with <code>aria-labelledby</code></span></td>
+          <td><span data-lang="pt">Cria uma região semântica navegável para métricas</span><span data-lang="en">Creates a navigable semantic region for metrics</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title"><span data-lang="pt">Relacionados</span><span data-lang="en">Related</span></h2>
+    <div class="ds-related">
+      <a href="card.html" class="ds-related__link">Card</a>
+      <a href="badge.html" class="ds-related__link">Badge</a>
+      <a href="avatar.html" class="ds-related__link">Avatar</a>
+      <a href="alert.html" class="ds-related__link">Alert</a>
+      <a href="template-landing.html" class="ds-related__link"><span data-lang="pt">Template: Landing Page</span><span data-lang="en">Template: Landing Page</span></a>
+    </div>
+  </div>
+
+</main>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

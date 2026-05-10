@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login — Template</title>
+  <link rel="stylesheet" href="../css/design-system.css">
+  <script>
+    (function(){
+      var m=localStorage.getItem('ds-mode');
+      if(m==='dark')document.documentElement.setAttribute('data-mode','dark');
+    })();
+  </script>
+  <style>
+    /* Estrutura de página — usa exclusivamente tokens DS */
+    .tpl-login-page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--ds-surface-sunken);
+      padding: var(--ds-space-section-sm);
+    }
+    .tpl-login-box {
+      width: 100%;
+      max-width: var(--ds-size-layout-xs);
+      display: flex;
+      flex-direction: column;
+      gap: var(--ds-space-2xl);
+    }
+    .tpl-login-brand {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--ds-space-sm);
+    }
+    .tpl-login-form {
+      display: flex;
+      flex-direction: column;
+      gap: var(--ds-space-lg);
+    }
+    .tpl-login-footer {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<main class="tpl-login-page" id="main-content">
+  <div class="tpl-login-box">
+
+    <!-- Marca -->
+    <div class="tpl-login-brand">
+      <div class="ds-site-header__logo" aria-hidden="true">DS</div>
+      <p class="ds-text-body-sm" style="color:var(--ds-content-subtle)">Design System</p>
+    </div>
+
+    <!-- Card de login -->
+    <div class="ds-card ds-card--outlined" role="region" aria-labelledby="login-title">
+      <div class="ds-card__header">
+        <h1 class="ds-card__title ds-text-heading-md" id="login-title">Bem-vindo de volta</h1>
+        <p class="ds-card__subtitle ds-text-body-sm">Acesse sua conta para continuar</p>
+      </div>
+      <div class="ds-card__body">
+        <form class="tpl-login-form" novalidate>
+
+          <div class="ds-field">
+            <div class="ds-field__label-row">
+              <label class="ds-field__label" for="login-email">E-mail</label>
+            </div>
+            <div class="ds-input">
+              <input
+                class="ds-input__field"
+                id="login-email"
+                type="email"
+                placeholder="voce@empresa.com"
+                autocomplete="email"
+                required
+                aria-required="true"
+              >
+            </div>
+          </div>
+
+          <div class="ds-field">
+            <div class="ds-field__label-row">
+              <label class="ds-field__label" for="login-password">Senha</label>
+            </div>
+            <div class="ds-input">
+              <input
+                class="ds-input__field"
+                id="login-password"
+                type="password"
+                placeholder="••••••••"
+                autocomplete="current-password"
+                required
+                aria-required="true"
+              >
+            </div>
+            <div class="ds-field__helper">
+              <a href="#" class="ds-link">Esqueci minha senha</a>
+            </div>
+          </div>
+
+          <div class="ds-flex ds-flex-col ds-gap-md">
+            <button class="ds-btn ds-btn--brand ds-w-full" type="submit">
+              Entrar
+            </button>
+            <div class="ds-divider"></div>
+            <button class="ds-btn ds-btn--outline ds-w-full" type="button">
+              Entrar com Google
+            </button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+    <!-- Rodapé -->
+    <div class="tpl-login-footer">
+      <p class="ds-text-body-sm" style="color:var(--ds-content-subtle)">
+        Não tem uma conta?
+        <a href="#" class="ds-link">Cadastre-se</a>
+      </p>
+    </div>
+
+  </div>
+</main>
+
+</body>
+</html>

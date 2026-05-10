@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — Template</title>
+  <link rel="stylesheet" href="../css/design-system.css">
+  <script>
+    (function(){
+      var m=localStorage.getItem('ds-mode');
+      if(m==='dark')document.documentElement.setAttribute('data-mode','dark');
+    })();
+  </script>
+  <style>
+    /* Estrutura de página — usa exclusivamente tokens DS */
+    .tpl-dashboard {
+      display: grid;
+      grid-template-columns: var(--ds-dimension-320) 1fr;
+      grid-template-rows: var(--ds-size-2xl) 1fr;
+      min-height: 100vh;
+    }
+    .tpl-topbar {
+      grid-column: 1 / -1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 var(--ds-space-2xl);
+      background: var(--ds-surface-default);
+      border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle);
+      gap: var(--ds-space-lg);
+    }
+    .tpl-topbar-brand {
+      display: flex;
+      align-items: center;
+      gap: var(--ds-space-md);
+      flex-shrink: 0;
+    }
+    .tpl-topbar-search {
+      flex: 1;
+      max-width: var(--ds-size-layout-md);
+    }
+    .tpl-topbar-actions {
+      display: flex;
+      align-items: center;
+      gap: var(--ds-space-md);
+      flex-shrink: 0;
+    }
+    .tpl-sidebar {
+      background: var(--ds-surface-raised);
+      border-right: var(--ds-border-width-1) solid var(--ds-border-subtle);
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      padding: var(--ds-space-lg) 0;
+    }
+    .tpl-nav-section {
+      padding: var(--ds-space-sm) var(--ds-space-lg);
+      display: flex;
+      flex-direction: column;
+      gap: var(--ds-space-xs);
+    }
+    .tpl-nav-label {
+      padding: var(--ds-space-xs) var(--ds-space-md);
+    }
+    .tpl-nav-item {
+      display: flex;
+      align-items: center;
+      gap: var(--ds-space-md);
+      padding: var(--ds-space-sm) var(--ds-space-md);
+      border-radius: var(--ds-radius-md);
+      text-decoration: none;
+      color: var(--ds-content-default);
+      transition: background var(--ds-duration-fast) var(--ds-ease-default);
+    }
+    .tpl-nav-item:hover {
+      background: var(--ds-surface-sunken);
+    }
+    .tpl-nav-item--active {
+      background: var(--ds-primary-background-toned);
+      color: var(--ds-primary-content-default);
+    }
+    .tpl-nav-icon {
+      width: var(--ds-size-md);
+      height: var(--ds-size-md);
+      flex-shrink: 0;
+    }
+    .tpl-content {
+      overflow-y: auto;
+      padding: var(--ds-space-section-sm) var(--ds-space-2xl);
+      background: var(--ds-surface-sunken);
+      display: flex;
+      flex-direction: column;
+      gap: var(--ds-space-2xl);
+    }
+    .tpl-content-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--ds-space-lg);
+    }
+    .tpl-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--ds-space-lg);
+    }
+    @media (max-width: 1024px) {
+      .tpl-stats-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .tpl-stat-card {
+      display: flex;
+      flex-direction: column;
+      gap: var(--ds-space-sm);
+    }
+    .tpl-stat-value {
+      display: flex;
+      align-items: baseline;
+      gap: var(--ds-space-xs);
+    }
+    .tpl-main-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: var(--ds-space-lg);
+    }
+    @media (max-width: 900px) {
+      .tpl-main-grid { grid-template-columns: 1fr; }
+      .tpl-dashboard { grid-template-columns: 1fr; }
+      .tpl-sidebar { display: none; }
+    }
+    .tpl-table-wrapper {
+      overflow-x: auto;
+    }
+    .tpl-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .tpl-table th,
+    .tpl-table td {
+      padding: var(--ds-space-md) var(--ds-space-lg);
+      text-align: left;
+      border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle);
+    }
+    .tpl-table th {
+      color: var(--ds-content-subtle);
+      background: var(--ds-surface-sunken);
+    }
+    .tpl-table td {
+      color: var(--ds-content-default);
+    }
+    .tpl-table tr:hover td {
+      background: var(--ds-surface-sunken);
+    }
+    .tpl-activity-list {
+      display: flex;
+      flex-direction: column;
+    }
+    .tpl-activity-item {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--ds-space-md);
+      padding: var(--ds-space-md) 0;
+      border-bottom: var(--ds-border-width-1) solid var(--ds-border-subtle);
+    }
+    .tpl-activity-item:last-child {
+      border-bottom: none;
+    }
+    .tpl-activity-meta {
+      display: flex;
+      flex-direction: column;
+      gap: var(--ds-space-2xs);
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+
+<div class="tpl-dashboard">
+
+  <!-- Topbar -->
+  <header class="tpl-topbar" role="banner">
+    <div class="tpl-topbar-brand">
+      <div class="ds-site-header__logo" aria-hidden="true">DS</div>
+      <span class="ds-text-label-lg" style="color:var(--ds-content-strong)">Workspace</span>
+    </div>
+
+    <div class="tpl-topbar-search" role="search">
+      <div class="ds-input ds-input--sm">
+        <input
+          class="ds-input__field"
+          type="search"
+          placeholder="Buscar..."
+          aria-label="Buscar no workspace"
+        >
+      </div>
+    </div>
+
+    <div class="tpl-topbar-actions">
+      <button class="ds-btn ds-btn--ghost ds-btn--sm ds-btn--icon-only" aria-label="Notificações">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" width="16" height="16"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+      </button>
+      <div class="ds-avatar ds-avatar--sm ds-avatar--icon" aria-label="Menu do usuário">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sidebar de navegação -->
+  <nav class="tpl-sidebar" aria-label="Navegação principal">
+
+    <div class="tpl-nav-section">
+      <span class="ds-text-overline-sm tpl-nav-label" style="color:var(--ds-content-subtle)">Principal</span>
+      <a href="#" class="tpl-nav-item tpl-nav-item--active" aria-current="page">
+        <svg class="tpl-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        <span class="ds-text-label-md">Dashboard</span>
+      </a>
+      <a href="#" class="tpl-nav-item">
+        <svg class="tpl-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <span class="ds-text-label-md">Usuários</span>
+      </a>
+      <a href="#" class="tpl-nav-item">
+        <svg class="tpl-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        <span class="ds-text-label-md">Relatórios</span>
+      </a>
+      <a href="#" class="tpl-nav-item">
+        <svg class="tpl-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        <span class="ds-text-label-md">Projetos</span>
+      </a>
+    </div>
+
+    <div class="ds-divider"></div>
+
+    <div class="tpl-nav-section">
+      <span class="ds-text-overline-sm tpl-nav-label" style="color:var(--ds-content-subtle)">Configurações</span>
+      <a href="#" class="tpl-nav-item">
+        <svg class="tpl-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 0-14.14 0M4.93 19.07a10 10 0 0 0 14.14 0"/></svg>
+        <span class="ds-text-label-md">Integrações</span>
+      </a>
+      <a href="#" class="tpl-nav-item">
+        <svg class="tpl-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+        <span class="ds-text-label-md">Configurações</span>
+      </a>
+    </div>
+
+  </nav>
+
+  <!-- Conteúdo principal -->
+  <main class="tpl-content" id="main-content">
+
+    <!-- Cabeçalho da página -->
+    <div class="tpl-content-header">
+      <div>
+        <h1 class="ds-text-heading-lg">Dashboard</h1>
+        <p class="ds-text-body-sm" style="color:var(--ds-content-subtle);margin-top:var(--ds-space-xs)">
+          Visão geral do seu workspace — Maio 2026
+        </p>
+      </div>
+      <div class="ds-flex ds-gap-md">
+        <div class="ds-select ds-select--sm">
+          <select class="ds-select__field" aria-label="Filtrar por período">
+            <option>Últimos 30 dias</option>
+            <option>Últimos 7 dias</option>
+            <option>Este ano</option>
+          </select>
+        </div>
+        <button class="ds-btn ds-btn--brand ds-btn--sm">
+          Exportar
+        </button>
+      </div>
+    </div>
+
+    <!-- Cards de estatísticas -->
+    <section aria-labelledby="stats-title">
+      <h2 class="ds-sr-only" id="stats-title">Estatísticas rápidas</h2>
+      <div class="tpl-stats-grid">
+
+        <div class="ds-card ds-card--elevated tpl-stat-card">
+          <div class="ds-card__header">
+            <p class="ds-card__subtitle">Usuários ativos</p>
+          </div>
+          <div class="ds-card__body">
+            <div class="tpl-stat-value">
+              <span class="ds-text-display-md">2.847</span>
+              <span class="ds-badge ds-badge--success ds-badge--subtle">+12%</span>
+            </div>
+            <p class="ds-text-body-xs" style="color:var(--ds-content-subtle);margin-top:var(--ds-space-xs)">vs. mês anterior</p>
+          </div>
+        </div>
+
+        <div class="ds-card ds-card--elevated tpl-stat-card">
+          <div class="ds-card__header">
+            <p class="ds-card__subtitle">Receita mensal</p>
+          </div>
+          <div class="ds-card__body">
+            <div class="tpl-stat-value">
+              <span class="ds-text-display-md">R$ 48.5k</span>
+              <span class="ds-badge ds-badge--success ds-badge--subtle">+8%</span>
+            </div>
+            <p class="ds-text-body-xs" style="color:var(--ds-content-subtle);margin-top:var(--ds-space-xs)">vs. mês anterior</p>
+          </div>
+        </div>
+
+        <div class="ds-card ds-card--elevated tpl-stat-card">
+          <div class="ds-card__header">
+            <p class="ds-card__subtitle">Novos projetos</p>
+          </div>
+          <div class="ds-card__body">
+            <div class="tpl-stat-value">
+              <span class="ds-text-display-md">134</span>
+              <span class="ds-badge ds-badge--warning ds-badge--subtle">-3%</span>
+            </div>
+            <p class="ds-text-body-xs" style="color:var(--ds-content-subtle);margin-top:var(--ds-space-xs)">vs. mês anterior</p>
+          </div>
+        </div>
+
+        <div class="ds-card ds-card--elevated tpl-stat-card">
+          <div class="ds-card__header">
+            <p class="ds-card__subtitle">Taxa de retenção</p>
+          </div>
+          <div class="ds-card__body">
+            <div class="tpl-stat-value">
+              <span class="ds-text-display-md">94%</span>
+              <span class="ds-badge ds-badge--success ds-badge--subtle">+2%</span>
+            </div>
+            <p class="ds-text-body-xs" style="color:var(--ds-content-subtle);margin-top:var(--ds-space-xs)">vs. mês anterior</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Grid principal: tabela + atividade recente -->
+    <div class="tpl-main-grid">
+
+      <!-- Tabela de usuários recentes -->
+      <section aria-labelledby="users-title">
+        <div class="ds-card ds-card--outlined">
+          <div class="ds-card__header">
+            <div class="ds-flex ds-justify-between ds-items-center">
+              <h2 class="ds-card__title" id="users-title">Usuários recentes</h2>
+              <button class="ds-btn ds-btn--ghost ds-btn--sm">Ver todos</button>
+            </div>
+          </div>
+          <div class="ds-card__body">
+            <div class="tpl-table-wrapper" role="region" aria-label="Tabela de usuários recentes" tabindex="0">
+              <table class="tpl-table" aria-label="Usuários recentes">
+                <thead>
+                  <tr>
+                    <th scope="col" class="ds-text-label-xs">Usuário</th>
+                    <th scope="col" class="ds-text-label-xs">Status</th>
+                    <th scope="col" class="ds-text-label-xs">Plano</th>
+                    <th scope="col" class="ds-text-label-xs">Data</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="ds-flex ds-items-center ds-gap-md">
+                        <div class="ds-avatar ds-avatar--sm ds-avatar--icon" aria-hidden="true">
+                          <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+                        </div>
+                        <div>
+                          <p class="ds-text-label-md">Ana Souza</p>
+                          <p class="ds-text-body-xs" style="color:var(--ds-content-subtle)">ana@empresa.com</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td><span class="ds-badge ds-badge--success ds-badge--subtle">Ativo</span></td>
+                    <td><span class="ds-text-body-sm">Pro</span></td>
+                    <td><span class="ds-text-body-sm" style="color:var(--ds-content-subtle)">07 mai 2026</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="ds-flex ds-items-center ds-gap-md">
+                        <div class="ds-avatar ds-avatar--sm ds-avatar--icon" aria-hidden="true">
+                          <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+                        </div>
+                        <div>
+                          <p class="ds-text-label-md">Bruno Lima</p>
+                          <p class="ds-text-body-xs" style="color:var(--ds-content-subtle)">bruno@startup.io</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td><span class="ds-badge ds-badge--neutral ds-badge--subtle">Inativo</span></td>
+                    <td><span class="ds-text-body-sm">Starter</span></td>
+                    <td><span class="ds-text-body-sm" style="color:var(--ds-content-subtle)">05 mai 2026</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="ds-flex ds-items-center ds-gap-md">
+                        <div class="ds-avatar ds-avatar--sm ds-avatar--icon" aria-hidden="true">
+                          <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+                        </div>
+                        <div>
+                          <p class="ds-text-label-md">Carla Dias</p>
+                          <p class="ds-text-body-xs" style="color:var(--ds-content-subtle)">carla@agencia.com</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td><span class="ds-badge ds-badge--info ds-badge--subtle">Trial</span></td>
+                    <td><span class="ds-text-body-sm">Enterprise</span></td>
+                    <td><span class="ds-text-body-sm" style="color:var(--ds-content-subtle)">03 mai 2026</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="ds-flex ds-items-center ds-gap-md">
+                        <div class="ds-avatar ds-avatar--sm ds-avatar--icon" aria-hidden="true">
+                          <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+                        </div>
+                        <div>
+                          <p class="ds-text-label-md">Daniel Melo</p>
+                          <p class="ds-text-body-xs" style="color:var(--ds-content-subtle)">daniel@corp.com</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td><span class="ds-badge ds-badge--error ds-badge--subtle">Bloqueado</span></td>
+                    <td><span class="ds-text-body-sm">Pro</span></td>
+                    <td><span class="ds-text-body-sm" style="color:var(--ds-content-subtle)">01 mai 2026</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Atividade recente -->
+      <section aria-labelledby="activity-title">
+        <div class="ds-card ds-card--outlined">
+          <div class="ds-card__header">
+            <h2 class="ds-card__title" id="activity-title">Atividade recente</h2>
+          </div>
+          <div class="ds-card__body">
+            <div class="tpl-activity-list" role="list">
+
+              <div class="tpl-activity-item" role="listitem">
+                <div class="ds-avatar ds-avatar--sm ds-avatar--icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+                </div>
+                <div class="tpl-activity-meta">
+                  <p class="ds-text-body-sm"><strong>Ana Souza</strong> criou um novo projeto</p>
+                  <p class="ds-text-body-xs" style="color:var(--ds-content-subtle)">há 2 horas</p>
+                </div>
+              </div>
+
+              <div class="tpl-activity-item" role="listitem">
+                <div class="ds-avatar ds-avatar--sm ds-avatar--icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+                </div>
+                <div class="tpl-activity-meta">
+                  <p class="ds-text-body-sm"><strong>Bruno Lima</strong> atualizou configurações</p>
+                  <p class="ds-text-body-xs" style="color:var(--ds-content-subtle)">há 4 horas</p>
+                </div>
+              </div>
+
+              <div class="tpl-activity-item" role="listitem">
+                <div class="ds-alert ds-alert--info ds-alert--subtle" role="none">
+                  <span class="ds-text-body-xs">Sistema atualizado para v1.0.0-beta.4</span>
+                </div>
+              </div>
+
+              <div class="tpl-activity-item" role="listitem">
+                <div class="ds-avatar ds-avatar--sm ds-avatar--icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+                </div>
+                <div class="tpl-activity-meta">
+                  <p class="ds-text-body-sm"><strong>Carla Dias</strong> fez upgrade para Enterprise</p>
+                  <p class="ds-text-body-xs" style="color:var(--ds-content-subtle)">ontem</p>
+                </div>
+              </div>
+
+              <div class="tpl-activity-item" role="listitem">
+                <div class="ds-avatar ds-avatar--sm ds-avatar--icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+                </div>
+                <div class="tpl-activity-meta">
+                  <p class="ds-text-body-sm"><strong>Daniel Melo</strong> foi bloqueado por inatividade</p>
+                  <p class="ds-text-body-xs" style="color:var(--ds-content-subtle)">há 2 dias</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+</div>
+
+</body>
+</html>

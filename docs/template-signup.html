@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Template: Cadastro — Design System</title>
+  <link rel="stylesheet" href="../css/design-system.css">
+  <link rel="stylesheet" href="layout.css">
+  <script>
+    (function(){var l=localStorage.getItem('ds-lang');if(l)document.documentElement.setAttribute('lang',l)})();
+  </script>
+</head>
+<body>
+
+<header class="ds-site-header">
+  <div style="display:flex;align-items:center;gap:var(--ds-space-lg)">
+    <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <a href="../index.html" class="ds-site-header__brand">
+      <div class="ds-site-header__logo">DS</div>
+      <span class="ds-site-header__title">Design System</span>
+    </a>
+  </div>
+  <div class="ds-site-header__actions">
+    <select class="ds-theme-switcher__select" id="lang-switcher" aria-label="Language">
+      <option value="pt">PT</option>
+      <option value="en">EN</option>
+    </select>
+    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg> Dark</button>
+  </div>
+</header>
+<div class="ds-sidebar-overlay" id="sidebar-overlay"></div>
+<nav class="ds-sidebar" id="sidebar" aria-label="Main navigation"></nav>
+
+<main class="ds-main">
+
+  <div class="ds-section">
+    <h1 class="ds-section__title"><span data-lang="pt">Template: Cadastro</span><span data-lang="en">Template: Signup</span></h1>
+    <p class="ds-section__subtitle">
+      <span data-lang="pt">Layout split com painel de marca e formulário complexo. Demonstra campos em grid 2 colunas, helper texts, campo de seleção (Select) e grupos de Checkbox.</span>
+      <span data-lang="en">Split layout with brand panel and complex form. Demonstrates 2-column grid fields, helper texts, Select, and Checkbox groups.</span>
+    </p>
+  </div>
+
+  <div class="ds-subsection">
+    <div style="display:flex;align-items:center;gap:var(--ds-space-md);margin-bottom:var(--ds-space-lg)">
+      <h2 class="ds-subsection__title" style="margin-bottom:0"><span data-lang="pt">Visualização</span><span data-lang="en">Preview</span></h2>
+      <a href="../templates/signup.html" target="_blank" rel="noopener" class="ds-btn ds-btn--outline ds-btn--sm">
+        <span data-lang="pt">Abrir em tela cheia</span><span data-lang="en">Open fullscreen</span>
+      </a>
+    </div>
+    <div class="ds-preview">
+      <div class="ds-preview__tabs" role="tablist">
+        <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
+        <button class="ds-preview__tab" role="tab" aria-selected="false" data-tab="code">Code</button>
+      </div>
+      <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
+        <div class="ds-preview__canvas" style="padding:var(--ds-space-section-sm);display:flex;flex-direction:column;gap:var(--ds-space-xl)">
+          <div class="ds-alert ds-alert--info ds-alert--subtle">
+            <span data-lang="pt">O painel de marca ocupa metade da tela em desktop. Nesta preview, apenas o painel do formulário é exibido.</span>
+            <span data-lang="en">The brand panel occupies half the screen on desktop. This preview shows only the form panel.</span>
+          </div>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--ds-space-lg)">
+            <div class="ds-field">
+              <div class="ds-field__label-row">
+                <label class="ds-field__label" for="prev-fn">Nome</label>
+                <span class="ds-field__required" aria-hidden="true">*</span>
+              </div>
+              <div class="ds-input"><input class="ds-input__field" id="prev-fn" type="text" placeholder="Ana"></div>
+            </div>
+            <div class="ds-field">
+              <div class="ds-field__label-row">
+                <label class="ds-field__label" for="prev-ln">Sobrenome</label>
+                <span class="ds-field__required" aria-hidden="true">*</span>
+              </div>
+              <div class="ds-input"><input class="ds-input__field" id="prev-ln" type="text" placeholder="Souza"></div>
+            </div>
+          </div>
+
+          <div class="ds-field">
+            <div class="ds-field__label-row">
+              <label class="ds-field__label" for="prev-em">E-mail corporativo</label>
+              <span class="ds-field__required" aria-hidden="true">*</span>
+            </div>
+            <div class="ds-input"><input class="ds-input__field" id="prev-em" type="email" placeholder="ana@empresa.com" aria-describedby="prev-em-h"></div>
+            <p class="ds-field__helper" id="prev-em-h">Use seu e-mail corporativo para acesso ao plano de equipe.</p>
+          </div>
+
+          <div class="ds-field">
+            <div class="ds-field__label-row">
+              <label class="ds-field__label" for="prev-role">Cargo</label>
+            </div>
+            <div class="ds-select">
+              <select class="ds-select__field" id="prev-role">
+                <option value="" disabled selected>Selecione</option>
+                <option>Designer</option>
+                <option>Frontend</option>
+                <option>Product Manager</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="ds-checkbox-group">
+            <div class="ds-checkbox-item">
+              <input type="checkbox" class="ds-checkbox" id="prev-terms">
+              <label class="ds-checkbox-label" for="prev-terms">Concordo com os <a href="#" class="ds-link">Termos de Uso</a></label>
+            </div>
+          </div>
+
+          <button class="ds-btn ds-btn--brand ds-w-full" type="button">Criar minha conta</button>
+        </div>
+      </div>
+      <div class="ds-preview__panel" data-panel="code">
+        <div class="ds-preview__code">
+          <button class="ds-preview__copy" aria-label="Copy code">Copy</button>
+          <pre tabindex="0"><code>&lt;!-- Campos lado a lado via grid de layout --&gt;
+&lt;div class="tpl-signup-row"&gt; &lt;!-- grid-template-columns: 1fr 1fr --&gt;
+  &lt;div class="ds-field"&gt;
+    &lt;div class="ds-field__label-row"&gt;
+      &lt;label class="ds-field__label" for="firstname"&gt;Nome&lt;/label&gt;
+      &lt;span class="ds-field__required" aria-hidden="true"&gt;*&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="ds-input"&gt;
+      &lt;input class="ds-input__field" id="firstname"
+        type="text" autocomplete="given-name"
+        required aria-required="true"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- repete para Sobrenome --&gt;
+&lt;/div&gt;
+
+&lt;!-- Campo com helper text --&gt;
+&lt;div class="ds-field"&gt;
+  &lt;div class="ds-field__label-row"&gt;
+    &lt;label class="ds-field__label" for="email"&gt;E-mail corporativo&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class="ds-input"&gt;
+    &lt;input class="ds-input__field" id="email"
+      type="email" aria-describedby="email-helper"&gt;
+  &lt;/div&gt;
+  &lt;p class="ds-field__helper" id="email-helper"&gt;
+    Use seu e-mail corporativo para acesso ao plano de equipe.
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- Checkbox group --&gt;
+&lt;div class="ds-checkbox-group" role="group"&gt;
+  &lt;div class="ds-checkbox-item"&gt;
+    &lt;input type="checkbox" class="ds-checkbox" id="terms"
+      required aria-required="true"&gt;
+    &lt;label class="ds-checkbox-label" for="terms"&gt;
+      Concordo com os &lt;a href="#" class="ds-link"&gt;Termos de Uso&lt;/a&gt;
+    &lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title"><span data-lang="pt">Componentes usados</span><span data-lang="en">Components used</span></h2>
+    <table class="ds-token-table">
+      <thead>
+        <tr>
+          <th><span data-lang="pt">Componente</span><span data-lang="en">Component</span></th>
+          <th><span data-lang="pt">Classe</span><span data-lang="en">Class</span></th>
+          <th><span data-lang="pt">Papel no template</span><span data-lang="en">Role in template</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Input</td><td><code>ds-input</code></td><td><span data-lang="pt">Nome, sobrenome, e-mail, senha</span><span data-lang="en">First name, last name, email, password</span></td></tr>
+        <tr><td>Select</td><td><code>ds-select</code></td><td><span data-lang="pt">Seleção de cargo</span><span data-lang="en">Role selection</span></td></tr>
+        <tr><td>Form Field</td><td><code>ds-field</code></td><td><span data-lang="pt">Wrapper de todos os controles</span><span data-lang="en">Wrapper for all controls</span></td></tr>
+        <tr><td>Checkbox</td><td><code>ds-checkbox</code>, <code>ds-checkbox-group</code></td><td><span data-lang="pt">Aceite de termos e newsletter</span><span data-lang="en">Terms acceptance and newsletter</span></td></tr>
+        <tr><td>Button (brand)</td><td><code>ds-btn ds-btn--brand ds-w-full</code></td><td><span data-lang="pt">Submissão do formulário</span><span data-lang="en">Form submission</span></td></tr>
+        <tr><td>Avatar</td><td><code>ds-avatar ds-avatar--sm</code></td><td><span data-lang="pt">Foto do autor do depoimento</span><span data-lang="en">Testimonial author photo</span></td></tr>
+        <tr><td>Link</td><td><code>ds-link</code></td><td><span data-lang="pt">Links de termos e voltar ao login</span><span data-lang="en">Terms links and back to login</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title"><span data-lang="pt">Padrões de formulário complexo</span><span data-lang="en">Complex form patterns</span></h2>
+    <table class="ds-token-table">
+      <thead><tr><th><span data-lang="pt">Padrão</span><span data-lang="en">Pattern</span></th><th><span data-lang="pt">Como implementar</span><span data-lang="en">How to implement</span></th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span data-lang="pt">Campos lado a lado</span><span data-lang="en">Side-by-side fields</span></td>
+          <td><span data-lang="pt">Container com <code>grid-template-columns: 1fr 1fr</code> usando <code>var(--ds-space-lg)</code> de gap. Em mobile (<480px), colapsa para 1 coluna.</span><span data-lang="en">Container with <code>grid-template-columns: 1fr 1fr</code> using <code>var(--ds-space-lg)</code> gap. Collapses to 1 column on mobile (&lt;480px).</span></td>
+        </tr>
+        <tr>
+          <td><span data-lang="pt">Helper text de validação</span><span data-lang="en">Validation helper text</span></td>
+          <td><span data-lang="pt"><code>.ds-field__helper</code> conectado ao input via <code>aria-describedby</code>. Em erro, troca para <code>.ds-field__error</code> e adiciona <code>.ds-field--error</code> no <code>.ds-field</code> pai.</span><span data-lang="en"><code>.ds-field__helper</code> connected to input via <code>aria-describedby</code>. On error, switch to <code>.ds-field__error</code> and add <code>.ds-field--error</code> on parent <code>.ds-field</code>.</span></td>
+        </tr>
+        <tr>
+          <td><span data-lang="pt">Campo obrigatório</span><span data-lang="en">Required field</span></td>
+          <td><span data-lang="pt"><code>.ds-field__required</code> com <code>aria-hidden="true"</code> (indicador visual) + <code>aria-required="true"</code> no input (indicador semântico). Nunca confie só no asterisco.</span><span data-lang="en"><code>.ds-field__required</code> with <code>aria-hidden="true"</code> (visual indicator) + <code>aria-required="true"</code> on input (semantic indicator). Never rely on the asterisk alone.</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title"><span data-lang="pt">Acessibilidade</span><span data-lang="en">Accessibility</span></h2>
+    <div class="ds-callout ds-callout--success">
+      <div class="ds-callout__title">WCAG 2.2 AA</div>
+      <span data-lang="pt">Checkbox group usa <code>role="group"</code> com <code>aria-labelledby</code>. Campos obrigatórios têm <code>aria-required="true"</code>. O painel de marca tem <code>aria-label</code> como complemento. Foco gerenciado naturalmente pela ordem do DOM.</span>
+      <span data-lang="en">Checkbox group uses <code>role="group"</code> with <code>aria-labelledby</code>. Required fields have <code>aria-required="true"</code>. Brand panel has an <code>aria-label</code> as complement. Focus is managed naturally by DOM order.</span>
+    </div>
+  </div>
+
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title"><span data-lang="pt">Relacionados</span><span data-lang="en">Related</span></h2>
+    <div class="ds-related">
+      <a href="template-login.html" class="ds-related__link"><span data-lang="pt">Template: Login</span><span data-lang="en">Template: Login</span></a>
+      <a href="form-field.html" class="ds-related__link">Form Field</a>
+      <a href="checkbox.html" class="ds-related__link">Checkbox</a>
+      <a href="select.html" class="ds-related__link">Select</a>
+    </div>
+  </div>
+
+</main>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
