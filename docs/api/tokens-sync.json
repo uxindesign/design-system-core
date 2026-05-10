@@ -1,11 +1,11 @@
 {
   "version": "1.0.0-beta.4",
   "totals": {
-    "jsonTokens": 625,
+    "jsonTokens": 619,
     "sharedTokens": 265,
-    "lightTokens": 180,
-    "darkTokens": 180,
-    "errors": 14,
+    "lightTokens": 177,
+    "darkTokens": 177,
+    "errors": 8,
     "warnings": 2
   },
   "checks": {
@@ -15,20 +15,19 @@
     "registryCompleteness": [
       {
         "level": "warning",
-        "message": "7 entries com campos TODO (sentido/contexto/decisao). Preencha incrementalmente.",
+        "message": "4 entries com campos TODO (sentido/contexto/decisao). Preencha incrementalmente.",
         "sample": [
           "semantic.control.toggle.height.sm",
           "semantic.control.toggle.height.md",
           "semantic.control.toggle.height.lg",
-          "semantic.control.toggle.thumb.gap",
-          "semantic.control.toggle.width.sm"
+          "semantic.control.toggle.thumb.gap"
         ]
       }
     ],
     "docTokenDrift": [],
     "jsonVsFigma": {
       "skipped": false,
-      "snapshotAge": "56h",
+      "snapshotAge": "32h",
       "snapshotFreshness": "stale",
       "snapshotMaxAgeHours": 24,
       "summary": {
@@ -36,7 +35,7 @@
         "figmaCollectionCount": 2,
         "VALUE_DRIFT": 0,
         "NEEDS_SYNC": 0,
-        "DRIFT_FROM_SOURCE": 14,
+        "DRIFT_FROM_SOURCE": 8,
         "ALIAS_BROKEN": 0,
         "CSS_ONLY": 7,
         "BY_DESIGN": 118
@@ -46,7 +45,7 @@
           "level": "warning",
           "category": "STALE_SNAPSHOT",
           "token": ".figma-snapshot.json",
-          "message": "snapshot Figma tem 56h (> 24h). Regenerar via use_figma antes de concluir sync/release."
+          "message": "snapshot Figma tem 32h (> 24h). Regenerar via use_figma antes de concluir sync/release."
         },
         {
           "level": "error",
@@ -68,27 +67,6 @@
           "token": "semantic.control.toggle.height.lg",
           "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
           "json": "{foundation.dimension.32}"
-        },
-        {
-          "level": "error",
-          "category": "DRIFT_FROM_SOURCE",
-          "token": "semantic.control.toggle.width.sm",
-          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
-          "json": "{foundation.dimension.28}"
-        },
-        {
-          "level": "error",
-          "category": "DRIFT_FROM_SOURCE",
-          "token": "semantic.control.toggle.width.md",
-          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
-          "json": "{foundation.dimension.44}"
-        },
-        {
-          "level": "error",
-          "category": "DRIFT_FROM_SOURCE",
-          "token": "semantic.control.toggle.width.lg",
-          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
-          "json": "{foundation.dimension.56}"
         },
         {
           "level": "error",
@@ -117,27 +95,6 @@
           "token": "semantic.control.toggle.height.lg",
           "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
           "json": "{foundation.dimension.32}"
-        },
-        {
-          "level": "error",
-          "category": "DRIFT_FROM_SOURCE",
-          "token": "semantic.control.toggle.width.sm",
-          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
-          "json": "{foundation.dimension.28}"
-        },
-        {
-          "level": "error",
-          "category": "DRIFT_FROM_SOURCE",
-          "token": "semantic.control.toggle.width.md",
-          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
-          "json": "{foundation.dimension.44}"
-        },
-        {
-          "level": "error",
-          "category": "DRIFT_FROM_SOURCE",
-          "token": "semantic.control.toggle.width.lg",
-          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
-          "json": "{foundation.dimension.56}"
         },
         {
           "level": "error",
@@ -168,21 +125,6 @@
           },
           {
             "file": "semantic/light.json",
-            "token": "semantic.control.toggle.width.sm",
-            "json": "{foundation.dimension.28}"
-          },
-          {
-            "file": "semantic/light.json",
-            "token": "semantic.control.toggle.width.md",
-            "json": "{foundation.dimension.44}"
-          },
-          {
-            "file": "semantic/light.json",
-            "token": "semantic.control.toggle.width.lg",
-            "json": "{foundation.dimension.56}"
-          },
-          {
-            "file": "semantic/light.json",
             "token": "semantic.control.toggle.thumb.gap",
             "json": "{foundation.dimension.2}"
           },
@@ -200,21 +142,6 @@
             "file": "semantic/dark.json",
             "token": "semantic.control.toggle.height.lg",
             "json": "{foundation.dimension.32}"
-          },
-          {
-            "file": "semantic/dark.json",
-            "token": "semantic.control.toggle.width.sm",
-            "json": "{foundation.dimension.28}"
-          },
-          {
-            "file": "semantic/dark.json",
-            "token": "semantic.control.toggle.width.md",
-            "json": "{foundation.dimension.44}"
-          },
-          {
-            "file": "semantic/dark.json",
-            "token": "semantic.control.toggle.width.lg",
-            "json": "{foundation.dimension.56}"
           },
           {
             "file": "semantic/dark.json",

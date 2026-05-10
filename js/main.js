@@ -93,16 +93,6 @@
       items: [
         { label: 'Brand Principles', path: 'docs/brand-principles.html' }
       ]
-    },
-    {
-      heading: 'Templates',
-      items: [
-        { label: 'Overview',   path: 'docs/templates.html' },
-        { label: 'Login',      path: 'docs/template-login.html' },
-        { label: 'Cadastro',   path: 'docs/template-signup.html' },
-        { label: 'Dashboard',  path: 'docs/template-dashboard.html' },
-        { label: 'Landing Page', path: 'docs/template-landing.html' }
-      ]
     }
   ];
 
