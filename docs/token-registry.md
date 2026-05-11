@@ -6,8 +6,8 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Status
 
-- Total de tokens: **508**
-- Com metadados completos: **508**
+- Total de tokens: **516**
+- Com metadados completos: **516**
 - Pendentes (`TODO` em algum campo obrigatório): **0**
 - Completude: **100%**
 
@@ -360,7 +360,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.border.inverse` | color | → `foundation.color.neutral.50` | Borda invertida — sobre dark surfaces em light mode. | 1 |
 | `semantic.border.strong` | color | → `foundation.color.neutral.600` | Borda neutra forte — emphasis em separadores. | 0 |
 | `semantic.border.subtle` | color | → `foundation.color.neutral.200` | Borda neutra sutil — chips, code blocks. | 3 |
-| `semantic.border.width.default` | dimension | → `foundation.border.width.1` | Border-width default. | 13 |
+| `semantic.border.width.default` | dimension | → `foundation.border.width.1` | Border-width default. | 14 |
 | `semantic.border.width.focus` | dimension | → `foundation.border.width.2` | Border-width focus. | 12 |
 | `semantic.border.width.strong` | dimension | → `foundation.border.width.2` | Border-width strong. | 3 |
 
@@ -574,8 +574,8 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.typography.body.font-size.md` | dimension | → `foundation.typography.font.size.16` | font-size md pra texto UI geral. | 0 |
 | `semantic.typography.body.font-size.sm` | dimension | → `foundation.typography.font.size.14` | font-size sm pra texto UI geral. | 3 |
 | `semantic.typography.body.font-size.xl` | dimension | → `foundation.typography.font.size.20` | font-size xl pra texto UI geral. | 2 |
-| `semantic.typography.body.font-size.xs` | dimension | → `foundation.typography.font.size.12` | font-size xs pra texto UI geral. | 0 |
-| `semantic.typography.body.font-weight.bold` | number | → `foundation.typography.font.weight.bold` | font-weight bold pra texto UI geral. | 2 |
+| `semantic.typography.body.font-size.xs` | dimension | → `foundation.typography.font.size.12` | font-size xs pra texto UI geral. | 1 |
+| `semantic.typography.body.font-weight.bold` | number | → `foundation.typography.font.weight.bold` | font-weight bold pra texto UI geral. | 3 |
 | `semantic.typography.body.font-weight.medium` | number | → `foundation.typography.font.weight.medium` | font-weight medium pra texto UI geral. | 0 |
 | `semantic.typography.body.font-weight.regular` | number | → `foundation.typography.font.weight.regular` | font-weight regular pra texto UI geral. | 1 |
 | `semantic.typography.body.font-weight.semibold` | number | → `foundation.typography.font.weight.semibold` | font-weight semibold pra texto UI geral. | 1 |
@@ -595,7 +595,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.typography.body.line-height.md` | dimension | → `foundation.typography.line.height.24` | line-height md pra texto UI geral. | 0 |
 | `semantic.typography.body.line-height.sm` | dimension | → `foundation.typography.line.height.20` | line-height sm pra texto UI geral. | 3 |
 | `semantic.typography.body.line-height.xl` | dimension | → `foundation.typography.line.height.32` | line-height xl pra texto UI geral. | 1 |
-| `semantic.typography.body.line-height.xs` | dimension | → `foundation.typography.line.height.18` | line-height xs pra texto UI geral. | 0 |
+| `semantic.typography.body.line-height.xs` | dimension | → `foundation.typography.line.height.18` | line-height xs pra texto UI geral. | 1 |
 
 ### semantic.z
 
@@ -605,7 +605,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Component
 
-69 tokens.
+77 tokens.
 
 ### component.avatar
 
@@ -627,6 +627,19 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.avatar.root.size.lg` | dimension | → `semantic.size.3xl` | Tamanho do root circular do Avatar por size. | 1 |
 | `component.avatar.root.size.md` | dimension | → `semantic.size.xl` | Tamanho do root circular do Avatar por size. | 1 |
 | `component.avatar.root.size.sm` | dimension | → `semantic.size.lg` | Tamanho do root circular do Avatar por size. | 1 |
+
+### component.badge
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `component.badge.label.font-size.default` | dimension | → `semantic.typography.body.font-size.xs` | Font-size do label Badge. | 1 |
+| `component.badge.label.font-weight.default` | number | → `semantic.typography.body.font-weight.bold` | Font-weight do label Badge. | 1 |
+| `component.badge.label.line-height.default` | dimension | → `semantic.typography.body.line-height.xs` | Line-height do label Badge. | 1 |
+| `component.badge.root.border-width.default` | dimension | → `semantic.border.width.default` | Border width do root Badge quando stroke esta ativo. | 1 |
+| `component.badge.root.gap.default` | dimension | → `semantic.space.xs` | Gap interno do root Badge. | 1 |
+| `component.badge.root.padding-x.default` | dimension | → `semantic.space.sm` | Padding horizontal do root Badge. | 1 |
+| `component.badge.root.padding-y.default` | dimension | → `semantic.space.2xs` | Padding vertical do root Badge. | 1 |
+| `component.badge.root.radius.default` | dimension | → `semantic.radius.full` | Radius pill do root Badge. | 1 |
 
 ### component.button
 
@@ -4182,7 +4195,6 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/base/reset.css` (1×)
     - `css/components/alert.css` (4×)
-    - `css/components/badge.css` (1×)
     - `css/components/button.css` (1×)
     - `css/components/card.css` (2×)
     - `css/components/checkbox.css` (1×)
@@ -4193,6 +4205,8 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/tabs.css` (1×)
     - `css/components/textarea.css` (1×)
     - `css/components/toggle.css` (3×)
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.badge.root.border-width.default`
 
 ### `semantic.border.width.focus`
 
@@ -5252,11 +5266,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.radius.999.
 - **Usos**:
   - CSS:
-    - `css/components/badge.css` (1×)
     - `css/components/radio.css` (2×)
     - `css/components/toggle.css` (2×)
-    - `css/tokens/generated/component.css` (3×)
-  - Tokens que referenciam: `component.avatar.root.radius.default`, `component.skeleton.circle.radius.default`, `component.spinner.root.radius.default`
+    - `css/tokens/generated/component.css` (4×)
+  - Tokens que referenciam: `component.avatar.root.radius.default`, `component.badge.root.radius.default`, `component.skeleton.circle.radius.default`, `component.spinner.root.radius.default`
 
 ### `semantic.radius.lg`
 
@@ -5589,12 +5602,11 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.dimension.2.
 - **Usos**:
   - CSS:
-    - `css/components/badge.css` (1×)
     - `css/components/checkbox.css` (1×)
     - `css/components/form-field.css` (1×)
     - `css/components/radio.css` (1×)
-    - `css/tokens/generated/component.css` (1×)
-  - Tokens que referenciam: `component.toggle.thumb.inset.default`
+    - `css/tokens/generated/component.css` (2×)
+  - Tokens que referenciam: `component.badge.root.padding-y.default`, `component.toggle.thumb.inset.default`
 
 ### `semantic.space.control.padding.10`
 
@@ -5726,7 +5738,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/alert.css` (1×)
-    - `css/components/badge.css` (1×)
     - `css/components/button.css` (3×)
     - `css/components/card.css` (2×)
     - `css/components/checkbox.css` (3×)
@@ -5737,9 +5748,9 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/textarea.css` (2×)
     - `css/components/toggle.css` (1×)
     - `css/components/tooltip.css` (4×)
-    - `css/tokens/generated/component.css` (2×)
+    - `css/tokens/generated/component.css` (3×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.tooltip.content.padding-x.default`, `component.tooltip.arrow.base.default`
+  - Tokens que referenciam: `component.badge.root.padding-x.default`, `component.tooltip.content.padding-x.default`, `component.tooltip.arrow.base.default`
 
 ### `semantic.space.xl`
 
@@ -5767,7 +5778,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/alert.css` (1×)
-    - `css/components/badge.css` (1×)
     - `css/components/breadcrumb.css` (1×)
     - `css/components/button.css` (1×)
     - `css/components/checkbox.css` (6×)
@@ -5777,9 +5787,9 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/radio.css` (7×)
     - `css/components/select.css` (1×)
     - `css/components/toggle.css` (2×)
-    - `css/tokens/generated/component.css` (2×)
+    - `css/tokens/generated/component.css` (3×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.tooltip.content.padding-y.default`, `component.tooltip.arrow.depth.default`
+  - Tokens que referenciam: `component.badge.root.gap.default`, `component.tooltip.content.padding-y.default`, `component.tooltip.arrow.depth.default`
 
 ### `semantic.surface.default`
 
@@ -6107,7 +6117,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-xs`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.size.12.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - Tokens que referenciam: `component.badge.label.font-size.default`
 
 ### `semantic.typography.body.font-weight.bold`
 
@@ -6119,7 +6129,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-bold`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.weight.bold.
 - **Usos**:
-  - Tokens que referenciam: `component.avatar.initials.font-weight.sm`, `component.avatar.initials.font-weight.md`
+  - Tokens que referenciam: `component.avatar.initials.font-weight.sm`, `component.avatar.initials.font-weight.md`, `component.badge.label.font-weight.default`
 
 ### `semantic.typography.body.font-weight.medium`
 
@@ -6359,7 +6369,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-xs`.
 - **Decisão**: Aliasado a Foundation foundation.typography.line.height.18.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - Tokens que referenciam: `component.badge.label.line-height.default`
 
 ### `semantic.z.tooltip`
 
@@ -6581,6 +6591,110 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/avatar.css` (2×)
+
+### `component.badge.label.font-size.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.font-size.xs`
+- **Sentido**: Font-size do label Badge.
+- **Escopo**: font-size
+- **Contexto**: Component token do contrato anatomico Badge Label. Binda fontSize dos 12 labels no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.typography.body.font-size.xs porque o label usa body/xs, mas a escala tipografica do Badge e contrato publico do componente.
+- **Usos**:
+  - CSS:
+    - `css/components/badge.css` (1×)
+
+### `component.badge.label.font-weight.default`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.font-weight.bold`
+- **Sentido**: Font-weight do label Badge.
+- **Escopo**: font-weight
+- **Contexto**: Component token do contrato anatomico Badge Label. Binda fontStyle dos 12 labels no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.typography.body.font-weight.bold porque Badge usa label bold; no Figma o campo bindavel e fontStyle/string, enquanto no JSON/CSS o contrato permanece numerico.
+- **Usos**:
+  - CSS:
+    - `css/components/badge.css` (1×)
+
+### `component.badge.label.line-height.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.line-height.xs`
+- **Sentido**: Line-height do label Badge.
+- **Escopo**: line-height
+- **Contexto**: Component token do contrato anatomico Badge Label. Binda lineHeight dos 12 labels no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.typography.body.line-height.xs porque o label usa body/xs, mas a metrica vertical do Badge e contrato publico do componente.
+- **Usos**:
+  - CSS:
+    - `css/components/badge.css` (1×)
+
+### `component.badge.root.border-width.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.border.width.default`
+- **Sentido**: Border width do root Badge quando stroke esta ativo.
+- **Escopo**: border-width
+- **Contexto**: Component token do contrato anatomico Badge Root. Binda stroke weights do variant Neutral/Subtle no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.border.width.default porque 1px e padrao reutilizavel, mas no Badge documenta a espessura publica do stroke quando o estilo exige borda.
+- **Usos**:
+  - CSS:
+    - `css/components/badge.css` (1×)
+
+### `component.badge.root.gap.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.xs`
+- **Sentido**: Gap interno do root Badge.
+- **Escopo**: gap
+- **Contexto**: Component token do contrato anatomico Badge Root. Binda itemSpacing dos 12 variants no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.space.xs porque 4px e escala reutilizavel, mas no Badge documenta o gap interno entre conteudo e adornos futuros.
+- **Usos**:
+  - CSS:
+    - `css/components/badge.css` (1×)
+
+### `component.badge.root.padding-x.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.sm`
+- **Sentido**: Padding horizontal do root Badge.
+- **Escopo**: padding-left, padding-right
+- **Contexto**: Component token do contrato anatomico Badge Root. Binda paddingLeft/paddingRight dos 12 variants no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.space.sm porque 8px e escala reutilizavel, mas no Badge documenta o padding horizontal publico do pill.
+- **Usos**:
+  - CSS:
+    - `css/components/badge.css` (1×)
+
+### `component.badge.root.padding-y.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.2xs`
+- **Sentido**: Padding vertical do root Badge.
+- **Escopo**: padding-top, padding-bottom
+- **Contexto**: Component token do contrato anatomico Badge Root. Binda paddingTop/paddingBottom dos 12 variants no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.space.2xs porque 2px e escala reutilizavel, mas no Badge documenta o padding vertical publico do pill.
+- **Usos**:
+  - CSS:
+    - `css/components/badge.css` (1×)
+
+### `component.badge.root.radius.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.radius.full`
+- **Sentido**: Radius pill do root Badge.
+- **Escopo**: border-radius
+- **Contexto**: Component token do contrato anatomico Badge Root. Binda os 4 corner radii dos 12 variants no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.radius.full porque a circularidade e reutilizavel, mas no Badge e parte publica da anatomia pill.
+- **Usos**:
+  - CSS:
+    - `css/components/badge.css` (1×)
 
 ### `component.button.root.height.lg`
 

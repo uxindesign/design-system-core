@@ -4592,10 +4592,6 @@
             "count": 4
           },
           {
-            "file": "css/components/badge.css",
-            "count": 1
-          },
-          {
             "file": "css/components/button.css",
             "count": 1
           },
@@ -4634,9 +4630,15 @@
           {
             "file": "css/components/toggle.css",
             "count": 3
+          },
+          {
+            "file": "css/tokens/generated/component.css",
+            "count": 1
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "component.badge.root.border-width.default"
+        ],
         "figma": []
       }
     },
@@ -5104,7 +5106,8 @@
         "css": [],
         "tokens": [
           "component.avatar.initials.font-weight.sm",
-          "component.avatar.initials.font-weight.md"
+          "component.avatar.initials.font-weight.md",
+          "component.badge.label.font-weight.default"
         ],
         "figma": []
       }
@@ -5153,7 +5156,9 @@
       "decisao": "Aliasado a Foundation foundation.typography.font.size.12.",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "component.badge.label.font-size.default"
+        ],
         "figma": []
       }
     },
@@ -5274,7 +5279,9 @@
       "decisao": "Aliasado a Foundation foundation.typography.line.height.18.",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "component.badge.label.line-height.default"
+        ],
         "figma": []
       }
     },
@@ -6619,10 +6626,6 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/badge.css",
-            "count": 1
-          },
-          {
             "file": "css/components/checkbox.css",
             "count": 1
           },
@@ -6636,10 +6639,11 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [
+          "component.badge.root.padding-y.default",
           "component.toggle.thumb.inset.default"
         ],
         "figma": []
@@ -6661,10 +6665,6 @@
         "css": [
           {
             "file": "css/components/alert.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/badge.css",
             "count": 1
           },
           {
@@ -6705,7 +6705,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 2
+            "count": 3
           },
           {
             "file": "css/utilities/layout.css",
@@ -6713,6 +6713,7 @@
           }
         ],
         "tokens": [
+          "component.badge.root.gap.default",
           "component.tooltip.content.padding-y.default",
           "component.tooltip.arrow.depth.default"
         ],
@@ -6735,10 +6736,6 @@
         "css": [
           {
             "file": "css/components/alert.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/badge.css",
             "count": 1
           },
           {
@@ -6783,7 +6780,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 2
+            "count": 3
           },
           {
             "file": "css/utilities/layout.css",
@@ -6791,6 +6788,7 @@
           }
         ],
         "tokens": [
+          "component.badge.root.padding-x.default",
           "component.tooltip.content.padding-x.default",
           "component.tooltip.arrow.base.default"
         ],
@@ -7113,10 +7111,6 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/badge.css",
-            "count": 1
-          },
-          {
             "file": "css/components/radio.css",
             "count": 2
           },
@@ -7126,11 +7120,12 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 3
+            "count": 4
           }
         ],
         "tokens": [
           "component.avatar.root.radius.default",
+          "component.badge.root.radius.default",
           "component.skeleton.circle.radius.default",
           "component.spinner.root.radius.default"
         ],
@@ -11784,6 +11779,176 @@
         "css": [
           {
             "file": "css/components/tooltip.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.badge.root.padding-x.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.sm",
+      "sentido": "Padding horizontal do root Badge.",
+      "escopo": [
+        "padding-left",
+        "padding-right"
+      ],
+      "contexto": "Component token do contrato anatomico Badge Root. Binda paddingLeft/paddingRight dos 12 variants no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.sm porque 8px e escala reutilizavel, mas no Badge documenta o padding horizontal publico do pill.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/badge.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.badge.root.padding-y.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.2xs",
+      "sentido": "Padding vertical do root Badge.",
+      "escopo": [
+        "padding-top",
+        "padding-bottom"
+      ],
+      "contexto": "Component token do contrato anatomico Badge Root. Binda paddingTop/paddingBottom dos 12 variants no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.2xs porque 2px e escala reutilizavel, mas no Badge documenta o padding vertical publico do pill.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/badge.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.badge.root.gap.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xs",
+      "sentido": "Gap interno do root Badge.",
+      "escopo": [
+        "gap"
+      ],
+      "contexto": "Component token do contrato anatomico Badge Root. Binda itemSpacing dos 12 variants no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.xs porque 4px e escala reutilizavel, mas no Badge documenta o gap interno entre conteudo e adornos futuros.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/badge.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.badge.root.radius.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.radius.full",
+      "sentido": "Radius pill do root Badge.",
+      "escopo": [
+        "border-radius"
+      ],
+      "contexto": "Component token do contrato anatomico Badge Root. Binda os 4 corner radii dos 12 variants no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.radius.full porque a circularidade e reutilizavel, mas no Badge e parte publica da anatomia pill.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/badge.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.badge.root.border-width.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.border.width.default",
+      "sentido": "Border width do root Badge quando stroke esta ativo.",
+      "escopo": [
+        "border-width"
+      ],
+      "contexto": "Component token do contrato anatomico Badge Root. Binda stroke weights do variant Neutral/Subtle no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.border.width.default porque 1px e padrao reutilizavel, mas no Badge documenta a espessura publica do stroke quando o estilo exige borda.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/badge.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.badge.label.font-size.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.xs",
+      "sentido": "Font-size do label Badge.",
+      "escopo": [
+        "font-size"
+      ],
+      "contexto": "Component token do contrato anatomico Badge Label. Binda fontSize dos 12 labels no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-size.xs porque o label usa body/xs, mas a escala tipografica do Badge e contrato publico do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/badge.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.badge.label.line-height.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.xs",
+      "sentido": "Line-height do label Badge.",
+      "escopo": [
+        "line-height"
+      ],
+      "contexto": "Component token do contrato anatomico Badge Label. Binda lineHeight dos 12 labels no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.line-height.xs porque o label usa body/xs, mas a metrica vertical do Badge e contrato publico do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/badge.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.badge.label.font-weight.default": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.font-weight.bold",
+      "sentido": "Font-weight do label Badge.",
+      "escopo": [
+        "font-weight"
+      ],
+      "contexto": "Component token do contrato anatomico Badge Label. Binda fontStyle dos 12 labels no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-weight.bold porque Badge usa label bold; no Figma o campo bindavel e fontStyle/string, enquanto no JSON/CSS o contrato permanece numerico.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/badge.css",
             "count": 1
           }
         ],

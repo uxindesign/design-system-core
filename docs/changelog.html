@@ -72,6 +72,8 @@
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
 <h3>Corrigido</h3>
 <ul>
+<li><p><strong>Badge Figma/CSS aplicado aos Component tokens anatómicos.</strong> Criado <code>component.badge</code> para padding/gap/radius/border-width do root e tipografia do label; os 12 variants vivos do Figma (<code>6</code> cores × <code>2</code> estilos) agora usam Component tokens nesses contratos. CSS passa a consumir <code>--ds-badge-*</code>; documentação corrige inventário de cores para 6 e remove mappings antigos/stale.</p>
+</li>
 <li><p><strong>Tooltip Figma/CSS aplicado aos Component tokens anatómicos.</strong> Criado <code>component.tooltip</code> para padding/radius do content, tipografia do label e dimensões da seta (<code>base/depth</code>); os 4 variants <code>Position</code> do Figma agora usam Component tokens nesses contratos. CSS passa a consumir <code>--ds-tooltip-*</code>; cores e z-index permanecem Semantic.</p>
 </li>
 <li><p><strong>Skeleton Figma/CSS aplicado aos Component tokens anatómicos.</strong> Criado <code>component.skeleton.{text,circle,rectangle}</code> para height/size/radius dos 3 variants vivos do Figma; Text e Rectangle usam alturas anatómicas específicas (<code>12/120</code>) e Circle usa <code>semantic.size.xl</code> (<code>40</code>). CSS passa a consumir <code>--ds-skeleton-*</code>; documentação corrige background para <code>semantic.background.subtle</code> e remove mappings antigos de radius Foundation.</p>

@@ -20,7 +20,7 @@
 |--------|--------|----------|
 | Foundation/Core | **266** | 9 |
 | Semantic/System | **173 × 2 modos** | light.json + dark.json |
-| Component | **69** | 11 |
+| Component | **77** | 12 |
 
 ## Foundation (266 tokens)
 
@@ -62,11 +62,12 @@ semantic.typography.*
 semantic.z.*
 ```
 
-## Component (69 tokens)
+## Component (77 tokens)
 
 | Arquivo | Tokens |
 |---------|--------|
 | `avatar.json` | 16 |
+| `badge.json` | 8 |
 | `button.json` | 3 |
 | `checkbox.json` | 6 |
 | `input.json` | 3 |
