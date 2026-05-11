@@ -180,12 +180,13 @@ function checkJsonIntegrity(lightAll, darkAll) {
 }
 
 // -----------------------------------------------------------------------------
-// 1b. CSS foundation leak — ADR-013 (atualizado pra 2-layer + naming numérico, 0.7.0)
+// 1b. CSS foundation leak — ADR-013/019
 //
 // Component CSS (`css/components/*.css`) e base CSS (`css/base/*.css`) não
-// podem consumir tokens Foundation direto. Só Semantic.
+// podem consumir tokens Foundation direto. Componentes migrados consomem
+// Component; componentes ainda não migrados podem consumir Semantic direto.
 //
-// Pós-migração 2-layer (0.7.0):
+// Pós-migração 2-layer (0.7.0) + reintrodução Component (ADR-019):
 //   Foundation usa naming NUMÉRICO   (radius-8, spacing-16, font-size-14)
 //   Semantic   usa naming T-SHIRT    (radius-md, space-sm, body-font-size-sm)
 //

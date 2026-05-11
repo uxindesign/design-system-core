@@ -1,6 +1,6 @@
 # Inventário de componentes — Design System Core
 
-> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-05-09. Não editar manualmente.
+> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-05-11. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
 > Versão atual: **1.0.0-beta.4**
 
@@ -42,8 +42,9 @@
 | Coleção | Tokens | Status |
 |---------|--------|--------|
 | Foundation | 265 | 🟢 |
-| Semantic (light) | 180 | 🟢 |
-| Semantic (dark) | 180 | 🟢 |
+| Semantic (light) | 173 | 🟢 |
+| Semantic (dark) | 173 | 🟢 |
+| Component | 22 | 🟢 |
 
 ## Pipeline
 
@@ -51,7 +52,7 @@
 |-------|--------|
 | JSON (DTCG) canônico | 🟢 `tokens/` |
 | Style Dictionary | 🟢 `build-tokens.mjs` |
-| CSS gerado | 🟢 4 arquivos em `css/tokens/generated/` |
+| CSS gerado | 🟢 5 arquivos em `css/tokens/generated/` |
 | Import pipeline | 🟢 index.css importa apenas generated/ |
 | Figma binding | 🟢 19 componentes vinculados |
 
@@ -71,12 +72,13 @@
 | ADR-010 | Remoção de `foundation.color.white` e `foundation.color.black` puros | Aceita — Implementada em 0.5.0 |
 | ADR-011 | Reestruturação do naming de tokens semânticos de cor | Aceita — Implementada em 0.5.0 |
 | ADR-012 | Tokens de line-height e letter-spacing divergem por design entre Figma e JSON | Aceita |
-| ADR-013 | Camadas de consumo de tokens — Foundation nunca direto em consumidor final | Aceita — implementada em 0.7.0 (Component layer eliminada) e fechada em 1.0.0-beta.1 (0 leaks Foundation em `css/components/*.css` e `css/base/*.css`) |
+| ADR-013 | Camadas de consumo de tokens — Foundation nunca direto em consumidor final | Aceita — implementada em 0.7.0 e parcialmente substituída por ADR-019 em 2026-05-11 |
 | ADR-014 | Reestruturação Semantic em `action` × `style` × `prop` × `state` — eliminação de brand/accent e themes | Aceita — implementada em 0.7.0 e estabilizada em 1.0.0-beta.1 |
 | ADR-015 | — Unificação da escala size, eliminação de tokens component-specific e renomeação spacing→dimension | Aceito |
 | ADR-016 | — Tokens sem equivalência no Figma (CSS-only) | Aceito |
 | ADR-017 | — Componentes CSS-only (sem equivalência no Figma) | Aceito |
 | ADR-018 | — Renomear `content.{default,secondary,tertiary}` para `content.{strong,default,subtle}` | Aceito |
+| ADR-019 | — Reintroducao de Component tokens como contrato anatomico | Aceito |
 
 ## Próximos milestones
 

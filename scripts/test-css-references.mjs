@@ -42,7 +42,7 @@ for (const f of fs.readdirSync(generatedDir)) {
 }
 
 console.log(`\n═══ test-css-references ══════════════════════`);
-console.log(`Valid CSS vars (Foundation + Semantic): ${validVars.size}`);
+console.log(`Valid CSS vars (Foundation + Semantic + Component): ${validVars.size}`);
 
 // ──────────────────────────────────────────────────────────────────
 // 2. Check var() refs in CSS files

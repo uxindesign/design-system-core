@@ -1,6 +1,6 @@
 # Token schema — Design System Core
 
-> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-05-09. Não editar manualmente.
+> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-05-11. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
 > Versão atual: **1.0.0-beta.4**
 
@@ -12,14 +12,15 @@
 | Formato canônico | JSON (DTCG) em `tokens/` |
 | CSS gerado | Style Dictionary → `css/tokens/generated/` |
 | Pipeline | ✅ index.css importa apenas generated/ |
-| Paridade light/dark | ✅ 180 tokens em ambos os modos |
+| Paridade light/dark | ✅ 173 tokens em ambos os modos |
 
 ## Camadas
 
 | Camada | Tokens | Arquivos |
 |--------|--------|----------|
-| Foundation | **265** | 9 |
-| Semantic | **180 × 2 modos** | light.json + dark.json |
+| Foundation/Core | **265** | 9 |
+| Semantic/System | **173 × 2 modos** | light.json + dark.json |
+| Component | **22** | 3 |
 
 ## Foundation (265 tokens)
 
@@ -35,12 +36,11 @@
 | `typography.json` | 54 |
 | `z-index.json` | 6 |
 
-## Semantic (180 tokens × 2 modos)
+## Semantic (173 tokens × 2 modos)
 
 Categorias raiz em light.json:
 
 ```
-semantic.control.*
 semantic.primary.*
 semantic.toned.*
 semantic.outline.*
@@ -62,11 +62,19 @@ semantic.typography.*
 semantic.z.*
 ```
 
+## Component (22 tokens)
+
+| Arquivo | Tokens |
+|---------|--------|
+| `checkbox.json` | 6 |
+| `radio.json` | 6 |
+| `toggle.json` | 10 |
+
 ## Regras invioláveis
 
-1. Consumidores finais (CSS, Figma bindings e docs de componente) consomem Semantic, nunca Foundation direto
-2. Semantic → Foundation, nunca hardcoded
-3. Foundation é a única camada com valores absolutos
+1. Componentes migrados consomem Component tokens; componentes ainda não migrados podem consumir Semantic direto durante a transição
+2. Component → Semantic; Semantic → Foundation; consumidor final nunca usa Foundation direto
+3. Foundation é a camada de primitivos; valores específicos fora da escala exigem ADR explícita
 4. Brand é Foundation — 2 tokens, sem estados, ponto de troca por tema
 5. Todo token tem `$type` conforme DTCG spec
 6. Tokens não óbvios têm `$description`
@@ -91,9 +99,10 @@ semantic.z.*
 - **ADR-010** — Remoção de `foundation.color.white` e `foundation.color.black` puros (Aceita — Implementada em 0.5.0)
 - **ADR-011** — Reestruturação do naming de tokens semânticos de cor (Aceita — Implementada em 0.5.0)
 - **ADR-012** — Tokens de line-height e letter-spacing divergem por design entre Figma e JSON (Aceita)
-- **ADR-013** — Camadas de consumo de tokens — Foundation nunca direto em consumidor final (Aceita — implementada em 0.7.0 (Component layer eliminada) e fechada em 1.0.0-beta.1 (0 leaks Foundation em `css/components/*.css` e `css/base/*.css`))
+- **ADR-013** — Camadas de consumo de tokens — Foundation nunca direto em consumidor final (Aceita — implementada em 0.7.0 e parcialmente substituída por ADR-019 em 2026-05-11)
 - **ADR-014** — Reestruturação Semantic em `action` × `style` × `prop` × `state` — eliminação de brand/accent e themes (Aceita — implementada em 0.7.0 e estabilizada em 1.0.0-beta.1)
 - **ADR-015** — — Unificação da escala size, eliminação de tokens component-specific e renomeação spacing→dimension (Aceito)
 - **ADR-016** — — Tokens sem equivalência no Figma (CSS-only) (Aceito)
 - **ADR-017** — — Componentes CSS-only (sem equivalência no Figma) (Aceito)
 - **ADR-018** — — Renomear `content.{default,secondary,tertiary}` para `content.{strong,default,subtle}` (Aceito)
+- **ADR-019** — — Reintroducao de Component tokens como contrato anatomico (Aceito)

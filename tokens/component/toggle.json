@@ -1,0 +1,70 @@
+{
+  "component": {
+    "toggle": {
+      "target": {
+        "height": {
+          "sm": {
+            "$type": "dimension",
+            "$value": "{semantic.size.lg}",
+            "$description": "Altura minima da area interativa Toggle sm."
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "{semantic.size.xl}",
+            "$description": "Altura minima da area interativa Toggle md."
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{semantic.size.2xl}",
+            "$description": "Altura minima da area interativa Toggle lg."
+          }
+        }
+      },
+      "track": {
+        "height": {
+          "sm": {
+            "$type": "dimension",
+            "$value": "{semantic.size.xs}",
+            "$description": "Altura da track Toggle sm."
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "{semantic.size.md}",
+            "$description": "Altura da track Toggle md."
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{semantic.size.lg}",
+            "$description": "Altura da track Toggle lg."
+          }
+        },
+        "width": {
+          "sm": {
+            "$type": "dimension",
+            "$value": "{foundation.dimension.28}",
+            "$description": "Largura especifica da track Toggle sm. Component-specific; nao ha Semantic reutilizavel."
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "{foundation.dimension.44}",
+            "$description": "Largura especifica da track Toggle md. Component-specific; nao ha Semantic reutilizavel."
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{foundation.dimension.56}",
+            "$description": "Largura especifica da track Toggle lg. Component-specific; nao ha Semantic reutilizavel."
+          }
+        }
+      },
+      "thumb": {
+        "inset": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.space.2xs}",
+            "$description": "Inset/gap do thumb Toggle usado pela implementacao CSS."
+          }
+        }
+      }
+    }
+  }
+}

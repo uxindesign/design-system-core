@@ -6609,9 +6609,15 @@
           {
             "file": "css/components/radio.css",
             "count": 1
+          },
+          {
+            "file": "css/tokens/generated/component.css",
+            "count": 1
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "component.toggle.thumb.inset.default"
+        ],
         "figma": []
       }
     },
@@ -7116,17 +7122,15 @@
           },
           {
             "file": "css/tokens/generated/theme-dark.css",
-            "count": 2
+            "count": 1
           },
           {
             "file": "css/tokens/generated/theme-light.css",
-            "count": 2
+            "count": 1
           }
         ],
         "tokens": [
-          "semantic.control.toggle.thumb.gap",
           "semantic.space.2xs",
-          "semantic.control.toggle.thumb.gap",
           "semantic.space.2xs"
         ],
         "figma": []
@@ -7332,18 +7336,16 @@
           },
           {
             "file": "css/tokens/generated/theme-dark.css",
-            "count": 3
+            "count": 2
           },
           {
             "file": "css/tokens/generated/theme-light.css",
-            "count": 3
+            "count": 2
           }
         ],
         "tokens": [
-          "semantic.control.toggle.height.sm",
           "semantic.space.lg",
           "semantic.size.xs",
-          "semantic.control.toggle.height.sm",
           "semantic.space.lg",
           "semantic.size.xs"
         ],
@@ -7398,18 +7400,16 @@
         "css": [
           {
             "file": "css/tokens/generated/theme-dark.css",
-            "count": 3
+            "count": 2
           },
           {
             "file": "css/tokens/generated/theme-light.css",
-            "count": 3
+            "count": 2
           }
         ],
         "tokens": [
-          "semantic.control.toggle.height.md",
           "semantic.space.2xl",
           "semantic.size.md",
-          "semantic.control.toggle.height.md",
           "semantic.space.2xl",
           "semantic.size.md"
         ],
@@ -7429,8 +7429,15 @@
       "contexto": "Use via Semantic `space.*` (gap/padding) ou `size.*` (width/height). Componentes não consomem direto.",
       "decisao": "Step da escala 2/4/6/8/10/12/14/16/20/24/28/32/36/40/44/48 — múltiplos de 2 e 4 cobrem todas as densidades de UI.",
       "usos": {
-        "css": [],
-        "tokens": [],
+        "css": [
+          {
+            "file": "css/tokens/generated/component.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "component.toggle.track.width.sm"
+        ],
         "figma": []
       }
     },
@@ -7450,20 +7457,16 @@
         "css": [
           {
             "file": "css/tokens/generated/theme-dark.css",
-            "count": 4
+            "count": 2
           },
           {
             "file": "css/tokens/generated/theme-light.css",
-            "count": 4
+            "count": 2
           }
         ],
         "tokens": [
-          "semantic.control.toggle.height.lg",
-          "semantic.control.toggle.width.sm",
           "semantic.space.section.sm",
           "semantic.size.lg",
-          "semantic.control.toggle.height.lg",
-          "semantic.control.toggle.width.sm",
           "semantic.space.section.sm",
           "semantic.size.lg"
         ],
@@ -7533,17 +7536,12 @@
       "usos": {
         "css": [
           {
-            "file": "css/tokens/generated/theme-dark.css",
-            "count": 1
-          },
-          {
-            "file": "css/tokens/generated/theme-light.css",
+            "file": "css/tokens/generated/component.css",
             "count": 1
           }
         ],
         "tokens": [
-          "semantic.control.toggle.width.md",
-          "semantic.control.toggle.width.md"
+          "component.toggle.track.width.md"
         ],
         "figma": []
       }
@@ -7595,17 +7593,12 @@
       "usos": {
         "css": [
           {
-            "file": "css/tokens/generated/theme-dark.css",
-            "count": 1
-          },
-          {
-            "file": "css/tokens/generated/theme-light.css",
+            "file": "css/tokens/generated/component.css",
             "count": 1
           }
         ],
         "tokens": [
-          "semantic.control.toggle.width.lg",
-          "semantic.control.toggle.width.lg"
+          "component.toggle.track.width.lg"
         ],
         "figma": []
       }
@@ -8965,16 +8958,8 @@
             "count": 1
           },
           {
-            "file": "css/components/checkbox.css",
-            "count": 2
-          },
-          {
             "file": "css/components/input.css",
             "count": 1
-          },
-          {
-            "file": "css/components/radio.css",
-            "count": 2
           },
           {
             "file": "css/components/select.css",
@@ -8983,9 +8968,17 @@
           {
             "file": "css/components/spinner.css",
             "count": 2
+          },
+          {
+            "file": "css/tokens/generated/component.css",
+            "count": 3
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "component.checkbox.box.size.sm",
+          "component.radio.control.size.sm",
+          "component.toggle.track.height.sm"
+        ],
         "figma": []
       }
     },
@@ -9016,7 +9009,7 @@
           },
           {
             "file": "css/components/checkbox.css",
-            "count": 4
+            "count": 2
           },
           {
             "file": "css/components/input.css",
@@ -9024,14 +9017,21 @@
           },
           {
             "file": "css/components/radio.css",
-            "count": 4
+            "count": 2
           },
           {
             "file": "css/components/select.css",
             "count": 5
+          },
+          {
+            "file": "css/tokens/generated/component.css",
+            "count": 2
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "component.checkbox.box.size.md",
+          "component.radio.control.size.md"
+        ],
         "figma": []
       }
     },
@@ -9061,16 +9061,8 @@
             "count": 3
           },
           {
-            "file": "css/components/checkbox.css",
-            "count": 2
-          },
-          {
             "file": "css/components/input.css",
             "count": 3
-          },
-          {
-            "file": "css/components/radio.css",
-            "count": 2
           },
           {
             "file": "css/components/select.css",
@@ -9079,9 +9071,17 @@
           {
             "file": "css/components/spinner.css",
             "count": 2
+          },
+          {
+            "file": "css/tokens/generated/component.css",
+            "count": 3
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "component.checkbox.box.size.lg",
+          "component.radio.control.size.lg",
+          "component.toggle.track.height.md"
+        ],
         "figma": []
       }
     },
@@ -9119,11 +9119,16 @@
             "count": 2
           },
           {
-            "file": "css/components/toggle.css",
-            "count": 1
+            "file": "css/tokens/generated/component.css",
+            "count": 4
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "component.checkbox.target.height.sm",
+          "component.radio.target.height.sm",
+          "component.toggle.target.height.sm",
+          "component.toggle.track.height.lg"
+        ],
         "figma": []
       }
     },
@@ -9161,11 +9166,15 @@
             "count": 2
           },
           {
-            "file": "css/components/toggle.css",
-            "count": 1
+            "file": "css/tokens/generated/component.css",
+            "count": 3
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "component.checkbox.target.height.md",
+          "component.radio.target.height.md",
+          "component.toggle.target.height.md"
+        ],
         "figma": []
       }
     },
@@ -9187,15 +9196,7 @@
             "count": 3
           },
           {
-            "file": "css/components/checkbox.css",
-            "count": 1
-          },
-          {
             "file": "css/components/input.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/radio.css",
             "count": 1
           },
           {
@@ -9203,11 +9204,15 @@
             "count": 1
           },
           {
-            "file": "css/components/toggle.css",
-            "count": 1
+            "file": "css/tokens/generated/component.css",
+            "count": 3
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "component.checkbox.target.height.lg",
+          "component.radio.target.height.lg",
+          "component.toggle.target.height.lg"
+        ],
         "figma": []
       }
     },
@@ -9416,6 +9421,10 @@
         "css": [
           {
             "file": "css/components/card.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/toggle.css",
             "count": 1
           }
         ],
@@ -10284,14 +10293,281 @@
         "figma": []
       }
     },
-    "semantic.control.toggle.height.sm": {
-      "layer": "semantic",
+    "component.checkbox.target.height.sm": {
+      "layer": "component",
       "type": "dimension",
-      "references": "foundation.dimension.16",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "references": "semantic.size.lg",
+      "sentido": "Altura minima da area interativa do Checkbox por size.",
+      "escopo": [
+        "min-height",
+        "height"
+      ],
+      "contexto": "Component token do contrato anatomico Checkbox. Consumido por CSS e/ou Figma quando a anatomia de target existir; pode aliasar Semantic porque documenta API publica do componente.",
+      "decisao": "Criado pelo piloto ADR-019 para separar target 32/40/48 do glyph visual 16/20/24 sem recriar semantic.control.toggle.* ou nomes Semantic falsamente genericos.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.target.height.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.xl",
+      "sentido": "Altura minima da area interativa do Checkbox por size.",
+      "escopo": [
+        "min-height",
+        "height"
+      ],
+      "contexto": "Component token do contrato anatomico Checkbox. Consumido por CSS e/ou Figma quando a anatomia de target existir; pode aliasar Semantic porque documenta API publica do componente.",
+      "decisao": "Criado pelo piloto ADR-019 para separar target 32/40/48 do glyph visual 16/20/24 sem recriar semantic.control.toggle.* ou nomes Semantic falsamente genericos.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.target.height.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.2xl",
+      "sentido": "Altura minima da area interativa do Checkbox por size.",
+      "escopo": [
+        "min-height",
+        "height"
+      ],
+      "contexto": "Component token do contrato anatomico Checkbox. Consumido por CSS e/ou Figma quando a anatomia de target existir; pode aliasar Semantic porque documenta API publica do componente.",
+      "decisao": "Criado pelo piloto ADR-019 para separar target 32/40/48 do glyph visual 16/20/24 sem recriar semantic.control.toggle.* ou nomes Semantic falsamente genericos.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.box.size.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.xs",
+      "sentido": "Tamanho visual da box do Checkbox por size.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Component token do contrato anatomico Checkbox. Binda o node Control no Figma e substitui consumo direto de semantic.size.* no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.xs/sm/md e mantido em Component porque representa anatomia publica do Checkbox, nao uma decisao Semantic nova.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 3
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.box.size.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.sm",
+      "sentido": "Tamanho visual da box do Checkbox por size.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Component token do contrato anatomico Checkbox. Binda o node Control no Figma e substitui consumo direto de semantic.size.* no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.xs/sm/md e mantido em Component porque representa anatomia publica do Checkbox, nao uma decisao Semantic nova.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.box.size.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.md",
+      "sentido": "Tamanho visual da box do Checkbox por size.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Component token do contrato anatomico Checkbox. Binda o node Control no Figma e substitui consumo direto de semantic.size.* no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.xs/sm/md e mantido em Component porque representa anatomia publica do Checkbox, nao uma decisao Semantic nova.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 3
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.target.height.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.lg",
+      "sentido": "Altura minima da area interativa do Radio por size.",
+      "escopo": [
+        "min-height",
+        "height"
+      ],
+      "contexto": "Component token do contrato anatomico Radio. Consumido por CSS e/ou Figma quando a anatomia de target existir; pode aliasar Semantic porque documenta API publica do componente.",
+      "decisao": "Criado pelo piloto ADR-019 para separar target 32/40/48 do control visual 16/20/24.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.target.height.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.xl",
+      "sentido": "Altura minima da area interativa do Radio por size.",
+      "escopo": [
+        "min-height",
+        "height"
+      ],
+      "contexto": "Component token do contrato anatomico Radio. Consumido por CSS e/ou Figma quando a anatomia de target existir; pode aliasar Semantic porque documenta API publica do componente.",
+      "decisao": "Criado pelo piloto ADR-019 para separar target 32/40/48 do control visual 16/20/24.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.target.height.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.2xl",
+      "sentido": "Altura minima da area interativa do Radio por size.",
+      "escopo": [
+        "min-height",
+        "height"
+      ],
+      "contexto": "Component token do contrato anatomico Radio. Consumido por CSS e/ou Figma quando a anatomia de target existir; pode aliasar Semantic porque documenta API publica do componente.",
+      "decisao": "Criado pelo piloto ADR-019 para separar target 32/40/48 do control visual 16/20/24.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.control.size.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.xs",
+      "sentido": "Tamanho visual do control circular do Radio por size.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Component token do contrato anatomico Radio. Binda o node Control no Figma e substitui consumo direto de semantic.size.* no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.xs/sm/md e mantido em Component porque representa anatomia publica do Radio.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 3
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.control.size.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.sm",
+      "sentido": "Tamanho visual do control circular do Radio por size.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Component token do contrato anatomico Radio. Binda o node Control no Figma e substitui consumo direto de semantic.size.* no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.xs/sm/md e mantido em Component porque representa anatomia publica do Radio.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.control.size.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.md",
+      "sentido": "Tamanho visual do control circular do Radio por size.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Component token do contrato anatomico Radio. Binda o node Control no Figma e substitui consumo direto de semantic.size.* no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.xs/sm/md e mantido em Component porque representa anatomia publica do Radio.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 3
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.target.height.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.lg",
+      "sentido": "Altura minima da area interativa do Toggle por size.",
+      "escopo": [
+        "min-height",
+        "height"
+      ],
+      "contexto": "Component token do contrato anatomico Toggle. O Figma actual nao tem node de target dedicado; o token materializa o contrato para CSS e futuras variants.",
+      "decisao": "Criado pelo piloto ADR-019 para separar target 32/40/48 da track visual 28x16/44x24/56x32.",
       "usos": {
         "css": [
           {
@@ -10303,14 +10579,17 @@
         "figma": []
       }
     },
-    "semantic.control.toggle.height.md": {
-      "layer": "semantic",
+    "component.toggle.target.height.md": {
+      "layer": "component",
       "type": "dimension",
-      "references": "foundation.dimension.24",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "references": "semantic.size.xl",
+      "sentido": "Altura minima da area interativa do Toggle por size.",
+      "escopo": [
+        "min-height",
+        "height"
+      ],
+      "contexto": "Component token do contrato anatomico Toggle. O Figma actual nao tem node de target dedicado; o token materializa o contrato para CSS e futuras variants.",
+      "decisao": "Criado pelo piloto ADR-019 para separar target 32/40/48 da track visual 28x16/44x24/56x32.",
       "usos": {
         "css": [
           {
@@ -10322,14 +10601,17 @@
         "figma": []
       }
     },
-    "semantic.control.toggle.height.lg": {
-      "layer": "semantic",
+    "component.toggle.target.height.lg": {
+      "layer": "component",
       "type": "dimension",
-      "references": "foundation.dimension.32",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "references": "semantic.size.2xl",
+      "sentido": "Altura minima da area interativa do Toggle por size.",
+      "escopo": [
+        "min-height",
+        "height"
+      ],
+      "contexto": "Component token do contrato anatomico Toggle. O Figma actual nao tem node de target dedicado; o token materializa o contrato para CSS e futuras variants.",
+      "decisao": "Criado pelo piloto ADR-019 para separar target 32/40/48 da track visual 28x16/44x24/56x32.",
       "usos": {
         "css": [
           {
@@ -10341,14 +10623,16 @@
         "figma": []
       }
     },
-    "semantic.control.toggle.thumb.gap": {
-      "layer": "semantic",
+    "component.toggle.track.height.sm": {
+      "layer": "component",
       "type": "dimension",
-      "references": "foundation.dimension.2",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "references": "semantic.size.xs",
+      "sentido": "Altura visual da track do Toggle por size.",
+      "escopo": [
+        "height"
+      ],
+      "contexto": "Component token do contrato anatomico Toggle. Binda a track no Figma e substitui a ponte temporaria do CSS.",
+      "decisao": "Alias 1:1 para semantic.size.xs/md/lg porque a altura usa a escala Semantic existente, mas a anatomia exposta pertence ao Toggle.",
       "usos": {
         "css": [
           {
@@ -10360,44 +10644,129 @@
         "figma": []
       }
     },
-    "semantic.control.toggle.width.sm": {
-      "layer": "semantic",
+    "component.toggle.track.height.md": {
+      "layer": "component",
       "type": "dimension",
-      "references": "foundation.dimension.32",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "references": "semantic.size.md",
+      "sentido": "Altura visual da track do Toggle por size.",
+      "escopo": [
+        "height"
+      ],
+      "contexto": "Component token do contrato anatomico Toggle. Binda a track no Figma e substitui a ponte temporaria do CSS.",
+      "decisao": "Alias 1:1 para semantic.size.xs/md/lg porque a altura usa a escala Semantic existente, mas a anatomia exposta pertence ao Toggle.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
     },
-    "semantic.control.toggle.width.md": {
-      "layer": "semantic",
+    "component.toggle.track.height.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.lg",
+      "sentido": "Altura visual da track do Toggle por size.",
+      "escopo": [
+        "height"
+      ],
+      "contexto": "Component token do contrato anatomico Toggle. Binda a track no Figma e substitui a ponte temporaria do CSS.",
+      "decisao": "Alias 1:1 para semantic.size.xs/md/lg porque a altura usa a escala Semantic existente, mas a anatomia exposta pertence ao Toggle.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.track.width.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "foundation.dimension.28",
+      "sentido": "Largura visual da track do Toggle por size.",
+      "escopo": [
+        "width"
+      ],
+      "contexto": "Component-specific do contrato anatomico Toggle. Binda a track no Figma e substitui calculos CSS baseados em size + space.",
+      "decisao": "Mantido em Component com alias direto para Foundation dimension 28/44/56 porque nao ha Semantic reutilizavel real; criar control.track-width seria falsa genericidade rejeitada pela ADR-019.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.track.width.md": {
+      "layer": "component",
       "type": "dimension",
       "references": "foundation.dimension.44",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Largura visual da track do Toggle por size.",
+      "escopo": [
+        "width"
+      ],
+      "contexto": "Component-specific do contrato anatomico Toggle. Binda a track no Figma e substitui calculos CSS baseados em size + space.",
+      "decisao": "Mantido em Component com alias direto para Foundation dimension 28/44/56 porque nao ha Semantic reutilizavel real; criar control.track-width seria falsa genericidade rejeitada pela ADR-019.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
     },
-    "semantic.control.toggle.width.lg": {
-      "layer": "semantic",
+    "component.toggle.track.width.lg": {
+      "layer": "component",
       "type": "dimension",
       "references": "foundation.dimension.56",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Largura visual da track do Toggle por size.",
+      "escopo": [
+        "width"
+      ],
+      "contexto": "Component-specific do contrato anatomico Toggle. Binda a track no Figma e substitui calculos CSS baseados em size + space.",
+      "decisao": "Mantido em Component com alias direto para Foundation dimension 28/44/56 porque nao ha Semantic reutilizavel real; criar control.track-width seria falsa genericidade rejeitada pela ADR-019.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.thumb.inset.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.2xs",
+      "sentido": "Inset/gap padrao do thumb dentro da track do Toggle.",
+      "escopo": [
+        "gap",
+        "inset"
+      ],
+      "contexto": "Component token do contrato anatomico Toggle usado pelo CSS para calcular thumb-size e deslocamento.",
+      "decisao": "Alias para semantic.space.2xs (2px), pois ha Semantic reutilizavel para spacing. Figma actual posiciona o thumb em 3px; a divergencia fica documentada para ajuste posterior.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }

@@ -1,9 +1,9 @@
 # Índice de ADRs — Design System Core
 
-> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-05-09. Não editar manualmente.
+> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-05-11. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
 
-18 decisões registradas.
+19 decisões registradas.
 
 | ADR | Título | Status | Data |
 |-----|--------|--------|------|
@@ -19,9 +19,10 @@
 | [ADR-010](decisions/ADR-010-abolir-white-black-puros.md) | Remoção de `foundation.color.white` e `foundation.color.black` puros | Aceita — Implementada em 0.5.0 | 2026-04-16 |
 | [ADR-011](decisions/ADR-011-renaming-tokens-semanticos-de-cor.md) | Reestruturação do naming de tokens semânticos de cor | Aceita — Implementada em 0.5.0 | 2026-04-17 |
 | [ADR-012](decisions/ADR-012-typography-tokens-divergence.md) | Tokens de line-height e letter-spacing divergem por design entre Figma e JSON | Aceita | 2026-04-21 |
-| [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) | Camadas de consumo de tokens — Foundation nunca direto em consumidor final | Aceita — implementada em 0.7.0 (Component layer eliminada) e fechada em 1.0.0-beta.1 (0 leaks Foundation em `css/components/*.css` e `css/base/*.css`) | 2026-04-22 |
+| [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) | Camadas de consumo de tokens — Foundation nunca direto em consumidor final | Aceita — implementada em 0.7.0 e parcialmente substituída por ADR-019 em 2026-05-11 | 2026-04-22 |
 | [ADR-014](decisions/ADR-014-action-tokens-role-style.md) | Reestruturação Semantic em `action` × `style` × `prop` × `state` — eliminação de brand/accent e themes | Aceita — implementada em 0.7.0 e estabilizada em 1.0.0-beta.1 | 2026-04-22 |
 | [ADR-015](decisions/ADR-015-unificacao-de-size-e-dimension.md) | — Unificação da escala size, eliminação de tokens component-specific e renomeação spacing→dimension | Aceito | 2026-04-26 |
 | [ADR-016](decisions/ADR-016-tokens-sem-equivalencia-no-figma.md) | — Tokens sem equivalência no Figma (CSS-only) | Aceito | 2026-04-30 |
 | [ADR-017](decisions/ADR-017-componentes-css-only.md) | — Componentes CSS-only (sem equivalência no Figma) | Aceito | 2026-04-30 |
 | [ADR-018](decisions/ADR-018-content-naming-strong-default-subtle.md) | — Renomear `content.{default,secondary,tertiary}` para `content.{strong,default,subtle}` | Aceito | 2026-05-06 |
+| [ADR-019](decisions/ADR-019-component-tokens-contrato-anatomico.md) | — Reintroducao de Component tokens como contrato anatomico | Aceito | 2026-05-11 |

@@ -1,15 +1,15 @@
 # Token Registry
 
-> Gerado automaticamente por `scripts/build-token-registry.mjs` em 2026-05-09. Não editar à mão — edite `tokens/registry.json` e rode `npm run build:registry`.
+> Gerado automaticamente por `scripts/build-token-registry.mjs` em 2026-05-11. Não editar à mão — edite `tokens/registry.json` e rode `npm run build:registry`.
 
 Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra arquitetural de camadas.
 
 ## Status
 
-- Total de tokens: **445**
-- Com metadados completos: **438**
-- Pendentes (`TODO` em algum campo obrigatório): **7**
-- Completude: **98%**
+- Total de tokens: **460**
+- Com metadados completos: **460**
+- Pendentes (`TODO` em algum campo obrigatório): **0**
+- Completude: **100%**
 
 ## Foundation
 
@@ -185,20 +185,20 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `foundation.dimension.128` | dimension | — | Dimensão fixa de 128px (8rem). | 4 |
 | `foundation.dimension.1280` | dimension | — | Dimensão fixa de 1280px (80rem). | 4 |
 | `foundation.dimension.14` | dimension | — | Dimensão fixa de 14px (0.875rem). | 0 |
-| `foundation.dimension.16` | dimension | — | Dimensão fixa de 16px (1rem). | 9 |
-| `foundation.dimension.2` | dimension | — | Dimensão fixa de 2px (0.125rem). | 7 |
+| `foundation.dimension.16` | dimension | — | Dimensão fixa de 16px (1rem). | 7 |
+| `foundation.dimension.2` | dimension | — | Dimensão fixa de 2px (0.125rem). | 5 |
 | `foundation.dimension.20` | dimension | — | Dimensão fixa de 20px (1.25rem). | 6 |
-| `foundation.dimension.24` | dimension | — | Dimensão fixa de 24px (1.5rem). | 8 |
-| `foundation.dimension.28` | dimension | — | Dimensão fixa de 28px (1.75rem). | 0 |
-| `foundation.dimension.32` | dimension | — | Dimensão fixa de 32px (2rem). | 10 |
+| `foundation.dimension.24` | dimension | — | Dimensão fixa de 24px (1.5rem). | 6 |
+| `foundation.dimension.28` | dimension | — | Dimensão fixa de 28px (1.75rem). | 2 |
+| `foundation.dimension.32` | dimension | — | Dimensão fixa de 32px (2rem). | 6 |
 | `foundation.dimension.320` | dimension | — | Dimensão fixa de 320px (20rem). | 4 |
 | `foundation.dimension.36` | dimension | — | Dimensão fixa de 36px (2.25rem). | 0 |
 | `foundation.dimension.4` | dimension | — | Dimensão fixa de 4px (0.25rem). | 5 |
 | `foundation.dimension.40` | dimension | — | Dimensão fixa de 40px (2.5rem). | 4 |
-| `foundation.dimension.44` | dimension | — | Dimensão fixa de 44px (2.75rem). | 4 |
+| `foundation.dimension.44` | dimension | — | Dimensão fixa de 44px (2.75rem). | 2 |
 | `foundation.dimension.48` | dimension | — | Dimensão fixa de 48px (3rem). | 6 |
 | `foundation.dimension.480` | dimension | — | Dimensão fixa de 480px (30rem). | 4 |
-| `foundation.dimension.56` | dimension | — | Dimensão fixa de 56px (3.5rem). | 4 |
+| `foundation.dimension.56` | dimension | — | Dimensão fixa de 56px (3.5rem). | 2 |
 | `foundation.dimension.6` | dimension | — | Dimensão fixa de 6px (0.375rem). | 4 |
 | `foundation.dimension.64` | dimension | — | Dimensão fixa de 64px (4rem). | 6 |
 | `foundation.dimension.640` | dimension | — | Dimensão fixa de 640px (40rem). | 4 |
@@ -332,7 +332,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Semantic
 
-180 tokens.
+173 tokens.
 
 ### semantic.background
 
@@ -372,18 +372,6 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.content.inverse` | color | → `foundation.color.neutral.50` | Texto invertido — sobre background.inverse (tooltips, badges escuros em light). | 1 |
 | `semantic.content.strong` | color | → `foundation.color.neutral.900` | Texto primário — body, headings, labels principais. | 13 |
 | `semantic.content.subtle` | color | → `foundation.color.neutral.500` | Texto terciário — caption, footnote, timestamps. | 3 |
-
-### semantic.control
-
-| Token | Tipo | Alias | Sentido | Usos |
-|---|---|---|---|---|
-| `semantic.control.toggle.height.lg` | dimension | → `foundation.dimension.32` | ⚠️ TODO | 1 |
-| `semantic.control.toggle.height.md` | dimension | → `foundation.dimension.24` | ⚠️ TODO | 1 |
-| `semantic.control.toggle.height.sm` | dimension | → `foundation.dimension.16` | ⚠️ TODO | 1 |
-| `semantic.control.toggle.thumb.gap` | dimension | → `foundation.dimension.2` | ⚠️ TODO | 1 |
-| `semantic.control.toggle.width.lg` | dimension | → `foundation.dimension.56` | ⚠️ TODO | 0 |
-| `semantic.control.toggle.width.md` | dimension | → `foundation.dimension.44` | ⚠️ TODO | 0 |
-| `semantic.control.toggle.width.sm` | dimension | → `foundation.dimension.32` | ⚠️ TODO | 0 |
 
 ### semantic.feedback
 
@@ -505,14 +493,14 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `semantic.shadow.card` | shadow | → `foundation.shadow.sm` | Sombra semantic card. | 1 |
+| `semantic.shadow.card` | shadow | → `foundation.shadow.sm` | Sombra semantic card. | 2 |
 | `semantic.shadow.modal` | shadow | → `foundation.shadow.xl` | Sombra semantic modal. | 0 |
 
 ### semantic.size
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `semantic.size.2xl` | dimension | → `foundation.dimension.48` | Size token 2xl. | 6 |
+| `semantic.size.2xl` | dimension | → `foundation.dimension.48` | Size token 2xl. | 7 |
 | `semantic.size.3xl` | dimension | → `foundation.dimension.64` | Size token 3xl. | 2 |
 | `semantic.size.4xl` | dimension | → `foundation.dimension.96` | Size token 4xl. | 1 |
 | `semantic.size.5xl` | dimension | → `foundation.dimension.128` | Size token 5xl. | 2 |
@@ -522,18 +510,18 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.size.layout.sm` | dimension | → `foundation.dimension.480` | Size token layout.sm. | 1 |
 | `semantic.size.layout.xl` | dimension | → `foundation.dimension.1024` | Size token layout.xl. | 0 |
 | `semantic.size.layout.xs` | dimension | → `foundation.dimension.320` | Size token layout.xs. | 0 |
-| `semantic.size.lg` | dimension | → `foundation.dimension.32` | Size token lg. | 6 |
-| `semantic.size.md` | dimension | → `foundation.dimension.24` | Size token md. | 8 |
-| `semantic.size.sm` | dimension | → `foundation.dimension.20` | Size token sm. | 7 |
-| `semantic.size.xl` | dimension | → `foundation.dimension.40` | Size token xl. | 6 |
-| `semantic.size.xs` | dimension | → `foundation.dimension.16` | Size token xs. | 6 |
+| `semantic.size.lg` | dimension | → `foundation.dimension.32` | Size token lg. | 10 |
+| `semantic.size.md` | dimension | → `foundation.dimension.24` | Size token md. | 10 |
+| `semantic.size.sm` | dimension | → `foundation.dimension.20` | Size token sm. | 10 |
+| `semantic.size.xl` | dimension | → `foundation.dimension.40` | Size token xl. | 9 |
+| `semantic.size.xs` | dimension | → `foundation.dimension.16` | Size token xs. | 8 |
 
 ### semantic.space
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `semantic.space.2xl` | dimension | → `foundation.dimension.24` | Spacing token 2xl. | 0 |
-| `semantic.space.2xs` | dimension | → `foundation.dimension.2` | Spacing token 2xs. | 4 |
+| `semantic.space.2xs` | dimension | → `foundation.dimension.2` | Spacing token 2xs. | 6 |
 | `semantic.space.control.padding.10` | dimension | → `foundation.dimension.10` | Spacing token control.padding.10. | 3 |
 | `semantic.space.control.padding.6` | dimension | → `foundation.dimension.6` | Padding simétrico de Icon Only sm Button. | 1 |
 | `semantic.space.lg` | dimension | → `foundation.dimension.16` | Spacing token lg. | 8 |
@@ -616,9 +604,44 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Component
 
-0 tokens.
+22 tokens.
 
-_Nenhuma entrada._
+### component.checkbox
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `component.checkbox.box.size.lg` | dimension | → `semantic.size.md` | Tamanho visual da box do Checkbox por size. | 1 |
+| `component.checkbox.box.size.md` | dimension | → `semantic.size.sm` | Tamanho visual da box do Checkbox por size. | 1 |
+| `component.checkbox.box.size.sm` | dimension | → `semantic.size.xs` | Tamanho visual da box do Checkbox por size. | 1 |
+| `component.checkbox.target.height.lg` | dimension | → `semantic.size.2xl` | Altura minima da area interativa do Checkbox por size. | 1 |
+| `component.checkbox.target.height.md` | dimension | → `semantic.size.xl` | Altura minima da area interativa do Checkbox por size. | 1 |
+| `component.checkbox.target.height.sm` | dimension | → `semantic.size.lg` | Altura minima da area interativa do Checkbox por size. | 1 |
+
+### component.radio
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `component.radio.control.size.lg` | dimension | → `semantic.size.md` | Tamanho visual do control circular do Radio por size. | 1 |
+| `component.radio.control.size.md` | dimension | → `semantic.size.sm` | Tamanho visual do control circular do Radio por size. | 1 |
+| `component.radio.control.size.sm` | dimension | → `semantic.size.xs` | Tamanho visual do control circular do Radio por size. | 1 |
+| `component.radio.target.height.lg` | dimension | → `semantic.size.2xl` | Altura minima da area interativa do Radio por size. | 1 |
+| `component.radio.target.height.md` | dimension | → `semantic.size.xl` | Altura minima da area interativa do Radio por size. | 1 |
+| `component.radio.target.height.sm` | dimension | → `semantic.size.lg` | Altura minima da area interativa do Radio por size. | 1 |
+
+### component.toggle
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `component.toggle.target.height.lg` | dimension | → `semantic.size.2xl` | Altura minima da area interativa do Toggle por size. | 1 |
+| `component.toggle.target.height.md` | dimension | → `semantic.size.xl` | Altura minima da area interativa do Toggle por size. | 1 |
+| `component.toggle.target.height.sm` | dimension | → `semantic.size.lg` | Altura minima da area interativa do Toggle por size. | 1 |
+| `component.toggle.thumb.inset.default` | dimension | → `semantic.space.2xs` | Inset/gap padrao do thumb dentro da track do Toggle. | 1 |
+| `component.toggle.track.height.lg` | dimension | → `semantic.size.lg` | Altura visual da track do Toggle por size. | 1 |
+| `component.toggle.track.height.md` | dimension | → `semantic.size.md` | Altura visual da track do Toggle por size. | 1 |
+| `component.toggle.track.height.sm` | dimension | → `semantic.size.xs` | Altura visual da track do Toggle por size. | 1 |
+| `component.toggle.track.width.lg` | dimension | → `foundation.dimension.56` | Largura visual da track do Toggle por size. | 1 |
+| `component.toggle.track.width.md` | dimension | → `foundation.dimension.44` | Largura visual da track do Toggle por size. | 1 |
+| `component.toggle.track.width.sm` | dimension | → `foundation.dimension.28` | Largura visual da track do Toggle por size. | 1 |
 
 ---
 
@@ -2491,9 +2514,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/reset.css` (3×)
-    - `css/tokens/generated/theme-dark.css` (3×)
-    - `css/tokens/generated/theme-light.css` (3×)
-  - Tokens que referenciam: `semantic.control.toggle.height.sm`, `semantic.space.lg`, `semantic.size.xs`, `semantic.control.toggle.height.sm`, `semantic.space.lg`, `semantic.size.xs`
+    - `css/tokens/generated/theme-dark.css` (2×)
+    - `css/tokens/generated/theme-light.css` (2×)
+  - Tokens que referenciam: `semantic.space.lg`, `semantic.size.xs`, `semantic.space.lg`, `semantic.size.xs`
 
 ### `foundation.dimension.2`
 
@@ -2506,9 +2529,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/reset.css` (1×)
-    - `css/tokens/generated/theme-dark.css` (2×)
-    - `css/tokens/generated/theme-light.css` (2×)
-  - Tokens que referenciam: `semantic.control.toggle.thumb.gap`, `semantic.space.2xs`, `semantic.control.toggle.thumb.gap`, `semantic.space.2xs`
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.space.2xs`, `semantic.space.2xs`
 
 ### `foundation.dimension.20`
 
@@ -2534,9 +2557,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Step da escala 2/4/6/8/10/12/14/16/20/24/28/32/36/40/44/48 — múltiplos de 2 e 4 cobrem todas as densidades de UI.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-dark.css` (3×)
-    - `css/tokens/generated/theme-light.css` (3×)
-  - Tokens que referenciam: `semantic.control.toggle.height.md`, `semantic.space.2xl`, `semantic.size.md`, `semantic.control.toggle.height.md`, `semantic.space.2xl`, `semantic.size.md`
+    - `css/tokens/generated/theme-dark.css` (2×)
+    - `css/tokens/generated/theme-light.css` (2×)
+  - Tokens que referenciam: `semantic.space.2xl`, `semantic.size.md`, `semantic.space.2xl`, `semantic.size.md`
 
 ### `foundation.dimension.28`
 
@@ -2547,7 +2570,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Use via Semantic `space.*` (gap/padding) ou `size.*` (width/height). Componentes não consomem direto.
 - **Decisão**: Step da escala 2/4/6/8/10/12/14/16/20/24/28/32/36/40/44/48 — múltiplos de 2 e 4 cobrem todas as densidades de UI.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.toggle.track.width.sm`
 
 ### `foundation.dimension.32`
 
@@ -2559,9 +2584,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Step da escala 2/4/6/8/10/12/14/16/20/24/28/32/36/40/44/48 — múltiplos de 2 e 4 cobrem todas as densidades de UI.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-dark.css` (4×)
-    - `css/tokens/generated/theme-light.css` (4×)
-  - Tokens que referenciam: `semantic.control.toggle.height.lg`, `semantic.control.toggle.width.sm`, `semantic.space.section.sm`, `semantic.size.lg`, `semantic.control.toggle.height.lg`, `semantic.control.toggle.width.sm`, `semantic.space.section.sm`, `semantic.size.lg`
+    - `css/tokens/generated/theme-dark.css` (2×)
+    - `css/tokens/generated/theme-light.css` (2×)
+  - Tokens que referenciam: `semantic.space.section.sm`, `semantic.size.lg`, `semantic.space.section.sm`, `semantic.size.lg`
 
 ### `foundation.dimension.320`
 
@@ -2627,9 +2652,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Step da escala 2/4/6/8/10/12/14/16/20/24/28/32/36/40/44/48 — múltiplos de 2 e 4 cobrem todas as densidades de UI.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-dark.css` (1×)
-    - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.control.toggle.width.md`, `semantic.control.toggle.width.md`
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.toggle.track.width.md`
 
 ### `foundation.dimension.48`
 
@@ -2669,9 +2693,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Step da escala 2/4/6/8/10/12/14/16/20/24/28/32/36/40/44/48 — múltiplos de 2 e 4 cobrem todas as densidades de UI.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-dark.css` (1×)
-    - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.control.toggle.width.lg`, `semantic.control.toggle.width.lg`
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.toggle.track.width.lg`
 
 ### `foundation.dimension.6`
 
@@ -4200,94 +4223,6 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/select.css` (3×)
     - `css/components/textarea.css` (1×)
 
-### `semantic.control.toggle.height.lg`
-
-- **Camada**: semantic
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.dimension.32`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/toggle.css` (1×)
-
-### `semantic.control.toggle.height.md`
-
-- **Camada**: semantic
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.dimension.24`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/toggle.css` (1×)
-
-### `semantic.control.toggle.height.sm`
-
-- **Camada**: semantic
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.dimension.16`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/toggle.css` (1×)
-
-### `semantic.control.toggle.thumb.gap`
-
-- **Camada**: semantic
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.dimension.2`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - CSS:
-    - `css/components/toggle.css` (1×)
-
-### `semantic.control.toggle.width.lg`
-
-- **Camada**: semantic
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.dimension.56`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `semantic.control.toggle.width.md`
-
-- **Camada**: semantic
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.dimension.44`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `semantic.control.toggle.width.sm`
-
-- **Camada**: semantic
-- **Tipo**: `dimension`
-- **Alias**: → `foundation.dimension.32`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
 ### `semantic.feedback.error.background.active`
 
 - **Camada**: semantic
@@ -5300,6 +5235,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/card.css` (1×)
+    - `css/components/toggle.css` (1×)
 
 ### `semantic.shadow.modal`
 
@@ -5325,11 +5261,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/button.css` (3×)
-    - `css/components/checkbox.css` (1×)
     - `css/components/input.css` (1×)
-    - `css/components/radio.css` (1×)
     - `css/components/select.css` (1×)
-    - `css/components/toggle.css` (1×)
+    - `css/tokens/generated/component.css` (3×)
+  - Tokens que referenciam: `component.checkbox.target.height.lg`, `component.radio.target.height.lg`, `component.toggle.target.height.lg`
 
 ### `semantic.size.3xl`
 
@@ -5463,7 +5398,8 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/input.css` (1×)
     - `css/components/select.css` (1×)
     - `css/components/spinner.css` (2×)
-    - `css/components/toggle.css` (1×)
+    - `css/tokens/generated/component.css` (4×)
+  - Tokens que referenciam: `component.checkbox.target.height.sm`, `component.radio.target.height.sm`, `component.toggle.target.height.sm`, `component.toggle.track.height.lg`
 
 ### `semantic.size.md`
 
@@ -5479,11 +5415,11 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/alert.css` (2×)
     - `css/components/avatar.css` (1×)
     - `css/components/button.css` (3×)
-    - `css/components/checkbox.css` (2×)
     - `css/components/input.css` (3×)
-    - `css/components/radio.css` (2×)
     - `css/components/select.css` (5×)
     - `css/components/spinner.css` (2×)
+    - `css/tokens/generated/component.css` (3×)
+  - Tokens que referenciam: `component.checkbox.box.size.lg`, `component.radio.control.size.lg`, `component.toggle.track.height.md`
 
 ### `semantic.size.sm`
 
@@ -5499,10 +5435,12 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/alert.css` (1×)
     - `css/components/avatar.css` (1×)
     - `css/components/button.css` (3×)
-    - `css/components/checkbox.css` (4×)
+    - `css/components/checkbox.css` (2×)
     - `css/components/input.css` (1×)
-    - `css/components/radio.css` (4×)
+    - `css/components/radio.css` (2×)
     - `css/components/select.css` (5×)
+    - `css/tokens/generated/component.css` (2×)
+  - Tokens que referenciam: `component.checkbox.box.size.md`, `component.radio.control.size.md`
 
 ### `semantic.size.xl`
 
@@ -5520,7 +5458,8 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/input.css` (1×)
     - `css/components/select.css` (1×)
     - `css/components/skeleton.css` (2×)
-    - `css/components/toggle.css` (1×)
+    - `css/tokens/generated/component.css` (3×)
+  - Tokens que referenciam: `component.checkbox.target.height.md`, `component.radio.target.height.md`, `component.toggle.target.height.md`
 
 ### `semantic.size.xs`
 
@@ -5534,11 +5473,11 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/avatar.css` (1×)
-    - `css/components/checkbox.css` (2×)
     - `css/components/input.css` (1×)
-    - `css/components/radio.css` (2×)
     - `css/components/select.css` (1×)
     - `css/components/spinner.css` (2×)
+    - `css/tokens/generated/component.css` (3×)
+  - Tokens que referenciam: `component.checkbox.box.size.sm`, `component.radio.control.size.sm`, `component.toggle.track.height.sm`
 
 ### `semantic.space.2xl`
 
@@ -5567,6 +5506,8 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/checkbox.css` (1×)
     - `css/components/form-field.css` (1×)
     - `css/components/radio.css` (1×)
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.toggle.thumb.inset.default`
 
 ### `semantic.space.control.padding.10`
 
@@ -6342,4 +6283,290 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/tooltip.css` (1×)
+
+### `component.checkbox.box.size.lg`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.md`
+- **Sentido**: Tamanho visual da box do Checkbox por size.
+- **Escopo**: width, height
+- **Contexto**: Component token do contrato anatomico Checkbox. Binda o node Control no Figma e substitui consumo direto de semantic.size.* no CSS.
+- **Decisão**: Alias 1:1 para semantic.size.xs/sm/md e mantido em Component porque representa anatomia publica do Checkbox, nao uma decisao Semantic nova.
+- **Usos**:
+  - CSS:
+    - `css/components/checkbox.css` (3×)
+
+### `component.checkbox.box.size.md`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.sm`
+- **Sentido**: Tamanho visual da box do Checkbox por size.
+- **Escopo**: width, height
+- **Contexto**: Component token do contrato anatomico Checkbox. Binda o node Control no Figma e substitui consumo direto de semantic.size.* no CSS.
+- **Decisão**: Alias 1:1 para semantic.size.xs/sm/md e mantido em Component porque representa anatomia publica do Checkbox, nao uma decisao Semantic nova.
+- **Usos**:
+  - CSS:
+    - `css/components/checkbox.css` (1×)
+
+### `component.checkbox.box.size.sm`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.xs`
+- **Sentido**: Tamanho visual da box do Checkbox por size.
+- **Escopo**: width, height
+- **Contexto**: Component token do contrato anatomico Checkbox. Binda o node Control no Figma e substitui consumo direto de semantic.size.* no CSS.
+- **Decisão**: Alias 1:1 para semantic.size.xs/sm/md e mantido em Component porque representa anatomia publica do Checkbox, nao uma decisao Semantic nova.
+- **Usos**:
+  - CSS:
+    - `css/components/checkbox.css` (3×)
+
+### `component.checkbox.target.height.lg`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.2xl`
+- **Sentido**: Altura minima da area interativa do Checkbox por size.
+- **Escopo**: min-height, height
+- **Contexto**: Component token do contrato anatomico Checkbox. Consumido por CSS e/ou Figma quando a anatomia de target existir; pode aliasar Semantic porque documenta API publica do componente.
+- **Decisão**: Criado pelo piloto ADR-019 para separar target 32/40/48 do glyph visual 16/20/24 sem recriar semantic.control.toggle.* ou nomes Semantic falsamente genericos.
+- **Usos**:
+  - CSS:
+    - `css/components/checkbox.css` (1×)
+
+### `component.checkbox.target.height.md`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.xl`
+- **Sentido**: Altura minima da area interativa do Checkbox por size.
+- **Escopo**: min-height, height
+- **Contexto**: Component token do contrato anatomico Checkbox. Consumido por CSS e/ou Figma quando a anatomia de target existir; pode aliasar Semantic porque documenta API publica do componente.
+- **Decisão**: Criado pelo piloto ADR-019 para separar target 32/40/48 do glyph visual 16/20/24 sem recriar semantic.control.toggle.* ou nomes Semantic falsamente genericos.
+- **Usos**:
+  - CSS:
+    - `css/components/checkbox.css` (1×)
+
+### `component.checkbox.target.height.sm`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.lg`
+- **Sentido**: Altura minima da area interativa do Checkbox por size.
+- **Escopo**: min-height, height
+- **Contexto**: Component token do contrato anatomico Checkbox. Consumido por CSS e/ou Figma quando a anatomia de target existir; pode aliasar Semantic porque documenta API publica do componente.
+- **Decisão**: Criado pelo piloto ADR-019 para separar target 32/40/48 do glyph visual 16/20/24 sem recriar semantic.control.toggle.* ou nomes Semantic falsamente genericos.
+- **Usos**:
+  - CSS:
+    - `css/components/checkbox.css` (1×)
+
+### `component.radio.control.size.lg`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.md`
+- **Sentido**: Tamanho visual do control circular do Radio por size.
+- **Escopo**: width, height
+- **Contexto**: Component token do contrato anatomico Radio. Binda o node Control no Figma e substitui consumo direto de semantic.size.* no CSS.
+- **Decisão**: Alias 1:1 para semantic.size.xs/sm/md e mantido em Component porque representa anatomia publica do Radio.
+- **Usos**:
+  - CSS:
+    - `css/components/radio.css` (3×)
+
+### `component.radio.control.size.md`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.sm`
+- **Sentido**: Tamanho visual do control circular do Radio por size.
+- **Escopo**: width, height
+- **Contexto**: Component token do contrato anatomico Radio. Binda o node Control no Figma e substitui consumo direto de semantic.size.* no CSS.
+- **Decisão**: Alias 1:1 para semantic.size.xs/sm/md e mantido em Component porque representa anatomia publica do Radio.
+- **Usos**:
+  - CSS:
+    - `css/components/radio.css` (1×)
+
+### `component.radio.control.size.sm`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.xs`
+- **Sentido**: Tamanho visual do control circular do Radio por size.
+- **Escopo**: width, height
+- **Contexto**: Component token do contrato anatomico Radio. Binda o node Control no Figma e substitui consumo direto de semantic.size.* no CSS.
+- **Decisão**: Alias 1:1 para semantic.size.xs/sm/md e mantido em Component porque representa anatomia publica do Radio.
+- **Usos**:
+  - CSS:
+    - `css/components/radio.css` (3×)
+
+### `component.radio.target.height.lg`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.2xl`
+- **Sentido**: Altura minima da area interativa do Radio por size.
+- **Escopo**: min-height, height
+- **Contexto**: Component token do contrato anatomico Radio. Consumido por CSS e/ou Figma quando a anatomia de target existir; pode aliasar Semantic porque documenta API publica do componente.
+- **Decisão**: Criado pelo piloto ADR-019 para separar target 32/40/48 do control visual 16/20/24.
+- **Usos**:
+  - CSS:
+    - `css/components/radio.css` (1×)
+
+### `component.radio.target.height.md`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.xl`
+- **Sentido**: Altura minima da area interativa do Radio por size.
+- **Escopo**: min-height, height
+- **Contexto**: Component token do contrato anatomico Radio. Consumido por CSS e/ou Figma quando a anatomia de target existir; pode aliasar Semantic porque documenta API publica do componente.
+- **Decisão**: Criado pelo piloto ADR-019 para separar target 32/40/48 do control visual 16/20/24.
+- **Usos**:
+  - CSS:
+    - `css/components/radio.css` (1×)
+
+### `component.radio.target.height.sm`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.lg`
+- **Sentido**: Altura minima da area interativa do Radio por size.
+- **Escopo**: min-height, height
+- **Contexto**: Component token do contrato anatomico Radio. Consumido por CSS e/ou Figma quando a anatomia de target existir; pode aliasar Semantic porque documenta API publica do componente.
+- **Decisão**: Criado pelo piloto ADR-019 para separar target 32/40/48 do control visual 16/20/24.
+- **Usos**:
+  - CSS:
+    - `css/components/radio.css` (1×)
+
+### `component.toggle.target.height.lg`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.2xl`
+- **Sentido**: Altura minima da area interativa do Toggle por size.
+- **Escopo**: min-height, height
+- **Contexto**: Component token do contrato anatomico Toggle. O Figma actual nao tem node de target dedicado; o token materializa o contrato para CSS e futuras variants.
+- **Decisão**: Criado pelo piloto ADR-019 para separar target 32/40/48 da track visual 28x16/44x24/56x32.
+- **Usos**:
+  - CSS:
+    - `css/components/toggle.css` (1×)
+
+### `component.toggle.target.height.md`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.xl`
+- **Sentido**: Altura minima da area interativa do Toggle por size.
+- **Escopo**: min-height, height
+- **Contexto**: Component token do contrato anatomico Toggle. O Figma actual nao tem node de target dedicado; o token materializa o contrato para CSS e futuras variants.
+- **Decisão**: Criado pelo piloto ADR-019 para separar target 32/40/48 da track visual 28x16/44x24/56x32.
+- **Usos**:
+  - CSS:
+    - `css/components/toggle.css` (1×)
+
+### `component.toggle.target.height.sm`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.lg`
+- **Sentido**: Altura minima da area interativa do Toggle por size.
+- **Escopo**: min-height, height
+- **Contexto**: Component token do contrato anatomico Toggle. O Figma actual nao tem node de target dedicado; o token materializa o contrato para CSS e futuras variants.
+- **Decisão**: Criado pelo piloto ADR-019 para separar target 32/40/48 da track visual 28x16/44x24/56x32.
+- **Usos**:
+  - CSS:
+    - `css/components/toggle.css` (1×)
+
+### `component.toggle.thumb.inset.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.2xs`
+- **Sentido**: Inset/gap padrao do thumb dentro da track do Toggle.
+- **Escopo**: gap, inset
+- **Contexto**: Component token do contrato anatomico Toggle usado pelo CSS para calcular thumb-size e deslocamento.
+- **Decisão**: Alias para semantic.space.2xs (2px), pois ha Semantic reutilizavel para spacing. Figma actual posiciona o thumb em 3px; a divergencia fica documentada para ajuste posterior.
+- **Usos**:
+  - CSS:
+    - `css/components/toggle.css` (1×)
+
+### `component.toggle.track.height.lg`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.lg`
+- **Sentido**: Altura visual da track do Toggle por size.
+- **Escopo**: height
+- **Contexto**: Component token do contrato anatomico Toggle. Binda a track no Figma e substitui a ponte temporaria do CSS.
+- **Decisão**: Alias 1:1 para semantic.size.xs/md/lg porque a altura usa a escala Semantic existente, mas a anatomia exposta pertence ao Toggle.
+- **Usos**:
+  - CSS:
+    - `css/components/toggle.css` (1×)
+
+### `component.toggle.track.height.md`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.md`
+- **Sentido**: Altura visual da track do Toggle por size.
+- **Escopo**: height
+- **Contexto**: Component token do contrato anatomico Toggle. Binda a track no Figma e substitui a ponte temporaria do CSS.
+- **Decisão**: Alias 1:1 para semantic.size.xs/md/lg porque a altura usa a escala Semantic existente, mas a anatomia exposta pertence ao Toggle.
+- **Usos**:
+  - CSS:
+    - `css/components/toggle.css` (1×)
+
+### `component.toggle.track.height.sm`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.xs`
+- **Sentido**: Altura visual da track do Toggle por size.
+- **Escopo**: height
+- **Contexto**: Component token do contrato anatomico Toggle. Binda a track no Figma e substitui a ponte temporaria do CSS.
+- **Decisão**: Alias 1:1 para semantic.size.xs/md/lg porque a altura usa a escala Semantic existente, mas a anatomia exposta pertence ao Toggle.
+- **Usos**:
+  - CSS:
+    - `css/components/toggle.css` (1×)
+
+### `component.toggle.track.width.lg`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.dimension.56`
+- **Sentido**: Largura visual da track do Toggle por size.
+- **Escopo**: width
+- **Contexto**: Component-specific do contrato anatomico Toggle. Binda a track no Figma e substitui calculos CSS baseados em size + space.
+- **Decisão**: Mantido em Component com alias direto para Foundation dimension 28/44/56 porque nao ha Semantic reutilizavel real; criar control.track-width seria falsa genericidade rejeitada pela ADR-019.
+- **Usos**:
+  - CSS:
+    - `css/components/toggle.css` (1×)
+
+### `component.toggle.track.width.md`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.dimension.44`
+- **Sentido**: Largura visual da track do Toggle por size.
+- **Escopo**: width
+- **Contexto**: Component-specific do contrato anatomico Toggle. Binda a track no Figma e substitui calculos CSS baseados em size + space.
+- **Decisão**: Mantido em Component com alias direto para Foundation dimension 28/44/56 porque nao ha Semantic reutilizavel real; criar control.track-width seria falsa genericidade rejeitada pela ADR-019.
+- **Usos**:
+  - CSS:
+    - `css/components/toggle.css` (1×)
+
+### `component.toggle.track.width.sm`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.dimension.28`
+- **Sentido**: Largura visual da track do Toggle por size.
+- **Escopo**: width
+- **Contexto**: Component-specific do contrato anatomico Toggle. Binda a track no Figma e substitui calculos CSS baseados em size + space.
+- **Decisão**: Mantido em Component com alias direto para Foundation dimension 28/44/56 porque nao ha Semantic reutilizavel real; criar control.track-width seria falsa genericidade rejeitada pela ADR-019.
+- **Usos**:
+  - CSS:
+    - `css/components/toggle.css` (1×)
 

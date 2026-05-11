@@ -69,6 +69,18 @@ const darkRoot = darkJson ? darkJson[Object.keys(darkJson)[0]] : null;
 const darkTotal = darkRoot ? countTokens(darkRoot) : 0;
 const paridadeOk = semanticTotal === darkTotal;
 
+// Component
+const componentDir = path.join(ROOT, 'tokens', 'component');
+const componentFiles = fs.existsSync(componentDir)
+  ? fs.readdirSync(componentDir).filter(f => f.endsWith('.json'))
+  : [];
+const componentStats = componentFiles.map(f => {
+  const json = readJson(path.join(componentDir, f));
+  const root = json ? json[Object.keys(json)[0]] : null;
+  return { file: f, count: root ? countTokens(root) : 0 };
+});
+const componentTotal = componentStats.reduce((s, f) => s + f.count, 0);
+
 // CSS components
 const cssComponentsDir = path.join(ROOT, 'css', 'components');
 const cssComponents = fs.existsSync(cssComponentsDir)
@@ -128,8 +140,9 @@ const tokenSchema = `# Token schema — Design System Core
 
 | Camada | Tokens | Arquivos |
 |--------|--------|----------|
-| Foundation | **${foundationTotal}** | ${foundationFiles.length} |
-| Semantic | **${semanticTotal} × 2 modos** | light.json + dark.json |
+| Foundation/Core | **${foundationTotal}** | ${foundationFiles.length} |
+| Semantic/System | **${semanticTotal} × 2 modos** | light.json + dark.json |
+| Component | **${componentTotal}** | ${componentFiles.length || '—'} |
 
 ## Foundation (${foundationTotal} tokens)
 
@@ -145,11 +158,19 @@ Categorias raiz em light.json:
 ${semanticCategories.map(c => `semantic.${c}.*`).join('\n')}
 \`\`\`
 
+## Component (${componentTotal} tokens)
+
+${componentTotal > 0
+  ? `| Arquivo | Tokens |
+|---------|--------|
+${componentStats.map(f => `| \`${f.file}\` | ${f.count} |`).join('\n')}`
+  : 'Nenhum token Component materializado ainda. ADR-019 reintroduz a camada; a migração deve ser incremental por componente.'}
+
 ## Regras invioláveis
 
-1. Consumidores finais (CSS, Figma bindings e docs de componente) consomem Semantic, nunca Foundation direto
-2. Semantic → Foundation, nunca hardcoded
-3. Foundation é a única camada com valores absolutos
+1. Componentes migrados consomem Component tokens; componentes ainda não migrados podem consumir Semantic direto durante a transição
+2. Component → Semantic; Semantic → Foundation; consumidor final nunca usa Foundation direto
+3. Foundation é a camada de primitivos; valores específicos fora da escala exigem ADR explícita
 4. Brand é Foundation — 2 tokens, sem estados, ponto de troca por tema
 5. Todo token tem \`$type\` conforme DTCG spec
 6. Tokens não óbvios têm \`$description\`
@@ -231,6 +252,7 @@ ${rows.join('\n')}
 | Foundation | ${foundationTotal} | 🟢 |
 | Semantic (light) | ${semanticTotal} | 🟢 |
 | Semantic (dark) | ${darkTotal} | ${paridadeOk ? '🟢' : '⚠️'} |
+| Component | ${componentTotal} | ${componentTotal > 0 ? '🟢' : '—'} |
 
 ## Pipeline
 
@@ -452,7 +474,7 @@ console.log(`✅ ${mdPageCount} páginas MD → HTML em docs/`);
 // conteúdo entre <!-- AUTO-GENERATED:THEME-COLORS:START --> e :END,
 // preservando header/nav/footer editáveis à mão.
 
-// Paths atualizados pra 2-layer + ADR-014 (action tokens role/style):
+// Paths atualizados pra ADR-014/019 (action tokens role/style + Component contracts):
 // - brand.* eliminado → primary.* / toned.*
 // - accent.* eliminado (não havia no MVP)
 // - content.link.* → link.content-* (peer pattern)

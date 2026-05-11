@@ -72,7 +72,9 @@
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
 <h3>Corrigido</h3>
 <ul>
-<li><p><strong>Documentação normalizada conforme auditoria estrutural.</strong> Labels de tabela foram padronizados (<code>Variável CSS</code>, <code>Descrição</code>, <code>Critério WCAG</code>, <code>Função</code>, <code>Referência</code>), README atualizado para 18 ADRs, páginas simples de componentes ganharam anatomia curta, <code>Form Field</code> declara o contrato CSS-only na própria página, e referências stale a <code>semantic.content.secondary/tertiary</code> foram migradas para <code>semantic.content.default/subtle</code>.</p>
+<li><p><strong>Tokens semânticos inválidos do Toggle removidos.</strong> A tentativa anterior criou <code>semantic.control.toggle.*</code> diretamente no JSON sem variável correspondente no Figma, gerando <code>DRIFT_FROM_SOURCE</code> em <code>verify:tokens</code>. Esses aliases foram removidos de <code>tokens/semantic/{light,dark}.json</code> e do registry; <code>toggle.css</code> agora consome os Component tokens do piloto em vez de inventar <code>semantic.control.toggle.*</code>.</p>
+</li>
+<li><p><strong>Documentação normalizada conforme auditoria estrutural.</strong> Labels de tabela foram padronizados (<code>Variável CSS</code>, <code>Descrição</code>, <code>Critério WCAG</code>, <code>Função</code>, <code>Referência</code>), README atualizado para 19 ADRs, páginas simples de componentes ganharam anatomia curta, <code>Form Field</code> declara o contrato CSS-only na própria página, e referências stale a <code>semantic.content.secondary/tertiary</code> foram migradas para <code>semantic.content.default/subtle</code>.</p>
 </li>
 <li><p><strong>Escala de Elevation/Shadow oficializada em 4 níveis + reset.</strong> Removidos <code>foundation.shadow.xs</code> e <code>foundation.shadow.2xl</code> por não terem uso nem Effect Style correspondente. <code>foundation.shadow.{sm,md,lg,xl}</code> preserva exatamente os parâmetros dos Effect Styles Figma <code>elevation/1..4</code>, e <code>foundation.shadow.none</code> permanece como reset técnico de <code>.ds-elevation-0</code>. A página de Elevation agora documenta o papel de cada nível e o mapping Figma ↔ CSS. Resolve #19 / P3-2 da auditoria Figma↔Repo.</p>
 </li>
@@ -132,6 +134,10 @@
 </ul>
 <h3>Adicionado</h3>
 <ul>
+<li><p><strong>ADR-019 — Component tokens como contrato anatômico.</strong> Reintroduz a camada Component no modelo Foundation/Core → Semantic/System → Component → implementação, alinhando o Core ao padrão de mercado para component tokens. Component deixa de ser wrapper mecânico e passa a documentar anatomia pública (<code>target</code>, <code>box</code>, <code>track</code>, <code>thumb</code>, etc.); aliases 1:1 para Semantic são permitidos quando representam contrato estável do componente. Pipeline preparado para <code>tokens/component/*.json</code> e <code>css/tokens/generated/component.css</code>, com docs/API/llms atualizados.</p>
+</li>
+<li><p><strong>Piloto Component materializado em Figma + JSON para Checkbox, Radio e Toggle.</strong> Criada a collection Figma <code>Component</code> com modo <code>Default</code> e 22 variables <code>component/...</code>: target heights 32/40/48, box/control 16/20/24, track Toggle 28×16 / 44×24 / 56×32 e thumb inset 2px. Checkbox/Radio <code>Control</code> e Toggle <code>Track</code> foram rebindados às novas variables; <code>tokens/component/{checkbox,radio,toggle}.json</code>, registry, CSS consumidor e snapshot Figma foram atualizados.</p>
+</li>
 <li><p><strong>Guia editorial de documentação</strong> (<code>docs/documentation-guidelines.md</code>). Define templates para páginas Foundation, Component, Process e System, exceções permitidas, labels oficiais de tabela e regra authored vs generated.</p>
 </li>
 <li><p><strong>Auditoria estrutural da documentação</strong> (<code>audit/docs-structure-audit.md</code>). Classifica páginas por tipo (Foundation, Component, Process, System), identifica inconsistências editoriais e define uma sequência recomendada de PRs para normalização.</p>

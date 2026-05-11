@@ -38,8 +38,9 @@ const pkg = readJson(path.join(ROOT, "package.json"));
 // components.json
 // -----------------------------------------------------------------------------
 
-// Component layer eliminada em 0.7.0 — tokens migrados pra Semantic.
-// `token` em cada entry agora não aponta pra arquivo (lookup via CSS).
+// Component layer reintroduzida por ADR-019 como contrato anatomico.
+// Nem todos os componentes foram migrados ainda; consumers podem consultar
+// `tokens` extraidos do CSS e `componentTokenFile` quando existir.
 const COMPONENTS = [
   { name: "Button", slug: "button", css: "button.css", html: "button.html" },
   { name: "Input Text", slug: "input", css: "input.css", html: "input.html" },
@@ -57,6 +58,7 @@ const COMPONENTS = [
   { name: "Breadcrumb", slug: "breadcrumb", css: "breadcrumb.css", html: "breadcrumb.html" },
   { name: "Avatar", slug: "avatar", css: "avatar.css", html: "avatar.html" },
   { name: "Divider", slug: "divider", css: "divider.css", html: "divider.html" },
+  { name: "Form Field", slug: "form-field", css: "form-field.css", html: "form-field.html", cssClass: "ds-field", cssOnly: true },
   { name: "Spinner", slug: "spinner", css: "spinner.css", html: "spinner.html" },
   { name: "Skeleton", slug: "skeleton", css: "skeleton.css", html: "skeleton.html" },
 ];
@@ -87,7 +89,7 @@ const components = COMPONENTS.map((c) => {
     name: c.name,
     slug: c.slug,
     url: `${BASE_URL}/docs/${c.html}`,
-    cssClass: `ds-${c.slug === "input" ? "input" : c.slug}`,
+    cssClass: c.cssClass || `ds-${c.slug === "input" ? "input" : c.slug}`,
     cssFile: `css/components/${c.css}`,
     tokens: extractTokensFromCss(cssPath),
     variants: extractVariantsFromCss(cssPath),
@@ -127,15 +129,20 @@ const tokensRoot = path.join(ROOT, "tokens");
 const foundationTokens = {};
 const semanticLight = {};
 const semanticDark = {};
+const componentTokens = {};
 
 for (const f of fs.readdirSync(path.join(tokensRoot, "foundation")).filter((x) => x.endsWith(".json"))) {
   const data = readJson(path.join(tokensRoot, "foundation", f));
   Object.assign(foundationTokens, flattenTokens(data));
 }
-// Component layer eliminada em 0.7.0 (2-layer: Foundation + Semantic).
-// Tokens que eram Component agora vivem em Semantic (size.avatar.*, size.modal.*, etc.).
 Object.assign(semanticLight, flattenTokens(readJson(path.join(tokensRoot, "semantic", "light.json"))));
 Object.assign(semanticDark, flattenTokens(readJson(path.join(tokensRoot, "semantic", "dark.json"))));
+const componentDir = path.join(tokensRoot, "component");
+if (fs.existsSync(componentDir)) {
+  for (const f of fs.readdirSync(componentDir).filter((x) => x.endsWith(".json"))) {
+    Object.assign(componentTokens, flattenTokens(readJson(path.join(componentDir, f))));
+  }
+}
 
 writeJson(path.join(API_DIR, "tokens.json"), {
   version: pkg.version,
@@ -143,11 +150,13 @@ writeJson(path.join(API_DIR, "tokens.json"), {
     foundation: Object.keys(foundationTokens).length,
     semanticLight: Object.keys(semanticLight).length,
     semanticDark: Object.keys(semanticDark).length,
+    component: Object.keys(componentTokens).length,
   },
   foundation: foundationTokens,
   semantic: { light: semanticLight, dark: semanticDark },
+  component: componentTokens,
 });
-console.log(`✅ docs/api/tokens.json (${Object.keys(foundationTokens).length + Object.keys(semanticLight).length * 2} tokens)`);
+console.log(`✅ docs/api/tokens.json (${Object.keys(foundationTokens).length + Object.keys(semanticLight).length * 2 + Object.keys(componentTokens).length} tokens)`);
 
 // -----------------------------------------------------------------------------
 // adrs.json

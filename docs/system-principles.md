@@ -70,35 +70,39 @@ Critério operacional para decidir a camada de um novo token: a pergunta não é
   aplica só a controles interativos), o token mora em semantic porque expressa
   intenção compartilhada. Exemplos: `semantic.border.control.*` (ADR-009),
   `semantic.space.control.*` (ADR-006), `semantic.color.primary.toned.*` (ADR-007).
-- **Semantic** também para decisões específicas de componente quando elas
-  precisam ser consumidas por CSS, Figma bindings ou docs. A camada Component
-  foi eliminada; se a intenção ainda não existe em Semantic, criar um semantic
-  token antes de aplicar no consumidor final.
+- **Component** quando a decisão descreve anatomia pública de um componente
+  (`target`, `box`, `track`, `thumb`, `icon`, `label`) e precisa ser consumida
+  por CSS, Figma bindings ou docs como contrato do componente. Component tokens
+  podem aliasar Semantic 1:1 quando isso melhora a leitura do contrato.
 
 A motivação é operacional. Intenção compartilhada vivendo em component obriga
-edição em N arquivos sem garantia de consistência. Vivendo em semantic, a fonte
-é única e a propagação é automática via referência.
+edição em N arquivos sem garantia de consistência. Anatomia de componente
+vivendo só em semantic gera nomes falsamente genéricos e confunde variant de
+componente com escala global. ADR-019 separa esses dois usos.
 
-A regra "categoria restrita não desclassifica como semantic" é deliberada. Sem
-ela, surge tentação de mover qualquer token específico de uma classe de
-componente para component, o que repõe o problema que semantic existe para
-resolver.
+A regra "categoria restrita não desclassifica como semantic" continua válida:
+`control.*` pode existir em Semantic quando o padrão é reutilizável entre
+controles. Quando o conceito só faz sentido dentro da anatomia de um componente,
+ele pertence a Component.
 
 ---
 
-## 4. As duas camadas de token têm regras de referência
+## 4. As três camadas de token têm regras de referência
 
 ```
 Foundation (valores absolutos: hex, rem, px)
     ↑ referenciada por
 Semantic (intenção: aliases pra foundation, modo light/dark)
+    ↑ referenciada por
+Component (contrato anatômico de componente)
 ```
 
 Regras invioláveis (detalhadas em `token-schema.md`):
 
 - Foundation é a única camada com valores absolutos.
 - Semantic referencia foundation, nunca valores hardcoded.
-- Consumidores finais (CSS, Figma bindings e docs de componente) consomem semantic tokens, nunca foundation direto.
+- Component referencia semantic sempre que houver intenção reutilizável; exceções específicas precisam de ADR explícita.
+- Consumidores finais (CSS, Figma bindings e docs de componente) consomem component tokens quando o componente já foi migrado; durante a transição, semantic direto ainda é permitido.
 - Textos em componentes Figma usam text styles; não devem bindar typography variables diretamente.
 - Novos tokens que criam categorias ou quebram hierarquia exigem ADR.
 

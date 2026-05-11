@@ -70,8 +70,11 @@
 <li><strong>Status:</strong> Aceito</li>
 <li><strong>Data:</strong> 2026-04-26</li>
 <li><strong>Substitui:</strong> sub-decisões de ADR-006 (que introduziu <code>size.control.*</code> e <code>space.control.padding-{x,y}.*</code>)</li>
-<li><strong>Relaciona:</strong> ADR-013 (2-layer architecture)</li>
+<li><strong>Relaciona:</strong> ADR-013, ADR-019</li>
 </ul>
+<blockquote>
+<p><strong>Atualização (2026-05-11):</strong> ADR-019 reintroduz Component tokens como contrato anatômico. Esta ADR continua vigente para a escala Semantic (<code>size.{xs..5xl}</code>) e para a regra de evitar component-specific disfarçado em Semantic. O que muda é que aliases 1:1 voltam a ser aceitos na camada Component quando documentam anatomia pública de componente.</p>
+</blockquote>
 <h2>Contexto</h2>
 <p>A migração 3-layer → 2-layer (ADR-013) eliminou a Component collection mas a Semantic absorveu tokens component-specific (<code>size.avatar.*</code>, <code>size.modal.*</code>, <code>size.spinner.*</code>, <code>size.skeleton.*</code>, <code>size.textarea.*</code>, <code>size.toggle.track-width.*</code>, <code>size.control.*</code>). Eram 25 tokens em <code>semantic.size.*</code>. Auditoria revelou:</p>
 <ul>

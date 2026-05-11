@@ -1,6 +1,6 @@
 {
   "version": "1.0.0-beta.4",
-  "count": 18,
+  "count": 19,
   "components": [
     {
       "name": "Button",
@@ -256,6 +256,12 @@
         "ds-border-focus",
         "ds-border-width-default",
         "ds-border-width-focus",
+        "ds-checkbox-box-size-lg",
+        "ds-checkbox-box-size-md",
+        "ds-checkbox-box-size-sm",
+        "ds-checkbox-target-height-lg",
+        "ds-checkbox-target-height-md",
+        "ds-checkbox-target-height-sm",
         "ds-content-default",
         "ds-content-strong",
         "ds-feedback-error-background-default",
@@ -268,10 +274,7 @@
         "ds-primary-background-default",
         "ds-primary-content-default",
         "ds-radius-sm",
-        "ds-size-2xl",
-        "ds-size-md",
         "ds-size-sm",
-        "ds-size-xs",
         "ds-space-2xs",
         "ds-space-sm",
         "ds-space-xs",
@@ -320,12 +323,15 @@
         "ds-overlay-subtle",
         "ds-primary-background-default",
         "ds-primary-content-default",
+        "ds-radio-control-size-lg",
+        "ds-radio-control-size-md",
+        "ds-radio-control-size-sm",
+        "ds-radio-target-height-lg",
+        "ds-radio-target-height-md",
+        "ds-radio-target-height-sm",
         "ds-radius-full",
         "ds-radius-sm",
-        "ds-size-2xl",
-        "ds-size-md",
         "ds-size-sm",
-        "ds-size-xs",
         "ds-space-2xs",
         "ds-space-md",
         "ds-space-sm",
@@ -364,10 +370,6 @@
         "ds-content-default",
         "ds-content-disabled",
         "ds-content-strong",
-        "ds-control-toggle-height-lg",
-        "ds-control-toggle-height-md",
-        "ds-control-toggle-height-sm",
-        "ds-control-toggle-thumb-gap",
         "ds-motion-duration-fast",
         "ds-motion-ease-default",
         "ds-opacity-disabled",
@@ -376,12 +378,20 @@
         "ds-primary-content-default",
         "ds-radius-full",
         "ds-radius-sm",
-        "ds-size-2xl",
-        "ds-size-lg",
-        "ds-size-xl",
+        "ds-shadow-card",
         "ds-space-sm",
         "ds-space-xs",
-        "ds-surface-default"
+        "ds-surface-default",
+        "ds-toggle-target-height-lg",
+        "ds-toggle-target-height-md",
+        "ds-toggle-target-height-sm",
+        "ds-toggle-thumb-inset-default",
+        "ds-toggle-track-height-lg",
+        "ds-toggle-track-height-md",
+        "ds-toggle-track-height-sm",
+        "ds-toggle-track-width-lg",
+        "ds-toggle-track-width-md",
+        "ds-toggle-track-width-sm"
       ],
       "variants": [
         "lg",
@@ -728,6 +738,34 @@
       "figma": {
         "fileKey": "PRYS2kL7VdC1MtVWfZvuDN",
         "page": "Divider"
+      }
+    },
+    {
+      "name": "Form Field",
+      "slug": "form-field",
+      "url": "https://uxindesign.github.io/design-system-core/docs/form-field.html",
+      "cssClass": "ds-field",
+      "cssFile": "css/components/form-field.css",
+      "tokens": [
+        "ds-body-font-size-sm",
+        "ds-body-font-size-xs",
+        "ds-body-font-weight-medium",
+        "ds-body-line-height-md",
+        "ds-body-line-height-sm",
+        "ds-content-default",
+        "ds-content-strong",
+        "ds-feedback-error-content-default",
+        "ds-space-2xs",
+        "ds-space-xs"
+      ],
+      "variants": [
+        "error",
+        "no-helper",
+        "no-label"
+      ],
+      "figma": {
+        "fileKey": "PRYS2kL7VdC1MtVWfZvuDN",
+        "page": "Form Field"
       }
     },
     {
