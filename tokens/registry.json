@@ -4367,7 +4367,7 @@
           },
           {
             "file": "css/components/breadcrumb.css",
-            "count": 2
+            "count": 1
           },
           {
             "file": "css/components/card.css",
@@ -4419,6 +4419,10 @@
       "decisao": "Aliasado a foundation.color.neutral.500.",
       "usos": {
         "css": [
+          {
+            "file": "css/components/breadcrumb.css",
+            "count": 1
+          },
           {
             "file": "css/components/input.css",
             "count": 2
@@ -5044,6 +5048,7 @@
         "css": [],
         "tokens": [
           "component.alert.description.font-weight.default",
+          "component.breadcrumb.separator.font-weight.default",
           "component.card.body.font-weight.default",
           "component.modal.body.font-weight.default",
           "component.tooltip.label.font-weight.default"
@@ -5104,6 +5109,7 @@
           "component.avatar.initials.font-weight.sm",
           "component.avatar.initials.font-weight.md",
           "component.badge.label.font-weight.default",
+          "component.breadcrumb.label.font-weight.default",
           "component.card.subtitle.font-weight.default",
           "component.tabs.label.font-weight.default"
         ],
@@ -5123,6 +5129,8 @@
       "usos": {
         "css": [],
         "tokens": [
+          "component.breadcrumb.label.letter-spacing.default",
+          "component.breadcrumb.separator.letter-spacing.default",
           "component.modal.title.letter-spacing.sm",
           "component.modal.title.letter-spacing.md",
           "component.tabs.label.letter-spacing.default"
@@ -5161,7 +5169,8 @@
       "usos": {
         "css": [],
         "tokens": [
-          "component.badge.label.font-size.default"
+          "component.badge.label.font-size.default",
+          "component.breadcrumb.separator.font-size.default"
         ],
         "figma": []
       }
@@ -5183,6 +5192,7 @@
           "component.alert.description.font-size.default",
           "component.avatar.initials.font-size.sm",
           "component.avatar.initials.font-size.md",
+          "component.breadcrumb.label.font-size.default",
           "component.card.body.font-size.default",
           "component.card.subtitle.font-size.default",
           "component.modal.body.font-size.sm",
@@ -5299,7 +5309,8 @@
       "usos": {
         "css": [],
         "tokens": [
-          "component.badge.label.line-height.default"
+          "component.badge.label.line-height.default",
+          "component.breadcrumb.separator.line-height.default"
         ],
         "figma": []
       }
@@ -5321,6 +5332,7 @@
           "component.alert.description.line-height.default",
           "component.avatar.initials.line-height.sm",
           "component.avatar.initials.line-height.md",
+          "component.breadcrumb.label.line-height.default",
           "component.card.body.line-height.default",
           "component.card.subtitle.line-height.default",
           "component.modal.body.line-height.sm",
@@ -6698,10 +6710,6 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/breadcrumb.css",
-            "count": 1
-          },
-          {
             "file": "css/components/button.css",
             "count": 1
           },
@@ -6731,7 +6739,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 5
+            "count": 7
           },
           {
             "file": "css/utilities/layout.css",
@@ -6741,6 +6749,8 @@
         "tokens": [
           "component.alert.content.gap.default",
           "component.badge.root.gap.default",
+          "component.breadcrumb.root.gap.default",
+          "component.breadcrumb.item.gap.default",
           "component.modal.close.padding.default",
           "component.tooltip.content.padding-y.default",
           "component.tooltip.arrow.depth.default"
@@ -7059,10 +7069,6 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/breadcrumb.css",
-            "count": 1
-          },
-          {
             "file": "css/components/button.css",
             "count": 3
           },
@@ -7084,10 +7090,11 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 4
+            "count": 5
           }
         ],
         "tokens": [
+          "component.breadcrumb.item.radius.default",
           "component.skeleton.text.radius.default",
           "component.skeleton.rectangle.radius.default",
           "component.tabs.item.radius.default",
@@ -14081,6 +14088,215 @@
         "css": [
           {
             "file": "css/components/tabs.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.breadcrumb.root.gap.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xs",
+      "sentido": "Espaço horizontal entre itens e separadores do Breadcrumb.",
+      "escopo": [],
+      "contexto": "Usado no container ds-breadcrumb e no componente Figma Breadcrumb para manter a cadência do trail de navegação.",
+      "decisao": "Alias para semantic.space.xs, porque o gap é parte anatômica pública do Breadcrumb, mas reutiliza a escala Semantic existente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/breadcrumb.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.breadcrumb.item.gap.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xs",
+      "sentido": "Espaço interno entre partes do item de Breadcrumb.",
+      "escopo": [],
+      "contexto": "Usado em ds-breadcrumb__item e nos variants do Figma Breadcrumb Item; preserva compatibilidade se o item ganhar ícone ou affordance adicional.",
+      "decisao": "Alias para semantic.space.xs, refletindo o binding vivo do Figma sem criar uma abstração Semantic específica de Breadcrumb.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/breadcrumb.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.breadcrumb.item.radius.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.radius.md",
+      "sentido": "Raio do item de Breadcrumb para estados de foco e área interativa.",
+      "escopo": [],
+      "contexto": "Usado no item navegável do CSS e nos variants State=Link e State=Current do Figma.",
+      "decisao": "Alias para semantic.radius.md, expondo o contrato anatômico do item sem duplicar valor primitivo.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/breadcrumb.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.breadcrumb.label.font-size.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.sm",
+      "sentido": "Tamanho da fonte do rótulo de Breadcrumb.",
+      "escopo": [],
+      "contexto": "Usado nos links e no item atual do Breadcrumb em CSS e Figma.",
+      "decisao": "Alias para semantic.typography.body.font-size.sm, mantendo o rótulo alinhado ao text style de corpo pequeno.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/breadcrumb.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.breadcrumb.label.line-height.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.sm",
+      "sentido": "Altura de linha do rótulo de Breadcrumb.",
+      "escopo": [],
+      "contexto": "Usado nos links e no item atual do Breadcrumb em CSS e Figma.",
+      "decisao": "Alias para semantic.typography.body.line-height.sm, preservando a altura visual de 20px do rótulo.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/breadcrumb.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.breadcrumb.label.font-weight.default": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.font-weight.bold",
+      "sentido": "Peso da fonte do rótulo de Breadcrumb.",
+      "escopo": [],
+      "contexto": "Usado nos links e no item atual do Breadcrumb em CSS e Figma.",
+      "decisao": "Alias para semantic.typography.body.font-weight.bold, alinhado ao variant vivo Breadcrumb Item.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/breadcrumb.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.breadcrumb.label.letter-spacing.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.letter-spacing.normal",
+      "sentido": "Espaçamento entre letras do rótulo de Breadcrumb.",
+      "escopo": [],
+      "contexto": "Usado nos links e no item atual do Breadcrumb em CSS e Figma.",
+      "decisao": "Alias para semantic.typography.body.letter-spacing.normal, mantendo paridade com os text styles do sistema.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/breadcrumb.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.breadcrumb.separator.font-size.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.xs",
+      "sentido": "Tamanho da fonte do separador de Breadcrumb.",
+      "escopo": [],
+      "contexto": "Usado no separador / entre itens; no Figma o separador usa body/xs para reduzir peso visual.",
+      "decisao": "Alias para semantic.typography.body.font-size.xs, refletindo a anatomia específica do separador.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/breadcrumb.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.breadcrumb.separator.line-height.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.xs",
+      "sentido": "Altura de linha do separador de Breadcrumb.",
+      "escopo": [],
+      "contexto": "Usado no separador / entre itens em CSS e Figma.",
+      "decisao": "Alias para semantic.typography.body.line-height.xs, alinhado ao separador vivo do Figma.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/breadcrumb.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.breadcrumb.separator.font-weight.default": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.font-weight.regular",
+      "sentido": "Peso da fonte do separador de Breadcrumb.",
+      "escopo": [],
+      "contexto": "Usado no separador / entre itens para manter menor ênfase que os links.",
+      "decisao": "Alias para semantic.typography.body.font-weight.regular, refletindo a hierarquia visual do Figma.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/breadcrumb.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.breadcrumb.separator.letter-spacing.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.letter-spacing.normal",
+      "sentido": "Espaçamento entre letras do separador de Breadcrumb.",
+      "escopo": [],
+      "contexto": "Usado no separador / entre itens em CSS e Figma.",
+      "decisao": "Alias para semantic.typography.body.letter-spacing.normal, mantendo consistência tipográfica.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/breadcrumb.css",
             "count": 1
           }
         ],

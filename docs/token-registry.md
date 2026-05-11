@@ -6,8 +6,8 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Status
 
-- Total de tokens: **614**
-- Com metadados completos: **614**
+- Total de tokens: **625**
+- Com metadados completos: **625**
 - Pendentes (`TODO` em algum campo obrigatório): **0**
 - Completude: **100%**
 
@@ -372,7 +372,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.content.disabled` | color | → `foundation.color.neutral.400` | Texto disabled — controles e items inativos. | 5 |
 | `semantic.content.inverse` | color | → `foundation.color.neutral.50` | Texto invertido — sobre background.inverse (tooltips, badges escuros em light). | 1 |
 | `semantic.content.strong` | color | → `foundation.color.neutral.900` | Texto primário — body, headings, labels principais. | 13 |
-| `semantic.content.subtle` | color | → `foundation.color.neutral.500` | Texto terciário — caption, footnote, timestamps. | 3 |
+| `semantic.content.subtle` | color | → `foundation.color.neutral.500` | Texto terciário — caption, footnote, timestamps. | 4 |
 
 ### semantic.feedback
 
@@ -533,7 +533,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.space.section.xl` | dimension | → `foundation.dimension.80` | Spacing token section.xl. | 0 |
 | `semantic.space.sm` | dimension | → `foundation.dimension.8` | Spacing token sm. | 20 |
 | `semantic.space.xl` | dimension | → `foundation.dimension.20` | Spacing token xl. | 16 |
-| `semantic.space.xs` | dimension | → `foundation.dimension.4` | Spacing token xs. | 15 |
+| `semantic.space.xs` | dimension | → `foundation.dimension.4` | Spacing token xs. | 16 |
 
 ### semantic.surface
 
@@ -572,14 +572,14 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.typography.body.font-size.9xl` | dimension | → `foundation.typography.font.size.72` | font-size 9xl pra texto UI geral. | 0 |
 | `semantic.typography.body.font-size.lg` | dimension | → `foundation.typography.font.size.18` | font-size lg pra texto UI geral. | 1 |
 | `semantic.typography.body.font-size.md` | dimension | → `foundation.typography.font.size.16` | font-size md pra texto UI geral. | 1 |
-| `semantic.typography.body.font-size.sm` | dimension | → `foundation.typography.font.size.14` | font-size sm pra texto UI geral. | 9 |
+| `semantic.typography.body.font-size.sm` | dimension | → `foundation.typography.font.size.14` | font-size sm pra texto UI geral. | 10 |
 | `semantic.typography.body.font-size.xl` | dimension | → `foundation.typography.font.size.20` | font-size xl pra texto UI geral. | 4 |
-| `semantic.typography.body.font-size.xs` | dimension | → `foundation.typography.font.size.12` | font-size xs pra texto UI geral. | 1 |
-| `semantic.typography.body.font-weight.bold` | number | → `foundation.typography.font.weight.bold` | font-weight bold pra texto UI geral. | 6 |
+| `semantic.typography.body.font-size.xs` | dimension | → `foundation.typography.font.size.12` | font-size xs pra texto UI geral. | 2 |
+| `semantic.typography.body.font-weight.bold` | number | → `foundation.typography.font.weight.bold` | font-weight bold pra texto UI geral. | 7 |
 | `semantic.typography.body.font-weight.medium` | number | → `foundation.typography.font.weight.medium` | font-weight medium pra texto UI geral. | 0 |
-| `semantic.typography.body.font-weight.regular` | number | → `foundation.typography.font.weight.regular` | font-weight regular pra texto UI geral. | 4 |
+| `semantic.typography.body.font-weight.regular` | number | → `foundation.typography.font.weight.regular` | font-weight regular pra texto UI geral. | 5 |
 | `semantic.typography.body.font-weight.semibold` | number | → `foundation.typography.font.weight.semibold` | font-weight semibold pra texto UI geral. | 3 |
-| `semantic.typography.body.letter-spacing.normal` | dimension | → `foundation.typography.letter.spacing.normal` | letter-spacing normal pra texto UI geral. | 3 |
+| `semantic.typography.body.letter-spacing.normal` | dimension | → `foundation.typography.letter.spacing.normal` | letter-spacing normal pra texto UI geral. | 5 |
 | `semantic.typography.body.letter-spacing.tight` | dimension | → `foundation.typography.letter.spacing.tight` | letter-spacing tight pra texto UI geral. | 1 |
 | `semantic.typography.body.letter-spacing.wider` | dimension | → `foundation.typography.letter.spacing.wider` | letter-spacing wider pra texto UI geral. | 0 |
 | `semantic.typography.body.line-height.2xl` | dimension | → `foundation.typography.line.height.34` | line-height 2xl pra texto UI geral. | 1 |
@@ -593,9 +593,9 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.typography.body.line-height.9xl` | dimension | → `foundation.typography.line.height.90` | line-height 9xl pra texto UI geral. | 0 |
 | `semantic.typography.body.line-height.lg` | dimension | → `foundation.typography.line.height.28` | line-height lg pra texto UI geral. | 0 |
 | `semantic.typography.body.line-height.md` | dimension | → `foundation.typography.line.height.24` | line-height md pra texto UI geral. | 1 |
-| `semantic.typography.body.line-height.sm` | dimension | → `foundation.typography.line.height.20` | line-height sm pra texto UI geral. | 9 |
+| `semantic.typography.body.line-height.sm` | dimension | → `foundation.typography.line.height.20` | line-height sm pra texto UI geral. | 10 |
 | `semantic.typography.body.line-height.xl` | dimension | → `foundation.typography.line.height.32` | line-height xl pra texto UI geral. | 4 |
-| `semantic.typography.body.line-height.xs` | dimension | → `foundation.typography.line.height.18` | line-height xs pra texto UI geral. | 1 |
+| `semantic.typography.body.line-height.xs` | dimension | → `foundation.typography.line.height.18` | line-height xs pra texto UI geral. | 2 |
 
 ### semantic.z
 
@@ -606,7 +606,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Component
 
-174 tokens.
+185 tokens.
 
 ### component.alert
 
@@ -661,6 +661,22 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.badge.root.padding-x.default` | dimension | → `semantic.space.sm` | Padding horizontal do root Badge. | 1 |
 | `component.badge.root.padding-y.default` | dimension | → `semantic.space.2xs` | Padding vertical do root Badge. | 1 |
 | `component.badge.root.radius.default` | dimension | → `semantic.radius.full` | Radius pill do root Badge. | 1 |
+
+### component.breadcrumb
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `component.breadcrumb.item.gap.default` | dimension | → `semantic.space.xs` | Espaço interno entre partes do item de Breadcrumb. | 1 |
+| `component.breadcrumb.item.radius.default` | dimension | → `semantic.radius.md` | Raio do item de Breadcrumb para estados de foco e área interativa. | 1 |
+| `component.breadcrumb.label.font-size.default` | dimension | → `semantic.typography.body.font-size.sm` | Tamanho da fonte do rótulo de Breadcrumb. | 1 |
+| `component.breadcrumb.label.font-weight.default` | number | → `semantic.typography.body.font-weight.bold` | Peso da fonte do rótulo de Breadcrumb. | 1 |
+| `component.breadcrumb.label.letter-spacing.default` | dimension | → `semantic.typography.body.letter-spacing.normal` | Espaçamento entre letras do rótulo de Breadcrumb. | 1 |
+| `component.breadcrumb.label.line-height.default` | dimension | → `semantic.typography.body.line-height.sm` | Altura de linha do rótulo de Breadcrumb. | 1 |
+| `component.breadcrumb.root.gap.default` | dimension | → `semantic.space.xs` | Espaço horizontal entre itens e separadores do Breadcrumb. | 1 |
+| `component.breadcrumb.separator.font-size.default` | dimension | → `semantic.typography.body.font-size.xs` | Tamanho da fonte do separador de Breadcrumb. | 1 |
+| `component.breadcrumb.separator.font-weight.default` | number | → `semantic.typography.body.font-weight.regular` | Peso da fonte do separador de Breadcrumb. | 1 |
+| `component.breadcrumb.separator.letter-spacing.default` | dimension | → `semantic.typography.body.letter-spacing.normal` | Espaçamento entre letras do separador de Breadcrumb. | 1 |
+| `component.breadcrumb.separator.line-height.default` | dimension | → `semantic.typography.body.line-height.xs` | Altura de linha do separador de Breadcrumb. | 1 |
 
 ### component.button
 
@@ -4375,7 +4391,7 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/base/reset.css` (1×)
     - `css/components/alert.css` (1×)
     - `css/components/badge.css` (1×)
-    - `css/components/breadcrumb.css` (2×)
+    - `css/components/breadcrumb.css` (1×)
     - `css/components/card.css` (2×)
     - `css/components/checkbox.css` (2×)
     - `css/components/form-field.css` (1×)
@@ -4451,6 +4467,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a foundation.color.neutral.500.
 - **Usos**:
   - CSS:
+    - `css/components/breadcrumb.css` (1×)
     - `css/components/input.css` (2×)
     - `css/components/select.css` (3×)
     - `css/components/textarea.css` (1×)
@@ -5411,14 +5428,13 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.radius.8.
 - **Usos**:
   - CSS:
-    - `css/components/breadcrumb.css` (1×)
     - `css/components/button.css` (3×)
     - `css/components/divider.css` (1×)
     - `css/components/input.css` (1×)
     - `css/components/select.css` (1×)
     - `css/components/textarea.css` (1×)
-    - `css/tokens/generated/component.css` (4×)
-  - Tokens que referenciam: `component.skeleton.text.radius.default`, `component.skeleton.rectangle.radius.default`, `component.tabs.item.radius.default`, `component.tabs.indicator.radius.default`
+    - `css/tokens/generated/component.css` (5×)
+  - Tokens que referenciam: `component.breadcrumb.item.radius.default`, `component.skeleton.text.radius.default`, `component.skeleton.rectangle.radius.default`, `component.tabs.item.radius.default`, `component.tabs.indicator.radius.default`
 
 ### `semantic.radius.sm`
 
@@ -5891,7 +5907,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.dimension.4.
 - **Usos**:
   - CSS:
-    - `css/components/breadcrumb.css` (1×)
     - `css/components/button.css` (1×)
     - `css/components/checkbox.css` (6×)
     - `css/components/form-field.css` (1×)
@@ -5899,9 +5914,9 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/radio.css` (7×)
     - `css/components/select.css` (1×)
     - `css/components/toggle.css` (2×)
-    - `css/tokens/generated/component.css` (5×)
+    - `css/tokens/generated/component.css` (7×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.alert.content.gap.default`, `component.badge.root.gap.default`, `component.modal.close.padding.default`, `component.tooltip.content.padding-y.default`, `component.tooltip.arrow.depth.default`
+  - Tokens que referenciam: `component.alert.content.gap.default`, `component.badge.root.gap.default`, `component.breadcrumb.root.gap.default`, `component.breadcrumb.item.gap.default`, `component.modal.close.padding.default`, `component.tooltip.content.padding-y.default`, `component.tooltip.arrow.depth.default`
 
 ### `semantic.surface.default`
 
@@ -6205,7 +6220,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-sm`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.size.14.
 - **Usos**:
-  - Tokens que referenciam: `component.alert.title.font-size.default`, `component.alert.description.font-size.default`, `component.avatar.initials.font-size.sm`, `component.avatar.initials.font-size.md`, `component.card.body.font-size.default`, `component.card.subtitle.font-size.default`, `component.modal.body.font-size.sm`, `component.tabs.label.font-size.default`, `component.tooltip.label.font-size.default`
+  - Tokens que referenciam: `component.alert.title.font-size.default`, `component.alert.description.font-size.default`, `component.avatar.initials.font-size.sm`, `component.avatar.initials.font-size.md`, `component.breadcrumb.label.font-size.default`, `component.card.body.font-size.default`, `component.card.subtitle.font-size.default`, `component.modal.body.font-size.sm`, `component.tabs.label.font-size.default`, `component.tooltip.label.font-size.default`
 
 ### `semantic.typography.body.font-size.xl`
 
@@ -6229,7 +6244,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-xs`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.size.12.
 - **Usos**:
-  - Tokens que referenciam: `component.badge.label.font-size.default`
+  - Tokens que referenciam: `component.badge.label.font-size.default`, `component.breadcrumb.separator.font-size.default`
 
 ### `semantic.typography.body.font-weight.bold`
 
@@ -6241,7 +6256,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-bold`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.weight.bold.
 - **Usos**:
-  - Tokens que referenciam: `component.alert.title.font-weight.default`, `component.avatar.initials.font-weight.sm`, `component.avatar.initials.font-weight.md`, `component.badge.label.font-weight.default`, `component.card.subtitle.font-weight.default`, `component.tabs.label.font-weight.default`
+  - Tokens que referenciam: `component.alert.title.font-weight.default`, `component.avatar.initials.font-weight.sm`, `component.avatar.initials.font-weight.md`, `component.badge.label.font-weight.default`, `component.breadcrumb.label.font-weight.default`, `component.card.subtitle.font-weight.default`, `component.tabs.label.font-weight.default`
 
 ### `semantic.typography.body.font-weight.medium`
 
@@ -6265,7 +6280,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-regular`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.weight.regular.
 - **Usos**:
-  - Tokens que referenciam: `component.alert.description.font-weight.default`, `component.card.body.font-weight.default`, `component.modal.body.font-weight.default`, `component.tooltip.label.font-weight.default`
+  - Tokens que referenciam: `component.alert.description.font-weight.default`, `component.breadcrumb.separator.font-weight.default`, `component.card.body.font-weight.default`, `component.modal.body.font-weight.default`, `component.tooltip.label.font-weight.default`
 
 ### `semantic.typography.body.font-weight.semibold`
 
@@ -6289,7 +6304,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-normal`.
 - **Decisão**: Aliasado a Foundation foundation.typography.letter.spacing.normal.
 - **Usos**:
-  - Tokens que referenciam: `component.modal.title.letter-spacing.sm`, `component.modal.title.letter-spacing.md`, `component.tabs.label.letter-spacing.default`
+  - Tokens que referenciam: `component.breadcrumb.label.letter-spacing.default`, `component.breadcrumb.separator.letter-spacing.default`, `component.modal.title.letter-spacing.sm`, `component.modal.title.letter-spacing.md`, `component.tabs.label.letter-spacing.default`
 
 ### `semantic.typography.body.letter-spacing.tight`
 
@@ -6457,7 +6472,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-sm`.
 - **Decisão**: Aliasado a Foundation foundation.typography.line.height.20.
 - **Usos**:
-  - Tokens que referenciam: `component.alert.title.line-height.default`, `component.alert.description.line-height.default`, `component.avatar.initials.line-height.sm`, `component.avatar.initials.line-height.md`, `component.card.body.line-height.default`, `component.card.subtitle.line-height.default`, `component.modal.body.line-height.sm`, `component.tabs.label.line-height.default`, `component.tooltip.label.line-height.default`
+  - Tokens que referenciam: `component.alert.title.line-height.default`, `component.alert.description.line-height.default`, `component.avatar.initials.line-height.sm`, `component.avatar.initials.line-height.md`, `component.breadcrumb.label.line-height.default`, `component.card.body.line-height.default`, `component.card.subtitle.line-height.default`, `component.modal.body.line-height.sm`, `component.tabs.label.line-height.default`, `component.tooltip.label.line-height.default`
 
 ### `semantic.typography.body.line-height.xl`
 
@@ -6481,7 +6496,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-xs`.
 - **Decisão**: Aliasado a Foundation foundation.typography.line.height.18.
 - **Usos**:
-  - Tokens que referenciam: `component.badge.label.line-height.default`
+  - Tokens que referenciam: `component.badge.label.line-height.default`, `component.breadcrumb.separator.line-height.default`
 
 ### `semantic.z.modal`
 
@@ -7016,6 +7031,149 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/badge.css` (1×)
+
+### `component.breadcrumb.item.gap.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.xs`
+- **Sentido**: Espaço interno entre partes do item de Breadcrumb.
+- **Escopo**: —
+- **Contexto**: Usado em ds-breadcrumb__item e nos variants do Figma Breadcrumb Item; preserva compatibilidade se o item ganhar ícone ou affordance adicional.
+- **Decisão**: Alias para semantic.space.xs, refletindo o binding vivo do Figma sem criar uma abstração Semantic específica de Breadcrumb.
+- **Usos**:
+  - CSS:
+    - `css/components/breadcrumb.css` (1×)
+
+### `component.breadcrumb.item.radius.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.radius.md`
+- **Sentido**: Raio do item de Breadcrumb para estados de foco e área interativa.
+- **Escopo**: —
+- **Contexto**: Usado no item navegável do CSS e nos variants State=Link e State=Current do Figma.
+- **Decisão**: Alias para semantic.radius.md, expondo o contrato anatômico do item sem duplicar valor primitivo.
+- **Usos**:
+  - CSS:
+    - `css/components/breadcrumb.css` (1×)
+
+### `component.breadcrumb.label.font-size.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.font-size.sm`
+- **Sentido**: Tamanho da fonte do rótulo de Breadcrumb.
+- **Escopo**: —
+- **Contexto**: Usado nos links e no item atual do Breadcrumb em CSS e Figma.
+- **Decisão**: Alias para semantic.typography.body.font-size.sm, mantendo o rótulo alinhado ao text style de corpo pequeno.
+- **Usos**:
+  - CSS:
+    - `css/components/breadcrumb.css` (1×)
+
+### `component.breadcrumb.label.font-weight.default`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.font-weight.bold`
+- **Sentido**: Peso da fonte do rótulo de Breadcrumb.
+- **Escopo**: —
+- **Contexto**: Usado nos links e no item atual do Breadcrumb em CSS e Figma.
+- **Decisão**: Alias para semantic.typography.body.font-weight.bold, alinhado ao variant vivo Breadcrumb Item.
+- **Usos**:
+  - CSS:
+    - `css/components/breadcrumb.css` (1×)
+
+### `component.breadcrumb.label.letter-spacing.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.letter-spacing.normal`
+- **Sentido**: Espaçamento entre letras do rótulo de Breadcrumb.
+- **Escopo**: —
+- **Contexto**: Usado nos links e no item atual do Breadcrumb em CSS e Figma.
+- **Decisão**: Alias para semantic.typography.body.letter-spacing.normal, mantendo paridade com os text styles do sistema.
+- **Usos**:
+  - CSS:
+    - `css/components/breadcrumb.css` (1×)
+
+### `component.breadcrumb.label.line-height.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.line-height.sm`
+- **Sentido**: Altura de linha do rótulo de Breadcrumb.
+- **Escopo**: —
+- **Contexto**: Usado nos links e no item atual do Breadcrumb em CSS e Figma.
+- **Decisão**: Alias para semantic.typography.body.line-height.sm, preservando a altura visual de 20px do rótulo.
+- **Usos**:
+  - CSS:
+    - `css/components/breadcrumb.css` (1×)
+
+### `component.breadcrumb.root.gap.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.xs`
+- **Sentido**: Espaço horizontal entre itens e separadores do Breadcrumb.
+- **Escopo**: —
+- **Contexto**: Usado no container ds-breadcrumb e no componente Figma Breadcrumb para manter a cadência do trail de navegação.
+- **Decisão**: Alias para semantic.space.xs, porque o gap é parte anatômica pública do Breadcrumb, mas reutiliza a escala Semantic existente.
+- **Usos**:
+  - CSS:
+    - `css/components/breadcrumb.css` (1×)
+
+### `component.breadcrumb.separator.font-size.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.font-size.xs`
+- **Sentido**: Tamanho da fonte do separador de Breadcrumb.
+- **Escopo**: —
+- **Contexto**: Usado no separador / entre itens; no Figma o separador usa body/xs para reduzir peso visual.
+- **Decisão**: Alias para semantic.typography.body.font-size.xs, refletindo a anatomia específica do separador.
+- **Usos**:
+  - CSS:
+    - `css/components/breadcrumb.css` (1×)
+
+### `component.breadcrumb.separator.font-weight.default`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.font-weight.regular`
+- **Sentido**: Peso da fonte do separador de Breadcrumb.
+- **Escopo**: —
+- **Contexto**: Usado no separador / entre itens para manter menor ênfase que os links.
+- **Decisão**: Alias para semantic.typography.body.font-weight.regular, refletindo a hierarquia visual do Figma.
+- **Usos**:
+  - CSS:
+    - `css/components/breadcrumb.css` (1×)
+
+### `component.breadcrumb.separator.letter-spacing.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.letter-spacing.normal`
+- **Sentido**: Espaçamento entre letras do separador de Breadcrumb.
+- **Escopo**: —
+- **Contexto**: Usado no separador / entre itens em CSS e Figma.
+- **Decisão**: Alias para semantic.typography.body.letter-spacing.normal, mantendo consistência tipográfica.
+- **Usos**:
+  - CSS:
+    - `css/components/breadcrumb.css` (1×)
+
+### `component.breadcrumb.separator.line-height.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.line-height.xs`
+- **Sentido**: Altura de linha do separador de Breadcrumb.
+- **Escopo**: —
+- **Contexto**: Usado no separador / entre itens em CSS e Figma.
+- **Decisão**: Alias para semantic.typography.body.line-height.xs, alinhado ao separador vivo do Figma.
+- **Usos**:
+  - CSS:
+    - `css/components/breadcrumb.css` (1×)
 
 ### `component.button.root.height.lg`
 

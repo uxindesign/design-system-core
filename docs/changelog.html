@@ -72,6 +72,8 @@
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
 <h3>Corrigido</h3>
 <ul>
+<li><p><strong>Breadcrumb Figma/CSS aplicado aos tokens Component anatômicos.</strong> Criado <code>component.breadcrumb</code> para gap da lista, gap/raio do item, tipografia do rótulo e tipografia do separador; <code>Breadcrumb</code> e <code>Breadcrumb Item</code> vivos do Figma agora usam tokens Component nesses contratos. CSS passa a consumir <code>--ds-breadcrumb-*</code>; separador é alinhado ao Figma com <code>content.subtle</code> e tipografia <code>body/xs regular</code>.</p>
+</li>
 <li><p><strong>Tabs Figma/CSS aplicado aos tokens Component anatômicos.</strong> Criado <code>component.tabs</code> para borda da lista, espaçamento/raio/gap do indicador no item, altura/raio do indicador, tipografia do rótulo e espaçamento do painel; <code>Tab Item</code> e <code>Tab Bar</code> ativos no Figma agora usam tokens Component nesses contratos. CSS passa a consumir <code>--ds-tabs-*</code>; cores e focus ring permanecem Semantic.</p>
 </li>
 <li><p><strong>Modal Figma/CSS aplicado aos Component tokens anatômicos.</strong> Criado <code>component.modal</code> para overlay, root, header, body, title, footer e close; as 3 variantes vivas do Figma (<code>Small</code>, <code>Medium</code>, <code>Large</code>) agora usam Component tokens nesses contratos. CSS passa a consumir <code>--ds-modal-*</code>, remove <code>z-index</code> hardcoded via <code>semantic.z.modal</code> e aplica <code>component.modal.root.shadow.default</code> em vez de depender da utility <code>.ds-elevation-4</code>.</p>

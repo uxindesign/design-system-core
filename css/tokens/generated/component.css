@@ -50,6 +50,17 @@
   --ds-badge-label-font-size-default: var(--ds-body-font-size-xs); /** Font-size do label Badge. */
   --ds-badge-label-line-height-default: var(--ds-body-line-height-xs); /** Line-height do label Badge. */
   --ds-badge-label-font-weight-default: var(--ds-body-font-weight-bold); /** Font-weight do label Badge. */
+  --ds-breadcrumb-root-gap-default: var(--ds-space-xs); /** Espaço entre itens e separadores do Breadcrumb. */
+  --ds-breadcrumb-item-gap-default: var(--ds-space-xs); /** Espaço interno entre partes do item de Breadcrumb. */
+  --ds-breadcrumb-item-radius-default: var(--ds-radius-md); /** Raio do item de Breadcrumb. */
+  --ds-breadcrumb-label-font-size-default: var(--ds-body-font-size-sm); /** Tamanho da fonte do rótulo de Breadcrumb. */
+  --ds-breadcrumb-label-line-height-default: var(--ds-body-line-height-sm); /** Altura de linha do rótulo de Breadcrumb. */
+  --ds-breadcrumb-label-font-weight-default: var(--ds-body-font-weight-bold); /** Peso da fonte do rótulo de Breadcrumb. */
+  --ds-breadcrumb-label-letter-spacing-default: var(--ds-body-letter-spacing-normal); /** Espaçamento entre letras do rótulo de Breadcrumb. */
+  --ds-breadcrumb-separator-font-size-default: var(--ds-body-font-size-xs); /** Tamanho da fonte do separador de Breadcrumb. */
+  --ds-breadcrumb-separator-line-height-default: var(--ds-body-line-height-xs); /** Altura de linha do separador de Breadcrumb. */
+  --ds-breadcrumb-separator-font-weight-default: var(--ds-body-font-weight-regular); /** Peso da fonte do separador de Breadcrumb. */
+  --ds-breadcrumb-separator-letter-spacing-default: var(--ds-body-letter-spacing-normal); /** Espaçamento entre letras do separador de Breadcrumb. */
   --ds-button-root-height-sm: var(--ds-size-lg); /** Altura do root Button sm. */
   --ds-button-root-height-md: var(--ds-size-xl); /** Altura do root Button md. */
   --ds-button-root-height-lg: var(--ds-size-2xl); /** Altura do root Button lg. */
