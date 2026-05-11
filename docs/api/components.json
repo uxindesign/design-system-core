@@ -610,15 +610,17 @@
       "cssFile": "css/components/tooltip.css",
       "tokens": [
         "ds-background-inverse",
-        "ds-body-font-size-sm",
-        "ds-body-font-weight-regular",
-        "ds-body-line-height-sm",
         "ds-motion-duration-fast",
         "ds-motion-ease-default",
         "ds-primary-content-default",
-        "ds-radius-sm",
         "ds-space-sm",
-        "ds-space-xs",
+        "ds-tooltip-arrow-depth-default",
+        "ds-tooltip-content-padding-x-default",
+        "ds-tooltip-content-padding-y-default",
+        "ds-tooltip-content-radius-default",
+        "ds-tooltip-label-font-size-default",
+        "ds-tooltip-label-font-weight-default",
+        "ds-tooltip-label-line-height-default",
         "ds-z-tooltip"
       ],
       "variants": [

@@ -6,8 +6,8 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Status
 
-- Total de tokens: **500**
-- Com metadados completos: **500**
+- Total de tokens: **508**
+- Com metadados completos: **508**
 - Pendentes (`TODO` em algum campo obrigatório): **0**
 - Completude: **100%**
 
@@ -487,7 +487,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.radius.full` | dimension | → `foundation.radius.999` | Radius semantic full. | 7 |
 | `semantic.radius.lg` | dimension | → `foundation.radius.12` | Radius semantic lg. | 4 |
 | `semantic.radius.md` | dimension | → `foundation.radius.8` | Radius semantic md. | 10 |
-| `semantic.radius.sm` | dimension | → `foundation.radius.4` | Radius semantic sm. | 8 |
+| `semantic.radius.sm` | dimension | → `foundation.radius.4` | Radius semantic sm. | 9 |
 | `semantic.radius.xl` | dimension | → `foundation.radius.16` | Radius semantic xl. | 0 |
 
 ### semantic.shadow
@@ -531,9 +531,9 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.space.section.md` | dimension | → `foundation.dimension.48` | Spacing token section.md. | 0 |
 | `semantic.space.section.sm` | dimension | → `foundation.dimension.32` | Spacing token section.sm. | 1 |
 | `semantic.space.section.xl` | dimension | → `foundation.dimension.80` | Spacing token section.xl. | 0 |
-| `semantic.space.sm` | dimension | → `foundation.dimension.8` | Spacing token sm. | 13 |
+| `semantic.space.sm` | dimension | → `foundation.dimension.8` | Spacing token sm. | 16 |
 | `semantic.space.xl` | dimension | → `foundation.dimension.20` | Spacing token xl. | 2 |
-| `semantic.space.xs` | dimension | → `foundation.dimension.4` | Spacing token xs. | 13 |
+| `semantic.space.xs` | dimension | → `foundation.dimension.4` | Spacing token xs. | 15 |
 
 ### semantic.surface
 
@@ -572,12 +572,12 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.typography.body.font-size.9xl` | dimension | → `foundation.typography.font.size.72` | font-size 9xl pra texto UI geral. | 0 |
 | `semantic.typography.body.font-size.lg` | dimension | → `foundation.typography.font.size.18` | font-size lg pra texto UI geral. | 0 |
 | `semantic.typography.body.font-size.md` | dimension | → `foundation.typography.font.size.16` | font-size md pra texto UI geral. | 0 |
-| `semantic.typography.body.font-size.sm` | dimension | → `foundation.typography.font.size.14` | font-size sm pra texto UI geral. | 2 |
+| `semantic.typography.body.font-size.sm` | dimension | → `foundation.typography.font.size.14` | font-size sm pra texto UI geral. | 3 |
 | `semantic.typography.body.font-size.xl` | dimension | → `foundation.typography.font.size.20` | font-size xl pra texto UI geral. | 2 |
 | `semantic.typography.body.font-size.xs` | dimension | → `foundation.typography.font.size.12` | font-size xs pra texto UI geral. | 0 |
 | `semantic.typography.body.font-weight.bold` | number | → `foundation.typography.font.weight.bold` | font-weight bold pra texto UI geral. | 2 |
 | `semantic.typography.body.font-weight.medium` | number | → `foundation.typography.font.weight.medium` | font-weight medium pra texto UI geral. | 0 |
-| `semantic.typography.body.font-weight.regular` | number | → `foundation.typography.font.weight.regular` | font-weight regular pra texto UI geral. | 0 |
+| `semantic.typography.body.font-weight.regular` | number | → `foundation.typography.font.weight.regular` | font-weight regular pra texto UI geral. | 1 |
 | `semantic.typography.body.font-weight.semibold` | number | → `foundation.typography.font.weight.semibold` | font-weight semibold pra texto UI geral. | 1 |
 | `semantic.typography.body.letter-spacing.normal` | dimension | → `foundation.typography.letter.spacing.normal` | letter-spacing normal pra texto UI geral. | 0 |
 | `semantic.typography.body.letter-spacing.tight` | dimension | → `foundation.typography.letter.spacing.tight` | letter-spacing tight pra texto UI geral. | 0 |
@@ -593,7 +593,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.typography.body.line-height.9xl` | dimension | → `foundation.typography.line.height.90` | line-height 9xl pra texto UI geral. | 0 |
 | `semantic.typography.body.line-height.lg` | dimension | → `foundation.typography.line.height.28` | line-height lg pra texto UI geral. | 0 |
 | `semantic.typography.body.line-height.md` | dimension | → `foundation.typography.line.height.24` | line-height md pra texto UI geral. | 0 |
-| `semantic.typography.body.line-height.sm` | dimension | → `foundation.typography.line.height.20` | line-height sm pra texto UI geral. | 2 |
+| `semantic.typography.body.line-height.sm` | dimension | → `foundation.typography.line.height.20` | line-height sm pra texto UI geral. | 3 |
 | `semantic.typography.body.line-height.xl` | dimension | → `foundation.typography.line.height.32` | line-height xl pra texto UI geral. | 1 |
 | `semantic.typography.body.line-height.xs` | dimension | → `foundation.typography.line.height.18` | line-height xs pra texto UI geral. | 0 |
 
@@ -605,7 +605,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Component
 
-61 tokens.
+69 tokens.
 
 ### component.avatar
 
@@ -717,6 +717,19 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.toggle.track.width.lg` | dimension | → `foundation.dimension.56` | Largura visual da track do Toggle por size. | 1 |
 | `component.toggle.track.width.md` | dimension | → `foundation.dimension.44` | Largura visual da track do Toggle por size. | 1 |
 | `component.toggle.track.width.sm` | dimension | → `foundation.dimension.28` | Largura visual da track do Toggle por size. | 1 |
+
+### component.tooltip
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `component.tooltip.arrow.base.default` | dimension | → `semantic.space.sm` | Base visual da seta Tooltip. | 0 |
+| `component.tooltip.arrow.depth.default` | dimension | → `semantic.space.xs` | Profundidade visual da seta Tooltip. | 1 |
+| `component.tooltip.content.padding-x.default` | dimension | → `semantic.space.sm` | Padding horizontal do content Tooltip. | 1 |
+| `component.tooltip.content.padding-y.default` | dimension | → `semantic.space.xs` | Padding vertical do content Tooltip. | 1 |
+| `component.tooltip.content.radius.default` | dimension | → `semantic.radius.sm` | Radius do content Tooltip. | 1 |
+| `component.tooltip.label.font-size.default` | dimension | → `semantic.typography.body.font-size.sm` | Font-size do label Tooltip. | 1 |
+| `component.tooltip.label.font-weight.default` | number | → `semantic.typography.body.font-weight.regular` | Font-weight do label Tooltip. | 1 |
+| `component.tooltip.label.line-height.default` | dimension | → `semantic.typography.body.line-height.sm` | Line-height do label Tooltip. | 1 |
 
 ---
 
@@ -5300,7 +5313,8 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/modal.css` (1×)
     - `css/components/radio.css` (1×)
     - `css/components/toggle.css` (1×)
-    - `css/components/tooltip.css` (1×)
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.tooltip.content.radius.default`
 
 ### `semantic.radius.xl`
 
@@ -5722,8 +5736,10 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/select.css` (3×)
     - `css/components/textarea.css` (2×)
     - `css/components/toggle.css` (1×)
-    - `css/components/tooltip.css` (5×)
+    - `css/components/tooltip.css` (4×)
+    - `css/tokens/generated/component.css` (2×)
     - `css/utilities/layout.css` (1×)
+  - Tokens que referenciam: `component.tooltip.content.padding-x.default`, `component.tooltip.arrow.base.default`
 
 ### `semantic.space.xl`
 
@@ -5761,8 +5777,9 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/radio.css` (7×)
     - `css/components/select.css` (1×)
     - `css/components/toggle.css` (2×)
-    - `css/components/tooltip.css` (2×)
+    - `css/tokens/generated/component.css` (2×)
     - `css/utilities/layout.css` (1×)
+  - Tokens que referenciam: `component.tooltip.content.padding-y.default`, `component.tooltip.arrow.depth.default`
 
 ### `semantic.surface.default`
 
@@ -6066,7 +6083,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-sm`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.size.14.
 - **Usos**:
-  - Tokens que referenciam: `component.avatar.initials.font-size.sm`, `component.avatar.initials.font-size.md`
+  - Tokens que referenciam: `component.avatar.initials.font-size.sm`, `component.avatar.initials.font-size.md`, `component.tooltip.label.font-size.default`
 
 ### `semantic.typography.body.font-size.xl`
 
@@ -6126,7 +6143,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-regular`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.weight.regular.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - Tokens que referenciam: `component.tooltip.label.font-weight.default`
 
 ### `semantic.typography.body.font-weight.semibold`
 
@@ -6318,7 +6335,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-sm`.
 - **Decisão**: Aliasado a Foundation foundation.typography.line.height.20.
 - **Usos**:
-  - Tokens que referenciam: `component.avatar.initials.line-height.sm`, `component.avatar.initials.line-height.md`
+  - Tokens que referenciam: `component.avatar.initials.line-height.sm`, `component.avatar.initials.line-height.md`, `component.tooltip.label.line-height.default`
 
 ### `semantic.typography.body.line-height.xl`
 
@@ -7149,4 +7166,107 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/toggle.css` (1×)
+
+### `component.tooltip.arrow.base.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.sm`
+- **Sentido**: Base visual da seta Tooltip.
+- **Escopo**: width, height
+- **Contexto**: Component token do contrato anatomico Tooltip Arrow. Binda a maior dimensao da seta nos 4 variants Position do Figma: top/bottom usam width 8px; left/right usam height 8px.
+- **Decisão**: Alias 1:1 para semantic.space.sm porque a base 8px deriva da escala, mas fica em Component por ser geometria especifica da seta do Tooltip. No CSS a base e derivada de 2x a profundidade do border triangle.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.tooltip.arrow.depth.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.xs`
+- **Sentido**: Profundidade visual da seta Tooltip.
+- **Escopo**: width, height, border
+- **Contexto**: Component token do contrato anatomico Tooltip Arrow. Binda a menor dimensao da seta nos 4 variants Position do Figma e define o border do triangulo no CSS.
+- **Decisão**: Alias 1:1 para semantic.space.xs porque 4px deriva da escala, mas no Tooltip representa a profundidade anatomica da seta.
+- **Usos**:
+  - CSS:
+    - `css/components/tooltip.css` (1×)
+
+### `component.tooltip.content.padding-x.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.sm`
+- **Sentido**: Padding horizontal do content Tooltip.
+- **Escopo**: padding-left, padding-right
+- **Contexto**: Component token do contrato anatomico Tooltip Content. Binda paddingLeft/paddingRight dos 4 variants Position no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.space.sm porque 8px e escala reutilizavel, mas no Tooltip documenta o padding horizontal publico do content.
+- **Usos**:
+  - CSS:
+    - `css/components/tooltip.css` (1×)
+
+### `component.tooltip.content.padding-y.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.xs`
+- **Sentido**: Padding vertical do content Tooltip.
+- **Escopo**: padding-top, padding-bottom
+- **Contexto**: Component token do contrato anatomico Tooltip Content. Binda paddingTop/paddingBottom dos 4 variants Position no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.space.xs porque 4px e escala reutilizavel, mas no Tooltip documenta o padding vertical publico do content.
+- **Usos**:
+  - CSS:
+    - `css/components/tooltip.css` (1×)
+
+### `component.tooltip.content.radius.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.radius.sm`
+- **Sentido**: Radius do content Tooltip.
+- **Escopo**: border-radius
+- **Contexto**: Component token do contrato anatomico Tooltip Content. Binda os 4 corner radii dos variants Position no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.radius.sm porque o radius sm e reutilizavel, mas no Tooltip e parte publica da anatomia do content.
+- **Usos**:
+  - CSS:
+    - `css/components/tooltip.css` (1×)
+
+### `component.tooltip.label.font-size.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.font-size.sm`
+- **Sentido**: Font-size do label Tooltip.
+- **Escopo**: font-size
+- **Contexto**: Component token do contrato anatomico Tooltip Label. Binda fontSize dos 4 labels no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.typography.body.font-size.sm porque o label usa body/sm, mas a escala tipografica do Tooltip e contrato publico do componente.
+- **Usos**:
+  - CSS:
+    - `css/components/tooltip.css` (1×)
+
+### `component.tooltip.label.font-weight.default`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.font-weight.regular`
+- **Sentido**: Font-weight do label Tooltip.
+- **Escopo**: font-weight
+- **Contexto**: Component token do contrato anatomico Tooltip Label. Binda fontStyle dos 4 labels no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.typography.body.font-weight.regular porque Tooltip usa texto regular; no Figma o campo bindavel e fontStyle/string, enquanto no JSON/CSS o contrato permanece numerico.
+- **Usos**:
+  - CSS:
+    - `css/components/tooltip.css` (1×)
+
+### `component.tooltip.label.line-height.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.line-height.sm`
+- **Sentido**: Line-height do label Tooltip.
+- **Escopo**: line-height
+- **Contexto**: Component token do contrato anatomico Tooltip Label. Binda lineHeight dos 4 labels no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.typography.body.line-height.sm porque o label usa body/sm, mas a metrica vertical do Tooltip e contrato publico do componente.
+- **Usos**:
+  - CSS:
+    - `css/components/tooltip.css` (1×)
 

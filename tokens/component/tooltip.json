@@ -1,0 +1,68 @@
+{
+  "component": {
+    "tooltip": {
+      "content": {
+        "padding-x": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.space.sm}",
+            "$description": "Padding horizontal do content Tooltip."
+          }
+        },
+        "padding-y": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.space.xs}",
+            "$description": "Padding vertical do content Tooltip."
+          }
+        },
+        "radius": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.radius.sm}",
+            "$description": "Radius do content Tooltip."
+          }
+        }
+      },
+      "label": {
+        "font-size": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.font-size.sm}",
+            "$description": "Font-size do label Tooltip."
+          }
+        },
+        "line-height": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.line-height.sm}",
+            "$description": "Line-height do label Tooltip."
+          }
+        },
+        "font-weight": {
+          "default": {
+            "$type": "number",
+            "$value": "{semantic.typography.body.font-weight.regular}",
+            "$description": "Font-weight do label Tooltip."
+          }
+        }
+      },
+      "arrow": {
+        "base": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.space.sm}",
+            "$description": "Base visual da seta Tooltip."
+          }
+        },
+        "depth": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.space.xs}",
+            "$description": "Profundidade visual da seta Tooltip."
+          }
+        }
+      }
+    }
+  }
+}

@@ -5050,7 +5050,9 @@
       "decisao": "Aliasado a Foundation foundation.typography.font.weight.regular.",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "component.tooltip.label.font-weight.default"
+        ],
         "figma": []
       }
     },
@@ -5169,7 +5171,8 @@
         "css": [],
         "tokens": [
           "component.avatar.initials.font-size.sm",
-          "component.avatar.initials.font-size.md"
+          "component.avatar.initials.font-size.md",
+          "component.tooltip.label.font-size.default"
         ],
         "figma": []
       }
@@ -5289,7 +5292,8 @@
         "css": [],
         "tokens": [
           "component.avatar.initials.line-height.sm",
-          "component.avatar.initials.line-height.md"
+          "component.avatar.initials.line-height.md",
+          "component.tooltip.label.line-height.default"
         ],
         "figma": []
       }
@@ -6700,7 +6704,7 @@
             "count": 2
           },
           {
-            "file": "css/components/tooltip.css",
+            "file": "css/tokens/generated/component.css",
             "count": 2
           },
           {
@@ -6708,7 +6712,10 @@
             "count": 1
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "component.tooltip.content.padding-y.default",
+          "component.tooltip.arrow.depth.default"
+        ],
         "figma": []
       }
     },
@@ -6772,14 +6779,21 @@
           },
           {
             "file": "css/components/tooltip.css",
-            "count": 5
+            "count": 4
+          },
+          {
+            "file": "css/tokens/generated/component.css",
+            "count": 2
           },
           {
             "file": "css/utilities/layout.css",
             "count": 1
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "component.tooltip.content.padding-x.default",
+          "component.tooltip.arrow.base.default"
+        ],
         "figma": []
       }
     },
@@ -6975,11 +6989,13 @@
             "count": 1
           },
           {
-            "file": "css/components/tooltip.css",
+            "file": "css/tokens/generated/component.css",
             "count": 1
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "component.tooltip.content.radius.default"
+        ],
         "figma": []
       }
     },
@@ -11600,6 +11616,174 @@
         "css": [
           {
             "file": "css/components/skeleton.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.tooltip.content.padding-x.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.sm",
+      "sentido": "Padding horizontal do content Tooltip.",
+      "escopo": [
+        "padding-left",
+        "padding-right"
+      ],
+      "contexto": "Component token do contrato anatomico Tooltip Content. Binda paddingLeft/paddingRight dos 4 variants Position no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.sm porque 8px e escala reutilizavel, mas no Tooltip documenta o padding horizontal publico do content.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/tooltip.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.tooltip.content.padding-y.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xs",
+      "sentido": "Padding vertical do content Tooltip.",
+      "escopo": [
+        "padding-top",
+        "padding-bottom"
+      ],
+      "contexto": "Component token do contrato anatomico Tooltip Content. Binda paddingTop/paddingBottom dos 4 variants Position no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.xs porque 4px e escala reutilizavel, mas no Tooltip documenta o padding vertical publico do content.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/tooltip.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.tooltip.content.radius.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.radius.sm",
+      "sentido": "Radius do content Tooltip.",
+      "escopo": [
+        "border-radius"
+      ],
+      "contexto": "Component token do contrato anatomico Tooltip Content. Binda os 4 corner radii dos variants Position no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.radius.sm porque o radius sm e reutilizavel, mas no Tooltip e parte publica da anatomia do content.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/tooltip.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.tooltip.label.font-size.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.sm",
+      "sentido": "Font-size do label Tooltip.",
+      "escopo": [
+        "font-size"
+      ],
+      "contexto": "Component token do contrato anatomico Tooltip Label. Binda fontSize dos 4 labels no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-size.sm porque o label usa body/sm, mas a escala tipografica do Tooltip e contrato publico do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/tooltip.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.tooltip.label.line-height.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.sm",
+      "sentido": "Line-height do label Tooltip.",
+      "escopo": [
+        "line-height"
+      ],
+      "contexto": "Component token do contrato anatomico Tooltip Label. Binda lineHeight dos 4 labels no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.line-height.sm porque o label usa body/sm, mas a metrica vertical do Tooltip e contrato publico do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/tooltip.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.tooltip.label.font-weight.default": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.font-weight.regular",
+      "sentido": "Font-weight do label Tooltip.",
+      "escopo": [
+        "font-weight"
+      ],
+      "contexto": "Component token do contrato anatomico Tooltip Label. Binda fontStyle dos 4 labels no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-weight.regular porque Tooltip usa texto regular; no Figma o campo bindavel e fontStyle/string, enquanto no JSON/CSS o contrato permanece numerico.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/tooltip.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.tooltip.arrow.base.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.sm",
+      "sentido": "Base visual da seta Tooltip.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Component token do contrato anatomico Tooltip Arrow. Binda a maior dimensao da seta nos 4 variants Position do Figma: top/bottom usam width 8px; left/right usam height 8px.",
+      "decisao": "Alias 1:1 para semantic.space.sm porque a base 8px deriva da escala, mas fica em Component por ser geometria especifica da seta do Tooltip. No CSS a base e derivada de 2x a profundidade do border triangle.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.tooltip.arrow.depth.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xs",
+      "sentido": "Profundidade visual da seta Tooltip.",
+      "escopo": [
+        "width",
+        "height",
+        "border"
+      ],
+      "contexto": "Component token do contrato anatomico Tooltip Arrow. Binda a menor dimensao da seta nos 4 variants Position do Figma e define o border do triangulo no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.xs porque 4px deriva da escala, mas no Tooltip representa a profundidade anatomica da seta.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/tooltip.css",
             "count": 1
           }
         ],

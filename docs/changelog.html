@@ -72,6 +72,8 @@
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
 <h3>Corrigido</h3>
 <ul>
+<li><p><strong>Tooltip Figma/CSS aplicado aos Component tokens anatómicos.</strong> Criado <code>component.tooltip</code> para padding/radius do content, tipografia do label e dimensões da seta (<code>base/depth</code>); os 4 variants <code>Position</code> do Figma agora usam Component tokens nesses contratos. CSS passa a consumir <code>--ds-tooltip-*</code>; cores e z-index permanecem Semantic.</p>
+</li>
 <li><p><strong>Skeleton Figma/CSS aplicado aos Component tokens anatómicos.</strong> Criado <code>component.skeleton.{text,circle,rectangle}</code> para height/size/radius dos 3 variants vivos do Figma; Text e Rectangle usam alturas anatómicas específicas (<code>12/120</code>) e Circle usa <code>semantic.size.xl</code> (<code>40</code>). CSS passa a consumir <code>--ds-skeleton-*</code>; documentação corrige background para <code>semantic.background.subtle</code> e remove mappings antigos de radius Foundation.</p>
 </li>
 <li><p><strong>Spinner Figma/CSS aplicado aos Component tokens anatómicos.</strong> Criado <code>component.spinner.root.size.{sm,md,lg}</code>, <code>component.spinner.root.radius.default</code> e <code>component.spinner.ring.stroke-width.default</code>; os 6 variants do Spinner no Figma agora usam Component tokens em root, Track e Indicator. CSS passa a consumir <code>--ds-spinner-*</code>; documentação corrige tamanhos <code>16/24/32</code> e motion para <code>duration.slower</code> + <code>ease.linear</code>.</p>

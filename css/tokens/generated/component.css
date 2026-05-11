@@ -64,4 +64,12 @@
   --ds-toggle-track-height-md: var(--ds-size-md); /** Altura da track Toggle md. */
   --ds-toggle-track-height-lg: var(--ds-size-lg); /** Altura da track Toggle lg. */
   --ds-toggle-thumb-inset-default: var(--ds-space-2xs); /** Inset/gap do thumb Toggle usado pela implementacao CSS. */
+  --ds-tooltip-content-padding-x-default: var(--ds-space-sm); /** Padding horizontal do content Tooltip. */
+  --ds-tooltip-content-padding-y-default: var(--ds-space-xs); /** Padding vertical do content Tooltip. */
+  --ds-tooltip-content-radius-default: var(--ds-radius-sm); /** Radius do content Tooltip. */
+  --ds-tooltip-label-font-size-default: var(--ds-body-font-size-sm); /** Font-size do label Tooltip. */
+  --ds-tooltip-label-line-height-default: var(--ds-body-line-height-sm); /** Line-height do label Tooltip. */
+  --ds-tooltip-label-font-weight-default: var(--ds-body-font-weight-regular); /** Font-weight do label Tooltip. */
+  --ds-tooltip-arrow-base-default: var(--ds-space-sm); /** Base visual da seta Tooltip. */
+  --ds-tooltip-arrow-depth-default: var(--ds-space-xs); /** Profundidade visual da seta Tooltip. */
 }
