@@ -4588,10 +4588,6 @@
             "count": 1
           },
           {
-            "file": "css/components/alert.css",
-            "count": 4
-          },
-          {
             "file": "css/components/button.css",
             "count": 1
           },
@@ -4633,10 +4629,11 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [
+          "component.alert.root.border-width.default",
           "component.badge.root.border-width.default"
         ],
         "figma": []
@@ -5053,6 +5050,7 @@
       "usos": {
         "css": [],
         "tokens": [
+          "component.alert.description.font-weight.default",
           "component.tooltip.label.font-weight.default"
         ],
         "figma": []
@@ -5105,6 +5103,7 @@
       "usos": {
         "css": [],
         "tokens": [
+          "component.alert.title.font-weight.default",
           "component.avatar.initials.font-weight.sm",
           "component.avatar.initials.font-weight.md",
           "component.badge.label.font-weight.default"
@@ -5175,6 +5174,8 @@
       "usos": {
         "css": [],
         "tokens": [
+          "component.alert.title.font-size.default",
+          "component.alert.description.font-size.default",
           "component.avatar.initials.font-size.sm",
           "component.avatar.initials.font-size.md",
           "component.tooltip.label.font-size.default"
@@ -5298,6 +5299,8 @@
       "usos": {
         "css": [],
         "tokens": [
+          "component.alert.title.line-height.default",
+          "component.alert.description.line-height.default",
           "component.avatar.initials.line-height.sm",
           "component.avatar.initials.line-height.md",
           "component.tooltip.label.line-height.default"
@@ -6664,10 +6667,6 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/alert.css",
-            "count": 1
-          },
-          {
             "file": "css/components/breadcrumb.css",
             "count": 1
           },
@@ -6705,7 +6704,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 3
+            "count": 4
           },
           {
             "file": "css/utilities/layout.css",
@@ -6713,6 +6712,7 @@
           }
         ],
         "tokens": [
+          "component.alert.content.gap.default",
           "component.badge.root.gap.default",
           "component.tooltip.content.padding-y.default",
           "component.tooltip.arrow.depth.default"
@@ -6734,10 +6734,6 @@
       "decisao": "Aliasado a Foundation foundation.dimension.8.",
       "usos": {
         "css": [
-          {
-            "file": "css/components/alert.css",
-            "count": 1
-          },
           {
             "file": "css/components/button.css",
             "count": 3
@@ -6780,7 +6776,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 3
+            "count": 4
           },
           {
             "file": "css/utilities/layout.css",
@@ -6788,6 +6784,7 @@
           }
         ],
         "tokens": [
+          "component.alert.root.gap.default",
           "component.badge.root.padding-x.default",
           "component.tooltip.content.padding-x.default",
           "component.tooltip.arrow.base.default"
@@ -6809,10 +6806,6 @@
       "decisao": "Aliasado a Foundation foundation.dimension.12.",
       "usos": {
         "css": [
-          {
-            "file": "css/components/alert.css",
-            "count": 1
-          },
           {
             "file": "css/components/button.css",
             "count": 3
@@ -6842,11 +6835,17 @@
             "count": 2
           },
           {
+            "file": "css/tokens/generated/component.css",
+            "count": 1
+          },
+          {
             "file": "css/utilities/layout.css",
             "count": 1
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "component.alert.root.padding.default"
+        ],
         "figma": []
       }
     },
@@ -7066,19 +7065,21 @@
             "count": 1
           },
           {
-            "file": "css/components/alert.css",
-            "count": 1
-          },
-          {
             "file": "css/components/card.css",
             "count": 1
           },
           {
             "file": "css/components/modal.css",
             "count": 1
+          },
+          {
+            "file": "css/tokens/generated/component.css",
+            "count": 1
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "component.alert.root.radius.default"
+        ],
         "figma": []
       }
     },
@@ -9030,10 +9031,6 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/alert.css",
-            "count": 1
-          },
-          {
             "file": "css/components/button.css",
             "count": 3
           },
@@ -9055,10 +9052,12 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 2
+            "count": 4
           }
         ],
         "tokens": [
+          "component.alert.icon.glyph-size.default",
+          "component.alert.close.glyph-size.default",
           "component.checkbox.box.size.md",
           "component.radio.control.size.md"
         ],
@@ -9079,10 +9078,6 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/alert.css",
-            "count": 2
-          },
-          {
             "file": "css/components/button.css",
             "count": 3
           },
@@ -9096,10 +9091,12 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 4
+            "count": 6
           }
         ],
         "tokens": [
+          "component.alert.icon.size.default",
+          "component.alert.close.size.default",
           "component.checkbox.box.size.lg",
           "component.radio.control.size.lg",
           "component.spinner.root.size.md",
@@ -11949,6 +11946,323 @@
         "css": [
           {
             "file": "css/components/badge.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.alert.root.padding.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.md",
+      "sentido": "Padding do root Alert.",
+      "escopo": [
+        "padding"
+      ],
+      "contexto": "Component token do contrato anatomico Alert Root. Binda padding nos 8 variants do Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.md porque 12px e escala reutilizavel, mas no Alert documenta o padding publico do container.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.alert.root.gap.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.sm",
+      "sentido": "Gap horizontal do root Alert.",
+      "escopo": [
+        "gap"
+      ],
+      "contexto": "Component token do contrato anatomico Alert Root. Binda itemSpacing entre icon, content e close nos 8 variants do Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.sm porque 8px e escala reutilizavel, mas no Alert documenta o espaçamento horizontal publico da anatomia.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.alert.root.radius.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.radius.lg",
+      "sentido": "Radius do root Alert.",
+      "escopo": [
+        "border-radius"
+      ],
+      "contexto": "Component token do contrato anatomico Alert Root. Binda os 4 corner radii nos 8 variants do Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.radius.lg porque 12px e decisao reutilizavel, mas no Alert e parte publica da anatomia do container.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.alert.root.border-width.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.border.width.default",
+      "sentido": "Border width do root Alert quando stroke esta ativo.",
+      "escopo": [
+        "border-width"
+      ],
+      "contexto": "Component token do contrato anatomico Alert Root. Binda stroke weights dos 4 variants Subtle no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.border.width.default porque 1px e padrao reutilizavel, mas no Alert documenta a espessura publica da borda Subtle.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 4
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.alert.icon.size.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.md",
+      "sentido": "Tamanho do container Icon Alert.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Component token do contrato anatomico Alert Icon. Binda width/height dos icons nos 8 variants do Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.md porque 24px e escala reutilizavel, mas no Alert documenta o slot publico de icon.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.alert.icon.glyph-size.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.sm",
+      "sentido": "Tamanho do glyph Icon Alert.",
+      "escopo": [
+        "font-size"
+      ],
+      "contexto": "Component token do contrato anatomico Alert Icon. Binda fontSize dos glyphs Material Icons nos 8 variants do Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.sm porque 20px e escala reutilizavel, mas no Alert documenta o tamanho publico do glyph de status.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.alert.content.gap.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xs",
+      "sentido": "Gap vertical do content Alert.",
+      "escopo": [
+        "gap"
+      ],
+      "contexto": "Component token do contrato anatomico Alert Content. Binda itemSpacing entre Title e Description nos 8 variants do Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.xs porque 4px e escala reutilizavel, mas no Alert documenta a separacao vertical publica do conteudo.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.alert.title.font-size.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.sm",
+      "sentido": "Font-size do title Alert.",
+      "escopo": [
+        "font-size"
+      ],
+      "contexto": "Component token do contrato anatomico Alert Title. Binda fontSize dos 8 titles no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-size.sm porque o title usa body/sm, mas a escala tipografica do Alert e contrato publico do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.alert.title.line-height.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.sm",
+      "sentido": "Line-height do title Alert.",
+      "escopo": [
+        "line-height"
+      ],
+      "contexto": "Component token do contrato anatomico Alert Title. Binda lineHeight dos 8 titles no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.line-height.sm porque o title usa body/sm, mas a metrica vertical do Alert e contrato publico do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.alert.title.font-weight.default": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.font-weight.bold",
+      "sentido": "Font-weight do title Alert.",
+      "escopo": [
+        "font-weight"
+      ],
+      "contexto": "Component token do contrato anatomico Alert Title. Binda fontStyle dos 8 titles no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-weight.bold porque o title usa Bold; no Figma o campo bindavel e fontStyle/string, enquanto no JSON/CSS o contrato permanece numerico.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.alert.description.font-size.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.sm",
+      "sentido": "Font-size da description Alert.",
+      "escopo": [
+        "font-size"
+      ],
+      "contexto": "Component token do contrato anatomico Alert Description. Binda fontSize das 8 descriptions no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-size.sm porque a description usa body/sm, mas a escala tipografica do Alert e contrato publico do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.alert.description.line-height.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.sm",
+      "sentido": "Line-height da description Alert.",
+      "escopo": [
+        "line-height"
+      ],
+      "contexto": "Component token do contrato anatomico Alert Description. Binda lineHeight das 8 descriptions no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.line-height.sm porque a description usa body/sm, mas a metrica vertical do Alert e contrato publico do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.alert.description.font-weight.default": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.font-weight.regular",
+      "sentido": "Font-weight da description Alert.",
+      "escopo": [
+        "font-weight"
+      ],
+      "contexto": "Component token do contrato anatomico Alert Description. Binda fontStyle das 8 descriptions no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-weight.regular porque a description usa Regular; no Figma o campo bindavel e fontStyle/string, enquanto no JSON/CSS o contrato permanece numerico.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.alert.close.size.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.md",
+      "sentido": "Tamanho do container Close Alert.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Component token do contrato anatomico Alert Close. Binda width/height dos close buttons nos 8 variants do Figma e substitui tamanho implicito no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.md porque 24px e escala reutilizavel, mas no Alert documenta o slot publico de dismiss.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.alert.close.glyph-size.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.sm",
+      "sentido": "Tamanho do glyph Close Alert.",
+      "escopo": [
+        "font-size"
+      ],
+      "contexto": "Component token do contrato anatomico Alert Close. Binda fontSize dos glyphs close nos 8 variants do Figma e substitui tamanho implicito no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.sm porque 20px e escala reutilizavel, mas no Alert documenta o tamanho publico do glyph de dismiss.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/alert.css",
             "count": 1
           }
         ],

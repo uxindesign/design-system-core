@@ -11,6 +11,21 @@
   --ds-toggle-track-width-sm: var(--ds-dimension-28); /** Largura especifica da track Toggle sm. Component-specific; nao ha Semantic reutilizavel. */
   --ds-toggle-track-width-md: var(--ds-dimension-44); /** Largura especifica da track Toggle md. Component-specific; nao ha Semantic reutilizavel. */
   --ds-toggle-track-width-lg: var(--ds-dimension-56); /** Largura especifica da track Toggle lg. Component-specific; nao ha Semantic reutilizavel. */
+  --ds-alert-root-padding-default: var(--ds-space-md); /** Padding do root Alert. */
+  --ds-alert-root-gap-default: var(--ds-space-sm); /** Gap horizontal do root Alert. */
+  --ds-alert-root-radius-default: var(--ds-radius-lg); /** Radius do root Alert. */
+  --ds-alert-root-border-width-default: var(--ds-border-width-default); /** Border width do root Alert quando stroke esta ativo. */
+  --ds-alert-icon-size-default: var(--ds-size-md); /** Tamanho do container Icon Alert. */
+  --ds-alert-icon-glyph-size-default: var(--ds-size-sm); /** Tamanho do glyph Icon Alert. */
+  --ds-alert-content-gap-default: var(--ds-space-xs); /** Gap vertical do content Alert. */
+  --ds-alert-title-font-size-default: var(--ds-body-font-size-sm); /** Font-size do title Alert. */
+  --ds-alert-title-line-height-default: var(--ds-body-line-height-sm); /** Line-height do title Alert. */
+  --ds-alert-title-font-weight-default: var(--ds-body-font-weight-bold); /** Font-weight do title Alert. */
+  --ds-alert-description-font-size-default: var(--ds-body-font-size-sm); /** Font-size da description Alert. */
+  --ds-alert-description-line-height-default: var(--ds-body-line-height-sm); /** Line-height da description Alert. */
+  --ds-alert-description-font-weight-default: var(--ds-body-font-weight-regular); /** Font-weight da description Alert. */
+  --ds-alert-close-size-default: var(--ds-size-md); /** Tamanho do container Close Alert. */
+  --ds-alert-close-glyph-size-default: var(--ds-size-sm); /** Tamanho do glyph Close Alert. */
   --ds-avatar-root-size-sm: var(--ds-size-lg); /** Tamanho do root Avatar sm. */
   --ds-avatar-root-size-md: var(--ds-size-xl); /** Tamanho do root Avatar md. */
   --ds-avatar-root-size-lg: var(--ds-size-3xl); /** Tamanho do root Avatar lg. */

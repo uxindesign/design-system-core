@@ -6,8 +6,8 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Status
 
-- Total de tokens: **516**
-- Com metadados completos: **516**
+- Total de tokens: **531**
+- Com metadados completos: **531**
 - Pendentes (`TODO` em algum campo obrigatório): **0**
 - Completude: **100%**
 
@@ -485,7 +485,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `semantic.radius.full` | dimension | → `foundation.radius.999` | Radius semantic full. | 7 |
-| `semantic.radius.lg` | dimension | → `foundation.radius.12` | Radius semantic lg. | 4 |
+| `semantic.radius.lg` | dimension | → `foundation.radius.12` | Radius semantic lg. | 5 |
 | `semantic.radius.md` | dimension | → `foundation.radius.8` | Radius semantic md. | 10 |
 | `semantic.radius.sm` | dimension | → `foundation.radius.4` | Radius semantic sm. | 9 |
 | `semantic.radius.xl` | dimension | → `foundation.radius.16` | Radius semantic xl. | 0 |
@@ -512,8 +512,8 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.size.layout.xl` | dimension | → `foundation.dimension.1024` | Size token layout.xl. | 0 |
 | `semantic.size.layout.xs` | dimension | → `foundation.dimension.320` | Size token layout.xs. | 0 |
 | `semantic.size.lg` | dimension | → `foundation.dimension.32` | Size token lg. | 11 |
-| `semantic.size.md` | dimension | → `foundation.dimension.24` | Size token md. | 9 |
-| `semantic.size.sm` | dimension | → `foundation.dimension.20` | Size token sm. | 9 |
+| `semantic.size.md` | dimension | → `foundation.dimension.24` | Size token md. | 10 |
+| `semantic.size.sm` | dimension | → `foundation.dimension.20` | Size token sm. | 10 |
 | `semantic.size.xl` | dimension | → `foundation.dimension.40` | Size token xl. | 10 |
 | `semantic.size.xs` | dimension | → `foundation.dimension.16` | Size token xs. | 7 |
 
@@ -526,7 +526,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.space.control.padding.10` | dimension | → `foundation.dimension.10` | Spacing token control.padding.10. | 3 |
 | `semantic.space.control.padding.6` | dimension | → `foundation.dimension.6` | Padding simétrico de Icon Only sm Button. | 1 |
 | `semantic.space.lg` | dimension | → `foundation.dimension.16` | Spacing token lg. | 8 |
-| `semantic.space.md` | dimension | → `foundation.dimension.12` | Spacing token md. | 9 |
+| `semantic.space.md` | dimension | → `foundation.dimension.12` | Spacing token md. | 10 |
 | `semantic.space.section.lg` | dimension | → `foundation.dimension.64` | Spacing token section.lg. | 0 |
 | `semantic.space.section.md` | dimension | → `foundation.dimension.48` | Spacing token section.md. | 0 |
 | `semantic.space.section.sm` | dimension | → `foundation.dimension.32` | Spacing token section.sm. | 1 |
@@ -572,12 +572,12 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.typography.body.font-size.9xl` | dimension | → `foundation.typography.font.size.72` | font-size 9xl pra texto UI geral. | 0 |
 | `semantic.typography.body.font-size.lg` | dimension | → `foundation.typography.font.size.18` | font-size lg pra texto UI geral. | 0 |
 | `semantic.typography.body.font-size.md` | dimension | → `foundation.typography.font.size.16` | font-size md pra texto UI geral. | 0 |
-| `semantic.typography.body.font-size.sm` | dimension | → `foundation.typography.font.size.14` | font-size sm pra texto UI geral. | 3 |
+| `semantic.typography.body.font-size.sm` | dimension | → `foundation.typography.font.size.14` | font-size sm pra texto UI geral. | 5 |
 | `semantic.typography.body.font-size.xl` | dimension | → `foundation.typography.font.size.20` | font-size xl pra texto UI geral. | 2 |
 | `semantic.typography.body.font-size.xs` | dimension | → `foundation.typography.font.size.12` | font-size xs pra texto UI geral. | 1 |
-| `semantic.typography.body.font-weight.bold` | number | → `foundation.typography.font.weight.bold` | font-weight bold pra texto UI geral. | 3 |
+| `semantic.typography.body.font-weight.bold` | number | → `foundation.typography.font.weight.bold` | font-weight bold pra texto UI geral. | 4 |
 | `semantic.typography.body.font-weight.medium` | number | → `foundation.typography.font.weight.medium` | font-weight medium pra texto UI geral. | 0 |
-| `semantic.typography.body.font-weight.regular` | number | → `foundation.typography.font.weight.regular` | font-weight regular pra texto UI geral. | 1 |
+| `semantic.typography.body.font-weight.regular` | number | → `foundation.typography.font.weight.regular` | font-weight regular pra texto UI geral. | 2 |
 | `semantic.typography.body.font-weight.semibold` | number | → `foundation.typography.font.weight.semibold` | font-weight semibold pra texto UI geral. | 1 |
 | `semantic.typography.body.letter-spacing.normal` | dimension | → `foundation.typography.letter.spacing.normal` | letter-spacing normal pra texto UI geral. | 0 |
 | `semantic.typography.body.letter-spacing.tight` | dimension | → `foundation.typography.letter.spacing.tight` | letter-spacing tight pra texto UI geral. | 0 |
@@ -593,7 +593,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.typography.body.line-height.9xl` | dimension | → `foundation.typography.line.height.90` | line-height 9xl pra texto UI geral. | 0 |
 | `semantic.typography.body.line-height.lg` | dimension | → `foundation.typography.line.height.28` | line-height lg pra texto UI geral. | 0 |
 | `semantic.typography.body.line-height.md` | dimension | → `foundation.typography.line.height.24` | line-height md pra texto UI geral. | 0 |
-| `semantic.typography.body.line-height.sm` | dimension | → `foundation.typography.line.height.20` | line-height sm pra texto UI geral. | 3 |
+| `semantic.typography.body.line-height.sm` | dimension | → `foundation.typography.line.height.20` | line-height sm pra texto UI geral. | 5 |
 | `semantic.typography.body.line-height.xl` | dimension | → `foundation.typography.line.height.32` | line-height xl pra texto UI geral. | 1 |
 | `semantic.typography.body.line-height.xs` | dimension | → `foundation.typography.line.height.18` | line-height xs pra texto UI geral. | 1 |
 
@@ -605,7 +605,27 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Component
 
-77 tokens.
+92 tokens.
+
+### component.alert
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `component.alert.close.glyph-size.default` | dimension | → `semantic.size.sm` | Tamanho do glyph Close Alert. | 1 |
+| `component.alert.close.size.default` | dimension | → `semantic.size.md` | Tamanho do container Close Alert. | 1 |
+| `component.alert.content.gap.default` | dimension | → `semantic.space.xs` | Gap vertical do content Alert. | 1 |
+| `component.alert.description.font-size.default` | dimension | → `semantic.typography.body.font-size.sm` | Font-size da description Alert. | 1 |
+| `component.alert.description.font-weight.default` | number | → `semantic.typography.body.font-weight.regular` | Font-weight da description Alert. | 1 |
+| `component.alert.description.line-height.default` | dimension | → `semantic.typography.body.line-height.sm` | Line-height da description Alert. | 1 |
+| `component.alert.icon.glyph-size.default` | dimension | → `semantic.size.sm` | Tamanho do glyph Icon Alert. | 1 |
+| `component.alert.icon.size.default` | dimension | → `semantic.size.md` | Tamanho do container Icon Alert. | 1 |
+| `component.alert.root.border-width.default` | dimension | → `semantic.border.width.default` | Border width do root Alert quando stroke esta ativo. | 1 |
+| `component.alert.root.gap.default` | dimension | → `semantic.space.sm` | Gap horizontal do root Alert. | 1 |
+| `component.alert.root.padding.default` | dimension | → `semantic.space.md` | Padding do root Alert. | 1 |
+| `component.alert.root.radius.default` | dimension | → `semantic.radius.lg` | Radius do root Alert. | 1 |
+| `component.alert.title.font-size.default` | dimension | → `semantic.typography.body.font-size.sm` | Font-size do title Alert. | 1 |
+| `component.alert.title.font-weight.default` | number | → `semantic.typography.body.font-weight.bold` | Font-weight do title Alert. | 1 |
+| `component.alert.title.line-height.default` | dimension | → `semantic.typography.body.line-height.sm` | Line-height do title Alert. | 1 |
 
 ### component.avatar
 
@@ -4194,7 +4214,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/reset.css` (1×)
-    - `css/components/alert.css` (4×)
     - `css/components/button.css` (1×)
     - `css/components/card.css` (2×)
     - `css/components/checkbox.css` (1×)
@@ -4205,8 +4224,8 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/tabs.css` (1×)
     - `css/components/textarea.css` (1×)
     - `css/components/toggle.css` (3×)
-    - `css/tokens/generated/component.css` (1×)
-  - Tokens que referenciam: `component.badge.root.border-width.default`
+    - `css/tokens/generated/component.css` (2×)
+  - Tokens que referenciam: `component.alert.root.border-width.default`, `component.badge.root.border-width.default`
 
 ### `semantic.border.width.focus`
 
@@ -5283,9 +5302,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/reset.css` (1×)
-    - `css/components/alert.css` (1×)
     - `css/components/card.css` (1×)
     - `css/components/modal.css` (1×)
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.alert.root.radius.default`
 
 ### `semantic.radius.md`
 
@@ -5521,12 +5541,11 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.dimension.24.
 - **Usos**:
   - CSS:
-    - `css/components/alert.css` (2×)
     - `css/components/button.css` (3×)
     - `css/components/input.css` (3×)
     - `css/components/select.css` (5×)
-    - `css/tokens/generated/component.css` (4×)
-  - Tokens que referenciam: `component.checkbox.box.size.lg`, `component.radio.control.size.lg`, `component.spinner.root.size.md`, `component.toggle.track.height.md`
+    - `css/tokens/generated/component.css` (6×)
+  - Tokens que referenciam: `component.alert.icon.size.default`, `component.alert.close.size.default`, `component.checkbox.box.size.lg`, `component.radio.control.size.lg`, `component.spinner.root.size.md`, `component.toggle.track.height.md`
 
 ### `semantic.size.sm`
 
@@ -5539,14 +5558,13 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.dimension.20.
 - **Usos**:
   - CSS:
-    - `css/components/alert.css` (1×)
     - `css/components/button.css` (3×)
     - `css/components/checkbox.css` (2×)
     - `css/components/input.css` (1×)
     - `css/components/radio.css` (2×)
     - `css/components/select.css` (5×)
-    - `css/tokens/generated/component.css` (2×)
-  - Tokens que referenciam: `component.checkbox.box.size.md`, `component.radio.control.size.md`
+    - `css/tokens/generated/component.css` (4×)
+  - Tokens que referenciam: `component.alert.icon.glyph-size.default`, `component.alert.close.glyph-size.default`, `component.checkbox.box.size.md`, `component.radio.control.size.md`
 
 ### `semantic.size.xl`
 
@@ -5667,7 +5685,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.dimension.12.
 - **Usos**:
   - CSS:
-    - `css/components/alert.css` (1×)
     - `css/components/button.css` (3×)
     - `css/components/divider.css` (2×)
     - `css/components/input.css` (1×)
@@ -5675,7 +5692,9 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/select.css` (3×)
     - `css/components/tabs.css` (1×)
     - `css/components/textarea.css` (2×)
+    - `css/tokens/generated/component.css` (1×)
     - `css/utilities/layout.css` (1×)
+  - Tokens que referenciam: `component.alert.root.padding.default`
 
 ### `semantic.space.section.lg`
 
@@ -5737,7 +5756,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.dimension.8.
 - **Usos**:
   - CSS:
-    - `css/components/alert.css` (1×)
     - `css/components/button.css` (3×)
     - `css/components/card.css` (2×)
     - `css/components/checkbox.css` (3×)
@@ -5748,9 +5766,9 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/textarea.css` (2×)
     - `css/components/toggle.css` (1×)
     - `css/components/tooltip.css` (4×)
-    - `css/tokens/generated/component.css` (3×)
+    - `css/tokens/generated/component.css` (4×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.badge.root.padding-x.default`, `component.tooltip.content.padding-x.default`, `component.tooltip.arrow.base.default`
+  - Tokens que referenciam: `component.alert.root.gap.default`, `component.badge.root.padding-x.default`, `component.tooltip.content.padding-x.default`, `component.tooltip.arrow.base.default`
 
 ### `semantic.space.xl`
 
@@ -5777,7 +5795,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.dimension.4.
 - **Usos**:
   - CSS:
-    - `css/components/alert.css` (1×)
     - `css/components/breadcrumb.css` (1×)
     - `css/components/button.css` (1×)
     - `css/components/checkbox.css` (6×)
@@ -5787,9 +5804,9 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/radio.css` (7×)
     - `css/components/select.css` (1×)
     - `css/components/toggle.css` (2×)
-    - `css/tokens/generated/component.css` (3×)
+    - `css/tokens/generated/component.css` (4×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.badge.root.gap.default`, `component.tooltip.content.padding-y.default`, `component.tooltip.arrow.depth.default`
+  - Tokens que referenciam: `component.alert.content.gap.default`, `component.badge.root.gap.default`, `component.tooltip.content.padding-y.default`, `component.tooltip.arrow.depth.default`
 
 ### `semantic.surface.default`
 
@@ -6093,7 +6110,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-sm`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.size.14.
 - **Usos**:
-  - Tokens que referenciam: `component.avatar.initials.font-size.sm`, `component.avatar.initials.font-size.md`, `component.tooltip.label.font-size.default`
+  - Tokens que referenciam: `component.alert.title.font-size.default`, `component.alert.description.font-size.default`, `component.avatar.initials.font-size.sm`, `component.avatar.initials.font-size.md`, `component.tooltip.label.font-size.default`
 
 ### `semantic.typography.body.font-size.xl`
 
@@ -6129,7 +6146,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-bold`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.weight.bold.
 - **Usos**:
-  - Tokens que referenciam: `component.avatar.initials.font-weight.sm`, `component.avatar.initials.font-weight.md`, `component.badge.label.font-weight.default`
+  - Tokens que referenciam: `component.alert.title.font-weight.default`, `component.avatar.initials.font-weight.sm`, `component.avatar.initials.font-weight.md`, `component.badge.label.font-weight.default`
 
 ### `semantic.typography.body.font-weight.medium`
 
@@ -6153,7 +6170,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-regular`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.weight.regular.
 - **Usos**:
-  - Tokens que referenciam: `component.tooltip.label.font-weight.default`
+  - Tokens que referenciam: `component.alert.description.font-weight.default`, `component.tooltip.label.font-weight.default`
 
 ### `semantic.typography.body.font-weight.semibold`
 
@@ -6345,7 +6362,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-sm`.
 - **Decisão**: Aliasado a Foundation foundation.typography.line.height.20.
 - **Usos**:
-  - Tokens que referenciam: `component.avatar.initials.line-height.sm`, `component.avatar.initials.line-height.md`, `component.tooltip.label.line-height.default`
+  - Tokens que referenciam: `component.alert.title.line-height.default`, `component.alert.description.line-height.default`, `component.avatar.initials.line-height.sm`, `component.avatar.initials.line-height.md`, `component.tooltip.label.line-height.default`
 
 ### `semantic.typography.body.line-height.xl`
 
@@ -6383,6 +6400,201 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/tooltip.css` (1×)
+
+### `component.alert.close.glyph-size.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.sm`
+- **Sentido**: Tamanho do glyph Close Alert.
+- **Escopo**: font-size
+- **Contexto**: Component token do contrato anatomico Alert Close. Binda fontSize dos glyphs close nos 8 variants do Figma e substitui tamanho implicito no CSS.
+- **Decisão**: Alias 1:1 para semantic.size.sm porque 20px e escala reutilizavel, mas no Alert documenta o tamanho publico do glyph de dismiss.
+- **Usos**:
+  - CSS:
+    - `css/components/alert.css` (1×)
+
+### `component.alert.close.size.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.md`
+- **Sentido**: Tamanho do container Close Alert.
+- **Escopo**: width, height
+- **Contexto**: Component token do contrato anatomico Alert Close. Binda width/height dos close buttons nos 8 variants do Figma e substitui tamanho implicito no CSS.
+- **Decisão**: Alias 1:1 para semantic.size.md porque 24px e escala reutilizavel, mas no Alert documenta o slot publico de dismiss.
+- **Usos**:
+  - CSS:
+    - `css/components/alert.css` (2×)
+
+### `component.alert.content.gap.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.xs`
+- **Sentido**: Gap vertical do content Alert.
+- **Escopo**: gap
+- **Contexto**: Component token do contrato anatomico Alert Content. Binda itemSpacing entre Title e Description nos 8 variants do Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.space.xs porque 4px e escala reutilizavel, mas no Alert documenta a separacao vertical publica do conteudo.
+- **Usos**:
+  - CSS:
+    - `css/components/alert.css` (1×)
+
+### `component.alert.description.font-size.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.font-size.sm`
+- **Sentido**: Font-size da description Alert.
+- **Escopo**: font-size
+- **Contexto**: Component token do contrato anatomico Alert Description. Binda fontSize das 8 descriptions no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.typography.body.font-size.sm porque a description usa body/sm, mas a escala tipografica do Alert e contrato publico do componente.
+- **Usos**:
+  - CSS:
+    - `css/components/alert.css` (2×)
+
+### `component.alert.description.font-weight.default`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.font-weight.regular`
+- **Sentido**: Font-weight da description Alert.
+- **Escopo**: font-weight
+- **Contexto**: Component token do contrato anatomico Alert Description. Binda fontStyle das 8 descriptions no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.typography.body.font-weight.regular porque a description usa Regular; no Figma o campo bindavel e fontStyle/string, enquanto no JSON/CSS o contrato permanece numerico.
+- **Usos**:
+  - CSS:
+    - `css/components/alert.css` (1×)
+
+### `component.alert.description.line-height.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.line-height.sm`
+- **Sentido**: Line-height da description Alert.
+- **Escopo**: line-height
+- **Contexto**: Component token do contrato anatomico Alert Description. Binda lineHeight das 8 descriptions no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.typography.body.line-height.sm porque a description usa body/sm, mas a metrica vertical do Alert e contrato publico do componente.
+- **Usos**:
+  - CSS:
+    - `css/components/alert.css` (2×)
+
+### `component.alert.icon.glyph-size.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.sm`
+- **Sentido**: Tamanho do glyph Icon Alert.
+- **Escopo**: font-size
+- **Contexto**: Component token do contrato anatomico Alert Icon. Binda fontSize dos glyphs Material Icons nos 8 variants do Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.size.sm porque 20px e escala reutilizavel, mas no Alert documenta o tamanho publico do glyph de status.
+- **Usos**:
+  - CSS:
+    - `css/components/alert.css` (1×)
+
+### `component.alert.icon.size.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.md`
+- **Sentido**: Tamanho do container Icon Alert.
+- **Escopo**: width, height
+- **Contexto**: Component token do contrato anatomico Alert Icon. Binda width/height dos icons nos 8 variants do Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.size.md porque 24px e escala reutilizavel, mas no Alert documenta o slot publico de icon.
+- **Usos**:
+  - CSS:
+    - `css/components/alert.css` (2×)
+
+### `component.alert.root.border-width.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.border.width.default`
+- **Sentido**: Border width do root Alert quando stroke esta ativo.
+- **Escopo**: border-width
+- **Contexto**: Component token do contrato anatomico Alert Root. Binda stroke weights dos 4 variants Subtle no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.border.width.default porque 1px e padrao reutilizavel, mas no Alert documenta a espessura publica da borda Subtle.
+- **Usos**:
+  - CSS:
+    - `css/components/alert.css` (4×)
+
+### `component.alert.root.gap.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.sm`
+- **Sentido**: Gap horizontal do root Alert.
+- **Escopo**: gap
+- **Contexto**: Component token do contrato anatomico Alert Root. Binda itemSpacing entre icon, content e close nos 8 variants do Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.space.sm porque 8px e escala reutilizavel, mas no Alert documenta o espaçamento horizontal publico da anatomia.
+- **Usos**:
+  - CSS:
+    - `css/components/alert.css` (1×)
+
+### `component.alert.root.padding.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.md`
+- **Sentido**: Padding do root Alert.
+- **Escopo**: padding
+- **Contexto**: Component token do contrato anatomico Alert Root. Binda padding nos 8 variants do Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.space.md porque 12px e escala reutilizavel, mas no Alert documenta o padding publico do container.
+- **Usos**:
+  - CSS:
+    - `css/components/alert.css` (1×)
+
+### `component.alert.root.radius.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.radius.lg`
+- **Sentido**: Radius do root Alert.
+- **Escopo**: border-radius
+- **Contexto**: Component token do contrato anatomico Alert Root. Binda os 4 corner radii nos 8 variants do Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.radius.lg porque 12px e decisao reutilizavel, mas no Alert e parte publica da anatomia do container.
+- **Usos**:
+  - CSS:
+    - `css/components/alert.css` (1×)
+
+### `component.alert.title.font-size.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.font-size.sm`
+- **Sentido**: Font-size do title Alert.
+- **Escopo**: font-size
+- **Contexto**: Component token do contrato anatomico Alert Title. Binda fontSize dos 8 titles no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.typography.body.font-size.sm porque o title usa body/sm, mas a escala tipografica do Alert e contrato publico do componente.
+- **Usos**:
+  - CSS:
+    - `css/components/alert.css` (1×)
+
+### `component.alert.title.font-weight.default`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.font-weight.bold`
+- **Sentido**: Font-weight do title Alert.
+- **Escopo**: font-weight
+- **Contexto**: Component token do contrato anatomico Alert Title. Binda fontStyle dos 8 titles no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.typography.body.font-weight.bold porque o title usa Bold; no Figma o campo bindavel e fontStyle/string, enquanto no JSON/CSS o contrato permanece numerico.
+- **Usos**:
+  - CSS:
+    - `css/components/alert.css` (1×)
+
+### `component.alert.title.line-height.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.line-height.sm`
+- **Sentido**: Line-height do title Alert.
+- **Escopo**: line-height
+- **Contexto**: Component token do contrato anatomico Alert Title. Binda lineHeight dos 8 titles no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.typography.body.line-height.sm porque o title usa body/sm, mas a metrica vertical do Alert e contrato publico do componente.
+- **Usos**:
+  - CSS:
+    - `css/components/alert.css` (1×)
 
 ### `component.avatar.icon.size.lg`
 
