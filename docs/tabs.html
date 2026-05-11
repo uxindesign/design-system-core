@@ -166,7 +166,7 @@
   <!-- Multiple tabs -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Múltiplas tabs</span><span data-lang="en">Multiple tabs</span></h2>
-    <p style="margin-bottom:var(--ds-dimension-16);color:var(--ds-content-default);font-size:var(--ds-font-size-14);"><span data-lang="pt">As tabs rolam horizontalmente quando excedem o container.</span><span data-lang="en">Tabs scroll horizontally when they overflow the container.</span></p>
+    <p style="margin-bottom:var(--ds-space-lg);color:var(--ds-content-default);font-size:var(--ds-body-font-size-sm);"><span data-lang="pt">As tabs rolam horizontalmente quando excedem o container.</span><span data-lang="en">Tabs scroll horizontally when they overflow the container.</span></p>
     <div class="ds-preview">
       <div class="ds-preview__tabs">
         <button class="ds-preview__tab ds-preview__tab--active" data-tab="preview">Preview</button>
@@ -251,7 +251,7 @@
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Mapeamento de tokens</span><span data-lang="en">Token mapping</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token (semantic)</th><th><span data-lang="pt">Variável CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token</th><th><span data-lang="pt">Variável CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
       <tbody>
         <tr><td><span data-lang="pt">texto (inativo)</span><span data-lang="en">text (inactive)</span></td><td><code>semantic.content.default</code></td><td><code>--ds-content-default</code></td></tr>
         <tr><td><span data-lang="pt">texto (hover)</span><span data-lang="en">text (hover)</span></td><td><code>semantic.content.strong</code></td><td><code>--ds-content-strong</code></td></tr>
@@ -259,7 +259,13 @@
         <tr><td><span data-lang="pt">texto (desabilitado)</span><span data-lang="en">text (disabled)</span></td><td><code>semantic.content.disabled</code></td><td><code>--ds-content-disabled</code></td></tr>
         <tr><td><span data-lang="pt">indicador ativo</span><span data-lang="en">active indicator</span></td><td><code>semantic.primary.background.default</code></td><td><code>--ds-primary-background-default</code></td></tr>
         <tr><td><span data-lang="pt">divider</span><span data-lang="en">divider</span></td><td><code>semantic.overlay.default</code></td><td><code>--ds-overlay-default</code></td></tr>
-        <tr><td><span data-lang="pt">gap ate o indicador</span><span data-lang="en">gap to indicator</span></td><td><code>semantic.space.control.padding.10</code></td><td><code>--ds-space-control-padding-10</code></td></tr>
+        <tr><td><span data-lang="pt">borda da lista</span><span data-lang="en">list border</span></td><td><code>component.tabs.list.border-width.default</code></td><td><code>--ds-tabs-list-border-width-default</code></td></tr>
+        <tr><td><span data-lang="pt">espaçamento do item</span><span data-lang="en">item padding</span></td><td><code>component.tabs.item.{padding-x,padding-top}.default</code></td><td><code>--ds-tabs-item-padding-*-default</code></td></tr>
+        <tr><td><span data-lang="pt">gap até o indicador</span><span data-lang="en">gap to indicator</span></td><td><code>component.tabs.item.indicator-gap.default</code></td><td><code>--ds-tabs-item-indicator-gap-default</code></td></tr>
+        <tr><td><span data-lang="pt">altura do indicador</span><span data-lang="en">indicator height</span></td><td><code>component.tabs.indicator.height.default</code></td><td><code>--ds-tabs-indicator-height-default</code></td></tr>
+        <tr><td><span data-lang="pt">raio do item</span><span data-lang="en">item radius</span></td><td><code>component.tabs.item.radius.default</code></td><td><code>--ds-tabs-item-radius-default</code></td></tr>
+        <tr><td><span data-lang="pt">tipografia do rótulo</span><span data-lang="en">label typography</span></td><td><code>component.tabs.label.{font-size,line-height,font-weight,letter-spacing}.default</code></td><td><code>--ds-tabs-label-*-default</code></td></tr>
+        <tr><td><span data-lang="pt">espaçamento do painel</span><span data-lang="en">panel padding</span></td><td><code>component.tabs.panel.padding-y.default</code></td><td><code>--ds-tabs-panel-padding-y-default</code></td></tr>
         <tr><td>focus ring</td><td><code>semantic.border.focus</code> + <code>semantic.border.width.focus</code></td><td><code>--ds-border-focus</code>, <code>--ds-border-width-focus</code></td></tr>
       </tbody>
     </table>
@@ -297,7 +303,7 @@
         <tr><td><code>Tab</code> <span data-lang="pt">(da lista)</span><span data-lang="en">(from list)</span></td><td><span data-lang="pt">Move o foco para o conteúdo do painel ativo</span><span data-lang="en">Moves focus into the active panel content</span></td></tr>
       </tbody>
     </table>
-    <p style="margin-top:var(--ds-dimension-8);color:var(--ds-content-default);font-size:var(--ds-font-size-14);">
+    <p style="margin-top:var(--ds-space-sm);color:var(--ds-content-default);font-size:var(--ds-body-font-size-sm);">
       <span data-lang="pt">Tabs desabilitadas são ignoradas na navegação por setas. Apenas a tab ativa está na sequência <code>Tab</code> (<code>tabindex="0"</code>); todas as outras tem <code>tabindex="-1"</code>.</span><span data-lang="en">Disabled tabs are skipped during arrow key navigation. Only the active tab is in the <code>Tab</code> sequence (<code>tabindex="0"</code>); all others have <code>tabindex="-1"</code>.</span>
     </p>
   </div>
@@ -316,7 +322,7 @@
       </tbody>
     </table>
 
-    <div class="ds-callout ds-callout--info" style="margin-top:var(--ds-dimension-16)">
+    <div class="ds-callout ds-callout--info" style="margin-top:var(--ds-space-lg)">
       <div class="ds-callout__title"><span data-lang="pt">Resumo dos atributos ARIA</span><span data-lang="en">ARIA attributes summary</span></div>
       <span data-lang="pt"><code>role="tablist"</code> — no container da lista de tabs.<br>
       <code>role="tab"</code> — em cada button de tab.<br>

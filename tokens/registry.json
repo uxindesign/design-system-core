@@ -4614,10 +4614,6 @@
             "count": 1
           },
           {
-            "file": "css/components/tabs.css",
-            "count": 1
-          },
-          {
             "file": "css/components/textarea.css",
             "count": 1
           },
@@ -4627,13 +4623,14 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 3
+            "count": 4
           }
         ],
         "tokens": [
           "component.alert.root.border-width.default",
           "component.badge.root.border-width.default",
-          "component.card.root.border-width.default"
+          "component.card.root.border-width.default",
+          "component.tabs.list.border-width.default"
         ],
         "figma": []
       }
@@ -4651,16 +4648,13 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/tabs.css",
-            "count": 1
-          },
-          {
             "file": "css/tokens/generated/component.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [
-          "component.spinner.ring.stroke-width.default"
+          "component.spinner.ring.stroke-width.default",
+          "component.tabs.indicator.height.default"
         ],
         "figma": []
       }
@@ -5110,7 +5104,8 @@
           "component.avatar.initials.font-weight.sm",
           "component.avatar.initials.font-weight.md",
           "component.badge.label.font-weight.default",
-          "component.card.subtitle.font-weight.default"
+          "component.card.subtitle.font-weight.default",
+          "component.tabs.label.font-weight.default"
         ],
         "figma": []
       }
@@ -5129,7 +5124,8 @@
         "css": [],
         "tokens": [
           "component.modal.title.letter-spacing.sm",
-          "component.modal.title.letter-spacing.md"
+          "component.modal.title.letter-spacing.md",
+          "component.tabs.label.letter-spacing.default"
         ],
         "figma": []
       }
@@ -5190,6 +5186,7 @@
           "component.card.body.font-size.default",
           "component.card.subtitle.font-size.default",
           "component.modal.body.font-size.sm",
+          "component.tabs.label.font-size.default",
           "component.tooltip.label.font-size.default"
         ],
         "figma": []
@@ -5327,6 +5324,7 @@
           "component.card.body.line-height.default",
           "component.card.subtitle.line-height.default",
           "component.modal.body.line-height.sm",
+          "component.tabs.label.line-height.default",
           "component.tooltip.label.line-height.default"
         ],
         "figma": []
@@ -6855,16 +6853,12 @@
             "count": 3
           },
           {
-            "file": "css/components/tabs.css",
-            "count": 1
-          },
-          {
             "file": "css/components/textarea.css",
             "count": 2
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 5
+            "count": 6
           },
           {
             "file": "css/utilities/layout.css",
@@ -6876,7 +6870,8 @@
           "component.modal.header.padding-bottom.md",
           "component.modal.header.padding-bottom.lg",
           "component.modal.footer.padding-top.md",
-          "component.modal.footer.padding-top.lg"
+          "component.modal.footer.padding-top.lg",
+          "component.tabs.item.padding-top.default"
         ],
         "figma": []
       }
@@ -6908,16 +6903,12 @@
             "count": 3
           },
           {
-            "file": "css/components/tabs.css",
-            "count": 2
-          },
-          {
             "file": "css/components/textarea.css",
             "count": 1
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 10
+            "count": 12
           },
           {
             "file": "css/utilities/layout.css",
@@ -6934,7 +6925,9 @@
           "component.modal.body.padding-x.sm",
           "component.modal.body.padding-bottom.sm",
           "component.modal.footer.padding-x.sm",
-          "component.modal.footer.padding-bottom.sm"
+          "component.modal.footer.padding-bottom.sm",
+          "component.tabs.item.padding-x.default",
+          "component.tabs.panel.padding-y.default"
         ],
         "figma": []
       }
@@ -7086,21 +7079,19 @@
             "count": 1
           },
           {
-            "file": "css/components/tabs.css",
-            "count": 1
-          },
-          {
             "file": "css/components/textarea.css",
             "count": 1
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 2
+            "count": 4
           }
         ],
         "tokens": [
           "component.skeleton.text.radius.default",
-          "component.skeleton.rectangle.radius.default"
+          "component.skeleton.rectangle.radius.default",
+          "component.tabs.item.radius.default",
+          "component.tabs.indicator.radius.default"
         ],
         "figma": []
       }
@@ -9021,15 +9012,17 @@
             "count": 1
           },
           {
-            "file": "css/components/tabs.css",
+            "file": "css/components/textarea.css",
             "count": 1
           },
           {
-            "file": "css/components/textarea.css",
+            "file": "css/tokens/generated/component.css",
             "count": 1
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "component.tabs.item.indicator-gap.default"
+        ],
         "figma": []
       }
     },
@@ -13841,6 +13834,257 @@
         "tokens": [
           "component.modal.overlay.z-index.default"
         ],
+        "figma": []
+      }
+    },
+    "component.tabs.list.border-width.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.border.width.default",
+      "sentido": "Border width da list Tabs.",
+      "escopo": [
+        "border-bottom-width"
+      ],
+      "contexto": "Component token do contrato anatômico Tabs List. Binda strokeBottomWeight do Tab Bar no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.border.width.default porque 1px é padrão reutilizável, mas no Tabs documenta a linha divisória pública da lista.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/tabs.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.tabs.item.padding-x.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.lg",
+      "sentido": "Padding horizontal do item Tabs.",
+      "escopo": [
+        "padding-left",
+        "padding-right"
+      ],
+      "contexto": "Component token do contrato anatômico Tabs Item. Binda paddingLeft/paddingRight dos 4 estados do Tab Item no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.lg porque 16px é escala reutilizável, mas no Tabs documenta o respiro horizontal público do item.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/tabs.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.tabs.item.padding-top.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.md",
+      "sentido": "Padding top do item Tabs.",
+      "escopo": [
+        "padding-top"
+      ],
+      "contexto": "Component token do contrato anatômico Tabs Item. Binda paddingTop dos 4 estados do Tab Item no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.md porque 12px é escala reutilizável, mas no Tabs documenta o respiro superior público do item.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/tabs.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.tabs.item.radius.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.radius.md",
+      "sentido": "Radius do item Tabs.",
+      "escopo": [
+        "border-radius"
+      ],
+      "contexto": "Component token do contrato anatômico Tabs Item. Binda os 4 corner radii dos 4 estados do Tab Item e do Focus Ring no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.radius.md porque 8px é decisão reutilizável, mas no Tabs documenta o radius público do item.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/tabs.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.tabs.item.indicator-gap.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.control.padding.10",
+      "sentido": "Gap entre label e indicator Tabs.",
+      "escopo": [
+        "height",
+        "padding-bottom"
+      ],
+      "contexto": "Component token do contrato anatômico Tabs Item. Binda height do frame Gap nos 4 estados do Tab Item no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.control.padding.10 porque 10px é valor de controle já existente, mas no Tabs representa a separação anatômica entre label e indicador.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/tabs.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.tabs.indicator.height.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.border.width.strong",
+      "sentido": "Altura do indicator Tabs.",
+      "escopo": [
+        "height",
+        "border-bottom-width"
+      ],
+      "contexto": "Component token do contrato anatômico Tabs Indicator. Binda height do Indicator nos 4 estados do Tab Item no Figma e define a espessura do border-bottom ativo no CSS.",
+      "decisao": "Alias 1:1 para semantic.border.width.strong porque 2px é padrão reutilizável, mas no Tabs documenta a espessura pública do indicador.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/tabs.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.tabs.indicator.radius.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.radius.md",
+      "sentido": "Radius do indicator Tabs.",
+      "escopo": [
+        "border-radius"
+      ],
+      "contexto": "Component token do contrato anatômico Tabs Indicator. Binda os 4 corner radii do Indicator nos 4 estados do Tab Item no Figma.",
+      "decisao": "Alias 1:1 para semantic.radius.md porque 8px é decisão reutilizável, mas no Tabs documenta o radius público do indicador.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.tabs.label.font-size.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.sm",
+      "sentido": "Font-size do label Tabs.",
+      "escopo": [
+        "font-size"
+      ],
+      "contexto": "Component token do contrato anatômico Tabs Label. Binda fontSize dos labels nos 4 estados do Tab Item no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-size.sm porque o label usa body/sm, mas a escala tipográfica do Tabs é contrato público do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/tabs.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.tabs.label.line-height.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.sm",
+      "sentido": "Line-height do label Tabs.",
+      "escopo": [
+        "line-height"
+      ],
+      "contexto": "Component token do contrato anatômico Tabs Label. Binda lineHeight dos labels nos 4 estados do Tab Item no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.line-height.sm porque o label usa body/sm, mas a métrica vertical do Tabs é contrato público do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/tabs.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.tabs.label.font-weight.default": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.font-weight.bold",
+      "sentido": "Font-weight do label Tabs.",
+      "escopo": [
+        "font-weight"
+      ],
+      "contexto": "Component token do contrato anatômico Tabs Label. Binda fontStyle dos labels nos 4 estados do Tab Item no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-weight.bold porque o label usa Bold; no Figma o campo bindável é fontStyle/string, enquanto no JSON/CSS o contrato permanece numérico.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/tabs.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.tabs.label.letter-spacing.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.letter-spacing.normal",
+      "sentido": "Letter-spacing do label Tabs.",
+      "escopo": [
+        "letter-spacing"
+      ],
+      "contexto": "Component token do contrato anatômico Tabs Label. Binda letterSpacing dos labels nos 4 estados do Tab Item no Figma e explicita o tracking normal no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.letter-spacing.normal porque o label usa tracking normal, mas esse valor faz parte da tipografia pública do Tabs.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/tabs.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.tabs.panel.padding-y.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.lg",
+      "sentido": "Padding vertical do panel Tabs.",
+      "escopo": [
+        "padding-top",
+        "padding-bottom"
+      ],
+      "contexto": "Component token do contrato anatômico Tabs Panel. Existe como variável Component no Figma e substitui consumo direto de Semantic no CSS; o arquivo Figma atual não possui Tab Panel equivalente para binding.",
+      "decisao": "Alias 1:1 para semantic.space.lg porque 16px é escala reutilizável, mas no Tabs documenta o respiro vertical público do panel.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/tabs.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
         "figma": []
       }
     }

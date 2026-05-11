@@ -6,8 +6,8 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Status
 
-- Total de tokens: **602**
-- Com metadados completos: **602**
+- Total de tokens: **614**
+- Com metadados completos: **614**
 - Pendentes (`TODO` em algum campo obrigatório): **0**
 - Completude: **100%**
 
@@ -486,7 +486,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 |---|---|---|---|---|
 | `semantic.radius.full` | dimension | → `foundation.radius.999` | Radius semantic full. | 7 |
 | `semantic.radius.lg` | dimension | → `foundation.radius.12` | Radius semantic lg. | 5 |
-| `semantic.radius.md` | dimension | → `foundation.radius.8` | Radius semantic md. | 10 |
+| `semantic.radius.md` | dimension | → `foundation.radius.8` | Radius semantic md. | 11 |
 | `semantic.radius.sm` | dimension | → `foundation.radius.4` | Radius semantic sm. | 9 |
 | `semantic.radius.xl` | dimension | → `foundation.radius.16` | Radius semantic xl. | 0 |
 
@@ -523,9 +523,9 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 |---|---|---|---|---|
 | `semantic.space.2xl` | dimension | → `foundation.dimension.24` | Spacing token 2xl. | 0 |
 | `semantic.space.2xs` | dimension | → `foundation.dimension.2` | Spacing token 2xs. | 6 |
-| `semantic.space.control.padding.10` | dimension | → `foundation.dimension.10` | Spacing token control.padding.10. | 3 |
+| `semantic.space.control.padding.10` | dimension | → `foundation.dimension.10` | Spacing token control.padding.10. | 4 |
 | `semantic.space.control.padding.6` | dimension | → `foundation.dimension.6` | Padding simétrico de Icon Only sm Button. | 1 |
-| `semantic.space.lg` | dimension | → `foundation.dimension.16` | Spacing token lg. | 17 |
+| `semantic.space.lg` | dimension | → `foundation.dimension.16` | Spacing token lg. | 18 |
 | `semantic.space.md` | dimension | → `foundation.dimension.12` | Spacing token md. | 14 |
 | `semantic.space.section.lg` | dimension | → `foundation.dimension.64` | Spacing token section.lg. | 0 |
 | `semantic.space.section.md` | dimension | → `foundation.dimension.48` | Spacing token section.md. | 0 |
@@ -572,14 +572,14 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.typography.body.font-size.9xl` | dimension | → `foundation.typography.font.size.72` | font-size 9xl pra texto UI geral. | 0 |
 | `semantic.typography.body.font-size.lg` | dimension | → `foundation.typography.font.size.18` | font-size lg pra texto UI geral. | 1 |
 | `semantic.typography.body.font-size.md` | dimension | → `foundation.typography.font.size.16` | font-size md pra texto UI geral. | 1 |
-| `semantic.typography.body.font-size.sm` | dimension | → `foundation.typography.font.size.14` | font-size sm pra texto UI geral. | 8 |
+| `semantic.typography.body.font-size.sm` | dimension | → `foundation.typography.font.size.14` | font-size sm pra texto UI geral. | 9 |
 | `semantic.typography.body.font-size.xl` | dimension | → `foundation.typography.font.size.20` | font-size xl pra texto UI geral. | 4 |
 | `semantic.typography.body.font-size.xs` | dimension | → `foundation.typography.font.size.12` | font-size xs pra texto UI geral. | 1 |
-| `semantic.typography.body.font-weight.bold` | number | → `foundation.typography.font.weight.bold` | font-weight bold pra texto UI geral. | 5 |
+| `semantic.typography.body.font-weight.bold` | number | → `foundation.typography.font.weight.bold` | font-weight bold pra texto UI geral. | 6 |
 | `semantic.typography.body.font-weight.medium` | number | → `foundation.typography.font.weight.medium` | font-weight medium pra texto UI geral. | 0 |
 | `semantic.typography.body.font-weight.regular` | number | → `foundation.typography.font.weight.regular` | font-weight regular pra texto UI geral. | 4 |
 | `semantic.typography.body.font-weight.semibold` | number | → `foundation.typography.font.weight.semibold` | font-weight semibold pra texto UI geral. | 3 |
-| `semantic.typography.body.letter-spacing.normal` | dimension | → `foundation.typography.letter.spacing.normal` | letter-spacing normal pra texto UI geral. | 2 |
+| `semantic.typography.body.letter-spacing.normal` | dimension | → `foundation.typography.letter.spacing.normal` | letter-spacing normal pra texto UI geral. | 3 |
 | `semantic.typography.body.letter-spacing.tight` | dimension | → `foundation.typography.letter.spacing.tight` | letter-spacing tight pra texto UI geral. | 1 |
 | `semantic.typography.body.letter-spacing.wider` | dimension | → `foundation.typography.letter.spacing.wider` | letter-spacing wider pra texto UI geral. | 0 |
 | `semantic.typography.body.line-height.2xl` | dimension | → `foundation.typography.line.height.34` | line-height 2xl pra texto UI geral. | 1 |
@@ -593,7 +593,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.typography.body.line-height.9xl` | dimension | → `foundation.typography.line.height.90` | line-height 9xl pra texto UI geral. | 0 |
 | `semantic.typography.body.line-height.lg` | dimension | → `foundation.typography.line.height.28` | line-height lg pra texto UI geral. | 0 |
 | `semantic.typography.body.line-height.md` | dimension | → `foundation.typography.line.height.24` | line-height md pra texto UI geral. | 1 |
-| `semantic.typography.body.line-height.sm` | dimension | → `foundation.typography.line.height.20` | line-height sm pra texto UI geral. | 8 |
+| `semantic.typography.body.line-height.sm` | dimension | → `foundation.typography.line.height.20` | line-height sm pra texto UI geral. | 9 |
 | `semantic.typography.body.line-height.xl` | dimension | → `foundation.typography.line.height.32` | line-height xl pra texto UI geral. | 4 |
 | `semantic.typography.body.line-height.xs` | dimension | → `foundation.typography.line.height.18` | line-height xs pra texto UI geral. | 1 |
 
@@ -606,7 +606,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Component
 
-162 tokens.
+174 tokens.
 
 ### component.alert
 
@@ -808,6 +808,23 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.spinner.root.size.lg` | dimension | → `semantic.size.lg` | Tamanho do root e ring do Spinner por size. | 1 |
 | `component.spinner.root.size.md` | dimension | → `semantic.size.md` | Tamanho do root e ring do Spinner por size. | 1 |
 | `component.spinner.root.size.sm` | dimension | → `semantic.size.xs` | Tamanho do root e ring do Spinner por size. | 1 |
+
+### component.tabs
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `component.tabs.indicator.height.default` | dimension | → `semantic.border.width.strong` | Altura do indicator Tabs. | 1 |
+| `component.tabs.indicator.radius.default` | dimension | → `semantic.radius.md` | Radius do indicator Tabs. | 0 |
+| `component.tabs.item.indicator-gap.default` | dimension | → `semantic.space.control.padding.10` | Gap entre label e indicator Tabs. | 1 |
+| `component.tabs.item.padding-top.default` | dimension | → `semantic.space.md` | Padding top do item Tabs. | 1 |
+| `component.tabs.item.padding-x.default` | dimension | → `semantic.space.lg` | Padding horizontal do item Tabs. | 1 |
+| `component.tabs.item.radius.default` | dimension | → `semantic.radius.md` | Radius do item Tabs. | 1 |
+| `component.tabs.label.font-size.default` | dimension | → `semantic.typography.body.font-size.sm` | Font-size do label Tabs. | 1 |
+| `component.tabs.label.font-weight.default` | number | → `semantic.typography.body.font-weight.bold` | Font-weight do label Tabs. | 1 |
+| `component.tabs.label.letter-spacing.default` | dimension | → `semantic.typography.body.letter-spacing.normal` | Letter-spacing do label Tabs. | 1 |
+| `component.tabs.label.line-height.default` | dimension | → `semantic.typography.body.line-height.sm` | Line-height do label Tabs. | 1 |
+| `component.tabs.list.border-width.default` | dimension | → `semantic.border.width.default` | Border width da list Tabs. | 1 |
+| `component.tabs.panel.padding-y.default` | dimension | → `semantic.space.lg` | Padding vertical do panel Tabs. | 1 |
 
 ### component.textarea
 
@@ -4301,11 +4318,10 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/input.css` (1×)
     - `css/components/radio.css` (1×)
     - `css/components/select.css` (1×)
-    - `css/components/tabs.css` (1×)
     - `css/components/textarea.css` (1×)
     - `css/components/toggle.css` (3×)
-    - `css/tokens/generated/component.css` (3×)
-  - Tokens que referenciam: `component.alert.root.border-width.default`, `component.badge.root.border-width.default`, `component.card.root.border-width.default`
+    - `css/tokens/generated/component.css` (4×)
+  - Tokens que referenciam: `component.alert.root.border-width.default`, `component.badge.root.border-width.default`, `component.card.root.border-width.default`, `component.tabs.list.border-width.default`
 
 ### `semantic.border.width.focus`
 
@@ -4342,9 +4358,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Alias direto a Foundation foundation.border.width.2.
 - **Usos**:
   - CSS:
-    - `css/components/tabs.css` (1×)
-    - `css/tokens/generated/component.css` (1×)
-  - Tokens que referenciam: `component.spinner.ring.stroke-width.default`
+    - `css/tokens/generated/component.css` (2×)
+  - Tokens que referenciam: `component.spinner.ring.stroke-width.default`, `component.tabs.indicator.height.default`
 
 ### `semantic.content.default`
 
@@ -5401,10 +5416,9 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/divider.css` (1×)
     - `css/components/input.css` (1×)
     - `css/components/select.css` (1×)
-    - `css/components/tabs.css` (1×)
     - `css/components/textarea.css` (1×)
-    - `css/tokens/generated/component.css` (2×)
-  - Tokens que referenciam: `component.skeleton.text.radius.default`, `component.skeleton.rectangle.radius.default`
+    - `css/tokens/generated/component.css` (4×)
+  - Tokens que referenciam: `component.skeleton.text.radius.default`, `component.skeleton.rectangle.radius.default`, `component.tabs.item.radius.default`, `component.tabs.indicator.radius.default`
 
 ### `semantic.radius.sm`
 
@@ -5721,8 +5735,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/button.css` (1×)
-    - `css/components/tabs.css` (1×)
     - `css/components/textarea.css` (1×)
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.tabs.item.indicator-gap.default`
 
 ### `semantic.space.control.padding.6`
 
@@ -5751,11 +5766,10 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/button.css` (1×)
     - `css/components/input.css` (1×)
     - `css/components/select.css` (3×)
-    - `css/components/tabs.css` (2×)
     - `css/components/textarea.css` (1×)
-    - `css/tokens/generated/component.css` (10×)
+    - `css/tokens/generated/component.css` (12×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.card.header.padding-x.default`, `component.card.header.padding-top.default`, `component.card.body.padding-x.default`, `component.card.body.padding-bottom.default`, `component.modal.header.padding-x.sm`, `component.modal.header.padding-top.sm`, `component.modal.body.padding-x.sm`, `component.modal.body.padding-bottom.sm`, `component.modal.footer.padding-x.sm`, `component.modal.footer.padding-bottom.sm`
+  - Tokens que referenciam: `component.card.header.padding-x.default`, `component.card.header.padding-top.default`, `component.card.body.padding-x.default`, `component.card.body.padding-bottom.default`, `component.modal.header.padding-x.sm`, `component.modal.header.padding-top.sm`, `component.modal.body.padding-x.sm`, `component.modal.body.padding-bottom.sm`, `component.modal.footer.padding-x.sm`, `component.modal.footer.padding-bottom.sm`, `component.tabs.item.padding-x.default`, `component.tabs.panel.padding-y.default`
 
 ### `semantic.space.md`
 
@@ -5773,11 +5787,10 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/input.css` (1×)
     - `css/components/radio.css` (1×)
     - `css/components/select.css` (3×)
-    - `css/components/tabs.css` (1×)
     - `css/components/textarea.css` (2×)
-    - `css/tokens/generated/component.css` (5×)
+    - `css/tokens/generated/component.css` (6×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.alert.root.padding.default`, `component.modal.header.padding-bottom.md`, `component.modal.header.padding-bottom.lg`, `component.modal.footer.padding-top.md`, `component.modal.footer.padding-top.lg`
+  - Tokens que referenciam: `component.alert.root.padding.default`, `component.modal.header.padding-bottom.md`, `component.modal.header.padding-bottom.lg`, `component.modal.footer.padding-top.md`, `component.modal.footer.padding-top.lg`, `component.tabs.item.padding-top.default`
 
 ### `semantic.space.section.lg`
 
@@ -6192,7 +6205,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-sm`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.size.14.
 - **Usos**:
-  - Tokens que referenciam: `component.alert.title.font-size.default`, `component.alert.description.font-size.default`, `component.avatar.initials.font-size.sm`, `component.avatar.initials.font-size.md`, `component.card.body.font-size.default`, `component.card.subtitle.font-size.default`, `component.modal.body.font-size.sm`, `component.tooltip.label.font-size.default`
+  - Tokens que referenciam: `component.alert.title.font-size.default`, `component.alert.description.font-size.default`, `component.avatar.initials.font-size.sm`, `component.avatar.initials.font-size.md`, `component.card.body.font-size.default`, `component.card.subtitle.font-size.default`, `component.modal.body.font-size.sm`, `component.tabs.label.font-size.default`, `component.tooltip.label.font-size.default`
 
 ### `semantic.typography.body.font-size.xl`
 
@@ -6228,7 +6241,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-bold`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.weight.bold.
 - **Usos**:
-  - Tokens que referenciam: `component.alert.title.font-weight.default`, `component.avatar.initials.font-weight.sm`, `component.avatar.initials.font-weight.md`, `component.badge.label.font-weight.default`, `component.card.subtitle.font-weight.default`
+  - Tokens que referenciam: `component.alert.title.font-weight.default`, `component.avatar.initials.font-weight.sm`, `component.avatar.initials.font-weight.md`, `component.badge.label.font-weight.default`, `component.card.subtitle.font-weight.default`, `component.tabs.label.font-weight.default`
 
 ### `semantic.typography.body.font-weight.medium`
 
@@ -6276,7 +6289,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-normal`.
 - **Decisão**: Aliasado a Foundation foundation.typography.letter.spacing.normal.
 - **Usos**:
-  - Tokens que referenciam: `component.modal.title.letter-spacing.sm`, `component.modal.title.letter-spacing.md`
+  - Tokens que referenciam: `component.modal.title.letter-spacing.sm`, `component.modal.title.letter-spacing.md`, `component.tabs.label.letter-spacing.default`
 
 ### `semantic.typography.body.letter-spacing.tight`
 
@@ -6444,7 +6457,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-sm`.
 - **Decisão**: Aliasado a Foundation foundation.typography.line.height.20.
 - **Usos**:
-  - Tokens que referenciam: `component.alert.title.line-height.default`, `component.alert.description.line-height.default`, `component.avatar.initials.line-height.sm`, `component.avatar.initials.line-height.md`, `component.card.body.line-height.default`, `component.card.subtitle.line-height.default`, `component.modal.body.line-height.sm`, `component.tooltip.label.line-height.default`
+  - Tokens que referenciam: `component.alert.title.line-height.default`, `component.alert.description.line-height.default`, `component.avatar.initials.line-height.sm`, `component.avatar.initials.line-height.md`, `component.card.body.line-height.default`, `component.card.subtitle.line-height.default`, `component.modal.body.line-height.sm`, `component.tabs.label.line-height.default`, `component.tooltip.label.line-height.default`
 
 ### `semantic.typography.body.line-height.xl`
 
@@ -8329,6 +8342,161 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/spinner.css` (2×)
+
+### `component.tabs.indicator.height.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.border.width.strong`
+- **Sentido**: Altura do indicator Tabs.
+- **Escopo**: height, border-bottom-width
+- **Contexto**: Component token do contrato anatômico Tabs Indicator. Binda height do Indicator nos 4 estados do Tab Item no Figma e define a espessura do border-bottom ativo no CSS.
+- **Decisão**: Alias 1:1 para semantic.border.width.strong porque 2px é padrão reutilizável, mas no Tabs documenta a espessura pública do indicador.
+- **Usos**:
+  - CSS:
+    - `css/components/tabs.css` (1×)
+
+### `component.tabs.indicator.radius.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.radius.md`
+- **Sentido**: Radius do indicator Tabs.
+- **Escopo**: border-radius
+- **Contexto**: Component token do contrato anatômico Tabs Indicator. Binda os 4 corner radii do Indicator nos 4 estados do Tab Item no Figma.
+- **Decisão**: Alias 1:1 para semantic.radius.md porque 8px é decisão reutilizável, mas no Tabs documenta o radius público do indicador.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.tabs.item.indicator-gap.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.control.padding.10`
+- **Sentido**: Gap entre label e indicator Tabs.
+- **Escopo**: height, padding-bottom
+- **Contexto**: Component token do contrato anatômico Tabs Item. Binda height do frame Gap nos 4 estados do Tab Item no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.space.control.padding.10 porque 10px é valor de controle já existente, mas no Tabs representa a separação anatômica entre label e indicador.
+- **Usos**:
+  - CSS:
+    - `css/components/tabs.css` (1×)
+
+### `component.tabs.item.padding-top.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.md`
+- **Sentido**: Padding top do item Tabs.
+- **Escopo**: padding-top
+- **Contexto**: Component token do contrato anatômico Tabs Item. Binda paddingTop dos 4 estados do Tab Item no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.space.md porque 12px é escala reutilizável, mas no Tabs documenta o respiro superior público do item.
+- **Usos**:
+  - CSS:
+    - `css/components/tabs.css` (1×)
+
+### `component.tabs.item.padding-x.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.lg`
+- **Sentido**: Padding horizontal do item Tabs.
+- **Escopo**: padding-left, padding-right
+- **Contexto**: Component token do contrato anatômico Tabs Item. Binda paddingLeft/paddingRight dos 4 estados do Tab Item no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.space.lg porque 16px é escala reutilizável, mas no Tabs documenta o respiro horizontal público do item.
+- **Usos**:
+  - CSS:
+    - `css/components/tabs.css` (1×)
+
+### `component.tabs.item.radius.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.radius.md`
+- **Sentido**: Radius do item Tabs.
+- **Escopo**: border-radius
+- **Contexto**: Component token do contrato anatômico Tabs Item. Binda os 4 corner radii dos 4 estados do Tab Item e do Focus Ring no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.radius.md porque 8px é decisão reutilizável, mas no Tabs documenta o radius público do item.
+- **Usos**:
+  - CSS:
+    - `css/components/tabs.css` (1×)
+
+### `component.tabs.label.font-size.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.font-size.sm`
+- **Sentido**: Font-size do label Tabs.
+- **Escopo**: font-size
+- **Contexto**: Component token do contrato anatômico Tabs Label. Binda fontSize dos labels nos 4 estados do Tab Item no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.typography.body.font-size.sm porque o label usa body/sm, mas a escala tipográfica do Tabs é contrato público do componente.
+- **Usos**:
+  - CSS:
+    - `css/components/tabs.css` (1×)
+
+### `component.tabs.label.font-weight.default`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.font-weight.bold`
+- **Sentido**: Font-weight do label Tabs.
+- **Escopo**: font-weight
+- **Contexto**: Component token do contrato anatômico Tabs Label. Binda fontStyle dos labels nos 4 estados do Tab Item no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.typography.body.font-weight.bold porque o label usa Bold; no Figma o campo bindável é fontStyle/string, enquanto no JSON/CSS o contrato permanece numérico.
+- **Usos**:
+  - CSS:
+    - `css/components/tabs.css` (1×)
+
+### `component.tabs.label.letter-spacing.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.letter-spacing.normal`
+- **Sentido**: Letter-spacing do label Tabs.
+- **Escopo**: letter-spacing
+- **Contexto**: Component token do contrato anatômico Tabs Label. Binda letterSpacing dos labels nos 4 estados do Tab Item no Figma e explicita o tracking normal no CSS.
+- **Decisão**: Alias 1:1 para semantic.typography.body.letter-spacing.normal porque o label usa tracking normal, mas esse valor faz parte da tipografia pública do Tabs.
+- **Usos**:
+  - CSS:
+    - `css/components/tabs.css` (1×)
+
+### `component.tabs.label.line-height.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.line-height.sm`
+- **Sentido**: Line-height do label Tabs.
+- **Escopo**: line-height
+- **Contexto**: Component token do contrato anatômico Tabs Label. Binda lineHeight dos labels nos 4 estados do Tab Item no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.typography.body.line-height.sm porque o label usa body/sm, mas a métrica vertical do Tabs é contrato público do componente.
+- **Usos**:
+  - CSS:
+    - `css/components/tabs.css` (1×)
+
+### `component.tabs.list.border-width.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.border.width.default`
+- **Sentido**: Border width da list Tabs.
+- **Escopo**: border-bottom-width
+- **Contexto**: Component token do contrato anatômico Tabs List. Binda strokeBottomWeight do Tab Bar no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.border.width.default porque 1px é padrão reutilizável, mas no Tabs documenta a linha divisória pública da lista.
+- **Usos**:
+  - CSS:
+    - `css/components/tabs.css` (2×)
+
+### `component.tabs.panel.padding-y.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.lg`
+- **Sentido**: Padding vertical do panel Tabs.
+- **Escopo**: padding-top, padding-bottom
+- **Contexto**: Component token do contrato anatômico Tabs Panel. Existe como variável Component no Figma e substitui consumo direto de Semantic no CSS; o arquivo Figma atual não possui Tab Panel equivalente para binding.
+- **Decisão**: Alias 1:1 para semantic.space.lg porque 16px é escala reutilizável, mas no Tabs documenta o respiro vertical público do panel.
+- **Usos**:
+  - CSS:
+    - `css/components/tabs.css` (1×)
 
 ### `component.textarea.field.min-height.lg`
 

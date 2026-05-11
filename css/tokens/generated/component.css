@@ -150,6 +150,18 @@
   --ds-spinner-root-size-lg: var(--ds-size-lg); /** Tamanho do root Spinner lg. */
   --ds-spinner-root-radius-default: var(--ds-radius-full); /** Radius circular do root Spinner. */
   --ds-spinner-ring-stroke-width-default: var(--ds-border-width-strong); /** Stroke width do ring Spinner. */
+  --ds-tabs-list-border-width-default: var(--ds-border-width-default); /** Largura da borda da lista de Tabs. */
+  --ds-tabs-item-padding-x-default: var(--ds-space-lg); /** Espaçamento interno horizontal do item de Tabs. */
+  --ds-tabs-item-padding-top-default: var(--ds-space-md); /** Espaçamento interno superior do item de Tabs. */
+  --ds-tabs-item-radius-default: var(--ds-radius-md); /** Raio do item de Tabs. */
+  --ds-tabs-item-indicator-gap-default: var(--ds-space-control-padding-10); /** Espaço entre o rótulo e o indicador de Tabs. */
+  --ds-tabs-indicator-height-default: var(--ds-border-width-strong); /** Altura do indicador de Tabs. */
+  --ds-tabs-indicator-radius-default: var(--ds-radius-md); /** Raio do indicador de Tabs. */
+  --ds-tabs-label-font-size-default: var(--ds-body-font-size-sm); /** Tamanho da fonte do rótulo de Tabs. */
+  --ds-tabs-label-line-height-default: var(--ds-body-line-height-sm); /** Altura de linha do rótulo de Tabs. */
+  --ds-tabs-label-font-weight-default: var(--ds-body-font-weight-bold); /** Peso da fonte do rótulo de Tabs. */
+  --ds-tabs-label-letter-spacing-default: var(--ds-body-letter-spacing-normal); /** Espaçamento entre letras do rótulo de Tabs. */
+  --ds-tabs-panel-padding-y-default: var(--ds-space-lg); /** Espaçamento interno vertical do painel de Tabs. */
   --ds-toggle-target-height-sm: var(--ds-size-lg); /** Altura minima da area interativa Toggle sm. */
   --ds-toggle-target-height-md: var(--ds-size-xl); /** Altura minima da area interativa Toggle md. */
   --ds-toggle-target-height-lg: var(--ds-size-2xl); /** Altura minima da area interativa Toggle lg. */

@@ -686,13 +686,8 @@
       "cssClass": "ds-tabs",
       "cssFile": "css/components/tabs.css",
       "tokens": [
-        "ds-body-font-size-sm",
-        "ds-body-font-weight-bold",
-        "ds-body-line-height-sm",
         "ds-border-focus",
-        "ds-border-width-default",
         "ds-border-width-focus",
-        "ds-border-width-strong",
         "ds-content-default",
         "ds-content-disabled",
         "ds-content-strong",
@@ -700,10 +695,17 @@
         "ds-motion-ease-default",
         "ds-overlay-default",
         "ds-primary-background-default",
-        "ds-radius-md",
-        "ds-space-control-padding-10",
-        "ds-space-lg",
-        "ds-space-md"
+        "ds-tabs-indicator-height-default",
+        "ds-tabs-item-indicator-gap-default",
+        "ds-tabs-item-padding-top-default",
+        "ds-tabs-item-padding-x-default",
+        "ds-tabs-item-radius-default",
+        "ds-tabs-label-font-size-default",
+        "ds-tabs-label-font-weight-default",
+        "ds-tabs-label-letter-spacing-default",
+        "ds-tabs-label-line-height-default",
+        "ds-tabs-list-border-width-default",
+        "ds-tabs-panel-padding-y-default"
       ],
       "variants": [
         "active"
