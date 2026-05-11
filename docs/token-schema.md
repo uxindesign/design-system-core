@@ -18,16 +18,16 @@
 
 | Camada | Tokens | Arquivos |
 |--------|--------|----------|
-| Foundation/Core | **265** | 9 |
+| Foundation/Core | **266** | 9 |
 | Semantic/System | **173 × 2 modos** | light.json + dark.json |
-| Component | **31** | 6 |
+| Component | **34** | 7 |
 
-## Foundation (265 tokens)
+## Foundation (266 tokens)
 
 | Arquivo | Tokens |
 |---------|--------|
 | `colors.json` | 147 |
-| `dimension.json` | 27 |
+| `dimension.json` | 28 |
 | `motion.json` | 10 |
 | `opacity.json` | 6 |
 | `radius.json` | 7 |
@@ -62,7 +62,7 @@ semantic.typography.*
 semantic.z.*
 ```
 
-## Component (31 tokens)
+## Component (34 tokens)
 
 | Arquivo | Tokens |
 |---------|--------|
@@ -71,6 +71,7 @@ semantic.z.*
 | `input.json` | 3 |
 | `radio.json` | 6 |
 | `select.json` | 3 |
+| `textarea.json` | 3 |
 | `toggle.json` | 10 |
 
 ## Regras invioláveis

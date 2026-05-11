@@ -1,0 +1,25 @@
+{
+  "component": {
+    "textarea": {
+      "field": {
+        "min-height": {
+          "sm": {
+            "$type": "dimension",
+            "$value": "{foundation.dimension.80}",
+            "$description": "Altura mínima do field Textarea sm."
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "{foundation.dimension.96}",
+            "$description": "Altura mínima do field Textarea md."
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{foundation.dimension.120}",
+            "$description": "Altura mínima do field Textarea lg."
+          }
+        }
+      }
+    }
+  }
+}

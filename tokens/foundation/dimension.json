@@ -102,6 +102,11 @@
         "$value": "6rem",
         "$description": "96px"
       },
+      "120": {
+        "$type": "dimension",
+        "$value": "7.5rem",
+        "$description": "120px"
+      },
       "128": {
         "$type": "dimension",
         "$value": "8rem",

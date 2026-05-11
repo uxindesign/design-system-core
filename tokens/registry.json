@@ -7650,6 +7650,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/tokens/generated/component.css",
+            "count": 1
+          },
+          {
             "file": "css/tokens/generated/theme-dark.css",
             "count": 1
           },
@@ -7659,6 +7663,7 @@
           }
         ],
         "tokens": [
+          "component.textarea.field.min-height.sm",
           "semantic.space.section.xl",
           "semantic.space.section.xl"
         ],
@@ -7680,6 +7685,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/tokens/generated/component.css",
+            "count": 1
+          },
+          {
             "file": "css/tokens/generated/theme-dark.css",
             "count": 1
           },
@@ -7689,6 +7698,7 @@
           }
         ],
         "tokens": [
+          "component.textarea.field.min-height.md",
           "semantic.size.4xl",
           "semantic.size.4xl"
         ],
@@ -9217,10 +9227,6 @@
           {
             "file": "css/components/avatar.css",
             "count": 2
-          },
-          {
-            "file": "css/components/textarea.css",
-            "count": 1
           }
         ],
         "tokens": [],
@@ -9239,12 +9245,7 @@
       "contexto": "Use em `width`, `height` ou pra ícones, controles, layouts.",
       "decisao": "Aliasado a Foundation foundation.dimension.96.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/textarea.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -9264,10 +9265,6 @@
         "css": [
           {
             "file": "css/components/skeleton.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/textarea.css",
             "count": 1
           }
         ],
@@ -10951,6 +10948,97 @@
           }
         ],
         "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.field.min-height.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "foundation.dimension.80",
+      "sentido": "Altura minima do field visual do Textarea por size.",
+      "escopo": [
+        "min-height",
+        "height"
+      ],
+      "contexto": "Component token do contrato anatomico Textarea. Binda o subnode Field no Figma e substitui consumo direto de foundation/semantic no CSS.",
+      "decisao": "Mantido em Component com alias direto para Foundation dimension 80/96/120 porque Textarea usa uma altura minima propria do field, distinta do padrao 32/40/48 de Button/Input/Select; criar semantic.control.textarea-height ou reutilizar semantic.size.* esconderia uma anatomia especifica do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.field.min-height.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "foundation.dimension.96",
+      "sentido": "Altura minima do field visual do Textarea por size.",
+      "escopo": [
+        "min-height",
+        "height"
+      ],
+      "contexto": "Component token do contrato anatomico Textarea. Binda o subnode Field no Figma e substitui consumo direto de foundation/semantic no CSS.",
+      "decisao": "Mantido em Component com alias direto para Foundation dimension 80/96/120 porque Textarea usa uma altura minima propria do field, distinta do padrao 32/40/48 de Button/Input/Select; criar semantic.control.textarea-height ou reutilizar semantic.size.* esconderia uma anatomia especifica do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.field.min-height.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "foundation.dimension.120",
+      "sentido": "Altura minima do field visual do Textarea por size.",
+      "escopo": [
+        "min-height",
+        "height"
+      ],
+      "contexto": "Component token do contrato anatomico Textarea. Binda o subnode Field no Figma e substitui consumo direto de foundation/semantic no CSS.",
+      "decisao": "Mantido em Component com alias direto para Foundation dimension 80/96/120 porque Textarea usa uma altura minima propria do field, distinta do padrao 32/40/48 de Button/Input/Select; criar semantic.control.textarea-height ou reutilizar semantic.size.* esconderia uma anatomia especifica do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "foundation.dimension.120": {
+      "layer": "foundation",
+      "type": "dimension",
+      "references": null,
+      "sentido": "Dimensão fixa de 120px (7.5rem).",
+      "escopo": [
+        "gap",
+        "padding",
+        "size"
+      ],
+      "contexto": "Primitivo Foundation adicionado para suportar a altura Large do field Textarea observada no Figma. Consumo em componentes deve ocorrer via Component token.",
+      "decisao": "Adicionado como valor primitivo porque 120px existe no Figma vivo para Textarea Large e nao havia Semantic reutilizavel real; a intencao publica permanece em component.textarea.field.min-height.lg.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/tokens/generated/component.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "component.textarea.field.min-height.lg"
+        ],
         "figma": []
       }
     }

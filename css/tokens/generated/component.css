@@ -3,6 +3,9 @@
  */
 
 :root {
+  --ds-textarea-field-min-height-sm: var(--ds-dimension-80); /** Altura mínima do field Textarea sm. */
+  --ds-textarea-field-min-height-md: var(--ds-dimension-96); /** Altura mínima do field Textarea md. */
+  --ds-textarea-field-min-height-lg: var(--ds-dimension-120); /** Altura mínima do field Textarea lg. */
   --ds-toggle-track-width-sm: var(--ds-dimension-28); /** Largura especifica da track Toggle sm. Component-specific; nao ha Semantic reutilizavel. */
   --ds-toggle-track-width-md: var(--ds-dimension-44); /** Largura especifica da track Toggle md. Component-specific; nao ha Semantic reutilizavel. */
   --ds-toggle-track-width-lg: var(--ds-dimension-56); /** Largura especifica da track Toggle lg. Component-specific; nao ha Semantic reutilizavel. */

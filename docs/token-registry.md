@@ -6,14 +6,14 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Status
 
-- Total de tokens: **469**
-- Com metadados completos: **469**
+- Total de tokens: **473**
+- Com metadados completos: **473**
 - Pendentes (`TODO` em algum campo obrigatório): **0**
 - Completude: **100%**
 
 ## Foundation
 
-265 tokens.
+266 tokens.
 
 ### foundation.border
 
@@ -182,6 +182,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `foundation.dimension.10` | dimension | — | Dimensão fixa de 10px (0.625rem). | 4 |
 | `foundation.dimension.1024` | dimension | — | Dimensão fixa de 1024px (64rem). | 4 |
 | `foundation.dimension.12` | dimension | — | Dimensão fixa de 12px (0.75rem). | 6 |
+| `foundation.dimension.120` | dimension | — | Dimensão fixa de 120px (7.5rem). | 2 |
 | `foundation.dimension.128` | dimension | — | Dimensão fixa de 128px (8rem). | 4 |
 | `foundation.dimension.1280` | dimension | — | Dimensão fixa de 1280px (80rem). | 4 |
 | `foundation.dimension.14` | dimension | — | Dimensão fixa de 14px (0.875rem). | 0 |
@@ -203,9 +204,9 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `foundation.dimension.64` | dimension | — | Dimensão fixa de 64px (4rem). | 6 |
 | `foundation.dimension.640` | dimension | — | Dimensão fixa de 640px (40rem). | 4 |
 | `foundation.dimension.8` | dimension | — | Dimensão fixa de 8px (0.5rem). | 4 |
-| `foundation.dimension.80` | dimension | — | Dimensão fixa de 80px (5rem). | 4 |
+| `foundation.dimension.80` | dimension | — | Dimensão fixa de 80px (5rem). | 6 |
 | `foundation.dimension.800` | dimension | — | Dimensão fixa de 800px (50rem). | 4 |
-| `foundation.dimension.96` | dimension | — | Dimensão fixa de 96px (6rem). | 4 |
+| `foundation.dimension.96` | dimension | — | Dimensão fixa de 96px (6rem). | 6 |
 
 ### foundation.duration
 
@@ -501,9 +502,9 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `semantic.size.2xl` | dimension | → `foundation.dimension.48` | Size token 2xl. | 8 |
-| `semantic.size.3xl` | dimension | → `foundation.dimension.64` | Size token 3xl. | 2 |
-| `semantic.size.4xl` | dimension | → `foundation.dimension.96` | Size token 4xl. | 1 |
-| `semantic.size.5xl` | dimension | → `foundation.dimension.128` | Size token 5xl. | 2 |
+| `semantic.size.3xl` | dimension | → `foundation.dimension.64` | Size token 3xl. | 1 |
+| `semantic.size.4xl` | dimension | → `foundation.dimension.96` | Size token 4xl. | 0 |
+| `semantic.size.5xl` | dimension | → `foundation.dimension.128` | Size token 5xl. | 1 |
 | `semantic.size.layout.2xl` | dimension | → `foundation.dimension.1280` | Size token layout.2xl. | 0 |
 | `semantic.size.layout.lg` | dimension | → `foundation.dimension.800` | Size token layout.lg. | 1 |
 | `semantic.size.layout.md` | dimension | → `foundation.dimension.640` | Size token layout.md. | 1 |
@@ -604,7 +605,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Component
 
-31 tokens.
+34 tokens.
 
 ### component.button
 
@@ -651,6 +652,14 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.select.root.height.lg` | dimension | → `semantic.size.2xl` | Altura do root visual do Select por size. | 1 |
 | `component.select.root.height.md` | dimension | → `semantic.size.xl` | Altura do root visual do Select por size. | 1 |
 | `component.select.root.height.sm` | dimension | → `semantic.size.lg` | Altura do root visual do Select por size. | 1 |
+
+### component.textarea
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `component.textarea.field.min-height.lg` | dimension | → `foundation.dimension.120` | Altura minima do field visual do Textarea por size. | 1 |
+| `component.textarea.field.min-height.md` | dimension | → `foundation.dimension.96` | Altura minima do field visual do Textarea por size. | 1 |
+| `component.textarea.field.min-height.sm` | dimension | → `foundation.dimension.80` | Altura minima do field visual do Textarea por size. | 1 |
 
 ### component.toggle
 
@@ -2488,6 +2497,19 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/tokens/generated/theme-light.css` (1×)
   - Tokens que referenciam: `semantic.space.md`, `semantic.space.md`
 
+### `foundation.dimension.120`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: Dimensão fixa de 120px (7.5rem).
+- **Escopo**: gap, padding, size
+- **Contexto**: Primitivo Foundation adicionado para suportar a altura Large do field Textarea observada no Figma. Consumo em componentes deve ocorrer via Component token.
+- **Decisão**: Adicionado como valor primitivo porque 120px existe no Figma vivo para Textarea Large e nao havia Semantic reutilizavel real; a intencao publica permanece em component.textarea.field.min-height.lg.
+- **Usos**:
+  - CSS:
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.textarea.field.min-height.lg`
+
 ### `foundation.dimension.128`
 
 - **Camada**: foundation
@@ -2786,9 +2808,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Step da escala 2/4/6/8/10/12/14/16/20/24/28/32/36/40/44/48 — múltiplos de 2 e 4 cobrem todas as densidades de UI.
 - **Usos**:
   - CSS:
+    - `css/tokens/generated/component.css` (1×)
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.space.section.xl`, `semantic.space.section.xl`
+  - Tokens que referenciam: `component.textarea.field.min-height.sm`, `semantic.space.section.xl`, `semantic.space.section.xl`
 
 ### `foundation.dimension.800`
 
@@ -2814,9 +2837,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Step da escala 2/4/6/8/10/12/14/16/20/24/28/32/36/40/44/48 — múltiplos de 2 e 4 cobrem todas as densidades de UI.
 - **Usos**:
   - CSS:
+    - `css/tokens/generated/component.css` (1×)
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.size.4xl`, `semantic.size.4xl`
+  - Tokens que referenciam: `component.textarea.field.min-height.md`, `semantic.size.4xl`, `semantic.size.4xl`
 
 ### `foundation.duration.fast`
 
@@ -5300,7 +5324,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/avatar.css` (2×)
-    - `css/components/textarea.css` (1×)
 
 ### `semantic.size.4xl`
 
@@ -5312,8 +5335,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Use em `width`, `height` ou pra ícones, controles, layouts.
 - **Decisão**: Aliasado a Foundation foundation.dimension.96.
 - **Usos**:
-  - CSS:
-    - `css/components/textarea.css` (1×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `semantic.size.5xl`
 
@@ -5327,7 +5349,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/skeleton.css` (1×)
-    - `css/components/textarea.css` (1×)
 
 ### `semantic.size.layout.2xl`
 
@@ -6574,6 +6595,45 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/select.css` (1×)
+
+### `component.textarea.field.min-height.lg`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.dimension.120`
+- **Sentido**: Altura minima do field visual do Textarea por size.
+- **Escopo**: min-height, height
+- **Contexto**: Component token do contrato anatomico Textarea. Binda o subnode Field no Figma e substitui consumo direto de foundation/semantic no CSS.
+- **Decisão**: Mantido em Component com alias direto para Foundation dimension 80/96/120 porque Textarea usa uma altura minima propria do field, distinta do padrao 32/40/48 de Button/Input/Select; criar semantic.control.textarea-height ou reutilizar semantic.size.* esconderia uma anatomia especifica do componente.
+- **Usos**:
+  - CSS:
+    - `css/components/textarea.css` (1×)
+
+### `component.textarea.field.min-height.md`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.dimension.96`
+- **Sentido**: Altura minima do field visual do Textarea por size.
+- **Escopo**: min-height, height
+- **Contexto**: Component token do contrato anatomico Textarea. Binda o subnode Field no Figma e substitui consumo direto de foundation/semantic no CSS.
+- **Decisão**: Mantido em Component com alias direto para Foundation dimension 80/96/120 porque Textarea usa uma altura minima propria do field, distinta do padrao 32/40/48 de Button/Input/Select; criar semantic.control.textarea-height ou reutilizar semantic.size.* esconderia uma anatomia especifica do componente.
+- **Usos**:
+  - CSS:
+    - `css/components/textarea.css` (1×)
+
+### `component.textarea.field.min-height.sm`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.dimension.80`
+- **Sentido**: Altura minima do field visual do Textarea por size.
+- **Escopo**: min-height, height
+- **Contexto**: Component token do contrato anatomico Textarea. Binda o subnode Field no Figma e substitui consumo direto de foundation/semantic no CSS.
+- **Decisão**: Mantido em Component com alias direto para Foundation dimension 80/96/120 porque Textarea usa uma altura minima propria do field, distinta do padrao 32/40/48 de Button/Input/Select; criar semantic.control.textarea-height ou reutilizar semantic.size.* esconderia uma anatomia especifica do componente.
+- **Usos**:
+  - CSS:
+    - `css/components/textarea.css` (1×)
 
 ### `component.toggle.target.height.lg`
 

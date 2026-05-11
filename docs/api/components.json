@@ -162,14 +162,14 @@
         "ds-motion-duration-fast",
         "ds-motion-ease-default",
         "ds-radius-md",
-        "ds-size-3xl",
-        "ds-size-4xl",
-        "ds-size-5xl",
         "ds-space-control-padding-10",
         "ds-space-lg",
         "ds-space-md",
         "ds-space-sm",
-        "ds-surface-default"
+        "ds-surface-default",
+        "ds-textarea-field-min-height-lg",
+        "ds-textarea-field-min-height-md",
+        "ds-textarea-field-min-height-sm"
       ],
       "variants": [
         "disabled",
