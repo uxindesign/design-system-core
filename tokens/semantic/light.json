@@ -902,6 +902,11 @@
       }
     },
     "z": {
+      "modal": {
+        "$type": "number",
+        "$value": "{foundation.z.40}",
+        "$description": "Stack layer para modais e overlays bloqueantes."
+      },
       "tooltip": {
         "$type": "number",
         "$value": "{foundation.z.40}",

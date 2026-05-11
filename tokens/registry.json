@@ -4027,15 +4027,17 @@
         "css": [
           {
             "file": "css/tokens/generated/theme-dark.css",
-            "count": 1
+            "count": 2
           },
           {
             "file": "css/tokens/generated/theme-light.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [
+          "semantic.z.modal",
           "semantic.z.tooltip",
+          "semantic.z.modal",
           "semantic.z.tooltip"
         ],
         "figma": []
@@ -5049,6 +5051,7 @@
         "tokens": [
           "component.alert.description.font-weight.default",
           "component.card.body.font-weight.default",
+          "component.modal.body.font-weight.default",
           "component.tooltip.label.font-weight.default"
         ],
         "figma": []
@@ -5084,7 +5087,8 @@
         "css": [],
         "tokens": [
           "component.avatar.initials.font-weight.lg",
-          "component.card.title.font-weight.default"
+          "component.card.title.font-weight.default",
+          "component.modal.title.font-weight.default"
         ],
         "figma": []
       }
@@ -5123,7 +5127,10 @@
       "decisao": "Aliasado a Foundation foundation.typography.letter.spacing.normal.",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "component.modal.title.letter-spacing.sm",
+          "component.modal.title.letter-spacing.md"
+        ],
         "figma": []
       }
     },
@@ -5139,7 +5146,9 @@
       "decisao": "Aliasado a Foundation foundation.typography.letter.spacing.tight.",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "component.modal.title.letter-spacing.lg"
+        ],
         "figma": []
       }
     },
@@ -5180,6 +5189,7 @@
           "component.avatar.initials.font-size.md",
           "component.card.body.font-size.default",
           "component.card.subtitle.font-size.default",
+          "component.modal.body.font-size.sm",
           "component.tooltip.label.font-size.default"
         ],
         "figma": []
@@ -5197,7 +5207,9 @@
       "decisao": "Aliasado a Foundation foundation.typography.font.size.16.",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "component.modal.body.font-size.md"
+        ],
         "figma": []
       }
     },
@@ -5213,7 +5225,9 @@
       "decisao": "Aliasado a Foundation foundation.typography.font.size.18.",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "component.modal.body.font-size.lg"
+        ],
         "figma": []
       }
     },
@@ -5232,7 +5246,8 @@
         "tokens": [
           "component.avatar.initials.font-size.lg",
           "component.avatar.icon.size.sm",
-          "component.card.title.font-size.default"
+          "component.card.title.font-size.default",
+          "component.modal.title.font-size.sm"
         ],
         "figma": []
       }
@@ -5250,7 +5265,8 @@
       "usos": {
         "css": [],
         "tokens": [
-          "component.avatar.icon.size.md"
+          "component.avatar.icon.size.md",
+          "component.modal.title.font-size.md"
         ],
         "figma": []
       }
@@ -5267,7 +5283,9 @@
       "decisao": "Aliasado a Foundation foundation.typography.font.size.28.",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "component.modal.title.font-size.lg"
+        ],
         "figma": []
       }
     },
@@ -5308,6 +5326,7 @@
           "component.avatar.initials.line-height.md",
           "component.card.body.line-height.default",
           "component.card.subtitle.line-height.default",
+          "component.modal.body.line-height.sm",
           "component.tooltip.label.line-height.default"
         ],
         "figma": []
@@ -5325,7 +5344,9 @@
       "decisao": "Aliasado a Foundation foundation.typography.line.height.24.",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "component.modal.body.line-height.md"
+        ],
         "figma": []
       }
     },
@@ -5343,7 +5364,9 @@
         "css": [],
         "tokens": [
           "component.avatar.initials.line-height.lg",
-          "component.card.title.line-height.default"
+          "component.card.title.line-height.default",
+          "component.modal.body.line-height.lg",
+          "component.modal.title.line-height.sm"
         ],
         "figma": []
       }
@@ -5360,7 +5383,9 @@
       "decisao": "Aliasado a Foundation foundation.typography.line.height.34.",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "component.modal.title.line-height.md"
+        ],
         "figma": []
       }
     },
@@ -5376,7 +5401,9 @@
       "decisao": "Aliasado a Foundation foundation.typography.line.height.40.",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "component.modal.title.line-height.lg"
+        ],
         "figma": []
       }
     },
@@ -6693,10 +6720,6 @@
             "count": 2
           },
           {
-            "file": "css/components/modal.css",
-            "count": 1
-          },
-          {
             "file": "css/components/radio.css",
             "count": 7
           },
@@ -6710,7 +6733,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 4
+            "count": 5
           },
           {
             "file": "css/utilities/layout.css",
@@ -6720,6 +6743,7 @@
         "tokens": [
           "component.alert.content.gap.default",
           "component.badge.root.gap.default",
+          "component.modal.close.padding.default",
           "component.tooltip.content.padding-y.default",
           "component.tooltip.arrow.depth.default"
         ],
@@ -6753,10 +6777,6 @@
             "count": 2
           },
           {
-            "file": "css/components/modal.css",
-            "count": 4
-          },
-          {
             "file": "css/components/radio.css",
             "count": 4
           },
@@ -6778,7 +6798,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 6
+            "count": 10
           },
           {
             "file": "css/utilities/layout.css",
@@ -6790,6 +6810,10 @@
           "component.badge.root.padding-x.default",
           "component.card.header.padding-bottom.default",
           "component.card.header.gap.default",
+          "component.modal.header.padding-bottom.sm",
+          "component.modal.header.gap.default",
+          "component.modal.footer.padding-top.sm",
+          "component.modal.footer.gap.default",
           "component.tooltip.content.padding-x.default",
           "component.tooltip.arrow.base.default"
         ],
@@ -6840,7 +6864,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 1
+            "count": 5
           },
           {
             "file": "css/utilities/layout.css",
@@ -6848,7 +6872,11 @@
           }
         ],
         "tokens": [
-          "component.alert.root.padding.default"
+          "component.alert.root.padding.default",
+          "component.modal.header.padding-bottom.md",
+          "component.modal.header.padding-bottom.lg",
+          "component.modal.footer.padding-top.md",
+          "component.modal.footer.padding-top.lg"
         ],
         "figma": []
       }
@@ -6876,10 +6904,6 @@
             "count": 1
           },
           {
-            "file": "css/components/modal.css",
-            "count": 7
-          },
-          {
             "file": "css/components/select.css",
             "count": 3
           },
@@ -6893,7 +6917,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 4
+            "count": 10
           },
           {
             "file": "css/utilities/layout.css",
@@ -6904,7 +6928,13 @@
           "component.card.header.padding-x.default",
           "component.card.header.padding-top.default",
           "component.card.body.padding-x.default",
-          "component.card.body.padding-bottom.default"
+          "component.card.body.padding-bottom.default",
+          "component.modal.header.padding-x.sm",
+          "component.modal.header.padding-top.sm",
+          "component.modal.body.padding-x.sm",
+          "component.modal.body.padding-bottom.sm",
+          "component.modal.footer.padding-x.sm",
+          "component.modal.footer.padding-bottom.sm"
         ],
         "figma": []
       }
@@ -6928,11 +6958,29 @@
             "count": 1
           },
           {
+            "file": "css/tokens/generated/component.css",
+            "count": 13
+          },
+          {
             "file": "css/utilities/layout.css",
             "count": 1
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "component.modal.overlay.padding.default",
+          "component.modal.header.padding-x.md",
+          "component.modal.header.padding-x.lg",
+          "component.modal.header.padding-top.md",
+          "component.modal.header.padding-top.lg",
+          "component.modal.body.padding-x.md",
+          "component.modal.body.padding-x.lg",
+          "component.modal.body.padding-bottom.md",
+          "component.modal.body.padding-bottom.lg",
+          "component.modal.footer.padding-x.md",
+          "component.modal.footer.padding-x.lg",
+          "component.modal.footer.padding-bottom.md",
+          "component.modal.footer.padding-bottom.lg"
+        ],
         "figma": []
       }
     },
@@ -7074,17 +7122,14 @@
             "count": 1
           },
           {
-            "file": "css/components/modal.css",
-            "count": 1
-          },
-          {
             "file": "css/tokens/generated/component.css",
-            "count": 2
+            "count": 3
           }
         ],
         "tokens": [
           "component.alert.root.radius.default",
-          "component.card.root.radius.default"
+          "component.card.root.radius.default",
+          "component.modal.root.radius.default"
         ],
         "figma": []
       }
@@ -9011,11 +9056,12 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 4
+            "count": 5
           }
         ],
         "tokens": [
           "component.checkbox.box.size.sm",
+          "component.modal.close.glyph-size.default",
           "component.radio.control.size.sm",
           "component.spinner.root.size.sm",
           "component.toggle.track.height.sm"
@@ -9097,13 +9143,14 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 6
+            "count": 7
           }
         ],
         "tokens": [
           "component.alert.icon.size.default",
           "component.alert.close.size.default",
           "component.checkbox.box.size.lg",
+          "component.modal.close.size.default",
           "component.radio.control.size.lg",
           "component.spinner.root.size.md",
           "component.toggle.track.height.md"
@@ -9304,11 +9351,13 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/modal.css",
+            "file": "css/tokens/generated/component.css",
             "count": 1
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "component.modal.root.max-width.sm"
+        ],
         "figma": []
       }
     },
@@ -9326,11 +9375,13 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/modal.css",
+            "file": "css/tokens/generated/component.css",
             "count": 1
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "component.modal.root.max-width.md"
+        ],
         "figma": []
       }
     },
@@ -9348,11 +9399,13 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/modal.css",
+            "file": "css/tokens/generated/component.css",
             "count": 1
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "component.modal.root.max-width.lg"
+        ],
         "figma": []
       }
     },
@@ -9426,8 +9479,15 @@
       "contexto": "Use em componentes sobre overlays (modais, drawers).",
       "decisao": "Aliasado a Foundation foundation.shadow.xl.",
       "usos": {
-        "css": [],
-        "tokens": [],
+        "css": [
+          {
+            "file": "css/tokens/generated/component.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "component.modal.root.shadow.default"
+        ],
         "figma": []
       }
     },
@@ -12632,6 +12692,1155 @@
           }
         ],
         "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.overlay.padding.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xl",
+      "sentido": "Padding do overlay Modal.",
+      "escopo": [
+        "padding"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Overlay. Binda o padding do component set Modal no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.xl porque 20px é a margem de respiro do overlay no Figma vivo.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.overlay.z-index.default": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.z.modal",
+      "sentido": "Z-index do overlay Modal.",
+      "escopo": [
+        "z-index"
+      ],
+      "contexto": "Component token CSS-only do contrato anatômico Modal Overlay. Substitui z-index hardcoded no CSS; Figma usa layer order, não Variable.",
+      "decisao": "Alias 1:1 para semantic.z.modal porque a posição de stack é contrato do overlay Modal, mas a escala é decisão de sistema.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.root.max-width.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.layout.sm",
+      "sentido": "Max-width do root Modal sm.",
+      "escopo": [
+        "max-width",
+        "width"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Root. Binda width/maxWidth da variante Size=Small no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.layout.sm porque a largura sm do Modal usa a escala layout reutilizável, mas documenta o contrato público de tamanho do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.root.max-width.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.layout.md",
+      "sentido": "Max-width do root Modal md.",
+      "escopo": [
+        "max-width",
+        "width"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Root. Binda width da variante Size=Medium no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.layout.md porque a largura md do Modal usa a escala layout reutilizável, mas documenta o contrato público de tamanho do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.root.max-width.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.layout.lg",
+      "sentido": "Max-width do root Modal lg.",
+      "escopo": [
+        "max-width",
+        "width"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Root. Binda width da variante Size=Large no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.layout.lg porque a largura lg do Modal usa a escala layout reutilizável, mas documenta o contrato público de tamanho do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.root.radius.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.radius.lg",
+      "sentido": "Radius do root Modal.",
+      "escopo": [
+        "border-radius"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Root. Binda as 3 variantes Size do Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.radius.lg porque 12px é decisão reutilizável, mas no Modal documenta o radius público do container.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.root.shadow.default": {
+      "layer": "component",
+      "type": "shadow",
+      "references": "semantic.shadow.modal",
+      "sentido": "Shadow do root Modal.",
+      "escopo": [
+        "box-shadow"
+      ],
+      "contexto": "Component token CSS-only do contrato anatômico Modal Root. Espelha o Effect Style elevation/4 no Figma e substitui dependência da utility .ds-elevation-4 no CSS.",
+      "decisao": "Alias 1:1 para semantic.shadow.modal porque a elevação é contrato visual do Modal, enquanto shadow permanece categoria CSS-only conforme ADR-016.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.header.padding-x.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.lg",
+      "sentido": "Padding horizontal do header Modal sm.",
+      "escopo": [
+        "padding-left",
+        "padding-right"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Header. Binda paddingLeft/paddingRight da variante Size=Small no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.lg porque o respiro horizontal segue a escala de spacing, mas é contrato público do header Modal.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.header.padding-x.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xl",
+      "sentido": "Padding horizontal do header Modal md.",
+      "escopo": [
+        "padding-left",
+        "padding-right"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Header. Binda paddingLeft/paddingRight da variante Size=Medium no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.xl porque o respiro horizontal segue a escala de spacing, mas é contrato público do header Modal.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.header.padding-x.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xl",
+      "sentido": "Padding horizontal do header Modal lg.",
+      "escopo": [
+        "padding-left",
+        "padding-right"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Header. Binda paddingLeft/paddingRight da variante Size=Large no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.xl porque o respiro horizontal segue a escala de spacing, mas é contrato público do header Modal.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.header.padding-top.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.lg",
+      "sentido": "Padding top do header Modal sm.",
+      "escopo": [
+        "padding-top"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Header. Binda paddingTop da variante Size=Small no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.lg porque o respiro superior segue a escala de spacing, mas é contrato público do header Modal.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.header.padding-top.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xl",
+      "sentido": "Padding top do header Modal md.",
+      "escopo": [
+        "padding-top"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Header. Binda paddingTop da variante Size=Medium no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.xl porque o respiro superior segue a escala de spacing, mas é contrato público do header Modal.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.header.padding-top.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xl",
+      "sentido": "Padding top do header Modal lg.",
+      "escopo": [
+        "padding-top"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Header. Binda paddingTop da variante Size=Large no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.xl porque o respiro superior segue a escala de spacing, mas é contrato público do header Modal.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.header.padding-bottom.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.sm",
+      "sentido": "Padding bottom do header Modal sm.",
+      "escopo": [
+        "padding-bottom"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Header. Binda paddingBottom da variante Size=Small no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.sm porque a separação entre header e body segue a escala de spacing, mas é contrato público do Modal.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.header.padding-bottom.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.md",
+      "sentido": "Padding bottom do header Modal md.",
+      "escopo": [
+        "padding-bottom"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Header. Binda paddingBottom da variante Size=Medium no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.md porque a separação entre header e body segue a escala de spacing, mas é contrato público do Modal.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.header.padding-bottom.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.md",
+      "sentido": "Padding bottom do header Modal lg.",
+      "escopo": [
+        "padding-bottom"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Header. Binda paddingBottom da variante Size=Large no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.md porque a separação entre header e body segue a escala de spacing, mas é contrato público do Modal.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.header.gap.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.sm",
+      "sentido": "Gap horizontal do header Modal.",
+      "escopo": [
+        "gap"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Header. Binda itemSpacing entre Title e Close nas 3 variantes Size no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.sm porque 8px é escala reutilizável, mas no Modal documenta a separação pública entre título e close.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.body.padding-x.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.lg",
+      "sentido": "Padding horizontal do body Modal sm.",
+      "escopo": [
+        "padding-left",
+        "padding-right"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Body. Binda paddingLeft/paddingRight da variante Size=Small no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.lg porque o respiro horizontal segue a escala de spacing, mas é contrato público do body Modal.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.body.padding-x.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xl",
+      "sentido": "Padding horizontal do body Modal md.",
+      "escopo": [
+        "padding-left",
+        "padding-right"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Body. Binda paddingLeft/paddingRight da variante Size=Medium no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.xl porque o respiro horizontal segue a escala de spacing, mas é contrato público do body Modal.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.body.padding-x.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xl",
+      "sentido": "Padding horizontal do body Modal lg.",
+      "escopo": [
+        "padding-left",
+        "padding-right"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Body. Binda paddingLeft/paddingRight da variante Size=Large no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.xl porque o respiro horizontal segue a escala de spacing, mas é contrato público do body Modal.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.body.padding-bottom.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.lg",
+      "sentido": "Padding bottom do body Modal sm.",
+      "escopo": [
+        "padding-bottom"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Body. Binda paddingBottom da variante Size=Small no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.lg porque o respiro inferior segue a escala de spacing, mas é contrato público do body Modal.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.body.padding-bottom.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xl",
+      "sentido": "Padding bottom do body Modal md.",
+      "escopo": [
+        "padding-bottom"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Body. Binda paddingBottom da variante Size=Medium no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.xl porque o respiro inferior segue a escala de spacing, mas é contrato público do body Modal.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.body.padding-bottom.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xl",
+      "sentido": "Padding bottom do body Modal lg.",
+      "escopo": [
+        "padding-bottom"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Body. Binda paddingBottom da variante Size=Large no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.xl porque o respiro inferior segue a escala de spacing, mas é contrato público do body Modal.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.body.font-size.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.sm",
+      "sentido": "Font-size do body Modal sm.",
+      "escopo": [
+        "font-size"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Body. Binda fontSize do Content na variante Size=Small no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-size.sm porque a escala tipográfica é reutilizável, mas o tamanho do body é contrato público do Modal.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.body.font-size.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.md",
+      "sentido": "Font-size do body Modal md.",
+      "escopo": [
+        "font-size"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Body. Binda fontSize do Content na variante Size=Medium no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-size.md porque a escala tipográfica é reutilizável, mas o tamanho do body é contrato público do Modal.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.body.font-size.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.lg",
+      "sentido": "Font-size do body Modal lg.",
+      "escopo": [
+        "font-size"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Body. Binda fontSize do Content na variante Size=Large no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-size.lg porque a escala tipográfica é reutilizável, mas o tamanho do body é contrato público do Modal.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.body.line-height.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.sm",
+      "sentido": "Line-height do body Modal sm.",
+      "escopo": [
+        "line-height"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Body. Binda lineHeight do Content na variante Size=Small no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.line-height.sm porque a métrica vertical é reutilizável, mas o body é contrato público do Modal.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.body.line-height.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.md",
+      "sentido": "Line-height do body Modal md.",
+      "escopo": [
+        "line-height"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Body. Binda lineHeight do Content na variante Size=Medium no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.line-height.md porque a métrica vertical é reutilizável, mas o body é contrato público do Modal.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.body.line-height.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.xl",
+      "sentido": "Line-height do body Modal lg.",
+      "escopo": [
+        "line-height"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Body. Binda lineHeight do Content na variante Size=Large no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.line-height.xl porque a métrica vertical é reutilizável, mas o body é contrato público do Modal.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.body.font-weight.default": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.font-weight.regular",
+      "sentido": "Font-weight do body Modal.",
+      "escopo": [
+        "font-weight"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Body. Binda fontStyle do Content nas 3 variantes Size no Figma e substitui peso implícito no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-weight.regular porque o body usa Regular; no Figma o campo bindável é fontStyle/string, enquanto no JSON/CSS o contrato permanece numérico.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.title.font-size.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.xl",
+      "sentido": "Font-size do title Modal sm.",
+      "escopo": [
+        "font-size"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Title. Binda fontSize do Title na variante Size=Small no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-size.xl porque a escala tipográfica é reutilizável, mas o tamanho do title é contrato público do Modal.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.title.font-size.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.2xl",
+      "sentido": "Font-size do title Modal md.",
+      "escopo": [
+        "font-size"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Title. Binda fontSize do Title na variante Size=Medium no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-size.2xl porque a escala tipográfica é reutilizável, mas o tamanho do title é contrato público do Modal.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.title.font-size.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.3xl",
+      "sentido": "Font-size do title Modal lg.",
+      "escopo": [
+        "font-size"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Title. Binda fontSize do Title na variante Size=Large no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-size.3xl porque a escala tipográfica é reutilizável, mas o tamanho do title é contrato público do Modal.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.title.line-height.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.xl",
+      "sentido": "Line-height do title Modal sm.",
+      "escopo": [
+        "line-height"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Title. Binda lineHeight do Title na variante Size=Small no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.line-height.xl porque a métrica vertical é reutilizável, mas o title é contrato público do Modal.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.title.line-height.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.2xl",
+      "sentido": "Line-height do title Modal md.",
+      "escopo": [
+        "line-height"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Title. Binda lineHeight do Title na variante Size=Medium no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.line-height.2xl porque a métrica vertical é reutilizável, mas o title é contrato público do Modal.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.title.line-height.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.3xl",
+      "sentido": "Line-height do title Modal lg.",
+      "escopo": [
+        "line-height"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Title. Binda lineHeight do Title na variante Size=Large no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.line-height.3xl porque a métrica vertical é reutilizável, mas o title é contrato público do Modal.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.title.font-weight.default": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.font-weight.semibold",
+      "sentido": "Font-weight do title Modal.",
+      "escopo": [
+        "font-weight"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Title. Binda fontStyle do Title nas 3 variantes Size no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-weight.semibold porque o title usa Semi Bold; no Figma o campo bindável é fontStyle/string, enquanto no JSON/CSS o contrato permanece numérico.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.title.letter-spacing.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.letter-spacing.normal",
+      "sentido": "Letter-spacing do title Modal sm.",
+      "escopo": [
+        "letter-spacing"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Title. Binda letterSpacing do Title na variante Size=Small no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.letter-spacing.normal porque a escala de tracking é reutilizável, mas o ajuste por tamanho do title é contrato público do Modal.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.title.letter-spacing.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.letter-spacing.normal",
+      "sentido": "Letter-spacing do title Modal md.",
+      "escopo": [
+        "letter-spacing"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Title. Binda letterSpacing do Title na variante Size=Medium no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.letter-spacing.normal porque a escala de tracking é reutilizável, mas o ajuste por tamanho do title é contrato público do Modal.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.title.letter-spacing.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.letter-spacing.tight",
+      "sentido": "Letter-spacing do title Modal lg.",
+      "escopo": [
+        "letter-spacing"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Title. Binda letterSpacing do Title na variante Size=Large no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.letter-spacing.tight porque a escala de tracking é reutilizável, mas o ajuste por tamanho do title é contrato público do Modal.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.footer.padding-x.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.lg",
+      "sentido": "Padding horizontal do footer Modal sm.",
+      "escopo": [
+        "padding-left",
+        "padding-right"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Footer. Binda paddingLeft/paddingRight da variante Size=Small no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.lg porque o respiro horizontal segue a escala de spacing, mas é contrato público do footer Modal.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.footer.padding-x.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xl",
+      "sentido": "Padding horizontal do footer Modal md.",
+      "escopo": [
+        "padding-left",
+        "padding-right"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Footer. Binda paddingLeft/paddingRight da variante Size=Medium no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.xl porque o respiro horizontal segue a escala de spacing, mas é contrato público do footer Modal.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.footer.padding-x.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xl",
+      "sentido": "Padding horizontal do footer Modal lg.",
+      "escopo": [
+        "padding-left",
+        "padding-right"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Footer. Binda paddingLeft/paddingRight da variante Size=Large no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.xl porque o respiro horizontal segue a escala de spacing, mas é contrato público do footer Modal.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.footer.padding-top.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.sm",
+      "sentido": "Padding top do footer Modal sm.",
+      "escopo": [
+        "padding-top"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Footer. Binda paddingTop da variante Size=Small no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.sm porque a separação entre body e footer segue a escala de spacing, mas é contrato público do Modal.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.footer.padding-top.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.md",
+      "sentido": "Padding top do footer Modal md.",
+      "escopo": [
+        "padding-top"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Footer. Binda paddingTop da variante Size=Medium no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.md porque a separação entre body e footer segue a escala de spacing, mas é contrato público do Modal.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.footer.padding-top.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.md",
+      "sentido": "Padding top do footer Modal lg.",
+      "escopo": [
+        "padding-top"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Footer. Binda paddingTop da variante Size=Large no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.md porque a separação entre body e footer segue a escala de spacing, mas é contrato público do Modal.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.footer.padding-bottom.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.lg",
+      "sentido": "Padding bottom do footer Modal sm.",
+      "escopo": [
+        "padding-bottom"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Footer. Binda paddingBottom da variante Size=Small no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.lg porque o respiro inferior segue a escala de spacing, mas é contrato público do footer Modal.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.footer.padding-bottom.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xl",
+      "sentido": "Padding bottom do footer Modal md.",
+      "escopo": [
+        "padding-bottom"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Footer. Binda paddingBottom da variante Size=Medium no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.xl porque o respiro inferior segue a escala de spacing, mas é contrato público do footer Modal.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.footer.padding-bottom.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xl",
+      "sentido": "Padding bottom do footer Modal lg.",
+      "escopo": [
+        "padding-bottom"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Footer. Binda paddingBottom da variante Size=Large no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.xl porque o respiro inferior segue a escala de spacing, mas é contrato público do footer Modal.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.footer.gap.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.sm",
+      "sentido": "Gap horizontal do footer Modal.",
+      "escopo": [
+        "gap"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Footer. Binda itemSpacing entre ações nas 3 variantes Size no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.sm porque 8px é escala reutilizável, mas no Modal documenta a separação pública entre ações.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.close.size.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.md",
+      "sentido": "Tamanho do close Modal.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Close. Binda width/height do Close nas 3 variantes Size no Figma e substitui tamanho implícito no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.md porque 24px é escala reutilizável, mas no Modal documenta o hit area público do close.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.close.padding.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xs",
+      "sentido": "Padding do close Modal.",
+      "escopo": [
+        "padding"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Close. Existe como variável Component no Figma e substitui consumo direto de Semantic no CSS para centralizar o glyph de 16px no hit area de 24px.",
+      "decisao": "Alias 1:1 para semantic.space.xs porque 4px é escala reutilizável, mas no Modal documenta o padding público do close.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.close.glyph-size.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.xs",
+      "sentido": "Tamanho do glyph Close Modal.",
+      "escopo": [
+        "font-size"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Close. Binda fontSize do glyph Close nas 3 variantes Size no Figma e substitui estilo inline na documentação.",
+      "decisao": "Alias 1:1 para semantic.size.xs porque 16px é escala reutilizável, mas no Modal documenta o glyph público do close.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.z.modal": {
+      "layer": "semantic",
+      "type": "number",
+      "references": "foundation.z.40",
+      "sentido": "Stack layer para modais e overlays bloqueantes.",
+      "escopo": [
+        "z-index"
+      ],
+      "contexto": "Semantic token CSS-only para overlays modais. Use quando a camada precisa bloquear interação com a página sem ficar acima de toasts globais.",
+      "decisao": "Alias para foundation.z.40 para manter modais abaixo de notificações/toasts em foundation.z.50 e acima de conteúdo de página.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/tokens/generated/component.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "component.modal.overlay.z-index.default"
+        ],
         "figma": []
       }
     }

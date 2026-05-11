@@ -42,9 +42,9 @@
 | Coleção | Tokens | Status |
 |---------|--------|--------|
 | Foundation | 266 | 🟢 |
-| Semantic (light) | 173 | 🟢 |
-| Semantic (dark) | 173 | 🟢 |
-| Component | 109 | 🟢 |
+| Semantic (light) | 174 | 🟢 |
+| Semantic (dark) | 174 | 🟢 |
+| Component | 162 | 🟢 |
 
 ## Pipeline
 

@@ -10,16 +10,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 50;
-  padding: var(--ds-space-lg);
+  z-index: var(--ds-modal-overlay-z-index-default);
+  padding: var(--ds-modal-overlay-padding-default);
 }
 
 /* Dialog */
 .ds-modal {
   background-color: var(--ds-surface-elevated);
-  border-radius: var(--ds-radius-lg);
-  /* Elevation: apply .ds-elevation-4 utility alongside .ds-modal for box-shadow.
-     Semantic elevation tokens do not exist yet post-ADR-014. */
+  border-radius: var(--ds-modal-root-radius-default);
+  box-shadow: var(--ds-modal-root-shadow-default);
   width: 100%;
   max-height: calc(100vh - var(--ds-space-section-sm));
   display: flex;
@@ -28,49 +27,69 @@
 }
 
 /* Sizes */
-.ds-modal--sm { max-width: var(--ds-size-layout-sm); }
-.ds-modal--md { max-width: var(--ds-size-layout-md); }
-.ds-modal--lg { max-width: var(--ds-size-layout-lg); }
+.ds-modal--sm { max-width: var(--ds-modal-root-max-width-sm); }
+.ds-modal--md { max-width: var(--ds-modal-root-max-width-md); }
+.ds-modal--lg { max-width: var(--ds-modal-root-max-width-lg); }
 
 /* Header */
 .ds-modal__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--ds-space-lg) var(--ds-space-lg) var(--ds-space-sm);
-  gap: var(--ds-space-sm);
+  padding: var(--ds-modal-header-padding-top-sm) var(--ds-modal-header-padding-x-sm) var(--ds-modal-header-padding-bottom-sm);
+  gap: var(--ds-modal-header-gap-default);
+}
+
+.ds-modal--md .ds-modal__header {
+  padding: var(--ds-modal-header-padding-top-md) var(--ds-modal-header-padding-x-md) var(--ds-modal-header-padding-bottom-md);
+}
+
+.ds-modal--lg .ds-modal__header {
+  padding: var(--ds-modal-header-padding-top-lg) var(--ds-modal-header-padding-x-lg) var(--ds-modal-header-padding-bottom-lg);
 }
 
 .ds-modal__title {
   margin: 0;
-  font-size: var(--ds-body-font-size-xl);
-  font-weight: var(--ds-body-font-weight-semibold);
+  font-size: var(--ds-modal-title-font-size-sm);
+  font-weight: var(--ds-modal-title-font-weight-default);
   color: var(--ds-content-strong);
-  line-height: var(--ds-body-line-height-xl);
+  line-height: var(--ds-modal-title-line-height-sm);
+  letter-spacing: var(--ds-modal-title-letter-spacing-sm);
 }
 
 .ds-modal--md .ds-modal__title {
-  font-size: var(--ds-body-font-size-2xl);
-  line-height: var(--ds-body-line-height-2xl);
+  font-size: var(--ds-modal-title-font-size-md);
+  line-height: var(--ds-modal-title-line-height-md);
+  letter-spacing: var(--ds-modal-title-letter-spacing-md);
 }
 
 .ds-modal--lg .ds-modal__title {
-  font-size: var(--ds-body-font-size-3xl);
-  line-height: var(--ds-body-line-height-3xl);
-  /* Figma: title em modal lg usa letter-spacing tight pra otimizar legibilidade em font-size grande */
-  letter-spacing: var(--ds-body-letter-spacing-tight);
+  font-size: var(--ds-modal-title-font-size-lg);
+  line-height: var(--ds-modal-title-line-height-lg);
+  letter-spacing: var(--ds-modal-title-letter-spacing-lg);
 }
 
 .ds-modal__close {
   flex-shrink: 0;
+  width: var(--ds-modal-close-size-default);
+  height: var(--ds-modal-close-size-default);
   background: none;
   border: none;
-  padding: var(--ds-space-xs);
+  padding: var(--ds-modal-close-padding-default);
   cursor: pointer;
   color: var(--ds-content-default);
   border-radius: var(--ds-radius-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   transition: color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
               background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
+}
+
+.ds-modal__close .material-symbols-outlined,
+.ds-modal__close .material-icons {
+  font-size: var(--ds-modal-close-glyph-size-default);
+  line-height: 1;
 }
 
 .ds-modal__close:hover {
@@ -88,31 +107,41 @@
    md → font-size md + line-height md
    lg → font-size lg + line-height xl */
 .ds-modal__body {
-  padding: 0 var(--ds-space-lg) var(--ds-space-lg);
+  padding: 0 var(--ds-modal-body-padding-x-sm) var(--ds-modal-body-padding-bottom-sm);
   overflow-y: auto;
   color: var(--ds-content-strong);
-  /* default sm */
-  font-size: var(--ds-body-font-size-sm);
-  line-height: var(--ds-body-line-height-sm);
+  font-size: var(--ds-modal-body-font-size-sm);
+  font-weight: var(--ds-modal-body-font-weight-default);
+  line-height: var(--ds-modal-body-line-height-sm);
 }
 
 .ds-modal--md .ds-modal__body {
-  font-size: var(--ds-body-font-size-md);
-  line-height: var(--ds-body-line-height-md);
+  padding: 0 var(--ds-modal-body-padding-x-md) var(--ds-modal-body-padding-bottom-md);
+  font-size: var(--ds-modal-body-font-size-md);
+  line-height: var(--ds-modal-body-line-height-md);
 }
 
 .ds-modal--lg .ds-modal__body {
-  font-size: var(--ds-body-font-size-lg);
-  line-height: var(--ds-body-line-height-xl);
+  padding: 0 var(--ds-modal-body-padding-x-lg) var(--ds-modal-body-padding-bottom-lg);
+  font-size: var(--ds-modal-body-font-size-lg);
+  line-height: var(--ds-modal-body-line-height-lg);
 }
 
 /* Footer */
 .ds-modal__footer {
   display: flex;
   justify-content: flex-end;
-  gap: var(--ds-space-sm);
-  padding: var(--ds-space-sm) var(--ds-space-lg) var(--ds-space-lg);
+  gap: var(--ds-modal-footer-gap-default);
+  padding: var(--ds-modal-footer-padding-top-sm) var(--ds-modal-footer-padding-x-sm) var(--ds-modal-footer-padding-bottom-sm);
   /* Figma: footer não tem divider/border-top. */
+}
+
+.ds-modal--md .ds-modal__footer {
+  padding: var(--ds-modal-footer-padding-top-md) var(--ds-modal-footer-padding-x-md) var(--ds-modal-footer-padding-bottom-md);
+}
+
+.ds-modal--lg .ds-modal__footer {
+  padding: var(--ds-modal-footer-padding-top-lg) var(--ds-modal-footer-padding-x-lg) var(--ds-modal-footer-padding-bottom-lg);
 }
 
 /* ---------------------------------------------------------

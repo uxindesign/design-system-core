@@ -71,7 +71,7 @@
           <div class="ds-modal ds-modal--sm" role="dialog" aria-modal="true" aria-labelledby="anatomy-modal-title" style="position:relative;width:100%;">
             <div class="ds-modal__header">
               <h3 id="anatomy-modal-title" class="ds-modal__title">Delete item</h3>
-              <button class="ds-modal__close" aria-label="Close modal" tabindex="-1"><span class="material-symbols-outlined" style="font-size:var(--ds-size-sm)">close</span></button>
+              <button class="ds-modal__close" aria-label="Close modal" tabindex="-1"><span class="material-symbols-outlined">close</span></button>
             </div>
             <div class="ds-modal__body">
               <p style="margin:0;">Are you sure? This action cannot be undone.</p>
@@ -125,8 +125,8 @@
           <div class="ds-modal-overlay" style="position:relative;background:var(--ds-background-overlay);border-radius:var(--ds-radius-lg);padding:var(--ds-space-section-sm);display:flex;align-items:center;justify-content:center;width:100%;">
             <div class="ds-modal ds-modal--sm" role="dialog" aria-modal="true" aria-labelledby="modal-sm-title" style="position:relative;width:100%;">
               <div class="ds-modal__header">
-                <h3 id="modal-sm-title" style="margin:0;">Delete item</h3>
-                <button class="ds-modal__close" aria-label="Close modal"><span class="material-symbols-outlined" style="font-size:var(--ds-size-sm)">close</span></button>
+                <h3 id="modal-sm-title" class="ds-modal__title">Delete item</h3>
+                <button class="ds-modal__close" aria-label="Close modal"><span class="material-symbols-outlined">close</span></button>
               </div>
               <div class="ds-modal__body">
                 <p style="margin:0;">Are you sure you want to delete this item? This action cannot be undone.</p>
@@ -146,7 +146,7 @@
   &lt;div class="ds-modal ds-modal--sm" role="dialog"
        aria-modal="true" aria-labelledby="modal-title"&gt;
     &lt;div class="ds-modal__header"&gt;
-      &lt;h3 id="modal-title"&gt;Delete item&lt;/h3&gt;
+      &lt;h3 id="modal-title" class="ds-modal__title"&gt;Delete item&lt;/h3&gt;
       &lt;button class="ds-button ds-button--ghost ds-button--sm ds-button--icon-only"
               aria-label="Close modal"&gt;&amp;times;&lt;/button&gt;
     &lt;/div&gt;
@@ -176,8 +176,8 @@
           <div class="ds-modal-overlay" style="position:relative;background:var(--ds-background-overlay);border-radius:var(--ds-radius-lg);padding:var(--ds-space-section-sm);display:flex;align-items:center;justify-content:center;width:100%;">
             <div class="ds-modal ds-modal--md" role="dialog" aria-modal="true" aria-labelledby="modal-md-title" style="position:relative;width:100%;">
               <div class="ds-modal__header">
-                <h3 id="modal-md-title" style="margin:0;">Edit profile</h3>
-                <button class="ds-modal__close" aria-label="Close modal"><span class="material-symbols-outlined" style="font-size:var(--ds-size-sm)">close</span></button>
+                <h3 id="modal-md-title" class="ds-modal__title">Edit profile</h3>
+                <button class="ds-modal__close" aria-label="Close modal"><span class="material-symbols-outlined">close</span></button>
               </div>
               <div class="ds-modal__body">
                 <p style="margin:0 0 var(--ds-space-md);">Update your personal information below. Changes will be saved immediately.</p>
@@ -198,7 +198,7 @@
   &lt;div class="ds-modal ds-modal--md" role="dialog"
        aria-modal="true" aria-labelledby="modal-title"&gt;
     &lt;div class="ds-modal__header"&gt;
-      &lt;h3 id="modal-title"&gt;Edit profile&lt;/h3&gt;
+      &lt;h3 id="modal-title" class="ds-modal__title"&gt;Edit profile&lt;/h3&gt;
       &lt;button aria-label="Close modal"&gt;&amp;times;&lt;/button&gt;
     &lt;/div&gt;
     &lt;div class="ds-modal__body"&gt;
@@ -228,8 +228,8 @@
           <div class="ds-modal-overlay" style="position:relative;background:var(--ds-background-overlay);border-radius:var(--ds-radius-lg);padding:var(--ds-space-section-sm);display:flex;align-items:center;justify-content:center;width:100%;">
             <div class="ds-modal ds-modal--lg" role="dialog" aria-modal="true" aria-labelledby="modal-lg-title" style="position:relative;width:100%;">
               <div class="ds-modal__header">
-                <h3 id="modal-lg-title" style="margin:0;">Terms of service</h3>
-                <button class="ds-modal__close" aria-label="Close modal"><span class="material-symbols-outlined" style="font-size:var(--ds-size-sm)">close</span></button>
+                <h3 id="modal-lg-title" class="ds-modal__title">Terms of service</h3>
+                <button class="ds-modal__close" aria-label="Close modal"><span class="material-symbols-outlined">close</span></button>
               </div>
               <div class="ds-modal__body">
                 <p style="margin:0 0 var(--ds-space-sm);">Please read and accept the following terms before continuing. By using our service you agree to comply with all policies outlined in this document.</p>
@@ -250,7 +250,7 @@
   &lt;div class="ds-modal ds-modal--lg" role="dialog"
        aria-modal="true" aria-labelledby="modal-title"&gt;
     &lt;div class="ds-modal__header"&gt;
-      &lt;h3 id="modal-title"&gt;Terms of service&lt;/h3&gt;
+      &lt;h3 id="modal-title" class="ds-modal__title"&gt;Terms of service&lt;/h3&gt;
       &lt;button aria-label="Close modal"&gt;&amp;times;&lt;/button&gt;
     &lt;/div&gt;
     &lt;div class="ds-modal__body"&gt;
@@ -354,15 +354,20 @@
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Mapeamento de tokens</span><span data-lang="en">Token mapping</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token (semantic)</th><th><span data-lang="pt">Variável CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token</th><th><span data-lang="pt">Variável CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
       <tbody>
         <tr><td>overlay background</td><td><code>semantic.background.overlay</code></td><td><code>--ds-background-overlay</code></td></tr>
         <tr><td>surface</td><td><code>semantic.surface.elevated</code></td><td><code>--ds-surface-elevated</code></td></tr>
-        <tr><td>border-radius</td><td><code>semantic.radius.lg</code></td><td><code>--ds-radius-lg</code></td></tr>
-        <tr><td>padding</td><td><code>semantic.space.lg</code></td><td><code>--ds-space-lg</code></td></tr>
-        <tr><td>max-width (sm)</td><td><code>semantic.size.layout.sm</code></td><td><code>--ds-size-layout-sm</code></td></tr>
-        <tr><td>max-width (md)</td><td><code>semantic.size.layout.md</code></td><td><code>--ds-size-layout-md</code></td></tr>
-        <tr><td>max-width (lg)</td><td><code>semantic.size.layout.lg</code></td><td><code>--ds-size-layout-lg</code></td></tr>
+        <tr><td>overlay padding</td><td><code>component.modal.overlay.padding.default</code></td><td><code>--ds-modal-overlay-padding-default</code></td></tr>
+        <tr><td>overlay z-index</td><td><code>component.modal.overlay.z-index.default</code></td><td><code>--ds-modal-overlay-z-index-default</code></td></tr>
+        <tr><td>border-radius</td><td><code>component.modal.root.radius.default</code></td><td><code>--ds-modal-root-radius-default</code></td></tr>
+        <tr><td>shadow</td><td><code>component.modal.root.shadow.default</code></td><td><code>--ds-modal-root-shadow-default</code></td></tr>
+        <tr><td>max-width</td><td><code>component.modal.root.max-width.{sm,md,lg}</code></td><td><code>--ds-modal-root-max-width-*</code></td></tr>
+        <tr><td>header spacing</td><td><code>component.modal.header.{padding-*,gap}.*</code></td><td><code>--ds-modal-header-*-*</code></td></tr>
+        <tr><td>body spacing/typography</td><td><code>component.modal.body.{padding-*,font-size,line-height,font-weight}.*</code></td><td><code>--ds-modal-body-*-*</code></td></tr>
+        <tr><td>title typography</td><td><code>component.modal.title.{font-size,line-height,font-weight,letter-spacing}.*</code></td><td><code>--ds-modal-title-*-*</code></td></tr>
+        <tr><td>footer spacing</td><td><code>component.modal.footer.{padding-*,gap}.*</code></td><td><code>--ds-modal-footer-*-*</code></td></tr>
+        <tr><td>close size</td><td><code>component.modal.close.{size,padding,glyph-size}.default</code></td><td><code>--ds-modal-close-*-default</code></td></tr>
       </tbody>
     </table>
   </div>
@@ -377,9 +382,9 @@
       <tbody>
         <tr><td><code>ds-modal-overlay</code></td><td><span data-lang="pt">Overlay backdrop em tela cheia</span><span data-lang="en">Full-screen backdrop overlay</span></td></tr>
         <tr><td><code>ds-modal</code></td><td><span data-lang="pt">Container do diálogo modal</span><span data-lang="en">Modal dialog container</span></td></tr>
-        <tr><td><code>ds-modal--sm</code></td><td><span data-lang="pt">Tamanho pequeno (<code>--ds-size-layout-sm</code>)</span><span data-lang="en">Small size (<code>--ds-size-layout-sm</code>)</span></td></tr>
-        <tr><td><code>ds-modal--md</code></td><td><span data-lang="pt">Tamanho médio (<code>--ds-size-layout-md</code>)</span><span data-lang="en">Medium size (<code>--ds-size-layout-md</code>)</span></td></tr>
-        <tr><td><code>ds-modal--lg</code></td><td><span data-lang="pt">Tamanho grande (<code>--ds-size-layout-lg</code>)</span><span data-lang="en">Large size (<code>--ds-size-layout-lg</code>)</span></td></tr>
+        <tr><td><code>ds-modal--sm</code></td><td><span data-lang="pt">Tamanho pequeno (<code>--ds-modal-root-max-width-sm</code>)</span><span data-lang="en">Small size (<code>--ds-modal-root-max-width-sm</code>)</span></td></tr>
+        <tr><td><code>ds-modal--md</code></td><td><span data-lang="pt">Tamanho médio (<code>--ds-modal-root-max-width-md</code>)</span><span data-lang="en">Medium size (<code>--ds-modal-root-max-width-md</code>)</span></td></tr>
+        <tr><td><code>ds-modal--lg</code></td><td><span data-lang="pt">Tamanho grande (<code>--ds-modal-root-max-width-lg</code>)</span><span data-lang="en">Large size (<code>--ds-modal-root-max-width-lg</code>)</span></td></tr>
         <tr><td><code>ds-modal__header</code></td><td><span data-lang="pt">Área de header com título e button de fechar</span><span data-lang="en">Header area with title and close button</span></td></tr>
         <tr><td><code>ds-modal__title</code></td><td><span data-lang="pt">Texto do título do modal</span><span data-lang="en">Modal title text</span></td></tr>
         <tr><td><code>ds-modal__close</code></td><td><span data-lang="pt">Button de fechar no header</span><span data-lang="en">Close button in the header</span></td></tr>

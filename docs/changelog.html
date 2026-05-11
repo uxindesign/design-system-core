@@ -72,6 +72,8 @@
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
 <h3>Corrigido</h3>
 <ul>
+<li><p><strong>Modal Figma/CSS aplicado aos Component tokens anatômicos.</strong> Criado <code>component.modal</code> para overlay, root, header, body, title, footer e close; as 3 variantes vivas do Figma (<code>Small</code>, <code>Medium</code>, <code>Large</code>) agora usam Component tokens nesses contratos. CSS passa a consumir <code>--ds-modal-*</code>, remove <code>z-index</code> hardcoded via <code>semantic.z.modal</code> e aplica <code>component.modal.root.shadow.default</code> em vez de depender da utility <code>.ds-elevation-4</code>.</p>
+</li>
 <li><p><strong>Card Figma/CSS aplicado aos Component tokens anatômicos.</strong> Criado <code>component.card</code> para radius/border-width do root, padding/gap do header, padding do body e tipografia de title/subtitle/body; as 3 variantes vivas do Figma agora usam Component tokens nesses contratos. CSS passa a consumir <code>--ds-card-*</code>; cores e shadow permanecem Semantic.</p>
 </li>
 <li><p><strong>Alert Figma/CSS aplicado aos Component tokens anatómicos.</strong> Criado <code>component.alert</code> para root padding/gap/radius/border-width, icon/close size e glyph-size, content gap e tipografia de title/description; os 8 variants vivos do Figma agora usam Component tokens nesses contratos. CSS passa a consumir <code>--ds-alert-*</code>; documentação remove mappings antigos/stale de spacing e typography Foundation.</p>

@@ -1,10 +1,10 @@
 {
   "version": "1.0.0-beta.4",
   "totals": {
-    "jsonTokens": 721,
-    "sharedTokens": 375,
-    "lightTokens": 173,
-    "darkTokens": 173,
+    "jsonTokens": 776,
+    "sharedTokens": 428,
+    "lightTokens": 174,
+    "darkTokens": 174,
     "errors": 0,
     "warnings": 0
   },
@@ -20,14 +20,14 @@
       "snapshotFreshness": "fresh",
       "snapshotMaxAgeHours": 24,
       "summary": {
-        "figmaVariableCount": 502,
+        "figmaVariableCount": 553,
         "figmaCollectionCount": 3,
         "VALUE_DRIFT": 0,
         "NEEDS_SYNC": 0,
         "DRIFT_FROM_SOURCE": 0,
         "ALIAS_BROKEN": 0,
         "CSS_ONLY": 7,
-        "BY_DESIGN": 118
+        "BY_DESIGN": 122
       },
       "divergences": [],
       "diffs": {
@@ -614,6 +614,12 @@
           },
           {
             "file": "semantic/light.json",
+            "token": "semantic.z.modal",
+            "side": "json-only",
+            "json": "{foundation.z.40}"
+          },
+          {
+            "file": "semantic/light.json",
             "token": "semantic.z.tooltip",
             "side": "json-only",
             "json": "{foundation.z.40}"
@@ -817,9 +823,27 @@
           },
           {
             "file": "semantic/dark.json",
+            "token": "semantic.z.modal",
+            "side": "json-only",
+            "json": "{foundation.z.40}"
+          },
+          {
+            "file": "semantic/dark.json",
             "token": "semantic.z.tooltip",
             "side": "json-only",
             "json": "{foundation.z.40}"
+          },
+          {
+            "file": "component/modal.json",
+            "token": "component.modal.overlay.z-index.default",
+            "side": "json-only-downstream",
+            "json": "{semantic.z.modal}"
+          },
+          {
+            "file": "component/modal.json",
+            "token": "component.modal.root.shadow.default",
+            "side": "json-only-downstream",
+            "json": "{semantic.shadow.modal}"
           }
         ]
       }

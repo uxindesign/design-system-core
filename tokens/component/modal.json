@@ -1,0 +1,335 @@
+{
+  "component": {
+    "modal": {
+      "overlay": {
+        "padding": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.space.xl}",
+            "$description": "Padding do overlay Modal."
+          }
+        },
+        "z-index": {
+          "default": {
+            "$type": "number",
+            "$value": "{semantic.z.modal}",
+            "$description": "Z-index do overlay Modal."
+          }
+        }
+      },
+      "root": {
+        "max-width": {
+          "sm": {
+            "$type": "dimension",
+            "$value": "{semantic.size.layout.sm}",
+            "$description": "Max-width do root Modal sm."
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "{semantic.size.layout.md}",
+            "$description": "Max-width do root Modal md."
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{semantic.size.layout.lg}",
+            "$description": "Max-width do root Modal lg."
+          }
+        },
+        "radius": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.radius.lg}",
+            "$description": "Radius do root Modal."
+          }
+        },
+        "shadow": {
+          "default": {
+            "$type": "shadow",
+            "$value": "{semantic.shadow.modal}",
+            "$description": "Shadow do root Modal."
+          }
+        }
+      },
+      "header": {
+        "padding-x": {
+          "sm": {
+            "$type": "dimension",
+            "$value": "{semantic.space.lg}",
+            "$description": "Padding horizontal do header Modal sm."
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "{semantic.space.xl}",
+            "$description": "Padding horizontal do header Modal md."
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{semantic.space.xl}",
+            "$description": "Padding horizontal do header Modal lg."
+          }
+        },
+        "padding-top": {
+          "sm": {
+            "$type": "dimension",
+            "$value": "{semantic.space.lg}",
+            "$description": "Padding top do header Modal sm."
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "{semantic.space.xl}",
+            "$description": "Padding top do header Modal md."
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{semantic.space.xl}",
+            "$description": "Padding top do header Modal lg."
+          }
+        },
+        "padding-bottom": {
+          "sm": {
+            "$type": "dimension",
+            "$value": "{semantic.space.sm}",
+            "$description": "Padding bottom do header Modal sm."
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "{semantic.space.md}",
+            "$description": "Padding bottom do header Modal md."
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{semantic.space.md}",
+            "$description": "Padding bottom do header Modal lg."
+          }
+        },
+        "gap": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.space.sm}",
+            "$description": "Gap horizontal do header Modal."
+          }
+        }
+      },
+      "body": {
+        "padding-x": {
+          "sm": {
+            "$type": "dimension",
+            "$value": "{semantic.space.lg}",
+            "$description": "Padding horizontal do body Modal sm."
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "{semantic.space.xl}",
+            "$description": "Padding horizontal do body Modal md."
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{semantic.space.xl}",
+            "$description": "Padding horizontal do body Modal lg."
+          }
+        },
+        "padding-bottom": {
+          "sm": {
+            "$type": "dimension",
+            "$value": "{semantic.space.lg}",
+            "$description": "Padding bottom do body Modal sm."
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "{semantic.space.xl}",
+            "$description": "Padding bottom do body Modal md."
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{semantic.space.xl}",
+            "$description": "Padding bottom do body Modal lg."
+          }
+        },
+        "font-size": {
+          "sm": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.font-size.sm}",
+            "$description": "Font-size do body Modal sm."
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.font-size.md}",
+            "$description": "Font-size do body Modal md."
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.font-size.lg}",
+            "$description": "Font-size do body Modal lg."
+          }
+        },
+        "line-height": {
+          "sm": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.line-height.sm}",
+            "$description": "Line-height do body Modal sm."
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.line-height.md}",
+            "$description": "Line-height do body Modal md."
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.line-height.xl}",
+            "$description": "Line-height do body Modal lg."
+          }
+        },
+        "font-weight": {
+          "default": {
+            "$type": "number",
+            "$value": "{semantic.typography.body.font-weight.regular}",
+            "$description": "Font-weight do body Modal."
+          }
+        }
+      },
+      "title": {
+        "font-size": {
+          "sm": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.font-size.xl}",
+            "$description": "Font-size do title Modal sm."
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.font-size.2xl}",
+            "$description": "Font-size do title Modal md."
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.font-size.3xl}",
+            "$description": "Font-size do title Modal lg."
+          }
+        },
+        "line-height": {
+          "sm": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.line-height.xl}",
+            "$description": "Line-height do title Modal sm."
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.line-height.2xl}",
+            "$description": "Line-height do title Modal md."
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.line-height.3xl}",
+            "$description": "Line-height do title Modal lg."
+          }
+        },
+        "font-weight": {
+          "default": {
+            "$type": "number",
+            "$value": "{semantic.typography.body.font-weight.semibold}",
+            "$description": "Font-weight do title Modal."
+          }
+        },
+        "letter-spacing": {
+          "sm": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.letter-spacing.normal}",
+            "$description": "Letter-spacing do title Modal sm."
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.letter-spacing.normal}",
+            "$description": "Letter-spacing do title Modal md."
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.letter-spacing.tight}",
+            "$description": "Letter-spacing do title Modal lg."
+          }
+        }
+      },
+      "footer": {
+        "padding-x": {
+          "sm": {
+            "$type": "dimension",
+            "$value": "{semantic.space.lg}",
+            "$description": "Padding horizontal do footer Modal sm."
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "{semantic.space.xl}",
+            "$description": "Padding horizontal do footer Modal md."
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{semantic.space.xl}",
+            "$description": "Padding horizontal do footer Modal lg."
+          }
+        },
+        "padding-top": {
+          "sm": {
+            "$type": "dimension",
+            "$value": "{semantic.space.sm}",
+            "$description": "Padding top do footer Modal sm."
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "{semantic.space.md}",
+            "$description": "Padding top do footer Modal md."
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{semantic.space.md}",
+            "$description": "Padding top do footer Modal lg."
+          }
+        },
+        "padding-bottom": {
+          "sm": {
+            "$type": "dimension",
+            "$value": "{semantic.space.lg}",
+            "$description": "Padding bottom do footer Modal sm."
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "{semantic.space.xl}",
+            "$description": "Padding bottom do footer Modal md."
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{semantic.space.xl}",
+            "$description": "Padding bottom do footer Modal lg."
+          }
+        },
+        "gap": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.space.sm}",
+            "$description": "Gap horizontal do footer Modal."
+          }
+        }
+      },
+      "close": {
+        "size": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.size.md}",
+            "$description": "Tamanho do close Modal."
+          }
+        },
+        "padding": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.space.xs}",
+            "$description": "Padding do close Modal."
+          }
+        },
+        "glyph-size": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.size.xs}",
+            "$description": "Tamanho do glyph Close Modal."
+          }
+        }
+      }
+    }
+  }
+}

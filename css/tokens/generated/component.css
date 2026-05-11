@@ -79,6 +79,59 @@
   --ds-input-root-height-sm: var(--ds-size-lg); /** Altura do root visual Input Text sm. */
   --ds-input-root-height-md: var(--ds-size-xl); /** Altura do root visual Input Text md. */
   --ds-input-root-height-lg: var(--ds-size-2xl); /** Altura do root visual Input Text lg. */
+  --ds-modal-overlay-padding-default: var(--ds-space-xl); /** Padding do overlay Modal. */
+  --ds-modal-overlay-z-index-default: var(--ds-z-modal); /** Z-index do overlay Modal. */
+  --ds-modal-root-max-width-sm: var(--ds-size-layout-sm); /** Max-width do root Modal sm. */
+  --ds-modal-root-max-width-md: var(--ds-size-layout-md); /** Max-width do root Modal md. */
+  --ds-modal-root-max-width-lg: var(--ds-size-layout-lg); /** Max-width do root Modal lg. */
+  --ds-modal-root-radius-default: var(--ds-radius-lg); /** Radius do root Modal. */
+  --ds-modal-root-shadow-default: var(--ds-shadow-modal); /** Shadow do root Modal. */
+  --ds-modal-header-padding-x-sm: var(--ds-space-lg); /** Padding horizontal do header Modal sm. */
+  --ds-modal-header-padding-x-md: var(--ds-space-xl); /** Padding horizontal do header Modal md. */
+  --ds-modal-header-padding-x-lg: var(--ds-space-xl); /** Padding horizontal do header Modal lg. */
+  --ds-modal-header-padding-top-sm: var(--ds-space-lg); /** Padding top do header Modal sm. */
+  --ds-modal-header-padding-top-md: var(--ds-space-xl); /** Padding top do header Modal md. */
+  --ds-modal-header-padding-top-lg: var(--ds-space-xl); /** Padding top do header Modal lg. */
+  --ds-modal-header-padding-bottom-sm: var(--ds-space-sm); /** Padding bottom do header Modal sm. */
+  --ds-modal-header-padding-bottom-md: var(--ds-space-md); /** Padding bottom do header Modal md. */
+  --ds-modal-header-padding-bottom-lg: var(--ds-space-md); /** Padding bottom do header Modal lg. */
+  --ds-modal-header-gap-default: var(--ds-space-sm); /** Gap horizontal do header Modal. */
+  --ds-modal-body-padding-x-sm: var(--ds-space-lg); /** Padding horizontal do body Modal sm. */
+  --ds-modal-body-padding-x-md: var(--ds-space-xl); /** Padding horizontal do body Modal md. */
+  --ds-modal-body-padding-x-lg: var(--ds-space-xl); /** Padding horizontal do body Modal lg. */
+  --ds-modal-body-padding-bottom-sm: var(--ds-space-lg); /** Padding bottom do body Modal sm. */
+  --ds-modal-body-padding-bottom-md: var(--ds-space-xl); /** Padding bottom do body Modal md. */
+  --ds-modal-body-padding-bottom-lg: var(--ds-space-xl); /** Padding bottom do body Modal lg. */
+  --ds-modal-body-font-size-sm: var(--ds-body-font-size-sm); /** Font-size do body Modal sm. */
+  --ds-modal-body-font-size-md: var(--ds-body-font-size-md); /** Font-size do body Modal md. */
+  --ds-modal-body-font-size-lg: var(--ds-body-font-size-lg); /** Font-size do body Modal lg. */
+  --ds-modal-body-line-height-sm: var(--ds-body-line-height-sm); /** Line-height do body Modal sm. */
+  --ds-modal-body-line-height-md: var(--ds-body-line-height-md); /** Line-height do body Modal md. */
+  --ds-modal-body-line-height-lg: var(--ds-body-line-height-xl); /** Line-height do body Modal lg. */
+  --ds-modal-body-font-weight-default: var(--ds-body-font-weight-regular); /** Font-weight do body Modal. */
+  --ds-modal-title-font-size-sm: var(--ds-body-font-size-xl); /** Font-size do title Modal sm. */
+  --ds-modal-title-font-size-md: var(--ds-body-font-size-2xl); /** Font-size do title Modal md. */
+  --ds-modal-title-font-size-lg: var(--ds-body-font-size-3xl); /** Font-size do title Modal lg. */
+  --ds-modal-title-line-height-sm: var(--ds-body-line-height-xl); /** Line-height do title Modal sm. */
+  --ds-modal-title-line-height-md: var(--ds-body-line-height-2xl); /** Line-height do title Modal md. */
+  --ds-modal-title-line-height-lg: var(--ds-body-line-height-3xl); /** Line-height do title Modal lg. */
+  --ds-modal-title-font-weight-default: var(--ds-body-font-weight-semibold); /** Font-weight do title Modal. */
+  --ds-modal-title-letter-spacing-sm: var(--ds-body-letter-spacing-normal); /** Letter-spacing do title Modal sm. */
+  --ds-modal-title-letter-spacing-md: var(--ds-body-letter-spacing-normal); /** Letter-spacing do title Modal md. */
+  --ds-modal-title-letter-spacing-lg: var(--ds-body-letter-spacing-tight); /** Letter-spacing do title Modal lg. */
+  --ds-modal-footer-padding-x-sm: var(--ds-space-lg); /** Padding horizontal do footer Modal sm. */
+  --ds-modal-footer-padding-x-md: var(--ds-space-xl); /** Padding horizontal do footer Modal md. */
+  --ds-modal-footer-padding-x-lg: var(--ds-space-xl); /** Padding horizontal do footer Modal lg. */
+  --ds-modal-footer-padding-top-sm: var(--ds-space-sm); /** Padding top do footer Modal sm. */
+  --ds-modal-footer-padding-top-md: var(--ds-space-md); /** Padding top do footer Modal md. */
+  --ds-modal-footer-padding-top-lg: var(--ds-space-md); /** Padding top do footer Modal lg. */
+  --ds-modal-footer-padding-bottom-sm: var(--ds-space-lg); /** Padding bottom do footer Modal sm. */
+  --ds-modal-footer-padding-bottom-md: var(--ds-space-xl); /** Padding bottom do footer Modal md. */
+  --ds-modal-footer-padding-bottom-lg: var(--ds-space-xl); /** Padding bottom do footer Modal lg. */
+  --ds-modal-footer-gap-default: var(--ds-space-sm); /** Gap horizontal do footer Modal. */
+  --ds-modal-close-size-default: var(--ds-size-md); /** Tamanho do close Modal. */
+  --ds-modal-close-padding-default: var(--ds-space-xs); /** Padding do close Modal. */
+  --ds-modal-close-glyph-size-default: var(--ds-size-xs); /** Tamanho do glyph Close Modal. */
   --ds-radio-target-height-sm: var(--ds-size-lg); /** Altura minima da area interativa Radio sm. */
   --ds-radio-target-height-md: var(--ds-size-xl); /** Altura minima da area interativa Radio md. */
   --ds-radio-target-height-lg: var(--ds-size-2xl); /** Altura minima da area interativa Radio lg. */
