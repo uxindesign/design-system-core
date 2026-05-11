@@ -46,6 +46,11 @@
   --ds-select-root-height-sm: var(--ds-size-lg); /** Altura do root visual Select sm. */
   --ds-select-root-height-md: var(--ds-size-xl); /** Altura do root visual Select md. */
   --ds-select-root-height-lg: var(--ds-size-2xl); /** Altura do root visual Select lg. */
+  --ds-spinner-root-size-sm: var(--ds-size-xs); /** Tamanho do root Spinner sm. */
+  --ds-spinner-root-size-md: var(--ds-size-md); /** Tamanho do root Spinner md. */
+  --ds-spinner-root-size-lg: var(--ds-size-lg); /** Tamanho do root Spinner lg. */
+  --ds-spinner-root-radius-default: var(--ds-radius-full); /** Radius circular do root Spinner. */
+  --ds-spinner-ring-stroke-width-default: var(--ds-border-width-strong); /** Stroke width do ring Spinner. */
   --ds-toggle-target-height-sm: var(--ds-size-lg); /** Altura minima da area interativa Toggle sm. */
   --ds-toggle-target-height-md: var(--ds-size-xl); /** Altura minima da area interativa Toggle md. */
   --ds-toggle-target-height-lg: var(--ds-size-2xl); /** Altura minima da area interativa Toggle lg. */

@@ -233,15 +233,17 @@
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Mapeamento de tokens</span><span data-lang="en">Token mapping</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token (semantic)</th><th><span data-lang="pt">Variável CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token</th><th><span data-lang="pt">Variável CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
       <tbody>
+        <tr><td>root size (sm/md/lg)</td><td><code>component.spinner.root.size.sm/md/lg</code></td><td><code>--ds-spinner-root-size-*</code> (16/24/32px)</td></tr>
+        <tr><td>root radius</td><td><code>component.spinner.root.radius.default</code></td><td><code>--ds-spinner-root-radius-default</code></td></tr>
+        <tr><td><span data-lang="pt">espessura</span><span data-lang="en">stroke width</span></td><td><code>component.spinner.ring.stroke-width.default</code></td><td><code>--ds-spinner-ring-stroke-width-default</code> (2px)</td></tr>
         <tr><td><span data-lang="pt">indicador default</span><span data-lang="en">default indicator</span></td><td><code>semantic.border.brand</code></td><td><code>--ds-border-brand</code></td></tr>
         <tr><td><span data-lang="pt">trilha default</span><span data-lang="en">default track</span></td><td><code>semantic.border.subtle</code></td><td><code>--ds-border-subtle</code></td></tr>
         <tr><td><span data-lang="pt">indicador on-color</span><span data-lang="en">on-color indicator</span></td><td><code>semantic.border.inverse</code></td><td><code>--ds-border-inverse</code></td></tr>
         <tr><td><span data-lang="pt">trilha on-color</span><span data-lang="en">on-color track</span></td><td><code>semantic.overlay.medium</code></td><td><code>--ds-overlay-medium</code></td></tr>
-        <tr><td><span data-lang="pt">espessura</span><span data-lang="en">stroke width</span></td><td><code>semantic.border.width.strong</code></td><td><code>--ds-border-width-strong</code></td></tr>
-        <tr><td><span data-lang="pt">duração da animação</span><span data-lang="en">animation duration</span></td><td><code>semantic.motion.duration.slow</code></td><td><code>--ds-motion-duration-slow</code></td></tr>
-        <tr><td><span data-lang="pt">curva da animação</span><span data-lang="en">animation easing</span></td><td><code>semantic.motion.ease.default</code></td><td><code>--ds-motion-ease-default</code></td></tr>
+        <tr><td><span data-lang="pt">duração da animação</span><span data-lang="en">animation duration</span></td><td><code>semantic.motion.duration.slower</code></td><td><code>--ds-motion-duration-slower</code></td></tr>
+        <tr><td><span data-lang="pt">curva da animação</span><span data-lang="en">animation easing</span></td><td><code>semantic.motion.ease.linear</code></td><td><code>--ds-motion-ease-linear</code></td></tr>
       </tbody>
     </table>
   </div>
@@ -255,9 +257,9 @@
       <thead><tr><th><span data-lang="pt">Classe</span><span data-lang="en">Class</span></th><th><span data-lang="pt">Descrição</span><span data-lang="en">Description</span></th></tr></thead>
       <tbody>
         <tr><td><code>ds-spinner</code></td><td><span data-lang="pt">Classe base do spinner</span><span data-lang="en">Base spinner class</span></td></tr>
-        <tr><td><code>ds-spinner--sm</code></td><td><span data-lang="pt">Tamanho pequeno (<code>--ds-size-xs</code>)</span><span data-lang="en">Small size (<code>--ds-size-xs</code>)</span></td></tr>
-        <tr><td><code>ds-spinner--md</code></td><td><span data-lang="pt">Tamanho médio — também é o padrão da classe base</span><span data-lang="en">Medium size — also the default on the base class</span></td></tr>
-        <tr><td><code>ds-spinner--lg</code></td><td><span data-lang="pt">Tamanho grande</span><span data-lang="en">Large size</span></td></tr>
+        <tr><td><code>ds-spinner--sm</code></td><td><span data-lang="pt">Tamanho pequeno (16px)</span><span data-lang="en">Small size (16px)</span></td></tr>
+        <tr><td><code>ds-spinner--md</code></td><td><span data-lang="pt">Tamanho médio (24px) — também é o padrão da classe base</span><span data-lang="en">Medium size (24px) — also the default on the base class</span></td></tr>
+        <tr><td><code>ds-spinner--lg</code></td><td><span data-lang="pt">Tamanho grande (32px)</span><span data-lang="en">Large size (32px)</span></td></tr>
         <tr><td><code>ds-spinner--on-color</code></td><td><span data-lang="pt">Estilo para fundos coloridos ou invertidos</span><span data-lang="en">Style for colored or inverted backgrounds</span></td></tr>
       </tbody>
     </table>

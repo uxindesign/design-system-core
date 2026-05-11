@@ -785,15 +785,15 @@
         "ds-border-brand",
         "ds-border-inverse",
         "ds-border-subtle",
-        "ds-border-width-strong",
         "ds-motion-duration-slower",
         "ds-motion-ease-linear",
         "ds-opacity-disabled",
         "ds-overlay-medium",
-        "ds-radius-full",
-        "ds-size-lg",
-        "ds-size-md",
-        "ds-size-xs"
+        "ds-spinner-ring-stroke-width-default",
+        "ds-spinner-root-radius-default",
+        "ds-spinner-root-size-lg",
+        "ds-spinner-root-size-md",
+        "ds-spinner-root-size-sm"
       ],
       "variants": [
         "lg",

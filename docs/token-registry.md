@@ -6,8 +6,8 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Status
 
-- Total de tokens: **489**
-- Com metadados completos: **489**
+- Total de tokens: **494**
+- Com metadados completos: **494**
 - Pendentes (`TODO` em algum campo obrigatório): **0**
 - Completude: **100%**
 
@@ -362,7 +362,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.border.subtle` | color | → `foundation.color.neutral.200` | Borda neutra sutil — chips, code blocks. | 3 |
 | `semantic.border.width.default` | dimension | → `foundation.border.width.1` | Border-width default. | 13 |
 | `semantic.border.width.focus` | dimension | → `foundation.border.width.2` | Border-width focus. | 12 |
-| `semantic.border.width.strong` | dimension | → `foundation.border.width.2` | Border-width strong. | 2 |
+| `semantic.border.width.strong` | dimension | → `foundation.border.width.2` | Border-width strong. | 3 |
 
 ### semantic.content
 
@@ -605,7 +605,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Component
 
-50 tokens.
+55 tokens.
 
 ### component.avatar
 
@@ -673,6 +673,16 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.select.root.height.lg` | dimension | → `semantic.size.2xl` | Altura do root visual do Select por size. | 1 |
 | `component.select.root.height.md` | dimension | → `semantic.size.xl` | Altura do root visual do Select por size. | 1 |
 | `component.select.root.height.sm` | dimension | → `semantic.size.lg` | Altura do root visual do Select por size. | 1 |
+
+### component.spinner
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `component.spinner.ring.stroke-width.default` | dimension | → `semantic.border.width.strong` | Stroke width do ring Spinner. | 1 |
+| `component.spinner.root.radius.default` | dimension | → `semantic.radius.full` | Radius circular do root Spinner. | 1 |
+| `component.spinner.root.size.lg` | dimension | → `semantic.size.lg` | Tamanho do root e ring do Spinner por size. | 1 |
+| `component.spinner.root.size.md` | dimension | → `semantic.size.md` | Tamanho do root e ring do Spinner por size. | 1 |
+| `component.spinner.root.size.sm` | dimension | → `semantic.size.xs` | Tamanho do root e ring do Spinner por size. | 1 |
 
 ### component.textarea
 
@@ -4195,8 +4205,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Alias direto a Foundation foundation.border.width.2.
 - **Usos**:
   - CSS:
-    - `css/components/spinner.css` (1×)
     - `css/components/tabs.css` (1×)
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.spinner.ring.stroke-width.default`
 
 ### `semantic.content.default`
 
@@ -5220,10 +5231,9 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/badge.css` (1×)
     - `css/components/radio.css` (2×)
     - `css/components/skeleton.css` (1×)
-    - `css/components/spinner.css` (1×)
     - `css/components/toggle.css` (2×)
-    - `css/tokens/generated/component.css` (1×)
-  - Tokens que referenciam: `component.avatar.root.radius.default`
+    - `css/tokens/generated/component.css` (2×)
+  - Tokens que referenciam: `component.avatar.root.radius.default`, `component.spinner.root.radius.default`
 
 ### `semantic.radius.lg`
 
@@ -5460,9 +5470,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/button.css` (1×)
-    - `css/components/spinner.css` (2×)
-    - `css/tokens/generated/component.css` (8×)
-  - Tokens que referenciam: `component.avatar.root.size.sm`, `component.button.root.height.sm`, `component.checkbox.target.height.sm`, `component.input.root.height.sm`, `component.radio.target.height.sm`, `component.select.root.height.sm`, `component.toggle.target.height.sm`, `component.toggle.track.height.lg`
+    - `css/tokens/generated/component.css` (9×)
+  - Tokens que referenciam: `component.avatar.root.size.sm`, `component.button.root.height.sm`, `component.checkbox.target.height.sm`, `component.input.root.height.sm`, `component.radio.target.height.sm`, `component.select.root.height.sm`, `component.spinner.root.size.lg`, `component.toggle.target.height.sm`, `component.toggle.track.height.lg`
 
 ### `semantic.size.md`
 
@@ -5479,9 +5488,8 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/button.css` (3×)
     - `css/components/input.css` (3×)
     - `css/components/select.css` (5×)
-    - `css/components/spinner.css` (2×)
-    - `css/tokens/generated/component.css` (3×)
-  - Tokens que referenciam: `component.checkbox.box.size.lg`, `component.radio.control.size.lg`, `component.toggle.track.height.md`
+    - `css/tokens/generated/component.css` (4×)
+  - Tokens que referenciam: `component.checkbox.box.size.lg`, `component.radio.control.size.lg`, `component.spinner.root.size.md`, `component.toggle.track.height.md`
 
 ### `semantic.size.sm`
 
@@ -5532,9 +5540,8 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/input.css` (1×)
     - `css/components/select.css` (1×)
-    - `css/components/spinner.css` (2×)
-    - `css/tokens/generated/component.css` (3×)
-  - Tokens que referenciam: `component.checkbox.box.size.sm`, `component.radio.control.size.sm`, `component.toggle.track.height.sm`
+    - `css/tokens/generated/component.css` (4×)
+  - Tokens que referenciam: `component.checkbox.box.size.sm`, `component.radio.control.size.sm`, `component.spinner.root.size.sm`, `component.toggle.track.height.sm`
 
 ### `semantic.space.2xl`
 
@@ -6821,6 +6828,71 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/select.css` (1×)
+
+### `component.spinner.ring.stroke-width.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.border.width.strong`
+- **Sentido**: Stroke width do ring Spinner.
+- **Escopo**: border-width, stroke-width
+- **Contexto**: Component token do contrato anatomico Spinner. Binda strokeWeight de Track e Indicator no Figma e substitui consumo direto de semantic.border.width.strong no CSS.
+- **Decisão**: Alias 1:1 para semantic.border.width.strong porque a espessura 2px e padrao reutilizavel, mas no Spinner e parte publica da anatomia do ring.
+- **Usos**:
+  - CSS:
+    - `css/components/spinner.css` (1×)
+
+### `component.spinner.root.radius.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.radius.full`
+- **Sentido**: Radius circular do root Spinner.
+- **Escopo**: border-radius
+- **Contexto**: Component token do contrato anatomico Spinner. Binda os quatro corner radii do root no Figma e substitui consumo direto de semantic.radius.full no CSS.
+- **Decisão**: Alias 1:1 para semantic.radius.full porque o Spinner renderiza um ring circular.
+- **Usos**:
+  - CSS:
+    - `css/components/spinner.css` (1×)
+
+### `component.spinner.root.size.lg`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.lg`
+- **Sentido**: Tamanho do root e ring do Spinner por size.
+- **Escopo**: width, height
+- **Contexto**: Component token do contrato anatomico Spinner. Binda root, Track e Indicator no Figma e substitui consumo direto de semantic.size.* no CSS.
+- **Decisão**: Alias 1:1 para semantic.size.xs/md/lg porque Spinner usa 16/24/32 como tamanhos publicos; fica em Component para documentar a anatomia do loading indicator.
+- **Usos**:
+  - CSS:
+    - `css/components/spinner.css` (2×)
+
+### `component.spinner.root.size.md`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.md`
+- **Sentido**: Tamanho do root e ring do Spinner por size.
+- **Escopo**: width, height
+- **Contexto**: Component token do contrato anatomico Spinner. Binda root, Track e Indicator no Figma e substitui consumo direto de semantic.size.* no CSS.
+- **Decisão**: Alias 1:1 para semantic.size.xs/md/lg porque Spinner usa 16/24/32 como tamanhos publicos; fica em Component para documentar a anatomia do loading indicator.
+- **Usos**:
+  - CSS:
+    - `css/components/spinner.css` (2×)
+
+### `component.spinner.root.size.sm`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.xs`
+- **Sentido**: Tamanho do root e ring do Spinner por size.
+- **Escopo**: width, height
+- **Contexto**: Component token do contrato anatomico Spinner. Binda root, Track e Indicator no Figma e substitui consumo direto de semantic.size.* no CSS.
+- **Decisão**: Alias 1:1 para semantic.size.xs/md/lg porque Spinner usa 16/24/32 como tamanhos publicos; fica em Component para documentar a anatomia do loading indicator.
+- **Usos**:
+  - CSS:
+    - `css/components/spinner.css` (2×)
 
 ### `component.textarea.field.min-height.lg`
 

@@ -4653,15 +4653,17 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/spinner.css",
+            "file": "css/components/tabs.css",
             "count": 1
           },
           {
-            "file": "css/components/tabs.css",
+            "file": "css/tokens/generated/component.css",
             "count": 1
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "component.spinner.ring.stroke-width.default"
+        ],
         "figma": []
       }
     },
@@ -7104,20 +7106,17 @@
             "count": 1
           },
           {
-            "file": "css/components/spinner.css",
-            "count": 1
-          },
-          {
             "file": "css/components/toggle.css",
             "count": 2
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [
-          "component.avatar.root.radius.default"
+          "component.avatar.root.radius.default",
+          "component.spinner.root.radius.default"
         ],
         "figma": []
       }
@@ -8992,17 +8991,14 @@
             "count": 1
           },
           {
-            "file": "css/components/spinner.css",
-            "count": 2
-          },
-          {
             "file": "css/tokens/generated/component.css",
-            "count": 3
+            "count": 4
           }
         ],
         "tokens": [
           "component.checkbox.box.size.sm",
           "component.radio.control.size.sm",
+          "component.spinner.root.size.sm",
           "component.toggle.track.height.sm"
         ],
         "figma": []
@@ -9087,17 +9083,14 @@
             "count": 5
           },
           {
-            "file": "css/components/spinner.css",
-            "count": 2
-          },
-          {
             "file": "css/tokens/generated/component.css",
-            "count": 3
+            "count": 4
           }
         ],
         "tokens": [
           "component.checkbox.box.size.lg",
           "component.radio.control.size.lg",
+          "component.spinner.root.size.md",
           "component.toggle.track.height.md"
         ],
         "figma": []
@@ -9121,12 +9114,8 @@
             "count": 1
           },
           {
-            "file": "css/components/spinner.css",
-            "count": 2
-          },
-          {
             "file": "css/tokens/generated/component.css",
-            "count": 8
+            "count": 9
           }
         ],
         "tokens": [
@@ -9136,6 +9125,7 @@
           "component.input.root.height.sm",
           "component.radio.target.height.sm",
           "component.select.root.height.sm",
+          "component.spinner.root.size.lg",
           "component.toggle.target.height.sm",
           "component.toggle.track.height.lg"
         ],
@@ -11380,6 +11370,115 @@
         "css": [
           {
             "file": "css/components/avatar.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.spinner.root.size.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.xs",
+      "sentido": "Tamanho do root e ring do Spinner por size.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Component token do contrato anatomico Spinner. Binda root, Track e Indicator no Figma e substitui consumo direto de semantic.size.* no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.xs/md/lg porque Spinner usa 16/24/32 como tamanhos publicos; fica em Component para documentar a anatomia do loading indicator.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/spinner.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.spinner.root.size.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.md",
+      "sentido": "Tamanho do root e ring do Spinner por size.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Component token do contrato anatomico Spinner. Binda root, Track e Indicator no Figma e substitui consumo direto de semantic.size.* no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.xs/md/lg porque Spinner usa 16/24/32 como tamanhos publicos; fica em Component para documentar a anatomia do loading indicator.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/spinner.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.spinner.root.size.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.lg",
+      "sentido": "Tamanho do root e ring do Spinner por size.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Component token do contrato anatomico Spinner. Binda root, Track e Indicator no Figma e substitui consumo direto de semantic.size.* no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.xs/md/lg porque Spinner usa 16/24/32 como tamanhos publicos; fica em Component para documentar a anatomia do loading indicator.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/spinner.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.spinner.root.radius.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.radius.full",
+      "sentido": "Radius circular do root Spinner.",
+      "escopo": [
+        "border-radius"
+      ],
+      "contexto": "Component token do contrato anatomico Spinner. Binda os quatro corner radii do root no Figma e substitui consumo direto de semantic.radius.full no CSS.",
+      "decisao": "Alias 1:1 para semantic.radius.full porque o Spinner renderiza um ring circular.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/spinner.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.spinner.ring.stroke-width.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.border.width.strong",
+      "sentido": "Stroke width do ring Spinner.",
+      "escopo": [
+        "border-width",
+        "stroke-width"
+      ],
+      "contexto": "Component token do contrato anatomico Spinner. Binda strokeWeight de Track e Indicator no Figma e substitui consumo direto de semantic.border.width.strong no CSS.",
+      "decisao": "Alias 1:1 para semantic.border.width.strong porque a espessura 2px e padrao reutilizavel, mas no Spinner e parte publica da anatomia do ring.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/spinner.css",
             "count": 1
           }
         ],

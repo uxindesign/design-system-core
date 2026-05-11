@@ -1,0 +1,41 @@
+{
+  "component": {
+    "spinner": {
+      "root": {
+        "size": {
+          "sm": {
+            "$type": "dimension",
+            "$value": "{semantic.size.xs}",
+            "$description": "Tamanho do root Spinner sm."
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "{semantic.size.md}",
+            "$description": "Tamanho do root Spinner md."
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{semantic.size.lg}",
+            "$description": "Tamanho do root Spinner lg."
+          }
+        },
+        "radius": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.radius.full}",
+            "$description": "Radius circular do root Spinner."
+          }
+        }
+      },
+      "ring": {
+        "stroke-width": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.border.width.strong}",
+            "$description": "Stroke width do ring Spinner."
+          }
+        }
+      }
+    }
+  }
+}
