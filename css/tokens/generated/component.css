@@ -3,6 +3,8 @@
  */
 
 :root {
+  --ds-skeleton-text-height-default: var(--ds-dimension-12); /** Altura do Skeleton Text. */
+  --ds-skeleton-rectangle-height-default: var(--ds-dimension-120); /** Altura default do Skeleton Rectangle. */
   --ds-textarea-field-min-height-sm: var(--ds-dimension-80); /** Altura mínima do field Textarea sm. */
   --ds-textarea-field-min-height-md: var(--ds-dimension-96); /** Altura mínima do field Textarea md. */
   --ds-textarea-field-min-height-lg: var(--ds-dimension-120); /** Altura mínima do field Textarea lg. */
@@ -46,6 +48,10 @@
   --ds-select-root-height-sm: var(--ds-size-lg); /** Altura do root visual Select sm. */
   --ds-select-root-height-md: var(--ds-size-xl); /** Altura do root visual Select md. */
   --ds-select-root-height-lg: var(--ds-size-2xl); /** Altura do root visual Select lg. */
+  --ds-skeleton-text-radius-default: var(--ds-radius-md); /** Radius do Skeleton Text. */
+  --ds-skeleton-circle-size-default: var(--ds-size-xl); /** Tamanho do Skeleton Circle. */
+  --ds-skeleton-circle-radius-default: var(--ds-radius-full); /** Radius circular do Skeleton Circle. */
+  --ds-skeleton-rectangle-radius-default: var(--ds-radius-md); /** Radius do Skeleton Rectangle. */
   --ds-spinner-root-size-sm: var(--ds-size-xs); /** Tamanho do root Spinner sm. */
   --ds-spinner-root-size-md: var(--ds-size-md); /** Tamanho do root Spinner md. */
   --ds-spinner-root-size-lg: var(--ds-size-lg); /** Tamanho do root Spinner lg. */

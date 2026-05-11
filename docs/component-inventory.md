@@ -44,7 +44,7 @@
 | Foundation | 266 | 🟢 |
 | Semantic (light) | 173 | 🟢 |
 | Semantic (dark) | 173 | 🟢 |
-| Component | 55 | 🟢 |
+| Component | 61 | 🟢 |
 
 ## Pipeline
 

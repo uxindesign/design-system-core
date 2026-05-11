@@ -7016,19 +7016,22 @@
             "count": 1
           },
           {
-            "file": "css/components/skeleton.css",
-            "count": 2
-          },
-          {
             "file": "css/components/tabs.css",
             "count": 1
           },
           {
             "file": "css/components/textarea.css",
             "count": 1
+          },
+          {
+            "file": "css/tokens/generated/component.css",
+            "count": 2
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "component.skeleton.text.radius.default",
+          "component.skeleton.rectangle.radius.default"
+        ],
         "figma": []
       }
     },
@@ -7102,20 +7105,17 @@
             "count": 2
           },
           {
-            "file": "css/components/skeleton.css",
-            "count": 1
-          },
-          {
             "file": "css/components/toggle.css",
             "count": 2
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 2
+            "count": 3
           }
         ],
         "tokens": [
           "component.avatar.root.radius.default",
+          "component.skeleton.circle.radius.default",
           "component.spinner.root.radius.default"
         ],
         "figma": []
@@ -7298,7 +7298,7 @@
             "count": 1
           },
           {
-            "file": "css/components/skeleton.css",
+            "file": "css/tokens/generated/component.css",
             "count": 1
           },
           {
@@ -7311,6 +7311,7 @@
           }
         ],
         "tokens": [
+          "component.skeleton.text.height.default",
           "semantic.space.md",
           "semantic.space.md"
         ],
@@ -9150,12 +9151,8 @@
             "count": 1
           },
           {
-            "file": "css/components/skeleton.css",
-            "count": 2
-          },
-          {
             "file": "css/tokens/generated/component.css",
-            "count": 7
+            "count": 8
           }
         ],
         "tokens": [
@@ -9165,6 +9162,7 @@
           "component.input.root.height.md",
           "component.radio.target.height.md",
           "component.select.root.height.md",
+          "component.skeleton.circle.size.default",
           "component.toggle.target.height.md"
         ],
         "figma": []
@@ -9256,12 +9254,7 @@
       "contexto": "Use em `width`, `height` ou pra ícones, controles, layouts.",
       "decisao": "Aliasado a Foundation foundation.dimension.128.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/skeleton.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -11029,10 +11022,11 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [
+          "component.skeleton.rectangle.height.default",
           "component.textarea.field.min-height.lg"
         ],
         "figma": []
@@ -11479,6 +11473,133 @@
         "css": [
           {
             "file": "css/components/spinner.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.skeleton.text.height.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "foundation.dimension.12",
+      "sentido": "Altura default do Skeleton Text.",
+      "escopo": [
+        "height"
+      ],
+      "contexto": "Component token do contrato anatomico Skeleton Text. Binda a variant Text no Figma e substitui consumo direto de Foundation no CSS.",
+      "decisao": "Mantido em Component com alias direto para foundation.dimension.12 porque 12px e altura anatomica especifica de placeholder de texto, sem Semantic reutilizavel real.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/skeleton.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.skeleton.text.radius.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.radius.md",
+      "sentido": "Radius do Skeleton Text.",
+      "escopo": [
+        "border-radius"
+      ],
+      "contexto": "Component token do contrato anatomico Skeleton Text. Binda radius da variant Text no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.radius.md porque o radius md e uma decisao reutilizavel, mas no Skeleton Text e parte publica da anatomia do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/skeleton.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.skeleton.circle.size.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.xl",
+      "sentido": "Tamanho default do Skeleton Circle.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Component token do contrato anatomico Skeleton Circle. Binda width/height da variant Circle no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.xl porque 40px e uma escala reutilizavel, mas no Skeleton Circle define o tamanho publico do placeholder circular.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/skeleton.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.skeleton.circle.radius.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.radius.full",
+      "sentido": "Radius circular do Skeleton Circle.",
+      "escopo": [
+        "border-radius"
+      ],
+      "contexto": "Component token do contrato anatomico Skeleton Circle. Binda radius da variant Circle no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.radius.full porque a circularidade e uma decisao reutilizavel, mas aqui documenta a anatomia publica do placeholder circular.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/skeleton.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.skeleton.rectangle.height.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "foundation.dimension.120",
+      "sentido": "Altura default do Skeleton Rectangle.",
+      "escopo": [
+        "height"
+      ],
+      "contexto": "Component token do contrato anatomico Skeleton Rectangle. Binda a variant Rectangle no Figma e corrige o CSS para o default vivo de 120px.",
+      "decisao": "Mantido em Component com alias direto para foundation.dimension.120 porque 120px e altura anatomica especifica do placeholder retangular, sem Semantic reutilizavel real.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/skeleton.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.skeleton.rectangle.radius.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.radius.md",
+      "sentido": "Radius do Skeleton Rectangle.",
+      "escopo": [
+        "border-radius"
+      ],
+      "contexto": "Component token do contrato anatomico Skeleton Rectangle. Binda radius da variant Rectangle no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.radius.md porque o radius md e uma decisao reutilizavel, mas no Skeleton Rectangle e parte publica da anatomia do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/skeleton.css",
             "count": 1
           }
         ],

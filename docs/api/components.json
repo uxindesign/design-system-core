@@ -814,11 +814,12 @@
       "cssFile": "css/components/skeleton.css",
       "tokens": [
         "ds-background-subtle",
-        "ds-dimension-12",
-        "ds-radius-full",
-        "ds-radius-md",
-        "ds-size-5xl",
-        "ds-size-xl"
+        "ds-skeleton-circle-radius-default",
+        "ds-skeleton-circle-size-default",
+        "ds-skeleton-rectangle-height-default",
+        "ds-skeleton-rectangle-radius-default",
+        "ds-skeleton-text-height-default",
+        "ds-skeleton-text-radius-default"
       ],
       "variants": [
         "circle",

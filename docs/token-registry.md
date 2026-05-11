@@ -6,8 +6,8 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Status
 
-- Total de tokens: **494**
-- Com metadados completos: **494**
+- Total de tokens: **500**
+- Com metadados completos: **500**
 - Pendentes (`TODO` em algum campo obrigatório): **0**
 - Completude: **100%**
 
@@ -181,8 +181,8 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 |---|---|---|---|---|
 | `foundation.dimension.10` | dimension | — | Dimensão fixa de 10px (0.625rem). | 4 |
 | `foundation.dimension.1024` | dimension | — | Dimensão fixa de 1024px (64rem). | 4 |
-| `foundation.dimension.12` | dimension | — | Dimensão fixa de 12px (0.75rem). | 6 |
-| `foundation.dimension.120` | dimension | — | Dimensão fixa de 120px (7.5rem). | 2 |
+| `foundation.dimension.12` | dimension | — | Dimensão fixa de 12px (0.75rem). | 7 |
+| `foundation.dimension.120` | dimension | — | Dimensão fixa de 120px (7.5rem). | 3 |
 | `foundation.dimension.128` | dimension | — | Dimensão fixa de 128px (8rem). | 4 |
 | `foundation.dimension.1280` | dimension | — | Dimensão fixa de 1280px (80rem). | 4 |
 | `foundation.dimension.14` | dimension | — | Dimensão fixa de 14px (0.875rem). | 0 |
@@ -486,7 +486,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 |---|---|---|---|---|
 | `semantic.radius.full` | dimension | → `foundation.radius.999` | Radius semantic full. | 7 |
 | `semantic.radius.lg` | dimension | → `foundation.radius.12` | Radius semantic lg. | 4 |
-| `semantic.radius.md` | dimension | → `foundation.radius.8` | Radius semantic md. | 8 |
+| `semantic.radius.md` | dimension | → `foundation.radius.8` | Radius semantic md. | 10 |
 | `semantic.radius.sm` | dimension | → `foundation.radius.4` | Radius semantic sm. | 8 |
 | `semantic.radius.xl` | dimension | → `foundation.radius.16` | Radius semantic xl. | 0 |
 
@@ -504,7 +504,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.size.2xl` | dimension | → `foundation.dimension.48` | Size token 2xl. | 8 |
 | `semantic.size.3xl` | dimension | → `foundation.dimension.64` | Size token 3xl. | 2 |
 | `semantic.size.4xl` | dimension | → `foundation.dimension.96` | Size token 4xl. | 0 |
-| `semantic.size.5xl` | dimension | → `foundation.dimension.128` | Size token 5xl. | 1 |
+| `semantic.size.5xl` | dimension | → `foundation.dimension.128` | Size token 5xl. | 0 |
 | `semantic.size.layout.2xl` | dimension | → `foundation.dimension.1280` | Size token layout.2xl. | 0 |
 | `semantic.size.layout.lg` | dimension | → `foundation.dimension.800` | Size token layout.lg. | 1 |
 | `semantic.size.layout.md` | dimension | → `foundation.dimension.640` | Size token layout.md. | 1 |
@@ -605,7 +605,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Component
 
-55 tokens.
+61 tokens.
 
 ### component.avatar
 
@@ -673,6 +673,17 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.select.root.height.lg` | dimension | → `semantic.size.2xl` | Altura do root visual do Select por size. | 1 |
 | `component.select.root.height.md` | dimension | → `semantic.size.xl` | Altura do root visual do Select por size. | 1 |
 | `component.select.root.height.sm` | dimension | → `semantic.size.lg` | Altura do root visual do Select por size. | 1 |
+
+### component.skeleton
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `component.skeleton.circle.radius.default` | dimension | → `semantic.radius.full` | Radius circular do Skeleton Circle. | 1 |
+| `component.skeleton.circle.size.default` | dimension | → `semantic.size.xl` | Tamanho default do Skeleton Circle. | 1 |
+| `component.skeleton.rectangle.height.default` | dimension | → `foundation.dimension.120` | Altura default do Skeleton Rectangle. | 1 |
+| `component.skeleton.rectangle.radius.default` | dimension | → `semantic.radius.md` | Radius do Skeleton Rectangle. | 1 |
+| `component.skeleton.text.height.default` | dimension | → `foundation.dimension.12` | Altura default do Skeleton Text. | 1 |
+| `component.skeleton.text.radius.default` | dimension | → `semantic.radius.md` | Radius do Skeleton Text. | 1 |
 
 ### component.spinner
 
@@ -2523,10 +2534,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/reset.css` (1×)
-    - `css/components/skeleton.css` (1×)
+    - `css/tokens/generated/component.css` (1×)
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.space.md`, `semantic.space.md`
+  - Tokens que referenciam: `component.skeleton.text.height.default`, `semantic.space.md`, `semantic.space.md`
 
 ### `foundation.dimension.120`
 
@@ -2538,8 +2549,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Adicionado como valor primitivo porque 120px existe no Figma vivo para Textarea Large e nao havia Semantic reutilizavel real; a intencao publica permanece em component.textarea.field.min-height.lg.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (1×)
-  - Tokens que referenciam: `component.textarea.field.min-height.lg`
+    - `css/tokens/generated/component.css` (2×)
+  - Tokens que referenciam: `component.skeleton.rectangle.height.default`, `component.textarea.field.min-height.lg`
 
 ### `foundation.dimension.128`
 
@@ -5230,10 +5241,9 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/badge.css` (1×)
     - `css/components/radio.css` (2×)
-    - `css/components/skeleton.css` (1×)
     - `css/components/toggle.css` (2×)
-    - `css/tokens/generated/component.css` (2×)
-  - Tokens que referenciam: `component.avatar.root.radius.default`, `component.spinner.root.radius.default`
+    - `css/tokens/generated/component.css` (3×)
+  - Tokens que referenciam: `component.avatar.root.radius.default`, `component.skeleton.circle.radius.default`, `component.spinner.root.radius.default`
 
 ### `semantic.radius.lg`
 
@@ -5267,9 +5277,10 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/divider.css` (1×)
     - `css/components/input.css` (1×)
     - `css/components/select.css` (1×)
-    - `css/components/skeleton.css` (2×)
     - `css/components/tabs.css` (1×)
     - `css/components/textarea.css` (1×)
+    - `css/tokens/generated/component.css` (2×)
+  - Tokens que referenciam: `component.skeleton.text.radius.default`, `component.skeleton.rectangle.radius.default`
 
 ### `semantic.radius.sm`
 
@@ -5380,8 +5391,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Use em `width`, `height` ou pra ícones, controles, layouts.
 - **Decisão**: Aliasado a Foundation foundation.dimension.128.
 - **Usos**:
-  - CSS:
-    - `css/components/skeleton.css` (1×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `semantic.size.layout.2xl`
 
@@ -5523,9 +5533,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/button.css` (1×)
-    - `css/components/skeleton.css` (2×)
-    - `css/tokens/generated/component.css` (7×)
-  - Tokens que referenciam: `component.avatar.root.size.md`, `component.button.root.height.md`, `component.checkbox.target.height.md`, `component.input.root.height.md`, `component.radio.target.height.md`, `component.select.root.height.md`, `component.toggle.target.height.md`
+    - `css/tokens/generated/component.css` (8×)
+  - Tokens que referenciam: `component.avatar.root.size.md`, `component.button.root.height.md`, `component.checkbox.target.height.md`, `component.input.root.height.md`, `component.radio.target.height.md`, `component.select.root.height.md`, `component.skeleton.circle.size.default`, `component.toggle.target.height.md`
 
 ### `semantic.size.xs`
 
@@ -6828,6 +6837,84 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/select.css` (1×)
+
+### `component.skeleton.circle.radius.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.radius.full`
+- **Sentido**: Radius circular do Skeleton Circle.
+- **Escopo**: border-radius
+- **Contexto**: Component token do contrato anatomico Skeleton Circle. Binda radius da variant Circle no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.radius.full porque a circularidade e uma decisao reutilizavel, mas aqui documenta a anatomia publica do placeholder circular.
+- **Usos**:
+  - CSS:
+    - `css/components/skeleton.css` (1×)
+
+### `component.skeleton.circle.size.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.xl`
+- **Sentido**: Tamanho default do Skeleton Circle.
+- **Escopo**: width, height
+- **Contexto**: Component token do contrato anatomico Skeleton Circle. Binda width/height da variant Circle no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.size.xl porque 40px e uma escala reutilizavel, mas no Skeleton Circle define o tamanho publico do placeholder circular.
+- **Usos**:
+  - CSS:
+    - `css/components/skeleton.css` (2×)
+
+### `component.skeleton.rectangle.height.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.dimension.120`
+- **Sentido**: Altura default do Skeleton Rectangle.
+- **Escopo**: height
+- **Contexto**: Component token do contrato anatomico Skeleton Rectangle. Binda a variant Rectangle no Figma e corrige o CSS para o default vivo de 120px.
+- **Decisão**: Mantido em Component com alias direto para foundation.dimension.120 porque 120px e altura anatomica especifica do placeholder retangular, sem Semantic reutilizavel real.
+- **Usos**:
+  - CSS:
+    - `css/components/skeleton.css` (1×)
+
+### `component.skeleton.rectangle.radius.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.radius.md`
+- **Sentido**: Radius do Skeleton Rectangle.
+- **Escopo**: border-radius
+- **Contexto**: Component token do contrato anatomico Skeleton Rectangle. Binda radius da variant Rectangle no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.radius.md porque o radius md e uma decisao reutilizavel, mas no Skeleton Rectangle e parte publica da anatomia do componente.
+- **Usos**:
+  - CSS:
+    - `css/components/skeleton.css` (1×)
+
+### `component.skeleton.text.height.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.dimension.12`
+- **Sentido**: Altura default do Skeleton Text.
+- **Escopo**: height
+- **Contexto**: Component token do contrato anatomico Skeleton Text. Binda a variant Text no Figma e substitui consumo direto de Foundation no CSS.
+- **Decisão**: Mantido em Component com alias direto para foundation.dimension.12 porque 12px e altura anatomica especifica de placeholder de texto, sem Semantic reutilizavel real.
+- **Usos**:
+  - CSS:
+    - `css/components/skeleton.css` (1×)
+
+### `component.skeleton.text.radius.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.radius.md`
+- **Sentido**: Radius do Skeleton Text.
+- **Escopo**: border-radius
+- **Contexto**: Component token do contrato anatomico Skeleton Text. Binda radius da variant Text no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.radius.md porque o radius md e uma decisao reutilizavel, mas no Skeleton Text e parte publica da anatomia do componente.
+- **Usos**:
+  - CSS:
+    - `css/components/skeleton.css` (1×)
 
 ### `component.spinner.ring.stroke-width.default`
 
