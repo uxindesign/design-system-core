@@ -9,6 +9,7 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 ## [Não publicado]
 
 ### Corrigido
+- **Card Figma/CSS aplicado aos Component tokens anatômicos.** Criado `component.card` para radius/border-width do root, padding/gap do header, padding do body e tipografia de title/subtitle/body; as 3 variantes vivas do Figma agora usam Component tokens nesses contratos. CSS passa a consumir `--ds-card-*`; cores e shadow permanecem Semantic.
 - **Alert Figma/CSS aplicado aos Component tokens anatómicos.** Criado `component.alert` para root padding/gap/radius/border-width, icon/close size e glyph-size, content gap e tipografia de title/description; os 8 variants vivos do Figma agora usam Component tokens nesses contratos. CSS passa a consumir `--ds-alert-*`; documentação remove mappings antigos/stale de spacing e typography Foundation.
 - **Badge Figma/CSS aplicado aos Component tokens anatómicos.** Criado `component.badge` para padding/gap/radius/border-width do root e tipografia do label; os 12 variants vivos do Figma (`6` cores × `2` estilos) agora usam Component tokens nesses contratos. CSS passa a consumir `--ds-badge-*`; documentação corrige inventário de cores para 6 e remove mappings antigos/stale.
 - **Tooltip Figma/CSS aplicado aos Component tokens anatómicos.** Criado `component.tooltip` para padding/radius do content, tipografia do label e dimensões da seta (`base/depth`); os 4 variants `Position` do Figma agora usam Component tokens nesses contratos. CSS passa a consumir `--ds-tooltip-*`; cores e z-index permanecem Semantic.

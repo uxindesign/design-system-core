@@ -4592,10 +4592,6 @@
             "count": 1
           },
           {
-            "file": "css/components/card.css",
-            "count": 2
-          },
-          {
             "file": "css/components/checkbox.css",
             "count": 1
           },
@@ -4629,12 +4625,13 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 2
+            "count": 3
           }
         ],
         "tokens": [
           "component.alert.root.border-width.default",
-          "component.badge.root.border-width.default"
+          "component.badge.root.border-width.default",
+          "component.card.root.border-width.default"
         ],
         "figma": []
       }
@@ -5051,6 +5048,7 @@
         "css": [],
         "tokens": [
           "component.alert.description.font-weight.default",
+          "component.card.body.font-weight.default",
           "component.tooltip.label.font-weight.default"
         ],
         "figma": []
@@ -5085,7 +5083,8 @@
       "usos": {
         "css": [],
         "tokens": [
-          "component.avatar.initials.font-weight.lg"
+          "component.avatar.initials.font-weight.lg",
+          "component.card.title.font-weight.default"
         ],
         "figma": []
       }
@@ -5106,7 +5105,8 @@
           "component.alert.title.font-weight.default",
           "component.avatar.initials.font-weight.sm",
           "component.avatar.initials.font-weight.md",
-          "component.badge.label.font-weight.default"
+          "component.badge.label.font-weight.default",
+          "component.card.subtitle.font-weight.default"
         ],
         "figma": []
       }
@@ -5178,6 +5178,8 @@
           "component.alert.description.font-size.default",
           "component.avatar.initials.font-size.sm",
           "component.avatar.initials.font-size.md",
+          "component.card.body.font-size.default",
+          "component.card.subtitle.font-size.default",
           "component.tooltip.label.font-size.default"
         ],
         "figma": []
@@ -5229,7 +5231,8 @@
         "css": [],
         "tokens": [
           "component.avatar.initials.font-size.lg",
-          "component.avatar.icon.size.sm"
+          "component.avatar.icon.size.sm",
+          "component.card.title.font-size.default"
         ],
         "figma": []
       }
@@ -5303,6 +5306,8 @@
           "component.alert.description.line-height.default",
           "component.avatar.initials.line-height.sm",
           "component.avatar.initials.line-height.md",
+          "component.card.body.line-height.default",
+          "component.card.subtitle.line-height.default",
           "component.tooltip.label.line-height.default"
         ],
         "figma": []
@@ -5337,7 +5342,8 @@
       "usos": {
         "css": [],
         "tokens": [
-          "component.avatar.initials.line-height.lg"
+          "component.avatar.initials.line-height.lg",
+          "component.card.title.line-height.default"
         ],
         "figma": []
       }
@@ -6739,10 +6745,6 @@
             "count": 3
           },
           {
-            "file": "css/components/card.css",
-            "count": 2
-          },
-          {
             "file": "css/components/checkbox.css",
             "count": 3
           },
@@ -6776,7 +6778,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 4
+            "count": 6
           },
           {
             "file": "css/utilities/layout.css",
@@ -6786,6 +6788,8 @@
         "tokens": [
           "component.alert.root.gap.default",
           "component.badge.root.padding-x.default",
+          "component.card.header.padding-bottom.default",
+          "component.card.header.gap.default",
           "component.tooltip.content.padding-x.default",
           "component.tooltip.arrow.base.default"
         ],
@@ -6868,10 +6872,6 @@
             "count": 1
           },
           {
-            "file": "css/components/card.css",
-            "count": 4
-          },
-          {
             "file": "css/components/input.css",
             "count": 1
           },
@@ -6892,11 +6892,20 @@
             "count": 1
           },
           {
+            "file": "css/tokens/generated/component.css",
+            "count": 4
+          },
+          {
             "file": "css/utilities/layout.css",
             "count": 1
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "component.card.header.padding-x.default",
+          "component.card.header.padding-top.default",
+          "component.card.body.padding-x.default",
+          "component.card.body.padding-bottom.default"
+        ],
         "figma": []
       }
     },
@@ -7065,20 +7074,17 @@
             "count": 1
           },
           {
-            "file": "css/components/card.css",
-            "count": 1
-          },
-          {
             "file": "css/components/modal.css",
             "count": 1
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [
-          "component.alert.root.radius.default"
+          "component.alert.root.radius.default",
+          "component.card.root.radius.default"
         ],
         "figma": []
       }
@@ -12263,6 +12269,365 @@
         "css": [
           {
             "file": "css/components/alert.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.card.root.radius.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.radius.lg",
+      "sentido": "Radius do root Card.",
+      "escopo": [
+        "border-radius"
+      ],
+      "contexto": "Component token do contrato anatômico Card Root. Binda os 4 corner radii das 3 variantes Style no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.radius.lg porque 12px é decisão reutilizável, mas no Card documenta o radius público do container.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.card.root.border-width.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.border.width.default",
+      "sentido": "Border width do root Card quando stroke está ativo.",
+      "escopo": [
+        "border-width"
+      ],
+      "contexto": "Component token do contrato anatômico Card Root. Binda stroke weights das variantes Default e Outlined no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.border.width.default porque 1px é padrão reutilizável, mas no Card documenta a espessura pública da borda.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.card.header.padding-x.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.lg",
+      "sentido": "Padding horizontal do header Card.",
+      "escopo": [
+        "padding-left",
+        "padding-right"
+      ],
+      "contexto": "Component token do contrato anatômico Card Header. Binda paddingLeft/paddingRight dos headers nas 3 variantes Style do Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.lg porque 16px é escala reutilizável, mas no Card documenta o respiro horizontal público do header.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.card.header.padding-top.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.lg",
+      "sentido": "Padding top do header Card.",
+      "escopo": [
+        "padding-top"
+      ],
+      "contexto": "Component token do contrato anatômico Card Header. Binda paddingTop dos headers nas 3 variantes Style do Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.lg porque 16px é escala reutilizável, mas no Card documenta o respiro superior público do header.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.card.header.padding-bottom.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.sm",
+      "sentido": "Padding bottom do header Card.",
+      "escopo": [
+        "padding-bottom"
+      ],
+      "contexto": "Component token do contrato anatômico Card Header. Binda paddingBottom dos headers nas 3 variantes Style do Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.sm porque 8px é escala reutilizável, mas no Card documenta a separação pública entre header e body.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.card.header.gap.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.sm",
+      "sentido": "Gap vertical do header Card.",
+      "escopo": [
+        "gap"
+      ],
+      "contexto": "Component token do contrato anatômico Card Header. Binda itemSpacing entre Title e Subtitle nas 3 variantes Style do Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.sm porque 8px é escala reutilizável, mas no Card documenta a separação vertical pública do header.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.card.body.padding-x.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.lg",
+      "sentido": "Padding horizontal do body Card.",
+      "escopo": [
+        "padding-left",
+        "padding-right"
+      ],
+      "contexto": "Component token do contrato anatômico Card Body. Binda paddingLeft/paddingRight dos bodies nas 3 variantes Style do Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.lg porque 16px é escala reutilizável, mas no Card documenta o respiro horizontal público do body.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.card.body.padding-bottom.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.lg",
+      "sentido": "Padding bottom do body Card.",
+      "escopo": [
+        "padding-bottom"
+      ],
+      "contexto": "Component token do contrato anatômico Card Body. Binda paddingBottom dos bodies nas 3 variantes Style do Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.lg porque 16px é escala reutilizável, mas no Card documenta o respiro inferior público do body.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.card.body.font-size.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.sm",
+      "sentido": "Font-size do body Card.",
+      "escopo": [
+        "font-size"
+      ],
+      "contexto": "Component token do contrato anatômico Card Body. Binda fontSize dos textos Content nas 3 variantes Style do Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-size.sm porque o body usa body/sm, mas a escala tipográfica do Card é contrato público do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.card.body.line-height.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.sm",
+      "sentido": "Line-height do body Card.",
+      "escopo": [
+        "line-height"
+      ],
+      "contexto": "Component token do contrato anatômico Card Body. Binda lineHeight dos textos Content nas 3 variantes Style do Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.line-height.sm porque o body usa body/sm, mas a métrica vertical do Card é contrato público do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.card.body.font-weight.default": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.font-weight.regular",
+      "sentido": "Font-weight do body Card.",
+      "escopo": [
+        "font-weight"
+      ],
+      "contexto": "Component token do contrato anatômico Card Body. Binda fontStyle dos textos Content nas 3 variantes Style do Figma e substitui peso implícito no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-weight.regular porque o body usa Regular; no Figma o campo bindável é fontStyle/string, enquanto no JSON/CSS o contrato permanece numérico.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.card.title.font-size.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.xl",
+      "sentido": "Font-size do title Card.",
+      "escopo": [
+        "font-size"
+      ],
+      "contexto": "Component token do contrato anatômico Card Title. Binda fontSize dos titles nas 3 variantes Style do Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-size.xl porque o title usa body/xl, mas a escala tipográfica do Card é contrato público do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.card.title.line-height.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.xl",
+      "sentido": "Line-height do title Card.",
+      "escopo": [
+        "line-height"
+      ],
+      "contexto": "Component token do contrato anatômico Card Title. Binda lineHeight dos titles nas 3 variantes Style do Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.line-height.xl porque o title usa body/xl, mas a métrica vertical do Card é contrato público do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.card.title.font-weight.default": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.font-weight.semibold",
+      "sentido": "Font-weight do title Card.",
+      "escopo": [
+        "font-weight"
+      ],
+      "contexto": "Component token do contrato anatômico Card Title. Binda fontStyle dos titles nas 3 variantes Style do Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-weight.semibold porque o title usa Semi Bold; no Figma o campo bindável é fontStyle/string, enquanto no JSON/CSS o contrato permanece numérico.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.card.subtitle.font-size.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.sm",
+      "sentido": "Font-size do subtitle Card.",
+      "escopo": [
+        "font-size"
+      ],
+      "contexto": "Component token do contrato anatômico Card Subtitle. Binda fontSize dos subtitles nas 3 variantes Style do Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-size.sm porque o subtitle usa body/sm, mas a escala tipográfica do Card é contrato público do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.card.subtitle.line-height.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.sm",
+      "sentido": "Line-height do subtitle Card.",
+      "escopo": [
+        "line-height"
+      ],
+      "contexto": "Component token do contrato anatômico Card Subtitle. Binda lineHeight dos subtitles nas 3 variantes Style do Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.line-height.sm porque o subtitle usa body/sm, mas a métrica vertical do Card é contrato público do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.card.subtitle.font-weight.default": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.font-weight.bold",
+      "sentido": "Font-weight do subtitle Card.",
+      "escopo": [
+        "font-weight"
+      ],
+      "contexto": "Component token do contrato anatômico Card Subtitle. Binda fontStyle dos subtitles nas 3 variantes Style do Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-weight.bold porque o subtitle usa Bold; no Figma o campo bindável é fontStyle/string, enquanto no JSON/CSS o contrato permanece numérico.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/card.css",
             "count": 1
           }
         ],

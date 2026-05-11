@@ -4,39 +4,40 @@
 
 .ds-card {
   background-color: var(--ds-surface-default);
-  border-radius: var(--ds-radius-lg);
+  border-radius: var(--ds-card-root-radius-default);
   overflow: hidden;
 }
 
 .ds-card__header {
-  padding: var(--ds-space-lg) var(--ds-space-lg) var(--ds-space-sm);
+  padding: var(--ds-card-header-padding-top-default) var(--ds-card-header-padding-x-default) var(--ds-card-header-padding-bottom-default);
   display: flex;
   flex-direction: column;
-  gap: var(--ds-space-sm);
+  gap: var(--ds-card-header-gap-default);
 }
 
-/* Title — heading/sm in Figma */
+/* Title — body/xl semibold in Figma */
 .ds-card__title {
-  font-size: var(--ds-body-font-size-xl);
-  font-weight: var(--ds-body-font-weight-semibold);
+  font-size: var(--ds-card-title-font-size-default);
+  font-weight: var(--ds-card-title-font-weight-default);
   color: var(--ds-content-strong);
-  line-height: var(--ds-body-line-height-xl);
+  line-height: var(--ds-card-title-line-height-default);
 }
 
-/* Subtitle — label/md in Figma */
+/* Subtitle — body/sm bold in Figma */
 .ds-card__subtitle {
-  font-size: var(--ds-body-font-size-sm);
-  font-weight: var(--ds-body-font-weight-bold);
-  line-height: var(--ds-body-line-height-sm);
+  font-size: var(--ds-card-subtitle-font-size-default);
+  font-weight: var(--ds-card-subtitle-font-weight-default);
+  line-height: var(--ds-card-subtitle-line-height-default);
   color: var(--ds-content-default);
 }
 
 /* Body — body/sm in Figma */
 .ds-card__body {
-  padding: 0 var(--ds-space-lg) var(--ds-space-lg);
-  font-size: var(--ds-body-font-size-sm);
+  padding: 0 var(--ds-card-body-padding-x-default) var(--ds-card-body-padding-bottom-default);
+  font-size: var(--ds-card-body-font-size-default);
+  font-weight: var(--ds-card-body-font-weight-default);
   color: var(--ds-content-default);
-  line-height: var(--ds-body-line-height-sm);
+  line-height: var(--ds-card-body-line-height-default);
 }
 
 /* ---------------------------------------------------------
@@ -45,12 +46,12 @@
 
 /* Default — subtle border */
 .ds-card--default {
-  border: var(--ds-border-width-default) solid var(--ds-border-subtle);
+  border: var(--ds-card-root-border-width-default) solid var(--ds-border-subtle);
 }
 
 /* Outlined — stronger border */
 .ds-card--outlined {
-  border: var(--ds-border-width-default) solid var(--ds-border-default);
+  border: var(--ds-card-root-border-width-default) solid var(--ds-border-default);
 }
 
 /* Elevated — raised surface + semantic card shadow, no stroke in Figma. */

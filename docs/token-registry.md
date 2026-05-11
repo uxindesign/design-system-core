@@ -6,8 +6,8 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Status
 
-- Total de tokens: **531**
-- Com metadados completos: **531**
+- Total de tokens: **548**
+- Com metadados completos: **548**
 - Pendentes (`TODO` em algum campo obrigatório): **0**
 - Completude: **100%**
 
@@ -525,13 +525,13 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.space.2xs` | dimension | → `foundation.dimension.2` | Spacing token 2xs. | 6 |
 | `semantic.space.control.padding.10` | dimension | → `foundation.dimension.10` | Spacing token control.padding.10. | 3 |
 | `semantic.space.control.padding.6` | dimension | → `foundation.dimension.6` | Padding simétrico de Icon Only sm Button. | 1 |
-| `semantic.space.lg` | dimension | → `foundation.dimension.16` | Spacing token lg. | 8 |
+| `semantic.space.lg` | dimension | → `foundation.dimension.16` | Spacing token lg. | 12 |
 | `semantic.space.md` | dimension | → `foundation.dimension.12` | Spacing token md. | 10 |
 | `semantic.space.section.lg` | dimension | → `foundation.dimension.64` | Spacing token section.lg. | 0 |
 | `semantic.space.section.md` | dimension | → `foundation.dimension.48` | Spacing token section.md. | 0 |
 | `semantic.space.section.sm` | dimension | → `foundation.dimension.32` | Spacing token section.sm. | 1 |
 | `semantic.space.section.xl` | dimension | → `foundation.dimension.80` | Spacing token section.xl. | 0 |
-| `semantic.space.sm` | dimension | → `foundation.dimension.8` | Spacing token sm. | 16 |
+| `semantic.space.sm` | dimension | → `foundation.dimension.8` | Spacing token sm. | 17 |
 | `semantic.space.xl` | dimension | → `foundation.dimension.20` | Spacing token xl. | 2 |
 | `semantic.space.xs` | dimension | → `foundation.dimension.4` | Spacing token xs. | 15 |
 
@@ -572,13 +572,13 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.typography.body.font-size.9xl` | dimension | → `foundation.typography.font.size.72` | font-size 9xl pra texto UI geral. | 0 |
 | `semantic.typography.body.font-size.lg` | dimension | → `foundation.typography.font.size.18` | font-size lg pra texto UI geral. | 0 |
 | `semantic.typography.body.font-size.md` | dimension | → `foundation.typography.font.size.16` | font-size md pra texto UI geral. | 0 |
-| `semantic.typography.body.font-size.sm` | dimension | → `foundation.typography.font.size.14` | font-size sm pra texto UI geral. | 5 |
-| `semantic.typography.body.font-size.xl` | dimension | → `foundation.typography.font.size.20` | font-size xl pra texto UI geral. | 2 |
+| `semantic.typography.body.font-size.sm` | dimension | → `foundation.typography.font.size.14` | font-size sm pra texto UI geral. | 7 |
+| `semantic.typography.body.font-size.xl` | dimension | → `foundation.typography.font.size.20` | font-size xl pra texto UI geral. | 3 |
 | `semantic.typography.body.font-size.xs` | dimension | → `foundation.typography.font.size.12` | font-size xs pra texto UI geral. | 1 |
-| `semantic.typography.body.font-weight.bold` | number | → `foundation.typography.font.weight.bold` | font-weight bold pra texto UI geral. | 4 |
+| `semantic.typography.body.font-weight.bold` | number | → `foundation.typography.font.weight.bold` | font-weight bold pra texto UI geral. | 5 |
 | `semantic.typography.body.font-weight.medium` | number | → `foundation.typography.font.weight.medium` | font-weight medium pra texto UI geral. | 0 |
-| `semantic.typography.body.font-weight.regular` | number | → `foundation.typography.font.weight.regular` | font-weight regular pra texto UI geral. | 2 |
-| `semantic.typography.body.font-weight.semibold` | number | → `foundation.typography.font.weight.semibold` | font-weight semibold pra texto UI geral. | 1 |
+| `semantic.typography.body.font-weight.regular` | number | → `foundation.typography.font.weight.regular` | font-weight regular pra texto UI geral. | 3 |
+| `semantic.typography.body.font-weight.semibold` | number | → `foundation.typography.font.weight.semibold` | font-weight semibold pra texto UI geral. | 2 |
 | `semantic.typography.body.letter-spacing.normal` | dimension | → `foundation.typography.letter.spacing.normal` | letter-spacing normal pra texto UI geral. | 0 |
 | `semantic.typography.body.letter-spacing.tight` | dimension | → `foundation.typography.letter.spacing.tight` | letter-spacing tight pra texto UI geral. | 0 |
 | `semantic.typography.body.letter-spacing.wider` | dimension | → `foundation.typography.letter.spacing.wider` | letter-spacing wider pra texto UI geral. | 0 |
@@ -593,8 +593,8 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.typography.body.line-height.9xl` | dimension | → `foundation.typography.line.height.90` | line-height 9xl pra texto UI geral. | 0 |
 | `semantic.typography.body.line-height.lg` | dimension | → `foundation.typography.line.height.28` | line-height lg pra texto UI geral. | 0 |
 | `semantic.typography.body.line-height.md` | dimension | → `foundation.typography.line.height.24` | line-height md pra texto UI geral. | 0 |
-| `semantic.typography.body.line-height.sm` | dimension | → `foundation.typography.line.height.20` | line-height sm pra texto UI geral. | 5 |
-| `semantic.typography.body.line-height.xl` | dimension | → `foundation.typography.line.height.32` | line-height xl pra texto UI geral. | 1 |
+| `semantic.typography.body.line-height.sm` | dimension | → `foundation.typography.line.height.20` | line-height sm pra texto UI geral. | 7 |
+| `semantic.typography.body.line-height.xl` | dimension | → `foundation.typography.line.height.32` | line-height xl pra texto UI geral. | 2 |
 | `semantic.typography.body.line-height.xs` | dimension | → `foundation.typography.line.height.18` | line-height xs pra texto UI geral. | 1 |
 
 ### semantic.z
@@ -605,7 +605,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Component
 
-92 tokens.
+109 tokens.
 
 ### component.alert
 
@@ -668,6 +668,28 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.button.root.height.lg` | dimension | → `semantic.size.2xl` | Altura do root do Button por size. | 1 |
 | `component.button.root.height.md` | dimension | → `semantic.size.xl` | Altura do root do Button por size. | 1 |
 | `component.button.root.height.sm` | dimension | → `semantic.size.lg` | Altura do root do Button por size. | 1 |
+
+### component.card
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `component.card.body.font-size.default` | dimension | → `semantic.typography.body.font-size.sm` | Font-size do body Card. | 1 |
+| `component.card.body.font-weight.default` | number | → `semantic.typography.body.font-weight.regular` | Font-weight do body Card. | 1 |
+| `component.card.body.line-height.default` | dimension | → `semantic.typography.body.line-height.sm` | Line-height do body Card. | 1 |
+| `component.card.body.padding-bottom.default` | dimension | → `semantic.space.lg` | Padding bottom do body Card. | 1 |
+| `component.card.body.padding-x.default` | dimension | → `semantic.space.lg` | Padding horizontal do body Card. | 1 |
+| `component.card.header.gap.default` | dimension | → `semantic.space.sm` | Gap vertical do header Card. | 1 |
+| `component.card.header.padding-bottom.default` | dimension | → `semantic.space.sm` | Padding bottom do header Card. | 1 |
+| `component.card.header.padding-top.default` | dimension | → `semantic.space.lg` | Padding top do header Card. | 1 |
+| `component.card.header.padding-x.default` | dimension | → `semantic.space.lg` | Padding horizontal do header Card. | 1 |
+| `component.card.root.border-width.default` | dimension | → `semantic.border.width.default` | Border width do root Card quando stroke está ativo. | 1 |
+| `component.card.root.radius.default` | dimension | → `semantic.radius.lg` | Radius do root Card. | 1 |
+| `component.card.subtitle.font-size.default` | dimension | → `semantic.typography.body.font-size.sm` | Font-size do subtitle Card. | 1 |
+| `component.card.subtitle.font-weight.default` | number | → `semantic.typography.body.font-weight.bold` | Font-weight do subtitle Card. | 1 |
+| `component.card.subtitle.line-height.default` | dimension | → `semantic.typography.body.line-height.sm` | Line-height do subtitle Card. | 1 |
+| `component.card.title.font-size.default` | dimension | → `semantic.typography.body.font-size.xl` | Font-size do title Card. | 1 |
+| `component.card.title.font-weight.default` | number | → `semantic.typography.body.font-weight.semibold` | Font-weight do title Card. | 1 |
+| `component.card.title.line-height.default` | dimension | → `semantic.typography.body.line-height.xl` | Line-height do title Card. | 1 |
 
 ### component.checkbox
 
@@ -4215,7 +4237,6 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/base/reset.css` (1×)
     - `css/components/button.css` (1×)
-    - `css/components/card.css` (2×)
     - `css/components/checkbox.css` (1×)
     - `css/components/divider.css` (2×)
     - `css/components/input.css` (1×)
@@ -4224,8 +4245,8 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/tabs.css` (1×)
     - `css/components/textarea.css` (1×)
     - `css/components/toggle.css` (3×)
-    - `css/tokens/generated/component.css` (2×)
-  - Tokens que referenciam: `component.alert.root.border-width.default`, `component.badge.root.border-width.default`
+    - `css/tokens/generated/component.css` (3×)
+  - Tokens que referenciam: `component.alert.root.border-width.default`, `component.badge.root.border-width.default`, `component.card.root.border-width.default`
 
 ### `semantic.border.width.focus`
 
@@ -5302,10 +5323,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/reset.css` (1×)
-    - `css/components/card.css` (1×)
     - `css/components/modal.css` (1×)
-    - `css/tokens/generated/component.css` (1×)
-  - Tokens que referenciam: `component.alert.root.radius.default`
+    - `css/tokens/generated/component.css` (2×)
+  - Tokens que referenciam: `component.alert.root.radius.default`, `component.card.root.radius.default`
 
 ### `semantic.radius.md`
 
@@ -5666,13 +5686,14 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/button.css` (1×)
-    - `css/components/card.css` (4×)
     - `css/components/input.css` (1×)
     - `css/components/modal.css` (7×)
     - `css/components/select.css` (3×)
     - `css/components/tabs.css` (2×)
     - `css/components/textarea.css` (1×)
+    - `css/tokens/generated/component.css` (4×)
     - `css/utilities/layout.css` (1×)
+  - Tokens que referenciam: `component.card.header.padding-x.default`, `component.card.header.padding-top.default`, `component.card.body.padding-x.default`, `component.card.body.padding-bottom.default`
 
 ### `semantic.space.md`
 
@@ -5757,7 +5778,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/button.css` (3×)
-    - `css/components/card.css` (2×)
     - `css/components/checkbox.css` (3×)
     - `css/components/input.css` (2×)
     - `css/components/modal.css` (4×)
@@ -5766,9 +5786,9 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/textarea.css` (2×)
     - `css/components/toggle.css` (1×)
     - `css/components/tooltip.css` (4×)
-    - `css/tokens/generated/component.css` (4×)
+    - `css/tokens/generated/component.css` (6×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.alert.root.gap.default`, `component.badge.root.padding-x.default`, `component.tooltip.content.padding-x.default`, `component.tooltip.arrow.base.default`
+  - Tokens que referenciam: `component.alert.root.gap.default`, `component.badge.root.padding-x.default`, `component.card.header.padding-bottom.default`, `component.card.header.gap.default`, `component.tooltip.content.padding-x.default`, `component.tooltip.arrow.base.default`
 
 ### `semantic.space.xl`
 
@@ -6110,7 +6130,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-sm`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.size.14.
 - **Usos**:
-  - Tokens que referenciam: `component.alert.title.font-size.default`, `component.alert.description.font-size.default`, `component.avatar.initials.font-size.sm`, `component.avatar.initials.font-size.md`, `component.tooltip.label.font-size.default`
+  - Tokens que referenciam: `component.alert.title.font-size.default`, `component.alert.description.font-size.default`, `component.avatar.initials.font-size.sm`, `component.avatar.initials.font-size.md`, `component.card.body.font-size.default`, `component.card.subtitle.font-size.default`, `component.tooltip.label.font-size.default`
 
 ### `semantic.typography.body.font-size.xl`
 
@@ -6122,7 +6142,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-xl`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.size.20.
 - **Usos**:
-  - Tokens que referenciam: `component.avatar.initials.font-size.lg`, `component.avatar.icon.size.sm`
+  - Tokens que referenciam: `component.avatar.initials.font-size.lg`, `component.avatar.icon.size.sm`, `component.card.title.font-size.default`
 
 ### `semantic.typography.body.font-size.xs`
 
@@ -6146,7 +6166,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-bold`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.weight.bold.
 - **Usos**:
-  - Tokens que referenciam: `component.alert.title.font-weight.default`, `component.avatar.initials.font-weight.sm`, `component.avatar.initials.font-weight.md`, `component.badge.label.font-weight.default`
+  - Tokens que referenciam: `component.alert.title.font-weight.default`, `component.avatar.initials.font-weight.sm`, `component.avatar.initials.font-weight.md`, `component.badge.label.font-weight.default`, `component.card.subtitle.font-weight.default`
 
 ### `semantic.typography.body.font-weight.medium`
 
@@ -6170,7 +6190,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-regular`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.weight.regular.
 - **Usos**:
-  - Tokens que referenciam: `component.alert.description.font-weight.default`, `component.tooltip.label.font-weight.default`
+  - Tokens que referenciam: `component.alert.description.font-weight.default`, `component.card.body.font-weight.default`, `component.tooltip.label.font-weight.default`
 
 ### `semantic.typography.body.font-weight.semibold`
 
@@ -6182,7 +6202,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-semibold`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.weight.semibold.
 - **Usos**:
-  - Tokens que referenciam: `component.avatar.initials.font-weight.lg`
+  - Tokens que referenciam: `component.avatar.initials.font-weight.lg`, `component.card.title.font-weight.default`
 
 ### `semantic.typography.body.letter-spacing.normal`
 
@@ -6362,7 +6382,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-sm`.
 - **Decisão**: Aliasado a Foundation foundation.typography.line.height.20.
 - **Usos**:
-  - Tokens que referenciam: `component.alert.title.line-height.default`, `component.alert.description.line-height.default`, `component.avatar.initials.line-height.sm`, `component.avatar.initials.line-height.md`, `component.tooltip.label.line-height.default`
+  - Tokens que referenciam: `component.alert.title.line-height.default`, `component.alert.description.line-height.default`, `component.avatar.initials.line-height.sm`, `component.avatar.initials.line-height.md`, `component.card.body.line-height.default`, `component.card.subtitle.line-height.default`, `component.tooltip.label.line-height.default`
 
 ### `semantic.typography.body.line-height.xl`
 
@@ -6374,7 +6394,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-xl`.
 - **Decisão**: Aliasado a Foundation foundation.typography.line.height.32.
 - **Usos**:
-  - Tokens que referenciam: `component.avatar.initials.line-height.lg`
+  - Tokens que referenciam: `component.avatar.initials.line-height.lg`, `component.card.title.line-height.default`
 
 ### `semantic.typography.body.line-height.xs`
 
@@ -6946,6 +6966,227 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/button.css` (1×)
+
+### `component.card.body.font-size.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.font-size.sm`
+- **Sentido**: Font-size do body Card.
+- **Escopo**: font-size
+- **Contexto**: Component token do contrato anatômico Card Body. Binda fontSize dos textos Content nas 3 variantes Style do Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.typography.body.font-size.sm porque o body usa body/sm, mas a escala tipográfica do Card é contrato público do componente.
+- **Usos**:
+  - CSS:
+    - `css/components/card.css` (1×)
+
+### `component.card.body.font-weight.default`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.font-weight.regular`
+- **Sentido**: Font-weight do body Card.
+- **Escopo**: font-weight
+- **Contexto**: Component token do contrato anatômico Card Body. Binda fontStyle dos textos Content nas 3 variantes Style do Figma e substitui peso implícito no CSS.
+- **Decisão**: Alias 1:1 para semantic.typography.body.font-weight.regular porque o body usa Regular; no Figma o campo bindável é fontStyle/string, enquanto no JSON/CSS o contrato permanece numérico.
+- **Usos**:
+  - CSS:
+    - `css/components/card.css` (1×)
+
+### `component.card.body.line-height.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.line-height.sm`
+- **Sentido**: Line-height do body Card.
+- **Escopo**: line-height
+- **Contexto**: Component token do contrato anatômico Card Body. Binda lineHeight dos textos Content nas 3 variantes Style do Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.typography.body.line-height.sm porque o body usa body/sm, mas a métrica vertical do Card é contrato público do componente.
+- **Usos**:
+  - CSS:
+    - `css/components/card.css` (1×)
+
+### `component.card.body.padding-bottom.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.lg`
+- **Sentido**: Padding bottom do body Card.
+- **Escopo**: padding-bottom
+- **Contexto**: Component token do contrato anatômico Card Body. Binda paddingBottom dos bodies nas 3 variantes Style do Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.space.lg porque 16px é escala reutilizável, mas no Card documenta o respiro inferior público do body.
+- **Usos**:
+  - CSS:
+    - `css/components/card.css` (1×)
+
+### `component.card.body.padding-x.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.lg`
+- **Sentido**: Padding horizontal do body Card.
+- **Escopo**: padding-left, padding-right
+- **Contexto**: Component token do contrato anatômico Card Body. Binda paddingLeft/paddingRight dos bodies nas 3 variantes Style do Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.space.lg porque 16px é escala reutilizável, mas no Card documenta o respiro horizontal público do body.
+- **Usos**:
+  - CSS:
+    - `css/components/card.css` (1×)
+
+### `component.card.header.gap.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.sm`
+- **Sentido**: Gap vertical do header Card.
+- **Escopo**: gap
+- **Contexto**: Component token do contrato anatômico Card Header. Binda itemSpacing entre Title e Subtitle nas 3 variantes Style do Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.space.sm porque 8px é escala reutilizável, mas no Card documenta a separação vertical pública do header.
+- **Usos**:
+  - CSS:
+    - `css/components/card.css` (1×)
+
+### `component.card.header.padding-bottom.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.sm`
+- **Sentido**: Padding bottom do header Card.
+- **Escopo**: padding-bottom
+- **Contexto**: Component token do contrato anatômico Card Header. Binda paddingBottom dos headers nas 3 variantes Style do Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.space.sm porque 8px é escala reutilizável, mas no Card documenta a separação pública entre header e body.
+- **Usos**:
+  - CSS:
+    - `css/components/card.css` (1×)
+
+### `component.card.header.padding-top.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.lg`
+- **Sentido**: Padding top do header Card.
+- **Escopo**: padding-top
+- **Contexto**: Component token do contrato anatômico Card Header. Binda paddingTop dos headers nas 3 variantes Style do Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.space.lg porque 16px é escala reutilizável, mas no Card documenta o respiro superior público do header.
+- **Usos**:
+  - CSS:
+    - `css/components/card.css` (1×)
+
+### `component.card.header.padding-x.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.lg`
+- **Sentido**: Padding horizontal do header Card.
+- **Escopo**: padding-left, padding-right
+- **Contexto**: Component token do contrato anatômico Card Header. Binda paddingLeft/paddingRight dos headers nas 3 variantes Style do Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.space.lg porque 16px é escala reutilizável, mas no Card documenta o respiro horizontal público do header.
+- **Usos**:
+  - CSS:
+    - `css/components/card.css` (1×)
+
+### `component.card.root.border-width.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.border.width.default`
+- **Sentido**: Border width do root Card quando stroke está ativo.
+- **Escopo**: border-width
+- **Contexto**: Component token do contrato anatômico Card Root. Binda stroke weights das variantes Default e Outlined no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.border.width.default porque 1px é padrão reutilizável, mas no Card documenta a espessura pública da borda.
+- **Usos**:
+  - CSS:
+    - `css/components/card.css` (2×)
+
+### `component.card.root.radius.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.radius.lg`
+- **Sentido**: Radius do root Card.
+- **Escopo**: border-radius
+- **Contexto**: Component token do contrato anatômico Card Root. Binda os 4 corner radii das 3 variantes Style no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.radius.lg porque 12px é decisão reutilizável, mas no Card documenta o radius público do container.
+- **Usos**:
+  - CSS:
+    - `css/components/card.css` (1×)
+
+### `component.card.subtitle.font-size.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.font-size.sm`
+- **Sentido**: Font-size do subtitle Card.
+- **Escopo**: font-size
+- **Contexto**: Component token do contrato anatômico Card Subtitle. Binda fontSize dos subtitles nas 3 variantes Style do Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.typography.body.font-size.sm porque o subtitle usa body/sm, mas a escala tipográfica do Card é contrato público do componente.
+- **Usos**:
+  - CSS:
+    - `css/components/card.css` (1×)
+
+### `component.card.subtitle.font-weight.default`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.font-weight.bold`
+- **Sentido**: Font-weight do subtitle Card.
+- **Escopo**: font-weight
+- **Contexto**: Component token do contrato anatômico Card Subtitle. Binda fontStyle dos subtitles nas 3 variantes Style do Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.typography.body.font-weight.bold porque o subtitle usa Bold; no Figma o campo bindável é fontStyle/string, enquanto no JSON/CSS o contrato permanece numérico.
+- **Usos**:
+  - CSS:
+    - `css/components/card.css` (1×)
+
+### `component.card.subtitle.line-height.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.line-height.sm`
+- **Sentido**: Line-height do subtitle Card.
+- **Escopo**: line-height
+- **Contexto**: Component token do contrato anatômico Card Subtitle. Binda lineHeight dos subtitles nas 3 variantes Style do Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.typography.body.line-height.sm porque o subtitle usa body/sm, mas a métrica vertical do Card é contrato público do componente.
+- **Usos**:
+  - CSS:
+    - `css/components/card.css` (1×)
+
+### `component.card.title.font-size.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.font-size.xl`
+- **Sentido**: Font-size do title Card.
+- **Escopo**: font-size
+- **Contexto**: Component token do contrato anatômico Card Title. Binda fontSize dos titles nas 3 variantes Style do Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.typography.body.font-size.xl porque o title usa body/xl, mas a escala tipográfica do Card é contrato público do componente.
+- **Usos**:
+  - CSS:
+    - `css/components/card.css` (1×)
+
+### `component.card.title.font-weight.default`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.font-weight.semibold`
+- **Sentido**: Font-weight do title Card.
+- **Escopo**: font-weight
+- **Contexto**: Component token do contrato anatômico Card Title. Binda fontStyle dos titles nas 3 variantes Style do Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.typography.body.font-weight.semibold porque o title usa Semi Bold; no Figma o campo bindável é fontStyle/string, enquanto no JSON/CSS o contrato permanece numérico.
+- **Usos**:
+  - CSS:
+    - `css/components/card.css` (1×)
+
+### `component.card.title.line-height.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.line-height.xl`
+- **Sentido**: Line-height do title Card.
+- **Escopo**: line-height
+- **Contexto**: Component token do contrato anatômico Card Title. Binda lineHeight dos titles nas 3 variantes Style do Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.typography.body.line-height.xl porque o title usa body/xl, mas a métrica vertical do Card é contrato público do componente.
+- **Usos**:
+  - CSS:
+    - `css/components/card.css` (1×)
 
 ### `component.checkbox.box.size.lg`
 

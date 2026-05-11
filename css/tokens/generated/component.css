@@ -53,6 +53,23 @@
   --ds-button-root-height-sm: var(--ds-size-lg); /** Altura do root Button sm. */
   --ds-button-root-height-md: var(--ds-size-xl); /** Altura do root Button md. */
   --ds-button-root-height-lg: var(--ds-size-2xl); /** Altura do root Button lg. */
+  --ds-card-root-radius-default: var(--ds-radius-lg); /** Radius do root Card. */
+  --ds-card-root-border-width-default: var(--ds-border-width-default); /** Border width do root Card quando stroke está ativo. */
+  --ds-card-header-padding-x-default: var(--ds-space-lg); /** Padding horizontal do header Card. */
+  --ds-card-header-padding-top-default: var(--ds-space-lg); /** Padding top do header Card. */
+  --ds-card-header-padding-bottom-default: var(--ds-space-sm); /** Padding bottom do header Card. */
+  --ds-card-header-gap-default: var(--ds-space-sm); /** Gap vertical do header Card. */
+  --ds-card-body-padding-x-default: var(--ds-space-lg); /** Padding horizontal do body Card. */
+  --ds-card-body-padding-bottom-default: var(--ds-space-lg); /** Padding bottom do body Card. */
+  --ds-card-body-font-size-default: var(--ds-body-font-size-sm); /** Font-size do body Card. */
+  --ds-card-body-line-height-default: var(--ds-body-line-height-sm); /** Line-height do body Card. */
+  --ds-card-body-font-weight-default: var(--ds-body-font-weight-regular); /** Font-weight do body Card. */
+  --ds-card-title-font-size-default: var(--ds-body-font-size-xl); /** Font-size do title Card. */
+  --ds-card-title-line-height-default: var(--ds-body-line-height-xl); /** Line-height do title Card. */
+  --ds-card-title-font-weight-default: var(--ds-body-font-weight-semibold); /** Font-weight do title Card. */
+  --ds-card-subtitle-font-size-default: var(--ds-body-font-size-sm); /** Font-size do subtitle Card. */
+  --ds-card-subtitle-line-height-default: var(--ds-body-line-height-sm); /** Line-height do subtitle Card. */
+  --ds-card-subtitle-font-weight-default: var(--ds-body-font-weight-bold); /** Font-weight do subtitle Card. */
   --ds-checkbox-target-height-sm: var(--ds-size-lg); /** Altura minima da area interativa Checkbox sm. */
   --ds-checkbox-target-height-md: var(--ds-size-xl); /** Altura minima da area interativa Checkbox md. */
   --ds-checkbox-target-height-lg: var(--ds-size-2xl); /** Altura minima da area interativa Checkbox lg. */
