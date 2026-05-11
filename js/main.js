@@ -64,6 +64,17 @@
       ]
     },
     {
+      heading: 'Templates',
+      items: [
+        { label: 'Overview',   path: 'docs/templates/index.html' },
+        { label: 'Login',      path: 'docs/templates/login.html' },
+        { label: 'Sign Up',    path: 'docs/templates/signup.html' },
+        { label: 'Dashboard',  path: 'docs/templates/dashboard.html' },
+        { label: 'Settings',   path: 'docs/templates/settings.html' },
+        { label: 'Contact',    path: 'docs/templates/contact.html' }
+      ]
+    },
+    {
       heading: 'Guidelines',
       items: [
         { label: 'Theming',        path: 'docs/theming.html' },
@@ -225,6 +236,7 @@
       'Overview': 'Visão Geral',
       'Foundations': 'Foundations',
       'Components': 'Components',
+      'Templates': 'Templates',
       'Guidelines': 'Guidelines',
       'Getting Started': 'Comece por aqui',
       'Token Architecture': 'Token Architecture',
@@ -259,6 +271,11 @@
       'Spinner': 'Spinner',
       'Skeleton': 'Skeleton',
       'Form Field': 'Form Field',
+      'Login': 'Login',
+      'Sign Up': 'Cadastro',
+      'Dashboard': 'Dashboard',
+      'Settings': 'Configurações',
+      'Contact': 'Contato',
       'Theming': 'Theming',
       'Accessibility': 'Accessibility',
       'Control Sizing': 'Control Sizing',
@@ -326,9 +343,9 @@
     var lang = getLang();
     var map = UI_STRINGS[lang] || {};
     if (Object.keys(map).length) {
-      var parts = original.split(' \u2014 ');
+      var parts = original.split(' — ');
       if (parts.length === 2) {
-        document.title = (map[parts[0]] || parts[0]) + ' \u2014 Design System';
+        document.title = (map[parts[0]] || parts[0]) + ' — Design System';
       }
     } else {
       document.title = original;
