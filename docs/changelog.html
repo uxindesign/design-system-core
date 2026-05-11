@@ -72,6 +72,8 @@
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
 <h3>Corrigido</h3>
 <ul>
+<li><p><strong>Checkbox Figma aplicado aos Component tokens anatómicos.</strong> Os 27 variants do component set <code>Checkbox</code> agora usam <code>component.checkbox.target.height.{sm,md,lg}</code> no <code>minHeight</code> do root, preservando <code>component.checkbox.box.size.{sm,md,lg}</code> em <code>Control</code> width/height. Validação Figma viva: sm <code>32/16</code>, md <code>40/20</code>, lg <code>48/24</code>, sem problemas de binding.</p>
+</li>
 <li><p><strong>API CSS e docs alinhadas aos nomes canónicos de Component.</strong> Classes públicas do Button renomeadas de <code>.ds-btn*</code> para <code>.ds-button*</code> sem alias legado, porque o DS ainda está em beta e só a documentação consome os componentes. A documentação de Button/Control Sizing também deixou de anunciar tokens antigos inexistentes de height/padding/font/icon e passa a publicar o contrato real <code>component.button.root.height.*</code> / <code>--ds-button-root-height-*</code>.</p>
 </li>
 <li><p><strong>Tokens semânticos inválidos do Toggle removidos.</strong> A tentativa anterior criou <code>semantic.control.toggle.*</code> diretamente no JSON sem variável correspondente no Figma, gerando <code>DRIFT_FROM_SOURCE</code> em <code>verify:tokens</code>. Esses aliases foram removidos de <code>tokens/semantic/{light,dark}.json</code> e do registry; <code>toggle.css</code> agora consome os Component tokens do piloto em vez de inventar <code>semantic.control.toggle.*</code>.</p>
