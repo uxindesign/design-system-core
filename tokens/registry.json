@@ -14807,6 +14807,1511 @@
         "tokens": [],
         "figma": []
       }
+    },
+    "component.button.root.min-width.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": null,
+      "sentido": "Largura mínima do root Button sm.",
+      "escopo": [
+        "min-width"
+      ],
+      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Valor específico do Button mantido na camada Component porque não há Semantic reutilizável sem criar abstração falsa.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.min-width.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": null,
+      "sentido": "Largura mínima do root Button md.",
+      "escopo": [
+        "min-width"
+      ],
+      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Valor específico do Button mantido na camada Component porque não há Semantic reutilizável sem criar abstração falsa.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.min-width.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": null,
+      "sentido": "Largura mínima do root Button lg.",
+      "escopo": [
+        "min-width"
+      ],
+      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Valor específico do Button mantido na camada Component porque não há Semantic reutilizável sem criar abstração falsa.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.padding-x.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.md",
+      "sentido": "Padding horizontal do root Button sm.",
+      "escopo": [
+        "padding-left",
+        "padding-right"
+      ],
+      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.md porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.padding-x.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.lg",
+      "sentido": "Padding horizontal do root Button md.",
+      "escopo": [
+        "padding-left",
+        "padding-right"
+      ],
+      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.lg porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.padding-x.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xl",
+      "sentido": "Padding horizontal do root Button lg.",
+      "escopo": [
+        "padding-left",
+        "padding-right"
+      ],
+      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.xl porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.padding-y.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.sm",
+      "sentido": "Padding vertical do root Button sm.",
+      "escopo": [
+        "padding-top",
+        "padding-bottom"
+      ],
+      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.sm porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.padding-y.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.control.padding.10",
+      "sentido": "Padding vertical do root Button md.",
+      "escopo": [
+        "padding-top",
+        "padding-bottom"
+      ],
+      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.control.padding.10 porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.padding-y.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.md",
+      "sentido": "Padding vertical do root Button lg.",
+      "escopo": [
+        "padding-top",
+        "padding-bottom"
+      ],
+      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.md porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.gap.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xs",
+      "sentido": "Gap interno do root Button sm.",
+      "escopo": [
+        "gap"
+      ],
+      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.xs porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.gap.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.sm",
+      "sentido": "Gap interno do root Button md.",
+      "escopo": [
+        "gap"
+      ],
+      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.sm porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.gap.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.sm",
+      "sentido": "Gap interno do root Button lg.",
+      "escopo": [
+        "gap"
+      ],
+      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.sm porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.radius.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.radius.md",
+      "sentido": "Radius do root Button.",
+      "escopo": [
+        "border-radius"
+      ],
+      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.radius.md porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.border-width.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.border.width.default",
+      "sentido": "Border width do root Button quando stroke está ativo.",
+      "escopo": [
+        "border-width"
+      ],
+      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.border.width.default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.icon-only-width.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.lg",
+      "sentido": "Largura do Button somente-ícone sm.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.lg porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.icon-only-width.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.xl",
+      "sentido": "Largura do Button somente-ícone md.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.xl porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.icon-only-width.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.2xl",
+      "sentido": "Largura do Button somente-ícone lg.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.2xl porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.icon-only-padding.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.control.padding.6",
+      "sentido": "Padding simétrico do Button somente-ícone sm.",
+      "escopo": [
+        "padding"
+      ],
+      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.control.padding.6 porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.icon-only-padding.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.sm",
+      "sentido": "Padding simétrico do Button somente-ícone md.",
+      "escopo": [
+        "padding"
+      ],
+      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.sm porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.icon-only-padding.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.md",
+      "sentido": "Padding simétrico do Button somente-ícone lg.",
+      "escopo": [
+        "padding"
+      ],
+      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.md porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.background.brand.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.background.default",
+      "sentido": "Background do root Button brand default.",
+      "escopo": [
+        "background-color"
+      ],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.primary.background.default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.background.brand.hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.background.hover",
+      "sentido": "Background do root Button brand hover.",
+      "escopo": [
+        "background-color"
+      ],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.primary.background.hover porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.background.brand.pressed": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.background.active",
+      "sentido": "Background do root Button brand pressed.",
+      "escopo": [
+        "background-color"
+      ],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.primary.background.active porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.background.brand.focused": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.background.default",
+      "sentido": "Background do root Button brand focused.",
+      "escopo": [
+        "background-color"
+      ],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.primary.background.default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.background.brand.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.background.disabled",
+      "sentido": "Background do root Button brand disabled.",
+      "escopo": [
+        "background-color"
+      ],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.primary.background.disabled porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.background.toned.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.toned.background.default",
+      "sentido": "Background do root Button toned default.",
+      "escopo": [
+        "background-color"
+      ],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.toned.background.default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.background.toned.hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.toned.background.hover",
+      "sentido": "Background do root Button toned hover.",
+      "escopo": [
+        "background-color"
+      ],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.toned.background.hover porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.background.toned.pressed": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.toned.background.active",
+      "sentido": "Background do root Button toned pressed.",
+      "escopo": [
+        "background-color"
+      ],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.toned.background.active porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.background.toned.focused": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.toned.background.default",
+      "sentido": "Background do root Button toned focused.",
+      "escopo": [
+        "background-color"
+      ],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.toned.background.default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.background.toned.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.toned.background.disabled",
+      "sentido": "Background do root Button toned disabled.",
+      "escopo": [
+        "background-color"
+      ],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.toned.background.disabled porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.background.outline.hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.outline.background.hover",
+      "sentido": "Background do root Button outline hover.",
+      "escopo": [
+        "background-color"
+      ],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.outline.background.hover porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.background.outline.pressed": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.background.subtle",
+      "sentido": "Background do root Button outline pressed.",
+      "escopo": [
+        "background-color"
+      ],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.background.subtle porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.background.ghost.hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.ghost.background.hover",
+      "sentido": "Background do root Button ghost hover.",
+      "escopo": [
+        "background-color"
+      ],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.ghost.background.hover porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.background.ghost.pressed": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.ghost.background.active",
+      "sentido": "Background do root Button ghost pressed.",
+      "escopo": [
+        "background-color"
+      ],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.ghost.background.active porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.background.success.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.feedback.success.background.default",
+      "sentido": "Background do root Button success default.",
+      "escopo": [
+        "background-color"
+      ],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.feedback.success.background.default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.background.success.hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.feedback.success.background.hover",
+      "sentido": "Background do root Button success hover.",
+      "escopo": [
+        "background-color"
+      ],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.feedback.success.background.hover porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.background.success.pressed": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.feedback.success.background.active",
+      "sentido": "Background do root Button success pressed.",
+      "escopo": [
+        "background-color"
+      ],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.feedback.success.background.active porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.background.success.focused": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.feedback.success.background.default",
+      "sentido": "Background do root Button success focused.",
+      "escopo": [
+        "background-color"
+      ],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.feedback.success.background.default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.background.success.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.feedback.success.background.disabled",
+      "sentido": "Background do root Button success disabled.",
+      "escopo": [
+        "background-color"
+      ],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.feedback.success.background.disabled porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.background.danger.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.feedback.error.background.default",
+      "sentido": "Background do root Button danger default.",
+      "escopo": [
+        "background-color"
+      ],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.feedback.error.background.default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.background.danger.hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.feedback.error.background.hover",
+      "sentido": "Background do root Button danger hover.",
+      "escopo": [
+        "background-color"
+      ],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.feedback.error.background.hover porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.background.danger.pressed": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.feedback.error.background.active",
+      "sentido": "Background do root Button danger pressed.",
+      "escopo": [
+        "background-color"
+      ],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.feedback.error.background.active porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.background.danger.focused": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.feedback.error.background.default",
+      "sentido": "Background do root Button danger focused.",
+      "escopo": [
+        "background-color"
+      ],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.feedback.error.background.default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.background.danger.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.feedback.error.background.disabled",
+      "sentido": "Background do root Button danger disabled.",
+      "escopo": [
+        "background-color"
+      ],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.feedback.error.background.disabled porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.border-color.outline.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.outline.border-default",
+      "sentido": "Border color do root Button outline default.",
+      "escopo": [
+        "border-color"
+      ],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.outline.border-default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.border-color.outline.hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.outline.border-hover",
+      "sentido": "Border color do root Button outline hover.",
+      "escopo": [
+        "border-color"
+      ],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.outline.border-hover porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.border-color.outline.pressed": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.control-default",
+      "sentido": "Border color do root Button outline pressed.",
+      "escopo": [
+        "border-color"
+      ],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.border.control-default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.border-color.outline.focused": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.default",
+      "sentido": "Border color do root Button outline focused.",
+      "escopo": [
+        "border-color"
+      ],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.border.default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.border-color.outline.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.control-disabled",
+      "sentido": "Border color do root Button outline disabled.",
+      "escopo": [
+        "border-color"
+      ],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.border.control-disabled porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.label-frame.padding-x.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xs",
+      "sentido": "Padding horizontal do Label Frame Button.",
+      "escopo": [
+        "padding-left",
+        "padding-right"
+      ],
+      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.xs porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.label.font-family.default": {
+      "layer": "component",
+      "type": "string",
+      "references": "semantic.typography.body.font-family.sans",
+      "sentido": "font-family do label Button default.",
+      "escopo": [
+        "font-family"
+      ],
+      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-family.sans porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.label.font-weight.default": {
+      "layer": "component",
+      "type": "string",
+      "references": "semantic.typography.body.font-weight.bold",
+      "sentido": "font-weight do label Button default.",
+      "escopo": [
+        "font-weight"
+      ],
+      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-weight.bold porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.label.letter-spacing.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.letter-spacing.normal",
+      "sentido": "letter-spacing do label Button default.",
+      "escopo": [
+        "letter-spacing"
+      ],
+      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.letter-spacing.normal porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.label.font-size.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.sm",
+      "sentido": "font-size do label Button sm.",
+      "escopo": [
+        "font-size"
+      ],
+      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-size.sm porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.label.font-size.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.sm",
+      "sentido": "font-size do label Button md.",
+      "escopo": [
+        "font-size"
+      ],
+      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-size.sm porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.label.font-size.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.md",
+      "sentido": "font-size do label Button lg.",
+      "escopo": [
+        "font-size"
+      ],
+      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-size.md porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.label.line-height.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.2xs",
+      "sentido": "line-height do label Button sm.",
+      "escopo": [
+        "height",
+        "min-height"
+      ],
+      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.line-height.2xs porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.label.line-height.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.sm",
+      "sentido": "line-height do label Button md.",
+      "escopo": [
+        "height",
+        "min-height"
+      ],
+      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.line-height.sm porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.label.line-height.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.md",
+      "sentido": "line-height do label Button lg.",
+      "escopo": [
+        "height",
+        "min-height"
+      ],
+      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.line-height.md porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.icon.frame-size.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.md",
+      "sentido": "Tamanho do frame de ícone Button.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.md porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.icon.glyph-size.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.sm",
+      "sentido": "Tamanho do glyph de ícone Button sm.",
+      "escopo": [
+        "font-size"
+      ],
+      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.sm porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.icon.glyph-size.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.md",
+      "sentido": "Tamanho do glyph de ícone Button md.",
+      "escopo": [
+        "font-size"
+      ],
+      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.md porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.icon.glyph-size.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.md",
+      "sentido": "Tamanho do glyph de ícone Button lg.",
+      "escopo": [
+        "font-size"
+      ],
+      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.md porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.focus-ring.stroke-width.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.border.width.focus",
+      "sentido": "stroke-width do focus ring Button.",
+      "escopo": [],
+      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.border.width.focus porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.focus-ring.offset.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.border.width.focus",
+      "sentido": "offset do focus ring Button.",
+      "escopo": [
+        "outline-offset"
+      ],
+      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.border.width.focus porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.focus-ring.radius.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.radius.lg",
+      "sentido": "radius do focus ring Button.",
+      "escopo": [
+        "border-radius"
+      ],
+      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.radius.lg porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.focus-ring.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.focus",
+      "sentido": "color do focus ring Button.",
+      "escopo": [
+        "outline-color",
+        "stroke"
+      ],
+      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.border.focus porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.content.color.brand.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.content-default",
+      "sentido": "Cor de conteúdo do Button default undefined.",
+      "escopo": [],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.primary.content-default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.content.color.brand.hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.content-default",
+      "sentido": "Cor de conteúdo do Button hover undefined.",
+      "escopo": [],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.primary.content-default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.content.color.brand.pressed": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.content-default",
+      "sentido": "Cor de conteúdo do Button pressed undefined.",
+      "escopo": [],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.primary.content-default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.content.color.brand.focused": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.content-default",
+      "sentido": "Cor de conteúdo do Button focused undefined.",
+      "escopo": [],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.primary.content-default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.content.color.brand.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.content-disabled",
+      "sentido": "Cor de conteúdo do Button disabled undefined.",
+      "escopo": [],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.primary.content-disabled porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.content.color.toned.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.toned.content-default",
+      "sentido": "Cor de conteúdo do Button default undefined.",
+      "escopo": [],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.toned.content-default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.content.color.toned.hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.link.content-hover",
+      "sentido": "Cor de conteúdo do Button hover undefined.",
+      "escopo": [],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.link.content-hover porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.content.color.toned.pressed": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.link.content-hover",
+      "sentido": "Cor de conteúdo do Button pressed undefined.",
+      "escopo": [],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.link.content-hover porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.content.color.toned.focused": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.toned.content-default",
+      "sentido": "Cor de conteúdo do Button focused undefined.",
+      "escopo": [],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.toned.content-default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.content.color.toned.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.toned.content-disabled",
+      "sentido": "Cor de conteúdo do Button disabled undefined.",
+      "escopo": [],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.toned.content-disabled porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.content.color.outline.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.outline.content-default",
+      "sentido": "Cor de conteúdo do Button default undefined.",
+      "escopo": [],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.outline.content-default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.content.color.outline.hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.outline.content-default",
+      "sentido": "Cor de conteúdo do Button hover undefined.",
+      "escopo": [],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.outline.content-default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.content.color.outline.pressed": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.outline.content-default",
+      "sentido": "Cor de conteúdo do Button pressed undefined.",
+      "escopo": [],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.outline.content-default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.content.color.outline.focused": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.outline.content-default",
+      "sentido": "Cor de conteúdo do Button focused undefined.",
+      "escopo": [],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.outline.content-default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.content.color.outline.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.outline.content-disabled",
+      "sentido": "Cor de conteúdo do Button disabled undefined.",
+      "escopo": [],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.outline.content-disabled porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.content.color.ghost.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.link.content-default",
+      "sentido": "Cor de conteúdo do Button default undefined.",
+      "escopo": [],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.link.content-default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.content.color.ghost.hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.link.content-default",
+      "sentido": "Cor de conteúdo do Button hover undefined.",
+      "escopo": [],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.link.content-default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.content.color.ghost.pressed": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.link.content-default",
+      "sentido": "Cor de conteúdo do Button pressed undefined.",
+      "escopo": [],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.link.content-default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.content.color.ghost.focused": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.link.content-default",
+      "sentido": "Cor de conteúdo do Button focused undefined.",
+      "escopo": [],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.link.content-default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.content.color.ghost.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.ghost.content-disabled",
+      "sentido": "Cor de conteúdo do Button disabled undefined.",
+      "escopo": [],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.ghost.content-disabled porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.content.color.success.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.feedback.success.content-contrast",
+      "sentido": "Cor de conteúdo do Button default undefined.",
+      "escopo": [],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.feedback.success.content-contrast porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.content.color.success.hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.feedback.success.content-contrast",
+      "sentido": "Cor de conteúdo do Button hover undefined.",
+      "escopo": [],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.feedback.success.content-contrast porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.content.color.success.pressed": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.feedback.success.content-contrast",
+      "sentido": "Cor de conteúdo do Button pressed undefined.",
+      "escopo": [],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.feedback.success.content-contrast porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.content.color.success.focused": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.feedback.success.content-contrast",
+      "sentido": "Cor de conteúdo do Button focused undefined.",
+      "escopo": [],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.feedback.success.content-contrast porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.content.color.success.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.feedback.success.content-disabled",
+      "sentido": "Cor de conteúdo do Button disabled undefined.",
+      "escopo": [],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.feedback.success.content-disabled porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.content.color.danger.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.feedback.error.content-contrast",
+      "sentido": "Cor de conteúdo do Button default undefined.",
+      "escopo": [],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.feedback.error.content-contrast porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.content.color.danger.hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.feedback.error.content-contrast",
+      "sentido": "Cor de conteúdo do Button hover undefined.",
+      "escopo": [],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.feedback.error.content-contrast porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.content.color.danger.pressed": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.feedback.error.content-contrast",
+      "sentido": "Cor de conteúdo do Button pressed undefined.",
+      "escopo": [],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.feedback.error.content-contrast porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.content.color.danger.focused": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.feedback.error.content-contrast",
+      "sentido": "Cor de conteúdo do Button focused undefined.",
+      "escopo": [],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.feedback.error.content-contrast porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.content.color.danger.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.feedback.error.content-disabled",
+      "sentido": "Cor de conteúdo do Button disabled undefined.",
+      "escopo": [],
+      "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.feedback.error.content-disabled porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
     }
   }
 }

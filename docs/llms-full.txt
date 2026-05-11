@@ -206,6 +206,7 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 ## [Não publicado]
 
 ### Corrigido
+- **Button Figma/CSS aplicado aos Component tokens anatômicos completos.** Criado `component.button` para root height/min-width/padding/gap/radius/border, background por estilo/estado, border color de Outline, cor de conteúdo, tipografia do label, frame/glyph de ícone, icon-only e focus ring. Os 216 variants vivos do Button no Figma agora usam Component tokens nos atributos públicos; CSS passa a consumir `--ds-button-*`, corrige `Brand/Large/Focused` com padding vertical incorreto e remove opacidade disabled global em favor de cores de estado.
 - **Form Field aplicado aos Component tokens CSS-only.** Criado `component.form-field` para gaps, cores e tipografia de label, required, helper e error; o CSS passa a consumir `--ds-form-field-*` sem criar componente visual no Figma, respeitando ADR-017. Helper e error também foram alinhados ao Figma vivo para `body/xs` com `line-height/xs`.
 - **Divider Figma/CSS aplicado aos tokens Component anatômicos.** Criado `component.divider.line` para cor, espessura e raio da linha; os variants `Orientation=Horizontal` e `Orientation=Vertical` vivos do Figma agora usam tokens Component nesses contratos. CSS passa a consumir `--ds-divider-*`; comprimento segue contextual (`100%`/container) e não vira token.
 - **Breadcrumb Figma/CSS aplicado aos tokens Component anatômicos.** Criado `component.breadcrumb` para gap da lista, gap/raio do item, tipografia do rótulo e tipografia do separador; `Breadcrumb` e `Breadcrumb Item` vivos do Figma agora usam tokens Component nesses contratos. CSS passa a consumir `--ds-breadcrumb-*`; separador é alinhado ao Figma com `content.subtle` e tipografia `body/xs regular`.
@@ -1499,7 +1500,7 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 | Foundation | 266 | 🟢 |
 | Semantic (light) | 174 | 🟢 |
 | Semantic (dark) | 174 | 🟢 |
-| Component | 207 | 🟢 |
+| Component | 304 | 🟢 |
 
 ## Pipeline
 
@@ -11642,7 +11643,7 @@ Seção expandida com contexto, decisão e locais de uso.
 |--------|--------|----------|
 | Foundation/Core | **266** | 9 |
 | Semantic/System | **174 × 2 modos** | light.json + dark.json |
-| Component | **207** | 19 |
+| Component | **304** | 19 |
 
 ## Foundation (266 tokens)
 
@@ -11684,7 +11685,7 @@ semantic.typography.*
 semantic.z.*
 ```
 
-## Component (207 tokens)
+## Component (304 tokens)
 
 | Arquivo | Tokens |
 |---------|--------|
@@ -11692,7 +11693,7 @@ semantic.z.*
 | `avatar.json` | 16 |
 | `badge.json` | 8 |
 | `breadcrumb.json` | 11 |
-| `button.json` | 3 |
+| `button.json` | 100 |
 | `card.json` | 17 |
 | `checkbox.json` | 6 |
 | `divider.json` | 3 |

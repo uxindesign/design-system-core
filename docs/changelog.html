@@ -72,6 +72,8 @@
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
 <h3>Corrigido</h3>
 <ul>
+<li><p><strong>Button Figma/CSS aplicado aos Component tokens anatômicos completos.</strong> Criado <code>component.button</code> para root height/min-width/padding/gap/radius/border, background por estilo/estado, border color de Outline, cor de conteúdo, tipografia do label, frame/glyph de ícone, icon-only e focus ring. Os 216 variants vivos do Button no Figma agora usam Component tokens nos atributos públicos; CSS passa a consumir <code>--ds-button-*</code>, corrige <code>Brand/Large/Focused</code> com padding vertical incorreto e remove opacidade disabled global em favor de cores de estado.</p>
+</li>
 <li><p><strong>Form Field aplicado aos Component tokens CSS-only.</strong> Criado <code>component.form-field</code> para gaps, cores e tipografia de label, required, helper e error; o CSS passa a consumir <code>--ds-form-field-*</code> sem criar componente visual no Figma, respeitando ADR-017. Helper e error também foram alinhados ao Figma vivo para <code>body/xs</code> com <code>line-height/xs</code>.</p>
 </li>
 <li><p><strong>Divider Figma/CSS aplicado aos tokens Component anatômicos.</strong> Criado <code>component.divider.line</code> para cor, espessura e raio da linha; os variants <code>Orientation=Horizontal</code> e <code>Orientation=Vertical</code> vivos do Figma agora usam tokens Component nesses contratos. CSS passa a consumir <code>--ds-divider-*</code>; comprimento segue contextual (<code>100%</code>/container) e não vira token.</p>

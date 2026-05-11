@@ -7,14 +7,13 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--ds-space-sm);
-  font-family: var(--ds-body-font-family-sans);
-  /* Figma: button label = Inter Bold (700) em todos os tamanhos */
-  font-weight: var(--ds-body-font-weight-bold);
-  line-height: var(--ds-body-line-height-sm);
+  gap: var(--ds-button-root-gap-md);
+  font-family: var(--ds-button-label-font-family-default);
+  font-weight: var(--ds-button-label-font-weight-default);
+  line-height: var(--ds-button-label-line-height-md);
   text-decoration: none;
-  border: var(--ds-border-width-default) solid transparent;
-  border-radius: var(--ds-radius-md);
+  border: var(--ds-button-root-border-width-default) solid transparent;
+  border-radius: var(--ds-button-root-radius-default);
   cursor: pointer;
   transition: background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
               border-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
@@ -25,29 +24,31 @@
 
   /* Default size: md (40px) */
   height: var(--ds-button-root-height-md);
-  padding: var(--ds-space-control-padding-10) var(--ds-space-lg);
-  font-size: var(--ds-body-font-size-sm);
-  min-width: var(--ds-size-2xl);
+  padding: var(--ds-button-root-padding-y-md) var(--ds-button-root-padding-x-md);
+  font-size: var(--ds-button-label-font-size-md);
+  min-width: var(--ds-button-root-min-width-md);
 }
 
 .ds-button:focus-visible {
-  outline: var(--ds-border-width-focus) solid var(--ds-border-focus);
-  outline-offset: var(--ds-border-width-focus);
+  outline: var(--ds-button-focus-ring-stroke-width-default) solid var(--ds-button-focus-ring-color-default);
+  outline-offset: var(--ds-button-focus-ring-offset-default);
 }
 
 .ds-button[disabled],
 .ds-button--disabled {
-  opacity: var(--ds-opacity-disabled);
   cursor: not-allowed;
   pointer-events: none;
 }
 
-/* Icon inside button — default 20px (md) */
 .ds-button__icon {
-  width: var(--ds-size-md);
-  height: var(--ds-size-md);
+  width: var(--ds-button-icon-frame-size-default);
+  height: var(--ds-button-icon-frame-size-default);
   flex-shrink: 0;
   fill: currentColor;
+}
+
+.ds-button__label {
+  padding-inline: var(--ds-button-label-frame-padding-x-default);
 }
 
 /* ---------------------------------------------------------
@@ -55,63 +56,70 @@
    --------------------------------------------------------- */
 .ds-button--sm {
   height: var(--ds-button-root-height-sm);
-  padding: var(--ds-space-sm) var(--ds-space-md);
-  font-size: var(--ds-body-font-size-sm);
-  line-height: var(--ds-body-line-height-2xs);
-  border-radius: var(--ds-radius-md);
-  /* Figma: gap entre ícone e label no Small é 4px (space-xs) */
-  gap: var(--ds-space-xs);
-}
-
-.ds-button--sm .ds-button__icon {
-  width: var(--ds-size-sm);
-  height: var(--ds-size-sm);
+  padding: var(--ds-button-root-padding-y-sm) var(--ds-button-root-padding-x-sm);
+  font-size: var(--ds-button-label-font-size-sm);
+  line-height: var(--ds-button-label-line-height-sm);
+  min-width: var(--ds-button-root-min-width-sm);
+  gap: var(--ds-button-root-gap-sm);
 }
 
 .ds-button--lg {
   height: var(--ds-button-root-height-lg);
-  padding: var(--ds-space-md) var(--ds-space-xl);
-  font-size: var(--ds-body-font-size-md);
-  line-height: var(--ds-body-line-height-md);
-  border-radius: var(--ds-radius-md);
+  padding: var(--ds-button-root-padding-y-lg) var(--ds-button-root-padding-x-lg);
+  font-size: var(--ds-button-label-font-size-lg);
+  line-height: var(--ds-button-label-line-height-lg);
+  min-width: var(--ds-button-root-min-width-lg);
+  gap: var(--ds-button-root-gap-lg);
 }
-
-/* lg: icon stays size-md (24px), same as default — no override needed */
 
 /* ---------------------------------------------------------
    Variant: Brand (primary filled — action/primary/default)
    --------------------------------------------------------- */
 .ds-button--brand {
-  background-color: var(--ds-primary-background-default);
-  color: var(--ds-primary-content-default);
-  border-color: var(--ds-primary-background-default);
+  background-color: var(--ds-button-root-background-brand-default);
+  color: var(--ds-button-content-color-brand-default);
+  border-color: transparent;
 }
 
 .ds-button--brand:hover {
-  background-color: var(--ds-primary-background-hover);
-  border-color: var(--ds-primary-background-hover);
+  background-color: var(--ds-button-root-background-brand-hover);
+  color: var(--ds-button-content-color-brand-hover);
 }
 
 .ds-button--brand:active {
-  background-color: var(--ds-primary-background-active);
-  border-color: var(--ds-primary-background-active);
+  background-color: var(--ds-button-root-background-brand-pressed);
+  color: var(--ds-button-content-color-brand-pressed);
+}
+
+.ds-button--brand[disabled],
+.ds-button--brand.ds-button--disabled {
+  background-color: var(--ds-button-root-background-brand-disabled);
+  color: var(--ds-button-content-color-brand-disabled);
 }
 
 /* ---------------------------------------------------------
    Variant: Toned (alpha-tinted primary — action/primary/toned)
    --------------------------------------------------------- */
 .ds-button--toned {
-  background-color: var(--ds-toned-background-default);
-  color: var(--ds-toned-content-default);
+  background-color: var(--ds-button-root-background-toned-default);
+  color: var(--ds-button-content-color-toned-default);
   border-color: transparent;
 }
 
 .ds-button--toned:hover {
-  background-color: var(--ds-toned-background-hover);
+  background-color: var(--ds-button-root-background-toned-hover);
+  color: var(--ds-button-content-color-toned-hover);
 }
 
 .ds-button--toned:active {
-  background-color: var(--ds-toned-background-active);
+  background-color: var(--ds-button-root-background-toned-pressed);
+  color: var(--ds-button-content-color-toned-pressed);
+}
+
+.ds-button--toned[disabled],
+.ds-button--toned.ds-button--disabled {
+  background-color: var(--ds-button-root-background-toned-disabled);
+  color: var(--ds-button-content-color-toned-disabled);
 }
 
 /* ---------------------------------------------------------
@@ -119,17 +127,27 @@
    --------------------------------------------------------- */
 .ds-button--outline {
   background-color: transparent;
-  color: var(--ds-outline-content-default);
-  border-color: var(--ds-outline-border-default);
+  color: var(--ds-button-content-color-outline-default);
+  border-color: var(--ds-button-root-border-color-outline-default);
 }
 
 .ds-button--outline:hover {
-  background-color: var(--ds-outline-background-hover);
-  border-color: var(--ds-outline-border-hover);
+  background-color: var(--ds-button-root-background-outline-hover);
+  color: var(--ds-button-content-color-outline-hover);
+  border-color: var(--ds-button-root-border-color-outline-hover);
 }
 
 .ds-button--outline:active {
-  background-color: var(--ds-outline-background-active);
+  background-color: var(--ds-button-root-background-outline-pressed);
+  color: var(--ds-button-content-color-outline-pressed);
+  border-color: var(--ds-button-root-border-color-outline-pressed);
+}
+
+.ds-button--outline[disabled],
+.ds-button--outline.ds-button--disabled {
+  background-color: transparent;
+  color: var(--ds-button-content-color-outline-disabled);
+  border-color: var(--ds-button-root-border-color-outline-disabled);
 }
 
 /* ---------------------------------------------------------
@@ -137,54 +155,74 @@
    --------------------------------------------------------- */
 .ds-button--ghost {
   background-color: transparent;
-  color: var(--ds-ghost-content-default);
+  color: var(--ds-button-content-color-ghost-default);
   border-color: transparent;
 }
 
 .ds-button--ghost:hover {
-  background-color: var(--ds-ghost-background-hover);
+  background-color: var(--ds-button-root-background-ghost-hover);
+  color: var(--ds-button-content-color-ghost-hover);
 }
 
 .ds-button--ghost:active {
-  background-color: var(--ds-ghost-background-active);
+  background-color: var(--ds-button-root-background-ghost-pressed);
+  color: var(--ds-button-content-color-ghost-pressed);
+}
+
+.ds-button--ghost[disabled],
+.ds-button--ghost.ds-button--disabled {
+  background-color: transparent;
+  color: var(--ds-button-content-color-ghost-disabled);
 }
 
 /* ---------------------------------------------------------
    Variant: Success
    --------------------------------------------------------- */
 .ds-button--success {
-  background-color: var(--ds-feedback-success-background-default);
-  color: var(--ds-feedback-success-content-contrast);
-  border-color: var(--ds-feedback-success-background-default);
+  background-color: var(--ds-button-root-background-success-default);
+  color: var(--ds-button-content-color-success-default);
+  border-color: transparent;
 }
 
 .ds-button--success:hover {
-  background-color: var(--ds-feedback-success-background-hover);
-  border-color: var(--ds-feedback-success-background-hover);
+  background-color: var(--ds-button-root-background-success-hover);
+  color: var(--ds-button-content-color-success-hover);
 }
 
 .ds-button--success:active {
-  background-color: var(--ds-feedback-success-background-active);
-  border-color: var(--ds-feedback-success-background-active);
+  background-color: var(--ds-button-root-background-success-pressed);
+  color: var(--ds-button-content-color-success-pressed);
+}
+
+.ds-button--success[disabled],
+.ds-button--success.ds-button--disabled {
+  background-color: var(--ds-button-root-background-success-disabled);
+  color: var(--ds-button-content-color-success-disabled);
 }
 
 /* ---------------------------------------------------------
    Variant: Danger (action/danger/default)
    --------------------------------------------------------- */
 .ds-button--danger {
-  background-color: var(--ds-feedback-error-background-default);
-  color: var(--ds-feedback-error-content-contrast);
-  border-color: var(--ds-feedback-error-background-default);
+  background-color: var(--ds-button-root-background-danger-default);
+  color: var(--ds-button-content-color-danger-default);
+  border-color: transparent;
 }
 
 .ds-button--danger:hover {
-  background-color: var(--ds-feedback-error-background-hover);
-  border-color: var(--ds-feedback-error-background-hover);
+  background-color: var(--ds-button-root-background-danger-hover);
+  color: var(--ds-button-content-color-danger-hover);
 }
 
 .ds-button--danger:active {
-  background-color: var(--ds-feedback-error-background-active);
-  border-color: var(--ds-feedback-error-background-active);
+  background-color: var(--ds-button-root-background-danger-pressed);
+  color: var(--ds-button-content-color-danger-pressed);
+}
+
+.ds-button--danger[disabled],
+.ds-button--danger.ds-button--disabled {
+  background-color: var(--ds-button-root-background-danger-disabled);
+  color: var(--ds-button-content-color-danger-disabled);
 }
 
 /* ---------------------------------------------------------
@@ -195,33 +233,31 @@
 }
 
 .ds-button--icon-only.ds-button--sm {
-  width: var(--ds-size-lg);
-  /* (32 - 20) / 2 = 6px simétrico */
-  padding: var(--ds-space-control-padding-6);
+  width: var(--ds-button-root-icon-only-width-sm);
+  padding: var(--ds-button-root-icon-only-padding-sm);
 }
 
 .ds-button--icon-only:not(.ds-button--sm):not(.ds-button--lg) {
-  width: var(--ds-size-xl);
-  /* (40 - 24) / 2 = 8px simétrico */
-  padding: var(--ds-space-sm);
+  width: var(--ds-button-root-icon-only-width-md);
+  padding: var(--ds-button-root-icon-only-padding-md);
 }
 
 .ds-button--icon-only.ds-button--lg {
-  width: var(--ds-size-2xl);
-  /* (48 - 24) / 2 = 12px simétrico */
-  padding: var(--ds-space-md);
+  width: var(--ds-button-root-icon-only-width-lg);
+  padding: var(--ds-button-root-icon-only-padding-lg);
 }
 
-/* Material Symbols inside button — glyph escala por size do button (sm=20, md/lg=24) */
 .ds-button .material-symbols-outlined {
-  font-size: var(--ds-size-md);
+  font-size: var(--ds-button-icon-glyph-size-md);
 }
 
 .ds-button--sm .material-symbols-outlined {
-  font-size: var(--ds-size-sm);
+  font-size: var(--ds-button-icon-glyph-size-sm);
 }
 
-/* lg usa default md (24) — sem override */
+.ds-button--lg .material-symbols-outlined {
+  font-size: var(--ds-button-icon-glyph-size-lg);
+}
 
 /* ---------------------------------------------------------
    Full Width

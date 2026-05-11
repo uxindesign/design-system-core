@@ -3,6 +3,9 @@
  */
 
 :root {
+  --ds-button-root-min-width-sm: 80px; /** Largura mínima específica do root Button sm. Component-specific; não há Semantic reutilizável. */
+  --ds-button-root-min-width-md: 88px; /** Largura mínima específica do root Button md. Component-specific; não há Semantic reutilizável. */
+  --ds-button-root-min-width-lg: 102px; /** Largura mínima específica do root Button lg. Component-specific; não há Semantic reutilizável. */
   --ds-skeleton-text-height-default: var(--ds-dimension-12); /** Altura do Skeleton Text. */
   --ds-skeleton-rectangle-height-default: var(--ds-dimension-120); /** Altura default do Skeleton Rectangle. */
   --ds-textarea-field-min-height-sm: var(--ds-dimension-80); /** Altura mínima do field Textarea sm. */
@@ -64,6 +67,100 @@
   --ds-button-root-height-sm: var(--ds-size-lg); /** Altura do root Button sm. */
   --ds-button-root-height-md: var(--ds-size-xl); /** Altura do root Button md. */
   --ds-button-root-height-lg: var(--ds-size-2xl); /** Altura do root Button lg. */
+  --ds-button-root-padding-x-sm: var(--ds-space-md); /** Padding horizontal do root Button sm. */
+  --ds-button-root-padding-x-md: var(--ds-space-lg); /** Padding horizontal do root Button md. */
+  --ds-button-root-padding-x-lg: var(--ds-space-xl); /** Padding horizontal do root Button lg. */
+  --ds-button-root-padding-y-sm: var(--ds-space-sm); /** Padding vertical do root Button sm. */
+  --ds-button-root-padding-y-md: var(--ds-space-control-padding-10); /** Padding vertical do root Button md. */
+  --ds-button-root-padding-y-lg: var(--ds-space-md); /** Padding vertical do root Button lg. */
+  --ds-button-root-gap-sm: var(--ds-space-xs); /** Gap interno do root Button sm. */
+  --ds-button-root-gap-md: var(--ds-space-sm); /** Gap interno do root Button md. */
+  --ds-button-root-gap-lg: var(--ds-space-sm); /** Gap interno do root Button lg. */
+  --ds-button-root-radius-default: var(--ds-radius-md); /** Radius do root Button. */
+  --ds-button-root-border-width-default: var(--ds-border-width-default); /** Border width do root Button quando stroke está ativo. */
+  --ds-button-root-icon-only-width-sm: var(--ds-size-lg); /** Largura do Button somente-ícone sm. */
+  --ds-button-root-icon-only-width-md: var(--ds-size-xl); /** Largura do Button somente-ícone md. */
+  --ds-button-root-icon-only-width-lg: var(--ds-size-2xl); /** Largura do Button somente-ícone lg. */
+  --ds-button-root-icon-only-padding-sm: var(--ds-space-control-padding-6); /** Padding simétrico do Button somente-ícone sm. */
+  --ds-button-root-icon-only-padding-md: var(--ds-space-sm); /** Padding simétrico do Button somente-ícone md. */
+  --ds-button-root-icon-only-padding-lg: var(--ds-space-md); /** Padding simétrico do Button somente-ícone lg. */
+  --ds-button-root-background-brand-default: var(--ds-primary-background-default); /** Background do root Button brand default. */
+  --ds-button-root-background-brand-hover: var(--ds-primary-background-hover); /** Background do root Button brand hover. */
+  --ds-button-root-background-brand-pressed: var(--ds-primary-background-active); /** Background do root Button brand pressed. */
+  --ds-button-root-background-brand-focused: var(--ds-primary-background-default); /** Background do root Button brand focused. */
+  --ds-button-root-background-brand-disabled: var(--ds-primary-background-disabled); /** Background do root Button brand disabled. */
+  --ds-button-root-background-toned-default: var(--ds-toned-background-default); /** Background do root Button toned default. */
+  --ds-button-root-background-toned-hover: var(--ds-toned-background-hover); /** Background do root Button toned hover. */
+  --ds-button-root-background-toned-pressed: var(--ds-toned-background-active); /** Background do root Button toned pressed. */
+  --ds-button-root-background-toned-focused: var(--ds-toned-background-default); /** Background do root Button toned focused. */
+  --ds-button-root-background-toned-disabled: var(--ds-toned-background-disabled); /** Background do root Button toned disabled. */
+  --ds-button-root-background-outline-hover: var(--ds-outline-background-hover); /** Background do root Button outline hover. */
+  --ds-button-root-background-outline-pressed: var(--ds-background-subtle); /** Background do root Button outline pressed. */
+  --ds-button-root-background-ghost-hover: var(--ds-ghost-background-hover); /** Background do root Button ghost hover. */
+  --ds-button-root-background-ghost-pressed: var(--ds-ghost-background-active); /** Background do root Button ghost pressed. */
+  --ds-button-root-background-success-default: var(--ds-feedback-success-background-default); /** Background do root Button success default. */
+  --ds-button-root-background-success-hover: var(--ds-feedback-success-background-hover); /** Background do root Button success hover. */
+  --ds-button-root-background-success-pressed: var(--ds-feedback-success-background-active); /** Background do root Button success pressed. */
+  --ds-button-root-background-success-focused: var(--ds-feedback-success-background-default); /** Background do root Button success focused. */
+  --ds-button-root-background-success-disabled: var(--ds-feedback-success-background-disabled); /** Background do root Button success disabled. */
+  --ds-button-root-background-danger-default: var(--ds-feedback-error-background-default); /** Background do root Button danger default. */
+  --ds-button-root-background-danger-hover: var(--ds-feedback-error-background-hover); /** Background do root Button danger hover. */
+  --ds-button-root-background-danger-pressed: var(--ds-feedback-error-background-active); /** Background do root Button danger pressed. */
+  --ds-button-root-background-danger-focused: var(--ds-feedback-error-background-default); /** Background do root Button danger focused. */
+  --ds-button-root-background-danger-disabled: var(--ds-feedback-error-background-disabled); /** Background do root Button danger disabled. */
+  --ds-button-root-border-color-outline-default: var(--ds-outline-border-default); /** Border color do root Button outline default. */
+  --ds-button-root-border-color-outline-hover: var(--ds-outline-border-hover); /** Border color do root Button outline hover. */
+  --ds-button-root-border-color-outline-pressed: var(--ds-border-control-default); /** Border color do root Button outline pressed. */
+  --ds-button-root-border-color-outline-focused: var(--ds-border-default); /** Border color do root Button outline focused. */
+  --ds-button-root-border-color-outline-disabled: var(--ds-border-control-disabled); /** Border color do root Button outline disabled. */
+  --ds-button-label-frame-padding-x-default: var(--ds-space-xs); /** Padding horizontal do Label Frame Button. */
+  --ds-button-label-font-family-default: var(--ds-body-font-family-sans); /** Font-family do label Button. */
+  --ds-button-label-font-weight-default: var(--ds-body-font-weight-bold); /** Font-weight do label Button. */
+  --ds-button-label-letter-spacing-default: var(--ds-body-letter-spacing-normal); /** Letter-spacing do label Button. */
+  --ds-button-label-font-size-sm: var(--ds-body-font-size-sm); /** Font-size do label Button sm. */
+  --ds-button-label-font-size-md: var(--ds-body-font-size-sm); /** Font-size do label Button md. */
+  --ds-button-label-font-size-lg: var(--ds-body-font-size-md); /** Font-size do label Button lg. */
+  --ds-button-label-line-height-sm: var(--ds-body-line-height-2xs); /** Line-height do label Button sm. */
+  --ds-button-label-line-height-md: var(--ds-body-line-height-sm); /** Line-height do label Button md. */
+  --ds-button-label-line-height-lg: var(--ds-body-line-height-md); /** Line-height do label Button lg. */
+  --ds-button-icon-frame-size-default: var(--ds-size-md); /** Tamanho do frame de ícone Button. */
+  --ds-button-icon-glyph-size-sm: var(--ds-size-sm); /** Tamanho do glyph de ícone Button sm. */
+  --ds-button-icon-glyph-size-md: var(--ds-size-md); /** Tamanho do glyph de ícone Button md. */
+  --ds-button-icon-glyph-size-lg: var(--ds-size-md); /** Tamanho do glyph de ícone Button lg. */
+  --ds-button-focus-ring-stroke-width-default: var(--ds-border-width-focus); /** Stroke width do focus ring Button. */
+  --ds-button-focus-ring-offset-default: var(--ds-border-width-focus); /** Offset CSS do focus ring Button. */
+  --ds-button-focus-ring-radius-default: var(--ds-radius-lg); /** Radius do focus ring Button. */
+  --ds-button-focus-ring-color-default: var(--ds-border-focus); /** Cor do focus ring Button. */
+  --ds-button-content-color-brand-default: var(--ds-primary-content-default); /** Cor de conteúdo do Button brand default. */
+  --ds-button-content-color-brand-hover: var(--ds-primary-content-default); /** Cor de conteúdo do Button brand hover. */
+  --ds-button-content-color-brand-pressed: var(--ds-primary-content-default); /** Cor de conteúdo do Button brand pressed. */
+  --ds-button-content-color-brand-focused: var(--ds-primary-content-default); /** Cor de conteúdo do Button brand focused. */
+  --ds-button-content-color-brand-disabled: var(--ds-primary-content-disabled); /** Cor de conteúdo do Button brand disabled. */
+  --ds-button-content-color-toned-default: var(--ds-toned-content-default); /** Cor de conteúdo do Button toned default. */
+  --ds-button-content-color-toned-hover: var(--ds-link-content-hover); /** Cor de conteúdo do Button toned hover. */
+  --ds-button-content-color-toned-pressed: var(--ds-link-content-hover); /** Cor de conteúdo do Button toned pressed. */
+  --ds-button-content-color-toned-focused: var(--ds-toned-content-default); /** Cor de conteúdo do Button toned focused. */
+  --ds-button-content-color-toned-disabled: var(--ds-toned-content-disabled); /** Cor de conteúdo do Button toned disabled. */
+  --ds-button-content-color-outline-default: var(--ds-outline-content-default); /** Cor de conteúdo do Button outline default. */
+  --ds-button-content-color-outline-hover: var(--ds-outline-content-default); /** Cor de conteúdo do Button outline hover. */
+  --ds-button-content-color-outline-pressed: var(--ds-outline-content-default); /** Cor de conteúdo do Button outline pressed. */
+  --ds-button-content-color-outline-focused: var(--ds-outline-content-default); /** Cor de conteúdo do Button outline focused. */
+  --ds-button-content-color-outline-disabled: var(--ds-outline-content-disabled); /** Cor de conteúdo do Button outline disabled. */
+  --ds-button-content-color-ghost-default: var(--ds-link-content-default); /** Cor de conteúdo do Button ghost default. */
+  --ds-button-content-color-ghost-hover: var(--ds-link-content-default); /** Cor de conteúdo do Button ghost hover. */
+  --ds-button-content-color-ghost-pressed: var(--ds-link-content-default); /** Cor de conteúdo do Button ghost pressed. */
+  --ds-button-content-color-ghost-focused: var(--ds-link-content-default); /** Cor de conteúdo do Button ghost focused. */
+  --ds-button-content-color-ghost-disabled: var(--ds-ghost-content-disabled); /** Cor de conteúdo do Button ghost disabled. */
+  --ds-button-content-color-success-default: var(--ds-feedback-success-content-contrast); /** Cor de conteúdo do Button success default. */
+  --ds-button-content-color-success-hover: var(--ds-feedback-success-content-contrast); /** Cor de conteúdo do Button success hover. */
+  --ds-button-content-color-success-pressed: var(--ds-feedback-success-content-contrast); /** Cor de conteúdo do Button success pressed. */
+  --ds-button-content-color-success-focused: var(--ds-feedback-success-content-contrast); /** Cor de conteúdo do Button success focused. */
+  --ds-button-content-color-success-disabled: var(--ds-feedback-success-content-disabled); /** Cor de conteúdo do Button success disabled. */
+  --ds-button-content-color-danger-default: var(--ds-feedback-error-content-contrast); /** Cor de conteúdo do Button danger default. */
+  --ds-button-content-color-danger-hover: var(--ds-feedback-error-content-contrast); /** Cor de conteúdo do Button danger hover. */
+  --ds-button-content-color-danger-pressed: var(--ds-feedback-error-content-contrast); /** Cor de conteúdo do Button danger pressed. */
+  --ds-button-content-color-danger-focused: var(--ds-feedback-error-content-contrast); /** Cor de conteúdo do Button danger focused. */
+  --ds-button-content-color-danger-disabled: var(--ds-feedback-error-content-disabled); /** Cor de conteúdo do Button danger disabled. */
   --ds-card-root-radius-default: var(--ds-radius-lg); /** Radius do root Card. */
   --ds-card-root-border-width-default: var(--ds-border-width-default); /** Border width do root Card quando stroke está ativo. */
   --ds-card-header-padding-x-default: var(--ds-space-lg); /** Padding horizontal do header Card. */
