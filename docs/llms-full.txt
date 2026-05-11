@@ -206,6 +206,7 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 ## [Não publicado]
 
 ### Corrigido
+- **Avatar Figma/CSS aplicado aos Component tokens anatómicos.** Criado `component.avatar.root.size.*`, `component.avatar.root.radius.default`, `component.avatar.initials.{font-size,line-height,font-weight}.*` e `component.avatar.icon.size.*`; os 6 variants do Avatar no Figma agora usam Component tokens para root e tipografia anatómica. CSS passa a consumir `--ds-avatar-*`, corrige icon sizes para `20/24/32` e documentação corrige `lg` de `56px` para `64px`.
 - **Textarea Figma/CSS aplicado aos Component tokens de field min-height.** Criado `component.textarea.field.min-height.{sm,md,lg}` e bindado nos 18 `Field` variants do Textarea no Figma (`80/96/120`). CSS passa a consumir `--ds-textarea-field-min-height-*`; documentação corrigida removendo valores antigos `120/160` que não batiam com Figma vivo. `foundation.dimension.120` foi adicionado como primitivo para suportar o tamanho Large.
 - **Toggle Figma aplicado aos Component tokens anatómicos bindáveis.** Os 18 variants do component set `Toggle` agora usam `component.toggle.target.height.{sm,md,lg}` no `minHeight` do root, preservando `component.toggle.track.width.{sm,md,lg}` e `component.toggle.track.height.{sm,md,lg}` em `Track` width/height. Validação Figma viva: sm `32 / 28×16`, md `40 / 44×24`, lg `48 / 56×32`, sem problemas de binding. `component.toggle.thumb.inset.default` permanece como geometria `x/y` do Thumb, porque posição `x/y` não é campo bindável por Figma Variables.
 - **Radio Figma aplicado aos Component tokens anatómicos.** Os 18 variants do component set `Radio` agora usam `component.radio.target.height.{sm,md,lg}` no `minHeight` do root, preservando `component.radio.control.size.{sm,md,lg}` em `Control` width/height. Validação Figma viva: sm `32/16`, md `40/20`, lg `48/24`, sem problemas de binding.
@@ -1487,7 +1488,7 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 | Foundation | 266 | 🟢 |
 | Semantic (light) | 173 | 🟢 |
 | Semantic (dark) | 173 | 🟢 |
-| Component | 34 | 🟢 |
+| Component | 50 | 🟢 |
 
 ## Pipeline
 
@@ -2363,8 +2364,8 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Status
 
-- Total de tokens: **473**
-- Com metadados completos: **473**
+- Total de tokens: **489**
+- Com metadados completos: **489**
 - Pendentes (`TODO` em algum campo obrigatório): **0**
 - Completude: **100%**
 
@@ -2841,7 +2842,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `semantic.radius.full` | dimension | → `foundation.radius.999` | Radius semantic full. | 6 |
+| `semantic.radius.full` | dimension | → `foundation.radius.999` | Radius semantic full. | 7 |
 | `semantic.radius.lg` | dimension | → `foundation.radius.12` | Radius semantic lg. | 4 |
 | `semantic.radius.md` | dimension | → `foundation.radius.8` | Radius semantic md. | 8 |
 | `semantic.radius.sm` | dimension | → `foundation.radius.4` | Radius semantic sm. | 8 |
@@ -2859,7 +2860,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `semantic.size.2xl` | dimension | → `foundation.dimension.48` | Size token 2xl. | 8 |
-| `semantic.size.3xl` | dimension | → `foundation.dimension.64` | Size token 3xl. | 1 |
+| `semantic.size.3xl` | dimension | → `foundation.dimension.64` | Size token 3xl. | 2 |
 | `semantic.size.4xl` | dimension | → `foundation.dimension.96` | Size token 4xl. | 0 |
 | `semantic.size.5xl` | dimension | → `foundation.dimension.128` | Size token 5xl. | 1 |
 | `semantic.size.layout.2xl` | dimension | → `foundation.dimension.1280` | Size token layout.2xl. | 0 |
@@ -2869,10 +2870,10 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.size.layout.xl` | dimension | → `foundation.dimension.1024` | Size token layout.xl. | 0 |
 | `semantic.size.layout.xs` | dimension | → `foundation.dimension.320` | Size token layout.xs. | 0 |
 | `semantic.size.lg` | dimension | → `foundation.dimension.32` | Size token lg. | 11 |
-| `semantic.size.md` | dimension | → `foundation.dimension.24` | Size token md. | 10 |
-| `semantic.size.sm` | dimension | → `foundation.dimension.20` | Size token sm. | 10 |
+| `semantic.size.md` | dimension | → `foundation.dimension.24` | Size token md. | 9 |
+| `semantic.size.sm` | dimension | → `foundation.dimension.20` | Size token sm. | 9 |
 | `semantic.size.xl` | dimension | → `foundation.dimension.40` | Size token xl. | 10 |
-| `semantic.size.xs` | dimension | → `foundation.dimension.16` | Size token xs. | 8 |
+| `semantic.size.xs` | dimension | → `foundation.dimension.16` | Size token xs. | 7 |
 
 ### semantic.space
 
@@ -2918,10 +2919,10 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 |---|---|---|---|---|
 | `semantic.typography.body.font-family.mono` | fontFamily | → `foundation.typography.font.family.mono` | font-family mono pra texto UI geral. | 0 |
 | `semantic.typography.body.font-family.sans` | fontFamily | → `foundation.typography.font.family.sans` | font-family sans pra texto UI geral. | 0 |
-| `semantic.typography.body.font-size.2xl` | dimension | → `foundation.typography.font.size.24` | font-size 2xl pra texto UI geral. | 0 |
+| `semantic.typography.body.font-size.2xl` | dimension | → `foundation.typography.font.size.24` | font-size 2xl pra texto UI geral. | 1 |
 | `semantic.typography.body.font-size.2xs` | dimension | → `foundation.typography.font.size.11` | font-size 2xs pra texto UI geral. | 0 |
 | `semantic.typography.body.font-size.3xl` | dimension | → `foundation.typography.font.size.28` | font-size 3xl pra texto UI geral. | 0 |
-| `semantic.typography.body.font-size.4xl` | dimension | → `foundation.typography.font.size.32` | font-size 4xl pra texto UI geral. | 0 |
+| `semantic.typography.body.font-size.4xl` | dimension | → `foundation.typography.font.size.32` | font-size 4xl pra texto UI geral. | 1 |
 | `semantic.typography.body.font-size.5xl` | dimension | → `foundation.typography.font.size.40` | font-size 5xl pra texto UI geral. | 0 |
 | `semantic.typography.body.font-size.6xl` | dimension | → `foundation.typography.font.size.48` | font-size 6xl pra texto UI geral. | 0 |
 | `semantic.typography.body.font-size.7xl` | dimension | → `foundation.typography.font.size.56` | font-size 7xl pra texto UI geral. | 0 |
@@ -2929,13 +2930,13 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.typography.body.font-size.9xl` | dimension | → `foundation.typography.font.size.72` | font-size 9xl pra texto UI geral. | 0 |
 | `semantic.typography.body.font-size.lg` | dimension | → `foundation.typography.font.size.18` | font-size lg pra texto UI geral. | 0 |
 | `semantic.typography.body.font-size.md` | dimension | → `foundation.typography.font.size.16` | font-size md pra texto UI geral. | 0 |
-| `semantic.typography.body.font-size.sm` | dimension | → `foundation.typography.font.size.14` | font-size sm pra texto UI geral. | 0 |
-| `semantic.typography.body.font-size.xl` | dimension | → `foundation.typography.font.size.20` | font-size xl pra texto UI geral. | 0 |
+| `semantic.typography.body.font-size.sm` | dimension | → `foundation.typography.font.size.14` | font-size sm pra texto UI geral. | 2 |
+| `semantic.typography.body.font-size.xl` | dimension | → `foundation.typography.font.size.20` | font-size xl pra texto UI geral. | 2 |
 | `semantic.typography.body.font-size.xs` | dimension | → `foundation.typography.font.size.12` | font-size xs pra texto UI geral. | 0 |
-| `semantic.typography.body.font-weight.bold` | number | → `foundation.typography.font.weight.bold` | font-weight bold pra texto UI geral. | 0 |
+| `semantic.typography.body.font-weight.bold` | number | → `foundation.typography.font.weight.bold` | font-weight bold pra texto UI geral. | 2 |
 | `semantic.typography.body.font-weight.medium` | number | → `foundation.typography.font.weight.medium` | font-weight medium pra texto UI geral. | 0 |
 | `semantic.typography.body.font-weight.regular` | number | → `foundation.typography.font.weight.regular` | font-weight regular pra texto UI geral. | 0 |
-| `semantic.typography.body.font-weight.semibold` | number | → `foundation.typography.font.weight.semibold` | font-weight semibold pra texto UI geral. | 0 |
+| `semantic.typography.body.font-weight.semibold` | number | → `foundation.typography.font.weight.semibold` | font-weight semibold pra texto UI geral. | 1 |
 | `semantic.typography.body.letter-spacing.normal` | dimension | → `foundation.typography.letter.spacing.normal` | letter-spacing normal pra texto UI geral. | 0 |
 | `semantic.typography.body.letter-spacing.tight` | dimension | → `foundation.typography.letter.spacing.tight` | letter-spacing tight pra texto UI geral. | 0 |
 | `semantic.typography.body.letter-spacing.wider` | dimension | → `foundation.typography.letter.spacing.wider` | letter-spacing wider pra texto UI geral. | 0 |
@@ -2950,8 +2951,8 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.typography.body.line-height.9xl` | dimension | → `foundation.typography.line.height.90` | line-height 9xl pra texto UI geral. | 0 |
 | `semantic.typography.body.line-height.lg` | dimension | → `foundation.typography.line.height.28` | line-height lg pra texto UI geral. | 0 |
 | `semantic.typography.body.line-height.md` | dimension | → `foundation.typography.line.height.24` | line-height md pra texto UI geral. | 0 |
-| `semantic.typography.body.line-height.sm` | dimension | → `foundation.typography.line.height.20` | line-height sm pra texto UI geral. | 0 |
-| `semantic.typography.body.line-height.xl` | dimension | → `foundation.typography.line.height.32` | line-height xl pra texto UI geral. | 0 |
+| `semantic.typography.body.line-height.sm` | dimension | → `foundation.typography.line.height.20` | line-height sm pra texto UI geral. | 2 |
+| `semantic.typography.body.line-height.xl` | dimension | → `foundation.typography.line.height.32` | line-height xl pra texto UI geral. | 1 |
 | `semantic.typography.body.line-height.xs` | dimension | → `foundation.typography.line.height.18` | line-height xs pra texto UI geral. | 0 |
 
 ### semantic.z
@@ -2962,7 +2963,28 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Component
 
-34 tokens.
+50 tokens.
+
+### component.avatar
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `component.avatar.icon.size.lg` | dimension | → `semantic.typography.body.font-size.4xl` | Tamanho do icon fallback do Avatar por size. | 1 |
+| `component.avatar.icon.size.md` | dimension | → `semantic.typography.body.font-size.2xl` | Tamanho do icon fallback do Avatar por size. | 1 |
+| `component.avatar.icon.size.sm` | dimension | → `semantic.typography.body.font-size.xl` | Tamanho do icon fallback do Avatar por size. | 1 |
+| `component.avatar.initials.font-size.lg` | dimension | → `semantic.typography.body.font-size.xl` | Font-size das iniciais do Avatar por size. | 1 |
+| `component.avatar.initials.font-size.md` | dimension | → `semantic.typography.body.font-size.sm` | Font-size das iniciais do Avatar por size. | 1 |
+| `component.avatar.initials.font-size.sm` | dimension | → `semantic.typography.body.font-size.sm` | Font-size das iniciais do Avatar por size. | 1 |
+| `component.avatar.initials.font-weight.lg` | number | → `semantic.typography.body.font-weight.semibold` | Font-weight das iniciais do Avatar por size. | 1 |
+| `component.avatar.initials.font-weight.md` | number | → `semantic.typography.body.font-weight.bold` | Font-weight das iniciais do Avatar por size. | 1 |
+| `component.avatar.initials.font-weight.sm` | number | → `semantic.typography.body.font-weight.bold` | Font-weight das iniciais do Avatar por size. | 1 |
+| `component.avatar.initials.line-height.lg` | dimension | → `semantic.typography.body.line-height.xl` | Line-height das iniciais do Avatar por size. | 1 |
+| `component.avatar.initials.line-height.md` | dimension | → `semantic.typography.body.line-height.sm` | Line-height das iniciais do Avatar por size. | 1 |
+| `component.avatar.initials.line-height.sm` | dimension | → `semantic.typography.body.line-height.sm` | Line-height das iniciais do Avatar por size. | 1 |
+| `component.avatar.root.radius.default` | dimension | → `semantic.radius.full` | Radius circular do root Avatar. | 1 |
+| `component.avatar.root.size.lg` | dimension | → `semantic.size.3xl` | Tamanho do root circular do Avatar por size. | 1 |
+| `component.avatar.root.size.md` | dimension | → `semantic.size.xl` | Tamanho do root circular do Avatar por size. | 1 |
+| `component.avatar.root.size.sm` | dimension | → `semantic.size.lg` | Tamanho do root circular do Avatar por size. | 1 |
 
 ### component.button
 
@@ -7553,12 +7575,13 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.radius.999.
 - **Usos**:
   - CSS:
-    - `css/components/avatar.css` (1×)
     - `css/components/badge.css` (1×)
     - `css/components/radio.css` (2×)
     - `css/components/skeleton.css` (1×)
     - `css/components/spinner.css` (1×)
     - `css/components/toggle.css` (2×)
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.avatar.root.radius.default`
 
 ### `semantic.radius.lg`
 
@@ -7680,7 +7703,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.dimension.64.
 - **Usos**:
   - CSS:
-    - `css/components/avatar.css` (2×)
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.avatar.root.size.lg`
 
 ### `semantic.size.4xl`
 
@@ -7793,11 +7817,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.dimension.32.
 - **Usos**:
   - CSS:
-    - `css/components/avatar.css` (2×)
     - `css/components/button.css` (1×)
     - `css/components/spinner.css` (2×)
-    - `css/tokens/generated/component.css` (7×)
-  - Tokens que referenciam: `component.button.root.height.sm`, `component.checkbox.target.height.sm`, `component.input.root.height.sm`, `component.radio.target.height.sm`, `component.select.root.height.sm`, `component.toggle.target.height.sm`, `component.toggle.track.height.lg`
+    - `css/tokens/generated/component.css` (8×)
+  - Tokens que referenciam: `component.avatar.root.size.sm`, `component.button.root.height.sm`, `component.checkbox.target.height.sm`, `component.input.root.height.sm`, `component.radio.target.height.sm`, `component.select.root.height.sm`, `component.toggle.target.height.sm`, `component.toggle.track.height.lg`
 
 ### `semantic.size.md`
 
@@ -7811,7 +7834,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/alert.css` (2×)
-    - `css/components/avatar.css` (1×)
     - `css/components/button.css` (3×)
     - `css/components/input.css` (3×)
     - `css/components/select.css` (5×)
@@ -7831,7 +7853,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/alert.css` (1×)
-    - `css/components/avatar.css` (1×)
     - `css/components/button.css` (3×)
     - `css/components/checkbox.css` (2×)
     - `css/components/input.css` (1×)
@@ -7851,11 +7872,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.dimension.40.
 - **Usos**:
   - CSS:
-    - `css/components/avatar.css` (2×)
     - `css/components/button.css` (1×)
     - `css/components/skeleton.css` (2×)
-    - `css/tokens/generated/component.css` (6×)
-  - Tokens que referenciam: `component.button.root.height.md`, `component.checkbox.target.height.md`, `component.input.root.height.md`, `component.radio.target.height.md`, `component.select.root.height.md`, `component.toggle.target.height.md`
+    - `css/tokens/generated/component.css` (7×)
+  - Tokens que referenciam: `component.avatar.root.size.md`, `component.button.root.height.md`, `component.checkbox.target.height.md`, `component.input.root.height.md`, `component.radio.target.height.md`, `component.select.root.height.md`, `component.toggle.target.height.md`
 
 ### `semantic.size.xs`
 
@@ -7868,7 +7888,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.dimension.16.
 - **Usos**:
   - CSS:
-    - `css/components/avatar.css` (1×)
     - `css/components/input.css` (1×)
     - `css/components/select.css` (1×)
     - `css/components/spinner.css` (2×)
@@ -8257,7 +8276,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-2xl`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.size.24.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - Tokens que referenciam: `component.avatar.icon.size.md`
 
 ### `semantic.typography.body.font-size.2xs`
 
@@ -8293,7 +8312,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-4xl`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.size.32.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - Tokens que referenciam: `component.avatar.icon.size.lg`
 
 ### `semantic.typography.body.font-size.5xl`
 
@@ -8389,7 +8408,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-sm`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.size.14.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - Tokens que referenciam: `component.avatar.initials.font-size.sm`, `component.avatar.initials.font-size.md`
 
 ### `semantic.typography.body.font-size.xl`
 
@@ -8401,7 +8420,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-xl`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.size.20.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - Tokens que referenciam: `component.avatar.initials.font-size.lg`, `component.avatar.icon.size.sm`
 
 ### `semantic.typography.body.font-size.xs`
 
@@ -8425,7 +8444,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-bold`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.weight.bold.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - Tokens que referenciam: `component.avatar.initials.font-weight.sm`, `component.avatar.initials.font-weight.md`
 
 ### `semantic.typography.body.font-weight.medium`
 
@@ -8461,7 +8480,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-semibold`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.weight.semibold.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - Tokens que referenciam: `component.avatar.initials.font-weight.lg`
 
 ### `semantic.typography.body.letter-spacing.normal`
 
@@ -8641,7 +8660,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-sm`.
 - **Decisão**: Aliasado a Foundation foundation.typography.line.height.20.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - Tokens que referenciam: `component.avatar.initials.line-height.sm`, `component.avatar.initials.line-height.md`
 
 ### `semantic.typography.body.line-height.xl`
 
@@ -8653,7 +8672,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-xl`.
 - **Decisão**: Aliasado a Foundation foundation.typography.line.height.32.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - Tokens que referenciam: `component.avatar.initials.line-height.lg`
 
 ### `semantic.typography.body.line-height.xs`
 
@@ -8679,6 +8698,214 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/tooltip.css` (1×)
+
+### `component.avatar.icon.size.lg`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.font-size.4xl`
+- **Sentido**: Tamanho do icon fallback do Avatar por size.
+- **Escopo**: font-size
+- **Contexto**: Component token do contrato anatomico Avatar Icon. Binda o texto Material Symbols no Figma e corrige o CSS para usar os tamanhos 20/24/32 observados no Figma.
+- **Decisão**: Alias para typography body font-size porque Material Symbols usa font-size; fica em Component para documentar que o icon nao segue a escala icon anterior 16/20/24.
+- **Usos**:
+  - CSS:
+    - `css/components/avatar.css` (1×)
+
+### `component.avatar.icon.size.md`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.font-size.2xl`
+- **Sentido**: Tamanho do icon fallback do Avatar por size.
+- **Escopo**: font-size
+- **Contexto**: Component token do contrato anatomico Avatar Icon. Binda o texto Material Symbols no Figma e corrige o CSS para usar os tamanhos 20/24/32 observados no Figma.
+- **Decisão**: Alias para typography body font-size porque Material Symbols usa font-size; fica em Component para documentar que o icon nao segue a escala icon anterior 16/20/24.
+- **Usos**:
+  - CSS:
+    - `css/components/avatar.css` (1×)
+
+### `component.avatar.icon.size.sm`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.font-size.xl`
+- **Sentido**: Tamanho do icon fallback do Avatar por size.
+- **Escopo**: font-size
+- **Contexto**: Component token do contrato anatomico Avatar Icon. Binda o texto Material Symbols no Figma e corrige o CSS para usar os tamanhos 20/24/32 observados no Figma.
+- **Decisão**: Alias para typography body font-size porque Material Symbols usa font-size; fica em Component para documentar que o icon nao segue a escala icon anterior 16/20/24.
+- **Usos**:
+  - CSS:
+    - `css/components/avatar.css` (1×)
+
+### `component.avatar.initials.font-size.lg`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.font-size.xl`
+- **Sentido**: Font-size das iniciais do Avatar por size.
+- **Escopo**: font-size
+- **Contexto**: Component token do contrato tipografico Avatar Initials. Binda o texto Initials no Figma e substitui consumo direto de semantic.typography.* no CSS.
+- **Decisão**: Alias para typography body porque a tipografia continua vindo do sistema; fica em Component para documentar que Avatar sm/md usam 14px e lg usa 20px.
+- **Usos**:
+  - CSS:
+    - `css/components/avatar.css` (1×)
+
+### `component.avatar.initials.font-size.md`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.font-size.sm`
+- **Sentido**: Font-size das iniciais do Avatar por size.
+- **Escopo**: font-size
+- **Contexto**: Component token do contrato tipografico Avatar Initials. Binda o texto Initials no Figma e substitui consumo direto de semantic.typography.* no CSS.
+- **Decisão**: Alias para typography body porque a tipografia continua vindo do sistema; fica em Component para documentar que Avatar sm/md usam 14px e lg usa 20px.
+- **Usos**:
+  - CSS:
+    - `css/components/avatar.css` (1×)
+
+### `component.avatar.initials.font-size.sm`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.font-size.sm`
+- **Sentido**: Font-size das iniciais do Avatar por size.
+- **Escopo**: font-size
+- **Contexto**: Component token do contrato tipografico Avatar Initials. Binda o texto Initials no Figma e substitui consumo direto de semantic.typography.* no CSS.
+- **Decisão**: Alias para typography body porque a tipografia continua vindo do sistema; fica em Component para documentar que Avatar sm/md usam 14px e lg usa 20px.
+- **Usos**:
+  - CSS:
+    - `css/components/avatar.css` (1×)
+
+### `component.avatar.initials.font-weight.lg`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.font-weight.semibold`
+- **Sentido**: Font-weight das iniciais do Avatar por size.
+- **Escopo**: font-weight
+- **Contexto**: Component token do contrato tipografico Avatar Initials. Binda fontStyle no Figma e substitui consumo direto de semantic.typography.* no CSS.
+- **Decisão**: Alias para typography body font-weight; sm/md usam bold e lg usa semibold conforme Figma vivo.
+- **Usos**:
+  - CSS:
+    - `css/components/avatar.css` (1×)
+
+### `component.avatar.initials.font-weight.md`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.font-weight.bold`
+- **Sentido**: Font-weight das iniciais do Avatar por size.
+- **Escopo**: font-weight
+- **Contexto**: Component token do contrato tipografico Avatar Initials. Binda fontStyle no Figma e substitui consumo direto de semantic.typography.* no CSS.
+- **Decisão**: Alias para typography body font-weight; sm/md usam bold e lg usa semibold conforme Figma vivo.
+- **Usos**:
+  - CSS:
+    - `css/components/avatar.css` (1×)
+
+### `component.avatar.initials.font-weight.sm`
+
+- **Camada**: component
+- **Tipo**: `number`
+- **Alias**: → `semantic.typography.body.font-weight.bold`
+- **Sentido**: Font-weight das iniciais do Avatar por size.
+- **Escopo**: font-weight
+- **Contexto**: Component token do contrato tipografico Avatar Initials. Binda fontStyle no Figma e substitui consumo direto de semantic.typography.* no CSS.
+- **Decisão**: Alias para typography body font-weight; sm/md usam bold e lg usa semibold conforme Figma vivo.
+- **Usos**:
+  - CSS:
+    - `css/components/avatar.css` (1×)
+
+### `component.avatar.initials.line-height.lg`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.line-height.xl`
+- **Sentido**: Line-height das iniciais do Avatar por size.
+- **Escopo**: line-height
+- **Contexto**: Component token do contrato tipografico Avatar Initials. Binda o texto Initials no Figma e torna explicita a altura de linha no CSS.
+- **Decisão**: Alias para typography body line-height; sm/md usam 20px e lg usa 32px para manter alinhamento visual vertical com o Figma.
+- **Usos**:
+  - CSS:
+    - `css/components/avatar.css` (1×)
+
+### `component.avatar.initials.line-height.md`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.line-height.sm`
+- **Sentido**: Line-height das iniciais do Avatar por size.
+- **Escopo**: line-height
+- **Contexto**: Component token do contrato tipografico Avatar Initials. Binda o texto Initials no Figma e torna explicita a altura de linha no CSS.
+- **Decisão**: Alias para typography body line-height; sm/md usam 20px e lg usa 32px para manter alinhamento visual vertical com o Figma.
+- **Usos**:
+  - CSS:
+    - `css/components/avatar.css` (1×)
+
+### `component.avatar.initials.line-height.sm`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.line-height.sm`
+- **Sentido**: Line-height das iniciais do Avatar por size.
+- **Escopo**: line-height
+- **Contexto**: Component token do contrato tipografico Avatar Initials. Binda o texto Initials no Figma e torna explicita a altura de linha no CSS.
+- **Decisão**: Alias para typography body line-height; sm/md usam 20px e lg usa 32px para manter alinhamento visual vertical com o Figma.
+- **Usos**:
+  - CSS:
+    - `css/components/avatar.css` (1×)
+
+### `component.avatar.root.radius.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.radius.full`
+- **Sentido**: Radius circular do root Avatar.
+- **Escopo**: border-radius
+- **Contexto**: Component token do contrato anatomico Avatar. Binda os quatro corner radii do root no Figma e substitui consumo direto de semantic.radius.full no CSS.
+- **Decisão**: Alias 1:1 para semantic.radius.full porque o formato circular e parte publica da anatomia Avatar.
+- **Usos**:
+  - CSS:
+    - `css/components/avatar.css` (1×)
+
+### `component.avatar.root.size.lg`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.3xl`
+- **Sentido**: Tamanho do root circular do Avatar por size.
+- **Escopo**: width, height
+- **Contexto**: Component token do contrato anatomico Avatar. Binda width/height do root no Figma e substitui consumo direto de semantic.size.* no CSS.
+- **Decisão**: Alias 1:1 para semantic.size.lg/xl/3xl porque Avatar usa 32/40/64 como tamanhos publicos do root; fica em Component para documentar a anatomia e corrigir a documentacao antiga que indicava lg 56px.
+- **Usos**:
+  - CSS:
+    - `css/components/avatar.css` (2×)
+
+### `component.avatar.root.size.md`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.xl`
+- **Sentido**: Tamanho do root circular do Avatar por size.
+- **Escopo**: width, height
+- **Contexto**: Component token do contrato anatomico Avatar. Binda width/height do root no Figma e substitui consumo direto de semantic.size.* no CSS.
+- **Decisão**: Alias 1:1 para semantic.size.lg/xl/3xl porque Avatar usa 32/40/64 como tamanhos publicos do root; fica em Component para documentar a anatomia e corrigir a documentacao antiga que indicava lg 56px.
+- **Usos**:
+  - CSS:
+    - `css/components/avatar.css` (2×)
+
+### `component.avatar.root.size.sm`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.lg`
+- **Sentido**: Tamanho do root circular do Avatar por size.
+- **Escopo**: width, height
+- **Contexto**: Component token do contrato anatomico Avatar. Binda width/height do root no Figma e substitui consumo direto de semantic.size.* no CSS.
+- **Decisão**: Alias 1:1 para semantic.size.lg/xl/3xl porque Avatar usa 32/40/64 como tamanhos publicos do root; fica em Component para documentar a anatomia e corrigir a documentacao antiga que indicava lg 56px.
+- **Usos**:
+  - CSS:
+    - `css/components/avatar.css` (2×)
 
 ### `component.button.root.height.lg`
 
@@ -9149,7 +9376,7 @@ Seção expandida com contexto, decisão e locais de uso.
 |--------|--------|----------|
 | Foundation/Core | **266** | 9 |
 | Semantic/System | **173 × 2 modos** | light.json + dark.json |
-| Component | **34** | 7 |
+| Component | **50** | 8 |
 
 ## Foundation (266 tokens)
 
@@ -9191,10 +9418,11 @@ semantic.typography.*
 semantic.z.*
 ```
 
-## Component (34 tokens)
+## Component (50 tokens)
 
 | Arquivo | Tokens |
 |---------|--------|
+| `avatar.json` | 16 |
 | `button.json` | 3 |
 | `checkbox.json` | 6 |
 | `input.json` | 3 |

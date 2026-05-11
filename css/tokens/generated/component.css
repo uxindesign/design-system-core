@@ -9,6 +9,22 @@
   --ds-toggle-track-width-sm: var(--ds-dimension-28); /** Largura especifica da track Toggle sm. Component-specific; nao ha Semantic reutilizavel. */
   --ds-toggle-track-width-md: var(--ds-dimension-44); /** Largura especifica da track Toggle md. Component-specific; nao ha Semantic reutilizavel. */
   --ds-toggle-track-width-lg: var(--ds-dimension-56); /** Largura especifica da track Toggle lg. Component-specific; nao ha Semantic reutilizavel. */
+  --ds-avatar-root-size-sm: var(--ds-size-lg); /** Tamanho do root Avatar sm. */
+  --ds-avatar-root-size-md: var(--ds-size-xl); /** Tamanho do root Avatar md. */
+  --ds-avatar-root-size-lg: var(--ds-size-3xl); /** Tamanho do root Avatar lg. */
+  --ds-avatar-root-radius-default: var(--ds-radius-full); /** Radius circular do root Avatar. */
+  --ds-avatar-initials-font-size-sm: var(--ds-body-font-size-sm); /** Font-size das iniciais Avatar sm. */
+  --ds-avatar-initials-font-size-md: var(--ds-body-font-size-sm); /** Font-size das iniciais Avatar md. */
+  --ds-avatar-initials-font-size-lg: var(--ds-body-font-size-xl); /** Font-size das iniciais Avatar lg. */
+  --ds-avatar-initials-line-height-sm: var(--ds-body-line-height-sm); /** Line-height das iniciais Avatar sm. */
+  --ds-avatar-initials-line-height-md: var(--ds-body-line-height-sm); /** Line-height das iniciais Avatar md. */
+  --ds-avatar-initials-line-height-lg: var(--ds-body-line-height-xl); /** Line-height das iniciais Avatar lg. */
+  --ds-avatar-initials-font-weight-sm: var(--ds-body-font-weight-bold); /** Font-weight das iniciais Avatar sm. */
+  --ds-avatar-initials-font-weight-md: var(--ds-body-font-weight-bold); /** Font-weight das iniciais Avatar md. */
+  --ds-avatar-initials-font-weight-lg: var(--ds-body-font-weight-semibold); /** Font-weight das iniciais Avatar lg. */
+  --ds-avatar-icon-size-sm: var(--ds-body-font-size-xl); /** Tamanho do icon Avatar sm. */
+  --ds-avatar-icon-size-md: var(--ds-body-font-size-2xl); /** Tamanho do icon Avatar md. */
+  --ds-avatar-icon-size-lg: var(--ds-body-font-size-4xl); /** Tamanho do icon Avatar lg. */
   --ds-button-root-height-sm: var(--ds-size-lg); /** Altura do root Button sm. */
   --ds-button-root-height-md: var(--ds-size-xl); /** Altura do root Button md. */
   --ds-button-root-height-lg: var(--ds-size-2xl); /** Altura do root Button lg. */

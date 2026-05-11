@@ -5080,7 +5080,9 @@
       "decisao": "Aliasado a Foundation foundation.typography.font.weight.semibold.",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "component.avatar.initials.font-weight.lg"
+        ],
         "figma": []
       }
     },
@@ -5096,7 +5098,10 @@
       "decisao": "Aliasado a Foundation foundation.typography.font.weight.bold.",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "component.avatar.initials.font-weight.sm",
+          "component.avatar.initials.font-weight.md"
+        ],
         "figma": []
       }
     },
@@ -5160,7 +5165,10 @@
       "decisao": "Aliasado a Foundation foundation.typography.font.size.14.",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "component.avatar.initials.font-size.sm",
+          "component.avatar.initials.font-size.md"
+        ],
         "figma": []
       }
     },
@@ -5208,7 +5216,10 @@
       "decisao": "Aliasado a Foundation foundation.typography.font.size.20.",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "component.avatar.initials.font-size.lg",
+          "component.avatar.icon.size.sm"
+        ],
         "figma": []
       }
     },
@@ -5224,7 +5235,9 @@
       "decisao": "Aliasado a Foundation foundation.typography.font.size.24.",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "component.avatar.icon.size.md"
+        ],
         "figma": []
       }
     },
@@ -5272,7 +5285,10 @@
       "decisao": "Aliasado a Foundation foundation.typography.line.height.20.",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "component.avatar.initials.line-height.sm",
+          "component.avatar.initials.line-height.md"
+        ],
         "figma": []
       }
     },
@@ -5304,7 +5320,9 @@
       "decisao": "Aliasado a Foundation foundation.typography.line.height.32.",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "component.avatar.initials.line-height.lg"
+        ],
         "figma": []
       }
     },
@@ -7074,10 +7092,6 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/avatar.css",
-            "count": 1
-          },
-          {
             "file": "css/components/badge.css",
             "count": 1
           },
@@ -7096,9 +7110,15 @@
           {
             "file": "css/components/toggle.css",
             "count": 2
+          },
+          {
+            "file": "css/tokens/generated/component.css",
+            "count": 1
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "component.avatar.root.radius.default"
+        ],
         "figma": []
       }
     },
@@ -8964,10 +8984,6 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/avatar.css",
-            "count": 1
-          },
-          {
             "file": "css/components/input.css",
             "count": 1
           },
@@ -9007,10 +9023,6 @@
         "css": [
           {
             "file": "css/components/alert.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/avatar.css",
             "count": 1
           },
           {
@@ -9063,10 +9075,6 @@
             "count": 2
           },
           {
-            "file": "css/components/avatar.css",
-            "count": 1
-          },
-          {
             "file": "css/components/button.css",
             "count": 3
           },
@@ -9109,10 +9117,6 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/avatar.css",
-            "count": 2
-          },
-          {
             "file": "css/components/button.css",
             "count": 1
           },
@@ -9122,10 +9126,11 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 7
+            "count": 8
           }
         ],
         "tokens": [
+          "component.avatar.root.size.sm",
           "component.button.root.height.sm",
           "component.checkbox.target.height.sm",
           "component.input.root.height.sm",
@@ -9151,10 +9156,6 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/avatar.css",
-            "count": 2
-          },
-          {
             "file": "css/components/button.css",
             "count": 1
           },
@@ -9164,10 +9165,11 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 6
+            "count": 7
           }
         ],
         "tokens": [
+          "component.avatar.root.size.md",
           "component.button.root.height.md",
           "component.checkbox.target.height.md",
           "component.input.root.height.md",
@@ -9225,11 +9227,13 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/avatar.css",
-            "count": 2
+            "file": "css/tokens/generated/component.css",
+            "count": 1
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "component.avatar.root.size.lg"
+        ],
         "figma": []
       }
     },
@@ -9458,7 +9462,9 @@
       "decisao": "Aliasado a Foundation foundation.typography.font.size.32.",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "component.avatar.icon.size.lg"
+        ],
         "figma": []
       }
     },
@@ -11039,6 +11045,345 @@
         "tokens": [
           "component.textarea.field.min-height.lg"
         ],
+        "figma": []
+      }
+    },
+    "component.avatar.root.size.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.lg",
+      "sentido": "Tamanho do root circular do Avatar por size.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Component token do contrato anatomico Avatar. Binda width/height do root no Figma e substitui consumo direto de semantic.size.* no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.lg/xl/3xl porque Avatar usa 32/40/64 como tamanhos publicos do root; fica em Component para documentar a anatomia e corrigir a documentacao antiga que indicava lg 56px.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/avatar.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.avatar.root.size.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.xl",
+      "sentido": "Tamanho do root circular do Avatar por size.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Component token do contrato anatomico Avatar. Binda width/height do root no Figma e substitui consumo direto de semantic.size.* no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.lg/xl/3xl porque Avatar usa 32/40/64 como tamanhos publicos do root; fica em Component para documentar a anatomia e corrigir a documentacao antiga que indicava lg 56px.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/avatar.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.avatar.root.size.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.3xl",
+      "sentido": "Tamanho do root circular do Avatar por size.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Component token do contrato anatomico Avatar. Binda width/height do root no Figma e substitui consumo direto de semantic.size.* no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.lg/xl/3xl porque Avatar usa 32/40/64 como tamanhos publicos do root; fica em Component para documentar a anatomia e corrigir a documentacao antiga que indicava lg 56px.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/avatar.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.avatar.root.radius.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.radius.full",
+      "sentido": "Radius circular do root Avatar.",
+      "escopo": [
+        "border-radius"
+      ],
+      "contexto": "Component token do contrato anatomico Avatar. Binda os quatro corner radii do root no Figma e substitui consumo direto de semantic.radius.full no CSS.",
+      "decisao": "Alias 1:1 para semantic.radius.full porque o formato circular e parte publica da anatomia Avatar.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/avatar.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.avatar.initials.font-size.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.sm",
+      "sentido": "Font-size das iniciais do Avatar por size.",
+      "escopo": [
+        "font-size"
+      ],
+      "contexto": "Component token do contrato tipografico Avatar Initials. Binda o texto Initials no Figma e substitui consumo direto de semantic.typography.* no CSS.",
+      "decisao": "Alias para typography body porque a tipografia continua vindo do sistema; fica em Component para documentar que Avatar sm/md usam 14px e lg usa 20px.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/avatar.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.avatar.initials.font-size.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.sm",
+      "sentido": "Font-size das iniciais do Avatar por size.",
+      "escopo": [
+        "font-size"
+      ],
+      "contexto": "Component token do contrato tipografico Avatar Initials. Binda o texto Initials no Figma e substitui consumo direto de semantic.typography.* no CSS.",
+      "decisao": "Alias para typography body porque a tipografia continua vindo do sistema; fica em Component para documentar que Avatar sm/md usam 14px e lg usa 20px.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/avatar.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.avatar.initials.font-size.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.xl",
+      "sentido": "Font-size das iniciais do Avatar por size.",
+      "escopo": [
+        "font-size"
+      ],
+      "contexto": "Component token do contrato tipografico Avatar Initials. Binda o texto Initials no Figma e substitui consumo direto de semantic.typography.* no CSS.",
+      "decisao": "Alias para typography body porque a tipografia continua vindo do sistema; fica em Component para documentar que Avatar sm/md usam 14px e lg usa 20px.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/avatar.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.avatar.initials.line-height.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.sm",
+      "sentido": "Line-height das iniciais do Avatar por size.",
+      "escopo": [
+        "line-height"
+      ],
+      "contexto": "Component token do contrato tipografico Avatar Initials. Binda o texto Initials no Figma e torna explicita a altura de linha no CSS.",
+      "decisao": "Alias para typography body line-height; sm/md usam 20px e lg usa 32px para manter alinhamento visual vertical com o Figma.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/avatar.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.avatar.initials.line-height.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.sm",
+      "sentido": "Line-height das iniciais do Avatar por size.",
+      "escopo": [
+        "line-height"
+      ],
+      "contexto": "Component token do contrato tipografico Avatar Initials. Binda o texto Initials no Figma e torna explicita a altura de linha no CSS.",
+      "decisao": "Alias para typography body line-height; sm/md usam 20px e lg usa 32px para manter alinhamento visual vertical com o Figma.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/avatar.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.avatar.initials.line-height.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.xl",
+      "sentido": "Line-height das iniciais do Avatar por size.",
+      "escopo": [
+        "line-height"
+      ],
+      "contexto": "Component token do contrato tipografico Avatar Initials. Binda o texto Initials no Figma e torna explicita a altura de linha no CSS.",
+      "decisao": "Alias para typography body line-height; sm/md usam 20px e lg usa 32px para manter alinhamento visual vertical com o Figma.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/avatar.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.avatar.initials.font-weight.sm": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.font-weight.bold",
+      "sentido": "Font-weight das iniciais do Avatar por size.",
+      "escopo": [
+        "font-weight"
+      ],
+      "contexto": "Component token do contrato tipografico Avatar Initials. Binda fontStyle no Figma e substitui consumo direto de semantic.typography.* no CSS.",
+      "decisao": "Alias para typography body font-weight; sm/md usam bold e lg usa semibold conforme Figma vivo.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/avatar.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.avatar.initials.font-weight.md": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.font-weight.bold",
+      "sentido": "Font-weight das iniciais do Avatar por size.",
+      "escopo": [
+        "font-weight"
+      ],
+      "contexto": "Component token do contrato tipografico Avatar Initials. Binda fontStyle no Figma e substitui consumo direto de semantic.typography.* no CSS.",
+      "decisao": "Alias para typography body font-weight; sm/md usam bold e lg usa semibold conforme Figma vivo.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/avatar.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.avatar.initials.font-weight.lg": {
+      "layer": "component",
+      "type": "number",
+      "references": "semantic.typography.body.font-weight.semibold",
+      "sentido": "Font-weight das iniciais do Avatar por size.",
+      "escopo": [
+        "font-weight"
+      ],
+      "contexto": "Component token do contrato tipografico Avatar Initials. Binda fontStyle no Figma e substitui consumo direto de semantic.typography.* no CSS.",
+      "decisao": "Alias para typography body font-weight; sm/md usam bold e lg usa semibold conforme Figma vivo.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/avatar.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.avatar.icon.size.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.xl",
+      "sentido": "Tamanho do icon fallback do Avatar por size.",
+      "escopo": [
+        "font-size"
+      ],
+      "contexto": "Component token do contrato anatomico Avatar Icon. Binda o texto Material Symbols no Figma e corrige o CSS para usar os tamanhos 20/24/32 observados no Figma.",
+      "decisao": "Alias para typography body font-size porque Material Symbols usa font-size; fica em Component para documentar que o icon nao segue a escala icon anterior 16/20/24.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/avatar.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.avatar.icon.size.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.2xl",
+      "sentido": "Tamanho do icon fallback do Avatar por size.",
+      "escopo": [
+        "font-size"
+      ],
+      "contexto": "Component token do contrato anatomico Avatar Icon. Binda o texto Material Symbols no Figma e corrige o CSS para usar os tamanhos 20/24/32 observados no Figma.",
+      "decisao": "Alias para typography body font-size porque Material Symbols usa font-size; fica em Component para documentar que o icon nao segue a escala icon anterior 16/20/24.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/avatar.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.avatar.icon.size.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.4xl",
+      "sentido": "Tamanho do icon fallback do Avatar por size.",
+      "escopo": [
+        "font-size"
+      ],
+      "contexto": "Component token do contrato anatomico Avatar Icon. Binda o texto Material Symbols no Figma e corrige o CSS para usar os tamanhos 20/24/32 observados no Figma.",
+      "decisao": "Alias para typography body font-size porque Material Symbols usa font-size; fica em Component para documentar que o icon nao segue a escala icon anterior 16/20/24.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/avatar.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
         "figma": []
       }
     }

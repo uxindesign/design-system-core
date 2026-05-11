@@ -7,38 +7,41 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: var(--ds-radius-full);
+  border-radius: var(--ds-avatar-root-radius-default);
   background-color: var(--ds-primary-background-default);
   color: var(--ds-primary-content-default);
   font-family: var(--ds-body-font-family-sans);
-  font-weight: var(--ds-body-font-weight-bold);
+  font-weight: var(--ds-avatar-initials-font-weight-md);
   flex-shrink: 0;
   overflow: hidden;
   user-select: none;
 }
 
-/* Default size: md (Figma: 40×40, initials font-md=16 Bold) */
+/* Default size: md (Figma: 40×40, initials 14/20 Bold) */
 .ds-avatar {
-  width: var(--ds-size-xl);
-  height: var(--ds-size-xl);
-  font-size: var(--ds-body-font-size-md);
+  width: var(--ds-avatar-root-size-md);
+  height: var(--ds-avatar-root-size-md);
+  font-size: var(--ds-avatar-initials-font-size-md);
+  line-height: var(--ds-avatar-initials-line-height-md);
 }
 
 /* ---------------------------------------------------------
-   Sizes — Figma scale 14/16/20 (sm/md/lg)
+   Sizes — Figma initials scale 14/14/20 (sm/md/lg)
    --------------------------------------------------------- */
 .ds-avatar--sm {
-  width: var(--ds-size-lg);
-  height: var(--ds-size-lg);
-  font-size: var(--ds-body-font-size-sm);
+  width: var(--ds-avatar-root-size-sm);
+  height: var(--ds-avatar-root-size-sm);
+  font-size: var(--ds-avatar-initials-font-size-sm);
+  line-height: var(--ds-avatar-initials-line-height-sm);
+  font-weight: var(--ds-avatar-initials-font-weight-sm);
 }
 
 .ds-avatar--lg {
-  width: var(--ds-size-3xl);
-  height: var(--ds-size-3xl);
-  font-size: var(--ds-body-font-size-xl);
-  /* Figma: lg usa semibold (sm/md ficam com bold default) */
-  font-weight: var(--ds-body-font-weight-semibold);
+  width: var(--ds-avatar-root-size-lg);
+  height: var(--ds-avatar-root-size-lg);
+  font-size: var(--ds-avatar-initials-font-size-lg);
+  line-height: var(--ds-avatar-initials-line-height-lg);
+  font-weight: var(--ds-avatar-initials-font-weight-lg);
 }
 
 /* ---------------------------------------------------------
@@ -54,13 +57,13 @@
 
 /* Icon avatar */
 .ds-avatar--icon .material-symbols-outlined {
-  font-size: var(--ds-size-sm);
+  font-size: var(--ds-avatar-icon-size-md);
 }
 
 .ds-avatar--sm.ds-avatar--icon .material-symbols-outlined {
-  font-size: var(--ds-size-xs);
+  font-size: var(--ds-avatar-icon-size-sm);
 }
 
 .ds-avatar--lg.ds-avatar--icon .material-symbols-outlined {
-  font-size: var(--ds-size-md);
+  font-size: var(--ds-avatar-icon-size-lg);
 }
