@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Templates — Design System</title>
+  <link rel="stylesheet" href="../../css/design-system.css">
+  <link rel="stylesheet" href="../layout.css">
+  <script>
+    (function(){var l=localStorage.getItem('ds-lang');if(l)document.documentElement.setAttribute('lang',l)})();
+  </script>
+</head>
+<body>
+
+<header class="ds-site-header">
+  <div style="display:flex;align-items:center;gap:var(--ds-dimension-16)">
+    <button class="ds-menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <a href="../../index.html" class="ds-site-header__brand">
+      <div class="ds-site-header__logo">DS</div>
+      <span class="ds-site-header__title">Design System</span>
+    </a>
+  </div>
+  <div class="ds-site-header__actions">
+    <select class="ds-theme-switcher__select" id="lang-switcher" aria-label="Language">
+      <option value="pt">PT</option>
+      <option value="en">EN</option>
+    </select>
+    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg> Dark</button>
+  </div>
+</header>
+<div class="ds-sidebar-overlay" id="sidebar-overlay"></div>
+
+<nav class="ds-sidebar" id="sidebar" aria-label="Main navigation"></nav>
+
+<main class="ds-main">
+
+  <div class="ds-section">
+    <h1 class="ds-section__title"><span data-lang="pt">Galeria de Templates</span><span data-lang="en">Template Gallery</span></h1>
+    <p class="ds-section__subtitle">
+      <span data-lang="pt">Páginas completas construídas exclusivamente com componentes e tokens do Design System Core. Copie, adapte e implemente em minutos.</span>
+      <span data-lang="en">Complete pages built exclusively with Design System Core components and tokens. Copy, adapt, and ship in minutes.</span>
+    </p>
+  </div>
+
+  <div class="ds-subsection">
+    <div class="ds-callout ds-callout--info">
+      <div class="ds-callout__title"><span data-lang="pt">Como usar</span><span data-lang="en">How to use</span></div>
+      <span data-lang="pt">Cada template é uma página HTML autocontida que importa apenas <code>css/design-system.css</code>. Abra a aba <strong>Código</strong> em qualquer template, copie o HTML e hospede com os assets do DS.</span>
+      <span data-lang="en">Each template is a self-contained HTML page that only imports <code>css/design-system.css</code>. Open the <strong>Code</strong> tab in any template, copy the HTML, and host it with the DS assets.</span>
+    </div>
+  </div>
+
+  <div class="ds-subsection">
+    <div class="ds-component-grid">
+
+      <!-- Login -->
+      <div class="ds-component-card">
+        <div class="ds-component-card__preview" style="background:var(--ds-background-subtle);min-height:200px;display:flex;align-items:center;justify-content:center;padding:var(--ds-dimension-24)">
+          <div style="background:var(--ds-surface-default);border-radius:var(--ds-radius-md);padding:var(--ds-dimension-24);width:100%;max-width:220px;box-shadow:0 4px 20px rgba(0,0,0,.08)">
+            <div style="width:32px;height:32px;background:var(--ds-primary-background-default);border-radius:var(--ds-radius-sm);margin:0 auto var(--ds-dimension-16)"></div>
+            <div style="height:8px;background:var(--ds-background-subtle);border-radius:var(--ds-radius-sm);margin-bottom:var(--ds-dimension-16);width:70%;margin-left:auto;margin-right:auto"></div>
+            <div style="height:32px;background:var(--ds-background-subtle);border-radius:var(--ds-radius-sm);margin-bottom:var(--ds-dimension-8)"></div>
+            <div style="height:32px;background:var(--ds-background-subtle);border-radius:var(--ds-radius-sm);margin-bottom:var(--ds-dimension-16)"></div>
+            <div style="height:40px;background:var(--ds-primary-background-default);border-radius:var(--ds-radius-md)"></div>
+          </div>
+        </div>
+        <div class="ds-component-card__body">
+          <div class="ds-component-card__name"><span data-lang="pt">Login</span><span data-lang="en">Login</span></div>
+          <div class="ds-component-card__description"><span data-lang="pt">Autenticação com email e senha, link de recuperação e acesso ao cadastro.</span><span data-lang="en">Email and password authentication with recovery link and sign-up access.</span></div>
+          <div style="display:flex;flex-wrap:wrap;gap:var(--ds-dimension-4);margin-top:var(--ds-dimension-12)">
+            <span class="ds-badge ds-badge--neutral ds-badge--subtle">Input</span>
+            <span class="ds-badge ds-badge--neutral ds-badge--subtle">Button</span>
+            <span class="ds-badge ds-badge--neutral ds-badge--subtle">Form Field</span>
+          </div>
+          <a class="ds-btn ds-btn--outline ds-btn--sm" href="login.html" style="margin-top:var(--ds-dimension-16);display:inline-flex">
+            <span class="ds-btn__label"><span data-lang="pt">Ver template</span><span data-lang="en">View template</span></span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Sign Up -->
+      <div class="ds-component-card">
+        <div class="ds-component-card__preview" style="background:var(--ds-background-subtle);min-height:200px;display:flex;align-items:center;justify-content:center;padding:var(--ds-dimension-24)">
+          <div style="background:var(--ds-surface-default);border-radius:var(--ds-radius-md);padding:var(--ds-dimension-24);width:100%;max-width:220px;box-shadow:0 4px 20px rgba(0,0,0,.08)">
+            <div style="width:32px;height:32px;background:var(--ds-primary-background-default);border-radius:var(--ds-radius-sm);margin:0 auto var(--ds-dimension-16)"></div>
+            <div style="height:8px;background:var(--ds-background-subtle);border-radius:var(--ds-radius-sm);margin-bottom:var(--ds-dimension-16);width:70%;margin-left:auto;margin-right:auto"></div>
+            <div style="height:32px;background:var(--ds-background-subtle);border-radius:var(--ds-radius-sm);margin-bottom:var(--ds-dimension-8)"></div>
+            <div style="height:32px;background:var(--ds-background-subtle);border-radius:var(--ds-radius-sm);margin-bottom:var(--ds-dimension-8)"></div>
+            <div style="height:32px;background:var(--ds-background-subtle);border-radius:var(--ds-radius-sm);margin-bottom:var(--ds-dimension-16)"></div>
+            <div style="height:40px;background:var(--ds-primary-background-default);border-radius:var(--ds-radius-md)"></div>
+          </div>
+        </div>
+        <div class="ds-component-card__body">
+          <div class="ds-component-card__name"><span data-lang="pt">Cadastro</span><span data-lang="en">Sign Up</span></div>
+          <div class="ds-component-card__description"><span data-lang="pt">Criação de conta com validação em linha, aceite de termos e feedback de erro.</span><span data-lang="en">Account creation with inline validation, terms acceptance, and error feedback.</span></div>
+          <div style="display:flex;flex-wrap:wrap;gap:var(--ds-dimension-4);margin-top:var(--ds-dimension-12)">
+            <span class="ds-badge ds-badge--neutral ds-badge--subtle">Input</span>
+            <span class="ds-badge ds-badge--neutral ds-badge--subtle">Select</span>
+            <span class="ds-badge ds-badge--neutral ds-badge--subtle">Checkbox</span>
+            <span class="ds-badge ds-badge--neutral ds-badge--subtle">Alert</span>
+          </div>
+          <a class="ds-btn ds-btn--outline ds-btn--sm" href="signup.html" style="margin-top:var(--ds-dimension-16);display:inline-flex">
+            <span class="ds-btn__label"><span data-lang="pt">Ver template</span><span data-lang="en">View template</span></span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Dashboard -->
+      <div class="ds-component-card">
+        <div class="ds-component-card__preview" style="background:var(--ds-background-subtle);min-height:200px;display:flex;align-items:flex-start;justify-content:center;padding:var(--ds-dimension-16)">
+          <div style="width:100%;max-width:280px">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:var(--ds-dimension-12)">
+              <div style="height:8px;width:80px;background:var(--ds-surface-default);border-radius:var(--ds-radius-sm)"></div>
+              <div style="width:28px;height:28px;background:var(--ds-toned-background-default);border-radius:var(--ds-radius-full)"></div>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:var(--ds-dimension-8);margin-bottom:var(--ds-dimension-12)">
+              <div style="height:56px;background:var(--ds-surface-default);border-radius:var(--ds-radius-sm);border:1px solid var(--ds-border-default)"></div>
+              <div style="height:56px;background:var(--ds-surface-default);border-radius:var(--ds-radius-sm);border:1px solid var(--ds-border-default)"></div>
+              <div style="height:56px;background:var(--ds-surface-default);border-radius:var(--ds-radius-sm);border:1px solid var(--ds-border-default)"></div>
+            </div>
+            <div style="height:72px;background:var(--ds-surface-default);border-radius:var(--ds-radius-sm);border:1px solid var(--ds-border-default)"></div>
+          </div>
+        </div>
+        <div class="ds-component-card__body">
+          <div class="ds-component-card__name"><span data-lang="pt">Dashboard</span><span data-lang="en">Dashboard</span></div>
+          <div class="ds-component-card__description"><span data-lang="pt">Painel com métricas, abas de conteúdo e estado de carregamento com Skeleton.</span><span data-lang="en">Panel with metrics, content tabs, and Skeleton loading state.</span></div>
+          <div style="display:flex;flex-wrap:wrap;gap:var(--ds-dimension-4);margin-top:var(--ds-dimension-12)">
+            <span class="ds-badge ds-badge--neutral ds-badge--subtle">Card</span>
+            <span class="ds-badge ds-badge--neutral ds-badge--subtle">Tabs</span>
+            <span class="ds-badge ds-badge--neutral ds-badge--subtle">Badge</span>
+            <span class="ds-badge ds-badge--neutral ds-badge--subtle">Skeleton</span>
+          </div>
+          <a class="ds-btn ds-btn--outline ds-btn--sm" href="dashboard.html" style="margin-top:var(--ds-dimension-16);display:inline-flex">
+            <span class="ds-btn__label"><span data-lang="pt">Ver template</span><span data-lang="en">View template</span></span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Settings -->
+      <div class="ds-component-card">
+        <div class="ds-component-card__preview" style="background:var(--ds-background-subtle);min-height:200px;display:flex;align-items:flex-start;justify-content:center;padding:var(--ds-dimension-16)">
+          <div style="width:100%;max-width:280px">
+            <div style="height:8px;width:80px;background:var(--ds-surface-default);border-radius:var(--ds-radius-sm);margin-bottom:var(--ds-dimension-12)"></div>
+            <div style="display:flex;gap:var(--ds-dimension-8);margin-bottom:var(--ds-dimension-16)">
+              <div style="height:28px;width:60px;background:var(--ds-primary-background-default);border-radius:var(--ds-radius-sm)"></div>
+              <div style="height:28px;width:72px;background:var(--ds-surface-default);border-radius:var(--ds-radius-sm);border:1px solid var(--ds-border-default)"></div>
+              <div style="height:28px;width:84px;background:var(--ds-surface-default);border-radius:var(--ds-radius-sm);border:1px solid var(--ds-border-default)"></div>
+            </div>
+            <div style="height:32px;background:var(--ds-surface-default);border-radius:var(--ds-radius-sm);margin-bottom:var(--ds-dimension-8);border:1px solid var(--ds-border-default)"></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:var(--ds-dimension-8);background:var(--ds-surface-default);border-radius:var(--ds-radius-sm);border:1px solid var(--ds-border-default)">
+              <div style="height:8px;width:80px;background:var(--ds-background-subtle);border-radius:var(--ds-radius-sm)"></div>
+              <div style="width:32px;height:18px;background:var(--ds-primary-background-default);border-radius:var(--ds-radius-full)"></div>
+            </div>
+          </div>
+        </div>
+        <div class="ds-component-card__body">
+          <div class="ds-component-card__name"><span data-lang="pt">Configurações</span><span data-lang="en">Settings</span></div>
+          <div class="ds-component-card__description"><span data-lang="pt">Página de preferências com abas, campos de perfil e toggles de notificação.</span><span data-lang="en">Preferences page with tabs, profile fields, and notification toggles.</span></div>
+          <div style="display:flex;flex-wrap:wrap;gap:var(--ds-dimension-4);margin-top:var(--ds-dimension-12)">
+            <span class="ds-badge ds-badge--neutral ds-badge--subtle">Tabs</span>
+            <span class="ds-badge ds-badge--neutral ds-badge--subtle">Toggle</span>
+            <span class="ds-badge ds-badge--neutral ds-badge--subtle">Input</span>
+            <span class="ds-badge ds-badge--neutral ds-badge--subtle">Avatar</span>
+          </div>
+          <a class="ds-btn ds-btn--outline ds-btn--sm" href="settings.html" style="margin-top:var(--ds-dimension-16);display:inline-flex">
+            <span class="ds-btn__label"><span data-lang="pt">Ver template</span><span data-lang="en">View template</span></span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div class="ds-component-card">
+        <div class="ds-component-card__preview" style="background:var(--ds-background-subtle);min-height:200px;display:flex;align-items:flex-start;justify-content:center;padding:var(--ds-dimension-16)">
+          <div style="width:100%;max-width:280px">
+            <div style="height:8px;width:80px;background:var(--ds-surface-default);border-radius:var(--ds-radius-sm);margin-bottom:var(--ds-dimension-16)"></div>
+            <div style="height:32px;background:var(--ds-surface-default);border-radius:var(--ds-radius-sm);margin-bottom:var(--ds-dimension-8);border:1px solid var(--ds-border-default)"></div>
+            <div style="height:32px;background:var(--ds-surface-default);border-radius:var(--ds-radius-sm);margin-bottom:var(--ds-dimension-8);border:1px solid var(--ds-border-default)"></div>
+            <div style="height:56px;background:var(--ds-surface-default);border-radius:var(--ds-radius-sm);margin-bottom:var(--ds-dimension-16);border:1px solid var(--ds-border-default)"></div>
+            <div style="height:40px;background:var(--ds-primary-background-default);border-radius:var(--ds-radius-md)"></div>
+          </div>
+        </div>
+        <div class="ds-component-card__body">
+          <div class="ds-component-card__name"><span data-lang="pt">Contato</span><span data-lang="en">Contact</span></div>
+          <div class="ds-component-card__description"><span data-lang="pt">Formulário completo com seleção de assunto, validação e confirmação de envio.</span><span data-lang="en">Complete form with subject selection, validation, and submission confirmation.</span></div>
+          <div style="display:flex;flex-wrap:wrap;gap:var(--ds-dimension-4);margin-top:var(--ds-dimension-12)">
+            <span class="ds-badge ds-badge--neutral ds-badge--subtle">Input</span>
+            <span class="ds-badge ds-badge--neutral ds-badge--subtle">Textarea</span>
+            <span class="ds-badge ds-badge--neutral ds-badge--subtle">Select</span>
+            <span class="ds-badge ds-badge--neutral ds-badge--subtle">Radio</span>
+          </div>
+          <a class="ds-btn ds-btn--outline ds-btn--sm" href="contact.html" style="margin-top:var(--ds-dimension-16);display:inline-flex">
+            <span class="ds-btn__label"><span data-lang="pt">Ver template</span><span data-lang="en">View template</span></span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+<script src="../../js/main.js"></script>
+</body>
+</html>
