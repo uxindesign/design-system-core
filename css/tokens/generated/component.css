@@ -87,6 +87,9 @@
   --ds-checkbox-box-size-sm: var(--ds-size-xs); /** Tamanho visual da box Checkbox sm. */
   --ds-checkbox-box-size-md: var(--ds-size-sm); /** Tamanho visual da box Checkbox md. */
   --ds-checkbox-box-size-lg: var(--ds-size-md); /** Tamanho visual da box Checkbox lg. */
+  --ds-divider-line-color-default: var(--ds-border-subtle); /** Cor da linha do Divider. */
+  --ds-divider-line-thickness-default: var(--ds-border-width-default); /** Espessura da linha do Divider. */
+  --ds-divider-line-radius-default: var(--ds-radius-md); /** Raio da linha do Divider. */
   --ds-input-root-height-sm: var(--ds-size-lg); /** Altura do root visual Input Text sm. */
   --ds-input-root-height-md: var(--ds-size-xl); /** Altura do root visual Input Text md. */
   --ds-input-root-height-lg: var(--ds-size-2xl); /** Altura do root visual Input Text lg. */

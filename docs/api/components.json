@@ -791,9 +791,9 @@
       "cssClass": "ds-divider",
       "cssFile": "css/components/divider.css",
       "tokens": [
-        "ds-border-subtle",
-        "ds-border-width-default",
-        "ds-radius-md",
+        "ds-divider-line-color-default",
+        "ds-divider-line-radius-default",
+        "ds-divider-line-thickness-default",
         "ds-space-md"
       ],
       "variants": [

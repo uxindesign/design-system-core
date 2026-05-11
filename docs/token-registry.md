@@ -6,8 +6,8 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Status
 
-- Total de tokens: **625**
-- Com metadados completos: **625**
+- Total de tokens: **628**
+- Com metadados completos: **628**
 - Pendentes (`TODO` em algum campo obrigatório): **0**
 - Completude: **100%**
 
@@ -359,7 +359,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.border.focus-error` | color | → `foundation.color.red.500` | Focus ring em estado error (apenas em focus, não default). | 0 |
 | `semantic.border.inverse` | color | → `foundation.color.neutral.50` | Borda invertida — sobre dark surfaces em light mode. | 1 |
 | `semantic.border.strong` | color | → `foundation.color.neutral.600` | Borda neutra forte — emphasis em separadores. | 0 |
-| `semantic.border.subtle` | color | → `foundation.color.neutral.200` | Borda neutra sutil — chips, code blocks. | 3 |
+| `semantic.border.subtle` | color | → `foundation.color.neutral.200` | Borda neutra sutil — chips, code blocks. | 4 |
 | `semantic.border.width.default` | dimension | → `foundation.border.width.1` | Border-width default. | 14 |
 | `semantic.border.width.focus` | dimension | → `foundation.border.width.2` | Border-width focus. | 12 |
 | `semantic.border.width.strong` | dimension | → `foundation.border.width.2` | Border-width strong. | 3 |
@@ -606,7 +606,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Component
 
-185 tokens.
+188 tokens.
 
 ### component.alert
 
@@ -718,6 +718,14 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.checkbox.target.height.lg` | dimension | → `semantic.size.2xl` | Altura minima da area interativa do Checkbox por size. | 1 |
 | `component.checkbox.target.height.md` | dimension | → `semantic.size.xl` | Altura minima da area interativa do Checkbox por size. | 1 |
 | `component.checkbox.target.height.sm` | dimension | → `semantic.size.lg` | Altura minima da area interativa do Checkbox por size. | 1 |
+
+### component.divider
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `component.divider.line.color.default` | color | → `semantic.border.subtle` | Cor da linha do Divider. | 1 |
+| `component.divider.line.radius.default` | dimension | → `semantic.radius.md` | Raio da linha do Divider. | 1 |
+| `component.divider.line.thickness.default` | dimension | → `semantic.border.width.default` | Espessura da linha do Divider. | 1 |
 
 ### component.input
 
@@ -4313,8 +4321,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/card.css` (1×)
-    - `css/components/divider.css` (1×)
     - `css/components/spinner.css` (1×)
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.divider.line.color.default`
 
 ### `semantic.border.width.default`
 
@@ -4330,14 +4339,13 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/base/reset.css` (1×)
     - `css/components/button.css` (1×)
     - `css/components/checkbox.css` (1×)
-    - `css/components/divider.css` (2×)
     - `css/components/input.css` (1×)
     - `css/components/radio.css` (1×)
     - `css/components/select.css` (1×)
     - `css/components/textarea.css` (1×)
     - `css/components/toggle.css` (3×)
-    - `css/tokens/generated/component.css` (4×)
-  - Tokens que referenciam: `component.alert.root.border-width.default`, `component.badge.root.border-width.default`, `component.card.root.border-width.default`, `component.tabs.list.border-width.default`
+    - `css/tokens/generated/component.css` (5×)
+  - Tokens que referenciam: `component.alert.root.border-width.default`, `component.badge.root.border-width.default`, `component.card.root.border-width.default`, `component.divider.line.thickness.default`, `component.tabs.list.border-width.default`
 
 ### `semantic.border.width.focus`
 
@@ -5429,12 +5437,11 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/button.css` (3×)
-    - `css/components/divider.css` (1×)
     - `css/components/input.css` (1×)
     - `css/components/select.css` (1×)
     - `css/components/textarea.css` (1×)
-    - `css/tokens/generated/component.css` (5×)
-  - Tokens que referenciam: `component.breadcrumb.item.radius.default`, `component.skeleton.text.radius.default`, `component.skeleton.rectangle.radius.default`, `component.tabs.item.radius.default`, `component.tabs.indicator.radius.default`
+    - `css/tokens/generated/component.css` (6×)
+  - Tokens que referenciam: `component.breadcrumb.item.radius.default`, `component.divider.line.radius.default`, `component.skeleton.text.radius.default`, `component.skeleton.rectangle.radius.default`, `component.tabs.item.radius.default`, `component.tabs.indicator.radius.default`
 
 ### `semantic.radius.sm`
 
@@ -7512,6 +7519,45 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/checkbox.css` (1×)
+
+### `component.divider.line.color.default`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.border.subtle`
+- **Sentido**: Cor da linha do Divider.
+- **Escopo**: —
+- **Contexto**: Usado no fill dos variants Horizontal e Vertical do Figma e no background-color de ds-divider no CSS.
+- **Decisão**: Alias para semantic.border.subtle, porque a cor segue o papel semântico de separador decorativo, mas o consumo do componente deve passar pelo contrato Component.
+- **Usos**:
+  - CSS:
+    - `css/components/divider.css` (1×)
+
+### `component.divider.line.radius.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.radius.md`
+- **Sentido**: Raio da linha do Divider.
+- **Escopo**: —
+- **Contexto**: Usado nos quatro corner radii dos variants Horizontal e Vertical do Figma e no border-radius do CSS.
+- **Decisão**: Alias para semantic.radius.md, espelhando o Figma vivo e documentando o raio público da linha do Divider.
+- **Usos**:
+  - CSS:
+    - `css/components/divider.css` (1×)
+
+### `component.divider.line.thickness.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.border.width.default`
+- **Sentido**: Espessura da linha do Divider.
+- **Escopo**: —
+- **Contexto**: Usado como height no variant Horizontal, width no variant Vertical e nas classes ds-divider/ds-divider--vertical.
+- **Decisão**: Alias para semantic.border.width.default, mantendo 1px como contrato anatômico da linha sem expor Foundation ao componente.
+- **Usos**:
+  - CSS:
+    - `css/components/divider.css` (2×)
 
 ### `component.input.root.height.lg`
 

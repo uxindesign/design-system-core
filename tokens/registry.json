@@ -4565,15 +4565,17 @@
             "count": 1
           },
           {
-            "file": "css/components/divider.css",
+            "file": "css/components/spinner.css",
             "count": 1
           },
           {
-            "file": "css/components/spinner.css",
+            "file": "css/tokens/generated/component.css",
             "count": 1
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "component.divider.line.color.default"
+        ],
         "figma": []
       }
     },
@@ -4602,10 +4604,6 @@
             "count": 1
           },
           {
-            "file": "css/components/divider.css",
-            "count": 2
-          },
-          {
             "file": "css/components/input.css",
             "count": 1
           },
@@ -4627,13 +4625,14 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 4
+            "count": 5
           }
         ],
         "tokens": [
           "component.alert.root.border-width.default",
           "component.badge.root.border-width.default",
           "component.card.root.border-width.default",
+          "component.divider.line.thickness.default",
           "component.tabs.list.border-width.default"
         ],
         "figma": []
@@ -7073,10 +7072,6 @@
             "count": 3
           },
           {
-            "file": "css/components/divider.css",
-            "count": 1
-          },
-          {
             "file": "css/components/input.css",
             "count": 1
           },
@@ -7090,11 +7085,12 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 5
+            "count": 6
           }
         ],
         "tokens": [
           "component.breadcrumb.item.radius.default",
+          "component.divider.line.radius.default",
           "component.skeleton.text.radius.default",
           "component.skeleton.rectangle.radius.default",
           "component.tabs.item.radius.default",
@@ -14297,6 +14293,63 @@
         "css": [
           {
             "file": "css/components/breadcrumb.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.divider.line.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.subtle",
+      "sentido": "Cor da linha do Divider.",
+      "escopo": [],
+      "contexto": "Usado no fill dos variants Horizontal e Vertical do Figma e no background-color de ds-divider no CSS.",
+      "decisao": "Alias para semantic.border.subtle, porque a cor segue o papel semântico de separador decorativo, mas o consumo do componente deve passar pelo contrato Component.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/divider.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.divider.line.thickness.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.border.width.default",
+      "sentido": "Espessura da linha do Divider.",
+      "escopo": [],
+      "contexto": "Usado como height no variant Horizontal, width no variant Vertical e nas classes ds-divider/ds-divider--vertical.",
+      "decisao": "Alias para semantic.border.width.default, mantendo 1px como contrato anatômico da linha sem expor Foundation ao componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/divider.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.divider.line.radius.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.radius.md",
+      "sentido": "Raio da linha do Divider.",
+      "escopo": [],
+      "contexto": "Usado nos quatro corner radii dos variants Horizontal e Vertical do Figma e no border-radius do CSS.",
+      "decisao": "Alias para semantic.radius.md, espelhando o Figma vivo e documentando o raio público da linha do Divider.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/divider.css",
             "count": 1
           }
         ],
