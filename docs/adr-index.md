@@ -25,4 +25,4 @@
 | [ADR-016](decisions/ADR-016-tokens-sem-equivalencia-no-figma.md) | — Tokens sem equivalência no Figma (CSS-only) | Aceito | 2026-04-30 |
 | [ADR-017](decisions/ADR-017-componentes-css-only.md) | — Componentes CSS-only (sem equivalência no Figma) | Aceito | 2026-04-30 |
 | [ADR-018](decisions/ADR-018-content-naming-strong-default-subtle.md) | — Renomear `content.{default,secondary,tertiary}` para `content.{strong,default,subtle}` | Aceito | 2026-05-06 |
-| [ADR-019](decisions/ADR-019-component-tokens-contrato-anatomico.md) | — Reintroducao de Component tokens como contrato anatomico | Aceito | 2026-05-11 |
+| [ADR-019](decisions/ADR-019-component-tokens-contrato-anatomico.md) | — Reintrodução de Component tokens como contrato anatômico | Aceito | 2026-05-11 |

@@ -212,17 +212,17 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 - **Tabs Figma/CSS aplicado aos tokens Component anatômicos.** Criado `component.tabs` para borda da lista, espaçamento/raio/gap do indicador no item, altura/raio do indicador, tipografia do rótulo e espaçamento do painel; `Tab Item` e `Tab Bar` ativos no Figma agora usam tokens Component nesses contratos. CSS passa a consumir `--ds-tabs-*`; cores e focus ring permanecem Semantic.
 - **Modal Figma/CSS aplicado aos Component tokens anatômicos.** Criado `component.modal` para overlay, root, header, body, title, footer e close; as 3 variantes vivas do Figma (`Small`, `Medium`, `Large`) agora usam Component tokens nesses contratos. CSS passa a consumir `--ds-modal-*`, remove `z-index` hardcoded via `semantic.z.modal` e aplica `component.modal.root.shadow.default` em vez de depender da utility `.ds-elevation-4`.
 - **Card Figma/CSS aplicado aos Component tokens anatômicos.** Criado `component.card` para radius/border-width do root, padding/gap do header, padding do body e tipografia de title/subtitle/body; as 3 variantes vivas do Figma agora usam Component tokens nesses contratos. CSS passa a consumir `--ds-card-*`; cores e shadow permanecem Semantic.
-- **Alert Figma/CSS aplicado aos Component tokens anatómicos.** Criado `component.alert` para root padding/gap/radius/border-width, icon/close size e glyph-size, content gap e tipografia de title/description; os 8 variants vivos do Figma agora usam Component tokens nesses contratos. CSS passa a consumir `--ds-alert-*`; documentação remove mappings antigos/stale de spacing e typography Foundation.
-- **Badge Figma/CSS aplicado aos Component tokens anatómicos.** Criado `component.badge` para padding/gap/radius/border-width do root e tipografia do label; os 12 variants vivos do Figma (`6` cores × `2` estilos) agora usam Component tokens nesses contratos. CSS passa a consumir `--ds-badge-*`; documentação corrige inventário de cores para 6 e remove mappings antigos/stale.
-- **Tooltip Figma/CSS aplicado aos Component tokens anatómicos.** Criado `component.tooltip` para padding/radius do content, tipografia do label e dimensões da seta (`base/depth`); os 4 variants `Position` do Figma agora usam Component tokens nesses contratos. CSS passa a consumir `--ds-tooltip-*`; cores e z-index permanecem Semantic.
-- **Skeleton Figma/CSS aplicado aos Component tokens anatómicos.** Criado `component.skeleton.{text,circle,rectangle}` para height/size/radius dos 3 variants vivos do Figma; Text e Rectangle usam alturas anatómicas específicas (`12/120`) e Circle usa `semantic.size.xl` (`40`). CSS passa a consumir `--ds-skeleton-*`; documentação corrige background para `semantic.background.subtle` e remove mappings antigos de radius Foundation.
-- **Spinner Figma/CSS aplicado aos Component tokens anatómicos.** Criado `component.spinner.root.size.{sm,md,lg}`, `component.spinner.root.radius.default` e `component.spinner.ring.stroke-width.default`; os 6 variants do Spinner no Figma agora usam Component tokens em root, Track e Indicator. CSS passa a consumir `--ds-spinner-*`; documentação corrige tamanhos `16/24/32` e motion para `duration.slower` + `ease.linear`.
-- **Avatar Figma/CSS aplicado aos Component tokens anatómicos.** Criado `component.avatar.root.size.*`, `component.avatar.root.radius.default`, `component.avatar.initials.{font-size,line-height,font-weight}.*` e `component.avatar.icon.size.*`; os 6 variants do Avatar no Figma agora usam Component tokens para root e tipografia anatómica. CSS passa a consumir `--ds-avatar-*`, corrige icon sizes para `20/24/32` e documentação corrige `lg` de `56px` para `64px`.
+- **Alert Figma/CSS aplicado aos Component tokens anatômicos.** Criado `component.alert` para root padding/gap/radius/border-width, icon/close size e glyph-size, content gap e tipografia de title/description; os 8 variants vivos do Figma agora usam Component tokens nesses contratos. CSS passa a consumir `--ds-alert-*`; documentação remove mappings antigos/stale de spacing e typography Foundation.
+- **Badge Figma/CSS aplicado aos Component tokens anatômicos.** Criado `component.badge` para padding/gap/radius/border-width do root e tipografia do label; os 12 variants vivos do Figma (`6` cores × `2` estilos) agora usam Component tokens nesses contratos. CSS passa a consumir `--ds-badge-*`; documentação corrige inventário de cores para 6 e remove mappings antigos/stale.
+- **Tooltip Figma/CSS aplicado aos Component tokens anatômicos.** Criado `component.tooltip` para padding/radius do content, tipografia do label e dimensões da seta (`base/depth`); os 4 variants `Position` do Figma agora usam Component tokens nesses contratos. CSS passa a consumir `--ds-tooltip-*`; cores e z-index permanecem Semantic.
+- **Skeleton Figma/CSS aplicado aos Component tokens anatômicos.** Criado `component.skeleton.{text,circle,rectangle}` para height/size/radius dos 3 variants vivos do Figma; Text e Rectangle usam alturas anatômicas específicas (`12/120`) e Circle usa `semantic.size.xl` (`40`). CSS passa a consumir `--ds-skeleton-*`; documentação corrige background para `semantic.background.subtle` e remove mappings antigos de radius Foundation.
+- **Spinner Figma/CSS aplicado aos Component tokens anatômicos.** Criado `component.spinner.root.size.{sm,md,lg}`, `component.spinner.root.radius.default` e `component.spinner.ring.stroke-width.default`; os 6 variants do Spinner no Figma agora usam Component tokens em root, Track e Indicator. CSS passa a consumir `--ds-spinner-*`; documentação corrige tamanhos `16/24/32` e motion para `duration.slower` + `ease.linear`.
+- **Avatar Figma/CSS aplicado aos Component tokens anatômicos.** Criado `component.avatar.root.size.*`, `component.avatar.root.radius.default`, `component.avatar.initials.{font-size,line-height,font-weight}.*` e `component.avatar.icon.size.*`; os 6 variants do Avatar no Figma agora usam Component tokens para root e tipografia anatômica. CSS passa a consumir `--ds-avatar-*`, corrige icon sizes para `20/24/32` e documentação corrige `lg` de `56px` para `64px`.
 - **Textarea Figma/CSS aplicado aos Component tokens de field min-height.** Criado `component.textarea.field.min-height.{sm,md,lg}` e bindado nos 18 `Field` variants do Textarea no Figma (`80/96/120`). CSS passa a consumir `--ds-textarea-field-min-height-*`; documentação corrigida removendo valores antigos `120/160` que não batiam com Figma vivo. `foundation.dimension.120` foi adicionado como primitivo para suportar o tamanho Large.
-- **Toggle Figma aplicado aos Component tokens anatómicos bindáveis.** Os 18 variants do component set `Toggle` agora usam `component.toggle.target.height.{sm,md,lg}` no `minHeight` do root, preservando `component.toggle.track.width.{sm,md,lg}` e `component.toggle.track.height.{sm,md,lg}` em `Track` width/height. Validação Figma viva: sm `32 / 28×16`, md `40 / 44×24`, lg `48 / 56×32`, sem problemas de binding. `component.toggle.thumb.inset.default` permanece como geometria `x/y` do Thumb, porque posição `x/y` não é campo bindável por Figma Variables.
-- **Radio Figma aplicado aos Component tokens anatómicos.** Os 18 variants do component set `Radio` agora usam `component.radio.target.height.{sm,md,lg}` no `minHeight` do root, preservando `component.radio.control.size.{sm,md,lg}` em `Control` width/height. Validação Figma viva: sm `32/16`, md `40/20`, lg `48/24`, sem problemas de binding.
-- **Checkbox Figma aplicado aos Component tokens anatómicos.** Os 27 variants do component set `Checkbox` agora usam `component.checkbox.target.height.{sm,md,lg}` no `minHeight` do root, preservando `component.checkbox.box.size.{sm,md,lg}` em `Control` width/height. Validação Figma viva: sm `32/16`, md `40/20`, lg `48/24`, sem problemas de binding.
-- **API CSS e docs alinhadas aos nomes canónicos de Component.** Classes públicas do Button renomeadas de `.ds-btn*` para `.ds-button*` sem alias legado, porque o DS ainda está em beta e só a documentação consome os componentes. A documentação de Button/Control Sizing também deixou de anunciar tokens antigos inexistentes de height/padding/font/icon e passa a publicar o contrato real `component.button.root.height.*` / `--ds-button-root-height-*`.
+- **Toggle Figma aplicado aos Component tokens anatômicos bindáveis.** Os 18 variants do component set `Toggle` agora usam `component.toggle.target.height.{sm,md,lg}` no `minHeight` do root, preservando `component.toggle.track.width.{sm,md,lg}` e `component.toggle.track.height.{sm,md,lg}` em `Track` width/height. Validação Figma viva: sm `32 / 28×16`, md `40 / 44×24`, lg `48 / 56×32`, sem problemas de binding. `component.toggle.thumb.inset.default` permanece como geometria `x/y` do Thumb, porque posição `x/y` não é campo bindável por Figma Variables.
+- **Radio Figma aplicado aos Component tokens anatômicos.** Os 18 variants do component set `Radio` agora usam `component.radio.target.height.{sm,md,lg}` no `minHeight` do root, preservando `component.radio.control.size.{sm,md,lg}` em `Control` width/height. Validação Figma viva: sm `32/16`, md `40/20`, lg `48/24`, sem problemas de binding.
+- **Checkbox Figma aplicado aos Component tokens anatômicos.** Os 27 variants do component set `Checkbox` agora usam `component.checkbox.target.height.{sm,md,lg}` no `minHeight` do root, preservando `component.checkbox.box.size.{sm,md,lg}` em `Control` width/height. Validação Figma viva: sm `32/16`, md `40/20`, lg `48/24`, sem problemas de binding.
+- **API CSS e docs alinhadas aos nomes canônicos de Component.** Classes públicas do Button renomeadas de `.ds-btn*` para `.ds-button*` sem alias legado, porque o DS ainda está em beta e só a documentação consome os componentes. A documentação de Button/Control Sizing também deixou de anunciar tokens antigos inexistentes de height/padding/font/icon e passa a publicar o contrato real `component.button.root.height.*` / `--ds-button-root-height-*`.
 - **Tokens semânticos inválidos do Toggle removidos.** A tentativa anterior criou `semantic.control.toggle.*` diretamente no JSON sem variável correspondente no Figma, gerando `DRIFT_FROM_SOURCE` em `verify:tokens`. Esses aliases foram removidos de `tokens/semantic/{light,dark}.json` e do registry; `toggle.css` agora consome os Component tokens do piloto em vez de inventar `semantic.control.toggle.*`.
 - **Documentação normalizada conforme auditoria estrutural.** Labels de tabela foram padronizados (`Variável CSS`, `Descrição`, `Critério WCAG`, `Função`, `Referência`), README atualizado para 19 ADRs, páginas simples de componentes ganharam anatomia curta, `Form Field` declara o contrato CSS-only na própria página, e referências stale a `semantic.content.secondary/tertiary` foram migradas para `semantic.content.default/subtle`.
 - **Escala de Elevation/Shadow oficializada em 4 níveis + reset.** Removidos `foundation.shadow.xs` e `foundation.shadow.2xl` por não terem uso nem Effect Style correspondente. `foundation.shadow.{sm,md,lg,xl}` preserva exatamente os parâmetros dos Effect Styles Figma `elevation/1..4`, e `foundation.shadow.none` permanece como reset técnico de `.ds-elevation-0`. A página de Elevation agora documenta o papel de cada nível e o mapping Figma ↔ CSS. Resolve #19 / P3-2 da auditoria Figma↔Repo.
@@ -880,7 +880,7 @@ Primeira execução end-to-end do fluxo Figma → JSON. O Figma estava arquitetu
 - ADR-005 marcada como Aceita — Implementada em 0.5.0. Implementação já havia acontecido via ADR-011; fechamento formal em 0.5.2.
 
 ### Corrigido
-- `scripts/tokens-verify.mjs`: função `canonicalToCssVar` agora espelha exatamente o transform `name/strip-layer` de `build-tokens.mjs`. Remove os 65 falsos positivos (`foundation.typography.font.*` e `foundation.color.overlay.*`) que mascaravam a saúde real da cadeia Figma → JSON → CSS. `npm run verify:tokens` agora reporta 0 warnings, 0 erros.
+- `scripts/tokens-verify.mjs`: função `canônicalToCssVar` agora espelha exatamente o transform `name/strip-layer` de `build-tokens.mjs`. Remove os 65 falsos positivos (`foundation.typography.font.*` e `foundation.color.overlay.*`) que mascaravam a saúde real da cadeia Figma → JSON → CSS. `npm run verify:tokens` agora reporta 0 warnings, 0 erros.
 
 
 Consolidação da documentação como fonte única de verdade. Plano em seis fases executadas na branch `consolidation/docs-ground-truth`.
@@ -1011,7 +1011,7 @@ Consolidação da documentação como fonte única de verdade. Plano em seis fas
 | [ADR-016](decisions/ADR-016-tokens-sem-equivalencia-no-figma.md) | — Tokens sem equivalência no Figma (CSS-only) | Aceito | 2026-04-30 |
 | [ADR-017](decisions/ADR-017-componentes-css-only.md) | — Componentes CSS-only (sem equivalência no Figma) | Aceito | 2026-04-30 |
 | [ADR-018](decisions/ADR-018-content-naming-strong-default-subtle.md) | — Renomear `content.{default,secondary,tertiary}` para `content.{strong,default,subtle}` | Aceito | 2026-05-06 |
-| [ADR-019](decisions/ADR-019-component-tokens-contrato-anatomico.md) | — Reintroducao de Component tokens como contrato anatomico | Aceito | 2026-05-11 |
+| [ADR-019](decisions/ADR-019-component-tokens-contrato-anatomico.md) | — Reintrodução de Component tokens como contrato anatômico | Aceito | 2026-05-11 |
 
 
 ═══════════════════════════════════════════════════════════
@@ -1533,7 +1533,7 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 | ADR-016 | — Tokens sem equivalência no Figma (CSS-only) | Aceito |
 | ADR-017 | — Componentes CSS-only (sem equivalência no Figma) | Aceito |
 | ADR-018 | — Renomear `content.{default,secondary,tertiary}` para `content.{strong,default,subtle}` | Aceito |
-| ADR-019 | — Reintroducao de Component tokens como contrato anatomico | Aceito |
+| ADR-019 | — Reintrodução de Component tokens como contrato anatômico | Aceito |
 
 ## Próximos milestones
 
@@ -8933,7 +8933,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.sm`
 - **Sentido**: Tamanho do glyph Close Alert.
 - **Escopo**: font-size
-- **Contexto**: Component token do contrato anatomico Alert Close. Binda fontSize dos glyphs close nos 8 variants do Figma e substitui tamanho implicito no CSS.
+- **Contexto**: Component token do contrato anatômico Alert Close. Binda fontSize dos glyphs close nos 8 variants do Figma e substitui tamanho implicito no CSS.
 - **Decisão**: Alias 1:1 para semantic.size.sm porque 20px e escala reutilizavel, mas no Alert documenta o tamanho publico do glyph de dismiss.
 - **Usos**:
   - CSS:
@@ -8946,7 +8946,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.md`
 - **Sentido**: Tamanho do container Close Alert.
 - **Escopo**: width, height
-- **Contexto**: Component token do contrato anatomico Alert Close. Binda width/height dos close buttons nos 8 variants do Figma e substitui tamanho implicito no CSS.
+- **Contexto**: Component token do contrato anatômico Alert Close. Binda width/height dos close buttons nos 8 variants do Figma e substitui tamanho implicito no CSS.
 - **Decisão**: Alias 1:1 para semantic.size.md porque 24px e escala reutilizavel, mas no Alert documenta o slot publico de dismiss.
 - **Usos**:
   - CSS:
@@ -8959,7 +8959,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.space.xs`
 - **Sentido**: Gap vertical do content Alert.
 - **Escopo**: gap
-- **Contexto**: Component token do contrato anatomico Alert Content. Binda itemSpacing entre Title e Description nos 8 variants do Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Alert Content. Binda itemSpacing entre Title e Description nos 8 variants do Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.space.xs porque 4px e escala reutilizavel, mas no Alert documenta a separacao vertical publica do conteudo.
 - **Usos**:
   - CSS:
@@ -8972,7 +8972,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.typography.body.font-size.sm`
 - **Sentido**: Font-size da description Alert.
 - **Escopo**: font-size
-- **Contexto**: Component token do contrato anatomico Alert Description. Binda fontSize das 8 descriptions no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Alert Description. Binda fontSize das 8 descriptions no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.typography.body.font-size.sm porque a description usa body/sm, mas a escala tipografica do Alert e contrato publico do componente.
 - **Usos**:
   - CSS:
@@ -8985,7 +8985,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.typography.body.font-weight.regular`
 - **Sentido**: Font-weight da description Alert.
 - **Escopo**: font-weight
-- **Contexto**: Component token do contrato anatomico Alert Description. Binda fontStyle das 8 descriptions no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Alert Description. Binda fontStyle das 8 descriptions no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.typography.body.font-weight.regular porque a description usa Regular; no Figma o campo bindavel e fontStyle/string, enquanto no JSON/CSS o contrato permanece numerico.
 - **Usos**:
   - CSS:
@@ -8998,7 +8998,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.typography.body.line-height.sm`
 - **Sentido**: Line-height da description Alert.
 - **Escopo**: line-height
-- **Contexto**: Component token do contrato anatomico Alert Description. Binda lineHeight das 8 descriptions no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Alert Description. Binda lineHeight das 8 descriptions no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.typography.body.line-height.sm porque a description usa body/sm, mas a metrica vertical do Alert e contrato publico do componente.
 - **Usos**:
   - CSS:
@@ -9011,7 +9011,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.sm`
 - **Sentido**: Tamanho do glyph Icon Alert.
 - **Escopo**: font-size
-- **Contexto**: Component token do contrato anatomico Alert Icon. Binda fontSize dos glyphs Material Icons nos 8 variants do Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Alert Icon. Binda fontSize dos glyphs Material Icons nos 8 variants do Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.size.sm porque 20px e escala reutilizavel, mas no Alert documenta o tamanho publico do glyph de status.
 - **Usos**:
   - CSS:
@@ -9024,7 +9024,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.md`
 - **Sentido**: Tamanho do container Icon Alert.
 - **Escopo**: width, height
-- **Contexto**: Component token do contrato anatomico Alert Icon. Binda width/height dos icons nos 8 variants do Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Alert Icon. Binda width/height dos icons nos 8 variants do Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.size.md porque 24px e escala reutilizavel, mas no Alert documenta o slot publico de icon.
 - **Usos**:
   - CSS:
@@ -9037,7 +9037,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.border.width.default`
 - **Sentido**: Border width do root Alert quando stroke esta ativo.
 - **Escopo**: border-width
-- **Contexto**: Component token do contrato anatomico Alert Root. Binda stroke weights dos 4 variants Subtle no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Alert Root. Binda stroke weights dos 4 variants Subtle no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.border.width.default porque 1px e padrao reutilizavel, mas no Alert documenta a espessura publica da borda Subtle.
 - **Usos**:
   - CSS:
@@ -9050,7 +9050,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.space.sm`
 - **Sentido**: Gap horizontal do root Alert.
 - **Escopo**: gap
-- **Contexto**: Component token do contrato anatomico Alert Root. Binda itemSpacing entre icon, content e close nos 8 variants do Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Alert Root. Binda itemSpacing entre icon, content e close nos 8 variants do Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.space.sm porque 8px e escala reutilizavel, mas no Alert documenta o espaçamento horizontal publico da anatomia.
 - **Usos**:
   - CSS:
@@ -9063,7 +9063,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.space.md`
 - **Sentido**: Padding do root Alert.
 - **Escopo**: padding
-- **Contexto**: Component token do contrato anatomico Alert Root. Binda padding nos 8 variants do Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Alert Root. Binda padding nos 8 variants do Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.space.md porque 12px e escala reutilizavel, mas no Alert documenta o padding publico do container.
 - **Usos**:
   - CSS:
@@ -9076,7 +9076,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.radius.lg`
 - **Sentido**: Radius do root Alert.
 - **Escopo**: border-radius
-- **Contexto**: Component token do contrato anatomico Alert Root. Binda os 4 corner radii nos 8 variants do Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Alert Root. Binda os 4 corner radii nos 8 variants do Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.radius.lg porque 12px e decisao reutilizavel, mas no Alert e parte publica da anatomia do container.
 - **Usos**:
   - CSS:
@@ -9089,7 +9089,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.typography.body.font-size.sm`
 - **Sentido**: Font-size do title Alert.
 - **Escopo**: font-size
-- **Contexto**: Component token do contrato anatomico Alert Title. Binda fontSize dos 8 titles no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Alert Title. Binda fontSize dos 8 titles no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.typography.body.font-size.sm porque o title usa body/sm, mas a escala tipografica do Alert e contrato publico do componente.
 - **Usos**:
   - CSS:
@@ -9102,7 +9102,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.typography.body.font-weight.bold`
 - **Sentido**: Font-weight do title Alert.
 - **Escopo**: font-weight
-- **Contexto**: Component token do contrato anatomico Alert Title. Binda fontStyle dos 8 titles no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Alert Title. Binda fontStyle dos 8 titles no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.typography.body.font-weight.bold porque o title usa Bold; no Figma o campo bindavel e fontStyle/string, enquanto no JSON/CSS o contrato permanece numerico.
 - **Usos**:
   - CSS:
@@ -9115,7 +9115,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.typography.body.line-height.sm`
 - **Sentido**: Line-height do title Alert.
 - **Escopo**: line-height
-- **Contexto**: Component token do contrato anatomico Alert Title. Binda lineHeight dos 8 titles no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Alert Title. Binda lineHeight dos 8 titles no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.typography.body.line-height.sm porque o title usa body/sm, mas a metrica vertical do Alert e contrato publico do componente.
 - **Usos**:
   - CSS:
@@ -9128,7 +9128,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.typography.body.font-size.4xl`
 - **Sentido**: Tamanho do icon fallback do Avatar por size.
 - **Escopo**: font-size
-- **Contexto**: Component token do contrato anatomico Avatar Icon. Binda o texto Material Symbols no Figma e corrige o CSS para usar os tamanhos 20/24/32 observados no Figma.
+- **Contexto**: Component token do contrato anatômico Avatar Icon. Binda o texto Material Symbols no Figma e corrige o CSS para usar os tamanhos 20/24/32 observados no Figma.
 - **Decisão**: Alias para typography body font-size porque Material Symbols usa font-size; fica em Component para documentar que o icon nao segue a escala icon anterior 16/20/24.
 - **Usos**:
   - CSS:
@@ -9141,7 +9141,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.typography.body.font-size.2xl`
 - **Sentido**: Tamanho do icon fallback do Avatar por size.
 - **Escopo**: font-size
-- **Contexto**: Component token do contrato anatomico Avatar Icon. Binda o texto Material Symbols no Figma e corrige o CSS para usar os tamanhos 20/24/32 observados no Figma.
+- **Contexto**: Component token do contrato anatômico Avatar Icon. Binda o texto Material Symbols no Figma e corrige o CSS para usar os tamanhos 20/24/32 observados no Figma.
 - **Decisão**: Alias para typography body font-size porque Material Symbols usa font-size; fica em Component para documentar que o icon nao segue a escala icon anterior 16/20/24.
 - **Usos**:
   - CSS:
@@ -9154,7 +9154,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.typography.body.font-size.xl`
 - **Sentido**: Tamanho do icon fallback do Avatar por size.
 - **Escopo**: font-size
-- **Contexto**: Component token do contrato anatomico Avatar Icon. Binda o texto Material Symbols no Figma e corrige o CSS para usar os tamanhos 20/24/32 observados no Figma.
+- **Contexto**: Component token do contrato anatômico Avatar Icon. Binda o texto Material Symbols no Figma e corrige o CSS para usar os tamanhos 20/24/32 observados no Figma.
 - **Decisão**: Alias para typography body font-size porque Material Symbols usa font-size; fica em Component para documentar que o icon nao segue a escala icon anterior 16/20/24.
 - **Usos**:
   - CSS:
@@ -9284,7 +9284,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.radius.full`
 - **Sentido**: Radius circular do root Avatar.
 - **Escopo**: border-radius
-- **Contexto**: Component token do contrato anatomico Avatar. Binda os quatro corner radii do root no Figma e substitui consumo direto de semantic.radius.full no CSS.
+- **Contexto**: Component token do contrato anatômico Avatar. Binda os quatro corner radii do root no Figma e substitui consumo direto de semantic.radius.full no CSS.
 - **Decisão**: Alias 1:1 para semantic.radius.full porque o formato circular e parte publica da anatomia Avatar.
 - **Usos**:
   - CSS:
@@ -9297,7 +9297,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.3xl`
 - **Sentido**: Tamanho do root circular do Avatar por size.
 - **Escopo**: width, height
-- **Contexto**: Component token do contrato anatomico Avatar. Binda width/height do root no Figma e substitui consumo direto de semantic.size.* no CSS.
+- **Contexto**: Component token do contrato anatômico Avatar. Binda width/height do root no Figma e substitui consumo direto de semantic.size.* no CSS.
 - **Decisão**: Alias 1:1 para semantic.size.lg/xl/3xl porque Avatar usa 32/40/64 como tamanhos publicos do root; fica em Component para documentar a anatomia e corrigir a documentacao antiga que indicava lg 56px.
 - **Usos**:
   - CSS:
@@ -9310,7 +9310,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.xl`
 - **Sentido**: Tamanho do root circular do Avatar por size.
 - **Escopo**: width, height
-- **Contexto**: Component token do contrato anatomico Avatar. Binda width/height do root no Figma e substitui consumo direto de semantic.size.* no CSS.
+- **Contexto**: Component token do contrato anatômico Avatar. Binda width/height do root no Figma e substitui consumo direto de semantic.size.* no CSS.
 - **Decisão**: Alias 1:1 para semantic.size.lg/xl/3xl porque Avatar usa 32/40/64 como tamanhos publicos do root; fica em Component para documentar a anatomia e corrigir a documentacao antiga que indicava lg 56px.
 - **Usos**:
   - CSS:
@@ -9323,7 +9323,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.lg`
 - **Sentido**: Tamanho do root circular do Avatar por size.
 - **Escopo**: width, height
-- **Contexto**: Component token do contrato anatomico Avatar. Binda width/height do root no Figma e substitui consumo direto de semantic.size.* no CSS.
+- **Contexto**: Component token do contrato anatômico Avatar. Binda width/height do root no Figma e substitui consumo direto de semantic.size.* no CSS.
 - **Decisão**: Alias 1:1 para semantic.size.lg/xl/3xl porque Avatar usa 32/40/64 como tamanhos publicos do root; fica em Component para documentar a anatomia e corrigir a documentacao antiga que indicava lg 56px.
 - **Usos**:
   - CSS:
@@ -9336,7 +9336,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.typography.body.font-size.xs`
 - **Sentido**: Font-size do label Badge.
 - **Escopo**: font-size
-- **Contexto**: Component token do contrato anatomico Badge Label. Binda fontSize dos 12 labels no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Badge Label. Binda fontSize dos 12 labels no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.typography.body.font-size.xs porque o label usa body/xs, mas a escala tipografica do Badge e contrato publico do componente.
 - **Usos**:
   - CSS:
@@ -9349,7 +9349,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.typography.body.font-weight.bold`
 - **Sentido**: Font-weight do label Badge.
 - **Escopo**: font-weight
-- **Contexto**: Component token do contrato anatomico Badge Label. Binda fontStyle dos 12 labels no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Badge Label. Binda fontStyle dos 12 labels no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.typography.body.font-weight.bold porque Badge usa label bold; no Figma o campo bindavel e fontStyle/string, enquanto no JSON/CSS o contrato permanece numerico.
 - **Usos**:
   - CSS:
@@ -9362,7 +9362,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.typography.body.line-height.xs`
 - **Sentido**: Line-height do label Badge.
 - **Escopo**: line-height
-- **Contexto**: Component token do contrato anatomico Badge Label. Binda lineHeight dos 12 labels no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Badge Label. Binda lineHeight dos 12 labels no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.typography.body.line-height.xs porque o label usa body/xs, mas a metrica vertical do Badge e contrato publico do componente.
 - **Usos**:
   - CSS:
@@ -9375,7 +9375,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.border.width.default`
 - **Sentido**: Border width do root Badge quando stroke esta ativo.
 - **Escopo**: border-width
-- **Contexto**: Component token do contrato anatomico Badge Root. Binda stroke weights do variant Neutral/Subtle no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Badge Root. Binda stroke weights do variant Neutral/Subtle no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.border.width.default porque 1px e padrao reutilizavel, mas no Badge documenta a espessura publica do stroke quando o estilo exige borda.
 - **Usos**:
   - CSS:
@@ -9388,7 +9388,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.space.xs`
 - **Sentido**: Gap interno do root Badge.
 - **Escopo**: gap
-- **Contexto**: Component token do contrato anatomico Badge Root. Binda itemSpacing dos 12 variants no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Badge Root. Binda itemSpacing dos 12 variants no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.space.xs porque 4px e escala reutilizavel, mas no Badge documenta o gap interno entre conteudo e adornos futuros.
 - **Usos**:
   - CSS:
@@ -9401,7 +9401,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.space.sm`
 - **Sentido**: Padding horizontal do root Badge.
 - **Escopo**: padding-left, padding-right
-- **Contexto**: Component token do contrato anatomico Badge Root. Binda paddingLeft/paddingRight dos 12 variants no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Badge Root. Binda paddingLeft/paddingRight dos 12 variants no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.space.sm porque 8px e escala reutilizavel, mas no Badge documenta o padding horizontal publico do pill.
 - **Usos**:
   - CSS:
@@ -9414,7 +9414,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.space.2xs`
 - **Sentido**: Padding vertical do root Badge.
 - **Escopo**: padding-top, padding-bottom
-- **Contexto**: Component token do contrato anatomico Badge Root. Binda paddingTop/paddingBottom dos 12 variants no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Badge Root. Binda paddingTop/paddingBottom dos 12 variants no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.space.2xs porque 2px e escala reutilizavel, mas no Badge documenta o padding vertical publico do pill.
 - **Usos**:
   - CSS:
@@ -9427,7 +9427,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.radius.full`
 - **Sentido**: Radius pill do root Badge.
 - **Escopo**: border-radius
-- **Contexto**: Component token do contrato anatomico Badge Root. Binda os 4 corner radii dos 12 variants no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Badge Root. Binda os 4 corner radii dos 12 variants no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.radius.full porque a circularidade e reutilizavel, mas no Badge e parte publica da anatomia pill.
 - **Usos**:
   - CSS:
@@ -9583,7 +9583,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.2xl`
 - **Sentido**: Altura do root do Button por size.
 - **Escopo**: height, min-height
-- **Contexto**: Component token do contrato anatomico Button. Binda o root das variants no Figma e substitui consumo direto de semantic.size.* no CSS.
+- **Contexto**: Component token do contrato anatômico Button. Binda o root das variants no Figma e substitui consumo direto de semantic.size.* no CSS.
 - **Decisão**: Alias 1:1 para semantic.size.lg/xl/2xl porque Button usa 32/40/48 como altura visual e area interativa; fica em Component para documentar o contrato publico da anatomia.
 - **Usos**:
   - CSS:
@@ -9596,7 +9596,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.xl`
 - **Sentido**: Altura do root do Button por size.
 - **Escopo**: height, min-height
-- **Contexto**: Component token do contrato anatomico Button. Binda o root das variants no Figma e substitui consumo direto de semantic.size.* no CSS.
+- **Contexto**: Component token do contrato anatômico Button. Binda o root das variants no Figma e substitui consumo direto de semantic.size.* no CSS.
 - **Decisão**: Alias 1:1 para semantic.size.lg/xl/2xl porque Button usa 32/40/48 como altura visual e area interativa; fica em Component para documentar o contrato publico da anatomia.
 - **Usos**:
   - CSS:
@@ -9609,7 +9609,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.lg`
 - **Sentido**: Altura do root do Button por size.
 - **Escopo**: height, min-height
-- **Contexto**: Component token do contrato anatomico Button. Binda o root das variants no Figma e substitui consumo direto de semantic.size.* no CSS.
+- **Contexto**: Component token do contrato anatômico Button. Binda o root das variants no Figma e substitui consumo direto de semantic.size.* no CSS.
 - **Decisão**: Alias 1:1 para semantic.size.lg/xl/2xl porque Button usa 32/40/48 como altura visual e area interativa; fica em Component para documentar o contrato publico da anatomia.
 - **Usos**:
   - CSS:
@@ -9843,7 +9843,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.md`
 - **Sentido**: Tamanho visual da box do Checkbox por size.
 - **Escopo**: width, height
-- **Contexto**: Component token do contrato anatomico Checkbox. Binda o node Control no Figma e substitui consumo direto de semantic.size.* no CSS.
+- **Contexto**: Component token do contrato anatômico Checkbox. Binda o node Control no Figma e substitui consumo direto de semantic.size.* no CSS.
 - **Decisão**: Alias 1:1 para semantic.size.xs/sm/md e mantido em Component porque representa anatomia publica do Checkbox, nao uma decisao Semantic nova.
 - **Usos**:
   - CSS:
@@ -9856,7 +9856,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.sm`
 - **Sentido**: Tamanho visual da box do Checkbox por size.
 - **Escopo**: width, height
-- **Contexto**: Component token do contrato anatomico Checkbox. Binda o node Control no Figma e substitui consumo direto de semantic.size.* no CSS.
+- **Contexto**: Component token do contrato anatômico Checkbox. Binda o node Control no Figma e substitui consumo direto de semantic.size.* no CSS.
 - **Decisão**: Alias 1:1 para semantic.size.xs/sm/md e mantido em Component porque representa anatomia publica do Checkbox, nao uma decisao Semantic nova.
 - **Usos**:
   - CSS:
@@ -9869,7 +9869,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.xs`
 - **Sentido**: Tamanho visual da box do Checkbox por size.
 - **Escopo**: width, height
-- **Contexto**: Component token do contrato anatomico Checkbox. Binda o node Control no Figma e substitui consumo direto de semantic.size.* no CSS.
+- **Contexto**: Component token do contrato anatômico Checkbox. Binda o node Control no Figma e substitui consumo direto de semantic.size.* no CSS.
 - **Decisão**: Alias 1:1 para semantic.size.xs/sm/md e mantido em Component porque representa anatomia publica do Checkbox, nao uma decisao Semantic nova.
 - **Usos**:
   - CSS:
@@ -9882,7 +9882,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.2xl`
 - **Sentido**: Altura minima da area interativa do Checkbox por size.
 - **Escopo**: min-height, height
-- **Contexto**: Component token do contrato anatomico Checkbox. Consumido por CSS e/ou Figma quando a anatomia de target existir; pode aliasar Semantic porque documenta API publica do componente.
+- **Contexto**: Component token do contrato anatômico Checkbox. Consumido por CSS e/ou Figma quando a anatomia de target existir; pode aliasar Semantic porque documenta API publica do componente.
 - **Decisão**: Criado pelo piloto ADR-019 para separar target 32/40/48 do glyph visual 16/20/24 sem recriar semantic.control.toggle.* ou nomes Semantic falsamente genericos.
 - **Usos**:
   - CSS:
@@ -9895,7 +9895,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.xl`
 - **Sentido**: Altura minima da area interativa do Checkbox por size.
 - **Escopo**: min-height, height
-- **Contexto**: Component token do contrato anatomico Checkbox. Consumido por CSS e/ou Figma quando a anatomia de target existir; pode aliasar Semantic porque documenta API publica do componente.
+- **Contexto**: Component token do contrato anatômico Checkbox. Consumido por CSS e/ou Figma quando a anatomia de target existir; pode aliasar Semantic porque documenta API publica do componente.
 - **Decisão**: Criado pelo piloto ADR-019 para separar target 32/40/48 do glyph visual 16/20/24 sem recriar semantic.control.toggle.* ou nomes Semantic falsamente genericos.
 - **Usos**:
   - CSS:
@@ -9908,7 +9908,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.lg`
 - **Sentido**: Altura minima da area interativa do Checkbox por size.
 - **Escopo**: min-height, height
-- **Contexto**: Component token do contrato anatomico Checkbox. Consumido por CSS e/ou Figma quando a anatomia de target existir; pode aliasar Semantic porque documenta API publica do componente.
+- **Contexto**: Component token do contrato anatômico Checkbox. Consumido por CSS e/ou Figma quando a anatomia de target existir; pode aliasar Semantic porque documenta API publica do componente.
 - **Decisão**: Criado pelo piloto ADR-019 para separar target 32/40/48 do glyph visual 16/20/24 sem recriar semantic.control.toggle.* ou nomes Semantic falsamente genericos.
 - **Usos**:
   - CSS:
@@ -10207,7 +10207,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.2xl`
 - **Sentido**: Altura do root visual do Input Text por size.
 - **Escopo**: height, min-height
-- **Contexto**: Component token do contrato anatomico Input Text. Binda o subnode visual do campo no Figma e substitui consumo direto de semantic.size.* no CSS.
+- **Contexto**: Component token do contrato anatômico Input Text. Binda o subnode visual do campo no Figma e substitui consumo direto de semantic.size.* no CSS.
 - **Decisão**: Alias 1:1 para semantic.size.lg/xl/2xl porque Input usa 32/40/48 como altura visual e area interativa; fica em Component para documentar o contrato publico da anatomia.
 - **Usos**:
   - CSS:
@@ -10220,7 +10220,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.xl`
 - **Sentido**: Altura do root visual do Input Text por size.
 - **Escopo**: height, min-height
-- **Contexto**: Component token do contrato anatomico Input Text. Binda o subnode visual do campo no Figma e substitui consumo direto de semantic.size.* no CSS.
+- **Contexto**: Component token do contrato anatômico Input Text. Binda o subnode visual do campo no Figma e substitui consumo direto de semantic.size.* no CSS.
 - **Decisão**: Alias 1:1 para semantic.size.lg/xl/2xl porque Input usa 32/40/48 como altura visual e area interativa; fica em Component para documentar o contrato publico da anatomia.
 - **Usos**:
   - CSS:
@@ -10233,7 +10233,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.lg`
 - **Sentido**: Altura do root visual do Input Text por size.
 - **Escopo**: height, min-height
-- **Contexto**: Component token do contrato anatomico Input Text. Binda o subnode visual do campo no Figma e substitui consumo direto de semantic.size.* no CSS.
+- **Contexto**: Component token do contrato anatômico Input Text. Binda o subnode visual do campo no Figma e substitui consumo direto de semantic.size.* no CSS.
 - **Decisão**: Alias 1:1 para semantic.size.lg/xl/2xl porque Input usa 32/40/48 como altura visual e area interativa; fica em Component para documentar o contrato publico da anatomia.
 - **Usos**:
   - CSS:
@@ -10935,7 +10935,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.md`
 - **Sentido**: Tamanho visual do control circular do Radio por size.
 - **Escopo**: width, height
-- **Contexto**: Component token do contrato anatomico Radio. Binda o node Control no Figma e substitui consumo direto de semantic.size.* no CSS.
+- **Contexto**: Component token do contrato anatômico Radio. Binda o node Control no Figma e substitui consumo direto de semantic.size.* no CSS.
 - **Decisão**: Alias 1:1 para semantic.size.xs/sm/md e mantido em Component porque representa anatomia publica do Radio.
 - **Usos**:
   - CSS:
@@ -10948,7 +10948,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.sm`
 - **Sentido**: Tamanho visual do control circular do Radio por size.
 - **Escopo**: width, height
-- **Contexto**: Component token do contrato anatomico Radio. Binda o node Control no Figma e substitui consumo direto de semantic.size.* no CSS.
+- **Contexto**: Component token do contrato anatômico Radio. Binda o node Control no Figma e substitui consumo direto de semantic.size.* no CSS.
 - **Decisão**: Alias 1:1 para semantic.size.xs/sm/md e mantido em Component porque representa anatomia publica do Radio.
 - **Usos**:
   - CSS:
@@ -10961,7 +10961,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.xs`
 - **Sentido**: Tamanho visual do control circular do Radio por size.
 - **Escopo**: width, height
-- **Contexto**: Component token do contrato anatomico Radio. Binda o node Control no Figma e substitui consumo direto de semantic.size.* no CSS.
+- **Contexto**: Component token do contrato anatômico Radio. Binda o node Control no Figma e substitui consumo direto de semantic.size.* no CSS.
 - **Decisão**: Alias 1:1 para semantic.size.xs/sm/md e mantido em Component porque representa anatomia publica do Radio.
 - **Usos**:
   - CSS:
@@ -10974,7 +10974,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.2xl`
 - **Sentido**: Altura minima da area interativa do Radio por size.
 - **Escopo**: min-height, height
-- **Contexto**: Component token do contrato anatomico Radio. Consumido por CSS e/ou Figma quando a anatomia de target existir; pode aliasar Semantic porque documenta API publica do componente.
+- **Contexto**: Component token do contrato anatômico Radio. Consumido por CSS e/ou Figma quando a anatomia de target existir; pode aliasar Semantic porque documenta API publica do componente.
 - **Decisão**: Criado pelo piloto ADR-019 para separar target 32/40/48 do control visual 16/20/24.
 - **Usos**:
   - CSS:
@@ -10987,7 +10987,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.xl`
 - **Sentido**: Altura minima da area interativa do Radio por size.
 - **Escopo**: min-height, height
-- **Contexto**: Component token do contrato anatomico Radio. Consumido por CSS e/ou Figma quando a anatomia de target existir; pode aliasar Semantic porque documenta API publica do componente.
+- **Contexto**: Component token do contrato anatômico Radio. Consumido por CSS e/ou Figma quando a anatomia de target existir; pode aliasar Semantic porque documenta API publica do componente.
 - **Decisão**: Criado pelo piloto ADR-019 para separar target 32/40/48 do control visual 16/20/24.
 - **Usos**:
   - CSS:
@@ -11000,7 +11000,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.lg`
 - **Sentido**: Altura minima da area interativa do Radio por size.
 - **Escopo**: min-height, height
-- **Contexto**: Component token do contrato anatomico Radio. Consumido por CSS e/ou Figma quando a anatomia de target existir; pode aliasar Semantic porque documenta API publica do componente.
+- **Contexto**: Component token do contrato anatômico Radio. Consumido por CSS e/ou Figma quando a anatomia de target existir; pode aliasar Semantic porque documenta API publica do componente.
 - **Decisão**: Criado pelo piloto ADR-019 para separar target 32/40/48 do control visual 16/20/24.
 - **Usos**:
   - CSS:
@@ -11013,7 +11013,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.2xl`
 - **Sentido**: Altura do root visual do Select por size.
 - **Escopo**: height, min-height
-- **Contexto**: Component token do contrato anatomico Select. Binda o subnode visual do campo no Figma e substitui consumo direto de semantic.size.* no CSS.
+- **Contexto**: Component token do contrato anatômico Select. Binda o subnode visual do campo no Figma e substitui consumo direto de semantic.size.* no CSS.
 - **Decisão**: Alias 1:1 para semantic.size.lg/xl/2xl porque Select usa 32/40/48 como altura visual e area interativa; fica em Component para documentar o contrato publico da anatomia.
 - **Usos**:
   - CSS:
@@ -11026,7 +11026,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.xl`
 - **Sentido**: Altura do root visual do Select por size.
 - **Escopo**: height, min-height
-- **Contexto**: Component token do contrato anatomico Select. Binda o subnode visual do campo no Figma e substitui consumo direto de semantic.size.* no CSS.
+- **Contexto**: Component token do contrato anatômico Select. Binda o subnode visual do campo no Figma e substitui consumo direto de semantic.size.* no CSS.
 - **Decisão**: Alias 1:1 para semantic.size.lg/xl/2xl porque Select usa 32/40/48 como altura visual e area interativa; fica em Component para documentar o contrato publico da anatomia.
 - **Usos**:
   - CSS:
@@ -11039,7 +11039,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.lg`
 - **Sentido**: Altura do root visual do Select por size.
 - **Escopo**: height, min-height
-- **Contexto**: Component token do contrato anatomico Select. Binda o subnode visual do campo no Figma e substitui consumo direto de semantic.size.* no CSS.
+- **Contexto**: Component token do contrato anatômico Select. Binda o subnode visual do campo no Figma e substitui consumo direto de semantic.size.* no CSS.
 - **Decisão**: Alias 1:1 para semantic.size.lg/xl/2xl porque Select usa 32/40/48 como altura visual e area interativa; fica em Component para documentar o contrato publico da anatomia.
 - **Usos**:
   - CSS:
@@ -11052,7 +11052,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.radius.full`
 - **Sentido**: Radius circular do Skeleton Circle.
 - **Escopo**: border-radius
-- **Contexto**: Component token do contrato anatomico Skeleton Circle. Binda radius da variant Circle no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Skeleton Circle. Binda radius da variant Circle no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.radius.full porque a circularidade e uma decisao reutilizavel, mas aqui documenta a anatomia publica do placeholder circular.
 - **Usos**:
   - CSS:
@@ -11065,7 +11065,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.xl`
 - **Sentido**: Tamanho default do Skeleton Circle.
 - **Escopo**: width, height
-- **Contexto**: Component token do contrato anatomico Skeleton Circle. Binda width/height da variant Circle no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Skeleton Circle. Binda width/height da variant Circle no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.size.xl porque 40px e uma escala reutilizavel, mas no Skeleton Circle define o tamanho publico do placeholder circular.
 - **Usos**:
   - CSS:
@@ -11078,8 +11078,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.dimension.120`
 - **Sentido**: Altura default do Skeleton Rectangle.
 - **Escopo**: height
-- **Contexto**: Component token do contrato anatomico Skeleton Rectangle. Binda a variant Rectangle no Figma e corrige o CSS para o default vivo de 120px.
-- **Decisão**: Mantido em Component com alias direto para foundation.dimension.120 porque 120px e altura anatomica especifica do placeholder retangular, sem Semantic reutilizavel real.
+- **Contexto**: Component token do contrato anatômico Skeleton Rectangle. Binda a variant Rectangle no Figma e corrige o CSS para o default vivo de 120px.
+- **Decisão**: Mantido em Component com alias direto para foundation.dimension.120 porque 120px e altura anatômica especifica do placeholder retangular, sem Semantic reutilizavel real.
 - **Usos**:
   - CSS:
     - `css/components/skeleton.css` (1×)
@@ -11091,7 +11091,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.radius.md`
 - **Sentido**: Radius do Skeleton Rectangle.
 - **Escopo**: border-radius
-- **Contexto**: Component token do contrato anatomico Skeleton Rectangle. Binda radius da variant Rectangle no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Skeleton Rectangle. Binda radius da variant Rectangle no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.radius.md porque o radius md e uma decisao reutilizavel, mas no Skeleton Rectangle e parte publica da anatomia do componente.
 - **Usos**:
   - CSS:
@@ -11104,8 +11104,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.dimension.12`
 - **Sentido**: Altura default do Skeleton Text.
 - **Escopo**: height
-- **Contexto**: Component token do contrato anatomico Skeleton Text. Binda a variant Text no Figma e substitui consumo direto de Foundation no CSS.
-- **Decisão**: Mantido em Component com alias direto para foundation.dimension.12 porque 12px e altura anatomica especifica de placeholder de texto, sem Semantic reutilizavel real.
+- **Contexto**: Component token do contrato anatômico Skeleton Text. Binda a variant Text no Figma e substitui consumo direto de Foundation no CSS.
+- **Decisão**: Mantido em Component com alias direto para foundation.dimension.12 porque 12px e altura anatômica especifica de placeholder de texto, sem Semantic reutilizavel real.
 - **Usos**:
   - CSS:
     - `css/components/skeleton.css` (1×)
@@ -11117,7 +11117,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.radius.md`
 - **Sentido**: Radius do Skeleton Text.
 - **Escopo**: border-radius
-- **Contexto**: Component token do contrato anatomico Skeleton Text. Binda radius da variant Text no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Skeleton Text. Binda radius da variant Text no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.radius.md porque o radius md e uma decisao reutilizavel, mas no Skeleton Text e parte publica da anatomia do componente.
 - **Usos**:
   - CSS:
@@ -11130,7 +11130,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.border.width.strong`
 - **Sentido**: Stroke width do ring Spinner.
 - **Escopo**: border-width, stroke-width
-- **Contexto**: Component token do contrato anatomico Spinner. Binda strokeWeight de Track e Indicator no Figma e substitui consumo direto de semantic.border.width.strong no CSS.
+- **Contexto**: Component token do contrato anatômico Spinner. Binda strokeWeight de Track e Indicator no Figma e substitui consumo direto de semantic.border.width.strong no CSS.
 - **Decisão**: Alias 1:1 para semantic.border.width.strong porque a espessura 2px e padrao reutilizavel, mas no Spinner e parte publica da anatomia do ring.
 - **Usos**:
   - CSS:
@@ -11143,7 +11143,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.radius.full`
 - **Sentido**: Radius circular do root Spinner.
 - **Escopo**: border-radius
-- **Contexto**: Component token do contrato anatomico Spinner. Binda os quatro corner radii do root no Figma e substitui consumo direto de semantic.radius.full no CSS.
+- **Contexto**: Component token do contrato anatômico Spinner. Binda os quatro corner radii do root no Figma e substitui consumo direto de semantic.radius.full no CSS.
 - **Decisão**: Alias 1:1 para semantic.radius.full porque o Spinner renderiza um ring circular.
 - **Usos**:
   - CSS:
@@ -11156,7 +11156,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.lg`
 - **Sentido**: Tamanho do root e ring do Spinner por size.
 - **Escopo**: width, height
-- **Contexto**: Component token do contrato anatomico Spinner. Binda root, Track e Indicator no Figma e substitui consumo direto de semantic.size.* no CSS.
+- **Contexto**: Component token do contrato anatômico Spinner. Binda root, Track e Indicator no Figma e substitui consumo direto de semantic.size.* no CSS.
 - **Decisão**: Alias 1:1 para semantic.size.xs/md/lg porque Spinner usa 16/24/32 como tamanhos publicos; fica em Component para documentar a anatomia do loading indicator.
 - **Usos**:
   - CSS:
@@ -11169,7 +11169,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.md`
 - **Sentido**: Tamanho do root e ring do Spinner por size.
 - **Escopo**: width, height
-- **Contexto**: Component token do contrato anatomico Spinner. Binda root, Track e Indicator no Figma e substitui consumo direto de semantic.size.* no CSS.
+- **Contexto**: Component token do contrato anatômico Spinner. Binda root, Track e Indicator no Figma e substitui consumo direto de semantic.size.* no CSS.
 - **Decisão**: Alias 1:1 para semantic.size.xs/md/lg porque Spinner usa 16/24/32 como tamanhos publicos; fica em Component para documentar a anatomia do loading indicator.
 - **Usos**:
   - CSS:
@@ -11182,7 +11182,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.xs`
 - **Sentido**: Tamanho do root e ring do Spinner por size.
 - **Escopo**: width, height
-- **Contexto**: Component token do contrato anatomico Spinner. Binda root, Track e Indicator no Figma e substitui consumo direto de semantic.size.* no CSS.
+- **Contexto**: Component token do contrato anatômico Spinner. Binda root, Track e Indicator no Figma e substitui consumo direto de semantic.size.* no CSS.
 - **Decisão**: Alias 1:1 para semantic.size.xs/md/lg porque Spinner usa 16/24/32 como tamanhos publicos; fica em Component para documentar a anatomia do loading indicator.
 - **Usos**:
   - CSS:
@@ -11350,7 +11350,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.dimension.120`
 - **Sentido**: Altura minima do field visual do Textarea por size.
 - **Escopo**: min-height, height
-- **Contexto**: Component token do contrato anatomico Textarea. Binda o subnode Field no Figma e substitui consumo direto de foundation/semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Textarea. Binda o subnode Field no Figma e substitui consumo direto de foundation/semantic no CSS.
 - **Decisão**: Mantido em Component com alias direto para Foundation dimension 80/96/120 porque Textarea usa uma altura minima propria do field, distinta do padrao 32/40/48 de Button/Input/Select; criar semantic.control.textarea-height ou reutilizar semantic.size.* esconderia uma anatomia especifica do componente.
 - **Usos**:
   - CSS:
@@ -11363,7 +11363,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.dimension.96`
 - **Sentido**: Altura minima do field visual do Textarea por size.
 - **Escopo**: min-height, height
-- **Contexto**: Component token do contrato anatomico Textarea. Binda o subnode Field no Figma e substitui consumo direto de foundation/semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Textarea. Binda o subnode Field no Figma e substitui consumo direto de foundation/semantic no CSS.
 - **Decisão**: Mantido em Component com alias direto para Foundation dimension 80/96/120 porque Textarea usa uma altura minima propria do field, distinta do padrao 32/40/48 de Button/Input/Select; criar semantic.control.textarea-height ou reutilizar semantic.size.* esconderia uma anatomia especifica do componente.
 - **Usos**:
   - CSS:
@@ -11376,7 +11376,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.dimension.80`
 - **Sentido**: Altura minima do field visual do Textarea por size.
 - **Escopo**: min-height, height
-- **Contexto**: Component token do contrato anatomico Textarea. Binda o subnode Field no Figma e substitui consumo direto de foundation/semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Textarea. Binda o subnode Field no Figma e substitui consumo direto de foundation/semantic no CSS.
 - **Decisão**: Mantido em Component com alias direto para Foundation dimension 80/96/120 porque Textarea usa uma altura minima propria do field, distinta do padrao 32/40/48 de Button/Input/Select; criar semantic.control.textarea-height ou reutilizar semantic.size.* esconderia uma anatomia especifica do componente.
 - **Usos**:
   - CSS:
@@ -11389,7 +11389,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.2xl`
 - **Sentido**: Altura minima da area interativa do Toggle por size.
 - **Escopo**: min-height, height
-- **Contexto**: Component token do contrato anatomico Toggle. O Figma actual nao tem node de target dedicado; o token materializa o contrato para CSS e futuras variants.
+- **Contexto**: Component token do contrato anatômico Toggle. O Figma atual nao tem node de target dedicado; o token materializa o contrato para CSS e futuras variants.
 - **Decisão**: Criado pelo piloto ADR-019 para separar target 32/40/48 da track visual 28x16/44x24/56x32.
 - **Usos**:
   - CSS:
@@ -11402,7 +11402,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.xl`
 - **Sentido**: Altura minima da area interativa do Toggle por size.
 - **Escopo**: min-height, height
-- **Contexto**: Component token do contrato anatomico Toggle. O Figma actual nao tem node de target dedicado; o token materializa o contrato para CSS e futuras variants.
+- **Contexto**: Component token do contrato anatômico Toggle. O Figma atual nao tem node de target dedicado; o token materializa o contrato para CSS e futuras variants.
 - **Decisão**: Criado pelo piloto ADR-019 para separar target 32/40/48 da track visual 28x16/44x24/56x32.
 - **Usos**:
   - CSS:
@@ -11415,7 +11415,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.lg`
 - **Sentido**: Altura minima da area interativa do Toggle por size.
 - **Escopo**: min-height, height
-- **Contexto**: Component token do contrato anatomico Toggle. O Figma actual nao tem node de target dedicado; o token materializa o contrato para CSS e futuras variants.
+- **Contexto**: Component token do contrato anatômico Toggle. O Figma atual nao tem node de target dedicado; o token materializa o contrato para CSS e futuras variants.
 - **Decisão**: Criado pelo piloto ADR-019 para separar target 32/40/48 da track visual 28x16/44x24/56x32.
 - **Usos**:
   - CSS:
@@ -11428,8 +11428,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.space.2xs`
 - **Sentido**: Inset/gap padrao do thumb dentro da track do Toggle.
 - **Escopo**: gap, inset
-- **Contexto**: Component token do contrato anatomico Toggle usado pelo CSS para calcular thumb-size e deslocamento.
-- **Decisão**: Alias para semantic.space.2xs (2px), pois ha Semantic reutilizavel para spacing. Figma actual posiciona o thumb em 3px; a divergencia fica documentada para ajuste posterior.
+- **Contexto**: Component token do contrato anatômico Toggle usado pelo CSS para calcular thumb-size e deslocamento.
+- **Decisão**: Alias para semantic.space.2xs (2px), pois ha Semantic reutilizavel para spacing. Figma atual posiciona o thumb em 3px; a divergencia fica documentada para ajuste posterior.
 - **Usos**:
   - CSS:
     - `css/components/toggle.css` (1×)
@@ -11441,7 +11441,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.lg`
 - **Sentido**: Altura visual da track do Toggle por size.
 - **Escopo**: height
-- **Contexto**: Component token do contrato anatomico Toggle. Binda a track no Figma e substitui a ponte temporaria do CSS.
+- **Contexto**: Component token do contrato anatômico Toggle. Binda a track no Figma e substitui a ponte temporaria do CSS.
 - **Decisão**: Alias 1:1 para semantic.size.xs/md/lg porque a altura usa a escala Semantic existente, mas a anatomia exposta pertence ao Toggle.
 - **Usos**:
   - CSS:
@@ -11454,7 +11454,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.md`
 - **Sentido**: Altura visual da track do Toggle por size.
 - **Escopo**: height
-- **Contexto**: Component token do contrato anatomico Toggle. Binda a track no Figma e substitui a ponte temporaria do CSS.
+- **Contexto**: Component token do contrato anatômico Toggle. Binda a track no Figma e substitui a ponte temporaria do CSS.
 - **Decisão**: Alias 1:1 para semantic.size.xs/md/lg porque a altura usa a escala Semantic existente, mas a anatomia exposta pertence ao Toggle.
 - **Usos**:
   - CSS:
@@ -11467,7 +11467,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.xs`
 - **Sentido**: Altura visual da track do Toggle por size.
 - **Escopo**: height
-- **Contexto**: Component token do contrato anatomico Toggle. Binda a track no Figma e substitui a ponte temporaria do CSS.
+- **Contexto**: Component token do contrato anatômico Toggle. Binda a track no Figma e substitui a ponte temporaria do CSS.
 - **Decisão**: Alias 1:1 para semantic.size.xs/md/lg porque a altura usa a escala Semantic existente, mas a anatomia exposta pertence ao Toggle.
 - **Usos**:
   - CSS:
@@ -11480,7 +11480,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.dimension.56`
 - **Sentido**: Largura visual da track do Toggle por size.
 - **Escopo**: width
-- **Contexto**: Component-specific do contrato anatomico Toggle. Binda a track no Figma e substitui calculos CSS baseados em size + space.
+- **Contexto**: Component-specific do contrato anatômico Toggle. Binda a track no Figma e substitui calculos CSS baseados em size + space.
 - **Decisão**: Mantido em Component com alias direto para Foundation dimension 28/44/56 porque nao ha Semantic reutilizavel real; criar control.track-width seria falsa genericidade rejeitada pela ADR-019.
 - **Usos**:
   - CSS:
@@ -11493,7 +11493,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.dimension.44`
 - **Sentido**: Largura visual da track do Toggle por size.
 - **Escopo**: width
-- **Contexto**: Component-specific do contrato anatomico Toggle. Binda a track no Figma e substitui calculos CSS baseados em size + space.
+- **Contexto**: Component-specific do contrato anatômico Toggle. Binda a track no Figma e substitui calculos CSS baseados em size + space.
 - **Decisão**: Mantido em Component com alias direto para Foundation dimension 28/44/56 porque nao ha Semantic reutilizavel real; criar control.track-width seria falsa genericidade rejeitada pela ADR-019.
 - **Usos**:
   - CSS:
@@ -11506,7 +11506,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.dimension.28`
 - **Sentido**: Largura visual da track do Toggle por size.
 - **Escopo**: width
-- **Contexto**: Component-specific do contrato anatomico Toggle. Binda a track no Figma e substitui calculos CSS baseados em size + space.
+- **Contexto**: Component-specific do contrato anatômico Toggle. Binda a track no Figma e substitui calculos CSS baseados em size + space.
 - **Decisão**: Mantido em Component com alias direto para Foundation dimension 28/44/56 porque nao ha Semantic reutilizavel real; criar control.track-width seria falsa genericidade rejeitada pela ADR-019.
 - **Usos**:
   - CSS:
@@ -11519,7 +11519,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.space.sm`
 - **Sentido**: Base visual da seta Tooltip.
 - **Escopo**: width, height
-- **Contexto**: Component token do contrato anatomico Tooltip Arrow. Binda a maior dimensao da seta nos 4 variants Position do Figma: top/bottom usam width 8px; left/right usam height 8px.
+- **Contexto**: Component token do contrato anatômico Tooltip Arrow. Binda a maior dimensao da seta nos 4 variants Position do Figma: top/bottom usam width 8px; left/right usam height 8px.
 - **Decisão**: Alias 1:1 para semantic.space.sm porque a base 8px deriva da escala, mas fica em Component por ser geometria especifica da seta do Tooltip. No CSS a base e derivada de 2x a profundidade do border triangle.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -11531,8 +11531,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.space.xs`
 - **Sentido**: Profundidade visual da seta Tooltip.
 - **Escopo**: width, height, border
-- **Contexto**: Component token do contrato anatomico Tooltip Arrow. Binda a menor dimensao da seta nos 4 variants Position do Figma e define o border do triangulo no CSS.
-- **Decisão**: Alias 1:1 para semantic.space.xs porque 4px deriva da escala, mas no Tooltip representa a profundidade anatomica da seta.
+- **Contexto**: Component token do contrato anatômico Tooltip Arrow. Binda a menor dimensao da seta nos 4 variants Position do Figma e define o border do triangulo no CSS.
+- **Decisão**: Alias 1:1 para semantic.space.xs porque 4px deriva da escala, mas no Tooltip representa a profundidade anatômica da seta.
 - **Usos**:
   - CSS:
     - `css/components/tooltip.css` (1×)
@@ -11544,7 +11544,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.space.sm`
 - **Sentido**: Padding horizontal do content Tooltip.
 - **Escopo**: padding-left, padding-right
-- **Contexto**: Component token do contrato anatomico Tooltip Content. Binda paddingLeft/paddingRight dos 4 variants Position no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Tooltip Content. Binda paddingLeft/paddingRight dos 4 variants Position no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.space.sm porque 8px e escala reutilizavel, mas no Tooltip documenta o padding horizontal publico do content.
 - **Usos**:
   - CSS:
@@ -11557,7 +11557,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.space.xs`
 - **Sentido**: Padding vertical do content Tooltip.
 - **Escopo**: padding-top, padding-bottom
-- **Contexto**: Component token do contrato anatomico Tooltip Content. Binda paddingTop/paddingBottom dos 4 variants Position no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Tooltip Content. Binda paddingTop/paddingBottom dos 4 variants Position no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.space.xs porque 4px e escala reutilizavel, mas no Tooltip documenta o padding vertical publico do content.
 - **Usos**:
   - CSS:
@@ -11570,7 +11570,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.radius.sm`
 - **Sentido**: Radius do content Tooltip.
 - **Escopo**: border-radius
-- **Contexto**: Component token do contrato anatomico Tooltip Content. Binda os 4 corner radii dos variants Position no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Tooltip Content. Binda os 4 corner radii dos variants Position no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.radius.sm porque o radius sm e reutilizavel, mas no Tooltip e parte publica da anatomia do content.
 - **Usos**:
   - CSS:
@@ -11583,7 +11583,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.typography.body.font-size.sm`
 - **Sentido**: Font-size do label Tooltip.
 - **Escopo**: font-size
-- **Contexto**: Component token do contrato anatomico Tooltip Label. Binda fontSize dos 4 labels no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Tooltip Label. Binda fontSize dos 4 labels no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.typography.body.font-size.sm porque o label usa body/sm, mas a escala tipografica do Tooltip e contrato publico do componente.
 - **Usos**:
   - CSS:
@@ -11596,7 +11596,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.typography.body.font-weight.regular`
 - **Sentido**: Font-weight do label Tooltip.
 - **Escopo**: font-weight
-- **Contexto**: Component token do contrato anatomico Tooltip Label. Binda fontStyle dos 4 labels no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Tooltip Label. Binda fontStyle dos 4 labels no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.typography.body.font-weight.regular porque Tooltip usa texto regular; no Figma o campo bindavel e fontStyle/string, enquanto no JSON/CSS o contrato permanece numerico.
 - **Usos**:
   - CSS:
@@ -11609,7 +11609,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.typography.body.line-height.sm`
 - **Sentido**: Line-height do label Tooltip.
 - **Escopo**: line-height
-- **Contexto**: Component token do contrato anatomico Tooltip Label. Binda lineHeight dos 4 labels no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Tooltip Label. Binda lineHeight dos 4 labels no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.typography.body.line-height.sm porque o label usa body/sm, mas a metrica vertical do Tooltip e contrato publico do componente.
 - **Usos**:
   - CSS:
@@ -11743,7 +11743,7 @@ semantic.z.*
 - **ADR-016** — — Tokens sem equivalência no Figma (CSS-only) (Aceito)
 - **ADR-017** — — Componentes CSS-only (sem equivalência no Figma) (Aceito)
 - **ADR-018** — — Renomear `content.{default,secondary,tertiary}` para `content.{strong,default,subtle}` (Aceito)
-- **ADR-019** — — Reintroducao de Component tokens como contrato anatomico (Aceito)
+- **ADR-019** — — Reintrodução de Component tokens como contrato anatômico (Aceito)
 
 
 ═══════════════════════════════════════════════════════════
@@ -12112,7 +12112,7 @@ Manter font.size.base como alias de md: Descartada. Alias no JSON gera duas CSS 
 **Data:** 2026-04-15
 **Status:** Parcialmente substituída — `size.control.*` e `space.control.padding-{x,y}.*` substituídos por escala `size.{xs..5xl}` + `space.{xs..2xl}` + `space.control.padding.10` em **ADR-015** (2026-04-26). O contrato público de anatomia dos componentes foi movido para tokens Component em **ADR-019** (2026-05-10). `typography.control.*` permanece vigente.
 
-> **Nota:** Esta ADR introduziu `semantic.size.control.*` e `semantic.space.control.padding-{x,y}.*` como tokens compartilhados entre controles. Em 2026-04-26, ADR-015 unificou a escala de dimensão num namespace genérico `size.{xs..5xl}` (e `size.layout.{xs..2xl}` para containers), eliminando a maioria dos tokens `*.control.*`. Em 2026-05-10, ADR-019 definiu que Button, Input, Select, Checkbox, Radio e Toggle expõem contratos anatómicos por `component.<component>.<part>.<property>.*`.
+> **Nota:** Esta ADR introduziu `semantic.size.control.*` e `semantic.space.control.padding-{x,y}.*` como tokens compartilhados entre controles. Em 2026-04-26, ADR-015 unificou a escala de dimensão num namespace genérico `size.{xs..5xl}` (e `size.layout.{xs..2xl}` para containers), eliminando a maioria dos tokens `*.control.*`. Em 2026-05-10, ADR-019 definiu que Button, Input, Select, Checkbox, Radio e Toggle expõem contratos anatômicos por `component.<component>.<part>.<property>.*`.
 
 ## Implementação
 
@@ -12218,7 +12218,7 @@ Fórmula de altura: `height = padding-y * 2 + lineHeight`, validada em todos os 
 
 ### 3. Atualizar tokens de componente para referenciar os tokens semânticos de controle
 
-`component.button.*` e futuros `component.input.*`, `component.select.*` referenciavam os tokens semânticos de controle. Este formato foi substituído por ADR-019, que exige o segmento anatómico no nome do token Component:
+`component.button.*` e futuros `component.input.*`, `component.select.*` referenciavam os tokens semânticos de controle. Este formato foi substituído por ADR-019, que exige o segmento anatômico no nome do token Component:
 
 ```
 component.button.root.height.sm → {semantic.size.lg}
@@ -12232,7 +12232,7 @@ component.select.root.height.md → {semantic.size.xl}
 component.select.root.height.lg → {semantic.size.2xl}
 ```
 
-O plano antigo de criar tokens Component de padding, font-size e icon-size para Button não representa o estado canónico actual no Figma/JSON. Essas propriedades continuam consumindo Semantic directamente até serem materializadas como contratos Component explícitos.
+O plano antigo de criar tokens Component de padding, font-size e icon-size para Button não representa o estado canônico atual no Figma/JSON. Essas propriedades continuam consumindo Semantic diretamente até serem materializadas como contratos Component explícitos.
 
 ### 4. Normalizar as dimensões dos componentes no Figma
 
@@ -12249,10 +12249,10 @@ Textarea compartilha os tokens de padding mas não a altura:
 ## Consequências
 
 - **Tokens:** ~18 novos tokens semânticos (6 size, 6 space, 6 typography). 3 tokens do button renomeados (padding → padding-x). ~10 tokens do button atualizados de valores absolutos para referências semânticas. Foundation pode ganhar 1–2 tokens (line-height 1.25rem, dimension min-target).
-- **CSS:** Novas variáveis `--ds-size-control-*`, `--ds-space-control-*`, `--ds-typography-control-*`. O contrato Component actual em CSS usa `--ds-button-root-height-*`, `--ds-input-root-height-*` e `--ds-select-root-height-*`.
+- **CSS:** Novas variáveis `--ds-size-control-*`, `--ds-space-control-*`, `--ds-typography-control-*`. O contrato Component atual em CSS usa `--ds-button-root-height-*`, `--ds-input-root-height-*` e `--ds-select-root-height-*`.
 - **Figma:** Novas variáveis na coleção Semantic: `size/control/*`, `space/control/*`, `typography/control/*`. Componentes Button, Input Text, Select, Textarea religados às novas variáveis. Frames Field de Input/Select ajustados para as alturas 32/40/48. paddingY do Textarea ajustado de 8/12/16 para 8/10/12; altura inalterada.
 - **Docs:** Nova seção "Control sizing" documentando o sistema dimensional compartilhado. Páginas Button, Input, Select atualizadas. token-schema.md e component-inventory.md atualizados.
-- **Breaking changes:** O rename antigo das variáveis de padding do Button foi substituído pelo contrato Component anatómico de ADR-019 para alturas de root.
+- **Breaking changes:** O rename antigo das variáveis de padding do Button foi substituído pelo contrato Component anatômico de ADR-019 para alturas de root.
 
 ## Alternativas consideradas
 
@@ -13976,10 +13976,10 @@ Descartada por escopo. Exigiria renomear `default` em **todas** as categorias do
 
 
 ═══════════════════════════════════════════════════════════
-# ADR-019 — — Reintroducao de Component tokens como contrato anatomico
+# ADR-019 — — Reintrodução de Component tokens como contrato anatômico
 ═══════════════════════════════════════════════════════════
 
-# ADR-019 — Reintroducao de Component tokens como contrato anatomico
+# ADR-019 — Reintrodução de Component tokens como contrato anatômico
 
 - **Status:** Aceito
 - **Data:** 2026-05-11
@@ -13990,7 +13990,7 @@ Descartada por escopo. Exigiria renomear `default` em **todas** as categorias do
 
 ADR-013 estabilizou a arquitetura em duas camadas, Foundation -> Semantic, depois de uma migracao que eliminou a antiga collection Component. A decisao corrigiu um problema real: muitos tokens Component eram wrappers mecanicos 1:1 sem contrato proprio, por exemplo um token por componente apenas para repetir a mesma cor, motion ou dimensao ja expressa por Semantic.
 
-A auditoria dimensional de controles de formulario mostrou outro problema. Componentes com a mesma variant nominal (`sm`, `md`, `lg`) podem precisar de partes anatomicas com tamanhos diferentes:
+A auditoria dimensional de controles de formulario mostrou outro problema. Componentes com a mesma variant nominal (`sm`, `md`, `lg`) podem precisar de partes anatômicas com tamanhos diferentes:
 
 - Input e Button usam 32/40/48 como altura visual e area interativa.
 - Checkbox e Radio usam 32/40/48 como area interativa, mas o glyph visual e 16/20/24.
@@ -14001,11 +14001,11 @@ Sem Component tokens, a implementacao precisa escolher entre duas opcoes ruins:
 1. Consumir `semantic.size.xs/sm/md` diretamente em `Checkbox sm/md/lg`, o que parece inconsistente para quem le a documentacao do componente.
 2. Criar nomes Semantic artificiais ou especificos demais, como `control.track-width`, tentando esconder uma decisao que na pratica pertence ao Toggle.
 
-Design systems de referencia usam uma camada equivalente a Component tokens para expor contratos anatomicos de componente. Material Web distingue tokens de sistema (`--md-sys-*`) de tokens de componente (`--md-switch-*`, `--md-checkbox-*`). Carbon documenta component tokens como propriedades associadas a um componente especifico. Spectrum modela `component`, `anatomy`, `property`, `variant` e `state` como eixos legitimos de classificacao de tokens.
+Design systems de referencia usam uma camada equivalente a Component tokens para expor contratos anatômicos de componente. Material Web distingue tokens de sistema (`--md-sys-*`) de tokens de componente (`--md-switch-*`, `--md-checkbox-*`). Carbon documenta component tokens como propriedades associadas a um componente especifico. Spectrum modela `component`, `anatomy`, `property`, `variant` e `state` como eixos legitimos de classificacao de tokens.
 
 ## Decisao
 
-Reintroduzir a camada **Component** como camada de contrato anatomico e de consumo dos componentes.
+Reintroduzir a camada **Component** como camada de contrato anatômico e de consumo dos componentes.
 
 Nova cadeia:
 
@@ -14044,7 +14044,7 @@ Semantic nao deve conter nome de componente. `control` continua permitido quando
 
 #### Component
 
-Contrato publico e anatomico de cada componente:
+Contrato publico e anatômico de cada componente:
 
 ```txt
 component.checkbox.target.height.sm
@@ -14059,7 +14059,7 @@ Component tokens podem ser alias 1:1 para Semantic quando esse alias documenta u
 
 ### Naming
 
-Formato canonico:
+Formato canônico:
 
 ```txt
 component.<component>.<part>.<property>.<variant-or-state>
@@ -14088,7 +14088,7 @@ Exemplos rejeitados:
 component.button.primary.background.default -> semantic.primary.background.default
 ```
 
-Rejeitado quando for apenas duplicacao de uma decisao de role/style ja expressa por Semantic e nao houver contrato anatomico adicional. Se a documentacao do componente precisar expor essa decisao como API de customizacao, o token Component passa a ser aceitavel.
+Rejeitado quando for apenas duplicacao de uma decisao de role/style ja expressa por Semantic e nao houver contrato anatômico adicional. Se a documentacao do componente precisar expor essa decisao como API de customizacao, o token Component passa a ser aceitavel.
 
 ### Regra de consumo
 
@@ -14104,7 +14104,7 @@ Se uma dimensao especifica de componente nao existir em Semantic, a decisao deve
 
 1. Verificar se a escala Semantic existente resolve o caso.
 2. Criar ou reaproveitar um token Semantic se a decisao for reutilizavel fora do componente.
-3. Criar um token Component se a decisao for anatomica e especifica do componente.
+3. Criar um token Component se a decisao for anatômica e especifica do componente.
 
 Quando a decisao for especifica e ainda assim precisar de valor fora da escala Semantic, a ADR da mudanca deve explicitar se o valor entra em Semantic como novo padrao reutilizavel ou se fica como contrato Component. Essa excecao nao pode ser implicita.
 

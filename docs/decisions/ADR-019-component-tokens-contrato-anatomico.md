@@ -1,4 +1,4 @@
-# ADR-019 — Reintroducao de Component tokens como contrato anatomico
+# ADR-019 — Reintrodução de Component tokens como contrato anatômico
 
 - **Status:** Aceito
 - **Data:** 2026-05-11
@@ -9,7 +9,7 @@
 
 ADR-013 estabilizou a arquitetura em duas camadas, Foundation -> Semantic, depois de uma migracao que eliminou a antiga collection Component. A decisao corrigiu um problema real: muitos tokens Component eram wrappers mecanicos 1:1 sem contrato proprio, por exemplo um token por componente apenas para repetir a mesma cor, motion ou dimensao ja expressa por Semantic.
 
-A auditoria dimensional de controles de formulario mostrou outro problema. Componentes com a mesma variant nominal (`sm`, `md`, `lg`) podem precisar de partes anatomicas com tamanhos diferentes:
+A auditoria dimensional de controles de formulario mostrou outro problema. Componentes com a mesma variant nominal (`sm`, `md`, `lg`) podem precisar de partes anatômicas com tamanhos diferentes:
 
 - Input e Button usam 32/40/48 como altura visual e area interativa.
 - Checkbox e Radio usam 32/40/48 como area interativa, mas o glyph visual e 16/20/24.
@@ -20,11 +20,11 @@ Sem Component tokens, a implementacao precisa escolher entre duas opcoes ruins:
 1. Consumir `semantic.size.xs/sm/md` diretamente em `Checkbox sm/md/lg`, o que parece inconsistente para quem le a documentacao do componente.
 2. Criar nomes Semantic artificiais ou especificos demais, como `control.track-width`, tentando esconder uma decisao que na pratica pertence ao Toggle.
 
-Design systems de referencia usam uma camada equivalente a Component tokens para expor contratos anatomicos de componente. Material Web distingue tokens de sistema (`--md-sys-*`) de tokens de componente (`--md-switch-*`, `--md-checkbox-*`). Carbon documenta component tokens como propriedades associadas a um componente especifico. Spectrum modela `component`, `anatomy`, `property`, `variant` e `state` como eixos legitimos de classificacao de tokens.
+Design systems de referencia usam uma camada equivalente a Component tokens para expor contratos anatômicos de componente. Material Web distingue tokens de sistema (`--md-sys-*`) de tokens de componente (`--md-switch-*`, `--md-checkbox-*`). Carbon documenta component tokens como propriedades associadas a um componente especifico. Spectrum modela `component`, `anatomy`, `property`, `variant` e `state` como eixos legitimos de classificacao de tokens.
 
 ## Decisao
 
-Reintroduzir a camada **Component** como camada de contrato anatomico e de consumo dos componentes.
+Reintroduzir a camada **Component** como camada de contrato anatômico e de consumo dos componentes.
 
 Nova cadeia:
 
@@ -63,7 +63,7 @@ Semantic nao deve conter nome de componente. `control` continua permitido quando
 
 #### Component
 
-Contrato publico e anatomico de cada componente:
+Contrato publico e anatômico de cada componente:
 
 ```txt
 component.checkbox.target.height.sm
@@ -78,7 +78,7 @@ Component tokens podem ser alias 1:1 para Semantic quando esse alias documenta u
 
 ### Naming
 
-Formato canonico:
+Formato canônico:
 
 ```txt
 component.<component>.<part>.<property>.<variant-or-state>
@@ -107,7 +107,7 @@ Exemplos rejeitados:
 component.button.primary.background.default -> semantic.primary.background.default
 ```
 
-Rejeitado quando for apenas duplicacao de uma decisao de role/style ja expressa por Semantic e nao houver contrato anatomico adicional. Se a documentacao do componente precisar expor essa decisao como API de customizacao, o token Component passa a ser aceitavel.
+Rejeitado quando for apenas duplicacao de uma decisao de role/style ja expressa por Semantic e nao houver contrato anatômico adicional. Se a documentacao do componente precisar expor essa decisao como API de customizacao, o token Component passa a ser aceitavel.
 
 ### Regra de consumo
 
@@ -123,7 +123,7 @@ Se uma dimensao especifica de componente nao existir em Semantic, a decisao deve
 
 1. Verificar se a escala Semantic existente resolve o caso.
 2. Criar ou reaproveitar um token Semantic se a decisao for reutilizavel fora do componente.
-3. Criar um token Component se a decisao for anatomica e especifica do componente.
+3. Criar um token Component se a decisao for anatômica e especifica do componente.
 
 Quando a decisao for especifica e ainda assim precisar de valor fora da escala Semantic, a ADR da mudanca deve explicitar se o valor entra em Semantic como novo padrao reutilizavel ou se fica como contrato Component. Essa excecao nao pode ser implicita.
 

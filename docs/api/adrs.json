@@ -167,7 +167,7 @@
     {
       "id": "ADR-019",
       "num": 19,
-      "title": "— Reintroducao de Component tokens como contrato anatomico",
+      "title": "— Reintrodução de Component tokens como contrato anatômico",
       "status": "Aceito",
       "date": "2026-05-11",
       "sourceFile": "docs/decisions/ADR-019-component-tokens-contrato-anatomico.md",

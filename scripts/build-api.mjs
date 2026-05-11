@@ -38,7 +38,7 @@ const pkg = readJson(path.join(ROOT, "package.json"));
 // components.json
 // -----------------------------------------------------------------------------
 
-// Component layer reintroduzida por ADR-019 como contrato anatomico.
+// Component layer reintroduzida por ADR-019 como contrato anatômico.
 // Nem todos os componentes foram migrados ainda; consumers podem consultar
 // `tokens` extraidos do CSS e `componentTokenFile` quando existir.
 const COMPONENTS = [

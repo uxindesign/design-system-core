@@ -3,7 +3,7 @@
 **Data:** 2026-04-15
 **Status:** Parcialmente substituída — `size.control.*` e `space.control.padding-{x,y}.*` substituídos por escala `size.{xs..5xl}` + `space.{xs..2xl}` + `space.control.padding.10` em **ADR-015** (2026-04-26). O contrato público de anatomia dos componentes foi movido para tokens Component em **ADR-019** (2026-05-10). `typography.control.*` permanece vigente.
 
-> **Nota:** Esta ADR introduziu `semantic.size.control.*` e `semantic.space.control.padding-{x,y}.*` como tokens compartilhados entre controles. Em 2026-04-26, ADR-015 unificou a escala de dimensão num namespace genérico `size.{xs..5xl}` (e `size.layout.{xs..2xl}` para containers), eliminando a maioria dos tokens `*.control.*`. Em 2026-05-10, ADR-019 definiu que Button, Input, Select, Checkbox, Radio e Toggle expõem contratos anatómicos por `component.<component>.<part>.<property>.*`.
+> **Nota:** Esta ADR introduziu `semantic.size.control.*` e `semantic.space.control.padding-{x,y}.*` como tokens compartilhados entre controles. Em 2026-04-26, ADR-015 unificou a escala de dimensão num namespace genérico `size.{xs..5xl}` (e `size.layout.{xs..2xl}` para containers), eliminando a maioria dos tokens `*.control.*`. Em 2026-05-10, ADR-019 definiu que Button, Input, Select, Checkbox, Radio e Toggle expõem contratos anatômicos por `component.<component>.<part>.<property>.*`.
 
 ## Implementação
 
@@ -109,7 +109,7 @@ Fórmula de altura: `height = padding-y * 2 + lineHeight`, validada em todos os 
 
 ### 3. Atualizar tokens de componente para referenciar os tokens semânticos de controle
 
-`component.button.*` e futuros `component.input.*`, `component.select.*` referenciavam os tokens semânticos de controle. Este formato foi substituído por ADR-019, que exige o segmento anatómico no nome do token Component:
+`component.button.*` e futuros `component.input.*`, `component.select.*` referenciavam os tokens semânticos de controle. Este formato foi substituído por ADR-019, que exige o segmento anatômico no nome do token Component:
 
 ```
 component.button.root.height.sm → {semantic.size.lg}
@@ -123,7 +123,7 @@ component.select.root.height.md → {semantic.size.xl}
 component.select.root.height.lg → {semantic.size.2xl}
 ```
 
-O plano antigo de criar tokens Component de padding, font-size e icon-size para Button não representa o estado canónico actual no Figma/JSON. Essas propriedades continuam consumindo Semantic directamente até serem materializadas como contratos Component explícitos.
+O plano antigo de criar tokens Component de padding, font-size e icon-size para Button não representa o estado canônico atual no Figma/JSON. Essas propriedades continuam consumindo Semantic diretamente até serem materializadas como contratos Component explícitos.
 
 ### 4. Normalizar as dimensões dos componentes no Figma
 
@@ -140,10 +140,10 @@ Textarea compartilha os tokens de padding mas não a altura:
 ## Consequências
 
 - **Tokens:** ~18 novos tokens semânticos (6 size, 6 space, 6 typography). 3 tokens do button renomeados (padding → padding-x). ~10 tokens do button atualizados de valores absolutos para referências semânticas. Foundation pode ganhar 1–2 tokens (line-height 1.25rem, dimension min-target).
-- **CSS:** Novas variáveis `--ds-size-control-*`, `--ds-space-control-*`, `--ds-typography-control-*`. O contrato Component actual em CSS usa `--ds-button-root-height-*`, `--ds-input-root-height-*` e `--ds-select-root-height-*`.
+- **CSS:** Novas variáveis `--ds-size-control-*`, `--ds-space-control-*`, `--ds-typography-control-*`. O contrato Component atual em CSS usa `--ds-button-root-height-*`, `--ds-input-root-height-*` e `--ds-select-root-height-*`.
 - **Figma:** Novas variáveis na coleção Semantic: `size/control/*`, `space/control/*`, `typography/control/*`. Componentes Button, Input Text, Select, Textarea religados às novas variáveis. Frames Field de Input/Select ajustados para as alturas 32/40/48. paddingY do Textarea ajustado de 8/12/16 para 8/10/12; altura inalterada.
 - **Docs:** Nova seção "Control sizing" documentando o sistema dimensional compartilhado. Páginas Button, Input, Select atualizadas. token-schema.md e component-inventory.md atualizados.
-- **Breaking changes:** O rename antigo das variáveis de padding do Button foi substituído pelo contrato Component anatómico de ADR-019 para alturas de root.
+- **Breaking changes:** O rename antigo das variáveis de padding do Button foi substituído pelo contrato Component anatômico de ADR-019 para alturas de root.
 
 ## Alternativas consideradas
 

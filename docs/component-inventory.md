@@ -78,7 +78,7 @@
 | ADR-016 | — Tokens sem equivalência no Figma (CSS-only) | Aceito |
 | ADR-017 | — Componentes CSS-only (sem equivalência no Figma) | Aceito |
 | ADR-018 | — Renomear `content.{default,secondary,tertiary}` para `content.{strong,default,subtle}` | Aceito |
-| ADR-019 | — Reintroducao de Component tokens como contrato anatomico | Aceito |
+| ADR-019 | — Reintrodução de Component tokens como contrato anatômico | Aceito |
 
 ## Próximos milestones
 

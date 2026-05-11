@@ -49,7 +49,7 @@
 <main class="ds-main">
   <div class="ds-section">
     <h1 class="ds-section__title"><span data-lang="pt">Control Sizing</span><span data-lang="en">Control Sizing</span></h1>
-    <p class="ds-section__subtitle"><span data-lang="pt">Button, Input e Select compartilham uma altura anatómica de root via tokens Component. Checkbox, Radio e Toggle usam Component tokens próprios para diferenciar alvo, caixa, controlo, track e thumb. Definido no ADR-019.</span><span data-lang="en">Button, Input, and Select share an anatomical root height via Component tokens. Checkbox, Radio, and Toggle use their own Component tokens to distinguish target, box, control, track, and thumb. Defined in ADR-019.</span></p>
+    <p class="ds-section__subtitle"><span data-lang="pt">Button, Input e Select compartilham uma altura anatômica de root via tokens Component. Checkbox, Radio e Toggle usam Component tokens próprios para diferenciar alvo, caixa, controlo, track e thumb. Definido no ADR-019.</span><span data-lang="en">Button, Input, and Select share an anatômical root height via Component tokens. Checkbox, Radio, and Toggle use their own Component tokens to distinguish target, box, control, track, and thumb. Defined in ADR-019.</span></p>
   </div>
 
   <!-- Formula -->
@@ -120,13 +120,13 @@
   <!-- Token layers -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Token Layers</span><span data-lang="en">Token layers</span></h2>
-    <p style="margin-bottom:var(--ds-dimension-16);color:var(--ds-content-default);font-size:var(--ds-font-size-14);"><span data-lang="pt">O contrato público de anatomia vive na camada Component. Quando a decisão é sistémica, o token Component referencia Semantic 1:1:</span><span data-lang="en">The public anatomical contract lives in the Component layer. When the decision is systemic, the Component token references Semantic 1:1:</span></p>
+    <p style="margin-bottom:var(--ds-dimension-16);color:var(--ds-content-default);font-size:var(--ds-font-size-14);"><span data-lang="pt">O contrato público de anatomia vive na camada Component. Quando a decisão é sistémica, o token Component referencia Semantic 1:1:</span><span data-lang="en">The public anatômical contract lives in the Component layer. When the decision is systemic, the Component token references Semantic 1:1:</span></p>
 <div class="ds-code-block">/* Semantic (shared) */
 --ds-size-xl:              2.5rem;   /* 40px */
 --ds-space-lg:   var(--ds-dimension-16);  /* 16px */
 --ds-space-control-padding-10:   var(--ds-dimension-10); /* 10px */
 
-/* Component (anatomical contract) */
+/* Component (anatômical contract) */
 --ds-button-root-height-md: var(--ds-size-xl);
 --ds-input-root-height-md:  var(--ds-size-xl);
 --ds-select-root-height-md: var(--ds-size-xl);</div>
@@ -156,9 +156,9 @@
     <h2 class="ds-subsection__title"><span data-lang="pt">Decisões de arquitetura</span><span data-lang="en">Architecture decisions</span></h2>
     <div class="ds-callout ds-callout--info">
       <div class="ds-callout__title"><span data-lang="pt">ADRs relacionados</span><span data-lang="en">Related ADRs</span></div>
-      <span data-lang="pt"><strong>ADR-019:</strong> Component tokens como contrato anatómico público.<br>
+      <span data-lang="pt"><strong>ADR-019:</strong> Component tokens como contrato anatômico público.<br>
       <strong>ADR-006:</strong> Tokens semânticos de controle -- parcialmente substituída por ADR-015 e ADR-019.<br>
-      <strong>ADR-007:</strong> Sistema de cores toned -- overlays coloridos na foundation, tokens toned semânticos.</span><span data-lang="en"><strong>ADR-019:</strong> Component tokens as the public anatomical contract.<br>
+      <strong>ADR-007:</strong> Sistema de cores toned -- overlays coloridos na foundation, tokens toned semânticos.</span><span data-lang="en"><strong>ADR-019:</strong> Component tokens as the public anatômical contract.<br>
       <strong>ADR-006:</strong> Semantic control tokens -- partially superseded by ADR-015 and ADR-019.<br>
       <strong>ADR-007:</strong> Toned color system -- colored overlays in foundation, semantic toned tokens.</span>
     </div>
