@@ -206,6 +206,7 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 ## [Não publicado]
 
 ### Corrigido
+- **API CSS e docs alinhadas aos nomes canónicos de Component.** Classes públicas do Button renomeadas de `.ds-btn*` para `.ds-button*` sem alias legado, porque o DS ainda está em beta e só a documentação consome os componentes. A documentação de Button/Control Sizing também deixou de anunciar tokens antigos inexistentes de height/padding/font/icon e passa a publicar o contrato real `component.button.root.height.*` / `--ds-button-root-height-*`.
 - **Tokens semânticos inválidos do Toggle removidos.** A tentativa anterior criou `semantic.control.toggle.*` diretamente no JSON sem variável correspondente no Figma, gerando `DRIFT_FROM_SOURCE` em `verify:tokens`. Esses aliases foram removidos de `tokens/semantic/{light,dark}.json` e do registry; `toggle.css` agora consome os Component tokens do piloto em vez de inventar `semantic.control.toggle.*`.
 - **Documentação normalizada conforme auditoria estrutural.** Labels de tabela foram padronizados (`Variável CSS`, `Descrição`, `Critério WCAG`, `Função`, `Referência`), README atualizado para 19 ADRs, páginas simples de componentes ganharam anatomia curta, `Form Field` declara o contrato CSS-only na própria página, e referências stale a `semantic.content.secondary/tertiary` foram migradas para `semantic.content.default/subtle`.
 - **Escala de Elevation/Shadow oficializada em 4 níveis + reset.** Removidos `foundation.shadow.xs` e `foundation.shadow.2xl` por não terem uso nem Effect Style correspondente. `foundation.shadow.{sm,md,lg,xl}` preserva exatamente os parâmetros dos Effect Styles Figma `elevation/1..4`, e `foundation.shadow.none` permanece como reset técnico de `.ds-elevation-0`. A página de Elevation agora documenta o papel de cada nível e o mapping Figma ↔ CSS. Resolve #19 / P3-2 da auditoria Figma↔Repo.
@@ -271,7 +272,7 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 
 - **P2-5 (Spinner --on-color) reclassificado como falso positivo.** Re-dump completo mostra Figma TEM `Style=On Color` (sm/md/lg) com tokens batendo 1:1 com CSS (`overlay/medium` + `border/inverse`). Auditoria original amostrou só `Style=Default, Size=Small` — conclusão errada. Sistema correto.
 
-- **P2-4 (Modal Footer button heights) reclassificado como wontfix.** Modal CSS não força size de Button (decisão consciente, padrão Material/Polaris). Consumer controla via `.ds-btn--sm/--lg`. Figma prescreve sm/md/lg como recomendação visual pra mockups, não como CSS constraint.
+- **P2-4 (Modal Footer button heights) reclassificado como wontfix.** Modal CSS não força size de Button (decisão consciente, padrão Material/Polaris). Consumer controla via `.ds-button--sm/--lg`. Figma prescreve sm/md/lg como recomendação visual pra mockups, não como CSS constraint.
 
 - **P2-1 (letter-spacing morto sistêmico) reclassificado como wontfix.** Investigação revelou que `css/base/reset.css:82` aplica `letter-spacing: var(--ds-body-letter-spacing-normal)` globalmente; todo texto herda via cascade. Figma bindings explícitos são redundantes mas não causam drift visual. Limpar ~600+ bindings sem ganho visual não justifica o trabalho. Modal Large title é exceção (tight, fix em P1-4).
 
@@ -293,7 +294,7 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
   - **Glyph fontSize bindado** em 270 nodes via `use_figma`: sm Buttons → `size/sm` (20), md/lg Buttons → `size/md` (24).
   - **Icon Only paddings simétricos** em 108 variants Figma: sm → `space/control/padding/6` (6px), md → `space/sm` (8px), lg → `space/md` (12px). Cálculo: (button - icon) / 2 centraliza icon.
   - **Token novo: `semantic.space.control.padding.6`** (alias `foundation.dimension.6`) — único valor entre `xs` (4) e `sm` (8) na escala. Segue padrão de `space.control.padding.10` (ADR-006/015).
-  - **CSS atualizado**: `.ds-btn__icon` default 20→24, sm 16→20, lg sem mudança. Material Symbols glyph idem. `.ds-btn--icon-only` ganha paddings por size em vez de `padding: 0`.
+  - **CSS atualizado**: `.ds-button__icon` default 20→24, sm 16→20, lg sem mudança. Material Symbols glyph idem. `.ds-button--icon-only` ganha paddings por size em vez de `padding: 0`.
   - Decidido como P1-3 da auditoria.
 
 - **Badge Subtle (Success/Warning/Error/Info): Figma rebindado de `feedback/X/background/default` para `feedback/X/content/default` na cor do Label.** Figma usava token de **background** como cor de texto — uso semanticamente errado da Variable. CSS já consumia `feedback-X-content-default` (correto, com calibração WCAG pra texto). Rebind via `use_figma` em 4 variants (Success Subtle, Warning Subtle, Error Subtle, Info Subtle). Resolve P1-2 e mantém paralelismo com Solid: Solid usa `content/contrast` (texto sobre fundo escuro), Subtle usa `content/default` (texto sobre fundo claro).
@@ -430,7 +431,7 @@ Link como text style (não Button variant) com estados WCAG/W3C completos. Topba
 
 ### Mudado
 
-- **Modal Cancel button no Figma** rebindado em todas as 3 variants (Sm/Md/Lg): label color e glyph fills de `link/content/default` → `ghost/content/default`. Cancel volta a ser visualmente Ghost neutral (alinha com `.ds-btn--ghost` já em uso no CSS).
+- **Modal Cancel button no Figma** rebindado em todas as 3 variants (Sm/Md/Lg): label color e glyph fills de `link/content/default` → `ghost/content/default`. Cancel volta a ser visualmente Ghost neutral (alinha com `.ds-button--ghost` já em uso no CSS).
 - **Capa Figma**: badge versão `v1.0.0-beta.1` → `v1.0.0-beta.3` (pulou beta.2). Estilos de Texto count `25 → 29` (+4 link styles).
 - **Changelog Figma**: nova entrada `v1.0.0-beta.3 — Abril 2026` com 7 bullets.
 
@@ -443,7 +444,7 @@ Link como text style (não Button variant) com estados WCAG/W3C completos. Topba
 
 ### Removido
 
-- **`.ds-btn--link` variant** revertido de `css/components/button.css`. Adicionado erroneamente em beta.2 — Link não é Button variant (overlap com Ghost), é text style. Substituído por `.ds-link` em arquivo dedicado.
+- **`.ds-button--link` variant** revertido de `css/components/button.css`. Adicionado erroneamente em beta.2 — Link não é Button variant (overlap com Ghost), é text style. Substituído por `.ds-link` em arquivo dedicado.
 
 ### Sobre versão
 
@@ -451,11 +452,11 @@ Beta.3 corrige decisão arquitetural de beta.2 (Link como Button variant) e adic
 
 ## [1.0.0-beta.2] — 2026-04-27
 
-Sincronização Figma↔código: alinhamento de utilities/textStyles per size + nova variant `.ds-btn--link` espelhando padrão de DS modernos (Material Text Button, Atlassian Link Button, Polaris Plain). Atualização da documentação no Figma (Capa + Changelog) refletindo o estado atual.
+Sincronização Figma↔código: alinhamento de utilities/textStyles per size + nova variant `.ds-button--link` espelhando padrão de DS modernos (Material Text Button, Atlassian Link Button, Polaris Plain). Atualização da documentação no Figma (Capa + Changelog) refletindo o estado atual.
 
 ### Adicionado
 
-- **`.ds-btn--link` variant** em `css/components/button.css`: button text-only com cor `link/content/default`, sem background/border, underline em hover. Cobre o padrão Modal Cancel e ações de baixa ênfase. Espelha Material 3 (Text Button), Atlassian (Link Button), Polaris (Plain), Spectrum (style=text).
+- **`.ds-button--link` variant** em `css/components/button.css`: button text-only com cor `link/content/default`, sem background/border, underline em hover. Cobre o padrão Modal Cancel e ações de baixa ênfase. Espelha Material 3 (Text Button), Atlassian (Link Button), Polaris (Plain), Spectrum (style=text).
 
 ### Mudado
 
@@ -467,7 +468,7 @@ Sincronização Figma↔código: alinhamento de utilities/textStyles per size + 
 ### Documentação
 
 - **Política de versionamento beta** estabilizada: schema `1.0.0-beta.N` substitui 0.x até decisão do owner pra dropping → `1.0.0` oficial. Detalhes em `docs/process-versioning.md`.
-- **Style=Link variant em Figma** identificado como pendente (~60 variants × Style/Size/State/booleans). Deferido pra sessão dedicada com escopo Figma. CSS já tem `.ds-btn--link` pronto pra consumir quando variant existir.
+- **Style=Link variant em Figma** identificado como pendente (~60 variants × Style/Size/State/booleans). Deferido pra sessão dedicada com escopo Figma. CSS já tem `.ds-button--link` pronto pra consumir quando variant existir.
 
 ### Sobre versão
 
@@ -981,7 +982,7 @@ Consolidação da documentação como fonte única de verdade. Plano em seis fas
 | [ADR-003](decisions/ADR-003-fontes-verdade.md) | Figma como origem canônica de tokens, Git como consolidação | Aceita — Revisada em 0.5.8 | 2026-04-14 (original) · 2026-04-21 (revisada) |
 | [ADR-004](decisions/ADR-004-wcag.md) | WCAG 2.2 AA como padrão de acessibilidade | Aceita — Implementada em 0.5.0 | 2026-04-14 |
 | [ADR-005](decisions/ADR-005-brand-foundation-e-estados-explicitos.md) | Brand como camada foundation, estados explícitos no semantic, e limpeza tipográfica | Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.2). Superseded por [ADR-014](ADR-014-action-tokens-role-style.md): collection Brand (modes Default/Ocean/Forest) deletada em 0.8.0, Brand virou paleta única customizável dentro da Foundation. | 2026-04-14 |
-| [ADR-006](decisions/ADR-006-semantic-control-tokens.md) | Tokens semânticos de controle para dimensões e tipografia compartilhadas entre controles interativos | Parcialmente substituída — `size.control.*` e `space.control.padding-{x,y}.*` substituídos por escala `size.{xs..5xl}` + `space.{xs..2xl}` + `space.control.padding.10` em **ADR-015** (2026-04-26). `typography.control.*` permanece vigente. | 2026-04-15 |
+| [ADR-006](decisions/ADR-006-semantic-control-tokens.md) | Tokens semânticos de controle para dimensões e tipografia compartilhadas entre controles interativos | Parcialmente substituída — `size.control.*` e `space.control.padding-{x,y}.*` substituídos por escala `size.{xs..5xl}` + `space.{xs..2xl}` + `space.control.padding.10` em **ADR-015** (2026-04-26). O contrato público de anatomia dos componentes foi movido para tokens Component em **ADR-019** (2026-05-10). `typography.control.*` permanece vigente. | 2026-04-15 |
 | [ADR-007](decisions/ADR-007-toned-color-system.md) | Estabelecer sistema de cores toned com overlays coloridos e tokens semânticos toned | Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.4, sincronização Figma completa em 0.5.6) | 2026-04-15 |
 | [ADR-008](decisions/ADR-008-recalibracao-paletas-feedback.md) | Recalibração das paletas foundation `green` e `amber` | Aceita — Implementada em 0.5.0 | 2026-04-16 |
 | [ADR-009](decisions/ADR-009-border-control-vs-decorative.md) | Separação de `border.default` (decorativa) e `border.control` (funcional) | Aceita — Implementada em 0.5.0 | 2026-04-16 |
@@ -1503,7 +1504,7 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 | ADR-003 | Figma como origem canônica de tokens, Git como consolidação | Aceita — Revisada em 0.5.8 |
 | ADR-004 | WCAG 2.2 AA como padrão de acessibilidade | Aceita — Implementada em 0.5.0 |
 | ADR-005 | Brand como camada foundation, estados explícitos no semantic, e limpeza tipográfica | Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.2). Superseded por [ADR-014](ADR-014-action-tokens-role-style.md): collection Brand (modes Default/Ocean/Forest) deletada em 0.8.0, Brand virou paleta única customizável dentro da Foundation. |
-| ADR-006 | Tokens semânticos de controle para dimensões e tipografia compartilhadas entre controles interativos | Parcialmente substituída — `size.control.*` e `space.control.padding-{x,y}.*` substituídos por escala `size.{xs..5xl}` + `space.{xs..2xl}` + `space.control.padding.10` em **ADR-015** (2026-04-26). `typography.control.*` permanece vigente. |
+| ADR-006 | Tokens semânticos de controle para dimensões e tipografia compartilhadas entre controles interativos | Parcialmente substituída — `size.control.*` e `space.control.padding-{x,y}.*` substituídos por escala `size.{xs..5xl}` + `space.{xs..2xl}` + `space.control.padding.10` em **ADR-015** (2026-04-26). O contrato público de anatomia dos componentes foi movido para tokens Component em **ADR-019** (2026-05-10). `typography.control.*` permanece vigente. |
 | ADR-007 | Estabelecer sistema de cores toned com overlays coloridos e tokens semânticos toned | Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.4, sincronização Figma completa em 0.5.6) |
 | ADR-008 | Recalibração das paletas foundation `green` e `amber` | Aceita — Implementada em 0.5.0 |
 | ADR-009 | Separação de `border.default` (decorativa) e `border.control` (funcional) | Aceita — Implementada em 0.5.0 |
@@ -7020,7 +7021,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.overlay.black.10`
 - **Sentido**: Fill de ação apenas texto (neutral) em estado active.
 - **Escopo**: background-color
-- **Contexto**: Aplicado em `.ds-btn--ghost` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--ghost` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.overlay.black.10 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
@@ -7033,7 +7034,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.overlay.black.5`
 - **Sentido**: Fill de ação apenas texto (neutral) em estado hover.
 - **Escopo**: background-color
-- **Contexto**: Aplicado em `.ds-btn--ghost` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--ghost` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.overlay.black.5 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
@@ -7046,7 +7047,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.neutral.900`
 - **Sentido**: Cor de texto/ícone de ação apenas texto (neutral) em estado default.
 - **Escopo**: color, fill
-- **Contexto**: Aplicado em `.ds-btn--ghost` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--ghost` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.neutral.900 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
@@ -7059,7 +7060,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.neutral.400`
 - **Sentido**: Cor de texto/ícone de ação apenas texto (neutral) em estado disabled.
 - **Escopo**: color, fill
-- **Contexto**: Aplicado em `.ds-btn--ghost` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--ghost` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.neutral.400 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -7071,7 +7072,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.brand.800`
 - **Sentido**: Cor de texto/ícone de link inline (branded text) em estado active.
 - **Escopo**: color, fill
-- **Contexto**: Aplicado em `.ds-btn--link` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--link` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.brand.800 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
@@ -7085,7 +7086,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.brand.700`
 - **Sentido**: Cor de texto/ícone de link inline (branded text) em estado default.
 - **Escopo**: color, fill
-- **Contexto**: Aplicado em `.ds-btn--link` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--link` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.brand.700 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
@@ -7100,7 +7101,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.neutral.400`
 - **Sentido**: Cor de texto/ícone de link inline (branded text) em estado disabled.
 - **Escopo**: color, fill
-- **Contexto**: Aplicado em `.ds-btn--link` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--link` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.neutral.400 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -7112,7 +7113,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.brand.800`
 - **Sentido**: Cor de texto/ícone de link inline (branded text) em estado hover.
 - **Escopo**: color, fill
-- **Contexto**: Aplicado em `.ds-btn--link` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--link` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.brand.800 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
@@ -7289,7 +7290,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.overlay.black.10`
 - **Sentido**: Fill de ação com borda neutra em estado active.
 - **Escopo**: background-color
-- **Contexto**: Aplicado em `.ds-btn--outline` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--outline` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.overlay.black.10 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
@@ -7302,7 +7303,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.overlay.black.5`
 - **Sentido**: Fill de ação com borda neutra em estado hover.
 - **Escopo**: background-color
-- **Contexto**: Aplicado em `.ds-btn--outline` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--outline` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.overlay.black.5 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
@@ -7315,7 +7316,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.neutral.500`
 - **Sentido**: Borda de ação com borda neutra em estado default.
 - **Escopo**: border-color
-- **Contexto**: Aplicado em `.ds-btn--outline` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--outline` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.neutral.500 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
@@ -7328,7 +7329,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.neutral.200`
 - **Sentido**: Borda de ação com borda neutra em estado disabled.
 - **Escopo**: border-color
-- **Contexto**: Aplicado em `.ds-btn--outline` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--outline` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.neutral.200 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -7340,7 +7341,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.neutral.700`
 - **Sentido**: Borda de ação com borda neutra em estado hover.
 - **Escopo**: border-color
-- **Contexto**: Aplicado em `.ds-btn--outline` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--outline` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.neutral.700 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
@@ -7353,7 +7354,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.neutral.700`
 - **Sentido**: Cor de texto/ícone de ação com borda neutra em estado default.
 - **Escopo**: color, fill
-- **Contexto**: Aplicado em `.ds-btn--outline` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--outline` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.neutral.700 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
@@ -7366,7 +7367,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.neutral.400`
 - **Sentido**: Cor de texto/ícone de ação com borda neutra em estado disabled.
 - **Escopo**: color, fill
-- **Contexto**: Aplicado em `.ds-btn--outline` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--outline` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.neutral.400 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -7432,7 +7433,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.brand.800`
 - **Sentido**: Fill de ação primária (brand solid) em estado active.
 - **Escopo**: background-color
-- **Contexto**: Aplicado em `.ds-btn--primary` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--primary` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.brand.800 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
@@ -7445,7 +7446,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.brand.600`
 - **Sentido**: Fill de ação primária (brand solid) em estado default.
 - **Escopo**: background-color
-- **Contexto**: Aplicado em `.ds-btn--primary` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--primary` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.brand.600 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
@@ -7464,7 +7465,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.disabled.brand.light`
 - **Sentido**: Fill de ação primária (brand solid) em estado disabled.
 - **Escopo**: background-color
-- **Contexto**: Aplicado em `.ds-btn--primary` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--primary` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.disabled.brand.light — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -7476,7 +7477,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.brand.700`
 - **Sentido**: Fill de ação primária (brand solid) em estado hover.
 - **Escopo**: background-color
-- **Contexto**: Aplicado em `.ds-btn--primary` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--primary` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.brand.700 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
@@ -7489,7 +7490,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.neutral.50`
 - **Sentido**: Cor de texto/ícone de ação primária (brand solid) em estado default.
 - **Escopo**: color, fill
-- **Contexto**: Aplicado em `.ds-btn--primary` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--primary` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.neutral.50 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
@@ -7508,7 +7509,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.overlay.white.80`
 - **Sentido**: Cor de texto/ícone de ação primária (brand solid) em estado disabled.
 - **Escopo**: color, fill
-- **Contexto**: Aplicado em `.ds-btn--primary` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--primary` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.overlay.white.80 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -7901,7 +7902,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.dimension.6`
 - **Sentido**: Padding simétrico de Icon Only sm Button.
 - **Escopo**: padding
-- **Contexto**: Consumido por .ds-btn--icon-only.ds-btn--sm. (32 - 20) / 2 = 6px.
+- **Contexto**: Consumido por .ds-button--icon-only.ds-button--sm. (32 - 20) / 2 = 6px.
 - **Decisão**: Único valor entre xs(4) e sm(8) que foge da escala space. Segue padrão de space.control.padding.10 (ADR-006/015).
 - **Usos**:
   - CSS:
@@ -8126,7 +8127,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.overlay.blue-600.28`
 - **Sentido**: Fill de ação brand translúcida em estado active.
 - **Escopo**: background-color
-- **Contexto**: Aplicado em `.ds-btn--toned` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--toned` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.overlay.blue-600.28 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
@@ -8139,7 +8140,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.overlay.blue-600.12`
 - **Sentido**: Fill de ação brand translúcida em estado default.
 - **Escopo**: background-color
-- **Contexto**: Aplicado em `.ds-btn--toned` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--toned` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.overlay.blue-600.12 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
@@ -8153,7 +8154,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.disabled.brand.toned.light`
 - **Sentido**: Fill de ação brand translúcida em estado disabled.
 - **Escopo**: background-color
-- **Contexto**: Aplicado em `.ds-btn--toned` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--toned` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.disabled.brand.toned.light em light e brand.toned.dark em dark, conforme Figma. Adicionado para fechar paridade do estado disabled toned.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -8165,7 +8166,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.overlay.blue-600.20`
 - **Sentido**: Fill de ação brand translúcida em estado hover.
 - **Escopo**: background-color
-- **Contexto**: Aplicado em `.ds-btn--toned` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--toned` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.overlay.blue-600.20 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
@@ -8178,7 +8179,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.brand.700`
 - **Sentido**: Cor de texto/ícone de ação brand translúcida em estado default.
 - **Escopo**: color, fill
-- **Contexto**: Aplicado em `.ds-btn--toned` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--toned` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.brand.700 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
@@ -8192,7 +8193,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.neutral.400`
 - **Sentido**: Cor de texto/ícone de ação brand translúcida em estado disabled.
 - **Escopo**: color, fill
-- **Contexto**: Aplicado em `.ds-btn--toned` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--toned` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.neutral.400 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -9159,7 +9160,7 @@ semantic.z.*
 - **ADR-003** — Figma como origem canônica de tokens, Git como consolidação (Aceita — Revisada em 0.5.8)
 - **ADR-004** — WCAG 2.2 AA como padrão de acessibilidade (Aceita — Implementada em 0.5.0)
 - **ADR-005** — Brand como camada foundation, estados explícitos no semantic, e limpeza tipográfica (Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.2). Superseded por [ADR-014](ADR-014-action-tokens-role-style.md): collection Brand (modes Default/Ocean/Forest) deletada em 0.8.0, Brand virou paleta única customizável dentro da Foundation.)
-- **ADR-006** — Tokens semânticos de controle para dimensões e tipografia compartilhadas entre controles interativos (Parcialmente substituída — `size.control.*` e `space.control.padding-{x,y}.*` substituídos por escala `size.{xs..5xl}` + `space.{xs..2xl}` + `space.control.padding.10` em **ADR-015** (2026-04-26). `typography.control.*` permanece vigente.)
+- **ADR-006** — Tokens semânticos de controle para dimensões e tipografia compartilhadas entre controles interativos (Parcialmente substituída — `size.control.*` e `space.control.padding-{x,y}.*` substituídos por escala `size.{xs..5xl}` + `space.{xs..2xl}` + `space.control.padding.10` em **ADR-015** (2026-04-26). O contrato público de anatomia dos componentes foi movido para tokens Component em **ADR-019** (2026-05-10). `typography.control.*` permanece vigente.)
 - **ADR-007** — Estabelecer sistema de cores toned com overlays coloridos e tokens semânticos toned (Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.4, sincronização Figma completa em 0.5.6))
 - **ADR-008** — Recalibração das paletas foundation `green` e `amber` (Aceita — Implementada em 0.5.0)
 - **ADR-009** — Separação de `border.default` (decorativa) e `border.control` (funcional) (Aceita — Implementada em 0.5.0)
@@ -9255,7 +9256,7 @@ O DS precisa servir como fundação para projetos futuros cuja stack ainda não 
 
 ## Decisão
 
-O DS é implementado em HTML + CSS + vanilla JS. Componentes são classes CSS (.ds-btn, .ds-input, etc.) sem dependência de runtime JS para funcionalidade visual básica. JS é usado apenas para comportamentos interativos (modal open/close, tooltip positioning, etc.).
+O DS é implementado em HTML + CSS + vanilla JS. Componentes são classes CSS (.ds-button, .ds-input, etc.) sem dependência de runtime JS para funcionalidade visual básica. JS é usado apenas para comportamentos interativos (modal open/close, tooltip positioning, etc.).
 
 Tokens em JSON (DTCG) + Style Dictionary permitem gerar outputs para qualquer plataforma quando a stack for definida.
 
@@ -9539,9 +9540,9 @@ Manter font.size.base como alias de md: Descartada. Alias no JSON gera duas CSS 
 # ADR-006: Tokens semânticos de controle para dimensões e tipografia compartilhadas entre controles interativos
 
 **Data:** 2026-04-15
-**Status:** Parcialmente substituída — `size.control.*` e `space.control.padding-{x,y}.*` substituídos por escala `size.{xs..5xl}` + `space.{xs..2xl}` + `space.control.padding.10` em **ADR-015** (2026-04-26). `typography.control.*` permanece vigente.
+**Status:** Parcialmente substituída — `size.control.*` e `space.control.padding-{x,y}.*` substituídos por escala `size.{xs..5xl}` + `space.{xs..2xl}` + `space.control.padding.10` em **ADR-015** (2026-04-26). O contrato público de anatomia dos componentes foi movido para tokens Component em **ADR-019** (2026-05-10). `typography.control.*` permanece vigente.
 
-> **Nota:** Esta ADR introduziu `semantic.size.control.*` e `semantic.space.control.padding-{x,y}.*` como tokens compartilhados entre controles. Em 2026-04-26, ADR-015 unificou a escala de dimensão num namespace genérico `size.{xs..5xl}` (e `size.layout.{xs..2xl}` para containers), eliminando a maioria dos tokens `*.control.*`. A regra agora: `control.*` só é usado para valores que **fogem** da escala genérica. Veja ADR-015.
+> **Nota:** Esta ADR introduziu `semantic.size.control.*` e `semantic.space.control.padding-{x,y}.*` como tokens compartilhados entre controles. Em 2026-04-26, ADR-015 unificou a escala de dimensão num namespace genérico `size.{xs..5xl}` (e `size.layout.{xs..2xl}` para containers), eliminando a maioria dos tokens `*.control.*`. Em 2026-05-10, ADR-019 definiu que Button, Input, Select, Checkbox, Radio e Toggle expõem contratos anatómicos por `component.<component>.<part>.<property>.*`.
 
 ## Implementação
 
@@ -9647,28 +9648,21 @@ Fórmula de altura: `height = padding-y * 2 + lineHeight`, validada em todos os 
 
 ### 3. Atualizar tokens de componente para referenciar os tokens semânticos de controle
 
-`component.button.*` e futuros `component.input.*`, `component.select.*` referenciam os tokens semânticos de controle:
+`component.button.*` e futuros `component.input.*`, `component.select.*` referenciavam os tokens semânticos de controle. Este formato foi substituído por ADR-019, que exige o segmento anatómico no nome do token Component:
 
 ```
-component.button.height.sm       → {semantic.size.control.sm}
-component.button.height.md       → {semantic.size.control.md}
-component.button.height.lg       → {semantic.size.control.lg}
-component.button.padding-x.sm    → {semantic.space.control.padding-x.sm}
-component.button.padding-x.md    → {semantic.space.control.padding-x.md}
-component.button.padding-x.lg    → {semantic.space.control.padding-x.lg}
-component.button.padding-y.sm    → {semantic.space.control.padding-y.sm}
-component.button.padding-y.md    → {semantic.space.control.padding-y.md}
-component.button.padding-y.lg    → {semantic.space.control.padding-y.lg}
-component.button.font-size.sm    → {semantic.typography.control.font-size.sm}
-component.button.font-size.md    → {semantic.typography.control.font-size.md}
-component.button.font-size.lg    → {semantic.typography.control.font-size.lg}
-component.button.icon-size.sm    → {semantic.size.control.icon.sm}
-component.button.icon-size.md    → {semantic.size.control.icon.md}
-component.button.icon-size.lg    → {semantic.size.control.icon.lg}
-component.button.min-target-size → {semantic.size.control.min-target}
+component.button.root.height.sm → {semantic.size.lg}
+component.button.root.height.md → {semantic.size.xl}
+component.button.root.height.lg → {semantic.size.2xl}
+component.input.root.height.sm  → {semantic.size.lg}
+component.input.root.height.md  → {semantic.size.xl}
+component.input.root.height.lg  → {semantic.size.2xl}
+component.select.root.height.sm → {semantic.size.lg}
+component.select.root.height.md → {semantic.size.xl}
+component.select.root.height.lg → {semantic.size.2xl}
 ```
 
-Renomear `button.padding.{sm/md/lg}` → `button.padding-x.{sm/md/lg}` para deixar claro o eixo.
+O plano antigo de criar tokens Component de padding, font-size e icon-size para Button não representa o estado canónico actual no Figma/JSON. Essas propriedades continuam consumindo Semantic directamente até serem materializadas como contratos Component explícitos.
 
 ### 4. Normalizar as dimensões dos componentes no Figma
 
@@ -9685,10 +9679,10 @@ Textarea compartilha os tokens de padding mas não a altura:
 ## Consequências
 
 - **Tokens:** ~18 novos tokens semânticos (6 size, 6 space, 6 typography). 3 tokens do button renomeados (padding → padding-x). ~10 tokens do button atualizados de valores absolutos para referências semânticas. Foundation pode ganhar 1–2 tokens (line-height 1.25rem, dimension min-target).
-- **CSS:** Novas variáveis `--ds-size-control-*`, `--ds-space-control-*`, `--ds-typography-control-*`. Variáveis CSS do button renomeadas `--ds-button-padding-*` → `--ds-button-padding-x-*`, novas `--ds-button-padding-y-*`.
+- **CSS:** Novas variáveis `--ds-size-control-*`, `--ds-space-control-*`, `--ds-typography-control-*`. O contrato Component actual em CSS usa `--ds-button-root-height-*`, `--ds-input-root-height-*` e `--ds-select-root-height-*`.
 - **Figma:** Novas variáveis na coleção Semantic: `size/control/*`, `space/control/*`, `typography/control/*`. Componentes Button, Input Text, Select, Textarea religados às novas variáveis. Frames Field de Input/Select ajustados para as alturas 32/40/48. paddingY do Textarea ajustado de 8/12/16 para 8/10/12; altura inalterada.
 - **Docs:** Nova seção "Control sizing" documentando o sistema dimensional compartilhado. Páginas Button, Input, Select atualizadas. token-schema.md e component-inventory.md atualizados.
-- **Breaking changes:** `--ds-button-padding-sm/md/lg` renomeadas para `--ds-button-padding-x-sm/md/lg`. Migração: find-and-replace no CSS consumidor.
+- **Breaking changes:** O rename antigo das variáveis de padding do Button foi substituído pelo contrato Component anatómico de ADR-019 para alturas de root.
 
 ## Alternativas consideradas
 
@@ -9715,7 +9709,7 @@ Toda a camada de código foi executada durante ADR-011:
 - **Foundation overlays**: `tokens/foundation/colors.json` contém `foundation.color.overlay.blue-600.{12,20,28}` (light) e `foundation.color.overlay.blue-400.{15,25,32}` (dark). CSS gerado em `css/tokens/generated/foundation.css` emite `--ds-overlay-blue-600-*` e `--ds-overlay-blue-400-*`.
 - **Semantic toned**: `semantic.brand.toned.{default,hover,active}` existem em `tokens/semantic/light.json` (linhas 111–127) e `dark.json` (linhas 105–121) referenciando os overlays foundation. CSS gerado: `--ds-brand-toned-*` em `theme-light.css` e `theme-dark.css`.
 - **Component button**: `tokens/component/button.json` tem `button.background.toned.{default,hover,active,disabled}` e `button.foreground.toned.{default,disabled}`. Os estados toned apontam para `semantic.brand.toned.*`; o disabled aponta para `semantic.state.disabled.*` e `semantic.content.disabled` (opaco neutro, conforme ADR).
-- **CSS consumer**: `css/components/button.css` consome `--ds-brand-toned-*` na variante `.ds-btn--toned`. Zero rgba hardcoded.
+- **CSS consumer**: `css/components/button.css` consome `--ds-brand-toned-*` na variante `.ds-button--toned`. Zero rgba hardcoded.
 
 ### Sincronização Figma (0.5.6)
 
@@ -10930,17 +10924,17 @@ foundation.color.{brand|neutral|red}.{step}
 Exemplo concreto — Button brand (primary, sólido) CSS:
 
 ```css
-.ds-btn--brand {
+.ds-button--brand {
   background-color: var(--ds-action-primary-default-background-default);
   color: var(--ds-action-primary-default-content-default);
 }
-.ds-btn--brand:hover  { background-color: var(--ds-action-primary-default-background-hover); }
-.ds-btn--brand:active { background-color: var(--ds-action-primary-default-background-active); }
+.ds-button--brand:hover  { background-color: var(--ds-action-primary-default-background-hover); }
+.ds-button--brand:active { background-color: var(--ds-action-primary-default-background-active); }
 ```
 
 Button toned:
 ```css
-.ds-btn--toned {
+.ds-button--toned {
   background-color: var(--ds-action-primary-toned-background-default);
   color: var(--ds-action-primary-toned-content-default);
 }
@@ -10948,7 +10942,7 @@ Button toned:
 
 Button danger:
 ```css
-.ds-btn--danger {
+.ds-button--danger {
   background-color: var(--ds-action-danger-default-background-default);
   color: var(--ds-action-danger-default-content-default);
 }

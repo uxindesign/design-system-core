@@ -51,7 +51,7 @@
       "id": "ADR-006",
       "num": 6,
       "title": "Tokens semânticos de controle para dimensões e tipografia compartilhadas entre controles interativos",
-      "status": "Parcialmente substituída — `size.control.*` e `space.control.padding-{x,y}.*` substituídos por escala `size.{xs..5xl}` + `space.{xs..2xl}` + `space.control.padding.10` em **ADR-015** (2026-04-26). `typography.control.*` permanece vigente.",
+      "status": "Parcialmente substituída — `size.control.*` e `space.control.padding-{x,y}.*` substituídos por escala `size.{xs..5xl}` + `space.{xs..2xl}` + `space.control.padding.10` em **ADR-015** (2026-04-26). O contrato público de anatomia dos componentes foi movido para tokens Component em **ADR-019** (2026-05-10). `typography.control.*` permanece vigente.",
       "date": "2026-04-15",
       "sourceFile": "docs/decisions/ADR-006-semantic-control-tokens.md",
       "url": "https://uxindesign.github.io/design-system-core/docs/decisions/adr-006-semantic-control-tokens.html"

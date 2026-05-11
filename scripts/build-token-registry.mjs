@@ -115,7 +115,7 @@ function detectAlias(value) {
  * `name/strip-layer` (remove o primeiro segmento). Ex:
  *   foundation.color.blue.500 → --ds-color-blue-500
  *   semantic.space.inset.md   → --ds-space-inset-md
- *   component.button.height.md → --ds-button-height-md
+ *   component.button.root.height.md → --ds-button-root-height-md
  *
  * Nota: alguns transforms adicionais podem aplicar (ex: segment
  * "typography" é strippado em alguns casos). Esta é uma aproximação

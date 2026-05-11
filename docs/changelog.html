@@ -49,7 +49,7 @@
       <option value="pt">PT</option>
       <option value="en">EN</option>
     </select>
-    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg> Dark</button>
+    <button class="ds-button ds-button--ghost ds-button--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg> Dark</button>
   </div>
 </header>
 <div class="ds-sidebar-overlay" id="sidebar-overlay"></div>
@@ -72,6 +72,8 @@
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
 <h3>Corrigido</h3>
 <ul>
+<li><p><strong>API CSS e docs alinhadas aos nomes canónicos de Component.</strong> Classes públicas do Button renomeadas de <code>.ds-btn*</code> para <code>.ds-button*</code> sem alias legado, porque o DS ainda está em beta e só a documentação consome os componentes. A documentação de Button/Control Sizing também deixou de anunciar tokens antigos inexistentes de height/padding/font/icon e passa a publicar o contrato real <code>component.button.root.height.*</code> / <code>--ds-button-root-height-*</code>.</p>
+</li>
 <li><p><strong>Tokens semânticos inválidos do Toggle removidos.</strong> A tentativa anterior criou <code>semantic.control.toggle.*</code> diretamente no JSON sem variável correspondente no Figma, gerando <code>DRIFT_FROM_SOURCE</code> em <code>verify:tokens</code>. Esses aliases foram removidos de <code>tokens/semantic/{light,dark}.json</code> e do registry; <code>toggle.css</code> agora consome os Component tokens do piloto em vez de inventar <code>semantic.control.toggle.*</code>.</p>
 </li>
 <li><p><strong>Documentação normalizada conforme auditoria estrutural.</strong> Labels de tabela foram padronizados (<code>Variável CSS</code>, <code>Descrição</code>, <code>Critério WCAG</code>, <code>Função</code>, <code>Referência</code>), README atualizado para 19 ADRs, páginas simples de componentes ganharam anatomia curta, <code>Form Field</code> declara o contrato CSS-only na própria página, e referências stale a <code>semantic.content.secondary/tertiary</code> foram migradas para <code>semantic.content.default/subtle</code>.</p>
@@ -164,7 +166,7 @@
 </li>
 <li><p><strong>P2-5 (Spinner --on-color) reclassificado como falso positivo.</strong> Re-dump completo mostra Figma TEM <code>Style=On Color</code> (sm/md/lg) com tokens batendo 1:1 com CSS (<code>overlay/medium</code> + <code>border/inverse</code>). Auditoria original amostrou só <code>Style=Default, Size=Small</code> — conclusão errada. Sistema correto.</p>
 </li>
-<li><p><strong>P2-4 (Modal Footer button heights) reclassificado como wontfix.</strong> Modal CSS não força size de Button (decisão consciente, padrão Material/Polaris). Consumer controla via <code>.ds-btn--sm/--lg</code>. Figma prescreve sm/md/lg como recomendação visual pra mockups, não como CSS constraint.</p>
+<li><p><strong>P2-4 (Modal Footer button heights) reclassificado como wontfix.</strong> Modal CSS não força size de Button (decisão consciente, padrão Material/Polaris). Consumer controla via <code>.ds-button--sm/--lg</code>. Figma prescreve sm/md/lg como recomendação visual pra mockups, não como CSS constraint.</p>
 </li>
 <li><p><strong>P2-1 (letter-spacing morto sistêmico) reclassificado como wontfix.</strong> Investigação revelou que <code>css/base/reset.css:82</code> aplica <code>letter-spacing: var(--ds-body-letter-spacing-normal)</code> globalmente; todo texto herda via cascade. Figma bindings explícitos são redundantes mas não causam drift visual. Limpar ~600+ bindings sem ganho visual não justifica o trabalho. Modal Large title é exceção (tight, fix em P1-4).</p>
 </li>
@@ -189,7 +191,7 @@
 <li><strong>Glyph fontSize bindado</strong> em 270 nodes via <code>use_figma</code>: sm Buttons → <code>size/sm</code> (20), md/lg Buttons → <code>size/md</code> (24).</li>
 <li><strong>Icon Only paddings simétricos</strong> em 108 variants Figma: sm → <code>space/control/padding/6</code> (6px), md → <code>space/sm</code> (8px), lg → <code>space/md</code> (12px). Cálculo: (button - icon) / 2 centraliza icon.</li>
 <li><strong>Token novo: <code>semantic.space.control.padding.6</code></strong> (alias <code>foundation.dimension.6</code>) — único valor entre <code>xs</code> (4) e <code>sm</code> (8) na escala. Segue padrão de <code>space.control.padding.10</code> (ADR-006/015).</li>
-<li><strong>CSS atualizado</strong>: <code>.ds-btn__icon</code> default 20→24, sm 16→20, lg sem mudança. Material Symbols glyph idem. <code>.ds-btn--icon-only</code> ganha paddings por size em vez de <code>padding: 0</code>.</li>
+<li><strong>CSS atualizado</strong>: <code>.ds-button__icon</code> default 20→24, sm 16→20, lg sem mudança. Material Symbols glyph idem. <code>.ds-button--icon-only</code> ganha paddings por size em vez de <code>padding: 0</code>.</li>
 <li>Decidido como P1-3 da auditoria.</li>
 </ul>
 </li>
@@ -346,7 +348,7 @@
 </ul>
 <h3>Mudado</h3>
 <ul>
-<li><strong>Modal Cancel button no Figma</strong> rebindado em todas as 3 variants (Sm/Md/Lg): label color e glyph fills de <code>link/content/default</code> → <code>ghost/content/default</code>. Cancel volta a ser visualmente Ghost neutral (alinha com <code>.ds-btn--ghost</code> já em uso no CSS).</li>
+<li><strong>Modal Cancel button no Figma</strong> rebindado em todas as 3 variants (Sm/Md/Lg): label color e glyph fills de <code>link/content/default</code> → <code>ghost/content/default</code>. Cancel volta a ser visualmente Ghost neutral (alinha com <code>.ds-button--ghost</code> já em uso no CSS).</li>
 <li><strong>Capa Figma</strong>: badge versão <code>v1.0.0-beta.1</code> → <code>v1.0.0-beta.3</code> (pulou beta.2). Estilos de Texto count <code>25 → 29</code> (+4 link styles).</li>
 <li><strong>Changelog Figma</strong>: nova entrada <code>v1.0.0-beta.3 — Abril 2026</code> com 7 bullets.</li>
 </ul>
@@ -361,15 +363,15 @@
 </ul>
 <h3>Removido</h3>
 <ul>
-<li><strong><code>.ds-btn--link</code> variant</strong> revertido de <code>css/components/button.css</code>. Adicionado erroneamente em beta.2 — Link não é Button variant (overlap com Ghost), é text style. Substituído por <code>.ds-link</code> em arquivo dedicado.</li>
+<li><strong><code>.ds-button--link</code> variant</strong> revertido de <code>css/components/button.css</code>. Adicionado erroneamente em beta.2 — Link não é Button variant (overlap com Ghost), é text style. Substituído por <code>.ds-link</code> em arquivo dedicado.</li>
 </ul>
 <h3>Sobre versão</h3>
 <p>Beta.3 corrige decisão arquitetural de beta.2 (Link como Button variant) e adiciona pattern correto (Link como text style com estados WCAG/W3C completos). Topbar fixes do owner consolidados nesta release.</p>
 <h2>[1.0.0-beta.2] — 2026-04-27</h2>
-<p>Sincronização Figma↔código: alinhamento de utilities/textStyles per size + nova variant <code>.ds-btn--link</code> espelhando padrão de DS modernos (Material Text Button, Atlassian Link Button, Polaris Plain). Atualização da documentação no Figma (Capa + Changelog) refletindo o estado atual.</p>
+<p>Sincronização Figma↔código: alinhamento de utilities/textStyles per size + nova variant <code>.ds-button--link</code> espelhando padrão de DS modernos (Material Text Button, Atlassian Link Button, Polaris Plain). Atualização da documentação no Figma (Capa + Changelog) refletindo o estado atual.</p>
 <h3>Adicionado</h3>
 <ul>
-<li><strong><code>.ds-btn--link</code> variant</strong> em <code>css/components/button.css</code>: button text-only com cor <code>link/content/default</code>, sem background/border, underline em hover. Cobre o padrão Modal Cancel e ações de baixa ênfase. Espelha Material 3 (Text Button), Atlassian (Link Button), Polaris (Plain), Spectrum (style=text).</li>
+<li><strong><code>.ds-button--link</code> variant</strong> em <code>css/components/button.css</code>: button text-only com cor <code>link/content/default</code>, sem background/border, underline em hover. Cobre o padrão Modal Cancel e ações de baixa ênfase. Espelha Material 3 (Text Button), Atlassian (Link Button), Polaris (Plain), Spectrum (style=text).</li>
 </ul>
 <h3>Mudado</h3>
 <ul>
@@ -381,7 +383,7 @@
 <h3>Documentação</h3>
 <ul>
 <li><strong>Política de versionamento beta</strong> estabilizada: schema <code>1.0.0-beta.N</code> substitui 0.x até decisão do owner pra dropping → <code>1.0.0</code> oficial. Detalhes em <code>docs/process-versioning.md</code>.</li>
-<li><strong>Style=Link variant em Figma</strong> identificado como pendente (~60 variants × Style/Size/State/booleans). Deferido pra sessão dedicada com escopo Figma. CSS já tem <code>.ds-btn--link</code> pronto pra consumir quando variant existir.</li>
+<li><strong>Style=Link variant em Figma</strong> identificado como pendente (~60 variants × Style/Size/State/booleans). Deferido pra sessão dedicada com escopo Figma. CSS já tem <code>.ds-button--link</code> pronto pra consumir quando variant existir.</li>
 </ul>
 <h3>Sobre versão</h3>
 <p>Beta.2 fecha pendências do beta.1 (descrições/counts Figma desatualizados, drift Badge/Radio per size). Próxima beta deve focar em snapshot Figma (CI Figma↔JSON), Style=Link variants no Figma, e brand-principles.md.</p>

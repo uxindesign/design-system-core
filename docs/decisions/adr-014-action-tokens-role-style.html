@@ -49,7 +49,7 @@
       <option value="pt">PT</option>
       <option value="en">EN</option>
     </select>
-    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg> Dark</button>
+    <button class="ds-button ds-button--ghost ds-button--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg> Dark</button>
   </div>
 </header>
 <div class="ds-sidebar-overlay" id="sidebar-overlay"></div>
@@ -167,21 +167,21 @@ semantic.action.{role}.{style}.{prop}.{state}
 foundation.color.{brand|neutral|red}.{step}
 </code></pre>
 <p>Exemplo concreto — Button brand (primary, sólido) CSS:</p>
-<pre><code class="language-css">.ds-btn--brand {
+<pre><code class="language-css">.ds-button--brand {
   background-color: var(--ds-action-primary-default-background-default);
   color: var(--ds-action-primary-default-content-default);
 }
-.ds-btn--brand:hover  { background-color: var(--ds-action-primary-default-background-hover); }
-.ds-btn--brand:active { background-color: var(--ds-action-primary-default-background-active); }
+.ds-button--brand:hover  { background-color: var(--ds-action-primary-default-background-hover); }
+.ds-button--brand:active { background-color: var(--ds-action-primary-default-background-active); }
 </code></pre>
 <p>Button toned:</p>
-<pre><code class="language-css">.ds-btn--toned {
+<pre><code class="language-css">.ds-button--toned {
   background-color: var(--ds-action-primary-toned-background-default);
   color: var(--ds-action-primary-toned-content-default);
 }
 </code></pre>
 <p>Button danger:</p>
-<pre><code class="language-css">.ds-btn--danger {
+<pre><code class="language-css">.ds-button--danger {
   background-color: var(--ds-action-danger-default-background-default);
   color: var(--ds-action-danger-default-content-default);
 }

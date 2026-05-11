@@ -49,7 +49,7 @@
       <option value="pt">PT</option>
       <option value="en">EN</option>
     </select>
-    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg> Dark</button>
+    <button class="ds-button ds-button--ghost ds-button--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg> Dark</button>
   </div>
 </header>
 <div class="ds-sidebar-overlay" id="sidebar-overlay"></div>
@@ -74,7 +74,7 @@
 <li><strong>Foundation overlays</strong>: <code>tokens/foundation/colors.json</code> contém <code>foundation.color.overlay.blue-600.{12,20,28}</code> (light) e <code>foundation.color.overlay.blue-400.{15,25,32}</code> (dark). CSS gerado em <code>css/tokens/generated/foundation.css</code> emite <code>--ds-overlay-blue-600-*</code> e <code>--ds-overlay-blue-400-*</code>.</li>
 <li><strong>Semantic toned</strong>: <code>semantic.brand.toned.{default,hover,active}</code> existem em <code>tokens/semantic/light.json</code> (linhas 111–127) e <code>dark.json</code> (linhas 105–121) referenciando os overlays foundation. CSS gerado: <code>--ds-brand-toned-*</code> em <code>theme-light.css</code> e <code>theme-dark.css</code>.</li>
 <li><strong>Component button</strong>: <code>tokens/component/button.json</code> tem <code>button.background.toned.{default,hover,active,disabled}</code> e <code>button.foreground.toned.{default,disabled}</code>. Os estados toned apontam para <code>semantic.brand.toned.*</code>; o disabled aponta para <code>semantic.state.disabled.*</code> e <code>semantic.content.disabled</code> (opaco neutro, conforme ADR).</li>
-<li><strong>CSS consumer</strong>: <code>css/components/button.css</code> consome <code>--ds-brand-toned-*</code> na variante <code>.ds-btn--toned</code>. Zero rgba hardcoded.</li>
+<li><strong>CSS consumer</strong>: <code>css/components/button.css</code> consome <code>--ds-brand-toned-*</code> na variante <code>.ds-button--toned</code>. Zero rgba hardcoded.</li>
 </ul>
 <h3>Sincronização Figma (0.5.6)</h3>
 <p>Confirmação do estado real do arquivo Figma <code>PRYS2kL7VdC1MtVWfZvuDN</code> em 2026-04-21:</p>

@@ -339,7 +339,7 @@ function populateSemantic(key, e) {
     const stateName = state || (isCompound ? propParts[1] : 'default');
     return {
       sentido: `${propName === 'background' ? 'Fill' : propName === 'content' ? 'Cor de texto/ícone' : propName === 'border' ? 'Borda' : propName} de ${styleDesc[style]} em estado ${stateName}.`,
-      contexto: `Aplicado em \`.ds-btn--${style}\` ou em consumidores Figma equivalentes.`,
+      contexto: `Aplicado em \`.ds-button--${style}\` ou em consumidores Figma equivalentes.`,
       decisao: e.references ? `Aliasado a ${e.references} — escolha de tom feita no Figma (ADR-014: action × style × prop × state).` : 'Semantic-level.',
       escopo: propName === 'background' ? ['background-color'] : propName === 'border' ? ['border-color'] : ['color', 'fill'],
     };

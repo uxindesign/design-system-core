@@ -115,18 +115,18 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
 }
 
 /* Mode toggle — ghost button on brand background */
-.ds-site-header .ds-btn--ghost {
+.ds-site-header .ds-button--ghost {
   color: var(--_hfg);
   border-color: rgba(255, 255, 255, 0.35);
 }
 
-.ds-site-header .ds-btn--ghost:hover {
+.ds-site-header .ds-button--ghost:hover {
   background-color: rgba(255, 255, 255, 0.15);
   border-color: rgba(255, 255, 255, 0.5);
   color: var(--_hfg);
 }
 
-.ds-site-header .ds-btn--ghost:focus-visible {
+.ds-site-header .ds-button--ghost:focus-visible {
   outline-color: rgba(255, 255, 255, 0.6);
 }
 

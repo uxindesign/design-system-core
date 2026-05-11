@@ -9,7 +9,7 @@ O DS precisa servir como fundação para projetos futuros cuja stack ainda não 
 
 ## Decisão
 
-O DS é implementado em HTML + CSS + vanilla JS. Componentes são classes CSS (.ds-btn, .ds-input, etc.) sem dependência de runtime JS para funcionalidade visual básica. JS é usado apenas para comportamentos interativos (modal open/close, tooltip positioning, etc.).
+O DS é implementado em HTML + CSS + vanilla JS. Componentes são classes CSS (.ds-button, .ds-input, etc.) sem dependência de runtime JS para funcionalidade visual básica. JS é usado apenas para comportamentos interativos (modal open/close, tooltip positioning, etc.).
 
 Tokens em JSON (DTCG) + Style Dictionary permitem gerar outputs para qualquer plataforma quando a stack for definida.
 

@@ -49,7 +49,7 @@
       <option value="pt">PT</option>
       <option value="en">EN</option>
     </select>
-    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg> Dark</button>
+    <button class="ds-button ds-button--ghost ds-button--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg> Dark</button>
   </div>
 </header>
 <div class="ds-sidebar-overlay" id="sidebar-overlay"></div>
@@ -76,7 +76,7 @@
 <tr><td><a href="adr-003-fontes-verdade.html">ADR-003</a></td><td>Figma como origem canônica de tokens, Git como consolidação</td><td>Aceita — Revisada em 0.5.8</td><td>2026-04-14 (original) · 2026-04-21 (revisada)</td></tr>
 <tr><td><a href="adr-004-wcag.html">ADR-004</a></td><td>WCAG 2.2 AA como padrão de acessibilidade</td><td>Aceita — Implementada em 0.5.0</td><td>2026-04-14</td></tr>
 <tr><td><a href="adr-005-brand-foundation-e-estados-explicitos.html">ADR-005</a></td><td>Brand como camada foundation, estados explícitos no semantic, e limpeza tipográfica</td><td>Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.2). Superseded por [ADR-014](ADR-014-action-tokens-role-style.md): collection Brand (modes Default/Ocean/Forest) deletada em 0.8.0, Brand virou paleta única customizável dentro da Foundation.</td><td>2026-04-14</td></tr>
-<tr><td><a href="adr-006-semantic-control-tokens.html">ADR-006</a></td><td>Tokens semânticos de controle para dimensões e tipografia compartilhadas entre controles interativos</td><td>Parcialmente substituída — `size.control.*` e `space.control.padding-{x,y}.*` substituídos por escala `size.{xs..5xl}` + `space.{xs..2xl}` + `space.control.padding.10` em **ADR-015** (2026-04-26). `typography.control.*` permanece vigente.</td><td>2026-04-15</td></tr>
+<tr><td><a href="adr-006-semantic-control-tokens.html">ADR-006</a></td><td>Tokens semânticos de controle para dimensões e tipografia compartilhadas entre controles interativos</td><td>Parcialmente substituída — `size.control.*` e `space.control.padding-{x,y}.*` substituídos por escala `size.{xs..5xl}` + `space.{xs..2xl}` + `space.control.padding.10` em **ADR-015** (2026-04-26). O contrato público de anatomia dos componentes foi movido para tokens Component em **ADR-019** (2026-05-10). `typography.control.*` permanece vigente.</td><td>2026-04-15</td></tr>
 <tr><td><a href="adr-007-toned-color-system.html">ADR-007</a></td><td>Estabelecer sistema de cores toned com overlays coloridos e tokens semânticos toned</td><td>Aceita — Implementada em 0.5.0 (fechamento formal em 0.5.4, sincronização Figma completa em 0.5.6)</td><td>2026-04-15</td></tr>
 <tr><td><a href="adr-008-recalibracao-paletas-feedback.html">ADR-008</a></td><td>Recalibração das paletas foundation `green` e `amber`</td><td>Aceita — Implementada em 0.5.0</td><td>2026-04-16</td></tr>
 <tr><td><a href="adr-009-border-control-vs-decorative.html">ADR-009</a></td><td>Separação de `border.default` (decorativa) e `border.control` (funcional)</td><td>Aceita — Implementada em 0.5.0</td><td>2026-04-16</td></tr>

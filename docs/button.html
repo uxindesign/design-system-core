@@ -27,7 +27,7 @@
       <option value="pt">PT</option>
       <option value="en">EN</option>
     </select>
-    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg> Dark</button>
+    <button class="ds-button ds-button--ghost ds-button--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg> Dark</button>
   </div>
 </header>
 <div class="ds-sidebar-overlay" id="sidebar-overlay"></div>
@@ -79,9 +79,9 @@
 
     <div class="ds-anatomy">
       <div style="position:relative;display:inline-flex;align-items:center;">
-        <button class="ds-btn ds-btn--brand">
+        <button class="ds-button ds-button--brand">
           <span class="material-symbols-outlined">add</span>
-          <span class="ds-btn__label">Add item</span>
+          <span class="ds-button__label">Add item</span>
         </button>
         <!-- Markers -->
         <span class="ds-anatomy__marker" style="top:-24px;left:50%;transform:translateX(-50%);">1</span>
@@ -95,11 +95,11 @@
     <div class="ds-anatomy-legend">
       <span data-lang="pt"><strong>1</strong> Container — background, border-radius, min-height por tamanho.<br>
       <strong>2</strong> Icon (opcional) — 16px, herda a cor do foreground. Posição esquerda ou direita.<br>
-      <strong>3</strong> Label (<code>.ds-btn__label</code>) — conteúdo de texto, token de fonte semântico por tamanho.<br>
+      <strong>3</strong> Label (<code>.ds-button__label</code>) — conteúdo de texto, token de fonte semântico por tamanho.<br>
       <strong>4</strong> Padding raiz — <code>inset-sm</code> (8px) / <code>inset-md</code> (12px) / <code>inset-lg</code> (16px).<br>
       <strong>5</strong> Padding do label — 4px adicionais (<code>inset-xs</code>) quando não há ícone, para equilíbrio óptico.</span><span data-lang="en"><strong>1</strong> Container — background, border-radius, min-height per size.<br>
       <strong>2</strong> Icon (optional) — 16px, inherits foreground color. Left or right position.<br>
-      <strong>3</strong> Label (<code>.ds-btn__label</code>) — text content, semantic font token per size.<br>
+      <strong>3</strong> Label (<code>.ds-button__label</code>) — text content, semantic font token per size.<br>
       <strong>4</strong> Root padding — <code>inset-sm</code> (8px) / <code>inset-md</code> (12px) / <code>inset-lg</code> (16px).<br>
       <strong>5</strong> Label padding — additional 4px (<code>inset-xs</code>) when no icon is present, for optical balance.</span>
     </div>
@@ -116,37 +116,37 @@
         <button class="ds-preview__tab" data-tab="code">Code</button>
       </div>
       <div class="ds-preview__canvas">
-        <button class="ds-btn ds-btn--brand"><span class="ds-btn__label">Brand</span></button>
-        <button class="ds-btn ds-btn--toned"><span class="ds-btn__label">Toned</span></button>
-        <button class="ds-btn ds-btn--outline"><span class="ds-btn__label">Outline</span></button>
-        <button class="ds-btn ds-btn--ghost"><span class="ds-btn__label">Ghost</span></button>
-        <button class="ds-btn ds-btn--success"><span class="ds-btn__label">Success</span></button>
-        <button class="ds-btn ds-btn--danger"><span class="ds-btn__label">Danger</span></button>
+        <button class="ds-button ds-button--brand"><span class="ds-button__label">Brand</span></button>
+        <button class="ds-button ds-button--toned"><span class="ds-button__label">Toned</span></button>
+        <button class="ds-button ds-button--outline"><span class="ds-button__label">Outline</span></button>
+        <button class="ds-button ds-button--ghost"><span class="ds-button__label">Ghost</span></button>
+        <button class="ds-button ds-button--success"><span class="ds-button__label">Success</span></button>
+        <button class="ds-button ds-button--danger"><span class="ds-button__label">Danger</span></button>
       </div>
       <div class="ds-preview__code" style="display:none">
         <button class="ds-preview__copy">Copy</button>
-        <pre tabindex="0"><code>&lt;button class="ds-btn ds-btn--brand"&gt;
-  &lt;span class="ds-btn__label"&gt;Brand&lt;/span&gt;
+        <pre tabindex="0"><code>&lt;button class="ds-button ds-button--brand"&gt;
+  &lt;span class="ds-button__label"&gt;Brand&lt;/span&gt;
 &lt;/button&gt;
 
-&lt;button class="ds-btn ds-btn--toned"&gt;
-  &lt;span class="ds-btn__label"&gt;Toned&lt;/span&gt;
+&lt;button class="ds-button ds-button--toned"&gt;
+  &lt;span class="ds-button__label"&gt;Toned&lt;/span&gt;
 &lt;/button&gt;
 
-&lt;button class="ds-btn ds-btn--outline"&gt;
-  &lt;span class="ds-btn__label"&gt;Outline&lt;/span&gt;
+&lt;button class="ds-button ds-button--outline"&gt;
+  &lt;span class="ds-button__label"&gt;Outline&lt;/span&gt;
 &lt;/button&gt;
 
-&lt;button class="ds-btn ds-btn--ghost"&gt;
-  &lt;span class="ds-btn__label"&gt;Ghost&lt;/span&gt;
+&lt;button class="ds-button ds-button--ghost"&gt;
+  &lt;span class="ds-button__label"&gt;Ghost&lt;/span&gt;
 &lt;/button&gt;
 
-&lt;button class="ds-btn ds-btn--success"&gt;
-  &lt;span class="ds-btn__label"&gt;Success&lt;/span&gt;
+&lt;button class="ds-button ds-button--success"&gt;
+  &lt;span class="ds-button__label"&gt;Success&lt;/span&gt;
 &lt;/button&gt;
 
-&lt;button class="ds-btn ds-btn--danger"&gt;
-  &lt;span class="ds-btn__label"&gt;Danger&lt;/span&gt;
+&lt;button class="ds-button ds-button--danger"&gt;
+  &lt;span class="ds-button__label"&gt;Danger&lt;/span&gt;
 &lt;/button&gt;</code></pre>
       </div>
     </div>
@@ -163,15 +163,15 @@
         <button class="ds-preview__tab" data-tab="code">Code</button>
       </div>
       <div class="ds-preview__canvas" style="align-items:center">
-        <button class="ds-btn ds-btn--brand ds-btn--sm"><span class="ds-btn__label">Small</span></button>
-        <button class="ds-btn ds-btn--brand ds-btn--md"><span class="ds-btn__label">Medium</span></button>
-        <button class="ds-btn ds-btn--brand ds-btn--lg"><span class="ds-btn__label">Large</span></button>
+        <button class="ds-button ds-button--brand ds-button--sm"><span class="ds-button__label">Small</span></button>
+        <button class="ds-button ds-button--brand ds-button--md"><span class="ds-button__label">Medium</span></button>
+        <button class="ds-button ds-button--brand ds-button--lg"><span class="ds-button__label">Large</span></button>
       </div>
       <div class="ds-preview__code" style="display:none">
         <button class="ds-preview__copy">Copy</button>
-        <pre tabindex="0"><code>&lt;button class="ds-btn ds-btn--brand ds-btn--sm"&gt;Small&lt;/button&gt;  &lt;!-- 32px --&gt;
-&lt;button class="ds-btn ds-btn--brand ds-btn--md"&gt;Medium&lt;/button&gt; &lt;!-- 40px (default) --&gt;
-&lt;button class="ds-btn ds-btn--brand ds-btn--lg"&gt;Large&lt;/button&gt;  &lt;!-- 48px --&gt;</code></pre>
+        <pre tabindex="0"><code>&lt;button class="ds-button ds-button--brand ds-button--sm"&gt;Small&lt;/button&gt;  &lt;!-- 32px --&gt;
+&lt;button class="ds-button ds-button--brand ds-button--md"&gt;Medium&lt;/button&gt; &lt;!-- 40px (default) --&gt;
+&lt;button class="ds-button ds-button--brand ds-button--lg"&gt;Large&lt;/button&gt;  &lt;!-- 48px --&gt;</code></pre>
       </div>
     </div>
     <table class="ds-token-table">
@@ -194,11 +194,11 @@
     </p>
     <div class="ds-preview">
       <div class="ds-preview__canvas">
-        <button class="ds-btn ds-btn--brand"><span class="ds-btn__label">Default</span></button>
-        <button class="ds-btn ds-btn--brand" style="background-color:var(--ds-primary-background-hover)"><span class="ds-btn__label">Hover</span></button>
-        <button class="ds-btn ds-btn--brand" style="background-color:var(--ds-primary-background-active)"><span class="ds-btn__label">Pressed</span></button>
-        <button class="ds-btn ds-btn--brand" style="outline:var(--ds-border-width-focus, 2px) solid var(--ds-border-focus); outline-offset:var(--ds-border-width-focus, 2px)"><span class="ds-btn__label">Focused</span></button>
-        <button class="ds-btn ds-btn--brand" disabled><span class="ds-btn__label">Disabled</span></button>
+        <button class="ds-button ds-button--brand"><span class="ds-button__label">Default</span></button>
+        <button class="ds-button ds-button--brand" style="background-color:var(--ds-primary-background-hover)"><span class="ds-button__label">Hover</span></button>
+        <button class="ds-button ds-button--brand" style="background-color:var(--ds-primary-background-active)"><span class="ds-button__label">Pressed</span></button>
+        <button class="ds-button ds-button--brand" style="outline:var(--ds-border-width-focus, 2px) solid var(--ds-border-focus); outline-offset:var(--ds-border-width-focus, 2px)"><span class="ds-button__label">Focused</span></button>
+        <button class="ds-button ds-button--brand" disabled><span class="ds-button__label">Disabled</span></button>
       </div>
     </div>
     <table class="ds-token-table">
@@ -224,15 +224,15 @@
         <button class="ds-preview__tab" data-tab="code">Code</button>
       </div>
       <div class="ds-preview__canvas">
-        <button class="ds-btn ds-btn--brand"><span class="material-symbols-outlined">add</span><span class="ds-btn__label">Add item</span></button>
-        <button class="ds-btn ds-btn--outline"><span class="material-symbols-outlined">download</span><span class="ds-btn__label">Download</span></button>
-        <button class="ds-btn ds-btn--danger"><span class="material-symbols-outlined">delete</span><span class="ds-btn__label">Delete</span></button>
+        <button class="ds-button ds-button--brand"><span class="material-symbols-outlined">add</span><span class="ds-button__label">Add item</span></button>
+        <button class="ds-button ds-button--outline"><span class="material-symbols-outlined">download</span><span class="ds-button__label">Download</span></button>
+        <button class="ds-button ds-button--danger"><span class="material-symbols-outlined">delete</span><span class="ds-button__label">Delete</span></button>
       </div>
       <div class="ds-preview__code" style="display:none">
         <button class="ds-preview__copy">Copy</button>
-        <pre tabindex="0"><code>&lt;button class="ds-btn ds-btn--brand"&gt;
+        <pre tabindex="0"><code>&lt;button class="ds-button ds-button--brand"&gt;
   &lt;span class="material-symbols-outlined"&gt;add&lt;/span&gt;
-  &lt;span class="ds-btn__label"&gt;Add item&lt;/span&gt;
+  &lt;span class="ds-button__label"&gt;Add item&lt;/span&gt;
 &lt;/button&gt;</code></pre>
       </div>
     </div>
@@ -246,15 +246,15 @@
         <button class="ds-preview__tab" data-tab="code">Code</button>
       </div>
       <div class="ds-preview__canvas" style="align-items:center">
-        <button class="ds-btn ds-btn--brand ds-btn--icon-only ds-btn--sm" aria-label="Add"><span class="material-symbols-outlined">add</span></button>
-        <button class="ds-btn ds-btn--brand ds-btn--icon-only" aria-label="Edit"><span class="material-symbols-outlined">edit</span></button>
-        <button class="ds-btn ds-btn--brand ds-btn--icon-only ds-btn--lg" aria-label="Settings"><span class="material-symbols-outlined">settings</span></button>
-        <button class="ds-btn ds-btn--outline ds-btn--icon-only" aria-label="Search"><span class="material-symbols-outlined">search</span></button>
-        <button class="ds-btn ds-btn--ghost ds-btn--icon-only" aria-label="Close"><span class="material-symbols-outlined">close</span></button>
+        <button class="ds-button ds-button--brand ds-button--icon-only ds-button--sm" aria-label="Add"><span class="material-symbols-outlined">add</span></button>
+        <button class="ds-button ds-button--brand ds-button--icon-only" aria-label="Edit"><span class="material-symbols-outlined">edit</span></button>
+        <button class="ds-button ds-button--brand ds-button--icon-only ds-button--lg" aria-label="Settings"><span class="material-symbols-outlined">settings</span></button>
+        <button class="ds-button ds-button--outline ds-button--icon-only" aria-label="Search"><span class="material-symbols-outlined">search</span></button>
+        <button class="ds-button ds-button--ghost ds-button--icon-only" aria-label="Close"><span class="material-symbols-outlined">close</span></button>
       </div>
       <div class="ds-preview__code" style="display:none">
         <button class="ds-preview__copy">Copy</button>
-        <pre tabindex="0"><code>&lt;button class="ds-btn ds-btn--brand ds-btn--icon-only" aria-label="Edit"&gt;
+        <pre tabindex="0"><code>&lt;button class="ds-button ds-button--brand ds-button--icon-only" aria-label="Edit"&gt;
   &lt;span class="material-symbols-outlined"&gt;edit&lt;/span&gt;
 &lt;/button&gt;
 
@@ -271,15 +271,15 @@
         <button class="ds-preview__tab" data-tab="code">Code</button>
       </div>
       <div class="ds-preview__canvas">
-        <button class="ds-btn ds-btn--brand ds-btn--loading" aria-label="Saving" aria-busy="true"><span class="ds-btn__label">Saving</span><span class="ds-btn__spinner"><span class="ds-spinner ds-spinner--sm"></span></span></button>
-        <button class="ds-btn ds-btn--outline ds-btn--loading" aria-label="Loading" aria-busy="true"><span class="ds-btn__label">Loading</span><span class="ds-btn__spinner"><span class="ds-spinner ds-spinner--sm"></span></span></button>
+        <button class="ds-button ds-button--brand ds-button--loading" aria-label="Saving" aria-busy="true"><span class="ds-button__label">Saving</span><span class="ds-button__spinner"><span class="ds-spinner ds-spinner--sm"></span></span></button>
+        <button class="ds-button ds-button--outline ds-button--loading" aria-label="Loading" aria-busy="true"><span class="ds-button__label">Loading</span><span class="ds-button__spinner"><span class="ds-spinner ds-spinner--sm"></span></span></button>
       </div>
       <div class="ds-preview__code" style="display:none">
         <button class="ds-preview__copy">Copy</button>
-        <pre tabindex="0"><code>&lt;button class="ds-btn ds-btn--brand ds-btn--loading"
+        <pre tabindex="0"><code>&lt;button class="ds-button ds-button--brand ds-button--loading"
         aria-disabled="true" aria-busy="true"&gt;
-  &lt;span class="ds-btn__label"&gt;Saving&lt;/span&gt;
-  &lt;span class="ds-btn__spinner"&gt;
+  &lt;span class="ds-button__label"&gt;Saving&lt;/span&gt;
+  &lt;span class="ds-button__spinner"&gt;
     &lt;span class="ds-spinner ds-spinner--sm"&gt;&lt;/span&gt;
   &lt;/span&gt;
 &lt;/button&gt;</code></pre>
@@ -295,12 +295,12 @@
         <button class="ds-preview__tab" data-tab="code">Code</button>
       </div>
       <div class="ds-preview__canvas ds-preview__canvas--column">
-        <button class="ds-btn ds-btn--brand ds-btn--full"><span class="ds-btn__label">Full Width Button</span></button>
+        <button class="ds-button ds-button--brand ds-button--full"><span class="ds-button__label">Full Width Button</span></button>
       </div>
       <div class="ds-preview__code" style="display:none">
         <button class="ds-preview__copy">Copy</button>
-        <pre tabindex="0"><code>&lt;button class="ds-btn ds-btn--brand ds-btn--full"&gt;
-  &lt;span class="ds-btn__label"&gt;Full Width Button&lt;/span&gt;
+        <pre tabindex="0"><code>&lt;button class="ds-button ds-button--brand ds-button--full"&gt;
+  &lt;span class="ds-button__label"&gt;Full Width Button&lt;/span&gt;
 &lt;/button&gt;</code></pre>
       </div>
     </div>
@@ -315,17 +315,17 @@
     <div class="ds-dodont">
       <div class="ds-dodont__item">
         <div class="ds-dodont__preview">
-          <button class="ds-btn ds-btn--brand"><span class="ds-btn__label">Save changes</span></button>
-          <button class="ds-btn ds-btn--outline"><span class="ds-btn__label">Cancel</span></button>
+          <button class="ds-button ds-button--brand"><span class="ds-button__label">Save changes</span></button>
+          <button class="ds-button ds-button--outline"><span class="ds-button__label">Cancel</span></button>
         </div>
         <div class="ds-dodont__label ds-dodont__label--do">Faça</div>
         <div class="ds-dodont__desc"><span data-lang="pt">Use um button Brand por seção. Combine com uma alternativa de menor ênfase.</span><span data-lang="en">Use one Brand button per section. Pair with a lower-emphasis alternative.</span></div>
       </div>
       <div class="ds-dodont__item">
         <div class="ds-dodont__preview">
-          <button class="ds-btn ds-btn--brand"><span class="ds-btn__label">Save</span></button>
-          <button class="ds-btn ds-btn--brand"><span class="ds-btn__label">Cancel</span></button>
-          <button class="ds-btn ds-btn--brand"><span class="ds-btn__label">Reset</span></button>
+          <button class="ds-button ds-button--brand"><span class="ds-button__label">Save</span></button>
+          <button class="ds-button ds-button--brand"><span class="ds-button__label">Cancel</span></button>
+          <button class="ds-button ds-button--brand"><span class="ds-button__label">Reset</span></button>
         </div>
         <div class="ds-dodont__label ds-dodont__label--dont">Não faça</div>
         <div class="ds-dodont__desc"><span data-lang="pt">Múltiplos buttons Brand competem por atenção e confundem a prioridade.</span><span data-lang="en">Multiple Brand buttons compete for attention and confuse priority.</span></div>
@@ -335,14 +335,14 @@
     <div class="ds-dodont">
       <div class="ds-dodont__item">
         <div class="ds-dodont__preview">
-          <button class="ds-btn ds-btn--danger"><span class="ds-btn__label">Delete project</span></button>
+          <button class="ds-button ds-button--danger"><span class="ds-button__label">Delete project</span></button>
         </div>
         <div class="ds-dodont__label ds-dodont__label--do">Faça</div>
         <div class="ds-dodont__desc"><span data-lang="pt">Use Danger para ações destrutivas. O label descreve claramente o que será excluído.</span><span data-lang="en">Use Danger for destructive actions. Label clearly describes what will be deleted.</span></div>
       </div>
       <div class="ds-dodont__item">
         <div class="ds-dodont__preview">
-          <button class="ds-btn ds-btn--danger"><span class="ds-btn__label">Submit</span></button>
+          <button class="ds-button ds-button--danger"><span class="ds-button__label">Submit</span></button>
         </div>
         <div class="ds-dodont__label ds-dodont__label--dont">Não faça</div>
         <div class="ds-dodont__desc"><span data-lang="pt">Não use Danger para ações não-destrutivas. Vermelho implica algo irreversível.</span><span data-lang="en">Don't use Danger for non-destructive actions. Red implies something irreversible.</span></div>
@@ -387,22 +387,14 @@
         <tr><td>text (disabled)</td><td><code>semantic.content.disabled</code></td><td><code>--ds-content-disabled</code></td></tr>
         <tr><td>border-radius</td><td><code>semantic.radius.component</code></td><td><code>--ds-radius-md</code></td></tr>
         <tr><td>focus ring</td><td><code>semantic.border.{focus,width.focus}</code></td><td><code>--ds-border-focus</code>, <code>--ds-border-width-focus</code> (offset reusa width)</td></tr>
-        <tr><td>height (sm)</td><td><code>component.button.height.sm</code></td><td><code>--ds-button-height-sm</code></td></tr>
-        <tr><td>height (md)</td><td><code>component.button.height.md</code></td><td><code>--ds-button-height-md</code></td></tr>
-        <tr><td>height (lg)</td><td><code>component.button.height.lg</code></td><td><code>--ds-button-height-lg</code></td></tr>
-        <tr><td>padding-x (sm)</td><td><code>component.button.padding-x.sm</code></td><td><code>--ds-button-padding-x-sm</code></td></tr>
-        <tr><td>padding-x (md)</td><td><code>component.button.padding-x.md</code></td><td><code>--ds-button-padding-x-md</code></td></tr>
-        <tr><td>padding-x (lg)</td><td><code>component.button.padding-x.lg</code></td><td><code>--ds-button-padding-x-lg</code></td></tr>
-        <tr><td>padding-y (sm)</td><td><code>component.button.padding-y.sm</code></td><td><code>--ds-button-padding-y-sm</code> (8px)</td></tr>
-        <tr><td>padding-y (md)</td><td><code>component.button.padding-y.md</code></td><td><code>--ds-button-padding-y-md</code> (10px)</td></tr>
-        <tr><td>padding-y (lg)</td><td><code>component.button.padding-y.lg</code></td><td><code>--ds-button-padding-y-lg</code> (12px)</td></tr>
-        <tr><td>gap (icon ↔ label)</td><td><code>component.button.gap</code></td><td><code>--ds-button-gap</code></td></tr>
-        <tr><td>font-size (sm)</td><td><code>component.button.font-size.sm</code></td><td><code>--ds-button-font-size-sm</code></td></tr>
-        <tr><td>font-size (md)</td><td><code>component.button.font-size.md</code></td><td><code>--ds-button-font-size-md</code></td></tr>
-        <tr><td>font-size (lg)</td><td><code>component.button.font-size.lg</code></td><td><code>--ds-button-font-size-lg</code></td></tr>
-        <tr><td>icon-size (sm)</td><td><code>component.button.icon-size.sm</code></td><td><code>--ds-button-icon-size-sm</code></td></tr>
-        <tr><td>icon-size (md)</td><td><code>component.button.icon-size.md</code></td><td><code>--ds-button-icon-size-md</code></td></tr>
-        <tr><td>icon-size (lg)</td><td><code>component.button.icon-size.lg</code></td><td><code>--ds-button-icon-size-lg</code></td></tr>
+        <tr><td>height (sm)</td><td><code>component.button.root.height.sm</code></td><td><code>--ds-button-root-height-sm</code></td></tr>
+        <tr><td>height (md)</td><td><code>component.button.root.height.md</code></td><td><code>--ds-button-root-height-md</code></td></tr>
+        <tr><td>height (lg)</td><td><code>component.button.root.height.lg</code></td><td><code>--ds-button-root-height-lg</code></td></tr>
+        <tr><td>padding-x (sm/md/lg)</td><td><code>semantic.space.{md,lg,xl}</code></td><td><code>--ds-space-{md,lg,xl}</code></td></tr>
+        <tr><td>padding-y (sm/md/lg)</td><td><code>semantic.space.sm</code>, <code>semantic.space.control.padding.10</code>, <code>semantic.space.md</code></td><td><code>--ds-space-sm</code>, <code>--ds-space-control-padding-10</code>, <code>--ds-space-md</code></td></tr>
+        <tr><td>gap (sm/default)</td><td><code>semantic.space.xs</code>, <code>semantic.space.sm</code></td><td><code>--ds-space-xs</code>, <code>--ds-space-sm</code></td></tr>
+        <tr><td>font-size (sm/md/lg)</td><td><code>semantic.body.font-size.{sm,md}</code></td><td><code>--ds-body-font-size-sm</code>, <code>--ds-body-font-size-md</code></td></tr>
+        <tr><td>icon-size (sm/md/lg)</td><td><code>semantic.size.{sm,md}</code></td><td><code>--ds-size-sm</code>, <code>--ds-size-md</code></td></tr>
       </tbody>
     </table>
 
@@ -420,21 +412,21 @@
     <table class="ds-token-table">
       <thead><tr><th><span data-lang="pt">Classe</span><span data-lang="en">Class</span></th><th><span data-lang="pt">Descrição</span><span data-lang="en">Description</span></th></tr></thead>
       <tbody>
-        <tr><td><code>ds-btn</code></td><td><span data-lang="pt">Classe base do button</span><span data-lang="en">Base button class</span></td></tr>
-        <tr><td><code>ds-btn--brand</code></td><td><span data-lang="pt">Preenchido com cor da marca (estilo padrão, pode ser omitido)</span><span data-lang="en">Filled with brand color (default style, can be omitted)</span></td></tr>
-        <tr><td><code>ds-btn--toned</code></td><td><span data-lang="pt">Background da marca com alpha transparente</span><span data-lang="en">Alpha-tinted brand background</span></td></tr>
-        <tr><td><code>ds-btn--outline</code></td><td><span data-lang="pt">Borda neutra, sem preenchimento de marca</span><span data-lang="en">Neutral border, no brand fill</span></td></tr>
-        <tr><td><code>ds-btn--ghost</code></td><td><span data-lang="pt">Texto da marca, sem background ou borda</span><span data-lang="en">Brand text, no background or border</span></td></tr>
-        <tr><td><code>ds-btn--success</code></td><td><span data-lang="pt">Preenchido com cor de sucesso/verde</span><span data-lang="en">Filled with success/green color</span></td></tr>
-        <tr><td><code>ds-btn--danger</code></td><td><span data-lang="pt">Preenchido com cor de erro/vermelho</span><span data-lang="en">Filled with error/red color</span></td></tr>
-        <tr><td><code>ds-btn--sm</code></td><td><span data-lang="pt">Tamanho pequeno (altura 32px)</span><span data-lang="en">Small size (32px height)</span></td></tr>
-        <tr><td><code>ds-btn--md</code></td><td><span data-lang="pt">Tamanho médio (40px, padrão — pode ser omitido)</span><span data-lang="en">Medium size (40px, default — can be omitted)</span></td></tr>
-        <tr><td><code>ds-btn--lg</code></td><td><span data-lang="pt">Tamanho grande (altura 48px)</span><span data-lang="en">Large size (48px height)</span></td></tr>
-        <tr><td><code>ds-btn--icon-only</code></td><td><span data-lang="pt">Button quadrado para uso somente-ícone</span><span data-lang="en">Square button for icon-only use</span></td></tr>
-        <tr><td><code>ds-btn--full</code></td><td><span data-lang="pt">Button de largura total (100%)</span><span data-lang="en">Full-width button (100%)</span></td></tr>
-        <tr><td><code>ds-btn--loading</code></td><td><span data-lang="pt">Estado de carregamento — oculta label, mostra spinner</span><span data-lang="en">Loading state — hides label, shows spinner</span></td></tr>
-        <tr><td><code>ds-btn__label</code></td><td><span data-lang="pt">Label de texto (elemento filho)</span><span data-lang="en">Text label (child element)</span></td></tr>
-        <tr><td><code>ds-btn__spinner</code></td><td><span data-lang="pt">Container do spinner (elemento filho, usado com <code>--loading</code>)</span><span data-lang="en">Spinner container (child element, used with <code>--loading</code>)</span></td></tr>
+        <tr><td><code>ds-button</code></td><td><span data-lang="pt">Classe base do button</span><span data-lang="en">Base button class</span></td></tr>
+        <tr><td><code>ds-button--brand</code></td><td><span data-lang="pt">Preenchido com cor da marca (estilo padrão, pode ser omitido)</span><span data-lang="en">Filled with brand color (default style, can be omitted)</span></td></tr>
+        <tr><td><code>ds-button--toned</code></td><td><span data-lang="pt">Background da marca com alpha transparente</span><span data-lang="en">Alpha-tinted brand background</span></td></tr>
+        <tr><td><code>ds-button--outline</code></td><td><span data-lang="pt">Borda neutra, sem preenchimento de marca</span><span data-lang="en">Neutral border, no brand fill</span></td></tr>
+        <tr><td><code>ds-button--ghost</code></td><td><span data-lang="pt">Texto da marca, sem background ou borda</span><span data-lang="en">Brand text, no background or border</span></td></tr>
+        <tr><td><code>ds-button--success</code></td><td><span data-lang="pt">Preenchido com cor de sucesso/verde</span><span data-lang="en">Filled with success/green color</span></td></tr>
+        <tr><td><code>ds-button--danger</code></td><td><span data-lang="pt">Preenchido com cor de erro/vermelho</span><span data-lang="en">Filled with error/red color</span></td></tr>
+        <tr><td><code>ds-button--sm</code></td><td><span data-lang="pt">Tamanho pequeno (altura 32px)</span><span data-lang="en">Small size (32px height)</span></td></tr>
+        <tr><td><code>ds-button--md</code></td><td><span data-lang="pt">Tamanho médio (40px, padrão — pode ser omitido)</span><span data-lang="en">Medium size (40px, default — can be omitted)</span></td></tr>
+        <tr><td><code>ds-button--lg</code></td><td><span data-lang="pt">Tamanho grande (altura 48px)</span><span data-lang="en">Large size (48px height)</span></td></tr>
+        <tr><td><code>ds-button--icon-only</code></td><td><span data-lang="pt">Button quadrado para uso somente-ícone</span><span data-lang="en">Square button for icon-only use</span></td></tr>
+        <tr><td><code>ds-button--full</code></td><td><span data-lang="pt">Button de largura total (100%)</span><span data-lang="en">Full-width button (100%)</span></td></tr>
+        <tr><td><code>ds-button--loading</code></td><td><span data-lang="pt">Estado de carregamento — oculta label, mostra spinner</span><span data-lang="en">Loading state — hides label, shows spinner</span></td></tr>
+        <tr><td><code>ds-button__label</code></td><td><span data-lang="pt">Label de texto (elemento filho)</span><span data-lang="en">Text label (child element)</span></td></tr>
+        <tr><td><code>ds-button__spinner</code></td><td><span data-lang="pt">Container do spinner (elemento filho, usado com <code>--loading</code>)</span><span data-lang="en">Spinner container (child element, used with <code>--loading</code>)</span></td></tr>
       </tbody>
     </table>
   </div>

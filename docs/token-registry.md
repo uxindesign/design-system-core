@@ -4668,7 +4668,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.overlay.black.10`
 - **Sentido**: Fill de ação apenas texto (neutral) em estado active.
 - **Escopo**: background-color
-- **Contexto**: Aplicado em `.ds-btn--ghost` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--ghost` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.overlay.black.10 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
@@ -4681,7 +4681,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.overlay.black.5`
 - **Sentido**: Fill de ação apenas texto (neutral) em estado hover.
 - **Escopo**: background-color
-- **Contexto**: Aplicado em `.ds-btn--ghost` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--ghost` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.overlay.black.5 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
@@ -4694,7 +4694,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.neutral.900`
 - **Sentido**: Cor de texto/ícone de ação apenas texto (neutral) em estado default.
 - **Escopo**: color, fill
-- **Contexto**: Aplicado em `.ds-btn--ghost` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--ghost` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.neutral.900 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
@@ -4707,7 +4707,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.neutral.400`
 - **Sentido**: Cor de texto/ícone de ação apenas texto (neutral) em estado disabled.
 - **Escopo**: color, fill
-- **Contexto**: Aplicado em `.ds-btn--ghost` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--ghost` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.neutral.400 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -4719,7 +4719,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.brand.800`
 - **Sentido**: Cor de texto/ícone de link inline (branded text) em estado active.
 - **Escopo**: color, fill
-- **Contexto**: Aplicado em `.ds-btn--link` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--link` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.brand.800 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
@@ -4733,7 +4733,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.brand.700`
 - **Sentido**: Cor de texto/ícone de link inline (branded text) em estado default.
 - **Escopo**: color, fill
-- **Contexto**: Aplicado em `.ds-btn--link` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--link` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.brand.700 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
@@ -4748,7 +4748,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.neutral.400`
 - **Sentido**: Cor de texto/ícone de link inline (branded text) em estado disabled.
 - **Escopo**: color, fill
-- **Contexto**: Aplicado em `.ds-btn--link` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--link` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.neutral.400 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -4760,7 +4760,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.brand.800`
 - **Sentido**: Cor de texto/ícone de link inline (branded text) em estado hover.
 - **Escopo**: color, fill
-- **Contexto**: Aplicado em `.ds-btn--link` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--link` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.brand.800 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
@@ -4937,7 +4937,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.overlay.black.10`
 - **Sentido**: Fill de ação com borda neutra em estado active.
 - **Escopo**: background-color
-- **Contexto**: Aplicado em `.ds-btn--outline` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--outline` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.overlay.black.10 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
@@ -4950,7 +4950,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.overlay.black.5`
 - **Sentido**: Fill de ação com borda neutra em estado hover.
 - **Escopo**: background-color
-- **Contexto**: Aplicado em `.ds-btn--outline` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--outline` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.overlay.black.5 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
@@ -4963,7 +4963,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.neutral.500`
 - **Sentido**: Borda de ação com borda neutra em estado default.
 - **Escopo**: border-color
-- **Contexto**: Aplicado em `.ds-btn--outline` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--outline` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.neutral.500 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
@@ -4976,7 +4976,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.neutral.200`
 - **Sentido**: Borda de ação com borda neutra em estado disabled.
 - **Escopo**: border-color
-- **Contexto**: Aplicado em `.ds-btn--outline` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--outline` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.neutral.200 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -4988,7 +4988,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.neutral.700`
 - **Sentido**: Borda de ação com borda neutra em estado hover.
 - **Escopo**: border-color
-- **Contexto**: Aplicado em `.ds-btn--outline` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--outline` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.neutral.700 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
@@ -5001,7 +5001,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.neutral.700`
 - **Sentido**: Cor de texto/ícone de ação com borda neutra em estado default.
 - **Escopo**: color, fill
-- **Contexto**: Aplicado em `.ds-btn--outline` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--outline` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.neutral.700 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
@@ -5014,7 +5014,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.neutral.400`
 - **Sentido**: Cor de texto/ícone de ação com borda neutra em estado disabled.
 - **Escopo**: color, fill
-- **Contexto**: Aplicado em `.ds-btn--outline` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--outline` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.neutral.400 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -5080,7 +5080,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.brand.800`
 - **Sentido**: Fill de ação primária (brand solid) em estado active.
 - **Escopo**: background-color
-- **Contexto**: Aplicado em `.ds-btn--primary` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--primary` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.brand.800 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
@@ -5093,7 +5093,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.brand.600`
 - **Sentido**: Fill de ação primária (brand solid) em estado default.
 - **Escopo**: background-color
-- **Contexto**: Aplicado em `.ds-btn--primary` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--primary` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.brand.600 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
@@ -5112,7 +5112,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.disabled.brand.light`
 - **Sentido**: Fill de ação primária (brand solid) em estado disabled.
 - **Escopo**: background-color
-- **Contexto**: Aplicado em `.ds-btn--primary` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--primary` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.disabled.brand.light — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -5124,7 +5124,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.brand.700`
 - **Sentido**: Fill de ação primária (brand solid) em estado hover.
 - **Escopo**: background-color
-- **Contexto**: Aplicado em `.ds-btn--primary` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--primary` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.brand.700 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
@@ -5137,7 +5137,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.neutral.50`
 - **Sentido**: Cor de texto/ícone de ação primária (brand solid) em estado default.
 - **Escopo**: color, fill
-- **Contexto**: Aplicado em `.ds-btn--primary` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--primary` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.neutral.50 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
@@ -5156,7 +5156,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.overlay.white.80`
 - **Sentido**: Cor de texto/ícone de ação primária (brand solid) em estado disabled.
 - **Escopo**: color, fill
-- **Contexto**: Aplicado em `.ds-btn--primary` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--primary` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.overlay.white.80 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -5549,7 +5549,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.dimension.6`
 - **Sentido**: Padding simétrico de Icon Only sm Button.
 - **Escopo**: padding
-- **Contexto**: Consumido por .ds-btn--icon-only.ds-btn--sm. (32 - 20) / 2 = 6px.
+- **Contexto**: Consumido por .ds-button--icon-only.ds-button--sm. (32 - 20) / 2 = 6px.
 - **Decisão**: Único valor entre xs(4) e sm(8) que foge da escala space. Segue padrão de space.control.padding.10 (ADR-006/015).
 - **Usos**:
   - CSS:
@@ -5774,7 +5774,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.overlay.blue-600.28`
 - **Sentido**: Fill de ação brand translúcida em estado active.
 - **Escopo**: background-color
-- **Contexto**: Aplicado em `.ds-btn--toned` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--toned` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.overlay.blue-600.28 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
@@ -5787,7 +5787,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.overlay.blue-600.12`
 - **Sentido**: Fill de ação brand translúcida em estado default.
 - **Escopo**: background-color
-- **Contexto**: Aplicado em `.ds-btn--toned` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--toned` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.overlay.blue-600.12 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
@@ -5801,7 +5801,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.disabled.brand.toned.light`
 - **Sentido**: Fill de ação brand translúcida em estado disabled.
 - **Escopo**: background-color
-- **Contexto**: Aplicado em `.ds-btn--toned` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--toned` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.disabled.brand.toned.light em light e brand.toned.dark em dark, conforme Figma. Adicionado para fechar paridade do estado disabled toned.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -5813,7 +5813,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.overlay.blue-600.20`
 - **Sentido**: Fill de ação brand translúcida em estado hover.
 - **Escopo**: background-color
-- **Contexto**: Aplicado em `.ds-btn--toned` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--toned` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.overlay.blue-600.20 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
@@ -5826,7 +5826,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.brand.700`
 - **Sentido**: Cor de texto/ícone de ação brand translúcida em estado default.
 - **Escopo**: color, fill
-- **Contexto**: Aplicado em `.ds-btn--toned` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--toned` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.brand.700 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
@@ -5840,7 +5840,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `foundation.color.neutral.400`
 - **Sentido**: Cor de texto/ícone de ação brand translúcida em estado disabled.
 - **Escopo**: color, fill
-- **Contexto**: Aplicado em `.ds-btn--toned` ou em consumidores Figma equivalentes.
+- **Contexto**: Aplicado em `.ds-button--toned` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.neutral.400 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
