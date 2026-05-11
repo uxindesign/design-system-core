@@ -138,6 +138,8 @@
 </li>
 <li><p><strong>Piloto Component materializado em Figma + JSON para Checkbox, Radio e Toggle.</strong> Criada a collection Figma <code>Component</code> com modo <code>Default</code> e 22 variables <code>component/...</code>: target heights 32/40/48, box/control 16/20/24, track Toggle 28×16 / 44×24 / 56×32 e thumb inset 2px. Checkbox/Radio <code>Control</code> e Toggle <code>Track</code> foram rebindados às novas variables; <code>tokens/component/{checkbox,radio,toggle}.json</code>, registry, CSS consumidor e snapshot Figma foram atualizados.</p>
 </li>
+<li><p><strong>Alturas Component para controles single-line.</strong> Button, Input Text e Select ganharam <code>component.&lt;componente&gt;.root.height.{sm,md,lg}</code> aliasados a <code>semantic.size.{lg,xl,2xl}</code>. Figma foi rebindado no root do Button e no <code>Field</code> visual de Input/Select; CSS consumidor passou a usar <code>--ds-button-root-height-*</code>, <code>--ds-input-root-height-*</code> e <code>--ds-select-root-height-*</code>.</p>
+</li>
 <li><p><strong>Guia editorial de documentação</strong> (<code>docs/documentation-guidelines.md</code>). Define templates para páginas Foundation, Component, Process e System, exceções permitidas, labels oficiais de tabela e regra authored vs generated.</p>
 </li>
 <li><p><strong>Auditoria estrutural da documentação</strong> (<code>audit/docs-structure-audit.md</code>). Classifica páginas por tipo (Foundation, Component, Process, System), identifica inconsistências editoriais e define uma sequência recomendada de PRs para normalização.</p>

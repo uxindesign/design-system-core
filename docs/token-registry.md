@@ -6,8 +6,8 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Status
 
-- Total de tokens: **460**
-- Com metadados completos: **460**
+- Total de tokens: **469**
+- Com metadados completos: **469**
 - Pendentes (`TODO` em algum campo obrigatório): **0**
 - Completude: **100%**
 
@@ -500,7 +500,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `semantic.size.2xl` | dimension | → `foundation.dimension.48` | Size token 2xl. | 7 |
+| `semantic.size.2xl` | dimension | → `foundation.dimension.48` | Size token 2xl. | 8 |
 | `semantic.size.3xl` | dimension | → `foundation.dimension.64` | Size token 3xl. | 2 |
 | `semantic.size.4xl` | dimension | → `foundation.dimension.96` | Size token 4xl. | 1 |
 | `semantic.size.5xl` | dimension | → `foundation.dimension.128` | Size token 5xl. | 2 |
@@ -510,10 +510,10 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.size.layout.sm` | dimension | → `foundation.dimension.480` | Size token layout.sm. | 1 |
 | `semantic.size.layout.xl` | dimension | → `foundation.dimension.1024` | Size token layout.xl. | 0 |
 | `semantic.size.layout.xs` | dimension | → `foundation.dimension.320` | Size token layout.xs. | 0 |
-| `semantic.size.lg` | dimension | → `foundation.dimension.32` | Size token lg. | 10 |
+| `semantic.size.lg` | dimension | → `foundation.dimension.32` | Size token lg. | 11 |
 | `semantic.size.md` | dimension | → `foundation.dimension.24` | Size token md. | 10 |
 | `semantic.size.sm` | dimension | → `foundation.dimension.20` | Size token sm. | 10 |
-| `semantic.size.xl` | dimension | → `foundation.dimension.40` | Size token xl. | 9 |
+| `semantic.size.xl` | dimension | → `foundation.dimension.40` | Size token xl. | 10 |
 | `semantic.size.xs` | dimension | → `foundation.dimension.16` | Size token xs. | 8 |
 
 ### semantic.space
@@ -604,7 +604,15 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Component
 
-22 tokens.
+31 tokens.
+
+### component.button
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `component.button.root.height.lg` | dimension | → `semantic.size.2xl` | Altura do root do Button por size. | 1 |
+| `component.button.root.height.md` | dimension | → `semantic.size.xl` | Altura do root do Button por size. | 1 |
+| `component.button.root.height.sm` | dimension | → `semantic.size.lg` | Altura do root do Button por size. | 1 |
 
 ### component.checkbox
 
@@ -617,6 +625,14 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.checkbox.target.height.md` | dimension | → `semantic.size.xl` | Altura minima da area interativa do Checkbox por size. | 1 |
 | `component.checkbox.target.height.sm` | dimension | → `semantic.size.lg` | Altura minima da area interativa do Checkbox por size. | 1 |
 
+### component.input
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `component.input.root.height.lg` | dimension | → `semantic.size.2xl` | Altura do root visual do Input Text por size. | 1 |
+| `component.input.root.height.md` | dimension | → `semantic.size.xl` | Altura do root visual do Input Text por size. | 1 |
+| `component.input.root.height.sm` | dimension | → `semantic.size.lg` | Altura do root visual do Input Text por size. | 1 |
+
 ### component.radio
 
 | Token | Tipo | Alias | Sentido | Usos |
@@ -627,6 +643,14 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.radio.target.height.lg` | dimension | → `semantic.size.2xl` | Altura minima da area interativa do Radio por size. | 1 |
 | `component.radio.target.height.md` | dimension | → `semantic.size.xl` | Altura minima da area interativa do Radio por size. | 1 |
 | `component.radio.target.height.sm` | dimension | → `semantic.size.lg` | Altura minima da area interativa do Radio por size. | 1 |
+
+### component.select
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `component.select.root.height.lg` | dimension | → `semantic.size.2xl` | Altura do root visual do Select por size. | 1 |
+| `component.select.root.height.md` | dimension | → `semantic.size.xl` | Altura do root visual do Select por size. | 1 |
+| `component.select.root.height.sm` | dimension | → `semantic.size.lg` | Altura do root visual do Select por size. | 1 |
 
 ### component.toggle
 
@@ -5260,11 +5284,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.dimension.48.
 - **Usos**:
   - CSS:
-    - `css/components/button.css` (3×)
-    - `css/components/input.css` (1×)
-    - `css/components/select.css` (1×)
-    - `css/tokens/generated/component.css` (3×)
-  - Tokens que referenciam: `component.checkbox.target.height.lg`, `component.radio.target.height.lg`, `component.toggle.target.height.lg`
+    - `css/components/button.css` (2×)
+    - `css/tokens/generated/component.css` (6×)
+  - Tokens que referenciam: `component.button.root.height.lg`, `component.checkbox.target.height.lg`, `component.input.root.height.lg`, `component.radio.target.height.lg`, `component.select.root.height.lg`, `component.toggle.target.height.lg`
 
 ### `semantic.size.3xl`
 
@@ -5394,12 +5416,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/avatar.css` (2×)
-    - `css/components/button.css` (2×)
-    - `css/components/input.css` (1×)
-    - `css/components/select.css` (1×)
+    - `css/components/button.css` (1×)
     - `css/components/spinner.css` (2×)
-    - `css/tokens/generated/component.css` (4×)
-  - Tokens que referenciam: `component.checkbox.target.height.sm`, `component.radio.target.height.sm`, `component.toggle.target.height.sm`, `component.toggle.track.height.lg`
+    - `css/tokens/generated/component.css` (7×)
+  - Tokens que referenciam: `component.button.root.height.sm`, `component.checkbox.target.height.sm`, `component.input.root.height.sm`, `component.radio.target.height.sm`, `component.select.root.height.sm`, `component.toggle.target.height.sm`, `component.toggle.track.height.lg`
 
 ### `semantic.size.md`
 
@@ -5454,12 +5474,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/avatar.css` (2×)
-    - `css/components/button.css` (2×)
-    - `css/components/input.css` (1×)
-    - `css/components/select.css` (1×)
+    - `css/components/button.css` (1×)
     - `css/components/skeleton.css` (2×)
-    - `css/tokens/generated/component.css` (3×)
-  - Tokens que referenciam: `component.checkbox.target.height.md`, `component.radio.target.height.md`, `component.toggle.target.height.md`
+    - `css/tokens/generated/component.css` (6×)
+  - Tokens que referenciam: `component.button.root.height.md`, `component.checkbox.target.height.md`, `component.input.root.height.md`, `component.radio.target.height.md`, `component.select.root.height.md`, `component.toggle.target.height.md`
 
 ### `semantic.size.xs`
 
@@ -6284,6 +6302,45 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/tooltip.css` (1×)
 
+### `component.button.root.height.lg`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.2xl`
+- **Sentido**: Altura do root do Button por size.
+- **Escopo**: height, min-height
+- **Contexto**: Component token do contrato anatomico Button. Binda o root das variants no Figma e substitui consumo direto de semantic.size.* no CSS.
+- **Decisão**: Alias 1:1 para semantic.size.lg/xl/2xl porque Button usa 32/40/48 como altura visual e area interativa; fica em Component para documentar o contrato publico da anatomia.
+- **Usos**:
+  - CSS:
+    - `css/components/button.css` (1×)
+
+### `component.button.root.height.md`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.xl`
+- **Sentido**: Altura do root do Button por size.
+- **Escopo**: height, min-height
+- **Contexto**: Component token do contrato anatomico Button. Binda o root das variants no Figma e substitui consumo direto de semantic.size.* no CSS.
+- **Decisão**: Alias 1:1 para semantic.size.lg/xl/2xl porque Button usa 32/40/48 como altura visual e area interativa; fica em Component para documentar o contrato publico da anatomia.
+- **Usos**:
+  - CSS:
+    - `css/components/button.css` (1×)
+
+### `component.button.root.height.sm`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.lg`
+- **Sentido**: Altura do root do Button por size.
+- **Escopo**: height, min-height
+- **Contexto**: Component token do contrato anatomico Button. Binda o root das variants no Figma e substitui consumo direto de semantic.size.* no CSS.
+- **Decisão**: Alias 1:1 para semantic.size.lg/xl/2xl porque Button usa 32/40/48 como altura visual e area interativa; fica em Component para documentar o contrato publico da anatomia.
+- **Usos**:
+  - CSS:
+    - `css/components/button.css` (1×)
+
 ### `component.checkbox.box.size.lg`
 
 - **Camada**: component
@@ -6362,6 +6419,45 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/checkbox.css` (1×)
 
+### `component.input.root.height.lg`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.2xl`
+- **Sentido**: Altura do root visual do Input Text por size.
+- **Escopo**: height, min-height
+- **Contexto**: Component token do contrato anatomico Input Text. Binda o subnode visual do campo no Figma e substitui consumo direto de semantic.size.* no CSS.
+- **Decisão**: Alias 1:1 para semantic.size.lg/xl/2xl porque Input usa 32/40/48 como altura visual e area interativa; fica em Component para documentar o contrato publico da anatomia.
+- **Usos**:
+  - CSS:
+    - `css/components/input.css` (1×)
+
+### `component.input.root.height.md`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.xl`
+- **Sentido**: Altura do root visual do Input Text por size.
+- **Escopo**: height, min-height
+- **Contexto**: Component token do contrato anatomico Input Text. Binda o subnode visual do campo no Figma e substitui consumo direto de semantic.size.* no CSS.
+- **Decisão**: Alias 1:1 para semantic.size.lg/xl/2xl porque Input usa 32/40/48 como altura visual e area interativa; fica em Component para documentar o contrato publico da anatomia.
+- **Usos**:
+  - CSS:
+    - `css/components/input.css` (1×)
+
+### `component.input.root.height.sm`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.lg`
+- **Sentido**: Altura do root visual do Input Text por size.
+- **Escopo**: height, min-height
+- **Contexto**: Component token do contrato anatomico Input Text. Binda o subnode visual do campo no Figma e substitui consumo direto de semantic.size.* no CSS.
+- **Decisão**: Alias 1:1 para semantic.size.lg/xl/2xl porque Input usa 32/40/48 como altura visual e area interativa; fica em Component para documentar o contrato publico da anatomia.
+- **Usos**:
+  - CSS:
+    - `css/components/input.css` (1×)
+
 ### `component.radio.control.size.lg`
 
 - **Camada**: component
@@ -6439,6 +6535,45 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/radio.css` (1×)
+
+### `component.select.root.height.lg`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.2xl`
+- **Sentido**: Altura do root visual do Select por size.
+- **Escopo**: height, min-height
+- **Contexto**: Component token do contrato anatomico Select. Binda o subnode visual do campo no Figma e substitui consumo direto de semantic.size.* no CSS.
+- **Decisão**: Alias 1:1 para semantic.size.lg/xl/2xl porque Select usa 32/40/48 como altura visual e area interativa; fica em Component para documentar o contrato publico da anatomia.
+- **Usos**:
+  - CSS:
+    - `css/components/select.css` (1×)
+
+### `component.select.root.height.md`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.xl`
+- **Sentido**: Altura do root visual do Select por size.
+- **Escopo**: height, min-height
+- **Contexto**: Component token do contrato anatomico Select. Binda o subnode visual do campo no Figma e substitui consumo direto de semantic.size.* no CSS.
+- **Decisão**: Alias 1:1 para semantic.size.lg/xl/2xl porque Select usa 32/40/48 como altura visual e area interativa; fica em Component para documentar o contrato publico da anatomia.
+- **Usos**:
+  - CSS:
+    - `css/components/select.css` (1×)
+
+### `component.select.root.height.sm`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.lg`
+- **Sentido**: Altura do root visual do Select por size.
+- **Escopo**: height, min-height
+- **Contexto**: Component token do contrato anatomico Select. Binda o subnode visual do campo no Figma e substitui consumo direto de semantic.size.* no CSS.
+- **Decisão**: Alias 1:1 para semantic.size.lg/xl/2xl porque Select usa 32/40/48 como altura visual e area interativa; fica em Component para documentar o contrato publico da anatomia.
+- **Usos**:
+  - CSS:
+    - `css/components/select.css` (1×)
 
 ### `component.toggle.target.height.lg`
 

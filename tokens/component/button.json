@@ -1,0 +1,25 @@
+{
+  "component": {
+    "button": {
+      "root": {
+        "height": {
+          "sm": {
+            "$type": "dimension",
+            "$value": "{semantic.size.lg}",
+            "$description": "Altura do root Button sm."
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "{semantic.size.xl}",
+            "$description": "Altura do root Button md."
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{semantic.size.2xl}",
+            "$description": "Altura do root Button lg."
+          }
+        }
+      }
+    }
+  }
+}

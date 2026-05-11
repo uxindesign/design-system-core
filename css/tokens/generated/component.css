@@ -6,18 +6,27 @@
   --ds-toggle-track-width-sm: var(--ds-dimension-28); /** Largura especifica da track Toggle sm. Component-specific; nao ha Semantic reutilizavel. */
   --ds-toggle-track-width-md: var(--ds-dimension-44); /** Largura especifica da track Toggle md. Component-specific; nao ha Semantic reutilizavel. */
   --ds-toggle-track-width-lg: var(--ds-dimension-56); /** Largura especifica da track Toggle lg. Component-specific; nao ha Semantic reutilizavel. */
+  --ds-button-root-height-sm: var(--ds-size-lg); /** Altura do root Button sm. */
+  --ds-button-root-height-md: var(--ds-size-xl); /** Altura do root Button md. */
+  --ds-button-root-height-lg: var(--ds-size-2xl); /** Altura do root Button lg. */
   --ds-checkbox-target-height-sm: var(--ds-size-lg); /** Altura minima da area interativa Checkbox sm. */
   --ds-checkbox-target-height-md: var(--ds-size-xl); /** Altura minima da area interativa Checkbox md. */
   --ds-checkbox-target-height-lg: var(--ds-size-2xl); /** Altura minima da area interativa Checkbox lg. */
   --ds-checkbox-box-size-sm: var(--ds-size-xs); /** Tamanho visual da box Checkbox sm. */
   --ds-checkbox-box-size-md: var(--ds-size-sm); /** Tamanho visual da box Checkbox md. */
   --ds-checkbox-box-size-lg: var(--ds-size-md); /** Tamanho visual da box Checkbox lg. */
+  --ds-input-root-height-sm: var(--ds-size-lg); /** Altura do root visual Input Text sm. */
+  --ds-input-root-height-md: var(--ds-size-xl); /** Altura do root visual Input Text md. */
+  --ds-input-root-height-lg: var(--ds-size-2xl); /** Altura do root visual Input Text lg. */
   --ds-radio-target-height-sm: var(--ds-size-lg); /** Altura minima da area interativa Radio sm. */
   --ds-radio-target-height-md: var(--ds-size-xl); /** Altura minima da area interativa Radio md. */
   --ds-radio-target-height-lg: var(--ds-size-2xl); /** Altura minima da area interativa Radio lg. */
   --ds-radio-control-size-sm: var(--ds-size-xs); /** Tamanho visual do control Radio sm. */
   --ds-radio-control-size-md: var(--ds-size-sm); /** Tamanho visual do control Radio md. */
   --ds-radio-control-size-lg: var(--ds-size-md); /** Tamanho visual do control Radio lg. */
+  --ds-select-root-height-sm: var(--ds-size-lg); /** Altura do root visual Select sm. */
+  --ds-select-root-height-md: var(--ds-size-xl); /** Altura do root visual Select md. */
+  --ds-select-root-height-lg: var(--ds-size-2xl); /** Altura do root visual Select lg. */
   --ds-toggle-target-height-sm: var(--ds-size-lg); /** Altura minima da area interativa Toggle sm. */
   --ds-toggle-target-height-md: var(--ds-size-xl); /** Altura minima da area interativa Toggle md. */
   --ds-toggle-target-height-lg: var(--ds-size-2xl); /** Altura minima da area interativa Toggle lg. */

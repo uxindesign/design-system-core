@@ -1,0 +1,25 @@
+{
+  "component": {
+    "select": {
+      "root": {
+        "height": {
+          "sm": {
+            "$type": "dimension",
+            "$value": "{semantic.size.lg}",
+            "$description": "Altura do root visual Select sm."
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "{semantic.size.xl}",
+            "$description": "Altura do root visual Select md."
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{semantic.size.2xl}",
+            "$description": "Altura do root visual Select lg."
+          }
+        }
+      }
+    }
+  }
+}

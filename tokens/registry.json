@@ -9104,14 +9104,6 @@
           },
           {
             "file": "css/components/button.css",
-            "count": 2
-          },
-          {
-            "file": "css/components/input.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/select.css",
             "count": 1
           },
           {
@@ -9120,12 +9112,15 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 4
+            "count": 7
           }
         ],
         "tokens": [
+          "component.button.root.height.sm",
           "component.checkbox.target.height.sm",
+          "component.input.root.height.sm",
           "component.radio.target.height.sm",
+          "component.select.root.height.sm",
           "component.toggle.target.height.sm",
           "component.toggle.track.height.lg"
         ],
@@ -9151,14 +9146,6 @@
           },
           {
             "file": "css/components/button.css",
-            "count": 2
-          },
-          {
-            "file": "css/components/input.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/select.css",
             "count": 1
           },
           {
@@ -9167,12 +9154,15 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 3
+            "count": 6
           }
         ],
         "tokens": [
+          "component.button.root.height.md",
           "component.checkbox.target.height.md",
+          "component.input.root.height.md",
           "component.radio.target.height.md",
+          "component.select.root.height.md",
           "component.toggle.target.height.md"
         ],
         "figma": []
@@ -9193,24 +9183,19 @@
         "css": [
           {
             "file": "css/components/button.css",
-            "count": 3
-          },
-          {
-            "file": "css/components/input.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/select.css",
-            "count": 1
+            "count": 2
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 3
+            "count": 6
           }
         ],
         "tokens": [
+          "component.button.root.height.lg",
           "component.checkbox.target.height.lg",
+          "component.input.root.height.lg",
           "component.radio.target.height.lg",
+          "component.select.root.height.lg",
           "component.toggle.target.height.lg"
         ],
         "figma": []
@@ -10764,6 +10749,204 @@
         "css": [
           {
             "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.height.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.lg",
+      "sentido": "Altura do root do Button por size.",
+      "escopo": [
+        "height",
+        "min-height"
+      ],
+      "contexto": "Component token do contrato anatomico Button. Binda o root das variants no Figma e substitui consumo direto de semantic.size.* no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.lg/xl/2xl porque Button usa 32/40/48 como altura visual e area interativa; fica em Component para documentar o contrato publico da anatomia.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/button.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.height.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.xl",
+      "sentido": "Altura do root do Button por size.",
+      "escopo": [
+        "height",
+        "min-height"
+      ],
+      "contexto": "Component token do contrato anatomico Button. Binda o root das variants no Figma e substitui consumo direto de semantic.size.* no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.lg/xl/2xl porque Button usa 32/40/48 como altura visual e area interativa; fica em Component para documentar o contrato publico da anatomia.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/button.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.root.height.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.2xl",
+      "sentido": "Altura do root do Button por size.",
+      "escopo": [
+        "height",
+        "min-height"
+      ],
+      "contexto": "Component token do contrato anatomico Button. Binda o root das variants no Figma e substitui consumo direto de semantic.size.* no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.lg/xl/2xl porque Button usa 32/40/48 como altura visual e area interativa; fica em Component para documentar o contrato publico da anatomia.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/button.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.input.root.height.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.lg",
+      "sentido": "Altura do root visual do Input Text por size.",
+      "escopo": [
+        "height",
+        "min-height"
+      ],
+      "contexto": "Component token do contrato anatomico Input Text. Binda o subnode visual do campo no Figma e substitui consumo direto de semantic.size.* no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.lg/xl/2xl porque Input usa 32/40/48 como altura visual e area interativa; fica em Component para documentar o contrato publico da anatomia.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.input.root.height.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.xl",
+      "sentido": "Altura do root visual do Input Text por size.",
+      "escopo": [
+        "height",
+        "min-height"
+      ],
+      "contexto": "Component token do contrato anatomico Input Text. Binda o subnode visual do campo no Figma e substitui consumo direto de semantic.size.* no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.lg/xl/2xl porque Input usa 32/40/48 como altura visual e area interativa; fica em Component para documentar o contrato publico da anatomia.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.input.root.height.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.2xl",
+      "sentido": "Altura do root visual do Input Text por size.",
+      "escopo": [
+        "height",
+        "min-height"
+      ],
+      "contexto": "Component token do contrato anatomico Input Text. Binda o subnode visual do campo no Figma e substitui consumo direto de semantic.size.* no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.lg/xl/2xl porque Input usa 32/40/48 como altura visual e area interativa; fica em Component para documentar o contrato publico da anatomia.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.root.height.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.lg",
+      "sentido": "Altura do root visual do Select por size.",
+      "escopo": [
+        "height",
+        "min-height"
+      ],
+      "contexto": "Component token do contrato anatomico Select. Binda o subnode visual do campo no Figma e substitui consumo direto de semantic.size.* no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.lg/xl/2xl porque Select usa 32/40/48 como altura visual e area interativa; fica em Component para documentar o contrato publico da anatomia.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.root.height.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.xl",
+      "sentido": "Altura do root visual do Select por size.",
+      "escopo": [
+        "height",
+        "min-height"
+      ],
+      "contexto": "Component token do contrato anatomico Select. Binda o subnode visual do campo no Figma e substitui consumo direto de semantic.size.* no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.lg/xl/2xl porque Select usa 32/40/48 como altura visual e area interativa; fica em Component para documentar o contrato publico da anatomia.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.root.height.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.2xl",
+      "sentido": "Altura do root visual do Select por size.",
+      "escopo": [
+        "height",
+        "min-height"
+      ],
+      "contexto": "Component token do contrato anatomico Select. Binda o subnode visual do campo no Figma e substitui consumo direto de semantic.size.* no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.lg/xl/2xl porque Select usa 32/40/48 como altura visual e area interativa; fica em Component para documentar o contrato publico da anatomia.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
             "count": 1
           }
         ],

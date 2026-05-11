@@ -24,7 +24,7 @@
   user-select: none;
 
   /* Default size: md (40px) */
-  height: var(--ds-size-xl);
+  height: var(--ds-button-root-height-md);
   padding: var(--ds-space-control-padding-10) var(--ds-space-lg);
   font-size: var(--ds-body-font-size-sm);
   min-width: var(--ds-size-2xl);
@@ -54,7 +54,7 @@
    Sizes
    --------------------------------------------------------- */
 .ds-btn--sm {
-  height: var(--ds-size-lg);
+  height: var(--ds-button-root-height-sm);
   padding: var(--ds-space-sm) var(--ds-space-md);
   font-size: var(--ds-body-font-size-sm);
   line-height: var(--ds-body-line-height-2xs);
@@ -69,7 +69,7 @@
 }
 
 .ds-btn--lg {
-  height: var(--ds-size-2xl);
+  height: var(--ds-button-root-height-lg);
   padding: var(--ds-space-md) var(--ds-space-xl);
   font-size: var(--ds-body-font-size-md);
   line-height: var(--ds-body-line-height-md);
