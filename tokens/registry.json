@@ -4304,10 +4304,6 @@
             "count": 4
           },
           {
-            "file": "css/components/form-field.css",
-            "count": 1
-          },
-          {
             "file": "css/components/input.css",
             "count": 1
           },
@@ -4334,9 +4330,15 @@
           {
             "file": "css/components/toggle.css",
             "count": 3
+          },
+          {
+            "file": "css/tokens/generated/component.css",
+            "count": 1
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "component.form-field.label.color.default"
+        ],
         "figma": []
       }
     },
@@ -4378,10 +4380,6 @@
             "count": 2
           },
           {
-            "file": "css/components/form-field.css",
-            "count": 1
-          },
-          {
             "file": "css/components/modal.css",
             "count": 1
           },
@@ -4400,9 +4398,15 @@
           {
             "file": "css/components/toggle.css",
             "count": 2
+          },
+          {
+            "file": "css/tokens/generated/component.css",
+            "count": 1
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "component.form-field.helper.color.default"
+        ],
         "figma": []
       }
     },
@@ -5049,6 +5053,7 @@
           "component.alert.description.font-weight.default",
           "component.breadcrumb.separator.font-weight.default",
           "component.card.body.font-weight.default",
+          "component.form-field.helper.font-weight.default",
           "component.modal.body.font-weight.default",
           "component.tooltip.label.font-weight.default"
         ],
@@ -5110,6 +5115,9 @@
           "component.badge.label.font-weight.default",
           "component.breadcrumb.label.font-weight.default",
           "component.card.subtitle.font-weight.default",
+          "component.form-field.label.font-weight.default",
+          "component.form-field.required.font-weight.default",
+          "component.form-field.error.font-weight.default",
           "component.tabs.label.font-weight.default"
         ],
         "figma": []
@@ -5169,7 +5177,9 @@
         "css": [],
         "tokens": [
           "component.badge.label.font-size.default",
-          "component.breadcrumb.separator.font-size.default"
+          "component.breadcrumb.separator.font-size.default",
+          "component.form-field.helper.font-size.default",
+          "component.form-field.error.font-size.default"
         ],
         "figma": []
       }
@@ -5194,6 +5204,8 @@
           "component.breadcrumb.label.font-size.default",
           "component.card.body.font-size.default",
           "component.card.subtitle.font-size.default",
+          "component.form-field.label.font-size.default",
+          "component.form-field.required.font-size.default",
           "component.modal.body.font-size.sm",
           "component.tabs.label.font-size.default",
           "component.tooltip.label.font-size.default"
@@ -5309,7 +5321,9 @@
         "css": [],
         "tokens": [
           "component.badge.label.line-height.default",
-          "component.breadcrumb.separator.line-height.default"
+          "component.breadcrumb.separator.line-height.default",
+          "component.form-field.helper.line-height.default",
+          "component.form-field.error.line-height.default"
         ],
         "figma": []
       }
@@ -5334,6 +5348,8 @@
           "component.breadcrumb.label.line-height.default",
           "component.card.body.line-height.default",
           "component.card.subtitle.line-height.default",
+          "component.form-field.label.line-height.default",
+          "component.form-field.required.line-height.default",
           "component.modal.body.line-height.sm",
           "component.tabs.label.line-height.default",
           "component.tooltip.label.line-height.default"
@@ -6382,19 +6398,23 @@
             "count": 1
           },
           {
-            "file": "css/components/form-field.css",
-            "count": 3
-          },
-          {
             "file": "css/components/radio.css",
             "count": 2
           },
           {
             "file": "css/components/textarea.css",
             "count": 1
+          },
+          {
+            "file": "css/tokens/generated/component.css",
+            "count": 3
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "component.form-field.label.color.error",
+          "component.form-field.required.color.default",
+          "component.form-field.error.color.default"
+        ],
         "figma": []
       }
     },
@@ -6675,20 +6695,17 @@
             "count": 1
           },
           {
-            "file": "css/components/form-field.css",
-            "count": 1
-          },
-          {
             "file": "css/components/radio.css",
             "count": 1
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 2
+            "count": 3
           }
         ],
         "tokens": [
           "component.badge.root.padding-y.default",
+          "component.form-field.label-row.gap.default",
           "component.toggle.thumb.inset.default"
         ],
         "figma": []
@@ -6717,10 +6734,6 @@
             "count": 6
           },
           {
-            "file": "css/components/form-field.css",
-            "count": 1
-          },
-          {
             "file": "css/components/input.css",
             "count": 2
           },
@@ -6738,7 +6751,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 7
+            "count": 8
           },
           {
             "file": "css/utilities/layout.css",
@@ -6750,6 +6763,7 @@
           "component.badge.root.gap.default",
           "component.breadcrumb.root.gap.default",
           "component.breadcrumb.item.gap.default",
+          "component.form-field.root.gap.default",
           "component.modal.close.padding.default",
           "component.tooltip.content.padding-y.default",
           "component.tooltip.arrow.depth.default"
@@ -14350,6 +14364,443 @@
         "css": [
           {
             "file": "css/components/divider.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.form-field.root.gap.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xs",
+      "sentido": "Espacamento vertical interno do wrapper Form Field.",
+      "escopo": [
+        "Form Field",
+        "CSS-only",
+        "ADR-017"
+      ],
+      "contexto": "Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.",
+      "decisao": "Alias 1:1 para semantic.space.xs porque o gap e decisao reutilizavel, mas o contrato publico pertence ao Form Field.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/form-field.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.form-field.label-row.gap.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.2xs",
+      "sentido": "Espacamento horizontal entre label e indicador required.",
+      "escopo": [
+        "Form Field",
+        "CSS-only",
+        "ADR-017"
+      ],
+      "contexto": "Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.",
+      "decisao": "Alias 1:1 para semantic.space.2xs porque o gap compacto e reutilizavel, mas a anatomia label-row pertence ao Form Field.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/form-field.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.form-field.label.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.strong",
+      "sentido": "Cor default do label do Form Field.",
+      "escopo": [
+        "Form Field",
+        "CSS-only",
+        "ADR-017"
+      ],
+      "contexto": "Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.",
+      "decisao": "Alias 1:1 para semantic.content.strong, preservando o papel semantico de enfase e expondo o contrato de label do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/form-field.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.form-field.label.color.error": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.feedback.error.content-default",
+      "sentido": "Cor do label do Form Field em estado de erro.",
+      "escopo": [
+        "Form Field",
+        "CSS-only",
+        "ADR-017"
+      ],
+      "contexto": "Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.",
+      "decisao": "Alias 1:1 para semantic.feedback.error.content-default para alinhar label em erro aos controles Figma vivos.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/form-field.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.form-field.label.font-size.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.sm",
+      "sentido": "Tamanho tipografico de label no Form Field.",
+      "escopo": [
+        "Form Field",
+        "CSS-only",
+        "ADR-017"
+      ],
+      "contexto": "Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-size.sm, alinhado ao default medio dos controles de formulario.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/form-field.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.form-field.label.line-height.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.sm",
+      "sentido": "Altura de linha de label no Form Field.",
+      "escopo": [
+        "Form Field",
+        "CSS-only",
+        "ADR-017"
+      ],
+      "contexto": "Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.line-height.sm, mantendo a metrica vertical de 20px do label/required.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/form-field.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.form-field.label.font-weight.default": {
+      "layer": "component",
+      "type": "string",
+      "references": "semantic.typography.body.font-weight.bold",
+      "sentido": "Peso tipografico de label no Form Field.",
+      "escopo": [
+        "Form Field",
+        "CSS-only",
+        "ADR-017"
+      ],
+      "contexto": "Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-weight.bold, alinhado ao Figma vivo dos labels de controle.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/form-field.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.form-field.required.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.feedback.error.content-default",
+      "sentido": "Cor do indicador required do Form Field.",
+      "escopo": [
+        "Form Field",
+        "CSS-only",
+        "ADR-017"
+      ],
+      "contexto": "Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.",
+      "decisao": "Alias 1:1 para semantic.feedback.error.content-default, mantendo o asterisco como conteudo de erro e nao background.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/form-field.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.form-field.required.font-size.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.sm",
+      "sentido": "Tamanho tipografico de required no Form Field.",
+      "escopo": [
+        "Form Field",
+        "CSS-only",
+        "ADR-017"
+      ],
+      "contexto": "Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-size.sm, alinhado ao default medio dos controles de formulario.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/form-field.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.form-field.required.line-height.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.sm",
+      "sentido": "Altura de linha de required no Form Field.",
+      "escopo": [
+        "Form Field",
+        "CSS-only",
+        "ADR-017"
+      ],
+      "contexto": "Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.line-height.sm, mantendo a metrica vertical de 20px do label/required.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/form-field.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.form-field.required.font-weight.default": {
+      "layer": "component",
+      "type": "string",
+      "references": "semantic.typography.body.font-weight.bold",
+      "sentido": "Peso tipografico de required no Form Field.",
+      "escopo": [
+        "Form Field",
+        "CSS-only",
+        "ADR-017"
+      ],
+      "contexto": "Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-weight.bold, alinhado ao Figma vivo dos labels de controle.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/form-field.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.form-field.helper.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.default",
+      "sentido": "Cor default do helper text do Form Field.",
+      "escopo": [
+        "Form Field",
+        "CSS-only",
+        "ADR-017"
+      ],
+      "contexto": "Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.",
+      "decisao": "Alias 1:1 para semantic.content.default, preservando o papel de texto auxiliar padrao.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/form-field.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.form-field.helper.font-size.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.xs",
+      "sentido": "Tamanho tipografico do helper text do Form Field.",
+      "escopo": [
+        "Form Field",
+        "CSS-only",
+        "ADR-017"
+      ],
+      "contexto": "Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-size.xs, alinhado ao helper text vivo no Figma.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/form-field.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.form-field.helper.line-height.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.xs",
+      "sentido": "Altura de linha do helper text do Form Field.",
+      "escopo": [
+        "Form Field",
+        "CSS-only",
+        "ADR-017"
+      ],
+      "contexto": "Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.line-height.xs, corrigindo o CSS para 18px como no Figma vivo.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/form-field.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.form-field.helper.font-weight.default": {
+      "layer": "component",
+      "type": "string",
+      "references": "semantic.typography.body.font-weight.regular",
+      "sentido": "Peso tipografico do helper text do Form Field.",
+      "escopo": [
+        "Form Field",
+        "CSS-only",
+        "ADR-017"
+      ],
+      "contexto": "Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-weight.regular, alinhado ao helper text vivo no Figma.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/form-field.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.form-field.error.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.feedback.error.content-default",
+      "sentido": "Cor da mensagem de erro do Form Field.",
+      "escopo": [
+        "Form Field",
+        "CSS-only",
+        "ADR-017"
+      ],
+      "contexto": "Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.",
+      "decisao": "Alias 1:1 para semantic.feedback.error.content-default, mantendo error como cor de conteudo.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/form-field.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.form-field.error.font-size.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.xs",
+      "sentido": "Tamanho tipografico da mensagem de erro do Form Field.",
+      "escopo": [
+        "Form Field",
+        "CSS-only",
+        "ADR-017"
+      ],
+      "contexto": "Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-size.xs, alinhado ao error text vivo no Figma.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/form-field.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.form-field.error.line-height.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.xs",
+      "sentido": "Altura de linha da mensagem de erro do Form Field.",
+      "escopo": [
+        "Form Field",
+        "CSS-only",
+        "ADR-017"
+      ],
+      "contexto": "Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.line-height.xs, corrigindo o CSS para 18px como no Figma vivo.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/form-field.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.form-field.error.font-weight.default": {
+      "layer": "component",
+      "type": "string",
+      "references": "semantic.typography.body.font-weight.bold",
+      "sentido": "Peso tipografico da mensagem de erro do Form Field.",
+      "escopo": [
+        "Form Field",
+        "CSS-only",
+        "ADR-017"
+      ],
+      "contexto": "Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-weight.bold, alinhado ao error text vivo no Figma.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/form-field.css",
             "count": 1
           }
         ],

@@ -72,6 +72,8 @@
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
 <h3>Corrigido</h3>
 <ul>
+<li><p><strong>Form Field aplicado aos Component tokens CSS-only.</strong> Criado <code>component.form-field</code> para gaps, cores e tipografia de label, required, helper e error; o CSS passa a consumir <code>--ds-form-field-*</code> sem criar componente visual no Figma, respeitando ADR-017. Helper e error também foram alinhados ao Figma vivo para <code>body/xs</code> com <code>line-height/xs</code>.</p>
+</li>
 <li><p><strong>Divider Figma/CSS aplicado aos tokens Component anatômicos.</strong> Criado <code>component.divider.line</code> para cor, espessura e raio da linha; os variants <code>Orientation=Horizontal</code> e <code>Orientation=Vertical</code> vivos do Figma agora usam tokens Component nesses contratos. CSS passa a consumir <code>--ds-divider-*</code>; comprimento segue contextual (<code>100%</code>/container) e não vira token.</p>
 </li>
 <li><p><strong>Breadcrumb Figma/CSS aplicado aos tokens Component anatômicos.</strong> Criado <code>component.breadcrumb</code> para gap da lista, gap/raio do item, tipografia do rótulo e tipografia do separador; <code>Breadcrumb</code> e <code>Breadcrumb Item</code> vivos do Figma agora usam tokens Component nesses contratos. CSS passa a consumir <code>--ds-breadcrumb-*</code>; separador é alinhado ao Figma com <code>content.subtle</code> e tipografia <code>body/xs regular</code>.</p>

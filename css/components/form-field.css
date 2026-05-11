@@ -45,7 +45,7 @@
 .ds-field {
   display: flex;
   flex-direction: column;
-  gap: var(--ds-space-xs);
+  gap: var(--ds-form-field-root-gap-default);
   width: 100%;
 }
 
@@ -53,39 +53,41 @@
 .ds-field__label-row {
   display: flex;
   align-items: center;
-  gap: var(--ds-space-2xs);
+  gap: var(--ds-form-field-label-row-gap-default);
 }
 
-/* Label text (label/md: 14px medium / 20px) */
+/* Label text (body/sm: 14px bold / 20px) */
 .ds-field__label {
-  font-size: var(--ds-body-font-size-sm);
-  font-weight: var(--ds-body-font-weight-medium);
-  line-height: var(--ds-body-line-height-sm);
-  color: var(--ds-content-strong);
+  font-size: var(--ds-form-field-label-font-size-default);
+  font-weight: var(--ds-form-field-label-font-weight-default);
+  line-height: var(--ds-form-field-label-line-height-default);
+  color: var(--ds-form-field-label-color-default);
 }
 
 /* Required asterisk — error text color, decorative (aria-hidden no markup) */
 .ds-field__required {
-  font-size: var(--ds-body-font-size-sm);
-  font-weight: var(--ds-body-font-weight-medium);
-  line-height: var(--ds-body-line-height-sm);
-  color: var(--ds-feedback-error-content-default);
+  font-size: var(--ds-form-field-required-font-size-default);
+  font-weight: var(--ds-form-field-required-font-weight-default);
+  line-height: var(--ds-form-field-required-line-height-default);
+  color: var(--ds-form-field-required-color-default);
   user-select: none;
 }
 
 /* Helper text (12px regular / 18px) */
 .ds-field__helper {
-  font-size: var(--ds-body-font-size-xs);
-  line-height: var(--ds-body-line-height-md);
-  color: var(--ds-content-default);
+  font-size: var(--ds-form-field-helper-font-size-default);
+  font-weight: var(--ds-form-field-helper-font-weight-default);
+  line-height: var(--ds-form-field-helper-line-height-default);
+  color: var(--ds-form-field-helper-color-default);
 }
 
 /* Error message (default hidden; mostrado em .ds-field--error) */
 .ds-field__error {
   display: none;
-  font-size: var(--ds-body-font-size-xs);
-  line-height: var(--ds-body-line-height-md);
-  color: var(--ds-feedback-error-content-default);
+  font-size: var(--ds-form-field-error-font-size-default);
+  font-weight: var(--ds-form-field-error-font-weight-default);
+  line-height: var(--ds-form-field-error-line-height-default);
+  color: var(--ds-form-field-error-color-default);
 }
 
 /* ---------------------------------------------------------
@@ -108,5 +110,5 @@
 }
 
 .ds-field--error .ds-field__label {
-  color: var(--ds-feedback-error-content-default);
+  color: var(--ds-form-field-label-color-error);
 }

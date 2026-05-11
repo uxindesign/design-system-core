@@ -6,8 +6,8 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Status
 
-- Total de tokens: **628**
-- Com metadados completos: **628**
+- Total de tokens: **647**
+- Com metadados completos: **647**
 - Pendentes (`TODO` em algum campo obrigatório): **0**
 - Completude: **100%**
 
@@ -368,10 +368,10 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `semantic.content.default` | color | → `foundation.color.neutral.600` | Texto secundário — descrições, helper text, meta-info. | 12 |
+| `semantic.content.default` | color | → `foundation.color.neutral.600` | Texto secundário — descrições, helper text, meta-info. | 13 |
 | `semantic.content.disabled` | color | → `foundation.color.neutral.400` | Texto disabled — controles e items inativos. | 5 |
 | `semantic.content.inverse` | color | → `foundation.color.neutral.50` | Texto invertido — sobre background.inverse (tooltips, badges escuros em light). | 1 |
-| `semantic.content.strong` | color | → `foundation.color.neutral.900` | Texto primário — body, headings, labels principais. | 13 |
+| `semantic.content.strong` | color | → `foundation.color.neutral.900` | Texto primário — body, headings, labels principais. | 14 |
 | `semantic.content.subtle` | color | → `foundation.color.neutral.500` | Texto terciário — caption, footnote, timestamps. | 4 |
 
 ### semantic.feedback
@@ -385,7 +385,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.feedback.error.background.subtle` | color | → `foundation.color.red.100` | Fill de feedback erro (vermelho) em estado subtle. | 2 |
 | `semantic.feedback.error.border-default` | color | → `foundation.color.red.500` | Borda de feedback erro (vermelho) em estado default. | 2 |
 | `semantic.feedback.error.content-contrast` | color | → `foundation.color.neutral.50` | Cor de feedback erro (vermelho) em estado contrast. | 3 |
-| `semantic.feedback.error.content-default` | color | → `foundation.color.red.700` | Cor de feedback erro (vermelho) em estado default. | 6 |
+| `semantic.feedback.error.content-default` | color | → `foundation.color.red.700` | Cor de feedback erro (vermelho) em estado default. | 9 |
 | `semantic.feedback.error.content-disabled` | color | → `foundation.color.overlay.white.80` | Cor de feedback erro (vermelho) em estado disabled. | 0 |
 | `semantic.feedback.info.background.default` | color | → `foundation.color.sky.500` | Fill de feedback informação (azul) em estado default. | 2 |
 | `semantic.feedback.info.background.hover` | color | → `foundation.color.sky.600` | Fill de feedback informação (azul) em estado hover. | 0 |
@@ -572,12 +572,12 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.typography.body.font-size.9xl` | dimension | → `foundation.typography.font.size.72` | font-size 9xl pra texto UI geral. | 0 |
 | `semantic.typography.body.font-size.lg` | dimension | → `foundation.typography.font.size.18` | font-size lg pra texto UI geral. | 1 |
 | `semantic.typography.body.font-size.md` | dimension | → `foundation.typography.font.size.16` | font-size md pra texto UI geral. | 1 |
-| `semantic.typography.body.font-size.sm` | dimension | → `foundation.typography.font.size.14` | font-size sm pra texto UI geral. | 10 |
+| `semantic.typography.body.font-size.sm` | dimension | → `foundation.typography.font.size.14` | font-size sm pra texto UI geral. | 12 |
 | `semantic.typography.body.font-size.xl` | dimension | → `foundation.typography.font.size.20` | font-size xl pra texto UI geral. | 4 |
-| `semantic.typography.body.font-size.xs` | dimension | → `foundation.typography.font.size.12` | font-size xs pra texto UI geral. | 2 |
-| `semantic.typography.body.font-weight.bold` | number | → `foundation.typography.font.weight.bold` | font-weight bold pra texto UI geral. | 7 |
+| `semantic.typography.body.font-size.xs` | dimension | → `foundation.typography.font.size.12` | font-size xs pra texto UI geral. | 4 |
+| `semantic.typography.body.font-weight.bold` | number | → `foundation.typography.font.weight.bold` | font-weight bold pra texto UI geral. | 10 |
 | `semantic.typography.body.font-weight.medium` | number | → `foundation.typography.font.weight.medium` | font-weight medium pra texto UI geral. | 0 |
-| `semantic.typography.body.font-weight.regular` | number | → `foundation.typography.font.weight.regular` | font-weight regular pra texto UI geral. | 5 |
+| `semantic.typography.body.font-weight.regular` | number | → `foundation.typography.font.weight.regular` | font-weight regular pra texto UI geral. | 6 |
 | `semantic.typography.body.font-weight.semibold` | number | → `foundation.typography.font.weight.semibold` | font-weight semibold pra texto UI geral. | 3 |
 | `semantic.typography.body.letter-spacing.normal` | dimension | → `foundation.typography.letter.spacing.normal` | letter-spacing normal pra texto UI geral. | 5 |
 | `semantic.typography.body.letter-spacing.tight` | dimension | → `foundation.typography.letter.spacing.tight` | letter-spacing tight pra texto UI geral. | 1 |
@@ -593,9 +593,9 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.typography.body.line-height.9xl` | dimension | → `foundation.typography.line.height.90` | line-height 9xl pra texto UI geral. | 0 |
 | `semantic.typography.body.line-height.lg` | dimension | → `foundation.typography.line.height.28` | line-height lg pra texto UI geral. | 0 |
 | `semantic.typography.body.line-height.md` | dimension | → `foundation.typography.line.height.24` | line-height md pra texto UI geral. | 1 |
-| `semantic.typography.body.line-height.sm` | dimension | → `foundation.typography.line.height.20` | line-height sm pra texto UI geral. | 10 |
+| `semantic.typography.body.line-height.sm` | dimension | → `foundation.typography.line.height.20` | line-height sm pra texto UI geral. | 12 |
 | `semantic.typography.body.line-height.xl` | dimension | → `foundation.typography.line.height.32` | line-height xl pra texto UI geral. | 4 |
-| `semantic.typography.body.line-height.xs` | dimension | → `foundation.typography.line.height.18` | line-height xs pra texto UI geral. | 2 |
+| `semantic.typography.body.line-height.xs` | dimension | → `foundation.typography.line.height.18` | line-height xs pra texto UI geral. | 4 |
 
 ### semantic.z
 
@@ -606,7 +606,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Component
 
-188 tokens.
+207 tokens.
 
 ### component.alert
 
@@ -726,6 +726,30 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.divider.line.color.default` | color | → `semantic.border.subtle` | Cor da linha do Divider. | 1 |
 | `component.divider.line.radius.default` | dimension | → `semantic.radius.md` | Raio da linha do Divider. | 1 |
 | `component.divider.line.thickness.default` | dimension | → `semantic.border.width.default` | Espessura da linha do Divider. | 1 |
+
+### component.form-field
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `component.form-field.error.color.default` | color | → `semantic.feedback.error.content-default` | Cor da mensagem de erro do Form Field. | 1 |
+| `component.form-field.error.font-size.default` | dimension | → `semantic.typography.body.font-size.xs` | Tamanho tipografico da mensagem de erro do Form Field. | 1 |
+| `component.form-field.error.font-weight.default` | string | → `semantic.typography.body.font-weight.bold` | Peso tipografico da mensagem de erro do Form Field. | 1 |
+| `component.form-field.error.line-height.default` | dimension | → `semantic.typography.body.line-height.xs` | Altura de linha da mensagem de erro do Form Field. | 1 |
+| `component.form-field.helper.color.default` | color | → `semantic.content.default` | Cor default do helper text do Form Field. | 1 |
+| `component.form-field.helper.font-size.default` | dimension | → `semantic.typography.body.font-size.xs` | Tamanho tipografico do helper text do Form Field. | 1 |
+| `component.form-field.helper.font-weight.default` | string | → `semantic.typography.body.font-weight.regular` | Peso tipografico do helper text do Form Field. | 1 |
+| `component.form-field.helper.line-height.default` | dimension | → `semantic.typography.body.line-height.xs` | Altura de linha do helper text do Form Field. | 1 |
+| `component.form-field.label-row.gap.default` | dimension | → `semantic.space.2xs` | Espacamento horizontal entre label e indicador required. | 1 |
+| `component.form-field.label.color.default` | color | → `semantic.content.strong` | Cor default do label do Form Field. | 1 |
+| `component.form-field.label.color.error` | color | → `semantic.feedback.error.content-default` | Cor do label do Form Field em estado de erro. | 1 |
+| `component.form-field.label.font-size.default` | dimension | → `semantic.typography.body.font-size.sm` | Tamanho tipografico de label no Form Field. | 1 |
+| `component.form-field.label.font-weight.default` | string | → `semantic.typography.body.font-weight.bold` | Peso tipografico de label no Form Field. | 1 |
+| `component.form-field.label.line-height.default` | dimension | → `semantic.typography.body.line-height.sm` | Altura de linha de label no Form Field. | 1 |
+| `component.form-field.required.color.default` | color | → `semantic.feedback.error.content-default` | Cor do indicador required do Form Field. | 1 |
+| `component.form-field.required.font-size.default` | dimension | → `semantic.typography.body.font-size.sm` | Tamanho tipografico de required no Form Field. | 1 |
+| `component.form-field.required.font-weight.default` | string | → `semantic.typography.body.font-weight.bold` | Peso tipografico de required no Form Field. | 1 |
+| `component.form-field.required.line-height.default` | dimension | → `semantic.typography.body.line-height.sm` | Altura de linha de required no Form Field. | 1 |
+| `component.form-field.root.gap.default` | dimension | → `semantic.space.xs` | Espacamento vertical interno do wrapper Form Field. | 1 |
 
 ### component.input
 
@@ -4402,12 +4426,13 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/breadcrumb.css` (1×)
     - `css/components/card.css` (2×)
     - `css/components/checkbox.css` (2×)
-    - `css/components/form-field.css` (1×)
     - `css/components/modal.css` (1×)
     - `css/components/radio.css` (2×)
     - `css/components/tabs.css` (1×)
     - `css/components/textarea.css` (1×)
     - `css/components/toggle.css` (2×)
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.form-field.helper.color.default`
 
 ### `semantic.content.disabled`
 
@@ -4455,7 +4480,6 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/badge.css` (1×)
     - `css/components/card.css` (1×)
     - `css/components/checkbox.css` (4×)
-    - `css/components/form-field.css` (1×)
     - `css/components/input.css` (1×)
     - `css/components/modal.css` (3×)
     - `css/components/radio.css` (5×)
@@ -4463,6 +4487,8 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/tabs.css` (1×)
     - `css/components/textarea.css` (1×)
     - `css/components/toggle.css` (3×)
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.form-field.label.color.default`
 
 ### `semantic.content.subtle`
 
@@ -4595,9 +4621,10 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/alert.css` (1×)
     - `css/components/badge.css` (1×)
     - `css/components/checkbox.css` (1×)
-    - `css/components/form-field.css` (3×)
     - `css/components/radio.css` (2×)
     - `css/components/textarea.css` (1×)
+    - `css/tokens/generated/component.css` (3×)
+  - Tokens que referenciam: `component.form-field.label.color.error`, `component.form-field.required.color.default`, `component.form-field.error.color.default`
 
 ### `semantic.feedback.error.content-disabled`
 
@@ -5741,10 +5768,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/checkbox.css` (1×)
-    - `css/components/form-field.css` (1×)
     - `css/components/radio.css` (1×)
-    - `css/tokens/generated/component.css` (2×)
-  - Tokens que referenciam: `component.badge.root.padding-y.default`, `component.toggle.thumb.inset.default`
+    - `css/tokens/generated/component.css` (3×)
+  - Tokens que referenciam: `component.badge.root.padding-y.default`, `component.form-field.label-row.gap.default`, `component.toggle.thumb.inset.default`
 
 ### `semantic.space.control.padding.10`
 
@@ -5916,14 +5942,13 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/button.css` (1×)
     - `css/components/checkbox.css` (6×)
-    - `css/components/form-field.css` (1×)
     - `css/components/input.css` (2×)
     - `css/components/radio.css` (7×)
     - `css/components/select.css` (1×)
     - `css/components/toggle.css` (2×)
-    - `css/tokens/generated/component.css` (7×)
+    - `css/tokens/generated/component.css` (8×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.alert.content.gap.default`, `component.badge.root.gap.default`, `component.breadcrumb.root.gap.default`, `component.breadcrumb.item.gap.default`, `component.modal.close.padding.default`, `component.tooltip.content.padding-y.default`, `component.tooltip.arrow.depth.default`
+  - Tokens que referenciam: `component.alert.content.gap.default`, `component.badge.root.gap.default`, `component.breadcrumb.root.gap.default`, `component.breadcrumb.item.gap.default`, `component.form-field.root.gap.default`, `component.modal.close.padding.default`, `component.tooltip.content.padding-y.default`, `component.tooltip.arrow.depth.default`
 
 ### `semantic.surface.default`
 
@@ -6227,7 +6252,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-sm`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.size.14.
 - **Usos**:
-  - Tokens que referenciam: `component.alert.title.font-size.default`, `component.alert.description.font-size.default`, `component.avatar.initials.font-size.sm`, `component.avatar.initials.font-size.md`, `component.breadcrumb.label.font-size.default`, `component.card.body.font-size.default`, `component.card.subtitle.font-size.default`, `component.modal.body.font-size.sm`, `component.tabs.label.font-size.default`, `component.tooltip.label.font-size.default`
+  - Tokens que referenciam: `component.alert.title.font-size.default`, `component.alert.description.font-size.default`, `component.avatar.initials.font-size.sm`, `component.avatar.initials.font-size.md`, `component.breadcrumb.label.font-size.default`, `component.card.body.font-size.default`, `component.card.subtitle.font-size.default`, `component.form-field.label.font-size.default`, `component.form-field.required.font-size.default`, `component.modal.body.font-size.sm`, `component.tabs.label.font-size.default`, `component.tooltip.label.font-size.default`
 
 ### `semantic.typography.body.font-size.xl`
 
@@ -6251,7 +6276,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-xs`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.size.12.
 - **Usos**:
-  - Tokens que referenciam: `component.badge.label.font-size.default`, `component.breadcrumb.separator.font-size.default`
+  - Tokens que referenciam: `component.badge.label.font-size.default`, `component.breadcrumb.separator.font-size.default`, `component.form-field.helper.font-size.default`, `component.form-field.error.font-size.default`
 
 ### `semantic.typography.body.font-weight.bold`
 
@@ -6263,7 +6288,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-bold`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.weight.bold.
 - **Usos**:
-  - Tokens que referenciam: `component.alert.title.font-weight.default`, `component.avatar.initials.font-weight.sm`, `component.avatar.initials.font-weight.md`, `component.badge.label.font-weight.default`, `component.breadcrumb.label.font-weight.default`, `component.card.subtitle.font-weight.default`, `component.tabs.label.font-weight.default`
+  - Tokens que referenciam: `component.alert.title.font-weight.default`, `component.avatar.initials.font-weight.sm`, `component.avatar.initials.font-weight.md`, `component.badge.label.font-weight.default`, `component.breadcrumb.label.font-weight.default`, `component.card.subtitle.font-weight.default`, `component.form-field.label.font-weight.default`, `component.form-field.required.font-weight.default`, `component.form-field.error.font-weight.default`, `component.tabs.label.font-weight.default`
 
 ### `semantic.typography.body.font-weight.medium`
 
@@ -6287,7 +6312,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-regular`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.weight.regular.
 - **Usos**:
-  - Tokens que referenciam: `component.alert.description.font-weight.default`, `component.breadcrumb.separator.font-weight.default`, `component.card.body.font-weight.default`, `component.modal.body.font-weight.default`, `component.tooltip.label.font-weight.default`
+  - Tokens que referenciam: `component.alert.description.font-weight.default`, `component.breadcrumb.separator.font-weight.default`, `component.card.body.font-weight.default`, `component.form-field.helper.font-weight.default`, `component.modal.body.font-weight.default`, `component.tooltip.label.font-weight.default`
 
 ### `semantic.typography.body.font-weight.semibold`
 
@@ -6479,7 +6504,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-sm`.
 - **Decisão**: Aliasado a Foundation foundation.typography.line.height.20.
 - **Usos**:
-  - Tokens que referenciam: `component.alert.title.line-height.default`, `component.alert.description.line-height.default`, `component.avatar.initials.line-height.sm`, `component.avatar.initials.line-height.md`, `component.breadcrumb.label.line-height.default`, `component.card.body.line-height.default`, `component.card.subtitle.line-height.default`, `component.modal.body.line-height.sm`, `component.tabs.label.line-height.default`, `component.tooltip.label.line-height.default`
+  - Tokens que referenciam: `component.alert.title.line-height.default`, `component.alert.description.line-height.default`, `component.avatar.initials.line-height.sm`, `component.avatar.initials.line-height.md`, `component.breadcrumb.label.line-height.default`, `component.card.body.line-height.default`, `component.card.subtitle.line-height.default`, `component.form-field.label.line-height.default`, `component.form-field.required.line-height.default`, `component.modal.body.line-height.sm`, `component.tabs.label.line-height.default`, `component.tooltip.label.line-height.default`
 
 ### `semantic.typography.body.line-height.xl`
 
@@ -6503,7 +6528,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-xs`.
 - **Decisão**: Aliasado a Foundation foundation.typography.line.height.18.
 - **Usos**:
-  - Tokens que referenciam: `component.badge.label.line-height.default`, `component.breadcrumb.separator.line-height.default`
+  - Tokens que referenciam: `component.badge.label.line-height.default`, `component.breadcrumb.separator.line-height.default`, `component.form-field.helper.line-height.default`, `component.form-field.error.line-height.default`
 
 ### `semantic.z.modal`
 
@@ -7558,6 +7583,253 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/divider.css` (2×)
+
+### `component.form-field.error.color.default`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.feedback.error.content-default`
+- **Sentido**: Cor da mensagem de erro do Form Field.
+- **Escopo**: Form Field, CSS-only, ADR-017
+- **Contexto**: Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.
+- **Decisão**: Alias 1:1 para semantic.feedback.error.content-default, mantendo error como cor de conteudo.
+- **Usos**:
+  - CSS:
+    - `css/components/form-field.css` (1×)
+
+### `component.form-field.error.font-size.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.font-size.xs`
+- **Sentido**: Tamanho tipografico da mensagem de erro do Form Field.
+- **Escopo**: Form Field, CSS-only, ADR-017
+- **Contexto**: Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.
+- **Decisão**: Alias 1:1 para semantic.typography.body.font-size.xs, alinhado ao error text vivo no Figma.
+- **Usos**:
+  - CSS:
+    - `css/components/form-field.css` (1×)
+
+### `component.form-field.error.font-weight.default`
+
+- **Camada**: component
+- **Tipo**: `string`
+- **Alias**: → `semantic.typography.body.font-weight.bold`
+- **Sentido**: Peso tipografico da mensagem de erro do Form Field.
+- **Escopo**: Form Field, CSS-only, ADR-017
+- **Contexto**: Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.
+- **Decisão**: Alias 1:1 para semantic.typography.body.font-weight.bold, alinhado ao error text vivo no Figma.
+- **Usos**:
+  - CSS:
+    - `css/components/form-field.css` (1×)
+
+### `component.form-field.error.line-height.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.line-height.xs`
+- **Sentido**: Altura de linha da mensagem de erro do Form Field.
+- **Escopo**: Form Field, CSS-only, ADR-017
+- **Contexto**: Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.
+- **Decisão**: Alias 1:1 para semantic.typography.body.line-height.xs, corrigindo o CSS para 18px como no Figma vivo.
+- **Usos**:
+  - CSS:
+    - `css/components/form-field.css` (1×)
+
+### `component.form-field.helper.color.default`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.content.default`
+- **Sentido**: Cor default do helper text do Form Field.
+- **Escopo**: Form Field, CSS-only, ADR-017
+- **Contexto**: Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.
+- **Decisão**: Alias 1:1 para semantic.content.default, preservando o papel de texto auxiliar padrao.
+- **Usos**:
+  - CSS:
+    - `css/components/form-field.css` (1×)
+
+### `component.form-field.helper.font-size.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.font-size.xs`
+- **Sentido**: Tamanho tipografico do helper text do Form Field.
+- **Escopo**: Form Field, CSS-only, ADR-017
+- **Contexto**: Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.
+- **Decisão**: Alias 1:1 para semantic.typography.body.font-size.xs, alinhado ao helper text vivo no Figma.
+- **Usos**:
+  - CSS:
+    - `css/components/form-field.css` (1×)
+
+### `component.form-field.helper.font-weight.default`
+
+- **Camada**: component
+- **Tipo**: `string`
+- **Alias**: → `semantic.typography.body.font-weight.regular`
+- **Sentido**: Peso tipografico do helper text do Form Field.
+- **Escopo**: Form Field, CSS-only, ADR-017
+- **Contexto**: Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.
+- **Decisão**: Alias 1:1 para semantic.typography.body.font-weight.regular, alinhado ao helper text vivo no Figma.
+- **Usos**:
+  - CSS:
+    - `css/components/form-field.css` (1×)
+
+### `component.form-field.helper.line-height.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.line-height.xs`
+- **Sentido**: Altura de linha do helper text do Form Field.
+- **Escopo**: Form Field, CSS-only, ADR-017
+- **Contexto**: Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.
+- **Decisão**: Alias 1:1 para semantic.typography.body.line-height.xs, corrigindo o CSS para 18px como no Figma vivo.
+- **Usos**:
+  - CSS:
+    - `css/components/form-field.css` (1×)
+
+### `component.form-field.label-row.gap.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.2xs`
+- **Sentido**: Espacamento horizontal entre label e indicador required.
+- **Escopo**: Form Field, CSS-only, ADR-017
+- **Contexto**: Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.
+- **Decisão**: Alias 1:1 para semantic.space.2xs porque o gap compacto e reutilizavel, mas a anatomia label-row pertence ao Form Field.
+- **Usos**:
+  - CSS:
+    - `css/components/form-field.css` (1×)
+
+### `component.form-field.label.color.default`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.content.strong`
+- **Sentido**: Cor default do label do Form Field.
+- **Escopo**: Form Field, CSS-only, ADR-017
+- **Contexto**: Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.
+- **Decisão**: Alias 1:1 para semantic.content.strong, preservando o papel semantico de enfase e expondo o contrato de label do componente.
+- **Usos**:
+  - CSS:
+    - `css/components/form-field.css` (1×)
+
+### `component.form-field.label.color.error`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.feedback.error.content-default`
+- **Sentido**: Cor do label do Form Field em estado de erro.
+- **Escopo**: Form Field, CSS-only, ADR-017
+- **Contexto**: Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.
+- **Decisão**: Alias 1:1 para semantic.feedback.error.content-default para alinhar label em erro aos controles Figma vivos.
+- **Usos**:
+  - CSS:
+    - `css/components/form-field.css` (1×)
+
+### `component.form-field.label.font-size.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.font-size.sm`
+- **Sentido**: Tamanho tipografico de label no Form Field.
+- **Escopo**: Form Field, CSS-only, ADR-017
+- **Contexto**: Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.
+- **Decisão**: Alias 1:1 para semantic.typography.body.font-size.sm, alinhado ao default medio dos controles de formulario.
+- **Usos**:
+  - CSS:
+    - `css/components/form-field.css` (1×)
+
+### `component.form-field.label.font-weight.default`
+
+- **Camada**: component
+- **Tipo**: `string`
+- **Alias**: → `semantic.typography.body.font-weight.bold`
+- **Sentido**: Peso tipografico de label no Form Field.
+- **Escopo**: Form Field, CSS-only, ADR-017
+- **Contexto**: Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.
+- **Decisão**: Alias 1:1 para semantic.typography.body.font-weight.bold, alinhado ao Figma vivo dos labels de controle.
+- **Usos**:
+  - CSS:
+    - `css/components/form-field.css` (1×)
+
+### `component.form-field.label.line-height.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.line-height.sm`
+- **Sentido**: Altura de linha de label no Form Field.
+- **Escopo**: Form Field, CSS-only, ADR-017
+- **Contexto**: Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.
+- **Decisão**: Alias 1:1 para semantic.typography.body.line-height.sm, mantendo a metrica vertical de 20px do label/required.
+- **Usos**:
+  - CSS:
+    - `css/components/form-field.css` (1×)
+
+### `component.form-field.required.color.default`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.feedback.error.content-default`
+- **Sentido**: Cor do indicador required do Form Field.
+- **Escopo**: Form Field, CSS-only, ADR-017
+- **Contexto**: Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.
+- **Decisão**: Alias 1:1 para semantic.feedback.error.content-default, mantendo o asterisco como conteudo de erro e nao background.
+- **Usos**:
+  - CSS:
+    - `css/components/form-field.css` (1×)
+
+### `component.form-field.required.font-size.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.font-size.sm`
+- **Sentido**: Tamanho tipografico de required no Form Field.
+- **Escopo**: Form Field, CSS-only, ADR-017
+- **Contexto**: Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.
+- **Decisão**: Alias 1:1 para semantic.typography.body.font-size.sm, alinhado ao default medio dos controles de formulario.
+- **Usos**:
+  - CSS:
+    - `css/components/form-field.css` (1×)
+
+### `component.form-field.required.font-weight.default`
+
+- **Camada**: component
+- **Tipo**: `string`
+- **Alias**: → `semantic.typography.body.font-weight.bold`
+- **Sentido**: Peso tipografico de required no Form Field.
+- **Escopo**: Form Field, CSS-only, ADR-017
+- **Contexto**: Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.
+- **Decisão**: Alias 1:1 para semantic.typography.body.font-weight.bold, alinhado ao Figma vivo dos labels de controle.
+- **Usos**:
+  - CSS:
+    - `css/components/form-field.css` (1×)
+
+### `component.form-field.required.line-height.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.typography.body.line-height.sm`
+- **Sentido**: Altura de linha de required no Form Field.
+- **Escopo**: Form Field, CSS-only, ADR-017
+- **Contexto**: Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.
+- **Decisão**: Alias 1:1 para semantic.typography.body.line-height.sm, mantendo a metrica vertical de 20px do label/required.
+- **Usos**:
+  - CSS:
+    - `css/components/form-field.css` (1×)
+
+### `component.form-field.root.gap.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.xs`
+- **Sentido**: Espacamento vertical interno do wrapper Form Field.
+- **Escopo**: Form Field, CSS-only, ADR-017
+- **Contexto**: Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.
+- **Decisão**: Alias 1:1 para semantic.space.xs porque o gap e decisao reutilizavel, mas o contrato publico pertence ao Form Field.
+- **Usos**:
+  - CSS:
+    - `css/components/form-field.css` (1×)
 
 ### `component.input.root.height.lg`
 

@@ -1,0 +1,149 @@
+{
+  "component": {
+    "form-field": {
+      "root": {
+        "gap": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.space.xs}",
+            "$description": "Gap vertical entre label, controle, helper e erro no Form Field."
+          }
+        }
+      },
+      "label-row": {
+        "gap": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.space.2xs}",
+            "$description": "Gap horizontal entre label e indicador required no Form Field."
+          }
+        }
+      },
+      "label": {
+        "color": {
+          "default": {
+            "$type": "color",
+            "$value": "{semantic.content.strong}",
+            "$description": "Cor default do label Form Field."
+          },
+          "error": {
+            "$type": "color",
+            "$value": "{semantic.feedback.error.content-default}",
+            "$description": "Cor do label Form Field em estado de erro."
+          }
+        },
+        "font-size": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.font-size.sm}",
+            "$description": "Font-size do label Form Field."
+          }
+        },
+        "line-height": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.line-height.sm}",
+            "$description": "Line-height do label Form Field."
+          }
+        },
+        "font-weight": {
+          "default": {
+            "$type": "string",
+            "$value": "{semantic.typography.body.font-weight.bold}",
+            "$description": "Font-weight do label Form Field."
+          }
+        }
+      },
+      "required": {
+        "color": {
+          "default": {
+            "$type": "color",
+            "$value": "{semantic.feedback.error.content-default}",
+            "$description": "Cor do indicador required Form Field."
+          }
+        },
+        "font-size": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.font-size.sm}",
+            "$description": "Font-size do indicador required Form Field."
+          }
+        },
+        "line-height": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.line-height.sm}",
+            "$description": "Line-height do indicador required Form Field."
+          }
+        },
+        "font-weight": {
+          "default": {
+            "$type": "string",
+            "$value": "{semantic.typography.body.font-weight.bold}",
+            "$description": "Font-weight do indicador required Form Field."
+          }
+        }
+      },
+      "helper": {
+        "color": {
+          "default": {
+            "$type": "color",
+            "$value": "{semantic.content.default}",
+            "$description": "Cor do helper text Form Field."
+          }
+        },
+        "font-size": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.font-size.xs}",
+            "$description": "Font-size do helper text Form Field."
+          }
+        },
+        "line-height": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.line-height.xs}",
+            "$description": "Line-height do helper text Form Field."
+          }
+        },
+        "font-weight": {
+          "default": {
+            "$type": "string",
+            "$value": "{semantic.typography.body.font-weight.regular}",
+            "$description": "Font-weight do helper text Form Field."
+          }
+        }
+      },
+      "error": {
+        "color": {
+          "default": {
+            "$type": "color",
+            "$value": "{semantic.feedback.error.content-default}",
+            "$description": "Cor da mensagem de erro Form Field."
+          }
+        },
+        "font-size": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.font-size.xs}",
+            "$description": "Font-size da mensagem de erro Form Field."
+          }
+        },
+        "line-height": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.line-height.xs}",
+            "$description": "Line-height da mensagem de erro Form Field."
+          }
+        },
+        "font-weight": {
+          "default": {
+            "$type": "string",
+            "$value": "{semantic.typography.body.font-weight.bold}",
+            "$description": "Font-weight da mensagem de erro Form Field."
+          }
+        }
+      }
+    }
+  }
+}

@@ -90,6 +90,25 @@
   --ds-divider-line-color-default: var(--ds-border-subtle); /** Cor da linha do Divider. */
   --ds-divider-line-thickness-default: var(--ds-border-width-default); /** Espessura da linha do Divider. */
   --ds-divider-line-radius-default: var(--ds-radius-md); /** Raio da linha do Divider. */
+  --ds-form-field-root-gap-default: var(--ds-space-xs); /** Gap vertical entre label, controle, helper e erro no Form Field. */
+  --ds-form-field-label-row-gap-default: var(--ds-space-2xs); /** Gap horizontal entre label e indicador required no Form Field. */
+  --ds-form-field-label-color-default: var(--ds-content-strong); /** Cor default do label Form Field. */
+  --ds-form-field-label-color-error: var(--ds-feedback-error-content-default); /** Cor do label Form Field em estado de erro. */
+  --ds-form-field-label-font-size-default: var(--ds-body-font-size-sm); /** Font-size do label Form Field. */
+  --ds-form-field-label-line-height-default: var(--ds-body-line-height-sm); /** Line-height do label Form Field. */
+  --ds-form-field-label-font-weight-default: var(--ds-body-font-weight-bold); /** Font-weight do label Form Field. */
+  --ds-form-field-required-color-default: var(--ds-feedback-error-content-default); /** Cor do indicador required Form Field. */
+  --ds-form-field-required-font-size-default: var(--ds-body-font-size-sm); /** Font-size do indicador required Form Field. */
+  --ds-form-field-required-line-height-default: var(--ds-body-line-height-sm); /** Line-height do indicador required Form Field. */
+  --ds-form-field-required-font-weight-default: var(--ds-body-font-weight-bold); /** Font-weight do indicador required Form Field. */
+  --ds-form-field-helper-color-default: var(--ds-content-default); /** Cor do helper text Form Field. */
+  --ds-form-field-helper-font-size-default: var(--ds-body-font-size-xs); /** Font-size do helper text Form Field. */
+  --ds-form-field-helper-line-height-default: var(--ds-body-line-height-xs); /** Line-height do helper text Form Field. */
+  --ds-form-field-helper-font-weight-default: var(--ds-body-font-weight-regular); /** Font-weight do helper text Form Field. */
+  --ds-form-field-error-color-default: var(--ds-feedback-error-content-default); /** Cor da mensagem de erro Form Field. */
+  --ds-form-field-error-font-size-default: var(--ds-body-font-size-xs); /** Font-size da mensagem de erro Form Field. */
+  --ds-form-field-error-line-height-default: var(--ds-body-line-height-xs); /** Line-height da mensagem de erro Form Field. */
+  --ds-form-field-error-font-weight-default: var(--ds-body-font-weight-bold); /** Font-weight da mensagem de erro Form Field. */
   --ds-input-root-height-sm: var(--ds-size-lg); /** Altura do root visual Input Text sm. */
   --ds-input-root-height-md: var(--ds-size-xl); /** Altura do root visual Input Text md. */
   --ds-input-root-height-lg: var(--ds-size-2xl); /** Altura do root visual Input Text lg. */
