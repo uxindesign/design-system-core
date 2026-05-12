@@ -37,10 +37,10 @@
 
   display: inline-flex;
   align-items: center;
-  gap: var(--ds-space-sm);
+  gap: var(--ds-checkbox-target-gap-default);
   cursor: pointer;
   padding: var(--ds-space-xs) var(--ds-space-xs);
-  border-radius: var(--ds-radius-sm);
+  border-radius: var(--ds-checkbox-target-radius-default);
   min-height: var(--checkbox-target-height);
   font-size: var(--ds-body-font-size-sm);
   color: var(--ds-content-strong);
@@ -57,8 +57,8 @@
   -webkit-appearance: none;
   width: var(--checkbox-box-size);
   height: var(--checkbox-box-size);
-  border: var(--ds-border-width-default) solid var(--ds-border-control-default);
-  border-radius: var(--ds-radius-sm);
+  border: var(--ds-checkbox-box-border-width-default) solid var(--ds-border-control-default);
+  border-radius: var(--ds-checkbox-box-radius-default);
   background-color: var(--ds-surface-default);
   cursor: pointer;
   position: relative;
@@ -115,8 +115,8 @@
 
 /* Focus */
 .ds-checkbox:focus-visible {
-  outline: var(--ds-border-width-focus) solid var(--ds-border-focus);
-  outline-offset: var(--ds-border-width-focus);
+  outline: var(--ds-checkbox-focus-ring-stroke-width-default) solid var(--ds-checkbox-focus-ring-color-default);
+  outline-offset: var(--ds-checkbox-focus-ring-stroke-width-default);
 }
 
 /* Disabled */

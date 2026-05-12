@@ -5,13 +5,13 @@
 .ds-badge {
   display: inline-flex;
   align-items: center;
-  gap: var(--ds-badge-root-gap-default);
-  padding: var(--ds-badge-root-padding-y-default) var(--ds-badge-root-padding-x-default);
+  gap: var(--ds-badge-gap-default);
+  padding: var(--ds-badge-padding-y-default) var(--ds-badge-padding-x-default);
   /* Figma: Badge label = Inter Bold 12 / 18 (label/xs) */
   font-size: var(--ds-badge-label-font-size-default);
   font-weight: var(--ds-badge-label-font-weight-default);
   line-height: var(--ds-badge-label-line-height-default);
-  border-radius: var(--ds-badge-root-radius-default);
+  border-radius: var(--ds-badge-radius-default);
   white-space: nowrap;
 }
 
@@ -79,5 +79,5 @@
 .ds-badge--neutral.ds-badge--subtle {
   background-color: var(--ds-surface-default);
   color: var(--ds-content-default);
-  border: var(--ds-badge-root-border-width-default) solid var(--ds-border-default);
+  border: var(--ds-badge-border-width-default) solid var(--ds-border-default);
 }

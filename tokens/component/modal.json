@@ -17,37 +17,35 @@
           }
         }
       },
-      "root": {
-        "max-width": {
-          "sm": {
-            "$type": "dimension",
-            "$value": "{semantic.size.layout.sm}",
-            "$description": "Max-width do root Modal sm."
-          },
-          "md": {
-            "$type": "dimension",
-            "$value": "{semantic.size.layout.md}",
-            "$description": "Max-width do root Modal md."
-          },
-          "lg": {
-            "$type": "dimension",
-            "$value": "{semantic.size.layout.lg}",
-            "$description": "Max-width do root Modal lg."
-          }
+      "max-width": {
+        "sm": {
+          "$type": "dimension",
+          "$value": "{semantic.size.layout.sm}",
+          "$description": "Max-width do Modal sm."
         },
-        "radius": {
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.radius.lg}",
-            "$description": "Radius do root Modal."
-          }
+        "md": {
+          "$type": "dimension",
+          "$value": "{semantic.size.layout.md}",
+          "$description": "Max-width do Modal md."
         },
-        "shadow": {
-          "default": {
-            "$type": "shadow",
-            "$value": "{semantic.shadow.modal}",
-            "$description": "Shadow do root Modal."
-          }
+        "lg": {
+          "$type": "dimension",
+          "$value": "{semantic.size.layout.lg}",
+          "$description": "Max-width do Modal lg."
+        }
+      },
+      "radius": {
+        "default": {
+          "$type": "dimension",
+          "$value": "{semantic.radius.lg}",
+          "$description": "Radius do Modal."
+        }
+      },
+      "shadow": {
+        "default": {
+          "$type": "shadow",
+          "$value": "{semantic.shadow.modal}",
+          "$description": "Shadow do Modal."
         }
       },
       "header": {

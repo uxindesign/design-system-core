@@ -3,18 +3,19 @@
 **Data:** 2026-04-22
 **Status:** Aceita — implementada em 0.7.0 e parcialmente substituída por ADR-019 em 2026-05-11
 
-> **Atualização (2026-04-26):** Arquitetura final estabilizada como **2-layer (Foundation + Semantic)**. Component collection foi eliminada em 0.7.0. ADR-015 unificou a escala de dimensão dentro de Semantic. Em 1.0.0-beta.1, todos os 111 leaks Foundation em `css/base/` foram migrados pra Semantic, fechando o débito original deste ADR. Resultado: `verify:tokens` reporta `CSS leak: OK` em ambas as camadas (components + base).
+> **Atualização (2026-04-26):** Naquele release, a arquitetura foi estabilizada como **2-layer (Foundation + Semantic)**. Component collection foi eliminada em 0.7.0. ADR-015 unificou a escala de dimensão dentro de Semantic. Em 1.0.0-beta.1, todos os 111 leaks Foundation em `css/base/` foram migrados pra Semantic, fechando o débito original deste ADR.
 
 > **Atualização (2026-05-11):** ADR-019 reintroduz **Component tokens** como contrato anatômico de componente. A regra de fundo permanece: consumidor final não consome Foundation direto. A cadeia vigente passa a ser Foundation/Core → Semantic/System → Component → implementação. Component não volta como wrapper mecânico; volta para partes públicas de componente (`target`, `box`, `track`, `thumb`, etc.).
 
 ## Contexto
 
-O sistema começou com três camadas de tokens, mas a arquitetura vigente é 2-layer:
+O sistema começou com três camadas de tokens, passou por uma simplificação 2-layer em 0.7.0 e voltou a ter três camadas com ADR-019. A arquitetura vigente é:
 
 1. **Foundation** — valores crus, escalas primitivas (`spacing/3 = 0.75rem`, `color/blue/600`, `radius/sm`, `shadow/md`, `duration/fast`). Sem significado funcional, só quantidade.
 2. **Semantic** — aliases com intenção de uso (`brand/default`, `content/default`, `border/width/default`, `space/inset/md`, `typography/control/font-size/md`).
+3. **Component** — contrato público de anatomia de componente (`component.checkbox.target.height.sm`, `component.button.bg.brand.default`, `component.toggle.track.width.md`), aliasando Semantic quando possível.
 
-A regra vigente é que consumidores finais — CSS de componente, bindings em componentes Figma, docs de uso — operam em cima de Semantic, não de Foundation direto e não de valores hardcoded. Foundation existe pra **abastecer Semantic**, não pra ser consumido direto.
+A regra vigente é que consumidores finais — CSS de componente, bindings em componentes Figma, docs de uso — operam em cima de Component quando houver contrato de componente, ou Semantic enquanto o componente ainda não foi migrado. Foundation existe pra **abastecer Semantic e aliases Component**, não pra ser consumido direto.
 
 Essa regra **nunca foi codificada explicitamente** e por isso **não é respeitada hoje**. Auditoria em 22/04/2026:
 
@@ -55,11 +56,11 @@ O sistema perdeu propriedades arquiteturais importantes:
 ### Cadeia permitida
 
 ```
-Foundation  ──►  Semantic  ──►  Consumidor final
-                          (CSS, Figma binding, docs de componente)
+Foundation  ──►  Semantic  ──►  Component  ──►  Consumidor final
+                                            (CSS, Figma binding, docs de componente)
 ```
 
-Consumidor final **só** vê Semantic. Nunca Foundation, nunca valor hardcoded.
+Consumidor final **só** vê Component quando houver contrato Component, ou Semantic durante a migração. Nunca Foundation, nunca valor hardcoded.
 
 ### Exceção explícita — `semantic.control.*` (ADR-006)
 
@@ -67,7 +68,7 @@ Já codificado em ADR-006 e depois simplificado por ADR-015: dimensões e tipogr
 
 ### Valores específicos de componente
 
-Alguns valores são genuinamente específicos de um componente e não têm equivalente abstrato Semantic no momento da auditoria. Exemplos: `modal.max-width`, `avatar.icon-size`, `textarea.min-height`. Na arquitetura vigente, isso não autoriza hardcode nem consumo direto de Foundation: primeiro cria-se ou reaproveita-se um token Semantic com intenção adequada, depois CSS/Figma/docs consomem esse token.
+Alguns valores são genuinamente específicos de um componente e não têm equivalente abstrato Semantic no momento da auditoria. Exemplos: `modal.max-width`, `avatar.icon-size`, `textarea.min-height`. Na arquitetura vigente pós-ADR-019, isso não autoriza hardcode nem consumo direto de Foundation: primeiro reaproveita-se Semantic quando houver decisão reutilizável; se a decisão for anatômica e específica do componente, cria-se um token Component.
 
 ### Enforcement automatizado
 
@@ -127,7 +128,7 @@ Gerado em MD (`docs/token-registry.md`) via `scripts/build-token-registry.mjs`. 
 
 - **Rastreabilidade restaurada**: cada uso de valor no CSS ou Figma passa por um token com intenção nomeada. `grep` recupera contexto.
 - **Theming escala**: mudanças semânticas (ex: "densidade média quer menos padding") mudam um alias, propagam pra todo sistema.
-- **Figma e código convergem**: os dois consomem a mesma camada Semantic, não Foundation direto em caminhos diferentes.
+- **Figma e código convergem**: os dois consomem Component quando há contrato de componente, ou Semantic durante a migração, não Foundation direto em caminhos diferentes.
 - **CI pega regressão**: qualquer PR que introduzir foundation leak em CSS de componente ou binding Figma falha o verify.
 - **Decisões ficam explícitas**: Token Registry obriga preencher `sentido`/`contexto`/`decisao` pra cada token. Tokens sem justificativa documentada não entram no sistema.
 
@@ -145,7 +146,7 @@ Descartada. Rastreabilidade quebrada não é aceitável num sistema que se prop�
 
 ### (b) Manter Component → Foundation como exceção
 
-Descartada na arquitetura vigente. Componentes têm valores específicos, mas o custo de manter uma camada Component ou permitir Foundation direto é maior que o benefício. Se a intenção é necessária no produto, ela deve ser nomeada em Semantic.
+Descartada como regra geral. Componentes têm valores específicos, mas Component não pode apontar direto para Foundation nem virar wrapper mecânico. Quando o contrato for anatômico, o caminho preferencial é Component → Semantic → Foundation.
 
 ### (c) Criar camada adicional entre Foundation e Semantic (ex: "Alias")
 
@@ -167,11 +168,12 @@ Fases 0-7. Divisão em 5 PRs:
 
 ## Referências
 
-- [ADR-001](./ADR-001-migracao-tokens.md) — arquitetura Foundation → Semantic → Component original, superseded pela estabilização 2-layer.
+- [ADR-001](./ADR-001-migracao-tokens.md) — arquitetura Foundation → Semantic → Component original.
 - [ADR-003](./ADR-003-fontes-verdade.md) — Figma como autoridade de valor.
 - [ADR-005](./ADR-005-brand-foundation-e-estados-explicitos.md) — brand como foundation, convenção `-default`.
 - [ADR-006](./ADR-006-semantic-control-tokens.md) — tokens de controle, parcialmente substituídos pela simplificação de ADR-015.
 - [ADR-011](./ADR-011-renaming-tokens-semanticos-de-cor.md) — renaming de semantic de cor; princípio 9 é o precedente direto deste ADR.
+- [ADR-019](./ADR-019-component-tokens-contrato-anatomico.md) — reintrodução da camada Component como contrato anatômico.
 - `tokens/registry.yaml` — Token Registry (artefato criado por esta ADR).
 - `scripts/tokens-verify.mjs` — checks de enforcement.
 - `CLAUDE.md` — seção "Hierarquia de verdade" atualizada com referência a este ADR.

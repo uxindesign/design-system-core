@@ -1,18 +1,27 @@
 {
   "version": "1.0.0-beta.4",
   "totals": {
-    "jsonTokens": 918,
-    "sharedTokens": 570,
+    "jsonTokens": 927,
+    "sharedTokens": 579,
     "lightTokens": 174,
     "darkTokens": 174,
     "errors": 0,
-    "warnings": 0
+    "warnings": 1
   },
   "checks": {
     "jsonIntegrity": [],
     "jsonVsCss": [],
     "cssFoundationLeak": [],
-    "registryCompleteness": [],
+    "registryCompleteness": [
+      {
+        "level": "warning",
+        "message": "2 entries com campos TODO (sentido/contexto/decisao). Preencha incrementalmente.",
+        "sample": [
+          "component.button.focus-ring.color.success",
+          "component.button.focus-ring.color.danger"
+        ]
+      }
+    ],
     "docTokenDrift": [],
     "jsonVsFigma": {
       "skipped": false,
@@ -20,14 +29,14 @@
       "snapshotFreshness": "fresh",
       "snapshotMaxAgeHours": 24,
       "summary": {
-        "figmaVariableCount": 695,
+        "figmaVariableCount": 685,
         "figmaCollectionCount": 3,
         "VALUE_DRIFT": 0,
         "NEEDS_SYNC": 0,
         "DRIFT_FROM_SOURCE": 0,
         "ALIAS_BROKEN": 0,
         "CSS_ONLY": 7,
-        "BY_DESIGN": 122
+        "BY_DESIGN": 141
       },
       "divergences": [],
       "diffs": {
@@ -841,9 +850,123 @@
           },
           {
             "file": "component/modal.json",
-            "token": "component.modal.root.shadow.default",
+            "token": "component.modal.shadow.default",
             "side": "json-only-downstream",
             "json": "{semantic.shadow.modal}"
+          },
+          {
+            "file": "component/form-field.json",
+            "token": "component.form-field.gap.default",
+            "side": "json-only",
+            "json": "{semantic.space.xs}"
+          },
+          {
+            "file": "component/form-field.json",
+            "token": "component.form-field.label-row.gap.default",
+            "side": "json-only",
+            "json": "{semantic.space.2xs}"
+          },
+          {
+            "file": "component/form-field.json",
+            "token": "component.form-field.label.color.default",
+            "side": "json-only",
+            "json": "{semantic.content.strong}"
+          },
+          {
+            "file": "component/form-field.json",
+            "token": "component.form-field.label.color.error",
+            "side": "json-only",
+            "json": "{semantic.feedback.error.content-default}"
+          },
+          {
+            "file": "component/form-field.json",
+            "token": "component.form-field.label.font-size.default",
+            "side": "json-only",
+            "json": "{semantic.typography.body.font-size.sm}"
+          },
+          {
+            "file": "component/form-field.json",
+            "token": "component.form-field.label.line-height.default",
+            "side": "json-only",
+            "json": "{semantic.typography.body.line-height.sm}"
+          },
+          {
+            "file": "component/form-field.json",
+            "token": "component.form-field.label.font-weight.default",
+            "side": "json-only",
+            "json": "{semantic.typography.body.font-weight.bold}"
+          },
+          {
+            "file": "component/form-field.json",
+            "token": "component.form-field.required.color.default",
+            "side": "json-only",
+            "json": "{semantic.feedback.error.content-default}"
+          },
+          {
+            "file": "component/form-field.json",
+            "token": "component.form-field.required.font-size.default",
+            "side": "json-only",
+            "json": "{semantic.typography.body.font-size.sm}"
+          },
+          {
+            "file": "component/form-field.json",
+            "token": "component.form-field.required.line-height.default",
+            "side": "json-only",
+            "json": "{semantic.typography.body.line-height.sm}"
+          },
+          {
+            "file": "component/form-field.json",
+            "token": "component.form-field.required.font-weight.default",
+            "side": "json-only",
+            "json": "{semantic.typography.body.font-weight.bold}"
+          },
+          {
+            "file": "component/form-field.json",
+            "token": "component.form-field.helper.color.default",
+            "side": "json-only",
+            "json": "{semantic.content.default}"
+          },
+          {
+            "file": "component/form-field.json",
+            "token": "component.form-field.helper.font-size.default",
+            "side": "json-only",
+            "json": "{semantic.typography.body.font-size.xs}"
+          },
+          {
+            "file": "component/form-field.json",
+            "token": "component.form-field.helper.line-height.default",
+            "side": "json-only",
+            "json": "{semantic.typography.body.line-height.xs}"
+          },
+          {
+            "file": "component/form-field.json",
+            "token": "component.form-field.helper.font-weight.default",
+            "side": "json-only",
+            "json": "{semantic.typography.body.font-weight.regular}"
+          },
+          {
+            "file": "component/form-field.json",
+            "token": "component.form-field.error.color.default",
+            "side": "json-only",
+            "json": "{semantic.feedback.error.content-default}"
+          },
+          {
+            "file": "component/form-field.json",
+            "token": "component.form-field.error.font-size.default",
+            "side": "json-only",
+            "json": "{semantic.typography.body.font-size.xs}"
+          },
+          {
+            "file": "component/form-field.json",
+            "token": "component.form-field.error.line-height.default",
+            "side": "json-only",
+            "json": "{semantic.typography.body.line-height.xs}"
+          },
+          {
+            "file": "component/form-field.json",
+            "token": "component.form-field.error.font-weight.default",
+            "side": "json-only",
+            "json": "{semantic.typography.body.font-weight.bold}"
           }
         ]
       }

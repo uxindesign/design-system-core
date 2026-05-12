@@ -1,23 +1,21 @@
 {
   "component": {
     "input": {
-      "root": {
-        "height": {
-          "sm": {
-            "$type": "dimension",
-            "$value": "{semantic.size.lg}",
-            "$description": "Altura do root visual Input Text sm."
-          },
-          "md": {
-            "$type": "dimension",
-            "$value": "{semantic.size.xl}",
-            "$description": "Altura do root visual Input Text md."
-          },
-          "lg": {
-            "$type": "dimension",
-            "$value": "{semantic.size.2xl}",
-            "$description": "Altura do root visual Input Text lg."
-          }
+      "height": {
+        "sm": {
+          "$type": "dimension",
+          "$value": "{semantic.size.lg}",
+          "$description": "Altura do superfície principal visual Input Text sm."
+        },
+        "md": {
+          "$type": "dimension",
+          "$value": "{semantic.size.xl}",
+          "$description": "Altura do superfície principal visual Input Text md."
+        },
+        "lg": {
+          "$type": "dimension",
+          "$value": "{semantic.size.2xl}",
+          "$description": "Altura do superfície principal visual Input Text lg."
         }
       }
     }

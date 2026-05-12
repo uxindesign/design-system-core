@@ -212,7 +212,7 @@
     <table class="ds-token-table">
       <thead><tr><th>#</th><th><span data-lang="pt">Regra</span><span data-lang="en">Rule</span></th></tr></thead>
       <tbody>
-        <tr><td>1</td><td><span data-lang="pt">Consumidores finais (CSS de componente, base, bindings Figma) só consomem Semantic — nunca Foundation direto.</span><span data-lang="en">Final consumers (component CSS, base CSS, Figma bindings) only consume Semantic — never Foundation directly.</span></td></tr>
+        <tr><td>1</td><td><span data-lang="pt">Consumidores finais consomem Component quando há contrato de componente, ou Semantic durante a migração — nunca Foundation direto.</span><span data-lang="en">Final consumers use Component when a component contract exists, or Semantic during migration — never Foundation directly.</span></td></tr>
         <tr><td>2</td><td><span data-lang="pt">Tokens semânticos referenciam foundation, nunca hardcoded. Nenhum hex ou rgba bruto na camada semântica (exceto rgba documentados em ADR).</span><span data-lang="en">Semantic tokens reference foundation, never hardcoded. No raw hex or rgba in the semantic layer (except rgba documented in ADR).</span></td></tr>
         <tr><td>3</td><td><span data-lang="pt">Foundation é a única camada com valores absolutos. Naming numérico (radius-8, spacing-16) — não t-shirt.</span><span data-lang="en">Foundation is the only layer with absolute values. Numeric naming (radius-8, spacing-16) — not t-shirt.</span></td></tr>
         <tr><td>4</td><td><span data-lang="pt">Semantic usa naming t-shirt (radius-md, space-sm) — distinto de Foundation pra evitar redundância.</span><span data-lang="en">Semantic uses t-shirt naming (radius-md, space-sm) — distinct from Foundation to avoid redundancy.</span></td></tr>

@@ -183,15 +183,15 @@ semantic.space.control.padding-y.lg → {foundation.spacing.3}    (12px)
 </ul>
 <h3>3. Atualizar tokens de componente para referenciar os tokens semânticos de controle</h3>
 <p><code>component.button.*</code> e futuros <code>component.input.*</code>, <code>component.select.*</code> referenciavam os tokens semânticos de controle. Este formato foi substituído por ADR-019, que exige o segmento anatômico no nome do token Component:</p>
-<pre><code>component.button.root.height.sm → {semantic.size.lg}
-component.button.root.height.md → {semantic.size.xl}
-component.button.root.height.lg → {semantic.size.2xl}
-component.input.root.height.sm  → {semantic.size.lg}
-component.input.root.height.md  → {semantic.size.xl}
-component.input.root.height.lg  → {semantic.size.2xl}
-component.select.root.height.sm → {semantic.size.lg}
-component.select.root.height.md → {semantic.size.xl}
-component.select.root.height.lg → {semantic.size.2xl}
+<pre><code>component.button.height.sm → {semantic.size.lg}
+component.button.height.md → {semantic.size.xl}
+component.button.height.lg → {semantic.size.2xl}
+component.input.height.sm  → {semantic.size.lg}
+component.input.height.md  → {semantic.size.xl}
+component.input.height.lg  → {semantic.size.2xl}
+component.select.height.sm → {semantic.size.lg}
+component.select.height.md → {semantic.size.xl}
+component.select.height.lg → {semantic.size.2xl}
 </code></pre>
 <p>O plano antigo de criar tokens Component de padding, font-size e icon-size para Button não representa o estado canônico atual no Figma/JSON. Essas propriedades continuam consumindo Semantic diretamente até serem materializadas como contratos Component explícitos.</p>
 <h3>4. Normalizar as dimensões dos componentes no Figma</h3>
@@ -210,7 +210,7 @@ component.select.root.height.lg → {semantic.size.2xl}
 <h2>Consequências</h2>
 <ul>
 <li><strong>Tokens:</strong> ~18 novos tokens semânticos (6 size, 6 space, 6 typography). 3 tokens do button renomeados (padding → padding-x). ~10 tokens do button atualizados de valores absolutos para referências semânticas. Foundation pode ganhar 1–2 tokens (line-height 1.25rem, dimension min-target).</li>
-<li><strong>CSS:</strong> Novas variáveis <code>--ds-size-control-*</code>, <code>--ds-space-control-*</code>, <code>--ds-typography-control-*</code>. O contrato Component atual em CSS usa <code>--ds-button-root-height-*</code>, <code>--ds-input-root-height-*</code> e <code>--ds-select-root-height-*</code>.</li>
+<li><strong>CSS:</strong> Novas variáveis <code>--ds-size-control-*</code>, <code>--ds-space-control-*</code>, <code>--ds-typography-control-*</code>. O contrato Component atual em CSS usa <code>--ds-button-height-*</code>, <code>--ds-input-height-*</code> e <code>--ds-select-height-*</code>.</li>
 <li><strong>Figma:</strong> Novas variáveis na coleção Semantic: <code>size/control/*</code>, <code>space/control/*</code>, <code>typography/control/*</code>. Componentes Button, Input Text, Select, Textarea religados às novas variáveis. Frames Field de Input/Select ajustados para as alturas 32/40/48. paddingY do Textarea ajustado de 8/12/16 para 8/10/12; altura inalterada.</li>
 <li><strong>Docs:</strong> Nova seção &quot;Control sizing&quot; documentando o sistema dimensional compartilhado. Páginas Button, Input, Select atualizadas. token-schema.md e component-inventory.md atualizados.</li>
 <li><strong>Breaking changes:</strong> O rename antigo das variáveis de padding do Button foi substituído pelo contrato Component anatômico de ADR-019 para alturas de root.</li>

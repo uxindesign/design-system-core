@@ -5,9 +5,9 @@
 .ds-alert {
   display: flex;
   align-items: flex-start;
-  gap: var(--ds-alert-root-gap-default);
-  padding: var(--ds-alert-root-padding-default);
-  border-radius: var(--ds-alert-root-radius-default);
+  gap: var(--ds-alert-gap-default);
+  padding: var(--ds-alert-padding-default);
+  border-radius: var(--ds-alert-radius-default);
   font-size: var(--ds-alert-description-font-size-default);
   line-height: var(--ds-alert-description-line-height-default);
 }
@@ -122,25 +122,25 @@
 .ds-alert--success.ds-alert--subtle {
   background-color: var(--ds-feedback-success-background-subtle);
   color: var(--ds-content-strong);
-  border: var(--ds-alert-root-border-width-default) solid var(--ds-feedback-success-border-default);
+  border: var(--ds-alert-border-width-default) solid var(--ds-feedback-success-border-default);
 }
 
 .ds-alert--warning.ds-alert--subtle {
   background-color: var(--ds-feedback-warning-background-subtle);
   color: var(--ds-content-strong);
-  border: var(--ds-alert-root-border-width-default) solid var(--ds-feedback-warning-border-default);
+  border: var(--ds-alert-border-width-default) solid var(--ds-feedback-warning-border-default);
 }
 
 .ds-alert--error.ds-alert--subtle {
   background-color: var(--ds-feedback-error-background-subtle);
   color: var(--ds-content-strong);
-  border: var(--ds-alert-root-border-width-default) solid var(--ds-feedback-error-border-default);
+  border: var(--ds-alert-border-width-default) solid var(--ds-feedback-error-border-default);
 }
 
 .ds-alert--info.ds-alert--subtle {
   background-color: var(--ds-feedback-info-background-subtle);
   color: var(--ds-content-strong);
-  border: var(--ds-alert-root-border-width-default) solid var(--ds-feedback-info-border-default);
+  border: var(--ds-alert-border-width-default) solid var(--ds-feedback-info-border-default);
 }
 
 /* Description uses secondary content tone in subtle variants */

@@ -5,7 +5,7 @@
 .ds-breadcrumb {
   display: flex;
   align-items: center;
-  gap: var(--ds-breadcrumb-root-gap-default);
+  gap: var(--ds-breadcrumb-gap-default);
   font-size: var(--ds-breadcrumb-label-font-size-default);
   font-weight: var(--ds-breadcrumb-label-font-weight-default);
   line-height: var(--ds-breadcrumb-label-line-height-default);

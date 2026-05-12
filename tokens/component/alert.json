@@ -1,34 +1,32 @@
 {
   "component": {
     "alert": {
-      "root": {
-        "padding": {
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.space.md}",
-            "$description": "Padding do root Alert."
-          }
-        },
-        "gap": {
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.space.sm}",
-            "$description": "Gap horizontal do root Alert."
-          }
-        },
-        "radius": {
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.radius.lg}",
-            "$description": "Radius do root Alert."
-          }
-        },
-        "border-width": {
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.border.width.default}",
-            "$description": "Border width do root Alert quando stroke esta ativo."
-          }
+      "padding": {
+        "default": {
+          "$type": "dimension",
+          "$value": "{semantic.space.md}",
+          "$description": "Padding do Alert."
+        }
+      },
+      "gap": {
+        "default": {
+          "$type": "dimension",
+          "$value": "{semantic.space.sm}",
+          "$description": "Gap horizontal do Alert."
+        }
+      },
+      "radius": {
+        "default": {
+          "$type": "dimension",
+          "$value": "{semantic.radius.lg}",
+          "$description": "Radius do Alert."
+        }
+      },
+      "border-width": {
+        "default": {
+          "$type": "dimension",
+          "$value": "{semantic.border.width.default}",
+          "$description": "Border width do Alert quando stroke esta ativo."
         }
       },
       "icon": {

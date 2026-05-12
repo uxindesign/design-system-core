@@ -1,13 +1,11 @@
 {
   "component": {
     "breadcrumb": {
-      "root": {
-        "gap": {
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.space.xs}",
-            "$description": "Espaço entre itens e separadores do Breadcrumb."
-          }
+      "gap": {
+        "default": {
+          "$type": "dimension",
+          "$value": "{semantic.space.xs}",
+          "$description": "Espaço entre itens e separadores do Breadcrumb."
         }
       },
       "item": {

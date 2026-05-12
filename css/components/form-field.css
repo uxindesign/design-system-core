@@ -45,7 +45,7 @@
 .ds-field {
   display: flex;
   flex-direction: column;
-  gap: var(--ds-form-field-root-gap-default);
+  gap: var(--ds-form-field-gap-default);
   width: 100%;
 }
 

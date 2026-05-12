@@ -7,13 +7,13 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--ds-button-root-gap-md);
+  gap: var(--ds-button-gap-md);
   font-family: var(--ds-button-label-font-family-default);
   font-weight: var(--ds-button-label-font-weight-default);
   line-height: var(--ds-button-label-line-height-md);
   text-decoration: none;
-  border: var(--ds-button-root-border-width-default) solid transparent;
-  border-radius: var(--ds-button-root-radius-default);
+  border: var(--ds-button-border-width-default) solid transparent;
+  border-radius: var(--ds-button-radius-default);
   cursor: pointer;
   transition: background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
               border-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
@@ -23,10 +23,10 @@
   user-select: none;
 
   /* Default size: md (40px) */
-  height: var(--ds-button-root-height-md);
-  padding: var(--ds-button-root-padding-y-md) var(--ds-button-root-padding-x-md);
+  height: var(--ds-button-height-md);
+  padding: var(--ds-button-padding-y-md) var(--ds-button-padding-x-md);
   font-size: var(--ds-button-label-font-size-md);
-  min-width: var(--ds-button-root-min-width-md);
+  min-width: var(--ds-button-min-width-md);
 }
 
 .ds-button:focus-visible {
@@ -55,45 +55,45 @@
    Sizes
    --------------------------------------------------------- */
 .ds-button--sm {
-  height: var(--ds-button-root-height-sm);
-  padding: var(--ds-button-root-padding-y-sm) var(--ds-button-root-padding-x-sm);
+  height: var(--ds-button-height-sm);
+  padding: var(--ds-button-padding-y-sm) var(--ds-button-padding-x-sm);
   font-size: var(--ds-button-label-font-size-sm);
   line-height: var(--ds-button-label-line-height-sm);
-  min-width: var(--ds-button-root-min-width-sm);
-  gap: var(--ds-button-root-gap-sm);
+  min-width: var(--ds-button-min-width-sm);
+  gap: var(--ds-button-gap-sm);
 }
 
 .ds-button--lg {
-  height: var(--ds-button-root-height-lg);
-  padding: var(--ds-button-root-padding-y-lg) var(--ds-button-root-padding-x-lg);
+  height: var(--ds-button-height-lg);
+  padding: var(--ds-button-padding-y-lg) var(--ds-button-padding-x-lg);
   font-size: var(--ds-button-label-font-size-lg);
   line-height: var(--ds-button-label-line-height-lg);
-  min-width: var(--ds-button-root-min-width-lg);
-  gap: var(--ds-button-root-gap-lg);
+  min-width: var(--ds-button-min-width-lg);
+  gap: var(--ds-button-gap-lg);
 }
 
 /* ---------------------------------------------------------
    Variant: Brand (primary filled — action/primary/default)
    --------------------------------------------------------- */
 .ds-button--brand {
-  background-color: var(--ds-button-root-background-brand-default);
+  background-color: var(--ds-button-bg-brand-default);
   color: var(--ds-button-content-color-brand-default);
   border-color: transparent;
 }
 
 .ds-button--brand:hover {
-  background-color: var(--ds-button-root-background-brand-hover);
+  background-color: var(--ds-button-bg-brand-hover);
   color: var(--ds-button-content-color-brand-hover);
 }
 
 .ds-button--brand:active {
-  background-color: var(--ds-button-root-background-brand-pressed);
+  background-color: var(--ds-button-bg-brand-pressed);
   color: var(--ds-button-content-color-brand-pressed);
 }
 
 .ds-button--brand[disabled],
 .ds-button--brand.ds-button--disabled {
-  background-color: var(--ds-button-root-background-brand-disabled);
+  background-color: var(--ds-button-bg-brand-disabled);
   color: var(--ds-button-content-color-brand-disabled);
 }
 
@@ -101,24 +101,24 @@
    Variant: Toned (alpha-tinted primary — action/primary/toned)
    --------------------------------------------------------- */
 .ds-button--toned {
-  background-color: var(--ds-button-root-background-toned-default);
+  background-color: var(--ds-button-bg-toned-default);
   color: var(--ds-button-content-color-toned-default);
   border-color: transparent;
 }
 
 .ds-button--toned:hover {
-  background-color: var(--ds-button-root-background-toned-hover);
+  background-color: var(--ds-button-bg-toned-hover);
   color: var(--ds-button-content-color-toned-hover);
 }
 
 .ds-button--toned:active {
-  background-color: var(--ds-button-root-background-toned-pressed);
+  background-color: var(--ds-button-bg-toned-pressed);
   color: var(--ds-button-content-color-toned-pressed);
 }
 
 .ds-button--toned[disabled],
 .ds-button--toned.ds-button--disabled {
-  background-color: var(--ds-button-root-background-toned-disabled);
+  background-color: var(--ds-button-bg-toned-disabled);
   color: var(--ds-button-content-color-toned-disabled);
 }
 
@@ -128,26 +128,26 @@
 .ds-button--outline {
   background-color: transparent;
   color: var(--ds-button-content-color-outline-default);
-  border-color: var(--ds-button-root-border-color-outline-default);
+  border-color: var(--ds-button-border-color-outline-default);
 }
 
 .ds-button--outline:hover {
-  background-color: var(--ds-button-root-background-outline-hover);
+  background-color: var(--ds-button-bg-outline-hover);
   color: var(--ds-button-content-color-outline-hover);
-  border-color: var(--ds-button-root-border-color-outline-hover);
+  border-color: var(--ds-button-border-color-outline-hover);
 }
 
 .ds-button--outline:active {
-  background-color: var(--ds-button-root-background-outline-pressed);
+  background-color: var(--ds-button-bg-outline-pressed);
   color: var(--ds-button-content-color-outline-pressed);
-  border-color: var(--ds-button-root-border-color-outline-pressed);
+  border-color: var(--ds-button-border-color-outline-pressed);
 }
 
 .ds-button--outline[disabled],
 .ds-button--outline.ds-button--disabled {
   background-color: transparent;
   color: var(--ds-button-content-color-outline-disabled);
-  border-color: var(--ds-button-root-border-color-outline-disabled);
+  border-color: var(--ds-button-border-color-outline-disabled);
 }
 
 /* ---------------------------------------------------------
@@ -160,12 +160,12 @@
 }
 
 .ds-button--ghost:hover {
-  background-color: var(--ds-button-root-background-ghost-hover);
+  background-color: var(--ds-button-bg-ghost-hover);
   color: var(--ds-button-content-color-ghost-hover);
 }
 
 .ds-button--ghost:active {
-  background-color: var(--ds-button-root-background-ghost-pressed);
+  background-color: var(--ds-button-bg-ghost-pressed);
   color: var(--ds-button-content-color-ghost-pressed);
 }
 
@@ -179,24 +179,28 @@
    Variant: Success
    --------------------------------------------------------- */
 .ds-button--success {
-  background-color: var(--ds-button-root-background-success-default);
+  background-color: var(--ds-button-bg-success-default);
   color: var(--ds-button-content-color-success-default);
   border-color: transparent;
 }
 
+.ds-button--success:focus-visible {
+  outline-color: var(--ds-button-focus-ring-color-success);
+}
+
 .ds-button--success:hover {
-  background-color: var(--ds-button-root-background-success-hover);
+  background-color: var(--ds-button-bg-success-hover);
   color: var(--ds-button-content-color-success-hover);
 }
 
 .ds-button--success:active {
-  background-color: var(--ds-button-root-background-success-pressed);
+  background-color: var(--ds-button-bg-success-pressed);
   color: var(--ds-button-content-color-success-pressed);
 }
 
 .ds-button--success[disabled],
 .ds-button--success.ds-button--disabled {
-  background-color: var(--ds-button-root-background-success-disabled);
+  background-color: var(--ds-button-bg-success-disabled);
   color: var(--ds-button-content-color-success-disabled);
 }
 
@@ -204,24 +208,28 @@
    Variant: Danger (action/danger/default)
    --------------------------------------------------------- */
 .ds-button--danger {
-  background-color: var(--ds-button-root-background-danger-default);
+  background-color: var(--ds-button-bg-danger-default);
   color: var(--ds-button-content-color-danger-default);
   border-color: transparent;
 }
 
+.ds-button--danger:focus-visible {
+  outline-color: var(--ds-button-focus-ring-color-danger);
+}
+
 .ds-button--danger:hover {
-  background-color: var(--ds-button-root-background-danger-hover);
+  background-color: var(--ds-button-bg-danger-hover);
   color: var(--ds-button-content-color-danger-hover);
 }
 
 .ds-button--danger:active {
-  background-color: var(--ds-button-root-background-danger-pressed);
+  background-color: var(--ds-button-bg-danger-pressed);
   color: var(--ds-button-content-color-danger-pressed);
 }
 
 .ds-button--danger[disabled],
 .ds-button--danger.ds-button--disabled {
-  background-color: var(--ds-button-root-background-danger-disabled);
+  background-color: var(--ds-button-bg-danger-disabled);
   color: var(--ds-button-content-color-danger-disabled);
 }
 
@@ -233,18 +241,18 @@
 }
 
 .ds-button--icon-only.ds-button--sm {
-  width: var(--ds-button-root-icon-only-width-sm);
-  padding: var(--ds-button-root-icon-only-padding-sm);
+  width: var(--ds-button-icon-only-width-sm);
+  padding: var(--ds-button-icon-only-padding-sm);
 }
 
 .ds-button--icon-only:not(.ds-button--sm):not(.ds-button--lg) {
-  width: var(--ds-button-root-icon-only-width-md);
-  padding: var(--ds-button-root-icon-only-padding-md);
+  width: var(--ds-button-icon-only-width-md);
+  padding: var(--ds-button-icon-only-padding-md);
 }
 
 .ds-button--icon-only.ds-button--lg {
-  width: var(--ds-button-root-icon-only-width-lg);
-  padding: var(--ds-button-root-icon-only-padding-lg);
+  width: var(--ds-button-icon-only-width-lg);
+  padding: var(--ds-button-icon-only-padding-lg);
 }
 
 .ds-button .material-symbols-outlined {

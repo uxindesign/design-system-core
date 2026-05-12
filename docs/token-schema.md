@@ -1,6 +1,6 @@
 # Token schema — Design System Core
 
-> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-05-11. Não editar manualmente.
+> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-05-12. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
 > Versão atual: **1.0.0-beta.4**
 
@@ -20,7 +20,7 @@
 |--------|--------|----------|
 | Foundation/Core | **266** | 9 |
 | Semantic/System | **174 × 2 modos** | light.json + dark.json |
-| Component | **304** | 19 |
+| Component | **313** | 19 |
 
 ## Foundation (266 tokens)
 
@@ -62,7 +62,7 @@ semantic.typography.*
 semantic.z.*
 ```
 
-## Component (304 tokens)
+## Component (313 tokens)
 
 | Arquivo | Tokens |
 |---------|--------|
@@ -70,9 +70,9 @@ semantic.z.*
 | `avatar.json` | 16 |
 | `badge.json` | 8 |
 | `breadcrumb.json` | 11 |
-| `button.json` | 100 |
+| `button.json` | 102 |
 | `card.json` | 17 |
-| `checkbox.json` | 6 |
+| `checkbox.json` | 13 |
 | `divider.json` | 3 |
 | `form-field.json` | 19 |
 | `input.json` | 3 |
@@ -121,4 +121,4 @@ semantic.z.*
 - **ADR-016** — — Tokens sem equivalência no Figma (CSS-only) (Aceito)
 - **ADR-017** — — Componentes CSS-only (sem equivalência no Figma) (Aceito)
 - **ADR-018** — — Renomear `content.{default,secondary,tertiary}` para `content.{strong,default,subtle}` (Aceito)
-- **ADR-019** — — Reintrodução de Component tokens como contrato anatômico (Aceito)
+- **ADR-019** — — Reintrodução de Component tokens como contrato anatômico (Aceita)

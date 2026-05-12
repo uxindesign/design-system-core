@@ -17,8 +17,8 @@
 /* Dialog */
 .ds-modal {
   background-color: var(--ds-surface-elevated);
-  border-radius: var(--ds-modal-root-radius-default);
-  box-shadow: var(--ds-modal-root-shadow-default);
+  border-radius: var(--ds-modal-radius-default);
+  box-shadow: var(--ds-modal-shadow-default);
   width: 100%;
   max-height: calc(100vh - var(--ds-space-section-sm));
   display: flex;
@@ -27,9 +27,9 @@
 }
 
 /* Sizes */
-.ds-modal--sm { max-width: var(--ds-modal-root-max-width-sm); }
-.ds-modal--md { max-width: var(--ds-modal-root-max-width-md); }
-.ds-modal--lg { max-width: var(--ds-modal-root-max-width-lg); }
+.ds-modal--sm { max-width: var(--ds-modal-max-width-sm); }
+.ds-modal--md { max-width: var(--ds-modal-max-width-md); }
+.ds-modal--lg { max-width: var(--ds-modal-max-width-lg); }
 
 /* Header */
 .ds-modal__header {

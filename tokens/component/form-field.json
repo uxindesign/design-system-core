@@ -1,13 +1,11 @@
 {
   "component": {
     "form-field": {
-      "root": {
-        "gap": {
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.space.xs}",
-            "$description": "Gap vertical entre label, controle, helper e erro no Form Field."
-          }
+      "gap": {
+        "default": {
+          "$type": "dimension",
+          "$value": "{semantic.space.xs}",
+          "$description": "Gap vertical entre label, controle, helper e erro no Form Field."
         }
       },
       "label-row": {

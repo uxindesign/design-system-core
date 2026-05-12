@@ -358,6 +358,7 @@ const JSON_ONLY_PATHS = [
   /^semantic\.motion\./,                               // motion (runtime — Smart Animate)
   /^semantic\.z\./,                                    // z-index (Figma usa layer order)
   /^semantic\.shadow\./,                               // shadow (Figma Effect Style, não Variable)
+  /^component\.form-field\./,                          // ADR-017: Form Field é componente CSS-only
   // 2xs (11px) é micro-text usado em docs/layout.css. Figma omite por estar
   // abaixo do mínimo recomendado WCAG 1.4.4 (12px); CSS mantém pra meta-info.
   /^foundation\.typography\.font\.size\.11$/,

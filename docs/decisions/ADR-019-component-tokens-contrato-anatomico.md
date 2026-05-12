@@ -1,26 +1,26 @@
 # ADR-019 — Reintrodução de Component tokens como contrato anatômico
 
-- **Status:** Aceito
+- **Status:** Aceita
 - **Data:** 2026-05-11
 - **Substitui:** partes de ADR-013 e ADR-015 que eliminavam a camada Component como regra geral
 - **Relaciona:** ADR-006, ADR-013, ADR-015, ADR-017
 
 ## Contexto
 
-ADR-013 estabilizou a arquitetura em duas camadas, Foundation -> Semantic, depois de uma migracao que eliminou a antiga collection Component. A decisao corrigiu um problema real: muitos tokens Component eram wrappers mecanicos 1:1 sem contrato proprio, por exemplo um token por componente apenas para repetir a mesma cor, motion ou dimensao ja expressa por Semantic.
+ADR-013 estabilizou a arquitetura em duas camadas, Foundation -> Semantic, depois de uma migração que eliminou a antiga collection Component. A decisão corrigiu um problema real: muitos tokens Component eram wrappers mecânicos 1:1 sem contrato próprio, por exemplo um token por componente apenas para repetir a mesma cor, motion ou dimensão já expressa por Semantic.
 
 A auditoria dimensional de controles de formulario mostrou outro problema. Componentes com a mesma variant nominal (`sm`, `md`, `lg`) podem precisar de partes anatômicas com tamanhos diferentes:
 
-- Input e Button usam 32/40/48 como altura visual e area interativa.
-- Checkbox e Radio usam 32/40/48 como area interativa, mas o glyph visual e 16/20/24.
-- Toggle usa 32/40/48 como area interativa, mas a track visual precisa manter proporcoes proprias.
+- Input e Button usam 32/40/48 como altura visual e área interativa.
+- Checkbox e Radio usam 32/40/48 como área interativa, mas o glyph visual é 16/20/24.
+- Toggle usa 32/40/48 como área interativa, mas a track visual precisa manter proporções próprias.
 
-Sem Component tokens, a implementacao precisa escolher entre duas opcoes ruins:
+Sem Component tokens, a implementação precisa escolher entre duas opções ruins:
 
-1. Consumir `semantic.size.xs/sm/md` diretamente em `Checkbox sm/md/lg`, o que parece inconsistente para quem le a documentacao do componente.
-2. Criar nomes Semantic artificiais ou especificos demais, como `control.track-width`, tentando esconder uma decisao que na pratica pertence ao Toggle.
+1. Consumir `semantic.size.xs/sm/md` diretamente em `Checkbox sm/md/lg`, o que parece inconsistente para quem lê a documentação do componente.
+2. Criar nomes Semantic artificiais ou específicos demais, como `control.track-width`, tentando esconder uma decisão que na prática pertence ao Toggle.
 
-Design systems de referencia usam uma camada equivalente a Component tokens para expor contratos anatômicos de componente. Material Web distingue tokens de sistema (`--md-sys-*`) de tokens de componente (`--md-switch-*`, `--md-checkbox-*`). Carbon documenta component tokens como propriedades associadas a um componente especifico. Spectrum modela `component`, `anatomy`, `property`, `variant` e `state` como eixos legitimos de classificacao de tokens.
+Design systems de referência usam uma camada equivalente a Component tokens para expor contratos anatômicos de componente. Material Web distingue tokens de sistema (`--md-sys-*`) de tokens de componente (`--md-switch-*`, `--md-checkbox-*`). Carbon documenta component tokens como propriedades associadas a um componente específico. Spectrum modela `component`, `anatomy`, `property`, `variant` e `state` como eixos legítimos de classificação de tokens.
 
 ## Decisao
 
@@ -36,7 +36,7 @@ Foundation/Core -> Semantic/System -> Component -> implementacao
 
 #### Foundation/Core
 
-Primitivos sem intencao de uso:
+Primitivos sem intenção de uso:
 
 ```txt
 foundation.dimension.40
@@ -45,11 +45,11 @@ foundation.radius.4
 foundation.border.width.1
 ```
 
-Foundation nao fala de componente, estado de UI ou anatomia.
+Foundation não fala de componente, estado de UI ou anatomia.
 
 #### Semantic/System
 
-Decisoes reutilizaveis do sistema:
+Decisões reutilizáveis do sistema:
 
 ```txt
 semantic.size.xl
@@ -59,7 +59,7 @@ semantic.feedback.error.content.default
 semantic.border.control.default
 ```
 
-Semantic nao deve conter nome de componente. `control` continua permitido quando o conceito e reutilizavel por varios controles, nao quando nomeia uma parte exclusiva de um componente.
+Semantic não deve conter nome de componente. `control` continua permitido quando o conceito é reutilizável por vários controles, não quando nomeia uma parte exclusiva de um componente.
 
 #### Component
 
@@ -71,32 +71,51 @@ component.checkbox.box.size.sm
 component.checkbox.mark.size.sm
 component.toggle.track.width.md
 component.toggle.thumb.size.md
-component.input.root.height.md
+component.input.height.md
 ```
 
-Component tokens podem ser alias 1:1 para Semantic quando esse alias documenta uma parte publica e estavel da anatomia do componente. O problema a evitar nao e o alias 1:1; e criar wrapper sem anatomia, sem contrato e sem uso claro.
+Component tokens podem ser alias 1:1 para Semantic quando esse alias documenta uma parte pública e estável da anatomia do componente. O problema a evitar não é o alias 1:1; é criar wrapper sem anatomia, sem contrato e sem uso claro.
 
 ### Naming
 
-Formato canônico:
+Formato canônico DTCG:
 
 ```txt
-component.<component>.<part>.<property>.<variant-or-state>
+component.<component>.[<part>.]<property>.<variant-or-state>
 ```
+
+Formato canônico no Figma:
+
+```txt
+<component>/[<part>/]<property>/<variant-or-state>
+```
+
+No Figma, o prefixo de camada nao entra no nome da variable porque a propria collection `Component` ja define a camada. Assim, `button/height/md` na collection `Component` corresponde a `component.button.height.md` em DTCG. Nao usar `component/button/...` dentro da collection `Component`, porque isso duplica a camada como `Component/component/...` na UI.
+
+O segmento `<part>` é opcional. Ele deve aparecer quando existe anatomia real ou ambiguidade entre partes do componente (`checkbox.target`, `checkbox.box`, `toggle.track`, `toggle.thumb`, `button.label`, `button.icon`, `button.focus-ring`). Quando a propriedade pertence ao componente como um todo ou à superfície principal, o path deve ser mais curto:
+
+```txt
+component.button.height.md
+component.button.bg.brand.default
+component.input.height.sm
+component.avatar.size.md
+```
+
+Não usar `root` como parte genérica apenas para representar o nó externo. Isso aumenta o nome sem adicionar contrato anatômico público. Se em algum componente o wrapper externo tiver semântica própria diferente da superfície principal, a parte deve receber um nome funcional mais claro.
 
 Campos:
 
-- `<component>`: slug estavel do componente (`button`, `input`, `checkbox`, `radio`, `toggle`).
-- `<part>`: anatomia publica (`root`, `target`, `box`, `track`, `thumb`, `icon`, `label`, `helper`, `description`).
-- `<property>`: propriedade visual ou estrutural (`height`, `width`, `size`, `background`, `border`, `radius`, `font-size`, `line-height`, `gap`, `inset`).
-- `<variant-or-state>`: size, state ou role quando necessario (`sm`, `md`, `lg`, `default`, `hover`, `selected`, `disabled`, `error`).
+- `<component>`: slug estável do componente (`button`, `input`, `checkbox`, `radio`, `toggle`).
+- `<part>`: anatomia pública quando necessária (`target`, `box`, `track`, `thumb`, `icon`, `label`, `helper`, `description`, `focus-ring`).
+- `<property>`: propriedade visual ou estrutural (`height`, `width`, `size`, `bg`, `border`, `radius`, `font-size`, `line-height`, `gap`, `inset`).
+- `<variant-or-state>`: size, state ou role quando necessário (`sm`, `md`, `lg`, `default`, `hover`, `selected`, `disabled`, `error`).
 
-Exemplos aceites:
+Exemplos aceitos:
 
 ```txt
 component.checkbox.target.height.sm -> semantic.size.lg
 component.checkbox.box.size.sm -> semantic.size.xs
-component.input.root.height.sm -> semantic.size.lg
+component.input.height.sm -> semantic.size.lg
 component.toggle.target.height.md -> semantic.size.xl
 component.toggle.track.height.md -> semantic.size.md
 ```
@@ -104,28 +123,28 @@ component.toggle.track.height.md -> semantic.size.md
 Exemplos rejeitados:
 
 ```txt
-component.button.primary.background.default -> semantic.primary.background.default
+component.button.bg.brand.default -> semantic.primary.background.default
 ```
 
-Rejeitado quando for apenas duplicacao de uma decisao de role/style ja expressa por Semantic e nao houver contrato anatômico adicional. Se a documentacao do componente precisar expor essa decisao como API de customizacao, o token Component passa a ser aceitavel.
+Rejeitado quando for apenas duplicação de uma decisão de role/style já expressa por Semantic e não houver contrato anatômico adicional. Se a documentação do componente precisar expor essa decisão como API de customização, o token Component passa a ser aceitável.
 
 ### Regra de consumo
 
 CSS e bindings Figma de componentes devem consumir Component tokens quando existir token Component para aquela anatomia.
 
-Durante a migracao, componentes ainda podem consumir Semantic diretamente ate receberem seus Component tokens. Novos trabalhos estruturais em componentes devem preferir a camada Component.
+Durante a migração, componentes ainda podem consumir Semantic diretamente até receberem seus Component tokens. Novos trabalhos estruturais em componentes devem preferir a camada Component.
 
 ### Valores especificos de componente
 
 O caminho preferencial e Component -> Semantic -> Foundation.
 
-Se uma dimensao especifica de componente nao existir em Semantic, a decisao deve seguir esta ordem:
+Se uma dimensão específica de componente não existir em Semantic, a decisão deve seguir esta ordem:
 
 1. Verificar se a escala Semantic existente resolve o caso.
 2. Criar ou reaproveitar um token Semantic se a decisao for reutilizavel fora do componente.
 3. Criar um token Component se a decisao for anatômica e especifica do componente.
 
-Quando a decisao for especifica e ainda assim precisar de valor fora da escala Semantic, a ADR da mudanca deve explicitar se o valor entra em Semantic como novo padrao reutilizavel ou se fica como contrato Component. Essa excecao nao pode ser implicita.
+Quando a decisão for específica e ainda assim precisar de valor fora da escala Semantic, a ADR da mudança deve explicitar se o valor entra em Semantic como novo padrão reutilizável ou se fica como contrato Component. Essa exceção não pode ser implícita.
 
 ## Consequencias
 
@@ -138,10 +157,10 @@ Quando a decisao for especifica e ainda assim precisar de valor fora da escala S
 
 ### Negativas
 
-- Reintroduz uma terceira camada e aumenta o numero de tokens.
-- Exige migracao incremental de componentes existentes.
-- Requer disciplina para nao recriar a antiga camada Component como espelho mecanico de tudo.
-- Exige ajustes em build, docs, API, registry e verificacao.
+- Reintroduz uma terceira camada e aumenta o número de tokens.
+- Exige migração incremental de componentes existentes.
+- Requer disciplina para não recriar a antiga camada Component como espelho mecânico de tudo.
+- Exige ajustes em build, docs, API, registry e verificação.
 
 ## Plano de migracao
 

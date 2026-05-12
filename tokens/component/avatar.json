@@ -1,30 +1,28 @@
 {
   "component": {
     "avatar": {
-      "root": {
-        "size": {
-          "sm": {
-            "$type": "dimension",
-            "$value": "{semantic.size.lg}",
-            "$description": "Tamanho do root Avatar sm."
-          },
-          "md": {
-            "$type": "dimension",
-            "$value": "{semantic.size.xl}",
-            "$description": "Tamanho do root Avatar md."
-          },
-          "lg": {
-            "$type": "dimension",
-            "$value": "{semantic.size.3xl}",
-            "$description": "Tamanho do root Avatar lg."
-          }
+      "size": {
+        "sm": {
+          "$type": "dimension",
+          "$value": "{semantic.size.lg}",
+          "$description": "Tamanho do Avatar sm."
         },
-        "radius": {
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.radius.full}",
-            "$description": "Radius circular do root Avatar."
-          }
+        "md": {
+          "$type": "dimension",
+          "$value": "{semantic.size.xl}",
+          "$description": "Tamanho do Avatar md."
+        },
+        "lg": {
+          "$type": "dimension",
+          "$value": "{semantic.size.3xl}",
+          "$description": "Tamanho do Avatar lg."
+        }
+      },
+      "radius": {
+        "default": {
+          "$type": "dimension",
+          "$value": "{semantic.radius.full}",
+          "$description": "Radius circular do Avatar."
         }
       },
       "initials": {

@@ -9,7 +9,7 @@
 /* Base spinner — Figma: track border/subtle, indicator border/brand */
 .ds-spinner {
   display: inline-block;
-  border-radius: var(--ds-spinner-root-radius-default);
+  border-radius: var(--ds-spinner-radius-default);
   border: var(--ds-spinner-ring-stroke-width-default) solid var(--ds-border-subtle);
   border-top-color: var(--ds-border-brand);
   /* motion.duration.slower (600ms) e motion.ease.linear são tokens
@@ -23,21 +23,21 @@
 /* Default size: md */
 .ds-spinner,
 .ds-spinner--md {
-  width: var(--ds-spinner-root-size-md);
-  height: var(--ds-spinner-root-size-md);
+  width: var(--ds-spinner-size-md);
+  height: var(--ds-spinner-size-md);
 }
 
 /* ---------------------------------------------------------
    Sizes
    --------------------------------------------------------- */
 .ds-spinner--sm {
-  width: var(--ds-spinner-root-size-sm);
-  height: var(--ds-spinner-root-size-sm);
+  width: var(--ds-spinner-size-sm);
+  height: var(--ds-spinner-size-sm);
 }
 
 .ds-spinner--lg {
-  width: var(--ds-spinner-root-size-lg);
-  height: var(--ds-spinner-root-size-lg);
+  width: var(--ds-spinner-size-lg);
+  height: var(--ds-spinner-size-lg);
 }
 
 /* ---------------------------------------------------------

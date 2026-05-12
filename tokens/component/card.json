@@ -1,20 +1,18 @@
 {
   "component": {
     "card": {
-      "root": {
-        "radius": {
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.radius.lg}",
-            "$description": "Radius do root Card."
-          }
-        },
-        "border-width": {
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.border.width.default}",
-            "$description": "Border width do root Card quando stroke está ativo."
-          }
+      "radius": {
+        "default": {
+          "$type": "dimension",
+          "$value": "{semantic.radius.lg}",
+          "$description": "Radius do Card."
+        }
+      },
+      "border-width": {
+        "default": {
+          "$type": "dimension",
+          "$value": "{semantic.border.width.default}",
+          "$description": "Border width do Card quando stroke está ativo."
         }
       },
       "header": {

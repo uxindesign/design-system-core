@@ -4,7 +4,7 @@
 
 .ds-card {
   background-color: var(--ds-surface-default);
-  border-radius: var(--ds-card-root-radius-default);
+  border-radius: var(--ds-card-radius-default);
   overflow: hidden;
 }
 
@@ -46,12 +46,12 @@
 
 /* Default — subtle border */
 .ds-card--default {
-  border: var(--ds-card-root-border-width-default) solid var(--ds-border-subtle);
+  border: var(--ds-card-border-width-default) solid var(--ds-border-subtle);
 }
 
 /* Outlined — stronger border */
 .ds-card--outlined {
-  border: var(--ds-card-root-border-width-default) solid var(--ds-border-default);
+  border: var(--ds-card-border-width-default) solid var(--ds-border-default);
 }
 
 /* Elevated — raised surface + semantic card shadow, no stroke in Figma. */

@@ -168,7 +168,7 @@
       "id": "ADR-019",
       "num": 19,
       "title": "— Reintrodução de Component tokens como contrato anatômico",
-      "status": "Aceito",
+      "status": "Aceita",
       "date": "2026-05-11",
       "sourceFile": "docs/decisions/ADR-019-component-tokens-contrato-anatomico.md",
       "url": "https://uxindesign.github.io/design-system-core/docs/decisions/adr-019-component-tokens-contrato-anatomico.html"
