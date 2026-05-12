@@ -86,12 +86,12 @@
       <strong>2</strong> Required indicator (<code>.ds-field__required</code>) — asterisco visual, <code>aria-hidden="true"</code> (a obrigatoriedade vem do <code>aria-required</code> no controle).<br>
       <strong>3</strong> Controle — Input/Select/Textarea/Checkbox group, com <code>id</code> matching o label e <code>aria-describedby</code> apontando pro helper.<br>
       <strong>4</strong> Helper text (<code>.ds-field__helper</code>) — orientação ou contexto adicional, com <code>id</code> referenciado pelo <code>aria-describedby</code> do controle.<br>
-      <strong>5</strong> Error message (<code>.ds-field__error</code>) — mensagem de validação, aparece apenas em <code>.ds-field--error</code> com <code>role="alert"</code>.</span>
+      <strong>5</strong> Error message (<code>.ds-field__error</code>) — ícone + mensagem de validação, aparece apenas em <code>.ds-field--error</code> com <code>role="alert"</code>.</span>
       <span data-lang="en"><strong>1</strong> Label (<code>.ds-field__label</code>) — descriptive text with <code>for=</code> pointing to the control's <code>id</code>.<br>
       <strong>2</strong> Required indicator (<code>.ds-field__required</code>) — visual asterisk, <code>aria-hidden="true"</code> (required state comes from <code>aria-required</code> on the control).<br>
       <strong>3</strong> Control — Input/Select/Textarea/Checkbox group, with matching <code>id</code> and <code>aria-describedby</code> pointing to the helper.<br>
       <strong>4</strong> Helper text (<code>.ds-field__helper</code>) — guidance or additional context, with <code>id</code> referenced by control's <code>aria-describedby</code>.<br>
-      <strong>5</strong> Error message (<code>.ds-field__error</code>) — validation message, shown only in <code>.ds-field--error</code> with <code>role="alert"</code>.</span>
+      <strong>5</strong> Error message (<code>.ds-field__error</code>) — icon + validation message, shown only in <code>.ds-field--error</code> with <code>role="alert"</code>.</span>
     </div>
   </div>
 
@@ -256,6 +256,8 @@
         <tr><td>required color</td><td><code>component.form-field.required.color.default</code></td><td><code>--ds-form-field-required-color-default</code></td></tr>
         <tr><td>helper color</td><td><code>component.form-field.helper.color.default</code></td><td><code>--ds-form-field-helper-color-default</code></td></tr>
         <tr><td>error color</td><td><code>component.form-field.error.color.default</code></td><td><code>--ds-form-field-error-color-default</code></td></tr>
+        <tr><td>error gap</td><td><code>component.form-field.error.gap.default</code></td><td><code>--ds-form-field-error-gap-default</code></td></tr>
+        <tr><td>error icon</td><td><code>component.form-field.error.icon.{color,frame-size,glyph-size}.default</code></td><td><code>--ds-form-field-error-icon-*-default</code></td></tr>
         <tr><td>label typography</td><td><code>component.form-field.label.{font-size,line-height,font-weight}.default</code></td><td><code>--ds-form-field-label-*-default</code></td></tr>
         <tr><td>helper/error typography</td><td><code>component.form-field.{helper,error}.{font-size,line-height,font-weight}.default</code></td><td><code>--ds-form-field-helper-*-default</code> / <code>--ds-form-field-error-*-default</code></td></tr>
       </tbody>
@@ -274,7 +276,7 @@
         <tr><td><code>ds-field__label</code></td><td><span data-lang="pt">Texto do label (14px medium).</span><span data-lang="en">Label text (14px medium).</span></td></tr>
         <tr><td><code>ds-field__required</code></td><td><span data-lang="pt">Asterisco visual (decorativo, <code>aria-hidden</code>).</span><span data-lang="en">Visual asterisk (decorative, <code>aria-hidden</code>).</span></td></tr>
         <tr><td><code>ds-field__helper</code></td><td><span data-lang="pt">Helper text (12px secundário).</span><span data-lang="en">Helper text (12px secondary).</span></td></tr>
-        <tr><td><code>ds-field__error</code></td><td><span data-lang="pt">Mensagem de erro. Visível apenas em <code>--error</code>.</span><span data-lang="en">Error message. Visible only with <code>--error</code>.</span></td></tr>
+        <tr><td><code>ds-field__error</code></td><td><span data-lang="pt">Linha de erro com ícone automático e mensagem. Visível apenas em <code>--error</code>.</span><span data-lang="en">Error row with automatic icon and message. Visible only with <code>--error</code>.</span></td></tr>
         <tr><td><code>ds-field--error</code></td><td><span data-lang="pt">Modificador: estado de erro. Mostra error message, tinge label.</span><span data-lang="en">Modifier: error state. Shows error message, tints label.</span></td></tr>
         <tr><td><code>ds-field--no-label</code></td><td><span data-lang="pt">Modificador: esconde label-row. Usar com <code>aria-label</code> no controle.</span><span data-lang="en">Modifier: hides label-row. Pair with <code>aria-label</code> on control.</span></td></tr>
         <tr><td><code>ds-field--no-helper</code></td><td><span data-lang="pt">Modificador: esconde helper.</span><span data-lang="en">Modifier: hides helper.</span></td></tr>

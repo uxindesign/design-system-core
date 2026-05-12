@@ -6553,13 +6553,14 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 5
+            "count": 6
           }
         ],
         "tokens": [
           "component.form-field.label.color.error",
           "component.form-field.required.color.default",
           "component.form-field.error.color.default",
+          "component.form-field.error.icon.color.default",
           "component.input.required.color.default",
           "component.select.required.color.default"
         ],
@@ -6893,7 +6894,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 15
+            "count": 16
           },
           {
             "file": "css/utilities/layout.css",
@@ -6908,6 +6909,7 @@
           "component.button.gap.md",
           "component.button.label-frame.padding-x.default",
           "component.form-field.gap.default",
+          "component.form-field.error.gap.default",
           "component.input.gap.md",
           "component.input.stack.gap.default",
           "component.input.text-frame.padding-x.default",
@@ -9230,11 +9232,13 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 6
+            "count": 8
           }
         ],
         "tokens": [
           "component.checkbox.box.size.sm",
+          "component.form-field.error.icon.frame-size.default",
+          "component.form-field.error.icon.glyph-size.default",
           "component.input.icon.glyph-size.sm",
           "component.modal.close.glyph-size.default",
           "component.radio.control.size.sm",
@@ -15493,7 +15497,12 @@
       "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
       "decisao": "Alias 1:1 para semantic.primary.background.default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/button.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -15593,7 +15602,12 @@
       "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
       "decisao": "Alias 1:1 para semantic.toned.background.default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/button.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -15777,7 +15791,12 @@
       "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
       "decisao": "Alias 1:1 para semantic.feedback.success.background.default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/button.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -15877,7 +15896,12 @@
       "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
       "decisao": "Alias 1:1 para semantic.feedback.error.background.default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/button.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -15977,7 +16001,12 @@
       "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
       "decisao": "Alias 1:1 para semantic.border.default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/button.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -16419,7 +16448,12 @@
       "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
       "decisao": "Alias 1:1 para semantic.primary.content-default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/button.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -16509,7 +16543,12 @@
       "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
       "decisao": "Alias 1:1 para semantic.toned.content-default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/button.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -16599,7 +16638,12 @@
       "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
       "decisao": "Alias 1:1 para semantic.outline.content-default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/button.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -16689,7 +16733,12 @@
       "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
       "decisao": "Alias 1:1 para semantic.link.content-default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/button.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -16779,7 +16828,12 @@
       "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
       "decisao": "Alias 1:1 para semantic.feedback.success.content-contrast porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/button.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -16869,7 +16923,12 @@
       "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
       "decisao": "Alias 1:1 para semantic.feedback.error.content-contrast porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/button.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -20371,7 +20430,7 @@
         "css": [
           {
             "file": "css/components/select.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [],
@@ -20394,7 +20453,7 @@
         "css": [
           {
             "file": "css/components/select.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [],
@@ -20779,6 +20838,98 @@
           {
             "file": "css/components/select.css",
             "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.form-field.error.gap.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xs",
+      "sentido": "Gap horizontal entre ícone e texto da mensagem de erro do Form Field.",
+      "escopo": [
+        "Form Field",
+        "CSS-only",
+        "ADR-017"
+      ],
+      "contexto": "Contrato Component CSS-only do Form Field. O Figma vivo de Input Text, Select e Textarea usa Error Message horizontal com gap 4px entre glyph e texto.",
+      "decisao": "Alias 1:1 para semantic.space.xs porque 4px é escala reutilizável, mas no Form Field documenta a anatomia pública da linha de erro.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/form-field.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.form-field.error.icon.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.feedback.error.content-default",
+      "sentido": "Cor do ícone da mensagem de erro do Form Field.",
+      "escopo": [
+        "Form Field",
+        "CSS-only",
+        "ADR-017"
+      ],
+      "contexto": "Contrato Component CSS-only do Form Field. O Figma vivo usa glyph de erro com fill feedback/error/content/default em Input Text, Select e Textarea.",
+      "decisao": "Alias 1:1 para semantic.feedback.error.content-default, mantendo o ícone como conteúdo de erro e não como background.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/form-field.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.form-field.error.icon.frame-size.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.xs",
+      "sentido": "Frame-size do ícone da mensagem de erro do Form Field.",
+      "escopo": [
+        "Form Field",
+        "CSS-only",
+        "ADR-017"
+      ],
+      "contexto": "Contrato Component CSS-only do Form Field. O Figma vivo mede o glyph de erro em 16x16 nos estados de erro de Input Text, Select e Textarea.",
+      "decisao": "Alias 1:1 para semantic.size.xs porque 16px já existe como tamanho reutilizável, mas aqui estabiliza o contrato do ícone de erro.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/form-field.css",
+            "count": 4
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.form-field.error.icon.glyph-size.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.xs",
+      "sentido": "Tamanho do glyph do ícone da mensagem de erro do Form Field.",
+      "escopo": [
+        "Form Field",
+        "CSS-only",
+        "ADR-017"
+      ],
+      "contexto": "Contrato Component CSS-only do Form Field. O glyph Material Symbols de erro no Figma vivo usa 16px.",
+      "decisao": "Alias 1:1 para semantic.size.xs porque o glyph usa 16px e esse valor já pertence à escala Semantic.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/form-field.css",
+            "count": 1
           }
         ],
         "tokens": [],

@@ -72,6 +72,8 @@
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
 <h3>Corrigido</h3>
 <ul>
+<li><p><strong>Form Field renderiza o ícone da mensagem de erro.</strong> Adicionados <code>component.form-field.error.gap.default</code> e <code>component.form-field.error.icon.{color,frame-size,glyph-size}.default</code> ao contrato CSS-only; <code>.ds-field__error</code> passa a renderizar a linha de erro com ícone automático + texto, alinhada ao Figma vivo de Input Text, Select e Textarea (<code>gap=4px</code>, ícone <code>16px</code>, cor <code>feedback/error/content/default</code>).</p>
+</li>
 <li><p><strong>Select completo aplicado aos Component tokens.</strong> Criadas 89 novas variables <code>select/...</code> na collection Component do Figma e normalizadas as 3 alturas existentes, totalizando 92 tokens para bg, bordas, radius, focus ring, conteúdo, placeholder, chevron, ícone leading, label, required, helper, stack, label-row, sizing, padding e tipografia. Os 18 variants vivos do Select foram bindados nesses tokens; JSON/CSS/docs/API passam a consumir <code>component.select.*</code> / <code>--ds-select-*</code>, alinhando padding <code>8/12/16</code>, padding-y <code>8/10/12</code>, gap interno <code>8</code>, chevron frame <code>24</code> e glyph <code>20/24/24</code> ao Figma vivo.</p>
 </li>
 <li><p><strong>Input Text md gap sincronizado com Figma.</strong> <code>component.input.gap.md</code> passa de <code>semantic.space.sm</code> para <code>semantic.space.xs</code>, alinhando o Field Medium ao gap vivo de <code>4px</code> nos variants do Input Text.</p>

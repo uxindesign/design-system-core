@@ -206,6 +206,7 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 ## [Não publicado]
 
 ### Corrigido
+- **Form Field renderiza o ícone da mensagem de erro.** Adicionados `component.form-field.error.gap.default` e `component.form-field.error.icon.{color,frame-size,glyph-size}.default` ao contrato CSS-only; `.ds-field__error` passa a renderizar a linha de erro com ícone automático + texto, alinhada ao Figma vivo de Input Text, Select e Textarea (`gap=4px`, ícone `16px`, cor `feedback/error/content/default`).
 - **Select completo aplicado aos Component tokens.** Criadas 89 novas variables `select/...` na collection Component do Figma e normalizadas as 3 alturas existentes, totalizando 92 tokens para bg, bordas, radius, focus ring, conteúdo, placeholder, chevron, ícone leading, label, required, helper, stack, label-row, sizing, padding e tipografia. Os 18 variants vivos do Select foram bindados nesses tokens; JSON/CSS/docs/API passam a consumir `component.select.*` / `--ds-select-*`, alinhando padding `8/12/16`, padding-y `8/10/12`, gap interno `8`, chevron frame `24` e glyph `20/24/24` ao Figma vivo.
 - **Input Text md gap sincronizado com Figma.** `component.input.gap.md` passa de `semantic.space.sm` para `semantic.space.xs`, alinhando o Field Medium ao gap vivo de `4px` nos variants do Input Text.
 - **Input Text completo aplicado aos Component tokens.** `component.input` agora cobre bg, bordas, radius, focus ring, conteúdo, placeholder, ícone, label, required, helper, stack, label-row, sizing, padding e tipografia; os variants vivos no Figma foram bindados nesses atributos e o CSS passa a consumir `--ds-input-*` no wrapper e no uso composto com `.ds-field`.
@@ -1508,7 +1509,7 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 | Foundation | 266 | 🟢 |
 | Semantic (light) | 174 | 🟢 |
 | Semantic (dark) | 174 | 🟢 |
-| Component | 483 | 🟢 |
+| Component | 487 | 🟢 |
 
 ## Pipeline
 
@@ -2384,8 +2385,8 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Status
 
-- Total de tokens: **923**
-- Com metadados completos: **923**
+- Total de tokens: **927**
+- Com metadados completos: **927**
 - Pendentes (`TODO` em algum campo obrigatório): **0**
 - Completude: **100%**
 
@@ -2763,7 +2764,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.feedback.error.background.subtle` | color | → `foundation.color.red.100` | Fill de feedback erro (vermelho) em estado subtle. | 2 |
 | `semantic.feedback.error.border-default` | color | → `foundation.color.red.500` | Borda de feedback erro (vermelho) em estado default. | 2 |
 | `semantic.feedback.error.content-contrast` | color | → `foundation.color.neutral.50` | Cor de feedback erro (vermelho) em estado contrast. | 7 |
-| `semantic.feedback.error.content-default` | color | → `foundation.color.red.700` | Cor de feedback erro (vermelho) em estado default. | 11 |
+| `semantic.feedback.error.content-default` | color | → `foundation.color.red.700` | Cor de feedback erro (vermelho) em estado default. | 12 |
 | `semantic.feedback.error.content-disabled` | color | → `foundation.color.overlay.white.80` | Cor de feedback erro (vermelho) em estado disabled. | 2 |
 | `semantic.feedback.info.background.default` | color | → `foundation.color.sky.500` | Fill de feedback informação (azul) em estado default. | 2 |
 | `semantic.feedback.info.background.hover` | color | → `foundation.color.sky.600` | Fill de feedback informação (azul) em estado hover. | 0 |
@@ -2893,7 +2894,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.size.md` | dimension | → `foundation.dimension.24` | Size token md. | 25 |
 | `semantic.size.sm` | dimension | → `foundation.dimension.20` | Size token sm. | 13 |
 | `semantic.size.xl` | dimension | → `foundation.dimension.40` | Size token xl. | 10 |
-| `semantic.size.xs` | dimension | → `foundation.dimension.16` | Size token xs. | 7 |
+| `semantic.size.xs` | dimension | → `foundation.dimension.16` | Size token xs. | 9 |
 
 ### semantic.space
 
@@ -2911,7 +2912,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.space.section.xl` | dimension | → `foundation.dimension.80` | Spacing token section.xl. | 0 |
 | `semantic.space.sm` | dimension | → `foundation.dimension.8` | Spacing token sm. | 30 |
 | `semantic.space.xl` | dimension | → `foundation.dimension.20` | Spacing token xl. | 15 |
-| `semantic.space.xs` | dimension | → `foundation.dimension.4` | Spacing token xs. | 20 |
+| `semantic.space.xs` | dimension | → `foundation.dimension.4` | Spacing token xs. | 21 |
 
 ### semantic.surface
 
@@ -2984,7 +2985,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Component
 
-483 tokens.
+487 tokens.
 
 ### component.alert
 
@@ -3062,12 +3063,12 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 |---|---|---|---|---|
 | `component.button.bg.brand.default` | color | → `semantic.primary.background.default` | Bg do Button brand default. | 1 |
 | `component.button.bg.brand.disabled` | color | → `semantic.primary.background.disabled` | Bg do Button brand disabled. | 1 |
-| `component.button.bg.brand.focused` | color | → `semantic.primary.background.default` | Bg do Button brand focused. | 0 |
+| `component.button.bg.brand.focused` | color | → `semantic.primary.background.default` | Bg do Button brand focused. | 1 |
 | `component.button.bg.brand.hover` | color | → `semantic.primary.background.hover` | Bg do Button brand hover. | 1 |
 | `component.button.bg.brand.pressed` | color | → `semantic.primary.background.active` | Bg do Button brand pressed. | 1 |
 | `component.button.bg.danger.default` | color | → `semantic.feedback.error.background.default` | Bg do Button danger default. | 1 |
 | `component.button.bg.danger.disabled` | color | → `semantic.feedback.error.background.disabled` | Bg do Button danger disabled. | 1 |
-| `component.button.bg.danger.focused` | color | → `semantic.feedback.error.background.default` | Bg do Button danger focused. | 0 |
+| `component.button.bg.danger.focused` | color | → `semantic.feedback.error.background.default` | Bg do Button danger focused. | 1 |
 | `component.button.bg.danger.hover` | color | → `semantic.feedback.error.background.hover` | Bg do Button danger hover. | 1 |
 | `component.button.bg.danger.pressed` | color | → `semantic.feedback.error.background.active` | Bg do Button danger pressed. | 1 |
 | `component.button.bg.ghost.hover` | color | → `semantic.ghost.background.hover` | Bg do Button ghost hover. | 1 |
@@ -3076,48 +3077,48 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.button.bg.outline.pressed` | color | → `semantic.background.subtle` | Bg do Button outline pressed. | 1 |
 | `component.button.bg.success.default` | color | → `semantic.feedback.success.background.default` | Bg do Button success default. | 1 |
 | `component.button.bg.success.disabled` | color | → `semantic.feedback.success.background.disabled` | Bg do Button success disabled. | 1 |
-| `component.button.bg.success.focused` | color | → `semantic.feedback.success.background.default` | Bg do Button success focused. | 0 |
+| `component.button.bg.success.focused` | color | → `semantic.feedback.success.background.default` | Bg do Button success focused. | 1 |
 | `component.button.bg.success.hover` | color | → `semantic.feedback.success.background.hover` | Bg do Button success hover. | 1 |
 | `component.button.bg.success.pressed` | color | → `semantic.feedback.success.background.active` | Bg do Button success pressed. | 1 |
 | `component.button.bg.toned.default` | color | → `semantic.toned.background.default` | Bg do Button toned default. | 1 |
 | `component.button.bg.toned.disabled` | color | → `semantic.toned.background.disabled` | Bg do Button toned disabled. | 1 |
-| `component.button.bg.toned.focused` | color | → `semantic.toned.background.default` | Bg do Button toned focused. | 0 |
+| `component.button.bg.toned.focused` | color | → `semantic.toned.background.default` | Bg do Button toned focused. | 1 |
 | `component.button.bg.toned.hover` | color | → `semantic.toned.background.hover` | Bg do Button toned hover. | 1 |
 | `component.button.bg.toned.pressed` | color | → `semantic.toned.background.active` | Bg do Button toned pressed. | 1 |
 | `component.button.border-color.outline.default` | color | → `semantic.outline.border-default` | Border color do Button outline default. | 1 |
 | `component.button.border-color.outline.disabled` | color | → `semantic.border.control-disabled` | Border color do Button outline disabled. | 1 |
-| `component.button.border-color.outline.focused` | color | → `semantic.border.default` | Border color do Button outline focused. | 0 |
+| `component.button.border-color.outline.focused` | color | → `semantic.border.default` | Border color do Button outline focused. | 1 |
 | `component.button.border-color.outline.hover` | color | → `semantic.outline.border-hover` | Border color do Button outline hover. | 1 |
 | `component.button.border-color.outline.pressed` | color | → `semantic.border.control-default` | Border color do Button outline pressed. | 1 |
 | `component.button.border-width.default` | dimension | → `semantic.border.width.default` | Border width do Button quando stroke está ativo. | 1 |
 | `component.button.content.color.brand.default` | color | → `semantic.primary.content-default` | Cor de conteúdo do Button default undefined. | 1 |
 | `component.button.content.color.brand.disabled` | color | → `semantic.primary.content-disabled` | Cor de conteúdo do Button disabled undefined. | 1 |
-| `component.button.content.color.brand.focused` | color | → `semantic.primary.content-default` | Cor de conteúdo do Button focused undefined. | 0 |
+| `component.button.content.color.brand.focused` | color | → `semantic.primary.content-default` | Cor de conteúdo do Button focused undefined. | 1 |
 | `component.button.content.color.brand.hover` | color | → `semantic.primary.content-default` | Cor de conteúdo do Button hover undefined. | 1 |
 | `component.button.content.color.brand.pressed` | color | → `semantic.primary.content-default` | Cor de conteúdo do Button pressed undefined. | 1 |
 | `component.button.content.color.danger.default` | color | → `semantic.feedback.error.content-contrast` | Cor de conteúdo do Button default undefined. | 1 |
 | `component.button.content.color.danger.disabled` | color | → `semantic.feedback.error.content-disabled` | Cor de conteúdo do Button disabled undefined. | 1 |
-| `component.button.content.color.danger.focused` | color | → `semantic.feedback.error.content-contrast` | Cor de conteúdo do Button focused undefined. | 0 |
+| `component.button.content.color.danger.focused` | color | → `semantic.feedback.error.content-contrast` | Cor de conteúdo do Button focused undefined. | 1 |
 | `component.button.content.color.danger.hover` | color | → `semantic.feedback.error.content-contrast` | Cor de conteúdo do Button hover undefined. | 1 |
 | `component.button.content.color.danger.pressed` | color | → `semantic.feedback.error.content-contrast` | Cor de conteúdo do Button pressed undefined. | 1 |
 | `component.button.content.color.ghost.default` | color | → `semantic.ghost.content-default` | Cor de conteúdo do Button default undefined. | 1 |
 | `component.button.content.color.ghost.disabled` | color | → `semantic.ghost.content-disabled` | Cor de conteúdo do Button disabled undefined. | 1 |
-| `component.button.content.color.ghost.focused` | color | → `semantic.ghost.content-default` | Cor de conteúdo do Button focused undefined. | 0 |
+| `component.button.content.color.ghost.focused` | color | → `semantic.ghost.content-default` | Cor de conteúdo do Button focused undefined. | 1 |
 | `component.button.content.color.ghost.hover` | color | → `semantic.ghost.content-default` | Cor de conteúdo do Button hover undefined. | 1 |
 | `component.button.content.color.ghost.pressed` | color | → `semantic.ghost.content-default` | Cor de conteúdo do Button pressed undefined. | 1 |
 | `component.button.content.color.outline.default` | color | → `semantic.outline.content-default` | Cor de conteúdo do Button default undefined. | 1 |
 | `component.button.content.color.outline.disabled` | color | → `semantic.outline.content-disabled` | Cor de conteúdo do Button disabled undefined. | 1 |
-| `component.button.content.color.outline.focused` | color | → `semantic.outline.content-default` | Cor de conteúdo do Button focused undefined. | 0 |
+| `component.button.content.color.outline.focused` | color | → `semantic.outline.content-default` | Cor de conteúdo do Button focused undefined. | 1 |
 | `component.button.content.color.outline.hover` | color | → `semantic.outline.content-default` | Cor de conteúdo do Button hover undefined. | 1 |
 | `component.button.content.color.outline.pressed` | color | → `semantic.outline.content-default` | Cor de conteúdo do Button pressed undefined. | 1 |
 | `component.button.content.color.success.default` | color | → `semantic.feedback.success.content-contrast` | Cor de conteúdo do Button default undefined. | 1 |
 | `component.button.content.color.success.disabled` | color | → `semantic.feedback.success.content-disabled` | Cor de conteúdo do Button disabled undefined. | 1 |
-| `component.button.content.color.success.focused` | color | → `semantic.feedback.success.content-contrast` | Cor de conteúdo do Button focused undefined. | 0 |
+| `component.button.content.color.success.focused` | color | → `semantic.feedback.success.content-contrast` | Cor de conteúdo do Button focused undefined. | 1 |
 | `component.button.content.color.success.hover` | color | → `semantic.feedback.success.content-contrast` | Cor de conteúdo do Button hover undefined. | 1 |
 | `component.button.content.color.success.pressed` | color | → `semantic.feedback.success.content-contrast` | Cor de conteúdo do Button pressed undefined. | 1 |
 | `component.button.content.color.toned.default` | color | → `semantic.toned.content-default` | Cor de conteúdo do Button default undefined. | 1 |
 | `component.button.content.color.toned.disabled` | color | → `semantic.toned.content-disabled` | Cor de conteúdo do Button disabled undefined. | 1 |
-| `component.button.content.color.toned.focused` | color | → `semantic.toned.content-default` | Cor de conteúdo do Button focused undefined. | 0 |
+| `component.button.content.color.toned.focused` | color | → `semantic.toned.content-default` | Cor de conteúdo do Button focused undefined. | 1 |
 | `component.button.content.color.toned.hover` | color | → `semantic.link.content-hover` | Cor de conteúdo do Button hover undefined. | 1 |
 | `component.button.content.color.toned.pressed` | color | → `semantic.link.content-hover` | Cor de conteúdo do Button pressed undefined. | 1 |
 | `component.button.focus-ring.color.danger` | color | → `semantic.border.focus-error` | Cor do focus ring do Button danger. | 1 |
@@ -3220,6 +3221,10 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.form-field.error.color.default` | color | → `semantic.feedback.error.content-default` | Cor da mensagem de erro do Form Field. | 1 |
 | `component.form-field.error.font-size.default` | dimension | → `semantic.typography.body.font-size.xs` | Tamanho tipografico da mensagem de erro do Form Field. | 1 |
 | `component.form-field.error.font-weight.default` | string | → `semantic.typography.body.font-weight.bold` | Peso tipografico da mensagem de erro do Form Field. | 1 |
+| `component.form-field.error.gap.default` | dimension | → `semantic.space.xs` | Gap horizontal entre ícone e texto da mensagem de erro do Form Field. | 1 |
+| `component.form-field.error.icon.color.default` | color | → `semantic.feedback.error.content-default` | Cor do ícone da mensagem de erro do Form Field. | 1 |
+| `component.form-field.error.icon.frame-size.default` | dimension | → `semantic.size.xs` | Frame-size do ícone da mensagem de erro do Form Field. | 1 |
+| `component.form-field.error.icon.glyph-size.default` | dimension | → `semantic.size.xs` | Tamanho do glyph do ícone da mensagem de erro do Form Field. | 1 |
 | `component.form-field.error.line-height.default` | dimension | → `semantic.typography.body.line-height.xs` | Altura de linha da mensagem de erro do Form Field. | 1 |
 | `component.form-field.gap.default` | dimension | → `semantic.space.xs` | Espacamento vertical interno do wrapper Form Field. | 1 |
 | `component.form-field.helper.color.default` | color | → `semantic.content.default` | Cor default do helper text do Form Field. | 1 |
@@ -7277,8 +7282,8 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/checkbox.css` (1×)
     - `css/components/radio.css` (2×)
     - `css/components/textarea.css` (1×)
-    - `css/tokens/generated/component.css` (5×)
-  - Tokens que referenciam: `component.form-field.label.color.error`, `component.form-field.required.color.default`, `component.form-field.error.color.default`, `component.input.required.color.default`, `component.select.required.color.default`
+    - `css/tokens/generated/component.css` (6×)
+  - Tokens que referenciam: `component.form-field.label.color.error`, `component.form-field.required.color.default`, `component.form-field.error.color.default`, `component.form-field.error.icon.color.default`, `component.input.required.color.default`, `component.select.required.color.default`
 
 ### `semantic.feedback.error.content-disabled`
 
@@ -8411,8 +8416,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.dimension.16.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (6×)
-  - Tokens que referenciam: `component.checkbox.box.size.sm`, `component.input.icon.glyph-size.sm`, `component.modal.close.glyph-size.default`, `component.radio.control.size.sm`, `component.spinner.size.sm`, `component.toggle.track.height.sm`
+    - `css/tokens/generated/component.css` (8×)
+  - Tokens que referenciam: `component.checkbox.box.size.sm`, `component.form-field.error.icon.frame-size.default`, `component.form-field.error.icon.glyph-size.default`, `component.input.icon.glyph-size.sm`, `component.modal.close.glyph-size.default`, `component.radio.control.size.sm`, `component.spinner.size.sm`, `component.toggle.track.height.sm`
 
 ### `semantic.space.2xl`
 
@@ -8603,9 +8608,9 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/checkbox.css` (6×)
     - `css/components/radio.css` (7×)
     - `css/components/toggle.css` (2×)
-    - `css/tokens/generated/component.css` (15×)
+    - `css/tokens/generated/component.css` (16×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.alert.content.gap.default`, `component.badge.gap.default`, `component.breadcrumb.gap.default`, `component.breadcrumb.item.gap.default`, `component.button.gap.md`, `component.button.label-frame.padding-x.default`, `component.form-field.gap.default`, `component.input.gap.md`, `component.input.stack.gap.default`, `component.input.text-frame.padding-x.default`, `component.modal.close.padding.default`, `component.select.stack.gap.default`, `component.select.text-frame.padding-x.default`, `component.tooltip.content.padding-y.default`, `component.tooltip.arrow.depth.default`
+  - Tokens que referenciam: `component.alert.content.gap.default`, `component.badge.gap.default`, `component.breadcrumb.gap.default`, `component.breadcrumb.item.gap.default`, `component.button.gap.md`, `component.button.label-frame.padding-x.default`, `component.form-field.gap.default`, `component.form-field.error.gap.default`, `component.input.gap.md`, `component.input.stack.gap.default`, `component.input.text-frame.padding-x.default`, `component.modal.close.padding.default`, `component.select.stack.gap.default`, `component.select.text-frame.padding-x.default`, `component.tooltip.content.padding-y.default`, `component.tooltip.arrow.depth.default`
 
 ### `semantic.surface.default`
 
@@ -9908,7 +9913,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.primary.background.default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/button.css` (1×)
 
 ### `component.button.bg.brand.hover`
 
@@ -9972,7 +9978,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.feedback.error.background.default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/button.css` (1×)
 
 ### `component.button.bg.danger.hover`
 
@@ -10088,7 +10095,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.feedback.success.background.default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/button.css` (1×)
 
 ### `component.button.bg.success.hover`
 
@@ -10152,7 +10160,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.toned.background.default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/button.css` (1×)
 
 ### `component.button.bg.toned.hover`
 
@@ -10216,7 +10225,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.border.default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/button.css` (1×)
 
 ### `component.button.border-color.outline.hover`
 
@@ -10293,7 +10303,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.primary.content-default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/button.css` (1×)
 
 ### `component.button.content.color.brand.hover`
 
@@ -10357,7 +10368,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.feedback.error.content-contrast porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/button.css` (1×)
 
 ### `component.button.content.color.danger.hover`
 
@@ -10421,7 +10433,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.link.content-default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/button.css` (1×)
 
 ### `component.button.content.color.ghost.hover`
 
@@ -10485,7 +10498,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.outline.content-default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/button.css` (1×)
 
 ### `component.button.content.color.outline.hover`
 
@@ -10549,7 +10563,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.feedback.success.content-contrast porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/button.css` (1×)
 
 ### `component.button.content.color.success.hover`
 
@@ -10613,7 +10628,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.toned.content-default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/button.css` (1×)
 
 ### `component.button.content.color.toned.hover`
 
@@ -11671,6 +11687,58 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Escopo**: Form Field, CSS-only, ADR-017
 - **Contexto**: Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.
 - **Decisão**: Alias 1:1 para semantic.typography.body.font-weight.bold, alinhado ao error text vivo no Figma.
+- **Usos**:
+  - CSS:
+    - `css/components/form-field.css` (1×)
+
+### `component.form-field.error.gap.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.xs`
+- **Sentido**: Gap horizontal entre ícone e texto da mensagem de erro do Form Field.
+- **Escopo**: Form Field, CSS-only, ADR-017
+- **Contexto**: Contrato Component CSS-only do Form Field. O Figma vivo de Input Text, Select e Textarea usa Error Message horizontal com gap 4px entre glyph e texto.
+- **Decisão**: Alias 1:1 para semantic.space.xs porque 4px é escala reutilizável, mas no Form Field documenta a anatomia pública da linha de erro.
+- **Usos**:
+  - CSS:
+    - `css/components/form-field.css` (1×)
+
+### `component.form-field.error.icon.color.default`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.feedback.error.content-default`
+- **Sentido**: Cor do ícone da mensagem de erro do Form Field.
+- **Escopo**: Form Field, CSS-only, ADR-017
+- **Contexto**: Contrato Component CSS-only do Form Field. O Figma vivo usa glyph de erro com fill feedback/error/content/default em Input Text, Select e Textarea.
+- **Decisão**: Alias 1:1 para semantic.feedback.error.content-default, mantendo o ícone como conteúdo de erro e não como background.
+- **Usos**:
+  - CSS:
+    - `css/components/form-field.css` (1×)
+
+### `component.form-field.error.icon.frame-size.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.xs`
+- **Sentido**: Frame-size do ícone da mensagem de erro do Form Field.
+- **Escopo**: Form Field, CSS-only, ADR-017
+- **Contexto**: Contrato Component CSS-only do Form Field. O Figma vivo mede o glyph de erro em 16x16 nos estados de erro de Input Text, Select e Textarea.
+- **Decisão**: Alias 1:1 para semantic.size.xs porque 16px já existe como tamanho reutilizável, mas aqui estabiliza o contrato do ícone de erro.
+- **Usos**:
+  - CSS:
+    - `css/components/form-field.css` (4×)
+
+### `component.form-field.error.icon.glyph-size.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.xs`
+- **Sentido**: Tamanho do glyph do ícone da mensagem de erro do Form Field.
+- **Escopo**: Form Field, CSS-only, ADR-017
+- **Contexto**: Contrato Component CSS-only do Form Field. O glyph Material Symbols de erro no Figma vivo usa 16px.
+- **Decisão**: Alias 1:1 para semantic.size.xs porque o glyph usa 16px e esse valor já pertence à escala Semantic.
 - **Usos**:
   - CSS:
     - `css/components/form-field.css` (1×)
@@ -14660,7 +14728,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Alias para semantic.content.subtle porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
 - **Usos**:
   - CSS:
-    - `css/components/select.css` (1×)
+    - `css/components/select.css` (2×)
 
 ### `component.select.placeholder.color.disabled`
 
@@ -14673,7 +14741,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Alias para semantic.content.disabled porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
 - **Usos**:
   - CSS:
-    - `css/components/select.css` (1×)
+    - `css/components/select.css` (2×)
 
 ### `component.select.radius.default`
 
@@ -15506,7 +15574,7 @@ Seção expandida com contexto, decisão e locais de uso.
 |--------|--------|----------|
 | Foundation/Core | **266** | 9 |
 | Semantic/System | **174 × 2 modos** | light.json + dark.json |
-| Component | **483** | 19 |
+| Component | **487** | 19 |
 
 ## Foundation (266 tokens)
 
@@ -15548,7 +15616,7 @@ semantic.typography.*
 semantic.z.*
 ```
 
-## Component (483 tokens)
+## Component (487 tokens)
 
 | Arquivo | Tokens |
 |---------|--------|
@@ -15560,7 +15628,7 @@ semantic.z.*
 | `card.json` | 17 |
 | `checkbox.json` | 13 |
 | `divider.json` | 3 |
-| `form-field.json` | 19 |
+| `form-field.json` | 23 |
 | `input.json` | 82 |
 | `modal.json` | 53 |
 | `radio.json` | 6 |

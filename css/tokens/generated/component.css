@@ -218,6 +218,10 @@
   --ds-form-field-error-font-size-default: var(--ds-body-font-size-xs); /** Font-size da mensagem de erro Form Field. */
   --ds-form-field-error-line-height-default: var(--ds-body-line-height-xs); /** Line-height da mensagem de erro Form Field. */
   --ds-form-field-error-font-weight-default: var(--ds-body-font-weight-bold); /** Font-weight da mensagem de erro Form Field. */
+  --ds-form-field-error-gap-default: var(--ds-space-xs); /** Gap horizontal entre ícone e texto da mensagem de erro Form Field. */
+  --ds-form-field-error-icon-color-default: var(--ds-feedback-error-content-default); /** Cor do ícone da mensagem de erro Form Field. */
+  --ds-form-field-error-icon-frame-size-default: var(--ds-size-xs); /** Frame-size do ícone da mensagem de erro Form Field. */
+  --ds-form-field-error-icon-glyph-size-default: var(--ds-size-xs); /** Tamanho do glyph do ícone da mensagem de erro Form Field. */
   --ds-input-bg-default: var(--ds-surface-default); /** Bg do Field Input Text default. */
   --ds-input-bg-disabled: var(--ds-background-disabled); /** Bg do Field Input Text disabled. */
   --ds-input-bg-error: var(--ds-surface-default); /** Bg do Field Input Text error. */

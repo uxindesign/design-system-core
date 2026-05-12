@@ -140,6 +140,36 @@
             "$value": "{semantic.typography.body.font-weight.bold}",
             "$description": "Font-weight da mensagem de erro Form Field."
           }
+        },
+        "gap": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.space.xs}",
+            "$description": "Gap horizontal entre ícone e texto da mensagem de erro Form Field."
+          }
+        },
+        "icon": {
+          "color": {
+            "default": {
+              "$type": "color",
+              "$value": "{semantic.feedback.error.content-default}",
+              "$description": "Cor do ícone da mensagem de erro Form Field."
+            }
+          },
+          "frame-size": {
+            "default": {
+              "$type": "dimension",
+              "$value": "{semantic.size.xs}",
+              "$description": "Frame-size do ícone da mensagem de erro Form Field."
+            }
+          },
+          "glyph-size": {
+            "default": {
+              "$type": "dimension",
+              "$value": "{semantic.size.xs}",
+              "$description": "Tamanho do glyph do ícone da mensagem de erro Form Field."
+            }
+          }
         }
       }
     }

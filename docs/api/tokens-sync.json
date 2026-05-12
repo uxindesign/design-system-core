@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-beta.4",
   "totals": {
-    "jsonTokens": 1097,
-    "sharedTokens": 749,
+    "jsonTokens": 1101,
+    "sharedTokens": 753,
     "lightTokens": 174,
     "darkTokens": 174,
     "errors": 0,
@@ -16,7 +16,7 @@
     "docTokenDrift": [],
     "jsonVsFigma": {
       "skipped": false,
-      "snapshotAge": "0h",
+      "snapshotAge": "4h",
       "snapshotFreshness": "fresh",
       "snapshotMaxAgeHours": 24,
       "summary": {
@@ -27,7 +27,7 @@
         "DRIFT_FROM_SOURCE": 0,
         "ALIAS_BROKEN": 0,
         "CSS_ONLY": 7,
-        "BY_DESIGN": 141
+        "BY_DESIGN": 145
       },
       "divergences": [],
       "diffs": {
@@ -958,6 +958,30 @@
             "token": "component.form-field.error.font-weight.default",
             "side": "json-only",
             "json": "{semantic.typography.body.font-weight.bold}"
+          },
+          {
+            "file": "component/form-field.json",
+            "token": "component.form-field.error.gap.default",
+            "side": "json-only",
+            "json": "{semantic.space.xs}"
+          },
+          {
+            "file": "component/form-field.json",
+            "token": "component.form-field.error.icon.color.default",
+            "side": "json-only",
+            "json": "{semantic.feedback.error.content-default}"
+          },
+          {
+            "file": "component/form-field.json",
+            "token": "component.form-field.error.icon.frame-size.default",
+            "side": "json-only",
+            "json": "{semantic.size.xs}"
+          },
+          {
+            "file": "component/form-field.json",
+            "token": "component.form-field.error.icon.glyph-size.default",
+            "side": "json-only",
+            "json": "{semantic.size.xs}"
           }
         ]
       }
