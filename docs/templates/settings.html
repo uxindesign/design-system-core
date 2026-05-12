@@ -142,9 +142,7 @@
                   <option>English (US)</option>
                   <option>Español</option>
                 </select>
-                <span class="ds-select__arrow" aria-hidden="true">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
-                </span>
+                <span class="ds-select__arrow" aria-hidden="true"></span>
               </div>
             </div>
 
@@ -259,7 +257,7 @@
     &lt;/div&gt;
   &lt;/div&gt;
 
-  &lt;div class="ds-field" style="margin-bottom:var(--ds-dimension-32)"&gt;
+  &lt;div class="ds-field" style="margin-bottom:var(--ds-dimension-16)"&gt;
     &lt;div class="ds-field__label-row"&gt;
       &lt;label class="ds-field__label" for="email"&gt;E-mail&lt;/label&gt;
     &lt;/div&gt;
@@ -267,6 +265,20 @@
       &lt;input class="ds-input__field" type="email" id="email" value="ana@empresa.com" autocomplete="email"&gt;
     &lt;/div&gt;
     &lt;span class="ds-field__helper"&gt;Alterar e-mail requer verificação.&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class="ds-field" style="margin-bottom:var(--ds-dimension-32)"&gt;
+    &lt;div class="ds-field__label-row"&gt;
+      &lt;label class="ds-field__label" for="lang"&gt;Idioma&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="ds-select ds-select--lg"&gt;
+      &lt;select class="ds-select__field" id="lang"&gt;
+        &lt;option selected&gt;Português (BR)&lt;/option&gt;
+        &lt;option&gt;English (US)&lt;/option&gt;
+        &lt;option&gt;Español&lt;/option&gt;
+      &lt;/select&gt;
+      &lt;span class="ds-select__arrow" aria-hidden="true"&gt;&lt;/span&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 
   &lt;hr class="ds-divider" style="margin-bottom:var(--ds-dimension-24)"&gt;
