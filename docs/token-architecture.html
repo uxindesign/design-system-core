@@ -119,7 +119,7 @@
     <div class="ds-layers">
       <article class="ds-layer">
         <h3 class="ds-layer__title"><span class="ds-layer__title-num">01</span>Foundation</h3>
-        <p class="ds-layer__count"><span data-lang="pt">265 tokens · 9 categorias · hidden from publishing</span><span data-lang="en">265 tokens · 9 categories · hidden from publishing</span></p>
+        <p class="ds-layer__count"><span data-lang="pt">266 tokens · 9 categorias · hidden from publishing</span><span data-lang="en">266 tokens · 9 categories · hidden from publishing</span></p>
         <p class="ds-layer__role"><span data-lang="pt">Valores brutos com naming numérico. A única camada com hex, rem ou px. Não é consumida diretamente pelos componentes.</span><span data-lang="en">Raw values with numeric naming. The only layer with hex, rem or px. Never consumed directly by components.</span></p>
         <div class="ds-layer__entries">
           <div class="ds-layer__entry"><code>color.blue.600</code><span>=</span><code>#2563EB</code></div>
@@ -130,7 +130,7 @@
 
       <article class="ds-layer">
         <h3 class="ds-layer__title"><span class="ds-layer__title-num">02</span>Semantic</h3>
-        <p class="ds-layer__count"><span data-lang="pt">180 tokens × 2 modos · publicada pra Figma</span><span data-lang="en">180 tokens × 2 modes · published to Figma</span></p>
+        <p class="ds-layer__count"><span data-lang="pt">174 tokens × 2 modos · publicada pra Figma</span><span data-lang="en">174 tokens × 2 modes · published to Figma</span></p>
         <p class="ds-layer__role"><span data-lang="pt">Intenção e significado, com naming t-shirt (sm/md/lg). Referência Foundation via aliases. Light e dark sobrescrevem só esta camada.</span><span data-lang="en">Intent and meaning, with t-shirt naming (sm/md/lg). References Foundation via aliases. Light and dark only override this layer.</span></p>
         <div class="ds-layer__entries">
           <div class="ds-layer__entry"><code>primary.background.default</code><span>→</span><code>{foundation.color.brand.600}</code></div>
@@ -141,7 +141,7 @@
 
       <article class="ds-layer">
         <h3 class="ds-layer__title"><span class="ds-layer__title-num">03</span>Component</h3>
-        <p class="ds-layer__count"><span data-lang="pt">Migração incremental · contrato anatômico</span><span data-lang="en">Incremental migration · anatomical contract</span></p>
+        <p class="ds-layer__count"><span data-lang="pt">313 tokens JSON · 292 variables Figma · contrato anatômico</span><span data-lang="en">313 JSON tokens · 292 Figma variables · anatomical contract</span></p>
         <p class="ds-layer__role"><span data-lang="pt">Nomeia partes públicas de cada componente. Pode aliasar Semantic 1:1 quando isso documenta a API visual do componente.</span><span data-lang="en">Names public parts of each component. May alias Semantic 1:1 when that documents the component visual API.</span></p>
         <div class="ds-layer__entries">
           <div class="ds-layer__entry"><code>checkbox.target.height.sm</code><span>→</span><code>{semantic.size.lg}</code></div>
@@ -186,7 +186,7 @@
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Modo light/dark</span><span data-lang="en">Light/dark mode</span></h2>
     <p style="margin-bottom:var(--ds-space-lg);color:var(--ds-content-default);font-size:var(--ds-body-font-size-sm);">
-      <span data-lang="pt">Tokens semânticos têm as mesmas chaves em ambos os modos mas valores diferentes. Tokens de foundation são invariantes de modo.</span><span data-lang="en">Semantic tokens have the same keys in both modes but different values. Foundation tokens are mode-invariant.</span>
+      <span data-lang="pt">Tokens semânticos têm as mesmas chaves em ambos os modos mas valores diferentes. Tokens Component usam modo único e herdam a troca de tema pelos aliases para Semantic. Tokens de Foundation são invariantes de modo.</span><span data-lang="en">Semantic tokens have the same keys in both modes but different values. Component tokens use a single mode and inherit theme changes through aliases to Semantic. Foundation tokens are mode-invariant.</span>
     </p>
     <table class="ds-token-table">
       <thead><tr><th>Token</th><th><span data-lang="pt">Valor light</span><span data-lang="en">Light value</span></th><th><span data-lang="pt">Valor dark</span><span data-lang="en">Dark value</span></th></tr></thead>
@@ -233,10 +233,11 @@
       <thead><tr><th><span data-lang="pt">JSON (consolidação)</span><span data-lang="en">JSON (consolidation)</span></th><th><span data-lang="pt">CSS (gerado)</span><span data-lang="en">CSS (generated)</span></th><th><span data-lang="pt">Variáveis Figma</span><span data-lang="en">Figma Variables</span></th></tr></thead>
       <tbody>
         <tr><td><code>foundation.color.brand.500</code></td><td><code>--ds-color-brand-500</code></td><td><code>color/brand/500</code> (Foundation)</td></tr>
-        <tr><td><code>foundation.spacing.16</code></td><td><code>--ds-dimension-16</code></td><td><code>spacing/16</code> (Foundation)</td></tr>
+        <tr><td><code>foundation.dimension.16</code></td><td><code>--ds-dimension-16</code></td><td><code>dimension/16</code> (Foundation)</td></tr>
         <tr><td><code>semantic.primary.background.default</code></td><td><code>--ds-primary-background-default</code></td><td><code>primary/background/default</code> (Semantic)</td></tr>
         <tr><td><code>semantic.space.md</code></td><td><code>--ds-space-md</code></td><td><code>space/md</code> (Semantic)</td></tr>
         <tr><td><code>semantic.size.lg</code></td><td><code>--ds-size-lg</code></td><td><code>size/lg</code> (Semantic)</td></tr>
+        <tr><td><code>component.checkbox.target.height.sm</code></td><td><code>--ds-checkbox-target-height-sm</code></td><td><code>checkbox/target/height/sm</code> (Component)</td></tr>
       </tbody>
     </table>
     <p style="color:var(--ds-content-default);font-size:var(--ds-body-font-size-sm);">
@@ -270,8 +271,9 @@
     <table class="ds-token-table">
       <thead><tr><th><span data-lang="pt">Camada</span><span data-lang="en">Layer</span></th><th>Tokens</th><th><span data-lang="pt">Arquivos</span><span data-lang="en">Files</span></th><th>Status</th></tr></thead>
       <tbody>
-        <tr><td>Foundation</td><td>236</td><td><span data-lang="pt">9 arquivos JSON (colors, typography, spacing, radius, shadows, opacity, motion, stroke, z-index)</span><span data-lang="en">9 JSON files (colors, typography, spacing, radius, shadows, opacity, motion, stroke, z-index)</span></td><td>JSON + Figma vars (hidden)</td></tr>
-        <tr><td>Semantic</td><td><span data-lang="pt">171 × 2 modos</span><span data-lang="en">171 × 2 modes</span></td><td>light.json + dark.json</td><td>JSON + Figma vars</td></tr>
+        <tr><td>Foundation</td><td>266</td><td><span data-lang="pt">9 arquivos JSON (colors, typography, dimension, radius, shadows, opacity, motion, stroke, z-index)</span><span data-lang="en">9 JSON files (colors, typography, dimension, radius, shadows, opacity, motion, stroke, z-index)</span></td><td>JSON + Figma vars (hidden)</td></tr>
+        <tr><td>Semantic</td><td><span data-lang="pt">174 × 2 modos</span><span data-lang="en">174 × 2 modes</span></td><td>light.json + dark.json</td><td>JSON + Figma vars</td></tr>
+        <tr><td>Component</td><td><span data-lang="pt">313 JSON · 292 Figma</span><span data-lang="en">313 JSON · 292 Figma</span></td><td><span data-lang="pt">19 arquivos JSON em <code>tokens/component/</code></span><span data-lang="en">19 JSON files in <code>tokens/component/</code></span></td><td><span data-lang="pt">JSON + Figma vars; diferenças CSS-only documentadas por ADR-017</span><span data-lang="en">JSON + Figma vars; CSS-only differences documented by ADR-017</span></td></tr>
       </tbody>
     </table>
   </div>
