@@ -5519,7 +5519,7 @@
           },
           {
             "file": "css/components/input.css",
-            "count": 3
+            "count": 2
           },
           {
             "file": "css/components/link.css",
@@ -5602,7 +5602,7 @@
           },
           {
             "file": "css/components/input.css",
-            "count": 3
+            "count": 2
           },
           {
             "file": "css/components/link.css",
@@ -17940,12 +17940,7 @@
       "contexto": "Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.",
       "decisao": "Alias 1:1 para semantic.radius.lg porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/input.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -17965,7 +17960,7 @@
         "css": [
           {
             "file": "css/components/input.css",
-            "count": 2
+            "count": 1
           }
         ],
         "tokens": [],

@@ -3243,7 +3243,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.input.bg.disabled` | color | → `semantic.background.disabled` | Bg do Field Input Text disabled. | 1 |
 | `component.input.bg.error` | color | → `semantic.surface.default` | Bg do Field Input Text error. | 1 |
 | `component.input.bg.filled` | color | → `semantic.surface.default` | Bg do Field Input Text filled. | 1 |
-| `component.input.bg.focused` | color | → `semantic.surface.default` | Bg do Field Input Text focused. | 0 |
+| `component.input.bg.focused` | color | → `semantic.surface.default` | Bg do Field Input Text focused. | 1 |
 | `component.input.bg.readonly` | color | → `semantic.background.subtle` | Bg do Field Input Text readonly. | 1 |
 | `component.input.border-color.default` | color | → `semantic.border.control-default` | Border color do Field Input Text default. | 1 |
 | `component.input.border-color.disabled` | color | → `semantic.border.control-disabled` | Border color do Field Input Text disabled. | 1 |
@@ -11875,7 +11875,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
 - **Decisão**: Alias 1:1 para semantic.surface.default porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/input.css` (1×)
 
 ### `component.input.bg.readonly`
 

@@ -7,7 +7,6 @@
    ========================================================================== */
 
 .ds-input {
-  position: relative;
   display: flex;
   align-items: center;
   gap: var(--ds-input-gap-md);
@@ -18,19 +17,8 @@
   font-family: var(--ds-input-text-font-family-default);
   font-weight: var(--ds-input-text-font-weight-default);
   letter-spacing: var(--ds-input-text-letter-spacing-default);
-  transition: border-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
-}
-
-.ds-input::after {
-  content: "";
-  position: absolute;
-  inset: calc(-1 * (var(--ds-input-focus-ring-offset-default) + var(--ds-input-focus-ring-stroke-width-default)));
-  border: var(--ds-input-focus-ring-stroke-width-default) solid transparent;
-  border-radius: var(--ds-input-focus-ring-radius-default);
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
-              border-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
+  transition: border-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
+              box-shadow var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
 }
 
 /* Sizes
@@ -123,11 +111,8 @@
 .ds-input:focus-within {
   background: var(--ds-input-bg-focused);
   border-color: var(--ds-input-border-color-focused);
-}
-
-.ds-input:focus-within::after {
-  border-color: var(--ds-input-focus-ring-color-default);
-  opacity: 1;
+  outline: var(--ds-input-focus-ring-stroke-width-default) solid var(--ds-input-focus-ring-color-default);
+  outline-offset: var(--ds-input-focus-ring-offset-default);
 }
 
 /* Error */
@@ -138,10 +123,7 @@
 
 .ds-input--error:focus-within {
   border-color: var(--ds-input-border-color-error);
-}
-
-.ds-input--error:focus-within::after {
-  border-color: var(--ds-input-focus-ring-color-error);
+  outline-color: var(--ds-input-focus-ring-color-error);
 }
 
 /* Filled */
@@ -262,8 +244,5 @@
    Reduced motion
    --------------------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {
-  .ds-input,
-  .ds-input::after {
-    transition: none;
-  }
+  .ds-input { transition: none; }
 }

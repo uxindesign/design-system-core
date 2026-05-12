@@ -883,7 +883,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.input.focus-ring.color.default` | color | → `semantic.border.focus` | Cor do focus ring Input Text. | 1 |
 | `component.input.focus-ring.color.error` | color | → `semantic.feedback.error.background.default` | Cor do focus ring Input Text error. | 1 |
 | `component.input.focus-ring.offset.default` | dimension | → `semantic.border.width.focus` | Offset CSS do focus ring Input Text. | 1 |
-| `component.input.focus-ring.radius.default` | dimension | → `semantic.radius.lg` | Radius do focus ring Input Text. | 1 |
+| `component.input.focus-ring.radius.default` | dimension | → `semantic.radius.lg` | Radius do focus ring Input Text. | 0 |
 | `component.input.focus-ring.stroke-width.default` | dimension | → `semantic.border.width.focus` | Stroke width do focus ring Input Text. | 1 |
 | `component.input.gap.lg` | dimension | → `semantic.space.sm` | Gap interno do Field Input Text lg. | 1 |
 | `component.input.gap.md` | dimension | → `semantic.space.sm` | Gap interno do Field Input Text md. | 1 |
@@ -5259,7 +5259,7 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/alert.css` (1×)
     - `css/components/button.css` (4×)
     - `css/components/checkbox.css` (4×)
-    - `css/components/input.css` (3×)
+    - `css/components/input.css` (2×)
     - `css/components/link.css` (1×)
     - `css/components/modal.css` (2×)
     - `css/components/radio.css` (4×)
@@ -5332,7 +5332,7 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/alert.css` (1×)
     - `css/components/button.css` (4×)
     - `css/components/checkbox.css` (4×)
-    - `css/components/input.css` (3×)
+    - `css/components/input.css` (2×)
     - `css/components/link.css` (1×)
     - `css/components/modal.css` (2×)
     - `css/components/radio.css` (4×)
@@ -9707,8 +9707,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
 - **Decisão**: Alias 1:1 para semantic.radius.lg porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
 - **Usos**:
-  - CSS:
-    - `css/components/input.css` (1×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `component.input.focus-ring.stroke-width.default`
 
@@ -9721,7 +9720,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Alias 1:1 para semantic.border.width.focus porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
 - **Usos**:
   - CSS:
-    - `css/components/input.css` (2×)
+    - `css/components/input.css` (1×)
 
 ### `component.input.gap.lg`
 
