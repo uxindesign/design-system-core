@@ -165,6 +165,159 @@ function checkJsonIntegrity(lightAll, darkAll) {
 }
 
 // -----------------------------------------------------------------------------
+// 1b. CSS foundation leak — ADR-013
+//
+// Component CSS (`css/components/*.css`) e base CSS (`css/base/*.css`) não
+// podem consumir tokens Foundation direto. Só Semantic ou Component.
+// Ver ADR-013. Padrões proibidos:
+//   --ds-spacing-*           (exceto se refatorado pra semantic ou component)
+//   --ds-radius-{sm,md,lg,xl,2xl,xs,none,full}  (radius-component OK)
+//   --ds-border-width-{0,1,2,4,8}               (border-width-default OK)
+//   --ds-font-size-*, --ds-font-family-*, --ds-font-weight-*
+//   --ds-line-height-*, --ds-letter-spacing-*
+//   --ds-shadow-{xs,sm,md,lg,xl}
+//   --ds-duration-*, --ds-ease-*
+//   --ds-opacity-[0-9]*
+//   --ds-z-[0-9]*
+//   --ds-color-*  (paletas raw)
+// -----------------------------------------------------------------------------
+
+const FOUNDATION_LEAK_RE = /var\(\s*--ds-(?:spacing-[0-9-]+|radius-(?:xs|sm|md|lg|xl|2xl|none|full)|border-width-[0-9]+|font-family-[a-z]+|font-weight-[a-z]+|font-size-[0-9a-z]+|line-height-[a-z]+|letter-spacing-[a-z]+|shadow-(?:xs|sm|md|lg|xl)|duration-[a-z]+|ease-[a-z-]+|opacity-[0-9]+|z-[0-9]+|color-[a-z]+-[0-9]+)[a-z0-9-]*\s*\)/gi;
+
+function scanCssFileForLeaks(filePath) {
+  const content = fs.readFileSync(filePath, "utf8");
+  const lines = content.split("\n");
+  const leaks = [];
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    FOUNDATION_LEAK_RE.lastIndex = 0;
+    let m;
+    while ((m = FOUNDATION_LEAK_RE.exec(line)) !== null) {
+      leaks.push({
+        line: i + 1,
+        column: m.index + 1,
+        match: m[0],
+      });
+    }
+  }
+  return leaks;
+}
+
+function checkCssFoundationLeak() {
+  const diagnostics = [];
+  // components/ segue regra estrita (ADR-013 Fase 5 já refatorou)
+  // base/ ainda não foi refatorado — downgrade pra warning até o PR de base ser mergeado
+  const dirs = [
+    { path: path.join(ROOT, "css", "components"), level: "error", scope: "components" },
+    { path: path.join(ROOT, "css", "base"),       level: "warning", scope: "base" },
+  ];
+  for (const { path: dir, level, scope } of dirs) {
+    if (!fs.existsSync(dir)) continue;
+    for (const file of fs.readdirSync(dir)) {
+      if (!file.endsWith(".css")) continue;
+      if (file === "index.css") continue; // only @imports
+      const full = path.join(dir, file);
+      const leaks = scanCssFileForLeaks(full);
+      for (const leak of leaks) {
+        diagnostics.push({
+          level,
+          scope,
+          file: path.relative(ROOT, full),
+          line: leak.line,
+          column: leak.column,
+          match: leak.match,
+          message: `Foundation token consumido direto: ${leak.match}. Use Semantic/Component layer (ADR-013).`,
+        });
+      }
+    }
+  }
+  return diagnostics;
+}
+
+// -----------------------------------------------------------------------------
+// 1c. Registry completude — ADR-013
+//
+// Toda variável em tokens/**/*.json precisa ter entry em tokens/registry.json
+// com campos sentido, contexto, decisao preenchidos (não "TODO").
+//
+// Durante a migração (enquanto há TODOs massivos), opera como WARNING em vez
+// de ERROR pra não bloquear CI. Flip pra error quando completude atingir ~80%.
+// -----------------------------------------------------------------------------
+
+function flattenTokenPaths(obj, prefix = "") {
+  const paths = [];
+  if (!obj || typeof obj !== "object") return paths;
+  for (const [key, val] of Object.entries(obj)) {
+    if (key.startsWith("$")) continue;
+    const p = prefix ? `${prefix}.${key}` : key;
+    if (val && typeof val === "object") {
+      if ("$value" in val) paths.push(p);
+      else paths.push(...flattenTokenPaths(val, p));
+    }
+  }
+  return paths;
+}
+
+function checkRegistryCompleteness() {
+  const registryPath = path.join(ROOT, "tokens", "registry.json");
+  if (!fs.existsSync(registryPath)) {
+    return [{
+      level: "warning",
+      message: "tokens/registry.json não existe. Rode `npm run build:registry:init`.",
+    }];
+  }
+  const registry = JSON.parse(fs.readFileSync(registryPath, "utf8"));
+  const entries = registry.entries || {};
+
+  // Collect paths from all tokens/ JSONs
+  const tokenPaths = new Set();
+  const tokenDirs = ["foundation", "semantic", "component"];
+  for (const dir of tokenDirs) {
+    const dirPath = path.join(ROOT, "tokens", dir);
+    if (!fs.existsSync(dirPath)) continue;
+    for (const file of fs.readdirSync(dirPath)) {
+      if (!file.endsWith(".json")) continue;
+      if (file === "registry.json") continue;
+      const full = path.join(dirPath, file);
+      let json;
+      try { json = JSON.parse(fs.readFileSync(full, "utf8")); } catch { continue; }
+      for (const p of flattenTokenPaths(json)) tokenPaths.add(p);
+    }
+  }
+
+  const diagnostics = [];
+  const missing = [...tokenPaths].filter(p => !entries[p]);
+  const withTodos = Object.entries(entries).filter(([p, e]) =>
+    tokenPaths.has(p) && (e.sentido === "TODO" || e.contexto === "TODO" || e.decisao === "TODO")
+  );
+  const stale = Object.keys(entries).filter(p => !tokenPaths.has(p));
+
+  if (missing.length) {
+    diagnostics.push({
+      level: "error",
+      message: `${missing.length} tokens em tokens/ sem entry em registry.json. Rode \`npm run build:registry:init\`.`,
+      sample: missing.slice(0, 5),
+    });
+  }
+  if (withTodos.length) {
+    // Downgrade to warning during migration (expected mass of TODOs)
+    diagnostics.push({
+      level: "warning",
+      message: `${withTodos.length} entries com campos TODO (sentido/contexto/decisao). Preencha incrementalmente.`,
+      sample: withTodos.slice(0, 5).map(([p]) => p),
+    });
+  }
+  if (stale.length) {
+    diagnostics.push({
+      level: "warning",
+      message: `${stale.length} entries em registry.json sem token correspondente em tokens/ (stale).`,
+      sample: stale.slice(0, 5),
+    });
+  }
+  return diagnostics;
+}
+
+// -----------------------------------------------------------------------------
 // 2. Comparar JSON resolvido com CSS gerado
 // -----------------------------------------------------------------------------
 
@@ -479,6 +632,8 @@ async function main() {
   const totalTokens = Object.keys(bundle.shared).length + Object.keys(bundle.light).length + Object.keys(bundle.dark).length;
   const jsonIntegrity = checkJsonIntegrity(bundle.lightAll, bundle.darkAll);
   const jsonVsCss = compareJsonToCss(bundle);
+  const cssFoundationLeak = checkCssFoundationLeak();
+  const registryCompleteness = checkRegistryCompleteness();
   // Para a verificação Figma usa o pool combinado (light) como representativo.
   // A comparação específica por modo será implementada junto com a resolução
   // de alias Figma.
@@ -489,9 +644,13 @@ async function main() {
 
   const errors = jsonIntegrity.filter((d) => d.level === "error").length +
     jsonVsCss.filter((d) => d.level === "error").length +
+    cssFoundationLeak.filter((d) => d.level === "error").length +
+    registryCompleteness.filter((d) => d.level === "error").length +
     figmaErrors;
   const warnings = jsonIntegrity.filter((d) => d.level === "warning").length +
     jsonVsCss.filter((d) => d.level === "warning").length +
+    cssFoundationLeak.filter((d) => d.level === "warning").length +
+    registryCompleteness.filter((d) => d.level === "warning").length +
     figmaWarnings;
 
   const report = {
@@ -507,6 +666,8 @@ async function main() {
     checks: {
       jsonIntegrity,
       jsonVsCss,
+      cssFoundationLeak,
+      registryCompleteness,
       jsonVsFigma,
     },
   };
@@ -517,6 +678,18 @@ async function main() {
   console.log(`Tokens JSON:      ${report.totals.jsonTokens} (shared ${report.totals.sharedTokens}, light ${report.totals.lightTokens}, dark ${report.totals.darkTokens})`);
   console.log(`JSON integrity:   ${jsonIntegrity.length === 0 ? "OK" : `${jsonIntegrity.length} erros`}`);
   console.log(`JSON ↔ CSS:       ${jsonVsCss.filter((d) => d.level === "error").length === 0 ? "OK" : `${jsonVsCss.filter((d) => d.level === "error").length} divergências`}`);
+  const cssLeakErrors = cssFoundationLeak.filter((d) => d.level === "error").length;
+  const cssLeakWarnings = cssFoundationLeak.filter((d) => d.level === "warning").length;
+  const cssLeakLabel = cssLeakErrors === 0 && cssLeakWarnings === 0 ? "OK"
+    : cssLeakErrors > 0 ? `${cssLeakErrors} leaks em components/`
+    : `${cssLeakWarnings} leaks em base/ (warning, débito)`;
+  console.log(`CSS leak (ADR-013): ${cssLeakLabel}`);
+  const regErrors = registryCompleteness.filter((d) => d.level === "error").length;
+  const regWarnings = registryCompleteness.filter((d) => d.level === "warning").length;
+  const regLabel = regErrors === 0 && regWarnings === 0 ? "OK"
+    : regErrors > 0 ? `${regErrors} erros`
+    : `${regWarnings} warnings (migração em curso)`;
+  console.log(`Registry:         ${regLabel}`);
   if (jsonVsFigma.skipped) {
     console.log(`JSON ↔ Figma:     SKIP — ${jsonVsFigma.reason}`);
   } else {

@@ -4,7 +4,7 @@
 
 .ds-tabs {
   display: flex;
-  border-bottom: var(--ds-tabs-border-width) solid var(--ds-border-default);
+  border-bottom: var(--ds-border-width-default) solid var(--ds-border-default);
   gap: 0;
 }
 
@@ -20,8 +20,8 @@
   border: none;
   border-bottom: var(--ds-tabs-active-border-width) solid transparent;
   cursor: pointer;
-  transition: color var(--ds-tabs-transition-duration) var(--ds-tabs-transition-timing),
-              border-color var(--ds-tabs-transition-duration) var(--ds-tabs-transition-timing);
+  transition: color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
+              border-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
   margin-bottom: -1px;
 }
 

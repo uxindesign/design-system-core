@@ -86,6 +86,11 @@
   --ds-state-hover: var(--ds-overlay-black-5);
   --ds-state-pressed: var(--ds-overlay-black-10);
   --ds-state-disabled-background: var(--ds-color-neutral-200);
+  --ds-motion-duration-fast: var(--ds-duration-fast); /** 150ms. Transições rápidas (hover, focus, active). */
+  --ds-motion-duration-normal: var(--ds-duration-normal); /** 200ms. Padrão pra transições de estado. */
+  --ds-motion-duration-slow: var(--ds-duration-slow); /** 300ms. Animações enfáticas (entrada de overlay, etc). */
+  --ds-motion-ease-default: var(--ds-ease-default); /** Curva padrão pra transições UI. */
+  --ds-opacity-disabled: var(--ds-opacity-50); /** 50%. Aplicar em componentes em estado disabled. */
   --ds-space-inset-2xs: var(--ds-spacing-0-5); /** 2px. Compact inset for small components like Badge. */
   --ds-space-inset-xs: var(--ds-spacing-1);
   --ds-space-inset-sm: var(--ds-spacing-2);

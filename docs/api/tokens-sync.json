@@ -1,28 +1,1107 @@
 {
-  "generatedAt": "2026-04-22T20:35:33.925Z",
+  "generatedAt": "2026-04-22T21:09:11.913Z",
   "totals": {
-    "jsonTokens": 825,
-    "sharedTokens": 519,
-    "lightTokens": 153,
-    "darkTokens": 153,
+    "jsonTokens": 736,
+    "sharedTokens": 420,
+    "lightTokens": 158,
+    "darkTokens": 158,
     "errors": 0,
-    "warnings": 0
+    "warnings": 119
   },
   "checks": {
     "jsonIntegrity": [],
     "jsonVsCss": [],
+    "cssFoundationLeak": [
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/reset.css",
+        "line": 22,
+        "column": 16,
+        "match": "var(--ds-font-family-sans)",
+        "message": "Foundation token consumido direto: var(--ds-font-family-sans). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/reset.css",
+        "line": 23,
+        "column": 14,
+        "match": "var(--ds-font-size-md)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-md). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/reset.css",
+        "line": 24,
+        "column": 16,
+        "match": "var(--ds-line-height-normal)",
+        "message": "Foundation token consumido direto: var(--ds-line-height-normal). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/reset.css",
+        "line": 36,
+        "column": 16,
+        "match": "var(--ds-font-family-mono)",
+        "message": "Foundation token consumido direto: var(--ds-font-family-mono). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/reset.css",
+        "line": 37,
+        "column": 14,
+        "match": "var(--ds-font-size-sm)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-sm). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/reset.css",
+        "line": 42,
+        "column": 12,
+        "match": "var(--ds-spacing-0-5)",
+        "message": "Foundation token consumido direto: var(--ds-spacing-0-5). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/reset.css",
+        "line": 42,
+        "column": 34,
+        "match": "var(--ds-spacing-1)",
+        "message": "Foundation token consumido direto: var(--ds-spacing-1). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/reset.css",
+        "line": 43,
+        "column": 18,
+        "match": "var(--ds-radius-sm)",
+        "message": "Foundation token consumido direto: var(--ds-radius-sm). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/reset.css",
+        "line": 48,
+        "column": 21,
+        "match": "var(--ds-color-neutral-900)",
+        "message": "Foundation token consumido direto: var(--ds-color-neutral-900). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/reset.css",
+        "line": 49,
+        "column": 10,
+        "match": "var(--ds-color-neutral-100)",
+        "message": "Foundation token consumido direto: var(--ds-color-neutral-100). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/reset.css",
+        "line": 50,
+        "column": 12,
+        "match": "var(--ds-spacing-4)",
+        "message": "Foundation token consumido direto: var(--ds-spacing-4). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/reset.css",
+        "line": 51,
+        "column": 18,
+        "match": "var(--ds-radius-lg)",
+        "message": "Foundation token consumido direto: var(--ds-radius-lg). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/reset.css",
+        "line": 53,
+        "column": 18,
+        "match": "var(--ds-spacing-4)",
+        "message": "Foundation token consumido direto: var(--ds-spacing-4). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/reset.css",
+        "line": 60,
+        "column": 14,
+        "match": "var(--ds-font-size-sm)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-sm). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/reset.css",
+        "line": 72,
+        "column": 12,
+        "match": "var(--ds-spacing-3)",
+        "message": "Foundation token consumido direto: var(--ds-spacing-3). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/reset.css",
+        "line": 72,
+        "column": 32,
+        "match": "var(--ds-spacing-4)",
+        "message": "Foundation token consumido direto: var(--ds-spacing-4). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/reset.css",
+        "line": 74,
+        "column": 18,
+        "match": "var(--ds-border-width-1)",
+        "message": "Foundation token consumido direto: var(--ds-border-width-1). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/reset.css",
+        "line": 78,
+        "column": 16,
+        "match": "var(--ds-font-weight-semibold)",
+        "message": "Foundation token consumido direto: var(--ds-font-weight-semibold). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/reset.css",
+        "line": 79,
+        "column": 14,
+        "match": "var(--ds-font-size-sm)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-sm). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/reset.css",
+        "line": 82,
+        "column": 19,
+        "match": "var(--ds-letter-spacing-wide)",
+        "message": "Foundation token consumido direto: var(--ds-letter-spacing-wide). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 12,
+        "column": 16,
+        "match": "var(--ds-font-family-display)",
+        "message": "Foundation token consumido direto: var(--ds-font-family-display). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 13,
+        "column": 16,
+        "match": "var(--ds-font-weight-bold)",
+        "message": "Foundation token consumido direto: var(--ds-font-weight-bold). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 14,
+        "column": 14,
+        "match": "var(--ds-font-size-9xl)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-9xl). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 15,
+        "column": 16,
+        "match": "var(--ds-line-height-tight)",
+        "message": "Foundation token consumido direto: var(--ds-line-height-tight). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 20,
+        "column": 16,
+        "match": "var(--ds-font-family-display)",
+        "message": "Foundation token consumido direto: var(--ds-font-family-display). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 21,
+        "column": 16,
+        "match": "var(--ds-font-weight-bold)",
+        "message": "Foundation token consumido direto: var(--ds-font-weight-bold). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 22,
+        "column": 14,
+        "match": "var(--ds-font-size-8xl)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-8xl). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 23,
+        "column": 16,
+        "match": "var(--ds-line-height-tight)",
+        "message": "Foundation token consumido direto: var(--ds-line-height-tight). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 28,
+        "column": 16,
+        "match": "var(--ds-font-family-display)",
+        "message": "Foundation token consumido direto: var(--ds-font-family-display). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 29,
+        "column": 16,
+        "match": "var(--ds-font-weight-bold)",
+        "message": "Foundation token consumido direto: var(--ds-font-weight-bold). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 30,
+        "column": 14,
+        "match": "var(--ds-font-size-7xl)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-7xl). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 31,
+        "column": 16,
+        "match": "var(--ds-line-height-tight)",
+        "message": "Foundation token consumido direto: var(--ds-line-height-tight). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 36,
+        "column": 16,
+        "match": "var(--ds-font-family-display)",
+        "message": "Foundation token consumido direto: var(--ds-font-family-display). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 37,
+        "column": 16,
+        "match": "var(--ds-font-weight-bold)",
+        "message": "Foundation token consumido direto: var(--ds-font-weight-bold). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 38,
+        "column": 14,
+        "match": "var(--ds-font-size-6xl)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-6xl). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 39,
+        "column": 16,
+        "match": "var(--ds-line-height-tight)",
+        "message": "Foundation token consumido direto: var(--ds-line-height-tight). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 44,
+        "column": 16,
+        "match": "var(--ds-font-family-display)",
+        "message": "Foundation token consumido direto: var(--ds-font-family-display). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 45,
+        "column": 16,
+        "match": "var(--ds-font-weight-bold)",
+        "message": "Foundation token consumido direto: var(--ds-font-weight-bold). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 46,
+        "column": 14,
+        "match": "var(--ds-font-size-5xl)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-5xl). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 47,
+        "column": 16,
+        "match": "var(--ds-line-height-tight)",
+        "message": "Foundation token consumido direto: var(--ds-line-height-tight). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 48,
+        "column": 19,
+        "match": "var(--ds-letter-spacing-normal)",
+        "message": "Foundation token consumido direto: var(--ds-letter-spacing-normal). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 58,
+        "column": 16,
+        "match": "var(--ds-font-family-sans)",
+        "message": "Foundation token consumido direto: var(--ds-font-family-sans). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 59,
+        "column": 16,
+        "match": "var(--ds-font-weight-bold)",
+        "message": "Foundation token consumido direto: var(--ds-font-weight-bold). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 60,
+        "column": 14,
+        "match": "var(--ds-font-size-4xl)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-4xl). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 61,
+        "column": 16,
+        "match": "var(--ds-line-height-snug)",
+        "message": "Foundation token consumido direto: var(--ds-line-height-snug). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 66,
+        "column": 16,
+        "match": "var(--ds-font-family-sans)",
+        "message": "Foundation token consumido direto: var(--ds-font-family-sans). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 67,
+        "column": 16,
+        "match": "var(--ds-font-weight-semibold)",
+        "message": "Foundation token consumido direto: var(--ds-font-weight-semibold). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 68,
+        "column": 14,
+        "match": "var(--ds-font-size-3xl)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-3xl). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 69,
+        "column": 16,
+        "match": "var(--ds-line-height-snug)",
+        "message": "Foundation token consumido direto: var(--ds-line-height-snug). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 74,
+        "column": 16,
+        "match": "var(--ds-font-family-sans)",
+        "message": "Foundation token consumido direto: var(--ds-font-family-sans). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 75,
+        "column": 16,
+        "match": "var(--ds-font-weight-semibold)",
+        "message": "Foundation token consumido direto: var(--ds-font-weight-semibold). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 76,
+        "column": 14,
+        "match": "var(--ds-font-size-2xl)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-2xl). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 77,
+        "column": 16,
+        "match": "var(--ds-line-height-snug)",
+        "message": "Foundation token consumido direto: var(--ds-line-height-snug). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 81,
+        "column": 16,
+        "match": "var(--ds-font-family-sans)",
+        "message": "Foundation token consumido direto: var(--ds-font-family-sans). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 82,
+        "column": 16,
+        "match": "var(--ds-font-weight-semibold)",
+        "message": "Foundation token consumido direto: var(--ds-font-weight-semibold). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 83,
+        "column": 14,
+        "match": "var(--ds-font-size-xl)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-xl). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 84,
+        "column": 16,
+        "match": "var(--ds-line-height-snug)",
+        "message": "Foundation token consumido direto: var(--ds-line-height-snug). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 88,
+        "column": 16,
+        "match": "var(--ds-font-family-sans)",
+        "message": "Foundation token consumido direto: var(--ds-font-family-sans). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 89,
+        "column": 16,
+        "match": "var(--ds-font-weight-semibold)",
+        "message": "Foundation token consumido direto: var(--ds-font-weight-semibold). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 90,
+        "column": 14,
+        "match": "var(--ds-font-size-lg)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-lg). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 91,
+        "column": 16,
+        "match": "var(--ds-line-height-snug)",
+        "message": "Foundation token consumido direto: var(--ds-line-height-snug). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 99,
+        "column": 16,
+        "match": "var(--ds-font-family-sans)",
+        "message": "Foundation token consumido direto: var(--ds-font-family-sans). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 100,
+        "column": 16,
+        "match": "var(--ds-font-weight-regular)",
+        "message": "Foundation token consumido direto: var(--ds-font-weight-regular). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 101,
+        "column": 14,
+        "match": "var(--ds-font-size-lg)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-lg). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 102,
+        "column": 16,
+        "match": "var(--ds-line-height-normal)",
+        "message": "Foundation token consumido direto: var(--ds-line-height-normal). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 106,
+        "column": 16,
+        "match": "var(--ds-font-family-sans)",
+        "message": "Foundation token consumido direto: var(--ds-font-family-sans). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 107,
+        "column": 16,
+        "match": "var(--ds-font-weight-regular)",
+        "message": "Foundation token consumido direto: var(--ds-font-weight-regular). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 108,
+        "column": 14,
+        "match": "var(--ds-font-size-md)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-md). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 109,
+        "column": 16,
+        "match": "var(--ds-line-height-normal)",
+        "message": "Foundation token consumido direto: var(--ds-line-height-normal). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 113,
+        "column": 16,
+        "match": "var(--ds-font-family-sans)",
+        "message": "Foundation token consumido direto: var(--ds-font-family-sans). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 114,
+        "column": 16,
+        "match": "var(--ds-font-weight-regular)",
+        "message": "Foundation token consumido direto: var(--ds-font-weight-regular). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 115,
+        "column": 14,
+        "match": "var(--ds-font-size-sm)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-sm). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 116,
+        "column": 16,
+        "match": "var(--ds-line-height-normal)",
+        "message": "Foundation token consumido direto: var(--ds-line-height-normal). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 120,
+        "column": 16,
+        "match": "var(--ds-font-family-sans)",
+        "message": "Foundation token consumido direto: var(--ds-font-family-sans). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 121,
+        "column": 16,
+        "match": "var(--ds-font-weight-regular)",
+        "message": "Foundation token consumido direto: var(--ds-font-weight-regular). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 122,
+        "column": 14,
+        "match": "var(--ds-font-size-xs)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-xs). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 123,
+        "column": 16,
+        "match": "var(--ds-line-height-normal)",
+        "message": "Foundation token consumido direto: var(--ds-line-height-normal). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 132,
+        "column": 16,
+        "match": "var(--ds-font-family-sans)",
+        "message": "Foundation token consumido direto: var(--ds-font-family-sans). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 133,
+        "column": 16,
+        "match": "var(--ds-font-weight-medium)",
+        "message": "Foundation token consumido direto: var(--ds-font-weight-medium). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 134,
+        "column": 14,
+        "match": "var(--ds-font-size-md)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-md). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 135,
+        "column": 16,
+        "match": "var(--ds-line-height-snug)",
+        "message": "Foundation token consumido direto: var(--ds-line-height-snug). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 140,
+        "column": 16,
+        "match": "var(--ds-font-family-sans)",
+        "message": "Foundation token consumido direto: var(--ds-font-family-sans). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 141,
+        "column": 16,
+        "match": "var(--ds-font-weight-medium)",
+        "message": "Foundation token consumido direto: var(--ds-font-weight-medium). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 142,
+        "column": 14,
+        "match": "var(--ds-font-size-sm)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-sm). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 143,
+        "column": 16,
+        "match": "var(--ds-line-height-snug)",
+        "message": "Foundation token consumido direto: var(--ds-line-height-snug). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 148,
+        "column": 16,
+        "match": "var(--ds-font-family-sans)",
+        "message": "Foundation token consumido direto: var(--ds-font-family-sans). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 149,
+        "column": 16,
+        "match": "var(--ds-font-weight-medium)",
+        "message": "Foundation token consumido direto: var(--ds-font-weight-medium). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 150,
+        "column": 14,
+        "match": "var(--ds-font-size-xs)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-xs). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 151,
+        "column": 16,
+        "match": "var(--ds-line-height-snug)",
+        "message": "Foundation token consumido direto: var(--ds-line-height-snug). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 156,
+        "column": 16,
+        "match": "var(--ds-font-family-sans)",
+        "message": "Foundation token consumido direto: var(--ds-font-family-sans). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 157,
+        "column": 16,
+        "match": "var(--ds-font-weight-medium)",
+        "message": "Foundation token consumido direto: var(--ds-font-weight-medium). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 158,
+        "column": 14,
+        "match": "var(--ds-font-size-2xs)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-2xs). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 159,
+        "column": 16,
+        "match": "var(--ds-line-height-snug)",
+        "message": "Foundation token consumido direto: var(--ds-line-height-snug). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 168,
+        "column": 16,
+        "match": "var(--ds-font-family-sans)",
+        "message": "Foundation token consumido direto: var(--ds-font-family-sans). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 169,
+        "column": 16,
+        "match": "var(--ds-font-weight-regular)",
+        "message": "Foundation token consumido direto: var(--ds-font-weight-regular). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 170,
+        "column": 14,
+        "match": "var(--ds-font-size-xs)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-xs). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 171,
+        "column": 16,
+        "match": "var(--ds-line-height-normal)",
+        "message": "Foundation token consumido direto: var(--ds-line-height-normal). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 175,
+        "column": 16,
+        "match": "var(--ds-font-family-sans)",
+        "message": "Foundation token consumido direto: var(--ds-font-family-sans). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 176,
+        "column": 16,
+        "match": "var(--ds-font-weight-regular)",
+        "message": "Foundation token consumido direto: var(--ds-font-weight-regular). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 177,
+        "column": 14,
+        "match": "var(--ds-font-size-2xs)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-2xs). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 178,
+        "column": 16,
+        "match": "var(--ds-line-height-normal)",
+        "message": "Foundation token consumido direto: var(--ds-line-height-normal). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 187,
+        "column": 16,
+        "match": "var(--ds-font-family-sans)",
+        "message": "Foundation token consumido direto: var(--ds-font-family-sans). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 188,
+        "column": 16,
+        "match": "var(--ds-font-weight-semibold)",
+        "message": "Foundation token consumido direto: var(--ds-font-weight-semibold). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 189,
+        "column": 14,
+        "match": "var(--ds-font-size-xs)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-xs). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 190,
+        "column": 16,
+        "match": "var(--ds-line-height-snug)",
+        "message": "Foundation token consumido direto: var(--ds-line-height-snug). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 196,
+        "column": 16,
+        "match": "var(--ds-font-family-sans)",
+        "message": "Foundation token consumido direto: var(--ds-font-family-sans). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 197,
+        "column": 16,
+        "match": "var(--ds-font-weight-semibold)",
+        "message": "Foundation token consumido direto: var(--ds-font-weight-semibold). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 198,
+        "column": 14,
+        "match": "var(--ds-font-size-2xs)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-2xs). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 199,
+        "column": 16,
+        "match": "var(--ds-line-height-snug)",
+        "message": "Foundation token consumido direto: var(--ds-line-height-snug). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 209,
+        "column": 16,
+        "match": "var(--ds-font-family-mono)",
+        "message": "Foundation token consumido direto: var(--ds-font-family-mono). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 210,
+        "column": 16,
+        "match": "var(--ds-font-weight-regular)",
+        "message": "Foundation token consumido direto: var(--ds-font-weight-regular). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 211,
+        "column": 14,
+        "match": "var(--ds-font-size-sm)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-sm). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 212,
+        "column": 16,
+        "match": "var(--ds-line-height-normal)",
+        "message": "Foundation token consumido direto: var(--ds-line-height-normal). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 216,
+        "column": 16,
+        "match": "var(--ds-font-family-mono)",
+        "message": "Foundation token consumido direto: var(--ds-font-family-mono). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 217,
+        "column": 16,
+        "match": "var(--ds-font-weight-regular)",
+        "message": "Foundation token consumido direto: var(--ds-font-weight-regular). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 218,
+        "column": 14,
+        "match": "var(--ds-font-size-xs)",
+        "message": "Foundation token consumido direto: var(--ds-font-size-xs). Use Semantic/Component layer (ADR-013)."
+      },
+      {
+        "level": "warning",
+        "scope": "base",
+        "file": "css/base/typography.css",
+        "line": 219,
+        "column": 16,
+        "match": "var(--ds-line-height-normal)",
+        "message": "Foundation token consumido direto: var(--ds-line-height-normal). Use Semantic/Component layer (ADR-013)."
+      }
+    ],
+    "registryCompleteness": [
+      {
+        "level": "warning",
+        "message": "578 entries com campos TODO (sentido/contexto/decisao). Preencha incrementalmente.",
+        "sample": [
+          "component.avatar.size.sm",
+          "component.avatar.size.md",
+          "component.avatar.size.lg",
+          "component.avatar.font-size.sm",
+          "component.avatar.font-size.md"
+        ]
+      },
+      {
+        "level": "warning",
+        "message": "99 entries em registry.json sem token correspondente em tokens/ (stale).",
+        "sample": [
+          "component.button.border-width",
+          "component.button.min-target-size",
+          "component.checkbox.border-width",
+          "component.checkbox.min-target-size",
+          "component.input.border-width"
+        ]
+      }
+    ],
     "jsonVsFigma": {
       "skipped": false,
       "snapshotAge": "0h",
       "summary": {
-        "figmaVariableCount": 635,
+        "figmaVariableCount": 559,
         "figmaCollectionCount": 4,
         "VALUE_DRIFT": 0,
         "NEEDS_SYNC": 0,
         "DRIFT_FROM_SOURCE": 0,
         "ALIAS_BROKEN": 0,
         "CSS_ONLY": 9,
-        "BY_DESIGN": 79
+        "BY_DESIGN": 65
       },
       "divergences": [],
       "diffs": {
@@ -365,6 +1444,30 @@
             "json": "{foundation.typography.line.height.tight}"
           },
           {
+            "file": "semantic/light.json",
+            "token": "semantic.motion.duration.fast",
+            "side": "json-only",
+            "json": "{foundation.duration.fast}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.motion.duration.normal",
+            "side": "json-only",
+            "json": "{foundation.duration.normal}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.motion.duration.slow",
+            "side": "json-only",
+            "json": "{foundation.duration.slow}"
+          },
+          {
+            "file": "semantic/light.json",
+            "token": "semantic.motion.ease.default",
+            "side": "json-only",
+            "json": "{foundation.ease.default}"
+          },
+          {
             "file": "semantic/dark.json",
             "token": "semantic.typography.body.letter-spacing.normal",
             "side": "divergent-alias",
@@ -421,160 +1524,52 @@
             "json": "{foundation.typography.line.height.tight}"
           },
           {
-            "file": "component/button.json",
-            "token": "component.button.transition-duration",
-            "side": "json-only-component",
+            "file": "semantic/dark.json",
+            "token": "semantic.motion.duration.fast",
+            "side": "json-only",
             "json": "{foundation.duration.fast}"
           },
           {
-            "file": "component/button.json",
-            "token": "component.button.transition-timing",
-            "side": "json-only-component",
-            "json": "{foundation.ease.default}"
+            "file": "semantic/dark.json",
+            "token": "semantic.motion.duration.normal",
+            "side": "json-only",
+            "json": "{foundation.duration.normal}"
           },
           {
-            "file": "component/checkbox.json",
-            "token": "component.checkbox.transition-duration",
-            "side": "json-only-component",
-            "json": "{foundation.duration.fast}"
+            "file": "semantic/dark.json",
+            "token": "semantic.motion.duration.slow",
+            "side": "json-only",
+            "json": "{foundation.duration.slow}"
           },
           {
-            "file": "component/checkbox.json",
-            "token": "component.checkbox.transition-timing",
-            "side": "json-only-component",
-            "json": "{foundation.ease.default}"
-          },
-          {
-            "file": "component/input.json",
-            "token": "component.input.transition-duration",
-            "side": "json-only-component",
-            "json": "{foundation.duration.fast}"
-          },
-          {
-            "file": "component/input.json",
-            "token": "component.input.transition-timing",
-            "side": "json-only-component",
+            "file": "semantic/dark.json",
+            "token": "semantic.motion.ease.default",
+            "side": "json-only",
             "json": "{foundation.ease.default}"
           },
           {
             "file": "component/modal.json",
             "token": "component.modal.shadow",
-            "side": "json-only-component",
+            "side": "json-only-downstream",
             "json": "{foundation.shadow.xl}"
           },
           {
             "file": "component/modal.json",
             "token": "component.modal.z-index",
-            "side": "json-only-component",
+            "side": "json-only-downstream",
             "json": "{foundation.z.50}"
-          },
-          {
-            "file": "component/modal.json",
-            "token": "component.modal.transition-duration",
-            "side": "json-only-component",
-            "json": "{foundation.duration.fast}"
-          },
-          {
-            "file": "component/modal.json",
-            "token": "component.modal.transition-timing",
-            "side": "json-only-component",
-            "json": "{foundation.ease.default}"
-          },
-          {
-            "file": "component/radio.json",
-            "token": "component.radio.transition-duration",
-            "side": "json-only-component",
-            "json": "{foundation.duration.fast}"
-          },
-          {
-            "file": "component/radio.json",
-            "token": "component.radio.transition-timing",
-            "side": "json-only-component",
-            "json": "{foundation.ease.default}"
-          },
-          {
-            "file": "component/select.json",
-            "token": "component.select.transition-duration",
-            "side": "json-only-component",
-            "json": "{foundation.duration.fast}"
-          },
-          {
-            "file": "component/select.json",
-            "token": "component.select.transition-timing",
-            "side": "json-only-component",
-            "json": "{foundation.ease.default}"
-          },
-          {
-            "file": "component/textarea.json",
-            "token": "component.textarea.transition-duration",
-            "side": "json-only-component",
-            "json": "{foundation.duration.fast}"
-          },
-          {
-            "file": "component/textarea.json",
-            "token": "component.textarea.transition-timing",
-            "side": "json-only-component",
-            "json": "{foundation.ease.default}"
-          },
-          {
-            "file": "component/toggle.json",
-            "token": "component.toggle.transition-duration",
-            "side": "json-only-component",
-            "json": "{foundation.duration.fast}"
-          },
-          {
-            "file": "component/toggle.json",
-            "token": "component.toggle.transition-timing",
-            "side": "json-only-component",
-            "json": "{foundation.ease.default}"
-          },
-          {
-            "file": "component/alert.json",
-            "token": "component.alert.transition-duration",
-            "side": "json-only-component",
-            "json": "{foundation.duration.fast}"
-          },
-          {
-            "file": "component/alert.json",
-            "token": "component.alert.transition-timing",
-            "side": "json-only-component",
-            "json": "{foundation.ease.default}"
           },
           {
             "file": "component/card.json",
             "token": "component.card.shadow-elevated",
-            "side": "json-only-component",
+            "side": "json-only-downstream",
             "json": "{foundation.shadow.sm}"
-          },
-          {
-            "file": "component/tabs.json",
-            "token": "component.tabs.transition-duration",
-            "side": "json-only-component",
-            "json": "{foundation.duration.fast}"
-          },
-          {
-            "file": "component/tabs.json",
-            "token": "component.tabs.transition-timing",
-            "side": "json-only-component",
-            "json": "{foundation.ease.default}"
           },
           {
             "file": "component/tooltip.json",
             "token": "component.tooltip.z-index",
-            "side": "json-only-component",
+            "side": "json-only-downstream",
             "json": "{foundation.z.50}"
-          },
-          {
-            "file": "component/tooltip.json",
-            "token": "component.tooltip.transition-duration",
-            "side": "json-only-component",
-            "json": "{foundation.duration.fast}"
-          },
-          {
-            "file": "component/tooltip.json",
-            "token": "component.tooltip.transition-timing",
-            "side": "json-only-component",
-            "json": "{foundation.ease.default}"
           }
         ]
       }

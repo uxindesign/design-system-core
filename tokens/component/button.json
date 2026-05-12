@@ -62,10 +62,6 @@
         "$type": "dimension",
         "$value": "{semantic.radius.component}"
       },
-      "border-width": {
-        "$type": "dimension",
-        "$value": "{semantic.border.width.default}"
-      },
       "font-size": {
         "sm": {
           "$type": "dimension",
@@ -99,11 +95,6 @@
           "$value": "{semantic.size.control.icon.lg}",
           "$description": "24px"
         }
-      },
-      "min-target-size": {
-        "$type": "dimension",
-        "$value": "{semantic.size.control.min-target}",
-        "$description": "44px — WCAG 2.5.5 enhanced touch target"
       },
       "background": {
         "toned": {
@@ -140,11 +131,10 @@
           }
         }
       },
-      "font-family": { "$type": "fontFamily", "$value": "{semantic.typography.body.font-family.sans}" },
-      "font-weight": { "$type": "number", "$value": "{semantic.typography.body.font-weight.medium}" },
-      "opacity-disabled": { "$type": "number", "$value": "{foundation.opacity.50}" },
-      "transition-duration": { "$type": "duration", "$value": "{foundation.duration.fast}" },
-      "transition-timing": { "$type": "cubicBezier", "$value": "{foundation.ease.default}" }
+      "font-weight": {
+        "$type": "number",
+        "$value": "{semantic.typography.body.font-weight.medium}"
+      }
     }
   }
 }
