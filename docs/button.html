@@ -6,6 +6,22 @@
   <title>Button — Design System</title>
   <link rel="stylesheet" href="../css/design-system.css">
   <link rel="stylesheet" href="layout.css">
+  <style>
+    .ds-button--docs-focused {
+      position: relative;
+      background-color: var(--ds-button-bg-brand-focused);
+      color: var(--ds-button-content-color-brand-focused);
+    }
+
+    .ds-button--docs-focused::after {
+      content: "";
+      position: absolute;
+      inset: calc(-1 * (var(--ds-button-focus-ring-offset-default) + var(--ds-button-focus-ring-stroke-width-default)));
+      border: var(--ds-button-focus-ring-stroke-width-default) solid var(--ds-button-focus-ring-color-default);
+      border-radius: var(--ds-button-focus-ring-radius-default);
+      pointer-events: none;
+    }
+  </style>
   <script>
     (function(){var l=localStorage.getItem('ds-lang');if(l)document.documentElement.setAttribute('lang',l)})();
   </script>
@@ -197,7 +213,7 @@
         <button class="ds-button ds-button--brand"><span class="ds-button__label">Default</span></button>
         <button class="ds-button ds-button--brand" style="background-color:var(--ds-button-bg-brand-hover)"><span class="ds-button__label">Hover</span></button>
         <button class="ds-button ds-button--brand" style="background-color:var(--ds-button-bg-brand-pressed)"><span class="ds-button__label">Pressed</span></button>
-        <button class="ds-button ds-button--brand" style="outline:var(--ds-button-focus-ring-stroke-width-default) solid var(--ds-button-focus-ring-color-default); outline-offset:var(--ds-button-focus-ring-offset-default)"><span class="ds-button__label">Focused</span></button>
+        <button class="ds-button ds-button--brand ds-button--docs-focused"><span class="ds-button__label">Focused</span></button>
         <button class="ds-button ds-button--brand" disabled><span class="ds-button__label">Disabled</span></button>
       </div>
     </div>
@@ -207,8 +223,8 @@
         <tr><td>Default</td><td>—</td><td><span data-lang="pt">Preenchimento primário</span><span data-lang="en">Primary fill</span></td><td><code>component.button.bg.brand.default</code></td></tr>
         <tr><td>Hover</td><td><code>:hover</code></td><td><span data-lang="pt">Preenchimento mais escuro</span><span data-lang="en">Darker fill</span></td><td><code>component.button.bg.brand.hover</code></td></tr>
         <tr><td>Pressed</td><td><code>:active</code></td><td><span data-lang="pt">Preenchimento mais escuro ainda</span><span data-lang="en">Darkest fill</span></td><td><code>component.button.bg.brand.pressed</code></td></tr>
-        <tr><td>Focused</td><td><code>:focus-visible</code></td><td><span data-lang="pt">Anel de 2px, offset de 2px</span><span data-lang="en">2px outline ring, 2px offset</span></td><td><code>component.button.focus-ring.*</code></td></tr>
-        <tr><td>Disabled</td><td><code>[disabled]</code></td><td><span data-lang="pt">Bg + fg atenuados, sem pointer events</span><span data-lang="en">Muted bg + fg, no pointer events</span></td><td><code>semantic.background.disabled</code></td></tr>
+        <tr><td>Focused</td><td><code>:focus-visible</code></td><td><span data-lang="pt">Ring de 2px com afastamento de 2px e cores do estado focused</span><span data-lang="en">2px ring with 2px offset and focused-state colors</span></td><td><code>component.button.bg.brand.focused</code>, <code>component.button.content.color.brand.focused</code>, <code>component.button.focus-ring.*</code></td></tr>
+        <tr><td>Disabled</td><td><code>[disabled]</code></td><td><span data-lang="pt">Bg + conteúdo atenuados, sem pointer events</span><span data-lang="en">Muted bg + content, no pointer events</span></td><td><code>component.button.bg.brand.disabled</code>, <code>component.button.content.color.brand.disabled</code></td></tr>
       </tbody>
     </table>
   </div>
@@ -393,7 +409,7 @@
         <tr><td>label typography</td><td><code>component.button.label.{font-size,line-height,font-weight,letter-spacing}.*</code></td><td><code>--ds-button-label-*</code></td></tr>
         <tr><td>icon frame/glyph</td><td><code>component.button.icon.frame-size.{sm,md,lg}</code>, <code>component.button.icon.glyph-size.{sm,md,lg}</code></td><td><code>--ds-button-icon-*</code></td></tr>
         <tr><td>icon-only</td><td><code>component.button.icon-only-{width,padding}.{sm,md,lg}</code></td><td><code>--ds-button-icon-only-*</code></td></tr>
-        <tr><td>focus ring</td><td><code>component.button.focus-ring.{stroke-width,offset,radius,color}.default</code></td><td><code>--ds-button-focus-ring-*</code></td></tr>
+        <tr><td>focus ring</td><td><code>component.button.focus-ring.{stroke-width,offset,radius}.default</code>, <code>component.button.focus-ring.color.{default,success,danger}</code></td><td><code>--ds-button-focus-ring-*</code></td></tr>
       </tbody>
     </table>
 

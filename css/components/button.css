@@ -4,6 +4,8 @@
    ============================================================ */
 
 .ds-button {
+  position: relative;
+  --_ds-button-focus-ring-color: var(--ds-button-focus-ring-color-default);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -30,8 +32,16 @@
 }
 
 .ds-button:focus-visible {
-  outline: var(--ds-button-focus-ring-stroke-width-default) solid var(--ds-button-focus-ring-color-default);
-  outline-offset: var(--ds-button-focus-ring-offset-default);
+  outline: none;
+}
+
+.ds-button:focus-visible::after {
+  content: "";
+  position: absolute;
+  inset: calc(-1 * (var(--ds-button-focus-ring-offset-default) + var(--ds-button-focus-ring-stroke-width-default)));
+  border: var(--ds-button-focus-ring-stroke-width-default) solid var(--_ds-button-focus-ring-color);
+  border-radius: var(--ds-button-focus-ring-radius-default);
+  pointer-events: none;
 }
 
 .ds-button[disabled],
@@ -91,6 +101,11 @@
   border-color: transparent;
 }
 
+.ds-button--brand:focus-visible {
+  background-color: var(--ds-button-bg-brand-focused);
+  color: var(--ds-button-content-color-brand-focused);
+}
+
 .ds-button--brand:hover {
   background-color: var(--ds-button-bg-brand-hover);
   color: var(--ds-button-content-color-brand-hover);
@@ -116,6 +131,11 @@
   border-color: transparent;
 }
 
+.ds-button--toned:focus-visible {
+  background-color: var(--ds-button-bg-toned-focused);
+  color: var(--ds-button-content-color-toned-focused);
+}
+
 .ds-button--toned:hover {
   background-color: var(--ds-button-bg-toned-hover);
   color: var(--ds-button-content-color-toned-hover);
@@ -139,6 +159,11 @@
   background-color: transparent;
   color: var(--ds-button-content-color-outline-default);
   border-color: var(--ds-button-border-color-outline-default);
+}
+
+.ds-button--outline:focus-visible {
+  color: var(--ds-button-content-color-outline-focused);
+  border-color: var(--ds-button-border-color-outline-focused);
 }
 
 .ds-button--outline:hover {
@@ -169,6 +194,10 @@
   border-color: transparent;
 }
 
+.ds-button--ghost:focus-visible {
+  color: var(--ds-button-content-color-ghost-focused);
+}
+
 .ds-button--ghost:hover {
   background-color: var(--ds-button-bg-ghost-hover);
   color: var(--ds-button-content-color-ghost-hover);
@@ -189,13 +218,15 @@
    Variant: Success
    --------------------------------------------------------- */
 .ds-button--success {
+  --_ds-button-focus-ring-color: var(--ds-button-focus-ring-color-success);
   background-color: var(--ds-button-bg-success-default);
   color: var(--ds-button-content-color-success-default);
   border-color: transparent;
 }
 
 .ds-button--success:focus-visible {
-  outline-color: var(--ds-button-focus-ring-color-success);
+  background-color: var(--ds-button-bg-success-focused);
+  color: var(--ds-button-content-color-success-focused);
 }
 
 .ds-button--success:hover {
@@ -218,13 +249,15 @@
    Variant: Danger (action/danger/default)
    --------------------------------------------------------- */
 .ds-button--danger {
+  --_ds-button-focus-ring-color: var(--ds-button-focus-ring-color-danger);
   background-color: var(--ds-button-bg-danger-default);
   color: var(--ds-button-content-color-danger-default);
   border-color: transparent;
 }
 
 .ds-button--danger:focus-visible {
-  outline-color: var(--ds-button-focus-ring-color-danger);
+  background-color: var(--ds-button-bg-danger-focused);
+  color: var(--ds-button-content-color-danger-focused);
 }
 
 .ds-button--danger:hover {
