@@ -4,7 +4,6 @@
    ============================================================ */
 
 .ds-button {
-  position: relative;
   --_ds-button-focus-ring-color: var(--ds-button-focus-ring-color-default);
   display: inline-flex;
   align-items: center;
@@ -32,16 +31,8 @@
 }
 
 .ds-button:focus-visible {
-  outline: none;
-}
-
-.ds-button:focus-visible::after {
-  content: "";
-  position: absolute;
-  inset: calc(-1 * (var(--ds-button-focus-ring-offset-default) + var(--ds-button-focus-ring-stroke-width-default)));
-  border: var(--ds-button-focus-ring-stroke-width-default) solid var(--_ds-button-focus-ring-color);
-  border-radius: var(--ds-button-focus-ring-radius-default);
-  pointer-events: none;
+  outline: var(--ds-button-focus-ring-stroke-width-default) solid var(--_ds-button-focus-ring-color);
+  outline-offset: var(--ds-button-focus-ring-offset-default);
 }
 
 .ds-button[disabled],
