@@ -4101,18 +4101,15 @@
             "count": 1
           },
           {
-            "file": "css/components/textarea.css",
-            "count": 1
-          },
-          {
             "file": "css/tokens/generated/component.css",
-            "count": 3
+            "count": 4
           }
         ],
         "tokens": [
           "component.button.bg.outline.pressed",
           "component.input.bg.readonly",
-          "component.select.bg.readonly"
+          "component.select.bg.readonly",
+          "component.textarea.bg.readonly"
         ],
         "figma": []
       }
@@ -4192,16 +4189,12 @@
             "count": 1
           },
           {
-            "file": "css/components/textarea.css",
-            "count": 1
-          },
-          {
             "file": "css/components/toggle.css",
             "count": 1
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 8
+            "count": 12
           }
         ],
         "tokens": [
@@ -4212,7 +4205,11 @@
           "component.select.bg.default",
           "component.select.bg.error",
           "component.select.bg.filled",
-          "component.select.bg.focused"
+          "component.select.bg.focused",
+          "component.textarea.bg.default",
+          "component.textarea.bg.error",
+          "component.textarea.bg.filled",
+          "component.textarea.bg.focused"
         ],
         "figma": []
       }
@@ -4321,16 +4318,12 @@
             "count": 1
           },
           {
-            "file": "css/components/textarea.css",
-            "count": 1
-          },
-          {
             "file": "css/components/toggle.css",
             "count": 3
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 5
+            "count": 7
           }
         ],
         "tokens": [
@@ -4338,7 +4331,9 @@
           "component.input.content.color.default",
           "component.input.label.color.default",
           "component.select.content.color.default",
-          "component.select.label.color.default"
+          "component.select.label.color.default",
+          "component.textarea.content.color.default",
+          "component.textarea.label.color.default"
         ],
         "figma": []
       }
@@ -4402,7 +4397,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 8
+            "count": 10
           }
         ],
         "tokens": [
@@ -4413,7 +4408,9 @@
           "component.select.chevron.color.default",
           "component.select.content.color.readonly",
           "component.select.helper.color.default",
-          "component.select.icon.color.default"
+          "component.select.icon.color.default",
+          "component.textarea.content.color.readonly",
+          "component.textarea.helper.color.default"
         ],
         "figma": []
       }
@@ -4436,18 +4433,15 @@
             "count": 1
           },
           {
-            "file": "css/components/textarea.css",
-            "count": 1
-          },
-          {
             "file": "css/tokens/generated/component.css",
-            "count": 3
+            "count": 4
           }
         ],
         "tokens": [
           "component.input.icon.color.default",
           "component.input.placeholder.color.default",
-          "component.select.placeholder.color.default"
+          "component.select.placeholder.color.default",
+          "component.textarea.placeholder.color.default"
         ],
         "figma": []
       }
@@ -4470,16 +4464,12 @@
             "count": 1
           },
           {
-            "file": "css/components/textarea.css",
-            "count": 2
-          },
-          {
             "file": "css/components/toggle.css",
             "count": 1
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 10
+            "count": 13
           }
         ],
         "tokens": [
@@ -4492,7 +4482,10 @@
           "component.select.content.color.disabled",
           "component.select.helper.color.disabled",
           "component.select.icon.color.disabled",
-          "component.select.placeholder.color.disabled"
+          "component.select.placeholder.color.disabled",
+          "component.textarea.content.color.disabled",
+          "component.textarea.helper.color.disabled",
+          "component.textarea.placeholder.color.disabled"
         ],
         "figma": []
       }
@@ -4570,12 +4563,13 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 2
+            "count": 3
           }
         ],
         "tokens": [
           "component.input.border-color.filled",
-          "component.select.border-color.filled"
+          "component.select.border-color.filled",
+          "component.textarea.border-color.filled"
         ],
         "figma": []
       }
@@ -4603,13 +4597,14 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 3
+            "count": 4
           }
         ],
         "tokens": [
           "component.divider.line.color.default",
           "component.input.border-color.readonly",
-          "component.select.border-color.readonly"
+          "component.select.border-color.readonly",
+          "component.textarea.border-color.readonly"
         ],
         "figma": []
       }
@@ -4635,16 +4630,12 @@
             "count": 1
           },
           {
-            "file": "css/components/textarea.css",
-            "count": 1
-          },
-          {
             "file": "css/components/toggle.css",
             "count": 3
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 9
+            "count": 10
           }
         ],
         "tokens": [
@@ -4656,7 +4647,8 @@
           "component.divider.line.thickness.default",
           "component.input.border-width.default",
           "component.select.border-width.default",
-          "component.tabs.list.border-width.default"
+          "component.tabs.list.border-width.default",
+          "component.textarea.border-width.default"
         ],
         "figma": []
       }
@@ -4722,16 +4714,12 @@
             "count": 2
           },
           {
-            "file": "css/components/textarea.css",
-            "count": 4
-          },
-          {
             "file": "css/components/toggle.css",
             "count": 2
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 7
+            "count": 9
           }
         ],
         "tokens": [
@@ -4741,7 +4729,9 @@
           "component.input.focus-ring.offset.default",
           "component.input.focus-ring.stroke-width.default",
           "component.select.focus-ring.offset.default",
-          "component.select.focus-ring.stroke-width.default"
+          "component.select.focus-ring.stroke-width.default",
+          "component.textarea.focus-ring.offset.default",
+          "component.textarea.focus-ring.stroke-width.default"
         ],
         "figma": []
       }
@@ -4784,23 +4774,20 @@
             "count": 1
           },
           {
-            "file": "css/components/textarea.css",
-            "count": 2
-          },
-          {
             "file": "css/components/toggle.css",
             "count": 1
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 5
+            "count": 6
           }
         ],
         "tokens": [
           "component.button.focus-ring.color.default",
           "component.checkbox.focus-ring.color.default",
           "component.input.focus-ring.color.default",
-          "component.select.focus-ring.color.default"
+          "component.select.focus-ring.color.default",
+          "component.textarea.focus-ring.color.default"
         ],
         "figma": []
       }
@@ -5057,7 +5044,11 @@
           "component.select.helper.font-family.default",
           "component.select.label.font-family.default",
           "component.select.required.font-family.default",
-          "component.select.text.font-family.default"
+          "component.select.text.font-family.default",
+          "component.textarea.helper.font-family.default",
+          "component.textarea.label.font-family.default",
+          "component.textarea.required.font-family.default",
+          "component.textarea.text.font-family.default"
         ],
         "figma": []
       }
@@ -5084,6 +5075,8 @@
           "component.modal.body.font-weight.default",
           "component.select.helper.font-weight.default",
           "component.select.text.font-weight.default",
+          "component.textarea.helper.font-weight.default",
+          "component.textarea.text.font-weight.default",
           "component.tooltip.label.font-weight.default"
         ],
         "figma": []
@@ -5152,7 +5145,9 @@
           "component.input.required.font-weight.default",
           "component.select.label.font-weight.default",
           "component.select.required.font-weight.default",
-          "component.tabs.label.font-weight.default"
+          "component.tabs.label.font-weight.default",
+          "component.textarea.label.font-weight.default",
+          "component.textarea.required.font-weight.default"
         ],
         "figma": []
       }
@@ -5183,7 +5178,11 @@
           "component.select.label.letter-spacing.default",
           "component.select.required.letter-spacing.default",
           "component.select.text.letter-spacing.default",
-          "component.tabs.label.letter-spacing.default"
+          "component.tabs.label.letter-spacing.default",
+          "component.textarea.helper.letter-spacing.default",
+          "component.textarea.label.letter-spacing.default",
+          "component.textarea.required.letter-spacing.default",
+          "component.textarea.text.letter-spacing.default"
         ],
         "figma": []
       }
@@ -5228,7 +5227,9 @@
           "component.input.text.font-size.sm",
           "component.select.helper.font-size.sm",
           "component.select.label.font-size.sm",
-          "component.select.text.font-size.sm"
+          "component.select.text.font-size.sm",
+          "component.textarea.helper.font-size.sm",
+          "component.textarea.label.font-size.sm"
         ],
         "figma": []
       }
@@ -5269,6 +5270,13 @@
           "component.select.required.font-size.default",
           "component.select.text.font-size.md",
           "component.tabs.label.font-size.default",
+          "component.textarea.helper.font-size.md",
+          "component.textarea.helper.font-size.lg",
+          "component.textarea.label.font-size.md",
+          "component.textarea.label.font-size.lg",
+          "component.textarea.required.font-size.default",
+          "component.textarea.text.font-size.sm",
+          "component.textarea.text.font-size.md",
           "component.tooltip.label.font-size.default"
         ],
         "figma": []
@@ -5290,7 +5298,8 @@
           "component.button.label.font-size.lg",
           "component.input.text.font-size.lg",
           "component.modal.body.font-size.md",
-          "component.select.text.font-size.lg"
+          "component.select.text.font-size.lg",
+          "component.textarea.text.font-size.lg"
         ],
         "figma": []
       }
@@ -5391,7 +5400,9 @@
           "component.input.helper.line-height.default",
           "component.input.label.line-height.sm",
           "component.select.helper.line-height.sm",
-          "component.select.label.line-height.sm"
+          "component.select.label.line-height.sm",
+          "component.textarea.helper.line-height.sm",
+          "component.textarea.label.line-height.sm"
         ],
         "figma": []
       }
@@ -5431,6 +5442,13 @@
           "component.select.required.line-height.default",
           "component.select.text.line-height.md",
           "component.tabs.label.line-height.default",
+          "component.textarea.helper.line-height.md",
+          "component.textarea.helper.line-height.lg",
+          "component.textarea.label.line-height.md",
+          "component.textarea.label.line-height.lg",
+          "component.textarea.required.line-height.default",
+          "component.textarea.text.line-height.sm",
+          "component.textarea.text.line-height.md",
           "component.tooltip.label.line-height.default"
         ],
         "figma": []
@@ -5452,7 +5470,8 @@
           "component.button.label.line-height.lg",
           "component.input.text.line-height.lg",
           "component.modal.body.line-height.md",
-          "component.select.text.line-height.lg"
+          "component.select.text.line-height.lg",
+          "component.textarea.text.line-height.lg"
         ],
         "figma": []
       }
@@ -6553,15 +6572,17 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 5
+            "count": 7
           }
         ],
         "tokens": [
           "component.form-field.label.color.error",
           "component.form-field.required.color.default",
           "component.form-field.error.color.default",
+          "component.form-field.error.icon.color.default",
           "component.input.required.color.default",
-          "component.select.required.color.default"
+          "component.select.required.color.default",
+          "component.textarea.required.color.default"
         ],
         "figma": []
       }
@@ -6695,21 +6716,18 @@
             "count": 1
           },
           {
-            "file": "css/components/textarea.css",
-            "count": 1
-          },
-          {
             "file": "css/components/toggle.css",
             "count": 1
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 2
+            "count": 3
           }
         ],
         "tokens": [
           "component.input.bg.disabled",
-          "component.select.bg.disabled"
+          "component.select.bg.disabled",
+          "component.textarea.bg.disabled"
         ],
         "figma": []
       }
@@ -6736,22 +6754,19 @@
             "count": 1
           },
           {
-            "file": "css/components/textarea.css",
-            "count": 1
-          },
-          {
             "file": "css/components/toggle.css",
             "count": 1
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 3
+            "count": 4
           }
         ],
         "tokens": [
           "component.button.border-color.outline.pressed",
           "component.input.border-color.default",
-          "component.select.border-color.default"
+          "component.select.border-color.default",
+          "component.textarea.border-color.default"
         ],
         "figma": []
       }
@@ -6770,17 +6785,14 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/textarea.css",
-            "count": 1
-          },
-          {
             "file": "css/tokens/generated/component.css",
-            "count": 2
+            "count": 3
           }
         ],
         "tokens": [
           "component.input.border-color.hover",
-          "component.select.border-color.hover"
+          "component.select.border-color.hover",
+          "component.textarea.border-color.hover"
         ],
         "figma": []
       }
@@ -6807,22 +6819,19 @@
             "count": 1
           },
           {
-            "file": "css/components/textarea.css",
-            "count": 1
-          },
-          {
             "file": "css/components/toggle.css",
             "count": 1
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 3
+            "count": 4
           }
         ],
         "tokens": [
           "component.button.border-color.outline.disabled",
           "component.input.border-color.disabled",
-          "component.select.border-color.disabled"
+          "component.select.border-color.disabled",
+          "component.textarea.border-color.disabled"
         ],
         "figma": []
       }
@@ -6851,7 +6860,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 6
+            "count": 7
           }
         ],
         "tokens": [
@@ -6860,6 +6869,7 @@
           "component.form-field.label-row.gap.default",
           "component.input.label-row.gap.default",
           "component.select.label-row.gap.default",
+          "component.textarea.label-row.gap.default",
           "component.toggle.thumb.inset.default"
         ],
         "figma": []
@@ -6893,7 +6903,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 15
+            "count": 17
           },
           {
             "file": "css/utilities/layout.css",
@@ -6908,12 +6918,14 @@
           "component.button.gap.md",
           "component.button.label-frame.padding-x.default",
           "component.form-field.gap.default",
+          "component.form-field.error.gap.default",
           "component.input.gap.md",
           "component.input.stack.gap.default",
           "component.input.text-frame.padding-x.default",
           "component.modal.close.padding.default",
           "component.select.stack.gap.default",
           "component.select.text-frame.padding-x.default",
+          "component.textarea.stack.gap.default",
           "component.tooltip.content.padding-y.default",
           "component.tooltip.arrow.depth.default"
         ],
@@ -6943,10 +6955,6 @@
             "count": 4
           },
           {
-            "file": "css/components/textarea.css",
-            "count": 2
-          },
-          {
             "file": "css/components/toggle.css",
             "count": 1
           },
@@ -6956,7 +6964,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 23
+            "count": 25
           },
           {
             "file": "css/utilities/layout.css",
@@ -6985,6 +6993,8 @@
           "component.select.gap.lg",
           "component.select.padding-x.sm",
           "component.select.padding-y.sm",
+          "component.textarea.padding-x.sm",
+          "component.textarea.padding-y.sm",
           "component.tooltip.content.padding-x.default",
           "component.tooltip.arrow.base.default"
         ],
@@ -7014,12 +7024,8 @@
             "count": 1
           },
           {
-            "file": "css/components/textarea.css",
-            "count": 2
-          },
-          {
             "file": "css/tokens/generated/component.css",
-            "count": 13
+            "count": 15
           },
           {
             "file": "css/utilities/layout.css",
@@ -7039,7 +7045,9 @@
           "component.modal.footer.padding-top.lg",
           "component.select.padding-x.md",
           "component.select.padding-y.lg",
-          "component.tabs.item.padding-top.default"
+          "component.tabs.item.padding-top.default",
+          "component.textarea.padding-x.md",
+          "component.textarea.padding-y.lg"
         ],
         "figma": []
       }
@@ -7059,12 +7067,8 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/textarea.css",
-            "count": 1
-          },
-          {
             "file": "css/tokens/generated/component.css",
-            "count": 15
+            "count": 16
           },
           {
             "file": "css/utilities/layout.css",
@@ -7086,7 +7090,8 @@
           "component.modal.footer.padding-bottom.sm",
           "component.select.padding-x.lg",
           "component.tabs.item.padding-x.default",
-          "component.tabs.panel.padding-y.default"
+          "component.tabs.panel.padding-y.default",
+          "component.textarea.padding-x.lg"
         ],
         "figma": []
       }
@@ -7211,12 +7216,8 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/textarea.css",
-            "count": 1
-          },
-          {
             "file": "css/tokens/generated/component.css",
-            "count": 11
+            "count": 12
           }
         ],
         "tokens": [
@@ -7230,7 +7231,8 @@
           "component.skeleton.text.radius.default",
           "component.skeleton.rectangle.radius.default",
           "component.tabs.item.radius.default",
-          "component.tabs.indicator.radius.default"
+          "component.tabs.indicator.radius.default",
+          "component.textarea.radius.default"
         ],
         "figma": []
       }
@@ -7253,7 +7255,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 6
+            "count": 7
           }
         ],
         "tokens": [
@@ -7262,7 +7264,8 @@
           "component.card.radius.default",
           "component.input.focus-ring.radius.default",
           "component.modal.radius.default",
-          "component.select.focus-ring.radius.default"
+          "component.select.focus-ring.radius.default",
+          "component.textarea.focus-ring.radius.default"
         ],
         "figma": []
       }
@@ -8543,14 +8546,15 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 4
+            "count": 5
           }
         ],
         "tokens": [
           "component.button.bg.brand.default",
           "component.button.bg.brand.focused",
           "component.input.border-color.focused",
-          "component.select.border-color.focused"
+          "component.select.border-color.focused",
+          "component.textarea.border-color.focused"
         ],
         "figma": []
       }
@@ -9004,12 +9008,8 @@
             "count": 3
           },
           {
-            "file": "css/components/textarea.css",
-            "count": 3
-          },
-          {
             "file": "css/tokens/generated/component.css",
-            "count": 6
+            "count": 8
           }
         ],
         "tokens": [
@@ -9018,7 +9018,9 @@
           "component.input.border-color.error",
           "component.input.focus-ring.color.error",
           "component.select.border-color.error",
-          "component.select.focus-ring.color.error"
+          "component.select.focus-ring.color.error",
+          "component.textarea.border-color.error",
+          "component.textarea.focus-ring.color.error"
         ],
         "figma": []
       }
@@ -9198,19 +9200,16 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/textarea.css",
-            "count": 1
-          },
-          {
             "file": "css/tokens/generated/component.css",
-            "count": 4
+            "count": 5
           }
         ],
         "tokens": [
           "component.button.padding-y.md",
           "component.input.padding-y.md",
           "component.select.padding-y.md",
-          "component.tabs.item.indicator-gap.default"
+          "component.tabs.item.indicator-gap.default",
+          "component.textarea.padding-y.md"
         ],
         "figma": []
       }
@@ -9230,11 +9229,13 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 6
+            "count": 8
           }
         ],
         "tokens": [
           "component.checkbox.box.size.sm",
+          "component.form-field.error.icon.frame-size.default",
+          "component.form-field.error.icon.glyph-size.default",
           "component.input.icon.glyph-size.sm",
           "component.modal.close.glyph-size.default",
           "component.radio.control.size.sm",
@@ -11210,13 +11211,14 @@
       "layer": "component",
       "type": "dimension",
       "references": "foundation.dimension.80",
-      "sentido": "Altura minima do field visual do Textarea por size.",
+      "sentido": "Altura mínima do field Textarea sm.",
       "escopo": [
-        "min-height",
-        "height"
+        "Textarea",
+        "Component set",
+        "Figma"
       ],
-      "contexto": "Component token do contrato anatômico Textarea. Binda o subnode Field no Figma e substitui consumo direto de foundation/semantic no CSS.",
-      "decisao": "Mantido em Component com alias direto para Foundation dimension 80/96/120 porque Textarea usa uma altura minima propria do field, distinta do padrao 32/40/48 de Button/Input/Select; criar semantic.control.textarea-height ou reutilizar semantic.size.* esconderia uma anatomia especifica do componente.",
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Valor anatômico específico do Textarea observado no Figma vivo. Permanece em Component porque a altura mínima multilinha é contrato público do componente, não decisão Semantic reutilizável.",
       "usos": {
         "css": [
           {
@@ -11232,13 +11234,14 @@
       "layer": "component",
       "type": "dimension",
       "references": "foundation.dimension.96",
-      "sentido": "Altura minima do field visual do Textarea por size.",
+      "sentido": "Altura mínima do field Textarea md.",
       "escopo": [
-        "min-height",
-        "height"
+        "Textarea",
+        "Component set",
+        "Figma"
       ],
-      "contexto": "Component token do contrato anatômico Textarea. Binda o subnode Field no Figma e substitui consumo direto de foundation/semantic no CSS.",
-      "decisao": "Mantido em Component com alias direto para Foundation dimension 80/96/120 porque Textarea usa uma altura minima propria do field, distinta do padrao 32/40/48 de Button/Input/Select; criar semantic.control.textarea-height ou reutilizar semantic.size.* esconderia uma anatomia especifica do componente.",
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Valor anatômico específico do Textarea observado no Figma vivo. Permanece em Component porque a altura mínima multilinha é contrato público do componente, não decisão Semantic reutilizável.",
       "usos": {
         "css": [
           {
@@ -11254,13 +11257,14 @@
       "layer": "component",
       "type": "dimension",
       "references": "foundation.dimension.120",
-      "sentido": "Altura minima do field visual do Textarea por size.",
+      "sentido": "Altura mínima do field Textarea lg.",
       "escopo": [
-        "min-height",
-        "height"
+        "Textarea",
+        "Component set",
+        "Figma"
       ],
-      "contexto": "Component token do contrato anatômico Textarea. Binda o subnode Field no Figma e substitui consumo direto de foundation/semantic no CSS.",
-      "decisao": "Mantido em Component com alias direto para Foundation dimension 80/96/120 porque Textarea usa uma altura minima propria do field, distinta do padrao 32/40/48 de Button/Input/Select; criar semantic.control.textarea-height ou reutilizar semantic.size.* esconderia uma anatomia especifica do componente.",
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Valor anatômico específico do Textarea observado no Figma vivo. Permanece em Component porque a altura mínima multilinha é contrato público do componente, não decisão Semantic reutilizável.",
       "usos": {
         "css": [
           {
@@ -15493,7 +15497,12 @@
       "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
       "decisao": "Alias 1:1 para semantic.primary.background.default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/button.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -15593,7 +15602,12 @@
       "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
       "decisao": "Alias 1:1 para semantic.toned.background.default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/button.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -15777,7 +15791,12 @@
       "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
       "decisao": "Alias 1:1 para semantic.feedback.success.background.default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/button.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -15877,7 +15896,12 @@
       "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
       "decisao": "Alias 1:1 para semantic.feedback.error.background.default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/button.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -15977,7 +16001,12 @@
       "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
       "decisao": "Alias 1:1 para semantic.border.default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/button.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -16419,7 +16448,12 @@
       "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
       "decisao": "Alias 1:1 para semantic.primary.content-default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/button.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -16509,7 +16543,12 @@
       "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
       "decisao": "Alias 1:1 para semantic.toned.content-default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/button.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -16599,7 +16638,12 @@
       "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
       "decisao": "Alias 1:1 para semantic.outline.content-default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/button.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -16689,7 +16733,12 @@
       "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
       "decisao": "Alias 1:1 para semantic.link.content-default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/button.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -16779,7 +16828,12 @@
       "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
       "decisao": "Alias 1:1 para semantic.feedback.success.content-contrast porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/button.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -16869,7 +16923,12 @@
       "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
       "decisao": "Alias 1:1 para semantic.feedback.error.content-contrast porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/button.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -20371,7 +20430,7 @@
         "css": [
           {
             "file": "css/components/select.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [],
@@ -20394,7 +20453,7 @@
         "css": [
           {
             "file": "css/components/select.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [],
@@ -20779,6 +20838,1515 @@
           {
             "file": "css/components/select.css",
             "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.form-field.error.gap.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xs",
+      "sentido": "Gap horizontal entre ícone e texto da mensagem de erro do Form Field.",
+      "escopo": [
+        "Form Field",
+        "CSS-only",
+        "ADR-017"
+      ],
+      "contexto": "Contrato Component CSS-only do Form Field. O Figma vivo de Input Text, Select e Textarea usa Error Message horizontal com gap 4px entre glyph e texto.",
+      "decisao": "Alias 1:1 para semantic.space.xs porque 4px é escala reutilizável, mas no Form Field documenta a anatomia pública da linha de erro.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/form-field.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.form-field.error.icon.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.feedback.error.content-default",
+      "sentido": "Cor do ícone da mensagem de erro do Form Field.",
+      "escopo": [
+        "Form Field",
+        "CSS-only",
+        "ADR-017"
+      ],
+      "contexto": "Contrato Component CSS-only do Form Field. O Figma vivo usa glyph de erro com fill feedback/error/content/default em Input Text, Select e Textarea.",
+      "decisao": "Alias 1:1 para semantic.feedback.error.content-default, mantendo o ícone como conteúdo de erro e não como background.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/form-field.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.form-field.error.icon.frame-size.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.xs",
+      "sentido": "Frame-size do ícone da mensagem de erro do Form Field.",
+      "escopo": [
+        "Form Field",
+        "CSS-only",
+        "ADR-017"
+      ],
+      "contexto": "Contrato Component CSS-only do Form Field. O Figma vivo mede o glyph de erro em 16x16 nos estados de erro de Input Text, Select e Textarea.",
+      "decisao": "Alias 1:1 para semantic.size.xs porque 16px já existe como tamanho reutilizável, mas aqui estabiliza o contrato do ícone de erro.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/form-field.css",
+            "count": 4
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.form-field.error.icon.glyph-size.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.xs",
+      "sentido": "Tamanho do glyph do ícone da mensagem de erro do Form Field.",
+      "escopo": [
+        "Form Field",
+        "CSS-only",
+        "ADR-017"
+      ],
+      "contexto": "Contrato Component CSS-only do Form Field. O glyph Material Symbols de erro no Figma vivo usa 16px.",
+      "decisao": "Alias 1:1 para semantic.size.xs porque o glyph usa 16px e esse valor já pertence à escala Semantic.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/form-field.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.bg.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.surface.default",
+      "sentido": "Bg do Field Textarea default.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.surface.default porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.bg.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.background.disabled",
+      "sentido": "Bg do Field Textarea disabled.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.background.disabled porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.bg.error": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.surface.default",
+      "sentido": "Bg do Field Textarea error.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.surface.default porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.bg.filled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.surface.default",
+      "sentido": "Bg do Field Textarea filled.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.surface.default porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.bg.focused": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.surface.default",
+      "sentido": "Bg do Field Textarea focused.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.surface.default porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.bg.readonly": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.background.subtle",
+      "sentido": "Bg do Field Textarea readonly.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.background.subtle porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.border-color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.control-default",
+      "sentido": "Border color do Field Textarea default.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.border.control-default porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.border-color.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.control-disabled",
+      "sentido": "Border color do Field Textarea disabled.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.border.control-disabled porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.border-color.error": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.feedback.error.background.default",
+      "sentido": "Border color do Field Textarea error.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.feedback.error.background.default porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.border-color.filled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.strong",
+      "sentido": "Border color do Field Textarea filled.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.border.strong porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.border-color.focused": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.background.default",
+      "sentido": "Border color do Field Textarea focused.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.primary.background.default porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.border-color.hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.control-hover",
+      "sentido": "Border color do Field Textarea hover.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.border.control-hover porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.border-color.readonly": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.subtle",
+      "sentido": "Border color do Field Textarea readonly.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.border.subtle porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.border-width.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.border.width.default",
+      "sentido": "Border width do Field Textarea.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.border.width.default porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.content.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.strong",
+      "sentido": "Cor de conteúdo preenchido do Textarea.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.content.strong porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.content.color.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.disabled",
+      "sentido": "Cor de conteúdo disabled do Textarea.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.content.disabled porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.content.color.readonly": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.default",
+      "sentido": "Cor de conteúdo readonly do Textarea.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.content.default porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.focus-ring.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.focus",
+      "sentido": "Cor do focus ring Textarea.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.border.focus porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.focus-ring.color.error": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.feedback.error.background.default",
+      "sentido": "Cor do focus ring Textarea error.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.feedback.error.background.default porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.focus-ring.offset.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.border.width.focus",
+      "sentido": "Offset CSS do focus ring Textarea.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.border.width.focus porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.focus-ring.radius.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.radius.lg",
+      "sentido": "Radius do focus ring Textarea.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.radius.lg porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.focus-ring.stroke-width.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.border.width.focus",
+      "sentido": "Stroke width do focus ring Textarea.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.border.width.focus porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.helper.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.default",
+      "sentido": "Cor do helper text Textarea.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.content.default porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.helper.color.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.disabled",
+      "sentido": "Cor do helper text Textarea disabled.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.content.disabled porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.helper.font-family.default": {
+      "layer": "component",
+      "type": "string",
+      "references": "semantic.typography.body.font-family.sans",
+      "sentido": "Font-family do helper text Textarea.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-family.sans porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.helper.font-size.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.xs",
+      "sentido": "Font-size do helper text Textarea sm.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-size.xs porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.helper.font-size.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.sm",
+      "sentido": "Font-size do helper text Textarea md.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-size.sm porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.helper.font-size.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.sm",
+      "sentido": "Font-size do helper text Textarea lg.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-size.sm porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.helper.font-weight.default": {
+      "layer": "component",
+      "type": "string",
+      "references": "semantic.typography.body.font-weight.regular",
+      "sentido": "Font-weight do helper text Textarea.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-weight.regular porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.helper.letter-spacing.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.letter-spacing.normal",
+      "sentido": "Letter-spacing do helper text Textarea.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.typography.body.letter-spacing.normal porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.helper.line-height.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.xs",
+      "sentido": "Line-height do helper text Textarea sm.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.typography.body.line-height.xs porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.helper.line-height.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.sm",
+      "sentido": "Line-height do helper text Textarea md.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.typography.body.line-height.sm porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.helper.line-height.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.sm",
+      "sentido": "Line-height do helper text Textarea lg.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.typography.body.line-height.sm porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.label.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.strong",
+      "sentido": "Cor do label Textarea.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.content.strong porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.label.font-family.default": {
+      "layer": "component",
+      "type": "string",
+      "references": "semantic.typography.body.font-family.sans",
+      "sentido": "Font-family do label Textarea.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-family.sans porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.label.font-size.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.xs",
+      "sentido": "Font-size do label Textarea sm.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-size.xs porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.label.font-size.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.sm",
+      "sentido": "Font-size do label Textarea md.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-size.sm porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.label.font-size.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.sm",
+      "sentido": "Font-size do label Textarea lg.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-size.sm porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.label.font-weight.default": {
+      "layer": "component",
+      "type": "string",
+      "references": "semantic.typography.body.font-weight.bold",
+      "sentido": "Font-weight do label Textarea.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-weight.bold porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.label.letter-spacing.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.letter-spacing.normal",
+      "sentido": "Letter-spacing do label Textarea.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.typography.body.letter-spacing.normal porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.label.line-height.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.xs",
+      "sentido": "Line-height do label Textarea sm.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.typography.body.line-height.xs porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.label.line-height.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.sm",
+      "sentido": "Line-height do label Textarea md.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.typography.body.line-height.sm porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.label.line-height.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.sm",
+      "sentido": "Line-height do label Textarea lg.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.typography.body.line-height.sm porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.label-row.gap.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.2xs",
+      "sentido": "Gap entre label e required Textarea.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.space.2xs porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.padding-x.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.sm",
+      "sentido": "Padding horizontal do Field Textarea sm.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.space.sm porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.padding-x.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.md",
+      "sentido": "Padding horizontal do Field Textarea md.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.space.md porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.padding-x.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.lg",
+      "sentido": "Padding horizontal do Field Textarea lg.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.space.lg porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.padding-y.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.sm",
+      "sentido": "Padding vertical do Field Textarea sm.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.space.sm porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.padding-y.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.control.padding.10",
+      "sentido": "Padding vertical do Field Textarea md.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.space.control.padding.10 porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.padding-y.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.md",
+      "sentido": "Padding vertical do Field Textarea lg.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.space.md porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.placeholder.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.subtle",
+      "sentido": "Cor do placeholder Textarea.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.content.subtle porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.placeholder.color.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.disabled",
+      "sentido": "Cor do placeholder Textarea disabled.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.content.disabled porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.radius.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.radius.md",
+      "sentido": "Radius do Field Textarea.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.radius.md porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.required.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.feedback.error.content-default",
+      "sentido": "Cor do indicador required Textarea.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.feedback.error.content-default porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.required.font-family.default": {
+      "layer": "component",
+      "type": "string",
+      "references": "semantic.typography.body.font-family.sans",
+      "sentido": "Font-family do indicador required Textarea.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-family.sans porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.required.font-size.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.sm",
+      "sentido": "Font-size do indicador required Textarea.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-size.sm porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.required.font-weight.default": {
+      "layer": "component",
+      "type": "string",
+      "references": "semantic.typography.body.font-weight.bold",
+      "sentido": "Font-weight do indicador required Textarea.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-weight.bold porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.required.letter-spacing.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.letter-spacing.normal",
+      "sentido": "Letter-spacing do indicador required Textarea.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.typography.body.letter-spacing.normal porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.required.line-height.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.sm",
+      "sentido": "Line-height do indicador required Textarea.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.typography.body.line-height.sm porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.stack.gap.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xs",
+      "sentido": "Gap vertical entre label, field e helper no Textarea.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.space.xs porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.text.font-family.default": {
+      "layer": "component",
+      "type": "string",
+      "references": "semantic.typography.body.font-family.sans",
+      "sentido": "Font-family do texto Textarea.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-family.sans porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.text.font-size.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.sm",
+      "sentido": "Font-size do texto Textarea sm.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-size.sm porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.text.font-size.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.sm",
+      "sentido": "Font-size do texto Textarea md.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-size.sm porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.text.font-size.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.md",
+      "sentido": "Font-size do texto Textarea lg.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-size.md porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.text.font-weight.default": {
+      "layer": "component",
+      "type": "string",
+      "references": "semantic.typography.body.font-weight.regular",
+      "sentido": "Font-weight do texto Textarea.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.typography.body.font-weight.regular porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.text.letter-spacing.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.letter-spacing.normal",
+      "sentido": "Letter-spacing do texto Textarea.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.typography.body.letter-spacing.normal porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.text.line-height.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.sm",
+      "sentido": "Line-height do texto Textarea sm.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.typography.body.line-height.sm porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.text.line-height.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.sm",
+      "sentido": "Line-height do texto Textarea md.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.typography.body.line-height.sm porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.text.line-height.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.md",
+      "sentido": "Line-height do texto Textarea lg.",
+      "escopo": [
+        "Textarea",
+        "Component set",
+        "Figma"
+      ],
+      "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
+      "decisao": "Alias 1:1 para semantic.typography.body.line-height.md porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
           }
         ],
         "tokens": [],

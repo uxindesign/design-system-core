@@ -8,9 +8,9 @@
 .ds-textarea {
   display: flex;
   width: 100%;
-  border: var(--ds-border-width-default) solid var(--ds-border-control-default);
-  border-radius: var(--ds-radius-md);
-  background: var(--ds-surface-default);
+  border: var(--ds-textarea-border-width-default) solid var(--ds-textarea-border-color-default);
+  border-radius: var(--ds-textarea-radius-default);
+  background: var(--ds-textarea-bg-default);
   transition: border-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
               box-shadow var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
 }
@@ -20,15 +20,18 @@
 
 .ds-textarea,
 .ds-textarea--md {
-  font-size: var(--ds-body-font-size-sm);
+  font-size: var(--ds-textarea-text-font-size-md);
+  line-height: var(--ds-textarea-text-line-height-md);
 }
 
 .ds-textarea--sm {
-  font-size: var(--ds-body-font-size-sm);
+  font-size: var(--ds-textarea-text-font-size-sm);
+  line-height: var(--ds-textarea-text-line-height-sm);
 }
 
 .ds-textarea--lg {
-  font-size: var(--ds-body-font-size-md);
+  font-size: var(--ds-textarea-text-font-size-lg);
+  line-height: var(--ds-textarea-text-line-height-lg);
 }
 
 /* Field
@@ -41,31 +44,30 @@
   border: none;
   background: transparent;
   outline: none;
-  color: var(--ds-content-strong);
+  color: var(--ds-textarea-content-color-default);
   font-size: inherit;
-  font-family: inherit;
+  font-family: var(--ds-textarea-text-font-family-default);
+  font-weight: var(--ds-textarea-text-font-weight-default);
+  letter-spacing: var(--ds-textarea-text-letter-spacing-default);
   resize: vertical;
   min-height: var(--ds-textarea-field-min-height-md);
   min-width: 0;
-  /* Figma Textarea Field md (pós descida): pl/pr=space/md (12), pt/pb=space/control/padding/10 (10) */
-  padding: var(--ds-space-control-padding-10) var(--ds-space-md);
-  line-height: var(--ds-body-line-height-sm);
+  padding: var(--ds-textarea-padding-y-md) var(--ds-textarea-padding-x-md);
+  line-height: inherit;
 }
 
 .ds-textarea--sm .ds-textarea__field {
   min-height: var(--ds-textarea-field-min-height-sm);
-  /* Figma Textarea sm Field (pós descida): pl/pr=space/sm (8), pt/pb=space/sm (8) */
-  padding: var(--ds-space-sm) var(--ds-space-sm);
+  padding: var(--ds-textarea-padding-y-sm) var(--ds-textarea-padding-x-sm);
 }
 
 .ds-textarea--lg .ds-textarea__field {
   min-height: var(--ds-textarea-field-min-height-lg);
-  /* Figma Textarea lg Field (pós descida): pl/pr=space/lg (16), pt/pb=space/md (12) */
-  padding: var(--ds-space-md) var(--ds-space-lg);
+  padding: var(--ds-textarea-padding-y-lg) var(--ds-textarea-padding-x-lg);
 }
 
 .ds-textarea__field::placeholder {
-  color: var(--ds-content-subtle);
+  color: var(--ds-textarea-placeholder-color-default);
 }
 
 /* States
@@ -73,46 +75,55 @@
 
 /* Hover */
 .ds-textarea:hover:not(.ds-textarea--disabled):not(:focus-within) {
-  border-color: var(--ds-border-control-hover);
+  border-color: var(--ds-textarea-border-color-hover);
 }
 
 /* Focused */
 .ds-textarea:focus-within {
-  border-color: var(--ds-border-focus);
-  outline: var(--ds-border-width-focus) solid var(--ds-border-focus);
-  outline-offset: var(--ds-border-width-focus);
+  border-color: var(--ds-textarea-border-color-focused);
+  outline: var(--ds-textarea-focus-ring-stroke-width-default) solid var(--ds-textarea-focus-ring-color-default);
+  outline-offset: var(--ds-textarea-focus-ring-offset-default);
 }
 
 /* Error */
 .ds-textarea--error {
-  border-color: var(--ds-feedback-error-background-default);
+  border-color: var(--ds-textarea-border-color-error);
 }
 
 .ds-textarea--error:focus-within {
-  border-color: var(--ds-feedback-error-background-default);
-  outline: var(--ds-border-width-focus) solid var(--ds-feedback-error-background-default);
-  outline-offset: var(--ds-border-width-focus);
+  border-color: var(--ds-textarea-border-color-error);
+  outline-color: var(--ds-textarea-focus-ring-color-error);
 }
 
 /* Disabled */
 .ds-textarea--disabled,
 .ds-textarea:has(.ds-textarea__field:disabled) {
-  background: var(--ds-background-disabled);
-  border-color: var(--ds-border-control-disabled);
-  color: var(--ds-content-disabled);
+  background: var(--ds-textarea-bg-disabled);
+  border-color: var(--ds-textarea-border-color-disabled);
   pointer-events: none;
 }
 
 .ds-textarea--disabled .ds-textarea__field,
 .ds-textarea__field:disabled {
-  color: var(--ds-content-disabled);
+  color: var(--ds-textarea-content-color-disabled);
   resize: none;
+}
+
+.ds-textarea--disabled .ds-textarea__field::placeholder,
+.ds-textarea__field:disabled::placeholder {
+  color: var(--ds-textarea-placeholder-color-disabled);
 }
 
 /* Readonly */
 .ds-textarea--readonly,
 .ds-textarea:has(.ds-textarea__field:read-only) {
-  background: var(--ds-background-subtle);
+  background: var(--ds-textarea-bg-readonly);
+  border-color: var(--ds-textarea-border-color-readonly);
+}
+
+.ds-textarea--readonly .ds-textarea__field,
+.ds-textarea__field:read-only {
+  color: var(--ds-textarea-content-color-readonly);
 }
 
 /* Character Counter
@@ -135,7 +146,7 @@
    --------------------------------------------------------- */
 
 /*
-  Uses shared .ds-field wrapper and .ds-field__helper from input.css.
+  Uses shared .ds-field wrapper and .ds-field__helper from form-field.css.
   .ds-field__counter (above) is the character counter — separate from .ds-field__helper.
 
   HTML structure:
@@ -158,7 +169,7 @@
 
 /*
   Field anatomy (Label row, Required, Helper) uses shared .ds-field__* classes
-  defined in input.css. See input.css for .ds-field__label-row, .ds-field__label,
+  defined in form-field.css. See form-field.css for .ds-field__label-row, .ds-field__label,
   .ds-field__required, .ds-field__helper, .ds-field--no-label, .ds-field--no-helper.
   .ds-field__counter (above) is the character counter — distinct from .ds-field__helper.
 */
