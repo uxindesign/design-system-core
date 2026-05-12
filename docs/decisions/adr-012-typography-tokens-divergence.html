@@ -142,6 +142,17 @@ const JSON_ONLY_PATHS = [
 <h3>Extensão em ADR-013 — aliases divergentes</h3>
 <p>Tokens Semantic/Component que <strong>existem nos dois lados</strong> mas apontam para Foundation em subárvores divergentes (Figma → <code>foundation.typography.font.line-height.*</code> px, JSON → <code>foundation.typography.line.height.*</code> ratio) são também classificados como <code>BY_DESIGN</code>, não <code>VALUE_DRIFT</code>. Motivo: a divergência vem da mesma razão arquitetural (Figma px vs CSS ratio) propagada através do alias. Exemplo: <code>semantic.typography.body.line-height.md</code> resolve em 24px no Figma e ratio 1.5 no CSS — ambos canônicos.</p>
 <p>Detecção via função <code>isDivergentAliasByDesign</code> em <code>figma-dtcg.mjs</code>: quando Figma alias casa <code>^{foundation.typography.font.line-height.</code> e JSON alias casa <code>^{foundation.typography.line.height.</code> (ou letter-spacing equivalente), é BY_DESIGN divergent-alias.</p>
+<h3>Extensão 2 — tokens Component JSON-only por limitação Figma</h3>
+<p>Categorias que Figma Variables <strong>não consegue representar</strong>: sombras como composite (objeto com offset/blur/color), cubic-bezier easings, durações de motion (Figma só tem prototype motion, não variables), e z-index (Figma não tem primitivo de stack order). Tokens Component que aliasam para essas categorias Foundation vivem só no JSON — o CSS consome, mas não há equivalente Figma.</p>
+<p>Lista de targets JSON-only (em <code>JSON_ONLY_COMPONENT_ALIAS_TARGETS</code> de <code>figma-dtcg.mjs</code>):</p>
+<ul>
+<li><code>{foundation.shadow.*}</code> — shadow objects</li>
+<li><code>{foundation.z.*}</code> — z-index layers</li>
+<li><code>{foundation.duration.*}</code> — motion duration</li>
+<li><code>{foundation.ease.*}</code> — cubic-bezier easings</li>
+</ul>
+<p>Quando <code>compareStates</code> encontra um token <code>component.*</code> presente no JSON mas ausente no Figma <strong>e</strong> seu valor casa um desses targets, classifica como <code>BY_DESIGN</code> (side: <code>json-only-component</code>) em vez de <code>MISSING_IN_FIGMA</code>. Eliminam-se os 26 erros &quot;falsos&quot; que surgiriam do Phase 5 refactor (ADR-013).</p>
+<p>Se no futuro o Figma expandir Variables pra suportar qualquer dessas categorias, basta remover a regex da lista e essas variáveis podem migrar pro Figma como aliases reais.</p>
 <h3>Diferença semântica vs <code>CSS_ONLY</code></h3>
 <p>Este ADR introduz <code>BY_DESIGN</code>; não se confunde com a categoria <code>CSS_ONLY</code> existente:</p>
 <ul>

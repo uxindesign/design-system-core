@@ -8,6 +8,16 @@ Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na
 
 ## [Não publicado]
 
+### Concluído (Fase 5 — CSS + JSONs component + Figma component vars)
+
+Fase 5 do plano ADR-013 completa: os 19 CSS de componente não consomem mais **nenhum** token Foundation direto. Todos os consumos são via Semantic ou Component layer.
+
+- **CSS**: 17 `css/components/*.css` reescritos (divider piloto já feito). Grep `var(--ds-(spacing-|radius-(sm|md|lg|xl|2xl|full|xs|none)|border-width-[0-9]|font-*|line-height-|letter-spacing-|shadow-|duration-|ease-|opacity-[0-9]|z-[0-9]|color-)` → **0 matches**.
+- **JSON**: 6 novos (alert, badge, breadcrumb, card, tabs, tooltip) + 11 expandidos. Registry cresce de 521 → 672.
+- **Figma**: 125 vars novas na collection Component (137 → 262), aliasando Foundation/Semantic. 26 tokens (transitions, shadows, z-index) ficam só em JSON — Figma Variables não representa essas categorias.
+- **ADR-012 estendido**: `JSON_ONLY_COMPONENT_ALIAS_TARGETS` em `figma-dtcg.mjs` classifica esses 26 como `BY_DESIGN` em vez de drift.
+- **Verify pós-Fase 5**: 0 erros, 0 warnings. CSS_ONLY=9, BY_DESIGN=79 (informativos).
+
 ### Concluído (Fases 2 e 3 — rebind + conversão de raw values)
 
 **Fase 2**: Todos os 3.479 bindings Foundation nos 51 componentes Figma rebindados pra Semantic. Divididos em 4 passes:

@@ -139,7 +139,12 @@
             "$value": "{semantic.content.disabled}"
           }
         }
-      }
+      },
+      "font-family": { "$type": "fontFamily", "$value": "{semantic.typography.body.font-family.sans}" },
+      "font-weight": { "$type": "number", "$value": "{semantic.typography.body.font-weight.medium}" },
+      "opacity-disabled": { "$type": "number", "$value": "{foundation.opacity.50}" },
+      "transition-duration": { "$type": "duration", "$value": "{foundation.duration.fast}" },
+      "transition-timing": { "$type": "cubicBezier", "$value": "{foundation.ease.default}" }
     }
   }
 }

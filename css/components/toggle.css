@@ -8,12 +8,12 @@
   align-items: center;
   gap: var(--ds-toggle-gap);
   cursor: pointer;
-  padding: var(--ds-spacing-1-5) var(--ds-spacing-1);
-  border-radius: var(--ds-radius-sm);
+  padding: var(--ds-toggle-label-padding-y) var(--ds-toggle-label-padding-x);
+  border-radius: var(--ds-toggle-label-border-radius);
   min-height: var(--ds-toggle-min-target-size);
   font-size: var(--ds-toggle-font-size);
   color: var(--ds-content-default);
-  transition: background-color var(--ds-duration-fast) var(--ds-ease-default);
+  transition: background-color var(--ds-toggle-transition-duration) var(--ds-toggle-transition-timing);
 }
 
 .ds-toggle-label:hover {
@@ -28,12 +28,12 @@
   width: var(--ds-toggle-track-width-md);
   height: var(--ds-toggle-track-height-md);
   background-color: var(--ds-surface-default);
-  border: var(--ds-border-width-1) solid var(--ds-border-control-default);
-  border-radius: var(--ds-radius-full);
+  border: var(--ds-toggle-border-width) solid var(--ds-border-control-default);
+  border-radius: var(--ds-toggle-border-radius-full);
   cursor: pointer;
   flex-shrink: 0;
-  transition: background-color var(--ds-duration-fast) var(--ds-ease-default),
-              border-color var(--ds-duration-fast) var(--ds-ease-default);
+  transition: background-color var(--ds-toggle-transition-duration) var(--ds-toggle-transition-timing),
+              border-color var(--ds-toggle-transition-duration) var(--ds-toggle-transition-timing);
 }
 
 /* Thumb */
@@ -44,10 +44,10 @@
   left: 2px;
   width: var(--ds-toggle-thumb-size-md);
   height: var(--ds-toggle-thumb-size-md);
-  border-radius: var(--ds-radius-full);
+  border-radius: var(--ds-toggle-border-radius-full);
   background-color: var(--ds-content-secondary);
-  transition: transform var(--ds-duration-fast) var(--ds-ease-default),
-              background-color var(--ds-duration-fast) var(--ds-ease-default);
+  transition: transform var(--ds-toggle-transition-duration) var(--ds-toggle-transition-timing),
+              background-color var(--ds-toggle-transition-duration) var(--ds-toggle-transition-timing);
 }
 
 /* Hover */
@@ -85,7 +85,7 @@
 
 .ds-toggle-label:has(.ds-toggle:disabled) {
   cursor: not-allowed;
-  opacity: var(--ds-opacity-50);
+  opacity: var(--ds-toggle-opacity-disabled);
 }
 
 .ds-toggle-label:has(.ds-toggle:disabled):hover {
@@ -150,31 +150,31 @@
 .ds-toggle__content {
   display: flex;
   flex-direction: column;
-  gap: var(--ds-spacing-1);
+  gap: var(--ds-toggle-content-gap);
   min-width: 0;
 }
 
 /* Label text (label/md: 14px medium / 20px) */
 .ds-toggle__label {
-  font-size: var(--ds-font-size-sm);
-  font-weight: var(--ds-font-weight-medium);
-  line-height: var(--ds-line-height-snug);
+  font-size: var(--ds-toggle-label-font-size);
+  font-weight: var(--ds-toggle-label-font-weight);
+  line-height: var(--ds-toggle-label-line-height);
   color: var(--ds-content-default);
 }
 
 /* Description (body/sm: 14px regular / 22px, multiline) */
 .ds-toggle__description {
-  font-size: var(--ds-font-size-sm);
-  font-weight: var(--ds-font-weight-regular);
-  line-height: var(--ds-line-height-relaxed);
+  font-size: var(--ds-toggle-description-font-size);
+  font-weight: var(--ds-toggle-description-font-weight);
+  line-height: var(--ds-toggle-description-line-height);
   color: var(--ds-content-default);
   white-space: pre-wrap;
 }
 
 /* Helper text (caption/sm: 11px regular / 18px) */
 .ds-toggle__helper {
-  font-size: var(--ds-font-size-xs);
-  line-height: var(--ds-line-height-normal);
+  font-size: var(--ds-toggle-helper-font-size);
+  line-height: var(--ds-toggle-helper-line-height);
   color: var(--ds-content-secondary);
 }
 

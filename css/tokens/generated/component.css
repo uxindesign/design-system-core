@@ -3,16 +3,23 @@
  */
 
 :root {
+  --ds-alert-icon-size: 1.25rem; /** 20px */
   --ds-checkbox-check-width-md: 5px;
+  --ds-checkbox-label-padding-y: 0.375rem; /** 6px vertical padding around label (spacing-1-5 legacy) */
   --ds-modal-max-width-sm: 25rem; /** 400px */
   --ds-modal-max-width-md: 32.5rem; /** 520px */
   --ds-modal-max-width-lg: 40rem; /** 640px */
+  --ds-radio-label-padding-y: 0.375rem; /** 6px vertical padding on label wrapper (spacing-1-5 legacy) */
   --ds-skeleton-rect-height: 7.5rem; /** 120px image/card placeholder */
   --ds-spinner-stroke-width-sm: 1.5px;
   --ds-spinner-stroke-width-lg: 3px;
   --ds-textarea-min-height-sm: 4.25rem; /** 68px */
   --ds-textarea-min-height-lg: 7rem; /** 112px */
   --ds-toggle-thumb-size-lg: 1.125rem; /** 18px */
+  --ds-toggle-label-padding-y: 0.375rem; /** 6px vertical padding on label wrapper (spacing-1-5 legacy) */
+  --ds-alert-focus-border-radius: var(--ds-radius-sm); /** 4px — focus ring corner on close button */
+  --ds-alert-transition-duration: var(--ds-duration-fast);
+  --ds-alert-transition-timing: var(--ds-ease-default);
   --ds-avatar-size-sm: var(--ds-spacing-8); /** 32px */
   --ds-avatar-size-md: var(--ds-spacing-10); /** 40px */
   --ds-avatar-size-lg: var(--ds-spacing-14); /** 56px */
@@ -22,6 +29,14 @@
   --ds-avatar-icon-size-sm: var(--ds-spacing-4); /** 16px */
   --ds-avatar-icon-size-md: var(--ds-spacing-5); /** 20px */
   --ds-avatar-icon-size-lg: var(--ds-spacing-7); /** 28px */
+  --ds-avatar-border-radius: var(--ds-radius-full); /** Circle shape */
+  --ds-badge-border-radius: var(--ds-radius-full); /** Pill shape */
+  --ds-breadcrumb-focus-border-radius: var(--ds-radius-sm); /** 4px — focus ring corner on link */
+  --ds-button-opacity-disabled: var(--ds-opacity-50);
+  --ds-button-transition-duration: var(--ds-duration-fast);
+  --ds-button-transition-timing: var(--ds-ease-default);
+  --ds-card-border-radius: var(--ds-radius-lg); /** 12px */
+  --ds-card-shadow-elevated: var(--ds-shadow-sm); /** Elevation level 1. */
   --ds-checkbox-control-size-sm: var(--ds-spacing-4); /** 16px */
   --ds-checkbox-control-size-md: var(--ds-spacing-5); /** 20px */
   --ds-checkbox-control-size-lg: var(--ds-spacing-6); /** 24px */
@@ -32,25 +47,50 @@
   --ds-checkbox-check-height-lg: var(--ds-spacing-3);
   --ds-checkbox-border-radius: var(--ds-radius-sm); /** 4px — smaller radius for compact control */
   --ds-checkbox-font-size: var(--ds-font-size-sm); /** 14px label */
+  --ds-checkbox-opacity-disabled: var(--ds-opacity-50);
+  --ds-checkbox-transition-duration: var(--ds-duration-fast);
+  --ds-checkbox-transition-timing: var(--ds-ease-default);
+  --ds-input-transition-duration: var(--ds-duration-fast);
+  --ds-input-transition-timing: var(--ds-ease-default);
   --ds-modal-border-radius: var(--ds-radius-xl); /** 16px — xl radius for modal overlay */
+  --ds-modal-close-border-radius: var(--ds-radius-sm); /** 4px corner on close */
+  --ds-modal-shadow: var(--ds-shadow-xl);
+  --ds-modal-z-index: var(--ds-z-50);
+  --ds-modal-transition-duration: var(--ds-duration-fast);
+  --ds-modal-transition-timing: var(--ds-ease-default);
   --ds-radio-control-size-sm: var(--ds-spacing-4); /** 16px */
   --ds-radio-control-size-md: var(--ds-spacing-5); /** 20px */
   --ds-radio-control-size-lg: var(--ds-spacing-6); /** 24px */
   --ds-radio-dot-size-sm: var(--ds-spacing-1-5);
   --ds-radio-dot-size-md: var(--ds-spacing-2);
   --ds-radio-dot-size-lg: var(--ds-spacing-2-5);
+  --ds-radio-border-radius-full: var(--ds-radius-full); /** Circle shape */
+  --ds-radio-label-border-radius: var(--ds-radius-sm); /** 4px on label wrapper */
   --ds-radio-font-size: var(--ds-font-size-sm); /** 14px label */
+  --ds-radio-opacity-disabled: var(--ds-opacity-50);
+  --ds-radio-transition-duration: var(--ds-duration-fast);
+  --ds-radio-transition-timing: var(--ds-ease-default);
   --ds-select-arrow-size: var(--ds-spacing-4); /** 16px */
   --ds-select-arrow-offset-sm: var(--ds-spacing-2); /** 8px from right edge */
   --ds-select-arrow-offset-md: var(--ds-spacing-3); /** 12px */
   --ds-select-arrow-offset-lg: var(--ds-spacing-4); /** 16px */
+  --ds-select-transition-duration: var(--ds-duration-fast);
+  --ds-select-transition-timing: var(--ds-ease-default);
   --ds-skeleton-text-height: var(--ds-spacing-4); /** 16px line placeholder */
   --ds-skeleton-circle-size: var(--ds-spacing-10); /** 40px avatar placeholder */
+  --ds-skeleton-text-border-radius: var(--ds-radius-sm); /** 4px */
+  --ds-skeleton-circle-border-radius: var(--ds-radius-full);
   --ds-spinner-size-sm: var(--ds-spacing-4); /** 16px */
   --ds-spinner-size-md: var(--ds-spacing-6); /** 24px */
   --ds-spinner-size-lg: var(--ds-spacing-8); /** 32px */
   --ds-spinner-stroke-width-md: var(--ds-spacing-0-5);
+  --ds-spinner-border-radius: var(--ds-radius-full);
+  --ds-tabs-focus-border-radius: var(--ds-radius-sm); /** 4px — focus ring corner on tab */
+  --ds-tabs-transition-duration: var(--ds-duration-fast);
+  --ds-tabs-transition-timing: var(--ds-ease-default);
   --ds-textarea-min-height-md: var(--ds-spacing-20); /** 80px */
+  --ds-textarea-transition-duration: var(--ds-duration-fast);
+  --ds-textarea-transition-timing: var(--ds-ease-default);
   --ds-toggle-track-width-sm: var(--ds-spacing-7); /** 28px */
   --ds-toggle-track-width-md: var(--ds-spacing-9); /** 36px */
   --ds-toggle-track-width-lg: var(--ds-spacing-11); /** 44px */
@@ -59,7 +99,31 @@
   --ds-toggle-track-height-lg: var(--ds-spacing-6); /** 24px */
   --ds-toggle-thumb-size-sm: var(--ds-spacing-2-5); /** 10px */
   --ds-toggle-thumb-size-md: var(--ds-spacing-3-5); /** 14px */
+  --ds-toggle-border-radius-full: var(--ds-radius-full); /** Pill shape for track and thumb */
+  --ds-toggle-label-border-radius: var(--ds-radius-sm); /** 4px on label wrapper */
   --ds-toggle-font-size: var(--ds-font-size-sm); /** 14px label */
+  --ds-toggle-opacity-disabled: var(--ds-opacity-50);
+  --ds-toggle-transition-duration: var(--ds-duration-fast);
+  --ds-toggle-transition-timing: var(--ds-ease-default);
+  --ds-tooltip-border-radius: var(--ds-radius-sm); /** 4px */
+  --ds-tooltip-z-index: var(--ds-z-50);
+  --ds-tooltip-transition-duration: var(--ds-duration-fast);
+  --ds-tooltip-transition-timing: var(--ds-ease-default);
+  --ds-alert-padding: var(--ds-space-inset-md); /** 12px */
+  --ds-alert-gap: var(--ds-space-gap-sm); /** 8px between icon and content */
+  --ds-alert-content-gap: var(--ds-space-gap-xs); /** 4px between title and description */
+  --ds-alert-border-radius: var(--ds-radius-component);
+  --ds-alert-border-width: var(--ds-border-width-default);
+  --ds-avatar-font-family: var(--ds-body-font-family-sans);
+  --ds-avatar-font-weight: var(--ds-body-font-weight-semibold);
+  --ds-badge-padding-y: var(--ds-space-inset-2xs); /** 2px vertical padding */
+  --ds-badge-padding-x: var(--ds-space-gap-sm); /** 8px horizontal padding */
+  --ds-badge-font-size: var(--ds-body-font-size-xs); /** 12px */
+  --ds-badge-font-weight: var(--ds-body-font-weight-medium);
+  --ds-badge-line-height: var(--ds-body-line-height-md);
+  --ds-breadcrumb-gap: var(--ds-space-gap-xs); /** 4px between items and separator */
+  --ds-breadcrumb-font-size: var(--ds-body-font-size-sm); /** 14px */
+  --ds-breadcrumb-font-weight-current: var(--ds-body-font-weight-medium);
   --ds-button-height-sm: var(--ds-size-control-sm); /** 32px */
   --ds-button-height-md: var(--ds-size-control-md); /** 40px */
   --ds-button-height-lg: var(--ds-size-control-lg); /** 48px */
@@ -85,9 +149,33 @@
   --ds-button-background-toned-disabled: var(--ds-state-disabled-background); /** Opaque neutral — toned transparency not needed for disabled. */
   --ds-button-foreground-toned-default: var(--ds-brand-content-default); /** Text/icon color on toned background. ADR-011. */
   --ds-button-foreground-toned-disabled: var(--ds-content-disabled);
+  --ds-button-font-family: var(--ds-body-font-family-sans);
+  --ds-button-font-weight: var(--ds-body-font-weight-medium);
+  --ds-card-border-width: var(--ds-border-width-default);
+  --ds-card-padding: var(--ds-space-inset-lg); /** 16px — header/body/footer padding */
+  --ds-card-gap: var(--ds-space-gap-sm); /** 8px between header elements */
+  --ds-card-title-font-size: var(--ds-body-font-size-lg); /** 18px */
+  --ds-card-title-font-weight: var(--ds-body-font-weight-semibold);
+  --ds-card-title-line-height: var(--ds-body-line-height-sm);
+  --ds-card-body-font-size: var(--ds-body-font-size-sm); /** 14px */
+  --ds-card-body-line-height: var(--ds-body-line-height-md);
   --ds-checkbox-border-width: var(--ds-border-width-default);
   --ds-checkbox-gap: var(--ds-space-gap-sm); /** 8px between control and label */
+  --ds-checkbox-label-padding-x: var(--ds-space-gap-xs); /** 4px horizontal padding around label */
+  --ds-checkbox-content-gap: var(--ds-space-gap-xs); /** 4px between label, description, helper */
+  --ds-checkbox-error-margin-top: var(--ds-space-gap-xs); /** 4px above error message */
   --ds-checkbox-min-target-size: var(--ds-size-control-min-target); /** 44px — WCAG 2.5.5 */
+  --ds-checkbox-label-font-size: var(--ds-body-font-size-sm); /** 14px */
+  --ds-checkbox-label-font-weight: var(--ds-body-font-weight-medium);
+  --ds-checkbox-label-line-height: var(--ds-body-line-height-sm);
+  --ds-checkbox-description-font-size: var(--ds-body-font-size-sm);
+  --ds-checkbox-description-font-weight: var(--ds-body-font-weight-regular);
+  --ds-checkbox-description-line-height: var(--ds-body-line-height-md);
+  --ds-checkbox-helper-font-size: var(--ds-body-font-size-xs);
+  --ds-checkbox-helper-line-height: var(--ds-body-line-height-md);
+  --ds-checkbox-error-font-size: var(--ds-body-font-size-xs);
+  --ds-divider-thickness: var(--ds-border-width-default); /** 1px — thin rule. */
+  --ds-divider-spacing: var(--ds-space-gap-lg); /** 16px — default margin around divider. */
   --ds-input-height-sm: var(--ds-size-control-sm); /** 32px */
   --ds-input-height-md: var(--ds-size-control-md); /** 40px */
   --ds-input-height-lg: var(--ds-size-control-lg); /** 48px */
@@ -98,6 +186,7 @@
   --ds-input-padding-y-md: var(--ds-space-control-padding-y-md); /** 10px */
   --ds-input-padding-y-lg: var(--ds-space-control-padding-y-lg); /** 12px */
   --ds-input-gap: var(--ds-space-gap-sm); /** 8px gap between icon and field */
+  --ds-input-field-inner-padding-x: var(--ds-space-gap-xs); /** 4px inner padding around native input */
   --ds-input-border-radius: var(--ds-radius-component);
   --ds-input-border-width: var(--ds-border-width-default);
   --ds-input-font-size-sm: var(--ds-control-font-size-sm); /** 14px */
@@ -106,11 +195,46 @@
   --ds-input-icon-size-sm: var(--ds-size-control-icon-sm); /** 16px */
   --ds-input-icon-size-md: var(--ds-size-control-icon-md); /** 20px */
   --ds-input-icon-size-lg: var(--ds-size-control-icon-lg); /** 24px */
+  --ds-input-field-gap: var(--ds-space-gap-xs); /** 4px vertical gap between label row, control, helper */
+  --ds-input-label-font-size: var(--ds-body-font-size-sm);
+  --ds-input-label-font-weight: var(--ds-body-font-weight-medium);
+  --ds-input-label-line-height: var(--ds-body-line-height-sm);
+  --ds-input-helper-font-size: var(--ds-body-font-size-xs);
+  --ds-input-helper-line-height: var(--ds-body-line-height-md);
   --ds-modal-padding: var(--ds-space-inset-lg); /** 16px */
+  --ds-modal-overlay-padding: var(--ds-space-inset-lg); /** 16px overlay breathing room */
   --ds-modal-header-gap: var(--ds-space-gap-sm); /** 8px between title and close */
+  --ds-modal-footer-gap: var(--ds-space-gap-sm); /** 8px between footer buttons */
+  --ds-modal-header-padding-bottom: var(--ds-space-gap-sm); /** 8px bottom padding of header */
+  --ds-modal-footer-padding-top: var(--ds-space-gap-sm); /** 8px top padding of footer */
+  --ds-modal-close-padding: var(--ds-space-gap-xs); /** 4px padding on close button */
+  --ds-modal-viewport-offset: var(--ds-space-section-sm); /** 32px — max-height = 100vh - this */
+  --ds-modal-border-width: var(--ds-border-width-default);
+  --ds-modal-title-font-size: var(--ds-body-font-size-lg);
+  --ds-modal-title-font-weight: var(--ds-body-font-weight-semibold);
+  --ds-modal-title-line-height: var(--ds-body-line-height-sm);
+  --ds-modal-body-font-size: var(--ds-body-font-size-sm);
+  --ds-modal-body-line-height: var(--ds-body-line-height-md);
   --ds-radio-border-width: var(--ds-border-width-default);
   --ds-radio-gap: var(--ds-space-gap-sm); /** 8px between control and label */
+  --ds-radio-group-gap: var(--ds-space-gap-xs); /** 4px between radios in a group */
+  --ds-radio-group-legend-margin-bottom: var(--ds-space-gap-sm); /** 8px below legend */
+  --ds-radio-group-margin-bottom: var(--ds-space-inset-lg); /** 16px below radio group */
+  --ds-radio-label-padding-x: var(--ds-space-gap-xs); /** 4px horizontal padding on label wrapper */
+  --ds-radio-content-gap: var(--ds-space-gap-xs); /** 4px between label, description, helper */
+  --ds-radio-error-margin-top: var(--ds-space-gap-xs); /** 4px above error message */
   --ds-radio-min-target-size: var(--ds-size-control-min-target); /** 44px — WCAG 2.5.5 */
+  --ds-radio-legend-font-size: var(--ds-body-font-size-sm);
+  --ds-radio-legend-font-weight: var(--ds-body-font-weight-medium);
+  --ds-radio-label-font-size: var(--ds-body-font-size-sm);
+  --ds-radio-label-font-weight: var(--ds-body-font-weight-medium);
+  --ds-radio-label-line-height: var(--ds-body-line-height-sm);
+  --ds-radio-description-font-size: var(--ds-body-font-size-sm);
+  --ds-radio-description-font-weight: var(--ds-body-font-weight-regular);
+  --ds-radio-description-line-height: var(--ds-body-line-height-md);
+  --ds-radio-helper-font-size: var(--ds-body-font-size-xs);
+  --ds-radio-helper-line-height: var(--ds-body-line-height-md);
+  --ds-radio-error-font-size: var(--ds-body-font-size-xs);
   --ds-select-height-sm: var(--ds-size-control-sm); /** 32px */
   --ds-select-height-md: var(--ds-size-control-md); /** 40px */
   --ds-select-height-lg: var(--ds-size-control-lg); /** 48px */
@@ -121,23 +245,50 @@
   --ds-select-padding-y-md: var(--ds-space-control-padding-y-md); /** 10px */
   --ds-select-padding-y-lg: var(--ds-space-control-padding-y-lg); /** 12px */
   --ds-select-gap: var(--ds-space-gap-xs); /** 4px */
+  --ds-select-field-inner-padding-x: var(--ds-space-gap-xs); /** 4px inner padding around native select */
   --ds-select-border-radius: var(--ds-radius-component);
   --ds-select-border-width: var(--ds-border-width-default);
   --ds-select-font-size-sm: var(--ds-control-font-size-sm); /** 14px */
   --ds-select-font-size-md: var(--ds-control-font-size-md); /** 14px */
   --ds-select-font-size-lg: var(--ds-control-font-size-lg); /** 16px */
+  --ds-skeleton-rect-border-radius: var(--ds-radius-component);
   --ds-skeleton-fill: var(--ds-state-disabled-background); /** Skeleton background fill. Neutral-100 light / neutral-800 dark. Replaces semantic.background.muted per ADR-011. */
+  --ds-tabs-padding-y: var(--ds-space-gap-sm); /** 8px vertical padding */
+  --ds-tabs-padding-x: var(--ds-space-inset-lg); /** 16px horizontal padding */
+  --ds-tabs-panel-padding-y: var(--ds-space-inset-lg); /** 16px padding top/bottom for tab panel */
+  --ds-tabs-border-width: var(--ds-border-width-default);
+  --ds-tabs-active-border-width: var(--ds-border-width-strong); /** 2px active underline */
+  --ds-tabs-font-size: var(--ds-body-font-size-sm); /** 14px */
+  --ds-tabs-font-weight: var(--ds-body-font-weight-medium);
   --ds-textarea-padding-x-sm: var(--ds-space-control-padding-x-sm); /** 12px */
   --ds-textarea-padding-x-md: var(--ds-space-control-padding-x-md); /** 16px */
   --ds-textarea-padding-x-lg: var(--ds-space-control-padding-x-lg); /** 20px */
   --ds-textarea-padding-y-sm: var(--ds-space-control-padding-y-sm); /** 8px */
   --ds-textarea-padding-y-md: var(--ds-space-control-padding-y-md); /** 10px */
   --ds-textarea-padding-y-lg: var(--ds-space-control-padding-y-lg); /** 12px */
+  --ds-textarea-field-inner-padding-x: var(--ds-space-gap-xs); /** 4px inner padding added to padding-x */
   --ds-textarea-border-radius: var(--ds-radius-component);
   --ds-textarea-border-width: var(--ds-border-width-default);
   --ds-textarea-font-size-sm: var(--ds-control-font-size-sm); /** 14px */
   --ds-textarea-font-size-md: var(--ds-control-font-size-md); /** 14px */
   --ds-textarea-font-size-lg: var(--ds-control-font-size-lg); /** 16px */
+  --ds-textarea-field-line-height: var(--ds-body-line-height-md);
+  --ds-textarea-counter-font-size: var(--ds-body-font-size-xs);
+  --ds-textarea-counter-font-weight: var(--ds-body-font-weight-medium);
+  --ds-toggle-border-width: var(--ds-border-width-default);
   --ds-toggle-gap: var(--ds-space-gap-sm); /** 8px between toggle and label */
+  --ds-toggle-label-padding-x: var(--ds-space-gap-xs); /** 4px horizontal padding on label wrapper */
+  --ds-toggle-content-gap: var(--ds-space-gap-xs); /** 4px between label, description, helper */
   --ds-toggle-min-target-size: var(--ds-size-control-min-target); /** 44px — WCAG 2.5.5 */
+  --ds-toggle-label-font-size: var(--ds-body-font-size-sm);
+  --ds-toggle-label-font-weight: var(--ds-body-font-weight-medium);
+  --ds-toggle-label-line-height: var(--ds-body-line-height-sm);
+  --ds-toggle-description-font-size: var(--ds-body-font-size-sm);
+  --ds-toggle-description-font-weight: var(--ds-body-font-weight-regular);
+  --ds-toggle-description-line-height: var(--ds-body-line-height-md);
+  --ds-toggle-helper-font-size: var(--ds-body-font-size-xs);
+  --ds-toggle-helper-line-height: var(--ds-body-line-height-md);
+  --ds-tooltip-padding-y: var(--ds-space-gap-xs); /** 4px vertical padding */
+  --ds-tooltip-padding-x: var(--ds-space-gap-sm); /** 8px horizontal padding */
+  --ds-tooltip-font-size: var(--ds-body-font-size-xs); /** 12px */
 }

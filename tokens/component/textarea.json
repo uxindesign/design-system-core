@@ -53,6 +53,11 @@
           "$description": "12px"
         }
       },
+      "field-inner-padding-x": {
+        "$type": "dimension",
+        "$value": "{semantic.space.gap.xs}",
+        "$description": "4px inner padding added to padding-x"
+      },
       "border-radius": {
         "$type": "dimension",
         "$value": "{semantic.radius.component}"
@@ -77,6 +82,26 @@
           "$value": "{semantic.typography.control.font-size.lg}",
           "$description": "16px"
         }
+      },
+      "field-line-height": {
+        "$type": "number",
+        "$value": "{semantic.typography.body.line-height.md}"
+      },
+      "counter-font-size": {
+        "$type": "dimension",
+        "$value": "{semantic.typography.body.font-size.xs}"
+      },
+      "counter-font-weight": {
+        "$type": "number",
+        "$value": "{semantic.typography.body.font-weight.medium}"
+      },
+      "transition-duration": {
+        "$type": "duration",
+        "$value": "{foundation.duration.fast}"
+      },
+      "transition-timing": {
+        "$type": "cubicBezier",
+        "$value": "{foundation.ease.default}"
       }
     }
   }

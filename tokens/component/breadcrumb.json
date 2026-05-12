@@ -1,0 +1,11 @@
+{
+  "component": {
+    "breadcrumb": {
+      "$description": "Structural tokens for Breadcrumb component.",
+      "gap": { "$type": "dimension", "$value": "{semantic.space.gap.xs}", "$description": "4px between items and separator" },
+      "font-size": { "$type": "dimension", "$value": "{semantic.typography.body.font-size.sm}", "$description": "14px" },
+      "font-weight-current": { "$type": "number", "$value": "{semantic.typography.body.font-weight.medium}" },
+      "focus-border-radius": { "$type": "dimension", "$value": "{foundation.radius.sm}", "$description": "4px — focus ring corner on link" }
+    }
+  }
+}

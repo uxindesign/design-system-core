@@ -1,0 +1,13 @@
+{
+  "component": {
+    "badge": {
+      "$description": "Structural tokens for Badge component.",
+      "padding-y": { "$type": "dimension", "$value": "{semantic.space.inset.2xs}", "$description": "2px vertical padding" },
+      "padding-x": { "$type": "dimension", "$value": "{semantic.space.gap.sm}", "$description": "8px horizontal padding" },
+      "border-radius": { "$type": "dimension", "$value": "{foundation.radius.full}", "$description": "Pill shape" },
+      "font-size": { "$type": "dimension", "$value": "{semantic.typography.body.font-size.xs}", "$description": "12px" },
+      "font-weight": { "$type": "number", "$value": "{semantic.typography.body.font-weight.medium}" },
+      "line-height": { "$type": "number", "$value": "{semantic.typography.body.line-height.md}" }
+    }
+  }
+}

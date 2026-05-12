@@ -62,6 +62,21 @@ Tokens Semantic/Component que **existem nos dois lados** mas apontam para Founda
 
 Detecção via função `isDivergentAliasByDesign` em `figma-dtcg.mjs`: quando Figma alias casa `^{foundation.typography.font.line-height.` e JSON alias casa `^{foundation.typography.line.height.` (ou letter-spacing equivalente), é BY_DESIGN divergent-alias.
 
+### Extensão 2 — tokens Component JSON-only por limitação Figma
+
+Categorias que Figma Variables **não consegue representar**: sombras como composite (objeto com offset/blur/color), cubic-bezier easings, durações de motion (Figma só tem prototype motion, não variables), e z-index (Figma não tem primitivo de stack order). Tokens Component que aliasam para essas categorias Foundation vivem só no JSON — o CSS consome, mas não há equivalente Figma.
+
+Lista de targets JSON-only (em `JSON_ONLY_COMPONENT_ALIAS_TARGETS` de `figma-dtcg.mjs`):
+
+- `{foundation.shadow.*}` — shadow objects
+- `{foundation.z.*}` — z-index layers
+- `{foundation.duration.*}` — motion duration
+- `{foundation.ease.*}` — cubic-bezier easings
+
+Quando `compareStates` encontra um token `component.*` presente no JSON mas ausente no Figma **e** seu valor casa um desses targets, classifica como `BY_DESIGN` (side: `json-only-component`) em vez de `MISSING_IN_FIGMA`. Eliminam-se os 26 erros "falsos" que surgiriam do Phase 5 refactor (ADR-013).
+
+Se no futuro o Figma expandir Variables pra suportar qualquer dessas categorias, basta remover a regex da lista e essas variáveis podem migrar pro Figma como aliases reais.
+
 ### Diferença semântica vs `CSS_ONLY`
 
 Este ADR introduz `BY_DESIGN`; não se confunde com a categoria `CSS_ONLY` existente:
