@@ -531,9 +531,9 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.space.section.md` | dimension | → `foundation.dimension.48` | Spacing token section.md. | 0 |
 | `semantic.space.section.sm` | dimension | → `foundation.dimension.32` | Spacing token section.sm. | 1 |
 | `semantic.space.section.xl` | dimension | → `foundation.dimension.80` | Spacing token section.xl. | 0 |
-| `semantic.space.sm` | dimension | → `foundation.dimension.8` | Spacing token sm. | 27 |
+| `semantic.space.sm` | dimension | → `foundation.dimension.8` | Spacing token sm. | 26 |
 | `semantic.space.xl` | dimension | → `foundation.dimension.20` | Spacing token xl. | 15 |
-| `semantic.space.xs` | dimension | → `foundation.dimension.4` | Spacing token xs. | 18 |
+| `semantic.space.xs` | dimension | → `foundation.dimension.4` | Spacing token xs. | 19 |
 
 ### semantic.surface
 
@@ -886,7 +886,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.input.focus-ring.radius.default` | dimension | → `semantic.radius.lg` | Radius do focus ring Input Text. | 0 |
 | `component.input.focus-ring.stroke-width.default` | dimension | → `semantic.border.width.focus` | Stroke width do focus ring Input Text. | 1 |
 | `component.input.gap.lg` | dimension | → `semantic.space.sm` | Gap interno do Field Input Text lg. | 1 |
-| `component.input.gap.md` | dimension | → `semantic.space.sm` | Gap interno do Field Input Text md. | 1 |
+| `component.input.gap.md` | dimension | → `semantic.space.xs` | Gap interno do Field Input Text md. | 1 |
 | `component.input.gap.sm` | dimension | — | Gap interno do Field Input Text sm. | 1 |
 | `component.input.height.lg` | dimension | → `semantic.size.2xl` | Altura da superfície visual do Input Text por tamanho. | 1 |
 | `component.input.height.md` | dimension | → `semantic.size.xl` | Altura da superfície visual do Input Text por tamanho. | 1 |
@@ -6122,9 +6122,9 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/textarea.css` (2×)
     - `css/components/toggle.css` (1×)
     - `css/components/tooltip.css` (4×)
-    - `css/tokens/generated/component.css` (19×)
+    - `css/tokens/generated/component.css` (18×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.alert.gap.default`, `component.badge.padding-x.default`, `component.button.padding-x.sm`, `component.button.padding-y.sm`, `component.button.gap.lg`, `component.button.icon-only-padding.md`, `component.card.header.padding-bottom.default`, `component.card.header.gap.default`, `component.checkbox.target.gap.default`, `component.input.gap.md`, `component.input.gap.lg`, `component.input.padding-x.sm`, `component.input.padding-y.sm`, `component.modal.header.padding-bottom.sm`, `component.modal.header.gap.default`, `component.modal.footer.padding-top.sm`, `component.modal.footer.gap.default`, `component.tooltip.content.padding-x.default`, `component.tooltip.arrow.base.default`
+  - Tokens que referenciam: `component.alert.gap.default`, `component.badge.padding-x.default`, `component.button.padding-x.sm`, `component.button.padding-y.sm`, `component.button.gap.lg`, `component.button.icon-only-padding.md`, `component.card.header.padding-bottom.default`, `component.card.header.gap.default`, `component.checkbox.target.gap.default`, `component.input.gap.lg`, `component.input.padding-x.sm`, `component.input.padding-y.sm`, `component.modal.header.padding-bottom.sm`, `component.modal.header.gap.default`, `component.modal.footer.padding-top.sm`, `component.modal.footer.gap.default`, `component.tooltip.content.padding-x.default`, `component.tooltip.arrow.base.default`
 
 ### `semantic.space.xl`
 
@@ -6156,9 +6156,9 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/radio.css` (7×)
     - `css/components/select.css` (1×)
     - `css/components/toggle.css` (2×)
-    - `css/tokens/generated/component.css` (12×)
+    - `css/tokens/generated/component.css` (13×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.alert.content.gap.default`, `component.badge.gap.default`, `component.breadcrumb.gap.default`, `component.breadcrumb.item.gap.default`, `component.button.gap.md`, `component.button.label-frame.padding-x.default`, `component.form-field.gap.default`, `component.input.stack.gap.default`, `component.input.text-frame.padding-x.default`, `component.modal.close.padding.default`, `component.tooltip.content.padding-y.default`, `component.tooltip.arrow.depth.default`
+  - Tokens que referenciam: `component.alert.content.gap.default`, `component.badge.gap.default`, `component.breadcrumb.gap.default`, `component.breadcrumb.item.gap.default`, `component.button.gap.md`, `component.button.label-frame.padding-x.default`, `component.form-field.gap.default`, `component.input.gap.md`, `component.input.stack.gap.default`, `component.input.text-frame.padding-x.default`, `component.modal.close.padding.default`, `component.tooltip.content.padding-y.default`, `component.tooltip.arrow.depth.default`
 
 ### `semantic.surface.default`
 
@@ -9739,7 +9739,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.space.sm`
+- **Alias**: → `semantic.space.xs`
 - **Sentido**: Gap interno do Field Input Text md.
 - **Escopo**: gap
 - **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Field no Figma e controla a distância entre ícones e Text Frame.

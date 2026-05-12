@@ -206,8 +206,9 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 ## [Não publicado]
 
 ### Corrigido
+- **Input Text md gap sincronizado com Figma.** `component.input.gap.md` passa de `semantic.space.sm` para `semantic.space.xs`, alinhando o Field Medium ao gap vivo de `4px` nos variants do Input Text.
 - **Input Text completo aplicado aos Component tokens.** `component.input` agora cobre bg, bordas, radius, focus ring, conteúdo, placeholder, ícone, label, required, helper, stack, label-row, sizing, padding e tipografia; os variants vivos no Figma foram bindados nesses atributos e o CSS passa a consumir `--ds-input-*` no wrapper e no uso composto com `.ds-field`.
-- **Input Text sizing/spacing aplicado aos Component tokens.** Criadas variables `input/{padding-x,padding-y,gap}`, `input/icon/{frame-size,glyph-size}` e `input/text-frame/padding-x` no Figma, com Code Syntax WEB e binds nos 18 variants do Input Text. JSON/CSS/docs passam a consumir `component.input.*`, alinhando padding `8/12/16`, padding-y `8/10/12`, gap `0/8/8` e ícone frame/glyph ao Figma vivo.
+- **Input Text sizing/spacing aplicado aos Component tokens.** Criadas variables `input/{padding-x,padding-y,gap}`, `input/icon/{frame-size,glyph-size}` e `input/text-frame/padding-x` no Figma, com Code Syntax WEB e binds nos 18 variants do Input Text. JSON/CSS/docs passam a consumir `component.input.*`, alinhando padding `8/12/16`, padding-y `8/10/12`, gap `0/4/8` e ícone frame/glyph ao Figma vivo.
 - **Button padding e gap sincronizados com Figma.** `component.button.padding-x.{sm,md,lg}` passa a seguir `8/12/16px` e `component.button.gap.{sm,md,lg}` passa a seguir `2/4/8px`, alinhando JSON, CSS gerado, documentação e API às variables vivas do Button no Figma.
 - **Button sm com frame de ícone por tamanho.** `component.button.icon.frame-size.default` foi substituído por `component.button.icon.frame-size.{sm,md,lg}` no Figma/JSON/CSS; os 270 frames de ícone do Button no Figma agora usam `sm=20px`, `md=24px` e `lg=24px`. CSS também corrige Button somente-ícone para não herdar `min-width` textual e renderizar quadrado.
 - **Checkbox estrutural/focus aplicado aos Component tokens anatômicos.** Adicionados `component.checkbox.target.{gap,radius}`, `component.checkbox.box.{radius,border-width}` e `component.checkbox.focus-ring.{color,stroke-width,radius}`; os 27 variants vivos do Checkbox agora usam Component tokens nesses atributos, além de `target.height` e `box.size` já existentes. CSS passa a consumir `--ds-checkbox-*` nesses contratos e o sync Figma↔JSON trata `component.form-field.*` como JSON-only por ADR-017 após remoção das variables `form-field` do Figma.
@@ -2907,9 +2908,9 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.space.section.md` | dimension | → `foundation.dimension.48` | Spacing token section.md. | 0 |
 | `semantic.space.section.sm` | dimension | → `foundation.dimension.32` | Spacing token section.sm. | 1 |
 | `semantic.space.section.xl` | dimension | → `foundation.dimension.80` | Spacing token section.xl. | 0 |
-| `semantic.space.sm` | dimension | → `foundation.dimension.8` | Spacing token sm. | 27 |
+| `semantic.space.sm` | dimension | → `foundation.dimension.8` | Spacing token sm. | 26 |
 | `semantic.space.xl` | dimension | → `foundation.dimension.20` | Spacing token xl. | 15 |
-| `semantic.space.xs` | dimension | → `foundation.dimension.4` | Spacing token xs. | 18 |
+| `semantic.space.xs` | dimension | → `foundation.dimension.4` | Spacing token xs. | 19 |
 
 ### semantic.surface
 
@@ -3259,10 +3260,10 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.input.focus-ring.color.default` | color | → `semantic.border.focus` | Cor do focus ring Input Text. | 1 |
 | `component.input.focus-ring.color.error` | color | → `semantic.feedback.error.background.default` | Cor do focus ring Input Text error. | 1 |
 | `component.input.focus-ring.offset.default` | dimension | → `semantic.border.width.focus` | Offset CSS do focus ring Input Text. | 1 |
-| `component.input.focus-ring.radius.default` | dimension | → `semantic.radius.lg` | Radius do focus ring Input Text. | 1 |
+| `component.input.focus-ring.radius.default` | dimension | → `semantic.radius.lg` | Radius do focus ring Input Text. | 0 |
 | `component.input.focus-ring.stroke-width.default` | dimension | → `semantic.border.width.focus` | Stroke width do focus ring Input Text. | 1 |
 | `component.input.gap.lg` | dimension | → `semantic.space.sm` | Gap interno do Field Input Text lg. | 1 |
-| `component.input.gap.md` | dimension | → `semantic.space.sm` | Gap interno do Field Input Text md. | 1 |
+| `component.input.gap.md` | dimension | → `semantic.space.xs` | Gap interno do Field Input Text md. | 1 |
 | `component.input.gap.sm` | dimension | — | Gap interno do Field Input Text sm. | 1 |
 | `component.input.height.lg` | dimension | → `semantic.size.2xl` | Altura da superfície visual do Input Text por tamanho. | 1 |
 | `component.input.height.md` | dimension | → `semantic.size.xl` | Altura da superfície visual do Input Text por tamanho. | 1 |
@@ -7635,7 +7636,7 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/alert.css` (1×)
     - `css/components/button.css` (4×)
     - `css/components/checkbox.css` (4×)
-    - `css/components/input.css` (3×)
+    - `css/components/input.css` (2×)
     - `css/components/link.css` (1×)
     - `css/components/modal.css` (2×)
     - `css/components/radio.css` (4×)
@@ -7708,7 +7709,7 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/alert.css` (1×)
     - `css/components/button.css` (4×)
     - `css/components/checkbox.css` (4×)
-    - `css/components/input.css` (3×)
+    - `css/components/input.css` (2×)
     - `css/components/link.css` (1×)
     - `css/components/modal.css` (2×)
     - `css/components/radio.css` (4×)
@@ -8498,9 +8499,9 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/textarea.css` (2×)
     - `css/components/toggle.css` (1×)
     - `css/components/tooltip.css` (4×)
-    - `css/tokens/generated/component.css` (19×)
+    - `css/tokens/generated/component.css` (18×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.alert.gap.default`, `component.badge.padding-x.default`, `component.button.padding-x.sm`, `component.button.padding-y.sm`, `component.button.gap.lg`, `component.button.icon-only-padding.md`, `component.card.header.padding-bottom.default`, `component.card.header.gap.default`, `component.checkbox.target.gap.default`, `component.input.gap.md`, `component.input.gap.lg`, `component.input.padding-x.sm`, `component.input.padding-y.sm`, `component.modal.header.padding-bottom.sm`, `component.modal.header.gap.default`, `component.modal.footer.padding-top.sm`, `component.modal.footer.gap.default`, `component.tooltip.content.padding-x.default`, `component.tooltip.arrow.base.default`
+  - Tokens que referenciam: `component.alert.gap.default`, `component.badge.padding-x.default`, `component.button.padding-x.sm`, `component.button.padding-y.sm`, `component.button.gap.lg`, `component.button.icon-only-padding.md`, `component.card.header.padding-bottom.default`, `component.card.header.gap.default`, `component.checkbox.target.gap.default`, `component.input.gap.lg`, `component.input.padding-x.sm`, `component.input.padding-y.sm`, `component.modal.header.padding-bottom.sm`, `component.modal.header.gap.default`, `component.modal.footer.padding-top.sm`, `component.modal.footer.gap.default`, `component.tooltip.content.padding-x.default`, `component.tooltip.arrow.base.default`
 
 ### `semantic.space.xl`
 
@@ -8532,9 +8533,9 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/radio.css` (7×)
     - `css/components/select.css` (1×)
     - `css/components/toggle.css` (2×)
-    - `css/tokens/generated/component.css` (12×)
+    - `css/tokens/generated/component.css` (13×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.alert.content.gap.default`, `component.badge.gap.default`, `component.breadcrumb.gap.default`, `component.breadcrumb.item.gap.default`, `component.button.gap.md`, `component.button.label-frame.padding-x.default`, `component.form-field.gap.default`, `component.input.stack.gap.default`, `component.input.text-frame.padding-x.default`, `component.modal.close.padding.default`, `component.tooltip.content.padding-y.default`, `component.tooltip.arrow.depth.default`
+  - Tokens que referenciam: `component.alert.content.gap.default`, `component.badge.gap.default`, `component.breadcrumb.gap.default`, `component.breadcrumb.item.gap.default`, `component.button.gap.md`, `component.button.label-frame.padding-x.default`, `component.form-field.gap.default`, `component.input.gap.md`, `component.input.stack.gap.default`, `component.input.text-frame.padding-x.default`, `component.modal.close.padding.default`, `component.tooltip.content.padding-y.default`, `component.tooltip.arrow.depth.default`
 
 ### `semantic.surface.default`
 
@@ -12083,8 +12084,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
 - **Decisão**: Alias 1:1 para semantic.radius.lg porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
 - **Usos**:
-  - CSS:
-    - `css/components/input.css` (1×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `component.input.focus-ring.stroke-width.default`
 
@@ -12097,7 +12097,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Alias 1:1 para semantic.border.width.focus porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
 - **Usos**:
   - CSS:
-    - `css/components/input.css` (2×)
+    - `css/components/input.css` (1×)
 
 ### `component.input.gap.lg`
 
@@ -12116,7 +12116,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.space.sm`
+- **Alias**: → `semantic.space.xs`
 - **Sentido**: Gap interno do Field Input Text md.
 - **Escopo**: gap
 - **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Field no Figma e controla a distância entre ícones e Text Frame.

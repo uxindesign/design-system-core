@@ -133,6 +133,7 @@
         "ds-input-bg-disabled",
         "ds-input-bg-error",
         "ds-input-bg-filled",
+        "ds-input-bg-focused",
         "ds-input-bg-readonly",
         "ds-input-border-color-default",
         "ds-input-border-color-disabled",

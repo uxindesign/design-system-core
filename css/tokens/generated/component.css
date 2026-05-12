@@ -240,7 +240,7 @@
   --ds-input-focus-ring-offset-default: var(--ds-border-width-focus); /** Offset CSS do focus ring Input Text. */
   --ds-input-focus-ring-radius-default: var(--ds-radius-lg); /** Radius do focus ring Input Text. */
   --ds-input-focus-ring-stroke-width-default: var(--ds-border-width-focus); /** Stroke width do focus ring Input Text. */
-  --ds-input-gap-md: var(--ds-space-sm); /** Gap interno do Field Input Text md. */
+  --ds-input-gap-md: var(--ds-space-xs); /** Gap interno do Field Input Text md. */
   --ds-input-gap-lg: var(--ds-space-sm); /** Gap interno do Field Input Text lg. */
   --ds-input-height-sm: var(--ds-size-lg); /** Altura da superfície visual Input Text sm. */
   --ds-input-height-md: var(--ds-size-xl); /** Altura da superfície visual Input Text md. */

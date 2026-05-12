@@ -6885,7 +6885,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 12
+            "count": 13
           },
           {
             "file": "css/utilities/layout.css",
@@ -6900,6 +6900,7 @@
           "component.button.gap.md",
           "component.button.label-frame.padding-x.default",
           "component.form-field.gap.default",
+          "component.input.gap.md",
           "component.input.stack.gap.default",
           "component.input.text-frame.padding-x.default",
           "component.modal.close.padding.default",
@@ -6949,7 +6950,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 19
+            "count": 18
           },
           {
             "file": "css/utilities/layout.css",
@@ -6966,7 +6967,6 @@
           "component.card.header.padding-bottom.default",
           "component.card.header.gap.default",
           "component.checkbox.target.gap.default",
-          "component.input.gap.md",
           "component.input.gap.lg",
           "component.input.padding-x.sm",
           "component.input.padding-y.sm",
@@ -17299,7 +17299,7 @@
     "component.input.gap.md": {
       "layer": "component",
       "type": "dimension",
-      "references": "semantic.space.sm",
+      "references": "semantic.space.xs",
       "sentido": "Gap interno do Field Input Text md.",
       "escopo": [
         "gap"
