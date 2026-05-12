@@ -376,36 +376,32 @@
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Mapeamento de tokens</span><span data-lang="en">Token mapping</span></h2>
     <p style="margin-bottom:var(--ds-dimension-16);color:var(--ds-content-default);font-size:var(--ds-font-size-14);">
-      <span data-lang="pt">Textarea usa os mesmos tokens visuais de Input para borda, radius e estados, mas a altura mínima do field é contrato Component próprio por ser multilinha.</span><span data-lang="en">Textarea uses the same visual tokens as Input for border, radius, and states, but the field min-height is its own Component contract because it is multi-line.</span>
+      <span data-lang="pt">Textarea agora publica seu próprio contrato <code>component.textarea.*</code> para superfície visual, tipografia, spacing, label/helper e estados. O contador continua CSS-only porque não existe no component set vivo do Figma.</span><span data-lang="en">Textarea now publishes its own <code>component.textarea.*</code> contract for the visual surface, typography, spacing, label/helper, and states. The counter remains CSS-only because it does not exist in the live Figma component set.</span>
     </p>
     <table class="ds-token-table">
       <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token</th><th><span data-lang="pt">Variável CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
       <tbody>
-        <tr><td>background</td><td><code>semantic.surface.default</code></td><td><code>--ds-surface-default</code></td></tr>
-        <tr><td>border</td><td><code>semantic.border.default</code></td><td><code>--ds-border-default</code></td></tr>
-        <tr><td>border (hover)</td><td><code>semantic.border.control-hover</code></td><td><code>--ds-border-control-hover</code></td></tr>
-        <tr><td>border (focus)</td><td><code>semantic.primary.background.default</code></td><td><code>--ds-primary-background-default</code></td></tr>
-        <tr><td>border (error)</td><td><code>semantic.feedback.error.bg-default</code></td><td><code>--ds-feedback-error-background-default</code></td></tr>
-        <tr><td>text color</td><td><code>semantic.content.default</code></td><td><code>--ds-content-strong</code></td></tr>
-        <tr><td>placeholder color</td><td><code>semantic.content.subtle</code></td><td><code>--ds-content-subtle</code></td></tr>
-        <tr><td>border-radius</td><td><code>semantic.radius.component</code></td><td><code>--ds-radius-md</code></td></tr>
-        <tr><td>focus ring</td><td><code>semantic.focus.ring.*</code></td><td><code>--ds-focus-ring-width</code>, <code>--ds-focus-ring-offset</code>, <code>--ds-focus-ring-color</code></td></tr>
-        <tr><td>padding-x (sm/md/lg)</td><td><code>semantic.space.control.padding-x.*</code></td><td><code>--ds-space-md/md/lg</code></td></tr>
-        <tr><td>padding-y (sm)</td><td><code>semantic.space.control.padding-y.sm</code></td><td><code>--ds-space-sm</code> (8px)</td></tr>
-        <tr><td>padding-y (md)</td><td><code>semantic.space.control.padding-y.md</code></td><td><code>--ds-space-control-padding-10</code> (10px, was 12px)</td></tr>
-        <tr><td>padding-y (lg)</td><td><code>semantic.space.control.padding-y.lg</code></td><td><code>--ds-space-md</code> (12px, was 16px)</td></tr>
-        <tr><td>font-size (sm)</td><td><code>semantic.typography.control.font-size.sm</code></td><td><code>--ds-control-font-size-sm</code></td></tr>
-        <tr><td>font-size (md)</td><td><code>semantic.typography.control.font-size.md</code></td><td><code>--ds-control-font-size-md</code></td></tr>
-        <tr><td>font-size (lg)</td><td><code>semantic.typography.control.font-size.lg</code></td><td><code>--ds-control-font-size-lg</code></td></tr>
+        <tr><td>background</td><td><code>component.textarea.bg.*</code></td><td><code>--ds-textarea-bg-*</code></td></tr>
+        <tr><td>border-color</td><td><code>component.textarea.border-color.*</code></td><td><code>--ds-textarea-border-color-*</code></td></tr>
+        <tr><td>border-width</td><td><code>component.textarea.border-width.default</code></td><td><code>--ds-textarea-border-width-default</code></td></tr>
+        <tr><td>radius</td><td><code>component.textarea.radius.default</code></td><td><code>--ds-textarea-radius-default</code></td></tr>
+        <tr><td>focus ring</td><td><code>component.textarea.focus-ring.{color,offset,radius,stroke-width}.*</code></td><td><code>--ds-textarea-focus-ring-*</code></td></tr>
+        <tr><td>content color</td><td><code>component.textarea.content.color.{default,disabled,readonly}</code></td><td><code>--ds-textarea-content-color-*</code></td></tr>
+        <tr><td>placeholder color</td><td><code>component.textarea.placeholder.color.{default,disabled}</code></td><td><code>--ds-textarea-placeholder-color-*</code></td></tr>
+        <tr><td>padding-x (sm/md/lg)</td><td><code>component.textarea.padding-x.{sm,md,lg}</code></td><td><code>--ds-textarea-padding-x-*</code></td></tr>
+        <tr><td>padding-y (sm/md/lg)</td><td><code>component.textarea.padding-y.{sm,md,lg}</code></td><td><code>--ds-textarea-padding-y-*</code></td></tr>
+        <tr><td>text typography</td><td><code>component.textarea.text.{font-family,font-size,font-weight,letter-spacing,line-height}.*</code></td><td><code>--ds-textarea-text-*</code></td></tr>
         <tr><td>field min-height (sm)</td><td><code>component.textarea.field.min-height.sm</code></td><td><code>--ds-textarea-field-min-height-sm</code> (80px)</td></tr>
         <tr><td>field min-height (md)</td><td><code>component.textarea.field.min-height.md</code></td><td><code>--ds-textarea-field-min-height-md</code> (96px)</td></tr>
         <tr><td>field min-height (lg)</td><td><code>component.textarea.field.min-height.lg</code></td><td><code>--ds-textarea-field-min-height-lg</code> (120px)</td></tr>
+        <tr><td>label/helper/required</td><td><code>component.textarea.{label,helper,required}.*</code></td><td><code>--ds-textarea-label-*</code>, <code>--ds-textarea-helper-*</code>, <code>--ds-textarea-required-*</code></td></tr>
+        <tr><td>stack/label-row gap</td><td><code>component.textarea.stack.gap.default</code>, <code>component.textarea.label-row.gap.default</code></td><td><code>--ds-textarea-stack-gap-default</code>, <code>--ds-textarea-label-row-gap-default</code></td></tr>
         <tr><td>counter color</td><td><code>semantic.content.default</code></td><td><code>--ds-content-default</code></td></tr>
         <tr><td>counter color (over)</td><td><code>semantic.feedback.error.content-default</code></td><td><code>--ds-feedback-error-content-default</code></td></tr>
       </tbody>
     </table>
     <p style="margin-top:var(--ds-dimension-8);color:var(--ds-content-default);font-size:var(--ds-font-size-14);">
-      <span data-lang="pt"><strong>Nota:</strong> Textarea não usa <code>component.*.root.height</code> como Button/Input/Select. O contrato anatômico é <code>component.textarea.field.min-height.*</code>, aplicado ao field visual.</span><span data-lang="en"><strong>Note:</strong> Textarea does not use <code>component.*.root.height</code> like Button/Input/Select. Its anatomical contract is <code>component.textarea.field.min-height.*</code>, applied to the visual field.</span>
+      <span data-lang="pt"><strong>Nota:</strong> Textarea não usa <code>component.*.height</code> como Button/Input/Select. O contrato anatômico principal é <code>component.textarea.field.min-height.*</code>, aplicado ao field visual multilinha.</span><span data-lang="en"><strong>Note:</strong> Textarea does not use <code>component.*.height</code> like Button/Input/Select. Its main anatomical contract is <code>component.textarea.field.min-height.*</code>, applied to the multiline visual field.</span>
     </p>
   </div>
 
@@ -420,8 +416,8 @@
         <tr><td><code>ds-textarea</code></td><td><span data-lang="pt">Elemento wrapper do textarea</span><span data-lang="en">Wrapper element for the textarea</span></td></tr>
         <tr><td><code>ds-textarea__field</code></td><td><span data-lang="pt">O elemento nativo <code>&lt;textarea&gt;</code></span><span data-lang="en">The native <code>&lt;textarea&gt;</code> element</span></td></tr>
         <tr><td><code>ds-textarea--sm</code></td><td><span data-lang="pt">Tamanho pequeno (80px min-height)</span><span data-lang="en">Small size (80px min-height)</span></td></tr>
-        <tr><td><code>ds-textarea--md</code></td><td><span data-lang="pt">Tamanho médio (120px min-height, padrão)</span><span data-lang="en">Medium size (120px min-height, default)</span></td></tr>
-        <tr><td><code>ds-textarea--lg</code></td><td><span data-lang="pt">Tamanho grande (160px min-height)</span><span data-lang="en">Large size (160px min-height)</span></td></tr>
+        <tr><td><code>ds-textarea--md</code></td><td><span data-lang="pt">Tamanho médio (96px min-height, padrão)</span><span data-lang="en">Medium size (96px min-height, default)</span></td></tr>
+        <tr><td><code>ds-textarea--lg</code></td><td><span data-lang="pt">Tamanho grande (120px min-height)</span><span data-lang="en">Large size (120px min-height)</span></td></tr>
         <tr><td><code>ds-textarea--error</code></td><td><span data-lang="pt">Estado de erro com borda vermelha</span><span data-lang="en">Error state with red border</span></td></tr>
         <tr><td><code>ds-textarea--disabled</code></td><td><span data-lang="pt">Estado desabilitado (ou use o nativo <code>disabled</code>)</span><span data-lang="en">Disabled state (or use native <code>disabled</code>)</span></td></tr>
         <tr><td><code>ds-textarea--readonly</code></td><td><span data-lang="pt">Estado somente leitura (ou use o nativo <code>readonly</code>)</span><span data-lang="en">Readonly state (or use native <code>readonly</code>)</span></td></tr>

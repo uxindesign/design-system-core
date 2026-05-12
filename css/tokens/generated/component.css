@@ -475,6 +475,75 @@
   --ds-tabs-label-font-weight-default: var(--ds-body-font-weight-bold); /** Peso da fonte do rótulo de Tabs. */
   --ds-tabs-label-letter-spacing-default: var(--ds-body-letter-spacing-normal); /** Espaçamento entre letras do rótulo de Tabs. */
   --ds-tabs-panel-padding-y-default: var(--ds-space-lg); /** Espaçamento interno vertical do painel de Tabs. */
+  --ds-textarea-bg-default: var(--ds-surface-default); /** Bg do Field Textarea default. */
+  --ds-textarea-bg-disabled: var(--ds-background-disabled); /** Bg do Field Textarea disabled. */
+  --ds-textarea-bg-error: var(--ds-surface-default); /** Bg do Field Textarea error. */
+  --ds-textarea-bg-filled: var(--ds-surface-default); /** Bg do Field Textarea filled. */
+  --ds-textarea-bg-focused: var(--ds-surface-default); /** Bg do Field Textarea focused. */
+  --ds-textarea-bg-readonly: var(--ds-background-subtle); /** Bg do Field Textarea readonly. */
+  --ds-textarea-border-color-default: var(--ds-border-control-default); /** Border color do Field Textarea default. */
+  --ds-textarea-border-color-disabled: var(--ds-border-control-disabled); /** Border color do Field Textarea disabled. */
+  --ds-textarea-border-color-error: var(--ds-feedback-error-background-default); /** Border color do Field Textarea error. */
+  --ds-textarea-border-color-filled: var(--ds-border-strong); /** Border color do Field Textarea filled. */
+  --ds-textarea-border-color-focused: var(--ds-primary-background-default); /** Border color do Field Textarea focused. */
+  --ds-textarea-border-color-hover: var(--ds-border-control-hover); /** Border color do Field Textarea hover. */
+  --ds-textarea-border-color-readonly: var(--ds-border-subtle); /** Border color do Field Textarea readonly. */
+  --ds-textarea-border-width-default: var(--ds-border-width-default); /** Border width do Field Textarea. */
+  --ds-textarea-content-color-default: var(--ds-content-strong); /** Cor de conteúdo preenchido do Textarea. */
+  --ds-textarea-content-color-disabled: var(--ds-content-disabled); /** Cor de conteúdo disabled do Textarea. */
+  --ds-textarea-content-color-readonly: var(--ds-content-default); /** Cor de conteúdo readonly do Textarea. */
+  --ds-textarea-focus-ring-color-default: var(--ds-border-focus); /** Cor do focus ring Textarea. */
+  --ds-textarea-focus-ring-color-error: var(--ds-feedback-error-background-default); /** Cor do focus ring Textarea error. */
+  --ds-textarea-focus-ring-offset-default: var(--ds-border-width-focus); /** Offset CSS do focus ring Textarea. */
+  --ds-textarea-focus-ring-radius-default: var(--ds-radius-lg); /** Radius do focus ring Textarea. */
+  --ds-textarea-focus-ring-stroke-width-default: var(--ds-border-width-focus); /** Stroke width do focus ring Textarea. */
+  --ds-textarea-helper-color-default: var(--ds-content-default); /** Cor do helper text Textarea. */
+  --ds-textarea-helper-color-disabled: var(--ds-content-disabled); /** Cor do helper text Textarea disabled. */
+  --ds-textarea-helper-font-family-default: var(--ds-body-font-family-sans); /** Font-family do helper text Textarea. */
+  --ds-textarea-helper-font-size-sm: var(--ds-body-font-size-xs); /** Font-size do helper text Textarea sm. */
+  --ds-textarea-helper-font-size-md: var(--ds-body-font-size-sm); /** Font-size do helper text Textarea md. */
+  --ds-textarea-helper-font-size-lg: var(--ds-body-font-size-sm); /** Font-size do helper text Textarea lg. */
+  --ds-textarea-helper-font-weight-default: var(--ds-body-font-weight-regular); /** Font-weight do helper text Textarea. */
+  --ds-textarea-helper-letter-spacing-default: var(--ds-body-letter-spacing-normal); /** Letter-spacing do helper text Textarea. */
+  --ds-textarea-helper-line-height-sm: var(--ds-body-line-height-xs); /** Line-height do helper text Textarea sm. */
+  --ds-textarea-helper-line-height-md: var(--ds-body-line-height-sm); /** Line-height do helper text Textarea md. */
+  --ds-textarea-helper-line-height-lg: var(--ds-body-line-height-sm); /** Line-height do helper text Textarea lg. */
+  --ds-textarea-label-color-default: var(--ds-content-strong); /** Cor do label Textarea. */
+  --ds-textarea-label-font-family-default: var(--ds-body-font-family-sans); /** Font-family do label Textarea. */
+  --ds-textarea-label-font-size-sm: var(--ds-body-font-size-xs); /** Font-size do label Textarea sm. */
+  --ds-textarea-label-font-size-md: var(--ds-body-font-size-sm); /** Font-size do label Textarea md. */
+  --ds-textarea-label-font-size-lg: var(--ds-body-font-size-sm); /** Font-size do label Textarea lg. */
+  --ds-textarea-label-font-weight-default: var(--ds-body-font-weight-bold); /** Font-weight do label Textarea. */
+  --ds-textarea-label-letter-spacing-default: var(--ds-body-letter-spacing-normal); /** Letter-spacing do label Textarea. */
+  --ds-textarea-label-line-height-sm: var(--ds-body-line-height-xs); /** Line-height do label Textarea sm. */
+  --ds-textarea-label-line-height-md: var(--ds-body-line-height-sm); /** Line-height do label Textarea md. */
+  --ds-textarea-label-line-height-lg: var(--ds-body-line-height-sm); /** Line-height do label Textarea lg. */
+  --ds-textarea-label-row-gap-default: var(--ds-space-2xs); /** Gap entre label e required Textarea. */
+  --ds-textarea-padding-x-sm: var(--ds-space-sm); /** Padding horizontal do Field Textarea sm. */
+  --ds-textarea-padding-x-md: var(--ds-space-md); /** Padding horizontal do Field Textarea md. */
+  --ds-textarea-padding-x-lg: var(--ds-space-lg); /** Padding horizontal do Field Textarea lg. */
+  --ds-textarea-padding-y-sm: var(--ds-space-sm); /** Padding vertical do Field Textarea sm. */
+  --ds-textarea-padding-y-md: var(--ds-space-control-padding-10); /** Padding vertical do Field Textarea md. */
+  --ds-textarea-padding-y-lg: var(--ds-space-md); /** Padding vertical do Field Textarea lg. */
+  --ds-textarea-placeholder-color-default: var(--ds-content-subtle); /** Cor do placeholder Textarea. */
+  --ds-textarea-placeholder-color-disabled: var(--ds-content-disabled); /** Cor do placeholder Textarea disabled. */
+  --ds-textarea-radius-default: var(--ds-radius-md); /** Radius do Field Textarea. */
+  --ds-textarea-required-color-default: var(--ds-feedback-error-content-default); /** Cor do indicador required Textarea. */
+  --ds-textarea-required-font-family-default: var(--ds-body-font-family-sans); /** Font-family do indicador required Textarea. */
+  --ds-textarea-required-font-size-default: var(--ds-body-font-size-sm); /** Font-size do indicador required Textarea. */
+  --ds-textarea-required-font-weight-default: var(--ds-body-font-weight-bold); /** Font-weight do indicador required Textarea. */
+  --ds-textarea-required-letter-spacing-default: var(--ds-body-letter-spacing-normal); /** Letter-spacing do indicador required Textarea. */
+  --ds-textarea-required-line-height-default: var(--ds-body-line-height-sm); /** Line-height do indicador required Textarea. */
+  --ds-textarea-stack-gap-default: var(--ds-space-xs); /** Gap vertical entre label, field e helper no Textarea. */
+  --ds-textarea-text-font-family-default: var(--ds-body-font-family-sans); /** Font-family do texto Textarea. */
+  --ds-textarea-text-font-size-sm: var(--ds-body-font-size-sm); /** Font-size do texto Textarea sm. */
+  --ds-textarea-text-font-size-md: var(--ds-body-font-size-sm); /** Font-size do texto Textarea md. */
+  --ds-textarea-text-font-size-lg: var(--ds-body-font-size-md); /** Font-size do texto Textarea lg. */
+  --ds-textarea-text-font-weight-default: var(--ds-body-font-weight-regular); /** Font-weight do texto Textarea. */
+  --ds-textarea-text-letter-spacing-default: var(--ds-body-letter-spacing-normal); /** Letter-spacing do texto Textarea. */
+  --ds-textarea-text-line-height-sm: var(--ds-body-line-height-sm); /** Line-height do texto Textarea sm. */
+  --ds-textarea-text-line-height-md: var(--ds-body-line-height-sm); /** Line-height do texto Textarea md. */
+  --ds-textarea-text-line-height-lg: var(--ds-body-line-height-md); /** Line-height do texto Textarea lg. */
   --ds-toggle-target-height-sm: var(--ds-size-lg); /** Altura minima da area interativa Toggle sm. */
   --ds-toggle-target-height-md: var(--ds-size-xl); /** Altura minima da area interativa Toggle md. */
   --ds-toggle-target-height-lg: var(--ds-size-2xl); /** Altura minima da area interativa Toggle lg. */
