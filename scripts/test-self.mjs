@@ -75,8 +75,8 @@ withMutation(
 console.log('[3] orphan-css-ref detection...');
 withMutation(
   'css/components/button.css',
-  'var(--ds-radius-md)',
-  'var(--ds-radius-nonexistent)',
+  'var(--ds-button-radius-default)',
+  'var(--ds-button-radius-nonexistent)',
   () => {
     const code = runTest('scripts/test-css-references.mjs');
     if (code === 0) failures.push('css-references did NOT detect orphan ref');
