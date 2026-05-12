@@ -79,8 +79,18 @@
 }
 
 .ds-select__field:invalid,
+.ds-select__field option:disabled[value=""],
 .ds-select__field option[value=""] {
   color: var(--ds-select-placeholder-color-default);
+}
+
+.ds-select:has(.ds-select__field option:checked[value=""]) .ds-select__field {
+  color: var(--ds-select-placeholder-color-default);
+}
+
+.ds-select--disabled:has(.ds-select__field option:checked[value=""]) .ds-select__field,
+.ds-select:has(.ds-select__field:disabled option:checked[value=""]) .ds-select__field {
+  color: var(--ds-select-placeholder-color-disabled);
 }
 
 /* Chevron indicator
