@@ -74,6 +74,39 @@
 <p>O formato é baseado em <a href="https://keepachangelog.com/pt-BR/1.1.0/">Keep a Changelog</a> e o versionamento segue <a href="https://semver.org/lang/pt-BR/">Semantic Versioning</a>.</p>
 <p>Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na faixa 0.x. Regras de bump documentadas em <code>docs/process-versioning.html</code>.</p>
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
+<h3>Corrigido (Fase 8 — limpeza de tokens component redundantes)</h3>
+<p>Reflexão crítica após Fase 5: o agente automatizou demais e criou 151 tokens component novos, dos quais 105 eram aliases 1:1 pra Semantic/Foundation sem variação entre componentes (30% de bloat). Essa limpeza corrige.</p>
+<p><strong>Princípio refinado</strong> em ADR-013 (nova seção &quot;Quando criar um Component token&quot;):</p>
+<ul>
+<li>Component token existe <strong>apenas</strong> quando há valor único pro componente, variação por size/state, OU decisão de identidade que diverge do padrão semantic</li>
+<li>NÃO criar Component token quando é alias 1:1 sem variação — CSS consome Semantic direto (Semantic &gt; Foundation na cadeia, sem leak)</li>
+</ul>
+<p><strong>Execução</strong>:</p>
+<p>Fase 8.2 — 5 Semantic novos criados pra cobrir categorias faltantes:</p>
+<ul>
+<li><code>semantic.motion.duration.{fast,normal,slow}</code> → aliases pra <code>foundation.duration.*</code></li>
+<li><code>semantic.motion.ease.default</code> → alias pra <code>foundation.ease.default</code></li>
+<li><code>semantic.opacity.disabled</code> → alias pra <code>foundation.opacity.50</code> (também criado no Figma com scope <code>OPACITY</code>)</li>
+</ul>
+<p>Motion vive <strong>JSON-only by design</strong> (Figma Variables não suporta animações). <code>scripts/lib/figma-dtcg.mjs</code> estendido: <code>semantic.motion.*</code> agora é <code>BY_DESIGN</code> no verify.</p>
+<p>Fase 8.3+8.4 — Removidos 96 tokens component redundantes do JSON + 146 substituições CSS. Exemplos:</p>
+<ul>
+<li><code>component.X.transition-duration</code> (11 componentes, todos <code>{foundation.duration.fast}</code>) → removido; CSS usa <code>var(--ds-motion-duration-fast)</code> direto</li>
+<li><code>component.X.transition-timing</code> (11) → <code>var(--ds-motion-ease-default)</code></li>
+<li><code>component.X.border-width</code> (11) → <code>var(--ds-border-width-default)</code> (semantic existente)</li>
+<li><code>component.X.font-family</code> (em 17 comps) → <code>var(--ds-body-font-family-sans)</code></li>
+<li><code>component.X.opacity-disabled</code> (4) → <code>var(--ds-opacity-disabled)</code></li>
+<li>label/helper/description typography tokens (~30) → consomem <code>body.*</code> direto</li>
+</ul>
+<p>9 tokens candidatos <strong>mantidos como wrappers</strong> porque remover causaria Foundation leak (ex: <code>alert.focus-border-radius</code> aliasando <code>{foundation.radius.sm}</code> — não existe semantic equivalente).</p>
+<p>Fase 8.5 — Removidos 70 variables correspondentes do Figma Component collection (192 vars hoje, era 262).</p>
+<p><strong>Estado final</strong>:</p>
+<ul>
+<li>JSON tokens: 825 → <strong>739</strong> (-86: -96 removidos + 10 novos semantic/motion/opacity)</li>
+<li>Figma Component: 262 → <strong>185 vars</strong> (-77)</li>
+<li>Registry: 672 → <strong>671 entries</strong> (net -1; várias removidas, poucas adicionadas)</li>
+<li><code>verify:tokens</code>: <strong>0 erros</strong>, 119 warnings (117 base/ leak — débito separado; 2 registry migration)</li>
+</ul>
 <h3>Adicionado (Fase 7 — enforcement em CI)</h3>
 <p><code>scripts/tokens-verify.mjs</code> ganha 2 checks novos que rodam em CI:</p>
 <ol>

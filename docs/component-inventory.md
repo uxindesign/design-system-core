@@ -8,21 +8,21 @@
 
 | Componente | CSS | Tokens JSON | Figma (visual) | Figma (binding) | Stories | Docs site |
 |------------|-----|-------------|-----------------|-----------------|---------|----------|
-| Button | 🟢 | 🟢 (30) | 🟢 | 🟢 | ⬜ | 🟢 |
-| Input Text | 🟢 | 🟢 (27) | 🟢 | 🟢 | ⬜ | 🟢 |
-| Textarea | 🟢 | 🟢 (20) | 🟢 | 🟢 | ⬜ | 🟢 |
-| Select | 🟢 | 🟢 (22) | 🟢 | 🟢 | ⬜ | 🟢 |
-| Checkbox | 🟢 | 🟢 (30) | 🟢 | 🟢 | ⬜ | 🟢 |
-| Radio | 🟢 | 🟢 (33) | 🟢 | 🟢 | ⬜ | 🟢 |
-| Toggle | 🟢 | 🟢 (29) | 🟢 | 🟢 | ⬜ | 🟢 |
+| Button | 🟢 | 🟢 (24) | 🟢 | 🟢 | ⬜ | 🟢 |
+| Input Text | 🟢 | 🟢 (18) | 🟢 | 🟢 | ⬜ | 🟢 |
+| Textarea | 🟢 | 🟢 (16) | 🟢 | 🟢 | ⬜ | 🟢 |
+| Select | 🟢 | 🟢 (18) | 🟢 | 🟢 | ⬜ | 🟢 |
+| Checkbox | 🟢 | 🟢 (12) | 🟢 | 🟢 | ⬜ | 🟢 |
+| Radio | 🟢 | 🟢 (15) | 🟢 | 🟢 | ⬜ | 🟢 |
+| Toggle | 🟢 | 🟢 (14) | 🟢 | 🟢 | ⬜ | 🟢 |
 | Badge | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
 | Alert | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
 | Card | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
-| Modal | 🟢 | 🟢 (23) | 🟢 | 🟢 | ⬜ | 🟢 |
+| Modal | 🟢 | 🟢 (14) | 🟢 | 🟢 | ⬜ | 🟢 |
 | Tooltip | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
 | Tabs | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
 | Breadcrumb | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
-| Avatar | 🟢 | 🟢 (12) | 🟢 | 🟢 | ⬜ | 🟢 |
+| Avatar | 🟢 | 🟢 (11) | 🟢 | 🟢 | ⬜ | 🟢 |
 | Divider | 🟢 | — | 🟢 | 🟢 | ⬜ | 🟢 |
 | Spinner | 🟢 | 🟢 (7) | 🟢 | 🟢 | ⬜ | 🟢 |
 | Skeleton | 🟢 | 🟢 (7) | 🟢 | 🟢 | ⬜ | 🟢 |
@@ -40,9 +40,9 @@
 | Coleção | Tokens | Status |
 |---------|--------|--------|
 | Foundation | 231 | 🟢 |
-| Semantic (light) | 153 | 🟢 |
-| Semantic (dark) | 153 | 🟢 |
-| Component | 288 | 🟢 |
+| Semantic (light) | 158 | 🟢 |
+| Semantic (dark) | 158 | 🟢 |
+| Component | 189 | 🟢 |
 
 ## Pipeline
 

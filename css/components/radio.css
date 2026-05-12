@@ -26,12 +26,12 @@
   align-items: center;
   gap: var(--ds-radio-gap);
   cursor: pointer;
-  padding: var(--ds-radio-label-padding-y) var(--ds-radio-label-padding-x);
+  padding: var(--ds-radio-label-padding-y) var(--ds-space-gap-xs);
   border-radius: var(--ds-radio-label-border-radius);
-  min-height: var(--ds-radio-min-target-size);
+  min-height: var(--ds-size-control-min-target);
   font-size: var(--ds-radio-font-size);
   color: var(--ds-content-default);
-  transition: background-color var(--ds-radio-transition-duration) var(--ds-radio-transition-timing);
+  transition: background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
 }
 
 .ds-radio-label:hover {
@@ -44,14 +44,14 @@
   -webkit-appearance: none;
   width: var(--ds-radio-control-size-md);
   height: var(--ds-radio-control-size-md);
-  border: var(--ds-radio-border-width) solid var(--ds-border-control-default);
+  border: var(--ds-border-width-default) solid var(--ds-border-control-default);
   border-radius: var(--ds-radio-border-radius-full);
   background-color: var(--ds-surface-default);
   cursor: pointer;
   position: relative;
   flex-shrink: 0;
-  transition: border-color var(--ds-radio-transition-duration) var(--ds-radio-transition-timing),
-              background-color var(--ds-radio-transition-duration) var(--ds-radio-transition-timing);
+  transition: border-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
+              background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
 }
 
 .ds-radio::after {
@@ -64,7 +64,7 @@
   border-radius: var(--ds-radio-border-radius-full);
   background-color: var(--ds-brand-content-contrast);
   transform: translate(-50%, -50%) scale(0);
-  transition: transform var(--ds-radio-transition-duration) var(--ds-radio-transition-timing);
+  transition: transform var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
 }
 
 /* Hover */
@@ -97,12 +97,12 @@
 
 .ds-radio:disabled + .ds-radio-label__text,
 .ds-radio:disabled ~ * {
-  opacity: var(--ds-radio-opacity-disabled);
+  opacity: var(--ds-opacity-disabled);
 }
 
 .ds-radio-label:has(.ds-radio:disabled) {
   cursor: not-allowed;
-  opacity: var(--ds-radio-opacity-disabled);
+  opacity: var(--ds-opacity-disabled);
 }
 
 .ds-radio-label:has(.ds-radio:disabled):hover {
@@ -124,9 +124,9 @@
 }
 
 .ds-radio-group__error {
-  font-size: var(--ds-radio-error-font-size);
+  font-size: var(--ds-body-font-size-xs);
   color: var(--ds-feedback-error-content-default);
-  margin-top: var(--ds-radio-error-margin-top);
+  margin-top: var(--ds-space-gap-xs);
   display: none;
 }
 
@@ -184,31 +184,31 @@
 .ds-radio__content {
   display: flex;
   flex-direction: column;
-  gap: var(--ds-radio-content-gap);
+  gap: var(--ds-space-gap-xs);
   min-width: 0;
 }
 
 /* Label text (label/md: 14px medium / 20px) */
 .ds-radio__label {
-  font-size: var(--ds-radio-label-font-size);
-  font-weight: var(--ds-radio-label-font-weight);
-  line-height: var(--ds-radio-label-line-height);
+  font-size: var(--ds-body-font-size-sm);
+  font-weight: var(--ds-body-font-weight-medium);
+  line-height: var(--ds-body-line-height-sm);
   color: var(--ds-content-default);
 }
 
 /* Description (body/sm: 14px regular / 22px, multiline) */
 .ds-radio__description {
-  font-size: var(--ds-radio-description-font-size);
-  font-weight: var(--ds-radio-description-font-weight);
-  line-height: var(--ds-radio-description-line-height);
+  font-size: var(--ds-body-font-size-sm);
+  font-weight: var(--ds-body-font-weight-regular);
+  line-height: var(--ds-body-line-height-md);
   color: var(--ds-content-default);
   white-space: pre-wrap;
 }
 
 /* Helper text (caption/sm: 11px regular / 18px) */
 .ds-radio__helper {
-  font-size: var(--ds-radio-helper-font-size);
-  line-height: var(--ds-radio-helper-line-height);
+  font-size: var(--ds-body-font-size-xs);
+  line-height: var(--ds-body-line-height-md);
   color: var(--ds-content-secondary);
 }
 

@@ -8,6 +8,41 @@ Enquanto o sistema não tiver um release oficial 1.0, todas as versões ficam na
 
 ## [Não publicado]
 
+### Corrigido (Fase 8 — limpeza de tokens component redundantes)
+
+Reflexão crítica após Fase 5: o agente automatizou demais e criou 151 tokens component novos, dos quais 105 eram aliases 1:1 pra Semantic/Foundation sem variação entre componentes (30% de bloat). Essa limpeza corrige.
+
+**Princípio refinado** em ADR-013 (nova seção "Quando criar um Component token"):
+- Component token existe **apenas** quando há valor único pro componente, variação por size/state, OU decisão de identidade que diverge do padrão semantic
+- NÃO criar Component token quando é alias 1:1 sem variação — CSS consome Semantic direto (Semantic > Foundation na cadeia, sem leak)
+
+**Execução**:
+
+Fase 8.2 — 5 Semantic novos criados pra cobrir categorias faltantes:
+- `semantic.motion.duration.{fast,normal,slow}` → aliases pra `foundation.duration.*`
+- `semantic.motion.ease.default` → alias pra `foundation.ease.default`
+- `semantic.opacity.disabled` → alias pra `foundation.opacity.50` (também criado no Figma com scope `OPACITY`)
+
+Motion vive **JSON-only by design** (Figma Variables não suporta animações). `scripts/lib/figma-dtcg.mjs` estendido: `semantic.motion.*` agora é `BY_DESIGN` no verify.
+
+Fase 8.3+8.4 — Removidos 96 tokens component redundantes do JSON + 146 substituições CSS. Exemplos:
+- `component.X.transition-duration` (11 componentes, todos `{foundation.duration.fast}`) → removido; CSS usa `var(--ds-motion-duration-fast)` direto
+- `component.X.transition-timing` (11) → `var(--ds-motion-ease-default)`
+- `component.X.border-width` (11) → `var(--ds-border-width-default)` (semantic existente)
+- `component.X.font-family` (em 17 comps) → `var(--ds-body-font-family-sans)`
+- `component.X.opacity-disabled` (4) → `var(--ds-opacity-disabled)`
+- label/helper/description typography tokens (~30) → consomem `body.*` direto
+
+9 tokens candidatos **mantidos como wrappers** porque remover causaria Foundation leak (ex: `alert.focus-border-radius` aliasando `{foundation.radius.sm}` — não existe semantic equivalente).
+
+Fase 8.5 — Removidos 70 variables correspondentes do Figma Component collection (192 vars hoje, era 262).
+
+**Estado final**:
+- JSON tokens: 825 → **739** (-86: -96 removidos + 10 novos semantic/motion/opacity)
+- Figma Component: 262 → **185 vars** (-77)
+- Registry: 672 → **671 entries** (net -1; várias removidas, poucas adicionadas)
+- `verify:tokens`: **0 erros**, 119 warnings (117 base/ leak — débito separado; 2 registry migration)
+
 ### Adicionado (Fase 7 — enforcement em CI)
 
 `scripts/tokens-verify.mjs` ganha 2 checks novos que rodam em CI:

@@ -12,15 +12,15 @@
 | Formato canônico | JSON (DTCG) em `tokens/` |
 | CSS gerado | Style Dictionary → `css/tokens/generated/` |
 | Pipeline | ✅ index.css importa apenas generated/ |
-| Paridade light/dark | ✅ 153 tokens em ambos os modos |
+| Paridade light/dark | ✅ 158 tokens em ambos os modos |
 
 ## Camadas
 
 | Camada | Tokens | Arquivos |
 |--------|--------|----------|
 | Foundation | **231** | 10 |
-| Semantic | **153 × 2 modos** | light.json + dark.json |
-| Component | **288** | 18 |
+| Semantic | **158 × 2 modos** | light.json + dark.json |
+| Component | **189** | 18 |
 
 ## Foundation (231 tokens)
 
@@ -37,7 +37,7 @@
 | `typography.json` | 35 |
 | `z-index.json` | 6 |
 
-## Semantic (153 tokens × 2 modos)
+## Semantic (158 tokens × 2 modos)
 
 Categorias raiz em light.json:
 
@@ -52,34 +52,36 @@ semantic.border.*
 semantic.focus.*
 semantic.overlay.*
 semantic.state.*
+semantic.motion.*
+semantic.opacity.*
 semantic.space.*
 semantic.radius.*
 semantic.size.*
 semantic.typography.*
 ```
 
-## Component (288 tokens)
+## Component (189 tokens)
 
 | Arquivo | Tokens |
 |---------|--------|
-| `alert.json` | 9 |
-| `avatar.json` | 12 |
+| `alert.json` | 5 |
+| `avatar.json` | 11 |
 | `badge.json` | 6 |
 | `breadcrumb.json` | 4 |
-| `button.json` | 30 |
-| `card.json` | 10 |
-| `checkbox.json` | 30 |
+| `button.json` | 24 |
+| `card.json` | 4 |
+| `checkbox.json` | 12 |
 | `divider.json` | 2 |
-| `input.json` | 27 |
-| `modal.json` | 23 |
-| `radio.json` | 33 |
-| `select.json` | 22 |
+| `input.json` | 18 |
+| `modal.json` | 14 |
+| `radio.json` | 15 |
+| `select.json` | 18 |
 | `skeleton.json` | 7 |
 | `spinner.json` | 7 |
-| `tabs.json` | 10 |
-| `textarea.json` | 20 |
-| `toggle.json` | 29 |
-| `tooltip.json` | 7 |
+| `tabs.json` | 7 |
+| `textarea.json` | 16 |
+| `toggle.json` | 14 |
+| `tooltip.json` | 5 |
 
 ## Regras invioláveis
 

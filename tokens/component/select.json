@@ -58,18 +58,9 @@
         "$value": "{semantic.space.gap.xs}",
         "$description": "4px"
       },
-      "field-inner-padding-x": {
-        "$type": "dimension",
-        "$value": "{semantic.space.gap.xs}",
-        "$description": "4px inner padding around native select"
-      },
       "border-radius": {
         "$type": "dimension",
         "$value": "{semantic.radius.component}"
-      },
-      "border-width": {
-        "$type": "dimension",
-        "$value": "{semantic.border.width.default}"
       },
       "font-size": {
         "sm": {
@@ -109,14 +100,6 @@
           "$value": "{foundation.spacing.4}",
           "$description": "16px"
         }
-      },
-      "transition-duration": {
-        "$type": "duration",
-        "$value": "{foundation.duration.fast}"
-      },
-      "transition-timing": {
-        "$type": "cubicBezier",
-        "$value": "{foundation.ease.default}"
       }
     }
   }

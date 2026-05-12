@@ -6,9 +6,9 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Status
 
-- Total de tokens: **672**
+- Total de tokens: **677**
 - Com metadados completos: **0**
-- Pendentes (`TODO` em algum campo obrigatório): **672**
+- Pendentes (`TODO` em algum campo obrigatório): **677**
 - Completude: **0%**
 
 ## Foundation
@@ -174,15 +174,15 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `foundation.duration.fast` | duration | — | ⚠️ TODO | 12 |
-| `foundation.duration.normal` | duration | — | ⚠️ TODO | 0 |
-| `foundation.duration.slow` | duration | — | ⚠️ TODO | 0 |
+| `foundation.duration.fast` | duration | — | ⚠️ TODO | 4 |
+| `foundation.duration.normal` | duration | — | ⚠️ TODO | 4 |
+| `foundation.duration.slow` | duration | — | ⚠️ TODO | 4 |
 
 ### foundation.ease
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `foundation.ease.default` | cubicBezier | — | ⚠️ TODO | 12 |
+| `foundation.ease.default` | cubicBezier | — | ⚠️ TODO | 4 |
 | `foundation.ease.in` | cubicBezier | — | ⚠️ TODO | 0 |
 | `foundation.ease.in-out` | cubicBezier | — | ⚠️ TODO | 0 |
 | `foundation.ease.out` | cubicBezier | — | ⚠️ TODO | 0 |
@@ -196,7 +196,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `foundation.opacity.100` | number | — | ⚠️ TODO | 0 |
 | `foundation.opacity.25` | number | — | ⚠️ TODO | 0 |
 | `foundation.opacity.5` | number | — | ⚠️ TODO | 0 |
-| `foundation.opacity.50` | number | — | ⚠️ TODO | 5 |
+| `foundation.opacity.50` | number | — | ⚠️ TODO | 4 |
 | `foundation.opacity.75` | number | — | ⚠️ TODO | 0 |
 
 ### foundation.radius
@@ -208,7 +208,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `foundation.radius.lg` | dimension | — | ⚠️ TODO | 3 |
 | `foundation.radius.md` | dimension | — | ⚠️ TODO | 4 |
 | `foundation.radius.none` | dimension | — | ⚠️ TODO | 0 |
-| `foundation.radius.sm` | dimension | — | ⚠️ TODO | 11 |
+| `foundation.radius.sm` | dimension | — | ⚠️ TODO | 10 |
 | `foundation.radius.xl` | dimension | — | ⚠️ TODO | 2 |
 | `foundation.radius.xs` | dimension | — | ⚠️ TODO | 0 |
 
@@ -303,7 +303,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Semantic
 
-153 tokens.
+158 tokens.
 
 ### semantic.accent
 
@@ -419,6 +419,21 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.focus.ring.offset` | dimension | → `foundation.border.width.2` | ⚠️ TODO | 11 |
 | `semantic.focus.ring.width` | dimension | → `foundation.border.width.2` | ⚠️ TODO | 11 |
 
+### semantic.motion
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `semantic.motion.duration.fast` | duration | → `foundation.duration.fast` | ⚠️ TODO | 11 |
+| `semantic.motion.duration.normal` | duration | → `foundation.duration.normal` | ⚠️ TODO | 0 |
+| `semantic.motion.duration.slow` | duration | → `foundation.duration.slow` | ⚠️ TODO | 0 |
+| `semantic.motion.ease.default` | cubicBezier | → `foundation.ease.default` | ⚠️ TODO | 11 |
+
+### semantic.opacity
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `semantic.opacity.disabled` | number | → `foundation.opacity.50` | ⚠️ TODO | 4 |
+
 ### semantic.overlay
 
 | Token | Tipo | Alias | Sentido | Usos |
@@ -443,7 +458,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.size.control.icon.sm` | dimension | → `foundation.spacing.4` | ⚠️ TODO | 4 |
 | `semantic.size.control.lg` | dimension | → `foundation.spacing.12` | ⚠️ TODO | 4 |
 | `semantic.size.control.md` | dimension | → `foundation.spacing.10` | ⚠️ TODO | 4 |
-| `semantic.size.control.min-target` | dimension | → `foundation.spacing.11` | ⚠️ TODO | 5 |
+| `semantic.size.control.min-target` | dimension | → `foundation.spacing.11` | ⚠️ TODO | 4 |
 | `semantic.size.control.sm` | dimension | → `foundation.spacing.8` | ⚠️ TODO | 4 |
 
 ### semantic.space
@@ -467,7 +482,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.space.gap.md` | dimension | → `foundation.spacing.3` | ⚠️ TODO | 1 |
 | `semantic.space.gap.sm` | dimension | → `foundation.spacing.2` | ⚠️ TODO | 17 |
 | `semantic.space.gap.xl` | dimension | → `foundation.spacing.6` | ⚠️ TODO | 1 |
-| `semantic.space.gap.xs` | dimension | → `foundation.spacing.1` | ⚠️ TODO | 20 |
+| `semantic.space.gap.xs` | dimension | → `foundation.spacing.1` | ⚠️ TODO | 15 |
 | `semantic.space.inset.2xs` | dimension | → `foundation.spacing.0-5` | ⚠️ TODO | 2 |
 | `semantic.space.inset.lg` | dimension | → `foundation.spacing.4` | ⚠️ TODO | 7 |
 | `semantic.space.inset.md` | dimension | → `foundation.spacing.3` | ⚠️ TODO | 2 |
@@ -501,24 +516,24 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `semantic.typography.body.font-family.sans` | fontFamily | → `foundation.typography.font.family.sans` | ⚠️ TODO | 2 |
+| `semantic.typography.body.font-family.sans` | fontFamily | → `foundation.typography.font.family.sans` | ⚠️ TODO | 0 |
 | `semantic.typography.body.font-size.2xl` | dimension | → `foundation.typography.font.size.2xl` | ⚠️ TODO | 0 |
 | `semantic.typography.body.font-size.3xl` | dimension | → `foundation.typography.font.size.3xl` | ⚠️ TODO | 0 |
-| `semantic.typography.body.font-size.lg` | dimension | → `foundation.typography.font.size.lg` | ⚠️ TODO | 2 |
+| `semantic.typography.body.font-size.lg` | dimension | → `foundation.typography.font.size.lg` | ⚠️ TODO | 0 |
 | `semantic.typography.body.font-size.md` | dimension | → `foundation.typography.font.size.md` | ⚠️ TODO | 0 |
-| `semantic.typography.body.font-size.sm` | dimension | → `foundation.typography.font.size.sm` | ⚠️ TODO | 12 |
+| `semantic.typography.body.font-size.sm` | dimension | → `foundation.typography.font.size.sm` | ⚠️ TODO | 3 |
 | `semantic.typography.body.font-size.xl` | dimension | → `foundation.typography.font.size.xl` | ⚠️ TODO | 0 |
-| `semantic.typography.body.font-size.xs` | dimension | → `foundation.typography.font.size.xs` | ⚠️ TODO | 9 |
+| `semantic.typography.body.font-size.xs` | dimension | → `foundation.typography.font.size.xs` | ⚠️ TODO | 3 |
 | `semantic.typography.body.font-weight.bold` | number | → `foundation.typography.font.weight.bold` | ⚠️ TODO | 0 |
-| `semantic.typography.body.font-weight.medium` | number | → `foundation.typography.font.weight.medium` | ⚠️ TODO | 10 |
-| `semantic.typography.body.font-weight.regular` | number | → `foundation.typography.font.weight.regular` | ⚠️ TODO | 3 |
-| `semantic.typography.body.font-weight.semibold` | number | → `foundation.typography.font.weight.semibold` | ⚠️ TODO | 3 |
+| `semantic.typography.body.font-weight.medium` | number | → `foundation.typography.font.weight.medium` | ⚠️ TODO | 6 |
+| `semantic.typography.body.font-weight.regular` | number | → `foundation.typography.font.weight.regular` | ⚠️ TODO | 0 |
+| `semantic.typography.body.font-weight.semibold` | number | → `foundation.typography.font.weight.semibold` | ⚠️ TODO | 1 |
 | `semantic.typography.body.letter-spacing.normal` | dimension | → `foundation.typography.letter.spacing.normal` | ⚠️ TODO | 0 |
 | `semantic.typography.body.letter-spacing.tight` | dimension | → `foundation.typography.letter.spacing.tight` | ⚠️ TODO | 0 |
 | `semantic.typography.body.line-height.2xl` | number | → `foundation.typography.line.height.snug` | ⚠️ TODO | 0 |
 | `semantic.typography.body.line-height.3xl` | number | → `foundation.typography.line.height.tight` | ⚠️ TODO | 0 |
-| `semantic.typography.body.line-height.md` | number | → `foundation.typography.line.height.normal` | ⚠️ TODO | 11 |
-| `semantic.typography.body.line-height.sm` | number | → `foundation.typography.line.height.snug` | ⚠️ TODO | 6 |
+| `semantic.typography.body.line-height.md` | number | → `foundation.typography.line.height.normal` | ⚠️ TODO | 2 |
+| `semantic.typography.body.line-height.sm` | number | → `foundation.typography.line.height.snug` | ⚠️ TODO | 0 |
 | `semantic.typography.body.line-height.xl` | number | → `foundation.typography.line.height.normal` | ⚠️ TODO | 0 |
 | `semantic.typography.body.line-height.xs` | number | → `foundation.typography.line.height.snug` | ⚠️ TODO | 0 |
 | `semantic.typography.control.font-size.lg` | dimension | → `foundation.typography.font.size.md` | ⚠️ TODO | 4 |
@@ -2651,8 +2666,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (11×)
-  - Tokens que referenciam: `component.alert.transition-duration`, `component.button.transition-duration`, `component.checkbox.transition-duration`, `component.input.transition-duration`, `component.modal.transition-duration`, `component.radio.transition-duration`, `component.select.transition-duration`, `component.tabs.transition-duration`, `component.textarea.transition-duration`, `component.toggle.transition-duration`, `component.tooltip.transition-duration`
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.motion.duration.fast`, `semantic.motion.duration.fast`
 
 ### `foundation.duration.normal`
 
@@ -2663,7 +2679,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.motion.duration.normal`, `semantic.motion.duration.normal`
 
 ### `foundation.duration.slow`
 
@@ -2674,7 +2693,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.motion.duration.slow`, `semantic.motion.duration.slow`
 
 ### `foundation.ease.default`
 
@@ -2686,8 +2708,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (11×)
-  - Tokens que referenciam: `component.alert.transition-timing`, `component.button.transition-timing`, `component.checkbox.transition-timing`, `component.input.transition-timing`, `component.modal.transition-timing`, `component.radio.transition-timing`, `component.select.transition-timing`, `component.tabs.transition-timing`, `component.textarea.transition-timing`, `component.toggle.transition-timing`, `component.tooltip.transition-timing`
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.motion.ease.default`, `semantic.motion.ease.default`
 
 ### `foundation.ease.in`
 
@@ -2787,8 +2810,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (4×)
-  - Tokens que referenciam: `component.button.opacity-disabled`, `component.checkbox.opacity-disabled`, `component.radio.opacity-disabled`, `component.toggle.opacity-disabled`
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.opacity.disabled`, `semantic.opacity.disabled`
 
 ### `foundation.opacity.75`
 
@@ -2875,8 +2899,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/reset.css` (1×)
-    - `css/tokens/generated/component.css` (9×)
-  - Tokens que referenciam: `component.alert.focus-border-radius`, `component.breadcrumb.focus-border-radius`, `component.checkbox.border-radius`, `component.modal.close-border-radius`, `component.radio.label-border-radius`, `component.skeleton.text-border-radius`, `component.tabs.focus-border-radius`, `component.toggle.label-border-radius`, `component.tooltip.border-radius`
+    - `css/tokens/generated/component.css` (8×)
+  - Tokens que referenciam: `component.alert.focus-border-radius`, `component.breadcrumb.focus-border-radius`, `component.checkbox.border-radius`, `component.radio.label-border-radius`, `component.skeleton.text-border-radius`, `component.tabs.focus-border-radius`, `component.toggle.label-border-radius`, `component.tooltip.border-radius`
 
 ### `foundation.radius.xl`
 
@@ -4035,8 +4059,19 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (12×)
-  - Tokens que referenciam: `component.alert.border-width`, `component.button.border-width`, `component.card.border-width`, `component.checkbox.border-width`, `component.divider.thickness`, `component.input.border-width`, `component.modal.border-width`, `component.radio.border-width`, `component.select.border-width`, `component.tabs.border-width`, `component.textarea.border-width`, `component.toggle.border-width`
+    - `css/components/alert.css` (4×)
+    - `css/components/button.css` (1×)
+    - `css/components/card.css` (2×)
+    - `css/components/checkbox.css` (1×)
+    - `css/components/input.css` (1×)
+    - `css/components/modal.css` (1×)
+    - `css/components/radio.css` (1×)
+    - `css/components/select.css` (1×)
+    - `css/components/tabs.css` (1×)
+    - `css/components/textarea.css` (1×)
+    - `css/components/toggle.css` (1×)
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.divider.thickness`
 
 ### `semantic.border.width.focus`
 
@@ -4898,6 +4933,92 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/textarea.css` (2×)
     - `css/components/toggle.css` (1×)
 
+### `semantic.motion.duration.fast`
+
+- **Camada**: semantic
+- **Tipo**: `duration`
+- **Alias**: → `foundation.duration.fast`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/alert.css` (1×)
+    - `css/components/button.css` (4×)
+    - `css/components/checkbox.css` (4×)
+    - `css/components/input.css` (2×)
+    - `css/components/modal.css` (2×)
+    - `css/components/radio.css` (4×)
+    - `css/components/select.css` (2×)
+    - `css/components/tabs.css` (2×)
+    - `css/components/textarea.css` (2×)
+    - `css/components/toggle.css` (5×)
+    - `css/components/tooltip.css` (1×)
+
+### `semantic.motion.duration.normal`
+
+- **Camada**: semantic
+- **Tipo**: `duration`
+- **Alias**: → `foundation.duration.normal`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.motion.duration.slow`
+
+- **Camada**: semantic
+- **Tipo**: `duration`
+- **Alias**: → `foundation.duration.slow`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.motion.ease.default`
+
+- **Camada**: semantic
+- **Tipo**: `cubicBezier`
+- **Alias**: → `foundation.ease.default`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/alert.css` (1×)
+    - `css/components/button.css` (4×)
+    - `css/components/checkbox.css` (4×)
+    - `css/components/input.css` (2×)
+    - `css/components/modal.css` (2×)
+    - `css/components/radio.css` (4×)
+    - `css/components/select.css` (2×)
+    - `css/components/tabs.css` (2×)
+    - `css/components/textarea.css` (2×)
+    - `css/components/toggle.css` (5×)
+    - `css/components/tooltip.css` (1×)
+
+### `semantic.opacity.disabled`
+
+- **Camada**: semantic
+- **Tipo**: `number`
+- **Alias**: → `foundation.opacity.50`
+- **Sentido**: TODO
+- **Escopo**: —
+- **Contexto**: TODO
+- **Decisão**: TODO
+- **Usos**:
+  - CSS:
+    - `css/components/button.css` (1×)
+    - `css/components/checkbox.css` (1×)
+    - `css/components/radio.css` (2×)
+    - `css/components/toggle.css` (1×)
+
 ### `semantic.overlay.default`
 
 - **Camada**: semantic
@@ -5044,8 +5165,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (4×)
-  - Tokens que referenciam: `component.button.min-target-size`, `component.checkbox.min-target-size`, `component.radio.min-target-size`, `component.toggle.min-target-size`
+    - `css/components/button.css` (1×)
+    - `css/components/checkbox.css` (1×)
+    - `css/components/radio.css` (1×)
+    - `css/components/toggle.css` (1×)
 
 ### `semantic.size.control.sm`
 
@@ -5296,9 +5419,16 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: TODO
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (18×)
+    - `css/components/alert.css` (1×)
+    - `css/components/checkbox.css` (3×)
+    - `css/components/input.css` (2×)
+    - `css/components/radio.css` (3×)
+    - `css/components/select.css` (1×)
+    - `css/components/textarea.css` (3×)
+    - `css/components/toggle.css` (2×)
+    - `css/tokens/generated/component.css` (6×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.alert.content-gap`, `component.breadcrumb.gap`, `component.checkbox.label-padding-x`, `component.checkbox.content-gap`, `component.checkbox.error-margin-top`, `component.input.field-inner-padding-x`, `component.input.field-gap`, `component.modal.close-padding`, `component.radio.group-gap`, `component.radio.label-padding-x`, `component.radio.content-gap`, `component.radio.error-margin-top`, `component.select.gap`, `component.select.field-inner-padding-x`, `component.textarea.field-inner-padding-x`, `component.toggle.label-padding-x`, `component.toggle.content-gap`, `component.tooltip.padding-y`
+  - Tokens que referenciam: `component.breadcrumb.gap`, `component.input.field-gap`, `component.modal.close-padding`, `component.radio.group-gap`, `component.select.gap`, `component.tooltip.padding-y`
 
 ### `semantic.space.inset.2xs`
 
@@ -5557,7 +5687,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `component.avatar.font-family`, `component.button.font-family`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `semantic.typography.body.font-size.2xl`
 
@@ -5593,7 +5723,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `component.card.title-font-size`, `component.modal.title-font-size`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `semantic.typography.body.font-size.md`
 
@@ -5617,7 +5747,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `component.breadcrumb.font-size`, `component.card.body-font-size`, `component.checkbox.label-font-size`, `component.checkbox.description-font-size`, `component.input.label-font-size`, `component.modal.body-font-size`, `component.radio.legend-font-size`, `component.radio.label-font-size`, `component.radio.description-font-size`, `component.tabs.font-size`, `component.toggle.label-font-size`, `component.toggle.description-font-size`
+  - Tokens que referenciam: `component.breadcrumb.font-size`, `component.radio.legend-font-size`, `component.tabs.font-size`
 
 ### `semantic.typography.body.font-size.xl`
 
@@ -5641,7 +5771,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `component.badge.font-size`, `component.checkbox.helper-font-size`, `component.checkbox.error-font-size`, `component.input.helper-font-size`, `component.radio.helper-font-size`, `component.radio.error-font-size`, `component.textarea.counter-font-size`, `component.toggle.helper-font-size`, `component.tooltip.font-size`
+  - Tokens que referenciam: `component.badge.font-size`, `component.textarea.counter-font-size`, `component.tooltip.font-size`
 
 ### `semantic.typography.body.font-weight.bold`
 
@@ -5665,7 +5795,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `component.badge.font-weight`, `component.breadcrumb.font-weight-current`, `component.button.font-weight`, `component.checkbox.label-font-weight`, `component.input.label-font-weight`, `component.radio.legend-font-weight`, `component.radio.label-font-weight`, `component.tabs.font-weight`, `component.textarea.counter-font-weight`, `component.toggle.label-font-weight`
+  - Tokens que referenciam: `component.badge.font-weight`, `component.breadcrumb.font-weight-current`, `component.button.font-weight`, `component.radio.legend-font-weight`, `component.tabs.font-weight`, `component.textarea.counter-font-weight`
 
 ### `semantic.typography.body.font-weight.regular`
 
@@ -5677,7 +5807,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `component.checkbox.description-font-weight`, `component.radio.description-font-weight`, `component.toggle.description-font-weight`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `semantic.typography.body.font-weight.semibold`
 
@@ -5689,7 +5819,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `component.avatar.font-weight`, `component.card.title-font-weight`, `component.modal.title-font-weight`
+  - Tokens que referenciam: `component.avatar.font-weight`
 
 ### `semantic.typography.body.letter-spacing.normal`
 
@@ -5749,7 +5879,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `component.badge.line-height`, `component.card.body-line-height`, `component.checkbox.description-line-height`, `component.checkbox.helper-line-height`, `component.input.helper-line-height`, `component.modal.body-line-height`, `component.radio.description-line-height`, `component.radio.helper-line-height`, `component.textarea.field-line-height`, `component.toggle.description-line-height`, `component.toggle.helper-line-height`
+  - Tokens que referenciam: `component.badge.line-height`, `component.textarea.field-line-height`
 
 ### `semantic.typography.body.line-height.sm`
 
@@ -5761,7 +5891,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: TODO
 - **Decisão**: TODO
 - **Usos**:
-  - Tokens que referenciam: `component.card.title-line-height`, `component.checkbox.label-line-height`, `component.input.label-line-height`, `component.modal.title-line-height`, `component.radio.label-line-height`, `component.toggle.label-line-height`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `semantic.typography.body.line-height.xl`
 
