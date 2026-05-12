@@ -67,14 +67,14 @@
   --ds-button-height-sm: var(--ds-size-lg); /** Altura do Button sm. */
   --ds-button-height-md: var(--ds-size-xl); /** Altura do Button md. */
   --ds-button-height-lg: var(--ds-size-2xl); /** Altura do Button lg. */
-  --ds-button-padding-x-sm: var(--ds-space-md); /** Padding horizontal do Button sm. */
-  --ds-button-padding-x-md: var(--ds-space-lg); /** Padding horizontal do Button md. */
-  --ds-button-padding-x-lg: var(--ds-space-xl); /** Padding horizontal do Button lg. */
+  --ds-button-padding-x-sm: var(--ds-space-sm); /** Padding horizontal do Button sm. */
+  --ds-button-padding-x-md: var(--ds-space-md); /** Padding horizontal do Button md. */
+  --ds-button-padding-x-lg: var(--ds-space-lg); /** Padding horizontal do Button lg. */
   --ds-button-padding-y-sm: var(--ds-space-sm); /** Padding vertical do Button sm. */
   --ds-button-padding-y-md: var(--ds-space-control-padding-10); /** Padding vertical do Button md. */
   --ds-button-padding-y-lg: var(--ds-space-md); /** Padding vertical do Button lg. */
-  --ds-button-gap-sm: var(--ds-space-xs); /** Gap interno do Button sm. */
-  --ds-button-gap-md: var(--ds-space-sm); /** Gap interno do Button md. */
+  --ds-button-gap-sm: var(--ds-space-2xs); /** Gap interno do Button sm. */
+  --ds-button-gap-md: var(--ds-space-xs); /** Gap interno do Button md. */
   --ds-button-gap-lg: var(--ds-space-sm); /** Gap interno do Button lg. */
   --ds-button-radius-default: var(--ds-radius-md); /** Radius do Button. */
   --ds-button-border-width-default: var(--ds-border-width-default); /** Border width do Button quando stroke está ativo. */

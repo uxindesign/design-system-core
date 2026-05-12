@@ -37,17 +37,17 @@
       },
       "padding-x": {
         "sm": {
-          "$value": "{semantic.space.md}",
+          "$value": "{semantic.space.sm}",
           "$type": "dimension",
           "$description": "Padding horizontal do Button sm."
         },
         "md": {
-          "$value": "{semantic.space.lg}",
+          "$value": "{semantic.space.md}",
           "$type": "dimension",
           "$description": "Padding horizontal do Button md."
         },
         "lg": {
-          "$value": "{semantic.space.xl}",
+          "$value": "{semantic.space.lg}",
           "$type": "dimension",
           "$description": "Padding horizontal do Button lg."
         }
@@ -71,12 +71,12 @@
       },
       "gap": {
         "sm": {
-          "$value": "{semantic.space.xs}",
+          "$value": "{semantic.space.2xs}",
           "$type": "dimension",
           "$description": "Gap interno do Button sm."
         },
         "md": {
-          "$value": "{semantic.space.sm}",
+          "$value": "{semantic.space.xs}",
           "$type": "dimension",
           "$description": "Gap interno do Button md."
         },

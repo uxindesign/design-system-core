@@ -522,7 +522,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `semantic.space.2xl` | dimension | → `foundation.dimension.24` | Spacing token 2xl. | 0 |
-| `semantic.space.2xs` | dimension | → `foundation.dimension.2` | Spacing token 2xs. | 6 |
+| `semantic.space.2xs` | dimension | → `foundation.dimension.2` | Spacing token 2xs. | 7 |
 | `semantic.space.control.padding.10` | dimension | → `foundation.dimension.10` | Spacing token control.padding.10. | 4 |
 | `semantic.space.control.padding.6` | dimension | → `foundation.dimension.6` | Padding simétrico de Icon Only sm Button. | 2 |
 | `semantic.space.lg` | dimension | → `foundation.dimension.16` | Spacing token lg. | 18 |
@@ -532,7 +532,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.space.section.sm` | dimension | → `foundation.dimension.32` | Spacing token section.sm. | 1 |
 | `semantic.space.section.xl` | dimension | → `foundation.dimension.80` | Spacing token section.xl. | 0 |
 | `semantic.space.sm` | dimension | → `foundation.dimension.8` | Spacing token sm. | 24 |
-| `semantic.space.xl` | dimension | → `foundation.dimension.20` | Spacing token xl. | 16 |
+| `semantic.space.xl` | dimension | → `foundation.dimension.20` | Spacing token xl. | 15 |
 | `semantic.space.xs` | dimension | → `foundation.dimension.4` | Spacing token xs. | 17 |
 
 ### semantic.surface
@@ -749,8 +749,8 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.button.focus-ring.radius.default` | dimension | → `semantic.radius.lg` | radius do focus ring Button. | 0 |
 | `component.button.focus-ring.stroke-width.default` | dimension | → `semantic.border.width.focus` | stroke-width do focus ring Button. | 1 |
 | `component.button.gap.lg` | dimension | → `semantic.space.sm` | Gap interno do Button lg. | 1 |
-| `component.button.gap.md` | dimension | → `semantic.space.sm` | Gap interno do Button md. | 1 |
-| `component.button.gap.sm` | dimension | → `semantic.space.xs` | Gap interno do Button sm. | 1 |
+| `component.button.gap.md` | dimension | → `semantic.space.xs` | Gap interno do Button md. | 1 |
+| `component.button.gap.sm` | dimension | → `semantic.space.2xs` | Gap interno do Button sm. | 1 |
 | `component.button.height.lg` | dimension | → `semantic.size.2xl` | Altura do Button por size. | 1 |
 | `component.button.height.md` | dimension | → `semantic.size.xl` | Altura do Button por size. | 1 |
 | `component.button.height.sm` | dimension | → `semantic.size.lg` | Altura do Button por size. | 1 |
@@ -779,9 +779,9 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.button.min-width.lg` | dimension | — | Largura mínima do Button lg. | 1 |
 | `component.button.min-width.md` | dimension | — | Largura mínima do Button md. | 1 |
 | `component.button.min-width.sm` | dimension | — | Largura mínima do Button sm. | 1 |
-| `component.button.padding-x.lg` | dimension | → `semantic.space.xl` | Padding horizontal do Button lg. | 1 |
-| `component.button.padding-x.md` | dimension | → `semantic.space.lg` | Padding horizontal do Button md. | 1 |
-| `component.button.padding-x.sm` | dimension | → `semantic.space.md` | Padding horizontal do Button sm. | 1 |
+| `component.button.padding-x.lg` | dimension | → `semantic.space.lg` | Padding horizontal do Button lg. | 1 |
+| `component.button.padding-x.md` | dimension | → `semantic.space.md` | Padding horizontal do Button md. | 1 |
+| `component.button.padding-x.sm` | dimension | → `semantic.space.sm` | Padding horizontal do Button sm. | 1 |
 | `component.button.padding-y.lg` | dimension | → `semantic.space.md` | Padding vertical do Button lg. | 1 |
 | `component.button.padding-y.md` | dimension | → `semantic.space.control.padding.10` | Padding vertical do Button md. | 1 |
 | `component.button.padding-y.sm` | dimension | → `semantic.space.sm` | Padding vertical do Button sm. | 1 |
@@ -5915,8 +5915,8 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/checkbox.css` (1×)
     - `css/components/radio.css` (1×)
-    - `css/tokens/generated/component.css` (3×)
-  - Tokens que referenciam: `component.badge.padding-y.default`, `component.form-field.label-row.gap.default`, `component.toggle.thumb.inset.default`
+    - `css/tokens/generated/component.css` (4×)
+  - Tokens que referenciam: `component.badge.padding-y.default`, `component.button.gap.sm`, `component.form-field.label-row.gap.default`, `component.toggle.thumb.inset.default`
 
 ### `semantic.space.control.padding.10`
 
@@ -5963,7 +5963,7 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/textarea.css` (1×)
     - `css/tokens/generated/component.css` (13×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.button.padding-x.md`, `component.card.header.padding-x.default`, `component.card.header.padding-top.default`, `component.card.body.padding-x.default`, `component.card.body.padding-bottom.default`, `component.modal.header.padding-x.sm`, `component.modal.header.padding-top.sm`, `component.modal.body.padding-x.sm`, `component.modal.body.padding-bottom.sm`, `component.modal.footer.padding-x.sm`, `component.modal.footer.padding-bottom.sm`, `component.tabs.item.padding-x.default`, `component.tabs.panel.padding-y.default`
+  - Tokens que referenciam: `component.button.padding-x.lg`, `component.card.header.padding-x.default`, `component.card.header.padding-top.default`, `component.card.body.padding-x.default`, `component.card.body.padding-bottom.default`, `component.modal.header.padding-x.sm`, `component.modal.header.padding-top.sm`, `component.modal.body.padding-x.sm`, `component.modal.body.padding-bottom.sm`, `component.modal.footer.padding-x.sm`, `component.modal.footer.padding-bottom.sm`, `component.tabs.item.padding-x.default`, `component.tabs.panel.padding-y.default`
 
 ### `semantic.space.md`
 
@@ -5983,7 +5983,7 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/textarea.css` (2×)
     - `css/tokens/generated/component.css` (9×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.alert.padding.default`, `component.button.padding-x.sm`, `component.button.padding-y.lg`, `component.button.icon-only-padding.lg`, `component.modal.header.padding-bottom.md`, `component.modal.header.padding-bottom.lg`, `component.modal.footer.padding-top.md`, `component.modal.footer.padding-top.lg`, `component.tabs.item.padding-top.default`
+  - Tokens que referenciam: `component.alert.padding.default`, `component.button.padding-x.md`, `component.button.padding-y.lg`, `component.button.icon-only-padding.lg`, `component.modal.header.padding-bottom.md`, `component.modal.header.padding-bottom.lg`, `component.modal.footer.padding-top.md`, `component.modal.footer.padding-top.lg`, `component.tabs.item.padding-top.default`
 
 ### `semantic.space.section.lg`
 
@@ -6054,7 +6054,7 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/tooltip.css` (4×)
     - `css/tokens/generated/component.css` (15×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.alert.gap.default`, `component.badge.padding-x.default`, `component.button.padding-y.sm`, `component.button.gap.md`, `component.button.gap.lg`, `component.button.icon-only-padding.md`, `component.card.header.padding-bottom.default`, `component.card.header.gap.default`, `component.checkbox.target.gap.default`, `component.modal.header.padding-bottom.sm`, `component.modal.header.gap.default`, `component.modal.footer.padding-top.sm`, `component.modal.footer.gap.default`, `component.tooltip.content.padding-x.default`, `component.tooltip.arrow.base.default`
+  - Tokens que referenciam: `component.alert.gap.default`, `component.badge.padding-x.default`, `component.button.padding-x.sm`, `component.button.padding-y.sm`, `component.button.gap.lg`, `component.button.icon-only-padding.md`, `component.card.header.padding-bottom.default`, `component.card.header.gap.default`, `component.checkbox.target.gap.default`, `component.modal.header.padding-bottom.sm`, `component.modal.header.gap.default`, `component.modal.footer.padding-top.sm`, `component.modal.footer.gap.default`, `component.tooltip.content.padding-x.default`, `component.tooltip.arrow.base.default`
 
 ### `semantic.space.xl`
 
@@ -6067,9 +6067,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.dimension.20.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (14×)
+    - `css/tokens/generated/component.css` (13×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.button.padding-x.lg`, `component.modal.overlay.padding.default`, `component.modal.header.padding-x.md`, `component.modal.header.padding-x.lg`, `component.modal.header.padding-top.md`, `component.modal.header.padding-top.lg`, `component.modal.body.padding-x.md`, `component.modal.body.padding-x.lg`, `component.modal.body.padding-bottom.md`, `component.modal.body.padding-bottom.lg`, `component.modal.footer.padding-x.md`, `component.modal.footer.padding-x.lg`, `component.modal.footer.padding-bottom.md`, `component.modal.footer.padding-bottom.lg`
+  - Tokens que referenciam: `component.modal.overlay.padding.default`, `component.modal.header.padding-x.md`, `component.modal.header.padding-x.lg`, `component.modal.header.padding-top.md`, `component.modal.header.padding-top.lg`, `component.modal.body.padding-x.md`, `component.modal.body.padding-x.lg`, `component.modal.body.padding-bottom.md`, `component.modal.body.padding-bottom.lg`, `component.modal.footer.padding-x.md`, `component.modal.footer.padding-x.lg`, `component.modal.footer.padding-bottom.md`, `component.modal.footer.padding-bottom.lg`
 
 ### `semantic.space.xs`
 
@@ -6089,7 +6089,7 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/toggle.css` (2×)
     - `css/tokens/generated/component.css` (10×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.alert.content.gap.default`, `component.badge.gap.default`, `component.breadcrumb.gap.default`, `component.breadcrumb.item.gap.default`, `component.button.gap.sm`, `component.button.label-frame.padding-x.default`, `component.form-field.gap.default`, `component.modal.close.padding.default`, `component.tooltip.content.padding-y.default`, `component.tooltip.arrow.depth.default`
+  - Tokens que referenciam: `component.alert.content.gap.default`, `component.badge.gap.default`, `component.breadcrumb.gap.default`, `component.breadcrumb.item.gap.default`, `component.button.gap.md`, `component.button.label-frame.padding-x.default`, `component.form-field.gap.default`, `component.modal.close.padding.default`, `component.tooltip.content.padding-y.default`, `component.tooltip.arrow.depth.default`
 
 ### `semantic.surface.default`
 
@@ -8209,7 +8209,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.space.sm`
 - **Sentido**: Gap interno do Button lg.
 - **Escopo**: gap
-- **Contexto**: Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Button. Espelha a variable viva do Button no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.space.sm porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
   - CSS:
@@ -8219,11 +8219,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.space.sm`
+- **Alias**: → `semantic.space.xs`
 - **Sentido**: Gap interno do Button md.
 - **Escopo**: gap
-- **Contexto**: Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.space.sm porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
+- **Contexto**: Component token do contrato anatômico Button. Espelha a variable viva do Button no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.space.xs porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
   - CSS:
     - `css/components/button.css` (1×)
@@ -8232,11 +8232,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.space.xs`
+- **Alias**: → `semantic.space.2xs`
 - **Sentido**: Gap interno do Button sm.
 - **Escopo**: gap
-- **Contexto**: Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.space.xs porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
+- **Contexto**: Component token do contrato anatômico Button. Espelha a variable viva do Button no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.space.2xs porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
   - CSS:
     - `css/components/button.css` (1×)
@@ -8605,11 +8605,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.space.xl`
+- **Alias**: → `semantic.space.lg`
 - **Sentido**: Padding horizontal do Button lg.
 - **Escopo**: padding-left, padding-right
-- **Contexto**: Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.space.xl porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
+- **Contexto**: Component token do contrato anatômico Button. Espelha a variable viva do Button no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.space.lg porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
   - CSS:
     - `css/components/button.css` (1×)
@@ -8618,11 +8618,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.space.lg`
+- **Alias**: → `semantic.space.md`
 - **Sentido**: Padding horizontal do Button md.
 - **Escopo**: padding-left, padding-right
-- **Contexto**: Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.space.lg porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
+- **Contexto**: Component token do contrato anatômico Button. Espelha a variable viva do Button no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.space.md porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
   - CSS:
     - `css/components/button.css` (1×)
@@ -8631,11 +8631,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.space.md`
+- **Alias**: → `semantic.space.sm`
 - **Sentido**: Padding horizontal do Button sm.
 - **Escopo**: padding-left, padding-right
-- **Contexto**: Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.space.md porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
+- **Contexto**: Component token do contrato anatômico Button. Espelha a variable viva do Button no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.space.sm porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
   - CSS:
     - `css/components/button.css` (1×)

@@ -72,6 +72,10 @@
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
 <h3>Corrigido</h3>
 <ul>
+<li><p><strong>Button padding e gap sincronizados com Figma.</strong> <code>component.button.padding-x.{sm,md,lg}</code> passa a seguir <code>8/12/16px</code> e <code>component.button.gap.{sm,md,lg}</code> passa a seguir <code>2/4/8px</code>, alinhando JSON, CSS gerado, documentação e API às variables vivas do Button no Figma.</p>
+</li>
+<li><p><strong>Button sm com frame de ícone por tamanho.</strong> <code>component.button.icon.frame-size.default</code> foi substituído por <code>component.button.icon.frame-size.{sm,md,lg}</code> no Figma/JSON/CSS; os 270 frames de ícone do Button no Figma agora usam <code>sm=20px</code>, <code>md=24px</code> e <code>lg=24px</code>. CSS também corrige Button somente-ícone para não herdar <code>min-width</code> textual e renderizar quadrado.</p>
+</li>
 <li><p><strong>Checkbox estrutural/focus aplicado aos Component tokens anatômicos.</strong> Adicionados <code>component.checkbox.target.{gap,radius}</code>, <code>component.checkbox.box.{radius,border-width}</code> e <code>component.checkbox.focus-ring.{color,stroke-width,radius}</code>; os 27 variants vivos do Checkbox agora usam Component tokens nesses atributos, além de <code>target.height</code> e <code>box.size</code> já existentes. CSS passa a consumir <code>--ds-checkbox-*</code> nesses contratos e o sync Figma↔JSON trata <code>component.form-field.*</code> como JSON-only por ADR-017 após remoção das variables <code>form-field</code> do Figma.</p>
 </li>
 <li><p><strong>Button Focus Ring por estilo no Component token.</strong> Success e Danger deixam de herdar o focus ring brand: <code>component.button.focus-ring.color.success</code> aponta para <code>semantic.feedback.success.border-default</code> e <code>component.button.focus-ring.color.danger</code> aponta para <code>semantic.border.focus-error</code>; CSS e Figma passam a aplicar esses tokens nos variants verdes e vermelhos.</p>

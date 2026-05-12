@@ -6802,11 +6802,12 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 3
+            "count": 4
           }
         ],
         "tokens": [
           "component.badge.padding-y.default",
+          "component.button.gap.sm",
           "component.form-field.label-row.gap.default",
           "component.toggle.thumb.inset.default"
         ],
@@ -6861,7 +6862,7 @@
           "component.badge.gap.default",
           "component.breadcrumb.gap.default",
           "component.breadcrumb.item.gap.default",
-          "component.button.gap.sm",
+          "component.button.gap.md",
           "component.button.label-frame.padding-x.default",
           "component.form-field.gap.default",
           "component.modal.close.padding.default",
@@ -6925,8 +6926,8 @@
         "tokens": [
           "component.alert.gap.default",
           "component.badge.padding-x.default",
+          "component.button.padding-x.sm",
           "component.button.padding-y.sm",
-          "component.button.gap.md",
           "component.button.gap.lg",
           "component.button.icon-only-padding.md",
           "component.card.header.padding-bottom.default",
@@ -6987,7 +6988,7 @@
         ],
         "tokens": [
           "component.alert.padding.default",
-          "component.button.padding-x.sm",
+          "component.button.padding-x.md",
           "component.button.padding-y.lg",
           "component.button.icon-only-padding.lg",
           "component.modal.header.padding-bottom.md",
@@ -7035,7 +7036,7 @@
           }
         ],
         "tokens": [
-          "component.button.padding-x.md",
+          "component.button.padding-x.lg",
           "component.card.header.padding-x.default",
           "component.card.header.padding-top.default",
           "component.card.body.padding-x.default",
@@ -7068,7 +7069,7 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 14
+            "count": 13
           },
           {
             "file": "css/utilities/layout.css",
@@ -7076,7 +7077,6 @@
           }
         ],
         "tokens": [
-          "component.button.padding-x.lg",
           "component.modal.overlay.padding.default",
           "component.modal.header.padding-x.md",
           "component.modal.header.padding-x.lg",
@@ -15026,14 +15026,14 @@
     "component.button.padding-x.sm": {
       "layer": "component",
       "type": "dimension",
-      "references": "semantic.space.md",
+      "references": "semantic.space.sm",
       "sentido": "Padding horizontal do Button sm.",
       "escopo": [
         "padding-left",
         "padding-right"
       ],
-      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
-      "decisao": "Alias 1:1 para semantic.space.md porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "contexto": "Component token do contrato anatômico Button. Espelha a variable viva do Button no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.sm porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
       "usos": {
         "css": [
           {
@@ -15048,14 +15048,14 @@
     "component.button.padding-x.md": {
       "layer": "component",
       "type": "dimension",
-      "references": "semantic.space.lg",
+      "references": "semantic.space.md",
       "sentido": "Padding horizontal do Button md.",
       "escopo": [
         "padding-left",
         "padding-right"
       ],
-      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
-      "decisao": "Alias 1:1 para semantic.space.lg porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "contexto": "Component token do contrato anatômico Button. Espelha a variable viva do Button no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.md porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
       "usos": {
         "css": [
           {
@@ -15070,14 +15070,14 @@
     "component.button.padding-x.lg": {
       "layer": "component",
       "type": "dimension",
-      "references": "semantic.space.xl",
+      "references": "semantic.space.lg",
       "sentido": "Padding horizontal do Button lg.",
       "escopo": [
         "padding-left",
         "padding-right"
       ],
-      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
-      "decisao": "Alias 1:1 para semantic.space.xl porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "contexto": "Component token do contrato anatômico Button. Espelha a variable viva do Button no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.lg porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
       "usos": {
         "css": [
           {
@@ -15158,13 +15158,13 @@
     "component.button.gap.sm": {
       "layer": "component",
       "type": "dimension",
-      "references": "semantic.space.xs",
+      "references": "semantic.space.2xs",
       "sentido": "Gap interno do Button sm.",
       "escopo": [
         "gap"
       ],
-      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
-      "decisao": "Alias 1:1 para semantic.space.xs porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "contexto": "Component token do contrato anatômico Button. Espelha a variable viva do Button no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.2xs porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
       "usos": {
         "css": [
           {
@@ -15179,13 +15179,13 @@
     "component.button.gap.md": {
       "layer": "component",
       "type": "dimension",
-      "references": "semantic.space.sm",
+      "references": "semantic.space.xs",
       "sentido": "Gap interno do Button md.",
       "escopo": [
         "gap"
       ],
-      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
-      "decisao": "Alias 1:1 para semantic.space.sm porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "contexto": "Component token do contrato anatômico Button. Espelha a variable viva do Button no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.xs porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
       "usos": {
         "css": [
           {
@@ -15205,7 +15205,7 @@
       "escopo": [
         "gap"
       ],
-      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
+      "contexto": "Component token do contrato anatômico Button. Espelha a variable viva do Button no Figma e substitui consumo direto de Semantic no CSS.",
       "decisao": "Alias 1:1 para semantic.space.sm porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
       "usos": {
         "css": [
