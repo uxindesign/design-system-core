@@ -72,6 +72,8 @@
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
 <h3>Corrigido</h3>
 <ul>
+<li><p><strong>Select completo aplicado aos Component tokens.</strong> Criadas 89 novas variables <code>select/...</code> na collection Component do Figma e normalizadas as 3 alturas existentes, totalizando 92 tokens para bg, bordas, radius, focus ring, conteúdo, placeholder, chevron, ícone leading, label, required, helper, stack, label-row, sizing, padding e tipografia. Os 18 variants vivos do Select foram bindados nesses tokens; JSON/CSS/docs/API passam a consumir <code>component.select.*</code> / <code>--ds-select-*</code>, alinhando padding <code>8/12/16</code>, padding-y <code>8/10/12</code>, gap interno <code>8</code>, chevron frame <code>24</code> e glyph <code>20/24/24</code> ao Figma vivo.</p>
+</li>
 <li><p><strong>Input Text md gap sincronizado com Figma.</strong> <code>component.input.gap.md</code> passa de <code>semantic.space.sm</code> para <code>semantic.space.xs</code>, alinhando o Field Medium ao gap vivo de <code>4px</code> nos variants do Input Text.</p>
 </li>
 <li><p><strong>Input Text completo aplicado aos Component tokens.</strong> <code>component.input</code> agora cobre bg, bordas, radius, focus ring, conteúdo, placeholder, ícone, label, required, helper, stack, label-row, sizing, padding e tipografia; os variants vivos no Figma foram bindados nesses atributos e o CSS passa a consumir <code>--ds-input-*</code> no wrapper e no uso composto com <code>.ds-field</code>.</p>

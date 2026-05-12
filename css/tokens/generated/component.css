@@ -358,9 +358,98 @@
   --ds-radio-control-size-sm: var(--ds-size-xs); /** Tamanho visual do control Radio sm. */
   --ds-radio-control-size-md: var(--ds-size-sm); /** Tamanho visual do control Radio md. */
   --ds-radio-control-size-lg: var(--ds-size-md); /** Tamanho visual do control Radio lg. */
-  --ds-select-height-sm: var(--ds-size-lg); /** Altura do superfície principal visual Select sm. */
-  --ds-select-height-md: var(--ds-size-xl); /** Altura do superfície principal visual Select md. */
-  --ds-select-height-lg: var(--ds-size-2xl); /** Altura do superfície principal visual Select lg. */
+  --ds-select-bg-default: var(--ds-surface-default); /** Bg do Field Select default. */
+  --ds-select-bg-disabled: var(--ds-background-disabled); /** Bg do Field Select disabled. */
+  --ds-select-bg-error: var(--ds-surface-default); /** Bg do Field Select error. */
+  --ds-select-bg-filled: var(--ds-surface-default); /** Bg do Field Select filled. */
+  --ds-select-bg-focused: var(--ds-surface-default); /** Bg do Field Select focused. */
+  --ds-select-bg-readonly: var(--ds-background-subtle); /** Bg do Field Select readonly. */
+  --ds-select-border-color-default: var(--ds-border-control-default); /** Border color do Field Select default. */
+  --ds-select-border-color-disabled: var(--ds-border-control-disabled); /** Border color do Field Select disabled. */
+  --ds-select-border-color-error: var(--ds-feedback-error-background-default); /** Border color do Field Select error. */
+  --ds-select-border-color-filled: var(--ds-border-strong); /** Border color do Field Select filled. */
+  --ds-select-border-color-focused: var(--ds-primary-background-default); /** Border color do Field Select focused. */
+  --ds-select-border-color-hover: var(--ds-border-control-hover); /** Border color do Field Select hover. */
+  --ds-select-border-color-readonly: var(--ds-border-subtle); /** Border color do Field Select readonly. */
+  --ds-select-border-width-default: var(--ds-border-width-default); /** Border width do Field Select. */
+  --ds-select-chevron-color-default: var(--ds-content-default); /** Cor do chevron Select. */
+  --ds-select-chevron-color-disabled: var(--ds-content-disabled); /** Cor do chevron Select disabled. */
+  --ds-select-chevron-frame-size-sm: var(--ds-size-md); /** Tamanho do frame do chevron Select sm. */
+  --ds-select-chevron-frame-size-md: var(--ds-size-md); /** Tamanho do frame do chevron Select md. */
+  --ds-select-chevron-frame-size-lg: var(--ds-size-md); /** Tamanho do frame do chevron Select lg. */
+  --ds-select-chevron-glyph-size-sm: var(--ds-size-sm); /** Tamanho do glyph do chevron Select sm. */
+  --ds-select-chevron-glyph-size-md: var(--ds-size-md); /** Tamanho do glyph do chevron Select md. */
+  --ds-select-chevron-glyph-size-lg: var(--ds-size-md); /** Tamanho do glyph do chevron Select lg. */
+  --ds-select-content-color-default: var(--ds-content-strong); /** Cor de conteúdo preenchido do Select. */
+  --ds-select-content-color-disabled: var(--ds-content-disabled); /** Cor de conteúdo disabled do Select. */
+  --ds-select-content-color-readonly: var(--ds-content-default); /** Cor de conteúdo readonly do Select. */
+  --ds-select-focus-ring-color-default: var(--ds-border-focus); /** Cor do focus ring Select. */
+  --ds-select-focus-ring-color-error: var(--ds-feedback-error-background-default); /** Cor do focus ring Select error. */
+  --ds-select-focus-ring-offset-default: var(--ds-border-width-focus); /** Offset CSS do focus ring Select. */
+  --ds-select-focus-ring-radius-default: var(--ds-radius-lg); /** Radius do focus ring Select. */
+  --ds-select-focus-ring-stroke-width-default: var(--ds-border-width-focus); /** Stroke width do focus ring Select. */
+  --ds-select-gap-sm: var(--ds-space-sm); /** Gap interno do Field Select sm. */
+  --ds-select-gap-md: var(--ds-space-sm); /** Gap interno do Field Select md. */
+  --ds-select-gap-lg: var(--ds-space-sm); /** Gap interno do Field Select lg. */
+  --ds-select-height-sm: var(--ds-size-lg); /** Altura da superfície visual Select sm. */
+  --ds-select-height-md: var(--ds-size-xl); /** Altura da superfície visual Select md. */
+  --ds-select-height-lg: var(--ds-size-2xl); /** Altura da superfície visual Select lg. */
+  --ds-select-helper-color-default: var(--ds-content-default); /** Cor do helper text Select. */
+  --ds-select-helper-color-disabled: var(--ds-content-disabled); /** Cor do helper text Select disabled. */
+  --ds-select-helper-font-family-default: var(--ds-body-font-family-sans); /** Font-family do helper text Select. */
+  --ds-select-helper-font-size-sm: var(--ds-body-font-size-xs); /** Font-size do helper text Select sm. */
+  --ds-select-helper-font-size-md: var(--ds-body-font-size-sm); /** Font-size do helper text Select md. */
+  --ds-select-helper-font-size-lg: var(--ds-body-font-size-sm); /** Font-size do helper text Select lg. */
+  --ds-select-helper-font-weight-default: var(--ds-body-font-weight-regular); /** Font-weight do helper text Select. */
+  --ds-select-helper-letter-spacing-default: var(--ds-body-letter-spacing-normal); /** Letter-spacing do helper text Select. */
+  --ds-select-helper-line-height-sm: var(--ds-body-line-height-xs); /** Line-height do helper text Select sm. */
+  --ds-select-helper-line-height-md: var(--ds-body-line-height-sm); /** Line-height do helper text Select md. */
+  --ds-select-helper-line-height-lg: var(--ds-body-line-height-sm); /** Line-height do helper text Select lg. */
+  --ds-select-icon-color-default: var(--ds-content-default); /** Cor do ícone Select. */
+  --ds-select-icon-color-disabled: var(--ds-content-disabled); /** Cor do ícone Select disabled. */
+  --ds-select-icon-frame-size-sm: var(--ds-size-sm); /** Tamanho do frame de ícone Select sm. */
+  --ds-select-icon-frame-size-md: var(--ds-size-md); /** Tamanho do frame de ícone Select md. */
+  --ds-select-icon-frame-size-lg: var(--ds-size-md); /** Tamanho do frame de ícone Select lg. */
+  --ds-select-icon-glyph-size-sm: var(--ds-size-sm); /** Tamanho do glyph de ícone Select sm. */
+  --ds-select-icon-glyph-size-md: var(--ds-size-md); /** Tamanho do glyph de ícone Select md. */
+  --ds-select-icon-glyph-size-lg: var(--ds-size-md); /** Tamanho do glyph de ícone Select lg. */
+  --ds-select-label-color-default: var(--ds-content-strong); /** Cor do label Select. */
+  --ds-select-label-font-family-default: var(--ds-body-font-family-sans); /** Font-family do label Select. */
+  --ds-select-label-font-size-sm: var(--ds-body-font-size-xs); /** Font-size do label Select sm. */
+  --ds-select-label-font-size-md: var(--ds-body-font-size-sm); /** Font-size do label Select md. */
+  --ds-select-label-font-size-lg: var(--ds-body-font-size-sm); /** Font-size do label Select lg. */
+  --ds-select-label-font-weight-default: var(--ds-body-font-weight-bold); /** Font-weight do label Select. */
+  --ds-select-label-letter-spacing-default: var(--ds-body-letter-spacing-normal); /** Letter-spacing do label Select. */
+  --ds-select-label-line-height-sm: var(--ds-body-line-height-xs); /** Line-height do label Select sm. */
+  --ds-select-label-line-height-md: var(--ds-body-line-height-sm); /** Line-height do label Select md. */
+  --ds-select-label-line-height-lg: var(--ds-body-line-height-sm); /** Line-height do label Select lg. */
+  --ds-select-label-row-gap-default: var(--ds-space-2xs); /** Gap entre label e required do Select. */
+  --ds-select-padding-x-sm: var(--ds-space-sm); /** Padding horizontal do Field Select sm. */
+  --ds-select-padding-x-md: var(--ds-space-md); /** Padding horizontal do Field Select md. */
+  --ds-select-padding-x-lg: var(--ds-space-lg); /** Padding horizontal do Field Select lg. */
+  --ds-select-padding-y-sm: var(--ds-space-sm); /** Padding vertical do Field Select sm. */
+  --ds-select-padding-y-md: var(--ds-space-control-padding-10); /** Padding vertical do Field Select md. */
+  --ds-select-padding-y-lg: var(--ds-space-md); /** Padding vertical do Field Select lg. */
+  --ds-select-placeholder-color-default: var(--ds-content-subtle); /** Cor do placeholder Select. */
+  --ds-select-placeholder-color-disabled: var(--ds-content-disabled); /** Cor do placeholder Select disabled. */
+  --ds-select-radius-default: var(--ds-radius-md); /** Radius do Field Select. */
+  --ds-select-required-color-default: var(--ds-feedback-error-content-default); /** Cor do required Select. */
+  --ds-select-required-font-family-default: var(--ds-body-font-family-sans); /** Font-family do required Select. */
+  --ds-select-required-font-size-default: var(--ds-body-font-size-sm); /** Font-size do required Select. */
+  --ds-select-required-font-weight-default: var(--ds-body-font-weight-bold); /** Font-weight do required Select. */
+  --ds-select-required-letter-spacing-default: var(--ds-body-letter-spacing-normal); /** Letter-spacing do required Select. */
+  --ds-select-required-line-height-default: var(--ds-body-line-height-sm); /** Line-height do required Select. */
+  --ds-select-stack-gap-default: var(--ds-space-xs); /** Gap vertical do Select composto. */
+  --ds-select-text-font-family-default: var(--ds-body-font-family-sans); /** Font-family do texto Select. */
+  --ds-select-text-font-size-sm: var(--ds-body-font-size-xs); /** Font-size do texto Select sm. */
+  --ds-select-text-font-size-md: var(--ds-body-font-size-sm); /** Font-size do texto Select md. */
+  --ds-select-text-font-size-lg: var(--ds-body-font-size-md); /** Font-size do texto Select lg. */
+  --ds-select-text-font-weight-default: var(--ds-body-font-weight-regular); /** Font-weight do texto Select. */
+  --ds-select-text-letter-spacing-default: var(--ds-body-letter-spacing-normal); /** Letter-spacing do texto Select. */
+  --ds-select-text-line-height-sm: var(--ds-body-line-height-2xs); /** Line-height do texto Select sm. */
+  --ds-select-text-line-height-md: var(--ds-body-line-height-sm); /** Line-height do texto Select md. */
+  --ds-select-text-line-height-lg: var(--ds-body-line-height-md); /** Line-height do texto Select lg. */
+  --ds-select-text-frame-padding-x-default: var(--ds-space-xs); /** Padding horizontal do Text Frame Select. */
   --ds-skeleton-text-radius-default: var(--ds-radius-md); /** Radius do Skeleton Text. */
   --ds-skeleton-circle-size-default: var(--ds-size-xl); /** Tamanho do Skeleton Circle. */
   --ds-skeleton-circle-radius-default: var(--ds-radius-full); /** Radius circular do Skeleton Circle. */

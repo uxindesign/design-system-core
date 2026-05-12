@@ -4097,10 +4097,6 @@
             "count": 1
           },
           {
-            "file": "css/components/select.css",
-            "count": 1
-          },
-          {
             "file": "css/components/skeleton.css",
             "count": 1
           },
@@ -4110,12 +4106,13 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 2
+            "count": 3
           }
         ],
         "tokens": [
           "component.button.bg.outline.pressed",
-          "component.input.bg.readonly"
+          "component.input.bg.readonly",
+          "component.select.bg.readonly"
         ],
         "figma": []
       }
@@ -4195,10 +4192,6 @@
             "count": 1
           },
           {
-            "file": "css/components/select.css",
-            "count": 1
-          },
-          {
             "file": "css/components/textarea.css",
             "count": 1
           },
@@ -4208,14 +4201,18 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 4
+            "count": 8
           }
         ],
         "tokens": [
           "component.input.bg.default",
           "component.input.bg.error",
           "component.input.bg.filled",
-          "component.input.bg.focused"
+          "component.input.bg.focused",
+          "component.select.bg.default",
+          "component.select.bg.error",
+          "component.select.bg.filled",
+          "component.select.bg.focused"
         ],
         "figma": []
       }
@@ -4320,10 +4317,6 @@
             "count": 5
           },
           {
-            "file": "css/components/select.css",
-            "count": 1
-          },
-          {
             "file": "css/components/tabs.css",
             "count": 1
           },
@@ -4337,13 +4330,15 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 3
+            "count": 5
           }
         ],
         "tokens": [
           "component.form-field.label.color.default",
           "component.input.content.color.default",
-          "component.input.label.color.default"
+          "component.input.label.color.default",
+          "component.select.content.color.default",
+          "component.select.label.color.default"
         ],
         "figma": []
       }
@@ -4407,14 +4402,18 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 4
+            "count": 8
           }
         ],
         "tokens": [
           "component.form-field.helper.color.default",
           "component.input.content.color.readonly",
           "component.input.helper.color.default",
-          "component.input.label.color.readonly"
+          "component.input.label.color.readonly",
+          "component.select.chevron.color.default",
+          "component.select.content.color.readonly",
+          "component.select.helper.color.default",
+          "component.select.icon.color.default"
         ],
         "figma": []
       }
@@ -4437,21 +4436,18 @@
             "count": 1
           },
           {
-            "file": "css/components/select.css",
-            "count": 3
-          },
-          {
             "file": "css/components/textarea.css",
             "count": 1
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 2
+            "count": 3
           }
         ],
         "tokens": [
           "component.input.icon.color.default",
-          "component.input.placeholder.color.default"
+          "component.input.placeholder.color.default",
+          "component.select.placeholder.color.default"
         ],
         "figma": []
       }
@@ -4470,10 +4466,6 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/select.css",
-            "count": 2
-          },
-          {
             "file": "css/components/tabs.css",
             "count": 1
           },
@@ -4487,7 +4479,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 5
+            "count": 10
           }
         ],
         "tokens": [
@@ -4495,7 +4487,12 @@
           "component.input.helper.color.disabled",
           "component.input.icon.color.disabled",
           "component.input.label.color.disabled",
-          "component.input.placeholder.color.disabled"
+          "component.input.placeholder.color.disabled",
+          "component.select.chevron.color.disabled",
+          "component.select.content.color.disabled",
+          "component.select.helper.color.disabled",
+          "component.select.icon.color.disabled",
+          "component.select.placeholder.color.disabled"
         ],
         "figma": []
       }
@@ -4573,11 +4570,12 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [
-          "component.input.border-color.filled"
+          "component.input.border-color.filled",
+          "component.select.border-color.filled"
         ],
         "figma": []
       }
@@ -4605,12 +4603,13 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 2
+            "count": 3
           }
         ],
         "tokens": [
           "component.divider.line.color.default",
-          "component.input.border-color.readonly"
+          "component.input.border-color.readonly",
+          "component.select.border-color.readonly"
         ],
         "figma": []
       }
@@ -4636,10 +4635,6 @@
             "count": 1
           },
           {
-            "file": "css/components/select.css",
-            "count": 1
-          },
-          {
             "file": "css/components/textarea.css",
             "count": 1
           },
@@ -4649,7 +4644,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 8
+            "count": 9
           }
         ],
         "tokens": [
@@ -4660,6 +4655,7 @@
           "component.checkbox.box.border-width.default",
           "component.divider.line.thickness.default",
           "component.input.border-width.default",
+          "component.select.border-width.default",
           "component.tabs.list.border-width.default"
         ],
         "figma": []
@@ -4722,10 +4718,6 @@
             "count": 2
           },
           {
-            "file": "css/components/select.css",
-            "count": 4
-          },
-          {
             "file": "css/components/tabs.css",
             "count": 2
           },
@@ -4739,7 +4731,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 5
+            "count": 7
           }
         ],
         "tokens": [
@@ -4747,7 +4739,9 @@
           "component.button.focus-ring.offset.default",
           "component.checkbox.focus-ring.stroke-width.default",
           "component.input.focus-ring.offset.default",
-          "component.input.focus-ring.stroke-width.default"
+          "component.input.focus-ring.stroke-width.default",
+          "component.select.focus-ring.offset.default",
+          "component.select.focus-ring.stroke-width.default"
         ],
         "figma": []
       }
@@ -4786,10 +4780,6 @@
             "count": 1
           },
           {
-            "file": "css/components/select.css",
-            "count": 2
-          },
-          {
             "file": "css/components/tabs.css",
             "count": 1
           },
@@ -4803,13 +4793,14 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 4
+            "count": 5
           }
         ],
         "tokens": [
           "component.button.focus-ring.color.default",
           "component.checkbox.focus-ring.color.default",
-          "component.input.focus-ring.color.default"
+          "component.input.focus-ring.color.default",
+          "component.select.focus-ring.color.default"
         ],
         "figma": []
       }
@@ -5062,7 +5053,11 @@
           "component.input.helper.font-family.default",
           "component.input.label.font-family.default",
           "component.input.required.font-family.default",
-          "component.input.text.font-family.default"
+          "component.input.text.font-family.default",
+          "component.select.helper.font-family.default",
+          "component.select.label.font-family.default",
+          "component.select.required.font-family.default",
+          "component.select.text.font-family.default"
         ],
         "figma": []
       }
@@ -5087,6 +5082,8 @@
           "component.input.helper.font-weight.default",
           "component.input.text.font-weight.default",
           "component.modal.body.font-weight.default",
+          "component.select.helper.font-weight.default",
+          "component.select.text.font-weight.default",
           "component.tooltip.label.font-weight.default"
         ],
         "figma": []
@@ -5153,6 +5150,8 @@
           "component.form-field.error.font-weight.default",
           "component.input.label.font-weight.default",
           "component.input.required.font-weight.default",
+          "component.select.label.font-weight.default",
+          "component.select.required.font-weight.default",
           "component.tabs.label.font-weight.default"
         ],
         "figma": []
@@ -5180,6 +5179,10 @@
           "component.input.text.letter-spacing.default",
           "component.modal.title.letter-spacing.sm",
           "component.modal.title.letter-spacing.md",
+          "component.select.helper.letter-spacing.default",
+          "component.select.label.letter-spacing.default",
+          "component.select.required.letter-spacing.default",
+          "component.select.text.letter-spacing.default",
           "component.tabs.label.letter-spacing.default"
         ],
         "figma": []
@@ -5222,7 +5225,10 @@
           "component.form-field.error.font-size.default",
           "component.input.helper.font-size.default",
           "component.input.label.font-size.sm",
-          "component.input.text.font-size.sm"
+          "component.input.text.font-size.sm",
+          "component.select.helper.font-size.sm",
+          "component.select.label.font-size.sm",
+          "component.select.text.font-size.sm"
         ],
         "figma": []
       }
@@ -5256,6 +5262,12 @@
           "component.input.required.font-size.default",
           "component.input.text.font-size.md",
           "component.modal.body.font-size.sm",
+          "component.select.helper.font-size.md",
+          "component.select.helper.font-size.lg",
+          "component.select.label.font-size.md",
+          "component.select.label.font-size.lg",
+          "component.select.required.font-size.default",
+          "component.select.text.font-size.md",
           "component.tabs.label.font-size.default",
           "component.tooltip.label.font-size.default"
         ],
@@ -5277,7 +5289,8 @@
         "tokens": [
           "component.button.label.font-size.lg",
           "component.input.text.font-size.lg",
-          "component.modal.body.font-size.md"
+          "component.modal.body.font-size.md",
+          "component.select.text.font-size.lg"
         ],
         "figma": []
       }
@@ -5376,7 +5389,9 @@
           "component.form-field.helper.line-height.default",
           "component.form-field.error.line-height.default",
           "component.input.helper.line-height.default",
-          "component.input.label.line-height.sm"
+          "component.input.label.line-height.sm",
+          "component.select.helper.line-height.sm",
+          "component.select.label.line-height.sm"
         ],
         "figma": []
       }
@@ -5409,6 +5424,12 @@
           "component.input.required.line-height.default",
           "component.input.text.line-height.md",
           "component.modal.body.line-height.sm",
+          "component.select.helper.line-height.md",
+          "component.select.helper.line-height.lg",
+          "component.select.label.line-height.md",
+          "component.select.label.line-height.lg",
+          "component.select.required.line-height.default",
+          "component.select.text.line-height.md",
           "component.tabs.label.line-height.default",
           "component.tooltip.label.line-height.default"
         ],
@@ -5430,7 +5451,8 @@
         "tokens": [
           "component.button.label.line-height.lg",
           "component.input.text.line-height.lg",
-          "component.modal.body.line-height.md"
+          "component.modal.body.line-height.md",
+          "component.select.text.line-height.lg"
         ],
         "figma": []
       }
@@ -6531,14 +6553,15 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 4
+            "count": 5
           }
         ],
         "tokens": [
           "component.form-field.label.color.error",
           "component.form-field.required.color.default",
           "component.form-field.error.color.default",
-          "component.input.required.color.default"
+          "component.input.required.color.default",
+          "component.select.required.color.default"
         ],
         "figma": []
       }
@@ -6672,10 +6695,6 @@
             "count": 1
           },
           {
-            "file": "css/components/select.css",
-            "count": 1
-          },
-          {
             "file": "css/components/textarea.css",
             "count": 1
           },
@@ -6685,11 +6704,12 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [
-          "component.input.bg.disabled"
+          "component.input.bg.disabled",
+          "component.select.bg.disabled"
         ],
         "figma": []
       }
@@ -6716,10 +6736,6 @@
             "count": 1
           },
           {
-            "file": "css/components/select.css",
-            "count": 1
-          },
-          {
             "file": "css/components/textarea.css",
             "count": 1
           },
@@ -6729,12 +6745,13 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 2
+            "count": 3
           }
         ],
         "tokens": [
           "component.button.border-color.outline.pressed",
-          "component.input.border-color.default"
+          "component.input.border-color.default",
+          "component.select.border-color.default"
         ],
         "figma": []
       }
@@ -6753,20 +6770,17 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/select.css",
-            "count": 1
-          },
-          {
             "file": "css/components/textarea.css",
             "count": 1
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [
-          "component.input.border-color.hover"
+          "component.input.border-color.hover",
+          "component.select.border-color.hover"
         ],
         "figma": []
       }
@@ -6793,10 +6807,6 @@
             "count": 1
           },
           {
-            "file": "css/components/select.css",
-            "count": 1
-          },
-          {
             "file": "css/components/textarea.css",
             "count": 1
           },
@@ -6806,12 +6816,13 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 2
+            "count": 3
           }
         ],
         "tokens": [
           "component.button.border-color.outline.disabled",
-          "component.input.border-color.disabled"
+          "component.input.border-color.disabled",
+          "component.select.border-color.disabled"
         ],
         "figma": []
       }
@@ -6840,7 +6851,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 5
+            "count": 6
           }
         ],
         "tokens": [
@@ -6848,6 +6859,7 @@
           "component.button.gap.sm",
           "component.form-field.label-row.gap.default",
           "component.input.label-row.gap.default",
+          "component.select.label-row.gap.default",
           "component.toggle.thumb.inset.default"
         ],
         "figma": []
@@ -6876,16 +6888,12 @@
             "count": 7
           },
           {
-            "file": "css/components/select.css",
-            "count": 1
-          },
-          {
             "file": "css/components/toggle.css",
             "count": 2
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 13
+            "count": 15
           },
           {
             "file": "css/utilities/layout.css",
@@ -6904,6 +6912,8 @@
           "component.input.stack.gap.default",
           "component.input.text-frame.padding-x.default",
           "component.modal.close.padding.default",
+          "component.select.stack.gap.default",
+          "component.select.text-frame.padding-x.default",
           "component.tooltip.content.padding-y.default",
           "component.tooltip.arrow.depth.default"
         ],
@@ -6933,10 +6943,6 @@
             "count": 4
           },
           {
-            "file": "css/components/select.css",
-            "count": 3
-          },
-          {
             "file": "css/components/textarea.css",
             "count": 2
           },
@@ -6950,7 +6956,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 18
+            "count": 23
           },
           {
             "file": "css/utilities/layout.css",
@@ -6974,6 +6980,11 @@
           "component.modal.header.gap.default",
           "component.modal.footer.padding-top.sm",
           "component.modal.footer.gap.default",
+          "component.select.gap.sm",
+          "component.select.gap.md",
+          "component.select.gap.lg",
+          "component.select.padding-x.sm",
+          "component.select.padding-y.sm",
           "component.tooltip.content.padding-x.default",
           "component.tooltip.arrow.base.default"
         ],
@@ -7003,16 +7014,12 @@
             "count": 1
           },
           {
-            "file": "css/components/select.css",
-            "count": 3
-          },
-          {
             "file": "css/components/textarea.css",
             "count": 2
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 11
+            "count": 13
           },
           {
             "file": "css/utilities/layout.css",
@@ -7030,6 +7037,8 @@
           "component.modal.header.padding-bottom.lg",
           "component.modal.footer.padding-top.md",
           "component.modal.footer.padding-top.lg",
+          "component.select.padding-x.md",
+          "component.select.padding-y.lg",
           "component.tabs.item.padding-top.default"
         ],
         "figma": []
@@ -7050,16 +7059,12 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/select.css",
-            "count": 3
-          },
-          {
             "file": "css/components/textarea.css",
             "count": 1
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 14
+            "count": 15
           },
           {
             "file": "css/utilities/layout.css",
@@ -7079,6 +7084,7 @@
           "component.modal.body.padding-bottom.sm",
           "component.modal.footer.padding-x.sm",
           "component.modal.footer.padding-bottom.sm",
+          "component.select.padding-x.lg",
           "component.tabs.item.padding-x.default",
           "component.tabs.panel.padding-y.default"
         ],
@@ -7205,16 +7211,12 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/select.css",
-            "count": 1
-          },
-          {
             "file": "css/components/textarea.css",
             "count": 1
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 10
+            "count": 11
           }
         ],
         "tokens": [
@@ -7224,6 +7226,7 @@
           "component.checkbox.focus-ring.radius.default",
           "component.divider.line.radius.default",
           "component.input.radius.default",
+          "component.select.radius.default",
           "component.skeleton.text.radius.default",
           "component.skeleton.rectangle.radius.default",
           "component.tabs.item.radius.default",
@@ -7250,7 +7253,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 5
+            "count": 6
           }
         ],
         "tokens": [
@@ -7258,7 +7261,8 @@
           "component.button.focus-ring.radius.default",
           "component.card.radius.default",
           "component.input.focus-ring.radius.default",
-          "component.modal.radius.default"
+          "component.modal.radius.default",
+          "component.select.focus-ring.radius.default"
         ],
         "figma": []
       }
@@ -8539,13 +8543,14 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 3
+            "count": 4
           }
         ],
         "tokens": [
           "component.button.bg.brand.default",
           "component.button.bg.brand.focused",
-          "component.input.border-color.focused"
+          "component.input.border-color.focused",
+          "component.select.border-color.focused"
         ],
         "figma": []
       }
@@ -8999,23 +9004,21 @@
             "count": 3
           },
           {
-            "file": "css/components/select.css",
-            "count": 3
-          },
-          {
             "file": "css/components/textarea.css",
             "count": 3
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 4
+            "count": 6
           }
         ],
         "tokens": [
           "component.button.bg.danger.default",
           "component.button.bg.danger.focused",
           "component.input.border-color.error",
-          "component.input.focus-ring.color.error"
+          "component.input.focus-ring.color.error",
+          "component.select.border-color.error",
+          "component.select.focus-ring.color.error"
         ],
         "figma": []
       }
@@ -9200,12 +9203,13 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 3
+            "count": 4
           }
         ],
         "tokens": [
           "component.button.padding-y.md",
           "component.input.padding-y.md",
+          "component.select.padding-y.md",
           "component.tabs.item.indicator-gap.default"
         ],
         "figma": []
@@ -9224,10 +9228,6 @@
       "decisao": "Aliasado a Foundation foundation.dimension.16.",
       "usos": {
         "css": [
-          {
-            "file": "css/components/select.css",
-            "count": 1
-          },
           {
             "file": "css/tokens/generated/component.css",
             "count": 6
@@ -9266,12 +9266,8 @@
             "count": 2
           },
           {
-            "file": "css/components/select.css",
-            "count": 5
-          },
-          {
             "file": "css/tokens/generated/component.css",
-            "count": 7
+            "count": 10
           }
         ],
         "tokens": [
@@ -9281,7 +9277,10 @@
           "component.button.icon.glyph-size.sm",
           "component.checkbox.box.size.md",
           "component.input.icon.glyph-size.md",
-          "component.radio.control.size.md"
+          "component.radio.control.size.md",
+          "component.select.chevron.glyph-size.sm",
+          "component.select.icon.frame-size.sm",
+          "component.select.icon.glyph-size.sm"
         ],
         "figma": []
       }
@@ -9300,12 +9299,8 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/select.css",
-            "count": 5
-          },
-          {
             "file": "css/tokens/generated/component.css",
-            "count": 15
+            "count": 24
           }
         ],
         "tokens": [
@@ -9322,6 +9317,15 @@
           "component.input.icon.glyph-size.lg",
           "component.modal.close.size.default",
           "component.radio.control.size.lg",
+          "component.select.chevron.frame-size.sm",
+          "component.select.chevron.frame-size.md",
+          "component.select.chevron.frame-size.lg",
+          "component.select.chevron.glyph-size.md",
+          "component.select.chevron.glyph-size.lg",
+          "component.select.icon.frame-size.md",
+          "component.select.icon.frame-size.lg",
+          "component.select.icon.glyph-size.md",
+          "component.select.icon.glyph-size.lg",
           "component.spinner.size.md",
           "component.toggle.track.height.md"
         ],
@@ -9780,7 +9784,8 @@
         "css": [],
         "tokens": [
           "component.button.label.line-height.sm",
-          "component.input.text.line-height.sm"
+          "component.input.text.line-height.sm",
+          "component.select.text.line-height.sm"
         ],
         "figma": []
       }
@@ -11139,13 +11144,13 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.size.lg",
-      "sentido": "Altura da superfície principal visual do Select por size.",
+      "sentido": "Altura da superfície visual do Select por size.",
       "escopo": [
         "height",
         "min-height"
       ],
-      "contexto": "Component token do contrato anatômico Select. Binda o subnode visual do campo no Figma e substitui consumo direto de semantic.size.* no CSS.",
-      "decisao": "Alias 1:1 para semantic.size.lg/xl/2xl porque Select usa 32/40/48 como altura visual e area interativa; fica em Component para documentar o contrato publico da anatomia.",
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.size.lg porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
       "usos": {
         "css": [
           {
@@ -11161,18 +11166,18 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.size.xl",
-      "sentido": "Altura da superfície principal visual do Select por size.",
+      "sentido": "Altura da superfície visual do Select por size.",
       "escopo": [
         "height",
         "min-height"
       ],
-      "contexto": "Component token do contrato anatômico Select. Binda o subnode visual do campo no Figma e substitui consumo direto de semantic.size.* no CSS.",
-      "decisao": "Alias 1:1 para semantic.size.lg/xl/2xl porque Select usa 32/40/48 como altura visual e area interativa; fica em Component para documentar o contrato publico da anatomia.",
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.size.xl porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
       "usos": {
         "css": [
           {
             "file": "css/components/select.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [],
@@ -11183,13 +11188,13 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.size.2xl",
-      "sentido": "Altura da superfície principal visual do Select por size.",
+      "sentido": "Altura da superfície visual do Select por size.",
       "escopo": [
         "height",
         "min-height"
       ],
-      "contexto": "Component token do contrato anatômico Select. Binda o subnode visual do campo no Figma e substitui consumo direto de semantic.size.* no CSS.",
-      "decisao": "Alias 1:1 para semantic.size.lg/xl/2xl porque Select usa 32/40/48 como altura visual e area interativa; fica em Component para documentar o contrato publico da anatomia.",
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.size.2xl porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
       "usos": {
         "css": [
           {
@@ -18833,6 +18838,1947 @@
           {
             "file": "css/components/input.css",
             "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.bg.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.surface.default",
+      "sentido": "Bg do Field Select por estado.",
+      "escopo": [
+        "background",
+        "fill"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.surface.default porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.bg.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.background.disabled",
+      "sentido": "Bg do Field Select por estado.",
+      "escopo": [
+        "background",
+        "fill"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.background.disabled porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.bg.error": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.surface.default",
+      "sentido": "Bg do Field Select por estado.",
+      "escopo": [
+        "background",
+        "fill"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.surface.default porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.bg.filled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.surface.default",
+      "sentido": "Bg do Field Select por estado.",
+      "escopo": [
+        "background",
+        "fill"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.surface.default porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.bg.focused": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.surface.default",
+      "sentido": "Bg do Field Select por estado.",
+      "escopo": [
+        "background",
+        "fill"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.surface.default porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.bg.readonly": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.background.subtle",
+      "sentido": "Bg do Field Select por estado.",
+      "escopo": [
+        "background",
+        "fill"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.background.subtle porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.border-color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.control-default",
+      "sentido": "Cor da borda do Field Select por estado.",
+      "escopo": [
+        "border-color",
+        "stroke"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.border.control-default porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.border-color.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.control-disabled",
+      "sentido": "Cor da borda do Field Select por estado.",
+      "escopo": [
+        "border-color",
+        "stroke"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.border.control-disabled porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.border-color.error": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.feedback.error.background.default",
+      "sentido": "Cor da borda do Field Select por estado.",
+      "escopo": [
+        "border-color",
+        "stroke"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.feedback.error.background.default porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.border-color.filled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.strong",
+      "sentido": "Cor da borda do Field Select por estado.",
+      "escopo": [
+        "border-color",
+        "stroke"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.border.strong porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.border-color.focused": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.background.default",
+      "sentido": "Cor da borda do Field Select por estado.",
+      "escopo": [
+        "border-color",
+        "stroke"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.primary.background.default porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.border-color.hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.control-hover",
+      "sentido": "Cor da borda do Field Select por estado.",
+      "escopo": [
+        "border-color",
+        "stroke"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.border.control-hover porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.border-color.readonly": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.subtle",
+      "sentido": "Cor da borda do Field Select por estado.",
+      "escopo": [
+        "border-color",
+        "stroke"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.border.subtle porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.border-width.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.border.width.default",
+      "sentido": "Espessura da borda do Field Select.",
+      "escopo": [
+        "border-width",
+        "stroke-width"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.border.width.default porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.chevron.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.default",
+      "sentido": "Cor do chevron do Select por estado.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.content.default porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.chevron.color.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.disabled",
+      "sentido": "Cor do chevron do Select por estado.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.content.disabled porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.chevron.frame-size.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.md",
+      "sentido": "Tamanho do frame do chevron do Select por size.",
+      "escopo": [
+        "width",
+        "height",
+        "font-size"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.size.md porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.chevron.frame-size.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.md",
+      "sentido": "Tamanho do frame do chevron do Select por size.",
+      "escopo": [
+        "width",
+        "height",
+        "font-size"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.size.md porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 3
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.chevron.frame-size.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.md",
+      "sentido": "Tamanho do frame do chevron do Select por size.",
+      "escopo": [
+        "width",
+        "height",
+        "font-size"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.size.md porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.chevron.glyph-size.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.sm",
+      "sentido": "Tamanho do glyph do chevron do Select por size.",
+      "escopo": [
+        "width",
+        "height",
+        "font-size"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.size.sm porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 4
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.chevron.glyph-size.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.md",
+      "sentido": "Tamanho do glyph do chevron do Select por size.",
+      "escopo": [
+        "width",
+        "height",
+        "font-size"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.size.md porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 4
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.chevron.glyph-size.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.md",
+      "sentido": "Tamanho do glyph do chevron do Select por size.",
+      "escopo": [
+        "width",
+        "height",
+        "font-size"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.size.md porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 4
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.content.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.strong",
+      "sentido": "Cor do conteúdo preenchido do Select por estado.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.content.strong porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 4
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.content.color.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.disabled",
+      "sentido": "Cor do conteúdo preenchido do Select por estado.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.content.disabled porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.content.color.readonly": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.default",
+      "sentido": "Cor do conteúdo preenchido do Select por estado.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.content.default porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.focus-ring.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.focus",
+      "sentido": "Cor do focus ring do Select por estado.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.border.focus porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.focus-ring.color.error": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.feedback.error.background.default",
+      "sentido": "Cor do focus ring do Select por estado.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.feedback.error.background.default porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.focus-ring.offset.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.border.width.focus",
+      "sentido": "Offset do focus ring do Select.",
+      "escopo": [],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.border.width.focus porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.focus-ring.radius.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.radius.lg",
+      "sentido": "Radius do focus ring do Select.",
+      "escopo": [
+        "border-radius"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.radius.lg porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.focus-ring.stroke-width.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.border.width.focus",
+      "sentido": "Espessura do focus ring do Select.",
+      "escopo": [
+        "border-width",
+        "stroke-width"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.border.width.focus porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.gap.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.sm",
+      "sentido": "Gap interno do Field Select por size.",
+      "escopo": [
+        "gap"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.space.sm porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.gap.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.sm",
+      "sentido": "Gap interno do Field Select por size.",
+      "escopo": [
+        "gap"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.space.sm porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 3
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.gap.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.sm",
+      "sentido": "Gap interno do Field Select por size.",
+      "escopo": [
+        "gap"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.space.sm porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.helper.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.default",
+      "sentido": "Cor do helper text do Select por estado.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.content.default porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.helper.color.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.disabled",
+      "sentido": "Cor do helper text do Select por estado.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.content.disabled porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.helper.font-family.default": {
+      "layer": "component",
+      "type": "string",
+      "references": "semantic.typography.body.font-family.sans",
+      "sentido": "Tipografia do helper text do Select.",
+      "escopo": [
+        "font-family"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.typography.body.font-family.sans porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.helper.font-size.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.xs",
+      "sentido": "Tipografia do helper text do Select.",
+      "escopo": [
+        "font-size"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.typography.body.font-size.xs porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.helper.font-size.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.sm",
+      "sentido": "Tipografia do helper text do Select.",
+      "escopo": [
+        "font-size"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.typography.body.font-size.sm porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.helper.font-size.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.sm",
+      "sentido": "Tipografia do helper text do Select.",
+      "escopo": [
+        "font-size"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.typography.body.font-size.sm porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.helper.font-weight.default": {
+      "layer": "component",
+      "type": "string",
+      "references": "semantic.typography.body.font-weight.regular",
+      "sentido": "Tipografia do helper text do Select.",
+      "escopo": [
+        "font-weight"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.typography.body.font-weight.regular porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.helper.letter-spacing.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.letter-spacing.normal",
+      "sentido": "Tipografia do helper text do Select.",
+      "escopo": [
+        "letter-spacing"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.typography.body.letter-spacing.normal porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.helper.line-height.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.xs",
+      "sentido": "Tipografia do helper text do Select.",
+      "escopo": [
+        "height",
+        "min-height"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.typography.body.line-height.xs porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.helper.line-height.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.sm",
+      "sentido": "Tipografia do helper text do Select.",
+      "escopo": [
+        "height",
+        "min-height"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.typography.body.line-height.sm porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.helper.line-height.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.sm",
+      "sentido": "Tipografia do helper text do Select.",
+      "escopo": [
+        "height",
+        "min-height"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.typography.body.line-height.sm porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.icon.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.default",
+      "sentido": "Cor do ícone leading do Select por estado.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.content.default porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.icon.color.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.disabled",
+      "sentido": "Cor do ícone leading do Select por estado.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.content.disabled porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.icon.frame-size.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.sm",
+      "sentido": "Tamanho do frame de ícone leading do Select por size.",
+      "escopo": [
+        "width",
+        "height",
+        "font-size"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.size.sm porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.icon.frame-size.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.md",
+      "sentido": "Tamanho do frame de ícone leading do Select por size.",
+      "escopo": [
+        "width",
+        "height",
+        "font-size"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.size.md porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.icon.frame-size.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.md",
+      "sentido": "Tamanho do frame de ícone leading do Select por size.",
+      "escopo": [
+        "width",
+        "height",
+        "font-size"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.size.md porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.icon.glyph-size.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.sm",
+      "sentido": "Tamanho do glyph de ícone leading do Select por size.",
+      "escopo": [
+        "width",
+        "height",
+        "font-size"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.size.sm porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.icon.glyph-size.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.md",
+      "sentido": "Tamanho do glyph de ícone leading do Select por size.",
+      "escopo": [
+        "width",
+        "height",
+        "font-size"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.size.md porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.icon.glyph-size.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.md",
+      "sentido": "Tamanho do glyph de ícone leading do Select por size.",
+      "escopo": [
+        "width",
+        "height",
+        "font-size"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.size.md porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.label.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.strong",
+      "sentido": "Cor do label do Select.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.content.strong porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.label.font-family.default": {
+      "layer": "component",
+      "type": "string",
+      "references": "semantic.typography.body.font-family.sans",
+      "sentido": "Tipografia do label do Select.",
+      "escopo": [
+        "font-family"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.typography.body.font-family.sans porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.label.font-size.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.xs",
+      "sentido": "Tipografia do label do Select.",
+      "escopo": [
+        "font-size"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.typography.body.font-size.xs porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.label.font-size.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.sm",
+      "sentido": "Tipografia do label do Select.",
+      "escopo": [
+        "font-size"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.typography.body.font-size.sm porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.label.font-size.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.sm",
+      "sentido": "Tipografia do label do Select.",
+      "escopo": [
+        "font-size"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.typography.body.font-size.sm porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.label.font-weight.default": {
+      "layer": "component",
+      "type": "string",
+      "references": "semantic.typography.body.font-weight.bold",
+      "sentido": "Tipografia do label do Select.",
+      "escopo": [
+        "font-weight"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.typography.body.font-weight.bold porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.label.letter-spacing.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.letter-spacing.normal",
+      "sentido": "Tipografia do label do Select.",
+      "escopo": [
+        "letter-spacing"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.typography.body.letter-spacing.normal porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.label.line-height.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.xs",
+      "sentido": "Tipografia do label do Select.",
+      "escopo": [
+        "height",
+        "min-height"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.typography.body.line-height.xs porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.label.line-height.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.sm",
+      "sentido": "Tipografia do label do Select.",
+      "escopo": [
+        "height",
+        "min-height"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.typography.body.line-height.sm porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.label.line-height.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.sm",
+      "sentido": "Tipografia do label do Select.",
+      "escopo": [
+        "height",
+        "min-height"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.typography.body.line-height.sm porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.label-row.gap.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.2xs",
+      "sentido": "Gap entre label e required do Select.",
+      "escopo": [
+        "gap"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.space.2xs porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.padding-x.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.sm",
+      "sentido": "Padding horizontal do Field Select por size.",
+      "escopo": [
+        "padding"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.space.sm porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.padding-x.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.md",
+      "sentido": "Padding horizontal do Field Select por size.",
+      "escopo": [
+        "padding"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.space.md porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 3
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.padding-x.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.lg",
+      "sentido": "Padding horizontal do Field Select por size.",
+      "escopo": [
+        "padding"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.space.lg porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.padding-y.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.sm",
+      "sentido": "Padding vertical do Field Select por size.",
+      "escopo": [
+        "padding"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.space.sm porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.padding-y.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.control.padding.10",
+      "sentido": "Padding vertical do Field Select por size.",
+      "escopo": [
+        "padding"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.space.control.padding.10 porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.padding-y.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.md",
+      "sentido": "Padding vertical do Field Select por size.",
+      "escopo": [
+        "padding"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.space.md porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.placeholder.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.subtle",
+      "sentido": "Cor do placeholder do Select por estado.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.content.subtle porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.placeholder.color.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.disabled",
+      "sentido": "Cor do placeholder do Select por estado.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.content.disabled porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.radius.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.radius.md",
+      "sentido": "Radius do Field Select.",
+      "escopo": [
+        "border-radius"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.radius.md porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.required.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.feedback.error.content-default",
+      "sentido": "Cor do indicador required do Select.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.feedback.error.content-default porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.required.font-family.default": {
+      "layer": "component",
+      "type": "string",
+      "references": "semantic.typography.body.font-family.sans",
+      "sentido": "Tipografia do indicador required do Select.",
+      "escopo": [
+        "font-family"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.typography.body.font-family.sans porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.required.font-size.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.sm",
+      "sentido": "Tipografia do indicador required do Select.",
+      "escopo": [
+        "font-size"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.typography.body.font-size.sm porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.required.font-weight.default": {
+      "layer": "component",
+      "type": "string",
+      "references": "semantic.typography.body.font-weight.bold",
+      "sentido": "Tipografia do indicador required do Select.",
+      "escopo": [
+        "font-weight"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.typography.body.font-weight.bold porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.required.letter-spacing.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.letter-spacing.normal",
+      "sentido": "Tipografia do indicador required do Select.",
+      "escopo": [
+        "letter-spacing"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.typography.body.letter-spacing.normal porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.required.line-height.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.sm",
+      "sentido": "Tipografia do indicador required do Select.",
+      "escopo": [
+        "height",
+        "min-height"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.typography.body.line-height.sm porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.stack.gap.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xs",
+      "sentido": "Gap vertical do Select composto.",
+      "escopo": [
+        "gap"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.space.xs porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.text.font-family.default": {
+      "layer": "component",
+      "type": "string",
+      "references": "semantic.typography.body.font-family.sans",
+      "sentido": "Tipografia do texto do Select.",
+      "escopo": [
+        "font-family"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.typography.body.font-family.sans porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.text.font-size.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.xs",
+      "sentido": "Tipografia do texto do Select.",
+      "escopo": [
+        "font-size"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.typography.body.font-size.xs porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.text.font-size.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.sm",
+      "sentido": "Tipografia do texto do Select.",
+      "escopo": [
+        "font-size"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.typography.body.font-size.sm porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.text.font-size.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.font-size.md",
+      "sentido": "Tipografia do texto do Select.",
+      "escopo": [
+        "font-size"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.typography.body.font-size.md porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.text.font-weight.default": {
+      "layer": "component",
+      "type": "string",
+      "references": "semantic.typography.body.font-weight.regular",
+      "sentido": "Tipografia do texto do Select.",
+      "escopo": [
+        "font-weight"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.typography.body.font-weight.regular porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.text.letter-spacing.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.letter-spacing.normal",
+      "sentido": "Tipografia do texto do Select.",
+      "escopo": [
+        "letter-spacing"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.typography.body.letter-spacing.normal porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.text.line-height.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.2xs",
+      "sentido": "Tipografia do texto do Select.",
+      "escopo": [
+        "height",
+        "min-height"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.typography.body.line-height.2xs porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.text.line-height.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.sm",
+      "sentido": "Tipografia do texto do Select.",
+      "escopo": [
+        "height",
+        "min-height"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.typography.body.line-height.sm porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.text.line-height.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.typography.body.line-height.md",
+      "sentido": "Tipografia do texto do Select.",
+      "escopo": [
+        "height",
+        "min-height"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.typography.body.line-height.md porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.text-frame.padding-x.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xs",
+      "sentido": "Padding horizontal do Text Frame do Select.",
+      "escopo": [
+        "padding"
+      ],
+      "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
+      "decisao": "Alias para semantic.space.xs porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 2
           }
         ],
         "tokens": [],
