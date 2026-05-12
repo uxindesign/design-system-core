@@ -20,24 +20,24 @@
 
 /* Text skeleton — Figma: 12px height, radius/md */
 .ds-skeleton--text {
-  height: var(--ds-dimension-12);
+  height: var(--ds-skeleton-text-height-default);
   width: 100%;
-  border-radius: var(--ds-radius-md);
+  border-radius: var(--ds-skeleton-text-radius-default);
 }
 
 /* Circle skeleton */
 .ds-skeleton--circle {
-  width: var(--ds-size-xl);
-  height: var(--ds-size-xl);
-  border-radius: var(--ds-radius-full);
+  width: var(--ds-skeleton-circle-size-default);
+  height: var(--ds-skeleton-circle-size-default);
+  border-radius: var(--ds-skeleton-circle-radius-default);
   flex-shrink: 0;
 }
 
 /* Rectangle skeleton */
 .ds-skeleton--rectangle {
   width: 100%;
-  height: var(--ds-size-5xl);
-  border-radius: var(--ds-radius-md);
+  height: var(--ds-skeleton-rectangle-height-default);
+  border-radius: var(--ds-skeleton-rectangle-radius-default);
 }
 
 /* ---------------------------------------------------------

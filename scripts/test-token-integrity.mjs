@@ -60,6 +60,20 @@ const semanticDark = flattenTokens(JSON.parse(fs.readFileSync(path.join(ROOT, 't
 for (const [p, v] of Object.entries(semanticLight)) { v.source = 'tokens/semantic/light.json'; allTokens[p] = v; }
 // Não sobrescreve light com dark — só usamos light pra audit (mesmas chaves esperadas)
 
+// Component — mode-invariant contracts (ADR-019)
+const componentDir = path.join(ROOT, 'tokens', 'component');
+if (fs.existsSync(componentDir)) {
+  for (const file of fs.readdirSync(componentDir)) {
+    if (!file.endsWith('.json')) continue;
+    const data = JSON.parse(fs.readFileSync(path.join(componentDir, file), 'utf-8'));
+    const flat = flattenTokens(data);
+    for (const [p, v] of Object.entries(flat)) {
+      v.source = `tokens/component/${file}`;
+      allTokens[p] = v;
+    }
+  }
+}
+
 // ──────────────────────────────────────────────────────────────────
 // 2. Test: aliases existem
 // ──────────────────────────────────────────────────────────────────
@@ -175,7 +189,7 @@ for (const k of darkKeys) if (!lightKeys.has(k)) errors.push(`[mode-mismatch] ${
 // ──────────────────────────────────────────────────────────────────
 
 console.log(`\n═══ test-token-integrity ═════════════════════`);
-console.log(`Tokens analisados: ${Object.keys(allTokens).length} foundation + semantic light`);
+console.log(`Tokens analisados: ${Object.keys(allTokens).length} foundation + semantic light + component`);
 console.log(`Light/Dark mode: ${lightKeys.size} chaves cada lado\n`);
 
 if (errors.length === 0) {

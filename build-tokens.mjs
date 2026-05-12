@@ -1,6 +1,6 @@
 import StyleDictionary from 'style-dictionary';
 import { register } from '@tokens-studio/sd-transforms';
-import { writeFileSync } from 'fs';
+import { existsSync, writeFileSync } from 'fs';
 
 // Register DTCG-compatible transforms from tokens-studio
 register(StyleDictionary);
@@ -107,22 +107,48 @@ const semanticDark = new StyleDictionary({
   }
 });
 
+// ─── Component ───
+// Component tokens are mode-invariant contracts for component anatomy
+// (ADR-019). They may reference Semantic vars; outputReferences keeps the
+// generated CSS pointing to the Semantic custom properties so theme changes
+// still flow through at runtime.
+const hasComponentTokens = existsSync('tokens/component');
+const component = hasComponentTokens ? new StyleDictionary({
+  log,
+  include: ['tokens/foundation/**/*.json', 'tokens/semantic/light.json'],
+  source: ['tokens/component/**/*.json'],
+  platforms: {
+    css: {
+      transforms,
+      buildPath,
+      files: [{
+        destination: 'component.css',
+        format: 'css/variables',
+        filter: (token) => token.path[0] === 'component',
+        options: { selector: ':root', outputReferences: true }
+      }]
+    }
+  }
+}) : null;
+
 // ─── Build ───
 console.log('Building tokens...');
 await foundation.buildAllPlatforms();
 await semanticLight.buildAllPlatforms();
 await semanticDark.buildAllPlatforms();
+if (component) await component.buildAllPlatforms();
 
 // ─── Generate index.css ───
 const indexCss = `/* Auto-generated — do not edit. Run: npm run build:tokens */
 @import 'foundation.css';
 @import 'theme-light.css';
 @import 'theme-dark.css';
-`;
+${component ? "@import 'component.css';\n" : ""}`;
 writeFileSync(`${buildPath}index.css`, indexCss);
 
-console.log('Done. Output (2-layer — Component collection eliminated):');
+console.log('Done. Output (Foundation/Core → Semantic/System → Component):');
 console.log('  css/tokens/generated/foundation.css');
 console.log('  css/tokens/generated/theme-light.css');
 console.log('  css/tokens/generated/theme-dark.css');
+if (component) console.log('  css/tokens/generated/component.css');
 console.log('  css/tokens/generated/index.css');

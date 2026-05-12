@@ -49,7 +49,7 @@
       <option value="pt">PT</option>
       <option value="en">EN</option>
     </select>
-    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg> Dark</button>
+    <button class="ds-button ds-button--ghost ds-button--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg> Dark</button>
   </div>
 </header>
 <div class="ds-sidebar-overlay" id="sidebar-overlay"></div>
@@ -72,7 +72,49 @@
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
 <h3>Corrigido</h3>
 <ul>
-<li><p><strong>Documentação normalizada conforme auditoria estrutural.</strong> Labels de tabela foram padronizados (<code>Variável CSS</code>, <code>Descrição</code>, <code>Critério WCAG</code>, <code>Função</code>, <code>Referência</code>), README atualizado para 18 ADRs, páginas simples de componentes ganharam anatomia curta, <code>Form Field</code> declara o contrato CSS-only na própria página, e referências stale a <code>semantic.content.secondary/tertiary</code> foram migradas para <code>semantic.content.default/subtle</code>.</p>
+<li><p><strong>Checkbox estrutural/focus aplicado aos Component tokens anatômicos.</strong> Adicionados <code>component.checkbox.target.{gap,radius}</code>, <code>component.checkbox.box.{radius,border-width}</code> e <code>component.checkbox.focus-ring.{color,stroke-width,radius}</code>; os 27 variants vivos do Checkbox agora usam Component tokens nesses atributos, além de <code>target.height</code> e <code>box.size</code> já existentes. CSS passa a consumir <code>--ds-checkbox-*</code> nesses contratos e o sync Figma↔JSON trata <code>component.form-field.*</code> como JSON-only por ADR-017 após remoção das variables <code>form-field</code> do Figma.</p>
+</li>
+<li><p><strong>Button Focus Ring por estilo no Component token.</strong> Success e Danger deixam de herdar o focus ring brand: <code>component.button.focus-ring.color.success</code> aponta para <code>semantic.feedback.success.border-default</code> e <code>component.button.focus-ring.color.danger</code> aponta para <code>semantic.border.focus-error</code>; CSS e Figma passam a aplicar esses tokens nos variants verdes e vermelhos.</p>
+</li>
+<li><p><strong>Button Figma/CSS aplicado aos Component tokens anatômicos completos.</strong> Criado <code>component.button</code> para a superfície principal height/min-width/padding/gap/radius/border, background por estilo/estado, border color de Outline, cor de conteúdo, tipografia do label, frame/glyph de ícone, icon-only e focus ring. Os 216 variants vivos do Button no Figma agora usam Component tokens nos atributos públicos; CSS passa a consumir <code>--ds-button-*</code>, corrige <code>Brand/Large/Focused</code> com padding vertical incorreto e remove opacidade disabled global em favor de cores de estado.</p>
+</li>
+<li><p><strong>Form Field aplicado aos Component tokens CSS-only.</strong> Criado <code>component.form-field</code> para gaps, cores e tipografia de label, required, helper e error; o CSS passa a consumir <code>--ds-form-field-*</code> sem criar componente visual no Figma, respeitando ADR-017. Helper e error também foram alinhados ao Figma vivo para <code>body/xs</code> com <code>line-height/xs</code>.</p>
+</li>
+<li><p><strong>Divider Figma/CSS aplicado aos tokens Component anatômicos.</strong> Criado <code>component.divider.line</code> para cor, espessura e raio da linha; os variants <code>Orientation=Horizontal</code> e <code>Orientation=Vertical</code> vivos do Figma agora usam tokens Component nesses contratos. CSS passa a consumir <code>--ds-divider-*</code>; comprimento segue contextual (<code>100%</code>/container) e não vira token.</p>
+</li>
+<li><p><strong>Breadcrumb Figma/CSS aplicado aos tokens Component anatômicos.</strong> Criado <code>component.breadcrumb</code> para gap da lista, gap/raio do item, tipografia do rótulo e tipografia do separador; <code>Breadcrumb</code> e <code>Breadcrumb Item</code> vivos do Figma agora usam tokens Component nesses contratos. CSS passa a consumir <code>--ds-breadcrumb-*</code>; separador é alinhado ao Figma com <code>content.subtle</code> e tipografia <code>body/xs regular</code>.</p>
+</li>
+<li><p><strong>Tabs Figma/CSS aplicado aos tokens Component anatômicos.</strong> Criado <code>component.tabs</code> para borda da lista, espaçamento/raio/gap do indicador no item, altura/raio do indicador, tipografia do rótulo e espaçamento do painel; <code>Tab Item</code> e <code>Tab Bar</code> ativos no Figma agora usam tokens Component nesses contratos. CSS passa a consumir <code>--ds-tabs-*</code>; cores e focus ring permanecem Semantic.</p>
+</li>
+<li><p><strong>Modal Figma/CSS aplicado aos Component tokens anatômicos.</strong> Criado <code>component.modal</code> para overlay, superfície principal, header, body, title, footer e close; as 3 variantes vivas do Figma (<code>Small</code>, <code>Medium</code>, <code>Large</code>) agora usam Component tokens nesses contratos. CSS passa a consumir <code>--ds-modal-*</code>, remove <code>z-index</code> hardcoded via <code>semantic.z.modal</code> e aplica <code>component.modal.shadow.default</code> em vez de depender da utility <code>.ds-elevation-4</code>.</p>
+</li>
+<li><p><strong>Card Figma/CSS aplicado aos Component tokens anatômicos.</strong> Criado <code>component.card</code> para radius/border-width da superfície principal, padding/gap do header, padding do body e tipografia de title/subtitle/body; as 3 variantes vivas do Figma agora usam Component tokens nesses contratos. CSS passa a consumir <code>--ds-card-*</code>; cores e shadow permanecem Semantic.</p>
+</li>
+<li><p><strong>Alert Figma/CSS aplicado aos Component tokens anatômicos.</strong> Criado <code>component.alert</code> para a superfície principal padding/gap/radius/border-width, icon/close size e glyph-size, content gap e tipografia de title/description; os 8 variants vivos do Figma agora usam Component tokens nesses contratos. CSS passa a consumir <code>--ds-alert-*</code>; documentação remove mappings antigos/stale de spacing e typography Foundation.</p>
+</li>
+<li><p><strong>Badge Figma/CSS aplicado aos Component tokens anatômicos.</strong> Criado <code>component.badge</code> para padding/gap/radius/border-width da superfície principal e tipografia do label; os 12 variants vivos do Figma (<code>6</code> cores × <code>2</code> estilos) agora usam Component tokens nesses contratos. CSS passa a consumir <code>--ds-badge-*</code>; documentação corrige inventário de cores para 6 e remove mappings antigos/stale.</p>
+</li>
+<li><p><strong>Tooltip Figma/CSS aplicado aos Component tokens anatômicos.</strong> Criado <code>component.tooltip</code> para padding/radius do content, tipografia do label e dimensões da seta (<code>base/depth</code>); os 4 variants <code>Position</code> do Figma agora usam Component tokens nesses contratos. CSS passa a consumir <code>--ds-tooltip-*</code>; cores e z-index permanecem Semantic.</p>
+</li>
+<li><p><strong>Skeleton Figma/CSS aplicado aos Component tokens anatômicos.</strong> Criado <code>component.skeleton.{text,circle,rectangle}</code> para height/size/radius dos 3 variants vivos do Figma; Text e Rectangle usam alturas anatômicas específicas (<code>12/120</code>) e Circle usa <code>semantic.size.xl</code> (<code>40</code>). CSS passa a consumir <code>--ds-skeleton-*</code>; documentação corrige background para <code>semantic.background.subtle</code> e remove mappings antigos de radius Foundation.</p>
+</li>
+<li><p><strong>Spinner Figma/CSS aplicado aos Component tokens anatômicos.</strong> Criado <code>component.spinner.size.{sm,md,lg}</code>, <code>component.spinner.radius.default</code> e <code>component.spinner.ring.stroke-width.default</code>; os 6 variants do Spinner no Figma agora usam Component tokens na superfície principal, Track e Indicator. CSS passa a consumir <code>--ds-spinner-*</code>; documentação corrige tamanhos <code>16/24/32</code> e motion para <code>duration.slower</code> + <code>ease.linear</code>.</p>
+</li>
+<li><p><strong>Avatar Figma/CSS aplicado aos Component tokens anatômicos.</strong> Criado <code>component.avatar.size.*</code>, <code>component.avatar.radius.default</code>, <code>component.avatar.initials.{font-size,line-height,font-weight}.*</code> e <code>component.avatar.icon.size.*</code>; os 6 variants do Avatar no Figma agora usam Component tokens para a superfície principal e tipografia anatômica. CSS passa a consumir <code>--ds-avatar-*</code>, corrige icon sizes para <code>20/24/32</code> e documentação corrige <code>lg</code> de <code>56px</code> para <code>64px</code>.</p>
+</li>
+<li><p><strong>Textarea Figma/CSS aplicado aos Component tokens de field min-height.</strong> Criado <code>component.textarea.field.min-height.{sm,md,lg}</code> e bindado nos 18 <code>Field</code> variants do Textarea no Figma (<code>80/96/120</code>). CSS passa a consumir <code>--ds-textarea-field-min-height-*</code>; documentação corrigida removendo valores antigos <code>120/160</code> que não batiam com Figma vivo. <code>foundation.dimension.120</code> foi adicionado como primitivo para suportar o tamanho Large.</p>
+</li>
+<li><p><strong>Toggle Figma aplicado aos Component tokens anatômicos bindáveis.</strong> Os 18 variants do component set <code>Toggle</code> agora usam <code>component.toggle.target.height.{sm,md,lg}</code> no <code>minHeight</code> da superfície principal, preservando <code>component.toggle.track.width.{sm,md,lg}</code> e <code>component.toggle.track.height.{sm,md,lg}</code> em <code>Track</code> width/height. Validação Figma viva: sm <code>32 / 28×16</code>, md <code>40 / 44×24</code>, lg <code>48 / 56×32</code>, sem problemas de binding. <code>component.toggle.thumb.inset.default</code> permanece como geometria <code>x/y</code> do Thumb, porque posição <code>x/y</code> não é campo bindável por Figma Variables.</p>
+</li>
+<li><p><strong>Radio Figma aplicado aos Component tokens anatômicos.</strong> Os 18 variants do component set <code>Radio</code> agora usam <code>component.radio.target.height.{sm,md,lg}</code> no <code>minHeight</code> da superfície principal, preservando <code>component.radio.control.size.{sm,md,lg}</code> em <code>Control</code> width/height. Validação Figma viva: sm <code>32/16</code>, md <code>40/20</code>, lg <code>48/24</code>, sem problemas de binding.</p>
+</li>
+<li><p><strong>Checkbox Figma aplicado aos Component tokens anatômicos.</strong> Os 27 variants do component set <code>Checkbox</code> agora usam <code>component.checkbox.target.height.{sm,md,lg}</code> no <code>minHeight</code> da superfície principal, preservando <code>component.checkbox.box.size.{sm,md,lg}</code> em <code>Control</code> width/height. Validação Figma viva: sm <code>32/16</code>, md <code>40/20</code>, lg <code>48/24</code>, sem problemas de binding.</p>
+</li>
+<li><p><strong>API CSS e docs alinhadas aos nomes canônicos de Component.</strong> Classes públicas do Button renomeadas de <code>.ds-btn*</code> para <code>.ds-button*</code> sem alias legado, porque o DS ainda está em beta e só a documentação consome os componentes. A documentação de Button/Control Sizing também deixou de anunciar tokens antigos inexistentes de height/padding/font/icon e passa a publicar o contrato real <code>component.button.height.*</code> / <code>--ds-button-height-*</code>.</p>
+</li>
+<li><p><strong>Tokens semânticos inválidos do Toggle removidos.</strong> A tentativa anterior criou <code>semantic.control.toggle.*</code> diretamente no JSON sem variável correspondente no Figma, gerando <code>DRIFT_FROM_SOURCE</code> em <code>verify:tokens</code>. Esses aliases foram removidos de <code>tokens/semantic/{light,dark}.json</code> e do registry; <code>toggle.css</code> agora consome os Component tokens do piloto em vez de inventar <code>semantic.control.toggle.*</code>.</p>
+</li>
+<li><p><strong>Documentação normalizada conforme auditoria estrutural.</strong> Labels de tabela foram padronizados (<code>Variável CSS</code>, <code>Descrição</code>, <code>Critério WCAG</code>, <code>Função</code>, <code>Referência</code>), README atualizado para 19 ADRs, páginas simples de componentes ganharam anatomia curta, <code>Form Field</code> declara o contrato CSS-only na própria página, e referências stale a <code>semantic.content.secondary/tertiary</code> foram migradas para <code>semantic.content.default/subtle</code>.</p>
 </li>
 <li><p><strong>Escala de Elevation/Shadow oficializada em 4 níveis + reset.</strong> Removidos <code>foundation.shadow.xs</code> e <code>foundation.shadow.2xl</code> por não terem uso nem Effect Style correspondente. <code>foundation.shadow.{sm,md,lg,xl}</code> preserva exatamente os parâmetros dos Effect Styles Figma <code>elevation/1..4</code>, e <code>foundation.shadow.none</code> permanece como reset técnico de <code>.ds-elevation-0</code>. A página de Elevation agora documenta o papel de cada nível e o mapping Figma ↔ CSS. Resolve #19 / P3-2 da auditoria Figma↔Repo.</p>
 </li>
@@ -132,6 +174,12 @@
 </ul>
 <h3>Adicionado</h3>
 <ul>
+<li><p><strong>ADR-019 — Component tokens como contrato anatômico.</strong> Reintroduz a camada Component no modelo Foundation/Core → Semantic/System → Component → implementação, alinhando o Core ao padrão de mercado para component tokens. Component deixa de ser wrapper mecânico e passa a documentar anatomia pública (<code>target</code>, <code>box</code>, <code>track</code>, <code>thumb</code>, etc.); aliases 1:1 para Semantic são permitidos quando representam contrato estável do componente. Pipeline preparado para <code>tokens/component/*.json</code> e <code>css/tokens/generated/component.css</code>, com docs/API/llms atualizados.</p>
+</li>
+<li><p><strong>Piloto Component materializado em Figma + JSON para Checkbox, Radio e Toggle.</strong> Criada a collection Figma <code>Component</code> com modo <code>Default</code> e 22 variables agrupadas por componente (<code>checkbox/...</code>, <code>radio/...</code>, <code>toggle/...</code>): target heights 32/40/48, box/control 16/20/24, track Toggle 28×16 / 44×24 / 56×32 e thumb inset 2px. Checkbox/Radio <code>Control</code> e Toggle <code>Track</code> foram rebindados às novas variables; <code>tokens/component/{checkbox,radio,toggle}.json</code>, registry, CSS consumidor e snapshot Figma foram atualizados.</p>
+</li>
+<li><p><strong>Alturas Component para controles single-line.</strong> Button, Input Text e Select ganharam <code>component.&lt;componente&gt;.superfície principal.height.{sm,md,lg}</code> aliasados a <code>semantic.size.{lg,xl,2xl}</code>. Figma foi rebindado no Button e no <code>Field</code> visual de Input/Select; CSS consumidor passou a usar <code>--ds-button-height-*</code>, <code>--ds-input-height-*</code> e <code>--ds-select-height-*</code>.</p>
+</li>
 <li><p><strong>Guia editorial de documentação</strong> (<code>docs/documentation-guidelines.md</code>). Define templates para páginas Foundation, Component, Process e System, exceções permitidas, labels oficiais de tabela e regra authored vs generated.</p>
 </li>
 <li><p><strong>Auditoria estrutural da documentação</strong> (<code>audit/docs-structure-audit.md</code>). Classifica páginas por tipo (Foundation, Component, Process, System), identifica inconsistências editoriais e define uma sequência recomendada de PRs para normalização.</p>
@@ -156,7 +204,7 @@
 </li>
 <li><p><strong>P2-5 (Spinner --on-color) reclassificado como falso positivo.</strong> Re-dump completo mostra Figma TEM <code>Style=On Color</code> (sm/md/lg) com tokens batendo 1:1 com CSS (<code>overlay/medium</code> + <code>border/inverse</code>). Auditoria original amostrou só <code>Style=Default, Size=Small</code> — conclusão errada. Sistema correto.</p>
 </li>
-<li><p><strong>P2-4 (Modal Footer button heights) reclassificado como wontfix.</strong> Modal CSS não força size de Button (decisão consciente, padrão Material/Polaris). Consumer controla via <code>.ds-btn--sm/--lg</code>. Figma prescreve sm/md/lg como recomendação visual pra mockups, não como CSS constraint.</p>
+<li><p><strong>P2-4 (Modal Footer button heights) reclassificado como wontfix.</strong> Modal CSS não força size de Button (decisão consciente, padrão Material/Polaris). Consumer controla via <code>.ds-button--sm/--lg</code>. Figma prescreve sm/md/lg como recomendação visual pra mockups, não como CSS constraint.</p>
 </li>
 <li><p><strong>P2-1 (letter-spacing morto sistêmico) reclassificado como wontfix.</strong> Investigação revelou que <code>css/base/reset.css:82</code> aplica <code>letter-spacing: var(--ds-body-letter-spacing-normal)</code> globalmente; todo texto herda via cascade. Figma bindings explícitos são redundantes mas não causam drift visual. Limpar ~600+ bindings sem ganho visual não justifica o trabalho. Modal Large title é exceção (tight, fix em P1-4).</p>
 </li>
@@ -181,7 +229,7 @@
 <li><strong>Glyph fontSize bindado</strong> em 270 nodes via <code>use_figma</code>: sm Buttons → <code>size/sm</code> (20), md/lg Buttons → <code>size/md</code> (24).</li>
 <li><strong>Icon Only paddings simétricos</strong> em 108 variants Figma: sm → <code>space/control/padding/6</code> (6px), md → <code>space/sm</code> (8px), lg → <code>space/md</code> (12px). Cálculo: (button - icon) / 2 centraliza icon.</li>
 <li><strong>Token novo: <code>semantic.space.control.padding.6</code></strong> (alias <code>foundation.dimension.6</code>) — único valor entre <code>xs</code> (4) e <code>sm</code> (8) na escala. Segue padrão de <code>space.control.padding.10</code> (ADR-006/015).</li>
-<li><strong>CSS atualizado</strong>: <code>.ds-btn__icon</code> default 20→24, sm 16→20, lg sem mudança. Material Symbols glyph idem. <code>.ds-btn--icon-only</code> ganha paddings por size em vez de <code>padding: 0</code>.</li>
+<li><strong>CSS atualizado</strong>: <code>.ds-button__icon</code> default 20→24, sm 16→20, lg sem mudança. Material Symbols glyph idem. <code>.ds-button--icon-only</code> ganha paddings por size em vez de <code>padding: 0</code>.</li>
 <li>Decidido como P1-3 da auditoria.</li>
 </ul>
 </li>
@@ -338,7 +386,7 @@
 </ul>
 <h3>Mudado</h3>
 <ul>
-<li><strong>Modal Cancel button no Figma</strong> rebindado em todas as 3 variants (Sm/Md/Lg): label color e glyph fills de <code>link/content/default</code> → <code>ghost/content/default</code>. Cancel volta a ser visualmente Ghost neutral (alinha com <code>.ds-btn--ghost</code> já em uso no CSS).</li>
+<li><strong>Modal Cancel button no Figma</strong> rebindado em todas as 3 variants (Sm/Md/Lg): label color e glyph fills de <code>link/content/default</code> → <code>ghost/content/default</code>. Cancel volta a ser visualmente Ghost neutral (alinha com <code>.ds-button--ghost</code> já em uso no CSS).</li>
 <li><strong>Capa Figma</strong>: badge versão <code>v1.0.0-beta.1</code> → <code>v1.0.0-beta.3</code> (pulou beta.2). Estilos de Texto count <code>25 → 29</code> (+4 link styles).</li>
 <li><strong>Changelog Figma</strong>: nova entrada <code>v1.0.0-beta.3 — Abril 2026</code> com 7 bullets.</li>
 </ul>
@@ -353,15 +401,15 @@
 </ul>
 <h3>Removido</h3>
 <ul>
-<li><strong><code>.ds-btn--link</code> variant</strong> revertido de <code>css/components/button.css</code>. Adicionado erroneamente em beta.2 — Link não é Button variant (overlap com Ghost), é text style. Substituído por <code>.ds-link</code> em arquivo dedicado.</li>
+<li><strong><code>.ds-button--link</code> variant</strong> revertido de <code>css/components/button.css</code>. Adicionado erroneamente em beta.2 — Link não é Button variant (overlap com Ghost), é text style. Substituído por <code>.ds-link</code> em arquivo dedicado.</li>
 </ul>
 <h3>Sobre versão</h3>
 <p>Beta.3 corrige decisão arquitetural de beta.2 (Link como Button variant) e adiciona pattern correto (Link como text style com estados WCAG/W3C completos). Topbar fixes do owner consolidados nesta release.</p>
 <h2>[1.0.0-beta.2] — 2026-04-27</h2>
-<p>Sincronização Figma↔código: alinhamento de utilities/textStyles per size + nova variant <code>.ds-btn--link</code> espelhando padrão de DS modernos (Material Text Button, Atlassian Link Button, Polaris Plain). Atualização da documentação no Figma (Capa + Changelog) refletindo o estado atual.</p>
+<p>Sincronização Figma↔código: alinhamento de utilities/textStyles per size + nova variant <code>.ds-button--link</code> espelhando padrão de DS modernos (Material Text Button, Atlassian Link Button, Polaris Plain). Atualização da documentação no Figma (Capa + Changelog) refletindo o estado atual.</p>
 <h3>Adicionado</h3>
 <ul>
-<li><strong><code>.ds-btn--link</code> variant</strong> em <code>css/components/button.css</code>: button text-only com cor <code>link/content/default</code>, sem background/border, underline em hover. Cobre o padrão Modal Cancel e ações de baixa ênfase. Espelha Material 3 (Text Button), Atlassian (Link Button), Polaris (Plain), Spectrum (style=text).</li>
+<li><strong><code>.ds-button--link</code> variant</strong> em <code>css/components/button.css</code>: button text-only com cor <code>link/content/default</code>, sem background/border, underline em hover. Cobre o padrão Modal Cancel e ações de baixa ênfase. Espelha Material 3 (Text Button), Atlassian (Link Button), Polaris (Plain), Spectrum (style=text).</li>
 </ul>
 <h3>Mudado</h3>
 <ul>
@@ -373,7 +421,7 @@
 <h3>Documentação</h3>
 <ul>
 <li><strong>Política de versionamento beta</strong> estabilizada: schema <code>1.0.0-beta.N</code> substitui 0.x até decisão do owner pra dropping → <code>1.0.0</code> oficial. Detalhes em <code>docs/process-versioning.md</code>.</li>
-<li><strong>Style=Link variant em Figma</strong> identificado como pendente (~60 variants × Style/Size/State/booleans). Deferido pra sessão dedicada com escopo Figma. CSS já tem <code>.ds-btn--link</code> pronto pra consumir quando variant existir.</li>
+<li><strong>Style=Link variant em Figma</strong> identificado como pendente (~60 variants × Style/Size/State/booleans). Deferido pra sessão dedicada com escopo Figma. CSS já tem <code>.ds-button--link</code> pronto pra consumir quando variant existir.</li>
 </ul>
 <h3>Sobre versão</h3>
 <p>Beta.2 fecha pendências do beta.1 (descrições/counts Figma desatualizados, drift Badge/Radio per size). Próxima beta deve focar em snapshot Figma (CI Figma↔JSON), Style=Link variants no Figma, e brand-principles.md.</p>
@@ -592,7 +640,7 @@
 <li><strong><code>--ds-typography-control-font-size-*</code> → <code>--ds-control-font-size-*</code></strong>: button, input, select, textarea. O Style Dictionary faz strip-layer removendo <code>typography</code>; a doc mantinha o nome pre-strip.</li>
 <li><strong><code>--ds-border-hover</code> → <code>--ds-border-control-hover</code></strong>: select, textarea.</li>
 </ul>
-<p>Também em <code>docs/token-architecture.html</code>: exemplo de component token atualizado de <code>--ds-button-bg-brand-default</code> (inexistente) para <code>--ds-button-background-toned-default</code> (real, criado no PR #18).</p>
+<p>Também em <code>docs/token-architecture.html</code>: exemplo de component token atualizado de <code>--ds-button-bg-brand-default</code> (inexistente) para <code>--ds-button-bg-toned-default</code> (real, criado no PR #18).</p>
 <p>E em <code>docs/brand-principles.md</code>: <code>foundation.color.brand.primary/secondary/accent</code> → <code>foundation.brand.primary/secondary</code> (<code>.accent</code> nunca existiu — só primary e secondary em Foundation; marcado como &quot;não definido&quot; até virar ADR).</p>
 <p><strong>Total: 66 renames em 19 arquivos.</strong> Audit residual: 2 &quot;fantasmas&quot; remanescentes são bad examples didáticos intencionais (<code>--ds-red-600</code> em <code>design-principles.html</code> dizendo &quot;não use&quot; + <code>--ds-color-primary</code> em <code>token-architecture.html</code> dizendo &quot;não colapse&quot;). Ficam.</p>
 <h3>Observações do audit (não aplicadas nesta PR)</h3>
@@ -657,7 +705,7 @@
 <li><strong>Semantic — 31 rebindings</strong>: link/focus/border agora apontam pra <code>semantic.brand.*</code> via alias (antes apontavam direto pra foundation); <code>focus/ring/*</code>, <code>size/control/*</code>, <code>typography/control/*</code>, <code>*.disabled</code>, <code>*.contrast-disabled</code> viraram aliases de foundation (antes eram literais).</li>
 <li><strong>Component — 28 rebindings</strong>: <code>button/input/select/textarea</code> — height, font-size, icon-size, min-target-size viram aliases de <code>semantic.size.control.*</code> e <code>semantic.typography.control.*</code>.</li>
 <li><strong>Component — reestruturado padding</strong>: substituído <code>{comp}/padding/{sm,md,lg}</code> (unificado) por <code>{comp}/padding-x/*</code> + <code>{comp}/padding-y/*</code> em 4 componentes (24 criadas, 12 deletadas).</li>
-<li><strong>Component — 7 criadas</strong>: <code>button/background/toned/{default,hover,active,disabled}</code>, <code>button/foreground/toned/{default,disabled}</code>, <code>skeleton/fill</code>.</li>
+<li><strong>Component — 7 criadas</strong>: <code>button/bg/toned/{default,hover,active,disabled}</code>, <code>button/foreground/toned/{default,disabled}</code>, <code>skeleton/fill</code>.</li>
 <li>Total Figma: <strong>489 variáveis</strong> (era 462) em 4 collections.</li>
 </ul>
 <p><strong>Sync Figma → JSON aplicado (38 VALUE_DRIFT, categoria A):</strong></p>
@@ -771,7 +819,7 @@
 </ul>
 <h3>Corrigido</h3>
 <ul>
-<li><code>scripts/tokens-verify.mjs</code>: função <code>canonicalToCssVar</code> agora espelha exatamente o transform <code>name/strip-layer</code> de <code>build-tokens.mjs</code>. Remove os 65 falsos positivos (<code>foundation.typography.font.*</code> e <code>foundation.color.overlay.*</code>) que mascaravam a saúde real da cadeia Figma → JSON → CSS. <code>npm run verify:tokens</code> agora reporta 0 warnings, 0 erros.</li>
+<li><code>scripts/tokens-verify.mjs</code>: função <code>canônicalToCssVar</code> agora espelha exatamente o transform <code>name/strip-layer</code> de <code>build-tokens.mjs</code>. Remove os 65 falsos positivos (<code>foundation.typography.font.*</code> e <code>foundation.color.overlay.*</code>) que mascaravam a saúde real da cadeia Figma → JSON → CSS. <code>npm run verify:tokens</code> agora reporta 0 warnings, 0 erros.</li>
 </ul>
 <p>Consolidação da documentação como fonte única de verdade. Plano em seis fases executadas na branch <code>consolidation/docs-ground-truth</code>.</p>
 <h3>Alterado</h3>

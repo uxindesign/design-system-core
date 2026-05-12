@@ -1,0 +1,54 @@
+{
+  "component": {
+    "skeleton": {
+      "text": {
+        "height": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{foundation.dimension.12}",
+            "$description": "Altura do Skeleton Text."
+          }
+        },
+        "radius": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.radius.md}",
+            "$description": "Radius do Skeleton Text."
+          }
+        }
+      },
+      "circle": {
+        "size": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.size.xl}",
+            "$description": "Tamanho do Skeleton Circle."
+          }
+        },
+        "radius": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.radius.full}",
+            "$description": "Radius circular do Skeleton Circle."
+          }
+        }
+      },
+      "rectangle": {
+        "height": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{foundation.dimension.120}",
+            "$description": "Altura default do Skeleton Rectangle."
+          }
+        },
+        "radius": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.radius.md}",
+            "$description": "Radius do Skeleton Rectangle."
+          }
+        }
+      }
+    }
+  }
+}

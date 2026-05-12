@@ -1,0 +1,121 @@
+{
+  "component": {
+    "alert": {
+      "padding": {
+        "default": {
+          "$type": "dimension",
+          "$value": "{semantic.space.md}",
+          "$description": "Padding do Alert."
+        }
+      },
+      "gap": {
+        "default": {
+          "$type": "dimension",
+          "$value": "{semantic.space.sm}",
+          "$description": "Gap horizontal do Alert."
+        }
+      },
+      "radius": {
+        "default": {
+          "$type": "dimension",
+          "$value": "{semantic.radius.lg}",
+          "$description": "Radius do Alert."
+        }
+      },
+      "border-width": {
+        "default": {
+          "$type": "dimension",
+          "$value": "{semantic.border.width.default}",
+          "$description": "Border width do Alert quando stroke esta ativo."
+        }
+      },
+      "icon": {
+        "size": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.size.md}",
+            "$description": "Tamanho do container Icon Alert."
+          }
+        },
+        "glyph-size": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.size.sm}",
+            "$description": "Tamanho do glyph Icon Alert."
+          }
+        }
+      },
+      "content": {
+        "gap": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.space.xs}",
+            "$description": "Gap vertical do content Alert."
+          }
+        }
+      },
+      "title": {
+        "font-size": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.font-size.sm}",
+            "$description": "Font-size do title Alert."
+          }
+        },
+        "line-height": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.line-height.sm}",
+            "$description": "Line-height do title Alert."
+          }
+        },
+        "font-weight": {
+          "default": {
+            "$type": "number",
+            "$value": "{semantic.typography.body.font-weight.bold}",
+            "$description": "Font-weight do title Alert."
+          }
+        }
+      },
+      "description": {
+        "font-size": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.font-size.sm}",
+            "$description": "Font-size da description Alert."
+          }
+        },
+        "line-height": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.line-height.sm}",
+            "$description": "Line-height da description Alert."
+          }
+        },
+        "font-weight": {
+          "default": {
+            "$type": "number",
+            "$value": "{semantic.typography.body.font-weight.regular}",
+            "$description": "Font-weight da description Alert."
+          }
+        }
+      },
+      "close": {
+        "size": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.size.md}",
+            "$description": "Tamanho do container Close Alert."
+          }
+        },
+        "glyph-size": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.size.sm}",
+            "$description": "Tamanho do glyph Close Alert."
+          }
+        }
+      }
+    }
+  }
+}

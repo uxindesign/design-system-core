@@ -1,22 +1,5 @@
 {
   "semantic": {
-    "control": {
-      "toggle": {
-        "height": {
-          "sm": { "$type": "dimension", "$value": "{foundation.dimension.16}" },
-          "md": { "$type": "dimension", "$value": "{foundation.dimension.24}" },
-          "lg": { "$type": "dimension", "$value": "{foundation.dimension.32}" }
-        },
-        "width": {
-          "sm": { "$type": "dimension", "$value": "{foundation.dimension.28}" },
-          "md": { "$type": "dimension", "$value": "{foundation.dimension.44}" },
-          "lg": { "$type": "dimension", "$value": "{foundation.dimension.56}" }
-        },
-        "thumb": {
-          "gap": { "$type": "dimension", "$value": "{foundation.dimension.2}" }
-        }
-      }
-    },
     "primary": {
       "$description": "Ação primária (brand solid). ADR-014.",
       "content-default": {
@@ -899,6 +882,11 @@
       }
     },
     "z": {
+      "modal": {
+        "$type": "number",
+        "$value": "{foundation.z.40}",
+        "$description": "Stack layer para modais e overlays bloqueantes."
+      },
       "tooltip": {
         "$type": "number",
         "$value": "{foundation.z.40}",

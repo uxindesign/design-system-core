@@ -1,0 +1,29 @@
+{
+  "component": {
+    "divider": {
+      "line": {
+        "color": {
+          "default": {
+            "$type": "color",
+            "$value": "{semantic.border.subtle}",
+            "$description": "Cor da linha do Divider."
+          }
+        },
+        "thickness": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.border.width.default}",
+            "$description": "Espessura da linha do Divider."
+          }
+        },
+        "radius": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.radius.md}",
+            "$description": "Raio da linha do Divider."
+          }
+        }
+      }
+    }
+  }
+}

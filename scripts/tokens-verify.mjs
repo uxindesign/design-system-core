@@ -180,12 +180,13 @@ function checkJsonIntegrity(lightAll, darkAll) {
 }
 
 // -----------------------------------------------------------------------------
-// 1b. CSS foundation leak — ADR-013 (atualizado pra 2-layer + naming numérico, 0.7.0)
+// 1b. CSS foundation leak — ADR-013/019
 //
 // Component CSS (`css/components/*.css`) e base CSS (`css/base/*.css`) não
-// podem consumir tokens Foundation direto. Só Semantic.
+// podem consumir tokens Foundation direto. Componentes migrados consomem
+// Component; componentes ainda não migrados podem consumir Semantic direto.
 //
-// Pós-migração 2-layer (0.7.0):
+// Pós-migração 2-layer (0.7.0) + reintrodução Component (ADR-019):
 //   Foundation usa naming NUMÉRICO   (radius-8, spacing-16, font-size-14)
 //   Semantic   usa naming T-SHIRT    (radius-md, space-sm, body-font-size-sm)
 //
@@ -612,7 +613,7 @@ function writeHtmlReport(report) {
       <option value="pt">PT</option>
       <option value="en">EN</option>
     </select>
-    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg> Dark</button>
+    <button class="ds-button ds-button--ghost ds-button--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg> Dark</button>
   </div>
 </header>
 <div class="ds-sidebar-overlay" id="sidebar-overlay"></div>

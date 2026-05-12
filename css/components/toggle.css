@@ -8,17 +8,20 @@
  * e o conteúdo (Label + Desc + Helper) fica à direita em uma coluna flex.
  * Alinhamento é sempre TOP (flex-start) para suportar textos multilinha.
  *
- * ESCALA DIMENSIONAL (ADR-013/015):
+ * ESCALA DIMENSIONAL (ADR-013/015/019):
  * Proporção corrigida (aprox 1.8x - 2x):
- * Sm: 32x16px | Md: 44x24px | Lg: 56x32px (Grade 4px).
+ * Sm: 28x16px | Md: 44x24px | Lg: 56x32px (Grade 4px).
  */
 
 .ds-toggle-label {
+  --toggle-target-height: var(--ds-toggle-target-height-md);
+
   display: inline-flex;
   align-items: flex-start;
   gap: var(--ds-space-sm);
   cursor: pointer;
   padding: var(--ds-space-xs);
+  min-height: var(--toggle-target-height);
   border-radius: var(--ds-radius-sm);
   color: var(--ds-content-strong);
   transition: background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
@@ -42,10 +45,9 @@
   transition: background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
               border-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
 
-  /* Variáveis internas baseadas nos novos Semantic Control Tokens */
-  --toggle-height: var(--ds-control-toggle-height-md); /* 24px */
-  --toggle-width: var(--ds-control-toggle-width-md);   /* 44px */
-  --thumb-gap: var(--ds-control-toggle-thumb-gap);     /* 2px */
+  --toggle-height: var(--ds-toggle-track-height-md);
+  --toggle-width: var(--ds-toggle-track-width-md);
+  --thumb-gap: var(--ds-toggle-thumb-inset-default);
   
   /* Thumb size calculado: Altura total - (2 * gap) - (2 * border) */
   --thumb-size: calc(var(--toggle-height) - (var(--thumb-gap) * 2) - (var(--ds-border-width-default) * 2));
@@ -64,7 +66,7 @@
   height: var(--thumb-size);
   border-radius: var(--ds-radius-full);
   background-color: var(--ds-content-default);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--ds-shadow-card);
   transition: transform var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
               background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
 }
@@ -112,16 +114,24 @@
    Sizes (Figma Specs - Grid 4px)
    --------------------------------------------------------- */
 
-/* Small (32x16px) */
+/* Small (28x16px) */
+.ds-toggle-label:has(.ds-toggle--sm) {
+  --toggle-target-height: var(--ds-toggle-target-height-sm);
+}
+
 .ds-toggle--sm {
-  --toggle-height: var(--ds-control-toggle-height-sm); /* 16px */
-  --toggle-width: var(--ds-control-toggle-width-sm);   /* 32px */
+  --toggle-height: var(--ds-toggle-track-height-sm);
+  --toggle-width: var(--ds-toggle-track-width-sm);
 }
 
 /* Large (56x32px) */
+.ds-toggle-label:has(.ds-toggle--lg) {
+  --toggle-target-height: var(--ds-toggle-target-height-lg);
+}
+
 .ds-toggle--lg {
-  --toggle-height: var(--ds-control-toggle-height-lg); /* 32px */
-  --toggle-width: var(--ds-control-toggle-width-lg);   /* 56px */
+  --toggle-height: var(--ds-toggle-track-height-lg);
+  --toggle-width: var(--ds-toggle-track-width-lg);
 }
 
 /* ---------------------------------------------------------
@@ -133,7 +143,6 @@
   flex-direction: column;
   gap: var(--ds-space-xs);
   min-width: 0;
-  padding-top: 2px;
 }
 
 /* Label text (label/md: 14px bold) */

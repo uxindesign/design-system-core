@@ -1,12 +1,12 @@
 {
   "version": "1.0.0-beta.4",
   "totals": {
-    "jsonTokens": 619,
-    "sharedTokens": 265,
-    "lightTokens": 177,
-    "darkTokens": 177,
-    "errors": 8,
-    "warnings": 2
+    "jsonTokens": 927,
+    "sharedTokens": 579,
+    "lightTokens": 174,
+    "darkTokens": 174,
+    "errors": 0,
+    "warnings": 1
   },
   "checks": {
     "jsonIntegrity": [],
@@ -15,140 +15,34 @@
     "registryCompleteness": [
       {
         "level": "warning",
-        "message": "4 entries com campos TODO (sentido/contexto/decisao). Preencha incrementalmente.",
+        "message": "2 entries com campos TODO (sentido/contexto/decisao). Preencha incrementalmente.",
         "sample": [
-          "semantic.control.toggle.height.sm",
-          "semantic.control.toggle.height.md",
-          "semantic.control.toggle.height.lg",
-          "semantic.control.toggle.thumb.gap"
+          "component.button.focus-ring.color.success",
+          "component.button.focus-ring.color.danger"
         ]
       }
     ],
     "docTokenDrift": [],
     "jsonVsFigma": {
       "skipped": false,
-      "snapshotAge": "32h",
-      "snapshotFreshness": "stale",
+      "snapshotAge": "0h",
+      "snapshotFreshness": "fresh",
       "snapshotMaxAgeHours": 24,
       "summary": {
-        "figmaVariableCount": 392,
-        "figmaCollectionCount": 2,
+        "figmaVariableCount": 685,
+        "figmaCollectionCount": 3,
         "VALUE_DRIFT": 0,
         "NEEDS_SYNC": 0,
-        "DRIFT_FROM_SOURCE": 8,
+        "DRIFT_FROM_SOURCE": 0,
         "ALIAS_BROKEN": 0,
         "CSS_ONLY": 7,
-        "BY_DESIGN": 118
+        "BY_DESIGN": 141
       },
-      "divergences": [
-        {
-          "level": "warning",
-          "category": "STALE_SNAPSHOT",
-          "token": ".figma-snapshot.json",
-          "message": "snapshot Figma tem 32h (> 24h). Regenerar via use_figma antes de concluir sync/release."
-        },
-        {
-          "level": "error",
-          "category": "DRIFT_FROM_SOURCE",
-          "token": "semantic.control.toggle.height.sm",
-          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
-          "json": "{foundation.dimension.16}"
-        },
-        {
-          "level": "error",
-          "category": "DRIFT_FROM_SOURCE",
-          "token": "semantic.control.toggle.height.md",
-          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
-          "json": "{foundation.dimension.24}"
-        },
-        {
-          "level": "error",
-          "category": "DRIFT_FROM_SOURCE",
-          "token": "semantic.control.toggle.height.lg",
-          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
-          "json": "{foundation.dimension.32}"
-        },
-        {
-          "level": "error",
-          "category": "DRIFT_FROM_SOURCE",
-          "token": "semantic.control.toggle.thumb.gap",
-          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
-          "json": "{foundation.dimension.2}"
-        },
-        {
-          "level": "error",
-          "category": "DRIFT_FROM_SOURCE",
-          "token": "semantic.control.toggle.height.sm",
-          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
-          "json": "{foundation.dimension.16}"
-        },
-        {
-          "level": "error",
-          "category": "DRIFT_FROM_SOURCE",
-          "token": "semantic.control.toggle.height.md",
-          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
-          "json": "{foundation.dimension.24}"
-        },
-        {
-          "level": "error",
-          "category": "DRIFT_FROM_SOURCE",
-          "token": "semantic.control.toggle.height.lg",
-          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
-          "json": "{foundation.dimension.32}"
-        },
-        {
-          "level": "error",
-          "category": "DRIFT_FROM_SOURCE",
-          "token": "semantic.control.toggle.thumb.gap",
-          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
-          "json": "{foundation.dimension.2}"
-        }
-      ],
+      "divergences": [],
       "diffs": {
         "VALUE_DRIFT": [],
         "NEW_IN_FIGMA": [],
-        "MISSING_IN_FIGMA": [
-          {
-            "file": "semantic/light.json",
-            "token": "semantic.control.toggle.height.sm",
-            "json": "{foundation.dimension.16}"
-          },
-          {
-            "file": "semantic/light.json",
-            "token": "semantic.control.toggle.height.md",
-            "json": "{foundation.dimension.24}"
-          },
-          {
-            "file": "semantic/light.json",
-            "token": "semantic.control.toggle.height.lg",
-            "json": "{foundation.dimension.32}"
-          },
-          {
-            "file": "semantic/light.json",
-            "token": "semantic.control.toggle.thumb.gap",
-            "json": "{foundation.dimension.2}"
-          },
-          {
-            "file": "semantic/dark.json",
-            "token": "semantic.control.toggle.height.sm",
-            "json": "{foundation.dimension.16}"
-          },
-          {
-            "file": "semantic/dark.json",
-            "token": "semantic.control.toggle.height.md",
-            "json": "{foundation.dimension.24}"
-          },
-          {
-            "file": "semantic/dark.json",
-            "token": "semantic.control.toggle.height.lg",
-            "json": "{foundation.dimension.32}"
-          },
-          {
-            "file": "semantic/dark.json",
-            "token": "semantic.control.toggle.thumb.gap",
-            "json": "{foundation.dimension.2}"
-          }
-        ],
+        "MISSING_IN_FIGMA": [],
         "CSS_ONLY": [
           {
             "file": "foundation/typography.json",
@@ -729,6 +623,12 @@
           },
           {
             "file": "semantic/light.json",
+            "token": "semantic.z.modal",
+            "side": "json-only",
+            "json": "{foundation.z.40}"
+          },
+          {
+            "file": "semantic/light.json",
             "token": "semantic.z.tooltip",
             "side": "json-only",
             "json": "{foundation.z.40}"
@@ -932,9 +832,141 @@
           },
           {
             "file": "semantic/dark.json",
+            "token": "semantic.z.modal",
+            "side": "json-only",
+            "json": "{foundation.z.40}"
+          },
+          {
+            "file": "semantic/dark.json",
             "token": "semantic.z.tooltip",
             "side": "json-only",
             "json": "{foundation.z.40}"
+          },
+          {
+            "file": "component/modal.json",
+            "token": "component.modal.overlay.z-index.default",
+            "side": "json-only-downstream",
+            "json": "{semantic.z.modal}"
+          },
+          {
+            "file": "component/modal.json",
+            "token": "component.modal.shadow.default",
+            "side": "json-only-downstream",
+            "json": "{semantic.shadow.modal}"
+          },
+          {
+            "file": "component/form-field.json",
+            "token": "component.form-field.gap.default",
+            "side": "json-only",
+            "json": "{semantic.space.xs}"
+          },
+          {
+            "file": "component/form-field.json",
+            "token": "component.form-field.label-row.gap.default",
+            "side": "json-only",
+            "json": "{semantic.space.2xs}"
+          },
+          {
+            "file": "component/form-field.json",
+            "token": "component.form-field.label.color.default",
+            "side": "json-only",
+            "json": "{semantic.content.strong}"
+          },
+          {
+            "file": "component/form-field.json",
+            "token": "component.form-field.label.color.error",
+            "side": "json-only",
+            "json": "{semantic.feedback.error.content-default}"
+          },
+          {
+            "file": "component/form-field.json",
+            "token": "component.form-field.label.font-size.default",
+            "side": "json-only",
+            "json": "{semantic.typography.body.font-size.sm}"
+          },
+          {
+            "file": "component/form-field.json",
+            "token": "component.form-field.label.line-height.default",
+            "side": "json-only",
+            "json": "{semantic.typography.body.line-height.sm}"
+          },
+          {
+            "file": "component/form-field.json",
+            "token": "component.form-field.label.font-weight.default",
+            "side": "json-only",
+            "json": "{semantic.typography.body.font-weight.bold}"
+          },
+          {
+            "file": "component/form-field.json",
+            "token": "component.form-field.required.color.default",
+            "side": "json-only",
+            "json": "{semantic.feedback.error.content-default}"
+          },
+          {
+            "file": "component/form-field.json",
+            "token": "component.form-field.required.font-size.default",
+            "side": "json-only",
+            "json": "{semantic.typography.body.font-size.sm}"
+          },
+          {
+            "file": "component/form-field.json",
+            "token": "component.form-field.required.line-height.default",
+            "side": "json-only",
+            "json": "{semantic.typography.body.line-height.sm}"
+          },
+          {
+            "file": "component/form-field.json",
+            "token": "component.form-field.required.font-weight.default",
+            "side": "json-only",
+            "json": "{semantic.typography.body.font-weight.bold}"
+          },
+          {
+            "file": "component/form-field.json",
+            "token": "component.form-field.helper.color.default",
+            "side": "json-only",
+            "json": "{semantic.content.default}"
+          },
+          {
+            "file": "component/form-field.json",
+            "token": "component.form-field.helper.font-size.default",
+            "side": "json-only",
+            "json": "{semantic.typography.body.font-size.xs}"
+          },
+          {
+            "file": "component/form-field.json",
+            "token": "component.form-field.helper.line-height.default",
+            "side": "json-only",
+            "json": "{semantic.typography.body.line-height.xs}"
+          },
+          {
+            "file": "component/form-field.json",
+            "token": "component.form-field.helper.font-weight.default",
+            "side": "json-only",
+            "json": "{semantic.typography.body.font-weight.regular}"
+          },
+          {
+            "file": "component/form-field.json",
+            "token": "component.form-field.error.color.default",
+            "side": "json-only",
+            "json": "{semantic.feedback.error.content-default}"
+          },
+          {
+            "file": "component/form-field.json",
+            "token": "component.form-field.error.font-size.default",
+            "side": "json-only",
+            "json": "{semantic.typography.body.font-size.xs}"
+          },
+          {
+            "file": "component/form-field.json",
+            "token": "component.form-field.error.line-height.default",
+            "side": "json-only",
+            "json": "{semantic.typography.body.line-height.xs}"
+          },
+          {
+            "file": "component/form-field.json",
+            "token": "component.form-field.error.font-weight.default",
+            "side": "json-only",
+            "json": "{semantic.typography.body.font-weight.bold}"
           }
         ]
       }

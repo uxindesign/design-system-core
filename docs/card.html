@@ -27,7 +27,7 @@
       <option value="pt">PT</option>
       <option value="en">EN</option>
     </select>
-    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg> Dark</button>
+    <button class="ds-button ds-button--ghost ds-button--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg> Dark</button>
   </div>
 </header>
 <div class="ds-sidebar-overlay" id="sidebar-overlay"></div>
@@ -313,16 +313,21 @@
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Mapeamento de tokens</span><span data-lang="en">Token mapping</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token (semantic)</th><th><span data-lang="pt">Variável CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token</th><th><span data-lang="pt">Variável CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
       <tbody>
         <tr><td>background</td><td><code>semantic.surface.default</code></td><td><code>--ds-surface-default</code></td></tr>
         <tr><td>background (elevated variant)</td><td><code>semantic.surface.raised</code></td><td><code>--ds-surface-raised</code></td></tr>
         <tr><td>border (default variant)</td><td><code>semantic.border.subtle</code></td><td><code>--ds-border-subtle</code></td></tr>
         <tr><td>border (outlined variant)</td><td><code>semantic.border.default</code></td><td><code>--ds-border-default</code></td></tr>
         <tr><td>shadow (elevated)</td><td><code>semantic.shadow.card</code></td><td><code>--ds-shadow-card</code></td></tr>
-        <tr><td>border-radius</td><td><code>semantic.radius.lg</code></td><td><code>--ds-radius-lg</code></td></tr>
-        <tr><td><code>.ds-card__header</code> padding</td><td><code>semantic.space.lg</code> / <code>semantic.space.sm</code></td><td><code>--ds-space-lg</code> / <code>--ds-space-sm</code></td></tr>
-        <tr><td><code>.ds-card__body</code> padding</td><td><code>semantic.space.lg</code></td><td><code>--ds-space-lg</code></td></tr>
+        <tr><td>border-radius</td><td><code>component.card.radius.default</code></td><td><code>--ds-card-radius-default</code></td></tr>
+        <tr><td>border-width</td><td><code>component.card.border-width.default</code></td><td><code>--ds-card-border-width-default</code></td></tr>
+        <tr><td><code>.ds-card__header</code> padding</td><td><code>component.card.header.padding-*</code></td><td><code>--ds-card-header-padding-*-default</code></td></tr>
+        <tr><td><code>.ds-card__header</code> gap</td><td><code>component.card.header.gap.default</code></td><td><code>--ds-card-header-gap-default</code></td></tr>
+        <tr><td><code>.ds-card__body</code> padding</td><td><code>component.card.body.padding-*</code></td><td><code>--ds-card-body-padding-*-default</code></td></tr>
+        <tr><td><code>.ds-card__title</code> typography</td><td><code>component.card.title.{font-size,line-height,font-weight}.default</code></td><td><code>--ds-card-title-*-default</code></td></tr>
+        <tr><td><code>.ds-card__subtitle</code> typography</td><td><code>component.card.subtitle.{font-size,line-height,font-weight}.default</code></td><td><code>--ds-card-subtitle-*-default</code></td></tr>
+        <tr><td><code>.ds-card__body</code> typography</td><td><code>component.card.body.{font-size,line-height,font-weight}.default</code></td><td><code>--ds-card-body-*-default</code></td></tr>
       </tbody>
     </table>
   </div>

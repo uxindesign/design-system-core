@@ -67,7 +67,7 @@ const adrs = adrFiles.map((f) => {
 const COMPONENTS = [
   "button", "input", "textarea", "select", "checkbox", "radio", "toggle",
   "badge", "alert", "card", "modal", "tooltip", "tabs", "breadcrumb",
-  "avatar", "divider", "spinner", "skeleton",
+  "avatar", "divider", "form-field", "spinner", "skeleton",
 ];
 
 const FOUNDATIONS = [
@@ -95,7 +95,7 @@ Arquivo completo para LLMs: ${BASE_URL}/docs/llms-full.txt
 
 - [Home](${BASE_URL}/index.html): visão rápida, quick start e dark mode.
 - [README](https://github.com/uxindesign/design-system-core/blob/main/README.md): instalação e navegação.
-- [Token Architecture](${BASE_URL}/docs/token-architecture.html): arquitetura 2-layer (Foundation → Semantic).
+- [Token Architecture](${BASE_URL}/docs/token-architecture.html): arquitetura 3-layer (Foundation/Core → Semantic/System → Component).
 - [Theming](${BASE_URL}/docs/theming.html): como customizar brand e alternar modo.
 - [Accessibility](${BASE_URL}/docs/accessibility.html): WCAG 2.2 AA aplicada.
 - [Design Principles](${BASE_URL}/docs/design-principles.html): princípios do sistema.
@@ -127,7 +127,7 @@ ${adrs.map((a) => `- [ADR-${a.num} — ${a.title}](${BASE_URL}/docs/decisions/${
 ## APIs JSON (consumo programático)
 
 - [components.json](${BASE_URL}/docs/api/components.json): 19 componentes com variantes e tokens consumidos.
-- [tokens.json](${BASE_URL}/docs/api/tokens.json): camadas Foundation e Semantic (light/dark).
+- [tokens.json](${BASE_URL}/docs/api/tokens.json): camadas Foundation, Semantic (light/dark) e Component.
 - [adrs.json](${BASE_URL}/docs/api/adrs.json): índice estruturado das decisões.
 - [foundations.json](${BASE_URL}/docs/api/foundations.json): catálogo das 10 foundations.
 - [tokens-sync.json](${BASE_URL}/docs/api/tokens-sync.json): estado de coerência Figma ↔ JSON ↔ CSS.
@@ -175,11 +175,12 @@ for (const adr of adrs) {
 // Resumo de tokens
 const tokensMd = `
 Total por camada (ver docs/api/tokens.json para valores completos).
-Arquitetura **2-layer** desde 0.7.0 — Component collection eliminada.
+Arquitetura **3-layer** desde ADR-019: Foundation/Core -> Semantic/System -> Component.
 
 - Foundation: ver \`tokens/foundation/\`
 - Semantic (light): ver \`tokens/semantic/light.json\`
 - Semantic (dark): ver \`tokens/semantic/dark.json\`
+- Component: ver \`tokens/component/\` quando a migracao incremental materializar tokens de componente
 
 Formato canônico: DTCG (Design Token Community Group).
 Transformação: \`build-tokens.mjs\` usa Style Dictionary pra gerar \`css/tokens/generated/*.css\`.

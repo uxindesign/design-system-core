@@ -1,0 +1,23 @@
+{
+  "component": {
+    "select": {
+      "height": {
+        "sm": {
+          "$type": "dimension",
+          "$value": "{semantic.size.lg}",
+          "$description": "Altura do superfície principal visual Select sm."
+        },
+        "md": {
+          "$type": "dimension",
+          "$value": "{semantic.size.xl}",
+          "$description": "Altura do superfície principal visual Select md."
+        },
+        "lg": {
+          "$type": "dimension",
+          "$value": "{semantic.size.2xl}",
+          "$description": "Altura do superfície principal visual Select lg."
+        }
+      }
+    }
+  }
+}

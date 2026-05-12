@@ -27,7 +27,7 @@
       <option value="pt">PT</option>
       <option value="en">EN</option>
     </select>
-    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg> Dark</button>
+    <button class="ds-button ds-button--ghost ds-button--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg> Dark</button>
   </div>
 </header>
 <div class="ds-sidebar-overlay" id="sidebar-overlay"></div>
@@ -71,14 +71,14 @@
           <div class="ds-modal ds-modal--sm" role="dialog" aria-modal="true" aria-labelledby="anatomy-modal-title" style="position:relative;width:100%;">
             <div class="ds-modal__header">
               <h3 id="anatomy-modal-title" class="ds-modal__title">Delete item</h3>
-              <button class="ds-modal__close" aria-label="Close modal" tabindex="-1"><span class="material-symbols-outlined" style="font-size:var(--ds-size-sm)">close</span></button>
+              <button class="ds-modal__close" aria-label="Close modal" tabindex="-1"><span class="material-symbols-outlined">close</span></button>
             </div>
             <div class="ds-modal__body">
               <p style="margin:0;">Are you sure? This action cannot be undone.</p>
             </div>
             <div class="ds-modal__footer">
-              <button class="ds-btn ds-btn--ghost ds-btn--sm" tabindex="-1">Cancel</button>
-              <button class="ds-btn ds-btn--danger ds-btn--sm" tabindex="-1">Delete</button>
+              <button class="ds-button ds-button--ghost ds-button--sm" tabindex="-1">Cancel</button>
+              <button class="ds-button ds-button--danger ds-button--sm" tabindex="-1">Delete</button>
             </div>
           </div>
         </div>
@@ -125,15 +125,15 @@
           <div class="ds-modal-overlay" style="position:relative;background:var(--ds-background-overlay);border-radius:var(--ds-radius-lg);padding:var(--ds-space-section-sm);display:flex;align-items:center;justify-content:center;width:100%;">
             <div class="ds-modal ds-modal--sm" role="dialog" aria-modal="true" aria-labelledby="modal-sm-title" style="position:relative;width:100%;">
               <div class="ds-modal__header">
-                <h3 id="modal-sm-title" style="margin:0;">Delete item</h3>
-                <button class="ds-modal__close" aria-label="Close modal"><span class="material-symbols-outlined" style="font-size:var(--ds-size-sm)">close</span></button>
+                <h3 id="modal-sm-title" class="ds-modal__title">Delete item</h3>
+                <button class="ds-modal__close" aria-label="Close modal"><span class="material-symbols-outlined">close</span></button>
               </div>
               <div class="ds-modal__body">
                 <p style="margin:0;">Are you sure you want to delete this item? This action cannot be undone.</p>
               </div>
               <div class="ds-modal__footer">
-                <button class="ds-btn ds-btn--ghost ds-btn--sm">Cancel</button>
-                <button class="ds-btn ds-btn--danger ds-btn--sm">Delete</button>
+                <button class="ds-button ds-button--ghost ds-button--sm">Cancel</button>
+                <button class="ds-button ds-button--danger ds-button--sm">Delete</button>
               </div>
             </div>
           </div>
@@ -146,16 +146,16 @@
   &lt;div class="ds-modal ds-modal--sm" role="dialog"
        aria-modal="true" aria-labelledby="modal-title"&gt;
     &lt;div class="ds-modal__header"&gt;
-      &lt;h3 id="modal-title"&gt;Delete item&lt;/h3&gt;
-      &lt;button class="ds-btn ds-btn--ghost ds-btn--sm ds-btn--icon-only"
+      &lt;h3 id="modal-title" class="ds-modal__title"&gt;Delete item&lt;/h3&gt;
+      &lt;button class="ds-button ds-button--ghost ds-button--sm ds-button--icon-only"
               aria-label="Close modal"&gt;&amp;times;&lt;/button&gt;
     &lt;/div&gt;
     &lt;div class="ds-modal__body"&gt;
       &lt;p&gt;Are you sure? This action cannot be undone.&lt;/p&gt;
     &lt;/div&gt;
     &lt;div class="ds-modal__footer"&gt;
-      &lt;button class="ds-btn ds-btn--ghost ds-btn--sm"&gt;Cancel&lt;/button&gt;
-      &lt;button class="ds-btn ds-btn--danger ds-btn--sm"&gt;Delete&lt;/button&gt;
+      &lt;button class="ds-button ds-button--ghost ds-button--sm"&gt;Cancel&lt;/button&gt;
+      &lt;button class="ds-button ds-button--danger ds-button--sm"&gt;Delete&lt;/button&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
@@ -176,16 +176,16 @@
           <div class="ds-modal-overlay" style="position:relative;background:var(--ds-background-overlay);border-radius:var(--ds-radius-lg);padding:var(--ds-space-section-sm);display:flex;align-items:center;justify-content:center;width:100%;">
             <div class="ds-modal ds-modal--md" role="dialog" aria-modal="true" aria-labelledby="modal-md-title" style="position:relative;width:100%;">
               <div class="ds-modal__header">
-                <h3 id="modal-md-title" style="margin:0;">Edit profile</h3>
-                <button class="ds-modal__close" aria-label="Close modal"><span class="material-symbols-outlined" style="font-size:var(--ds-size-sm)">close</span></button>
+                <h3 id="modal-md-title" class="ds-modal__title">Edit profile</h3>
+                <button class="ds-modal__close" aria-label="Close modal"><span class="material-symbols-outlined">close</span></button>
               </div>
               <div class="ds-modal__body">
                 <p style="margin:0 0 var(--ds-space-md);">Update your personal information below. Changes will be saved immediately.</p>
                 <input class="ds-input__field" type="text" placeholder="Full name" style="width:100%;">
               </div>
               <div class="ds-modal__footer">
-                <button class="ds-btn ds-btn--ghost">Cancel</button>
-                <button class="ds-btn ds-btn--brand">Save changes</button>
+                <button class="ds-button ds-button--ghost">Cancel</button>
+                <button class="ds-button ds-button--brand">Save changes</button>
               </div>
             </div>
           </div>
@@ -198,7 +198,7 @@
   &lt;div class="ds-modal ds-modal--md" role="dialog"
        aria-modal="true" aria-labelledby="modal-title"&gt;
     &lt;div class="ds-modal__header"&gt;
-      &lt;h3 id="modal-title"&gt;Edit profile&lt;/h3&gt;
+      &lt;h3 id="modal-title" class="ds-modal__title"&gt;Edit profile&lt;/h3&gt;
       &lt;button aria-label="Close modal"&gt;&amp;times;&lt;/button&gt;
     &lt;/div&gt;
     &lt;div class="ds-modal__body"&gt;
@@ -206,8 +206,8 @@
       &lt;input type="text" placeholder="Full name"&gt;
     &lt;/div&gt;
     &lt;div class="ds-modal__footer"&gt;
-      &lt;button class="ds-btn ds-btn--ghost"&gt;Cancel&lt;/button&gt;
-      &lt;button class="ds-btn ds-btn--brand"&gt;Save changes&lt;/button&gt;
+      &lt;button class="ds-button ds-button--ghost"&gt;Cancel&lt;/button&gt;
+      &lt;button class="ds-button ds-button--brand"&gt;Save changes&lt;/button&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
@@ -228,16 +228,16 @@
           <div class="ds-modal-overlay" style="position:relative;background:var(--ds-background-overlay);border-radius:var(--ds-radius-lg);padding:var(--ds-space-section-sm);display:flex;align-items:center;justify-content:center;width:100%;">
             <div class="ds-modal ds-modal--lg" role="dialog" aria-modal="true" aria-labelledby="modal-lg-title" style="position:relative;width:100%;">
               <div class="ds-modal__header">
-                <h3 id="modal-lg-title" style="margin:0;">Terms of service</h3>
-                <button class="ds-modal__close" aria-label="Close modal"><span class="material-symbols-outlined" style="font-size:var(--ds-size-sm)">close</span></button>
+                <h3 id="modal-lg-title" class="ds-modal__title">Terms of service</h3>
+                <button class="ds-modal__close" aria-label="Close modal"><span class="material-symbols-outlined">close</span></button>
               </div>
               <div class="ds-modal__body">
                 <p style="margin:0 0 var(--ds-space-sm);">Please read and accept the following terms before continuing. By using our service you agree to comply with all policies outlined in this document.</p>
                 <p style="margin:0;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
               </div>
               <div class="ds-modal__footer">
-                <button class="ds-btn ds-btn--ghost ds-btn--lg">Cancel</button>
-                <button class="ds-btn ds-btn--brand ds-btn--lg">Accept terms</button>
+                <button class="ds-button ds-button--ghost ds-button--lg">Cancel</button>
+                <button class="ds-button ds-button--brand ds-button--lg">Accept terms</button>
               </div>
             </div>
           </div>
@@ -250,15 +250,15 @@
   &lt;div class="ds-modal ds-modal--lg" role="dialog"
        aria-modal="true" aria-labelledby="modal-title"&gt;
     &lt;div class="ds-modal__header"&gt;
-      &lt;h3 id="modal-title"&gt;Terms of service&lt;/h3&gt;
+      &lt;h3 id="modal-title" class="ds-modal__title"&gt;Terms of service&lt;/h3&gt;
       &lt;button aria-label="Close modal"&gt;&amp;times;&lt;/button&gt;
     &lt;/div&gt;
     &lt;div class="ds-modal__body"&gt;
       &lt;p&gt;Please read and accept the terms...&lt;/p&gt;
     &lt;/div&gt;
     &lt;div class="ds-modal__footer"&gt;
-      &lt;button class="ds-btn ds-btn--ghost ds-btn--lg"&gt;Cancel&lt;/button&gt;
-      &lt;button class="ds-btn ds-btn--brand ds-btn--lg"&gt;Accept terms&lt;/button&gt;
+      &lt;button class="ds-button ds-button--ghost ds-button--lg"&gt;Cancel&lt;/button&gt;
+      &lt;button class="ds-button ds-button--brand ds-button--lg"&gt;Accept terms&lt;/button&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
@@ -277,8 +277,8 @@
       <div class="ds-dodont__item">
         <div class="ds-dodont__preview" style="flex-direction:column;">
           <div style="display:flex;gap:var(--ds-space-md);">
-            <button class="ds-btn ds-btn--ghost ds-btn--sm">Cancel</button>
-            <button class="ds-btn ds-btn--brand ds-btn--sm">Save changes</button>
+            <button class="ds-button ds-button--ghost ds-button--sm">Cancel</button>
+            <button class="ds-button ds-button--brand ds-button--sm">Save changes</button>
           </div>
         </div>
         <div class="ds-dodont__label ds-dodont__label--do">Faça</div>
@@ -287,8 +287,8 @@
       <div class="ds-dodont__item">
         <div class="ds-dodont__preview" style="flex-direction:column;">
           <div style="display:flex;gap:var(--ds-space-md);">
-            <button class="ds-btn ds-btn--brand ds-btn--sm">Cancel</button>
-            <button class="ds-btn ds-btn--brand ds-btn--sm">Save</button>
+            <button class="ds-button ds-button--brand ds-button--sm">Cancel</button>
+            <button class="ds-button ds-button--brand ds-button--sm">Save</button>
           </div>
         </div>
         <div class="ds-dodont__label ds-dodont__label--dont">Não faça</div>
@@ -343,7 +343,7 @@
         <tr><td><span data-lang="pt">Corpo: 1-3 frases, explique consequencias</span><span data-lang="en">Body: 1-3 sentences, explain consequences</span></td><td>"This action cannot be undone. All data will be permanently removed."</td></tr>
         <tr><td><span data-lang="pt">Button primario: corresponda ao verbo do título</span><span data-lang="en">Primary button: match title verb</span></td><td><span data-lang="pt">Título "Delete project" -> button "Delete"</span><span data-lang="en">Title "Delete project" -> button "Delete"</span></td></tr>
         <tr><td><span data-lang="pt">Button secundário: sempre "Cancel"</span><span data-lang="en">Secondary button: always "Cancel"</span></td><td><span data-lang="pt">"Cancel" — não "Go back" ou "Close"</span><span data-lang="en">"Cancel" — not "Go back" or "Close"</span></td></tr>
-        <tr><td><span data-lang="pt">Ações destrutivas: use button Danger</span><span data-lang="en">Destructive actions: use Danger button</span></td><td><code>ds-btn--danger</code> <span data-lang="pt">para delete, remove, revoke</span><span data-lang="en">for delete, remove, revoke</span></td></tr>
+        <tr><td><span data-lang="pt">Ações destrutivas: use button Danger</span><span data-lang="en">Destructive actions: use Danger button</span></td><td><code>ds-button--danger</code> <span data-lang="pt">para delete, remove, revoke</span><span data-lang="en">for delete, remove, revoke</span></td></tr>
       </tbody>
     </table>
   </div>
@@ -354,15 +354,20 @@
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Mapeamento de tokens</span><span data-lang="en">Token mapping</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token (semantic)</th><th><span data-lang="pt">Variável CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token</th><th><span data-lang="pt">Variável CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
       <tbody>
         <tr><td>overlay background</td><td><code>semantic.background.overlay</code></td><td><code>--ds-background-overlay</code></td></tr>
         <tr><td>surface</td><td><code>semantic.surface.elevated</code></td><td><code>--ds-surface-elevated</code></td></tr>
-        <tr><td>border-radius</td><td><code>semantic.radius.lg</code></td><td><code>--ds-radius-lg</code></td></tr>
-        <tr><td>padding</td><td><code>semantic.space.lg</code></td><td><code>--ds-space-lg</code></td></tr>
-        <tr><td>max-width (sm)</td><td><code>semantic.size.layout.sm</code></td><td><code>--ds-size-layout-sm</code></td></tr>
-        <tr><td>max-width (md)</td><td><code>semantic.size.layout.md</code></td><td><code>--ds-size-layout-md</code></td></tr>
-        <tr><td>max-width (lg)</td><td><code>semantic.size.layout.lg</code></td><td><code>--ds-size-layout-lg</code></td></tr>
+        <tr><td>overlay padding</td><td><code>component.modal.overlay.padding.default</code></td><td><code>--ds-modal-overlay-padding-default</code></td></tr>
+        <tr><td>overlay z-index</td><td><code>component.modal.overlay.z-index.default</code></td><td><code>--ds-modal-overlay-z-index-default</code></td></tr>
+        <tr><td>border-radius</td><td><code>component.modal.radius.default</code></td><td><code>--ds-modal-radius-default</code></td></tr>
+        <tr><td>shadow</td><td><code>component.modal.shadow.default</code></td><td><code>--ds-modal-shadow-default</code></td></tr>
+        <tr><td>max-width</td><td><code>component.modal.max-width.{sm,md,lg}</code></td><td><code>--ds-modal-max-width-*</code></td></tr>
+        <tr><td>header spacing</td><td><code>component.modal.header.{padding-*,gap}.*</code></td><td><code>--ds-modal-header-*-*</code></td></tr>
+        <tr><td>body spacing/typography</td><td><code>component.modal.body.{padding-*,font-size,line-height,font-weight}.*</code></td><td><code>--ds-modal-body-*-*</code></td></tr>
+        <tr><td>title typography</td><td><code>component.modal.title.{font-size,line-height,font-weight,letter-spacing}.*</code></td><td><code>--ds-modal-title-*-*</code></td></tr>
+        <tr><td>footer spacing</td><td><code>component.modal.footer.{padding-*,gap}.*</code></td><td><code>--ds-modal-footer-*-*</code></td></tr>
+        <tr><td>close size</td><td><code>component.modal.close.{size,padding,glyph-size}.default</code></td><td><code>--ds-modal-close-*-default</code></td></tr>
       </tbody>
     </table>
   </div>
@@ -377,9 +382,9 @@
       <tbody>
         <tr><td><code>ds-modal-overlay</code></td><td><span data-lang="pt">Overlay backdrop em tela cheia</span><span data-lang="en">Full-screen backdrop overlay</span></td></tr>
         <tr><td><code>ds-modal</code></td><td><span data-lang="pt">Container do diálogo modal</span><span data-lang="en">Modal dialog container</span></td></tr>
-        <tr><td><code>ds-modal--sm</code></td><td><span data-lang="pt">Tamanho pequeno (<code>--ds-size-layout-sm</code>)</span><span data-lang="en">Small size (<code>--ds-size-layout-sm</code>)</span></td></tr>
-        <tr><td><code>ds-modal--md</code></td><td><span data-lang="pt">Tamanho médio (<code>--ds-size-layout-md</code>)</span><span data-lang="en">Medium size (<code>--ds-size-layout-md</code>)</span></td></tr>
-        <tr><td><code>ds-modal--lg</code></td><td><span data-lang="pt">Tamanho grande (<code>--ds-size-layout-lg</code>)</span><span data-lang="en">Large size (<code>--ds-size-layout-lg</code>)</span></td></tr>
+        <tr><td><code>ds-modal--sm</code></td><td><span data-lang="pt">Tamanho pequeno (<code>--ds-modal-max-width-sm</code>)</span><span data-lang="en">Small size (<code>--ds-modal-max-width-sm</code>)</span></td></tr>
+        <tr><td><code>ds-modal--md</code></td><td><span data-lang="pt">Tamanho médio (<code>--ds-modal-max-width-md</code>)</span><span data-lang="en">Medium size (<code>--ds-modal-max-width-md</code>)</span></td></tr>
+        <tr><td><code>ds-modal--lg</code></td><td><span data-lang="pt">Tamanho grande (<code>--ds-modal-max-width-lg</code>)</span><span data-lang="en">Large size (<code>--ds-modal-max-width-lg</code>)</span></td></tr>
         <tr><td><code>ds-modal__header</code></td><td><span data-lang="pt">Área de header com título e button de fechar</span><span data-lang="en">Header area with title and close button</span></td></tr>
         <tr><td><code>ds-modal__title</code></td><td><span data-lang="pt">Texto do título do modal</span><span data-lang="en">Modal title text</span></td></tr>
         <tr><td><code>ds-modal__close</code></td><td><span data-lang="pt">Button de fechar no header</span><span data-lang="en">Close button in the header</span></td></tr>

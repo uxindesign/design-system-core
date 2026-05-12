@@ -23,7 +23,7 @@ Mostra branch atual, dirty/clean, idade do snapshot Figma, último resultado de 
 | Editar `css/tokens/generated/*.css` à mão | Arquivos derivados — regerados por `npm run build:tokens`. Mudança aqui é perdida no próximo build. |
 | Editar `tokens/*.json` à mão para categorias com equivalente Figma (`color`, `dimension`, `radius`, `opacity`, `border-width`, `typography`) | Figma é fonte de verdade dessas categorias (ADR-003). Edição direta cria drift. |
 | Hardcodear `#hex`, `rgb()`, valores em `px`, `rem`, em consumidor final (`css/components/*.css`, `css/base/*.css`) | Quebra a cadeia de tokens. Sempre usar `var(--ds-...)`. |
-| Consumir tokens Foundation diretamente em CSS de componente | ADR-013: cadeia é Foundation → Semantic → Consumidor. CSS consome Semantic. |
+| Consumir tokens Foundation diretamente em CSS de componente | ADR-013/019: cadeia é Foundation → Semantic → Component → Consumidor. CSS consome Component quando existir contrato anatômico; durante migração, Semantic direto ainda é permitido para componentes não migrados. |
 | Usar `ALL_SCOPES` em variáveis Figma | Polui todos os pickers. Usar escopos específicos. |
 | Push direto pra `main` sem rodar `npm run verify:tokens` clean | Pode introduzir drift Figma↔JSON ou CSS leak detectável automaticamente. |
 | Forçar variables Figma para categorias CSS-only (`motion`, `z`, `shadow`) | ADR-016: essas categorias vivem só em JSON. Criar Figma Variable é cargo culting. |
@@ -39,7 +39,7 @@ Mostra branch atual, dirty/clean, idade do snapshot Figma, último resultado de 
 
 ## 2. Visão geral do projeto (1 parágrafo)
 
-Design system white-label em CSS puro com tokens DTCG em JSON, 19 componentes, modos light/dark, paleta brand única customizável. Arquitetura **2-layer** (Foundation + Semantic) — collection Component eliminada em 0.7.0. Versão atual em `package.json`. Documentação pública em `https://uxindesign.github.io/design-system-core/`.
+Design system white-label em CSS puro com tokens DTCG em JSON, 19 componentes, modos light/dark, paleta brand única customizável. Arquitetura **3-layer** (Foundation/Core → Semantic/System → Component) — Component foi reintroduzida por ADR-019 como contrato anatômico dos componentes, não como wrapper mecânico de tudo. Versão atual em `package.json`. Documentação pública em `https://uxindesign.github.io/design-system-core/`.
 
 ---
 
@@ -74,8 +74,10 @@ Análogo a categorias CSS-only de tokens, alguns **componentes** existem só no 
 2. **Figma** (para categorias listadas como Figma-canônicas acima) — autoridade de valor.
 3. **JSON DTCG** — consolidação canônica em Git. Para categorias Figma-canônicas, espelha o Figma. Para categorias CSS-only, é a fonte direta.
 4. **CSS gerado** (`css/tokens/generated/*.css`) — derivado do JSON. Nunca editar à mão.
-5. **CSS de componente/base** — consome `var(--ds-...)` espelhando bindings do Figma equivalente.
-6. **Docs** (`docs/*.html`, `docs/*.md`) — descritivo do estado atual. Nunca fonte de verdade.
+5. **Component JSON** (`tokens/component/*.json`) — contrato anatômico dos componentes. Component tokens podem aliasar Semantic 1:1 quando isso documenta uma parte pública/estável (`target.height`, `box.size`, `track.width`). Ver ADR-019.
+6. **CSS gerado Component** (`css/tokens/generated/component.css`) — derivado dos JSONs Component. Nunca editar à mão.
+7. **CSS de componente/base** — consome `var(--ds-...)` espelhando bindings do Figma equivalente. Componentes migrados consomem Component; componentes ainda não migrados podem consumir Semantic direto.
+8. **Docs** (`docs/*.html`, `docs/*.md`) — descritivo do estado atual. Nunca fonte de verdade.
 
 ---
 
@@ -90,6 +92,7 @@ Análogo a categorias CSS-only de tokens, alguns **componentes** existem só no 
 3. **Identifique a localização correta no JSON** — siga a estrutura existente:
    - Foundation: cada categoria tem seu arquivo (`tokens/foundation/{colors,dimension,motion,opacity,radius,shadows,stroke,typography,z-index}.json`). Categoria nova exige novo arquivo + ADR.
    - Semantic: `tokens/semantic/light.json` e `tokens/semantic/dark.json`. Top-level keys atuais: `background`, `border`, `content`, `feedback`, `ghost`, `link`, `motion`, `opacity`, `outline`, `overlay`, `primary`, `radius`, `shadow`, `size`, `space`, `surface`, `toned`, `typography`, `z`. **Cada nova subkey vai em um destes top-levels — NUNCA aninhar fora do top-level apropriado** (ex: `z.tooltip` vai em `semantic.z`, não em `semantic.typography.z`).
+   - Component: `tokens/component/<component>.json`. Estrutura canônica DTCG: `component.<component>.<part>.<property>.<variant-or-state>` (ADR-019). No Figma, dentro da collection `Component`, usar `<component>/<part>/<property>/<variant-or-state>` sem prefixo `component/`. Component existe para contrato anatômico (`checkbox.box.size.md`, `toggle.track.width.md`), não para duplicar roles Semantic sem valor documental.
 4. **Paridade light/dark obrigatória** — toda key em `light.json` precisa estar em `dark.json` (mesmo path, valor pode diferir). Verificado por `verify:tokens`.
 5. **Adicione entry em `tokens/registry.json`** com `layer`, `type`, `references`, `sentido`, `escopo`, `contexto`, `decisao`. `verify:tokens` reporta erro se faltar.
 6. **Rode `npm run build:tokens`** — gera CSS variables em `css/tokens/generated/*.css`.

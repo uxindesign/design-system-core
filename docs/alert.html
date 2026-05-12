@@ -27,7 +27,7 @@
       <option value="pt">PT</option>
       <option value="en">EN</option>
     </select>
-    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg> Dark</button>
+    <button class="ds-button ds-button--ghost ds-button--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg> Dark</button>
   </div>
 </header>
 <div class="ds-sidebar-overlay" id="sidebar-overlay"></div>
@@ -435,19 +435,25 @@
       <span data-lang="pt">Tokens mostrados para a variante success. Outros tipos (warning, error, info) seguem o mesmo padrão com seus respectivos grupos de cor de feedback.</span><span data-lang="en">Tokens shown for the success variant. Other types (warning, error, info) follow the same pattern with their respective feedback color groups.</span>
     </p>
     <table class="ds-token-table">
-      <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token (semantic)</th><th><span data-lang="pt">Variável CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token</th><th><span data-lang="pt">Variável CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
       <tbody>
-        <tr><td>bg (success filled)</td><td><code>semantic.feedback.success.bg-default</code></td><td><code>--ds-feedback-success-background-default</code></td></tr>
-        <tr><td>bg (success subtle)</td><td><code>semantic.feedback.success.bg-subtle</code></td><td><code>--ds-feedback-success-background-subtle</code></td></tr>
-        <tr><td>border (success subtle)</td><td><code>semantic.feedback.success.border-default</code></td><td><code>--ds-feedback-success-border-default</code></td></tr>
-        <tr><td>text (success filled)</td><td><code>semantic.feedback.success.content-contrast</code></td><td><code>--ds-feedback-success-content-contrast</code></td></tr>
-        <tr><td>text title (subtle)</td><td><code>semantic.content.default</code></td><td><code>--ds-content-strong</code></td></tr>
+        <tr><td>bg (success filled)</td><td><code>semantic.feedback.success.background.default</code></td><td><code>--ds-feedback-success-background-default</code></td></tr>
+        <tr><td>bg (success subtle)</td><td><code>semantic.feedback.success.background.subtle</code></td><td><code>--ds-feedback-success-background-subtle</code></td></tr>
+        <tr><td>border (success subtle)</td><td><code>semantic.feedback.success.border.default</code></td><td><code>--ds-feedback-success-border-default</code></td></tr>
+        <tr><td>text (success filled)</td><td><code>semantic.feedback.success.content.contrast</code></td><td><code>--ds-feedback-success-content-contrast</code></td></tr>
+        <tr><td>text title (subtle)</td><td><code>semantic.content.strong</code></td><td><code>--ds-content-strong</code></td></tr>
         <tr><td>text description (subtle)</td><td><code>semantic.content.default</code></td><td><code>--ds-content-default</code></td></tr>
-        <tr><td>border-radius</td><td><code>semantic.radius.component</code></td><td><code>--ds-radius-md</code></td></tr>
-        <tr><td>padding (all sides)</td><td><code>foundation.spacing.48</code></td><td><code>--ds-dimension-12</code></td></tr>
-        <tr><td>gap</td><td><code>foundation.spacing.32</code></td><td><code>--ds-dimension-8</code></td></tr>
-        <tr><td>title font-size</td><td><code>foundation.typography.font.size.12</code></td><td><code>--ds-font-size-12</code></td></tr>
-        <tr><td>title font-weight</td><td><code>foundation.typography.font.weight.bold</code></td><td><code>--ds-font-weight-bold</code></td></tr>
+        <tr><td>root padding</td><td><code>component.alert.padding.default</code></td><td><code>--ds-alert-padding-default</code></td></tr>
+        <tr><td>root gap</td><td><code>component.alert.gap.default</code></td><td><code>--ds-alert-gap-default</code></td></tr>
+        <tr><td>root radius</td><td><code>component.alert.radius.default</code></td><td><code>--ds-alert-radius-default</code></td></tr>
+        <tr><td>root border-width</td><td><code>component.alert.border-width.default</code></td><td><code>--ds-alert-border-width-default</code></td></tr>
+        <tr><td>icon size</td><td><code>component.alert.icon.size.default</code></td><td><code>--ds-alert-icon-size-default</code></td></tr>
+        <tr><td>icon glyph-size</td><td><code>component.alert.icon.glyph-size.default</code></td><td><code>--ds-alert-icon-glyph-size-default</code></td></tr>
+        <tr><td>content gap</td><td><code>component.alert.content.gap.default</code></td><td><code>--ds-alert-content-gap-default</code></td></tr>
+        <tr><td>title typography</td><td><code>component.alert.title.*.default</code></td><td><code>--ds-alert-title-*-default</code></td></tr>
+        <tr><td>description typography</td><td><code>component.alert.description.*.default</code></td><td><code>--ds-alert-description-*-default</code></td></tr>
+        <tr><td>close size</td><td><code>component.alert.close.size.default</code></td><td><code>--ds-alert-close-size-default</code></td></tr>
+        <tr><td>close glyph-size</td><td><code>component.alert.close.glyph-size.default</code></td><td><code>--ds-alert-close-glyph-size-default</code></td></tr>
       </tbody>
     </table>
   </div>

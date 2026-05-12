@@ -22,20 +22,20 @@
 
 .ds-input,
 .ds-input--md {
-  height: var(--ds-size-xl);
+  height: var(--ds-input-height-md);
   padding: 0 var(--ds-space-md);
   font-size: var(--ds-body-font-size-sm);
 }
 
 .ds-input--sm {
-  height: var(--ds-size-lg);
+  height: var(--ds-input-height-sm);
   padding: 0 var(--ds-space-sm);
   font-size: var(--ds-body-font-size-xs);
   line-height: var(--ds-body-line-height-2xs);
 }
 
 .ds-input--lg {
-  height: var(--ds-size-2xl);
+  height: var(--ds-input-height-lg);
   padding: 0 var(--ds-space-lg);
   font-size: var(--ds-body-font-size-md);
 }

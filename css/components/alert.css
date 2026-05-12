@@ -5,11 +5,11 @@
 .ds-alert {
   display: flex;
   align-items: flex-start;
-  gap: var(--ds-space-sm);
-  padding: var(--ds-space-md);
-  border-radius: var(--ds-radius-lg);
-  font-size: var(--ds-body-font-size-sm);
-  line-height: var(--ds-body-line-height-sm);
+  gap: var(--ds-alert-gap-default);
+  padding: var(--ds-alert-padding-default);
+  border-radius: var(--ds-alert-radius-default);
+  font-size: var(--ds-alert-description-font-size-default);
+  line-height: var(--ds-alert-description-line-height-default);
 }
 
 /* Icon — Figma: container size/md (24), glyph 20 (size/sm) */
@@ -18,12 +18,12 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: var(--ds-size-md);
-  height: var(--ds-size-md);
+  width: var(--ds-alert-icon-size-default);
+  height: var(--ds-alert-icon-size-default);
 }
 
 .ds-alert__icon .material-symbols-outlined {
-  font-size: var(--ds-size-sm);
+  font-size: var(--ds-alert-icon-glyph-size-default);
 }
 
 /* Icon color em Subtle — tematizado por feedback (Figma binda
@@ -47,18 +47,29 @@
   min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: var(--ds-space-xs);
+  gap: var(--ds-alert-content-gap-default);
 }
 
 /* Title — label/md: 14px Bold / 20px */
 .ds-alert__title {
-  font-size: var(--ds-body-font-size-sm);
-  font-weight: var(--ds-body-font-weight-bold);
-  line-height: var(--ds-body-line-height-sm);
+  font-size: var(--ds-alert-title-font-size-default);
+  font-weight: var(--ds-alert-title-font-weight-default);
+  line-height: var(--ds-alert-title-line-height-default);
+}
+
+.ds-alert__description {
+  font-size: var(--ds-alert-description-font-size-default);
+  font-weight: var(--ds-alert-description-font-weight-default);
+  line-height: var(--ds-alert-description-line-height-default);
 }
 
 .ds-alert__close {
   flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--ds-alert-close-size-default);
+  height: var(--ds-alert-close-size-default);
   background: none;
   border: none;
   padding: 0;
@@ -70,6 +81,10 @@
 
 .ds-alert__close:hover {
   opacity: 1;
+}
+
+.ds-alert__close .material-symbols-outlined {
+  font-size: var(--ds-alert-close-glyph-size-default);
 }
 
 .ds-alert__close:focus-visible {
@@ -107,25 +122,25 @@
 .ds-alert--success.ds-alert--subtle {
   background-color: var(--ds-feedback-success-background-subtle);
   color: var(--ds-content-strong);
-  border: var(--ds-border-width-default) solid var(--ds-feedback-success-border-default);
+  border: var(--ds-alert-border-width-default) solid var(--ds-feedback-success-border-default);
 }
 
 .ds-alert--warning.ds-alert--subtle {
   background-color: var(--ds-feedback-warning-background-subtle);
   color: var(--ds-content-strong);
-  border: var(--ds-border-width-default) solid var(--ds-feedback-warning-border-default);
+  border: var(--ds-alert-border-width-default) solid var(--ds-feedback-warning-border-default);
 }
 
 .ds-alert--error.ds-alert--subtle {
   background-color: var(--ds-feedback-error-background-subtle);
   color: var(--ds-content-strong);
-  border: var(--ds-border-width-default) solid var(--ds-feedback-error-border-default);
+  border: var(--ds-alert-border-width-default) solid var(--ds-feedback-error-border-default);
 }
 
 .ds-alert--info.ds-alert--subtle {
   background-color: var(--ds-feedback-info-background-subtle);
   color: var(--ds-content-strong);
-  border: var(--ds-border-width-default) solid var(--ds-feedback-info-border-default);
+  border: var(--ds-alert-border-width-default) solid var(--ds-feedback-info-border-default);
 }
 
 /* Description uses secondary content tone in subtle variants */

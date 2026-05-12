@@ -62,6 +62,11 @@ export function figmaNameToPath(figmaName) {
   return figmaName.split("/").join(".");
 }
 
+export function canonicalPathForVariable(layer, figmaName) {
+  const path = figmaNameToPath(figmaName);
+  return path === layer || path.startsWith(`${layer}.`) ? path : `${layer}.${path}`;
+}
+
 export function colorToString(rgba) {
   const { r, g, b, a } = rgba;
   const to255 = (c) => Math.round(c * 255);
@@ -152,8 +157,9 @@ export function resolveTargetFile(variable, collection) {
   }
 
   if (collection.name === "Component") {
-    const prefix = variable.name.split("/")[0];
-    return { file: `component/${prefix}.json`, mode: COMPONENT_MODE };
+    const parts = variable.name.split("/");
+    const component = parts[0] === "component" ? parts[1] : parts[0];
+    return component ? { file: `component/${component}.json`, mode: COMPONENT_MODE } : { file: null, mode: null };
   }
 
   return { file: null, mode: null };
@@ -176,7 +182,7 @@ export function buildExpectedState(figmaMeta) {
     const coll = collectionsById[v.variableCollectionId];
     if (!coll) continue;
     const layer = collectionToLayer(coll);
-    const canonicalPath = `${layer}.${figmaNameToPath(v.name)}`;
+    const canonicalPath = canonicalPathForVariable(layer, v.name);
     const target = resolveTargetFile(v, coll);
 
     if (coll.name === "Semantic") {
@@ -352,6 +358,7 @@ const JSON_ONLY_PATHS = [
   /^semantic\.motion\./,                               // motion (runtime — Smart Animate)
   /^semantic\.z\./,                                    // z-index (Figma usa layer order)
   /^semantic\.shadow\./,                               // shadow (Figma Effect Style, não Variable)
+  /^component\.form-field\./,                          // ADR-017: Form Field é componente CSS-only
   // 2xs (11px) é micro-text usado em docs/layout.css. Figma omite por estar
   // abaixo do mínimo recomendado WCAG 1.4.4 (12px); CSS mantém pra meta-info.
   /^foundation\.typography\.font\.size\.11$/,

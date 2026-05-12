@@ -27,7 +27,7 @@
       <option value="pt">PT</option>
       <option value="en">EN</option>
     </select>
-    <button class="ds-btn ds-btn--ghost ds-btn--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg> Dark</button>
+    <button class="ds-button ds-button--ghost ds-button--sm" id="mode-toggle" aria-pressed="false" aria-label="Toggle dark mode"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg> Dark</button>
   </div>
 </header>
 <div class="ds-sidebar-overlay" id="sidebar-overlay"></div>
@@ -56,9 +56,9 @@
         <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
           <div class="ds-preview__canvas">
             <p style="font-size:var(--ds-font-size-14);color:var(--ds-content-default);margin-bottom:var(--ds-dimension-16);width:100%;"><span data-lang="pt">Navegue com Tab por estes elementos para ver o focus ring:</span><span data-lang="en">Tab through these elements to see the focus ring:</span></p>
-            <button class="ds-btn ds-btn--brand ds-btn--md"><span class="ds-btn__label">Brand Button</span></button>
-            <button class="ds-btn ds-btn--outline ds-btn--md"><span class="ds-btn__label">Outline Button</span></button>
-            <button class="ds-btn ds-btn--ghost ds-btn--md"><span class="ds-btn__label">Ghost Button</span></button>
+            <button class="ds-button ds-button--brand ds-button--md"><span class="ds-button__label">Brand Button</span></button>
+            <button class="ds-button ds-button--outline ds-button--md"><span class="ds-button__label">Outline Button</span></button>
+            <button class="ds-button ds-button--ghost ds-button--md"><span class="ds-button__label">Ghost Button</span></button>
             <input class="ds-input" type="text" placeholder="Text input" style="max-width:200px;">
           </div>
         </div>
@@ -71,7 +71,7 @@
 --ds-focus-ring-color: var(--ds-primary-background-default);
 
 /* Applied via :focus-visible on all interactive elements */
-.ds-btn:focus-visible,
+.ds-button:focus-visible,
 .ds-input:focus-visible {
   outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color);
   outline-offset: var(--ds-focus-ring-offset);
@@ -197,7 +197,7 @@
         <span data-lang="pt">Todos os elementos interativos mantem um tamanho mínimo de alvo de toque de <strong>44 &times; 44 pixels CSS</strong>, em conformidade com o WCAG 2.5.8 (Target Size). Isso se aplica a buttons, checkboxes, radio buttons, toggles e outros controles clicáveis.</span><span data-lang="en">All interactive elements maintain a minimum touch target size of <strong>44 &times; 44 CSS pixels</strong>, in line with WCAG 2.5.8 (Target Size). This applies to buttons, checkboxes, radio buttons, toggles, and other clickable controls.</span>
       </p>
       <ul style="color:var(--ds-content-default);padding-left:var(--ds-dimension-24);line-height:var(--ds-line-height-loose);">
-        <li><span data-lang="pt">Buttons pequenos (<code style="font-family:var(--ds-font-family-mono);">ds-btn--sm</code>) usam padding para atingir a altura mínima de 44px.</span><span data-lang="en">Small buttons (<code style="font-family:var(--ds-font-family-mono);">ds-btn--sm</code>) use padding to meet the 44px minimum height.</span></li>
+        <li><span data-lang="pt">Buttons pequenos (<code style="font-family:var(--ds-font-family-mono);">ds-button--sm</code>) usam padding para atingir a altura mínima de 44px.</span><span data-lang="en">Small buttons (<code style="font-family:var(--ds-font-family-mono);">ds-button--sm</code>) use padding to meet the 44px minimum height.</span></li>
         <li><span data-lang="pt">Inputs de checkbox e radio tem uma área de label clicável que satisfaz o tamanho do alvo.</span><span data-lang="en">Checkbox and radio inputs have a clickable label area that satisfies the target size.</span></li>
         <li><span data-lang="pt">Buttons somente com ícone são dimensionados em no mínimo 44px via padding interno.</span><span data-lang="en">Icon-only buttons are sized at minimum 44px via internal padding.</span></li>
       </ul>

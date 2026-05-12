@@ -1,0 +1,95 @@
+{
+  "component": {
+    "checkbox": {
+      "target": {
+        "height": {
+          "sm": {
+            "$type": "dimension",
+            "$value": "{semantic.size.lg}",
+            "$description": "Altura minima da area interativa Checkbox sm."
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "{semantic.size.xl}",
+            "$description": "Altura minima da area interativa Checkbox md."
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{semantic.size.2xl}",
+            "$description": "Altura minima da area interativa Checkbox lg."
+          }
+        },
+        "gap": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.space.sm}",
+            "$description": "Gap horizontal entre control e content Checkbox."
+          }
+        },
+        "radius": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.radius.md}",
+            "$description": "Radius do target interativo Checkbox."
+          }
+        }
+      },
+      "box": {
+        "size": {
+          "sm": {
+            "$type": "dimension",
+            "$value": "{semantic.size.xs}",
+            "$description": "Tamanho visual da box Checkbox sm."
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "{semantic.size.sm}",
+            "$description": "Tamanho visual da box Checkbox md."
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{semantic.size.md}",
+            "$description": "Tamanho visual da box Checkbox lg."
+          }
+        },
+        "radius": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.radius.sm}",
+            "$description": "Radius da box visual Checkbox."
+          }
+        },
+        "border-width": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.border.width.default}",
+            "$description": "Border width da box visual Checkbox."
+          }
+        }
+      },
+      "focus-ring": {
+        "color": {
+          "default": {
+            "$type": "color",
+            "$value": "{semantic.border.focus}",
+            "$description": "Cor do focus ring Checkbox."
+          }
+        },
+        "stroke-width": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.border.width.focus}",
+            "$description": "Stroke width do focus ring Checkbox."
+          }
+        },
+        "radius": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.radius.md}",
+            "$description": "Radius do focus ring Checkbox."
+          }
+        }
+      }
+    }
+  }
+}

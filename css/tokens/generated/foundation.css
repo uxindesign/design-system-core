@@ -170,6 +170,7 @@
   --ds-dimension-64: 4rem; /** 64px */
   --ds-dimension-80: 5rem; /** 80px */
   --ds-dimension-96: 6rem; /** 96px */
+  --ds-dimension-120: 7.5rem; /** 120px */
   --ds-dimension-128: 8rem; /** 128px */
   --ds-dimension-320: 20rem; /** 320px — layout scale */
   --ds-dimension-480: 30rem; /** 480px — layout scale */

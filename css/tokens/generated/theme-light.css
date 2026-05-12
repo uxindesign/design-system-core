@@ -4,13 +4,6 @@
 
 :root,
 [data-mode="light"] {
-  --ds-control-toggle-height-sm: var(--ds-dimension-16);
-  --ds-control-toggle-height-md: var(--ds-dimension-24);
-  --ds-control-toggle-height-lg: var(--ds-dimension-32);
-  --ds-control-toggle-width-sm: var(--ds-dimension-28);
-  --ds-control-toggle-width-md: var(--ds-dimension-44);
-  --ds-control-toggle-width-lg: var(--ds-dimension-56);
-  --ds-control-toggle-thumb-gap: var(--ds-dimension-2);
   --ds-primary-content-default: var(--ds-color-neutral-50);
   --ds-primary-content-disabled: var(--ds-overlay-white-80);
   --ds-primary-background-default: var(--ds-color-brand-600);
@@ -183,5 +176,6 @@
   --ds-body-line-height-7xl: var(--ds-line-height-72); /** 72px. Pareia com body/font-size/7xl (56px). */
   --ds-body-line-height-8xl: var(--ds-line-height-80); /** 80px. Pareia com body/font-size/8xl (64px). */
   --ds-body-line-height-9xl: var(--ds-line-height-90); /** 90px. Pareia com body/font-size/9xl (72px). */
+  --ds-z-modal: var(--ds-z-40); /** Stack layer para modais e overlays bloqueantes. */
   --ds-z-tooltip: var(--ds-z-40); /** Stack layer para tooltips e floating labels não modais. */
 }

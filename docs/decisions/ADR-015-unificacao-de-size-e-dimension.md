@@ -3,7 +3,9 @@
 - **Status:** Aceito
 - **Data:** 2026-04-26
 - **Substitui:** sub-decisões de ADR-006 (que introduziu `size.control.*` e `space.control.padding-{x,y}.*`)
-- **Relaciona:** ADR-013 (2-layer architecture)
+- **Relaciona:** ADR-013, ADR-019
+
+> **Atualização (2026-05-11):** ADR-019 reintroduz Component tokens como contrato anatômico. Esta ADR continua vigente para a escala Semantic (`size.{xs..5xl}`) e para a regra de evitar component-specific disfarçado em Semantic. O que muda é que aliases 1:1 voltam a ser aceitos na camada Component quando documentam anatomia pública de componente.
 
 ## Contexto
 

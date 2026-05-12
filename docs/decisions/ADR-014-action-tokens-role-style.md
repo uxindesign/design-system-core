@@ -125,17 +125,17 @@ foundation.color.{brand|neutral|red}.{step}
 Exemplo concreto — Button brand (primary, sólido) CSS:
 
 ```css
-.ds-btn--brand {
+.ds-button--brand {
   background-color: var(--ds-action-primary-default-background-default);
   color: var(--ds-action-primary-default-content-default);
 }
-.ds-btn--brand:hover  { background-color: var(--ds-action-primary-default-background-hover); }
-.ds-btn--brand:active { background-color: var(--ds-action-primary-default-background-active); }
+.ds-button--brand:hover  { background-color: var(--ds-action-primary-default-background-hover); }
+.ds-button--brand:active { background-color: var(--ds-action-primary-default-background-active); }
 ```
 
 Button toned:
 ```css
-.ds-btn--toned {
+.ds-button--toned {
   background-color: var(--ds-action-primary-toned-background-default);
   color: var(--ds-action-primary-toned-content-default);
 }
@@ -143,7 +143,7 @@ Button toned:
 
 Button danger:
 ```css
-.ds-btn--danger {
+.ds-button--danger {
   background-color: var(--ds-action-danger-default-background-default);
   color: var(--ds-action-danger-default-content-default);
 }

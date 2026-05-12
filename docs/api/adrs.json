@@ -1,6 +1,6 @@
 {
   "version": "1.0.0-beta.4",
-  "count": 18,
+  "count": 19,
   "adrs": [
     {
       "id": "ADR-001",
@@ -51,7 +51,7 @@
       "id": "ADR-006",
       "num": 6,
       "title": "Tokens semânticos de controle para dimensões e tipografia compartilhadas entre controles interativos",
-      "status": "Parcialmente substituída — `size.control.*` e `space.control.padding-{x,y}.*` substituídos por escala `size.{xs..5xl}` + `space.{xs..2xl}` + `space.control.padding.10` em **ADR-015** (2026-04-26). `typography.control.*` permanece vigente.",
+      "status": "Parcialmente substituída — `size.control.*` e `space.control.padding-{x,y}.*` substituídos por escala `size.{xs..5xl}` + `space.{xs..2xl}` + `space.control.padding.10` em **ADR-015** (2026-04-26). O contrato público de anatomia dos componentes foi movido para tokens Component em **ADR-019** (2026-05-10). `typography.control.*` permanece vigente.",
       "date": "2026-04-15",
       "sourceFile": "docs/decisions/ADR-006-semantic-control-tokens.md",
       "url": "https://uxindesign.github.io/design-system-core/docs/decisions/adr-006-semantic-control-tokens.html"
@@ -114,7 +114,7 @@
       "id": "ADR-013",
       "num": 13,
       "title": "Camadas de consumo de tokens — Foundation nunca direto em consumidor final",
-      "status": "Aceita — implementada em 0.7.0 (Component layer eliminada) e fechada em 1.0.0-beta.1 (0 leaks Foundation em `css/components/*.css` e `css/base/*.css`)",
+      "status": "Aceita — implementada em 0.7.0 e parcialmente substituída por ADR-019 em 2026-05-11",
       "date": "2026-04-22",
       "sourceFile": "docs/decisions/ADR-013-camadas-de-consumo-de-tokens.md",
       "url": "https://uxindesign.github.io/design-system-core/docs/decisions/adr-013-camadas-de-consumo-de-tokens.html"
@@ -163,6 +163,15 @@
       "date": "2026-05-06",
       "sourceFile": "docs/decisions/ADR-018-content-naming-strong-default-subtle.md",
       "url": "https://uxindesign.github.io/design-system-core/docs/decisions/adr-018-content-naming-strong-default-subtle.html"
+    },
+    {
+      "id": "ADR-019",
+      "num": 19,
+      "title": "— Reintrodução de Component tokens como contrato anatômico",
+      "status": "Aceita",
+      "date": "2026-05-11",
+      "sourceFile": "docs/decisions/ADR-019-component-tokens-contrato-anatomico.md",
+      "url": "https://uxindesign.github.io/design-system-core/docs/decisions/adr-019-component-tokens-contrato-anatomico.html"
     }
   ]
 }
