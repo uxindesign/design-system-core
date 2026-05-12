@@ -6,9 +6,9 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Status
 
-- Total de tokens: **753**
-- Com metadados completos: **751**
-- Pendentes (`TODO` em algum campo obrigatório): **2**
+- Total de tokens: **755**
+- Com metadados completos: **755**
+- Pendentes (`TODO` em algum campo obrigatório): **0**
 - Completude: **100%**
 
 ## Foundation
@@ -415,7 +415,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 |---|---|---|---|---|
 | `semantic.ghost.background.active` | color | → `foundation.color.overlay.black.10` | Fill de ação apenas texto (neutral) em estado active. | 2 |
 | `semantic.ghost.background.hover` | color | → `foundation.color.overlay.black.5` | Fill de ação apenas texto (neutral) em estado hover. | 2 |
-| `semantic.ghost.content-default` | color | → `foundation.color.neutral.900` | Cor de texto/ícone de ação apenas texto (neutral) em estado default. | 0 |
+| `semantic.ghost.content-default` | color | → `foundation.color.neutral.900` | Cor de texto/ícone de ação apenas texto (neutral) em estado default. | 5 |
 | `semantic.ghost.content-disabled` | color | → `foundation.color.neutral.400` | Cor de texto/ícone de ação apenas texto (neutral) em estado disabled. | 2 |
 
 ### semantic.link
@@ -423,7 +423,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `semantic.link.content-active` | color | → `foundation.color.brand.800` | Cor de texto/ícone de link inline (branded text) em estado active. | 2 |
-| `semantic.link.content-default` | color | → `foundation.color.brand.700` | Cor de texto/ícone de link inline (branded text) em estado default. | 8 |
+| `semantic.link.content-default` | color | → `foundation.color.brand.700` | Cor de texto/ícone de link inline (branded text) em estado default. | 3 |
 | `semantic.link.content-disabled` | color | → `foundation.color.neutral.400` | Cor de texto/ícone de link inline (branded text) em estado disabled. | 0 |
 | `semantic.link.content-hover` | color | → `foundation.color.brand.800` | Cor de texto/ícone de link inline (branded text) em estado hover. | 5 |
 
@@ -512,8 +512,8 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.size.layout.xl` | dimension | → `foundation.dimension.1024` | Size token layout.xl. | 0 |
 | `semantic.size.layout.xs` | dimension | → `foundation.dimension.320` | Size token layout.xs. | 0 |
 | `semantic.size.lg` | dimension | → `foundation.dimension.32` | Size token lg. | 11 |
-| `semantic.size.md` | dimension | → `foundation.dimension.24` | Size token md. | 13 |
-| `semantic.size.sm` | dimension | → `foundation.dimension.20` | Size token sm. | 10 |
+| `semantic.size.md` | dimension | → `foundation.dimension.24` | Size token md. | 14 |
+| `semantic.size.sm` | dimension | → `foundation.dimension.20` | Size token sm. | 11 |
 | `semantic.size.xl` | dimension | → `foundation.dimension.40` | Size token xl. | 10 |
 | `semantic.size.xs` | dimension | → `foundation.dimension.16` | Size token xs. | 8 |
 
@@ -606,7 +606,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Component
 
-313 tokens.
+315 tokens.
 
 ### component.alert
 
@@ -722,11 +722,11 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.button.content.color.danger.focused` | color | → `semantic.feedback.error.content-contrast` | Cor de conteúdo do Button focused undefined. | 0 |
 | `component.button.content.color.danger.hover` | color | → `semantic.feedback.error.content-contrast` | Cor de conteúdo do Button hover undefined. | 1 |
 | `component.button.content.color.danger.pressed` | color | → `semantic.feedback.error.content-contrast` | Cor de conteúdo do Button pressed undefined. | 1 |
-| `component.button.content.color.ghost.default` | color | → `semantic.link.content-default` | Cor de conteúdo do Button default undefined. | 1 |
+| `component.button.content.color.ghost.default` | color | → `semantic.ghost.content-default` | Cor de conteúdo do Button default undefined. | 1 |
 | `component.button.content.color.ghost.disabled` | color | → `semantic.ghost.content-disabled` | Cor de conteúdo do Button disabled undefined. | 1 |
-| `component.button.content.color.ghost.focused` | color | → `semantic.link.content-default` | Cor de conteúdo do Button focused undefined. | 0 |
-| `component.button.content.color.ghost.hover` | color | → `semantic.link.content-default` | Cor de conteúdo do Button hover undefined. | 1 |
-| `component.button.content.color.ghost.pressed` | color | → `semantic.link.content-default` | Cor de conteúdo do Button pressed undefined. | 1 |
+| `component.button.content.color.ghost.focused` | color | → `semantic.ghost.content-default` | Cor de conteúdo do Button focused undefined. | 0 |
+| `component.button.content.color.ghost.hover` | color | → `semantic.ghost.content-default` | Cor de conteúdo do Button hover undefined. | 1 |
+| `component.button.content.color.ghost.pressed` | color | → `semantic.ghost.content-default` | Cor de conteúdo do Button pressed undefined. | 1 |
 | `component.button.content.color.outline.default` | color | → `semantic.outline.content-default` | Cor de conteúdo do Button default undefined. | 1 |
 | `component.button.content.color.outline.disabled` | color | → `semantic.outline.content-disabled` | Cor de conteúdo do Button disabled undefined. | 1 |
 | `component.button.content.color.outline.focused` | color | → `semantic.outline.content-default` | Cor de conteúdo do Button focused undefined. | 0 |
@@ -742,9 +742,9 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.button.content.color.toned.focused` | color | → `semantic.toned.content-default` | Cor de conteúdo do Button focused undefined. | 0 |
 | `component.button.content.color.toned.hover` | color | → `semantic.link.content-hover` | Cor de conteúdo do Button hover undefined. | 1 |
 | `component.button.content.color.toned.pressed` | color | → `semantic.link.content-hover` | Cor de conteúdo do Button pressed undefined. | 1 |
-| `component.button.focus-ring.color.danger` | color | → `semantic.border.focus-error` | ⚠️ TODO | 1 |
+| `component.button.focus-ring.color.danger` | color | → `semantic.border.focus-error` | Cor do focus ring do Button danger. | 1 |
 | `component.button.focus-ring.color.default` | color | → `semantic.border.focus` | color do focus ring Button. | 1 |
-| `component.button.focus-ring.color.success` | color | → `semantic.feedback.success.border-default` | ⚠️ TODO | 1 |
+| `component.button.focus-ring.color.success` | color | → `semantic.feedback.success.border-default` | Cor do focus ring do Button success. | 1 |
 | `component.button.focus-ring.offset.default` | dimension | → `semantic.border.width.focus` | offset do focus ring Button. | 1 |
 | `component.button.focus-ring.radius.default` | dimension | → `semantic.radius.lg` | radius do focus ring Button. | 0 |
 | `component.button.focus-ring.stroke-width.default` | dimension | → `semantic.border.width.focus` | stroke-width do focus ring Button. | 1 |
@@ -760,7 +760,9 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.button.icon-only-width.lg` | dimension | → `semantic.size.2xl` | Largura do Button somente-ícone lg. | 1 |
 | `component.button.icon-only-width.md` | dimension | → `semantic.size.xl` | Largura do Button somente-ícone md. | 1 |
 | `component.button.icon-only-width.sm` | dimension | → `semantic.size.lg` | Largura do Button somente-ícone sm. | 1 |
-| `component.button.icon.frame-size.default` | dimension | → `semantic.size.md` | Tamanho do frame de ícone Button. | 1 |
+| `component.button.icon.frame-size.lg` | dimension | → `semantic.size.md` | Tamanho do frame de ícone Button lg. | 1 |
+| `component.button.icon.frame-size.md` | dimension | → `semantic.size.md` | Tamanho do frame de ícone Button md. | 1 |
+| `component.button.icon.frame-size.sm` | dimension | → `semantic.size.sm` | Tamanho do frame de ícone Button sm. | 1 |
 | `component.button.icon.glyph-size.lg` | dimension | → `semantic.size.md` | Tamanho do glyph de ícone Button lg. | 1 |
 | `component.button.icon.glyph-size.md` | dimension | → `semantic.size.md` | Tamanho do glyph de ícone Button md. | 1 |
 | `component.button.icon.glyph-size.sm` | dimension | → `semantic.size.sm` | Tamanho do glyph de ícone Button sm. | 1 |
@@ -5091,7 +5093,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado em `.ds-button--ghost` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.neutral.900 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/component.css` (4×)
+  - Tokens que referenciam: `component.button.content.color.ghost.default`, `component.button.content.color.ghost.hover`, `component.button.content.color.ghost.pressed`, `component.button.content.color.ghost.focused`
 
 ### `semantic.ghost.content-disabled`
 
@@ -5135,8 +5139,6 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/base/reset.css` (1×)
     - `css/components/breadcrumb.css` (1×)
     - `css/components/link.css` (1×)
-    - `css/tokens/generated/component.css` (4×)
-  - Tokens que referenciam: `component.button.content.color.ghost.default`, `component.button.content.color.ghost.hover`, `component.button.content.color.ghost.pressed`, `component.button.content.color.ghost.focused`
 
 ### `semantic.link.content-disabled`
 
@@ -5837,8 +5839,8 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/input.css` (3×)
     - `css/components/select.css` (5×)
-    - `css/tokens/generated/component.css` (10×)
-  - Tokens que referenciam: `component.alert.icon.size.default`, `component.alert.close.size.default`, `component.button.icon.frame-size.default`, `component.button.icon.glyph-size.md`, `component.button.icon.glyph-size.lg`, `component.checkbox.box.size.lg`, `component.modal.close.size.default`, `component.radio.control.size.lg`, `component.spinner.size.md`, `component.toggle.track.height.md`
+    - `css/tokens/generated/component.css` (11×)
+  - Tokens que referenciam: `component.alert.icon.size.default`, `component.alert.close.size.default`, `component.button.icon.frame-size.md`, `component.button.icon.frame-size.lg`, `component.button.icon.glyph-size.md`, `component.button.icon.glyph-size.lg`, `component.checkbox.box.size.lg`, `component.modal.close.size.default`, `component.radio.control.size.lg`, `component.spinner.size.md`, `component.toggle.track.height.md`
 
 ### `semantic.size.sm`
 
@@ -5855,8 +5857,8 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/input.css` (1×)
     - `css/components/radio.css` (2×)
     - `css/components/select.css` (5×)
-    - `css/tokens/generated/component.css` (5×)
-  - Tokens que referenciam: `component.alert.icon.glyph-size.default`, `component.alert.close.glyph-size.default`, `component.button.icon.glyph-size.sm`, `component.checkbox.box.size.md`, `component.radio.control.size.md`
+    - `css/tokens/generated/component.css` (6×)
+  - Tokens que referenciam: `component.alert.icon.glyph-size.default`, `component.alert.close.glyph-size.default`, `component.button.icon.frame-size.sm`, `component.button.icon.glyph-size.sm`, `component.checkbox.box.size.md`, `component.radio.control.size.md`
 
 ### `semantic.size.xl`
 
@@ -7871,7 +7873,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.link.content-default`
+- **Alias**: → `semantic.ghost.content-default`
 - **Sentido**: Cor de conteúdo do Button default undefined.
 - **Escopo**: —
 - **Contexto**: Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.
@@ -7897,7 +7899,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.link.content-default`
+- **Alias**: → `semantic.ghost.content-default`
 - **Sentido**: Cor de conteúdo do Button focused undefined.
 - **Escopo**: —
 - **Contexto**: Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.
@@ -7909,7 +7911,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.link.content-default`
+- **Alias**: → `semantic.ghost.content-default`
 - **Sentido**: Cor de conteúdo do Button hover undefined.
 - **Escopo**: —
 - **Contexto**: Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.
@@ -7922,7 +7924,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.link.content-default`
+- **Alias**: → `semantic.ghost.content-default`
 - **Sentido**: Cor de conteúdo do Button pressed undefined.
 - **Escopo**: —
 - **Contexto**: Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.
@@ -8128,10 +8130,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Camada**: component
 - **Tipo**: `color`
 - **Alias**: → `semantic.border.focus-error`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
+- **Sentido**: Cor do focus ring do Button danger.
+- **Escopo**: outline-color, stroke
+- **Contexto**: Component token do contrato anatômico Button. Binda o focus ring dos estilos Success/Danger no Figma e impede herança indevida do foco brand no CSS.
+- **Decisão**: Alias 1:1 para semantic.border.focus-error porque a cor é semântica, mas o focus ring é uma parte pública e estável do Button por estilo.
 - **Usos**:
   - CSS:
     - `css/components/button.css` (1×)
@@ -8154,10 +8156,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Camada**: component
 - **Tipo**: `color`
 - **Alias**: → `semantic.feedback.success.border-default`
-- **Sentido**: TODO
-- **Escopo**: —
-- **Contexto**: TODO
-- **Decisão**: TODO
+- **Sentido**: Cor do focus ring do Button success.
+- **Escopo**: outline-color, stroke
+- **Contexto**: Component token do contrato anatômico Button. Binda o focus ring dos estilos Success/Danger no Figma e impede herança indevida do foco brand no CSS.
+- **Decisão**: Alias 1:1 para semantic.feedback.success.border-default porque a cor é semântica, mas o focus ring é uma parte pública e estável do Button por estilo.
 - **Usos**:
   - CSS:
     - `css/components/button.css` (1×)
@@ -8328,7 +8330,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Alias 1:1 para semantic.size.2xl porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
   - CSS:
-    - `css/components/button.css` (1×)
+    - `css/components/button.css` (2×)
 
 ### `component.button.icon-only-width.md`
 
@@ -8341,7 +8343,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Alias 1:1 para semantic.size.xl porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
   - CSS:
-    - `css/components/button.css` (1×)
+    - `css/components/button.css` (2×)
 
 ### `component.button.icon-only-width.sm`
 
@@ -8354,17 +8356,43 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Alias 1:1 para semantic.size.lg porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
   - CSS:
-    - `css/components/button.css` (1×)
+    - `css/components/button.css` (2×)
 
-### `component.button.icon.frame-size.default`
+### `component.button.icon.frame-size.lg`
 
 - **Camada**: component
 - **Tipo**: `dimension`
 - **Alias**: → `semantic.size.md`
-- **Sentido**: Tamanho do frame de ícone Button.
+- **Sentido**: Tamanho do frame de ícone Button lg.
 - **Escopo**: width, height
 - **Contexto**: Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.size.md porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
+- **Decisão**: Alias 1:1 para semantic.size.md porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente por tamanho.
+- **Usos**:
+  - CSS:
+    - `css/components/button.css` (2×)
+
+### `component.button.icon.frame-size.md`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.md`
+- **Sentido**: Tamanho do frame de ícone Button md.
+- **Escopo**: width, height
+- **Contexto**: Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.size.md porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente por tamanho.
+- **Usos**:
+  - CSS:
+    - `css/components/button.css` (2×)
+
+### `component.button.icon.frame-size.sm`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.sm`
+- **Sentido**: Tamanho do frame de ícone Button sm.
+- **Escopo**: width, height
+- **Contexto**: Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.size.sm porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente por tamanho.
 - **Usos**:
   - CSS:
     - `css/components/button.css` (2×)

@@ -365,10 +365,20 @@
       },
       "icon": {
         "frame-size": {
-          "default": {
+          "sm": {
+            "$value": "{semantic.size.sm}",
+            "$type": "dimension",
+            "$description": "Tamanho do frame de ícone Button sm."
+          },
+          "md": {
             "$value": "{semantic.size.md}",
             "$type": "dimension",
-            "$description": "Tamanho do frame de ícone Button."
+            "$description": "Tamanho do frame de ícone Button md."
+          },
+          "lg": {
+            "$value": "{semantic.size.md}",
+            "$type": "dimension",
+            "$description": "Tamanho do frame de ícone Button lg."
           }
         },
         "glyph-size": {

@@ -123,7 +123,9 @@
   --ds-button-label-line-height-sm: var(--ds-body-line-height-2xs); /** Line-height do label Button sm. */
   --ds-button-label-line-height-md: var(--ds-body-line-height-sm); /** Line-height do label Button md. */
   --ds-button-label-line-height-lg: var(--ds-body-line-height-md); /** Line-height do label Button lg. */
-  --ds-button-icon-frame-size-default: var(--ds-size-md); /** Tamanho do frame de ícone Button. */
+  --ds-button-icon-frame-size-sm: var(--ds-size-sm); /** Tamanho do frame de ícone Button sm. */
+  --ds-button-icon-frame-size-md: var(--ds-size-md); /** Tamanho do frame de ícone Button md. */
+  --ds-button-icon-frame-size-lg: var(--ds-size-md); /** Tamanho do frame de ícone Button lg. */
   --ds-button-icon-glyph-size-sm: var(--ds-size-sm); /** Tamanho do glyph de ícone Button sm. */
   --ds-button-icon-glyph-size-md: var(--ds-size-md); /** Tamanho do glyph de ícone Button md. */
   --ds-button-icon-glyph-size-lg: var(--ds-size-md); /** Tamanho do glyph de ícone Button lg. */

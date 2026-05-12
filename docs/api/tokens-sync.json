@@ -1,27 +1,18 @@
 {
   "version": "1.0.0-beta.4",
   "totals": {
-    "jsonTokens": 927,
-    "sharedTokens": 579,
+    "jsonTokens": 929,
+    "sharedTokens": 581,
     "lightTokens": 174,
     "darkTokens": 174,
     "errors": 0,
-    "warnings": 1
+    "warnings": 0
   },
   "checks": {
     "jsonIntegrity": [],
     "jsonVsCss": [],
     "cssFoundationLeak": [],
-    "registryCompleteness": [
-      {
-        "level": "warning",
-        "message": "2 entries com campos TODO (sentido/contexto/decisao). Preencha incrementalmente.",
-        "sample": [
-          "component.button.focus-ring.color.success",
-          "component.button.focus-ring.color.danger"
-        ]
-      }
-    ],
+    "registryCompleteness": [],
     "docTokenDrift": [],
     "jsonVsFigma": {
       "skipped": false,
@@ -29,7 +20,7 @@
       "snapshotFreshness": "fresh",
       "snapshotMaxAgeHours": 24,
       "summary": {
-        "figmaVariableCount": 685,
+        "figmaVariableCount": 687,
         "figmaCollectionCount": 3,
         "VALUE_DRIFT": 0,
         "NEEDS_SYNC": 0,

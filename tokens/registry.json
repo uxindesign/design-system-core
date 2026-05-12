@@ -6169,8 +6169,18 @@
       "contexto": "Aplicado em `.ds-button--ghost` ou em consumidores Figma equivalentes.",
       "decisao": "Aliasado a foundation.color.neutral.900 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).",
       "usos": {
-        "css": [],
-        "tokens": [],
+        "css": [
+          {
+            "file": "css/tokens/generated/component.css",
+            "count": 4
+          }
+        ],
+        "tokens": [
+          "component.button.content.color.ghost.default",
+          "component.button.content.color.ghost.hover",
+          "component.button.content.color.ghost.pressed",
+          "component.button.content.color.ghost.focused"
+        ],
         "figma": []
       }
     },
@@ -6222,18 +6232,9 @@
           {
             "file": "css/components/link.css",
             "count": 1
-          },
-          {
-            "file": "css/tokens/generated/component.css",
-            "count": 4
           }
         ],
-        "tokens": [
-          "component.button.content.color.ghost.default",
-          "component.button.content.color.ghost.hover",
-          "component.button.content.color.ghost.pressed",
-          "component.button.content.color.ghost.focused"
-        ],
+        "tokens": [],
         "figma": []
       }
     },
@@ -9247,12 +9248,13 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 5
+            "count": 6
           }
         ],
         "tokens": [
           "component.alert.icon.glyph-size.default",
           "component.alert.close.glyph-size.default",
+          "component.button.icon.frame-size.sm",
           "component.button.icon.glyph-size.sm",
           "component.checkbox.box.size.md",
           "component.radio.control.size.md"
@@ -9283,13 +9285,14 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 10
+            "count": 11
           }
         ],
         "tokens": [
           "component.alert.icon.size.default",
           "component.alert.close.size.default",
-          "component.button.icon.frame-size.default",
+          "component.button.icon.frame-size.md",
+          "component.button.icon.frame-size.lg",
           "component.button.icon.glyph-size.md",
           "component.button.icon.glyph-size.lg",
           "component.checkbox.box.size.lg",
@@ -15272,7 +15275,7 @@
         "css": [
           {
             "file": "css/components/button.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [],
@@ -15294,7 +15297,7 @@
         "css": [
           {
             "file": "css/components/button.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [],
@@ -15316,7 +15319,7 @@
         "css": [
           {
             "file": "css/components/button.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [],
@@ -16179,28 +16182,6 @@
         "figma": []
       }
     },
-    "component.button.icon.frame-size.default": {
-      "layer": "component",
-      "type": "dimension",
-      "references": "semantic.size.md",
-      "sentido": "Tamanho do frame de ícone Button.",
-      "escopo": [
-        "width",
-        "height"
-      ],
-      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
-      "decisao": "Alias 1:1 para semantic.size.md porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
-      "usos": {
-        "css": [
-          {
-            "file": "css/components/button.css",
-            "count": 2
-          }
-        ],
-        "tokens": [],
-        "figma": []
-      }
-    },
     "component.button.icon.glyph-size.sm": {
       "layer": "component",
       "type": "dimension",
@@ -16615,7 +16596,7 @@
     "component.button.content.color.ghost.default": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.link.content-default",
+      "references": "semantic.ghost.content-default",
       "sentido": "Cor de conteúdo do Button default undefined.",
       "escopo": [],
       "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
@@ -16634,7 +16615,7 @@
     "component.button.content.color.ghost.hover": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.link.content-default",
+      "references": "semantic.ghost.content-default",
       "sentido": "Cor de conteúdo do Button hover undefined.",
       "escopo": [],
       "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
@@ -16653,7 +16634,7 @@
     "component.button.content.color.ghost.pressed": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.link.content-default",
+      "references": "semantic.ghost.content-default",
       "sentido": "Cor de conteúdo do Button pressed undefined.",
       "escopo": [],
       "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
@@ -16672,7 +16653,7 @@
     "component.button.content.color.ghost.focused": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.link.content-default",
+      "references": "semantic.ghost.content-default",
       "sentido": "Cor de conteúdo do Button focused undefined.",
       "escopo": [],
       "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
@@ -16886,10 +16867,13 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.feedback.success.border-default",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Cor do focus ring do Button success.",
+      "escopo": [
+        "outline-color",
+        "stroke"
+      ],
+      "contexto": "Component token do contrato anatômico Button. Binda o focus ring dos estilos Success/Danger no Figma e impede herança indevida do foco brand no CSS.",
+      "decisao": "Alias 1:1 para semantic.feedback.success.border-default porque a cor é semântica, mas o focus ring é uma parte pública e estável do Button por estilo.",
       "usos": {
         "css": [
           {
@@ -16905,10 +16889,13 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.border.focus-error",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Cor do focus ring do Button danger.",
+      "escopo": [
+        "outline-color",
+        "stroke"
+      ],
+      "contexto": "Component token do contrato anatômico Button. Binda o focus ring dos estilos Success/Danger no Figma e impede herança indevida do foco brand no CSS.",
+      "decisao": "Alias 1:1 para semantic.border.focus-error porque a cor é semântica, mas o focus ring é uma parte pública e estável do Button por estilo.",
       "usos": {
         "css": [
           {
@@ -17061,6 +17048,72 @@
       "decisao": "Alias 1:1 para semantic.radius.md porque o radius é reutilizável, mas a anatomia focus-ring pertence ao Checkbox.",
       "usos": {
         "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.icon.frame-size.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.sm",
+      "sentido": "Tamanho do frame de ícone Button sm.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.sm porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente por tamanho.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/button.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.icon.frame-size.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.md",
+      "sentido": "Tamanho do frame de ícone Button md.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.md porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente por tamanho.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/button.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.button.icon.frame-size.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.md",
+      "sentido": "Tamanho do frame de ícone Button lg.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.md porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente por tamanho.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/button.css",
+            "count": 2
+          }
+        ],
         "tokens": [],
         "figma": []
       }
