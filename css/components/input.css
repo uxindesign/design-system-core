@@ -7,14 +7,30 @@
    ========================================================================== */
 
 .ds-input {
+  position: relative;
   display: flex;
   align-items: center;
   gap: var(--ds-input-gap-md);
-  border: var(--ds-border-width-default) solid var(--ds-border-control-default);
-  border-radius: var(--ds-radius-md);
-  background: var(--ds-surface-default);
-  transition: border-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
-              box-shadow var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
+  border: var(--ds-input-border-width-default) solid var(--ds-input-border-color-default);
+  border-radius: var(--ds-input-radius-default);
+  background: var(--ds-input-bg-default);
+  color: var(--ds-input-content-color-default);
+  font-family: var(--ds-input-text-font-family-default);
+  font-weight: var(--ds-input-text-font-weight-default);
+  letter-spacing: var(--ds-input-text-letter-spacing-default);
+  transition: border-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
+}
+
+.ds-input::after {
+  content: "";
+  position: absolute;
+  inset: calc(-1 * (var(--ds-input-focus-ring-offset-default) + var(--ds-input-focus-ring-stroke-width-default)));
+  border: var(--ds-input-focus-ring-stroke-width-default) solid transparent;
+  border-radius: var(--ds-input-focus-ring-radius-default);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
+              border-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
 }
 
 /* Sizes
@@ -24,22 +40,24 @@
 .ds-input--md {
   height: var(--ds-input-height-md);
   padding: var(--ds-input-padding-y-md) var(--ds-input-padding-x-md);
-  font-size: var(--ds-body-font-size-sm);
+  font-size: var(--ds-input-text-font-size-md);
+  line-height: var(--ds-input-text-line-height-md);
 }
 
 .ds-input--sm {
   height: var(--ds-input-height-sm);
   gap: var(--ds-input-gap-sm);
   padding: var(--ds-input-padding-y-sm) var(--ds-input-padding-x-sm);
-  font-size: var(--ds-body-font-size-xs);
-  line-height: var(--ds-body-line-height-2xs);
+  font-size: var(--ds-input-text-font-size-sm);
+  line-height: var(--ds-input-text-line-height-sm);
 }
 
 .ds-input--lg {
   height: var(--ds-input-height-lg);
   gap: var(--ds-input-gap-lg);
   padding: var(--ds-input-padding-y-lg) var(--ds-input-padding-x-lg);
-  font-size: var(--ds-body-font-size-md);
+  font-size: var(--ds-input-text-font-size-lg);
+  line-height: var(--ds-input-text-line-height-lg);
 }
 
 /* Field
@@ -50,16 +68,19 @@
   border: none;
   background: transparent;
   outline: none;
-  color: var(--ds-content-strong);
+  color: var(--ds-input-content-color-default);
   font-size: inherit;
   font-family: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
   min-width: 0;
   padding-left: var(--ds-input-text-frame-padding-x-default);
   padding-right: var(--ds-input-text-frame-padding-x-default);
 }
 
 .ds-input__field::placeholder {
-  color: var(--ds-content-subtle);
+  color: var(--ds-input-placeholder-color-default);
 }
 
 /* Icon
@@ -69,7 +90,7 @@
    por size de input. Container fixo dá breathing room consistente. */
 .ds-input__icon {
   flex-shrink: 0;
-  color: var(--ds-content-subtle);
+  color: var(--ds-input-icon-color-default);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -95,49 +116,145 @@
 
 /* Hover */
 .ds-input:hover:not(.ds-input--disabled):not(:focus-within) {
-  border-color: var(--ds-border-control-hover);
+  border-color: var(--ds-input-border-color-hover);
 }
 
 /* Focused */
 .ds-input:focus-within {
-  border-color: var(--ds-border-focus);
-  outline: var(--ds-border-width-focus) solid var(--ds-border-focus);
-  outline-offset: var(--ds-border-width-focus);
+  background: var(--ds-input-bg-focused);
+  border-color: var(--ds-input-border-color-focused);
+}
+
+.ds-input:focus-within::after {
+  border-color: var(--ds-input-focus-ring-color-default);
+  opacity: 1;
 }
 
 /* Error */
 .ds-input--error {
-  border-color: var(--ds-feedback-error-background-default);
+  background: var(--ds-input-bg-error);
+  border-color: var(--ds-input-border-color-error);
 }
 
 .ds-input--error:focus-within {
-  border-color: var(--ds-feedback-error-background-default);
-  outline: var(--ds-border-width-focus) solid var(--ds-feedback-error-background-default);
-  outline-offset: var(--ds-border-width-focus);
+  border-color: var(--ds-input-border-color-error);
+}
+
+.ds-input--error:focus-within::after {
+  border-color: var(--ds-input-focus-ring-color-error);
+}
+
+/* Filled */
+.ds-input--filled {
+  background: var(--ds-input-bg-filled);
+  border-color: var(--ds-input-border-color-filled);
 }
 
 /* Disabled */
 .ds-input--disabled,
 .ds-input:has(.ds-input__field:disabled) {
-  background: var(--ds-background-disabled);
-  border-color: var(--ds-border-control-disabled);
-  color: var(--ds-content-disabled);
+  background: var(--ds-input-bg-disabled);
+  border-color: var(--ds-input-border-color-disabled);
+  color: var(--ds-input-content-color-disabled);
   pointer-events: none;
 }
 
 .ds-input--disabled .ds-input__field,
 .ds-input__field:disabled {
-  color: var(--ds-content-disabled);
+  color: var(--ds-input-content-color-disabled);
+}
+
+.ds-input--disabled .ds-input__field::placeholder,
+.ds-input__field:disabled::placeholder {
+  color: var(--ds-input-placeholder-color-disabled);
+}
+
+.ds-input--disabled .ds-input__icon,
+.ds-input:has(.ds-input__field:disabled) .ds-input__icon {
+  color: var(--ds-input-icon-color-disabled);
 }
 
 /* Readonly */
 .ds-input--readonly,
 .ds-input:has(.ds-input__field:read-only) {
-  background: var(--ds-background-subtle);
+  background: var(--ds-input-bg-readonly);
+  border-color: var(--ds-input-border-color-readonly);
+}
+
+.ds-input--readonly .ds-input__field,
+.ds-input__field:read-only {
+  color: var(--ds-input-content-color-readonly);
+}
+
+/* Composed field anatomy
+   ========================================================================== */
+
+.ds-field:has(.ds-input) {
+  gap: var(--ds-input-stack-gap-default);
+}
+
+.ds-field:has(.ds-input) .ds-field__label-row {
+  gap: var(--ds-input-label-row-gap-default);
+}
+
+.ds-field:has(.ds-input) .ds-field__label {
+  color: var(--ds-input-label-color-default);
+  font-family: var(--ds-input-label-font-family-default);
+  font-size: var(--ds-input-label-font-size-md);
+  font-weight: var(--ds-input-label-font-weight-default);
+  letter-spacing: var(--ds-input-label-letter-spacing-default);
+  line-height: var(--ds-input-label-line-height-md);
+}
+
+.ds-field:has(.ds-input--sm) .ds-field__label {
+  font-size: var(--ds-input-label-font-size-sm);
+  line-height: var(--ds-input-label-line-height-sm);
+}
+
+.ds-field:has(.ds-input--lg) .ds-field__label {
+  font-size: var(--ds-input-label-font-size-lg);
+  line-height: var(--ds-input-label-line-height-lg);
+}
+
+.ds-field:has(.ds-input) .ds-field__required {
+  color: var(--ds-input-required-color-default);
+  font-family: var(--ds-input-required-font-family-default);
+  font-size: var(--ds-input-required-font-size-default);
+  font-weight: var(--ds-input-required-font-weight-default);
+  letter-spacing: var(--ds-input-required-letter-spacing-default);
+  line-height: var(--ds-input-required-line-height-default);
+}
+
+.ds-field:has(.ds-input) .ds-field__helper {
+  color: var(--ds-input-helper-color-default);
+  font-family: var(--ds-input-helper-font-family-default);
+  font-size: var(--ds-input-helper-font-size-default);
+  font-weight: var(--ds-input-helper-font-weight-default);
+  letter-spacing: var(--ds-input-helper-letter-spacing-default);
+  line-height: var(--ds-input-helper-line-height-default);
+}
+
+.ds-field--error:has(.ds-input) .ds-field__label {
+  color: var(--ds-input-label-color-default);
+}
+
+.ds-field:has(.ds-input--disabled) .ds-field__label,
+.ds-field:has(.ds-input__field:disabled) .ds-field__label {
+  color: var(--ds-input-label-color-disabled);
+}
+
+.ds-field:has(.ds-input--disabled) .ds-field__helper,
+.ds-field:has(.ds-input__field:disabled) .ds-field__helper {
+  color: var(--ds-input-helper-color-disabled);
+}
+
+.ds-field:has(.ds-input--readonly) .ds-field__label,
+.ds-field:has(.ds-input__field:read-only) .ds-field__label {
+  color: var(--ds-input-label-color-readonly);
 }
 
 /* ---------------------------------------------------------
-   Field anatomy (label, helper, error) lives em form-field.css.
+   Error message styling lives em form-field.css.
    Compor Input dentro de .ds-field pra usar o pattern composto.
    --------------------------------------------------------- */
 
@@ -145,5 +262,8 @@
    Reduced motion
    --------------------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {
-  .ds-input { transition: none; }
+  .ds-input,
+  .ds-input::after {
+    transition: none;
+  }
 }

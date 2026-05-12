@@ -9,6 +9,7 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 ## [Não publicado]
 
 ### Corrigido
+- **Input Text completo aplicado aos Component tokens.** `component.input` agora cobre bg, bordas, radius, focus ring, conteúdo, placeholder, ícone, label, required, helper, stack, label-row, sizing, padding e tipografia; os variants vivos no Figma foram bindados nesses atributos e o CSS passa a consumir `--ds-input-*` no wrapper e no uso composto com `.ds-field`.
 - **Input Text sizing/spacing aplicado aos Component tokens.** Criadas variables `input/{padding-x,padding-y,gap}`, `input/icon/{frame-size,glyph-size}` e `input/text-frame/padding-x` no Figma, com Code Syntax WEB e binds nos 18 variants do Input Text. JSON/CSS/docs passam a consumir `component.input.*`, alinhando padding `8/12/16`, padding-y `8/10/12`, gap `0/8/8` e ícone frame/glyph ao Figma vivo.
 - **Button padding e gap sincronizados com Figma.** `component.button.padding-x.{sm,md,lg}` passa a seguir `8/12/16px` e `component.button.gap.{sm,md,lg}` passa a seguir `2/4/8px`, alinhando JSON, CSS gerado, documentação e API às variables vivas do Button no Figma.
 - **Button sm com frame de ícone por tamanho.** `component.button.icon.frame-size.default` foi substituído por `component.button.icon.frame-size.{sm,md,lg}` no Figma/JSON/CSS; os 270 frames de ícone do Button no Figma agora usam `sm=20px`, `md=24px` e `lg=24px`. CSS também corrige Button somente-ícone para não herdar `min-width` textual e renderizar quadrado.

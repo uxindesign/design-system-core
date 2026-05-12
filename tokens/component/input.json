@@ -1,6 +1,153 @@
 {
   "component": {
     "input": {
+      "bg": {
+        "default": {
+          "$type": "color",
+          "$value": "{semantic.surface.default}",
+          "$description": "Bg do Field Input Text default."
+        },
+        "disabled": {
+          "$type": "color",
+          "$value": "{semantic.background.disabled}",
+          "$description": "Bg do Field Input Text disabled."
+        },
+        "error": {
+          "$type": "color",
+          "$value": "{semantic.surface.default}",
+          "$description": "Bg do Field Input Text error."
+        },
+        "filled": {
+          "$type": "color",
+          "$value": "{semantic.surface.default}",
+          "$description": "Bg do Field Input Text filled."
+        },
+        "focused": {
+          "$type": "color",
+          "$value": "{semantic.surface.default}",
+          "$description": "Bg do Field Input Text focused."
+        },
+        "readonly": {
+          "$type": "color",
+          "$value": "{semantic.background.subtle}",
+          "$description": "Bg do Field Input Text readonly."
+        }
+      },
+      "border-color": {
+        "default": {
+          "$type": "color",
+          "$value": "{semantic.border.control-default}",
+          "$description": "Border color do Field Input Text default."
+        },
+        "disabled": {
+          "$type": "color",
+          "$value": "{semantic.border.control-disabled}",
+          "$description": "Border color do Field Input Text disabled."
+        },
+        "error": {
+          "$type": "color",
+          "$value": "{semantic.feedback.error.background.default}",
+          "$description": "Border color do Field Input Text error."
+        },
+        "filled": {
+          "$type": "color",
+          "$value": "{semantic.border.strong}",
+          "$description": "Border color do Field Input Text filled."
+        },
+        "focused": {
+          "$type": "color",
+          "$value": "{semantic.primary.background.default}",
+          "$description": "Border color do Field Input Text focused."
+        },
+        "hover": {
+          "$type": "color",
+          "$value": "{semantic.border.control-hover}",
+          "$description": "Border color do Field Input Text hover."
+        },
+        "readonly": {
+          "$type": "color",
+          "$value": "{semantic.border.subtle}",
+          "$description": "Border color do Field Input Text readonly."
+        }
+      },
+      "border-width": {
+        "default": {
+          "$type": "dimension",
+          "$value": "{semantic.border.width.default}",
+          "$description": "Border width do Field Input Text."
+        }
+      },
+      "content": {
+        "color": {
+          "default": {
+            "$type": "color",
+            "$value": "{semantic.content.strong}",
+            "$description": "Cor de conteúdo preenchido do Input Text."
+          },
+          "disabled": {
+            "$type": "color",
+            "$value": "{semantic.content.disabled}",
+            "$description": "Cor de conteúdo disabled do Input Text."
+          },
+          "readonly": {
+            "$type": "color",
+            "$value": "{semantic.content.default}",
+            "$description": "Cor de conteúdo readonly do Input Text."
+          }
+        }
+      },
+      "focus-ring": {
+        "color": {
+          "default": {
+            "$type": "color",
+            "$value": "{semantic.border.focus}",
+            "$description": "Cor do focus ring Input Text."
+          },
+          "error": {
+            "$type": "color",
+            "$value": "{semantic.feedback.error.background.default}",
+            "$description": "Cor do focus ring Input Text error."
+          }
+        },
+        "offset": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.border.width.focus}",
+            "$description": "Offset CSS do focus ring Input Text."
+          }
+        },
+        "radius": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.radius.lg}",
+            "$description": "Radius do focus ring Input Text."
+          }
+        },
+        "stroke-width": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.border.width.focus}",
+            "$description": "Stroke width do focus ring Input Text."
+          }
+        }
+      },
+      "gap": {
+        "sm": {
+          "$type": "dimension",
+          "$value": "0",
+          "$description": "Gap interno do Field Input Text sm."
+        },
+        "md": {
+          "$type": "dimension",
+          "$value": "{semantic.space.sm}",
+          "$description": "Gap interno do Field Input Text md."
+        },
+        "lg": {
+          "$type": "dimension",
+          "$value": "{semantic.space.sm}",
+          "$description": "Gap interno do Field Input Text lg."
+        }
+      },
       "height": {
         "sm": {
           "$type": "dimension",
@@ -16,6 +163,186 @@
           "$type": "dimension",
           "$value": "{semantic.size.2xl}",
           "$description": "Altura da superfície visual Input Text lg."
+        }
+      },
+      "helper": {
+        "color": {
+          "default": {
+            "$type": "color",
+            "$value": "{semantic.content.default}",
+            "$description": "Cor do helper text Input Text."
+          },
+          "disabled": {
+            "$type": "color",
+            "$value": "{semantic.content.disabled}",
+            "$description": "Cor do helper text Input Text disabled."
+          }
+        },
+        "font-family": {
+          "default": {
+            "$type": "string",
+            "$value": "{semantic.typography.body.font-family.sans}",
+            "$description": "Font-family do helper text Input Text."
+          }
+        },
+        "font-size": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.font-size.xs}",
+            "$description": "Font-size do helper text Input Text."
+          }
+        },
+        "font-weight": {
+          "default": {
+            "$type": "string",
+            "$value": "{semantic.typography.body.font-weight.regular}",
+            "$description": "Font-weight do helper text Input Text."
+          }
+        },
+        "letter-spacing": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.letter-spacing.normal}",
+            "$description": "Letter-spacing do helper text Input Text."
+          }
+        },
+        "line-height": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.line-height.xs}",
+            "$description": "Line-height do helper text Input Text."
+          }
+        }
+      },
+      "icon": {
+        "color": {
+          "default": {
+            "$type": "color",
+            "$value": "{semantic.content.subtle}",
+            "$description": "Cor do ícone Input Text."
+          },
+          "disabled": {
+            "$type": "color",
+            "$value": "{semantic.content.disabled}",
+            "$description": "Cor do ícone Input Text disabled."
+          }
+        },
+        "frame-size": {
+          "sm": {
+            "$type": "dimension",
+            "$value": "{semantic.size.md}",
+            "$description": "Tamanho do frame de ícone Input Text sm."
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "{semantic.size.md}",
+            "$description": "Tamanho do frame de ícone Input Text md."
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{semantic.size.md}",
+            "$description": "Tamanho do frame de ícone Input Text lg."
+          }
+        },
+        "glyph-size": {
+          "sm": {
+            "$type": "dimension",
+            "$value": "{semantic.size.xs}",
+            "$description": "Tamanho do glyph de ícone Input Text sm."
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "{semantic.size.sm}",
+            "$description": "Tamanho do glyph de ícone Input Text md."
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{semantic.size.md}",
+            "$description": "Tamanho do glyph de ícone Input Text lg."
+          }
+        }
+      },
+      "label": {
+        "color": {
+          "default": {
+            "$type": "color",
+            "$value": "{semantic.content.strong}",
+            "$description": "Cor do label Input Text."
+          },
+          "disabled": {
+            "$type": "color",
+            "$value": "{semantic.content.disabled}",
+            "$description": "Cor do label Input Text disabled."
+          },
+          "readonly": {
+            "$type": "color",
+            "$value": "{semantic.content.default}",
+            "$description": "Cor do label Input Text readonly."
+          }
+        },
+        "font-family": {
+          "default": {
+            "$type": "string",
+            "$value": "{semantic.typography.body.font-family.sans}",
+            "$description": "Font-family do label Input Text."
+          }
+        },
+        "font-size": {
+          "sm": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.font-size.xs}",
+            "$description": "Font-size do label Input Text sm."
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.font-size.sm}",
+            "$description": "Font-size do label Input Text md."
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.font-size.sm}",
+            "$description": "Font-size do label Input Text lg."
+          }
+        },
+        "font-weight": {
+          "default": {
+            "$type": "string",
+            "$value": "{semantic.typography.body.font-weight.bold}",
+            "$description": "Font-weight do label Input Text."
+          }
+        },
+        "letter-spacing": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.letter-spacing.normal}",
+            "$description": "Letter-spacing do label Input Text."
+          }
+        },
+        "line-height": {
+          "sm": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.line-height.xs}",
+            "$description": "Line-height do label Input Text sm."
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.line-height.sm}",
+            "$description": "Line-height do label Input Text md."
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.line-height.sm}",
+            "$description": "Line-height do label Input Text lg."
+          }
+        }
+      },
+      "label-row": {
+        "gap": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.space.2xs}",
+            "$description": "Gap entre label e required Input Text."
+          }
         }
       },
       "padding-x": {
@@ -52,21 +379,135 @@
           "$description": "Padding vertical do Field Input Text lg."
         }
       },
-      "gap": {
-        "sm": {
+      "placeholder": {
+        "color": {
+          "default": {
+            "$type": "color",
+            "$value": "{semantic.content.subtle}",
+            "$description": "Cor do placeholder Input Text."
+          },
+          "disabled": {
+            "$type": "color",
+            "$value": "{semantic.content.disabled}",
+            "$description": "Cor do placeholder Input Text disabled."
+          }
+        }
+      },
+      "radius": {
+        "default": {
           "$type": "dimension",
-          "$value": "0",
-          "$description": "Gap interno do Field Input Text sm."
+          "$value": "{semantic.radius.md}",
+          "$description": "Radius do Field Input Text."
+        }
+      },
+      "required": {
+        "color": {
+          "default": {
+            "$type": "color",
+            "$value": "{semantic.feedback.error.content-default}",
+            "$description": "Cor do indicador required Input Text."
+          }
         },
-        "md": {
-          "$type": "dimension",
-          "$value": "{semantic.space.sm}",
-          "$description": "Gap interno do Field Input Text md."
+        "font-family": {
+          "default": {
+            "$type": "string",
+            "$value": "{semantic.typography.body.font-family.sans}",
+            "$description": "Font-family do indicador required Input Text."
+          }
         },
-        "lg": {
-          "$type": "dimension",
-          "$value": "{semantic.space.sm}",
-          "$description": "Gap interno do Field Input Text lg."
+        "font-size": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.font-size.sm}",
+            "$description": "Font-size do indicador required Input Text."
+          }
+        },
+        "font-weight": {
+          "default": {
+            "$type": "string",
+            "$value": "{semantic.typography.body.font-weight.bold}",
+            "$description": "Font-weight do indicador required Input Text."
+          }
+        },
+        "letter-spacing": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.letter-spacing.normal}",
+            "$description": "Letter-spacing do indicador required Input Text."
+          }
+        },
+        "line-height": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.line-height.sm}",
+            "$description": "Line-height do indicador required Input Text."
+          }
+        }
+      },
+      "stack": {
+        "gap": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.space.xs}",
+            "$description": "Gap vertical entre label, field e helper no Input Text."
+          }
+        }
+      },
+      "text": {
+        "font-family": {
+          "default": {
+            "$type": "string",
+            "$value": "{semantic.typography.body.font-family.sans}",
+            "$description": "Font-family do texto Input Text."
+          }
+        },
+        "font-size": {
+          "sm": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.font-size.xs}",
+            "$description": "Font-size do texto Input Text sm."
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.font-size.sm}",
+            "$description": "Font-size do texto Input Text md."
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.font-size.md}",
+            "$description": "Font-size do texto Input Text lg."
+          }
+        },
+        "font-weight": {
+          "default": {
+            "$type": "string",
+            "$value": "{semantic.typography.body.font-weight.regular}",
+            "$description": "Font-weight do texto Input Text."
+          }
+        },
+        "letter-spacing": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.letter-spacing.normal}",
+            "$description": "Letter-spacing do texto Input Text."
+          }
+        },
+        "line-height": {
+          "sm": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.line-height.2xs}",
+            "$description": "Line-height do texto Input Text sm."
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.line-height.sm}",
+            "$description": "Line-height do texto Input Text md."
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{semantic.typography.body.line-height.md}",
+            "$description": "Line-height do texto Input Text lg."
+          }
         }
       },
       "text-frame": {
@@ -75,42 +516,6 @@
             "$type": "dimension",
             "$value": "{semantic.space.xs}",
             "$description": "Padding horizontal do Text Frame Input Text."
-          }
-        }
-      },
-      "icon": {
-        "frame-size": {
-          "sm": {
-            "$type": "dimension",
-            "$value": "{semantic.size.md}",
-            "$description": "Tamanho do frame de ícone Input Text sm."
-          },
-          "md": {
-            "$type": "dimension",
-            "$value": "{semantic.size.md}",
-            "$description": "Tamanho do frame de ícone Input Text md."
-          },
-          "lg": {
-            "$type": "dimension",
-            "$value": "{semantic.size.md}",
-            "$description": "Tamanho do frame de ícone Input Text lg."
-          }
-        },
-        "glyph-size": {
-          "sm": {
-            "$type": "dimension",
-            "$value": "{semantic.size.xs}",
-            "$description": "Tamanho do glyph de ícone Input Text sm."
-          },
-          "md": {
-            "$type": "dimension",
-            "$value": "{semantic.size.sm}",
-            "$description": "Tamanho do glyph de ícone Input Text md."
-          },
-          "lg": {
-            "$type": "dimension",
-            "$value": "{semantic.size.md}",
-            "$description": "Tamanho do glyph de ícone Input Text lg."
           }
         }
       }

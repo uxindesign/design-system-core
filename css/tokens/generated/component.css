@@ -218,24 +218,87 @@
   --ds-form-field-error-font-size-default: var(--ds-body-font-size-xs); /** Font-size da mensagem de erro Form Field. */
   --ds-form-field-error-line-height-default: var(--ds-body-line-height-xs); /** Line-height da mensagem de erro Form Field. */
   --ds-form-field-error-font-weight-default: var(--ds-body-font-weight-bold); /** Font-weight da mensagem de erro Form Field. */
+  --ds-input-bg-default: var(--ds-surface-default); /** Bg do Field Input Text default. */
+  --ds-input-bg-disabled: var(--ds-background-disabled); /** Bg do Field Input Text disabled. */
+  --ds-input-bg-error: var(--ds-surface-default); /** Bg do Field Input Text error. */
+  --ds-input-bg-filled: var(--ds-surface-default); /** Bg do Field Input Text filled. */
+  --ds-input-bg-focused: var(--ds-surface-default); /** Bg do Field Input Text focused. */
+  --ds-input-bg-readonly: var(--ds-background-subtle); /** Bg do Field Input Text readonly. */
+  --ds-input-border-color-default: var(--ds-border-control-default); /** Border color do Field Input Text default. */
+  --ds-input-border-color-disabled: var(--ds-border-control-disabled); /** Border color do Field Input Text disabled. */
+  --ds-input-border-color-error: var(--ds-feedback-error-background-default); /** Border color do Field Input Text error. */
+  --ds-input-border-color-filled: var(--ds-border-strong); /** Border color do Field Input Text filled. */
+  --ds-input-border-color-focused: var(--ds-primary-background-default); /** Border color do Field Input Text focused. */
+  --ds-input-border-color-hover: var(--ds-border-control-hover); /** Border color do Field Input Text hover. */
+  --ds-input-border-color-readonly: var(--ds-border-subtle); /** Border color do Field Input Text readonly. */
+  --ds-input-border-width-default: var(--ds-border-width-default); /** Border width do Field Input Text. */
+  --ds-input-content-color-default: var(--ds-content-strong); /** Cor de conteúdo preenchido do Input Text. */
+  --ds-input-content-color-disabled: var(--ds-content-disabled); /** Cor de conteúdo disabled do Input Text. */
+  --ds-input-content-color-readonly: var(--ds-content-default); /** Cor de conteúdo readonly do Input Text. */
+  --ds-input-focus-ring-color-default: var(--ds-border-focus); /** Cor do focus ring Input Text. */
+  --ds-input-focus-ring-color-error: var(--ds-feedback-error-background-default); /** Cor do focus ring Input Text error. */
+  --ds-input-focus-ring-offset-default: var(--ds-border-width-focus); /** Offset CSS do focus ring Input Text. */
+  --ds-input-focus-ring-radius-default: var(--ds-radius-lg); /** Radius do focus ring Input Text. */
+  --ds-input-focus-ring-stroke-width-default: var(--ds-border-width-focus); /** Stroke width do focus ring Input Text. */
+  --ds-input-gap-md: var(--ds-space-sm); /** Gap interno do Field Input Text md. */
+  --ds-input-gap-lg: var(--ds-space-sm); /** Gap interno do Field Input Text lg. */
   --ds-input-height-sm: var(--ds-size-lg); /** Altura da superfície visual Input Text sm. */
   --ds-input-height-md: var(--ds-size-xl); /** Altura da superfície visual Input Text md. */
   --ds-input-height-lg: var(--ds-size-2xl); /** Altura da superfície visual Input Text lg. */
-  --ds-input-padding-x-sm: var(--ds-space-sm); /** Padding horizontal do Field Input Text sm. */
-  --ds-input-padding-x-md: var(--ds-space-md); /** Padding horizontal do Field Input Text md. */
-  --ds-input-padding-x-lg: var(--ds-space-lg); /** Padding horizontal do Field Input Text lg. */
-  --ds-input-padding-y-sm: var(--ds-space-sm); /** Padding vertical do Field Input Text sm. */
-  --ds-input-padding-y-md: var(--ds-space-control-padding-10); /** Padding vertical do Field Input Text md. */
-  --ds-input-padding-y-lg: var(--ds-space-md); /** Padding vertical do Field Input Text lg. */
-  --ds-input-gap-md: var(--ds-space-sm); /** Gap interno do Field Input Text md. */
-  --ds-input-gap-lg: var(--ds-space-sm); /** Gap interno do Field Input Text lg. */
-  --ds-input-text-frame-padding-x-default: var(--ds-space-xs); /** Padding horizontal do Text Frame Input Text. */
+  --ds-input-helper-color-default: var(--ds-content-default); /** Cor do helper text Input Text. */
+  --ds-input-helper-color-disabled: var(--ds-content-disabled); /** Cor do helper text Input Text disabled. */
+  --ds-input-helper-font-family-default: var(--ds-body-font-family-sans); /** Font-family do helper text Input Text. */
+  --ds-input-helper-font-size-default: var(--ds-body-font-size-xs); /** Font-size do helper text Input Text. */
+  --ds-input-helper-font-weight-default: var(--ds-body-font-weight-regular); /** Font-weight do helper text Input Text. */
+  --ds-input-helper-letter-spacing-default: var(--ds-body-letter-spacing-normal); /** Letter-spacing do helper text Input Text. */
+  --ds-input-helper-line-height-default: var(--ds-body-line-height-xs); /** Line-height do helper text Input Text. */
+  --ds-input-icon-color-default: var(--ds-content-subtle); /** Cor do ícone Input Text. */
+  --ds-input-icon-color-disabled: var(--ds-content-disabled); /** Cor do ícone Input Text disabled. */
   --ds-input-icon-frame-size-sm: var(--ds-size-md); /** Tamanho do frame de ícone Input Text sm. */
   --ds-input-icon-frame-size-md: var(--ds-size-md); /** Tamanho do frame de ícone Input Text md. */
   --ds-input-icon-frame-size-lg: var(--ds-size-md); /** Tamanho do frame de ícone Input Text lg. */
   --ds-input-icon-glyph-size-sm: var(--ds-size-xs); /** Tamanho do glyph de ícone Input Text sm. */
   --ds-input-icon-glyph-size-md: var(--ds-size-sm); /** Tamanho do glyph de ícone Input Text md. */
   --ds-input-icon-glyph-size-lg: var(--ds-size-md); /** Tamanho do glyph de ícone Input Text lg. */
+  --ds-input-label-color-default: var(--ds-content-strong); /** Cor do label Input Text. */
+  --ds-input-label-color-disabled: var(--ds-content-disabled); /** Cor do label Input Text disabled. */
+  --ds-input-label-color-readonly: var(--ds-content-default); /** Cor do label Input Text readonly. */
+  --ds-input-label-font-family-default: var(--ds-body-font-family-sans); /** Font-family do label Input Text. */
+  --ds-input-label-font-size-sm: var(--ds-body-font-size-xs); /** Font-size do label Input Text sm. */
+  --ds-input-label-font-size-md: var(--ds-body-font-size-sm); /** Font-size do label Input Text md. */
+  --ds-input-label-font-size-lg: var(--ds-body-font-size-sm); /** Font-size do label Input Text lg. */
+  --ds-input-label-font-weight-default: var(--ds-body-font-weight-bold); /** Font-weight do label Input Text. */
+  --ds-input-label-letter-spacing-default: var(--ds-body-letter-spacing-normal); /** Letter-spacing do label Input Text. */
+  --ds-input-label-line-height-sm: var(--ds-body-line-height-xs); /** Line-height do label Input Text sm. */
+  --ds-input-label-line-height-md: var(--ds-body-line-height-sm); /** Line-height do label Input Text md. */
+  --ds-input-label-line-height-lg: var(--ds-body-line-height-sm); /** Line-height do label Input Text lg. */
+  --ds-input-label-row-gap-default: var(--ds-space-2xs); /** Gap entre label e required Input Text. */
+  --ds-input-padding-x-sm: var(--ds-space-sm); /** Padding horizontal do Field Input Text sm. */
+  --ds-input-padding-x-md: var(--ds-space-md); /** Padding horizontal do Field Input Text md. */
+  --ds-input-padding-x-lg: var(--ds-space-lg); /** Padding horizontal do Field Input Text lg. */
+  --ds-input-padding-y-sm: var(--ds-space-sm); /** Padding vertical do Field Input Text sm. */
+  --ds-input-padding-y-md: var(--ds-space-control-padding-10); /** Padding vertical do Field Input Text md. */
+  --ds-input-padding-y-lg: var(--ds-space-md); /** Padding vertical do Field Input Text lg. */
+  --ds-input-placeholder-color-default: var(--ds-content-subtle); /** Cor do placeholder Input Text. */
+  --ds-input-placeholder-color-disabled: var(--ds-content-disabled); /** Cor do placeholder Input Text disabled. */
+  --ds-input-radius-default: var(--ds-radius-md); /** Radius do Field Input Text. */
+  --ds-input-required-color-default: var(--ds-feedback-error-content-default); /** Cor do indicador required Input Text. */
+  --ds-input-required-font-family-default: var(--ds-body-font-family-sans); /** Font-family do indicador required Input Text. */
+  --ds-input-required-font-size-default: var(--ds-body-font-size-sm); /** Font-size do indicador required Input Text. */
+  --ds-input-required-font-weight-default: var(--ds-body-font-weight-bold); /** Font-weight do indicador required Input Text. */
+  --ds-input-required-letter-spacing-default: var(--ds-body-letter-spacing-normal); /** Letter-spacing do indicador required Input Text. */
+  --ds-input-required-line-height-default: var(--ds-body-line-height-sm); /** Line-height do indicador required Input Text. */
+  --ds-input-stack-gap-default: var(--ds-space-xs); /** Gap vertical entre label, field e helper no Input Text. */
+  --ds-input-text-font-family-default: var(--ds-body-font-family-sans); /** Font-family do texto Input Text. */
+  --ds-input-text-font-size-sm: var(--ds-body-font-size-xs); /** Font-size do texto Input Text sm. */
+  --ds-input-text-font-size-md: var(--ds-body-font-size-sm); /** Font-size do texto Input Text md. */
+  --ds-input-text-font-size-lg: var(--ds-body-font-size-md); /** Font-size do texto Input Text lg. */
+  --ds-input-text-font-weight-default: var(--ds-body-font-weight-regular); /** Font-weight do texto Input Text. */
+  --ds-input-text-letter-spacing-default: var(--ds-body-letter-spacing-normal); /** Letter-spacing do texto Input Text. */
+  --ds-input-text-line-height-sm: var(--ds-body-line-height-2xs); /** Line-height do texto Input Text sm. */
+  --ds-input-text-line-height-md: var(--ds-body-line-height-sm); /** Line-height do texto Input Text md. */
+  --ds-input-text-line-height-lg: var(--ds-body-line-height-md); /** Line-height do texto Input Text lg. */
+  --ds-input-text-frame-padding-x-default: var(--ds-space-xs); /** Padding horizontal do Text Frame Input Text. */
   --ds-modal-overlay-padding-default: var(--ds-space-xl); /** Padding do overlay Modal. */
   --ds-modal-overlay-z-index-default: var(--ds-z-modal); /** Z-index do overlay Modal. */
   --ds-modal-max-width-sm: var(--ds-size-layout-sm); /** Max-width do Modal sm. */

@@ -525,22 +525,25 @@
     <table class="ds-token-table">
       <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token</th><th><span data-lang="pt">Variável CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
       <tbody>
-        <tr><td>background</td><td><code>semantic.surface.default</code></td><td><code>--ds-surface-default</code></td></tr>
-        <tr><td>border-color (default)</td><td><code>semantic.border.control.default</code></td><td><code>--ds-border-control-default</code></td></tr>
-        <tr><td>border-color (focus)</td><td><code>semantic.border.focus</code></td><td><code>--ds-border-focus</code></td></tr>
-        <tr><td>border-color (error)</td><td><code>semantic.feedback.error.background.default</code></td><td><code>--ds-feedback-error-background-default</code></td></tr>
-        <tr><td>text color</td><td><code>semantic.content.strong</code></td><td><code>--ds-content-strong</code></td></tr>
-        <tr><td>placeholder color</td><td><code>semantic.content.subtle</code></td><td><code>--ds-content-subtle</code></td></tr>
-        <tr><td>icon color</td><td><code>semantic.content.subtle</code></td><td><code>--ds-content-subtle</code></td></tr>
-        <tr><td>border-radius</td><td><code>semantic.radius.md</code></td><td><code>--ds-radius-md</code></td></tr>
-        <tr><td>focus ring</td><td><code>semantic.border.focus</code>, <code>semantic.border.width.focus</code></td><td><code>--ds-border-focus</code>, <code>--ds-border-width-focus</code></td></tr>
+        <tr><td>bg (default/disabled/error/filled/focused/readonly)</td><td><code>component.input.bg.*</code></td><td><code>--ds-input-bg-*</code></td></tr>
+        <tr><td>border-color (default/hover/focused/error/filled/disabled/readonly)</td><td><code>component.input.border-color.*</code></td><td><code>--ds-input-border-color-*</code></td></tr>
+        <tr><td>border-width</td><td><code>component.input.border-width.default</code></td><td><code>--ds-input-border-width-default</code></td></tr>
+        <tr><td>border-radius</td><td><code>component.input.radius.default</code></td><td><code>--ds-input-radius-default</code></td></tr>
+        <tr><td>focus ring</td><td><code>component.input.focus-ring.{color,stroke-width,offset,radius}.*</code></td><td><code>--ds-input-focus-ring-*</code></td></tr>
+        <tr><td>content color</td><td><code>component.input.content.color.{default,disabled,readonly}</code></td><td><code>--ds-input-content-color-*</code></td></tr>
+        <tr><td>placeholder color</td><td><code>component.input.placeholder.color.{default,disabled}</code></td><td><code>--ds-input-placeholder-color-*</code></td></tr>
+        <tr><td>icon color</td><td><code>component.input.icon.color.{default,disabled}</code></td><td><code>--ds-input-icon-color-*</code></td></tr>
         <tr><td>height (sm/md/lg)</td><td><code>component.input.height.{sm,md,lg}</code></td><td><code>--ds-input-height-*</code></td></tr>
         <tr><td>padding-x (sm/md/lg)</td><td><code>component.input.padding-x.{sm,md,lg}</code></td><td><code>--ds-input-padding-x-*</code></td></tr>
         <tr><td>padding-y (sm/md/lg)</td><td><code>component.input.padding-y.{sm,md,lg}</code></td><td><code>--ds-input-padding-y-*</code></td></tr>
         <tr><td>gap (sm/md/lg)</td><td><code>component.input.gap.{sm,md,lg}</code></td><td><code>--ds-input-gap-*</code></td></tr>
         <tr><td>text-frame padding-x</td><td><code>component.input.text-frame.padding-x.default</code></td><td><code>--ds-input-text-frame-padding-x-default</code></td></tr>
-        <tr><td>icon frame/glyph</td><td><code>component.input.icon.frame-size.{sm,md,lg}</code>, <code>component.input.icon.glyph-size.{sm,md,lg}</code></td><td><code>--ds-input-icon-*</code></td></tr>
-        <tr><td>font-size (sm/md/lg)</td><td><code>semantic.typography.body.font-size.{xs,sm,md}</code></td><td><code>--ds-body-font-size-*</code></td></tr>
+        <tr><td>icon frame/glyph</td><td><code>component.input.icon.{frame-size,glyph-size}.{sm,md,lg}</code></td><td><code>--ds-input-icon-*</code></td></tr>
+        <tr><td>text typography</td><td><code>component.input.text.{font-family,font-size,font-weight,letter-spacing,line-height}.*</code></td><td><code>--ds-input-text-*</code></td></tr>
+        <tr><td>label typography/color</td><td><code>component.input.label.{color,font-family,font-size,font-weight,letter-spacing,line-height}.*</code></td><td><code>--ds-input-label-*</code></td></tr>
+        <tr><td>required typography/color</td><td><code>component.input.required.{color,font-family,font-size,font-weight,letter-spacing,line-height}.default</code></td><td><code>--ds-input-required-*</code></td></tr>
+        <tr><td>helper typography/color</td><td><code>component.input.helper.{color,font-family,font-size,font-weight,letter-spacing,line-height}.*</code></td><td><code>--ds-input-helper-*</code></td></tr>
+        <tr><td>stack/label-row gap</td><td><code>component.input.stack.gap.default</code>, <code>component.input.label-row.gap.default</code></td><td><code>--ds-input-stack-gap-default</code>, <code>--ds-input-label-row-gap-default</code></td></tr>
       </tbody>
     </table>
   </div>
