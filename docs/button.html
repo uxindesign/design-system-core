@@ -8,18 +8,10 @@
   <link rel="stylesheet" href="layout.css">
   <style>
     .ds-button--docs-focused {
-      position: relative;
       background-color: var(--ds-button-bg-brand-focused);
       color: var(--ds-button-content-color-brand-focused);
-    }
-
-    .ds-button--docs-focused::after {
-      content: "";
-      position: absolute;
-      inset: calc(-1 * (var(--ds-button-focus-ring-offset-default) + var(--ds-button-focus-ring-stroke-width-default)));
-      border: var(--ds-button-focus-ring-stroke-width-default) solid var(--ds-button-focus-ring-color-default);
-      border-radius: var(--ds-button-focus-ring-radius-default);
-      pointer-events: none;
+      outline: var(--ds-button-focus-ring-stroke-width-default) solid var(--ds-button-focus-ring-color-default);
+      outline-offset: var(--ds-button-focus-ring-offset-default);
     }
   </style>
   <script>
