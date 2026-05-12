@@ -63,7 +63,7 @@
       </div>
       <div class="ds-preview__canvas" style="padding:0;display:block">
         <div style="min-height:660px;display:flex;align-items:center;justify-content:center;background:var(--ds-background-subtle);padding:var(--ds-dimension-40)">
-          <div style="background:var(--ds-surface-default);border-radius:var(--ds-radius-lg);padding:var(--ds-dimension-40);width:100%;max-width:440px;box-shadow:0 8px 32px rgba(0,0,0,.08)">
+          <div style="background:var(--ds-surface-default);border-radius:var(--ds-radius-lg);padding:var(--ds-dimension-40);width:100%;max-width:440px;box-shadow:0 8px 32px rgba(0,0,0,.08);box-sizing:border-box">
 
             <div style="text-align:center;margin-bottom:var(--ds-dimension-32)">
               <div style="width:48px;height:48px;background:var(--ds-primary-background-default);border-radius:var(--ds-radius-md);display:inline-flex;align-items:center;justify-content:center;margin-bottom:var(--ds-dimension-16)">
@@ -94,7 +94,7 @@
 
             <form novalidate>
               <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--ds-dimension-12);margin-bottom:var(--ds-dimension-16)">
-                <div class="ds-field">
+                <div class="ds-field" style="min-width:0">
                   <div class="ds-field__label-row">
                     <label class="ds-field__label" for="su-fname"><span data-lang="pt">Nome</span><span data-lang="en">First name</span></label>
                     <span class="ds-field__required" aria-hidden="true">*</span>
@@ -103,7 +103,7 @@
                     <input class="ds-input__field" type="text" id="su-fname" autocomplete="given-name" required>
                   </div>
                 </div>
-                <div class="ds-field">
+                <div class="ds-field" style="min-width:0">
                   <div class="ds-field__label-row">
                     <label class="ds-field__label" for="su-lname"><span data-lang="pt">Sobrenome</span><span data-lang="en">Last name</span></label>
                     <span class="ds-field__required" aria-hidden="true">*</span>
@@ -204,6 +204,7 @@
       box-shadow: 0 8px 32px rgba(0,0,0,.08);
     }
     .signup-name-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ds-dimension-12); margin-bottom: var(--ds-dimension-16); }
+    .signup-name-row &gt; * { min-width: 0; }
   &lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
