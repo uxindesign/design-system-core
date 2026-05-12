@@ -9,7 +9,7 @@
 .ds-input {
   display: flex;
   align-items: center;
-  gap: var(--ds-space-sm);
+  gap: var(--ds-input-gap-md);
   border: var(--ds-border-width-default) solid var(--ds-border-control-default);
   border-radius: var(--ds-radius-md);
   background: var(--ds-surface-default);
@@ -23,20 +23,22 @@
 .ds-input,
 .ds-input--md {
   height: var(--ds-input-height-md);
-  padding: 0 var(--ds-space-md);
+  padding: var(--ds-input-padding-y-md) var(--ds-input-padding-x-md);
   font-size: var(--ds-body-font-size-sm);
 }
 
 .ds-input--sm {
   height: var(--ds-input-height-sm);
-  padding: 0 var(--ds-space-sm);
+  gap: var(--ds-input-gap-sm);
+  padding: var(--ds-input-padding-y-sm) var(--ds-input-padding-x-sm);
   font-size: var(--ds-body-font-size-xs);
   line-height: var(--ds-body-line-height-2xs);
 }
 
 .ds-input--lg {
   height: var(--ds-input-height-lg);
-  padding: 0 var(--ds-space-lg);
+  gap: var(--ds-input-gap-lg);
+  padding: var(--ds-input-padding-y-lg) var(--ds-input-padding-x-lg);
   font-size: var(--ds-body-font-size-md);
 }
 
@@ -52,8 +54,8 @@
   font-size: inherit;
   font-family: inherit;
   min-width: 0;
-  padding-left: var(--ds-space-xs);
-  padding-right: var(--ds-space-xs);
+  padding-left: var(--ds-input-text-frame-padding-x-default);
+  padding-right: var(--ds-input-text-frame-padding-x-default);
 }
 
 .ds-input__field::placeholder {
@@ -71,17 +73,21 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: var(--ds-size-md);
-  height: var(--ds-size-md);
-  font-size: var(--ds-size-sm); /* glyph 20px (md default) */
+  width: var(--ds-input-icon-frame-size-md);
+  height: var(--ds-input-icon-frame-size-md);
+  font-size: var(--ds-input-icon-glyph-size-md);
 }
 
 .ds-input--sm .ds-input__icon {
-  font-size: var(--ds-size-xs); /* glyph 16px */
+  width: var(--ds-input-icon-frame-size-sm);
+  height: var(--ds-input-icon-frame-size-sm);
+  font-size: var(--ds-input-icon-glyph-size-sm);
 }
 
 .ds-input--lg .ds-input__icon {
-  font-size: var(--ds-size-md); /* glyph 24px */
+  width: var(--ds-input-icon-frame-size-lg);
+  height: var(--ds-input-icon-frame-size-lg);
+  font-size: var(--ds-input-icon-glyph-size-lg);
 }
 
 /* States

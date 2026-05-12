@@ -6833,10 +6833,6 @@
             "count": 6
           },
           {
-            "file": "css/components/input.css",
-            "count": 2
-          },
-          {
             "file": "css/components/radio.css",
             "count": 7
           },
@@ -6850,7 +6846,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 10
+            "count": 11
           },
           {
             "file": "css/utilities/layout.css",
@@ -6865,6 +6861,7 @@
           "component.button.gap.md",
           "component.button.label-frame.padding-x.default",
           "component.form-field.gap.default",
+          "component.input.text-frame.padding-x.default",
           "component.modal.close.padding.default",
           "component.tooltip.content.padding-y.default",
           "component.tooltip.arrow.depth.default"
@@ -6891,10 +6888,6 @@
             "count": 2
           },
           {
-            "file": "css/components/input.css",
-            "count": 2
-          },
-          {
             "file": "css/components/radio.css",
             "count": 4
           },
@@ -6916,7 +6909,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 15
+            "count": 19
           },
           {
             "file": "css/utilities/layout.css",
@@ -6933,6 +6926,10 @@
           "component.card.header.padding-bottom.default",
           "component.card.header.gap.default",
           "component.checkbox.target.gap.default",
+          "component.input.padding-x.sm",
+          "component.input.padding-y.sm",
+          "component.input.gap.md",
+          "component.input.gap.lg",
           "component.modal.header.padding-bottom.sm",
           "component.modal.header.gap.default",
           "component.modal.footer.padding-top.sm",
@@ -6962,10 +6959,6 @@
             "count": 2
           },
           {
-            "file": "css/components/input.css",
-            "count": 1
-          },
-          {
             "file": "css/components/radio.css",
             "count": 1
           },
@@ -6979,7 +6972,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 9
+            "count": 11
           },
           {
             "file": "css/utilities/layout.css",
@@ -6991,6 +6984,8 @@
           "component.button.padding-x.md",
           "component.button.padding-y.lg",
           "component.button.icon-only-padding.lg",
+          "component.input.padding-x.md",
+          "component.input.padding-y.lg",
           "component.modal.header.padding-bottom.md",
           "component.modal.header.padding-bottom.lg",
           "component.modal.footer.padding-top.md",
@@ -7015,10 +7010,6 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/input.css",
-            "count": 1
-          },
-          {
             "file": "css/components/select.css",
             "count": 3
           },
@@ -7028,7 +7019,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 13
+            "count": 14
           },
           {
             "file": "css/utilities/layout.css",
@@ -7041,6 +7032,7 @@
           "component.card.header.padding-top.default",
           "component.card.body.padding-x.default",
           "component.card.body.padding-bottom.default",
+          "component.input.padding-x.lg",
           "component.modal.header.padding-x.sm",
           "component.modal.header.padding-top.sm",
           "component.modal.body.padding-x.sm",
@@ -9171,11 +9163,12 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 2
+            "count": 3
           }
         ],
         "tokens": [
           "component.button.padding-y.md",
+          "component.input.padding-y.md",
           "component.tabs.item.indicator-gap.default"
         ],
         "figma": []
@@ -9195,20 +9188,17 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/input.css",
-            "count": 1
-          },
-          {
             "file": "css/components/select.css",
             "count": 1
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 5
+            "count": 6
           }
         ],
         "tokens": [
           "component.checkbox.box.size.sm",
+          "component.input.icon.glyph-size.sm",
           "component.modal.close.glyph-size.default",
           "component.radio.control.size.sm",
           "component.spinner.size.sm",
@@ -9235,10 +9225,6 @@
             "count": 2
           },
           {
-            "file": "css/components/input.css",
-            "count": 1
-          },
-          {
             "file": "css/components/radio.css",
             "count": 2
           },
@@ -9248,7 +9234,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 6
+            "count": 7
           }
         ],
         "tokens": [
@@ -9257,6 +9243,7 @@
           "component.button.icon.frame-size.sm",
           "component.button.icon.glyph-size.sm",
           "component.checkbox.box.size.md",
+          "component.input.icon.glyph-size.md",
           "component.radio.control.size.md"
         ],
         "figma": []
@@ -9276,16 +9263,12 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/input.css",
-            "count": 3
-          },
-          {
             "file": "css/components/select.css",
             "count": 5
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 11
+            "count": 15
           }
         ],
         "tokens": [
@@ -9296,6 +9279,10 @@
           "component.button.icon.glyph-size.md",
           "component.button.icon.glyph-size.lg",
           "component.checkbox.box.size.lg",
+          "component.input.icon.frame-size.sm",
+          "component.input.icon.frame-size.md",
+          "component.input.icon.frame-size.lg",
+          "component.input.icon.glyph-size.lg",
           "component.modal.close.size.default",
           "component.radio.control.size.lg",
           "component.spinner.size.md",
@@ -11048,13 +11035,13 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.size.lg",
-      "sentido": "Altura da superfície principal visual do Input Text por size.",
+      "sentido": "Altura da superfície visual do Input Text por tamanho.",
       "escopo": [
         "height",
         "min-height"
       ],
-      "contexto": "Component token do contrato anatômico Input Text. Binda o subnode visual do campo no Figma e substitui consumo direto de semantic.size.* no CSS.",
-      "decisao": "Alias 1:1 para semantic.size.lg/xl/2xl porque Input usa 32/40/48 como altura visual e area interativa; fica em Component para documentar o contrato publico da anatomia.",
+      "contexto": "Component token do contrato do Input Text. Binda o Field no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.lg/xl/2xl porque Input usa 32/40/48 como altura visual e área interativa pública do componente.",
       "usos": {
         "css": [
           {
@@ -11070,13 +11057,13 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.size.xl",
-      "sentido": "Altura da superfície principal visual do Input Text por size.",
+      "sentido": "Altura da superfície visual do Input Text por tamanho.",
       "escopo": [
         "height",
         "min-height"
       ],
-      "contexto": "Component token do contrato anatômico Input Text. Binda o subnode visual do campo no Figma e substitui consumo direto de semantic.size.* no CSS.",
-      "decisao": "Alias 1:1 para semantic.size.lg/xl/2xl porque Input usa 32/40/48 como altura visual e area interativa; fica em Component para documentar o contrato publico da anatomia.",
+      "contexto": "Component token do contrato do Input Text. Binda o Field no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.lg/xl/2xl porque Input usa 32/40/48 como altura visual e área interativa pública do componente.",
       "usos": {
         "css": [
           {
@@ -11092,13 +11079,13 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.size.2xl",
-      "sentido": "Altura da superfície principal visual do Input Text por size.",
+      "sentido": "Altura da superfície visual do Input Text por tamanho.",
       "escopo": [
         "height",
         "min-height"
       ],
-      "contexto": "Component token do contrato anatômico Input Text. Binda o subnode visual do campo no Figma e substitui consumo direto de semantic.size.* no CSS.",
-      "decisao": "Alias 1:1 para semantic.size.lg/xl/2xl porque Input usa 32/40/48 como altura visual e area interativa; fica em Component para documentar o contrato publico da anatomia.",
+      "contexto": "Component token do contrato do Input Text. Binda o Field no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.lg/xl/2xl porque Input usa 32/40/48 como altura visual e área interativa pública do componente.",
       "usos": {
         "css": [
           {
@@ -17112,6 +17099,352 @@
           {
             "file": "css/components/button.css",
             "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.input.padding-x.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.sm",
+      "sentido": "Padding horizontal do Field Input Text sm.",
+      "escopo": [
+        "padding-left",
+        "padding-right"
+      ],
+      "contexto": "Component token do contrato do Input Text. Espelha a variable viva do Field no Figma e remove consumo direto de spacing Semantic no CSS.",
+      "decisao": "Alias 1:1 para a escala semantic.space porque o valor é reutilizável no sistema, mas no Input documenta o padding público do Field.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.input.padding-x.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.md",
+      "sentido": "Padding horizontal do Field Input Text md.",
+      "escopo": [
+        "padding-left",
+        "padding-right"
+      ],
+      "contexto": "Component token do contrato do Input Text. Espelha a variable viva do Field no Figma e remove consumo direto de spacing Semantic no CSS.",
+      "decisao": "Alias 1:1 para a escala semantic.space porque o valor é reutilizável no sistema, mas no Input documenta o padding público do Field.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.input.padding-x.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.lg",
+      "sentido": "Padding horizontal do Field Input Text lg.",
+      "escopo": [
+        "padding-left",
+        "padding-right"
+      ],
+      "contexto": "Component token do contrato do Input Text. Espelha a variable viva do Field no Figma e remove consumo direto de spacing Semantic no CSS.",
+      "decisao": "Alias 1:1 para a escala semantic.space porque o valor é reutilizável no sistema, mas no Input documenta o padding público do Field.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.input.padding-y.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.sm",
+      "sentido": "Padding vertical do Field Input Text sm.",
+      "escopo": [
+        "padding-top",
+        "padding-bottom"
+      ],
+      "contexto": "Component token do contrato do Input Text. Espelha a variable viva do Field no Figma e remove consumo direto de spacing Semantic no CSS.",
+      "decisao": "Alias 1:1 para a escala semantic.space, incluindo semantic.space.control.padding.10 no md, porque o valor é reutilizável em controles e documenta a anatomia pública do Input.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.input.padding-y.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.control.padding.10",
+      "sentido": "Padding vertical do Field Input Text md.",
+      "escopo": [
+        "padding-top",
+        "padding-bottom"
+      ],
+      "contexto": "Component token do contrato do Input Text. Espelha a variable viva do Field no Figma e remove consumo direto de spacing Semantic no CSS.",
+      "decisao": "Alias 1:1 para a escala semantic.space, incluindo semantic.space.control.padding.10 no md, porque o valor é reutilizável em controles e documenta a anatomia pública do Input.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.input.padding-y.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.md",
+      "sentido": "Padding vertical do Field Input Text lg.",
+      "escopo": [
+        "padding-top",
+        "padding-bottom"
+      ],
+      "contexto": "Component token do contrato do Input Text. Espelha a variable viva do Field no Figma e remove consumo direto de spacing Semantic no CSS.",
+      "decisao": "Alias 1:1 para a escala semantic.space, incluindo semantic.space.control.padding.10 no md, porque o valor é reutilizável em controles e documenta a anatomia pública do Input.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.input.gap.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": null,
+      "sentido": "Gap interno do Field Input Text sm.",
+      "escopo": [
+        "gap"
+      ],
+      "contexto": "Component token do contrato do Input Text. Espelha a variable viva do Field no Figma e controla a distância entre ícones e Text Frame.",
+      "decisao": "Valor component-specific 0 porque o Input sm não tem gap entre ícone e Text Frame no Figma vivo; criar Semantic reutilizável para zero não adicionaria intenção.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.input.gap.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.sm",
+      "sentido": "Gap interno do Field Input Text md.",
+      "escopo": [
+        "gap"
+      ],
+      "contexto": "Component token do contrato do Input Text. Espelha a variable viva do Field no Figma e controla a distância entre ícones e Text Frame.",
+      "decisao": "Alias 1:1 para semantic.space.sm porque md/lg usam o spacing reutilizável de 8px, documentado aqui como contrato interno do Field.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.input.gap.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.sm",
+      "sentido": "Gap interno do Field Input Text lg.",
+      "escopo": [
+        "gap"
+      ],
+      "contexto": "Component token do contrato do Input Text. Espelha a variable viva do Field no Figma e controla a distância entre ícones e Text Frame.",
+      "decisao": "Alias 1:1 para semantic.space.sm porque md/lg usam o spacing reutilizável de 8px, documentado aqui como contrato interno do Field.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.input.text-frame.padding-x.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xs",
+      "sentido": "Padding horizontal do Text Frame Input Text.",
+      "escopo": [
+        "padding-left",
+        "padding-right"
+      ],
+      "contexto": "Component token do contrato do Input Text. Espelha o padding do Text Frame no Figma e alimenta o padding interno do input nativo no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.xs porque o respiro textual de 4px é reutilizável, mas aqui documenta a separação entre texto e ícones no Input.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.input.icon.frame-size.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.md",
+      "sentido": "Tamanho do frame de ícone Input Text sm.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Component token do contrato do Input Text. Binda os frames de ícone esquerdo/direito no Figma e substitui consumo direto de size Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.md porque o frame permanece 24px nos três tamanhos do Input, documentando o espaço reservado ao ícone.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.input.icon.frame-size.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.md",
+      "sentido": "Tamanho do frame de ícone Input Text md.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Component token do contrato do Input Text. Binda os frames de ícone esquerdo/direito no Figma e substitui consumo direto de size Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.md porque o frame permanece 24px nos três tamanhos do Input, documentando o espaço reservado ao ícone.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.input.icon.frame-size.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.md",
+      "sentido": "Tamanho do frame de ícone Input Text lg.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Component token do contrato do Input Text. Binda os frames de ícone esquerdo/direito no Figma e substitui consumo direto de size Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.md porque o frame permanece 24px nos três tamanhos do Input, documentando o espaço reservado ao ícone.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.input.icon.glyph-size.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.xs",
+      "sentido": "Tamanho do glyph de ícone Input Text sm.",
+      "escopo": [
+        "font-size"
+      ],
+      "contexto": "Component token do contrato do Input Text. Binda o glyph Material Icons no Figma e substitui consumo direto de size Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.xs/sm/md porque o glyph escala 16/20/24px conforme o tamanho do Input.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.input.icon.glyph-size.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.sm",
+      "sentido": "Tamanho do glyph de ícone Input Text md.",
+      "escopo": [
+        "font-size"
+      ],
+      "contexto": "Component token do contrato do Input Text. Binda o glyph Material Icons no Figma e substitui consumo direto de size Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.xs/sm/md porque o glyph escala 16/20/24px conforme o tamanho do Input.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.input.icon.glyph-size.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.md",
+      "sentido": "Tamanho do glyph de ícone Input Text lg.",
+      "escopo": [
+        "font-size"
+      ],
+      "contexto": "Component token do contrato do Input Text. Binda o glyph Material Icons no Figma e substitui consumo direto de size Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.xs/sm/md porque o glyph escala 16/20/24px conforme o tamanho do Input.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 1
           }
         ],
         "tokens": [],

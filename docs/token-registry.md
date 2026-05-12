@@ -6,8 +6,8 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Status
 
-- Total de tokens: **755**
-- Com metadados completos: **755**
+- Total de tokens: **771**
+- Com metadados completos: **771**
 - Pendentes (`TODO` em algum campo obrigatório): **0**
 - Completude: **100%**
 
@@ -512,7 +512,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.size.layout.xl` | dimension | → `foundation.dimension.1024` | Size token layout.xl. | 0 |
 | `semantic.size.layout.xs` | dimension | → `foundation.dimension.320` | Size token layout.xs. | 0 |
 | `semantic.size.lg` | dimension | → `foundation.dimension.32` | Size token lg. | 11 |
-| `semantic.size.md` | dimension | → `foundation.dimension.24` | Size token md. | 14 |
+| `semantic.size.md` | dimension | → `foundation.dimension.24` | Size token md. | 17 |
 | `semantic.size.sm` | dimension | → `foundation.dimension.20` | Size token sm. | 11 |
 | `semantic.size.xl` | dimension | → `foundation.dimension.40` | Size token xl. | 10 |
 | `semantic.size.xs` | dimension | → `foundation.dimension.16` | Size token xs. | 8 |
@@ -523,15 +523,15 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 |---|---|---|---|---|
 | `semantic.space.2xl` | dimension | → `foundation.dimension.24` | Spacing token 2xl. | 0 |
 | `semantic.space.2xs` | dimension | → `foundation.dimension.2` | Spacing token 2xs. | 7 |
-| `semantic.space.control.padding.10` | dimension | → `foundation.dimension.10` | Spacing token control.padding.10. | 4 |
+| `semantic.space.control.padding.10` | dimension | → `foundation.dimension.10` | Spacing token control.padding.10. | 5 |
 | `semantic.space.control.padding.6` | dimension | → `foundation.dimension.6` | Padding simétrico de Icon Only sm Button. | 2 |
 | `semantic.space.lg` | dimension | → `foundation.dimension.16` | Spacing token lg. | 18 |
-| `semantic.space.md` | dimension | → `foundation.dimension.12` | Spacing token md. | 16 |
+| `semantic.space.md` | dimension | → `foundation.dimension.12` | Spacing token md. | 17 |
 | `semantic.space.section.lg` | dimension | → `foundation.dimension.64` | Spacing token section.lg. | 0 |
 | `semantic.space.section.md` | dimension | → `foundation.dimension.48` | Spacing token section.md. | 0 |
 | `semantic.space.section.sm` | dimension | → `foundation.dimension.32` | Spacing token section.sm. | 1 |
 | `semantic.space.section.xl` | dimension | → `foundation.dimension.80` | Spacing token section.xl. | 0 |
-| `semantic.space.sm` | dimension | → `foundation.dimension.8` | Spacing token sm. | 24 |
+| `semantic.space.sm` | dimension | → `foundation.dimension.8` | Spacing token sm. | 27 |
 | `semantic.space.xl` | dimension | → `foundation.dimension.20` | Spacing token xl. | 15 |
 | `semantic.space.xs` | dimension | → `foundation.dimension.4` | Spacing token xs. | 17 |
 
@@ -606,7 +606,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Component
 
-315 tokens.
+331 tokens.
 
 ### component.alert
 
@@ -863,9 +863,25 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `component.input.height.lg` | dimension | → `semantic.size.2xl` | Altura da superfície principal visual do Input Text por size. | 1 |
-| `component.input.height.md` | dimension | → `semantic.size.xl` | Altura da superfície principal visual do Input Text por size. | 1 |
-| `component.input.height.sm` | dimension | → `semantic.size.lg` | Altura da superfície principal visual do Input Text por size. | 1 |
+| `component.input.gap.lg` | dimension | → `semantic.space.sm` | Gap interno do Field Input Text lg. | 1 |
+| `component.input.gap.md` | dimension | → `semantic.space.sm` | Gap interno do Field Input Text md. | 1 |
+| `component.input.gap.sm` | dimension | — | Gap interno do Field Input Text sm. | 1 |
+| `component.input.height.lg` | dimension | → `semantic.size.2xl` | Altura da superfície visual do Input Text por tamanho. | 1 |
+| `component.input.height.md` | dimension | → `semantic.size.xl` | Altura da superfície visual do Input Text por tamanho. | 1 |
+| `component.input.height.sm` | dimension | → `semantic.size.lg` | Altura da superfície visual do Input Text por tamanho. | 1 |
+| `component.input.icon.frame-size.lg` | dimension | → `semantic.size.md` | Tamanho do frame de ícone Input Text lg. | 1 |
+| `component.input.icon.frame-size.md` | dimension | → `semantic.size.md` | Tamanho do frame de ícone Input Text md. | 1 |
+| `component.input.icon.frame-size.sm` | dimension | → `semantic.size.md` | Tamanho do frame de ícone Input Text sm. | 1 |
+| `component.input.icon.glyph-size.lg` | dimension | → `semantic.size.md` | Tamanho do glyph de ícone Input Text lg. | 1 |
+| `component.input.icon.glyph-size.md` | dimension | → `semantic.size.sm` | Tamanho do glyph de ícone Input Text md. | 1 |
+| `component.input.icon.glyph-size.sm` | dimension | → `semantic.size.xs` | Tamanho do glyph de ícone Input Text sm. | 1 |
+| `component.input.padding-x.lg` | dimension | → `semantic.space.lg` | Padding horizontal do Field Input Text lg. | 1 |
+| `component.input.padding-x.md` | dimension | → `semantic.space.md` | Padding horizontal do Field Input Text md. | 1 |
+| `component.input.padding-x.sm` | dimension | → `semantic.space.sm` | Padding horizontal do Field Input Text sm. | 1 |
+| `component.input.padding-y.lg` | dimension | → `semantic.space.md` | Padding vertical do Field Input Text lg. | 1 |
+| `component.input.padding-y.md` | dimension | → `semantic.space.control.padding.10` | Padding vertical do Field Input Text md. | 1 |
+| `component.input.padding-y.sm` | dimension | → `semantic.space.sm` | Padding vertical do Field Input Text sm. | 1 |
+| `component.input.text-frame.padding-x.default` | dimension | → `semantic.space.xs` | Padding horizontal do Text Frame Input Text. | 1 |
 
 ### component.modal
 
@@ -5837,10 +5853,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.dimension.24.
 - **Usos**:
   - CSS:
-    - `css/components/input.css` (3×)
     - `css/components/select.css` (5×)
-    - `css/tokens/generated/component.css` (11×)
-  - Tokens que referenciam: `component.alert.icon.size.default`, `component.alert.close.size.default`, `component.button.icon.frame-size.md`, `component.button.icon.frame-size.lg`, `component.button.icon.glyph-size.md`, `component.button.icon.glyph-size.lg`, `component.checkbox.box.size.lg`, `component.modal.close.size.default`, `component.radio.control.size.lg`, `component.spinner.size.md`, `component.toggle.track.height.md`
+    - `css/tokens/generated/component.css` (15×)
+  - Tokens que referenciam: `component.alert.icon.size.default`, `component.alert.close.size.default`, `component.button.icon.frame-size.md`, `component.button.icon.frame-size.lg`, `component.button.icon.glyph-size.md`, `component.button.icon.glyph-size.lg`, `component.checkbox.box.size.lg`, `component.input.icon.frame-size.sm`, `component.input.icon.frame-size.md`, `component.input.icon.frame-size.lg`, `component.input.icon.glyph-size.lg`, `component.modal.close.size.default`, `component.radio.control.size.lg`, `component.spinner.size.md`, `component.toggle.track.height.md`
 
 ### `semantic.size.sm`
 
@@ -5854,11 +5869,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/checkbox.css` (2×)
-    - `css/components/input.css` (1×)
     - `css/components/radio.css` (2×)
     - `css/components/select.css` (5×)
-    - `css/tokens/generated/component.css` (6×)
-  - Tokens que referenciam: `component.alert.icon.glyph-size.default`, `component.alert.close.glyph-size.default`, `component.button.icon.frame-size.sm`, `component.button.icon.glyph-size.sm`, `component.checkbox.box.size.md`, `component.radio.control.size.md`
+    - `css/tokens/generated/component.css` (7×)
+  - Tokens que referenciam: `component.alert.icon.glyph-size.default`, `component.alert.close.glyph-size.default`, `component.button.icon.frame-size.sm`, `component.button.icon.glyph-size.sm`, `component.checkbox.box.size.md`, `component.input.icon.glyph-size.md`, `component.radio.control.size.md`
 
 ### `semantic.size.xl`
 
@@ -5885,10 +5899,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.dimension.16.
 - **Usos**:
   - CSS:
-    - `css/components/input.css` (1×)
     - `css/components/select.css` (1×)
-    - `css/tokens/generated/component.css` (5×)
-  - Tokens que referenciam: `component.checkbox.box.size.sm`, `component.modal.close.glyph-size.default`, `component.radio.control.size.sm`, `component.spinner.size.sm`, `component.toggle.track.height.sm`
+    - `css/tokens/generated/component.css` (6×)
+  - Tokens que referenciam: `component.checkbox.box.size.sm`, `component.input.icon.glyph-size.sm`, `component.modal.close.glyph-size.default`, `component.radio.control.size.sm`, `component.spinner.size.sm`, `component.toggle.track.height.sm`
 
 ### `semantic.space.2xl`
 
@@ -5930,8 +5943,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/textarea.css` (1×)
-    - `css/tokens/generated/component.css` (2×)
-  - Tokens que referenciam: `component.button.padding-y.md`, `component.tabs.item.indicator-gap.default`
+    - `css/tokens/generated/component.css` (3×)
+  - Tokens que referenciam: `component.button.padding-y.md`, `component.input.padding-y.md`, `component.tabs.item.indicator-gap.default`
 
 ### `semantic.space.control.padding.6`
 
@@ -5958,12 +5971,11 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.dimension.16.
 - **Usos**:
   - CSS:
-    - `css/components/input.css` (1×)
     - `css/components/select.css` (3×)
     - `css/components/textarea.css` (1×)
-    - `css/tokens/generated/component.css` (13×)
+    - `css/tokens/generated/component.css` (14×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.button.padding-x.lg`, `component.card.header.padding-x.default`, `component.card.header.padding-top.default`, `component.card.body.padding-x.default`, `component.card.body.padding-bottom.default`, `component.modal.header.padding-x.sm`, `component.modal.header.padding-top.sm`, `component.modal.body.padding-x.sm`, `component.modal.body.padding-bottom.sm`, `component.modal.footer.padding-x.sm`, `component.modal.footer.padding-bottom.sm`, `component.tabs.item.padding-x.default`, `component.tabs.panel.padding-y.default`
+  - Tokens que referenciam: `component.button.padding-x.lg`, `component.card.header.padding-x.default`, `component.card.header.padding-top.default`, `component.card.body.padding-x.default`, `component.card.body.padding-bottom.default`, `component.input.padding-x.lg`, `component.modal.header.padding-x.sm`, `component.modal.header.padding-top.sm`, `component.modal.body.padding-x.sm`, `component.modal.body.padding-bottom.sm`, `component.modal.footer.padding-x.sm`, `component.modal.footer.padding-bottom.sm`, `component.tabs.item.padding-x.default`, `component.tabs.panel.padding-y.default`
 
 ### `semantic.space.md`
 
@@ -5977,13 +5989,12 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/divider.css` (2×)
-    - `css/components/input.css` (1×)
     - `css/components/radio.css` (1×)
     - `css/components/select.css` (3×)
     - `css/components/textarea.css` (2×)
-    - `css/tokens/generated/component.css` (9×)
+    - `css/tokens/generated/component.css` (11×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.alert.padding.default`, `component.button.padding-x.md`, `component.button.padding-y.lg`, `component.button.icon-only-padding.lg`, `component.modal.header.padding-bottom.md`, `component.modal.header.padding-bottom.lg`, `component.modal.footer.padding-top.md`, `component.modal.footer.padding-top.lg`, `component.tabs.item.padding-top.default`
+  - Tokens que referenciam: `component.alert.padding.default`, `component.button.padding-x.md`, `component.button.padding-y.lg`, `component.button.icon-only-padding.lg`, `component.input.padding-x.md`, `component.input.padding-y.lg`, `component.modal.header.padding-bottom.md`, `component.modal.header.padding-bottom.lg`, `component.modal.footer.padding-top.md`, `component.modal.footer.padding-top.lg`, `component.tabs.item.padding-top.default`
 
 ### `semantic.space.section.lg`
 
@@ -6046,15 +6057,14 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/checkbox.css` (2×)
-    - `css/components/input.css` (2×)
     - `css/components/radio.css` (4×)
     - `css/components/select.css` (3×)
     - `css/components/textarea.css` (2×)
     - `css/components/toggle.css` (1×)
     - `css/components/tooltip.css` (4×)
-    - `css/tokens/generated/component.css` (15×)
+    - `css/tokens/generated/component.css` (19×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.alert.gap.default`, `component.badge.padding-x.default`, `component.button.padding-x.sm`, `component.button.padding-y.sm`, `component.button.gap.lg`, `component.button.icon-only-padding.md`, `component.card.header.padding-bottom.default`, `component.card.header.gap.default`, `component.checkbox.target.gap.default`, `component.modal.header.padding-bottom.sm`, `component.modal.header.gap.default`, `component.modal.footer.padding-top.sm`, `component.modal.footer.gap.default`, `component.tooltip.content.padding-x.default`, `component.tooltip.arrow.base.default`
+  - Tokens que referenciam: `component.alert.gap.default`, `component.badge.padding-x.default`, `component.button.padding-x.sm`, `component.button.padding-y.sm`, `component.button.gap.lg`, `component.button.icon-only-padding.md`, `component.card.header.padding-bottom.default`, `component.card.header.gap.default`, `component.checkbox.target.gap.default`, `component.input.padding-x.sm`, `component.input.padding-y.sm`, `component.input.gap.md`, `component.input.gap.lg`, `component.modal.header.padding-bottom.sm`, `component.modal.header.gap.default`, `component.modal.footer.padding-top.sm`, `component.modal.footer.gap.default`, `component.tooltip.content.padding-x.default`, `component.tooltip.arrow.base.default`
 
 ### `semantic.space.xl`
 
@@ -6083,13 +6093,12 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/checkbox.css` (6×)
-    - `css/components/input.css` (2×)
     - `css/components/radio.css` (7×)
     - `css/components/select.css` (1×)
     - `css/components/toggle.css` (2×)
-    - `css/tokens/generated/component.css` (10×)
+    - `css/tokens/generated/component.css` (11×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.alert.content.gap.default`, `component.badge.gap.default`, `component.breadcrumb.gap.default`, `component.breadcrumb.item.gap.default`, `component.button.gap.md`, `component.button.label-frame.padding-x.default`, `component.form-field.gap.default`, `component.modal.close.padding.default`, `component.tooltip.content.padding-y.default`, `component.tooltip.arrow.depth.default`
+  - Tokens que referenciam: `component.alert.content.gap.default`, `component.badge.gap.default`, `component.breadcrumb.gap.default`, `component.breadcrumb.item.gap.default`, `component.button.gap.md`, `component.button.label-frame.padding-x.default`, `component.form-field.gap.default`, `component.input.text-frame.padding-x.default`, `component.modal.close.padding.default`, `component.tooltip.content.padding-y.default`, `component.tooltip.arrow.depth.default`
 
 ### `semantic.surface.default`
 
@@ -9367,15 +9376,53 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/form-field.css` (1×)
 
+### `component.input.gap.lg`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.sm`
+- **Sentido**: Gap interno do Field Input Text lg.
+- **Escopo**: gap
+- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Field no Figma e controla a distância entre ícones e Text Frame.
+- **Decisão**: Alias 1:1 para semantic.space.sm porque md/lg usam o spacing reutilizável de 8px, documentado aqui como contrato interno do Field.
+- **Usos**:
+  - CSS:
+    - `css/components/input.css` (1×)
+
+### `component.input.gap.md`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.sm`
+- **Sentido**: Gap interno do Field Input Text md.
+- **Escopo**: gap
+- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Field no Figma e controla a distância entre ícones e Text Frame.
+- **Decisão**: Alias 1:1 para semantic.space.sm porque md/lg usam o spacing reutilizável de 8px, documentado aqui como contrato interno do Field.
+- **Usos**:
+  - CSS:
+    - `css/components/input.css` (1×)
+
+### `component.input.gap.sm`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Sentido**: Gap interno do Field Input Text sm.
+- **Escopo**: gap
+- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Field no Figma e controla a distância entre ícones e Text Frame.
+- **Decisão**: Valor component-specific 0 porque o Input sm não tem gap entre ícone e Text Frame no Figma vivo; criar Semantic reutilizável para zero não adicionaria intenção.
+- **Usos**:
+  - CSS:
+    - `css/components/input.css` (1×)
+
 ### `component.input.height.lg`
 
 - **Camada**: component
 - **Tipo**: `dimension`
 - **Alias**: → `semantic.size.2xl`
-- **Sentido**: Altura da superfície principal visual do Input Text por size.
+- **Sentido**: Altura da superfície visual do Input Text por tamanho.
 - **Escopo**: height, min-height
-- **Contexto**: Component token do contrato anatômico Input Text. Binda o subnode visual do campo no Figma e substitui consumo direto de semantic.size.* no CSS.
-- **Decisão**: Alias 1:1 para semantic.size.lg/xl/2xl porque Input usa 32/40/48 como altura visual e area interativa; fica em Component para documentar o contrato publico da anatomia.
+- **Contexto**: Component token do contrato do Input Text. Binda o Field no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.size.lg/xl/2xl porque Input usa 32/40/48 como altura visual e área interativa pública do componente.
 - **Usos**:
   - CSS:
     - `css/components/input.css` (1×)
@@ -9385,10 +9432,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Camada**: component
 - **Tipo**: `dimension`
 - **Alias**: → `semantic.size.xl`
-- **Sentido**: Altura da superfície principal visual do Input Text por size.
+- **Sentido**: Altura da superfície visual do Input Text por tamanho.
 - **Escopo**: height, min-height
-- **Contexto**: Component token do contrato anatômico Input Text. Binda o subnode visual do campo no Figma e substitui consumo direto de semantic.size.* no CSS.
-- **Decisão**: Alias 1:1 para semantic.size.lg/xl/2xl porque Input usa 32/40/48 como altura visual e area interativa; fica em Component para documentar o contrato publico da anatomia.
+- **Contexto**: Component token do contrato do Input Text. Binda o Field no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.size.lg/xl/2xl porque Input usa 32/40/48 como altura visual e área interativa pública do componente.
 - **Usos**:
   - CSS:
     - `css/components/input.css` (1×)
@@ -9398,13 +9445,182 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Camada**: component
 - **Tipo**: `dimension`
 - **Alias**: → `semantic.size.lg`
-- **Sentido**: Altura da superfície principal visual do Input Text por size.
+- **Sentido**: Altura da superfície visual do Input Text por tamanho.
 - **Escopo**: height, min-height
-- **Contexto**: Component token do contrato anatômico Input Text. Binda o subnode visual do campo no Figma e substitui consumo direto de semantic.size.* no CSS.
-- **Decisão**: Alias 1:1 para semantic.size.lg/xl/2xl porque Input usa 32/40/48 como altura visual e area interativa; fica em Component para documentar o contrato publico da anatomia.
+- **Contexto**: Component token do contrato do Input Text. Binda o Field no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.size.lg/xl/2xl porque Input usa 32/40/48 como altura visual e área interativa pública do componente.
 - **Usos**:
   - CSS:
     - `css/components/input.css` (1×)
+
+### `component.input.icon.frame-size.lg`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.md`
+- **Sentido**: Tamanho do frame de ícone Input Text lg.
+- **Escopo**: width, height
+- **Contexto**: Component token do contrato do Input Text. Binda os frames de ícone esquerdo/direito no Figma e substitui consumo direto de size Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.size.md porque o frame permanece 24px nos três tamanhos do Input, documentando o espaço reservado ao ícone.
+- **Usos**:
+  - CSS:
+    - `css/components/input.css` (2×)
+
+### `component.input.icon.frame-size.md`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.md`
+- **Sentido**: Tamanho do frame de ícone Input Text md.
+- **Escopo**: width, height
+- **Contexto**: Component token do contrato do Input Text. Binda os frames de ícone esquerdo/direito no Figma e substitui consumo direto de size Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.size.md porque o frame permanece 24px nos três tamanhos do Input, documentando o espaço reservado ao ícone.
+- **Usos**:
+  - CSS:
+    - `css/components/input.css` (2×)
+
+### `component.input.icon.frame-size.sm`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.md`
+- **Sentido**: Tamanho do frame de ícone Input Text sm.
+- **Escopo**: width, height
+- **Contexto**: Component token do contrato do Input Text. Binda os frames de ícone esquerdo/direito no Figma e substitui consumo direto de size Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.size.md porque o frame permanece 24px nos três tamanhos do Input, documentando o espaço reservado ao ícone.
+- **Usos**:
+  - CSS:
+    - `css/components/input.css` (2×)
+
+### `component.input.icon.glyph-size.lg`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.md`
+- **Sentido**: Tamanho do glyph de ícone Input Text lg.
+- **Escopo**: font-size
+- **Contexto**: Component token do contrato do Input Text. Binda o glyph Material Icons no Figma e substitui consumo direto de size Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.size.xs/sm/md porque o glyph escala 16/20/24px conforme o tamanho do Input.
+- **Usos**:
+  - CSS:
+    - `css/components/input.css` (1×)
+
+### `component.input.icon.glyph-size.md`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.sm`
+- **Sentido**: Tamanho do glyph de ícone Input Text md.
+- **Escopo**: font-size
+- **Contexto**: Component token do contrato do Input Text. Binda o glyph Material Icons no Figma e substitui consumo direto de size Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.size.xs/sm/md porque o glyph escala 16/20/24px conforme o tamanho do Input.
+- **Usos**:
+  - CSS:
+    - `css/components/input.css` (1×)
+
+### `component.input.icon.glyph-size.sm`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.xs`
+- **Sentido**: Tamanho do glyph de ícone Input Text sm.
+- **Escopo**: font-size
+- **Contexto**: Component token do contrato do Input Text. Binda o glyph Material Icons no Figma e substitui consumo direto de size Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.size.xs/sm/md porque o glyph escala 16/20/24px conforme o tamanho do Input.
+- **Usos**:
+  - CSS:
+    - `css/components/input.css` (1×)
+
+### `component.input.padding-x.lg`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.lg`
+- **Sentido**: Padding horizontal do Field Input Text lg.
+- **Escopo**: padding-left, padding-right
+- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Field no Figma e remove consumo direto de spacing Semantic no CSS.
+- **Decisão**: Alias 1:1 para a escala semantic.space porque o valor é reutilizável no sistema, mas no Input documenta o padding público do Field.
+- **Usos**:
+  - CSS:
+    - `css/components/input.css` (1×)
+
+### `component.input.padding-x.md`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.md`
+- **Sentido**: Padding horizontal do Field Input Text md.
+- **Escopo**: padding-left, padding-right
+- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Field no Figma e remove consumo direto de spacing Semantic no CSS.
+- **Decisão**: Alias 1:1 para a escala semantic.space porque o valor é reutilizável no sistema, mas no Input documenta o padding público do Field.
+- **Usos**:
+  - CSS:
+    - `css/components/input.css` (1×)
+
+### `component.input.padding-x.sm`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.sm`
+- **Sentido**: Padding horizontal do Field Input Text sm.
+- **Escopo**: padding-left, padding-right
+- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Field no Figma e remove consumo direto de spacing Semantic no CSS.
+- **Decisão**: Alias 1:1 para a escala semantic.space porque o valor é reutilizável no sistema, mas no Input documenta o padding público do Field.
+- **Usos**:
+  - CSS:
+    - `css/components/input.css` (1×)
+
+### `component.input.padding-y.lg`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.md`
+- **Sentido**: Padding vertical do Field Input Text lg.
+- **Escopo**: padding-top, padding-bottom
+- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Field no Figma e remove consumo direto de spacing Semantic no CSS.
+- **Decisão**: Alias 1:1 para a escala semantic.space, incluindo semantic.space.control.padding.10 no md, porque o valor é reutilizável em controles e documenta a anatomia pública do Input.
+- **Usos**:
+  - CSS:
+    - `css/components/input.css` (1×)
+
+### `component.input.padding-y.md`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.control.padding.10`
+- **Sentido**: Padding vertical do Field Input Text md.
+- **Escopo**: padding-top, padding-bottom
+- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Field no Figma e remove consumo direto de spacing Semantic no CSS.
+- **Decisão**: Alias 1:1 para a escala semantic.space, incluindo semantic.space.control.padding.10 no md, porque o valor é reutilizável em controles e documenta a anatomia pública do Input.
+- **Usos**:
+  - CSS:
+    - `css/components/input.css` (1×)
+
+### `component.input.padding-y.sm`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.sm`
+- **Sentido**: Padding vertical do Field Input Text sm.
+- **Escopo**: padding-top, padding-bottom
+- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Field no Figma e remove consumo direto de spacing Semantic no CSS.
+- **Decisão**: Alias 1:1 para a escala semantic.space, incluindo semantic.space.control.padding.10 no md, porque o valor é reutilizável em controles e documenta a anatomia pública do Input.
+- **Usos**:
+  - CSS:
+    - `css/components/input.css` (1×)
+
+### `component.input.text-frame.padding-x.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.xs`
+- **Sentido**: Padding horizontal do Text Frame Input Text.
+- **Escopo**: padding-left, padding-right
+- **Contexto**: Component token do contrato do Input Text. Espelha o padding do Text Frame no Figma e alimenta o padding interno do input nativo no CSS.
+- **Decisão**: Alias 1:1 para semantic.space.xs porque o respiro textual de 4px é reutilizável, mas aqui documenta a separação entre texto e ícones no Input.
+- **Usos**:
+  - CSS:
+    - `css/components/input.css` (2×)
 
 ### `component.modal.body.font-size.lg`
 

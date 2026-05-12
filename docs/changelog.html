@@ -72,6 +72,8 @@
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
 <h3>Corrigido</h3>
 <ul>
+<li><p><strong>Input Text sizing/spacing aplicado aos Component tokens.</strong> Criadas variables <code>input/{padding-x,padding-y,gap}</code>, <code>input/icon/{frame-size,glyph-size}</code> e <code>input/text-frame/padding-x</code> no Figma, com Code Syntax WEB e binds nos 18 variants do Input Text. JSON/CSS/docs passam a consumir <code>component.input.*</code>, alinhando padding <code>8/12/16</code>, padding-y <code>8/10/12</code>, gap <code>0/8/8</code> e ícone frame/glyph ao Figma vivo.</p>
+</li>
 <li><p><strong>Button padding e gap sincronizados com Figma.</strong> <code>component.button.padding-x.{sm,md,lg}</code> passa a seguir <code>8/12/16px</code> e <code>component.button.gap.{sm,md,lg}</code> passa a seguir <code>2/4/8px</code>, alinhando JSON, CSS gerado, documentação e API às variables vivas do Button no Figma.</p>
 </li>
 <li><p><strong>Button sm com frame de ícone por tamanho.</strong> <code>component.button.icon.frame-size.default</code> foi substituído por <code>component.button.icon.frame-size.{sm,md,lg}</code> no Figma/JSON/CSS; os 270 frames de ícone do Button no Figma agora usam <code>sm=20px</code>, <code>md=24px</code> e <code>lg=24px</code>. CSS também corrige Button somente-ícone para não herdar <code>min-width</code> textual e renderizar quadrado.</p>
