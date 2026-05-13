@@ -79,38 +79,32 @@
       <div style="display:inline-flex;flex-direction:column;gap:var(--ds-dimension-4);min-width:300px;">
 
         <!-- 4: Label -->
-        <div class="ds-anatomy__part">
+        <div style="position:relative;" inert>
+          <label class="ds-field__label">Email address</label>
           <span class="ds-anatomy__marker" style="top:50%;left:-28px;transform:translateY(-50%);">4</span>
-          <label class="ds-field__label" style="pointer-events:none;">Email address</label>
         </div>
 
-        <!-- 1: Wrapper (input) + 2: Icon + 3: Field -->
-        <div class="ds-anatomy__part">
-          <span class="ds-anatomy__marker" style="top:-12px;left:50%;transform:translateX(-50%);">1</span>
-          <div class="ds-input" style="position:relative;">
-            <!-- 2: Icon -->
-            <span class="ds-anatomy__part" style="position:static;">
-              <span class="ds-anatomy__marker" style="top:-12px;left:12px;">2</span>
-              <span class="ds-input__icon material-symbols-outlined">mail</span>
-            </span>
-            <!-- 3: Field -->
-            <span class="ds-anatomy__part" style="flex:1;position:relative;">
-              <span class="ds-anatomy__marker" style="top:-12px;right:12px;">3</span>
-              <input type="text" class="ds-input__field" placeholder="name@example.com" tabindex="-1" style="pointer-events:none;">
-            </span>
+        <!-- 1: Wrapper · 2: Icon · 3: Field -->
+        <div style="position:relative;" inert>
+          <div class="ds-input">
+            <span class="ds-input__icon material-symbols-outlined">mail</span>
+            <input type="text" class="ds-input__field" placeholder="name@example.com">
           </div>
+          <span class="ds-anatomy__marker" style="top:-12px;left:50%;transform:translateX(-50%);">1</span>
+          <span class="ds-anatomy__marker" style="top:-12px;left:10px;">2</span>
+          <span class="ds-anatomy__marker" style="top:-12px;right:10px;">3</span>
         </div>
 
         <!-- 5: Helper -->
-        <div class="ds-anatomy__part">
-          <span class="ds-anatomy__marker" style="top:50%;left:-28px;transform:translateY(-50%);">5</span>
+        <div style="position:relative;" inert>
           <span class="ds-field__helper">We'll never share your email.</span>
+          <span class="ds-anatomy__marker" style="top:50%;left:-28px;transform:translateY(-50%);">5</span>
         </div>
 
         <!-- 6: Error -->
-        <div class="ds-anatomy__part ds-field--error">
-          <span class="ds-anatomy__marker" style="top:50%;left:-28px;transform:translateY(-50%);">6</span>
+        <div class="ds-field--error" style="position:relative;" inert>
           <span class="ds-field__error">Please enter a valid email.</span>
+          <span class="ds-anatomy__marker" style="top:50%;left:-28px;transform:translateY(-50%);">6</span>
         </div>
 
       </div>
