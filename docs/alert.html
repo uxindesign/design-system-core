@@ -75,23 +75,34 @@
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Anatomia</span><span data-lang="en">Anatomy</span></h2>
 
-    <div class="ds-anatomy">
-      <div style="position:relative;min-width:320px;">
-        <div class="ds-alert ds-alert--success ds-alert--filled" role="alert" style="pointer-events:none;">
+    <div class="ds-anatomy" style="padding:64px;">
+      <div style="position:relative;min-width:320px;" inert>
+        <div class="ds-alert ds-alert--success ds-alert--filled" role="alert">
           <span class="ds-alert__icon"><span class="material-symbols-outlined">check_circle</span></span>
           <div class="ds-alert__content">
             <p class="ds-alert__title">Success</p>
             <p class="ds-alert__description">Your changes have been saved.</p>
           </div>
-          <button class="ds-alert__close" aria-label="Dismiss alert" tabindex="-1"><span class="material-symbols-outlined">close</span></button>
+          <button class="ds-alert__close" aria-label="Dismiss alert"><span class="material-symbols-outlined">close</span></button>
         </div>
-        <!-- Markers -->
-        <span class="ds-anatomy__marker" style="top:-12px;left:50%;transform:translateX(-50%);">1</span>
-        <span class="ds-anatomy__marker" style="top:50%;left:-28px;transform:translateY(-50%);">2</span>
-        <span class="ds-anatomy__marker" style="top:-12px;left:52px;">3</span>
-        <span class="ds-anatomy__marker" style="bottom:-12px;left:52px;">4</span>
-        <span class="ds-anatomy__marker" style="bottom:-12px;left:120px;">5</span>
-        <span class="ds-anatomy__marker" style="top:50%;right:-28px;transform:translateY(-50%);">6</span>
+        <!-- 1: Container top center -->
+        <span style="position:absolute;top:-28px;left:50%;transform:translateX(-50%);width:1px;height:28px;background:var(--ds-border-subtle);"></span>
+        <span class="ds-anatomy__marker" style="top:-48px;left:50%;transform:translateX(-50%);">1</span>
+        <!-- 2: Icon left -->
+        <span style="position:absolute;left:-28px;top:50%;transform:translateY(-50%);height:1px;width:28px;background:var(--ds-border-subtle);"></span>
+        <span class="ds-anatomy__marker" style="top:50%;left:-48px;transform:translateY(-50%);">2</span>
+        <!-- 3: Content top (shifted left of center) -->
+        <span style="position:absolute;top:-28px;left:73px;width:1px;height:28px;background:var(--ds-border-subtle);"></span>
+        <span class="ds-anatomy__marker" style="top:-48px;left:64px;">3</span>
+        <!-- 4: Title bottom-left -->
+        <span style="position:absolute;bottom:-28px;left:89px;width:1px;height:28px;background:var(--ds-border-subtle);"></span>
+        <span class="ds-anatomy__marker" style="bottom:-48px;left:80px;">4</span>
+        <!-- 5: Description bottom-center -->
+        <span style="position:absolute;bottom:-28px;left:185px;width:1px;height:28px;background:var(--ds-border-subtle);"></span>
+        <span class="ds-anatomy__marker" style="bottom:-48px;left:176px;">5</span>
+        <!-- 6: Close button right -->
+        <span style="position:absolute;right:-28px;top:50%;transform:translateY(-50%);height:1px;width:28px;background:var(--ds-border-subtle);"></span>
+        <span class="ds-anatomy__marker" style="top:50%;right:-48px;transform:translateY(-50%);">6</span>
       </div>
     </div>
 

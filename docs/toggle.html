@@ -65,20 +65,26 @@
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Anatomia</span><span data-lang="en">Anatomy</span></h2>
 
-    <div class="ds-anatomy">
-      <div style="position:relative;display:inline-flex;align-items:flex-start;gap:var(--ds-dimension-12);">
-        <!-- Visual toggle -->
-        <label class="ds-toggle-label" style="pointer-events:none;">
-          <input type="checkbox" class="ds-toggle" role="switch" checked style="pointer-events:none;" tabindex="-1">
+    <div class="ds-anatomy" style="padding:64px;">
+      <div style="position:relative;display:inline-flex;align-items:flex-start;" inert>
+        <label class="ds-toggle-label">
+          <input type="checkbox" class="ds-toggle" role="switch" checked>
           <span class="ds-toggle__content">
             <span class="ds-toggle__label">Label text</span>
           </span>
         </label>
-        <!-- Markers -->
-        <span class="ds-anatomy__marker" style="top:-24px;left:16px;">1</span>
-        <span class="ds-anatomy__marker" style="top:11px;left:-28px;transform:translateY(-50%);">2</span>
-        <span class="ds-anatomy__marker" style="top:11px;left:24px;transform:translateY(-50%);">3</span>
-        <span class="ds-anatomy__marker" style="bottom:-12px;right:12px;">4</span>
+        <!-- 1: Toggle input top (above switch) -->
+        <span style="position:absolute;top:-28px;left:25px;width:1px;height:28px;background:var(--ds-border-subtle);"></span>
+        <span class="ds-anatomy__marker" style="top:-48px;left:15px;">1</span>
+        <!-- 2: Track left -->
+        <span style="position:absolute;left:-28px;top:12px;height:1px;width:28px;background:var(--ds-border-subtle);"></span>
+        <span class="ds-anatomy__marker" style="top:2px;left:-48px;">2</span>
+        <!-- 3: Thumb bottom (below switch center) -->
+        <span style="position:absolute;bottom:-28px;left:25px;width:1px;height:28px;background:var(--ds-border-subtle);"></span>
+        <span class="ds-anatomy__marker" style="bottom:-48px;left:15px;">3</span>
+        <!-- 4: Content frame right -->
+        <span style="position:absolute;right:-28px;top:50%;transform:translateY(-50%);height:1px;width:28px;background:var(--ds-border-subtle);"></span>
+        <span class="ds-anatomy__marker" style="top:50%;right:-48px;transform:translateY(-50%);">4</span>
       </div>
     </div>
 

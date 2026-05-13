@@ -74,17 +74,24 @@
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Anatomia</span><span data-lang="en">Anatomy</span></h2>
 
-    <div class="ds-anatomy">
-      <div style="position:relative;display:inline-flex;align-items:center;">
+    <div class="ds-anatomy" style="padding:64px;">
+      <div style="position:relative;display:inline-flex;align-items:center;" inert>
         <label class="ds-checkbox-label">
-          <input type="checkbox" class="ds-checkbox" checked readonly tabindex="-1" style="pointer-events:none;">
+          <input type="checkbox" class="ds-checkbox" checked>
           Option label
         </label>
-        <!-- Markers -->
-        <span class="ds-anatomy__marker" style="top:-24px;left:50%;transform:translateX(-50%);">1</span>
-        <span class="ds-anatomy__marker" style="top:50%;left:-28px;transform:translateY(-50%);">2</span>
-        <span class="ds-anatomy__marker" style="top:-24px;left:12px;">3</span>
-        <span class="ds-anatomy__marker" style="bottom:-24px;left:12px;">4</span>
+        <!-- 1: Label wrapper top center -->
+        <span style="position:absolute;top:-28px;left:50%;transform:translateX(-50%);width:1px;height:28px;background:var(--ds-border-subtle);"></span>
+        <span class="ds-anatomy__marker" style="top:-48px;left:50%;transform:translateX(-50%);">1</span>
+        <!-- 2: Input checkbox left -->
+        <span style="position:absolute;left:-28px;top:50%;transform:translateY(-50%);height:1px;width:28px;background:var(--ds-border-subtle);"></span>
+        <span class="ds-anatomy__marker" style="top:50%;left:-48px;transform:translateY(-50%);">2</span>
+        <!-- 3: Checkmark top-left (above checkbox) -->
+        <span style="position:absolute;top:-28px;left:9px;width:1px;height:28px;background:var(--ds-border-subtle);"></span>
+        <span class="ds-anatomy__marker" style="top:-48px;left:0;">3</span>
+        <!-- 4: Indeterminate dash bottom-left (below checkbox) -->
+        <span style="position:absolute;bottom:-28px;left:9px;width:1px;height:28px;background:var(--ds-border-subtle);"></span>
+        <span class="ds-anatomy__marker" style="bottom:-48px;left:0;">4</span>
       </div>
     </div>
 
