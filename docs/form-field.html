@@ -74,26 +74,23 @@
             <input type="email" id="anatomy-id" class="ds-input__field" placeholder="name@example.com" aria-required="true" aria-describedby="anatomy-helper">
           </div>
           <span class="ds-field__helper" id="anatomy-helper">We'll never share your email.</span>
-          <div class="ds-field__error" role="alert" style="display:flex;">
-            <span class="material-symbols-outlined" style="font-size:16px;">error</span>
-            Please enter a valid email.
-          </div>
+          <span class="ds-field__error" role="alert" style="display:flex;">Please enter a valid email.</span>
         </div>
-        <!-- 1: Label left (at label row level) -->
+        <!-- 1: Label left -->
         <span style="position:absolute;left:-28px;top:10px;height:1px;width:28px;background:var(--ds-primary-background-default);"></span>
         <span class="ds-anatomy__marker" style="top:0;left:-48px;">1</span>
-        <!-- 2: Required right (at label row level) -->
-        <span style="position:absolute;right:-28px;top:10px;height:1px;width:28px;background:var(--ds-primary-background-default);"></span>
-        <span class="ds-anatomy__marker" style="top:0;right:-48px;">2</span>
-        <!-- 3: Control left (at input level ~32px from top) -->
-        <span style="position:absolute;left:-28px;top:52px;height:1px;width:28px;background:var(--ds-primary-background-default);"></span>
-        <span class="ds-anatomy__marker" style="top:42px;left:-48px;">3</span>
-        <!-- 4: Helper right (at helper level ~80px from top) -->
-        <span style="position:absolute;right:-28px;top:90px;height:1px;width:28px;background:var(--ds-primary-background-default);"></span>
-        <span class="ds-anatomy__marker" style="top:80px;right:-48px;">4</span>
-        <!-- 5: Error right (at error level ~110px from top) -->
-        <span style="position:absolute;right:-28px;top:118px;height:1px;width:28px;background:var(--ds-primary-background-default);"></span>
-        <span class="ds-anatomy__marker" style="top:108px;right:-48px;">5</span>
+        <!-- 2: Required top-right (above the asterisk) -->
+        <span style="position:absolute;top:-28px;right:9px;width:1px;height:28px;background:var(--ds-primary-background-default);"></span>
+        <span class="ds-anatomy__marker" style="top:-48px;right:0;">2</span>
+        <!-- 3: Control left (at input center ~46px from top) -->
+        <span style="position:absolute;left:-28px;top:46px;height:1px;width:28px;background:var(--ds-primary-background-default);"></span>
+        <span class="ds-anatomy__marker" style="top:36px;left:-48px;">3</span>
+        <!-- 4: Helper right (at helper center ~80px from top) -->
+        <span style="position:absolute;right:-28px;top:80px;height:1px;width:28px;background:var(--ds-primary-background-default);"></span>
+        <span class="ds-anatomy__marker" style="top:70px;right:-48px;">4</span>
+        <!-- 5: Error right (at error center ~100px from top) -->
+        <span style="position:absolute;right:-28px;top:102px;height:1px;width:28px;background:var(--ds-primary-background-default);"></span>
+        <span class="ds-anatomy__marker" style="top:92px;right:-48px;">5</span>
       </div>
     </div>
 
