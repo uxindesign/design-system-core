@@ -65,24 +65,26 @@
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Anatomia</span><span data-lang="en">Anatomy</span></h2>
 
-    <div class="ds-anatomy" style="padding:64px;">
-      <div style="position:relative;display:inline-flex;flex-direction:column;align-items:center;gap:var(--ds-space-sm);" inert>
-        <span class="ds-tooltip__content" role="tooltip" style="position:relative;z-index:0;left:auto;right:auto;top:auto;bottom:auto;transform:none;">Edit document</span>
-        <button class="ds-button ds-button--ghost ds-button--icon-only ds-button--sm" aria-label="Edit">
+    <div class="ds-anatomy" style="padding:64px;padding-top:120px;">
+      <div class="ds-tooltip ds-tooltip--top" inert>
+        <button class="ds-button ds-button--ghost ds-button--icon-only ds-button--sm" aria-label="Edit" style="position:relative;">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          <!-- 1: Trigger — below center of button -->
+          <span style="position:absolute;bottom:-28px;left:50%;transform:translateX(-50%);width:1px;height:28px;background:var(--ds-primary-background-default);"></span>
+          <span class="ds-anatomy__marker" style="position:absolute;bottom:-48px;left:50%;transform:translateX(-50%);">1</span>
         </button>
-        <!-- 1: Trigger bottom-center -->
-        <span style="position:absolute;bottom:-28px;left:50%;transform:translateX(-50%);width:1px;height:28px;background:var(--ds-primary-background-default);"></span>
-        <span class="ds-anatomy__marker" style="bottom:-48px;left:50%;transform:translateX(-50%);">1</span>
-        <!-- 2: Tooltip container top-center -->
-        <span style="position:absolute;top:-28px;left:50%;transform:translateX(-50%);width:1px;height:28px;background:var(--ds-primary-background-default);"></span>
-        <span class="ds-anatomy__marker" style="top:-48px;left:50%;transform:translateX(-50%);">2</span>
-        <!-- 3: Arrow right (at gap between tooltip and button) -->
-        <span style="position:absolute;right:-28px;top:32px;height:1px;width:28px;background:var(--ds-primary-background-default);"></span>
-        <span class="ds-anatomy__marker" style="top:22px;right:-48px;">3</span>
-        <!-- 4: Content left (at tooltip level) -->
-        <span style="position:absolute;left:-28px;top:14px;height:1px;width:28px;background:var(--ds-primary-background-default);"></span>
-        <span class="ds-anatomy__marker" style="top:4px;left:-48px;">4</span>
+        <span class="ds-tooltip__content" role="tooltip" style="z-index:0;">
+          Edit document
+          <!-- 2: Container — above bubble top-center -->
+          <span style="position:absolute;top:-28px;left:50%;transform:translateX(-50%);width:1px;height:28px;background:var(--ds-primary-background-default);"></span>
+          <span class="ds-anatomy__marker" style="position:absolute;top:-48px;left:50%;transform:translateX(-50%);">2</span>
+          <!-- 3: Arrow — right side near bubble bottom (arrow pseudo is at bottom-center) -->
+          <span style="position:absolute;right:-28px;bottom:0;height:1px;width:28px;background:var(--ds-primary-background-default);"></span>
+          <span class="ds-anatomy__marker" style="position:absolute;right:-48px;bottom:-10px;">3</span>
+          <!-- 4: Content text — left center of bubble -->
+          <span style="position:absolute;left:-28px;top:50%;transform:translateY(-50%);height:1px;width:28px;background:var(--ds-primary-background-default);"></span>
+          <span class="ds-anatomy__marker" style="position:absolute;left:-48px;top:50%;transform:translateY(-50%);">4</span>
+        </span>
       </div>
     </div>
 
