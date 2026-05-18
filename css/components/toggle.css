@@ -77,7 +77,7 @@
 /* Checked (On) State */
 .ds-toggle:checked {
   background-color: var(--ds-toggle-track-fill-on-default);
-  border-color: var(--ds-toggle-track-fill-on-default);
+  border-width: 0;
 }
 
 .ds-toggle:checked::after {
@@ -104,7 +104,7 @@
 
 .ds-toggle:checked:disabled {
   background-color: var(--ds-toggle-track-fill-on-disabled);
-  border-color: var(--ds-toggle-track-fill-on-disabled);
+  border-width: 0;
 }
 
 .ds-toggle:checked:disabled::after {
