@@ -1,6 +1,6 @@
 # Token schema — Design System Core
 
-> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-05-12. Não editar manualmente.
+> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-05-18. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
 > Versão atual: **1.0.0-beta.4**
 
@@ -20,7 +20,7 @@
 |--------|--------|----------|
 | Foundation/Core | **266** | 9 |
 | Semantic/System | **174 × 2 modos** | light.json + dark.json |
-| Component | **556** | 19 |
+| Component | **560** | 19 |
 
 ## Foundation (266 tokens)
 
@@ -62,7 +62,7 @@ semantic.typography.*
 semantic.z.*
 ```
 
-## Component (556 tokens)
+## Component (560 tokens)
 
 | Arquivo | Tokens |
 |---------|--------|
@@ -74,11 +74,11 @@ semantic.z.*
 | `card.json` | 17 |
 | `checkbox.json` | 13 |
 | `divider.json` | 3 |
-| `form-field.json` | 23 |
-| `input.json` | 82 |
+| `form-field.json` | 24 |
+| `input.json` | 83 |
 | `modal.json` | 53 |
 | `radio.json` | 6 |
-| `select.json` | 92 |
+| `select.json` | 94 |
 | `skeleton.json` | 6 |
 | `spinner.json` | 5 |
 | `tabs.json` | 12 |

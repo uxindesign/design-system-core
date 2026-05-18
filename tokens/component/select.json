@@ -93,12 +93,12 @@
         "frame-size": {
           "sm": {
             "$type": "dimension",
-            "$value": "{semantic.size.md}",
+            "$value": "{semantic.size.xs}",
             "$description": "Tamanho do frame do chevron Select sm."
           },
           "md": {
             "$type": "dimension",
-            "$value": "{semantic.size.md}",
+            "$value": "{semantic.size.sm}",
             "$description": "Tamanho do frame do chevron Select md."
           },
           "lg": {
@@ -110,18 +110,27 @@
         "glyph-size": {
           "sm": {
             "$type": "dimension",
-            "$value": "{semantic.size.sm}",
+            "$value": "{semantic.size.xs}",
             "$description": "Tamanho do glyph do chevron Select sm."
           },
           "md": {
             "$type": "dimension",
-            "$value": "{semantic.size.md}",
+            "$value": "{semantic.size.sm}",
             "$description": "Tamanho do glyph do chevron Select md."
           },
           "lg": {
             "$type": "dimension",
             "$value": "{semantic.size.md}",
             "$description": "Tamanho do glyph do chevron Select lg."
+          }
+        }
+      },
+      "chevron-frame": {
+        "padding-x": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.space.xs}",
+            "$description": "Padding horizontal do frame externo do chevron Select."
           }
         }
       },
@@ -182,12 +191,12 @@
       "gap": {
         "sm": {
           "$type": "dimension",
-          "$value": "{semantic.space.sm}",
+          "$value": "{semantic.space.xs}",
           "$description": "Gap interno do Field Select sm."
         },
         "md": {
           "$type": "dimension",
-          "$value": "{semantic.space.sm}",
+          "$value": "{semantic.space.xs}",
           "$description": "Gap interno do Field Select md."
         },
         "lg": {
@@ -298,12 +307,12 @@
         "frame-size": {
           "sm": {
             "$type": "dimension",
-            "$value": "{semantic.size.sm}",
+            "$value": "{semantic.size.xs}",
             "$description": "Tamanho do frame de ícone Select sm."
           },
           "md": {
             "$type": "dimension",
-            "$value": "{semantic.size.md}",
+            "$value": "{semantic.size.sm}",
             "$description": "Tamanho do frame de ícone Select md."
           },
           "lg": {
@@ -315,18 +324,27 @@
         "glyph-size": {
           "sm": {
             "$type": "dimension",
-            "$value": "{semantic.size.sm}",
+            "$value": "{semantic.size.xs}",
             "$description": "Tamanho do glyph de ícone Select sm."
           },
           "md": {
             "$type": "dimension",
-            "$value": "{semantic.size.md}",
+            "$value": "{semantic.size.sm}",
             "$description": "Tamanho do glyph de ícone Select md."
           },
           "lg": {
             "$type": "dimension",
             "$value": "{semantic.size.md}",
             "$description": "Tamanho do glyph de ícone Select lg."
+          }
+        }
+      },
+      "icon-frame": {
+        "padding-x": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.space.xs}",
+            "$description": "Padding horizontal do frame externo de ícone Select."
           }
         }
       },
@@ -411,12 +429,12 @@
         },
         "md": {
           "$type": "dimension",
-          "$value": "{semantic.space.md}",
+          "$value": "{semantic.space.sm}",
           "$description": "Padding horizontal do Field Select md."
         },
         "lg": {
           "$type": "dimension",
-          "$value": "{semantic.space.lg}",
+          "$value": "{semantic.space.md}",
           "$description": "Padding horizontal do Field Select lg."
         }
       },

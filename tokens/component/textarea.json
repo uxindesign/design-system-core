@@ -295,7 +295,7 @@
       "padding-x": {
         "sm": {
           "$type": "dimension",
-          "$value": "{semantic.space.sm}",
+          "$value": "{semantic.space.md}",
           "$description": "Padding horizontal do Field Textarea sm."
         },
         "md": {
@@ -411,7 +411,7 @@
         "font-size": {
           "sm": {
             "$type": "dimension",
-            "$value": "{semantic.typography.body.font-size.sm}",
+            "$value": "{semantic.typography.body.font-size.xs}",
             "$description": "Font-size do texto Textarea sm."
           },
           "md": {
@@ -442,7 +442,7 @@
         "line-height": {
           "sm": {
             "$type": "dimension",
-            "$value": "{semantic.typography.body.line-height.sm}",
+            "$value": "{semantic.typography.body.line-height.2xs}",
             "$description": "Line-height do texto Textarea sm."
           },
           "md": {

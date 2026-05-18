@@ -73,7 +73,29 @@
   padding-left: var(--ds-select-text-frame-padding-x-default);
   padding-right: calc(
     var(--ds-select-chevron-frame-size-md) +
+    var(--ds-select-chevron-frame-padding-x-default) +
+    var(--ds-select-chevron-frame-padding-x-default) +
     var(--ds-select-gap-md) +
+    var(--ds-select-text-frame-padding-x-default)
+  );
+}
+
+.ds-select--sm .ds-select__field {
+  padding-right: calc(
+    var(--ds-select-chevron-frame-size-sm) +
+    var(--ds-select-chevron-frame-padding-x-default) +
+    var(--ds-select-chevron-frame-padding-x-default) +
+    var(--ds-select-gap-sm) +
+    var(--ds-select-text-frame-padding-x-default)
+  );
+}
+
+.ds-select--lg .ds-select__field {
+  padding-right: calc(
+    var(--ds-select-chevron-frame-size-lg) +
+    var(--ds-select-chevron-frame-padding-x-default) +
+    var(--ds-select-chevron-frame-padding-x-default) +
+    var(--ds-select-gap-lg) +
     var(--ds-select-text-frame-padding-x-default)
   );
 }
@@ -102,11 +124,15 @@
   position: absolute;
   right: var(--ds-select-padding-x-md);
   top: 50%;
+  box-sizing: content-box;
   width: var(--ds-select-chevron-frame-size-md);
   height: var(--ds-select-chevron-frame-size-md);
+  padding-left: var(--ds-select-chevron-frame-padding-x-default);
+  padding-right: var(--ds-select-chevron-frame-padding-x-default);
   transform: translateY(-50%);
   pointer-events: none;
   color: var(--ds-select-chevron-color-default);
+  line-height: 1;
   background-color: currentColor;
   -webkit-mask: var(--select-chevron-mask) center / var(--ds-select-chevron-glyph-size-md) var(--ds-select-chevron-glyph-size-md) no-repeat;
   mask: var(--select-chevron-mask) center / var(--ds-select-chevron-glyph-size-md) var(--ds-select-chevron-glyph-size-md) no-repeat;
@@ -136,10 +162,14 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  box-sizing: content-box;
   width: var(--ds-select-icon-frame-size-md);
   height: var(--ds-select-icon-frame-size-md);
+  padding-left: var(--ds-select-icon-frame-padding-x-default);
+  padding-right: var(--ds-select-icon-frame-padding-x-default);
   color: var(--ds-select-icon-color-default);
   font-size: var(--ds-select-icon-glyph-size-md);
+  line-height: 1;
 }
 
 .ds-select--sm .ds-select__icon {

@@ -74,17 +74,20 @@
 /* Icon
    ========================================================================== */
 
-/* Icon container: sempre size-md (24×24) por Figma — glyph dentro escala
-   por size de input. Container fixo dá breathing room consistente. */
+/* Icon container: wrapper externo com respiro horizontal; glyph interno escala por tamanho. */
 .ds-input__icon {
   flex-shrink: 0;
   color: var(--ds-input-icon-color-default);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  box-sizing: content-box;
   width: var(--ds-input-icon-frame-size-md);
   height: var(--ds-input-icon-frame-size-md);
+  padding-left: var(--ds-input-icon-frame-padding-x-default);
+  padding-right: var(--ds-input-icon-frame-padding-x-default);
   font-size: var(--ds-input-icon-glyph-size-md);
+  line-height: 1;
 }
 
 .ds-input--sm .ds-input__icon {
