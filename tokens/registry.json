@@ -22421,6 +22421,1654 @@
         "tokens": [],
         "figma": []
       }
+    },
+    "component.checkbox.content.gap.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xs",
+      "sentido": "Checkbox content frame default",
+      "escopo": [
+        "checkbox",
+        "content frame"
+      ],
+      "contexto": "Component token do contrato Checkbox materializado no Figma para content frame.",
+      "decisao": "Alias 1:1 para semantic.space.xs para manter a anatomia content frame alinhada entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.label.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.strong",
+      "sentido": "Checkbox label default",
+      "escopo": [
+        "checkbox",
+        "label"
+      ],
+      "contexto": "Component token do contrato Checkbox materializado no Figma para label.",
+      "decisao": "Alias 1:1 para semantic.content.strong para manter o estado default alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.label.color.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.disabled",
+      "sentido": "Checkbox label disabled",
+      "escopo": [
+        "checkbox",
+        "label",
+        "disabled"
+      ],
+      "contexto": "Component token do contrato Checkbox materializado no Figma para label.",
+      "decisao": "Alias 1:1 para semantic.content.disabled para manter o estado disabled alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.description.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.strong",
+      "sentido": "Checkbox description default",
+      "escopo": [
+        "checkbox",
+        "description"
+      ],
+      "contexto": "Component token do contrato Checkbox materializado no Figma para description.",
+      "decisao": "Alias 1:1 para semantic.content.strong para manter o estado default alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.helper-text.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.default",
+      "sentido": "Checkbox helper text default",
+      "escopo": [
+        "checkbox",
+        "helper text"
+      ],
+      "contexto": "Component token do contrato Checkbox materializado no Figma para helper text.",
+      "decisao": "Alias 1:1 para semantic.content.default para manter o estado default alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.box.fill.unchecked.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.surface.default",
+      "sentido": "Checkbox box visual unchecked",
+      "escopo": [
+        "checkbox",
+        "box visual",
+        "unchecked"
+      ],
+      "contexto": "Component token do contrato Checkbox materializado no Figma para box visual.",
+      "decisao": "Alias 1:1 para semantic.surface.default para manter o estado unchecked alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.box.fill.unchecked.focused": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.surface.default",
+      "sentido": "Checkbox box visual unchecked focused",
+      "escopo": [
+        "checkbox",
+        "box visual",
+        "unchecked",
+        "focused"
+      ],
+      "contexto": "Component token do contrato Checkbox materializado no Figma para box visual.",
+      "decisao": "Alias 1:1 para semantic.surface.default para manter o estado unchecked focused alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.box.fill.unchecked.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.background.disabled",
+      "sentido": "Checkbox box visual unchecked disabled",
+      "escopo": [
+        "checkbox",
+        "box visual",
+        "unchecked",
+        "disabled"
+      ],
+      "contexto": "Component token do contrato Checkbox materializado no Figma para box visual.",
+      "decisao": "Alias 1:1 para semantic.background.disabled para manter o estado unchecked disabled alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.box.fill.checked.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.background.default",
+      "sentido": "Checkbox box visual checked",
+      "escopo": [
+        "checkbox",
+        "box visual",
+        "checked"
+      ],
+      "contexto": "Component token do contrato Checkbox materializado no Figma para box visual.",
+      "decisao": "Alias 1:1 para semantic.primary.background.default para manter o estado checked alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.box.fill.checked.focused": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.background.default",
+      "sentido": "Checkbox box visual checked focused",
+      "escopo": [
+        "checkbox",
+        "box visual",
+        "checked",
+        "focused"
+      ],
+      "contexto": "Component token do contrato Checkbox materializado no Figma para box visual.",
+      "decisao": "Alias 1:1 para semantic.primary.background.default para manter o estado checked focused alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.box.fill.checked.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.background.disabled",
+      "sentido": "Checkbox box visual checked disabled",
+      "escopo": [
+        "checkbox",
+        "box visual",
+        "checked",
+        "disabled"
+      ],
+      "contexto": "Component token do contrato Checkbox materializado no Figma para box visual.",
+      "decisao": "Alias 1:1 para semantic.primary.background.disabled para manter o estado checked disabled alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.box.fill.indeterminate.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.background.default",
+      "sentido": "Checkbox box visual indeterminate",
+      "escopo": [
+        "checkbox",
+        "box visual",
+        "indeterminate"
+      ],
+      "contexto": "Component token do contrato Checkbox materializado no Figma para box visual.",
+      "decisao": "Alias 1:1 para semantic.primary.background.default para manter o estado indeterminate alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.box.fill.indeterminate.focused": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.background.default",
+      "sentido": "Checkbox box visual indeterminate focused",
+      "escopo": [
+        "checkbox",
+        "box visual",
+        "indeterminate",
+        "focused"
+      ],
+      "contexto": "Component token do contrato Checkbox materializado no Figma para box visual.",
+      "decisao": "Alias 1:1 para semantic.primary.background.default para manter o estado indeterminate focused alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.box.fill.indeterminate.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.background.disabled",
+      "sentido": "Checkbox box visual indeterminate disabled",
+      "escopo": [
+        "checkbox",
+        "box visual",
+        "indeterminate",
+        "disabled"
+      ],
+      "contexto": "Component token do contrato Checkbox materializado no Figma para box visual.",
+      "decisao": "Alias 1:1 para semantic.primary.background.disabled para manter o estado indeterminate disabled alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.box.border-color.unchecked.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.control-default",
+      "sentido": "Checkbox box visual unchecked",
+      "escopo": [
+        "checkbox",
+        "box visual",
+        "unchecked"
+      ],
+      "contexto": "Component token do contrato Checkbox materializado no Figma para box visual.",
+      "decisao": "Alias 1:1 para semantic.border.control-default para manter o estado unchecked alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.box.border-color.unchecked.focused": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.background.default",
+      "sentido": "Checkbox box visual unchecked focused",
+      "escopo": [
+        "checkbox",
+        "box visual",
+        "unchecked",
+        "focused"
+      ],
+      "contexto": "Component token do contrato Checkbox materializado no Figma para box visual.",
+      "decisao": "Alias 1:1 para semantic.primary.background.default para manter o estado unchecked focused alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.box.border-color.unchecked.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.control-disabled",
+      "sentido": "Checkbox box visual unchecked disabled",
+      "escopo": [
+        "checkbox",
+        "box visual",
+        "unchecked",
+        "disabled"
+      ],
+      "contexto": "Component token do contrato Checkbox materializado no Figma para box visual.",
+      "decisao": "Alias 1:1 para semantic.border.control-disabled para manter o estado unchecked disabled alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.box.border-color.checked.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.background.default",
+      "sentido": "Checkbox box visual checked",
+      "escopo": [
+        "checkbox",
+        "box visual",
+        "checked"
+      ],
+      "contexto": "Component token do contrato Checkbox materializado no Figma para box visual.",
+      "decisao": "Alias 1:1 para semantic.primary.background.default para manter o estado checked alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.box.border-color.checked.focused": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.background.default",
+      "sentido": "Checkbox box visual checked focused",
+      "escopo": [
+        "checkbox",
+        "box visual",
+        "checked",
+        "focused"
+      ],
+      "contexto": "Component token do contrato Checkbox materializado no Figma para box visual.",
+      "decisao": "Alias 1:1 para semantic.primary.background.default para manter o estado checked focused alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.box.border-color.checked.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.background.disabled",
+      "sentido": "Checkbox box visual checked disabled",
+      "escopo": [
+        "checkbox",
+        "box visual",
+        "checked",
+        "disabled"
+      ],
+      "contexto": "Component token do contrato Checkbox materializado no Figma para box visual.",
+      "decisao": "Alias 1:1 para semantic.primary.background.disabled para manter o estado checked disabled alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.box.border-color.indeterminate.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.background.default",
+      "sentido": "Checkbox box visual indeterminate",
+      "escopo": [
+        "checkbox",
+        "box visual",
+        "indeterminate"
+      ],
+      "contexto": "Component token do contrato Checkbox materializado no Figma para box visual.",
+      "decisao": "Alias 1:1 para semantic.primary.background.default para manter o estado indeterminate alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.box.border-color.indeterminate.focused": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.background.default",
+      "sentido": "Checkbox box visual indeterminate focused",
+      "escopo": [
+        "checkbox",
+        "box visual",
+        "indeterminate",
+        "focused"
+      ],
+      "contexto": "Component token do contrato Checkbox materializado no Figma para box visual.",
+      "decisao": "Alias 1:1 para semantic.primary.background.default para manter o estado indeterminate focused alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.box.border-color.indeterminate.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.background.disabled",
+      "sentido": "Checkbox box visual indeterminate disabled",
+      "escopo": [
+        "checkbox",
+        "box visual",
+        "indeterminate",
+        "disabled"
+      ],
+      "contexto": "Component token do contrato Checkbox materializado no Figma para box visual.",
+      "decisao": "Alias 1:1 para semantic.primary.background.disabled para manter o estado indeterminate disabled alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.mark.fill.checked.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.content-default",
+      "sentido": "Checkbox marca visual checked",
+      "escopo": [
+        "checkbox",
+        "marca visual",
+        "checked"
+      ],
+      "contexto": "Component token do contrato Checkbox materializado no Figma para marca visual.",
+      "decisao": "Alias 1:1 para semantic.primary.content-default para manter o estado checked alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.mark.fill.checked.focused": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.content-default",
+      "sentido": "Checkbox marca visual checked focused",
+      "escopo": [
+        "checkbox",
+        "marca visual",
+        "checked",
+        "focused"
+      ],
+      "contexto": "Component token do contrato Checkbox materializado no Figma para marca visual.",
+      "decisao": "Alias 1:1 para semantic.primary.content-default para manter o estado checked focused alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.mark.fill.checked.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.content-disabled",
+      "sentido": "Checkbox marca visual checked disabled",
+      "escopo": [
+        "checkbox",
+        "marca visual",
+        "checked",
+        "disabled"
+      ],
+      "contexto": "Component token do contrato Checkbox materializado no Figma para marca visual.",
+      "decisao": "Alias 1:1 para semantic.primary.content-disabled para manter o estado checked disabled alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.mark.fill.indeterminate.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.content-default",
+      "sentido": "Checkbox marca visual indeterminate",
+      "escopo": [
+        "checkbox",
+        "marca visual",
+        "indeterminate"
+      ],
+      "contexto": "Component token do contrato Checkbox materializado no Figma para marca visual.",
+      "decisao": "Alias 1:1 para semantic.primary.content-default para manter o estado indeterminate alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.mark.fill.indeterminate.focused": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.content-default",
+      "sentido": "Checkbox marca visual indeterminate focused",
+      "escopo": [
+        "checkbox",
+        "marca visual",
+        "indeterminate",
+        "focused"
+      ],
+      "contexto": "Component token do contrato Checkbox materializado no Figma para marca visual.",
+      "decisao": "Alias 1:1 para semantic.primary.content-default para manter o estado indeterminate focused alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.mark.fill.indeterminate.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.content-disabled",
+      "sentido": "Checkbox marca visual indeterminate disabled",
+      "escopo": [
+        "checkbox",
+        "marca visual",
+        "indeterminate",
+        "disabled"
+      ],
+      "contexto": "Component token do contrato Checkbox materializado no Figma para marca visual.",
+      "decisao": "Alias 1:1 para semantic.primary.content-disabled para manter o estado indeterminate disabled alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.target.gap.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.sm",
+      "sentido": "Radio target interativo default",
+      "escopo": [
+        "radio",
+        "target interativo"
+      ],
+      "contexto": "Component token do contrato Radio materializado no Figma para target interativo.",
+      "decisao": "Alias 1:1 para semantic.space.sm para manter a anatomia target interativo alinhada entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.content.gap.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xs",
+      "sentido": "Radio content frame default",
+      "escopo": [
+        "radio",
+        "content frame"
+      ],
+      "contexto": "Component token do contrato Radio materializado no Figma para content frame.",
+      "decisao": "Alias 1:1 para semantic.space.xs para manter a anatomia content frame alinhada entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.label.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.strong",
+      "sentido": "Radio label default",
+      "escopo": [
+        "radio",
+        "label"
+      ],
+      "contexto": "Component token do contrato Radio materializado no Figma para label.",
+      "decisao": "Alias 1:1 para semantic.content.strong para manter o estado default alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.label.color.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.disabled",
+      "sentido": "Radio label disabled",
+      "escopo": [
+        "radio",
+        "label",
+        "disabled"
+      ],
+      "contexto": "Component token do contrato Radio materializado no Figma para label.",
+      "decisao": "Alias 1:1 para semantic.content.disabled para manter o estado disabled alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.description.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.strong",
+      "sentido": "Radio description default",
+      "escopo": [
+        "radio",
+        "description"
+      ],
+      "contexto": "Component token do contrato Radio materializado no Figma para description.",
+      "decisao": "Alias 1:1 para semantic.content.strong para manter o estado default alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.helper-text.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.default",
+      "sentido": "Radio helper text default",
+      "escopo": [
+        "radio",
+        "helper text"
+      ],
+      "contexto": "Component token do contrato Radio materializado no Figma para helper text.",
+      "decisao": "Alias 1:1 para semantic.content.default para manter o estado default alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.control.radius.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.radius.full",
+      "sentido": "Radio control visual default",
+      "escopo": [
+        "radio",
+        "control visual"
+      ],
+      "contexto": "Component token do contrato Radio materializado no Figma para control visual.",
+      "decisao": "Alias 1:1 para semantic.radius.full para manter a anatomia control visual alinhada entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.control.fill.unselected.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.surface.default",
+      "sentido": "Radio control visual unselected",
+      "escopo": [
+        "radio",
+        "control visual",
+        "unselected"
+      ],
+      "contexto": "Component token do contrato Radio materializado no Figma para control visual.",
+      "decisao": "Alias 1:1 para semantic.surface.default para manter o estado unselected alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.control.fill.unselected.focused": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.surface.default",
+      "sentido": "Radio control visual unselected focused",
+      "escopo": [
+        "radio",
+        "control visual",
+        "unselected",
+        "focused"
+      ],
+      "contexto": "Component token do contrato Radio materializado no Figma para control visual.",
+      "decisao": "Alias 1:1 para semantic.surface.default para manter o estado unselected focused alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.control.fill.unselected.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.background.disabled",
+      "sentido": "Radio control visual unselected disabled",
+      "escopo": [
+        "radio",
+        "control visual",
+        "unselected",
+        "disabled"
+      ],
+      "contexto": "Component token do contrato Radio materializado no Figma para control visual.",
+      "decisao": "Alias 1:1 para semantic.background.disabled para manter o estado unselected disabled alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.control.fill.selected.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.background.default",
+      "sentido": "Radio control visual selected",
+      "escopo": [
+        "radio",
+        "control visual",
+        "selected"
+      ],
+      "contexto": "Component token do contrato Radio materializado no Figma para control visual.",
+      "decisao": "Alias 1:1 para semantic.primary.background.default para manter o estado selected alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.control.fill.selected.focused": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.background.default",
+      "sentido": "Radio control visual selected focused",
+      "escopo": [
+        "radio",
+        "control visual",
+        "selected",
+        "focused"
+      ],
+      "contexto": "Component token do contrato Radio materializado no Figma para control visual.",
+      "decisao": "Alias 1:1 para semantic.primary.background.default para manter o estado selected focused alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.control.fill.selected.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.background.disabled",
+      "sentido": "Radio control visual selected disabled",
+      "escopo": [
+        "radio",
+        "control visual",
+        "selected",
+        "disabled"
+      ],
+      "contexto": "Component token do contrato Radio materializado no Figma para control visual.",
+      "decisao": "Alias 1:1 para semantic.primary.background.disabled para manter o estado selected disabled alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.control.border-color.unselected.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.control-default",
+      "sentido": "Radio control visual unselected",
+      "escopo": [
+        "radio",
+        "control visual",
+        "unselected"
+      ],
+      "contexto": "Component token do contrato Radio materializado no Figma para control visual.",
+      "decisao": "Alias 1:1 para semantic.border.control-default para manter o estado unselected alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.control.border-color.unselected.focused": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.background.default",
+      "sentido": "Radio control visual unselected focused",
+      "escopo": [
+        "radio",
+        "control visual",
+        "unselected",
+        "focused"
+      ],
+      "contexto": "Component token do contrato Radio materializado no Figma para control visual.",
+      "decisao": "Alias 1:1 para semantic.primary.background.default para manter o estado unselected focused alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.control.border-color.unselected.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.control-disabled",
+      "sentido": "Radio control visual unselected disabled",
+      "escopo": [
+        "radio",
+        "control visual",
+        "unselected",
+        "disabled"
+      ],
+      "contexto": "Component token do contrato Radio materializado no Figma para control visual.",
+      "decisao": "Alias 1:1 para semantic.border.control-disabled para manter o estado unselected disabled alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.control.border-color.selected.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.background.default",
+      "sentido": "Radio control visual selected",
+      "escopo": [
+        "radio",
+        "control visual",
+        "selected"
+      ],
+      "contexto": "Component token do contrato Radio materializado no Figma para control visual.",
+      "decisao": "Alias 1:1 para semantic.primary.background.default para manter o estado selected alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.control.border-color.selected.focused": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.background.default",
+      "sentido": "Radio control visual selected focused",
+      "escopo": [
+        "radio",
+        "control visual",
+        "selected",
+        "focused"
+      ],
+      "contexto": "Component token do contrato Radio materializado no Figma para control visual.",
+      "decisao": "Alias 1:1 para semantic.primary.background.default para manter o estado selected focused alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.control.border-color.selected.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.background.disabled",
+      "sentido": "Radio control visual selected disabled",
+      "escopo": [
+        "radio",
+        "control visual",
+        "selected",
+        "disabled"
+      ],
+      "contexto": "Component token do contrato Radio materializado no Figma para control visual.",
+      "decisao": "Alias 1:1 para semantic.primary.background.disabled para manter o estado selected disabled alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.control.border-width.unselected.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.border.width.default",
+      "sentido": "Radio control visual unselected",
+      "escopo": [
+        "radio",
+        "control visual",
+        "unselected"
+      ],
+      "contexto": "Component token do contrato Radio materializado no Figma para control visual.",
+      "decisao": "Alias 1:1 para semantic.border.width.default para manter a anatomia control visual alinhada entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.control.border-width.selected.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.border.width.strong",
+      "sentido": "Radio control visual selected",
+      "escopo": [
+        "radio",
+        "control visual",
+        "selected"
+      ],
+      "contexto": "Component token do contrato Radio materializado no Figma para control visual.",
+      "decisao": "Alias 1:1 para semantic.border.width.strong para manter a anatomia control visual alinhada entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.dot.size.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "foundation.dimension.6",
+      "sentido": "Radio dot interno size sm",
+      "escopo": [
+        "radio",
+        "dot interno",
+        "sm"
+      ],
+      "contexto": "Component token do contrato Radio materializado no Figma para dot interno.",
+      "decisao": "Alias 1:1 para foundation.dimension.6 para manter a anatomia dot interno alinhada entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.dot.size.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "foundation.dimension.8",
+      "sentido": "Radio dot interno size md",
+      "escopo": [
+        "radio",
+        "dot interno",
+        "md"
+      ],
+      "contexto": "Component token do contrato Radio materializado no Figma para dot interno.",
+      "decisao": "Alias 1:1 para foundation.dimension.8 para manter a anatomia dot interno alinhada entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.dot.size.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "foundation.dimension.10",
+      "sentido": "Radio dot interno size lg",
+      "escopo": [
+        "radio",
+        "dot interno",
+        "lg"
+      ],
+      "contexto": "Component token do contrato Radio materializado no Figma para dot interno.",
+      "decisao": "Alias 1:1 para foundation.dimension.10 para manter a anatomia dot interno alinhada entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.dot.radius.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.radius.full",
+      "sentido": "Radio dot interno default",
+      "escopo": [
+        "radio",
+        "dot interno"
+      ],
+      "contexto": "Component token do contrato Radio materializado no Figma para dot interno.",
+      "decisao": "Alias 1:1 para semantic.radius.full para manter a anatomia dot interno alinhada entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.dot.fill.selected.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.content-default",
+      "sentido": "Radio dot interno selected",
+      "escopo": [
+        "radio",
+        "dot interno",
+        "selected"
+      ],
+      "contexto": "Component token do contrato Radio materializado no Figma para dot interno.",
+      "decisao": "Alias 1:1 para semantic.primary.content-default para manter o estado selected alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.dot.fill.selected.focused": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.content-default",
+      "sentido": "Radio dot interno selected focused",
+      "escopo": [
+        "radio",
+        "dot interno",
+        "selected",
+        "focused"
+      ],
+      "contexto": "Component token do contrato Radio materializado no Figma para dot interno.",
+      "decisao": "Alias 1:1 para semantic.primary.content-default para manter o estado selected focused alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.dot.fill.selected.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.content-disabled",
+      "sentido": "Radio dot interno selected disabled",
+      "escopo": [
+        "radio",
+        "dot interno",
+        "selected",
+        "disabled"
+      ],
+      "contexto": "Component token do contrato Radio materializado no Figma para dot interno.",
+      "decisao": "Alias 1:1 para semantic.primary.content-disabled para manter o estado selected disabled alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.focus-ring.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.focus",
+      "sentido": "Radio focus ring default",
+      "escopo": [
+        "radio",
+        "focus ring"
+      ],
+      "contexto": "Component token do contrato Radio materializado no Figma para focus ring.",
+      "decisao": "Alias 1:1 para semantic.border.focus para manter o estado default alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.focus-ring.stroke-width.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.border.width.focus",
+      "sentido": "Radio focus ring default",
+      "escopo": [
+        "radio",
+        "focus ring"
+      ],
+      "contexto": "Component token do contrato Radio materializado no Figma para focus ring.",
+      "decisao": "Alias 1:1 para semantic.border.width.focus para manter a anatomia focus ring alinhada entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.focus-ring.radius.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.radius.full",
+      "sentido": "Radio focus ring default",
+      "escopo": [
+        "radio",
+        "focus ring"
+      ],
+      "contexto": "Component token do contrato Radio materializado no Figma para focus ring.",
+      "decisao": "Alias 1:1 para semantic.radius.full para manter a anatomia focus ring alinhada entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.target.gap.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.sm",
+      "sentido": "Toggle target interativo default",
+      "escopo": [
+        "toggle",
+        "target interativo"
+      ],
+      "contexto": "Component token do contrato Toggle materializado no Figma para target interativo.",
+      "decisao": "Alias 1:1 para semantic.space.sm para manter a anatomia target interativo alinhada entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.target.radius.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.radius.md",
+      "sentido": "Toggle target interativo default",
+      "escopo": [
+        "toggle",
+        "target interativo"
+      ],
+      "contexto": "Component token do contrato Toggle materializado no Figma para target interativo.",
+      "decisao": "Alias 1:1 para semantic.radius.md para manter a anatomia target interativo alinhada entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.content.gap.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xs",
+      "sentido": "Toggle content frame default",
+      "escopo": [
+        "toggle",
+        "content frame"
+      ],
+      "contexto": "Component token do contrato Toggle materializado no Figma para content frame.",
+      "decisao": "Alias 1:1 para semantic.space.xs para manter a anatomia content frame alinhada entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.label.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.strong",
+      "sentido": "Toggle label default",
+      "escopo": [
+        "toggle",
+        "label"
+      ],
+      "contexto": "Component token do contrato Toggle materializado no Figma para label.",
+      "decisao": "Alias 1:1 para semantic.content.strong para manter o estado default alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.label.color.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.disabled",
+      "sentido": "Toggle label disabled",
+      "escopo": [
+        "toggle",
+        "label",
+        "disabled"
+      ],
+      "contexto": "Component token do contrato Toggle materializado no Figma para label.",
+      "decisao": "Alias 1:1 para semantic.content.disabled para manter o estado disabled alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.description.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.strong",
+      "sentido": "Toggle description default",
+      "escopo": [
+        "toggle",
+        "description"
+      ],
+      "contexto": "Component token do contrato Toggle materializado no Figma para description.",
+      "decisao": "Alias 1:1 para semantic.content.strong para manter o estado default alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.helper-text.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.default",
+      "sentido": "Toggle helper text default",
+      "escopo": [
+        "toggle",
+        "helper text"
+      ],
+      "contexto": "Component token do contrato Toggle materializado no Figma para helper text.",
+      "decisao": "Alias 1:1 para semantic.content.default para manter o estado default alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.track.radius.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.radius.full",
+      "sentido": "Toggle track default",
+      "escopo": [
+        "toggle",
+        "track"
+      ],
+      "contexto": "Component token do contrato Toggle materializado no Figma para track.",
+      "decisao": "Alias 1:1 para semantic.radius.full para manter a anatomia track alinhada entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.track.border-width.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.border.width.default",
+      "sentido": "Toggle track default",
+      "escopo": [
+        "toggle",
+        "track"
+      ],
+      "contexto": "Component token do contrato Toggle materializado no Figma para track.",
+      "decisao": "Alias 1:1 para semantic.border.width.default para manter a anatomia track alinhada entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.track.fill.off.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.surface.default",
+      "sentido": "Toggle track off",
+      "escopo": [
+        "toggle",
+        "track",
+        "off"
+      ],
+      "contexto": "Component token do contrato Toggle materializado no Figma para track.",
+      "decisao": "Alias 1:1 para semantic.surface.default para manter o estado off alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.track.fill.off.focused": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.surface.default",
+      "sentido": "Toggle track off focused",
+      "escopo": [
+        "toggle",
+        "track",
+        "off",
+        "focused"
+      ],
+      "contexto": "Component token do contrato Toggle materializado no Figma para track.",
+      "decisao": "Alias 1:1 para semantic.surface.default para manter o estado off focused alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.track.fill.off.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.background.disabled",
+      "sentido": "Toggle track off disabled",
+      "escopo": [
+        "toggle",
+        "track",
+        "off",
+        "disabled"
+      ],
+      "contexto": "Component token do contrato Toggle materializado no Figma para track.",
+      "decisao": "Alias 1:1 para semantic.background.disabled para manter o estado off disabled alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.track.fill.on.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.background.default",
+      "sentido": "Toggle track on",
+      "escopo": [
+        "toggle",
+        "track",
+        "on"
+      ],
+      "contexto": "Component token do contrato Toggle materializado no Figma para track.",
+      "decisao": "Alias 1:1 para semantic.primary.background.default para manter o estado on alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.track.fill.on.focused": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.background.default",
+      "sentido": "Toggle track on focused",
+      "escopo": [
+        "toggle",
+        "track",
+        "on",
+        "focused"
+      ],
+      "contexto": "Component token do contrato Toggle materializado no Figma para track.",
+      "decisao": "Alias 1:1 para semantic.primary.background.default para manter o estado on focused alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.track.fill.on.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.background.disabled",
+      "sentido": "Toggle track on disabled",
+      "escopo": [
+        "toggle",
+        "track",
+        "on",
+        "disabled"
+      ],
+      "contexto": "Component token do contrato Toggle materializado no Figma para track.",
+      "decisao": "Alias 1:1 para semantic.primary.background.disabled para manter o estado on disabled alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.track.border-color.off.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.control-default",
+      "sentido": "Toggle track off",
+      "escopo": [
+        "toggle",
+        "track",
+        "off"
+      ],
+      "contexto": "Component token do contrato Toggle materializado no Figma para track.",
+      "decisao": "Alias 1:1 para semantic.border.control-default para manter o estado off alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.track.border-color.off.focused": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.background.default",
+      "sentido": "Toggle track off focused",
+      "escopo": [
+        "toggle",
+        "track",
+        "off",
+        "focused"
+      ],
+      "contexto": "Component token do contrato Toggle materializado no Figma para track.",
+      "decisao": "Alias 1:1 para semantic.primary.background.default para manter o estado off focused alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.track.border-color.off.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.control-disabled",
+      "sentido": "Toggle track off disabled",
+      "escopo": [
+        "toggle",
+        "track",
+        "off",
+        "disabled"
+      ],
+      "contexto": "Component token do contrato Toggle materializado no Figma para track.",
+      "decisao": "Alias 1:1 para semantic.border.control-disabled para manter o estado off disabled alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.thumb.size.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "foundation.dimension.12",
+      "sentido": "Toggle thumb size sm",
+      "escopo": [
+        "toggle",
+        "thumb",
+        "sm"
+      ],
+      "contexto": "Component token do contrato Toggle materializado no Figma para thumb.",
+      "decisao": "Alias 1:1 para foundation.dimension.12 para manter a anatomia thumb alinhada entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.thumb.size.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "foundation.dimension.20",
+      "sentido": "Toggle thumb size md",
+      "escopo": [
+        "toggle",
+        "thumb",
+        "md"
+      ],
+      "contexto": "Component token do contrato Toggle materializado no Figma para thumb.",
+      "decisao": "Alias 1:1 para foundation.dimension.20 para manter a anatomia thumb alinhada entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.thumb.size.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "foundation.dimension.28",
+      "sentido": "Toggle thumb size lg",
+      "escopo": [
+        "toggle",
+        "thumb",
+        "lg"
+      ],
+      "contexto": "Component token do contrato Toggle materializado no Figma para thumb.",
+      "decisao": "Alias 1:1 para foundation.dimension.28 para manter a anatomia thumb alinhada entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.thumb.radius.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.radius.full",
+      "sentido": "Toggle thumb default",
+      "escopo": [
+        "toggle",
+        "thumb"
+      ],
+      "contexto": "Component token do contrato Toggle materializado no Figma para thumb.",
+      "decisao": "Alias 1:1 para semantic.radius.full para manter a anatomia thumb alinhada entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.thumb.fill.off.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.default",
+      "sentido": "Toggle thumb off",
+      "escopo": [
+        "toggle",
+        "thumb",
+        "off"
+      ],
+      "contexto": "Component token do contrato Toggle materializado no Figma para thumb.",
+      "decisao": "Alias 1:1 para semantic.content.default para manter o estado off alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.thumb.fill.off.focused": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.default",
+      "sentido": "Toggle thumb off focused",
+      "escopo": [
+        "toggle",
+        "thumb",
+        "off",
+        "focused"
+      ],
+      "contexto": "Component token do contrato Toggle materializado no Figma para thumb.",
+      "decisao": "Alias 1:1 para semantic.content.default para manter o estado off focused alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.thumb.fill.off.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.disabled",
+      "sentido": "Toggle thumb off disabled",
+      "escopo": [
+        "toggle",
+        "thumb",
+        "off",
+        "disabled"
+      ],
+      "contexto": "Component token do contrato Toggle materializado no Figma para thumb.",
+      "decisao": "Alias 1:1 para semantic.content.disabled para manter o estado off disabled alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.thumb.fill.on.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.content-default",
+      "sentido": "Toggle thumb on",
+      "escopo": [
+        "toggle",
+        "thumb",
+        "on"
+      ],
+      "contexto": "Component token do contrato Toggle materializado no Figma para thumb.",
+      "decisao": "Alias 1:1 para semantic.primary.content-default para manter o estado on alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.thumb.fill.on.focused": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.content-default",
+      "sentido": "Toggle thumb on focused",
+      "escopo": [
+        "toggle",
+        "thumb",
+        "on",
+        "focused"
+      ],
+      "contexto": "Component token do contrato Toggle materializado no Figma para thumb.",
+      "decisao": "Alias 1:1 para semantic.primary.content-default para manter o estado on focused alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.thumb.fill.on.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.content-disabled",
+      "sentido": "Toggle thumb on disabled",
+      "escopo": [
+        "toggle",
+        "thumb",
+        "on",
+        "disabled"
+      ],
+      "contexto": "Component token do contrato Toggle materializado no Figma para thumb.",
+      "decisao": "Alias 1:1 para semantic.primary.content-disabled para manter o estado on disabled alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.focus-ring.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.focus",
+      "sentido": "Toggle focus ring default",
+      "escopo": [
+        "toggle",
+        "focus ring"
+      ],
+      "contexto": "Component token do contrato Toggle materializado no Figma para focus ring.",
+      "decisao": "Alias 1:1 para semantic.border.focus para manter o estado default alinhado entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.focus-ring.stroke-width.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.border.width.focus",
+      "sentido": "Toggle focus ring default",
+      "escopo": [
+        "toggle",
+        "focus ring"
+      ],
+      "contexto": "Component token do contrato Toggle materializado no Figma para focus ring.",
+      "decisao": "Alias 1:1 para semantic.border.width.focus para manter a anatomia focus ring alinhada entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.focus-ring.radius.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.radius.full",
+      "sentido": "Toggle focus ring default",
+      "escopo": [
+        "toggle",
+        "focus ring"
+      ],
+      "contexto": "Component token do contrato Toggle materializado no Figma para focus ring.",
+      "decisao": "Alias 1:1 para semantic.radius.full para manter a anatomia focus ring alinhada entre Figma, CSS e docs.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
     }
   }
 }

@@ -34,6 +34,47 @@
           }
         }
       },
+      "content": {
+        "gap": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.space.xs}",
+            "$description": "Gap vertical entre textos do Checkbox."
+          }
+        }
+      },
+      "label": {
+        "color": {
+          "default": {
+            "$type": "color",
+            "$value": "{semantic.content.strong}",
+            "$description": "Cor do label Checkbox."
+          },
+          "disabled": {
+            "$type": "color",
+            "$value": "{semantic.content.disabled}",
+            "$description": "Cor do label Checkbox disabled."
+          }
+        }
+      },
+      "description": {
+        "color": {
+          "default": {
+            "$type": "color",
+            "$value": "{semantic.content.strong}",
+            "$description": "Cor da description Checkbox."
+          }
+        }
+      },
+      "helper-text": {
+        "color": {
+          "default": {
+            "$type": "color",
+            "$value": "{semantic.content.default}",
+            "$description": "Cor do helper text Checkbox."
+          }
+        }
+      },
       "box": {
         "size": {
           "sm": {
@@ -64,6 +105,150 @@
             "$type": "dimension",
             "$value": "{semantic.border.width.default}",
             "$description": "Border width da box visual Checkbox."
+          }
+        },
+        "fill": {
+          "unchecked": {
+            "default": {
+              "$type": "color",
+              "$value": "{semantic.surface.default}",
+              "$description": "Fill da box Checkbox unchecked default."
+            },
+            "focused": {
+              "$type": "color",
+              "$value": "{semantic.surface.default}",
+              "$description": "Fill da box Checkbox unchecked focused."
+            },
+            "disabled": {
+              "$type": "color",
+              "$value": "{semantic.background.disabled}",
+              "$description": "Fill da box Checkbox unchecked disabled."
+            }
+          },
+          "checked": {
+            "default": {
+              "$type": "color",
+              "$value": "{semantic.primary.background.default}",
+              "$description": "Fill da box Checkbox checked default."
+            },
+            "focused": {
+              "$type": "color",
+              "$value": "{semantic.primary.background.default}",
+              "$description": "Fill da box Checkbox checked focused."
+            },
+            "disabled": {
+              "$type": "color",
+              "$value": "{semantic.primary.background.disabled}",
+              "$description": "Fill da box Checkbox checked disabled."
+            }
+          },
+          "indeterminate": {
+            "default": {
+              "$type": "color",
+              "$value": "{semantic.primary.background.default}",
+              "$description": "Fill da box Checkbox indeterminate default."
+            },
+            "focused": {
+              "$type": "color",
+              "$value": "{semantic.primary.background.default}",
+              "$description": "Fill da box Checkbox indeterminate focused."
+            },
+            "disabled": {
+              "$type": "color",
+              "$value": "{semantic.primary.background.disabled}",
+              "$description": "Fill da box Checkbox indeterminate disabled."
+            }
+          }
+        },
+        "border-color": {
+          "unchecked": {
+            "default": {
+              "$type": "color",
+              "$value": "{semantic.border.control-default}",
+              "$description": "Border color da box Checkbox unchecked default."
+            },
+            "focused": {
+              "$type": "color",
+              "$value": "{semantic.primary.background.default}",
+              "$description": "Border color da box Checkbox unchecked focused."
+            },
+            "disabled": {
+              "$type": "color",
+              "$value": "{semantic.border.control-disabled}",
+              "$description": "Border color da box Checkbox unchecked disabled."
+            }
+          },
+          "checked": {
+            "default": {
+              "$type": "color",
+              "$value": "{semantic.primary.background.default}",
+              "$description": "Border color da box Checkbox checked default."
+            },
+            "focused": {
+              "$type": "color",
+              "$value": "{semantic.primary.background.default}",
+              "$description": "Border color da box Checkbox checked focused."
+            },
+            "disabled": {
+              "$type": "color",
+              "$value": "{semantic.primary.background.disabled}",
+              "$description": "Border color da box Checkbox checked disabled."
+            }
+          },
+          "indeterminate": {
+            "default": {
+              "$type": "color",
+              "$value": "{semantic.primary.background.default}",
+              "$description": "Border color da box Checkbox indeterminate default."
+            },
+            "focused": {
+              "$type": "color",
+              "$value": "{semantic.primary.background.default}",
+              "$description": "Border color da box Checkbox indeterminate focused."
+            },
+            "disabled": {
+              "$type": "color",
+              "$value": "{semantic.primary.background.disabled}",
+              "$description": "Border color da box Checkbox indeterminate disabled."
+            }
+          }
+        }
+      },
+      "mark": {
+        "fill": {
+          "checked": {
+            "default": {
+              "$type": "color",
+              "$value": "{semantic.primary.content-default}",
+              "$description": "Fill do checkmark Checkbox checked default."
+            },
+            "focused": {
+              "$type": "color",
+              "$value": "{semantic.primary.content-default}",
+              "$description": "Fill do checkmark Checkbox checked focused."
+            },
+            "disabled": {
+              "$type": "color",
+              "$value": "{semantic.primary.content-disabled}",
+              "$description": "Fill do checkmark Checkbox checked disabled."
+            }
+          },
+          "indeterminate": {
+            "default": {
+              "$type": "color",
+              "$value": "{semantic.primary.content-default}",
+              "$description": "Fill da marca Checkbox indeterminate default."
+            },
+            "focused": {
+              "$type": "color",
+              "$value": "{semantic.primary.content-default}",
+              "$description": "Fill da marca Checkbox indeterminate focused."
+            },
+            "disabled": {
+              "$type": "color",
+              "$value": "{semantic.primary.content-disabled}",
+              "$description": "Fill da marca Checkbox indeterminate disabled."
+            }
           }
         }
       },
