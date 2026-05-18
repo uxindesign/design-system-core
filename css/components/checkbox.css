@@ -44,11 +44,6 @@
   min-height: var(--checkbox-target-height);
   font-size: var(--ds-body-font-size-sm);
   color: var(--ds-checkbox-label-color-default);
-  transition: background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
-}
-
-.ds-checkbox-label:hover {
-  background-color: var(--ds-overlay-subtle);
 }
 
 /* Custom checkbox */
@@ -73,18 +68,13 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: calc(var(--checkbox-box-size) * 0.7);
-  height: calc(var(--checkbox-box-size) * 0.7);
+  width: var(--checkbox-box-size);
+  height: var(--checkbox-box-size);
   background-color: var(--ds-checkbox-mark-fill-checked-default);
-  -webkit-mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 14 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 9.2 1.8 6 0.4 7.4 5 12 14 3 12.6 1.6z'/%3E%3C/svg%3E") center / contain no-repeat;
-  mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 14 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 9.2 1.8 6 0.4 7.4 5 12 14 3 12.6 1.6z'/%3E%3C/svg%3E") center / contain no-repeat;
-  transform: translate(calc(-50% + 0.5px), calc(-50% - 0.5px)) scale(0);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.72408 12.4323L13.8699 6.28643C14.0609 6.09546 14.3039 5.99997 14.5991 5.99997C14.8942 5.99997 15.1373 6.09546 15.3282 6.28643C15.5192 6.47741 15.6147 6.72046 15.6147 7.0156C15.6147 7.31074 15.5192 7.55379 15.3282 7.74477L8.45325 14.6198C8.24491 14.8281 8.00186 14.9323 7.72408 14.9323C7.4463 14.9323 7.20325 14.8281 6.99491 14.6198L4.28658 11.9114C4.09561 11.7205 4.00012 11.4774 4.00012 11.1823C4.00012 10.8871 4.09561 10.6441 4.28658 10.4531C4.47755 10.2621 4.72061 10.1666 5.01575 10.1666C5.31089 10.1666 5.55394 10.2621 5.74491 10.4531L7.72408 12.4323Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.72408 12.4323L13.8699 6.28643C14.0609 6.09546 14.3039 5.99997 14.5991 5.99997C14.8942 5.99997 15.1373 6.09546 15.3282 6.28643C15.5192 6.47741 15.6147 6.72046 15.6147 7.0156C15.6147 7.31074 15.5192 7.55379 15.3282 7.74477L8.45325 14.6198C8.24491 14.8281 8.00186 14.9323 7.72408 14.9323C7.4463 14.9323 7.20325 14.8281 6.99491 14.6198L4.28658 11.9114C4.09561 11.7205 4.00012 11.4774 4.00012 11.1823C4.00012 10.8871 4.09561 10.6441 4.28658 10.4531C4.47755 10.2621 4.72061 10.1666 5.01575 10.1666C5.31089 10.1666 5.55394 10.2621 5.74491 10.4531L7.72408 12.4323Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+  transform: translate(-50%, -50%) scale(0);
   transition: transform var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
-}
-
-/* Hover */
-.ds-checkbox:hover:not(:disabled) {
-  border-color: var(--ds-checkbox-box-border-color-unchecked-focused);
 }
 
 /* Checked */
@@ -94,7 +84,7 @@
 }
 
 .ds-checkbox:checked::after {
-  transform: translate(calc(-50% + 0.5px), calc(-50% - 0.5px)) scale(1);
+  transform: translate(-50%, -50%) scale(1);
 }
 
 /* Indeterminate */
@@ -151,10 +141,6 @@
   color: var(--ds-checkbox-label-color-disabled);
 }
 
-.ds-checkbox-label:has(.ds-checkbox:disabled):hover {
-  background-color: transparent;
-}
-
 /* Error state */
 .ds-checkbox-group--error .ds-checkbox {
   border-color: var(--ds-feedback-error-border-default);
@@ -191,6 +177,11 @@
   height: var(--ds-checkbox-box-size-sm);
 }
 
+.ds-checkbox--sm::after {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.17926 9.94581L11.0959 5.02914C11.2487 4.87636 11.4432 4.79998 11.6793 4.79998C11.9154 4.79998 12.1098 4.87636 12.2626 5.02914C12.4154 5.18192 12.4918 5.37636 12.4918 5.61248C12.4918 5.84859 12.4154 6.04303 12.2626 6.19581L6.7626 11.6958C6.59593 11.8625 6.40149 11.9458 6.17926 11.9458C5.95704 11.9458 5.7626 11.8625 5.59593 11.6958L3.42926 9.52914C3.27649 9.37636 3.2001 9.18192 3.2001 8.94581C3.2001 8.7097 3.27649 8.51525 3.42926 8.36248C3.58204 8.2097 3.77649 8.13331 4.0126 8.13331C4.24871 8.13331 4.44315 8.2097 4.59593 8.36248L6.17926 9.94581Z'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.17926 9.94581L11.0959 5.02914C11.2487 4.87636 11.4432 4.79998 11.6793 4.79998C11.9154 4.79998 12.1098 4.87636 12.2626 5.02914C12.4154 5.18192 12.4918 5.37636 12.4918 5.61248C12.4918 5.84859 12.4154 6.04303 12.2626 6.19581L6.7626 11.6958C6.59593 11.8625 6.40149 11.9458 6.17926 11.9458C5.95704 11.9458 5.7626 11.8625 5.59593 11.6958L3.42926 9.52914C3.27649 9.37636 3.2001 9.18192 3.2001 8.94581C3.2001 8.7097 3.27649 8.51525 3.42926 8.36248C3.58204 8.2097 3.77649 8.13331 4.0126 8.13331C4.24871 8.13331 4.44315 8.2097 4.59593 8.36248L6.17926 9.94581Z'/%3E%3C/svg%3E");
+}
+
 .ds-checkbox--sm:indeterminate::after {
   width: 8px;
   height: 1.5px;
@@ -205,6 +196,11 @@
 .ds-checkbox--lg {
   width: var(--ds-checkbox-box-size-lg);
   height: var(--ds-checkbox-box-size-lg);
+}
+
+.ds-checkbox--lg::after {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.2689 14.9188L16.6439 7.54375C16.8731 7.31458 17.1647 7.2 17.5189 7.2C17.8731 7.2 18.1647 7.31458 18.3939 7.54375C18.6231 7.77292 18.7376 8.06458 18.7376 8.41875C18.7376 8.77292 18.6231 9.06458 18.3939 9.29375L10.1439 17.5438C9.8939 17.7938 9.60223 17.9187 9.2689 17.9187C8.93556 17.9187 8.6439 17.7938 8.3939 17.5438L5.1439 14.2938C4.91473 14.0646 4.80015 13.7729 4.80015 13.4187C4.80015 13.0646 4.91473 12.7729 5.1439 12.5437C5.37306 12.3146 5.66473 12.2 6.0189 12.2C6.37306 12.2 6.66473 12.3146 6.8939 12.5437L9.2689 14.9188Z'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.2689 14.9188L16.6439 7.54375C16.8731 7.31458 17.1647 7.2 17.5189 7.2C17.8731 7.2 18.1647 7.31458 18.3939 7.54375C18.6231 7.77292 18.7376 8.06458 18.7376 8.41875C18.7376 8.77292 18.6231 9.06458 18.3939 9.29375L10.1439 17.5438C9.8939 17.7938 9.60223 17.9187 9.2689 17.9187C8.93556 17.9187 8.6439 17.7938 8.3939 17.5438L5.1439 14.2938C4.91473 14.0646 4.80015 13.7729 4.80015 13.4187C4.80015 13.0646 4.91473 12.7729 5.1439 12.5437C5.37306 12.3146 5.66473 12.2 6.0189 12.2C6.37306 12.2 6.66473 12.3146 6.8939 12.5437L9.2689 14.9188Z'/%3E%3C/svg%3E");
 }
 
 .ds-checkbox--lg:indeterminate::after {

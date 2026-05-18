@@ -61,11 +61,6 @@
   min-height: var(--radio-target-height);
   font-size: var(--ds-body-font-size-sm);
   color: var(--ds-content-strong);
-  transition: background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
-}
-
-.ds-radio-label:hover {
-  background-color: var(--ds-overlay-subtle);
 }
 
 /* Custom radio */
@@ -95,11 +90,6 @@
   background-color: var(--ds-radio-dot-fill-selected-default);
   transform: translate(-50%, -50%) scale(0);
   transition: transform var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
-}
-
-/* Hover */
-.ds-radio:hover:not(:disabled) {
-  border-color: var(--ds-radio-control-border-color-unselected-focused);
 }
 
 /* Checked */
@@ -139,10 +129,6 @@
 .ds-radio-label:has(.ds-radio:disabled) {
   cursor: not-allowed;
   color: var(--ds-radio-label-color-disabled);
-}
-
-.ds-radio-label:has(.ds-radio:disabled):hover {
-  background-color: transparent;
 }
 
 /* Error state */
