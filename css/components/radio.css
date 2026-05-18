@@ -129,6 +129,7 @@
 .ds-radio:checked:disabled {
   background-color: var(--ds-radio-control-fill-selected-disabled);
   border-color: var(--ds-radio-control-border-color-selected-disabled);
+  border-width: 0;
 }
 
 .ds-radio:checked:disabled::after {

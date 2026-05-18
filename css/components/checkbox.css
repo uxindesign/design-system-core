@@ -89,7 +89,7 @@
 /* Checked */
 .ds-checkbox:checked {
   background-color: var(--ds-checkbox-box-fill-checked-default);
-  border-color: var(--ds-checkbox-box-border-color-checked-default);
+  border-width: 0;
 }
 
 .ds-checkbox:checked::after {
@@ -99,7 +99,7 @@
 /* Indeterminate */
 .ds-checkbox:indeterminate {
   background-color: var(--ds-checkbox-box-fill-indeterminate-default);
-  border-color: var(--ds-checkbox-box-border-color-indeterminate-default);
+  border-width: 0;
 }
 
 .ds-checkbox:indeterminate::after {
@@ -128,7 +128,7 @@
 
 .ds-checkbox:checked:disabled {
   background-color: var(--ds-checkbox-box-fill-checked-disabled);
-  border-color: var(--ds-checkbox-box-border-color-checked-disabled);
+  border-width: 0;
 }
 
 .ds-checkbox:checked:disabled::after {
@@ -137,7 +137,7 @@
 
 .ds-checkbox:indeterminate:disabled {
   background-color: var(--ds-checkbox-box-fill-indeterminate-disabled);
-  border-color: var(--ds-checkbox-box-border-color-indeterminate-disabled);
+  border-width: 0;
 }
 
 .ds-checkbox:indeterminate:disabled::after {
