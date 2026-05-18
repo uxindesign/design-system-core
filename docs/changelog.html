@@ -72,6 +72,8 @@
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
 <h3>Corrigido</h3>
 <ul>
+<li><p><strong>Checkbox, Radio e Toggle completos aplicados aos Component tokens.</strong> Espelhadas no repo as 120 variables vivas de <code>checkbox/...</code>, <code>radio/...</code> e <code>toggle/...</code> no Figma: cores de label/description/helper, fills/borders por estado, mark/dot/thumb, track, focus ring, content gap e target gap/radius. CSS passa a consumir <code>--ds-checkbox-*</code>, <code>--ds-radio-*</code> e <code>--ds-toggle-*</code> para esses contratos; registry, API, docs, LLMs e snapshot Figma↔JSON foram atualizados.</p>
+</li>
 <li><p><strong>Frames externos de ícone espelhados do Figma.</strong> Adicionados <code>input/icon-frame/padding-x/default</code>, <code>select/icon-frame/padding-x/default</code>, <code>select/chevron-frame/padding-x/default</code> e <code>form-field/error/icon-frame/padding-x/default</code> aos Component tokens; CSS passa a representar o wrapper externo com padding horizontal sem confundir esse respiro com o tamanho interno do <code>Icon Placeholder</code>.</p>
 </li>
 <li><p><strong>AGENTS.md reforça regras de edição de componentes no Figma.</strong> Adicionado checklist obrigatório para preservar propriedades públicas do component set: textos editáveis via painel, ordem size menor→maior, pares booleano→campo dependente, uso de <code>Icon Placeholder</code>, validação de <code>componentPropertyReferences</code> e regra específica para Select não duplicar chevron/right icon.</p>

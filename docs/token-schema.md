@@ -20,7 +20,7 @@
 |--------|--------|----------|
 | Foundation/Core | **266** | 9 |
 | Semantic/System | **174 × 2 modos** | light.json + dark.json |
-| Component | **560** | 19 |
+| Component | **651** | 19 |
 
 ## Foundation (266 tokens)
 
@@ -62,7 +62,7 @@ semantic.typography.*
 semantic.z.*
 ```
 
-## Component (560 tokens)
+## Component (651 tokens)
 
 | Arquivo | Tokens |
 |---------|--------|
@@ -72,18 +72,18 @@ semantic.z.*
 | `breadcrumb.json` | 11 |
 | `button.json` | 104 |
 | `card.json` | 17 |
-| `checkbox.json` | 13 |
+| `checkbox.json` | 42 |
 | `divider.json` | 3 |
 | `form-field.json` | 24 |
 | `input.json` | 83 |
 | `modal.json` | 53 |
-| `radio.json` | 6 |
+| `radio.json` | 37 |
 | `select.json` | 94 |
 | `skeleton.json` | 6 |
 | `spinner.json` | 5 |
 | `tabs.json` | 12 |
 | `textarea.json` | 72 |
-| `toggle.json` | 10 |
+| `toggle.json` | 41 |
 | `tooltip.json` | 8 |
 
 ## Regras invioláveis

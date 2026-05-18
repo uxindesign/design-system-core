@@ -206,6 +206,7 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 ## [Não publicado]
 
 ### Corrigido
+- **Checkbox, Radio e Toggle completos aplicados aos Component tokens.** Espelhadas no repo as 120 variables vivas de `checkbox/...`, `radio/...` e `toggle/...` no Figma: cores de label/description/helper, fills/borders por estado, mark/dot/thumb, track, focus ring, content gap e target gap/radius. CSS passa a consumir `--ds-checkbox-*`, `--ds-radio-*` e `--ds-toggle-*` para esses contratos; registry, API, docs, LLMs e snapshot Figma↔JSON foram atualizados.
 - **Frames externos de ícone espelhados do Figma.** Adicionados `input/icon-frame/padding-x/default`, `select/icon-frame/padding-x/default`, `select/chevron-frame/padding-x/default` e `form-field/error/icon-frame/padding-x/default` aos Component tokens; CSS passa a representar o wrapper externo com padding horizontal sem confundir esse respiro com o tamanho interno do `Icon Placeholder`.
 - **AGENTS.md reforça regras de edição de componentes no Figma.** Adicionado checklist obrigatório para preservar propriedades públicas do component set: textos editáveis via painel, ordem size menor→maior, pares booleano→campo dependente, uso de `Icon Placeholder`, validação de `componentPropertyReferences` e regra específica para Select não duplicar chevron/right icon.
 - **Fields single-line com respiro interno e adornments proporcionais.** Input Text e Select voltam a usar `text-frame/padding-x=4px` além do padding do Field, mantendo origem visual de texto em `12/12/16px`; ícones e chevrons passam a usar `frame-size=glyph-size` em `16/20/24px` e `line-height: 100%`, alinhando Figma e CSS.
@@ -1513,7 +1514,7 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 | Foundation | 266 | 🟢 |
 | Semantic (light) | 174 | 🟢 |
 | Semantic (dark) | 174 | 🟢 |
-| Component | 560 | 🟢 |
+| Component | 651 | 🟢 |
 
 ## Pipeline
 
@@ -16492,7 +16493,7 @@ Seção expandida com contexto, decisão e locais de uso.
 |--------|--------|----------|
 | Foundation/Core | **266** | 9 |
 | Semantic/System | **174 × 2 modos** | light.json + dark.json |
-| Component | **560** | 19 |
+| Component | **651** | 19 |
 
 ## Foundation (266 tokens)
 
@@ -16534,7 +16535,7 @@ semantic.typography.*
 semantic.z.*
 ```
 
-## Component (560 tokens)
+## Component (651 tokens)
 
 | Arquivo | Tokens |
 |---------|--------|
@@ -16544,18 +16545,18 @@ semantic.z.*
 | `breadcrumb.json` | 11 |
 | `button.json` | 104 |
 | `card.json` | 17 |
-| `checkbox.json` | 13 |
+| `checkbox.json` | 42 |
 | `divider.json` | 3 |
 | `form-field.json` | 24 |
 | `input.json` | 83 |
 | `modal.json` | 53 |
-| `radio.json` | 6 |
+| `radio.json` | 37 |
 | `select.json` | 94 |
 | `skeleton.json` | 6 |
 | `spinner.json` | 5 |
 | `tabs.json` | 12 |
 | `textarea.json` | 72 |
-| `toggle.json` | 10 |
+| `toggle.json` | 41 |
 | `tooltip.json` | 8 |
 
 ## Regras invioláveis

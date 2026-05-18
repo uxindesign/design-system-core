@@ -15,15 +15,16 @@
 
 .ds-toggle-label {
   --toggle-target-height: var(--ds-toggle-target-height-md);
+  --toggle-thumb-size: var(--ds-toggle-thumb-size-md);
 
   display: inline-flex;
   align-items: flex-start;
-  gap: var(--ds-space-sm);
+  gap: var(--ds-toggle-target-gap-default);
   cursor: pointer;
   padding: var(--ds-space-xs);
   min-height: var(--toggle-target-height);
-  border-radius: var(--ds-radius-sm);
-  color: var(--ds-content-strong);
+  border-radius: var(--ds-toggle-target-radius-default);
+  color: var(--ds-toggle-label-color-default);
   transition: background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
   user-select: none;
 }
@@ -37,9 +38,9 @@
   appearance: none;
   -webkit-appearance: none;
   position: relative;
-  background-color: var(--ds-surface-default);
-  border: var(--ds-border-width-default) solid var(--ds-border-control-default);
-  border-radius: var(--ds-radius-full);
+  background-color: var(--ds-toggle-track-fill-off-default);
+  border: var(--ds-toggle-track-border-width-default) solid var(--ds-toggle-track-border-color-off-default);
+  border-radius: var(--ds-toggle-track-radius-default);
   cursor: pointer;
   flex-shrink: 0;
   transition: background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
@@ -49,9 +50,6 @@
   --toggle-width: var(--ds-toggle-track-width-md);
   --thumb-gap: var(--ds-toggle-thumb-inset-default);
   
-  /* Thumb size calculado: Altura total - (2 * gap) - (2 * border) */
-  --thumb-size: calc(var(--toggle-height) - (var(--thumb-gap) * 2) - (var(--ds-border-width-default) * 2));
-
   width: var(--toggle-width);
   height: var(--toggle-height);
 }
@@ -62,10 +60,10 @@
   position: absolute;
   top: var(--thumb-gap);
   left: var(--thumb-gap);
-  width: var(--thumb-size);
-  height: var(--thumb-size);
-  border-radius: var(--ds-radius-full);
-  background-color: var(--ds-content-default);
+  width: var(--toggle-thumb-size);
+  height: var(--toggle-thumb-size);
+  border-radius: var(--ds-toggle-thumb-radius-default);
+  background-color: var(--ds-toggle-thumb-fill-off-default);
   box-shadow: var(--ds-shadow-card);
   transition: transform var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
               background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
@@ -73,41 +71,50 @@
 
 /* Hover State */
 .ds-toggle:hover:not(:disabled) {
-  border-color: var(--ds-primary-background-default);
+  border-color: var(--ds-toggle-track-border-color-off-focused);
 }
 
 /* Checked (On) State */
 .ds-toggle:checked {
-  background-color: var(--ds-primary-background-default);
-  border-color: var(--ds-primary-background-default);
+  background-color: var(--ds-toggle-track-fill-on-default);
+  border-color: var(--ds-toggle-track-fill-on-default);
 }
 
 .ds-toggle:checked::after {
-  background-color: var(--ds-primary-content-default);
+  background-color: var(--ds-toggle-thumb-fill-on-default);
   /* Cálculo dinâmico e simétrico com largura corrigida */
-  transform: translateX(calc(var(--toggle-width) - var(--thumb-size) - (var(--thumb-gap) * 2) - (var(--ds-border-width-default) * 2)));
+  transform: translateX(calc(var(--toggle-width) - var(--toggle-thumb-size) - (var(--thumb-gap) * 2) - (var(--ds-toggle-track-border-width-default) * 2)));
 }
 
 /* Focus State */
 .ds-toggle:focus-visible {
-  outline: var(--ds-border-width-focus) solid var(--ds-border-focus);
-  outline-offset: var(--ds-border-width-focus);
+  outline: var(--ds-toggle-focus-ring-stroke-width-default) solid var(--ds-toggle-focus-ring-color-default);
+  outline-offset: var(--ds-toggle-focus-ring-stroke-width-default);
 }
 
 /* Disabled State */
 .ds-toggle:disabled {
-  background-color: var(--ds-background-disabled);
-  border-color: var(--ds-border-control-disabled);
+  background-color: var(--ds-toggle-track-fill-off-disabled);
+  border-color: var(--ds-toggle-track-border-color-off-disabled);
   cursor: not-allowed;
 }
 
 .ds-toggle:disabled::after {
-  background-color: var(--ds-content-disabled);
+  background-color: var(--ds-toggle-thumb-fill-off-disabled);
+}
+
+.ds-toggle:checked:disabled {
+  background-color: var(--ds-toggle-track-fill-on-disabled);
+  border-color: var(--ds-toggle-track-fill-on-disabled);
+}
+
+.ds-toggle:checked:disabled::after {
+  background-color: var(--ds-toggle-thumb-fill-on-disabled);
 }
 
 .ds-toggle-label:has(.ds-toggle:disabled) {
   cursor: not-allowed;
-  opacity: var(--ds-opacity-disabled);
+  color: var(--ds-toggle-label-color-disabled);
 }
 
 /* ---------------------------------------------------------
@@ -117,6 +124,7 @@
 /* Small (28x16px) */
 .ds-toggle-label:has(.ds-toggle--sm) {
   --toggle-target-height: var(--ds-toggle-target-height-sm);
+  --toggle-thumb-size: var(--ds-toggle-thumb-size-sm);
 }
 
 .ds-toggle--sm {
@@ -127,6 +135,7 @@
 /* Large (56x32px) */
 .ds-toggle-label:has(.ds-toggle--lg) {
   --toggle-target-height: var(--ds-toggle-target-height-lg);
+  --toggle-thumb-size: var(--ds-toggle-thumb-size-lg);
 }
 
 .ds-toggle--lg {
@@ -141,7 +150,7 @@
 .ds-toggle__content {
   display: flex;
   flex-direction: column;
-  gap: var(--ds-space-xs);
+  gap: var(--ds-toggle-content-gap-default);
   min-width: 0;
 }
 
@@ -150,7 +159,7 @@
   font-size: var(--ds-body-font-size-sm);
   font-weight: var(--ds-body-font-weight-bold);
   line-height: var(--ds-body-line-height-sm);
-  color: var(--ds-content-strong);
+  color: var(--ds-toggle-label-color-default);
 }
 
 /* Description (body/sm: 14px regular) */
@@ -158,7 +167,7 @@
   font-size: var(--ds-body-font-size-sm);
   font-weight: var(--ds-body-font-weight-regular);
   line-height: var(--ds-body-line-height-sm);
-  color: var(--ds-content-strong);
+  color: var(--ds-toggle-description-color-default);
   white-space: pre-wrap;
 }
 
@@ -166,7 +175,11 @@
 .ds-toggle__helper {
   font-size: var(--ds-body-font-size-xs);
   line-height: var(--ds-body-line-height-xs);
-  color: var(--ds-content-default);
+  color: var(--ds-toggle-helper-text-color-default);
+}
+
+.ds-toggle-label:has(.ds-toggle:disabled) .ds-toggle__label {
+  color: var(--ds-toggle-label-color-disabled);
 }
 
 /* ---------------------------------------------------------
