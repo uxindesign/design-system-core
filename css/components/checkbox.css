@@ -44,11 +44,6 @@
   min-height: var(--checkbox-target-height);
   font-size: var(--ds-body-font-size-sm);
   color: var(--ds-checkbox-label-color-default);
-  transition: background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
-}
-
-.ds-checkbox-label:hover {
-  background-color: var(--ds-overlay-subtle);
 }
 
 /* Custom checkbox */
@@ -80,11 +75,6 @@
   mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.72408 12.4323L13.8699 6.28643C14.0609 6.09546 14.3039 5.99997 14.5991 5.99997C14.8942 5.99997 15.1373 6.09546 15.3282 6.28643C15.5192 6.47741 15.6147 6.72046 15.6147 7.0156C15.6147 7.31074 15.5192 7.55379 15.3282 7.74477L8.45325 14.6198C8.24491 14.8281 8.00186 14.9323 7.72408 14.9323C7.4463 14.9323 7.20325 14.8281 6.99491 14.6198L4.28658 11.9114C4.09561 11.7205 4.00012 11.4774 4.00012 11.1823C4.00012 10.8871 4.09561 10.6441 4.28658 10.4531C4.47755 10.2621 4.72061 10.1666 5.01575 10.1666C5.31089 10.1666 5.55394 10.2621 5.74491 10.4531L7.72408 12.4323Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
   transform: translate(-50%, -50%) scale(0);
   transition: transform var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
-}
-
-/* Hover */
-.ds-checkbox:hover:not(:disabled) {
-  border-color: var(--ds-checkbox-box-border-color-unchecked-focused);
 }
 
 /* Checked */
@@ -149,10 +139,6 @@
 .ds-checkbox-label:has(.ds-checkbox:disabled) {
   cursor: not-allowed;
   color: var(--ds-checkbox-label-color-disabled);
-}
-
-.ds-checkbox-label:has(.ds-checkbox:disabled):hover {
-  background-color: transparent;
 }
 
 /* Error state */

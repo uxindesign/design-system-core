@@ -25,12 +25,7 @@
   min-height: var(--toggle-target-height);
   border-radius: var(--ds-toggle-target-radius-default);
   color: var(--ds-toggle-label-color-default);
-  transition: background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
   user-select: none;
-}
-
-.ds-toggle-label:hover:not(:has(.ds-toggle:disabled)) {
-  background-color: var(--ds-overlay-subtle);
 }
 
 /* Track — Hidden native checkbox styled */
@@ -68,11 +63,6 @@
   box-shadow: var(--ds-shadow-card);
   transition: transform var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
               background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
-}
-
-/* Hover State */
-.ds-toggle:hover:not(:disabled) {
-  border-color: var(--ds-toggle-track-border-color-off-focused);
 }
 
 /* Checked (On) State */
