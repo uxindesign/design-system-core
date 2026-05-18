@@ -86,11 +86,13 @@
 }
 
 /* Error */
-.ds-textarea--error {
+.ds-textarea--error,
+.ds-field--error .ds-textarea {
   border-color: var(--ds-textarea-border-color-error);
 }
 
-.ds-textarea--error:focus-within {
+.ds-textarea--error:focus-within,
+.ds-field--error .ds-textarea:focus-within {
   border-color: var(--ds-textarea-border-color-error);
   outline-color: var(--ds-textarea-focus-ring-color-error);
 }

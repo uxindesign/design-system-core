@@ -71,13 +71,14 @@
 .ds-checkbox::after {
   content: '';
   position: absolute;
-  top: 2px;
-  left: 6px;
-  width: 5px;
-  height: 10px;
-  border: solid var(--ds-checkbox-mark-fill-checked-default);
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg) scale(0);
+  top: 50%;
+  left: 50%;
+  width: calc(var(--checkbox-box-size) * 0.7);
+  height: calc(var(--checkbox-box-size) * 0.7);
+  background-color: var(--ds-checkbox-mark-fill-checked-default);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.2 11.2 2.8 7.8 1.4 9.2l4.8 4.8L14.6 5.6 13.2 4.2z'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.2 11.2 2.8 7.8 1.4 9.2l4.8 4.8L14.6 5.6 13.2 4.2z'/%3E%3C/svg%3E") center / contain no-repeat;
+  transform: translate(-50%, -50%) scale(0);
   transition: transform var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
 }
 
@@ -93,7 +94,7 @@
 }
 
 .ds-checkbox:checked::after {
-  transform: rotate(45deg) scale(1);
+  transform: translate(-50%, -50%) scale(1);
 }
 
 /* Indeterminate */
@@ -107,8 +108,9 @@
   left: 50%;
   width: 10px;
   height: 2px;
-  border: none;
   background-color: var(--ds-checkbox-mark-fill-indeterminate-default);
+  -webkit-mask: none;
+  mask: none;
   transform: translate(-50%, -50%) scale(1);
   border-radius: 1px;
 }
@@ -132,7 +134,7 @@
 }
 
 .ds-checkbox:checked:disabled::after {
-  border-color: var(--ds-checkbox-mark-fill-checked-disabled);
+  background-color: var(--ds-checkbox-mark-fill-checked-disabled);
 }
 
 .ds-checkbox:indeterminate:disabled {
@@ -189,14 +191,6 @@
   height: var(--ds-checkbox-box-size-sm);
 }
 
-.ds-checkbox--sm::after {
-  top: 1px;
-  left: 4.5px;
-  width: 4px;
-  height: 8px;
-  border-width: 0 1.5px 1.5px 0;
-}
-
 .ds-checkbox--sm:indeterminate::after {
   width: 8px;
   height: 1.5px;
@@ -211,14 +205,6 @@
 .ds-checkbox--lg {
   width: var(--ds-checkbox-box-size-lg);
   height: var(--ds-checkbox-box-size-lg);
-}
-
-.ds-checkbox--lg::after {
-  top: 3px;
-  left: 7.5px;
-  width: 6px;
-  height: 12px;
-  border-width: 0 2.5px 2.5px 0;
 }
 
 .ds-checkbox--lg:indeterminate::after {
