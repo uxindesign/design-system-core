@@ -112,7 +112,75 @@ Análogo a categorias CSS-only de tokens, alguns **componentes** existem só no 
 6. **Atualize doc HTML do componente** em `docs/<componente>.html` se a mudança altera anatomia/uso.
 7. **CHANGELOG entry** em `[Não publicado]` descrevendo o que mudou e por quê.
 
-### 4.3 Sync Figma → JSON (após mudança visual feita no Figma)
+### 4.3 Editar componentes no Figma
+
+Editar um component set no Figma exige preservar a API pública do componente, não só o visual. Antes e depois de qualquer mudança em variants, sublayers, icons, texts ou bindings, execute uma auditoria do component set.
+
+#### Antes de escrever
+
+1. Dump completo do component set alvo:
+   - `componentPropertyDefinitions` com ordem atual.
+   - `componentPropertyReferences` dos sublayers editáveis.
+   - Ordem dos variants e dimensões por size.
+   - Ordem dos sublayers dentro da anatomia afetada (`Field`, `Text Frame`, `Icon Left`, `Chevron`, `Error Message`, etc.).
+2. Não extrapole de um variant para todos sem confirmar os outros variants. Se o componente tem `sm/md/lg` e estados, leia pelo menos um variant por size e todos os states afetados.
+3. Antes de substituir um layer, registre quais propriedades públicas ele alimenta. Ao recriar o layer, religue as mesmas referências de componente.
+
+#### Regras de properties no painel do Figma
+
+1. Todo texto visível ou configurável de componente deve ter propriedade `TEXT` no painel e o node deve referenciar essa propriedade em `componentPropertyReferences.characters`. Isso inclui, sem limitar a: label, placeholder, value/content preenchido, helper text, error message, title, description, badge label, avatar initials, tab label, breadcrumb item, tooltip content e qualquer outro texto exposto por variant ou slot do componente.
+2. Placeholder e conteúdo preenchido são propriedades diferentes quando o componente tem os dois estados:
+   - Input Text e Select devem expor texto de placeholder e texto de value/content preenchido quando houver state `Filled`.
+   - Textarea deve expor placeholder e content/value separadamente; não tratar os dois como a mesma propriedade.
+3. Mensagens de erro devem expor o texto da mensagem como propriedade editável no painel. O frame `Error Message` não pode ter apenas texto fixo no canvas.
+4. Quando um booleano habilita outro campo, o campo dependente deve vir imediatamente abaixo do booleano no painel:
+   - `Show Left Icon` → `Left Icon`
+   - `Show Right Icon` → `Right Icon` ou `Chevron Icon`
+   - `Show Label` → `Label`
+   - `Show Helper Text` → `Helper Text`
+5. Não exponha duas propriedades para o mesmo conceito. No Select, o chevron é o ícone da direita; não manter `Chevron Icon` e `Right Icon` como controles concorrentes para o mesmo sublayer.
+6. Booleanos de visibilidade e instance swaps precisam estar ligados ao layer correspondente:
+   - `visible` aponta para o booleano.
+   - `mainComponent` aponta para o instance swap.
+   - Validar isso em todos os variants, não só no primeiro.
+7. A ordem visual das propriedades deve seguir a ordem de uso do componente: label/required/helper, conteúdo principal, adornments relacionados, estados auxiliares. Pares booleano→campo dependente ficam juntos mesmo que isso quebre uma ordenação alfabética.
+
+#### Regras de ordenação
+
+1. Qualquer ordenação de tamanho deve começar pelo menor e crescer para o maior: `Small`, `Medium`, `Large` ou `sm`, `md`, `lg`.
+2. Essa regra vale em todos os lugares:
+   - ordem visual dos variants no canvas, de cima para baixo;
+   - ordem das opções de variant no component set;
+   - ordem das variables dentro de cada grupo;
+   - ordem dos tokens no JSON e nas docs geradas quando a ordem for controlável;
+   - ordem das tabelas e exemplos de documentação.
+3. Variables de size devem manter ordem menor→maior dentro do grupo: `sm`, `md`, `lg`.
+4. A lista de componentes dentro da collection `Component` deve permanecer em ordem alfabética; dentro de cada componente, priorize ordem semântica quando ela melhorar leitura e manutenção, respeitando sempre a ordem menor→maior para sizes.
+
+#### Regras para ícones
+
+1. Ícones usados por componentes devem ser instâncias de `Icon Placeholder`. Não deixar glyph de fonte solto em componente vivo.
+2. O único lugar onde fonte de ícone pode existir é dentro do próprio `Icon Placeholder` ou dentro de componente utilitário de ícone que encapsule esse placeholder.
+3. `frame-size` e `glyph-size` devem ser explícitos e, quando a decisão do componente exigir equivalência, devem usar o mesmo valor.
+4. Glyph de ícone usa `line-height: 100%`.
+5. Ao trocar um glyph solto por `Icon Placeholder`, preserve:
+   - variável de cor;
+   - variável de tamanho;
+   - instance swap;
+   - booleano de visibilidade;
+   - ordem do sublayer na anatomia.
+
+#### Validação obrigatória após editar Figma
+
+1. Reexecutar dump do component set e comparar com o dump inicial.
+2. Verificar que todos os texts editáveis continuam com `componentPropertyReferences.characters`.
+3. Verificar que todos os booleans e instance swaps esperados estão referenciados pelos sublayers em todos os variants.
+4. Verificar que não há glyph de fonte solto fora de `Icon Placeholder` em componentes vivos.
+5. Verificar screenshot do component set quando a mudança mexer em layout, icon, spacing ou texto.
+6. Se variables Figma foram alteradas, regenerar `.figma-snapshot.json` antes de afirmar que Figma↔JSON está em dia.
+7. Se a mudança impacta repo, repetir o fluxo Figma → JSON → CSS gerado → docs/API/LLM → `verify:tokens` → testes relevantes.
+
+### 4.4 Sync Figma → JSON (após mudança visual feita no Figma)
 
 Detalhes em `docs/process-figma-sync.md`. Resumo:
 
@@ -129,7 +197,7 @@ npm run verify:tokens
 
 CSS_ONLY e BY_DESIGN são informativos (não drift). VALUE_DRIFT/NEW_IN_FIGMA/MISSING_IN_FIGMA exigem ação.
 
-### 4.4 Criar ou editar uma ADR
+### 4.5 Criar ou editar uma ADR
 
 1. Próximo número sequencial (ver `ls docs/decisions/`).
 2. Nome em snake-kebab: `ADR-NNN-titulo-em-pt-br.md`.

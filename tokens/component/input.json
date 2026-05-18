@@ -134,7 +134,7 @@
       "gap": {
         "sm": {
           "$type": "dimension",
-          "$value": "0",
+          "$value": "{semantic.space.xs}",
           "$description": "Gap interno do Field Input Text sm."
         },
         "md": {
@@ -230,12 +230,12 @@
         "frame-size": {
           "sm": {
             "$type": "dimension",
-            "$value": "{semantic.size.md}",
+            "$value": "{semantic.size.xs}",
             "$description": "Tamanho do frame de ícone Input Text sm."
           },
           "md": {
             "$type": "dimension",
-            "$value": "{semantic.size.md}",
+            "$value": "{semantic.size.sm}",
             "$description": "Tamanho do frame de ícone Input Text md."
           },
           "lg": {
@@ -259,6 +259,15 @@
             "$type": "dimension",
             "$value": "{semantic.size.md}",
             "$description": "Tamanho do glyph de ícone Input Text lg."
+          }
+        }
+      },
+      "icon-frame": {
+        "padding-x": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.space.xs}",
+            "$description": "Padding horizontal do frame externo de ícone Input Text."
           }
         }
       },
@@ -353,12 +362,12 @@
         },
         "md": {
           "$type": "dimension",
-          "$value": "{semantic.space.md}",
+          "$value": "{semantic.space.sm}",
           "$description": "Padding horizontal do Field Input Text md."
         },
         "lg": {
           "$type": "dimension",
-          "$value": "{semantic.space.lg}",
+          "$value": "{semantic.space.md}",
           "$description": "Padding horizontal do Field Input Text lg."
         }
       },

@@ -6,7 +6,6 @@
   --ds-button-min-width-sm: 80px; /** Largura mínima específica do Button sm. Component-specific; não há Semantic reutilizável. */
   --ds-button-min-width-md: 88px; /** Largura mínima específica do Button md. Component-specific; não há Semantic reutilizável. */
   --ds-button-min-width-lg: 102px; /** Largura mínima específica do Button lg. Component-specific; não há Semantic reutilizável. */
-  --ds-input-gap-sm: 0; /** Gap interno do Field Input Text sm. */
   --ds-skeleton-text-height-default: var(--ds-dimension-12); /** Altura do Skeleton Text. */
   --ds-skeleton-rectangle-height-default: var(--ds-dimension-120); /** Altura default do Skeleton Rectangle. */
   --ds-textarea-field-min-height-sm: var(--ds-dimension-80); /** Altura mínima do field Textarea sm. */
@@ -222,6 +221,7 @@
   --ds-form-field-error-icon-color-default: var(--ds-feedback-error-content-default); /** Cor do ícone da mensagem de erro Form Field. */
   --ds-form-field-error-icon-frame-size-default: var(--ds-size-xs); /** Frame-size do ícone da mensagem de erro Form Field. */
   --ds-form-field-error-icon-glyph-size-default: var(--ds-size-xs); /** Tamanho do glyph do ícone da mensagem de erro Form Field. */
+  --ds-form-field-error-icon-frame-padding-x-default: var(--ds-space-2xs); /** Padding horizontal do frame externo do ícone da mensagem de erro Form Field. */
   --ds-input-bg-default: var(--ds-surface-default); /** Bg do Field Input Text default. */
   --ds-input-bg-disabled: var(--ds-background-disabled); /** Bg do Field Input Text disabled. */
   --ds-input-bg-error: var(--ds-surface-default); /** Bg do Field Input Text error. */
@@ -244,6 +244,7 @@
   --ds-input-focus-ring-offset-default: var(--ds-border-width-focus); /** Offset CSS do focus ring Input Text. */
   --ds-input-focus-ring-radius-default: var(--ds-radius-lg); /** Radius do focus ring Input Text. */
   --ds-input-focus-ring-stroke-width-default: var(--ds-border-width-focus); /** Stroke width do focus ring Input Text. */
+  --ds-input-gap-sm: var(--ds-space-xs); /** Gap interno do Field Input Text sm. */
   --ds-input-gap-md: var(--ds-space-xs); /** Gap interno do Field Input Text md. */
   --ds-input-gap-lg: var(--ds-space-sm); /** Gap interno do Field Input Text lg. */
   --ds-input-height-sm: var(--ds-size-lg); /** Altura da superfície visual Input Text sm. */
@@ -258,12 +259,13 @@
   --ds-input-helper-line-height-default: var(--ds-body-line-height-xs); /** Line-height do helper text Input Text. */
   --ds-input-icon-color-default: var(--ds-content-subtle); /** Cor do ícone Input Text. */
   --ds-input-icon-color-disabled: var(--ds-content-disabled); /** Cor do ícone Input Text disabled. */
-  --ds-input-icon-frame-size-sm: var(--ds-size-md); /** Tamanho do frame de ícone Input Text sm. */
-  --ds-input-icon-frame-size-md: var(--ds-size-md); /** Tamanho do frame de ícone Input Text md. */
+  --ds-input-icon-frame-size-sm: var(--ds-size-xs); /** Tamanho do frame de ícone Input Text sm. */
+  --ds-input-icon-frame-size-md: var(--ds-size-sm); /** Tamanho do frame de ícone Input Text md. */
   --ds-input-icon-frame-size-lg: var(--ds-size-md); /** Tamanho do frame de ícone Input Text lg. */
   --ds-input-icon-glyph-size-sm: var(--ds-size-xs); /** Tamanho do glyph de ícone Input Text sm. */
   --ds-input-icon-glyph-size-md: var(--ds-size-sm); /** Tamanho do glyph de ícone Input Text md. */
   --ds-input-icon-glyph-size-lg: var(--ds-size-md); /** Tamanho do glyph de ícone Input Text lg. */
+  --ds-input-icon-frame-padding-x-default: var(--ds-space-xs); /** Padding horizontal do frame externo de ícone Input Text. */
   --ds-input-label-color-default: var(--ds-content-strong); /** Cor do label Input Text. */
   --ds-input-label-color-disabled: var(--ds-content-disabled); /** Cor do label Input Text disabled. */
   --ds-input-label-color-readonly: var(--ds-content-default); /** Cor do label Input Text readonly. */
@@ -278,8 +280,8 @@
   --ds-input-label-line-height-lg: var(--ds-body-line-height-sm); /** Line-height do label Input Text lg. */
   --ds-input-label-row-gap-default: var(--ds-space-2xs); /** Gap entre label e required Input Text. */
   --ds-input-padding-x-sm: var(--ds-space-sm); /** Padding horizontal do Field Input Text sm. */
-  --ds-input-padding-x-md: var(--ds-space-md); /** Padding horizontal do Field Input Text md. */
-  --ds-input-padding-x-lg: var(--ds-space-lg); /** Padding horizontal do Field Input Text lg. */
+  --ds-input-padding-x-md: var(--ds-space-sm); /** Padding horizontal do Field Input Text md. */
+  --ds-input-padding-x-lg: var(--ds-space-md); /** Padding horizontal do Field Input Text lg. */
   --ds-input-padding-y-sm: var(--ds-space-sm); /** Padding vertical do Field Input Text sm. */
   --ds-input-padding-y-md: var(--ds-space-control-padding-10); /** Padding vertical do Field Input Text md. */
   --ds-input-padding-y-lg: var(--ds-space-md); /** Padding vertical do Field Input Text lg. */
@@ -378,12 +380,13 @@
   --ds-select-border-width-default: var(--ds-border-width-default); /** Border width do Field Select. */
   --ds-select-chevron-color-default: var(--ds-content-default); /** Cor do chevron Select. */
   --ds-select-chevron-color-disabled: var(--ds-content-disabled); /** Cor do chevron Select disabled. */
-  --ds-select-chevron-frame-size-sm: var(--ds-size-md); /** Tamanho do frame do chevron Select sm. */
-  --ds-select-chevron-frame-size-md: var(--ds-size-md); /** Tamanho do frame do chevron Select md. */
+  --ds-select-chevron-frame-size-sm: var(--ds-size-xs); /** Tamanho do frame do chevron Select sm. */
+  --ds-select-chevron-frame-size-md: var(--ds-size-sm); /** Tamanho do frame do chevron Select md. */
   --ds-select-chevron-frame-size-lg: var(--ds-size-md); /** Tamanho do frame do chevron Select lg. */
-  --ds-select-chevron-glyph-size-sm: var(--ds-size-sm); /** Tamanho do glyph do chevron Select sm. */
-  --ds-select-chevron-glyph-size-md: var(--ds-size-md); /** Tamanho do glyph do chevron Select md. */
+  --ds-select-chevron-glyph-size-sm: var(--ds-size-xs); /** Tamanho do glyph do chevron Select sm. */
+  --ds-select-chevron-glyph-size-md: var(--ds-size-sm); /** Tamanho do glyph do chevron Select md. */
   --ds-select-chevron-glyph-size-lg: var(--ds-size-md); /** Tamanho do glyph do chevron Select lg. */
+  --ds-select-chevron-frame-padding-x-default: var(--ds-space-xs); /** Padding horizontal do frame externo do chevron Select. */
   --ds-select-content-color-default: var(--ds-content-strong); /** Cor de conteúdo preenchido do Select. */
   --ds-select-content-color-disabled: var(--ds-content-disabled); /** Cor de conteúdo disabled do Select. */
   --ds-select-content-color-readonly: var(--ds-content-default); /** Cor de conteúdo readonly do Select. */
@@ -392,8 +395,8 @@
   --ds-select-focus-ring-offset-default: var(--ds-border-width-focus); /** Offset CSS do focus ring Select. */
   --ds-select-focus-ring-radius-default: var(--ds-radius-lg); /** Radius do focus ring Select. */
   --ds-select-focus-ring-stroke-width-default: var(--ds-border-width-focus); /** Stroke width do focus ring Select. */
-  --ds-select-gap-sm: var(--ds-space-sm); /** Gap interno do Field Select sm. */
-  --ds-select-gap-md: var(--ds-space-sm); /** Gap interno do Field Select md. */
+  --ds-select-gap-sm: var(--ds-space-xs); /** Gap interno do Field Select sm. */
+  --ds-select-gap-md: var(--ds-space-xs); /** Gap interno do Field Select md. */
   --ds-select-gap-lg: var(--ds-space-sm); /** Gap interno do Field Select lg. */
   --ds-select-height-sm: var(--ds-size-lg); /** Altura da superfície visual Select sm. */
   --ds-select-height-md: var(--ds-size-xl); /** Altura da superfície visual Select md. */
@@ -411,12 +414,13 @@
   --ds-select-helper-line-height-lg: var(--ds-body-line-height-sm); /** Line-height do helper text Select lg. */
   --ds-select-icon-color-default: var(--ds-content-default); /** Cor do ícone Select. */
   --ds-select-icon-color-disabled: var(--ds-content-disabled); /** Cor do ícone Select disabled. */
-  --ds-select-icon-frame-size-sm: var(--ds-size-sm); /** Tamanho do frame de ícone Select sm. */
-  --ds-select-icon-frame-size-md: var(--ds-size-md); /** Tamanho do frame de ícone Select md. */
+  --ds-select-icon-frame-size-sm: var(--ds-size-xs); /** Tamanho do frame de ícone Select sm. */
+  --ds-select-icon-frame-size-md: var(--ds-size-sm); /** Tamanho do frame de ícone Select md. */
   --ds-select-icon-frame-size-lg: var(--ds-size-md); /** Tamanho do frame de ícone Select lg. */
-  --ds-select-icon-glyph-size-sm: var(--ds-size-sm); /** Tamanho do glyph de ícone Select sm. */
-  --ds-select-icon-glyph-size-md: var(--ds-size-md); /** Tamanho do glyph de ícone Select md. */
+  --ds-select-icon-glyph-size-sm: var(--ds-size-xs); /** Tamanho do glyph de ícone Select sm. */
+  --ds-select-icon-glyph-size-md: var(--ds-size-sm); /** Tamanho do glyph de ícone Select md. */
   --ds-select-icon-glyph-size-lg: var(--ds-size-md); /** Tamanho do glyph de ícone Select lg. */
+  --ds-select-icon-frame-padding-x-default: var(--ds-space-xs); /** Padding horizontal do frame externo de ícone Select. */
   --ds-select-label-color-default: var(--ds-content-strong); /** Cor do label Select. */
   --ds-select-label-font-family-default: var(--ds-body-font-family-sans); /** Font-family do label Select. */
   --ds-select-label-font-size-sm: var(--ds-body-font-size-xs); /** Font-size do label Select sm. */
@@ -429,8 +433,8 @@
   --ds-select-label-line-height-lg: var(--ds-body-line-height-sm); /** Line-height do label Select lg. */
   --ds-select-label-row-gap-default: var(--ds-space-2xs); /** Gap entre label e required do Select. */
   --ds-select-padding-x-sm: var(--ds-space-sm); /** Padding horizontal do Field Select sm. */
-  --ds-select-padding-x-md: var(--ds-space-md); /** Padding horizontal do Field Select md. */
-  --ds-select-padding-x-lg: var(--ds-space-lg); /** Padding horizontal do Field Select lg. */
+  --ds-select-padding-x-md: var(--ds-space-sm); /** Padding horizontal do Field Select md. */
+  --ds-select-padding-x-lg: var(--ds-space-md); /** Padding horizontal do Field Select lg. */
   --ds-select-padding-y-sm: var(--ds-space-sm); /** Padding vertical do Field Select sm. */
   --ds-select-padding-y-md: var(--ds-space-control-padding-10); /** Padding vertical do Field Select md. */
   --ds-select-padding-y-lg: var(--ds-space-md); /** Padding vertical do Field Select lg. */
@@ -519,7 +523,7 @@
   --ds-textarea-label-line-height-md: var(--ds-body-line-height-sm); /** Line-height do label Textarea md. */
   --ds-textarea-label-line-height-lg: var(--ds-body-line-height-sm); /** Line-height do label Textarea lg. */
   --ds-textarea-label-row-gap-default: var(--ds-space-2xs); /** Gap entre label e required Textarea. */
-  --ds-textarea-padding-x-sm: var(--ds-space-sm); /** Padding horizontal do Field Textarea sm. */
+  --ds-textarea-padding-x-sm: var(--ds-space-md); /** Padding horizontal do Field Textarea sm. */
   --ds-textarea-padding-x-md: var(--ds-space-md); /** Padding horizontal do Field Textarea md. */
   --ds-textarea-padding-x-lg: var(--ds-space-lg); /** Padding horizontal do Field Textarea lg. */
   --ds-textarea-padding-y-sm: var(--ds-space-sm); /** Padding vertical do Field Textarea sm. */
@@ -536,12 +540,12 @@
   --ds-textarea-required-line-height-default: var(--ds-body-line-height-sm); /** Line-height do indicador required Textarea. */
   --ds-textarea-stack-gap-default: var(--ds-space-xs); /** Gap vertical entre label, field e helper no Textarea. */
   --ds-textarea-text-font-family-default: var(--ds-body-font-family-sans); /** Font-family do texto Textarea. */
-  --ds-textarea-text-font-size-sm: var(--ds-body-font-size-sm); /** Font-size do texto Textarea sm. */
+  --ds-textarea-text-font-size-sm: var(--ds-body-font-size-xs); /** Font-size do texto Textarea sm. */
   --ds-textarea-text-font-size-md: var(--ds-body-font-size-sm); /** Font-size do texto Textarea md. */
   --ds-textarea-text-font-size-lg: var(--ds-body-font-size-md); /** Font-size do texto Textarea lg. */
   --ds-textarea-text-font-weight-default: var(--ds-body-font-weight-regular); /** Font-weight do texto Textarea. */
   --ds-textarea-text-letter-spacing-default: var(--ds-body-letter-spacing-normal); /** Letter-spacing do texto Textarea. */
-  --ds-textarea-text-line-height-sm: var(--ds-body-line-height-sm); /** Line-height do texto Textarea sm. */
+  --ds-textarea-text-line-height-sm: var(--ds-body-line-height-2xs); /** Line-height do texto Textarea sm. */
   --ds-textarea-text-line-height-md: var(--ds-body-line-height-sm); /** Line-height do texto Textarea md. */
   --ds-textarea-text-line-height-lg: var(--ds-body-line-height-md); /** Line-height do texto Textarea lg. */
   --ds-toggle-target-height-sm: var(--ds-size-lg); /** Altura minima da area interativa Toggle sm. */
