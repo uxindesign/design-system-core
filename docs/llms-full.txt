@@ -206,6 +206,7 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 ## [Não publicado]
 
 ### Corrigido
+- **Frames externos de ícone espelhados do Figma.** Adicionados `input/icon-frame/padding-x/default`, `select/icon-frame/padding-x/default`, `select/chevron-frame/padding-x/default` e `form-field/error/icon-frame/padding-x/default` aos Component tokens; CSS passa a representar o wrapper externo com padding horizontal sem confundir esse respiro com o tamanho interno do `Icon Placeholder`.
 - **AGENTS.md reforça regras de edição de componentes no Figma.** Adicionado checklist obrigatório para preservar propriedades públicas do component set: textos editáveis via painel, ordem size menor→maior, pares booleano→campo dependente, uso de `Icon Placeholder`, validação de `componentPropertyReferences` e regra específica para Select não duplicar chevron/right icon.
 - **Fields single-line com respiro interno e adornments proporcionais.** Input Text e Select voltam a usar `text-frame/padding-x=4px` além do padding do Field, mantendo origem visual de texto em `12/12/16px`; ícones e chevrons passam a usar `frame-size=glyph-size` em `16/20/24px` e `line-height: 100%`, alinhando Figma e CSS.
 - **Textarea completo aplicado aos Component tokens.** `component.textarea` agora cobre bg, bordas, radius, focus ring, conteúdo, placeholder, label, required, helper, spacing e tipografia; `Textarea` passa a consumir `--ds-textarea-*` no CSS em vez de `Semantic` direto, preservando `field.min-height` como contrato anatômico multilinha e mantendo o contador como CSS-only por não existir no component set vivo do Figma.
@@ -1512,7 +1513,7 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 | Foundation | 266 | 🟢 |
 | Semantic (light) | 174 | 🟢 |
 | Semantic (dark) | 174 | 🟢 |
-| Component | 556 | 🟢 |
+| Component | 560 | 🟢 |
 
 ## Pipeline
 
@@ -16491,7 +16492,7 @@ Seção expandida com contexto, decisão e locais de uso.
 |--------|--------|----------|
 | Foundation/Core | **266** | 9 |
 | Semantic/System | **174 × 2 modos** | light.json + dark.json |
-| Component | **556** | 19 |
+| Component | **560** | 19 |
 
 ## Foundation (266 tokens)
 
@@ -16533,7 +16534,7 @@ semantic.typography.*
 semantic.z.*
 ```
 
-## Component (556 tokens)
+## Component (560 tokens)
 
 | Arquivo | Tokens |
 |---------|--------|
@@ -16545,11 +16546,11 @@ semantic.z.*
 | `card.json` | 17 |
 | `checkbox.json` | 13 |
 | `divider.json` | 3 |
-| `form-field.json` | 23 |
-| `input.json` | 82 |
+| `form-field.json` | 24 |
+| `input.json` | 83 |
 | `modal.json` | 53 |
 | `radio.json` | 6 |
-| `select.json` | 92 |
+| `select.json` | 94 |
 | `skeleton.json` | 6 |
 | `spinner.json` | 5 |
 | `tabs.json` | 12 |

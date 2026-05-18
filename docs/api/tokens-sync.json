@@ -1,12 +1,12 @@
 {
   "version": "1.0.0-beta.4",
   "totals": {
-    "jsonTokens": 1170,
-    "sharedTokens": 822,
+    "jsonTokens": 1174,
+    "sharedTokens": 826,
     "lightTokens": 174,
     "darkTokens": 174,
     "errors": 0,
-    "warnings": 4
+    "warnings": 0
   },
   "checks": {
     "jsonIntegrity": [],
@@ -23,66 +23,16 @@
         "figmaVariableCount": 936,
         "figmaCollectionCount": 3,
         "VALUE_DRIFT": 0,
-        "NEEDS_SYNC": 4,
+        "NEEDS_SYNC": 0,
         "DRIFT_FROM_SOURCE": 0,
         "ALIAS_BROKEN": 0,
         "CSS_ONLY": 7,
         "BY_DESIGN": 137
       },
-      "divergences": [
-        {
-          "level": "warning",
-          "category": "NEEDS_SYNC",
-          "token": "component.input.icon-frame.padding-x.default",
-          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
-          "figma": "{semantic.space.xs}"
-        },
-        {
-          "level": "warning",
-          "category": "NEEDS_SYNC",
-          "token": "component.select.icon-frame.padding-x.default",
-          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
-          "figma": "{semantic.space.xs}"
-        },
-        {
-          "level": "warning",
-          "category": "NEEDS_SYNC",
-          "token": "component.select.chevron-frame.padding-x.default",
-          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
-          "figma": "{semantic.space.xs}"
-        },
-        {
-          "level": "warning",
-          "category": "NEEDS_SYNC",
-          "token": "component.form-field.error.icon-frame.padding-x.default",
-          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
-          "figma": "{semantic.space.2xs}"
-        }
-      ],
+      "divergences": [],
       "diffs": {
         "VALUE_DRIFT": [],
-        "NEW_IN_FIGMA": [
-          {
-            "file": "component/input.json",
-            "token": "component.input.icon-frame.padding-x.default",
-            "figma": "{semantic.space.xs}"
-          },
-          {
-            "file": "component/select.json",
-            "token": "component.select.icon-frame.padding-x.default",
-            "figma": "{semantic.space.xs}"
-          },
-          {
-            "file": "component/select.json",
-            "token": "component.select.chevron-frame.padding-x.default",
-            "figma": "{semantic.space.xs}"
-          },
-          {
-            "file": "component/form-field.json",
-            "token": "component.form-field.error.icon-frame.padding-x.default",
-            "figma": "{semantic.space.2xs}"
-          }
-        ],
+        "NEW_IN_FIGMA": [],
         "MISSING_IN_FIGMA": [],
         "CSS_ONLY": [
           {

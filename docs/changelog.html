@@ -72,6 +72,8 @@
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
 <h3>Corrigido</h3>
 <ul>
+<li><p><strong>Frames externos de ícone espelhados do Figma.</strong> Adicionados <code>input/icon-frame/padding-x/default</code>, <code>select/icon-frame/padding-x/default</code>, <code>select/chevron-frame/padding-x/default</code> e <code>form-field/error/icon-frame/padding-x/default</code> aos Component tokens; CSS passa a representar o wrapper externo com padding horizontal sem confundir esse respiro com o tamanho interno do <code>Icon Placeholder</code>.</p>
+</li>
 <li><p><strong>AGENTS.md reforça regras de edição de componentes no Figma.</strong> Adicionado checklist obrigatório para preservar propriedades públicas do component set: textos editáveis via painel, ordem size menor→maior, pares booleano→campo dependente, uso de <code>Icon Placeholder</code>, validação de <code>componentPropertyReferences</code> e regra específica para Select não duplicar chevron/right icon.</p>
 </li>
 <li><p><strong>Fields single-line com respiro interno e adornments proporcionais.</strong> Input Text e Select voltam a usar <code>text-frame/padding-x=4px</code> além do padding do Field, mantendo origem visual de texto em <code>12/12/16px</code>; ícones e chevrons passam a usar <code>frame-size=glyph-size</code> em <code>16/20/24px</code> e <code>line-height: 100%</code>, alinhando Figma e CSS.</p>
