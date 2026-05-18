@@ -170,6 +170,15 @@
               "$description": "Tamanho do glyph do ícone da mensagem de erro Form Field."
             }
           }
+        },
+        "icon-frame": {
+          "padding-x": {
+            "default": {
+              "$type": "dimension",
+              "$value": "{semantic.space.2xs}",
+              "$description": "Padding horizontal do frame externo do ícone da mensagem de erro Form Field."
+            }
+          }
         }
       }
     }

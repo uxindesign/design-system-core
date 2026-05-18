@@ -97,9 +97,16 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  flex: 0 0 var(--ds-form-field-error-icon-frame-size-default);
+  box-sizing: content-box;
+  flex: 0 0 calc(
+    var(--ds-form-field-error-icon-frame-size-default) +
+    var(--ds-form-field-error-icon-frame-padding-x-default) +
+    var(--ds-form-field-error-icon-frame-padding-x-default)
+  );
   width: var(--ds-form-field-error-icon-frame-size-default);
   height: var(--ds-form-field-error-icon-frame-size-default);
+  padding-left: var(--ds-form-field-error-icon-frame-padding-x-default);
+  padding-right: var(--ds-form-field-error-icon-frame-padding-x-default);
   color: var(--ds-form-field-error-icon-color-default);
   font-family: "Material Symbols Outlined";
   font-size: var(--ds-form-field-error-icon-glyph-size-default);

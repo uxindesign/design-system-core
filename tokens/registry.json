@@ -22352,6 +22352,75 @@
         "tokens": [],
         "figma": []
       }
+    },
+    "component.form-field.error.icon-frame.padding-x.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.2xs",
+      "sentido": "Padding horizontal do frame externo do ícone de erro Form Field.",
+      "escopo": [
+        "padding-inline",
+        "error icon frame",
+        "CSS-only"
+      ],
+      "contexto": "Component token do contrato CSS-only do Form Field. Espelha o wrapper externo de ícone usado nos estados de erro de Input Text, Select e Textarea no Figma.",
+      "decisao": "Alias 1:1 para semantic.space.2xs porque o frame externo do erro usa 2px de respiro horizontal ao redor do glyph de 16px.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.input.icon-frame.padding-x.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xs",
+      "sentido": "Padding horizontal do frame externo de ícone Input Text.",
+      "escopo": [
+        "padding-inline",
+        "icon frame"
+      ],
+      "contexto": "Component token do contrato do Input Text. Binda o wrapper externo dos ícones esquerdo/direito no Figma, enquanto icon.frame-size continua representando o Icon Placeholder interno.",
+      "decisao": "Alias 1:1 para semantic.space.xs para manter 4px de respiro horizontal ao redor do glyph sem inflar o tamanho anatômico do Icon Placeholder.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.chevron-frame.padding-x.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xs",
+      "sentido": "Padding horizontal do frame externo do chevron Select.",
+      "escopo": [
+        "padding-inline",
+        "chevron frame"
+      ],
+      "contexto": "Component token do contrato do Select. Binda o wrapper externo do chevron no Figma e separa o respiro horizontal do tamanho interno do Icon Placeholder.",
+      "decisao": "Alias 1:1 para semantic.space.xs para manter 4px de respiro horizontal e preservar o glyph/placeholder em 16/20/24px por size.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.icon-frame.padding-x.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xs",
+      "sentido": "Padding horizontal do frame externo de ícone Select.",
+      "escopo": [
+        "padding-inline",
+        "icon frame"
+      ],
+      "contexto": "Component token do contrato do Select. Binda o wrapper externo do ícone à esquerda no Figma, mantendo o Icon Placeholder interno separado do respiro horizontal.",
+      "decisao": "Alias 1:1 para semantic.space.xs para manter 4px de respiro horizontal ao redor do ícone leading.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
     }
   }
 }
