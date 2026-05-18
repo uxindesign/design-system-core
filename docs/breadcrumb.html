@@ -65,22 +65,36 @@
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Anatomia</span><span data-lang="en">Anatomy</span></h2>
 
-    <div class="ds-anatomy">
-      <div style="position:relative;display:inline-flex;align-items:center;pointer-events:none;">
+    <div class="ds-anatomy" style="padding:64px;">
+      <div style="position:relative;display:inline-flex;align-items:center;pointer-events:none;" inert>
         <nav class="ds-breadcrumb" aria-label="Breadcrumb">
-          <a href="#" class="ds-breadcrumb__item" tabindex="-1">Home</a>
+          <a href="#" class="ds-breadcrumb__item" tabindex="-1" style="position:relative;">Home
+            <!-- 4: Link — connector bottom -->
+            <span style="position:absolute;bottom:-28px;left:50%;transform:translateX(-50%);width:1px;height:28px;background:var(--ds-primary-background-default);"></span>
+            <span class="ds-anatomy__marker" style="bottom:-48px;left:50%;transform:translateX(-50%);">4</span>
+          </a>
           <span class="ds-breadcrumb__separator">/</span>
           <a href="#" class="ds-breadcrumb__item" tabindex="-1">Products</a>
-          <span class="ds-breadcrumb__separator">/</span>
-          <span class="ds-breadcrumb__item ds-breadcrumb__item--current" aria-current="page">Sneakers</span>
+          <span class="ds-breadcrumb__separator" style="position:relative;">/
+            <!-- 6: Separator — connector bottom -->
+            <span style="position:absolute;bottom:-28px;left:50%;transform:translateX(-50%);width:1px;height:28px;background:var(--ds-primary-background-default);"></span>
+            <span class="ds-anatomy__marker" style="bottom:-48px;left:50%;transform:translateX(-50%);">6</span>
+          </span>
+          <span class="ds-breadcrumb__item ds-breadcrumb__item--current" aria-current="page" style="position:relative;">Sneakers
+            <!-- 5: Atual — connector bottom -->
+            <span style="position:absolute;bottom:-28px;left:50%;transform:translateX(-50%);width:1px;height:28px;background:var(--ds-primary-background-default);"></span>
+            <span class="ds-anatomy__marker" style="bottom:-48px;left:50%;transform:translateX(-50%);">5</span>
+          </span>
         </nav>
-        <!-- Markers -->
-        <span class="ds-anatomy__marker" style="top:-28px;left:50%;transform:translateX(-50%);">1</span>
-        <span class="ds-anatomy__marker" style="top:50%;left:-28px;transform:translateY(-50%);">2</span>
-        <span class="ds-anatomy__marker" style="top:50%;right:-28px;transform:translateY(-50%);">3</span>
-        <span class="ds-anatomy__marker" style="bottom:-24px;left:14px;">4</span>
-        <span class="ds-anatomy__marker" style="bottom:-24px;right:28px;">5</span>
-        <span class="ds-anatomy__marker" style="top:-28px;left:52%;">6</span>
+        <!-- 1: Nav container — connector top center -->
+        <span style="position:absolute;top:-28px;left:50%;transform:translateX(-50%);width:1px;height:28px;background:var(--ds-primary-background-default);"></span>
+        <span class="ds-anatomy__marker" style="top:-48px;left:50%;transform:translateX(-50%);">1</span>
+        <!-- 2: Nav landmark — connector left -->
+        <span style="position:absolute;left:-28px;top:50%;transform:translateY(-50%);height:1px;width:28px;background:var(--ds-primary-background-default);"></span>
+        <span class="ds-anatomy__marker" style="top:50%;left:-48px;transform:translateY(-50%);">2</span>
+        <!-- 3: Item — connector right -->
+        <span style="position:absolute;right:-28px;top:50%;transform:translateY(-50%);height:1px;width:28px;background:var(--ds-primary-background-default);"></span>
+        <span class="ds-anatomy__marker" style="top:50%;right:-48px;transform:translateY(-50%);">3</span>
       </div>
     </div>
 
