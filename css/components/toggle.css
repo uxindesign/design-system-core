@@ -49,6 +49,7 @@
   --toggle-height: var(--ds-toggle-track-height-md);
   --toggle-width: var(--ds-toggle-track-width-md);
   --thumb-gap: var(--ds-toggle-thumb-inset-default);
+  --track-border-width: var(--ds-toggle-track-border-width-default);
   
   width: var(--toggle-width);
   height: var(--toggle-height);
@@ -58,8 +59,8 @@
 .ds-toggle::after {
   content: '';
   position: absolute;
-  top: var(--thumb-gap);
-  left: var(--thumb-gap);
+  top: calc(var(--thumb-gap) - var(--track-border-width));
+  left: calc(var(--thumb-gap) - var(--track-border-width));
   width: var(--toggle-thumb-size);
   height: var(--toggle-thumb-size);
   border-radius: var(--ds-toggle-thumb-radius-default);
@@ -78,6 +79,7 @@
 .ds-toggle:checked {
   background-color: var(--ds-toggle-track-fill-on-default);
   border-width: 0;
+  --track-border-width: 0px;
 }
 
 .ds-toggle:checked::after {

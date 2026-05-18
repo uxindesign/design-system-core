@@ -225,7 +225,7 @@
         <div class="ds-preview__canvas ds-preview__canvas--column" style="max-width:400px">
           <div class="ds-field ds-field--error">
             <label class="ds-field__label" for="demo-msg">Message</label>
-            <div class="ds-textarea">
+            <div class="ds-textarea ds-textarea--error">
               <textarea class="ds-textarea__field" id="demo-msg" aria-invalid="true" aria-describedby="msg-error">Too short</textarea>
             </div>
             <span class="ds-field__error" id="msg-error">Message must be at least 20 characters.</span>
@@ -237,7 +237,7 @@
           <button class="ds-preview__copy" aria-label="Copy code">Copy</button>
           <pre tabindex="0"><code>&lt;div class="ds-field ds-field--error"&gt;
   &lt;label class="ds-field__label" for="msg"&gt;Message&lt;/label&gt;
-  &lt;div class="ds-textarea"&gt;
+  &lt;div class="ds-textarea ds-textarea--error"&gt;
     &lt;textarea class="ds-textarea__field" id="msg"
       aria-invalid="true" aria-describedby="msg-error"&gt;&lt;/textarea&gt;
   &lt;/div&gt;
