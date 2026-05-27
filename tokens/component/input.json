@@ -17,6 +17,11 @@
           "$value": "{semantic.surface.default}",
           "$description": "Bg do Field Input Text error."
         },
+        "error-hover": {
+          "$type": "color",
+          "$value": "{semantic.surface.default}",
+          "$description": "Bg do Field Input Text error hover."
+        },
         "filled": {
           "$type": "color",
           "$value": "{semantic.surface.default}",
@@ -48,6 +53,11 @@
           "$type": "color",
           "$value": "{semantic.feedback.error.background.default}",
           "$description": "Border color do Field Input Text error."
+        },
+        "error-hover": {
+          "$type": "color",
+          "$value": "{semantic.feedback.error.border.hover}",
+          "$description": "Border color do Field Input Text error hover."
         },
         "filled": {
           "$type": "color",
@@ -107,6 +117,11 @@
             "$type": "color",
             "$value": "{semantic.feedback.error.background.default}",
             "$description": "Cor do focus ring Input Text error."
+          },
+          "readonly": {
+            "$type": "color",
+            "$value": "{semantic.border.control-default}",
+            "$description": "Cor do focus ring Input Text readonly."
           }
         },
         "offset": {

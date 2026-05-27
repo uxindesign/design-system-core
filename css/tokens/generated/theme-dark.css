@@ -4,6 +4,7 @@
 
 [data-mode="dark"] {
   --ds-primary-content-default: var(--ds-color-neutral-900);
+  --ds-primary-content-hover: var(--ds-color-neutral-900); /** Conteúdo sobre fill primário em hover. */
   --ds-primary-content-disabled: var(--ds-overlay-white-80);
   --ds-primary-background-default: var(--ds-color-brand-400);
   --ds-primary-background-hover: var(--ds-color-brand-500);
@@ -46,6 +47,7 @@
   --ds-feedback-warning-background-hover: var(--ds-color-amber-500);
   --ds-feedback-warning-background-subtle: var(--ds-color-amber-900);
   --ds-feedback-error-border-default: var(--ds-color-red-400);
+  --ds-feedback-error-border-hover: var(--ds-color-red-500); /** Borda de feedback erro em estado hover. */
   --ds-feedback-error-content-default: var(--ds-color-red-400);
   --ds-feedback-error-content-contrast: var(--ds-color-neutral-900); /** Dark text porque error default em dark é red-500 (medium). */
   --ds-feedback-error-content-disabled: var(--ds-overlay-white-60); /** Conteúdo error disabled. */
@@ -61,6 +63,7 @@
   --ds-feedback-info-background-hover: var(--ds-color-sky-500);
   --ds-feedback-info-background-subtle: var(--ds-color-sky-900);
   --ds-surface-default: var(--ds-color-neutral-900); /** Card and panel surfaces */
+  --ds-surface-hover: var(--ds-color-neutral-800); /** Surface neutra em hover de controles. */
   --ds-surface-raised: var(--ds-color-neutral-800); /** Elevated surface (sticky headers, raised cards) */
   --ds-surface-overlay: var(--ds-color-neutral-700);
   --ds-surface-elevated: var(--ds-color-neutral-600);
@@ -71,6 +74,7 @@
   --ds-background-disabled: var(--ds-color-neutral-800); /** Background de componentes em estado disabled (antes state.disabled.background). */
   --ds-content-strong: var(--ds-color-neutral-50); /** Conteúdo de ênfase máxima (títulos, badge labels, modal title, active tab). Tom mais escuro/claro da escala. */
   --ds-content-default: var(--ds-color-neutral-400); /** Conteúdo padrão (body text, descriptions, form labels). Use este na maioria dos casos. */
+  --ds-content-hover: var(--ds-color-neutral-300); /** Conteúdo neutro em hover. */
   --ds-content-subtle: var(--ds-color-neutral-400); /** Conteúdo de ênfase reduzida (placeholders, ícones decorativos, helper text). */
   --ds-content-disabled: var(--ds-color-neutral-600); /** Conteúdo em estado disabled. Isento de contraste WCAG. Unifica text/disabled e state/disabled/foreground (ADR-011). */
   --ds-content-inverse: var(--ds-color-neutral-900);

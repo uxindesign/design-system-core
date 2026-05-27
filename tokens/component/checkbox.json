@@ -119,6 +119,11 @@
               "$value": "{semantic.surface.default}",
               "$description": "Fill da box Checkbox unchecked focused."
             },
+            "hover": {
+              "$type": "color",
+              "$value": "{semantic.surface.hover}",
+              "$description": "Fill da box Checkbox unchecked hover."
+            },
             "disabled": {
               "$type": "color",
               "$value": "{semantic.background.disabled}",
@@ -136,6 +141,11 @@
               "$value": "{semantic.primary.background.default}",
               "$description": "Fill da box Checkbox checked focused."
             },
+            "hover": {
+              "$type": "color",
+              "$value": "{semantic.primary.background.hover}",
+              "$description": "Fill da box Checkbox checked hover."
+            },
             "disabled": {
               "$type": "color",
               "$value": "{semantic.primary.background.disabled}",
@@ -152,6 +162,11 @@
               "$type": "color",
               "$value": "{semantic.primary.background.default}",
               "$description": "Fill da box Checkbox indeterminate focused."
+            },
+            "hover": {
+              "$type": "color",
+              "$value": "{semantic.primary.background.hover}",
+              "$description": "Fill da box Checkbox indeterminate hover."
             },
             "disabled": {
               "$type": "color",
@@ -172,6 +187,11 @@
               "$value": "{semantic.primary.background.default}",
               "$description": "Border color da box Checkbox unchecked focused."
             },
+            "hover": {
+              "$type": "color",
+              "$value": "{semantic.border.control-hover}",
+              "$description": "Border color da box Checkbox unchecked hover."
+            },
             "disabled": {
               "$type": "color",
               "$value": "{semantic.border.control-disabled}",
@@ -189,6 +209,11 @@
               "$value": "{semantic.primary.background.default}",
               "$description": "Border color da box Checkbox checked focused."
             },
+            "hover": {
+              "$type": "color",
+              "$value": "{semantic.primary.background.hover}",
+              "$description": "Border color da box Checkbox checked hover."
+            },
             "disabled": {
               "$type": "color",
               "$value": "{semantic.primary.background.disabled}",
@@ -205,6 +230,11 @@
               "$type": "color",
               "$value": "{semantic.primary.background.default}",
               "$description": "Border color da box Checkbox indeterminate focused."
+            },
+            "hover": {
+              "$type": "color",
+              "$value": "{semantic.primary.background.hover}",
+              "$description": "Border color da box Checkbox indeterminate hover."
             },
             "disabled": {
               "$type": "color",
@@ -227,6 +257,11 @@
               "$value": "{semantic.primary.content-default}",
               "$description": "Fill do checkmark Checkbox checked focused."
             },
+            "hover": {
+              "$type": "color",
+              "$value": "{semantic.primary.content-hover}",
+              "$description": "Fill do checkmark Checkbox checked hover."
+            },
             "disabled": {
               "$type": "color",
               "$value": "{semantic.primary.content-disabled}",
@@ -243,6 +278,11 @@
               "$type": "color",
               "$value": "{semantic.primary.content-default}",
               "$description": "Fill da marca Checkbox indeterminate focused."
+            },
+            "hover": {
+              "$type": "color",
+              "$value": "{semantic.primary.content-hover}",
+              "$description": "Fill da marca Checkbox indeterminate hover."
             },
             "disabled": {
               "$type": "color",

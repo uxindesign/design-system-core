@@ -66,11 +66,20 @@
     <h2 class="ds-subsection__title"><span data-lang="pt">Anatomia</span><span data-lang="en">Anatomy</span></h2>
 
     <div class="ds-anatomy" style="padding:64px;">
-      <div style="position:relative;display:inline-flex;align-items:center;min-width:240px;" inert>
-        <div class="ds-select" style="width:100%;">
+      <div style="display:inline-flex;flex-direction:column;gap:var(--ds-dimension-4);min-width:300px;">
+
+        <!-- 7: Label -->
+        <div style="position:relative;" inert>
+          <label class="ds-field__label">Country<span class="ds-field__required">*</span></label>
+          <span style="position:absolute;left:-28px;top:50%;transform:translateY(-50%);height:1px;width:28px;background:var(--ds-primary-background-default);"></span>
+          <span class="ds-anatomy__marker" style="top:50%;left:-48px;transform:translateY(-50%);">7</span>
+        </div>
+
+        <div style="position:relative;" inert>
+        <div class="ds-select ds-select--error" style="width:100%;">
           <span class="ds-select__icon material-symbols-outlined">language</span>
           <select class="ds-select__field" aria-label="Select example">
-            <option>Choose a country</option>
+            <option selected>Select a country</option>
           </select>
           <span class="ds-select__arrow"></span>
         </div>
@@ -86,6 +95,21 @@
         <!-- 4: Arrow right -->
         <span style="position:absolute;right:-28px;top:50%;transform:translateY(-50%);height:1px;width:28px;background:var(--ds-primary-background-default);"></span>
         <span class="ds-anatomy__marker" style="top:50%;right:-48px;transform:translateY(-50%);">4</span>
+        </div>
+
+        <!-- 5: Error -->
+        <div class="ds-field--error" style="position:relative;display:flex;align-items:flex-start;height:18px;" inert>
+          <span class="ds-field__error">Please select a country.</span>
+          <span style="position:absolute;left:-28px;top:50%;transform:translateY(-50%);height:1px;width:28px;background:var(--ds-primary-background-default);"></span>
+          <span class="ds-anatomy__marker" style="top:50%;left:-48px;transform:translateY(-50%);">5</span>
+        </div>
+
+        <!-- 6: Helper -->
+        <div style="position:relative;display:flex;align-items:flex-start;height:18px;" inert>
+          <span class="ds-field__helper">Choose one country from the list.</span>
+          <span style="position:absolute;left:-28px;top:50%;transform:translateY(-50%);height:1px;width:28px;background:var(--ds-primary-background-default);"></span>
+          <span class="ds-anatomy__marker" style="top:50%;left:-48px;transform:translateY(-50%);">6</span>
+        </div>
       </div>
     </div>
 
@@ -93,10 +117,16 @@
       <span data-lang="pt"><strong>1</strong> Wrapper (<code>.ds-select</code>) — container com borda, radius.<br>
       <strong>2</strong> Ícone (opcional, <code>.ds-select__icon</code>) — ícone à esquerda, decorativo.<br>
       <strong>3</strong> Campo (<code>.ds-select__field</code>) — elemento nativo <code>&lt;select&gt;</code>.<br>
-      <strong>4</strong> Seta (<code>.ds-select__arrow</code>) — chevron customizado, <code>pointer-events: none</code>.</span><span data-lang="en"><strong>1</strong> Wrapper (<code>.ds-select</code>) — container with border, radius.<br>
+      <strong>4</strong> Seta (<code>.ds-select__arrow</code>) — chevron customizado, <code>pointer-events: none</code>.<br>
+      <strong>5</strong> Mensagem de erro (<code>.ds-field__error</code>) — externa, via Form Field.<br>
+      <strong>6</strong> Texto auxiliar (<code>.ds-field__helper</code>) — externo, via Form Field.<br>
+      <strong>7</strong> Label (<code>.ds-field__label</code>) — externo, via Form Field.</span><span data-lang="en"><strong>1</strong> Wrapper (<code>.ds-select</code>) — container with border, radius.<br>
       <strong>2</strong> Icon (optional, <code>.ds-select__icon</code>) — leading icon, decorative.<br>
       <strong>3</strong> Field (<code>.ds-select__field</code>) — native <code>&lt;select&gt;</code> element.<br>
-      <strong>4</strong> Arrow (<code>.ds-select__arrow</code>) — custom chevron, <code>pointer-events: none</code>.</span>
+      <strong>4</strong> Arrow (<code>.ds-select__arrow</code>) — custom chevron, <code>pointer-events: none</code>.<br>
+      <strong>5</strong> Error message (<code>.ds-field__error</code>) — external, via Form Field.<br>
+      <strong>6</strong> Helper text (<code>.ds-field__helper</code>) — external, via Form Field.<br>
+      <strong>7</strong> Label (<code>.ds-field__label</code>) — external, via Form Field.</span>
     </div>
   </div>
 
@@ -273,6 +303,7 @@
               <span class="ds-select__arrow"></span>
             </div>
             <span class="ds-field__error" id="country-error">Please select a country.</span>
+            <span class="ds-field__helper">Choose one country from the list.</span>
           </div>
         </div>
       </div>
@@ -289,6 +320,7 @@
     &lt;span class="ds-select__arrow"&gt;&lt;/span&gt;
   &lt;/div&gt;
   &lt;span class="ds-field__error" id="country-error"&gt;Please select a country.&lt;/span&gt;
+  &lt;span class="ds-field__helper"&gt;Choose one country from the list.&lt;/span&gt;
 &lt;/div&gt;</code></pre>
         </div>
       </div>

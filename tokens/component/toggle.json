@@ -136,6 +136,11 @@
               "$value": "{semantic.surface.default}",
               "$description": "Fill da track Toggle off focused."
             },
+            "hover": {
+              "$type": "color",
+              "$value": "{semantic.surface.hover}",
+              "$description": "Fill da track Toggle off hover."
+            },
             "disabled": {
               "$type": "color",
               "$value": "{semantic.background.disabled}",
@@ -152,6 +157,11 @@
               "$type": "color",
               "$value": "{semantic.primary.background.default}",
               "$description": "Fill da track Toggle on focused."
+            },
+            "hover": {
+              "$type": "color",
+              "$value": "{semantic.primary.background.hover}",
+              "$description": "Fill da track Toggle on hover."
             },
             "disabled": {
               "$type": "color",
@@ -171,6 +181,11 @@
               "$type": "color",
               "$value": "{semantic.primary.background.default}",
               "$description": "Border color da track Toggle off focused."
+            },
+            "hover": {
+              "$type": "color",
+              "$value": "{semantic.border.control-hover}",
+              "$description": "Border color da track Toggle off hover."
             },
             "disabled": {
               "$type": "color",
@@ -224,6 +239,11 @@
               "$value": "{semantic.content.default}",
               "$description": "Fill do thumb Toggle off focused."
             },
+            "hover": {
+              "$type": "color",
+              "$value": "{semantic.content.hover}",
+              "$description": "Fill do thumb Toggle off hover."
+            },
             "disabled": {
               "$type": "color",
               "$value": "{semantic.content.disabled}",
@@ -240,6 +260,11 @@
               "$type": "color",
               "$value": "{semantic.primary.content-default}",
               "$description": "Fill do thumb Toggle on focused."
+            },
+            "hover": {
+              "$type": "color",
+              "$value": "{semantic.primary.content-hover}",
+              "$description": "Fill do thumb Toggle on hover."
             },
             "disabled": {
               "$type": "color",

@@ -205,27 +205,35 @@
   --ds-checkbox-box-border-width-default: var(--ds-border-width-default); /** Border width da box visual Checkbox. */
   --ds-checkbox-box-fill-unchecked-default: var(--ds-surface-default); /** Fill da box Checkbox unchecked default. */
   --ds-checkbox-box-fill-unchecked-focused: var(--ds-surface-default); /** Fill da box Checkbox unchecked focused. */
+  --ds-checkbox-box-fill-unchecked-hover: var(--ds-surface-hover); /** Fill da box Checkbox unchecked hover. */
   --ds-checkbox-box-fill-unchecked-disabled: var(--ds-background-disabled); /** Fill da box Checkbox unchecked disabled. */
   --ds-checkbox-box-fill-checked-default: var(--ds-primary-background-default); /** Fill da box Checkbox checked default. */
   --ds-checkbox-box-fill-checked-focused: var(--ds-primary-background-default); /** Fill da box Checkbox checked focused. */
+  --ds-checkbox-box-fill-checked-hover: var(--ds-primary-background-hover); /** Fill da box Checkbox checked hover. */
   --ds-checkbox-box-fill-checked-disabled: var(--ds-primary-background-disabled); /** Fill da box Checkbox checked disabled. */
   --ds-checkbox-box-fill-indeterminate-default: var(--ds-primary-background-default); /** Fill da box Checkbox indeterminate default. */
   --ds-checkbox-box-fill-indeterminate-focused: var(--ds-primary-background-default); /** Fill da box Checkbox indeterminate focused. */
+  --ds-checkbox-box-fill-indeterminate-hover: var(--ds-primary-background-hover); /** Fill da box Checkbox indeterminate hover. */
   --ds-checkbox-box-fill-indeterminate-disabled: var(--ds-primary-background-disabled); /** Fill da box Checkbox indeterminate disabled. */
   --ds-checkbox-box-border-color-unchecked-default: var(--ds-border-control-default); /** Border color da box Checkbox unchecked default. */
   --ds-checkbox-box-border-color-unchecked-focused: var(--ds-primary-background-default); /** Border color da box Checkbox unchecked focused. */
+  --ds-checkbox-box-border-color-unchecked-hover: var(--ds-border-control-hover); /** Border color da box Checkbox unchecked hover. */
   --ds-checkbox-box-border-color-unchecked-disabled: var(--ds-border-control-disabled); /** Border color da box Checkbox unchecked disabled. */
   --ds-checkbox-box-border-color-checked-default: var(--ds-primary-background-default); /** Border color da box Checkbox checked default. */
   --ds-checkbox-box-border-color-checked-focused: var(--ds-primary-background-default); /** Border color da box Checkbox checked focused. */
+  --ds-checkbox-box-border-color-checked-hover: var(--ds-primary-background-hover); /** Border color da box Checkbox checked hover. */
   --ds-checkbox-box-border-color-checked-disabled: var(--ds-primary-background-disabled); /** Border color da box Checkbox checked disabled. */
   --ds-checkbox-box-border-color-indeterminate-default: var(--ds-primary-background-default); /** Border color da box Checkbox indeterminate default. */
   --ds-checkbox-box-border-color-indeterminate-focused: var(--ds-primary-background-default); /** Border color da box Checkbox indeterminate focused. */
+  --ds-checkbox-box-border-color-indeterminate-hover: var(--ds-primary-background-hover); /** Border color da box Checkbox indeterminate hover. */
   --ds-checkbox-box-border-color-indeterminate-disabled: var(--ds-primary-background-disabled); /** Border color da box Checkbox indeterminate disabled. */
   --ds-checkbox-mark-fill-checked-default: var(--ds-primary-content-default); /** Fill do checkmark Checkbox checked default. */
   --ds-checkbox-mark-fill-checked-focused: var(--ds-primary-content-default); /** Fill do checkmark Checkbox checked focused. */
+  --ds-checkbox-mark-fill-checked-hover: var(--ds-primary-content-hover); /** Fill do checkmark Checkbox checked hover. */
   --ds-checkbox-mark-fill-checked-disabled: var(--ds-primary-content-disabled); /** Fill do checkmark Checkbox checked disabled. */
   --ds-checkbox-mark-fill-indeterminate-default: var(--ds-primary-content-default); /** Fill da marca Checkbox indeterminate default. */
   --ds-checkbox-mark-fill-indeterminate-focused: var(--ds-primary-content-default); /** Fill da marca Checkbox indeterminate focused. */
+  --ds-checkbox-mark-fill-indeterminate-hover: var(--ds-primary-content-hover); /** Fill da marca Checkbox indeterminate hover. */
   --ds-checkbox-mark-fill-indeterminate-disabled: var(--ds-primary-content-disabled); /** Fill da marca Checkbox indeterminate disabled. */
   --ds-checkbox-focus-ring-color-default: var(--ds-border-focus); /** Cor do focus ring Checkbox. */
   --ds-checkbox-focus-ring-stroke-width-default: var(--ds-border-width-focus); /** Stroke width do focus ring Checkbox. */
@@ -260,12 +268,14 @@
   --ds-input-bg-default: var(--ds-surface-default); /** Bg do Field Input Text default. */
   --ds-input-bg-disabled: var(--ds-background-disabled); /** Bg do Field Input Text disabled. */
   --ds-input-bg-error: var(--ds-surface-default); /** Bg do Field Input Text error. */
+  --ds-input-bg-error-hover: var(--ds-surface-default); /** Bg do Field Input Text error hover. */
   --ds-input-bg-filled: var(--ds-surface-default); /** Bg do Field Input Text filled. */
   --ds-input-bg-focused: var(--ds-surface-default); /** Bg do Field Input Text focused. */
   --ds-input-bg-readonly: var(--ds-background-subtle); /** Bg do Field Input Text readonly. */
   --ds-input-border-color-default: var(--ds-border-control-default); /** Border color do Field Input Text default. */
   --ds-input-border-color-disabled: var(--ds-border-control-disabled); /** Border color do Field Input Text disabled. */
   --ds-input-border-color-error: var(--ds-feedback-error-background-default); /** Border color do Field Input Text error. */
+  --ds-input-border-color-error-hover: var(--ds-feedback-error-border-hover); /** Border color do Field Input Text error hover. */
   --ds-input-border-color-filled: var(--ds-border-strong); /** Border color do Field Input Text filled. */
   --ds-input-border-color-focused: var(--ds-primary-background-default); /** Border color do Field Input Text focused. */
   --ds-input-border-color-hover: var(--ds-border-control-hover); /** Border color do Field Input Text hover. */
@@ -276,6 +286,7 @@
   --ds-input-content-color-readonly: var(--ds-content-default); /** Cor de conteúdo readonly do Input Text. */
   --ds-input-focus-ring-color-default: var(--ds-border-focus); /** Cor do focus ring Input Text. */
   --ds-input-focus-ring-color-error: var(--ds-feedback-error-background-default); /** Cor do focus ring Input Text error. */
+  --ds-input-focus-ring-color-readonly: var(--ds-border-control-default); /** Cor do focus ring Input Text readonly. */
   --ds-input-focus-ring-offset-default: var(--ds-border-width-focus); /** Offset CSS do focus ring Input Text. */
   --ds-input-focus-ring-radius-default: var(--ds-radius-lg); /** Radius do focus ring Input Text. */
   --ds-input-focus-ring-stroke-width-default: var(--ds-border-width-focus); /** Stroke width do focus ring Input Text. */
@@ -408,21 +419,26 @@
   --ds-radio-control-radius-default: var(--ds-radius-full); /** Radius do control Radio. */
   --ds-radio-control-fill-unselected-default: var(--ds-surface-default); /** Fill do control Radio unselected default. */
   --ds-radio-control-fill-unselected-focused: var(--ds-surface-default); /** Fill do control Radio unselected focused. */
+  --ds-radio-control-fill-unselected-hover: var(--ds-surface-hover); /** Fill do control Radio unselected hover. */
   --ds-radio-control-fill-unselected-disabled: var(--ds-background-disabled); /** Fill do control Radio unselected disabled. */
   --ds-radio-control-fill-selected-default: var(--ds-primary-background-default); /** Fill do control Radio selected default. */
   --ds-radio-control-fill-selected-focused: var(--ds-primary-background-default); /** Fill do control Radio selected focused. */
+  --ds-radio-control-fill-selected-hover: var(--ds-primary-background-hover); /** Fill do control Radio selected hover. */
   --ds-radio-control-fill-selected-disabled: var(--ds-primary-background-disabled); /** Fill do control Radio selected disabled. */
   --ds-radio-control-border-color-unselected-default: var(--ds-border-control-default); /** Border color do control Radio unselected default. */
   --ds-radio-control-border-color-unselected-focused: var(--ds-primary-background-default); /** Border color do control Radio unselected focused. */
+  --ds-radio-control-border-color-unselected-hover: var(--ds-border-control-hover); /** Border color do control Radio unselected hover. */
   --ds-radio-control-border-color-unselected-disabled: var(--ds-border-control-disabled); /** Border color do control Radio unselected disabled. */
   --ds-radio-control-border-color-selected-default: var(--ds-primary-background-default); /** Border color do control Radio selected default. */
   --ds-radio-control-border-color-selected-focused: var(--ds-primary-background-default); /** Border color do control Radio selected focused. */
+  --ds-radio-control-border-color-selected-hover: var(--ds-primary-background-hover); /** Border color do control Radio selected hover. */
   --ds-radio-control-border-color-selected-disabled: var(--ds-primary-background-disabled); /** Border color do control Radio selected disabled. */
   --ds-radio-control-border-width-unselected-default: var(--ds-border-width-default); /** Border width do control Radio unselected. */
   --ds-radio-control-border-width-selected-default: var(--ds-border-width-strong); /** Border width do control Radio selected. */
   --ds-radio-dot-radius-default: var(--ds-radius-full); /** Radius do dot Radio. */
   --ds-radio-dot-fill-selected-default: var(--ds-primary-content-default); /** Fill do dot Radio selected default. */
   --ds-radio-dot-fill-selected-focused: var(--ds-primary-content-default); /** Fill do dot Radio selected focused. */
+  --ds-radio-dot-fill-selected-hover: var(--ds-primary-content-hover); /** Fill do dot Radio selected hover. */
   --ds-radio-dot-fill-selected-disabled: var(--ds-primary-content-disabled); /** Fill do dot Radio selected disabled. */
   --ds-radio-focus-ring-color-default: var(--ds-border-focus); /** Cor do focus ring Radio. */
   --ds-radio-focus-ring-stroke-width-default: var(--ds-border-width-focus); /** Stroke width do focus ring Radio. */
@@ -430,12 +446,14 @@
   --ds-select-bg-default: var(--ds-surface-default); /** Bg do Field Select default. */
   --ds-select-bg-disabled: var(--ds-background-disabled); /** Bg do Field Select disabled. */
   --ds-select-bg-error: var(--ds-surface-default); /** Bg do Field Select error. */
+  --ds-select-bg-error-hover: var(--ds-surface-default); /** Bg do Field Select error hover. */
   --ds-select-bg-filled: var(--ds-surface-default); /** Bg do Field Select filled. */
   --ds-select-bg-focused: var(--ds-surface-default); /** Bg do Field Select focused. */
   --ds-select-bg-readonly: var(--ds-background-subtle); /** Bg do Field Select readonly. */
   --ds-select-border-color-default: var(--ds-border-control-default); /** Border color do Field Select default. */
   --ds-select-border-color-disabled: var(--ds-border-control-disabled); /** Border color do Field Select disabled. */
   --ds-select-border-color-error: var(--ds-feedback-error-background-default); /** Border color do Field Select error. */
+  --ds-select-border-color-error-hover: var(--ds-feedback-error-border-hover); /** Border color do Field Select error hover. */
   --ds-select-border-color-filled: var(--ds-border-strong); /** Border color do Field Select filled. */
   --ds-select-border-color-focused: var(--ds-primary-background-default); /** Border color do Field Select focused. */
   --ds-select-border-color-hover: var(--ds-border-control-hover); /** Border color do Field Select hover. */
@@ -455,6 +473,7 @@
   --ds-select-content-color-readonly: var(--ds-content-default); /** Cor de conteúdo readonly do Select. */
   --ds-select-focus-ring-color-default: var(--ds-border-focus); /** Cor do focus ring Select. */
   --ds-select-focus-ring-color-error: var(--ds-feedback-error-background-default); /** Cor do focus ring Select error. */
+  --ds-select-focus-ring-color-readonly: var(--ds-border-control-default); /** Cor do focus ring Select readonly. */
   --ds-select-focus-ring-offset-default: var(--ds-border-width-focus); /** Offset CSS do focus ring Select. */
   --ds-select-focus-ring-radius-default: var(--ds-radius-lg); /** Radius do focus ring Select. */
   --ds-select-focus-ring-stroke-width-default: var(--ds-border-width-focus); /** Stroke width do focus ring Select. */
@@ -545,12 +564,14 @@
   --ds-textarea-bg-default: var(--ds-surface-default); /** Bg do Field Textarea default. */
   --ds-textarea-bg-disabled: var(--ds-background-disabled); /** Bg do Field Textarea disabled. */
   --ds-textarea-bg-error: var(--ds-surface-default); /** Bg do Field Textarea error. */
+  --ds-textarea-bg-error-hover: var(--ds-surface-default); /** Bg do Field Textarea error hover. */
   --ds-textarea-bg-filled: var(--ds-surface-default); /** Bg do Field Textarea filled. */
   --ds-textarea-bg-focused: var(--ds-surface-default); /** Bg do Field Textarea focused. */
   --ds-textarea-bg-readonly: var(--ds-background-subtle); /** Bg do Field Textarea readonly. */
   --ds-textarea-border-color-default: var(--ds-border-control-default); /** Border color do Field Textarea default. */
   --ds-textarea-border-color-disabled: var(--ds-border-control-disabled); /** Border color do Field Textarea disabled. */
   --ds-textarea-border-color-error: var(--ds-feedback-error-background-default); /** Border color do Field Textarea error. */
+  --ds-textarea-border-color-error-hover: var(--ds-feedback-error-border-hover); /** Border color do Field Textarea error hover. */
   --ds-textarea-border-color-filled: var(--ds-border-strong); /** Border color do Field Textarea filled. */
   --ds-textarea-border-color-focused: var(--ds-primary-background-default); /** Border color do Field Textarea focused. */
   --ds-textarea-border-color-hover: var(--ds-border-control-hover); /** Border color do Field Textarea hover. */
@@ -561,6 +582,7 @@
   --ds-textarea-content-color-readonly: var(--ds-content-default); /** Cor de conteúdo readonly do Textarea. */
   --ds-textarea-focus-ring-color-default: var(--ds-border-focus); /** Cor do focus ring Textarea. */
   --ds-textarea-focus-ring-color-error: var(--ds-feedback-error-background-default); /** Cor do focus ring Textarea error. */
+  --ds-textarea-focus-ring-color-readonly: var(--ds-border-control-default); /** Cor do focus ring Textarea readonly. */
   --ds-textarea-focus-ring-offset-default: var(--ds-border-width-focus); /** Offset CSS do focus ring Textarea. */
   --ds-textarea-focus-ring-radius-default: var(--ds-radius-lg); /** Radius do focus ring Textarea. */
   --ds-textarea-focus-ring-stroke-width-default: var(--ds-border-width-focus); /** Stroke width do focus ring Textarea. */
@@ -628,20 +650,25 @@
   --ds-toggle-track-border-width-default: var(--ds-border-width-default); /** Border width da track Toggle. */
   --ds-toggle-track-fill-off-default: var(--ds-surface-default); /** Fill da track Toggle off default. */
   --ds-toggle-track-fill-off-focused: var(--ds-surface-default); /** Fill da track Toggle off focused. */
+  --ds-toggle-track-fill-off-hover: var(--ds-surface-hover); /** Fill da track Toggle off hover. */
   --ds-toggle-track-fill-off-disabled: var(--ds-background-disabled); /** Fill da track Toggle off disabled. */
   --ds-toggle-track-fill-on-default: var(--ds-primary-background-default); /** Fill da track Toggle on default. */
   --ds-toggle-track-fill-on-focused: var(--ds-primary-background-default); /** Fill da track Toggle on focused. */
+  --ds-toggle-track-fill-on-hover: var(--ds-primary-background-hover); /** Fill da track Toggle on hover. */
   --ds-toggle-track-fill-on-disabled: var(--ds-primary-background-disabled); /** Fill da track Toggle on disabled. */
   --ds-toggle-track-border-color-off-default: var(--ds-border-control-default); /** Border color da track Toggle off default. */
   --ds-toggle-track-border-color-off-focused: var(--ds-primary-background-default); /** Border color da track Toggle off focused. */
+  --ds-toggle-track-border-color-off-hover: var(--ds-border-control-hover); /** Border color da track Toggle off hover. */
   --ds-toggle-track-border-color-off-disabled: var(--ds-border-control-disabled); /** Border color da track Toggle off disabled. */
   --ds-toggle-thumb-inset-default: var(--ds-space-2xs); /** Inset/gap do thumb Toggle usado pela implementacao CSS. */
   --ds-toggle-thumb-radius-default: var(--ds-radius-full); /** Radius do thumb Toggle. */
   --ds-toggle-thumb-fill-off-default: var(--ds-content-default); /** Fill do thumb Toggle off default. */
   --ds-toggle-thumb-fill-off-focused: var(--ds-content-default); /** Fill do thumb Toggle off focused. */
+  --ds-toggle-thumb-fill-off-hover: var(--ds-content-hover); /** Fill do thumb Toggle off hover. */
   --ds-toggle-thumb-fill-off-disabled: var(--ds-content-disabled); /** Fill do thumb Toggle off disabled. */
   --ds-toggle-thumb-fill-on-default: var(--ds-primary-content-default); /** Fill do thumb Toggle on default. */
   --ds-toggle-thumb-fill-on-focused: var(--ds-primary-content-default); /** Fill do thumb Toggle on focused. */
+  --ds-toggle-thumb-fill-on-hover: var(--ds-primary-content-hover); /** Fill do thumb Toggle on hover. */
   --ds-toggle-thumb-fill-on-disabled: var(--ds-primary-content-disabled); /** Fill do thumb Toggle on disabled. */
   --ds-toggle-focus-ring-color-default: var(--ds-border-focus); /** Cor do focus ring Toggle. */
   --ds-toggle-focus-ring-stroke-width-default: var(--ds-border-width-focus); /** Stroke width do focus ring Toggle. */

@@ -21,7 +21,7 @@
           },
           {
             "file": "css/tokens/generated/theme-light.css",
-            "count": 10
+            "count": 11
           }
         ],
         "tokens": [
@@ -29,6 +29,7 @@
           "semantic.background.inverse",
           "semantic.content.strong",
           "semantic.primary.content-default",
+          "semantic.primary.content-hover",
           "semantic.feedback.success.content-contrast",
           "semantic.feedback.error.content-contrast",
           "semantic.surface.default",
@@ -55,8 +56,15 @@
       "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
-        "css": [],
-        "tokens": [],
+        "css": [
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "semantic.surface.hover"
+        ],
         "figma": []
       }
     },
@@ -104,7 +112,7 @@
         "css": [
           {
             "file": "css/tokens/generated/theme-dark.css",
-            "count": 2
+            "count": 3
           },
           {
             "file": "css/tokens/generated/theme-light.css",
@@ -114,6 +122,7 @@
         "tokens": [
           "semantic.outline.content-default",
           "semantic.outline.border-hover",
+          "semantic.content.hover",
           "semantic.border.default",
           "semantic.border.control-disabled"
         ],
@@ -247,7 +256,7 @@
           },
           {
             "file": "css/tokens/generated/theme-light.css",
-            "count": 2
+            "count": 3
           }
         ],
         "tokens": [
@@ -255,7 +264,8 @@
           "semantic.border.default",
           "semantic.border.control-disabled",
           "semantic.outline.content-default",
-          "semantic.outline.border-hover"
+          "semantic.outline.border-hover",
+          "semantic.content.hover"
         ],
         "figma": []
       }
@@ -276,11 +286,12 @@
         "css": [
           {
             "file": "css/tokens/generated/theme-dark.css",
-            "count": 5
+            "count": 6
           }
         ],
         "tokens": [
           "semantic.outline.border-disabled",
+          "semantic.surface.hover",
           "semantic.surface.raised",
           "semantic.background.subtle",
           "semantic.background.disabled",
@@ -305,7 +316,7 @@
         "css": [
           {
             "file": "css/tokens/generated/theme-dark.css",
-            "count": 8
+            "count": 9
           },
           {
             "file": "css/tokens/generated/theme-light.css",
@@ -314,6 +325,7 @@
         ],
         "tokens": [
           "semantic.primary.content-default",
+          "semantic.primary.content-hover",
           "semantic.feedback.success.content-contrast",
           "semantic.feedback.warning.content-contrast",
           "semantic.feedback.error.content-contrast",
@@ -875,7 +887,7 @@
         "css": [
           {
             "file": "css/tokens/generated/theme-dark.css",
-            "count": 2
+            "count": 3
           },
           {
             "file": "css/tokens/generated/theme-light.css",
@@ -883,6 +895,7 @@
           }
         ],
         "tokens": [
+          "semantic.feedback.error.border.hover",
           "semantic.feedback.error.background.hover",
           "semantic.border.focus-error",
           "semantic.feedback.error.border-default",
@@ -958,10 +971,11 @@
         "css": [
           {
             "file": "css/tokens/generated/theme-light.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [
+          "semantic.feedback.error.border.hover",
           "semantic.feedback.error.background.hover"
         ],
         "figma": []
@@ -4181,35 +4195,32 @@
             "count": 1
           },
           {
-            "file": "css/components/checkbox.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/radio.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/toggle.css",
-            "count": 1
-          },
-          {
             "file": "css/tokens/generated/component.css",
-            "count": 12
+            "count": 21
           }
         ],
         "tokens": [
+          "component.checkbox.box.fill.unchecked.default",
+          "component.checkbox.box.fill.unchecked.focused",
           "component.input.bg.default",
           "component.input.bg.error",
+          "component.input.bg.error-hover",
           "component.input.bg.filled",
           "component.input.bg.focused",
+          "component.radio.control.fill.unselected.default",
+          "component.radio.control.fill.unselected.focused",
           "component.select.bg.default",
           "component.select.bg.error",
+          "component.select.bg.error-hover",
           "component.select.bg.filled",
           "component.select.bg.focused",
           "component.textarea.bg.default",
           "component.textarea.bg.error",
+          "component.textarea.bg.error-hover",
           "component.textarea.bg.filled",
-          "component.textarea.bg.focused"
+          "component.textarea.bg.focused",
+          "component.toggle.track.fill.off.default",
+          "component.toggle.track.fill.off.focused"
         ],
         "figma": []
       }
@@ -4302,38 +4313,36 @@
             "count": 1
           },
           {
-            "file": "css/components/checkbox.css",
-            "count": 4
-          },
-          {
             "file": "css/components/modal.css",
             "count": 3
           },
           {
             "file": "css/components/radio.css",
-            "count": 5
+            "count": 1
           },
           {
             "file": "css/components/tabs.css",
             "count": 1
           },
           {
-            "file": "css/components/toggle.css",
-            "count": 3
-          },
-          {
             "file": "css/tokens/generated/component.css",
-            "count": 7
+            "count": 13
           }
         ],
         "tokens": [
+          "component.checkbox.label.color.default",
+          "component.checkbox.description.color.default",
           "component.form-field.label.color.default",
           "component.input.content.color.default",
           "component.input.label.color.default",
+          "component.radio.label.color.default",
+          "component.radio.description.color.default",
           "component.select.content.color.default",
           "component.select.label.color.default",
           "component.textarea.content.color.default",
-          "component.textarea.label.color.default"
+          "component.textarea.label.color.default",
+          "component.toggle.label.color.default",
+          "component.toggle.description.color.default"
         ],
         "figma": []
       }
@@ -4372,16 +4381,8 @@
             "count": 2
           },
           {
-            "file": "css/components/checkbox.css",
-            "count": 2
-          },
-          {
             "file": "css/components/modal.css",
             "count": 1
-          },
-          {
-            "file": "css/components/radio.css",
-            "count": 2
           },
           {
             "file": "css/components/tabs.css",
@@ -4392,25 +4393,26 @@
             "count": 1
           },
           {
-            "file": "css/components/toggle.css",
-            "count": 2
-          },
-          {
             "file": "css/tokens/generated/component.css",
-            "count": 10
+            "count": 15
           }
         ],
         "tokens": [
+          "component.checkbox.helper-text.color.default",
           "component.form-field.helper.color.default",
           "component.input.content.color.readonly",
           "component.input.helper.color.default",
           "component.input.label.color.readonly",
+          "component.radio.helper-text.color.default",
           "component.select.chevron.color.default",
           "component.select.content.color.readonly",
           "component.select.helper.color.default",
           "component.select.icon.color.default",
           "component.textarea.content.color.readonly",
-          "component.textarea.helper.color.default"
+          "component.textarea.helper.color.default",
+          "component.toggle.helper-text.color.default",
+          "component.toggle.thumb.fill.off.default",
+          "component.toggle.thumb.fill.off.focused"
         ],
         "figma": []
       }
@@ -4464,20 +4466,18 @@
             "count": 1
           },
           {
-            "file": "css/components/toggle.css",
-            "count": 1
-          },
-          {
             "file": "css/tokens/generated/component.css",
-            "count": 13
+            "count": 17
           }
         ],
         "tokens": [
+          "component.checkbox.label.color.disabled",
           "component.input.content.color.disabled",
           "component.input.helper.color.disabled",
           "component.input.icon.color.disabled",
           "component.input.label.color.disabled",
           "component.input.placeholder.color.disabled",
+          "component.radio.label.color.disabled",
           "component.select.chevron.color.disabled",
           "component.select.content.color.disabled",
           "component.select.helper.color.disabled",
@@ -4485,7 +4485,9 @@
           "component.select.placeholder.color.disabled",
           "component.textarea.content.color.disabled",
           "component.textarea.helper.color.disabled",
-          "component.textarea.placeholder.color.disabled"
+          "component.textarea.placeholder.color.disabled",
+          "component.toggle.label.color.disabled",
+          "component.toggle.thumb.fill.off.disabled"
         ],
         "figma": []
       }
@@ -4626,16 +4628,8 @@
             "count": 1
           },
           {
-            "file": "css/components/radio.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/toggle.css",
-            "count": 3
-          },
-          {
             "file": "css/tokens/generated/component.css",
-            "count": 10
+            "count": 12
           }
         ],
         "tokens": [
@@ -4646,9 +4640,11 @@
           "component.checkbox.box.border-width.default",
           "component.divider.line.thickness.default",
           "component.input.border-width.default",
+          "component.radio.control.border-width.unselected.default",
           "component.select.border-width.default",
           "component.tabs.list.border-width.default",
-          "component.textarea.border-width.default"
+          "component.textarea.border-width.default",
+          "component.toggle.track.border-width.default"
         ],
         "figma": []
       }
@@ -4667,10 +4663,11 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 2
+            "count": 3
           }
         ],
         "tokens": [
+          "component.radio.control.border-width.selected.default",
           "component.spinner.ring.stroke-width.default",
           "component.tabs.indicator.height.default"
         ],
@@ -4706,20 +4703,12 @@
             "count": 2
           },
           {
-            "file": "css/components/radio.css",
-            "count": 2
-          },
-          {
             "file": "css/components/tabs.css",
             "count": 2
           },
           {
-            "file": "css/components/toggle.css",
-            "count": 2
-          },
-          {
             "file": "css/tokens/generated/component.css",
-            "count": 9
+            "count": 11
           }
         ],
         "tokens": [
@@ -4728,10 +4717,12 @@
           "component.checkbox.focus-ring.stroke-width.default",
           "component.input.focus-ring.offset.default",
           "component.input.focus-ring.stroke-width.default",
+          "component.radio.focus-ring.stroke-width.default",
           "component.select.focus-ring.offset.default",
           "component.select.focus-ring.stroke-width.default",
           "component.textarea.focus-ring.offset.default",
-          "component.textarea.focus-ring.stroke-width.default"
+          "component.textarea.focus-ring.stroke-width.default",
+          "component.toggle.focus-ring.stroke-width.default"
         ],
         "figma": []
       }
@@ -4766,28 +4757,22 @@
             "count": 1
           },
           {
-            "file": "css/components/radio.css",
-            "count": 1
-          },
-          {
             "file": "css/components/tabs.css",
             "count": 1
           },
           {
-            "file": "css/components/toggle.css",
-            "count": 1
-          },
-          {
             "file": "css/tokens/generated/component.css",
-            "count": 6
+            "count": 8
           }
         ],
         "tokens": [
           "component.button.focus-ring.color.default",
           "component.checkbox.focus-ring.color.default",
           "component.input.focus-ring.color.default",
+          "component.radio.focus-ring.color.default",
           "component.select.focus-ring.color.default",
-          "component.textarea.focus-ring.color.default"
+          "component.textarea.focus-ring.color.default",
+          "component.toggle.focus-ring.color.default"
         ],
         "figma": []
       }
@@ -4868,19 +4853,7 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/checkbox.css",
-            "count": 1
-          },
-          {
             "file": "css/components/modal.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/radio.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/toggle.css",
             "count": 1
           }
         ],
@@ -5229,7 +5202,8 @@
           "component.select.label.font-size.sm",
           "component.select.text.font-size.sm",
           "component.textarea.helper.font-size.sm",
-          "component.textarea.label.font-size.sm"
+          "component.textarea.label.font-size.sm",
+          "component.textarea.text.font-size.sm"
         ],
         "figma": []
       }
@@ -5275,7 +5249,6 @@
           "component.textarea.label.font-size.md",
           "component.textarea.label.font-size.lg",
           "component.textarea.required.font-size.default",
-          "component.textarea.text.font-size.sm",
           "component.textarea.text.font-size.md",
           "component.tooltip.label.font-size.default"
         ],
@@ -5447,7 +5420,6 @@
           "component.textarea.label.line-height.md",
           "component.textarea.label.line-height.lg",
           "component.textarea.required.line-height.default",
-          "component.textarea.text.line-height.sm",
           "component.textarea.text.line-height.md",
           "component.tooltip.label.line-height.default"
         ],
@@ -5556,7 +5528,7 @@
           },
           {
             "file": "css/components/checkbox.css",
-            "count": 4
+            "count": 3
           },
           {
             "file": "css/components/input.css",
@@ -5572,7 +5544,7 @@
           },
           {
             "file": "css/components/radio.css",
-            "count": 4
+            "count": 3
           },
           {
             "file": "css/components/select.css",
@@ -5588,7 +5560,7 @@
           },
           {
             "file": "css/components/toggle.css",
-            "count": 5
+            "count": 4
           },
           {
             "file": "css/components/tooltip.css",
@@ -5639,7 +5611,7 @@
           },
           {
             "file": "css/components/checkbox.css",
-            "count": 4
+            "count": 3
           },
           {
             "file": "css/components/input.css",
@@ -5655,7 +5627,7 @@
           },
           {
             "file": "css/components/radio.css",
-            "count": 4
+            "count": 3
           },
           {
             "file": "css/components/select.css",
@@ -5671,7 +5643,7 @@
           },
           {
             "file": "css/components/toggle.css",
-            "count": 5
+            "count": 4
           },
           {
             "file": "css/components/tooltip.css",
@@ -5695,19 +5667,7 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/checkbox.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/radio.css",
-            "count": 2
-          },
-          {
             "file": "css/components/spinner.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/toggle.css",
             "count": 1
           }
         ],
@@ -6018,31 +5978,27 @@
             "count": 1
           },
           {
-            "file": "css/components/checkbox.css",
-            "count": 2
-          },
-          {
-            "file": "css/components/radio.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/toggle.css",
-            "count": 1
-          },
-          {
             "file": "css/components/tooltip.css",
             "count": 1
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 4
+            "count": 12
           }
         ],
         "tokens": [
           "component.button.content.color.brand.default",
           "component.button.content.color.brand.hover",
           "component.button.content.color.brand.pressed",
-          "component.button.content.color.brand.focused"
+          "component.button.content.color.brand.focused",
+          "component.checkbox.mark.fill.checked.default",
+          "component.checkbox.mark.fill.checked.focused",
+          "component.checkbox.mark.fill.indeterminate.default",
+          "component.checkbox.mark.fill.indeterminate.focused",
+          "component.radio.dot.fill.selected.default",
+          "component.radio.dot.fill.selected.focused",
+          "component.toggle.thumb.fill.on.default",
+          "component.toggle.thumb.fill.on.focused"
         ],
         "figma": []
       }
@@ -6062,11 +6018,15 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 1
+            "count": 5
           }
         ],
         "tokens": [
-          "component.button.content.color.brand.disabled"
+          "component.button.content.color.brand.disabled",
+          "component.checkbox.mark.fill.checked.disabled",
+          "component.checkbox.mark.fill.indeterminate.disabled",
+          "component.radio.dot.fill.selected.disabled",
+          "component.toggle.thumb.fill.on.disabled"
         ],
         "figma": []
       }
@@ -6708,26 +6668,17 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/checkbox.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/radio.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/toggle.css",
-            "count": 1
-          },
-          {
             "file": "css/tokens/generated/component.css",
-            "count": 3
+            "count": 6
           }
         ],
         "tokens": [
+          "component.checkbox.box.fill.unchecked.disabled",
           "component.input.bg.disabled",
+          "component.radio.control.fill.unselected.disabled",
           "component.select.bg.disabled",
-          "component.textarea.bg.disabled"
+          "component.textarea.bg.disabled",
+          "component.toggle.track.fill.off.disabled"
         ],
         "figma": []
       }
@@ -6746,27 +6697,21 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/checkbox.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/radio.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/toggle.css",
-            "count": 1
-          },
-          {
             "file": "css/tokens/generated/component.css",
-            "count": 4
+            "count": 10
           }
         ],
         "tokens": [
           "component.button.border-color.outline.pressed",
+          "component.checkbox.box.border-color.unchecked.default",
           "component.input.border-color.default",
+          "component.input.focus-ring.color.readonly",
+          "component.radio.control.border-color.unselected.default",
           "component.select.border-color.default",
-          "component.textarea.border-color.default"
+          "component.select.focus-ring.color.readonly",
+          "component.textarea.border-color.default",
+          "component.textarea.focus-ring.color.readonly",
+          "component.toggle.track.border-color.off.default"
         ],
         "figma": []
       }
@@ -6786,13 +6731,16 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 3
+            "count": 6
           }
         ],
         "tokens": [
+          "component.checkbox.box.border-color.unchecked.hover",
           "component.input.border-color.hover",
+          "component.radio.control.border-color.unselected.hover",
           "component.select.border-color.hover",
-          "component.textarea.border-color.hover"
+          "component.textarea.border-color.hover",
+          "component.toggle.track.border-color.off.hover"
         ],
         "figma": []
       }
@@ -6811,27 +6759,18 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/checkbox.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/radio.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/toggle.css",
-            "count": 1
-          },
-          {
             "file": "css/tokens/generated/component.css",
-            "count": 4
+            "count": 7
           }
         ],
         "tokens": [
           "component.button.border-color.outline.disabled",
+          "component.checkbox.box.border-color.unchecked.disabled",
           "component.input.border-color.disabled",
+          "component.radio.control.border-color.unselected.disabled",
           "component.select.border-color.disabled",
-          "component.textarea.border-color.disabled"
+          "component.textarea.border-color.disabled",
+          "component.toggle.track.border-color.off.disabled"
         ],
         "figma": []
       }
@@ -6851,22 +6790,15 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/checkbox.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/radio.css",
-            "count": 1
-          },
-          {
             "file": "css/tokens/generated/component.css",
-            "count": 7
+            "count": 8
           }
         ],
         "tokens": [
           "component.badge.padding-y.default",
           "component.button.gap.sm",
           "component.form-field.label-row.gap.default",
+          "component.form-field.error.icon-frame.padding-x.default",
           "component.input.label-row.gap.default",
           "component.select.label-row.gap.default",
           "component.textarea.label-row.gap.default",
@@ -6891,19 +6823,19 @@
         "css": [
           {
             "file": "css/components/checkbox.css",
-            "count": 6
+            "count": 5
           },
           {
             "file": "css/components/radio.css",
-            "count": 7
+            "count": 6
           },
           {
             "file": "css/components/toggle.css",
-            "count": 2
+            "count": 1
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 17
+            "count": 26
           },
           {
             "file": "css/utilities/layout.css",
@@ -6917,15 +6849,24 @@
           "component.breadcrumb.item.gap.default",
           "component.button.gap.md",
           "component.button.label-frame.padding-x.default",
+          "component.checkbox.content.gap.default",
           "component.form-field.gap.default",
           "component.form-field.error.gap.default",
+          "component.input.gap.sm",
           "component.input.gap.md",
+          "component.input.icon-frame.padding-x.default",
           "component.input.stack.gap.default",
           "component.input.text-frame.padding-x.default",
           "component.modal.close.padding.default",
+          "component.radio.content.gap.default",
+          "component.select.chevron-frame.padding-x.default",
+          "component.select.gap.sm",
+          "component.select.gap.md",
+          "component.select.icon-frame.padding-x.default",
           "component.select.stack.gap.default",
           "component.select.text-frame.padding-x.default",
           "component.textarea.stack.gap.default",
+          "component.toggle.content.gap.default",
           "component.tooltip.content.padding-y.default",
           "component.tooltip.arrow.depth.default"
         ],
@@ -6952,11 +6893,7 @@
           },
           {
             "file": "css/components/radio.css",
-            "count": 4
-          },
-          {
-            "file": "css/components/toggle.css",
-            "count": 1
+            "count": 3
           },
           {
             "file": "css/components/tooltip.css",
@@ -6964,7 +6901,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 25
+            "count": 26
           },
           {
             "file": "css/utilities/layout.css",
@@ -6983,18 +6920,19 @@
           "component.checkbox.target.gap.default",
           "component.input.gap.lg",
           "component.input.padding-x.sm",
+          "component.input.padding-x.md",
           "component.input.padding-y.sm",
           "component.modal.header.padding-bottom.sm",
           "component.modal.header.gap.default",
           "component.modal.footer.padding-top.sm",
           "component.modal.footer.gap.default",
-          "component.select.gap.sm",
-          "component.select.gap.md",
+          "component.radio.target.gap.default",
           "component.select.gap.lg",
           "component.select.padding-x.sm",
+          "component.select.padding-x.md",
           "component.select.padding-y.sm",
-          "component.textarea.padding-x.sm",
           "component.textarea.padding-y.sm",
+          "component.toggle.target.gap.default",
           "component.tooltip.content.padding-x.default",
           "component.tooltip.arrow.base.default"
         ],
@@ -7025,7 +6963,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 15
+            "count": 16
           },
           {
             "file": "css/utilities/layout.css",
@@ -7037,15 +6975,16 @@
           "component.button.padding-x.md",
           "component.button.padding-y.lg",
           "component.button.icon-only-padding.lg",
-          "component.input.padding-x.md",
+          "component.input.padding-x.lg",
           "component.input.padding-y.lg",
           "component.modal.header.padding-bottom.md",
           "component.modal.header.padding-bottom.lg",
           "component.modal.footer.padding-top.md",
           "component.modal.footer.padding-top.lg",
-          "component.select.padding-x.md",
+          "component.select.padding-x.lg",
           "component.select.padding-y.lg",
           "component.tabs.item.padding-top.default",
+          "component.textarea.padding-x.sm",
           "component.textarea.padding-x.md",
           "component.textarea.padding-y.lg"
         ],
@@ -7068,7 +7007,7 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 16
+            "count": 14
           },
           {
             "file": "css/utilities/layout.css",
@@ -7081,14 +7020,12 @@
           "component.card.header.padding-top.default",
           "component.card.body.padding-x.default",
           "component.card.body.padding-bottom.default",
-          "component.input.padding-x.lg",
           "component.modal.header.padding-x.sm",
           "component.modal.header.padding-top.sm",
           "component.modal.body.padding-x.sm",
           "component.modal.body.padding-bottom.sm",
           "component.modal.footer.padding-x.sm",
           "component.modal.footer.padding-bottom.sm",
-          "component.select.padding-x.lg",
           "component.tabs.item.padding-x.default",
           "component.tabs.panel.padding-y.default",
           "component.textarea.padding-x.lg"
@@ -7188,10 +7125,6 @@
             "count": 1
           },
           {
-            "file": "css/components/toggle.css",
-            "count": 1
-          },
-          {
             "file": "css/tokens/generated/component.css",
             "count": 2
           }
@@ -7217,7 +7150,7 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 12
+            "count": 13
           }
         ],
         "tokens": [
@@ -7232,7 +7165,8 @@
           "component.skeleton.rectangle.radius.default",
           "component.tabs.item.radius.default",
           "component.tabs.indicator.radius.default",
-          "component.textarea.radius.default"
+          "component.textarea.radius.default",
+          "component.toggle.target.radius.default"
         ],
         "figma": []
       }
@@ -7299,23 +7233,21 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/radio.css",
-            "count": 2
-          },
-          {
-            "file": "css/components/toggle.css",
-            "count": 2
-          },
-          {
             "file": "css/tokens/generated/component.css",
-            "count": 4
+            "count": 10
           }
         ],
         "tokens": [
           "component.avatar.radius.default",
           "component.badge.radius.default",
+          "component.radio.control.radius.default",
+          "component.radio.dot.radius.default",
+          "component.radio.focus-ring.radius.default",
           "component.skeleton.circle.radius.default",
-          "component.spinner.radius.default"
+          "component.spinner.radius.default",
+          "component.toggle.track.radius.default",
+          "component.toggle.thumb.radius.default",
+          "component.toggle.focus-ring.radius.default"
         ],
         "figma": []
       }
@@ -7403,6 +7335,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/tokens/generated/component.css",
+            "count": 1
+          },
+          {
             "file": "css/tokens/generated/theme-dark.css",
             "count": 1
           },
@@ -7412,6 +7348,7 @@
           }
         ],
         "tokens": [
+          "component.radio.dot.size.sm",
           "semantic.space.control.padding.6",
           "semantic.space.control.padding.6"
         ],
@@ -7433,6 +7370,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/tokens/generated/component.css",
+            "count": 1
+          },
+          {
             "file": "css/tokens/generated/theme-dark.css",
             "count": 1
           },
@@ -7442,6 +7383,7 @@
           }
         ],
         "tokens": [
+          "component.radio.dot.size.md",
           "semantic.space.sm",
           "semantic.space.sm"
         ],
@@ -7463,6 +7405,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/tokens/generated/component.css",
+            "count": 1
+          },
+          {
             "file": "css/tokens/generated/theme-dark.css",
             "count": 1
           },
@@ -7472,6 +7418,7 @@
           }
         ],
         "tokens": [
+          "component.radio.dot.size.lg",
           "semantic.space.control.padding.10",
           "semantic.space.control.padding.10"
         ],
@@ -7498,7 +7445,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 1
+            "count": 2
           },
           {
             "file": "css/tokens/generated/theme-dark.css",
@@ -7511,6 +7458,7 @@
         ],
         "tokens": [
           "component.skeleton.text.height.default",
+          "component.toggle.thumb.size.sm",
           "semantic.space.md",
           "semantic.space.md"
         ],
@@ -7586,6 +7534,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/tokens/generated/component.css",
+            "count": 1
+          },
+          {
             "file": "css/tokens/generated/theme-dark.css",
             "count": 2
           },
@@ -7595,6 +7547,7 @@
           }
         ],
         "tokens": [
+          "component.toggle.thumb.size.md",
           "semantic.space.xl",
           "semantic.size.sm",
           "semantic.space.xl",
@@ -7651,11 +7604,12 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [
-          "component.toggle.track.width.sm"
+          "component.toggle.track.width.sm",
+          "component.toggle.thumb.size.lg"
         ],
         "figma": []
       }
@@ -8529,32 +8483,37 @@
             "count": 1
           },
           {
-            "file": "css/components/checkbox.css",
-            "count": 5
-          },
-          {
-            "file": "css/components/radio.css",
-            "count": 3
-          },
-          {
             "file": "css/components/tabs.css",
             "count": 2
           },
           {
-            "file": "css/components/toggle.css",
-            "count": 3
-          },
-          {
             "file": "css/tokens/generated/component.css",
-            "count": 5
+            "count": 22
           }
         ],
         "tokens": [
           "component.button.bg.brand.default",
           "component.button.bg.brand.focused",
+          "component.checkbox.box.fill.checked.default",
+          "component.checkbox.box.fill.checked.focused",
+          "component.checkbox.box.fill.indeterminate.default",
+          "component.checkbox.box.fill.indeterminate.focused",
+          "component.checkbox.box.border-color.unchecked.focused",
+          "component.checkbox.box.border-color.checked.default",
+          "component.checkbox.box.border-color.checked.focused",
+          "component.checkbox.box.border-color.indeterminate.default",
+          "component.checkbox.box.border-color.indeterminate.focused",
           "component.input.border-color.focused",
+          "component.radio.control.fill.selected.default",
+          "component.radio.control.fill.selected.focused",
+          "component.radio.control.border-color.unselected.focused",
+          "component.radio.control.border-color.selected.default",
+          "component.radio.control.border-color.selected.focused",
           "component.select.border-color.focused",
-          "component.textarea.border-color.focused"
+          "component.textarea.border-color.focused",
+          "component.toggle.track.fill.on.default",
+          "component.toggle.track.fill.on.focused",
+          "component.toggle.track.border-color.off.focused"
         ],
         "figma": []
       }
@@ -8573,11 +8532,18 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 1
+            "count": 8
           }
         ],
         "tokens": [
-          "component.button.bg.brand.hover"
+          "component.button.bg.brand.hover",
+          "component.checkbox.box.fill.checked.hover",
+          "component.checkbox.box.fill.indeterminate.hover",
+          "component.checkbox.box.border-color.checked.hover",
+          "component.checkbox.box.border-color.indeterminate.hover",
+          "component.radio.control.fill.selected.hover",
+          "component.radio.control.border-color.selected.hover",
+          "component.toggle.track.fill.on.hover"
         ],
         "figma": []
       }
@@ -8619,11 +8585,18 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 1
+            "count": 8
           }
         ],
         "tokens": [
-          "component.button.bg.brand.disabled"
+          "component.button.bg.brand.disabled",
+          "component.checkbox.box.fill.checked.disabled",
+          "component.checkbox.box.fill.indeterminate.disabled",
+          "component.checkbox.box.border-color.checked.disabled",
+          "component.checkbox.box.border-color.indeterminate.disabled",
+          "component.radio.control.fill.selected.disabled",
+          "component.radio.control.border-color.selected.disabled",
+          "component.toggle.track.fill.on.disabled"
         ],
         "figma": []
       }
@@ -9229,16 +9202,21 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 8
+            "count": 13
           }
         ],
         "tokens": [
           "component.checkbox.box.size.sm",
           "component.form-field.error.icon.frame-size.default",
           "component.form-field.error.icon.glyph-size.default",
+          "component.input.icon.frame-size.sm",
           "component.input.icon.glyph-size.sm",
           "component.modal.close.glyph-size.default",
           "component.radio.control.size.sm",
+          "component.select.chevron.frame-size.sm",
+          "component.select.chevron.glyph-size.sm",
+          "component.select.icon.frame-size.sm",
+          "component.select.icon.glyph-size.sm",
           "component.spinner.size.sm",
           "component.toggle.track.height.sm"
         ],
@@ -9268,7 +9246,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 10
+            "count": 12
           }
         ],
         "tokens": [
@@ -9277,11 +9255,13 @@
           "component.button.icon.frame-size.sm",
           "component.button.icon.glyph-size.sm",
           "component.checkbox.box.size.md",
+          "component.input.icon.frame-size.md",
           "component.input.icon.glyph-size.md",
           "component.radio.control.size.md",
-          "component.select.chevron.glyph-size.sm",
-          "component.select.icon.frame-size.sm",
-          "component.select.icon.glyph-size.sm"
+          "component.select.chevron.frame-size.md",
+          "component.select.chevron.glyph-size.md",
+          "component.select.icon.frame-size.md",
+          "component.select.icon.glyph-size.md"
         ],
         "figma": []
       }
@@ -9301,7 +9281,7 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 24
+            "count": 17
           }
         ],
         "tokens": [
@@ -9312,20 +9292,13 @@
           "component.button.icon.glyph-size.md",
           "component.button.icon.glyph-size.lg",
           "component.checkbox.box.size.lg",
-          "component.input.icon.frame-size.sm",
-          "component.input.icon.frame-size.md",
           "component.input.icon.frame-size.lg",
           "component.input.icon.glyph-size.lg",
           "component.modal.close.size.default",
           "component.radio.control.size.lg",
-          "component.select.chevron.frame-size.sm",
-          "component.select.chevron.frame-size.md",
           "component.select.chevron.frame-size.lg",
-          "component.select.chevron.glyph-size.md",
           "component.select.chevron.glyph-size.lg",
-          "component.select.icon.frame-size.md",
           "component.select.icon.frame-size.lg",
-          "component.select.icon.glyph-size.md",
           "component.select.icon.glyph-size.lg",
           "component.spinner.size.md",
           "component.toggle.track.height.md"
@@ -9786,7 +9759,8 @@
         "tokens": [
           "component.button.label.line-height.sm",
           "component.input.text.line-height.sm",
-          "component.select.text.line-height.sm"
+          "component.select.text.line-height.sm",
+          "component.textarea.text.line-height.sm"
         ],
         "figma": []
       }
@@ -17232,7 +17206,7 @@
     "component.input.padding-x.md": {
       "layer": "component",
       "type": "dimension",
-      "references": "semantic.space.md",
+      "references": "semantic.space.sm",
       "sentido": "Padding horizontal do Field Input Text md.",
       "escopo": [
         "padding-left",
@@ -17254,7 +17228,7 @@
     "component.input.padding-x.lg": {
       "layer": "component",
       "type": "dimension",
-      "references": "semantic.space.lg",
+      "references": "semantic.space.md",
       "sentido": "Padding horizontal do Field Input Text lg.",
       "escopo": [
         "padding-left",
@@ -17342,7 +17316,7 @@
     "component.input.gap.sm": {
       "layer": "component",
       "type": "dimension",
-      "references": null,
+      "references": "semantic.space.xs",
       "sentido": "Gap interno do Field Input Text sm.",
       "escopo": [
         "gap"
@@ -17427,7 +17401,7 @@
     "component.input.icon.frame-size.sm": {
       "layer": "component",
       "type": "dimension",
-      "references": "semantic.size.md",
+      "references": "semantic.size.xs",
       "sentido": "Tamanho do frame de ícone Input Text sm.",
       "escopo": [
         "width",
@@ -17449,7 +17423,7 @@
     "component.input.icon.frame-size.md": {
       "layer": "component",
       "type": "dimension",
-      "references": "semantic.size.md",
+      "references": "semantic.size.sm",
       "sentido": "Tamanho do frame de ícone Input Text md.",
       "escopo": [
         "width",
@@ -17612,7 +17586,7 @@
         "css": [
           {
             "file": "css/components/input.css",
-            "count": 1
+            "count": 4
           }
         ],
         "tokens": [],
@@ -17678,7 +17652,7 @@
         "css": [
           {
             "file": "css/components/input.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [],
@@ -17744,7 +17718,7 @@
         "css": [
           {
             "file": "css/components/input.css",
-            "count": 2
+            "count": 5
           }
         ],
         "tokens": [],
@@ -17832,7 +17806,7 @@
         "css": [
           {
             "file": "css/components/input.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [],
@@ -18962,7 +18936,7 @@
         "css": [
           {
             "file": "css/components/select.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [],
@@ -19028,7 +19002,7 @@
         "css": [
           {
             "file": "css/components/select.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [],
@@ -19094,7 +19068,7 @@
         "css": [
           {
             "file": "css/components/select.css",
-            "count": 2
+            "count": 3
           }
         ],
         "tokens": [],
@@ -19182,7 +19156,7 @@
         "css": [
           {
             "file": "css/components/select.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [],
@@ -19260,7 +19234,7 @@
     "component.select.chevron.frame-size.sm": {
       "layer": "component",
       "type": "dimension",
-      "references": "semantic.size.md",
+      "references": "semantic.size.xs",
       "sentido": "Tamanho do frame do chevron do Select por size.",
       "escopo": [
         "width",
@@ -19273,7 +19247,7 @@
         "css": [
           {
             "file": "css/components/select.css",
-            "count": 2
+            "count": 3
           }
         ],
         "tokens": [],
@@ -19283,7 +19257,7 @@
     "component.select.chevron.frame-size.md": {
       "layer": "component",
       "type": "dimension",
-      "references": "semantic.size.md",
+      "references": "semantic.size.sm",
       "sentido": "Tamanho do frame do chevron do Select por size.",
       "escopo": [
         "width",
@@ -19319,7 +19293,7 @@
         "css": [
           {
             "file": "css/components/select.css",
-            "count": 2
+            "count": 3
           }
         ],
         "tokens": [],
@@ -19329,7 +19303,7 @@
     "component.select.chevron.glyph-size.sm": {
       "layer": "component",
       "type": "dimension",
-      "references": "semantic.size.sm",
+      "references": "semantic.size.xs",
       "sentido": "Tamanho do glyph do chevron do Select por size.",
       "escopo": [
         "width",
@@ -19352,7 +19326,7 @@
     "component.select.chevron.glyph-size.md": {
       "layer": "component",
       "type": "dimension",
-      "references": "semantic.size.md",
+      "references": "semantic.size.sm",
       "sentido": "Tamanho do glyph do chevron do Select por size.",
       "escopo": [
         "width",
@@ -19570,7 +19544,7 @@
     "component.select.gap.sm": {
       "layer": "component",
       "type": "dimension",
-      "references": "semantic.space.sm",
+      "references": "semantic.space.xs",
       "sentido": "Gap interno do Field Select por size.",
       "escopo": [
         "gap"
@@ -19581,7 +19555,7 @@
         "css": [
           {
             "file": "css/components/select.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [],
@@ -19591,7 +19565,7 @@
     "component.select.gap.md": {
       "layer": "component",
       "type": "dimension",
-      "references": "semantic.space.sm",
+      "references": "semantic.space.xs",
       "sentido": "Gap interno do Field Select por size.",
       "escopo": [
         "gap"
@@ -19623,7 +19597,7 @@
         "css": [
           {
             "file": "css/components/select.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [],
@@ -19917,7 +19891,7 @@
     "component.select.icon.frame-size.sm": {
       "layer": "component",
       "type": "dimension",
-      "references": "semantic.size.sm",
+      "references": "semantic.size.xs",
       "sentido": "Tamanho do frame de ícone leading do Select por size.",
       "escopo": [
         "width",
@@ -19940,7 +19914,7 @@
     "component.select.icon.frame-size.md": {
       "layer": "component",
       "type": "dimension",
-      "references": "semantic.size.md",
+      "references": "semantic.size.sm",
       "sentido": "Tamanho do frame de ícone leading do Select por size.",
       "escopo": [
         "width",
@@ -19986,7 +19960,7 @@
     "component.select.icon.glyph-size.sm": {
       "layer": "component",
       "type": "dimension",
-      "references": "semantic.size.sm",
+      "references": "semantic.size.xs",
       "sentido": "Tamanho do glyph de ícone leading do Select por size.",
       "escopo": [
         "width",
@@ -20009,7 +19983,7 @@
     "component.select.icon.glyph-size.md": {
       "layer": "component",
       "type": "dimension",
-      "references": "semantic.size.md",
+      "references": "semantic.size.sm",
       "sentido": "Tamanho do glyph de ícone leading do Select por size.",
       "escopo": [
         "width",
@@ -20312,7 +20286,7 @@
     "component.select.padding-x.md": {
       "layer": "component",
       "type": "dimension",
-      "references": "semantic.space.md",
+      "references": "semantic.space.sm",
       "sentido": "Padding horizontal do Field Select por size.",
       "escopo": [
         "padding"
@@ -20333,7 +20307,7 @@
     "component.select.padding-x.lg": {
       "layer": "component",
       "type": "dimension",
-      "references": "semantic.space.lg",
+      "references": "semantic.space.md",
       "sentido": "Padding horizontal do Field Select por size.",
       "escopo": [
         "padding"
@@ -20837,7 +20811,7 @@
         "css": [
           {
             "file": "css/components/select.css",
-            "count": 2
+            "count": 4
           }
         ],
         "tokens": [],
@@ -20995,7 +20969,12 @@
       "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
       "decisao": "Alias 1:1 para semantic.surface.default porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 4
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -21013,7 +20992,12 @@
       "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
       "decisao": "Alias 1:1 para semantic.surface.default porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -21031,7 +21015,12 @@
       "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
       "decisao": "Alias 1:1 para semantic.surface.default porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -21052,7 +21041,7 @@
         "css": [
           {
             "file": "css/components/textarea.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [],
@@ -21121,7 +21110,7 @@
         "css": [
           {
             "file": "css/components/textarea.css",
-            "count": 2
+            "count": 5
           }
         ],
         "tokens": [],
@@ -21141,7 +21130,12 @@
       "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
       "decisao": "Alias 1:1 para semantic.border.strong porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -21208,7 +21202,7 @@
         "css": [
           {
             "file": "css/components/textarea.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [],
@@ -21816,7 +21810,7 @@
     "component.textarea.padding-x.sm": {
       "layer": "component",
       "type": "dimension",
-      "references": "semantic.space.sm",
+      "references": "semantic.space.md",
       "sentido": "Padding horizontal do Field Textarea sm.",
       "escopo": [
         "Textarea",
@@ -22172,7 +22166,7 @@
     "component.textarea.text.font-size.sm": {
       "layer": "component",
       "type": "dimension",
-      "references": "semantic.typography.body.font-size.sm",
+      "references": "semantic.typography.body.font-size.xs",
       "sentido": "Font-size do texto Textarea sm.",
       "escopo": [
         "Textarea",
@@ -22287,7 +22281,7 @@
     "component.textarea.text.line-height.sm": {
       "layer": "component",
       "type": "dimension",
-      "references": "semantic.typography.body.line-height.sm",
+      "references": "semantic.typography.body.line-height.2xs",
       "sentido": "Line-height do texto Textarea sm.",
       "escopo": [
         "Textarea",
@@ -22366,7 +22360,12 @@
       "contexto": "Component token do contrato CSS-only do Form Field. Espelha o wrapper externo de ícone usado nos estados de erro de Input Text, Select e Textarea no Figma.",
       "decisao": "Alias 1:1 para semantic.space.2xs porque o frame externo do erro usa 2px de respiro horizontal ao redor do glyph de 16px.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/form-field.css",
+            "count": 4
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -22383,7 +22382,12 @@
       "contexto": "Component token do contrato do Input Text. Binda o wrapper externo dos ícones esquerdo/direito no Figma, enquanto icon.frame-size continua representando o Icon Placeholder interno.",
       "decisao": "Alias 1:1 para semantic.space.xs para manter 4px de respiro horizontal ao redor do glyph sem inflar o tamanho anatômico do Icon Placeholder.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 2
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -22400,7 +22404,12 @@
       "contexto": "Component token do contrato do Select. Binda o wrapper externo do chevron no Figma e separa o respiro horizontal do tamanho interno do Icon Placeholder.",
       "decisao": "Alias 1:1 para semantic.space.xs para manter 4px de respiro horizontal e preservar o glyph/placeholder em 16/20/24px por size.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 8
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -22417,7 +22426,12 @@
       "contexto": "Component token do contrato do Select. Binda o wrapper externo do ícone à esquerda no Figma, mantendo o Icon Placeholder interno separado do respiro horizontal.",
       "decisao": "Alias 1:1 para semantic.space.xs para manter 4px de respiro horizontal ao redor do ícone leading.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 2
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -22434,7 +22448,12 @@
       "contexto": "Component token do contrato Checkbox materializado no Figma para content frame.",
       "decisao": "Alias 1:1 para semantic.space.xs para manter a anatomia content frame alinhada entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 2
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -22451,7 +22470,12 @@
       "contexto": "Component token do contrato Checkbox materializado no Figma para label.",
       "decisao": "Alias 1:1 para semantic.content.strong para manter o estado default alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 2
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -22469,7 +22493,12 @@
       "contexto": "Component token do contrato Checkbox materializado no Figma para label.",
       "decisao": "Alias 1:1 para semantic.content.disabled para manter o estado disabled alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 2
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -22486,7 +22515,12 @@
       "contexto": "Component token do contrato Checkbox materializado no Figma para description.",
       "decisao": "Alias 1:1 para semantic.content.strong para manter o estado default alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 2
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -22503,7 +22537,12 @@
       "contexto": "Component token do contrato Checkbox materializado no Figma para helper text.",
       "decisao": "Alias 1:1 para semantic.content.default para manter o estado default alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 2
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -22521,7 +22560,12 @@
       "contexto": "Component token do contrato Checkbox materializado no Figma para box visual.",
       "decisao": "Alias 1:1 para semantic.surface.default para manter o estado unchecked alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -22559,7 +22603,12 @@
       "contexto": "Component token do contrato Checkbox materializado no Figma para box visual.",
       "decisao": "Alias 1:1 para semantic.background.disabled para manter o estado unchecked disabled alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -22577,7 +22626,12 @@
       "contexto": "Component token do contrato Checkbox materializado no Figma para box visual.",
       "decisao": "Alias 1:1 para semantic.primary.background.default para manter o estado checked alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -22615,7 +22669,12 @@
       "contexto": "Component token do contrato Checkbox materializado no Figma para box visual.",
       "decisao": "Alias 1:1 para semantic.primary.background.disabled para manter o estado checked disabled alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -22633,7 +22692,12 @@
       "contexto": "Component token do contrato Checkbox materializado no Figma para box visual.",
       "decisao": "Alias 1:1 para semantic.primary.background.default para manter o estado indeterminate alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -22671,7 +22735,12 @@
       "contexto": "Component token do contrato Checkbox materializado no Figma para box visual.",
       "decisao": "Alias 1:1 para semantic.primary.background.disabled para manter o estado indeterminate disabled alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -22689,7 +22758,12 @@
       "contexto": "Component token do contrato Checkbox materializado no Figma para box visual.",
       "decisao": "Alias 1:1 para semantic.border.control-default para manter o estado unchecked alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -22727,7 +22801,12 @@
       "contexto": "Component token do contrato Checkbox materializado no Figma para box visual.",
       "decisao": "Alias 1:1 para semantic.border.control-disabled para manter o estado unchecked disabled alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -22857,7 +22936,12 @@
       "contexto": "Component token do contrato Checkbox materializado no Figma para marca visual.",
       "decisao": "Alias 1:1 para semantic.primary.content-default para manter o estado checked alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -22895,7 +22979,12 @@
       "contexto": "Component token do contrato Checkbox materializado no Figma para marca visual.",
       "decisao": "Alias 1:1 para semantic.primary.content-disabled para manter o estado checked disabled alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -22913,7 +23002,12 @@
       "contexto": "Component token do contrato Checkbox materializado no Figma para marca visual.",
       "decisao": "Alias 1:1 para semantic.primary.content-default para manter o estado indeterminate alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -22951,7 +23045,12 @@
       "contexto": "Component token do contrato Checkbox materializado no Figma para marca visual.",
       "decisao": "Alias 1:1 para semantic.primary.content-disabled para manter o estado indeterminate disabled alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -22968,7 +23067,12 @@
       "contexto": "Component token do contrato Radio materializado no Figma para target interativo.",
       "decisao": "Alias 1:1 para semantic.space.sm para manter a anatomia target interativo alinhada entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -22985,7 +23089,12 @@
       "contexto": "Component token do contrato Radio materializado no Figma para content frame.",
       "decisao": "Alias 1:1 para semantic.space.xs para manter a anatomia content frame alinhada entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 2
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23002,7 +23111,12 @@
       "contexto": "Component token do contrato Radio materializado no Figma para label.",
       "decisao": "Alias 1:1 para semantic.content.strong para manter o estado default alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 2
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23020,7 +23134,12 @@
       "contexto": "Component token do contrato Radio materializado no Figma para label.",
       "decisao": "Alias 1:1 para semantic.content.disabled para manter o estado disabled alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 2
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23037,7 +23156,12 @@
       "contexto": "Component token do contrato Radio materializado no Figma para description.",
       "decisao": "Alias 1:1 para semantic.content.strong para manter o estado default alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 2
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23054,7 +23178,12 @@
       "contexto": "Component token do contrato Radio materializado no Figma para helper text.",
       "decisao": "Alias 1:1 para semantic.content.default para manter o estado default alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 2
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23071,7 +23200,12 @@
       "contexto": "Component token do contrato Radio materializado no Figma para control visual.",
       "decisao": "Alias 1:1 para semantic.radius.full para manter a anatomia control visual alinhada entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23089,7 +23223,12 @@
       "contexto": "Component token do contrato Radio materializado no Figma para control visual.",
       "decisao": "Alias 1:1 para semantic.surface.default para manter o estado unselected alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23127,7 +23266,12 @@
       "contexto": "Component token do contrato Radio materializado no Figma para control visual.",
       "decisao": "Alias 1:1 para semantic.background.disabled para manter o estado unselected disabled alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23145,7 +23289,12 @@
       "contexto": "Component token do contrato Radio materializado no Figma para control visual.",
       "decisao": "Alias 1:1 para semantic.primary.background.default para manter o estado selected alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23183,7 +23332,12 @@
       "contexto": "Component token do contrato Radio materializado no Figma para control visual.",
       "decisao": "Alias 1:1 para semantic.primary.background.disabled para manter o estado selected disabled alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23201,7 +23355,12 @@
       "contexto": "Component token do contrato Radio materializado no Figma para control visual.",
       "decisao": "Alias 1:1 para semantic.border.control-default para manter o estado unselected alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23239,7 +23398,12 @@
       "contexto": "Component token do contrato Radio materializado no Figma para control visual.",
       "decisao": "Alias 1:1 para semantic.border.control-disabled para manter o estado unselected disabled alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23257,7 +23421,12 @@
       "contexto": "Component token do contrato Radio materializado no Figma para control visual.",
       "decisao": "Alias 1:1 para semantic.primary.background.default para manter o estado selected alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23295,7 +23464,12 @@
       "contexto": "Component token do contrato Radio materializado no Figma para control visual.",
       "decisao": "Alias 1:1 para semantic.primary.background.disabled para manter o estado selected disabled alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23313,7 +23487,12 @@
       "contexto": "Component token do contrato Radio materializado no Figma para control visual.",
       "decisao": "Alias 1:1 para semantic.border.width.default para manter a anatomia control visual alinhada entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23331,7 +23510,12 @@
       "contexto": "Component token do contrato Radio materializado no Figma para control visual.",
       "decisao": "Alias 1:1 para semantic.border.width.strong para manter a anatomia control visual alinhada entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23349,7 +23533,12 @@
       "contexto": "Component token do contrato Radio materializado no Figma para dot interno.",
       "decisao": "Alias 1:1 para foundation.dimension.6 para manter a anatomia dot interno alinhada entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 2
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23367,7 +23556,12 @@
       "contexto": "Component token do contrato Radio materializado no Figma para dot interno.",
       "decisao": "Alias 1:1 para foundation.dimension.8 para manter a anatomia dot interno alinhada entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 2
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23385,7 +23579,12 @@
       "contexto": "Component token do contrato Radio materializado no Figma para dot interno.",
       "decisao": "Alias 1:1 para foundation.dimension.10 para manter a anatomia dot interno alinhada entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 2
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23402,7 +23601,12 @@
       "contexto": "Component token do contrato Radio materializado no Figma para dot interno.",
       "decisao": "Alias 1:1 para semantic.radius.full para manter a anatomia dot interno alinhada entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23420,7 +23624,12 @@
       "contexto": "Component token do contrato Radio materializado no Figma para dot interno.",
       "decisao": "Alias 1:1 para semantic.primary.content-default para manter o estado selected alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23458,7 +23667,12 @@
       "contexto": "Component token do contrato Radio materializado no Figma para dot interno.",
       "decisao": "Alias 1:1 para semantic.primary.content-disabled para manter o estado selected disabled alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23475,7 +23689,12 @@
       "contexto": "Component token do contrato Radio materializado no Figma para focus ring.",
       "decisao": "Alias 1:1 para semantic.border.focus para manter o estado default alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23492,7 +23711,12 @@
       "contexto": "Component token do contrato Radio materializado no Figma para focus ring.",
       "decisao": "Alias 1:1 para semantic.border.width.focus para manter a anatomia focus ring alinhada entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 2
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23526,7 +23750,12 @@
       "contexto": "Component token do contrato Toggle materializado no Figma para target interativo.",
       "decisao": "Alias 1:1 para semantic.space.sm para manter a anatomia target interativo alinhada entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23543,7 +23772,12 @@
       "contexto": "Component token do contrato Toggle materializado no Figma para target interativo.",
       "decisao": "Alias 1:1 para semantic.radius.md para manter a anatomia target interativo alinhada entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23560,7 +23794,12 @@
       "contexto": "Component token do contrato Toggle materializado no Figma para content frame.",
       "decisao": "Alias 1:1 para semantic.space.xs para manter a anatomia content frame alinhada entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23577,7 +23816,12 @@
       "contexto": "Component token do contrato Toggle materializado no Figma para label.",
       "decisao": "Alias 1:1 para semantic.content.strong para manter o estado default alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 2
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23595,7 +23839,12 @@
       "contexto": "Component token do contrato Toggle materializado no Figma para label.",
       "decisao": "Alias 1:1 para semantic.content.disabled para manter o estado disabled alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 2
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23612,7 +23861,12 @@
       "contexto": "Component token do contrato Toggle materializado no Figma para description.",
       "decisao": "Alias 1:1 para semantic.content.strong para manter o estado default alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23629,7 +23883,12 @@
       "contexto": "Component token do contrato Toggle materializado no Figma para helper text.",
       "decisao": "Alias 1:1 para semantic.content.default para manter o estado default alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23646,7 +23905,12 @@
       "contexto": "Component token do contrato Toggle materializado no Figma para track.",
       "decisao": "Alias 1:1 para semantic.radius.full para manter a anatomia track alinhada entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23663,7 +23927,12 @@
       "contexto": "Component token do contrato Toggle materializado no Figma para track.",
       "decisao": "Alias 1:1 para semantic.border.width.default para manter a anatomia track alinhada entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 2
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23681,7 +23950,12 @@
       "contexto": "Component token do contrato Toggle materializado no Figma para track.",
       "decisao": "Alias 1:1 para semantic.surface.default para manter o estado off alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23719,7 +23993,12 @@
       "contexto": "Component token do contrato Toggle materializado no Figma para track.",
       "decisao": "Alias 1:1 para semantic.background.disabled para manter o estado off disabled alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23737,7 +24016,12 @@
       "contexto": "Component token do contrato Toggle materializado no Figma para track.",
       "decisao": "Alias 1:1 para semantic.primary.background.default para manter o estado on alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23775,7 +24059,12 @@
       "contexto": "Component token do contrato Toggle materializado no Figma para track.",
       "decisao": "Alias 1:1 para semantic.primary.background.disabled para manter o estado on disabled alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23793,7 +24082,12 @@
       "contexto": "Component token do contrato Toggle materializado no Figma para track.",
       "decisao": "Alias 1:1 para semantic.border.control-default para manter o estado off alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23831,7 +24125,12 @@
       "contexto": "Component token do contrato Toggle materializado no Figma para track.",
       "decisao": "Alias 1:1 para semantic.border.control-disabled para manter o estado off disabled alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23849,7 +24148,12 @@
       "contexto": "Component token do contrato Toggle materializado no Figma para thumb.",
       "decisao": "Alias 1:1 para foundation.dimension.12 para manter a anatomia thumb alinhada entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23867,7 +24171,12 @@
       "contexto": "Component token do contrato Toggle materializado no Figma para thumb.",
       "decisao": "Alias 1:1 para foundation.dimension.20 para manter a anatomia thumb alinhada entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23885,7 +24194,12 @@
       "contexto": "Component token do contrato Toggle materializado no Figma para thumb.",
       "decisao": "Alias 1:1 para foundation.dimension.28 para manter a anatomia thumb alinhada entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23902,7 +24216,12 @@
       "contexto": "Component token do contrato Toggle materializado no Figma para thumb.",
       "decisao": "Alias 1:1 para semantic.radius.full para manter a anatomia thumb alinhada entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23920,7 +24239,12 @@
       "contexto": "Component token do contrato Toggle materializado no Figma para thumb.",
       "decisao": "Alias 1:1 para semantic.content.default para manter o estado off alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23958,7 +24282,12 @@
       "contexto": "Component token do contrato Toggle materializado no Figma para thumb.",
       "decisao": "Alias 1:1 para semantic.content.disabled para manter o estado off disabled alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23976,7 +24305,12 @@
       "contexto": "Component token do contrato Toggle materializado no Figma para thumb.",
       "decisao": "Alias 1:1 para semantic.primary.content-default para manter o estado on alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24014,7 +24348,12 @@
       "contexto": "Component token do contrato Toggle materializado no Figma para thumb.",
       "decisao": "Alias 1:1 para semantic.primary.content-disabled para manter o estado on disabled alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24031,7 +24370,12 @@
       "contexto": "Component token do contrato Toggle materializado no Figma para focus ring.",
       "decisao": "Alias 1:1 para semantic.border.focus para manter o estado default alinhado entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24048,7 +24392,12 @@
       "contexto": "Component token do contrato Toggle materializado no Figma para focus ring.",
       "decisao": "Alias 1:1 para semantic.border.width.focus para manter a anatomia focus ring alinhada entre Figma, CSS e docs.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 2
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24067,6 +24416,723 @@
       "usos": {
         "css": [],
         "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.box.fill.unchecked.hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.surface.hover",
+      "sentido": "Fill da box Checkbox unchecked em hover.",
+      "escopo": [
+        "checkbox",
+        "box",
+        "hover"
+      ],
+      "contexto": "Component token do contrato Checkbox para o estado hover da anatomia box.",
+      "decisao": "Alias para semantic.surface.hover para separar hover de surface/default e manter a cadeia Foundation → Semantic → Component.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.box.fill.checked.hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.background.hover",
+      "sentido": "Fill da box Checkbox checked em hover.",
+      "escopo": [
+        "checkbox",
+        "box",
+        "hover"
+      ],
+      "contexto": "Component token do contrato Checkbox para estado checked + hover.",
+      "decisao": "Alias para semantic.primary.background.hover porque o estado preenchido deve acompanhar a intenção semântica hover de primary.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.box.fill.indeterminate.hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.background.hover",
+      "sentido": "Fill da box Checkbox indeterminate em hover.",
+      "escopo": [
+        "checkbox",
+        "box",
+        "hover"
+      ],
+      "contexto": "Component token do contrato Checkbox para estado indeterminate + hover.",
+      "decisao": "Alias para semantic.primary.background.hover para manter checked e indeterminate com o mesmo fill semântico no hover.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.box.border-color.unchecked.hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.control-hover",
+      "sentido": "Border da box Checkbox unchecked em hover.",
+      "escopo": [
+        "checkbox",
+        "box",
+        "hover"
+      ],
+      "contexto": "Component token do contrato Checkbox para borda de controle não selecionado em hover.",
+      "decisao": "Alias para semantic.border.control-hover para não reutilizar border/control-default no estado hover.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.box.border-color.checked.hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.background.hover",
+      "sentido": "Border da box Checkbox checked em hover.",
+      "escopo": [
+        "checkbox",
+        "box",
+        "hover"
+      ],
+      "contexto": "Component token do contrato Checkbox para borda de checked hover.",
+      "decisao": "Alias para semantic.primary.background.hover para preservar paridade entre fill e border do estado preenchido.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.box.border-color.indeterminate.hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.background.hover",
+      "sentido": "Border da box Checkbox indeterminate em hover.",
+      "escopo": [
+        "checkbox",
+        "box",
+        "hover"
+      ],
+      "contexto": "Component token do contrato Checkbox para borda de indeterminate hover.",
+      "decisao": "Alias para semantic.primary.background.hover para preservar paridade entre fill e border do estado preenchido.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.mark.fill.checked.hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.content-hover",
+      "sentido": "Fill do checkmark Checkbox em hover.",
+      "escopo": [
+        "checkbox",
+        "mark",
+        "hover"
+      ],
+      "contexto": "Component token do contrato Checkbox para a marca checked no estado hover.",
+      "decisao": "Alias para semantic.primary.content-hover para manter o conteúdo sobre primary em cadeia semântica própria de hover.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.mark.fill.indeterminate.hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.content-hover",
+      "sentido": "Fill da marca indeterminate Checkbox em hover.",
+      "escopo": [
+        "checkbox",
+        "mark",
+        "hover"
+      ],
+      "contexto": "Component token do contrato Checkbox para a marca indeterminate no estado hover.",
+      "decisao": "Alias para semantic.primary.content-hover para manter checked e indeterminate alinhados no conteúdo sobre primary.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.control.fill.unselected.hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.surface.hover",
+      "sentido": "Fill do control Radio unselected em hover.",
+      "escopo": [
+        "radio",
+        "control",
+        "hover"
+      ],
+      "contexto": "Component token do contrato Radio para estado unselected + hover.",
+      "decisao": "Alias para semantic.surface.hover para separar hover de surface/default.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.control.fill.selected.hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.background.hover",
+      "sentido": "Fill do control Radio selected em hover.",
+      "escopo": [
+        "radio",
+        "control",
+        "hover"
+      ],
+      "contexto": "Component token do contrato Radio para estado selected + hover.",
+      "decisao": "Alias para semantic.primary.background.hover porque selected é um fill primário no hover.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.control.border-color.unselected.hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.control-hover",
+      "sentido": "Border do control Radio unselected em hover.",
+      "escopo": [
+        "radio",
+        "control",
+        "hover"
+      ],
+      "contexto": "Component token do contrato Radio para borda unselected em hover.",
+      "decisao": "Alias para semantic.border.control-hover para não reutilizar border/control-default no estado hover.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.control.border-color.selected.hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.background.hover",
+      "sentido": "Border do control Radio selected em hover.",
+      "escopo": [
+        "radio",
+        "control",
+        "hover"
+      ],
+      "contexto": "Component token do contrato Radio para borda selected em hover.",
+      "decisao": "Alias para semantic.primary.background.hover para preservar paridade entre fill e border do estado selected.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.dot.fill.selected.hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.content-hover",
+      "sentido": "Fill do dot Radio selected em hover.",
+      "escopo": [
+        "radio",
+        "dot",
+        "hover"
+      ],
+      "contexto": "Component token do contrato Radio para o dot selected em hover.",
+      "decisao": "Alias para semantic.primary.content-hover para manter conteúdo sobre primary em cadeia semântica de hover.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.track.fill.off.hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.surface.hover",
+      "sentido": "Fill da track Toggle off em hover.",
+      "escopo": [
+        "toggle",
+        "track",
+        "hover"
+      ],
+      "contexto": "Component token do contrato Toggle para estado off + hover.",
+      "decisao": "Alias para semantic.surface.hover para separar hover de surface/default.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.track.fill.on.hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.background.hover",
+      "sentido": "Fill da track Toggle on em hover.",
+      "escopo": [
+        "toggle",
+        "track",
+        "hover"
+      ],
+      "contexto": "Component token do contrato Toggle para estado on + hover.",
+      "decisao": "Alias para semantic.primary.background.hover porque on é o estado primário preenchido em hover.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.track.border-color.off.hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.control-hover",
+      "sentido": "Border da track Toggle off em hover.",
+      "escopo": [
+        "toggle",
+        "track",
+        "hover"
+      ],
+      "contexto": "Component token do contrato Toggle para borda off em hover.",
+      "decisao": "Alias para semantic.border.control-hover para não reutilizar border/control-default no estado hover.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.thumb.fill.off.hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.hover",
+      "sentido": "Fill do thumb Toggle off em hover.",
+      "escopo": [
+        "toggle",
+        "thumb",
+        "hover"
+      ],
+      "contexto": "Component token do contrato Toggle para thumb off em hover.",
+      "decisao": "Alias para semantic.content.hover porque o thumb off é conteúdo neutro sobre surface hover.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.toggle.thumb.fill.on.hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.primary.content-hover",
+      "sentido": "Fill do thumb Toggle on em hover.",
+      "escopo": [
+        "toggle",
+        "thumb",
+        "hover"
+      ],
+      "contexto": "Component token do contrato Toggle para thumb on em hover.",
+      "decisao": "Alias para semantic.primary.content-hover para manter conteúdo sobre primary em cadeia semântica de hover.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.primary.content-hover": {
+      "layer": "semantic",
+      "type": "color",
+      "references": "foundation.color.neutral.50",
+      "sentido": "Conteúdo sobre fill primário em hover.",
+      "escopo": [
+        "text",
+        "shape",
+        "hover"
+      ],
+      "contexto": "Semantic token usado por marcas internas de controles e conteúdo sobre primary/background/hover.",
+      "decisao": "Mantém token semântico próprio para hover mesmo quando o valor atual é igual ao default; isso evita que component tokens de hover apontem para semantic default.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/tokens/generated/component.css",
+            "count": 4
+          }
+        ],
+        "tokens": [
+          "component.checkbox.mark.fill.checked.hover",
+          "component.checkbox.mark.fill.indeterminate.hover",
+          "component.radio.dot.fill.selected.hover",
+          "component.toggle.thumb.fill.on.hover"
+        ],
+        "figma": []
+      }
+    },
+    "semantic.surface.hover": {
+      "layer": "semantic",
+      "type": "color",
+      "references": "foundation.color.neutral.100",
+      "sentido": "Surface neutra em hover.",
+      "escopo": [
+        "fill",
+        "hover"
+      ],
+      "contexto": "Semantic token para superfícies de controles no estado hover.",
+      "decisao": "Introduz estado hover na camada semântica para que Checkbox, Radio e Toggle não dependam de surface/default.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/tokens/generated/component.css",
+            "count": 3
+          }
+        ],
+        "tokens": [
+          "component.checkbox.box.fill.unchecked.hover",
+          "component.radio.control.fill.unselected.hover",
+          "component.toggle.track.fill.off.hover"
+        ],
+        "figma": []
+      }
+    },
+    "semantic.content.hover": {
+      "layer": "semantic",
+      "type": "color",
+      "references": "foundation.color.neutral.700",
+      "sentido": "Conteúdo neutro em hover.",
+      "escopo": [
+        "text",
+        "shape",
+        "hover"
+      ],
+      "contexto": "Semantic token para conteúdo neutro de controles no estado hover.",
+      "decisao": "Introduz estado hover na camada semântica para que partes anatômicas como toggle/thumb/off não apontem para content/default.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/tokens/generated/component.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "component.toggle.thumb.fill.off.hover"
+        ],
+        "figma": []
+      }
+    },
+    "component.input.bg.error-hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.surface.default",
+      "sentido": "Bg do Field Input Text em erro durante hover.",
+      "escopo": [
+        "background",
+        "fill"
+      ],
+      "contexto": "Component token do contrato do Input Text para a combinação Error=True e State=Hover no Figma.",
+      "decisao": "Alias 1:1 para semantic.surface.default para manter o erro visual na borda, sem alterar a superfície do campo.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.input.border-color.error-hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.feedback.error.border.hover",
+      "sentido": "Border color do Field Input Text em erro durante hover.",
+      "escopo": [
+        "border-color",
+        "stroke"
+      ],
+      "contexto": "Component token do contrato do Input Text para a combinação Error=True e State=Hover no Figma.",
+      "decisao": "Alias 1:1 para semantic.feedback.error.border.hover para separar erro default de erro em hover.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.input.focus-ring.color.readonly": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.control-default",
+      "sentido": "Cor neutra do focus ring Input Text readonly.",
+      "escopo": [
+        "color",
+        "stroke"
+      ],
+      "contexto": "Component token do contrato do Input Text para Readonly=True e State=Focus no Figma.",
+      "decisao": "Alias 1:1 para semantic.border.control-default porque readonly pode receber foco, mas não deve parecer estado ativo primário.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.bg.error-hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.surface.default",
+      "sentido": "Bg do Field Select em erro durante hover.",
+      "escopo": [
+        "background",
+        "fill"
+      ],
+      "contexto": "Component token do contrato do Select para a combinação Error=True e State=Hover no Figma.",
+      "decisao": "Alias 1:1 para semantic.surface.default para manter o erro visual na borda, sem alterar a superfície do campo.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.border-color.error-hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.feedback.error.border.hover",
+      "sentido": "Border color do Field Select em erro durante hover.",
+      "escopo": [
+        "border-color",
+        "stroke"
+      ],
+      "contexto": "Component token do contrato do Select para a combinação Error=True e State=Hover no Figma.",
+      "decisao": "Alias 1:1 para semantic.feedback.error.border.hover para separar erro default de erro em hover.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.select.focus-ring.color.readonly": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.control-default",
+      "sentido": "Cor neutra do focus ring Select readonly.",
+      "escopo": [
+        "color",
+        "stroke"
+      ],
+      "contexto": "Component token do contrato do Select para Readonly=True e State=Focus no Figma.",
+      "decisao": "Alias 1:1 para semantic.border.control-default porque readonly pode receber foco, mas não deve parecer estado ativo primário.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.bg.error-hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.surface.default",
+      "sentido": "Bg do Field Textarea em erro durante hover.",
+      "escopo": [
+        "background",
+        "fill"
+      ],
+      "contexto": "Component token do contrato do Textarea para a combinação Error=True e State=Hover no Figma.",
+      "decisao": "Alias 1:1 para semantic.surface.default para manter o erro visual na borda, sem alterar a superfície do campo.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.border-color.error-hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.feedback.error.border.hover",
+      "sentido": "Border color do Field Textarea em erro durante hover.",
+      "escopo": [
+        "border-color",
+        "stroke"
+      ],
+      "contexto": "Component token do contrato do Textarea para a combinação Error=True e State=Hover no Figma.",
+      "decisao": "Alias 1:1 para semantic.feedback.error.border.hover para separar erro default de erro em hover.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.textarea.focus-ring.color.readonly": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.control-default",
+      "sentido": "Cor neutra do focus ring Textarea readonly.",
+      "escopo": [
+        "color",
+        "stroke"
+      ],
+      "contexto": "Component token do contrato do Textarea para Readonly=True e State=Focus no Figma.",
+      "decisao": "Alias 1:1 para semantic.border.control-default porque readonly pode receber foco, mas não deve parecer estado ativo primário.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.feedback.error.border.hover": {
+      "layer": "semantic",
+      "type": "color",
+      "references": "foundation.color.red.800",
+      "sentido": "Borda de feedback erro em estado hover.",
+      "escopo": [
+        "border-color",
+        "stroke"
+      ],
+      "contexto": "Use em componentes de formulário quando Error=True e State=Hover exigem borda de erro mais enfática que o default.",
+      "decisao": "Aliasado a foundation.color.red.800 no tema light e foundation.color.red.500 no tema dark, acompanhando o contrato criado no Figma.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/tokens/generated/component.css",
+            "count": 3
+          }
+        ],
+        "tokens": [
+          "component.input.border-color.error-hover",
+          "component.select.border-color.error-hover",
+          "component.textarea.border-color.error-hover"
+        ],
         "figma": []
       }
     }

@@ -77,6 +77,24 @@
   transform: translateX(calc(var(--toggle-width) - var(--toggle-thumb-size) - (var(--thumb-gap) * 2)));
 }
 
+/* Hover State */
+.ds-toggle:hover:not(:disabled) {
+  background-color: var(--ds-toggle-track-fill-off-hover);
+  border-color: var(--ds-toggle-track-border-color-off-hover);
+}
+
+.ds-toggle:hover:not(:disabled)::after {
+  background-color: var(--ds-toggle-thumb-fill-off-hover);
+}
+
+.ds-toggle:checked:hover:not(:disabled) {
+  background-color: var(--ds-toggle-track-fill-on-hover);
+}
+
+.ds-toggle:checked:hover:not(:disabled)::after {
+  background-color: var(--ds-toggle-thumb-fill-on-hover);
+}
+
 /* Focus State */
 .ds-toggle:focus-visible {
   outline: var(--ds-toggle-focus-ring-stroke-width-default) solid var(--ds-toggle-focus-ring-color-default);

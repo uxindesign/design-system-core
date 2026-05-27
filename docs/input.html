@@ -80,16 +80,16 @@
 
         <!-- 4: Label -->
         <div style="position:relative;" inert>
-          <label class="ds-field__label">Email address</label>
+          <label class="ds-field__label">Email<span class="ds-field__required">*</span></label>
           <span style="position:absolute;left:-28px;top:50%;transform:translateY(-50%);height:1px;width:28px;background:var(--ds-primary-background-default);"></span>
           <span class="ds-anatomy__marker" style="top:50%;left:-48px;transform:translateY(-50%);">4</span>
         </div>
 
         <!-- 1: Wrapper · 2: Icon · 3: Field -->
         <div style="position:relative;" inert>
-          <div class="ds-input">
+          <div class="ds-input ds-input--error">
             <span class="ds-input__icon material-symbols-outlined">mail</span>
-            <input type="text" class="ds-input__field" placeholder="name@example.com">
+            <input type="text" class="ds-input__field" value="invalid" aria-invalid="true">
           </div>
           <!-- 1: Wrapper top center -->
           <span style="position:absolute;top:-28px;left:50%;transform:translateX(-50%);width:1px;height:28px;background:var(--ds-primary-background-default);"></span>
@@ -102,16 +102,16 @@
           <span class="ds-anatomy__marker" style="top:-48px;right:2px;">3</span>
         </div>
 
-        <!-- 5: Helper -->
-        <div style="position:relative;" inert>
-          <span class="ds-field__helper">We'll never share your email.</span>
+        <!-- 5: Error -->
+        <div class="ds-field--error" style="position:relative;display:flex;align-items:flex-start;height:18px;" inert>
+          <span class="ds-field__error">Please enter a valid email.</span>
           <span style="position:absolute;left:-28px;top:50%;transform:translateY(-50%);height:1px;width:28px;background:var(--ds-primary-background-default);"></span>
           <span class="ds-anatomy__marker" style="top:50%;left:-48px;transform:translateY(-50%);">5</span>
         </div>
 
-        <!-- 6: Error -->
-        <div class="ds-field--error" style="position:relative;" inert>
-          <span class="ds-field__error">Please enter a valid email.</span>
+        <!-- 6: Helper -->
+        <div style="position:relative;display:flex;align-items:flex-start;height:18px;" inert>
+          <span class="ds-field__helper">We'll never share your email.</span>
           <span style="position:absolute;left:-28px;top:50%;transform:translateY(-50%);height:1px;width:28px;background:var(--ds-primary-background-default);"></span>
           <span class="ds-anatomy__marker" style="top:50%;left:-48px;transform:translateY(-50%);">6</span>
         </div>
@@ -125,16 +125,16 @@
         <strong>2</strong> Ícone (opcional, <code>.ds-input__icon</code>) — frame 24px; glyph 16/20/24px em sm/md/lg.<br>
         <strong>3</strong> Campo (<code>.ds-input__field</code>) — o elemento nativo <code>&lt;input&gt;</code>.<br>
         <strong>4</strong> Label (<code>.ds-field__label</code>) — externo, via Form Field.<br>
-        <strong>5</strong> Texto auxiliar (<code>.ds-field__helper</code>) — externo, via Form Field.<br>
-        <strong>6</strong> Mensagem de erro (<code>.ds-field__error</code>) — externa, via Form Field.
+        <strong>5</strong> Mensagem de erro (<code>.ds-field__error</code>) — externa, via Form Field.<br>
+        <strong>6</strong> Texto auxiliar (<code>.ds-field__helper</code>) — externo, via Form Field.
       </span>
       <span data-lang="en">
         <strong>1</strong> Wrapper (<code>.ds-input</code>) — container with border, radius, background, padding and gap.<br>
         <strong>2</strong> Icon (optional, <code>.ds-input__icon</code>) — 24px frame; 16/20/24px glyph in sm/md/lg.<br>
         <strong>3</strong> Field (<code>.ds-input__field</code>) — the native <code>&lt;input&gt;</code> element.<br>
         <strong>4</strong> Label (<code>.ds-field__label</code>) — external, via Form Field.<br>
-        <strong>5</strong> Helper text (<code>.ds-field__helper</code>) — external, via Form Field.<br>
-        <strong>6</strong> Error message (<code>.ds-field__error</code>) — external, via Form Field.
+        <strong>5</strong> Error message (<code>.ds-field__error</code>) — external, via Form Field.<br>
+        <strong>6</strong> Helper text (<code>.ds-field__helper</code>) — external, via Form Field.
       </span>
     </div>
   </div>

@@ -211,17 +211,27 @@
 }
 
 /* Error */
-.ds-select--error {
+.ds-select--error,
+.ds-field--error .ds-select {
   background: var(--ds-select-bg-error);
   border-color: var(--ds-select-border-color-error);
 }
 
+.ds-select--error:hover:not(.ds-select--disabled):not(:focus-within),
+.ds-field--error .ds-select:hover:not(.ds-select--disabled):not(:focus-within) {
+  background: var(--ds-select-bg-error-hover);
+  border-color: var(--ds-select-border-color-error-hover);
+}
+
 .ds-select--error .ds-select__field,
-.ds-select--error .ds-select__field:invalid {
+.ds-select--error .ds-select__field:invalid,
+.ds-field--error .ds-select .ds-select__field,
+.ds-field--error .ds-select .ds-select__field:invalid {
   color: var(--ds-select-content-color-default);
 }
 
-.ds-select--error:focus-within {
+.ds-select--error:focus-within,
+.ds-field--error .ds-select:focus-within {
   border-color: var(--ds-select-border-color-error);
   outline-color: var(--ds-select-focus-ring-color-error);
 }
@@ -264,6 +274,12 @@
 
 .ds-select--readonly .ds-select__field {
   color: var(--ds-select-content-color-readonly);
+}
+
+.ds-select--readonly:focus-within {
+  background: var(--ds-select-bg-readonly);
+  border-color: var(--ds-select-border-color-readonly);
+  outline-color: var(--ds-select-focus-ring-color-readonly);
 }
 
 /* Composed field anatomy

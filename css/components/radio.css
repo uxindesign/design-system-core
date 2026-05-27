@@ -103,6 +103,21 @@
   transform: translate(-50%, -50%) scale(1);
 }
 
+/* Hover */
+.ds-radio:hover:not(:disabled) {
+  background-color: var(--ds-radio-control-fill-unselected-hover);
+  border-color: var(--ds-radio-control-border-color-unselected-hover);
+}
+
+.ds-radio:checked:hover:not(:disabled) {
+  background-color: var(--ds-radio-control-fill-selected-hover);
+  border-color: var(--ds-radio-control-border-color-selected-hover);
+}
+
+.ds-radio:checked:hover:not(:disabled)::after {
+  background-color: var(--ds-radio-dot-fill-selected-hover);
+}
+
 /* Focus */
 .ds-radio:focus-visible {
   outline: var(--ds-radio-focus-ring-stroke-width-default) solid var(--ds-radio-focus-ring-color-default);

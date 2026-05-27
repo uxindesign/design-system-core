@@ -1,6 +1,6 @@
 # Token schema — Design System Core
 
-> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-05-18. Não editar manualmente.
+> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-05-27. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
 > Versão atual: **1.0.0-beta.4**
 
@@ -12,15 +12,15 @@
 | Formato canônico | JSON (DTCG) em `tokens/` |
 | CSS gerado | Style Dictionary → `css/tokens/generated/` |
 | Pipeline | ✅ index.css importa apenas generated/ |
-| Paridade light/dark | ✅ 174 tokens em ambos os modos |
+| Paridade light/dark | ✅ 178 tokens em ambos os modos |
 
 ## Camadas
 
 | Camada | Tokens | Arquivos |
 |--------|--------|----------|
 | Foundation/Core | **266** | 9 |
-| Semantic/System | **174 × 2 modos** | light.json + dark.json |
-| Component | **651** | 19 |
+| Semantic/System | **178 × 2 modos** | light.json + dark.json |
+| Component | **678** | 19 |
 
 ## Foundation (266 tokens)
 
@@ -36,7 +36,7 @@
 | `typography.json` | 54 |
 | `z-index.json` | 6 |
 
-## Semantic (174 tokens × 2 modos)
+## Semantic (178 tokens × 2 modos)
 
 Categorias raiz em light.json:
 
@@ -62,7 +62,7 @@ semantic.typography.*
 semantic.z.*
 ```
 
-## Component (651 tokens)
+## Component (678 tokens)
 
 | Arquivo | Tokens |
 |---------|--------|
@@ -72,18 +72,18 @@ semantic.z.*
 | `breadcrumb.json` | 11 |
 | `button.json` | 104 |
 | `card.json` | 17 |
-| `checkbox.json` | 42 |
+| `checkbox.json` | 50 |
 | `divider.json` | 3 |
 | `form-field.json` | 24 |
-| `input.json` | 83 |
+| `input.json` | 86 |
 | `modal.json` | 53 |
-| `radio.json` | 37 |
-| `select.json` | 94 |
+| `radio.json` | 42 |
+| `select.json` | 97 |
 | `skeleton.json` | 6 |
 | `spinner.json` | 5 |
 | `tabs.json` | 12 |
-| `textarea.json` | 72 |
-| `toggle.json` | 41 |
+| `textarea.json` | 75 |
+| `toggle.json` | 46 |
 | `tooltip.json` | 8 |
 
 ## Regras invioláveis

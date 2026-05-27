@@ -119,12 +119,20 @@
 }
 
 /* Error */
-.ds-input--error {
+.ds-input--error,
+.ds-field--error .ds-input {
   background: var(--ds-input-bg-error);
   border-color: var(--ds-input-border-color-error);
 }
 
-.ds-input--error:focus-within {
+.ds-input--error:hover:not(.ds-input--disabled):not(:focus-within),
+.ds-field--error .ds-input:hover:not(.ds-input--disabled):not(:focus-within) {
+  background: var(--ds-input-bg-error-hover);
+  border-color: var(--ds-input-border-color-error-hover);
+}
+
+.ds-input--error:focus-within,
+.ds-field--error .ds-input:focus-within {
   border-color: var(--ds-input-border-color-error);
   outline-color: var(--ds-input-focus-ring-color-error);
 }
@@ -133,6 +141,18 @@
 .ds-input--filled {
   background: var(--ds-input-bg-filled);
   border-color: var(--ds-input-border-color-filled);
+}
+
+.ds-input--filled.ds-input--error,
+.ds-field--error .ds-input--filled {
+  background: var(--ds-input-bg-error);
+  border-color: var(--ds-input-border-color-error);
+}
+
+.ds-input--filled.ds-input--error:hover:not(.ds-input--disabled):not(:focus-within),
+.ds-field--error .ds-input--filled:hover:not(.ds-input--disabled):not(:focus-within) {
+  background: var(--ds-input-bg-error-hover);
+  border-color: var(--ds-input-border-color-error-hover);
 }
 
 /* Disabled */
@@ -169,6 +189,13 @@
 .ds-input--readonly .ds-input__field,
 .ds-input__field:read-only {
   color: var(--ds-input-content-color-readonly);
+}
+
+.ds-input--readonly:focus-within,
+.ds-input:has(.ds-input__field:read-only):focus-within {
+  background: var(--ds-input-bg-readonly);
+  border-color: var(--ds-input-border-color-readonly);
+  outline-color: var(--ds-input-focus-ring-color-readonly);
 }
 
 /* Composed field anatomy

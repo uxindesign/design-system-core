@@ -66,9 +66,18 @@
     <h2 class="ds-subsection__title"><span data-lang="pt">Anatomia</span><span data-lang="en">Anatomy</span></h2>
 
     <div class="ds-anatomy" style="padding:64px;">
-      <div style="position:relative;width:280px;" inert>
-        <div class="ds-textarea">
-          <textarea class="ds-textarea__field" placeholder="Tell us about your experience..." rows="3"></textarea>
+      <div style="display:inline-flex;flex-direction:column;gap:var(--ds-dimension-4);width:280px;">
+
+        <!-- 4: Label -->
+        <div style="position:relative;" inert>
+          <label class="ds-field__label">Message<span class="ds-field__required">*</span></label>
+          <span style="position:absolute;left:-28px;top:50%;transform:translateY(-50%);height:1px;width:28px;background:var(--ds-primary-background-default);"></span>
+          <span class="ds-anatomy__marker" style="top:50%;left:-48px;transform:translateY(-50%);">4</span>
+        </div>
+
+        <div style="position:relative;" inert>
+        <div class="ds-textarea ds-textarea--error">
+          <textarea class="ds-textarea__field" rows="3" aria-invalid="true">Too short</textarea>
         </div>
         <!-- 1: Wrapper top center -->
         <span style="position:absolute;top:-28px;left:50%;transform:translateX(-50%);width:1px;height:28px;background:var(--ds-primary-background-default);"></span>
@@ -79,6 +88,21 @@
         <!-- 3: Resize handle bottom-right -->
         <span style="position:absolute;bottom:-28px;right:11px;width:1px;height:28px;background:var(--ds-primary-background-default);"></span>
         <span class="ds-anatomy__marker" style="bottom:-48px;right:2px;">3</span>
+        </div>
+
+        <!-- 5: Error -->
+        <div class="ds-field--error" style="position:relative;display:flex;align-items:flex-start;height:18px;" inert>
+          <span class="ds-field__error">Message must be at least 20 characters.</span>
+          <span style="position:absolute;left:-28px;top:50%;transform:translateY(-50%);height:1px;width:28px;background:var(--ds-primary-background-default);"></span>
+          <span class="ds-anatomy__marker" style="top:50%;left:-48px;transform:translateY(-50%);">5</span>
+        </div>
+
+        <!-- 6: Helper -->
+        <div style="position:relative;display:flex;align-items:flex-start;height:18px;" inert>
+          <span class="ds-field__helper">Write a clear message with enough detail.</span>
+          <span style="position:absolute;left:-28px;top:50%;transform:translateY(-50%);height:1px;width:28px;background:var(--ds-primary-background-default);"></span>
+          <span class="ds-anatomy__marker" style="top:50%;left:-48px;transform:translateY(-50%);">6</span>
+        </div>
       </div>
     </div>
 
@@ -86,9 +110,15 @@
       <span data-lang="pt"><strong>1</strong> Wrapper (<code>.ds-textarea</code>) -- mesmo padrão de borda/radius do Input.<br>
       <strong>2</strong> Campo (<code>.ds-textarea__field</code>) -- o elemento nativo <code>&lt;textarea&gt;</code>.<br>
       <strong>3</strong> Alça de redimensionamento -- nativa do navegador, apenas vertical por padrão.<br>
+      <strong>4</strong> Label (<code>.ds-field__label</code>) -- externo, via Form Field.<br>
+      <strong>5</strong> Mensagem de erro (<code>.ds-field__error</code>) -- externa, via Form Field.<br>
+      <strong>6</strong> Texto auxiliar (<code>.ds-field__helper</code>) -- externo, via Form Field.<br>
       <strong>Contador de caracteres</strong> (opcional, <code>.ds-field__counter</code>) -- disponível via wrapper Form Field.</span><span data-lang="en"><strong>1</strong> Wrapper (<code>.ds-textarea</code>) -- same border/radius pattern as Input.<br>
       <strong>2</strong> Field (<code>.ds-textarea__field</code>) -- the native <code>&lt;textarea&gt;</code> element.<br>
       <strong>3</strong> Resize handle -- browser-native, vertical only by default.<br>
+      <strong>4</strong> Label (<code>.ds-field__label</code>) -- external, via Form Field.<br>
+      <strong>5</strong> Error message (<code>.ds-field__error</code>) -- external, via Form Field.<br>
+      <strong>6</strong> Helper text (<code>.ds-field__helper</code>) -- external, via Form Field.<br>
       <strong>Character counter</strong> (optional, <code>.ds-field__counter</code>) -- available via Form Field wrapper.</span>
     </div>
   </div>
@@ -229,6 +259,7 @@
               <textarea class="ds-textarea__field" id="demo-msg" aria-invalid="true" aria-describedby="msg-error">Too short</textarea>
             </div>
             <span class="ds-field__error" id="msg-error">Message must be at least 20 characters.</span>
+            <span class="ds-field__helper">Write a clear message with enough detail.</span>
           </div>
         </div>
       </div>
@@ -242,6 +273,7 @@
       aria-invalid="true" aria-describedby="msg-error"&gt;&lt;/textarea&gt;
   &lt;/div&gt;
   &lt;span class="ds-field__error" id="msg-error"&gt;Message must be at least 20 characters.&lt;/span&gt;
+  &lt;span class="ds-field__helper"&gt;Write a clear message with enough detail.&lt;/span&gt;
 &lt;/div&gt;</code></pre>
         </div>
       </div>

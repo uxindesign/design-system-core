@@ -6,6 +6,11 @@
         "$type": "color",
         "$value": "{foundation.color.neutral.900}"
       },
+      "content-hover": {
+        "$type": "color",
+        "$value": "{foundation.color.neutral.900}",
+        "$description": "Conteúdo sobre fill primário em hover."
+      },
       "content-disabled": {
         "$type": "color",
         "$value": "{foundation.color.overlay.white.80}"
@@ -211,6 +216,13 @@
           "$type": "color",
           "$value": "{foundation.color.red.400}"
         },
+        "border": {
+          "hover": {
+            "$type": "color",
+            "$value": "{foundation.color.red.500}",
+            "$description": "Borda de feedback erro em estado hover."
+          }
+        },
         "content-default": {
           "$type": "color",
           "$value": "{foundation.color.red.400}"
@@ -283,6 +295,11 @@
         "$value": "{foundation.color.neutral.900}",
         "$description": "Card and panel surfaces"
       },
+      "hover": {
+        "$type": "color",
+        "$value": "{foundation.color.neutral.800}",
+        "$description": "Surface neutra em hover de controles."
+      },
       "raised": {
         "$type": "color",
         "$value": "{foundation.color.neutral.800}",
@@ -334,6 +351,11 @@
         "$type": "color",
         "$value": "{foundation.color.neutral.400}",
         "$description": "Conteúdo padrão (body text, descriptions, form labels). Use este na maioria dos casos."
+      },
+      "hover": {
+        "$type": "color",
+        "$value": "{foundation.color.neutral.300}",
+        "$description": "Conteúdo neutro em hover."
       },
       "subtle": {
         "$type": "color",

@@ -80,6 +80,7 @@
 
 /* Focused */
 .ds-textarea:focus-within {
+  background: var(--ds-textarea-bg-focused);
   border-color: var(--ds-textarea-border-color-focused);
   outline: var(--ds-textarea-focus-ring-stroke-width-default) solid var(--ds-textarea-focus-ring-color-default);
   outline-offset: var(--ds-textarea-focus-ring-offset-default);
@@ -88,13 +89,38 @@
 /* Error */
 .ds-textarea--error,
 .ds-field--error .ds-textarea {
+  background: var(--ds-textarea-bg-error);
   border-color: var(--ds-textarea-border-color-error);
+}
+
+.ds-textarea--error:hover:not(.ds-textarea--disabled):not(:focus-within),
+.ds-field--error .ds-textarea:hover:not(.ds-textarea--disabled):not(:focus-within) {
+  background: var(--ds-textarea-bg-error-hover);
+  border-color: var(--ds-textarea-border-color-error-hover);
 }
 
 .ds-textarea--error:focus-within,
 .ds-field--error .ds-textarea:focus-within {
   border-color: var(--ds-textarea-border-color-error);
   outline-color: var(--ds-textarea-focus-ring-color-error);
+}
+
+/* Filled */
+.ds-textarea--filled {
+  background: var(--ds-textarea-bg-filled);
+  border-color: var(--ds-textarea-border-color-filled);
+}
+
+.ds-textarea--filled.ds-textarea--error,
+.ds-field--error .ds-textarea--filled {
+  background: var(--ds-textarea-bg-error);
+  border-color: var(--ds-textarea-border-color-error);
+}
+
+.ds-textarea--filled.ds-textarea--error:hover:not(.ds-textarea--disabled):not(:focus-within),
+.ds-field--error .ds-textarea--filled:hover:not(.ds-textarea--disabled):not(:focus-within) {
+  background: var(--ds-textarea-bg-error-hover);
+  border-color: var(--ds-textarea-border-color-error-hover);
 }
 
 /* Disabled */
@@ -126,6 +152,13 @@
 .ds-textarea--readonly .ds-textarea__field,
 .ds-textarea__field:read-only {
   color: var(--ds-textarea-content-color-readonly);
+}
+
+.ds-textarea--readonly:focus-within,
+.ds-textarea:has(.ds-textarea__field:read-only):focus-within {
+  background: var(--ds-textarea-bg-readonly);
+  border-color: var(--ds-textarea-border-color-readonly);
+  outline-color: var(--ds-textarea-focus-ring-color-readonly);
 }
 
 /* Character Counter

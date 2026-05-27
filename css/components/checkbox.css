@@ -105,6 +105,30 @@
   border-radius: 1px;
 }
 
+/* Hover */
+.ds-checkbox:hover:not(:disabled) {
+  background-color: var(--ds-checkbox-box-fill-unchecked-hover);
+  border-color: var(--ds-checkbox-box-border-color-unchecked-hover);
+}
+
+.ds-checkbox:checked:hover:not(:disabled) {
+  background-color: var(--ds-checkbox-box-fill-checked-hover);
+  border-color: var(--ds-checkbox-box-border-color-checked-hover);
+}
+
+.ds-checkbox:checked:hover:not(:disabled)::after {
+  background-color: var(--ds-checkbox-mark-fill-checked-hover);
+}
+
+.ds-checkbox:indeterminate:hover:not(:disabled) {
+  background-color: var(--ds-checkbox-box-fill-indeterminate-hover);
+  border-color: var(--ds-checkbox-box-border-color-indeterminate-hover);
+}
+
+.ds-checkbox:indeterminate:hover:not(:disabled)::after {
+  background-color: var(--ds-checkbox-mark-fill-indeterminate-hover);
+}
+
 /* Focus */
 .ds-checkbox:focus-visible {
   outline: var(--ds-checkbox-focus-ring-stroke-width-default) solid var(--ds-checkbox-focus-ring-color-default);

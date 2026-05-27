@@ -72,6 +72,12 @@
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
 <h3>Corrigido</h3>
 <ul>
+<li><p><strong>Form Field e anatomia de Input alinhados ao Figma.</strong> <code>.ds-field--error</code> agora propaga borda/focus/hover de erro para Input e Select compostos; a linha de erro usa o glyph real <code>error</code> em <code>Material Icons</code> com frame/gap do Figma, e a anatomia do Input representa o estado de erro com ordem Error Message → Helper Text.</p>
+</li>
+<li><p><strong>Input Text, Select e Textarea espelhados com error-hover e readonly focus.</strong> Adicionados <code>feedback/error/border/hover</code>, <code>component.{input,select,textarea}.bg.error-hover</code>, <code>border-color.error-hover</code> e <code>focus-ring.color.readonly</code>; CSS passa a aplicar hover específico em erro, mantém error acima de filled e usa focus ring neutro em readonly.</p>
+</li>
+<li><p><strong>Hover de Checkbox, Radio e Toggle espelhado do Figma.</strong> Adicionados estados <code>hover</code> aos Component tokens de box/control/track/thumb/mark/dot e semânticos <code>surface.hover</code>, <code>content.hover</code> e <code>primary.content-hover</code>; CSS aplica hover apenas no controle real, sem overlay/target hover inventado, e mantém <code>focus-visible</code> separado.</p>
+</li>
 <li><p><strong>Checkbox, Radio e Toggle completos aplicados aos Component tokens.</strong> Espelhadas no repo as 120 variables vivas de <code>checkbox/...</code>, <code>radio/...</code> e <code>toggle/...</code> no Figma: cores de label/description/helper, fills/borders por estado, mark/dot/thumb, track, focus ring, content gap e target gap/radius. CSS passa a consumir <code>--ds-checkbox-*</code>, <code>--ds-radio-*</code> e <code>--ds-toggle-*</code> para esses contratos; registry, API, docs, LLMs e snapshot Figma↔JSON foram atualizados.</p>
 </li>
 <li><p><strong>Frames externos de ícone espelhados do Figma.</strong> Adicionados <code>input/icon-frame/padding-x/default</code>, <code>select/icon-frame/padding-x/default</code>, <code>select/chevron-frame/padding-x/default</code> e <code>form-field/error/icon-frame/padding-x/default</code> aos Component tokens; CSS passa a representar o wrapper externo com padding horizontal sem confundir esse respiro com o tamanho interno do <code>Icon Placeholder</code>.</p>

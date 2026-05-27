@@ -105,6 +105,11 @@
               "$value": "{semantic.surface.default}",
               "$description": "Fill do control Radio unselected focused."
             },
+            "hover": {
+              "$type": "color",
+              "$value": "{semantic.surface.hover}",
+              "$description": "Fill do control Radio unselected hover."
+            },
             "disabled": {
               "$type": "color",
               "$value": "{semantic.background.disabled}",
@@ -121,6 +126,11 @@
               "$type": "color",
               "$value": "{semantic.primary.background.default}",
               "$description": "Fill do control Radio selected focused."
+            },
+            "hover": {
+              "$type": "color",
+              "$value": "{semantic.primary.background.hover}",
+              "$description": "Fill do control Radio selected hover."
             },
             "disabled": {
               "$type": "color",
@@ -141,6 +151,11 @@
               "$value": "{semantic.primary.background.default}",
               "$description": "Border color do control Radio unselected focused."
             },
+            "hover": {
+              "$type": "color",
+              "$value": "{semantic.border.control-hover}",
+              "$description": "Border color do control Radio unselected hover."
+            },
             "disabled": {
               "$type": "color",
               "$value": "{semantic.border.control-disabled}",
@@ -157,6 +172,11 @@
               "$type": "color",
               "$value": "{semantic.primary.background.default}",
               "$description": "Border color do control Radio selected focused."
+            },
+            "hover": {
+              "$type": "color",
+              "$value": "{semantic.primary.background.hover}",
+              "$description": "Border color do control Radio selected hover."
             },
             "disabled": {
               "$type": "color",
@@ -218,6 +238,11 @@
               "$type": "color",
               "$value": "{semantic.primary.content-default}",
               "$description": "Fill do dot Radio selected focused."
+            },
+            "hover": {
+              "$type": "color",
+              "$value": "{semantic.primary.content-hover}",
+              "$description": "Fill do dot Radio selected hover."
             },
             "disabled": {
               "$type": "color",
