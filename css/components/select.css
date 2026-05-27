@@ -7,6 +7,15 @@
    ========================================================================== */
 
 .ds-select {
+  --select-padding-x: var(--ds-select-padding-x-md);
+  --select-padding-y: var(--ds-select-padding-y-md);
+  --select-gap: var(--ds-select-gap-md);
+  --select-chevron-frame-size: var(--ds-select-chevron-frame-size-md);
+  --select-icon-frame-size: var(--ds-select-icon-frame-size-md);
+  --select-border-width: var(--ds-select-border-width-default);
+  --select-field-leading-size: 0px;
+  --select-field-leading-gap: 0px;
+
   position: relative;
   display: flex;
   align-items: center;
@@ -39,6 +48,12 @@
 }
 
 .ds-select--sm {
+  --select-padding-x: var(--ds-select-padding-x-sm);
+  --select-padding-y: var(--ds-select-padding-y-sm);
+  --select-gap: var(--ds-select-gap-sm);
+  --select-chevron-frame-size: var(--ds-select-chevron-frame-size-sm);
+  --select-icon-frame-size: var(--ds-select-icon-frame-size-sm);
+
   height: var(--ds-select-height-sm);
   gap: var(--ds-select-gap-sm);
   padding: var(--ds-select-padding-y-sm) var(--ds-select-padding-x-sm);
@@ -47,6 +62,12 @@
 }
 
 .ds-select--lg {
+  --select-padding-x: var(--ds-select-padding-x-lg);
+  --select-padding-y: var(--ds-select-padding-y-lg);
+  --select-gap: var(--ds-select-gap-lg);
+  --select-chevron-frame-size: var(--ds-select-chevron-frame-size-lg);
+  --select-icon-frame-size: var(--ds-select-icon-frame-size-lg);
+
   height: var(--ds-select-height-lg);
   gap: var(--ds-select-gap-lg);
   padding: var(--ds-select-padding-y-lg) var(--ds-select-padding-x-lg);
@@ -59,6 +80,7 @@
 
 .ds-select__field {
   flex: 1;
+  align-self: stretch;
   appearance: none;
   -webkit-appearance: none;
   border: none;
@@ -70,34 +92,42 @@
   line-height: inherit;
   cursor: pointer;
   min-width: 0;
-  padding-left: var(--ds-select-text-frame-padding-x-default);
+  margin-top: calc(-1 * (var(--select-padding-y) + var(--select-border-width)));
+  margin-bottom: calc(-1 * (var(--select-padding-y) + var(--select-border-width)));
+  margin-left: calc(
+    -1 * (
+      var(--select-padding-x) +
+      var(--select-border-width) +
+      var(--select-field-leading-size) +
+      var(--select-field-leading-gap)
+    )
+  );
+  margin-right: calc(-1 * (var(--select-padding-x) + var(--select-border-width)));
+  padding-left: calc(
+    var(--select-padding-x) +
+    var(--select-border-width) +
+    var(--select-field-leading-size) +
+    var(--select-field-leading-gap) +
+    var(--ds-select-text-frame-padding-x-default)
+  );
   padding-right: calc(
-    var(--ds-select-chevron-frame-size-md) +
+    var(--select-padding-x) +
+    var(--select-border-width) +
+    var(--select-chevron-frame-size) +
     var(--ds-select-chevron-frame-padding-x-default) +
     var(--ds-select-chevron-frame-padding-x-default) +
-    var(--ds-select-gap-md) +
+    var(--select-gap) +
     var(--ds-select-text-frame-padding-x-default)
   );
 }
 
-.ds-select--sm .ds-select__field {
-  padding-right: calc(
-    var(--ds-select-chevron-frame-size-sm) +
-    var(--ds-select-chevron-frame-padding-x-default) +
-    var(--ds-select-chevron-frame-padding-x-default) +
-    var(--ds-select-gap-sm) +
-    var(--ds-select-text-frame-padding-x-default)
+.ds-select:has(.ds-select__icon) {
+  --select-field-leading-size: calc(
+    var(--select-icon-frame-size) +
+    var(--ds-select-icon-frame-padding-x-default) +
+    var(--ds-select-icon-frame-padding-x-default)
   );
-}
-
-.ds-select--lg .ds-select__field {
-  padding-right: calc(
-    var(--ds-select-chevron-frame-size-lg) +
-    var(--ds-select-chevron-frame-padding-x-default) +
-    var(--ds-select-chevron-frame-padding-x-default) +
-    var(--ds-select-gap-lg) +
-    var(--ds-select-text-frame-padding-x-default)
-  );
+  --select-field-leading-gap: var(--select-gap);
 }
 
 .ds-select__field:invalid,
@@ -170,6 +200,7 @@
   color: var(--ds-select-icon-color-default);
   font-size: var(--ds-select-icon-glyph-size-md);
   line-height: 1;
+  pointer-events: none;
 }
 
 .ds-select--sm .ds-select__icon {

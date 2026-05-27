@@ -391,9 +391,10 @@
         <tr><td>Default</td><td>---</td><td>Neutral border</td><td><code>component.select.border-color.default</code></td></tr>
         <tr><td>Hover</td><td><code>:hover</code></td><td>Darker border</td><td><code>component.select.border-color.hover</code></td></tr>
         <tr><td>Focused</td><td><code>:focus-visible</code></td><td>2px outline ring, 2px offset</td><td><code>component.select.border-color.focused</code>, <code>component.select.focus-ring.*</code></td></tr>
-        <tr><td>Error</td><td><code>.ds-select--error</code></td><td>Red border</td><td><code>component.select.border-color.error</code>, <code>component.select.focus-ring.color.error</code></td></tr>
+        <tr><td>Error</td><td><code>.ds-select--error</code> or <code>.ds-field--error .ds-select</code></td><td>Red border and error focus ring</td><td><code>component.select.border-color.error</code>, <code>component.select.focus-ring.color.error</code></td></tr>
+        <tr><td>Error hover</td><td><code>.ds-select--error:hover</code></td><td>Darker red border</td><td><code>component.select.border-color.error-hover</code></td></tr>
         <tr><td>Disabled</td><td><code>[disabled]</code></td><td>Muted bg + content, no pointer events</td><td><code>component.select.bg.disabled</code>, <code>component.select.content.color.disabled</code>, <code>component.select.placeholder.color.disabled</code></td></tr>
-        <tr><td>Readonly</td><td><code>.ds-select--readonly</code> + <code>[disabled]</code></td><td>Readonly bg and content treatment</td><td><code>component.select.bg.readonly</code>, <code>component.select.content.color.readonly</code></td></tr>
+        <tr><td>Readonly</td><td><code>.ds-select--readonly</code> + <code>[disabled]</code></td><td>Readonly bg and content treatment; native select has no real readonly focus</td><td><code>component.select.bg.readonly</code>, <code>component.select.content.color.readonly</code></td></tr>
       </tbody>
     </table>
   </div>

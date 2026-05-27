@@ -296,7 +296,26 @@
   </div>
 
   <!-- ============================================================
-       8. BEST PRACTICES (Do / Don't)
+       8. STATES
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title"><span data-lang="pt">Estados</span><span data-lang="en">States</span></h2>
+    <table class="ds-token-table">
+      <thead><tr><th>State</th><th>CSS trigger</th><th>Visual change</th><th>Token</th></tr></thead>
+      <tbody>
+        <tr><td>Unselected</td><td>---</td><td>Neutral control fill and border</td><td><code>component.radio.control.fill.unselected.default</code>, <code>component.radio.control.border-color.unselected.default</code></td></tr>
+        <tr><td>Unselected hover</td><td><code>:hover</code></td><td>Darker neutral control border/fill</td><td><code>component.radio.control.fill.unselected.hover</code>, <code>component.radio.control.border-color.unselected.hover</code></td></tr>
+        <tr><td>Selected</td><td><code>:checked</code></td><td>Primary control fill with dot</td><td><code>component.radio.control.fill.selected.default</code>, <code>component.radio.dot.fill.selected.default</code></td></tr>
+        <tr><td>Selected hover</td><td><code>:checked:hover</code></td><td>Darker primary control fill</td><td><code>component.radio.control.fill.selected.hover</code>, <code>component.radio.dot.fill.selected.hover</code></td></tr>
+        <tr><td>Focus</td><td><code>:focus-visible</code></td><td>2px outline ring</td><td><code>component.radio.focus-ring.*</code></td></tr>
+        <tr><td>Error group</td><td><code>.ds-radio-group--error</code></td><td>Error border/fill and message below group</td><td><code>semantic.feedback.error.*</code></td></tr>
+        <tr><td>Disabled</td><td><code>[disabled]</code></td><td>Muted control, dot and label</td><td><code>component.radio.control.fill.*.disabled</code>, <code>component.radio.label.color.disabled</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============================================================
+       9. BEST PRACTICES (Do / Don't)
        ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Boas práticas</span><span data-lang="en">Best practices</span></h2>
@@ -352,7 +371,7 @@
   </div>
 
   <!-- ============================================================
-       9. CONTENT GUIDELINES
+       10. CONTENT GUIDELINES
        ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Diretrizes de conteúdo</span><span data-lang="en">Content guidelines</span></h2>
@@ -368,7 +387,7 @@
   </div>
 
   <!-- ============================================================
-       10. TOKEN MAPPING
+       11. TOKEN MAPPING
        ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Mapeamento de tokens</span><span data-lang="en">Token mapping</span></h2>
@@ -376,20 +395,21 @@
       <span data-lang="pt">Mesmos tokens do Checkbox exceto <code>border-radius: 50%</code> (círculo) em vez de <code>foundation.radius.4</code>.</span><span data-lang="en">Same tokens as Checkbox except <code>border-radius: 50%</code> (circle) instead of <code>foundation.radius.4</code>.</span>
     </p>
     <table class="ds-token-table">
-      <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token (semantic)</th><th><span data-lang="pt">Variável CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token Component</th><th><span data-lang="pt">Variável CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
       <tbody>
-        <tr><td>border (unselected)</td><td><code>semantic.border.control-default</code></td><td><code>--ds-border-control-default</code></td></tr>
-        <tr><td>background (selected)</td><td><code>semantic.primary.background.default</code></td><td><code>--ds-primary-background-default</code></td></tr>
-        <tr><td>dot color</td><td><code>semantic.primary.content-default</code></td><td><code>--ds-primary-content-default</code></td></tr>
-        <tr><td>border (error)</td><td><code>semantic.feedback.error.border-default</code></td><td><code>--ds-feedback-error-border-default</code></td></tr>
-        <tr><td>focus ring</td><td><code>semantic.focus.ring.*</code></td><td><code>--ds-focus-ring-width</code>, <code>--ds-focus-ring-offset</code>, <code>--ds-focus-ring-color</code></td></tr>
-        <tr><td>border-radius</td><td>50% (circle)</td><td><code>border-radius: 50%</code></td></tr>
+        <tr><td>control size (sm/md/lg)</td><td><code>component.radio.control.size.*</code></td><td><code>--ds-radio-control-size-*</code></td></tr>
+        <tr><td>control fill</td><td><code>component.radio.control.fill.*.*</code></td><td><code>--ds-radio-control-fill-*</code></td></tr>
+        <tr><td>control border</td><td><code>component.radio.control.border-color.*.*</code></td><td><code>--ds-radio-control-border-color-*</code></td></tr>
+        <tr><td>dot size/fill</td><td><code>component.radio.dot.{size,fill}.*</code></td><td><code>--ds-radio-dot-*</code></td></tr>
+        <tr><td>target height</td><td><code>component.radio.target.height.*</code></td><td><code>--ds-radio-target-height-*</code></td></tr>
+        <tr><td>focus ring</td><td><code>component.radio.focus-ring.*</code></td><td><code>--ds-radio-focus-ring-*</code></td></tr>
+        <tr><td>label/helper/description</td><td><code>component.radio.{label,helper-text,description}.*</code></td><td><code>--ds-radio-label-*</code>, <code>--ds-radio-helper-text-*</code></td></tr>
       </tbody>
     </table>
   </div>
 
   <!-- ============================================================
-       11. CSS CLASSES
+       12. CSS CLASSES
        ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Classes CSS</span><span data-lang="en">CSS classes</span></h2>

@@ -253,7 +253,25 @@
   </div>
 
   <!-- ============================================================
-       7. BEST PRACTICES (Do / Don't)
+       7. STATES
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title"><span data-lang="pt">Estados</span><span data-lang="en">States</span></h2>
+    <table class="ds-token-table">
+      <thead><tr><th>State</th><th>CSS trigger</th><th>Visual change</th><th>Token</th></tr></thead>
+      <tbody>
+        <tr><td>Off</td><td>---</td><td>Neutral track with dark thumb</td><td><code>component.toggle.track.fill.off.default</code>, <code>component.toggle.thumb.fill.off.default</code></td></tr>
+        <tr><td>Off hover</td><td><code>:hover</code></td><td>Darker neutral track/thumb</td><td><code>component.toggle.track.fill.off.hover</code>, <code>component.toggle.thumb.fill.off.hover</code></td></tr>
+        <tr><td>On</td><td><code>:checked</code></td><td>Primary track with light thumb</td><td><code>component.toggle.track.fill.on.default</code>, <code>component.toggle.thumb.fill.on.default</code></td></tr>
+        <tr><td>On hover</td><td><code>:checked:hover</code></td><td>Darker primary track</td><td><code>component.toggle.track.fill.on.hover</code>, <code>component.toggle.thumb.fill.on.hover</code></td></tr>
+        <tr><td>Focus</td><td><code>:focus-visible</code></td><td>2px outline ring</td><td><code>component.toggle.focus-ring.*</code></td></tr>
+        <tr><td>Disabled</td><td><code>[disabled]</code></td><td>Muted track, thumb and label</td><td><code>component.toggle.track.fill.*.disabled</code>, <code>component.toggle.label.color.disabled</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============================================================
+       8. BEST PRACTICES (Do / Don't)
        ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Boas práticas</span><span data-lang="en">Best practices</span></h2>
@@ -314,7 +332,7 @@
   </div>
 
   <!-- ============================================================
-       8. CONTENT GUIDELINES
+       9. CONTENT GUIDELINES
        ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Diretrizes de conteúdo</span><span data-lang="en">Content guidelines</span></h2>
@@ -329,23 +347,26 @@
   </div>
 
   <!-- ============================================================
-       9. TOKEN MAPPING
+       10. TOKEN MAPPING
        ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Mapeamento de tokens</span><span data-lang="en">Token mapping</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token (semantic)</th><th><span data-lang="pt">Variável CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token Component</th><th><span data-lang="pt">Variável CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
       <tbody>
-        <tr><td>track (off)</td><td><code>semantic.border.control-default</code></td><td><code>--ds-border-control-default</code></td></tr>
-        <tr><td>track (on)</td><td><code>semantic.primary.background.default</code></td><td><code>--ds-primary-background-default</code></td></tr>
-        <tr><td>thumb (off)</td><td><code>semantic.content.default</code></td><td><code>--ds-content-default</code></td></tr>
-        <tr><td>focus ring</td><td><code>semantic.focus.ring.*</code></td><td><code>--ds-focus-ring-width</code>, <code>--ds-focus-ring-offset</code>, <code>--ds-focus-ring-color</code></td></tr>
+        <tr><td>target height/gap</td><td><code>component.toggle.target.{height,gap}.*</code></td><td><code>--ds-toggle-target-*</code></td></tr>
+        <tr><td>track size</td><td><code>component.toggle.track.{width,height}.*</code></td><td><code>--ds-toggle-track-*</code></td></tr>
+        <tr><td>track fill</td><td><code>component.toggle.track.fill.*.*</code></td><td><code>--ds-toggle-track-fill-*</code></td></tr>
+        <tr><td>track border</td><td><code>component.toggle.track.border-color.*.*</code></td><td><code>--ds-toggle-track-border-color-*</code></td></tr>
+        <tr><td>thumb size/fill</td><td><code>component.toggle.thumb.{size,fill}.*</code></td><td><code>--ds-toggle-thumb-*</code></td></tr>
+        <tr><td>focus ring</td><td><code>component.toggle.focus-ring.*</code></td><td><code>--ds-toggle-focus-ring-*</code></td></tr>
+        <tr><td>label/helper/description</td><td><code>component.toggle.{label,helper-text,description}.*</code></td><td><code>--ds-toggle-label-*</code>, <code>--ds-toggle-helper-text-*</code></td></tr>
       </tbody>
     </table>
   </div>
 
   <!-- ============================================================
-       10. CSS CLASSES
+       11. CSS CLASSES
        ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Classes CSS</span><span data-lang="en">CSS classes</span></h2>

@@ -9,6 +9,8 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 ## [Não publicado]
 
 ### Corrigido
+- **Input Text e Select com área clicável expandida para todo o container.** O campo nativo agora cobre o padding interno do wrapper, incluindo top/bottom, áreas laterais, espaço vazio e regiões de ícone/adornment decorativo, mantendo ícones e chevron com `pointer-events: none`.
+- **Documentação de estados dos controles de formulário padronizada.** Input, Select, Textarea, Checkbox, Radio e Toggle agora documentam os estados visuais com o mesmo modelo de tabela (`State`, `CSS trigger`, `Visual change`, `Token`); Checkbox, Radio e Toggle também tiveram o mapeamento de tokens atualizado para a camada `component.*` em vez dos atalhos semânticos antigos.
 - **Form Field e anatomia de Input alinhados ao Figma.** `.ds-field--error` agora propaga borda/focus/hover de erro para Input e Select compostos; a linha de erro usa o glyph real `error` em `Material Icons` com frame/gap do Figma, e a anatomia do Input representa o estado de erro com ordem Error Message → Helper Text.
 - **Input Text, Select e Textarea espelhados com error-hover e readonly focus.** Adicionados `feedback/error/border/hover`, `component.{input,select,textarea}.bg.error-hover`, `border-color.error-hover` e `focus-ring.color.readonly`; CSS passa a aplicar hover específico em erro, mantém error acima de filled e usa focus ring neutro em readonly.
 - **Hover de Checkbox, Radio e Toggle espelhado do Figma.** Adicionados estados `hover` aos Component tokens de box/control/track/thumb/mark/dot e semânticos `surface.hover`, `content.hover` e `primary.content-hover`; CSS aplica hover apenas no controle real, sem overlay/target hover inventado, e mantém `focus-visible` separado.

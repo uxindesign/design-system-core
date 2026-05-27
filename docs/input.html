@@ -267,6 +267,9 @@
        ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Estados</span><span data-lang="en">States</span></h2>
+    <p style="margin-bottom:var(--ds-dimension-16);color:var(--ds-content-default);font-size:var(--ds-font-size-14);">
+      <span data-lang="pt">Estados visuais seguem pseudo-classes nativas e classes modificadoras. Error e readonly preservam precedência sobre hover/focus quando aplicável.</span><span data-lang="en">Visual states use native pseudo-classes and modifier classes. Error and readonly keep precedence over hover/focus where applicable.</span>
+    </p>
 
     <h3>Error</h3>
     <div class="ds-preview">
@@ -346,6 +349,19 @@
         </div>
       </div>
     </div>
+
+    <table class="ds-token-table" style="margin-top:var(--ds-dimension-16)">
+      <thead><tr><th>State</th><th>CSS trigger</th><th>Visual change</th><th>Token</th></tr></thead>
+      <tbody>
+        <tr><td>Default</td><td>---</td><td>Neutral surface and border</td><td><code>component.input.bg.default</code>, <code>component.input.border-color.default</code></td></tr>
+        <tr><td>Hover</td><td><code>:hover</code></td><td>Darker border</td><td><code>component.input.border-color.hover</code></td></tr>
+        <tr><td>Focus</td><td><code>:focus-within</code></td><td>2px outline ring, 2px offset</td><td><code>component.input.border-color.focused</code>, <code>component.input.focus-ring.*</code></td></tr>
+        <tr><td>Error</td><td><code>.ds-input--error</code> or <code>.ds-field--error .ds-input</code></td><td>Red border and error focus ring</td><td><code>component.input.border-color.error</code>, <code>component.input.focus-ring.color.error</code></td></tr>
+        <tr><td>Error hover</td><td><code>.ds-input--error:hover</code></td><td>Darker red border</td><td><code>component.input.border-color.error-hover</code></td></tr>
+        <tr><td>Disabled</td><td><code>[disabled]</code> or <code>.ds-input--disabled</code></td><td>Muted bg, border and content</td><td><code>component.input.bg.disabled</code>, <code>component.input.content.color.disabled</code></td></tr>
+        <tr><td>Readonly</td><td><code>[readonly]</code> or <code>.ds-input--readonly</code></td><td>Readonly bg with neutral focus ring</td><td><code>component.input.bg.readonly</code>, <code>component.input.focus-ring.color.readonly</code></td></tr>
+      </tbody>
+    </table>
   </div>
 
   <!-- ============================================================

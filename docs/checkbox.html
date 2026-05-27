@@ -314,7 +314,27 @@
   </div>
 
   <!-- ============================================================
-       9. BEST PRACTICES (Do / Don't)
+       9. STATES
+       ============================================================ -->
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title"><span data-lang="pt">Estados</span><span data-lang="en">States</span></h2>
+    <table class="ds-token-table">
+      <thead><tr><th>State</th><th>CSS trigger</th><th>Visual change</th><th>Token</th></tr></thead>
+      <tbody>
+        <tr><td>Unchecked</td><td>---</td><td>Neutral box fill and border</td><td><code>component.checkbox.box.fill.unchecked.default</code>, <code>component.checkbox.box.border-color.unchecked.default</code></td></tr>
+        <tr><td>Unchecked hover</td><td><code>:hover</code></td><td>Darker neutral box border/fill</td><td><code>component.checkbox.box.fill.unchecked.hover</code>, <code>component.checkbox.box.border-color.unchecked.hover</code></td></tr>
+        <tr><td>Checked</td><td><code>:checked</code></td><td>Primary box fill with checkmark</td><td><code>component.checkbox.box.fill.checked.default</code>, <code>component.checkbox.mark.fill.checked.default</code></td></tr>
+        <tr><td>Checked hover</td><td><code>:checked:hover</code></td><td>Darker primary box fill</td><td><code>component.checkbox.box.fill.checked.hover</code>, <code>component.checkbox.mark.fill.checked.hover</code></td></tr>
+        <tr><td>Indeterminate</td><td><code>:indeterminate</code></td><td>Primary box fill with indeterminate mark</td><td><code>component.checkbox.box.fill.indeterminate.default</code>, <code>component.checkbox.mark.fill.indeterminate.default</code></td></tr>
+        <tr><td>Focus</td><td><code>:focus-visible</code></td><td>2px outline ring</td><td><code>component.checkbox.focus-ring.*</code></td></tr>
+        <tr><td>Error group</td><td><code>.ds-checkbox-group--error</code></td><td>Error border/fill and message below group</td><td><code>semantic.feedback.error.*</code></td></tr>
+        <tr><td>Disabled</td><td><code>[disabled]</code></td><td>Muted box, mark and label</td><td><code>component.checkbox.box.fill.*.disabled</code>, <code>component.checkbox.label.color.disabled</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============================================================
+       10. BEST PRACTICES (Do / Don't)
        ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Boas práticas</span><span data-lang="en">Best practices</span></h2>
@@ -362,7 +382,7 @@
   </div>
 
   <!-- ============================================================
-       10. CONTENT GUIDELINES
+       11. CONTENT GUIDELINES
        ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Diretrizes de conteúdo</span><span data-lang="en">Content guidelines</span></h2>
@@ -378,25 +398,26 @@
   </div>
 
   <!-- ============================================================
-       11. TOKEN MAPPING
+       12. TOKEN MAPPING
        ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Mapeamento de tokens</span><span data-lang="en">Token mapping</span></h2>
     <table class="ds-token-table">
-      <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token (semantic)</th><th><span data-lang="pt">Variável CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
+      <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token Component</th><th><span data-lang="pt">Variável CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
       <tbody>
-        <tr><td>border (unchecked)</td><td><code>semantic.border.default</code></td><td><code>--ds-border-default</code></td></tr>
-        <tr><td>background (checked)</td><td><code>semantic.primary.background.default</code></td><td><code>--ds-primary-background-default</code></td></tr>
-        <tr><td>checkmark color</td><td><code>semantic.primary.content-default</code></td><td><code>--ds-primary-content-default</code></td></tr>
-        <tr><td>border (error)</td><td><code>semantic.feedback.error.border-default</code></td><td><code>--ds-feedback-error-border-default</code></td></tr>
-        <tr><td>focus ring</td><td><code>semantic.focus.ring.*</code></td><td><code>--ds-focus-ring-width</code>, <code>--ds-focus-ring-offset</code>, <code>--ds-focus-ring-color</code></td></tr>
-        <tr><td>border-radius</td><td><code>foundation.radius.4</code></td><td><code>--ds-radius-4</code></td></tr>
+        <tr><td>box size (sm/md/lg)</td><td><code>component.checkbox.box.size.*</code></td><td><code>--ds-checkbox-box-size-*</code></td></tr>
+        <tr><td>box fill</td><td><code>component.checkbox.box.fill.*.*</code></td><td><code>--ds-checkbox-box-fill-*</code></td></tr>
+        <tr><td>box border</td><td><code>component.checkbox.box.border-color.*.*</code></td><td><code>--ds-checkbox-box-border-color-*</code></td></tr>
+        <tr><td>mark fill</td><td><code>component.checkbox.mark.fill.*.*</code></td><td><code>--ds-checkbox-mark-fill-*</code></td></tr>
+        <tr><td>target height</td><td><code>component.checkbox.target.height.*</code></td><td><code>--ds-checkbox-target-height-*</code></td></tr>
+        <tr><td>focus ring</td><td><code>component.checkbox.focus-ring.*</code></td><td><code>--ds-checkbox-focus-ring-*</code></td></tr>
+        <tr><td>label/helper/description</td><td><code>component.checkbox.{label,helper-text,description}.*</code></td><td><code>--ds-checkbox-label-*</code>, <code>--ds-checkbox-helper-text-*</code></td></tr>
       </tbody>
     </table>
   </div>
 
   <!-- ============================================================
-       12. CSS CLASSES
+       13. CSS CLASSES
        ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Classes CSS</span><span data-lang="en">CSS classes</span></h2>

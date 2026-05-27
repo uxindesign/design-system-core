@@ -7,6 +7,12 @@
    ========================================================================== */
 
 .ds-input {
+  --input-padding-x: var(--ds-input-padding-x-md);
+  --input-padding-y: var(--ds-input-padding-y-md);
+  --input-gap: var(--ds-input-gap-md);
+  --input-icon-frame-size: var(--ds-input-icon-frame-size-md);
+  --input-border-width: var(--ds-input-border-width-default);
+
   display: flex;
   align-items: center;
   gap: var(--ds-input-gap-md);
@@ -33,6 +39,11 @@
 }
 
 .ds-input--sm {
+  --input-padding-x: var(--ds-input-padding-x-sm);
+  --input-padding-y: var(--ds-input-padding-y-sm);
+  --input-gap: var(--ds-input-gap-sm);
+  --input-icon-frame-size: var(--ds-input-icon-frame-size-sm);
+
   height: var(--ds-input-height-sm);
   gap: var(--ds-input-gap-sm);
   padding: var(--ds-input-padding-y-sm) var(--ds-input-padding-x-sm);
@@ -41,6 +52,11 @@
 }
 
 .ds-input--lg {
+  --input-padding-x: var(--ds-input-padding-x-lg);
+  --input-padding-y: var(--ds-input-padding-y-lg);
+  --input-gap: var(--ds-input-gap-lg);
+  --input-icon-frame-size: var(--ds-input-icon-frame-size-lg);
+
   height: var(--ds-input-height-lg);
   gap: var(--ds-input-gap-lg);
   padding: var(--ds-input-padding-y-lg) var(--ds-input-padding-x-lg);
@@ -52,7 +68,13 @@
    ========================================================================== */
 
 .ds-input__field {
+  --input-field-leading-size: 0px;
+  --input-field-leading-gap: 0px;
+  --input-field-trailing-size: 0px;
+  --input-field-trailing-gap: 0px;
+
   flex: 1;
+  align-self: stretch;
   border: none;
   background: transparent;
   outline: none;
@@ -63,8 +85,57 @@
   letter-spacing: inherit;
   line-height: inherit;
   min-width: 0;
-  padding-left: var(--ds-input-text-frame-padding-x-default);
-  padding-right: var(--ds-input-text-frame-padding-x-default);
+  margin-top: calc(-1 * (var(--input-padding-y) + var(--input-border-width)));
+  margin-bottom: calc(-1 * (var(--input-padding-y) + var(--input-border-width)));
+  margin-left: calc(
+    -1 * (
+      var(--input-padding-x) +
+      var(--input-border-width) +
+      var(--input-field-leading-size) +
+      var(--input-field-leading-gap)
+    )
+  );
+  margin-right: calc(-1 * (var(--input-padding-x) + var(--input-border-width)));
+  padding-left: calc(
+    var(--input-padding-x) +
+    var(--input-border-width) +
+    var(--input-field-leading-size) +
+    var(--input-field-leading-gap) +
+    var(--ds-input-text-frame-padding-x-default)
+  );
+  padding-right: calc(
+    var(--input-padding-x) +
+    var(--input-border-width) +
+    var(--input-field-trailing-size) +
+    var(--input-field-trailing-gap) +
+    var(--ds-input-text-frame-padding-x-default)
+  );
+}
+
+.ds-input__icon + .ds-input__field {
+  --input-field-leading-size: calc(
+    var(--input-icon-frame-size) +
+    var(--ds-input-icon-frame-padding-x-default) +
+    var(--ds-input-icon-frame-padding-x-default)
+  );
+  --input-field-leading-gap: var(--input-gap);
+}
+
+.ds-input__field:has(+ .ds-input__icon) {
+  --input-field-trailing-size: calc(
+    var(--input-icon-frame-size) +
+    var(--ds-input-icon-frame-padding-x-default) +
+    var(--ds-input-icon-frame-padding-x-default)
+  );
+  --input-field-trailing-gap: var(--input-gap);
+  margin-right: calc(
+    -1 * (
+      var(--input-padding-x) +
+      var(--input-border-width) +
+      var(--input-field-trailing-size) +
+      var(--input-field-trailing-gap)
+    )
+  );
 }
 
 .ds-input__field::placeholder {
@@ -88,6 +159,7 @@
   padding-right: var(--ds-input-icon-frame-padding-x-default);
   font-size: var(--ds-input-icon-glyph-size-md);
   line-height: 1;
+  pointer-events: none;
 }
 
 .ds-input--sm .ds-input__icon {
