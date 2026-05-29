@@ -245,7 +245,7 @@
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Estados</span><span data-lang="en">States</span></h2>
     <p style="margin-bottom:var(--ds-dimension-16);color:var(--ds-content-default);font-size:var(--ds-font-size-14);">
-      <span data-lang="pt">Estados visuais seguem pseudo-classes nativas e classes modificadoras. Error e readonly preservam precedência sobre hover/focus quando aplicável.</span><span data-lang="en">Visual states use native pseudo-classes and modifier classes. Error and readonly keep precedence over hover/focus where applicable.</span>
+      <span data-lang="pt">No Figma, <code>State</code> representa apenas estados visuais exclusivos: <code>Default</code>, <code>Hover</code>, <code>Focus</code> e <code>Disabled</code>. <code>Filled</code>, <code>Error</code> e <code>Read-only</code> são propriedades separadas; <code>Error</code> combina com Default/Hover/Focus, e <code>Read-only</code> combina com Default/Focus.</span><span data-lang="en">In Figma, <code>State</code> only represents exclusive visual states: <code>Default</code>, <code>Hover</code>, <code>Focus</code>, and <code>Disabled</code>. <code>Filled</code>, <code>Error</code>, and <code>Read-only</code> are separate properties; <code>Error</code> combines with Default/Hover/Focus, and <code>Read-only</code> combines with Default/Focus.</span>
     </p>
 
     <h3>Error</h3>
@@ -329,15 +329,15 @@
     </div>
 
     <table class="ds-token-table" style="margin-top:var(--ds-dimension-16)">
-      <thead><tr><th>State</th><th>CSS trigger</th><th>Visual change</th><th>Token</th></tr></thead>
+      <thead><tr><th>Figma property</th><th>Value / CSS trigger</th><th>Visual change</th><th>Token</th></tr></thead>
       <tbody>
-        <tr><td>Default</td><td>---</td><td>Neutral surface and border</td><td><code>component.textarea.bg.default</code>, <code>component.textarea.border-color.default</code></td></tr>
-        <tr><td>Hover</td><td><code>:hover</code></td><td>Darker border</td><td><code>component.textarea.border-color.hover</code></td></tr>
-        <tr><td>Focus</td><td><code>:focus-within</code></td><td>2px outline ring, 2px offset</td><td><code>component.textarea.border-color.focused</code>, <code>component.textarea.focus-ring.*</code></td></tr>
-        <tr><td>Error</td><td><code>.ds-textarea--error</code> or <code>.ds-field--error .ds-textarea</code></td><td>Red border and error focus ring</td><td><code>component.textarea.border-color.error</code>, <code>component.textarea.focus-ring.color.error</code></td></tr>
-        <tr><td>Error hover</td><td><code>.ds-textarea--error:hover</code></td><td>Darker red border</td><td><code>component.textarea.border-color.error-hover</code></td></tr>
-        <tr><td>Disabled</td><td><code>[disabled]</code> or <code>.ds-textarea--disabled</code></td><td>Muted bg, border and content</td><td><code>component.textarea.bg.disabled</code>, <code>component.textarea.content.color.disabled</code></td></tr>
-        <tr><td>Readonly</td><td><code>[readonly]</code> or <code>.ds-textarea--readonly</code></td><td>Readonly bg with neutral focus ring</td><td><code>component.textarea.bg.readonly</code>, <code>component.textarea.focus-ring.color.readonly</code></td></tr>
+        <tr><td>State</td><td>Default</td><td>Neutral surface and border</td><td><code>component.textarea.bg.default</code>, <code>component.textarea.border-color.default</code></td></tr>
+        <tr><td>State</td><td>Hover / <code>:hover</code></td><td>Darker border</td><td><code>component.textarea.border-color.hover</code></td></tr>
+        <tr><td>State</td><td>Focus / <code>:focus-within</code></td><td>2px outline ring, 2px offset</td><td><code>component.textarea.border-color.focused</code>, <code>component.textarea.focus-ring.*</code></td></tr>
+        <tr><td>State</td><td>Disabled / <code>[disabled]</code> or <code>.ds-textarea--disabled</code></td><td>Muted bg, border and content</td><td><code>component.textarea.bg.disabled</code>, <code>component.textarea.content.color.disabled</code></td></tr>
+        <tr><td>Error</td><td>True / <code>.ds-textarea--error</code> or <code>.ds-field--error .ds-textarea</code></td><td>Red border and error focus ring</td><td><code>component.textarea.border-color.error</code>, <code>component.textarea.focus-ring.color.error</code></td></tr>
+        <tr><td>Error + State</td><td>True + Hover / <code>.ds-textarea--error:hover</code></td><td>Darker red border</td><td><code>component.textarea.border-color.error-hover</code></td></tr>
+        <tr><td>Read-only</td><td>True / <code>[readonly]</code> or <code>.ds-textarea--readonly</code></td><td>Readonly bg with neutral focus ring</td><td><code>component.textarea.bg.readonly</code>, <code>component.textarea.focus-ring.color.readonly</code></td></tr>
       </tbody>
     </table>
   </div>

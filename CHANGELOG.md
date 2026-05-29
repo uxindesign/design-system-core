@@ -9,6 +9,7 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 ## [Não publicado]
 
 ### Corrigido
+- **Input Text, Select e Textarea documentam o novo contrato de propriedades do Figma.** `Disabled` passa a ser valor de `State` (`Default`, `Hover`, `Focus`, `Disabled`), enquanto `Filled`, `Error` e `Read-only` ficam como propriedades separadas com regras explícitas de combinação.
 - **Input Text e Select com área clicável expandida para todo o container.** O campo nativo agora cobre o padding interno do wrapper, incluindo top/bottom, áreas laterais, espaço vazio e regiões de ícone/adornment decorativo, mantendo ícones e chevron com `pointer-events: none`.
 - **Documentação de estados dos controles de formulário padronizada.** Input, Select, Textarea, Checkbox, Radio e Toggle agora documentam os estados visuais com o mesmo modelo de tabela (`State`, `CSS trigger`, `Visual change`, `Token`); Checkbox, Radio e Toggle também tiveram o mapeamento de tokens atualizado para a camada `component.*` em vez dos atalhos semânticos antigos.
 - **Form Field e anatomia de Input alinhados ao Figma.** `.ds-field--error` agora propaga borda/focus/hover de erro para Input e Select compostos; a linha de erro usa o glyph real `error` em `Material Icons` com frame/gap do Figma, e a anatomia do Input representa o estado de erro com ordem Error Message → Helper Text.
