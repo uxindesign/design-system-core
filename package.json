@@ -39,7 +39,8 @@
     "verify:registry": "node scripts/build-token-registry.mjs --check",
     "security:check": "node scripts/security-check.mjs",
     "figma:plugin:check": "node --check figma-plugin/snapshot-exporter/code.js",
-    "agent:preflight": "node scripts/agent-preflight.mjs"
+    "agent:preflight": "node scripts/agent-preflight.mjs",
+    "verify:agent-docs": "node scripts/verify-agent-docs.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.11.2",

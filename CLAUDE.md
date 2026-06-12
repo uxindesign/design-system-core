@@ -1,6 +1,8 @@
-# CLAUDE.md — Claude Code adaptações
+@AGENTS.md
 
-**Comece sempre por [`AGENTS.md`](./AGENTS.md)** — fonte canônica de instruções para qualquer agente neste repo (forbidden actions, source of truth por categoria, workflows comuns, verification protocol). Este arquivo cobre só o que é específico do Claude Code.
+# CLAUDE.md — Claude Code adapter
+
+Este arquivo existe apenas para compatibilidade com Claude Code. A fonte canônica do projeto é `AGENTS.md`; integrações compartilhadas ficam em `docs/agent-integrations.md`.
 
 ## Antes da primeira escrita na sessão
 
@@ -10,7 +12,7 @@ npm run agent:preflight
 
 Mostra branch, dirty/clean, idade do snapshot Figma, último resultado de `verify:tokens`, e estado do CHANGELOG.
 
-## MCPs disponíveis
+## MCPs disponíveis no ambiente Claude
 
 ### Figma — dois servidores autenticados
 
@@ -22,29 +24,7 @@ Mostra branch, dirty/clean, idade do snapshot Figma, último resultado de `verif
 
 ### GitHub (`mcp__github__*`)
 
-PAT fine-grained restrito a `uxindesign/design-system-core`. Permissões: Contents/Issues/PRs read+write, Actions/Metadata read. Sem `workflow` ou `packages`.
-
-Git local usa SSH (`git@github.com:uxindesign/design-system-core.git`). Zero token em URL.
-
-**Limitações conhecidas:**
-- `create_or_update_file` exige SHA fresco. Rodar `get_file_contents` imediatamente antes de cada update.
-- `push_files` com payload grande estoura timeout. Commitar arquivos individualmente.
-- MCP **não consegue escrever** em `.github/workflows/` (restrição de API). Usar interface web ou git local com SSH.
-- `web_fetch` em `github.com/tree/...` bloqueado por robots; `raw.githubusercontent.com` bloqueado pelo proxy. Usar `get_file_contents` ou ferramentas locais (Read/Bash).
-
-## Figma Plugin API — armadilhas operacionais
-
-Coisas que falharam silenciosamente em sessões passadas:
-
-- **Bound variable de paint**: usar `paint.boundVariables.color.id`, não `node.boundVariables` top-level. Paint carrega seu próprio binding.
-- **Trocar bound variable de `fontSize`** em text node: setar `node.fontSize` pra valor numérico raw primeiro (limpa bindings), depois `setBoundVariable` com novo token. Exige `await figma.loadFontAsync()` antes. Pré-carregar via `Promise.all(loadFontAsync)` em loop.
-- **`setBoundVariable` empilha** se a propriedade já tinha binding. Limpar antes (`null` ou valor raw), depois rebind.
-- **Truncamento de output ~20KB**: dumps grandes quebram em chunks via `slice(start, end)` e agregados off-plugin. Ver `scripts/sync-tokens-from-figma.mjs` e `docs/process-figma-sync.md`.
-- **`hiddenFromPublishing = true`** após `createVariable` falha com "Node not found". Criar primeiro, setar a flag em chamada separada — ou via UI do Figma depois. Documentado em PR #17/#18.
-- **`strokeWeight` bindado vive em 4 campos individuais**: `node.setBoundVariable('strokeWeight', var)` retorna sem erro mas não aplica. O binding real fica em `strokeTopWeight/strokeRightWeight/strokeBottomWeight/strokeLeftWeight`. Mesma coisa pra `cornerRadius` → `topLeftRadius/topRightRadius/bottomLeftRadius/bottomRightRadius`. Helpers em `scripts/lib/figma-node-audit.mjs`. Descoberto em PR #31 (0.5.17).
-- **`ALL_SCOPES` polui pickers** — sempre escopos específicos (`FRAME_FILL`, `SHAPE_FILL`, `TEXT_FILL`, `STROKE_COLOR`, `GAP`, `CORNER_RADIUS`, `STROKE_FLOAT` etc.).
-- **`COMPONENT_SET` precisa de `clipsContent = false` + size que abrace todo conteúdo** (variants + focus rings + drop shadows que extrapolam). Senão focus ring fica clipped na visualização do component set, mascarando regressões de a11y.
-- **Não ativar `clipsContent = true`** em frames de componente sem necessidade — impede visualização de focus rings e conteúdo overflow. Default é off e deve continuar off pra qualquer wrapper interativo.
+Ver regras e limitações comuns em `docs/agent-integrations.md`.
 
 ## Skills relevantes neste repo
 
@@ -55,13 +35,14 @@ Coisas que falharam silenciosamente em sessões passadas:
 ## Resolução de conflitos entre instruções
 
 Precedência (maior → menor):
-1. **AGENTS.md / CLAUDE.md neste repo** — autoridade local.
+1. **AGENTS.md neste repo** — autoridade local.
 2. **ADRs em `docs/decisions/`** — autoridade arquitetural local.
-3. Memórias persistentes do agente (`~/.claude/.../memory/`) — preferências cross-projeto. Quando conflitar com o repo, **o repo ganha**.
-4. Defaults do agente.
+3. Este `CLAUDE.md` — adapter operacional do Claude Code.
+4. Memórias persistentes do agente (`~/.claude/.../memory/`) — preferências cross-projeto. Quando conflitar com o repo, **o repo ganha**.
+5. Defaults do agente.
 
 Se uma memória sua diz "X" e este repo diz "não X", siga o repo. Se a memória for repo-específica, ela está no lugar errado — devia estar no repo. Mover.
 
 ## Quando precisar atualizar este arquivo
 
-Mudou algo Claude-Code-específico? (MCP novo, gotcha de Plugin API descoberta, skill nova relevante.) Edite aqui. Mudou algo do projeto em geral? (Workflow, regra, source of truth.) Vai em `AGENTS.md`.
+Mudou algo Claude-Code-específico? (nome de MCP, skill do Claude, limitação do runtime Claude.) Edite aqui. Mudou algo compartilhado entre agentes? Vai em `AGENTS.md` ou `docs/agent-integrations.md`.

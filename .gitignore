@@ -9,6 +9,11 @@ node_modules/
 .DS_Store
 **/.DS_Store
 
+# Configurações locais de agentes IA
+.claude/settings.local.json
+.gemini/settings.json
+.codex/config.toml
+
 # Figma snapshot gerado via MCP (sync Figma → JSON)
 .figma-snapshot.json
 .figma-snapshot.*.json

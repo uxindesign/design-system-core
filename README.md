@@ -35,6 +35,7 @@ Links rápidos:
 - [Changelog](./CHANGELOG.md)
 - [Como contribuir](./CONTRIBUTING.md)
 - [Instruções para agentes IA](./AGENTS.md) — canônico (Claude Code, Codex, Gemini, Cursor, etc.)
+- [Integrações para agentes IA](./docs/agent-integrations.md) — Figma, GitHub, MCPs e adapters locais
 
 ## Licença
 

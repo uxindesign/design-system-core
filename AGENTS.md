@@ -1,6 +1,6 @@
 # AGENTS.md — instruções canônicas para qualquer agente
 
-Este arquivo é a **fonte canônica** de instruções para qualquer agente IA que opere neste repositório (Claude Code, OpenAI Codex, Gemini CLI, Cursor, Aider, etc.). Os arquivos `CLAUDE.md` e `GEMINI.md` na raiz são pointers finos pra cá com adições específicas de cada agente (MCPs, skills).
+Este arquivo é a **fonte canônica** de instruções para qualquer agente IA que opere neste repositório (Claude Code, OpenAI Codex, Gemini CLI, Cursor, Aider, etc.). Arquivos específicos como `CLAUDE.md` e `GEMINI.md` existem apenas como adapters de compatibilidade para ferramentas que carregam nomes próprios.
 
 Se você é uma IA começando a operar neste repo, leia este arquivo inteiro **antes de qualquer escrita**.
 
@@ -27,7 +27,7 @@ Mostra branch atual, dirty/clean, idade do snapshot Figma, último resultado de 
 | Usar `ALL_SCOPES` em variáveis Figma | Polui todos os pickers. Usar escopos específicos. |
 | Push direto pra `main` sem rodar `npm run verify:tokens` clean | Pode introduzir drift Figma↔JSON ou CSS leak detectável automaticamente. |
 | Forçar variables Figma para categorias CSS-only (`motion`, `z`, `shadow`) | ADR-016: essas categorias vivem só em JSON. Criar Figma Variable é cargo culting. |
-| Pedir/expor `FIGMA_PAT`, GitHub token, ou outras credenciais em chat | Credenciais ficam em `~/.claude.json`/env. Nunca em arquivo do repo, nunca em mensagem. |
+| Pedir/expor `FIGMA_PAT`, GitHub token, ou outras credenciais em chat | Credenciais ficam em env, secret store ou configuração local do agente. Nunca em arquivo do repo, nunca em mensagem. |
 | Bulk update em Figma sem revisão componente-a-componente | Histórico mostra ~60% de retrabalho. Incremental sempre. |
 | Editar `.github/workflows/*.yml` via GitHub MCP | API restrita — usar interface web ou git local com SSH. |
 
@@ -185,7 +185,7 @@ Editar um component set no Figma exige preservar a API pública do componente, n
 Detalhes em `docs/process-figma-sync.md`. Resumo:
 
 ```bash
-# 1. Regenerar snapshot via Claude Code session (use_figma chunked dump)
+# 1. Regenerar snapshot via agente com Figma MCP / use_figma chunked dump
 # 2. Dry-run
 npm run sync:tokens-from-figma
 # 3. Review divergências (VALUE_DRIFT, NEW_IN_FIGMA, MISSING_IN_FIGMA, ALIAS_BROKEN)
@@ -340,8 +340,11 @@ CI (`.github/workflows/deploy.yml`) roda `build:tokens` em cada push pra main e 
 
 ---
 
-## 12. Adições específicas por agente
+## 12. Integrações e adapters de agentes
 
-- **Claude Code**: ver `CLAUDE.md` na raiz — MCPs Figma + GitHub, skills, gotchas da Plugin API.
-- **Gemini CLI**: ver `GEMINI.md` na raiz.
-- **Codex / outros**: este arquivo (`AGENTS.md`) é completo. Se precisar de algo específico, abrir issue.
+- **Integrações Figma/GitHub/MCP**: ver `docs/agent-integrations.md`.
+- **Claude Code**: `CLAUDE.md` é adapter fino para ferramentas Claude.
+- **Gemini CLI**: `GEMINI.md` é adapter fino para ferramentas Gemini.
+- **Codex / Cursor / Aider / outros**: este arquivo (`AGENTS.md`) é completo. Se uma ferramenta precisar de configuração própria, ela deve apontar para este arquivo e manter apenas detalhes operacionais específicos.
+
+Configurações locais de agente (`.claude/settings.local.json`, `.gemini/settings.json`, `.codex/config.toml`, equivalentes) não são fonte de verdade do projeto e não devem carregar regras arquiteturais que outras IAs deixariam de ver.
