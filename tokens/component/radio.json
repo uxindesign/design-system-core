@@ -100,10 +100,10 @@
               "$value": "{semantic.surface.default}",
               "$description": "Fill do control Radio unselected default."
             },
-            "focused": {
+            "focus": {
               "$type": "color",
               "$value": "{semantic.surface.default}",
-              "$description": "Fill do control Radio unselected focused."
+              "$description": "Fill do control Radio unselected focus."
             },
             "hover": {
               "$type": "color",
@@ -122,10 +122,10 @@
               "$value": "{semantic.primary.background.default}",
               "$description": "Fill do control Radio selected default."
             },
-            "focused": {
+            "focus": {
               "$type": "color",
               "$value": "{semantic.primary.background.default}",
-              "$description": "Fill do control Radio selected focused."
+              "$description": "Fill do control Radio selected focus."
             },
             "hover": {
               "$type": "color",
@@ -146,10 +146,10 @@
               "$value": "{semantic.border.control-default}",
               "$description": "Border color do control Radio unselected default."
             },
-            "focused": {
+            "focus": {
               "$type": "color",
-              "$value": "{semantic.primary.background.default}",
-              "$description": "Border color do control Radio unselected focused."
+              "$value": "{semantic.border.focus}",
+              "$description": "Border color do control Radio unselected focus."
             },
             "hover": {
               "$type": "color",
@@ -168,10 +168,10 @@
               "$value": "{semantic.primary.background.default}",
               "$description": "Border color do control Radio selected default."
             },
-            "focused": {
+            "focus": {
               "$type": "color",
-              "$value": "{semantic.primary.background.default}",
-              "$description": "Border color do control Radio selected focused."
+              "$value": "{semantic.border.focus}",
+              "$description": "Border color do control Radio selected focus."
             },
             "hover": {
               "$type": "color",
@@ -234,10 +234,10 @@
               "$value": "{semantic.primary.content-default}",
               "$description": "Fill do dot Radio selected default."
             },
-            "focused": {
+            "focus": {
               "$type": "color",
               "$value": "{semantic.primary.content-default}",
-              "$description": "Fill do dot Radio selected focused."
+              "$description": "Fill do dot Radio selected focus."
             },
             "hover": {
               "$type": "color",

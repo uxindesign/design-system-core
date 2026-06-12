@@ -5,35 +5,896 @@
     "sharedTokens": 944,
     "lightTokens": 178,
     "darkTokens": 178,
-    "errors": 0,
-    "warnings": 0
+    "errors": 35,
+    "warnings": 37
   },
   "checks": {
     "jsonIntegrity": [],
     "jsonVsCss": [],
     "cssFoundationLeak": [],
-    "registryCompleteness": [],
+    "registryCompleteness": [
+      {
+        "level": "warning",
+        "message": "51 entries com campos TODO (sentido/contexto/decisao). Preencha incrementalmente.",
+        "sample": [
+          "component.button.bg.brand.focus",
+          "component.button.bg.toned.focus",
+          "component.button.bg.success.focus",
+          "component.button.bg.danger.focus",
+          "component.button.border-color.outline.focus"
+        ]
+      }
+    ],
     "docTokenDrift": [],
     "jsonVsFigma": {
       "skipped": false,
-      "snapshotAge": "2h",
-      "snapshotFreshness": "fresh",
+      "snapshotAge": "173h",
+      "snapshotFreshness": "stale",
       "snapshotMaxAgeHours": 24,
       "summary": {
         "figmaVariableCount": 1062,
         "figmaCollectionCount": 3,
         "VALUE_DRIFT": 0,
-        "NEEDS_SYNC": 0,
-        "DRIFT_FROM_SOURCE": 0,
+        "NEEDS_SYNC": 35,
+        "DRIFT_FROM_SOURCE": 35,
         "ALIAS_BROKEN": 0,
         "CSS_ONLY": 7,
         "BY_DESIGN": 137
       },
-      "divergences": [],
+      "divergences": [
+        {
+          "level": "warning",
+          "category": "STALE_SNAPSHOT",
+          "token": ".figma-snapshot.json",
+          "message": "snapshot Figma tem 173h (> 24h). Regenerar via use_figma antes de concluir sync/release."
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "component.input.bg.focus",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{semantic.surface.default}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "component.input.border-color.focus",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{semantic.border.focus}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "component.select.bg.focus",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{semantic.surface.default}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "component.select.border-color.focus",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{semantic.border.focus}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "component.textarea.bg.focus",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{semantic.surface.default}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "component.textarea.border-color.focus",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{semantic.border.focus}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "component.button.bg.brand.focus",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{semantic.primary.background.default}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "component.button.bg.toned.focus",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{semantic.toned.background.default}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "component.button.bg.success.focus",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{semantic.feedback.success.background.default}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "component.button.bg.danger.focus",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{semantic.feedback.error.background.default}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "component.button.border-color.outline.focus",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{semantic.border.focus}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "component.button.content.color.brand.focus",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{semantic.primary.content-default}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "component.button.content.color.toned.focus",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{semantic.toned.content-default}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "component.button.content.color.outline.focus",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{semantic.outline.content-default}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "component.button.content.color.ghost.focus",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{semantic.ghost.content-default}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "component.button.content.color.success.focus",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{semantic.feedback.success.content-contrast}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "component.button.content.color.danger.focus",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{semantic.feedback.error.content-contrast}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "component.checkbox.box.fill.unchecked.focus",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{semantic.surface.default}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "component.checkbox.box.fill.checked.focus",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{semantic.primary.background.default}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "component.checkbox.box.fill.indeterminate.focus",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{semantic.primary.background.default}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "component.checkbox.box.border-color.unchecked.focus",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{semantic.border.focus}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "component.checkbox.box.border-color.checked.focus",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{semantic.border.focus}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "component.checkbox.box.border-color.indeterminate.focus",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{semantic.border.focus}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "component.checkbox.mark.fill.checked.focus",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{semantic.primary.content-default}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "component.checkbox.mark.fill.indeterminate.focus",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{semantic.primary.content-default}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "component.radio.control.fill.unselected.focus",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{semantic.surface.default}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "component.radio.control.fill.selected.focus",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{semantic.primary.background.default}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "component.radio.control.border-color.unselected.focus",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{semantic.border.focus}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "component.radio.control.border-color.selected.focus",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{semantic.border.focus}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "component.radio.dot.fill.selected.focus",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{semantic.primary.content-default}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "component.toggle.track.fill.off.focus",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{semantic.surface.default}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "component.toggle.track.fill.on.focus",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{semantic.primary.background.default}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "component.toggle.track.border-color.off.focus",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{semantic.border.focus}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "component.toggle.thumb.fill.off.focus",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{semantic.content.default}"
+        },
+        {
+          "level": "error",
+          "category": "DRIFT_FROM_SOURCE",
+          "token": "component.toggle.thumb.fill.on.focus",
+          "message": "existe no JSON mas não no Figma — JSON foi editado sem passar pelo Figma",
+          "json": "{semantic.primary.content-default}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.input.bg.focused",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.surface.default}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.input.border-color.focused",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.primary.background.default}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.select.bg.focused",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.surface.default}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.select.border-color.focused",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.primary.background.default}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.textarea.bg.focused",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.surface.default}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.textarea.border-color.focused",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.primary.background.default}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.button.bg.brand.focused",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.primary.background.default}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.button.bg.toned.focused",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.toned.background.default}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.button.bg.success.focused",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.feedback.success.background.default}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.button.bg.danger.focused",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.feedback.error.background.default}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.button.border-color.outline.focused",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.border.default}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.button.content.color.brand.focused",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.primary.content.default}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.button.content.color.toned.focused",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.toned.content.default}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.button.content.color.outline.focused",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.outline.content.default}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.button.content.color.ghost.focused",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.ghost.content.default}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.button.content.color.success.focused",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.feedback.success.content.contrast}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.button.content.color.danger.focused",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.feedback.error.content.contrast}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.checkbox.box.fill.unchecked.focused",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.surface.default}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.checkbox.box.fill.checked.focused",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.primary.background.default}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.checkbox.box.fill.indeterminate.focused",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.primary.background.default}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.checkbox.box.border-color.unchecked.focused",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.primary.background.default}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.checkbox.box.border-color.checked.focused",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.primary.background.default}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.checkbox.box.border-color.indeterminate.focused",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.primary.background.default}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.checkbox.mark.fill.checked.focused",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.primary.content-default}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.checkbox.mark.fill.indeterminate.focused",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.primary.content-default}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.radio.control.fill.unselected.focused",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.surface.default}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.radio.control.fill.selected.focused",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.primary.background.default}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.radio.control.border-color.unselected.focused",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.primary.background.default}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.radio.control.border-color.selected.focused",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.primary.background.default}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.radio.dot.fill.selected.focused",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.primary.content-default}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.toggle.track.fill.off.focused",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.surface.default}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.toggle.track.fill.on.focused",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.primary.background.default}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.toggle.track.border-color.off.focused",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.primary.background.default}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.toggle.thumb.fill.off.focused",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.content.default}"
+        },
+        {
+          "level": "warning",
+          "category": "NEEDS_SYNC",
+          "token": "component.toggle.thumb.fill.on.focused",
+          "message": "existe no Figma mas não no JSON — rode npm run sync:tokens-from-figma",
+          "figma": "{semantic.primary.content-default}"
+        }
+      ],
       "diffs": {
         "VALUE_DRIFT": [],
-        "NEW_IN_FIGMA": [],
-        "MISSING_IN_FIGMA": [],
+        "NEW_IN_FIGMA": [
+          {
+            "file": "component/input.json",
+            "token": "component.input.bg.focused",
+            "figma": "{semantic.surface.default}"
+          },
+          {
+            "file": "component/input.json",
+            "token": "component.input.border-color.focused",
+            "figma": "{semantic.primary.background.default}"
+          },
+          {
+            "file": "component/select.json",
+            "token": "component.select.bg.focused",
+            "figma": "{semantic.surface.default}"
+          },
+          {
+            "file": "component/select.json",
+            "token": "component.select.border-color.focused",
+            "figma": "{semantic.primary.background.default}"
+          },
+          {
+            "file": "component/textarea.json",
+            "token": "component.textarea.bg.focused",
+            "figma": "{semantic.surface.default}"
+          },
+          {
+            "file": "component/textarea.json",
+            "token": "component.textarea.border-color.focused",
+            "figma": "{semantic.primary.background.default}"
+          },
+          {
+            "file": "component/button.json",
+            "token": "component.button.bg.brand.focused",
+            "figma": "{semantic.primary.background.default}"
+          },
+          {
+            "file": "component/button.json",
+            "token": "component.button.bg.toned.focused",
+            "figma": "{semantic.toned.background.default}"
+          },
+          {
+            "file": "component/button.json",
+            "token": "component.button.bg.success.focused",
+            "figma": "{semantic.feedback.success.background.default}"
+          },
+          {
+            "file": "component/button.json",
+            "token": "component.button.bg.danger.focused",
+            "figma": "{semantic.feedback.error.background.default}"
+          },
+          {
+            "file": "component/button.json",
+            "token": "component.button.border-color.outline.focused",
+            "figma": "{semantic.border.default}"
+          },
+          {
+            "file": "component/button.json",
+            "token": "component.button.content.color.brand.focused",
+            "figma": "{semantic.primary.content.default}"
+          },
+          {
+            "file": "component/button.json",
+            "token": "component.button.content.color.toned.focused",
+            "figma": "{semantic.toned.content.default}"
+          },
+          {
+            "file": "component/button.json",
+            "token": "component.button.content.color.outline.focused",
+            "figma": "{semantic.outline.content.default}"
+          },
+          {
+            "file": "component/button.json",
+            "token": "component.button.content.color.ghost.focused",
+            "figma": "{semantic.ghost.content.default}"
+          },
+          {
+            "file": "component/button.json",
+            "token": "component.button.content.color.success.focused",
+            "figma": "{semantic.feedback.success.content.contrast}"
+          },
+          {
+            "file": "component/button.json",
+            "token": "component.button.content.color.danger.focused",
+            "figma": "{semantic.feedback.error.content.contrast}"
+          },
+          {
+            "file": "component/checkbox.json",
+            "token": "component.checkbox.box.fill.unchecked.focused",
+            "figma": "{semantic.surface.default}"
+          },
+          {
+            "file": "component/checkbox.json",
+            "token": "component.checkbox.box.fill.checked.focused",
+            "figma": "{semantic.primary.background.default}"
+          },
+          {
+            "file": "component/checkbox.json",
+            "token": "component.checkbox.box.fill.indeterminate.focused",
+            "figma": "{semantic.primary.background.default}"
+          },
+          {
+            "file": "component/checkbox.json",
+            "token": "component.checkbox.box.border-color.unchecked.focused",
+            "figma": "{semantic.primary.background.default}"
+          },
+          {
+            "file": "component/checkbox.json",
+            "token": "component.checkbox.box.border-color.checked.focused",
+            "figma": "{semantic.primary.background.default}"
+          },
+          {
+            "file": "component/checkbox.json",
+            "token": "component.checkbox.box.border-color.indeterminate.focused",
+            "figma": "{semantic.primary.background.default}"
+          },
+          {
+            "file": "component/checkbox.json",
+            "token": "component.checkbox.mark.fill.checked.focused",
+            "figma": "{semantic.primary.content-default}"
+          },
+          {
+            "file": "component/checkbox.json",
+            "token": "component.checkbox.mark.fill.indeterminate.focused",
+            "figma": "{semantic.primary.content-default}"
+          },
+          {
+            "file": "component/radio.json",
+            "token": "component.radio.control.fill.unselected.focused",
+            "figma": "{semantic.surface.default}"
+          },
+          {
+            "file": "component/radio.json",
+            "token": "component.radio.control.fill.selected.focused",
+            "figma": "{semantic.primary.background.default}"
+          },
+          {
+            "file": "component/radio.json",
+            "token": "component.radio.control.border-color.unselected.focused",
+            "figma": "{semantic.primary.background.default}"
+          },
+          {
+            "file": "component/radio.json",
+            "token": "component.radio.control.border-color.selected.focused",
+            "figma": "{semantic.primary.background.default}"
+          },
+          {
+            "file": "component/radio.json",
+            "token": "component.radio.dot.fill.selected.focused",
+            "figma": "{semantic.primary.content-default}"
+          },
+          {
+            "file": "component/toggle.json",
+            "token": "component.toggle.track.fill.off.focused",
+            "figma": "{semantic.surface.default}"
+          },
+          {
+            "file": "component/toggle.json",
+            "token": "component.toggle.track.fill.on.focused",
+            "figma": "{semantic.primary.background.default}"
+          },
+          {
+            "file": "component/toggle.json",
+            "token": "component.toggle.track.border-color.off.focused",
+            "figma": "{semantic.primary.background.default}"
+          },
+          {
+            "file": "component/toggle.json",
+            "token": "component.toggle.thumb.fill.off.focused",
+            "figma": "{semantic.content.default}"
+          },
+          {
+            "file": "component/toggle.json",
+            "token": "component.toggle.thumb.fill.on.focused",
+            "figma": "{semantic.primary.content-default}"
+          }
+        ],
+        "MISSING_IN_FIGMA": [
+          {
+            "file": "component/input.json",
+            "token": "component.input.bg.focus",
+            "json": "{semantic.surface.default}"
+          },
+          {
+            "file": "component/input.json",
+            "token": "component.input.border-color.focus",
+            "json": "{semantic.border.focus}"
+          },
+          {
+            "file": "component/select.json",
+            "token": "component.select.bg.focus",
+            "json": "{semantic.surface.default}"
+          },
+          {
+            "file": "component/select.json",
+            "token": "component.select.border-color.focus",
+            "json": "{semantic.border.focus}"
+          },
+          {
+            "file": "component/textarea.json",
+            "token": "component.textarea.bg.focus",
+            "json": "{semantic.surface.default}"
+          },
+          {
+            "file": "component/textarea.json",
+            "token": "component.textarea.border-color.focus",
+            "json": "{semantic.border.focus}"
+          },
+          {
+            "file": "component/button.json",
+            "token": "component.button.bg.brand.focus",
+            "json": "{semantic.primary.background.default}"
+          },
+          {
+            "file": "component/button.json",
+            "token": "component.button.bg.toned.focus",
+            "json": "{semantic.toned.background.default}"
+          },
+          {
+            "file": "component/button.json",
+            "token": "component.button.bg.success.focus",
+            "json": "{semantic.feedback.success.background.default}"
+          },
+          {
+            "file": "component/button.json",
+            "token": "component.button.bg.danger.focus",
+            "json": "{semantic.feedback.error.background.default}"
+          },
+          {
+            "file": "component/button.json",
+            "token": "component.button.border-color.outline.focus",
+            "json": "{semantic.border.focus}"
+          },
+          {
+            "file": "component/button.json",
+            "token": "component.button.content.color.brand.focus",
+            "json": "{semantic.primary.content-default}"
+          },
+          {
+            "file": "component/button.json",
+            "token": "component.button.content.color.toned.focus",
+            "json": "{semantic.toned.content-default}"
+          },
+          {
+            "file": "component/button.json",
+            "token": "component.button.content.color.outline.focus",
+            "json": "{semantic.outline.content-default}"
+          },
+          {
+            "file": "component/button.json",
+            "token": "component.button.content.color.ghost.focus",
+            "json": "{semantic.ghost.content-default}"
+          },
+          {
+            "file": "component/button.json",
+            "token": "component.button.content.color.success.focus",
+            "json": "{semantic.feedback.success.content-contrast}"
+          },
+          {
+            "file": "component/button.json",
+            "token": "component.button.content.color.danger.focus",
+            "json": "{semantic.feedback.error.content-contrast}"
+          },
+          {
+            "file": "component/checkbox.json",
+            "token": "component.checkbox.box.fill.unchecked.focus",
+            "json": "{semantic.surface.default}"
+          },
+          {
+            "file": "component/checkbox.json",
+            "token": "component.checkbox.box.fill.checked.focus",
+            "json": "{semantic.primary.background.default}"
+          },
+          {
+            "file": "component/checkbox.json",
+            "token": "component.checkbox.box.fill.indeterminate.focus",
+            "json": "{semantic.primary.background.default}"
+          },
+          {
+            "file": "component/checkbox.json",
+            "token": "component.checkbox.box.border-color.unchecked.focus",
+            "json": "{semantic.border.focus}"
+          },
+          {
+            "file": "component/checkbox.json",
+            "token": "component.checkbox.box.border-color.checked.focus",
+            "json": "{semantic.border.focus}"
+          },
+          {
+            "file": "component/checkbox.json",
+            "token": "component.checkbox.box.border-color.indeterminate.focus",
+            "json": "{semantic.border.focus}"
+          },
+          {
+            "file": "component/checkbox.json",
+            "token": "component.checkbox.mark.fill.checked.focus",
+            "json": "{semantic.primary.content-default}"
+          },
+          {
+            "file": "component/checkbox.json",
+            "token": "component.checkbox.mark.fill.indeterminate.focus",
+            "json": "{semantic.primary.content-default}"
+          },
+          {
+            "file": "component/radio.json",
+            "token": "component.radio.control.fill.unselected.focus",
+            "json": "{semantic.surface.default}"
+          },
+          {
+            "file": "component/radio.json",
+            "token": "component.radio.control.fill.selected.focus",
+            "json": "{semantic.primary.background.default}"
+          },
+          {
+            "file": "component/radio.json",
+            "token": "component.radio.control.border-color.unselected.focus",
+            "json": "{semantic.border.focus}"
+          },
+          {
+            "file": "component/radio.json",
+            "token": "component.radio.control.border-color.selected.focus",
+            "json": "{semantic.border.focus}"
+          },
+          {
+            "file": "component/radio.json",
+            "token": "component.radio.dot.fill.selected.focus",
+            "json": "{semantic.primary.content-default}"
+          },
+          {
+            "file": "component/toggle.json",
+            "token": "component.toggle.track.fill.off.focus",
+            "json": "{semantic.surface.default}"
+          },
+          {
+            "file": "component/toggle.json",
+            "token": "component.toggle.track.fill.on.focus",
+            "json": "{semantic.primary.background.default}"
+          },
+          {
+            "file": "component/toggle.json",
+            "token": "component.toggle.track.border-color.off.focus",
+            "json": "{semantic.border.focus}"
+          },
+          {
+            "file": "component/toggle.json",
+            "token": "component.toggle.thumb.fill.off.focus",
+            "json": "{semantic.content.default}"
+          },
+          {
+            "file": "component/toggle.json",
+            "token": "component.toggle.thumb.fill.on.focus",
+            "json": "{semantic.primary.content-default}"
+          }
+        ],
         "CSS_ONLY": [
           {
             "file": "foundation/typography.json",

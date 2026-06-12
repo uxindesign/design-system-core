@@ -2,7 +2,7 @@
 
 [![Versão](https://img.shields.io/badge/vers%C3%A3o-1.0.0--beta.4-blue)](./CHANGELOG.md) [![Licença](https://img.shields.io/badge/licen%C3%A7a-Propriet%C3%A1ria-red)](./LICENSE) [![Documentação](https://img.shields.io/badge/docs-online-brightgreen)](https://uxindesign.github.io/design-system-core/)
 
-Design system white-label em CSS puro, com tokens DTCG em arquitetura 3-layer (Foundation/Core → Semantic/System → Component), 19 componentes documentados, modos light/dark e paleta brand única customizável.
+Design system white-label em CSS puro, com tokens DTCG em arquitetura 3-layer (Foundation/Core → Semantic/System → Component), componentes documentados, modos light/dark e paleta brand única customizável.
 
 ## Instalação
 
@@ -23,7 +23,7 @@ Depois serve o diretório estático (`python3 -m http.server` ou equivalente).
 
 ## Documentação completa
 
-Toda a documentação vive em **[uxindesign.github.io/design-system-core](https://uxindesign.github.io/design-system-core/)**. Lá estão: 19 componentes com preview ao vivo, 10 foundations, guias de tema, acessibilidade e documentação, 19 ADRs navegáveis, inventário de tokens, e consumo por IA em `/docs/llms.txt`.
+Toda a documentação vive em **[uxindesign.github.io/design-system-core](https://uxindesign.github.io/design-system-core/)**. Lá estão: componentes com preview ao vivo, foundations, guias de tema, acessibilidade e documentação, ADRs navegáveis, inventário de tokens, e consumo por IA em `/docs/llms.txt`.
 
 Links rápidos:
 

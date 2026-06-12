@@ -1,4 +1,10 @@
 const EXPECTED_FILE_KEY = "PRYS2kL7VdC1MtVWfZvuDN";
+const STROKE_WEIGHT_FIELDS = [
+  "strokeTopWeight",
+  "strokeRightWeight",
+  "strokeBottomWeight",
+  "strokeLeftWeight",
+];
 
 figma.showUI(__html__, {
   width: 560,
@@ -44,6 +50,9 @@ async function exportSnapshot() {
     serializedVariables[variable.id] = serializeVariable(variable);
   }
 
+  figma.ui.postMessage({ type: "snapshot-status", message: "Auditando estrutura dos componentes..." });
+
+  const structureAudit = await buildStructureAudit(variables, variableCollections);
   const collectionCounts = countByCollection(variables, variableCollections);
   const snapshot = {
     generatedAt: new Date().toISOString(),
@@ -57,6 +66,7 @@ async function exportSnapshot() {
     fileName: figma.root.name,
     variableCollections,
     variables: serializedVariables,
+    structureAudit,
   };
 
   figma.ui.postMessage({
@@ -68,6 +78,7 @@ async function exportSnapshot() {
       collectionCount: collections.length,
       variableCount: variables.length,
       collectionCounts,
+      structureIssueCount: structureAudit.issueCount,
       generatedAt: snapshot.generatedAt,
     },
   });
@@ -103,6 +114,7 @@ function serializeVariable(variable) {
     valuesByMode,
     description: variable.description || "",
     scopes: Array.isArray(variable.scopes) ? variable.scopes.slice() : [],
+    codeSyntax: variable.codeSyntax ? { ...variable.codeSyntax } : {},
     hiddenFromPublishing: Boolean(variable.hiddenFromPublishing),
     remote: Boolean(variable.remote),
   };
@@ -150,4 +162,363 @@ function countByCollection(variables, collectionsById) {
     counts[name] = (counts[name] || 0) + 1;
   }
   return counts;
+}
+
+async function buildStructureAudit(variables, collectionsById) {
+  const variablesById = new Map(variables.map((variable) => [variable.id, variable]));
+  const collectionNameById = new Map(
+    Object.entries(collectionsById).map(([id, collection]) => [id, collection.name])
+  );
+  const issues = [];
+
+  auditVariables(variables, variablesById, collectionNameById, issues);
+
+  const componentPages = figma.root.children.filter((page) => /❖/.test(page.name));
+  const pageSummary = [];
+
+  for (const page of componentPages) {
+    if (typeof figma.setCurrentPageAsync === "function") {
+      await figma.setCurrentPageAsync(page);
+    } else {
+      figma.currentPage = page;
+    }
+    const before = issues.length;
+    await auditPageNodes(page, variablesById, collectionNameById, issues);
+    pageSummary.push({
+      pageId: page.id,
+      pageName: page.name,
+      issueCount: issues.length - before,
+    });
+  }
+
+  return {
+    generatedAt: new Date().toISOString(),
+    componentPageCount: componentPages.length,
+    collectionCounts: countByCollection(variables, collectionsById),
+    aliasSummary: summarizeAliases(variables, variablesById, collectionNameById),
+    pageSummary,
+    issueCount: issues.length,
+    grouped: groupIssues(issues),
+    issues: issues.slice(0, 500),
+    truncated: issues.length > 500,
+  };
+}
+
+function auditVariables(variables, variablesById, collectionNameById, issues) {
+  for (const variable of variables) {
+    const collectionName = collectionNameById.get(variable.variableCollectionId) || "";
+    const syntax = variable.codeSyntax || {};
+
+    if (!syntax.WEB) {
+      addIssue(issues, "variable", "missing-web-syntax", variable.name, {
+        collection: collectionName,
+      });
+    }
+
+    if (Array.isArray(variable.scopes) && variable.scopes.includes("ALL_SCOPES")) {
+      addIssue(issues, "variable", "all-scopes", variable.name, {
+        collection: collectionName,
+      });
+    }
+
+    if (/\bglyph\b/i.test(variable.name)) {
+      addIssue(issues, "variable", "legacy-glyph-name", variable.name, {
+        collection: collectionName,
+      });
+    }
+
+    if (variable.name.includes("error-hover")) {
+      addIssue(issues, "variable", "legacy-error-hover-name", variable.name, {
+        collection: collectionName,
+      });
+    }
+
+    if (variable.name.includes("danger") && !variable.name.startsWith("button/")) {
+      addIssue(issues, "variable", "danger-outside-button", variable.name, {
+        collection: collectionName,
+      });
+    }
+
+    for (const [modeId, value] of Object.entries(variable.valuesByMode || {})) {
+      if (!value || value.type !== "VARIABLE_ALIAS") {
+        if (collectionName === "Component") {
+          addIssue(issues, "variable", "component-raw-value", variable.name, {
+            collection: collectionName,
+            modeId,
+          });
+        }
+        if (collectionName === "Semantic") {
+          addIssue(issues, "variable", "semantic-raw-value", variable.name, {
+            collection: collectionName,
+            modeId,
+          });
+        }
+        continue;
+      }
+
+      const target = variablesById.get(value.id);
+      const targetCollection = target
+        ? collectionNameById.get(target.variableCollectionId) || ""
+        : "missing";
+
+      if (!target) {
+        addIssue(issues, "variable", "missing-alias-target", variable.name, {
+          collection: collectionName,
+          modeId,
+          targetId: value.id,
+        });
+        continue;
+      }
+
+      if (collectionName === "Component" && targetCollection !== "Semantic") {
+        addIssue(issues, "variable", "component-alias-not-semantic", variable.name, {
+          collection: collectionName,
+          modeId,
+          target: target.name,
+          targetCollection,
+        });
+      }
+
+      if (collectionName === "Semantic" && targetCollection === "Component") {
+        addIssue(issues, "variable", "semantic-alias-component", variable.name, {
+          collection: collectionName,
+          modeId,
+          target: target.name,
+          targetCollection,
+        });
+      }
+
+      auditComponentAliasSemantics(variable.name, target.name, issues, modeId);
+    }
+  }
+}
+
+function auditComponentAliasSemantics(sourceName, targetName, issues, modeId) {
+  if (!sourceName.includes("/")) return;
+
+  if (sourceName.includes("/icon/color/") && !targetName.startsWith("icon/color/")) {
+    addIssue(issues, "variable", "component-icon-color-alias", sourceName, { modeId, target: targetName });
+  }
+
+  if (sourceName.includes("/border-color/") && !/^(border|primary\/border)\//.test(targetName)) {
+    addIssue(issues, "variable", "component-border-color-alias", sourceName, { modeId, target: targetName });
+  }
+
+  if (sourceName.includes("/focus-ring/color/") && !targetName.startsWith("focus-ring/color/")) {
+    addIssue(issues, "variable", "component-focus-ring-color-alias", sourceName, { modeId, target: targetName });
+  }
+
+  if (sourceName.includes("/bg/") && !/^(background|surface|overlay|primary\/background|feedback)\//.test(targetName)) {
+    addIssue(issues, "variable", "component-background-alias", sourceName, { modeId, target: targetName });
+  }
+}
+
+async function auditPageNodes(page, variablesById, collectionNameById, issues) {
+  const nodes = page.findAll(() => true);
+
+  for (const node of nodes) {
+    const path = nodePath(node);
+
+    if (/\bglyph\b/i.test(node.name)) {
+      addIssue(issues, "node", "legacy-glyph-node", path, { nodeId: node.id, pageName: page.name });
+    }
+
+    if (node.type === "INSTANCE") {
+      let mainComponent = null;
+      try {
+        mainComponent = await node.getMainComponentAsync();
+      } catch (error) {
+        mainComponent = null;
+      }
+
+      const mainName = mainComponent ? mainComponent.name : "";
+      if (/Icon Placeholder/i.test(mainName)) {
+        addIssue(issues, "node", "icon-placeholder-instance", path, {
+          nodeId: node.id,
+          pageName: page.name,
+          mainComponent: mainName,
+        });
+      }
+
+      if (mainName.startsWith("lucide/")) {
+        auditLucideInstance(node, path, variablesById, collectionNameById, issues, page.name, mainName);
+      }
+    }
+
+    if (/focus ring/i.test(node.name)) {
+      auditFocusRingNode(node, path, variablesById, collectionNameById, issues, page.name);
+    }
+  }
+}
+
+function auditLucideInstance(node, path, variablesById, collectionNameById, issues, pageName, mainComponent) {
+  const width = variableRefInfo(node.boundVariables && node.boundVariables.width, variablesById, collectionNameById);
+  const height = variableRefInfo(node.boundVariables && node.boundVariables.height, variablesById, collectionNameById);
+  const color = findPaintBinding(node, variablesById, collectionNameById);
+  const stroke = getStrokeWeightBindingInfo(node, variablesById, collectionNameById);
+  const hasStroke = hasVisibleStroke(node);
+
+  if (!isComponentBinding(width)) {
+    addIssue(issues, "node", "lucide-width-not-component-bound", path, { nodeId: node.id, pageName, mainComponent, binding: width });
+  }
+
+  if (!isComponentBinding(height)) {
+    addIssue(issues, "node", "lucide-height-not-component-bound", path, { nodeId: node.id, pageName, mainComponent, binding: height });
+  }
+
+  if (!isComponentBinding(color)) {
+    addIssue(issues, "node", "lucide-color-not-component-bound", path, { nodeId: node.id, pageName, mainComponent, binding: color });
+  }
+
+  if (hasStroke && !isComponentBinding(stroke)) {
+    addIssue(issues, "node", "lucide-stroke-width-not-component-bound", path, {
+      nodeId: node.id,
+      pageName,
+      mainComponent,
+      binding: stroke,
+    });
+  }
+}
+
+function auditFocusRingNode(node, path, variablesById, collectionNameById, issues, pageName) {
+  const color = findPaintBinding(node, variablesById, collectionNameById);
+  const stroke = getStrokeWeightBindingInfo(node, variablesById, collectionNameById);
+
+  if (!color || color.collection !== "Component" || !/\/focus-ring\/color\//.test(color.name)) {
+    addIssue(issues, "node", "focus-ring-color-not-component-focus-ring", path, {
+      nodeId: node.id,
+      pageName,
+      binding: color,
+    });
+  }
+
+  if (!stroke || stroke.collection !== "Component" || !/\/focus-ring\/width$/.test(stroke.name)) {
+    addIssue(issues, "node", "focus-ring-width-not-component-focus-ring", path, {
+      nodeId: node.id,
+      pageName,
+      binding: stroke,
+    });
+  }
+}
+
+function summarizeAliases(variables, variablesById, collectionNameById) {
+  const summary = {
+    componentTotal: 0,
+    componentAliasSemantic: 0,
+    componentRaw: 0,
+    componentAliasOther: 0,
+    semanticTotal: 0,
+    semanticRaw: 0,
+  };
+
+  for (const variable of variables) {
+    const collectionName = collectionNameById.get(variable.variableCollectionId) || "";
+    for (const value of Object.values(variable.valuesByMode || {})) {
+      if (collectionName === "Component") {
+        summary.componentTotal += 1;
+        if (!value || value.type !== "VARIABLE_ALIAS") {
+          summary.componentRaw += 1;
+          continue;
+        }
+        const target = variablesById.get(value.id);
+        const targetCollection = target ? collectionNameById.get(target.variableCollectionId) || "" : "";
+        if (targetCollection === "Semantic") summary.componentAliasSemantic += 1;
+        else summary.componentAliasOther += 1;
+      }
+      if (collectionName === "Semantic") {
+        summary.semanticTotal += 1;
+        if (!value || value.type !== "VARIABLE_ALIAS") summary.semanticRaw += 1;
+      }
+    }
+  }
+
+  return summary;
+}
+
+function findPaintBinding(node, variablesById, collectionNameById) {
+  for (const current of [node, ...findDescendants(node)]) {
+    const bound = current.boundVariables || {};
+    for (const field of ["fills", "strokes"]) {
+      const refs = toArray(bound[field]);
+      for (const ref of refs) {
+        const info = variableRefInfo(ref, variablesById, collectionNameById);
+        if (info) return info;
+      }
+    }
+  }
+  return null;
+}
+
+function getStrokeWeightBindingInfo(node, variablesById, collectionNameById) {
+  for (const current of [node, ...findDescendants(node)]) {
+    const bound = current.boundVariables || {};
+    for (const field of STROKE_WEIGHT_FIELDS) {
+      const info = variableRefInfo(bound[field], variablesById, collectionNameById);
+      if (info) return info;
+    }
+  }
+  return null;
+}
+
+function hasVisibleStroke(node) {
+  for (const current of [node, ...findDescendants(node)]) {
+    if (!Array.isArray(current.strokes)) continue;
+    if (current.strokes.some((paint) => paint && paint.visible !== false)) return true;
+  }
+  return false;
+}
+
+function findDescendants(node) {
+  if (!("children" in node) || !Array.isArray(node.children)) return [];
+  const out = [];
+  for (const child of node.children) {
+    out.push(child);
+    out.push(...findDescendants(child));
+  }
+  return out;
+}
+
+function variableRefInfo(ref, variablesById, collectionNameById) {
+  if (!ref) return null;
+  const id = typeof ref === "string" ? ref : ref.id;
+  if (!id) return null;
+  const variable = variablesById.get(id);
+  if (!variable) return { id, name: null, collection: "missing" };
+  return {
+    id,
+    name: variable.name,
+    collection: collectionNameById.get(variable.variableCollectionId) || variable.variableCollectionId,
+  };
+}
+
+function isComponentBinding(info) {
+  return Boolean(info && info.collection === "Component");
+}
+
+function toArray(value) {
+  if (!value) return [];
+  return Array.isArray(value) ? value : [value];
+}
+
+function nodePath(node) {
+  const parts = [];
+  let current = node;
+  while (current) {
+    parts.unshift(current.name);
+    current = current.parent;
+    if (current && current.type === "DOCUMENT") break;
+  }
+  return parts.join(" / ");
+}
+
+function groupIssues(issues) {
+  const grouped = {};
+  for (const issue of issues) {
+    grouped[issue.code] = (grouped[issue.code] || 0) + 1;
+  }
+  return grouped;
+}
+
+function addIssue(issues, scope, code, target, details) {
+  issues.push({ scope, code, target, details: details || {} });
 }

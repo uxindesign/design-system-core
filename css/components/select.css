@@ -164,24 +164,24 @@
   color: var(--ds-select-chevron-color-default);
   line-height: 1;
   background-color: currentColor;
-  -webkit-mask: var(--select-chevron-mask) center / var(--ds-select-chevron-glyph-size-md) var(--ds-select-chevron-glyph-size-md) no-repeat;
-  mask: var(--select-chevron-mask) center / var(--ds-select-chevron-glyph-size-md) var(--ds-select-chevron-glyph-size-md) no-repeat;
+  -webkit-mask: var(--select-chevron-mask) center / var(--ds-select-chevron-size-md) var(--ds-select-chevron-size-md) no-repeat;
+  mask: var(--select-chevron-mask) center / var(--ds-select-chevron-size-md) var(--ds-select-chevron-size-md) no-repeat;
 }
 
 .ds-select--sm .ds-select__arrow {
   right: var(--ds-select-padding-x-sm);
   width: var(--ds-select-chevron-frame-size-sm);
   height: var(--ds-select-chevron-frame-size-sm);
-  -webkit-mask-size: var(--ds-select-chevron-glyph-size-sm) var(--ds-select-chevron-glyph-size-sm);
-  mask-size: var(--ds-select-chevron-glyph-size-sm) var(--ds-select-chevron-glyph-size-sm);
+  -webkit-mask-size: var(--ds-select-chevron-size-sm) var(--ds-select-chevron-size-sm);
+  mask-size: var(--ds-select-chevron-size-sm) var(--ds-select-chevron-size-sm);
 }
 
 .ds-select--lg .ds-select__arrow {
   right: var(--ds-select-padding-x-lg);
   width: var(--ds-select-chevron-frame-size-lg);
   height: var(--ds-select-chevron-frame-size-lg);
-  -webkit-mask-size: var(--ds-select-chevron-glyph-size-lg) var(--ds-select-chevron-glyph-size-lg);
-  mask-size: var(--ds-select-chevron-glyph-size-lg) var(--ds-select-chevron-glyph-size-lg);
+  -webkit-mask-size: var(--ds-select-chevron-size-lg) var(--ds-select-chevron-size-lg);
+  mask-size: var(--ds-select-chevron-size-lg) var(--ds-select-chevron-size-lg);
 }
 
 /* Icon
@@ -198,7 +198,7 @@
   padding-left: var(--ds-select-icon-frame-padding-x-default);
   padding-right: var(--ds-select-icon-frame-padding-x-default);
   color: var(--ds-select-icon-color-default);
-  font-size: var(--ds-select-icon-glyph-size-md);
+  font-size: var(--ds-select-icon-size-md);
   line-height: 1;
   pointer-events: none;
 }
@@ -206,13 +206,13 @@
 .ds-select--sm .ds-select__icon {
   width: var(--ds-select-icon-frame-size-sm);
   height: var(--ds-select-icon-frame-size-sm);
-  font-size: var(--ds-select-icon-glyph-size-sm);
+  font-size: var(--ds-select-icon-size-sm);
 }
 
 .ds-select--lg .ds-select__icon {
   width: var(--ds-select-icon-frame-size-lg);
   height: var(--ds-select-icon-frame-size-lg);
-  font-size: var(--ds-select-icon-glyph-size-lg);
+  font-size: var(--ds-select-icon-size-lg);
 }
 
 /* States
@@ -225,8 +225,8 @@
 
 /* Focused */
 .ds-select:focus-within {
-  background: var(--ds-select-bg-focused);
-  border-color: var(--ds-select-border-color-focused);
+  background: var(--ds-select-bg-focus);
+  border-color: var(--ds-select-border-color-focus);
   outline: var(--ds-select-focus-ring-stroke-width-default) solid var(--ds-select-focus-ring-color-default);
   outline-offset: var(--ds-select-focus-ring-offset-default);
 }

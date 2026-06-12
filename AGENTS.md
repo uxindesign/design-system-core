@@ -159,26 +159,37 @@ Editar um component set no Figma exige preservar a API pública do componente, n
 
 #### Regras para ícones
 
-1. Ícones usados por componentes devem ser instâncias de `Icon Placeholder`. Não deixar glyph de fonte solto em componente vivo.
-2. O único lugar onde fonte de ícone pode existir é dentro do próprio `Icon Placeholder` ou dentro de componente utilitário de ícone que encapsule esse placeholder.
-3. `frame-size` e `glyph-size` devem ser explícitos e, quando a decisão do componente exigir equivalência, devem usar o mesmo valor.
-4. Glyph de ícone usa `line-height: 100%`.
-5. Ao trocar um glyph solto por `Icon Placeholder`, preserve:
+1. Ícones usados por componentes vivos devem ser instâncias da biblioteca Lucide (`lucide/*`), não `Icon Placeholder`, fonte de ícone ou texto `glyph`.
+2. `Icon Placeholder` e `glyph` são legado. Se aparecerem em componente vivo, trate como regressão e substitua por uma instância Lucide equivalente.
+3. Todo ícone Lucide dentro de componente final deve ter:
+   - `width` e `height` bindados em token Component de tamanho;
+   - cor bindada em token Component de cor da anatomia;
+   - `strokeWeight` bindado em token Component de stroke-width quando o ícone usa stroke.
+4. O token Component de cor do ícone deve aliasar um Semantic de iconografia (`icon/color/*`) ou outro Semantic de conteúdo apropriado via token Component. Não aplicar Semantic direto no ícone dentro de componente final.
+5. `frame-size` pertence ao frame que contém o ícone; `icon-size` pertence à instância/vetor do ícone. Não aplicar token de frame diretamente no vetor.
+6. Ao trocar um ícone legado por Lucide, preserve:
    - variável de cor;
    - variável de tamanho;
+   - variável de stroke-width;
    - instance swap;
    - booleano de visibilidade;
    - ordem do sublayer na anatomia.
+7. A biblioteca de ícones e componentes utilitários de iconografia podem consumir Semantic `icon/*` diretamente. Componentes finais do DS consomem Component tokens.
 
 #### Validação obrigatória após editar Figma
 
 1. Reexecutar dump do component set e comparar com o dump inicial.
 2. Verificar que todos os texts editáveis continuam com `componentPropertyReferences.characters`.
 3. Verificar que todos os booleans e instance swaps esperados estão referenciados pelos sublayers em todos os variants.
-4. Verificar que não há glyph de fonte solto fora de `Icon Placeholder` em componentes vivos.
-5. Verificar screenshot do component set quando a mudança mexer em layout, icon, spacing ou texto.
-6. Se variables Figma foram alteradas, regenerar `.figma-snapshot.json` antes de afirmar que Figma↔JSON está em dia.
-7. Se a mudança impacta repo, repetir o fluxo Figma → JSON → CSS gerado → docs/API/LLM → `verify:tokens` → testes relevantes.
+4. Verificar que não há `glyph`, `Icon Placeholder` ou ícone de fonte em componentes vivos.
+5. Verificar que todos os ícones Lucide em componentes finais têm size, color e stroke-width por Component token.
+6. Verificar que Focus Ring usa `focus-ring/color/*` e `focus-ring/width`; radius pode ficar local quando acompanha o shape.
+7. Verificar que `Component` aponta apenas para `Semantic`; `Component → Foundation`, `Component → Component` e valor cru em Component são regressões.
+8. Verificar que não há `ALL_SCOPES`, variável sem WEB code syntax, `error-hover`, nem `danger` fora de Button/action destructive.
+9. Após regenerar `.figma-snapshot.json` com o snapshot exporter atualizado, rodar `npm run verify:figma-structure`. Esse gate valida regressões estruturais objetivas; não substitui screenshot.
+10. Verificar screenshot do component set quando a mudança mexer em layout, icon, spacing ou texto.
+11. Se variables Figma foram alteradas, regenerar `.figma-snapshot.json` antes de afirmar que Figma↔JSON está em dia.
+12. Se a mudança impacta repo, repetir o fluxo Figma → JSON → CSS gerado → docs/API/LLM → `verify:tokens` → testes relevantes.
 
 ### 4.4 Sync Figma → JSON (após mudança visual feita no Figma)
 
@@ -215,6 +226,7 @@ CSS_ONLY e BY_DESIGN são informativos (não drift). VALUE_DRIFT/NEW_IN_FIGMA/MI
 | `npm run build:tokens` | Regenera CSS de tokens a partir do JSON | Sim se falha |
 | `npm run sync:docs` | Regenera `docs/token-schema.md`, `docs/component-inventory.md`, `docs/adr-index.md`, ADR HTMLs | Sim se falha |
 | `npm run verify:tokens` | Valida JSON integrity, JSON↔CSS, CSS leak (ADR-013), Registry completeness, JSON↔Figma drift | **Sim se erro** |
+| `npm run verify:figma-structure` | Valida snapshot Figma contra invariantes estruturais: bindings de ícone, glyph/Icon Placeholder, scopes, WEB syntax, aliases Component→Semantic e focus rings | Sim quando o snapshot foi regenerado para mudanças Figma |
 | `git diff` review | Confirmar que diff bate com a intenção da mudança | Manual |
 
 Atalho: `npm run build:all` roda `build:tokens → sync:docs → build:api → build:llms → verify:tokens` em sequência.

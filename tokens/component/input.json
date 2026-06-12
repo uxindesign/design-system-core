@@ -27,10 +27,10 @@
           "$value": "{semantic.surface.default}",
           "$description": "Bg do Field Input Text filled."
         },
-        "focused": {
+        "focus": {
           "$type": "color",
           "$value": "{semantic.surface.default}",
-          "$description": "Bg do Field Input Text focused."
+          "$description": "Bg do Field Input Text focus."
         },
         "readonly": {
           "$type": "color",
@@ -51,7 +51,7 @@
         },
         "error": {
           "$type": "color",
-          "$value": "{semantic.feedback.error.background.default}",
+          "$value": "{semantic.border.error}",
           "$description": "Border color do Field Input Text error."
         },
         "error-hover": {
@@ -64,10 +64,10 @@
           "$value": "{semantic.border.strong}",
           "$description": "Border color do Field Input Text filled."
         },
-        "focused": {
+        "focus": {
           "$type": "color",
-          "$value": "{semantic.primary.background.default}",
-          "$description": "Border color do Field Input Text focused."
+          "$value": "{semantic.border.focus}",
+          "$description": "Border color do Field Input Text focus."
         },
         "hover": {
           "$type": "color",
@@ -115,7 +115,7 @@
           },
           "error": {
             "$type": "color",
-            "$value": "{semantic.feedback.error.background.default}",
+            "$value": "{semantic.border.focus-error}",
             "$description": "Cor do focus ring Input Text error."
           },
           "readonly": {
@@ -259,21 +259,21 @@
             "$description": "Tamanho do frame de ícone Input Text lg."
           }
         },
-        "glyph-size": {
+        "size": {
           "sm": {
             "$type": "dimension",
             "$value": "{semantic.size.xs}",
-            "$description": "Tamanho do glyph de ícone Input Text sm."
+            "$description": "Tamanho do ícone Input Text sm."
           },
           "md": {
             "$type": "dimension",
             "$value": "{semantic.size.sm}",
-            "$description": "Tamanho do glyph de ícone Input Text md."
+            "$description": "Tamanho do ícone Input Text md."
           },
           "lg": {
             "$type": "dimension",
             "$value": "{semantic.size.md}",
-            "$description": "Tamanho do glyph de ícone Input Text lg."
+            "$description": "Tamanho do ícone Input Text lg."
           }
         }
       },

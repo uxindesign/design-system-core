@@ -8,11 +8,11 @@ Itens fora do escopo imediato mas que devem ser implementados. Organizados por p
 
 Em 0.5.10 implementamos a opção **(b) adaptar pra MCP** (ver `docs/process-figma-sync.md`): o agente Claude Code dumpa as Variables em `.figma-snapshot.json` via `use_figma` em chunks, e `scripts/sync-tokens-from-figma.mjs` compara/aplica divergências. Funciona, mas exige sessão interativa — não roda em GitHub Actions.
 
-Pra automatizar de verdade (disparo por webhook ou agendamento), há 3 caminhos:
+Pra automatizar de verdade (disparo por webhook ou agendamento), há alguns caminhos:
 
 **(a) Plugin Figma custom** — rodaria dentro do Figma via Plugin API (que não é plano-gated). Botão "Publicar variables" que serializa em DTCG e faz POST/commit pra GitHub (usando GitHub App ou OAuth). Custo: 1–2 semanas de dev + manutenção própria.
 
-**(b) Tokens Studio for Figma (plugin de terceiros)** — plugin com free tier, que faz Figma → JSON + push pra Git via OAuth. Migrar as 462 Variables nativas atuais pra dentro do Tokens Studio exige reconfiguração. Ajusta `build-tokens.mjs` pro formato que ele exporta. Custo: 2–3 dias + designer precisa aprender o plugin.
+**(b) Tokens Studio for Figma (plugin de terceiros)** — plugin com free tier, que faz Figma → JSON + push pra Git via OAuth. Migrar as Variables nativas atuais pra dentro do Tokens Studio exige reconfiguração. Ajusta `build-tokens.mjs` pro formato que ele exporta. Custo: 2–3 dias + designer precisa aprender o plugin.
 
 **(c) Upgrade para plano Enterprise** — destrava a REST API direta (`GET /v1/files/:key/variables/local`), possibilitando o script original revertido em 0.5.9. Decisão de negócio (≈ US$ 75/editor/mês).
 
@@ -67,7 +67,7 @@ A Fase 7 original previa. Substituída pela decisão de reduzir doc textual do F
 
 Hoje (Pattern A): cada controle Figma — Input Text, Select, Textarea, Checkbox, Radio — encapsula label/helper/error/required internamente. Form Field existe no CSS (`.ds-field*`) e na doc (`docs/form-field.html`) como wrapper standalone, mas não há Component Figma dedicado — criar um seria duplicar o que cada controle já tem.
 
-Avaliar mudança pra Pattern B (Carbon/Polaris/Atlassian): extrair label/helper/error dos controles Figma, criar Component Form Field standalone com slot pra qualquer controle, recompor cada doc. Custo: refactor profundo de 5 components Figma + repensar bindings de Text Style + atualizar 5+ docs HTML. Benefício: source of truth do wrapping pattern em um lugar só, alinhamento com DS de referência.
+Avaliar mudança pra Pattern B (Carbon/Polaris/Atlassian): extrair label/helper/error dos controles Figma, criar Component Form Field standalone com slot pra qualquer controle, recompor cada doc afetada. Custo: refactor profundo nos controles Figma impactados, repensar bindings de Text Style e atualizar a documentação relacionada. Benefício: source of truth do wrapping pattern em um lugar só, alinhamento com DS de referência.
 
 Trigger pra revisitar: pedido explícito de consumidor que precise compor controles custom (ex: combobox, color-picker) usando o wrapping nativo, ou observação de drift em a11y patterns entre Input/Select/Textarea.
 

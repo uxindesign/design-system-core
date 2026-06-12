@@ -39,6 +39,7 @@
     "verify:registry": "node scripts/build-token-registry.mjs --check",
     "security:check": "node scripts/security-check.mjs",
     "figma:plugin:check": "node --check figma-plugin/snapshot-exporter/code.js",
+    "verify:figma-structure": "node scripts/verify-figma-structure.mjs",
     "agent:preflight": "node scripts/agent-preflight.mjs",
     "verify:agent-docs": "node scripts/verify-agent-docs.mjs"
   },

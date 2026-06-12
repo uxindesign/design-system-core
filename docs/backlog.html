@@ -70,9 +70,9 @@
 <h2>Alta prioridade</h2>
 <h3>Automatizar o sync Figma → JSON em CI</h3>
 <p>Em 0.5.10 implementamos a opção <strong>(b) adaptar pra MCP</strong> (ver <code>docs/process-figma-sync.md</code>): o agente Claude Code dumpa as Variables em <code>.figma-snapshot.json</code> via <code>use_figma</code> em chunks, e <code>scripts/sync-tokens-from-figma.mjs</code> compara/aplica divergências. Funciona, mas exige sessão interativa — não roda em GitHub Actions.</p>
-<p>Pra automatizar de verdade (disparo por webhook ou agendamento), há 3 caminhos:</p>
+<p>Pra automatizar de verdade (disparo por webhook ou agendamento), há alguns caminhos:</p>
 <p><strong>(a) Plugin Figma custom</strong> — rodaria dentro do Figma via Plugin API (que não é plano-gated). Botão &quot;Publicar variables&quot; que serializa em DTCG e faz POST/commit pra GitHub (usando GitHub App ou OAuth). Custo: 1–2 semanas de dev + manutenção própria.</p>
-<p><strong>(b) Tokens Studio for Figma (plugin de terceiros)</strong> — plugin com free tier, que faz Figma → JSON + push pra Git via OAuth. Migrar as 462 Variables nativas atuais pra dentro do Tokens Studio exige reconfiguração. Ajusta <code>build-tokens.mjs</code> pro formato que ele exporta. Custo: 2–3 dias + designer precisa aprender o plugin.</p>
+<p><strong>(b) Tokens Studio for Figma (plugin de terceiros)</strong> — plugin com free tier, que faz Figma → JSON + push pra Git via OAuth. Migrar as Variables nativas atuais pra dentro do Tokens Studio exige reconfiguração. Ajusta <code>build-tokens.mjs</code> pro formato que ele exporta. Custo: 2–3 dias + designer precisa aprender o plugin.</p>
 <p><strong>(c) Upgrade para plano Enterprise</strong> — destrava a REST API direta (<code>GET /v1/files/:key/variables/local</code>), possibilitando o script original revertido em 0.5.9. Decisão de negócio (≈ US$ 75/editor/mês).</p>
 <p>Enquanto o disparo manual não virar gargalo, fica como está. Revisitar quando frequência de sync aumentar ou quando o volume de divergências manuais crescer.</p>
 <h3>Preencher <code>docs/brand-principles.md</code></h3>
@@ -109,7 +109,7 @@
 <h2>Baixa prioridade</h2>
 <h3>Form Field como Component dedicado no Figma</h3>
 <p>Hoje (Pattern A): cada controle Figma — Input Text, Select, Textarea, Checkbox, Radio — encapsula label/helper/error/required internamente. Form Field existe no CSS (<code>.ds-field*</code>) e na doc (<code>docs/form-field.html</code>) como wrapper standalone, mas não há Component Figma dedicado — criar um seria duplicar o que cada controle já tem.</p>
-<p>Avaliar mudança pra Pattern B (Carbon/Polaris/Atlassian): extrair label/helper/error dos controles Figma, criar Component Form Field standalone com slot pra qualquer controle, recompor cada doc. Custo: refactor profundo de 5 components Figma + repensar bindings de Text Style + atualizar 5+ docs HTML. Benefício: source of truth do wrapping pattern em um lugar só, alinhamento com DS de referência.</p>
+<p>Avaliar mudança pra Pattern B (Carbon/Polaris/Atlassian): extrair label/helper/error dos controles Figma, criar Component Form Field standalone com slot pra qualquer controle, recompor cada doc afetada. Custo: refactor profundo nos controles Figma impactados, repensar bindings de Text Style e atualizar a documentação relacionada. Benefício: source of truth do wrapping pattern em um lugar só, alinhamento com DS de referência.</p>
 <p>Trigger pra revisitar: pedido explícito de consumidor que precise compor controles custom (ex: combobox, color-picker) usando o wrapping nativo, ou observação de drift em a11y patterns entre Input/Select/Textarea.</p>
 <h3>Storybook</h3>
 <p>Componente inventory marca como pendente. Hoje o site cumpre o papel de vitrine interativa. Só implementar se houver demanda explícita de time Dev consumidor. Integração com os tokens DTCG já gerados (formato padrão de import), sem reinventar.</p>

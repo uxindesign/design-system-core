@@ -78,7 +78,7 @@
 </li>
 <li><p><strong>Documentação de estados dos controles de formulário padronizada.</strong> Input, Select, Textarea, Checkbox, Radio e Toggle agora documentam os estados visuais com o mesmo modelo de tabela (<code>State</code>, <code>CSS trigger</code>, <code>Visual change</code>, <code>Token</code>); Checkbox, Radio e Toggle também tiveram o mapeamento de tokens atualizado para a camada <code>component.*</code> em vez dos atalhos semânticos antigos.</p>
 </li>
-<li><p><strong>Form Field e anatomia de Input alinhados ao Figma.</strong> <code>.ds-field--error</code> agora propaga borda/focus/hover de erro para Input e Select compostos; a linha de erro usa o glyph real <code>error</code> em <code>Material Icons</code> com frame/gap do Figma, e a anatomia do Input representa o estado de erro com ordem Error Message → Helper Text.</p>
+<li><p><strong>Form Field e anatomia de Input alinhados ao Figma.</strong> <code>.ds-field--error</code> agora propaga borda/focus/hover de erro para Input e Select compostos; a linha de erro usa o ícone real <code>error</code> em <code>Material Icons</code> com frame/gap do Figma, e a anatomia do Input representa o estado de erro com ordem Error Message → Helper Text.</p>
 </li>
 <li><p><strong>Input Text, Select e Textarea espelhados com error-hover e readonly focus.</strong> Adicionados <code>feedback/error/border/hover</code>, <code>component.{input,select,textarea}.bg.error-hover</code>, <code>border-color.error-hover</code> e <code>focus-ring.color.readonly</code>; CSS passa a aplicar hover específico em erro, mantém error acima de filled e usa focus ring neutro em readonly.</p>
 </li>
@@ -90,11 +90,11 @@
 </li>
 <li><p><strong>AGENTS.md reforça regras de edição de componentes no Figma.</strong> Adicionado checklist obrigatório para preservar propriedades públicas do component set: textos editáveis via painel, ordem size menor→maior, pares booleano→campo dependente, uso de <code>Icon Placeholder</code>, validação de <code>componentPropertyReferences</code> e regra específica para Select não duplicar chevron/right icon.</p>
 </li>
-<li><p><strong>Fields single-line com respiro interno e adornments proporcionais.</strong> Input Text e Select voltam a usar <code>text-frame/padding-x=4px</code> além do padding do Field, mantendo origem visual de texto em <code>12/12/16px</code>; ícones e chevrons passam a usar <code>frame-size=glyph-size</code> em <code>16/20/24px</code> e <code>line-height: 100%</code>, alinhando Figma e CSS.</p>
+<li><p><strong>Fields single-line com respiro interno e adornments proporcionais.</strong> Input Text e Select voltam a usar <code>text-frame/padding-x=4px</code> além do padding do Field, mantendo origem visual de texto em <code>12/12/16px</code>; ícones e chevrons passam a usar <code>frame-size=size</code> em <code>16/20/24px</code> e <code>line-height: 100%</code>, alinhando Figma e CSS.</p>
 </li>
 <li><p><strong>Textarea completo aplicado aos Component tokens.</strong> <code>component.textarea</code> agora cobre bg, bordas, radius, focus ring, conteúdo, placeholder, label, required, helper, spacing e tipografia; <code>Textarea</code> passa a consumir <code>--ds-textarea-*</code> no CSS em vez de <code>Semantic</code> direto, preservando <code>field.min-height</code> como contrato anatômico multilinha e mantendo o contador como CSS-only por não existir no component set vivo do Figma.</p>
 </li>
-<li><p><strong>Form Field renderiza o ícone da mensagem de erro.</strong> Adicionados <code>component.form-field.error.gap.default</code> e <code>component.form-field.error.icon.{color,frame-size,glyph-size}.default</code> ao contrato CSS-only; <code>.ds-field__error</code> passa a renderizar a linha de erro com ícone automático + texto, alinhada ao Figma vivo de Input Text, Select e Textarea (<code>gap=4px</code>, ícone <code>16px</code>, cor <code>feedback/error/content/default</code>).</p>
+<li><p><strong>Form Field renderiza o ícone da mensagem de erro.</strong> Adicionados <code>component.form-field.error.gap.default</code> e <code>component.form-field.error.icon.{color,frame-size,size}.default</code> ao contrato CSS-only; <code>.ds-field__error</code> passa a renderizar a linha de erro com ícone automático + texto, alinhada ao Figma vivo de Input Text, Select e Textarea (<code>gap=4px</code>, ícone <code>16px</code>, cor <code>feedback/error/content/default</code>).</p>
 </li>
 <li><p><strong>Select completo aplicado aos Component tokens.</strong> Criadas 89 novas variables <code>select/...</code> na collection Component do Figma e normalizadas as 3 alturas existentes, totalizando 92 tokens para bg, bordas, radius, focus ring, conteúdo, placeholder, chevron, ícone leading, label, required, helper, stack, label-row, sizing, padding e tipografia. Os 18 variants vivos do Select foram bindados nesses tokens; JSON/CSS/docs/API passam a consumir <code>component.select.*</code> / <code>--ds-select-*</code>, alinhando padding <code>8/8/12</code>, padding-y <code>8/10/12</code>, gap interno <code>4/4/8</code>, text frame <code>4px</code> e chevron/ícone <code>16/20/24</code> ao Figma vivo.</p>
 </li>
@@ -102,7 +102,7 @@
 </li>
 <li><p><strong>Input Text completo aplicado aos Component tokens.</strong> <code>component.input</code> agora cobre bg, bordas, radius, focus ring, conteúdo, placeholder, ícone, label, required, helper, stack, label-row, sizing, padding e tipografia; os variants vivos no Figma foram bindados nesses atributos e o CSS passa a consumir <code>--ds-input-*</code> no wrapper e no uso composto com <code>.ds-field</code>.</p>
 </li>
-<li><p><strong>Input Text sizing/spacing aplicado aos Component tokens.</strong> Criadas variables <code>input/{padding-x,padding-y,gap}</code>, <code>input/icon/{frame-size,glyph-size}</code> e <code>input/text-frame/padding-x</code> no Figma, com Code Syntax WEB e binds nos 18 variants do Input Text. JSON/CSS/docs passam a consumir <code>component.input.*</code>, alinhando padding <code>8/8/12</code>, padding-y <code>8/10/12</code>, gap <code>4/4/8</code>, text frame <code>4px</code> e ícone frame/glyph <code>16/20/24</code> ao Figma vivo.</p>
+<li><p><strong>Input Text sizing/spacing aplicado aos Component tokens.</strong> Criadas variables <code>input/{padding-x,padding-y,gap}</code>, <code>input/icon/{frame-size,size}</code> e <code>input/text-frame/padding-x</code> no Figma, com Code Syntax WEB e binds nos 18 variants do Input Text. JSON/CSS/docs passam a consumir <code>component.input.*</code>, alinhando padding <code>8/8/12</code>, padding-y <code>8/10/12</code>, gap <code>4/4/8</code>, text frame <code>4px</code> e ícone frame/size <code>16/20/24</code> ao Figma vivo.</p>
 </li>
 <li><p><strong>Button padding e gap sincronizados com Figma.</strong> <code>component.button.padding-x.{sm,md,lg}</code> passa a seguir <code>8/12/16px</code> e <code>component.button.gap.{sm,md,lg}</code> passa a seguir <code>2/4/8px</code>, alinhando JSON, CSS gerado, documentação e API às variables vivas do Button no Figma.</p>
 </li>
@@ -112,7 +112,7 @@
 </li>
 <li><p><strong>Button Focus Ring por estilo no Component token.</strong> Success e Danger deixam de herdar o focus ring brand: <code>component.button.focus-ring.color.success</code> aponta para <code>semantic.feedback.success.border-default</code> e <code>component.button.focus-ring.color.danger</code> aponta para <code>semantic.border.focus-error</code>; CSS e Figma passam a aplicar esses tokens nos variants verdes e vermelhos.</p>
 </li>
-<li><p><strong>Button Figma/CSS aplicado aos Component tokens anatômicos completos.</strong> Criado <code>component.button</code> para a superfície principal height/min-width/padding/gap/radius/border, background por estilo/estado, border color de Outline, cor de conteúdo, tipografia do label, frame/glyph de ícone, icon-only e focus ring. Os 216 variants vivos do Button no Figma agora usam Component tokens nos atributos públicos; CSS passa a consumir <code>--ds-button-*</code>, corrige <code>Brand/Large/Focused</code> com padding vertical incorreto e remove opacidade disabled global em favor de cores de estado.</p>
+<li><p><strong>Button Figma/CSS aplicado aos Component tokens anatômicos completos.</strong> Criado <code>component.button</code> para a superfície principal height/min-width/padding/gap/radius/border, background por estilo/estado, border color de Outline, cor de conteúdo, tipografia do label, frame/size de ícone, icon-only e focus ring. Os 216 variants vivos do Button no Figma agora usam Component tokens nos atributos públicos; CSS passa a consumir <code>--ds-button-*</code>, corrige <code>Brand/Large/Focused</code> com padding vertical incorreto e remove opacidade disabled global em favor de cores de estado.</p>
 </li>
 <li><p><strong>Form Field aplicado aos Component tokens CSS-only.</strong> Criado <code>component.form-field</code> para gaps, cores e tipografia de label, required, helper e error; o CSS passa a consumir <code>--ds-form-field-*</code> sem criar componente visual no Figma, respeitando ADR-017. Helper e error também foram alinhados ao Figma vivo para <code>body/xs</code> com <code>line-height/xs</code>.</p>
 </li>
@@ -126,7 +126,7 @@
 </li>
 <li><p><strong>Card Figma/CSS aplicado aos Component tokens anatômicos.</strong> Criado <code>component.card</code> para radius/border-width da superfície principal, padding/gap do header, padding do body e tipografia de title/subtitle/body; as 3 variantes vivas do Figma agora usam Component tokens nesses contratos. CSS passa a consumir <code>--ds-card-*</code>; cores e shadow permanecem Semantic.</p>
 </li>
-<li><p><strong>Alert Figma/CSS aplicado aos Component tokens anatômicos.</strong> Criado <code>component.alert</code> para a superfície principal padding/gap/radius/border-width, icon/close size e glyph-size, content gap e tipografia de title/description; os 8 variants vivos do Figma agora usam Component tokens nesses contratos. CSS passa a consumir <code>--ds-alert-*</code>; documentação remove mappings antigos/stale de spacing e typography Foundation.</p>
+<li><p><strong>Alert Figma/CSS aplicado aos Component tokens anatômicos.</strong> Criado <code>component.alert</code> para a superfície principal padding/gap/radius/border-width, icon/close frame-size e size, content gap e tipografia de title/description; os 8 variants vivos do Figma agora usam Component tokens nesses contratos. CSS passa a consumir <code>--ds-alert-*</code>; documentação remove mappings antigos/stale de spacing e typography Foundation.</p>
 </li>
 <li><p><strong>Badge Figma/CSS aplicado aos Component tokens anatômicos.</strong> Criado <code>component.badge</code> para padding/gap/radius/border-width da superfície principal e tipografia do label; os 12 variants vivos do Figma (<code>6</code> cores × <code>2</code> estilos) agora usam Component tokens nesses contratos. CSS passa a consumir <code>--ds-badge-*</code>; documentação corrige inventário de cores para 6 e remove mappings antigos/stale.</p>
 </li>
@@ -168,7 +168,7 @@
 </li>
 <li><p>Referências órfãs de tokens de cor (<code>content-secondary</code>, <code>content-tertiary</code>) no <code>index.html</code> que causavam falha no pipeline de CI.</p>
 </li>
-<li><p><strong>Alert Subtle icon glyph tematizado por feedback</strong> (Success/Warning/Error/Info). Antes: ícone inheritava <code>color: content-default</code> do wrapper — saía cinza, sem distinção visual. Agora segue Figma: glyph usa <code>feedback/X/content/default</code> em CSS + Figma rebindado de <code>feedback/X/background/default</code> (token de bg usado como text — uso semanticamente errado, mesmo padrão de P1-2). 4 variants Figma rebindadas via <code>use_figma</code>. Resolve P2-6.</p>
+<li><p><strong>Alert Subtle icon tematizado por feedback</strong> (Success/Warning/Error/Info). Antes: ícone inheritava <code>color: content-default</code> do wrapper — saía cinza, sem distinção visual. Agora segue Figma: ícone usa <code>feedback/X/content/default</code> em CSS + Figma rebindado de <code>feedback/X/background/default</code> (token de bg usado como text — uso semanticamente errado, mesmo padrão de P1-2). 4 variants Figma rebindadas via <code>use_figma</code>. Resolve P2-6.</p>
 </li>
 <li><p><strong>Doc ↔ JSON drift check em <code>verify:tokens</code></strong> (<code>scripts/lib/doc-token-drift.mjs</code>). Detecta automaticamente quando doc descreve tokens/valores que JSON não tem — exatamente o sintoma que escondeu a drift de motion por meses. Categorias: <code>DOC_ONLY_TOKEN</code> (error — doc cita token inexistente), <code>VALUE_MISMATCH</code> (warning — doc e JSON com valores diferentes), <code>JSON_ONLY_TOKEN</code> (info). Roda automaticamente em <code>npm run verify:tokens</code>. Limpou 3 drifts pré-existentes durante implementação:</p>
 <ul>
@@ -246,9 +246,9 @@
 </li>
 <li><p><strong>Breadcrumb Item Link agora usa <code>link.content-default</code></strong> (era <code>primary.background.default</code>, token de background usado como text). Adicionado <code>:hover</code> → <code>link.content-hover</code> e <code>:active</code> → <code>link.content-active</code> no CSS. Figma rebindado via <code>use_figma</code> no Label do State=Link. Resolve P1-8 da auditoria.</p>
 </li>
-<li><p><strong>Select chevron + leading icon escalam por size (sm=20, md/lg=24)</strong> alinhando ao padrão do Button glyph. Antes: chevron sempre 16px no CSS; Figma chevron glyph hardcoded 16/20/24 (um step menor que Button). Agora ambos seguem 20/24/24:</p>
+<li><p><strong>Select chevron + leading icon escalam por size (sm=20, md/lg=24)</strong> alinhando ao padrão do Button icon. Antes: chevron sempre 16px no CSS; Figma chevron icon hardcoded 16/20/24 (um step menor que Button). Agora ambos seguem 20/24/24:</p>
 <ul>
-<li>Figma: 18 chevron glyph TEXT nodes rebindados via <code>use_figma</code> — sm → <code>size/sm</code>, md/lg → <code>size/md</code>.</li>
+<li>Figma: 18 chevron icon TEXT nodes rebindados via <code>use_figma</code> — sm → <code>size/sm</code>, md/lg → <code>size/md</code>.</li>
 <li>CSS <code>.ds-select__arrow</code>: default md = 24px, sm = 20px, lg = sem override (usa default).</li>
 <li>CSS <code>.ds-select__icon</code> (leading icon): mesma escala.</li>
 <li>Resolve P1-7 da auditoria.</li>
@@ -260,12 +260,12 @@
 </li>
 <li><p><strong>Modal Large title agora aplica <code>letter-spacing/tight</code></strong> (espelha binding do Figma). Para títulos grandes (3xl), tight letter-spacing otimiza legibilidade visual. Resolve P1-4 da auditoria.</p>
 </li>
-<li><p><strong>Button: glyph icon escala por size (sm=20, md/lg=24) + Icon Only com padding simétrico.</strong> Antes: glyph hardcoded em todas as variants (boundVar=null), Icon Only com <code>padding: 0</code> e paddings assimétricos no Figma (pl/pr ≠ pt/pb). Agora:</p>
+<li><p><strong>Button: icon escala por size (sm=20, md/lg=24) + Icon Only com padding simétrico.</strong> Antes: icon hardcoded em todas as variants (boundVar=null), Icon Only com <code>padding: 0</code> e paddings assimétricos no Figma (pl/pr ≠ pt/pb). Agora:</p>
 <ul>
 <li><strong>Glyph fontSize bindado</strong> em 270 nodes via <code>use_figma</code>: sm Buttons → <code>size/sm</code> (20), md/lg Buttons → <code>size/md</code> (24).</li>
 <li><strong>Icon Only paddings simétricos</strong> em 108 variants Figma: sm → <code>space/control/padding/6</code> (6px), md → <code>space/sm</code> (8px), lg → <code>space/md</code> (12px). Cálculo: (button - icon) / 2 centraliza icon.</li>
 <li><strong>Token novo: <code>semantic.space.control.padding.6</code></strong> (alias <code>foundation.dimension.6</code>) — único valor entre <code>xs</code> (4) e <code>sm</code> (8) na escala. Segue padrão de <code>space.control.padding.10</code> (ADR-006/015).</li>
-<li><strong>CSS atualizado</strong>: <code>.ds-button__icon</code> default 20→24, sm 16→20, lg sem mudança. Material Symbols glyph idem. <code>.ds-button--icon-only</code> ganha paddings por size em vez de <code>padding: 0</code>.</li>
+<li><strong>CSS atualizado</strong>: <code>.ds-button__icon</code> default 20→24, sm 16→20, lg sem mudança. Material Symbols idem. <code>.ds-button--icon-only</code> ganha paddings por size em vez de <code>padding: 0</code>.</li>
 <li>Decidido como P1-3 da auditoria.</li>
 </ul>
 </li>
@@ -422,7 +422,7 @@
 </ul>
 <h3>Mudado</h3>
 <ul>
-<li><strong>Modal Cancel button no Figma</strong> rebindado em todas as 3 variants (Sm/Md/Lg): label color e glyph fills de <code>link/content/default</code> → <code>ghost/content/default</code>. Cancel volta a ser visualmente Ghost neutral (alinha com <code>.ds-button--ghost</code> já em uso no CSS).</li>
+<li><strong>Modal Cancel button no Figma</strong> rebindado em todas as 3 variants (Sm/Md/Lg): label color e icon fills de <code>link/content/default</code> → <code>ghost/content/default</code>. Cancel volta a ser visualmente Ghost neutral (alinha com <code>.ds-button--ghost</code> já em uso no CSS).</li>
 <li><strong>Capa Figma</strong>: badge versão <code>v1.0.0-beta.1</code> → <code>v1.0.0-beta.3</code> (pulou beta.2). Estilos de Texto count <code>25 → 29</code> (+4 link styles).</li>
 <li><strong>Changelog Figma</strong>: nova entrada <code>v1.0.0-beta.3 — Abril 2026</code> com 7 bullets.</li>
 </ul>

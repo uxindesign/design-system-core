@@ -390,7 +390,7 @@
       <tbody>
         <tr><td>State</td><td>Default</td><td>Neutral border</td><td><code>component.select.border-color.default</code></td></tr>
         <tr><td>State</td><td>Hover / <code>:hover</code></td><td>Darker border</td><td><code>component.select.border-color.hover</code></td></tr>
-        <tr><td>State</td><td>Focus / <code>:focus-visible</code></td><td>2px outline ring, 2px offset</td><td><code>component.select.border-color.focused</code>, <code>component.select.focus-ring.*</code></td></tr>
+        <tr><td>State</td><td>Focus / <code>:focus-visible</code></td><td>2px outline ring, 2px offset</td><td><code>component.select.border-color.focus</code>, <code>component.select.focus-ring.*</code></td></tr>
         <tr><td>State</td><td>Disabled / <code>[disabled]</code></td><td>Muted bg + content, no pointer events</td><td><code>component.select.bg.disabled</code>, <code>component.select.content.color.disabled</code>, <code>component.select.placeholder.color.disabled</code></td></tr>
         <tr><td>Error</td><td>True / <code>.ds-select--error</code> or <code>.ds-field--error .ds-select</code></td><td>Red border and error focus ring</td><td><code>component.select.border-color.error</code>, <code>component.select.focus-ring.color.error</code></td></tr>
         <tr><td>Error + State</td><td>True + Hover / <code>.ds-select--error:hover</code></td><td>Darker red border</td><td><code>component.select.border-color.error-hover</code></td></tr>
@@ -500,12 +500,12 @@
     <table class="ds-token-table">
       <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token Component</th><th><span data-lang="pt">Variável CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
       <tbody>
-        <tr><td>bg</td><td><code>component.select.bg.{default|focused|filled|error|disabled|readonly}</code></td><td><code>--ds-select-bg-*</code></td></tr>
-        <tr><td>border color</td><td><code>component.select.border-color.{default|hover|focused|filled|error|disabled|readonly}</code></td><td><code>--ds-select-border-color-*</code></td></tr>
+        <tr><td>bg</td><td><code>component.select.bg.{default|focus|filled|error|disabled|readonly}</code></td><td><code>--ds-select-bg-*</code></td></tr>
+        <tr><td>border color</td><td><code>component.select.border-color.{default|hover|focus|filled|error|disabled|readonly}</code></td><td><code>--ds-select-border-color-*</code></td></tr>
         <tr><td>border width</td><td><code>component.select.border-width.default</code></td><td><code>--ds-select-border-width-default</code></td></tr>
         <tr><td>content color</td><td><code>component.select.content.color.{default|disabled|readonly}</code></td><td><code>--ds-select-content-color-*</code></td></tr>
         <tr><td>placeholder color</td><td><code>component.select.placeholder.color.{default|disabled}</code></td><td><code>--ds-select-placeholder-color-*</code></td></tr>
-        <tr><td>chevron</td><td><code>component.select.chevron.{color|frame-size|glyph-size}.*</code></td><td><code>--ds-select-chevron-*</code></td></tr>
+        <tr><td>chevron</td><td><code>component.select.chevron.{color|frame-size|icon-size}.*</code></td><td><code>--ds-select-chevron-*</code></td></tr>
         <tr><td>height</td><td><code>component.select.height.{sm|md|lg}</code></td><td><code>--ds-select-height-*</code></td></tr>
         <tr><td>gap</td><td><code>component.select.gap.{sm|md|lg}</code></td><td><code>--ds-select-gap-*</code></td></tr>
         <tr><td>padding</td><td><code>component.select.padding-x.*</code> / <code>component.select.padding-y.*</code></td><td><code>--ds-select-padding-x-*</code> / <code>--ds-select-padding-y-*</code></td></tr>

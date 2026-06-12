@@ -12,7 +12,7 @@ ADR-013 estabilizou a arquitetura em duas camadas, Foundation -> Semantic, depoi
 A auditoria dimensional de controles de formulario mostrou outro problema. Componentes com a mesma variant nominal (`sm`, `md`, `lg`) podem precisar de partes anatômicas com tamanhos diferentes:
 
 - Input e Button usam 32/40/48 como altura visual e área interativa.
-- Checkbox e Radio usam 32/40/48 como área interativa, mas o glyph visual é 16/20/24.
+- Checkbox e Radio usam 32/40/48 como área interativa, mas o ícone visual é 16/20/24.
 - Toggle usa 32/40/48 como área interativa, mas a track visual precisa manter proporções próprias.
 
 Sem Component tokens, a implementação precisa escolher entre duas opções ruins:
@@ -166,7 +166,7 @@ Quando a decisão for específica e ainda assim precisar de valor fora da escala
 
 1. Reativar suporte de pipeline a `tokens/component/*.json` e `css/tokens/generated/component.css`.
 2. Criar a collection `Component` no Figma, com modo `Default`, quando a sessao Figma estiver autenticada.
-3. Pilotar Checkbox, Radio e Toggle porque concentram a diferenca entre area interativa e glyph visual.
+3. Pilotar Checkbox, Radio e Toggle porque concentram a diferenca entre area interativa e ícone visual.
 4. Documentar a matriz dimensional:
 
 | Componente | Variant | Area interativa | Forma visual |

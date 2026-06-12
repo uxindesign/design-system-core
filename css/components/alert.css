@@ -12,22 +12,22 @@
   line-height: var(--ds-alert-description-line-height-default);
 }
 
-/* Icon — Figma: container size/md (24), glyph 20 (size/sm) */
+/* Icon — Figma: container size/md (24), ícone 20 (size/sm) */
 .ds-alert__icon {
   flex-shrink: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: var(--ds-alert-icon-size-default);
-  height: var(--ds-alert-icon-size-default);
+  width: var(--ds-alert-icon-frame-size-default);
+  height: var(--ds-alert-icon-frame-size-default);
 }
 
 .ds-alert__icon .material-symbols-outlined {
-  font-size: var(--ds-alert-icon-glyph-size-default);
+  font-size: var(--ds-alert-icon-size-default);
 }
 
 /* Icon color em Subtle — tematizado por feedback (Figma binda
-   feedback/X/content/default no glyph). Em Filled, icon herda
+   feedback/X/content/default no ícone). Em Filled, icon herda
    `color` do wrapper que já é content-contrast. */
 .ds-alert--success.ds-alert--subtle .ds-alert__icon {
   color: var(--ds-feedback-success-content-default);
@@ -68,8 +68,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: var(--ds-alert-close-size-default);
-  height: var(--ds-alert-close-size-default);
+  width: var(--ds-alert-close-frame-size-default);
+  height: var(--ds-alert-close-frame-size-default);
   background: none;
   border: none;
   padding: 0;
@@ -84,7 +84,7 @@
 }
 
 .ds-alert__close .material-symbols-outlined {
-  font-size: var(--ds-alert-close-glyph-size-default);
+  font-size: var(--ds-alert-close-icon-size-default);
 }
 
 .ds-alert__close:focus-visible {

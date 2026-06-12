@@ -131,10 +131,10 @@
               "$value": "{semantic.surface.default}",
               "$description": "Fill da track Toggle off default."
             },
-            "focused": {
+            "focus": {
               "$type": "color",
               "$value": "{semantic.surface.default}",
-              "$description": "Fill da track Toggle off focused."
+              "$description": "Fill da track Toggle off focus."
             },
             "hover": {
               "$type": "color",
@@ -153,10 +153,10 @@
               "$value": "{semantic.primary.background.default}",
               "$description": "Fill da track Toggle on default."
             },
-            "focused": {
+            "focus": {
               "$type": "color",
               "$value": "{semantic.primary.background.default}",
-              "$description": "Fill da track Toggle on focused."
+              "$description": "Fill da track Toggle on focus."
             },
             "hover": {
               "$type": "color",
@@ -177,10 +177,10 @@
               "$value": "{semantic.border.control-default}",
               "$description": "Border color da track Toggle off default."
             },
-            "focused": {
+            "focus": {
               "$type": "color",
-              "$value": "{semantic.primary.background.default}",
-              "$description": "Border color da track Toggle off focused."
+              "$value": "{semantic.border.focus}",
+              "$description": "Border color da track Toggle off focus."
             },
             "hover": {
               "$type": "color",
@@ -234,10 +234,10 @@
               "$value": "{semantic.content.default}",
               "$description": "Fill do thumb Toggle off default."
             },
-            "focused": {
+            "focus": {
               "$type": "color",
               "$value": "{semantic.content.default}",
-              "$description": "Fill do thumb Toggle off focused."
+              "$description": "Fill do thumb Toggle off focus."
             },
             "hover": {
               "$type": "color",
@@ -256,10 +256,10 @@
               "$value": "{semantic.primary.content-default}",
               "$description": "Fill do thumb Toggle on default."
             },
-            "focused": {
+            "focus": {
               "$type": "color",
               "$value": "{semantic.primary.content-default}",
-              "$description": "Fill do thumb Toggle on focused."
+              "$description": "Fill do thumb Toggle on focus."
             },
             "hover": {
               "$type": "color",

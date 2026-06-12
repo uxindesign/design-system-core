@@ -30,18 +30,18 @@
         }
       },
       "icon": {
-        "size": {
+        "frame-size": {
           "default": {
             "$type": "dimension",
             "$value": "{semantic.size.md}",
-            "$description": "Tamanho do container Icon Alert."
+            "$description": "Tamanho do frame do ícone Alert."
           }
         },
-        "glyph-size": {
+        "size": {
           "default": {
             "$type": "dimension",
             "$value": "{semantic.size.sm}",
-            "$description": "Tamanho do glyph Icon Alert."
+            "$description": "Tamanho do ícone Alert."
           }
         }
       },
@@ -101,18 +101,18 @@
         }
       },
       "close": {
-        "size": {
+        "frame-size": {
           "default": {
             "$type": "dimension",
             "$value": "{semantic.size.md}",
-            "$description": "Tamanho do container Close Alert."
+            "$description": "Tamanho do frame do botão Close Alert."
           }
         },
-        "glyph-size": {
+        "icon-size": {
           "default": {
             "$type": "dimension",
             "$value": "{semantic.size.sm}",
-            "$description": "Tamanho do glyph Close Alert."
+            "$description": "Tamanho do ícone Close Alert."
           }
         }
       }

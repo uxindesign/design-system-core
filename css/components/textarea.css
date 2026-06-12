@@ -80,8 +80,8 @@
 
 /* Focused */
 .ds-textarea:focus-within {
-  background: var(--ds-textarea-bg-focused);
-  border-color: var(--ds-textarea-border-color-focused);
+  background: var(--ds-textarea-bg-focus);
+  border-color: var(--ds-textarea-border-color-focus);
   outline: var(--ds-textarea-focus-ring-stroke-width-default) solid var(--ds-textarea-focus-ring-color-default);
   outline-offset: var(--ds-textarea-focus-ring-offset-default);
 }

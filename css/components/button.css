@@ -93,8 +93,8 @@
 }
 
 .ds-button--brand:focus-visible {
-  background-color: var(--ds-button-bg-brand-focused);
-  color: var(--ds-button-content-color-brand-focused);
+  background-color: var(--ds-button-bg-brand-focus);
+  color: var(--ds-button-content-color-brand-focus);
 }
 
 .ds-button--brand:hover {
@@ -123,8 +123,8 @@
 }
 
 .ds-button--toned:focus-visible {
-  background-color: var(--ds-button-bg-toned-focused);
-  color: var(--ds-button-content-color-toned-focused);
+  background-color: var(--ds-button-bg-toned-focus);
+  color: var(--ds-button-content-color-toned-focus);
 }
 
 .ds-button--toned:hover {
@@ -153,8 +153,8 @@
 }
 
 .ds-button--outline:focus-visible {
-  color: var(--ds-button-content-color-outline-focused);
-  border-color: var(--ds-button-border-color-outline-focused);
+  color: var(--ds-button-content-color-outline-focus);
+  border-color: var(--ds-button-border-color-outline-focus);
 }
 
 .ds-button--outline:hover {
@@ -186,7 +186,7 @@
 }
 
 .ds-button--ghost:focus-visible {
-  color: var(--ds-button-content-color-ghost-focused);
+  color: var(--ds-button-content-color-ghost-focus);
 }
 
 .ds-button--ghost:hover {
@@ -216,8 +216,8 @@
 }
 
 .ds-button--success:focus-visible {
-  background-color: var(--ds-button-bg-success-focused);
-  color: var(--ds-button-content-color-success-focused);
+  background-color: var(--ds-button-bg-success-focus);
+  color: var(--ds-button-content-color-success-focus);
 }
 
 .ds-button--success:hover {
@@ -247,8 +247,8 @@
 }
 
 .ds-button--danger:focus-visible {
-  background-color: var(--ds-button-bg-danger-focused);
-  color: var(--ds-button-content-color-danger-focused);
+  background-color: var(--ds-button-bg-danger-focus);
+  color: var(--ds-button-content-color-danger-focus);
 }
 
 .ds-button--danger:hover {
@@ -295,15 +295,15 @@
 }
 
 .ds-button .material-symbols-outlined {
-  font-size: var(--ds-button-icon-glyph-size-md);
+  font-size: var(--ds-button-icon-size-md);
 }
 
 .ds-button--sm .material-symbols-outlined {
-  font-size: var(--ds-button-icon-glyph-size-sm);
+  font-size: var(--ds-button-icon-size-sm);
 }
 
 .ds-button--lg .material-symbols-outlined {
-  font-size: var(--ds-button-icon-glyph-size-lg);
+  font-size: var(--ds-button-icon-size-lg);
 }
 
 /* ---------------------------------------------------------

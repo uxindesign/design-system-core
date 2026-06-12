@@ -163,11 +163,11 @@
               "$description": "Frame-size do ícone da mensagem de erro Form Field."
             }
           },
-          "glyph-size": {
+          "size": {
             "default": {
               "$type": "dimension",
               "$value": "{semantic.size.xs}",
-              "$description": "Tamanho do glyph do ícone da mensagem de erro Form Field."
+              "$description": "Tamanho do ícone da mensagem de erro Form Field."
             }
           }
         },

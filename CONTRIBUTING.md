@@ -71,7 +71,7 @@ Formato:
 
 ## Pipeline de tokens
 
-Tokens vivem em `tokens/**/*.json` (formato DTCG). `build-tokens.mjs` transforma em CSS custom properties prefixadas com `--ds-*` em `css/tokens/generated/`. O CSS dos 19 componentes em `css/components/*.css` consome essas variáveis. **Não edite os arquivos em `css/tokens/generated/` à mão.** Eles são regenerados no CI em cada push pra `main`.
+Tokens vivem em `tokens/**/*.json` (formato DTCG). `build-tokens.mjs` transforma em CSS custom properties prefixadas com `--ds-*` em `css/tokens/generated/`. O CSS dos componentes em `css/components/*.css` consome essas variáveis. **Não edite os arquivos em `css/tokens/generated/` à mão.** Eles são regenerados no CI em cada push pra `main`.
 
 **Fonte de verdade dos tokens depende da categoria** (ver [ADR-003](./docs/decisions/ADR-003-fontes-verdade.md) e [ADR-016](./docs/decisions/ADR-016-tokens-sem-equivalencia-no-figma.md)):
 
@@ -103,7 +103,7 @@ npm run test:visual -- --mode dark     # só um modo
 npm run test:visual:update             # regenera baseline (após mudança visual intencional)
 ```
 
-Roda em 31 páginas × 2 modos = 62 screenshots full-page. Compara com baseline em `tests/visual/baseline/` (versionado). Threshold: 0.5% pixel diff (tolera anti-aliasing). Diff visualizável em `tests/visual/diff/<page>-<mode>.png` quando falha.
+Roda as páginas configuradas nos modos suportados e gera screenshots full-page. Compara com baseline em `tests/visual/baseline/` (versionado). Threshold: 0.5% pixel diff (tolera anti-aliasing). Diff visualizável em `tests/visual/diff/<page>-<mode>.png` quando falha.
 
 Não roda em CI ainda — fonts via Google Fonts CDN podem renderizar diferentes em Linux runner vs Mac local. Use localmente antes de PR pra detectar regressões. Quando atualizar baseline, **inspeção visual obrigatória** (abra os PNGs antes de commitar) pra confirmar mudança é intencional.
 

@@ -122,7 +122,7 @@
     <div class="ds-anatomy-legend">
       <span data-lang="pt">
         <strong>1</strong> Wrapper (<code>.ds-input</code>) — container com borda, radius, background, padding e gap.<br>
-        <strong>2</strong> Ícone (opcional, <code>.ds-input__icon</code>) — frame 24px; glyph 16/20/24px em sm/md/lg.<br>
+        <strong>2</strong> Ícone (opcional, <code>.ds-input__icon</code>) — frame 24px; ícone 16/20/24px em sm/md/lg.<br>
         <strong>3</strong> Campo (<code>.ds-input__field</code>) — o elemento nativo <code>&lt;input&gt;</code>.<br>
         <strong>4</strong> Label (<code>.ds-field__label</code>) — externo, via Form Field.<br>
         <strong>5</strong> Mensagem de erro (<code>.ds-field__error</code>) — externa, via Form Field.<br>
@@ -130,7 +130,7 @@
       </span>
       <span data-lang="en">
         <strong>1</strong> Wrapper (<code>.ds-input</code>) — container with border, radius, background, padding and gap.<br>
-        <strong>2</strong> Icon (optional, <code>.ds-input__icon</code>) — 24px frame; 16/20/24px glyph in sm/md/lg.<br>
+        <strong>2</strong> Icon (optional, <code>.ds-input__icon</code>) — 24px frame; 16/20/24px ícone in sm/md/lg.<br>
         <strong>3</strong> Field (<code>.ds-input__field</code>) — the native <code>&lt;input&gt;</code> element.<br>
         <strong>4</strong> Label (<code>.ds-field__label</code>) — external, via Form Field.<br>
         <strong>5</strong> Error message (<code>.ds-field__error</code>) — external, via Form Field.<br>
@@ -355,7 +355,7 @@
       <tbody>
         <tr><td>State</td><td>Default</td><td>Neutral surface and border</td><td><code>component.input.bg.default</code>, <code>component.input.border-color.default</code></td></tr>
         <tr><td>State</td><td>Hover / <code>:hover</code></td><td>Darker border</td><td><code>component.input.border-color.hover</code></td></tr>
-        <tr><td>State</td><td>Focus / <code>:focus-within</code></td><td>2px outline ring, 2px offset</td><td><code>component.input.border-color.focused</code>, <code>component.input.focus-ring.*</code></td></tr>
+        <tr><td>State</td><td>Focus / <code>:focus-within</code></td><td>2px outline ring, 2px offset</td><td><code>component.input.border-color.focus</code>, <code>component.input.focus-ring.*</code></td></tr>
         <tr><td>State</td><td>Disabled / <code>[disabled]</code> or <code>.ds-input--disabled</code></td><td>Muted bg, border and content</td><td><code>component.input.bg.disabled</code>, <code>component.input.content.color.disabled</code></td></tr>
         <tr><td>Error</td><td>True / <code>.ds-input--error</code> or <code>.ds-field--error .ds-input</code></td><td>Red border and error focus ring</td><td><code>component.input.border-color.error</code>, <code>component.input.focus-ring.color.error</code></td></tr>
         <tr><td>Error + State</td><td>True + Hover / <code>.ds-input--error:hover</code></td><td>Darker red border</td><td><code>component.input.border-color.error-hover</code></td></tr>
@@ -544,8 +544,8 @@
     <table class="ds-token-table">
       <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token</th><th><span data-lang="pt">Variável CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
       <tbody>
-        <tr><td>bg (default/disabled/error/filled/focused/readonly)</td><td><code>component.input.bg.*</code></td><td><code>--ds-input-bg-*</code></td></tr>
-        <tr><td>border-color (default/hover/focused/error/filled/disabled/readonly)</td><td><code>component.input.border-color.*</code></td><td><code>--ds-input-border-color-*</code></td></tr>
+        <tr><td>bg (default/disabled/error/filled/focus/readonly)</td><td><code>component.input.bg.*</code></td><td><code>--ds-input-bg-*</code></td></tr>
+        <tr><td>border-color (default/hover/focus/error/filled/disabled/readonly)</td><td><code>component.input.border-color.*</code></td><td><code>--ds-input-border-color-*</code></td></tr>
         <tr><td>border-width</td><td><code>component.input.border-width.default</code></td><td><code>--ds-input-border-width-default</code></td></tr>
         <tr><td>border-radius</td><td><code>component.input.radius.default</code></td><td><code>--ds-input-radius-default</code></td></tr>
         <tr><td>focus ring</td><td><code>component.input.focus-ring.{color,stroke-width,offset,radius}.*</code></td><td><code>--ds-input-focus-ring-*</code></td></tr>
@@ -557,7 +557,7 @@
         <tr><td>padding-y (sm/md/lg)</td><td><code>component.input.padding-y.{sm,md,lg}</code></td><td><code>--ds-input-padding-y-*</code></td></tr>
         <tr><td>gap (sm/md/lg)</td><td><code>component.input.gap.{sm,md,lg}</code></td><td><code>--ds-input-gap-*</code></td></tr>
         <tr><td>text-frame padding-x</td><td><code>component.input.text-frame.padding-x.default</code></td><td><code>--ds-input-text-frame-padding-x-default</code></td></tr>
-        <tr><td>icon frame/glyph</td><td><code>component.input.icon.{frame-size,glyph-size}.{sm,md,lg}</code></td><td><code>--ds-input-icon-*</code></td></tr>
+        <tr><td>icon frame/ícone</td><td><code>component.input.icon.{frame-size,icon-size}.{sm,md,lg}</code></td><td><code>--ds-input-icon-*</code></td></tr>
         <tr><td>text typography</td><td><code>component.input.text.{font-family,font-size,font-weight,letter-spacing,line-height}.*</code></td><td><code>--ds-input-text-*</code></td></tr>
         <tr><td>label typography/color</td><td><code>component.input.label.{color,font-family,font-size,font-weight,letter-spacing,line-height}.*</code></td><td><code>--ds-input-label-*</code></td></tr>
         <tr><td>required typography/color</td><td><code>component.input.required.{color,font-family,font-size,font-weight,letter-spacing,line-height}.default</code></td><td><code>--ds-input-required-*</code></td></tr>

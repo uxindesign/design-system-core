@@ -4,7 +4,7 @@ Como executar o sync das Figma Variables pros arquivos DTCG em `tokens/`. O cami
 
 ## Contexto
 
-A ADR-003 (revisada em 0.5.8) estabelece **Figma como autoridade canônica** dos valores de token. Os JSONs em `tokens/` são consolidação derivada. Idealmente existiria um sync automático via REST API, mas `GET /v1/files/:key/variables/local` exige **plano Enterprise** (nosso plano Pro não destrava). No plano atual, o fluxo usa snapshot local: o plugin Figma `figma-plugin/snapshot-exporter` serializa as Variables num JSON temporário, e o script Node `scripts/sync-tokens-from-figma.mjs` lê esse snapshot e compara com os JSONs.
+A ADR-003 (revisada em 0.5.8) estabelece **Figma como autoridade canônica** dos valores de token. Os JSONs em `tokens/` são consolidação derivada. Idealmente existiria um sync automático via REST API, mas `GET /v1/files/:key/variables/local` exige **plano Enterprise** (nosso plano Pro não destrava). No plano atual, o fluxo usa snapshot local: o plugin Figma `figma-plugin/snapshot-exporter` serializa as Variables e a auditoria estrutural num JSON temporário, e os scripts Node leem esse snapshot para comparar com os JSONs e validar invariantes do Figma.
 
 **Disparo:** manual, dentro do Figma Desktop. Ver alternativas futuras em `docs/backlog.md` ("Automatizar o sync Figma → JSON em CI").
 
@@ -35,9 +35,10 @@ O plugin:
 
 1. Lista as collections locais (Foundation, Semantic) com seus modos.
 2. Itera sobre todas as variables locais do arquivo.
-3. Para cada variável, captura `id`, `name`, `resolvedType`, `variableCollectionId`, `valuesByMode`, `description`, `scopes` e metadados seguros.
+3. Para cada variável, captura `id`, `name`, `resolvedType`, `variableCollectionId`, `valuesByMode`, `description`, `scopes`, `codeSyntax` e metadados seguros.
 4. Preserva aliases como `{ "type": "VARIABLE_ALIAS", "id": "..." }`.
-5. Agrega tudo num único arquivo `.figma-snapshot.json` no formato:
+5. Audita páginas de componentes para detectar regressões estruturais como `glyph`, `Icon Placeholder`, ícones Lucide sem binding Component, focus ring incorreto, `ALL_SCOPES`, WEB code syntax ausente e aliases quebrados.
+6. Agrega tudo num único arquivo `.figma-snapshot.json` no formato:
 
 ```json
 {
@@ -53,13 +54,29 @@ O plugin:
       "name": "color/neutral/50",
       "resolvedType": "COLOR",
       "variableCollectionId": "VariableCollectionId:4:2",
+      "scopes": ["FRAME_FILL"],
+      "codeSyntax": { "WEB": "--ds-color-neutral-50" },
       "valuesByMode": { "4:0": { "r": 0.97, "g": 0.98, "b": 0.99, "a": 1 } }
     }
+  },
+  "structureAudit": {
+    "componentPageCount": 18,
+    "issueCount": 0,
+    "grouped": {},
+    "issues": []
   }
 }
 ```
 
 O arquivo `.figma-snapshot.json` está em `.gitignore` e não deve ser commitado — é regenerado a cada sync.
+
+Depois de gerar um snapshot pelo plugin atualizado, rode:
+
+```bash
+npm run verify:figma-structure
+```
+
+Esse gate falha se o snapshot não tiver `structureAudit`. O fallback via MCP continua útil para comparar valores de tokens, mas não substitui o snapshot do plugin para auditoria estrutural.
 
 ### Fallback — gerar via MCP
 
@@ -97,6 +114,8 @@ O agente vai executar uma sequência de chamadas `use_figma` que:
 
 O arquivo está em `.gitignore` e não deve ser commitado — é regenerado a cada sync.
 
+Limitação: o fallback MCP descrito aqui gera apenas dados de Variables. Para rodar `npm run verify:figma-structure`, use o snapshot gerado pelo plugin local atualizado.
+
 ## Passo 2 — dry-run
 
 ```bash
@@ -116,7 +135,7 @@ O script:
 1. Lê `.figma-snapshot.json` (ou `--snapshot <path>` pra outro caminho).
 2. Constrói o estado esperado dos JSONs (`tokens/foundation/`, `tokens/semantic/`) a partir das Variables.
 3. Lê os JSONs atuais e compara.
-4. Reporta em 6 categorias:
+4. Reporta categorias de divergência:
 
 | Categoria | Significado | Ação em `--write` |
 |-----------|-------------|-------------------|

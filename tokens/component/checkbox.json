@@ -114,10 +114,10 @@
               "$value": "{semantic.surface.default}",
               "$description": "Fill da box Checkbox unchecked default."
             },
-            "focused": {
+            "focus": {
               "$type": "color",
               "$value": "{semantic.surface.default}",
-              "$description": "Fill da box Checkbox unchecked focused."
+              "$description": "Fill da box Checkbox unchecked focus."
             },
             "hover": {
               "$type": "color",
@@ -136,10 +136,10 @@
               "$value": "{semantic.primary.background.default}",
               "$description": "Fill da box Checkbox checked default."
             },
-            "focused": {
+            "focus": {
               "$type": "color",
               "$value": "{semantic.primary.background.default}",
-              "$description": "Fill da box Checkbox checked focused."
+              "$description": "Fill da box Checkbox checked focus."
             },
             "hover": {
               "$type": "color",
@@ -158,10 +158,10 @@
               "$value": "{semantic.primary.background.default}",
               "$description": "Fill da box Checkbox indeterminate default."
             },
-            "focused": {
+            "focus": {
               "$type": "color",
               "$value": "{semantic.primary.background.default}",
-              "$description": "Fill da box Checkbox indeterminate focused."
+              "$description": "Fill da box Checkbox indeterminate focus."
             },
             "hover": {
               "$type": "color",
@@ -182,10 +182,10 @@
               "$value": "{semantic.border.control-default}",
               "$description": "Border color da box Checkbox unchecked default."
             },
-            "focused": {
+            "focus": {
               "$type": "color",
-              "$value": "{semantic.primary.background.default}",
-              "$description": "Border color da box Checkbox unchecked focused."
+              "$value": "{semantic.border.focus}",
+              "$description": "Border color da box Checkbox unchecked focus."
             },
             "hover": {
               "$type": "color",
@@ -204,10 +204,10 @@
               "$value": "{semantic.primary.background.default}",
               "$description": "Border color da box Checkbox checked default."
             },
-            "focused": {
+            "focus": {
               "$type": "color",
-              "$value": "{semantic.primary.background.default}",
-              "$description": "Border color da box Checkbox checked focused."
+              "$value": "{semantic.border.focus}",
+              "$description": "Border color da box Checkbox checked focus."
             },
             "hover": {
               "$type": "color",
@@ -226,10 +226,10 @@
               "$value": "{semantic.primary.background.default}",
               "$description": "Border color da box Checkbox indeterminate default."
             },
-            "focused": {
+            "focus": {
               "$type": "color",
-              "$value": "{semantic.primary.background.default}",
-              "$description": "Border color da box Checkbox indeterminate focused."
+              "$value": "{semantic.border.focus}",
+              "$description": "Border color da box Checkbox indeterminate focus."
             },
             "hover": {
               "$type": "color",
@@ -252,10 +252,10 @@
               "$value": "{semantic.primary.content-default}",
               "$description": "Fill do checkmark Checkbox checked default."
             },
-            "focused": {
+            "focus": {
               "$type": "color",
               "$value": "{semantic.primary.content-default}",
-              "$description": "Fill do checkmark Checkbox checked focused."
+              "$description": "Fill do checkmark Checkbox checked focus."
             },
             "hover": {
               "$type": "color",
@@ -274,10 +274,10 @@
               "$value": "{semantic.primary.content-default}",
               "$description": "Fill da marca Checkbox indeterminate default."
             },
-            "focused": {
+            "focus": {
               "$type": "color",
               "$value": "{semantic.primary.content-default}",
-              "$description": "Fill da marca Checkbox indeterminate focused."
+              "$description": "Fill da marca Checkbox indeterminate focus."
             },
             "hover": {
               "$type": "color",

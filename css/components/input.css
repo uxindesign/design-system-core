@@ -145,7 +145,7 @@
 /* Icon
    ========================================================================== */
 
-/* Icon container: wrapper externo com respiro horizontal; glyph interno escala por tamanho. */
+/* Icon container: wrapper externo com respiro horizontal; ícone interno escala por tamanho. */
 .ds-input__icon {
   flex-shrink: 0;
   color: var(--ds-input-icon-color-default);
@@ -157,7 +157,7 @@
   height: var(--ds-input-icon-frame-size-md);
   padding-left: var(--ds-input-icon-frame-padding-x-default);
   padding-right: var(--ds-input-icon-frame-padding-x-default);
-  font-size: var(--ds-input-icon-glyph-size-md);
+  font-size: var(--ds-input-icon-size-md);
   line-height: 1;
   pointer-events: none;
 }
@@ -165,13 +165,13 @@
 .ds-input--sm .ds-input__icon {
   width: var(--ds-input-icon-frame-size-sm);
   height: var(--ds-input-icon-frame-size-sm);
-  font-size: var(--ds-input-icon-glyph-size-sm);
+  font-size: var(--ds-input-icon-size-sm);
 }
 
 .ds-input--lg .ds-input__icon {
   width: var(--ds-input-icon-frame-size-lg);
   height: var(--ds-input-icon-frame-size-lg);
-  font-size: var(--ds-input-icon-glyph-size-lg);
+  font-size: var(--ds-input-icon-size-lg);
 }
 
 /* States
@@ -184,8 +184,8 @@
 
 /* Focused */
 .ds-input:focus-within {
-  background: var(--ds-input-bg-focused);
-  border-color: var(--ds-input-border-color-focused);
+  background: var(--ds-input-bg-focus);
+  border-color: var(--ds-input-border-color-focus);
   outline: var(--ds-input-focus-ring-stroke-width-default) solid var(--ds-input-focus-ring-color-default);
   outline-offset: var(--ds-input-focus-ring-offset-default);
 }

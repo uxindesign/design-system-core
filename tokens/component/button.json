@@ -151,10 +151,10 @@
             "$type": "color",
             "$description": "Bg do Button brand pressed."
           },
-          "focused": {
+          "focus": {
             "$value": "{semantic.primary.background.default}",
             "$type": "color",
-            "$description": "Bg do Button brand focused."
+            "$description": "Bg do Button brand focus."
           },
           "disabled": {
             "$value": "{semantic.primary.background.disabled}",
@@ -178,10 +178,10 @@
             "$type": "color",
             "$description": "Bg do Button toned pressed."
           },
-          "focused": {
+          "focus": {
             "$value": "{semantic.toned.background.default}",
             "$type": "color",
-            "$description": "Bg do Button toned focused."
+            "$description": "Bg do Button toned focus."
           },
           "disabled": {
             "$value": "{semantic.toned.background.disabled}",
@@ -229,10 +229,10 @@
             "$type": "color",
             "$description": "Bg do Button success pressed."
           },
-          "focused": {
+          "focus": {
             "$value": "{semantic.feedback.success.background.default}",
             "$type": "color",
-            "$description": "Bg do Button success focused."
+            "$description": "Bg do Button success focus."
           },
           "disabled": {
             "$value": "{semantic.feedback.success.background.disabled}",
@@ -256,10 +256,10 @@
             "$type": "color",
             "$description": "Bg do Button danger pressed."
           },
-          "focused": {
+          "focus": {
             "$value": "{semantic.feedback.error.background.default}",
             "$type": "color",
-            "$description": "Bg do Button danger focused."
+            "$description": "Bg do Button danger focus."
           },
           "disabled": {
             "$value": "{semantic.feedback.error.background.disabled}",
@@ -285,10 +285,10 @@
             "$type": "color",
             "$description": "Border color do Button outline pressed."
           },
-          "focused": {
-            "$value": "{semantic.border.default}",
+          "focus": {
+            "$value": "{semantic.border.focus}",
             "$type": "color",
-            "$description": "Border color do Button outline focused."
+            "$description": "Border color do Button outline focus."
           },
           "disabled": {
             "$value": "{semantic.border.control-disabled}",
@@ -381,21 +381,21 @@
             "$description": "Tamanho do frame de ícone Button lg."
           }
         },
-        "glyph-size": {
+        "size": {
           "sm": {
             "$value": "{semantic.size.sm}",
             "$type": "dimension",
-            "$description": "Tamanho do glyph de ícone Button sm."
+            "$description": "Tamanho do ícone Button sm."
           },
           "md": {
             "$value": "{semantic.size.md}",
             "$type": "dimension",
-            "$description": "Tamanho do glyph de ícone Button md."
+            "$description": "Tamanho do ícone Button md."
           },
           "lg": {
             "$value": "{semantic.size.md}",
             "$type": "dimension",
-            "$description": "Tamanho do glyph de ícone Button lg."
+            "$description": "Tamanho do ícone Button lg."
           }
         }
       },
@@ -457,10 +457,10 @@
               "$type": "color",
               "$description": "Cor de conteúdo do Button brand pressed."
             },
-            "focused": {
+            "focus": {
               "$value": "{semantic.primary.content-default}",
               "$type": "color",
-              "$description": "Cor de conteúdo do Button brand focused."
+              "$description": "Cor de conteúdo do Button brand focus."
             },
             "disabled": {
               "$value": "{semantic.primary.content-disabled}",
@@ -484,10 +484,10 @@
               "$type": "color",
               "$description": "Cor de conteúdo do Button toned pressed."
             },
-            "focused": {
+            "focus": {
               "$value": "{semantic.toned.content-default}",
               "$type": "color",
-              "$description": "Cor de conteúdo do Button toned focused."
+              "$description": "Cor de conteúdo do Button toned focus."
             },
             "disabled": {
               "$value": "{semantic.toned.content-disabled}",
@@ -511,10 +511,10 @@
               "$type": "color",
               "$description": "Cor de conteúdo do Button outline pressed."
             },
-            "focused": {
+            "focus": {
               "$value": "{semantic.outline.content-default}",
               "$type": "color",
-              "$description": "Cor de conteúdo do Button outline focused."
+              "$description": "Cor de conteúdo do Button outline focus."
             },
             "disabled": {
               "$value": "{semantic.outline.content-disabled}",
@@ -538,10 +538,10 @@
               "$type": "color",
               "$description": "Cor de conteúdo do Button ghost pressed."
             },
-            "focused": {
+            "focus": {
               "$value": "{semantic.ghost.content-default}",
               "$type": "color",
-              "$description": "Cor de conteúdo do Button ghost focused."
+              "$description": "Cor de conteúdo do Button ghost focus."
             },
             "disabled": {
               "$value": "{semantic.ghost.content-disabled}",
@@ -565,10 +565,10 @@
               "$type": "color",
               "$description": "Cor de conteúdo do Button success pressed."
             },
-            "focused": {
+            "focus": {
               "$value": "{semantic.feedback.success.content-contrast}",
               "$type": "color",
-              "$description": "Cor de conteúdo do Button success focused."
+              "$description": "Cor de conteúdo do Button success focus."
             },
             "disabled": {
               "$value": "{semantic.feedback.success.content-disabled}",
@@ -592,10 +592,10 @@
               "$type": "color",
               "$description": "Cor de conteúdo do Button danger pressed."
             },
-            "focused": {
+            "focus": {
               "$value": "{semantic.feedback.error.content-contrast}",
               "$type": "color",
-              "$description": "Cor de conteúdo do Button danger focused."
+              "$description": "Cor de conteúdo do Button danger focus."
             },
             "disabled": {
               "$value": "{semantic.feedback.error.content-disabled}",

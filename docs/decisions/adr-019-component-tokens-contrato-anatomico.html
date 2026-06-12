@@ -77,7 +77,7 @@
 <p>A auditoria dimensional de controles de formulario mostrou outro problema. Componentes com a mesma variant nominal (<code>sm</code>, <code>md</code>, <code>lg</code>) podem precisar de partes anatômicas com tamanhos diferentes:</p>
 <ul>
 <li>Input e Button usam 32/40/48 como altura visual e área interativa.</li>
-<li>Checkbox e Radio usam 32/40/48 como área interativa, mas o glyph visual é 16/20/24.</li>
+<li>Checkbox e Radio usam 32/40/48 como área interativa, mas o ícone visual é 16/20/24.</li>
 <li>Toggle usa 32/40/48 como área interativa, mas a track visual precisa manter proporções próprias.</li>
 </ul>
 <p>Sem Component tokens, a implementação precisa escolher entre duas opções ruins:</p>
@@ -183,7 +183,7 @@ component.toggle.track.height.md -&gt; semantic.size.md
 <ol>
 <li>Reativar suporte de pipeline a <code>tokens/component/*.json</code> e <code>css/tokens/generated/component.css</code>.</li>
 <li>Criar a collection <code>Component</code> no Figma, com modo <code>Default</code>, quando a sessao Figma estiver autenticada.</li>
-<li>Pilotar Checkbox, Radio e Toggle porque concentram a diferenca entre area interativa e glyph visual.</li>
+<li>Pilotar Checkbox, Radio e Toggle porque concentram a diferenca entre area interativa e ícone visual.</li>
 <li>Documentar a matriz dimensional:</li>
 </ol>
 <table>

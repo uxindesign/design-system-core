@@ -71,8 +71,8 @@
 
 .ds-modal__close {
   flex-shrink: 0;
-  width: var(--ds-modal-close-size-default);
-  height: var(--ds-modal-close-size-default);
+  width: var(--ds-modal-close-frame-size-default);
+  height: var(--ds-modal-close-frame-size-default);
   background: none;
   border: none;
   padding: var(--ds-modal-close-padding-default);
@@ -88,7 +88,7 @@
 
 .ds-modal__close .material-symbols-outlined,
 .ds-modal__close .material-icons {
-  font-size: var(--ds-modal-close-glyph-size-default);
+  font-size: var(--ds-modal-close-icon-size-default);
   line-height: 1;
 }
 

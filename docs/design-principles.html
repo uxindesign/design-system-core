@@ -62,11 +62,11 @@
     <div class="ds-principle__examples">
       <div class="ds-principle__example ds-principle__example--do">
         <div class="ds-principle__example-label"><span data-lang="pt">Exemplo</span><span data-lang="en">Example</span></div>
-        <span data-lang="pt">Todos os 19 componentes usam a mesma implementação de focus ring: <code>outline</code> + <code>outline-offset</code> com 3 tokens compartilhados. Mude um token, todo componente atualiza.</span><span data-lang="en">All 19 components use the same focus ring implementation: <code>outline</code> + <code>outline-offset</code> with 3 shared tokens. Change one token, every component updates.</span>
+        <span data-lang="pt">Componentes usam a mesma implementação de focus ring: <code>outline</code> + <code>outline-offset</code> com tokens compartilhados. Mude um token, todo componente atualiza.</span><span data-lang="en">Components use the same focus ring implementation: <code>outline</code> + <code>outline-offset</code> with shared tokens. Change one token, every component updates.</span>
       </div>
       <div class="ds-principle__example ds-principle__example--dont">
         <div class="ds-principle__example-label">Anti-pattern</div>
-        <span data-lang="pt">Cada componente implementa seu próprio estilo de foco -- alguns usam box-shadow, alguns usam outline, alguns usam border. Mudar o focus ring significa tocar em 19 arquivos.</span><span data-lang="en">Each component implements its own focus style -- some use box-shadow, some use outline, some use border. Changing the focus ring means touching 19 files.</span>
+        <span data-lang="pt">Cada componente implementa seu próprio estilo de foco -- alguns usam box-shadow, alguns usam outline, alguns usam border. Mudar o focus ring significa revisar arquivos componente por componente.</span><span data-lang="en">Each component implements its own focus style -- some use box-shadow, some use outline, some use border. Changing the focus ring means reviewing files component by component.</span>
       </div>
     </div>
   </div>

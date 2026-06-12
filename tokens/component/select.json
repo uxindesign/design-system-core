@@ -27,10 +27,10 @@
           "$value": "{semantic.surface.default}",
           "$description": "Bg do Field Select filled."
         },
-        "focused": {
+        "focus": {
           "$type": "color",
           "$value": "{semantic.surface.default}",
-          "$description": "Bg do Field Select focused."
+          "$description": "Bg do Field Select focus."
         },
         "readonly": {
           "$type": "color",
@@ -51,7 +51,7 @@
         },
         "error": {
           "$type": "color",
-          "$value": "{semantic.feedback.error.background.default}",
+          "$value": "{semantic.border.error}",
           "$description": "Border color do Field Select error."
         },
         "error-hover": {
@@ -64,10 +64,10 @@
           "$value": "{semantic.border.strong}",
           "$description": "Border color do Field Select filled."
         },
-        "focused": {
+        "focus": {
           "$type": "color",
-          "$value": "{semantic.primary.background.default}",
-          "$description": "Border color do Field Select focused."
+          "$value": "{semantic.border.focus}",
+          "$description": "Border color do Field Select focus."
         },
         "hover": {
           "$type": "color",
@@ -117,21 +117,21 @@
             "$description": "Tamanho do frame do chevron Select lg."
           }
         },
-        "glyph-size": {
+        "size": {
           "sm": {
             "$type": "dimension",
             "$value": "{semantic.size.xs}",
-            "$description": "Tamanho do glyph do chevron Select sm."
+            "$description": "Tamanho do ícone do chevron Select sm."
           },
           "md": {
             "$type": "dimension",
             "$value": "{semantic.size.sm}",
-            "$description": "Tamanho do glyph do chevron Select md."
+            "$description": "Tamanho do ícone do chevron Select md."
           },
           "lg": {
             "$type": "dimension",
             "$value": "{semantic.size.md}",
-            "$description": "Tamanho do glyph do chevron Select lg."
+            "$description": "Tamanho do ícone do chevron Select lg."
           }
         }
       },
@@ -172,7 +172,7 @@
           },
           "error": {
             "$type": "color",
-            "$value": "{semantic.feedback.error.background.default}",
+            "$value": "{semantic.border.focus-error}",
             "$description": "Cor do focus ring Select error."
           },
           "readonly": {
@@ -336,21 +336,21 @@
             "$description": "Tamanho do frame de ícone Select lg."
           }
         },
-        "glyph-size": {
+        "size": {
           "sm": {
             "$type": "dimension",
             "$value": "{semantic.size.xs}",
-            "$description": "Tamanho do glyph de ícone Select sm."
+            "$description": "Tamanho do ícone Select sm."
           },
           "md": {
             "$type": "dimension",
             "$value": "{semantic.size.sm}",
-            "$description": "Tamanho do glyph de ícone Select md."
+            "$description": "Tamanho do ícone Select md."
           },
           "lg": {
             "$type": "dimension",
             "$value": "{semantic.size.md}",
-            "$description": "Tamanho do glyph de ícone Select lg."
+            "$description": "Tamanho do ícone Select lg."
           }
         }
       },
