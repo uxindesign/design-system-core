@@ -93,7 +93,9 @@
 }
 
 .ds-field__error::before {
-  content: "error";
+  --_ds-field-error-icon-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cline x1='12' y1='8' x2='12' y2='12'/%3E%3Cline x1='12' y1='16' x2='12.01' y2='16'/%3E%3C/svg%3E");
+
+  content: "";
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -108,15 +110,9 @@
   padding-left: var(--ds-form-field-error-icon-frame-padding-x-default);
   padding-right: var(--ds-form-field-error-icon-frame-padding-x-default);
   color: var(--ds-form-field-error-icon-color-default);
-  font-family: "Material Icons";
-  font-size: var(--ds-form-field-error-icon-size-default);
-  font-weight: 400;
-  line-height: 1;
-  font-style: normal;
-  text-transform: none;
-  letter-spacing: normal;
-  white-space: nowrap;
-  direction: ltr;
+  background-color: currentColor;
+  -webkit-mask: var(--_ds-field-error-icon-mask) center / var(--ds-form-field-error-icon-size-default) var(--ds-form-field-error-icon-size-default) no-repeat;
+  mask: var(--_ds-field-error-icon-mask) center / var(--ds-form-field-error-icon-size-default) var(--ds-form-field-error-icon-size-default) no-repeat;
   user-select: none;
 }
 

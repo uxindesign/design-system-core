@@ -45,7 +45,10 @@
   width: var(--ds-button-icon-size-md);
   height: var(--ds-button-icon-size-md);
   flex-shrink: 0;
-  fill: currentColor;
+  color: currentColor;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: var(--ds-button-icon-stroke-width-md);
 }
 
 .ds-button__label {
@@ -67,6 +70,7 @@
 .ds-button--sm .ds-button__icon {
   width: var(--ds-button-icon-size-sm);
   height: var(--ds-button-icon-size-sm);
+  stroke-width: var(--ds-button-icon-stroke-width-sm);
 }
 
 .ds-button--lg {
@@ -81,6 +85,7 @@
 .ds-button--lg .ds-button__icon {
   width: var(--ds-button-icon-size-lg);
   height: var(--ds-button-icon-size-lg);
+  stroke-width: var(--ds-button-icon-stroke-width-lg);
 }
 
 /* ---------------------------------------------------------
@@ -297,17 +302,22 @@
 .ds-button .ds-icon {
   width: var(--ds-button-icon-size-md);
   height: var(--ds-button-icon-size-md);
+  color: currentColor;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: var(--ds-button-icon-stroke-width-md);
 }
 
 .ds-button--sm .ds-icon {
   width: var(--ds-button-icon-size-sm);
   height: var(--ds-button-icon-size-sm);
-  stroke-width: var(--ds-icon-stroke-width-regular-20);
+  stroke-width: var(--ds-button-icon-stroke-width-sm);
 }
 
 .ds-button--lg .ds-icon {
   width: var(--ds-button-icon-size-lg);
   height: var(--ds-button-icon-size-lg);
+  stroke-width: var(--ds-button-icon-stroke-width-lg);
 }
 
 /* ---------------------------------------------------------

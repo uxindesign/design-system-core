@@ -198,6 +198,9 @@
   padding-left: var(--ds-select-icon-frame-padding-x-default);
   padding-right: var(--ds-select-icon-frame-padding-x-default);
   color: var(--ds-select-icon-color-default);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: var(--ds-select-icon-stroke-width-md);
   font-size: var(--ds-select-icon-size-md);
   line-height: 1;
   pointer-events: none;
@@ -207,12 +210,14 @@
   width: var(--ds-select-icon-size-sm);
   height: var(--ds-select-icon-size-sm);
   font-size: var(--ds-select-icon-size-sm);
+  stroke-width: var(--ds-select-icon-stroke-width-sm);
 }
 
 .ds-select--lg .ds-select__icon {
   width: var(--ds-select-icon-size-lg);
   height: var(--ds-select-icon-size-lg);
   font-size: var(--ds-select-icon-size-lg);
+  stroke-width: var(--ds-select-icon-stroke-width-lg);
 }
 
 /* States

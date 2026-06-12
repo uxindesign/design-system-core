@@ -89,7 +89,8 @@
 .ds-modal__close .ds-icon {
   width: var(--ds-modal-close-icon-size-default);
   height: var(--ds-modal-close-icon-size-default);
-  stroke-width: var(--ds-icon-stroke-width-regular-20);
+  color: currentColor;
+  stroke-width: var(--ds-modal-close-icon-stroke-width-default);
 }
 
 .ds-modal__close:hover {

@@ -149,6 +149,9 @@
 .ds-input__icon {
   flex-shrink: 0;
   color: var(--ds-input-icon-color-default);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: var(--ds-input-icon-stroke-width-md);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -166,12 +169,14 @@
   width: var(--ds-input-icon-size-sm);
   height: var(--ds-input-icon-size-sm);
   font-size: var(--ds-input-icon-size-sm);
+  stroke-width: var(--ds-input-icon-stroke-width-sm);
 }
 
 .ds-input--lg .ds-input__icon {
   width: var(--ds-input-icon-size-lg);
   height: var(--ds-input-icon-size-lg);
   font-size: var(--ds-input-icon-size-lg);
+  stroke-width: var(--ds-input-icon-stroke-width-lg);
 }
 
 /* States

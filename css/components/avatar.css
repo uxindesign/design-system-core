@@ -59,16 +59,18 @@
 .ds-avatar--icon .ds-icon {
   width: var(--ds-avatar-icon-size-md);
   height: var(--ds-avatar-icon-size-md);
+  color: currentColor;
+  stroke-width: var(--ds-avatar-icon-stroke-width-md);
 }
 
 .ds-avatar--sm.ds-avatar--icon .ds-icon {
   width: var(--ds-avatar-icon-size-sm);
   height: var(--ds-avatar-icon-size-sm);
-  stroke-width: var(--ds-icon-stroke-width-regular-20);
+  stroke-width: var(--ds-avatar-icon-stroke-width-sm);
 }
 
 .ds-avatar--lg.ds-avatar--icon .ds-icon {
   width: var(--ds-avatar-icon-size-lg);
   height: var(--ds-avatar-icon-size-lg);
-  stroke-width: var(--ds-icon-stroke-width-regular-32);
+  stroke-width: var(--ds-avatar-icon-stroke-width-lg);
 }
