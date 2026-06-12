@@ -36,38 +36,6 @@
           }
         }
       },
-      "label": {
-        "color": {
-          "default": {
-            "$type": "color",
-            "$value": "{semantic.content.strong}",
-            "$description": "Cor do label Checkbox."
-          },
-          "disabled": {
-            "$type": "color",
-            "$value": "{semantic.content.disabled}",
-            "$description": "Cor do label Checkbox disabled."
-          }
-        }
-      },
-      "description": {
-        "color": {
-          "default": {
-            "$type": "color",
-            "$value": "{semantic.content.strong}",
-            "$description": "Cor da description Checkbox."
-          }
-        }
-      },
-      "helper-text": {
-        "color": {
-          "default": {
-            "$type": "color",
-            "$value": "{semantic.content.default}",
-            "$description": "Cor do helper text Checkbox."
-          }
-        }
-      },
       "box": {
         "size": {
           "sm": {
@@ -189,6 +157,14 @@
               "$type": "color",
               "$value": "{semantic.border.control-disabled}",
               "$description": "Border color da box Checkbox unchecked disabled."
+            },
+            "error": {
+              "$value": "{semantic.border.error}",
+              "$type": "color"
+            },
+            "error-hover": {
+              "$value": "{semantic.border.error-hover}",
+              "$type": "color"
             }
           }
         }
@@ -242,20 +218,6 @@
         }
       },
       "focus-ring": {
-        "color": {
-          "default": {
-            "$type": "color",
-            "$value": "{semantic.border.focus}",
-            "$description": "Cor do focus ring Checkbox."
-          }
-        },
-        "stroke-width": {
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.border.width.focus}",
-            "$description": "Stroke width do focus ring Checkbox."
-          }
-        },
         "radius": {
           "default": {
             "$type": "dimension",

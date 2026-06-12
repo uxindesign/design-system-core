@@ -1,316 +1,38 @@
 {
   "component": {
     "textarea": {
-      "bg": {
-        "default": {
-          "$type": "color",
-          "$value": "{semantic.surface.default}",
-          "$description": "Bg do Field Textarea default."
-        },
-        "disabled": {
-          "$type": "color",
-          "$value": "{semantic.background.disabled}",
-          "$description": "Bg do Field Textarea disabled."
-        },
-        "error": {
-          "$type": "color",
-          "$value": "{semantic.surface.default}",
-          "$description": "Bg do Field Textarea error."
-        },
-        "error-hover": {
-          "$type": "color",
-          "$value": "{semantic.surface.default}",
-          "$description": "Bg do Field Textarea error hover."
-        },
-        "filled": {
-          "$type": "color",
-          "$value": "{semantic.surface.default}",
-          "$description": "Bg do Field Textarea filled."
-        },
-        "focus": {
-          "$type": "color",
-          "$value": "{semantic.surface.default}",
-          "$description": "Bg do Field Textarea focus."
-        },
-        "readonly": {
-          "$type": "color",
-          "$value": "{semantic.background.subtle}",
-          "$description": "Bg do Field Textarea readonly."
-        }
-      },
-      "border-color": {
-        "default": {
-          "$type": "color",
-          "$value": "{semantic.border.control-default}",
-          "$description": "Border color do Field Textarea default."
-        },
-        "disabled": {
-          "$type": "color",
-          "$value": "{semantic.border.control-disabled}",
-          "$description": "Border color do Field Textarea disabled."
-        },
-        "error": {
-          "$type": "color",
-          "$value": "{semantic.border.error}",
-          "$description": "Border color do Field Textarea error."
-        },
-        "error-hover": {
-          "$type": "color",
-          "$value": "{semantic.feedback.error.border.hover}",
-          "$description": "Border color do Field Textarea error hover."
-        },
-        "filled": {
-          "$type": "color",
-          "$value": "{semantic.border.strong}",
-          "$description": "Border color do Field Textarea filled."
-        },
-        "focus": {
-          "$type": "color",
-          "$value": "{semantic.border.focus}",
-          "$description": "Border color do Field Textarea focus."
-        },
-        "hover": {
-          "$type": "color",
-          "$value": "{semantic.border.control-hover}",
-          "$description": "Border color do Field Textarea hover."
-        },
-        "readonly": {
-          "$type": "color",
-          "$value": "{semantic.border.subtle}",
-          "$description": "Border color do Field Textarea readonly."
-        }
-      },
-      "border-width": {
-        "default": {
-          "$type": "dimension",
-          "$value": "{semantic.border.width.default}",
-          "$description": "Border width do Field Textarea."
-        }
-      },
-      "content": {
-        "color": {
-          "default": {
-            "$type": "color",
-            "$value": "{semantic.content.strong}",
-            "$description": "Cor de conteúdo preenchido do Textarea."
-          },
-          "disabled": {
-            "$type": "color",
-            "$value": "{semantic.content.disabled}",
-            "$description": "Cor de conteúdo disabled do Textarea."
-          },
-          "readonly": {
-            "$type": "color",
-            "$value": "{semantic.content.default}",
-            "$description": "Cor de conteúdo readonly do Textarea."
-          }
-        }
-      },
       "field": {
         "min-height": {
           "sm": {
             "$type": "dimension",
-            "$value": "{foundation.dimension.80}",
+            "$value": "{semantic.control.textarea.min-height.sm}",
             "$description": "Altura mínima do field Textarea sm."
           },
           "md": {
             "$type": "dimension",
-            "$value": "{foundation.dimension.96}",
+            "$value": "{semantic.control.textarea.min-height.md}",
             "$description": "Altura mínima do field Textarea md."
           },
           "lg": {
             "$type": "dimension",
-            "$value": "{foundation.dimension.120}",
+            "$value": "{semantic.control.textarea.min-height.lg}",
             "$description": "Altura mínima do field Textarea lg."
           }
         }
       },
       "focus-ring": {
-        "color": {
-          "default": {
-            "$type": "color",
-            "$value": "{semantic.border.focus}",
-            "$description": "Cor do focus ring Textarea."
-          },
-          "error": {
-            "$type": "color",
-            "$value": "{semantic.border.focus-error}",
-            "$description": "Cor do focus ring Textarea error."
-          },
-          "readonly": {
-            "$type": "color",
-            "$value": "{semantic.border.control-default}",
-            "$description": "Cor do focus ring Textarea readonly."
-          }
-        },
-        "offset": {
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.border.width.focus}",
-            "$description": "Offset CSS do focus ring Textarea."
-          }
-        },
         "radius": {
           "default": {
             "$type": "dimension",
             "$value": "{semantic.radius.lg}",
             "$description": "Radius do focus ring Textarea."
           }
-        },
-        "stroke-width": {
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.border.width.focus}",
-            "$description": "Stroke width do focus ring Textarea."
-          }
-        }
-      },
-      "helper": {
-        "color": {
-          "default": {
-            "$type": "color",
-            "$value": "{semantic.content.default}",
-            "$description": "Cor do helper text Textarea."
-          },
-          "disabled": {
-            "$type": "color",
-            "$value": "{semantic.content.disabled}",
-            "$description": "Cor do helper text Textarea disabled."
-          }
-        },
-        "font-family": {
-          "default": {
-            "$type": "string",
-            "$value": "{semantic.typography.body.font-family.sans}",
-            "$description": "Font-family do helper text Textarea."
-          }
-        },
-        "font-size": {
-          "sm": {
-            "$type": "dimension",
-            "$value": "{semantic.typography.body.font-size.xs}",
-            "$description": "Font-size do helper text Textarea sm."
-          },
-          "md": {
-            "$type": "dimension",
-            "$value": "{semantic.typography.body.font-size.sm}",
-            "$description": "Font-size do helper text Textarea md."
-          },
-          "lg": {
-            "$type": "dimension",
-            "$value": "{semantic.typography.body.font-size.sm}",
-            "$description": "Font-size do helper text Textarea lg."
-          }
-        },
-        "font-weight": {
-          "default": {
-            "$type": "string",
-            "$value": "{semantic.typography.body.font-weight.regular}",
-            "$description": "Font-weight do helper text Textarea."
-          }
-        },
-        "letter-spacing": {
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.typography.body.letter-spacing.normal}",
-            "$description": "Letter-spacing do helper text Textarea."
-          }
-        },
-        "line-height": {
-          "sm": {
-            "$type": "dimension",
-            "$value": "{semantic.typography.body.line-height.xs}",
-            "$description": "Line-height do helper text Textarea sm."
-          },
-          "md": {
-            "$type": "dimension",
-            "$value": "{semantic.typography.body.line-height.sm}",
-            "$description": "Line-height do helper text Textarea md."
-          },
-          "lg": {
-            "$type": "dimension",
-            "$value": "{semantic.typography.body.line-height.sm}",
-            "$description": "Line-height do helper text Textarea lg."
-          }
-        }
-      },
-      "label": {
-        "color": {
-          "default": {
-            "$type": "color",
-            "$value": "{semantic.content.strong}",
-            "$description": "Cor do label Textarea."
-          }
-        },
-        "font-family": {
-          "default": {
-            "$type": "string",
-            "$value": "{semantic.typography.body.font-family.sans}",
-            "$description": "Font-family do label Textarea."
-          }
-        },
-        "font-size": {
-          "sm": {
-            "$type": "dimension",
-            "$value": "{semantic.typography.body.font-size.xs}",
-            "$description": "Font-size do label Textarea sm."
-          },
-          "md": {
-            "$type": "dimension",
-            "$value": "{semantic.typography.body.font-size.sm}",
-            "$description": "Font-size do label Textarea md."
-          },
-          "lg": {
-            "$type": "dimension",
-            "$value": "{semantic.typography.body.font-size.sm}",
-            "$description": "Font-size do label Textarea lg."
-          }
-        },
-        "font-weight": {
-          "default": {
-            "$type": "string",
-            "$value": "{semantic.typography.body.font-weight.bold}",
-            "$description": "Font-weight do label Textarea."
-          }
-        },
-        "letter-spacing": {
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.typography.body.letter-spacing.normal}",
-            "$description": "Letter-spacing do label Textarea."
-          }
-        },
-        "line-height": {
-          "sm": {
-            "$type": "dimension",
-            "$value": "{semantic.typography.body.line-height.xs}",
-            "$description": "Line-height do label Textarea sm."
-          },
-          "md": {
-            "$type": "dimension",
-            "$value": "{semantic.typography.body.line-height.sm}",
-            "$description": "Line-height do label Textarea md."
-          },
-          "lg": {
-            "$type": "dimension",
-            "$value": "{semantic.typography.body.line-height.sm}",
-            "$description": "Line-height do label Textarea lg."
-          }
-        }
-      },
-      "label-row": {
-        "gap": {
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.space.2xs}",
-            "$description": "Gap entre label e required Textarea."
-          }
         }
       },
       "padding-x": {
         "sm": {
           "$type": "dimension",
-          "$value": "{semantic.space.md}",
+          "$value": "{semantic.space.sm}",
           "$description": "Padding horizontal do Field Textarea sm."
         },
         "md": {
@@ -322,97 +44,6 @@
           "$type": "dimension",
           "$value": "{semantic.space.lg}",
           "$description": "Padding horizontal do Field Textarea lg."
-        }
-      },
-      "padding-y": {
-        "sm": {
-          "$type": "dimension",
-          "$value": "{semantic.space.sm}",
-          "$description": "Padding vertical do Field Textarea sm."
-        },
-        "md": {
-          "$type": "dimension",
-          "$value": "{semantic.space.control.padding.10}",
-          "$description": "Padding vertical do Field Textarea md."
-        },
-        "lg": {
-          "$type": "dimension",
-          "$value": "{semantic.space.md}",
-          "$description": "Padding vertical do Field Textarea lg."
-        }
-      },
-      "placeholder": {
-        "color": {
-          "default": {
-            "$type": "color",
-            "$value": "{semantic.content.subtle}",
-            "$description": "Cor do placeholder Textarea."
-          },
-          "disabled": {
-            "$type": "color",
-            "$value": "{semantic.content.disabled}",
-            "$description": "Cor do placeholder Textarea disabled."
-          }
-        }
-      },
-      "radius": {
-        "default": {
-          "$type": "dimension",
-          "$value": "{semantic.radius.md}",
-          "$description": "Radius do Field Textarea."
-        }
-      },
-      "required": {
-        "color": {
-          "default": {
-            "$type": "color",
-            "$value": "{semantic.feedback.error.content-default}",
-            "$description": "Cor do indicador required Textarea."
-          }
-        },
-        "font-family": {
-          "default": {
-            "$type": "string",
-            "$value": "{semantic.typography.body.font-family.sans}",
-            "$description": "Font-family do indicador required Textarea."
-          }
-        },
-        "font-size": {
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.typography.body.font-size.sm}",
-            "$description": "Font-size do indicador required Textarea."
-          }
-        },
-        "font-weight": {
-          "default": {
-            "$type": "string",
-            "$value": "{semantic.typography.body.font-weight.bold}",
-            "$description": "Font-weight do indicador required Textarea."
-          }
-        },
-        "letter-spacing": {
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.typography.body.letter-spacing.normal}",
-            "$description": "Letter-spacing do indicador required Textarea."
-          }
-        },
-        "line-height": {
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.typography.body.line-height.sm}",
-            "$description": "Line-height do indicador required Textarea."
-          }
-        }
-      },
-      "stack": {
-        "gap": {
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.space.xs}",
-            "$description": "Gap vertical entre label, field e helper no Textarea."
-          }
         }
       },
       "text": {

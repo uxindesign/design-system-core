@@ -16,7 +16,7 @@
   font-size: var(--ds-body-font-size-sm);
   font-weight: var(--ds-body-font-weight-regular);
   line-height: var(--ds-body-line-height-sm);
-  color: var(--ds-radio-description-color-default);
+  color: var(--ds-content-strong);
   padding-left: calc(var(--ds-size-sm) + var(--ds-space-sm) + var(--ds-space-xs));
 }
 
@@ -25,7 +25,7 @@
   font-size: var(--ds-body-font-size-xs);
   font-weight: var(--ds-body-font-weight-regular);
   line-height: var(--ds-body-line-height-xs);
-  color: var(--ds-radio-helper-text-color-default);
+  color: var(--ds-content-default);
   padding-left: calc(var(--ds-size-sm) + var(--ds-space-sm) + var(--ds-space-xs));
 }
 
@@ -42,7 +42,7 @@
 .ds-radio-group__legend {
   font-size: var(--ds-body-font-size-sm);
   font-weight: var(--ds-body-font-weight-medium);
-  color: var(--ds-radio-label-color-default);
+  color: var(--ds-content-strong);
   margin-bottom: var(--ds-space-xs);
   padding: 0;
 }
@@ -120,8 +120,8 @@
 
 /* Focus */
 .ds-radio:focus-visible {
-  outline: var(--ds-radio-focus-ring-stroke-width-default) solid var(--ds-radio-focus-ring-color-default);
-  outline-offset: var(--ds-radio-focus-ring-stroke-width-default);
+  outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color-default);
+  outline-offset: var(--ds-focus-ring-width);
 }
 
 /* Disabled */
@@ -142,7 +142,7 @@
 
 .ds-radio-label:has(.ds-radio:disabled) {
   cursor: not-allowed;
-  color: var(--ds-radio-label-color-disabled);
+  color: var(--ds-content-disabled);
 }
 
 /* Error state */
@@ -239,7 +239,7 @@
   font-size: var(--ds-body-font-size-sm);
   font-weight: var(--ds-body-font-weight-bold);
   line-height: var(--ds-body-line-height-sm);
-  color: var(--ds-radio-label-color-default);
+  color: var(--ds-content-strong);
 }
 
 /* Sm size: label = control/label-md (14px Bold / 16px) */
@@ -258,7 +258,7 @@
   font-size: var(--ds-body-font-size-sm);
   font-weight: var(--ds-body-font-weight-regular);
   line-height: var(--ds-body-line-height-sm);
-  color: var(--ds-radio-description-color-default);
+  color: var(--ds-content-strong);
   white-space: pre-wrap;
 }
 
@@ -266,11 +266,11 @@
 .ds-radio__helper {
   font-size: var(--ds-body-font-size-xs);
   line-height: var(--ds-body-line-height-md);
-  color: var(--ds-radio-helper-text-color-default);
+  color: var(--ds-content-default);
 }
 
 .ds-radio-label:has(.ds-radio:disabled) .ds-radio__label {
-  color: var(--ds-radio-label-color-disabled);
+  color: var(--ds-content-disabled);
 }
 
 /* ---------------------------------------------------------

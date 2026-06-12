@@ -43,8 +43,8 @@
   --ds-feedback-success-background-disabled: var(--ds-color-disabled-success-light); /** Fill success disabled. */
   --ds-feedback-warning-border-default: var(--ds-color-amber-500); /** Upgraded from amber.500 to amber.600 (ADR-008) for consistency with error.border/info.border at step 600. Passes 3:1 vs amber.50. */
   --ds-feedback-warning-content-default: var(--ds-color-amber-700); /** Cor warning como conteúdo. */
-  --ds-feedback-warning-content-contrast: var(--ds-color-neutral-900); /** Conteúdo de alto contraste sobre fill warning sólido. Dark text porque amber-500 é claro. */
-  --ds-feedback-warning-background-default: var(--ds-color-amber-500);
+  --ds-feedback-warning-content-contrast: var(--ds-color-amber-950); /** Conteúdo de alto contraste sobre fill warning sólido. Dark text porque amber-500 é claro. */
+  --ds-feedback-warning-background-default: var(--ds-color-amber-300);
   --ds-feedback-warning-background-hover: var(--ds-color-amber-600);
   --ds-feedback-warning-background-subtle: var(--ds-color-amber-100);
   --ds-feedback-error-border-default: var(--ds-color-red-500);
@@ -57,12 +57,12 @@
   --ds-feedback-error-background-active: var(--ds-color-red-900);
   --ds-feedback-error-background-subtle: var(--ds-color-red-100);
   --ds-feedback-error-background-disabled: var(--ds-color-disabled-error-light); /** Fill error disabled. */
-  --ds-feedback-info-border-default: var(--ds-color-sky-500);
-  --ds-feedback-info-content-default: var(--ds-color-sky-700); /** Cor info como conteúdo. */
-  --ds-feedback-info-content-contrast: var(--ds-color-neutral-900); /** Conteúdo de alto contraste sobre fill info sólido. Dark text porque sky-600 é claro demais para branco. */
-  --ds-feedback-info-background-default: var(--ds-color-sky-500);
-  --ds-feedback-info-background-hover: var(--ds-color-sky-600);
-  --ds-feedback-info-background-subtle: var(--ds-color-sky-100);
+  --ds-feedback-info-border-default: var(--ds-color-blue-500);
+  --ds-feedback-info-content-default: var(--ds-color-blue-700); /** Cor info como conteúdo. */
+  --ds-feedback-info-content-contrast: var(--ds-color-brand-950); /** Conteúdo de alto contraste sobre fill info sólido. Dark text porque sky-600 é claro demais para branco. */
+  --ds-feedback-info-background-default: var(--ds-color-blue-400);
+  --ds-feedback-info-background-hover: var(--ds-color-blue-600);
+  --ds-feedback-info-background-subtle: var(--ds-color-blue-100);
   --ds-surface-default: var(--ds-color-neutral-50); /** Card and panel surfaces */
   --ds-surface-hover: var(--ds-color-neutral-100); /** Surface neutra em hover de controles. */
   --ds-surface-raised: var(--ds-color-neutral-50); /** Elevated surface (sticky headers, raised cards) */
@@ -111,15 +111,15 @@
   --ds-border-strong: var(--ds-color-neutral-600);
   --ds-border-subtle: var(--ds-color-neutral-200);
   --ds-border-inverse: var(--ds-color-neutral-50); /** Borda usada sobre fundos invertidos (escuros em light mode). */
-  --ds-border-focus: var(--ds-color-brand-500);
+  --ds-border-focus: var(--ds-color-brand-600);
   --ds-border-brand: var(--ds-color-brand-600);
   --ds-border-error: var(--ds-color-red-600);
   --ds-border-width-default: var(--ds-border-width-1);
   --ds-border-width-strong: var(--ds-border-width-2);
   --ds-border-width-focus: var(--ds-border-width-2);
-  --ds-border-focus-error: var(--ds-color-red-500); /** Focus ring color for error/danger states */
+  --ds-border-focus-error: var(--ds-color-red-600); /** Focus ring color for error/danger states */
   --ds-border-control-default: var(--ds-color-neutral-500); /** Border color for interactive controls (Input, Select, Textarea, Checkbox, Radio). Meets WCAG 1.4.11 (≥3:1 against control background). */
-  --ds-border-control-hover: var(--ds-color-neutral-600); /** Border on hover for interactive controls. */
+  --ds-border-control-hover: var(--ds-color-brand-600); /** Border on hover for interactive controls. */
   --ds-border-control-disabled: var(--ds-color-neutral-300); /** Border for disabled controls. Exempt from contrast requirements per WCAG 1.4.3. */
   --ds-overlay-subtle: var(--ds-overlay-black-5);
   --ds-overlay-default: var(--ds-overlay-black-10);

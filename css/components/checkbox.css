@@ -16,7 +16,7 @@
   font-size: var(--ds-body-font-size-sm);
   font-weight: var(--ds-body-font-weight-regular);
   line-height: var(--ds-body-line-height-sm);
-  color: var(--ds-checkbox-description-color-default);
+  color: var(--ds-content-strong);
   /* indent pra alinhar com label, passando o checkbox + gap */
   padding-left: calc(var(--ds-size-sm) + var(--ds-space-sm) + var(--ds-space-xs));
 }
@@ -26,7 +26,7 @@
   font-size: var(--ds-body-font-size-xs);
   font-weight: var(--ds-body-font-weight-regular);
   line-height: var(--ds-body-line-height-xs);
-  color: var(--ds-checkbox-helper-text-color-default);
+  color: var(--ds-content-default);
   padding-left: calc(var(--ds-size-sm) + var(--ds-space-sm) + var(--ds-space-xs));
 }
 
@@ -42,7 +42,7 @@
   padding: var(--ds-space-xs) var(--ds-space-xs);
   min-height: var(--checkbox-target-height);
   font-size: var(--ds-body-font-size-sm);
-  color: var(--ds-checkbox-label-color-default);
+  color: var(--ds-content-strong);
 }
 
 /* Custom checkbox */
@@ -128,8 +128,8 @@
 
 /* Focus */
 .ds-checkbox:focus-visible {
-  outline: var(--ds-checkbox-focus-ring-stroke-width-default) solid var(--ds-checkbox-focus-ring-color-default);
-  outline-offset: var(--ds-checkbox-focus-ring-stroke-width-default);
+  outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color-default);
+  outline-offset: var(--ds-focus-ring-width);
 }
 
 /* Disabled */
@@ -159,7 +159,7 @@
 
 .ds-checkbox-label:has(.ds-checkbox:disabled) {
   cursor: not-allowed;
-  color: var(--ds-checkbox-label-color-disabled);
+  color: var(--ds-content-disabled);
 }
 
 /* Error state */
@@ -264,7 +264,7 @@
   font-size: var(--ds-body-font-size-sm);
   font-weight: var(--ds-body-font-weight-medium);
   line-height: var(--ds-body-line-height-sm);
-  color: var(--ds-checkbox-label-color-default);
+  color: var(--ds-content-strong);
 }
 
 /* Description (body/sm: 14px regular / 20px) */
@@ -272,7 +272,7 @@
   font-size: var(--ds-body-font-size-sm);
   font-weight: var(--ds-body-font-weight-regular);
   line-height: var(--ds-body-line-height-sm);
-  color: var(--ds-checkbox-description-color-default);
+  color: var(--ds-content-strong);
   white-space: pre-wrap;
 }
 
@@ -280,11 +280,11 @@
 .ds-checkbox__helper {
   font-size: var(--ds-body-font-size-xs);
   line-height: var(--ds-body-line-height-md);
-  color: var(--ds-checkbox-helper-text-color-default);
+  color: var(--ds-content-default);
 }
 
 .ds-checkbox-label:has(.ds-checkbox:disabled) .ds-checkbox__label {
-  color: var(--ds-checkbox-label-color-disabled);
+  color: var(--ds-content-disabled);
 }
 
 /* ---------------------------------------------------------

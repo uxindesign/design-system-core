@@ -1,120 +1,17 @@
 {
   "component": {
     "select": {
-      "bg": {
-        "default": {
-          "$type": "color",
-          "$value": "{semantic.surface.default}",
-          "$description": "Bg do Field Select default."
-        },
-        "disabled": {
-          "$type": "color",
-          "$value": "{semantic.background.disabled}",
-          "$description": "Bg do Field Select disabled."
-        },
-        "error": {
-          "$type": "color",
-          "$value": "{semantic.surface.default}",
-          "$description": "Bg do Field Select error."
-        },
-        "error-hover": {
-          "$type": "color",
-          "$value": "{semantic.surface.default}",
-          "$description": "Bg do Field Select error hover."
-        },
-        "filled": {
-          "$type": "color",
-          "$value": "{semantic.surface.default}",
-          "$description": "Bg do Field Select filled."
-        },
-        "focus": {
-          "$type": "color",
-          "$value": "{semantic.surface.default}",
-          "$description": "Bg do Field Select focus."
-        },
-        "readonly": {
-          "$type": "color",
-          "$value": "{semantic.background.subtle}",
-          "$description": "Bg do Field Select readonly."
-        }
-      },
-      "border-color": {
-        "default": {
-          "$type": "color",
-          "$value": "{semantic.border.control-default}",
-          "$description": "Border color do Field Select default."
-        },
-        "disabled": {
-          "$type": "color",
-          "$value": "{semantic.border.control-disabled}",
-          "$description": "Border color do Field Select disabled."
-        },
-        "error": {
-          "$type": "color",
-          "$value": "{semantic.border.error}",
-          "$description": "Border color do Field Select error."
-        },
-        "error-hover": {
-          "$type": "color",
-          "$value": "{semantic.feedback.error.border.hover}",
-          "$description": "Border color do Field Select error hover."
-        },
-        "filled": {
-          "$type": "color",
-          "$value": "{semantic.border.strong}",
-          "$description": "Border color do Field Select filled."
-        },
-        "focus": {
-          "$type": "color",
-          "$value": "{semantic.border.focus}",
-          "$description": "Border color do Field Select focus."
-        },
-        "hover": {
-          "$type": "color",
-          "$value": "{semantic.border.control-hover}",
-          "$description": "Border color do Field Select hover."
-        },
-        "readonly": {
-          "$type": "color",
-          "$value": "{semantic.border.subtle}",
-          "$description": "Border color do Field Select readonly."
-        }
-      },
-      "border-width": {
-        "default": {
-          "$type": "dimension",
-          "$value": "{semantic.border.width.default}",
-          "$description": "Border width do Field Select."
-        }
-      },
       "chevron": {
         "color": {
           "default": {
             "$type": "color",
-            "$value": "{semantic.content.default}",
+            "$value": "{semantic.icon.color.default}",
             "$description": "Cor do chevron Select."
           },
           "disabled": {
             "$type": "color",
-            "$value": "{semantic.content.disabled}",
+            "$value": "{semantic.icon.color.disabled}",
             "$description": "Cor do chevron Select disabled."
-          }
-        },
-        "frame-size": {
-          "sm": {
-            "$type": "dimension",
-            "$value": "{semantic.size.xs}",
-            "$description": "Tamanho do frame do chevron Select sm."
-          },
-          "md": {
-            "$type": "dimension",
-            "$value": "{semantic.size.sm}",
-            "$description": "Tamanho do frame do chevron Select md."
-          },
-          "lg": {
-            "$type": "dimension",
-            "$value": "{semantic.size.md}",
-            "$description": "Tamanho do frame do chevron Select lg."
           }
         },
         "size": {
@@ -133,6 +30,20 @@
             "$value": "{semantic.size.md}",
             "$description": "Tamanho do ícone do chevron Select lg."
           }
+        },
+        "stroke-width": {
+          "sm": {
+            "$value": "{semantic.icon.stroke-width.regular.16}",
+            "$type": "dimension"
+          },
+          "md": {
+            "$value": "{semantic.icon.stroke-width.regular.20}",
+            "$type": "dimension"
+          },
+          "lg": {
+            "$value": "{semantic.icon.stroke-width.regular.24}",
+            "$type": "dimension"
+          }
         }
       },
       "chevron-frame": {
@@ -144,62 +55,12 @@
           }
         }
       },
-      "content": {
-        "color": {
-          "default": {
-            "$type": "color",
-            "$value": "{semantic.content.strong}",
-            "$description": "Cor de conteúdo preenchido do Select."
-          },
-          "disabled": {
-            "$type": "color",
-            "$value": "{semantic.content.disabled}",
-            "$description": "Cor de conteúdo disabled do Select."
-          },
-          "readonly": {
-            "$type": "color",
-            "$value": "{semantic.content.default}",
-            "$description": "Cor de conteúdo readonly do Select."
-          }
-        }
-      },
       "focus-ring": {
-        "color": {
-          "default": {
-            "$type": "color",
-            "$value": "{semantic.border.focus}",
-            "$description": "Cor do focus ring Select."
-          },
-          "error": {
-            "$type": "color",
-            "$value": "{semantic.border.focus-error}",
-            "$description": "Cor do focus ring Select error."
-          },
-          "readonly": {
-            "$type": "color",
-            "$value": "{semantic.border.control-default}",
-            "$description": "Cor do focus ring Select readonly."
-          }
-        },
-        "offset": {
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.border.width.focus}",
-            "$description": "Offset CSS do focus ring Select."
-          }
-        },
         "radius": {
           "default": {
             "$type": "dimension",
             "$value": "{semantic.radius.lg}",
             "$description": "Radius do focus ring Select."
-          }
-        },
-        "stroke-width": {
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.border.width.focus}",
-            "$description": "Stroke width do focus ring Select."
           }
         }
       },
@@ -237,103 +98,17 @@
           "$description": "Altura da superfície visual Select lg."
         }
       },
-      "helper": {
-        "color": {
-          "default": {
-            "$type": "color",
-            "$value": "{semantic.content.default}",
-            "$description": "Cor do helper text Select."
-          },
-          "disabled": {
-            "$type": "color",
-            "$value": "{semantic.content.disabled}",
-            "$description": "Cor do helper text Select disabled."
-          }
-        },
-        "font-family": {
-          "default": {
-            "$type": "string",
-            "$value": "{semantic.typography.body.font-family.sans}",
-            "$description": "Font-family do helper text Select."
-          }
-        },
-        "font-size": {
-          "sm": {
-            "$type": "dimension",
-            "$value": "{semantic.typography.body.font-size.xs}",
-            "$description": "Font-size do helper text Select sm."
-          },
-          "md": {
-            "$type": "dimension",
-            "$value": "{semantic.typography.body.font-size.sm}",
-            "$description": "Font-size do helper text Select md."
-          },
-          "lg": {
-            "$type": "dimension",
-            "$value": "{semantic.typography.body.font-size.sm}",
-            "$description": "Font-size do helper text Select lg."
-          }
-        },
-        "font-weight": {
-          "default": {
-            "$type": "string",
-            "$value": "{semantic.typography.body.font-weight.regular}",
-            "$description": "Font-weight do helper text Select."
-          }
-        },
-        "letter-spacing": {
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.typography.body.letter-spacing.normal}",
-            "$description": "Letter-spacing do helper text Select."
-          }
-        },
-        "line-height": {
-          "sm": {
-            "$type": "dimension",
-            "$value": "{semantic.typography.body.line-height.xs}",
-            "$description": "Line-height do helper text Select sm."
-          },
-          "md": {
-            "$type": "dimension",
-            "$value": "{semantic.typography.body.line-height.sm}",
-            "$description": "Line-height do helper text Select md."
-          },
-          "lg": {
-            "$type": "dimension",
-            "$value": "{semantic.typography.body.line-height.sm}",
-            "$description": "Line-height do helper text Select lg."
-          }
-        }
-      },
       "icon": {
         "color": {
           "default": {
             "$type": "color",
-            "$value": "{semantic.content.default}",
+            "$value": "{semantic.icon.color.default}",
             "$description": "Cor do ícone Select."
           },
           "disabled": {
             "$type": "color",
-            "$value": "{semantic.content.disabled}",
+            "$value": "{semantic.icon.color.disabled}",
             "$description": "Cor do ícone Select disabled."
-          }
-        },
-        "frame-size": {
-          "sm": {
-            "$type": "dimension",
-            "$value": "{semantic.size.xs}",
-            "$description": "Tamanho do frame de ícone Select sm."
-          },
-          "md": {
-            "$type": "dimension",
-            "$value": "{semantic.size.sm}",
-            "$description": "Tamanho do frame de ícone Select md."
-          },
-          "lg": {
-            "$type": "dimension",
-            "$value": "{semantic.size.md}",
-            "$description": "Tamanho do frame de ícone Select lg."
           }
         },
         "size": {
@@ -352,6 +127,20 @@
             "$value": "{semantic.size.md}",
             "$description": "Tamanho do ícone Select lg."
           }
+        },
+        "stroke-width": {
+          "sm": {
+            "$value": "{semantic.icon.stroke-width.regular.16}",
+            "$type": "dimension"
+          },
+          "md": {
+            "$value": "{semantic.icon.stroke-width.regular.20}",
+            "$type": "dimension"
+          },
+          "lg": {
+            "$value": "{semantic.icon.stroke-width.regular.24}",
+            "$type": "dimension"
+          }
         }
       },
       "icon-frame": {
@@ -363,83 +152,10 @@
           }
         }
       },
-      "label": {
-        "color": {
-          "default": {
-            "$type": "color",
-            "$value": "{semantic.content.strong}",
-            "$description": "Cor do label Select."
-          }
-        },
-        "font-family": {
-          "default": {
-            "$type": "string",
-            "$value": "{semantic.typography.body.font-family.sans}",
-            "$description": "Font-family do label Select."
-          }
-        },
-        "font-size": {
-          "sm": {
-            "$type": "dimension",
-            "$value": "{semantic.typography.body.font-size.xs}",
-            "$description": "Font-size do label Select sm."
-          },
-          "md": {
-            "$type": "dimension",
-            "$value": "{semantic.typography.body.font-size.sm}",
-            "$description": "Font-size do label Select md."
-          },
-          "lg": {
-            "$type": "dimension",
-            "$value": "{semantic.typography.body.font-size.sm}",
-            "$description": "Font-size do label Select lg."
-          }
-        },
-        "font-weight": {
-          "default": {
-            "$type": "string",
-            "$value": "{semantic.typography.body.font-weight.bold}",
-            "$description": "Font-weight do label Select."
-          }
-        },
-        "letter-spacing": {
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.typography.body.letter-spacing.normal}",
-            "$description": "Letter-spacing do label Select."
-          }
-        },
-        "line-height": {
-          "sm": {
-            "$type": "dimension",
-            "$value": "{semantic.typography.body.line-height.xs}",
-            "$description": "Line-height do label Select sm."
-          },
-          "md": {
-            "$type": "dimension",
-            "$value": "{semantic.typography.body.line-height.sm}",
-            "$description": "Line-height do label Select md."
-          },
-          "lg": {
-            "$type": "dimension",
-            "$value": "{semantic.typography.body.line-height.sm}",
-            "$description": "Line-height do label Select lg."
-          }
-        }
-      },
-      "label-row": {
-        "gap": {
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.space.2xs}",
-            "$description": "Gap entre label e required do Select."
-          }
-        }
-      },
       "padding-x": {
         "sm": {
           "$type": "dimension",
-          "$value": "{semantic.space.sm}",
+          "$value": "{semantic.space.xs}",
           "$description": "Padding horizontal do Field Select sm."
         },
         "md": {
@@ -451,97 +167,6 @@
           "$type": "dimension",
           "$value": "{semantic.space.md}",
           "$description": "Padding horizontal do Field Select lg."
-        }
-      },
-      "padding-y": {
-        "sm": {
-          "$type": "dimension",
-          "$value": "{semantic.space.sm}",
-          "$description": "Padding vertical do Field Select sm."
-        },
-        "md": {
-          "$type": "dimension",
-          "$value": "{semantic.space.control.padding.10}",
-          "$description": "Padding vertical do Field Select md."
-        },
-        "lg": {
-          "$type": "dimension",
-          "$value": "{semantic.space.md}",
-          "$description": "Padding vertical do Field Select lg."
-        }
-      },
-      "placeholder": {
-        "color": {
-          "default": {
-            "$type": "color",
-            "$value": "{semantic.content.subtle}",
-            "$description": "Cor do placeholder Select."
-          },
-          "disabled": {
-            "$type": "color",
-            "$value": "{semantic.content.disabled}",
-            "$description": "Cor do placeholder Select disabled."
-          }
-        }
-      },
-      "radius": {
-        "default": {
-          "$type": "dimension",
-          "$value": "{semantic.radius.md}",
-          "$description": "Radius do Field Select."
-        }
-      },
-      "required": {
-        "color": {
-          "default": {
-            "$type": "color",
-            "$value": "{semantic.feedback.error.content-default}",
-            "$description": "Cor do required Select."
-          }
-        },
-        "font-family": {
-          "default": {
-            "$type": "string",
-            "$value": "{semantic.typography.body.font-family.sans}",
-            "$description": "Font-family do required Select."
-          }
-        },
-        "font-size": {
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.typography.body.font-size.sm}",
-            "$description": "Font-size do required Select."
-          }
-        },
-        "font-weight": {
-          "default": {
-            "$type": "string",
-            "$value": "{semantic.typography.body.font-weight.bold}",
-            "$description": "Font-weight do required Select."
-          }
-        },
-        "letter-spacing": {
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.typography.body.letter-spacing.normal}",
-            "$description": "Letter-spacing do required Select."
-          }
-        },
-        "line-height": {
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.typography.body.line-height.sm}",
-            "$description": "Line-height do required Select."
-          }
-        }
-      },
-      "stack": {
-        "gap": {
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.space.xs}",
-            "$description": "Gap vertical do Select composto."
-          }
         }
       },
       "text": {

@@ -54,6 +54,16 @@
             "$value": "{semantic.typography.body.letter-spacing.normal}",
             "$description": "Espaçamento entre letras do rótulo de Breadcrumb."
           }
+        },
+        "color": {
+          "link": {
+            "$value": "{semantic.link.content-default}",
+            "$type": "color"
+          },
+          "current": {
+            "$value": "{semantic.content.default}",
+            "$type": "color"
+          }
         }
       },
       "separator": {

@@ -359,7 +359,6 @@ const JSON_ONLY_PATHS = [
   /^semantic\.motion\./,                               // motion (runtime — Smart Animate)
   /^semantic\.z\./,                                    // z-index (Figma usa layer order)
   /^semantic\.shadow\./,                               // shadow (Figma Effect Style, não Variable)
-  /^component\.form-field\./,                          // ADR-017: Form Field é componente CSS-only
   /^component\.breadcrumb\.focus-ring\.radius\.default$/, // focus ring existe só no CSS; Figma Breadcrumb não tem focus variant
   /^component\.modal\.close\.(icon-size|padding)\.default$/, // Modal usa instância de ícone no Figma; CSS controla botão HTML
   /^component\.tabs\.panel\.padding-y\.default$/,       // painel de Tabs é estrutura CSS, não variant Figma

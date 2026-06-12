@@ -115,7 +115,7 @@ function serializeVariable(variable) {
     valuesByMode,
     description: variable.description || "",
     scopes: Array.isArray(variable.scopes) ? variable.scopes.slice() : [],
-    codeSyntax: variable.codeSyntax ? { ...variable.codeSyntax } : {},
+    codeSyntax: variable.codeSyntax ? Object.assign({}, variable.codeSyntax) : {},
     hiddenFromPublishing: Boolean(variable.hiddenFromPublishing),
     remote: Boolean(variable.remote),
   };
@@ -512,7 +512,7 @@ function addVariableUsage(id, path, usageByVariable) {
 }
 
 function findPaintBinding(node, variablesById, collectionNameById) {
-  for (const current of [node, ...findDescendants(node)]) {
+  for (const current of [node].concat(findDescendants(node))) {
     const bound = current.boundVariables || {};
     for (const field of ["fills", "strokes"]) {
       const refs = toArray(bound[field]);
@@ -526,7 +526,7 @@ function findPaintBinding(node, variablesById, collectionNameById) {
 }
 
 function getStrokeWeightBindingInfo(node, variablesById, collectionNameById) {
-  for (const current of [node, ...findDescendants(node)]) {
+  for (const current of [node].concat(findDescendants(node))) {
     const bound = current.boundVariables || {};
     for (const field of STROKE_WEIGHT_FIELDS) {
       const info = variableRefInfo(bound[field], variablesById, collectionNameById);
@@ -537,7 +537,7 @@ function getStrokeWeightBindingInfo(node, variablesById, collectionNameById) {
 }
 
 function hasVisibleStroke(node) {
-  for (const current of [node, ...findDescendants(node)]) {
+  for (const current of [node].concat(findDescendants(node))) {
     if (!Array.isArray(current.strokes)) continue;
     if (current.strokes.some((paint) => paint && paint.visible !== false)) return true;
   }
@@ -546,10 +546,10 @@ function hasVisibleStroke(node) {
 
 function findDescendants(node) {
   if (!("children" in node) || !Array.isArray(node.children)) return [];
-  const out = [];
+  let out = [];
   for (const child of node.children) {
     out.push(child);
-    out.push(...findDescendants(child));
+    out = out.concat(findDescendants(child));
   }
   return out;
 }

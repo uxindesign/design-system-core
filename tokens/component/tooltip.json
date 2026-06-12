@@ -22,6 +22,12 @@
             "$value": "{semantic.radius.sm}",
             "$description": "Radius do content Tooltip."
           }
+        },
+        "fill": {
+          "default": {
+            "$value": "{semantic.background.inverse}",
+            "$type": "color"
+          }
         }
       },
       "label": {
@@ -45,6 +51,12 @@
             "$value": "{semantic.typography.body.font-weight.regular}",
             "$description": "Font-weight do label Tooltip."
           }
+        },
+        "color": {
+          "default": {
+            "$value": "{semantic.primary.content-default}",
+            "$type": "color"
+          }
         }
       },
       "arrow": {
@@ -60,6 +72,12 @@
             "$type": "dimension",
             "$value": "{semantic.space.xs}",
             "$description": "Profundidade visual da seta Tooltip."
+          }
+        },
+        "fill": {
+          "default": {
+            "$value": "{semantic.background.inverse}",
+            "$type": "color"
           }
         }
       }

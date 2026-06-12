@@ -4,7 +4,7 @@
    ============================================================ */
 
 .ds-button {
-  --_ds-button-focus-ring-color: var(--ds-button-focus-ring-color-default);
+  --_ds-button-focus-ring-color: var(--ds-focus-ring-color-default);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -31,8 +31,8 @@
 }
 
 .ds-button:focus-visible {
-  outline: var(--ds-button-focus-ring-stroke-width-default) solid var(--_ds-button-focus-ring-color);
-  outline-offset: var(--ds-button-focus-ring-offset-default);
+  outline: var(--ds-focus-ring-width) solid var(--_ds-button-focus-ring-color);
+  outline-offset: var(--ds-focus-ring-width);
 }
 
 .ds-button[disabled],
@@ -42,8 +42,8 @@
 }
 
 .ds-button__icon {
-  width: var(--ds-button-icon-frame-size-md);
-  height: var(--ds-button-icon-frame-size-md);
+  width: var(--ds-button-icon-size-md);
+  height: var(--ds-button-icon-size-md);
   flex-shrink: 0;
   fill: currentColor;
 }
@@ -65,8 +65,8 @@
 }
 
 .ds-button--sm .ds-button__icon {
-  width: var(--ds-button-icon-frame-size-sm);
-  height: var(--ds-button-icon-frame-size-sm);
+  width: var(--ds-button-icon-size-sm);
+  height: var(--ds-button-icon-size-sm);
 }
 
 .ds-button--lg {
@@ -79,8 +79,8 @@
 }
 
 .ds-button--lg .ds-button__icon {
-  width: var(--ds-button-icon-frame-size-lg);
-  height: var(--ds-button-icon-frame-size-lg);
+  width: var(--ds-button-icon-size-lg);
+  height: var(--ds-button-icon-size-lg);
 }
 
 /* ---------------------------------------------------------
@@ -209,7 +209,7 @@
    Variant: Success
    --------------------------------------------------------- */
 .ds-button--success {
-  --_ds-button-focus-ring-color: var(--ds-button-focus-ring-color-success);
+  --_ds-button-focus-ring-color: var(--ds-focus-ring-color-success);
   background-color: var(--ds-button-bg-success-default);
   color: var(--ds-button-content-color-success-default);
   border-color: transparent;
@@ -240,7 +240,7 @@
    Variant: Danger (action/danger/default)
    --------------------------------------------------------- */
 .ds-button--danger {
-  --_ds-button-focus-ring-color: var(--ds-button-focus-ring-color-danger);
+  --_ds-button-focus-ring-color: var(--ds-focus-ring-color-error);
   background-color: var(--ds-button-bg-danger-default);
   color: var(--ds-button-content-color-danger-default);
   border-color: transparent;

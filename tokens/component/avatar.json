@@ -82,18 +82,46 @@
         "size": {
           "sm": {
             "$type": "dimension",
-            "$value": "{semantic.size.sm}",
+            "$value": "{semantic.typography.body.font-size.xl}",
             "$description": "Tamanho do ícone SVG fallback do Avatar sm."
           },
           "md": {
             "$type": "dimension",
-            "$value": "{semantic.size.md}",
+            "$value": "{semantic.typography.body.font-size.2xl}",
             "$description": "Tamanho do ícone SVG fallback do Avatar md."
           },
           "lg": {
             "$type": "dimension",
-            "$value": "{semantic.size.lg}",
+            "$value": "{semantic.typography.body.font-size.4xl}",
             "$description": "Tamanho do ícone SVG fallback do Avatar lg."
+          }
+        },
+        "stroke-width": {
+          "sm": {
+            "$value": "{semantic.icon.stroke-width.regular.20}",
+            "$type": "dimension"
+          },
+          "md": {
+            "$value": "{semantic.icon.stroke-width.regular.24}",
+            "$type": "dimension"
+          },
+          "lg": {
+            "$value": "{semantic.icon.stroke-width.regular.32}",
+            "$type": "dimension"
+          }
+        }
+      },
+      "bg": {
+        "default": {
+          "$value": "{semantic.primary.background.default}",
+          "$type": "color"
+        }
+      },
+      "content": {
+        "color": {
+          "default": {
+            "$value": "{semantic.primary.content-default}",
+            "$type": "color"
           }
         }
       }

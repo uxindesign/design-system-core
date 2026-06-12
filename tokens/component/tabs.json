@@ -56,6 +56,12 @@
             "$value": "{semantic.radius.md}",
             "$description": "Raio do indicador de Tabs."
           }
+        },
+        "fill": {
+          "active": {
+            "$value": "{semantic.primary.background.default}",
+            "$type": "color"
+          }
         }
       },
       "label": {
@@ -85,6 +91,24 @@
             "$type": "dimension",
             "$value": "{semantic.typography.body.letter-spacing.normal}",
             "$description": "Espaçamento entre letras do rótulo de Tabs."
+          }
+        },
+        "color": {
+          "default": {
+            "$value": "{semantic.content.default}",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "{semantic.content.strong}",
+            "$type": "color"
+          },
+          "active": {
+            "$value": "{semantic.content.brand}",
+            "$type": "color"
+          },
+          "disabled": {
+            "$value": "{semantic.content.disabled}",
+            "$type": "color"
           }
         }
       },

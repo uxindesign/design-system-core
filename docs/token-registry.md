@@ -6,8 +6,8 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Status
 
-- Total de tokens: **1192**
-- Com metadados completos: **1192**
+- Total de tokens: **1098**
+- Com metadados completos: **1098**
 - Pendentes (`TODO` em algum campo obrigatório): **0**
 - Completude: **100%**
 
@@ -29,37 +29,37 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 |---|---|---|---|---|
 | `foundation.color.amber.100` | color | — | Tom 100 da paleta amber. Tom muito claro — backgrounds, hover states sutis em light mode. | 2 |
 | `foundation.color.amber.200` | color | — | Tom 200 da paleta amber. Tom claro — backgrounds secundários, borders subtle. | 0 |
-| `foundation.color.amber.300` | color | — | Tom 300 da paleta amber. Tom médio-claro — borders default, foregrounds em dark mode. | 0 |
-| `foundation.color.amber.400` | color | — | Tom 400 da paleta amber. Tom médio — fills médios, focus rings. | 4 |
+| `foundation.color.amber.300` | color | — | Tom 300 da paleta amber. Tom médio-claro — borders default, foregrounds em dark mode. | 4 |
+| `foundation.color.amber.400` | color | — | Tom 400 da paleta amber. Tom médio — fills médios, focus rings. | 3 |
 | `foundation.color.amber.50` | color | — | Tom 50 da paleta amber. Tom muito claro — backgrounds, hover states sutis em light mode. | 0 |
-| `foundation.color.amber.500` | color | — | Tom 500 da paleta amber. Tom médio — fills médios, focus rings. | 5 |
+| `foundation.color.amber.500` | color | — | Tom 500 da paleta amber. Tom médio — fills médios, focus rings. | 4 |
 | `foundation.color.amber.600` | color | — | Tom 600 da paleta amber. Tom forte — fills primários, brand fills. | 2 |
 | `foundation.color.amber.700` | color | — | Tom 700 da paleta amber. Tom escuro — text on light, hover de fills brand. | 2 |
 | `foundation.color.amber.800` | color | — | Tom 800 da paleta amber. Tom muito escuro — emphasis text, active states. | 0 |
 | `foundation.color.amber.900` | color | — | Tom 900 da paleta amber. Tom extremo — surfaces escuras, body text em light mode. | 2 |
-| `foundation.color.amber.950` | color | — | Tom 950 da paleta amber. Tom extremo — surfaces escuras, body text em light mode. | 0 |
-| `foundation.color.blue.100` | color | — | Tom 100 da paleta blue. Tom muito claro — backgrounds, hover states sutis em light mode. | 0 |
+| `foundation.color.amber.950` | color | — | Tom 950 da paleta amber. Tom extremo — surfaces escuras, body text em light mode. | 4 |
+| `foundation.color.blue.100` | color | — | Tom 100 da paleta blue. Tom muito claro — backgrounds, hover states sutis em light mode. | 2 |
 | `foundation.color.blue.200` | color | — | Tom 200 da paleta blue. Tom claro — backgrounds secundários, borders subtle. | 0 |
 | `foundation.color.blue.300` | color | — | Tom 300 da paleta blue. Tom médio-claro — borders default, foregrounds em dark mode. | 0 |
-| `foundation.color.blue.400` | color | — | Tom 400 da paleta blue. Tom médio — fills médios, focus rings. | 0 |
+| `foundation.color.blue.400` | color | — | Tom 400 da paleta blue. Tom médio — fills médios, focus rings. | 6 |
 | `foundation.color.blue.50` | color | — | Tom 50 da paleta blue. Tom muito claro — backgrounds, hover states sutis em light mode. | 0 |
-| `foundation.color.blue.500` | color | — | Tom 500 da paleta blue. Tom médio — fills médios, focus rings. | 0 |
-| `foundation.color.blue.600` | color | — | Tom 600 da paleta blue. Tom forte — fills primários, brand fills. | 0 |
-| `foundation.color.blue.700` | color | — | Tom 700 da paleta blue. Tom escuro — text on light, hover de fills brand. | 0 |
+| `foundation.color.blue.500` | color | — | Tom 500 da paleta blue. Tom médio — fills médios, focus rings. | 4 |
+| `foundation.color.blue.600` | color | — | Tom 600 da paleta blue. Tom forte — fills primários, brand fills. | 2 |
+| `foundation.color.blue.700` | color | — | Tom 700 da paleta blue. Tom escuro — text on light, hover de fills brand. | 2 |
 | `foundation.color.blue.800` | color | — | Tom 800 da paleta blue. Tom muito escuro — emphasis text, active states. | 0 |
-| `foundation.color.blue.900` | color | — | Tom 900 da paleta blue. Tom extremo — surfaces escuras, body text em light mode. | 0 |
+| `foundation.color.blue.900` | color | — | Tom 900 da paleta blue. Tom extremo — surfaces escuras, body text em light mode. | 2 |
 | `foundation.color.blue.950` | color | — | Tom 950 da paleta blue. Tom extremo — surfaces escuras, body text em light mode. | 0 |
 | `foundation.color.brand.100` | color | — | Tom 100 da paleta brand. Tom muito claro — backgrounds, hover states sutis em light mode. | 0 |
 | `foundation.color.brand.200` | color | — | Tom 200 da paleta brand. Tom claro — backgrounds secundários, borders subtle. | 2 |
 | `foundation.color.brand.300` | color | — | Tom 300 da paleta brand. Tom médio-claro — borders default, foregrounds em dark mode. | 2 |
-| `foundation.color.brand.400` | color | — | Tom 400 da paleta brand. Tom médio — fills médios, focus rings. | 6 |
+| `foundation.color.brand.400` | color | — | Tom 400 da paleta brand. Tom médio — fills médios, focus rings. | 5 |
 | `foundation.color.brand.50` | color | — | Tom 50 da paleta brand. Tom muito claro — backgrounds, hover states sutis em light mode. | 0 |
 | `foundation.color.brand.500` | color | — | Tom 500 da paleta brand. Tom médio — fills médios, focus rings. | 5 |
-| `foundation.color.brand.600` | color | — | Tom 600 da paleta brand. Tom forte — fills primários, brand fills. | 3 |
+| `foundation.color.brand.600` | color | — | Tom 600 da paleta brand. Tom forte — fills primários, brand fills. | 5 |
 | `foundation.color.brand.700` | color | — | Tom 700 da paleta brand. Tom escuro — text on light, hover de fills brand. | 4 |
 | `foundation.color.brand.800` | color | — | Tom 800 da paleta brand. Tom muito escuro — emphasis text, active states. | 4 |
 | `foundation.color.brand.900` | color | — | Tom 900 da paleta brand. Tom extremo — surfaces escuras, body text em light mode. | 0 |
-| `foundation.color.brand.950` | color | — | Tom 950 da paleta brand. Tom extremo — surfaces escuras, body text em light mode. | 0 |
+| `foundation.color.brand.950` | color | — | Tom 950 da paleta brand. Tom extremo — surfaces escuras, body text em light mode. | 4 |
 | `foundation.color.cyan.100` | color | — | Tom 100 da paleta cyan. Tom muito claro — backgrounds, hover states sutis em light mode. | 0 |
 | `foundation.color.cyan.200` | color | — | Tom 200 da paleta cyan. Tom claro — backgrounds secundários, borders subtle. | 0 |
 | `foundation.color.cyan.300` | color | — | Tom 300 da paleta cyan. Tom médio-claro — borders default, foregrounds em dark mode. | 0 |
@@ -115,13 +115,13 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `foundation.color.neutral.100` | color | — | Tom 100 da paleta neutral. Tom muito claro — backgrounds, hover states sutis em light mode. | 2 |
 | `foundation.color.neutral.200` | color | — | Tom 200 da paleta neutral. Tom claro — backgrounds secundários, borders subtle. | 5 |
 | `foundation.color.neutral.300` | color | — | Tom 300 da paleta neutral. Tom médio-claro — borders default, foregrounds em dark mode. | 7 |
-| `foundation.color.neutral.400` | color | — | Tom 400 da paleta neutral. Tom médio — fills médios, focus rings. | 10 |
+| `foundation.color.neutral.400` | color | — | Tom 400 da paleta neutral. Tom médio — fills médios, focus rings. | 9 |
 | `foundation.color.neutral.50` | color | — | Tom 50 da paleta neutral. Tom muito claro — backgrounds, hover states sutis em light mode. | 16 |
 | `foundation.color.neutral.500` | color | — | Tom 500 da paleta neutral. Tom médio — fills médios, focus rings. | 8 |
-| `foundation.color.neutral.600` | color | — | Tom 600 da paleta neutral. Tom forte — fills primários, brand fills. | 11 |
+| `foundation.color.neutral.600` | color | — | Tom 600 da paleta neutral. Tom forte — fills primários, brand fills. | 10 |
 | `foundation.color.neutral.700` | color | — | Tom 700 da paleta neutral. Tom escuro — text on light, hover de fills brand. | 8 |
 | `foundation.color.neutral.800` | color | — | Tom 800 da paleta neutral. Tom muito escuro — emphasis text, active states. | 7 |
-| `foundation.color.neutral.900` | color | — | Tom 900 da paleta neutral. Tom extremo — surfaces escuras, body text em light mode. | 16 |
+| `foundation.color.neutral.900` | color | — | Tom 900 da paleta neutral. Tom extremo — surfaces escuras, body text em light mode. | 12 |
 | `foundation.color.neutral.950` | color | — | Tom 950 da paleta neutral. Tom extremo — surfaces escuras, body text em light mode. | 2 |
 | `foundation.color.overlay.black.10` | color | — | Sobreposição translúcida em black a 10% de opacidade. | 7 |
 | `foundation.color.overlay.black.20` | color | — | Sobreposição translúcida em black a 20% de opacidade. | 1 |
@@ -155,60 +155,60 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `foundation.color.red.100` | color | — | Tom 100 da paleta red. Tom muito claro — backgrounds, hover states sutis em light mode. | 2 |
 | `foundation.color.red.200` | color | — | Tom 200 da paleta red. Tom claro — backgrounds secundários, borders subtle. | 0 |
 | `foundation.color.red.300` | color | — | Tom 300 da paleta red. Tom médio-claro — borders default, foregrounds em dark mode. | 0 |
-| `foundation.color.red.400` | color | — | Tom 400 da paleta red. Tom médio — fills médios, focus rings. | 6 |
+| `foundation.color.red.400` | color | — | Tom 400 da paleta red. Tom médio — fills médios, focus rings. | 5 |
 | `foundation.color.red.50` | color | — | Tom 50 da paleta red. Tom muito claro — backgrounds, hover states sutis em light mode. | 0 |
 | `foundation.color.red.500` | color | — | Tom 500 da paleta red. Tom médio — fills médios, focus rings. | 7 |
-| `foundation.color.red.600` | color | — | Tom 600 da paleta red. Tom forte — fills primários, brand fills. | 3 |
+| `foundation.color.red.600` | color | — | Tom 600 da paleta red. Tom forte — fills primários, brand fills. | 4 |
 | `foundation.color.red.700` | color | — | Tom 700 da paleta red. Tom escuro — text on light, hover de fills brand. | 2 |
 | `foundation.color.red.800` | color | — | Tom 800 da paleta red. Tom muito escuro — emphasis text, active states. | 3 |
 | `foundation.color.red.900` | color | — | Tom 900 da paleta red. Tom extremo — surfaces escuras, body text em light mode. | 4 |
 | `foundation.color.red.950` | color | — | Tom 950 da paleta red. Tom extremo — surfaces escuras, body text em light mode. | 0 |
-| `foundation.color.sky.100` | color | — | Tom 100 da paleta sky. Tom muito claro — backgrounds, hover states sutis em light mode. | 2 |
+| `foundation.color.sky.100` | color | — | Tom 100 da paleta sky. Tom muito claro — backgrounds, hover states sutis em light mode. | 0 |
 | `foundation.color.sky.200` | color | — | Tom 200 da paleta sky. Tom claro — backgrounds secundários, borders subtle. | 0 |
 | `foundation.color.sky.300` | color | — | Tom 300 da paleta sky. Tom médio-claro — borders default, foregrounds em dark mode. | 0 |
-| `foundation.color.sky.400` | color | — | Tom 400 da paleta sky. Tom médio — fills médios, focus rings. | 4 |
+| `foundation.color.sky.400` | color | — | Tom 400 da paleta sky. Tom médio — fills médios, focus rings. | 0 |
 | `foundation.color.sky.50` | color | — | Tom 50 da paleta sky. Tom muito claro — backgrounds, hover states sutis em light mode. | 0 |
-| `foundation.color.sky.500` | color | — | Tom 500 da paleta sky. Tom médio — fills médios, focus rings. | 5 |
-| `foundation.color.sky.600` | color | — | Tom 600 da paleta sky. Tom forte — fills primários, brand fills. | 2 |
-| `foundation.color.sky.700` | color | — | Tom 700 da paleta sky. Tom escuro — text on light, hover de fills brand. | 2 |
+| `foundation.color.sky.500` | color | — | Tom 500 da paleta sky. Tom médio — fills médios, focus rings. | 0 |
+| `foundation.color.sky.600` | color | — | Tom 600 da paleta sky. Tom forte — fills primários, brand fills. | 0 |
+| `foundation.color.sky.700` | color | — | Tom 700 da paleta sky. Tom escuro — text on light, hover de fills brand. | 0 |
 | `foundation.color.sky.800` | color | — | Tom 800 da paleta sky. Tom muito escuro — emphasis text, active states. | 0 |
-| `foundation.color.sky.900` | color | — | Tom 900 da paleta sky. Tom extremo — surfaces escuras, body text em light mode. | 2 |
+| `foundation.color.sky.900` | color | — | Tom 900 da paleta sky. Tom extremo — surfaces escuras, body text em light mode. | 0 |
 | `foundation.color.sky.950` | color | — | Tom 950 da paleta sky. Tom extremo — surfaces escuras, body text em light mode. | 0 |
 
 ### foundation.dimension
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `foundation.dimension.10` | dimension | — | Dimensão fixa de 10px (0.625rem). | 8 |
+| `foundation.dimension.10` | dimension | — | Dimensão fixa de 10px (0.625rem). | 6 |
 | `foundation.dimension.102` | dimension | — | Dimensao fixa de 102px (6.375rem). | 4 |
 | `foundation.dimension.1024` | dimension | — | Dimensão fixa de 1024px (64rem). | 4 |
-| `foundation.dimension.12` | dimension | — | Dimensão fixa de 12px (0.75rem). | 12 |
-| `foundation.dimension.120` | dimension | — | Dimensão fixa de 120px (7.5rem). | 9 |
+| `foundation.dimension.12` | dimension | — | Dimensão fixa de 12px (0.75rem). | 9 |
+| `foundation.dimension.120` | dimension | — | Dimensão fixa de 120px (7.5rem). | 6 |
 | `foundation.dimension.128` | dimension | — | Dimensão fixa de 128px (8rem). | 4 |
 | `foundation.dimension.1280` | dimension | — | Dimensão fixa de 1280px (80rem). | 4 |
 | `foundation.dimension.14` | dimension | — | Dimensão fixa de 14px (0.875rem). | 0 |
 | `foundation.dimension.16` | dimension | — | Dimensão fixa de 16px (1rem). | 10 |
 | `foundation.dimension.2` | dimension | — | Dimensão fixa de 2px (0.125rem). | 7 |
-| `foundation.dimension.20` | dimension | — | Dimensão fixa de 20px (1.25rem). | 10 |
+| `foundation.dimension.20` | dimension | — | Dimensão fixa de 20px (1.25rem). | 8 |
 | `foundation.dimension.24` | dimension | — | Dimensão fixa de 24px (1.5rem). | 8 |
-| `foundation.dimension.28` | dimension | — | Dimensão fixa de 28px (1.75rem). | 9 |
+| `foundation.dimension.28` | dimension | — | Dimensão fixa de 28px (1.75rem). | 6 |
 | `foundation.dimension.32` | dimension | — | Dimensão fixa de 32px (2rem). | 8 |
 | `foundation.dimension.320` | dimension | — | Dimensão fixa de 320px (20rem). | 4 |
 | `foundation.dimension.36` | dimension | — | Dimensão fixa de 36px (2.25rem). | 0 |
 | `foundation.dimension.4` | dimension | — | Dimensão fixa de 4px (0.25rem). | 5 |
 | `foundation.dimension.40` | dimension | — | Dimensão fixa de 40px (2.5rem). | 4 |
-| `foundation.dimension.44` | dimension | — | Dimensão fixa de 44px (2.75rem). | 6 |
+| `foundation.dimension.44` | dimension | — | Dimensão fixa de 44px (2.75rem). | 4 |
 | `foundation.dimension.48` | dimension | — | Dimensão fixa de 48px (3rem). | 6 |
 | `foundation.dimension.480` | dimension | — | Dimensão fixa de 480px (30rem). | 4 |
-| `foundation.dimension.56` | dimension | — | Dimensão fixa de 56px (3.5rem). | 6 |
-| `foundation.dimension.6` | dimension | — | Dimensão fixa de 6px (0.375rem). | 8 |
+| `foundation.dimension.56` | dimension | — | Dimensão fixa de 56px (3.5rem). | 4 |
+| `foundation.dimension.6` | dimension | — | Dimensão fixa de 6px (0.375rem). | 6 |
 | `foundation.dimension.64` | dimension | — | Dimensão fixa de 64px (4rem). | 6 |
 | `foundation.dimension.640` | dimension | — | Dimensão fixa de 640px (40rem). | 4 |
-| `foundation.dimension.8` | dimension | — | Dimensão fixa de 8px (0.5rem). | 8 |
-| `foundation.dimension.80` | dimension | — | Dimensão fixa de 80px (5rem). | 10 |
+| `foundation.dimension.8` | dimension | — | Dimensão fixa de 8px (0.5rem). | 6 |
+| `foundation.dimension.80` | dimension | — | Dimensão fixa de 80px (5rem). | 8 |
 | `foundation.dimension.800` | dimension | — | Dimensão fixa de 800px (50rem). | 4 |
 | `foundation.dimension.88` | dimension | — | Dimensao fixa de 88px (5.5rem). | 4 |
-| `foundation.dimension.96` | dimension | — | Dimensão fixa de 96px (6rem). | 8 |
+| `foundation.dimension.96` | dimension | — | Dimensão fixa de 96px (6rem). | 6 |
 
 ### foundation.duration
 
@@ -352,8 +352,8 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `semantic.background.default` | color | → `foundation.color.neutral.50` | Background base do app — superfície neutra mais comum. | 1 |
-| `semantic.background.disabled` | color | → `foundation.color.neutral.200` | Background pra estados disabled — neutral subtle. | 8 |
-| `semantic.background.inverse` | color | → `foundation.color.neutral.900` | Background invertido — usado em tooltips, snackbars, dark badges em light mode. | 2 |
+| `semantic.background.disabled` | color | → `foundation.color.neutral.200` | Background pra estados disabled — neutral subtle. | 5 |
+| `semantic.background.inverse` | color | → `foundation.color.neutral.900` | Background invertido — usado em tooltips, snackbars, dark badges em light mode. | 5 |
 | `semantic.background.overlay` | color | → `foundation.color.overlay.black.60` | Scrim de modal/drawer — escurece o fundo pra focar o overlay. | 1 |
 | `semantic.background.subtle` | color | → `foundation.color.neutral.200` | Background levemente diferenciado — chips, código inline, áreas secundárias. | 8 |
 
@@ -361,102 +361,102 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `semantic.border.brand` | color | → `foundation.color.brand.600` | Borda brand — emphasis branded. | 1 |
-| `semantic.border.control-default` | color | → `foundation.color.neutral.500` | Border control-default. | 13 |
-| `semantic.border.control-disabled` | color | → `foundation.color.neutral.300` | Border control-disabled. | 9 |
-| `semantic.border.control-hover` | color | → `foundation.color.neutral.600` | Border control-hover. | 8 |
-| `semantic.border.default` | color | → `foundation.color.neutral.300` | Borda neutra default — cards, dividers. | 3 |
-| `semantic.border.error` | color | → `foundation.color.red.600` | Borda de erro — input invalid. | 5 |
-| `semantic.border.error-hover` | color | → `semantic.feedback.error.border.hover` | Token semantic para border / error hover. | 2 |
-| `semantic.border.focus` | color | → `foundation.color.brand.500` | Focus ring color (WCAG 2.4.7). | 23 |
-| `semantic.border.focus-error` | color | → `foundation.color.red.500` | Focus ring em estado error (apenas em focus, não default). | 6 |
-| `semantic.border.inverse` | color | → `foundation.color.neutral.50` | Borda invertida — sobre dark surfaces em light mode. | 1 |
-| `semantic.border.overlay.default` | color | → `semantic.overlay.default` | Token semantic para border / overlay / default. | 0 |
-| `semantic.border.overlay.medium` | color | → `semantic.overlay.medium` | Token semantic para border / overlay / medium. | 0 |
-| `semantic.border.strong` | color | → `foundation.color.neutral.600` | Borda neutra forte — emphasis em separadores. | 5 |
-| `semantic.border.subtle` | color | → `foundation.color.neutral.200` | Borda neutra sutil — chips, code blocks. | 8 |
-| `semantic.border.width.default` | dimension | → `foundation.border.width.1` | Border-width default. | 15 |
-| `semantic.border.width.focus` | dimension | → `foundation.border.width.2` | Border-width focus. | 18 |
+| `semantic.border.brand` | color | → `foundation.color.brand.600` | Borda brand — emphasis branded. | 3 |
+| `semantic.border.control-default` | color | → `foundation.color.neutral.500` | Border control-default. | 7 |
+| `semantic.border.control-disabled` | color | → `foundation.color.neutral.300` | Border control-disabled. | 6 |
+| `semantic.border.control-hover` | color | → `foundation.color.brand.600` | Border control-hover. | 5 |
+| `semantic.border.default` | color | → `foundation.color.neutral.300` | Borda neutra default — cards, dividers. | 6 |
+| `semantic.border.error` | color | → `foundation.color.red.600` | Borda de erro — input invalid. | 4 |
+| `semantic.border.error-hover` | color | → `semantic.feedback.error.border.hover` | Token semantic para border / error hover. | 4 |
+| `semantic.border.focus` | color | → `foundation.color.brand.600` | Focus ring color (WCAG 2.4.7). | 13 |
+| `semantic.border.focus-error` | color | → `foundation.color.red.600` | Focus ring em estado error (apenas em focus, não default). | 2 |
+| `semantic.border.inverse` | color | → `foundation.color.neutral.50` | Borda invertida — sobre dark surfaces em light mode. | 3 |
+| `semantic.border.overlay.default` | color | → `semantic.overlay.default` | Token semantic para border / overlay / default. | 2 |
+| `semantic.border.overlay.medium` | color | → `semantic.overlay.medium` | Token semantic para border / overlay / medium. | 2 |
+| `semantic.border.strong` | color | → `foundation.color.neutral.600` | Borda neutra forte — emphasis em separadores. | 2 |
+| `semantic.border.subtle` | color | → `foundation.color.neutral.200` | Borda neutra sutil — chips, code blocks. | 6 |
+| `semantic.border.width.default` | dimension | → `foundation.border.width.1` | Border-width default. | 12 |
+| `semantic.border.width.focus` | dimension | → `foundation.border.width.2` | Border-width focus. | 7 |
 | `semantic.border.width.strong` | dimension | → `foundation.border.width.2` | Border-width strong. | 4 |
 
 ### semantic.content
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `semantic.content.brand` | color | → `semantic.primary.background.default` | Token semantic para content / brand. | 0 |
-| `semantic.content.default` | color | → `foundation.color.neutral.600` | Texto secundário — descrições, helper text, meta-info. | 29 |
-| `semantic.content.disabled` | color | → `foundation.color.neutral.400` | Texto disabled — controles e items inativos. | 25 |
+| `semantic.content.brand` | color | → `semantic.primary.background.default` | Token semantic para content / brand. | 2 |
+| `semantic.content.default` | color | → `foundation.color.neutral.600` | Texto secundário — descrições, helper text, meta-info. | 27 |
+| `semantic.content.disabled` | color | → `foundation.color.neutral.400` | Texto disabled — controles e items inativos. | 15 |
 | `semantic.content.hover` | color | → `foundation.color.neutral.700` | Conteúdo neutro em hover. | 6 |
 | `semantic.content.inverse` | color | → `foundation.color.neutral.50` | Texto invertido — sobre background.inverse (tooltips, badges escuros em light). | 5 |
-| `semantic.content.strong` | color | → `foundation.color.neutral.900` | Texto primário — body, headings, labels principais. | 26 |
-| `semantic.content.subtle` | color | → `foundation.color.neutral.500` | Texto terciário — caption, footnote, timestamps. | 11 |
+| `semantic.content.strong` | color | → `foundation.color.neutral.900` | Texto primário — body, headings, labels principais. | 23 |
+| `semantic.content.subtle` | color | → `foundation.color.neutral.500` | Texto terciário — caption, footnote, timestamps. | 7 |
 
 ### semantic.content-placeholder
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `semantic.content-placeholder.rectangle.height.default` | dimension | → `foundation.dimension.120` | Altura semantica default do placeholder retangular de conteudo. | 0 |
-| `semantic.content-placeholder.text.height.default` | dimension | → `foundation.dimension.12` | Altura semantica default do placeholder textual de conteudo. | 0 |
+| `semantic.content-placeholder.rectangle.height.default` | dimension | → `foundation.dimension.120` | Altura semantica default do placeholder retangular de conteudo. | 2 |
+| `semantic.content-placeholder.text.height.default` | dimension | → `foundation.dimension.12` | Altura semantica default do placeholder textual de conteudo. | 2 |
 
 ### semantic.control
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `semantic.control.button.min-width.lg` | dimension | → `foundation.dimension.102` | Min-width semantico de Button lg. | 0 |
-| `semantic.control.button.min-width.md` | dimension | → `foundation.dimension.88` | Min-width semantico de Button md. | 0 |
-| `semantic.control.button.min-width.sm` | dimension | → `foundation.dimension.80` | Min-width semantico de Button sm. | 0 |
-| `semantic.control.radio.dot.size.lg` | dimension | → `foundation.dimension.10` | Size semantico do dot de Radio lg. | 0 |
-| `semantic.control.radio.dot.size.md` | dimension | → `foundation.dimension.8` | Size semantico do dot de Radio md. | 0 |
-| `semantic.control.radio.dot.size.sm` | dimension | → `foundation.dimension.6` | Size semantico do dot de Radio sm. | 0 |
-| `semantic.control.textarea.min-height.lg` | dimension | → `foundation.dimension.120` | Min-height semantico de Textarea lg. | 0 |
-| `semantic.control.textarea.min-height.md` | dimension | → `foundation.dimension.96` | Min-height semantico de Textarea md. | 0 |
-| `semantic.control.textarea.min-height.sm` | dimension | → `foundation.dimension.80` | Min-height semantico de Textarea sm. | 0 |
+| `semantic.control.button.min-width.lg` | dimension | → `foundation.dimension.102` | Min-width semantico de Button lg. | 2 |
+| `semantic.control.button.min-width.md` | dimension | → `foundation.dimension.88` | Min-width semantico de Button md. | 2 |
+| `semantic.control.button.min-width.sm` | dimension | → `foundation.dimension.80` | Min-width semantico de Button sm. | 2 |
+| `semantic.control.radio.dot.size.lg` | dimension | → `foundation.dimension.10` | Size semantico do dot de Radio lg. | 2 |
+| `semantic.control.radio.dot.size.md` | dimension | → `foundation.dimension.8` | Size semantico do dot de Radio md. | 2 |
+| `semantic.control.radio.dot.size.sm` | dimension | → `foundation.dimension.6` | Size semantico do dot de Radio sm. | 2 |
+| `semantic.control.textarea.min-height.lg` | dimension | → `foundation.dimension.120` | Min-height semantico de Textarea lg. | 2 |
+| `semantic.control.textarea.min-height.md` | dimension | → `foundation.dimension.96` | Min-height semantico de Textarea md. | 2 |
+| `semantic.control.textarea.min-height.sm` | dimension | → `foundation.dimension.80` | Min-height semantico de Textarea sm. | 2 |
 | `semantic.control.toggle.height.lg` | dimension | → `foundation.dimension.32` | Altura semantica de Toggle lg. | 0 |
 | `semantic.control.toggle.height.md` | dimension | → `foundation.dimension.24` | Altura semantica de Toggle md. | 0 |
 | `semantic.control.toggle.height.sm` | dimension | → `foundation.dimension.16` | Altura semantica de Toggle sm. | 0 |
 | `semantic.control.toggle.thumb.gap` | dimension | → `foundation.dimension.2` | Gap semantico entre thumb e borda interna do Toggle. | 0 |
-| `semantic.control.toggle.thumb.size.lg` | dimension | → `foundation.dimension.28` | Tamanho semantico do thumb de Toggle lg. | 0 |
-| `semantic.control.toggle.thumb.size.md` | dimension | → `foundation.dimension.20` | Tamanho semantico do thumb de Toggle md. | 0 |
-| `semantic.control.toggle.thumb.size.sm` | dimension | → `foundation.dimension.12` | Tamanho semantico do thumb de Toggle sm. | 0 |
-| `semantic.control.toggle.width.lg` | dimension | → `foundation.dimension.56` | Largura semantica de Toggle lg. | 0 |
-| `semantic.control.toggle.width.md` | dimension | → `foundation.dimension.44` | Largura semantica de Toggle md. | 0 |
-| `semantic.control.toggle.width.sm` | dimension | → `foundation.dimension.28` | Largura semantica de Toggle sm. | 0 |
+| `semantic.control.toggle.thumb.size.lg` | dimension | → `foundation.dimension.28` | Tamanho semantico do thumb de Toggle lg. | 2 |
+| `semantic.control.toggle.thumb.size.md` | dimension | → `foundation.dimension.20` | Tamanho semantico do thumb de Toggle md. | 2 |
+| `semantic.control.toggle.thumb.size.sm` | dimension | → `foundation.dimension.12` | Tamanho semantico do thumb de Toggle sm. | 2 |
+| `semantic.control.toggle.width.lg` | dimension | → `foundation.dimension.56` | Largura semantica de Toggle lg. | 2 |
+| `semantic.control.toggle.width.md` | dimension | → `foundation.dimension.44` | Largura semantica de Toggle md. | 2 |
+| `semantic.control.toggle.width.sm` | dimension | → `foundation.dimension.28` | Largura semantica de Toggle sm. | 2 |
 
 ### semantic.feedback
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `semantic.feedback.error.background.active` | color | → `foundation.color.red.900` | Fill de feedback erro (vermelho) em estado active. | 2 |
-| `semantic.feedback.error.background.default` | color | → `foundation.color.red.600` | Fill de feedback erro (vermelho) em estado default. | 7 |
+| `semantic.feedback.error.background.default` | color | → `foundation.color.red.600` | Fill de feedback erro (vermelho) em estado default. | 9 |
 | `semantic.feedback.error.background.disabled` | color | → `foundation.color.disabled.error.light` | Fill de feedback erro (vermelho) em estado disabled. | 2 |
 | `semantic.feedback.error.background.hover` | color | → `foundation.color.red.800` | Fill de feedback erro (vermelho) em estado hover. | 2 |
-| `semantic.feedback.error.background.subtle` | color | → `foundation.color.red.100` | Fill de feedback erro (vermelho) em estado subtle. | 2 |
-| `semantic.feedback.error.border-default` | color | → `foundation.color.red.500` | Borda de feedback erro (vermelho) em estado default. | 2 |
-| `semantic.feedback.error.border.hover` | color | → `foundation.color.red.800` | Borda de feedback erro em estado hover. | 8 |
-| `semantic.feedback.error.content-contrast` | color | → `foundation.color.neutral.50` | Cor de feedback erro (vermelho) em estado contrast. | 11 |
-| `semantic.feedback.error.content-default` | color | → `foundation.color.red.700` | Cor de feedback erro (vermelho) em estado default. | 17 |
+| `semantic.feedback.error.background.subtle` | color | → `foundation.color.red.100` | Fill de feedback erro (vermelho) em estado subtle. | 5 |
+| `semantic.feedback.error.border-default` | color | → `foundation.color.red.500` | Borda de feedback erro (vermelho) em estado default. | 4 |
+| `semantic.feedback.error.border.hover` | color | → `foundation.color.red.800` | Borda de feedback erro em estado hover. | 4 |
+| `semantic.feedback.error.content-contrast` | color | → `foundation.color.neutral.50` | Cor de feedback erro (vermelho) em estado contrast. | 14 |
+| `semantic.feedback.error.content-default` | color | → `foundation.color.red.700` | Cor de feedback erro (vermelho) em estado default. | 13 |
 | `semantic.feedback.error.content-disabled` | color | → `foundation.color.overlay.white.80` | Cor de feedback erro (vermelho) em estado disabled. | 2 |
-| `semantic.feedback.info.background.default` | color | → `foundation.color.sky.500` | Fill de feedback informação (azul) em estado default. | 2 |
-| `semantic.feedback.info.background.hover` | color | → `foundation.color.sky.600` | Fill de feedback informação (azul) em estado hover. | 0 |
-| `semantic.feedback.info.background.subtle` | color | → `foundation.color.sky.100` | Fill de feedback informação (azul) em estado subtle. | 2 |
-| `semantic.feedback.info.border-default` | color | → `foundation.color.sky.500` | Borda de feedback informação (azul) em estado default. | 1 |
-| `semantic.feedback.info.content-contrast` | color | → `foundation.color.neutral.900` | Cor de feedback informação (azul) em estado contrast. | 6 |
-| `semantic.feedback.info.content-default` | color | → `foundation.color.sky.700` | Cor de feedback informação (azul) em estado default. | 2 |
+| `semantic.feedback.info.background.default` | color | → `foundation.color.blue.400` | Fill de feedback informação (azul) em estado default. | 5 |
+| `semantic.feedback.info.background.hover` | color | → `foundation.color.blue.600` | Fill de feedback informação (azul) em estado hover. | 0 |
+| `semantic.feedback.info.background.subtle` | color | → `foundation.color.blue.100` | Fill de feedback informação (azul) em estado subtle. | 5 |
+| `semantic.feedback.info.border-default` | color | → `foundation.color.blue.500` | Borda de feedback informação (azul) em estado default. | 3 |
+| `semantic.feedback.info.content-contrast` | color | → `foundation.color.brand.950` | Cor de feedback informação (azul) em estado contrast. | 10 |
+| `semantic.feedback.info.content-default` | color | → `foundation.color.blue.700` | Cor de feedback informação (azul) em estado default. | 4 |
 | `semantic.feedback.success.background.active` | color | → `foundation.color.green.900` | Fill de feedback sucesso (verde) em estado active. | 2 |
-| `semantic.feedback.success.background.default` | color | → `foundation.color.green.600` | Fill de feedback sucesso (verde) em estado default. | 5 |
+| `semantic.feedback.success.background.default` | color | → `foundation.color.green.600` | Fill de feedback sucesso (verde) em estado default. | 7 |
 | `semantic.feedback.success.background.disabled` | color | → `foundation.color.disabled.success.light` | Fill de feedback sucesso (verde) em estado disabled. | 2 |
 | `semantic.feedback.success.background.hover` | color | → `foundation.color.green.800` | Fill de feedback sucesso (verde) em estado hover. | 2 |
-| `semantic.feedback.success.background.subtle` | color | → `foundation.color.green.100` | Fill de feedback sucesso (verde) em estado subtle. | 2 |
+| `semantic.feedback.success.background.subtle` | color | → `foundation.color.green.100` | Fill de feedback sucesso (verde) em estado subtle. | 5 |
 | `semantic.feedback.success.border-default` | color | → `foundation.color.green.500` | Borda de feedback sucesso (verde) em estado default. | 4 |
-| `semantic.feedback.success.content-contrast` | color | → `foundation.color.neutral.50` | Cor de feedback sucesso (verde) em estado contrast. | 11 |
-| `semantic.feedback.success.content-default` | color | → `foundation.color.green.700` | Cor de feedback sucesso (verde) em estado default. | 6 |
+| `semantic.feedback.success.content-contrast` | color | → `foundation.color.neutral.50` | Cor de feedback sucesso (verde) em estado contrast. | 14 |
+| `semantic.feedback.success.content-default` | color | → `foundation.color.green.700` | Cor de feedback sucesso (verde) em estado default. | 8 |
 | `semantic.feedback.success.content-disabled` | color | → `foundation.color.overlay.white.80` | Cor de feedback sucesso (verde) em estado disabled. | 2 |
-| `semantic.feedback.warning.background.default` | color | → `foundation.color.amber.500` | Fill de feedback aviso (âmbar) em estado default. | 2 |
+| `semantic.feedback.warning.background.default` | color | → `foundation.color.amber.300` | Fill de feedback aviso (âmbar) em estado default. | 5 |
 | `semantic.feedback.warning.background.hover` | color | → `foundation.color.amber.600` | Fill de feedback aviso (âmbar) em estado hover. | 0 |
-| `semantic.feedback.warning.background.subtle` | color | → `foundation.color.amber.100` | Fill de feedback aviso (âmbar) em estado subtle. | 2 |
-| `semantic.feedback.warning.border-default` | color | → `foundation.color.amber.500` | Borda de feedback aviso (âmbar) em estado default. | 1 |
-| `semantic.feedback.warning.content-contrast` | color | → `foundation.color.neutral.900` | Cor de feedback aviso (âmbar) em estado contrast. | 6 |
-| `semantic.feedback.warning.content-default` | color | → `foundation.color.amber.700` | Cor de feedback aviso (âmbar) em estado default. | 6 |
+| `semantic.feedback.warning.background.subtle` | color | → `foundation.color.amber.100` | Fill de feedback aviso (âmbar) em estado subtle. | 5 |
+| `semantic.feedback.warning.border-default` | color | → `foundation.color.amber.500` | Borda de feedback aviso (âmbar) em estado default. | 3 |
+| `semantic.feedback.warning.content-contrast` | color | → `foundation.color.amber.950` | Cor de feedback aviso (âmbar) em estado contrast. | 10 |
+| `semantic.feedback.warning.content-default` | color | → `foundation.color.amber.700` | Cor de feedback aviso (âmbar) em estado default. | 8 |
 
 ### semantic.ghost
 
@@ -472,23 +472,23 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `semantic.icon.color.active` | color | → `semantic.content.strong` | Cor semantica de icone active. | 0 |
-| `semantic.icon.color.default` | color | → `semantic.content.default` | Cor semantica de icone default. | 1 |
-| `semantic.icon.color.disabled` | color | → `semantic.content.disabled` | Cor semantica de icone disabled. | 1 |
-| `semantic.icon.color.error` | color | → `semantic.feedback.error.content-default` | Cor semantica de icone error. | 1 |
-| `semantic.icon.color.error-contrast` | color | → `semantic.feedback.error.content-contrast` | Cor semantica de icone error-contrast. | 0 |
+| `semantic.icon.color.default` | color | → `semantic.content.default` | Cor semantica de icone default. | 8 |
+| `semantic.icon.color.disabled` | color | → `semantic.content.disabled` | Cor semantica de icone disabled. | 5 |
+| `semantic.icon.color.error` | color | → `semantic.feedback.error.content-default` | Cor semantica de icone error. | 4 |
+| `semantic.icon.color.error-contrast` | color | → `semantic.feedback.error.content-contrast` | Cor semantica de icone error-contrast. | 3 |
 | `semantic.icon.color.hover` | color | → `semantic.content.hover` | Cor semantica de icone hover. | 0 |
-| `semantic.icon.color.info-contrast` | color | → `semantic.feedback.info.content-contrast` | Cor semantica de icone info-contrast. | 0 |
+| `semantic.icon.color.info-contrast` | color | → `semantic.feedback.info.content-contrast` | Cor semantica de icone info-contrast. | 3 |
 | `semantic.icon.color.inverse` | color | → `semantic.content.inverse` | Cor semantica de icone inverse. | 1 |
 | `semantic.icon.color.subtle` | color | → `semantic.content.subtle` | Cor semantica de icone subtle. | 1 |
-| `semantic.icon.color.success` | color | → `semantic.feedback.success.content-default` | Cor semantica de icone success. | 1 |
-| `semantic.icon.color.success-contrast` | color | → `semantic.feedback.success.content-contrast` | Cor semantica de icone success-contrast. | 0 |
-| `semantic.icon.color.warning` | color | → `semantic.feedback.warning.content-default` | Cor semantica de icone warning. | 1 |
-| `semantic.icon.color.warning-contrast` | color | → `semantic.feedback.warning.content-contrast` | Cor semantica de icone warning-contrast. | 0 |
-| `semantic.icon.stroke-width.regular.16` | dimension | → `foundation.stroke.width.1_5` | Stroke width semantico de icone regular 16px. | 1 |
-| `semantic.icon.stroke-width.regular.20` | dimension | → `foundation.stroke.width.1_75` | Stroke width semantico de icone regular 20px. | 5 |
-| `semantic.icon.stroke-width.regular.24` | dimension | → `foundation.stroke.width.2` | Stroke width semantico de icone regular 24px. | 1 |
-| `semantic.icon.stroke-width.regular.32` | dimension | → `foundation.stroke.width.2_5` | Stroke width semantico de icone regular 32px. | 2 |
-| `semantic.icon.stroke-width.strong.16` | dimension | → `foundation.stroke.width.1_75` | Stroke width semantico de icone strong 16px. | 1 |
+| `semantic.icon.color.success` | color | → `semantic.feedback.success.content-default` | Cor semantica de icone success. | 3 |
+| `semantic.icon.color.success-contrast` | color | → `semantic.feedback.success.content-contrast` | Cor semantica de icone success-contrast. | 3 |
+| `semantic.icon.color.warning` | color | → `semantic.feedback.warning.content-default` | Cor semantica de icone warning. | 3 |
+| `semantic.icon.color.warning-contrast` | color | → `semantic.feedback.warning.content-contrast` | Cor semantica de icone warning-contrast. | 3 |
+| `semantic.icon.stroke-width.regular.16` | dimension | → `foundation.stroke.width.1_5` | Stroke width semantico de icone regular 16px. | 6 |
+| `semantic.icon.stroke-width.regular.20` | dimension | → `foundation.stroke.width.1_75` | Stroke width semantico de icone regular 20px. | 13 |
+| `semantic.icon.stroke-width.regular.24` | dimension | → `foundation.stroke.width.2` | Stroke width semantico de icone regular 24px. | 8 |
+| `semantic.icon.stroke-width.regular.32` | dimension | → `foundation.stroke.width.2_5` | Stroke width semantico de icone regular 32px. | 4 |
+| `semantic.icon.stroke-width.strong.16` | dimension | → `foundation.stroke.width.1_75` | Stroke width semantico de icone strong 16px. | 3 |
 | `semantic.icon.stroke-width.strong.20` | dimension | → `foundation.stroke.width.2` | Stroke width semantico de icone strong 20px. | 1 |
 | `semantic.icon.stroke-width.strong.24` | dimension | → `foundation.stroke.width.2_25` | Stroke width semantico de icone strong 24px. | 1 |
 
@@ -497,7 +497,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `semantic.link.content-active` | color | → `foundation.color.brand.800` | Cor de texto/ícone de link inline (branded text) em estado active. | 2 |
-| `semantic.link.content-default` | color | → `foundation.color.brand.700` | Cor de texto/ícone de link inline (branded text) em estado default. | 3 |
+| `semantic.link.content-default` | color | → `foundation.color.brand.700` | Cor de texto/ícone de link inline (branded text) em estado default. | 5 |
 | `semantic.link.content-disabled` | color | → `foundation.color.neutral.400` | Cor de texto/ícone de link inline (branded text) em estado disabled. | 0 |
 | `semantic.link.content-hover` | color | → `foundation.color.brand.800` | Cor de texto/ícone de link inline (branded text) em estado hover. | 5 |
 
@@ -548,13 +548,13 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `semantic.primary.background.active` | color | → `foundation.color.brand.800` | Fill de ação primária (brand solid) em estado active. | 2 |
-| `semantic.primary.background.default` | color | → `foundation.color.brand.600` | Fill de ação primária (brand solid) em estado default. | 21 |
+| `semantic.primary.background.default` | color | → `foundation.color.brand.600` | Fill de ação primária (brand solid) em estado default. | 24 |
 | `semantic.primary.background.disabled` | color | → `foundation.color.disabled.brand.light` | Fill de ação primária (brand solid) em estado disabled. | 10 |
-| `semantic.primary.background.hover` | color | → `foundation.color.brand.700` | Fill de ação primária (brand solid) em estado hover. | 11 |
-| `semantic.primary.border.default` | color | → `semantic.primary.background.default` | Token semantic para primary / border / default. | 0 |
+| `semantic.primary.background.hover` | color | → `foundation.color.brand.700` | Fill de ação primária (brand solid) em estado hover. | 10 |
+| `semantic.primary.border.default` | color | → `semantic.primary.background.default` | Token semantic para primary / border / default. | 2 |
 | `semantic.primary.border.disabled` | color | → `semantic.primary.background.disabled` | Token semantic para primary / border / disabled. | 0 |
-| `semantic.primary.border.hover` | color | → `semantic.primary.background.hover` | Token semantic para primary / border / hover. | 0 |
-| `semantic.primary.content-default` | color | → `foundation.color.neutral.50` | Cor de texto/ícone de ação primária (brand solid) em estado default. | 16 |
+| `semantic.primary.border.hover` | color | → `semantic.primary.background.hover` | Token semantic para primary / border / hover. | 2 |
+| `semantic.primary.content-default` | color | → `foundation.color.neutral.50` | Cor de texto/ícone de ação primária (brand solid) em estado default. | 19 |
 | `semantic.primary.content-disabled` | color | → `foundation.color.overlay.white.80` | Cor de texto/ícone de ação primária (brand solid) em estado disabled. | 6 |
 | `semantic.primary.content-hover` | color | → `foundation.color.neutral.50` | Conteúdo sobre fill primário em hover. | 5 |
 
@@ -564,7 +564,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 |---|---|---|---|---|
 | `semantic.radius.full` | dimension | → `foundation.radius.999` | Radius semantic full. | 11 |
 | `semantic.radius.lg` | dimension | → `foundation.radius.12` | Radius semantic lg. | 9 |
-| `semantic.radius.md` | dimension | → `foundation.radius.8` | Radius semantic md. | 13 |
+| `semantic.radius.md` | dimension | → `foundation.radius.8` | Radius semantic md. | 10 |
 | `semantic.radius.sm` | dimension | → `foundation.radius.4` | Radius semantic sm. | 8 |
 | `semantic.radius.xl` | dimension | → `foundation.radius.16` | Radius semantic xl. | 0 |
 
@@ -589,49 +589,49 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.size.layout.sm` | dimension | → `foundation.dimension.480` | Size token layout.sm. | 2 |
 | `semantic.size.layout.xl` | dimension | → `foundation.dimension.1024` | Size token layout.xl. | 0 |
 | `semantic.size.layout.xs` | dimension | → `foundation.dimension.320` | Size token layout.xs. | 0 |
-| `semantic.size.lg` | dimension | → `foundation.dimension.32` | Size token lg. | 13 |
-| `semantic.size.md` | dimension | → `foundation.dimension.24` | Size token md. | 20 |
-| `semantic.size.sm` | dimension | → `foundation.dimension.20` | Size token sm. | 17 |
+| `semantic.size.lg` | dimension | → `foundation.dimension.32` | Size token lg. | 12 |
+| `semantic.size.md` | dimension | → `foundation.dimension.24` | Size token md. | 11 |
+| `semantic.size.sm` | dimension | → `foundation.dimension.20` | Size token sm. | 12 |
 | `semantic.size.xl` | dimension | → `foundation.dimension.40` | Size token xl. | 10 |
-| `semantic.size.xs` | dimension | → `foundation.dimension.16` | Size token xs. | 14 |
+| `semantic.size.xs` | dimension | → `foundation.dimension.16` | Size token xs. | 11 |
 
 ### semantic.space
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `semantic.space.2xl` | dimension | → `foundation.dimension.24` | Spacing token 2xl. | 0 |
-| `semantic.space.2xs` | dimension | → `foundation.dimension.2` | Spacing token 2xs. | 9 |
-| `semantic.space.control.padding.10` | dimension | → `foundation.dimension.10` | Spacing token control.padding.10. | 7 |
+| `semantic.space.2xl` | dimension | → `foundation.dimension.24` | Spacing token 2xl. | 6 |
+| `semantic.space.2xs` | dimension | → `foundation.dimension.2` | Spacing token 2xs. | 6 |
+| `semantic.space.control.padding.10` | dimension | → `foundation.dimension.10` | Spacing token control.padding.10. | 4 |
 | `semantic.space.control.padding.6` | dimension | → `foundation.dimension.6` | Padding simétrico de Icon Only sm Button. | 2 |
-| `semantic.space.lg` | dimension | → `foundation.dimension.16` | Spacing token lg. | 16 |
-| `semantic.space.md` | dimension | → `foundation.dimension.12` | Spacing token md. | 21 |
+| `semantic.space.lg` | dimension | → `foundation.dimension.16` | Spacing token lg. | 19 |
+| `semantic.space.md` | dimension | → `foundation.dimension.12` | Spacing token md. | 16 |
 | `semantic.space.section.lg` | dimension | → `foundation.dimension.64` | Spacing token section.lg. | 0 |
 | `semantic.space.section.md` | dimension | → `foundation.dimension.48` | Spacing token section.md. | 0 |
 | `semantic.space.section.sm` | dimension | → `foundation.dimension.32` | Spacing token section.sm. | 1 |
 | `semantic.space.section.xl` | dimension | → `foundation.dimension.80` | Spacing token section.xl. | 0 |
-| `semantic.space.sm` | dimension | → `foundation.dimension.8` | Spacing token sm. | 32 |
-| `semantic.space.xl` | dimension | → `foundation.dimension.20` | Spacing token xl. | 15 |
+| `semantic.space.sm` | dimension | → `foundation.dimension.8` | Spacing token sm. | 26 |
+| `semantic.space.xl` | dimension | → `foundation.dimension.20` | Spacing token xl. | 10 |
 | `semantic.space.xs` | dimension | → `foundation.dimension.4` | Spacing token xs. | 31 |
 
 ### semantic.surface
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `semantic.surface.default` | color | → `foundation.color.neutral.50` | Surface default — superfície base. | 25 |
-| `semantic.surface.elevated` | color | → `foundation.color.neutral.50` | Surface elevated — superfície altamente elevada (modal). | 1 |
+| `semantic.surface.default` | color | → `foundation.color.neutral.50` | Surface default — superfície base. | 12 |
+| `semantic.surface.elevated` | color | → `foundation.color.neutral.50` | Surface elevated — superfície altamente elevada (modal). | 3 |
 | `semantic.surface.hover` | color | → `foundation.color.neutral.100` | Surface neutra em hover. | 4 |
 | `semantic.surface.overlay` | color | → `foundation.color.neutral.50` | Surface overlay — superfície sobre overlay (popover). | 0 |
-| `semantic.surface.raised` | color | → `foundation.color.neutral.50` | Surface raised — superfície elevada (cards). | 1 |
+| `semantic.surface.raised` | color | → `foundation.color.neutral.50` | Surface raised — superfície elevada (cards). | 3 |
 
 ### semantic.toned
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `semantic.toned.background.active` | color | → `foundation.color.overlay.blue-600.28` | Fill de ação brand translúcida em estado active. | 2 |
-| `semantic.toned.background.default` | color | → `foundation.color.overlay.blue-600.12` | Fill de ação brand translúcida em estado default. | 4 |
+| `semantic.toned.background.default` | color | → `foundation.color.overlay.blue-600.12` | Fill de ação brand translúcida em estado default. | 5 |
 | `semantic.toned.background.disabled` | color | → `foundation.color.disabled.brand.toned.light` | Fill de ação brand translúcida em estado disabled. | 2 |
 | `semantic.toned.background.hover` | color | → `foundation.color.overlay.blue-600.20` | Fill de ação brand translúcida em estado hover. | 2 |
-| `semantic.toned.content-default` | color | → `foundation.color.brand.700` | Cor de texto/ícone de ação brand translúcida em estado default. | 4 |
+| `semantic.toned.content-default` | color | → `foundation.color.brand.700` | Cor de texto/ícone de ação brand translúcida em estado default. | 5 |
 | `semantic.toned.content-disabled` | color | → `foundation.color.neutral.400` | Cor de texto/ícone de ação brand translúcida em estado disabled. | 2 |
 
 ### semantic.typography
@@ -639,11 +639,11 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `semantic.typography.body.font-family.mono` | fontFamily | → `foundation.typography.font.family.mono` | font-family mono pra texto UI geral. | 0 |
-| `semantic.typography.body.font-family.sans` | fontFamily | → `foundation.typography.font.family.sans` | font-family sans pra texto UI geral. | 13 |
-| `semantic.typography.body.font-size.2xl` | dimension | → `foundation.typography.font.size.24` | font-size 2xl pra texto UI geral. | 1 |
+| `semantic.typography.body.font-family.sans` | fontFamily | → `foundation.typography.font.family.sans` | font-family sans pra texto UI geral. | 6 |
+| `semantic.typography.body.font-size.2xl` | dimension | → `foundation.typography.font.size.24` | font-size 2xl pra texto UI geral. | 2 |
 | `semantic.typography.body.font-size.2xs` | dimension | → `foundation.typography.font.size.11` | font-size 2xs pra texto UI geral. | 0 |
 | `semantic.typography.body.font-size.3xl` | dimension | → `foundation.typography.font.size.28` | font-size 3xl pra texto UI geral. | 1 |
-| `semantic.typography.body.font-size.4xl` | dimension | → `foundation.typography.font.size.32` | font-size 4xl pra texto UI geral. | 0 |
+| `semantic.typography.body.font-size.4xl` | dimension | → `foundation.typography.font.size.32` | font-size 4xl pra texto UI geral. | 1 |
 | `semantic.typography.body.font-size.5xl` | dimension | → `foundation.typography.font.size.40` | font-size 5xl pra texto UI geral. | 0 |
 | `semantic.typography.body.font-size.6xl` | dimension | → `foundation.typography.font.size.48` | font-size 6xl pra texto UI geral. | 0 |
 | `semantic.typography.body.font-size.7xl` | dimension | → `foundation.typography.font.size.56` | font-size 7xl pra texto UI geral. | 0 |
@@ -651,14 +651,14 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.typography.body.font-size.9xl` | dimension | → `foundation.typography.font.size.72` | font-size 9xl pra texto UI geral. | 0 |
 | `semantic.typography.body.font-size.lg` | dimension | → `foundation.typography.font.size.18` | font-size lg pra texto UI geral. | 1 |
 | `semantic.typography.body.font-size.md` | dimension | → `foundation.typography.font.size.16` | font-size md pra texto UI geral. | 5 |
-| `semantic.typography.body.font-size.sm` | dimension | → `foundation.typography.font.size.14` | font-size sm pra texto UI geral. | 30 |
-| `semantic.typography.body.font-size.xl` | dimension | → `foundation.typography.font.size.20` | font-size xl pra texto UI geral. | 3 |
-| `semantic.typography.body.font-size.xs` | dimension | → `foundation.typography.font.size.12` | font-size xs pra texto UI geral. | 13 |
-| `semantic.typography.body.font-weight.bold` | number | → `foundation.typography.font.weight.bold` | font-weight bold pra texto UI geral. | 17 |
+| `semantic.typography.body.font-size.sm` | dimension | → `foundation.typography.font.size.14` | font-size sm pra texto UI geral. | 17 |
+| `semantic.typography.body.font-size.xl` | dimension | → `foundation.typography.font.size.20` | font-size xl pra texto UI geral. | 4 |
+| `semantic.typography.body.font-size.xs` | dimension | → `foundation.typography.font.size.12` | font-size xs pra texto UI geral. | 7 |
+| `semantic.typography.body.font-weight.bold` | number | → `foundation.typography.font.weight.bold` | font-weight bold pra texto UI geral. | 11 |
 | `semantic.typography.body.font-weight.medium` | number | → `foundation.typography.font.weight.medium` | font-weight medium pra texto UI geral. | 0 |
-| `semantic.typography.body.font-weight.regular` | number | → `foundation.typography.font.weight.regular` | font-weight regular pra texto UI geral. | 12 |
+| `semantic.typography.body.font-weight.regular` | number | → `foundation.typography.font.weight.regular` | font-weight regular pra texto UI geral. | 9 |
 | `semantic.typography.body.font-weight.semibold` | number | → `foundation.typography.font.weight.semibold` | font-weight semibold pra texto UI geral. | 3 |
-| `semantic.typography.body.letter-spacing.normal` | dimension | → `foundation.typography.letter.spacing.normal` | letter-spacing normal pra texto UI geral. | 18 |
+| `semantic.typography.body.letter-spacing.normal` | dimension | → `foundation.typography.letter.spacing.normal` | letter-spacing normal pra texto UI geral. | 9 |
 | `semantic.typography.body.letter-spacing.tight` | dimension | → `foundation.typography.letter.spacing.tight` | letter-spacing tight pra texto UI geral. | 1 |
 | `semantic.typography.body.letter-spacing.wider` | dimension | → `foundation.typography.letter.spacing.wider` | letter-spacing wider pra texto UI geral. | 0 |
 | `semantic.typography.body.line-height.2xl` | dimension | → `foundation.typography.line.height.34` | line-height 2xl pra texto UI geral. | 1 |
@@ -672,9 +672,9 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.typography.body.line-height.9xl` | dimension | → `foundation.typography.line.height.90` | line-height 9xl pra texto UI geral. | 0 |
 | `semantic.typography.body.line-height.lg` | dimension | → `foundation.typography.line.height.28` | line-height lg pra texto UI geral. | 0 |
 | `semantic.typography.body.line-height.md` | dimension | → `foundation.typography.line.height.24` | line-height md pra texto UI geral. | 5 |
-| `semantic.typography.body.line-height.sm` | dimension | → `foundation.typography.line.height.20` | line-height sm pra texto UI geral. | 29 |
+| `semantic.typography.body.line-height.sm` | dimension | → `foundation.typography.line.height.20` | line-height sm pra texto UI geral. | 16 |
 | `semantic.typography.body.line-height.xl` | dimension | → `foundation.typography.line.height.32` | line-height xl pra texto UI geral. | 4 |
-| `semantic.typography.body.line-height.xs` | dimension | → `foundation.typography.line.height.18` | line-height xs pra texto UI geral. | 10 |
+| `semantic.typography.body.line-height.xs` | dimension | → `foundation.typography.line.height.18` | line-height xs pra texto UI geral. | 4 |
 
 ### semantic.z
 
@@ -685,24 +685,59 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Component
 
-693 tokens.
+599 tokens.
 
 ### component.alert
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
+| `component.alert.bg.error.filled` | color | → `semantic.feedback.error.background.default` | Contrato bg.error de alert, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.alert.bg.error.subtle` | color | → `semantic.feedback.error.background.subtle` | Contrato bg.error de alert, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.alert.bg.info.filled` | color | → `semantic.feedback.info.background.default` | Contrato bg.info de alert, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.alert.bg.info.subtle` | color | → `semantic.feedback.info.background.subtle` | Contrato bg.info de alert, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.alert.bg.success.filled` | color | → `semantic.feedback.success.background.default` | Contrato bg.success de alert, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.alert.bg.success.subtle` | color | → `semantic.feedback.success.background.subtle` | Contrato bg.success de alert, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.alert.bg.warning.filled` | color | → `semantic.feedback.warning.background.default` | Contrato bg.warning de alert, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.alert.bg.warning.subtle` | color | → `semantic.feedback.warning.background.subtle` | Contrato bg.warning de alert, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.alert.border-color.error.subtle` | color | → `semantic.feedback.error.border-default` | Contrato border-color.error de alert, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.alert.border-color.info.subtle` | color | → `semantic.feedback.info.border-default` | Contrato border-color.info de alert, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.alert.border-color.success.subtle` | color | → `semantic.feedback.success.border-default` | Contrato border-color.success de alert, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.alert.border-color.warning.subtle` | color | → `semantic.feedback.warning.border-default` | Contrato border-color.warning de alert, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.alert.border-width.default` | dimension | → `semantic.border.width.default` | Border width do Alert quando stroke esta ativo. | 1 |
-| `component.alert.close.frame-size.default` | dimension | → `semantic.size.md` | Token component para alert / close / frame size / default. | 1 |
 | `component.alert.close.icon-size.default` | dimension | → `semantic.size.sm` | Tamanho do ícone Close Alert. | 1 |
+| `component.alert.close.icon.color.error.filled` | color | → `semantic.icon.color.error-contrast` | Contrato close.icon.color.error de alert, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.alert.close.icon.color.info.filled` | color | → `semantic.icon.color.info-contrast` | Contrato close.icon.color.info de alert, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.alert.close.icon.color.subtle` | color | → `semantic.icon.color.default` | Contrato close.icon.color de alert, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.alert.close.icon.color.success.filled` | color | → `semantic.icon.color.success-contrast` | Contrato close.icon.color.success de alert, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.alert.close.icon.color.warning.filled` | color | → `semantic.icon.color.warning-contrast` | Contrato close.icon.color.warning de alert, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.alert.close.icon.stroke-width.default` | dimension | → `semantic.icon.stroke-width.regular.20` | Contrato close.icon.stroke-width de alert, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.alert.content.gap.default` | dimension | → `semantic.space.xs` | Gap vertical do content Alert. | 1 |
+| `component.alert.description.color.error.filled` | color | → `semantic.feedback.error.content-contrast` | Contrato description.color.error de alert, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.alert.description.color.info.filled` | color | → `semantic.feedback.info.content-contrast` | Contrato description.color.info de alert, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.alert.description.color.subtle` | color | → `semantic.content.default` | Contrato description.color de alert, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.alert.description.color.success.filled` | color | → `semantic.feedback.success.content-contrast` | Contrato description.color.success de alert, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.alert.description.color.warning.filled` | color | → `semantic.feedback.warning.content-contrast` | Contrato description.color.warning de alert, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.alert.description.font-size.default` | dimension | → `semantic.typography.body.font-size.sm` | Font-size da description Alert. | 1 |
 | `component.alert.description.font-weight.default` | number | → `semantic.typography.body.font-weight.regular` | Font-weight da description Alert. | 1 |
 | `component.alert.description.line-height.default` | dimension | → `semantic.typography.body.line-height.sm` | Line-height da description Alert. | 1 |
 | `component.alert.gap.default` | dimension | → `semantic.space.sm` | Gap horizontal do Alert. | 1 |
-| `component.alert.icon.frame-size.default` | dimension | → `semantic.size.md` | Token component para alert / icon / frame size / default. | 1 |
+| `component.alert.icon.color.error.filled` | color | → `semantic.icon.color.error-contrast` | Contrato icon.color.error de alert, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.alert.icon.color.error.subtle` | color | → `semantic.icon.color.error` | Contrato icon.color.error de alert, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.alert.icon.color.info.filled` | color | → `semantic.icon.color.info-contrast` | Contrato icon.color.info de alert, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.alert.icon.color.info.subtle` | color | → `semantic.icon.color.default` | Contrato icon.color.info de alert, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.alert.icon.color.success.filled` | color | → `semantic.icon.color.success-contrast` | Contrato icon.color.success de alert, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.alert.icon.color.success.subtle` | color | → `semantic.icon.color.success` | Contrato icon.color.success de alert, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.alert.icon.color.warning.filled` | color | → `semantic.icon.color.warning-contrast` | Contrato icon.color.warning de alert, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.alert.icon.color.warning.subtle` | color | → `semantic.icon.color.warning` | Contrato icon.color.warning de alert, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.alert.icon.size.default` | dimension | → `semantic.size.sm` | Tamanho do container Icon Alert. | 1 |
+| `component.alert.icon.stroke-width.default` | dimension | → `semantic.icon.stroke-width.regular.20` | Contrato icon.stroke-width de alert, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.alert.padding.default` | dimension | → `semantic.space.md` | Padding do Alert. | 1 |
 | `component.alert.radius.default` | dimension | → `semantic.radius.lg` | Radius do Alert. | 1 |
+| `component.alert.title.color.error.filled` | color | → `semantic.feedback.error.content-contrast` | Contrato title.color.error de alert, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.alert.title.color.info.filled` | color | → `semantic.feedback.info.content-contrast` | Contrato title.color.info de alert, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.alert.title.color.subtle` | color | → `semantic.content.strong` | Contrato title.color de alert, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.alert.title.color.success.filled` | color | → `semantic.feedback.success.content-contrast` | Contrato title.color.success de alert, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.alert.title.color.warning.filled` | color | → `semantic.feedback.warning.content-contrast` | Contrato title.color.warning de alert, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.alert.title.font-size.default` | dimension | → `semantic.typography.body.font-size.sm` | Font-size do title Alert. | 1 |
 | `component.alert.title.font-weight.default` | number | → `semantic.typography.body.font-weight.bold` | Font-weight do title Alert. | 1 |
 | `component.alert.title.line-height.default` | dimension | → `semantic.typography.body.line-height.sm` | Line-height do title Alert. | 1 |
@@ -711,9 +746,14 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `component.avatar.icon.size.lg` | dimension | → `semantic.size.lg` | Tamanho do ícone SVG fallback do Avatar por size. | 1 |
-| `component.avatar.icon.size.md` | dimension | → `semantic.size.md` | Tamanho do ícone SVG fallback do Avatar por size. | 1 |
-| `component.avatar.icon.size.sm` | dimension | → `semantic.size.sm` | Tamanho do ícone SVG fallback do Avatar por size. | 1 |
+| `component.avatar.bg.default` | color | → `semantic.primary.background.default` | Contrato bg de avatar, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.avatar.content.color.default` | color | → `semantic.primary.content-default` | Contrato content.color de avatar, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.avatar.icon.size.lg` | dimension | → `semantic.typography.body.font-size.4xl` | Tamanho do ícone SVG fallback do Avatar por size. | 1 |
+| `component.avatar.icon.size.md` | dimension | → `semantic.typography.body.font-size.2xl` | Tamanho do ícone SVG fallback do Avatar por size. | 1 |
+| `component.avatar.icon.size.sm` | dimension | → `semantic.typography.body.font-size.xl` | Tamanho do ícone SVG fallback do Avatar por size. | 1 |
+| `component.avatar.icon.stroke-width.lg` | dimension | → `semantic.icon.stroke-width.regular.32` | Contrato icon.stroke-width de avatar, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.avatar.icon.stroke-width.md` | dimension | → `semantic.icon.stroke-width.regular.24` | Contrato icon.stroke-width de avatar, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.avatar.icon.stroke-width.sm` | dimension | → `semantic.icon.stroke-width.regular.20` | Contrato icon.stroke-width de avatar, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.avatar.initials.font-size.lg` | dimension | → `semantic.typography.body.font-size.xl` | Font-size das iniciais do Avatar por size. | 1 |
 | `component.avatar.initials.font-size.md` | dimension | → `semantic.typography.body.font-size.sm` | Font-size das iniciais do Avatar por size. | 1 |
 | `component.avatar.initials.font-size.sm` | dimension | → `semantic.typography.body.font-size.sm` | Font-size das iniciais do Avatar por size. | 1 |
@@ -732,8 +772,32 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
+| `component.badge.bg.error.solid` | color | → `semantic.feedback.error.background.default` | Contrato bg.error de badge, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.badge.bg.error.subtle` | color | → `semantic.feedback.error.background.subtle` | Contrato bg.error de badge, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.badge.bg.info.solid` | color | → `semantic.feedback.info.background.default` | Contrato bg.info de badge, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.badge.bg.info.subtle` | color | → `semantic.feedback.info.background.subtle` | Contrato bg.info de badge, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.badge.bg.neutral.default` | color | → `semantic.surface.default` | Contrato bg.neutral de badge, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.badge.bg.primary.solid` | color | → `semantic.primary.background.default` | Contrato bg.primary de badge, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.badge.bg.primary.subtle` | color | → `semantic.toned.background.default` | Contrato bg.primary de badge, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.badge.bg.success.solid` | color | → `semantic.feedback.success.background.default` | Contrato bg.success de badge, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.badge.bg.success.subtle` | color | → `semantic.feedback.success.background.subtle` | Contrato bg.success de badge, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.badge.bg.warning.solid` | color | → `semantic.feedback.warning.background.default` | Contrato bg.warning de badge, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.badge.bg.warning.subtle` | color | → `semantic.feedback.warning.background.subtle` | Contrato bg.warning de badge, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.badge.border-color.neutral.subtle` | color | → `semantic.border.default` | Contrato border-color.neutral de badge, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.badge.border-width.default` | dimension | → `semantic.border.width.default` | Border width do Badge quando stroke esta ativo. | 1 |
 | `component.badge.gap.default` | dimension | → `semantic.space.xs` | Gap interno do Badge. | 1 |
+| `component.badge.label.color.error.solid` | color | → `semantic.feedback.error.content-contrast` | Contrato label.color.error de badge, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.badge.label.color.error.subtle` | color | → `semantic.feedback.error.content-default` | Contrato label.color.error de badge, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.badge.label.color.info.solid` | color | → `semantic.feedback.info.content-contrast` | Contrato label.color.info de badge, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.badge.label.color.info.subtle` | color | → `semantic.feedback.info.content-default` | Contrato label.color.info de badge, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.badge.label.color.neutral.solid` | color | → `semantic.content.strong` | Contrato label.color.neutral de badge, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.badge.label.color.neutral.subtle` | color | → `semantic.content.default` | Contrato label.color.neutral de badge, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.badge.label.color.primary.solid` | color | → `semantic.primary.content-default` | Contrato label.color.primary de badge, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.badge.label.color.primary.subtle` | color | → `semantic.toned.content-default` | Contrato label.color.primary de badge, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.badge.label.color.success.solid` | color | → `semantic.feedback.success.content-contrast` | Contrato label.color.success de badge, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.badge.label.color.success.subtle` | color | → `semantic.feedback.success.content-default` | Contrato label.color.success de badge, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.badge.label.color.warning.solid` | color | → `semantic.feedback.warning.content-contrast` | Contrato label.color.warning de badge, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.badge.label.color.warning.subtle` | color | → `semantic.feedback.warning.content-default` | Contrato label.color.warning de badge, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.badge.label.font-size.default` | dimension | → `semantic.typography.body.font-size.xs` | Font-size do label Badge. | 1 |
 | `component.badge.label.font-weight.default` | number | → `semantic.typography.body.font-weight.bold` | Font-weight do label Badge. | 1 |
 | `component.badge.label.line-height.default` | dimension | → `semantic.typography.body.line-height.xs` | Line-height do label Badge. | 1 |
@@ -748,6 +812,8 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.breadcrumb.focus-ring.radius.default` | dimension | → `semantic.radius.md` | Radius do focus ring Breadcrumb. | 1 |
 | `component.breadcrumb.gap.default` | dimension | → `semantic.space.xs` | Espaço horizontal entre itens e separadores do Breadcrumb. | 1 |
 | `component.breadcrumb.item.gap.default` | dimension | → `semantic.space.xs` | Espaço interno entre partes do item de Breadcrumb. | 1 |
+| `component.breadcrumb.label.color.current` | color | → `semantic.content.default` | Contrato label.color de breadcrumb, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.breadcrumb.label.color.link` | color | → `semantic.link.content-default` | Contrato label.color de breadcrumb, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.breadcrumb.label.font-size.default` | dimension | → `semantic.typography.body.font-size.sm` | Tamanho da fonte do rótulo de Breadcrumb. | 1 |
 | `component.breadcrumb.label.font-weight.default` | number | → `semantic.typography.body.font-weight.bold` | Peso da fonte do rótulo de Breadcrumb. | 1 |
 | `component.breadcrumb.label.letter-spacing.default` | dimension | → `semantic.typography.body.letter-spacing.normal` | Espaçamento entre letras do rótulo de Breadcrumb. | 1 |
@@ -821,12 +887,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.button.content.color.toned.focus` | color | → `semantic.toned.content-default` | Token component para button / content / color / toned / focus. | 1 |
 | `component.button.content.color.toned.hover` | color | → `semantic.link.content-hover` | Cor de conteúdo do Button hover undefined. | 1 |
 | `component.button.content.color.toned.pressed` | color | → `semantic.link.content-hover` | Cor de conteúdo do Button pressed undefined. | 1 |
-| `component.button.focus-ring.color.danger` | color | → `semantic.border.focus-error` | Cor do focus ring do Button danger. | 1 |
-| `component.button.focus-ring.color.default` | color | → `semantic.border.focus` | color do focus ring Button. | 1 |
-| `component.button.focus-ring.color.success` | color | → `semantic.feedback.success.border-default` | Cor do focus ring do Button success. | 1 |
-| `component.button.focus-ring.offset.default` | dimension | → `semantic.border.width.focus` | offset do focus ring Button. | 1 |
 | `component.button.focus-ring.radius.default` | dimension | → `semantic.radius.lg` | radius do focus ring Button. | 0 |
-| `component.button.focus-ring.stroke-width.default` | dimension | → `semantic.border.width.focus` | stroke-width do focus ring Button. | 1 |
 | `component.button.gap.lg` | dimension | → `semantic.space.sm` | Gap interno do Button lg. | 1 |
 | `component.button.gap.md` | dimension | → `semantic.space.xs` | Gap interno do Button md. | 1 |
 | `component.button.gap.sm` | dimension | → `semantic.space.2xs` | Gap interno do Button sm. | 1 |
@@ -839,12 +900,12 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.button.icon-only-width.lg` | dimension | → `semantic.size.2xl` | Largura do Button somente-ícone lg. | 1 |
 | `component.button.icon-only-width.md` | dimension | → `semantic.size.xl` | Largura do Button somente-ícone md. | 1 |
 | `component.button.icon-only-width.sm` | dimension | → `semantic.size.lg` | Largura do Button somente-ícone sm. | 1 |
-| `component.button.icon.frame-size.lg` | dimension | → `semantic.size.md` | Tamanho do frame de ícone Button lg. | 1 |
-| `component.button.icon.frame-size.md` | dimension | → `semantic.size.md` | Tamanho do frame de ícone Button md. | 1 |
-| `component.button.icon.frame-size.sm` | dimension | → `semantic.size.sm` | Tamanho do frame de ícone Button sm. | 1 |
 | `component.button.icon.size.lg` | dimension | → `semantic.size.md` | Token component para button / icon / size / lg. | 1 |
-| `component.button.icon.size.md` | dimension | → `semantic.size.md` | Token component para button / icon / size / md. | 1 |
-| `component.button.icon.size.sm` | dimension | → `semantic.size.sm` | Token component para button / icon / size / sm. | 1 |
+| `component.button.icon.size.md` | dimension | → `semantic.size.sm` | Token component para button / icon / size / md. | 1 |
+| `component.button.icon.size.sm` | dimension | → `semantic.size.xs` | Token component para button / icon / size / sm. | 1 |
+| `component.button.icon.stroke-width.lg` | dimension | → `semantic.icon.stroke-width.regular.24` | Contrato icon.stroke-width de button, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.button.icon.stroke-width.md` | dimension | → `semantic.icon.stroke-width.regular.20` | Contrato icon.stroke-width de button, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.button.icon.stroke-width.sm` | dimension | → `semantic.icon.stroke-width.regular.16` | Contrato icon.stroke-width de button, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.button.label-frame.padding-x.default` | dimension | → `semantic.space.xs` | Padding horizontal do Label Frame Button. | 1 |
 | `component.button.label.font-family.default` | string | → `semantic.typography.body.font-family.sans` | font-family do label Button default. | 1 |
 | `component.button.label.font-size.lg` | dimension | → `semantic.typography.body.font-size.md` | font-size do label Button lg. | 1 |
@@ -855,9 +916,9 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.button.label.line-height.lg` | dimension | → `semantic.typography.body.line-height.md` | line-height do label Button lg. | 1 |
 | `component.button.label.line-height.md` | dimension | → `semantic.typography.body.line-height.sm` | line-height do label Button md. | 1 |
 | `component.button.label.line-height.sm` | dimension | → `semantic.typography.body.line-height.2xs` | line-height do label Button sm. | 1 |
-| `component.button.min-width.lg` | dimension | — | Largura mínima do Button lg. | 1 |
-| `component.button.min-width.md` | dimension | — | Largura mínima do Button md. | 1 |
-| `component.button.min-width.sm` | dimension | — | Largura mínima do Button sm. | 1 |
+| `component.button.min-width.lg` | dimension | → `semantic.control.button.min-width.lg` | Largura mínima do Button lg. | 1 |
+| `component.button.min-width.md` | dimension | → `semantic.control.button.min-width.md` | Largura mínima do Button md. | 1 |
+| `component.button.min-width.sm` | dimension | → `semantic.control.button.min-width.sm` | Largura mínima do Button sm. | 1 |
 | `component.button.padding-x.lg` | dimension | → `semantic.space.lg` | Padding horizontal do Button lg. | 1 |
 | `component.button.padding-x.md` | dimension | → `semantic.space.md` | Padding horizontal do Button md. | 1 |
 | `component.button.padding-x.sm` | dimension | → `semantic.space.sm` | Padding horizontal do Button sm. | 1 |
@@ -870,20 +931,27 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
+| `component.card.bg.default` | color | → `semantic.surface.default` | Contrato bg de card, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.card.bg.elevated` | color | → `semantic.surface.raised` | Contrato bg de card, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.card.body.color.default` | color | → `semantic.content.default` | Contrato body.color de card, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.card.body.font-size.default` | dimension | → `semantic.typography.body.font-size.sm` | Font-size do body Card. | 1 |
 | `component.card.body.font-weight.default` | number | → `semantic.typography.body.font-weight.regular` | Font-weight do body Card. | 1 |
 | `component.card.body.line-height.default` | dimension | → `semantic.typography.body.line-height.sm` | Line-height do body Card. | 1 |
 | `component.card.body.padding-bottom.default` | dimension | → `semantic.space.lg` | Padding bottom do body Card. | 1 |
 | `component.card.body.padding-x.default` | dimension | → `semantic.space.lg` | Padding horizontal do body Card. | 1 |
+| `component.card.border-color.elevated` | color | → `semantic.border.default` | Contrato border-color de card, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.card.border-color.outlined` | color | → `semantic.border.subtle` | Contrato border-color de card, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.card.border-width.default` | dimension | → `semantic.border.width.default` | Border width do Card quando stroke está ativo. | 1 |
 | `component.card.header.gap.default` | dimension | → `semantic.space.sm` | Gap vertical do header Card. | 1 |
 | `component.card.header.padding-bottom.default` | dimension | → `semantic.space.sm` | Padding bottom do header Card. | 1 |
 | `component.card.header.padding-top.default` | dimension | → `semantic.space.lg` | Padding top do header Card. | 1 |
 | `component.card.header.padding-x.default` | dimension | → `semantic.space.lg` | Padding horizontal do header Card. | 1 |
 | `component.card.radius.default` | dimension | → `semantic.radius.lg` | Radius do Card. | 1 |
+| `component.card.subtitle.color.default` | color | → `semantic.content.default` | Contrato subtitle.color de card, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.card.subtitle.font-size.default` | dimension | → `semantic.typography.body.font-size.sm` | Font-size do subtitle Card. | 1 |
 | `component.card.subtitle.font-weight.default` | number | → `semantic.typography.body.font-weight.bold` | Font-weight do subtitle Card. | 1 |
 | `component.card.subtitle.line-height.default` | dimension | → `semantic.typography.body.line-height.sm` | Line-height do subtitle Card. | 1 |
+| `component.card.title.color.default` | color | → `semantic.content.strong` | Contrato title.color de card, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.card.title.font-size.default` | dimension | → `semantic.typography.body.font-size.xl` | Font-size do title Card. | 1 |
 | `component.card.title.font-weight.default` | number | → `semantic.typography.body.font-weight.semibold` | Font-weight do title Card. | 1 |
 | `component.card.title.line-height.default` | dimension | → `semantic.typography.body.line-height.xl` | Line-height do title Card. | 1 |
@@ -894,6 +962,8 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 |---|---|---|---|---|
 | `component.checkbox.box.border-color.unchecked.default` | color | → `semantic.border.control-default` | Checkbox box visual unchecked | 1 |
 | `component.checkbox.box.border-color.unchecked.disabled` | color | → `semantic.border.control-disabled` | Checkbox box visual unchecked disabled | 1 |
+| `component.checkbox.box.border-color.unchecked.error` | color | → `semantic.border.error` | Contrato box.border-color.unchecked de checkbox, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.checkbox.box.border-color.unchecked.error-hover` | color | → `semantic.border.error-hover` | Contrato box.border-color.unchecked de checkbox, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.checkbox.box.border-color.unchecked.focus` | color | → `semantic.border.focus` | Token component para checkbox / box / border color / unchecked / focus. | 0 |
 | `component.checkbox.box.border-color.unchecked.hover` | color | → `semantic.border.control-hover` | Border da box Checkbox unchecked em hover. | 1 |
 | `component.checkbox.box.border-width.default` | dimension | → `semantic.border.width.default` | Border width da box visual do Checkbox. | 1 |
@@ -914,13 +984,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.checkbox.box.size.md` | dimension | → `semantic.size.sm` | Tamanho visual da box do Checkbox por size. | 1 |
 | `component.checkbox.box.size.sm` | dimension | → `semantic.size.xs` | Tamanho visual da box do Checkbox por size. | 1 |
 | `component.checkbox.content.gap.default` | dimension | → `semantic.space.xs` | Checkbox content frame default | 1 |
-| `component.checkbox.description.color.default` | color | → `semantic.content.strong` | Checkbox description default | 1 |
-| `component.checkbox.focus-ring.color.default` | color | → `semantic.border.focus` | Cor do focus ring do Checkbox. | 1 |
 | `component.checkbox.focus-ring.radius.default` | dimension | → `semantic.radius.md` | Radius do focus ring do Checkbox. | 0 |
-| `component.checkbox.focus-ring.stroke-width.default` | dimension | → `semantic.border.width.focus` | Stroke width do focus ring do Checkbox. | 1 |
-| `component.checkbox.helper-text.color.default` | color | → `semantic.content.default` | Checkbox helper text default | 1 |
-| `component.checkbox.label.color.default` | color | → `semantic.content.strong` | Checkbox label default | 1 |
-| `component.checkbox.label.color.disabled` | color | → `semantic.content.disabled` | Checkbox label disabled | 1 |
 | `component.checkbox.mark.fill.checked.default` | color | → `semantic.primary.content-default` | Checkbox marca visual checked | 1 |
 | `component.checkbox.mark.fill.checked.disabled` | color | → `semantic.primary.content-disabled` | Checkbox marca visual checked disabled | 1 |
 | `component.checkbox.mark.fill.checked.focus` | color | → `semantic.primary.content-default` | Token component para checkbox / mark / fill / checked / focus. | 0 |
@@ -958,9 +1022,9 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.field.border-color.hover` | color | → `semantic.border.control-hover` | Token component para field / border color / hover. | 3 |
 | `component.field.border-color.readonly` | color | → `semantic.border.subtle` | Token component para field / border color / readonly. | 3 |
 | `component.field.border-width` | dimension | → `semantic.border.width.default` | Token component para field / border width. | 3 |
-| `component.field.padding-y.lg` | dimension | → `semantic.space.md` | Token component para field / padding y / lg. | 0 |
-| `component.field.padding-y.md` | dimension | → `semantic.space.control.padding.10` | Token component para field / padding y / md. | 0 |
-| `component.field.padding-y.sm` | dimension | → `semantic.space.sm` | Token component para field / padding y / sm. | 0 |
+| `component.field.padding-y.lg` | dimension | → `semantic.space.md` | Token component para field / padding y / lg. | 3 |
+| `component.field.padding-y.md` | dimension | → `semantic.space.control.padding.10` | Token component para field / padding y / md. | 3 |
+| `component.field.padding-y.sm` | dimension | → `semantic.space.sm` | Token component para field / padding y / sm. | 3 |
 | `component.field.placeholder.color.default` | color | → `semantic.content.subtle` | Token component para field / placeholder / color / default. | 3 |
 | `component.field.placeholder.color.disabled` | color | → `semantic.content.disabled` | Token component para field / placeholder / color / disabled. | 3 |
 | `component.field.radius` | dimension | → `semantic.radius.md` | Token component para field / radius. | 3 |
@@ -972,121 +1036,70 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `component.focus-ring.color.default` | color | → `semantic.border.focus` | Token component para focus ring / color / default. | 3 |
-| `component.focus-ring.color.error` | color | → `semantic.border.focus-error` | Token component para focus ring / color / error. | 3 |
+| `component.focus-ring.color.default` | color | → `semantic.border.focus` | Token component para focus ring / color / default. | 7 |
+| `component.focus-ring.color.error` | color | → `semantic.border.focus-error` | Token component para focus ring / color / error. | 4 |
 | `component.focus-ring.color.readonly` | color | → `semantic.border.control-default` | Token component para focus ring / color / readonly. | 3 |
-| `component.focus-ring.color.success` | color | → `semantic.feedback.success.border-default` | Token component para focus ring / color / success. | 0 |
-| `component.focus-ring.width` | dimension | → `semantic.border.width.focus` | Token component para focus ring / width. | 3 |
+| `component.focus-ring.color.success` | color | → `semantic.feedback.success.border-default` | Token component para focus ring / color / success. | 1 |
+| `component.focus-ring.width` | dimension | → `semantic.border.width.focus` | Token component para focus ring / width. | 7 |
 
 ### component.form-field
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
+| `component.form-field.description.color.default` | color | → `semantic.content.strong` | Contrato description.color de form-field, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.form-field.error.color.default` | color | → `semantic.feedback.error.content-default` | Cor da mensagem de erro do Form Field. | 1 |
 | `component.form-field.error.font-size.default` | dimension | → `semantic.typography.body.font-size.xs` | Tamanho tipografico da mensagem de erro do Form Field. | 1 |
 | `component.form-field.error.font-weight.default` | string | → `semantic.typography.body.font-weight.bold` | Peso tipografico da mensagem de erro do Form Field. | 1 |
 | `component.form-field.error.gap.default` | dimension | → `semantic.space.xs` | Gap horizontal entre ícone e texto da mensagem de erro do Form Field. | 1 |
 | `component.form-field.error.icon-frame.padding-x.default` | dimension | → `semantic.space.2xs` | Padding horizontal do frame externo do ícone de erro Form Field. | 1 |
-| `component.form-field.error.icon.color.default` | color | → `semantic.feedback.error.content-default` | Cor do ícone da mensagem de erro do Form Field. | 1 |
-| `component.form-field.error.icon.frame-size.default` | dimension | → `semantic.size.xs` | Frame-size do ícone da mensagem de erro do Form Field. | 1 |
+| `component.form-field.error.icon.color.default` | color | → `semantic.icon.color.error` | Cor do ícone da mensagem de erro do Form Field. | 1 |
 | `component.form-field.error.icon.size.default` | dimension | → `semantic.size.xs` | Token component para form field / error / icon / size / default. | 1 |
+| `component.form-field.error.icon.stroke-width.default` | dimension | → `semantic.icon.stroke-width.strong.16` | Contrato error.icon.stroke-width de form-field, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.form-field.error.line-height.default` | dimension | → `semantic.typography.body.line-height.xs` | Altura de linha da mensagem de erro do Form Field. | 1 |
 | `component.form-field.gap.default` | dimension | → `semantic.space.xs` | Espacamento vertical interno do wrapper Form Field. | 1 |
-| `component.form-field.helper.color.default` | color | → `semantic.content.default` | Cor default do helper text do Form Field. | 1 |
-| `component.form-field.helper.font-size.default` | dimension | → `semantic.typography.body.font-size.xs` | Tamanho tipografico do helper text do Form Field. | 1 |
-| `component.form-field.helper.font-weight.default` | string | → `semantic.typography.body.font-weight.regular` | Peso tipografico do helper text do Form Field. | 1 |
-| `component.form-field.helper.line-height.default` | dimension | → `semantic.typography.body.line-height.xs` | Altura de linha do helper text do Form Field. | 1 |
-| `component.form-field.label-row.gap.default` | dimension | → `semantic.space.2xs` | Espacamento horizontal entre label e indicador required. | 1 |
-| `component.form-field.label.color.default` | color | → `semantic.content.strong` | Cor default do label do Form Field. | 1 |
-| `component.form-field.label.color.error` | color | → `semantic.feedback.error.content-default` | Cor do label do Form Field em estado de erro. | 1 |
-| `component.form-field.label.font-size.default` | dimension | → `semantic.typography.body.font-size.sm` | Tamanho tipografico de label no Form Field. | 1 |
-| `component.form-field.label.font-weight.default` | string | → `semantic.typography.body.font-weight.bold` | Peso tipografico de label no Form Field. | 1 |
-| `component.form-field.label.line-height.default` | dimension | → `semantic.typography.body.line-height.sm` | Altura de linha de label no Form Field. | 1 |
-| `component.form-field.required.color.default` | color | → `semantic.feedback.error.content-default` | Cor do indicador required do Form Field. | 1 |
-| `component.form-field.required.font-size.default` | dimension | → `semantic.typography.body.font-size.sm` | Tamanho tipografico de required no Form Field. | 1 |
-| `component.form-field.required.font-weight.default` | string | → `semantic.typography.body.font-weight.bold` | Peso tipografico de required no Form Field. | 1 |
-| `component.form-field.required.line-height.default` | dimension | → `semantic.typography.body.line-height.sm` | Altura de linha de required no Form Field. | 1 |
+| `component.form-field.helper.color.default` | color | → `semantic.content.default` | Cor default do helper text do Form Field. | 3 |
+| `component.form-field.helper.color.disabled` | color | → `semantic.content.disabled` | Contrato helper.color de form-field, sincronizado a partir das Variables Figma atuais. | 2 |
+| `component.form-field.helper.font-size.default` | dimension | → `semantic.typography.body.font-size.xs` | Tamanho tipografico do helper text do Form Field. | 3 |
+| `component.form-field.helper.font-weight.default` | string | → `semantic.typography.body.font-weight.regular` | Peso tipografico do helper text do Form Field. | 3 |
+| `component.form-field.helper.line-height.default` | dimension | → `semantic.typography.body.line-height.xs` | Altura de linha do helper text do Form Field. | 3 |
+| `component.form-field.label-row.gap.default` | dimension | → `semantic.space.2xs` | Espacamento horizontal entre label e indicador required. | 3 |
+| `component.form-field.label.color.default` | color | → `semantic.content.strong` | Cor default do label do Form Field. | 3 |
+| `component.form-field.label.color.disabled` | color | → `semantic.content.disabled` | Contrato label.color de form-field, sincronizado a partir das Variables Figma atuais. | 1 |
+| `component.form-field.label.color.readonly` | color | → `semantic.content.default` | Contrato label.color de form-field, sincronizado a partir das Variables Figma atuais. | 1 |
+| `component.form-field.label.font-family.default` | string | → `semantic.typography.body.font-family.sans` | Contrato label.font-family de form-field, sincronizado a partir das Variables Figma atuais. | 2 |
+| `component.form-field.label.font-size.default` | dimension | → `semantic.typography.body.font-size.sm` | Tamanho tipografico de label no Form Field. | 3 |
+| `component.form-field.label.font-weight.default` | string | → `semantic.typography.body.font-weight.bold` | Peso tipografico de label no Form Field. | 3 |
+| `component.form-field.label.line-height.default` | dimension | → `semantic.typography.body.line-height.sm` | Altura de linha de label no Form Field. | 3 |
+| `component.form-field.required.color.default` | color | → `semantic.feedback.error.content-default` | Cor do indicador required do Form Field. | 3 |
+| `component.form-field.required.font-family.default` | string | → `semantic.typography.body.font-family.sans` | Contrato required.font-family de form-field, sincronizado a partir das Variables Figma atuais. | 2 |
+| `component.form-field.required.font-size.default` | dimension | → `semantic.typography.body.font-size.sm` | Tamanho tipografico de required no Form Field. | 3 |
+| `component.form-field.required.font-weight.default` | string | → `semantic.typography.body.font-weight.bold` | Peso tipografico de required no Form Field. | 3 |
+| `component.form-field.required.line-height.default` | dimension | → `semantic.typography.body.line-height.sm` | Altura de linha de required no Form Field. | 3 |
+| `component.form-field.stack.gap.default` | dimension | → `semantic.space.xs` | Contrato stack.gap de form-field, sincronizado a partir das Variables Figma atuais. | 2 |
 
 ### component.input
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `component.input.bg.default` | color | → `semantic.surface.default` | Bg do Field Input Text default. | 0 |
-| `component.input.bg.disabled` | color | → `semantic.background.disabled` | Bg do Field Input Text disabled. | 0 |
-| `component.input.bg.error` | color | → `semantic.surface.default` | Bg do Field Input Text error. | 0 |
-| `component.input.bg.error-hover` | color | → `semantic.surface.default` | Bg do Field Input Text em erro durante hover. | 0 |
-| `component.input.bg.filled` | color | → `semantic.surface.default` | Bg do Field Input Text filled. | 0 |
-| `component.input.bg.focus` | color | → `semantic.surface.default` | Token component para input / bg / focus. | 0 |
-| `component.input.bg.readonly` | color | → `semantic.background.subtle` | Bg do Field Input Text readonly. | 0 |
-| `component.input.border-color.default` | color | → `semantic.border.control-default` | Border color do Field Input Text default. | 0 |
-| `component.input.border-color.disabled` | color | → `semantic.border.control-disabled` | Border color do Field Input Text disabled. | 0 |
-| `component.input.border-color.error` | color | → `semantic.border.error` | Border color do Field Input Text error. | 0 |
-| `component.input.border-color.error-hover` | color | → `semantic.feedback.error.border.hover` | Border color do Field Input Text em erro durante hover. | 0 |
-| `component.input.border-color.filled` | color | → `semantic.border.strong` | Border color do Field Input Text filled. | 0 |
-| `component.input.border-color.focus` | color | → `semantic.border.focus` | Token component para input / border color / focus. | 0 |
-| `component.input.border-color.hover` | color | → `semantic.border.control-hover` | Border color do Field Input Text hover. | 0 |
-| `component.input.border-color.readonly` | color | → `semantic.border.subtle` | Border color do Field Input Text readonly. | 0 |
-| `component.input.border-width.default` | dimension | → `semantic.border.width.default` | Border width do Field Input Text. | 0 |
-| `component.input.content.color.default` | color | → `semantic.content.strong` | Cor de conteúdo preenchido do Input Text. | 0 |
-| `component.input.content.color.disabled` | color | → `semantic.content.disabled` | Cor de conteúdo disabled do Input Text. | 0 |
-| `component.input.content.color.readonly` | color | → `semantic.content.default` | Cor de conteúdo readonly do Input Text. | 0 |
-| `component.input.focus-ring.color.default` | color | → `semantic.border.focus` | Cor do focus ring Input Text. | 0 |
-| `component.input.focus-ring.color.error` | color | → `semantic.border.focus-error` | Cor do focus ring Input Text error. | 0 |
-| `component.input.focus-ring.color.readonly` | color | → `semantic.border.control-default` | Cor neutra do focus ring Input Text readonly. | 0 |
-| `component.input.focus-ring.offset.default` | dimension | → `semantic.border.width.focus` | Offset CSS do focus ring Input Text. | 1 |
 | `component.input.focus-ring.radius.default` | dimension | → `semantic.radius.lg` | Radius do focus ring Input Text. | 0 |
-| `component.input.focus-ring.stroke-width.default` | dimension | → `semantic.border.width.focus` | Stroke width do focus ring Input Text. | 0 |
 | `component.input.gap.lg` | dimension | → `semantic.space.sm` | Gap interno do Field Input Text lg. | 1 |
 | `component.input.gap.md` | dimension | → `semantic.space.xs` | Gap interno do Field Input Text md. | 1 |
 | `component.input.gap.sm` | dimension | → `semantic.space.xs` | Gap interno do Field Input Text sm. | 1 |
 | `component.input.height.lg` | dimension | → `semantic.size.2xl` | Altura da superfície visual do Input Text por tamanho. | 1 |
 | `component.input.height.md` | dimension | → `semantic.size.xl` | Altura da superfície visual do Input Text por tamanho. | 1 |
 | `component.input.height.sm` | dimension | → `semantic.size.lg` | Altura da superfície visual do Input Text por tamanho. | 1 |
-| `component.input.helper.color.default` | color | → `semantic.content.default` | Cor do helper text Input Text. | 1 |
-| `component.input.helper.color.disabled` | color | → `semantic.content.disabled` | Cor do helper text Input Text disabled. | 1 |
-| `component.input.helper.font-family.default` | string | → `semantic.typography.body.font-family.sans` | Font-family do helper text Input Text. | 1 |
-| `component.input.helper.font-size.default` | dimension | → `semantic.typography.body.font-size.xs` | Font-size do helper text Input Text. | 1 |
-| `component.input.helper.font-weight.default` | string | → `semantic.typography.body.font-weight.regular` | Font-weight do helper text Input Text. | 1 |
-| `component.input.helper.letter-spacing.default` | dimension | → `semantic.typography.body.letter-spacing.normal` | Letter-spacing do helper text Input Text. | 1 |
-| `component.input.helper.line-height.default` | dimension | → `semantic.typography.body.line-height.xs` | Line-height do helper text Input Text. | 1 |
 | `component.input.icon-frame.padding-x.default` | dimension | → `semantic.space.xs` | Padding horizontal do frame externo de ícone Input Text. | 1 |
-| `component.input.icon.color.default` | color | → `semantic.content.subtle` | Cor do ícone Input Text. | 1 |
-| `component.input.icon.color.disabled` | color | → `semantic.content.disabled` | Cor do ícone Input Text disabled. | 1 |
-| `component.input.icon.frame-size.lg` | dimension | → `semantic.size.md` | Tamanho do frame de ícone Input Text lg. | 1 |
-| `component.input.icon.frame-size.md` | dimension | → `semantic.size.sm` | Tamanho do frame de ícone Input Text md. | 1 |
-| `component.input.icon.frame-size.sm` | dimension | → `semantic.size.xs` | Tamanho do frame de ícone Input Text sm. | 1 |
+| `component.input.icon.color.default` | color | → `semantic.icon.color.default` | Cor do ícone Input Text. | 1 |
+| `component.input.icon.color.disabled` | color | → `semantic.icon.color.disabled` | Cor do ícone Input Text disabled. | 1 |
 | `component.input.icon.size.lg` | dimension | → `semantic.size.md` | Token component para input / icon / size / lg. | 1 |
 | `component.input.icon.size.md` | dimension | → `semantic.size.sm` | Token component para input / icon / size / md. | 1 |
 | `component.input.icon.size.sm` | dimension | → `semantic.size.xs` | Token component para input / icon / size / sm. | 1 |
-| `component.input.label-row.gap.default` | dimension | → `semantic.space.2xs` | Gap entre label e required Input Text. | 1 |
-| `component.input.label.color.default` | color | → `semantic.content.strong` | Cor do label Input Text. | 1 |
-| `component.input.label.color.disabled` | color | → `semantic.content.disabled` | Cor do label Input Text disabled. | 1 |
-| `component.input.label.color.readonly` | color | → `semantic.content.default` | Cor do label Input Text readonly. | 1 |
-| `component.input.label.font-family.default` | string | → `semantic.typography.body.font-family.sans` | Font-family do label Input Text. | 1 |
-| `component.input.label.font-size.lg` | dimension | → `semantic.typography.body.font-size.sm` | Font-size do label Input Text lg. | 1 |
-| `component.input.label.font-size.md` | dimension | → `semantic.typography.body.font-size.sm` | Font-size do label Input Text md. | 1 |
-| `component.input.label.font-size.sm` | dimension | → `semantic.typography.body.font-size.xs` | Font-size do label Input Text sm. | 1 |
-| `component.input.label.font-weight.default` | string | → `semantic.typography.body.font-weight.bold` | Font-weight do label Input Text. | 1 |
-| `component.input.label.letter-spacing.default` | dimension | → `semantic.typography.body.letter-spacing.normal` | Letter-spacing do label Input Text. | 1 |
-| `component.input.label.line-height.lg` | dimension | → `semantic.typography.body.line-height.sm` | Line-height do label Input Text lg. | 1 |
-| `component.input.label.line-height.md` | dimension | → `semantic.typography.body.line-height.sm` | Line-height do label Input Text md. | 1 |
-| `component.input.label.line-height.sm` | dimension | → `semantic.typography.body.line-height.xs` | Line-height do label Input Text sm. | 1 |
+| `component.input.icon.stroke-width.lg` | dimension | → `semantic.icon.stroke-width.regular.24` | Contrato icon.stroke-width de input, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.input.icon.stroke-width.md` | dimension | → `semantic.icon.stroke-width.regular.20` | Contrato icon.stroke-width de input, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.input.icon.stroke-width.sm` | dimension | → `semantic.icon.stroke-width.regular.16` | Contrato icon.stroke-width de input, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.input.padding-x.lg` | dimension | → `semantic.space.md` | Padding horizontal do Field Input Text lg. | 1 |
 | `component.input.padding-x.md` | dimension | → `semantic.space.sm` | Padding horizontal do Field Input Text md. | 1 |
-| `component.input.padding-x.sm` | dimension | → `semantic.space.sm` | Padding horizontal do Field Input Text sm. | 1 |
-| `component.input.padding-y.lg` | dimension | → `semantic.space.md` | Padding vertical do Field Input Text lg. | 1 |
-| `component.input.padding-y.md` | dimension | → `semantic.space.control.padding.10` | Padding vertical do Field Input Text md. | 1 |
-| `component.input.padding-y.sm` | dimension | → `semantic.space.sm` | Padding vertical do Field Input Text sm. | 1 |
-| `component.input.placeholder.color.default` | color | → `semantic.content.subtle` | Cor do placeholder Input Text. | 0 |
-| `component.input.placeholder.color.disabled` | color | → `semantic.content.disabled` | Cor do placeholder Input Text disabled. | 0 |
-| `component.input.radius.default` | dimension | → `semantic.radius.md` | Radius do Field Input Text. | 0 |
-| `component.input.required.color.default` | color | → `semantic.feedback.error.content-default` | Cor do indicador required Input Text. | 1 |
-| `component.input.required.font-family.default` | string | → `semantic.typography.body.font-family.sans` | Font-family do indicador required Input Text. | 1 |
-| `component.input.required.font-size.default` | dimension | → `semantic.typography.body.font-size.sm` | Font-size do indicador required Input Text. | 1 |
-| `component.input.required.font-weight.default` | string | → `semantic.typography.body.font-weight.bold` | Font-weight do indicador required Input Text. | 1 |
-| `component.input.required.letter-spacing.default` | dimension | → `semantic.typography.body.letter-spacing.normal` | Letter-spacing do indicador required Input Text. | 1 |
-| `component.input.required.line-height.default` | dimension | → `semantic.typography.body.line-height.sm` | Line-height do indicador required Input Text. | 1 |
-| `component.input.stack.gap.default` | dimension | → `semantic.space.xs` | Gap vertical entre label, field e helper no Input Text. | 1 |
+| `component.input.padding-x.sm` | dimension | → `semantic.space.xs` | Padding horizontal do Field Input Text sm. | 1 |
 | `component.input.text-frame.padding-x.default` | dimension | → `semantic.space.xs` | Padding horizontal do Text Frame Input Text. | 1 |
 | `component.input.text.font-family.default` | string | → `semantic.typography.body.font-family.sans` | Font-family do texto Input Text. | 1 |
 | `component.input.text.font-size.lg` | dimension | → `semantic.typography.body.font-size.md` | Font-size do texto Input Text lg. | 1 |
@@ -1102,6 +1115,9 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
+| `component.modal.action.fill.primary` | color | → `semantic.primary.background.default` | Contrato action.fill de modal, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.modal.bg.default` | color | → `semantic.surface.elevated` | Contrato bg de modal, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.modal.body.color.default` | color | → `semantic.content.strong` | Contrato body.color de modal, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.modal.body.font-size.lg` | dimension | → `semantic.typography.body.font-size.lg` | Font-size do body Modal lg. | 1 |
 | `component.modal.body.font-size.md` | dimension | → `semantic.typography.body.font-size.md` | Font-size do body Modal md. | 1 |
 | `component.modal.body.font-size.sm` | dimension | → `semantic.typography.body.font-size.sm` | Font-size do body Modal sm. | 1 |
@@ -1112,30 +1128,32 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.modal.body.padding-bottom.lg` | dimension | → `semantic.space.xl` | Padding bottom do body Modal lg. | 1 |
 | `component.modal.body.padding-bottom.md` | dimension | → `semantic.space.xl` | Padding bottom do body Modal md. | 1 |
 | `component.modal.body.padding-bottom.sm` | dimension | → `semantic.space.lg` | Padding bottom do body Modal sm. | 1 |
-| `component.modal.body.padding-x.lg` | dimension | → `semantic.space.xl` | Padding horizontal do body Modal lg. | 1 |
+| `component.modal.body.padding-x.lg` | dimension | → `semantic.space.2xl` | Padding horizontal do body Modal lg. | 1 |
 | `component.modal.body.padding-x.md` | dimension | → `semantic.space.xl` | Padding horizontal do body Modal md. | 1 |
 | `component.modal.body.padding-x.sm` | dimension | → `semantic.space.lg` | Padding horizontal do body Modal sm. | 1 |
-| `component.modal.close.frame-size.default` | dimension | → `semantic.size.md` | Token component para modal / close / frame size / default. | 1 |
+| `component.modal.close.color.default` | color | → `semantic.icon.color.default` | Contrato close.color de modal, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.modal.close.icon-size.default` | dimension | → `semantic.size.xs` | Tamanho do ícone Close Modal. | 1 |
+| `component.modal.close.icon.stroke-width.default` | dimension | → `semantic.icon.stroke-width.regular.24` | Contrato close.icon.stroke-width de modal, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.modal.close.padding.default` | dimension | → `semantic.space.xs` | Padding do close Modal. | 1 |
-| `component.modal.footer.gap.default` | dimension | → `semantic.space.sm` | Gap horizontal do footer Modal. | 1 |
-| `component.modal.footer.padding-bottom.lg` | dimension | → `semantic.space.xl` | Padding bottom do footer Modal lg. | 1 |
+| `component.modal.close.size.default` | dimension | → `semantic.size.md` | Contrato close.size de modal, sincronizado a partir das Variables Figma atuais. | 1 |
+| `component.modal.footer.gap.default` | dimension | → `semantic.space.md` | Gap horizontal do footer Modal. | 1 |
+| `component.modal.footer.padding-bottom.lg` | dimension | → `semantic.space.2xl` | Padding bottom do footer Modal lg. | 1 |
 | `component.modal.footer.padding-bottom.md` | dimension | → `semantic.space.xl` | Padding bottom do footer Modal md. | 1 |
 | `component.modal.footer.padding-bottom.sm` | dimension | → `semantic.space.lg` | Padding bottom do footer Modal sm. | 1 |
-| `component.modal.footer.padding-top.lg` | dimension | → `semantic.space.md` | Padding top do footer Modal lg. | 1 |
+| `component.modal.footer.padding-top.lg` | dimension | → `semantic.space.lg` | Padding top do footer Modal lg. | 1 |
 | `component.modal.footer.padding-top.md` | dimension | → `semantic.space.md` | Padding top do footer Modal md. | 1 |
 | `component.modal.footer.padding-top.sm` | dimension | → `semantic.space.sm` | Padding top do footer Modal sm. | 1 |
-| `component.modal.footer.padding-x.lg` | dimension | → `semantic.space.xl` | Padding horizontal do footer Modal lg. | 1 |
+| `component.modal.footer.padding-x.lg` | dimension | → `semantic.space.2xl` | Padding horizontal do footer Modal lg. | 1 |
 | `component.modal.footer.padding-x.md` | dimension | → `semantic.space.xl` | Padding horizontal do footer Modal md. | 1 |
 | `component.modal.footer.padding-x.sm` | dimension | → `semantic.space.lg` | Padding horizontal do footer Modal sm. | 1 |
-| `component.modal.header.gap.default` | dimension | → `semantic.space.sm` | Gap horizontal do header Modal. | 1 |
-| `component.modal.header.padding-bottom.lg` | dimension | → `semantic.space.md` | Padding bottom do header Modal lg. | 1 |
+| `component.modal.header.gap.default` | dimension | → `semantic.space.lg` | Gap horizontal do header Modal. | 1 |
+| `component.modal.header.padding-bottom.lg` | dimension | → `semantic.space.lg` | Padding bottom do header Modal lg. | 1 |
 | `component.modal.header.padding-bottom.md` | dimension | → `semantic.space.md` | Padding bottom do header Modal md. | 1 |
 | `component.modal.header.padding-bottom.sm` | dimension | → `semantic.space.sm` | Padding bottom do header Modal sm. | 1 |
-| `component.modal.header.padding-top.lg` | dimension | → `semantic.space.xl` | Padding top do header Modal lg. | 1 |
+| `component.modal.header.padding-top.lg` | dimension | → `semantic.space.2xl` | Padding top do header Modal lg. | 1 |
 | `component.modal.header.padding-top.md` | dimension | → `semantic.space.xl` | Padding top do header Modal md. | 1 |
 | `component.modal.header.padding-top.sm` | dimension | → `semantic.space.lg` | Padding top do header Modal sm. | 1 |
-| `component.modal.header.padding-x.lg` | dimension | → `semantic.space.xl` | Padding horizontal do header Modal lg. | 1 |
+| `component.modal.header.padding-x.lg` | dimension | → `semantic.space.2xl` | Padding horizontal do header Modal lg. | 1 |
 | `component.modal.header.padding-x.md` | dimension | → `semantic.space.xl` | Padding horizontal do header Modal md. | 1 |
 | `component.modal.header.padding-x.sm` | dimension | → `semantic.space.lg` | Padding horizontal do header Modal sm. | 1 |
 | `component.modal.max-width.lg` | dimension | → `semantic.size.layout.lg` | Max-width do Modal lg. | 1 |
@@ -1145,6 +1163,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.modal.overlay.z-index.default` | number | → `semantic.z.modal` | Z-index do overlay Modal. | 1 |
 | `component.modal.radius.default` | dimension | → `semantic.radius.lg` | Radius do Modal. | 1 |
 | `component.modal.shadow.default` | shadow | → `semantic.shadow.modal` | Shadow do Modal. | 1 |
+| `component.modal.title.color.default` | color | → `semantic.content.strong` | Contrato title.color de modal, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.modal.title.font-size.lg` | dimension | → `semantic.typography.body.font-size.3xl` | Font-size do title Modal lg. | 1 |
 | `component.modal.title.font-size.md` | dimension | → `semantic.typography.body.font-size.2xl` | Font-size do title Modal md. | 1 |
 | `component.modal.title.font-size.sm` | dimension | → `semantic.typography.body.font-size.xl` | Font-size do title Modal sm. | 1 |
@@ -1161,11 +1180,13 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `component.radio.content.gap.default` | dimension | → `semantic.space.xs` | Radio content frame default | 1 |
-| `component.radio.control.border-color.selected.default` | color | → `semantic.primary.background.default` | Radio control visual selected | 1 |
+| `component.radio.control.border-color.selected.default` | color | → `semantic.primary.border.default` | Radio control visual selected | 1 |
 | `component.radio.control.border-color.selected.focus` | color | → `semantic.border.focus` | Token component para radio / control / border color / selected / focus. | 0 |
-| `component.radio.control.border-color.selected.hover` | color | → `semantic.primary.background.hover` | Border do control Radio selected em hover. | 1 |
+| `component.radio.control.border-color.selected.hover` | color | → `semantic.primary.border.hover` | Border do control Radio selected em hover. | 1 |
 | `component.radio.control.border-color.unselected.default` | color | → `semantic.border.control-default` | Radio control visual unselected | 1 |
 | `component.radio.control.border-color.unselected.disabled` | color | → `semantic.border.control-disabled` | Radio control visual unselected disabled | 1 |
+| `component.radio.control.border-color.unselected.error` | color | → `semantic.border.error` | Contrato control.border-color.unselected de radio, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.radio.control.border-color.unselected.error-hover` | color | → `semantic.border.error-hover` | Contrato control.border-color.unselected de radio, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.radio.control.border-color.unselected.focus` | color | → `semantic.border.focus` | Token component para radio / control / border color / unselected / focus. | 0 |
 | `component.radio.control.border-color.unselected.hover` | color | → `semantic.border.control-hover` | Border do control Radio unselected em hover. | 1 |
 | `component.radio.control.border-width.selected.default` | dimension | → `semantic.border.width.strong` | Radio control visual selected | 1 |
@@ -1182,21 +1203,15 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.radio.control.size.lg` | dimension | → `semantic.size.md` | Tamanho visual do control circular do Radio por size. | 1 |
 | `component.radio.control.size.md` | dimension | → `semantic.size.sm` | Tamanho visual do control circular do Radio por size. | 1 |
 | `component.radio.control.size.sm` | dimension | → `semantic.size.xs` | Tamanho visual do control circular do Radio por size. | 1 |
-| `component.radio.description.color.default` | color | → `semantic.content.strong` | Radio description default | 1 |
 | `component.radio.dot.fill.selected.default` | color | → `semantic.primary.content-default` | Radio dot interno selected | 1 |
 | `component.radio.dot.fill.selected.disabled` | color | → `semantic.primary.content-disabled` | Radio dot interno selected disabled | 1 |
 | `component.radio.dot.fill.selected.focus` | color | → `semantic.primary.content-default` | Token component para radio / dot / fill / selected / focus. | 0 |
 | `component.radio.dot.fill.selected.hover` | color | → `semantic.primary.content-hover` | Fill do dot Radio selected em hover. | 1 |
 | `component.radio.dot.radius.default` | dimension | → `semantic.radius.full` | Radio dot interno default | 1 |
-| `component.radio.dot.size.lg` | dimension | → `foundation.dimension.10` | Radio dot interno size lg | 1 |
-| `component.radio.dot.size.md` | dimension | → `foundation.dimension.8` | Radio dot interno size md | 1 |
-| `component.radio.dot.size.sm` | dimension | → `foundation.dimension.6` | Radio dot interno size sm | 1 |
-| `component.radio.focus-ring.color.default` | color | → `semantic.border.focus` | Radio focus ring default | 1 |
+| `component.radio.dot.size.lg` | dimension | → `semantic.control.radio.dot.size.lg` | Radio dot interno size lg | 1 |
+| `component.radio.dot.size.md` | dimension | → `semantic.control.radio.dot.size.md` | Radio dot interno size md | 1 |
+| `component.radio.dot.size.sm` | dimension | → `semantic.control.radio.dot.size.sm` | Radio dot interno size sm | 1 |
 | `component.radio.focus-ring.radius.default` | dimension | → `semantic.radius.full` | Radio focus ring default | 0 |
-| `component.radio.focus-ring.stroke-width.default` | dimension | → `semantic.border.width.focus` | Radio focus ring default | 1 |
-| `component.radio.helper-text.color.default` | color | → `semantic.content.default` | Radio helper text default | 1 |
-| `component.radio.label.color.default` | color | → `semantic.content.strong` | Radio label default | 1 |
-| `component.radio.label.color.disabled` | color | → `semantic.content.disabled` | Radio label disabled | 1 |
 | `component.radio.target.gap.default` | dimension | → `semantic.space.sm` | Radio target interativo default | 1 |
 | `component.radio.target.height.lg` | dimension | → `semantic.size.2xl` | Altura minima da area interativa do Radio por size. | 1 |
 | `component.radio.target.height.md` | dimension | → `semantic.size.xl` | Altura minima da area interativa do Radio por size. | 1 |
@@ -1206,93 +1221,34 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `component.select.bg.default` | color | → `semantic.surface.default` | Bg do Field Select por estado. | 0 |
-| `component.select.bg.disabled` | color | → `semantic.background.disabled` | Bg do Field Select por estado. | 0 |
-| `component.select.bg.error` | color | → `semantic.surface.default` | Bg do Field Select por estado. | 0 |
-| `component.select.bg.error-hover` | color | → `semantic.surface.default` | Bg do Field Select em erro durante hover. | 0 |
-| `component.select.bg.filled` | color | → `semantic.surface.default` | Bg do Field Select por estado. | 0 |
-| `component.select.bg.focus` | color | → `semantic.surface.default` | Token component para select / bg / focus. | 0 |
-| `component.select.bg.readonly` | color | → `semantic.background.subtle` | Bg do Field Select por estado. | 0 |
-| `component.select.border-color.default` | color | → `semantic.border.control-default` | Cor da borda do Field Select por estado. | 0 |
-| `component.select.border-color.disabled` | color | → `semantic.border.control-disabled` | Cor da borda do Field Select por estado. | 0 |
-| `component.select.border-color.error` | color | → `semantic.border.error` | Cor da borda do Field Select por estado. | 0 |
-| `component.select.border-color.error-hover` | color | → `semantic.feedback.error.border.hover` | Border color do Field Select em erro durante hover. | 0 |
-| `component.select.border-color.filled` | color | → `semantic.border.strong` | Cor da borda do Field Select por estado. | 0 |
-| `component.select.border-color.focus` | color | → `semantic.border.focus` | Token component para select / border color / focus. | 0 |
-| `component.select.border-color.hover` | color | → `semantic.border.control-hover` | Cor da borda do Field Select por estado. | 0 |
-| `component.select.border-color.readonly` | color | → `semantic.border.subtle` | Cor da borda do Field Select por estado. | 0 |
-| `component.select.border-width.default` | dimension | → `semantic.border.width.default` | Espessura da borda do Field Select. | 0 |
 | `component.select.chevron-frame.padding-x.default` | dimension | → `semantic.space.xs` | Padding horizontal do frame externo do chevron Select. | 1 |
-| `component.select.chevron.color.default` | color | → `semantic.content.default` | Cor do chevron do Select por estado. | 1 |
-| `component.select.chevron.color.disabled` | color | → `semantic.content.disabled` | Cor do chevron do Select por estado. | 1 |
-| `component.select.chevron.frame-size.lg` | dimension | → `semantic.size.md` | Tamanho do frame do chevron do Select por size. | 1 |
-| `component.select.chevron.frame-size.md` | dimension | → `semantic.size.sm` | Tamanho do frame do chevron do Select por size. | 1 |
-| `component.select.chevron.frame-size.sm` | dimension | → `semantic.size.xs` | Tamanho do frame do chevron do Select por size. | 1 |
+| `component.select.chevron.color.default` | color | → `semantic.icon.color.default` | Cor do chevron do Select por estado. | 1 |
+| `component.select.chevron.color.disabled` | color | → `semantic.icon.color.disabled` | Cor do chevron do Select por estado. | 1 |
 | `component.select.chevron.size.lg` | dimension | → `semantic.size.md` | Token component para select / chevron / size / lg. | 1 |
 | `component.select.chevron.size.md` | dimension | → `semantic.size.sm` | Token component para select / chevron / size / md. | 1 |
 | `component.select.chevron.size.sm` | dimension | → `semantic.size.xs` | Token component para select / chevron / size / sm. | 1 |
-| `component.select.content.color.default` | color | → `semantic.content.strong` | Cor do conteúdo preenchido do Select por estado. | 0 |
-| `component.select.content.color.disabled` | color | → `semantic.content.disabled` | Cor do conteúdo preenchido do Select por estado. | 0 |
-| `component.select.content.color.readonly` | color | → `semantic.content.default` | Cor do conteúdo preenchido do Select por estado. | 0 |
-| `component.select.focus-ring.color.default` | color | → `semantic.border.focus` | Cor do focus ring do Select por estado. | 0 |
-| `component.select.focus-ring.color.error` | color | → `semantic.border.focus-error` | Cor do focus ring do Select por estado. | 0 |
-| `component.select.focus-ring.color.readonly` | color | → `semantic.border.control-default` | Cor neutra do focus ring Select readonly. | 0 |
-| `component.select.focus-ring.offset.default` | dimension | → `semantic.border.width.focus` | Offset do focus ring do Select. | 1 |
+| `component.select.chevron.stroke-width.lg` | dimension | → `semantic.icon.stroke-width.regular.24` | Contrato chevron.stroke-width de select, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.select.chevron.stroke-width.md` | dimension | → `semantic.icon.stroke-width.regular.20` | Contrato chevron.stroke-width de select, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.select.chevron.stroke-width.sm` | dimension | → `semantic.icon.stroke-width.regular.16` | Contrato chevron.stroke-width de select, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.select.focus-ring.radius.default` | dimension | → `semantic.radius.lg` | Radius do focus ring do Select. | 0 |
-| `component.select.focus-ring.stroke-width.default` | dimension | → `semantic.border.width.focus` | Espessura do focus ring do Select. | 0 |
 | `component.select.gap.lg` | dimension | → `semantic.space.sm` | Gap interno do Field Select por size. | 1 |
 | `component.select.gap.md` | dimension | → `semantic.space.xs` | Gap interno do Field Select por size. | 1 |
 | `component.select.gap.sm` | dimension | → `semantic.space.xs` | Gap interno do Field Select por size. | 1 |
 | `component.select.height.lg` | dimension | → `semantic.size.2xl` | Altura da superfície visual do Select por size. | 1 |
 | `component.select.height.md` | dimension | → `semantic.size.xl` | Altura da superfície visual do Select por size. | 1 |
 | `component.select.height.sm` | dimension | → `semantic.size.lg` | Altura da superfície visual do Select por size. | 1 |
-| `component.select.helper.color.default` | color | → `semantic.content.default` | Cor do helper text do Select por estado. | 1 |
-| `component.select.helper.color.disabled` | color | → `semantic.content.disabled` | Cor do helper text do Select por estado. | 1 |
-| `component.select.helper.font-family.default` | string | → `semantic.typography.body.font-family.sans` | Tipografia do helper text do Select. | 1 |
-| `component.select.helper.font-size.lg` | dimension | → `semantic.typography.body.font-size.sm` | Tipografia do helper text do Select. | 1 |
-| `component.select.helper.font-size.md` | dimension | → `semantic.typography.body.font-size.sm` | Tipografia do helper text do Select. | 1 |
-| `component.select.helper.font-size.sm` | dimension | → `semantic.typography.body.font-size.xs` | Tipografia do helper text do Select. | 1 |
-| `component.select.helper.font-weight.default` | string | → `semantic.typography.body.font-weight.regular` | Tipografia do helper text do Select. | 1 |
-| `component.select.helper.letter-spacing.default` | dimension | → `semantic.typography.body.letter-spacing.normal` | Tipografia do helper text do Select. | 1 |
-| `component.select.helper.line-height.lg` | dimension | → `semantic.typography.body.line-height.sm` | Tipografia do helper text do Select. | 1 |
-| `component.select.helper.line-height.md` | dimension | → `semantic.typography.body.line-height.sm` | Tipografia do helper text do Select. | 1 |
-| `component.select.helper.line-height.sm` | dimension | → `semantic.typography.body.line-height.xs` | Tipografia do helper text do Select. | 1 |
 | `component.select.icon-frame.padding-x.default` | dimension | → `semantic.space.xs` | Padding horizontal do frame externo de ícone Select. | 1 |
-| `component.select.icon.color.default` | color | → `semantic.content.default` | Cor do ícone leading do Select por estado. | 1 |
-| `component.select.icon.color.disabled` | color | → `semantic.content.disabled` | Cor do ícone leading do Select por estado. | 1 |
-| `component.select.icon.frame-size.lg` | dimension | → `semantic.size.md` | Tamanho do frame de ícone leading do Select por size. | 1 |
-| `component.select.icon.frame-size.md` | dimension | → `semantic.size.sm` | Tamanho do frame de ícone leading do Select por size. | 1 |
-| `component.select.icon.frame-size.sm` | dimension | → `semantic.size.xs` | Tamanho do frame de ícone leading do Select por size. | 1 |
+| `component.select.icon.color.default` | color | → `semantic.icon.color.default` | Cor do ícone leading do Select por estado. | 1 |
+| `component.select.icon.color.disabled` | color | → `semantic.icon.color.disabled` | Cor do ícone leading do Select por estado. | 1 |
 | `component.select.icon.size.lg` | dimension | → `semantic.size.md` | Token component para select / icon / size / lg. | 1 |
 | `component.select.icon.size.md` | dimension | → `semantic.size.sm` | Token component para select / icon / size / md. | 1 |
 | `component.select.icon.size.sm` | dimension | → `semantic.size.xs` | Token component para select / icon / size / sm. | 1 |
-| `component.select.label-row.gap.default` | dimension | → `semantic.space.2xs` | Gap entre label e required do Select. | 1 |
-| `component.select.label.color.default` | color | → `semantic.content.strong` | Cor do label do Select. | 1 |
-| `component.select.label.font-family.default` | string | → `semantic.typography.body.font-family.sans` | Tipografia do label do Select. | 1 |
-| `component.select.label.font-size.lg` | dimension | → `semantic.typography.body.font-size.sm` | Tipografia do label do Select. | 1 |
-| `component.select.label.font-size.md` | dimension | → `semantic.typography.body.font-size.sm` | Tipografia do label do Select. | 1 |
-| `component.select.label.font-size.sm` | dimension | → `semantic.typography.body.font-size.xs` | Tipografia do label do Select. | 1 |
-| `component.select.label.font-weight.default` | string | → `semantic.typography.body.font-weight.bold` | Tipografia do label do Select. | 1 |
-| `component.select.label.letter-spacing.default` | dimension | → `semantic.typography.body.letter-spacing.normal` | Tipografia do label do Select. | 1 |
-| `component.select.label.line-height.lg` | dimension | → `semantic.typography.body.line-height.sm` | Tipografia do label do Select. | 1 |
-| `component.select.label.line-height.md` | dimension | → `semantic.typography.body.line-height.sm` | Tipografia do label do Select. | 1 |
-| `component.select.label.line-height.sm` | dimension | → `semantic.typography.body.line-height.xs` | Tipografia do label do Select. | 1 |
+| `component.select.icon.stroke-width.lg` | dimension | → `semantic.icon.stroke-width.regular.24` | Contrato icon.stroke-width de select, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.select.icon.stroke-width.md` | dimension | → `semantic.icon.stroke-width.regular.20` | Contrato icon.stroke-width de select, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.select.icon.stroke-width.sm` | dimension | → `semantic.icon.stroke-width.regular.16` | Contrato icon.stroke-width de select, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.select.padding-x.lg` | dimension | → `semantic.space.md` | Padding horizontal do Field Select por size. | 1 |
 | `component.select.padding-x.md` | dimension | → `semantic.space.sm` | Padding horizontal do Field Select por size. | 1 |
-| `component.select.padding-x.sm` | dimension | → `semantic.space.sm` | Padding horizontal do Field Select por size. | 1 |
-| `component.select.padding-y.lg` | dimension | → `semantic.space.md` | Padding vertical do Field Select por size. | 1 |
-| `component.select.padding-y.md` | dimension | → `semantic.space.control.padding.10` | Padding vertical do Field Select por size. | 1 |
-| `component.select.padding-y.sm` | dimension | → `semantic.space.sm` | Padding vertical do Field Select por size. | 1 |
-| `component.select.placeholder.color.default` | color | → `semantic.content.subtle` | Cor do placeholder do Select por estado. | 0 |
-| `component.select.placeholder.color.disabled` | color | → `semantic.content.disabled` | Cor do placeholder do Select por estado. | 0 |
-| `component.select.radius.default` | dimension | → `semantic.radius.md` | Radius do Field Select. | 0 |
-| `component.select.required.color.default` | color | → `semantic.feedback.error.content-default` | Cor do indicador required do Select. | 1 |
-| `component.select.required.font-family.default` | string | → `semantic.typography.body.font-family.sans` | Tipografia do indicador required do Select. | 1 |
-| `component.select.required.font-size.default` | dimension | → `semantic.typography.body.font-size.sm` | Tipografia do indicador required do Select. | 1 |
-| `component.select.required.font-weight.default` | string | → `semantic.typography.body.font-weight.bold` | Tipografia do indicador required do Select. | 1 |
-| `component.select.required.letter-spacing.default` | dimension | → `semantic.typography.body.letter-spacing.normal` | Tipografia do indicador required do Select. | 1 |
-| `component.select.required.line-height.default` | dimension | → `semantic.typography.body.line-height.sm` | Tipografia do indicador required do Select. | 1 |
-| `component.select.stack.gap.default` | dimension | → `semantic.space.xs` | Gap vertical do Select composto. | 1 |
+| `component.select.padding-x.sm` | dimension | → `semantic.space.xs` | Padding horizontal do Field Select por size. | 1 |
 | `component.select.text-frame.padding-x.default` | dimension | → `semantic.space.xs` | Padding horizontal do Text Frame do Select. | 1 |
 | `component.select.text.font-family.default` | string | → `semantic.typography.body.font-family.sans` | Tipografia do texto do Select. | 1 |
 | `component.select.text.font-size.lg` | dimension | → `semantic.typography.body.font-size.md` | Tipografia do texto do Select. | 1 |
@@ -1308,33 +1264,45 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
+| `component.skeleton.circle.fill.default` | color | → `semantic.background.subtle` | Contrato circle.fill de skeleton, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.skeleton.circle.radius.default` | dimension | → `semantic.radius.full` | Radius circular do Skeleton Circle. | 1 |
 | `component.skeleton.circle.size.default` | dimension | → `semantic.size.xl` | Tamanho default do Skeleton Circle. | 1 |
-| `component.skeleton.rectangle.height.default` | dimension | → `foundation.dimension.120` | Altura default do Skeleton Rectangle. | 1 |
+| `component.skeleton.rectangle.fill.default` | color | → `semantic.background.subtle` | Contrato rectangle.fill de skeleton, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.skeleton.rectangle.height.default` | dimension | → `semantic.content-placeholder.rectangle.height.default` | Altura default do Skeleton Rectangle. | 1 |
 | `component.skeleton.rectangle.radius.default` | dimension | → `semantic.radius.md` | Radius do Skeleton Rectangle. | 1 |
-| `component.skeleton.text.height.default` | dimension | → `foundation.dimension.12` | Altura default do Skeleton Text. | 1 |
+| `component.skeleton.text.fill.default` | color | → `semantic.background.subtle` | Contrato text.fill de skeleton, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.skeleton.text.height.default` | dimension | → `semantic.content-placeholder.text.height.default` | Altura default do Skeleton Text. | 1 |
 | `component.skeleton.text.radius.default` | dimension | → `semantic.radius.md` | Radius do Skeleton Text. | 1 |
 
 ### component.spinner
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
+| `component.spinner.indicator.border-color.default` | color | → `semantic.border.brand` | Contrato indicator.border-color de spinner, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.spinner.indicator.border-color.on-color` | color | → `semantic.border.inverse` | Contrato indicator.border-color de spinner, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.spinner.radius.default` | dimension | → `semantic.radius.full` | Radius circular do Spinner. | 1 |
 | `component.spinner.ring.stroke-width.default` | dimension | → `semantic.border.width.strong` | Stroke width do ring Spinner. | 1 |
 | `component.spinner.size.lg` | dimension | → `semantic.size.lg` | Tamanho da superfície principal e ring do Spinner por size. | 1 |
 | `component.spinner.size.md` | dimension | → `semantic.size.md` | Tamanho da superfície principal e ring do Spinner por size. | 1 |
 | `component.spinner.size.sm` | dimension | → `semantic.size.xs` | Tamanho da superfície principal e ring do Spinner por size. | 1 |
+| `component.spinner.track.border-color.default` | color | → `semantic.border.overlay.default` | Contrato track.border-color de spinner, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.spinner.track.border-color.on-color` | color | → `semantic.border.overlay.medium` | Contrato track.border-color de spinner, sincronizado a partir das Variables Figma atuais. | 0 |
 
 ### component.tabs
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `component.tabs.focus-ring.radius.default` | dimension | → `semantic.radius.md` | Radius do focus ring Tabs. | 1 |
+| `component.tabs.indicator.fill.active` | color | → `semantic.primary.background.default` | Contrato indicator.fill de tabs, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.tabs.indicator.height.default` | dimension | → `semantic.border.width.strong` | Altura do indicator Tabs. | 1 |
 | `component.tabs.indicator.radius.default` | dimension | → `semantic.radius.md` | Radius do indicator Tabs. | 0 |
 | `component.tabs.item.indicator-gap.default` | dimension | → `semantic.space.control.padding.10` | Gap entre label e indicator Tabs. | 1 |
 | `component.tabs.item.padding-top.default` | dimension | → `semantic.space.md` | Padding top do item Tabs. | 1 |
 | `component.tabs.item.padding-x.default` | dimension | → `semantic.space.lg` | Padding horizontal do item Tabs. | 1 |
+| `component.tabs.label.color.active` | color | → `semantic.content.brand` | Contrato label.color de tabs, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.tabs.label.color.default` | color | → `semantic.content.default` | Contrato label.color de tabs, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.tabs.label.color.disabled` | color | → `semantic.content.disabled` | Contrato label.color de tabs, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.tabs.label.color.hover` | color | → `semantic.content.strong` | Contrato label.color de tabs, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.tabs.label.font-size.default` | dimension | → `semantic.typography.body.font-size.sm` | Font-size do label Tabs. | 1 |
 | `component.tabs.label.font-weight.default` | number | → `semantic.typography.body.font-weight.bold` | Font-weight do label Tabs. | 1 |
 | `component.tabs.label.letter-spacing.default` | dimension | → `semantic.typography.body.letter-spacing.normal` | Letter-spacing do label Tabs. | 1 |
@@ -1346,72 +1314,13 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `component.textarea.bg.default` | color | → `semantic.surface.default` | Bg do Field Textarea default. | 0 |
-| `component.textarea.bg.disabled` | color | → `semantic.background.disabled` | Bg do Field Textarea disabled. | 0 |
-| `component.textarea.bg.error` | color | → `semantic.surface.default` | Bg do Field Textarea error. | 0 |
-| `component.textarea.bg.error-hover` | color | → `semantic.surface.default` | Bg do Field Textarea em erro durante hover. | 0 |
-| `component.textarea.bg.filled` | color | → `semantic.surface.default` | Bg do Field Textarea filled. | 0 |
-| `component.textarea.bg.focus` | color | → `semantic.surface.default` | Token component para textarea / bg / focus. | 0 |
-| `component.textarea.bg.readonly` | color | → `semantic.background.subtle` | Bg do Field Textarea readonly. | 0 |
-| `component.textarea.border-color.default` | color | → `semantic.border.control-default` | Border color do Field Textarea default. | 0 |
-| `component.textarea.border-color.disabled` | color | → `semantic.border.control-disabled` | Border color do Field Textarea disabled. | 0 |
-| `component.textarea.border-color.error` | color | → `semantic.border.error` | Border color do Field Textarea error. | 0 |
-| `component.textarea.border-color.error-hover` | color | → `semantic.feedback.error.border.hover` | Border color do Field Textarea em erro durante hover. | 0 |
-| `component.textarea.border-color.filled` | color | → `semantic.border.strong` | Border color do Field Textarea filled. | 0 |
-| `component.textarea.border-color.focus` | color | → `semantic.border.focus` | Token component para textarea / border color / focus. | 0 |
-| `component.textarea.border-color.hover` | color | → `semantic.border.control-hover` | Border color do Field Textarea hover. | 0 |
-| `component.textarea.border-color.readonly` | color | → `semantic.border.subtle` | Border color do Field Textarea readonly. | 0 |
-| `component.textarea.border-width.default` | dimension | → `semantic.border.width.default` | Border width do Field Textarea. | 0 |
-| `component.textarea.content.color.default` | color | → `semantic.content.strong` | Cor de conteúdo preenchido do Textarea. | 0 |
-| `component.textarea.content.color.disabled` | color | → `semantic.content.disabled` | Cor de conteúdo disabled do Textarea. | 0 |
-| `component.textarea.content.color.readonly` | color | → `semantic.content.default` | Cor de conteúdo readonly do Textarea. | 0 |
-| `component.textarea.field.min-height.lg` | dimension | → `foundation.dimension.120` | Altura mínima do field Textarea lg. | 1 |
-| `component.textarea.field.min-height.md` | dimension | → `foundation.dimension.96` | Altura mínima do field Textarea md. | 1 |
-| `component.textarea.field.min-height.sm` | dimension | → `foundation.dimension.80` | Altura mínima do field Textarea sm. | 1 |
-| `component.textarea.focus-ring.color.default` | color | → `semantic.border.focus` | Cor do focus ring Textarea. | 0 |
-| `component.textarea.focus-ring.color.error` | color | → `semantic.border.focus-error` | Cor do focus ring Textarea error. | 0 |
-| `component.textarea.focus-ring.color.readonly` | color | → `semantic.border.control-default` | Cor neutra do focus ring Textarea readonly. | 0 |
-| `component.textarea.focus-ring.offset.default` | dimension | → `semantic.border.width.focus` | Offset CSS do focus ring Textarea. | 1 |
+| `component.textarea.field.min-height.lg` | dimension | → `semantic.control.textarea.min-height.lg` | Altura mínima do field Textarea lg. | 1 |
+| `component.textarea.field.min-height.md` | dimension | → `semantic.control.textarea.min-height.md` | Altura mínima do field Textarea md. | 1 |
+| `component.textarea.field.min-height.sm` | dimension | → `semantic.control.textarea.min-height.sm` | Altura mínima do field Textarea sm. | 1 |
 | `component.textarea.focus-ring.radius.default` | dimension | → `semantic.radius.lg` | Radius do focus ring Textarea. | 0 |
-| `component.textarea.focus-ring.stroke-width.default` | dimension | → `semantic.border.width.focus` | Stroke width do focus ring Textarea. | 0 |
-| `component.textarea.helper.color.default` | color | → `semantic.content.default` | Cor do helper text Textarea. | 0 |
-| `component.textarea.helper.color.disabled` | color | → `semantic.content.disabled` | Cor do helper text Textarea disabled. | 0 |
-| `component.textarea.helper.font-family.default` | string | → `semantic.typography.body.font-family.sans` | Font-family do helper text Textarea. | 0 |
-| `component.textarea.helper.font-size.lg` | dimension | → `semantic.typography.body.font-size.sm` | Font-size do helper text Textarea lg. | 0 |
-| `component.textarea.helper.font-size.md` | dimension | → `semantic.typography.body.font-size.sm` | Font-size do helper text Textarea md. | 0 |
-| `component.textarea.helper.font-size.sm` | dimension | → `semantic.typography.body.font-size.xs` | Font-size do helper text Textarea sm. | 0 |
-| `component.textarea.helper.font-weight.default` | string | → `semantic.typography.body.font-weight.regular` | Font-weight do helper text Textarea. | 0 |
-| `component.textarea.helper.letter-spacing.default` | dimension | → `semantic.typography.body.letter-spacing.normal` | Letter-spacing do helper text Textarea. | 0 |
-| `component.textarea.helper.line-height.lg` | dimension | → `semantic.typography.body.line-height.sm` | Line-height do helper text Textarea lg. | 0 |
-| `component.textarea.helper.line-height.md` | dimension | → `semantic.typography.body.line-height.sm` | Line-height do helper text Textarea md. | 0 |
-| `component.textarea.helper.line-height.sm` | dimension | → `semantic.typography.body.line-height.xs` | Line-height do helper text Textarea sm. | 0 |
-| `component.textarea.label-row.gap.default` | dimension | → `semantic.space.2xs` | Gap entre label e required Textarea. | 0 |
-| `component.textarea.label.color.default` | color | → `semantic.content.strong` | Cor do label Textarea. | 0 |
-| `component.textarea.label.font-family.default` | string | → `semantic.typography.body.font-family.sans` | Font-family do label Textarea. | 0 |
-| `component.textarea.label.font-size.lg` | dimension | → `semantic.typography.body.font-size.sm` | Font-size do label Textarea lg. | 0 |
-| `component.textarea.label.font-size.md` | dimension | → `semantic.typography.body.font-size.sm` | Font-size do label Textarea md. | 0 |
-| `component.textarea.label.font-size.sm` | dimension | → `semantic.typography.body.font-size.xs` | Font-size do label Textarea sm. | 0 |
-| `component.textarea.label.font-weight.default` | string | → `semantic.typography.body.font-weight.bold` | Font-weight do label Textarea. | 0 |
-| `component.textarea.label.letter-spacing.default` | dimension | → `semantic.typography.body.letter-spacing.normal` | Letter-spacing do label Textarea. | 0 |
-| `component.textarea.label.line-height.lg` | dimension | → `semantic.typography.body.line-height.sm` | Line-height do label Textarea lg. | 0 |
-| `component.textarea.label.line-height.md` | dimension | → `semantic.typography.body.line-height.sm` | Line-height do label Textarea md. | 0 |
-| `component.textarea.label.line-height.sm` | dimension | → `semantic.typography.body.line-height.xs` | Line-height do label Textarea sm. | 0 |
 | `component.textarea.padding-x.lg` | dimension | → `semantic.space.lg` | Padding horizontal do Field Textarea lg. | 1 |
 | `component.textarea.padding-x.md` | dimension | → `semantic.space.md` | Padding horizontal do Field Textarea md. | 1 |
-| `component.textarea.padding-x.sm` | dimension | → `semantic.space.md` | Padding horizontal do Field Textarea sm. | 1 |
-| `component.textarea.padding-y.lg` | dimension | → `semantic.space.md` | Padding vertical do Field Textarea lg. | 1 |
-| `component.textarea.padding-y.md` | dimension | → `semantic.space.control.padding.10` | Padding vertical do Field Textarea md. | 1 |
-| `component.textarea.padding-y.sm` | dimension | → `semantic.space.sm` | Padding vertical do Field Textarea sm. | 1 |
-| `component.textarea.placeholder.color.default` | color | → `semantic.content.subtle` | Cor do placeholder Textarea. | 0 |
-| `component.textarea.placeholder.color.disabled` | color | → `semantic.content.disabled` | Cor do placeholder Textarea disabled. | 0 |
-| `component.textarea.radius.default` | dimension | → `semantic.radius.md` | Radius do Field Textarea. | 0 |
-| `component.textarea.required.color.default` | color | → `semantic.feedback.error.content-default` | Cor do indicador required Textarea. | 0 |
-| `component.textarea.required.font-family.default` | string | → `semantic.typography.body.font-family.sans` | Font-family do indicador required Textarea. | 0 |
-| `component.textarea.required.font-size.default` | dimension | → `semantic.typography.body.font-size.sm` | Font-size do indicador required Textarea. | 0 |
-| `component.textarea.required.font-weight.default` | string | → `semantic.typography.body.font-weight.bold` | Font-weight do indicador required Textarea. | 0 |
-| `component.textarea.required.letter-spacing.default` | dimension | → `semantic.typography.body.letter-spacing.normal` | Letter-spacing do indicador required Textarea. | 0 |
-| `component.textarea.required.line-height.default` | dimension | → `semantic.typography.body.line-height.sm` | Line-height do indicador required Textarea. | 0 |
-| `component.textarea.stack.gap.default` | dimension | → `semantic.space.xs` | Gap vertical entre label, field e helper no Textarea. | 0 |
+| `component.textarea.padding-x.sm` | dimension | → `semantic.space.sm` | Padding horizontal do Field Textarea sm. | 1 |
 | `component.textarea.text.font-family.default` | string | → `semantic.typography.body.font-family.sans` | Font-family do texto Textarea. | 1 |
 | `component.textarea.text.font-size.lg` | dimension | → `semantic.typography.body.font-size.md` | Font-size do texto Textarea lg. | 1 |
 | `component.textarea.text.font-size.md` | dimension | → `semantic.typography.body.font-size.sm` | Font-size do texto Textarea md. | 1 |
@@ -1427,13 +1336,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `component.toggle.content.gap.default` | dimension | → `semantic.space.xs` | Toggle content frame default | 1 |
-| `component.toggle.description.color.default` | color | → `semantic.content.strong` | Toggle description default | 1 |
-| `component.toggle.focus-ring.color.default` | color | → `semantic.border.focus` | Toggle focus ring default | 1 |
 | `component.toggle.focus-ring.radius.default` | dimension | → `semantic.radius.full` | Toggle focus ring default | 0 |
-| `component.toggle.focus-ring.stroke-width.default` | dimension | → `semantic.border.width.focus` | Toggle focus ring default | 1 |
-| `component.toggle.helper-text.color.default` | color | → `semantic.content.default` | Toggle helper text default | 1 |
-| `component.toggle.label.color.default` | color | → `semantic.content.strong` | Toggle label default | 1 |
-| `component.toggle.label.color.disabled` | color | → `semantic.content.disabled` | Toggle label disabled | 1 |
 | `component.toggle.target.gap.default` | dimension | → `semantic.space.sm` | Toggle target interativo default | 1 |
 | `component.toggle.target.height.lg` | dimension | → `semantic.size.2xl` | Altura minima da area interativa do Toggle por size. | 1 |
 | `component.toggle.target.height.md` | dimension | → `semantic.size.xl` | Altura minima da area interativa do Toggle por size. | 1 |
@@ -1448,9 +1351,9 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.toggle.thumb.fill.on.hover` | color | → `semantic.primary.content-hover` | Fill do thumb Toggle on em hover. | 1 |
 | `component.toggle.thumb.inset.default` | dimension | → `semantic.space.2xs` | Inset/gap padrao do thumb dentro da track do Toggle. | 1 |
 | `component.toggle.thumb.radius.default` | dimension | → `semantic.radius.full` | Toggle thumb default | 1 |
-| `component.toggle.thumb.size.lg` | dimension | → `foundation.dimension.28` | Toggle thumb size lg | 1 |
-| `component.toggle.thumb.size.md` | dimension | → `foundation.dimension.20` | Toggle thumb size md | 1 |
-| `component.toggle.thumb.size.sm` | dimension | → `foundation.dimension.12` | Toggle thumb size sm | 1 |
+| `component.toggle.thumb.size.lg` | dimension | → `semantic.control.toggle.thumb.size.lg` | Toggle thumb size lg | 1 |
+| `component.toggle.thumb.size.md` | dimension | → `semantic.control.toggle.thumb.size.md` | Toggle thumb size md | 1 |
+| `component.toggle.thumb.size.sm` | dimension | → `semantic.control.toggle.thumb.size.sm` | Toggle thumb size sm | 1 |
 | `component.toggle.track.border-color.off.default` | color | → `semantic.border.control-default` | Toggle track off | 1 |
 | `component.toggle.track.border-color.off.disabled` | color | → `semantic.border.control-disabled` | Toggle track off disabled | 1 |
 | `component.toggle.track.border-color.off.focus` | color | → `semantic.border.focus` | Token component para toggle / track / border color / off / focus. | 0 |
@@ -1468,9 +1371,9 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.toggle.track.height.md` | dimension | → `semantic.size.md` | Altura visual da track do Toggle por size. | 1 |
 | `component.toggle.track.height.sm` | dimension | → `semantic.size.xs` | Altura visual da track do Toggle por size. | 1 |
 | `component.toggle.track.radius.default` | dimension | → `semantic.radius.full` | Toggle track default | 1 |
-| `component.toggle.track.width.lg` | dimension | → `foundation.dimension.56` | Largura visual da track do Toggle por size. | 1 |
-| `component.toggle.track.width.md` | dimension | → `foundation.dimension.44` | Largura visual da track do Toggle por size. | 1 |
-| `component.toggle.track.width.sm` | dimension | → `foundation.dimension.28` | Largura visual da track do Toggle por size. | 1 |
+| `component.toggle.track.width.lg` | dimension | → `semantic.control.toggle.width.lg` | Largura visual da track do Toggle por size. | 1 |
+| `component.toggle.track.width.md` | dimension | → `semantic.control.toggle.width.md` | Largura visual da track do Toggle por size. | 1 |
+| `component.toggle.track.width.sm` | dimension | → `semantic.control.toggle.width.sm` | Largura visual da track do Toggle por size. | 1 |
 
 ### component.tooltip
 
@@ -1478,9 +1381,12 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 |---|---|---|---|---|
 | `component.tooltip.arrow.base.default` | dimension | → `semantic.space.sm` | Base visual da seta Tooltip. | 0 |
 | `component.tooltip.arrow.depth.default` | dimension | → `semantic.space.xs` | Profundidade visual da seta Tooltip. | 1 |
+| `component.tooltip.arrow.fill.default` | color | → `semantic.background.inverse` | Contrato arrow.fill de tooltip, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.tooltip.content.fill.default` | color | → `semantic.background.inverse` | Contrato content.fill de tooltip, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.tooltip.content.padding-x.default` | dimension | → `semantic.space.sm` | Padding horizontal do content Tooltip. | 1 |
 | `component.tooltip.content.padding-y.default` | dimension | → `semantic.space.xs` | Padding vertical do content Tooltip. | 1 |
 | `component.tooltip.content.radius.default` | dimension | → `semantic.radius.sm` | Radius do content Tooltip. | 1 |
+| `component.tooltip.label.color.default` | color | → `semantic.primary.content-default` | Contrato label.color de tooltip, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.tooltip.label.font-size.default` | dimension | → `semantic.typography.body.font-size.sm` | Font-size do label Tooltip. | 1 |
 | `component.tooltip.label.font-weight.default` | number | → `semantic.typography.body.font-weight.regular` | Font-weight do label Tooltip. | 1 |
 | `component.tooltip.label.line-height.default` | dimension | → `semantic.typography.body.line-height.sm` | Line-height do label Tooltip. | 1 |
@@ -1563,7 +1469,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.warning.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.feedback.warning.background.default`, `semantic.feedback.warning.background.default`
 
 ### `foundation.color.amber.400`
 
@@ -1575,8 +1484,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-dark.css` (3×)
-  - Tokens que referenciam: `semantic.feedback.warning.border-default`, `semantic.feedback.warning.content-default`, `semantic.feedback.warning.background.default`
+    - `css/tokens/generated/theme-dark.css` (2×)
+  - Tokens que referenciam: `semantic.feedback.warning.border-default`, `semantic.feedback.warning.content-default`
 
 ### `foundation.color.amber.50`
 
@@ -1600,8 +1509,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (1×)
-    - `css/tokens/generated/theme-light.css` (2×)
-  - Tokens que referenciam: `semantic.feedback.warning.background.hover`, `semantic.feedback.warning.border-default`, `semantic.feedback.warning.background.default`
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.feedback.warning.background.hover`, `semantic.feedback.warning.border-default`
 
 ### `foundation.color.amber.600`
 
@@ -1662,7 +1571,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.warning.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.feedback.warning.content-contrast`, `semantic.feedback.warning.content-contrast`
 
 ### `foundation.color.blue.100`
 
@@ -1673,7 +1585,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.feedback.info.background.subtle`
 
 ### `foundation.color.blue.200`
 
@@ -1706,7 +1620,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (3×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.feedback.info.border-default`, `semantic.feedback.info.content-default`, `semantic.feedback.info.background.default`, `semantic.feedback.info.background.default`
 
 ### `foundation.color.blue.50`
 
@@ -1728,7 +1645,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.feedback.info.background.hover`, `semantic.feedback.info.border-default`
 
 ### `foundation.color.blue.600`
 
@@ -1739,7 +1659,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.feedback.info.background.hover`
 
 ### `foundation.color.blue.700`
 
@@ -1750,7 +1672,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.feedback.info.content-default`
 
 ### `foundation.color.blue.800`
 
@@ -1772,7 +1696,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (1×)
+  - Tokens que referenciam: `semantic.feedback.info.background.subtle`
 
 ### `foundation.color.blue.950`
 
@@ -1832,8 +1758,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-dark.css` (5×)
-  - Tokens que referenciam: `semantic.primary.background.default`, `semantic.primary.background.active`, `semantic.toned.content-default`, `semantic.link.content-default`, `semantic.border.brand`
+    - `css/tokens/generated/theme-dark.css` (4×)
+  - Tokens que referenciam: `semantic.primary.background.default`, `semantic.primary.background.active`, `semantic.toned.content-default`, `semantic.link.content-default`
 
 ### `foundation.color.brand.50`
 
@@ -1856,9 +1782,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-dark.css` (2×)
-    - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.primary.background.hover`, `semantic.border.focus`, `semantic.border.focus`
+    - `css/tokens/generated/theme-dark.css` (4×)
+  - Tokens que referenciam: `semantic.primary.background.hover`, `semantic.border.focus`, `semantic.border.brand`, `semantic.border.control-hover`
 
 ### `foundation.color.brand.600`
 
@@ -1870,8 +1795,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-light.css` (2×)
-  - Tokens que referenciam: `semantic.primary.background.default`, `semantic.border.brand`
+    - `css/tokens/generated/theme-light.css` (4×)
+  - Tokens que referenciam: `semantic.primary.background.default`, `semantic.border.focus`, `semantic.border.brand`, `semantic.border.control-hover`
 
 ### `foundation.color.brand.700`
 
@@ -1919,7 +1844,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.feedback.info.content-contrast`, `semantic.feedback.info.content-contrast`
 
 ### `foundation.color.cyan.100`
 
@@ -2574,9 +2502,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-dark.css` (3×)
+    - `css/tokens/generated/theme-dark.css` (2×)
     - `css/tokens/generated/theme-light.css` (5×)
-  - Tokens que referenciam: `semantic.content.default`, `semantic.content.subtle`, `semantic.border.control-hover`, `semantic.toned.content-disabled`, `semantic.outline.content-disabled`, `semantic.ghost.content-disabled`, `semantic.link.content-disabled`, `semantic.content.disabled`
+  - Tokens que referenciam: `semantic.content.default`, `semantic.content.subtle`, `semantic.toned.content-disabled`, `semantic.outline.content-disabled`, `semantic.ghost.content-disabled`, `semantic.link.content-disabled`, `semantic.content.disabled`
 
 ### `foundation.color.neutral.50`
 
@@ -2617,8 +2545,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (6×)
-    - `css/tokens/generated/theme-light.css` (3×)
-  - Tokens que referenciam: `semantic.toned.content-disabled`, `semantic.outline.content-disabled`, `semantic.ghost.content-disabled`, `semantic.link.content-disabled`, `semantic.surface.elevated`, `semantic.content.disabled`, `semantic.content.default`, `semantic.border.strong`, `semantic.border.control-hover`
+    - `css/tokens/generated/theme-light.css` (2×)
+  - Tokens que referenciam: `semantic.toned.content-disabled`, `semantic.outline.content-disabled`, `semantic.ghost.content-disabled`, `semantic.link.content-disabled`, `semantic.surface.elevated`, `semantic.content.disabled`, `semantic.content.default`, `semantic.border.strong`
 
 ### `foundation.color.neutral.700`
 
@@ -2657,9 +2585,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-dark.css` (9×)
-    - `css/tokens/generated/theme-light.css` (5×)
-  - Tokens que referenciam: `semantic.primary.content-default`, `semantic.primary.content-hover`, `semantic.feedback.success.content-contrast`, `semantic.feedback.warning.content-contrast`, `semantic.feedback.error.content-contrast`, `semantic.feedback.info.content-contrast`, `semantic.surface.default`, `semantic.content.inverse`, `semantic.border.inverse`, `semantic.ghost.content-default`, `semantic.feedback.warning.content-contrast`, `semantic.feedback.info.content-contrast`, `semantic.background.inverse`, `semantic.content.strong`
+    - `css/tokens/generated/theme-dark.css` (7×)
+    - `css/tokens/generated/theme-light.css` (3×)
+  - Tokens que referenciam: `semantic.primary.content-default`, `semantic.primary.content-hover`, `semantic.feedback.success.content-contrast`, `semantic.feedback.error.content-contrast`, `semantic.surface.default`, `semantic.content.inverse`, `semantic.border.inverse`, `semantic.ghost.content-default`, `semantic.background.inverse`, `semantic.content.strong`
 
 ### `foundation.color.neutral.950`
 
@@ -3038,8 +2966,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-dark.css` (5×)
-  - Tokens que referenciam: `semantic.feedback.error.border-default`, `semantic.feedback.error.content-default`, `semantic.feedback.error.background.default`, `semantic.feedback.error.background.active`, `semantic.border.error`
+    - `css/tokens/generated/theme-dark.css` (4×)
+  - Tokens que referenciam: `semantic.feedback.error.border-default`, `semantic.feedback.error.content-default`, `semantic.feedback.error.background.default`, `semantic.feedback.error.background.active`
 
 ### `foundation.color.red.50`
 
@@ -3062,9 +2990,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-dark.css` (3×)
-    - `css/tokens/generated/theme-light.css` (2×)
-  - Tokens que referenciam: `semantic.feedback.error.border.hover`, `semantic.feedback.error.background.hover`, `semantic.border.focus-error`, `semantic.feedback.error.border-default`, `semantic.border.focus-error`
+    - `css/tokens/generated/theme-dark.css` (4×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.feedback.error.border.hover`, `semantic.feedback.error.background.hover`, `semantic.border.error`, `semantic.border.focus-error`, `semantic.feedback.error.border-default`
 
 ### `foundation.color.red.600`
 
@@ -3076,8 +3004,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-light.css` (2×)
-  - Tokens que referenciam: `semantic.feedback.error.background.default`, `semantic.border.error`
+    - `css/tokens/generated/theme-light.css` (3×)
+  - Tokens que referenciam: `semantic.feedback.error.background.default`, `semantic.border.error`, `semantic.border.focus-error`
 
 ### `foundation.color.red.700`
 
@@ -3139,9 +3067,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
-  - CSS:
-    - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.feedback.info.background.subtle`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.sky.200`
 
@@ -3174,9 +3100,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
-  - CSS:
-    - `css/tokens/generated/theme-dark.css` (3×)
-  - Tokens que referenciam: `semantic.feedback.info.border-default`, `semantic.feedback.info.content-default`, `semantic.feedback.info.background.default`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.sky.50`
 
@@ -3198,10 +3122,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
-  - CSS:
-    - `css/tokens/generated/theme-dark.css` (1×)
-    - `css/tokens/generated/theme-light.css` (2×)
-  - Tokens que referenciam: `semantic.feedback.info.background.hover`, `semantic.feedback.info.border-default`, `semantic.feedback.info.background.default`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.sky.600`
 
@@ -3212,9 +3133,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
-  - CSS:
-    - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.feedback.info.background.hover`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.sky.700`
 
@@ -3225,9 +3144,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
-  - CSS:
-    - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.feedback.info.content-default`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.sky.800`
 
@@ -3249,9 +3166,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
-  - CSS:
-    - `css/tokens/generated/theme-dark.css` (1×)
-  - Tokens que referenciam: `semantic.feedback.info.background.subtle`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.sky.950`
 
@@ -3274,10 +3189,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Step da escala 2/4/6/8/10/12/14/16/20/24/28/32/36/40/44/48 — múltiplos de 2 e 4 cobrem todas as densidades de UI.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (1×)
     - `css/tokens/generated/theme-dark.css` (2×)
     - `css/tokens/generated/theme-light.css` (2×)
-  - Tokens que referenciam: `component.radio.dot.size.lg`, `semantic.control.radio.dot.size.lg`, `semantic.space.control.padding.10`, `semantic.control.radio.dot.size.lg`, `semantic.space.control.padding.10`
+  - Tokens que referenciam: `semantic.control.radio.dot.size.lg`, `semantic.space.control.padding.10`, `semantic.control.radio.dot.size.lg`, `semantic.space.control.padding.10`
 
 ### `foundation.dimension.102`
 
@@ -3318,10 +3232,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/reset.css` (1×)
-    - `css/tokens/generated/component.css` (2×)
     - `css/tokens/generated/theme-dark.css` (3×)
     - `css/tokens/generated/theme-light.css` (3×)
-  - Tokens que referenciam: `component.skeleton.text.height.default`, `component.toggle.thumb.size.sm`, `semantic.content-placeholder.text.height.default`, `semantic.control.toggle.thumb.size.sm`, `semantic.space.md`, `semantic.content-placeholder.text.height.default`, `semantic.control.toggle.thumb.size.sm`, `semantic.space.md`
+  - Tokens que referenciam: `semantic.content-placeholder.text.height.default`, `semantic.control.toggle.thumb.size.sm`, `semantic.space.md`, `semantic.content-placeholder.text.height.default`, `semantic.control.toggle.thumb.size.sm`, `semantic.space.md`
 
 ### `foundation.dimension.120`
 
@@ -3333,10 +3246,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Adicionado como valor primitivo porque 120px existe no Figma vivo para Textarea Large e nao havia Semantic reutilizavel real; a intencao publica permanece em component.textarea.field.min-height.lg.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (2×)
     - `css/tokens/generated/theme-dark.css` (2×)
     - `css/tokens/generated/theme-light.css` (2×)
-  - Tokens que referenciam: `component.skeleton.rectangle.height.default`, `component.textarea.field.min-height.lg`, `semantic.content-placeholder.rectangle.height.default`, `semantic.control.textarea.min-height.lg`, `semantic.content-placeholder.rectangle.height.default`, `semantic.control.textarea.min-height.lg`
+  - Tokens que referenciam: `semantic.content-placeholder.rectangle.height.default`, `semantic.control.textarea.min-height.lg`, `semantic.content-placeholder.rectangle.height.default`, `semantic.control.textarea.min-height.lg`
 
 ### `foundation.dimension.128`
 
@@ -3418,10 +3330,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Step da escala 2/4/6/8/10/12/14/16/20/24/28/32/36/40/44/48 — múltiplos de 2 e 4 cobrem todas as densidades de UI.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (1×)
     - `css/tokens/generated/theme-dark.css` (3×)
     - `css/tokens/generated/theme-light.css` (3×)
-  - Tokens que referenciam: `component.toggle.thumb.size.md`, `semantic.control.toggle.thumb.size.md`, `semantic.space.xl`, `semantic.size.sm`, `semantic.control.toggle.thumb.size.md`, `semantic.space.xl`, `semantic.size.sm`
+  - Tokens que referenciam: `semantic.control.toggle.thumb.size.md`, `semantic.space.xl`, `semantic.size.sm`, `semantic.control.toggle.thumb.size.md`, `semantic.space.xl`, `semantic.size.sm`
 
 ### `foundation.dimension.24`
 
@@ -3447,10 +3358,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Step da escala 2/4/6/8/10/12/14/16/20/24/28/32/36/40/44/48 — múltiplos de 2 e 4 cobrem todas as densidades de UI.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (2×)
     - `css/tokens/generated/theme-dark.css` (2×)
     - `css/tokens/generated/theme-light.css` (2×)
-  - Tokens que referenciam: `component.toggle.track.width.sm`, `component.toggle.thumb.size.lg`, `semantic.control.toggle.width.sm`, `semantic.control.toggle.thumb.size.lg`, `semantic.control.toggle.width.sm`, `semantic.control.toggle.thumb.size.lg`
+  - Tokens que referenciam: `semantic.control.toggle.width.sm`, `semantic.control.toggle.thumb.size.lg`, `semantic.control.toggle.width.sm`, `semantic.control.toggle.thumb.size.lg`
 
 ### `foundation.dimension.32`
 
@@ -3530,10 +3440,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Step da escala 2/4/6/8/10/12/14/16/20/24/28/32/36/40/44/48 — múltiplos de 2 e 4 cobrem todas as densidades de UI.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (1×)
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `component.toggle.track.width.md`, `semantic.control.toggle.width.md`, `semantic.control.toggle.width.md`
+  - Tokens que referenciam: `semantic.control.toggle.width.md`, `semantic.control.toggle.width.md`
 
 ### `foundation.dimension.48`
 
@@ -3573,10 +3482,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Step da escala 2/4/6/8/10/12/14/16/20/24/28/32/36/40/44/48 — múltiplos de 2 e 4 cobrem todas as densidades de UI.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (1×)
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `component.toggle.track.width.lg`, `semantic.control.toggle.width.lg`, `semantic.control.toggle.width.lg`
+  - Tokens que referenciam: `semantic.control.toggle.width.lg`, `semantic.control.toggle.width.lg`
 
 ### `foundation.dimension.6`
 
@@ -3588,10 +3496,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Step da escala 2/4/6/8/10/12/14/16/20/24/28/32/36/40/44/48 — múltiplos de 2 e 4 cobrem todas as densidades de UI.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (1×)
     - `css/tokens/generated/theme-dark.css` (2×)
     - `css/tokens/generated/theme-light.css` (2×)
-  - Tokens que referenciam: `component.radio.dot.size.sm`, `semantic.control.radio.dot.size.sm`, `semantic.space.control.padding.6`, `semantic.control.radio.dot.size.sm`, `semantic.space.control.padding.6`
+  - Tokens que referenciam: `semantic.control.radio.dot.size.sm`, `semantic.space.control.padding.6`, `semantic.control.radio.dot.size.sm`, `semantic.space.control.padding.6`
 
 ### `foundation.dimension.64`
 
@@ -3631,10 +3538,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Step da escala 2/4/6/8/10/12/14/16/20/24/28/32/36/40/44/48 — múltiplos de 2 e 4 cobrem todas as densidades de UI.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (1×)
     - `css/tokens/generated/theme-dark.css` (2×)
     - `css/tokens/generated/theme-light.css` (2×)
-  - Tokens que referenciam: `component.radio.dot.size.md`, `semantic.control.radio.dot.size.md`, `semantic.space.sm`, `semantic.control.radio.dot.size.md`, `semantic.space.sm`
+  - Tokens que referenciam: `semantic.control.radio.dot.size.md`, `semantic.space.sm`, `semantic.control.radio.dot.size.md`, `semantic.space.sm`
 
 ### `foundation.dimension.80`
 
@@ -3646,10 +3552,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Step da escala 2/4/6/8/10/12/14/16/20/24/28/32/36/40/44/48 — múltiplos de 2 e 4 cobrem todas as densidades de UI.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (1×)
     - `css/tokens/generated/theme-dark.css` (3×)
     - `css/tokens/generated/theme-light.css` (3×)
-  - Tokens que referenciam: `component.textarea.field.min-height.sm`, `semantic.control.button.min-width.sm`, `semantic.control.textarea.min-height.sm`, `semantic.space.section.xl`, `semantic.control.button.min-width.sm`, `semantic.control.textarea.min-height.sm`, `semantic.space.section.xl`
+  - Tokens que referenciam: `semantic.control.button.min-width.sm`, `semantic.control.textarea.min-height.sm`, `semantic.space.section.xl`, `semantic.control.button.min-width.sm`, `semantic.control.textarea.min-height.sm`, `semantic.space.section.xl`
 
 ### `foundation.dimension.800`
 
@@ -3689,10 +3594,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Step da escala 2/4/6/8/10/12/14/16/20/24/28/32/36/40/44/48 — múltiplos de 2 e 4 cobrem todas as densidades de UI.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (1×)
     - `css/tokens/generated/theme-dark.css` (2×)
     - `css/tokens/generated/theme-light.css` (2×)
-  - Tokens que referenciam: `component.textarea.field.min-height.md`, `semantic.control.textarea.min-height.md`, `semantic.size.4xl`, `semantic.control.textarea.min-height.md`, `semantic.size.4xl`
+  - Tokens que referenciam: `semantic.control.textarea.min-height.md`, `semantic.size.4xl`, `semantic.control.textarea.min-height.md`, `semantic.size.4xl`
 
 ### `foundation.duration.fast`
 
@@ -4818,8 +4722,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a foundation.color.neutral.200 (light) — Semantic encapsula a decisão de qual tom da paleta usar.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (7×)
-  - Tokens que referenciam: `component.checkbox.box.fill.unchecked.disabled`, `component.field.bg.disabled`, `component.input.bg.disabled`, `component.radio.control.fill.unselected.disabled`, `component.select.bg.disabled`, `component.textarea.bg.disabled`, `component.toggle.track.fill.off.disabled`
+    - `css/tokens/generated/component.css` (4×)
+  - Tokens que referenciam: `component.checkbox.box.fill.unchecked.disabled`, `component.field.bg.disabled`, `component.radio.control.fill.unselected.disabled`, `component.toggle.track.fill.off.disabled`
 
 ### `semantic.background.inverse`
 
@@ -4834,6 +4738,8 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/base/reset.css` (1×)
     - `css/components/tooltip.css` (5×)
+    - `css/tokens/generated/component.css` (2×)
+  - Tokens que referenciam: `component.tooltip.content.fill.default`, `component.tooltip.arrow.fill.default`
 
 ### `semantic.background.overlay`
 
@@ -4862,7 +4768,7 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/base/reset.css` (1×)
     - `css/components/skeleton.css` (1×)
     - `css/tokens/generated/component.css` (5×)
-  - Tokens que referenciam: `component.button.bg.outline.pressed`, `component.field.bg.readonly`, `component.input.bg.readonly`, `component.select.bg.readonly`, `component.textarea.bg.readonly`
+  - Tokens que referenciam: `component.button.bg.outline.pressed`, `component.field.bg.readonly`, `component.skeleton.text.fill.default`, `component.skeleton.circle.fill.default`, `component.skeleton.rectangle.fill.default`
 
 ### `semantic.border.brand`
 
@@ -4876,6 +4782,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/spinner.css` (1×)
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.spinner.indicator.border-color.default`
 
 ### `semantic.border.control-default`
 
@@ -4888,8 +4796,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a foundation.color.neutral.500.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (12×)
-  - Tokens que referenciam: `component.button.border-color.outline.pressed`, `component.checkbox.box.border-color.unchecked.default`, `component.field.border-color.default`, `component.focus-ring.color.readonly`, `component.input.border-color.default`, `component.input.focus-ring.color.readonly`, `component.radio.control.border-color.unselected.default`, `component.select.border-color.default`, `component.select.focus-ring.color.readonly`, `component.textarea.border-color.default`, `component.textarea.focus-ring.color.readonly`, `component.toggle.track.border-color.off.default`
+    - `css/tokens/generated/component.css` (6×)
+  - Tokens que referenciam: `component.button.border-color.outline.pressed`, `component.checkbox.box.border-color.unchecked.default`, `component.field.border-color.default`, `component.focus-ring.color.readonly`, `component.radio.control.border-color.unselected.default`, `component.toggle.track.border-color.off.default`
 
 ### `semantic.border.control-disabled`
 
@@ -4902,22 +4810,22 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a foundation.color.neutral.300.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (8×)
-  - Tokens que referenciam: `component.button.border-color.outline.disabled`, `component.checkbox.box.border-color.unchecked.disabled`, `component.field.border-color.disabled`, `component.input.border-color.disabled`, `component.radio.control.border-color.unselected.disabled`, `component.select.border-color.disabled`, `component.textarea.border-color.disabled`, `component.toggle.track.border-color.off.disabled`
+    - `css/tokens/generated/component.css` (5×)
+  - Tokens que referenciam: `component.button.border-color.outline.disabled`, `component.checkbox.box.border-color.unchecked.disabled`, `component.field.border-color.disabled`, `component.radio.control.border-color.unselected.disabled`, `component.toggle.track.border-color.off.disabled`
 
 ### `semantic.border.control-hover`
 
 - **Camada**: semantic
 - **Tipo**: `color`
-- **Alias**: → `foundation.color.neutral.600`
+- **Alias**: → `foundation.color.brand.600`
 - **Sentido**: Border control-hover.
 - **Escopo**: border-color, outline-color
 - **Contexto**: Use em `border-color` ou `outline-color`. Pareado com border-width apropriado.
 - **Decisão**: Aliasado a foundation.color.neutral.600.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (7×)
-  - Tokens que referenciam: `component.checkbox.box.border-color.unchecked.hover`, `component.field.border-color.hover`, `component.input.border-color.hover`, `component.radio.control.border-color.unselected.hover`, `component.select.border-color.hover`, `component.textarea.border-color.hover`, `component.toggle.track.border-color.off.hover`
+    - `css/tokens/generated/component.css` (4×)
+  - Tokens que referenciam: `component.checkbox.box.border-color.unchecked.hover`, `component.field.border-color.hover`, `component.radio.control.border-color.unselected.hover`, `component.toggle.track.border-color.off.hover`
 
 ### `semantic.border.default`
 
@@ -4933,6 +4841,8 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/base/reset.css` (1×)
     - `css/components/badge.css` (1×)
     - `css/components/card.css` (1×)
+    - `css/tokens/generated/component.css` (2×)
+  - Tokens que referenciam: `component.badge.border-color.neutral.subtle`, `component.card.border-color.elevated`
 
 ### `semantic.border.error`
 
@@ -4945,8 +4855,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a foundation.color.red.600.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (5×)
-  - Tokens que referenciam: `component.field.border-color.error`, `component.input.border-color.error`, `component.select.border-color.error`, `component.textarea.border-color.error`
+    - `css/tokens/generated/component.css` (6×)
+  - Tokens que referenciam: `component.checkbox.box.border-color.unchecked.error`, `component.field.border-color.error`, `component.radio.control.border-color.unselected.error`
 
 ### `semantic.border.error-hover`
 
@@ -4959,14 +4869,14 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.feedback.error.border.hover.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (1×)
-  - Tokens que referenciam: `component.field.border-color.error-hover`
+    - `css/tokens/generated/component.css` (3×)
+  - Tokens que referenciam: `component.checkbox.box.border-color.unchecked.error-hover`, `component.field.border-color.error-hover`, `component.radio.control.border-color.unselected.error-hover`
 
 ### `semantic.border.focus`
 
 - **Camada**: semantic
 - **Tipo**: `color`
-- **Alias**: → `foundation.color.brand.500`
+- **Alias**: → `foundation.color.brand.600`
 - **Sentido**: Focus ring color (WCAG 2.4.7).
 - **Escopo**: border-color, outline-color
 - **Contexto**: Use em `border-color` ou `outline-color`. Pareado com border-width apropriado.
@@ -4978,22 +4888,22 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/link.css` (1×)
     - `css/components/modal.css` (1×)
     - `css/components/tabs.css` (1×)
-    - `css/tokens/generated/component.css` (22×)
-  - Tokens que referenciam: `component.button.border-color.outline.focus`, `component.button.focus-ring.color.default`, `component.checkbox.box.border-color.unchecked.focus`, `component.checkbox.focus-ring.color.default`, `component.field.border-color.focus`, `component.focus-ring.color.default`, `component.input.border-color.focus`, `component.input.focus-ring.color.default`, `component.radio.control.border-color.unselected.focus`, `component.radio.control.border-color.selected.focus`, `component.radio.focus-ring.color.default`, `component.select.border-color.focus`, `component.select.focus-ring.color.default`, `component.textarea.border-color.focus`, `component.textarea.focus-ring.color.default`, `component.toggle.track.border-color.off.focus`, `component.toggle.focus-ring.color.default`
+    - `css/tokens/generated/component.css` (8×)
+  - Tokens que referenciam: `component.button.border-color.outline.focus`, `component.checkbox.box.border-color.unchecked.focus`, `component.field.border-color.focus`, `component.focus-ring.color.default`, `component.radio.control.border-color.unselected.focus`, `component.radio.control.border-color.selected.focus`, `component.toggle.track.border-color.off.focus`
 
 ### `semantic.border.focus-error`
 
 - **Camada**: semantic
 - **Tipo**: `color`
-- **Alias**: → `foundation.color.red.500`
+- **Alias**: → `foundation.color.red.600`
 - **Sentido**: Focus ring em estado error (apenas em focus, não default).
 - **Escopo**: border-color, outline-color
 - **Contexto**: Use em `border-color` ou `outline-color`. Pareado com border-width apropriado.
 - **Decisão**: Aliasado a foundation.color.red.500.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (5×)
-  - Tokens que referenciam: `component.button.focus-ring.color.danger`, `component.focus-ring.color.error`, `component.input.focus-ring.color.error`, `component.select.focus-ring.color.error`, `component.textarea.focus-ring.color.error`
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.focus-ring.color.error`
 
 ### `semantic.border.inverse`
 
@@ -5007,6 +4917,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/spinner.css` (1×)
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.spinner.indicator.border-color.on-color`
 
 ### `semantic.border.overlay.default`
 
@@ -5018,7 +4930,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Usado para estabilizar o contrato semantic exposto por semantic.border.overlay.
 - **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.overlay.default.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.spinner.track.border-color.default`
 
 ### `semantic.border.overlay.medium`
 
@@ -5030,7 +4944,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Usado para estabilizar o contrato semantic exposto por semantic.border.overlay.
 - **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.overlay.medium.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.spinner.track.border-color.on-color`
 
 ### `semantic.border.strong`
 
@@ -5043,8 +4959,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a foundation.color.neutral.600.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (4×)
-  - Tokens que referenciam: `component.field.border-color.filled`, `component.input.border-color.filled`, `component.select.border-color.filled`, `component.textarea.border-color.filled`
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.field.border-color.filled`
 
 ### `semantic.border.subtle`
 
@@ -5059,8 +4975,8 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/card.css` (1×)
     - `css/components/spinner.css` (1×)
-    - `css/tokens/generated/component.css` (5×)
-  - Tokens que referenciam: `component.divider.line.color.default`, `component.field.border-color.readonly`, `component.input.border-color.readonly`, `component.select.border-color.readonly`, `component.textarea.border-color.readonly`
+    - `css/tokens/generated/component.css` (3×)
+  - Tokens que referenciam: `component.card.border-color.outlined`, `component.divider.line.color.default`, `component.field.border-color.readonly`
 
 ### `semantic.border.width.default`
 
@@ -5074,8 +4990,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/reset.css` (1×)
-    - `css/tokens/generated/component.css` (13×)
-  - Tokens que referenciam: `component.alert.border-width.default`, `component.badge.border-width.default`, `component.button.border-width.default`, `component.card.border-width.default`, `component.checkbox.box.border-width.default`, `component.divider.line.thickness.default`, `component.field.border-width`, `component.input.border-width.default`, `component.radio.control.border-width.unselected.default`, `component.select.border-width.default`, `component.tabs.list.border-width.default`, `component.textarea.border-width.default`, `component.toggle.track.border-width.default`
+    - `css/tokens/generated/component.css` (10×)
+  - Tokens que referenciam: `component.alert.border-width.default`, `component.badge.border-width.default`, `component.button.border-width.default`, `component.card.border-width.default`, `component.checkbox.box.border-width.default`, `component.divider.line.thickness.default`, `component.field.border-width`, `component.radio.control.border-width.unselected.default`, `component.tabs.list.border-width.default`, `component.toggle.track.border-width.default`
 
 ### `semantic.border.width.focus`
 
@@ -5093,8 +5009,8 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/link.css` (1×)
     - `css/components/modal.css` (2×)
     - `css/components/tabs.css` (2×)
-    - `css/tokens/generated/component.css` (12×)
-  - Tokens que referenciam: `component.button.focus-ring.stroke-width.default`, `component.button.focus-ring.offset.default`, `component.checkbox.focus-ring.stroke-width.default`, `component.focus-ring.width`, `component.input.focus-ring.offset.default`, `component.input.focus-ring.stroke-width.default`, `component.radio.focus-ring.stroke-width.default`, `component.select.focus-ring.offset.default`, `component.select.focus-ring.stroke-width.default`, `component.textarea.focus-ring.offset.default`, `component.textarea.focus-ring.stroke-width.default`, `component.toggle.focus-ring.stroke-width.default`
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.focus-ring.width`
 
 ### `semantic.border.width.strong`
 
@@ -5120,7 +5036,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Use para placeholders de conteudo retangulares antes de estabilizar em Component tokens especificos.
 - **Decisão**: Alias para foundation.dimension.120 conforme Figma vivo; mantem o conceito reutilizavel fora de um componente especifico.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.skeleton.rectangle.height.default`
 
 ### `semantic.content-placeholder.text.height.default`
 
@@ -5132,7 +5050,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Use para linhas de skeleton/text placeholder antes de estabilizar em Component tokens especificos.
 - **Decisão**: Alias para foundation.dimension.12 conforme Figma vivo; representa altura de linha placeholder, nao tipografia real.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.skeleton.text.height.default`
 
 ### `semantic.content.brand`
 
@@ -5144,7 +5064,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Usado para estabilizar o contrato semantic exposto por semantic.content.brand.
 - **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.background.default.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.tabs.label.color.active`
 
 ### `semantic.content.default`
 
@@ -5162,13 +5084,16 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/badge.css` (1×)
     - `css/components/breadcrumb.css` (1×)
     - `css/components/card.css` (2×)
+    - `css/components/checkbox.css` (2×)
     - `css/components/modal.css` (1×)
+    - `css/components/radio.css` (2×)
     - `css/components/tabs.css` (1×)
     - `css/components/textarea.css` (1×)
-    - `css/tokens/generated/component.css` (16×)
+    - `css/components/toggle.css` (1×)
+    - `css/tokens/generated/component.css` (11×)
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `component.checkbox.helper-text.color.default`, `component.field.value.color.readonly`, `component.form-field.helper.color.default`, `component.input.content.color.readonly`, `component.input.helper.color.default`, `component.input.label.color.readonly`, `component.radio.helper-text.color.default`, `component.select.chevron.color.default`, `component.select.content.color.readonly`, `component.select.helper.color.default`, `component.select.icon.color.default`, `component.textarea.content.color.readonly`, `component.textarea.helper.color.default`, `component.toggle.helper-text.color.default`, `component.toggle.thumb.fill.off.default`, `component.toggle.thumb.fill.off.focus`, `semantic.icon.color.default`, `semantic.icon.color.default`
+  - Tokens que referenciam: `component.alert.description.color.subtle`, `component.badge.label.color.neutral.subtle`, `component.breadcrumb.label.color.current`, `component.card.body.color.default`, `component.card.subtitle.color.default`, `component.field.value.color.readonly`, `component.form-field.label.color.readonly`, `component.form-field.helper.color.default`, `component.tabs.label.color.default`, `component.toggle.thumb.fill.off.default`, `component.toggle.thumb.fill.off.focus`, `semantic.icon.color.default`, `semantic.icon.color.default`
 
 ### `semantic.content.disabled`
 
@@ -5181,11 +5106,14 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a foundation.color.neutral.400.
 - **Usos**:
   - CSS:
+    - `css/components/checkbox.css` (2×)
+    - `css/components/radio.css` (2×)
     - `css/components/tabs.css` (1×)
-    - `css/tokens/generated/component.css` (19×)
+    - `css/components/toggle.css` (2×)
+    - `css/tokens/generated/component.css` (6×)
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `component.checkbox.label.color.disabled`, `component.field.placeholder.color.disabled`, `component.field.value.color.disabled`, `component.input.content.color.disabled`, `component.input.helper.color.disabled`, `component.input.icon.color.disabled`, `component.input.label.color.disabled`, `component.input.placeholder.color.disabled`, `component.radio.label.color.disabled`, `component.select.chevron.color.disabled`, `component.select.content.color.disabled`, `component.select.helper.color.disabled`, `component.select.icon.color.disabled`, `component.select.placeholder.color.disabled`, `component.textarea.content.color.disabled`, `component.textarea.helper.color.disabled`, `component.textarea.placeholder.color.disabled`, `component.toggle.label.color.disabled`, `component.toggle.thumb.fill.off.disabled`, `semantic.icon.color.disabled`, `semantic.icon.color.disabled`
+  - Tokens que referenciam: `component.field.placeholder.color.disabled`, `component.field.value.color.disabled`, `component.form-field.label.color.disabled`, `component.form-field.helper.color.disabled`, `component.tabs.label.color.disabled`, `component.toggle.thumb.fill.off.disabled`, `semantic.icon.color.disabled`, `semantic.icon.color.disabled`
 
 ### `semantic.content.hover`
 
@@ -5234,13 +5162,15 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/alert.css` (4×)
     - `css/components/badge.css` (1×)
     - `css/components/card.css` (1×)
+    - `css/components/checkbox.css` (4×)
     - `css/components/modal.css` (3×)
-    - `css/components/radio.css` (1×)
+    - `css/components/radio.css` (5×)
     - `css/components/tabs.css` (1×)
-    - `css/tokens/generated/component.css` (14×)
+    - `css/components/toggle.css` (3×)
+    - `css/tokens/generated/component.css` (9×)
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `component.checkbox.label.color.default`, `component.checkbox.description.color.default`, `component.field.value.color.default`, `component.form-field.label.color.default`, `component.input.content.color.default`, `component.input.label.color.default`, `component.radio.label.color.default`, `component.radio.description.color.default`, `component.select.content.color.default`, `component.select.label.color.default`, `component.textarea.content.color.default`, `component.textarea.label.color.default`, `component.toggle.label.color.default`, `component.toggle.description.color.default`, `semantic.icon.color.active`, `semantic.icon.color.active`
+  - Tokens que referenciam: `component.alert.title.color.subtle`, `component.badge.label.color.neutral.solid`, `component.card.title.color.default`, `component.field.value.color.default`, `component.form-field.label.color.default`, `component.form-field.description.color.default`, `component.modal.body.color.default`, `component.modal.title.color.default`, `component.tabs.label.color.hover`, `semantic.icon.color.active`, `semantic.icon.color.active`
 
 ### `semantic.content.subtle`
 
@@ -5254,10 +5184,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/breadcrumb.css` (1×)
-    - `css/tokens/generated/component.css` (5×)
+    - `css/tokens/generated/component.css` (1×)
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `component.field.placeholder.color.default`, `component.input.icon.color.default`, `component.input.placeholder.color.default`, `component.select.placeholder.color.default`, `component.textarea.placeholder.color.default`, `semantic.icon.color.subtle`, `semantic.icon.color.subtle`
+  - Tokens que referenciam: `component.field.placeholder.color.default`, `semantic.icon.color.subtle`, `semantic.icon.color.subtle`
 
 ### `semantic.control.button.min-width.lg`
 
@@ -5269,7 +5199,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Use como decisao de sistema para largura minima de botao por tamanho; Component Button pode aliasar quando o contrato publico precisar expor a anatomia.
 - **Decisão**: Alias para {foundation.dimension.102} conforme Figma vivo para padronizar min-width de Button lg.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.button.min-width.lg`
 
 ### `semantic.control.button.min-width.md`
 
@@ -5281,7 +5213,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Use como decisao de sistema para largura minima de botao por tamanho; Component Button pode aliasar quando o contrato publico precisar expor a anatomia.
 - **Decisão**: Alias para {foundation.dimension.88} conforme Figma vivo para padronizar min-width de Button md.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.button.min-width.md`
 
 ### `semantic.control.button.min-width.sm`
 
@@ -5293,7 +5227,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Use como decisao de sistema para largura minima de botao por tamanho; Component Button pode aliasar quando o contrato publico precisar expor a anatomia.
 - **Decisão**: Alias para {foundation.dimension.80} conforme Figma vivo para padronizar min-width de Button sm.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.button.min-width.sm`
 
 ### `semantic.control.radio.dot.size.lg`
 
@@ -5305,7 +5241,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Use para indicator/dot circular de selection controls quando houver necessidade de decisao reutilizavel entre Figma e repo.
 - **Decisão**: Alias para {foundation.dimension.10} conforme Figma vivo; estabiliza o tamanho do dot sem depender de valores soltos.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.radio.dot.size.lg`
 
 ### `semantic.control.radio.dot.size.md`
 
@@ -5317,7 +5255,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Use para indicator/dot circular de selection controls quando houver necessidade de decisao reutilizavel entre Figma e repo.
 - **Decisão**: Alias para {foundation.dimension.8} conforme Figma vivo; estabiliza o tamanho do dot sem depender de valores soltos.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.radio.dot.size.md`
 
 ### `semantic.control.radio.dot.size.sm`
 
@@ -5329,7 +5269,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Use para indicator/dot circular de selection controls quando houver necessidade de decisao reutilizavel entre Figma e repo.
 - **Decisão**: Alias para {foundation.dimension.6} conforme Figma vivo; estabiliza o tamanho do dot sem depender de valores soltos.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.radio.dot.size.sm`
 
 ### `semantic.control.textarea.min-height.lg`
 
@@ -5341,7 +5283,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Use como decisao de sistema para altura minima de textareas por tamanho; componentes finais ainda podem expor Component token anatomico.
 - **Decisão**: Alias para {foundation.dimension.120} conforme Figma vivo.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.textarea.field.min-height.lg`
 
 ### `semantic.control.textarea.min-height.md`
 
@@ -5353,7 +5297,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Use como decisao de sistema para altura minima de textareas por tamanho; componentes finais ainda podem expor Component token anatomico.
 - **Decisão**: Alias para {foundation.dimension.96} conforme Figma vivo.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.textarea.field.min-height.md`
 
 ### `semantic.control.textarea.min-height.sm`
 
@@ -5365,7 +5311,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Use como decisao de sistema para altura minima de textareas por tamanho; componentes finais ainda podem expor Component token anatomico.
 - **Decisão**: Alias para {foundation.dimension.80} conforme Figma vivo.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.textarea.field.min-height.sm`
 
 ### `semantic.control.toggle.height.lg`
 
@@ -5425,7 +5373,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Use para o thumb interno do Toggle quando a decisao deve ser compartilhada entre Figma e repo.
 - **Decisão**: Alias para {foundation.dimension.28} conforme Figma vivo.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.toggle.thumb.size.lg`
 
 ### `semantic.control.toggle.thumb.size.md`
 
@@ -5437,7 +5387,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Use para o thumb interno do Toggle quando a decisao deve ser compartilhada entre Figma e repo.
 - **Decisão**: Alias para {foundation.dimension.20} conforme Figma vivo.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.toggle.thumb.size.md`
 
 ### `semantic.control.toggle.thumb.size.sm`
 
@@ -5449,7 +5401,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Use para o thumb interno do Toggle quando a decisao deve ser compartilhada entre Figma e repo.
 - **Decisão**: Alias para {foundation.dimension.12} conforme Figma vivo.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.toggle.thumb.size.sm`
 
 ### `semantic.control.toggle.width.lg`
 
@@ -5461,7 +5415,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Use para o track/tamanho externo de Toggle quando a decisao deve ser compartilhada entre Figma e repo.
 - **Decisão**: Alias para {foundation.dimension.56} conforme Figma vivo.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.toggle.track.width.lg`
 
 ### `semantic.control.toggle.width.md`
 
@@ -5473,7 +5429,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Use para o track/tamanho externo de Toggle quando a decisao deve ser compartilhada entre Figma e repo.
 - **Decisão**: Alias para {foundation.dimension.44} conforme Figma vivo.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.toggle.track.width.md`
 
 ### `semantic.control.toggle.width.sm`
 
@@ -5485,7 +5443,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Use para o track/tamanho externo de Toggle quando a decisao deve ser compartilhada entre Figma e repo.
 - **Decisão**: Alias para {foundation.dimension.28} conforme Figma vivo.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.toggle.track.width.sm`
 
 ### `semantic.feedback.error.background.active`
 
@@ -5516,8 +5476,8 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/badge.css` (1×)
     - `css/components/checkbox.css` (2×)
     - `css/components/radio.css` (3×)
-    - `css/tokens/generated/component.css` (2×)
-  - Tokens que referenciam: `component.button.bg.danger.default`, `component.button.bg.danger.focus`
+    - `css/tokens/generated/component.css` (4×)
+  - Tokens que referenciam: `component.alert.bg.error.filled`, `component.badge.bg.error.solid`, `component.button.bg.danger.default`, `component.button.bg.danger.focus`
 
 ### `semantic.feedback.error.background.disabled`
 
@@ -5560,6 +5520,8 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/alert.css` (1×)
     - `css/components/badge.css` (1×)
+    - `css/tokens/generated/component.css` (2×)
+  - Tokens que referenciam: `component.alert.bg.error.subtle`, `component.badge.bg.error.subtle`
 
 ### `semantic.feedback.error.border-default`
 
@@ -5574,6 +5536,8 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/alert.css` (1×)
     - `css/components/checkbox.css` (1×)
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.alert.border-color.error.subtle`
 
 ### `semantic.feedback.error.border.hover`
 
@@ -5586,10 +5550,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a foundation.color.red.800 no tema light e foundation.color.red.500 no tema dark, acompanhando o contrato criado no Figma.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (3×)
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `component.input.border-color.error-hover`, `component.select.border-color.error-hover`, `component.textarea.border-color.error-hover`, `semantic.border.error-hover`, `semantic.border.error-hover`
+  - Tokens que referenciam: `semantic.border.error-hover`, `semantic.border.error-hover`
 
 ### `semantic.feedback.error.content-contrast`
 
@@ -5604,10 +5567,10 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/alert.css` (1×)
     - `css/components/badge.css` (1×)
-    - `css/tokens/generated/component.css` (4×)
+    - `css/tokens/generated/component.css` (7×)
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `component.button.content.color.danger.default`, `component.button.content.color.danger.hover`, `component.button.content.color.danger.pressed`, `component.button.content.color.danger.focus`, `semantic.icon.color.error-contrast`, `semantic.icon.color.error-contrast`
+  - Tokens que referenciam: `component.alert.title.color.error.filled`, `component.alert.description.color.error.filled`, `component.badge.label.color.error.solid`, `component.button.content.color.danger.default`, `component.button.content.color.danger.hover`, `component.button.content.color.danger.pressed`, `component.button.content.color.danger.focus`, `semantic.icon.color.error-contrast`, `semantic.icon.color.error-contrast`
 
 ### `semantic.feedback.error.content-default`
 
@@ -5625,10 +5588,10 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/checkbox.css` (1×)
     - `css/components/radio.css` (2×)
     - `css/components/textarea.css` (1×)
-    - `css/tokens/generated/component.css` (7×)
+    - `css/tokens/generated/component.css` (3×)
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `component.form-field.label.color.error`, `component.form-field.required.color.default`, `component.form-field.error.color.default`, `component.form-field.error.icon.color.default`, `component.input.required.color.default`, `component.select.required.color.default`, `component.textarea.required.color.default`, `semantic.icon.color.error`, `semantic.icon.color.error`
+  - Tokens que referenciam: `component.badge.label.color.error.subtle`, `component.form-field.required.color.default`, `component.form-field.error.color.default`, `semantic.icon.color.error`, `semantic.icon.color.error`
 
 ### `semantic.feedback.error.content-disabled`
 
@@ -5648,7 +5611,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: semantic
 - **Tipo**: `color`
-- **Alias**: → `foundation.color.sky.500`
+- **Alias**: → `foundation.color.blue.400`
 - **Sentido**: Fill de feedback informação (azul) em estado default.
 - **Escopo**: background-color
 - **Contexto**: Use em alerts, badges, mensagens de validação, ícones de status. Pareado com Foundation sky.* via alias.
@@ -5657,12 +5620,14 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/alert.css` (1×)
     - `css/components/badge.css` (1×)
+    - `css/tokens/generated/component.css` (2×)
+  - Tokens que referenciam: `component.alert.bg.info.filled`, `component.badge.bg.info.solid`
 
 ### `semantic.feedback.info.background.hover`
 
 - **Camada**: semantic
 - **Tipo**: `color`
-- **Alias**: → `foundation.color.sky.600`
+- **Alias**: → `foundation.color.blue.600`
 - **Sentido**: Fill de feedback informação (azul) em estado hover.
 - **Escopo**: background-color
 - **Contexto**: Use em alerts, badges, mensagens de validação, ícones de status. Pareado com Foundation sky.* via alias.
@@ -5674,7 +5639,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: semantic
 - **Tipo**: `color`
-- **Alias**: → `foundation.color.sky.100`
+- **Alias**: → `foundation.color.blue.100`
 - **Sentido**: Fill de feedback informação (azul) em estado subtle.
 - **Escopo**: background-color
 - **Contexto**: Use em alerts, badges, mensagens de validação, ícones de status. Pareado com Foundation sky.* via alias.
@@ -5683,12 +5648,14 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/alert.css` (1×)
     - `css/components/badge.css` (1×)
+    - `css/tokens/generated/component.css` (2×)
+  - Tokens que referenciam: `component.alert.bg.info.subtle`, `component.badge.bg.info.subtle`
 
 ### `semantic.feedback.info.border-default`
 
 - **Camada**: semantic
 - **Tipo**: `color`
-- **Alias**: → `foundation.color.sky.500`
+- **Alias**: → `foundation.color.blue.500`
 - **Sentido**: Borda de feedback informação (azul) em estado default.
 - **Escopo**: border-color
 - **Contexto**: Use em alerts, badges, mensagens de validação, ícones de status. Pareado com Foundation sky.* via alias.
@@ -5696,12 +5663,14 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/alert.css` (1×)
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.alert.border-color.info.subtle`
 
 ### `semantic.feedback.info.content-contrast`
 
 - **Camada**: semantic
 - **Tipo**: `color`
-- **Alias**: → `foundation.color.neutral.900`
+- **Alias**: → `foundation.color.brand.950`
 - **Sentido**: Cor de feedback informação (azul) em estado contrast.
 - **Escopo**: color, fill
 - **Contexto**: Use em alerts, badges, mensagens de validação, ícones de status. Pareado com Foundation sky.* via alias.
@@ -5710,15 +5679,16 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/alert.css` (1×)
     - `css/components/badge.css` (1×)
+    - `css/tokens/generated/component.css` (3×)
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.icon.color.info-contrast`, `semantic.icon.color.info-contrast`
+  - Tokens que referenciam: `component.alert.title.color.info.filled`, `component.alert.description.color.info.filled`, `component.badge.label.color.info.solid`, `semantic.icon.color.info-contrast`, `semantic.icon.color.info-contrast`
 
 ### `semantic.feedback.info.content-default`
 
 - **Camada**: semantic
 - **Tipo**: `color`
-- **Alias**: → `foundation.color.sky.700`
+- **Alias**: → `foundation.color.blue.700`
 - **Sentido**: Cor de feedback informação (azul) em estado default.
 - **Escopo**: color, fill
 - **Contexto**: Use em alerts, badges, mensagens de validação, ícones de status. Pareado com Foundation sky.* via alias.
@@ -5727,6 +5697,8 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/alert.css` (1×)
     - `css/components/badge.css` (1×)
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.badge.label.color.info.subtle`
 
 ### `semantic.feedback.success.background.active`
 
@@ -5755,8 +5727,8 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/alert.css` (1×)
     - `css/components/badge.css` (1×)
-    - `css/tokens/generated/component.css` (2×)
-  - Tokens que referenciam: `component.button.bg.success.default`, `component.button.bg.success.focus`
+    - `css/tokens/generated/component.css` (4×)
+  - Tokens que referenciam: `component.alert.bg.success.filled`, `component.badge.bg.success.solid`, `component.button.bg.success.default`, `component.button.bg.success.focus`
 
 ### `semantic.feedback.success.background.disabled`
 
@@ -5799,6 +5771,8 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/alert.css` (1×)
     - `css/components/badge.css` (1×)
+    - `css/tokens/generated/component.css` (2×)
+  - Tokens que referenciam: `component.alert.bg.success.subtle`, `component.badge.bg.success.subtle`
 
 ### `semantic.feedback.success.border-default`
 
@@ -5813,7 +5787,7 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/alert.css` (1×)
     - `css/tokens/generated/component.css` (2×)
-  - Tokens que referenciam: `component.button.focus-ring.color.success`, `component.focus-ring.color.success`
+  - Tokens que referenciam: `component.alert.border-color.success.subtle`, `component.focus-ring.color.success`
 
 ### `semantic.feedback.success.content-contrast`
 
@@ -5828,10 +5802,10 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/alert.css` (1×)
     - `css/components/badge.css` (1×)
-    - `css/tokens/generated/component.css` (4×)
+    - `css/tokens/generated/component.css` (7×)
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `component.button.content.color.success.default`, `component.button.content.color.success.hover`, `component.button.content.color.success.pressed`, `component.button.content.color.success.focus`, `semantic.icon.color.success-contrast`, `semantic.icon.color.success-contrast`
+  - Tokens que referenciam: `component.alert.title.color.success.filled`, `component.alert.description.color.success.filled`, `component.badge.label.color.success.solid`, `component.button.content.color.success.default`, `component.button.content.color.success.hover`, `component.button.content.color.success.pressed`, `component.button.content.color.success.focus`, `semantic.icon.color.success-contrast`, `semantic.icon.color.success-contrast`
 
 ### `semantic.feedback.success.content-default`
 
@@ -5846,9 +5820,10 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/alert.css` (1×)
     - `css/components/badge.css` (1×)
+    - `css/tokens/generated/component.css` (1×)
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.icon.color.success`, `semantic.icon.color.success`
+  - Tokens que referenciam: `component.badge.label.color.success.subtle`, `semantic.icon.color.success`, `semantic.icon.color.success`
 
 ### `semantic.feedback.success.content-disabled`
 
@@ -5868,7 +5843,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: semantic
 - **Tipo**: `color`
-- **Alias**: → `foundation.color.amber.500`
+- **Alias**: → `foundation.color.amber.300`
 - **Sentido**: Fill de feedback aviso (âmbar) em estado default.
 - **Escopo**: background-color
 - **Contexto**: Use em alerts, badges, mensagens de validação, ícones de status. Pareado com Foundation amber.* via alias.
@@ -5877,6 +5852,8 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/alert.css` (1×)
     - `css/components/badge.css` (1×)
+    - `css/tokens/generated/component.css` (2×)
+  - Tokens que referenciam: `component.alert.bg.warning.filled`, `component.badge.bg.warning.solid`
 
 ### `semantic.feedback.warning.background.hover`
 
@@ -5903,6 +5880,8 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/alert.css` (1×)
     - `css/components/badge.css` (1×)
+    - `css/tokens/generated/component.css` (2×)
+  - Tokens que referenciam: `component.alert.bg.warning.subtle`, `component.badge.bg.warning.subtle`
 
 ### `semantic.feedback.warning.border-default`
 
@@ -5916,12 +5895,14 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/alert.css` (1×)
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.alert.border-color.warning.subtle`
 
 ### `semantic.feedback.warning.content-contrast`
 
 - **Camada**: semantic
 - **Tipo**: `color`
-- **Alias**: → `foundation.color.neutral.900`
+- **Alias**: → `foundation.color.amber.950`
 - **Sentido**: Cor de feedback aviso (âmbar) em estado contrast.
 - **Escopo**: color, fill
 - **Contexto**: Use em alerts, badges, mensagens de validação, ícones de status. Pareado com Foundation amber.* via alias.
@@ -5930,9 +5911,10 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/alert.css` (1×)
     - `css/components/badge.css` (1×)
+    - `css/tokens/generated/component.css` (3×)
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.icon.color.warning-contrast`, `semantic.icon.color.warning-contrast`
+  - Tokens que referenciam: `component.alert.title.color.warning.filled`, `component.alert.description.color.warning.filled`, `component.badge.label.color.warning.solid`, `semantic.icon.color.warning-contrast`, `semantic.icon.color.warning-contrast`
 
 ### `semantic.feedback.warning.content-default`
 
@@ -5947,9 +5929,10 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/alert.css` (1×)
     - `css/components/badge.css` (1×)
+    - `css/tokens/generated/component.css` (1×)
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.icon.color.warning`, `semantic.icon.color.warning`
+  - Tokens que referenciam: `component.badge.label.color.warning.subtle`, `semantic.icon.color.warning`, `semantic.icon.color.warning`
 
 ### `semantic.ghost.background.active`
 
@@ -6031,6 +6014,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/icons.css` (1×)
+    - `css/tokens/generated/component.css` (6×)
+  - Tokens que referenciam: `component.alert.icon.color.info.subtle`, `component.alert.close.icon.color.subtle`, `component.input.icon.color.default`, `component.modal.close.color.default`, `component.select.chevron.color.default`, `component.select.icon.color.default`
 
 ### `semantic.icon.color.disabled`
 
@@ -6044,6 +6029,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/icons.css` (1×)
+    - `css/tokens/generated/component.css` (3×)
+  - Tokens que referenciam: `component.input.icon.color.disabled`, `component.select.chevron.color.disabled`, `component.select.icon.color.disabled`
 
 ### `semantic.icon.color.error`
 
@@ -6057,6 +6044,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/icons.css` (1×)
+    - `css/tokens/generated/component.css` (4×)
+  - Tokens que referenciam: `component.alert.icon.color.error.subtle`, `component.form-field.error.icon.color.default`
 
 ### `semantic.icon.color.error-contrast`
 
@@ -6068,7 +6057,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Use na biblioteca de icones e no Icon swap. Componentes finais devem aliasar para Component tokens proprios quando o icone faz parte da anatomia do componente.
 - **Decisão**: Alias para {semantic.feedback.error.content-contrast} conforme Figma vivo; mantem fill e stroke de icones alinhados ao vocabulario de conteudo semantico.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/component.css` (2×)
+  - Tokens que referenciam: `component.alert.icon.color.error.filled`, `component.alert.close.icon.color.error.filled`
 
 ### `semantic.icon.color.hover`
 
@@ -6092,7 +6083,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Use na biblioteca de icones e no Icon swap. Componentes finais devem aliasar para Component tokens proprios quando o icone faz parte da anatomia do componente.
 - **Decisão**: Alias para {semantic.feedback.info.content-contrast} conforme Figma vivo; mantem fill e stroke de icones alinhados ao vocabulario de conteudo semantico.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/component.css` (2×)
+  - Tokens que referenciam: `component.alert.icon.color.info.filled`, `component.alert.close.icon.color.info.filled`
 
 ### `semantic.icon.color.inverse`
 
@@ -6132,6 +6125,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/icons.css` (1×)
+    - `css/tokens/generated/component.css` (3×)
+  - Tokens que referenciam: `component.alert.icon.color.success.subtle`
 
 ### `semantic.icon.color.success-contrast`
 
@@ -6143,7 +6138,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Use na biblioteca de icones e no Icon swap. Componentes finais devem aliasar para Component tokens proprios quando o icone faz parte da anatomia do componente.
 - **Decisão**: Alias para {semantic.feedback.success.content-contrast} conforme Figma vivo; mantem fill e stroke de icones alinhados ao vocabulario de conteudo semantico.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/component.css` (2×)
+  - Tokens que referenciam: `component.alert.icon.color.success.filled`, `component.alert.close.icon.color.success.filled`
 
 ### `semantic.icon.color.warning`
 
@@ -6157,6 +6154,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/icons.css` (1×)
+    - `css/tokens/generated/component.css` (3×)
+  - Tokens que referenciam: `component.alert.icon.color.warning.subtle`
 
 ### `semantic.icon.color.warning-contrast`
 
@@ -6168,7 +6167,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Use na biblioteca de icones e no Icon swap. Componentes finais devem aliasar para Component tokens proprios quando o icone faz parte da anatomia do componente.
 - **Decisão**: Alias para {semantic.feedback.warning.content-contrast} conforme Figma vivo; mantem fill e stroke de icones alinhados ao vocabulario de conteudo semantico.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/component.css` (2×)
+  - Tokens que referenciam: `component.alert.icon.color.warning.filled`, `component.alert.close.icon.color.warning.filled`
 
 ### `semantic.icon.stroke-width.regular.16`
 
@@ -6182,6 +6183,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/icons.css` (1×)
+    - `css/tokens/generated/component.css` (4×)
+  - Tokens que referenciam: `component.button.icon.stroke-width.sm`, `component.input.icon.stroke-width.sm`, `component.select.chevron.stroke-width.sm`, `component.select.icon.stroke-width.sm`
 
 ### `semantic.icon.stroke-width.regular.20`
 
@@ -6199,6 +6202,8 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/avatar.css` (1×)
     - `css/components/button.css` (1×)
     - `css/components/modal.css` (1×)
+    - `css/tokens/generated/component.css` (7×)
+  - Tokens que referenciam: `component.alert.icon.stroke-width.default`, `component.alert.close.icon.stroke-width.default`, `component.avatar.icon.stroke-width.sm`, `component.button.icon.stroke-width.md`, `component.input.icon.stroke-width.md`, `component.select.chevron.stroke-width.md`, `component.select.icon.stroke-width.md`
 
 ### `semantic.icon.stroke-width.regular.24`
 
@@ -6212,6 +6217,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/icons.css` (2×)
+    - `css/tokens/generated/component.css` (6×)
+  - Tokens que referenciam: `component.avatar.icon.stroke-width.md`, `component.button.icon.stroke-width.lg`, `component.input.icon.stroke-width.lg`, `component.modal.close.icon.stroke-width.default`, `component.select.chevron.stroke-width.lg`, `component.select.icon.stroke-width.lg`
 
 ### `semantic.icon.stroke-width.regular.32`
 
@@ -6226,6 +6233,8 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/base/icons.css` (1×)
     - `css/components/avatar.css` (1×)
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.avatar.icon.stroke-width.lg`
 
 ### `semantic.icon.stroke-width.strong.16`
 
@@ -6239,6 +6248,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/icons.css` (1×)
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.form-field.error.icon.stroke-width.default`
 
 ### `semantic.icon.stroke-width.strong.20`
 
@@ -6294,6 +6305,8 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/base/reset.css` (1×)
     - `css/components/breadcrumb.css` (1×)
     - `css/components/link.css` (1×)
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.breadcrumb.label.color.link`
 
 ### `semantic.link.content-disabled`
 
@@ -6661,10 +6674,10 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/avatar.css` (1×)
     - `css/components/badge.css` (1×)
     - `css/components/tabs.css` (2×)
-    - `css/tokens/generated/component.css` (11×)
+    - `css/tokens/generated/component.css` (14×)
     - `css/tokens/generated/theme-dark.css` (2×)
     - `css/tokens/generated/theme-light.css` (2×)
-  - Tokens que referenciam: `component.button.bg.brand.default`, `component.button.bg.brand.focus`, `component.checkbox.box.fill.checked.default`, `component.checkbox.box.fill.checked.focus`, `component.checkbox.box.fill.indeterminate.default`, `component.checkbox.box.fill.indeterminate.focus`, `component.radio.control.fill.selected.default`, `component.radio.control.fill.selected.focus`, `component.radio.control.border-color.selected.default`, `component.toggle.track.fill.on.default`, `component.toggle.track.fill.on.focus`, `semantic.primary.border.default`, `semantic.content.brand`, `semantic.primary.border.default`, `semantic.content.brand`
+  - Tokens que referenciam: `component.avatar.bg.default`, `component.badge.bg.primary.solid`, `component.button.bg.brand.default`, `component.button.bg.brand.focus`, `component.checkbox.box.fill.checked.default`, `component.checkbox.box.fill.checked.focus`, `component.checkbox.box.fill.indeterminate.default`, `component.checkbox.box.fill.indeterminate.focus`, `component.modal.action.fill.primary`, `component.radio.control.fill.selected.default`, `component.radio.control.fill.selected.focus`, `component.tabs.indicator.fill.active`, `component.toggle.track.fill.on.default`, `component.toggle.track.fill.on.focus`, `semantic.primary.border.default`, `semantic.content.brand`, `semantic.primary.border.default`, `semantic.content.brand`
 
 ### `semantic.primary.background.disabled`
 
@@ -6693,10 +6706,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a foundation.color.brand.700 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (6×)
+    - `css/tokens/generated/component.css` (5×)
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `component.button.bg.brand.hover`, `component.checkbox.box.fill.checked.hover`, `component.checkbox.box.fill.indeterminate.hover`, `component.radio.control.fill.selected.hover`, `component.radio.control.border-color.selected.hover`, `component.toggle.track.fill.on.hover`, `semantic.primary.border.hover`, `semantic.primary.border.hover`
+  - Tokens que referenciam: `component.button.bg.brand.hover`, `component.checkbox.box.fill.checked.hover`, `component.checkbox.box.fill.indeterminate.hover`, `component.radio.control.fill.selected.hover`, `component.toggle.track.fill.on.hover`, `semantic.primary.border.hover`, `semantic.primary.border.hover`
 
 ### `semantic.primary.border.default`
 
@@ -6708,7 +6721,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Usado para estabilizar o contrato semantic exposto por semantic.primary.border.
 - **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.background.default.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.radio.control.border-color.selected.default`
 
 ### `semantic.primary.border.disabled`
 
@@ -6732,7 +6747,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Usado para estabilizar o contrato semantic exposto por semantic.primary.border.
 - **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.background.hover.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.radio.control.border-color.selected.hover`
 
 ### `semantic.primary.content-default`
 
@@ -6748,8 +6765,8 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/avatar.css` (1×)
     - `css/components/badge.css` (1×)
     - `css/components/tooltip.css` (1×)
-    - `css/tokens/generated/component.css` (12×)
-  - Tokens que referenciam: `component.button.content.color.brand.default`, `component.button.content.color.brand.hover`, `component.button.content.color.brand.pressed`, `component.button.content.color.brand.focus`, `component.checkbox.mark.fill.checked.default`, `component.checkbox.mark.fill.checked.focus`, `component.checkbox.mark.fill.indeterminate.default`, `component.checkbox.mark.fill.indeterminate.focus`, `component.radio.dot.fill.selected.default`, `component.radio.dot.fill.selected.focus`, `component.toggle.thumb.fill.on.default`, `component.toggle.thumb.fill.on.focus`
+    - `css/tokens/generated/component.css` (15×)
+  - Tokens que referenciam: `component.avatar.content.color.default`, `component.badge.label.color.primary.solid`, `component.button.content.color.brand.default`, `component.button.content.color.brand.hover`, `component.button.content.color.brand.pressed`, `component.button.content.color.brand.focus`, `component.checkbox.mark.fill.checked.default`, `component.checkbox.mark.fill.checked.focus`, `component.checkbox.mark.fill.indeterminate.default`, `component.checkbox.mark.fill.indeterminate.focus`, `component.radio.dot.fill.selected.default`, `component.radio.dot.fill.selected.focus`, `component.toggle.thumb.fill.on.default`, `component.toggle.thumb.fill.on.focus`, `component.tooltip.label.color.default`
 
 ### `semantic.primary.content-disabled`
 
@@ -6819,8 +6836,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.radius.8.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (12×)
-  - Tokens que referenciam: `component.breadcrumb.focus-ring.radius.default`, `component.button.radius.default`, `component.checkbox.focus-ring.radius.default`, `component.divider.line.radius.default`, `component.field.radius`, `component.input.radius.default`, `component.select.radius.default`, `component.skeleton.text.radius.default`, `component.skeleton.rectangle.radius.default`, `component.tabs.focus-ring.radius.default`, `component.tabs.indicator.radius.default`, `component.textarea.radius.default`
+    - `css/tokens/generated/component.css` (9×)
+  - Tokens que referenciam: `component.breadcrumb.focus-ring.radius.default`, `component.button.radius.default`, `component.checkbox.focus-ring.radius.default`, `component.divider.line.radius.default`, `component.field.radius`, `component.skeleton.text.radius.default`, `component.skeleton.rectangle.radius.default`, `component.tabs.focus-ring.radius.default`, `component.tabs.indicator.radius.default`
 
 ### `semantic.radius.sm`
 
@@ -7023,8 +7040,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/icons.css` (2×)
-    - `css/tokens/generated/component.css` (11×)
-  - Tokens que referenciam: `component.avatar.size.sm`, `component.avatar.icon.size.lg`, `component.button.height.sm`, `component.button.icon-only-width.sm`, `component.checkbox.target.height.sm`, `component.input.height.sm`, `component.radio.target.height.sm`, `component.select.height.sm`, `component.spinner.size.lg`, `component.toggle.target.height.sm`, `component.toggle.track.height.lg`
+    - `css/tokens/generated/component.css` (10×)
+  - Tokens que referenciam: `component.avatar.size.sm`, `component.button.height.sm`, `component.button.icon-only-width.sm`, `component.checkbox.target.height.sm`, `component.input.height.sm`, `component.radio.target.height.sm`, `component.select.height.sm`, `component.spinner.size.lg`, `component.toggle.target.height.sm`, `component.toggle.track.height.lg`
 
 ### `semantic.size.md`
 
@@ -7038,8 +7055,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/icons.css` (4×)
-    - `css/tokens/generated/component.css` (18×)
-  - Tokens que referenciam: `component.alert.icon.frame-size.default`, `component.alert.close.frame-size.default`, `component.avatar.icon.size.md`, `component.button.icon.frame-size.md`, `component.button.icon.frame-size.lg`, `component.button.icon.size.md`, `component.button.icon.size.lg`, `component.checkbox.box.size.lg`, `component.input.icon.frame-size.lg`, `component.input.icon.size.lg`, `component.modal.close.frame-size.default`, `component.radio.control.size.lg`, `component.select.chevron.frame-size.lg`, `component.select.chevron.size.lg`, `component.select.icon.frame-size.lg`, `component.select.icon.size.lg`, `component.spinner.size.md`, `component.toggle.track.height.md`
+    - `css/tokens/generated/component.css` (9×)
+  - Tokens que referenciam: `component.button.icon.size.lg`, `component.checkbox.box.size.lg`, `component.input.icon.size.lg`, `component.modal.close.size.default`, `component.radio.control.size.lg`, `component.select.chevron.size.lg`, `component.select.icon.size.lg`, `component.spinner.size.md`, `component.toggle.track.height.md`
 
 ### `semantic.size.sm`
 
@@ -7055,8 +7072,8 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/base/icons.css` (2×)
     - `css/components/checkbox.css` (2×)
     - `css/components/radio.css` (2×)
-    - `css/tokens/generated/component.css` (13×)
-  - Tokens que referenciam: `component.alert.icon.size.default`, `component.alert.close.icon-size.default`, `component.avatar.icon.size.sm`, `component.button.icon.frame-size.sm`, `component.button.icon.size.sm`, `component.checkbox.box.size.md`, `component.input.icon.frame-size.md`, `component.input.icon.size.md`, `component.radio.control.size.md`, `component.select.chevron.frame-size.md`, `component.select.chevron.size.md`, `component.select.icon.frame-size.md`, `component.select.icon.size.md`
+    - `css/tokens/generated/component.css` (8×)
+  - Tokens que referenciam: `component.alert.icon.size.default`, `component.alert.close.icon-size.default`, `component.button.icon.size.md`, `component.checkbox.box.size.md`, `component.input.icon.size.md`, `component.radio.control.size.md`, `component.select.chevron.size.md`, `component.select.icon.size.md`
 
 ### `semantic.size.xl`
 
@@ -7083,8 +7100,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.dimension.16.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (13×)
-  - Tokens que referenciam: `component.checkbox.box.size.sm`, `component.form-field.error.icon.frame-size.default`, `component.form-field.error.icon.size.default`, `component.input.icon.frame-size.sm`, `component.input.icon.size.sm`, `component.modal.close.icon-size.default`, `component.radio.control.size.sm`, `component.select.chevron.frame-size.sm`, `component.select.chevron.size.sm`, `component.select.icon.frame-size.sm`, `component.select.icon.size.sm`, `component.spinner.size.sm`, `component.toggle.track.height.sm`
+    - `css/tokens/generated/component.css` (10×)
+  - Tokens que referenciam: `component.button.icon.size.sm`, `component.checkbox.box.size.sm`, `component.form-field.error.icon.size.default`, `component.input.icon.size.sm`, `component.modal.close.icon-size.default`, `component.radio.control.size.sm`, `component.select.chevron.size.sm`, `component.select.icon.size.sm`, `component.spinner.size.sm`, `component.toggle.track.height.sm`
 
 ### `semantic.space.2xl`
 
@@ -7096,7 +7113,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Use em `gap`, `padding`, `margin` em componentes.
 - **Decisão**: Aliasado a Foundation foundation.dimension.24.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/component.css` (5×)
+  - Tokens que referenciam: `component.modal.header.padding-x.lg`, `component.modal.header.padding-top.lg`, `component.modal.body.padding-x.lg`, `component.modal.footer.padding-x.lg`, `component.modal.footer.padding-bottom.lg`
 
 ### `semantic.space.2xs`
 
@@ -7109,8 +7128,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.dimension.2.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (8×)
-  - Tokens que referenciam: `component.badge.padding-y.default`, `component.button.gap.sm`, `component.form-field.label-row.gap.default`, `component.form-field.error.icon-frame.padding-x.default`, `component.input.label-row.gap.default`, `component.select.label-row.gap.default`, `component.textarea.label-row.gap.default`, `component.toggle.thumb.inset.default`
+    - `css/tokens/generated/component.css` (5×)
+  - Tokens que referenciam: `component.badge.padding-y.default`, `component.button.gap.sm`, `component.form-field.label-row.gap.default`, `component.form-field.error.icon-frame.padding-x.default`, `component.toggle.thumb.inset.default`
 
 ### `semantic.space.control.padding.10`
 
@@ -7123,8 +7142,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.dimension.10.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (6×)
-  - Tokens que referenciam: `component.button.padding-y.md`, `component.field.padding-y.md`, `component.input.padding-y.md`, `component.select.padding-y.md`, `component.tabs.item.indicator-gap.default`, `component.textarea.padding-y.md`
+    - `css/tokens/generated/component.css` (3×)
+  - Tokens que referenciam: `component.button.padding-y.md`, `component.field.padding-y.md`, `component.tabs.item.indicator-gap.default`
 
 ### `semantic.space.control.padding.6`
 
@@ -7151,9 +7170,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.dimension.16.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (14×)
+    - `css/tokens/generated/component.css` (17×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.button.padding-x.lg`, `component.card.header.padding-x.default`, `component.card.header.padding-top.default`, `component.card.body.padding-x.default`, `component.card.body.padding-bottom.default`, `component.modal.header.padding-x.sm`, `component.modal.header.padding-top.sm`, `component.modal.body.padding-x.sm`, `component.modal.body.padding-bottom.sm`, `component.modal.footer.padding-x.sm`, `component.modal.footer.padding-bottom.sm`, `component.tabs.item.padding-x.default`, `component.tabs.panel.padding-y.default`, `component.textarea.padding-x.lg`
+  - Tokens que referenciam: `component.button.padding-x.lg`, `component.card.header.padding-x.default`, `component.card.header.padding-top.default`, `component.card.body.padding-x.default`, `component.card.body.padding-bottom.default`, `component.modal.header.padding-x.sm`, `component.modal.header.padding-top.sm`, `component.modal.header.padding-bottom.lg`, `component.modal.header.gap.default`, `component.modal.body.padding-x.sm`, `component.modal.body.padding-bottom.sm`, `component.modal.footer.padding-x.sm`, `component.modal.footer.padding-top.lg`, `component.modal.footer.padding-bottom.sm`, `component.tabs.item.padding-x.default`, `component.tabs.panel.padding-y.default`, `component.textarea.padding-x.lg`
 
 ### `semantic.space.md`
 
@@ -7168,9 +7187,9 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/divider.css` (2×)
     - `css/components/radio.css` (1×)
-    - `css/tokens/generated/component.css` (17×)
+    - `css/tokens/generated/component.css` (12×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.alert.padding.default`, `component.button.padding-x.md`, `component.button.padding-y.lg`, `component.button.icon-only-padding.lg`, `component.field.padding-y.lg`, `component.input.padding-x.lg`, `component.input.padding-y.lg`, `component.modal.header.padding-bottom.md`, `component.modal.header.padding-bottom.lg`, `component.modal.footer.padding-top.md`, `component.modal.footer.padding-top.lg`, `component.select.padding-x.lg`, `component.select.padding-y.lg`, `component.tabs.item.padding-top.default`, `component.textarea.padding-x.sm`, `component.textarea.padding-x.md`, `component.textarea.padding-y.lg`
+  - Tokens que referenciam: `component.alert.padding.default`, `component.button.padding-x.md`, `component.button.padding-y.lg`, `component.button.icon-only-padding.lg`, `component.field.padding-y.lg`, `component.input.padding-x.lg`, `component.modal.header.padding-bottom.md`, `component.modal.footer.padding-top.md`, `component.modal.footer.gap.default`, `component.select.padding-x.lg`, `component.tabs.item.padding-top.default`, `component.textarea.padding-x.md`
 
 ### `semantic.space.section.lg`
 
@@ -7235,9 +7254,9 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/checkbox.css` (2×)
     - `css/components/radio.css` (3×)
     - `css/components/tooltip.css` (4×)
-    - `css/tokens/generated/component.css` (27×)
+    - `css/tokens/generated/component.css` (21×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.alert.gap.default`, `component.badge.padding-x.default`, `component.button.padding-x.sm`, `component.button.padding-y.sm`, `component.button.gap.lg`, `component.button.icon-only-padding.md`, `component.card.header.padding-bottom.default`, `component.card.header.gap.default`, `component.checkbox.target.gap.default`, `component.field.padding-y.sm`, `component.input.gap.lg`, `component.input.padding-x.sm`, `component.input.padding-x.md`, `component.input.padding-y.sm`, `component.modal.header.padding-bottom.sm`, `component.modal.header.gap.default`, `component.modal.footer.padding-top.sm`, `component.modal.footer.gap.default`, `component.radio.target.gap.default`, `component.select.gap.lg`, `component.select.padding-x.sm`, `component.select.padding-x.md`, `component.select.padding-y.sm`, `component.textarea.padding-y.sm`, `component.toggle.target.gap.default`, `component.tooltip.content.padding-x.default`, `component.tooltip.arrow.base.default`
+  - Tokens que referenciam: `component.alert.gap.default`, `component.badge.padding-x.default`, `component.button.padding-x.sm`, `component.button.padding-y.sm`, `component.button.gap.lg`, `component.button.icon-only-padding.md`, `component.card.header.padding-bottom.default`, `component.card.header.gap.default`, `component.checkbox.target.gap.default`, `component.field.padding-y.sm`, `component.input.gap.lg`, `component.input.padding-x.md`, `component.modal.header.padding-bottom.sm`, `component.modal.footer.padding-top.sm`, `component.radio.target.gap.default`, `component.select.gap.lg`, `component.select.padding-x.md`, `component.textarea.padding-x.sm`, `component.toggle.target.gap.default`, `component.tooltip.content.padding-x.default`, `component.tooltip.arrow.base.default`
 
 ### `semantic.space.xl`
 
@@ -7250,9 +7269,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.dimension.20.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (13×)
+    - `css/tokens/generated/component.css` (8×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.modal.overlay.padding.default`, `component.modal.header.padding-x.md`, `component.modal.header.padding-x.lg`, `component.modal.header.padding-top.md`, `component.modal.header.padding-top.lg`, `component.modal.body.padding-x.md`, `component.modal.body.padding-x.lg`, `component.modal.body.padding-bottom.md`, `component.modal.body.padding-bottom.lg`, `component.modal.footer.padding-x.md`, `component.modal.footer.padding-x.lg`, `component.modal.footer.padding-bottom.md`, `component.modal.footer.padding-bottom.lg`
+  - Tokens que referenciam: `component.modal.overlay.padding.default`, `component.modal.header.padding-x.md`, `component.modal.header.padding-top.md`, `component.modal.body.padding-x.md`, `component.modal.body.padding-bottom.md`, `component.modal.body.padding-bottom.lg`, `component.modal.footer.padding-x.md`, `component.modal.footer.padding-bottom.md`
 
 ### `semantic.space.xs`
 
@@ -7270,7 +7289,7 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/toggle.css` (1×)
     - `css/tokens/generated/component.css` (26×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.alert.content.gap.default`, `component.badge.gap.default`, `component.breadcrumb.gap.default`, `component.breadcrumb.item.gap.default`, `component.button.gap.md`, `component.button.label-frame.padding-x.default`, `component.checkbox.content.gap.default`, `component.form-field.gap.default`, `component.form-field.error.gap.default`, `component.input.gap.sm`, `component.input.gap.md`, `component.input.icon-frame.padding-x.default`, `component.input.stack.gap.default`, `component.input.text-frame.padding-x.default`, `component.modal.close.padding.default`, `component.radio.content.gap.default`, `component.select.chevron-frame.padding-x.default`, `component.select.gap.sm`, `component.select.gap.md`, `component.select.icon-frame.padding-x.default`, `component.select.stack.gap.default`, `component.select.text-frame.padding-x.default`, `component.textarea.stack.gap.default`, `component.toggle.content.gap.default`, `component.tooltip.content.padding-y.default`, `component.tooltip.arrow.depth.default`
+  - Tokens que referenciam: `component.alert.content.gap.default`, `component.badge.gap.default`, `component.breadcrumb.gap.default`, `component.breadcrumb.item.gap.default`, `component.button.gap.md`, `component.button.label-frame.padding-x.default`, `component.checkbox.content.gap.default`, `component.form-field.gap.default`, `component.form-field.error.gap.default`, `component.form-field.stack.gap.default`, `component.input.gap.sm`, `component.input.gap.md`, `component.input.icon-frame.padding-x.default`, `component.input.padding-x.sm`, `component.input.text-frame.padding-x.default`, `component.modal.close.padding.default`, `component.radio.content.gap.default`, `component.select.chevron-frame.padding-x.default`, `component.select.gap.sm`, `component.select.gap.md`, `component.select.icon-frame.padding-x.default`, `component.select.padding-x.sm`, `component.select.text-frame.padding-x.default`, `component.toggle.content.gap.default`, `component.tooltip.content.padding-y.default`, `component.tooltip.arrow.depth.default`
 
 ### `semantic.surface.default`
 
@@ -7285,8 +7304,8 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/badge.css` (2×)
     - `css/components/card.css` (1×)
-    - `css/tokens/generated/component.css` (22×)
-  - Tokens que referenciam: `component.checkbox.box.fill.unchecked.default`, `component.checkbox.box.fill.unchecked.focus`, `component.field.bg.default`, `component.input.bg.default`, `component.input.bg.error`, `component.input.bg.error-hover`, `component.input.bg.filled`, `component.input.bg.focus`, `component.radio.control.fill.unselected.default`, `component.radio.control.fill.unselected.focus`, `component.select.bg.default`, `component.select.bg.error`, `component.select.bg.error-hover`, `component.select.bg.filled`, `component.select.bg.focus`, `component.textarea.bg.default`, `component.textarea.bg.error`, `component.textarea.bg.error-hover`, `component.textarea.bg.filled`, `component.textarea.bg.focus`, `component.toggle.track.fill.off.default`, `component.toggle.track.fill.off.focus`
+    - `css/tokens/generated/component.css` (9×)
+  - Tokens que referenciam: `component.badge.bg.neutral.default`, `component.card.bg.default`, `component.checkbox.box.fill.unchecked.default`, `component.checkbox.box.fill.unchecked.focus`, `component.field.bg.default`, `component.radio.control.fill.unselected.default`, `component.radio.control.fill.unselected.focus`, `component.toggle.track.fill.off.default`, `component.toggle.track.fill.off.focus`
 
 ### `semantic.surface.elevated`
 
@@ -7300,6 +7319,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/modal.css` (1×)
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.modal.bg.default`
 
 ### `semantic.surface.hover`
 
@@ -7339,6 +7360,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/card.css` (1×)
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.card.bg.elevated`
 
 ### `semantic.toned.background.active`
 
@@ -7366,8 +7389,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/badge.css` (1×)
-    - `css/tokens/generated/component.css` (2×)
-  - Tokens que referenciam: `component.button.bg.toned.default`, `component.button.bg.toned.focus`
+    - `css/tokens/generated/component.css` (3×)
+  - Tokens que referenciam: `component.badge.bg.primary.subtle`, `component.button.bg.toned.default`, `component.button.bg.toned.focus`
 
 ### `semantic.toned.background.disabled`
 
@@ -7409,8 +7432,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/badge.css` (1×)
-    - `css/tokens/generated/component.css` (2×)
-  - Tokens que referenciam: `component.button.content.color.toned.default`, `component.button.content.color.toned.focus`
+    - `css/tokens/generated/component.css` (3×)
+  - Tokens que referenciam: `component.badge.label.color.primary.subtle`, `component.button.content.color.toned.default`, `component.button.content.color.toned.focus`
 
 ### `semantic.toned.content-disabled`
 
@@ -7448,7 +7471,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-sans`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.family.sans.
 - **Usos**:
-  - Tokens que referenciam: `component.button.label.font-family.default`, `component.input.helper.font-family.default`, `component.input.label.font-family.default`, `component.input.required.font-family.default`, `component.input.text.font-family.default`, `component.select.helper.font-family.default`, `component.select.label.font-family.default`, `component.select.required.font-family.default`, `component.select.text.font-family.default`, `component.textarea.helper.font-family.default`, `component.textarea.label.font-family.default`, `component.textarea.required.font-family.default`, `component.textarea.text.font-family.default`
+  - Tokens que referenciam: `component.button.label.font-family.default`, `component.form-field.label.font-family.default`, `component.form-field.required.font-family.default`, `component.input.text.font-family.default`, `component.select.text.font-family.default`, `component.textarea.text.font-family.default`
 
 ### `semantic.typography.body.font-size.2xl`
 
@@ -7460,7 +7483,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-2xl`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.size.24.
 - **Usos**:
-  - Tokens que referenciam: `component.modal.title.font-size.md`
+  - Tokens que referenciam: `component.avatar.icon.size.md`, `component.modal.title.font-size.md`
 
 ### `semantic.typography.body.font-size.2xs`
 
@@ -7496,7 +7519,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-4xl`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.size.32.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - Tokens que referenciam: `component.avatar.icon.size.lg`
 
 ### `semantic.typography.body.font-size.5xl`
 
@@ -7592,7 +7615,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-sm`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.size.14.
 - **Usos**:
-  - Tokens que referenciam: `component.alert.title.font-size.default`, `component.alert.description.font-size.default`, `component.avatar.initials.font-size.sm`, `component.avatar.initials.font-size.md`, `component.breadcrumb.label.font-size.default`, `component.button.label.font-size.sm`, `component.button.label.font-size.md`, `component.card.body.font-size.default`, `component.card.subtitle.font-size.default`, `component.form-field.label.font-size.default`, `component.form-field.required.font-size.default`, `component.input.label.font-size.md`, `component.input.label.font-size.lg`, `component.input.required.font-size.default`, `component.input.text.font-size.md`, `component.modal.body.font-size.sm`, `component.select.helper.font-size.md`, `component.select.helper.font-size.lg`, `component.select.label.font-size.md`, `component.select.label.font-size.lg`, `component.select.required.font-size.default`, `component.select.text.font-size.md`, `component.tabs.label.font-size.default`, `component.textarea.helper.font-size.md`, `component.textarea.helper.font-size.lg`, `component.textarea.label.font-size.md`, `component.textarea.label.font-size.lg`, `component.textarea.required.font-size.default`, `component.textarea.text.font-size.md`, `component.tooltip.label.font-size.default`
+  - Tokens que referenciam: `component.alert.title.font-size.default`, `component.alert.description.font-size.default`, `component.avatar.initials.font-size.sm`, `component.avatar.initials.font-size.md`, `component.breadcrumb.label.font-size.default`, `component.button.label.font-size.sm`, `component.button.label.font-size.md`, `component.card.body.font-size.default`, `component.card.subtitle.font-size.default`, `component.form-field.label.font-size.default`, `component.form-field.required.font-size.default`, `component.input.text.font-size.md`, `component.modal.body.font-size.sm`, `component.select.text.font-size.md`, `component.tabs.label.font-size.default`, `component.textarea.text.font-size.md`, `component.tooltip.label.font-size.default`
 
 ### `semantic.typography.body.font-size.xl`
 
@@ -7604,7 +7627,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-xl`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.size.20.
 - **Usos**:
-  - Tokens que referenciam: `component.avatar.initials.font-size.lg`, `component.card.title.font-size.default`, `component.modal.title.font-size.sm`
+  - Tokens que referenciam: `component.avatar.initials.font-size.lg`, `component.avatar.icon.size.sm`, `component.card.title.font-size.default`, `component.modal.title.font-size.sm`
 
 ### `semantic.typography.body.font-size.xs`
 
@@ -7616,7 +7639,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-xs`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.size.12.
 - **Usos**:
-  - Tokens que referenciam: `component.badge.label.font-size.default`, `component.breadcrumb.separator.font-size.default`, `component.form-field.helper.font-size.default`, `component.form-field.error.font-size.default`, `component.input.helper.font-size.default`, `component.input.label.font-size.sm`, `component.input.text.font-size.sm`, `component.select.helper.font-size.sm`, `component.select.label.font-size.sm`, `component.select.text.font-size.sm`, `component.textarea.helper.font-size.sm`, `component.textarea.label.font-size.sm`, `component.textarea.text.font-size.sm`
+  - Tokens que referenciam: `component.badge.label.font-size.default`, `component.breadcrumb.separator.font-size.default`, `component.form-field.helper.font-size.default`, `component.form-field.error.font-size.default`, `component.input.text.font-size.sm`, `component.select.text.font-size.sm`, `component.textarea.text.font-size.sm`
 
 ### `semantic.typography.body.font-weight.bold`
 
@@ -7628,7 +7651,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-bold`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.weight.bold.
 - **Usos**:
-  - Tokens que referenciam: `component.alert.title.font-weight.default`, `component.avatar.initials.font-weight.sm`, `component.avatar.initials.font-weight.md`, `component.badge.label.font-weight.default`, `component.breadcrumb.label.font-weight.default`, `component.button.label.font-weight.default`, `component.card.subtitle.font-weight.default`, `component.form-field.label.font-weight.default`, `component.form-field.required.font-weight.default`, `component.form-field.error.font-weight.default`, `component.input.label.font-weight.default`, `component.input.required.font-weight.default`, `component.select.label.font-weight.default`, `component.select.required.font-weight.default`, `component.tabs.label.font-weight.default`, `component.textarea.label.font-weight.default`, `component.textarea.required.font-weight.default`
+  - Tokens que referenciam: `component.alert.title.font-weight.default`, `component.avatar.initials.font-weight.sm`, `component.avatar.initials.font-weight.md`, `component.badge.label.font-weight.default`, `component.breadcrumb.label.font-weight.default`, `component.button.label.font-weight.default`, `component.card.subtitle.font-weight.default`, `component.form-field.label.font-weight.default`, `component.form-field.required.font-weight.default`, `component.form-field.error.font-weight.default`, `component.tabs.label.font-weight.default`
 
 ### `semantic.typography.body.font-weight.medium`
 
@@ -7652,7 +7675,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-regular`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.weight.regular.
 - **Usos**:
-  - Tokens que referenciam: `component.alert.description.font-weight.default`, `component.breadcrumb.separator.font-weight.default`, `component.card.body.font-weight.default`, `component.form-field.helper.font-weight.default`, `component.input.helper.font-weight.default`, `component.input.text.font-weight.default`, `component.modal.body.font-weight.default`, `component.select.helper.font-weight.default`, `component.select.text.font-weight.default`, `component.textarea.helper.font-weight.default`, `component.textarea.text.font-weight.default`, `component.tooltip.label.font-weight.default`
+  - Tokens que referenciam: `component.alert.description.font-weight.default`, `component.breadcrumb.separator.font-weight.default`, `component.card.body.font-weight.default`, `component.form-field.helper.font-weight.default`, `component.input.text.font-weight.default`, `component.modal.body.font-weight.default`, `component.select.text.font-weight.default`, `component.textarea.text.font-weight.default`, `component.tooltip.label.font-weight.default`
 
 ### `semantic.typography.body.font-weight.semibold`
 
@@ -7676,7 +7699,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-normal`.
 - **Decisão**: Aliasado a Foundation foundation.typography.letter.spacing.normal.
 - **Usos**:
-  - Tokens que referenciam: `component.breadcrumb.label.letter-spacing.default`, `component.breadcrumb.separator.letter-spacing.default`, `component.button.label.letter-spacing.default`, `component.input.helper.letter-spacing.default`, `component.input.label.letter-spacing.default`, `component.input.required.letter-spacing.default`, `component.input.text.letter-spacing.default`, `component.modal.title.letter-spacing.sm`, `component.modal.title.letter-spacing.md`, `component.select.helper.letter-spacing.default`, `component.select.label.letter-spacing.default`, `component.select.required.letter-spacing.default`, `component.select.text.letter-spacing.default`, `component.tabs.label.letter-spacing.default`, `component.textarea.helper.letter-spacing.default`, `component.textarea.label.letter-spacing.default`, `component.textarea.required.letter-spacing.default`, `component.textarea.text.letter-spacing.default`
+  - Tokens que referenciam: `component.breadcrumb.label.letter-spacing.default`, `component.breadcrumb.separator.letter-spacing.default`, `component.button.label.letter-spacing.default`, `component.input.text.letter-spacing.default`, `component.modal.title.letter-spacing.sm`, `component.modal.title.letter-spacing.md`, `component.select.text.letter-spacing.default`, `component.tabs.label.letter-spacing.default`, `component.textarea.text.letter-spacing.default`
 
 ### `semantic.typography.body.letter-spacing.tight`
 
@@ -7844,7 +7867,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-sm`.
 - **Decisão**: Aliasado a Foundation foundation.typography.line.height.20.
 - **Usos**:
-  - Tokens que referenciam: `component.alert.title.line-height.default`, `component.alert.description.line-height.default`, `component.avatar.initials.line-height.sm`, `component.avatar.initials.line-height.md`, `component.breadcrumb.label.line-height.default`, `component.button.label.line-height.md`, `component.card.body.line-height.default`, `component.card.subtitle.line-height.default`, `component.form-field.label.line-height.default`, `component.form-field.required.line-height.default`, `component.input.label.line-height.md`, `component.input.label.line-height.lg`, `component.input.required.line-height.default`, `component.input.text.line-height.md`, `component.modal.body.line-height.sm`, `component.select.helper.line-height.md`, `component.select.helper.line-height.lg`, `component.select.label.line-height.md`, `component.select.label.line-height.lg`, `component.select.required.line-height.default`, `component.select.text.line-height.md`, `component.tabs.label.line-height.default`, `component.textarea.helper.line-height.md`, `component.textarea.helper.line-height.lg`, `component.textarea.label.line-height.md`, `component.textarea.label.line-height.lg`, `component.textarea.required.line-height.default`, `component.textarea.text.line-height.md`, `component.tooltip.label.line-height.default`
+  - Tokens que referenciam: `component.alert.title.line-height.default`, `component.alert.description.line-height.default`, `component.avatar.initials.line-height.sm`, `component.avatar.initials.line-height.md`, `component.breadcrumb.label.line-height.default`, `component.button.label.line-height.md`, `component.card.body.line-height.default`, `component.card.subtitle.line-height.default`, `component.form-field.label.line-height.default`, `component.form-field.required.line-height.default`, `component.input.text.line-height.md`, `component.modal.body.line-height.sm`, `component.select.text.line-height.md`, `component.tabs.label.line-height.default`, `component.textarea.text.line-height.md`, `component.tooltip.label.line-height.default`
 
 ### `semantic.typography.body.line-height.xl`
 
@@ -7868,7 +7891,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-xs`.
 - **Decisão**: Aliasado a Foundation foundation.typography.line.height.18.
 - **Usos**:
-  - Tokens que referenciam: `component.badge.label.line-height.default`, `component.breadcrumb.separator.line-height.default`, `component.form-field.helper.line-height.default`, `component.form-field.error.line-height.default`, `component.input.helper.line-height.default`, `component.input.label.line-height.sm`, `component.select.helper.line-height.sm`, `component.select.label.line-height.sm`, `component.textarea.helper.line-height.sm`, `component.textarea.label.line-height.sm`
+  - Tokens que referenciam: `component.badge.label.line-height.default`, `component.breadcrumb.separator.line-height.default`, `component.form-field.helper.line-height.default`, `component.form-field.error.line-height.default`
 
 ### `semantic.z.modal`
 
@@ -7897,6 +7920,150 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/tooltip.css` (1×)
 
+### `component.alert.bg.error.filled`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.feedback.error.background.default`
+- **Sentido**: Contrato bg.error de alert, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: fill
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.alert.bg.error.subtle`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.feedback.error.background.subtle`
+- **Sentido**: Contrato bg.error de alert, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: fill
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.alert.bg.info.filled`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.feedback.info.background.default`
+- **Sentido**: Contrato bg.info de alert, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: fill
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.alert.bg.info.subtle`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.feedback.info.background.subtle`
+- **Sentido**: Contrato bg.info de alert, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: fill
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.alert.bg.success.filled`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.feedback.success.background.default`
+- **Sentido**: Contrato bg.success de alert, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: fill
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.alert.bg.success.subtle`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.feedback.success.background.subtle`
+- **Sentido**: Contrato bg.success de alert, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: fill
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.alert.bg.warning.filled`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.feedback.warning.background.default`
+- **Sentido**: Contrato bg.warning de alert, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: fill
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.alert.bg.warning.subtle`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.feedback.warning.background.subtle`
+- **Sentido**: Contrato bg.warning de alert, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: fill
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.alert.border-color.error.subtle`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.feedback.error.border-default`
+- **Sentido**: Contrato border-color.error de alert, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.alert.border-color.info.subtle`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.feedback.info.border-default`
+- **Sentido**: Contrato border-color.info de alert, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.alert.border-color.success.subtle`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.feedback.success.border-default`
+- **Sentido**: Contrato border-color.success de alert, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.alert.border-color.warning.subtle`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.feedback.warning.border-default`
+- **Sentido**: Contrato border-color.warning de alert, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
 ### `component.alert.border-width.default`
 
 - **Camada**: component
@@ -7909,19 +8076,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/alert.css` (4×)
-
-### `component.alert.close.frame-size.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.size.md`
-- **Sentido**: Token component para alert / close / frame size / default.
-- **Escopo**: width, height
-- **Contexto**: Usado para estabilizar o contrato component exposto por component.alert.close.
-- **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.size.md.
-- **Usos**:
-  - CSS:
-    - `css/components/alert.css` (2×)
 
 ### `component.alert.close.icon-size.default`
 
@@ -7936,6 +8090,78 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/alert.css` (2×)
 
+### `component.alert.close.icon.color.error.filled`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.icon.color.error-contrast`
+- **Sentido**: Contrato close.icon.color.error de alert, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.alert.close.icon.color.info.filled`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.icon.color.info-contrast`
+- **Sentido**: Contrato close.icon.color.info de alert, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.alert.close.icon.color.subtle`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.icon.color.default`
+- **Sentido**: Contrato close.icon.color de alert, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.alert.close.icon.color.success.filled`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.icon.color.success-contrast`
+- **Sentido**: Contrato close.icon.color.success de alert, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.alert.close.icon.color.warning.filled`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.icon.color.warning-contrast`
+- **Sentido**: Contrato close.icon.color.warning de alert, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.alert.close.icon.stroke-width.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.icon.stroke-width.regular.20`
+- **Sentido**: Contrato close.icon.stroke-width de alert, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: stroke-width, border-width
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
 ### `component.alert.content.gap.default`
 
 - **Camada**: component
@@ -7948,6 +8174,66 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/alert.css` (1×)
+
+### `component.alert.description.color.error.filled`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.feedback.error.content-contrast`
+- **Sentido**: Contrato description.color.error de alert, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.alert.description.color.info.filled`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.feedback.info.content-contrast`
+- **Sentido**: Contrato description.color.info de alert, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.alert.description.color.subtle`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.content.default`
+- **Sentido**: Contrato description.color de alert, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.alert.description.color.success.filled`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.feedback.success.content-contrast`
+- **Sentido**: Contrato description.color.success de alert, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.alert.description.color.warning.filled`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.feedback.warning.content-contrast`
+- **Sentido**: Contrato description.color.warning de alert, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `component.alert.description.font-size.default`
 
@@ -8001,18 +8287,101 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/alert.css` (1×)
 
-### `component.alert.icon.frame-size.default`
+### `component.alert.icon.color.error.filled`
 
 - **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.size.md`
-- **Sentido**: Token component para alert / icon / frame size / default.
-- **Escopo**: width, height
-- **Contexto**: Usado para estabilizar o contrato component exposto por component.alert.icon.
-- **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.size.md.
+- **Tipo**: `color`
+- **Alias**: → `semantic.icon.color.error-contrast`
+- **Sentido**: Contrato icon.color.error de alert, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
 - **Usos**:
-  - CSS:
-    - `css/components/alert.css` (2×)
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.alert.icon.color.error.subtle`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.icon.color.error`
+- **Sentido**: Contrato icon.color.error de alert, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.alert.icon.color.info.filled`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.icon.color.info-contrast`
+- **Sentido**: Contrato icon.color.info de alert, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.alert.icon.color.info.subtle`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.icon.color.default`
+- **Sentido**: Contrato icon.color.info de alert, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.alert.icon.color.success.filled`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.icon.color.success-contrast`
+- **Sentido**: Contrato icon.color.success de alert, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.alert.icon.color.success.subtle`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.icon.color.success`
+- **Sentido**: Contrato icon.color.success de alert, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.alert.icon.color.warning.filled`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.icon.color.warning-contrast`
+- **Sentido**: Contrato icon.color.warning de alert, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.alert.icon.color.warning.subtle`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.icon.color.warning`
+- **Sentido**: Contrato icon.color.warning de alert, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `component.alert.icon.size.default`
 
@@ -8025,7 +8394,19 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Alias 1:1 para semantic.size.md porque 24px e escala reutilizavel, mas no Alert documenta o slot publico de icon.
 - **Usos**:
   - CSS:
-    - `css/components/alert.css` (2×)
+    - `css/components/alert.css` (4×)
+
+### `component.alert.icon.stroke-width.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.icon.stroke-width.regular.20`
+- **Sentido**: Contrato icon.stroke-width de alert, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: stroke-width, border-width
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `component.alert.padding.default`
 
@@ -8052,6 +8433,66 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/alert.css` (1×)
+
+### `component.alert.title.color.error.filled`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.feedback.error.content-contrast`
+- **Sentido**: Contrato title.color.error de alert, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.alert.title.color.info.filled`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.feedback.info.content-contrast`
+- **Sentido**: Contrato title.color.info de alert, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.alert.title.color.subtle`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.content.strong`
+- **Sentido**: Contrato title.color de alert, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.alert.title.color.success.filled`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.feedback.success.content-contrast`
+- **Sentido**: Contrato title.color.success de alert, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.alert.title.color.warning.filled`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.feedback.warning.content-contrast`
+- **Sentido**: Contrato title.color.warning de alert, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `component.alert.title.font-size.default`
 
@@ -8092,11 +8533,35 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/alert.css` (1×)
 
+### `component.avatar.bg.default`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.primary.background.default`
+- **Sentido**: Contrato bg de avatar, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: fill
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente avatar entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.avatar.content.color.default`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.primary.content-default`
+- **Sentido**: Contrato content.color de avatar, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente avatar entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
 ### `component.avatar.icon.size.lg`
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.size.lg`
+- **Alias**: → `semantic.typography.body.font-size.4xl`
 - **Sentido**: Tamanho do ícone SVG fallback do Avatar por size.
 - **Escopo**: width, height
 - **Contexto**: Component token do contrato anatômico Avatar Icon. Dimensiona o ícone Lucide/SVG fallback do Avatar em 20/24/32px conforme size.
@@ -8109,7 +8574,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.size.md`
+- **Alias**: → `semantic.typography.body.font-size.2xl`
 - **Sentido**: Tamanho do ícone SVG fallback do Avatar por size.
 - **Escopo**: width, height
 - **Contexto**: Component token do contrato anatômico Avatar Icon. Dimensiona o ícone Lucide/SVG fallback do Avatar em 20/24/32px conforme size.
@@ -8122,7 +8587,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.size.sm`
+- **Alias**: → `semantic.typography.body.font-size.xl`
 - **Sentido**: Tamanho do ícone SVG fallback do Avatar por size.
 - **Escopo**: width, height
 - **Contexto**: Component token do contrato anatômico Avatar Icon. Dimensiona o ícone Lucide/SVG fallback do Avatar em 20/24/32px conforme size.
@@ -8130,6 +8595,42 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/avatar.css` (2×)
+
+### `component.avatar.icon.stroke-width.lg`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.icon.stroke-width.regular.32`
+- **Sentido**: Contrato icon.stroke-width de avatar, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: stroke-width, border-width
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente avatar entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.avatar.icon.stroke-width.md`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.icon.stroke-width.regular.24`
+- **Sentido**: Contrato icon.stroke-width de avatar, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: stroke-width, border-width
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente avatar entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.avatar.icon.stroke-width.sm`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.icon.stroke-width.regular.20`
+- **Sentido**: Contrato icon.stroke-width de avatar, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: stroke-width, border-width
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente avatar entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `component.avatar.initials.font-size.lg`
 
@@ -8300,6 +8801,150 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/avatar.css` (2×)
 
+### `component.badge.bg.error.solid`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.feedback.error.background.default`
+- **Sentido**: Contrato bg.error de badge, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: fill
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.badge.bg.error.subtle`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.feedback.error.background.subtle`
+- **Sentido**: Contrato bg.error de badge, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: fill
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.badge.bg.info.solid`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.feedback.info.background.default`
+- **Sentido**: Contrato bg.info de badge, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: fill
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.badge.bg.info.subtle`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.feedback.info.background.subtle`
+- **Sentido**: Contrato bg.info de badge, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: fill
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.badge.bg.neutral.default`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.surface.default`
+- **Sentido**: Contrato bg.neutral de badge, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: fill
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.badge.bg.primary.solid`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.primary.background.default`
+- **Sentido**: Contrato bg.primary de badge, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: fill
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.badge.bg.primary.subtle`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.toned.background.default`
+- **Sentido**: Contrato bg.primary de badge, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: fill
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.badge.bg.success.solid`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.feedback.success.background.default`
+- **Sentido**: Contrato bg.success de badge, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: fill
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.badge.bg.success.subtle`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.feedback.success.background.subtle`
+- **Sentido**: Contrato bg.success de badge, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: fill
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.badge.bg.warning.solid`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.feedback.warning.background.default`
+- **Sentido**: Contrato bg.warning de badge, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: fill
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.badge.bg.warning.subtle`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.feedback.warning.background.subtle`
+- **Sentido**: Contrato bg.warning de badge, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: fill
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.badge.border-color.neutral.subtle`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.border.default`
+- **Sentido**: Contrato border-color.neutral de badge, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
 ### `component.badge.border-width.default`
 
 - **Camada**: component
@@ -8325,6 +8970,150 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/badge.css` (1×)
+
+### `component.badge.label.color.error.solid`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.feedback.error.content-contrast`
+- **Sentido**: Contrato label.color.error de badge, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.badge.label.color.error.subtle`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.feedback.error.content-default`
+- **Sentido**: Contrato label.color.error de badge, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.badge.label.color.info.solid`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.feedback.info.content-contrast`
+- **Sentido**: Contrato label.color.info de badge, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.badge.label.color.info.subtle`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.feedback.info.content-default`
+- **Sentido**: Contrato label.color.info de badge, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.badge.label.color.neutral.solid`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.content.strong`
+- **Sentido**: Contrato label.color.neutral de badge, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.badge.label.color.neutral.subtle`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.content.default`
+- **Sentido**: Contrato label.color.neutral de badge, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.badge.label.color.primary.solid`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.primary.content-default`
+- **Sentido**: Contrato label.color.primary de badge, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.badge.label.color.primary.subtle`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.toned.content-default`
+- **Sentido**: Contrato label.color.primary de badge, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.badge.label.color.success.solid`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.feedback.success.content-contrast`
+- **Sentido**: Contrato label.color.success de badge, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.badge.label.color.success.subtle`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.feedback.success.content-default`
+- **Sentido**: Contrato label.color.success de badge, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.badge.label.color.warning.solid`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.feedback.warning.content-contrast`
+- **Sentido**: Contrato label.color.warning de badge, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.badge.label.color.warning.subtle`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.feedback.warning.content-default`
+- **Sentido**: Contrato label.color.warning de badge, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `component.badge.label.font-size.default`
 
@@ -8442,6 +9231,30 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/breadcrumb.css` (1×)
+
+### `component.breadcrumb.label.color.current`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.content.default`
+- **Sentido**: Contrato label.color de breadcrumb, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente breadcrumb entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.breadcrumb.label.color.link`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.link.content-default`
+- **Sentido**: Contrato label.color de breadcrumb, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente breadcrumb entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `component.breadcrumb.label.font-size.default`
 
@@ -9327,58 +10140,6 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/button.css` (1×)
 
-### `component.button.focus-ring.color.danger`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.border.focus-error`
-- **Sentido**: Cor do focus ring do Button danger.
-- **Escopo**: outline-color, stroke
-- **Contexto**: Component token do contrato anatômico Button. Binda o focus ring dos estilos Success/Danger no Figma e impede herança indevida do foco brand no CSS.
-- **Decisão**: Alias 1:1 para semantic.border.focus-error porque a cor é semântica, mas o focus ring é uma parte pública e estável do Button por estilo.
-- **Usos**:
-  - CSS:
-    - `css/components/button.css` (1×)
-
-### `component.button.focus-ring.color.default`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.border.focus`
-- **Sentido**: color do focus ring Button.
-- **Escopo**: outline-color, stroke
-- **Contexto**: Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.border.focus porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
-- **Usos**:
-  - CSS:
-    - `css/components/button.css` (1×)
-
-### `component.button.focus-ring.color.success`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.feedback.success.border-default`
-- **Sentido**: Cor do focus ring do Button success.
-- **Escopo**: outline-color, stroke
-- **Contexto**: Component token do contrato anatômico Button. Binda o focus ring dos estilos Success/Danger no Figma e impede herança indevida do foco brand no CSS.
-- **Decisão**: Alias 1:1 para semantic.feedback.success.border-default porque a cor é semântica, mas o focus ring é uma parte pública e estável do Button por estilo.
-- **Usos**:
-  - CSS:
-    - `css/components/button.css` (1×)
-
-### `component.button.focus-ring.offset.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.border.width.focus`
-- **Sentido**: offset do focus ring Button.
-- **Escopo**: outline-offset
-- **Contexto**: Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.border.width.focus porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
-- **Usos**:
-  - CSS:
-    - `css/components/button.css` (1×)
-
 ### `component.button.focus-ring.radius.default`
 
 - **Camada**: component
@@ -9390,19 +10151,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Alias 1:1 para semantic.radius.lg porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.button.focus-ring.stroke-width.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.border.width.focus`
-- **Sentido**: stroke-width do focus ring Button.
-- **Escopo**: —
-- **Contexto**: Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.border.width.focus porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
-- **Usos**:
-  - CSS:
-    - `css/components/button.css` (1×)
 
 ### `component.button.gap.lg`
 
@@ -9560,45 +10308,6 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/button.css` (2×)
 
-### `component.button.icon.frame-size.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.size.md`
-- **Sentido**: Tamanho do frame de ícone Button lg.
-- **Escopo**: width, height
-- **Contexto**: Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.size.md porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente por tamanho.
-- **Usos**:
-  - CSS:
-    - `css/components/button.css` (2×)
-
-### `component.button.icon.frame-size.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.size.md`
-- **Sentido**: Tamanho do frame de ícone Button md.
-- **Escopo**: width, height
-- **Contexto**: Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.size.md porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente por tamanho.
-- **Usos**:
-  - CSS:
-    - `css/components/button.css` (2×)
-
-### `component.button.icon.frame-size.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.size.sm`
-- **Sentido**: Tamanho do frame de ícone Button sm.
-- **Escopo**: width, height
-- **Contexto**: Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.size.sm porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente por tamanho.
-- **Usos**:
-  - CSS:
-    - `css/components/button.css` (2×)
-
 ### `component.button.icon.size.lg`
 
 - **Camada**: component
@@ -9610,33 +10319,69 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.size.md.
 - **Usos**:
   - CSS:
-    - `css/components/button.css` (2×)
+    - `css/components/button.css` (4×)
 
 ### `component.button.icon.size.md`
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.size.md`
+- **Alias**: → `semantic.size.sm`
 - **Sentido**: Token component para button / icon / size / md.
 - **Escopo**: width, height
 - **Contexto**: Usado para estabilizar o contrato component exposto por component.button.icon.
 - **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.size.md.
 - **Usos**:
   - CSS:
-    - `css/components/button.css` (2×)
+    - `css/components/button.css` (4×)
 
 ### `component.button.icon.size.sm`
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.size.sm`
+- **Alias**: → `semantic.size.xs`
 - **Sentido**: Token component para button / icon / size / sm.
 - **Escopo**: width, height
 - **Contexto**: Usado para estabilizar o contrato component exposto por component.button.icon.
 - **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.size.sm.
 - **Usos**:
   - CSS:
-    - `css/components/button.css` (2×)
+    - `css/components/button.css` (4×)
+
+### `component.button.icon.stroke-width.lg`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.icon.stroke-width.regular.24`
+- **Sentido**: Contrato icon.stroke-width de button, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: stroke-width, border-width
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente button entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.button.icon.stroke-width.md`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.icon.stroke-width.regular.20`
+- **Sentido**: Contrato icon.stroke-width de button, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: stroke-width, border-width
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente button entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.button.icon.stroke-width.sm`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.icon.stroke-width.regular.16`
+- **Sentido**: Contrato icon.stroke-width de button, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: stroke-width, border-width
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente button entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `component.button.label-frame.padding-x.default`
 
@@ -9771,6 +10516,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `semantic.control.button.min-width.lg`
 - **Sentido**: Largura mínima do Button lg.
 - **Escopo**: min-width
 - **Contexto**: Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.
@@ -9783,6 +10529,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `semantic.control.button.min-width.md`
 - **Sentido**: Largura mínima do Button md.
 - **Escopo**: min-width
 - **Contexto**: Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.
@@ -9795,6 +10542,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
+- **Alias**: → `semantic.control.button.min-width.sm`
 - **Sentido**: Largura mínima do Button sm.
 - **Escopo**: min-width
 - **Contexto**: Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.
@@ -9894,6 +10642,42 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/button.css` (1×)
 
+### `component.card.bg.default`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.surface.default`
+- **Sentido**: Contrato bg de card, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: fill
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente card entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.card.bg.elevated`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.surface.raised`
+- **Sentido**: Contrato bg de card, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: fill
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente card entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.card.body.color.default`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.content.default`
+- **Sentido**: Contrato body.color de card, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente card entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
 ### `component.card.body.font-size.default`
 
 - **Camada**: component
@@ -9958,6 +10742,30 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/card.css` (1×)
+
+### `component.card.border-color.elevated`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.border.default`
+- **Sentido**: Contrato border-color de card, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente card entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.card.border-color.outlined`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.border.subtle`
+- **Sentido**: Contrato border-color de card, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente card entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `component.card.border-width.default`
 
@@ -10037,6 +10845,18 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/card.css` (1×)
 
+### `component.card.subtitle.color.default`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.content.default`
+- **Sentido**: Contrato subtitle.color de card, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: fill
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente card entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
 ### `component.card.subtitle.font-size.default`
 
 - **Camada**: component
@@ -10075,6 +10895,18 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/card.css` (1×)
+
+### `component.card.title.color.default`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.content.strong`
+- **Sentido**: Contrato title.color de card, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente card entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `component.card.title.font-size.default`
 
@@ -10140,6 +10972,30 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/checkbox.css` (1×)
+
+### `component.checkbox.box.border-color.unchecked.error`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.border.error`
+- **Sentido**: Contrato box.border-color.unchecked de checkbox, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente checkbox entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.checkbox.box.border-color.unchecked.error-hover`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.border.error-hover`
+- **Sentido**: Contrato box.border-color.unchecked de checkbox, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente checkbox entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `component.checkbox.box.border-color.unchecked.focus`
 
@@ -10397,32 +11253,6 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/checkbox.css` (2×)
 
-### `component.checkbox.description.color.default`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.content.strong`
-- **Sentido**: Checkbox description default
-- **Escopo**: checkbox, description
-- **Contexto**: Component token do contrato Checkbox materializado no Figma para description.
-- **Decisão**: Alias 1:1 para semantic.content.strong para manter o estado default alinhado entre Figma, CSS e docs.
-- **Usos**:
-  - CSS:
-    - `css/components/checkbox.css` (2×)
-
-### `component.checkbox.focus-ring.color.default`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.border.focus`
-- **Sentido**: Cor do focus ring do Checkbox.
-- **Escopo**: outline-color, stroke
-- **Contexto**: Component token do contrato anatômico Checkbox. Binda o stroke do Focus Ring no Figma e substitui consumo direto de semantic.border.focus no CSS.
-- **Decisão**: Alias 1:1 para semantic.border.focus porque a cor de foco é sistêmica, mas a anatomia focus-ring pertence ao Checkbox.
-- **Usos**:
-  - CSS:
-    - `css/components/checkbox.css` (1×)
-
 ### `component.checkbox.focus-ring.radius.default`
 
 - **Camada**: component
@@ -10434,58 +11264,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Alias 1:1 para semantic.radius.md porque o radius é reutilizável, mas a anatomia focus-ring pertence ao Checkbox.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.checkbox.focus-ring.stroke-width.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.border.width.focus`
-- **Sentido**: Stroke width do focus ring do Checkbox.
-- **Escopo**: outline-width, strokeWeight
-- **Contexto**: Component token do contrato anatômico Checkbox. Binda stroke weight do Focus Ring no Figma e substitui consumo direto de semantic.border.width.focus no CSS.
-- **Decisão**: Alias 1:1 para semantic.border.width.focus porque a espessura de foco é sistêmica, mas o contrato anatômico é do Checkbox.
-- **Usos**:
-  - CSS:
-    - `css/components/checkbox.css` (2×)
-
-### `component.checkbox.helper-text.color.default`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.content.default`
-- **Sentido**: Checkbox helper text default
-- **Escopo**: checkbox, helper text
-- **Contexto**: Component token do contrato Checkbox materializado no Figma para helper text.
-- **Decisão**: Alias 1:1 para semantic.content.default para manter o estado default alinhado entre Figma, CSS e docs.
-- **Usos**:
-  - CSS:
-    - `css/components/checkbox.css` (2×)
-
-### `component.checkbox.label.color.default`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.content.strong`
-- **Sentido**: Checkbox label default
-- **Escopo**: checkbox, label
-- **Contexto**: Component token do contrato Checkbox materializado no Figma para label.
-- **Decisão**: Alias 1:1 para semantic.content.strong para manter o estado default alinhado entre Figma, CSS e docs.
-- **Usos**:
-  - CSS:
-    - `css/components/checkbox.css` (2×)
-
-### `component.checkbox.label.color.disabled`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.content.disabled`
-- **Sentido**: Checkbox label disabled
-- **Escopo**: checkbox, label, disabled
-- **Contexto**: Component token do contrato Checkbox materializado no Figma para label.
-- **Decisão**: Alias 1:1 para semantic.content.disabled para manter o estado disabled alinhado entre Figma, CSS e docs.
-- **Usos**:
-  - CSS:
-    - `css/components/checkbox.css` (2×)
 
 ### `component.checkbox.mark.fill.checked.default`
 
@@ -10870,7 +11648,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Usado para estabilizar o contrato component exposto por component.field.padding-y.
 - **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.space.md.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/input.css` (2×)
+    - `css/components/select.css` (2×)
+    - `css/components/textarea.css` (1×)
 
 ### `component.field.padding-y.md`
 
@@ -10882,7 +11663,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Usado para estabilizar o contrato component exposto por component.field.padding-y.
 - **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.space.control.padding.10.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/input.css` (2×)
+    - `css/components/select.css` (3×)
+    - `css/components/textarea.css` (1×)
 
 ### `component.field.padding-y.sm`
 
@@ -10894,7 +11678,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Usado para estabilizar o contrato component exposto por component.field.padding-y.
 - **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.space.sm.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/input.css` (2×)
+    - `css/components/select.css` (2×)
+    - `css/components/textarea.css` (1×)
 
 ### `component.field.placeholder.color.default`
 
@@ -10997,9 +11784,13 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.border.focus.
 - **Usos**:
   - CSS:
+    - `css/components/button.css` (1×)
+    - `css/components/checkbox.css` (1×)
     - `css/components/input.css` (1×)
+    - `css/components/radio.css` (1×)
     - `css/components/select.css` (1×)
     - `css/components/textarea.css` (1×)
+    - `css/components/toggle.css` (1×)
 
 ### `component.focus-ring.color.error`
 
@@ -11012,6 +11803,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.border.focus-error.
 - **Usos**:
   - CSS:
+    - `css/components/button.css` (1×)
     - `css/components/input.css` (1×)
     - `css/components/select.css` (1×)
     - `css/components/textarea.css` (1×)
@@ -11041,7 +11833,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Usado para estabilizar o contrato component exposto por component.focus-ring.color.
 - **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.feedback.success.border-default.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/button.css` (1×)
 
 ### `component.focus-ring.width`
 
@@ -11054,9 +11847,25 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.border.width.focus.
 - **Usos**:
   - CSS:
-    - `css/components/input.css` (1×)
-    - `css/components/select.css` (1×)
-    - `css/components/textarea.css` (1×)
+    - `css/components/button.css` (2×)
+    - `css/components/checkbox.css` (2×)
+    - `css/components/input.css` (2×)
+    - `css/components/radio.css` (2×)
+    - `css/components/select.css` (2×)
+    - `css/components/textarea.css` (2×)
+    - `css/components/toggle.css` (2×)
+
+### `component.form-field.description.color.default`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.content.strong`
+- **Sentido**: Contrato description.color de form-field, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente form-field entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `component.form-field.error.color.default`
 
@@ -11127,7 +11936,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.feedback.error.content-default`
+- **Alias**: → `semantic.icon.color.error`
 - **Sentido**: Cor do ícone da mensagem de erro do Form Field.
 - **Escopo**: Form Field, CSS-only, ADR-017
 - **Contexto**: Contrato Component CSS-only do Form Field. O Figma vivo usa ícone de erro com fill feedback/error/content/default em Input Text, Select e Textarea.
@@ -11135,19 +11944,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/form-field.css` (1×)
-
-### `component.form-field.error.icon.frame-size.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.size.xs`
-- **Sentido**: Frame-size do ícone da mensagem de erro do Form Field.
-- **Escopo**: Form Field, CSS-only, ADR-017
-- **Contexto**: Contrato Component CSS-only do Form Field. O Figma vivo mede o ícone de erro em 16x16 nos estados de erro de Input Text, Select e Textarea.
-- **Decisão**: Alias 1:1 para semantic.size.xs porque 16px já existe como tamanho reutilizável, mas aqui estabiliza o contrato do ícone de erro.
-- **Usos**:
-  - CSS:
-    - `css/components/form-field.css` (3×)
 
 ### `component.form-field.error.icon.size.default`
 
@@ -11161,6 +11957,18 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/form-field.css` (1×)
+
+### `component.form-field.error.icon.stroke-width.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.icon.stroke-width.strong.16`
+- **Sentido**: Contrato error.icon.stroke-width de form-field, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: stroke-width, border-width
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente form-field entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `component.form-field.error.line-height.default`
 
@@ -11200,6 +12008,22 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/form-field.css` (1×)
+    - `css/components/input.css` (1×)
+    - `css/components/select.css` (1×)
+
+### `component.form-field.helper.color.disabled`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.content.disabled`
+- **Sentido**: Contrato helper.color de form-field, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente form-field entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - CSS:
+    - `css/components/input.css` (1×)
+    - `css/components/select.css` (1×)
 
 ### `component.form-field.helper.font-size.default`
 
@@ -11213,6 +12037,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/form-field.css` (1×)
+    - `css/components/input.css` (1×)
+    - `css/components/select.css` (3×)
 
 ### `component.form-field.helper.font-weight.default`
 
@@ -11226,6 +12052,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/form-field.css` (1×)
+    - `css/components/input.css` (1×)
+    - `css/components/select.css` (1×)
 
 ### `component.form-field.helper.line-height.default`
 
@@ -11239,6 +12067,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/form-field.css` (1×)
+    - `css/components/input.css` (1×)
+    - `css/components/select.css` (3×)
 
 ### `component.form-field.label-row.gap.default`
 
@@ -11252,6 +12082,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/form-field.css` (1×)
+    - `css/components/input.css` (1×)
+    - `css/components/select.css` (1×)
 
 ### `component.form-field.label.color.default`
 
@@ -11265,19 +12097,48 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/form-field.css` (1×)
+    - `css/components/input.css` (2×)
+    - `css/components/select.css` (2×)
 
-### `component.form-field.label.color.error`
+### `component.form-field.label.color.disabled`
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.feedback.error.content-default`
-- **Sentido**: Cor do label do Form Field em estado de erro.
-- **Escopo**: Form Field, CSS-only, ADR-017
-- **Contexto**: Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.
-- **Decisão**: Alias 1:1 para semantic.feedback.error.content-default para alinhar label em erro aos controles Figma vivos.
+- **Alias**: → `semantic.content.disabled`
+- **Sentido**: Contrato label.color de form-field, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente form-field entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
 - **Usos**:
   - CSS:
-    - `css/components/form-field.css` (1×)
+    - `css/components/input.css` (1×)
+
+### `component.form-field.label.color.readonly`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.content.default`
+- **Sentido**: Contrato label.color de form-field, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente form-field entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - CSS:
+    - `css/components/input.css` (1×)
+
+### `component.form-field.label.font-family.default`
+
+- **Camada**: component
+- **Tipo**: `string`
+- **Alias**: → `semantic.typography.body.font-family.sans`
+- **Sentido**: Contrato label.font-family de form-field, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: typography
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente form-field entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - CSS:
+    - `css/components/input.css` (2×)
+    - `css/components/select.css` (2×)
 
 ### `component.form-field.label.font-size.default`
 
@@ -11291,6 +12152,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/form-field.css` (1×)
+    - `css/components/input.css` (3×)
+    - `css/components/select.css` (3×)
 
 ### `component.form-field.label.font-weight.default`
 
@@ -11304,6 +12167,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/form-field.css` (1×)
+    - `css/components/input.css` (1×)
+    - `css/components/select.css` (1×)
 
 ### `component.form-field.label.line-height.default`
 
@@ -11317,6 +12182,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/form-field.css` (1×)
+    - `css/components/input.css` (3×)
+    - `css/components/select.css` (3×)
 
 ### `component.form-field.required.color.default`
 
@@ -11330,6 +12197,22 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/form-field.css` (1×)
+    - `css/components/input.css` (1×)
+    - `css/components/select.css` (1×)
+
+### `component.form-field.required.font-family.default`
+
+- **Camada**: component
+- **Tipo**: `string`
+- **Alias**: → `semantic.typography.body.font-family.sans`
+- **Sentido**: Contrato required.font-family de form-field, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: typography
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente form-field entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - CSS:
+    - `css/components/input.css` (1×)
+    - `css/components/select.css` (1×)
 
 ### `component.form-field.required.font-size.default`
 
@@ -11343,6 +12226,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/form-field.css` (1×)
+    - `css/components/input.css` (1×)
+    - `css/components/select.css` (1×)
 
 ### `component.form-field.required.font-weight.default`
 
@@ -11356,6 +12241,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/form-field.css` (1×)
+    - `css/components/input.css` (1×)
+    - `css/components/select.css` (1×)
 
 ### `component.form-field.required.line-height.default`
 
@@ -11369,283 +12256,22 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/form-field.css` (1×)
+    - `css/components/input.css` (1×)
+    - `css/components/select.css` (1×)
 
-### `component.input.bg.default`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.surface.default`
-- **Sentido**: Bg do Field Input Text default.
-- **Escopo**: background, fill
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.surface.default porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.input.bg.disabled`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.background.disabled`
-- **Sentido**: Bg do Field Input Text disabled.
-- **Escopo**: background, fill
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.background.disabled porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.input.bg.error`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.surface.default`
-- **Sentido**: Bg do Field Input Text error.
-- **Escopo**: background, fill
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.surface.default porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.input.bg.error-hover`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.surface.default`
-- **Sentido**: Bg do Field Input Text em erro durante hover.
-- **Escopo**: background, fill
-- **Contexto**: Component token do contrato do Input Text para a combinação Error=True e State=Hover no Figma.
-- **Decisão**: Alias 1:1 para semantic.surface.default para manter o erro visual na borda, sem alterar a superfície do campo.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.input.bg.filled`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.surface.default`
-- **Sentido**: Bg do Field Input Text filled.
-- **Escopo**: background, fill
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.surface.default porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.input.bg.focus`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.surface.default`
-- **Sentido**: Token component para input / bg / focus.
-- **Escopo**: fill, background
-- **Contexto**: Usado para estabilizar o contrato component exposto por component.input.bg.
-- **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.surface.default.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.input.bg.readonly`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.background.subtle`
-- **Sentido**: Bg do Field Input Text readonly.
-- **Escopo**: background, fill
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.background.subtle porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.input.border-color.default`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.border.control-default`
-- **Sentido**: Border color do Field Input Text default.
-- **Escopo**: border-color, stroke
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.border.control-default porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.input.border-color.disabled`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.border.control-disabled`
-- **Sentido**: Border color do Field Input Text disabled.
-- **Escopo**: border-color, stroke
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.border.control-disabled porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.input.border-color.error`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.border.error`
-- **Sentido**: Border color do Field Input Text error.
-- **Escopo**: border-color, stroke
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.feedback.error.background.default porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.input.border-color.error-hover`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.feedback.error.border.hover`
-- **Sentido**: Border color do Field Input Text em erro durante hover.
-- **Escopo**: border-color, stroke
-- **Contexto**: Component token do contrato do Input Text para a combinação Error=True e State=Hover no Figma.
-- **Decisão**: Alias 1:1 para semantic.feedback.error.border.hover para separar erro default de erro em hover.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.input.border-color.filled`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.border.strong`
-- **Sentido**: Border color do Field Input Text filled.
-- **Escopo**: border-color, stroke
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.border.strong porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.input.border-color.focus`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.border.focus`
-- **Sentido**: Token component para input / border color / focus.
-- **Escopo**: color, text-fill, icon-fill, stroke-color
-- **Contexto**: Usado para estabilizar o contrato component exposto por component.input.border-color.
-- **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.border.focus.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.input.border-color.hover`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.border.control-hover`
-- **Sentido**: Border color do Field Input Text hover.
-- **Escopo**: border-color, stroke
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.border.control-hover porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.input.border-color.readonly`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.border.subtle`
-- **Sentido**: Border color do Field Input Text readonly.
-- **Escopo**: border-color, stroke
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.border.subtle porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.input.border-width.default`
+### `component.form-field.stack.gap.default`
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.border.width.default`
-- **Sentido**: Border width do Field Input Text.
-- **Escopo**: border-width, stroke-width
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.border.width.default porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.input.content.color.default`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.content.strong`
-- **Sentido**: Cor de conteúdo preenchido do Input Text.
-- **Escopo**: color, fill
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.content.strong porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.input.content.color.disabled`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.content.disabled`
-- **Sentido**: Cor de conteúdo disabled do Input Text.
-- **Escopo**: color, fill
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.content.disabled porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.input.content.color.readonly`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.content.default`
-- **Sentido**: Cor de conteúdo readonly do Input Text.
-- **Escopo**: color, fill
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.content.default porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.input.focus-ring.color.default`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.border.focus`
-- **Sentido**: Cor do focus ring Input Text.
-- **Escopo**: color, fill
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.border.focus porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.input.focus-ring.color.error`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.border.focus-error`
-- **Sentido**: Cor do focus ring Input Text error.
-- **Escopo**: color, fill
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.feedback.error.background.default porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.input.focus-ring.color.readonly`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.border.control-default`
-- **Sentido**: Cor neutra do focus ring Input Text readonly.
-- **Escopo**: color, stroke
-- **Contexto**: Component token do contrato do Input Text para Readonly=True e State=Focus no Figma.
-- **Decisão**: Alias 1:1 para semantic.border.control-default porque readonly pode receber foco, mas não deve parecer estado ativo primário.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.input.focus-ring.offset.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.border.width.focus`
-- **Sentido**: Offset CSS do focus ring Input Text.
-- **Escopo**: outline-offset
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.border.width.focus porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
+- **Alias**: → `semantic.space.xs`
+- **Sentido**: Contrato stack.gap de form-field, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: gap
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente form-field entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
 - **Usos**:
   - CSS:
     - `css/components/input.css` (1×)
+    - `css/components/select.css` (1×)
 
 ### `component.input.focus-ring.radius.default`
 
@@ -11656,18 +12282,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Escopo**: border-radius, corner-radius
 - **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
 - **Decisão**: Alias 1:1 para semantic.radius.lg porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.input.focus-ring.stroke-width.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.border.width.focus`
-- **Sentido**: Stroke width do focus ring Input Text.
-- **Escopo**: border-width, stroke-width
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.border.width.focus porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -11749,97 +12363,6 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/input.css` (1×)
 
-### `component.input.helper.color.default`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.content.default`
-- **Sentido**: Cor do helper text Input Text.
-- **Escopo**: color, fill
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.content.default porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (1×)
-
-### `component.input.helper.color.disabled`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.content.disabled`
-- **Sentido**: Cor do helper text Input Text disabled.
-- **Escopo**: color, fill
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.content.disabled porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (1×)
-
-### `component.input.helper.font-family.default`
-
-- **Camada**: component
-- **Tipo**: `string`
-- **Alias**: → `semantic.typography.body.font-family.sans`
-- **Sentido**: Font-family do helper text Input Text.
-- **Escopo**: font-family
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.typography.body.font-family.sans porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (1×)
-
-### `component.input.helper.font-size.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.xs`
-- **Sentido**: Font-size do helper text Input Text.
-- **Escopo**: font-size
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.typography.body.font-size.xs porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (1×)
-
-### `component.input.helper.font-weight.default`
-
-- **Camada**: component
-- **Tipo**: `string`
-- **Alias**: → `semantic.typography.body.font-weight.regular`
-- **Sentido**: Font-weight do helper text Input Text.
-- **Escopo**: font-weight
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.typography.body.font-weight.regular porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (1×)
-
-### `component.input.helper.letter-spacing.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.letter-spacing.normal`
-- **Sentido**: Letter-spacing do helper text Input Text.
-- **Escopo**: letter-spacing
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.typography.body.letter-spacing.normal porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (1×)
-
-### `component.input.helper.line-height.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.line-height.xs`
-- **Sentido**: Line-height do helper text Input Text.
-- **Escopo**: line-height
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.typography.body.line-height.xs porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (1×)
-
 ### `component.input.icon-frame.padding-x.default`
 
 - **Camada**: component
@@ -11857,7 +12380,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.content.subtle`
+- **Alias**: → `semantic.icon.color.default`
 - **Sentido**: Cor do ícone Input Text.
 - **Escopo**: color, fill
 - **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
@@ -11870,7 +12393,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.content.disabled`
+- **Alias**: → `semantic.icon.color.disabled`
 - **Sentido**: Cor do ícone Input Text disabled.
 - **Escopo**: color, fill
 - **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
@@ -11878,45 +12401,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/input.css` (1×)
-
-### `component.input.icon.frame-size.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.size.md`
-- **Sentido**: Tamanho do frame de ícone Input Text lg.
-- **Escopo**: width, height
-- **Contexto**: Component token do contrato do Input Text. Binda os frames de ícone esquerdo/direito no Figma e substitui consumo direto de size Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.size.md porque o frame permanece 24px nos três tamanhos do Input, documentando o espaço reservado ao ícone.
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (3×)
-
-### `component.input.icon.frame-size.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.size.sm`
-- **Sentido**: Tamanho do frame de ícone Input Text md.
-- **Escopo**: width, height
-- **Contexto**: Component token do contrato do Input Text. Binda os frames de ícone esquerdo/direito no Figma e substitui consumo direto de size Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.size.md porque o frame permanece 24px nos três tamanhos do Input, documentando o espaço reservado ao ícone.
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (3×)
-
-### `component.input.icon.frame-size.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.size.xs`
-- **Sentido**: Tamanho do frame de ícone Input Text sm.
-- **Escopo**: width, height
-- **Contexto**: Component token do contrato do Input Text. Binda os frames de ícone esquerdo/direito no Figma e substitui consumo direto de size Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.size.md porque o frame permanece 24px nos três tamanhos do Input, documentando o espaço reservado ao ícone.
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (3×)
 
 ### `component.input.icon.size.lg`
 
@@ -11929,7 +12413,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.size.md.
 - **Usos**:
   - CSS:
-    - `css/components/input.css` (1×)
+    - `css/components/input.css` (4×)
 
 ### `component.input.icon.size.md`
 
@@ -11942,7 +12426,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.size.sm.
 - **Usos**:
   - CSS:
-    - `css/components/input.css` (1×)
+    - `css/components/input.css` (4×)
 
 ### `component.input.icon.size.sm`
 
@@ -11955,176 +12439,43 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.size.xs.
 - **Usos**:
   - CSS:
-    - `css/components/input.css` (1×)
+    - `css/components/input.css` (4×)
 
-### `component.input.label-row.gap.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.2xs`
-- **Sentido**: Gap entre label e required Input Text.
-- **Escopo**: gap
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.space.2xs porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (1×)
-
-### `component.input.label.color.default`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.content.strong`
-- **Sentido**: Cor do label Input Text.
-- **Escopo**: color, fill
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.content.strong porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (2×)
-
-### `component.input.label.color.disabled`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.content.disabled`
-- **Sentido**: Cor do label Input Text disabled.
-- **Escopo**: color, fill
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.content.disabled porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (1×)
-
-### `component.input.label.color.readonly`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.content.default`
-- **Sentido**: Cor do label Input Text readonly.
-- **Escopo**: color, fill
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.content.default porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (1×)
-
-### `component.input.label.font-family.default`
-
-- **Camada**: component
-- **Tipo**: `string`
-- **Alias**: → `semantic.typography.body.font-family.sans`
-- **Sentido**: Font-family do label Input Text.
-- **Escopo**: font-family
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.typography.body.font-family.sans porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (1×)
-
-### `component.input.label.font-size.lg`
+### `component.input.icon.stroke-width.lg`
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.sm`
-- **Sentido**: Font-size do label Input Text lg.
-- **Escopo**: font-size
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.typography.body.font-size.sm porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
+- **Alias**: → `semantic.icon.stroke-width.regular.24`
+- **Sentido**: Contrato icon.stroke-width de input, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: stroke-width, border-width
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente input entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
 - **Usos**:
-  - CSS:
-    - `css/components/input.css` (1×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
-### `component.input.label.font-size.md`
+### `component.input.icon.stroke-width.md`
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.sm`
-- **Sentido**: Font-size do label Input Text md.
-- **Escopo**: font-size
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.typography.body.font-size.sm porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
+- **Alias**: → `semantic.icon.stroke-width.regular.20`
+- **Sentido**: Contrato icon.stroke-width de input, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: stroke-width, border-width
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente input entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
 - **Usos**:
-  - CSS:
-    - `css/components/input.css` (1×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
-### `component.input.label.font-size.sm`
+### `component.input.icon.stroke-width.sm`
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.xs`
-- **Sentido**: Font-size do label Input Text sm.
-- **Escopo**: font-size
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.typography.body.font-size.xs porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
+- **Alias**: → `semantic.icon.stroke-width.regular.16`
+- **Sentido**: Contrato icon.stroke-width de input, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: stroke-width, border-width
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente input entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
 - **Usos**:
-  - CSS:
-    - `css/components/input.css` (1×)
-
-### `component.input.label.font-weight.default`
-
-- **Camada**: component
-- **Tipo**: `string`
-- **Alias**: → `semantic.typography.body.font-weight.bold`
-- **Sentido**: Font-weight do label Input Text.
-- **Escopo**: font-weight
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.typography.body.font-weight.bold porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (1×)
-
-### `component.input.label.letter-spacing.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.letter-spacing.normal`
-- **Sentido**: Letter-spacing do label Input Text.
-- **Escopo**: letter-spacing
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.typography.body.letter-spacing.normal porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (1×)
-
-### `component.input.label.line-height.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.line-height.sm`
-- **Sentido**: Line-height do label Input Text lg.
-- **Escopo**: line-height
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.typography.body.line-height.sm porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (1×)
-
-### `component.input.label.line-height.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.line-height.sm`
-- **Sentido**: Line-height do label Input Text md.
-- **Escopo**: line-height
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.typography.body.line-height.sm porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (1×)
-
-### `component.input.label.line-height.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.line-height.xs`
-- **Sentido**: Line-height do label Input Text sm.
-- **Escopo**: line-height
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.typography.body.line-height.xs porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (1×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `component.input.padding-x.lg`
 
@@ -12156,7 +12507,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.space.sm`
+- **Alias**: → `semantic.space.xs`
 - **Sentido**: Padding horizontal do Field Input Text sm.
 - **Escopo**: padding-left, padding-right
 - **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Field no Figma e remove consumo direto de spacing Semantic no CSS.
@@ -12164,172 +12515,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/input.css` (2×)
-
-### `component.input.padding-y.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.md`
-- **Sentido**: Padding vertical do Field Input Text lg.
-- **Escopo**: padding-top, padding-bottom
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Field no Figma e remove consumo direto de spacing Semantic no CSS.
-- **Decisão**: Alias 1:1 para a escala semantic.space, incluindo semantic.space.control.padding.10 no md, porque o valor é reutilizável em controles e documenta a anatomia pública do Input.
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (2×)
-
-### `component.input.padding-y.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.control.padding.10`
-- **Sentido**: Padding vertical do Field Input Text md.
-- **Escopo**: padding-top, padding-bottom
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Field no Figma e remove consumo direto de spacing Semantic no CSS.
-- **Decisão**: Alias 1:1 para a escala semantic.space, incluindo semantic.space.control.padding.10 no md, porque o valor é reutilizável em controles e documenta a anatomia pública do Input.
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (2×)
-
-### `component.input.padding-y.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.sm`
-- **Sentido**: Padding vertical do Field Input Text sm.
-- **Escopo**: padding-top, padding-bottom
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Field no Figma e remove consumo direto de spacing Semantic no CSS.
-- **Decisão**: Alias 1:1 para a escala semantic.space, incluindo semantic.space.control.padding.10 no md, porque o valor é reutilizável em controles e documenta a anatomia pública do Input.
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (2×)
-
-### `component.input.placeholder.color.default`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.content.subtle`
-- **Sentido**: Cor do placeholder Input Text.
-- **Escopo**: color, fill
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.content.subtle porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.input.placeholder.color.disabled`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.content.disabled`
-- **Sentido**: Cor do placeholder Input Text disabled.
-- **Escopo**: color, fill
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.content.disabled porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.input.radius.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.radius.md`
-- **Sentido**: Radius do Field Input Text.
-- **Escopo**: border-radius, corner-radius
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.radius.md porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.input.required.color.default`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.feedback.error.content-default`
-- **Sentido**: Cor do indicador required Input Text.
-- **Escopo**: color, fill
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.feedback.error.content-default porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (1×)
-
-### `component.input.required.font-family.default`
-
-- **Camada**: component
-- **Tipo**: `string`
-- **Alias**: → `semantic.typography.body.font-family.sans`
-- **Sentido**: Font-family do indicador required Input Text.
-- **Escopo**: font-family
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.typography.body.font-family.sans porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (1×)
-
-### `component.input.required.font-size.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.sm`
-- **Sentido**: Font-size do indicador required Input Text.
-- **Escopo**: font-size
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.typography.body.font-size.sm porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (1×)
-
-### `component.input.required.font-weight.default`
-
-- **Camada**: component
-- **Tipo**: `string`
-- **Alias**: → `semantic.typography.body.font-weight.bold`
-- **Sentido**: Font-weight do indicador required Input Text.
-- **Escopo**: font-weight
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.typography.body.font-weight.bold porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (1×)
-
-### `component.input.required.letter-spacing.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.letter-spacing.normal`
-- **Sentido**: Letter-spacing do indicador required Input Text.
-- **Escopo**: letter-spacing
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.typography.body.letter-spacing.normal porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (1×)
-
-### `component.input.required.line-height.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.line-height.sm`
-- **Sentido**: Line-height do indicador required Input Text.
-- **Escopo**: line-height
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.typography.body.line-height.sm porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (1×)
-
-### `component.input.stack.gap.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.xs`
-- **Sentido**: Gap vertical entre label, field e helper no Input Text.
-- **Escopo**: gap
-- **Contexto**: Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.
-- **Decisão**: Alias 1:1 para semantic.space.xs porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.
-- **Usos**:
-  - CSS:
-    - `css/components/input.css` (1×)
 
 ### `component.input.text-frame.padding-x.default`
 
@@ -12460,6 +12645,42 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/input.css` (1×)
+
+### `component.modal.action.fill.primary`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.primary.background.default`
+- **Sentido**: Contrato action.fill de modal, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: fill
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente modal entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.modal.bg.default`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.surface.elevated`
+- **Sentido**: Contrato bg de modal, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: fill
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente modal entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.modal.body.color.default`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.content.strong`
+- **Sentido**: Contrato body.color de modal, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente modal entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `component.modal.body.font-size.lg`
 
@@ -12595,7 +12816,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.space.xl`
+- **Alias**: → `semantic.space.2xl`
 - **Sentido**: Padding horizontal do body Modal lg.
 - **Escopo**: padding-left, padding-right
 - **Contexto**: Component token do contrato anatômico Modal Body. Binda paddingLeft/paddingRight da variante Size=Large no Figma e substitui consumo direto de Semantic no CSS.
@@ -12630,18 +12851,17 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/modal.css` (1×)
 
-### `component.modal.close.frame-size.default`
+### `component.modal.close.color.default`
 
 - **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.size.md`
-- **Sentido**: Token component para modal / close / frame size / default.
-- **Escopo**: width, height
-- **Contexto**: Usado para estabilizar o contrato component exposto por component.modal.close.
-- **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.size.md.
+- **Tipo**: `color`
+- **Alias**: → `semantic.icon.color.default`
+- **Sentido**: Contrato close.color de modal, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: fill
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente modal entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
 - **Usos**:
-  - CSS:
-    - `css/components/modal.css` (2×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `component.modal.close.icon-size.default`
 
@@ -12656,6 +12876,18 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/modal.css` (2×)
 
+### `component.modal.close.icon.stroke-width.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.icon.stroke-width.regular.24`
+- **Sentido**: Contrato close.icon.stroke-width de modal, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: stroke-width, border-width
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente modal entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
 ### `component.modal.close.padding.default`
 
 - **Camada**: component
@@ -12669,11 +12901,24 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/modal.css` (1×)
 
+### `component.modal.close.size.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.md`
+- **Sentido**: Contrato close.size de modal, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: size
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente modal entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - CSS:
+    - `css/components/modal.css` (2×)
+
 ### `component.modal.footer.gap.default`
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.space.sm`
+- **Alias**: → `semantic.space.md`
 - **Sentido**: Gap horizontal do footer Modal.
 - **Escopo**: gap
 - **Contexto**: Component token do contrato anatômico Modal Footer. Binda itemSpacing entre ações nas 3 variantes Size no Figma e substitui consumo direto de Semantic no CSS.
@@ -12686,7 +12931,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.space.xl`
+- **Alias**: → `semantic.space.2xl`
 - **Sentido**: Padding bottom do footer Modal lg.
 - **Escopo**: padding-bottom
 - **Contexto**: Component token do contrato anatômico Modal Footer. Binda paddingBottom da variante Size=Large no Figma e substitui consumo direto de Semantic no CSS.
@@ -12725,7 +12970,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.space.md`
+- **Alias**: → `semantic.space.lg`
 - **Sentido**: Padding top do footer Modal lg.
 - **Escopo**: padding-top
 - **Contexto**: Component token do contrato anatômico Modal Footer. Binda paddingTop da variante Size=Large no Figma e substitui consumo direto de Semantic no CSS.
@@ -12764,7 +13009,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.space.xl`
+- **Alias**: → `semantic.space.2xl`
 - **Sentido**: Padding horizontal do footer Modal lg.
 - **Escopo**: padding-left, padding-right
 - **Contexto**: Component token do contrato anatômico Modal Footer. Binda paddingLeft/paddingRight da variante Size=Large no Figma e substitui consumo direto de Semantic no CSS.
@@ -12803,7 +13048,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.space.sm`
+- **Alias**: → `semantic.space.lg`
 - **Sentido**: Gap horizontal do header Modal.
 - **Escopo**: gap
 - **Contexto**: Component token do contrato anatômico Modal Header. Binda itemSpacing entre Title e Close nas 3 variantes Size no Figma e substitui consumo direto de Semantic no CSS.
@@ -12816,7 +13061,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.space.md`
+- **Alias**: → `semantic.space.lg`
 - **Sentido**: Padding bottom do header Modal lg.
 - **Escopo**: padding-bottom
 - **Contexto**: Component token do contrato anatômico Modal Header. Binda paddingBottom da variante Size=Large no Figma e substitui consumo direto de Semantic no CSS.
@@ -12855,7 +13100,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.space.xl`
+- **Alias**: → `semantic.space.2xl`
 - **Sentido**: Padding top do header Modal lg.
 - **Escopo**: padding-top
 - **Contexto**: Component token do contrato anatômico Modal Header. Binda paddingTop da variante Size=Large no Figma e substitui consumo direto de Semantic no CSS.
@@ -12894,7 +13139,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.space.xl`
+- **Alias**: → `semantic.space.2xl`
 - **Sentido**: Padding horizontal do header Modal lg.
 - **Escopo**: padding-left, padding-right
 - **Contexto**: Component token do contrato anatômico Modal Header. Binda paddingLeft/paddingRight da variante Size=Large no Figma e substitui consumo direto de Semantic no CSS.
@@ -13019,6 +13264,18 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/modal.css` (1×)
+
+### `component.modal.title.color.default`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.content.strong`
+- **Sentido**: Contrato title.color de modal, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente modal entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `component.modal.title.font-size.lg`
 
@@ -13167,7 +13424,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.background.default`
+- **Alias**: → `semantic.primary.border.default`
 - **Sentido**: Radio control visual selected
 - **Escopo**: radio, control visual, selected
 - **Contexto**: Component token do contrato Radio materializado no Figma para control visual.
@@ -13192,7 +13449,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.background.hover`
+- **Alias**: → `semantic.primary.border.hover`
 - **Sentido**: Border do control Radio selected em hover.
 - **Escopo**: radio, control, hover
 - **Contexto**: Component token do contrato Radio para borda selected em hover.
@@ -13226,6 +13483,30 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/radio.css` (1×)
+
+### `component.radio.control.border-color.unselected.error`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.border.error`
+- **Sentido**: Contrato control.border-color.unselected de radio, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente radio entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.radio.control.border-color.unselected.error-hover`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.border.error-hover`
+- **Sentido**: Contrato control.border-color.unselected de radio, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente radio entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `component.radio.control.border-color.unselected.focus`
 
@@ -13432,19 +13713,6 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/radio.css` (3×)
 
-### `component.radio.description.color.default`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.content.strong`
-- **Sentido**: Radio description default
-- **Escopo**: radio, description
-- **Contexto**: Component token do contrato Radio materializado no Figma para description.
-- **Decisão**: Alias 1:1 para semantic.content.strong para manter o estado default alinhado entre Figma, CSS e docs.
-- **Usos**:
-  - CSS:
-    - `css/components/radio.css` (2×)
-
 ### `component.radio.dot.fill.selected.default`
 
 - **Camada**: component
@@ -13513,7 +13781,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.dimension.10`
+- **Alias**: → `semantic.control.radio.dot.size.lg`
 - **Sentido**: Radio dot interno size lg
 - **Escopo**: radio, dot interno, lg
 - **Contexto**: Component token do contrato Radio materializado no Figma para dot interno.
@@ -13526,7 +13794,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.dimension.8`
+- **Alias**: → `semantic.control.radio.dot.size.md`
 - **Sentido**: Radio dot interno size md
 - **Escopo**: radio, dot interno, md
 - **Contexto**: Component token do contrato Radio materializado no Figma para dot interno.
@@ -13539,7 +13807,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.dimension.6`
+- **Alias**: → `semantic.control.radio.dot.size.sm`
 - **Sentido**: Radio dot interno size sm
 - **Escopo**: radio, dot interno, sm
 - **Contexto**: Component token do contrato Radio materializado no Figma para dot interno.
@@ -13547,19 +13815,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/radio.css` (2×)
-
-### `component.radio.focus-ring.color.default`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.border.focus`
-- **Sentido**: Radio focus ring default
-- **Escopo**: radio, focus ring
-- **Contexto**: Component token do contrato Radio materializado no Figma para focus ring.
-- **Decisão**: Alias 1:1 para semantic.border.focus para manter o estado default alinhado entre Figma, CSS e docs.
-- **Usos**:
-  - CSS:
-    - `css/components/radio.css` (1×)
 
 ### `component.radio.focus-ring.radius.default`
 
@@ -13572,58 +13827,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Alias 1:1 para semantic.radius.full para manter a anatomia focus ring alinhada entre Figma, CSS e docs.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.radio.focus-ring.stroke-width.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.border.width.focus`
-- **Sentido**: Radio focus ring default
-- **Escopo**: radio, focus ring
-- **Contexto**: Component token do contrato Radio materializado no Figma para focus ring.
-- **Decisão**: Alias 1:1 para semantic.border.width.focus para manter a anatomia focus ring alinhada entre Figma, CSS e docs.
-- **Usos**:
-  - CSS:
-    - `css/components/radio.css` (2×)
-
-### `component.radio.helper-text.color.default`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.content.default`
-- **Sentido**: Radio helper text default
-- **Escopo**: radio, helper text
-- **Contexto**: Component token do contrato Radio materializado no Figma para helper text.
-- **Decisão**: Alias 1:1 para semantic.content.default para manter o estado default alinhado entre Figma, CSS e docs.
-- **Usos**:
-  - CSS:
-    - `css/components/radio.css` (2×)
-
-### `component.radio.label.color.default`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.content.strong`
-- **Sentido**: Radio label default
-- **Escopo**: radio, label
-- **Contexto**: Component token do contrato Radio materializado no Figma para label.
-- **Decisão**: Alias 1:1 para semantic.content.strong para manter o estado default alinhado entre Figma, CSS e docs.
-- **Usos**:
-  - CSS:
-    - `css/components/radio.css` (2×)
-
-### `component.radio.label.color.disabled`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.content.disabled`
-- **Sentido**: Radio label disabled
-- **Escopo**: radio, label, disabled
-- **Contexto**: Component token do contrato Radio materializado no Figma para label.
-- **Decisão**: Alias 1:1 para semantic.content.disabled para manter o estado disabled alinhado entre Figma, CSS e docs.
-- **Usos**:
-  - CSS:
-    - `css/components/radio.css` (2×)
 
 ### `component.radio.target.gap.default`
 
@@ -13677,198 +13880,6 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/radio.css` (1×)
 
-### `component.select.bg.default`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.surface.default`
-- **Sentido**: Bg do Field Select por estado.
-- **Escopo**: background, fill
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.surface.default porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.select.bg.disabled`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.background.disabled`
-- **Sentido**: Bg do Field Select por estado.
-- **Escopo**: background, fill
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.background.disabled porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.select.bg.error`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.surface.default`
-- **Sentido**: Bg do Field Select por estado.
-- **Escopo**: background, fill
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.surface.default porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.select.bg.error-hover`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.surface.default`
-- **Sentido**: Bg do Field Select em erro durante hover.
-- **Escopo**: background, fill
-- **Contexto**: Component token do contrato do Select para a combinação Error=True e State=Hover no Figma.
-- **Decisão**: Alias 1:1 para semantic.surface.default para manter o erro visual na borda, sem alterar a superfície do campo.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.select.bg.filled`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.surface.default`
-- **Sentido**: Bg do Field Select por estado.
-- **Escopo**: background, fill
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.surface.default porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.select.bg.focus`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.surface.default`
-- **Sentido**: Token component para select / bg / focus.
-- **Escopo**: fill, background
-- **Contexto**: Usado para estabilizar o contrato component exposto por component.select.bg.
-- **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.surface.default.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.select.bg.readonly`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.background.subtle`
-- **Sentido**: Bg do Field Select por estado.
-- **Escopo**: background, fill
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.background.subtle porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.select.border-color.default`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.border.control-default`
-- **Sentido**: Cor da borda do Field Select por estado.
-- **Escopo**: border-color, stroke
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.border.control-default porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.select.border-color.disabled`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.border.control-disabled`
-- **Sentido**: Cor da borda do Field Select por estado.
-- **Escopo**: border-color, stroke
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.border.control-disabled porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.select.border-color.error`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.border.error`
-- **Sentido**: Cor da borda do Field Select por estado.
-- **Escopo**: border-color, stroke
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.feedback.error.background.default porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.select.border-color.error-hover`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.feedback.error.border.hover`
-- **Sentido**: Border color do Field Select em erro durante hover.
-- **Escopo**: border-color, stroke
-- **Contexto**: Component token do contrato do Select para a combinação Error=True e State=Hover no Figma.
-- **Decisão**: Alias 1:1 para semantic.feedback.error.border.hover para separar erro default de erro em hover.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.select.border-color.filled`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.border.strong`
-- **Sentido**: Cor da borda do Field Select por estado.
-- **Escopo**: border-color, stroke
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.border.strong porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.select.border-color.focus`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.border.focus`
-- **Sentido**: Token component para select / border color / focus.
-- **Escopo**: color, text-fill, icon-fill, stroke-color
-- **Contexto**: Usado para estabilizar o contrato component exposto por component.select.border-color.
-- **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.border.focus.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.select.border-color.hover`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.border.control-hover`
-- **Sentido**: Cor da borda do Field Select por estado.
-- **Escopo**: border-color, stroke
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.border.control-hover porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.select.border-color.readonly`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.border.subtle`
-- **Sentido**: Cor da borda do Field Select por estado.
-- **Escopo**: border-color, stroke
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.border.subtle porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.select.border-width.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.border.width.default`
-- **Sentido**: Espessura da borda do Field Select.
-- **Escopo**: border-width, stroke-width
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.border.width.default porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
 ### `component.select.chevron-frame.padding-x.default`
 
 - **Camada**: component
@@ -13886,7 +13897,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.content.default`
+- **Alias**: → `semantic.icon.color.default`
 - **Sentido**: Cor do chevron do Select por estado.
 - **Escopo**: color, text-fill, icon-fill
 - **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
@@ -13899,7 +13910,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.content.disabled`
+- **Alias**: → `semantic.icon.color.disabled`
 - **Sentido**: Cor do chevron do Select por estado.
 - **Escopo**: color, text-fill, icon-fill
 - **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
@@ -13907,45 +13918,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/select.css` (1×)
-
-### `component.select.chevron.frame-size.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.size.md`
-- **Sentido**: Tamanho do frame do chevron do Select por size.
-- **Escopo**: width, height, font-size
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.size.md porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (3×)
-
-### `component.select.chevron.frame-size.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.size.sm`
-- **Sentido**: Tamanho do frame do chevron do Select por size.
-- **Escopo**: width, height, font-size
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.size.md porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (3×)
-
-### `component.select.chevron.frame-size.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.size.xs`
-- **Sentido**: Tamanho do frame do chevron do Select por size.
-- **Escopo**: width, height, font-size
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.size.md porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (3×)
 
 ### `component.select.chevron.size.lg`
 
@@ -13958,7 +13930,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.size.md.
 - **Usos**:
   - CSS:
-    - `css/components/select.css` (4×)
+    - `css/components/select.css` (7×)
 
 ### `component.select.chevron.size.md`
 
@@ -13971,7 +13943,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.size.sm.
 - **Usos**:
   - CSS:
-    - `css/components/select.css` (4×)
+    - `css/components/select.css` (7×)
 
 ### `component.select.chevron.size.sm`
 
@@ -13984,92 +13956,43 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.size.xs.
 - **Usos**:
   - CSS:
-    - `css/components/select.css` (4×)
+    - `css/components/select.css` (7×)
 
-### `component.select.content.color.default`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.content.strong`
-- **Sentido**: Cor do conteúdo preenchido do Select por estado.
-- **Escopo**: color, text-fill, icon-fill
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.content.strong porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.select.content.color.disabled`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.content.disabled`
-- **Sentido**: Cor do conteúdo preenchido do Select por estado.
-- **Escopo**: color, text-fill, icon-fill
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.content.disabled porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.select.content.color.readonly`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.content.default`
-- **Sentido**: Cor do conteúdo preenchido do Select por estado.
-- **Escopo**: color, text-fill, icon-fill
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.content.default porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.select.focus-ring.color.default`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.border.focus`
-- **Sentido**: Cor do focus ring do Select por estado.
-- **Escopo**: color, text-fill, icon-fill
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.border.focus porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.select.focus-ring.color.error`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.border.focus-error`
-- **Sentido**: Cor do focus ring do Select por estado.
-- **Escopo**: color, text-fill, icon-fill
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.feedback.error.background.default porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.select.focus-ring.color.readonly`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.border.control-default`
-- **Sentido**: Cor neutra do focus ring Select readonly.
-- **Escopo**: color, stroke
-- **Contexto**: Component token do contrato do Select para Readonly=True e State=Focus no Figma.
-- **Decisão**: Alias 1:1 para semantic.border.control-default porque readonly pode receber foco, mas não deve parecer estado ativo primário.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.select.focus-ring.offset.default`
+### `component.select.chevron.stroke-width.lg`
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.border.width.focus`
-- **Sentido**: Offset do focus ring do Select.
-- **Escopo**: —
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.border.width.focus porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
+- **Alias**: → `semantic.icon.stroke-width.regular.24`
+- **Sentido**: Contrato chevron.stroke-width de select, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: stroke-width, border-width
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente select entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
 - **Usos**:
-  - CSS:
-    - `css/components/select.css` (1×)
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.select.chevron.stroke-width.md`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.icon.stroke-width.regular.20`
+- **Sentido**: Contrato chevron.stroke-width de select, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: stroke-width, border-width
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente select entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.select.chevron.stroke-width.sm`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.icon.stroke-width.regular.16`
+- **Sentido**: Contrato chevron.stroke-width de select, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: stroke-width, border-width
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente select entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `component.select.focus-ring.radius.default`
 
@@ -14080,18 +14003,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Escopo**: border-radius
 - **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
 - **Decisão**: Alias para semantic.radius.lg porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.select.focus-ring.stroke-width.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.border.width.focus`
-- **Sentido**: Espessura do focus ring do Select.
-- **Escopo**: border-width, stroke-width
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.border.width.focus porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -14173,149 +14084,6 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/select.css` (1×)
 
-### `component.select.helper.color.default`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.content.default`
-- **Sentido**: Cor do helper text do Select por estado.
-- **Escopo**: color, text-fill, icon-fill
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.content.default porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (1×)
-
-### `component.select.helper.color.disabled`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.content.disabled`
-- **Sentido**: Cor do helper text do Select por estado.
-- **Escopo**: color, text-fill, icon-fill
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.content.disabled porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (1×)
-
-### `component.select.helper.font-family.default`
-
-- **Camada**: component
-- **Tipo**: `string`
-- **Alias**: → `semantic.typography.body.font-family.sans`
-- **Sentido**: Tipografia do helper text do Select.
-- **Escopo**: font-family
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.typography.body.font-family.sans porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (1×)
-
-### `component.select.helper.font-size.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.sm`
-- **Sentido**: Tipografia do helper text do Select.
-- **Escopo**: font-size
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.typography.body.font-size.sm porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (1×)
-
-### `component.select.helper.font-size.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.sm`
-- **Sentido**: Tipografia do helper text do Select.
-- **Escopo**: font-size
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.typography.body.font-size.sm porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (1×)
-
-### `component.select.helper.font-size.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.xs`
-- **Sentido**: Tipografia do helper text do Select.
-- **Escopo**: font-size
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.typography.body.font-size.xs porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (1×)
-
-### `component.select.helper.font-weight.default`
-
-- **Camada**: component
-- **Tipo**: `string`
-- **Alias**: → `semantic.typography.body.font-weight.regular`
-- **Sentido**: Tipografia do helper text do Select.
-- **Escopo**: font-weight
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.typography.body.font-weight.regular porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (1×)
-
-### `component.select.helper.letter-spacing.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.letter-spacing.normal`
-- **Sentido**: Tipografia do helper text do Select.
-- **Escopo**: letter-spacing
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.typography.body.letter-spacing.normal porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (1×)
-
-### `component.select.helper.line-height.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.line-height.sm`
-- **Sentido**: Tipografia do helper text do Select.
-- **Escopo**: height, min-height
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.typography.body.line-height.sm porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (1×)
-
-### `component.select.helper.line-height.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.line-height.sm`
-- **Sentido**: Tipografia do helper text do Select.
-- **Escopo**: height, min-height
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.typography.body.line-height.sm porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (1×)
-
-### `component.select.helper.line-height.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.line-height.xs`
-- **Sentido**: Tipografia do helper text do Select.
-- **Escopo**: height, min-height
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.typography.body.line-height.xs porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (1×)
-
 ### `component.select.icon-frame.padding-x.default`
 
 - **Camada**: component
@@ -14333,7 +14101,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.content.default`
+- **Alias**: → `semantic.icon.color.default`
 - **Sentido**: Cor do ícone leading do Select por estado.
 - **Escopo**: color, text-fill, icon-fill
 - **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
@@ -14346,7 +14114,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.content.disabled`
+- **Alias**: → `semantic.icon.color.disabled`
 - **Sentido**: Cor do ícone leading do Select por estado.
 - **Escopo**: color, text-fill, icon-fill
 - **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
@@ -14354,45 +14122,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/select.css` (1×)
-
-### `component.select.icon.frame-size.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.size.md`
-- **Sentido**: Tamanho do frame de ícone leading do Select por size.
-- **Escopo**: width, height, font-size
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.size.md porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (3×)
-
-### `component.select.icon.frame-size.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.size.sm`
-- **Sentido**: Tamanho do frame de ícone leading do Select por size.
-- **Escopo**: width, height, font-size
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.size.md porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (3×)
-
-### `component.select.icon.frame-size.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.size.xs`
-- **Sentido**: Tamanho do frame de ícone leading do Select por size.
-- **Escopo**: width, height, font-size
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.size.sm porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (3×)
 
 ### `component.select.icon.size.lg`
 
@@ -14405,7 +14134,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.size.md.
 - **Usos**:
   - CSS:
-    - `css/components/select.css` (1×)
+    - `css/components/select.css` (4×)
 
 ### `component.select.icon.size.md`
 
@@ -14418,7 +14147,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.size.sm.
 - **Usos**:
   - CSS:
-    - `css/components/select.css` (1×)
+    - `css/components/select.css` (4×)
 
 ### `component.select.icon.size.sm`
 
@@ -14431,150 +14160,43 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.size.xs.
 - **Usos**:
   - CSS:
-    - `css/components/select.css` (1×)
+    - `css/components/select.css` (4×)
 
-### `component.select.label-row.gap.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.2xs`
-- **Sentido**: Gap entre label e required do Select.
-- **Escopo**: gap
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.space.2xs porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (1×)
-
-### `component.select.label.color.default`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.content.strong`
-- **Sentido**: Cor do label do Select.
-- **Escopo**: color, text-fill, icon-fill
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.content.strong porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (2×)
-
-### `component.select.label.font-family.default`
-
-- **Camada**: component
-- **Tipo**: `string`
-- **Alias**: → `semantic.typography.body.font-family.sans`
-- **Sentido**: Tipografia do label do Select.
-- **Escopo**: font-family
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.typography.body.font-family.sans porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (1×)
-
-### `component.select.label.font-size.lg`
+### `component.select.icon.stroke-width.lg`
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.sm`
-- **Sentido**: Tipografia do label do Select.
-- **Escopo**: font-size
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.typography.body.font-size.sm porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
+- **Alias**: → `semantic.icon.stroke-width.regular.24`
+- **Sentido**: Contrato icon.stroke-width de select, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: stroke-width, border-width
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente select entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
 - **Usos**:
-  - CSS:
-    - `css/components/select.css` (1×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
-### `component.select.label.font-size.md`
+### `component.select.icon.stroke-width.md`
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.sm`
-- **Sentido**: Tipografia do label do Select.
-- **Escopo**: font-size
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.typography.body.font-size.sm porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
+- **Alias**: → `semantic.icon.stroke-width.regular.20`
+- **Sentido**: Contrato icon.stroke-width de select, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: stroke-width, border-width
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente select entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
 - **Usos**:
-  - CSS:
-    - `css/components/select.css` (1×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
-### `component.select.label.font-size.sm`
+### `component.select.icon.stroke-width.sm`
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.xs`
-- **Sentido**: Tipografia do label do Select.
-- **Escopo**: font-size
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.typography.body.font-size.xs porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
+- **Alias**: → `semantic.icon.stroke-width.regular.16`
+- **Sentido**: Contrato icon.stroke-width de select, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: stroke-width, border-width
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente select entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
 - **Usos**:
-  - CSS:
-    - `css/components/select.css` (1×)
-
-### `component.select.label.font-weight.default`
-
-- **Camada**: component
-- **Tipo**: `string`
-- **Alias**: → `semantic.typography.body.font-weight.bold`
-- **Sentido**: Tipografia do label do Select.
-- **Escopo**: font-weight
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.typography.body.font-weight.bold porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (1×)
-
-### `component.select.label.letter-spacing.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.letter-spacing.normal`
-- **Sentido**: Tipografia do label do Select.
-- **Escopo**: letter-spacing
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.typography.body.letter-spacing.normal porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (1×)
-
-### `component.select.label.line-height.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.line-height.sm`
-- **Sentido**: Tipografia do label do Select.
-- **Escopo**: height, min-height
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.typography.body.line-height.sm porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (1×)
-
-### `component.select.label.line-height.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.line-height.sm`
-- **Sentido**: Tipografia do label do Select.
-- **Escopo**: height, min-height
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.typography.body.line-height.sm porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (1×)
-
-### `component.select.label.line-height.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.line-height.xs`
-- **Sentido**: Tipografia do label do Select.
-- **Escopo**: height, min-height
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.typography.body.line-height.xs porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (1×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `component.select.padding-x.lg`
 
@@ -14606,7 +14228,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.space.sm`
+- **Alias**: → `semantic.space.xs`
 - **Sentido**: Padding horizontal do Field Select por size.
 - **Escopo**: padding
 - **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
@@ -14614,172 +14236,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/select.css` (3×)
-
-### `component.select.padding-y.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.md`
-- **Sentido**: Padding vertical do Field Select por size.
-- **Escopo**: padding
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.space.md porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (2×)
-
-### `component.select.padding-y.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.control.padding.10`
-- **Sentido**: Padding vertical do Field Select por size.
-- **Escopo**: padding
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.space.control.padding.10 porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (3×)
-
-### `component.select.padding-y.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.sm`
-- **Sentido**: Padding vertical do Field Select por size.
-- **Escopo**: padding
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.space.sm porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (2×)
-
-### `component.select.placeholder.color.default`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.content.subtle`
-- **Sentido**: Cor do placeholder do Select por estado.
-- **Escopo**: color, text-fill, icon-fill
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.content.subtle porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.select.placeholder.color.disabled`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.content.disabled`
-- **Sentido**: Cor do placeholder do Select por estado.
-- **Escopo**: color, text-fill, icon-fill
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.content.disabled porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.select.radius.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.radius.md`
-- **Sentido**: Radius do Field Select.
-- **Escopo**: border-radius
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.radius.md porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.select.required.color.default`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.feedback.error.content-default`
-- **Sentido**: Cor do indicador required do Select.
-- **Escopo**: color, text-fill, icon-fill
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.feedback.error.content-default porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (1×)
-
-### `component.select.required.font-family.default`
-
-- **Camada**: component
-- **Tipo**: `string`
-- **Alias**: → `semantic.typography.body.font-family.sans`
-- **Sentido**: Tipografia do indicador required do Select.
-- **Escopo**: font-family
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.typography.body.font-family.sans porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (1×)
-
-### `component.select.required.font-size.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.sm`
-- **Sentido**: Tipografia do indicador required do Select.
-- **Escopo**: font-size
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.typography.body.font-size.sm porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (1×)
-
-### `component.select.required.font-weight.default`
-
-- **Camada**: component
-- **Tipo**: `string`
-- **Alias**: → `semantic.typography.body.font-weight.bold`
-- **Sentido**: Tipografia do indicador required do Select.
-- **Escopo**: font-weight
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.typography.body.font-weight.bold porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (1×)
-
-### `component.select.required.letter-spacing.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.letter-spacing.normal`
-- **Sentido**: Tipografia do indicador required do Select.
-- **Escopo**: letter-spacing
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.typography.body.letter-spacing.normal porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (1×)
-
-### `component.select.required.line-height.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.line-height.sm`
-- **Sentido**: Tipografia do indicador required do Select.
-- **Escopo**: height, min-height
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.typography.body.line-height.sm porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (1×)
-
-### `component.select.stack.gap.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.xs`
-- **Sentido**: Gap vertical do Select composto.
-- **Escopo**: gap
-- **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
-- **Decisão**: Alias para semantic.space.xs porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.
-- **Usos**:
-  - CSS:
-    - `css/components/select.css` (1×)
 
 ### `component.select.text-frame.padding-x.default`
 
@@ -14911,6 +14367,18 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/select.css` (1×)
 
+### `component.skeleton.circle.fill.default`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.background.subtle`
+- **Sentido**: Contrato circle.fill de skeleton, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: fill
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente skeleton entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
 ### `component.skeleton.circle.radius.default`
 
 - **Camada**: component
@@ -14937,11 +14405,23 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/skeleton.css` (2×)
 
+### `component.skeleton.rectangle.fill.default`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.background.subtle`
+- **Sentido**: Contrato rectangle.fill de skeleton, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: fill
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente skeleton entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
 ### `component.skeleton.rectangle.height.default`
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.dimension.120`
+- **Alias**: → `semantic.content-placeholder.rectangle.height.default`
 - **Sentido**: Altura default do Skeleton Rectangle.
 - **Escopo**: height
 - **Contexto**: Component token do contrato anatômico Skeleton Rectangle. Binda a variant Rectangle no Figma e corrige o CSS para o default vivo de 120px.
@@ -14963,11 +14443,23 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/skeleton.css` (1×)
 
+### `component.skeleton.text.fill.default`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.background.subtle`
+- **Sentido**: Contrato text.fill de skeleton, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: fill
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente skeleton entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
 ### `component.skeleton.text.height.default`
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.dimension.12`
+- **Alias**: → `semantic.content-placeholder.text.height.default`
 - **Sentido**: Altura default do Skeleton Text.
 - **Escopo**: height
 - **Contexto**: Component token do contrato anatômico Skeleton Text. Binda a variant Text no Figma e substitui consumo direto de Foundation no CSS.
@@ -14988,6 +14480,30 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/skeleton.css` (1×)
+
+### `component.spinner.indicator.border-color.default`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.border.brand`
+- **Sentido**: Contrato indicator.border-color de spinner, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente spinner entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.spinner.indicator.border-color.on-color`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.border.inverse`
+- **Sentido**: Contrato indicator.border-color de spinner, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente spinner entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `component.spinner.radius.default`
 
@@ -15054,6 +14570,30 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/spinner.css` (2×)
 
+### `component.spinner.track.border-color.default`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.border.overlay.default`
+- **Sentido**: Contrato track.border-color de spinner, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente spinner entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.spinner.track.border-color.on-color`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.border.overlay.medium`
+- **Sentido**: Contrato track.border-color de spinner, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente spinner entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
 ### `component.tabs.focus-ring.radius.default`
 
 - **Camada**: component
@@ -15066,6 +14606,18 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/tabs.css` (1×)
+
+### `component.tabs.indicator.fill.active`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.primary.background.default`
+- **Sentido**: Contrato indicator.fill de tabs, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: fill
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente tabs entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `component.tabs.indicator.height.default`
 
@@ -15130,6 +14682,54 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/tabs.css` (1×)
+
+### `component.tabs.label.color.active`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.content.brand`
+- **Sentido**: Contrato label.color de tabs, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente tabs entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.tabs.label.color.default`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.content.default`
+- **Sentido**: Contrato label.color de tabs, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente tabs entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.tabs.label.color.disabled`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.content.disabled`
+- **Sentido**: Contrato label.color de tabs, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente tabs entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.tabs.label.color.hover`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.content.strong`
+- **Sentido**: Contrato label.color de tabs, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente tabs entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `component.tabs.label.font-size.default`
 
@@ -15209,239 +14809,11 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/tabs.css` (1×)
 
-### `component.textarea.bg.default`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.surface.default`
-- **Sentido**: Bg do Field Textarea default.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.surface.default porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.bg.disabled`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.background.disabled`
-- **Sentido**: Bg do Field Textarea disabled.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.background.disabled porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.bg.error`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.surface.default`
-- **Sentido**: Bg do Field Textarea error.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.surface.default porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.bg.error-hover`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.surface.default`
-- **Sentido**: Bg do Field Textarea em erro durante hover.
-- **Escopo**: background, fill
-- **Contexto**: Component token do contrato do Textarea para a combinação Error=True e State=Hover no Figma.
-- **Decisão**: Alias 1:1 para semantic.surface.default para manter o erro visual na borda, sem alterar a superfície do campo.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.bg.filled`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.surface.default`
-- **Sentido**: Bg do Field Textarea filled.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.surface.default porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.bg.focus`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.surface.default`
-- **Sentido**: Token component para textarea / bg / focus.
-- **Escopo**: fill, background
-- **Contexto**: Usado para estabilizar o contrato component exposto por component.textarea.bg.
-- **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.surface.default.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.bg.readonly`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.background.subtle`
-- **Sentido**: Bg do Field Textarea readonly.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.background.subtle porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.border-color.default`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.border.control-default`
-- **Sentido**: Border color do Field Textarea default.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.border.control-default porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.border-color.disabled`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.border.control-disabled`
-- **Sentido**: Border color do Field Textarea disabled.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.border.control-disabled porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.border-color.error`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.border.error`
-- **Sentido**: Border color do Field Textarea error.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.feedback.error.background.default porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.border-color.error-hover`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.feedback.error.border.hover`
-- **Sentido**: Border color do Field Textarea em erro durante hover.
-- **Escopo**: border-color, stroke
-- **Contexto**: Component token do contrato do Textarea para a combinação Error=True e State=Hover no Figma.
-- **Decisão**: Alias 1:1 para semantic.feedback.error.border.hover para separar erro default de erro em hover.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.border-color.filled`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.border.strong`
-- **Sentido**: Border color do Field Textarea filled.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.border.strong porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.border-color.focus`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.border.focus`
-- **Sentido**: Token component para textarea / border color / focus.
-- **Escopo**: color, text-fill, icon-fill, stroke-color
-- **Contexto**: Usado para estabilizar o contrato component exposto por component.textarea.border-color.
-- **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.border.focus.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.border-color.hover`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.border.control-hover`
-- **Sentido**: Border color do Field Textarea hover.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.border.control-hover porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.border-color.readonly`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.border.subtle`
-- **Sentido**: Border color do Field Textarea readonly.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.border.subtle porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.border-width.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.border.width.default`
-- **Sentido**: Border width do Field Textarea.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.border.width.default porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.content.color.default`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.content.strong`
-- **Sentido**: Cor de conteúdo preenchido do Textarea.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.content.strong porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.content.color.disabled`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.content.disabled`
-- **Sentido**: Cor de conteúdo disabled do Textarea.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.content.disabled porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.content.color.readonly`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.content.default`
-- **Sentido**: Cor de conteúdo readonly do Textarea.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.content.default porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
 ### `component.textarea.field.min-height.lg`
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.dimension.120`
+- **Alias**: → `semantic.control.textarea.min-height.lg`
 - **Sentido**: Altura mínima do field Textarea lg.
 - **Escopo**: Textarea, Component set, Figma
 - **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
@@ -15454,7 +14826,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.dimension.96`
+- **Alias**: → `semantic.control.textarea.min-height.md`
 - **Sentido**: Altura mínima do field Textarea md.
 - **Escopo**: Textarea, Component set, Figma
 - **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
@@ -15467,60 +14839,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.dimension.80`
+- **Alias**: → `semantic.control.textarea.min-height.sm`
 - **Sentido**: Altura mínima do field Textarea sm.
 - **Escopo**: Textarea, Component set, Figma
 - **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
 - **Decisão**: Valor anatômico específico do Textarea observado no Figma vivo. Permanece em Component porque a altura mínima multilinha é contrato público do componente, não decisão Semantic reutilizável.
-- **Usos**:
-  - CSS:
-    - `css/components/textarea.css` (1×)
-
-### `component.textarea.focus-ring.color.default`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.border.focus`
-- **Sentido**: Cor do focus ring Textarea.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.border.focus porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.focus-ring.color.error`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.border.focus-error`
-- **Sentido**: Cor do focus ring Textarea error.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.feedback.error.background.default porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.focus-ring.color.readonly`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.border.control-default`
-- **Sentido**: Cor neutra do focus ring Textarea readonly.
-- **Escopo**: color, stroke
-- **Contexto**: Component token do contrato do Textarea para Readonly=True e State=Focus no Figma.
-- **Decisão**: Alias 1:1 para semantic.border.control-default porque readonly pode receber foco, mas não deve parecer estado ativo primário.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.focus-ring.offset.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.border.width.focus`
-- **Sentido**: Offset CSS do focus ring Textarea.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.border.width.focus porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
 - **Usos**:
   - CSS:
     - `css/components/textarea.css` (1×)
@@ -15534,282 +14857,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Escopo**: Textarea, Component set, Figma
 - **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
 - **Decisão**: Alias 1:1 para semantic.radius.lg porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.focus-ring.stroke-width.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.border.width.focus`
-- **Sentido**: Stroke width do focus ring Textarea.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.border.width.focus porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.helper.color.default`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.content.default`
-- **Sentido**: Cor do helper text Textarea.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.content.default porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.helper.color.disabled`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.content.disabled`
-- **Sentido**: Cor do helper text Textarea disabled.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.content.disabled porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.helper.font-family.default`
-
-- **Camada**: component
-- **Tipo**: `string`
-- **Alias**: → `semantic.typography.body.font-family.sans`
-- **Sentido**: Font-family do helper text Textarea.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.typography.body.font-family.sans porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.helper.font-size.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.sm`
-- **Sentido**: Font-size do helper text Textarea lg.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.typography.body.font-size.sm porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.helper.font-size.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.sm`
-- **Sentido**: Font-size do helper text Textarea md.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.typography.body.font-size.sm porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.helper.font-size.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.xs`
-- **Sentido**: Font-size do helper text Textarea sm.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.typography.body.font-size.xs porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.helper.font-weight.default`
-
-- **Camada**: component
-- **Tipo**: `string`
-- **Alias**: → `semantic.typography.body.font-weight.regular`
-- **Sentido**: Font-weight do helper text Textarea.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.typography.body.font-weight.regular porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.helper.letter-spacing.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.letter-spacing.normal`
-- **Sentido**: Letter-spacing do helper text Textarea.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.typography.body.letter-spacing.normal porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.helper.line-height.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.line-height.sm`
-- **Sentido**: Line-height do helper text Textarea lg.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.typography.body.line-height.sm porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.helper.line-height.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.line-height.sm`
-- **Sentido**: Line-height do helper text Textarea md.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.typography.body.line-height.sm porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.helper.line-height.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.line-height.xs`
-- **Sentido**: Line-height do helper text Textarea sm.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.typography.body.line-height.xs porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.label-row.gap.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.2xs`
-- **Sentido**: Gap entre label e required Textarea.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.space.2xs porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.label.color.default`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.content.strong`
-- **Sentido**: Cor do label Textarea.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.content.strong porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.label.font-family.default`
-
-- **Camada**: component
-- **Tipo**: `string`
-- **Alias**: → `semantic.typography.body.font-family.sans`
-- **Sentido**: Font-family do label Textarea.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.typography.body.font-family.sans porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.label.font-size.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.sm`
-- **Sentido**: Font-size do label Textarea lg.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.typography.body.font-size.sm porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.label.font-size.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.sm`
-- **Sentido**: Font-size do label Textarea md.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.typography.body.font-size.sm porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.label.font-size.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.xs`
-- **Sentido**: Font-size do label Textarea sm.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.typography.body.font-size.xs porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.label.font-weight.default`
-
-- **Camada**: component
-- **Tipo**: `string`
-- **Alias**: → `semantic.typography.body.font-weight.bold`
-- **Sentido**: Font-weight do label Textarea.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.typography.body.font-weight.bold porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.label.letter-spacing.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.letter-spacing.normal`
-- **Sentido**: Letter-spacing do label Textarea.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.typography.body.letter-spacing.normal porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.label.line-height.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.line-height.sm`
-- **Sentido**: Line-height do label Textarea lg.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.typography.body.line-height.sm porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.label.line-height.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.line-height.sm`
-- **Sentido**: Line-height do label Textarea md.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.typography.body.line-height.sm porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.label.line-height.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.line-height.xs`
-- **Sentido**: Line-height do label Textarea sm.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.typography.body.line-height.xs porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -15843,7 +14890,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.space.md`
+- **Alias**: → `semantic.space.sm`
 - **Sentido**: Padding horizontal do Field Textarea sm.
 - **Escopo**: Textarea, Component set, Figma
 - **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
@@ -15851,165 +14898,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/textarea.css` (1×)
-
-### `component.textarea.padding-y.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.md`
-- **Sentido**: Padding vertical do Field Textarea lg.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.space.md porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - CSS:
-    - `css/components/textarea.css` (1×)
-
-### `component.textarea.padding-y.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.control.padding.10`
-- **Sentido**: Padding vertical do Field Textarea md.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.space.control.padding.10 porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - CSS:
-    - `css/components/textarea.css` (1×)
-
-### `component.textarea.padding-y.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.sm`
-- **Sentido**: Padding vertical do Field Textarea sm.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.space.sm porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - CSS:
-    - `css/components/textarea.css` (1×)
-
-### `component.textarea.placeholder.color.default`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.content.subtle`
-- **Sentido**: Cor do placeholder Textarea.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.content.subtle porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.placeholder.color.disabled`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.content.disabled`
-- **Sentido**: Cor do placeholder Textarea disabled.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.content.disabled porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.radius.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.radius.md`
-- **Sentido**: Radius do Field Textarea.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.radius.md porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.required.color.default`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.feedback.error.content-default`
-- **Sentido**: Cor do indicador required Textarea.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.feedback.error.content-default porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.required.font-family.default`
-
-- **Camada**: component
-- **Tipo**: `string`
-- **Alias**: → `semantic.typography.body.font-family.sans`
-- **Sentido**: Font-family do indicador required Textarea.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.typography.body.font-family.sans porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.required.font-size.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.sm`
-- **Sentido**: Font-size do indicador required Textarea.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.typography.body.font-size.sm porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.required.font-weight.default`
-
-- **Camada**: component
-- **Tipo**: `string`
-- **Alias**: → `semantic.typography.body.font-weight.bold`
-- **Sentido**: Font-weight do indicador required Textarea.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.typography.body.font-weight.bold porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.required.letter-spacing.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.letter-spacing.normal`
-- **Sentido**: Letter-spacing do indicador required Textarea.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.typography.body.letter-spacing.normal porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.required.line-height.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.line-height.sm`
-- **Sentido**: Line-height do indicador required Textarea.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.typography.body.line-height.sm porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.textarea.stack.gap.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.xs`
-- **Sentido**: Gap vertical entre label, field e helper no Textarea.
-- **Escopo**: Textarea, Component set, Figma
-- **Contexto**: Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.
-- **Decisão**: Alias 1:1 para semantic.space.xs porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `component.textarea.text.font-family.default`
 
@@ -16141,32 +15029,6 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/toggle.css` (1×)
 
-### `component.toggle.description.color.default`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.content.strong`
-- **Sentido**: Toggle description default
-- **Escopo**: toggle, description
-- **Contexto**: Component token do contrato Toggle materializado no Figma para description.
-- **Decisão**: Alias 1:1 para semantic.content.strong para manter o estado default alinhado entre Figma, CSS e docs.
-- **Usos**:
-  - CSS:
-    - `css/components/toggle.css` (1×)
-
-### `component.toggle.focus-ring.color.default`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.border.focus`
-- **Sentido**: Toggle focus ring default
-- **Escopo**: toggle, focus ring
-- **Contexto**: Component token do contrato Toggle materializado no Figma para focus ring.
-- **Decisão**: Alias 1:1 para semantic.border.focus para manter o estado default alinhado entre Figma, CSS e docs.
-- **Usos**:
-  - CSS:
-    - `css/components/toggle.css` (1×)
-
 ### `component.toggle.focus-ring.radius.default`
 
 - **Camada**: component
@@ -16178,58 +15040,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Alias 1:1 para semantic.radius.full para manter a anatomia focus ring alinhada entre Figma, CSS e docs.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
-
-### `component.toggle.focus-ring.stroke-width.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.border.width.focus`
-- **Sentido**: Toggle focus ring default
-- **Escopo**: toggle, focus ring
-- **Contexto**: Component token do contrato Toggle materializado no Figma para focus ring.
-- **Decisão**: Alias 1:1 para semantic.border.width.focus para manter a anatomia focus ring alinhada entre Figma, CSS e docs.
-- **Usos**:
-  - CSS:
-    - `css/components/toggle.css` (2×)
-
-### `component.toggle.helper-text.color.default`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.content.default`
-- **Sentido**: Toggle helper text default
-- **Escopo**: toggle, helper text
-- **Contexto**: Component token do contrato Toggle materializado no Figma para helper text.
-- **Decisão**: Alias 1:1 para semantic.content.default para manter o estado default alinhado entre Figma, CSS e docs.
-- **Usos**:
-  - CSS:
-    - `css/components/toggle.css` (1×)
-
-### `component.toggle.label.color.default`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.content.strong`
-- **Sentido**: Toggle label default
-- **Escopo**: toggle, label
-- **Contexto**: Component token do contrato Toggle materializado no Figma para label.
-- **Decisão**: Alias 1:1 para semantic.content.strong para manter o estado default alinhado entre Figma, CSS e docs.
-- **Usos**:
-  - CSS:
-    - `css/components/toggle.css` (2×)
-
-### `component.toggle.label.color.disabled`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.content.disabled`
-- **Sentido**: Toggle label disabled
-- **Escopo**: toggle, label, disabled
-- **Contexto**: Component token do contrato Toggle materializado no Figma para label.
-- **Decisão**: Alias 1:1 para semantic.content.disabled para manter o estado disabled alinhado entre Figma, CSS e docs.
-- **Usos**:
-  - CSS:
-    - `css/components/toggle.css` (2×)
 
 ### `component.toggle.target.gap.default`
 
@@ -16415,7 +15225,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.dimension.28`
+- **Alias**: → `semantic.control.toggle.thumb.size.lg`
 - **Sentido**: Toggle thumb size lg
 - **Escopo**: toggle, thumb, lg
 - **Contexto**: Component token do contrato Toggle materializado no Figma para thumb.
@@ -16428,7 +15238,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.dimension.20`
+- **Alias**: → `semantic.control.toggle.thumb.size.md`
 - **Sentido**: Toggle thumb size md
 - **Escopo**: toggle, thumb, md
 - **Contexto**: Component token do contrato Toggle materializado no Figma para thumb.
@@ -16441,7 +15251,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.dimension.12`
+- **Alias**: → `semantic.control.toggle.thumb.size.sm`
 - **Sentido**: Toggle thumb size sm
 - **Escopo**: toggle, thumb, sm
 - **Contexto**: Component token do contrato Toggle materializado no Figma para thumb.
@@ -16672,7 +15482,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.dimension.56`
+- **Alias**: → `semantic.control.toggle.width.lg`
 - **Sentido**: Largura visual da track do Toggle por size.
 - **Escopo**: width
 - **Contexto**: Component-specific do contrato anatômico Toggle. Binda a track no Figma e substitui calculos CSS baseados em size + space.
@@ -16685,7 +15495,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.dimension.44`
+- **Alias**: → `semantic.control.toggle.width.md`
 - **Sentido**: Largura visual da track do Toggle por size.
 - **Escopo**: width
 - **Contexto**: Component-specific do contrato anatômico Toggle. Binda a track no Figma e substitui calculos CSS baseados em size + space.
@@ -16698,7 +15508,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.dimension.28`
+- **Alias**: → `semantic.control.toggle.width.sm`
 - **Sentido**: Largura visual da track do Toggle por size.
 - **Escopo**: width
 - **Contexto**: Component-specific do contrato anatômico Toggle. Binda a track no Figma e substitui calculos CSS baseados em size + space.
@@ -16731,6 +15541,30 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/tooltip.css` (1×)
+
+### `component.tooltip.arrow.fill.default`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.background.inverse`
+- **Sentido**: Contrato arrow.fill de tooltip, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: fill
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente tooltip entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.tooltip.content.fill.default`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.background.inverse`
+- **Sentido**: Contrato content.fill de tooltip, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente tooltip entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `component.tooltip.content.padding-x.default`
 
@@ -16770,6 +15604,18 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/tooltip.css` (1×)
+
+### `component.tooltip.label.color.default`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.primary.content-default`
+- **Sentido**: Contrato label.color de tooltip, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente tooltip entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `component.tooltip.label.font-size.default`
 

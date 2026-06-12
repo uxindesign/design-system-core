@@ -353,13 +353,13 @@
     <table class="ds-token-table" style="margin-top:var(--ds-dimension-16)">
       <thead><tr><th>Figma property</th><th>Value / CSS trigger</th><th>Visual change</th><th>Token</th></tr></thead>
       <tbody>
-        <tr><td>State</td><td>Default</td><td>Neutral surface and border</td><td><code>component.input.bg.default</code>, <code>component.input.border-color.default</code></td></tr>
-        <tr><td>State</td><td>Hover / <code>:hover</code></td><td>Darker border</td><td><code>component.input.border-color.hover</code></td></tr>
-        <tr><td>State</td><td>Focus / <code>:focus-within</code></td><td>2px outline ring, 2px offset</td><td><code>component.input.border-color.focus</code>, <code>component.input.focus-ring.*</code></td></tr>
-        <tr><td>State</td><td>Disabled / <code>[disabled]</code> or <code>.ds-input--disabled</code></td><td>Muted bg, border and content</td><td><code>component.input.bg.disabled</code>, <code>component.input.content.color.disabled</code></td></tr>
-        <tr><td>Error</td><td>True / <code>.ds-input--error</code> or <code>.ds-field--error .ds-input</code></td><td>Red border and error focus ring</td><td><code>component.input.border-color.error</code>, <code>component.input.focus-ring.color.error</code></td></tr>
-        <tr><td>Error + State</td><td>True + Hover / <code>.ds-input--error:hover</code></td><td>Darker red border</td><td><code>component.input.border-color.error-hover</code></td></tr>
-        <tr><td>Read-only</td><td>True / <code>[readonly]</code> or <code>.ds-input--readonly</code></td><td>Readonly bg with neutral focus ring</td><td><code>component.input.bg.readonly</code>, <code>component.input.focus-ring.color.readonly</code></td></tr>
+        <tr><td>State</td><td>Default</td><td>Neutral surface and border</td><td><code>component.field.bg.default</code>, <code>component.field.border-color.default</code></td></tr>
+        <tr><td>State</td><td>Hover / <code>:hover</code></td><td>Darker border</td><td><code>component.field.border-color.hover</code></td></tr>
+        <tr><td>State</td><td>Focus / <code>:focus-within</code></td><td>2px outline ring, component radius</td><td><code>component.field.border-color.focus</code>, <code>component.focus-ring.*</code>, <code>component.input.focus-ring.radius.default</code></td></tr>
+        <tr><td>State</td><td>Disabled / <code>[disabled]</code> or <code>.ds-input--disabled</code></td><td>Muted bg, border and content</td><td><code>component.field.bg.disabled</code>, <code>component.field.value.color.disabled</code></td></tr>
+        <tr><td>Error</td><td>True / <code>.ds-input--error</code> or <code>.ds-field--error .ds-input</code></td><td>Red border and error focus ring</td><td><code>component.field.border-color.error</code>, <code>component.focus-ring.color.error</code></td></tr>
+        <tr><td>Error + State</td><td>True + Hover / <code>.ds-input--error:hover</code></td><td>Darker red border</td><td><code>component.field.border-color.error-hover</code></td></tr>
+        <tr><td>Read-only</td><td>True / <code>[readonly]</code> or <code>.ds-input--readonly</code></td><td>Readonly bg with neutral focus ring</td><td><code>component.field.bg.readonly</code>, <code>component.focus-ring.color.readonly</code></td></tr>
       </tbody>
     </table>
   </div>
@@ -544,25 +544,25 @@
     <table class="ds-token-table">
       <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token</th><th><span data-lang="pt">Variável CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
       <tbody>
-        <tr><td>bg (default/disabled/error/filled/focus/readonly)</td><td><code>component.input.bg.*</code></td><td><code>--ds-input-bg-*</code></td></tr>
-        <tr><td>border-color (default/hover/focus/error/filled/disabled/readonly)</td><td><code>component.input.border-color.*</code></td><td><code>--ds-input-border-color-*</code></td></tr>
-        <tr><td>border-width</td><td><code>component.input.border-width.default</code></td><td><code>--ds-input-border-width-default</code></td></tr>
-        <tr><td>border-radius</td><td><code>component.input.radius.default</code></td><td><code>--ds-input-radius-default</code></td></tr>
-        <tr><td>focus ring</td><td><code>component.input.focus-ring.{color,stroke-width,offset,radius}.*</code></td><td><code>--ds-input-focus-ring-*</code></td></tr>
-        <tr><td>content color</td><td><code>component.input.content.color.{default,disabled,readonly}</code></td><td><code>--ds-input-content-color-*</code></td></tr>
-        <tr><td>placeholder color</td><td><code>component.input.placeholder.color.{default,disabled}</code></td><td><code>--ds-input-placeholder-color-*</code></td></tr>
+        <tr><td>bg (default/disabled/error/filled/focus/readonly)</td><td><code>component.field.bg.*</code></td><td><code>--ds-field-bg-*</code></td></tr>
+        <tr><td>border-color (default/hover/focus/error/filled/disabled/readonly)</td><td><code>component.field.border-color.*</code></td><td><code>--ds-field-border-color-*</code></td></tr>
+        <tr><td>border-width</td><td><code>component.field.border-width</code></td><td><code>--ds-field-border-width</code></td></tr>
+        <tr><td>border-radius</td><td><code>component.field.radius</code></td><td><code>--ds-field-radius</code></td></tr>
+        <tr><td>focus ring</td><td><code>component.focus-ring.*</code> + <code>component.input.focus-ring.radius.default</code></td><td><code>--ds-focus-ring-*</code> + <code>--ds-input-focus-ring-radius-default</code></td></tr>
+        <tr><td>content color</td><td><code>component.field.value.color.{default,disabled,readonly}</code></td><td><code>--ds-field-value-color-*</code></td></tr>
+        <tr><td>placeholder color</td><td><code>component.field.placeholder.color.{default,disabled}</code></td><td><code>--ds-field-placeholder-color-*</code></td></tr>
         <tr><td>icon color</td><td><code>component.input.icon.color.{default,disabled}</code></td><td><code>--ds-input-icon-color-*</code></td></tr>
         <tr><td>height (sm/md/lg)</td><td><code>component.input.height.{sm,md,lg}</code></td><td><code>--ds-input-height-*</code></td></tr>
         <tr><td>padding-x (sm/md/lg)</td><td><code>component.input.padding-x.{sm,md,lg}</code></td><td><code>--ds-input-padding-x-*</code></td></tr>
-        <tr><td>padding-y (sm/md/lg)</td><td><code>component.input.padding-y.{sm,md,lg}</code></td><td><code>--ds-input-padding-y-*</code></td></tr>
+        <tr><td>padding-y (sm/md/lg)</td><td><code>component.field.padding-y.{sm,md,lg}</code></td><td><code>--ds-field-padding-y-*</code></td></tr>
         <tr><td>gap (sm/md/lg)</td><td><code>component.input.gap.{sm,md,lg}</code></td><td><code>--ds-input-gap-*</code></td></tr>
         <tr><td>text-frame padding-x</td><td><code>component.input.text-frame.padding-x.default</code></td><td><code>--ds-input-text-frame-padding-x-default</code></td></tr>
         <tr><td>icon frame/ícone</td><td><code>component.input.icon.{frame-size,icon-size}.{sm,md,lg}</code></td><td><code>--ds-input-icon-*</code></td></tr>
         <tr><td>text typography</td><td><code>component.input.text.{font-family,font-size,font-weight,letter-spacing,line-height}.*</code></td><td><code>--ds-input-text-*</code></td></tr>
-        <tr><td>label typography/color</td><td><code>component.input.label.{color,font-family,font-size,font-weight,letter-spacing,line-height}.*</code></td><td><code>--ds-input-label-*</code></td></tr>
-        <tr><td>required typography/color</td><td><code>component.input.required.{color,font-family,font-size,font-weight,letter-spacing,line-height}.default</code></td><td><code>--ds-input-required-*</code></td></tr>
-        <tr><td>helper typography/color</td><td><code>component.input.helper.{color,font-family,font-size,font-weight,letter-spacing,line-height}.*</code></td><td><code>--ds-input-helper-*</code></td></tr>
-        <tr><td>stack/label-row gap</td><td><code>component.input.stack.gap.default</code>, <code>component.input.label-row.gap.default</code></td><td><code>--ds-input-stack-gap-default</code>, <code>--ds-input-label-row-gap-default</code></td></tr>
+        <tr><td>label typography/color</td><td><code>component.form-field.label.*</code></td><td><code>--ds-form-field-label-*</code></td></tr>
+        <tr><td>required typography/color</td><td><code>component.form-field.required.*</code></td><td><code>--ds-form-field-required-*</code></td></tr>
+        <tr><td>helper typography/color</td><td><code>component.form-field.helper.*</code></td><td><code>--ds-form-field-helper-*</code></td></tr>
+        <tr><td>stack/label-row gap</td><td><code>component.form-field.stack.gap.default</code>, <code>component.form-field.label-row.gap.default</code></td><td><code>--ds-form-field-stack-gap-default</code>, <code>--ds-form-field-label-row-gap-default</code></td></tr>
       </tbody>
     </table>
   </div>

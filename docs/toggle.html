@@ -264,8 +264,8 @@
         <tr><td>Off hover</td><td><code>:hover</code></td><td>Darker neutral track/thumb</td><td><code>component.toggle.track.fill.off.hover</code>, <code>component.toggle.thumb.fill.off.hover</code></td></tr>
         <tr><td>On</td><td><code>:checked</code></td><td>Primary track with light thumb</td><td><code>component.toggle.track.fill.on.default</code>, <code>component.toggle.thumb.fill.on.default</code></td></tr>
         <tr><td>On hover</td><td><code>:checked:hover</code></td><td>Darker primary track</td><td><code>component.toggle.track.fill.on.hover</code>, <code>component.toggle.thumb.fill.on.hover</code></td></tr>
-        <tr><td>Focus</td><td><code>:focus-visible</code></td><td>2px outline ring</td><td><code>component.toggle.focus-ring.*</code></td></tr>
-        <tr><td>Disabled</td><td><code>[disabled]</code></td><td>Muted track, thumb and label</td><td><code>component.toggle.track.fill.*.disabled</code>, <code>component.toggle.label.color.disabled</code></td></tr>
+        <tr><td>Focus</td><td><code>:focus-visible</code></td><td>2px outline ring</td><td><code>component.toggle.focus-ring.radius.default + component.focus-ring.*</code></td></tr>
+        <tr><td>Disabled</td><td><code>[disabled]</code></td><td>Muted track, thumb and label</td><td><code>component.toggle.track.fill.*.disabled</code>, <code>semantic.content.disabled</code></td></tr>
       </tbody>
     </table>
   </div>
@@ -359,8 +359,8 @@
         <tr><td>track fill</td><td><code>component.toggle.track.fill.*.*</code></td><td><code>--ds-toggle-track-fill-*</code></td></tr>
         <tr><td>track border</td><td><code>component.toggle.track.border-color.*.*</code></td><td><code>--ds-toggle-track-border-color-*</code></td></tr>
         <tr><td>thumb size/fill</td><td><code>component.toggle.thumb.{size,fill}.*</code></td><td><code>--ds-toggle-thumb-*</code></td></tr>
-        <tr><td>focus ring</td><td><code>component.toggle.focus-ring.*</code></td><td><code>--ds-toggle-focus-ring-*</code></td></tr>
-        <tr><td>label/helper/description</td><td><code>component.toggle.{label,helper-text,description}.*</code></td><td><code>--ds-toggle-label-*</code>, <code>--ds-toggle-helper-text-*</code></td></tr>
+        <tr><td>focus ring</td><td><code>component.toggle.focus-ring.radius.default + component.focus-ring.*</code></td><td><code>--ds-focus-ring-* + --ds-toggle-focus-ring-radius-default</code></td></tr>
+        <tr><td>label/helper/description</td><td><code>semantic.content.*</code></td><td><code>--ds-toggle-label-*</code>, <code>--ds-toggle-helper-text-*</code></td></tr>
       </tbody>
     </table>
   </div>

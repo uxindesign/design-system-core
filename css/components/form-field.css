@@ -99,12 +99,12 @@
   justify-content: center;
   box-sizing: content-box;
   flex: 0 0 calc(
-    var(--ds-form-field-error-icon-frame-size-default) +
+    var(--ds-form-field-error-icon-size-default) +
     var(--ds-form-field-error-icon-frame-padding-x-default) +
     var(--ds-form-field-error-icon-frame-padding-x-default)
   );
-  width: var(--ds-form-field-error-icon-frame-size-default);
-  height: var(--ds-form-field-error-icon-frame-size-default);
+  width: var(--ds-form-field-error-icon-size-default);
+  height: var(--ds-form-field-error-icon-size-default);
   padding-left: var(--ds-form-field-error-icon-frame-padding-x-default);
   padding-right: var(--ds-form-field-error-icon-frame-padding-x-default);
   color: var(--ds-form-field-error-icon-color-default);
@@ -134,11 +134,7 @@
   display: none;
 }
 
-/* Error state — mostra error message, tinge label */
+/* Error state — mostra error message; label permanece neutra. */
 .ds-field--error .ds-field__error {
   display: inline-flex;
-}
-
-.ds-field--error .ds-field__label {
-  color: var(--ds-form-field-label-color-error);
 }

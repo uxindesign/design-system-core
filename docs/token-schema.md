@@ -20,7 +20,7 @@
 |--------|--------|----------|
 | Foundation/Core | **273** | 9 |
 | Semantic/System | **226 × 2 modos** | light.json + dark.json |
-| Component | **693** | 21 |
+| Component | **599** | 21 |
 
 ## Foundation (273 tokens)
 
@@ -65,31 +65,31 @@ semantic.typography.*
 semantic.z.*
 ```
 
-## Component (693 tokens)
+## Component (599 tokens)
 
 | Arquivo | Tokens |
 |---------|--------|
-| `alert.json` | 15 |
-| `avatar.json` | 16 |
-| `badge.json` | 8 |
-| `breadcrumb.json` | 11 |
-| `button.json` | 104 |
-| `card.json` | 17 |
-| `checkbox.json` | 41 |
+| `alert.json` | 50 |
+| `avatar.json` | 21 |
+| `badge.json` | 32 |
+| `breadcrumb.json` | 13 |
+| `button.json` | 99 |
+| `card.json` | 24 |
+| `checkbox.json` | 37 |
 | `divider.json` | 3 |
 | `field.json` | 21 |
 | `focus-ring.json` | 5 |
-| `form-field.json` | 24 |
-| `input.json` | 86 |
-| `modal.json` | 53 |
-| `radio.json` | 41 |
-| `select.json` | 97 |
-| `skeleton.json` | 6 |
-| `spinner.json` | 5 |
-| `tabs.json` | 12 |
-| `textarea.json` | 75 |
-| `toggle.json` | 45 |
-| `tooltip.json` | 8 |
+| `form-field.json` | 30 |
+| `input.json` | 29 |
+| `modal.json` | 59 |
+| `radio.json` | 37 |
+| `select.json` | 38 |
+| `skeleton.json` | 9 |
+| `spinner.json` | 9 |
+| `tabs.json` | 17 |
+| `textarea.json` | 16 |
+| `toggle.json` | 39 |
+| `tooltip.json` | 11 |
 
 ## Regras invioláveis
 

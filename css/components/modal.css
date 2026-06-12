@@ -71,8 +71,8 @@
 
 .ds-modal__close {
   flex-shrink: 0;
-  width: var(--ds-modal-close-frame-size-default);
-  height: var(--ds-modal-close-frame-size-default);
+  width: var(--ds-modal-close-size-default);
+  height: var(--ds-modal-close-size-default);
   background: none;
   border: none;
   padding: var(--ds-modal-close-padding-default);

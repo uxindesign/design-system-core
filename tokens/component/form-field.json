@@ -24,10 +24,13 @@
             "$value": "{semantic.content.strong}",
             "$description": "Cor default do label Form Field."
           },
-          "error": {
-            "$type": "color",
-            "$value": "{semantic.feedback.error.content-default}",
-            "$description": "Cor do label Form Field em estado de erro."
+          "disabled": {
+            "$value": "{semantic.content.disabled}",
+            "$type": "color"
+          },
+          "readonly": {
+            "$value": "{semantic.content.default}",
+            "$type": "color"
           }
         },
         "font-size": {
@@ -49,6 +52,12 @@
             "$type": "string",
             "$value": "{semantic.typography.body.font-weight.bold}",
             "$description": "Font-weight do label Form Field."
+          }
+        },
+        "font-family": {
+          "default": {
+            "$value": "{semantic.typography.body.font-family.sans}",
+            "$type": "string"
           }
         }
       },
@@ -80,6 +89,12 @@
             "$value": "{semantic.typography.body.font-weight.bold}",
             "$description": "Font-weight do indicador required Form Field."
           }
+        },
+        "font-family": {
+          "default": {
+            "$value": "{semantic.typography.body.font-family.sans}",
+            "$type": "string"
+          }
         }
       },
       "helper": {
@@ -88,6 +103,10 @@
             "$type": "color",
             "$value": "{semantic.content.default}",
             "$description": "Cor do helper text Form Field."
+          },
+          "disabled": {
+            "$value": "{semantic.content.disabled}",
+            "$type": "color"
           }
         },
         "font-size": {
@@ -152,15 +171,8 @@
           "color": {
             "default": {
               "$type": "color",
-              "$value": "{semantic.feedback.error.content-default}",
+              "$value": "{semantic.icon.color.error}",
               "$description": "Cor do ícone da mensagem de erro Form Field."
-            }
-          },
-          "frame-size": {
-            "default": {
-              "$type": "dimension",
-              "$value": "{semantic.size.xs}",
-              "$description": "Frame-size do ícone da mensagem de erro Form Field."
             }
           },
           "size": {
@@ -168,6 +180,12 @@
               "$type": "dimension",
               "$value": "{semantic.size.xs}",
               "$description": "Tamanho do ícone da mensagem de erro Form Field."
+            }
+          },
+          "stroke-width": {
+            "default": {
+              "$value": "{semantic.icon.stroke-width.strong.16}",
+              "$type": "dimension"
             }
           }
         },
@@ -178,6 +196,22 @@
               "$value": "{semantic.space.2xs}",
               "$description": "Padding horizontal do frame externo do ícone da mensagem de erro Form Field."
             }
+          }
+        }
+      },
+      "stack": {
+        "gap": {
+          "default": {
+            "$value": "{semantic.space.xs}",
+            "$type": "dimension"
+          }
+        }
+      },
+      "description": {
+        "color": {
+          "default": {
+            "$value": "{semantic.content.strong}",
+            "$type": "color"
           }
         }
       }

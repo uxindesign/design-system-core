@@ -5,7 +5,7 @@
         "height": {
           "default": {
             "$type": "dimension",
-            "$value": "{foundation.dimension.12}",
+            "$value": "{semantic.content-placeholder.text.height.default}",
             "$description": "Altura do Skeleton Text."
           }
         },
@@ -14,6 +14,12 @@
             "$type": "dimension",
             "$value": "{semantic.radius.md}",
             "$description": "Radius do Skeleton Text."
+          }
+        },
+        "fill": {
+          "default": {
+            "$value": "{semantic.background.subtle}",
+            "$type": "color"
           }
         }
       },
@@ -31,13 +37,19 @@
             "$value": "{semantic.radius.full}",
             "$description": "Radius circular do Skeleton Circle."
           }
+        },
+        "fill": {
+          "default": {
+            "$value": "{semantic.background.subtle}",
+            "$type": "color"
+          }
         }
       },
       "rectangle": {
         "height": {
           "default": {
             "$type": "dimension",
-            "$value": "{foundation.dimension.120}",
+            "$value": "{semantic.content-placeholder.rectangle.height.default}",
             "$description": "Altura default do Skeleton Rectangle."
           }
         },
@@ -46,6 +58,12 @@
             "$type": "dimension",
             "$value": "{semantic.radius.md}",
             "$description": "Radius do Skeleton Rectangle."
+          }
+        },
+        "fill": {
+          "default": {
+            "$value": "{semantic.background.subtle}",
+            "$type": "color"
           }
         }
       }

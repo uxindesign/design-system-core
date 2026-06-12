@@ -23,7 +23,7 @@
   cursor: pointer;
   padding: var(--ds-space-xs);
   min-height: var(--toggle-target-height);
-  color: var(--ds-toggle-label-color-default);
+  color: var(--ds-content-strong);
   user-select: none;
 }
 
@@ -96,8 +96,8 @@
 
 /* Focus State */
 .ds-toggle:focus-visible {
-  outline: var(--ds-toggle-focus-ring-stroke-width-default) solid var(--ds-toggle-focus-ring-color-default);
-  outline-offset: var(--ds-toggle-focus-ring-stroke-width-default);
+  outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color-default);
+  outline-offset: var(--ds-focus-ring-width);
 }
 
 /* Disabled State */
@@ -122,7 +122,7 @@
 
 .ds-toggle-label:has(.ds-toggle:disabled) {
   cursor: not-allowed;
-  color: var(--ds-toggle-label-color-disabled);
+  color: var(--ds-content-disabled);
 }
 
 /* ---------------------------------------------------------
@@ -167,7 +167,7 @@
   font-size: var(--ds-body-font-size-sm);
   font-weight: var(--ds-body-font-weight-bold);
   line-height: var(--ds-body-line-height-sm);
-  color: var(--ds-toggle-label-color-default);
+  color: var(--ds-content-strong);
 }
 
 /* Description (body/sm: 14px regular) */
@@ -175,7 +175,7 @@
   font-size: var(--ds-body-font-size-sm);
   font-weight: var(--ds-body-font-weight-regular);
   line-height: var(--ds-body-line-height-sm);
-  color: var(--ds-toggle-description-color-default);
+  color: var(--ds-content-strong);
   white-space: pre-wrap;
 }
 
@@ -183,11 +183,11 @@
 .ds-toggle__helper {
   font-size: var(--ds-body-font-size-xs);
   line-height: var(--ds-body-line-height-xs);
-  color: var(--ds-toggle-helper-text-color-default);
+  color: var(--ds-content-default);
 }
 
 .ds-toggle-label:has(.ds-toggle:disabled) .ds-toggle__label {
-  color: var(--ds-toggle-label-color-disabled);
+  color: var(--ds-content-disabled);
 }
 
 /* ---------------------------------------------------------

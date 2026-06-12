@@ -228,9 +228,9 @@
     <table class="ds-token-table">
       <thead><tr><th>Size</th><th>Height</th><th>Font</th><th>Padding</th><th>Touch target</th></tr></thead>
       <tbody>
-        <tr><td>Small (<code>--sm</code>)</td><td>32px (<code>component.select.height.sm</code>)</td><td><code>component.select.text.font-size.sm</code></td><td><code>component.select.padding-x.sm</code> / <code>component.select.padding-y.sm</code></td><td>32px — meets WCAG 2.5.8 min (24px)</td></tr>
-        <tr><td>Medium (<code>--md</code>)</td><td>40px (<code>component.select.height.md</code>)</td><td><code>component.select.text.font-size.md</code></td><td><code>component.select.padding-x.md</code> / <code>component.select.padding-y.md</code></td><td>40px</td></tr>
-        <tr><td>Large (<code>--lg</code>)</td><td>48px (<code>component.select.height.lg</code>)</td><td><code>component.select.text.font-size.lg</code></td><td><code>component.select.padding-x.lg</code> / <code>component.select.padding-y.lg</code></td><td>48px — meets AAA 44px target</td></tr>
+        <tr><td>Small (<code>--sm</code>)</td><td>32px (<code>component.select.height.sm</code>)</td><td><code>component.select.text.font-size.sm</code></td><td><code>component.select.padding-x.sm</code> / <code>component.field.padding-y.sm</code></td><td>32px — meets WCAG 2.5.8 min (24px)</td></tr>
+        <tr><td>Medium (<code>--md</code>)</td><td>40px (<code>component.select.height.md</code>)</td><td><code>component.select.text.font-size.md</code></td><td><code>component.select.padding-x.md</code> / <code>component.field.padding-y.md</code></td><td>40px</td></tr>
+        <tr><td>Large (<code>--lg</code>)</td><td>48px (<code>component.select.height.lg</code>)</td><td><code>component.select.text.font-size.lg</code></td><td><code>component.select.padding-x.lg</code> / <code>component.field.padding-y.lg</code></td><td>48px — meets AAA 44px target</td></tr>
       </tbody>
     </table>
   </div>
@@ -388,13 +388,13 @@
     <table class="ds-token-table" style="margin-top:var(--ds-dimension-16)">
       <thead><tr><th>Figma property</th><th>Value / CSS trigger</th><th>Visual change</th><th>Token</th></tr></thead>
       <tbody>
-        <tr><td>State</td><td>Default</td><td>Neutral border</td><td><code>component.select.border-color.default</code></td></tr>
-        <tr><td>State</td><td>Hover / <code>:hover</code></td><td>Darker border</td><td><code>component.select.border-color.hover</code></td></tr>
-        <tr><td>State</td><td>Focus / <code>:focus-visible</code></td><td>2px outline ring, 2px offset</td><td><code>component.select.border-color.focus</code>, <code>component.select.focus-ring.*</code></td></tr>
-        <tr><td>State</td><td>Disabled / <code>[disabled]</code></td><td>Muted bg + content, no pointer events</td><td><code>component.select.bg.disabled</code>, <code>component.select.content.color.disabled</code>, <code>component.select.placeholder.color.disabled</code></td></tr>
-        <tr><td>Error</td><td>True / <code>.ds-select--error</code> or <code>.ds-field--error .ds-select</code></td><td>Red border and error focus ring</td><td><code>component.select.border-color.error</code>, <code>component.select.focus-ring.color.error</code></td></tr>
-        <tr><td>Error + State</td><td>True + Hover / <code>.ds-select--error:hover</code></td><td>Darker red border</td><td><code>component.select.border-color.error-hover</code></td></tr>
-        <tr><td>Read-only</td><td>True / <code>.ds-select--readonly</code> + <code>[disabled]</code></td><td>Readonly bg and content treatment; native select has no real readonly focus</td><td><code>component.select.bg.readonly</code>, <code>component.select.content.color.readonly</code></td></tr>
+        <tr><td>State</td><td>Default</td><td>Neutral border</td><td><code>component.field.border-color.default</code></td></tr>
+        <tr><td>State</td><td>Hover / <code>:hover</code></td><td>Darker border</td><td><code>component.field.border-color.hover</code></td></tr>
+        <tr><td>State</td><td>Focus / <code>:focus-visible</code></td><td>2px outline ring, component radius</td><td><code>component.field.border-color.focus</code>, <code>component.focus-ring.*</code>, <code>component.select.focus-ring.radius.default</code></td></tr>
+        <tr><td>State</td><td>Disabled / <code>[disabled]</code></td><td>Muted bg + content, no pointer events</td><td><code>component.field.bg.disabled</code>, <code>component.field.value.color.disabled</code>, <code>component.field.placeholder.color.disabled</code></td></tr>
+        <tr><td>Error</td><td>True / <code>.ds-select--error</code> or <code>.ds-field--error .ds-select</code></td><td>Red border and error focus ring</td><td><code>component.field.border-color.error</code>, <code>component.focus-ring.color.error</code></td></tr>
+        <tr><td>Error + State</td><td>True + Hover / <code>.ds-select--error:hover</code></td><td>Darker red border</td><td><code>component.field.border-color.error-hover</code></td></tr>
+        <tr><td>Read-only</td><td>True / <code>.ds-select--readonly</code> + <code>[disabled]</code></td><td>Readonly bg and content treatment; native select has no real readonly focus</td><td><code>component.field.bg.readonly</code>, <code>component.field.value.color.readonly</code></td></tr>
       </tbody>
     </table>
   </div>
@@ -500,18 +500,18 @@
     <table class="ds-token-table">
       <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token Component</th><th><span data-lang="pt">Variável CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
       <tbody>
-        <tr><td>bg</td><td><code>component.select.bg.{default|focus|filled|error|disabled|readonly}</code></td><td><code>--ds-select-bg-*</code></td></tr>
-        <tr><td>border color</td><td><code>component.select.border-color.{default|hover|focus|filled|error|disabled|readonly}</code></td><td><code>--ds-select-border-color-*</code></td></tr>
-        <tr><td>border width</td><td><code>component.select.border-width.default</code></td><td><code>--ds-select-border-width-default</code></td></tr>
-        <tr><td>content color</td><td><code>component.select.content.color.{default|disabled|readonly}</code></td><td><code>--ds-select-content-color-*</code></td></tr>
-        <tr><td>placeholder color</td><td><code>component.select.placeholder.color.{default|disabled}</code></td><td><code>--ds-select-placeholder-color-*</code></td></tr>
+        <tr><td>bg</td><td><code>component.field.bg.{default|focus|filled|error|disabled|readonly}</code></td><td><code>--ds-field-bg-*</code></td></tr>
+        <tr><td>border color</td><td><code>component.field.border-color.{default|hover|focus|filled|error|disabled|readonly}</code></td><td><code>--ds-field-border-color-*</code></td></tr>
+        <tr><td>border width</td><td><code>component.field.border-width</code></td><td><code>--ds-field-border-width</code></td></tr>
+        <tr><td>content color</td><td><code>component.field.value.color.{default|disabled|readonly}</code></td><td><code>--ds-field-value-color-*</code></td></tr>
+        <tr><td>placeholder color</td><td><code>component.field.placeholder.color.{default|disabled}</code></td><td><code>--ds-field-placeholder-color-*</code></td></tr>
         <tr><td>chevron</td><td><code>component.select.chevron.{color|frame-size|icon-size}.*</code></td><td><code>--ds-select-chevron-*</code></td></tr>
         <tr><td>height</td><td><code>component.select.height.{sm|md|lg}</code></td><td><code>--ds-select-height-*</code></td></tr>
         <tr><td>gap</td><td><code>component.select.gap.{sm|md|lg}</code></td><td><code>--ds-select-gap-*</code></td></tr>
-        <tr><td>padding</td><td><code>component.select.padding-x.*</code> / <code>component.select.padding-y.*</code></td><td><code>--ds-select-padding-x-*</code> / <code>--ds-select-padding-y-*</code></td></tr>
-        <tr><td>radius</td><td><code>component.select.radius.default</code></td><td><code>--ds-select-radius-default</code></td></tr>
-        <tr><td>focus ring</td><td><code>component.select.focus-ring.{color|offset|radius|stroke-width}.*</code></td><td><code>--ds-select-focus-ring-*</code></td></tr>
-        <tr><td>typography</td><td><code>component.select.{text|label|helper|required}.*</code></td><td><code>--ds-select-text-*</code>, <code>--ds-select-label-*</code>, <code>--ds-select-helper-*</code>, <code>--ds-select-required-*</code></td></tr>
+        <tr><td>padding</td><td><code>component.select.padding-x.*</code> / <code>component.field.padding-y.*</code></td><td><code>--ds-select-padding-x-*</code> / <code>--ds-field-padding-y-*</code></td></tr>
+        <tr><td>radius</td><td><code>component.field.radius</code></td><td><code>--ds-field-radius</code></td></tr>
+        <tr><td>focus ring</td><td><code>component.focus-ring.*</code> + <code>component.select.focus-ring.radius.default</code></td><td><code>--ds-focus-ring-*</code> + <code>--ds-select-focus-ring-radius-default</code></td></tr>
+        <tr><td>typography</td><td><code>component.select.text.*</code> + <code>component.form-field.{label|helper|required}.*</code></td><td><code>--ds-select-text-*</code>, <code>--ds-form-field-*</code></td></tr>
       </tbody>
     </table>
   </div>

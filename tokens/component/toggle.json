@@ -36,38 +36,6 @@
           }
         }
       },
-      "label": {
-        "color": {
-          "default": {
-            "$type": "color",
-            "$value": "{semantic.content.strong}",
-            "$description": "Cor do label Toggle."
-          },
-          "disabled": {
-            "$type": "color",
-            "$value": "{semantic.content.disabled}",
-            "$description": "Cor do label Toggle disabled."
-          }
-        }
-      },
-      "description": {
-        "color": {
-          "default": {
-            "$type": "color",
-            "$value": "{semantic.content.strong}",
-            "$description": "Cor da description Toggle."
-          }
-        }
-      },
-      "helper-text": {
-        "color": {
-          "default": {
-            "$type": "color",
-            "$value": "{semantic.content.default}",
-            "$description": "Cor do helper text Toggle."
-          }
-        }
-      },
       "track": {
         "height": {
           "sm": {
@@ -89,17 +57,17 @@
         "width": {
           "sm": {
             "$type": "dimension",
-            "$value": "{foundation.dimension.28}",
+            "$value": "{semantic.control.toggle.width.sm}",
             "$description": "Largura especifica da track Toggle sm. Component-specific; nao ha Semantic reutilizavel."
           },
           "md": {
             "$type": "dimension",
-            "$value": "{foundation.dimension.44}",
+            "$value": "{semantic.control.toggle.width.md}",
             "$description": "Largura especifica da track Toggle md. Component-specific; nao ha Semantic reutilizavel."
           },
           "lg": {
             "$type": "dimension",
-            "$value": "{foundation.dimension.56}",
+            "$value": "{semantic.control.toggle.width.lg}",
             "$description": "Largura especifica da track Toggle lg. Component-specific; nao ha Semantic reutilizavel."
           }
         },
@@ -199,17 +167,17 @@
         "size": {
           "sm": {
             "$type": "dimension",
-            "$value": "{foundation.dimension.12}",
+            "$value": "{semantic.control.toggle.thumb.size.sm}",
             "$description": "Tamanho do thumb Toggle sm. Component-specific; nao ha Semantic reutilizavel."
           },
           "md": {
             "$type": "dimension",
-            "$value": "{foundation.dimension.20}",
+            "$value": "{semantic.control.toggle.thumb.size.md}",
             "$description": "Tamanho do thumb Toggle md. Component-specific; nao ha Semantic reutilizavel."
           },
           "lg": {
             "$type": "dimension",
-            "$value": "{foundation.dimension.28}",
+            "$value": "{semantic.control.toggle.thumb.size.lg}",
             "$description": "Tamanho do thumb Toggle lg. Component-specific; nao ha Semantic reutilizavel."
           }
         },
@@ -268,20 +236,6 @@
         }
       },
       "focus-ring": {
-        "color": {
-          "default": {
-            "$type": "color",
-            "$value": "{semantic.border.focus}",
-            "$description": "Cor do focus ring Toggle."
-          }
-        },
-        "stroke-width": {
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.border.width.focus}",
-            "$description": "Stroke width do focus ring Toggle."
-          }
-        },
         "radius": {
           "default": {
             "$type": "dimension",

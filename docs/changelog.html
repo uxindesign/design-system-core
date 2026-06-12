@@ -106,11 +106,11 @@
 </li>
 <li><p><strong>Button padding e gap sincronizados com Figma.</strong> <code>component.button.padding-x.{sm,md,lg}</code> passa a seguir <code>8/12/16px</code> e <code>component.button.gap.{sm,md,lg}</code> passa a seguir <code>2/4/8px</code>, alinhando JSON, CSS gerado, documentação e API às variables vivas do Button no Figma.</p>
 </li>
-<li><p><strong>Button sm com frame de ícone por tamanho.</strong> <code>component.button.icon.frame-size.default</code> foi substituído por <code>component.button.icon.frame-size.{sm,md,lg}</code> no Figma/JSON/CSS; os 270 frames de ícone do Button no Figma agora usam <code>sm=20px</code>, <code>md=24px</code> e <code>lg=24px</code>. CSS também corrige Button somente-ícone para não herdar <code>min-width</code> textual e renderizar quadrado.</p>
+<li><p><strong>Button sm com frame de ícone por tamanho.</strong> Na época, o Button passou a ter frame de ícone por tamanho; esse contrato foi depois superado por <code>component.button.icon.size.{sm,md,lg}</code> e <code>component.button.icon.stroke-width.{sm,md,lg}</code>. CSS também corrige Button somente-ícone para não herdar <code>min-width</code> textual e renderizar quadrado.</p>
 </li>
-<li><p><strong>Checkbox estrutural/focus aplicado aos Component tokens anatômicos.</strong> Adicionados <code>component.checkbox.target.{gap,radius}</code>, <code>component.checkbox.box.{radius,border-width}</code> e <code>component.checkbox.focus-ring.{color,stroke-width,radius}</code>; os 27 variants vivos do Checkbox agora usam Component tokens nesses atributos, além de <code>target.height</code> e <code>box.size</code> já existentes. CSS passa a consumir <code>--ds-checkbox-*</code> nesses contratos e o sync Figma↔JSON trata <code>component.form-field.*</code> como JSON-only por ADR-017 após remoção das variables <code>form-field</code> do Figma.</p>
+<li><p><strong>Checkbox estrutural/focus aplicado aos Component tokens anatômicos.</strong> Na época, o Checkbox adicionou tokens próprios para target, box e focus ring; esse contrato foi depois simplificado para manter no componente apenas o radius do focus ring e consumir <code>component.focus-ring.*</code> para cor/largura. CSS passa a consumir <code>--ds-checkbox-*</code> nesses contratos.</p>
 </li>
-<li><p><strong>Button Focus Ring por estilo no Component token.</strong> Success e Danger deixam de herdar o focus ring brand: <code>component.button.focus-ring.color.success</code> aponta para <code>semantic.feedback.success.border-default</code> e <code>component.button.focus-ring.color.danger</code> aponta para <code>semantic.border.focus-error</code>; CSS e Figma passam a aplicar esses tokens nos variants verdes e vermelhos.</p>
+<li><p><strong>Button Focus Ring por estilo no Component token.</strong> Na época, Success e Danger tinham cor de focus ring própria no componente; esse contrato foi depois consolidado em <code>component.focus-ring.color.*</code>, mantendo no Button apenas o radius anatômico.</p>
 </li>
 <li><p><strong>Button Figma/CSS aplicado aos Component tokens anatômicos completos.</strong> Criado <code>component.button</code> para a superfície principal height/min-width/padding/gap/radius/border, background por estilo/estado, border color de Outline, cor de conteúdo, tipografia do label, frame/size de ícone, icon-only e focus ring. Os 216 variants vivos do Button no Figma agora usam Component tokens nos atributos públicos; CSS passa a consumir <code>--ds-button-*</code>, corrige <code>Brand/Large/Focused</code> com padding vertical incorreto e remove opacidade disabled global em favor de cores de estado.</p>
 </li>
@@ -842,7 +842,7 @@
 </ul>
 <h3>Adicionado</h3>
 <ul>
-<li><code>component.input.padding-y.{sm,md,lg}</code> e <code>component.select.padding-y.{sm,md,lg}</code> em <code>tokens/component/input.json</code> e <code>select.json</code>, referenciando <code>semantic.space.control.padding-y.*</code>. Gera <code>--ds-input-padding-y-*</code> e <code>--ds-select-padding-y-*</code> no CSS gerado.</li>
+<li>Na época, Input e Select ganharam padding-y próprio por tamanho; esse contrato foi depois consolidado em <code>component.field.padding-y.{sm,md,lg}</code> para Input, Select e Textarea.</li>
 </ul>
 <h3>Corrigido</h3>
 <ul>

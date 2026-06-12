@@ -52,18 +52,18 @@
   resize: vertical;
   min-height: var(--ds-textarea-field-min-height-md);
   min-width: 0;
-  padding: var(--ds-textarea-padding-y-md) var(--ds-textarea-padding-x-md);
+  padding: var(--ds-field-padding-y-md) var(--ds-textarea-padding-x-md);
   line-height: inherit;
 }
 
 .ds-textarea--sm .ds-textarea__field {
   min-height: var(--ds-textarea-field-min-height-sm);
-  padding: var(--ds-textarea-padding-y-sm) var(--ds-textarea-padding-x-sm);
+  padding: var(--ds-field-padding-y-sm) var(--ds-textarea-padding-x-sm);
 }
 
 .ds-textarea--lg .ds-textarea__field {
   min-height: var(--ds-textarea-field-min-height-lg);
-  padding: var(--ds-textarea-padding-y-lg) var(--ds-textarea-padding-x-lg);
+  padding: var(--ds-field-padding-y-lg) var(--ds-textarea-padding-x-lg);
 }
 
 .ds-textarea__field::placeholder {
@@ -83,7 +83,7 @@
   background: var(--ds-field-bg-default);
   border-color: var(--ds-field-border-color-focus);
   outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color-default);
-  outline-offset: var(--ds-textarea-focus-ring-offset-default);
+  outline-offset: var(--ds-focus-ring-width);
 }
 
 /* Error */

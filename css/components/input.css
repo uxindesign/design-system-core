@@ -8,9 +8,9 @@
 
 .ds-input {
   --input-padding-x: var(--ds-input-padding-x-md);
-  --input-padding-y: var(--ds-input-padding-y-md);
+  --input-padding-y: var(--ds-field-padding-y-md);
   --input-gap: var(--ds-input-gap-md);
-  --input-icon-frame-size: var(--ds-input-icon-frame-size-md);
+  --input-icon-frame-size: var(--ds-input-icon-size-md);
   --input-border-width: var(--ds-field-border-width);
 
   display: flex;
@@ -33,33 +33,33 @@
 .ds-input,
 .ds-input--md {
   height: var(--ds-input-height-md);
-  padding: var(--ds-input-padding-y-md) var(--ds-input-padding-x-md);
+  padding: var(--ds-field-padding-y-md) var(--ds-input-padding-x-md);
   font-size: var(--ds-input-text-font-size-md);
   line-height: var(--ds-input-text-line-height-md);
 }
 
 .ds-input--sm {
   --input-padding-x: var(--ds-input-padding-x-sm);
-  --input-padding-y: var(--ds-input-padding-y-sm);
+  --input-padding-y: var(--ds-field-padding-y-sm);
   --input-gap: var(--ds-input-gap-sm);
-  --input-icon-frame-size: var(--ds-input-icon-frame-size-sm);
+  --input-icon-frame-size: var(--ds-input-icon-size-sm);
 
   height: var(--ds-input-height-sm);
   gap: var(--ds-input-gap-sm);
-  padding: var(--ds-input-padding-y-sm) var(--ds-input-padding-x-sm);
+  padding: var(--ds-field-padding-y-sm) var(--ds-input-padding-x-sm);
   font-size: var(--ds-input-text-font-size-sm);
   line-height: var(--ds-input-text-line-height-sm);
 }
 
 .ds-input--lg {
   --input-padding-x: var(--ds-input-padding-x-lg);
-  --input-padding-y: var(--ds-input-padding-y-lg);
+  --input-padding-y: var(--ds-field-padding-y-lg);
   --input-gap: var(--ds-input-gap-lg);
-  --input-icon-frame-size: var(--ds-input-icon-frame-size-lg);
+  --input-icon-frame-size: var(--ds-input-icon-size-lg);
 
   height: var(--ds-input-height-lg);
   gap: var(--ds-input-gap-lg);
-  padding: var(--ds-input-padding-y-lg) var(--ds-input-padding-x-lg);
+  padding: var(--ds-field-padding-y-lg) var(--ds-input-padding-x-lg);
   font-size: var(--ds-input-text-font-size-lg);
   line-height: var(--ds-input-text-line-height-lg);
 }
@@ -153,8 +153,8 @@
   align-items: center;
   justify-content: center;
   box-sizing: content-box;
-  width: var(--ds-input-icon-frame-size-md);
-  height: var(--ds-input-icon-frame-size-md);
+  width: var(--ds-input-icon-size-md);
+  height: var(--ds-input-icon-size-md);
   padding-left: var(--ds-input-icon-frame-padding-x-default);
   padding-right: var(--ds-input-icon-frame-padding-x-default);
   font-size: var(--ds-input-icon-size-md);
@@ -163,14 +163,14 @@
 }
 
 .ds-input--sm .ds-input__icon {
-  width: var(--ds-input-icon-frame-size-sm);
-  height: var(--ds-input-icon-frame-size-sm);
+  width: var(--ds-input-icon-size-sm);
+  height: var(--ds-input-icon-size-sm);
   font-size: var(--ds-input-icon-size-sm);
 }
 
 .ds-input--lg .ds-input__icon {
-  width: var(--ds-input-icon-frame-size-lg);
-  height: var(--ds-input-icon-frame-size-lg);
+  width: var(--ds-input-icon-size-lg);
+  height: var(--ds-input-icon-size-lg);
   font-size: var(--ds-input-icon-size-lg);
 }
 
@@ -187,7 +187,7 @@
   background: var(--ds-field-bg-default);
   border-color: var(--ds-field-border-color-focus);
   outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color-default);
-  outline-offset: var(--ds-input-focus-ring-offset-default);
+  outline-offset: var(--ds-focus-ring-width);
 }
 
 /* Error */
@@ -274,67 +274,67 @@
    ========================================================================== */
 
 .ds-field:has(.ds-input) {
-  gap: var(--ds-input-stack-gap-default);
+  gap: var(--ds-form-field-stack-gap-default);
 }
 
 .ds-field:has(.ds-input) .ds-field__label-row {
-  gap: var(--ds-input-label-row-gap-default);
+  gap: var(--ds-form-field-label-row-gap-default);
 }
 
 .ds-field:has(.ds-input) .ds-field__label {
-  color: var(--ds-input-label-color-default);
-  font-family: var(--ds-input-label-font-family-default);
-  font-size: var(--ds-input-label-font-size-md);
-  font-weight: var(--ds-input-label-font-weight-default);
-  letter-spacing: var(--ds-input-label-letter-spacing-default);
-  line-height: var(--ds-input-label-line-height-md);
+  color: var(--ds-form-field-label-color-default);
+  font-family: var(--ds-form-field-label-font-family-default);
+  font-size: var(--ds-form-field-label-font-size-default);
+  font-weight: var(--ds-form-field-label-font-weight-default);
+  letter-spacing: var(--ds-body-letter-spacing-normal);
+  line-height: var(--ds-form-field-label-line-height-default);
 }
 
 .ds-field:has(.ds-input--sm) .ds-field__label {
-  font-size: var(--ds-input-label-font-size-sm);
-  line-height: var(--ds-input-label-line-height-sm);
+  font-size: var(--ds-form-field-label-font-size-default);
+  line-height: var(--ds-form-field-label-line-height-default);
 }
 
 .ds-field:has(.ds-input--lg) .ds-field__label {
-  font-size: var(--ds-input-label-font-size-lg);
-  line-height: var(--ds-input-label-line-height-lg);
+  font-size: var(--ds-form-field-label-font-size-default);
+  line-height: var(--ds-form-field-label-line-height-default);
 }
 
 .ds-field:has(.ds-input) .ds-field__required {
-  color: var(--ds-input-required-color-default);
-  font-family: var(--ds-input-required-font-family-default);
-  font-size: var(--ds-input-required-font-size-default);
-  font-weight: var(--ds-input-required-font-weight-default);
-  letter-spacing: var(--ds-input-required-letter-spacing-default);
-  line-height: var(--ds-input-required-line-height-default);
+  color: var(--ds-form-field-required-color-default);
+  font-family: var(--ds-form-field-required-font-family-default);
+  font-size: var(--ds-form-field-required-font-size-default);
+  font-weight: var(--ds-form-field-required-font-weight-default);
+  letter-spacing: var(--ds-body-letter-spacing-normal);
+  line-height: var(--ds-form-field-required-line-height-default);
 }
 
 .ds-field:has(.ds-input) .ds-field__helper {
-  color: var(--ds-input-helper-color-default);
-  font-family: var(--ds-input-helper-font-family-default);
-  font-size: var(--ds-input-helper-font-size-default);
-  font-weight: var(--ds-input-helper-font-weight-default);
-  letter-spacing: var(--ds-input-helper-letter-spacing-default);
-  line-height: var(--ds-input-helper-line-height-default);
+  color: var(--ds-form-field-helper-color-default);
+  font-family: var(--ds-form-field-label-font-family-default);
+  font-size: var(--ds-form-field-helper-font-size-default);
+  font-weight: var(--ds-form-field-helper-font-weight-default);
+  letter-spacing: var(--ds-body-letter-spacing-normal);
+  line-height: var(--ds-form-field-helper-line-height-default);
 }
 
 .ds-field--error:has(.ds-input) .ds-field__label {
-  color: var(--ds-input-label-color-default);
+  color: var(--ds-form-field-label-color-default);
 }
 
 .ds-field:has(.ds-input--disabled) .ds-field__label,
 .ds-field:has(.ds-input__field:disabled) .ds-field__label {
-  color: var(--ds-input-label-color-disabled);
+  color: var(--ds-form-field-label-color-disabled);
 }
 
 .ds-field:has(.ds-input--disabled) .ds-field__helper,
 .ds-field:has(.ds-input__field:disabled) .ds-field__helper {
-  color: var(--ds-input-helper-color-disabled);
+  color: var(--ds-form-field-helper-color-disabled);
 }
 
 .ds-field:has(.ds-input--readonly) .ds-field__label,
 .ds-field:has(.ds-input__field:read-only) .ds-field__label {
-  color: var(--ds-input-label-color-readonly);
+  color: var(--ds-form-field-label-color-readonly);
 }
 
 /* ---------------------------------------------------------

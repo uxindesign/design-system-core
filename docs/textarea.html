@@ -331,13 +331,13 @@
     <table class="ds-token-table" style="margin-top:var(--ds-dimension-16)">
       <thead><tr><th>Figma property</th><th>Value / CSS trigger</th><th>Visual change</th><th>Token</th></tr></thead>
       <tbody>
-        <tr><td>State</td><td>Default</td><td>Neutral surface and border</td><td><code>component.textarea.bg.default</code>, <code>component.textarea.border-color.default</code></td></tr>
-        <tr><td>State</td><td>Hover / <code>:hover</code></td><td>Darker border</td><td><code>component.textarea.border-color.hover</code></td></tr>
-        <tr><td>State</td><td>Focus / <code>:focus-within</code></td><td>2px outline ring, 2px offset</td><td><code>component.textarea.border-color.focus</code>, <code>component.textarea.focus-ring.*</code></td></tr>
-        <tr><td>State</td><td>Disabled / <code>[disabled]</code> or <code>.ds-textarea--disabled</code></td><td>Muted bg, border and content</td><td><code>component.textarea.bg.disabled</code>, <code>component.textarea.content.color.disabled</code></td></tr>
-        <tr><td>Error</td><td>True / <code>.ds-textarea--error</code> or <code>.ds-field--error .ds-textarea</code></td><td>Red border and error focus ring</td><td><code>component.textarea.border-color.error</code>, <code>component.textarea.focus-ring.color.error</code></td></tr>
-        <tr><td>Error + State</td><td>True + Hover / <code>.ds-textarea--error:hover</code></td><td>Darker red border</td><td><code>component.textarea.border-color.error-hover</code></td></tr>
-        <tr><td>Read-only</td><td>True / <code>[readonly]</code> or <code>.ds-textarea--readonly</code></td><td>Readonly bg with neutral focus ring</td><td><code>component.textarea.bg.readonly</code>, <code>component.textarea.focus-ring.color.readonly</code></td></tr>
+        <tr><td>State</td><td>Default</td><td>Neutral surface and border</td><td><code>component.field.bg.default</code>, <code>component.field.border-color.default</code></td></tr>
+        <tr><td>State</td><td>Hover / <code>:hover</code></td><td>Darker border</td><td><code>component.field.border-color.hover</code></td></tr>
+        <tr><td>State</td><td>Focus / <code>:focus-within</code></td><td>2px outline ring, component radius</td><td><code>component.field.border-color.focus</code>, <code>component.focus-ring.*</code>, <code>component.textarea.focus-ring.radius.default</code></td></tr>
+        <tr><td>State</td><td>Disabled / <code>[disabled]</code> or <code>.ds-textarea--disabled</code></td><td>Muted bg, border and content</td><td><code>component.field.bg.disabled</code>, <code>component.field.value.color.disabled</code></td></tr>
+        <tr><td>Error</td><td>True / <code>.ds-textarea--error</code> or <code>.ds-field--error .ds-textarea</code></td><td>Red border and error focus ring</td><td><code>component.field.border-color.error</code>, <code>component.focus-ring.color.error</code></td></tr>
+        <tr><td>Error + State</td><td>True + Hover / <code>.ds-textarea--error:hover</code></td><td>Darker red border</td><td><code>component.field.border-color.error-hover</code></td></tr>
+        <tr><td>Read-only</td><td>True / <code>[readonly]</code> or <code>.ds-textarea--readonly</code></td><td>Readonly bg with neutral focus ring</td><td><code>component.field.bg.readonly</code>, <code>component.focus-ring.color.readonly</code></td></tr>
       </tbody>
     </table>
   </div>
@@ -428,26 +428,26 @@
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Mapeamento de tokens</span><span data-lang="en">Token mapping</span></h2>
     <p style="margin-bottom:var(--ds-dimension-16);color:var(--ds-content-default);font-size:var(--ds-font-size-14);">
-      <span data-lang="pt">Textarea agora publica seu próprio contrato <code>component.textarea.*</code> para superfície visual, tipografia, spacing, label/helper e estados. O contador continua CSS-only porque não existe no component set vivo do Figma.</span><span data-lang="en">Textarea now publishes its own <code>component.textarea.*</code> contract for the visual surface, typography, spacing, label/helper, and states. The counter remains CSS-only because it does not exist in the live Figma component set.</span>
+      <span data-lang="pt">Textarea consome os contratos compartilhados de Field/Form Field para superfície, estados e mensagens, e mantém <code>component.textarea.*</code> apenas para contratos próprios como padding-x, tipografia do valor e min-height. O contador continua CSS-only porque não existe no component set vivo do Figma.</span><span data-lang="en">Textarea consumes shared Field/Form Field contracts for surface, states, and messages, and keeps <code>component.textarea.*</code> only for owned contracts such as padding-x, value typography, and min-height. The counter remains CSS-only because it does not exist in the live Figma component set.</span>
     </p>
     <table class="ds-token-table">
       <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th>Token</th><th><span data-lang="pt">Variável CSS</span><span data-lang="en">CSS variable</span></th></tr></thead>
       <tbody>
-        <tr><td>background</td><td><code>component.textarea.bg.*</code></td><td><code>--ds-textarea-bg-*</code></td></tr>
-        <tr><td>border-color</td><td><code>component.textarea.border-color.*</code></td><td><code>--ds-textarea-border-color-*</code></td></tr>
-        <tr><td>border-width</td><td><code>component.textarea.border-width.default</code></td><td><code>--ds-textarea-border-width-default</code></td></tr>
-        <tr><td>radius</td><td><code>component.textarea.radius.default</code></td><td><code>--ds-textarea-radius-default</code></td></tr>
-        <tr><td>focus ring</td><td><code>component.textarea.focus-ring.{color,offset,radius,stroke-width}.*</code></td><td><code>--ds-textarea-focus-ring-*</code></td></tr>
-        <tr><td>content color</td><td><code>component.textarea.content.color.{default,disabled,readonly}</code></td><td><code>--ds-textarea-content-color-*</code></td></tr>
-        <tr><td>placeholder color</td><td><code>component.textarea.placeholder.color.{default,disabled}</code></td><td><code>--ds-textarea-placeholder-color-*</code></td></tr>
+        <tr><td>background</td><td><code>component.field.bg.*</code></td><td><code>--ds-field-bg-*</code></td></tr>
+        <tr><td>border-color</td><td><code>component.field.border-color.*</code></td><td><code>--ds-field-border-color-*</code></td></tr>
+        <tr><td>border-width</td><td><code>component.field.border-width</code></td><td><code>--ds-field-border-width</code></td></tr>
+        <tr><td>radius</td><td><code>component.field.radius</code></td><td><code>--ds-field-radius</code></td></tr>
+        <tr><td>focus ring</td><td><code>component.focus-ring.*</code> + <code>component.textarea.focus-ring.radius.default</code></td><td><code>--ds-focus-ring-*</code> + <code>--ds-textarea-focus-ring-radius-default</code></td></tr>
+        <tr><td>content color</td><td><code>component.field.value.color.{default,disabled,readonly}</code></td><td><code>--ds-field-value-color-*</code></td></tr>
+        <tr><td>placeholder color</td><td><code>component.field.placeholder.color.{default,disabled}</code></td><td><code>--ds-field-placeholder-color-*</code></td></tr>
         <tr><td>padding-x (sm/md/lg)</td><td><code>component.textarea.padding-x.{sm,md,lg}</code></td><td><code>--ds-textarea-padding-x-*</code></td></tr>
-        <tr><td>padding-y (sm/md/lg)</td><td><code>component.textarea.padding-y.{sm,md,lg}</code></td><td><code>--ds-textarea-padding-y-*</code></td></tr>
+        <tr><td>padding-y (sm/md/lg)</td><td><code>component.field.padding-y.{sm,md,lg}</code></td><td><code>--ds-field-padding-y-*</code></td></tr>
         <tr><td>text typography</td><td><code>component.textarea.text.{font-family,font-size,font-weight,letter-spacing,line-height}.*</code></td><td><code>--ds-textarea-text-*</code></td></tr>
         <tr><td>field min-height (sm)</td><td><code>component.textarea.field.min-height.sm</code></td><td><code>--ds-textarea-field-min-height-sm</code> (80px)</td></tr>
         <tr><td>field min-height (md)</td><td><code>component.textarea.field.min-height.md</code></td><td><code>--ds-textarea-field-min-height-md</code> (96px)</td></tr>
         <tr><td>field min-height (lg)</td><td><code>component.textarea.field.min-height.lg</code></td><td><code>--ds-textarea-field-min-height-lg</code> (120px)</td></tr>
-        <tr><td>label/helper/required</td><td><code>component.textarea.{label,helper,required}.*</code></td><td><code>--ds-textarea-label-*</code>, <code>--ds-textarea-helper-*</code>, <code>--ds-textarea-required-*</code></td></tr>
-        <tr><td>stack/label-row gap</td><td><code>component.textarea.stack.gap.default</code>, <code>component.textarea.label-row.gap.default</code></td><td><code>--ds-textarea-stack-gap-default</code>, <code>--ds-textarea-label-row-gap-default</code></td></tr>
+        <tr><td>label/helper/required</td><td><code>component.form-field.{label,helper,required}.*</code></td><td><code>--ds-form-field-label-*</code>, <code>--ds-form-field-helper-*</code>, <code>--ds-form-field-required-*</code></td></tr>
+        <tr><td>stack/label-row gap</td><td><code>component.form-field.stack.gap.default</code>, <code>component.form-field.label-row.gap.default</code></td><td><code>--ds-form-field-stack-gap-default</code>, <code>--ds-form-field-label-row-gap-default</code></td></tr>
         <tr><td>counter color</td><td><code>semantic.content.default</code></td><td><code>--ds-content-default</code></td></tr>
         <tr><td>counter color (over)</td><td><code>semantic.feedback.error.content-default</code></td><td><code>--ds-feedback-error-content-default</code></td></tr>
       </tbody>

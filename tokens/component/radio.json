@@ -36,38 +36,6 @@
           }
         }
       },
-      "label": {
-        "color": {
-          "default": {
-            "$type": "color",
-            "$value": "{semantic.content.strong}",
-            "$description": "Cor do label Radio."
-          },
-          "disabled": {
-            "$type": "color",
-            "$value": "{semantic.content.disabled}",
-            "$description": "Cor do label Radio disabled."
-          }
-        }
-      },
-      "description": {
-        "color": {
-          "default": {
-            "$type": "color",
-            "$value": "{semantic.content.strong}",
-            "$description": "Cor da description Radio."
-          }
-        }
-      },
-      "helper-text": {
-        "color": {
-          "default": {
-            "$type": "color",
-            "$value": "{semantic.content.default}",
-            "$description": "Cor do helper text Radio."
-          }
-        }
-      },
       "control": {
         "size": {
           "sm": {
@@ -160,12 +128,20 @@
               "$type": "color",
               "$value": "{semantic.border.control-disabled}",
               "$description": "Border color do control Radio unselected disabled."
+            },
+            "error": {
+              "$value": "{semantic.border.error}",
+              "$type": "color"
+            },
+            "error-hover": {
+              "$value": "{semantic.border.error-hover}",
+              "$type": "color"
             }
           },
           "selected": {
             "default": {
               "$type": "color",
-              "$value": "{semantic.primary.background.default}",
+              "$value": "{semantic.primary.border.default}",
               "$description": "Border color do control Radio selected default."
             },
             "focus": {
@@ -175,7 +151,7 @@
             },
             "hover": {
               "$type": "color",
-              "$value": "{semantic.primary.background.hover}",
+              "$value": "{semantic.primary.border.hover}",
               "$description": "Border color do control Radio selected hover."
             }
           }
@@ -201,17 +177,17 @@
         "size": {
           "sm": {
             "$type": "dimension",
-            "$value": "{foundation.dimension.6}",
+            "$value": "{semantic.control.radio.dot.size.sm}",
             "$description": "Tamanho do dot Radio sm. Component-specific; nao ha Semantic reutilizavel."
           },
           "md": {
             "$type": "dimension",
-            "$value": "{foundation.dimension.8}",
+            "$value": "{semantic.control.radio.dot.size.md}",
             "$description": "Tamanho do dot Radio md. Component-specific; nao ha Semantic reutilizavel."
           },
           "lg": {
             "$type": "dimension",
-            "$value": "{foundation.dimension.10}",
+            "$value": "{semantic.control.radio.dot.size.lg}",
             "$description": "Tamanho do dot Radio lg. Component-specific; nao ha Semantic reutilizavel."
           }
         },
@@ -248,20 +224,6 @@
         }
       },
       "focus-ring": {
-        "color": {
-          "default": {
-            "$type": "color",
-            "$value": "{semantic.border.focus}",
-            "$description": "Cor do focus ring Radio."
-          }
-        },
-        "stroke-width": {
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.border.width.focus}",
-            "$description": "Stroke width do focus ring Radio."
-          }
-        },
         "radius": {
           "default": {
             "$type": "dimension",

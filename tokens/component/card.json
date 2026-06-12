@@ -80,6 +80,12 @@
             "$value": "{semantic.typography.body.font-weight.regular}",
             "$description": "Font-weight do body Card."
           }
+        },
+        "color": {
+          "default": {
+            "$value": "{semantic.content.default}",
+            "$type": "color"
+          }
         }
       },
       "title": {
@@ -102,6 +108,12 @@
             "$type": "number",
             "$value": "{semantic.typography.body.font-weight.semibold}",
             "$description": "Font-weight do title Card."
+          }
+        },
+        "color": {
+          "default": {
+            "$value": "{semantic.content.strong}",
+            "$type": "color"
           }
         }
       },
@@ -126,6 +138,32 @@
             "$value": "{semantic.typography.body.font-weight.bold}",
             "$description": "Font-weight do subtitle Card."
           }
+        },
+        "color": {
+          "default": {
+            "$value": "{semantic.content.default}",
+            "$type": "color"
+          }
+        }
+      },
+      "bg": {
+        "default": {
+          "$value": "{semantic.surface.default}",
+          "$type": "color"
+        },
+        "elevated": {
+          "$value": "{semantic.surface.raised}",
+          "$type": "color"
+        }
+      },
+      "border-color": {
+        "outlined": {
+          "$value": "{semantic.border.subtle}",
+          "$type": "color"
+        },
+        "elevated": {
+          "$value": "{semantic.border.default}",
+          "$type": "color"
         }
       }
     }

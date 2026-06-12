@@ -8,10 +8,10 @@
 
 .ds-select {
   --select-padding-x: var(--ds-select-padding-x-md);
-  --select-padding-y: var(--ds-select-padding-y-md);
+  --select-padding-y: var(--ds-field-padding-y-md);
   --select-gap: var(--ds-select-gap-md);
-  --select-chevron-frame-size: var(--ds-select-chevron-frame-size-md);
-  --select-icon-frame-size: var(--ds-select-icon-frame-size-md);
+  --select-chevron-frame-size: var(--ds-select-chevron-size-md);
+  --select-icon-frame-size: var(--ds-select-icon-size-md);
   --select-border-width: var(--ds-field-border-width);
   --select-field-leading-size: 0px;
   --select-field-leading-gap: 0px;
@@ -21,7 +21,7 @@
   align-items: center;
   gap: var(--ds-select-gap-md);
   height: var(--ds-select-height-md);
-  padding: var(--ds-select-padding-y-md) var(--ds-select-padding-x-md);
+  padding: var(--ds-field-padding-y-md) var(--ds-select-padding-x-md);
   border: var(--ds-field-border-width) solid var(--ds-field-border-color-default);
   border-radius: var(--ds-field-radius);
   background: var(--ds-field-bg-default);
@@ -42,35 +42,35 @@
 .ds-select--md {
   height: var(--ds-select-height-md);
   gap: var(--ds-select-gap-md);
-  padding: var(--ds-select-padding-y-md) var(--ds-select-padding-x-md);
+  padding: var(--ds-field-padding-y-md) var(--ds-select-padding-x-md);
   font-size: var(--ds-select-text-font-size-md);
   line-height: var(--ds-select-text-line-height-md);
 }
 
 .ds-select--sm {
   --select-padding-x: var(--ds-select-padding-x-sm);
-  --select-padding-y: var(--ds-select-padding-y-sm);
+  --select-padding-y: var(--ds-field-padding-y-sm);
   --select-gap: var(--ds-select-gap-sm);
-  --select-chevron-frame-size: var(--ds-select-chevron-frame-size-sm);
-  --select-icon-frame-size: var(--ds-select-icon-frame-size-sm);
+  --select-chevron-frame-size: var(--ds-select-chevron-size-sm);
+  --select-icon-frame-size: var(--ds-select-icon-size-sm);
 
   height: var(--ds-select-height-sm);
   gap: var(--ds-select-gap-sm);
-  padding: var(--ds-select-padding-y-sm) var(--ds-select-padding-x-sm);
+  padding: var(--ds-field-padding-y-sm) var(--ds-select-padding-x-sm);
   font-size: var(--ds-select-text-font-size-sm);
   line-height: var(--ds-select-text-line-height-sm);
 }
 
 .ds-select--lg {
   --select-padding-x: var(--ds-select-padding-x-lg);
-  --select-padding-y: var(--ds-select-padding-y-lg);
+  --select-padding-y: var(--ds-field-padding-y-lg);
   --select-gap: var(--ds-select-gap-lg);
-  --select-chevron-frame-size: var(--ds-select-chevron-frame-size-lg);
-  --select-icon-frame-size: var(--ds-select-icon-frame-size-lg);
+  --select-chevron-frame-size: var(--ds-select-chevron-size-lg);
+  --select-icon-frame-size: var(--ds-select-icon-size-lg);
 
   height: var(--ds-select-height-lg);
   gap: var(--ds-select-gap-lg);
-  padding: var(--ds-select-padding-y-lg) var(--ds-select-padding-x-lg);
+  padding: var(--ds-field-padding-y-lg) var(--ds-select-padding-x-lg);
   font-size: var(--ds-select-text-font-size-lg);
   line-height: var(--ds-select-text-line-height-lg);
 }
@@ -155,8 +155,8 @@
   right: var(--ds-select-padding-x-md);
   top: 50%;
   box-sizing: content-box;
-  width: var(--ds-select-chevron-frame-size-md);
-  height: var(--ds-select-chevron-frame-size-md);
+  width: var(--ds-select-chevron-size-md);
+  height: var(--ds-select-chevron-size-md);
   padding-left: var(--ds-select-chevron-frame-padding-x-default);
   padding-right: var(--ds-select-chevron-frame-padding-x-default);
   transform: translateY(-50%);
@@ -170,16 +170,16 @@
 
 .ds-select--sm .ds-select__arrow {
   right: var(--ds-select-padding-x-sm);
-  width: var(--ds-select-chevron-frame-size-sm);
-  height: var(--ds-select-chevron-frame-size-sm);
+  width: var(--ds-select-chevron-size-sm);
+  height: var(--ds-select-chevron-size-sm);
   -webkit-mask-size: var(--ds-select-chevron-size-sm) var(--ds-select-chevron-size-sm);
   mask-size: var(--ds-select-chevron-size-sm) var(--ds-select-chevron-size-sm);
 }
 
 .ds-select--lg .ds-select__arrow {
   right: var(--ds-select-padding-x-lg);
-  width: var(--ds-select-chevron-frame-size-lg);
-  height: var(--ds-select-chevron-frame-size-lg);
+  width: var(--ds-select-chevron-size-lg);
+  height: var(--ds-select-chevron-size-lg);
   -webkit-mask-size: var(--ds-select-chevron-size-lg) var(--ds-select-chevron-size-lg);
   mask-size: var(--ds-select-chevron-size-lg) var(--ds-select-chevron-size-lg);
 }
@@ -193,8 +193,8 @@
   align-items: center;
   justify-content: center;
   box-sizing: content-box;
-  width: var(--ds-select-icon-frame-size-md);
-  height: var(--ds-select-icon-frame-size-md);
+  width: var(--ds-select-icon-size-md);
+  height: var(--ds-select-icon-size-md);
   padding-left: var(--ds-select-icon-frame-padding-x-default);
   padding-right: var(--ds-select-icon-frame-padding-x-default);
   color: var(--ds-select-icon-color-default);
@@ -204,14 +204,14 @@
 }
 
 .ds-select--sm .ds-select__icon {
-  width: var(--ds-select-icon-frame-size-sm);
-  height: var(--ds-select-icon-frame-size-sm);
+  width: var(--ds-select-icon-size-sm);
+  height: var(--ds-select-icon-size-sm);
   font-size: var(--ds-select-icon-size-sm);
 }
 
 .ds-select--lg .ds-select__icon {
-  width: var(--ds-select-icon-frame-size-lg);
-  height: var(--ds-select-icon-frame-size-lg);
+  width: var(--ds-select-icon-size-lg);
+  height: var(--ds-select-icon-size-lg);
   font-size: var(--ds-select-icon-size-lg);
 }
 
@@ -228,7 +228,7 @@
   background: var(--ds-field-bg-default);
   border-color: var(--ds-field-border-color-focus);
   outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color-default);
-  outline-offset: var(--ds-select-focus-ring-offset-default);
+  outline-offset: var(--ds-focus-ring-width);
 }
 
 /* Filled */
@@ -317,67 +317,67 @@
    ========================================================================== */
 
 .ds-field:has(.ds-select) {
-  gap: var(--ds-select-stack-gap-default);
+  gap: var(--ds-form-field-stack-gap-default);
 }
 
 .ds-field:has(.ds-select) .ds-field__label-row {
-  gap: var(--ds-select-label-row-gap-default);
+  gap: var(--ds-form-field-label-row-gap-default);
 }
 
 .ds-field:has(.ds-select) .ds-field__label {
-  color: var(--ds-select-label-color-default);
-  font-family: var(--ds-select-label-font-family-default);
-  font-size: var(--ds-select-label-font-size-md);
-  font-weight: var(--ds-select-label-font-weight-default);
-  letter-spacing: var(--ds-select-label-letter-spacing-default);
-  line-height: var(--ds-select-label-line-height-md);
+  color: var(--ds-form-field-label-color-default);
+  font-family: var(--ds-form-field-label-font-family-default);
+  font-size: var(--ds-form-field-label-font-size-default);
+  font-weight: var(--ds-form-field-label-font-weight-default);
+  letter-spacing: var(--ds-body-letter-spacing-normal);
+  line-height: var(--ds-form-field-label-line-height-default);
 }
 
 .ds-field:has(.ds-select--sm) .ds-field__label {
-  font-size: var(--ds-select-label-font-size-sm);
-  line-height: var(--ds-select-label-line-height-sm);
+  font-size: var(--ds-form-field-label-font-size-default);
+  line-height: var(--ds-form-field-label-line-height-default);
 }
 
 .ds-field:has(.ds-select--lg) .ds-field__label {
-  font-size: var(--ds-select-label-font-size-lg);
-  line-height: var(--ds-select-label-line-height-lg);
+  font-size: var(--ds-form-field-label-font-size-default);
+  line-height: var(--ds-form-field-label-line-height-default);
 }
 
 .ds-field:has(.ds-select) .ds-field__required {
-  color: var(--ds-select-required-color-default);
-  font-family: var(--ds-select-required-font-family-default);
-  font-size: var(--ds-select-required-font-size-default);
-  font-weight: var(--ds-select-required-font-weight-default);
-  letter-spacing: var(--ds-select-required-letter-spacing-default);
-  line-height: var(--ds-select-required-line-height-default);
+  color: var(--ds-form-field-required-color-default);
+  font-family: var(--ds-form-field-required-font-family-default);
+  font-size: var(--ds-form-field-required-font-size-default);
+  font-weight: var(--ds-form-field-required-font-weight-default);
+  letter-spacing: var(--ds-body-letter-spacing-normal);
+  line-height: var(--ds-form-field-required-line-height-default);
 }
 
 .ds-field:has(.ds-select) .ds-field__helper {
-  color: var(--ds-select-helper-color-default);
-  font-family: var(--ds-select-helper-font-family-default);
-  font-size: var(--ds-select-helper-font-size-md);
-  font-weight: var(--ds-select-helper-font-weight-default);
-  letter-spacing: var(--ds-select-helper-letter-spacing-default);
-  line-height: var(--ds-select-helper-line-height-md);
+  color: var(--ds-form-field-helper-color-default);
+  font-family: var(--ds-form-field-label-font-family-default);
+  font-size: var(--ds-form-field-helper-font-size-default);
+  font-weight: var(--ds-form-field-helper-font-weight-default);
+  letter-spacing: var(--ds-body-letter-spacing-normal);
+  line-height: var(--ds-form-field-helper-line-height-default);
 }
 
 .ds-field:has(.ds-select--sm) .ds-field__helper {
-  font-size: var(--ds-select-helper-font-size-sm);
-  line-height: var(--ds-select-helper-line-height-sm);
+  font-size: var(--ds-form-field-helper-font-size-default);
+  line-height: var(--ds-form-field-helper-line-height-default);
 }
 
 .ds-field:has(.ds-select--lg) .ds-field__helper {
-  font-size: var(--ds-select-helper-font-size-lg);
-  line-height: var(--ds-select-helper-line-height-lg);
+  font-size: var(--ds-form-field-helper-font-size-default);
+  line-height: var(--ds-form-field-helper-line-height-default);
 }
 
 .ds-field--error:has(.ds-select) .ds-field__label {
-  color: var(--ds-select-label-color-default);
+  color: var(--ds-form-field-label-color-default);
 }
 
 .ds-field:has(.ds-select--disabled) .ds-field__helper,
 .ds-field:has(.ds-select__field:disabled) .ds-field__helper {
-  color: var(--ds-select-helper-color-disabled);
+  color: var(--ds-form-field-helper-color-disabled);
 }
 
 /* ---------------------------------------------------------

@@ -10,8 +10,8 @@
     .ds-button--docs-focus {
       background-color: var(--ds-button-bg-brand-focus);
       color: var(--ds-button-content-color-brand-focus);
-      outline: var(--ds-button-focus-ring-stroke-width-default) solid var(--ds-button-focus-ring-color-default);
-      outline-offset: var(--ds-button-focus-ring-offset-default);
+      outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color-default);
+      outline-offset: var(--ds-focus-ring-width);
     }
   </style>
   <script>
@@ -408,9 +408,9 @@
         <tr><td>border color Outline</td><td><code>component.button.border-color.outline.*</code></td><td><code>--ds-button-border-color-outline-*</code></td></tr>
         <tr><td>text/icon color</td><td><code>component.button.content.color.{style}.{state}</code></td><td><code>--ds-button-content-color-*</code></td></tr>
         <tr><td>label typography</td><td><code>component.button.label.{font-size,line-height,font-weight,letter-spacing}.*</code></td><td><code>--ds-button-label-*</code></td></tr>
-        <tr><td>icon frame/size</td><td><code>component.button.icon.frame-size.{sm,md,lg}</code>, <code>component.button.icon.size.{sm,md,lg}</code></td><td><code>--ds-button-icon-*</code></td></tr>
+        <tr><td>icon frame/size</td><td><code>component.button.icon.size.{sm,md,lg}</code>, <code>component.button.icon.stroke-width.{sm,md,lg}</code></td><td><code>--ds-button-icon-*</code></td></tr>
         <tr><td>icon-only</td><td><code>component.button.icon-only-{width,padding}.{sm,md,lg}</code></td><td><code>--ds-button-icon-only-*</code></td></tr>
-        <tr><td>focus ring</td><td><code>component.button.focus-ring.{stroke-width,offset,radius}.default</code>, <code>component.button.focus-ring.color.{default,success,danger}</code></td><td><code>--ds-button-focus-ring-*</code></td></tr>
+        <tr><td>focus ring</td><td><code>component.button.focus-ring.radius.default</code>, <code>component.focus-ring.{width,color.default,color.success,color.error}</code></td><td><code>--ds-focus-ring-* + --ds-button-focus-ring-radius-default</code></td></tr>
       </tbody>
     </table>
 
