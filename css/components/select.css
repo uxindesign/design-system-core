@@ -12,7 +12,7 @@
   --select-gap: var(--ds-select-gap-md);
   --select-chevron-frame-size: var(--ds-select-chevron-frame-size-md);
   --select-icon-frame-size: var(--ds-select-icon-frame-size-md);
-  --select-border-width: var(--ds-select-border-width-default);
+  --select-border-width: var(--ds-field-border-width);
   --select-field-leading-size: 0px;
   --select-field-leading-gap: 0px;
 
@@ -22,10 +22,10 @@
   gap: var(--ds-select-gap-md);
   height: var(--ds-select-height-md);
   padding: var(--ds-select-padding-y-md) var(--ds-select-padding-x-md);
-  border: var(--ds-select-border-width-default) solid var(--ds-select-border-color-default);
-  border-radius: var(--ds-select-radius-default);
-  background: var(--ds-select-bg-default);
-  color: var(--ds-select-content-color-default);
+  border: var(--ds-field-border-width) solid var(--ds-field-border-color-default);
+  border-radius: var(--ds-field-radius);
+  background: var(--ds-field-bg-default);
+  color: var(--ds-field-value-color-default);
   font-family: var(--ds-select-text-font-family-default);
   font-size: var(--ds-select-text-font-size-md);
   font-weight: var(--ds-select-text-font-weight-default);
@@ -86,7 +86,7 @@
   border: none;
   background: transparent;
   outline: none;
-  color: var(--ds-select-content-color-default);
+  color: var(--ds-field-value-color-default);
   font: inherit;
   letter-spacing: inherit;
   line-height: inherit;
@@ -133,16 +133,16 @@
 .ds-select__field:invalid,
 .ds-select__field option:disabled[value=""],
 .ds-select__field option[value=""] {
-  color: var(--ds-select-placeholder-color-default);
+  color: var(--ds-field-placeholder-color-default);
 }
 
 .ds-select:has(.ds-select__field option:checked[value=""]) .ds-select__field {
-  color: var(--ds-select-placeholder-color-default);
+  color: var(--ds-field-placeholder-color-default);
 }
 
 .ds-select--disabled:has(.ds-select__field option:checked[value=""]) .ds-select__field,
 .ds-select:has(.ds-select__field:disabled option:checked[value=""]) .ds-select__field {
-  color: var(--ds-select-placeholder-color-disabled);
+  color: var(--ds-field-placeholder-color-disabled);
 }
 
 /* Chevron indicator
@@ -220,71 +220,71 @@
 
 /* Hover */
 .ds-select:hover:not(.ds-select--disabled):not(:focus-within) {
-  border-color: var(--ds-select-border-color-hover);
+  border-color: var(--ds-field-border-color-hover);
 }
 
 /* Focused */
 .ds-select:focus-within {
-  background: var(--ds-select-bg-focus);
-  border-color: var(--ds-select-border-color-focus);
-  outline: var(--ds-select-focus-ring-stroke-width-default) solid var(--ds-select-focus-ring-color-default);
+  background: var(--ds-field-bg-default);
+  border-color: var(--ds-field-border-color-focus);
+  outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color-default);
   outline-offset: var(--ds-select-focus-ring-offset-default);
 }
 
 /* Filled */
 .ds-select--filled {
-  background: var(--ds-select-bg-filled);
-  border-color: var(--ds-select-border-color-filled);
+  background: var(--ds-field-bg-default);
+  border-color: var(--ds-field-border-color-filled);
 }
 
 .ds-select--filled .ds-select__field {
-  color: var(--ds-select-content-color-default);
+  color: var(--ds-field-value-color-default);
 }
 
 /* Error */
 .ds-select--error,
 .ds-field--error .ds-select {
-  background: var(--ds-select-bg-error);
-  border-color: var(--ds-select-border-color-error);
+  background: var(--ds-field-bg-default);
+  border-color: var(--ds-field-border-color-error);
 }
 
 .ds-select--error:hover:not(.ds-select--disabled):not(:focus-within),
 .ds-field--error .ds-select:hover:not(.ds-select--disabled):not(:focus-within) {
-  background: var(--ds-select-bg-error-hover);
-  border-color: var(--ds-select-border-color-error-hover);
+  background: var(--ds-field-bg-default);
+  border-color: var(--ds-field-border-color-error-hover);
 }
 
 .ds-select--error .ds-select__field,
 .ds-select--error .ds-select__field:invalid,
 .ds-field--error .ds-select .ds-select__field,
 .ds-field--error .ds-select .ds-select__field:invalid {
-  color: var(--ds-select-content-color-default);
+  color: var(--ds-field-value-color-default);
 }
 
 .ds-select--error:focus-within,
 .ds-field--error .ds-select:focus-within {
-  border-color: var(--ds-select-border-color-error);
-  outline-color: var(--ds-select-focus-ring-color-error);
+  border-color: var(--ds-field-border-color-error);
+  outline-color: var(--ds-focus-ring-color-error);
 }
 
 /* Disabled */
 .ds-select--disabled,
 .ds-select:has(.ds-select__field:disabled) {
-  background: var(--ds-select-bg-disabled);
-  border-color: var(--ds-select-border-color-disabled);
-  color: var(--ds-select-content-color-disabled);
+  background: var(--ds-field-bg-disabled);
+  border-color: var(--ds-field-border-color-disabled);
+  color: var(--ds-field-value-color-disabled);
   pointer-events: none;
 }
 
 .ds-select--disabled .ds-select__field,
 .ds-select__field:disabled {
-  color: var(--ds-select-content-color-disabled);
+  color: var(--ds-field-value-color-disabled);
   opacity: 1;
 }
 
 .ds-select--disabled .ds-select__field:invalid,
 .ds-select__field:disabled:invalid {
-  color: var(--ds-select-placeholder-color-disabled);
+  color: var(--ds-field-placeholder-color-disabled);
 }
 
 .ds-select--disabled .ds-select__arrow,
@@ -299,18 +299,18 @@
 
 /* Readonly */
 .ds-select--readonly {
-  background: var(--ds-select-bg-readonly);
-  border-color: var(--ds-select-border-color-readonly);
+  background: var(--ds-field-bg-readonly);
+  border-color: var(--ds-field-border-color-readonly);
 }
 
 .ds-select--readonly .ds-select__field {
-  color: var(--ds-select-content-color-readonly);
+  color: var(--ds-field-value-color-readonly);
 }
 
 .ds-select--readonly:focus-within {
-  background: var(--ds-select-bg-readonly);
-  border-color: var(--ds-select-border-color-readonly);
-  outline-color: var(--ds-select-focus-ring-color-readonly);
+  background: var(--ds-field-bg-readonly);
+  border-color: var(--ds-field-border-color-readonly);
+  outline-color: var(--ds-focus-ring-color-readonly);
 }
 
 /* Composed field anatomy

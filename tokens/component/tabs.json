@@ -25,18 +25,20 @@
             "$description": "Espaçamento interno superior do item de Tabs."
           }
         },
-        "radius": {
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.radius.md}",
-            "$description": "Raio do item de Tabs."
-          }
-        },
         "indicator-gap": {
           "default": {
             "$type": "dimension",
             "$value": "{semantic.space.control.padding.10}",
             "$description": "Espaço entre o rótulo e o indicador de Tabs."
+          }
+        }
+      },
+      "focus-ring": {
+        "radius": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.radius.md}",
+            "$description": "Radius do focus ring Tabs."
           }
         }
       },

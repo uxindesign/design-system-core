@@ -4116,11 +4116,12 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 4
+            "count": 5
           }
         ],
         "tokens": [
           "component.button.bg.outline.pressed",
+          "component.field.bg.readonly",
           "component.input.bg.readonly",
           "component.select.bg.readonly",
           "component.textarea.bg.readonly"
@@ -4196,12 +4197,13 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 21
+            "count": 22
           }
         ],
         "tokens": [
           "component.checkbox.box.fill.unchecked.default",
           "component.checkbox.box.fill.unchecked.focus",
+          "component.field.bg.default",
           "component.input.bg.default",
           "component.input.bg.error",
           "component.input.bg.error-hover",
@@ -4326,12 +4328,21 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 13
+            "count": 14
+          },
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
           }
         ],
         "tokens": [
           "component.checkbox.label.color.default",
           "component.checkbox.description.color.default",
+          "component.field.value.color.default",
           "component.form-field.label.color.default",
           "component.input.content.color.default",
           "component.input.label.color.default",
@@ -4342,7 +4353,9 @@
           "component.textarea.content.color.default",
           "component.textarea.label.color.default",
           "component.toggle.label.color.default",
-          "component.toggle.description.color.default"
+          "component.toggle.description.color.default",
+          "semantic.icon.color.active",
+          "semantic.icon.color.active"
         ],
         "figma": []
       }
@@ -4394,11 +4407,20 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 15
+            "count": 16
+          },
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
           }
         ],
         "tokens": [
           "component.checkbox.helper-text.color.default",
+          "component.field.value.color.readonly",
           "component.form-field.helper.color.default",
           "component.input.content.color.readonly",
           "component.input.helper.color.default",
@@ -4412,7 +4434,9 @@
           "component.textarea.helper.color.default",
           "component.toggle.helper-text.color.default",
           "component.toggle.thumb.fill.off.default",
-          "component.toggle.thumb.fill.off.focus"
+          "component.toggle.thumb.fill.off.focus",
+          "semantic.icon.color.default",
+          "semantic.icon.color.default"
         ],
         "figma": []
       }
@@ -4436,14 +4460,25 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 4
+            "count": 5
+          },
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
           }
         ],
         "tokens": [
+          "component.field.placeholder.color.default",
           "component.input.icon.color.default",
           "component.input.placeholder.color.default",
           "component.select.placeholder.color.default",
-          "component.textarea.placeholder.color.default"
+          "component.textarea.placeholder.color.default",
+          "semantic.icon.color.subtle",
+          "semantic.icon.color.subtle"
         ],
         "figma": []
       }
@@ -4467,11 +4502,21 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 17
+            "count": 19
+          },
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
           }
         ],
         "tokens": [
           "component.checkbox.label.color.disabled",
+          "component.field.placeholder.color.disabled",
+          "component.field.value.color.disabled",
           "component.input.content.color.disabled",
           "component.input.helper.color.disabled",
           "component.input.icon.color.disabled",
@@ -4487,7 +4532,9 @@
           "component.textarea.helper.color.disabled",
           "component.textarea.placeholder.color.disabled",
           "component.toggle.label.color.disabled",
-          "component.toggle.thumb.fill.off.disabled"
+          "component.toggle.thumb.fill.off.disabled",
+          "semantic.icon.color.disabled",
+          "semantic.icon.color.disabled"
         ],
         "figma": []
       }
@@ -4508,9 +4555,20 @@
           {
             "file": "css/base/reset.css",
             "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "semantic.icon.color.inverse",
+          "semantic.icon.color.inverse"
+        ],
         "figma": []
       }
     },
@@ -4559,10 +4617,11 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 3
+            "count": 4
           }
         ],
         "tokens": [
+          "component.field.border-color.filled",
           "component.input.border-color.filled",
           "component.select.border-color.filled",
           "component.textarea.border-color.filled"
@@ -4593,11 +4652,12 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 4
+            "count": 5
           }
         ],
         "tokens": [
           "component.divider.line.color.default",
+          "component.field.border-color.readonly",
           "component.input.border-color.readonly",
           "component.select.border-color.readonly",
           "component.textarea.border-color.readonly"
@@ -4623,7 +4683,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 12
+            "count": 13
           }
         ],
         "tokens": [
@@ -4633,6 +4693,7 @@
           "component.card.border-width.default",
           "component.checkbox.box.border-width.default",
           "component.divider.line.thickness.default",
+          "component.field.border-width",
           "component.input.border-width.default",
           "component.radio.control.border-width.unselected.default",
           "component.select.border-width.default",
@@ -4702,13 +4763,14 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 11
+            "count": 12
           }
         ],
         "tokens": [
           "component.button.focus-ring.stroke-width.default",
           "component.button.focus-ring.offset.default",
           "component.checkbox.focus-ring.stroke-width.default",
+          "component.focus-ring.width",
           "component.input.focus-ring.offset.default",
           "component.input.focus-ring.stroke-width.default",
           "component.radio.focus-ring.stroke-width.default",
@@ -4756,16 +4818,16 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 21
+            "count": 22
           }
         ],
         "tokens": [
           "component.button.border-color.outline.focus",
           "component.button.focus-ring.color.default",
           "component.checkbox.box.border-color.unchecked.focus",
-          "component.checkbox.box.border-color.checked.focus",
-          "component.checkbox.box.border-color.indeterminate.focus",
           "component.checkbox.focus-ring.color.default",
+          "component.field.border-color.focus",
+          "component.focus-ring.color.default",
           "component.input.border-color.focus",
           "component.input.focus-ring.color.default",
           "component.radio.control.border-color.unselected.focus",
@@ -4818,10 +4880,11 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 3
+            "count": 5
           }
         ],
         "tokens": [
+          "component.field.border-color.error",
           "component.input.border-color.error",
           "component.select.border-color.error",
           "component.textarea.border-color.error"
@@ -4844,11 +4907,12 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 4
+            "count": 5
           }
         ],
         "tokens": [
           "component.button.focus-ring.color.danger",
+          "component.focus-ring.color.error",
           "component.input.focus-ring.color.error",
           "component.select.focus-ring.color.error",
           "component.textarea.focus-ring.color.error"
@@ -4892,9 +4956,20 @@
           {
             "file": "css/components/tabs.css",
             "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "semantic.border.overlay.default",
+          "semantic.border.overlay.default"
+        ],
         "figma": []
       }
     },
@@ -4913,9 +4988,20 @@
           {
             "file": "css/components/spinner.css",
             "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "semantic.border.overlay.medium",
+          "semantic.border.overlay.medium"
+        ],
         "figma": []
       }
     },
@@ -5325,7 +5411,6 @@
         "css": [],
         "tokens": [
           "component.avatar.initials.font-size.lg",
-          "component.avatar.icon.size.sm",
           "component.card.title.font-size.default",
           "component.modal.title.font-size.sm"
         ],
@@ -5345,7 +5430,6 @@
       "usos": {
         "css": [],
         "tokens": [
-          "component.avatar.icon.size.md",
           "component.modal.title.font-size.md"
         ],
         "figma": []
@@ -6345,11 +6429,12 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [
-          "component.button.focus-ring.color.success"
+          "component.button.focus-ring.color.success",
+          "component.focus-ring.color.success"
         ],
         "figma": []
       }
@@ -6374,9 +6459,20 @@
           {
             "file": "css/components/badge.css",
             "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "semantic.icon.color.success",
+          "semantic.icon.color.success"
+        ],
         "figma": []
       }
     },
@@ -6404,13 +6500,23 @@
           {
             "file": "css/tokens/generated/component.css",
             "count": 4
+          },
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
           }
         ],
         "tokens": [
           "component.button.content.color.success.default",
           "component.button.content.color.success.hover",
           "component.button.content.color.success.pressed",
-          "component.button.content.color.success.focus"
+          "component.button.content.color.success.focus",
+          "semantic.icon.color.success-contrast",
+          "semantic.icon.color.success-contrast"
         ],
         "figma": []
       }
@@ -6456,9 +6562,20 @@
           {
             "file": "css/components/badge.css",
             "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "semantic.icon.color.warning",
+          "semantic.icon.color.warning"
+        ],
         "figma": []
       }
     },
@@ -6482,9 +6599,20 @@
           {
             "file": "css/components/badge.css",
             "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "semantic.icon.color.warning-contrast",
+          "semantic.icon.color.warning-contrast"
+        ],
         "figma": []
       }
     },
@@ -6549,6 +6677,14 @@
           {
             "file": "css/tokens/generated/component.css",
             "count": 7
+          },
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
           }
         ],
         "tokens": [
@@ -6558,7 +6694,9 @@
           "component.form-field.error.icon.color.default",
           "component.input.required.color.default",
           "component.select.required.color.default",
-          "component.textarea.required.color.default"
+          "component.textarea.required.color.default",
+          "semantic.icon.color.error",
+          "semantic.icon.color.error"
         ],
         "figma": []
       }
@@ -6587,13 +6725,23 @@
           {
             "file": "css/tokens/generated/component.css",
             "count": 4
+          },
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
           }
         ],
         "tokens": [
           "component.button.content.color.danger.default",
           "component.button.content.color.danger.hover",
           "component.button.content.color.danger.pressed",
-          "component.button.content.color.danger.focus"
+          "component.button.content.color.danger.focus",
+          "semantic.icon.color.error-contrast",
+          "semantic.icon.color.error-contrast"
         ],
         "figma": []
       }
@@ -6665,9 +6813,20 @@
           {
             "file": "css/components/badge.css",
             "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "semantic.icon.color.info-contrast",
+          "semantic.icon.color.info-contrast"
+        ],
         "figma": []
       }
     },
@@ -6685,11 +6844,12 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 6
+            "count": 7
           }
         ],
         "tokens": [
           "component.checkbox.box.fill.unchecked.disabled",
+          "component.field.bg.disabled",
           "component.input.bg.disabled",
           "component.radio.control.fill.unselected.disabled",
           "component.select.bg.disabled",
@@ -6714,12 +6874,14 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 10
+            "count": 12
           }
         ],
         "tokens": [
           "component.button.border-color.outline.pressed",
           "component.checkbox.box.border-color.unchecked.default",
+          "component.field.border-color.default",
+          "component.focus-ring.color.readonly",
           "component.input.border-color.default",
           "component.input.focus-ring.color.readonly",
           "component.radio.control.border-color.unselected.default",
@@ -6747,11 +6909,12 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 6
+            "count": 7
           }
         ],
         "tokens": [
           "component.checkbox.box.border-color.unchecked.hover",
+          "component.field.border-color.hover",
           "component.input.border-color.hover",
           "component.radio.control.border-color.unselected.hover",
           "component.select.border-color.hover",
@@ -6776,12 +6939,13 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 7
+            "count": 8
           }
         ],
         "tokens": [
           "component.button.border-color.outline.disabled",
           "component.checkbox.box.border-color.unchecked.disabled",
+          "component.field.border-color.disabled",
           "component.input.border-color.disabled",
           "component.radio.control.border-color.unselected.disabled",
           "component.select.border-color.disabled",
@@ -6917,7 +7081,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 26
+            "count": 27
           },
           {
             "file": "css/utilities/layout.css",
@@ -6934,6 +7098,7 @@
           "component.card.header.padding-bottom.default",
           "component.card.header.gap.default",
           "component.checkbox.target.gap.default",
+          "component.field.padding-y.sm",
           "component.input.gap.lg",
           "component.input.padding-x.sm",
           "component.input.padding-x.md",
@@ -6979,7 +7144,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 16
+            "count": 17
           },
           {
             "file": "css/utilities/layout.css",
@@ -6991,6 +7156,7 @@
           "component.button.padding-x.md",
           "component.button.padding-y.lg",
           "component.button.icon-only-padding.lg",
+          "component.field.padding-y.lg",
           "component.input.padding-x.lg",
           "component.input.padding-y.lg",
           "component.modal.header.padding-bottom.md",
@@ -7166,23 +7332,22 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 13
+            "count": 12
           }
         ],
         "tokens": [
-          "component.breadcrumb.item.radius.default",
+          "component.breadcrumb.focus-ring.radius.default",
           "component.button.radius.default",
-          "component.checkbox.target.radius.default",
           "component.checkbox.focus-ring.radius.default",
           "component.divider.line.radius.default",
+          "component.field.radius",
           "component.input.radius.default",
           "component.select.radius.default",
           "component.skeleton.text.radius.default",
           "component.skeleton.rectangle.radius.default",
-          "component.tabs.item.radius.default",
+          "component.tabs.focus-ring.radius.default",
           "component.tabs.indicator.radius.default",
-          "component.textarea.radius.default",
-          "component.toggle.target.radius.default"
+          "component.textarea.radius.default"
         ],
         "figma": []
       }
@@ -7288,15 +7453,17 @@
           },
           {
             "file": "css/tokens/generated/theme-dark.css",
-            "count": 1
+            "count": 2
           },
           {
             "file": "css/tokens/generated/theme-light.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [
+          "semantic.control.toggle.thumb.gap",
           "semantic.space.2xs",
+          "semantic.control.toggle.thumb.gap",
           "semantic.space.2xs"
         ],
         "figma": []
@@ -7356,16 +7523,18 @@
           },
           {
             "file": "css/tokens/generated/theme-dark.css",
-            "count": 1
+            "count": 2
           },
           {
             "file": "css/tokens/generated/theme-light.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [
           "component.radio.dot.size.sm",
+          "semantic.control.radio.dot.size.sm",
           "semantic.space.control.padding.6",
+          "semantic.control.radio.dot.size.sm",
           "semantic.space.control.padding.6"
         ],
         "figma": []
@@ -7391,16 +7560,18 @@
           },
           {
             "file": "css/tokens/generated/theme-dark.css",
-            "count": 1
+            "count": 2
           },
           {
             "file": "css/tokens/generated/theme-light.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [
           "component.radio.dot.size.md",
+          "semantic.control.radio.dot.size.md",
           "semantic.space.sm",
+          "semantic.control.radio.dot.size.md",
           "semantic.space.sm"
         ],
         "figma": []
@@ -7426,16 +7597,18 @@
           },
           {
             "file": "css/tokens/generated/theme-dark.css",
-            "count": 1
+            "count": 2
           },
           {
             "file": "css/tokens/generated/theme-light.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [
           "component.radio.dot.size.lg",
+          "semantic.control.radio.dot.size.lg",
           "semantic.space.control.padding.10",
+          "semantic.control.radio.dot.size.lg",
           "semantic.space.control.padding.10"
         ],
         "figma": []
@@ -7465,17 +7638,21 @@
           },
           {
             "file": "css/tokens/generated/theme-dark.css",
-            "count": 1
+            "count": 3
           },
           {
             "file": "css/tokens/generated/theme-light.css",
-            "count": 1
+            "count": 3
           }
         ],
         "tokens": [
           "component.skeleton.text.height.default",
           "component.toggle.thumb.size.sm",
+          "semantic.content-placeholder.text.height.default",
+          "semantic.control.toggle.thumb.size.sm",
           "semantic.space.md",
+          "semantic.content-placeholder.text.height.default",
+          "semantic.control.toggle.thumb.size.sm",
           "semantic.space.md"
         ],
         "figma": []
@@ -7514,21 +7691,27 @@
       "usos": {
         "css": [
           {
+            "file": "css/base/icons.css",
+            "count": 2
+          },
+          {
             "file": "css/base/reset.css",
             "count": 3
           },
           {
             "file": "css/tokens/generated/theme-dark.css",
-            "count": 2
+            "count": 3
           },
           {
             "file": "css/tokens/generated/theme-light.css",
-            "count": 2
+            "count": 3
           }
         ],
         "tokens": [
+          "semantic.control.toggle.height.sm",
           "semantic.space.lg",
           "semantic.size.xs",
+          "semantic.control.toggle.height.sm",
           "semantic.space.lg",
           "semantic.size.xs"
         ],
@@ -7555,17 +7738,19 @@
           },
           {
             "file": "css/tokens/generated/theme-dark.css",
-            "count": 2
+            "count": 3
           },
           {
             "file": "css/tokens/generated/theme-light.css",
-            "count": 2
+            "count": 3
           }
         ],
         "tokens": [
           "component.toggle.thumb.size.md",
+          "semantic.control.toggle.thumb.size.md",
           "semantic.space.xl",
           "semantic.size.sm",
+          "semantic.control.toggle.thumb.size.md",
           "semantic.space.xl",
           "semantic.size.sm"
         ],
@@ -7588,16 +7773,18 @@
         "css": [
           {
             "file": "css/tokens/generated/theme-dark.css",
-            "count": 2
+            "count": 3
           },
           {
             "file": "css/tokens/generated/theme-light.css",
-            "count": 2
+            "count": 3
           }
         ],
         "tokens": [
+          "semantic.control.toggle.height.md",
           "semantic.space.2xl",
           "semantic.size.md",
+          "semantic.control.toggle.height.md",
           "semantic.space.2xl",
           "semantic.size.md"
         ],
@@ -7621,11 +7808,23 @@
           {
             "file": "css/tokens/generated/component.css",
             "count": 2
+          },
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 2
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 2
           }
         ],
         "tokens": [
           "component.toggle.track.width.sm",
-          "component.toggle.thumb.size.lg"
+          "component.toggle.thumb.size.lg",
+          "semantic.control.toggle.width.sm",
+          "semantic.control.toggle.thumb.size.lg",
+          "semantic.control.toggle.width.sm",
+          "semantic.control.toggle.thumb.size.lg"
         ],
         "figma": []
       }
@@ -7646,16 +7845,18 @@
         "css": [
           {
             "file": "css/tokens/generated/theme-dark.css",
-            "count": 2
+            "count": 3
           },
           {
             "file": "css/tokens/generated/theme-light.css",
-            "count": 2
+            "count": 3
           }
         ],
         "tokens": [
+          "semantic.control.toggle.height.lg",
           "semantic.space.section.sm",
           "semantic.size.lg",
+          "semantic.control.toggle.height.lg",
           "semantic.space.section.sm",
           "semantic.size.lg"
         ],
@@ -7727,10 +7928,20 @@
           {
             "file": "css/tokens/generated/component.css",
             "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
           }
         ],
         "tokens": [
-          "component.toggle.track.width.md"
+          "component.toggle.track.width.md",
+          "semantic.control.toggle.width.md",
+          "semantic.control.toggle.width.md"
         ],
         "figma": []
       }
@@ -7784,10 +7995,20 @@
           {
             "file": "css/tokens/generated/component.css",
             "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
           }
         ],
         "tokens": [
-          "component.toggle.track.width.lg"
+          "component.toggle.track.width.lg",
+          "semantic.control.toggle.width.lg",
+          "semantic.control.toggle.width.lg"
         ],
         "figma": []
       }
@@ -7844,16 +8065,20 @@
           },
           {
             "file": "css/tokens/generated/theme-dark.css",
-            "count": 1
+            "count": 3
           },
           {
             "file": "css/tokens/generated/theme-light.css",
-            "count": 1
+            "count": 3
           }
         ],
         "tokens": [
           "component.textarea.field.min-height.sm",
+          "semantic.control.button.min-width.sm",
+          "semantic.control.textarea.min-height.sm",
           "semantic.space.section.xl",
+          "semantic.control.button.min-width.sm",
+          "semantic.control.textarea.min-height.sm",
           "semantic.space.section.xl"
         ],
         "figma": []
@@ -7879,16 +8104,18 @@
           },
           {
             "file": "css/tokens/generated/theme-dark.css",
-            "count": 1
+            "count": 2
           },
           {
             "file": "css/tokens/generated/theme-light.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [
           "component.textarea.field.min-height.md",
+          "semantic.control.textarea.min-height.md",
           "semantic.size.4xl",
+          "semantic.control.textarea.min-height.md",
           "semantic.size.4xl"
         ],
         "figma": []
@@ -8504,7 +8731,15 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 13
+            "count": 11
+          },
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 2
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 2
           }
         ],
         "tokens": [
@@ -8514,13 +8749,15 @@
           "component.checkbox.box.fill.checked.focus",
           "component.checkbox.box.fill.indeterminate.default",
           "component.checkbox.box.fill.indeterminate.focus",
-          "component.checkbox.box.border-color.checked.default",
-          "component.checkbox.box.border-color.indeterminate.default",
           "component.radio.control.fill.selected.default",
           "component.radio.control.fill.selected.focus",
           "component.radio.control.border-color.selected.default",
           "component.toggle.track.fill.on.default",
-          "component.toggle.track.fill.on.focus"
+          "component.toggle.track.fill.on.focus",
+          "semantic.primary.border.default",
+          "semantic.content.brand",
+          "semantic.primary.border.default",
+          "semantic.content.brand"
         ],
         "figma": []
       }
@@ -8539,18 +8776,26 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 8
+            "count": 6
+          },
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
           }
         ],
         "tokens": [
           "component.button.bg.brand.hover",
           "component.checkbox.box.fill.checked.hover",
           "component.checkbox.box.fill.indeterminate.hover",
-          "component.checkbox.box.border-color.checked.hover",
-          "component.checkbox.box.border-color.indeterminate.hover",
           "component.radio.control.fill.selected.hover",
           "component.radio.control.border-color.selected.hover",
-          "component.toggle.track.fill.on.hover"
+          "component.toggle.track.fill.on.hover",
+          "semantic.primary.border.hover",
+          "semantic.primary.border.hover"
         ],
         "figma": []
       }
@@ -8592,18 +8837,25 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 8
+            "count": 5
+          },
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
           }
         ],
         "tokens": [
           "component.button.bg.brand.disabled",
           "component.checkbox.box.fill.checked.disabled",
           "component.checkbox.box.fill.indeterminate.disabled",
-          "component.checkbox.box.border-color.checked.disabled",
-          "component.checkbox.box.border-color.indeterminate.disabled",
           "component.radio.control.fill.selected.disabled",
-          "component.radio.control.border-color.selected.disabled",
-          "component.toggle.track.fill.on.disabled"
+          "component.toggle.track.fill.on.disabled",
+          "semantic.primary.border.disabled",
+          "semantic.primary.border.disabled"
         ],
         "figma": []
       }
@@ -9175,11 +9427,12 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 5
+            "count": 6
           }
         ],
         "tokens": [
           "component.button.padding-y.md",
+          "component.field.padding-y.md",
           "component.input.padding-y.md",
           "component.select.padding-y.md",
           "component.tabs.item.indicator-gap.default",
@@ -9238,6 +9491,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/base/icons.css",
+            "count": 2
+          },
+          {
             "file": "css/components/checkbox.css",
             "count": 2
           },
@@ -9247,12 +9504,13 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 12
+            "count": 13
           }
         ],
         "tokens": [
           "component.alert.icon.size.default",
           "component.alert.close.icon-size.default",
+          "component.avatar.icon.size.sm",
           "component.button.icon.frame-size.sm",
           "component.button.icon.size.sm",
           "component.checkbox.box.size.md",
@@ -9281,13 +9539,18 @@
       "usos": {
         "css": [
           {
+            "file": "css/base/icons.css",
+            "count": 4
+          },
+          {
             "file": "css/tokens/generated/component.css",
-            "count": 17
+            "count": 18
           }
         ],
         "tokens": [
           "component.alert.icon.frame-size.default",
           "component.alert.close.frame-size.default",
+          "component.avatar.icon.size.md",
           "component.button.icon.frame-size.md",
           "component.button.icon.frame-size.lg",
           "component.button.icon.size.md",
@@ -9321,12 +9584,17 @@
       "usos": {
         "css": [
           {
+            "file": "css/base/icons.css",
+            "count": 2
+          },
+          {
             "file": "css/tokens/generated/component.css",
-            "count": 10
+            "count": 11
           }
         ],
         "tokens": [
           "component.avatar.size.sm",
+          "component.avatar.icon.size.lg",
           "component.button.height.sm",
           "component.button.icon-only-width.sm",
           "component.checkbox.target.height.sm",
@@ -9659,9 +9927,7 @@
       "decisao": "Aliasado a Foundation foundation.typography.font.size.32.",
       "usos": {
         "css": [],
-        "tokens": [
-          "component.avatar.icon.size.lg"
-        ],
+        "tokens": [],
         "figma": []
       }
     },
@@ -11268,11 +11534,23 @@
           {
             "file": "css/tokens/generated/component.css",
             "count": 2
+          },
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 2
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 2
           }
         ],
         "tokens": [
           "component.skeleton.rectangle.height.default",
-          "component.textarea.field.min-height.lg"
+          "component.textarea.field.min-height.lg",
+          "semantic.content-placeholder.rectangle.height.default",
+          "semantic.control.textarea.min-height.lg",
+          "semantic.content-placeholder.rectangle.height.default",
+          "semantic.control.textarea.min-height.lg"
         ],
         "figma": []
       }
@@ -11556,18 +11834,19 @@
     "component.avatar.icon.size.sm": {
       "layer": "component",
       "type": "dimension",
-      "references": "semantic.typography.body.font-size.xl",
-      "sentido": "Tamanho do icon fallback do Avatar por size.",
+      "references": "semantic.size.sm",
+      "sentido": "Tamanho do ícone SVG fallback do Avatar por size.",
       "escopo": [
-        "font-size"
+        "width",
+        "height"
       ],
-      "contexto": "Component token do contrato anatômico Avatar Icon. Binda o texto Material Symbols no Figma e corrige o CSS para usar os tamanhos 20/24/32 observados no Figma.",
-      "decisao": "Alias para typography body font-size porque Material Symbols usa font-size; fica em Component para documentar que o icon nao segue a escala icon anterior 16/20/24.",
+      "contexto": "Component token do contrato anatômico Avatar Icon. Dimensiona o ícone Lucide/SVG fallback do Avatar em 20/24/32px conforme size.",
+      "decisao": "Alias para semantic.size porque o Avatar usa ícone SVG real, não fonte de ícone; mantém a escala compartilhada de iconografia sem depender de typography font-size.",
       "usos": {
         "css": [
           {
             "file": "css/components/avatar.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [],
@@ -11577,18 +11856,19 @@
     "component.avatar.icon.size.md": {
       "layer": "component",
       "type": "dimension",
-      "references": "semantic.typography.body.font-size.2xl",
-      "sentido": "Tamanho do icon fallback do Avatar por size.",
+      "references": "semantic.size.md",
+      "sentido": "Tamanho do ícone SVG fallback do Avatar por size.",
       "escopo": [
-        "font-size"
+        "width",
+        "height"
       ],
-      "contexto": "Component token do contrato anatômico Avatar Icon. Binda o texto Material Symbols no Figma e corrige o CSS para usar os tamanhos 20/24/32 observados no Figma.",
-      "decisao": "Alias para typography body font-size porque Material Symbols usa font-size; fica em Component para documentar que o icon nao segue a escala icon anterior 16/20/24.",
+      "contexto": "Component token do contrato anatômico Avatar Icon. Dimensiona o ícone Lucide/SVG fallback do Avatar em 20/24/32px conforme size.",
+      "decisao": "Alias para semantic.size porque o Avatar usa ícone SVG real, não fonte de ícone; mantém a escala compartilhada de iconografia sem depender de typography font-size.",
       "usos": {
         "css": [
           {
             "file": "css/components/avatar.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [],
@@ -11598,18 +11878,19 @@
     "component.avatar.icon.size.lg": {
       "layer": "component",
       "type": "dimension",
-      "references": "semantic.typography.body.font-size.4xl",
-      "sentido": "Tamanho do icon fallback do Avatar por size.",
+      "references": "semantic.size.lg",
+      "sentido": "Tamanho do ícone SVG fallback do Avatar por size.",
       "escopo": [
-        "font-size"
+        "width",
+        "height"
       ],
-      "contexto": "Component token do contrato anatômico Avatar Icon. Binda o texto Material Symbols no Figma e corrige o CSS para usar os tamanhos 20/24/32 observados no Figma.",
-      "decisao": "Alias para typography body font-size porque Material Symbols usa font-size; fica em Component para documentar que o icon nao segue a escala icon anterior 16/20/24.",
+      "contexto": "Component token do contrato anatômico Avatar Icon. Dimensiona o ícone Lucide/SVG fallback do Avatar em 20/24/32px conforme size.",
+      "decisao": "Alias para semantic.size porque o Avatar usa ícone SVG real, não fonte de ícone; mantém a escala compartilhada de iconografia sem depender de typography font-size.",
       "usos": {
         "css": [
           {
             "file": "css/components/avatar.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [],
@@ -12289,7 +12570,7 @@
         "css": [
           {
             "file": "css/components/alert.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [],
@@ -12457,7 +12738,7 @@
         "css": [
           {
             "file": "css/components/alert.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [],
@@ -13920,7 +14201,7 @@
         "css": [
           {
             "file": "css/components/modal.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [],
@@ -14003,27 +14284,6 @@
       ],
       "contexto": "Component token do contrato anatômico Tabs Item. Binda paddingTop dos 4 estados do Tab Item no Figma e substitui consumo direto de Semantic no CSS.",
       "decisao": "Alias 1:1 para semantic.space.md porque 12px é escala reutilizável, mas no Tabs documenta o respiro superior público do item.",
-      "usos": {
-        "css": [
-          {
-            "file": "css/components/tabs.css",
-            "count": 1
-          }
-        ],
-        "tokens": [],
-        "figma": []
-      }
-    },
-    "component.tabs.item.radius.default": {
-      "layer": "component",
-      "type": "dimension",
-      "references": "semantic.radius.md",
-      "sentido": "Radius do item Tabs.",
-      "escopo": [
-        "border-radius"
-      ],
-      "contexto": "Component token do contrato anatômico Tabs Item. Binda os 4 corner radii dos 4 estados do Tab Item e do Focus Ring no Figma e substitui consumo direto de Semantic no CSS.",
-      "decisao": "Alias 1:1 para semantic.radius.md porque 8px é decisão reutilizável, mas no Tabs documenta o radius público do item.",
       "usos": {
         "css": [
           {
@@ -14228,25 +14488,6 @@
       "escopo": [],
       "contexto": "Usado em ds-breadcrumb__item e nos variants do Figma Breadcrumb Item; preserva compatibilidade se o item ganhar ícone ou affordance adicional.",
       "decisao": "Alias para semantic.space.xs, refletindo o binding vivo do Figma sem criar uma abstração Semantic específica de Breadcrumb.",
-      "usos": {
-        "css": [
-          {
-            "file": "css/components/breadcrumb.css",
-            "count": 1
-          }
-        ],
-        "tokens": [],
-        "figma": []
-      }
-    },
-    "component.breadcrumb.item.radius.default": {
-      "layer": "component",
-      "type": "dimension",
-      "references": "semantic.radius.md",
-      "sentido": "Raio do item de Breadcrumb para estados de foco e área interativa.",
-      "escopo": [],
-      "contexto": "Usado no item navegável do CSS e nos variants State=Link e State=Current do Figma.",
-      "decisao": "Alias para semantic.radius.md, expondo o contrato anatômico do item sem duplicar valor primitivo.",
       "usos": {
         "css": [
           {
@@ -16645,27 +16886,6 @@
         "figma": []
       }
     },
-    "component.checkbox.target.radius.default": {
-      "layer": "component",
-      "type": "dimension",
-      "references": "semantic.radius.md",
-      "sentido": "Radius do target interativo do Checkbox.",
-      "escopo": [
-        "border-radius"
-      ],
-      "contexto": "Component token do contrato anatômico Checkbox. Binda o radius do target no Figma e alinha o CSS à anatomia viva do componente.",
-      "decisao": "Alias 1:1 para semantic.radius.md porque o radius é reutilizável, mas o contrato público do target pertence ao Checkbox.",
-      "usos": {
-        "css": [
-          {
-            "file": "css/components/checkbox.css",
-            "count": 1
-          }
-        ],
-        "tokens": [],
-        "figma": []
-      }
-    },
     "component.checkbox.box.radius.default": {
       "layer": "component",
       "type": "dimension",
@@ -17130,12 +17350,7 @@
       "contexto": "Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.",
       "decisao": "Alias 1:1 para semantic.surface.default porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/input.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -17152,12 +17367,7 @@
       "contexto": "Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.",
       "decisao": "Alias 1:1 para semantic.background.disabled porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/input.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -17174,12 +17384,7 @@
       "contexto": "Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.",
       "decisao": "Alias 1:1 para semantic.surface.default porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/input.css",
-            "count": 4
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -17196,12 +17401,7 @@
       "contexto": "Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.",
       "decisao": "Alias 1:1 para semantic.surface.default porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/input.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -17218,12 +17418,7 @@
       "contexto": "Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.",
       "decisao": "Alias 1:1 para semantic.background.subtle porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/input.css",
-            "count": 2
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -17240,12 +17435,7 @@
       "contexto": "Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.",
       "decisao": "Alias 1:1 para semantic.border.control-default porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/input.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -17262,12 +17452,7 @@
       "contexto": "Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.",
       "decisao": "Alias 1:1 para semantic.border.control-disabled porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/input.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -17284,12 +17469,7 @@
       "contexto": "Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.",
       "decisao": "Alias 1:1 para semantic.feedback.error.background.default porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/input.css",
-            "count": 5
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -17306,12 +17486,7 @@
       "contexto": "Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.",
       "decisao": "Alias 1:1 para semantic.border.strong porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/input.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -17328,12 +17503,7 @@
       "contexto": "Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.",
       "decisao": "Alias 1:1 para semantic.border.control-hover porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/input.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -17350,12 +17520,7 @@
       "contexto": "Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.",
       "decisao": "Alias 1:1 para semantic.border.subtle porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/input.css",
-            "count": 2
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -17372,12 +17537,7 @@
       "contexto": "Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.",
       "decisao": "Alias 1:1 para semantic.border.width.default porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/input.css",
-            "count": 2
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -17394,12 +17554,7 @@
       "contexto": "Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.",
       "decisao": "Alias 1:1 para semantic.content.strong porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/input.css",
-            "count": 2
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -17416,12 +17571,7 @@
       "contexto": "Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.",
       "decisao": "Alias 1:1 para semantic.content.disabled porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/input.css",
-            "count": 2
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -17438,12 +17588,7 @@
       "contexto": "Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.",
       "decisao": "Alias 1:1 para semantic.content.default porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/input.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -17460,12 +17605,7 @@
       "contexto": "Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.",
       "decisao": "Alias 1:1 para semantic.border.focus porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/input.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -17482,12 +17622,7 @@
       "contexto": "Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.",
       "decisao": "Alias 1:1 para semantic.feedback.error.background.default porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/input.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -17542,12 +17677,7 @@
       "contexto": "Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.",
       "decisao": "Alias 1:1 para semantic.border.width.focus porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/input.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -18033,12 +18163,7 @@
       "contexto": "Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.",
       "decisao": "Alias 1:1 para semantic.content.subtle porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/input.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -18055,12 +18180,7 @@
       "contexto": "Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.",
       "decisao": "Alias 1:1 para semantic.content.disabled porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/input.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -18077,12 +18197,7 @@
       "contexto": "Component token do contrato do Input Text. Espelha a variable viva do Input no Figma e substitui consumo direto de Semantic no CSS quando há equivalente no DOM.",
       "decisao": "Alias 1:1 para semantic.radius.md porque o valor é reutilizável no sistema, mas no Input documenta o contrato público do componente.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/input.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -18436,12 +18551,7 @@
       "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
       "decisao": "Alias para semantic.surface.default porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/select.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -18458,12 +18568,7 @@
       "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
       "decisao": "Alias para semantic.background.disabled porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/select.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -18480,12 +18585,7 @@
       "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
       "decisao": "Alias para semantic.surface.default porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/select.css",
-            "count": 2
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -18502,12 +18602,7 @@
       "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
       "decisao": "Alias para semantic.surface.default porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/select.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -18524,12 +18619,7 @@
       "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
       "decisao": "Alias para semantic.background.subtle porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/select.css",
-            "count": 2
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -18546,12 +18636,7 @@
       "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
       "decisao": "Alias para semantic.border.control-default porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/select.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -18568,12 +18653,7 @@
       "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
       "decisao": "Alias para semantic.border.control-disabled porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/select.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -18590,12 +18670,7 @@
       "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
       "decisao": "Alias para semantic.feedback.error.background.default porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/select.css",
-            "count": 3
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -18612,12 +18687,7 @@
       "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
       "decisao": "Alias para semantic.border.strong porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/select.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -18634,12 +18704,7 @@
       "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
       "decisao": "Alias para semantic.border.control-hover porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/select.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -18656,12 +18721,7 @@
       "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
       "decisao": "Alias para semantic.border.subtle porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/select.css",
-            "count": 2
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -18678,12 +18738,7 @@
       "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
       "decisao": "Alias para semantic.border.width.default porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/select.css",
-            "count": 2
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -18816,12 +18871,7 @@
       "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
       "decisao": "Alias para semantic.content.strong porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/select.css",
-            "count": 4
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -18839,12 +18889,7 @@
       "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
       "decisao": "Alias para semantic.content.disabled porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/select.css",
-            "count": 2
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -18862,12 +18907,7 @@
       "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
       "decisao": "Alias para semantic.content.default porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/select.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -18885,12 +18925,7 @@
       "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
       "decisao": "Alias para semantic.border.focus porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/select.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -18908,12 +18943,7 @@
       "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
       "decisao": "Alias para semantic.feedback.error.background.default porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/select.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -18965,12 +18995,7 @@
       "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
       "decisao": "Alias para semantic.border.width.focus porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/select.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -19766,12 +19791,7 @@
       "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
       "decisao": "Alias para semantic.content.subtle porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/select.css",
-            "count": 2
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -19789,12 +19809,7 @@
       "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
       "decisao": "Alias para semantic.content.disabled porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/select.css",
-            "count": 2
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -19810,12 +19825,7 @@
       "contexto": "Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.",
       "decisao": "Alias para semantic.radius.md porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/select.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -20265,12 +20275,7 @@
       "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
       "decisao": "Alias 1:1 para semantic.surface.default porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/textarea.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -20288,12 +20293,7 @@
       "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
       "decisao": "Alias 1:1 para semantic.background.disabled porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/textarea.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -20311,12 +20311,7 @@
       "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
       "decisao": "Alias 1:1 para semantic.surface.default porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/textarea.css",
-            "count": 4
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -20334,12 +20329,7 @@
       "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
       "decisao": "Alias 1:1 para semantic.surface.default porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/textarea.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -20357,12 +20347,7 @@
       "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
       "decisao": "Alias 1:1 para semantic.background.subtle porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/textarea.css",
-            "count": 2
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -20380,12 +20365,7 @@
       "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
       "decisao": "Alias 1:1 para semantic.border.control-default porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/textarea.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -20403,12 +20383,7 @@
       "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
       "decisao": "Alias 1:1 para semantic.border.control-disabled porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/textarea.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -20426,12 +20401,7 @@
       "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
       "decisao": "Alias 1:1 para semantic.feedback.error.background.default porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/textarea.css",
-            "count": 5
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -20449,12 +20419,7 @@
       "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
       "decisao": "Alias 1:1 para semantic.border.strong porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/textarea.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -20472,12 +20437,7 @@
       "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
       "decisao": "Alias 1:1 para semantic.border.control-hover porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/textarea.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -20495,12 +20455,7 @@
       "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
       "decisao": "Alias 1:1 para semantic.border.subtle porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/textarea.css",
-            "count": 2
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -20518,12 +20473,7 @@
       "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
       "decisao": "Alias 1:1 para semantic.border.width.default porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/textarea.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -20541,12 +20491,7 @@
       "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
       "decisao": "Alias 1:1 para semantic.content.strong porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/textarea.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -20564,12 +20509,7 @@
       "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
       "decisao": "Alias 1:1 para semantic.content.disabled porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/textarea.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -20587,12 +20527,7 @@
       "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
       "decisao": "Alias 1:1 para semantic.content.default porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/textarea.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -20610,12 +20545,7 @@
       "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
       "decisao": "Alias 1:1 para semantic.border.focus porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/textarea.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -20633,12 +20563,7 @@
       "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
       "decisao": "Alias 1:1 para semantic.feedback.error.background.default porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/textarea.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -20697,12 +20622,7 @@
       "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
       "decisao": "Alias 1:1 para semantic.border.width.focus porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/textarea.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -21254,12 +21174,7 @@
       "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
       "decisao": "Alias 1:1 para semantic.content.subtle porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/textarea.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -21277,12 +21192,7 @@
       "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
       "decisao": "Alias 1:1 para semantic.content.disabled porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/textarea.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -21300,12 +21210,7 @@
       "contexto": "Contrato Component do Textarea. Materializa a superficie visual multilinha e a anatomia publica de field, text, label, required e helper observadas no Figma vivo.",
       "decisao": "Alias 1:1 para semantic.radius.md porque o valor já existe na escala Semantic, mas no Textarea documenta e estabiliza uma parte pública da anatomia do componente.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/textarea.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -22031,80 +21936,6 @@
         "figma": []
       }
     },
-    "component.checkbox.box.border-color.checked.default": {
-      "layer": "component",
-      "type": "color",
-      "references": "semantic.primary.background.default",
-      "sentido": "Checkbox box visual checked",
-      "escopo": [
-        "checkbox",
-        "box visual",
-        "checked"
-      ],
-      "contexto": "Component token do contrato Checkbox materializado no Figma para box visual.",
-      "decisao": "Alias 1:1 para semantic.primary.background.default para manter o estado checked alinhado entre Figma, CSS e docs.",
-      "usos": {
-        "css": [],
-        "tokens": [],
-        "figma": []
-      }
-    },
-    "component.checkbox.box.border-color.checked.disabled": {
-      "layer": "component",
-      "type": "color",
-      "references": "semantic.primary.background.disabled",
-      "sentido": "Checkbox box visual checked disabled",
-      "escopo": [
-        "checkbox",
-        "box visual",
-        "checked",
-        "disabled"
-      ],
-      "contexto": "Component token do contrato Checkbox materializado no Figma para box visual.",
-      "decisao": "Alias 1:1 para semantic.primary.background.disabled para manter o estado checked disabled alinhado entre Figma, CSS e docs.",
-      "usos": {
-        "css": [],
-        "tokens": [],
-        "figma": []
-      }
-    },
-    "component.checkbox.box.border-color.indeterminate.default": {
-      "layer": "component",
-      "type": "color",
-      "references": "semantic.primary.background.default",
-      "sentido": "Checkbox box visual indeterminate",
-      "escopo": [
-        "checkbox",
-        "box visual",
-        "indeterminate"
-      ],
-      "contexto": "Component token do contrato Checkbox materializado no Figma para box visual.",
-      "decisao": "Alias 1:1 para semantic.primary.background.default para manter o estado indeterminate alinhado entre Figma, CSS e docs.",
-      "usos": {
-        "css": [],
-        "tokens": [],
-        "figma": []
-      }
-    },
-    "component.checkbox.box.border-color.indeterminate.disabled": {
-      "layer": "component",
-      "type": "color",
-      "references": "semantic.primary.background.disabled",
-      "sentido": "Checkbox box visual indeterminate disabled",
-      "escopo": [
-        "checkbox",
-        "box visual",
-        "indeterminate",
-        "disabled"
-      ],
-      "contexto": "Component token do contrato Checkbox materializado no Figma para box visual.",
-      "decisao": "Alias 1:1 para semantic.primary.background.disabled para manter o estado indeterminate disabled alinhado entre Figma, CSS e docs.",
-      "usos": {
-        "css": [],
-        "tokens": [],
-        "figma": []
-      }
-    },
     "component.checkbox.mark.fill.checked.default": {
       "layer": "component",
       "type": "color",
@@ -22518,30 +22349,6 @@
         "figma": []
       }
     },
-    "component.radio.control.border-color.selected.disabled": {
-      "layer": "component",
-      "type": "color",
-      "references": "semantic.primary.background.disabled",
-      "sentido": "Radio control visual selected disabled",
-      "escopo": [
-        "radio",
-        "control visual",
-        "selected",
-        "disabled"
-      ],
-      "contexto": "Component token do contrato Radio materializado no Figma para control visual.",
-      "decisao": "Alias 1:1 para semantic.primary.background.disabled para manter o estado selected disabled alinhado entre Figma, CSS e docs.",
-      "usos": {
-        "css": [
-          {
-            "file": "css/components/radio.css",
-            "count": 1
-          }
-        ],
-        "tokens": [],
-        "figma": []
-      }
-    },
     "component.radio.control.border-width.unselected.default": {
       "layer": "component",
       "type": "dimension",
@@ -22798,28 +22605,6 @@
       ],
       "contexto": "Component token do contrato Toggle materializado no Figma para target interativo.",
       "decisao": "Alias 1:1 para semantic.space.sm para manter a anatomia target interativo alinhada entre Figma, CSS e docs.",
-      "usos": {
-        "css": [
-          {
-            "file": "css/components/toggle.css",
-            "count": 1
-          }
-        ],
-        "tokens": [],
-        "figma": []
-      }
-    },
-    "component.toggle.target.radius.default": {
-      "layer": "component",
-      "type": "dimension",
-      "references": "semantic.radius.md",
-      "sentido": "Toggle target interativo default",
-      "escopo": [
-        "toggle",
-        "target interativo"
-      ],
-      "contexto": "Component token do contrato Toggle materializado no Figma para target interativo.",
-      "decisao": "Alias 1:1 para semantic.radius.md para manter a anatomia target interativo alinhada entre Figma, CSS e docs.",
       "usos": {
         "css": [
           {
@@ -23465,52 +23250,6 @@
         "figma": []
       }
     },
-    "component.checkbox.box.border-color.checked.hover": {
-      "layer": "component",
-      "type": "color",
-      "references": "semantic.primary.background.hover",
-      "sentido": "Border da box Checkbox checked em hover.",
-      "escopo": [
-        "checkbox",
-        "box",
-        "hover"
-      ],
-      "contexto": "Component token do contrato Checkbox para borda de checked hover.",
-      "decisao": "Alias para semantic.primary.background.hover para preservar paridade entre fill e border do estado preenchido.",
-      "usos": {
-        "css": [
-          {
-            "file": "css/components/checkbox.css",
-            "count": 1
-          }
-        ],
-        "tokens": [],
-        "figma": []
-      }
-    },
-    "component.checkbox.box.border-color.indeterminate.hover": {
-      "layer": "component",
-      "type": "color",
-      "references": "semantic.primary.background.hover",
-      "sentido": "Border da box Checkbox indeterminate em hover.",
-      "escopo": [
-        "checkbox",
-        "box",
-        "hover"
-      ],
-      "contexto": "Component token do contrato Checkbox para borda de indeterminate hover.",
-      "decisao": "Alias para semantic.primary.background.hover para preservar paridade entre fill e border do estado preenchido.",
-      "usos": {
-        "css": [
-          {
-            "file": "css/components/checkbox.css",
-            "count": 1
-          }
-        ],
-        "tokens": [],
-        "figma": []
-      }
-    },
     "component.checkbox.mark.fill.checked.hover": {
       "layer": "component",
       "type": "color",
@@ -23858,10 +23597,20 @@
           {
             "file": "css/tokens/generated/component.css",
             "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
           }
         ],
         "tokens": [
-          "component.toggle.thumb.fill.off.hover"
+          "component.toggle.thumb.fill.off.hover",
+          "semantic.icon.color.hover",
+          "semantic.icon.color.hover"
         ],
         "figma": []
       }
@@ -23878,12 +23627,7 @@
       "contexto": "Component token do contrato do Input Text para a combinação Error=True e State=Hover no Figma.",
       "decisao": "Alias 1:1 para semantic.surface.default para manter o erro visual na borda, sem alterar a superfície do campo.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/input.css",
-            "count": 2
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -23900,12 +23644,7 @@
       "contexto": "Component token do contrato do Input Text para a combinação Error=True e State=Hover no Figma.",
       "decisao": "Alias 1:1 para semantic.feedback.error.border.hover para separar erro default de erro em hover.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/input.css",
-            "count": 2
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -23922,12 +23661,7 @@
       "contexto": "Component token do contrato do Input Text para Readonly=True e State=Focus no Figma.",
       "decisao": "Alias 1:1 para semantic.border.control-default porque readonly pode receber foco, mas não deve parecer estado ativo primário.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/input.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -23944,12 +23678,7 @@
       "contexto": "Component token do contrato do Select para a combinação Error=True e State=Hover no Figma.",
       "decisao": "Alias 1:1 para semantic.surface.default para manter o erro visual na borda, sem alterar a superfície do campo.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/select.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -23966,12 +23695,7 @@
       "contexto": "Component token do contrato do Select para a combinação Error=True e State=Hover no Figma.",
       "decisao": "Alias 1:1 para semantic.feedback.error.border.hover para separar erro default de erro em hover.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/select.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -23988,12 +23712,7 @@
       "contexto": "Component token do contrato do Select para Readonly=True e State=Focus no Figma.",
       "decisao": "Alias 1:1 para semantic.border.control-default porque readonly pode receber foco, mas não deve parecer estado ativo primário.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/select.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -24010,12 +23729,7 @@
       "contexto": "Component token do contrato do Textarea para a combinação Error=True e State=Hover no Figma.",
       "decisao": "Alias 1:1 para semantic.surface.default para manter o erro visual na borda, sem alterar a superfície do campo.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/textarea.css",
-            "count": 2
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -24032,12 +23746,7 @@
       "contexto": "Component token do contrato do Textarea para a combinação Error=True e State=Hover no Figma.",
       "decisao": "Alias 1:1 para semantic.feedback.error.border.hover para separar erro default de erro em hover.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/textarea.css",
-            "count": 2
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -24054,12 +23763,7 @@
       "contexto": "Component token do contrato do Textarea para Readonly=True e State=Focus no Figma.",
       "decisao": "Alias 1:1 para semantic.border.control-default porque readonly pode receber foco, mas não deve parecer estado ativo primário.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/textarea.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -24080,12 +23784,22 @@
           {
             "file": "css/tokens/generated/component.css",
             "count": 3
+          },
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
           }
         ],
         "tokens": [
           "component.input.border-color.error-hover",
           "component.select.border-color.error-hover",
-          "component.textarea.border-color.error-hover"
+          "component.textarea.border-color.error-hover",
+          "semantic.border.error-hover",
+          "semantic.border.error-hover"
         ],
         "figma": []
       }
@@ -24094,10 +23808,13 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.primary.background.default",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para button / bg / brand / focus.",
+      "escopo": [
+        "fill",
+        "background"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.button.bg.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.background.default.",
       "usos": {
         "css": [
           {
@@ -24113,10 +23830,13 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.toned.background.default",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para button / bg / toned / focus.",
+      "escopo": [
+        "fill",
+        "background"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.button.bg.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.toned.background.default.",
       "usos": {
         "css": [
           {
@@ -24132,10 +23852,13 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.feedback.success.background.default",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para button / bg / success / focus.",
+      "escopo": [
+        "fill",
+        "background"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.button.bg.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.feedback.success.background.default.",
       "usos": {
         "css": [
           {
@@ -24151,10 +23874,13 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.feedback.error.background.default",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para button / bg / danger / focus.",
+      "escopo": [
+        "fill",
+        "background"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.button.bg.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.feedback.error.background.default.",
       "usos": {
         "css": [
           {
@@ -24170,10 +23896,15 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.border.focus",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para button / border color / outline / focus.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill",
+        "stroke-color"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.button.border-color.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.border.focus.",
       "usos": {
         "css": [
           {
@@ -24189,10 +23920,15 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.primary.content-default",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para button / content / color / brand / focus.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill",
+        "stroke-color"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.button.content.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.content-default.",
       "usos": {
         "css": [
           {
@@ -24208,10 +23944,15 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.toned.content-default",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para button / content / color / toned / focus.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill",
+        "stroke-color"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.button.content.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.toned.content-default.",
       "usos": {
         "css": [
           {
@@ -24227,10 +23968,15 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.outline.content-default",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para button / content / color / outline / focus.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill",
+        "stroke-color"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.button.content.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.outline.content-default.",
       "usos": {
         "css": [
           {
@@ -24246,10 +23992,15 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.ghost.content-default",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para button / content / color / ghost / focus.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill",
+        "stroke-color"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.button.content.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.ghost.content-default.",
       "usos": {
         "css": [
           {
@@ -24265,10 +24016,15 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.feedback.success.content-contrast",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para button / content / color / success / focus.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill",
+        "stroke-color"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.button.content.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.feedback.success.content-contrast.",
       "usos": {
         "css": [
           {
@@ -24284,10 +24040,15 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.feedback.error.content-contrast",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para button / content / color / danger / focus.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill",
+        "stroke-color"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.button.content.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.feedback.error.content-contrast.",
       "usos": {
         "css": [
           {
@@ -24303,10 +24064,12 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.surface.default",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para checkbox / box / fill / unchecked / focus.",
+      "escopo": [
+        "component-token"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.checkbox.box.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.surface.default.",
       "usos": {
         "css": [],
         "tokens": [],
@@ -24317,10 +24080,12 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.primary.background.default",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para checkbox / box / fill / checked / focus.",
+      "escopo": [
+        "component-token"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.checkbox.box.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.background.default.",
       "usos": {
         "css": [],
         "tokens": [],
@@ -24331,10 +24096,12 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.primary.background.default",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para checkbox / box / fill / indeterminate / focus.",
+      "escopo": [
+        "component-token"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.checkbox.box.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.background.default.",
       "usos": {
         "css": [],
         "tokens": [],
@@ -24345,38 +24112,15 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.border.focus",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
-      "usos": {
-        "css": [],
-        "tokens": [],
-        "figma": []
-      }
-    },
-    "component.checkbox.box.border-color.checked.focus": {
-      "layer": "component",
-      "type": "color",
-      "references": "semantic.border.focus",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
-      "usos": {
-        "css": [],
-        "tokens": [],
-        "figma": []
-      }
-    },
-    "component.checkbox.box.border-color.indeterminate.focus": {
-      "layer": "component",
-      "type": "color",
-      "references": "semantic.border.focus",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para checkbox / box / border color / unchecked / focus.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill",
+        "stroke-color"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.checkbox.box.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.border.focus.",
       "usos": {
         "css": [],
         "tokens": [],
@@ -24387,10 +24131,12 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.primary.content-default",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para checkbox / mark / fill / checked / focus.",
+      "escopo": [
+        "component-token"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.checkbox.mark.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.content-default.",
       "usos": {
         "css": [],
         "tokens": [],
@@ -24401,10 +24147,12 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.primary.content-default",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para checkbox / mark / fill / indeterminate / focus.",
+      "escopo": [
+        "component-token"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.checkbox.mark.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.content-default.",
       "usos": {
         "css": [],
         "tokens": [],
@@ -24415,17 +24163,15 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.surface.default",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para input / bg / focus.",
+      "escopo": [
+        "fill",
+        "background"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.input.bg.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.surface.default.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/input.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -24434,17 +24180,17 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.border.focus",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para input / border color / focus.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill",
+        "stroke-color"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.input.border-color.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.border.focus.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/input.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -24453,10 +24199,12 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.surface.default",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para radio / control / fill / unselected / focus.",
+      "escopo": [
+        "component-token"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.radio.control.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.surface.default.",
       "usos": {
         "css": [],
         "tokens": [],
@@ -24467,10 +24215,12 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.primary.background.default",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para radio / control / fill / selected / focus.",
+      "escopo": [
+        "component-token"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.radio.control.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.background.default.",
       "usos": {
         "css": [],
         "tokens": [],
@@ -24481,10 +24231,15 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.border.focus",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para radio / control / border color / unselected / focus.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill",
+        "stroke-color"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.radio.control.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.border.focus.",
       "usos": {
         "css": [],
         "tokens": [],
@@ -24495,10 +24250,15 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.border.focus",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para radio / control / border color / selected / focus.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill",
+        "stroke-color"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.radio.control.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.border.focus.",
       "usos": {
         "css": [],
         "tokens": [],
@@ -24509,10 +24269,12 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.primary.content-default",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para radio / dot / fill / selected / focus.",
+      "escopo": [
+        "component-token"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.radio.dot.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.content-default.",
       "usos": {
         "css": [],
         "tokens": [],
@@ -24523,17 +24285,15 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.surface.default",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para select / bg / focus.",
+      "escopo": [
+        "fill",
+        "background"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.select.bg.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.surface.default.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/select.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -24542,17 +24302,17 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.border.focus",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para select / border color / focus.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill",
+        "stroke-color"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.select.border-color.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.border.focus.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/select.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -24561,17 +24321,15 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.surface.default",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para textarea / bg / focus.",
+      "escopo": [
+        "fill",
+        "background"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.textarea.bg.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.surface.default.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/textarea.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -24580,17 +24338,17 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.border.focus",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para textarea / border color / focus.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill",
+        "stroke-color"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.textarea.border-color.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.border.focus.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/textarea.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -24599,10 +24357,12 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.surface.default",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para toggle / track / fill / off / focus.",
+      "escopo": [
+        "component-token"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.toggle.track.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.surface.default.",
       "usos": {
         "css": [],
         "tokens": [],
@@ -24613,10 +24373,12 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.primary.background.default",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para toggle / track / fill / on / focus.",
+      "escopo": [
+        "component-token"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.toggle.track.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.background.default.",
       "usos": {
         "css": [],
         "tokens": [],
@@ -24627,10 +24389,15 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.border.focus",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para toggle / track / border color / off / focus.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill",
+        "stroke-color"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.toggle.track.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.border.focus.",
       "usos": {
         "css": [],
         "tokens": [],
@@ -24641,10 +24408,12 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.content.default",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para toggle / thumb / fill / off / focus.",
+      "escopo": [
+        "component-token"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.toggle.thumb.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.content.default.",
       "usos": {
         "css": [],
         "tokens": [],
@@ -24655,10 +24424,12 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.primary.content-default",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para toggle / thumb / fill / on / focus.",
+      "escopo": [
+        "component-token"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.toggle.thumb.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.content-default.",
       "usos": {
         "css": [],
         "tokens": [],
@@ -24669,10 +24440,13 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.size.md",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para alert / icon / frame size / default.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.alert.icon.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.size.md.",
       "usos": {
         "css": [
           {
@@ -24688,10 +24462,13 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.size.md",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para alert / close / frame size / default.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.alert.close.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.size.md.",
       "usos": {
         "css": [
           {
@@ -24707,15 +24484,18 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.size.sm",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para button / icon / size / sm.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.button.icon.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.size.sm.",
       "usos": {
         "css": [
           {
             "file": "css/components/button.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [],
@@ -24726,15 +24506,18 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.size.md",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para button / icon / size / md.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.button.icon.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.size.md.",
       "usos": {
         "css": [
           {
             "file": "css/components/button.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [],
@@ -24745,15 +24528,18 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.size.md",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para button / icon / size / lg.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.button.icon.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.size.md.",
       "usos": {
         "css": [
           {
             "file": "css/components/button.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [],
@@ -24764,10 +24550,13 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.size.xs",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para form field / error / icon / size / default.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.form-field.error.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.size.xs.",
       "usos": {
         "css": [
           {
@@ -24783,10 +24572,13 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.size.xs",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para input / icon / size / sm.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.input.icon.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.size.xs.",
       "usos": {
         "css": [
           {
@@ -24802,10 +24594,13 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.size.sm",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para input / icon / size / md.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.input.icon.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.size.sm.",
       "usos": {
         "css": [
           {
@@ -24821,10 +24616,13 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.size.md",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para input / icon / size / lg.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.input.icon.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.size.md.",
       "usos": {
         "css": [
           {
@@ -24840,10 +24638,13 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.size.md",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para modal / close / frame size / default.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.modal.close.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.size.md.",
       "usos": {
         "css": [
           {
@@ -24859,10 +24660,13 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.size.xs",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para select / chevron / size / sm.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.select.chevron.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.size.xs.",
       "usos": {
         "css": [
           {
@@ -24878,10 +24682,13 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.size.sm",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para select / chevron / size / md.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.select.chevron.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.size.sm.",
       "usos": {
         "css": [
           {
@@ -24897,10 +24704,13 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.size.md",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para select / chevron / size / lg.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.select.chevron.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.size.md.",
       "usos": {
         "css": [
           {
@@ -24916,10 +24726,13 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.size.xs",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para select / icon / size / sm.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.select.icon.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.size.xs.",
       "usos": {
         "css": [
           {
@@ -24935,10 +24748,13 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.size.sm",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para select / icon / size / md.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.select.icon.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.size.sm.",
       "usos": {
         "css": [
           {
@@ -24954,10 +24770,13 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.size.md",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Token component para select / icon / size / lg.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.select.icon.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.size.md.",
       "usos": {
         "css": [
           {
@@ -24965,6 +24784,1915 @@
             "count": 1
           }
         ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.tabs.focus-ring.radius.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.radius.md",
+      "sentido": "Radius do focus ring Tabs.",
+      "escopo": [
+        "border-radius"
+      ],
+      "contexto": "Component token do contrato anatômico Tabs Focus Ring. Binda corner radius do Focus Ring no Figma e define o border-radius usado para o outline do item no CSS.",
+      "decisao": "Alias 1:1 para semantic.radius.md porque 8px é decisão reutilizável, mas no Tabs documenta o radius do indicador de foco, não do item.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/tabs.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.breadcrumb.focus-ring.radius.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.radius.md",
+      "sentido": "Radius do focus ring Breadcrumb.",
+      "escopo": [
+        "border-radius"
+      ],
+      "contexto": "Component token do contrato anatômico Breadcrumb Focus Ring. Define o border-radius usado para o outline do item navegável no CSS.",
+      "decisao": "Alias 1:1 para semantic.radius.md porque 8px é decisão reutilizável, mas no Breadcrumb documenta o radius de foco, não um radius visual do item.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/breadcrumb.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "foundation.dimension.88": {
+      "layer": "foundation",
+      "type": "dimension",
+      "references": null,
+      "sentido": "Dimensao fixa de 88px (5.5rem).",
+      "escopo": [
+        "width",
+        "height",
+        "min-width"
+      ],
+      "contexto": "Primitivo Foundation para desvios de sizing de controles quando a escala 4px nao cobre o contrato observado no Figma.",
+      "decisao": "Adicionado porque semantic.control.button.min-width.md no Figma vivo referencia dimension/88; o valor permanece primitivo e deve ser consumido via Semantic/Component.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "semantic.control.button.min-width.md",
+          "semantic.control.button.min-width.md"
+        ],
+        "figma": []
+      }
+    },
+    "foundation.dimension.102": {
+      "layer": "foundation",
+      "type": "dimension",
+      "references": null,
+      "sentido": "Dimensao fixa de 102px (6.375rem).",
+      "escopo": [
+        "width",
+        "height",
+        "min-width"
+      ],
+      "contexto": "Primitivo Foundation para desvios de sizing de controles quando a escala 4px nao cobre o contrato observado no Figma.",
+      "decisao": "Adicionado porque semantic.control.button.min-width.lg no Figma vivo referencia dimension/102; nao e typo de 1024.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "semantic.control.button.min-width.lg",
+          "semantic.control.button.min-width.lg"
+        ],
+        "figma": []
+      }
+    },
+    "foundation.stroke.width.2": {
+      "layer": "foundation",
+      "type": "dimension",
+      "references": null,
+      "sentido": "Stroke width primitivo de 2px para icones.",
+      "escopo": [
+        "stroke-width"
+      ],
+      "contexto": "Primitivo Foundation para pesos de stroke de iconografia; separado de foundation.border.width para evitar misturar borda de componentes com stroke interno de icones.",
+      "decisao": "Criado para suportar semantic.icon.stroke-width.* preservando a filosofia Lucide de icones por stroke e permitindo pesos por tamanho/enfase.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 2
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 2
+          }
+        ],
+        "tokens": [
+          "semantic.icon.stroke-width.regular.24",
+          "semantic.icon.stroke-width.strong.20",
+          "semantic.icon.stroke-width.regular.24",
+          "semantic.icon.stroke-width.strong.20"
+        ],
+        "figma": []
+      }
+    },
+    "foundation.stroke.width.1_5": {
+      "layer": "foundation",
+      "type": "dimension",
+      "references": null,
+      "sentido": "Stroke width primitivo de 1.5px para icones.",
+      "escopo": [
+        "stroke-width"
+      ],
+      "contexto": "Primitivo Foundation para pesos de stroke de iconografia; separado de foundation.border.width para evitar misturar borda de componentes com stroke interno de icones.",
+      "decisao": "Criado para suportar semantic.icon.stroke-width.* preservando a filosofia Lucide de icones por stroke e permitindo pesos por tamanho/enfase.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "semantic.icon.stroke-width.regular.16",
+          "semantic.icon.stroke-width.regular.16"
+        ],
+        "figma": []
+      }
+    },
+    "foundation.stroke.width.1_75": {
+      "layer": "foundation",
+      "type": "dimension",
+      "references": null,
+      "sentido": "Stroke width primitivo de 1.75px para icones.",
+      "escopo": [
+        "stroke-width"
+      ],
+      "contexto": "Primitivo Foundation para pesos de stroke de iconografia; separado de foundation.border.width para evitar misturar borda de componentes com stroke interno de icones.",
+      "decisao": "Criado para suportar semantic.icon.stroke-width.* preservando a filosofia Lucide de icones por stroke e permitindo pesos por tamanho/enfase.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 2
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 2
+          }
+        ],
+        "tokens": [
+          "semantic.icon.stroke-width.regular.20",
+          "semantic.icon.stroke-width.strong.16",
+          "semantic.icon.stroke-width.regular.20",
+          "semantic.icon.stroke-width.strong.16"
+        ],
+        "figma": []
+      }
+    },
+    "foundation.stroke.width.2_25": {
+      "layer": "foundation",
+      "type": "dimension",
+      "references": null,
+      "sentido": "Stroke width primitivo de 2.25px para icones.",
+      "escopo": [
+        "stroke-width"
+      ],
+      "contexto": "Primitivo Foundation para pesos de stroke de iconografia; separado de foundation.border.width para evitar misturar borda de componentes com stroke interno de icones.",
+      "decisao": "Criado para suportar semantic.icon.stroke-width.* preservando a filosofia Lucide de icones por stroke e permitindo pesos por tamanho/enfase.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "semantic.icon.stroke-width.strong.24",
+          "semantic.icon.stroke-width.strong.24"
+        ],
+        "figma": []
+      }
+    },
+    "foundation.stroke.width.2_5": {
+      "layer": "foundation",
+      "type": "dimension",
+      "references": null,
+      "sentido": "Stroke width primitivo de 2.5px para icones.",
+      "escopo": [
+        "stroke-width"
+      ],
+      "contexto": "Primitivo Foundation para pesos de stroke de iconografia; separado de foundation.border.width para evitar misturar borda de componentes com stroke interno de icones.",
+      "decisao": "Criado para suportar semantic.icon.stroke-width.* preservando a filosofia Lucide de icones por stroke e permitindo pesos por tamanho/enfase.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "semantic.icon.stroke-width.regular.32",
+          "semantic.icon.stroke-width.regular.32"
+        ],
+        "figma": []
+      }
+    },
+    "semantic.content-placeholder.rectangle.height.default": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.dimension.120",
+      "sentido": "Altura semantica default do placeholder retangular de conteudo.",
+      "escopo": [
+        "height"
+      ],
+      "contexto": "Use para placeholders de conteudo retangulares antes de estabilizar em Component tokens especificos.",
+      "decisao": "Alias para foundation.dimension.120 conforme Figma vivo; mantem o conceito reutilizavel fora de um componente especifico.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.content-placeholder.text.height.default": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.dimension.12",
+      "sentido": "Altura semantica default do placeholder textual de conteudo.",
+      "escopo": [
+        "height"
+      ],
+      "contexto": "Use para linhas de skeleton/text placeholder antes de estabilizar em Component tokens especificos.",
+      "decisao": "Alias para foundation.dimension.12 conforme Figma vivo; representa altura de linha placeholder, nao tipografia real.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.control.button.min-width.sm": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.dimension.80",
+      "sentido": "Min-width semantico de Button sm.",
+      "escopo": [
+        "min-width"
+      ],
+      "contexto": "Use como decisao de sistema para largura minima de botao por tamanho; Component Button pode aliasar quando o contrato publico precisar expor a anatomia.",
+      "decisao": "Alias para {foundation.dimension.80} conforme Figma vivo para padronizar min-width de Button sm.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.control.button.min-width.md": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.dimension.88",
+      "sentido": "Min-width semantico de Button md.",
+      "escopo": [
+        "min-width"
+      ],
+      "contexto": "Use como decisao de sistema para largura minima de botao por tamanho; Component Button pode aliasar quando o contrato publico precisar expor a anatomia.",
+      "decisao": "Alias para {foundation.dimension.88} conforme Figma vivo para padronizar min-width de Button md.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.control.button.min-width.lg": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.dimension.102",
+      "sentido": "Min-width semantico de Button lg.",
+      "escopo": [
+        "min-width"
+      ],
+      "contexto": "Use como decisao de sistema para largura minima de botao por tamanho; Component Button pode aliasar quando o contrato publico precisar expor a anatomia.",
+      "decisao": "Alias para {foundation.dimension.102} conforme Figma vivo para padronizar min-width de Button lg.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.control.radio.dot.size.sm": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.dimension.6",
+      "sentido": "Size semantico do dot de Radio sm.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Use para indicator/dot circular de selection controls quando houver necessidade de decisao reutilizavel entre Figma e repo.",
+      "decisao": "Alias para {foundation.dimension.6} conforme Figma vivo; estabiliza o tamanho do dot sem depender de valores soltos.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.control.radio.dot.size.md": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.dimension.8",
+      "sentido": "Size semantico do dot de Radio md.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Use para indicator/dot circular de selection controls quando houver necessidade de decisao reutilizavel entre Figma e repo.",
+      "decisao": "Alias para {foundation.dimension.8} conforme Figma vivo; estabiliza o tamanho do dot sem depender de valores soltos.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.control.radio.dot.size.lg": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.dimension.10",
+      "sentido": "Size semantico do dot de Radio lg.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Use para indicator/dot circular de selection controls quando houver necessidade de decisao reutilizavel entre Figma e repo.",
+      "decisao": "Alias para {foundation.dimension.10} conforme Figma vivo; estabiliza o tamanho do dot sem depender de valores soltos.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.control.textarea.min-height.sm": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.dimension.80",
+      "sentido": "Min-height semantico de Textarea sm.",
+      "escopo": [
+        "min-height"
+      ],
+      "contexto": "Use como decisao de sistema para altura minima de textareas por tamanho; componentes finais ainda podem expor Component token anatomico.",
+      "decisao": "Alias para {foundation.dimension.80} conforme Figma vivo.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.control.textarea.min-height.md": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.dimension.96",
+      "sentido": "Min-height semantico de Textarea md.",
+      "escopo": [
+        "min-height"
+      ],
+      "contexto": "Use como decisao de sistema para altura minima de textareas por tamanho; componentes finais ainda podem expor Component token anatomico.",
+      "decisao": "Alias para {foundation.dimension.96} conforme Figma vivo.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.control.textarea.min-height.lg": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.dimension.120",
+      "sentido": "Min-height semantico de Textarea lg.",
+      "escopo": [
+        "min-height"
+      ],
+      "contexto": "Use como decisao de sistema para altura minima de textareas por tamanho; componentes finais ainda podem expor Component token anatomico.",
+      "decisao": "Alias para {foundation.dimension.120} conforme Figma vivo.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.control.toggle.height.sm": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.dimension.16",
+      "sentido": "Altura semantica de Toggle sm.",
+      "escopo": [
+        "height"
+      ],
+      "contexto": "Use para o track/tamanho externo de Toggle quando a decisao deve ser compartilhada entre Figma e repo.",
+      "decisao": "Alias para {foundation.dimension.16} conforme Figma vivo.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.control.toggle.height.md": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.dimension.24",
+      "sentido": "Altura semantica de Toggle md.",
+      "escopo": [
+        "height"
+      ],
+      "contexto": "Use para o track/tamanho externo de Toggle quando a decisao deve ser compartilhada entre Figma e repo.",
+      "decisao": "Alias para {foundation.dimension.24} conforme Figma vivo.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.control.toggle.height.lg": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.dimension.32",
+      "sentido": "Altura semantica de Toggle lg.",
+      "escopo": [
+        "height"
+      ],
+      "contexto": "Use para o track/tamanho externo de Toggle quando a decisao deve ser compartilhada entre Figma e repo.",
+      "decisao": "Alias para {foundation.dimension.32} conforme Figma vivo.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.control.toggle.width.sm": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.dimension.28",
+      "sentido": "Largura semantica de Toggle sm.",
+      "escopo": [
+        "width"
+      ],
+      "contexto": "Use para o track/tamanho externo de Toggle quando a decisao deve ser compartilhada entre Figma e repo.",
+      "decisao": "Alias para {foundation.dimension.28} conforme Figma vivo.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.control.toggle.width.md": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.dimension.44",
+      "sentido": "Largura semantica de Toggle md.",
+      "escopo": [
+        "width"
+      ],
+      "contexto": "Use para o track/tamanho externo de Toggle quando a decisao deve ser compartilhada entre Figma e repo.",
+      "decisao": "Alias para {foundation.dimension.44} conforme Figma vivo.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.control.toggle.width.lg": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.dimension.56",
+      "sentido": "Largura semantica de Toggle lg.",
+      "escopo": [
+        "width"
+      ],
+      "contexto": "Use para o track/tamanho externo de Toggle quando a decisao deve ser compartilhada entre Figma e repo.",
+      "decisao": "Alias para {foundation.dimension.56} conforme Figma vivo.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.control.toggle.thumb.gap": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.dimension.2",
+      "sentido": "Gap semantico entre thumb e borda interna do Toggle.",
+      "escopo": [
+        "gap",
+        "spacing"
+      ],
+      "contexto": "Use para calcular relacao entre track e thumb do Toggle sem criar valores soltos no componente.",
+      "decisao": "Alias para foundation.dimension.2 conforme Figma vivo; representa respiro interno do thumb.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.control.toggle.thumb.size.sm": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.dimension.12",
+      "sentido": "Tamanho semantico do thumb de Toggle sm.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Use para o thumb interno do Toggle quando a decisao deve ser compartilhada entre Figma e repo.",
+      "decisao": "Alias para {foundation.dimension.12} conforme Figma vivo.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.control.toggle.thumb.size.md": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.dimension.20",
+      "sentido": "Tamanho semantico do thumb de Toggle md.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Use para o thumb interno do Toggle quando a decisao deve ser compartilhada entre Figma e repo.",
+      "decisao": "Alias para {foundation.dimension.20} conforme Figma vivo.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.control.toggle.thumb.size.lg": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.dimension.28",
+      "sentido": "Tamanho semantico do thumb de Toggle lg.",
+      "escopo": [
+        "width",
+        "height"
+      ],
+      "contexto": "Use para o thumb interno do Toggle quando a decisao deve ser compartilhada entre Figma e repo.",
+      "decisao": "Alias para {foundation.dimension.28} conforme Figma vivo.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.icon.color.default": {
+      "layer": "semantic",
+      "type": "color",
+      "references": "semantic.content.default",
+      "sentido": "Cor semantica de icone default.",
+      "escopo": [
+        "icon-fill",
+        "icon-stroke",
+        "color"
+      ],
+      "contexto": "Use na biblioteca de icones e no Icon swap. Componentes finais devem aliasar para Component tokens proprios quando o icone faz parte da anatomia do componente.",
+      "decisao": "Alias para {semantic.content.default} conforme Figma vivo; mantem fill e stroke de icones alinhados ao vocabulario de conteudo semantico.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/base/icons.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.icon.color.hover": {
+      "layer": "semantic",
+      "type": "color",
+      "references": "semantic.content.hover",
+      "sentido": "Cor semantica de icone hover.",
+      "escopo": [
+        "icon-fill",
+        "icon-stroke",
+        "color"
+      ],
+      "contexto": "Use na biblioteca de icones e no Icon swap. Componentes finais devem aliasar para Component tokens proprios quando o icone faz parte da anatomia do componente.",
+      "decisao": "Alias para {semantic.content.hover} conforme Figma vivo; mantem fill e stroke de icones alinhados ao vocabulario de conteudo semantico.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.icon.color.active": {
+      "layer": "semantic",
+      "type": "color",
+      "references": "semantic.content.strong",
+      "sentido": "Cor semantica de icone active.",
+      "escopo": [
+        "icon-fill",
+        "icon-stroke",
+        "color"
+      ],
+      "contexto": "Use na biblioteca de icones e no Icon swap. Componentes finais devem aliasar para Component tokens proprios quando o icone faz parte da anatomia do componente.",
+      "decisao": "Alias para {semantic.content.strong} conforme Figma vivo; mantem fill e stroke de icones alinhados ao vocabulario de conteudo semantico.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.icon.color.disabled": {
+      "layer": "semantic",
+      "type": "color",
+      "references": "semantic.content.disabled",
+      "sentido": "Cor semantica de icone disabled.",
+      "escopo": [
+        "icon-fill",
+        "icon-stroke",
+        "color"
+      ],
+      "contexto": "Use na biblioteca de icones e no Icon swap. Componentes finais devem aliasar para Component tokens proprios quando o icone faz parte da anatomia do componente.",
+      "decisao": "Alias para {semantic.content.disabled} conforme Figma vivo; mantem fill e stroke de icones alinhados ao vocabulario de conteudo semantico.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/base/icons.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.icon.color.subtle": {
+      "layer": "semantic",
+      "type": "color",
+      "references": "semantic.content.subtle",
+      "sentido": "Cor semantica de icone subtle.",
+      "escopo": [
+        "icon-fill",
+        "icon-stroke",
+        "color"
+      ],
+      "contexto": "Use na biblioteca de icones e no Icon swap. Componentes finais devem aliasar para Component tokens proprios quando o icone faz parte da anatomia do componente.",
+      "decisao": "Alias para {semantic.content.subtle} conforme Figma vivo; mantem fill e stroke de icones alinhados ao vocabulario de conteudo semantico.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/base/icons.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.icon.color.inverse": {
+      "layer": "semantic",
+      "type": "color",
+      "references": "semantic.content.inverse",
+      "sentido": "Cor semantica de icone inverse.",
+      "escopo": [
+        "icon-fill",
+        "icon-stroke",
+        "color"
+      ],
+      "contexto": "Use na biblioteca de icones e no Icon swap. Componentes finais devem aliasar para Component tokens proprios quando o icone faz parte da anatomia do componente.",
+      "decisao": "Alias para {semantic.content.inverse} conforme Figma vivo; mantem fill e stroke de icones alinhados ao vocabulario de conteudo semantico.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/base/icons.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.icon.color.success": {
+      "layer": "semantic",
+      "type": "color",
+      "references": "semantic.feedback.success.content-default",
+      "sentido": "Cor semantica de icone success.",
+      "escopo": [
+        "icon-fill",
+        "icon-stroke",
+        "color"
+      ],
+      "contexto": "Use na biblioteca de icones e no Icon swap. Componentes finais devem aliasar para Component tokens proprios quando o icone faz parte da anatomia do componente.",
+      "decisao": "Alias para {semantic.feedback.success.content-default} conforme Figma vivo; mantem fill e stroke de icones alinhados ao vocabulario de conteudo semantico.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/base/icons.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.icon.color.warning": {
+      "layer": "semantic",
+      "type": "color",
+      "references": "semantic.feedback.warning.content-default",
+      "sentido": "Cor semantica de icone warning.",
+      "escopo": [
+        "icon-fill",
+        "icon-stroke",
+        "color"
+      ],
+      "contexto": "Use na biblioteca de icones e no Icon swap. Componentes finais devem aliasar para Component tokens proprios quando o icone faz parte da anatomia do componente.",
+      "decisao": "Alias para {semantic.feedback.warning.content-default} conforme Figma vivo; mantem fill e stroke de icones alinhados ao vocabulario de conteudo semantico.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/base/icons.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.icon.color.error": {
+      "layer": "semantic",
+      "type": "color",
+      "references": "semantic.feedback.error.content-default",
+      "sentido": "Cor semantica de icone error.",
+      "escopo": [
+        "icon-fill",
+        "icon-stroke",
+        "color"
+      ],
+      "contexto": "Use na biblioteca de icones e no Icon swap. Componentes finais devem aliasar para Component tokens proprios quando o icone faz parte da anatomia do componente.",
+      "decisao": "Alias para {semantic.feedback.error.content-default} conforme Figma vivo; mantem fill e stroke de icones alinhados ao vocabulario de conteudo semantico.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/base/icons.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.icon.color.success-contrast": {
+      "layer": "semantic",
+      "type": "color",
+      "references": "semantic.feedback.success.content-contrast",
+      "sentido": "Cor semantica de icone success-contrast.",
+      "escopo": [
+        "icon-fill",
+        "icon-stroke",
+        "color"
+      ],
+      "contexto": "Use na biblioteca de icones e no Icon swap. Componentes finais devem aliasar para Component tokens proprios quando o icone faz parte da anatomia do componente.",
+      "decisao": "Alias para {semantic.feedback.success.content-contrast} conforme Figma vivo; mantem fill e stroke de icones alinhados ao vocabulario de conteudo semantico.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.icon.color.warning-contrast": {
+      "layer": "semantic",
+      "type": "color",
+      "references": "semantic.feedback.warning.content-contrast",
+      "sentido": "Cor semantica de icone warning-contrast.",
+      "escopo": [
+        "icon-fill",
+        "icon-stroke",
+        "color"
+      ],
+      "contexto": "Use na biblioteca de icones e no Icon swap. Componentes finais devem aliasar para Component tokens proprios quando o icone faz parte da anatomia do componente.",
+      "decisao": "Alias para {semantic.feedback.warning.content-contrast} conforme Figma vivo; mantem fill e stroke de icones alinhados ao vocabulario de conteudo semantico.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.icon.color.error-contrast": {
+      "layer": "semantic",
+      "type": "color",
+      "references": "semantic.feedback.error.content-contrast",
+      "sentido": "Cor semantica de icone error-contrast.",
+      "escopo": [
+        "icon-fill",
+        "icon-stroke",
+        "color"
+      ],
+      "contexto": "Use na biblioteca de icones e no Icon swap. Componentes finais devem aliasar para Component tokens proprios quando o icone faz parte da anatomia do componente.",
+      "decisao": "Alias para {semantic.feedback.error.content-contrast} conforme Figma vivo; mantem fill e stroke de icones alinhados ao vocabulario de conteudo semantico.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.icon.color.info-contrast": {
+      "layer": "semantic",
+      "type": "color",
+      "references": "semantic.feedback.info.content-contrast",
+      "sentido": "Cor semantica de icone info-contrast.",
+      "escopo": [
+        "icon-fill",
+        "icon-stroke",
+        "color"
+      ],
+      "contexto": "Use na biblioteca de icones e no Icon swap. Componentes finais devem aliasar para Component tokens proprios quando o icone faz parte da anatomia do componente.",
+      "decisao": "Alias para {semantic.feedback.info.content-contrast} conforme Figma vivo; mantem fill e stroke de icones alinhados ao vocabulario de conteudo semantico.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.icon.stroke-width.regular.16": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.stroke.width.1_5",
+      "sentido": "Stroke width semantico de icone regular 16px.",
+      "escopo": [
+        "stroke-width",
+        "icon-stroke-width"
+      ],
+      "contexto": "Use em icones Lucide por stroke para controlar peso visual por tamanho e por enfase sem alterar a biblioteca base manualmente.",
+      "decisao": "Alias para {foundation.stroke.width.1_5} conforme Figma vivo; separa peso de icone de border-width de componentes.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/base/icons.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.icon.stroke-width.regular.20": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.stroke.width.1_75",
+      "sentido": "Stroke width semantico de icone regular 20px.",
+      "escopo": [
+        "stroke-width",
+        "icon-stroke-width"
+      ],
+      "contexto": "Use em icones Lucide por stroke para controlar peso visual por tamanho e por enfase sem alterar a biblioteca base manualmente.",
+      "decisao": "Alias para {foundation.stroke.width.1_75} conforme Figma vivo; separa peso de icone de border-width de componentes.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/base/icons.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/alert.css",
+            "count": 2
+          },
+          {
+            "file": "css/components/avatar.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/button.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.icon.stroke-width.regular.24": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.stroke.width.2",
+      "sentido": "Stroke width semantico de icone regular 24px.",
+      "escopo": [
+        "stroke-width",
+        "icon-stroke-width"
+      ],
+      "contexto": "Use em icones Lucide por stroke para controlar peso visual por tamanho e por enfase sem alterar a biblioteca base manualmente.",
+      "decisao": "Alias para {foundation.stroke.width.2} conforme Figma vivo; separa peso de icone de border-width de componentes.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/base/icons.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.icon.stroke-width.regular.32": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.stroke.width.2_5",
+      "sentido": "Stroke width semantico de icone regular 32px.",
+      "escopo": [
+        "stroke-width",
+        "icon-stroke-width"
+      ],
+      "contexto": "Use em icones Lucide por stroke para controlar peso visual por tamanho e por enfase sem alterar a biblioteca base manualmente.",
+      "decisao": "Alias para {foundation.stroke.width.2_5} conforme Figma vivo; separa peso de icone de border-width de componentes.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/base/icons.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/avatar.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.icon.stroke-width.strong.16": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.stroke.width.1_75",
+      "sentido": "Stroke width semantico de icone strong 16px.",
+      "escopo": [
+        "stroke-width",
+        "icon-stroke-width"
+      ],
+      "contexto": "Use em icones Lucide por stroke para controlar peso visual por tamanho e por enfase sem alterar a biblioteca base manualmente.",
+      "decisao": "Alias para {foundation.stroke.width.1_75} conforme Figma vivo; separa peso de icone de border-width de componentes.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/base/icons.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.icon.stroke-width.strong.20": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.stroke.width.2",
+      "sentido": "Stroke width semantico de icone strong 20px.",
+      "escopo": [
+        "stroke-width",
+        "icon-stroke-width"
+      ],
+      "contexto": "Use em icones Lucide por stroke para controlar peso visual por tamanho e por enfase sem alterar a biblioteca base manualmente.",
+      "decisao": "Alias para {foundation.stroke.width.2} conforme Figma vivo; separa peso de icone de border-width de componentes.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/base/icons.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.icon.stroke-width.strong.24": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.stroke.width.2_25",
+      "sentido": "Stroke width semantico de icone strong 24px.",
+      "escopo": [
+        "stroke-width",
+        "icon-stroke-width"
+      ],
+      "contexto": "Use em icones Lucide por stroke para controlar peso visual por tamanho e por enfase sem alterar a biblioteca base manualmente.",
+      "decisao": "Alias para {foundation.stroke.width.2_25} conforme Figma vivo; separa peso de icone de border-width de componentes.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/base/icons.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.field.bg.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.surface.default",
+      "sentido": "Token component para field / bg / default.",
+      "escopo": [
+        "fill",
+        "background"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.field.bg.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.surface.default.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 7
+          },
+          {
+            "file": "css/components/select.css",
+            "count": 5
+          },
+          {
+            "file": "css/components/textarea.css",
+            "count": 7
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.field.bg.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.background.disabled",
+      "sentido": "Token component para field / bg / disabled.",
+      "escopo": [
+        "fill",
+        "background"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.field.bg.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.background.disabled.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.field.bg.readonly": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.background.subtle",
+      "sentido": "Token component para field / bg / readonly.",
+      "escopo": [
+        "fill",
+        "background"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.field.bg.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.background.subtle.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 2
+          },
+          {
+            "file": "css/components/select.css",
+            "count": 2
+          },
+          {
+            "file": "css/components/textarea.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.field.border-color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.control-default",
+      "sentido": "Token component para field / border color / default.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill",
+        "stroke-color"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.field.border-color.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.border.control-default.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.field.border-color.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.control-disabled",
+      "sentido": "Token component para field / border color / disabled.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill",
+        "stroke-color"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.field.border-color.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.border.control-disabled.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.field.border-color.error": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.error",
+      "sentido": "Token component para field / border color / error.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill",
+        "stroke-color"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.field.border-color.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.border.error.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 5
+          },
+          {
+            "file": "css/components/select.css",
+            "count": 3
+          },
+          {
+            "file": "css/components/textarea.css",
+            "count": 5
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.field.border-color.error-hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.error-hover",
+      "sentido": "Token component para field / border color / error hover.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill",
+        "stroke-color"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.field.border-color.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.border.error-hover.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 2
+          },
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/textarea.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.field.border-color.filled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.strong",
+      "sentido": "Token component para field / border color / filled.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill",
+        "stroke-color"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.field.border-color.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.border.strong.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.field.border-color.focus": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.focus",
+      "sentido": "Token component para field / border color / focus.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill",
+        "stroke-color"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.field.border-color.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.border.focus.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.field.border-color.hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.control-hover",
+      "sentido": "Token component para field / border color / hover.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill",
+        "stroke-color"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.field.border-color.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.border.control-hover.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.field.border-color.readonly": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.subtle",
+      "sentido": "Token component para field / border color / readonly.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill",
+        "stroke-color"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.field.border-color.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.border.subtle.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 2
+          },
+          {
+            "file": "css/components/select.css",
+            "count": 2
+          },
+          {
+            "file": "css/components/textarea.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.field.border-width": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.border.width.default",
+      "sentido": "Token component para field / border width.",
+      "escopo": [
+        "stroke-width",
+        "border-width"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.field.border-width.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.border.width.default.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 2
+          },
+          {
+            "file": "css/components/select.css",
+            "count": 2
+          },
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.field.padding-y.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.sm",
+      "sentido": "Token component para field / padding y / sm.",
+      "escopo": [
+        "padding"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.field.padding-y.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.space.sm.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.field.padding-y.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.control.padding.10",
+      "sentido": "Token component para field / padding y / md.",
+      "escopo": [
+        "padding"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.field.padding-y.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.space.control.padding.10.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.field.padding-y.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.md",
+      "sentido": "Token component para field / padding y / lg.",
+      "escopo": [
+        "padding"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.field.padding-y.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.space.md.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.field.placeholder.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.subtle",
+      "sentido": "Token component para field / placeholder / color / default.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill",
+        "stroke-color"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.field.placeholder.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.content.subtle.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/select.css",
+            "count": 2
+          },
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.field.placeholder.color.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.disabled",
+      "sentido": "Token component para field / placeholder / color / disabled.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill",
+        "stroke-color"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.field.placeholder.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.content.disabled.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/select.css",
+            "count": 2
+          },
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.field.radius": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.radius.md",
+      "sentido": "Token component para field / radius.",
+      "escopo": [
+        "corner-radius"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.field.radius.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.radius.md.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.field.value.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.strong",
+      "sentido": "Token component para field / value / color / default.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill",
+        "stroke-color"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.field.value.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.content.strong.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 2
+          },
+          {
+            "file": "css/components/select.css",
+            "count": 4
+          },
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.field.value.color.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.disabled",
+      "sentido": "Token component para field / value / color / disabled.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill",
+        "stroke-color"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.field.value.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.content.disabled.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 2
+          },
+          {
+            "file": "css/components/select.css",
+            "count": 2
+          },
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.field.value.color.readonly": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.default",
+      "sentido": "Token component para field / value / color / readonly.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill",
+        "stroke-color"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.field.value.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.content.default.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.focus-ring.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.focus",
+      "sentido": "Token component para focus ring / color / default.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill",
+        "stroke-color"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.focus-ring.color.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.border.focus.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.focus-ring.color.error": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.focus-error",
+      "sentido": "Token component para focus ring / color / error.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill",
+        "stroke-color"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.focus-ring.color.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.border.focus-error.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.focus-ring.color.readonly": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.control-default",
+      "sentido": "Token component para focus ring / color / readonly.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill",
+        "stroke-color"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.focus-ring.color.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.border.control-default.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.focus-ring.color.success": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.feedback.success.border-default",
+      "sentido": "Token component para focus ring / color / success.",
+      "escopo": [
+        "color",
+        "text-fill",
+        "icon-fill",
+        "stroke-color"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.focus-ring.color.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.feedback.success.border-default.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.focus-ring.width": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.border.width.focus",
+      "sentido": "Token component para focus ring / width.",
+      "escopo": [
+        "stroke-width",
+        "border-width"
+      ],
+      "contexto": "Usado para estabilizar o contrato component exposto por component.focus-ring.width.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.border.width.focus.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/textarea.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.primary.border.default": {
+      "layer": "semantic",
+      "type": "color",
+      "references": "semantic.primary.background.default",
+      "sentido": "Token semantic para primary / border / default.",
+      "escopo": [
+        "component-token"
+      ],
+      "contexto": "Usado para estabilizar o contrato semantic exposto por semantic.primary.border.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.background.default.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.primary.border.hover": {
+      "layer": "semantic",
+      "type": "color",
+      "references": "semantic.primary.background.hover",
+      "sentido": "Token semantic para primary / border / hover.",
+      "escopo": [
+        "component-token"
+      ],
+      "contexto": "Usado para estabilizar o contrato semantic exposto por semantic.primary.border.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.background.hover.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.primary.border.disabled": {
+      "layer": "semantic",
+      "type": "color",
+      "references": "semantic.primary.background.disabled",
+      "sentido": "Token semantic para primary / border / disabled.",
+      "escopo": [
+        "component-token"
+      ],
+      "contexto": "Usado para estabilizar o contrato semantic exposto por semantic.primary.border.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.background.disabled.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.content.brand": {
+      "layer": "semantic",
+      "type": "color",
+      "references": "semantic.primary.background.default",
+      "sentido": "Token semantic para content / brand.",
+      "escopo": [
+        "component-token"
+      ],
+      "contexto": "Usado para estabilizar o contrato semantic exposto por semantic.content.brand.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.background.default.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.border.error-hover": {
+      "layer": "semantic",
+      "type": "color",
+      "references": "semantic.feedback.error.border.hover",
+      "sentido": "Token semantic para border / error hover.",
+      "escopo": [
+        "component-token"
+      ],
+      "contexto": "Usado para estabilizar o contrato semantic exposto por semantic.border.error-hover.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.feedback.error.border.hover.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/tokens/generated/component.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "component.field.border-color.error-hover"
+        ],
+        "figma": []
+      }
+    },
+    "semantic.border.overlay.default": {
+      "layer": "semantic",
+      "type": "color",
+      "references": "semantic.overlay.default",
+      "sentido": "Token semantic para border / overlay / default.",
+      "escopo": [
+        "component-token"
+      ],
+      "contexto": "Usado para estabilizar o contrato semantic exposto por semantic.border.overlay.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.overlay.default.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.border.overlay.medium": {
+      "layer": "semantic",
+      "type": "color",
+      "references": "semantic.overlay.medium",
+      "sentido": "Token semantic para border / overlay / medium.",
+      "escopo": [
+        "component-token"
+      ],
+      "contexto": "Usado para estabilizar o contrato semantic exposto por semantic.border.overlay.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.overlay.medium.",
+      "usos": {
+        "css": [],
         "tokens": [],
         "figma": []
       }

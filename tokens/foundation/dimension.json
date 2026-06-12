@@ -97,10 +97,20 @@
         "$value": "5rem",
         "$description": "80px"
       },
+      "88": {
+        "$type": "dimension",
+        "$value": "5.5rem",
+        "$description": "88px — control deviation for medium button min-width."
+      },
       "96": {
         "$type": "dimension",
         "$value": "6rem",
         "$description": "96px"
+      },
+      "102": {
+        "$type": "dimension",
+        "$value": "6.375rem",
+        "$description": "102px — control deviation for large button min-width."
       },
       "120": {
         "$type": "dimension",

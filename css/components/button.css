@@ -294,16 +294,20 @@
   padding: var(--ds-button-icon-only-padding-lg);
 }
 
-.ds-button .material-symbols-outlined {
-  font-size: var(--ds-button-icon-size-md);
+.ds-button .ds-icon {
+  width: var(--ds-button-icon-size-md);
+  height: var(--ds-button-icon-size-md);
 }
 
-.ds-button--sm .material-symbols-outlined {
-  font-size: var(--ds-button-icon-size-sm);
+.ds-button--sm .ds-icon {
+  width: var(--ds-button-icon-size-sm);
+  height: var(--ds-button-icon-size-sm);
+  stroke-width: var(--ds-icon-stroke-width-regular-20);
 }
 
-.ds-button--lg .material-symbols-outlined {
-  font-size: var(--ds-button-icon-size-lg);
+.ds-button--lg .ds-icon {
+  width: var(--ds-button-icon-size-lg);
+  height: var(--ds-button-icon-size-lg);
 }
 
 /* ---------------------------------------------------------

@@ -25,13 +25,6 @@
             "$value": "{semantic.space.sm}",
             "$description": "Gap horizontal entre control e content Checkbox."
           }
-        },
-        "radius": {
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.radius.md}",
-            "$description": "Radius do target interativo Checkbox."
-          }
         }
       },
       "content": {
@@ -196,50 +189,6 @@
               "$type": "color",
               "$value": "{semantic.border.control-disabled}",
               "$description": "Border color da box Checkbox unchecked disabled."
-            }
-          },
-          "checked": {
-            "default": {
-              "$type": "color",
-              "$value": "{semantic.primary.background.default}",
-              "$description": "Border color da box Checkbox checked default."
-            },
-            "focus": {
-              "$type": "color",
-              "$value": "{semantic.border.focus}",
-              "$description": "Border color da box Checkbox checked focus."
-            },
-            "hover": {
-              "$type": "color",
-              "$value": "{semantic.primary.background.hover}",
-              "$description": "Border color da box Checkbox checked hover."
-            },
-            "disabled": {
-              "$type": "color",
-              "$value": "{semantic.primary.background.disabled}",
-              "$description": "Border color da box Checkbox checked disabled."
-            }
-          },
-          "indeterminate": {
-            "default": {
-              "$type": "color",
-              "$value": "{semantic.primary.background.default}",
-              "$description": "Border color da box Checkbox indeterminate default."
-            },
-            "focus": {
-              "$type": "color",
-              "$value": "{semantic.border.focus}",
-              "$description": "Border color da box Checkbox indeterminate focus."
-            },
-            "hover": {
-              "$type": "color",
-              "$value": "{semantic.primary.background.hover}",
-              "$description": "Border color da box Checkbox indeterminate hover."
-            },
-            "disabled": {
-              "$type": "color",
-              "$value": "{semantic.primary.background.disabled}",
-              "$description": "Border color da box Checkbox indeterminate disabled."
             }
           }
         }

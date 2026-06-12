@@ -11,15 +11,15 @@
   --input-padding-y: var(--ds-input-padding-y-md);
   --input-gap: var(--ds-input-gap-md);
   --input-icon-frame-size: var(--ds-input-icon-frame-size-md);
-  --input-border-width: var(--ds-input-border-width-default);
+  --input-border-width: var(--ds-field-border-width);
 
   display: flex;
   align-items: center;
   gap: var(--ds-input-gap-md);
-  border: var(--ds-input-border-width-default) solid var(--ds-input-border-color-default);
-  border-radius: var(--ds-input-radius-default);
-  background: var(--ds-input-bg-default);
-  color: var(--ds-input-content-color-default);
+  border: var(--ds-field-border-width) solid var(--ds-field-border-color-default);
+  border-radius: var(--ds-field-radius);
+  background: var(--ds-field-bg-default);
+  color: var(--ds-field-value-color-default);
   font-family: var(--ds-input-text-font-family-default);
   font-weight: var(--ds-input-text-font-weight-default);
   letter-spacing: var(--ds-input-text-letter-spacing-default);
@@ -78,7 +78,7 @@
   border: none;
   background: transparent;
   outline: none;
-  color: var(--ds-input-content-color-default);
+  color: var(--ds-field-value-color-default);
   font-size: inherit;
   font-family: inherit;
   font-weight: inherit;
@@ -139,7 +139,7 @@
 }
 
 .ds-input__field::placeholder {
-  color: var(--ds-input-placeholder-color-default);
+  color: var(--ds-field-placeholder-color-default);
 }
 
 /* Icon
@@ -179,71 +179,71 @@
 
 /* Hover */
 .ds-input:hover:not(.ds-input--disabled):not(:focus-within) {
-  border-color: var(--ds-input-border-color-hover);
+  border-color: var(--ds-field-border-color-hover);
 }
 
 /* Focused */
 .ds-input:focus-within {
-  background: var(--ds-input-bg-focus);
-  border-color: var(--ds-input-border-color-focus);
-  outline: var(--ds-input-focus-ring-stroke-width-default) solid var(--ds-input-focus-ring-color-default);
+  background: var(--ds-field-bg-default);
+  border-color: var(--ds-field-border-color-focus);
+  outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color-default);
   outline-offset: var(--ds-input-focus-ring-offset-default);
 }
 
 /* Error */
 .ds-input--error,
 .ds-field--error .ds-input {
-  background: var(--ds-input-bg-error);
-  border-color: var(--ds-input-border-color-error);
+  background: var(--ds-field-bg-default);
+  border-color: var(--ds-field-border-color-error);
 }
 
 .ds-input--error:hover:not(.ds-input--disabled):not(:focus-within),
 .ds-field--error .ds-input:hover:not(.ds-input--disabled):not(:focus-within) {
-  background: var(--ds-input-bg-error-hover);
-  border-color: var(--ds-input-border-color-error-hover);
+  background: var(--ds-field-bg-default);
+  border-color: var(--ds-field-border-color-error-hover);
 }
 
 .ds-input--error:focus-within,
 .ds-field--error .ds-input:focus-within {
-  border-color: var(--ds-input-border-color-error);
-  outline-color: var(--ds-input-focus-ring-color-error);
+  border-color: var(--ds-field-border-color-error);
+  outline-color: var(--ds-focus-ring-color-error);
 }
 
 /* Filled */
 .ds-input--filled {
-  background: var(--ds-input-bg-filled);
-  border-color: var(--ds-input-border-color-filled);
+  background: var(--ds-field-bg-default);
+  border-color: var(--ds-field-border-color-filled);
 }
 
 .ds-input--filled.ds-input--error,
 .ds-field--error .ds-input--filled {
-  background: var(--ds-input-bg-error);
-  border-color: var(--ds-input-border-color-error);
+  background: var(--ds-field-bg-default);
+  border-color: var(--ds-field-border-color-error);
 }
 
 .ds-input--filled.ds-input--error:hover:not(.ds-input--disabled):not(:focus-within),
 .ds-field--error .ds-input--filled:hover:not(.ds-input--disabled):not(:focus-within) {
-  background: var(--ds-input-bg-error-hover);
-  border-color: var(--ds-input-border-color-error-hover);
+  background: var(--ds-field-bg-default);
+  border-color: var(--ds-field-border-color-error-hover);
 }
 
 /* Disabled */
 .ds-input--disabled,
 .ds-input:has(.ds-input__field:disabled) {
-  background: var(--ds-input-bg-disabled);
-  border-color: var(--ds-input-border-color-disabled);
-  color: var(--ds-input-content-color-disabled);
+  background: var(--ds-field-bg-disabled);
+  border-color: var(--ds-field-border-color-disabled);
+  color: var(--ds-field-value-color-disabled);
   pointer-events: none;
 }
 
 .ds-input--disabled .ds-input__field,
 .ds-input__field:disabled {
-  color: var(--ds-input-content-color-disabled);
+  color: var(--ds-field-value-color-disabled);
 }
 
 .ds-input--disabled .ds-input__field::placeholder,
 .ds-input__field:disabled::placeholder {
-  color: var(--ds-input-placeholder-color-disabled);
+  color: var(--ds-field-placeholder-color-disabled);
 }
 
 .ds-input--disabled .ds-input__icon,
@@ -254,20 +254,20 @@
 /* Readonly */
 .ds-input--readonly,
 .ds-input:has(.ds-input__field:read-only) {
-  background: var(--ds-input-bg-readonly);
-  border-color: var(--ds-input-border-color-readonly);
+  background: var(--ds-field-bg-readonly);
+  border-color: var(--ds-field-border-color-readonly);
 }
 
 .ds-input--readonly .ds-input__field,
 .ds-input__field:read-only {
-  color: var(--ds-input-content-color-readonly);
+  color: var(--ds-field-value-color-readonly);
 }
 
 .ds-input--readonly:focus-within,
 .ds-input:has(.ds-input__field:read-only):focus-within {
-  background: var(--ds-input-bg-readonly);
-  border-color: var(--ds-input-border-color-readonly);
-  outline-color: var(--ds-input-focus-ring-color-readonly);
+  background: var(--ds-field-bg-readonly);
+  border-color: var(--ds-field-border-color-readonly);
+  outline-color: var(--ds-focus-ring-color-readonly);
 }
 
 /* Composed field anatomy

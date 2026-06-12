@@ -56,14 +56,19 @@
 }
 
 /* Icon avatar */
-.ds-avatar--icon .material-symbols-outlined {
-  font-size: var(--ds-avatar-icon-size-md);
+.ds-avatar--icon .ds-icon {
+  width: var(--ds-avatar-icon-size-md);
+  height: var(--ds-avatar-icon-size-md);
 }
 
-.ds-avatar--sm.ds-avatar--icon .material-symbols-outlined {
-  font-size: var(--ds-avatar-icon-size-sm);
+.ds-avatar--sm.ds-avatar--icon .ds-icon {
+  width: var(--ds-avatar-icon-size-sm);
+  height: var(--ds-avatar-icon-size-sm);
+  stroke-width: var(--ds-icon-stroke-width-regular-20);
 }
 
-.ds-avatar--lg.ds-avatar--icon .material-symbols-outlined {
-  font-size: var(--ds-avatar-icon-size-lg);
+.ds-avatar--lg.ds-avatar--icon .ds-icon {
+  width: var(--ds-avatar-icon-size-lg);
+  height: var(--ds-avatar-icon-size-lg);
+  stroke-width: var(--ds-icon-stroke-width-regular-32);
 }

@@ -25,13 +25,6 @@
             "$value": "{semantic.space.sm}",
             "$description": "Gap horizontal entre track e content Toggle."
           }
-        },
-        "radius": {
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.radius.md}",
-            "$description": "Radius do target interativo Toggle."
-          }
         }
       },
       "content": {

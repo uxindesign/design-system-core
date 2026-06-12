@@ -1,6 +1,6 @@
 # Inventário de componentes — Design System Core
 
-> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-06-05. Não editar manualmente.
+> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-06-12. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
 > Versão atual: **1.0.0-beta.4**
 
@@ -41,10 +41,10 @@
 
 | Coleção | Tokens | Status |
 |---------|--------|--------|
-| Foundation | 266 | 🟢 |
-| Semantic (light) | 178 | 🟢 |
-| Semantic (dark) | 178 | 🟢 |
-| Component | 678 | 🟢 |
+| Foundation | 273 | 🟢 |
+| Semantic (light) | 226 | 🟢 |
+| Semantic (dark) | 226 | 🟢 |
+| Component | 693 | 🟢 |
 
 ## Pipeline
 

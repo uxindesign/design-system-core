@@ -22,8 +22,10 @@
   height: var(--ds-alert-icon-frame-size-default);
 }
 
-.ds-alert__icon .material-symbols-outlined {
-  font-size: var(--ds-alert-icon-size-default);
+.ds-alert__icon .ds-icon {
+  width: var(--ds-alert-icon-size-default);
+  height: var(--ds-alert-icon-size-default);
+  stroke-width: var(--ds-icon-stroke-width-regular-20);
 }
 
 /* Icon color em Subtle — tematizado por feedback (Figma binda
@@ -83,8 +85,10 @@
   opacity: 1;
 }
 
-.ds-alert__close .material-symbols-outlined {
-  font-size: var(--ds-alert-close-icon-size-default);
+.ds-alert__close .ds-icon {
+  width: var(--ds-alert-close-icon-size-default);
+  height: var(--ds-alert-close-icon-size-default);
+  stroke-width: var(--ds-icon-stroke-width-regular-20);
 }
 
 .ds-alert__close:focus-visible {

@@ -82,18 +82,18 @@
         "size": {
           "sm": {
             "$type": "dimension",
-            "$value": "{semantic.typography.body.font-size.xl}",
-            "$description": "Tamanho do icon Avatar sm."
+            "$value": "{semantic.size.sm}",
+            "$description": "Tamanho do ícone SVG fallback do Avatar sm."
           },
           "md": {
             "$type": "dimension",
-            "$value": "{semantic.typography.body.font-size.2xl}",
-            "$description": "Tamanho do icon Avatar md."
+            "$value": "{semantic.size.md}",
+            "$description": "Tamanho do ícone SVG fallback do Avatar md."
           },
           "lg": {
             "$type": "dimension",
-            "$value": "{semantic.typography.body.font-size.4xl}",
-            "$description": "Tamanho do icon Avatar lg."
+            "$value": "{semantic.size.lg}",
+            "$description": "Tamanho do ícone SVG fallback do Avatar lg."
           }
         }
       }

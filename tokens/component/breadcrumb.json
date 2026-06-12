@@ -15,12 +15,14 @@
             "$value": "{semantic.space.xs}",
             "$description": "Espaço interno entre partes do item de Breadcrumb."
           }
-        },
+        }
+      },
+      "focus-ring": {
         "radius": {
           "default": {
             "$type": "dimension",
             "$value": "{semantic.radius.md}",
-            "$description": "Raio do item de Breadcrumb."
+            "$description": "Radius do focus ring Breadcrumb."
           }
         }
       },

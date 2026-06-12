@@ -186,10 +186,11 @@ Editar um component set no Figma exige preservar a API pública do componente, n
 6. Verificar que Focus Ring usa `focus-ring/color/*` e `focus-ring/width`; radius pode ficar local quando acompanha o shape.
 7. Verificar que `Component` aponta apenas para `Semantic`; `Component → Foundation`, `Component → Component` e valor cru em Component são regressões.
 8. Verificar que não há `ALL_SCOPES`, variável sem WEB code syntax, `error-hover`, nem `danger` fora de Button/action destructive.
-9. Após regenerar `.figma-snapshot.json` com o snapshot exporter atualizado, rodar `npm run verify:figma-structure`. Esse gate valida regressões estruturais objetivas; não substitui screenshot.
-10. Verificar screenshot do component set quando a mudança mexer em layout, icon, spacing ou texto.
-11. Se variables Figma foram alteradas, regenerar `.figma-snapshot.json` antes de afirmar que Figma↔JSON está em dia.
-12. Se a mudança impacta repo, repetir o fluxo Figma → JSON → CSS gerado → docs/API/LLM → `verify:tokens` → testes relevantes.
+9. Após regenerar `.figma-snapshot.json` ou `.figma-snapshot.structure.json` com o snapshot exporter atualizado, rodar `npm run verify:figma-structure`. Esse gate valida regressões estruturais objetivas; não substitui screenshot.
+10. Quando a mudança cria, renomeia ou remove tokens Component, rodar `npm run audit:component-tokens` com snapshot estrutural contendo `structureAudit.variableUsage`. Token sem uso real em variants finais deve ser tratado como candidato a remoção ou exigir justificativa explícita.
+11. Verificar screenshot do component set quando a mudança mexer em layout, icon, spacing ou texto.
+12. Se variables Figma foram alteradas, regenerar `.figma-snapshot.json` antes de afirmar que Figma↔JSON está em dia.
+13. Se a mudança impacta repo, repetir o fluxo Figma → JSON → CSS gerado → docs/API/LLM → `verify:tokens` → testes relevantes.
 
 ### 4.4 Sync Figma → JSON (após mudança visual feita no Figma)
 
@@ -227,6 +228,7 @@ CSS_ONLY e BY_DESIGN são informativos (não drift). VALUE_DRIFT/NEW_IN_FIGMA/MI
 | `npm run sync:docs` | Regenera `docs/token-schema.md`, `docs/component-inventory.md`, `docs/adr-index.md`, ADR HTMLs | Sim se falha |
 | `npm run verify:tokens` | Valida JSON integrity, JSON↔CSS, CSS leak (ADR-013), Registry completeness, JSON↔Figma drift | **Sim se erro** |
 | `npm run verify:figma-structure` | Valida snapshot Figma contra invariantes estruturais: bindings de ícone, glyph/Icon Placeholder, scopes, WEB syntax, aliases Component→Semantic e focus rings | Sim quando o snapshot foi regenerado para mudanças Figma |
+| `npm run audit:component-tokens` | Falha para Component variables sem uso real nos variants finais, usando `structureAudit.variableUsage` | Sim durante limpeza/criação de tokens Component |
 | `git diff` review | Confirmar que diff bate com a intenção da mudança | Manual |
 
 Atalho: `npm run build:all` roda `build:tokens → sync:docs → build:api → build:llms → verify:tokens` em sequência.

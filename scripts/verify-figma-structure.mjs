@@ -9,6 +9,7 @@
  * Uso:
  *   node scripts/verify-figma-structure.mjs
  *   node scripts/verify-figma-structure.mjs --snapshot .figma-snapshot.json
+ *   node scripts/verify-figma-structure.mjs --strict-unused
  */
 
 import fs from "node:fs";
@@ -20,9 +21,10 @@ const ROOT = path.resolve(__dirname, "..");
 
 const args = process.argv.slice(2);
 if (args.includes("--help") || args.includes("-h")) {
-  console.log("Uso: node scripts/verify-figma-structure.mjs [--snapshot .figma-snapshot.json]");
+  console.log("Uso: node scripts/verify-figma-structure.mjs [--snapshot .figma-snapshot.json] [--strict-unused]");
   process.exit(0);
 }
+const strictUnused = args.includes("--strict-unused");
 
 const snapshotArgIndex = args.indexOf("--snapshot");
 const DEFAULT_STRUCTURE_SNAPSHOT_PATH = path.join(ROOT, ".figma-snapshot.structure.json");
@@ -55,6 +57,7 @@ const variablesById = new Map(variables.map((variable) => [variable.id, variable
 const collectionNameById = new Map(
   Object.entries(collectionsById).map(([id, collection]) => [id, collection.name])
 );
+const registry = loadRegistry();
 
 const structureAudit = snapshot.structureAudit || null;
 const variableAuditComplete = Boolean(structureAudit?.variableAuditComplete);
@@ -112,6 +115,33 @@ if (structureAudit?.truncated) {
   ));
 }
 
+const variableUsage = structureAudit?.variableUsage || null;
+const unusedComponentVariablesRaw = Array.isArray(variableUsage?.unusedComponentVariables)
+  ? variableUsage.unusedComponentVariables
+  : [];
+const unusedComponentVariables = classifyUnusedComponentVariables(unusedComponentVariablesRaw, registry);
+const unusedSummary = summarizeUnusedComponentVariables(unusedComponentVariables);
+
+if (strictUnused && !variableUsage) {
+  issues.push(issue(
+    "snapshot",
+    "missing-variable-usage",
+    "snapshot",
+    "Snapshot não contém structureAudit.variableUsage. Gere snapshot estrutural atualizado antes da auditoria de utilidade."
+  ));
+}
+
+if (strictUnused) {
+  for (const item of unusedComponentVariables) {
+    issues.push(issue(
+      "variable",
+      item.issueCode,
+      item.name,
+      item.message
+    ));
+  }
+}
+
 const grouped = groupIssues(issues);
 
 console.log("");
@@ -121,6 +151,14 @@ console.log(`snapshot:        ${path.relative(ROOT, snapshotPath)}`);
 console.log(`generatedAt:     ${snapshot.generatedAt || "?"}`);
 console.log(`variables:       ${variables.length}`);
 console.log(`component pages: ${structureAudit?.componentPageCount ?? "?"}`);
+if (variableUsage) {
+  console.log(`component vars:  ${variableUsage.usedComponentVariableCount}/${variableUsage.componentVariableCount} usadas`);
+  console.log(`unused vars:     ${variableUsage.unusedComponentVariableCount}`);
+  if (unusedComponentVariables.length > 0) {
+    console.log(`repo-only vars:  ${unusedSummary.repoUsedNotFigmaBound}`);
+    console.log(`dead vars:       ${unusedSummary.deadComponentVariable}`);
+  }
+}
 console.log(`issues:          ${issues.length}`);
 console.log("");
 
@@ -135,11 +173,30 @@ if (issues.length > 0) {
     console.log(`  [${item.code}] ${item.target}`);
     if (item.message) console.log(`    ${item.message}`);
   }
+  if (!strictUnused && unusedComponentVariables.length > 0) {
+    console.log("");
+    console.log("Aviso: há Component variables sem uso nos variants finais.");
+    console.log("Use --strict-unused para tratar isso como erro.");
+    for (const item of unusedComponentVariables.slice(0, 20)) {
+      console.log(`  [${item.issueCode}] ${item.name}`);
+    }
+  }
   console.log("");
   process.exit(1);
 }
 
 console.log("✓ Estrutura Figma válida para as invariantes automatizadas.");
+if (!strictUnused && unusedComponentVariables.length > 0) {
+  console.log("");
+  console.log("Aviso: Component variables sem uso nos variants finais:");
+  for (const item of unusedComponentVariables.slice(0, 20)) {
+    console.log(`  [${item.issueCode}] ${item.name}`);
+  }
+  if (unusedComponentVariables.length > 20) {
+    console.log(`  ... +${unusedComponentVariables.length - 20}`);
+  }
+  console.log("Rode com --strict-unused para bloquear esses casos.");
+}
 console.log("");
 
 function auditVariables(allVariables, variableById, collectionById, out) {
@@ -227,6 +284,52 @@ function auditComponentAlias(sourceName, targetName, modeId, out) {
   if (sourceName.includes("/bg/") && !/^(background|surface|overlay|primary\/background|feedback|toned\/background|outline\/background|ghost\/background)\//.test(targetName)) {
     out.push(issue("variable", "component-background-alias", sourceName, `Mode: ${modeId}; target: ${targetName}`));
   }
+}
+
+function loadRegistry() {
+  const registryPath = path.join(ROOT, "tokens", "registry.json");
+  if (!fs.existsSync(registryPath)) return null;
+  try {
+    return JSON.parse(fs.readFileSync(registryPath, "utf8"));
+  } catch {
+    return null;
+  }
+}
+
+function classifyUnusedComponentVariables(rows, tokenRegistry) {
+  return rows.map((row) => {
+    const tokenPath = `component.${row.name.replaceAll("/", ".")}`;
+    const registryEntry = tokenRegistry?.entries?.[tokenPath] || null;
+    const cssUsage = registryEntry?.usos?.css || [];
+    const tokenUsage = registryEntry?.usos?.tokens || [];
+    const hasRepoUsage = cssUsage.length > 0 || tokenUsage.length > 0;
+
+    return {
+      ...row,
+      tokenPath,
+      cssUsage,
+      tokenUsage,
+      hasRepoUsage,
+      issueCode: hasRepoUsage ? "repo-used-not-figma-bound" : "dead-component-variable",
+      message: hasRepoUsage
+        ? "Component variable consumida no repo, mas sem binding nos variants finais do Figma."
+        : "Component variable sem uso no Figma e sem uso registrado no repo.",
+    };
+  });
+}
+
+function summarizeUnusedComponentVariables(rows) {
+  const summary = {
+    repoUsedNotFigmaBound: 0,
+    deadComponentVariable: 0,
+  };
+
+  for (const row of rows) {
+    if (row.hasRepoUsage) summary.repoUsedNotFigmaBound += 1;
+    else summary.deadComponentVariable += 1;
+  }
+
+  return summary;
 }
 
 function formatStructureIssue(item) {

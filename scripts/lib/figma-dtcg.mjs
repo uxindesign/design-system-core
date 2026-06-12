@@ -24,6 +24,7 @@ export const FOUNDATION_PREFIX_TO_FILE = {
   radius: "radius.json",
   opacity: "opacity.json",
   border: "stroke.json",
+  stroke: "stroke.json",
 };
 
 // Brand tem 3 modos (Default/Ocean/Forest), só Default entra em foundation/brand.json.
@@ -359,6 +360,9 @@ const JSON_ONLY_PATHS = [
   /^semantic\.z\./,                                    // z-index (Figma usa layer order)
   /^semantic\.shadow\./,                               // shadow (Figma Effect Style, não Variable)
   /^component\.form-field\./,                          // ADR-017: Form Field é componente CSS-only
+  /^component\.breadcrumb\.focus-ring\.radius\.default$/, // focus ring existe só no CSS; Figma Breadcrumb não tem focus variant
+  /^component\.modal\.close\.(icon-size|padding)\.default$/, // Modal usa instância de ícone no Figma; CSS controla botão HTML
+  /^component\.tabs\.panel\.padding-y\.default$/,       // painel de Tabs é estrutura CSS, não variant Figma
   // 2xs (11px) é micro-text usado em docs/layout.css. Figma omite por estar
   // abaixo do mínimo recomendado WCAG 1.4.4 (12px); CSS mantém pra meta-info.
   /^foundation\.typography\.font\.size\.11$/,

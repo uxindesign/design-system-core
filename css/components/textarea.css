@@ -8,9 +8,9 @@
 .ds-textarea {
   display: flex;
   width: 100%;
-  border: var(--ds-textarea-border-width-default) solid var(--ds-textarea-border-color-default);
-  border-radius: var(--ds-textarea-radius-default);
-  background: var(--ds-textarea-bg-default);
+  border: var(--ds-field-border-width) solid var(--ds-field-border-color-default);
+  border-radius: var(--ds-field-radius);
+  background: var(--ds-field-bg-default);
   transition: border-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
               box-shadow var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
 }
@@ -44,7 +44,7 @@
   border: none;
   background: transparent;
   outline: none;
-  color: var(--ds-textarea-content-color-default);
+  color: var(--ds-field-value-color-default);
   font-size: inherit;
   font-family: var(--ds-textarea-text-font-family-default);
   font-weight: var(--ds-textarea-text-font-weight-default);
@@ -67,7 +67,7 @@
 }
 
 .ds-textarea__field::placeholder {
-  color: var(--ds-textarea-placeholder-color-default);
+  color: var(--ds-field-placeholder-color-default);
 }
 
 /* States
@@ -75,90 +75,90 @@
 
 /* Hover */
 .ds-textarea:hover:not(.ds-textarea--disabled):not(:focus-within) {
-  border-color: var(--ds-textarea-border-color-hover);
+  border-color: var(--ds-field-border-color-hover);
 }
 
 /* Focused */
 .ds-textarea:focus-within {
-  background: var(--ds-textarea-bg-focus);
-  border-color: var(--ds-textarea-border-color-focus);
-  outline: var(--ds-textarea-focus-ring-stroke-width-default) solid var(--ds-textarea-focus-ring-color-default);
+  background: var(--ds-field-bg-default);
+  border-color: var(--ds-field-border-color-focus);
+  outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color-default);
   outline-offset: var(--ds-textarea-focus-ring-offset-default);
 }
 
 /* Error */
 .ds-textarea--error,
 .ds-field--error .ds-textarea {
-  background: var(--ds-textarea-bg-error);
-  border-color: var(--ds-textarea-border-color-error);
+  background: var(--ds-field-bg-default);
+  border-color: var(--ds-field-border-color-error);
 }
 
 .ds-textarea--error:hover:not(.ds-textarea--disabled):not(:focus-within),
 .ds-field--error .ds-textarea:hover:not(.ds-textarea--disabled):not(:focus-within) {
-  background: var(--ds-textarea-bg-error-hover);
-  border-color: var(--ds-textarea-border-color-error-hover);
+  background: var(--ds-field-bg-default);
+  border-color: var(--ds-field-border-color-error-hover);
 }
 
 .ds-textarea--error:focus-within,
 .ds-field--error .ds-textarea:focus-within {
-  border-color: var(--ds-textarea-border-color-error);
-  outline-color: var(--ds-textarea-focus-ring-color-error);
+  border-color: var(--ds-field-border-color-error);
+  outline-color: var(--ds-focus-ring-color-error);
 }
 
 /* Filled */
 .ds-textarea--filled {
-  background: var(--ds-textarea-bg-filled);
-  border-color: var(--ds-textarea-border-color-filled);
+  background: var(--ds-field-bg-default);
+  border-color: var(--ds-field-border-color-filled);
 }
 
 .ds-textarea--filled.ds-textarea--error,
 .ds-field--error .ds-textarea--filled {
-  background: var(--ds-textarea-bg-error);
-  border-color: var(--ds-textarea-border-color-error);
+  background: var(--ds-field-bg-default);
+  border-color: var(--ds-field-border-color-error);
 }
 
 .ds-textarea--filled.ds-textarea--error:hover:not(.ds-textarea--disabled):not(:focus-within),
 .ds-field--error .ds-textarea--filled:hover:not(.ds-textarea--disabled):not(:focus-within) {
-  background: var(--ds-textarea-bg-error-hover);
-  border-color: var(--ds-textarea-border-color-error-hover);
+  background: var(--ds-field-bg-default);
+  border-color: var(--ds-field-border-color-error-hover);
 }
 
 /* Disabled */
 .ds-textarea--disabled,
 .ds-textarea:has(.ds-textarea__field:disabled) {
-  background: var(--ds-textarea-bg-disabled);
-  border-color: var(--ds-textarea-border-color-disabled);
+  background: var(--ds-field-bg-disabled);
+  border-color: var(--ds-field-border-color-disabled);
   pointer-events: none;
 }
 
 .ds-textarea--disabled .ds-textarea__field,
 .ds-textarea__field:disabled {
-  color: var(--ds-textarea-content-color-disabled);
+  color: var(--ds-field-value-color-disabled);
   resize: none;
 }
 
 .ds-textarea--disabled .ds-textarea__field::placeholder,
 .ds-textarea__field:disabled::placeholder {
-  color: var(--ds-textarea-placeholder-color-disabled);
+  color: var(--ds-field-placeholder-color-disabled);
 }
 
 /* Readonly */
 .ds-textarea--readonly,
 .ds-textarea:has(.ds-textarea__field:read-only) {
-  background: var(--ds-textarea-bg-readonly);
-  border-color: var(--ds-textarea-border-color-readonly);
+  background: var(--ds-field-bg-readonly);
+  border-color: var(--ds-field-border-color-readonly);
 }
 
 .ds-textarea--readonly .ds-textarea__field,
 .ds-textarea__field:read-only {
-  color: var(--ds-textarea-content-color-readonly);
+  color: var(--ds-field-value-color-readonly);
 }
 
 .ds-textarea--readonly:focus-within,
 .ds-textarea:has(.ds-textarea__field:read-only):focus-within {
-  background: var(--ds-textarea-bg-readonly);
-  border-color: var(--ds-textarea-border-color-readonly);
-  outline-color: var(--ds-textarea-focus-ring-color-readonly);
+  background: var(--ds-field-bg-readonly);
+  border-color: var(--ds-field-border-color-readonly);
+  outline-color: var(--ds-focus-ring-color-readonly);
 }
 
 /* Character Counter

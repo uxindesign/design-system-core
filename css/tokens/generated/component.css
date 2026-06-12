@@ -48,9 +48,9 @@
   --ds-avatar-initials-font-weight-sm: var(--ds-body-font-weight-bold); /** Font-weight das iniciais Avatar sm. */
   --ds-avatar-initials-font-weight-md: var(--ds-body-font-weight-bold); /** Font-weight das iniciais Avatar md. */
   --ds-avatar-initials-font-weight-lg: var(--ds-body-font-weight-semibold); /** Font-weight das iniciais Avatar lg. */
-  --ds-avatar-icon-size-sm: var(--ds-body-font-size-xl); /** Tamanho do icon Avatar sm. */
-  --ds-avatar-icon-size-md: var(--ds-body-font-size-2xl); /** Tamanho do icon Avatar md. */
-  --ds-avatar-icon-size-lg: var(--ds-body-font-size-4xl); /** Tamanho do icon Avatar lg. */
+  --ds-avatar-icon-size-sm: var(--ds-size-sm); /** Tamanho do ícone SVG fallback do Avatar sm. */
+  --ds-avatar-icon-size-md: var(--ds-size-md); /** Tamanho do ícone SVG fallback do Avatar md. */
+  --ds-avatar-icon-size-lg: var(--ds-size-lg); /** Tamanho do ícone SVG fallback do Avatar lg. */
   --ds-badge-padding-x-default: var(--ds-space-sm); /** Padding horizontal do Badge. */
   --ds-badge-padding-y-default: var(--ds-space-2xs); /** Padding vertical do Badge. */
   --ds-badge-gap-default: var(--ds-space-xs); /** Gap interno do Badge. */
@@ -61,7 +61,7 @@
   --ds-badge-label-font-weight-default: var(--ds-body-font-weight-bold); /** Font-weight do label Badge. */
   --ds-breadcrumb-gap-default: var(--ds-space-xs); /** Espaço entre itens e separadores do Breadcrumb. */
   --ds-breadcrumb-item-gap-default: var(--ds-space-xs); /** Espaço interno entre partes do item de Breadcrumb. */
-  --ds-breadcrumb-item-radius-default: var(--ds-radius-md); /** Raio do item de Breadcrumb. */
+  --ds-breadcrumb-focus-ring-radius-default: var(--ds-radius-md); /** Radius do focus ring Breadcrumb. */
   --ds-breadcrumb-label-font-size-default: var(--ds-body-font-size-sm); /** Tamanho da fonte do rótulo de Breadcrumb. */
   --ds-breadcrumb-label-line-height-default: var(--ds-body-line-height-sm); /** Altura de linha do rótulo de Breadcrumb. */
   --ds-breadcrumb-label-font-weight-default: var(--ds-body-font-weight-bold); /** Peso da fonte do rótulo de Breadcrumb. */
@@ -192,7 +192,6 @@
   --ds-checkbox-target-height-md: var(--ds-size-xl); /** Altura minima da area interativa Checkbox md. */
   --ds-checkbox-target-height-lg: var(--ds-size-2xl); /** Altura minima da area interativa Checkbox lg. */
   --ds-checkbox-target-gap-default: var(--ds-space-sm); /** Gap horizontal entre control e content Checkbox. */
-  --ds-checkbox-target-radius-default: var(--ds-radius-md); /** Radius do target interativo Checkbox. */
   --ds-checkbox-content-gap-default: var(--ds-space-xs); /** Gap vertical entre textos do Checkbox. */
   --ds-checkbox-label-color-default: var(--ds-content-strong); /** Cor do label Checkbox. */
   --ds-checkbox-label-color-disabled: var(--ds-content-disabled); /** Cor do label Checkbox disabled. */
@@ -219,14 +218,6 @@
   --ds-checkbox-box-border-color-unchecked-focus: var(--ds-border-focus); /** Border color da box Checkbox unchecked focus. */
   --ds-checkbox-box-border-color-unchecked-hover: var(--ds-border-control-hover); /** Border color da box Checkbox unchecked hover. */
   --ds-checkbox-box-border-color-unchecked-disabled: var(--ds-border-control-disabled); /** Border color da box Checkbox unchecked disabled. */
-  --ds-checkbox-box-border-color-checked-default: var(--ds-primary-background-default); /** Border color da box Checkbox checked default. */
-  --ds-checkbox-box-border-color-checked-focus: var(--ds-border-focus); /** Border color da box Checkbox checked focus. */
-  --ds-checkbox-box-border-color-checked-hover: var(--ds-primary-background-hover); /** Border color da box Checkbox checked hover. */
-  --ds-checkbox-box-border-color-checked-disabled: var(--ds-primary-background-disabled); /** Border color da box Checkbox checked disabled. */
-  --ds-checkbox-box-border-color-indeterminate-default: var(--ds-primary-background-default); /** Border color da box Checkbox indeterminate default. */
-  --ds-checkbox-box-border-color-indeterminate-focus: var(--ds-border-focus); /** Border color da box Checkbox indeterminate focus. */
-  --ds-checkbox-box-border-color-indeterminate-hover: var(--ds-primary-background-hover); /** Border color da box Checkbox indeterminate hover. */
-  --ds-checkbox-box-border-color-indeterminate-disabled: var(--ds-primary-background-disabled); /** Border color da box Checkbox indeterminate disabled. */
   --ds-checkbox-mark-fill-checked-default: var(--ds-primary-content-default); /** Fill do checkmark Checkbox checked default. */
   --ds-checkbox-mark-fill-checked-focus: var(--ds-primary-content-default); /** Fill do checkmark Checkbox checked focus. */
   --ds-checkbox-mark-fill-checked-hover: var(--ds-primary-content-hover); /** Fill do checkmark Checkbox checked hover. */
@@ -241,6 +232,31 @@
   --ds-divider-line-color-default: var(--ds-border-subtle); /** Cor da linha do Divider. */
   --ds-divider-line-thickness-default: var(--ds-border-width-default); /** Espessura da linha do Divider. */
   --ds-divider-line-radius-default: var(--ds-radius-md); /** Raio da linha do Divider. */
+  --ds-field-bg-default: var(--ds-surface-default); /** Field background default. */
+  --ds-field-bg-disabled: var(--ds-background-disabled); /** Field background disabled. */
+  --ds-field-bg-readonly: var(--ds-background-subtle); /** Field background read-only. */
+  --ds-field-border-color-default: var(--ds-border-control-default); /** Field border default. */
+  --ds-field-border-color-disabled: var(--ds-border-control-disabled); /** Field border disabled. */
+  --ds-field-border-color-error: var(--ds-border-error); /** Field border error. */
+  --ds-field-border-color-filled: var(--ds-border-strong); /** Field border filled. */
+  --ds-field-border-color-focus: var(--ds-border-focus); /** Field border focus. */
+  --ds-field-border-color-hover: var(--ds-border-control-hover); /** Field border hover. */
+  --ds-field-border-color-readonly: var(--ds-border-subtle); /** Field border read-only. */
+  --ds-field-border-width: var(--ds-border-width-default); /** Field border width. */
+  --ds-field-padding-y-sm: var(--ds-space-sm); /** Field vertical padding sm. */
+  --ds-field-padding-y-md: var(--ds-space-control-padding-10); /** Field vertical padding md. */
+  --ds-field-padding-y-lg: var(--ds-space-md); /** Field vertical padding lg. */
+  --ds-field-placeholder-color-default: var(--ds-content-subtle); /** Field placeholder color default. */
+  --ds-field-placeholder-color-disabled: var(--ds-content-disabled); /** Field placeholder color disabled. */
+  --ds-field-radius: var(--ds-radius-md); /** Field radius. */
+  --ds-field-value-color-default: var(--ds-content-strong); /** Field value color default. */
+  --ds-field-value-color-disabled: var(--ds-content-disabled); /** Field value color disabled. */
+  --ds-field-value-color-readonly: var(--ds-content-default); /** Field value color read-only. */
+  --ds-focus-ring-color-default: var(--ds-border-focus); /** Focus ring color default. */
+  --ds-focus-ring-color-error: var(--ds-border-focus-error); /** Focus ring color error. */
+  --ds-focus-ring-color-readonly: var(--ds-border-control-default); /** Focus ring color read-only. */
+  --ds-focus-ring-color-success: var(--ds-feedback-success-border-default); /** Focus ring color success. */
+  --ds-focus-ring-width: var(--ds-border-width-focus); /** Focus ring width. */
   --ds-form-field-gap-default: var(--ds-space-xs); /** Gap vertical entre label, controle, helper e erro no Form Field. */
   --ds-form-field-label-row-gap-default: var(--ds-space-2xs); /** Gap horizontal entre label e indicador required no Form Field. */
   --ds-form-field-label-color-default: var(--ds-content-strong); /** Cor default do label Form Field. */
@@ -432,7 +448,6 @@
   --ds-radio-control-border-color-selected-default: var(--ds-primary-background-default); /** Border color do control Radio selected default. */
   --ds-radio-control-border-color-selected-focus: var(--ds-border-focus); /** Border color do control Radio selected focus. */
   --ds-radio-control-border-color-selected-hover: var(--ds-primary-background-hover); /** Border color do control Radio selected hover. */
-  --ds-radio-control-border-color-selected-disabled: var(--ds-primary-background-disabled); /** Border color do control Radio selected disabled. */
   --ds-radio-control-border-width-unselected-default: var(--ds-border-width-default); /** Border width do control Radio unselected. */
   --ds-radio-control-border-width-selected-default: var(--ds-border-width-strong); /** Border width do control Radio selected. */
   --ds-radio-dot-radius-default: var(--ds-radius-full); /** Radius do dot Radio. */
@@ -552,8 +567,8 @@
   --ds-tabs-list-border-width-default: var(--ds-border-width-default); /** Largura da borda da lista de Tabs. */
   --ds-tabs-item-padding-x-default: var(--ds-space-lg); /** Espaçamento interno horizontal do item de Tabs. */
   --ds-tabs-item-padding-top-default: var(--ds-space-md); /** Espaçamento interno superior do item de Tabs. */
-  --ds-tabs-item-radius-default: var(--ds-radius-md); /** Raio do item de Tabs. */
   --ds-tabs-item-indicator-gap-default: var(--ds-space-control-padding-10); /** Espaço entre o rótulo e o indicador de Tabs. */
+  --ds-tabs-focus-ring-radius-default: var(--ds-radius-md); /** Radius do focus ring Tabs. */
   --ds-tabs-indicator-height-default: var(--ds-border-width-strong); /** Altura do indicador de Tabs. */
   --ds-tabs-indicator-radius-default: var(--ds-radius-md); /** Raio do indicador de Tabs. */
   --ds-tabs-label-font-size-default: var(--ds-body-font-size-sm); /** Tamanho da fonte do rótulo de Tabs. */
@@ -637,7 +652,6 @@
   --ds-toggle-target-height-md: var(--ds-size-xl); /** Altura minima da area interativa Toggle md. */
   --ds-toggle-target-height-lg: var(--ds-size-2xl); /** Altura minima da area interativa Toggle lg. */
   --ds-toggle-target-gap-default: var(--ds-space-sm); /** Gap horizontal entre track e content Toggle. */
-  --ds-toggle-target-radius-default: var(--ds-radius-md); /** Radius do target interativo Toggle. */
   --ds-toggle-content-gap-default: var(--ds-space-xs); /** Gap vertical entre textos do Toggle. */
   --ds-toggle-label-color-default: var(--ds-content-strong); /** Cor do label Toggle. */
   --ds-toggle-label-color-disabled: var(--ds-content-disabled); /** Cor do label Toggle disabled. */
@@ -681,4 +695,5 @@
   --ds-tooltip-label-font-weight-default: var(--ds-body-font-weight-regular); /** Font-weight do label Tooltip. */
   --ds-tooltip-arrow-base-default: var(--ds-space-sm); /** Base visual da seta Tooltip. */
   --ds-tooltip-arrow-depth-default: var(--ds-space-xs); /** Profundidade visual da seta Tooltip. */
+  --ds-field-border-color-error-hover: var(--ds-border-error-hover); /** Field border error hover. */
 }

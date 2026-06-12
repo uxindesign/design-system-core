@@ -1,6 +1,6 @@
 # Token schema — Design System Core
 
-> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-06-05. Não editar manualmente.
+> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-06-12. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
 > Versão atual: **1.0.0-beta.4**
 
@@ -12,31 +12,31 @@
 | Formato canônico | JSON (DTCG) em `tokens/` |
 | CSS gerado | Style Dictionary → `css/tokens/generated/` |
 | Pipeline | ✅ index.css importa apenas generated/ |
-| Paridade light/dark | ✅ 178 tokens em ambos os modos |
+| Paridade light/dark | ✅ 226 tokens em ambos os modos |
 
 ## Camadas
 
 | Camada | Tokens | Arquivos |
 |--------|--------|----------|
-| Foundation/Core | **266** | 9 |
-| Semantic/System | **178 × 2 modos** | light.json + dark.json |
-| Component | **678** | 19 |
+| Foundation/Core | **273** | 9 |
+| Semantic/System | **226 × 2 modos** | light.json + dark.json |
+| Component | **693** | 21 |
 
-## Foundation (266 tokens)
+## Foundation (273 tokens)
 
 | Arquivo | Tokens |
 |---------|--------|
 | `colors.json` | 147 |
-| `dimension.json` | 28 |
+| `dimension.json` | 30 |
 | `motion.json` | 10 |
 | `opacity.json` | 6 |
 | `radius.json` | 7 |
 | `shadows.json` | 5 |
-| `stroke.json` | 3 |
+| `stroke.json` | 8 |
 | `typography.json` | 54 |
 | `z-index.json` | 6 |
 
-## Semantic (178 tokens × 2 modos)
+## Semantic (226 tokens × 2 modos)
 
 Categorias raiz em light.json:
 
@@ -50,6 +50,9 @@ semantic.feedback.*
 semantic.surface.*
 semantic.background.*
 semantic.content.*
+semantic.content-placeholder.*
+semantic.control.*
+semantic.icon.*
 semantic.border.*
 semantic.overlay.*
 semantic.opacity.*
@@ -62,7 +65,7 @@ semantic.typography.*
 semantic.z.*
 ```
 
-## Component (678 tokens)
+## Component (693 tokens)
 
 | Arquivo | Tokens |
 |---------|--------|
@@ -72,18 +75,20 @@ semantic.z.*
 | `breadcrumb.json` | 11 |
 | `button.json` | 104 |
 | `card.json` | 17 |
-| `checkbox.json` | 50 |
+| `checkbox.json` | 41 |
 | `divider.json` | 3 |
+| `field.json` | 21 |
+| `focus-ring.json` | 5 |
 | `form-field.json` | 24 |
 | `input.json` | 86 |
 | `modal.json` | 53 |
-| `radio.json` | 42 |
+| `radio.json` | 41 |
 | `select.json` | 97 |
 | `skeleton.json` | 6 |
 | `spinner.json` | 5 |
 | `tabs.json` | 12 |
 | `textarea.json` | 75 |
-| `toggle.json` | 46 |
+| `toggle.json` | 45 |
 | `tooltip.json` | 8 |
 
 ## Regras invioláveis

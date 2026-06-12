@@ -171,6 +171,7 @@ async function buildStructureAudit(variables, collectionsById) {
     Object.entries(collectionsById).map(([id, collection]) => [id, collection.name])
   );
   const issues = [];
+  const usageByVariable = new Map();
 
   auditVariables(variables, variablesById, collectionNameById, issues);
 
@@ -184,7 +185,7 @@ async function buildStructureAudit(variables, collectionsById) {
       figma.currentPage = page;
     }
     const before = issues.length;
-    await auditPageNodes(page, variablesById, collectionNameById, issues);
+    await auditPageNodes(page, variablesById, collectionNameById, issues, usageByVariable);
     pageSummary.push({
       pageId: page.id,
       pageName: page.name,
@@ -197,6 +198,7 @@ async function buildStructureAudit(variables, collectionsById) {
     componentPageCount: componentPages.length,
     collectionCounts: countByCollection(variables, collectionsById),
     aliasSummary: summarizeAliases(variables, variablesById, collectionNameById),
+    variableUsage: summarizeVariableUsage(variables, usageByVariable, collectionNameById),
     pageSummary,
     issueCount: issues.length,
     grouped: groupIssues(issues),
@@ -314,12 +316,22 @@ function auditComponentAliasSemantics(sourceName, targetName, issues, modeId) {
   }
 }
 
-async function auditPageNodes(page, variablesById, collectionNameById, issues) {
+async function auditPageNodes(page, variablesById, collectionNameById, issues, usageByVariable) {
   const nodes = page.findAll(() => true);
 
   for (const node of nodes) {
     const path = nodePath(node);
     const isFinalComponentNode = isFinalComponentPath(path);
+
+    if (isFinalComponentNode) {
+      collectVariableUsage(node.boundVariables, path, usageByVariable);
+      if (Array.isArray(node.fills)) {
+        for (const paint of node.fills) collectVariableUsage(paint && paint.boundVariables, path, usageByVariable);
+      }
+      if (Array.isArray(node.strokes)) {
+        for (const paint of node.strokes) collectVariableUsage(paint && paint.boundVariables, path, usageByVariable);
+      }
+    }
 
     if (isFinalComponentNode && /\bglyph\b/i.test(node.name)) {
       addIssue(issues, "node", "legacy-glyph-node", path, { nodeId: node.id, pageName: page.name });
@@ -439,6 +451,64 @@ function summarizeAliases(variables, variablesById, collectionNameById) {
   }
 
   return summary;
+}
+
+function summarizeVariableUsage(variables, usageByVariable, collectionNameById) {
+  const componentRows = variables
+    .filter((variable) => collectionNameById.get(variable.variableCollectionId) === "Component")
+    .map((variable) => {
+      const entry = usageByVariable.get(variable.id) || { count: 0, samples: [] };
+      return {
+        id: variable.id,
+        name: variable.name,
+        type: variable.resolvedType,
+        usageCount: entry.count,
+        samples: entry.samples,
+      };
+    })
+    .sort((a, b) => a.name.localeCompare(b.name));
+
+  const unused = componentRows.filter((row) => row.usageCount === 0);
+  const unusedByComponent = {};
+  for (const row of unused) {
+    const component = row.name.split("/")[0] || "unknown";
+    unusedByComponent[component] = (unusedByComponent[component] || 0) + 1;
+  }
+
+  return {
+    componentVariableCount: componentRows.length,
+    usedComponentVariableCount: componentRows.length - unused.length,
+    unusedComponentVariableCount: unused.length,
+    unusedByComponent,
+    unusedComponentVariables: unused,
+  };
+}
+
+function collectVariableUsage(value, path, usageByVariable) {
+  if (!value) return;
+  if (Array.isArray(value)) {
+    for (const item of value) collectVariableUsage(item, path, usageByVariable);
+    return;
+  }
+  if (typeof value !== "object") return;
+
+  if (typeof value.id === "string") addVariableUsage(value.id, path, usageByVariable);
+  if (value.type === "VARIABLE_ALIAS" && typeof value.id === "string") {
+    addVariableUsage(value.id, path, usageByVariable);
+  }
+
+  for (const nested of Object.values(value)) {
+    collectVariableUsage(nested, path, usageByVariable);
+  }
+}
+
+function addVariableUsage(id, path, usageByVariable) {
+  if (!usageByVariable.has(id)) {
+    usageByVariable.set(id, { count: 0, samples: [] });
+  }
+  const entry = usageByVariable.get(id);
+  entry.count += 1;
+  if (entry.samples.length < 3) entry.samples.push(path);
 }
 
 function findPaintBinding(node, variablesById, collectionNameById) {

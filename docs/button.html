@@ -88,7 +88,7 @@
     <div class="ds-anatomy" style="padding:64px;">
       <div style="position:relative;display:inline-flex;align-items:center;" inert>
         <button class="ds-button ds-button--brand">
-          <span class="material-symbols-outlined">add</span>
+          <i data-lucide="plus" class="ds-button__icon ds-icon"></i>
           <span class="ds-button__label">Add item</span>
         </button>
         <!-- 1: Container top center -->
@@ -241,14 +241,14 @@
         <button class="ds-preview__tab" data-tab="code">Code</button>
       </div>
       <div class="ds-preview__canvas">
-        <button class="ds-button ds-button--brand"><span class="material-symbols-outlined">add</span><span class="ds-button__label">Add item</span></button>
-        <button class="ds-button ds-button--outline"><span class="material-symbols-outlined">download</span><span class="ds-button__label">Download</span></button>
-        <button class="ds-button ds-button--danger"><span class="material-symbols-outlined">delete</span><span class="ds-button__label">Delete</span></button>
+        <button class="ds-button ds-button--brand"><i data-lucide="plus" class="ds-button__icon ds-icon"></i><span class="ds-button__label">Add item</span></button>
+        <button class="ds-button ds-button--outline"><i data-lucide="download" class="ds-button__icon ds-icon"></i><span class="ds-button__label">Download</span></button>
+        <button class="ds-button ds-button--danger"><i data-lucide="trash-2" class="ds-button__icon ds-icon"></i><span class="ds-button__label">Delete</span></button>
       </div>
       <div class="ds-preview__code" style="display:none">
         <button class="ds-preview__copy">Copy</button>
         <pre tabindex="0"><code>&lt;button class="ds-button ds-button--brand"&gt;
-  &lt;span class="material-symbols-outlined"&gt;add&lt;/span&gt;
+  &lt;i data-lucide="plus" class="ds-button__icon ds-icon"&gt;&lt;/i&gt;
   &lt;span class="ds-button__label"&gt;Add item&lt;/span&gt;
 &lt;/button&gt;</code></pre>
       </div>
@@ -263,16 +263,16 @@
         <button class="ds-preview__tab" data-tab="code">Code</button>
       </div>
       <div class="ds-preview__canvas" style="align-items:center">
-        <button class="ds-button ds-button--brand ds-button--icon-only ds-button--sm" aria-label="Add"><span class="material-symbols-outlined">add</span></button>
-        <button class="ds-button ds-button--brand ds-button--icon-only" aria-label="Edit"><span class="material-symbols-outlined">edit</span></button>
-        <button class="ds-button ds-button--brand ds-button--icon-only ds-button--lg" aria-label="Settings"><span class="material-symbols-outlined">settings</span></button>
-        <button class="ds-button ds-button--outline ds-button--icon-only" aria-label="Search"><span class="material-symbols-outlined">search</span></button>
-        <button class="ds-button ds-button--ghost ds-button--icon-only" aria-label="Close"><span class="material-symbols-outlined">close</span></button>
+        <button class="ds-button ds-button--brand ds-button--icon-only ds-button--sm" aria-label="Add"><i data-lucide="plus" class="ds-button__icon ds-icon"></i></button>
+        <button class="ds-button ds-button--brand ds-button--icon-only" aria-label="Edit"><i data-lucide="pencil" class="ds-button__icon ds-icon"></i></button>
+        <button class="ds-button ds-button--brand ds-button--icon-only ds-button--lg" aria-label="Settings"><i data-lucide="settings" class="ds-button__icon ds-icon"></i></button>
+        <button class="ds-button ds-button--outline ds-button--icon-only" aria-label="Search"><i data-lucide="search" class="ds-button__icon ds-icon"></i></button>
+        <button class="ds-button ds-button--ghost ds-button--icon-only" aria-label="Close"><i data-lucide="x" class="ds-icon"></i></button>
       </div>
       <div class="ds-preview__code" style="display:none">
         <button class="ds-preview__copy">Copy</button>
         <pre tabindex="0"><code>&lt;button class="ds-button ds-button--brand ds-button--icon-only" aria-label="Edit"&gt;
-  &lt;span class="material-symbols-outlined"&gt;edit&lt;/span&gt;
+  &lt;i data-lucide="pencil" class="ds-button__icon ds-icon"&gt;&lt;/i&gt;
 &lt;/button&gt;
 
 &lt;!-- aria-label is REQUIRED for icon-only buttons --&gt;</code></pre>

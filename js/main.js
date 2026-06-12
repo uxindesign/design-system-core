@@ -25,6 +25,7 @@
         { label: 'Colors',        path: 'docs/foundations-colors.html' },
         { label: 'Theme Colors',  path: 'docs/foundations-theme-colors.html' },
         { label: 'Typography',    path: 'docs/foundations-typography.html' },
+        { label: 'Icons',         path: 'docs/icons.html' },
         { label: 'Spacing',       path: 'docs/foundations-spacing.html' },
         { label: 'Radius',        path: 'docs/foundations-radius.html' },
         { label: 'Elevation',     path: 'docs/foundations-elevation.html' },
@@ -245,6 +246,7 @@
       'Colors': 'Colors',
       'Theme Colors': 'Theme Colors',
       'Typography': 'Typography',
+      'Icons': 'Icons',
       'Spacing': 'Spacing',
       'Radius': 'Radius',
       'Elevation': 'Elevation',
@@ -540,6 +542,40 @@
   }
 
   /* ---------------------------------------------------------
+     Lucide icons
+     --------------------------------------------------------- */
+  function getRootPrefix() {
+    var pathname = window.location.pathname;
+    var segments = pathname.split('/').filter(Boolean);
+    segments.pop();
+    var docsIdx = segments.indexOf('docs');
+    if (docsIdx === -1) return '';
+    return '../'.repeat(segments.slice(docsIdx).length);
+  }
+
+  function initLucideIcons() {
+    if (!document.querySelector('[data-lucide]')) return;
+
+    function renderIcons() {
+      if (!window.lucide) return;
+      window.lucide.createIcons({
+        icons: window.lucide.icons,
+        attrs: { 'aria-hidden': 'true' }
+      });
+    }
+
+    if (window.lucide) {
+      renderIcons();
+      return;
+    }
+
+    var script = document.createElement('script');
+    script.src = getRootPrefix() + 'docs/assets/vendor/lucide.min.js';
+    script.onload = renderIcons;
+    document.head.appendChild(script);
+  }
+
+  /* ---------------------------------------------------------
      Textarea Character Counter
      --------------------------------------------------------- */
   function initCharCounters() {
@@ -575,5 +611,6 @@
     initCopyButtons();
     initPreviewTabs();
     initCharCounters();
+    initLucideIcons();
   });
 })();

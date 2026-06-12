@@ -86,10 +86,10 @@
               background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
 }
 
-.ds-modal__close .material-symbols-outlined,
-.ds-modal__close .material-icons {
-  font-size: var(--ds-modal-close-icon-size-default);
-  line-height: 1;
+.ds-modal__close .ds-icon {
+  width: var(--ds-modal-close-icon-size-default);
+  height: var(--ds-modal-close-icon-size-default);
+  stroke-width: var(--ds-icon-stroke-width-regular-20);
 }
 
 .ds-modal__close:hover {

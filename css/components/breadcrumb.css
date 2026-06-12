@@ -20,7 +20,7 @@
   align-items: center;
   gap: var(--ds-breadcrumb-item-gap-default);
   color: var(--ds-link-content-default);
-  border-radius: var(--ds-breadcrumb-item-radius-default);
+  border-radius: var(--ds-breadcrumb-focus-ring-radius-default);
   text-decoration: none;
 }
 

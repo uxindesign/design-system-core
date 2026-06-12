@@ -23,7 +23,6 @@
   cursor: pointer;
   padding: var(--ds-space-xs);
   min-height: var(--toggle-target-height);
-  border-radius: var(--ds-toggle-target-radius-default);
   color: var(--ds-toggle-label-color-default);
   user-select: none;
 }

@@ -78,6 +78,34 @@
   --ds-content-subtle: var(--ds-color-neutral-400); /** Conteúdo de ênfase reduzida (placeholders, ícones decorativos, helper text). */
   --ds-content-disabled: var(--ds-color-neutral-600); /** Conteúdo em estado disabled. Isento de contraste WCAG. Unifica text/disabled e state/disabled/foreground (ADR-011). */
   --ds-content-inverse: var(--ds-color-neutral-900);
+  --ds-content-placeholder-rectangle-height-default: var(--ds-dimension-120); /** Altura padrão do placeholder retangular de conteúdo. */
+  --ds-content-placeholder-text-height-default: var(--ds-dimension-12); /** Altura padrão do placeholder textual de conteúdo. */
+  --ds-control-button-min-width-sm: var(--ds-dimension-80);
+  --ds-control-button-min-width-md: var(--ds-dimension-88);
+  --ds-control-button-min-width-lg: var(--ds-dimension-102);
+  --ds-control-radio-dot-size-sm: var(--ds-dimension-6);
+  --ds-control-radio-dot-size-md: var(--ds-dimension-8);
+  --ds-control-radio-dot-size-lg: var(--ds-dimension-10);
+  --ds-control-textarea-min-height-sm: var(--ds-dimension-80);
+  --ds-control-textarea-min-height-md: var(--ds-dimension-96);
+  --ds-control-textarea-min-height-lg: var(--ds-dimension-120);
+  --ds-control-toggle-height-sm: var(--ds-dimension-16);
+  --ds-control-toggle-height-md: var(--ds-dimension-24);
+  --ds-control-toggle-height-lg: var(--ds-dimension-32);
+  --ds-control-toggle-width-sm: var(--ds-dimension-28);
+  --ds-control-toggle-width-md: var(--ds-dimension-44);
+  --ds-control-toggle-width-lg: var(--ds-dimension-56);
+  --ds-control-toggle-thumb-gap: var(--ds-dimension-2);
+  --ds-control-toggle-thumb-size-sm: var(--ds-dimension-12);
+  --ds-control-toggle-thumb-size-md: var(--ds-dimension-20);
+  --ds-control-toggle-thumb-size-lg: var(--ds-dimension-28);
+  --ds-icon-stroke-width-regular-16: var(--ds-stroke-width-1_5);
+  --ds-icon-stroke-width-regular-20: var(--ds-stroke-width-1_75);
+  --ds-icon-stroke-width-regular-24: var(--ds-stroke-width-2);
+  --ds-icon-stroke-width-regular-32: var(--ds-stroke-width-2_5);
+  --ds-icon-stroke-width-strong-16: var(--ds-stroke-width-1_75);
+  --ds-icon-stroke-width-strong-20: var(--ds-stroke-width-2);
+  --ds-icon-stroke-width-strong-24: var(--ds-stroke-width-2_25);
   --ds-border-default: var(--ds-color-neutral-700);
   --ds-border-strong: var(--ds-color-neutral-500);
   --ds-border-subtle: var(--ds-color-neutral-800);
@@ -181,4 +209,24 @@
   --ds-body-line-height-9xl: var(--ds-line-height-90); /** 90px. Pareia com body/font-size/9xl (72px). */
   --ds-z-modal: var(--ds-z-40); /** Stack layer para modais e overlays bloqueantes. */
   --ds-z-tooltip: var(--ds-z-40); /** Stack layer para tooltips e floating labels não modais. */
+  --ds-primary-border-default: var(--ds-primary-background-default);
+  --ds-primary-border-hover: var(--ds-primary-background-hover);
+  --ds-primary-border-disabled: var(--ds-primary-background-disabled);
+  --ds-content-brand: var(--ds-primary-background-default); /** Conteúdo brand sobre superfície neutra. */
+  --ds-icon-color-default: var(--ds-content-default);
+  --ds-icon-color-hover: var(--ds-content-hover);
+  --ds-icon-color-active: var(--ds-content-strong);
+  --ds-icon-color-disabled: var(--ds-content-disabled);
+  --ds-icon-color-subtle: var(--ds-content-subtle);
+  --ds-icon-color-inverse: var(--ds-content-inverse);
+  --ds-icon-color-success: var(--ds-feedback-success-content-default);
+  --ds-icon-color-warning: var(--ds-feedback-warning-content-default);
+  --ds-icon-color-error: var(--ds-feedback-error-content-default);
+  --ds-icon-color-success-contrast: var(--ds-feedback-success-content-contrast);
+  --ds-icon-color-warning-contrast: var(--ds-feedback-warning-content-contrast);
+  --ds-icon-color-error-contrast: var(--ds-feedback-error-content-contrast);
+  --ds-icon-color-info-contrast: var(--ds-feedback-info-content-contrast);
+  --ds-border-error-hover: var(--ds-feedback-error-border-hover);
+  --ds-border-overlay-default: var(--ds-overlay-default);
+  --ds-border-overlay-medium: var(--ds-overlay-medium);
 }

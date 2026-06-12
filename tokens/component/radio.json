@@ -177,11 +177,6 @@
               "$type": "color",
               "$value": "{semantic.primary.background.hover}",
               "$description": "Border color do control Radio selected hover."
-            },
-            "disabled": {
-              "$type": "color",
-              "$value": "{semantic.primary.background.disabled}",
-              "$description": "Border color do control Radio selected disabled."
             }
           }
         },
