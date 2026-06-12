@@ -70,8 +70,16 @@
 <p>O formato é baseado em <a href="https://keepachangelog.com/pt-BR/1.1.0/">Keep a Changelog</a> e o versionamento segue <a href="https://semver.org/lang/pt-BR/">Semantic Versioning</a>.</p>
 <p>A partir de <code>1.0.0-beta.1</code>, o sistema entrou em <strong>fase beta</strong> — releases incrementam <code>1.0.0-beta.N</code> até decisão do owner pra dropping do tag → <code>1.0.0</code> oficial. Tags 0.x permanecem como histórico pré-beta. Regras em <code>docs/process-versioning.html</code>.</p>
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
+<p>Sem mudanças ainda.</p>
+<h2>[1.0.0-beta.5] — 2026-06-12</h2>
 <h3>Corrigido</h3>
 <ul>
+<li><p><strong>Documentação renderiza ícones como Lucide outline.</strong> Button, Input, Select, Alert, Avatar, Modal, Tooltip e Form Field deixam de depender de preenchimento/ligaduras antigas e passam a usar SVG/stroke compatível com a biblioteca de ícones atual.</p>
+</li>
+<li><p><strong>Tabs sem radius no indicador ativo.</strong> O repo remove o arredondamento visual residual do indicador para seguir o contrato atual do Figma.</p>
+</li>
+<li><p><strong>Sincronização de tokens sem avisos falsos.</strong> <code>verify:tokens</code> passa a reconhecer variáveis CSS com <code>_</code> e elimina os avisos indevidos de stroke width <code>1_5</code>, <code>1_75</code>, <code>2_25</code> e <code>2_5</code>.</p>
+</li>
 <li><p><strong>Input Text, Select e Textarea documentam o novo contrato de propriedades do Figma.</strong> <code>Disabled</code> passa a ser valor de <code>State</code> (<code>Default</code>, <code>Hover</code>, <code>Focus</code>, <code>Disabled</code>), enquanto <code>Filled</code>, <code>Error</code> e <code>Read-only</code> ficam como propriedades separadas com regras explícitas de combinação.</p>
 </li>
 <li><p><strong>Input Text e Select com área clicável expandida para todo o container.</strong> O campo nativo agora cobre o padding interno do wrapper, incluindo top/bottom, áreas laterais, espaço vazio e regiões de ícone/adornment decorativo, mantendo ícones e chevron com <code>pointer-events: none</code>.</p>
@@ -102,7 +110,7 @@
 </li>
 <li><p><strong>Input Text completo aplicado aos Component tokens.</strong> <code>component.input</code> agora cobre bg, bordas, radius, focus ring, conteúdo, placeholder, ícone, label, required, helper, stack, label-row, sizing, padding e tipografia; os variants vivos no Figma foram bindados nesses atributos e o CSS passa a consumir <code>--ds-input-*</code> no wrapper e no uso composto com <code>.ds-field</code>.</p>
 </li>
-<li><p><strong>Input Text sizing/spacing aplicado aos Component tokens.</strong> Criadas variables <code>input/{padding-x,gap}</code>, <code>input/icon/{size,stroke-width}</code>, <code>input/icon-frame/padding-x</code> e <code>input/text-frame/padding-x</code> no Figma, com Code Syntax WEB e binds nos variants do Input Text. JSON/CSS/docs passam a consumir <code>component.input.*</code> junto dos contratos compartilhados de Field/Form Field.</p>
+<li><p><strong>Input Text sizing/spacing aplicado aos Component tokens.</strong> Criadas variables <code>input/{padding-x,padding-y,gap}</code>, <code>input/icon/{size,stroke-width}</code>, <code>input/icon-frame/padding-x</code> e <code>input/text-frame/padding-x</code> no Figma, com Code Syntax WEB e binds nos variants do Input Text. JSON/CSS/docs passam a consumir <code>component.input.*</code> junto dos contratos compartilhados de Field/Form Field.</p>
 </li>
 <li><p><strong>Button padding e gap sincronizados com Figma.</strong> <code>component.button.padding-x.{sm,md,lg}</code> passa a seguir <code>8/12/16px</code> e <code>component.button.gap.{sm,md,lg}</code> passa a seguir <code>2/4/8px</code>, alinhando JSON, CSS gerado, documentação e API às variables vivas do Button no Figma.</p>
 </li>
@@ -842,7 +850,7 @@
 </ul>
 <h3>Adicionado</h3>
 <ul>
-<li>Na época, Input e Select ganharam padding-y próprio por tamanho; esse contrato foi depois consolidado em <code>component.field.padding-y.{sm,md,lg}</code> para Input, Select e Textarea.</li>
+<li><code>component.input.padding-y.{sm,md,lg}</code> e <code>component.select.padding-y.{sm,md,lg}</code> em <code>tokens/component/input.json</code> e <code>select.json</code>, referenciando <code>semantic.space.control.padding-y.*</code>. Gera <code>--ds-input-padding-y-*</code> e <code>--ds-select-padding-y-*</code> no CSS gerado.</li>
 </ul>
 <h3>Corrigido</h3>
 <ul>

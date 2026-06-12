@@ -763,7 +763,7 @@ const indexPath = path.join(ROOT, 'index.html');
 if (fs.existsSync(indexPath)) {
   let indexHtml = fs.readFileSync(indexPath, 'utf8');
   const updated = indexHtml.replace(
-    /<!--\s*VERSION(?::[^-]*)?\s*-->(?:v\d+\.\d+\.\d+)*/g,
+    /<!--\s*VERSION(?::.*?)?\s*-->(?:v\d+\.\d+\.\d+(?:-[a-z0-9.-]+)?)*/gi,
     `<!-- VERSION:${version} -->v${version}`
   );
   if (updated !== indexHtml) {

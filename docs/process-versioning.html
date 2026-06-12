@@ -77,7 +77,7 @@ v1.0.0-beta.3
 v1.0.0-rc.1   ←  release candidate (decisão do owner)
 v1.0.0        ←  oficial (decisão do owner)
 </code></pre>
-<p><strong>Não existe release</strong> durante a fase beta. CHANGELOG agrupa o trabalho do incremento e tag git marca o ponto.</p>
+<p><strong>Não existe release minor/patch separado</strong> durante a fase beta. Cada release incrementa apenas <code>N</code>, o CHANGELOG agrupa o trabalho do incremento e a tag git marca o ponto.</p>
 <h3>Quando bumpar (trigger)</h3>
 <p>Bump pra próximo <code>beta.N</code> é por <strong>pacote coerente</strong> + fallback de tempo:</p>
 <h4>1. Mudança considerável (preferencial)</h4>
@@ -93,7 +93,7 @@ v1.0.0        ←  oficial (decisão do owner)
 <h4>2. Feature completa</h4>
 <p>Bumpa quando um conjunto de mudanças <strong>fecha</strong> uma feature — não em pedaços. Exemplo: adicionar Theming requer foundation + semantic + componentes adaptados + docs.</p>
 <h4>3. Cadência temporal (fallback)</h4>
-<p>Se há acúmulo de patches sem trigger arquitetural ou feature por <strong>mais de 2 semanas</strong>, faça um bump consolidando o que houve. Evita <code>[Não publicado]</code> virar dump infinito.</p>
+<p>Se há acúmulo de patches sem trigger arquitetural ou feature, faça um bump <strong>semanal</strong> consolidando o que houve. Evita <code>[Não publicado]</code> virar dump infinito e mantém o beta versionado em ciclos previsíveis.</p>
 <h3>Quando NÃO bumpar</h3>
 <ul>
 <li>Trabalho em andamento (não shipado).</li>

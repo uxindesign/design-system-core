@@ -1,13 +1,13 @@
 # Design System Core
 
-[![Versão](https://img.shields.io/badge/vers%C3%A3o-1.0.0--beta.4-blue)](./CHANGELOG.md) [![Licença](https://img.shields.io/badge/licen%C3%A7a-Propriet%C3%A1ria-red)](./LICENSE) [![Documentação](https://img.shields.io/badge/docs-online-brightgreen)](https://uxindesign.github.io/design-system-core/)
+[![Versão](https://img.shields.io/badge/vers%C3%A3o-1.0.0--beta.5-blue)](./CHANGELOG.md) [![Licença](https://img.shields.io/badge/licen%C3%A7a-Propriet%C3%A1ria-red)](./LICENSE) [![Documentação](https://img.shields.io/badge/docs-online-brightgreen)](https://uxindesign.github.io/design-system-core/)
 
 Design system white-label em CSS puro, com tokens DTCG em arquitetura 3-layer (Foundation/Core → Semantic/System → Component), componentes documentados, modos light/dark e paleta brand única customizável.
 
 ## Instalação
 
 ```html
-<link rel="stylesheet" href="https://cdn.example.com/design-system-core@1.0.0-beta.4/css/design-system.css">
+<link rel="stylesheet" href="https://cdn.example.com/design-system-core@1.0.0-beta.5/css/design-system.css">
 ```
 
 Uso local:

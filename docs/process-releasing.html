@@ -75,29 +75,29 @@
 </ul>
 <h2>Passo a passo</h2>
 <ol>
-<li><p><strong>Definir a versão nova</strong>. Consultar <a href="./process-versioning.md">regras de versionamento</a>.</p>
+<li><p><strong>Definir a versão nova</strong>. Consultar <a href="./process-versioning.md">regras de versionamento</a>. Durante beta, usar sempre o próximo <code>1.0.0-beta.N</code>; não criar minor/patch separado.</p>
 </li>
 <li><p><strong>Atualizar <code>CHANGELOG.md</code></strong>:</p>
 <ul>
-<li>Renomear <code>[Não publicado]</code> para <code>[x.y.z] — AAAA-MM-DD</code>.</li>
+<li>Renomear <code>[Não publicado]</code> para <code>[1.0.0-beta.N] — AAAA-MM-DD</code> durante beta.</li>
 <li>Adicionar nova seção <code>[Não publicado]</code> vazia no topo.</li>
 <li>Atualizar links de comparação no rodapé do arquivo.</li>
 </ul>
 </li>
-<li><p><strong>Atualizar <code>package.json</code></strong>: alterar o campo <code>version</code> para <code>x.y.z</code>.</p>
+<li><p><strong>Atualizar <code>package.json</code></strong>: alterar o campo <code>version</code> para <code>1.0.0-beta.N</code> durante beta.</p>
 </li>
 <li><p><strong>Commit de release</strong>:</p>
-<pre><code class="language-bash">git add CHANGELOG.md package.json
-git commit -m &quot;chore(release): x.y.z&quot;
+<pre><code class="language-bash">git add CHANGELOG.md package.json package-lock.json docs/
+git commit -m &quot;chore(release): 1.0.0-beta.N&quot;
 </code></pre>
 </li>
 <li><p><strong>Tag</strong>:</p>
-<pre><code class="language-bash">git tag -a vx.y.z -m &quot;Release x.y.z&quot;
+<pre><code class="language-bash">git tag -a v1.0.0-beta.N -m &quot;Release 1.0.0-beta.N&quot;
 </code></pre>
 </li>
 <li><p><strong>Push</strong>:</p>
 <pre><code class="language-bash">git push origin main
-git push origin vx.y.z
+git push origin v1.0.0-beta.N
 </code></pre>
 </li>
 <li><p><strong>CI faz o resto</strong>:</p>
@@ -110,8 +110,8 @@ git push origin vx.y.z
 </li>
 <li><p><strong>Verificar</strong>:</p>
 <ul>
-<li>A página <code>https://uxindesign.github.io/design-system-core/</code> mostra a badge <code>x.y.z</code>.</li>
-<li><code>docs/changelog.html</code> lista <code>x.y.z</code> como versão mais recente.</li>
+<li>A página <code>https://uxindesign.github.io/design-system-core/</code> mostra a badge <code>1.0.0-beta.N</code>.</li>
+<li><code>docs/changelog.html</code> lista <code>1.0.0-beta.N</code> como versão mais recente.</li>
 <li><code>docs/api/tokens-sync.json</code> tem timestamp recente e zero erros.</li>
 </ul>
 </li>

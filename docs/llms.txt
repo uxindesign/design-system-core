@@ -1,6 +1,6 @@
 # Design System Core
 
-> Design system white-label em CSS puro com tokens DTCG em JSON, 19 componentes, modos light/dark e paleta brand única customizável. Versão atual: 1.0.0-beta.4.
+> Design system white-label em CSS puro com tokens DTCG em JSON, 19 componentes, modos light/dark e paleta brand única customizável. Versão atual: 1.0.0-beta.5.
 
 Repositório: https://github.com/uxindesign/design-system-core
 Site: https://uxindesign.github.io/design-system-core/
@@ -75,7 +75,7 @@ Arquivo completo para LLMs: https://uxindesign.github.io/design-system-core/docs
 ## Processo
 
 - [Contributing](https://uxindesign.github.io/design-system-core/docs/process-contributing.html): setup, fluxo de PR, convenções.
-- [Versionamento](https://uxindesign.github.io/design-system-core/docs/process-versioning.html): regras de bump 0.x.
+- [Versionamento](https://uxindesign.github.io/design-system-core/docs/process-versioning.html): releases 1.0.0-beta.N com cadência semanal durante beta.
 - [Releases](https://uxindesign.github.io/design-system-core/docs/process-releasing.html): passo a passo.
 - [Changelog](https://uxindesign.github.io/design-system-core/docs/changelog.html): histórico de versões.
 - [Backlog](https://uxindesign.github.io/design-system-core/docs/backlog.html): itens fora do escopo imediato.
@@ -98,4 +98,4 @@ Arquivo completo para LLMs: https://uxindesign.github.io/design-system-core/docs
 
 ---
 
-Gerado por `scripts/build-llms.mjs`. Versão atual: 1.0.0-beta.4.
+Gerado por `scripts/build-llms.mjs`. Versão atual: 1.0.0-beta.5.

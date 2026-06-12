@@ -115,7 +115,7 @@ ${adrs.map((a) => `- [ADR-${a.num} — ${a.title}](${BASE_URL}/docs/decisions/${
 ## Processo
 
 - [Contributing](${BASE_URL}/docs/process-contributing.html): setup, fluxo de PR, convenções.
-- [Versionamento](${BASE_URL}/docs/process-versioning.html): regras de bump 0.x.
+- [Versionamento](${BASE_URL}/docs/process-versioning.html): releases 1.0.0-beta.N com cadência semanal durante beta.
 - [Releases](${BASE_URL}/docs/process-releasing.html): passo a passo.
 - [Changelog](${BASE_URL}/docs/changelog.html): histórico de versões.
 - [Backlog](${BASE_URL}/docs/backlog.html): itens fora do escopo imediato.

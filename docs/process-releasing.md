@@ -10,33 +10,33 @@ Passo a passo de uma release do design system. Pressupõe que você está na bra
 
 ## Passo a passo
 
-1. **Definir a versão nova**. Consultar [regras de versionamento](./process-versioning.md).
+1. **Definir a versão nova**. Consultar [regras de versionamento](./process-versioning.md). Durante beta, usar sempre o próximo `1.0.0-beta.N`; não criar minor/patch separado.
 
 2. **Atualizar `CHANGELOG.md`**:
-   - Renomear `[Não publicado]` para `[x.y.z] — AAAA-MM-DD`.
+   - Renomear `[Não publicado]` para `[1.0.0-beta.N] — AAAA-MM-DD` durante beta.
    - Adicionar nova seção `[Não publicado]` vazia no topo.
    - Atualizar links de comparação no rodapé do arquivo.
 
-3. **Atualizar `package.json`**: alterar o campo `version` para `x.y.z`.
+3. **Atualizar `package.json`**: alterar o campo `version` para `1.0.0-beta.N` durante beta.
 
 4. **Commit de release**:
 
    ```bash
-   git add CHANGELOG.md package.json
-   git commit -m "chore(release): x.y.z"
+   git add CHANGELOG.md package.json package-lock.json docs/
+   git commit -m "chore(release): 1.0.0-beta.N"
    ```
 
 5. **Tag**:
 
    ```bash
-   git tag -a vx.y.z -m "Release x.y.z"
+   git tag -a v1.0.0-beta.N -m "Release 1.0.0-beta.N"
    ```
 
 6. **Push**:
 
    ```bash
    git push origin main
-   git push origin vx.y.z
+   git push origin v1.0.0-beta.N
    ```
 
 7. **CI faz o resto**:
@@ -46,8 +46,8 @@ Passo a passo de uma release do design system. Pressupõe que você está na bra
    - Publica via GitHub Pages na URL `https://uxindesign.github.io/design-system-core/`.
 
 8. **Verificar**:
-   - A página `https://uxindesign.github.io/design-system-core/` mostra a badge `x.y.z`.
-   - `docs/changelog.html` lista `x.y.z` como versão mais recente.
+   - A página `https://uxindesign.github.io/design-system-core/` mostra a badge `1.0.0-beta.N`.
+   - `docs/changelog.html` lista `1.0.0-beta.N` como versão mais recente.
    - `docs/api/tokens-sync.json` tem timestamp recente e zero erros.
 
 ## Se algo der errado

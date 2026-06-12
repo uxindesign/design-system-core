@@ -287,6 +287,7 @@ Mudança arquitetural exige ADR anexada ou criada no mesmo PR.
 
 - Versão atual em `package.json` e `README.md` (badge). Manter em sincronia.
 - Pré-1.0.0: faixa `1.0.0-beta.N` enquanto ainda em fase beta. Tags 0.x são histórico pré-beta.
+- Durante beta, releases incrementam apenas `N` e devem seguir pacote coerente ou cadência semanal, sem minor/patch separados.
 - CHANGELOG segue [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/). Seção `[Não publicado]` acumula entradas até o owner decidir tagear nova versão.
 - **Cada mudança significativa entra em `[Não publicado]`** antes do commit. Significativo = observável pelo consumidor (designer ou dev), ou que muda processo/arquitetura. Refactor interno sem efeito externo não exige entrada.
 - Bump de versão (`package.json` + tag git) é decisão do owner. Agente não bumpa sem pedido explícito.
