@@ -6,46 +6,17 @@
     "lightTokens": 226,
     "darkTokens": 226,
     "errors": 0,
-    "warnings": 4
+    "warnings": 0
   },
   "checks": {
     "jsonIntegrity": [],
-    "jsonVsCss": [
-      {
-        "level": "warning",
-        "token": "foundation.stroke.width.1_5",
-        "cssVar": "ds-stroke-width-1_5",
-        "mode": "shared",
-        "message": "token definido em JSON mas sem CSS custom property equivalente"
-      },
-      {
-        "level": "warning",
-        "token": "foundation.stroke.width.1_75",
-        "cssVar": "ds-stroke-width-1_75",
-        "mode": "shared",
-        "message": "token definido em JSON mas sem CSS custom property equivalente"
-      },
-      {
-        "level": "warning",
-        "token": "foundation.stroke.width.2_25",
-        "cssVar": "ds-stroke-width-2_25",
-        "mode": "shared",
-        "message": "token definido em JSON mas sem CSS custom property equivalente"
-      },
-      {
-        "level": "warning",
-        "token": "foundation.stroke.width.2_5",
-        "cssVar": "ds-stroke-width-2_5",
-        "mode": "shared",
-        "message": "token definido em JSON mas sem CSS custom property equivalente"
-      }
-    ],
+    "jsonVsCss": [],
     "cssFoundationLeak": [],
     "registryCompleteness": [],
     "docTokenDrift": [],
     "jsonVsFigma": {
       "skipped": false,
-      "snapshotAge": "0h",
+      "snapshotAge": "1h",
       "snapshotFreshness": "fresh",
       "snapshotMaxAgeHours": 24,
       "summary": {

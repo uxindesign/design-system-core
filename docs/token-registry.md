@@ -485,9 +485,9 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.icon.color.warning` | color | → `semantic.feedback.warning.content-default` | Cor semantica de icone warning. | 3 |
 | `semantic.icon.color.warning-contrast` | color | → `semantic.feedback.warning.content-contrast` | Cor semantica de icone warning-contrast. | 3 |
 | `semantic.icon.stroke-width.regular.16` | dimension | → `foundation.stroke.width.1_5` | Stroke width semantico de icone regular 16px. | 6 |
-| `semantic.icon.stroke-width.regular.20` | dimension | → `foundation.stroke.width.1_75` | Stroke width semantico de icone regular 20px. | 13 |
+| `semantic.icon.stroke-width.regular.20` | dimension | → `foundation.stroke.width.1_75` | Stroke width semantico de icone regular 20px. | 9 |
 | `semantic.icon.stroke-width.regular.24` | dimension | → `foundation.stroke.width.2` | Stroke width semantico de icone regular 24px. | 8 |
-| `semantic.icon.stroke-width.regular.32` | dimension | → `foundation.stroke.width.2_5` | Stroke width semantico de icone regular 32px. | 4 |
+| `semantic.icon.stroke-width.regular.32` | dimension | → `foundation.stroke.width.2_5` | Stroke width semantico de icone regular 32px. | 3 |
 | `semantic.icon.stroke-width.strong.16` | dimension | → `foundation.stroke.width.1_75` | Stroke width semantico de icone strong 16px. | 3 |
 | `semantic.icon.stroke-width.strong.20` | dimension | → `foundation.stroke.width.2` | Stroke width semantico de icone strong 20px. | 1 |
 | `semantic.icon.stroke-width.strong.24` | dimension | → `foundation.stroke.width.2_25` | Stroke width semantico de icone strong 24px. | 1 |
@@ -710,7 +710,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.alert.close.icon.color.subtle` | color | → `semantic.icon.color.default` | Contrato close.icon.color de alert, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.alert.close.icon.color.success.filled` | color | → `semantic.icon.color.success-contrast` | Contrato close.icon.color.success de alert, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.alert.close.icon.color.warning.filled` | color | → `semantic.icon.color.warning-contrast` | Contrato close.icon.color.warning de alert, sincronizado a partir das Variables Figma atuais. | 0 |
-| `component.alert.close.icon.stroke-width.default` | dimension | → `semantic.icon.stroke-width.regular.20` | Contrato close.icon.stroke-width de alert, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.alert.close.icon.stroke-width.default` | dimension | → `semantic.icon.stroke-width.regular.20` | Contrato close.icon.stroke-width de alert, sincronizado a partir das Variables Figma atuais. | 1 |
 | `component.alert.content.gap.default` | dimension | → `semantic.space.xs` | Gap vertical do content Alert. | 1 |
 | `component.alert.description.color.error.filled` | color | → `semantic.feedback.error.content-contrast` | Contrato description.color.error de alert, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.alert.description.color.info.filled` | color | → `semantic.feedback.info.content-contrast` | Contrato description.color.info de alert, sincronizado a partir das Variables Figma atuais. | 0 |
@@ -730,7 +730,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.alert.icon.color.warning.filled` | color | → `semantic.icon.color.warning-contrast` | Contrato icon.color.warning de alert, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.alert.icon.color.warning.subtle` | color | → `semantic.icon.color.warning` | Contrato icon.color.warning de alert, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.alert.icon.size.default` | dimension | → `semantic.size.sm` | Tamanho do container Icon Alert. | 1 |
-| `component.alert.icon.stroke-width.default` | dimension | → `semantic.icon.stroke-width.regular.20` | Contrato icon.stroke-width de alert, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.alert.icon.stroke-width.default` | dimension | → `semantic.icon.stroke-width.regular.20` | Contrato icon.stroke-width de alert, sincronizado a partir das Variables Figma atuais. | 1 |
 | `component.alert.padding.default` | dimension | → `semantic.space.md` | Padding do Alert. | 1 |
 | `component.alert.radius.default` | dimension | → `semantic.radius.lg` | Radius do Alert. | 1 |
 | `component.alert.title.color.error.filled` | color | → `semantic.feedback.error.content-contrast` | Contrato title.color.error de alert, sincronizado a partir das Variables Figma atuais. | 0 |
@@ -751,9 +751,9 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.avatar.icon.size.lg` | dimension | → `semantic.typography.body.font-size.4xl` | Tamanho do ícone SVG fallback do Avatar por size. | 1 |
 | `component.avatar.icon.size.md` | dimension | → `semantic.typography.body.font-size.2xl` | Tamanho do ícone SVG fallback do Avatar por size. | 1 |
 | `component.avatar.icon.size.sm` | dimension | → `semantic.typography.body.font-size.xl` | Tamanho do ícone SVG fallback do Avatar por size. | 1 |
-| `component.avatar.icon.stroke-width.lg` | dimension | → `semantic.icon.stroke-width.regular.32` | Contrato icon.stroke-width de avatar, sincronizado a partir das Variables Figma atuais. | 0 |
-| `component.avatar.icon.stroke-width.md` | dimension | → `semantic.icon.stroke-width.regular.24` | Contrato icon.stroke-width de avatar, sincronizado a partir das Variables Figma atuais. | 0 |
-| `component.avatar.icon.stroke-width.sm` | dimension | → `semantic.icon.stroke-width.regular.20` | Contrato icon.stroke-width de avatar, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.avatar.icon.stroke-width.lg` | dimension | → `semantic.icon.stroke-width.regular.32` | Contrato icon.stroke-width de avatar, sincronizado a partir das Variables Figma atuais. | 1 |
+| `component.avatar.icon.stroke-width.md` | dimension | → `semantic.icon.stroke-width.regular.24` | Contrato icon.stroke-width de avatar, sincronizado a partir das Variables Figma atuais. | 1 |
+| `component.avatar.icon.stroke-width.sm` | dimension | → `semantic.icon.stroke-width.regular.20` | Contrato icon.stroke-width de avatar, sincronizado a partir das Variables Figma atuais. | 1 |
 | `component.avatar.initials.font-size.lg` | dimension | → `semantic.typography.body.font-size.xl` | Font-size das iniciais do Avatar por size. | 1 |
 | `component.avatar.initials.font-size.md` | dimension | → `semantic.typography.body.font-size.sm` | Font-size das iniciais do Avatar por size. | 1 |
 | `component.avatar.initials.font-size.sm` | dimension | → `semantic.typography.body.font-size.sm` | Font-size das iniciais do Avatar por size. | 1 |
@@ -903,9 +903,9 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.button.icon.size.lg` | dimension | → `semantic.size.md` | Token component para button / icon / size / lg. | 1 |
 | `component.button.icon.size.md` | dimension | → `semantic.size.sm` | Token component para button / icon / size / md. | 1 |
 | `component.button.icon.size.sm` | dimension | → `semantic.size.xs` | Token component para button / icon / size / sm. | 1 |
-| `component.button.icon.stroke-width.lg` | dimension | → `semantic.icon.stroke-width.regular.24` | Contrato icon.stroke-width de button, sincronizado a partir das Variables Figma atuais. | 0 |
-| `component.button.icon.stroke-width.md` | dimension | → `semantic.icon.stroke-width.regular.20` | Contrato icon.stroke-width de button, sincronizado a partir das Variables Figma atuais. | 0 |
-| `component.button.icon.stroke-width.sm` | dimension | → `semantic.icon.stroke-width.regular.16` | Contrato icon.stroke-width de button, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.button.icon.stroke-width.lg` | dimension | → `semantic.icon.stroke-width.regular.24` | Contrato icon.stroke-width de button, sincronizado a partir das Variables Figma atuais. | 1 |
+| `component.button.icon.stroke-width.md` | dimension | → `semantic.icon.stroke-width.regular.20` | Contrato icon.stroke-width de button, sincronizado a partir das Variables Figma atuais. | 1 |
+| `component.button.icon.stroke-width.sm` | dimension | → `semantic.icon.stroke-width.regular.16` | Contrato icon.stroke-width de button, sincronizado a partir das Variables Figma atuais. | 1 |
 | `component.button.label-frame.padding-x.default` | dimension | → `semantic.space.xs` | Padding horizontal do Label Frame Button. | 1 |
 | `component.button.label.font-family.default` | string | → `semantic.typography.body.font-family.sans` | font-family do label Button default. | 1 |
 | `component.button.label.font-size.lg` | dimension | → `semantic.typography.body.font-size.md` | font-size do label Button lg. | 1 |
@@ -1094,9 +1094,9 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.input.icon.size.lg` | dimension | → `semantic.size.md` | Token component para input / icon / size / lg. | 1 |
 | `component.input.icon.size.md` | dimension | → `semantic.size.sm` | Token component para input / icon / size / md. | 1 |
 | `component.input.icon.size.sm` | dimension | → `semantic.size.xs` | Token component para input / icon / size / sm. | 1 |
-| `component.input.icon.stroke-width.lg` | dimension | → `semantic.icon.stroke-width.regular.24` | Contrato icon.stroke-width de input, sincronizado a partir das Variables Figma atuais. | 0 |
-| `component.input.icon.stroke-width.md` | dimension | → `semantic.icon.stroke-width.regular.20` | Contrato icon.stroke-width de input, sincronizado a partir das Variables Figma atuais. | 0 |
-| `component.input.icon.stroke-width.sm` | dimension | → `semantic.icon.stroke-width.regular.16` | Contrato icon.stroke-width de input, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.input.icon.stroke-width.lg` | dimension | → `semantic.icon.stroke-width.regular.24` | Contrato icon.stroke-width de input, sincronizado a partir das Variables Figma atuais. | 1 |
+| `component.input.icon.stroke-width.md` | dimension | → `semantic.icon.stroke-width.regular.20` | Contrato icon.stroke-width de input, sincronizado a partir das Variables Figma atuais. | 1 |
+| `component.input.icon.stroke-width.sm` | dimension | → `semantic.icon.stroke-width.regular.16` | Contrato icon.stroke-width de input, sincronizado a partir das Variables Figma atuais. | 1 |
 | `component.input.padding-x.lg` | dimension | → `semantic.space.md` | Padding horizontal do Field Input Text lg. | 1 |
 | `component.input.padding-x.md` | dimension | → `semantic.space.sm` | Padding horizontal do Field Input Text md. | 1 |
 | `component.input.padding-x.sm` | dimension | → `semantic.space.xs` | Padding horizontal do Field Input Text sm. | 1 |
@@ -1133,7 +1133,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.modal.body.padding-x.sm` | dimension | → `semantic.space.lg` | Padding horizontal do body Modal sm. | 1 |
 | `component.modal.close.color.default` | color | → `semantic.icon.color.default` | Contrato close.color de modal, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.modal.close.icon-size.default` | dimension | → `semantic.size.xs` | Tamanho do ícone Close Modal. | 1 |
-| `component.modal.close.icon.stroke-width.default` | dimension | → `semantic.icon.stroke-width.regular.24` | Contrato close.icon.stroke-width de modal, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.modal.close.icon.stroke-width.default` | dimension | → `semantic.icon.stroke-width.regular.24` | Contrato close.icon.stroke-width de modal, sincronizado a partir das Variables Figma atuais. | 1 |
 | `component.modal.close.padding.default` | dimension | → `semantic.space.xs` | Padding do close Modal. | 1 |
 | `component.modal.close.size.default` | dimension | → `semantic.size.md` | Contrato close.size de modal, sincronizado a partir das Variables Figma atuais. | 1 |
 | `component.modal.footer.gap.default` | dimension | → `semantic.space.md` | Gap horizontal do footer Modal. | 1 |
@@ -1243,9 +1243,9 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.select.icon.size.lg` | dimension | → `semantic.size.md` | Token component para select / icon / size / lg. | 1 |
 | `component.select.icon.size.md` | dimension | → `semantic.size.sm` | Token component para select / icon / size / md. | 1 |
 | `component.select.icon.size.sm` | dimension | → `semantic.size.xs` | Token component para select / icon / size / sm. | 1 |
-| `component.select.icon.stroke-width.lg` | dimension | → `semantic.icon.stroke-width.regular.24` | Contrato icon.stroke-width de select, sincronizado a partir das Variables Figma atuais. | 0 |
-| `component.select.icon.stroke-width.md` | dimension | → `semantic.icon.stroke-width.regular.20` | Contrato icon.stroke-width de select, sincronizado a partir das Variables Figma atuais. | 0 |
-| `component.select.icon.stroke-width.sm` | dimension | → `semantic.icon.stroke-width.regular.16` | Contrato icon.stroke-width de select, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.select.icon.stroke-width.lg` | dimension | → `semantic.icon.stroke-width.regular.24` | Contrato icon.stroke-width de select, sincronizado a partir das Variables Figma atuais. | 1 |
+| `component.select.icon.stroke-width.md` | dimension | → `semantic.icon.stroke-width.regular.20` | Contrato icon.stroke-width de select, sincronizado a partir das Variables Figma atuais. | 1 |
+| `component.select.icon.stroke-width.sm` | dimension | → `semantic.icon.stroke-width.regular.16` | Contrato icon.stroke-width de select, sincronizado a partir das Variables Figma atuais. | 1 |
 | `component.select.padding-x.lg` | dimension | → `semantic.space.md` | Padding horizontal do Field Select por size. | 1 |
 | `component.select.padding-x.md` | dimension | → `semantic.space.sm` | Padding horizontal do Field Select por size. | 1 |
 | `component.select.padding-x.sm` | dimension | → `semantic.space.xs` | Padding horizontal do Field Select por size. | 1 |
@@ -1292,10 +1292,10 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `component.tabs.focus-ring.radius.default` | dimension | → `semantic.radius.md` | Radius do focus ring Tabs. | 1 |
+| `component.tabs.focus-ring.radius.default` | dimension | → `semantic.radius.md` | Radius do focus ring Tabs. | 0 |
 | `component.tabs.indicator.fill.active` | color | → `semantic.primary.background.default` | Contrato indicator.fill de tabs, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.tabs.indicator.height.default` | dimension | → `semantic.border.width.strong` | Altura do indicator Tabs. | 1 |
-| `component.tabs.indicator.radius.default` | dimension | → `semantic.radius.md` | Radius do indicator Tabs. | 0 |
+| `component.tabs.indicator.radius.default` | dimension | → `semantic.radius.md` | Radius do indicator Tabs no Figma (não aplicado no CSS). | 0 |
 | `component.tabs.item.indicator-gap.default` | dimension | → `semantic.space.control.padding.10` | Gap entre label e indicator Tabs. | 1 |
 | `component.tabs.item.padding-top.default` | dimension | → `semantic.space.md` | Padding top do item Tabs. | 1 |
 | `component.tabs.item.padding-x.default` | dimension | → `semantic.space.lg` | Padding horizontal do item Tabs. | 1 |
@@ -6198,10 +6198,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/icons.css` (1×)
-    - `css/components/alert.css` (2×)
-    - `css/components/avatar.css` (1×)
-    - `css/components/button.css` (1×)
-    - `css/components/modal.css` (1×)
     - `css/tokens/generated/component.css` (7×)
   - Tokens que referenciam: `component.alert.icon.stroke-width.default`, `component.alert.close.icon.stroke-width.default`, `component.avatar.icon.stroke-width.sm`, `component.button.icon.stroke-width.md`, `component.input.icon.stroke-width.md`, `component.select.chevron.stroke-width.md`, `component.select.icon.stroke-width.md`
 
@@ -6232,7 +6228,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/icons.css` (1×)
-    - `css/components/avatar.css` (1×)
     - `css/tokens/generated/component.css` (1×)
   - Tokens que referenciam: `component.avatar.icon.stroke-width.lg`
 
@@ -8088,7 +8083,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Alias 1:1 para semantic.size.sm porque 20px e escala reutilizavel, mas no Alert documenta o tamanho publico do ícone de dismiss.
 - **Usos**:
   - CSS:
-    - `css/components/alert.css` (2×)
+    - `css/components/alert.css` (4×)
 
 ### `component.alert.close.icon.color.error.filled`
 
@@ -8160,7 +8155,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.
 - **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/alert.css` (1×)
 
 ### `component.alert.content.gap.default`
 
@@ -8406,7 +8402,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.
 - **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/alert.css` (1×)
 
 ### `component.alert.padding.default`
 
@@ -8606,7 +8603,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Usado para estabilizar o contrato anatômico do componente avatar entre Figma, JSON e CSS.
 - **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/avatar.css` (1×)
 
 ### `component.avatar.icon.stroke-width.md`
 
@@ -8618,7 +8616,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Usado para estabilizar o contrato anatômico do componente avatar entre Figma, JSON e CSS.
 - **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/avatar.css` (1×)
 
 ### `component.avatar.icon.stroke-width.sm`
 
@@ -8630,7 +8629,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Usado para estabilizar o contrato anatômico do componente avatar entre Figma, JSON e CSS.
 - **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/avatar.css` (1×)
 
 ### `component.avatar.initials.font-size.lg`
 
@@ -10357,7 +10357,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Usado para estabilizar o contrato anatômico do componente button entre Figma, JSON e CSS.
 - **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/button.css` (2×)
 
 ### `component.button.icon.stroke-width.md`
 
@@ -10369,7 +10370,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Usado para estabilizar o contrato anatômico do componente button entre Figma, JSON e CSS.
 - **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/button.css` (2×)
 
 ### `component.button.icon.stroke-width.sm`
 
@@ -10381,7 +10383,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Usado para estabilizar o contrato anatômico do componente button entre Figma, JSON e CSS.
 - **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/button.css` (2×)
 
 ### `component.button.label-frame.padding-x.default`
 
@@ -11956,7 +11959,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.size.xs.
 - **Usos**:
   - CSS:
-    - `css/components/form-field.css` (1×)
+    - `css/components/form-field.css` (7×)
 
 ### `component.form-field.error.icon.stroke-width.default`
 
@@ -12370,8 +12373,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.space.xs`
 - **Sentido**: Padding horizontal do frame externo de ícone Input Text.
 - **Escopo**: padding-inline, icon frame
-- **Contexto**: Component token do contrato do Input Text. Binda o wrapper externo dos ícones esquerdo/direito no Figma, enquanto icon.frame-size continua representando o Icon Placeholder interno.
-- **Decisão**: Alias 1:1 para semantic.space.xs para manter 4px de respiro horizontal ao redor do ícone sem inflar o tamanho anatômico do Icon Placeholder.
+- **Contexto**: Component token do contrato do Input Text. Define o respiro horizontal do frame externo dos ícones esquerdo/direito; o tamanho e stroke do ícone são controlados por component.input.icon.{size,stroke-width}.
+- **Decisão**: Alias 1:1 para semantic.space.xs para manter 4px de respiro horizontal ao redor do ícone sem alterar o tamanho anatômico do SVG Lucide.
 - **Usos**:
   - CSS:
     - `css/components/input.css` (6×)
@@ -12451,7 +12454,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Usado para estabilizar o contrato anatômico do componente input entre Figma, JSON e CSS.
 - **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/input.css` (1×)
 
 ### `component.input.icon.stroke-width.md`
 
@@ -12463,7 +12467,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Usado para estabilizar o contrato anatômico do componente input entre Figma, JSON e CSS.
 - **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/input.css` (1×)
 
 ### `component.input.icon.stroke-width.sm`
 
@@ -12475,7 +12480,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Usado para estabilizar o contrato anatômico do componente input entre Figma, JSON e CSS.
 - **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/input.css` (1×)
 
 ### `component.input.padding-x.lg`
 
@@ -12886,7 +12892,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Usado para estabilizar o contrato anatômico do componente modal entre Figma, JSON e CSS.
 - **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/modal.css` (1×)
 
 ### `component.modal.close.padding.default`
 
@@ -13887,8 +13894,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.space.xs`
 - **Sentido**: Padding horizontal do frame externo do chevron Select.
 - **Escopo**: padding-inline, chevron frame
-- **Contexto**: Component token do contrato do Select. Binda o wrapper externo do chevron no Figma e separa o respiro horizontal do tamanho interno do Icon Placeholder.
-- **Decisão**: Alias 1:1 para semantic.space.xs para manter 4px de respiro horizontal e preservar o ícone/placeholder em 16/20/24px por size.
+- **Contexto**: Component token do contrato do Select. Binda o wrapper externo do chevron no Figma e separa o respiro horizontal do tamanho do SVG Lucide.
+- **Decisão**: Alias 1:1 para semantic.space.xs para manter 4px de respiro horizontal e preservar o chevron em 16/20/24px por size.
 - **Usos**:
   - CSS:
     - `css/components/select.css` (4×)
@@ -14091,7 +14098,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.space.xs`
 - **Sentido**: Padding horizontal do frame externo de ícone Select.
 - **Escopo**: padding-inline, icon frame
-- **Contexto**: Component token do contrato do Select. Binda o wrapper externo do ícone à esquerda no Figma, mantendo o Icon Placeholder interno separado do respiro horizontal.
+- **Contexto**: Component token do contrato do Select. Binda o wrapper externo do ícone à esquerda no Figma, mantendo o tamanho do SVG Lucide separado do respiro horizontal.
 - **Decisão**: Alias 1:1 para semantic.space.xs para manter 4px de respiro horizontal ao redor do ícone leading.
 - **Usos**:
   - CSS:
@@ -14172,7 +14179,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Usado para estabilizar o contrato anatômico do componente select entre Figma, JSON e CSS.
 - **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/select.css` (1×)
 
 ### `component.select.icon.stroke-width.md`
 
@@ -14184,7 +14192,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Usado para estabilizar o contrato anatômico do componente select entre Figma, JSON e CSS.
 - **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/select.css` (1×)
 
 ### `component.select.icon.stroke-width.sm`
 
@@ -14196,7 +14205,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Usado para estabilizar o contrato anatômico do componente select entre Figma, JSON e CSS.
 - **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/select.css` (1×)
 
 ### `component.select.padding-x.lg`
 
@@ -14601,11 +14611,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.radius.md`
 - **Sentido**: Radius do focus ring Tabs.
 - **Escopo**: border-radius
-- **Contexto**: Component token do contrato anatômico Tabs Focus Ring. Binda corner radius do Focus Ring no Figma e define o border-radius usado para o outline do item no CSS.
-- **Decisão**: Alias 1:1 para semantic.radius.md porque 8px é decisão reutilizável, mas no Tabs documenta o radius do indicador de foco, não do item.
+- **Contexto**: Component token do contrato anatômico Tabs Focus Ring. Binda corner radius do Focus Ring no Figma; não deve ser usado no item/indicator para não arredondar o underline ativo.
+- **Decisão**: Alias 1:1 para semantic.radius.md porque 8px é decisão reutilizável para o focus ring, mantendo o indicador ativo sem border-radius no CSS.
 - **Usos**:
-  - CSS:
-    - `css/components/tabs.css` (1×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `component.tabs.indicator.fill.active`
 
@@ -14637,10 +14646,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Camada**: component
 - **Tipo**: `dimension`
 - **Alias**: → `semantic.radius.md`
-- **Sentido**: Radius do indicator Tabs.
+- **Sentido**: Radius do indicator Tabs no Figma (não aplicado no CSS).
 - **Escopo**: border-radius
-- **Contexto**: Component token do contrato anatômico Tabs Indicator. Binda os 4 corner radii do Indicator nos 4 estados do Tab Item no Figma.
-- **Decisão**: Alias 1:1 para semantic.radius.md porque 8px é decisão reutilizável, mas no Tabs documenta o radius público do indicador.
+- **Contexto**: Component token residual do contrato anatômico Tabs Indicator no Figma. No CSS publicado o indicador ativo é border-bottom reto e não consome radius.
+- **Decisão**: Mantido enquanto existir no snapshot Figma, mas não deve ser aplicado no repo porque arredonda visualmente o underline ativo.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 

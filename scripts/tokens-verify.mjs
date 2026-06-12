@@ -350,7 +350,7 @@ function parseCssVars(file) {
   const content = fs.readFileSync(file, "utf8");
   const vars = {};
   // captura --nome: valor; (pode ter comentários /* ... */ antes)
-  const re = /--(ds-[a-z0-9-]+):\s*([^;]+);/gi;
+  const re = /--(ds-[a-z0-9_-]+):\s*([^;]+);/gi;
   let match;
   while ((match = re.exec(content)) !== null) {
     vars[match[1]] = match[2].trim();

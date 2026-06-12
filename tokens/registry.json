@@ -12712,7 +12712,7 @@
         "css": [
           {
             "file": "css/components/alert.css",
-            "count": 2
+            "count": 4
           }
         ],
         "tokens": [],
@@ -14317,12 +14317,12 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.radius.md",
-      "sentido": "Radius do indicator Tabs.",
+      "sentido": "Radius do indicator Tabs no Figma (não aplicado no CSS).",
       "escopo": [
         "border-radius"
       ],
-      "contexto": "Component token do contrato anatômico Tabs Indicator. Binda os 4 corner radii do Indicator nos 4 estados do Tab Item no Figma.",
-      "decisao": "Alias 1:1 para semantic.radius.md porque 8px é decisão reutilizável, mas no Tabs documenta o radius público do indicador.",
+      "contexto": "Component token residual do contrato anatômico Tabs Indicator no Figma. No CSS publicado o indicador ativo é border-bottom reto e não consome radius.",
+      "decisao": "Mantido enquanto existir no snapshot Figma, mas não deve ser aplicado no repo porque arredonda visualmente o underline ativo.",
       "usos": {
         "css": [],
         "tokens": [],
@@ -18114,8 +18114,8 @@
         "padding-inline",
         "icon frame"
       ],
-      "contexto": "Component token do contrato do Input Text. Binda o wrapper externo dos ícones esquerdo/direito no Figma, enquanto icon.frame-size continua representando o Icon Placeholder interno.",
-      "decisao": "Alias 1:1 para semantic.space.xs para manter 4px de respiro horizontal ao redor do ícone sem inflar o tamanho anatômico do Icon Placeholder.",
+      "contexto": "Component token do contrato do Input Text. Define o respiro horizontal do frame externo dos ícones esquerdo/direito; o tamanho e stroke do ícone são controlados por component.input.icon.{size,stroke-width}.",
+      "decisao": "Alias 1:1 para semantic.space.xs para manter 4px de respiro horizontal ao redor do ícone sem alterar o tamanho anatômico do SVG Lucide.",
       "usos": {
         "css": [
           {
@@ -18136,8 +18136,8 @@
         "padding-inline",
         "chevron frame"
       ],
-      "contexto": "Component token do contrato do Select. Binda o wrapper externo do chevron no Figma e separa o respiro horizontal do tamanho interno do Icon Placeholder.",
-      "decisao": "Alias 1:1 para semantic.space.xs para manter 4px de respiro horizontal e preservar o ícone/placeholder em 16/20/24px por size.",
+      "contexto": "Component token do contrato do Select. Binda o wrapper externo do chevron no Figma e separa o respiro horizontal do tamanho do SVG Lucide.",
+      "decisao": "Alias 1:1 para semantic.space.xs para manter 4px de respiro horizontal e preservar o chevron em 16/20/24px por size.",
       "usos": {
         "css": [
           {
@@ -18158,7 +18158,7 @@
         "padding-inline",
         "icon frame"
       ],
-      "contexto": "Component token do contrato do Select. Binda o wrapper externo do ícone à esquerda no Figma, mantendo o Icon Placeholder interno separado do respiro horizontal.",
+      "contexto": "Component token do contrato do Select. Binda o wrapper externo do ícone à esquerda no Figma, mantendo o tamanho do SVG Lucide separado do respiro horizontal.",
       "decisao": "Alias 1:1 para semantic.space.xs para manter 4px de respiro horizontal ao redor do ícone leading.",
       "usos": {
         "css": [
@@ -20428,7 +20428,7 @@
         "css": [
           {
             "file": "css/components/form-field.css",
-            "count": 1
+            "count": 7
           }
         ],
         "tokens": [],
@@ -20641,15 +20641,10 @@
       "escopo": [
         "border-radius"
       ],
-      "contexto": "Component token do contrato anatômico Tabs Focus Ring. Binda corner radius do Focus Ring no Figma e define o border-radius usado para o outline do item no CSS.",
-      "decisao": "Alias 1:1 para semantic.radius.md porque 8px é decisão reutilizável, mas no Tabs documenta o radius do indicador de foco, não do item.",
+      "contexto": "Component token do contrato anatômico Tabs Focus Ring. Binda corner radius do Focus Ring no Figma; não deve ser usado no item/indicator para não arredondar o underline ativo.",
+      "decisao": "Alias 1:1 para semantic.radius.md porque 8px é decisão reutilizável para o focus ring, mantendo o indicador ativo sem border-radius no CSS.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/tabs.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -21729,22 +21724,6 @@
             "count": 1
           },
           {
-            "file": "css/components/alert.css",
-            "count": 2
-          },
-          {
-            "file": "css/components/avatar.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/button.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/modal.css",
-            "count": 1
-          },
-          {
             "file": "css/tokens/generated/component.css",
             "count": 7
           }
@@ -21809,10 +21788,6 @@
         "css": [
           {
             "file": "css/base/icons.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/avatar.css",
             "count": 1
           },
           {
@@ -23048,7 +23023,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23335,7 +23315,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23544,7 +23529,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente avatar entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/avatar.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23561,7 +23551,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente avatar entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/avatar.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23578,7 +23573,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente avatar entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/avatar.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24073,7 +24073,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente button entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/button.css",
+            "count": 2
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24090,7 +24095,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente button entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/button.css",
+            "count": 2
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24107,7 +24117,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente button entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/button.css",
+            "count": 2
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24439,7 +24454,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente input entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24456,7 +24476,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente input entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24473,7 +24498,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente input entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/input.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24563,7 +24593,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente modal entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24679,7 +24714,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente select entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24696,7 +24736,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente select entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24713,7 +24758,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente select entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/select.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
