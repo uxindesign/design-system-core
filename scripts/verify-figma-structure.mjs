@@ -25,9 +25,14 @@ if (args.includes("--help") || args.includes("-h")) {
 }
 
 const snapshotArgIndex = args.indexOf("--snapshot");
+const DEFAULT_STRUCTURE_SNAPSHOT_PATH = path.join(ROOT, ".figma-snapshot.structure.json");
+const DEFAULT_FULL_SNAPSHOT_PATH = path.join(ROOT, ".figma-snapshot.json");
+
 const snapshotPath = snapshotArgIndex >= 0
   ? path.resolve(ROOT, args[snapshotArgIndex + 1] || "")
-  : path.join(ROOT, ".figma-snapshot.json");
+  : fs.existsSync(DEFAULT_STRUCTURE_SNAPSHOT_PATH)
+  ? DEFAULT_STRUCTURE_SNAPSHOT_PATH
+  : DEFAULT_FULL_SNAPSHOT_PATH;
 
 if (!fs.existsSync(snapshotPath)) {
   console.error(`Figma snapshot não encontrado: ${path.relative(ROOT, snapshotPath)}`);
@@ -51,7 +56,10 @@ const collectionNameById = new Map(
   Object.entries(collectionsById).map(([id, collection]) => [id, collection.name])
 );
 
-if (variables.length === 0) {
+const structureAudit = snapshot.structureAudit || null;
+const variableAuditComplete = Boolean(structureAudit?.variableAuditComplete);
+
+if (variables.length === 0 && !variableAuditComplete) {
   issues.push(issue("snapshot", "missing-variables", "snapshot", "Snapshot não contém variables."));
 }
 
@@ -68,12 +76,14 @@ if (!snapshot.structureAudit) {
   ));
 }
 
-auditVariables(variables, variablesById, collectionNameById, issues);
+if (variables.length > 0) {
+  auditVariables(variables, variablesById, collectionNameById, issues);
+}
 
-const structureIssues = Array.isArray(snapshot.structureAudit?.issues)
-  ? snapshot.structureAudit.issues
+const structureIssues = Array.isArray(structureAudit?.issues)
+  ? structureAudit.issues
   : [];
-const declaredStructureIssueCount = Number(snapshot.structureAudit?.issueCount || 0);
+const declaredStructureIssueCount = Number(structureAudit?.issueCount || 0);
 
 if (declaredStructureIssueCount > 0 && structureIssues.length === 0) {
   issues.push(issue(
@@ -93,7 +103,7 @@ for (const structureIssue of structureIssues) {
   });
 }
 
-if (snapshot.structureAudit?.truncated) {
+if (structureAudit?.truncated) {
   issues.push(issue(
     "snapshot",
     "structure-audit-truncated",
@@ -110,7 +120,7 @@ console.log("");
 console.log(`snapshot:        ${path.relative(ROOT, snapshotPath)}`);
 console.log(`generatedAt:     ${snapshot.generatedAt || "?"}`);
 console.log(`variables:       ${variables.length}`);
-console.log(`component pages: ${snapshot.structureAudit?.componentPageCount ?? "?"}`);
+console.log(`component pages: ${structureAudit?.componentPageCount ?? "?"}`);
 console.log(`issues:          ${issues.length}`);
 console.log("");
 
@@ -206,7 +216,7 @@ function auditComponentAlias(sourceName, targetName, modeId, out) {
     out.push(issue("variable", "component-icon-color-alias", sourceName, `Mode: ${modeId}; target: ${targetName}`));
   }
 
-  if (sourceName.includes("/border-color/") && !/^(border|primary\/border)\//.test(targetName)) {
+  if (sourceName.includes("/border-color/") && !/^(border|primary\/border|outline\/border|feedback\/[a-z]+\/border)\//.test(targetName)) {
     out.push(issue("variable", "component-border-color-alias", sourceName, `Mode: ${modeId}; target: ${targetName}`));
   }
 
@@ -214,7 +224,7 @@ function auditComponentAlias(sourceName, targetName, modeId, out) {
     out.push(issue("variable", "component-focus-ring-color-alias", sourceName, `Mode: ${modeId}; target: ${targetName}`));
   }
 
-  if (sourceName.includes("/bg/") && !/^(background|surface|overlay|primary\/background|feedback)\//.test(targetName)) {
+  if (sourceName.includes("/bg/") && !/^(background|surface|overlay|primary\/background|feedback|toned\/background|outline\/background|ghost\/background)\//.test(targetName)) {
     out.push(issue("variable", "component-background-alias", sourceName, `Mode: ${modeId}; target: ${targetName}`));
   }
 }

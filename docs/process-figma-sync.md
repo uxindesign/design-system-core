@@ -114,7 +114,7 @@ O agente vai executar uma sequência de chamadas `use_figma` que:
 
 O arquivo está em `.gitignore` e não deve ser commitado — é regenerado a cada sync.
 
-Limitação: o fallback MCP descrito aqui gera apenas dados de Variables. Para rodar `npm run verify:figma-structure`, use o snapshot gerado pelo plugin local atualizado.
+Limitação: o fallback MCP descrito aqui gera apenas dados de Variables quando usado para sync Figma → JSON. Para auditoria estrutural sem sobrescrever o snapshot completo de tokens, gere `.figma-snapshot.structure.json`; `npm run verify:figma-structure` usa esse arquivo automaticamente quando ele existir.
 
 ## Passo 2 — dry-run
 

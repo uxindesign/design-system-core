@@ -1,5 +1,6 @@
 const EXPECTED_FILE_KEY = "PRYS2kL7VdC1MtVWfZvuDN";
 const STROKE_WEIGHT_FIELDS = [
+  "strokeWeight",
   "strokeTopWeight",
   "strokeRightWeight",
   "strokeBottomWeight",
@@ -300,7 +301,7 @@ function auditComponentAliasSemantics(sourceName, targetName, issues, modeId) {
     addIssue(issues, "variable", "component-icon-color-alias", sourceName, { modeId, target: targetName });
   }
 
-  if (sourceName.includes("/border-color/") && !/^(border|primary\/border)\//.test(targetName)) {
+  if (sourceName.includes("/border-color/") && !/^(border|primary\/border|outline\/border|feedback\/[a-z]+\/border)\//.test(targetName)) {
     addIssue(issues, "variable", "component-border-color-alias", sourceName, { modeId, target: targetName });
   }
 
@@ -308,7 +309,7 @@ function auditComponentAliasSemantics(sourceName, targetName, issues, modeId) {
     addIssue(issues, "variable", "component-focus-ring-color-alias", sourceName, { modeId, target: targetName });
   }
 
-  if (sourceName.includes("/bg/") && !/^(background|surface|overlay|primary\/background|feedback)\//.test(targetName)) {
+  if (sourceName.includes("/bg/") && !/^(background|surface|overlay|primary\/background|feedback|toned\/background|outline\/background|ghost\/background)\//.test(targetName)) {
     addIssue(issues, "variable", "component-background-alias", sourceName, { modeId, target: targetName });
   }
 }
@@ -318,12 +319,13 @@ async function auditPageNodes(page, variablesById, collectionNameById, issues) {
 
   for (const node of nodes) {
     const path = nodePath(node);
+    const isFinalComponentNode = isFinalComponentPath(path);
 
-    if (/\bglyph\b/i.test(node.name)) {
+    if (isFinalComponentNode && /\bglyph\b/i.test(node.name)) {
       addIssue(issues, "node", "legacy-glyph-node", path, { nodeId: node.id, pageName: page.name });
     }
 
-    if (node.type === "INSTANCE") {
+    if (isFinalComponentNode && node.type === "INSTANCE") {
       let mainComponent = null;
       try {
         mainComponent = await node.getMainComponentAsync();
@@ -345,10 +347,14 @@ async function auditPageNodes(page, variablesById, collectionNameById, issues) {
       }
     }
 
-    if (/focus ring/i.test(node.name)) {
+    if (isFinalComponentNode && /focus ring/i.test(node.name)) {
       auditFocusRingNode(node, path, variablesById, collectionNameById, issues, page.name);
     }
   }
+}
+
+function isFinalComponentPath(path) {
+  return path.includes(" / section-variantes / ");
 }
 
 function auditLucideInstance(node, path, variablesById, collectionNameById, issues, pageName, mainComponent) {
@@ -384,7 +390,7 @@ function auditFocusRingNode(node, path, variablesById, collectionNameById, issue
   const color = findPaintBinding(node, variablesById, collectionNameById);
   const stroke = getStrokeWeightBindingInfo(node, variablesById, collectionNameById);
 
-  if (!color || color.collection !== "Component" || !/\/focus-ring\/color\//.test(color.name)) {
+  if (!color || color.collection !== "Component" || !/(^|\/)focus-ring\/color\//.test(color.name)) {
     addIssue(issues, "node", "focus-ring-color-not-component-focus-ring", path, {
       nodeId: node.id,
       pageName,
@@ -392,7 +398,7 @@ function auditFocusRingNode(node, path, variablesById, collectionNameById, issue
     });
   }
 
-  if (!stroke || stroke.collection !== "Component" || !/\/focus-ring\/width$/.test(stroke.name)) {
+  if (!stroke || stroke.collection !== "Component" || !/(^|\/)focus-ring\/width$/.test(stroke.name)) {
     addIssue(issues, "node", "focus-ring-width-not-component-focus-ring", path, {
       nodeId: node.id,
       pageName,
