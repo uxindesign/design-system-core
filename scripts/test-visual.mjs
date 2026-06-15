@@ -15,8 +15,9 @@
  *   node scripts/test-visual.mjs --filter button  # filtra por nome
  *   node scripts/test-visual.mjs --mode light     # só um modo
  *
- * Atenção: baseline images são versionadas em git. Atualizar com --update
- * só após verificar visualmente que mudança é intencional.
+ * Atenção: baseline images são versionadas em git. A referência canônica é o
+ * rendering Linux do GitHub Actions; ao atualizar em outro SO, valide que o
+ * diff não é apenas variação de fonte/rasterização antes de commitar.
  */
 
 import { chromium } from 'playwright';
