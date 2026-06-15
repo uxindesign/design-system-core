@@ -9,6 +9,7 @@
  * Uso:
  *   node scripts/verify-figma-structure.mjs
  *   node scripts/verify-figma-structure.mjs --snapshot .figma-snapshot.json
+ *   node scripts/verify-figma-structure.mjs --snapshot figma-snapshot.json
  *   node scripts/verify-figma-structure.mjs --strict-unused
  */
 
@@ -29,12 +30,15 @@ const strictUnused = args.includes("--strict-unused");
 const snapshotArgIndex = args.indexOf("--snapshot");
 const DEFAULT_STRUCTURE_SNAPSHOT_PATH = path.join(ROOT, ".figma-snapshot.structure.json");
 const DEFAULT_FULL_SNAPSHOT_PATH = path.join(ROOT, ".figma-snapshot.json");
+const DEFAULT_DOWNLOADED_SNAPSHOT_PATH = path.join(ROOT, "figma-snapshot.json");
 
 const snapshotPath = snapshotArgIndex >= 0
   ? path.resolve(ROOT, args[snapshotArgIndex + 1] || "")
-  : fs.existsSync(DEFAULT_STRUCTURE_SNAPSHOT_PATH)
-  ? DEFAULT_STRUCTURE_SNAPSHOT_PATH
-  : DEFAULT_FULL_SNAPSHOT_PATH;
+  : selectNewestSnapshot([
+      DEFAULT_STRUCTURE_SNAPSHOT_PATH,
+      DEFAULT_FULL_SNAPSHOT_PATH,
+      DEFAULT_DOWNLOADED_SNAPSHOT_PATH,
+    ]) || DEFAULT_FULL_SNAPSHOT_PATH;
 
 if (!fs.existsSync(snapshotPath)) {
   console.error(`Figma snapshot não encontrado: ${path.relative(ROOT, snapshotPath)}`);
@@ -183,6 +187,16 @@ if (issues.length > 0) {
   }
   console.log("");
   process.exit(1);
+}
+
+function selectNewestSnapshot(candidates) {
+  return candidates
+    .filter((candidate) => fs.existsSync(candidate))
+    .map((candidate) => ({
+      path: candidate,
+      mtimeMs: fs.statSync(candidate).mtimeMs,
+    }))
+    .sort((a, b) => b.mtimeMs - a.mtimeMs)[0]?.path || null;
 }
 
 console.log("✓ Estrutura Figma válida para as invariantes automatizadas.");

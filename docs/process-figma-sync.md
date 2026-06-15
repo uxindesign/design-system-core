@@ -29,7 +29,7 @@ Uso normal:
 
 Esse modo compara as Variables vivas do Figma com `docs/api/tokens.json` publicado em GitHub Pages. Não precisa terminal, arquivo local ou servidor local.
 
-Para fluxo de release ou auditoria que precisa comparar contra o working tree local, use o fallback manual: clique em **Baixar .figma-snapshot.json**, coloque o arquivo na raiz do repo e siga o Passo 2.
+Para fluxo de release ou auditoria que precisa comparar contra o working tree local, use o fallback manual: clique em **Baixar .figma-snapshot.json**, coloque o arquivo na raiz do repo e siga o Passo 2. Se o arquivo vier como `figma-snapshot.json` sem ponto, os scripts também aceitam; ele é derivado e não deve ser commitado.
 
 O plugin:
 
@@ -114,7 +114,7 @@ O agente vai executar uma sequência de chamadas `use_figma` que:
 
 O arquivo está em `.gitignore` e não deve ser commitado — é regenerado a cada sync.
 
-Limitação: o fallback MCP descrito aqui gera apenas dados de Variables quando usado para sync Figma → JSON. Para auditoria estrutural sem sobrescrever o snapshot completo de tokens, gere `.figma-snapshot.structure.json`; `npm run verify:figma-structure` usa esse arquivo automaticamente quando ele existir. Quando o snapshot tiver `structureAudit.variableUsage`, o verificador também lista Component variables sem uso nos variants finais; rode `npm run audit:component-tokens` para tratar esses casos como erro durante limpezas de tokens.
+Limitação: o fallback MCP descrito aqui gera apenas dados de Variables quando usado para sync Figma → JSON. Para auditoria estrutural sem sobrescrever o snapshot completo de tokens, gere `.figma-snapshot.structure.json`. Sem `--snapshot`, `npm run verify:figma-structure` usa o snapshot mais recente entre `.figma-snapshot.structure.json`, `.figma-snapshot.json` e `figma-snapshot.json`, evitando validar acidentalmente um arquivo estrutural antigo. Quando o snapshot tiver `structureAudit.variableUsage`, o verificador também lista Component variables sem uso nos variants finais; rode `npm run audit:component-tokens` para tratar esses casos como erro durante limpezas de tokens.
 
 ## Passo 2 — dry-run
 

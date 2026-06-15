@@ -70,7 +70,10 @@
 <p>O formato é baseado em <a href="https://keepachangelog.com/pt-BR/1.1.0/">Keep a Changelog</a> e o versionamento segue <a href="https://semver.org/lang/pt-BR/">Semantic Versioning</a>.</p>
 <p>A partir de <code>1.0.0-beta.1</code>, o sistema entrou em <strong>fase beta</strong> — releases incrementam <code>1.0.0-beta.N</code> até decisão do owner pra dropping do tag → <code>1.0.0</code> oficial. Tags 0.x permanecem como histórico pré-beta. Regras em <code>docs/process-versioning.html</code>.</p>
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
-<p>Sem mudanças ainda.</p>
+<h3>Corrigido</h3>
+<ul>
+<li><strong>Auditoria estrutural do Figma passa a escolher o snapshot mais recente.</strong> <code>verify:figma-structure</code> agora aceita <code>figma-snapshot.json</code> sem ponto e, quando não recebe <code>--snapshot</code>, escolhe o arquivo mais novo entre os snapshots locais conhecidos, evitando validar acidentalmente um <code>.figma-snapshot.structure.json</code> antigo.</li>
+</ul>
 <h2>[1.0.0-beta.5] — 2026-06-12</h2>
 <h3>Corrigido</h3>
 <ul>
