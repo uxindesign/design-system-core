@@ -16,7 +16,7 @@
 
 /* Dialog */
 .ds-modal {
-  background-color: var(--ds-surface-elevated);
+  background-color: var(--ds-modal-bg-default);
   border-radius: var(--ds-modal-radius-default);
   box-shadow: var(--ds-modal-shadow-default);
   width: 100%;
@@ -52,7 +52,7 @@
   margin: 0;
   font-size: var(--ds-modal-title-font-size-sm);
   font-weight: var(--ds-modal-title-font-weight-default);
-  color: var(--ds-content-strong);
+  color: var(--ds-modal-title-color-default);
   line-height: var(--ds-modal-title-line-height-sm);
   letter-spacing: var(--ds-modal-title-letter-spacing-sm);
 }
@@ -77,7 +77,7 @@
   border: none;
   padding: var(--ds-modal-close-padding-default);
   cursor: pointer;
-  color: var(--ds-content-default);
+  color: var(--ds-modal-close-color-default);
   border-radius: var(--ds-radius-sm);
   display: inline-flex;
   align-items: center;
@@ -99,8 +99,8 @@
 }
 
 .ds-modal__close:focus-visible {
-  outline: var(--ds-border-width-focus) solid var(--ds-border-focus);
-  outline-offset: var(--ds-border-width-focus);
+  outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color-default);
+  outline-offset: var(--ds-focus-ring-width);
 }
 
 /* Body — escala por size do modal (espelha Figma):
@@ -110,7 +110,7 @@
 .ds-modal__body {
   padding: 0 var(--ds-modal-body-padding-x-sm) var(--ds-modal-body-padding-bottom-sm);
   overflow-y: auto;
-  color: var(--ds-content-strong);
+  color: var(--ds-modal-body-color-default);
   font-size: var(--ds-modal-body-font-size-sm);
   font-weight: var(--ds-modal-body-font-weight-default);
   line-height: var(--ds-modal-body-line-height-sm);

@@ -7,10 +7,9 @@
   50% { opacity: 0.4; }
 }
 
-/* Base skeleton — Figma: fill background/subtle */
+/* Base skeleton — Figma: fill via component tokens */
 .ds-skeleton {
   display: block;
-  background-color: var(--ds-background-subtle);
   animation: ds-pulse 1.5s ease-in-out infinite;
 }
 
@@ -20,6 +19,7 @@
 
 /* Text skeleton — Figma: 12px height, radius/md */
 .ds-skeleton--text {
+  background-color: var(--ds-skeleton-text-fill-default);
   height: var(--ds-skeleton-text-height-default);
   width: 100%;
   border-radius: var(--ds-skeleton-text-radius-default);
@@ -27,6 +27,7 @@
 
 /* Circle skeleton */
 .ds-skeleton--circle {
+  background-color: var(--ds-skeleton-circle-fill-default);
   width: var(--ds-skeleton-circle-size-default);
   height: var(--ds-skeleton-circle-size-default);
   border-radius: var(--ds-skeleton-circle-radius-default);
@@ -35,6 +36,7 @@
 
 /* Rectangle skeleton */
 .ds-skeleton--rectangle {
+  background-color: var(--ds-skeleton-rectangle-fill-default);
   width: 100%;
   height: var(--ds-skeleton-rectangle-height-default);
   border-radius: var(--ds-skeleton-rectangle-radius-default);

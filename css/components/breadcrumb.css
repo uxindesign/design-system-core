@@ -19,7 +19,7 @@
   display: inline-flex;
   align-items: center;
   gap: var(--ds-breadcrumb-item-gap-default);
-  color: var(--ds-link-content-default);
+  color: var(--ds-breadcrumb-label-color-link);
   border-radius: var(--ds-breadcrumb-focus-ring-radius-default);
   text-decoration: none;
 }
@@ -34,15 +34,15 @@
 }
 
 .ds-breadcrumb__item:focus-visible {
-  outline: var(--ds-border-width-focus) solid var(--ds-border-focus);
-  outline-offset: var(--ds-border-width-focus);
+  outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color-default);
+  outline-offset: var(--ds-focus-ring-width);
 }
 
 /* Current (last item)
    ========================================================================== */
 
 .ds-breadcrumb__item--current {
-  color: var(--ds-content-default);
+  color: var(--ds-breadcrumb-label-color-current);
   pointer-events: none;
 }
 

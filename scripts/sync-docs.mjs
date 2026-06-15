@@ -239,11 +239,11 @@ ${rows.join('\n')}
 **Legenda:** ⬜ Não iniciado | 🟡 Em progresso | 🟢 Completo | ⚠️ Verificar | 🔴 Precisa revisão | — Não aplicável
 
 **Nota sobre binding:**
-- Button: fills (brand + toned), padding-x/y, height, radius, gap, border-width, focus ring via semantic vars
-- Input Text / Select / Textarea: label usa \`content/default\`, label row com asterisco Required, control tokens
-- Checkbox / Radio / Toggle: Content frame vertical (Label + Description + Helper Text), booleans show/hide
+- Button: tokens Component para background, content, border, height, padding, radius, gap, focus ring e ícones
+- Input Text / Select / Textarea: tokens Component compartilhados de Field/Form Field para label, required, helper, erro, superfície, borda, foco e estados
+- Checkbox / Radio / Toggle: tokens Component para target/control/track/thumb/content, com Content frame vertical (Label + Description + Helper Text) e booleans show/hide
 - **Form Field**: CSS-only (ADR-017). Não tem (e não deve ter) equivalente Figma — componentes Figma de form (Input, Select, Textarea, Checkbox, Radio, Toggle) já carregam Label + Required + Helper inline em cada variant. Form Field só existe no CSS porque HTML não tem elemento "form control" composto.
-- Demais: fills, strokes, radius, spacing via tokens semânticos
+- Demais componentes: tokens Component quando a anatomia já foi materializada; tokens Semantic só quando o componente ainda não tem contrato anatômico próprio.
 
 ## Pipeline
 

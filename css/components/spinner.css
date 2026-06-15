@@ -6,12 +6,12 @@
   to { transform: rotate(360deg); }
 }
 
-/* Base spinner — Figma: track border/subtle, indicator border/brand */
+/* Base spinner — Figma: track + indicator via component tokens */
 .ds-spinner {
   display: inline-block;
   border-radius: var(--ds-spinner-radius-default);
-  border: var(--ds-spinner-ring-stroke-width-default) solid var(--ds-border-subtle);
-  border-top-color: var(--ds-border-brand);
+  border: var(--ds-spinner-ring-stroke-width-default) solid var(--ds-spinner-track-border-color-default);
+  border-top-color: var(--ds-spinner-indicator-border-color-default);
   /* motion.duration.slower (600ms) e motion.ease.linear são tokens
      dedicados a loops contínuos. NÃO usar duration.fast/normal/slow
      (são pra transições de estado, 150-300ms) nem ease.default (curva
@@ -44,8 +44,8 @@
    Styles
    --------------------------------------------------------- */
 .ds-spinner--on-color {
-  border-color: var(--ds-overlay-medium);
-  border-top-color: var(--ds-border-inverse);
+  border-color: var(--ds-spinner-track-border-color-on-color);
+  border-top-color: var(--ds-spinner-indicator-border-color-on-color);
 }
 
 /* ---------------------------------------------------------
