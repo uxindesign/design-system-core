@@ -7,8 +7,10 @@ on:
       - "css/**"
       - "docs/**"
       - "scripts/**"
+      - "tests/visual/**"
       - "build-tokens.mjs"
       - "package.json"
+      - "package-lock.json"
       - ".github/workflows/test.yml"
   push:
     branches: [main]
@@ -17,7 +19,11 @@ on:
       - "css/**"
       - "docs/**"
       - "scripts/**"
+      - "tests/visual/**"
       - "build-tokens.mjs"
+      - "package.json"
+      - "package-lock.json"
+      - ".github/workflows/test.yml"
 
 jobs:
   test:
@@ -59,3 +65,16 @@ jobs:
 
       - name: A11y (axe-core WCAG 2.2 AA contra .a11y-baseline.json)
         run: node scripts/test-a11y.mjs
+
+      - name: Visual regression (Playwright + pixelmatch)
+        run: node scripts/test-visual.mjs
+
+      - name: Upload visual regression artifacts
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: visual-regression-artifacts
+          path: |
+            tests/visual/actual/
+            tests/visual/diff/
+          if-no-files-found: ignore
