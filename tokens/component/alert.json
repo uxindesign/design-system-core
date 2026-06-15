@@ -186,7 +186,7 @@
             }
           },
           "subtle": {
-            "$value": "{semantic.content.default}",
+            "$value": "{semantic.content.strong}",
             "$type": "color"
           },
           "warning": {

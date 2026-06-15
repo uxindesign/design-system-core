@@ -22,7 +22,7 @@
   --ds-alert-description-line-height-default: var(--ds-body-line-height-sm); /** Line-height da description Alert. */
   --ds-alert-description-font-weight-default: var(--ds-body-font-weight-regular); /** Font-weight da description Alert. */
   --ds-alert-description-color-success-filled: var(--ds-feedback-success-content-contrast);
-  --ds-alert-description-color-subtle: var(--ds-content-default);
+  --ds-alert-description-color-subtle: var(--ds-content-strong);
   --ds-alert-description-color-warning-filled: var(--ds-feedback-warning-content-contrast);
   --ds-alert-description-color-error-filled: var(--ds-feedback-error-content-contrast);
   --ds-alert-description-color-info-filled: var(--ds-feedback-info-content-contrast);

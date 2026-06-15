@@ -435,8 +435,15 @@
       "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
-        "css": [],
-        "tokens": [],
+        "css": [
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "semantic.feedback.info.content-default"
+        ],
         "figma": []
       }
     },
@@ -456,7 +463,7 @@
         "css": [
           {
             "file": "css/tokens/generated/theme-dark.css",
-            "count": 3
+            "count": 2
           },
           {
             "file": "css/tokens/generated/theme-light.css",
@@ -465,7 +472,6 @@
         ],
         "tokens": [
           "semantic.feedback.info.border-default",
-          "semantic.feedback.info.content-default",
           "semantic.feedback.info.background.default",
           "semantic.feedback.info.background.default"
         ],
@@ -885,8 +891,15 @@
       "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.error.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
-        "css": [],
-        "tokens": [],
+        "css": [
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "semantic.feedback.error.content-default"
+        ],
         "figma": []
       }
     },
@@ -906,12 +919,11 @@
         "css": [
           {
             "file": "css/tokens/generated/theme-dark.css",
-            "count": 4
+            "count": 3
           }
         ],
         "tokens": [
           "semantic.feedback.error.border-default",
-          "semantic.feedback.error.content-default",
           "semantic.feedback.error.background.default",
           "semantic.feedback.error.background.active"
         ],
@@ -1154,7 +1166,7 @@
         "css": [
           {
             "file": "css/tokens/generated/theme-dark.css",
-            "count": 1
+            "count": 2
           },
           {
             "file": "css/tokens/generated/theme-light.css",
@@ -1162,6 +1174,7 @@
           }
         ],
         "tokens": [
+          "semantic.feedback.warning.content-default",
           "semantic.feedback.warning.background.default",
           "semantic.feedback.warning.background.default"
         ],
@@ -1184,12 +1197,11 @@
         "css": [
           {
             "file": "css/tokens/generated/theme-dark.css",
-            "count": 2
+            "count": 1
           }
         ],
         "tokens": [
-          "semantic.feedback.warning.border-default",
-          "semantic.feedback.warning.content-default"
+          "semantic.feedback.warning.border-default"
         ],
         "figma": []
       }
@@ -1421,8 +1433,15 @@
       "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.success.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
-        "css": [],
-        "tokens": [],
+        "css": [
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "semantic.feedback.success.content-default"
+        ],
         "figma": []
       }
     },
@@ -1442,12 +1461,11 @@
         "css": [
           {
             "file": "css/tokens/generated/theme-dark.css",
-            "count": 3
+            "count": 2
           }
         ],
         "tokens": [
           "semantic.feedback.success.border-default",
-          "semantic.feedback.success.content-default",
           "semantic.feedback.success.background.default"
         ],
         "figma": []
@@ -4375,6 +4393,7 @@
         ],
         "tokens": [
           "component.alert.title.color.subtle",
+          "component.alert.description.color.subtle",
           "component.badge.label.color.neutral.solid",
           "component.card.title.color.default",
           "component.field.value.color.default",
@@ -4404,10 +4423,6 @@
         "css": [
           {
             "file": "css/base/reset.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/alert.css",
             "count": 1
           },
           {
@@ -4460,7 +4475,6 @@
           }
         ],
         "tokens": [
-          "component.alert.description.color.subtle",
           "component.badge.label.color.neutral.subtle",
           "component.breadcrumb.label.color.current",
           "component.card.body.color.default",
@@ -23144,7 +23158,7 @@
     "component.alert.description.color.subtle": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.content.default",
+      "references": "semantic.content.strong",
       "sentido": "Contrato description.color de alert, sincronizado a partir das Variables Figma atuais.",
       "escopo": [
         "text",
@@ -23154,7 +23168,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }

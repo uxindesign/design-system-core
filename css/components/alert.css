@@ -151,7 +151,7 @@
 
 /* Description uses secondary content tone in subtle variants */
 .ds-alert--subtle .ds-alert__description {
-  color: var(--ds-content-default);
+  color: var(--ds-alert-description-color-subtle);
 }
 
 /* ---------------------------------------------------------

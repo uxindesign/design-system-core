@@ -9,6 +9,7 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 ## [Não publicado]
 
 ### Corrigido
+- **Baseline de acessibilidade zerada.** Ajustados contrastes em feedback `subtle` no dark mode, links do site de documentação e foco de blocos de código roláveis; `test:a11y` agora passa com `critical=0`, `serious=0`, `moderate=0`, `minor=0` e `.a11y-baseline.json` fica sem violações aceitas.
 - **Auditoria estrutural do Figma passa a escolher o snapshot mais recente.** `verify:figma-structure` agora aceita `figma-snapshot.json` sem ponto e, quando não recebe `--snapshot`, escolhe o arquivo mais novo entre os snapshots locais conhecidos, evitando validar acidentalmente um `.figma-snapshot.structure.json` antigo.
 - **Pendências de maturidade e milestones removem itens stale.** `process-versioning` passa a marcar Form Field CSS-only, gates locais de snapshot, registry sem warnings, visual regression local e a11y tests como entregues; `component-inventory` troca milestones já resolvidos por próximos passos reais.
 

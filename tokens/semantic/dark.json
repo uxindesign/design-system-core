@@ -162,7 +162,7 @@
         },
         "content-default": {
           "$type": "color",
-          "$value": "{foundation.color.green.400}"
+          "$value": "{foundation.color.green.300}"
         },
         "content-contrast": {
           "$type": "color",
@@ -204,7 +204,7 @@
         },
         "content-default": {
           "$type": "color",
-          "$value": "{foundation.color.amber.400}"
+          "$value": "{foundation.color.amber.300}"
         },
         "content-contrast": {
           "$type": "color",
@@ -239,7 +239,7 @@
         },
         "content-default": {
           "$type": "color",
-          "$value": "{foundation.color.red.400}"
+          "$value": "{foundation.color.red.300}"
         },
         "content-contrast": {
           "$type": "color",
@@ -281,7 +281,7 @@
         },
         "content-default": {
           "$type": "color",
-          "$value": "{foundation.color.blue.400}"
+          "$value": "{foundation.color.blue.300}"
         },
         "content-contrast": {
           "$type": "color",

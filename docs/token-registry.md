@@ -1,6 +1,6 @@
 # Token Registry
 
-> Gerado automaticamente por `scripts/build-token-registry.mjs` em 2026-06-12. Não editar à mão — edite `tokens/registry.json` e rode `npm run build:registry`.
+> Gerado automaticamente por `scripts/build-token-registry.mjs` em 2026-06-15. Não editar à mão — edite `tokens/registry.json` e rode `npm run build:registry`.
 
 Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra arquitetural de camadas.
 
@@ -29,8 +29,8 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 |---|---|---|---|---|
 | `foundation.color.amber.100` | color | — | Tom 100 da paleta amber. Tom muito claro — backgrounds, hover states sutis em light mode. | 2 |
 | `foundation.color.amber.200` | color | — | Tom 200 da paleta amber. Tom claro — backgrounds secundários, borders subtle. | 0 |
-| `foundation.color.amber.300` | color | — | Tom 300 da paleta amber. Tom médio-claro — borders default, foregrounds em dark mode. | 4 |
-| `foundation.color.amber.400` | color | — | Tom 400 da paleta amber. Tom médio — fills médios, focus rings. | 3 |
+| `foundation.color.amber.300` | color | — | Tom 300 da paleta amber. Tom médio-claro — borders default, foregrounds em dark mode. | 5 |
+| `foundation.color.amber.400` | color | — | Tom 400 da paleta amber. Tom médio — fills médios, focus rings. | 2 |
 | `foundation.color.amber.50` | color | — | Tom 50 da paleta amber. Tom muito claro — backgrounds, hover states sutis em light mode. | 0 |
 | `foundation.color.amber.500` | color | — | Tom 500 da paleta amber. Tom médio — fills médios, focus rings. | 4 |
 | `foundation.color.amber.600` | color | — | Tom 600 da paleta amber. Tom forte — fills primários, brand fills. | 2 |
@@ -40,8 +40,8 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `foundation.color.amber.950` | color | — | Tom 950 da paleta amber. Tom extremo — surfaces escuras, body text em light mode. | 4 |
 | `foundation.color.blue.100` | color | — | Tom 100 da paleta blue. Tom muito claro — backgrounds, hover states sutis em light mode. | 2 |
 | `foundation.color.blue.200` | color | — | Tom 200 da paleta blue. Tom claro — backgrounds secundários, borders subtle. | 0 |
-| `foundation.color.blue.300` | color | — | Tom 300 da paleta blue. Tom médio-claro — borders default, foregrounds em dark mode. | 0 |
-| `foundation.color.blue.400` | color | — | Tom 400 da paleta blue. Tom médio — fills médios, focus rings. | 6 |
+| `foundation.color.blue.300` | color | — | Tom 300 da paleta blue. Tom médio-claro — borders default, foregrounds em dark mode. | 2 |
+| `foundation.color.blue.400` | color | — | Tom 400 da paleta blue. Tom médio — fills médios, focus rings. | 5 |
 | `foundation.color.blue.50` | color | — | Tom 50 da paleta blue. Tom muito claro — backgrounds, hover states sutis em light mode. | 0 |
 | `foundation.color.blue.500` | color | — | Tom 500 da paleta blue. Tom médio — fills médios, focus rings. | 4 |
 | `foundation.color.blue.600` | color | — | Tom 600 da paleta blue. Tom forte — fills primários, brand fills. | 2 |
@@ -92,8 +92,8 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `foundation.color.emerald.950` | color | — | Tom 950 da paleta emerald. Tom extremo — surfaces escuras, body text em light mode. | 0 |
 | `foundation.color.green.100` | color | — | Tom 100 da paleta green. Tom muito claro — backgrounds, hover states sutis em light mode. | 2 |
 | `foundation.color.green.200` | color | — | Tom 200 da paleta green. Tom claro — backgrounds secundários, borders subtle. | 0 |
-| `foundation.color.green.300` | color | — | Tom 300 da paleta green. Tom médio-claro — borders default, foregrounds em dark mode. | 0 |
-| `foundation.color.green.400` | color | — | Tom 400 da paleta green. Tom médio — fills médios, focus rings. | 4 |
+| `foundation.color.green.300` | color | — | Tom 300 da paleta green. Tom médio-claro — borders default, foregrounds em dark mode. | 2 |
+| `foundation.color.green.400` | color | — | Tom 400 da paleta green. Tom médio — fills médios, focus rings. | 3 |
 | `foundation.color.green.50` | color | — | Tom 50 da paleta green. Tom muito claro — backgrounds, hover states sutis em light mode. | 0 |
 | `foundation.color.green.500` | color | — | Tom 500 da paleta green. Tom médio — fills médios, focus rings. | 5 |
 | `foundation.color.green.600` | color | — | Tom 600 da paleta green. Tom forte — fills primários, brand fills. | 2 |
@@ -154,8 +154,8 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `foundation.color.purple.950` | color | — | Tom 950 da paleta purple. Tom extremo — surfaces escuras, body text em light mode. | 0 |
 | `foundation.color.red.100` | color | — | Tom 100 da paleta red. Tom muito claro — backgrounds, hover states sutis em light mode. | 2 |
 | `foundation.color.red.200` | color | — | Tom 200 da paleta red. Tom claro — backgrounds secundários, borders subtle. | 0 |
-| `foundation.color.red.300` | color | — | Tom 300 da paleta red. Tom médio-claro — borders default, foregrounds em dark mode. | 0 |
-| `foundation.color.red.400` | color | — | Tom 400 da paleta red. Tom médio — fills médios, focus rings. | 5 |
+| `foundation.color.red.300` | color | — | Tom 300 da paleta red. Tom médio-claro — borders default, foregrounds em dark mode. | 2 |
+| `foundation.color.red.400` | color | — | Tom 400 da paleta red. Tom médio — fills médios, focus rings. | 4 |
 | `foundation.color.red.50` | color | — | Tom 50 da paleta red. Tom muito claro — backgrounds, hover states sutis em light mode. | 0 |
 | `foundation.color.red.500` | color | — | Tom 500 da paleta red. Tom médio — fills médios, focus rings. | 7 |
 | `foundation.color.red.600` | color | — | Tom 600 da paleta red. Tom forte — fills primários, brand fills. | 4 |
@@ -384,11 +384,11 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `semantic.content.brand` | color | → `semantic.primary.background.default` | Token semantic para content / brand. | 2 |
-| `semantic.content.default` | color | → `foundation.color.neutral.600` | Texto secundário — descrições, helper text, meta-info. | 27 |
+| `semantic.content.default` | color | → `foundation.color.neutral.600` | Texto secundário — descrições, helper text, meta-info. | 25 |
 | `semantic.content.disabled` | color | → `foundation.color.neutral.400` | Texto disabled — controles e items inativos. | 15 |
 | `semantic.content.hover` | color | → `foundation.color.neutral.700` | Conteúdo neutro em hover. | 6 |
 | `semantic.content.inverse` | color | → `foundation.color.neutral.50` | Texto invertido — sobre background.inverse (tooltips, badges escuros em light). | 5 |
-| `semantic.content.strong` | color | → `foundation.color.neutral.900` | Texto primário — body, headings, labels principais. | 23 |
+| `semantic.content.strong` | color | → `foundation.color.neutral.900` | Texto primário — body, headings, labels principais. | 24 |
 | `semantic.content.subtle` | color | → `foundation.color.neutral.500` | Texto terciário — caption, footnote, timestamps. | 7 |
 
 ### semantic.content-placeholder
@@ -714,7 +714,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.alert.content.gap.default` | dimension | → `semantic.space.xs` | Gap vertical do content Alert. | 1 |
 | `component.alert.description.color.error.filled` | color | → `semantic.feedback.error.content-contrast` | Contrato description.color.error de alert, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.alert.description.color.info.filled` | color | → `semantic.feedback.info.content-contrast` | Contrato description.color.info de alert, sincronizado a partir das Variables Figma atuais. | 0 |
-| `component.alert.description.color.subtle` | color | → `semantic.content.default` | Contrato description.color de alert, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.alert.description.color.subtle` | color | → `semantic.content.strong` | Contrato description.color de alert, sincronizado a partir das Variables Figma atuais. | 1 |
 | `component.alert.description.color.success.filled` | color | → `semantic.feedback.success.content-contrast` | Contrato description.color.success de alert, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.alert.description.color.warning.filled` | color | → `semantic.feedback.warning.content-contrast` | Contrato description.color.warning de alert, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.alert.description.font-size.default` | dimension | → `semantic.typography.body.font-size.sm` | Font-size da description Alert. | 1 |
@@ -1470,9 +1470,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-dark.css` (2×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.feedback.warning.background.default`, `semantic.feedback.warning.background.default`
+  - Tokens que referenciam: `semantic.feedback.warning.content-default`, `semantic.feedback.warning.background.default`, `semantic.feedback.warning.background.default`
 
 ### `foundation.color.amber.400`
 
@@ -1484,8 +1484,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-dark.css` (2×)
-  - Tokens que referenciam: `semantic.feedback.warning.border-default`, `semantic.feedback.warning.content-default`
+    - `css/tokens/generated/theme-dark.css` (1×)
+  - Tokens que referenciam: `semantic.feedback.warning.border-default`
 
 ### `foundation.color.amber.50`
 
@@ -1609,7 +1609,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (1×)
+  - Tokens que referenciam: `semantic.feedback.info.content-default`
 
 ### `foundation.color.blue.400`
 
@@ -1621,9 +1623,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-dark.css` (3×)
+    - `css/tokens/generated/theme-dark.css` (2×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.feedback.info.border-default`, `semantic.feedback.info.content-default`, `semantic.feedback.info.background.default`, `semantic.feedback.info.background.default`
+  - Tokens que referenciam: `semantic.feedback.info.border-default`, `semantic.feedback.info.background.default`, `semantic.feedback.info.background.default`
 
 ### `foundation.color.blue.50`
 
@@ -2227,7 +2229,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.success.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (1×)
+  - Tokens que referenciam: `semantic.feedback.success.content-default`
 
 ### `foundation.color.green.400`
 
@@ -2239,8 +2243,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-dark.css` (3×)
-  - Tokens que referenciam: `semantic.feedback.success.border-default`, `semantic.feedback.success.content-default`, `semantic.feedback.success.background.default`
+    - `css/tokens/generated/theme-dark.css` (2×)
+  - Tokens que referenciam: `semantic.feedback.success.border-default`, `semantic.feedback.success.background.default`
 
 ### `foundation.color.green.50`
 
@@ -2954,7 +2958,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.error.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (1×)
+  - Tokens que referenciam: `semantic.feedback.error.content-default`
 
 ### `foundation.color.red.400`
 
@@ -2966,8 +2972,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-dark.css` (4×)
-  - Tokens que referenciam: `semantic.feedback.error.border-default`, `semantic.feedback.error.content-default`, `semantic.feedback.error.background.default`, `semantic.feedback.error.background.active`
+    - `css/tokens/generated/theme-dark.css` (3×)
+  - Tokens que referenciam: `semantic.feedback.error.border-default`, `semantic.feedback.error.background.default`, `semantic.feedback.error.background.active`
 
 ### `foundation.color.red.50`
 
@@ -5080,7 +5086,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/reset.css` (1×)
-    - `css/components/alert.css` (1×)
     - `css/components/badge.css` (1×)
     - `css/components/breadcrumb.css` (1×)
     - `css/components/card.css` (2×)
@@ -5093,7 +5098,7 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/tokens/generated/component.css` (11×)
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `component.alert.description.color.subtle`, `component.badge.label.color.neutral.subtle`, `component.breadcrumb.label.color.current`, `component.card.body.color.default`, `component.card.subtitle.color.default`, `component.field.value.color.readonly`, `component.form-field.label.color.readonly`, `component.form-field.helper.color.default`, `component.tabs.label.color.default`, `component.toggle.thumb.fill.off.default`, `component.toggle.thumb.fill.off.focus`, `semantic.icon.color.default`, `semantic.icon.color.default`
+  - Tokens que referenciam: `component.badge.label.color.neutral.subtle`, `component.breadcrumb.label.color.current`, `component.card.body.color.default`, `component.card.subtitle.color.default`, `component.field.value.color.readonly`, `component.form-field.label.color.readonly`, `component.form-field.helper.color.default`, `component.tabs.label.color.default`, `component.toggle.thumb.fill.off.default`, `component.toggle.thumb.fill.off.focus`, `semantic.icon.color.default`, `semantic.icon.color.default`
 
 ### `semantic.content.disabled`
 
@@ -5170,7 +5175,7 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/tokens/generated/component.css` (9×)
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `component.alert.title.color.subtle`, `component.badge.label.color.neutral.solid`, `component.card.title.color.default`, `component.field.value.color.default`, `component.form-field.label.color.default`, `component.form-field.description.color.default`, `component.modal.body.color.default`, `component.modal.title.color.default`, `component.tabs.label.color.hover`, `semantic.icon.color.active`, `semantic.icon.color.active`
+  - Tokens que referenciam: `component.alert.title.color.subtle`, `component.alert.description.color.subtle`, `component.badge.label.color.neutral.solid`, `component.card.title.color.default`, `component.field.value.color.default`, `component.form-field.label.color.default`, `component.form-field.description.color.default`, `component.modal.body.color.default`, `component.modal.title.color.default`, `component.tabs.label.color.hover`, `semantic.icon.color.active`, `semantic.icon.color.active`
 
 ### `semantic.content.subtle`
 
@@ -8199,13 +8204,14 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.content.default`
+- **Alias**: → `semantic.content.strong`
 - **Sentido**: Contrato description.color de alert, sincronizado a partir das Variables Figma atuais.
 - **Escopo**: text, fill, stroke
 - **Contexto**: Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.
 - **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/alert.css` (1×)
 
 ### `component.alert.description.color.success.filled`
 

@@ -599,6 +599,11 @@
     });
   }
 
+  function initFocusableCodeBlocks() {
+    document.querySelectorAll('.ds-code-block').forEach(function (block) {
+      if (!block.hasAttribute('tabindex')) block.setAttribute('tabindex', '0');
+    });
+  }
 
   /* ---------------------------------------------------------
      Initialize All
@@ -611,6 +616,7 @@
     initCopyButtons();
     initPreviewTabs();
     initCharCounters();
+    initFocusableCodeBlocks();
     initLucideIcons();
   });
 })();

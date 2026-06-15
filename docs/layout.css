@@ -804,11 +804,24 @@ body .ds-md-generated-banner code {
   white-space: pre;
 }
 
+.ds-code-block:focus-visible {
+  outline: var(--ds-border-width-focus) solid var(--ds-border-focus);
+  outline-offset: var(--ds-border-width-focus);
+}
+
 /* Override do <pre> global (reset.css usa --ds-background-inverse, que
    flipa pra branco em dark). Code blocks no docs site são sempre escuros. */
 main.ds-main pre {
   background-color: var(--ds-color-neutral-900);
   color: var(--ds-color-neutral-50);
+}
+
+main.ds-main a:not([class]) {
+  color: var(--ds-link-content-default);
+}
+
+main.ds-main a:not([class]):hover {
+  color: var(--ds-link-content-hover);
 }
 
 /* ---------------------------------------------------------
@@ -841,6 +854,16 @@ main.ds-main pre {
 .ds-callout__title {
   font-weight: var(--ds-body-font-weight-semibold);
   margin-bottom: var(--ds-dimension-4);
+}
+
+.ds-callout a {
+  color: var(--ds-content-strong) !important;
+  text-decoration: underline;
+  text-underline-offset: var(--ds-dimension-2);
+}
+
+.ds-callout a:hover {
+  color: var(--ds-content-strong) !important;
 }
 
 /* ---------------------------------------------------------
@@ -892,6 +915,12 @@ main.ds-main pre {
   padding: var(--ds-dimension-12) var(--ds-dimension-16);
   font-size: var(--ds-body-font-size-sm);
   color: var(--ds-content-strong);
+}
+
+.ds-dodont__desc a {
+  color: var(--ds-content-strong) !important;
+  text-decoration: underline;
+  text-underline-offset: var(--ds-dimension-2);
 }
 
 .ds-dodont__item:has(.ds-dodont__label--do) .ds-dodont__desc {
