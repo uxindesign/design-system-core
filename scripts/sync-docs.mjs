@@ -273,8 +273,8 @@ ${adrs.map(a => `| ADR-${a.num} | ${a.title} | ${a.status} |`).join('\n')}
 ## Próximos milestones
 
 1. **Storybook** — setup + stories para 19 componentes (vanilla JS)
-2. **prefers-reduced-motion** — media query nos componentes com transitions (ADR-004 pendente)
-3. **CSS legado** — verificar/remover \`css/tokens/theme-light.css\` (ADR-010 pendente)
+2. **Redução da baseline a11y** — corrigir violações aceitas e atualizar \`.a11y-baseline.json\`
+3. **Visual regression em CI** — estabilizar fontes/capturas para rodar fora do ambiente local
 4. **Novos componentes** — Dropdown, Combobox, Pagination, Table
 `;
 

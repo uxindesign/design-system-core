@@ -73,6 +73,7 @@
 <h3>Corrigido</h3>
 <ul>
 <li><strong>Auditoria estrutural do Figma passa a escolher o snapshot mais recente.</strong> <code>verify:figma-structure</code> agora aceita <code>figma-snapshot.json</code> sem ponto e, quando não recebe <code>--snapshot</code>, escolhe o arquivo mais novo entre os snapshots locais conhecidos, evitando validar acidentalmente um <code>.figma-snapshot.structure.json</code> antigo.</li>
+<li><strong>Pendências de maturidade e milestones removem itens stale.</strong> <code>process-versioning</code> passa a marcar Form Field CSS-only, gates locais de snapshot, registry sem warnings, visual regression local e a11y tests como entregues; <code>component-inventory</code> troca milestones já resolvidos por próximos passos reais.</li>
 </ul>
 <h2>[1.0.0-beta.5] — 2026-06-12</h2>
 <h3>Corrigido</h3>

@@ -142,14 +142,14 @@ v1.0.0        ←  oficial (decisão do owner)
 </ul>
 <h3>Pendente pra futuras betas</h3>
 <ul>
-<li><input disabled="" type="checkbox" aria-hidden="true"> <strong>Form Field</strong> definido (component completo OU explicitamente fora de escopo) — <em>resolvido em beta.1: fora de escopo</em></li>
+<li><input checked="" disabled="" type="checkbox" aria-hidden="true"> <strong>Form Field</strong> definido — CSS-only por ADR-017, fora de escopo como componente Figma dedicado até surgir demanda real de composição.</li>
 <li><input disabled="" type="checkbox" aria-hidden="true"> <strong><code>docs/brand-principles.md</code></strong> preenchido com conteúdo real</li>
-<li><input disabled="" type="checkbox" aria-hidden="true"> <strong><code>.figma-snapshot.json</code></strong> gerado e check JSON↔Figma rodando no CI</li>
+<li><input checked="" disabled="" type="checkbox" aria-hidden="true"> <strong>Snapshot exporter + gates locais Figma↔JSON/Figma structure</strong> — <code>verify:tokens</code>, <code>verify:figma-structure</code> e <code>audit:component-tokens</code> rodam contra snapshot do plugin.</li>
 <li><input disabled="" type="checkbox" aria-hidden="true"> <strong>ADRs históricos</strong> atualizados com notas de evolução — <em>parcial em beta.1: 006/013/014 atualizados</em></li>
-<li><input disabled="" type="checkbox" aria-hidden="true"> <strong><code>docs/process-figma-sync.md</code></strong> atualizado pra naming atual</li>
-<li><input disabled="" type="checkbox" aria-hidden="true"> <strong><code>tokens/registry.json</code></strong> sem warnings (entries com TODO preenchidos)</li>
-<li><input disabled="" type="checkbox" aria-hidden="true"> <strong>Visual regression tests</strong> (playwright + screenshot diff) — <em>nice-to-have</em></li>
-<li><input disabled="" type="checkbox" aria-hidden="true"> <strong>A11y tests</strong> por componente (axe-core) — <em>nice-to-have</em></li>
+<li><input checked="" disabled="" type="checkbox" aria-hidden="true"> <strong><code>docs/process-figma-sync.md</code></strong> atualizado pra naming atual e fluxo do snapshot exporter.</li>
+<li><input checked="" disabled="" type="checkbox" aria-hidden="true"> <strong><code>tokens/registry.json</code></strong> sem warnings (entries com metadados completos).</li>
+<li><input checked="" disabled="" type="checkbox" aria-hidden="true"> <strong>Visual regression tests</strong> (Playwright + screenshot diff) — disponível localmente; CI depende de estabilizar fontes/capturas.</li>
+<li><input checked="" disabled="" type="checkbox" aria-hidden="true"> <strong>A11y tests</strong> (axe-core) — rodam em <code>npm test</code> contra docs em light/dark com baseline incremental.</li>
 <li><input disabled="" type="checkbox" aria-hidden="true"> <strong>Sync Figma→JSON automatizado</strong> em CI — <em>depende de Enterprise/plugin</em></li>
 </ul>
 <h2>Cadeia única de versão</h2>

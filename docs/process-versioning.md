@@ -69,14 +69,14 @@ Quando o owner decidir que está pronto, drop do beta tag → `1.0.0` oficial. A
 - [x] Descriptions designer-focused nos component sets Figma
 
 ### Pendente pra futuras betas
-- [ ] **Form Field** definido (component completo OU explicitamente fora de escopo) — _resolvido em beta.1: fora de escopo_
+- [x] **Form Field** definido — CSS-only por ADR-017, fora de escopo como componente Figma dedicado até surgir demanda real de composição.
 - [ ] **`docs/brand-principles.md`** preenchido com conteúdo real
-- [ ] **`.figma-snapshot.json`** gerado e check JSON↔Figma rodando no CI
+- [x] **Snapshot exporter + gates locais Figma↔JSON/Figma structure** — `verify:tokens`, `verify:figma-structure` e `audit:component-tokens` rodam contra snapshot do plugin.
 - [ ] **ADRs históricos** atualizados com notas de evolução — _parcial em beta.1: 006/013/014 atualizados_
-- [ ] **`docs/process-figma-sync.md`** atualizado pra naming atual
-- [ ] **`tokens/registry.json`** sem warnings (entries com TODO preenchidos)
-- [ ] **Visual regression tests** (playwright + screenshot diff) — _nice-to-have_
-- [ ] **A11y tests** por componente (axe-core) — _nice-to-have_
+- [x] **`docs/process-figma-sync.md`** atualizado pra naming atual e fluxo do snapshot exporter.
+- [x] **`tokens/registry.json`** sem warnings (entries com metadados completos).
+- [x] **Visual regression tests** (Playwright + screenshot diff) — disponível localmente; CI depende de estabilizar fontes/capturas.
+- [x] **A11y tests** (axe-core) — rodam em `npm test` contra docs em light/dark com baseline incremental.
 - [ ] **Sync Figma→JSON automatizado** em CI — _depende de Enterprise/plugin_
 
 ## Cadeia única de versão

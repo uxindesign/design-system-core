@@ -10,6 +10,7 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 
 ### Corrigido
 - **Auditoria estrutural do Figma passa a escolher o snapshot mais recente.** `verify:figma-structure` agora aceita `figma-snapshot.json` sem ponto e, quando não recebe `--snapshot`, escolhe o arquivo mais novo entre os snapshots locais conhecidos, evitando validar acidentalmente um `.figma-snapshot.structure.json` antigo.
+- **Pendências de maturidade e milestones removem itens stale.** `process-versioning` passa a marcar Form Field CSS-only, gates locais de snapshot, registry sem warnings, visual regression local e a11y tests como entregues; `component-inventory` troca milestones já resolvidos por próximos passos reais.
 
 ## [1.0.0-beta.5] — 2026-06-12
 
