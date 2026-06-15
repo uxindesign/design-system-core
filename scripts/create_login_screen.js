@@ -108,8 +108,8 @@ async function run() {
     emailInput.setProperties({
       'Rótulo': 'E-mail',
       'Placeholder': 'seu@email.com',
-      'Left Icon': false,
-      'Right Icon': false
+      'Show Left Icon': false,
+      'Show Right Icon': false
     });
   }
 
@@ -125,8 +125,8 @@ async function run() {
     passwordInput.setProperties({
       'Rótulo': 'Senha',
       'Placeholder': '••••••••',
-      'Left Icon': false,
-      'Right Icon': true // Olho para mostrar senha
+      'Show Left Icon': false,
+      'Show Right Icon': true // Olho para mostrar senha
     });
   }
 

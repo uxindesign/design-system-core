@@ -498,7 +498,7 @@
   <div class="ds-subsection">
     <h2 class="ds-subsection__title">Figma</h2>
     <p style="color:var(--ds-content-default);font-size:var(--ds-font-size-14);margin-bottom:var(--ds-dimension-16);">
-      <span data-lang="pt">O componente Figma possui 168+ variantes nas seguintes propriedades:</span><span data-lang="en">The Figma component has 168+ variants across the following properties:</span>
+      <span data-lang="pt">O componente Figma expõe as propriedades abaixo no painel. Booleans de visibilidade ficam imediatamente acima do slot que controlam.</span><span data-lang="en">The Figma component exposes the properties below in the panel. Visibility booleans sit immediately above the slot they control.</span>
     </p>
     <table class="ds-token-table">
       <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th><span data-lang="pt">Tipo</span><span data-lang="en">Type</span></th><th><span data-lang="pt">Padrão</span><span data-lang="en">Default</span></th><th><span data-lang="pt">Opções</span><span data-lang="en">Options</span></th></tr></thead>
@@ -508,8 +508,10 @@
         <tr><td><span data-lang="pt">Estado</span><span data-lang="en">State</span></td><td>Variant</td><td>Default</td><td>Default, Hover, Pressed, Focused, Disabled</td></tr>
         <tr><td>Icon Only</td><td>Variant</td><td>false</td><td><span data-lang="pt">Default (com label), Icon Only (quadrado)</span><span data-lang="en">Default (with label), Icon Only (square)</span></td></tr>
         <tr><td>Loading</td><td>Boolean</td><td>false</td><td>true, false</td></tr>
-        <tr><td>Icon Left</td><td>Boolean</td><td>false</td><td><span data-lang="pt">Alterna o slot de ícone esquerdo</span><span data-lang="en">Toggles left icon slot</span></td></tr>
-        <tr><td>Icon Right</td><td>Boolean</td><td>false</td><td><span data-lang="pt">Alterna o slot de ícone direito</span><span data-lang="en">Toggles right icon slot</span></td></tr>
+        <tr><td>Show Left Icon</td><td>Boolean</td><td>false</td><td><span data-lang="pt">Alterna a visibilidade do frame de ícone esquerdo</span><span data-lang="en">Toggles visibility for the left icon frame</span></td></tr>
+        <tr><td>Left Icon</td><td>Instance swap</td><td>Placeholder</td><td><span data-lang="pt">Define o componente de ícone esquerdo</span><span data-lang="en">Sets the left icon component</span></td></tr>
+        <tr><td>Show Right Icon</td><td>Boolean</td><td>false</td><td><span data-lang="pt">Alterna a visibilidade do frame de ícone direito</span><span data-lang="en">Toggles visibility for the right icon frame</span></td></tr>
+        <tr><td>Right Icon</td><td>Instance swap</td><td>Placeholder</td><td><span data-lang="pt">Define o componente de ícone direito</span><span data-lang="en">Sets the right icon component</span></td></tr>
       </tbody>
     </table>
   </div>

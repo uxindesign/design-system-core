@@ -634,7 +634,6 @@ function writeHtmlReport(report) {
     <span class="ds-sync-status ${status.klass}">${status.label}</span>
     <div class="ds-sync-meta">
       <div><strong>Versão:</strong> ${report.version || ""}</div>
-      <div><strong>Tokens JSON:</strong> ${report.totals.jsonTokens}</div>
       <div><strong>Divergências:</strong> ${report.totals.errors}</div>
       <div><strong>Avisos:</strong> ${report.totals.warnings}</div>
     </div>
