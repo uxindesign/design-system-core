@@ -147,16 +147,7 @@
 
 /* Error state */
 .ds-radio-group--error .ds-radio {
-  border-color: var(--ds-feedback-error-background-default);
-}
-
-.ds-radio-group--error .ds-radio:checked {
-  background-color: var(--ds-feedback-error-background-default);
-  border-color: var(--ds-feedback-error-background-default);
-}
-
-.ds-radio-group--error .ds-radio-group__legend {
-  color: var(--ds-feedback-error-content-default);
+  border-color: var(--ds-radio-control-border-color-unselected-error);
 }
 
 .ds-radio-group__error {

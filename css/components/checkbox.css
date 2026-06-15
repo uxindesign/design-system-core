@@ -164,12 +164,7 @@
 
 /* Error state */
 .ds-checkbox-group--error .ds-checkbox {
-  border-color: var(--ds-feedback-error-border-default);
-}
-
-.ds-checkbox-group--error .ds-checkbox:checked {
-  background-color: var(--ds-feedback-error-background-default);
-  border-color: var(--ds-feedback-error-background-default);
+  border-color: var(--ds-checkbox-box-border-color-unchecked-error);
 }
 
 .ds-checkbox-group__error {
