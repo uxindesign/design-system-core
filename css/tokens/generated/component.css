@@ -402,9 +402,18 @@
   --ds-modal-footer-padding-bottom-md: var(--ds-space-xl); /** Padding bottom do footer Modal md. */
   --ds-modal-footer-padding-bottom-lg: var(--ds-space-2xl); /** Padding bottom do footer Modal lg. */
   --ds-modal-footer-gap-default: var(--ds-space-md); /** Gap horizontal do footer Modal. */
-  --ds-modal-close-padding-default: var(--ds-space-none); /** Padding do frame de hit-area do close Modal. */
-  --ds-modal-close-icon-size-default: var(--ds-size-md); /** Tamanho da instância Lucide interna ao close Modal. */
-  --ds-modal-close-size-default: var(--ds-size-md); /** Tamanho do close Modal. */
+  --ds-modal-close-padding-sm: var(--ds-space-control-padding-6); /** Padding do frame de hit-area do close Modal sm. */
+  --ds-modal-close-padding-md: var(--ds-space-sm); /** Padding do frame de hit-area do close Modal md. */
+  --ds-modal-close-padding-lg: var(--ds-space-md); /** Padding do frame de hit-area do close Modal lg. */
+  --ds-modal-close-padding-default: var(--ds-space-sm); /** Padding padrão do frame de hit-area do close Modal. */
+  --ds-modal-close-icon-size-sm: var(--ds-size-sm); /** Tamanho da instância Lucide interna ao close Modal sm. */
+  --ds-modal-close-icon-size-md: var(--ds-size-md); /** Tamanho da instância Lucide interna ao close Modal md. */
+  --ds-modal-close-icon-size-lg: var(--ds-size-md); /** Tamanho da instância Lucide interna ao close Modal lg. */
+  --ds-modal-close-icon-size-default: var(--ds-size-md); /** Tamanho padrão da instância Lucide interna ao close Modal. */
+  --ds-modal-close-size-sm: var(--ds-size-lg); /** Tamanho do frame de hit-area do close Modal sm. */
+  --ds-modal-close-size-md: var(--ds-size-xl); /** Tamanho do frame de hit-area do close Modal md. */
+  --ds-modal-close-size-lg: var(--ds-size-2xl); /** Tamanho do frame de hit-area do close Modal lg. */
+  --ds-modal-close-size-default: var(--ds-size-xl); /** Tamanho padrão do frame de hit-area do close Modal. */
   --ds-modal-close-icon-stroke-width-default: var(--ds-icon-stroke-width-regular-24);
   --ds-modal-bg-default: var(--ds-surface-elevated);
   --ds-modal-action-fill-primary: var(--ds-primary-background-default);

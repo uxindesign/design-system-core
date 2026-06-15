@@ -3059,7 +3059,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `semantic.size.2xl` | dimension | → `foundation.dimension.48` | Size token 2xl. | 8 |
+| `semantic.size.2xl` | dimension | → `foundation.dimension.48` | Size token 2xl. | 9 |
 | `semantic.size.3xl` | dimension | → `foundation.dimension.64` | Size token 3xl. | 2 |
 | `semantic.size.4xl` | dimension | → `foundation.dimension.96` | Size token 4xl. | 0 |
 | `semantic.size.5xl` | dimension | → `foundation.dimension.128` | Size token 5xl. | 0 |
@@ -3069,10 +3069,10 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.size.layout.sm` | dimension | → `foundation.dimension.480` | Size token layout.sm. | 2 |
 | `semantic.size.layout.xl` | dimension | → `foundation.dimension.1024` | Size token layout.xl. | 0 |
 | `semantic.size.layout.xs` | dimension | → `foundation.dimension.320` | Size token layout.xs. | 0 |
-| `semantic.size.lg` | dimension | → `foundation.dimension.32` | Size token lg. | 12 |
-| `semantic.size.md` | dimension | → `foundation.dimension.24` | Size token md. | 12 |
-| `semantic.size.sm` | dimension | → `foundation.dimension.20` | Size token sm. | 12 |
-| `semantic.size.xl` | dimension | → `foundation.dimension.40` | Size token xl. | 10 |
+| `semantic.size.lg` | dimension | → `foundation.dimension.32` | Size token lg. | 13 |
+| `semantic.size.md` | dimension | → `foundation.dimension.24` | Size token md. | 13 |
+| `semantic.size.sm` | dimension | → `foundation.dimension.20` | Size token sm. | 13 |
+| `semantic.size.xl` | dimension | → `foundation.dimension.40` | Size token xl. | 12 |
 | `semantic.size.xs` | dimension | → `foundation.dimension.16` | Size token xs. | 10 |
 
 ### semantic.space
@@ -3082,15 +3082,15 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.space.2xl` | dimension | → `foundation.dimension.24` | Spacing token 2xl. | 6 |
 | `semantic.space.2xs` | dimension | → `foundation.dimension.2` | Spacing token 2xs. | 6 |
 | `semantic.space.control.padding.10` | dimension | → `foundation.dimension.10` | Spacing token control.padding.10. | 4 |
-| `semantic.space.control.padding.6` | dimension | → `foundation.dimension.6` | Padding simétrico de Icon Only sm Button. | 2 |
+| `semantic.space.control.padding.6` | dimension | → `foundation.dimension.6` | Padding simétrico de Icon Only sm Button. | 3 |
 | `semantic.space.lg` | dimension | → `foundation.dimension.16` | Spacing token lg. | 19 |
-| `semantic.space.md` | dimension | → `foundation.dimension.12` | Spacing token md. | 16 |
-| `semantic.space.none` | dimension | → `foundation.dimension.0` | Espaço semântico zero. | 2 |
+| `semantic.space.md` | dimension | → `foundation.dimension.12` | Spacing token md. | 17 |
+| `semantic.space.none` | dimension | → `foundation.dimension.0` | Espaço semântico zero. | 0 |
 | `semantic.space.section.lg` | dimension | → `foundation.dimension.64` | Spacing token section.lg. | 0 |
 | `semantic.space.section.md` | dimension | → `foundation.dimension.48` | Spacing token section.md. | 0 |
 | `semantic.space.section.sm` | dimension | → `foundation.dimension.32` | Spacing token section.sm. | 1 |
 | `semantic.space.section.xl` | dimension | → `foundation.dimension.80` | Spacing token section.xl. | 0 |
-| `semantic.space.sm` | dimension | → `foundation.dimension.8` | Spacing token sm. | 26 |
+| `semantic.space.sm` | dimension | → `foundation.dimension.8` | Spacing token sm. | 28 |
 | `semantic.space.xl` | dimension | → `foundation.dimension.20` | Spacing token xl. | 10 |
 | `semantic.space.xs` | dimension | → `foundation.dimension.4` | Spacing token xs. | 30 |
 
@@ -3612,9 +3612,18 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.modal.body.padding-x.sm` | dimension | → `semantic.space.lg` | Padding horizontal do body Modal sm. | 1 |
 | `component.modal.close.color.default` | color | → `semantic.icon.color.default` | Contrato close.color de modal, sincronizado a partir das Variables Figma atuais. | 1 |
 | `component.modal.close.icon-size.default` | dimension | → `semantic.size.md` | Tamanho do ícone Close Modal. | 1 |
+| `component.modal.close.icon-size.lg` | dimension | → `semantic.size.md` | Tamanho do ícone Lucide interno do close Modal lg. | 1 |
+| `component.modal.close.icon-size.md` | dimension | → `semantic.size.md` | Tamanho do ícone Lucide interno do close Modal md. | 0 |
+| `component.modal.close.icon-size.sm` | dimension | → `semantic.size.sm` | Tamanho do ícone Lucide interno do close Modal sm. | 1 |
 | `component.modal.close.icon.stroke-width.default` | dimension | → `semantic.icon.stroke-width.regular.24` | Contrato close.icon.stroke-width de modal, sincronizado a partir das Variables Figma atuais. | 1 |
-| `component.modal.close.padding.default` | dimension | → `semantic.space.none` | Padding do close Modal. | 1 |
-| `component.modal.close.size.default` | dimension | → `semantic.size.md` | Contrato close.size de modal, sincronizado a partir das Variables Figma atuais. | 1 |
+| `component.modal.close.padding.default` | dimension | → `semantic.space.sm` | Padding do close Modal. | 1 |
+| `component.modal.close.padding.lg` | dimension | → `semantic.space.md` | Padding do frame de hit-area do close Modal lg. | 1 |
+| `component.modal.close.padding.md` | dimension | → `semantic.space.sm` | Padding do frame de hit-area do close Modal md. | 1 |
+| `component.modal.close.padding.sm` | dimension | → `semantic.space.control.padding.6` | Padding do frame de hit-area do close Modal sm. | 1 |
+| `component.modal.close.size.default` | dimension | → `semantic.size.xl` | Contrato close.size de modal, sincronizado a partir das Variables Figma atuais. | 1 |
+| `component.modal.close.size.lg` | dimension | → `semantic.size.2xl` | Tamanho do alvo interativo do close Modal lg. | 1 |
+| `component.modal.close.size.md` | dimension | → `semantic.size.xl` | Tamanho do alvo interativo do close Modal md. | 0 |
+| `component.modal.close.size.sm` | dimension | → `semantic.size.lg` | Tamanho do alvo interativo do close Modal sm. | 1 |
 | `component.modal.footer.gap.default` | dimension | → `semantic.space.md` | Gap horizontal do footer Modal. | 1 |
 | `component.modal.footer.padding-bottom.lg` | dimension | → `semantic.space.2xl` | Padding bottom do footer Modal lg. | 1 |
 | `component.modal.footer.padding-bottom.md` | dimension | → `semantic.space.xl` | Padding bottom do footer Modal md. | 1 |
@@ -9317,8 +9326,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.dimension.48.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (7×)
-  - Tokens que referenciam: `component.button.height.lg`, `component.button.icon-only-width.lg`, `component.checkbox.target.height.lg`, `component.input.height.lg`, `component.radio.target.height.lg`, `component.select.height.lg`, `component.toggle.target.height.lg`
+    - `css/tokens/generated/component.css` (8×)
+  - Tokens que referenciam: `component.button.height.lg`, `component.button.icon-only-width.lg`, `component.checkbox.target.height.lg`, `component.input.height.lg`, `component.modal.close.size.lg`, `component.radio.target.height.lg`, `component.select.height.lg`, `component.toggle.target.height.lg`
 
 ### `semantic.size.3xl`
 
@@ -9448,8 +9457,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/icons.css` (2×)
-    - `css/tokens/generated/component.css` (10×)
-  - Tokens que referenciam: `component.avatar.size.sm`, `component.button.height.sm`, `component.button.icon-only-width.sm`, `component.checkbox.target.height.sm`, `component.input.height.sm`, `component.radio.target.height.sm`, `component.select.height.sm`, `component.spinner.size.lg`, `component.toggle.target.height.sm`, `component.toggle.track.height.lg`
+    - `css/tokens/generated/component.css` (11×)
+  - Tokens que referenciam: `component.avatar.size.sm`, `component.button.height.sm`, `component.button.icon-only-width.sm`, `component.checkbox.target.height.sm`, `component.input.height.sm`, `component.modal.close.size.sm`, `component.radio.target.height.sm`, `component.select.height.sm`, `component.spinner.size.lg`, `component.toggle.target.height.sm`, `component.toggle.track.height.lg`
 
 ### `semantic.size.md`
 
@@ -9463,8 +9472,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/icons.css` (4×)
-    - `css/tokens/generated/component.css` (10×)
-  - Tokens que referenciam: `component.button.icon.size.lg`, `component.checkbox.box.size.lg`, `component.input.icon.size.lg`, `component.modal.close.icon-size.default`, `component.modal.close.size.default`, `component.radio.control.size.lg`, `component.select.chevron.size.lg`, `component.select.icon.size.lg`, `component.spinner.size.md`, `component.toggle.track.height.md`
+    - `css/tokens/generated/component.css` (11×)
+  - Tokens que referenciam: `component.button.icon.size.lg`, `component.checkbox.box.size.lg`, `component.input.icon.size.lg`, `component.modal.close.icon-size.md`, `component.modal.close.icon-size.lg`, `component.modal.close.icon-size.default`, `component.radio.control.size.lg`, `component.select.chevron.size.lg`, `component.select.icon.size.lg`, `component.spinner.size.md`, `component.toggle.track.height.md`
 
 ### `semantic.size.sm`
 
@@ -9480,8 +9489,8 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/base/icons.css` (2×)
     - `css/components/checkbox.css` (2×)
     - `css/components/radio.css` (2×)
-    - `css/tokens/generated/component.css` (8×)
-  - Tokens que referenciam: `component.alert.icon.size.default`, `component.alert.close.icon-size.default`, `component.button.icon.size.md`, `component.checkbox.box.size.md`, `component.input.icon.size.md`, `component.radio.control.size.md`, `component.select.chevron.size.md`, `component.select.icon.size.md`
+    - `css/tokens/generated/component.css` (9×)
+  - Tokens que referenciam: `component.alert.icon.size.default`, `component.alert.close.icon-size.default`, `component.button.icon.size.md`, `component.checkbox.box.size.md`, `component.input.icon.size.md`, `component.modal.close.icon-size.sm`, `component.radio.control.size.md`, `component.select.chevron.size.md`, `component.select.icon.size.md`
 
 ### `semantic.size.xl`
 
@@ -9494,8 +9503,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.dimension.40.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (9×)
-  - Tokens que referenciam: `component.avatar.size.md`, `component.button.height.md`, `component.button.icon-only-width.md`, `component.checkbox.target.height.md`, `component.input.height.md`, `component.radio.target.height.md`, `component.select.height.md`, `component.skeleton.circle.size.default`, `component.toggle.target.height.md`
+    - `css/tokens/generated/component.css` (11×)
+  - Tokens que referenciam: `component.avatar.size.md`, `component.button.height.md`, `component.button.icon-only-width.md`, `component.checkbox.target.height.md`, `component.input.height.md`, `component.modal.close.size.md`, `component.modal.close.size.default`, `component.radio.target.height.md`, `component.select.height.md`, `component.skeleton.circle.size.default`, `component.toggle.target.height.md`
 
 ### `semantic.size.xs`
 
@@ -9564,8 +9573,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Único valor entre xs(4) e sm(8) que foge da escala space. Segue padrão de space.control.padding.10 (ADR-006/015).
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (1×)
-  - Tokens que referenciam: `component.button.icon-only-padding.sm`
+    - `css/tokens/generated/component.css` (2×)
+  - Tokens que referenciam: `component.button.icon-only-padding.sm`, `component.modal.close.padding.sm`
 
 ### `semantic.space.lg`
 
@@ -9595,9 +9604,9 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/divider.css` (2×)
     - `css/components/radio.css` (1×)
-    - `css/tokens/generated/component.css` (12×)
+    - `css/tokens/generated/component.css` (13×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.alert.padding.default`, `component.button.padding-x.md`, `component.button.padding-y.lg`, `component.button.icon-only-padding.lg`, `component.field.padding-y.lg`, `component.input.padding-x.lg`, `component.modal.header.padding-bottom.md`, `component.modal.footer.padding-top.md`, `component.modal.footer.gap.default`, `component.select.padding-x.lg`, `component.tabs.item.padding-top.default`, `component.textarea.padding-x.md`
+  - Tokens que referenciam: `component.alert.padding.default`, `component.button.padding-x.md`, `component.button.padding-y.lg`, `component.button.icon-only-padding.lg`, `component.field.padding-y.lg`, `component.input.padding-x.lg`, `component.modal.header.padding-bottom.md`, `component.modal.footer.padding-top.md`, `component.modal.footer.gap.default`, `component.modal.close.padding.lg`, `component.select.padding-x.lg`, `component.tabs.item.padding-top.default`, `component.textarea.padding-x.md`
 
 ### `semantic.space.none`
 
@@ -9609,9 +9618,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Usado quando um componente precisa remover padding ou gap mantendo a cadeia Foundation -> Semantic -> Component.
 - **Decisão**: Mantido como alias semântico para zero porque Component tokens não devem depender de valores crus.
 - **Usos**:
-  - CSS:
-    - `css/tokens/generated/component.css` (1×)
-  - Tokens que referenciam: `component.modal.close.padding.default`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `semantic.space.section.lg`
 
@@ -9676,9 +9683,9 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/checkbox.css` (2×)
     - `css/components/radio.css` (3×)
     - `css/components/tooltip.css` (4×)
-    - `css/tokens/generated/component.css` (21×)
+    - `css/tokens/generated/component.css` (23×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.alert.gap.default`, `component.badge.padding-x.default`, `component.button.padding-x.sm`, `component.button.padding-y.sm`, `component.button.gap.lg`, `component.button.icon-only-padding.md`, `component.card.header.padding-bottom.default`, `component.card.header.gap.default`, `component.checkbox.target.gap.default`, `component.field.padding-y.sm`, `component.input.gap.lg`, `component.input.padding-x.md`, `component.modal.header.padding-bottom.sm`, `component.modal.footer.padding-top.sm`, `component.radio.target.gap.default`, `component.select.gap.lg`, `component.select.padding-x.md`, `component.textarea.padding-x.sm`, `component.toggle.target.gap.default`, `component.tooltip.content.padding-x.default`, `component.tooltip.arrow.base.default`
+  - Tokens que referenciam: `component.alert.gap.default`, `component.badge.padding-x.default`, `component.button.padding-x.sm`, `component.button.padding-y.sm`, `component.button.gap.lg`, `component.button.icon-only-padding.md`, `component.card.header.padding-bottom.default`, `component.card.header.gap.default`, `component.checkbox.target.gap.default`, `component.field.padding-y.sm`, `component.input.gap.lg`, `component.input.padding-x.md`, `component.modal.header.padding-bottom.sm`, `component.modal.footer.padding-top.sm`, `component.modal.close.padding.md`, `component.modal.close.padding.default`, `component.radio.target.gap.default`, `component.select.gap.lg`, `component.select.padding-x.md`, `component.textarea.padding-x.sm`, `component.toggle.target.gap.default`, `component.tooltip.content.padding-x.default`, `component.tooltip.arrow.base.default`
 
 ### `semantic.space.xl`
 
@@ -15414,6 +15421,44 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/modal.css` (2×)
 
+### `component.modal.close.icon-size.lg`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.md`
+- **Sentido**: Tamanho do ícone Lucide interno do close Modal lg.
+- **Escopo**: width-height, icon, modal, close
+- **Contexto**: Usado no ícone visual do close Large dentro de um target de 48px.
+- **Decisão**: Mantido igual ao Medium para ampliar a área clicável sem aumentar o peso visual do ícone.
+- **Usos**:
+  - CSS:
+    - `css/components/modal.css` (2×)
+
+### `component.modal.close.icon-size.md`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.md`
+- **Sentido**: Tamanho do ícone Lucide interno do close Modal md.
+- **Escopo**: width-height, icon, modal, close
+- **Contexto**: Usado no ícone visual do close Medium e como default do componente.
+- **Decisão**: Mantido separado do target para permitir alvo interativo de 40px com símbolo de 24px.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.modal.close.icon-size.sm`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.sm`
+- **Sentido**: Tamanho do ícone Lucide interno do close Modal sm.
+- **Escopo**: width-height, icon, modal, close
+- **Contexto**: Usado no ícone visual do close Small dentro de um target maior.
+- **Decisão**: Mantido separado do target para preservar legibilidade sem confundir área clicável com tamanho do símbolo.
+- **Usos**:
+  - CSS:
+    - `css/components/modal.css` (2×)
+
 ### `component.modal.close.icon.stroke-width.default`
 
 - **Camada**: component
@@ -15431,7 +15476,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.space.none`
+- **Alias**: → `semantic.space.sm`
 - **Sentido**: Padding do close Modal.
 - **Escopo**: padding
 - **Contexto**: Component token do contrato anatômico Modal Close. Controla o padding do frame de hit-area do close no Figma e no CSS.
@@ -15440,18 +15485,95 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/modal.css` (1×)
 
+### `component.modal.close.padding.lg`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.md`
+- **Sentido**: Padding do frame de hit-area do close Modal lg.
+- **Escopo**: padding, modal, close
+- **Contexto**: Usado no close da Modal Large para compor alvo interativo de 48px com ícone visual de 24px.
+- **Decisão**: Mantido por tamanho para reforçar acessibilidade em modais com conteúdo mais denso sem aumentar o peso visual do ícone.
+- **Usos**:
+  - CSS:
+    - `css/components/modal.css` (1×)
+
+### `component.modal.close.padding.md`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.sm`
+- **Sentido**: Padding do frame de hit-area do close Modal md.
+- **Escopo**: padding, modal, close
+- **Contexto**: Usado no close da Modal Medium para compor alvo interativo de 40px com ícone visual de 24px.
+- **Decisão**: Mantido por tamanho porque Medium é o default da Modal e precisa preservar área de interação maior que o ícone.
+- **Usos**:
+  - CSS:
+    - `css/components/modal.css` (2×)
+
+### `component.modal.close.padding.sm`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.control.padding.6`
+- **Sentido**: Padding do frame de hit-area do close Modal sm.
+- **Escopo**: padding, modal, close
+- **Contexto**: Usado no close da Modal Small para compor alvo interativo de 32px com ícone visual de 20px.
+- **Decisão**: Mantido por tamanho porque o alvo interativo do close acompanha a escala da Modal e não deve ser igual ao tamanho visual do ícone.
+- **Usos**:
+  - CSS:
+    - `css/components/modal.css` (1×)
+
 ### `component.modal.close.size.default`
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.size.md`
+- **Alias**: → `semantic.size.xl`
 - **Sentido**: Contrato close.size de modal, sincronizado a partir das Variables Figma atuais.
 - **Escopo**: size
 - **Contexto**: Usado para estabilizar o contrato anatômico do componente modal entre Figma, JSON e CSS.
 - **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
 - **Usos**:
   - CSS:
-    - `css/components/modal.css` (2×)
+    - `css/components/modal.css` (3×)
+
+### `component.modal.close.size.lg`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.2xl`
+- **Sentido**: Tamanho do alvo interativo do close Modal lg.
+- **Escopo**: width-height, target, modal, close
+- **Contexto**: Define target de 48px para o close da Modal Large.
+- **Decisão**: Mantido por tamanho para atender melhor acessibilidade em modais maiores sem alterar o tamanho visual do ícone.
+- **Usos**:
+  - CSS:
+    - `css/components/modal.css` (3×)
+
+### `component.modal.close.size.md`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.xl`
+- **Sentido**: Tamanho do alvo interativo do close Modal md.
+- **Escopo**: width-height, target, modal, close
+- **Contexto**: Define target de 40px para o close da Modal Medium e default.
+- **Decisão**: Mantido por tamanho para alinhar o close à altura padrão de controles do DS.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.modal.close.size.sm`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.lg`
+- **Sentido**: Tamanho do alvo interativo do close Modal sm.
+- **Escopo**: width-height, target, modal, close
+- **Contexto**: Define target de 32px para o close da Modal Small.
+- **Decisão**: Mantido por tamanho porque Small é usado para decisões curtas e precisa target compacto, mas maior que o ícone.
+- **Usos**:
+  - CSS:
+    - `css/components/modal.css` (3×)
 
 ### `component.modal.footer.gap.default`
 
@@ -15594,7 +15716,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Alias 1:1 para semantic.space.sm porque 8px é escala reutilizável, mas no Modal documenta a separação pública entre título e close.
 - **Usos**:
   - CSS:
-    - `css/components/modal.css` (1×)
+    - `css/components/modal.css` (4×)
 
 ### `component.modal.header.padding-bottom.lg`
 

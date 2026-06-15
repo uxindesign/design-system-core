@@ -88,7 +88,7 @@
                 <span style="position:absolute;bottom:-28px;left:50%;transform:translateX(-50%);width:1px;height:28px;background:var(--ds-primary-background-default);"></span>
                 <span class="ds-anatomy__marker" style="position:absolute;bottom:-48px;left:50%;transform:translateX(-50%);">4</span>
               </h3>
-              <button class="ds-modal__close" aria-label="Close modal" style="position:relative;">
+              <button class="ds-modal__close" aria-label="Close modal">
                 <i data-lucide="x" class="ds-icon"></i>
                 <!-- 5: Close button — right center -->
                 <span style="position:absolute;right:-28px;top:50%;transform:translateY(-50%);height:1px;width:28px;background:var(--ds-primary-background-default);"></span>
@@ -137,6 +137,7 @@
        ============================================================ -->
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Pequeno (480px)</span><span data-lang="en">Small (480px)</span></h2>
+    <p style="margin-bottom:var(--ds-space-lg);color:var(--ds-content-default);font-size:var(--ds-body-font-size-sm);"><span data-lang="pt">Use para confirmações curtas e decisões binárias. O close usa alvo interativo de 32px com ícone de 20px.</span><span data-lang="en">Use for short confirmations and binary decisions. The close control uses a 32px interactive target with a 20px icon.</span></p>
     <div class="ds-preview">
       <div class="ds-preview__tabs" role="tablist">
         <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
@@ -189,6 +190,7 @@
 
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Medio (640px)</span><span data-lang="en">Medium (640px)</span></h2>
+    <p style="margin-bottom:var(--ds-space-lg);color:var(--ds-content-default);font-size:var(--ds-body-font-size-sm);"><span data-lang="pt">Use como tamanho padrão para formulários curtos e edição simples. O close usa alvo interativo de 40px com ícone de 24px.</span><span data-lang="en">Use as the default size for short forms and simple editing. The close control uses a 40px interactive target with a 24px icon.</span></p>
     <div class="ds-preview">
       <div class="ds-preview__tabs" role="tablist">
         <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
@@ -243,6 +245,7 @@
 
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Grande (800px)</span><span data-lang="en">Large (800px)</span></h2>
+    <p style="margin-bottom:var(--ds-space-lg);color:var(--ds-content-default);font-size:var(--ds-body-font-size-sm);"><span data-lang="pt">Use para conteúdo mais denso que ainda não justifica uma página dedicada. O close usa alvo interativo de 48px com ícone de 24px para reforçar acessibilidade.</span><span data-lang="en">Use for denser content that still does not justify a dedicated page. The close control uses a 48px interactive target with a 24px icon to reinforce accessibility.</span></p>
     <div class="ds-preview">
       <div class="ds-preview__tabs" role="tablist">
         <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
@@ -394,7 +397,9 @@
         <tr><td>body spacing/typography</td><td><code>component.modal.body.{padding-*,font-size,line-height,font-weight}.*</code></td><td><code>--ds-modal-body-*-*</code></td></tr>
         <tr><td>title typography</td><td><code>component.modal.title.{font-size,line-height,font-weight,letter-spacing}.*</code></td><td><code>--ds-modal-title-*-*</code></td></tr>
         <tr><td>footer spacing</td><td><code>component.modal.footer.{padding-*,gap}.*</code></td><td><code>--ds-modal-footer-*-*</code></td></tr>
-        <tr><td>close size</td><td><code>component.modal.close.{size,padding,icon-size}.default</code></td><td><code>--ds-modal-close-*-default</code></td></tr>
+        <tr><td>close target</td><td><code>component.modal.close.size.{sm,md,lg}</code></td><td><code>--ds-modal-close-size-*</code></td></tr>
+        <tr><td>close icon</td><td><code>component.modal.close.icon-size.{sm,md,lg}</code></td><td><code>--ds-modal-close-icon-size-*</code></td></tr>
+        <tr><td>close padding</td><td><code>component.modal.close.padding.{sm,md,lg}</code></td><td><code>--ds-modal-close-padding-*</code></td></tr>
       </tbody>
     </table>
   </div>
@@ -414,7 +419,7 @@
         <tr><td><code>ds-modal--lg</code></td><td><span data-lang="pt">Tamanho grande (<code>--ds-modal-max-width-lg</code>)</span><span data-lang="en">Large size (<code>--ds-modal-max-width-lg</code>)</span></td></tr>
         <tr><td><code>ds-modal__header</code></td><td><span data-lang="pt">Área de header com título e button de fechar</span><span data-lang="en">Header area with title and close button</span></td></tr>
         <tr><td><code>ds-modal__title</code></td><td><span data-lang="pt">Texto do título do modal</span><span data-lang="en">Modal title text</span></td></tr>
-        <tr><td><code>ds-modal__close</code></td><td><span data-lang="pt">Button de fechar no header</span><span data-lang="en">Close button in the header</span></td></tr>
+        <tr><td><code>ds-modal__close</code></td><td><span data-lang="pt">Button de fechar no header; o elemento representa o alvo interativo, não apenas o ícone</span><span data-lang="en">Close button in the header; the element represents the interactive target, not only the icon</span></td></tr>
         <tr><td><code>ds-modal__body</code></td><td><span data-lang="pt">Área de conteúdo do corpo com scroll</span><span data-lang="en">Scrollable body content area</span></td></tr>
         <tr><td><code>ds-modal__footer</code></td><td><span data-lang="pt">Área de rodapé para buttons de ação</span><span data-lang="en">Footer area for action buttons</span></td></tr>
       </tbody>

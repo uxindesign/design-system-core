@@ -6821,7 +6821,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 21
+            "count": 23
           },
           {
             "file": "css/utilities/layout.css",
@@ -6843,6 +6843,8 @@
           "component.input.padding-x.md",
           "component.modal.header.padding-bottom.sm",
           "component.modal.footer.padding-top.sm",
+          "component.modal.close.padding.md",
+          "component.modal.close.padding.default",
           "component.radio.target.gap.default",
           "component.select.gap.lg",
           "component.select.padding-x.md",
@@ -6878,7 +6880,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 12
+            "count": 13
           },
           {
             "file": "css/utilities/layout.css",
@@ -6895,6 +6897,7 @@
           "component.modal.header.padding-bottom.md",
           "component.modal.footer.padding-top.md",
           "component.modal.footer.gap.default",
+          "component.modal.close.padding.lg",
           "component.select.padding-x.lg",
           "component.tabs.item.padding-top.default",
           "component.textarea.padding-x.md"
@@ -9140,7 +9143,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 8
+            "count": 9
           }
         ],
         "tokens": [
@@ -9149,6 +9152,7 @@
           "component.button.icon.size.md",
           "component.checkbox.box.size.md",
           "component.input.icon.size.md",
+          "component.modal.close.icon-size.sm",
           "component.radio.control.size.md",
           "component.select.chevron.size.md",
           "component.select.icon.size.md"
@@ -9175,15 +9179,16 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 10
+            "count": 11
           }
         ],
         "tokens": [
           "component.button.icon.size.lg",
           "component.checkbox.box.size.lg",
           "component.input.icon.size.lg",
+          "component.modal.close.icon-size.md",
+          "component.modal.close.icon-size.lg",
           "component.modal.close.icon-size.default",
-          "component.modal.close.size.default",
           "component.radio.control.size.lg",
           "component.select.chevron.size.lg",
           "component.select.icon.size.lg",
@@ -9212,7 +9217,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 10
+            "count": 11
           }
         ],
         "tokens": [
@@ -9221,6 +9226,7 @@
           "component.button.icon-only-width.sm",
           "component.checkbox.target.height.sm",
           "component.input.height.sm",
+          "component.modal.close.size.sm",
           "component.radio.target.height.sm",
           "component.select.height.sm",
           "component.spinner.size.lg",
@@ -9245,7 +9251,7 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 9
+            "count": 11
           }
         ],
         "tokens": [
@@ -9254,6 +9260,8 @@
           "component.button.icon-only-width.md",
           "component.checkbox.target.height.md",
           "component.input.height.md",
+          "component.modal.close.size.md",
+          "component.modal.close.size.default",
           "component.radio.target.height.md",
           "component.select.height.md",
           "component.skeleton.circle.size.default",
@@ -9277,7 +9285,7 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 7
+            "count": 8
           }
         ],
         "tokens": [
@@ -9285,6 +9293,7 @@
           "component.button.icon-only-width.lg",
           "component.checkbox.target.height.lg",
           "component.input.height.lg",
+          "component.modal.close.size.lg",
           "component.radio.target.height.lg",
           "component.select.height.lg",
           "component.toggle.target.height.lg"
@@ -9950,11 +9959,12 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [
-          "component.button.icon-only-padding.sm"
+          "component.button.icon-only-padding.sm",
+          "component.modal.close.padding.sm"
         ],
         "figma": []
       }
@@ -13080,7 +13090,7 @@
         "css": [
           {
             "file": "css/components/modal.css",
-            "count": 1
+            "count": 4
           }
         ],
         "tokens": [],
@@ -13789,13 +13799,13 @@
     "component.modal.close.padding.default": {
       "layer": "component",
       "type": "dimension",
-      "references": "semantic.space.none",
+      "references": "semantic.space.sm",
       "sentido": "Padding do close Modal.",
       "escopo": [
         "padding"
       ],
       "contexto": "Component token do contrato anatômico Modal Close. Controla o padding do frame de hit-area do close no Figma e no CSS.",
-      "decisao": "Alias 1:1 para semantic.space.none porque o close Modal usa hit-area de 24px sem padding interno; o tamanho do ícone é controlado separadamente.",
+      "decisao": "Alias 1:1 para semantic.space.sm para espelhar o default/md do Figma: target de 40px com ícone de 24px e padding interno de 8px.",
       "usos": {
         "css": [
           {
@@ -13816,7 +13826,7 @@
         "font-size"
       ],
       "contexto": "Component token do contrato anatômico Modal Close. Controla o tamanho da instância Lucide interna ao frame de hit-area do close no Figma e no CSS.",
-      "decisao": "Alias 1:1 para semantic.size.md porque o close Modal usa a instância Lucide em 24px dentro do hit-area do próprio close.",
+      "decisao": "Alias 1:1 para semantic.size.md para espelhar o default/md do Figma: ícone Lucide de 24px dentro de um target interativo maior.",
       "usos": {
         "css": [
           {
@@ -24551,8 +24561,8 @@
         "fill",
         "stroke"
       ],
-      "contexto": "Usado para estabilizar o contrato anatômico do componente modal entre Figma, JSON e CSS.",
-      "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
+      "contexto": "Usado para estabilizar o contrato anatômico do Modal Close entre Figma, JSON e CSS.",
+      "decisao": "Alias 1:1 para semantic.size.xl para espelhar o target default/md de 40px no Figma.",
       "usos": {
         "css": [
           {
@@ -24590,7 +24600,7 @@
     "component.modal.close.size.default": {
       "layer": "component",
       "type": "dimension",
-      "references": "semantic.size.md",
+      "references": "semantic.size.xl",
       "sentido": "Contrato close.size de modal, sincronizado a partir das Variables Figma atuais.",
       "escopo": [
         "size"
@@ -24601,7 +24611,7 @@
         "css": [
           {
             "file": "css/components/modal.css",
-            "count": 2
+            "count": 3
           }
         ],
         "tokens": [],
@@ -25346,15 +25356,211 @@
       "contexto": "Usado quando um componente precisa remover padding ou gap mantendo a cadeia Foundation -> Semantic -> Component.",
       "decisao": "Mantido como alias semântico para zero porque Component tokens não devem depender de valores crus.",
       "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.close.padding.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.control.padding.6",
+      "sentido": "Padding do frame de hit-area do close Modal sm.",
+      "escopo": [
+        "padding",
+        "modal",
+        "close"
+      ],
+      "contexto": "Usado no close da Modal Small para compor alvo interativo de 32px com ícone visual de 20px.",
+      "decisao": "Mantido por tamanho porque o alvo interativo do close acompanha a escala da Modal e não deve ser igual ao tamanho visual do ícone.",
+      "usos": {
         "css": [
           {
-            "file": "css/tokens/generated/component.css",
+            "file": "css/components/modal.css",
             "count": 1
           }
         ],
-        "tokens": [
-          "component.modal.close.padding.default"
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.close.padding.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.sm",
+      "sentido": "Padding do frame de hit-area do close Modal md.",
+      "escopo": [
+        "padding",
+        "modal",
+        "close"
+      ],
+      "contexto": "Usado no close da Modal Medium para compor alvo interativo de 40px com ícone visual de 24px.",
+      "decisao": "Mantido por tamanho porque Medium é o default da Modal e precisa preservar área de interação maior que o ícone.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 2
+          }
         ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.close.padding.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.md",
+      "sentido": "Padding do frame de hit-area do close Modal lg.",
+      "escopo": [
+        "padding",
+        "modal",
+        "close"
+      ],
+      "contexto": "Usado no close da Modal Large para compor alvo interativo de 48px com ícone visual de 24px.",
+      "decisao": "Mantido por tamanho para reforçar acessibilidade em modais com conteúdo mais denso sem aumentar o peso visual do ícone.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.close.icon-size.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.sm",
+      "sentido": "Tamanho do ícone Lucide interno do close Modal sm.",
+      "escopo": [
+        "width-height",
+        "icon",
+        "modal",
+        "close"
+      ],
+      "contexto": "Usado no ícone visual do close Small dentro de um target maior.",
+      "decisao": "Mantido separado do target para preservar legibilidade sem confundir área clicável com tamanho do símbolo.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.close.icon-size.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.md",
+      "sentido": "Tamanho do ícone Lucide interno do close Modal md.",
+      "escopo": [
+        "width-height",
+        "icon",
+        "modal",
+        "close"
+      ],
+      "contexto": "Usado no ícone visual do close Medium e como default do componente.",
+      "decisao": "Mantido separado do target para permitir alvo interativo de 40px com símbolo de 24px.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.close.icon-size.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.md",
+      "sentido": "Tamanho do ícone Lucide interno do close Modal lg.",
+      "escopo": [
+        "width-height",
+        "icon",
+        "modal",
+        "close"
+      ],
+      "contexto": "Usado no ícone visual do close Large dentro de um target de 48px.",
+      "decisao": "Mantido igual ao Medium para ampliar a área clicável sem aumentar o peso visual do ícone.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.close.size.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.lg",
+      "sentido": "Tamanho do alvo interativo do close Modal sm.",
+      "escopo": [
+        "width-height",
+        "target",
+        "modal",
+        "close"
+      ],
+      "contexto": "Define target de 32px para o close da Modal Small.",
+      "decisao": "Mantido por tamanho porque Small é usado para decisões curtas e precisa target compacto, mas maior que o ícone.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 3
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.close.size.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.xl",
+      "sentido": "Tamanho do alvo interativo do close Modal md.",
+      "escopo": [
+        "width-height",
+        "target",
+        "modal",
+        "close"
+      ],
+      "contexto": "Define target de 40px para o close da Modal Medium e default.",
+      "decisao": "Mantido por tamanho para alinhar o close à altura padrão de controles do DS.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.close.size.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.2xl",
+      "sentido": "Tamanho do alvo interativo do close Modal lg.",
+      "escopo": [
+        "width-height",
+        "target",
+        "modal",
+        "close"
+      ],
+      "contexto": "Define target de 48px para o close da Modal Large.",
+      "decisao": "Mantido por tamanho para atender melhor acessibilidade em modais maiores sem alterar o tamanho visual do ícone.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 3
+          }
+        ],
+        "tokens": [],
         "figma": []
       }
     }

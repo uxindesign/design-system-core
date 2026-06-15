@@ -33,6 +33,7 @@
 
 /* Header */
 .ds-modal__header {
+  position: relative;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -55,21 +56,27 @@
   color: var(--ds-modal-title-color-default);
   line-height: var(--ds-modal-title-line-height-sm);
   letter-spacing: var(--ds-modal-title-letter-spacing-sm);
+  padding-right: calc(var(--ds-modal-close-size-sm) + var(--ds-modal-header-gap-default));
 }
 
 .ds-modal--md .ds-modal__title {
   font-size: var(--ds-modal-title-font-size-md);
   line-height: var(--ds-modal-title-line-height-md);
   letter-spacing: var(--ds-modal-title-letter-spacing-md);
+  padding-right: calc(var(--ds-modal-close-size-default) + var(--ds-modal-header-gap-default));
 }
 
 .ds-modal--lg .ds-modal__title {
   font-size: var(--ds-modal-title-font-size-lg);
   line-height: var(--ds-modal-title-line-height-lg);
   letter-spacing: var(--ds-modal-title-letter-spacing-lg);
+  padding-right: calc(var(--ds-modal-close-size-lg) + var(--ds-modal-header-gap-default));
 }
 
 .ds-modal__close {
+  position: absolute;
+  top: var(--ds-modal-close-padding-md);
+  right: var(--ds-modal-close-padding-md);
   flex-shrink: 0;
   width: var(--ds-modal-close-size-default);
   height: var(--ds-modal-close-size-default);
@@ -91,6 +98,28 @@
   height: var(--ds-modal-close-icon-size-default);
   color: currentColor;
   stroke-width: var(--ds-modal-close-icon-stroke-width-default);
+}
+
+.ds-modal--sm .ds-modal__close {
+  width: var(--ds-modal-close-size-sm);
+  height: var(--ds-modal-close-size-sm);
+  padding: var(--ds-modal-close-padding-sm);
+}
+
+.ds-modal--sm .ds-modal__close .ds-icon {
+  width: var(--ds-modal-close-icon-size-sm);
+  height: var(--ds-modal-close-icon-size-sm);
+}
+
+.ds-modal--lg .ds-modal__close {
+  width: var(--ds-modal-close-size-lg);
+  height: var(--ds-modal-close-size-lg);
+  padding: var(--ds-modal-close-padding-lg);
+}
+
+.ds-modal--lg .ds-modal__close .ds-icon {
+  width: var(--ds-modal-close-icon-size-lg);
+  height: var(--ds-modal-close-icon-size-lg);
 }
 
 .ds-modal__close:hover {

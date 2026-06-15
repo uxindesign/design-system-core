@@ -326,24 +326,69 @@
       },
       "close": {
         "padding": {
+          "sm": {
+            "$type": "dimension",
+            "$value": "{semantic.space.control.padding.6}",
+            "$description": "Padding do frame de hit-area do close Modal sm."
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "{semantic.space.sm}",
+            "$description": "Padding do frame de hit-area do close Modal md."
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{semantic.space.md}",
+            "$description": "Padding do frame de hit-area do close Modal lg."
+          },
           "default": {
             "$type": "dimension",
-            "$value": "{semantic.space.none}",
-            "$description": "Padding do frame de hit-area do close Modal."
+            "$value": "{semantic.space.sm}",
+            "$description": "Padding padrão do frame de hit-area do close Modal."
           }
         },
         "icon-size": {
+          "sm": {
+            "$type": "dimension",
+            "$value": "{semantic.size.sm}",
+            "$description": "Tamanho da instância Lucide interna ao close Modal sm."
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "{semantic.size.md}",
+            "$description": "Tamanho da instância Lucide interna ao close Modal md."
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{semantic.size.md}",
+            "$description": "Tamanho da instância Lucide interna ao close Modal lg."
+          },
           "default": {
             "$type": "dimension",
             "$value": "{semantic.size.md}",
-            "$description": "Tamanho da instância Lucide interna ao close Modal."
+            "$description": "Tamanho padrão da instância Lucide interna ao close Modal."
           }
         },
         "size": {
-          "default": {
-            "$value": "{semantic.size.md}",
+          "sm": {
+            "$value": "{semantic.size.lg}",
             "$type": "dimension",
-            "$description": "Tamanho do close Modal."
+            "$description": "Tamanho do frame de hit-area do close Modal sm."
+          },
+          "md": {
+            "$value": "{semantic.size.xl}",
+            "$type": "dimension",
+            "$description": "Tamanho do frame de hit-area do close Modal md."
+          },
+          "lg": {
+            "$value": "{semantic.size.2xl}",
+            "$type": "dimension",
+            "$description": "Tamanho do frame de hit-area do close Modal lg."
+          },
+          "default": {
+            "$value": "{semantic.size.xl}",
+            "$type": "dimension",
+            "$description": "Tamanho padrão do frame de hit-area do close Modal."
           }
         },
         "color": {
