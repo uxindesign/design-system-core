@@ -32,9 +32,8 @@ function flattenTokens(obj, prefix = '', acc = {}) {
     if (v && typeof v === 'object') {
       if ('$value' in v) {
         acc[p] = { value: v.$value, type: v.$type, description: v.$description, source: '__pending__' };
-      } else {
-        flattenTokens(v, p, acc);
       }
+      flattenTokens(v, p, acc);
     }
   }
   return acc;

@@ -588,7 +588,7 @@ const THEME_COLOR_SECTIONS = [
 // → { "foundation.color.neutral.50": {$value, $type, $description} }
 function flattenTokens(obj, prefix = '', acc = {}) {
   if (!obj || typeof obj !== 'object') return acc;
-  if ('$value' in obj) { acc[prefix] = obj; return acc; }
+  if ('$value' in obj) acc[prefix] = obj;
   for (const [k, v] of Object.entries(obj)) {
     if (k.startsWith('$')) continue;
     flattenTokens(v, prefix ? `${prefix}.${k}` : k, acc);

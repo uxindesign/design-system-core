@@ -72,7 +72,6 @@ function walkJsonFiles(dir) {
 function flattenTokens(obj, prefix = "", acc = {}) {
   if (obj && typeof obj === "object" && "$value" in obj) {
     acc[prefix] = obj;
-    return acc;
   }
   if (obj && typeof obj === "object") {
     for (const [k, v] of Object.entries(obj)) {
@@ -277,7 +276,7 @@ function flattenTokenPaths(obj, prefix = "") {
     const p = prefix ? `${prefix}.${key}` : key;
     if (val && typeof val === "object") {
       if ("$value" in val) paths.push(p);
-      else paths.push(...flattenTokenPaths(val, p));
+      paths.push(...flattenTokenPaths(val, p));
     }
   }
   return paths;

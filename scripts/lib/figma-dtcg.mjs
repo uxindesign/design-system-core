@@ -231,7 +231,6 @@ export function buildExpectedState(figmaMeta) {
 export function flattenDtcg(obj, prefix = "", acc = {}) {
   if (obj && typeof obj === "object" && "$value" in obj) {
     acc[prefix] = obj;
-    return acc;
   }
   if (obj && typeof obj === "object") {
     for (const [k, v] of Object.entries(obj)) {

@@ -114,7 +114,6 @@ console.log(`✅ docs/api/components.json (${components.length} componentes)`);
 function flattenTokens(obj, prefix = "", acc = {}) {
   if (obj && typeof obj === "object" && "$value" in obj) {
     acc[prefix] = { value: obj.$value, type: obj.$type, description: obj.$description };
-    return acc;
   }
   if (obj && typeof obj === "object") {
     for (const [k, v] of Object.entries(obj)) {

@@ -81,9 +81,8 @@ function flattenTokens(obj, prefix = '') {
           value: val.$value,
           description: val.$description || null,
         });
-      } else {
-        result.push(...flattenTokens(val, newPath));
       }
+      result.push(...flattenTokens(val, newPath));
     }
   }
   return result;
