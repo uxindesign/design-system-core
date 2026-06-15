@@ -135,6 +135,7 @@
   --ds-motion-ease-out: var(--ds-ease-out); /** Desaceleração no final. Elementos entrando na tela. */
   --ds-motion-ease-in-out: var(--ds-ease-in-out); /** Aceleração + desaceleração. Mesmo valor de default. */
   --ds-motion-ease-linear: var(--ds-ease-linear); /** Velocidade constante. Loops (Spinner). */
+  --ds-space-none: var(--ds-dimension-0); /** Espaço zero para remover padding/gap mantendo alias semântico. */
   --ds-space-2xs: var(--ds-dimension-2); /** 2px */
   --ds-space-xs: var(--ds-dimension-4); /** 4px */
   --ds-space-sm: var(--ds-dimension-8); /** 8px */

@@ -402,8 +402,8 @@
   --ds-modal-footer-padding-bottom-md: var(--ds-space-xl); /** Padding bottom do footer Modal md. */
   --ds-modal-footer-padding-bottom-lg: var(--ds-space-2xl); /** Padding bottom do footer Modal lg. */
   --ds-modal-footer-gap-default: var(--ds-space-md); /** Gap horizontal do footer Modal. */
-  --ds-modal-close-padding-default: var(--ds-space-xs); /** Padding do close Modal. */
-  --ds-modal-close-icon-size-default: var(--ds-size-xs); /** Tamanho do ícone Close Modal. */
+  --ds-modal-close-padding-default: var(--ds-space-none); /** Padding do frame de hit-area do close Modal. */
+  --ds-modal-close-icon-size-default: var(--ds-size-md); /** Tamanho da instância Lucide interna ao close Modal. */
   --ds-modal-close-size-default: var(--ds-size-md); /** Tamanho do close Modal. */
   --ds-modal-close-icon-stroke-width-default: var(--ds-icon-stroke-width-regular-24);
   --ds-modal-bg-default: var(--ds-surface-elevated);

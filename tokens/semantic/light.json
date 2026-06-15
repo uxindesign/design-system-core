@@ -778,6 +778,11 @@
       }
     },
     "space": {
+      "none": {
+        "$type": "dimension",
+        "$value": "{foundation.dimension.0}",
+        "$description": "Espaço zero para remover padding/gap mantendo alias semântico."
+      },
       "2xs": {
         "$type": "dimension",
         "$value": "{foundation.dimension.2}",

@@ -348,6 +348,13 @@
   justify-content: center;
 }
 
+.ds-button--brand .ds-spinner,
+.ds-button--success .ds-spinner,
+.ds-button--danger .ds-spinner {
+  border-color: var(--ds-spinner-track-border-color-on-color);
+  border-top-color: var(--ds-spinner-indicator-border-color-on-color);
+}
+
 /* ---------------------------------------------------------
    Reduced motion
    --------------------------------------------------------- */

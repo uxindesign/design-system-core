@@ -72,6 +72,7 @@
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
 <h3>Corrigido</h3>
 <ul>
+<li><strong>Cards Faça/Não faça ajustam altura pelo próprio conteúdo.</strong> O grid compartilhado dos docs deixa de esticar o card menor até a altura da coluna vizinha e reduz o espaço entre label e descrição.</li>
 <li><strong>Visual regression passa a rodar no CI.</strong> <code>test.yml</code> agora executa <code>scripts/test-visual.mjs</code> após a auditoria a11y e publica <code>tests/visual/actual</code> + <code>tests/visual/diff</code> como artifact quando houver falha; a baseline visual foi atualizada para o estado atual validado em produção.</li>
 <li><strong>Baseline de acessibilidade zerada.</strong> Ajustados contrastes em feedback <code>subtle</code> no dark mode, links do site de documentação e foco de blocos de código roláveis; <code>test:a11y</code> agora passa com <code>critical=0</code>, <code>serious=0</code>, <code>moderate=0</code>, <code>minor=0</code> e <code>.a11y-baseline.json</code> fica sem violações aceitas.</li>
 <li><strong>Auditoria estrutural do Figma passa a escolher o snapshot mais recente.</strong> <code>verify:figma-structure</code> agora aceita <code>figma-snapshot.json</code> sem ponto e, quando não recebe <code>--snapshot</code>, escolhe o arquivo mais novo entre os snapshots locais conhecidos, evitando validar acidentalmente um <code>.figma-snapshot.structure.json</code> antigo.</li>

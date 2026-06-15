@@ -328,15 +328,15 @@
         "padding": {
           "default": {
             "$type": "dimension",
-            "$value": "{semantic.space.xs}",
-            "$description": "Padding do close Modal."
+            "$value": "{semantic.space.none}",
+            "$description": "Padding do frame de hit-area do close Modal."
           }
         },
         "icon-size": {
           "default": {
             "$type": "dimension",
-            "$value": "{semantic.size.xs}",
-            "$description": "Tamanho do ícone Close Modal."
+            "$value": "{semantic.size.md}",
+            "$description": "Tamanho da instância Lucide interna ao close Modal."
           }
         },
         "size": {

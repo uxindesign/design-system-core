@@ -207,6 +207,7 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 ## [Não publicado]
 
 ### Corrigido
+- **Cards Faça/Não faça ajustam altura pelo próprio conteúdo.** O grid compartilhado dos docs deixa de esticar o card menor até a altura da coluna vizinha e reduz o espaço entre label e descrição.
 - **Visual regression passa a rodar no CI.** `test.yml` agora executa `scripts/test-visual.mjs` após a auditoria a11y e publica `tests/visual/actual` + `tests/visual/diff` como artifact quando houver falha; a baseline visual foi atualizada para o estado atual validado em produção.
 - **Baseline de acessibilidade zerada.** Ajustados contrastes em feedback `subtle` no dark mode, links do site de documentação e foco de blocos de código roláveis; `test:a11y` agora passa com `critical=0`, `serious=0`, `moderate=0`, `minor=0` e `.a11y-baseline.json` fica sem violações aceitas.
 - **Auditoria estrutural do Figma passa a escolher o snapshot mais recente.** `verify:figma-structure` agora aceita `figma-snapshot.json` sem ponto e, quando não recebe `--snapshot`, escolhe o arquivo mais novo entre os snapshots locais conhecidos, evitando validar acidentalmente um `.figma-snapshot.structure.json` antigo.
@@ -2659,6 +2660,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
+| `foundation.dimension.0` | dimension | — | Zero absoluto da escala de dimensão. | 4 |
 | `foundation.dimension.10` | dimension | — | Dimensão fixa de 10px (0.625rem). | 6 |
 | `foundation.dimension.102` | dimension | — | Dimensao fixa de 102px (6.375rem). | 4 |
 | `foundation.dimension.1024` | dimension | — | Dimensão fixa de 1024px (64rem). | 4 |
@@ -3068,10 +3070,10 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.size.layout.xl` | dimension | → `foundation.dimension.1024` | Size token layout.xl. | 0 |
 | `semantic.size.layout.xs` | dimension | → `foundation.dimension.320` | Size token layout.xs. | 0 |
 | `semantic.size.lg` | dimension | → `foundation.dimension.32` | Size token lg. | 12 |
-| `semantic.size.md` | dimension | → `foundation.dimension.24` | Size token md. | 11 |
+| `semantic.size.md` | dimension | → `foundation.dimension.24` | Size token md. | 12 |
 | `semantic.size.sm` | dimension | → `foundation.dimension.20` | Size token sm. | 12 |
 | `semantic.size.xl` | dimension | → `foundation.dimension.40` | Size token xl. | 10 |
-| `semantic.size.xs` | dimension | → `foundation.dimension.16` | Size token xs. | 11 |
+| `semantic.size.xs` | dimension | → `foundation.dimension.16` | Size token xs. | 10 |
 
 ### semantic.space
 
@@ -3083,13 +3085,14 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.space.control.padding.6` | dimension | → `foundation.dimension.6` | Padding simétrico de Icon Only sm Button. | 2 |
 | `semantic.space.lg` | dimension | → `foundation.dimension.16` | Spacing token lg. | 19 |
 | `semantic.space.md` | dimension | → `foundation.dimension.12` | Spacing token md. | 16 |
+| `semantic.space.none` | dimension | → `foundation.dimension.0` | Espaço semântico zero. | 2 |
 | `semantic.space.section.lg` | dimension | → `foundation.dimension.64` | Spacing token section.lg. | 0 |
 | `semantic.space.section.md` | dimension | → `foundation.dimension.48` | Spacing token section.md. | 0 |
 | `semantic.space.section.sm` | dimension | → `foundation.dimension.32` | Spacing token section.sm. | 1 |
 | `semantic.space.section.xl` | dimension | → `foundation.dimension.80` | Spacing token section.xl. | 0 |
 | `semantic.space.sm` | dimension | → `foundation.dimension.8` | Spacing token sm. | 26 |
 | `semantic.space.xl` | dimension | → `foundation.dimension.20` | Spacing token xl. | 10 |
-| `semantic.space.xs` | dimension | → `foundation.dimension.4` | Spacing token xs. | 31 |
+| `semantic.space.xs` | dimension | → `foundation.dimension.4` | Spacing token xs. | 30 |
 
 ### semantic.surface
 
@@ -3608,9 +3611,9 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.modal.body.padding-x.md` | dimension | → `semantic.space.xl` | Padding horizontal do body Modal md. | 1 |
 | `component.modal.body.padding-x.sm` | dimension | → `semantic.space.lg` | Padding horizontal do body Modal sm. | 1 |
 | `component.modal.close.color.default` | color | → `semantic.icon.color.default` | Contrato close.color de modal, sincronizado a partir das Variables Figma atuais. | 1 |
-| `component.modal.close.icon-size.default` | dimension | → `semantic.size.xs` | Tamanho do ícone Close Modal. | 1 |
+| `component.modal.close.icon-size.default` | dimension | → `semantic.size.md` | Tamanho do ícone Close Modal. | 1 |
 | `component.modal.close.icon.stroke-width.default` | dimension | → `semantic.icon.stroke-width.regular.24` | Contrato close.icon.stroke-width de modal, sincronizado a partir das Variables Figma atuais. | 1 |
-| `component.modal.close.padding.default` | dimension | → `semantic.space.xs` | Padding do close Modal. | 1 |
+| `component.modal.close.padding.default` | dimension | → `semantic.space.none` | Padding do close Modal. | 1 |
 | `component.modal.close.size.default` | dimension | → `semantic.size.md` | Contrato close.size de modal, sincronizado a partir das Variables Figma atuais. | 1 |
 | `component.modal.footer.gap.default` | dimension | → `semantic.space.md` | Gap horizontal do footer Modal. | 1 |
 | `component.modal.footer.padding-bottom.lg` | dimension | → `semantic.space.2xl` | Padding bottom do footer Modal lg. | 1 |
@@ -3756,14 +3759,14 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `component.spinner.indicator.border-color.default` | color | → `semantic.border.brand` | Contrato indicator.border-color de spinner, sincronizado a partir das Variables Figma atuais. | 1 |
-| `component.spinner.indicator.border-color.on-color` | color | → `semantic.border.inverse` | Contrato indicator.border-color de spinner, sincronizado a partir das Variables Figma atuais. | 1 |
+| `component.spinner.indicator.border-color.on-color` | color | → `semantic.border.inverse` | Contrato indicator.border-color de spinner, sincronizado a partir das Variables Figma atuais. | 2 |
 | `component.spinner.radius.default` | dimension | → `semantic.radius.full` | Radius circular do Spinner. | 1 |
 | `component.spinner.ring.stroke-width.default` | dimension | → `semantic.border.width.strong` | Stroke width do ring Spinner. | 1 |
 | `component.spinner.size.lg` | dimension | → `semantic.size.lg` | Tamanho da superfície principal e ring do Spinner por size. | 1 |
 | `component.spinner.size.md` | dimension | → `semantic.size.md` | Tamanho da superfície principal e ring do Spinner por size. | 1 |
 | `component.spinner.size.sm` | dimension | → `semantic.size.xs` | Tamanho da superfície principal e ring do Spinner por size. | 1 |
 | `component.spinner.track.border-color.default` | color | → `semantic.border.overlay.default` | Contrato track.border-color de spinner, sincronizado a partir das Variables Figma atuais. | 1 |
-| `component.spinner.track.border-color.on-color` | color | → `semantic.border.overlay.medium` | Contrato track.border-color de spinner, sincronizado a partir das Variables Figma atuais. | 1 |
+| `component.spinner.track.border-color.on-color` | color | → `semantic.border.overlay.medium` | Contrato track.border-color de spinner, sincronizado a partir das Variables Figma atuais. | 2 |
 
 ### component.tabs
 
@@ -5660,6 +5663,20 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
+
+### `foundation.dimension.0`
+
+- **Camada**: foundation
+- **Tipo**: `dimension`
+- **Sentido**: Zero absoluto da escala de dimensão.
+- **Escopo**: dimension, space, padding, gap
+- **Contexto**: Primitivo usado quando uma anatomia precisa declarar ausência de espaço sem valor cru em tokens Semantic ou Component.
+- **Decisão**: Mantido para permitir aliases semânticos/componentes para 0px e evitar valores crus na camada Component.
+- **Usos**:
+  - CSS:
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.space.none`, `semantic.space.none`
 
 ### `foundation.dimension.10`
 
@@ -9446,8 +9463,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/icons.css` (4×)
-    - `css/tokens/generated/component.css` (9×)
-  - Tokens que referenciam: `component.button.icon.size.lg`, `component.checkbox.box.size.lg`, `component.input.icon.size.lg`, `component.modal.close.size.default`, `component.radio.control.size.lg`, `component.select.chevron.size.lg`, `component.select.icon.size.lg`, `component.spinner.size.md`, `component.toggle.track.height.md`
+    - `css/tokens/generated/component.css` (10×)
+  - Tokens que referenciam: `component.button.icon.size.lg`, `component.checkbox.box.size.lg`, `component.input.icon.size.lg`, `component.modal.close.icon-size.default`, `component.modal.close.size.default`, `component.radio.control.size.lg`, `component.select.chevron.size.lg`, `component.select.icon.size.lg`, `component.spinner.size.md`, `component.toggle.track.height.md`
 
 ### `semantic.size.sm`
 
@@ -9491,8 +9508,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.dimension.16.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (10×)
-  - Tokens que referenciam: `component.button.icon.size.sm`, `component.checkbox.box.size.sm`, `component.form-field.error.icon.size.default`, `component.input.icon.size.sm`, `component.modal.close.icon-size.default`, `component.radio.control.size.sm`, `component.select.chevron.size.sm`, `component.select.icon.size.sm`, `component.spinner.size.sm`, `component.toggle.track.height.sm`
+    - `css/tokens/generated/component.css` (9×)
+  - Tokens que referenciam: `component.button.icon.size.sm`, `component.checkbox.box.size.sm`, `component.form-field.error.icon.size.default`, `component.input.icon.size.sm`, `component.radio.control.size.sm`, `component.select.chevron.size.sm`, `component.select.icon.size.sm`, `component.spinner.size.sm`, `component.toggle.track.height.sm`
 
 ### `semantic.space.2xl`
 
@@ -9581,6 +9598,20 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/tokens/generated/component.css` (12×)
     - `css/utilities/layout.css` (1×)
   - Tokens que referenciam: `component.alert.padding.default`, `component.button.padding-x.md`, `component.button.padding-y.lg`, `component.button.icon-only-padding.lg`, `component.field.padding-y.lg`, `component.input.padding-x.lg`, `component.modal.header.padding-bottom.md`, `component.modal.footer.padding-top.md`, `component.modal.footer.gap.default`, `component.select.padding-x.lg`, `component.tabs.item.padding-top.default`, `component.textarea.padding-x.md`
+
+### `semantic.space.none`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.dimension.0`
+- **Sentido**: Espaço semântico zero.
+- **Escopo**: space, padding, gap
+- **Contexto**: Usado quando um componente precisa remover padding ou gap mantendo a cadeia Foundation -> Semantic -> Component.
+- **Decisão**: Mantido como alias semântico para zero porque Component tokens não devem depender de valores crus.
+- **Usos**:
+  - CSS:
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.modal.close.padding.default`
 
 ### `semantic.space.section.lg`
 
@@ -9678,9 +9709,9 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/checkbox.css` (5×)
     - `css/components/radio.css` (6×)
     - `css/components/toggle.css` (1×)
-    - `css/tokens/generated/component.css` (26×)
+    - `css/tokens/generated/component.css` (25×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.alert.content.gap.default`, `component.badge.gap.default`, `component.breadcrumb.gap.default`, `component.breadcrumb.item.gap.default`, `component.button.gap.md`, `component.button.label-frame.padding-x.default`, `component.checkbox.content.gap.default`, `component.form-field.gap.default`, `component.form-field.error.gap.default`, `component.form-field.stack.gap.default`, `component.input.gap.sm`, `component.input.gap.md`, `component.input.icon-frame.padding-x.default`, `component.input.padding-x.sm`, `component.input.text-frame.padding-x.default`, `component.modal.close.padding.default`, `component.radio.content.gap.default`, `component.select.chevron-frame.padding-x.default`, `component.select.gap.sm`, `component.select.gap.md`, `component.select.icon-frame.padding-x.default`, `component.select.padding-x.sm`, `component.select.text-frame.padding-x.default`, `component.toggle.content.gap.default`, `component.tooltip.content.padding-y.default`, `component.tooltip.arrow.depth.default`
+  - Tokens que referenciam: `component.alert.content.gap.default`, `component.badge.gap.default`, `component.breadcrumb.gap.default`, `component.breadcrumb.item.gap.default`, `component.button.gap.md`, `component.button.label-frame.padding-x.default`, `component.checkbox.content.gap.default`, `component.form-field.gap.default`, `component.form-field.error.gap.default`, `component.form-field.stack.gap.default`, `component.input.gap.sm`, `component.input.gap.md`, `component.input.icon-frame.padding-x.default`, `component.input.padding-x.sm`, `component.input.text-frame.padding-x.default`, `component.radio.content.gap.default`, `component.select.chevron-frame.padding-x.default`, `component.select.gap.sm`, `component.select.gap.md`, `component.select.icon-frame.padding-x.default`, `component.select.padding-x.sm`, `component.select.text-frame.padding-x.default`, `component.toggle.content.gap.default`, `component.tooltip.content.padding-y.default`, `component.tooltip.arrow.depth.default`
 
 ### `semantic.surface.default`
 
@@ -15374,11 +15405,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.size.xs`
+- **Alias**: → `semantic.size.md`
 - **Sentido**: Tamanho do ícone Close Modal.
 - **Escopo**: font-size
-- **Contexto**: Component token do contrato anatômico Modal Close. Binda fontSize do ícone Close nas variantes Size no Figma e substitui estilo inline na documentação.
-- **Decisão**: Alias 1:1 para semantic.size.xs porque 16px é escala reutilizável, mas no Modal documenta o ícone público do close.
+- **Contexto**: Component token do contrato anatômico Modal Close. Controla o tamanho da instância Lucide interna ao frame de hit-area do close no Figma e no CSS.
+- **Decisão**: Alias 1:1 para semantic.size.md porque o close Modal usa a instância Lucide em 24px dentro do hit-area do próprio close.
 - **Usos**:
   - CSS:
     - `css/components/modal.css` (2×)
@@ -15400,11 +15431,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.space.xs`
+- **Alias**: → `semantic.space.none`
 - **Sentido**: Padding do close Modal.
 - **Escopo**: padding
-- **Contexto**: Component token do contrato anatômico Modal Close. Existe como variável Component no Figma e substitui consumo direto de Semantic no CSS para centralizar o ícone de 16px no hit area de 24px.
-- **Decisão**: Alias 1:1 para semantic.space.xs porque 4px é escala reutilizável, mas no Modal documenta o padding público do close.
+- **Contexto**: Component token do contrato anatômico Modal Close. Controla o padding do frame de hit-area do close no Figma e no CSS.
+- **Decisão**: Alias 1:1 para semantic.space.none porque o close Modal usa hit-area de 24px sem padding interno; o tamanho do ícone é controlado separadamente.
 - **Usos**:
   - CSS:
     - `css/components/modal.css` (1×)
@@ -17034,6 +17065,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
 - **Usos**:
   - CSS:
+    - `css/components/button.css` (1×)
     - `css/components/spinner.css` (1×)
 
 ### `component.spinner.radius.default`
@@ -17125,6 +17157,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
 - **Usos**:
   - CSS:
+    - `css/components/button.css` (1×)
     - `css/components/spinner.css` (1×)
 
 ### `component.tabs.focus-ring.radius.default`

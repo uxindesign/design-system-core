@@ -6756,7 +6756,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 26
+            "count": 25
           },
           {
             "file": "css/utilities/layout.css",
@@ -6779,7 +6779,6 @@
           "component.input.icon-frame.padding-x.default",
           "component.input.padding-x.sm",
           "component.input.text-frame.padding-x.default",
-          "component.modal.close.padding.default",
           "component.radio.content.gap.default",
           "component.select.chevron-frame.padding-x.default",
           "component.select.gap.sm",
@@ -9097,7 +9096,7 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 10
+            "count": 9
           }
         ],
         "tokens": [
@@ -9105,7 +9104,6 @@
           "component.checkbox.box.size.sm",
           "component.form-field.error.icon.size.default",
           "component.input.icon.size.sm",
-          "component.modal.close.icon-size.default",
           "component.radio.control.size.sm",
           "component.select.chevron.size.sm",
           "component.select.icon.size.sm",
@@ -9177,13 +9175,14 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 9
+            "count": 10
           }
         ],
         "tokens": [
           "component.button.icon.size.lg",
           "component.checkbox.box.size.lg",
           "component.input.icon.size.lg",
+          "component.modal.close.icon-size.default",
           "component.modal.close.size.default",
           "component.radio.control.size.lg",
           "component.select.chevron.size.lg",
@@ -13790,13 +13789,13 @@
     "component.modal.close.padding.default": {
       "layer": "component",
       "type": "dimension",
-      "references": "semantic.space.xs",
+      "references": "semantic.space.none",
       "sentido": "Padding do close Modal.",
       "escopo": [
         "padding"
       ],
-      "contexto": "Component token do contrato anatômico Modal Close. Existe como variável Component no Figma e substitui consumo direto de Semantic no CSS para centralizar o ícone de 16px no hit area de 24px.",
-      "decisao": "Alias 1:1 para semantic.space.xs porque 4px é escala reutilizável, mas no Modal documenta o padding público do close.",
+      "contexto": "Component token do contrato anatômico Modal Close. Controla o padding do frame de hit-area do close no Figma e no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.none porque o close Modal usa hit-area de 24px sem padding interno; o tamanho do ícone é controlado separadamente.",
       "usos": {
         "css": [
           {
@@ -13811,13 +13810,13 @@
     "component.modal.close.icon-size.default": {
       "layer": "component",
       "type": "dimension",
-      "references": "semantic.size.xs",
+      "references": "semantic.size.md",
       "sentido": "Tamanho do ícone Close Modal.",
       "escopo": [
         "font-size"
       ],
-      "contexto": "Component token do contrato anatômico Modal Close. Binda fontSize do ícone Close nas variantes Size no Figma e substitui estilo inline na documentação.",
-      "decisao": "Alias 1:1 para semantic.size.xs porque 16px é escala reutilizável, mas no Modal documenta o ícone público do close.",
+      "contexto": "Component token do contrato anatômico Modal Close. Controla o tamanho da instância Lucide interna ao frame de hit-area do close no Figma e no CSS.",
+      "decisao": "Alias 1:1 para semantic.size.md porque o close Modal usa a instância Lucide em 24px dentro do hit-area do próprio close.",
       "usos": {
         "css": [
           {
@@ -24924,6 +24923,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/button.css",
+            "count": 1
+          },
+          {
             "file": "css/components/spinner.css",
             "count": 1
           }
@@ -24965,6 +24968,10 @@
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
         "css": [
+          {
+            "file": "css/components/button.css",
+            "count": 1
+          },
           {
             "file": "css/components/spinner.css",
             "count": 1
@@ -25292,6 +25299,62 @@
           }
         ],
         "tokens": [],
+        "figma": []
+      }
+    },
+    "foundation.dimension.0": {
+      "layer": "foundation",
+      "type": "dimension",
+      "references": null,
+      "sentido": "Zero absoluto da escala de dimensão.",
+      "escopo": [
+        "dimension",
+        "space",
+        "padding",
+        "gap"
+      ],
+      "contexto": "Primitivo usado quando uma anatomia precisa declarar ausência de espaço sem valor cru em tokens Semantic ou Component.",
+      "decisao": "Mantido para permitir aliases semânticos/componentes para 0px e evitar valores crus na camada Component.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "semantic.space.none",
+          "semantic.space.none"
+        ],
+        "figma": []
+      }
+    },
+    "semantic.space.none": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.dimension.0",
+      "sentido": "Espaço semântico zero.",
+      "escopo": [
+        "space",
+        "padding",
+        "gap"
+      ],
+      "contexto": "Usado quando um componente precisa remover padding ou gap mantendo a cadeia Foundation -> Semantic -> Component.",
+      "decisao": "Mantido como alias semântico para zero porque Component tokens não devem depender de valores crus.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/tokens/generated/component.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "component.modal.close.padding.default"
+        ],
         "figma": []
       }
     }

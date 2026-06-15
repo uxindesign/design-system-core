@@ -873,6 +873,7 @@ main.ds-main a:not([class]):hover {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--ds-dimension-16);
+  align-items: start;
   margin-bottom: var(--ds-dimension-32);
 }
 
@@ -894,7 +895,7 @@ main.ds-main a:not([class]):hover {
 }
 
 .ds-dodont__label {
-  padding: var(--ds-dimension-8) var(--ds-dimension-16);
+  padding: var(--ds-dimension-8) var(--ds-dimension-16) var(--ds-dimension-4);
   font-size: var(--ds-body-font-size-sm);
   font-weight: var(--ds-body-font-weight-semibold);
 }
@@ -912,7 +913,7 @@ main.ds-main a:not([class]):hover {
 }
 
 .ds-dodont__desc {
-  padding: var(--ds-dimension-12) var(--ds-dimension-16);
+  padding: var(--ds-dimension-4) var(--ds-dimension-16) var(--ds-dimension-12);
   font-size: var(--ds-body-font-size-sm);
   color: var(--ds-content-strong);
 }

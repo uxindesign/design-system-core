@@ -111,7 +111,9 @@
         "ds-focus-ring-color-success",
         "ds-focus-ring-width",
         "ds-motion-duration-fast",
-        "ds-motion-ease-default"
+        "ds-motion-ease-default",
+        "ds-spinner-indicator-border-color-on-color",
+        "ds-spinner-track-border-color-on-color"
       ],
       "variants": [
         "brand",

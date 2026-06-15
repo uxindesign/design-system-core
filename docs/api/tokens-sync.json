@@ -1,10 +1,10 @@
 {
   "version": "1.0.0-beta.5",
   "totals": {
-    "jsonTokens": 1324,
-    "sharedTokens": 872,
-    "lightTokens": 226,
-    "darkTokens": 226,
+    "jsonTokens": 1327,
+    "sharedTokens": 873,
+    "lightTokens": 227,
+    "darkTokens": 227,
     "errors": 0,
     "warnings": 0
   },
@@ -16,18 +16,18 @@
     "docTokenDrift": [],
     "jsonVsFigma": {
       "skipped": false,
-      "snapshotAge": "0h",
+      "snapshotAge": "1h",
       "snapshotFreshness": "fresh",
       "snapshotMaxAgeHours": 24,
       "summary": {
-        "figmaVariableCount": 1044,
+        "figmaVariableCount": 1048,
         "figmaCollectionCount": 3,
         "VALUE_DRIFT": 0,
         "NEEDS_SYNC": 0,
         "DRIFT_FROM_SOURCE": 0,
         "ALIAS_BROKEN": 0,
         "CSS_ONLY": 7,
-        "BY_DESIGN": 126
+        "BY_DESIGN": 124
       },
       "divergences": [],
       "diffs": {
@@ -844,18 +844,6 @@
             "token": "component.modal.shadow.default",
             "side": "json-only-downstream",
             "json": "{semantic.shadow.modal}"
-          },
-          {
-            "file": "component/modal.json",
-            "token": "component.modal.close.padding.default",
-            "side": "json-only",
-            "json": "{semantic.space.xs}"
-          },
-          {
-            "file": "component/modal.json",
-            "token": "component.modal.close.icon-size.default",
-            "side": "json-only",
-            "json": "{semantic.size.xs}"
           },
           {
             "file": "component/tabs.json",

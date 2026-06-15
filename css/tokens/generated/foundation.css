@@ -150,6 +150,7 @@
   --ds-color-disabled-success-dark: rgba(72, 110, 85, 0.4); /** Disabled fill for Button Success in dark mode. */
   --ds-color-disabled-error-light: rgba(194, 112, 112, 0.4); /** Disabled fill for Button Danger/Error in light mode. */
   --ds-color-disabled-error-dark: rgba(123, 80, 80, 0.4); /** Disabled fill for Button Danger/Error in dark mode. */
+  --ds-dimension-0: 0rem; /** 0px — ausência de espaço/dimensão. */
   --ds-dimension-2: 0.125rem; /** 2px */
   --ds-dimension-4: 0.25rem; /** 4px */
   --ds-dimension-6: 0.375rem; /** 6px */

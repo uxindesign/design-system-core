@@ -34,7 +34,7 @@
 /* Header */
 .ds-modal__header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   padding: var(--ds-modal-header-padding-top-sm) var(--ds-modal-header-padding-x-sm) var(--ds-modal-header-padding-bottom-sm);
   gap: var(--ds-modal-header-gap-default);
