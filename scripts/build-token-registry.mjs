@@ -252,21 +252,17 @@ function generateMarkdown(registry, allTokens) {
   md += `> Gerado automaticamente por \`scripts/build-token-registry.mjs\` em ${now}. Não editar à mão — edite \`tokens/registry.json\` e rode \`npm run build:registry\`.\n\n`;
   md += `Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra arquitetural de camadas.\n\n`;
 
-  const totalTokens = Object.keys(registry.entries).length;
   const withTodo = Object.values(registry.entries).filter(e =>
     e.sentido === 'TODO' || e.contexto === 'TODO' || e.decisao === 'TODO'
   ).length;
-  const completude = totalTokens === 0 ? 0 : Math.round(((totalTokens - withTodo) / totalTokens) * 100);
 
   md += `## Status\n\n`;
-  md += `- Total de tokens: **${totalTokens}**\n`;
-  md += `- Com metadados completos: **${totalTokens - withTodo}**\n`;
-  md += `- Pendentes (\`TODO\` em algum campo obrigatório): **${withTodo}**\n`;
-  md += `- Completude: **${completude}%**\n\n`;
+  md += withTodo === 0
+    ? `- Metadados obrigatórios preenchidos.\n\n`
+    : `- Há entradas com \`TODO\` em campos obrigatórios; rode \`npm run verify:registry\` para ver a lista exata.\n\n`;
 
   for (const layer of ['foundation', 'semantic', 'component']) {
     md += `## ${layer.charAt(0).toUpperCase() + layer.slice(1)}\n\n`;
-    md += `${byLayer[layer].length} tokens.\n\n`;
 
     if (byLayer[layer].length === 0) {
       md += `_Nenhuma entrada._\n\n`;

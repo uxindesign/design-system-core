@@ -134,23 +134,23 @@ const tokenSchema = `# Token schema — Design System Core
 | Formato canônico | JSON (DTCG) em \`tokens/\` |
 | CSS gerado | Style Dictionary → \`css/tokens/generated/\` |
 | Pipeline | ${pipelineClean ? '✅ index.css importa apenas generated/' : '⚠️ index.css ainda importa legados'} |
-| Paridade light/dark | ${paridadeOk ? `✅ ${semanticTotal} tokens em ambos os modos` : `⚠️ light=${semanticTotal}, dark=${darkTotal} — divergência`} |
+| Paridade light/dark | ${paridadeOk ? '✅ chaves alinhadas entre modos' : `⚠️ light=${semanticTotal}, dark=${darkTotal} — divergência`} |
 
 ## Camadas
 
-| Camada | Tokens | Arquivos |
-|--------|--------|----------|
-| Foundation/Core | **${foundationTotal}** | ${foundationFiles.length} |
-| Semantic/System | **${semanticTotal} × 2 modos** | light.json + dark.json |
-| Component | **${componentTotal}** | ${componentFiles.length || '—'} |
+| Camada | Arquivos | Papel |
+|--------|----------|-------|
+| Foundation/Core | \`tokens/foundation/\` | Primitivos de baixo nível |
+| Semantic/System | \`tokens/semantic/{light,dark}.json\` | Intenção de uso e tema |
+| Component | \`tokens/component/\` | Contratos anatômicos dos componentes |
 
-## Foundation (${foundationTotal} tokens)
+## Foundation
 
-| Arquivo | Tokens |
-|---------|--------|
-${foundationStats.map(f => `| \`${f.file}\` | ${f.count} |`).join('\n')}
+Arquivos canônicos em \`tokens/foundation/\`:
 
-## Semantic (${semanticTotal} tokens × 2 modos)
+${foundationStats.map(f => `- \`${f.file}\``).join('\n')}
+
+## Semantic
 
 Categorias raiz em light.json:
 
@@ -158,12 +158,12 @@ Categorias raiz em light.json:
 ${semanticCategories.map(c => `semantic.${c}.*`).join('\n')}
 \`\`\`
 
-## Component (${componentTotal} tokens)
+## Component
 
 ${componentTotal > 0
-  ? `| Arquivo | Tokens |
-|---------|--------|
-${componentStats.map(f => `| \`${f.file}\` | ${f.count} |`).join('\n')}`
+  ? `Arquivos canônicos em \`tokens/component/\`:
+
+${componentStats.map(f => `- \`${f.file}\``).join('\n')}`
   : 'Nenhum token Component materializado ainda. ADR-019 reintroduz a camada; a migração deve ser incremental por componente.'}
 
 ## Regras invioláveis
@@ -171,7 +171,7 @@ ${componentStats.map(f => `| \`${f.file}\` | ${f.count} |`).join('\n')}`
 1. Componentes migrados consomem Component tokens; componentes ainda não migrados podem consumir Semantic direto durante a transição
 2. Component → Semantic; Semantic → Foundation; consumidor final nunca usa Foundation direto
 3. Foundation é a camada de primitivos; valores específicos fora da escala exigem ADR explícita
-4. Brand é Foundation — 2 tokens, sem estados, ponto de troca por tema
+4. Brand é Foundation, sem estados, ponto de troca por tema
 5. Todo token tem \`$type\` conforme DTCG spec
 6. Tokens não óbvios têm \`$description\`
 7. Textos em componentes Figma usam text styles; não bind direto de typography vars
@@ -245,24 +245,15 @@ ${rows.join('\n')}
 - **Form Field**: CSS-only (ADR-017). Não tem (e não deve ter) equivalente Figma — componentes Figma de form (Input, Select, Textarea, Checkbox, Radio, Toggle) já carregam Label + Required + Helper inline em cada variant. Form Field só existe no CSS porque HTML não tem elemento "form control" composto.
 - Demais: fills, strokes, radius, spacing via tokens semânticos
 
-## Resumo de tokens
-
-| Coleção | Tokens | Status |
-|---------|--------|--------|
-| Foundation | ${foundationTotal} | 🟢 |
-| Semantic (light) | ${semanticTotal} | 🟢 |
-| Semantic (dark) | ${darkTotal} | ${paridadeOk ? '🟢' : '⚠️'} |
-| Component | ${componentTotal} | ${componentTotal > 0 ? '🟢' : '—'} |
-
 ## Pipeline
 
 | Etapa | Status |
 |-------|--------|
 | JSON (DTCG) canônico | 🟢 \`tokens/\` |
 | Style Dictionary | 🟢 \`build-tokens.mjs\` |
-| CSS gerado | ${generatedFiles.length > 0 ? `🟢 ${generatedFiles.length} arquivos em \`css/tokens/generated/\`` : '⚠️ generated/ vazio'} |
+| CSS gerado | ${generatedFiles.length > 0 ? '🟢 `css/tokens/generated/`' : '⚠️ generated/ vazio'} |
 | Import pipeline | ${pipelineClean ? '🟢 index.css importa apenas generated/' : '⚠️ ainda importa legados'} |
-| Figma binding | 🟢 19 componentes vinculados |
+| Figma binding | 🟢 componentes vivos vinculados |
 
 ## ADRs
 
@@ -272,10 +263,10 @@ ${adrs.map(a => `| ADR-${a.num} | ${a.title} | ${a.status} |`).join('\n')}
 
 ## Próximos milestones
 
-1. **Storybook** — setup + stories para 19 componentes (vanilla JS)
-2. **Redução da baseline a11y** — corrigir violações aceitas e atualizar \`.a11y-baseline.json\`
-3. **Visual regression em CI** — estabilizar fontes/capturas para rodar fora do ambiente local
-4. **Novos componentes** — Dropdown, Combobox, Pagination, Table
+1. **Auditoria contínua Figma ↔ repo** — manter snapshot, tokens, CSS e docs alinhados antes de cada release beta
+2. **Documentação de ícones** — explicitar uso de Lucide, stroke, pesos e aplicação de tokens de cor/tamanho
+3. **Componentes pendentes** — Dropdown, Combobox, Pagination, Table
+4. **Storybook** — opcional, não bloqueante para o beta atual
 `;
 
 fs.writeFileSync(path.join(OUTPUT_DIR, 'component-inventory.md'), inventory);

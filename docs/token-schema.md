@@ -12,31 +12,31 @@
 | Formato canônico | JSON (DTCG) em `tokens/` |
 | CSS gerado | Style Dictionary → `css/tokens/generated/` |
 | Pipeline | ✅ index.css importa apenas generated/ |
-| Paridade light/dark | ✅ 226 tokens em ambos os modos |
+| Paridade light/dark | ✅ chaves alinhadas entre modos |
 
 ## Camadas
 
-| Camada | Tokens | Arquivos |
-|--------|--------|----------|
-| Foundation/Core | **273** | 9 |
-| Semantic/System | **226 × 2 modos** | light.json + dark.json |
-| Component | **599** | 21 |
+| Camada | Arquivos | Papel |
+|--------|----------|-------|
+| Foundation/Core | `tokens/foundation/` | Primitivos de baixo nível |
+| Semantic/System | `tokens/semantic/{light,dark}.json` | Intenção de uso e tema |
+| Component | `tokens/component/` | Contratos anatômicos dos componentes |
 
-## Foundation (273 tokens)
+## Foundation
 
-| Arquivo | Tokens |
-|---------|--------|
-| `colors.json` | 147 |
-| `dimension.json` | 30 |
-| `motion.json` | 10 |
-| `opacity.json` | 6 |
-| `radius.json` | 7 |
-| `shadows.json` | 5 |
-| `stroke.json` | 8 |
-| `typography.json` | 54 |
-| `z-index.json` | 6 |
+Arquivos canônicos em `tokens/foundation/`:
 
-## Semantic (226 tokens × 2 modos)
+- `colors.json`
+- `dimension.json`
+- `motion.json`
+- `opacity.json`
+- `radius.json`
+- `shadows.json`
+- `stroke.json`
+- `typography.json`
+- `z-index.json`
+
+## Semantic
 
 Categorias raiz em light.json:
 
@@ -65,38 +65,38 @@ semantic.typography.*
 semantic.z.*
 ```
 
-## Component (599 tokens)
+## Component
 
-| Arquivo | Tokens |
-|---------|--------|
-| `alert.json` | 50 |
-| `avatar.json` | 21 |
-| `badge.json` | 32 |
-| `breadcrumb.json` | 13 |
-| `button.json` | 99 |
-| `card.json` | 24 |
-| `checkbox.json` | 37 |
-| `divider.json` | 3 |
-| `field.json` | 21 |
-| `focus-ring.json` | 5 |
-| `form-field.json` | 30 |
-| `input.json` | 29 |
-| `modal.json` | 60 |
-| `radio.json` | 37 |
-| `select.json` | 38 |
-| `skeleton.json` | 9 |
-| `spinner.json` | 9 |
-| `tabs.json` | 16 |
-| `textarea.json` | 16 |
-| `toggle.json` | 39 |
-| `tooltip.json` | 11 |
+Arquivos canônicos em `tokens/component/`:
+
+- `alert.json`
+- `avatar.json`
+- `badge.json`
+- `breadcrumb.json`
+- `button.json`
+- `card.json`
+- `checkbox.json`
+- `divider.json`
+- `field.json`
+- `focus-ring.json`
+- `form-field.json`
+- `input.json`
+- `modal.json`
+- `radio.json`
+- `select.json`
+- `skeleton.json`
+- `spinner.json`
+- `tabs.json`
+- `textarea.json`
+- `toggle.json`
+- `tooltip.json`
 
 ## Regras invioláveis
 
 1. Componentes migrados consomem Component tokens; componentes ainda não migrados podem consumir Semantic direto durante a transição
 2. Component → Semantic; Semantic → Foundation; consumidor final nunca usa Foundation direto
 3. Foundation é a camada de primitivos; valores específicos fora da escala exigem ADR explícita
-4. Brand é Foundation — 2 tokens, sem estados, ponto de troca por tema
+4. Brand é Foundation, sem estados, ponto de troca por tema
 5. Todo token tem `$type` conforme DTCG spec
 6. Tokens não óbvios têm `$description`
 7. Textos em componentes Figma usam text styles; não bind direto de typography vars

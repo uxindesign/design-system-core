@@ -1,6 +1,6 @@
 # Design System Core
 
-> Design system white-label em CSS puro com tokens DTCG em JSON, 19 componentes, modos light/dark e paleta brand única customizável. Versão atual: 1.0.0-beta.5.
+> Design system white-label em CSS puro com tokens DTCG em JSON, componentes documentados, modos light/dark e paleta brand única customizável. Versão atual: 1.0.0-beta.5.
 
 Repositório: https://github.com/uxindesign/design-system-core
 Site: https://uxindesign.github.io/design-system-core/
@@ -86,10 +86,10 @@ Arquivo completo para LLMs: https://uxindesign.github.io/design-system-core/docs
 
 ## APIs JSON (consumo programático)
 
-- [components.json](https://uxindesign.github.io/design-system-core/docs/api/components.json): 19 componentes com variantes e tokens consumidos.
+- [components.json](https://uxindesign.github.io/design-system-core/docs/api/components.json): catálogo de componentes com variantes e tokens consumidos.
 - [tokens.json](https://uxindesign.github.io/design-system-core/docs/api/tokens.json): camadas Foundation, Semantic (light/dark) e Component.
 - [adrs.json](https://uxindesign.github.io/design-system-core/docs/api/adrs.json): índice estruturado das decisões.
-- [foundations.json](https://uxindesign.github.io/design-system-core/docs/api/foundations.json): catálogo das 10 foundations.
+- [foundations.json](https://uxindesign.github.io/design-system-core/docs/api/foundations.json): catálogo das foundations.
 - [tokens-sync.json](https://uxindesign.github.io/design-system-core/docs/api/tokens-sync.json): estado de coerência Figma ↔ JSON ↔ CSS.
 
 ## Figma

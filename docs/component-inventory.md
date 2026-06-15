@@ -37,24 +37,15 @@
 - **Form Field**: CSS-only (ADR-017). Não tem (e não deve ter) equivalente Figma — componentes Figma de form (Input, Select, Textarea, Checkbox, Radio, Toggle) já carregam Label + Required + Helper inline em cada variant. Form Field só existe no CSS porque HTML não tem elemento "form control" composto.
 - Demais: fills, strokes, radius, spacing via tokens semânticos
 
-## Resumo de tokens
-
-| Coleção | Tokens | Status |
-|---------|--------|--------|
-| Foundation | 273 | 🟢 |
-| Semantic (light) | 226 | 🟢 |
-| Semantic (dark) | 226 | 🟢 |
-| Component | 599 | 🟢 |
-
 ## Pipeline
 
 | Etapa | Status |
 |-------|--------|
 | JSON (DTCG) canônico | 🟢 `tokens/` |
 | Style Dictionary | 🟢 `build-tokens.mjs` |
-| CSS gerado | 🟢 5 arquivos em `css/tokens/generated/` |
+| CSS gerado | 🟢 `css/tokens/generated/` |
 | Import pipeline | 🟢 index.css importa apenas generated/ |
-| Figma binding | 🟢 19 componentes vinculados |
+| Figma binding | 🟢 componentes vivos vinculados |
 
 ## ADRs
 
@@ -82,7 +73,7 @@
 
 ## Próximos milestones
 
-1. **Storybook** — setup + stories para 19 componentes (vanilla JS)
-2. **Redução da baseline a11y** — corrigir violações aceitas e atualizar `.a11y-baseline.json`
-3. **Visual regression em CI** — estabilizar fontes/capturas para rodar fora do ambiente local
-4. **Novos componentes** — Dropdown, Combobox, Pagination, Table
+1. **Auditoria contínua Figma ↔ repo** — manter snapshot, tokens, CSS e docs alinhados antes de cada release beta
+2. **Documentação de ícones** — explicitar uso de Lucide, stroke, pesos e aplicação de tokens de cor/tamanho
+3. **Componentes pendentes** — Dropdown, Combobox, Pagination, Table
+4. **Storybook** — opcional, não bloqueante para o beta atual

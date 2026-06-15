@@ -6,14 +6,9 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Status
 
-- Total de tokens: **1098**
-- Com metadados completos: **1098**
-- Pendentes (`TODO` em algum campo obrigatório): **0**
-- Completude: **100%**
+- Metadados obrigatórios preenchidos.
 
 ## Foundation
-
-273 tokens.
 
 ### foundation.border
 
@@ -344,8 +339,6 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `foundation.z.50` | number | — | Z-index camada 50 (toast/snackbar). | 0 |
 
 ## Semantic
-
-226 tokens.
 
 ### semantic.background
 
@@ -684,8 +677,6 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.z.tooltip` | number | → `foundation.z.40` | Stack layer para tooltips e floating labels não modais. | 1 |
 
 ## Component
-
-599 tokens.
 
 ### component.alert
 

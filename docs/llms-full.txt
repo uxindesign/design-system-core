@@ -1598,24 +1598,15 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 - **Form Field**: CSS-only (ADR-017). Não tem (e não deve ter) equivalente Figma — componentes Figma de form (Input, Select, Textarea, Checkbox, Radio, Toggle) já carregam Label + Required + Helper inline em cada variant. Form Field só existe no CSS porque HTML não tem elemento "form control" composto.
 - Demais: fills, strokes, radius, spacing via tokens semânticos
 
-## Resumo de tokens
-
-| Coleção | Tokens | Status |
-|---------|--------|--------|
-| Foundation | 273 | 🟢 |
-| Semantic (light) | 226 | 🟢 |
-| Semantic (dark) | 226 | 🟢 |
-| Component | 599 | 🟢 |
-
 ## Pipeline
 
 | Etapa | Status |
 |-------|--------|
 | JSON (DTCG) canônico | 🟢 `tokens/` |
 | Style Dictionary | 🟢 `build-tokens.mjs` |
-| CSS gerado | 🟢 5 arquivos em `css/tokens/generated/` |
+| CSS gerado | 🟢 `css/tokens/generated/` |
 | Import pipeline | 🟢 index.css importa apenas generated/ |
-| Figma binding | 🟢 19 componentes vinculados |
+| Figma binding | 🟢 componentes vivos vinculados |
 
 ## ADRs
 
@@ -1643,10 +1634,10 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 
 ## Próximos milestones
 
-1. **Storybook** — setup + stories para 19 componentes (vanilla JS)
-2. **Redução da baseline a11y** — corrigir violações aceitas e atualizar `.a11y-baseline.json`
-3. **Visual regression em CI** — estabilizar fontes/capturas para rodar fora do ambiente local
-4. **Novos componentes** — Dropdown, Combobox, Pagination, Table
+1. **Auditoria contínua Figma ↔ repo** — manter snapshot, tokens, CSS e docs alinhados antes de cada release beta
+2. **Documentação de ícones** — explicitar uso de Lucide, stroke, pesos e aplicação de tokens de cor/tamanho
+3. **Componentes pendentes** — Dropdown, Combobox, Pagination, Table
+4. **Storybook** — opcional, não bloqueante para o beta atual
 
 
 ═══════════════════════════════════════════════════════════
@@ -2500,14 +2491,9 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 ## Status
 
-- Total de tokens: **1098**
-- Com metadados completos: **1098**
-- Pendentes (`TODO` em algum campo obrigatório): **0**
-- Completude: **100%**
+- Metadados obrigatórios preenchidos.
 
 ## Foundation
-
-273 tokens.
 
 ### foundation.border
 
@@ -2838,8 +2824,6 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `foundation.z.50` | number | — | Z-index camada 50 (toast/snackbar). | 0 |
 
 ## Semantic
-
-226 tokens.
 
 ### semantic.background
 
@@ -3178,8 +3162,6 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.z.tooltip` | number | → `foundation.z.40` | Stack layer para tooltips e floating labels não modais. | 1 |
 
 ## Component
-
-599 tokens.
 
 ### component.alert
 
@@ -18186,31 +18168,31 @@ Seção expandida com contexto, decisão e locais de uso.
 | Formato canônico | JSON (DTCG) em `tokens/` |
 | CSS gerado | Style Dictionary → `css/tokens/generated/` |
 | Pipeline | ✅ index.css importa apenas generated/ |
-| Paridade light/dark | ✅ 226 tokens em ambos os modos |
+| Paridade light/dark | ✅ chaves alinhadas entre modos |
 
 ## Camadas
 
-| Camada | Tokens | Arquivos |
-|--------|--------|----------|
-| Foundation/Core | **273** | 9 |
-| Semantic/System | **226 × 2 modos** | light.json + dark.json |
-| Component | **599** | 21 |
+| Camada | Arquivos | Papel |
+|--------|----------|-------|
+| Foundation/Core | `tokens/foundation/` | Primitivos de baixo nível |
+| Semantic/System | `tokens/semantic/{light,dark}.json` | Intenção de uso e tema |
+| Component | `tokens/component/` | Contratos anatômicos dos componentes |
 
-## Foundation (273 tokens)
+## Foundation
 
-| Arquivo | Tokens |
-|---------|--------|
-| `colors.json` | 147 |
-| `dimension.json` | 30 |
-| `motion.json` | 10 |
-| `opacity.json` | 6 |
-| `radius.json` | 7 |
-| `shadows.json` | 5 |
-| `stroke.json` | 8 |
-| `typography.json` | 54 |
-| `z-index.json` | 6 |
+Arquivos canônicos em `tokens/foundation/`:
 
-## Semantic (226 tokens × 2 modos)
+- `colors.json`
+- `dimension.json`
+- `motion.json`
+- `opacity.json`
+- `radius.json`
+- `shadows.json`
+- `stroke.json`
+- `typography.json`
+- `z-index.json`
+
+## Semantic
 
 Categorias raiz em light.json:
 
@@ -18239,38 +18221,38 @@ semantic.typography.*
 semantic.z.*
 ```
 
-## Component (599 tokens)
+## Component
 
-| Arquivo | Tokens |
-|---------|--------|
-| `alert.json` | 50 |
-| `avatar.json` | 21 |
-| `badge.json` | 32 |
-| `breadcrumb.json` | 13 |
-| `button.json` | 99 |
-| `card.json` | 24 |
-| `checkbox.json` | 37 |
-| `divider.json` | 3 |
-| `field.json` | 21 |
-| `focus-ring.json` | 5 |
-| `form-field.json` | 30 |
-| `input.json` | 29 |
-| `modal.json` | 60 |
-| `radio.json` | 37 |
-| `select.json` | 38 |
-| `skeleton.json` | 9 |
-| `spinner.json` | 9 |
-| `tabs.json` | 16 |
-| `textarea.json` | 16 |
-| `toggle.json` | 39 |
-| `tooltip.json` | 11 |
+Arquivos canônicos em `tokens/component/`:
+
+- `alert.json`
+- `avatar.json`
+- `badge.json`
+- `breadcrumb.json`
+- `button.json`
+- `card.json`
+- `checkbox.json`
+- `divider.json`
+- `field.json`
+- `focus-ring.json`
+- `form-field.json`
+- `input.json`
+- `modal.json`
+- `radio.json`
+- `select.json`
+- `skeleton.json`
+- `spinner.json`
+- `tabs.json`
+- `textarea.json`
+- `toggle.json`
+- `tooltip.json`
 
 ## Regras invioláveis
 
 1. Componentes migrados consomem Component tokens; componentes ainda não migrados podem consumir Semantic direto durante a transição
 2. Component → Semantic; Semantic → Foundation; consumidor final nunca usa Foundation direto
 3. Foundation é a camada de primitivos; valores específicos fora da escala exigem ADR explícita
-4. Brand é Foundation — 2 tokens, sem estados, ponto de troca por tema
+4. Brand é Foundation, sem estados, ponto de troca por tema
 5. Todo token tem `$type` conforme DTCG spec
 6. Tokens não óbvios têm `$description`
 7. Textos em componentes Figma usam text styles; não bind direto de typography vars

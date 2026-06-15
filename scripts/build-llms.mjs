@@ -85,7 +85,7 @@ const FOUNDATIONS = [
 
 const llmsTxt = `# Design System Core
 
-> Design system white-label em CSS puro com tokens DTCG em JSON, 19 componentes, modos light/dark e paleta brand única customizável. Versão atual: ${pkg.version}.
+> Design system white-label em CSS puro com tokens DTCG em JSON, componentes documentados, modos light/dark e paleta brand única customizável. Versão atual: ${pkg.version}.
 
 Repositório: https://github.com/uxindesign/design-system-core
 Site: ${BASE_URL}/
@@ -126,10 +126,10 @@ ${adrs.map((a) => `- [ADR-${a.num} — ${a.title}](${BASE_URL}/docs/decisions/${
 
 ## APIs JSON (consumo programático)
 
-- [components.json](${BASE_URL}/docs/api/components.json): 19 componentes com variantes e tokens consumidos.
+- [components.json](${BASE_URL}/docs/api/components.json): catálogo de componentes com variantes e tokens consumidos.
 - [tokens.json](${BASE_URL}/docs/api/tokens.json): camadas Foundation, Semantic (light/dark) e Component.
 - [adrs.json](${BASE_URL}/docs/api/adrs.json): índice estruturado das decisões.
-- [foundations.json](${BASE_URL}/docs/api/foundations.json): catálogo das 10 foundations.
+- [foundations.json](${BASE_URL}/docs/api/foundations.json): catálogo das foundations.
 - [tokens-sync.json](${BASE_URL}/docs/api/tokens-sync.json): estado de coerência Figma ↔ JSON ↔ CSS.
 
 ## Figma
