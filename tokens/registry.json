@@ -4212,11 +4212,13 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/modal.css",
+            "file": "css/tokens/generated/component.css",
             "count": 1
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "component.modal.overlay.bg.default"
+        ],
         "figma": []
       }
     },
@@ -4380,7 +4382,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 9
+            "count": 10
           },
           {
             "file": "css/tokens/generated/theme-dark.css",
@@ -4463,7 +4465,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 11
+            "count": 10
           },
           {
             "file": "css/tokens/generated/theme-dark.css",
@@ -7345,7 +7347,7 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 9
+            "count": 8
           }
         ],
         "tokens": [
@@ -7356,8 +7358,7 @@
           "component.field.radius",
           "component.skeleton.text.radius.default",
           "component.skeleton.rectangle.radius.default",
-          "component.tabs.focus-ring.radius.default",
-          "component.tabs.indicator.radius.default"
+          "component.tabs.focus-ring.radius.default"
         ],
         "figma": []
       }
@@ -14323,22 +14324,6 @@
             "count": 1
           }
         ],
-        "tokens": [],
-        "figma": []
-      }
-    },
-    "component.tabs.indicator.radius.default": {
-      "layer": "component",
-      "type": "dimension",
-      "references": "semantic.radius.md",
-      "sentido": "Radius do indicator Tabs no Figma (não aplicado no CSS).",
-      "escopo": [
-        "border-radius"
-      ],
-      "contexto": "Component token residual do contrato anatômico Tabs Indicator no Figma. No CSS publicado o indicador ativo é border-bottom reto e não consome radius.",
-      "decisao": "Mantido enquanto existir no snapshot Figma, mas não deve ser aplicado no repo porque arredonda visualmente o underline ativo.",
-      "usos": {
-        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -25067,6 +25052,27 @@
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
         "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.modal.overlay.bg.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.background.overlay",
+      "sentido": "Background do overlay Modal.",
+      "escopo": [
+        "fill"
+      ],
+      "contexto": "Component token do contrato anatômico Modal Overlay. Binda o backdrop do component set Modal no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.background.overlay porque o scrim é uma decisão semântica reutilizável, mas o componente deve expor contrato anatômico próprio.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }

@@ -2,6 +2,13 @@
   "component": {
     "modal": {
       "overlay": {
+        "bg": {
+          "default": {
+            "$value": "{semantic.background.overlay}",
+            "$type": "color",
+            "$description": "Background do overlay Modal."
+          }
+        },
         "padding": {
           "default": {
             "$type": "dimension",

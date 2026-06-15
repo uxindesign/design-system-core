@@ -50,13 +50,6 @@
             "$description": "Altura do indicador de Tabs."
           }
         },
-        "radius": {
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.radius.md}",
-            "$description": "Raio do indicador de Tabs."
-          }
-        },
         "fill": {
           "active": {
             "$value": "{semantic.primary.background.default}",

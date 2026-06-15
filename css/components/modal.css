@@ -6,7 +6,7 @@
 .ds-modal-overlay {
   position: fixed;
   inset: 0;
-  background-color: var(--ds-background-overlay);
+  background-color: var(--ds-modal-overlay-bg-default);
   display: flex;
   align-items: center;
   justify-content: center;

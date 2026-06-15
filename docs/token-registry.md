@@ -354,7 +354,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.background.default` | color | → `foundation.color.neutral.50` | Background base do app — superfície neutra mais comum. | 1 |
 | `semantic.background.disabled` | color | → `foundation.color.neutral.200` | Background pra estados disabled — neutral subtle. | 5 |
 | `semantic.background.inverse` | color | → `foundation.color.neutral.900` | Background invertido — usado em tooltips, snackbars, dark badges em light mode. | 5 |
-| `semantic.background.overlay` | color | → `foundation.color.overlay.black.60` | Scrim de modal/drawer — escurece o fundo pra focar o overlay. | 1 |
+| `semantic.background.overlay` | color | → `foundation.color.overlay.black.60` | Scrim de modal/drawer — escurece o fundo pra focar o overlay. | 2 |
 | `semantic.background.subtle` | color | → `foundation.color.neutral.200` | Background levemente diferenciado — chips, código inline, áreas secundárias. | 8 |
 
 ### semantic.border
@@ -564,7 +564,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 |---|---|---|---|---|
 | `semantic.radius.full` | dimension | → `foundation.radius.999` | Radius semantic full. | 11 |
 | `semantic.radius.lg` | dimension | → `foundation.radius.12` | Radius semantic lg. | 9 |
-| `semantic.radius.md` | dimension | → `foundation.radius.8` | Radius semantic md. | 10 |
+| `semantic.radius.md` | dimension | → `foundation.radius.8` | Radius semantic md. | 9 |
 | `semantic.radius.sm` | dimension | → `foundation.radius.4` | Radius semantic sm. | 8 |
 | `semantic.radius.xl` | dimension | → `foundation.radius.16` | Radius semantic xl. | 0 |
 
@@ -1159,6 +1159,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.modal.max-width.lg` | dimension | → `semantic.size.layout.lg` | Max-width do Modal lg. | 1 |
 | `component.modal.max-width.md` | dimension | → `semantic.size.layout.md` | Max-width do Modal md. | 1 |
 | `component.modal.max-width.sm` | dimension | → `semantic.size.layout.sm` | Max-width do Modal sm. | 1 |
+| `component.modal.overlay.bg.default` | color | → `semantic.background.overlay` | Background do overlay Modal. | 1 |
 | `component.modal.overlay.padding.default` | dimension | → `semantic.space.xl` | Padding do overlay Modal. | 1 |
 | `component.modal.overlay.z-index.default` | number | → `semantic.z.modal` | Z-index do overlay Modal. | 1 |
 | `component.modal.radius.default` | dimension | → `semantic.radius.lg` | Radius do Modal. | 1 |
@@ -1295,7 +1296,6 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.tabs.focus-ring.radius.default` | dimension | → `semantic.radius.md` | Radius do focus ring Tabs. | 0 |
 | `component.tabs.indicator.fill.active` | color | → `semantic.primary.background.default` | Contrato indicator.fill de tabs, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.tabs.indicator.height.default` | dimension | → `semantic.border.width.strong` | Altura do indicator Tabs. | 1 |
-| `component.tabs.indicator.radius.default` | dimension | → `semantic.radius.md` | Radius do indicator Tabs no Figma (não aplicado no CSS). | 0 |
 | `component.tabs.item.indicator-gap.default` | dimension | → `semantic.space.control.padding.10` | Gap entre label e indicator Tabs. | 1 |
 | `component.tabs.item.padding-top.default` | dimension | → `semantic.space.md` | Padding top do item Tabs. | 1 |
 | `component.tabs.item.padding-x.default` | dimension | → `semantic.space.lg` | Padding horizontal do item Tabs. | 1 |
@@ -4758,7 +4758,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a foundation.color.overlay.black.40 (light) — Semantic encapsula a decisão de qual tom da paleta usar.
 - **Usos**:
   - CSS:
-    - `css/components/modal.css` (1×)
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.modal.overlay.bg.default`
 
 ### `semantic.background.subtle`
 
@@ -5095,7 +5096,7 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/tabs.css` (1×)
     - `css/components/textarea.css` (1×)
     - `css/components/toggle.css` (1×)
-    - `css/tokens/generated/component.css` (11×)
+    - `css/tokens/generated/component.css` (10×)
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
   - Tokens que referenciam: `component.badge.label.color.neutral.subtle`, `component.breadcrumb.label.color.current`, `component.card.body.color.default`, `component.card.subtitle.color.default`, `component.field.value.color.readonly`, `component.form-field.label.color.readonly`, `component.form-field.helper.color.default`, `component.tabs.label.color.default`, `component.toggle.thumb.fill.off.default`, `component.toggle.thumb.fill.off.focus`, `semantic.icon.color.default`, `semantic.icon.color.default`
@@ -5172,7 +5173,7 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/radio.css` (5×)
     - `css/components/tabs.css` (1×)
     - `css/components/toggle.css` (3×)
-    - `css/tokens/generated/component.css` (9×)
+    - `css/tokens/generated/component.css` (10×)
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
   - Tokens que referenciam: `component.alert.title.color.subtle`, `component.alert.description.color.subtle`, `component.badge.label.color.neutral.solid`, `component.card.title.color.default`, `component.field.value.color.default`, `component.form-field.label.color.default`, `component.form-field.description.color.default`, `component.modal.body.color.default`, `component.modal.title.color.default`, `component.tabs.label.color.hover`, `semantic.icon.color.active`, `semantic.icon.color.active`
@@ -6836,8 +6837,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.radius.8.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (9×)
-  - Tokens que referenciam: `component.breadcrumb.focus-ring.radius.default`, `component.button.radius.default`, `component.checkbox.focus-ring.radius.default`, `component.divider.line.radius.default`, `component.field.radius`, `component.skeleton.text.radius.default`, `component.skeleton.rectangle.radius.default`, `component.tabs.focus-ring.radius.default`, `component.tabs.indicator.radius.default`
+    - `css/tokens/generated/component.css` (8×)
+  - Tokens que referenciam: `component.breadcrumb.focus-ring.radius.default`, `component.button.radius.default`, `component.checkbox.focus-ring.radius.default`, `component.divider.line.radius.default`, `component.field.radius`, `component.skeleton.text.radius.default`, `component.skeleton.rectangle.radius.default`, `component.tabs.focus-ring.radius.default`
 
 ### `semantic.radius.sm`
 
@@ -13226,6 +13227,19 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/modal.css` (1×)
 
+### `component.modal.overlay.bg.default`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.background.overlay`
+- **Sentido**: Background do overlay Modal.
+- **Escopo**: fill
+- **Contexto**: Component token do contrato anatômico Modal Overlay. Binda o backdrop do component set Modal no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.background.overlay porque o scrim é uma decisão semântica reutilizável, mas o componente deve expor contrato anatômico próprio.
+- **Usos**:
+  - CSS:
+    - `css/components/modal.css` (1×)
+
 ### `component.modal.overlay.padding.default`
 
 - **Camada**: component
@@ -14646,18 +14660,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/tabs.css` (1×)
-
-### `component.tabs.indicator.radius.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.radius.md`
-- **Sentido**: Radius do indicator Tabs no Figma (não aplicado no CSS).
-- **Escopo**: border-radius
-- **Contexto**: Component token residual do contrato anatômico Tabs Indicator no Figma. No CSS publicado o indicador ativo é border-bottom reto e não consome radius.
-- **Decisão**: Mantido enquanto existir no snapshot Figma, mas não deve ser aplicado no repo porque arredonda visualmente o underline ativo.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `component.tabs.item.indicator-gap.default`
 

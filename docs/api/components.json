@@ -769,7 +769,6 @@
       "cssClass": "ds-modal",
       "cssFile": "css/components/modal.css",
       "tokens": [
-        "ds-background-overlay",
         "ds-border-focus",
         "ds-border-width-focus",
         "ds-content-default",
@@ -814,6 +813,7 @@
         "ds-modal-max-width-lg",
         "ds-modal-max-width-md",
         "ds-modal-max-width-sm",
+        "ds-modal-overlay-bg-default",
         "ds-modal-overlay-padding-default",
         "ds-modal-overlay-z-index-default",
         "ds-modal-radius-default",

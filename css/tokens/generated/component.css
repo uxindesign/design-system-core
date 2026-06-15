@@ -349,6 +349,7 @@
   --ds-input-text-line-height-md: var(--ds-body-line-height-sm); /** Line-height do texto Input Text md. */
   --ds-input-text-line-height-lg: var(--ds-body-line-height-md); /** Line-height do texto Input Text lg. */
   --ds-input-text-frame-padding-x-default: var(--ds-space-xs); /** Padding horizontal do Text Frame Input Text. */
+  --ds-modal-overlay-bg-default: var(--ds-background-overlay); /** Background do overlay Modal. */
   --ds-modal-overlay-padding-default: var(--ds-space-xl); /** Padding do overlay Modal. */
   --ds-modal-overlay-z-index-default: var(--ds-z-modal); /** Z-index do overlay Modal. */
   --ds-modal-max-width-sm: var(--ds-size-layout-sm); /** Max-width do Modal sm. */
@@ -497,7 +498,6 @@
   --ds-tabs-item-indicator-gap-default: var(--ds-space-control-padding-10); /** Espaço entre o rótulo e o indicador de Tabs. */
   --ds-tabs-focus-ring-radius-default: var(--ds-radius-md); /** Radius do focus ring Tabs. */
   --ds-tabs-indicator-height-default: var(--ds-border-width-strong); /** Altura do indicador de Tabs. */
-  --ds-tabs-indicator-radius-default: var(--ds-radius-md); /** Raio do indicador de Tabs. */
   --ds-tabs-indicator-fill-active: var(--ds-primary-background-default);
   --ds-tabs-label-font-size-default: var(--ds-body-font-size-sm); /** Tamanho da fonte do rótulo de Tabs. */
   --ds-tabs-label-line-height-default: var(--ds-body-line-height-sm); /** Altura de linha do rótulo de Tabs. */
