@@ -535,7 +535,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.overlay.default` | color | → `foundation.color.overlay.black.10` | Overlay default — translúcido sobre conteúdo. | 5 |
 | `semantic.overlay.medium` | color | → `foundation.color.overlay.black.20` | Overlay medium — translúcido sobre conteúdo. | 4 |
 | `semantic.overlay.strong` | color | → `foundation.color.overlay.black.40` | Overlay strong — translúcido sobre conteúdo. | 0 |
-| `semantic.overlay.subtle` | color | → `foundation.color.overlay.black.5` | Overlay subtle — translúcido sobre conteúdo. | 1 |
+| `semantic.overlay.subtle` | color | → `foundation.color.overlay.black.5` | Overlay subtle — translúcido sobre conteúdo. | 0 |
 
 ### semantic.primary
 
@@ -6580,8 +6580,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Use em scrims de modal, dropdowns, drawers.
 - **Decisão**: Aliasado a Foundation foundation.color.overlay.black.5.
 - **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `semantic.primary.background.active`
 
@@ -12734,8 +12733,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.content.strong`
 - **Sentido**: Contrato body.color de modal, sincronizado a partir das Variables Figma atuais.
 - **Escopo**: text, fill, stroke
-- **Contexto**: Usado para estabilizar o contrato anatômico do Modal Close entre Figma, JSON e CSS.
-- **Decisão**: Alias 1:1 para semantic.size.xl para espelhar o target default/md de 40px no Figma.
+- **Contexto**: Usado para estabilizar o contrato anatômico do Modal Body entre Figma, JSON e CSS.
+- **Decisão**: Alias 1:1 para semantic.content.strong porque o body da Modal usa conteúdo neutro de alta ênfase no contrato atual.
 - **Usos**:
   - CSS:
     - `css/components/modal.css` (1×)

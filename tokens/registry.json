@@ -4797,12 +4797,7 @@
       "contexto": "Use em scrims de modal, dropdowns, drawers.",
       "decisao": "Aliasado a Foundation foundation.color.overlay.black.5.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/modal.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -24561,8 +24556,8 @@
         "fill",
         "stroke"
       ],
-      "contexto": "Usado para estabilizar o contrato anatômico do Modal Close entre Figma, JSON e CSS.",
-      "decisao": "Alias 1:1 para semantic.size.xl para espelhar o target default/md de 40px no Figma.",
+      "contexto": "Usado para estabilizar o contrato anatômico do Modal Body entre Figma, JSON e CSS.",
+      "decisao": "Alias 1:1 para semantic.content.strong porque o body da Modal usa conteúdo neutro de alta ênfase no contrato atual.",
       "usos": {
         "css": [
           {

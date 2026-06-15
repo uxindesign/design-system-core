@@ -124,7 +124,6 @@
 
 .ds-modal__close:hover {
   color: var(--ds-content-strong);
-  background-color: var(--ds-overlay-subtle);
 }
 
 .ds-modal__close:focus-visible {

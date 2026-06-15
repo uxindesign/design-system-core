@@ -3021,7 +3021,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.overlay.default` | color | → `foundation.color.overlay.black.10` | Overlay default — translúcido sobre conteúdo. | 5 |
 | `semantic.overlay.medium` | color | → `foundation.color.overlay.black.20` | Overlay medium — translúcido sobre conteúdo. | 4 |
 | `semantic.overlay.strong` | color | → `foundation.color.overlay.black.40` | Overlay strong — translúcido sobre conteúdo. | 0 |
-| `semantic.overlay.subtle` | color | → `foundation.color.overlay.black.5` | Overlay subtle — translúcido sobre conteúdo. | 1 |
+| `semantic.overlay.subtle` | color | → `foundation.color.overlay.black.5` | Overlay subtle — translúcido sobre conteúdo. | 0 |
 
 ### semantic.primary
 
@@ -9066,8 +9066,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Use em scrims de modal, dropdowns, drawers.
 - **Decisão**: Aliasado a Foundation foundation.color.overlay.black.5.
 - **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `semantic.primary.background.active`
 
@@ -15220,8 +15219,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.content.strong`
 - **Sentido**: Contrato body.color de modal, sincronizado a partir das Variables Figma atuais.
 - **Escopo**: text, fill, stroke
-- **Contexto**: Usado para estabilizar o contrato anatômico do componente modal entre Figma, JSON e CSS.
-- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Contexto**: Usado para estabilizar o contrato anatômico do Modal Body entre Figma, JSON e CSS.
+- **Decisão**: Alias 1:1 para semantic.content.strong porque o body da Modal usa conteúdo neutro de alta ênfase no contrato atual.
 - **Usos**:
   - CSS:
     - `css/components/modal.css` (1×)
@@ -15416,7 +15415,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Tamanho do ícone Close Modal.
 - **Escopo**: font-size
 - **Contexto**: Component token do contrato anatômico Modal Close. Controla o tamanho da instância Lucide interna ao frame de hit-area do close no Figma e no CSS.
-- **Decisão**: Alias 1:1 para semantic.size.md porque o close Modal usa a instância Lucide em 24px dentro do hit-area do próprio close.
+- **Decisão**: Alias 1:1 para semantic.size.md para espelhar o default/md do Figma: ícone Lucide de 24px dentro de um target interativo maior.
 - **Usos**:
   - CSS:
     - `css/components/modal.css` (2×)
@@ -15480,7 +15479,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Sentido**: Padding do close Modal.
 - **Escopo**: padding
 - **Contexto**: Component token do contrato anatômico Modal Close. Controla o padding do frame de hit-area do close no Figma e no CSS.
-- **Decisão**: Alias 1:1 para semantic.space.none porque o close Modal usa hit-area de 24px sem padding interno; o tamanho do ícone é controlado separadamente.
+- **Decisão**: Alias 1:1 para semantic.space.sm para espelhar o default/md do Figma: target de 40px com ícone de 24px e padding interno de 8px.
 - **Usos**:
   - CSS:
     - `css/components/modal.css` (1×)
