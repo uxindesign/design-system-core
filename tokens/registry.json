@@ -4149,10 +4149,6 @@
             "count": 1
           },
           {
-            "file": "css/components/skeleton.css",
-            "count": 1
-          },
-          {
             "file": "css/tokens/generated/component.css",
             "count": 5
           }
@@ -4182,10 +4178,6 @@
           {
             "file": "css/base/reset.css",
             "count": 1
-          },
-          {
-            "file": "css/components/tooltip.css",
-            "count": 5
           },
           {
             "file": "css/tokens/generated/component.css",
@@ -4235,14 +4227,6 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/badge.css",
-            "count": 2
-          },
-          {
-            "file": "css/components/card.css",
-            "count": 1
-          },
-          {
             "file": "css/tokens/generated/component.css",
             "count": 9
           }
@@ -4273,10 +4257,6 @@
       "decisao": "Alias resolvido em foundation.color.neutral.50.",
       "usos": {
         "css": [
-          {
-            "file": "css/components/card.css",
-            "count": 1
-          },
           {
             "file": "css/tokens/generated/component.css",
             "count": 1
@@ -4317,10 +4297,6 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/modal.css",
-            "count": 1
-          },
-          {
             "file": "css/tokens/generated/component.css",
             "count": 1
           }
@@ -4349,40 +4325,12 @@
             "count": 1
           },
           {
-            "file": "css/components/alert.css",
-            "count": 4
-          },
-          {
-            "file": "css/components/badge.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/card.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/checkbox.css",
-            "count": 4
-          },
-          {
             "file": "css/components/modal.css",
-            "count": 3
-          },
-          {
-            "file": "css/components/radio.css",
-            "count": 5
-          },
-          {
-            "file": "css/components/tabs.css",
             "count": 1
-          },
-          {
-            "file": "css/components/toggle.css",
-            "count": 3
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 10
+            "count": 12
           },
           {
             "file": "css/tokens/generated/theme-dark.css",
@@ -4428,44 +4376,12 @@
             "count": 1
           },
           {
-            "file": "css/components/badge.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/breadcrumb.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/card.css",
-            "count": 2
-          },
-          {
-            "file": "css/components/checkbox.css",
-            "count": 2
-          },
-          {
-            "file": "css/components/modal.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/radio.css",
-            "count": 2
-          },
-          {
-            "file": "css/components/tabs.css",
-            "count": 1
-          },
-          {
             "file": "css/components/textarea.css",
             "count": 1
           },
           {
-            "file": "css/components/toggle.css",
-            "count": 1
-          },
-          {
             "file": "css/tokens/generated/component.css",
-            "count": 10
+            "count": 11
           },
           {
             "file": "css/tokens/generated/theme-dark.css",
@@ -4545,24 +4461,8 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/checkbox.css",
-            "count": 2
-          },
-          {
-            "file": "css/components/radio.css",
-            "count": 2
-          },
-          {
-            "file": "css/components/tabs.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/toggle.css",
-            "count": 2
-          },
-          {
             "file": "css/tokens/generated/component.css",
-            "count": 6
+            "count": 7
           },
           {
             "file": "css/tokens/generated/theme-dark.css",
@@ -4637,14 +4537,6 @@
             "count": 1
           },
           {
-            "file": "css/components/badge.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/card.css",
-            "count": 1
-          },
-          {
             "file": "css/tokens/generated/component.css",
             "count": 2
           }
@@ -4693,14 +4585,6 @@
       "decisao": "Aliasado a foundation.color.neutral.200.",
       "usos": {
         "css": [
-          {
-            "file": "css/components/card.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/spinner.css",
-            "count": 1
-          },
           {
             "file": "css/tokens/generated/component.css",
             "count": 3
@@ -4788,26 +4672,6 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/alert.css",
-            "count": 2
-          },
-          {
-            "file": "css/components/breadcrumb.css",
-            "count": 2
-          },
-          {
-            "file": "css/components/link.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/modal.css",
-            "count": 2
-          },
-          {
-            "file": "css/components/tabs.css",
-            "count": 2
-          },
-          {
             "file": "css/tokens/generated/component.css",
             "count": 1
           }
@@ -4831,26 +4695,6 @@
       "decisao": "Aliasado a foundation.color.brand.500.",
       "usos": {
         "css": [
-          {
-            "file": "css/components/alert.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/breadcrumb.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/link.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/modal.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/tabs.css",
-            "count": 1
-          },
           {
             "file": "css/tokens/generated/component.css",
             "count": 8
@@ -4881,10 +4725,6 @@
       "decisao": "Aliasado a foundation.color.brand.600.",
       "usos": {
         "css": [
-          {
-            "file": "css/components/spinner.css",
-            "count": 1
-          },
           {
             "file": "css/tokens/generated/component.css",
             "count": 1
@@ -5011,10 +4851,6 @@
       "decisao": "Aliasado a Foundation foundation.color.overlay.black.20.",
       "usos": {
         "css": [
-          {
-            "file": "css/components/spinner.css",
-            "count": 1
-          },
           {
             "file": "css/tokens/generated/theme-dark.css",
             "count": 1
@@ -6045,18 +5881,6 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/avatar.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/badge.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/tooltip.css",
-            "count": 1
-          },
-          {
             "file": "css/tokens/generated/component.css",
             "count": 15
           }
@@ -6122,10 +5946,6 @@
       "decisao": "Aliasado a foundation.color.brand.700 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).",
       "usos": {
         "css": [
-          {
-            "file": "css/components/badge.css",
-            "count": 1
-          },
           {
             "file": "css/tokens/generated/component.css",
             "count": 3
@@ -6345,10 +6165,6 @@
             "count": 1
           },
           {
-            "file": "css/components/breadcrumb.css",
-            "count": 1
-          },
-          {
             "file": "css/components/link.css",
             "count": 1
           },
@@ -6409,10 +6225,6 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/alert.css",
-            "count": 1
-          },
-          {
             "file": "css/tokens/generated/component.css",
             "count": 2
           }
@@ -6437,14 +6249,6 @@
       "decisao": "Aliasado a foundation.color.green.700.",
       "usos": {
         "css": [
-          {
-            "file": "css/components/alert.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/badge.css",
-            "count": 1
-          },
           {
             "file": "css/tokens/generated/component.css",
             "count": 1
@@ -6479,14 +6283,6 @@
       "decisao": "Aliasado a foundation.color.neutral.50.",
       "usos": {
         "css": [
-          {
-            "file": "css/components/alert.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/badge.css",
-            "count": 1
-          },
           {
             "file": "css/tokens/generated/component.css",
             "count": 7
@@ -6527,10 +6323,6 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/alert.css",
-            "count": 1
-          },
-          {
             "file": "css/tokens/generated/component.css",
             "count": 1
           }
@@ -6554,14 +6346,6 @@
       "decisao": "Aliasado a foundation.color.amber.700.",
       "usos": {
         "css": [
-          {
-            "file": "css/components/alert.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/badge.css",
-            "count": 1
-          },
           {
             "file": "css/tokens/generated/component.css",
             "count": 1
@@ -6596,14 +6380,6 @@
       "decisao": "Aliasado a foundation.color.neutral.900.",
       "usos": {
         "css": [
-          {
-            "file": "css/components/alert.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/badge.css",
-            "count": 1
-          },
           {
             "file": "css/tokens/generated/component.css",
             "count": 3
@@ -6640,14 +6416,6 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/alert.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/checkbox.css",
-            "count": 1
-          },
-          {
             "file": "css/tokens/generated/component.css",
             "count": 1
           }
@@ -6671,22 +6439,6 @@
       "decisao": "Aliasado a foundation.color.red.700.",
       "usos": {
         "css": [
-          {
-            "file": "css/components/alert.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/badge.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/checkbox.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/radio.css",
-            "count": 2
-          },
           {
             "file": "css/components/textarea.css",
             "count": 1
@@ -6728,14 +6480,6 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/alert.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/badge.css",
-            "count": 1
-          },
-          {
             "file": "css/tokens/generated/component.css",
             "count": 7
           },
@@ -6775,10 +6519,6 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/alert.css",
-            "count": 1
-          },
-          {
             "file": "css/tokens/generated/component.css",
             "count": 1
           }
@@ -6803,14 +6543,6 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/alert.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/badge.css",
-            "count": 1
-          },
-          {
             "file": "css/tokens/generated/component.css",
             "count": 1
           }
@@ -6834,14 +6566,6 @@
       "decisao": "Aliasado a foundation.color.neutral.900.",
       "usos": {
         "css": [
-          {
-            "file": "css/components/alert.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/badge.css",
-            "count": 1
-          },
           {
             "file": "css/tokens/generated/component.css",
             "count": 3
@@ -8677,18 +8401,6 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/avatar.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/badge.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/tabs.css",
-            "count": 2
-          },
-          {
             "file": "css/tokens/generated/component.css",
             "count": 14
           },
@@ -8833,10 +8545,6 @@
       "decisao": "Aliasado a foundation.color.overlay.blue-600.12 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).",
       "usos": {
         "css": [
-          {
-            "file": "css/components/badge.css",
-            "count": 1
-          },
           {
             "file": "css/tokens/generated/component.css",
             "count": 3
@@ -8994,14 +8702,6 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/alert.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/badge.css",
-            "count": 1
-          },
-          {
             "file": "css/tokens/generated/component.css",
             "count": 4
           }
@@ -9074,14 +8774,6 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/alert.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/badge.css",
-            "count": 1
-          },
-          {
             "file": "css/tokens/generated/component.css",
             "count": 2
           }
@@ -9129,14 +8821,6 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/alert.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/badge.css",
-            "count": 1
-          },
-          {
             "file": "css/tokens/generated/component.css",
             "count": 2
           }
@@ -9177,14 +8861,6 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/alert.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/badge.css",
-            "count": 1
-          },
-          {
             "file": "css/tokens/generated/component.css",
             "count": 2
           }
@@ -9208,22 +8884,6 @@
       "decisao": "Aliasado a foundation.color.red.600.",
       "usos": {
         "css": [
-          {
-            "file": "css/components/alert.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/badge.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/checkbox.css",
-            "count": 2
-          },
-          {
-            "file": "css/components/radio.css",
-            "count": 3
-          },
           {
             "file": "css/tokens/generated/component.css",
             "count": 4
@@ -9297,14 +8957,6 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/alert.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/badge.css",
-            "count": 1
-          },
-          {
             "file": "css/tokens/generated/component.css",
             "count": 2
           }
@@ -9352,14 +9004,6 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/alert.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/badge.css",
-            "count": 1
-          },
-          {
             "file": "css/tokens/generated/component.css",
             "count": 2
           }
@@ -9399,14 +9043,6 @@
       "decisao": "Aliasado a foundation.color.sky.100.",
       "usos": {
         "css": [
-          {
-            "file": "css/components/alert.css",
-            "count": 1
-          },
-          {
-            "file": "css/components/badge.css",
-            "count": 1
-          },
           {
             "file": "css/tokens/generated/component.css",
             "count": 2
@@ -10269,10 +9905,6 @@
       "decisao": "Aliasado a foundation.color.neutral.50.",
       "usos": {
         "css": [
-          {
-            "file": "css/components/spinner.css",
-            "count": 1
-          },
           {
             "file": "css/tokens/generated/component.css",
             "count": 1
@@ -14750,6 +14382,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/checkbox.css",
+            "count": 2
+          },
+          {
             "file": "css/components/form-field.css",
             "count": 1
           },
@@ -14758,7 +14394,15 @@
             "count": 2
           },
           {
+            "file": "css/components/radio.css",
+            "count": 3
+          },
+          {
             "file": "css/components/select.css",
+            "count": 2
+          },
+          {
+            "file": "css/components/toggle.css",
             "count": 2
           }
         ],
@@ -14781,6 +14425,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/checkbox.css",
+            "count": 2
+          },
+          {
             "file": "css/components/form-field.css",
             "count": 1
           },
@@ -14789,8 +14437,16 @@
             "count": 3
           },
           {
+            "file": "css/components/radio.css",
+            "count": 3
+          },
+          {
             "file": "css/components/select.css",
             "count": 3
+          },
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
           }
         ],
         "tokens": [],
@@ -14812,6 +14468,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          },
+          {
             "file": "css/components/form-field.css",
             "count": 1
           },
@@ -14820,8 +14480,16 @@
             "count": 3
           },
           {
+            "file": "css/components/radio.css",
+            "count": 2
+          },
+          {
             "file": "css/components/select.css",
             "count": 3
+          },
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
           }
         ],
         "tokens": [],
@@ -14843,6 +14511,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          },
+          {
             "file": "css/components/form-field.css",
             "count": 1
           },
@@ -14851,7 +14523,15 @@
             "count": 1
           },
           {
+            "file": "css/components/radio.css",
+            "count": 2
+          },
+          {
             "file": "css/components/select.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/toggle.css",
             "count": 1
           }
         ],
@@ -14998,6 +14678,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/checkbox.css",
+            "count": 2
+          },
+          {
             "file": "css/components/form-field.css",
             "count": 1
           },
@@ -15006,7 +14690,15 @@
             "count": 1
           },
           {
+            "file": "css/components/radio.css",
+            "count": 2
+          },
+          {
             "file": "css/components/select.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/toggle.css",
             "count": 1
           }
         ],
@@ -15029,6 +14721,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/checkbox.css",
+            "count": 2
+          },
+          {
             "file": "css/components/form-field.css",
             "count": 1
           },
@@ -15037,8 +14733,16 @@
             "count": 1
           },
           {
+            "file": "css/components/radio.css",
+            "count": 2
+          },
+          {
             "file": "css/components/select.css",
             "count": 3
+          },
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
           }
         ],
         "tokens": [],
@@ -15060,6 +14764,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/checkbox.css",
+            "count": 2
+          },
+          {
             "file": "css/components/form-field.css",
             "count": 1
           },
@@ -15068,8 +14776,16 @@
             "count": 1
           },
           {
+            "file": "css/components/radio.css",
+            "count": 2
+          },
+          {
             "file": "css/components/select.css",
             "count": 3
+          },
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
           }
         ],
         "tokens": [],
@@ -15091,6 +14807,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/checkbox.css",
+            "count": 2
+          },
+          {
             "file": "css/components/form-field.css",
             "count": 1
           },
@@ -15099,7 +14819,15 @@
             "count": 1
           },
           {
+            "file": "css/components/radio.css",
+            "count": 2
+          },
+          {
             "file": "css/components/select.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/toggle.css",
             "count": 1
           }
         ],
@@ -15122,7 +14850,15 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          },
+          {
             "file": "css/components/form-field.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/radio.css",
             "count": 1
           }
         ],
@@ -15145,7 +14881,15 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          },
+          {
             "file": "css/components/form-field.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/radio.css",
             "count": 1
           }
         ],
@@ -15168,7 +14912,15 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          },
+          {
             "file": "css/components/form-field.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/radio.css",
             "count": 1
           }
         ],
@@ -15191,7 +14943,15 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          },
+          {
             "file": "css/components/form-field.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/radio.css",
             "count": 1
           }
         ],
@@ -16813,27 +16573,6 @@
         "figma": []
       }
     },
-    "component.checkbox.target.gap.default": {
-      "layer": "component",
-      "type": "dimension",
-      "references": "semantic.space.sm",
-      "sentido": "Gap horizontal entre control e content do Checkbox.",
-      "escopo": [
-        "gap"
-      ],
-      "contexto": "Component token do contrato anatômico Checkbox. Binda o itemSpacing do target no Figma e substitui consumo direto de semantic.space.sm no CSS.",
-      "decisao": "Alias 1:1 para semantic.space.sm porque o espaçamento é reutilizável, mas a anatomia target pertence ao Checkbox.",
-      "usos": {
-        "css": [
-          {
-            "file": "css/components/checkbox.css",
-            "count": 1
-          }
-        ],
-        "tokens": [],
-        "figma": []
-      }
-    },
     "component.checkbox.box.radius.default": {
       "layer": "component",
       "type": "dimension",
@@ -18170,28 +17909,6 @@
         "figma": []
       }
     },
-    "component.checkbox.content.gap.default": {
-      "layer": "component",
-      "type": "dimension",
-      "references": "semantic.space.xs",
-      "sentido": "Checkbox content frame default",
-      "escopo": [
-        "checkbox",
-        "content frame"
-      ],
-      "contexto": "Component token do contrato Checkbox materializado no Figma para content frame.",
-      "decisao": "Alias 1:1 para semantic.space.xs para manter a anatomia content frame alinhada entre Figma, CSS e docs.",
-      "usos": {
-        "css": [
-          {
-            "file": "css/components/checkbox.css",
-            "count": 2
-          }
-        ],
-        "tokens": [],
-        "figma": []
-      }
-    },
     "component.checkbox.box.fill.unchecked.default": {
       "layer": "component",
       "type": "color",
@@ -18468,50 +18185,6 @@
           {
             "file": "css/components/checkbox.css",
             "count": 1
-          }
-        ],
-        "tokens": [],
-        "figma": []
-      }
-    },
-    "component.radio.target.gap.default": {
-      "layer": "component",
-      "type": "dimension",
-      "references": "semantic.space.sm",
-      "sentido": "Radio target interativo default",
-      "escopo": [
-        "radio",
-        "target interativo"
-      ],
-      "contexto": "Component token do contrato Radio materializado no Figma para target interativo.",
-      "decisao": "Alias 1:1 para semantic.space.sm para manter a anatomia target interativo alinhada entre Figma, CSS e docs.",
-      "usos": {
-        "css": [
-          {
-            "file": "css/components/radio.css",
-            "count": 1
-          }
-        ],
-        "tokens": [],
-        "figma": []
-      }
-    },
-    "component.radio.content.gap.default": {
-      "layer": "component",
-      "type": "dimension",
-      "references": "semantic.space.xs",
-      "sentido": "Radio content frame default",
-      "escopo": [
-        "radio",
-        "content frame"
-      ],
-      "contexto": "Component token do contrato Radio materializado no Figma para content frame.",
-      "decisao": "Alias 1:1 para semantic.space.xs para manter a anatomia content frame alinhada entre Figma, CSS e docs.",
-      "usos": {
-        "css": [
-          {
-            "file": "css/components/radio.css",
-            "count": 2
           }
         ],
         "tokens": [],
@@ -22540,6 +22213,14 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/alert.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/breadcrumb.css",
+            "count": 1
+          },
+          {
             "file": "css/components/button.css",
             "count": 1
           },
@@ -22552,11 +22233,23 @@
             "count": 1
           },
           {
+            "file": "css/components/link.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          },
+          {
             "file": "css/components/radio.css",
             "count": 1
           },
           {
             "file": "css/components/select.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/tabs.css",
             "count": 1
           },
           {
@@ -22678,6 +22371,14 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/alert.css",
+            "count": 2
+          },
+          {
+            "file": "css/components/breadcrumb.css",
+            "count": 2
+          },
+          {
             "file": "css/components/button.css",
             "count": 2
           },
@@ -22690,11 +22391,23 @@
             "count": 2
           },
           {
+            "file": "css/components/link.css",
+            "count": 2
+          },
+          {
+            "file": "css/components/modal.css",
+            "count": 2
+          },
+          {
             "file": "css/components/radio.css",
             "count": 2
           },
           {
             "file": "css/components/select.css",
+            "count": 2
+          },
+          {
+            "file": "css/components/tabs.css",
             "count": 2
           },
           {
@@ -22897,7 +22610,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -22933,7 +22651,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -22969,7 +22692,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23005,7 +22733,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23135,7 +22868,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23156,7 +22894,7 @@
         "css": [
           {
             "file": "css/components/alert.css",
-            "count": 1
+            "count": 5
           }
         ],
         "tokens": [],
@@ -23176,7 +22914,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23194,7 +22937,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23212,7 +22960,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23340,7 +23093,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23356,7 +23114,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23372,7 +23135,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23388,7 +23156,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23404,7 +23177,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23420,7 +23198,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23436,7 +23219,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23452,7 +23240,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23468,7 +23261,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23484,7 +23282,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23500,7 +23303,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23516,7 +23324,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente alert entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/alert.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23598,7 +23411,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente avatar entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/avatar.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23616,7 +23434,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente avatar entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/avatar.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23634,7 +23457,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/badge.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23652,7 +23480,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/badge.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23670,7 +23503,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/badge.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23688,7 +23526,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/badge.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23706,7 +23549,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/badge.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23724,7 +23572,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/badge.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23742,7 +23595,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/badge.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23760,7 +23618,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/badge.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23778,7 +23641,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/badge.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23796,7 +23664,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/badge.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23814,7 +23687,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/badge.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23832,7 +23710,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/badge.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23848,7 +23731,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/badge.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23864,7 +23752,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/badge.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23880,7 +23773,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/badge.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23896,7 +23794,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/badge.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23912,7 +23815,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/badge.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23928,7 +23836,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/badge.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23944,7 +23857,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/badge.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23960,7 +23878,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/badge.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23976,7 +23899,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/badge.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23992,7 +23920,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/badge.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24008,7 +23941,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/badge.css",
+            "count": 2
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24024,7 +23962,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/badge.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24042,7 +23985,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente breadcrumb entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/breadcrumb.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24060,7 +24008,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente breadcrumb entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/breadcrumb.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24144,7 +24097,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente card entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24162,7 +24120,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente card entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24178,7 +24141,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente card entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24194,7 +24162,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente card entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24210,7 +24183,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente card entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24226,7 +24204,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente card entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24242,7 +24225,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente card entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24258,7 +24246,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente checkbox entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24278,8 +24271,20 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/checkbox.css",
+            "count": 2
+          },
+          {
             "file": "css/components/input.css",
             "count": 1
+          },
+          {
+            "file": "css/components/radio.css",
+            "count": 2
+          },
+          {
+            "file": "css/components/toggle.css",
+            "count": 2
           }
         ],
         "tokens": [],
@@ -24322,12 +24327,24 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          },
+          {
             "file": "css/components/input.css",
+            "count": 2
+          },
+          {
+            "file": "css/components/radio.css",
             "count": 2
           },
           {
             "file": "css/components/select.css",
             "count": 2
+          },
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
           }
         ],
         "tokens": [],
@@ -24441,7 +24458,20 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente form-field entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 2
+          },
+          {
+            "file": "css/components/radio.css",
+            "count": 2
+          },
+          {
+            "file": "css/components/toggle.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24525,7 +24555,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente modal entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24543,7 +24578,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente modal entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24580,7 +24620,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente modal entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24618,7 +24663,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente modal entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24650,7 +24700,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente radio entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24783,7 +24838,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente skeleton entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/skeleton.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24799,7 +24859,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente skeleton entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/skeleton.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24815,7 +24880,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente skeleton entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/skeleton.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24831,7 +24901,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente spinner entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/spinner.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24847,7 +24922,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente spinner entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/spinner.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24863,7 +24943,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente spinner entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/spinner.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24879,7 +24964,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente spinner entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/spinner.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24895,7 +24985,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente tabs entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/tabs.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24913,7 +25008,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente tabs entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/tabs.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24931,7 +25031,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente tabs entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/tabs.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24949,7 +25054,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente tabs entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/tabs.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24967,7 +25077,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente tabs entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/tabs.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24985,7 +25100,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente tooltip entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/tooltip.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -25003,7 +25123,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente tooltip entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/tooltip.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -25019,7 +25144,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente tooltip entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/tooltip.css",
+            "count": 4
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -25071,6 +25201,94 @@
           {
             "file": "css/components/modal.css",
             "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.target.gap.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.sm",
+      "sentido": "Define o gap horizontal entre o controle Checkbox e o content frame do item.",
+      "escopo": [
+        "CSS",
+        "Figma"
+      ],
+      "contexto": "Usado por .ds-checkbox-label para separar a box visual do texto/descrição/helper sem depender dos tokens de Form Field.",
+      "decisao": "Mantido como token de componente porque o espaçamento control-content pertence à anatomia do Checkbox, não ao wrapper Form Field.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.content.gap.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xs",
+      "sentido": "Define o gap vertical interno entre label, description e helper text no content frame do Checkbox.",
+      "escopo": [
+        "CSS",
+        "Figma"
+      ],
+      "contexto": "Usado quando o item Checkbox exibe textos empilhados por propriedades opt-in.",
+      "decisao": "Mantido como token de componente porque organiza o content frame interno do item; cores e tipografia continuam no contrato Form Field.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/checkbox.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.target.gap.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.sm",
+      "sentido": "Define o gap horizontal entre o controle Radio e o content frame do item.",
+      "escopo": [
+        "CSS",
+        "Figma"
+      ],
+      "contexto": "Usado por .ds-radio-label para separar o círculo visual do texto/descrição/helper sem depender dos tokens de Form Field.",
+      "decisao": "Mantido como token de componente porque o espaçamento control-content pertence à anatomia do Radio, não ao wrapper Form Field.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.content.gap.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xs",
+      "sentido": "Define o gap vertical interno entre label, description e helper text no content frame do Radio.",
+      "escopo": [
+        "CSS",
+        "Figma"
+      ],
+      "contexto": "Usado quando o item Radio exibe textos empilhados por propriedades opt-in.",
+      "decisao": "Mantido como token de componente porque organiza o content frame interno do item; cores e tipografia continuam no contrato Form Field.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/radio.css",
+            "count": 2
           }
         ],
         "tokens": [],

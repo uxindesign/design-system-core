@@ -23,7 +23,7 @@
   cursor: pointer;
   padding: var(--ds-space-xs);
   min-height: var(--toggle-target-height);
-  color: var(--ds-content-strong);
+  color: var(--ds-form-field-label-color-default);
   user-select: none;
 }
 
@@ -122,7 +122,7 @@
 
 .ds-toggle-label:has(.ds-toggle:disabled) {
   cursor: not-allowed;
-  color: var(--ds-content-disabled);
+  color: var(--ds-form-field-label-color-disabled);
 }
 
 /* ---------------------------------------------------------
@@ -164,10 +164,11 @@
 
 /* Label text (label/md: 14px bold) */
 .ds-toggle__label {
-  font-size: var(--ds-body-font-size-sm);
-  font-weight: var(--ds-body-font-weight-bold);
-  line-height: var(--ds-body-line-height-sm);
-  color: var(--ds-content-strong);
+  font-family: var(--ds-form-field-label-font-family-default);
+  font-size: var(--ds-form-field-label-font-size-default);
+  font-weight: var(--ds-form-field-label-font-weight-default);
+  line-height: var(--ds-form-field-label-line-height-default);
+  color: var(--ds-form-field-label-color-default);
 }
 
 /* Description (body/sm: 14px regular) */
@@ -175,19 +176,20 @@
   font-size: var(--ds-body-font-size-sm);
   font-weight: var(--ds-body-font-weight-regular);
   line-height: var(--ds-body-line-height-sm);
-  color: var(--ds-content-strong);
+  color: var(--ds-form-field-description-color-default);
   white-space: pre-wrap;
 }
 
 /* Helper text (caption/sm: 11px regular) */
 .ds-toggle__helper {
-  font-size: var(--ds-body-font-size-xs);
-  line-height: var(--ds-body-line-height-xs);
-  color: var(--ds-content-default);
+  font-size: var(--ds-form-field-helper-font-size-default);
+  font-weight: var(--ds-form-field-helper-font-weight-default);
+  line-height: var(--ds-form-field-helper-line-height-default);
+  color: var(--ds-form-field-helper-color-default);
 }
 
 .ds-toggle-label:has(.ds-toggle:disabled) .ds-toggle__label {
-  color: var(--ds-content-disabled);
+  color: var(--ds-form-field-label-color-disabled);
 }
 
 /* ---------------------------------------------------------
