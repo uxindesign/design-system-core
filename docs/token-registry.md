@@ -5061,7 +5061,7 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/base/reset.css` (1×)
     - `css/components/textarea.css` (1×)
-    - `css/tokens/generated/component.css` (11×)
+    - `css/tokens/generated/component.css` (10×)
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
   - Tokens que referenciam: `component.badge.label.color.neutral.subtle`, `component.breadcrumb.label.color.current`, `component.card.body.color.default`, `component.card.subtitle.color.default`, `component.field.value.color.readonly`, `component.form-field.label.color.readonly`, `component.form-field.helper.color.default`, `component.tabs.label.color.default`, `component.toggle.thumb.fill.off.default`, `component.toggle.thumb.fill.off.focus`, `semantic.icon.color.default`, `semantic.icon.color.default`
@@ -5077,7 +5077,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a foundation.color.neutral.400.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (7×)
+    - `css/tokens/generated/component.css` (6×)
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
   - Tokens que referenciam: `component.field.placeholder.color.disabled`, `component.field.value.color.disabled`, `component.form-field.label.color.disabled`, `component.form-field.helper.color.disabled`, `component.tabs.label.color.disabled`, `component.toggle.thumb.fill.off.disabled`, `semantic.icon.color.disabled`, `semantic.icon.color.disabled`
@@ -5127,7 +5127,7 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/base/reset.css` (1×)
     - `css/components/modal.css` (1×)
-    - `css/tokens/generated/component.css` (12×)
+    - `css/tokens/generated/component.css` (10×)
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
   - Tokens que referenciam: `component.alert.title.color.subtle`, `component.alert.description.color.subtle`, `component.badge.label.color.neutral.solid`, `component.card.title.color.default`, `component.field.value.color.default`, `component.form-field.label.color.default`, `component.form-field.description.color.default`, `component.modal.body.color.default`, `component.modal.title.color.default`, `component.tabs.label.color.hover`, `semantic.icon.color.active`, `semantic.icon.color.active`
@@ -7983,7 +7983,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.border.width.default`
 - **Sentido**: Border width do Alert quando stroke esta ativo.
 - **Escopo**: border-width
-- **Contexto**: Component token do contrato anatômico Alert Root. Binda stroke weights dos 4 variants Subtle no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Alert Root. Binda stroke weights dos variants Subtle no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.border.width.default porque 1px e padrao reutilizavel, mas no Alert documenta a espessura publica da borda Subtle.
 - **Usos**:
   - CSS:
@@ -7996,7 +7996,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.sm`
 - **Sentido**: Tamanho do ícone Close Alert.
 - **Escopo**: font-size
-- **Contexto**: Component token do contrato anatômico Alert Close. Binda fontSize dos ícones close nos 8 variants do Figma e substitui tamanho implicito no CSS.
+- **Contexto**: Component token do contrato anatômico Alert Close. Binda fontSize dos ícones close nos variants do Figma e substitui tamanho implicito no CSS.
 - **Decisão**: Alias 1:1 para semantic.size.sm porque 20px e escala reutilizavel, mas no Alert documenta o tamanho publico do ícone de dismiss.
 - **Usos**:
   - CSS:
@@ -8082,7 +8082,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.space.xs`
 - **Sentido**: Gap vertical do content Alert.
 - **Escopo**: gap
-- **Contexto**: Component token do contrato anatômico Alert Content. Binda itemSpacing entre Title e Description nos 8 variants do Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Alert Content. Binda itemSpacing entre Title e Description nos variants do Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.space.xs porque 4px e escala reutilizavel, mas no Alert documenta a separacao vertical publica do conteudo.
 - **Usos**:
   - CSS:
@@ -8160,7 +8160,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.typography.body.font-size.sm`
 - **Sentido**: Font-size da description Alert.
 - **Escopo**: font-size
-- **Contexto**: Component token do contrato anatômico Alert Description. Binda fontSize das 8 descriptions no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Alert Description. Binda fontSize das descriptions no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.typography.body.font-size.sm porque a description usa body/sm, mas a escala tipografica do Alert e contrato publico do componente.
 - **Usos**:
   - CSS:
@@ -8173,7 +8173,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.typography.body.font-weight.regular`
 - **Sentido**: Font-weight da description Alert.
 - **Escopo**: font-weight
-- **Contexto**: Component token do contrato anatômico Alert Description. Binda fontStyle das 8 descriptions no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Alert Description. Binda fontStyle das descriptions no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.typography.body.font-weight.regular porque a description usa Regular; no Figma o campo bindavel e fontStyle/string, enquanto no JSON/CSS o contrato permanece numerico.
 - **Usos**:
   - CSS:
@@ -8186,7 +8186,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.typography.body.line-height.sm`
 - **Sentido**: Line-height da description Alert.
 - **Escopo**: line-height
-- **Contexto**: Component token do contrato anatômico Alert Description. Binda lineHeight das 8 descriptions no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Alert Description. Binda lineHeight das descriptions no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.typography.body.line-height.sm porque a description usa body/sm, mas a metrica vertical do Alert e contrato publico do componente.
 - **Usos**:
   - CSS:
@@ -8199,7 +8199,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.space.sm`
 - **Sentido**: Gap horizontal do Alert.
 - **Escopo**: gap
-- **Contexto**: Component token do contrato anatômico Alert Root. Binda itemSpacing entre icon, content e close nos 8 variants do Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Alert Root. Binda itemSpacing entre icon, content e close nos variants do Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.space.sm porque 8px e escala reutilizavel, mas no Alert documenta o espaçamento horizontal publico da anatomia.
 - **Usos**:
   - CSS:
@@ -8312,7 +8312,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.sm`
 - **Sentido**: Tamanho do container Icon Alert.
 - **Escopo**: width, height
-- **Contexto**: Component token do contrato anatômico Alert Icon. Binda width/height dos icons nos 8 variants do Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Alert Icon. Binda width/height dos icons nos variants do Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.size.md porque 24px e escala reutilizavel, mas no Alert documenta o slot publico de icon.
 - **Usos**:
   - CSS:
@@ -8338,7 +8338,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.space.md`
 - **Sentido**: Padding do Alert.
 - **Escopo**: padding
-- **Contexto**: Component token do contrato anatômico Alert Root. Binda padding nos 8 variants do Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Alert Root. Binda padding nos variants do Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.space.md porque 12px e escala reutilizavel, mas no Alert documenta o padding publico do container.
 - **Usos**:
   - CSS:
@@ -8351,7 +8351,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.radius.lg`
 - **Sentido**: Radius do Alert.
 - **Escopo**: border-radius
-- **Contexto**: Component token do contrato anatômico Alert Root. Binda os 4 corner radii nos 8 variants do Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Alert Root. Binda corner radii nos variants do Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.radius.lg porque 12px e decisao reutilizavel, mas no Alert e parte publica da anatomia do container.
 - **Usos**:
   - CSS:
@@ -8905,7 +8905,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.space.xs`
 - **Sentido**: Gap interno do Badge.
 - **Escopo**: gap
-- **Contexto**: Component token do contrato anatômico Badge Root. Binda itemSpacing dos 12 variants no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Badge Root. Binda itemSpacing dos variants no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.space.xs porque 4px e escala reutilizavel, mas no Badge documenta o gap interno entre conteudo e adornos futuros.
 - **Usos**:
   - CSS:
@@ -9113,7 +9113,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.space.sm`
 - **Sentido**: Padding horizontal do Badge.
 - **Escopo**: padding-left, padding-right
-- **Contexto**: Component token do contrato anatômico Badge Root. Binda paddingLeft/paddingRight dos 12 variants no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Badge Root. Binda paddingLeft/paddingRight dos variants no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.space.sm porque 8px e escala reutilizavel, mas no Badge documenta o padding horizontal publico do pill.
 - **Usos**:
   - CSS:
@@ -9126,7 +9126,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.space.2xs`
 - **Sentido**: Padding vertical do Badge.
 - **Escopo**: padding-top, padding-bottom
-- **Contexto**: Component token do contrato anatômico Badge Root. Binda paddingTop/paddingBottom dos 12 variants no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Badge Root. Binda paddingTop/paddingBottom dos variants no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.space.2xs porque 2px e escala reutilizavel, mas no Badge documenta o padding vertical publico do pill.
 - **Usos**:
   - CSS:
@@ -9139,7 +9139,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.radius.full`
 - **Sentido**: Radius pill do Badge.
 - **Escopo**: border-radius
-- **Contexto**: Component token do contrato anatômico Badge Root. Binda os 4 corner radii dos 12 variants no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Badge Root. Binda corner radii dos variants no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.radius.full porque a circularidade e reutilizavel, mas no Badge e parte publica da anatomia pill.
 - **Usos**:
   - CSS:
@@ -9698,7 +9698,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.border.width.default`
 - **Sentido**: Border width do Button quando stroke está ativo.
 - **Escopo**: border-width
-- **Contexto**: Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Button. Binda os variants vivos correspondentes no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.border.width.default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
   - CSS:
@@ -10101,7 +10101,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.radius.lg`
 - **Sentido**: radius do focus ring Button.
 - **Escopo**: border-radius
-- **Contexto**: Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Button. Binda os variants vivos correspondentes no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.radius.lg porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -10191,7 +10191,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.space.md`
 - **Sentido**: Padding simétrico do Button somente-ícone lg.
 - **Escopo**: padding
-- **Contexto**: Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Button. Binda os variants vivos correspondentes no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.space.md porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
   - CSS:
@@ -10204,7 +10204,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.space.sm`
 - **Sentido**: Padding simétrico do Button somente-ícone md.
 - **Escopo**: padding
-- **Contexto**: Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Button. Binda os variants vivos correspondentes no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.space.sm porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
   - CSS:
@@ -10217,7 +10217,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.space.control.padding.6`
 - **Sentido**: Padding simétrico do Button somente-ícone sm.
 - **Escopo**: padding
-- **Contexto**: Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Button. Binda os variants vivos correspondentes no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.space.control.padding.6 porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
   - CSS:
@@ -10230,7 +10230,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.2xl`
 - **Sentido**: Largura do Button somente-ícone lg.
 - **Escopo**: width, height
-- **Contexto**: Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Button. Binda os variants vivos correspondentes no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.size.2xl porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
   - CSS:
@@ -10243,7 +10243,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.xl`
 - **Sentido**: Largura do Button somente-ícone md.
 - **Escopo**: width, height
-- **Contexto**: Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Button. Binda os variants vivos correspondentes no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.size.xl porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
   - CSS:
@@ -10256,7 +10256,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.lg`
 - **Sentido**: Largura do Button somente-ícone sm.
 - **Escopo**: width, height
-- **Contexto**: Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Button. Binda os variants vivos correspondentes no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.size.lg porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
   - CSS:
@@ -10347,7 +10347,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.space.xs`
 - **Sentido**: Padding horizontal do Label Frame Button.
 - **Escopo**: padding-left, padding-right
-- **Contexto**: Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Button. Binda os variants vivos correspondentes no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.space.xs porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
   - CSS:
@@ -10360,7 +10360,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.typography.body.font-family.sans`
 - **Sentido**: font-family do label Button default.
 - **Escopo**: font-family
-- **Contexto**: Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Button. Binda os variants vivos correspondentes no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.typography.body.font-family.sans porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
   - CSS:
@@ -10373,7 +10373,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.typography.body.font-size.md`
 - **Sentido**: font-size do label Button lg.
 - **Escopo**: font-size
-- **Contexto**: Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Button. Binda os variants vivos correspondentes no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.typography.body.font-size.md porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
   - CSS:
@@ -10386,7 +10386,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.typography.body.font-size.sm`
 - **Sentido**: font-size do label Button md.
 - **Escopo**: font-size
-- **Contexto**: Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Button. Binda os variants vivos correspondentes no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.typography.body.font-size.sm porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
   - CSS:
@@ -10399,7 +10399,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.typography.body.font-size.sm`
 - **Sentido**: font-size do label Button sm.
 - **Escopo**: font-size
-- **Contexto**: Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Button. Binda os variants vivos correspondentes no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.typography.body.font-size.sm porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
   - CSS:
@@ -10412,7 +10412,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.typography.body.font-weight.bold`
 - **Sentido**: font-weight do label Button default.
 - **Escopo**: font-weight
-- **Contexto**: Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Button. Binda os variants vivos correspondentes no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.typography.body.font-weight.bold porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
   - CSS:
@@ -10425,7 +10425,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.typography.body.letter-spacing.normal`
 - **Sentido**: letter-spacing do label Button default.
 - **Escopo**: letter-spacing
-- **Contexto**: Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Button. Binda os variants vivos correspondentes no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.typography.body.letter-spacing.normal porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -10437,7 +10437,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.typography.body.line-height.md`
 - **Sentido**: line-height do label Button lg.
 - **Escopo**: height, min-height
-- **Contexto**: Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Button. Binda os variants vivos correspondentes no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.typography.body.line-height.md porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
   - CSS:
@@ -10450,7 +10450,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.typography.body.line-height.sm`
 - **Sentido**: line-height do label Button md.
 - **Escopo**: height, min-height
-- **Contexto**: Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Button. Binda os variants vivos correspondentes no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.typography.body.line-height.sm porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
   - CSS:
@@ -10463,7 +10463,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.typography.body.line-height.2xs`
 - **Sentido**: line-height do label Button sm.
 - **Escopo**: height, min-height
-- **Contexto**: Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Button. Binda os variants vivos correspondentes no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.typography.body.line-height.2xs porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
   - CSS:
@@ -10476,7 +10476,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.control.button.min-width.lg`
 - **Sentido**: Largura mínima do Button lg.
 - **Escopo**: min-width
-- **Contexto**: Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Button. Binda os variants vivos correspondentes no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Valor específico do Button mantido na camada Component porque não há Semantic reutilizável sem criar abstração falsa.
 - **Usos**:
   - CSS:
@@ -10489,7 +10489,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.control.button.min-width.md`
 - **Sentido**: Largura mínima do Button md.
 - **Escopo**: min-width
-- **Contexto**: Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Button. Binda os variants vivos correspondentes no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Valor específico do Button mantido na camada Component porque não há Semantic reutilizável sem criar abstração falsa.
 - **Usos**:
   - CSS:
@@ -10502,7 +10502,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.control.button.min-width.sm`
 - **Sentido**: Largura mínima do Button sm.
 - **Escopo**: min-width
-- **Contexto**: Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Button. Binda os variants vivos correspondentes no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Valor específico do Button mantido na camada Component porque não há Semantic reutilizável sem criar abstração falsa.
 - **Usos**:
   - CSS:
@@ -10554,7 +10554,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.space.md`
 - **Sentido**: Padding vertical do Button lg.
 - **Escopo**: padding-top, padding-bottom
-- **Contexto**: Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Button. Binda os variants vivos correspondentes no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.space.md porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
   - CSS:
@@ -10567,7 +10567,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.space.control.padding.10`
 - **Sentido**: Padding vertical do Button md.
 - **Escopo**: padding-top, padding-bottom
-- **Contexto**: Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Button. Binda os variants vivos correspondentes no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.space.control.padding.10 porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
   - CSS:
@@ -10580,7 +10580,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.space.sm`
 - **Sentido**: Padding vertical do Button sm.
 - **Escopo**: padding-top, padding-bottom
-- **Contexto**: Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Button. Binda os variants vivos correspondentes no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.space.sm porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
   - CSS:
@@ -10593,7 +10593,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.radius.md`
 - **Sentido**: Radius do Button.
 - **Escopo**: border-radius
-- **Contexto**: Component token do contrato anatômico Button. Binda os 216 variants vivos no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Button. Binda os variants vivos correspondentes no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.radius.md porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
   - CSS:
@@ -10645,7 +10645,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.typography.body.font-size.sm`
 - **Sentido**: Font-size do body Card.
 - **Escopo**: font-size
-- **Contexto**: Component token do contrato anatômico Card Body. Binda fontSize dos textos Content nas 3 variantes Style do Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Card Body. Binda fontSize dos textos Content nas variantes Style do Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.typography.body.font-size.sm porque o body usa body/sm, mas a escala tipográfica do Card é contrato público do componente.
 - **Usos**:
   - CSS:
@@ -10658,7 +10658,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.typography.body.font-weight.regular`
 - **Sentido**: Font-weight do body Card.
 - **Escopo**: font-weight
-- **Contexto**: Component token do contrato anatômico Card Body. Binda fontStyle dos textos Content nas 3 variantes Style do Figma e substitui peso implícito no CSS.
+- **Contexto**: Component token do contrato anatômico Card Body. Binda fontStyle dos textos Content nas variantes Style do Figma e substitui peso implícito no CSS.
 - **Decisão**: Alias 1:1 para semantic.typography.body.font-weight.regular porque o body usa Regular; no Figma o campo bindável é fontStyle/string, enquanto no JSON/CSS o contrato permanece numérico.
 - **Usos**:
   - CSS:
@@ -10671,7 +10671,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.typography.body.line-height.sm`
 - **Sentido**: Line-height do body Card.
 - **Escopo**: line-height
-- **Contexto**: Component token do contrato anatômico Card Body. Binda lineHeight dos textos Content nas 3 variantes Style do Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Card Body. Binda lineHeight dos textos Content nas variantes Style do Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.typography.body.line-height.sm porque o body usa body/sm, mas a métrica vertical do Card é contrato público do componente.
 - **Usos**:
   - CSS:
@@ -10684,7 +10684,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.space.lg`
 - **Sentido**: Padding bottom do body Card.
 - **Escopo**: padding-bottom
-- **Contexto**: Component token do contrato anatômico Card Body. Binda paddingBottom dos bodies nas 3 variantes Style do Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Card Body. Binda paddingBottom dos bodies nas variantes Style do Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.space.lg porque 16px é escala reutilizável, mas no Card documenta o respiro inferior público do body.
 - **Usos**:
   - CSS:
@@ -10697,7 +10697,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.space.lg`
 - **Sentido**: Padding horizontal do body Card.
 - **Escopo**: padding-left, padding-right
-- **Contexto**: Component token do contrato anatômico Card Body. Binda paddingLeft/paddingRight dos bodies nas 3 variantes Style do Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Card Body. Binda paddingLeft/paddingRight dos bodies nas variantes Style do Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.space.lg porque 16px é escala reutilizável, mas no Card documenta o respiro horizontal público do body.
 - **Usos**:
   - CSS:
@@ -10749,7 +10749,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.space.sm`
 - **Sentido**: Gap vertical do header Card.
 - **Escopo**: gap
-- **Contexto**: Component token do contrato anatômico Card Header. Binda itemSpacing entre Title e Subtitle nas 3 variantes Style do Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Card Header. Binda itemSpacing entre Title e Subtitle nas variantes Style do Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.space.sm porque 8px é escala reutilizável, mas no Card documenta a separação vertical pública do header.
 - **Usos**:
   - CSS:
@@ -10762,7 +10762,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.space.sm`
 - **Sentido**: Padding bottom do header Card.
 - **Escopo**: padding-bottom
-- **Contexto**: Component token do contrato anatômico Card Header. Binda paddingBottom dos headers nas 3 variantes Style do Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Card Header. Binda paddingBottom dos headers nas variantes Style do Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.space.sm porque 8px é escala reutilizável, mas no Card documenta a separação pública entre header e body.
 - **Usos**:
   - CSS:
@@ -10775,7 +10775,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.space.lg`
 - **Sentido**: Padding top do header Card.
 - **Escopo**: padding-top
-- **Contexto**: Component token do contrato anatômico Card Header. Binda paddingTop dos headers nas 3 variantes Style do Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Card Header. Binda paddingTop dos headers nas variantes Style do Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.space.lg porque 16px é escala reutilizável, mas no Card documenta o respiro superior público do header.
 - **Usos**:
   - CSS:
@@ -10788,7 +10788,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.space.lg`
 - **Sentido**: Padding horizontal do header Card.
 - **Escopo**: padding-left, padding-right
-- **Contexto**: Component token do contrato anatômico Card Header. Binda paddingLeft/paddingRight dos headers nas 3 variantes Style do Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Card Header. Binda paddingLeft/paddingRight dos headers nas variantes Style do Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.space.lg porque 16px é escala reutilizável, mas no Card documenta o respiro horizontal público do header.
 - **Usos**:
   - CSS:
@@ -10801,7 +10801,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.radius.lg`
 - **Sentido**: Radius do Card.
 - **Escopo**: border-radius
-- **Contexto**: Component token do contrato anatômico Card Root. Binda os 4 corner radii das 3 variantes Style no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Card Root. Binda corner radii das variantes Style no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.radius.lg porque 12px é decisão reutilizável, mas no Card documenta o radius público do container.
 - **Usos**:
   - CSS:
@@ -10827,7 +10827,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.typography.body.font-size.sm`
 - **Sentido**: Font-size do subtitle Card.
 - **Escopo**: font-size
-- **Contexto**: Component token do contrato anatômico Card Subtitle. Binda fontSize dos subtitles nas 3 variantes Style do Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Card Subtitle. Binda fontSize dos subtitles nas variantes Style do Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.typography.body.font-size.sm porque o subtitle usa body/sm, mas a escala tipográfica do Card é contrato público do componente.
 - **Usos**:
   - CSS:
@@ -10840,7 +10840,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.typography.body.font-weight.bold`
 - **Sentido**: Font-weight do subtitle Card.
 - **Escopo**: font-weight
-- **Contexto**: Component token do contrato anatômico Card Subtitle. Binda fontStyle dos subtitles nas 3 variantes Style do Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Card Subtitle. Binda fontStyle dos subtitles nas variantes Style do Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.typography.body.font-weight.bold porque o subtitle usa Bold; no Figma o campo bindável é fontStyle/string, enquanto no JSON/CSS o contrato permanece numérico.
 - **Usos**:
   - CSS:
@@ -10853,7 +10853,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.typography.body.line-height.sm`
 - **Sentido**: Line-height do subtitle Card.
 - **Escopo**: line-height
-- **Contexto**: Component token do contrato anatômico Card Subtitle. Binda lineHeight dos subtitles nas 3 variantes Style do Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Card Subtitle. Binda lineHeight dos subtitles nas variantes Style do Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.typography.body.line-height.sm porque o subtitle usa body/sm, mas a métrica vertical do Card é contrato público do componente.
 - **Usos**:
   - CSS:
@@ -10879,7 +10879,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.typography.body.font-size.xl`
 - **Sentido**: Font-size do title Card.
 - **Escopo**: font-size
-- **Contexto**: Component token do contrato anatômico Card Title. Binda fontSize dos titles nas 3 variantes Style do Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Card Title. Binda fontSize dos titles nas variantes Style do Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.typography.body.font-size.xl porque o title usa body/xl, mas a escala tipográfica do Card é contrato público do componente.
 - **Usos**:
   - CSS:
@@ -10892,7 +10892,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.typography.body.font-weight.semibold`
 - **Sentido**: Font-weight do title Card.
 - **Escopo**: font-weight
-- **Contexto**: Component token do contrato anatômico Card Title. Binda fontStyle dos titles nas 3 variantes Style do Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Card Title. Binda fontStyle dos titles nas variantes Style do Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.typography.body.font-weight.semibold porque o title usa Semi Bold; no Figma o campo bindável é fontStyle/string, enquanto no JSON/CSS o contrato permanece numérico.
 - **Usos**:
   - CSS:
@@ -10905,7 +10905,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.typography.body.line-height.xl`
 - **Sentido**: Line-height do title Card.
 - **Escopo**: line-height
-- **Contexto**: Component token do contrato anatômico Card Title. Binda lineHeight dos titles nas 3 variantes Style do Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Card Title. Binda lineHeight dos titles nas variantes Style do Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.typography.body.line-height.xl porque o title usa body/xl, mas a métrica vertical do Card é contrato público do componente.
 - **Usos**:
   - CSS:
@@ -12749,7 +12749,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.typography.body.font-weight.regular`
 - **Sentido**: Font-weight do body Modal.
 - **Escopo**: font-weight
-- **Contexto**: Component token do contrato anatômico Modal Body. Binda fontStyle do Content nas 3 variantes Size no Figma e substitui peso implícito no CSS.
+- **Contexto**: Component token do contrato anatômico Modal Body. Binda fontStyle do Content nas variantes Size no Figma e substitui peso implícito no CSS.
 - **Decisão**: Alias 1:1 para semantic.typography.body.font-weight.regular porque o body usa Regular; no Figma o campo bindável é fontStyle/string, enquanto no JSON/CSS o contrato permanece numérico.
 - **Usos**:
   - CSS:
@@ -12892,7 +12892,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.size.xs`
 - **Sentido**: Tamanho do ícone Close Modal.
 - **Escopo**: font-size
-- **Contexto**: Component token do contrato anatômico Modal Close. Binda fontSize do ícone Close nas 3 variantes Size no Figma e substitui estilo inline na documentação.
+- **Contexto**: Component token do contrato anatômico Modal Close. Binda fontSize do ícone Close nas variantes Size no Figma e substitui estilo inline na documentação.
 - **Decisão**: Alias 1:1 para semantic.size.xs porque 16px é escala reutilizável, mas no Modal documenta o ícone público do close.
 - **Usos**:
   - CSS:
@@ -12944,7 +12944,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.space.md`
 - **Sentido**: Gap horizontal do footer Modal.
 - **Escopo**: gap
-- **Contexto**: Component token do contrato anatômico Modal Footer. Binda itemSpacing entre ações nas 3 variantes Size no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Modal Footer. Binda itemSpacing entre ações nas variantes Size no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.space.sm porque 8px é escala reutilizável, mas no Modal documenta a separação pública entre ações.
 - **Usos**:
   - CSS:
@@ -13074,7 +13074,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.space.lg`
 - **Sentido**: Gap horizontal do header Modal.
 - **Escopo**: gap
-- **Contexto**: Component token do contrato anatômico Modal Header. Binda itemSpacing entre Title e Close nas 3 variantes Size no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Modal Header. Binda itemSpacing entre Title e Close nas variantes Size no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.space.sm porque 8px é escala reutilizável, mas no Modal documenta a separação pública entre título e close.
 - **Usos**:
   - CSS:
@@ -13282,7 +13282,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.radius.lg`
 - **Sentido**: Radius do Modal.
 - **Escopo**: border-radius
-- **Contexto**: Component token do contrato anatômico Modal Root. Binda as 3 variantes Size do Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Modal Root. Binda as variantes Size do Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.radius.lg porque 12px é decisão reutilizável, mas no Modal documenta o radius público do container.
 - **Usos**:
   - CSS:
@@ -13360,7 +13360,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.typography.body.font-weight.semibold`
 - **Sentido**: Font-weight do title Modal.
 - **Escopo**: font-weight
-- **Contexto**: Component token do contrato anatômico Modal Title. Binda fontStyle do Title nas 3 variantes Size no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Modal Title. Binda fontStyle do Title nas variantes Size no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.typography.body.font-weight.semibold porque o title usa Semi Bold; no Figma o campo bindável é fontStyle/string, enquanto no JSON/CSS o contrato permanece numérico.
 - **Usos**:
   - CSS:
@@ -14674,7 +14674,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.border.width.strong`
 - **Sentido**: Altura do indicator Tabs.
 - **Escopo**: height, border-bottom-width
-- **Contexto**: Component token do contrato anatômico Tabs Indicator. Binda height do Indicator nos 4 estados do Tab Item no Figma e define a espessura do border-bottom ativo no CSS.
+- **Contexto**: Component token do contrato anatômico Tabs Indicator. Binda height do Indicator nos estados do Tab Item no Figma e define a espessura do border-bottom ativo no CSS.
 - **Decisão**: Alias 1:1 para semantic.border.width.strong porque 2px é padrão reutilizável, mas no Tabs documenta a espessura pública do indicador.
 - **Usos**:
   - CSS:
@@ -14687,7 +14687,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.space.control.padding.10`
 - **Sentido**: Gap entre label e indicator Tabs.
 - **Escopo**: height, padding-bottom
-- **Contexto**: Component token do contrato anatômico Tabs Item. Binda height do frame Gap nos 4 estados do Tab Item no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Tabs Item. Binda height do frame Gap nos estados do Tab Item no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.space.control.padding.10 porque 10px é valor de controle já existente, mas no Tabs representa a separação anatômica entre label e indicador.
 - **Usos**:
   - CSS:
@@ -14700,7 +14700,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.space.md`
 - **Sentido**: Padding top do item Tabs.
 - **Escopo**: padding-top
-- **Contexto**: Component token do contrato anatômico Tabs Item. Binda paddingTop dos 4 estados do Tab Item no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Tabs Item. Binda paddingTop dos estados do Tab Item no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.space.md porque 12px é escala reutilizável, mas no Tabs documenta o respiro superior público do item.
 - **Usos**:
   - CSS:
@@ -14713,7 +14713,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.space.lg`
 - **Sentido**: Padding horizontal do item Tabs.
 - **Escopo**: padding-left, padding-right
-- **Contexto**: Component token do contrato anatômico Tabs Item. Binda paddingLeft/paddingRight dos 4 estados do Tab Item no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Tabs Item. Binda paddingLeft/paddingRight dos estados do Tab Item no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.space.lg porque 16px é escala reutilizável, mas no Tabs documenta o respiro horizontal público do item.
 - **Usos**:
   - CSS:
@@ -14778,7 +14778,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.typography.body.font-size.sm`
 - **Sentido**: Font-size do label Tabs.
 - **Escopo**: font-size
-- **Contexto**: Component token do contrato anatômico Tabs Label. Binda fontSize dos labels nos 4 estados do Tab Item no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Tabs Label. Binda fontSize dos labels nos estados do Tab Item no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.typography.body.font-size.sm porque o label usa body/sm, mas a escala tipográfica do Tabs é contrato público do componente.
 - **Usos**:
   - CSS:
@@ -14791,7 +14791,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.typography.body.font-weight.bold`
 - **Sentido**: Font-weight do label Tabs.
 - **Escopo**: font-weight
-- **Contexto**: Component token do contrato anatômico Tabs Label. Binda fontStyle dos labels nos 4 estados do Tab Item no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Tabs Label. Binda fontStyle dos labels nos estados do Tab Item no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.typography.body.font-weight.bold porque o label usa Bold; no Figma o campo bindável é fontStyle/string, enquanto no JSON/CSS o contrato permanece numérico.
 - **Usos**:
   - CSS:
@@ -14804,7 +14804,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.typography.body.letter-spacing.normal`
 - **Sentido**: Letter-spacing do label Tabs.
 - **Escopo**: letter-spacing
-- **Contexto**: Component token do contrato anatômico Tabs Label. Binda letterSpacing dos labels nos 4 estados do Tab Item no Figma e explicita o tracking normal no CSS.
+- **Contexto**: Component token do contrato anatômico Tabs Label. Binda letterSpacing dos labels nos estados do Tab Item no Figma e explicita o tracking normal no CSS.
 - **Decisão**: Alias 1:1 para semantic.typography.body.letter-spacing.normal porque o label usa tracking normal, mas esse valor faz parte da tipografia pública do Tabs.
 - **Usos**:
   - CSS:
@@ -14817,7 +14817,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.typography.body.line-height.sm`
 - **Sentido**: Line-height do label Tabs.
 - **Escopo**: line-height
-- **Contexto**: Component token do contrato anatômico Tabs Label. Binda lineHeight dos labels nos 4 estados do Tab Item no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Tabs Label. Binda lineHeight dos labels nos estados do Tab Item no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.typography.body.line-height.sm porque o label usa body/sm, mas a métrica vertical do Tabs é contrato público do componente.
 - **Usos**:
   - CSS:
@@ -15564,7 +15564,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.space.sm`
 - **Sentido**: Base visual da seta Tooltip.
 - **Escopo**: width, height
-- **Contexto**: Component token do contrato anatômico Tooltip Arrow. Binda a maior dimensao da seta nos 4 variants Position do Figma: top/bottom usam width 8px; left/right usam height 8px.
+- **Contexto**: Component token do contrato anatômico Tooltip Arrow. Binda a maior dimensao da seta nos variants Position do Figma: top/bottom usam width 8px; left/right usam height 8px.
 - **Decisão**: Alias 1:1 para semantic.space.sm porque a base 8px deriva da escala, mas fica em Component por ser geometria especifica da seta do Tooltip. No CSS a base e derivada de 2x a profundidade do border triangle.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -15576,7 +15576,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.space.xs`
 - **Sentido**: Profundidade visual da seta Tooltip.
 - **Escopo**: width, height, border
-- **Contexto**: Component token do contrato anatômico Tooltip Arrow. Binda a menor dimensao da seta nos 4 variants Position do Figma e define o border do triangulo no CSS.
+- **Contexto**: Component token do contrato anatômico Tooltip Arrow. Binda a menor dimensao da seta nos variants Position do Figma e define o border do triangulo no CSS.
 - **Decisão**: Alias 1:1 para semantic.space.xs porque 4px deriva da escala, mas no Tooltip representa a profundidade anatômica da seta.
 - **Usos**:
   - CSS:
@@ -15615,7 +15615,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.space.sm`
 - **Sentido**: Padding horizontal do content Tooltip.
 - **Escopo**: padding-left, padding-right
-- **Contexto**: Component token do contrato anatômico Tooltip Content. Binda paddingLeft/paddingRight dos 4 variants Position no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Tooltip Content. Binda paddingLeft/paddingRight dos variants Position no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.space.sm porque 8px e escala reutilizavel, mas no Tooltip documenta o padding horizontal publico do content.
 - **Usos**:
   - CSS:
@@ -15628,7 +15628,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.space.xs`
 - **Sentido**: Padding vertical do content Tooltip.
 - **Escopo**: padding-top, padding-bottom
-- **Contexto**: Component token do contrato anatômico Tooltip Content. Binda paddingTop/paddingBottom dos 4 variants Position no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Tooltip Content. Binda paddingTop/paddingBottom dos variants Position no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.space.xs porque 4px e escala reutilizavel, mas no Tooltip documenta o padding vertical publico do content.
 - **Usos**:
   - CSS:
@@ -15641,7 +15641,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Alias**: → `semantic.radius.sm`
 - **Sentido**: Radius do content Tooltip.
 - **Escopo**: border-radius
-- **Contexto**: Component token do contrato anatômico Tooltip Content. Binda os 4 corner radii dos variants Position no Figma e substitui consumo direto de Semantic no CSS.
+- **Contexto**: Component token do contrato anatômico Tooltip Content. Binda corner radii dos variants Position no Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.radius.sm porque o radius sm e reutilizavel, mas no Tooltip e parte publica da anatomia do content.
 - **Usos**:
   - CSS:
