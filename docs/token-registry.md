@@ -68,8 +68,8 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `foundation.color.cyan.950` | color | — | Tom 950 da paleta cyan. Tom extremo — surfaces escuras, body text em light mode. | 0 |
 | `foundation.color.disabled.brand.dark` | color | — | Cor de fill disabled para ações brand em dark mode. | 0 |
 | `foundation.color.disabled.brand.light` | color | — | Cor de fill disabled para ações brand em light mode. | 4 |
-| `foundation.color.disabled.brand.toned.dark` | color | — | Cor de fill disabled para ações brand toned em dark mode. | 2 |
-| `foundation.color.disabled.brand.toned.light` | color | — | Cor de fill disabled para ações brand toned em light mode. | 2 |
+| `foundation.color.disabled.brand.toned.dark` | color | — | Cor de fill disabled para ações brand toned em dark mode. | 0 |
+| `foundation.color.disabled.brand.toned.light` | color | — | Cor de fill disabled para ações brand toned em light mode. | 0 |
 | `foundation.color.disabled.error.dark` | color | — | Cor de fill disabled para feedback error em dark mode. | 2 |
 | `foundation.color.disabled.error.light` | color | — | Cor de fill disabled para feedback error em light mode. | 2 |
 | `foundation.color.disabled.success.dark` | color | — | Cor de fill disabled para feedback success em dark mode. | 2 |
@@ -107,16 +107,16 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `foundation.color.indigo.800` | color | — | Tom 800 da paleta indigo. Tom muito escuro — emphasis text, active states. | 0 |
 | `foundation.color.indigo.900` | color | — | Tom 900 da paleta indigo. Tom extremo — surfaces escuras, body text em light mode. | 0 |
 | `foundation.color.indigo.950` | color | — | Tom 950 da paleta indigo. Tom extremo — surfaces escuras, body text em light mode. | 0 |
-| `foundation.color.neutral.100` | color | — | Tom 100 da paleta neutral. Tom muito claro — backgrounds, hover states sutis em light mode. | 2 |
+| `foundation.color.neutral.100` | color | — | Tom 100 da paleta neutral. Tom muito claro — backgrounds, hover states sutis em light mode. | 3 |
 | `foundation.color.neutral.200` | color | — | Tom 200 da paleta neutral. Tom claro — backgrounds secundários, borders subtle. | 5 |
-| `foundation.color.neutral.300` | color | — | Tom 300 da paleta neutral. Tom médio-claro — borders default, foregrounds em dark mode. | 7 |
-| `foundation.color.neutral.400` | color | — | Tom 400 da paleta neutral. Tom médio — fills médios, focus rings. | 9 |
+| `foundation.color.neutral.300` | color | — | Tom 300 da paleta neutral. Tom médio-claro — borders default, foregrounds em dark mode. | 6 |
+| `foundation.color.neutral.400` | color | — | Tom 400 da paleta neutral. Tom médio — fills médios, focus rings. | 7 |
 | `foundation.color.neutral.50` | color | — | Tom 50 da paleta neutral. Tom muito claro — backgrounds, hover states sutis em light mode. | 16 |
-| `foundation.color.neutral.500` | color | — | Tom 500 da paleta neutral. Tom médio — fills médios, focus rings. | 8 |
-| `foundation.color.neutral.600` | color | — | Tom 600 da paleta neutral. Tom forte — fills primários, brand fills. | 10 |
-| `foundation.color.neutral.700` | color | — | Tom 700 da paleta neutral. Tom escuro — text on light, hover de fills brand. | 8 |
+| `foundation.color.neutral.500` | color | — | Tom 500 da paleta neutral. Tom médio — fills médios, focus rings. | 10 |
+| `foundation.color.neutral.600` | color | — | Tom 600 da paleta neutral. Tom forte — fills primários, brand fills. | 8 |
+| `foundation.color.neutral.700` | color | — | Tom 700 da paleta neutral. Tom escuro — text on light, hover de fills brand. | 7 |
 | `foundation.color.neutral.800` | color | — | Tom 800 da paleta neutral. Tom muito escuro — emphasis text, active states. | 7 |
-| `foundation.color.neutral.900` | color | — | Tom 900 da paleta neutral. Tom extremo — surfaces escuras, body text em light mode. | 12 |
+| `foundation.color.neutral.900` | color | — | Tom 900 da paleta neutral. Tom extremo — surfaces escuras, body text em light mode. | 13 |
 | `foundation.color.neutral.950` | color | — | Tom 950 da paleta neutral. Tom extremo — surfaces escuras, body text em light mode. | 2 |
 | `foundation.color.overlay.black.10` | color | — | Sobreposição translúcida em black a 10% de opacidade. | 7 |
 | `foundation.color.overlay.black.20` | color | — | Sobreposição translúcida em black a 20% de opacidade. | 1 |
@@ -346,10 +346,10 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `semantic.background.default` | color | → `foundation.color.neutral.50` | Background base do app — superfície neutra mais comum. | 1 |
-| `semantic.background.disabled` | color | → `foundation.color.neutral.200` | Background pra estados disabled — neutral subtle. | 5 |
+| `semantic.background.disabled` | color | → `foundation.color.neutral.100` | Background pra estados disabled — neutral subtle. | 9 |
 | `semantic.background.inverse` | color | → `foundation.color.neutral.900` | Background invertido — usado em tooltips, snackbars, dark badges em light mode. | 4 |
 | `semantic.background.overlay` | color | → `foundation.color.overlay.black.60` | Scrim de modal/drawer — escurece o fundo pra focar o overlay. | 2 |
-| `semantic.background.subtle` | color | → `foundation.color.neutral.200` | Background levemente diferenciado — chips, código inline, áreas secundárias. | 7 |
+| `semantic.background.subtle` | color | → `foundation.color.neutral.200` | Background levemente diferenciado — chips, código inline, áreas secundárias. | 6 |
 
 ### semantic.border
 
@@ -357,7 +357,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 |---|---|---|---|---|
 | `semantic.border.brand` | color | → `foundation.color.brand.600` | Borda brand — emphasis branded. | 2 |
 | `semantic.border.control-default` | color | → `foundation.color.neutral.500` | Border control-default. | 7 |
-| `semantic.border.control-disabled` | color | → `foundation.color.neutral.300` | Border control-disabled. | 6 |
+| `semantic.border.control-disabled` | color | → `foundation.color.neutral.200` | Border control-disabled. | 6 |
 | `semantic.border.control-hover` | color | → `foundation.color.brand.600` | Border control-hover. | 5 |
 | `semantic.border.default` | color | → `foundation.color.neutral.300` | Borda neutra default — cards, dividers. | 4 |
 | `semantic.border.error` | color | → `foundation.color.red.600` | Borda de erro — input invalid. | 4 |
@@ -373,13 +373,28 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.border.width.focus` | dimension | → `foundation.border.width.2` | Border-width focus. | 2 |
 | `semantic.border.width.strong` | dimension | → `foundation.border.width.2` | Border-width strong. | 4 |
 
+### semantic.brand
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `semantic.brand.background.active` | color | → `foundation.color.brand.800` | Fill de ação primária (brand solid) em estado active. | 1 |
+| `semantic.brand.background.default` | color | → `foundation.color.brand.600` | Fill de ação primária (brand solid) em estado default. | 18 |
+| `semantic.brand.background.disabled` | color | → `foundation.color.disabled.brand.light` | Fill de ação primária (brand solid) em estado disabled. | 7 |
+| `semantic.brand.background.hover` | color | → `foundation.color.brand.700` | Fill de ação primária (brand solid) em estado hover. | 7 |
+| `semantic.brand.border.default` | color | → `semantic.brand.background.default` | Token semantic para primary / border / default. | 1 |
+| `semantic.brand.border.disabled` | color | → `semantic.brand.background.disabled` | Token semantic para primary / border / disabled. | 0 |
+| `semantic.brand.border.hover` | color | → `semantic.brand.background.hover` | Token semantic para primary / border / hover. | 1 |
+| `semantic.brand.content-default` | color | → `foundation.color.neutral.50` | Cor de texto/ícone de ação primária (brand solid) em estado default. | 15 |
+| `semantic.brand.content-disabled` | color | → `foundation.color.overlay.white.80` | Cor de texto/ícone de ação primária (brand solid) em estado disabled. | 5 |
+| `semantic.brand.content-hover` | color | → `foundation.color.neutral.50` | Conteúdo sobre fill brand em hover. | 4 |
+
 ### semantic.content
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `semantic.content.brand` | color | → `semantic.primary.background.default` | Token semantic para content / brand. | 2 |
+| `semantic.content.brand` | color | → `semantic.brand.background.default` | Token semantic para content / brand. | 2 |
 | `semantic.content.default` | color | → `foundation.color.neutral.600` | Texto secundário — descrições, helper text, meta-info. | 17 |
-| `semantic.content.disabled` | color | → `foundation.color.neutral.400` | Texto disabled — controles e items inativos. | 11 |
+| `semantic.content.disabled` | color | → `foundation.color.neutral.500` | Texto disabled — controles e items inativos. | 13 |
 | `semantic.content.hover` | color | → `foundation.color.neutral.700` | Conteúdo neutro em hover. | 6 |
 | `semantic.content.inverse` | color | → `foundation.color.neutral.50` | Texto invertido — sobre background.inverse (tooltips, badges escuros em light). | 5 |
 | `semantic.content.strong` | color | → `foundation.color.neutral.900` | Texto primário — body, headings, labels principais. | 17 |
@@ -537,21 +552,6 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.overlay.strong` | color | → `foundation.color.overlay.black.40` | Overlay strong — translúcido sobre conteúdo. | 0 |
 | `semantic.overlay.subtle` | color | → `foundation.color.overlay.black.5` | Overlay subtle — translúcido sobre conteúdo. | 0 |
 
-### semantic.primary
-
-| Token | Tipo | Alias | Sentido | Usos |
-|---|---|---|---|---|
-| `semantic.primary.background.active` | color | → `foundation.color.brand.800` | Fill de ação primária (brand solid) em estado active. | 2 |
-| `semantic.primary.background.default` | color | → `foundation.color.brand.600` | Fill de ação primária (brand solid) em estado default. | 21 |
-| `semantic.primary.background.disabled` | color | → `foundation.color.disabled.brand.light` | Fill de ação primária (brand solid) em estado disabled. | 10 |
-| `semantic.primary.background.hover` | color | → `foundation.color.brand.700` | Fill de ação primária (brand solid) em estado hover. | 10 |
-| `semantic.primary.border.default` | color | → `semantic.primary.background.default` | Token semantic para primary / border / default. | 2 |
-| `semantic.primary.border.disabled` | color | → `semantic.primary.background.disabled` | Token semantic para primary / border / disabled. | 0 |
-| `semantic.primary.border.hover` | color | → `semantic.primary.background.hover` | Token semantic para primary / border / hover. | 2 |
-| `semantic.primary.content-default` | color | → `foundation.color.neutral.50` | Cor de texto/ícone de ação primária (brand solid) em estado default. | 16 |
-| `semantic.primary.content-disabled` | color | → `foundation.color.overlay.white.80` | Cor de texto/ícone de ação primária (brand solid) em estado disabled. | 6 |
-| `semantic.primary.content-hover` | color | → `foundation.color.neutral.50` | Conteúdo sobre fill primário em hover. | 5 |
-
 ### semantic.radius
 
 | Token | Tipo | Alias | Sentido | Usos |
@@ -594,7 +594,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `semantic.space.2xl` | dimension | → `foundation.dimension.24` | Spacing token 2xl. | 6 |
-| `semantic.space.2xs` | dimension | → `foundation.dimension.2` | Spacing token 2xs. | 6 |
+| `semantic.space.2xs` | dimension | → `foundation.dimension.2` | Spacing token 2xs. | 12 |
 | `semantic.space.control.padding.10` | dimension | → `foundation.dimension.10` | Spacing token control.padding.10. | 3 |
 | `semantic.space.control.padding.6` | dimension | → `foundation.dimension.6` | Padding simétrico de Icon Only sm Button. | 3 |
 | `semantic.space.lg` | dimension | → `foundation.dimension.16` | Spacing token lg. | 19 |
@@ -606,13 +606,13 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.space.section.xl` | dimension | → `foundation.dimension.80` | Spacing token section.xl. | 0 |
 | `semantic.space.sm` | dimension | → `foundation.dimension.8` | Spacing token sm. | 29 |
 | `semantic.space.xl` | dimension | → `foundation.dimension.20` | Spacing token xl. | 10 |
-| `semantic.space.xs` | dimension | → `foundation.dimension.4` | Spacing token xs. | 30 |
+| `semantic.space.xs` | dimension | → `foundation.dimension.4` | Spacing token xs. | 25 |
 
 ### semantic.surface
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `semantic.surface.default` | color | → `foundation.color.neutral.50` | Surface default — superfície base. | 10 |
+| `semantic.surface.default` | color | → `foundation.color.neutral.50` | Surface default — superfície base. | 11 |
 | `semantic.surface.elevated` | color | → `foundation.color.neutral.50` | Surface elevated — superfície altamente elevada (modal). | 2 |
 | `semantic.surface.hover` | color | → `foundation.color.neutral.100` | Surface neutra em hover. | 4 |
 | `semantic.surface.overlay` | color | → `foundation.color.neutral.50` | Surface overlay — superfície sobre overlay (popover). | 0 |
@@ -624,10 +624,10 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 |---|---|---|---|---|
 | `semantic.toned.background.active` | color | → `foundation.color.overlay.blue-600.28` | Fill de ação brand translúcida em estado active. | 2 |
 | `semantic.toned.background.default` | color | → `foundation.color.overlay.blue-600.12` | Fill de ação brand translúcida em estado default. | 4 |
-| `semantic.toned.background.disabled` | color | → `foundation.color.disabled.brand.toned.light` | Fill de ação brand translúcida em estado disabled. | 2 |
+| `semantic.toned.background.disabled` | color | → `semantic.background.disabled` | Fill de ação brand translúcida em estado disabled. | 2 |
 | `semantic.toned.background.hover` | color | → `foundation.color.overlay.blue-600.20` | Fill de ação brand translúcida em estado hover. | 2 |
 | `semantic.toned.content-default` | color | → `foundation.color.brand.700` | Cor de texto/ícone de ação brand translúcida em estado default. | 4 |
-| `semantic.toned.content-disabled` | color | → `foundation.color.neutral.400` | Cor de texto/ícone de ação brand translúcida em estado disabled. | 2 |
+| `semantic.toned.content-disabled` | color | → `semantic.content.disabled` | Cor de texto/ícone de ação brand translúcida em estado disabled. | 2 |
 
 ### semantic.typography
 
@@ -739,8 +739,8 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `component.avatar.bg.default` | color | → `semantic.primary.background.default` | Contrato bg de avatar, sincronizado a partir das Variables Figma atuais. | 1 |
-| `component.avatar.content.color.default` | color | → `semantic.primary.content-default` | Contrato content.color de avatar, sincronizado a partir das Variables Figma atuais. | 1 |
+| `component.avatar.bg.default` | color | → `semantic.brand.background.default` | Contrato bg de avatar, sincronizado a partir das Variables Figma atuais. | 1 |
+| `component.avatar.content.color.default` | color | → `semantic.brand.content-default` | Contrato content.color de avatar, sincronizado a partir das Variables Figma atuais. | 1 |
 | `component.avatar.icon.size.lg` | dimension | → `semantic.typography.body.font-size.4xl` | Tamanho do ícone SVG fallback do Avatar por size. | 1 |
 | `component.avatar.icon.size.md` | dimension | → `semantic.typography.body.font-size.2xl` | Tamanho do ícone SVG fallback do Avatar por size. | 1 |
 | `component.avatar.icon.size.sm` | dimension | → `semantic.typography.body.font-size.xl` | Tamanho do ícone SVG fallback do Avatar por size. | 1 |
@@ -765,13 +765,13 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
+| `component.badge.bg.brand.solid` | color | → `semantic.brand.background.default` | Contrato bg.brand de badge, sincronizado a partir das Variables Figma atuais. | 1 |
+| `component.badge.bg.brand.subtle` | color | → `semantic.toned.background.default` | Contrato bg.brand de badge, sincronizado a partir das Variables Figma atuais. | 1 |
 | `component.badge.bg.error.solid` | color | → `semantic.feedback.error.background.default` | Contrato bg.error de badge, sincronizado a partir das Variables Figma atuais. | 1 |
 | `component.badge.bg.error.subtle` | color | → `semantic.feedback.error.background.subtle` | Contrato bg.error de badge, sincronizado a partir das Variables Figma atuais. | 1 |
 | `component.badge.bg.info.solid` | color | → `semantic.feedback.info.background.default` | Contrato bg.info de badge, sincronizado a partir das Variables Figma atuais. | 1 |
 | `component.badge.bg.info.subtle` | color | → `semantic.feedback.info.background.subtle` | Contrato bg.info de badge, sincronizado a partir das Variables Figma atuais. | 1 |
 | `component.badge.bg.neutral.default` | color | → `semantic.surface.default` | Contrato bg.neutral de badge, sincronizado a partir das Variables Figma atuais. | 1 |
-| `component.badge.bg.primary.solid` | color | → `semantic.primary.background.default` | Contrato bg.primary de badge, sincronizado a partir das Variables Figma atuais. | 1 |
-| `component.badge.bg.primary.subtle` | color | → `semantic.toned.background.default` | Contrato bg.primary de badge, sincronizado a partir das Variables Figma atuais. | 1 |
 | `component.badge.bg.success.solid` | color | → `semantic.feedback.success.background.default` | Contrato bg.success de badge, sincronizado a partir das Variables Figma atuais. | 1 |
 | `component.badge.bg.success.subtle` | color | → `semantic.feedback.success.background.subtle` | Contrato bg.success de badge, sincronizado a partir das Variables Figma atuais. | 1 |
 | `component.badge.bg.warning.solid` | color | → `semantic.feedback.warning.background.default` | Contrato bg.warning de badge, sincronizado a partir das Variables Figma atuais. | 1 |
@@ -779,14 +779,14 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.badge.border-color.neutral.subtle` | color | → `semantic.border.default` | Contrato border-color.neutral de badge, sincronizado a partir das Variables Figma atuais. | 1 |
 | `component.badge.border-width.default` | dimension | → `semantic.border.width.default` | Border width do Badge quando stroke esta ativo. | 1 |
 | `component.badge.gap.default` | dimension | → `semantic.space.xs` | Gap interno do Badge. | 1 |
+| `component.badge.label.color.brand.solid` | color | → `semantic.brand.content-default` | Contrato label.color.brand de badge, sincronizado a partir das Variables Figma atuais. | 1 |
+| `component.badge.label.color.brand.subtle` | color | → `semantic.toned.content-default` | Contrato label.color.brand de badge, sincronizado a partir das Variables Figma atuais. | 1 |
 | `component.badge.label.color.error.solid` | color | → `semantic.feedback.error.content-contrast` | Contrato label.color.error de badge, sincronizado a partir das Variables Figma atuais. | 1 |
 | `component.badge.label.color.error.subtle` | color | → `semantic.feedback.error.content-default` | Contrato label.color.error de badge, sincronizado a partir das Variables Figma atuais. | 1 |
 | `component.badge.label.color.info.solid` | color | → `semantic.feedback.info.content-contrast` | Contrato label.color.info de badge, sincronizado a partir das Variables Figma atuais. | 1 |
 | `component.badge.label.color.info.subtle` | color | → `semantic.feedback.info.content-default` | Contrato label.color.info de badge, sincronizado a partir das Variables Figma atuais. | 1 |
 | `component.badge.label.color.neutral.solid` | color | → `semantic.content.strong` | Contrato label.color.neutral de badge, sincronizado a partir das Variables Figma atuais. | 1 |
 | `component.badge.label.color.neutral.subtle` | color | → `semantic.content.default` | Contrato label.color.neutral de badge, sincronizado a partir das Variables Figma atuais. | 1 |
-| `component.badge.label.color.primary.solid` | color | → `semantic.primary.content-default` | Contrato label.color.primary de badge, sincronizado a partir das Variables Figma atuais. | 1 |
-| `component.badge.label.color.primary.subtle` | color | → `semantic.toned.content-default` | Contrato label.color.primary de badge, sincronizado a partir das Variables Figma atuais. | 1 |
 | `component.badge.label.color.success.solid` | color | → `semantic.feedback.success.content-contrast` | Contrato label.color.success de badge, sincronizado a partir das Variables Figma atuais. | 1 |
 | `component.badge.label.color.success.subtle` | color | → `semantic.feedback.success.content-default` | Contrato label.color.success de badge, sincronizado a partir das Variables Figma atuais. | 1 |
 | `component.badge.label.color.warning.solid` | color | → `semantic.feedback.warning.content-contrast` | Contrato label.color.warning de badge, sincronizado a partir das Variables Figma atuais. | 1 |
@@ -820,11 +820,11 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `component.button.bg.brand.default` | color | → `semantic.primary.background.default` | Bg do Button brand default. | 1 |
-| `component.button.bg.brand.disabled` | color | → `semantic.primary.background.disabled` | Bg do Button brand disabled. | 1 |
-| `component.button.bg.brand.focus` | color | → `semantic.primary.background.default` | Token component para button / bg / brand / focus. | 1 |
-| `component.button.bg.brand.hover` | color | → `semantic.primary.background.hover` | Bg do Button brand hover. | 1 |
-| `component.button.bg.brand.pressed` | color | → `semantic.primary.background.active` | Bg do Button brand pressed. | 1 |
+| `component.button.bg.brand.default` | color | → `semantic.brand.background.default` | Bg do Button brand default. | 1 |
+| `component.button.bg.brand.disabled` | color | → `semantic.brand.background.disabled` | Bg do Button brand disabled. | 1 |
+| `component.button.bg.brand.focus` | color | → `semantic.brand.background.default` | Token component para button / bg / brand / focus. | 1 |
+| `component.button.bg.brand.hover` | color | → `semantic.brand.background.hover` | Bg do Button brand hover. | 1 |
+| `component.button.bg.brand.pressed` | color | → `semantic.brand.background.active` | Bg do Button brand pressed. | 1 |
 | `component.button.bg.danger.default` | color | → `semantic.feedback.error.background.default` | Bg do Button danger default. | 1 |
 | `component.button.bg.danger.disabled` | color | → `semantic.feedback.error.background.disabled` | Bg do Button danger disabled. | 1 |
 | `component.button.bg.danger.focus` | color | → `semantic.feedback.error.background.default` | Token component para button / bg / danger / focus. | 1 |
@@ -850,11 +850,11 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.button.border-color.outline.hover` | color | → `semantic.outline.border-hover` | Border color do Button outline hover. | 1 |
 | `component.button.border-color.outline.pressed` | color | → `semantic.border.control-default` | Border color do Button outline pressed. | 1 |
 | `component.button.border-width.default` | dimension | → `semantic.border.width.default` | Border width do Button quando stroke está ativo. | 1 |
-| `component.button.content.color.brand.default` | color | → `semantic.primary.content-default` | Cor de conteúdo do Button default undefined. | 1 |
-| `component.button.content.color.brand.disabled` | color | → `semantic.primary.content-disabled` | Cor de conteúdo do Button disabled undefined. | 1 |
-| `component.button.content.color.brand.focus` | color | → `semantic.primary.content-default` | Token component para button / content / color / brand / focus. | 1 |
-| `component.button.content.color.brand.hover` | color | → `semantic.primary.content-default` | Cor de conteúdo do Button hover undefined. | 1 |
-| `component.button.content.color.brand.pressed` | color | → `semantic.primary.content-default` | Cor de conteúdo do Button pressed undefined. | 1 |
+| `component.button.content.color.brand.default` | color | → `semantic.brand.content-default` | Cor de conteúdo do Button default undefined. | 1 |
+| `component.button.content.color.brand.disabled` | color | → `semantic.brand.content-disabled` | Cor de conteúdo do Button disabled undefined. | 1 |
+| `component.button.content.color.brand.focus` | color | → `semantic.brand.content-default` | Token component para button / content / color / brand / focus. | 1 |
+| `component.button.content.color.brand.hover` | color | → `semantic.brand.content-default` | Cor de conteúdo do Button hover undefined. | 1 |
+| `component.button.content.color.brand.pressed` | color | → `semantic.brand.content-default` | Cor de conteúdo do Button pressed undefined. | 1 |
 | `component.button.content.color.danger.default` | color | → `semantic.feedback.error.content-contrast` | Cor de conteúdo do Button default undefined. | 1 |
 | `component.button.content.color.danger.disabled` | color | → `semantic.feedback.error.content-disabled` | Cor de conteúdo do Button disabled undefined. | 1 |
 | `component.button.content.color.danger.focus` | color | → `semantic.feedback.error.content-contrast` | Token component para button / content / color / danger / focus. | 1 |
@@ -960,14 +960,14 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.checkbox.box.border-color.unchecked.focus` | color | → `semantic.border.focus` | Token component para checkbox / box / border color / unchecked / focus. | 0 |
 | `component.checkbox.box.border-color.unchecked.hover` | color | → `semantic.border.control-hover` | Border da box Checkbox unchecked em hover. | 1 |
 | `component.checkbox.box.border-width.default` | dimension | → `semantic.border.width.default` | Border width da box visual do Checkbox. | 1 |
-| `component.checkbox.box.fill.checked.default` | color | → `semantic.primary.background.default` | Checkbox box visual checked | 1 |
-| `component.checkbox.box.fill.checked.disabled` | color | → `semantic.primary.background.disabled` | Checkbox box visual checked disabled | 1 |
-| `component.checkbox.box.fill.checked.focus` | color | → `semantic.primary.background.default` | Token component para checkbox / box / fill / checked / focus. | 0 |
-| `component.checkbox.box.fill.checked.hover` | color | → `semantic.primary.background.hover` | Fill da box Checkbox checked em hover. | 1 |
-| `component.checkbox.box.fill.indeterminate.default` | color | → `semantic.primary.background.default` | Checkbox box visual indeterminate | 1 |
-| `component.checkbox.box.fill.indeterminate.disabled` | color | → `semantic.primary.background.disabled` | Checkbox box visual indeterminate disabled | 1 |
-| `component.checkbox.box.fill.indeterminate.focus` | color | → `semantic.primary.background.default` | Token component para checkbox / box / fill / indeterminate / focus. | 0 |
-| `component.checkbox.box.fill.indeterminate.hover` | color | → `semantic.primary.background.hover` | Fill da box Checkbox indeterminate em hover. | 1 |
+| `component.checkbox.box.fill.checked.default` | color | → `semantic.brand.background.default` | Checkbox box visual checked | 1 |
+| `component.checkbox.box.fill.checked.disabled` | color | → `semantic.brand.background.disabled` | Checkbox box visual checked disabled | 1 |
+| `component.checkbox.box.fill.checked.focus` | color | → `semantic.brand.background.default` | Token component para checkbox / box / fill / checked / focus. | 0 |
+| `component.checkbox.box.fill.checked.hover` | color | → `semantic.brand.background.hover` | Fill da box Checkbox checked em hover. | 1 |
+| `component.checkbox.box.fill.indeterminate.default` | color | → `semantic.brand.background.default` | Checkbox box visual indeterminate | 1 |
+| `component.checkbox.box.fill.indeterminate.disabled` | color | → `semantic.brand.background.disabled` | Checkbox box visual indeterminate disabled | 1 |
+| `component.checkbox.box.fill.indeterminate.focus` | color | → `semantic.brand.background.default` | Token component para checkbox / box / fill / indeterminate / focus. | 0 |
+| `component.checkbox.box.fill.indeterminate.hover` | color | → `semantic.brand.background.hover` | Fill da box Checkbox indeterminate em hover. | 1 |
 | `component.checkbox.box.fill.unchecked.default` | color | → `semantic.surface.default` | Checkbox box visual unchecked | 1 |
 | `component.checkbox.box.fill.unchecked.disabled` | color | → `semantic.background.disabled` | Checkbox box visual unchecked disabled | 1 |
 | `component.checkbox.box.fill.unchecked.focus` | color | → `semantic.surface.default` | Token component para checkbox / box / fill / unchecked / focus. | 0 |
@@ -979,14 +979,14 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.checkbox.content.gap.default` | dimension | → `semantic.space.xs` | Define o gap vertical interno entre label, description e helper text no content frame do Checkbox. | 1 |
 | `component.checkbox.focus-ring.radius.default` | dimension | → `semantic.radius.md` | Radius do focus ring do Checkbox. | 0 |
 | `component.checkbox.group.options.gap.default` | dimension | → `semantic.space.sm` | Gap vertical entre opções dentro do Checkbox Group. | 0 |
-| `component.checkbox.mark.fill.checked.default` | color | → `semantic.primary.content-default` | Checkbox marca visual checked | 1 |
-| `component.checkbox.mark.fill.checked.disabled` | color | → `semantic.primary.content-disabled` | Checkbox marca visual checked disabled | 1 |
-| `component.checkbox.mark.fill.checked.focus` | color | → `semantic.primary.content-default` | Token component para checkbox / mark / fill / checked / focus. | 0 |
-| `component.checkbox.mark.fill.checked.hover` | color | → `semantic.primary.content-hover` | Fill do checkmark Checkbox em hover. | 1 |
-| `component.checkbox.mark.fill.indeterminate.default` | color | → `semantic.primary.content-default` | Checkbox marca visual indeterminate | 1 |
-| `component.checkbox.mark.fill.indeterminate.disabled` | color | → `semantic.primary.content-disabled` | Checkbox marca visual indeterminate disabled | 1 |
-| `component.checkbox.mark.fill.indeterminate.focus` | color | → `semantic.primary.content-default` | Token component para checkbox / mark / fill / indeterminate / focus. | 0 |
-| `component.checkbox.mark.fill.indeterminate.hover` | color | → `semantic.primary.content-hover` | Fill da marca indeterminate Checkbox em hover. | 1 |
+| `component.checkbox.mark.fill.checked.default` | color | → `semantic.brand.content-default` | Checkbox marca visual checked | 1 |
+| `component.checkbox.mark.fill.checked.disabled` | color | → `semantic.brand.content-disabled` | Checkbox marca visual checked disabled | 1 |
+| `component.checkbox.mark.fill.checked.focus` | color | → `semantic.brand.content-default` | Token component para checkbox / mark / fill / checked / focus. | 0 |
+| `component.checkbox.mark.fill.checked.hover` | color | → `semantic.brand.content-hover` | Fill do checkmark Checkbox em hover. | 1 |
+| `component.checkbox.mark.fill.indeterminate.default` | color | → `semantic.brand.content-default` | Checkbox marca visual indeterminate | 1 |
+| `component.checkbox.mark.fill.indeterminate.disabled` | color | → `semantic.brand.content-disabled` | Checkbox marca visual indeterminate disabled | 1 |
+| `component.checkbox.mark.fill.indeterminate.focus` | color | → `semantic.brand.content-default` | Token component para checkbox / mark / fill / indeterminate / focus. | 0 |
+| `component.checkbox.mark.fill.indeterminate.hover` | color | → `semantic.brand.content-hover` | Fill da marca indeterminate Checkbox em hover. | 1 |
 | `component.checkbox.target.gap.default` | dimension | → `semantic.space.sm` | Define o gap horizontal entre o controle Checkbox e o content frame do item. | 1 |
 | `component.checkbox.target.height.lg` | dimension | → `semantic.size.2xl` | Altura minima da area interativa do Checkbox por size. | 1 |
 | `component.checkbox.target.height.md` | dimension | → `semantic.size.xl` | Altura minima da area interativa do Checkbox por size. | 1 |
@@ -1006,7 +1006,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 |---|---|---|---|---|
 | `component.field.bg.default` | color | → `semantic.surface.default` | Token component para field / bg / default. | 3 |
 | `component.field.bg.disabled` | color | → `semantic.background.disabled` | Token component para field / bg / disabled. | 3 |
-| `component.field.bg.readonly` | color | → `semantic.background.subtle` | Token component para field / bg / readonly. | 3 |
+| `component.field.bg.readonly` | color | → `semantic.surface.default` | Token component para field / bg / readonly. | 3 |
 | `component.field.border-color.default` | color | → `semantic.border.control-default` | Token component para field / border color / default. | 3 |
 | `component.field.border-color.disabled` | color | → `semantic.border.control-disabled` | Token component para field / border color / disabled. | 3 |
 | `component.field.border-color.error` | color | → `semantic.border.error` | Token component para field / border color / error. | 3 |
@@ -1050,6 +1050,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.form-field.error.icon.size.default` | dimension | → `semantic.size.xs` | Token component para form field / error / icon / size / default. | 1 |
 | `component.form-field.error.icon.stroke-width.default` | dimension | → `semantic.icon.stroke-width.strong.16` | Contrato error.icon.stroke-width de form-field, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.form-field.error.line-height.default` | dimension | → `semantic.typography.body.line-height.xs` | Altura de linha da mensagem de erro do Form Field. | 3 |
+| `component.form-field.error.padding-top.default` | dimension | → `semantic.space.2xs` | Padding superior do container Error Message no Form Field. | 1 |
 | `component.form-field.gap.default` | dimension | → `semantic.space.xs` | Espacamento vertical interno do wrapper Form Field. | 1 |
 | `component.form-field.helper.color.default` | color | → `semantic.content.default` | Cor default do helper text do Form Field. | 6 |
 | `component.form-field.helper.color.disabled` | color | → `semantic.content.disabled` | Contrato helper.color de form-field, sincronizado a partir das Variables Figma atuais. | 2 |
@@ -1082,7 +1083,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.input.height.lg` | dimension | → `semantic.size.2xl` | Altura da superfície visual do Input Text por tamanho. | 1 |
 | `component.input.height.md` | dimension | → `semantic.size.xl` | Altura da superfície visual do Input Text por tamanho. | 1 |
 | `component.input.height.sm` | dimension | → `semantic.size.lg` | Altura da superfície visual do Input Text por tamanho. | 1 |
-| `component.input.icon-frame.padding-x.default` | dimension | → `semantic.space.xs` | Padding horizontal do frame externo de ícone Input Text. | 1 |
+| `component.input.icon-frame.padding-x.default` | dimension | → `semantic.space.2xs` | Padding horizontal do frame externo de ícone Input Text. | 1 |
 | `component.input.icon.color.default` | color | → `semantic.icon.color.default` | Cor do ícone Input Text. | 1 |
 | `component.input.icon.color.disabled` | color | → `semantic.icon.color.disabled` | Cor do ícone Input Text disabled. | 1 |
 | `component.input.icon.size.lg` | dimension | → `semantic.size.md` | Token component para input / icon / size / lg. | 1 |
@@ -1094,7 +1095,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.input.padding-x.lg` | dimension | → `semantic.space.md` | Padding horizontal do Field Input Text lg. | 1 |
 | `component.input.padding-x.md` | dimension | → `semantic.space.sm` | Padding horizontal do Field Input Text md. | 1 |
 | `component.input.padding-x.sm` | dimension | → `semantic.space.xs` | Padding horizontal do Field Input Text sm. | 1 |
-| `component.input.text-frame.padding-x.default` | dimension | → `semantic.space.xs` | Padding horizontal do Text Frame Input Text. | 1 |
+| `component.input.text-frame.padding-x.default` | dimension | → `semantic.space.2xs` | Padding horizontal do Text Frame Input Text. | 1 |
 | `component.input.text.font-family.default` | string | → `semantic.typography.body.font-family.sans` | Font-family do texto Input Text. | 1 |
 | `component.input.text.font-size.lg` | dimension | → `semantic.typography.body.font-size.md` | Font-size do texto Input Text lg. | 1 |
 | `component.input.text.font-size.md` | dimension | → `semantic.typography.body.font-size.sm` | Font-size do texto Input Text md. | 1 |
@@ -1109,7 +1110,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `component.modal.action.fill.primary` | color | → `semantic.primary.background.default` | Contrato action.fill de modal, sincronizado a partir das Variables Figma atuais. | 0 |
+| `component.modal.action.fill.brand` | color | → `semantic.brand.background.default` | Contrato action.fill de modal, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.modal.bg.default` | color | → `semantic.surface.elevated` | Contrato bg de modal, sincronizado a partir das Variables Figma atuais. | 1 |
 | `component.modal.body.color.default` | color | → `semantic.content.strong` | Contrato body.color de modal, sincronizado a partir das Variables Figma atuais. | 1 |
 | `component.modal.body.font-size.lg` | dimension | → `semantic.typography.body.font-size.lg` | Font-size do body Modal lg. | 1 |
@@ -1181,9 +1182,9 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `component.radio.content.gap.default` | dimension | → `semantic.space.xs` | Define o gap vertical interno entre label, description e helper text no content frame do Radio. | 1 |
-| `component.radio.control.border-color.selected.default` | color | → `semantic.primary.border.default` | Radio control visual selected | 1 |
+| `component.radio.control.border-color.selected.default` | color | → `semantic.brand.border.default` | Radio control visual selected | 1 |
 | `component.radio.control.border-color.selected.focus` | color | → `semantic.border.focus` | Token component para radio / control / border color / selected / focus. | 0 |
-| `component.radio.control.border-color.selected.hover` | color | → `semantic.primary.border.hover` | Border do control Radio selected em hover. | 1 |
+| `component.radio.control.border-color.selected.hover` | color | → `semantic.brand.border.hover` | Border do control Radio selected em hover. | 1 |
 | `component.radio.control.border-color.unselected.default` | color | → `semantic.border.control-default` | Radio control visual unselected | 1 |
 | `component.radio.control.border-color.unselected.disabled` | color | → `semantic.border.control-disabled` | Radio control visual unselected disabled | 1 |
 | `component.radio.control.border-color.unselected.error` | color | → `semantic.border.error` | Contrato control.border-color.unselected de radio, sincronizado a partir das Variables Figma atuais. | 1 |
@@ -1192,10 +1193,10 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.radio.control.border-color.unselected.hover` | color | → `semantic.border.control-hover` | Border do control Radio unselected em hover. | 1 |
 | `component.radio.control.border-width.selected.default` | dimension | → `semantic.border.width.strong` | Radio control visual selected | 1 |
 | `component.radio.control.border-width.unselected.default` | dimension | → `semantic.border.width.default` | Radio control visual unselected | 1 |
-| `component.radio.control.fill.selected.default` | color | → `semantic.primary.background.default` | Radio control visual selected | 1 |
-| `component.radio.control.fill.selected.disabled` | color | → `semantic.primary.background.disabled` | Radio control visual selected disabled | 1 |
-| `component.radio.control.fill.selected.focus` | color | → `semantic.primary.background.default` | Token component para radio / control / fill / selected / focus. | 0 |
-| `component.radio.control.fill.selected.hover` | color | → `semantic.primary.background.hover` | Fill do control Radio selected em hover. | 1 |
+| `component.radio.control.fill.selected.default` | color | → `semantic.brand.background.default` | Radio control visual selected | 1 |
+| `component.radio.control.fill.selected.disabled` | color | → `semantic.brand.background.disabled` | Radio control visual selected disabled | 1 |
+| `component.radio.control.fill.selected.focus` | color | → `semantic.brand.background.default` | Token component para radio / control / fill / selected / focus. | 0 |
+| `component.radio.control.fill.selected.hover` | color | → `semantic.brand.background.hover` | Fill do control Radio selected em hover. | 1 |
 | `component.radio.control.fill.unselected.default` | color | → `semantic.surface.default` | Radio control visual unselected | 1 |
 | `component.radio.control.fill.unselected.disabled` | color | → `semantic.background.disabled` | Radio control visual unselected disabled | 1 |
 | `component.radio.control.fill.unselected.focus` | color | → `semantic.surface.default` | Token component para radio / control / fill / unselected / focus. | 0 |
@@ -1204,10 +1205,10 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.radio.control.size.lg` | dimension | → `semantic.size.md` | Tamanho visual do control circular do Radio por size. | 1 |
 | `component.radio.control.size.md` | dimension | → `semantic.size.sm` | Tamanho visual do control circular do Radio por size. | 1 |
 | `component.radio.control.size.sm` | dimension | → `semantic.size.xs` | Tamanho visual do control circular do Radio por size. | 1 |
-| `component.radio.dot.fill.selected.default` | color | → `semantic.primary.content-default` | Radio dot interno selected | 1 |
-| `component.radio.dot.fill.selected.disabled` | color | → `semantic.primary.content-disabled` | Radio dot interno selected disabled | 1 |
-| `component.radio.dot.fill.selected.focus` | color | → `semantic.primary.content-default` | Token component para radio / dot / fill / selected / focus. | 0 |
-| `component.radio.dot.fill.selected.hover` | color | → `semantic.primary.content-hover` | Fill do dot Radio selected em hover. | 1 |
+| `component.radio.dot.fill.selected.default` | color | → `semantic.brand.content-default` | Radio dot interno selected | 1 |
+| `component.radio.dot.fill.selected.disabled` | color | → `semantic.brand.content-disabled` | Radio dot interno selected disabled | 1 |
+| `component.radio.dot.fill.selected.focus` | color | → `semantic.brand.content-default` | Token component para radio / dot / fill / selected / focus. | 0 |
+| `component.radio.dot.fill.selected.hover` | color | → `semantic.brand.content-hover` | Fill do dot Radio selected em hover. | 1 |
 | `component.radio.dot.radius.default` | dimension | → `semantic.radius.full` | Radio dot interno default | 1 |
 | `component.radio.dot.size.lg` | dimension | → `semantic.control.radio.dot.size.lg` | Radio dot interno size lg | 1 |
 | `component.radio.dot.size.md` | dimension | → `semantic.control.radio.dot.size.md` | Radio dot interno size md | 1 |
@@ -1223,7 +1224,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `component.select.chevron-frame.padding-x.default` | dimension | → `semantic.space.xs` | Padding horizontal do frame externo do chevron Select. | 1 |
+| `component.select.chevron-frame.padding-x.default` | dimension | → `semantic.space.2xs` | Padding horizontal do frame externo do chevron Select. | 1 |
 | `component.select.chevron.color.default` | color | → `semantic.icon.color.default` | Cor do chevron do Select por estado. | 1 |
 | `component.select.chevron.color.disabled` | color | → `semantic.icon.color.disabled` | Cor do chevron do Select por estado. | 1 |
 | `component.select.chevron.size.lg` | dimension | → `semantic.size.md` | Token component para select / chevron / size / lg. | 1 |
@@ -1239,7 +1240,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.select.height.lg` | dimension | → `semantic.size.2xl` | Altura da superfície visual do Select por size. | 1 |
 | `component.select.height.md` | dimension | → `semantic.size.xl` | Altura da superfície visual do Select por size. | 1 |
 | `component.select.height.sm` | dimension | → `semantic.size.lg` | Altura da superfície visual do Select por size. | 1 |
-| `component.select.icon-frame.padding-x.default` | dimension | → `semantic.space.xs` | Padding horizontal do frame externo de ícone Select. | 1 |
+| `component.select.icon-frame.padding-x.default` | dimension | → `semantic.space.2xs` | Padding horizontal do frame externo de ícone Select. | 1 |
 | `component.select.icon.color.default` | color | → `semantic.icon.color.default` | Cor do ícone leading do Select por estado. | 1 |
 | `component.select.icon.color.disabled` | color | → `semantic.icon.color.disabled` | Cor do ícone leading do Select por estado. | 1 |
 | `component.select.icon.size.lg` | dimension | → `semantic.size.md` | Token component para select / icon / size / lg. | 1 |
@@ -1251,7 +1252,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.select.padding-x.lg` | dimension | → `semantic.space.md` | Padding horizontal do Field Select por size. | 1 |
 | `component.select.padding-x.md` | dimension | → `semantic.space.sm` | Padding horizontal do Field Select por size. | 1 |
 | `component.select.padding-x.sm` | dimension | → `semantic.space.xs` | Padding horizontal do Field Select por size. | 1 |
-| `component.select.text-frame.padding-x.default` | dimension | → `semantic.space.xs` | Padding horizontal do Text Frame do Select. | 1 |
+| `component.select.text-frame.padding-x.default` | dimension | → `semantic.space.2xs` | Padding horizontal do Text Frame do Select. | 1 |
 | `component.select.text.font-family.default` | string | → `semantic.typography.body.font-family.sans` | Tipografia do texto do Select. | 1 |
 | `component.select.text.font-size.lg` | dimension | → `semantic.typography.body.font-size.md` | Tipografia do texto do Select. | 1 |
 | `component.select.text.font-size.md` | dimension | → `semantic.typography.body.font-size.sm` | Tipografia do texto do Select. | 1 |
@@ -1295,7 +1296,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `component.tabs.focus-ring.radius.default` | dimension | → `semantic.radius.sm` | Radius do focus ring do Tab Item. | 0 |
-| `component.tabs.indicator.fill.active` | color | → `semantic.primary.background.default` | Contrato indicator.fill de tabs, sincronizado a partir das Variables Figma atuais. | 1 |
+| `component.tabs.indicator.fill.active` | color | → `semantic.brand.background.default` | Contrato indicator.fill de tabs, sincronizado a partir das Variables Figma atuais. | 1 |
 | `component.tabs.indicator.height.default` | dimension | → `semantic.border.width.strong` | Altura do indicator Tabs. | 1 |
 | `component.tabs.item.indicator-gap.default` | dimension | → `semantic.space.md` | Gap entre label e indicator Tabs. | 1 |
 | `component.tabs.item.padding-top.default` | dimension | → `semantic.space.md` | Padding top do item Tabs. | 1 |
@@ -1346,10 +1347,10 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.toggle.thumb.fill.off.disabled` | color | → `semantic.content.disabled` | Toggle thumb off disabled | 1 |
 | `component.toggle.thumb.fill.off.focus` | color | → `semantic.content.default` | Token component para toggle / thumb / fill / off / focus. | 0 |
 | `component.toggle.thumb.fill.off.hover` | color | → `semantic.content.hover` | Fill do thumb Toggle off em hover. | 1 |
-| `component.toggle.thumb.fill.on.default` | color | → `semantic.primary.content-default` | Toggle thumb on | 1 |
-| `component.toggle.thumb.fill.on.disabled` | color | → `semantic.primary.content-disabled` | Toggle thumb on disabled | 1 |
-| `component.toggle.thumb.fill.on.focus` | color | → `semantic.primary.content-default` | Token component para toggle / thumb / fill / on / focus. | 0 |
-| `component.toggle.thumb.fill.on.hover` | color | → `semantic.primary.content-hover` | Fill do thumb Toggle on em hover. | 1 |
+| `component.toggle.thumb.fill.on.default` | color | → `semantic.brand.content-default` | Toggle thumb on | 1 |
+| `component.toggle.thumb.fill.on.disabled` | color | → `semantic.brand.content-disabled` | Toggle thumb on disabled | 1 |
+| `component.toggle.thumb.fill.on.focus` | color | → `semantic.brand.content-default` | Token component para toggle / thumb / fill / on / focus. | 0 |
+| `component.toggle.thumb.fill.on.hover` | color | → `semantic.brand.content-hover` | Fill do thumb Toggle on em hover. | 1 |
 | `component.toggle.thumb.inset.default` | dimension | → `semantic.space.2xs` | Inset/gap padrao do thumb dentro da track do Toggle. | 1 |
 | `component.toggle.thumb.radius.default` | dimension | → `semantic.radius.full` | Toggle thumb default | 1 |
 | `component.toggle.thumb.size.lg` | dimension | → `semantic.control.toggle.thumb.size.lg` | Toggle thumb size lg | 1 |
@@ -1364,10 +1365,10 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.toggle.track.fill.off.disabled` | color | → `semantic.background.disabled` | Toggle track off disabled | 1 |
 | `component.toggle.track.fill.off.focus` | color | → `semantic.surface.default` | Token component para toggle / track / fill / off / focus. | 0 |
 | `component.toggle.track.fill.off.hover` | color | → `semantic.surface.hover` | Fill da track Toggle off em hover. | 1 |
-| `component.toggle.track.fill.on.default` | color | → `semantic.primary.background.default` | Toggle track on | 1 |
-| `component.toggle.track.fill.on.disabled` | color | → `semantic.primary.background.disabled` | Toggle track on disabled | 1 |
-| `component.toggle.track.fill.on.focus` | color | → `semantic.primary.background.default` | Token component para toggle / track / fill / on / focus. | 0 |
-| `component.toggle.track.fill.on.hover` | color | → `semantic.primary.background.hover` | Fill da track Toggle on em hover. | 1 |
+| `component.toggle.track.fill.on.default` | color | → `semantic.brand.background.default` | Toggle track on | 1 |
+| `component.toggle.track.fill.on.disabled` | color | → `semantic.brand.background.disabled` | Toggle track on disabled | 1 |
+| `component.toggle.track.fill.on.focus` | color | → `semantic.brand.background.default` | Token component para toggle / track / fill / on / focus. | 0 |
+| `component.toggle.track.fill.on.hover` | color | → `semantic.brand.background.hover` | Fill da track Toggle on em hover. | 1 |
 | `component.toggle.track.height.lg` | dimension | → `semantic.size.lg` | Altura visual da track do Toggle por size. | 1 |
 | `component.toggle.track.height.md` | dimension | → `semantic.size.md` | Altura visual da track do Toggle por size. | 1 |
 | `component.toggle.track.height.sm` | dimension | → `semantic.size.xs` | Altura visual da track do Toggle por size. | 1 |
@@ -1387,7 +1388,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.tooltip.content.padding-x.default` | dimension | → `semantic.space.sm` | Padding horizontal do content Tooltip. | 1 |
 | `component.tooltip.content.padding-y.default` | dimension | → `semantic.space.xs` | Padding vertical do content Tooltip. | 1 |
 | `component.tooltip.content.radius.default` | dimension | → `semantic.radius.sm` | Radius do content Tooltip. | 1 |
-| `component.tooltip.label.color.default` | color | → `semantic.primary.content-default` | Contrato label.color de tooltip, sincronizado a partir das Variables Figma atuais. | 1 |
+| `component.tooltip.label.color.default` | color | → `semantic.brand.content-default` | Contrato label.color de tooltip, sincronizado a partir das Variables Figma atuais. | 1 |
 | `component.tooltip.label.font-size.default` | dimension | → `semantic.typography.body.font-size.sm` | Font-size do label Tooltip. | 1 |
 | `component.tooltip.label.font-weight.default` | number | → `semantic.typography.body.font-weight.regular` | Font-weight do label Tooltip. | 1 |
 | `component.tooltip.label.line-height.default` | dimension | → `semantic.typography.body.line-height.sm` | Line-height do label Tooltip. | 1 |
@@ -1443,7 +1444,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 100 da paleta amber. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.warning.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.warning.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
@@ -1456,7 +1457,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 200 da paleta amber. Tom claro — backgrounds secundários, borders subtle.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.warning.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.warning.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -1467,7 +1468,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 300 da paleta amber. Tom médio-claro — borders default, foregrounds em dark mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.warning.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.warning.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
@@ -1481,7 +1482,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 400 da paleta amber. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.warning.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.warning.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
@@ -1494,7 +1495,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 50 da paleta amber. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.warning.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.warning.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -1505,7 +1506,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 500 da paleta amber. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.warning.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.warning.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
@@ -1519,7 +1520,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 600 da paleta amber. Tom forte — fills primários, brand fills.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.warning.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.warning.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
@@ -1532,7 +1533,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 700 da paleta amber. Tom escuro — text on light, hover de fills brand.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.warning.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.warning.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
@@ -1545,7 +1546,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 800 da paleta amber. Tom muito escuro — emphasis text, active states.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.warning.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.warning.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -1556,7 +1557,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 900 da paleta amber. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.warning.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.warning.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
@@ -1569,7 +1570,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 950 da paleta amber. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.warning.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.warning.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
@@ -1583,7 +1584,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 100 da paleta blue. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
@@ -1596,7 +1597,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 200 da paleta blue. Tom claro — backgrounds secundários, borders subtle.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -1607,7 +1608,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 300 da paleta blue. Tom médio-claro — borders default, foregrounds em dark mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
@@ -1620,7 +1621,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 400 da paleta blue. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
@@ -1634,7 +1635,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 50 da paleta blue. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -1645,7 +1646,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 500 da paleta blue. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
@@ -1659,7 +1660,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 600 da paleta blue. Tom forte — fills primários, brand fills.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
@@ -1672,7 +1673,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 700 da paleta blue. Tom escuro — text on light, hover de fills brand.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
@@ -1685,7 +1686,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 800 da paleta blue. Tom muito escuro — emphasis text, active states.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -1696,7 +1697,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 900 da paleta blue. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
@@ -1709,7 +1710,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 950 da paleta blue. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -1720,7 +1721,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 100 da paleta brand. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -1731,7 +1732,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 200 da paleta brand. Tom claro — backgrounds secundários, borders subtle.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
@@ -1744,7 +1745,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 300 da paleta brand. Tom médio-claro — borders default, foregrounds em dark mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
@@ -1757,12 +1758,12 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 400 da paleta brand. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (4×)
-  - Tokens que referenciam: `semantic.primary.background.default`, `semantic.primary.background.active`, `semantic.toned.content-default`, `semantic.link.content-default`
+  - Tokens que referenciam: `semantic.brand.background.default`, `semantic.brand.background.active`, `semantic.toned.content-default`, `semantic.link.content-default`
 
 ### `foundation.color.brand.50`
 
@@ -1770,7 +1771,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 50 da paleta brand. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -1781,12 +1782,12 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 500 da paleta brand. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (4×)
-  - Tokens que referenciam: `semantic.primary.background.hover`, `semantic.border.focus`, `semantic.border.brand`, `semantic.border.control-hover`
+  - Tokens que referenciam: `semantic.brand.background.hover`, `semantic.border.focus`, `semantic.border.brand`, `semantic.border.control-hover`
 
 ### `foundation.color.brand.600`
 
@@ -1794,12 +1795,12 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 600 da paleta brand. Tom forte — fills primários, brand fills.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-light.css` (4×)
-  - Tokens que referenciam: `semantic.primary.background.default`, `semantic.border.focus`, `semantic.border.brand`, `semantic.border.control-hover`
+  - Tokens que referenciam: `semantic.brand.background.default`, `semantic.border.focus`, `semantic.border.brand`, `semantic.border.control-hover`
 
 ### `foundation.color.brand.700`
 
@@ -1807,12 +1808,12 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 700 da paleta brand. Tom escuro — text on light, hover de fills brand.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-light.css` (3×)
-  - Tokens que referenciam: `semantic.primary.background.hover`, `semantic.toned.content-default`, `semantic.link.content-default`
+  - Tokens que referenciam: `semantic.brand.background.hover`, `semantic.toned.content-default`, `semantic.link.content-default`
 
 ### `foundation.color.brand.800`
 
@@ -1820,12 +1821,12 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 800 da paleta brand. Tom muito escuro — emphasis text, active states.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-light.css` (3×)
-  - Tokens que referenciam: `semantic.primary.background.active`, `semantic.link.content-hover`, `semantic.link.content-active`
+  - Tokens que referenciam: `semantic.brand.background.active`, `semantic.link.content-hover`, `semantic.link.content-active`
 
 ### `foundation.color.brand.900`
 
@@ -1833,7 +1834,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 900 da paleta brand. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -1844,7 +1845,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 950 da paleta brand. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
@@ -1858,7 +1859,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 100 da paleta cyan. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -1869,7 +1870,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 200 da paleta cyan. Tom claro — backgrounds secundários, borders subtle.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -1880,7 +1881,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 300 da paleta cyan. Tom médio-claro — borders default, foregrounds em dark mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -1891,7 +1892,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 400 da paleta cyan. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -1902,7 +1903,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 50 da paleta cyan. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -1913,7 +1914,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 500 da paleta cyan. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -1924,7 +1925,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 600 da paleta cyan. Tom forte — fills primários, brand fills.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -1935,7 +1936,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 700 da paleta cyan. Tom escuro — text on light, hover de fills brand.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -1946,7 +1947,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 800 da paleta cyan. Tom muito escuro — emphasis text, active states.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -1957,7 +1958,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 900 da paleta cyan. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -1968,7 +1969,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 950 da paleta cyan. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -1996,7 +1997,7 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.primary.background.disabled`, `semantic.primary.background.disabled`
+  - Tokens que referenciam: `semantic.brand.background.disabled`, `semantic.brand.background.disabled`
 
 ### `foundation.color.disabled.brand.toned.dark`
 
@@ -2007,9 +2008,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Semantic toned.background.disabled. Não use direto em componente.
 - **Decisão**: Nome aninhado espelha Figma color/disabled/... e ADR-011 (sem achatamento com hífen). Alpha preserva forma do botão sem competir visualmente — sinaliza não-interativo sem sumir.
 - **Usos**:
-  - CSS:
-    - `css/tokens/generated/theme-dark.css` (1×)
-  - Tokens que referenciam: `semantic.toned.background.disabled`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.disabled.brand.toned.light`
 
@@ -2020,9 +2019,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Semantic toned.background.disabled. Não use direto em componente.
 - **Decisão**: Nome aninhado espelha Figma color/disabled/... e ADR-011 (sem achatamento com hífen). Alpha preserva forma do botão sem competir visualmente — sinaliza não-interativo sem sumir.
 - **Usos**:
-  - CSS:
-    - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.toned.background.disabled`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `foundation.color.disabled.error.dark`
 
@@ -2082,7 +2079,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 100 da paleta emerald. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -2093,7 +2090,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 200 da paleta emerald. Tom claro — backgrounds secundários, borders subtle.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -2104,7 +2101,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 300 da paleta emerald. Tom médio-claro — borders default, foregrounds em dark mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -2115,7 +2112,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 400 da paleta emerald. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -2126,7 +2123,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 50 da paleta emerald. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -2137,7 +2134,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 500 da paleta emerald. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -2148,7 +2145,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 600 da paleta emerald. Tom forte — fills primários, brand fills.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -2159,7 +2156,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 700 da paleta emerald. Tom escuro — text on light, hover de fills brand.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -2170,7 +2167,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 800 da paleta emerald. Tom muito escuro — emphasis text, active states.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -2181,7 +2178,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 900 da paleta emerald. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -2192,7 +2189,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 950 da paleta emerald. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -2203,7 +2200,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 100 da paleta green. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.success.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.success.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
@@ -2216,7 +2213,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 200 da paleta green. Tom claro — backgrounds secundários, borders subtle.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.success.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.success.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -2227,7 +2224,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 300 da paleta green. Tom médio-claro — borders default, foregrounds em dark mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.success.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.success.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
@@ -2240,7 +2237,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 400 da paleta green. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.success.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.success.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
@@ -2253,7 +2250,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 50 da paleta green. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.success.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.success.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -2264,7 +2261,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 500 da paleta green. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.success.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.success.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
@@ -2278,7 +2275,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 600 da paleta green. Tom forte — fills primários, brand fills.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.success.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.success.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
@@ -2291,7 +2288,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 700 da paleta green. Tom escuro — text on light, hover de fills brand.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.success.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.success.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
@@ -2304,7 +2301,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 800 da paleta green. Tom muito escuro — emphasis text, active states.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.success.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.success.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
@@ -2317,7 +2314,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 900 da paleta green. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.success.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.success.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
@@ -2331,7 +2328,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 950 da paleta green. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.success.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.success.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -2342,7 +2339,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 100 da paleta indigo. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -2353,7 +2350,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 200 da paleta indigo. Tom claro — backgrounds secundários, borders subtle.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -2364,7 +2361,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 300 da paleta indigo. Tom médio-claro — borders default, foregrounds em dark mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -2375,7 +2372,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 400 da paleta indigo. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -2386,7 +2383,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 50 da paleta indigo. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -2397,7 +2394,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 500 da paleta indigo. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -2408,7 +2405,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 600 da paleta indigo. Tom forte — fills primários, brand fills.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -2419,7 +2416,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 700 da paleta indigo. Tom escuro — text on light, hover de fills brand.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -2430,7 +2427,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 800 da paleta indigo. Tom muito escuro — emphasis text, active states.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -2441,7 +2438,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 900 da paleta indigo. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -2452,7 +2449,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 950 da paleta indigo. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -2463,12 +2460,12 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 100 da paleta neutral. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.surface.hover`
+    - `css/tokens/generated/theme-light.css` (2×)
+  - Tokens que referenciam: `semantic.surface.hover`, `semantic.background.disabled`
 
 ### `foundation.color.neutral.200`
 
@@ -2476,12 +2473,12 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 200 da paleta neutral. Tom claro — backgrounds secundários, borders subtle.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-light.css` (4×)
-  - Tokens que referenciam: `semantic.outline.border-disabled`, `semantic.background.subtle`, `semantic.background.disabled`, `semantic.border.subtle`
+  - Tokens que referenciam: `semantic.outline.border-disabled`, `semantic.background.subtle`, `semantic.border.subtle`, `semantic.border.control-disabled`
 
 ### `foundation.color.neutral.300`
 
@@ -2489,13 +2486,13 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 300 da paleta neutral. Tom médio-claro — borders default, foregrounds em dark mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (3×)
-    - `css/tokens/generated/theme-light.css` (2×)
-  - Tokens que referenciam: `semantic.outline.content-default`, `semantic.outline.border-hover`, `semantic.content.hover`, `semantic.border.default`, `semantic.border.control-disabled`
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `semantic.outline.content-default`, `semantic.outline.border-hover`, `semantic.content.hover`, `semantic.border.default`
 
 ### `foundation.color.neutral.400`
 
@@ -2503,13 +2500,13 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 400 da paleta neutral. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (2×)
-    - `css/tokens/generated/theme-light.css` (5×)
-  - Tokens que referenciam: `semantic.content.default`, `semantic.content.subtle`, `semantic.toned.content-disabled`, `semantic.outline.content-disabled`, `semantic.ghost.content-disabled`, `semantic.link.content-disabled`, `semantic.content.disabled`
+    - `css/tokens/generated/theme-light.css` (3×)
+  - Tokens que referenciam: `semantic.content.default`, `semantic.content.subtle`, `semantic.outline.content-disabled`, `semantic.ghost.content-disabled`, `semantic.link.content-disabled`
 
 ### `foundation.color.neutral.50`
 
@@ -2517,13 +2514,13 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 50 da paleta neutral. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (3×)
     - `css/tokens/generated/theme-light.css` (11×)
-  - Tokens que referenciam: `semantic.ghost.content-default`, `semantic.background.inverse`, `semantic.content.strong`, `semantic.primary.content-default`, `semantic.primary.content-hover`, `semantic.feedback.success.content-contrast`, `semantic.feedback.error.content-contrast`, `semantic.surface.default`, `semantic.surface.raised`, `semantic.surface.overlay`, `semantic.surface.elevated`, `semantic.background.default`, `semantic.content.inverse`, `semantic.border.inverse`
+  - Tokens que referenciam: `semantic.ghost.content-default`, `semantic.background.inverse`, `semantic.content.strong`, `semantic.brand.content-default`, `semantic.brand.content-hover`, `semantic.feedback.success.content-contrast`, `semantic.feedback.error.content-contrast`, `semantic.surface.default`, `semantic.surface.raised`, `semantic.surface.overlay`, `semantic.surface.elevated`, `semantic.background.default`, `semantic.content.inverse`, `semantic.border.inverse`
 
 ### `foundation.color.neutral.500`
 
@@ -2531,13 +2528,13 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 500 da paleta neutral. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-dark.css` (3×)
-    - `css/tokens/generated/theme-light.css` (3×)
-  - Tokens que referenciam: `semantic.outline.border-default`, `semantic.border.strong`, `semantic.border.control-default`, `semantic.outline.border-default`, `semantic.content.subtle`, `semantic.border.control-default`
+    - `css/tokens/generated/theme-dark.css` (4×)
+    - `css/tokens/generated/theme-light.css` (4×)
+  - Tokens que referenciam: `semantic.outline.border-default`, `semantic.content.disabled`, `semantic.border.strong`, `semantic.border.control-default`, `semantic.outline.border-default`, `semantic.content.subtle`, `semantic.content.disabled`, `semantic.border.control-default`
 
 ### `foundation.color.neutral.600`
 
@@ -2545,13 +2542,13 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 600 da paleta neutral. Tom forte — fills primários, brand fills.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-dark.css` (6×)
+    - `css/tokens/generated/theme-dark.css` (4×)
     - `css/tokens/generated/theme-light.css` (2×)
-  - Tokens que referenciam: `semantic.toned.content-disabled`, `semantic.outline.content-disabled`, `semantic.ghost.content-disabled`, `semantic.link.content-disabled`, `semantic.surface.elevated`, `semantic.content.disabled`, `semantic.content.default`, `semantic.border.strong`
+  - Tokens que referenciam: `semantic.outline.content-disabled`, `semantic.ghost.content-disabled`, `semantic.link.content-disabled`, `semantic.surface.elevated`, `semantic.content.default`, `semantic.border.strong`
 
 ### `foundation.color.neutral.700`
 
@@ -2559,13 +2556,13 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 700 da paleta neutral. Tom escuro — text on light, hover de fills brand.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-dark.css` (3×)
+    - `css/tokens/generated/theme-dark.css` (2×)
     - `css/tokens/generated/theme-light.css` (3×)
-  - Tokens que referenciam: `semantic.surface.overlay`, `semantic.border.default`, `semantic.border.control-disabled`, `semantic.outline.content-default`, `semantic.outline.border-hover`, `semantic.content.hover`
+  - Tokens que referenciam: `semantic.surface.overlay`, `semantic.border.default`, `semantic.outline.content-default`, `semantic.outline.border-hover`, `semantic.content.hover`
 
 ### `foundation.color.neutral.800`
 
@@ -2573,12 +2570,12 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 800 da paleta neutral. Tom muito escuro — emphasis text, active states.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/theme-dark.css` (6×)
-  - Tokens que referenciam: `semantic.outline.border-disabled`, `semantic.surface.hover`, `semantic.surface.raised`, `semantic.background.subtle`, `semantic.background.disabled`, `semantic.border.subtle`
+  - Tokens que referenciam: `semantic.outline.border-disabled`, `semantic.surface.hover`, `semantic.surface.raised`, `semantic.background.subtle`, `semantic.border.subtle`, `semantic.border.control-disabled`
 
 ### `foundation.color.neutral.900`
 
@@ -2586,13 +2583,13 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 900 da paleta neutral. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-dark.css` (7×)
+    - `css/tokens/generated/theme-dark.css` (8×)
     - `css/tokens/generated/theme-light.css` (3×)
-  - Tokens que referenciam: `semantic.primary.content-default`, `semantic.primary.content-hover`, `semantic.feedback.success.content-contrast`, `semantic.feedback.error.content-contrast`, `semantic.surface.default`, `semantic.content.inverse`, `semantic.border.inverse`, `semantic.ghost.content-default`, `semantic.background.inverse`, `semantic.content.strong`
+  - Tokens que referenciam: `semantic.brand.content-default`, `semantic.brand.content-hover`, `semantic.feedback.success.content-contrast`, `semantic.feedback.error.content-contrast`, `semantic.surface.default`, `semantic.background.disabled`, `semantic.content.inverse`, `semantic.border.inverse`, `semantic.ghost.content-default`, `semantic.background.inverse`, `semantic.content.strong`
 
 ### `foundation.color.neutral.950`
 
@@ -2600,7 +2597,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 950 da paleta neutral. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
@@ -2803,7 +2800,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Use em fundos de modal, scrim de drawer, hover/active de superfícies translúcidas, e overlays de loading. Não consuma direto em componente — passe por Semantic ou utility class.
 - **Decisão**: Alpha tonal escolhido pra preservar legibilidade do conteúdo abaixo (5–10% = subtle hint; 20–40% = clear scrim; 60–80% = focus modal).
 - **Usos**:
-  - Tokens que referenciam: `semantic.primary.content-disabled`, `semantic.primary.content-disabled`, `semantic.feedback.success.content-disabled`, `semantic.feedback.error.content-disabled`
+  - Tokens que referenciam: `semantic.brand.content-disabled`, `semantic.brand.content-disabled`, `semantic.feedback.success.content-disabled`, `semantic.feedback.error.content-disabled`
 
 ### `foundation.color.purple.100`
 
@@ -2811,7 +2808,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 100 da paleta purple. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -2822,7 +2819,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 200 da paleta purple. Tom claro — backgrounds secundários, borders subtle.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -2833,7 +2830,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 300 da paleta purple. Tom médio-claro — borders default, foregrounds em dark mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -2844,7 +2841,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 400 da paleta purple. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -2855,7 +2852,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 50 da paleta purple. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -2866,7 +2863,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 500 da paleta purple. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -2877,7 +2874,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 600 da paleta purple. Tom forte — fills primários, brand fills.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -2888,7 +2885,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 700 da paleta purple. Tom escuro — text on light, hover de fills brand.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -2899,7 +2896,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 800 da paleta purple. Tom muito escuro — emphasis text, active states.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -2910,7 +2907,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 900 da paleta purple. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -2921,7 +2918,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 950 da paleta purple. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -2932,7 +2929,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 100 da paleta red. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.error.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.error.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
@@ -2945,7 +2942,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 200 da paleta red. Tom claro — backgrounds secundários, borders subtle.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.error.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.error.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -2956,7 +2953,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 300 da paleta red. Tom médio-claro — borders default, foregrounds em dark mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.error.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.error.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
@@ -2969,7 +2966,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 400 da paleta red. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.error.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.error.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
@@ -2982,7 +2979,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 50 da paleta red. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.error.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.error.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -2993,7 +2990,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 500 da paleta red. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.error.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.error.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
@@ -3007,7 +3004,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 600 da paleta red. Tom forte — fills primários, brand fills.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.error.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.error.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
@@ -3020,7 +3017,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 700 da paleta red. Tom escuro — text on light, hover de fills brand.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.error.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.error.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
@@ -3033,7 +3030,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 800 da paleta red. Tom muito escuro — emphasis text, active states.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.error.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.error.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
@@ -3046,7 +3043,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 900 da paleta red. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.error.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.error.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
@@ -3060,7 +3057,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 950 da paleta red. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.error.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.error.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -3071,7 +3068,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 100 da paleta sky. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -3082,7 +3079,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 200 da paleta sky. Tom claro — backgrounds secundários, borders subtle.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -3093,7 +3090,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 300 da paleta sky. Tom médio-claro — borders default, foregrounds em dark mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -3104,7 +3101,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 400 da paleta sky. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -3115,7 +3112,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 50 da paleta sky. Tom muito claro — backgrounds, hover states sutis em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -3126,7 +3123,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 500 da paleta sky. Tom médio — fills médios, focus rings.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -3137,7 +3134,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 600 da paleta sky. Tom forte — fills primários, brand fills.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -3148,7 +3145,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 700 da paleta sky. Tom escuro — text on light, hover de fills brand.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -3159,7 +3156,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 800 da paleta sky. Tom muito escuro — emphasis text, active states.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -3170,7 +3167,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 900 da paleta sky. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -3181,7 +3178,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Sentido**: Tom 950 da paleta sky. Tom extremo — surfaces escuras, body text em light mode.
 - **Escopo**: fill, stroke, text
-- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).
+- **Contexto**: Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
@@ -4736,15 +4733,17 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: semantic
 - **Tipo**: `color`
-- **Alias**: → `foundation.color.neutral.200`
+- **Alias**: → `foundation.color.neutral.100`
 - **Sentido**: Background pra estados disabled — neutral subtle.
 - **Escopo**: background-color
 - **Contexto**: Use em containers, frames, cards. Não consuma Foundation `color.*` direto.
-- **Decisão**: Aliasado a foundation.color.neutral.200 (light) — Semantic encapsula a decisão de qual tom da paleta usar.
+- **Decisão**: Aliasado a foundation.color.neutral.100 no light e neutral.900 no dark para reduzir o peso visual de campos disabled.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/component.css` (4×)
-  - Tokens que referenciam: `component.checkbox.box.fill.unchecked.disabled`, `component.field.bg.disabled`, `component.radio.control.fill.unselected.disabled`, `component.toggle.track.fill.off.disabled`
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
+  - Tokens que referenciam: `component.checkbox.box.fill.unchecked.disabled`, `component.field.bg.disabled`, `component.radio.control.fill.unselected.disabled`, `component.toggle.track.fill.off.disabled`, `semantic.toned.background.disabled`, `semantic.toned.background.disabled`
 
 ### `semantic.background.inverse`
 
@@ -4787,8 +4786,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/reset.css` (1×)
-    - `css/tokens/generated/component.css` (5×)
-  - Tokens que referenciam: `component.button.bg.outline.pressed`, `component.field.bg.readonly`, `component.skeleton.text.fill.default`, `component.skeleton.circle.fill.default`, `component.skeleton.rectangle.fill.default`
+    - `css/tokens/generated/component.css` (4×)
+  - Tokens que referenciam: `component.button.bg.outline.pressed`, `component.skeleton.text.fill.default`, `component.skeleton.circle.fill.default`, `component.skeleton.rectangle.fill.default`
 
 ### `semantic.border.brand`
 
@@ -4822,11 +4821,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: semantic
 - **Tipo**: `color`
-- **Alias**: → `foundation.color.neutral.300`
+- **Alias**: → `foundation.color.neutral.200`
 - **Sentido**: Border control-disabled.
 - **Escopo**: border-color, outline-color
 - **Contexto**: Use em `border-color` ou `outline-color`. Pareado com border-width apropriado.
-- **Decisão**: Aliasado a foundation.color.neutral.300.
+- **Decisão**: Aliasado a foundation.color.neutral.200 no light e neutral.800 no dark para acompanhar o novo background disabled dos campos.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/component.css` (5×)
@@ -5030,6 +5029,126 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/tokens/generated/component.css` (3×)
   - Tokens que referenciam: `component.radio.control.border-width.selected.default`, `component.spinner.ring.stroke-width.default`, `component.tabs.indicator.height.default`
 
+### `semantic.brand.background.active`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.brand.800`
+- **Sentido**: Fill de ação primária (brand solid) em estado active.
+- **Escopo**: background-color
+- **Contexto**: Aplicado em `.ds-button--brand` ou em consumidores Figma equivalentes.
+- **Decisão**: Aliasado a foundation.color.brand.800 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
+- **Usos**:
+  - Tokens que referenciam: `component.button.bg.brand.pressed`
+
+### `semantic.brand.background.default`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.brand.600`
+- **Sentido**: Fill de ação primária (brand solid) em estado default.
+- **Escopo**: background-color
+- **Contexto**: Aplicado em `.ds-button--brand` ou em consumidores Figma equivalentes.
+- **Decisão**: Aliasado a foundation.color.brand.600 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
+- **Usos**:
+  - Tokens que referenciam: `component.avatar.bg.default`, `component.badge.bg.brand.solid`, `component.button.bg.brand.default`, `component.button.bg.brand.focus`, `component.checkbox.box.fill.checked.default`, `component.checkbox.box.fill.checked.focus`, `component.checkbox.box.fill.indeterminate.default`, `component.checkbox.box.fill.indeterminate.focus`, `component.modal.action.fill.brand`, `component.radio.control.fill.selected.default`, `component.radio.control.fill.selected.focus`, `component.tabs.indicator.fill.active`, `component.toggle.track.fill.on.default`, `component.toggle.track.fill.on.focus`, `semantic.brand.border.default`, `semantic.content.brand`, `semantic.brand.border.default`, `semantic.content.brand`
+
+### `semantic.brand.background.disabled`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.disabled.brand.light`
+- **Sentido**: Fill de ação primária (brand solid) em estado disabled.
+- **Escopo**: background-color
+- **Contexto**: Aplicado em `.ds-button--brand` ou em consumidores Figma equivalentes.
+- **Decisão**: Aliasado a foundation.color.disabled.brand.light — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
+- **Usos**:
+  - Tokens que referenciam: `component.button.bg.brand.disabled`, `component.checkbox.box.fill.checked.disabled`, `component.checkbox.box.fill.indeterminate.disabled`, `component.radio.control.fill.selected.disabled`, `component.toggle.track.fill.on.disabled`, `semantic.brand.border.disabled`, `semantic.brand.border.disabled`
+
+### `semantic.brand.background.hover`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.brand.700`
+- **Sentido**: Fill de ação primária (brand solid) em estado hover.
+- **Escopo**: background-color
+- **Contexto**: Aplicado em `.ds-button--brand` ou em consumidores Figma equivalentes.
+- **Decisão**: Aliasado a foundation.color.brand.700 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
+- **Usos**:
+  - Tokens que referenciam: `component.button.bg.brand.hover`, `component.checkbox.box.fill.checked.hover`, `component.checkbox.box.fill.indeterminate.hover`, `component.radio.control.fill.selected.hover`, `component.toggle.track.fill.on.hover`, `semantic.brand.border.hover`, `semantic.brand.border.hover`
+
+### `semantic.brand.border.default`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `semantic.brand.background.default`
+- **Sentido**: Token semantic para primary / border / default.
+- **Escopo**: component-token
+- **Contexto**: Usado para estabilizar o contrato semantic exposto por semantic.brand.border.
+- **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.brand.background.default.
+- **Usos**:
+  - Tokens que referenciam: `component.radio.control.border-color.selected.default`
+
+### `semantic.brand.border.disabled`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `semantic.brand.background.disabled`
+- **Sentido**: Token semantic para primary / border / disabled.
+- **Escopo**: component-token
+- **Contexto**: Usado para estabilizar o contrato semantic exposto por semantic.brand.border.
+- **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.brand.background.disabled.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.brand.border.hover`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `semantic.brand.background.hover`
+- **Sentido**: Token semantic para primary / border / hover.
+- **Escopo**: component-token
+- **Contexto**: Usado para estabilizar o contrato semantic exposto por semantic.brand.border.
+- **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.brand.background.hover.
+- **Usos**:
+  - Tokens que referenciam: `component.radio.control.border-color.selected.hover`
+
+### `semantic.brand.content-default`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.neutral.50`
+- **Sentido**: Cor de texto/ícone de ação primária (brand solid) em estado default.
+- **Escopo**: color, fill
+- **Contexto**: Aplicado em `.ds-button--brand` ou em consumidores Figma equivalentes.
+- **Decisão**: Aliasado a foundation.color.neutral.50 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
+- **Usos**:
+  - Tokens que referenciam: `component.avatar.content.color.default`, `component.badge.label.color.brand.solid`, `component.button.content.color.brand.default`, `component.button.content.color.brand.hover`, `component.button.content.color.brand.pressed`, `component.button.content.color.brand.focus`, `component.checkbox.mark.fill.checked.default`, `component.checkbox.mark.fill.checked.focus`, `component.checkbox.mark.fill.indeterminate.default`, `component.checkbox.mark.fill.indeterminate.focus`, `component.radio.dot.fill.selected.default`, `component.radio.dot.fill.selected.focus`, `component.toggle.thumb.fill.on.default`, `component.toggle.thumb.fill.on.focus`, `component.tooltip.label.color.default`
+
+### `semantic.brand.content-disabled`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.overlay.white.80`
+- **Sentido**: Cor de texto/ícone de ação primária (brand solid) em estado disabled.
+- **Escopo**: color, fill
+- **Contexto**: Aplicado em `.ds-button--brand` ou em consumidores Figma equivalentes.
+- **Decisão**: Aliasado a foundation.color.overlay.white.80 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
+- **Usos**:
+  - Tokens que referenciam: `component.button.content.color.brand.disabled`, `component.checkbox.mark.fill.checked.disabled`, `component.checkbox.mark.fill.indeterminate.disabled`, `component.radio.dot.fill.selected.disabled`, `component.toggle.thumb.fill.on.disabled`
+
+### `semantic.brand.content-hover`
+
+- **Camada**: semantic
+- **Tipo**: `color`
+- **Alias**: → `foundation.color.neutral.50`
+- **Sentido**: Conteúdo sobre fill brand em hover.
+- **Escopo**: text, shape, hover
+- **Contexto**: Semantic token usado por marcas internas de controles e conteúdo sobre brand/background/hover.
+- **Decisão**: Mantém token semântico próprio para hover mesmo quando o valor atual é igual ao default; isso evita que component tokens de hover apontem para semantic default.
+- **Usos**:
+  - Tokens que referenciam: `component.checkbox.mark.fill.checked.hover`, `component.checkbox.mark.fill.indeterminate.hover`, `component.radio.dot.fill.selected.hover`, `component.toggle.thumb.fill.on.hover`
+
 ### `semantic.content-placeholder.rectangle.height.default`
 
 - **Camada**: semantic
@@ -5062,11 +5181,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: semantic
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.background.default`
+- **Alias**: → `semantic.brand.background.default`
 - **Sentido**: Token semantic para content / brand.
 - **Escopo**: component-token
 - **Contexto**: Usado para estabilizar o contrato semantic exposto por semantic.content.brand.
-- **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.background.default.
+- **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.brand.background.default.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/component.css` (1×)
@@ -5094,17 +5213,17 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: semantic
 - **Tipo**: `color`
-- **Alias**: → `foundation.color.neutral.400`
+- **Alias**: → `foundation.color.neutral.500`
 - **Sentido**: Texto disabled — controles e items inativos.
 - **Escopo**: color, fill
 - **Contexto**: Aplicado em `color` de texto. Pareado com background apropriado pra atender contraste WCAG AA (4.5:1 normal, 3:1 large).
-- **Decisão**: Aliasado a foundation.color.neutral.400.
+- **Decisão**: Aliasado a foundation.color.neutral.500 para reduzir a opacidade visual do estado disabled sem tornar o conteúdo indistinto.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/component.css` (6×)
-    - `css/tokens/generated/theme-dark.css` (1×)
-    - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `component.field.placeholder.color.disabled`, `component.field.value.color.disabled`, `component.form-field.label.color.disabled`, `component.form-field.helper.color.disabled`, `component.tabs.label.color.disabled`, `component.toggle.thumb.fill.off.disabled`, `semantic.icon.color.disabled`, `semantic.icon.color.disabled`
+    - `css/tokens/generated/theme-dark.css` (2×)
+    - `css/tokens/generated/theme-light.css` (2×)
+  - Tokens que referenciam: `component.field.placeholder.color.disabled`, `component.field.value.color.disabled`, `component.form-field.label.color.disabled`, `component.form-field.helper.color.disabled`, `component.tabs.label.color.disabled`, `component.toggle.thumb.fill.off.disabled`, `semantic.toned.content-disabled`, `semantic.icon.color.disabled`, `semantic.toned.content-disabled`, `semantic.icon.color.disabled`
 
 ### `semantic.content.hover`
 
@@ -6581,150 +6700,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
-### `semantic.primary.background.active`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.brand.800`
-- **Sentido**: Fill de ação primária (brand solid) em estado active.
-- **Escopo**: background-color
-- **Contexto**: Aplicado em `.ds-button--primary` ou em consumidores Figma equivalentes.
-- **Decisão**: Aliasado a foundation.color.brand.800 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
-- **Usos**:
-  - CSS:
-    - `css/tokens/generated/component.css` (1×)
-  - Tokens que referenciam: `component.button.bg.brand.pressed`
-
-### `semantic.primary.background.default`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.brand.600`
-- **Sentido**: Fill de ação primária (brand solid) em estado default.
-- **Escopo**: background-color
-- **Contexto**: Aplicado em `.ds-button--primary` ou em consumidores Figma equivalentes.
-- **Decisão**: Aliasado a foundation.color.brand.600 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
-- **Usos**:
-  - CSS:
-    - `css/tokens/generated/component.css` (14×)
-    - `css/tokens/generated/theme-dark.css` (2×)
-    - `css/tokens/generated/theme-light.css` (2×)
-  - Tokens que referenciam: `component.avatar.bg.default`, `component.badge.bg.primary.solid`, `component.button.bg.brand.default`, `component.button.bg.brand.focus`, `component.checkbox.box.fill.checked.default`, `component.checkbox.box.fill.checked.focus`, `component.checkbox.box.fill.indeterminate.default`, `component.checkbox.box.fill.indeterminate.focus`, `component.modal.action.fill.primary`, `component.radio.control.fill.selected.default`, `component.radio.control.fill.selected.focus`, `component.tabs.indicator.fill.active`, `component.toggle.track.fill.on.default`, `component.toggle.track.fill.on.focus`, `semantic.primary.border.default`, `semantic.content.brand`, `semantic.primary.border.default`, `semantic.content.brand`
-
-### `semantic.primary.background.disabled`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.disabled.brand.light`
-- **Sentido**: Fill de ação primária (brand solid) em estado disabled.
-- **Escopo**: background-color
-- **Contexto**: Aplicado em `.ds-button--primary` ou em consumidores Figma equivalentes.
-- **Decisão**: Aliasado a foundation.color.disabled.brand.light — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
-- **Usos**:
-  - CSS:
-    - `css/tokens/generated/component.css` (5×)
-    - `css/tokens/generated/theme-dark.css` (1×)
-    - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `component.button.bg.brand.disabled`, `component.checkbox.box.fill.checked.disabled`, `component.checkbox.box.fill.indeterminate.disabled`, `component.radio.control.fill.selected.disabled`, `component.toggle.track.fill.on.disabled`, `semantic.primary.border.disabled`, `semantic.primary.border.disabled`
-
-### `semantic.primary.background.hover`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.brand.700`
-- **Sentido**: Fill de ação primária (brand solid) em estado hover.
-- **Escopo**: background-color
-- **Contexto**: Aplicado em `.ds-button--primary` ou em consumidores Figma equivalentes.
-- **Decisão**: Aliasado a foundation.color.brand.700 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
-- **Usos**:
-  - CSS:
-    - `css/tokens/generated/component.css` (5×)
-    - `css/tokens/generated/theme-dark.css` (1×)
-    - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `component.button.bg.brand.hover`, `component.checkbox.box.fill.checked.hover`, `component.checkbox.box.fill.indeterminate.hover`, `component.radio.control.fill.selected.hover`, `component.toggle.track.fill.on.hover`, `semantic.primary.border.hover`, `semantic.primary.border.hover`
-
-### `semantic.primary.border.default`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `semantic.primary.background.default`
-- **Sentido**: Token semantic para primary / border / default.
-- **Escopo**: component-token
-- **Contexto**: Usado para estabilizar o contrato semantic exposto por semantic.primary.border.
-- **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.background.default.
-- **Usos**:
-  - CSS:
-    - `css/tokens/generated/component.css` (1×)
-  - Tokens que referenciam: `component.radio.control.border-color.selected.default`
-
-### `semantic.primary.border.disabled`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `semantic.primary.background.disabled`
-- **Sentido**: Token semantic para primary / border / disabled.
-- **Escopo**: component-token
-- **Contexto**: Usado para estabilizar o contrato semantic exposto por semantic.primary.border.
-- **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.background.disabled.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
-
-### `semantic.primary.border.hover`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `semantic.primary.background.hover`
-- **Sentido**: Token semantic para primary / border / hover.
-- **Escopo**: component-token
-- **Contexto**: Usado para estabilizar o contrato semantic exposto por semantic.primary.border.
-- **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.background.hover.
-- **Usos**:
-  - CSS:
-    - `css/tokens/generated/component.css` (1×)
-  - Tokens que referenciam: `component.radio.control.border-color.selected.hover`
-
-### `semantic.primary.content-default`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.neutral.50`
-- **Sentido**: Cor de texto/ícone de ação primária (brand solid) em estado default.
-- **Escopo**: color, fill
-- **Contexto**: Aplicado em `.ds-button--primary` ou em consumidores Figma equivalentes.
-- **Decisão**: Aliasado a foundation.color.neutral.50 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
-- **Usos**:
-  - CSS:
-    - `css/tokens/generated/component.css` (15×)
-  - Tokens que referenciam: `component.avatar.content.color.default`, `component.badge.label.color.primary.solid`, `component.button.content.color.brand.default`, `component.button.content.color.brand.hover`, `component.button.content.color.brand.pressed`, `component.button.content.color.brand.focus`, `component.checkbox.mark.fill.checked.default`, `component.checkbox.mark.fill.checked.focus`, `component.checkbox.mark.fill.indeterminate.default`, `component.checkbox.mark.fill.indeterminate.focus`, `component.radio.dot.fill.selected.default`, `component.radio.dot.fill.selected.focus`, `component.toggle.thumb.fill.on.default`, `component.toggle.thumb.fill.on.focus`, `component.tooltip.label.color.default`
-
-### `semantic.primary.content-disabled`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.overlay.white.80`
-- **Sentido**: Cor de texto/ícone de ação primária (brand solid) em estado disabled.
-- **Escopo**: color, fill
-- **Contexto**: Aplicado em `.ds-button--primary` ou em consumidores Figma equivalentes.
-- **Decisão**: Aliasado a foundation.color.overlay.white.80 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
-- **Usos**:
-  - CSS:
-    - `css/tokens/generated/component.css` (5×)
-  - Tokens que referenciam: `component.button.content.color.brand.disabled`, `component.checkbox.mark.fill.checked.disabled`, `component.checkbox.mark.fill.indeterminate.disabled`, `component.radio.dot.fill.selected.disabled`, `component.toggle.thumb.fill.on.disabled`
-
-### `semantic.primary.content-hover`
-
-- **Camada**: semantic
-- **Tipo**: `color`
-- **Alias**: → `foundation.color.neutral.50`
-- **Sentido**: Conteúdo sobre fill primário em hover.
-- **Escopo**: text, shape, hover
-- **Contexto**: Semantic token usado por marcas internas de controles e conteúdo sobre primary/background/hover.
-- **Decisão**: Mantém token semântico próprio para hover mesmo quando o valor atual é igual ao default; isso evita que component tokens de hover apontem para semantic default.
-- **Usos**:
-  - CSS:
-    - `css/tokens/generated/component.css` (4×)
-  - Tokens que referenciam: `component.checkbox.mark.fill.checked.hover`, `component.checkbox.mark.fill.indeterminate.hover`, `component.radio.dot.fill.selected.hover`, `component.toggle.thumb.fill.on.hover`
-
 ### `semantic.radius.full`
 
 - **Camada**: semantic
@@ -7057,8 +7032,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.dimension.2.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (5×)
-  - Tokens que referenciam: `component.badge.padding-y.default`, `component.button.gap.sm`, `component.form-field.label-row.gap.default`, `component.form-field.error.icon-frame.padding-x.default`, `component.toggle.thumb.inset.default`
+    - `css/tokens/generated/component.css` (11×)
+  - Tokens que referenciam: `component.badge.padding-y.default`, `component.button.gap.sm`, `component.form-field.label-row.gap.default`, `component.form-field.error.padding-top.default`, `component.form-field.error.icon-frame.padding-x.default`, `component.input.icon-frame.padding-x.default`, `component.input.text-frame.padding-x.default`, `component.select.chevron-frame.padding-x.default`, `component.select.icon-frame.padding-x.default`, `component.select.text-frame.padding-x.default`, `component.toggle.thumb.inset.default`
 
 ### `semantic.space.control.padding.10`
 
@@ -7228,9 +7203,9 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/checkbox.css` (5×)
     - `css/components/radio.css` (6×)
     - `css/components/toggle.css` (1×)
-    - `css/tokens/generated/component.css` (25×)
+    - `css/tokens/generated/component.css` (20×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.alert.content.gap.default`, `component.badge.gap.default`, `component.breadcrumb.gap.default`, `component.breadcrumb.item.gap.default`, `component.button.gap.md`, `component.button.label-frame.padding-x.default`, `component.checkbox.content.gap.default`, `component.form-field.gap.default`, `component.form-field.error.gap.default`, `component.form-field.stack.gap.default`, `component.input.gap.sm`, `component.input.gap.md`, `component.input.icon-frame.padding-x.default`, `component.input.padding-x.sm`, `component.input.text-frame.padding-x.default`, `component.radio.content.gap.default`, `component.select.chevron-frame.padding-x.default`, `component.select.gap.sm`, `component.select.gap.md`, `component.select.icon-frame.padding-x.default`, `component.select.padding-x.sm`, `component.select.text-frame.padding-x.default`, `component.toggle.content.gap.default`, `component.tooltip.content.padding-y.default`, `component.tooltip.arrow.depth.default`
+  - Tokens que referenciam: `component.alert.content.gap.default`, `component.badge.gap.default`, `component.breadcrumb.gap.default`, `component.breadcrumb.item.gap.default`, `component.button.gap.md`, `component.button.label-frame.padding-x.default`, `component.checkbox.content.gap.default`, `component.form-field.gap.default`, `component.form-field.error.gap.default`, `component.form-field.stack.gap.default`, `component.input.gap.sm`, `component.input.gap.md`, `component.input.padding-x.sm`, `component.radio.content.gap.default`, `component.select.gap.sm`, `component.select.gap.md`, `component.select.padding-x.sm`, `component.toggle.content.gap.default`, `component.tooltip.content.padding-y.default`, `component.tooltip.arrow.depth.default`
 
 ### `semantic.surface.default`
 
@@ -7243,8 +7218,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Alias resolvido em foundation.color.neutral.50.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (9×)
-  - Tokens que referenciam: `component.badge.bg.neutral.default`, `component.card.bg.default`, `component.checkbox.box.fill.unchecked.default`, `component.checkbox.box.fill.unchecked.focus`, `component.field.bg.default`, `component.radio.control.fill.unselected.default`, `component.radio.control.fill.unselected.focus`, `component.toggle.track.fill.off.default`, `component.toggle.track.fill.off.focus`
+    - `css/tokens/generated/component.css` (10×)
+  - Tokens que referenciam: `component.badge.bg.neutral.default`, `component.card.bg.default`, `component.checkbox.box.fill.unchecked.default`, `component.checkbox.box.fill.unchecked.focus`, `component.field.bg.default`, `component.field.bg.readonly`, `component.radio.control.fill.unselected.default`, `component.radio.control.fill.unselected.focus`, `component.toggle.track.fill.off.default`, `component.toggle.track.fill.off.focus`
 
 ### `semantic.surface.elevated`
 
@@ -7326,17 +7301,17 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/component.css` (3×)
-  - Tokens que referenciam: `component.badge.bg.primary.subtle`, `component.button.bg.toned.default`, `component.button.bg.toned.focus`
+  - Tokens que referenciam: `component.badge.bg.brand.subtle`, `component.button.bg.toned.default`, `component.button.bg.toned.focus`
 
 ### `semantic.toned.background.disabled`
 
 - **Camada**: semantic
 - **Tipo**: `color`
-- **Alias**: → `foundation.color.disabled.brand.toned.light`
+- **Alias**: → `semantic.background.disabled`
 - **Sentido**: Fill de ação brand translúcida em estado disabled.
 - **Escopo**: background-color
 - **Contexto**: Aplicado em `.ds-button--toned` ou em consumidores Figma equivalentes.
-- **Decisão**: Aliasado a foundation.color.disabled.brand.toned.light em light e brand.toned.dark em dark, conforme Figma. Adicionado para fechar paridade do estado disabled toned.
+- **Decisão**: Aliasado a semantic.background.disabled para reduzir o peso visual do Button toned disabled junto aos demais estados disabled.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/component.css` (1×)
@@ -7368,17 +7343,17 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/component.css` (3×)
-  - Tokens que referenciam: `component.badge.label.color.primary.subtle`, `component.button.content.color.toned.default`, `component.button.content.color.toned.focus`
+  - Tokens que referenciam: `component.badge.label.color.brand.subtle`, `component.button.content.color.toned.default`, `component.button.content.color.toned.focus`
 
 ### `semantic.toned.content-disabled`
 
 - **Camada**: semantic
 - **Tipo**: `color`
-- **Alias**: → `foundation.color.neutral.400`
+- **Alias**: → `semantic.content.disabled`
 - **Sentido**: Cor de texto/ícone de ação brand translúcida em estado disabled.
 - **Escopo**: color, fill
 - **Contexto**: Aplicado em `.ds-button--toned` ou em consumidores Figma equivalentes.
-- **Decisão**: Aliasado a foundation.color.neutral.400 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
+- **Decisão**: Aliasado a semantic.content.disabled para manter o Button toned disabled no mesmo critério semântico dos demais conteúdos disabled.
 - **Usos**:
   - CSS:
     - `css/tokens/generated/component.css` (1×)
@@ -8495,7 +8470,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.background.default`
+- **Alias**: → `semantic.brand.background.default`
 - **Sentido**: Contrato bg de avatar, sincronizado a partir das Variables Figma atuais.
 - **Escopo**: fill
 - **Contexto**: Usado para estabilizar o contrato anatômico do componente avatar entre Figma, JSON e CSS.
@@ -8508,7 +8483,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.content-default`
+- **Alias**: → `semantic.brand.content-default`
 - **Sentido**: Contrato content.color de avatar, sincronizado a partir das Variables Figma atuais.
 - **Escopo**: text, fill, stroke
 - **Contexto**: Usado para estabilizar o contrato anatômico do componente avatar entre Figma, JSON e CSS.
@@ -8764,6 +8739,32 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/avatar.css` (2×)
 
+### `component.badge.bg.brand.solid`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.brand.background.default`
+- **Sentido**: Contrato bg.brand de badge, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: fill
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - CSS:
+    - `css/components/badge.css` (1×)
+
+### `component.badge.bg.brand.subtle`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.toned.background.default`
+- **Sentido**: Contrato bg.brand de badge, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: fill
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - CSS:
+    - `css/components/badge.css` (1×)
+
 ### `component.badge.bg.error.solid`
 
 - **Camada**: component
@@ -8828,32 +8829,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/badge.css` (2×)
-
-### `component.badge.bg.primary.solid`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.primary.background.default`
-- **Sentido**: Contrato bg.primary de badge, sincronizado a partir das Variables Figma atuais.
-- **Escopo**: fill
-- **Contexto**: Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.
-- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
-- **Usos**:
-  - CSS:
-    - `css/components/badge.css` (1×)
-
-### `component.badge.bg.primary.subtle`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.toned.background.default`
-- **Sentido**: Contrato bg.primary de badge, sincronizado a partir das Variables Figma atuais.
-- **Escopo**: fill
-- **Contexto**: Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.
-- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
-- **Usos**:
-  - CSS:
-    - `css/components/badge.css` (1×)
 
 ### `component.badge.bg.success.solid`
 
@@ -8946,6 +8921,32 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/badge.css` (1×)
 
+### `component.badge.label.color.brand.solid`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.brand.content-default`
+- **Sentido**: Contrato label.color.brand de badge, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - CSS:
+    - `css/components/badge.css` (1×)
+
+### `component.badge.label.color.brand.subtle`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.toned.content-default`
+- **Sentido**: Contrato label.color.brand de badge, sincronizado a partir das Variables Figma atuais.
+- **Escopo**: text, fill, stroke
+- **Contexto**: Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.
+- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
+- **Usos**:
+  - CSS:
+    - `css/components/badge.css` (1×)
+
 ### `component.badge.label.color.error.solid`
 
 - **Camada**: component
@@ -9017,32 +9018,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Tipo**: `color`
 - **Alias**: → `semantic.content.default`
 - **Sentido**: Contrato label.color.neutral de badge, sincronizado a partir das Variables Figma atuais.
-- **Escopo**: text, fill, stroke
-- **Contexto**: Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.
-- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
-- **Usos**:
-  - CSS:
-    - `css/components/badge.css` (1×)
-
-### `component.badge.label.color.primary.solid`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.primary.content-default`
-- **Sentido**: Contrato label.color.primary de badge, sincronizado a partir das Variables Figma atuais.
-- **Escopo**: text, fill, stroke
-- **Contexto**: Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.
-- **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
-- **Usos**:
-  - CSS:
-    - `css/components/badge.css` (1×)
-
-### `component.badge.label.color.primary.subtle`
-
-- **Camada**: component
-- **Tipo**: `color`
-- **Alias**: → `semantic.toned.content-default`
-- **Sentido**: Contrato label.color.primary de badge, sincronizado a partir das Variables Figma atuais.
 - **Escopo**: text, fill, stroke
 - **Contexto**: Usado para estabilizar o contrato anatômico do componente badge entre Figma, JSON e CSS.
 - **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
@@ -9353,11 +9328,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.background.default`
+- **Alias**: → `semantic.brand.background.default`
 - **Sentido**: Bg do Button brand default.
 - **Escopo**: background-color
 - **Contexto**: Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.primary.background.default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
+- **Decisão**: Alias 1:1 para semantic.brand.background.default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
   - CSS:
     - `css/components/button.css` (1×)
@@ -9366,11 +9341,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.background.disabled`
+- **Alias**: → `semantic.brand.background.disabled`
 - **Sentido**: Bg do Button brand disabled.
 - **Escopo**: background-color
 - **Contexto**: Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.primary.background.disabled porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
+- **Decisão**: Alias 1:1 para semantic.brand.background.disabled porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
   - CSS:
     - `css/components/button.css` (1×)
@@ -9379,11 +9354,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.background.default`
+- **Alias**: → `semantic.brand.background.default`
 - **Sentido**: Token component para button / bg / brand / focus.
 - **Escopo**: fill, background
 - **Contexto**: Usado para estabilizar o contrato component exposto por component.button.bg.
-- **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.background.default.
+- **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.brand.background.default.
 - **Usos**:
   - CSS:
     - `css/components/button.css` (1×)
@@ -9392,11 +9367,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.background.hover`
+- **Alias**: → `semantic.brand.background.hover`
 - **Sentido**: Bg do Button brand hover.
 - **Escopo**: background-color
 - **Contexto**: Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.primary.background.hover porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
+- **Decisão**: Alias 1:1 para semantic.brand.background.hover porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
   - CSS:
     - `css/components/button.css` (1×)
@@ -9405,11 +9380,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.background.active`
+- **Alias**: → `semantic.brand.background.active`
 - **Sentido**: Bg do Button brand pressed.
 - **Escopo**: background-color
 - **Contexto**: Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.primary.background.active porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
+- **Decisão**: Alias 1:1 para semantic.brand.background.active porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
   - CSS:
     - `css/components/button.css` (1×)
@@ -9743,11 +9718,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.content-default`
+- **Alias**: → `semantic.brand.content-default`
 - **Sentido**: Cor de conteúdo do Button default undefined.
 - **Escopo**: —
 - **Contexto**: Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.primary.content-default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
+- **Decisão**: Alias 1:1 para semantic.brand.content-default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
   - CSS:
     - `css/components/button.css` (1×)
@@ -9756,11 +9731,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.content-disabled`
+- **Alias**: → `semantic.brand.content-disabled`
 - **Sentido**: Cor de conteúdo do Button disabled undefined.
 - **Escopo**: —
 - **Contexto**: Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.primary.content-disabled porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
+- **Decisão**: Alias 1:1 para semantic.brand.content-disabled porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
   - CSS:
     - `css/components/button.css` (1×)
@@ -9769,11 +9744,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.content-default`
+- **Alias**: → `semantic.brand.content-default`
 - **Sentido**: Token component para button / content / color / brand / focus.
 - **Escopo**: color, text-fill, icon-fill, stroke-color
 - **Contexto**: Usado para estabilizar o contrato component exposto por component.button.content.
-- **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.content-default.
+- **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.brand.content-default.
 - **Usos**:
   - CSS:
     - `css/components/button.css` (1×)
@@ -9782,11 +9757,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.content-default`
+- **Alias**: → `semantic.brand.content-default`
 - **Sentido**: Cor de conteúdo do Button hover undefined.
 - **Escopo**: —
 - **Contexto**: Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.primary.content-default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
+- **Decisão**: Alias 1:1 para semantic.brand.content-default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
   - CSS:
     - `css/components/button.css` (1×)
@@ -9795,11 +9770,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.content-default`
+- **Alias**: → `semantic.brand.content-default`
 - **Sentido**: Cor de conteúdo do Button pressed undefined.
 - **Escopo**: —
 - **Contexto**: Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.primary.content-default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
+- **Decisão**: Alias 1:1 para semantic.brand.content-default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.
 - **Usos**:
   - CSS:
     - `css/components/button.css` (1×)
@@ -11039,11 +11014,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.background.default`
+- **Alias**: → `semantic.brand.background.default`
 - **Sentido**: Checkbox box visual checked
 - **Escopo**: checkbox, box visual, checked
 - **Contexto**: Component token do contrato Checkbox materializado no Figma para box visual.
-- **Decisão**: Alias 1:1 para semantic.primary.background.default para manter o estado checked alinhado entre Figma, CSS e docs.
+- **Decisão**: Alias 1:1 para semantic.brand.background.default para manter o estado checked alinhado entre Figma, CSS e docs.
 - **Usos**:
   - CSS:
     - `css/components/checkbox.css` (1×)
@@ -11052,11 +11027,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.background.disabled`
+- **Alias**: → `semantic.brand.background.disabled`
 - **Sentido**: Checkbox box visual checked disabled
 - **Escopo**: checkbox, box visual, checked, disabled
 - **Contexto**: Component token do contrato Checkbox materializado no Figma para box visual.
-- **Decisão**: Alias 1:1 para semantic.primary.background.disabled para manter o estado checked disabled alinhado entre Figma, CSS e docs.
+- **Decisão**: Alias 1:1 para semantic.brand.background.disabled para manter o estado checked disabled alinhado entre Figma, CSS e docs.
 - **Usos**:
   - CSS:
     - `css/components/checkbox.css` (1×)
@@ -11065,11 +11040,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.background.default`
+- **Alias**: → `semantic.brand.background.default`
 - **Sentido**: Token component para checkbox / box / fill / checked / focus.
 - **Escopo**: component-token
 - **Contexto**: Usado para estabilizar o contrato component exposto por component.checkbox.box.
-- **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.background.default.
+- **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.brand.background.default.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -11077,11 +11052,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.background.hover`
+- **Alias**: → `semantic.brand.background.hover`
 - **Sentido**: Fill da box Checkbox checked em hover.
 - **Escopo**: checkbox, box, hover
 - **Contexto**: Component token do contrato Checkbox para estado checked + hover.
-- **Decisão**: Alias para semantic.primary.background.hover porque o estado preenchido deve acompanhar a intenção semântica hover de primary.
+- **Decisão**: Alias para semantic.brand.background.hover porque o estado preenchido deve acompanhar a intenção semântica hover de brand.
 - **Usos**:
   - CSS:
     - `css/components/checkbox.css` (1×)
@@ -11090,11 +11065,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.background.default`
+- **Alias**: → `semantic.brand.background.default`
 - **Sentido**: Checkbox box visual indeterminate
 - **Escopo**: checkbox, box visual, indeterminate
 - **Contexto**: Component token do contrato Checkbox materializado no Figma para box visual.
-- **Decisão**: Alias 1:1 para semantic.primary.background.default para manter o estado indeterminate alinhado entre Figma, CSS e docs.
+- **Decisão**: Alias 1:1 para semantic.brand.background.default para manter o estado indeterminate alinhado entre Figma, CSS e docs.
 - **Usos**:
   - CSS:
     - `css/components/checkbox.css` (1×)
@@ -11103,11 +11078,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.background.disabled`
+- **Alias**: → `semantic.brand.background.disabled`
 - **Sentido**: Checkbox box visual indeterminate disabled
 - **Escopo**: checkbox, box visual, indeterminate, disabled
 - **Contexto**: Component token do contrato Checkbox materializado no Figma para box visual.
-- **Decisão**: Alias 1:1 para semantic.primary.background.disabled para manter o estado indeterminate disabled alinhado entre Figma, CSS e docs.
+- **Decisão**: Alias 1:1 para semantic.brand.background.disabled para manter o estado indeterminate disabled alinhado entre Figma, CSS e docs.
 - **Usos**:
   - CSS:
     - `css/components/checkbox.css` (1×)
@@ -11116,11 +11091,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.background.default`
+- **Alias**: → `semantic.brand.background.default`
 - **Sentido**: Token component para checkbox / box / fill / indeterminate / focus.
 - **Escopo**: component-token
 - **Contexto**: Usado para estabilizar o contrato component exposto por component.checkbox.box.
-- **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.background.default.
+- **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.brand.background.default.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -11128,11 +11103,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.background.hover`
+- **Alias**: → `semantic.brand.background.hover`
 - **Sentido**: Fill da box Checkbox indeterminate em hover.
 - **Escopo**: checkbox, box, hover
 - **Contexto**: Component token do contrato Checkbox para estado indeterminate + hover.
-- **Decisão**: Alias para semantic.primary.background.hover para manter checked e indeterminate com o mesmo fill semântico no hover.
+- **Decisão**: Alias para semantic.brand.background.hover para manter checked e indeterminate com o mesmo fill semântico no hover.
 - **Usos**:
   - CSS:
     - `css/components/checkbox.css` (1×)
@@ -11281,11 +11256,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.content-default`
+- **Alias**: → `semantic.brand.content-default`
 - **Sentido**: Checkbox marca visual checked
 - **Escopo**: checkbox, marca visual, checked
 - **Contexto**: Component token do contrato Checkbox materializado no Figma para marca visual.
-- **Decisão**: Alias 1:1 para semantic.primary.content-default para manter o estado checked alinhado entre Figma, CSS e docs.
+- **Decisão**: Alias 1:1 para semantic.brand.content-default para manter o estado checked alinhado entre Figma, CSS e docs.
 - **Usos**:
   - CSS:
     - `css/components/checkbox.css` (1×)
@@ -11294,11 +11269,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.content-disabled`
+- **Alias**: → `semantic.brand.content-disabled`
 - **Sentido**: Checkbox marca visual checked disabled
 - **Escopo**: checkbox, marca visual, checked, disabled
 - **Contexto**: Component token do contrato Checkbox materializado no Figma para marca visual.
-- **Decisão**: Alias 1:1 para semantic.primary.content-disabled para manter o estado checked disabled alinhado entre Figma, CSS e docs.
+- **Decisão**: Alias 1:1 para semantic.brand.content-disabled para manter o estado checked disabled alinhado entre Figma, CSS e docs.
 - **Usos**:
   - CSS:
     - `css/components/checkbox.css` (1×)
@@ -11307,11 +11282,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.content-default`
+- **Alias**: → `semantic.brand.content-default`
 - **Sentido**: Token component para checkbox / mark / fill / checked / focus.
 - **Escopo**: component-token
 - **Contexto**: Usado para estabilizar o contrato component exposto por component.checkbox.mark.
-- **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.content-default.
+- **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.brand.content-default.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -11319,11 +11294,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.content-hover`
+- **Alias**: → `semantic.brand.content-hover`
 - **Sentido**: Fill do checkmark Checkbox em hover.
 - **Escopo**: checkbox, mark, hover
 - **Contexto**: Component token do contrato Checkbox para a marca checked no estado hover.
-- **Decisão**: Alias para semantic.primary.content-hover para manter o conteúdo sobre primary em cadeia semântica própria de hover.
+- **Decisão**: Alias para semantic.brand.content-hover para manter o conteúdo sobre brand em cadeia semântica própria de hover.
 - **Usos**:
   - CSS:
     - `css/components/checkbox.css` (1×)
@@ -11332,11 +11307,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.content-default`
+- **Alias**: → `semantic.brand.content-default`
 - **Sentido**: Checkbox marca visual indeterminate
 - **Escopo**: checkbox, marca visual, indeterminate
 - **Contexto**: Component token do contrato Checkbox materializado no Figma para marca visual.
-- **Decisão**: Alias 1:1 para semantic.primary.content-default para manter o estado indeterminate alinhado entre Figma, CSS e docs.
+- **Decisão**: Alias 1:1 para semantic.brand.content-default para manter o estado indeterminate alinhado entre Figma, CSS e docs.
 - **Usos**:
   - CSS:
     - `css/components/checkbox.css` (1×)
@@ -11345,11 +11320,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.content-disabled`
+- **Alias**: → `semantic.brand.content-disabled`
 - **Sentido**: Checkbox marca visual indeterminate disabled
 - **Escopo**: checkbox, marca visual, indeterminate, disabled
 - **Contexto**: Component token do contrato Checkbox materializado no Figma para marca visual.
-- **Decisão**: Alias 1:1 para semantic.primary.content-disabled para manter o estado indeterminate disabled alinhado entre Figma, CSS e docs.
+- **Decisão**: Alias 1:1 para semantic.brand.content-disabled para manter o estado indeterminate disabled alinhado entre Figma, CSS e docs.
 - **Usos**:
   - CSS:
     - `css/components/checkbox.css` (1×)
@@ -11358,11 +11333,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.content-default`
+- **Alias**: → `semantic.brand.content-default`
 - **Sentido**: Token component para checkbox / mark / fill / indeterminate / focus.
 - **Escopo**: component-token
 - **Contexto**: Usado para estabilizar o contrato component exposto por component.checkbox.mark.
-- **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.content-default.
+- **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.brand.content-default.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -11370,11 +11345,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.content-hover`
+- **Alias**: → `semantic.brand.content-hover`
 - **Sentido**: Fill da marca indeterminate Checkbox em hover.
 - **Escopo**: checkbox, mark, hover
 - **Contexto**: Component token do contrato Checkbox para a marca indeterminate no estado hover.
-- **Decisão**: Alias para semantic.primary.content-hover para manter checked e indeterminate alinhados no conteúdo sobre primary.
+- **Decisão**: Alias para semantic.brand.content-hover para manter checked e indeterminate alinhados no conteúdo sobre brand.
 - **Usos**:
   - CSS:
     - `css/components/checkbox.css` (1×)
@@ -11504,11 +11479,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.background.subtle`
+- **Alias**: → `semantic.surface.default`
 - **Sentido**: Token component para field / bg / readonly.
 - **Escopo**: fill, background
 - **Contexto**: Usado para estabilizar o contrato component exposto por component.field.bg.
-- **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.background.subtle.
+- **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.surface.default.
 - **Usos**:
   - CSS:
     - `css/components/input.css` (2×)
@@ -12016,6 +11991,19 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/form-field.css` (1×)
     - `css/components/radio.css` (1×)
 
+### `component.form-field.error.padding-top.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.2xs`
+- **Sentido**: Padding superior do container Error Message no Form Field.
+- **Escopo**: Form Field, CSS-only, ADR-017
+- **Contexto**: Contrato Component CSS-only do Form Field. O Figma vivo de Input Text, Select e Textarea usa 2px de padding-top no container Error Message para afastar a mensagem da borda do focus ring.
+- **Decisão**: Alias 1:1 para semantic.space.2xs porque 2px é escala reutilizável, mas no Form Field documenta a anatomia pública do bloco de erro.
+- **Usos**:
+  - CSS:
+    - `css/components/form-field.css` (1×)
+
 ### `component.form-field.gap.default`
 
 - **Camada**: component
@@ -12430,7 +12418,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.space.xs`
+- **Alias**: → `semantic.space.2xs`
 - **Sentido**: Padding horizontal do frame externo de ícone Input Text.
 - **Escopo**: padding-inline, icon frame
 - **Contexto**: Component token do contrato do Input Text. Define o respiro horizontal do frame externo dos ícones esquerdo/direito; o tamanho e stroke do ícone são controlados por component.input.icon.{size,stroke-width}.
@@ -12586,7 +12574,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.space.xs`
+- **Alias**: → `semantic.space.2xs`
 - **Sentido**: Padding horizontal do Text Frame Input Text.
 - **Escopo**: padding-left, padding-right
 - **Contexto**: Component token do contrato do Input Text. Espelha o padding do Text Frame no Figma e alimenta o padding interno do input nativo no CSS.
@@ -12712,11 +12700,11 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/input.css` (1×)
 
-### `component.modal.action.fill.primary`
+### `component.modal.action.fill.brand`
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.background.default`
+- **Alias**: → `semantic.brand.background.default`
 - **Sentido**: Contrato action.fill de modal, sincronizado a partir das Variables Figma atuais.
 - **Escopo**: fill
 - **Contexto**: Usado para estabilizar o contrato anatômico do componente modal entre Figma, JSON e CSS.
@@ -13586,11 +13574,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.border.default`
+- **Alias**: → `semantic.brand.border.default`
 - **Sentido**: Radio control visual selected
 - **Escopo**: radio, control visual, selected
 - **Contexto**: Component token do contrato Radio materializado no Figma para control visual.
-- **Decisão**: Alias 1:1 para semantic.primary.background.default para manter o estado selected alinhado entre Figma, CSS e docs.
+- **Decisão**: Alias 1:1 para semantic.brand.background.default para manter o estado selected alinhado entre Figma, CSS e docs.
 - **Usos**:
   - CSS:
     - `css/components/radio.css` (1×)
@@ -13611,11 +13599,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.border.hover`
+- **Alias**: → `semantic.brand.border.hover`
 - **Sentido**: Border do control Radio selected em hover.
 - **Escopo**: radio, control, hover
 - **Contexto**: Component token do contrato Radio para borda selected em hover.
-- **Decisão**: Alias para semantic.primary.background.hover para preservar paridade entre fill e border do estado selected.
+- **Decisão**: Alias para semantic.brand.background.hover para preservar paridade entre fill e border do estado selected.
 - **Usos**:
   - CSS:
     - `css/components/radio.css` (1×)
@@ -13726,11 +13714,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.background.default`
+- **Alias**: → `semantic.brand.background.default`
 - **Sentido**: Radio control visual selected
 - **Escopo**: radio, control visual, selected
 - **Contexto**: Component token do contrato Radio materializado no Figma para control visual.
-- **Decisão**: Alias 1:1 para semantic.primary.background.default para manter o estado selected alinhado entre Figma, CSS e docs.
+- **Decisão**: Alias 1:1 para semantic.brand.background.default para manter o estado selected alinhado entre Figma, CSS e docs.
 - **Usos**:
   - CSS:
     - `css/components/radio.css` (1×)
@@ -13739,11 +13727,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.background.disabled`
+- **Alias**: → `semantic.brand.background.disabled`
 - **Sentido**: Radio control visual selected disabled
 - **Escopo**: radio, control visual, selected, disabled
 - **Contexto**: Component token do contrato Radio materializado no Figma para control visual.
-- **Decisão**: Alias 1:1 para semantic.primary.background.disabled para manter o estado selected disabled alinhado entre Figma, CSS e docs.
+- **Decisão**: Alias 1:1 para semantic.brand.background.disabled para manter o estado selected disabled alinhado entre Figma, CSS e docs.
 - **Usos**:
   - CSS:
     - `css/components/radio.css` (1×)
@@ -13752,11 +13740,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.background.default`
+- **Alias**: → `semantic.brand.background.default`
 - **Sentido**: Token component para radio / control / fill / selected / focus.
 - **Escopo**: component-token
 - **Contexto**: Usado para estabilizar o contrato component exposto por component.radio.control.
-- **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.background.default.
+- **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.brand.background.default.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -13764,11 +13752,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.background.hover`
+- **Alias**: → `semantic.brand.background.hover`
 - **Sentido**: Fill do control Radio selected em hover.
 - **Escopo**: radio, control, hover
 - **Contexto**: Component token do contrato Radio para estado selected + hover.
-- **Decisão**: Alias para semantic.primary.background.hover porque selected é um fill primário no hover.
+- **Decisão**: Alias para semantic.brand.background.hover porque selected é um fill brand no hover.
 - **Usos**:
   - CSS:
     - `css/components/radio.css` (1×)
@@ -13880,11 +13868,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.content-default`
+- **Alias**: → `semantic.brand.content-default`
 - **Sentido**: Radio dot interno selected
 - **Escopo**: radio, dot interno, selected
 - **Contexto**: Component token do contrato Radio materializado no Figma para dot interno.
-- **Decisão**: Alias 1:1 para semantic.primary.content-default para manter o estado selected alinhado entre Figma, CSS e docs.
+- **Decisão**: Alias 1:1 para semantic.brand.content-default para manter o estado selected alinhado entre Figma, CSS e docs.
 - **Usos**:
   - CSS:
     - `css/components/radio.css` (1×)
@@ -13893,11 +13881,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.content-disabled`
+- **Alias**: → `semantic.brand.content-disabled`
 - **Sentido**: Radio dot interno selected disabled
 - **Escopo**: radio, dot interno, selected, disabled
 - **Contexto**: Component token do contrato Radio materializado no Figma para dot interno.
-- **Decisão**: Alias 1:1 para semantic.primary.content-disabled para manter o estado selected disabled alinhado entre Figma, CSS e docs.
+- **Decisão**: Alias 1:1 para semantic.brand.content-disabled para manter o estado selected disabled alinhado entre Figma, CSS e docs.
 - **Usos**:
   - CSS:
     - `css/components/radio.css` (1×)
@@ -13906,11 +13894,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.content-default`
+- **Alias**: → `semantic.brand.content-default`
 - **Sentido**: Token component para radio / dot / fill / selected / focus.
 - **Escopo**: component-token
 - **Contexto**: Usado para estabilizar o contrato component exposto por component.radio.dot.
-- **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.content-default.
+- **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.brand.content-default.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -13918,11 +13906,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.content-hover`
+- **Alias**: → `semantic.brand.content-hover`
 - **Sentido**: Fill do dot Radio selected em hover.
 - **Escopo**: radio, dot, hover
 - **Contexto**: Component token do contrato Radio para o dot selected em hover.
-- **Decisão**: Alias para semantic.primary.content-hover para manter conteúdo sobre primary em cadeia semântica de hover.
+- **Decisão**: Alias para semantic.brand.content-hover para manter conteúdo sobre brand em cadeia semântica de hover.
 - **Usos**:
   - CSS:
     - `css/components/radio.css` (1×)
@@ -14059,7 +14047,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.space.xs`
+- **Alias**: → `semantic.space.2xs`
 - **Sentido**: Padding horizontal do frame externo do chevron Select.
 - **Escopo**: padding-inline, chevron frame
 - **Contexto**: Component token do contrato do Select. Binda o wrapper externo do chevron no Figma e separa o respiro horizontal do tamanho do SVG Lucide.
@@ -14263,7 +14251,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.space.xs`
+- **Alias**: → `semantic.space.2xs`
 - **Sentido**: Padding horizontal do frame externo de ícone Select.
 - **Escopo**: padding-inline, icon frame
 - **Contexto**: Component token do contrato do Select. Binda o wrapper externo do ícone à esquerda no Figma, mantendo o tamanho do SVG Lucide separado do respiro horizontal.
@@ -14419,7 +14407,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.space.xs`
+- **Alias**: → `semantic.space.2xs`
 - **Sentido**: Padding horizontal do Text Frame do Select.
 - **Escopo**: padding
 - **Contexto**: Component token do contrato do Select. Mantém Figma, JSON e CSS consumindo a camada Component para esta parte/propriedade.
@@ -14797,7 +14785,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.background.default`
+- **Alias**: → `semantic.brand.background.default`
 - **Sentido**: Contrato indicator.fill de tabs, sincronizado a partir das Variables Figma atuais.
 - **Escopo**: fill, stroke
 - **Contexto**: Usado para estabilizar o contrato anatômico do componente Tabs entre Figma, JSON e CSS. No CSS o indicador é border-bottom; no Figma o mesmo contrato pode ser aplicado como stroke bottom.
@@ -15327,11 +15315,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.content-default`
+- **Alias**: → `semantic.brand.content-default`
 - **Sentido**: Toggle thumb on
 - **Escopo**: toggle, thumb, on
 - **Contexto**: Component token do contrato Toggle materializado no Figma para thumb.
-- **Decisão**: Alias 1:1 para semantic.primary.content-default para manter o estado on alinhado entre Figma, CSS e docs.
+- **Decisão**: Alias 1:1 para semantic.brand.content-default para manter o estado on alinhado entre Figma, CSS e docs.
 - **Usos**:
   - CSS:
     - `css/components/toggle.css` (1×)
@@ -15340,11 +15328,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.content-disabled`
+- **Alias**: → `semantic.brand.content-disabled`
 - **Sentido**: Toggle thumb on disabled
 - **Escopo**: toggle, thumb, on, disabled
 - **Contexto**: Component token do contrato Toggle materializado no Figma para thumb.
-- **Decisão**: Alias 1:1 para semantic.primary.content-disabled para manter o estado on disabled alinhado entre Figma, CSS e docs.
+- **Decisão**: Alias 1:1 para semantic.brand.content-disabled para manter o estado on disabled alinhado entre Figma, CSS e docs.
 - **Usos**:
   - CSS:
     - `css/components/toggle.css` (1×)
@@ -15353,11 +15341,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.content-default`
+- **Alias**: → `semantic.brand.content-default`
 - **Sentido**: Token component para toggle / thumb / fill / on / focus.
 - **Escopo**: component-token
 - **Contexto**: Usado para estabilizar o contrato component exposto por component.toggle.thumb.
-- **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.content-default.
+- **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.brand.content-default.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -15365,11 +15353,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.content-hover`
+- **Alias**: → `semantic.brand.content-hover`
 - **Sentido**: Fill do thumb Toggle on em hover.
 - **Escopo**: toggle, thumb, hover
 - **Contexto**: Component token do contrato Toggle para thumb on em hover.
-- **Decisão**: Alias para semantic.primary.content-hover para manter conteúdo sobre primary em cadeia semântica de hover.
+- **Decisão**: Alias para semantic.brand.content-hover para manter conteúdo sobre brand em cadeia semântica de hover.
 - **Usos**:
   - CSS:
     - `css/components/toggle.css` (1×)
@@ -15558,11 +15546,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.background.default`
+- **Alias**: → `semantic.brand.background.default`
 - **Sentido**: Toggle track on
 - **Escopo**: toggle, track, on
 - **Contexto**: Component token do contrato Toggle materializado no Figma para track.
-- **Decisão**: Alias 1:1 para semantic.primary.background.default para manter o estado on alinhado entre Figma, CSS e docs.
+- **Decisão**: Alias 1:1 para semantic.brand.background.default para manter o estado on alinhado entre Figma, CSS e docs.
 - **Usos**:
   - CSS:
     - `css/components/toggle.css` (1×)
@@ -15571,11 +15559,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.background.disabled`
+- **Alias**: → `semantic.brand.background.disabled`
 - **Sentido**: Toggle track on disabled
 - **Escopo**: toggle, track, on, disabled
 - **Contexto**: Component token do contrato Toggle materializado no Figma para track.
-- **Decisão**: Alias 1:1 para semantic.primary.background.disabled para manter o estado on disabled alinhado entre Figma, CSS e docs.
+- **Decisão**: Alias 1:1 para semantic.brand.background.disabled para manter o estado on disabled alinhado entre Figma, CSS e docs.
 - **Usos**:
   - CSS:
     - `css/components/toggle.css` (1×)
@@ -15584,11 +15572,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.background.default`
+- **Alias**: → `semantic.brand.background.default`
 - **Sentido**: Token component para toggle / track / fill / on / focus.
 - **Escopo**: component-token
 - **Contexto**: Usado para estabilizar o contrato component exposto por component.toggle.track.
-- **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.background.default.
+- **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.brand.background.default.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
@@ -15596,11 +15584,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.background.hover`
+- **Alias**: → `semantic.brand.background.hover`
 - **Sentido**: Fill da track Toggle on em hover.
 - **Escopo**: toggle, track, hover
 - **Contexto**: Component token do contrato Toggle para estado on + hover.
-- **Decisão**: Alias para semantic.primary.background.hover porque on é o estado primário preenchido em hover.
+- **Decisão**: Alias para semantic.brand.background.hover porque on é o estado primário preenchido em hover.
 - **Usos**:
   - CSS:
     - `css/components/toggle.css` (1×)
@@ -15790,7 +15778,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.primary.content-default`
+- **Alias**: → `semantic.brand.content-default`
 - **Sentido**: Contrato label.color de tooltip, sincronizado a partir das Variables Figma atuais.
 - **Escopo**: text, fill, stroke
 - **Contexto**: Usado para estabilizar o contrato anatômico do componente tooltip entre Figma, JSON e CSS.

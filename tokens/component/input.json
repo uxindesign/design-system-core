@@ -93,7 +93,7 @@
         "padding-x": {
           "default": {
             "$type": "dimension",
-            "$value": "{semantic.space.xs}",
+            "$value": "{semantic.space.2xs}",
             "$description": "Padding horizontal do frame externo de ícone Input Text."
           }
         }
@@ -176,7 +176,7 @@
         "padding-x": {
           "default": {
             "$type": "dimension",
-            "$value": "{semantic.space.xs}",
+            "$value": "{semantic.space.2xs}",
             "$description": "Padding horizontal do Text Frame Input Text."
           }
         }

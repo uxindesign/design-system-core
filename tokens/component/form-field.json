@@ -167,6 +167,13 @@
             "$description": "Gap horizontal entre ícone e texto da mensagem de erro Form Field."
           }
         },
+        "padding-top": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.space.2xs}",
+            "$description": "Padding superior do container Error Message no Form Field."
+          }
+        },
         "icon": {
           "color": {
             "default": {

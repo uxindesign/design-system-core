@@ -113,14 +113,14 @@
       },
       "bg": {
         "default": {
-          "$value": "{semantic.primary.background.default}",
+          "$value": "{semantic.brand.background.default}",
           "$type": "color"
         }
       },
       "content": {
         "color": {
           "default": {
-            "$value": "{semantic.primary.content-default}",
+            "$value": "{semantic.brand.content-default}",
             "$type": "color"
           }
         }

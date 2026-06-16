@@ -18,9 +18,9 @@
 /* ---------------------------------------------------------
    Solid style (filled background)
    --------------------------------------------------------- */
-.ds-badge--primary.ds-badge--solid {
-  background-color: var(--ds-badge-bg-primary-solid);
-  color: var(--ds-badge-label-color-primary-solid);
+.ds-badge--brand.ds-badge--solid {
+  background-color: var(--ds-badge-bg-brand-solid);
+  color: var(--ds-badge-label-color-brand-solid);
 }
 
 .ds-badge--success.ds-badge--solid {
@@ -51,9 +51,9 @@
 /* ---------------------------------------------------------
    Subtle style (light background)
    --------------------------------------------------------- */
-.ds-badge--primary.ds-badge--subtle {
-  background-color: var(--ds-badge-bg-primary-subtle);
-  color: var(--ds-badge-label-color-primary-subtle);
+.ds-badge--brand.ds-badge--subtle {
+  background-color: var(--ds-badge-bg-brand-subtle);
+  color: var(--ds-badge-label-color-brand-subtle);
 }
 
 .ds-badge--success.ds-badge--subtle {

@@ -54,7 +54,7 @@
         },
         "color": {
           "default": {
-            "$value": "{semantic.primary.content-default}",
+            "$value": "{semantic.brand.content-default}",
             "$type": "color"
           }
         }

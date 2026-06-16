@@ -88,10 +88,10 @@ Análogo a categorias CSS-only de tokens, alguns **componentes** existem só no 
 1. **Identifique a categoria** (tabela na seção 3) — define se é fluxo Figma ou JSON-direto.
 2. **Identifique a camada** (Foundation ou Semantic):
    - Foundation: valor primitivo numérico/neutro (`radius/16`, `color/blue/600`, `z/40`).
-   - Semantic: alias com intenção (`radius.lg`, `primary.background.default`, `z.tooltip`).
+   - Semantic: alias com intenção (`radius.lg`, `brand.background.default`, `z.tooltip`).
 3. **Identifique a localização correta no JSON** — siga a estrutura existente:
    - Foundation: cada categoria tem seu arquivo (`tokens/foundation/{colors,dimension,motion,opacity,radius,shadows,stroke,typography,z-index}.json`). Categoria nova exige novo arquivo + ADR.
-   - Semantic: `tokens/semantic/light.json` e `tokens/semantic/dark.json`. Top-level keys atuais: `background`, `border`, `content`, `feedback`, `ghost`, `link`, `motion`, `opacity`, `outline`, `overlay`, `primary`, `radius`, `shadow`, `size`, `space`, `surface`, `toned`, `typography`, `z`. **Cada nova subkey vai em um destes top-levels — NUNCA aninhar fora do top-level apropriado** (ex: `z.tooltip` vai em `semantic.z`, não em `semantic.typography.z`).
+   - Semantic: `tokens/semantic/light.json` e `tokens/semantic/dark.json`. Top-level keys atuais: `background`, `border`, `brand`, `content`, `feedback`, `ghost`, `link`, `motion`, `opacity`, `outline`, `overlay`, `radius`, `shadow`, `size`, `space`, `surface`, `toned`, `typography`, `z`. **Cada nova subkey vai em um destes top-levels — NUNCA aninhar fora do top-level apropriado** (ex: `z.tooltip` vai em `semantic.z`, não em `semantic.typography.z`).
    - Component: `tokens/component/<component>.json`. Estrutura canônica DTCG: `component.<component>.<part>.<property>.<variant-or-state>` (ADR-019). No Figma, dentro da collection `Component`, usar `<component>/<part>/<property>/<variant-or-state>` sem prefixo `component/`. Component existe para contrato anatômico (`checkbox.box.size.md`, `toggle.track.width.md`), não para duplicar roles Semantic sem valor documental.
 4. **Paridade light/dark obrigatória** — toda key em `light.json` precisa estar em `dark.json` (mesmo path, valor pode diferir). Verificado por `verify:tokens`.
 5. **Adicione entry em `tokens/registry.json`** com `layer`, `type`, `references`, `sentido`, `escopo`, `contexto`, `decisao`. `verify:tokens` reporta erro se faltar.
@@ -331,10 +331,10 @@ CI (`.github/workflows/deploy.yml`) roda `build:tokens` em cada push pra main e 
 
 - **DTCG** — Design Tokens Community Group format (W3C draft). Estrutura `{ "$type": "color", "$value": "#fff" }`. JSON canônico.
 - **Foundation token** — primitivo numérico/neutro (`radius/16`, `color/blue/600`).
-- **Semantic token** — alias com intenção (`radius.lg`, `primary.background.default`).
+- **Semantic token** — alias com intenção (`radius.lg`, `brand.background.default`).
 - **Binding** — variable Figma aplicada em uma propriedade de um node (`fills`, `cornerRadius`, etc.).
 - **Drift** — divergência entre fonte de verdade e seu derivado (Figma vs JSON, JSON vs CSS).
-- **Leak** — consumidor final consumindo camada errada (CSS de componente referenciando `--ds-color-blue-600` direto em vez de `--ds-primary-background-default`).
+- **Leak** — consumidor final consumindo camada errada (CSS de componente referenciando `--ds-color-blue-600` direto em vez de `--ds-brand-background-default`).
 - **CSS-only token** — categoria sem equivalência Figma Variable (motion, z-index, shadow). ADR-016.
 - **VALUE_DRIFT / NEEDS_SYNC / ALIAS_BROKEN / CSS_ONLY / BY_DESIGN** — categorias do `sync:tokens-from-figma`. Detalhes em `docs/process-figma-sync.md`.
 - **Snapshot** — `.figma-snapshot.json` (gitignored), dump local das Variables Figma usado por scripts de sync. Regenerado manualmente via `use_figma`.

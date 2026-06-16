@@ -89,6 +89,7 @@
   font-size: var(--ds-form-field-error-font-size-default);
   font-weight: var(--ds-form-field-error-font-weight-default);
   line-height: var(--ds-form-field-error-line-height-default);
+  padding-top: var(--ds-form-field-error-padding-top-default);
   color: var(--ds-form-field-error-color-default);
 }
 

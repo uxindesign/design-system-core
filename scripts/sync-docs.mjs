@@ -466,7 +466,7 @@ console.log(`✅ ${mdPageCount} páginas MD → HTML em docs/`);
 // preservando header/nav/footer editáveis à mão.
 
 // Paths atualizados pra ADR-014/019 (action tokens role/style + Component contracts):
-// - brand.* eliminado → primary.* / toned.*
+// - primary.* eliminado → brand.* / toned.*
 // - accent.* eliminado (não havia no MVP)
 // - content.link.* → link.content-* (peer pattern)
 // - feedback.{role}.background → feedback.{role}.bg-default (compound)
@@ -486,13 +486,14 @@ const THEME_COLOR_SECTIONS = [
     'semantic.surface.overlay',
     'semantic.surface.elevated',
   ]},
-  { id: 'primary', pt: 'Primary (Brand)', en: 'Primary (Brand)', tokens: [
-    'semantic.primary.background.default',
-    'semantic.primary.background.hover',
-    'semantic.primary.background.active',
-    'semantic.primary.background.disabled',
-    'semantic.primary.content-default',
-    'semantic.primary.content-disabled',
+  { id: 'brand', pt: 'Brand', en: 'Brand', tokens: [
+    'semantic.brand.background.default',
+    'semantic.brand.background.hover',
+    'semantic.brand.background.active',
+    'semantic.brand.background.disabled',
+    'semantic.brand.content-default',
+    'semantic.brand.content-hover',
+    'semantic.brand.content-disabled',
   ]},
   { id: 'toned', pt: 'Toned', en: 'Toned', tokens: [
     'semantic.toned.background.default',

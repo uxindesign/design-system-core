@@ -59,8 +59,8 @@
   --ds-avatar-icon-stroke-width-sm: var(--ds-icon-stroke-width-regular-20);
   --ds-avatar-icon-stroke-width-md: var(--ds-icon-stroke-width-regular-24);
   --ds-avatar-icon-stroke-width-lg: var(--ds-icon-stroke-width-regular-32);
-  --ds-avatar-bg-default: var(--ds-primary-background-default);
-  --ds-avatar-content-color-default: var(--ds-primary-content-default);
+  --ds-avatar-bg-default: var(--ds-brand-background-default);
+  --ds-avatar-content-color-default: var(--ds-brand-content-default);
   --ds-badge-padding-x-default: var(--ds-space-sm); /** Padding horizontal do Badge. */
   --ds-badge-padding-y-default: var(--ds-space-2xs); /** Padding vertical do Badge. */
   --ds-badge-gap-default: var(--ds-space-xs); /** Gap interno do Badge. */
@@ -69,8 +69,8 @@
   --ds-badge-label-font-size-default: var(--ds-body-font-size-xs); /** Font-size do label Badge. */
   --ds-badge-label-line-height-default: var(--ds-body-line-height-xs); /** Line-height do label Badge. */
   --ds-badge-label-font-weight-default: var(--ds-body-font-weight-bold); /** Font-weight do label Badge. */
-  --ds-badge-label-color-primary-solid: var(--ds-primary-content-default);
-  --ds-badge-label-color-primary-subtle: var(--ds-toned-content-default);
+  --ds-badge-label-color-brand-solid: var(--ds-brand-content-default);
+  --ds-badge-label-color-brand-subtle: var(--ds-toned-content-default);
   --ds-badge-label-color-success-solid: var(--ds-feedback-success-content-contrast);
   --ds-badge-label-color-success-subtle: var(--ds-feedback-success-content-default);
   --ds-badge-label-color-warning-solid: var(--ds-feedback-warning-content-contrast);
@@ -81,8 +81,8 @@
   --ds-badge-label-color-info-subtle: var(--ds-feedback-info-content-default);
   --ds-badge-label-color-neutral-solid: var(--ds-content-strong);
   --ds-badge-label-color-neutral-subtle: var(--ds-content-default);
-  --ds-badge-bg-primary-solid: var(--ds-primary-background-default);
-  --ds-badge-bg-primary-subtle: var(--ds-toned-background-default);
+  --ds-badge-bg-brand-solid: var(--ds-brand-background-default);
+  --ds-badge-bg-brand-subtle: var(--ds-toned-background-default);
   --ds-badge-bg-success-solid: var(--ds-feedback-success-background-default);
   --ds-badge-bg-success-subtle: var(--ds-feedback-success-background-subtle);
   --ds-badge-bg-warning-solid: var(--ds-feedback-warning-background-default);
@@ -129,16 +129,15 @@
   --ds-button-icon-only-padding-sm: var(--ds-space-control-padding-6); /** Padding simétrico do Button somente-ícone sm. */
   --ds-button-icon-only-padding-md: var(--ds-space-sm); /** Padding simétrico do Button somente-ícone md. */
   --ds-button-icon-only-padding-lg: var(--ds-space-md); /** Padding simétrico do Button somente-ícone lg. */
-  --ds-button-bg-brand-default: var(--ds-primary-background-default); /** Bg do Button brand default. */
-  --ds-button-bg-brand-hover: var(--ds-primary-background-hover); /** Bg do Button brand hover. */
-  --ds-button-bg-brand-pressed: var(--ds-primary-background-active); /** Bg do Button brand pressed. */
-  --ds-button-bg-brand-focus: var(--ds-primary-background-default); /** Bg do Button brand focus. */
-  --ds-button-bg-brand-disabled: var(--ds-primary-background-disabled); /** Bg do Button brand disabled. */
+  --ds-button-bg-brand-default: var(--ds-brand-background-default); /** Bg do Button brand default. */
+  --ds-button-bg-brand-hover: var(--ds-brand-background-hover); /** Bg do Button brand hover. */
+  --ds-button-bg-brand-pressed: var(--ds-brand-background-active); /** Bg do Button brand pressed. */
+  --ds-button-bg-brand-focus: var(--ds-brand-background-default); /** Bg do Button brand focus. */
+  --ds-button-bg-brand-disabled: var(--ds-brand-background-disabled); /** Bg do Button brand disabled. */
   --ds-button-bg-toned-default: var(--ds-toned-background-default); /** Bg do Button toned default. */
   --ds-button-bg-toned-hover: var(--ds-toned-background-hover); /** Bg do Button toned hover. */
   --ds-button-bg-toned-pressed: var(--ds-toned-background-active); /** Bg do Button toned pressed. */
   --ds-button-bg-toned-focus: var(--ds-toned-background-default); /** Bg do Button toned focus. */
-  --ds-button-bg-toned-disabled: var(--ds-toned-background-disabled); /** Bg do Button toned disabled. */
   --ds-button-bg-outline-hover: var(--ds-outline-background-hover); /** Bg do Button outline hover. */
   --ds-button-bg-outline-pressed: var(--ds-background-subtle); /** Bg do Button outline pressed. */
   --ds-button-bg-ghost-hover: var(--ds-ghost-background-hover); /** Bg do Button ghost hover. */
@@ -175,16 +174,15 @@
   --ds-button-icon-stroke-width-md: var(--ds-icon-stroke-width-regular-20);
   --ds-button-icon-stroke-width-lg: var(--ds-icon-stroke-width-regular-24);
   --ds-button-focus-ring-radius-default: var(--ds-radius-lg); /** Radius do focus ring Button. */
-  --ds-button-content-color-brand-default: var(--ds-primary-content-default); /** Cor de conteúdo do Button brand default. */
-  --ds-button-content-color-brand-hover: var(--ds-primary-content-default); /** Cor de conteúdo do Button brand hover. */
-  --ds-button-content-color-brand-pressed: var(--ds-primary-content-default); /** Cor de conteúdo do Button brand pressed. */
-  --ds-button-content-color-brand-focus: var(--ds-primary-content-default); /** Cor de conteúdo do Button brand focus. */
-  --ds-button-content-color-brand-disabled: var(--ds-primary-content-disabled); /** Cor de conteúdo do Button brand disabled. */
+  --ds-button-content-color-brand-default: var(--ds-brand-content-default); /** Cor de conteúdo do Button brand default. */
+  --ds-button-content-color-brand-hover: var(--ds-brand-content-default); /** Cor de conteúdo do Button brand hover. */
+  --ds-button-content-color-brand-pressed: var(--ds-brand-content-default); /** Cor de conteúdo do Button brand pressed. */
+  --ds-button-content-color-brand-focus: var(--ds-brand-content-default); /** Cor de conteúdo do Button brand focus. */
+  --ds-button-content-color-brand-disabled: var(--ds-brand-content-disabled); /** Cor de conteúdo do Button brand disabled. */
   --ds-button-content-color-toned-default: var(--ds-toned-content-default); /** Cor de conteúdo do Button toned default. */
   --ds-button-content-color-toned-hover: var(--ds-link-content-hover); /** Cor de conteúdo do Button toned hover. */
   --ds-button-content-color-toned-pressed: var(--ds-link-content-hover); /** Cor de conteúdo do Button toned pressed. */
   --ds-button-content-color-toned-focus: var(--ds-toned-content-default); /** Cor de conteúdo do Button toned focus. */
-  --ds-button-content-color-toned-disabled: var(--ds-toned-content-disabled); /** Cor de conteúdo do Button toned disabled. */
   --ds-button-content-color-outline-default: var(--ds-outline-content-default); /** Cor de conteúdo do Button outline default. */
   --ds-button-content-color-outline-hover: var(--ds-outline-content-default); /** Cor de conteúdo do Button outline hover. */
   --ds-button-content-color-outline-pressed: var(--ds-outline-content-default); /** Cor de conteúdo do Button outline pressed. */
@@ -244,34 +242,34 @@
   --ds-checkbox-box-fill-unchecked-focus: var(--ds-surface-default); /** Fill da box Checkbox unchecked focus. */
   --ds-checkbox-box-fill-unchecked-hover: var(--ds-surface-hover); /** Fill da box Checkbox unchecked hover. */
   --ds-checkbox-box-fill-unchecked-disabled: var(--ds-background-disabled); /** Fill da box Checkbox unchecked disabled. */
-  --ds-checkbox-box-fill-checked-default: var(--ds-primary-background-default); /** Fill da box Checkbox checked default. */
-  --ds-checkbox-box-fill-checked-focus: var(--ds-primary-background-default); /** Fill da box Checkbox checked focus. */
-  --ds-checkbox-box-fill-checked-hover: var(--ds-primary-background-hover); /** Fill da box Checkbox checked hover. */
-  --ds-checkbox-box-fill-checked-disabled: var(--ds-primary-background-disabled); /** Fill da box Checkbox checked disabled. */
-  --ds-checkbox-box-fill-indeterminate-default: var(--ds-primary-background-default); /** Fill da box Checkbox indeterminate default. */
-  --ds-checkbox-box-fill-indeterminate-focus: var(--ds-primary-background-default); /** Fill da box Checkbox indeterminate focus. */
-  --ds-checkbox-box-fill-indeterminate-hover: var(--ds-primary-background-hover); /** Fill da box Checkbox indeterminate hover. */
-  --ds-checkbox-box-fill-indeterminate-disabled: var(--ds-primary-background-disabled); /** Fill da box Checkbox indeterminate disabled. */
+  --ds-checkbox-box-fill-checked-default: var(--ds-brand-background-default); /** Fill da box Checkbox checked default. */
+  --ds-checkbox-box-fill-checked-focus: var(--ds-brand-background-default); /** Fill da box Checkbox checked focus. */
+  --ds-checkbox-box-fill-checked-hover: var(--ds-brand-background-hover); /** Fill da box Checkbox checked hover. */
+  --ds-checkbox-box-fill-checked-disabled: var(--ds-brand-background-disabled); /** Fill da box Checkbox checked disabled. */
+  --ds-checkbox-box-fill-indeterminate-default: var(--ds-brand-background-default); /** Fill da box Checkbox indeterminate default. */
+  --ds-checkbox-box-fill-indeterminate-focus: var(--ds-brand-background-default); /** Fill da box Checkbox indeterminate focus. */
+  --ds-checkbox-box-fill-indeterminate-hover: var(--ds-brand-background-hover); /** Fill da box Checkbox indeterminate hover. */
+  --ds-checkbox-box-fill-indeterminate-disabled: var(--ds-brand-background-disabled); /** Fill da box Checkbox indeterminate disabled. */
   --ds-checkbox-box-border-color-unchecked-default: var(--ds-border-control-default); /** Border color da box Checkbox unchecked default. */
   --ds-checkbox-box-border-color-unchecked-focus: var(--ds-border-focus); /** Border color da box Checkbox unchecked focus. */
   --ds-checkbox-box-border-color-unchecked-hover: var(--ds-border-control-hover); /** Border color da box Checkbox unchecked hover. */
   --ds-checkbox-box-border-color-unchecked-disabled: var(--ds-border-control-disabled); /** Border color da box Checkbox unchecked disabled. */
   --ds-checkbox-box-border-color-unchecked-error: var(--ds-border-error);
-  --ds-checkbox-mark-fill-checked-default: var(--ds-primary-content-default); /** Fill do checkmark Checkbox checked default. */
-  --ds-checkbox-mark-fill-checked-focus: var(--ds-primary-content-default); /** Fill do checkmark Checkbox checked focus. */
-  --ds-checkbox-mark-fill-checked-hover: var(--ds-primary-content-hover); /** Fill do checkmark Checkbox checked hover. */
-  --ds-checkbox-mark-fill-checked-disabled: var(--ds-primary-content-disabled); /** Fill do checkmark Checkbox checked disabled. */
-  --ds-checkbox-mark-fill-indeterminate-default: var(--ds-primary-content-default); /** Fill da marca Checkbox indeterminate default. */
-  --ds-checkbox-mark-fill-indeterminate-focus: var(--ds-primary-content-default); /** Fill da marca Checkbox indeterminate focus. */
-  --ds-checkbox-mark-fill-indeterminate-hover: var(--ds-primary-content-hover); /** Fill da marca Checkbox indeterminate hover. */
-  --ds-checkbox-mark-fill-indeterminate-disabled: var(--ds-primary-content-disabled); /** Fill da marca Checkbox indeterminate disabled. */
+  --ds-checkbox-mark-fill-checked-default: var(--ds-brand-content-default); /** Fill do checkmark Checkbox checked default. */
+  --ds-checkbox-mark-fill-checked-focus: var(--ds-brand-content-default); /** Fill do checkmark Checkbox checked focus. */
+  --ds-checkbox-mark-fill-checked-hover: var(--ds-brand-content-hover); /** Fill do checkmark Checkbox checked hover. */
+  --ds-checkbox-mark-fill-checked-disabled: var(--ds-brand-content-disabled); /** Fill do checkmark Checkbox checked disabled. */
+  --ds-checkbox-mark-fill-indeterminate-default: var(--ds-brand-content-default); /** Fill da marca Checkbox indeterminate default. */
+  --ds-checkbox-mark-fill-indeterminate-focus: var(--ds-brand-content-default); /** Fill da marca Checkbox indeterminate focus. */
+  --ds-checkbox-mark-fill-indeterminate-hover: var(--ds-brand-content-hover); /** Fill da marca Checkbox indeterminate hover. */
+  --ds-checkbox-mark-fill-indeterminate-disabled: var(--ds-brand-content-disabled); /** Fill da marca Checkbox indeterminate disabled. */
   --ds-checkbox-focus-ring-radius-default: var(--ds-radius-md); /** Radius do focus ring Checkbox. */
   --ds-divider-line-color-default: var(--ds-border-subtle); /** Cor da linha do Divider. */
   --ds-divider-line-thickness-default: var(--ds-border-width-default); /** Espessura da linha do Divider. */
   --ds-divider-line-radius-default: var(--ds-radius-md); /** Raio da linha do Divider. */
   --ds-field-bg-default: var(--ds-surface-default); /** Field background default. */
   --ds-field-bg-disabled: var(--ds-background-disabled); /** Field background disabled. */
-  --ds-field-bg-readonly: var(--ds-background-subtle); /** Field background read-only. */
+  --ds-field-bg-readonly: var(--ds-surface-default); /** Field background read-only. */
   --ds-field-border-color-default: var(--ds-border-control-default); /** Field border default. */
   --ds-field-border-color-disabled: var(--ds-border-control-disabled); /** Field border disabled. */
   --ds-field-border-color-error: var(--ds-border-error); /** Field border error. */
@@ -318,6 +316,7 @@
   --ds-form-field-error-line-height-default: var(--ds-body-line-height-xs); /** Line-height da mensagem de erro Form Field. */
   --ds-form-field-error-font-weight-default: var(--ds-body-font-weight-bold); /** Font-weight da mensagem de erro Form Field. */
   --ds-form-field-error-gap-default: var(--ds-space-xs); /** Gap horizontal entre ícone e texto da mensagem de erro Form Field. */
+  --ds-form-field-error-padding-top-default: var(--ds-space-2xs); /** Padding superior do container Error Message no Form Field. */
   --ds-form-field-error-icon-size-default: var(--ds-size-xs); /** Tamanho do ícone da mensagem de erro Form Field. */
   --ds-form-field-error-icon-stroke-width-default: var(--ds-icon-stroke-width-strong-16);
   --ds-form-field-error-icon-frame-padding-x-default: var(--ds-space-2xs); /** Padding horizontal do frame externo do ícone da mensagem de erro Form Field. */
@@ -336,7 +335,7 @@
   --ds-input-icon-stroke-width-sm: var(--ds-icon-stroke-width-regular-16);
   --ds-input-icon-stroke-width-md: var(--ds-icon-stroke-width-regular-20);
   --ds-input-icon-stroke-width-lg: var(--ds-icon-stroke-width-regular-24);
-  --ds-input-icon-frame-padding-x-default: var(--ds-space-xs); /** Padding horizontal do frame externo de ícone Input Text. */
+  --ds-input-icon-frame-padding-x-default: var(--ds-space-2xs); /** Padding horizontal do frame externo de ícone Input Text. */
   --ds-input-padding-x-sm: var(--ds-space-xs); /** Padding horizontal do Field Input Text sm. */
   --ds-input-padding-x-md: var(--ds-space-sm); /** Padding horizontal do Field Input Text md. */
   --ds-input-padding-x-lg: var(--ds-space-md); /** Padding horizontal do Field Input Text lg. */
@@ -349,7 +348,7 @@
   --ds-input-text-line-height-sm: var(--ds-body-line-height-2xs); /** Line-height do texto Input Text sm. */
   --ds-input-text-line-height-md: var(--ds-body-line-height-sm); /** Line-height do texto Input Text md. */
   --ds-input-text-line-height-lg: var(--ds-body-line-height-md); /** Line-height do texto Input Text lg. */
-  --ds-input-text-frame-padding-x-default: var(--ds-space-xs); /** Padding horizontal do Text Frame Input Text. */
+  --ds-input-text-frame-padding-x-default: var(--ds-space-2xs); /** Padding horizontal do Text Frame Input Text. */
   --ds-modal-overlay-bg-default: var(--ds-background-overlay); /** Background do overlay Modal. */
   --ds-modal-overlay-padding-default: var(--ds-space-xl); /** Padding do overlay Modal. */
   --ds-modal-overlay-z-index-default: var(--ds-z-modal); /** Z-index do overlay Modal. */
@@ -414,7 +413,7 @@
   --ds-modal-close-size-lg: var(--ds-size-2xl); /** Tamanho do frame de hit-area do close Modal lg. */
   --ds-modal-close-icon-stroke-width-default: var(--ds-icon-stroke-width-regular-24);
   --ds-modal-bg-default: var(--ds-surface-elevated);
-  --ds-modal-action-fill-primary: var(--ds-primary-background-default);
+  --ds-modal-action-fill-brand: var(--ds-brand-background-default);
   --ds-radio-target-height-sm: var(--ds-size-lg); /** Altura minima da area interativa Radio sm. */
   --ds-radio-target-height-md: var(--ds-size-xl); /** Altura minima da area interativa Radio md. */
   --ds-radio-target-height-lg: var(--ds-size-2xl); /** Altura minima da area interativa Radio lg. */
@@ -429,10 +428,10 @@
   --ds-radio-control-fill-unselected-focus: var(--ds-surface-default); /** Fill do control Radio unselected focus. */
   --ds-radio-control-fill-unselected-hover: var(--ds-surface-hover); /** Fill do control Radio unselected hover. */
   --ds-radio-control-fill-unselected-disabled: var(--ds-background-disabled); /** Fill do control Radio unselected disabled. */
-  --ds-radio-control-fill-selected-default: var(--ds-primary-background-default); /** Fill do control Radio selected default. */
-  --ds-radio-control-fill-selected-focus: var(--ds-primary-background-default); /** Fill do control Radio selected focus. */
-  --ds-radio-control-fill-selected-hover: var(--ds-primary-background-hover); /** Fill do control Radio selected hover. */
-  --ds-radio-control-fill-selected-disabled: var(--ds-primary-background-disabled); /** Fill do control Radio selected disabled. */
+  --ds-radio-control-fill-selected-default: var(--ds-brand-background-default); /** Fill do control Radio selected default. */
+  --ds-radio-control-fill-selected-focus: var(--ds-brand-background-default); /** Fill do control Radio selected focus. */
+  --ds-radio-control-fill-selected-hover: var(--ds-brand-background-hover); /** Fill do control Radio selected hover. */
+  --ds-radio-control-fill-selected-disabled: var(--ds-brand-background-disabled); /** Fill do control Radio selected disabled. */
   --ds-radio-control-border-color-unselected-default: var(--ds-border-control-default); /** Border color do control Radio unselected default. */
   --ds-radio-control-border-color-unselected-focus: var(--ds-border-focus); /** Border color do control Radio unselected focus. */
   --ds-radio-control-border-color-unselected-hover: var(--ds-border-control-hover); /** Border color do control Radio unselected hover. */
@@ -445,10 +444,10 @@
   --ds-radio-dot-size-md: var(--ds-control-radio-dot-size-md); /** Tamanho do dot Radio md. Component-specific; nao ha Semantic reutilizavel. */
   --ds-radio-dot-size-lg: var(--ds-control-radio-dot-size-lg); /** Tamanho do dot Radio lg. Component-specific; nao ha Semantic reutilizavel. */
   --ds-radio-dot-radius-default: var(--ds-radius-full); /** Radius do dot Radio. */
-  --ds-radio-dot-fill-selected-default: var(--ds-primary-content-default); /** Fill do dot Radio selected default. */
-  --ds-radio-dot-fill-selected-focus: var(--ds-primary-content-default); /** Fill do dot Radio selected focus. */
-  --ds-radio-dot-fill-selected-hover: var(--ds-primary-content-hover); /** Fill do dot Radio selected hover. */
-  --ds-radio-dot-fill-selected-disabled: var(--ds-primary-content-disabled); /** Fill do dot Radio selected disabled. */
+  --ds-radio-dot-fill-selected-default: var(--ds-brand-content-default); /** Fill do dot Radio selected default. */
+  --ds-radio-dot-fill-selected-focus: var(--ds-brand-content-default); /** Fill do dot Radio selected focus. */
+  --ds-radio-dot-fill-selected-hover: var(--ds-brand-content-hover); /** Fill do dot Radio selected hover. */
+  --ds-radio-dot-fill-selected-disabled: var(--ds-brand-content-disabled); /** Fill do dot Radio selected disabled. */
   --ds-radio-focus-ring-radius-default: var(--ds-radius-full); /** Radius do focus ring Radio. */
   --ds-select-chevron-size-sm: var(--ds-size-xs); /** Tamanho do ícone do chevron Select sm. */
   --ds-select-chevron-size-md: var(--ds-size-sm); /** Tamanho do ícone do chevron Select md. */
@@ -456,7 +455,7 @@
   --ds-select-chevron-stroke-width-sm: var(--ds-icon-stroke-width-regular-16);
   --ds-select-chevron-stroke-width-md: var(--ds-icon-stroke-width-regular-20);
   --ds-select-chevron-stroke-width-lg: var(--ds-icon-stroke-width-regular-24);
-  --ds-select-chevron-frame-padding-x-default: var(--ds-space-xs); /** Padding horizontal do frame externo do chevron Select. */
+  --ds-select-chevron-frame-padding-x-default: var(--ds-space-2xs); /** Padding horizontal do frame externo do chevron Select. */
   --ds-select-focus-ring-radius-default: var(--ds-radius-lg); /** Radius do focus ring Select. */
   --ds-select-gap-sm: var(--ds-space-xs); /** Gap interno do Field Select sm. */
   --ds-select-gap-md: var(--ds-space-xs); /** Gap interno do Field Select md. */
@@ -470,7 +469,7 @@
   --ds-select-icon-stroke-width-sm: var(--ds-icon-stroke-width-regular-16);
   --ds-select-icon-stroke-width-md: var(--ds-icon-stroke-width-regular-20);
   --ds-select-icon-stroke-width-lg: var(--ds-icon-stroke-width-regular-24);
-  --ds-select-icon-frame-padding-x-default: var(--ds-space-xs); /** Padding horizontal do frame externo de ícone Select. */
+  --ds-select-icon-frame-padding-x-default: var(--ds-space-2xs); /** Padding horizontal do frame externo de ícone Select. */
   --ds-select-padding-x-sm: var(--ds-space-xs); /** Padding horizontal do Field Select sm. */
   --ds-select-padding-x-md: var(--ds-space-sm); /** Padding horizontal do Field Select md. */
   --ds-select-padding-x-lg: var(--ds-space-md); /** Padding horizontal do Field Select lg. */
@@ -483,7 +482,7 @@
   --ds-select-text-line-height-sm: var(--ds-body-line-height-2xs); /** Line-height do texto Select sm. */
   --ds-select-text-line-height-md: var(--ds-body-line-height-sm); /** Line-height do texto Select md. */
   --ds-select-text-line-height-lg: var(--ds-body-line-height-md); /** Line-height do texto Select lg. */
-  --ds-select-text-frame-padding-x-default: var(--ds-space-xs); /** Padding horizontal do Text Frame Select. */
+  --ds-select-text-frame-padding-x-default: var(--ds-space-2xs); /** Padding horizontal do Text Frame Select. */
   --ds-skeleton-text-height-default: var(--ds-content-placeholder-text-height-default); /** Altura do Skeleton Text. */
   --ds-skeleton-text-radius-default: var(--ds-radius-md); /** Radius do Skeleton Text. */
   --ds-skeleton-text-fill-default: var(--ds-background-subtle);
@@ -505,7 +504,7 @@
   --ds-tabs-item-padding-top-default: var(--ds-space-md); /** Espaçamento interno superior do item de Tabs. */
   --ds-tabs-item-indicator-gap-default: var(--ds-space-md); /** Espaço entre o rótulo e o indicador de Tabs. */
   --ds-tabs-indicator-height-default: var(--ds-border-width-strong); /** Altura do indicador de Tabs. */
-  --ds-tabs-indicator-fill-active: var(--ds-primary-background-default);
+  --ds-tabs-indicator-fill-active: var(--ds-brand-background-default);
   --ds-tabs-label-font-size-default: var(--ds-body-font-size-sm); /** Tamanho da fonte do rótulo de Tabs. */
   --ds-tabs-label-line-height-default: var(--ds-body-line-height-sm); /** Altura de linha do rótulo de Tabs. */
   --ds-tabs-label-font-weight-default: var(--ds-body-font-weight-bold); /** Peso da fonte do rótulo de Tabs. */
@@ -548,10 +547,10 @@
   --ds-toggle-track-fill-off-focus: var(--ds-surface-default); /** Fill da track Toggle off focus. */
   --ds-toggle-track-fill-off-hover: var(--ds-surface-hover); /** Fill da track Toggle off hover. */
   --ds-toggle-track-fill-off-disabled: var(--ds-background-disabled); /** Fill da track Toggle off disabled. */
-  --ds-toggle-track-fill-on-default: var(--ds-primary-background-default); /** Fill da track Toggle on default. */
-  --ds-toggle-track-fill-on-focus: var(--ds-primary-background-default); /** Fill da track Toggle on focus. */
-  --ds-toggle-track-fill-on-hover: var(--ds-primary-background-hover); /** Fill da track Toggle on hover. */
-  --ds-toggle-track-fill-on-disabled: var(--ds-primary-background-disabled); /** Fill da track Toggle on disabled. */
+  --ds-toggle-track-fill-on-default: var(--ds-brand-background-default); /** Fill da track Toggle on default. */
+  --ds-toggle-track-fill-on-focus: var(--ds-brand-background-default); /** Fill da track Toggle on focus. */
+  --ds-toggle-track-fill-on-hover: var(--ds-brand-background-hover); /** Fill da track Toggle on hover. */
+  --ds-toggle-track-fill-on-disabled: var(--ds-brand-background-disabled); /** Fill da track Toggle on disabled. */
   --ds-toggle-track-border-color-off-default: var(--ds-border-control-default); /** Border color da track Toggle off default. */
   --ds-toggle-track-border-color-off-focus: var(--ds-border-focus); /** Border color da track Toggle off focus. */
   --ds-toggle-track-border-color-off-hover: var(--ds-border-control-hover); /** Border color da track Toggle off hover. */
@@ -565,10 +564,10 @@
   --ds-toggle-thumb-fill-off-focus: var(--ds-content-default); /** Fill do thumb Toggle off focus. */
   --ds-toggle-thumb-fill-off-hover: var(--ds-content-hover); /** Fill do thumb Toggle off hover. */
   --ds-toggle-thumb-fill-off-disabled: var(--ds-content-disabled); /** Fill do thumb Toggle off disabled. */
-  --ds-toggle-thumb-fill-on-default: var(--ds-primary-content-default); /** Fill do thumb Toggle on default. */
-  --ds-toggle-thumb-fill-on-focus: var(--ds-primary-content-default); /** Fill do thumb Toggle on focus. */
-  --ds-toggle-thumb-fill-on-hover: var(--ds-primary-content-hover); /** Fill do thumb Toggle on hover. */
-  --ds-toggle-thumb-fill-on-disabled: var(--ds-primary-content-disabled); /** Fill do thumb Toggle on disabled. */
+  --ds-toggle-thumb-fill-on-default: var(--ds-brand-content-default); /** Fill do thumb Toggle on default. */
+  --ds-toggle-thumb-fill-on-focus: var(--ds-brand-content-default); /** Fill do thumb Toggle on focus. */
+  --ds-toggle-thumb-fill-on-hover: var(--ds-brand-content-hover); /** Fill do thumb Toggle on hover. */
+  --ds-toggle-thumb-fill-on-disabled: var(--ds-brand-content-disabled); /** Fill do thumb Toggle on disabled. */
   --ds-toggle-focus-ring-radius-default: var(--ds-radius-full); /** Radius do focus ring Toggle. */
   --ds-tooltip-content-padding-x-default: var(--ds-space-sm); /** Padding horizontal do content Tooltip. */
   --ds-tooltip-content-padding-y-default: var(--ds-space-xs); /** Padding vertical do content Tooltip. */
@@ -577,7 +576,7 @@
   --ds-tooltip-label-font-size-default: var(--ds-body-font-size-sm); /** Font-size do label Tooltip. */
   --ds-tooltip-label-line-height-default: var(--ds-body-line-height-sm); /** Line-height do label Tooltip. */
   --ds-tooltip-label-font-weight-default: var(--ds-body-font-weight-regular); /** Font-weight do label Tooltip. */
-  --ds-tooltip-label-color-default: var(--ds-primary-content-default);
+  --ds-tooltip-label-color-default: var(--ds-brand-content-default);
   --ds-tooltip-arrow-base-default: var(--ds-space-sm); /** Base visual da seta Tooltip. */
   --ds-tooltip-arrow-depth-default: var(--ds-space-xs); /** Profundidade visual da seta Tooltip. */
   --ds-tooltip-arrow-fill-default: var(--ds-background-inverse);
@@ -594,6 +593,8 @@
   --ds-alert-close-icon-color-error-filled: var(--ds-icon-color-error-contrast);
   --ds-alert-close-icon-color-info-filled: var(--ds-icon-color-info-contrast);
   --ds-alert-close-icon-color-subtle: var(--ds-icon-color-default);
+  --ds-button-bg-toned-disabled: var(--ds-toned-background-disabled); /** Bg do Button toned disabled. */
+  --ds-button-content-color-toned-disabled: var(--ds-toned-content-disabled); /** Cor de conteúdo do Button toned disabled. */
   --ds-checkbox-box-border-color-unchecked-error-hover: var(--ds-border-error-hover);
   --ds-field-border-color-error-hover: var(--ds-border-error-hover); /** Field border error hover. */
   --ds-form-field-error-icon-color-default: var(--ds-icon-color-error); /** Cor do ícone da mensagem de erro Form Field. */
@@ -601,8 +602,8 @@
   --ds-input-icon-color-disabled: var(--ds-icon-color-disabled); /** Cor do ícone Input Text disabled. */
   --ds-modal-close-color-default: var(--ds-icon-color-default); /** Cor do ícone de fechar da Modal. Alias para content/default. */
   --ds-radio-control-border-color-unselected-error-hover: var(--ds-border-error-hover);
-  --ds-radio-control-border-color-selected-default: var(--ds-primary-border-default); /** Border color do control Radio selected default. */
-  --ds-radio-control-border-color-selected-hover: var(--ds-primary-border-hover); /** Border color do control Radio selected hover. */
+  --ds-radio-control-border-color-selected-default: var(--ds-brand-border-default); /** Border color do control Radio selected default. */
+  --ds-radio-control-border-color-selected-hover: var(--ds-brand-border-hover); /** Border color do control Radio selected hover. */
   --ds-select-chevron-color-default: var(--ds-icon-color-default); /** Cor do chevron Select. */
   --ds-select-chevron-color-disabled: var(--ds-icon-color-disabled); /** Cor do chevron Select disabled. */
   --ds-select-icon-color-default: var(--ds-icon-color-default); /** Cor do ícone Select. */

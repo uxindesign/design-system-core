@@ -105,44 +105,44 @@
           "checked": {
             "default": {
               "$type": "color",
-              "$value": "{semantic.primary.background.default}",
+              "$value": "{semantic.brand.background.default}",
               "$description": "Fill da box Checkbox checked default."
             },
             "focus": {
               "$type": "color",
-              "$value": "{semantic.primary.background.default}",
+              "$value": "{semantic.brand.background.default}",
               "$description": "Fill da box Checkbox checked focus."
             },
             "hover": {
               "$type": "color",
-              "$value": "{semantic.primary.background.hover}",
+              "$value": "{semantic.brand.background.hover}",
               "$description": "Fill da box Checkbox checked hover."
             },
             "disabled": {
               "$type": "color",
-              "$value": "{semantic.primary.background.disabled}",
+              "$value": "{semantic.brand.background.disabled}",
               "$description": "Fill da box Checkbox checked disabled."
             }
           },
           "indeterminate": {
             "default": {
               "$type": "color",
-              "$value": "{semantic.primary.background.default}",
+              "$value": "{semantic.brand.background.default}",
               "$description": "Fill da box Checkbox indeterminate default."
             },
             "focus": {
               "$type": "color",
-              "$value": "{semantic.primary.background.default}",
+              "$value": "{semantic.brand.background.default}",
               "$description": "Fill da box Checkbox indeterminate focus."
             },
             "hover": {
               "$type": "color",
-              "$value": "{semantic.primary.background.hover}",
+              "$value": "{semantic.brand.background.hover}",
               "$description": "Fill da box Checkbox indeterminate hover."
             },
             "disabled": {
               "$type": "color",
-              "$value": "{semantic.primary.background.disabled}",
+              "$value": "{semantic.brand.background.disabled}",
               "$description": "Fill da box Checkbox indeterminate disabled."
             }
           }
@@ -185,44 +185,44 @@
           "checked": {
             "default": {
               "$type": "color",
-              "$value": "{semantic.primary.content-default}",
+              "$value": "{semantic.brand.content-default}",
               "$description": "Fill do checkmark Checkbox checked default."
             },
             "focus": {
               "$type": "color",
-              "$value": "{semantic.primary.content-default}",
+              "$value": "{semantic.brand.content-default}",
               "$description": "Fill do checkmark Checkbox checked focus."
             },
             "hover": {
               "$type": "color",
-              "$value": "{semantic.primary.content-hover}",
+              "$value": "{semantic.brand.content-hover}",
               "$description": "Fill do checkmark Checkbox checked hover."
             },
             "disabled": {
               "$type": "color",
-              "$value": "{semantic.primary.content-disabled}",
+              "$value": "{semantic.brand.content-disabled}",
               "$description": "Fill do checkmark Checkbox checked disabled."
             }
           },
           "indeterminate": {
             "default": {
               "$type": "color",
-              "$value": "{semantic.primary.content-default}",
+              "$value": "{semantic.brand.content-default}",
               "$description": "Fill da marca Checkbox indeterminate default."
             },
             "focus": {
               "$type": "color",
-              "$value": "{semantic.primary.content-default}",
+              "$value": "{semantic.brand.content-default}",
               "$description": "Fill da marca Checkbox indeterminate focus."
             },
             "hover": {
               "$type": "color",
-              "$value": "{semantic.primary.content-hover}",
+              "$value": "{semantic.brand.content-hover}",
               "$description": "Fill da marca Checkbox indeterminate hover."
             },
             "disabled": {
               "$type": "color",
-              "$value": "{semantic.primary.content-disabled}",
+              "$value": "{semantic.brand.content-disabled}",
               "$description": "Fill da marca Checkbox indeterminate disabled."
             }
           }

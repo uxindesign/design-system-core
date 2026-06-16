@@ -303,7 +303,7 @@ function auditComponentAliasSemantics(sourceName, targetName, issues, modeId) {
     addIssue(issues, "variable", "component-icon-color-alias", sourceName, { modeId, target: targetName });
   }
 
-  if (sourceName.includes("/border-color/") && !/^(border|primary\/border|outline\/border|feedback\/[a-z]+\/border)\//.test(targetName)) {
+  if (sourceName.includes("/border-color/") && !/^(border|brand\/border|outline\/border|feedback\/[a-z]+\/border)\//.test(targetName)) {
     addIssue(issues, "variable", "component-border-color-alias", sourceName, { modeId, target: targetName });
   }
 
@@ -311,7 +311,7 @@ function auditComponentAliasSemantics(sourceName, targetName, issues, modeId) {
     addIssue(issues, "variable", "component-focus-ring-color-alias", sourceName, { modeId, target: targetName });
   }
 
-  if (sourceName.includes("/bg/") && !/^(background|surface|overlay|primary\/background|feedback|toned\/background|outline\/background|ghost\/background)\//.test(targetName)) {
+  if (sourceName.includes("/bg/") && !/^(background|surface|overlay|brand\/background|feedback|toned\/background|outline\/background|ghost\/background)\//.test(targetName)) {
     addIssue(issues, "variable", "component-background-alias", sourceName, { modeId, target: targetName });
   }
 }

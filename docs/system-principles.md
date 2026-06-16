@@ -38,7 +38,7 @@ Nem tudo tem a mesma fonte de verdade. Quando houver divergência, resolve-se po
 
 Regras operacionais:
 
-- **Arquitetura > valor**. Figma pode decidir "`brand.hover` é `blue.800` em vez de `blue.700`" (valor). Figma **não pode** decidir "vamos criar `semantic.color.primary.foreground`" se ADR-011 define que semantic de cor usa `brand.content.contrast` (arquitetura). Mudança arquitetural exige ADR antes da implementação.
+- **Arquitetura > valor**. Figma pode decidir "`brand.hover` é `blue.800` em vez de `blue.700`" (valor). Figma **não pode** decidir "vamos criar `semantic.brand.foreground`" se ADR-011 define que semantic de cor usa `brand.content.contrast` (arquitetura). Mudança arquitetural exige ADR antes da implementação.
 - **Figma > JSON em valor**. Quando o Figma mostra `blue.800` pra `brand.hover` e o JSON mostra `blue.700`, o Figma prevalece — rodar `npm run sync:tokens-from-figma:write` pra consolidar.
 - **Figma > CSS em design visual**. Se o Figma mostra um componente com border-radius de 8px e o CSS renderiza 6px, o Figma prevalece e o CSS deve ser corrigido.
 - **JSON > Figma em consolidação**. JSON é a fonte que alimenta build-tokens.mjs. Nenhum pipeline consome Figma direto. Então mesmo que "Figma é autoridade de valor", **nada roda sem JSON atualizado**. O sync é a ponte.
@@ -54,7 +54,7 @@ Quando um token é criado, renomeado, removido ou tem seu valor alterado, o impa
 
 Na prática:
 
-- Antes de alterar `semantic.color.primary.hover`, verificar quais componentes usam esse token (Button, Input, Select, Checkbox, Toggle, Tabs, links, etc.).
+- Antes de alterar `semantic.brand.background.hover`, verificar quais componentes usam esse token (Button, Input, Select, Checkbox, Toggle, Tabs, links, etc.).
 - Antes de criar um novo token semântico, verificar se o conceito é genuinamente reutilizável por múltiplos componentes. Se só um componente precisa, é token de componente — não semântico.
 - Antes de propor tokens dimensionais (height, padding, font-size), auditar os componentes que compartilham estrutura similar. Exemplo: Button, Input, Select e Textarea compartilham controles interativos com sizes sm/md/lg — tokens dimensionais devem refletir isso (ver ADR-006).
 
@@ -69,7 +69,7 @@ Critério operacional para decidir a camada de um novo token: a pergunta não é
   que a categoria seja restrita a um tipo (ex: `semantic.size.control.*` se
   aplica só a controles interativos), o token mora em semantic porque expressa
   intenção compartilhada. Exemplos: `semantic.border.control.*` (ADR-009),
-  `semantic.space.control.*` (ADR-006), `semantic.color.primary.toned.*` (ADR-007).
+  `semantic.space.control.*` (ADR-006), `semantic.toned.*` (ADR-007).
 - **Component** quando a decisão descreve anatomia pública de um componente
   (`target`, `box`, `track`, `thumb`, `icon`, `label`) e precisa ser consumida
   por CSS, Figma bindings ou docs como contrato do componente. Component tokens

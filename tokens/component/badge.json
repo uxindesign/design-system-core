@@ -59,9 +59,9 @@
           }
         },
         "color": {
-          "primary": {
+          "brand": {
             "solid": {
-              "$value": "{semantic.primary.content-default}",
+              "$value": "{semantic.brand.content-default}",
               "$type": "color"
             },
             "subtle": {
@@ -122,9 +122,9 @@
         }
       },
       "bg": {
-        "primary": {
+        "brand": {
           "solid": {
-            "$value": "{semantic.primary.background.default}",
+            "$value": "{semantic.brand.background.default}",
             "$type": "color"
           },
           "subtle": {

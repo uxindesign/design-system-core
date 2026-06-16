@@ -137,27 +137,27 @@
       "bg": {
         "brand": {
           "default": {
-            "$value": "{semantic.primary.background.default}",
+            "$value": "{semantic.brand.background.default}",
             "$type": "color",
             "$description": "Bg do Button brand default."
           },
           "hover": {
-            "$value": "{semantic.primary.background.hover}",
+            "$value": "{semantic.brand.background.hover}",
             "$type": "color",
             "$description": "Bg do Button brand hover."
           },
           "pressed": {
-            "$value": "{semantic.primary.background.active}",
+            "$value": "{semantic.brand.background.active}",
             "$type": "color",
             "$description": "Bg do Button brand pressed."
           },
           "focus": {
-            "$value": "{semantic.primary.background.default}",
+            "$value": "{semantic.brand.background.default}",
             "$type": "color",
             "$description": "Bg do Button brand focus."
           },
           "disabled": {
-            "$value": "{semantic.primary.background.disabled}",
+            "$value": "{semantic.brand.background.disabled}",
             "$type": "color",
             "$description": "Bg do Button brand disabled."
           }
@@ -409,27 +409,27 @@
         "color": {
           "brand": {
             "default": {
-              "$value": "{semantic.primary.content-default}",
+              "$value": "{semantic.brand.content-default}",
               "$type": "color",
               "$description": "Cor de conteúdo do Button brand default."
             },
             "hover": {
-              "$value": "{semantic.primary.content-default}",
+              "$value": "{semantic.brand.content-default}",
               "$type": "color",
               "$description": "Cor de conteúdo do Button brand hover."
             },
             "pressed": {
-              "$value": "{semantic.primary.content-default}",
+              "$value": "{semantic.brand.content-default}",
               "$type": "color",
               "$description": "Cor de conteúdo do Button brand pressed."
             },
             "focus": {
-              "$value": "{semantic.primary.content-default}",
+              "$value": "{semantic.brand.content-default}",
               "$type": "color",
               "$description": "Cor de conteúdo do Button brand focus."
             },
             "disabled": {
-              "$value": "{semantic.primary.content-disabled}",
+              "$value": "{semantic.brand.content-disabled}",
               "$type": "color",
               "$description": "Cor de conteúdo do Button brand disabled."
             }

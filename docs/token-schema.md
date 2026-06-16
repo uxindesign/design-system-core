@@ -41,7 +41,7 @@ Arquivos canônicos em `tokens/foundation/`:
 Categorias raiz em light.json:
 
 ```
-semantic.primary.*
+semantic.brand.*
 semantic.toned.*
 semantic.outline.*
 semantic.ghost.*

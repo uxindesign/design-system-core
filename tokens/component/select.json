@@ -50,7 +50,7 @@
         "padding-x": {
           "default": {
             "$type": "dimension",
-            "$value": "{semantic.space.xs}",
+            "$value": "{semantic.space.2xs}",
             "$description": "Padding horizontal do frame externo do chevron Select."
           }
         }
@@ -147,7 +147,7 @@
         "padding-x": {
           "default": {
             "$type": "dimension",
-            "$value": "{semantic.space.xs}",
+            "$value": "{semantic.space.2xs}",
             "$description": "Padding horizontal do frame externo de ícone Select."
           }
         }
@@ -230,7 +230,7 @@
         "padding-x": {
           "default": {
             "$type": "dimension",
-            "$value": "{semantic.space.xs}",
+            "$value": "{semantic.space.2xs}",
             "$description": "Padding horizontal do Text Frame Select."
           }
         }

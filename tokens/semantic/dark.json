@@ -1,6 +1,6 @@
 {
   "semantic": {
-    "primary": {
+    "brand": {
       "$description": "Ação primária (brand solid). ADR-014.",
       "content-default": {
         "$type": "color",
@@ -36,15 +36,15 @@
       "border": {
         "default": {
           "$type": "color",
-          "$value": "{semantic.primary.background.default}"
+          "$value": "{semantic.brand.background.default}"
         },
         "hover": {
           "$type": "color",
-          "$value": "{semantic.primary.background.hover}"
+          "$value": "{semantic.brand.background.hover}"
         },
         "disabled": {
           "$type": "color",
-          "$value": "{semantic.primary.background.disabled}"
+          "$value": "{semantic.brand.background.disabled}"
         }
       }
     },
@@ -56,7 +56,7 @@
       },
       "content-disabled": {
         "$type": "color",
-        "$value": "{foundation.color.neutral.600}"
+        "$value": "{semantic.content.disabled}"
       },
       "background": {
         "default": {
@@ -73,7 +73,7 @@
         },
         "disabled": {
           "$type": "color",
-          "$value": "{foundation.color.disabled.brand.toned.dark}"
+          "$value": "{semantic.background.disabled}"
         }
       }
     },
@@ -350,7 +350,7 @@
       },
       "disabled": {
         "$type": "color",
-        "$value": "{foundation.color.neutral.800}",
+        "$value": "{foundation.color.neutral.900}",
         "$description": "Background de componentes em estado disabled (antes state.disabled.background)."
       }
     },
@@ -378,7 +378,7 @@
       },
       "disabled": {
         "$type": "color",
-        "$value": "{foundation.color.neutral.600}",
+        "$value": "{foundation.color.neutral.500}",
         "$description": "Conteúdo em estado disabled. Isento de contraste WCAG. Unifica text/disabled e state/disabled/foreground (ADR-011)."
       },
       "inverse": {
@@ -387,7 +387,7 @@
       },
       "brand": {
         "$type": "color",
-        "$value": "{semantic.primary.background.default}",
+        "$value": "{semantic.brand.background.default}",
         "$description": "Conteúdo brand sobre superfície neutra."
       }
     },
@@ -678,7 +678,7 @@
       },
       "control-disabled": {
         "$type": "color",
-        "$value": "{foundation.color.neutral.700}",
+        "$value": "{foundation.color.neutral.800}",
         "$description": "Border for disabled controls in dark mode. Exempt from contrast requirements per WCAG 1.4.3."
       }
     },

@@ -20,13 +20,13 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
    --------------------------------------------------------- */
 /* --_hfg: header foreground — white in both modes on brand bg */
 .ds-site-header {
-  --_hfg: var(--ds-primary-content-default); /* light: neutral-50 (white) */
+  --_hfg: var(--ds-brand-content-default); /* light: neutral-50 (white) */
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   height: 64px;
-  background-color: var(--ds-primary-background-default); /* light: 600-level brand */
+  background-color: var(--ds-brand-background-default); /* light: 600-level brand */
   border-bottom: none;
   box-shadow: none;
   display: flex;
@@ -62,7 +62,7 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--ds-primary-background-default);
+  color: var(--ds-brand-background-default);
   font-weight: var(--ds-font-weight-bold);
   font-size: var(--ds-font-size-14);
 }
@@ -194,7 +194,7 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
 }
 
 .ds-sidebar__heading:hover {
-  color: var(--ds-primary-background-default);
+  color: var(--ds-brand-background-default);
 }
 
 .ds-sidebar__heading:focus-visible {
@@ -262,7 +262,7 @@ html[lang="en"] body [data-lang="pt"] { display: none; }
 
 .ds-sidebar__link--active {
   color: var(--ds-content-strong);
-  border-left-color: var(--ds-primary-background-default);
+  border-left-color: var(--ds-brand-background-default);
   background-color: var(--ds-toned-background-default);
   font-weight: var(--ds-font-weight-semibold);
 }
@@ -654,7 +654,7 @@ body .ds-md-generated-banner code {
 }
 
 .ds-component-card:hover {
-  border-color: var(--ds-primary-background-default);
+  border-color: var(--ds-brand-background-default);
   box-shadow: var(--ds-shadow-sm);
 }
 
@@ -958,8 +958,8 @@ main.ds-main a:not([class]):hover {
   width: var(--ds-size-sm);
   height: var(--ds-size-sm);
   border-radius: var(--ds-radius-full);
-  background-color: var(--ds-primary-background-default);
-  color: var(--ds-primary-content-default);
+  background-color: var(--ds-brand-background-default);
+  color: var(--ds-brand-content-default);
   font-size: var(--ds-body-font-size-2xs);
   font-weight: var(--ds-body-font-weight-bold);
   display: flex;
@@ -1000,6 +1000,6 @@ main.ds-main a:not([class]):hover {
 }
 
 .ds-related__link:hover {
-  border-color: var(--ds-primary-background-default);
+  border-color: var(--ds-brand-background-default);
   background-color: var(--ds-overlay-subtle);
 }

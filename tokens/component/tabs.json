@@ -43,7 +43,7 @@
         },
         "fill": {
           "active": {
-            "$value": "{semantic.primary.background.default}",
+            "$value": "{semantic.brand.background.default}",
             "$type": "color"
           }
         }

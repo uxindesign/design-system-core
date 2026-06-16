@@ -11,7 +11,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -28,8 +28,8 @@
           "semantic.ghost.content-default",
           "semantic.background.inverse",
           "semantic.content.strong",
-          "semantic.primary.content-default",
-          "semantic.primary.content-hover",
+          "semantic.brand.content-default",
+          "semantic.brand.content-hover",
           "semantic.feedback.success.content-contrast",
           "semantic.feedback.error.content-contrast",
           "semantic.surface.default",
@@ -53,17 +53,18 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
           {
             "file": "css/tokens/generated/theme-light.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [
-          "semantic.surface.hover"
+          "semantic.surface.hover",
+          "semantic.background.disabled"
         ],
         "figma": []
       }
@@ -78,7 +79,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -90,8 +91,8 @@
         "tokens": [
           "semantic.outline.border-disabled",
           "semantic.background.subtle",
-          "semantic.background.disabled",
-          "semantic.border.subtle"
+          "semantic.border.subtle",
+          "semantic.border.control-disabled"
         ],
         "figma": []
       }
@@ -106,7 +107,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -116,15 +117,14 @@
           },
           {
             "file": "css/tokens/generated/theme-light.css",
-            "count": 2
+            "count": 1
           }
         ],
         "tokens": [
           "semantic.outline.content-default",
           "semantic.outline.border-hover",
           "semantic.content.hover",
-          "semantic.border.default",
-          "semantic.border.control-disabled"
+          "semantic.border.default"
         ],
         "figma": []
       }
@@ -139,7 +139,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -149,17 +149,15 @@
           },
           {
             "file": "css/tokens/generated/theme-light.css",
-            "count": 5
+            "count": 3
           }
         ],
         "tokens": [
           "semantic.content.default",
           "semantic.content.subtle",
-          "semantic.toned.content-disabled",
           "semantic.outline.content-disabled",
           "semantic.ghost.content-disabled",
-          "semantic.link.content-disabled",
-          "semantic.content.disabled"
+          "semantic.link.content-disabled"
         ],
         "figma": []
       }
@@ -174,25 +172,27 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
           {
             "file": "css/tokens/generated/theme-dark.css",
-            "count": 3
+            "count": 4
           },
           {
             "file": "css/tokens/generated/theme-light.css",
-            "count": 3
+            "count": 4
           }
         ],
         "tokens": [
           "semantic.outline.border-default",
+          "semantic.content.disabled",
           "semantic.border.strong",
           "semantic.border.control-default",
           "semantic.outline.border-default",
           "semantic.content.subtle",
+          "semantic.content.disabled",
           "semantic.border.control-default"
         ],
         "figma": []
@@ -208,13 +208,13 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
           {
             "file": "css/tokens/generated/theme-dark.css",
-            "count": 6
+            "count": 4
           },
           {
             "file": "css/tokens/generated/theme-light.css",
@@ -222,12 +222,10 @@
           }
         ],
         "tokens": [
-          "semantic.toned.content-disabled",
           "semantic.outline.content-disabled",
           "semantic.ghost.content-disabled",
           "semantic.link.content-disabled",
           "semantic.surface.elevated",
-          "semantic.content.disabled",
           "semantic.content.default",
           "semantic.border.strong"
         ],
@@ -244,13 +242,13 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
           {
             "file": "css/tokens/generated/theme-dark.css",
-            "count": 3
+            "count": 2
           },
           {
             "file": "css/tokens/generated/theme-light.css",
@@ -260,7 +258,6 @@
         "tokens": [
           "semantic.surface.overlay",
           "semantic.border.default",
-          "semantic.border.control-disabled",
           "semantic.outline.content-default",
           "semantic.outline.border-hover",
           "semantic.content.hover"
@@ -278,7 +275,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -292,8 +289,8 @@
           "semantic.surface.hover",
           "semantic.surface.raised",
           "semantic.background.subtle",
-          "semantic.background.disabled",
-          "semantic.border.subtle"
+          "semantic.border.subtle",
+          "semantic.border.control-disabled"
         ],
         "figma": []
       }
@@ -308,13 +305,13 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
           {
             "file": "css/tokens/generated/theme-dark.css",
-            "count": 7
+            "count": 8
           },
           {
             "file": "css/tokens/generated/theme-light.css",
@@ -322,11 +319,12 @@
           }
         ],
         "tokens": [
-          "semantic.primary.content-default",
-          "semantic.primary.content-hover",
+          "semantic.brand.content-default",
+          "semantic.brand.content-hover",
           "semantic.feedback.success.content-contrast",
           "semantic.feedback.error.content-contrast",
           "semantic.surface.default",
+          "semantic.background.disabled",
           "semantic.content.inverse",
           "semantic.border.inverse",
           "semantic.ghost.content-default",
@@ -346,7 +344,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -371,7 +369,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -389,7 +387,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -414,7 +412,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -432,7 +430,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -457,7 +455,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -488,7 +486,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -518,7 +516,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -543,7 +541,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -568,7 +566,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -586,7 +584,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -611,7 +609,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -629,7 +627,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -647,7 +645,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -665,7 +663,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -683,7 +681,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -701,7 +699,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -719,7 +717,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -737,7 +735,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -755,7 +753,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -773,7 +771,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -791,7 +789,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -809,7 +807,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -827,7 +825,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.error.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.error.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -845,7 +843,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.error.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.error.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -870,7 +868,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.error.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.error.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -888,7 +886,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.error.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.error.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -913,7 +911,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.error.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.error.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -940,7 +938,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.error.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.error.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -973,7 +971,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.error.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.error.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -1000,7 +998,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.error.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.error.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -1025,7 +1023,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.error.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.error.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -1051,7 +1049,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.error.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.error.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -1081,7 +1079,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.error.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.error.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -1099,7 +1097,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.warning.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.warning.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -1117,7 +1115,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.warning.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.warning.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -1142,7 +1140,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.warning.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.warning.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -1160,7 +1158,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.warning.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.warning.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -1191,7 +1189,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.warning.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.warning.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -1216,7 +1214,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.warning.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.warning.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -1246,7 +1244,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.warning.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.warning.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -1271,7 +1269,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.warning.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.warning.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -1296,7 +1294,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.warning.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.warning.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -1314,7 +1312,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.warning.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.warning.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -1339,7 +1337,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.warning.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.warning.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -1369,7 +1367,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.success.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.success.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -1387,7 +1385,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.success.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.success.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -1412,7 +1410,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.success.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.success.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -1430,7 +1428,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.success.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.success.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -1455,7 +1453,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.success.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.success.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -1481,7 +1479,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.success.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.success.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -1512,7 +1510,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.success.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.success.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -1537,7 +1535,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.success.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.success.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -1562,7 +1560,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.success.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.success.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -1587,7 +1585,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.success.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.success.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -1617,7 +1615,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.success.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.success.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -1635,7 +1633,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -1653,7 +1651,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -1671,7 +1669,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -1689,7 +1687,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -1707,7 +1705,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -1725,7 +1723,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -1743,7 +1741,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -1761,7 +1759,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -1779,7 +1777,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -1797,7 +1795,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -1815,7 +1813,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -1833,7 +1831,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -1851,7 +1849,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -1869,7 +1867,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -1887,7 +1885,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -1905,7 +1903,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -1923,7 +1921,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -1941,7 +1939,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -1959,7 +1957,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -1977,7 +1975,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -1995,7 +1993,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -2013,7 +2011,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -2031,7 +2029,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -2049,7 +2047,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -2067,7 +2065,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -2085,7 +2083,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -2103,7 +2101,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -2121,7 +2119,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -2139,7 +2137,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -2157,7 +2155,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -2175,7 +2173,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -2193,7 +2191,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -2211,7 +2209,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -2229,7 +2227,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -2247,7 +2245,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -2265,7 +2263,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -2283,7 +2281,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -2301,7 +2299,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -2319,7 +2317,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -2337,7 +2335,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -2355,7 +2353,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -2373,7 +2371,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -2391,7 +2389,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -2409,7 +2407,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -2648,8 +2646,8 @@
       "usos": {
         "css": [],
         "tokens": [
-          "semantic.primary.content-disabled",
-          "semantic.primary.content-disabled",
+          "semantic.brand.content-disabled",
+          "semantic.brand.content-disabled",
           "semantic.feedback.success.content-disabled",
           "semantic.feedback.error.content-disabled"
         ],
@@ -4150,12 +4148,11 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 5
+            "count": 4
           }
         ],
         "tokens": [
           "component.button.bg.outline.pressed",
-          "component.field.bg.readonly",
           "component.skeleton.text.fill.default",
           "component.skeleton.circle.fill.default",
           "component.skeleton.rectangle.fill.default"
@@ -4228,7 +4225,7 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 9
+            "count": 10
           }
         ],
         "tokens": [
@@ -4237,6 +4234,7 @@
           "component.checkbox.box.fill.unchecked.default",
           "component.checkbox.box.fill.unchecked.focus",
           "component.field.bg.default",
+          "component.field.bg.readonly",
           "component.radio.control.fill.unselected.default",
           "component.radio.control.fill.unselected.focus",
           "component.toggle.track.fill.off.default",
@@ -4450,14 +4448,14 @@
     "semantic.content.disabled": {
       "layer": "semantic",
       "type": "color",
-      "references": "foundation.color.neutral.400",
+      "references": "foundation.color.neutral.500",
       "sentido": "Texto disabled — controles e items inativos.",
       "escopo": [
         "color",
         "fill"
       ],
       "contexto": "Aplicado em `color` de texto. Pareado com background apropriado pra atender contraste WCAG AA (4.5:1 normal, 3:1 large).",
-      "decisao": "Aliasado a foundation.color.neutral.400.",
+      "decisao": "Aliasado a foundation.color.neutral.500 para reduzir a opacidade visual do estado disabled sem tornar o conteúdo indistinto.",
       "usos": {
         "css": [
           {
@@ -4466,11 +4464,11 @@
           },
           {
             "file": "css/tokens/generated/theme-dark.css",
-            "count": 1
+            "count": 2
           },
           {
             "file": "css/tokens/generated/theme-light.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [
@@ -4480,7 +4478,9 @@
           "component.form-field.helper.color.disabled",
           "component.tabs.label.color.disabled",
           "component.toggle.thumb.fill.off.disabled",
+          "semantic.toned.content-disabled",
           "semantic.icon.color.disabled",
+          "semantic.toned.content-disabled",
           "semantic.icon.color.disabled"
         ],
         "figma": []
@@ -5581,7 +5581,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -5599,7 +5599,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -5617,7 +5617,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -5642,7 +5642,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -5667,7 +5667,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -5677,8 +5677,8 @@
           }
         ],
         "tokens": [
-          "semantic.primary.background.default",
-          "semantic.primary.background.active",
+          "semantic.brand.background.default",
+          "semantic.brand.background.active",
           "semantic.toned.content-default",
           "semantic.link.content-default"
         ],
@@ -5695,7 +5695,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -5705,7 +5705,7 @@
           }
         ],
         "tokens": [
-          "semantic.primary.background.hover",
+          "semantic.brand.background.hover",
           "semantic.border.focus",
           "semantic.border.brand",
           "semantic.border.control-hover"
@@ -5723,7 +5723,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -5733,7 +5733,7 @@
           }
         ],
         "tokens": [
-          "semantic.primary.background.default",
+          "semantic.brand.background.default",
           "semantic.border.focus",
           "semantic.border.brand",
           "semantic.border.control-hover"
@@ -5751,7 +5751,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -5761,7 +5761,7 @@
           }
         ],
         "tokens": [
-          "semantic.primary.background.hover",
+          "semantic.brand.background.hover",
           "semantic.toned.content-default",
           "semantic.link.content-default"
         ],
@@ -5778,7 +5778,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -5788,7 +5788,7 @@
           }
         ],
         "tokens": [
-          "semantic.primary.background.active",
+          "semantic.brand.background.active",
           "semantic.link.content-hover",
           "semantic.link.content-active"
         ],
@@ -5805,7 +5805,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [],
@@ -5823,7 +5823,7 @@
         "stroke",
         "text"
       ],
-      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`primary.*`, `feedback.info.*`, `content.*`, `background.*`).",
+      "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.info.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
         "css": [
@@ -5862,7 +5862,7 @@
         "figma": []
       }
     },
-    "semantic.primary.content-default": {
+    "semantic.brand.content-default": {
       "layer": "semantic",
       "type": "color",
       "references": "foundation.color.neutral.50",
@@ -5871,18 +5871,13 @@
         "color",
         "fill"
       ],
-      "contexto": "Aplicado em `.ds-button--primary` ou em consumidores Figma equivalentes.",
+      "contexto": "Aplicado em `.ds-button--brand` ou em consumidores Figma equivalentes.",
       "decisao": "Aliasado a foundation.color.neutral.50 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).",
       "usos": {
-        "css": [
-          {
-            "file": "css/tokens/generated/component.css",
-            "count": 15
-          }
-        ],
+        "css": [],
         "tokens": [
           "component.avatar.content.color.default",
-          "component.badge.label.color.primary.solid",
+          "component.badge.label.color.brand.solid",
           "component.button.content.color.brand.default",
           "component.button.content.color.brand.hover",
           "component.button.content.color.brand.pressed",
@@ -5900,7 +5895,7 @@
         "figma": []
       }
     },
-    "semantic.primary.content-disabled": {
+    "semantic.brand.content-disabled": {
       "layer": "semantic",
       "type": "color",
       "references": "foundation.color.overlay.white.80",
@@ -5909,15 +5904,10 @@
         "color",
         "fill"
       ],
-      "contexto": "Aplicado em `.ds-button--primary` ou em consumidores Figma equivalentes.",
+      "contexto": "Aplicado em `.ds-button--brand` ou em consumidores Figma equivalentes.",
       "decisao": "Aliasado a foundation.color.overlay.white.80 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).",
       "usos": {
-        "css": [
-          {
-            "file": "css/tokens/generated/component.css",
-            "count": 5
-          }
-        ],
+        "css": [],
         "tokens": [
           "component.button.content.color.brand.disabled",
           "component.checkbox.mark.fill.checked.disabled",
@@ -5947,7 +5937,7 @@
           }
         ],
         "tokens": [
-          "component.badge.label.color.primary.subtle",
+          "component.badge.label.color.brand.subtle",
           "component.button.content.color.toned.default",
           "component.button.content.color.toned.focus"
         ],
@@ -5957,14 +5947,14 @@
     "semantic.toned.content-disabled": {
       "layer": "semantic",
       "type": "color",
-      "references": "foundation.color.neutral.400",
+      "references": "semantic.content.disabled",
       "sentido": "Cor de texto/ícone de ação brand translúcida em estado disabled.",
       "escopo": [
         "color",
         "fill"
       ],
       "contexto": "Aplicado em `.ds-button--toned` ou em consumidores Figma equivalentes.",
-      "decisao": "Aliasado a foundation.color.neutral.400 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).",
+      "decisao": "Aliasado a semantic.content.disabled para manter o Button toned disabled no mesmo critério semântico dos demais conteúdos disabled.",
       "usos": {
         "css": [
           {
@@ -6587,25 +6577,35 @@
     "semantic.background.disabled": {
       "layer": "semantic",
       "type": "color",
-      "references": "foundation.color.neutral.200",
+      "references": "foundation.color.neutral.100",
       "sentido": "Background pra estados disabled — neutral subtle.",
       "escopo": [
         "background-color"
       ],
       "contexto": "Use em containers, frames, cards. Não consuma Foundation `color.*` direto.",
-      "decisao": "Aliasado a foundation.color.neutral.200 (light) — Semantic encapsula a decisão de qual tom da paleta usar.",
+      "decisao": "Aliasado a foundation.color.neutral.100 no light e neutral.900 no dark para reduzir o peso visual de campos disabled.",
       "usos": {
         "css": [
           {
             "file": "css/tokens/generated/component.css",
             "count": 4
+          },
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
           }
         ],
         "tokens": [
           "component.checkbox.box.fill.unchecked.disabled",
           "component.field.bg.disabled",
           "component.radio.control.fill.unselected.disabled",
-          "component.toggle.track.fill.off.disabled"
+          "component.toggle.track.fill.off.disabled",
+          "semantic.toned.background.disabled",
+          "semantic.toned.background.disabled"
         ],
         "figma": []
       }
@@ -6669,14 +6669,14 @@
     "semantic.border.control-disabled": {
       "layer": "semantic",
       "type": "color",
-      "references": "foundation.color.neutral.300",
+      "references": "foundation.color.neutral.200",
       "sentido": "Border control-disabled.",
       "escopo": [
         "border-color",
         "outline-color"
       ],
       "contexto": "Use em `border-color` ou `outline-color`. Pareado com border-width apropriado.",
-      "decisao": "Aliasado a foundation.color.neutral.300.",
+      "decisao": "Aliasado a foundation.color.neutral.200 no light e neutral.800 no dark para acompanhar o novo background disabled dos campos.",
       "usos": {
         "css": [
           {
@@ -6710,14 +6710,20 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 5
+            "count": 11
           }
         ],
         "tokens": [
           "component.badge.padding-y.default",
           "component.button.gap.sm",
           "component.form-field.label-row.gap.default",
+          "component.form-field.error.padding-top.default",
           "component.form-field.error.icon-frame.padding-x.default",
+          "component.input.icon-frame.padding-x.default",
+          "component.input.text-frame.padding-x.default",
+          "component.select.chevron-frame.padding-x.default",
+          "component.select.icon-frame.padding-x.default",
+          "component.select.text-frame.padding-x.default",
           "component.toggle.thumb.inset.default"
         ],
         "figma": []
@@ -6751,7 +6757,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 25
+            "count": 20
           },
           {
             "file": "css/utilities/layout.css",
@@ -6771,16 +6777,11 @@
           "component.form-field.stack.gap.default",
           "component.input.gap.sm",
           "component.input.gap.md",
-          "component.input.icon-frame.padding-x.default",
           "component.input.padding-x.sm",
-          "component.input.text-frame.padding-x.default",
           "component.radio.content.gap.default",
-          "component.select.chevron-frame.padding-x.default",
           "component.select.gap.sm",
           "component.select.gap.md",
-          "component.select.icon-frame.padding-x.default",
           "component.select.padding-x.sm",
-          "component.select.text-frame.padding-x.default",
           "component.toggle.content.gap.default",
           "component.tooltip.content.padding-y.default",
           "component.tooltip.arrow.depth.default"
@@ -8387,7 +8388,7 @@
         "figma": []
       }
     },
-    "semantic.primary.background.default": {
+    "semantic.brand.background.default": {
       "layer": "semantic",
       "type": "color",
       "references": "foundation.color.brand.600",
@@ -8395,47 +8396,34 @@
       "escopo": [
         "background-color"
       ],
-      "contexto": "Aplicado em `.ds-button--primary` ou em consumidores Figma equivalentes.",
+      "contexto": "Aplicado em `.ds-button--brand` ou em consumidores Figma equivalentes.",
       "decisao": "Aliasado a foundation.color.brand.600 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).",
       "usos": {
-        "css": [
-          {
-            "file": "css/tokens/generated/component.css",
-            "count": 14
-          },
-          {
-            "file": "css/tokens/generated/theme-dark.css",
-            "count": 2
-          },
-          {
-            "file": "css/tokens/generated/theme-light.css",
-            "count": 2
-          }
-        ],
+        "css": [],
         "tokens": [
           "component.avatar.bg.default",
-          "component.badge.bg.primary.solid",
+          "component.badge.bg.brand.solid",
           "component.button.bg.brand.default",
           "component.button.bg.brand.focus",
           "component.checkbox.box.fill.checked.default",
           "component.checkbox.box.fill.checked.focus",
           "component.checkbox.box.fill.indeterminate.default",
           "component.checkbox.box.fill.indeterminate.focus",
-          "component.modal.action.fill.primary",
+          "component.modal.action.fill.brand",
           "component.radio.control.fill.selected.default",
           "component.radio.control.fill.selected.focus",
           "component.tabs.indicator.fill.active",
           "component.toggle.track.fill.on.default",
           "component.toggle.track.fill.on.focus",
-          "semantic.primary.border.default",
+          "semantic.brand.border.default",
           "semantic.content.brand",
-          "semantic.primary.border.default",
+          "semantic.brand.border.default",
           "semantic.content.brand"
         ],
         "figma": []
       }
     },
-    "semantic.primary.background.hover": {
+    "semantic.brand.background.hover": {
       "layer": "semantic",
       "type": "color",
       "references": "foundation.color.brand.700",
@@ -8443,36 +8431,23 @@
       "escopo": [
         "background-color"
       ],
-      "contexto": "Aplicado em `.ds-button--primary` ou em consumidores Figma equivalentes.",
+      "contexto": "Aplicado em `.ds-button--brand` ou em consumidores Figma equivalentes.",
       "decisao": "Aliasado a foundation.color.brand.700 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).",
       "usos": {
-        "css": [
-          {
-            "file": "css/tokens/generated/component.css",
-            "count": 5
-          },
-          {
-            "file": "css/tokens/generated/theme-dark.css",
-            "count": 1
-          },
-          {
-            "file": "css/tokens/generated/theme-light.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [
           "component.button.bg.brand.hover",
           "component.checkbox.box.fill.checked.hover",
           "component.checkbox.box.fill.indeterminate.hover",
           "component.radio.control.fill.selected.hover",
           "component.toggle.track.fill.on.hover",
-          "semantic.primary.border.hover",
-          "semantic.primary.border.hover"
+          "semantic.brand.border.hover",
+          "semantic.brand.border.hover"
         ],
         "figma": []
       }
     },
-    "semantic.primary.background.active": {
+    "semantic.brand.background.active": {
       "layer": "semantic",
       "type": "color",
       "references": "foundation.color.brand.800",
@@ -8480,22 +8455,17 @@
       "escopo": [
         "background-color"
       ],
-      "contexto": "Aplicado em `.ds-button--primary` ou em consumidores Figma equivalentes.",
+      "contexto": "Aplicado em `.ds-button--brand` ou em consumidores Figma equivalentes.",
       "decisao": "Aliasado a foundation.color.brand.800 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).",
       "usos": {
-        "css": [
-          {
-            "file": "css/tokens/generated/component.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [
           "component.button.bg.brand.pressed"
         ],
         "figma": []
       }
     },
-    "semantic.primary.background.disabled": {
+    "semantic.brand.background.disabled": {
       "layer": "semantic",
       "type": "color",
       "references": "foundation.color.disabled.brand.light",
@@ -8503,31 +8473,18 @@
       "escopo": [
         "background-color"
       ],
-      "contexto": "Aplicado em `.ds-button--primary` ou em consumidores Figma equivalentes.",
+      "contexto": "Aplicado em `.ds-button--brand` ou em consumidores Figma equivalentes.",
       "decisao": "Aliasado a foundation.color.disabled.brand.light — escolha de tom feita no Figma (ADR-014: action × style × prop × state).",
       "usos": {
-        "css": [
-          {
-            "file": "css/tokens/generated/component.css",
-            "count": 5
-          },
-          {
-            "file": "css/tokens/generated/theme-dark.css",
-            "count": 1
-          },
-          {
-            "file": "css/tokens/generated/theme-light.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [
           "component.button.bg.brand.disabled",
           "component.checkbox.box.fill.checked.disabled",
           "component.checkbox.box.fill.indeterminate.disabled",
           "component.radio.control.fill.selected.disabled",
           "component.toggle.track.fill.on.disabled",
-          "semantic.primary.border.disabled",
-          "semantic.primary.border.disabled"
+          "semantic.brand.border.disabled",
+          "semantic.brand.border.disabled"
         ],
         "figma": []
       }
@@ -8550,7 +8507,7 @@
           }
         ],
         "tokens": [
-          "component.badge.bg.primary.subtle",
+          "component.badge.bg.brand.subtle",
           "component.button.bg.toned.default",
           "component.button.bg.toned.focus"
         ],
@@ -10219,8 +10176,8 @@
           }
         ],
         "tokens": [
-          "semantic.primary.background.disabled",
-          "semantic.primary.background.disabled"
+          "semantic.brand.background.disabled",
+          "semantic.brand.background.disabled"
         ],
         "figma": []
       }
@@ -10252,15 +10209,8 @@
       "contexto": "Aplicado via Semantic toned.background.disabled. Não use direto em componente.",
       "decisao": "Nome aninhado espelha Figma color/disabled/... e ADR-011 (sem achatamento com hífen). Alpha preserva forma do botão sem competir visualmente — sinaliza não-interativo sem sumir.",
       "usos": {
-        "css": [
-          {
-            "file": "css/tokens/generated/theme-light.css",
-            "count": 1
-          }
-        ],
-        "tokens": [
-          "semantic.toned.background.disabled"
-        ],
+        "css": [],
+        "tokens": [],
         "figma": []
       }
     },
@@ -10275,15 +10225,8 @@
       "contexto": "Aplicado via Semantic toned.background.disabled. Não use direto em componente.",
       "decisao": "Nome aninhado espelha Figma color/disabled/... e ADR-011 (sem achatamento com hífen). Alpha preserva forma do botão sem competir visualmente — sinaliza não-interativo sem sumir.",
       "usos": {
-        "css": [
-          {
-            "file": "css/tokens/generated/theme-dark.css",
-            "count": 1
-          }
-        ],
-        "tokens": [
-          "semantic.toned.background.disabled"
-        ],
+        "css": [],
+        "tokens": [],
         "figma": []
       }
     },
@@ -10382,13 +10325,13 @@
     "semantic.toned.background.disabled": {
       "layer": "semantic",
       "type": "color",
-      "references": "foundation.color.disabled.brand.toned.light",
+      "references": "semantic.background.disabled",
       "sentido": "Fill de ação brand translúcida em estado disabled.",
       "escopo": [
         "background-color"
       ],
       "contexto": "Aplicado em `.ds-button--toned` ou em consumidores Figma equivalentes.",
-      "decisao": "Aliasado a foundation.color.disabled.brand.toned.light em light e brand.toned.dark em dark, conforme Figma. Adicionado para fechar paridade do estado disabled toned.",
+      "decisao": "Aliasado a semantic.background.disabled para reduzir o peso visual do Button toned disabled junto aos demais estados disabled.",
       "usos": {
         "css": [
           {
@@ -15352,13 +15295,13 @@
     "component.button.bg.brand.default": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.background.default",
+      "references": "semantic.brand.background.default",
       "sentido": "Bg do Button brand default.",
       "escopo": [
         "background-color"
       ],
       "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
-      "decisao": "Alias 1:1 para semantic.primary.background.default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "decisao": "Alias 1:1 para semantic.brand.background.default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
       "usos": {
         "css": [
           {
@@ -15373,13 +15316,13 @@
     "component.button.bg.brand.hover": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.background.hover",
+      "references": "semantic.brand.background.hover",
       "sentido": "Bg do Button brand hover.",
       "escopo": [
         "background-color"
       ],
       "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
-      "decisao": "Alias 1:1 para semantic.primary.background.hover porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "decisao": "Alias 1:1 para semantic.brand.background.hover porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
       "usos": {
         "css": [
           {
@@ -15394,13 +15337,13 @@
     "component.button.bg.brand.pressed": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.background.active",
+      "references": "semantic.brand.background.active",
       "sentido": "Bg do Button brand pressed.",
       "escopo": [
         "background-color"
       ],
       "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
-      "decisao": "Alias 1:1 para semantic.primary.background.active porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "decisao": "Alias 1:1 para semantic.brand.background.active porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
       "usos": {
         "css": [
           {
@@ -15415,13 +15358,13 @@
     "component.button.bg.brand.disabled": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.background.disabled",
+      "references": "semantic.brand.background.disabled",
       "sentido": "Bg do Button brand disabled.",
       "escopo": [
         "background-color"
       ],
       "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
-      "decisao": "Alias 1:1 para semantic.primary.background.disabled porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "decisao": "Alias 1:1 para semantic.brand.background.disabled porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
       "usos": {
         "css": [
           {
@@ -16081,11 +16024,11 @@
     "component.button.content.color.brand.default": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.content-default",
+      "references": "semantic.brand.content-default",
       "sentido": "Cor de conteúdo do Button default undefined.",
       "escopo": [],
       "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
-      "decisao": "Alias 1:1 para semantic.primary.content-default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "decisao": "Alias 1:1 para semantic.brand.content-default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
       "usos": {
         "css": [
           {
@@ -16100,11 +16043,11 @@
     "component.button.content.color.brand.hover": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.content-default",
+      "references": "semantic.brand.content-default",
       "sentido": "Cor de conteúdo do Button hover undefined.",
       "escopo": [],
       "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
-      "decisao": "Alias 1:1 para semantic.primary.content-default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "decisao": "Alias 1:1 para semantic.brand.content-default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
       "usos": {
         "css": [
           {
@@ -16119,11 +16062,11 @@
     "component.button.content.color.brand.pressed": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.content-default",
+      "references": "semantic.brand.content-default",
       "sentido": "Cor de conteúdo do Button pressed undefined.",
       "escopo": [],
       "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
-      "decisao": "Alias 1:1 para semantic.primary.content-default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "decisao": "Alias 1:1 para semantic.brand.content-default porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
       "usos": {
         "css": [
           {
@@ -16138,11 +16081,11 @@
     "component.button.content.color.brand.disabled": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.content-disabled",
+      "references": "semantic.brand.content-disabled",
       "sentido": "Cor de conteúdo do Button disabled undefined.",
       "escopo": [],
       "contexto": "Component token do contrato visual Button por estilo e estado. Binda os variants vivos no Figma e evita consumo direto de Semantic no CSS.",
-      "decisao": "Alias 1:1 para semantic.primary.content-disabled porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
+      "decisao": "Alias 1:1 para semantic.brand.content-disabled porque o valor é reutilizável no sistema, mas no Button documenta uma parte pública e estável da anatomia do componente.",
       "usos": {
         "css": [
           {
@@ -16725,7 +16668,7 @@
     "component.input.text-frame.padding-x.default": {
       "layer": "component",
       "type": "dimension",
-      "references": "semantic.space.xs",
+      "references": "semantic.space.2xs",
       "sentido": "Padding horizontal do Text Frame Input Text.",
       "escopo": [
         "padding-left",
@@ -17423,7 +17366,7 @@
     "component.select.text-frame.padding-x.default": {
       "layer": "component",
       "type": "dimension",
-      "references": "semantic.space.xs",
+      "references": "semantic.space.2xs",
       "sentido": "Padding horizontal do Text Frame do Select.",
       "escopo": [
         "padding"
@@ -17453,6 +17396,29 @@
       ],
       "contexto": "Contrato Component CSS-only do Form Field. O Figma vivo de Input Text, Select e Textarea usa Error Message horizontal com gap 4px entre ícone e texto.",
       "decisao": "Alias 1:1 para semantic.space.xs porque 4px é escala reutilizável, mas no Form Field documenta a anatomia pública da linha de erro.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/form-field.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.form-field.error.padding-top.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.2xs",
+      "sentido": "Padding superior do container Error Message no Form Field.",
+      "escopo": [
+        "Form Field",
+        "CSS-only",
+        "ADR-017"
+      ],
+      "contexto": "Contrato Component CSS-only do Form Field. O Figma vivo de Input Text, Select e Textarea usa 2px de padding-top no container Error Message para afastar a mensagem da borda do focus ring.",
+      "decisao": "Alias 1:1 para semantic.space.2xs porque 2px é escala reutilizável, mas no Form Field documenta a anatomia pública do bloco de erro.",
       "usos": {
         "css": [
           {
@@ -17807,7 +17773,7 @@
     "component.input.icon-frame.padding-x.default": {
       "layer": "component",
       "type": "dimension",
-      "references": "semantic.space.xs",
+      "references": "semantic.space.2xs",
       "sentido": "Padding horizontal do frame externo de ícone Input Text.",
       "escopo": [
         "padding-inline",
@@ -17829,7 +17795,7 @@
     "component.select.chevron-frame.padding-x.default": {
       "layer": "component",
       "type": "dimension",
-      "references": "semantic.space.xs",
+      "references": "semantic.space.2xs",
       "sentido": "Padding horizontal do frame externo do chevron Select.",
       "escopo": [
         "padding-inline",
@@ -17851,7 +17817,7 @@
     "component.select.icon-frame.padding-x.default": {
       "layer": "component",
       "type": "dimension",
-      "references": "semantic.space.xs",
+      "references": "semantic.space.2xs",
       "sentido": "Padding horizontal do frame externo de ícone Select.",
       "escopo": [
         "padding-inline",
@@ -17920,7 +17886,7 @@
     "component.checkbox.box.fill.checked.default": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.background.default",
+      "references": "semantic.brand.background.default",
       "sentido": "Checkbox box visual checked",
       "escopo": [
         "checkbox",
@@ -17928,7 +17894,7 @@
         "checked"
       ],
       "contexto": "Component token do contrato Checkbox materializado no Figma para box visual.",
-      "decisao": "Alias 1:1 para semantic.primary.background.default para manter o estado checked alinhado entre Figma, CSS e docs.",
+      "decisao": "Alias 1:1 para semantic.brand.background.default para manter o estado checked alinhado entre Figma, CSS e docs.",
       "usos": {
         "css": [
           {
@@ -17943,7 +17909,7 @@
     "component.checkbox.box.fill.checked.disabled": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.background.disabled",
+      "references": "semantic.brand.background.disabled",
       "sentido": "Checkbox box visual checked disabled",
       "escopo": [
         "checkbox",
@@ -17952,7 +17918,7 @@
         "disabled"
       ],
       "contexto": "Component token do contrato Checkbox materializado no Figma para box visual.",
-      "decisao": "Alias 1:1 para semantic.primary.background.disabled para manter o estado checked disabled alinhado entre Figma, CSS e docs.",
+      "decisao": "Alias 1:1 para semantic.brand.background.disabled para manter o estado checked disabled alinhado entre Figma, CSS e docs.",
       "usos": {
         "css": [
           {
@@ -17967,7 +17933,7 @@
     "component.checkbox.box.fill.indeterminate.default": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.background.default",
+      "references": "semantic.brand.background.default",
       "sentido": "Checkbox box visual indeterminate",
       "escopo": [
         "checkbox",
@@ -17975,7 +17941,7 @@
         "indeterminate"
       ],
       "contexto": "Component token do contrato Checkbox materializado no Figma para box visual.",
-      "decisao": "Alias 1:1 para semantic.primary.background.default para manter o estado indeterminate alinhado entre Figma, CSS e docs.",
+      "decisao": "Alias 1:1 para semantic.brand.background.default para manter o estado indeterminate alinhado entre Figma, CSS e docs.",
       "usos": {
         "css": [
           {
@@ -17990,7 +17956,7 @@
     "component.checkbox.box.fill.indeterminate.disabled": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.background.disabled",
+      "references": "semantic.brand.background.disabled",
       "sentido": "Checkbox box visual indeterminate disabled",
       "escopo": [
         "checkbox",
@@ -17999,7 +17965,7 @@
         "disabled"
       ],
       "contexto": "Component token do contrato Checkbox materializado no Figma para box visual.",
-      "decisao": "Alias 1:1 para semantic.primary.background.disabled para manter o estado indeterminate disabled alinhado entre Figma, CSS e docs.",
+      "decisao": "Alias 1:1 para semantic.brand.background.disabled para manter o estado indeterminate disabled alinhado entre Figma, CSS e docs.",
       "usos": {
         "css": [
           {
@@ -18061,7 +18027,7 @@
     "component.checkbox.mark.fill.checked.default": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.content-default",
+      "references": "semantic.brand.content-default",
       "sentido": "Checkbox marca visual checked",
       "escopo": [
         "checkbox",
@@ -18069,7 +18035,7 @@
         "checked"
       ],
       "contexto": "Component token do contrato Checkbox materializado no Figma para marca visual.",
-      "decisao": "Alias 1:1 para semantic.primary.content-default para manter o estado checked alinhado entre Figma, CSS e docs.",
+      "decisao": "Alias 1:1 para semantic.brand.content-default para manter o estado checked alinhado entre Figma, CSS e docs.",
       "usos": {
         "css": [
           {
@@ -18084,7 +18050,7 @@
     "component.checkbox.mark.fill.checked.disabled": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.content-disabled",
+      "references": "semantic.brand.content-disabled",
       "sentido": "Checkbox marca visual checked disabled",
       "escopo": [
         "checkbox",
@@ -18093,7 +18059,7 @@
         "disabled"
       ],
       "contexto": "Component token do contrato Checkbox materializado no Figma para marca visual.",
-      "decisao": "Alias 1:1 para semantic.primary.content-disabled para manter o estado checked disabled alinhado entre Figma, CSS e docs.",
+      "decisao": "Alias 1:1 para semantic.brand.content-disabled para manter o estado checked disabled alinhado entre Figma, CSS e docs.",
       "usos": {
         "css": [
           {
@@ -18108,7 +18074,7 @@
     "component.checkbox.mark.fill.indeterminate.default": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.content-default",
+      "references": "semantic.brand.content-default",
       "sentido": "Checkbox marca visual indeterminate",
       "escopo": [
         "checkbox",
@@ -18116,7 +18082,7 @@
         "indeterminate"
       ],
       "contexto": "Component token do contrato Checkbox materializado no Figma para marca visual.",
-      "decisao": "Alias 1:1 para semantic.primary.content-default para manter o estado indeterminate alinhado entre Figma, CSS e docs.",
+      "decisao": "Alias 1:1 para semantic.brand.content-default para manter o estado indeterminate alinhado entre Figma, CSS e docs.",
       "usos": {
         "css": [
           {
@@ -18131,7 +18097,7 @@
     "component.checkbox.mark.fill.indeterminate.disabled": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.content-disabled",
+      "references": "semantic.brand.content-disabled",
       "sentido": "Checkbox marca visual indeterminate disabled",
       "escopo": [
         "checkbox",
@@ -18140,7 +18106,7 @@
         "disabled"
       ],
       "contexto": "Component token do contrato Checkbox materializado no Figma para marca visual.",
-      "decisao": "Alias 1:1 para semantic.primary.content-disabled para manter o estado indeterminate disabled alinhado entre Figma, CSS e docs.",
+      "decisao": "Alias 1:1 para semantic.brand.content-disabled para manter o estado indeterminate disabled alinhado entre Figma, CSS e docs.",
       "usos": {
         "css": [
           {
@@ -18224,7 +18190,7 @@
     "component.radio.control.fill.selected.default": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.background.default",
+      "references": "semantic.brand.background.default",
       "sentido": "Radio control visual selected",
       "escopo": [
         "radio",
@@ -18232,7 +18198,7 @@
         "selected"
       ],
       "contexto": "Component token do contrato Radio materializado no Figma para control visual.",
-      "decisao": "Alias 1:1 para semantic.primary.background.default para manter o estado selected alinhado entre Figma, CSS e docs.",
+      "decisao": "Alias 1:1 para semantic.brand.background.default para manter o estado selected alinhado entre Figma, CSS e docs.",
       "usos": {
         "css": [
           {
@@ -18247,7 +18213,7 @@
     "component.radio.control.fill.selected.disabled": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.background.disabled",
+      "references": "semantic.brand.background.disabled",
       "sentido": "Radio control visual selected disabled",
       "escopo": [
         "radio",
@@ -18256,7 +18222,7 @@
         "disabled"
       ],
       "contexto": "Component token do contrato Radio materializado no Figma para control visual.",
-      "decisao": "Alias 1:1 para semantic.primary.background.disabled para manter o estado selected disabled alinhado entre Figma, CSS e docs.",
+      "decisao": "Alias 1:1 para semantic.brand.background.disabled para manter o estado selected disabled alinhado entre Figma, CSS e docs.",
       "usos": {
         "css": [
           {
@@ -18318,7 +18284,7 @@
     "component.radio.control.border-color.selected.default": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.border.default",
+      "references": "semantic.brand.border.default",
       "sentido": "Radio control visual selected",
       "escopo": [
         "radio",
@@ -18326,7 +18292,7 @@
         "selected"
       ],
       "contexto": "Component token do contrato Radio materializado no Figma para control visual.",
-      "decisao": "Alias 1:1 para semantic.primary.background.default para manter o estado selected alinhado entre Figma, CSS e docs.",
+      "decisao": "Alias 1:1 para semantic.brand.background.default para manter o estado selected alinhado entre Figma, CSS e docs.",
       "usos": {
         "css": [
           {
@@ -18478,7 +18444,7 @@
     "component.radio.dot.fill.selected.default": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.content-default",
+      "references": "semantic.brand.content-default",
       "sentido": "Radio dot interno selected",
       "escopo": [
         "radio",
@@ -18486,7 +18452,7 @@
         "selected"
       ],
       "contexto": "Component token do contrato Radio materializado no Figma para dot interno.",
-      "decisao": "Alias 1:1 para semantic.primary.content-default para manter o estado selected alinhado entre Figma, CSS e docs.",
+      "decisao": "Alias 1:1 para semantic.brand.content-default para manter o estado selected alinhado entre Figma, CSS e docs.",
       "usos": {
         "css": [
           {
@@ -18501,7 +18467,7 @@
     "component.radio.dot.fill.selected.disabled": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.content-disabled",
+      "references": "semantic.brand.content-disabled",
       "sentido": "Radio dot interno selected disabled",
       "escopo": [
         "radio",
@@ -18510,7 +18476,7 @@
         "disabled"
       ],
       "contexto": "Component token do contrato Radio materializado no Figma para dot interno.",
-      "decisao": "Alias 1:1 para semantic.primary.content-disabled para manter o estado selected disabled alinhado entre Figma, CSS e docs.",
+      "decisao": "Alias 1:1 para semantic.brand.content-disabled para manter o estado selected disabled alinhado entre Figma, CSS e docs.",
       "usos": {
         "css": [
           {
@@ -18677,7 +18643,7 @@
     "component.toggle.track.fill.on.default": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.background.default",
+      "references": "semantic.brand.background.default",
       "sentido": "Toggle track on",
       "escopo": [
         "toggle",
@@ -18685,7 +18651,7 @@
         "on"
       ],
       "contexto": "Component token do contrato Toggle materializado no Figma para track.",
-      "decisao": "Alias 1:1 para semantic.primary.background.default para manter o estado on alinhado entre Figma, CSS e docs.",
+      "decisao": "Alias 1:1 para semantic.brand.background.default para manter o estado on alinhado entre Figma, CSS e docs.",
       "usos": {
         "css": [
           {
@@ -18700,7 +18666,7 @@
     "component.toggle.track.fill.on.disabled": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.background.disabled",
+      "references": "semantic.brand.background.disabled",
       "sentido": "Toggle track on disabled",
       "escopo": [
         "toggle",
@@ -18709,7 +18675,7 @@
         "disabled"
       ],
       "contexto": "Component token do contrato Toggle materializado no Figma para track.",
-      "decisao": "Alias 1:1 para semantic.primary.background.disabled para manter o estado on disabled alinhado entre Figma, CSS e docs.",
+      "decisao": "Alias 1:1 para semantic.brand.background.disabled para manter o estado on disabled alinhado entre Figma, CSS e docs.",
       "usos": {
         "css": [
           {
@@ -18909,7 +18875,7 @@
     "component.toggle.thumb.fill.on.default": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.content-default",
+      "references": "semantic.brand.content-default",
       "sentido": "Toggle thumb on",
       "escopo": [
         "toggle",
@@ -18917,7 +18883,7 @@
         "on"
       ],
       "contexto": "Component token do contrato Toggle materializado no Figma para thumb.",
-      "decisao": "Alias 1:1 para semantic.primary.content-default para manter o estado on alinhado entre Figma, CSS e docs.",
+      "decisao": "Alias 1:1 para semantic.brand.content-default para manter o estado on alinhado entre Figma, CSS e docs.",
       "usos": {
         "css": [
           {
@@ -18932,7 +18898,7 @@
     "component.toggle.thumb.fill.on.disabled": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.content-disabled",
+      "references": "semantic.brand.content-disabled",
       "sentido": "Toggle thumb on disabled",
       "escopo": [
         "toggle",
@@ -18941,7 +18907,7 @@
         "disabled"
       ],
       "contexto": "Component token do contrato Toggle materializado no Figma para thumb.",
-      "decisao": "Alias 1:1 para semantic.primary.content-disabled para manter o estado on disabled alinhado entre Figma, CSS e docs.",
+      "decisao": "Alias 1:1 para semantic.brand.content-disabled para manter o estado on disabled alinhado entre Figma, CSS e docs.",
       "usos": {
         "css": [
           {
@@ -18996,7 +18962,7 @@
     "component.checkbox.box.fill.checked.hover": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.background.hover",
+      "references": "semantic.brand.background.hover",
       "sentido": "Fill da box Checkbox checked em hover.",
       "escopo": [
         "checkbox",
@@ -19004,7 +18970,7 @@
         "hover"
       ],
       "contexto": "Component token do contrato Checkbox para estado checked + hover.",
-      "decisao": "Alias para semantic.primary.background.hover porque o estado preenchido deve acompanhar a intenção semântica hover de primary.",
+      "decisao": "Alias para semantic.brand.background.hover porque o estado preenchido deve acompanhar a intenção semântica hover de brand.",
       "usos": {
         "css": [
           {
@@ -19019,7 +18985,7 @@
     "component.checkbox.box.fill.indeterminate.hover": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.background.hover",
+      "references": "semantic.brand.background.hover",
       "sentido": "Fill da box Checkbox indeterminate em hover.",
       "escopo": [
         "checkbox",
@@ -19027,7 +18993,7 @@
         "hover"
       ],
       "contexto": "Component token do contrato Checkbox para estado indeterminate + hover.",
-      "decisao": "Alias para semantic.primary.background.hover para manter checked e indeterminate com o mesmo fill semântico no hover.",
+      "decisao": "Alias para semantic.brand.background.hover para manter checked e indeterminate com o mesmo fill semântico no hover.",
       "usos": {
         "css": [
           {
@@ -19065,7 +19031,7 @@
     "component.checkbox.mark.fill.checked.hover": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.content-hover",
+      "references": "semantic.brand.content-hover",
       "sentido": "Fill do checkmark Checkbox em hover.",
       "escopo": [
         "checkbox",
@@ -19073,7 +19039,7 @@
         "hover"
       ],
       "contexto": "Component token do contrato Checkbox para a marca checked no estado hover.",
-      "decisao": "Alias para semantic.primary.content-hover para manter o conteúdo sobre primary em cadeia semântica própria de hover.",
+      "decisao": "Alias para semantic.brand.content-hover para manter o conteúdo sobre brand em cadeia semântica própria de hover.",
       "usos": {
         "css": [
           {
@@ -19088,7 +19054,7 @@
     "component.checkbox.mark.fill.indeterminate.hover": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.content-hover",
+      "references": "semantic.brand.content-hover",
       "sentido": "Fill da marca indeterminate Checkbox em hover.",
       "escopo": [
         "checkbox",
@@ -19096,7 +19062,7 @@
         "hover"
       ],
       "contexto": "Component token do contrato Checkbox para a marca indeterminate no estado hover.",
-      "decisao": "Alias para semantic.primary.content-hover para manter checked e indeterminate alinhados no conteúdo sobre primary.",
+      "decisao": "Alias para semantic.brand.content-hover para manter checked e indeterminate alinhados no conteúdo sobre brand.",
       "usos": {
         "css": [
           {
@@ -19134,7 +19100,7 @@
     "component.radio.control.fill.selected.hover": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.background.hover",
+      "references": "semantic.brand.background.hover",
       "sentido": "Fill do control Radio selected em hover.",
       "escopo": [
         "radio",
@@ -19142,7 +19108,7 @@
         "hover"
       ],
       "contexto": "Component token do contrato Radio para estado selected + hover.",
-      "decisao": "Alias para semantic.primary.background.hover porque selected é um fill primário no hover.",
+      "decisao": "Alias para semantic.brand.background.hover porque selected é um fill brand no hover.",
       "usos": {
         "css": [
           {
@@ -19180,7 +19146,7 @@
     "component.radio.control.border-color.selected.hover": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.border.hover",
+      "references": "semantic.brand.border.hover",
       "sentido": "Border do control Radio selected em hover.",
       "escopo": [
         "radio",
@@ -19188,7 +19154,7 @@
         "hover"
       ],
       "contexto": "Component token do contrato Radio para borda selected em hover.",
-      "decisao": "Alias para semantic.primary.background.hover para preservar paridade entre fill e border do estado selected.",
+      "decisao": "Alias para semantic.brand.background.hover para preservar paridade entre fill e border do estado selected.",
       "usos": {
         "css": [
           {
@@ -19203,7 +19169,7 @@
     "component.radio.dot.fill.selected.hover": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.content-hover",
+      "references": "semantic.brand.content-hover",
       "sentido": "Fill do dot Radio selected em hover.",
       "escopo": [
         "radio",
@@ -19211,7 +19177,7 @@
         "hover"
       ],
       "contexto": "Component token do contrato Radio para o dot selected em hover.",
-      "decisao": "Alias para semantic.primary.content-hover para manter conteúdo sobre primary em cadeia semântica de hover.",
+      "decisao": "Alias para semantic.brand.content-hover para manter conteúdo sobre brand em cadeia semântica de hover.",
       "usos": {
         "css": [
           {
@@ -19249,7 +19215,7 @@
     "component.toggle.track.fill.on.hover": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.background.hover",
+      "references": "semantic.brand.background.hover",
       "sentido": "Fill da track Toggle on em hover.",
       "escopo": [
         "toggle",
@@ -19257,7 +19223,7 @@
         "hover"
       ],
       "contexto": "Component token do contrato Toggle para estado on + hover.",
-      "decisao": "Alias para semantic.primary.background.hover porque on é o estado primário preenchido em hover.",
+      "decisao": "Alias para semantic.brand.background.hover porque on é o estado primário preenchido em hover.",
       "usos": {
         "css": [
           {
@@ -19318,7 +19284,7 @@
     "component.toggle.thumb.fill.on.hover": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.content-hover",
+      "references": "semantic.brand.content-hover",
       "sentido": "Fill do thumb Toggle on em hover.",
       "escopo": [
         "toggle",
@@ -19326,7 +19292,7 @@
         "hover"
       ],
       "contexto": "Component token do contrato Toggle para thumb on em hover.",
-      "decisao": "Alias para semantic.primary.content-hover para manter conteúdo sobre primary em cadeia semântica de hover.",
+      "decisao": "Alias para semantic.brand.content-hover para manter conteúdo sobre brand em cadeia semântica de hover.",
       "usos": {
         "css": [
           {
@@ -19338,25 +19304,20 @@
         "figma": []
       }
     },
-    "semantic.primary.content-hover": {
+    "semantic.brand.content-hover": {
       "layer": "semantic",
       "type": "color",
       "references": "foundation.color.neutral.50",
-      "sentido": "Conteúdo sobre fill primário em hover.",
+      "sentido": "Conteúdo sobre fill brand em hover.",
       "escopo": [
         "text",
         "shape",
         "hover"
       ],
-      "contexto": "Semantic token usado por marcas internas de controles e conteúdo sobre primary/background/hover.",
+      "contexto": "Semantic token usado por marcas internas de controles e conteúdo sobre brand/background/hover.",
       "decisao": "Mantém token semântico próprio para hover mesmo quando o valor atual é igual ao default; isso evita que component tokens de hover apontem para semantic default.",
       "usos": {
-        "css": [
-          {
-            "file": "css/tokens/generated/component.css",
-            "count": 4
-          }
-        ],
+        "css": [],
         "tokens": [
           "component.checkbox.mark.fill.checked.hover",
           "component.checkbox.mark.fill.indeterminate.hover",
@@ -19459,14 +19420,14 @@
     "component.button.bg.brand.focus": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.background.default",
+      "references": "semantic.brand.background.default",
       "sentido": "Token component para button / bg / brand / focus.",
       "escopo": [
         "fill",
         "background"
       ],
       "contexto": "Usado para estabilizar o contrato component exposto por component.button.bg.",
-      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.background.default.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.brand.background.default.",
       "usos": {
         "css": [
           {
@@ -19571,7 +19532,7 @@
     "component.button.content.color.brand.focus": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.content-default",
+      "references": "semantic.brand.content-default",
       "sentido": "Token component para button / content / color / brand / focus.",
       "escopo": [
         "color",
@@ -19580,7 +19541,7 @@
         "stroke-color"
       ],
       "contexto": "Usado para estabilizar o contrato component exposto por component.button.content.",
-      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.content-default.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.brand.content-default.",
       "usos": {
         "css": [
           {
@@ -19731,13 +19692,13 @@
     "component.checkbox.box.fill.checked.focus": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.background.default",
+      "references": "semantic.brand.background.default",
       "sentido": "Token component para checkbox / box / fill / checked / focus.",
       "escopo": [
         "component-token"
       ],
       "contexto": "Usado para estabilizar o contrato component exposto por component.checkbox.box.",
-      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.background.default.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.brand.background.default.",
       "usos": {
         "css": [],
         "tokens": [],
@@ -19747,13 +19708,13 @@
     "component.checkbox.box.fill.indeterminate.focus": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.background.default",
+      "references": "semantic.brand.background.default",
       "sentido": "Token component para checkbox / box / fill / indeterminate / focus.",
       "escopo": [
         "component-token"
       ],
       "contexto": "Usado para estabilizar o contrato component exposto por component.checkbox.box.",
-      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.background.default.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.brand.background.default.",
       "usos": {
         "css": [],
         "tokens": [],
@@ -19782,13 +19743,13 @@
     "component.checkbox.mark.fill.checked.focus": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.content-default",
+      "references": "semantic.brand.content-default",
       "sentido": "Token component para checkbox / mark / fill / checked / focus.",
       "escopo": [
         "component-token"
       ],
       "contexto": "Usado para estabilizar o contrato component exposto por component.checkbox.mark.",
-      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.content-default.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.brand.content-default.",
       "usos": {
         "css": [],
         "tokens": [],
@@ -19798,13 +19759,13 @@
     "component.checkbox.mark.fill.indeterminate.focus": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.content-default",
+      "references": "semantic.brand.content-default",
       "sentido": "Token component para checkbox / mark / fill / indeterminate / focus.",
       "escopo": [
         "component-token"
       ],
       "contexto": "Usado para estabilizar o contrato component exposto por component.checkbox.mark.",
-      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.content-default.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.brand.content-default.",
       "usos": {
         "css": [],
         "tokens": [],
@@ -19830,13 +19791,13 @@
     "component.radio.control.fill.selected.focus": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.background.default",
+      "references": "semantic.brand.background.default",
       "sentido": "Token component para radio / control / fill / selected / focus.",
       "escopo": [
         "component-token"
       ],
       "contexto": "Usado para estabilizar o contrato component exposto por component.radio.control.",
-      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.background.default.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.brand.background.default.",
       "usos": {
         "css": [],
         "tokens": [],
@@ -19884,13 +19845,13 @@
     "component.radio.dot.fill.selected.focus": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.content-default",
+      "references": "semantic.brand.content-default",
       "sentido": "Token component para radio / dot / fill / selected / focus.",
       "escopo": [
         "component-token"
       ],
       "contexto": "Usado para estabilizar o contrato component exposto por component.radio.dot.",
-      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.content-default.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.brand.content-default.",
       "usos": {
         "css": [],
         "tokens": [],
@@ -19916,13 +19877,13 @@
     "component.toggle.track.fill.on.focus": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.background.default",
+      "references": "semantic.brand.background.default",
       "sentido": "Token component para toggle / track / fill / on / focus.",
       "escopo": [
         "component-token"
       ],
       "contexto": "Usado para estabilizar o contrato component exposto por component.toggle.track.",
-      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.background.default.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.brand.background.default.",
       "usos": {
         "css": [],
         "tokens": [],
@@ -19967,13 +19928,13 @@
     "component.toggle.thumb.fill.on.focus": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.content-default",
+      "references": "semantic.brand.content-default",
       "sentido": "Token component para toggle / thumb / fill / on / focus.",
       "escopo": [
         "component-token"
       ],
       "contexto": "Usado para estabilizar o contrato component exposto por component.toggle.thumb.",
-      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.content-default.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.brand.content-default.",
       "usos": {
         "css": [],
         "tokens": [],
@@ -21553,14 +21514,14 @@
     "component.field.bg.readonly": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.background.subtle",
+      "references": "semantic.surface.default",
       "sentido": "Token component para field / bg / readonly.",
       "escopo": [
         "fill",
         "background"
       ],
       "contexto": "Usado para estabilizar o contrato component exposto por component.field.bg.",
-      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.background.subtle.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.surface.default.",
       "usos": {
         "css": [
           {
@@ -22368,62 +22329,52 @@
         "figma": []
       }
     },
-    "semantic.primary.border.default": {
+    "semantic.brand.border.default": {
       "layer": "semantic",
       "type": "color",
-      "references": "semantic.primary.background.default",
+      "references": "semantic.brand.background.default",
       "sentido": "Token semantic para primary / border / default.",
       "escopo": [
         "component-token"
       ],
-      "contexto": "Usado para estabilizar o contrato semantic exposto por semantic.primary.border.",
-      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.background.default.",
+      "contexto": "Usado para estabilizar o contrato semantic exposto por semantic.brand.border.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.brand.background.default.",
       "usos": {
-        "css": [
-          {
-            "file": "css/tokens/generated/component.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [
           "component.radio.control.border-color.selected.default"
         ],
         "figma": []
       }
     },
-    "semantic.primary.border.hover": {
+    "semantic.brand.border.hover": {
       "layer": "semantic",
       "type": "color",
-      "references": "semantic.primary.background.hover",
+      "references": "semantic.brand.background.hover",
       "sentido": "Token semantic para primary / border / hover.",
       "escopo": [
         "component-token"
       ],
-      "contexto": "Usado para estabilizar o contrato semantic exposto por semantic.primary.border.",
-      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.background.hover.",
+      "contexto": "Usado para estabilizar o contrato semantic exposto por semantic.brand.border.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.brand.background.hover.",
       "usos": {
-        "css": [
-          {
-            "file": "css/tokens/generated/component.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [
           "component.radio.control.border-color.selected.hover"
         ],
         "figma": []
       }
     },
-    "semantic.primary.border.disabled": {
+    "semantic.brand.border.disabled": {
       "layer": "semantic",
       "type": "color",
-      "references": "semantic.primary.background.disabled",
+      "references": "semantic.brand.background.disabled",
       "sentido": "Token semantic para primary / border / disabled.",
       "escopo": [
         "component-token"
       ],
-      "contexto": "Usado para estabilizar o contrato semantic exposto por semantic.primary.border.",
-      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.background.disabled.",
+      "contexto": "Usado para estabilizar o contrato semantic exposto por semantic.brand.border.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.brand.background.disabled.",
       "usos": {
         "css": [],
         "tokens": [],
@@ -22433,13 +22384,13 @@
     "semantic.content.brand": {
       "layer": "semantic",
       "type": "color",
-      "references": "semantic.primary.background.default",
+      "references": "semantic.brand.background.default",
       "sentido": "Token semantic para content / brand.",
       "escopo": [
         "component-token"
       ],
       "contexto": "Usado para estabilizar o contrato semantic exposto por semantic.content.brand.",
-      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.primary.background.default.",
+      "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.brand.background.default.",
       "usos": {
         "css": [
           {
@@ -23348,7 +23299,7 @@
     "component.avatar.bg.default": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.background.default",
+      "references": "semantic.brand.background.default",
       "sentido": "Contrato bg de avatar, sincronizado a partir das Variables Figma atuais.",
       "escopo": [
         "fill"
@@ -23369,7 +23320,7 @@
     "component.avatar.content.color.default": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.content-default",
+      "references": "semantic.brand.content-default",
       "sentido": "Contrato content.color de avatar, sincronizado a partir das Variables Figma atuais.",
       "escopo": [
         "text",
@@ -23389,11 +23340,11 @@
         "figma": []
       }
     },
-    "component.badge.label.color.primary.solid": {
+    "component.badge.label.color.brand.solid": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.content-default",
-      "sentido": "Contrato label.color.primary de badge, sincronizado a partir das Variables Figma atuais.",
+      "references": "semantic.brand.content-default",
+      "sentido": "Contrato label.color.brand de badge, sincronizado a partir das Variables Figma atuais.",
       "escopo": [
         "text",
         "fill",
@@ -23412,11 +23363,11 @@
         "figma": []
       }
     },
-    "component.badge.label.color.primary.subtle": {
+    "component.badge.label.color.brand.subtle": {
       "layer": "component",
       "type": "color",
       "references": "semantic.toned.content-default",
-      "sentido": "Contrato label.color.primary de badge, sincronizado a partir das Variables Figma atuais.",
+      "sentido": "Contrato label.color.brand de badge, sincronizado a partir das Variables Figma atuais.",
       "escopo": [
         "text",
         "fill",
@@ -23665,11 +23616,11 @@
         "figma": []
       }
     },
-    "component.badge.bg.primary.solid": {
+    "component.badge.bg.brand.solid": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.background.default",
-      "sentido": "Contrato bg.primary de badge, sincronizado a partir das Variables Figma atuais.",
+      "references": "semantic.brand.background.default",
+      "sentido": "Contrato bg.brand de badge, sincronizado a partir das Variables Figma atuais.",
       "escopo": [
         "fill"
       ],
@@ -23686,11 +23637,11 @@
         "figma": []
       }
     },
-    "component.badge.bg.primary.subtle": {
+    "component.badge.bg.brand.subtle": {
       "layer": "component",
       "type": "color",
       "references": "semantic.toned.background.default",
-      "sentido": "Contrato bg.primary de badge, sincronizado a partir das Variables Figma atuais.",
+      "sentido": "Contrato bg.brand de badge, sincronizado a partir das Variables Figma atuais.",
       "escopo": [
         "fill"
       ],
@@ -24597,10 +24548,10 @@
         "figma": []
       }
     },
-    "component.modal.action.fill.primary": {
+    "component.modal.action.fill.brand": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.background.default",
+      "references": "semantic.brand.background.default",
       "sentido": "Contrato action.fill de modal, sincronizado a partir das Variables Figma atuais.",
       "escopo": [
         "fill"
@@ -24909,7 +24860,7 @@
     "component.tabs.indicator.fill.active": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.background.default",
+      "references": "semantic.brand.background.default",
       "sentido": "Contrato indicator.fill de tabs, sincronizado a partir das Variables Figma atuais.",
       "escopo": [
         "fill",
@@ -25046,7 +24997,7 @@
     "component.tooltip.label.color.default": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.primary.content-default",
+      "references": "semantic.brand.content-default",
       "sentido": "Contrato label.color de tooltip, sincronizado a partir das Variables Figma atuais.",
       "escopo": [
         "text",

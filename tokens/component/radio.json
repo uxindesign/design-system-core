@@ -98,22 +98,22 @@
           "selected": {
             "default": {
               "$type": "color",
-              "$value": "{semantic.primary.background.default}",
+              "$value": "{semantic.brand.background.default}",
               "$description": "Fill do control Radio selected default."
             },
             "focus": {
               "$type": "color",
-              "$value": "{semantic.primary.background.default}",
+              "$value": "{semantic.brand.background.default}",
               "$description": "Fill do control Radio selected focus."
             },
             "hover": {
               "$type": "color",
-              "$value": "{semantic.primary.background.hover}",
+              "$value": "{semantic.brand.background.hover}",
               "$description": "Fill do control Radio selected hover."
             },
             "disabled": {
               "$type": "color",
-              "$value": "{semantic.primary.background.disabled}",
+              "$value": "{semantic.brand.background.disabled}",
               "$description": "Fill do control Radio selected disabled."
             }
           }
@@ -152,7 +152,7 @@
           "selected": {
             "default": {
               "$type": "color",
-              "$value": "{semantic.primary.border.default}",
+              "$value": "{semantic.brand.border.default}",
               "$description": "Border color do control Radio selected default."
             },
             "focus": {
@@ -162,7 +162,7 @@
             },
             "hover": {
               "$type": "color",
-              "$value": "{semantic.primary.border.hover}",
+              "$value": "{semantic.brand.border.hover}",
               "$description": "Border color do control Radio selected hover."
             }
           }
@@ -213,22 +213,22 @@
           "selected": {
             "default": {
               "$type": "color",
-              "$value": "{semantic.primary.content-default}",
+              "$value": "{semantic.brand.content-default}",
               "$description": "Fill do dot Radio selected default."
             },
             "focus": {
               "$type": "color",
-              "$value": "{semantic.primary.content-default}",
+              "$value": "{semantic.brand.content-default}",
               "$description": "Fill do dot Radio selected focus."
             },
             "hover": {
               "$type": "color",
-              "$value": "{semantic.primary.content-hover}",
+              "$value": "{semantic.brand.content-hover}",
               "$description": "Fill do dot Radio selected hover."
             },
             "disabled": {
               "$type": "color",
-              "$value": "{semantic.primary.content-disabled}",
+              "$value": "{semantic.brand.content-disabled}",
               "$description": "Fill do dot Radio selected disabled."
             }
           }

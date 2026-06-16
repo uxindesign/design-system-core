@@ -287,7 +287,7 @@ function auditComponentAlias(sourceName, targetName, modeId, out) {
     out.push(issue("variable", "component-icon-color-alias", sourceName, `Mode: ${modeId}; target: ${targetName}`));
   }
 
-  if (sourceName.includes("/border-color/") && !/^(border|primary\/border|outline\/border|feedback\/[a-z]+\/border)\//.test(targetName)) {
+  if (sourceName.includes("/border-color/") && !/^(border|brand\/border|outline\/border|feedback\/[a-z]+\/border)\//.test(targetName)) {
     out.push(issue("variable", "component-border-color-alias", sourceName, `Mode: ${modeId}; target: ${targetName}`));
   }
 
@@ -295,7 +295,7 @@ function auditComponentAlias(sourceName, targetName, modeId, out) {
     out.push(issue("variable", "component-focus-ring-color-alias", sourceName, `Mode: ${modeId}; target: ${targetName}`));
   }
 
-  if (sourceName.includes("/bg/") && !/^(background|surface|overlay|primary\/background|feedback|toned\/background|outline\/background|ghost\/background)\//.test(targetName)) {
+  if (sourceName.includes("/bg/") && !/^(background|surface|overlay|brand\/background|feedback|toned\/background|outline\/background|ghost\/background)\//.test(targetName)) {
     out.push(issue("variable", "component-background-alias", sourceName, `Mode: ${modeId}; target: ${targetName}`));
   }
 }

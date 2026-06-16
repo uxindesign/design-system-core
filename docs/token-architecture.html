@@ -223,13 +223,13 @@
         <tr><td><code>spinner/indicator/border-color/on-color</code></td><td><code>spinner/indicator/border-color/border-inverse</code></td><td><span data-lang="pt">A variação pública é <code>on-color</code>, não o token semântico usado por baixo.</span><span data-lang="en">The public variant is <code>on-color</code>, not the underlying Semantic token.</span></td></tr>
         <tr><td><code>badge/label/color/error/subtle</code></td><td><code>badge/label/color/error-content-default</code></td><td><span data-lang="pt">O nome descreve a variante <code>error</code> e o estilo <code>subtle</code>.</span><span data-lang="en">The name describes the <code>error</code> variant and <code>subtle</code> style.</span></td></tr>
         <tr><td><code>alert/bg/success/filled</code></td><td><code>alert/root/fill/success-background-default</code></td><td><span data-lang="pt">Use a anatomia do componente e o estilo público, não a estrutura do Semantic.</span><span data-lang="en">Use the component anatomy and public style, not the Semantic structure.</span></td></tr>
-        <tr><td><code>tooltip/label/color/default</code></td><td><code>primary/content/default</code></td><td><span data-lang="pt">Componente migrado não recebe cor Semantic diretamente no binding.</span><span data-lang="en">A migrated component does not bind directly to Semantic color.</span></td></tr>
+        <tr><td><code>tooltip/label/color/default</code></td><td><code>brand/content/default</code></td><td><span data-lang="pt">Componente migrado não recebe cor Semantic diretamente no binding.</span><span data-lang="en">A migrated component does not bind directly to Semantic color.</span></td></tr>
       </tbody>
     </table>
 
     <div class="ds-callout ds-callout--warning">
       <div class="ds-callout__title"><span data-lang="pt">A regra do sufixo <code>-default</code></span><span data-lang="en">The <code>-default</code> suffix rule</span></div>
-      <span data-lang="pt">Todo token terminado em <code>.default</code> gera <code>-default</code> no CSS. Sem exceções, sem colapsar. <code>semantic.primary.background.default</code> vira <code>--ds-primary-background-default</code>, não <code>--ds-color-primary</code>.</span><span data-lang="en">Every token ending in <code>.default</code> generates <code>-default</code> in CSS. No exceptions, no collapsing. <code>semantic.primary.background.default</code> becomes <code>--ds-primary-background-default</code>, not <code>--ds-color-primary</code>.</span>
+      <span data-lang="pt">Todo token terminado em <code>.default</code> gera <code>-default</code> no CSS. Sem exceções, sem colapsar. <code>semantic.brand.background.default</code> vira <code>--ds-brand-background-default</code>, não <code>--ds-color-primary</code>.</span><span data-lang="en">Every token ending in <code>.default</code> generates <code>-default</code> in CSS. No exceptions, no collapsing. <code>semantic.brand.background.default</code> becomes <code>--ds-brand-background-default</code>, not <code>--ds-color-primary</code>.</span>
     </div>
     <div class="ds-callout ds-callout--warning">
       <div class="ds-callout__title"><span data-lang="pt">Colisão entre token pai e subestado</span><span data-lang="en">Parent token and substate collision</span></div>
@@ -318,7 +318,7 @@
         <tbody>
           <tr><td><code>foundation.color.brand.500</code></td><td><code>--ds-color-brand-500</code></td><td><code>color/brand/500</code> (Foundation)</td></tr>
           <tr><td><code>foundation.dimension.16</code></td><td><code>--ds-dimension-16</code></td><td><code>dimension/16</code> (Foundation)</td></tr>
-          <tr><td><code>semantic.primary.background.default</code></td><td><code>--ds-primary-background-default</code></td><td><code>primary/background/default</code> (Semantic)</td></tr>
+          <tr><td><code>semantic.brand.background.default</code></td><td><code>--ds-brand-background-default</code></td><td><code>brand/background/default</code> (Semantic)</td></tr>
           <tr><td><code>semantic.space.md</code></td><td><code>--ds-space-md</code></td><td><code>space/md</code> (Semantic)</td></tr>
           <tr><td><code>semantic.size.lg</code></td><td><code>--ds-size-lg</code></td><td><code>size/lg</code> (Semantic)</td></tr>
           <tr><td><code>component.checkbox.target.height.sm</code></td><td><code>--ds-checkbox-target-height-sm</code></td><td><code>checkbox/target/height/sm</code> (Component)</td></tr>

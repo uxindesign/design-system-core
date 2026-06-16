@@ -400,8 +400,8 @@
       },
       "action": {
         "fill": {
-          "primary": {
-            "$value": "{semantic.primary.background.default}",
+          "brand": {
+            "$value": "{semantic.brand.background.default}",
             "$type": "color"
           }
         }
