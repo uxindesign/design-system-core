@@ -340,11 +340,6 @@
             "$type": "dimension",
             "$value": "{semantic.space.md}",
             "$description": "Padding do frame de hit-area do close Modal lg."
-          },
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.space.sm}",
-            "$description": "Padding padrão do frame de hit-area do close Modal."
           }
         },
         "icon-size": {
@@ -362,11 +357,6 @@
             "$type": "dimension",
             "$value": "{semantic.size.md}",
             "$description": "Tamanho da instância Lucide interna ao close Modal lg."
-          },
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.size.md}",
-            "$description": "Tamanho padrão da instância Lucide interna ao close Modal."
           }
         },
         "size": {
@@ -384,11 +374,6 @@
             "$value": "{semantic.size.2xl}",
             "$type": "dimension",
             "$description": "Tamanho do frame de hit-area do close Modal lg."
-          },
-          "default": {
-            "$value": "{semantic.size.xl}",
-            "$type": "dimension",
-            "$description": "Tamanho padrão do frame de hit-area do close Modal."
           }
         },
         "color": {

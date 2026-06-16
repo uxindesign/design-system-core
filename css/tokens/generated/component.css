@@ -234,6 +234,7 @@
   --ds-checkbox-target-height-lg: var(--ds-size-2xl); /** Altura minima da area interativa Checkbox lg. */
   --ds-checkbox-target-gap-default: var(--ds-space-sm); /** Gap horizontal entre control e content Checkbox. */
   --ds-checkbox-content-gap-default: var(--ds-space-xs); /** Gap vertical entre textos do Checkbox. */
+  --ds-checkbox-group-options-gap-default: var(--ds-space-sm); /** Gap entre opções dentro do Checkbox Group. */
   --ds-checkbox-box-size-sm: var(--ds-size-xs); /** Tamanho visual da box Checkbox sm. */
   --ds-checkbox-box-size-md: var(--ds-size-sm); /** Tamanho visual da box Checkbox md. */
   --ds-checkbox-box-size-lg: var(--ds-size-md); /** Tamanho visual da box Checkbox lg. */
@@ -405,15 +406,12 @@
   --ds-modal-close-padding-sm: var(--ds-space-control-padding-6); /** Padding do frame de hit-area do close Modal sm. */
   --ds-modal-close-padding-md: var(--ds-space-sm); /** Padding do frame de hit-area do close Modal md. */
   --ds-modal-close-padding-lg: var(--ds-space-md); /** Padding do frame de hit-area do close Modal lg. */
-  --ds-modal-close-padding-default: var(--ds-space-sm); /** Padding padrão do frame de hit-area do close Modal. */
   --ds-modal-close-icon-size-sm: var(--ds-size-sm); /** Tamanho da instância Lucide interna ao close Modal sm. */
   --ds-modal-close-icon-size-md: var(--ds-size-md); /** Tamanho da instância Lucide interna ao close Modal md. */
   --ds-modal-close-icon-size-lg: var(--ds-size-md); /** Tamanho da instância Lucide interna ao close Modal lg. */
-  --ds-modal-close-icon-size-default: var(--ds-size-md); /** Tamanho padrão da instância Lucide interna ao close Modal. */
   --ds-modal-close-size-sm: var(--ds-size-lg); /** Tamanho do frame de hit-area do close Modal sm. */
   --ds-modal-close-size-md: var(--ds-size-xl); /** Tamanho do frame de hit-area do close Modal md. */
   --ds-modal-close-size-lg: var(--ds-size-2xl); /** Tamanho do frame de hit-area do close Modal lg. */
-  --ds-modal-close-size-default: var(--ds-size-xl); /** Tamanho padrão do frame de hit-area do close Modal. */
   --ds-modal-close-icon-stroke-width-default: var(--ds-icon-stroke-width-regular-24);
   --ds-modal-bg-default: var(--ds-surface-elevated);
   --ds-modal-action-fill-primary: var(--ds-primary-background-default);
@@ -422,6 +420,7 @@
   --ds-radio-target-height-lg: var(--ds-size-2xl); /** Altura minima da area interativa Radio lg. */
   --ds-radio-target-gap-default: var(--ds-space-sm); /** Gap horizontal entre control e content Radio. */
   --ds-radio-content-gap-default: var(--ds-space-xs); /** Gap vertical entre textos do Radio. */
+  --ds-radio-group-options-gap-default: var(--ds-space-sm); /** Gap entre opções dentro do Radio Group. */
   --ds-radio-control-size-sm: var(--ds-size-xs); /** Tamanho visual do control Radio sm. */
   --ds-radio-control-size-md: var(--ds-size-sm); /** Tamanho visual do control Radio md. */
   --ds-radio-control-size-lg: var(--ds-size-md); /** Tamanho visual do control Radio lg. */

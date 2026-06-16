@@ -5436,7 +5436,7 @@
           },
           {
             "file": "css/components/modal.css",
-            "count": 2
+            "count": 1
           },
           {
             "file": "css/components/radio.css",
@@ -5519,7 +5519,7 @@
           },
           {
             "file": "css/components/modal.css",
-            "count": 2
+            "count": 1
           },
           {
             "file": "css/components/radio.css",
@@ -6816,7 +6816,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 23
+            "count": 24
           },
           {
             "file": "css/utilities/layout.css",
@@ -6833,14 +6833,15 @@
           "component.card.header.padding-bottom.default",
           "component.card.header.gap.default",
           "component.checkbox.target.gap.default",
+          "component.checkbox.group.options.gap.default",
           "component.field.padding-y.sm",
           "component.input.gap.lg",
           "component.input.padding-x.md",
           "component.modal.header.padding-bottom.sm",
           "component.modal.footer.padding-top.sm",
           "component.modal.close.padding.md",
-          "component.modal.close.padding.default",
           "component.radio.target.gap.default",
+          "component.radio.group.options.gap.default",
           "component.select.gap.lg",
           "component.select.padding-x.md",
           "component.textarea.padding-x.sm",
@@ -9174,7 +9175,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 11
+            "count": 10
           }
         ],
         "tokens": [
@@ -9183,7 +9184,6 @@
           "component.input.icon.size.lg",
           "component.modal.close.icon-size.md",
           "component.modal.close.icon-size.lg",
-          "component.modal.close.icon-size.default",
           "component.radio.control.size.lg",
           "component.select.chevron.size.lg",
           "component.select.icon.size.lg",
@@ -9246,7 +9246,7 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 11
+            "count": 10
           }
         ],
         "tokens": [
@@ -9256,7 +9256,6 @@
           "component.checkbox.target.height.md",
           "component.input.height.md",
           "component.modal.close.size.md",
-          "component.modal.close.size.default",
           "component.radio.target.height.md",
           "component.select.height.md",
           "component.skeleton.circle.size.default",
@@ -13779,54 +13778,12 @@
         "gap"
       ],
       "contexto": "Component token do contrato anatômico Modal Footer. Binda itemSpacing entre ações nas variantes Size no Figma e substitui consumo direto de Semantic no CSS.",
-      "decisao": "Alias 1:1 para semantic.space.sm porque 8px é escala reutilizável, mas no Modal documenta a separação pública entre ações.",
+      "decisao": "Alias 1:1 para semantic.space.md porque o footer usa 12px entre ações no contrato anatômico da Modal.",
       "usos": {
         "css": [
           {
             "file": "css/components/modal.css",
             "count": 1
-          }
-        ],
-        "tokens": [],
-        "figma": []
-      }
-    },
-    "component.modal.close.padding.default": {
-      "layer": "component",
-      "type": "dimension",
-      "references": "semantic.space.sm",
-      "sentido": "Padding do close Modal.",
-      "escopo": [
-        "padding"
-      ],
-      "contexto": "Component token do contrato anatômico Modal Close. Controla o padding do frame de hit-area do close no Figma e no CSS.",
-      "decisao": "Alias 1:1 para semantic.space.sm para espelhar o default/md do Figma: target de 40px com ícone de 24px e padding interno de 8px.",
-      "usos": {
-        "css": [
-          {
-            "file": "css/components/modal.css",
-            "count": 1
-          }
-        ],
-        "tokens": [],
-        "figma": []
-      }
-    },
-    "component.modal.close.icon-size.default": {
-      "layer": "component",
-      "type": "dimension",
-      "references": "semantic.size.md",
-      "sentido": "Tamanho do ícone Close Modal.",
-      "escopo": [
-        "font-size"
-      ],
-      "contexto": "Component token do contrato anatômico Modal Close. Controla o tamanho da instância Lucide interna ao frame de hit-area do close no Figma e no CSS.",
-      "decisao": "Alias 1:1 para semantic.size.md para espelhar o default/md do Figma: ícone Lucide de 24px dentro de um target interativo maior.",
-      "usos": {
-        "css": [
-          {
-            "file": "css/components/modal.css",
-            "count": 2
           }
         ],
         "tokens": [],
@@ -24592,27 +24549,6 @@
         "figma": []
       }
     },
-    "component.modal.close.size.default": {
-      "layer": "component",
-      "type": "dimension",
-      "references": "semantic.size.xl",
-      "sentido": "Contrato close.size de modal, sincronizado a partir das Variables Figma atuais.",
-      "escopo": [
-        "size"
-      ],
-      "contexto": "Usado para estabilizar o contrato anatômico do componente modal entre Figma, JSON e CSS.",
-      "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
-      "usos": {
-        "css": [
-          {
-            "file": "css/components/modal.css",
-            "count": 3
-          }
-        ],
-        "tokens": [],
-        "figma": []
-      }
-    },
     "component.modal.close.color.default": {
       "layer": "component",
       "type": "color",
@@ -24992,10 +24928,11 @@
       "references": "semantic.primary.background.default",
       "sentido": "Contrato indicator.fill de tabs, sincronizado a partir das Variables Figma atuais.",
       "escopo": [
-        "fill"
+        "fill",
+        "stroke"
       ],
-      "contexto": "Usado para estabilizar o contrato anatômico do componente tabs entre Figma, JSON e CSS.",
-      "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
+      "contexto": "Usado para estabilizar o contrato anatômico do componente Tabs entre Figma, JSON e CSS. No CSS o indicador é border-bottom; no Figma o mesmo contrato pode ser aplicado como stroke bottom.",
+      "decisao": "Mantido como token de indicador ativo porque a anatomia atual de Tabs usa linha ativa, não layer visual separado. O escopo inclui fill e stroke para suportar a implementação por shape ou border sem trocar o contrato.",
       "usos": {
         "css": [
           {
@@ -25395,7 +25332,7 @@
         "css": [
           {
             "file": "css/components/modal.css",
-            "count": 2
+            "count": 3
           }
         ],
         "tokens": [],
@@ -25463,7 +25400,12 @@
       "contexto": "Usado no ícone visual do close Medium e como default do componente.",
       "decisao": "Mantido separado do target para permitir alvo interativo de 40px com símbolo de 24px.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 2
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -25530,7 +25472,12 @@
       "contexto": "Define target de 40px para o close da Modal Medium e default.",
       "decisao": "Mantido por tamanho para alinhar o close à altura padrão de controles do DS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 3
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -25555,6 +25502,38 @@
             "count": 3
           }
         ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.checkbox.group.options.gap.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.sm",
+      "sentido": "Gap vertical entre opções dentro do Checkbox Group.",
+      "escopo": [
+        "gap"
+      ],
+      "contexto": "Component token do contrato anatômico Checkbox Group. Binda itemSpacing do frame Options no Figma e evita consumo direto de Semantic em estrutura de componente.",
+      "decisao": "Alias 1:1 para semantic.space.sm para manter 8px entre opções e preservar alinhamento com grupos de seleção equivalentes.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.radio.group.options.gap.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.sm",
+      "sentido": "Gap vertical entre opções dentro do Radio Group.",
+      "escopo": [
+        "gap"
+      ],
+      "contexto": "Component token do contrato anatômico Radio Group. Binda itemSpacing do frame Options no Figma e evita consumo direto de Semantic em estrutura de componente.",
+      "decisao": "Alias 1:1 para semantic.space.sm para manter 8px entre opções e preservar alinhamento com grupos de seleção equivalentes.",
+      "usos": {
+        "css": [],
         "tokens": [],
         "figma": []
       }

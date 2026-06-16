@@ -36,6 +36,17 @@
           }
         }
       },
+      "group": {
+        "options": {
+          "gap": {
+            "default": {
+              "$type": "dimension",
+              "$value": "{semantic.space.sm}",
+              "$description": "Gap entre opções dentro do Checkbox Group."
+            }
+          }
+        }
+      },
       "box": {
         "size": {
           "sm": {

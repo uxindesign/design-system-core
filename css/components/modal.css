@@ -63,7 +63,7 @@
   font-size: var(--ds-modal-title-font-size-md);
   line-height: var(--ds-modal-title-line-height-md);
   letter-spacing: var(--ds-modal-title-letter-spacing-md);
-  padding-right: calc(var(--ds-modal-close-size-default) + var(--ds-modal-header-gap-default));
+  padding-right: calc(var(--ds-modal-close-size-md) + var(--ds-modal-header-gap-default));
 }
 
 .ds-modal--lg .ds-modal__title {
@@ -78,24 +78,23 @@
   top: var(--ds-modal-close-padding-md);
   right: var(--ds-modal-close-padding-md);
   flex-shrink: 0;
-  width: var(--ds-modal-close-size-default);
-  height: var(--ds-modal-close-size-default);
+  width: var(--ds-modal-close-size-md);
+  height: var(--ds-modal-close-size-md);
   background: none;
   border: none;
-  padding: var(--ds-modal-close-padding-default);
+  padding: var(--ds-modal-close-padding-md);
   cursor: pointer;
   color: var(--ds-modal-close-color-default);
   border-radius: var(--ds-radius-sm);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
-              background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
+  transition: color var(--ds-motion-duration-fast) var(--ds-motion-ease-default);
 }
 
 .ds-modal__close .ds-icon {
-  width: var(--ds-modal-close-icon-size-default);
-  height: var(--ds-modal-close-icon-size-default);
+  width: var(--ds-modal-close-icon-size-md);
+  height: var(--ds-modal-close-icon-size-md);
   color: currentColor;
   stroke-width: var(--ds-modal-close-icon-stroke-width-default);
 }
