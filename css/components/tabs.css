@@ -42,6 +42,7 @@
 .ds-tab:focus-visible {
   outline: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color-default);
   outline-offset: var(--ds-focus-ring-width);
+  border-radius: var(--ds-tabs-focus-ring-radius-default);
 }
 
 .ds-tab:disabled {
