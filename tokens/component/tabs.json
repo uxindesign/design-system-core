@@ -28,7 +28,7 @@
         "indicator-gap": {
           "default": {
             "$type": "dimension",
-            "$value": "{semantic.space.control.padding.10}",
+            "$value": "{semantic.space.md}",
             "$description": "Espaço entre o rótulo e o indicador de Tabs."
           }
         }
@@ -102,6 +102,15 @@
             "$type": "dimension",
             "$value": "{semantic.space.lg}",
             "$description": "Espaçamento interno vertical do painel de Tabs."
+          }
+        }
+      },
+      "focus-ring": {
+        "radius": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.radius.sm}",
+            "$description": "Radius do focus ring Tabs."
           }
         }
       }

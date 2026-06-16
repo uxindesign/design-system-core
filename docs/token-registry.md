@@ -559,7 +559,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.radius.full` | dimension | → `foundation.radius.999` | Radius semantic full. | 11 |
 | `semantic.radius.lg` | dimension | → `foundation.radius.12` | Radius semantic lg. | 9 |
 | `semantic.radius.md` | dimension | → `foundation.radius.8` | Radius semantic md. | 8 |
-| `semantic.radius.sm` | dimension | → `foundation.radius.4` | Radius semantic sm. | 8 |
+| `semantic.radius.sm` | dimension | → `foundation.radius.4` | Radius semantic sm. | 9 |
 | `semantic.radius.xl` | dimension | → `foundation.radius.16` | Radius semantic xl. | 0 |
 
 ### semantic.shadow
@@ -595,10 +595,10 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 |---|---|---|---|---|
 | `semantic.space.2xl` | dimension | → `foundation.dimension.24` | Spacing token 2xl. | 6 |
 | `semantic.space.2xs` | dimension | → `foundation.dimension.2` | Spacing token 2xs. | 6 |
-| `semantic.space.control.padding.10` | dimension | → `foundation.dimension.10` | Spacing token control.padding.10. | 4 |
+| `semantic.space.control.padding.10` | dimension | → `foundation.dimension.10` | Spacing token control.padding.10. | 3 |
 | `semantic.space.control.padding.6` | dimension | → `foundation.dimension.6` | Padding simétrico de Icon Only sm Button. | 3 |
 | `semantic.space.lg` | dimension | → `foundation.dimension.16` | Spacing token lg. | 19 |
-| `semantic.space.md` | dimension | → `foundation.dimension.12` | Spacing token md. | 17 |
+| `semantic.space.md` | dimension | → `foundation.dimension.12` | Spacing token md. | 18 |
 | `semantic.space.none` | dimension | → `foundation.dimension.0` | Espaço semântico zero. | 0 |
 | `semantic.space.section.lg` | dimension | → `foundation.dimension.64` | Spacing token section.lg. | 0 |
 | `semantic.space.section.md` | dimension | → `foundation.dimension.48` | Spacing token section.md. | 0 |
@@ -1294,9 +1294,10 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
+| `component.tabs.focus-ring.radius.default` | dimension | → `semantic.radius.sm` | Radius do focus ring do Tab Item. | 0 |
 | `component.tabs.indicator.fill.active` | color | → `semantic.primary.background.default` | Contrato indicator.fill de tabs, sincronizado a partir das Variables Figma atuais. | 1 |
 | `component.tabs.indicator.height.default` | dimension | → `semantic.border.width.strong` | Altura do indicator Tabs. | 1 |
-| `component.tabs.item.indicator-gap.default` | dimension | → `semantic.space.control.padding.10` | Gap entre label e indicator Tabs. | 1 |
+| `component.tabs.item.indicator-gap.default` | dimension | → `semantic.space.md` | Gap entre label e indicator Tabs. | 1 |
 | `component.tabs.item.padding-top.default` | dimension | → `semantic.space.md` | Padding top do item Tabs. | 1 |
 | `component.tabs.item.padding-x.default` | dimension | → `semantic.space.lg` | Padding horizontal do item Tabs. | 1 |
 | `component.tabs.label.color.active` | color | → `semantic.content.brand` | Contrato label.color de tabs, sincronizado a partir das Variables Figma atuais. | 1 |
@@ -6783,8 +6784,8 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/link.css` (1×)
     - `css/components/modal.css` (1×)
     - `css/components/radio.css` (1×)
-    - `css/tokens/generated/component.css` (2×)
-  - Tokens que referenciam: `component.checkbox.box.radius.default`, `component.tooltip.content.radius.default`
+    - `css/tokens/generated/component.css` (3×)
+  - Tokens que referenciam: `component.checkbox.box.radius.default`, `component.tabs.focus-ring.radius.default`, `component.tooltip.content.radius.default`
 
 ### `semantic.radius.xl`
 
@@ -7070,8 +7071,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.dimension.10.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (3×)
-  - Tokens que referenciam: `component.button.padding-y.md`, `component.field.padding-y.md`, `component.tabs.item.indicator-gap.default`
+    - `css/tokens/generated/component.css` (2×)
+  - Tokens que referenciam: `component.button.padding-y.md`, `component.field.padding-y.md`
 
 ### `semantic.space.control.padding.6`
 
@@ -7115,9 +7116,9 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/divider.css` (2×)
     - `css/components/radio.css` (1×)
-    - `css/tokens/generated/component.css` (13×)
+    - `css/tokens/generated/component.css` (14×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.alert.padding.default`, `component.button.padding-x.md`, `component.button.padding-y.lg`, `component.button.icon-only-padding.lg`, `component.field.padding-y.lg`, `component.input.padding-x.lg`, `component.modal.header.padding-bottom.md`, `component.modal.footer.padding-top.md`, `component.modal.footer.gap.default`, `component.modal.close.padding.lg`, `component.select.padding-x.lg`, `component.tabs.item.padding-top.default`, `component.textarea.padding-x.md`
+  - Tokens que referenciam: `component.alert.padding.default`, `component.button.padding-x.md`, `component.button.padding-y.lg`, `component.button.icon-only-padding.lg`, `component.field.padding-y.lg`, `component.input.padding-x.lg`, `component.modal.header.padding-bottom.md`, `component.modal.footer.padding-top.md`, `component.modal.footer.gap.default`, `component.modal.close.padding.lg`, `component.select.padding-x.lg`, `component.tabs.item.padding-top.default`, `component.tabs.item.indicator-gap.default`, `component.textarea.padding-x.md`
 
 ### `semantic.space.none`
 
@@ -14780,6 +14781,18 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/button.css` (1×)
     - `css/components/spinner.css` (1×)
 
+### `component.tabs.focus-ring.radius.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.radius.sm`
+- **Sentido**: Radius do focus ring do Tab Item.
+- **Escopo**: tabs, focus ring
+- **Contexto**: Component token do contrato anatômico Tabs. Binda o corner radius da camada Focus Ring no Figma, mantendo cor e largura nos tokens globais de focus ring.
+- **Decisão**: Alias 1:1 para semantic.radius.sm para manter 4px no focus ring de Tabs, evitando o exagero visual de radius/md sem transformar a borda ativa do item em elemento arredondado.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
 ### `component.tabs.indicator.fill.active`
 
 - **Camada**: component
@@ -14810,11 +14823,11 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.space.control.padding.10`
+- **Alias**: → `semantic.space.md`
 - **Sentido**: Gap entre label e indicator Tabs.
-- **Escopo**: height, padding-bottom
-- **Contexto**: Component token do contrato anatômico Tabs Item. Binda height do frame Gap nos estados do Tab Item no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.space.control.padding.10 porque 10px é valor de controle já existente, mas no Tabs representa a separação anatômica entre label e indicador.
+- **Escopo**: padding-bottom, tabs
+- **Contexto**: Component token do contrato anatômico Tabs Item. Binda o padding-bottom dos estados do Tab Item no Figma e substitui consumo direto de Semantic no CSS.
+- **Decisão**: Alias 1:1 para semantic.space.md para manter 12px entre label e indicador ativo, alinhando Figma e CSS sem camada Gap artificial.
 - **Usos**:
   - CSS:
     - `css/components/tabs.css` (1×)

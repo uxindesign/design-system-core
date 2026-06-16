@@ -6876,7 +6876,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 13
+            "count": 14
           },
           {
             "file": "css/utilities/layout.css",
@@ -6896,6 +6896,7 @@
           "component.modal.close.padding.lg",
           "component.select.padding-x.lg",
           "component.tabs.item.padding-top.default",
+          "component.tabs.item.indicator-gap.default",
           "component.textarea.padding-x.md"
         ],
         "figma": []
@@ -7045,11 +7046,12 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 2
+            "count": 3
           }
         ],
         "tokens": [
           "component.checkbox.box.radius.default",
+          "component.tabs.focus-ring.radius.default",
           "component.tooltip.content.radius.default"
         ],
         "figma": []
@@ -9068,13 +9070,12 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 3
+            "count": 2
           }
         ],
         "tokens": [
           "component.button.padding-y.md",
-          "component.field.padding-y.md",
-          "component.tabs.item.indicator-gap.default"
+          "component.field.padding-y.md"
         ],
         "figma": []
       }
@@ -13879,14 +13880,14 @@
     "component.tabs.item.indicator-gap.default": {
       "layer": "component",
       "type": "dimension",
-      "references": "semantic.space.control.padding.10",
+      "references": "semantic.space.md",
       "sentido": "Gap entre label e indicator Tabs.",
       "escopo": [
-        "height",
-        "padding-bottom"
+        "padding-bottom",
+        "tabs"
       ],
-      "contexto": "Component token do contrato anatômico Tabs Item. Binda height do frame Gap nos estados do Tab Item no Figma e substitui consumo direto de Semantic no CSS.",
-      "decisao": "Alias 1:1 para semantic.space.control.padding.10 porque 10px é valor de controle já existente, mas no Tabs representa a separação anatômica entre label e indicador.",
+      "contexto": "Component token do contrato anatômico Tabs Item. Binda o padding-bottom dos estados do Tab Item no Figma e substitui consumo direto de Semantic no CSS.",
+      "decisao": "Alias 1:1 para semantic.space.md para manter 12px entre label e indicador ativo, alinhando Figma e CSS sem camada Gap artificial.",
       "usos": {
         "css": [
           {
@@ -25515,6 +25516,23 @@
       ],
       "contexto": "Component token do contrato anatômico Radio Group. Binda itemSpacing do frame Options no Figma e evita consumo direto de Semantic em estrutura de componente.",
       "decisao": "Alias 1:1 para semantic.space.sm para manter 8px entre opções e preservar alinhamento com grupos de seleção equivalentes.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.tabs.focus-ring.radius.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.radius.sm",
+      "sentido": "Radius do focus ring do Tab Item.",
+      "escopo": [
+        "tabs",
+        "focus ring"
+      ],
+      "contexto": "Component token do contrato anatômico Tabs. Binda o corner radius da camada Focus Ring no Figma, mantendo cor e largura nos tokens globais de focus ring.",
+      "decisao": "Alias 1:1 para semantic.radius.sm para manter 4px no focus ring de Tabs, evitando o exagero visual de radius/md sem transformar a borda ativa do item em elemento arredondado.",
       "usos": {
         "css": [],
         "tokens": [],
