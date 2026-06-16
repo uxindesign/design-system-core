@@ -48,6 +48,7 @@
   content: "";
   position: absolute;
   inset: calc(var(--ds-focus-ring-width) * -2);
+  box-sizing: border-box;
   border: var(--ds-focus-ring-width) solid var(--ds-focus-ring-color-default);
   border-radius: var(--ds-tabs-focus-ring-radius-default);
   pointer-events: none;
