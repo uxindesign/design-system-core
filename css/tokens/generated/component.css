@@ -504,7 +504,6 @@
   --ds-tabs-item-padding-x-default: var(--ds-space-lg); /** Espaçamento interno horizontal do item de Tabs. */
   --ds-tabs-item-padding-top-default: var(--ds-space-md); /** Espaçamento interno superior do item de Tabs. */
   --ds-tabs-item-indicator-gap-default: var(--ds-space-control-padding-10); /** Espaço entre o rótulo e o indicador de Tabs. */
-  --ds-tabs-focus-ring-radius-default: var(--ds-radius-md); /** Radius do focus ring Tabs. */
   --ds-tabs-indicator-height-default: var(--ds-border-width-strong); /** Altura do indicador de Tabs. */
   --ds-tabs-indicator-fill-active: var(--ds-primary-background-default);
   --ds-tabs-label-font-size-default: var(--ds-body-font-size-sm); /** Tamanho da fonte do rótulo de Tabs. */

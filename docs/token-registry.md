@@ -558,7 +558,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 |---|---|---|---|---|
 | `semantic.radius.full` | dimension | → `foundation.radius.999` | Radius semantic full. | 11 |
 | `semantic.radius.lg` | dimension | → `foundation.radius.12` | Radius semantic lg. | 9 |
-| `semantic.radius.md` | dimension | → `foundation.radius.8` | Radius semantic md. | 9 |
+| `semantic.radius.md` | dimension | → `foundation.radius.8` | Radius semantic md. | 8 |
 | `semantic.radius.sm` | dimension | → `foundation.radius.4` | Radius semantic sm. | 8 |
 | `semantic.radius.xl` | dimension | → `foundation.radius.16` | Radius semantic xl. | 0 |
 
@@ -1294,7 +1294,6 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `component.tabs.focus-ring.radius.default` | dimension | → `semantic.radius.md` | Radius do focus ring Tabs. | 0 |
 | `component.tabs.indicator.fill.active` | color | → `semantic.primary.background.default` | Contrato indicator.fill de tabs, sincronizado a partir das Variables Figma atuais. | 1 |
 | `component.tabs.indicator.height.default` | dimension | → `semantic.border.width.strong` | Altura do indicator Tabs. | 1 |
 | `component.tabs.item.indicator-gap.default` | dimension | → `semantic.space.control.padding.10` | Gap entre label e indicator Tabs. | 1 |
@@ -6765,8 +6764,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.radius.8.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (8×)
-  - Tokens que referenciam: `component.breadcrumb.focus-ring.radius.default`, `component.button.radius.default`, `component.checkbox.focus-ring.radius.default`, `component.divider.line.radius.default`, `component.field.radius`, `component.skeleton.text.radius.default`, `component.skeleton.rectangle.radius.default`, `component.tabs.focus-ring.radius.default`
+    - `css/tokens/generated/component.css` (7×)
+  - Tokens que referenciam: `component.breadcrumb.focus-ring.radius.default`, `component.button.radius.default`, `component.checkbox.focus-ring.radius.default`, `component.divider.line.radius.default`, `component.field.radius`, `component.skeleton.text.radius.default`, `component.skeleton.rectangle.radius.default`
 
 ### `semantic.radius.sm`
 
@@ -14780,18 +14779,6 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/button.css` (1×)
     - `css/components/spinner.css` (1×)
-
-### `component.tabs.focus-ring.radius.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.radius.md`
-- **Sentido**: Radius do focus ring Tabs.
-- **Escopo**: border-radius
-- **Contexto**: Component token do contrato anatômico Tabs Focus Ring. Binda corner radius do Focus Ring no Figma; não deve ser usado no item/indicator para não arredondar o underline ativo.
-- **Decisão**: Alias 1:1 para semantic.radius.md porque 8px é decisão reutilizável para o focus ring, mantendo o indicador ativo sem border-radius no CSS.
-- **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `component.tabs.indicator.fill.active`
 

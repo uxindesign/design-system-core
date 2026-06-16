@@ -33,15 +33,6 @@
           }
         }
       },
-      "focus-ring": {
-        "radius": {
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.radius.md}",
-            "$description": "Radius do focus ring Tabs."
-          }
-        }
-      },
       "indicator": {
         "height": {
           "default": {

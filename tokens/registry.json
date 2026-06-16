@@ -7069,7 +7069,7 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 8
+            "count": 7
           }
         ],
         "tokens": [
@@ -7079,8 +7079,7 @@
           "component.divider.line.radius.default",
           "component.field.radius",
           "component.skeleton.text.radius.default",
-          "component.skeleton.rectangle.radius.default",
-          "component.tabs.focus-ring.radius.default"
+          "component.skeleton.rectangle.radius.default"
         ],
         "figma": []
       }
@@ -20262,22 +20261,6 @@
             "count": 4
           }
         ],
-        "tokens": [],
-        "figma": []
-      }
-    },
-    "component.tabs.focus-ring.radius.default": {
-      "layer": "component",
-      "type": "dimension",
-      "references": "semantic.radius.md",
-      "sentido": "Radius do focus ring Tabs.",
-      "escopo": [
-        "border-radius"
-      ],
-      "contexto": "Component token do contrato anatômico Tabs Focus Ring. Binda corner radius do Focus Ring no Figma; não deve ser usado no item/indicator para não arredondar o underline ativo.",
-      "decisao": "Alias 1:1 para semantic.radius.md porque 8px é decisão reutilizável para o focus ring, mantendo o indicador ativo sem border-radius no CSS.",
-      "usos": {
-        "css": [],
         "tokens": [],
         "figma": []
       }
