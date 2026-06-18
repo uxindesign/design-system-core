@@ -193,7 +193,7 @@
 
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Medio (640px)</span><span data-lang="en">Medium (640px)</span></h2>
-    <p style="margin-bottom:var(--ds-space-lg);color:var(--ds-content-default);font-size:var(--ds-body-font-size-sm);"><span data-lang="pt">Use como tamanho padrão para formulários curtos e edição simples. O close usa alvo interativo de 40px com ícone de 24px.</span><span data-lang="en">Use as the default size for short forms and simple editing. The close control uses a 40px interactive target with a 24px icon.</span></p>
+    <p style="margin-bottom:var(--ds-space-lg);color:var(--ds-content-default);font-size:var(--ds-body-font-size-sm);"><span data-lang="pt">Use como tamanho padrão para confirmações com contexto e edição simples. O close usa alvo interativo de 40px com ícone de 24px.</span><span data-lang="en">Use as the default size for confirmations with context and simple editing. The close control uses a 40px interactive target with a 24px icon.</span></p>
     <div class="ds-preview">
       <div class="ds-preview__tabs" role="tablist">
         <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
@@ -204,16 +204,15 @@
           <div class="ds-modal-overlay" style="position:relative;background:var(--ds-modal-overlay-bg-default);border-radius:var(--ds-radius-lg);padding:var(--ds-space-section-sm);display:flex;align-items:center;justify-content:center;width:100%;">
             <div class="ds-modal ds-modal--md" role="dialog" aria-modal="true" aria-labelledby="modal-md-title" style="position:relative;width:100%;">
               <div class="ds-modal__header">
-                <h3 id="modal-md-title" class="ds-modal__title">Edit profile</h3>
+                <h3 id="modal-md-title" class="ds-modal__title">Review changes</h3>
                 <button class="ds-modal__close" aria-label="Close modal"><i data-lucide="x" class="ds-icon"></i></button>
               </div>
               <div class="ds-modal__body">
-                <p style="margin:0 0 var(--ds-space-md);">Update your personal information below. Changes will be saved immediately.</p>
-                <input class="ds-input__field" type="text" placeholder="Full name" style="width:100%;">
+                <p style="margin:0;">Review the pending changes before applying them to this workspace. This action can be reverted later from the activity log.</p>
               </div>
               <div class="ds-modal__footer">
                 <button class="ds-button ds-button--ghost">Cancel</button>
-                <button class="ds-button ds-button--brand">Save changes</button>
+                <button class="ds-button ds-button--brand">Apply changes</button>
               </div>
             </div>
           </div>
@@ -226,18 +225,17 @@
   &lt;div class="ds-modal ds-modal--md" role="dialog"
        aria-modal="true" aria-labelledby="modal-title"&gt;
     &lt;div class="ds-modal__header"&gt;
-      &lt;h3 id="modal-title" class="ds-modal__title"&gt;Edit profile&lt;/h3&gt;
+      &lt;h3 id="modal-title" class="ds-modal__title"&gt;Review changes&lt;/h3&gt;
       &lt;button class="ds-modal__close" aria-label="Close modal"&gt;
         &lt;i data-lucide="x" class="ds-icon"&gt;&lt;/i&gt;
       &lt;/button&gt;
     &lt;/div&gt;
     &lt;div class="ds-modal__body"&gt;
-      &lt;p&gt;Update your personal information.&lt;/p&gt;
-      &lt;input type="text" placeholder="Full name"&gt;
+      &lt;p&gt;Review the pending changes before applying them.&lt;/p&gt;
     &lt;/div&gt;
     &lt;div class="ds-modal__footer"&gt;
       &lt;button class="ds-button ds-button--ghost"&gt;Cancel&lt;/button&gt;
-      &lt;button class="ds-button ds-button--brand"&gt;Save changes&lt;/button&gt;
+      &lt;button class="ds-button ds-button--brand"&gt;Apply changes&lt;/button&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
@@ -322,9 +320,9 @@
                 <button class="ds-modal__close" aria-label="Close modal"><i data-lucide="x" class="ds-icon"></i></button>
               </div>
               <div class="ds-modal__body">
-                <div style="display:grid;gap:var(--ds-space-md);">
-                  <input class="ds-input__field" type="email" placeholder="name@company.com">
-                  <button class="ds-button ds-button--brand">Send invite</button>
+                <div style="display:grid;gap:var(--ds-space-sm);">
+                  <p style="margin:0;">People added here will receive access to the workspace and inherit the default project role.</p>
+                  <p style="margin:0;color:var(--ds-content-default);font-size:var(--ds-body-font-size-sm);">Use the body slot for custom content when the modal needs a composed layout.</p>
                 </div>
               </div>
             </div>
