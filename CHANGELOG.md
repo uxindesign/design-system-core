@@ -12,6 +12,7 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 - **Escala semântica de space expandida.** `semantic.space` passa a incluir `3xl` a `6xl` (`32/40/48/64px`) e `semantic.space.section` sobe para `48/64/80/96/120px` com novo `section.2xl`, mantendo aliases Figma ↔ JSON para gaps, paddings e separação macro.
 
 ### Corrigido
+- **Modal close alinha posição ao Figma.** `.ds-modal__close` passa a ficar a `8px` do topo/direita da superfície em todos os tamanhos, compensando o padding do header como no component set vivo.
 - **Tabs aplicam radius no focus ring.** `.ds-tab:focus-visible` passa a consumir `--ds-tabs-focus-ring-radius-default`, alinhando o repo ao token já definido no Figma.
 - **Cards Faça/Não faça ajustam altura pelo próprio conteúdo.** O grid compartilhado dos docs deixa de esticar o card menor até a altura da coluna vizinha e reduz o espaço entre label e descrição.
 - **Visual regression passa a rodar no CI.** `test.yml` agora executa `scripts/test-visual.mjs` após a auditoria a11y e publica `tests/visual/actual` + `tests/visual/diff` como artifact quando houver falha; a baseline visual foi atualizada para o estado atual validado em produção.

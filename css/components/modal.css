@@ -119,8 +119,8 @@
 
 .ds-modal__close {
   position: absolute;
-  top: var(--ds-modal-close-padding-md);
-  right: var(--ds-modal-close-padding-md);
+  top: calc(var(--ds-space-sm) - var(--ds-modal-container-padding-md));
+  right: calc(var(--ds-space-sm) - var(--ds-modal-container-padding-md));
   flex-shrink: 0;
   width: var(--ds-modal-close-size-md);
   height: var(--ds-modal-close-size-md);
@@ -144,6 +144,8 @@
 }
 
 .ds-modal--sm .ds-modal__close {
+  top: calc(var(--ds-space-sm) - var(--ds-modal-container-padding-sm));
+  right: calc(var(--ds-space-sm) - var(--ds-modal-container-padding-sm));
   width: var(--ds-modal-close-size-sm);
   height: var(--ds-modal-close-size-sm);
   padding: var(--ds-modal-close-padding-sm);
@@ -155,6 +157,8 @@
 }
 
 .ds-modal--lg .ds-modal__close {
+  top: calc(var(--ds-space-sm) - var(--ds-modal-container-padding-lg));
+  right: calc(var(--ds-space-sm) - var(--ds-modal-container-padding-lg));
   width: var(--ds-modal-close-size-lg);
   height: var(--ds-modal-close-size-lg);
   padding: var(--ds-modal-close-padding-lg);
