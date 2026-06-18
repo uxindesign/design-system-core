@@ -134,18 +134,23 @@
   --ds-motion-ease-out: var(--ds-ease-out); /** Desaceleração no final. Elementos entrando na tela. */
   --ds-motion-ease-in-out: var(--ds-ease-in-out); /** Aceleração + desaceleração. Mesmo valor de default. */
   --ds-motion-ease-linear: var(--ds-ease-linear); /** Velocidade constante. Loops (Spinner). */
-  --ds-space-none: var(--ds-dimension-0); /** Espaço zero para remover padding/gap mantendo alias semântico. */
-  --ds-space-2xs: var(--ds-dimension-2); /** 2px */
-  --ds-space-xs: var(--ds-dimension-4); /** 4px */
-  --ds-space-sm: var(--ds-dimension-8); /** 8px */
-  --ds-space-md: var(--ds-dimension-12); /** 12px */
-  --ds-space-lg: var(--ds-dimension-16); /** 16px */
-  --ds-space-xl: var(--ds-dimension-20); /** 20px */
-  --ds-space-2xl: var(--ds-dimension-24); /** 24px */
-  --ds-space-section-sm: var(--ds-dimension-32);
-  --ds-space-section-md: var(--ds-dimension-48);
-  --ds-space-section-lg: var(--ds-dimension-64);
-  --ds-space-section-xl: var(--ds-dimension-80);
+  --ds-space-none: var(--ds-dimension-0); /** 0px. Espaço zero para remover padding/gap mantendo alias semântico. */
+  --ds-space-2xs: var(--ds-dimension-2); /** 2px. Menor espaço semântico para ajustes finos de gap/padding. */
+  --ds-space-xs: var(--ds-dimension-4); /** 4px. Espaço compacto para relações muito próximas. */
+  --ds-space-sm: var(--ds-dimension-8); /** 8px. Espaço pequeno padrão para controles e conteúdo denso. */
+  --ds-space-md: var(--ds-dimension-12); /** 12px. Espaço médio para gaps internos e agrupamentos próximos. */
+  --ds-space-lg: var(--ds-dimension-16); /** 16px. Espaço confortável para padding e separação interna. */
+  --ds-space-xl: var(--ds-dimension-20); /** 20px. Espaço amplo para containers e componentes robustos. */
+  --ds-space-2xl: var(--ds-dimension-24); /** 24px. Espaço extra amplo para containers antes da escala expandida. */
+  --ds-space-3xl: var(--ds-dimension-32); /** 32px. Espaçamento amplo para composição interna de componentes e blocos densos. */
+  --ds-space-4xl: var(--ds-dimension-40); /** 40px. Espaçamento amplo para composição interna quando 32px ainda é curto. */
+  --ds-space-5xl: var(--ds-dimension-48); /** 48px. Limite alto para composição interna antes de entrar em escala de section. */
+  --ds-space-6xl: var(--ds-dimension-64); /** 64px. Espaçamento máximo da escala genérica; use section/* para respiro entre áreas. */
+  --ds-space-section-sm: var(--ds-dimension-48); /** 48px. Espaçamento compacto entre seções, acima da escala genérica comum. */
+  --ds-space-section-md: var(--ds-dimension-64); /** 64px. Espaçamento padrão entre seções de página, docs e specs. */
+  --ds-space-section-lg: var(--ds-dimension-80); /** 80px. Espaçamento amplo entre seções ou grupos editoriais. */
+  --ds-space-section-xl: var(--ds-dimension-96); /** 96px. Espaçamento extra amplo para separação de grandes áreas. */
+  --ds-space-section-2xl: var(--ds-dimension-120); /** 120px. Maior respiro de section previsto para páginas e documentação. */
   --ds-space-control-padding-6: var(--ds-dimension-6); /** 6px. Padding simétrico de Icon Only sm Button. Único valor de control entre xs(4) e sm(8) que foge da escala space. */
   --ds-space-control-padding-10: var(--ds-dimension-10); /** 10px. Padding-Y vertical de controles (Input/Button md). Único valor de control que foge da escala space (xs–2xl). */
   --ds-size-xs: var(--ds-dimension-16); /** 16px. Inline icon em body text, indicator pequeno. */

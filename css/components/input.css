@@ -290,7 +290,7 @@
   color: var(--ds-form-field-label-color-default);
   font-family: var(--ds-form-field-label-font-family-default);
   font-size: var(--ds-form-field-label-font-size-default);
-  font-weight: var(--ds-form-field-label-font-weight-default);
+  font-weight: var(--ds-body-font-weight-bold);
   letter-spacing: var(--ds-body-letter-spacing-normal);
   line-height: var(--ds-form-field-label-line-height-default);
 }
@@ -309,7 +309,7 @@
   color: var(--ds-form-field-required-color-default);
   font-family: var(--ds-form-field-required-font-family-default);
   font-size: var(--ds-form-field-required-font-size-default);
-  font-weight: var(--ds-form-field-required-font-weight-default);
+  font-weight: var(--ds-body-font-weight-bold);
   letter-spacing: var(--ds-body-letter-spacing-normal);
   line-height: var(--ds-form-field-required-line-height-default);
 }
@@ -317,10 +317,10 @@
 .ds-field:has(.ds-input) .ds-field__helper {
   color: var(--ds-form-field-helper-color-default);
   font-family: var(--ds-form-field-label-font-family-default);
-  font-size: var(--ds-form-field-helper-font-size-default);
-  font-weight: var(--ds-form-field-helper-font-weight-default);
+  font-size: var(--ds-body-font-size-xs);
+  font-weight: var(--ds-body-font-weight-regular);
   letter-spacing: var(--ds-body-letter-spacing-normal);
-  line-height: var(--ds-form-field-helper-line-height-default);
+  line-height: var(--ds-body-line-height-xs);
 }
 
 .ds-field--error:has(.ds-input) .ds-field__label {

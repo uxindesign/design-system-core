@@ -299,18 +299,13 @@
   --ds-form-field-label-color-readonly: var(--ds-content-default);
   --ds-form-field-label-font-size-default: var(--ds-body-font-size-sm); /** Font-size do label Form Field. */
   --ds-form-field-label-line-height-default: var(--ds-body-line-height-sm); /** Line-height do label Form Field. */
-  --ds-form-field-label-font-weight-default: var(--ds-body-font-weight-bold); /** Font-weight do label Form Field. */
   --ds-form-field-label-font-family-default: var(--ds-body-font-family-sans);
   --ds-form-field-required-color-default: var(--ds-feedback-error-content-default); /** Cor do indicador required Form Field. */
   --ds-form-field-required-font-size-default: var(--ds-body-font-size-sm); /** Font-size do indicador required Form Field. */
   --ds-form-field-required-line-height-default: var(--ds-body-line-height-sm); /** Line-height do indicador required Form Field. */
-  --ds-form-field-required-font-weight-default: var(--ds-body-font-weight-bold); /** Font-weight do indicador required Form Field. */
   --ds-form-field-required-font-family-default: var(--ds-body-font-family-sans);
   --ds-form-field-helper-color-default: var(--ds-content-default); /** Cor do helper text Form Field. */
   --ds-form-field-helper-color-disabled: var(--ds-content-disabled);
-  --ds-form-field-helper-font-size-default: var(--ds-body-font-size-xs); /** Font-size do helper text Form Field. */
-  --ds-form-field-helper-line-height-default: var(--ds-body-line-height-xs); /** Line-height do helper text Form Field. */
-  --ds-form-field-helper-font-weight-default: var(--ds-body-font-weight-regular); /** Font-weight do helper text Form Field. */
   --ds-form-field-error-color-default: var(--ds-feedback-error-content-default); /** Cor da mensagem de erro Form Field. */
   --ds-form-field-error-font-size-default: var(--ds-body-font-size-xs); /** Font-size da mensagem de erro Form Field. */
   --ds-form-field-error-line-height-default: var(--ds-body-line-height-xs); /** Line-height da mensagem de erro Form Field. */
@@ -357,51 +352,25 @@
   --ds-modal-max-width-lg: var(--ds-size-layout-lg); /** Max-width do Modal lg. */
   --ds-modal-radius-default: var(--ds-radius-lg); /** Radius do Modal. */
   --ds-modal-shadow-default: var(--ds-shadow-modal); /** Shadow do Modal. */
-  --ds-modal-header-padding-x-sm: var(--ds-space-lg); /** Padding horizontal do header Modal sm. */
-  --ds-modal-header-padding-x-md: var(--ds-space-xl); /** Padding horizontal do header Modal md. */
-  --ds-modal-header-padding-x-lg: var(--ds-space-2xl); /** Padding horizontal do header Modal lg. */
-  --ds-modal-header-padding-top-sm: var(--ds-space-lg); /** Padding top do header Modal sm. */
-  --ds-modal-header-padding-top-md: var(--ds-space-xl); /** Padding top do header Modal md. */
-  --ds-modal-header-padding-top-lg: var(--ds-space-2xl); /** Padding top do header Modal lg. */
-  --ds-modal-header-padding-bottom-sm: var(--ds-space-sm); /** Padding bottom do header Modal sm. */
-  --ds-modal-header-padding-bottom-md: var(--ds-space-md); /** Padding bottom do header Modal md. */
-  --ds-modal-header-padding-bottom-lg: var(--ds-space-lg); /** Padding bottom do header Modal lg. */
+  --ds-modal-bg-default: var(--ds-surface-elevated); /** Background da superfície Modal. */
+  --ds-modal-container-padding-sm: var(--ds-space-lg); /** Padding do container Modal sm. */
+  --ds-modal-container-padding-md: var(--ds-space-xl); /** Padding do container Modal md. */
+  --ds-modal-container-padding-lg: var(--ds-space-2xl); /** Padding do container Modal lg. */
+  --ds-modal-container-gap-sm: var(--ds-space-md); /** Gap vertical do container Modal sm. */
+  --ds-modal-container-gap-md: var(--ds-space-lg); /** Gap vertical do container Modal md. */
+  --ds-modal-container-gap-lg: var(--ds-space-xl); /** Gap vertical do container Modal lg. */
   --ds-modal-header-gap-default: var(--ds-space-lg); /** Gap horizontal do header Modal. */
-  --ds-modal-body-padding-x-sm: var(--ds-space-lg); /** Padding horizontal do body Modal sm. */
-  --ds-modal-body-padding-x-md: var(--ds-space-xl); /** Padding horizontal do body Modal md. */
-  --ds-modal-body-padding-x-lg: var(--ds-space-2xl); /** Padding horizontal do body Modal lg. */
-  --ds-modal-body-padding-bottom-sm: var(--ds-space-lg); /** Padding bottom do body Modal sm. */
-  --ds-modal-body-padding-bottom-md: var(--ds-space-xl); /** Padding bottom do body Modal md. */
-  --ds-modal-body-padding-bottom-lg: var(--ds-space-xl); /** Padding bottom do body Modal lg. */
-  --ds-modal-body-font-size-sm: var(--ds-body-font-size-sm); /** Font-size do body Modal sm. */
-  --ds-modal-body-font-size-md: var(--ds-body-font-size-md); /** Font-size do body Modal md. */
-  --ds-modal-body-font-size-lg: var(--ds-body-font-size-lg); /** Font-size do body Modal lg. */
-  --ds-modal-body-line-height-sm: var(--ds-body-line-height-sm); /** Line-height do body Modal sm. */
-  --ds-modal-body-line-height-md: var(--ds-body-line-height-md); /** Line-height do body Modal md. */
-  --ds-modal-body-line-height-lg: var(--ds-body-line-height-xl); /** Line-height do body Modal lg. */
-  --ds-modal-body-font-weight-default: var(--ds-body-font-weight-regular); /** Font-weight do body Modal. */
-  --ds-modal-body-color-default: var(--ds-content-strong);
-  --ds-modal-title-font-size-sm: var(--ds-body-font-size-xl); /** Font-size do title Modal sm. */
-  --ds-modal-title-font-size-md: var(--ds-body-font-size-2xl); /** Font-size do title Modal md. */
-  --ds-modal-title-font-size-lg: var(--ds-body-font-size-3xl); /** Font-size do title Modal lg. */
-  --ds-modal-title-line-height-sm: var(--ds-body-line-height-xl); /** Line-height do title Modal sm. */
-  --ds-modal-title-line-height-md: var(--ds-body-line-height-2xl); /** Line-height do title Modal md. */
-  --ds-modal-title-line-height-lg: var(--ds-body-line-height-3xl); /** Line-height do title Modal lg. */
-  --ds-modal-title-font-weight-default: var(--ds-body-font-weight-semibold); /** Font-weight do title Modal. */
-  --ds-modal-title-letter-spacing-sm: var(--ds-body-letter-spacing-normal); /** Letter-spacing do title Modal sm. */
-  --ds-modal-title-letter-spacing-md: var(--ds-body-letter-spacing-normal); /** Letter-spacing do title Modal md. */
-  --ds-modal-title-letter-spacing-lg: var(--ds-body-letter-spacing-tight); /** Letter-spacing do title Modal lg. */
-  --ds-modal-title-color-default: var(--ds-content-strong);
-  --ds-modal-footer-padding-x-sm: var(--ds-space-lg); /** Padding horizontal do footer Modal sm. */
-  --ds-modal-footer-padding-x-md: var(--ds-space-xl); /** Padding horizontal do footer Modal md. */
-  --ds-modal-footer-padding-x-lg: var(--ds-space-2xl); /** Padding horizontal do footer Modal lg. */
-  --ds-modal-footer-padding-top-sm: var(--ds-space-sm); /** Padding top do footer Modal sm. */
-  --ds-modal-footer-padding-top-md: var(--ds-space-md); /** Padding top do footer Modal md. */
-  --ds-modal-footer-padding-top-lg: var(--ds-space-lg); /** Padding top do footer Modal lg. */
-  --ds-modal-footer-padding-bottom-sm: var(--ds-space-lg); /** Padding bottom do footer Modal sm. */
-  --ds-modal-footer-padding-bottom-md: var(--ds-space-xl); /** Padding bottom do footer Modal md. */
-  --ds-modal-footer-padding-bottom-lg: var(--ds-space-2xl); /** Padding bottom do footer Modal lg. */
-  --ds-modal-footer-gap-default: var(--ds-space-md); /** Gap horizontal do footer Modal. */
+  --ds-modal-heading-gap-default: var(--ds-space-xs); /** Gap vertical entre title e description Modal. */
+  --ds-modal-body-gap-sm: var(--ds-space-sm); /** Gap interno do body Modal sm. */
+  --ds-modal-body-gap-md: var(--ds-space-md); /** Gap interno do body Modal md. */
+  --ds-modal-body-gap-lg: var(--ds-space-lg); /** Gap interno do body Modal lg. */
+  --ds-modal-body-color-default: var(--ds-content-default); /** Cor do texto principal Modal. */
+  --ds-modal-title-color-default: var(--ds-content-strong); /** Cor do title Modal. */
+  --ds-modal-description-color-default: var(--ds-content-default); /** Cor da description Modal. */
+  --ds-modal-content-slot-gap-default: var(--ds-space-sm); /** Gap fallback do content slot Modal. */
+  --ds-modal-footer-gap-sm: var(--ds-space-sm); /** Gap horizontal do footer Modal sm. */
+  --ds-modal-footer-gap-md: var(--ds-space-md); /** Gap horizontal do footer Modal md. */
+  --ds-modal-footer-gap-lg: var(--ds-space-lg); /** Gap horizontal do footer Modal lg. */
   --ds-modal-close-padding-sm: var(--ds-space-control-padding-6); /** Padding do frame de hit-area do close Modal sm. */
   --ds-modal-close-padding-md: var(--ds-space-sm); /** Padding do frame de hit-area do close Modal md. */
   --ds-modal-close-padding-lg: var(--ds-space-md); /** Padding do frame de hit-area do close Modal lg. */
@@ -411,9 +380,8 @@
   --ds-modal-close-size-sm: var(--ds-size-lg); /** Tamanho do frame de hit-area do close Modal sm. */
   --ds-modal-close-size-md: var(--ds-size-xl); /** Tamanho do frame de hit-area do close Modal md. */
   --ds-modal-close-size-lg: var(--ds-size-2xl); /** Tamanho do frame de hit-area do close Modal lg. */
-  --ds-modal-close-icon-stroke-width-default: var(--ds-icon-stroke-width-regular-24);
-  --ds-modal-bg-default: var(--ds-surface-elevated);
-  --ds-modal-action-fill-brand: var(--ds-brand-background-default);
+  --ds-modal-close-icon-stroke-width-default: var(--ds-icon-stroke-width-regular-24); /** Stroke-width do ícone de fechar Modal. */
+  --ds-modal-action-fill-brand: var(--ds-brand-background-default); /** Fill brand para ação principal Modal. */
   --ds-radio-target-height-sm: var(--ds-size-lg); /** Altura minima da area interativa Radio sm. */
   --ds-radio-target-height-md: var(--ds-size-xl); /** Altura minima da area interativa Radio md. */
   --ds-radio-target-height-lg: var(--ds-size-2xl); /** Altura minima da area interativa Radio lg. */
@@ -600,7 +568,7 @@
   --ds-form-field-error-icon-color-default: var(--ds-icon-color-error); /** Cor do ícone da mensagem de erro Form Field. */
   --ds-input-icon-color-default: var(--ds-icon-color-default); /** Cor do ícone Input Text. */
   --ds-input-icon-color-disabled: var(--ds-icon-color-disabled); /** Cor do ícone Input Text disabled. */
-  --ds-modal-close-color-default: var(--ds-icon-color-default); /** Cor do ícone de fechar da Modal. Alias para content/default. */
+  --ds-modal-close-color-default: var(--ds-icon-color-default); /** Cor do ícone de fechar da Modal. */
   --ds-radio-control-border-color-unselected-error-hover: var(--ds-border-error-hover);
   --ds-radio-control-border-color-selected-default: var(--ds-brand-border-default); /** Border color do control Radio selected default. */
   --ds-radio-control-border-color-selected-hover: var(--ds-brand-border-hover); /** Border color do control Radio selected hover. */

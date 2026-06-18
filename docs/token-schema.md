@@ -1,6 +1,6 @@
 # Token schema — Design System Core
 
-> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-06-16. Não editar manualmente.
+> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-06-18. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
 > Versão atual: **1.0.0-beta.5**
 

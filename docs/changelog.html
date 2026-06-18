@@ -70,8 +70,13 @@
 <p>O formato é baseado em <a href="https://keepachangelog.com/pt-BR/1.1.0/">Keep a Changelog</a> e o versionamento segue <a href="https://semver.org/lang/pt-BR/">Semantic Versioning</a>.</p>
 <p>A partir de <code>1.0.0-beta.1</code>, o sistema entrou em <strong>fase beta</strong> — releases incrementam <code>1.0.0-beta.N</code> até decisão do owner pra dropping do tag → <code>1.0.0</code> oficial. Tags 0.x permanecem como histórico pré-beta. Regras em <code>docs/process-versioning.html</code>.</p>
 <h2><a href="https://github.com/uxindesign/design-system-core/compare/v0.5.0-pre-consolidation...HEAD">Não publicado</a></h2>
+<h3>Adicionado</h3>
+<ul>
+<li><strong>Escala semântica de space expandida.</strong> <code>semantic.space</code> passa a incluir <code>3xl</code> a <code>6xl</code> (<code>32/40/48/64px</code>) e <code>semantic.space.section</code> sobe para <code>48/64/80/96/120px</code> com novo <code>section.2xl</code>, mantendo aliases Figma ↔ JSON para gaps, paddings e separação macro.</li>
+</ul>
 <h3>Corrigido</h3>
 <ul>
+<li><strong>Tabs aplicam radius no focus ring.</strong> <code>.ds-tab:focus-visible</code> passa a consumir <code>--ds-tabs-focus-ring-radius-default</code>, alinhando o repo ao token já definido no Figma.</li>
 <li><strong>Cards Faça/Não faça ajustam altura pelo próprio conteúdo.</strong> O grid compartilhado dos docs deixa de esticar o card menor até a altura da coluna vizinha e reduz o espaço entre label e descrição.</li>
 <li><strong>Visual regression passa a rodar no CI.</strong> <code>test.yml</code> agora executa <code>scripts/test-visual.mjs</code> após a auditoria a11y e publica <code>tests/visual/actual</code> + <code>tests/visual/diff</code> como artifact quando houver falha; a baseline visual foi atualizada para o estado atual validado em produção.</li>
 <li><strong>Baseline de acessibilidade zerada.</strong> Ajustados contrastes em feedback <code>subtle</code> no dark mode, links do site de documentação e foco de blocos de código roláveis; <code>test:a11y</code> agora passa com <code>critical=0</code>, <code>serious=0</code>, <code>moderate=0</code>, <code>minor=0</code> e <code>.a11y-baseline.json</code> fica sem violações aceitas.</li>
@@ -225,6 +230,8 @@
 </ul>
 <h3>Adicionado</h3>
 <ul>
+<li><p><strong>Card e Modal ganham slots nativos no Figma.</strong> Card mantém as variantes por <code>Style</code> e passa a expor <code>Content Slot</code> e <code>Footer Slot</code> como properties <code>SLOT</code>, coexistindo com <code>Content</code>, <code>Title</code> e <code>Description</code>; Modal mantém as variantes por <code>Size</code> e passa a expor <code>Content Slot</code> nativo junto de <code>Title</code>, <code>Description</code> e <code>Content</code>. Repo documenta os novos contratos com <code>ds-card__description</code>, <code>ds-card__footer</code>, <code>ds-modal__heading</code> e <code>ds-modal__description</code>.</p>
+</li>
 <li><p><strong>ADR-019 — Component tokens como contrato anatômico.</strong> Reintroduz a camada Component no modelo Foundation/Core → Semantic/System → Component → implementação, alinhando o Core ao padrão de mercado para component tokens. Component deixa de ser wrapper mecânico e passa a documentar anatomia pública (<code>target</code>, <code>box</code>, <code>track</code>, <code>thumb</code>, etc.); aliases 1:1 para Semantic são permitidos quando representam contrato estável do componente. Pipeline preparado para <code>tokens/component/*.json</code> e <code>css/tokens/generated/component.css</code>, com docs/API/llms atualizados.</p>
 </li>
 <li><p><strong>Piloto Component materializado em Figma + JSON para Checkbox, Radio e Toggle.</strong> Criada a collection Figma <code>Component</code> com modo <code>Default</code> e 22 variables agrupadas por componente (<code>checkbox/...</code>, <code>radio/...</code>, <code>toggle/...</code>): target heights 32/40/48, box/control 16/20/24, track Toggle 28×16 / 44×24 / 56×32 e thumb inset 2px. Checkbox/Radio <code>Control</code> e Toggle <code>Track</code> foram rebindados às novas variables; <code>tokens/component/{checkbox,radio,toggle}.json</code>, registry, CSS consumidor e snapshot Figma foram atualizados.</p>

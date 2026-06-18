@@ -47,13 +47,6 @@
             "$description": "Line-height do label Form Field."
           }
         },
-        "font-weight": {
-          "default": {
-            "$type": "string",
-            "$value": "{semantic.typography.body.font-weight.bold}",
-            "$description": "Font-weight do label Form Field."
-          }
-        },
         "font-family": {
           "default": {
             "$value": "{semantic.typography.body.font-family.sans}",
@@ -83,13 +76,6 @@
             "$description": "Line-height do indicador required Form Field."
           }
         },
-        "font-weight": {
-          "default": {
-            "$type": "string",
-            "$value": "{semantic.typography.body.font-weight.bold}",
-            "$description": "Font-weight do indicador required Form Field."
-          }
-        },
         "font-family": {
           "default": {
             "$value": "{semantic.typography.body.font-family.sans}",
@@ -107,27 +93,6 @@
           "disabled": {
             "$value": "{semantic.content.disabled}",
             "$type": "color"
-          }
-        },
-        "font-size": {
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.typography.body.font-size.xs}",
-            "$description": "Font-size do helper text Form Field."
-          }
-        },
-        "line-height": {
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.typography.body.line-height.xs}",
-            "$description": "Line-height do helper text Form Field."
-          }
-        },
-        "font-weight": {
-          "default": {
-            "$type": "string",
-            "$value": "{semantic.typography.body.font-weight.regular}",
-            "$description": "Font-weight do helper text Form Field."
           }
         }
       },

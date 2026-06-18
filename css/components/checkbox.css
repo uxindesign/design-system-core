@@ -23,9 +23,9 @@
 
 /* Helper text — menor + mais sutil que description (Figma) */
 .ds-checkbox-helper {
-  font-size: var(--ds-form-field-helper-font-size-default);
-  font-weight: var(--ds-form-field-helper-font-weight-default);
-  line-height: var(--ds-form-field-helper-line-height-default);
+  font-size: var(--ds-body-font-size-xs);
+  font-weight: var(--ds-body-font-weight-regular);
+  line-height: var(--ds-body-line-height-xs);
   color: var(--ds-form-field-helper-color-default);
   padding-left: calc(var(--ds-size-sm) + var(--ds-space-sm) + var(--ds-space-xs));
 }
@@ -260,7 +260,7 @@
 .ds-checkbox__label {
   font-family: var(--ds-form-field-label-font-family-default);
   font-size: var(--ds-form-field-label-font-size-default);
-  font-weight: var(--ds-form-field-label-font-weight-default);
+  font-weight: var(--ds-body-font-weight-bold);
   line-height: var(--ds-form-field-label-line-height-default);
   color: var(--ds-form-field-label-color-default);
 }
@@ -276,9 +276,9 @@
 
 /* Helper text (caption/sm: 11px regular / 18px) */
 .ds-checkbox__helper {
-  font-size: var(--ds-form-field-helper-font-size-default);
-  font-weight: var(--ds-form-field-helper-font-weight-default);
-  line-height: var(--ds-form-field-helper-line-height-default);
+  font-size: var(--ds-body-font-size-xs);
+  font-weight: var(--ds-body-font-weight-regular);
+  line-height: var(--ds-body-line-height-xs);
   color: var(--ds-form-field-helper-color-default);
 }
 

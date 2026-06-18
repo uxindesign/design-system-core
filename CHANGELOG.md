@@ -8,6 +8,9 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 
 ## [Não publicado]
 
+### Adicionado
+- **Escala semântica de space expandida.** `semantic.space` passa a incluir `3xl` a `6xl` (`32/40/48/64px`) e `semantic.space.section` sobe para `48/64/80/96/120px` com novo `section.2xl`, mantendo aliases Figma ↔ JSON para gaps, paddings e separação macro.
+
 ### Corrigido
 - **Tabs aplicam radius no focus ring.** `.ds-tab:focus-visible` passa a consumir `--ds-tabs-focus-ring-radius-default`, alinhando o repo ao token já definido no Figma.
 - **Cards Faça/Não faça ajustam altura pelo próprio conteúdo.** O grid compartilhado dos docs deixa de esticar o card menor até a altura da coluna vizinha e reduz o espaço entre label e descrição.
@@ -102,6 +105,7 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 
 ### Adicionado
 
+- **Card e Modal ganham slots nativos no Figma.** Card mantém as variantes por `Style` e passa a expor `Content Slot` e `Footer Slot` como properties `SLOT`, coexistindo com `Content`, `Title` e `Description`; Modal mantém as variantes por `Size` e passa a expor `Content Slot` nativo junto de `Title`, `Description` e `Content`. Repo documenta os novos contratos com `ds-card__description`, `ds-card__footer`, `ds-modal__heading` e `ds-modal__description`.
 - **ADR-019 — Component tokens como contrato anatômico.** Reintroduz a camada Component no modelo Foundation/Core → Semantic/System → Component → implementação, alinhando o Core ao padrão de mercado para component tokens. Component deixa de ser wrapper mecânico e passa a documentar anatomia pública (`target`, `box`, `track`, `thumb`, etc.); aliases 1:1 para Semantic são permitidos quando representam contrato estável do componente. Pipeline preparado para `tokens/component/*.json` e `css/tokens/generated/component.css`, com docs/API/llms atualizados.
 - **Piloto Component materializado em Figma + JSON para Checkbox, Radio e Toggle.** Criada a collection Figma `Component` com modo `Default` e 22 variables agrupadas por componente (`checkbox/...`, `radio/...`, `toggle/...`): target heights 32/40/48, box/control 16/20/24, track Toggle 28×16 / 44×24 / 56×32 e thumb inset 2px. Checkbox/Radio `Control` e Toggle `Track` foram rebindados às novas variables; `tokens/component/{checkbox,radio,toggle}.json`, registry, CSS consumidor e snapshot Figma foram atualizados.
 - **Alturas Component para controles single-line.** Button, Input Text e Select ganharam `component.<componente>.superfície principal.height.{sm,md,lg}` aliasados a `semantic.size.{lg,xl,2xl}`. Figma foi rebindado no Button e no `Field` visual de Input/Select; CSS consumidor passou a usar `--ds-button-height-*`, `--ds-input-height-*` e `--ds-select-height-*`.

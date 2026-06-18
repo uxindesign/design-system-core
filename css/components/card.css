@@ -23,8 +23,9 @@
   line-height: var(--ds-card-title-line-height-default);
 }
 
-/* Subtitle — body/sm bold in Figma */
-.ds-card__subtitle {
+/* Description — body/sm bold in Figma */
+.ds-card__subtitle,
+.ds-card__description {
   font-size: var(--ds-card-subtitle-font-size-default);
   font-weight: var(--ds-card-subtitle-font-weight-default);
   line-height: var(--ds-card-subtitle-line-height-default);
@@ -38,6 +39,17 @@
   font-weight: var(--ds-card-body-font-weight-default);
   color: var(--ds-card-body-color-default);
   line-height: var(--ds-card-body-line-height-default);
+}
+
+.ds-card__body:first-child {
+  padding-top: var(--ds-card-header-padding-top-default);
+}
+
+.ds-card__footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--ds-card-header-gap-default);
+  padding: var(--ds-card-header-padding-bottom-default) var(--ds-card-body-padding-x-default) var(--ds-card-body-padding-bottom-default);
 }
 
 /* ---------------------------------------------------------

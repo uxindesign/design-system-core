@@ -37,40 +37,84 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: var(--ds-modal-header-padding-top-sm) var(--ds-modal-header-padding-x-sm) var(--ds-modal-header-padding-bottom-sm);
+  padding: var(--ds-modal-container-padding-sm) var(--ds-modal-container-padding-sm) 0;
   gap: var(--ds-modal-header-gap-default);
 }
 
 .ds-modal--md .ds-modal__header {
-  padding: var(--ds-modal-header-padding-top-md) var(--ds-modal-header-padding-x-md) var(--ds-modal-header-padding-bottom-md);
+  padding: var(--ds-modal-container-padding-md) var(--ds-modal-container-padding-md) 0;
 }
 
 .ds-modal--lg .ds-modal__header {
-  padding: var(--ds-modal-header-padding-top-lg) var(--ds-modal-header-padding-x-lg) var(--ds-modal-header-padding-bottom-lg);
+  padding: var(--ds-modal-container-padding-lg) var(--ds-modal-container-padding-lg) 0;
+}
+
+.ds-modal__heading {
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-modal-heading-gap-default);
+  padding-right: calc(var(--ds-modal-close-size-sm) + var(--ds-modal-header-gap-default));
+}
+
+.ds-modal--md .ds-modal__heading {
+  padding-right: calc(var(--ds-modal-close-size-md) + var(--ds-modal-header-gap-default));
+}
+
+.ds-modal--lg .ds-modal__heading {
+  padding-right: calc(var(--ds-modal-close-size-lg) + var(--ds-modal-header-gap-default));
 }
 
 .ds-modal__title {
   margin: 0;
-  font-size: var(--ds-modal-title-font-size-sm);
-  font-weight: var(--ds-modal-title-font-weight-default);
+  font-size: var(--ds-body-font-size-xl);
+  font-weight: var(--ds-body-font-weight-semibold);
   color: var(--ds-modal-title-color-default);
-  line-height: var(--ds-modal-title-line-height-sm);
-  letter-spacing: var(--ds-modal-title-letter-spacing-sm);
+  line-height: var(--ds-body-line-height-xl);
+  letter-spacing: var(--ds-body-letter-spacing-normal);
   padding-right: calc(var(--ds-modal-close-size-sm) + var(--ds-modal-header-gap-default));
 }
 
+.ds-modal__heading .ds-modal__title {
+  padding-right: 0;
+}
+
 .ds-modal--md .ds-modal__title {
-  font-size: var(--ds-modal-title-font-size-md);
-  line-height: var(--ds-modal-title-line-height-md);
-  letter-spacing: var(--ds-modal-title-letter-spacing-md);
+  font-size: var(--ds-body-font-size-2xl);
+  line-height: var(--ds-body-line-height-2xl);
+  letter-spacing: var(--ds-body-letter-spacing-normal);
   padding-right: calc(var(--ds-modal-close-size-md) + var(--ds-modal-header-gap-default));
 }
 
 .ds-modal--lg .ds-modal__title {
-  font-size: var(--ds-modal-title-font-size-lg);
-  line-height: var(--ds-modal-title-line-height-lg);
-  letter-spacing: var(--ds-modal-title-letter-spacing-lg);
+  font-size: var(--ds-body-font-size-3xl);
+  line-height: var(--ds-body-line-height-3xl);
+  letter-spacing: var(--ds-body-letter-spacing-tight);
   padding-right: calc(var(--ds-modal-close-size-lg) + var(--ds-modal-header-gap-default));
+}
+
+.ds-modal--md .ds-modal__heading .ds-modal__title,
+.ds-modal--lg .ds-modal__heading .ds-modal__title {
+  padding-right: 0;
+}
+
+.ds-modal__description {
+  margin: 0;
+  color: var(--ds-modal-description-color-default);
+  font-size: var(--ds-body-font-size-sm);
+  font-weight: var(--ds-body-font-weight-regular);
+  line-height: var(--ds-body-line-height-sm);
+}
+
+.ds-modal--md .ds-modal__description {
+  font-size: var(--ds-body-font-size-sm);
+  line-height: var(--ds-body-line-height-sm);
+}
+
+.ds-modal--lg .ds-modal__description {
+  font-size: var(--ds-body-font-size-md);
+  line-height: var(--ds-body-line-height-md);
 }
 
 .ds-modal__close {
@@ -135,41 +179,55 @@
    md → font-size md + line-height md
    lg → font-size lg + line-height xl */
 .ds-modal__body {
-  padding: 0 var(--ds-modal-body-padding-x-sm) var(--ds-modal-body-padding-bottom-sm);
+  padding: 0 var(--ds-modal-container-padding-sm) var(--ds-modal-container-padding-sm);
   overflow-y: auto;
   color: var(--ds-modal-body-color-default);
-  font-size: var(--ds-modal-body-font-size-sm);
-  font-weight: var(--ds-modal-body-font-weight-default);
-  line-height: var(--ds-modal-body-line-height-sm);
+  font-size: var(--ds-body-font-size-sm);
+  font-weight: var(--ds-body-font-weight-regular);
+  line-height: var(--ds-body-line-height-sm);
+}
+
+.ds-modal__body:first-child {
+  padding-top: var(--ds-modal-container-padding-sm);
 }
 
 .ds-modal--md .ds-modal__body {
-  padding: 0 var(--ds-modal-body-padding-x-md) var(--ds-modal-body-padding-bottom-md);
-  font-size: var(--ds-modal-body-font-size-md);
-  line-height: var(--ds-modal-body-line-height-md);
+  padding: 0 var(--ds-modal-container-padding-md) var(--ds-modal-container-padding-md);
+  font-size: var(--ds-body-font-size-md);
+  line-height: var(--ds-body-line-height-md);
+}
+
+.ds-modal--md .ds-modal__body:first-child {
+  padding-top: var(--ds-modal-container-padding-md);
 }
 
 .ds-modal--lg .ds-modal__body {
-  padding: 0 var(--ds-modal-body-padding-x-lg) var(--ds-modal-body-padding-bottom-lg);
-  font-size: var(--ds-modal-body-font-size-lg);
-  line-height: var(--ds-modal-body-line-height-lg);
+  padding: 0 var(--ds-modal-container-padding-lg) var(--ds-modal-container-padding-lg);
+  font-size: var(--ds-body-font-size-lg);
+  line-height: var(--ds-body-line-height-xl);
+}
+
+.ds-modal--lg .ds-modal__body:first-child {
+  padding-top: var(--ds-modal-container-padding-lg);
 }
 
 /* Footer */
 .ds-modal__footer {
   display: flex;
   justify-content: flex-end;
-  gap: var(--ds-modal-footer-gap-default);
-  padding: var(--ds-modal-footer-padding-top-sm) var(--ds-modal-footer-padding-x-sm) var(--ds-modal-footer-padding-bottom-sm);
+  gap: var(--ds-modal-footer-gap-sm);
+  padding: 0 var(--ds-modal-container-padding-sm) var(--ds-modal-container-padding-sm);
   /* Figma: footer não tem divider/border-top. */
 }
 
 .ds-modal--md .ds-modal__footer {
-  padding: var(--ds-modal-footer-padding-top-md) var(--ds-modal-footer-padding-x-md) var(--ds-modal-footer-padding-bottom-md);
+  gap: var(--ds-modal-footer-gap-md);
+  padding: 0 var(--ds-modal-container-padding-md) var(--ds-modal-container-padding-md);
 }
 
 .ds-modal--lg .ds-modal__footer {
-  padding: var(--ds-modal-footer-padding-top-lg) var(--ds-modal-footer-padding-x-lg) var(--ds-modal-footer-padding-bottom-lg);
+  gap: var(--ds-modal-footer-gap-lg);
+  padding: 0 var(--ds-modal-container-padding-lg) var(--ds-modal-container-padding-lg);
 }
 
 /* ---------------------------------------------------------

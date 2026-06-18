@@ -1,6 +1,6 @@
 # Token Registry
 
-> Gerado automaticamente por `scripts/build-token-registry.mjs` em 2026-06-16. Não editar à mão — edite `tokens/registry.json` e rode `npm run build:registry`.
+> Gerado automaticamente por `scripts/build-token-registry.mjs` em 2026-06-18. Não editar à mão — edite `tokens/registry.json` e rode `npm run build:registry`.
 
 Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra arquitetural de camadas.
 
@@ -109,8 +109,8 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `foundation.color.indigo.950` | color | — | Tom 950 da paleta indigo. Tom extremo — surfaces escuras, body text em light mode. | 0 |
 | `foundation.color.neutral.100` | color | — | Tom 100 da paleta neutral. Tom muito claro — backgrounds, hover states sutis em light mode. | 3 |
 | `foundation.color.neutral.200` | color | — | Tom 200 da paleta neutral. Tom claro — backgrounds secundários, borders subtle. | 5 |
-| `foundation.color.neutral.300` | color | — | Tom 300 da paleta neutral. Tom médio-claro — borders default, foregrounds em dark mode. | 6 |
-| `foundation.color.neutral.400` | color | — | Tom 400 da paleta neutral. Tom médio — fills médios, focus rings. | 7 |
+| `foundation.color.neutral.300` | color | — | Tom 300 da paleta neutral. Tom médio-claro — borders default, foregrounds em dark mode. | 7 |
+| `foundation.color.neutral.400` | color | — | Tom 400 da paleta neutral. Tom médio — fills médios, focus rings. | 6 |
 | `foundation.color.neutral.50` | color | — | Tom 50 da paleta neutral. Tom muito claro — backgrounds, hover states sutis em light mode. | 16 |
 | `foundation.color.neutral.500` | color | — | Tom 500 da paleta neutral. Tom médio — fills médios, focus rings. | 10 |
 | `foundation.color.neutral.600` | color | — | Tom 600 da paleta neutral. Tom forte — fills primários, brand fills. | 8 |
@@ -179,7 +179,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `foundation.dimension.102` | dimension | — | Dimensao fixa de 102px (6.375rem). | 4 |
 | `foundation.dimension.1024` | dimension | — | Dimensão fixa de 1024px (64rem). | 4 |
 | `foundation.dimension.12` | dimension | — | Dimensão fixa de 12px (0.75rem). | 9 |
-| `foundation.dimension.120` | dimension | — | Dimensão fixa de 120px (7.5rem). | 6 |
+| `foundation.dimension.120` | dimension | — | Dimensão fixa de 120px (7.5rem). | 8 |
 | `foundation.dimension.128` | dimension | — | Dimensão fixa de 128px (8rem). | 4 |
 | `foundation.dimension.1280` | dimension | — | Dimensão fixa de 1280px (80rem). | 4 |
 | `foundation.dimension.14` | dimension | — | Dimensão fixa de 14px (0.875rem). | 0 |
@@ -192,19 +192,19 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `foundation.dimension.320` | dimension | — | Dimensão fixa de 320px (20rem). | 4 |
 | `foundation.dimension.36` | dimension | — | Dimensão fixa de 36px (2.25rem). | 0 |
 | `foundation.dimension.4` | dimension | — | Dimensão fixa de 4px (0.25rem). | 5 |
-| `foundation.dimension.40` | dimension | — | Dimensão fixa de 40px (2.5rem). | 4 |
+| `foundation.dimension.40` | dimension | — | Dimensão fixa de 40px (2.5rem). | 6 |
 | `foundation.dimension.44` | dimension | — | Dimensão fixa de 44px (2.75rem). | 4 |
-| `foundation.dimension.48` | dimension | — | Dimensão fixa de 48px (3rem). | 6 |
+| `foundation.dimension.48` | dimension | — | Dimensão fixa de 48px (3rem). | 8 |
 | `foundation.dimension.480` | dimension | — | Dimensão fixa de 480px (30rem). | 4 |
 | `foundation.dimension.56` | dimension | — | Dimensão fixa de 56px (3.5rem). | 4 |
 | `foundation.dimension.6` | dimension | — | Dimensão fixa de 6px (0.375rem). | 6 |
-| `foundation.dimension.64` | dimension | — | Dimensão fixa de 64px (4rem). | 6 |
+| `foundation.dimension.64` | dimension | — | Dimensão fixa de 64px (4rem). | 8 |
 | `foundation.dimension.640` | dimension | — | Dimensão fixa de 640px (40rem). | 4 |
 | `foundation.dimension.8` | dimension | — | Dimensão fixa de 8px (0.5rem). | 6 |
 | `foundation.dimension.80` | dimension | — | Dimensão fixa de 80px (5rem). | 8 |
 | `foundation.dimension.800` | dimension | — | Dimensão fixa de 800px (50rem). | 4 |
 | `foundation.dimension.88` | dimension | — | Dimensao fixa de 88px (5.5rem). | 4 |
-| `foundation.dimension.96` | dimension | — | Dimensão fixa de 96px (6rem). | 6 |
+| `foundation.dimension.96` | dimension | — | Dimensão fixa de 96px (6rem). | 8 |
 
 ### foundation.duration
 
@@ -377,27 +377,27 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `semantic.brand.background.active` | color | → `foundation.color.brand.800` | Fill de ação primária (brand solid) em estado active. | 1 |
-| `semantic.brand.background.default` | color | → `foundation.color.brand.600` | Fill de ação primária (brand solid) em estado default. | 18 |
-| `semantic.brand.background.disabled` | color | → `foundation.color.disabled.brand.light` | Fill de ação primária (brand solid) em estado disabled. | 7 |
-| `semantic.brand.background.hover` | color | → `foundation.color.brand.700` | Fill de ação primária (brand solid) em estado hover. | 7 |
-| `semantic.brand.border.default` | color | → `semantic.brand.background.default` | Token semantic para primary / border / default. | 1 |
+| `semantic.brand.background.active` | color | → `foundation.color.brand.800` | Fill de ação primária (brand solid) em estado active. | 2 |
+| `semantic.brand.background.default` | color | → `foundation.color.brand.600` | Fill de ação primária (brand solid) em estado default. | 21 |
+| `semantic.brand.background.disabled` | color | → `foundation.color.disabled.brand.light` | Fill de ação primária (brand solid) em estado disabled. | 10 |
+| `semantic.brand.background.hover` | color | → `foundation.color.brand.700` | Fill de ação primária (brand solid) em estado hover. | 10 |
+| `semantic.brand.border.default` | color | → `semantic.brand.background.default` | Token semantic para primary / border / default. | 2 |
 | `semantic.brand.border.disabled` | color | → `semantic.brand.background.disabled` | Token semantic para primary / border / disabled. | 0 |
-| `semantic.brand.border.hover` | color | → `semantic.brand.background.hover` | Token semantic para primary / border / hover. | 1 |
-| `semantic.brand.content-default` | color | → `foundation.color.neutral.50` | Cor de texto/ícone de ação primária (brand solid) em estado default. | 15 |
-| `semantic.brand.content-disabled` | color | → `foundation.color.overlay.white.80` | Cor de texto/ícone de ação primária (brand solid) em estado disabled. | 5 |
-| `semantic.brand.content-hover` | color | → `foundation.color.neutral.50` | Conteúdo sobre fill brand em hover. | 4 |
+| `semantic.brand.border.hover` | color | → `semantic.brand.background.hover` | Token semantic para primary / border / hover. | 2 |
+| `semantic.brand.content-default` | color | → `foundation.color.neutral.50` | Cor de texto/ícone de ação primária (brand solid) em estado default. | 16 |
+| `semantic.brand.content-disabled` | color | → `foundation.color.overlay.white.80` | Cor de texto/ícone de ação primária (brand solid) em estado disabled. | 6 |
+| `semantic.brand.content-hover` | color | → `foundation.color.neutral.50` | Conteúdo sobre fill brand em hover. | 5 |
 
 ### semantic.content
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `semantic.content.brand` | color | → `semantic.brand.background.default` | Token semantic para content / brand. | 2 |
-| `semantic.content.default` | color | → `foundation.color.neutral.600` | Texto secundário — descrições, helper text, meta-info. | 17 |
+| `semantic.content.default` | color | → `foundation.color.neutral.600` | Texto secundário — descrições, helper text, meta-info. | 19 |
 | `semantic.content.disabled` | color | → `foundation.color.neutral.500` | Texto disabled — controles e items inativos. | 13 |
 | `semantic.content.hover` | color | → `foundation.color.neutral.700` | Conteúdo neutro em hover. | 6 |
 | `semantic.content.inverse` | color | → `foundation.color.neutral.50` | Texto invertido — sobre background.inverse (tooltips, badges escuros em light). | 5 |
-| `semantic.content.strong` | color | → `foundation.color.neutral.900` | Texto primário — body, headings, labels principais. | 17 |
+| `semantic.content.strong` | color | → `foundation.color.neutral.900` | Texto primário — body, headings, labels principais. | 16 |
 | `semantic.content.subtle` | color | → `foundation.color.neutral.500` | Texto terciário — caption, footnote, timestamps. | 7 |
 
 ### semantic.content-placeholder
@@ -593,20 +593,25 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `semantic.space.2xl` | dimension | → `foundation.dimension.24` | Spacing token 2xl. | 6 |
+| `semantic.space.2xl` | dimension | → `foundation.dimension.24` | Spacing token 2xl. | 2 |
 | `semantic.space.2xs` | dimension | → `foundation.dimension.2` | Spacing token 2xs. | 12 |
+| `semantic.space.3xl` | dimension | → `foundation.dimension.32` | Espaçamento amplo da escala semântica genérica para composição interna de componentes e blocos densos. | 0 |
+| `semantic.space.4xl` | dimension | → `foundation.dimension.40` | Espaçamento amplo intermediário da escala semântica genérica. | 0 |
+| `semantic.space.5xl` | dimension | → `foundation.dimension.48` | Espaçamento alto da escala semântica genérica para composição interna robusta. | 0 |
+| `semantic.space.6xl` | dimension | → `foundation.dimension.64` | Maior espaçamento da escala semântica genérica. | 0 |
 | `semantic.space.control.padding.10` | dimension | → `foundation.dimension.10` | Spacing token control.padding.10. | 3 |
 | `semantic.space.control.padding.6` | dimension | → `foundation.dimension.6` | Padding simétrico de Icon Only sm Button. | 3 |
-| `semantic.space.lg` | dimension | → `foundation.dimension.16` | Spacing token lg. | 19 |
+| `semantic.space.lg` | dimension | → `foundation.dimension.16` | Spacing token lg. | 15 |
 | `semantic.space.md` | dimension | → `foundation.dimension.12` | Spacing token md. | 18 |
 | `semantic.space.none` | dimension | → `foundation.dimension.0` | Espaço semântico zero. | 0 |
-| `semantic.space.section.lg` | dimension | → `foundation.dimension.64` | Spacing token section.lg. | 0 |
-| `semantic.space.section.md` | dimension | → `foundation.dimension.48` | Spacing token section.md. | 0 |
-| `semantic.space.section.sm` | dimension | → `foundation.dimension.32` | Spacing token section.sm. | 1 |
-| `semantic.space.section.xl` | dimension | → `foundation.dimension.80` | Spacing token section.xl. | 0 |
-| `semantic.space.sm` | dimension | → `foundation.dimension.8` | Spacing token sm. | 29 |
-| `semantic.space.xl` | dimension | → `foundation.dimension.20` | Spacing token xl. | 10 |
-| `semantic.space.xs` | dimension | → `foundation.dimension.4` | Spacing token xs. | 25 |
+| `semantic.space.section.2xl` | dimension | → `foundation.dimension.120` | Maior espaçamento semântico de section para separação macro entre áreas. | 0 |
+| `semantic.space.section.lg` | dimension | → `foundation.dimension.80` | Spacing token section.lg. | 0 |
+| `semantic.space.section.md` | dimension | → `foundation.dimension.64` | Spacing token section.md. | 0 |
+| `semantic.space.section.sm` | dimension | → `foundation.dimension.48` | Spacing token section.sm. | 1 |
+| `semantic.space.section.xl` | dimension | → `foundation.dimension.96` | Spacing token section.xl. | 0 |
+| `semantic.space.sm` | dimension | → `foundation.dimension.8` | Spacing token sm. | 30 |
+| `semantic.space.xl` | dimension | → `foundation.dimension.20` | Spacing token xl. | 5 |
+| `semantic.space.xs` | dimension | → `foundation.dimension.4` | Spacing token xs. | 26 |
 
 ### semantic.surface
 
@@ -635,30 +640,30 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 |---|---|---|---|---|
 | `semantic.typography.body.font-family.mono` | fontFamily | → `foundation.typography.font.family.mono` | font-family mono pra texto UI geral. | 0 |
 | `semantic.typography.body.font-family.sans` | fontFamily | → `foundation.typography.font.family.sans` | font-family sans pra texto UI geral. | 6 |
-| `semantic.typography.body.font-size.2xl` | dimension | → `foundation.typography.font.size.24` | font-size 2xl pra texto UI geral. | 2 |
+| `semantic.typography.body.font-size.2xl` | dimension | → `foundation.typography.font.size.24` | font-size 2xl pra texto UI geral. | 1 |
 | `semantic.typography.body.font-size.2xs` | dimension | → `foundation.typography.font.size.11` | font-size 2xs pra texto UI geral. | 0 |
-| `semantic.typography.body.font-size.3xl` | dimension | → `foundation.typography.font.size.28` | font-size 3xl pra texto UI geral. | 1 |
+| `semantic.typography.body.font-size.3xl` | dimension | → `foundation.typography.font.size.28` | font-size 3xl pra texto UI geral. | 0 |
 | `semantic.typography.body.font-size.4xl` | dimension | → `foundation.typography.font.size.32` | font-size 4xl pra texto UI geral. | 1 |
 | `semantic.typography.body.font-size.5xl` | dimension | → `foundation.typography.font.size.40` | font-size 5xl pra texto UI geral. | 0 |
 | `semantic.typography.body.font-size.6xl` | dimension | → `foundation.typography.font.size.48` | font-size 6xl pra texto UI geral. | 0 |
 | `semantic.typography.body.font-size.7xl` | dimension | → `foundation.typography.font.size.56` | font-size 7xl pra texto UI geral. | 0 |
 | `semantic.typography.body.font-size.8xl` | dimension | → `foundation.typography.font.size.64` | font-size 8xl pra texto UI geral. | 0 |
 | `semantic.typography.body.font-size.9xl` | dimension | → `foundation.typography.font.size.72` | font-size 9xl pra texto UI geral. | 0 |
-| `semantic.typography.body.font-size.lg` | dimension | → `foundation.typography.font.size.18` | font-size lg pra texto UI geral. | 1 |
-| `semantic.typography.body.font-size.md` | dimension | → `foundation.typography.font.size.16` | font-size md pra texto UI geral. | 5 |
-| `semantic.typography.body.font-size.sm` | dimension | → `foundation.typography.font.size.14` | font-size sm pra texto UI geral. | 17 |
-| `semantic.typography.body.font-size.xl` | dimension | → `foundation.typography.font.size.20` | font-size xl pra texto UI geral. | 4 |
-| `semantic.typography.body.font-size.xs` | dimension | → `foundation.typography.font.size.12` | font-size xs pra texto UI geral. | 7 |
-| `semantic.typography.body.font-weight.bold` | number | → `foundation.typography.font.weight.bold` | font-weight bold pra texto UI geral. | 11 |
+| `semantic.typography.body.font-size.lg` | dimension | → `foundation.typography.font.size.18` | font-size lg pra texto UI geral. | 0 |
+| `semantic.typography.body.font-size.md` | dimension | → `foundation.typography.font.size.16` | font-size md pra texto UI geral. | 4 |
+| `semantic.typography.body.font-size.sm` | dimension | → `foundation.typography.font.size.14` | font-size sm pra texto UI geral. | 16 |
+| `semantic.typography.body.font-size.xl` | dimension | → `foundation.typography.font.size.20` | font-size xl pra texto UI geral. | 3 |
+| `semantic.typography.body.font-size.xs` | dimension | → `foundation.typography.font.size.12` | font-size xs pra texto UI geral. | 6 |
+| `semantic.typography.body.font-weight.bold` | number | → `foundation.typography.font.weight.bold` | font-weight bold pra texto UI geral. | 9 |
 | `semantic.typography.body.font-weight.medium` | number | → `foundation.typography.font.weight.medium` | font-weight medium pra texto UI geral. | 0 |
-| `semantic.typography.body.font-weight.regular` | number | → `foundation.typography.font.weight.regular` | font-weight regular pra texto UI geral. | 9 |
-| `semantic.typography.body.font-weight.semibold` | number | → `foundation.typography.font.weight.semibold` | font-weight semibold pra texto UI geral. | 3 |
-| `semantic.typography.body.letter-spacing.normal` | dimension | → `foundation.typography.letter.spacing.normal` | letter-spacing normal pra texto UI geral. | 9 |
-| `semantic.typography.body.letter-spacing.tight` | dimension | → `foundation.typography.letter.spacing.tight` | letter-spacing tight pra texto UI geral. | 1 |
+| `semantic.typography.body.font-weight.regular` | number | → `foundation.typography.font.weight.regular` | font-weight regular pra texto UI geral. | 7 |
+| `semantic.typography.body.font-weight.semibold` | number | → `foundation.typography.font.weight.semibold` | font-weight semibold pra texto UI geral. | 2 |
+| `semantic.typography.body.letter-spacing.normal` | dimension | → `foundation.typography.letter.spacing.normal` | letter-spacing normal pra texto UI geral. | 7 |
+| `semantic.typography.body.letter-spacing.tight` | dimension | → `foundation.typography.letter.spacing.tight` | letter-spacing tight pra texto UI geral. | 0 |
 | `semantic.typography.body.letter-spacing.wider` | dimension | → `foundation.typography.letter.spacing.wider` | letter-spacing wider pra texto UI geral. | 0 |
-| `semantic.typography.body.line-height.2xl` | dimension | → `foundation.typography.line.height.34` | line-height 2xl pra texto UI geral. | 1 |
+| `semantic.typography.body.line-height.2xl` | dimension | → `foundation.typography.line.height.34` | line-height 2xl pra texto UI geral. | 0 |
 | `semantic.typography.body.line-height.2xs` | dimension | → `foundation.typography.line.height.16` | line-height 2xs pra texto UI geral. | 4 |
-| `semantic.typography.body.line-height.3xl` | dimension | → `foundation.typography.line.height.40` | line-height 3xl pra texto UI geral. | 1 |
+| `semantic.typography.body.line-height.3xl` | dimension | → `foundation.typography.line.height.40` | line-height 3xl pra texto UI geral. | 0 |
 | `semantic.typography.body.line-height.4xl` | dimension | → `foundation.typography.line.height.44` | line-height 4xl pra texto UI geral. | 0 |
 | `semantic.typography.body.line-height.5xl` | dimension | → `foundation.typography.line.height.48` | line-height 5xl pra texto UI geral. | 0 |
 | `semantic.typography.body.line-height.6xl` | dimension | → `foundation.typography.line.height.64` | line-height 6xl pra texto UI geral. | 0 |
@@ -666,10 +671,10 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.typography.body.line-height.8xl` | dimension | → `foundation.typography.line.height.80` | line-height 8xl pra texto UI geral. | 0 |
 | `semantic.typography.body.line-height.9xl` | dimension | → `foundation.typography.line.height.90` | line-height 9xl pra texto UI geral. | 0 |
 | `semantic.typography.body.line-height.lg` | dimension | → `foundation.typography.line.height.28` | line-height lg pra texto UI geral. | 0 |
-| `semantic.typography.body.line-height.md` | dimension | → `foundation.typography.line.height.24` | line-height md pra texto UI geral. | 5 |
-| `semantic.typography.body.line-height.sm` | dimension | → `foundation.typography.line.height.20` | line-height sm pra texto UI geral. | 16 |
-| `semantic.typography.body.line-height.xl` | dimension | → `foundation.typography.line.height.32` | line-height xl pra texto UI geral. | 4 |
-| `semantic.typography.body.line-height.xs` | dimension | → `foundation.typography.line.height.18` | line-height xs pra texto UI geral. | 4 |
+| `semantic.typography.body.line-height.md` | dimension | → `foundation.typography.line.height.24` | line-height md pra texto UI geral. | 4 |
+| `semantic.typography.body.line-height.sm` | dimension | → `foundation.typography.line.height.20` | line-height sm pra texto UI geral. | 15 |
+| `semantic.typography.body.line-height.xl` | dimension | → `foundation.typography.line.height.32` | line-height xl pra texto UI geral. | 2 |
+| `semantic.typography.body.line-height.xs` | dimension | → `foundation.typography.line.height.18` | line-height xs pra texto UI geral. | 3 |
 
 ### semantic.z
 
@@ -1054,21 +1059,16 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.form-field.gap.default` | dimension | → `semantic.space.xs` | Espacamento vertical interno do wrapper Form Field. | 1 |
 | `component.form-field.helper.color.default` | color | → `semantic.content.default` | Cor default do helper text do Form Field. | 6 |
 | `component.form-field.helper.color.disabled` | color | → `semantic.content.disabled` | Contrato helper.color de form-field, sincronizado a partir das Variables Figma atuais. | 2 |
-| `component.form-field.helper.font-size.default` | dimension | → `semantic.typography.body.font-size.xs` | Tamanho tipografico do helper text do Form Field. | 6 |
-| `component.form-field.helper.font-weight.default` | string | → `semantic.typography.body.font-weight.regular` | Peso tipografico do helper text do Form Field. | 6 |
-| `component.form-field.helper.line-height.default` | dimension | → `semantic.typography.body.line-height.xs` | Altura de linha do helper text do Form Field. | 6 |
 | `component.form-field.label-row.gap.default` | dimension | → `semantic.space.2xs` | Espacamento horizontal entre label e indicador required. | 3 |
 | `component.form-field.label.color.default` | color | → `semantic.content.strong` | Cor default do label do Form Field. | 6 |
 | `component.form-field.label.color.disabled` | color | → `semantic.content.disabled` | Contrato label.color de form-field, sincronizado a partir das Variables Figma atuais. | 4 |
 | `component.form-field.label.color.readonly` | color | → `semantic.content.default` | Contrato label.color de form-field, sincronizado a partir das Variables Figma atuais. | 1 |
 | `component.form-field.label.font-family.default` | string | → `semantic.typography.body.font-family.sans` | Contrato label.font-family de form-field, sincronizado a partir das Variables Figma atuais. | 5 |
 | `component.form-field.label.font-size.default` | dimension | → `semantic.typography.body.font-size.sm` | Tamanho tipografico de label no Form Field. | 6 |
-| `component.form-field.label.font-weight.default` | string | → `semantic.typography.body.font-weight.bold` | Peso tipografico de label no Form Field. | 6 |
 | `component.form-field.label.line-height.default` | dimension | → `semantic.typography.body.line-height.sm` | Altura de linha de label no Form Field. | 6 |
 | `component.form-field.required.color.default` | color | → `semantic.feedback.error.content-default` | Cor do indicador required do Form Field. | 3 |
 | `component.form-field.required.font-family.default` | string | → `semantic.typography.body.font-family.sans` | Contrato required.font-family de form-field, sincronizado a partir das Variables Figma atuais. | 2 |
 | `component.form-field.required.font-size.default` | dimension | → `semantic.typography.body.font-size.sm` | Tamanho tipografico de required no Form Field. | 3 |
-| `component.form-field.required.font-weight.default` | string | → `semantic.typography.body.font-weight.bold` | Peso tipografico de required no Form Field. | 3 |
 | `component.form-field.required.line-height.default` | dimension | → `semantic.typography.body.line-height.sm` | Altura de linha de required no Form Field. | 3 |
 | `component.form-field.stack.gap.default` | dimension | → `semantic.space.xs` | Contrato stack.gap de form-field, sincronizado a partir das Variables Figma atuais. | 2 |
 
@@ -1112,20 +1112,10 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 |---|---|---|---|---|
 | `component.modal.action.fill.brand` | color | → `semantic.brand.background.default` | Contrato action.fill de modal, sincronizado a partir das Variables Figma atuais. | 0 |
 | `component.modal.bg.default` | color | → `semantic.surface.elevated` | Contrato bg de modal, sincronizado a partir das Variables Figma atuais. | 1 |
-| `component.modal.body.color.default` | color | → `semantic.content.strong` | Contrato body.color de modal, sincronizado a partir das Variables Figma atuais. | 1 |
-| `component.modal.body.font-size.lg` | dimension | → `semantic.typography.body.font-size.lg` | Font-size do body Modal lg. | 1 |
-| `component.modal.body.font-size.md` | dimension | → `semantic.typography.body.font-size.md` | Font-size do body Modal md. | 1 |
-| `component.modal.body.font-size.sm` | dimension | → `semantic.typography.body.font-size.sm` | Font-size do body Modal sm. | 1 |
-| `component.modal.body.font-weight.default` | number | → `semantic.typography.body.font-weight.regular` | Font-weight do body Modal. | 1 |
-| `component.modal.body.line-height.lg` | dimension | → `semantic.typography.body.line-height.xl` | Line-height do body Modal lg. | 1 |
-| `component.modal.body.line-height.md` | dimension | → `semantic.typography.body.line-height.md` | Line-height do body Modal md. | 1 |
-| `component.modal.body.line-height.sm` | dimension | → `semantic.typography.body.line-height.sm` | Line-height do body Modal sm. | 1 |
-| `component.modal.body.padding-bottom.lg` | dimension | → `semantic.space.xl` | Padding bottom do body Modal lg. | 1 |
-| `component.modal.body.padding-bottom.md` | dimension | → `semantic.space.xl` | Padding bottom do body Modal md. | 1 |
-| `component.modal.body.padding-bottom.sm` | dimension | → `semantic.space.lg` | Padding bottom do body Modal sm. | 1 |
-| `component.modal.body.padding-x.lg` | dimension | → `semantic.space.2xl` | Padding horizontal do body Modal lg. | 1 |
-| `component.modal.body.padding-x.md` | dimension | → `semantic.space.xl` | Padding horizontal do body Modal md. | 1 |
-| `component.modal.body.padding-x.sm` | dimension | → `semantic.space.lg` | Padding horizontal do body Modal sm. | 1 |
+| `component.modal.body.color.default` | color | → `semantic.content.default` | Cor do texto principal do body Modal. | 1 |
+| `component.modal.body.gap.lg` | dimension | → `semantic.space.lg` | Gap interno do body Modal lg. | 0 |
+| `component.modal.body.gap.md` | dimension | → `semantic.space.md` | Gap interno do body Modal md. | 0 |
+| `component.modal.body.gap.sm` | dimension | → `semantic.space.sm` | Gap interno do body Modal sm. | 0 |
 | `component.modal.close.color.default` | color | → `semantic.icon.color.default` | Contrato close.color de modal, sincronizado a partir das Variables Figma atuais. | 1 |
 | `component.modal.close.icon-size.lg` | dimension | → `semantic.size.md` | Tamanho do ícone Lucide interno do close Modal lg. | 1 |
 | `component.modal.close.icon-size.md` | dimension | → `semantic.size.md` | Tamanho do ícone Lucide interno do close Modal md. | 1 |
@@ -1137,26 +1127,19 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.modal.close.size.lg` | dimension | → `semantic.size.2xl` | Tamanho do alvo interativo do close Modal lg. | 1 |
 | `component.modal.close.size.md` | dimension | → `semantic.size.xl` | Tamanho do alvo interativo do close Modal md. | 1 |
 | `component.modal.close.size.sm` | dimension | → `semantic.size.lg` | Tamanho do alvo interativo do close Modal sm. | 1 |
-| `component.modal.footer.gap.default` | dimension | → `semantic.space.md` | Gap horizontal do footer Modal. | 1 |
-| `component.modal.footer.padding-bottom.lg` | dimension | → `semantic.space.2xl` | Padding bottom do footer Modal lg. | 1 |
-| `component.modal.footer.padding-bottom.md` | dimension | → `semantic.space.xl` | Padding bottom do footer Modal md. | 1 |
-| `component.modal.footer.padding-bottom.sm` | dimension | → `semantic.space.lg` | Padding bottom do footer Modal sm. | 1 |
-| `component.modal.footer.padding-top.lg` | dimension | → `semantic.space.lg` | Padding top do footer Modal lg. | 1 |
-| `component.modal.footer.padding-top.md` | dimension | → `semantic.space.md` | Padding top do footer Modal md. | 1 |
-| `component.modal.footer.padding-top.sm` | dimension | → `semantic.space.sm` | Padding top do footer Modal sm. | 1 |
-| `component.modal.footer.padding-x.lg` | dimension | → `semantic.space.2xl` | Padding horizontal do footer Modal lg. | 1 |
-| `component.modal.footer.padding-x.md` | dimension | → `semantic.space.xl` | Padding horizontal do footer Modal md. | 1 |
-| `component.modal.footer.padding-x.sm` | dimension | → `semantic.space.lg` | Padding horizontal do footer Modal sm. | 1 |
+| `component.modal.container.gap.lg` | dimension | → `semantic.space.xl` | Gap vertical do container Modal lg. | 0 |
+| `component.modal.container.gap.md` | dimension | → `semantic.space.lg` | Gap vertical do container Modal md. | 0 |
+| `component.modal.container.gap.sm` | dimension | → `semantic.space.md` | Gap vertical do container Modal sm. | 0 |
+| `component.modal.container.padding.lg` | dimension | → `semantic.space.2xl` | Padding do container Modal lg. | 1 |
+| `component.modal.container.padding.md` | dimension | → `semantic.space.xl` | Padding do container Modal md. | 1 |
+| `component.modal.container.padding.sm` | dimension | → `semantic.space.lg` | Padding do container Modal sm. | 1 |
+| `component.modal.content-slot.gap.default` | dimension | → `semantic.space.sm` | Gap fallback do content slot Modal. | 0 |
+| `component.modal.description.color.default` | color | → `semantic.content.default` | Cor da description Modal. | 1 |
+| `component.modal.footer.gap.lg` | dimension | → `semantic.space.lg` | Gap horizontal do footer Modal lg. | 1 |
+| `component.modal.footer.gap.md` | dimension | → `semantic.space.md` | Gap horizontal do footer Modal md. | 1 |
+| `component.modal.footer.gap.sm` | dimension | → `semantic.space.sm` | Gap horizontal do footer Modal sm. | 1 |
 | `component.modal.header.gap.default` | dimension | → `semantic.space.lg` | Gap horizontal do header Modal. | 1 |
-| `component.modal.header.padding-bottom.lg` | dimension | → `semantic.space.lg` | Padding bottom do header Modal lg. | 1 |
-| `component.modal.header.padding-bottom.md` | dimension | → `semantic.space.md` | Padding bottom do header Modal md. | 1 |
-| `component.modal.header.padding-bottom.sm` | dimension | → `semantic.space.sm` | Padding bottom do header Modal sm. | 1 |
-| `component.modal.header.padding-top.lg` | dimension | → `semantic.space.2xl` | Padding top do header Modal lg. | 1 |
-| `component.modal.header.padding-top.md` | dimension | → `semantic.space.xl` | Padding top do header Modal md. | 1 |
-| `component.modal.header.padding-top.sm` | dimension | → `semantic.space.lg` | Padding top do header Modal sm. | 1 |
-| `component.modal.header.padding-x.lg` | dimension | → `semantic.space.2xl` | Padding horizontal do header Modal lg. | 1 |
-| `component.modal.header.padding-x.md` | dimension | → `semantic.space.xl` | Padding horizontal do header Modal md. | 1 |
-| `component.modal.header.padding-x.sm` | dimension | → `semantic.space.lg` | Padding horizontal do header Modal sm. | 1 |
+| `component.modal.heading.gap.default` | dimension | → `semantic.space.xs` | Gap vertical entre title e description Modal. | 1 |
 | `component.modal.max-width.lg` | dimension | → `semantic.size.layout.lg` | Max-width do Modal lg. | 1 |
 | `component.modal.max-width.md` | dimension | → `semantic.size.layout.md` | Max-width do Modal md. | 1 |
 | `component.modal.max-width.sm` | dimension | → `semantic.size.layout.sm` | Max-width do Modal sm. | 1 |
@@ -1166,16 +1149,6 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.modal.radius.default` | dimension | → `semantic.radius.lg` | Radius do Modal. | 1 |
 | `component.modal.shadow.default` | shadow | → `semantic.shadow.modal` | Shadow do Modal. | 1 |
 | `component.modal.title.color.default` | color | → `semantic.content.strong` | Contrato title.color de modal, sincronizado a partir das Variables Figma atuais. | 1 |
-| `component.modal.title.font-size.lg` | dimension | → `semantic.typography.body.font-size.3xl` | Font-size do title Modal lg. | 1 |
-| `component.modal.title.font-size.md` | dimension | → `semantic.typography.body.font-size.2xl` | Font-size do title Modal md. | 1 |
-| `component.modal.title.font-size.sm` | dimension | → `semantic.typography.body.font-size.xl` | Font-size do title Modal sm. | 1 |
-| `component.modal.title.font-weight.default` | number | → `semantic.typography.body.font-weight.semibold` | Font-weight do title Modal. | 1 |
-| `component.modal.title.letter-spacing.lg` | dimension | → `semantic.typography.body.letter-spacing.tight` | Letter-spacing do title Modal lg. | 1 |
-| `component.modal.title.letter-spacing.md` | dimension | → `semantic.typography.body.letter-spacing.normal` | Letter-spacing do title Modal md. | 1 |
-| `component.modal.title.letter-spacing.sm` | dimension | → `semantic.typography.body.letter-spacing.normal` | Letter-spacing do title Modal sm. | 1 |
-| `component.modal.title.line-height.lg` | dimension | → `semantic.typography.body.line-height.3xl` | Line-height do title Modal lg. | 1 |
-| `component.modal.title.line-height.md` | dimension | → `semantic.typography.body.line-height.2xl` | Line-height do title Modal md. | 1 |
-| `component.modal.title.line-height.sm` | dimension | → `semantic.typography.body.line-height.xl` | Line-height do title Modal sm. | 1 |
 
 ### component.radio
 
@@ -1295,7 +1268,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `component.tabs.focus-ring.radius.default` | dimension | → `semantic.radius.sm` | Radius do focus ring do Tab Item. | 0 |
+| `component.tabs.focus-ring.radius.default` | dimension | → `semantic.radius.sm` | Radius do focus ring do Tab Item. | 1 |
 | `component.tabs.indicator.fill.active` | color | → `semantic.brand.background.default` | Contrato indicator.fill de tabs, sincronizado a partir das Variables Figma atuais. | 1 |
 | `component.tabs.indicator.height.default` | dimension | → `semantic.border.width.strong` | Altura do indicator Tabs. | 1 |
 | `component.tabs.item.indicator-gap.default` | dimension | → `semantic.space.md` | Gap entre label e indicator Tabs. | 1 |
@@ -2490,9 +2463,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-dark.css` (3×)
+    - `css/tokens/generated/theme-dark.css` (4×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.outline.content-default`, `semantic.outline.border-hover`, `semantic.content.hover`, `semantic.border.default`
+  - Tokens que referenciam: `semantic.outline.content-default`, `semantic.outline.border-hover`, `semantic.content.default`, `semantic.content.hover`, `semantic.border.default`
 
 ### `foundation.color.neutral.400`
 
@@ -2504,9 +2477,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-dark.css` (2×)
+    - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (3×)
-  - Tokens que referenciam: `semantic.content.default`, `semantic.content.subtle`, `semantic.outline.content-disabled`, `semantic.ghost.content-disabled`, `semantic.link.content-disabled`
+  - Tokens que referenciam: `semantic.content.subtle`, `semantic.outline.content-disabled`, `semantic.ghost.content-disabled`, `semantic.link.content-disabled`
 
 ### `foundation.color.neutral.50`
 
@@ -3264,9 +3237,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Adicionado como valor primitivo porque 120px existe no Figma vivo para Textarea Large e nao havia Semantic reutilizavel real; a intencao publica permanece em component.textarea.field.min-height.lg.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-dark.css` (2×)
-    - `css/tokens/generated/theme-light.css` (2×)
-  - Tokens que referenciam: `semantic.content-placeholder.rectangle.height.default`, `semantic.control.textarea.min-height.lg`, `semantic.content-placeholder.rectangle.height.default`, `semantic.control.textarea.min-height.lg`
+    - `css/tokens/generated/theme-dark.css` (3×)
+    - `css/tokens/generated/theme-light.css` (3×)
+  - Tokens que referenciam: `semantic.content-placeholder.rectangle.height.default`, `semantic.control.textarea.min-height.lg`, `semantic.space.section.2xl`, `semantic.content-placeholder.rectangle.height.default`, `semantic.control.textarea.min-height.lg`, `semantic.space.section.2xl`
 
 ### `foundation.dimension.128`
 
@@ -3392,7 +3365,7 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/tokens/generated/theme-dark.css` (3×)
     - `css/tokens/generated/theme-light.css` (3×)
-  - Tokens que referenciam: `semantic.control.toggle.height.lg`, `semantic.space.section.sm`, `semantic.size.lg`, `semantic.control.toggle.height.lg`, `semantic.space.section.sm`, `semantic.size.lg`
+  - Tokens que referenciam: `semantic.control.toggle.height.lg`, `semantic.space.3xl`, `semantic.size.lg`, `semantic.control.toggle.height.lg`, `semantic.space.3xl`, `semantic.size.lg`
 
 ### `foundation.dimension.320`
 
@@ -3444,9 +3417,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Step da escala 2/4/6/8/10/12/14/16/20/24/28/32/36/40/44/48 — múltiplos de 2 e 4 cobrem todas as densidades de UI.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-dark.css` (1×)
-    - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `semantic.size.xl`, `semantic.size.xl`
+    - `css/tokens/generated/theme-dark.css` (2×)
+    - `css/tokens/generated/theme-light.css` (2×)
+  - Tokens que referenciam: `semantic.space.4xl`, `semantic.size.xl`, `semantic.space.4xl`, `semantic.size.xl`
 
 ### `foundation.dimension.44`
 
@@ -3472,9 +3445,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Step da escala 2/4/6/8/10/12/14/16/20/24/28/32/36/40/44/48 — múltiplos de 2 e 4 cobrem todas as densidades de UI.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-dark.css` (2×)
-    - `css/tokens/generated/theme-light.css` (2×)
-  - Tokens que referenciam: `semantic.space.section.md`, `semantic.size.2xl`, `semantic.space.section.md`, `semantic.size.2xl`
+    - `css/tokens/generated/theme-dark.css` (3×)
+    - `css/tokens/generated/theme-light.css` (3×)
+  - Tokens que referenciam: `semantic.space.5xl`, `semantic.space.section.sm`, `semantic.size.2xl`, `semantic.space.5xl`, `semantic.space.section.sm`, `semantic.size.2xl`
 
 ### `foundation.dimension.480`
 
@@ -3528,9 +3501,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Step da escala 2/4/6/8/10/12/14/16/20/24/28/32/36/40/44/48 — múltiplos de 2 e 4 cobrem todas as densidades de UI.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-dark.css` (2×)
-    - `css/tokens/generated/theme-light.css` (2×)
-  - Tokens que referenciam: `semantic.space.section.lg`, `semantic.size.3xl`, `semantic.space.section.lg`, `semantic.size.3xl`
+    - `css/tokens/generated/theme-dark.css` (3×)
+    - `css/tokens/generated/theme-light.css` (3×)
+  - Tokens que referenciam: `semantic.space.6xl`, `semantic.space.section.md`, `semantic.size.3xl`, `semantic.space.6xl`, `semantic.space.section.md`, `semantic.size.3xl`
 
 ### `foundation.dimension.640`
 
@@ -3572,7 +3545,7 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/tokens/generated/theme-dark.css` (3×)
     - `css/tokens/generated/theme-light.css` (3×)
-  - Tokens que referenciam: `semantic.control.button.min-width.sm`, `semantic.control.textarea.min-height.sm`, `semantic.space.section.xl`, `semantic.control.button.min-width.sm`, `semantic.control.textarea.min-height.sm`, `semantic.space.section.xl`
+  - Tokens que referenciam: `semantic.control.button.min-width.sm`, `semantic.control.textarea.min-height.sm`, `semantic.space.section.lg`, `semantic.control.button.min-width.sm`, `semantic.control.textarea.min-height.sm`, `semantic.space.section.lg`
 
 ### `foundation.dimension.800`
 
@@ -3612,9 +3585,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Step da escala 2/4/6/8/10/12/14/16/20/24/28/32/36/40/44/48 — múltiplos de 2 e 4 cobrem todas as densidades de UI.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/theme-dark.css` (2×)
-    - `css/tokens/generated/theme-light.css` (2×)
-  - Tokens que referenciam: `semantic.control.textarea.min-height.md`, `semantic.size.4xl`, `semantic.control.textarea.min-height.md`, `semantic.size.4xl`
+    - `css/tokens/generated/theme-dark.css` (3×)
+    - `css/tokens/generated/theme-light.css` (3×)
+  - Tokens que referenciam: `semantic.control.textarea.min-height.md`, `semantic.space.section.xl`, `semantic.size.4xl`, `semantic.control.textarea.min-height.md`, `semantic.space.section.xl`, `semantic.size.4xl`
 
 ### `foundation.duration.fast`
 
@@ -5039,6 +5012,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado em `.ds-button--brand` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.brand.800 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
+  - CSS:
+    - `css/tokens/generated/component.css` (1×)
   - Tokens que referenciam: `component.button.bg.brand.pressed`
 
 ### `semantic.brand.background.default`
@@ -5051,6 +5026,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado em `.ds-button--brand` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.brand.600 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
+  - CSS:
+    - `css/tokens/generated/component.css` (14×)
+    - `css/tokens/generated/theme-dark.css` (2×)
+    - `css/tokens/generated/theme-light.css` (2×)
   - Tokens que referenciam: `component.avatar.bg.default`, `component.badge.bg.brand.solid`, `component.button.bg.brand.default`, `component.button.bg.brand.focus`, `component.checkbox.box.fill.checked.default`, `component.checkbox.box.fill.checked.focus`, `component.checkbox.box.fill.indeterminate.default`, `component.checkbox.box.fill.indeterminate.focus`, `component.modal.action.fill.brand`, `component.radio.control.fill.selected.default`, `component.radio.control.fill.selected.focus`, `component.tabs.indicator.fill.active`, `component.toggle.track.fill.on.default`, `component.toggle.track.fill.on.focus`, `semantic.brand.border.default`, `semantic.content.brand`, `semantic.brand.border.default`, `semantic.content.brand`
 
 ### `semantic.brand.background.disabled`
@@ -5063,6 +5042,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado em `.ds-button--brand` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.disabled.brand.light — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
+  - CSS:
+    - `css/tokens/generated/component.css` (5×)
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
   - Tokens que referenciam: `component.button.bg.brand.disabled`, `component.checkbox.box.fill.checked.disabled`, `component.checkbox.box.fill.indeterminate.disabled`, `component.radio.control.fill.selected.disabled`, `component.toggle.track.fill.on.disabled`, `semantic.brand.border.disabled`, `semantic.brand.border.disabled`
 
 ### `semantic.brand.background.hover`
@@ -5075,6 +5058,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado em `.ds-button--brand` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.brand.700 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
+  - CSS:
+    - `css/tokens/generated/component.css` (5×)
+    - `css/tokens/generated/theme-dark.css` (1×)
+    - `css/tokens/generated/theme-light.css` (1×)
   - Tokens que referenciam: `component.button.bg.brand.hover`, `component.checkbox.box.fill.checked.hover`, `component.checkbox.box.fill.indeterminate.hover`, `component.radio.control.fill.selected.hover`, `component.toggle.track.fill.on.hover`, `semantic.brand.border.hover`, `semantic.brand.border.hover`
 
 ### `semantic.brand.border.default`
@@ -5087,6 +5074,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Usado para estabilizar o contrato semantic exposto por semantic.brand.border.
 - **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.brand.background.default.
 - **Usos**:
+  - CSS:
+    - `css/tokens/generated/component.css` (1×)
   - Tokens que referenciam: `component.radio.control.border-color.selected.default`
 
 ### `semantic.brand.border.disabled`
@@ -5111,6 +5100,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Usado para estabilizar o contrato semantic exposto por semantic.brand.border.
 - **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.brand.background.hover.
 - **Usos**:
+  - CSS:
+    - `css/tokens/generated/component.css` (1×)
   - Tokens que referenciam: `component.radio.control.border-color.selected.hover`
 
 ### `semantic.brand.content-default`
@@ -5123,6 +5114,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado em `.ds-button--brand` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.neutral.50 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
+  - CSS:
+    - `css/tokens/generated/component.css` (15×)
   - Tokens que referenciam: `component.avatar.content.color.default`, `component.badge.label.color.brand.solid`, `component.button.content.color.brand.default`, `component.button.content.color.brand.hover`, `component.button.content.color.brand.pressed`, `component.button.content.color.brand.focus`, `component.checkbox.mark.fill.checked.default`, `component.checkbox.mark.fill.checked.focus`, `component.checkbox.mark.fill.indeterminate.default`, `component.checkbox.mark.fill.indeterminate.focus`, `component.radio.dot.fill.selected.default`, `component.radio.dot.fill.selected.focus`, `component.toggle.thumb.fill.on.default`, `component.toggle.thumb.fill.on.focus`, `component.tooltip.label.color.default`
 
 ### `semantic.brand.content-disabled`
@@ -5135,6 +5128,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado em `.ds-button--brand` ou em consumidores Figma equivalentes.
 - **Decisão**: Aliasado a foundation.color.overlay.white.80 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
+  - CSS:
+    - `css/tokens/generated/component.css` (5×)
   - Tokens que referenciam: `component.button.content.color.brand.disabled`, `component.checkbox.mark.fill.checked.disabled`, `component.checkbox.mark.fill.indeterminate.disabled`, `component.radio.dot.fill.selected.disabled`, `component.toggle.thumb.fill.on.disabled`
 
 ### `semantic.brand.content-hover`
@@ -5147,6 +5142,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Semantic token usado por marcas internas de controles e conteúdo sobre brand/background/hover.
 - **Decisão**: Mantém token semântico próprio para hover mesmo quando o valor atual é igual ao default; isso evita que component tokens de hover apontem para semantic default.
 - **Usos**:
+  - CSS:
+    - `css/tokens/generated/component.css` (4×)
   - Tokens que referenciam: `component.checkbox.mark.fill.checked.hover`, `component.checkbox.mark.fill.indeterminate.hover`, `component.radio.dot.fill.selected.hover`, `component.toggle.thumb.fill.on.hover`
 
 ### `semantic.content-placeholder.rectangle.height.default`
@@ -5204,10 +5201,10 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/base/reset.css` (1×)
     - `css/components/textarea.css` (1×)
-    - `css/tokens/generated/component.css` (10×)
+    - `css/tokens/generated/component.css` (12×)
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `component.badge.label.color.neutral.subtle`, `component.breadcrumb.label.color.current`, `component.card.body.color.default`, `component.card.subtitle.color.default`, `component.field.value.color.readonly`, `component.form-field.label.color.readonly`, `component.form-field.helper.color.default`, `component.tabs.label.color.default`, `component.toggle.thumb.fill.off.default`, `component.toggle.thumb.fill.off.focus`, `semantic.icon.color.default`, `semantic.icon.color.default`
+  - Tokens que referenciam: `component.badge.label.color.neutral.subtle`, `component.breadcrumb.label.color.current`, `component.card.body.color.default`, `component.card.subtitle.color.default`, `component.field.value.color.readonly`, `component.form-field.label.color.readonly`, `component.form-field.helper.color.default`, `component.modal.body.color.default`, `component.modal.description.color.default`, `component.tabs.label.color.default`, `component.toggle.thumb.fill.off.default`, `component.toggle.thumb.fill.off.focus`, `semantic.icon.color.default`, `semantic.icon.color.default`
 
 ### `semantic.content.disabled`
 
@@ -5270,10 +5267,10 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/base/reset.css` (1×)
     - `css/components/modal.css` (1×)
-    - `css/tokens/generated/component.css` (10×)
+    - `css/tokens/generated/component.css` (9×)
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `component.alert.title.color.subtle`, `component.alert.description.color.subtle`, `component.badge.label.color.neutral.solid`, `component.card.title.color.default`, `component.field.value.color.default`, `component.form-field.label.color.default`, `component.form-field.description.color.default`, `component.modal.body.color.default`, `component.modal.title.color.default`, `component.tabs.label.color.hover`, `semantic.icon.color.active`, `semantic.icon.color.active`
+  - Tokens que referenciam: `component.alert.title.color.subtle`, `component.alert.description.color.subtle`, `component.badge.label.color.neutral.solid`, `component.card.title.color.default`, `component.field.value.color.default`, `component.form-field.label.color.default`, `component.form-field.description.color.default`, `component.modal.title.color.default`, `component.tabs.label.color.hover`, `semantic.icon.color.active`, `semantic.icon.color.active`
 
 ### `semantic.content.subtle`
 
@@ -7018,8 +7015,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.dimension.24.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (5×)
-  - Tokens que referenciam: `component.modal.header.padding-x.lg`, `component.modal.header.padding-top.lg`, `component.modal.body.padding-x.lg`, `component.modal.footer.padding-x.lg`, `component.modal.footer.padding-bottom.lg`
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.modal.container.padding.lg`
 
 ### `semantic.space.2xs`
 
@@ -7034,6 +7031,54 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/tokens/generated/component.css` (11×)
   - Tokens que referenciam: `component.badge.padding-y.default`, `component.button.gap.sm`, `component.form-field.label-row.gap.default`, `component.form-field.error.padding-top.default`, `component.form-field.error.icon-frame.padding-x.default`, `component.input.icon-frame.padding-x.default`, `component.input.text-frame.padding-x.default`, `component.select.chevron-frame.padding-x.default`, `component.select.icon-frame.padding-x.default`, `component.select.text-frame.padding-x.default`, `component.toggle.thumb.inset.default`
+
+### `semantic.space.3xl`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.dimension.32`
+- **Sentido**: Espaçamento amplo da escala semântica genérica para composição interna de componentes e blocos densos.
+- **Escopo**: space, spacing, gap, padding, componentes
+- **Contexto**: Usar quando 24px for insuficiente para separar grupos internos sem recorrer à escala macro de section.
+- **Decisão**: Adicionado para expandir a escala genérica de space até 64px, mantendo 32px como primeiro degrau acima de 2xl.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.space.4xl`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.dimension.40`
+- **Sentido**: Espaçamento amplo intermediário da escala semântica genérica.
+- **Escopo**: space, spacing, gap, padding, componentes
+- **Contexto**: Usar em containers e composições internas que precisam de mais respiro que 32px, mas ainda não são separação de seções.
+- **Decisão**: Adicionado como degrau de 40px para evitar saltos bruscos entre 32px e 48px na composição interna.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.space.5xl`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.dimension.48`
+- **Sentido**: Espaçamento alto da escala semântica genérica para composição interna robusta.
+- **Escopo**: space, spacing, gap, padding, componentes
+- **Contexto**: Usar como limite alto para espaços internos de componentes complexos antes de entrar na escala section.
+- **Decisão**: Adicionado em 48px para dar suporte a Card, Modal, Alert e componentes mais densos sem usar section indevidamente.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `semantic.space.6xl`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.dimension.64`
+- **Sentido**: Maior espaçamento da escala semântica genérica.
+- **Escopo**: space, spacing, gap, padding, componentes
+- **Contexto**: Usar como teto da escala genérica em blocos internos grandes; para respiro entre áreas, preferir semantic.space.section.*.
+- **Decisão**: Adicionado em 64px como limite da escala genérica, mantendo valores acima disso reservados para section/layout.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `semantic.space.control.padding.10`
 
@@ -7074,9 +7119,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.dimension.16.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (17×)
+    - `css/tokens/generated/component.css` (13×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.button.padding-x.lg`, `component.card.header.padding-x.default`, `component.card.header.padding-top.default`, `component.card.body.padding-x.default`, `component.card.body.padding-bottom.default`, `component.modal.header.padding-x.sm`, `component.modal.header.padding-top.sm`, `component.modal.header.padding-bottom.lg`, `component.modal.header.gap.default`, `component.modal.body.padding-x.sm`, `component.modal.body.padding-bottom.sm`, `component.modal.footer.padding-x.sm`, `component.modal.footer.padding-top.lg`, `component.modal.footer.padding-bottom.sm`, `component.tabs.item.padding-x.default`, `component.tabs.panel.padding-y.default`, `component.textarea.padding-x.lg`
+  - Tokens que referenciam: `component.button.padding-x.lg`, `component.card.header.padding-x.default`, `component.card.header.padding-top.default`, `component.card.body.padding-x.default`, `component.card.body.padding-bottom.default`, `component.modal.container.padding.sm`, `component.modal.container.gap.md`, `component.modal.header.gap.default`, `component.modal.body.gap.lg`, `component.modal.footer.gap.lg`, `component.tabs.item.padding-x.default`, `component.tabs.panel.padding-y.default`, `component.textarea.padding-x.lg`
 
 ### `semantic.space.md`
 
@@ -7093,7 +7138,7 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/radio.css` (1×)
     - `css/tokens/generated/component.css` (14×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.alert.padding.default`, `component.button.padding-x.md`, `component.button.padding-y.lg`, `component.button.icon-only-padding.lg`, `component.field.padding-y.lg`, `component.input.padding-x.lg`, `component.modal.header.padding-bottom.md`, `component.modal.footer.padding-top.md`, `component.modal.footer.gap.default`, `component.modal.close.padding.lg`, `component.select.padding-x.lg`, `component.tabs.item.padding-top.default`, `component.tabs.item.indicator-gap.default`, `component.textarea.padding-x.md`
+  - Tokens que referenciam: `component.alert.padding.default`, `component.button.padding-x.md`, `component.button.padding-y.lg`, `component.button.icon-only-padding.lg`, `component.field.padding-y.lg`, `component.input.padding-x.lg`, `component.modal.container.gap.sm`, `component.modal.body.gap.md`, `component.modal.footer.gap.md`, `component.modal.close.padding.lg`, `component.select.padding-x.lg`, `component.tabs.item.padding-top.default`, `component.tabs.item.indicator-gap.default`, `component.textarea.padding-x.md`
 
 ### `semantic.space.none`
 
@@ -7107,11 +7152,23 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - _(nenhum uso detectado — token órfão ou novo)_
 
+### `semantic.space.section.2xl`
+
+- **Camada**: semantic
+- **Tipo**: `dimension`
+- **Alias**: → `foundation.dimension.120`
+- **Sentido**: Maior espaçamento semântico de section para separação macro entre áreas.
+- **Escopo**: space, spacing, section, layout, documentacao
+- **Contexto**: Usar em páginas, specs e documentação quando section/xl ainda não oferece respiro suficiente.
+- **Decisão**: Adicionado em 120px ao elevar a escala section para 48, 64, 80, 96 e 120px.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
 ### `semantic.space.section.lg`
 
 - **Camada**: semantic
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.dimension.64`
+- **Alias**: → `foundation.dimension.80`
 - **Sentido**: Spacing token section.lg.
 - **Escopo**: gap, padding, margin
 - **Contexto**: Use em `gap`, `padding`, `margin` em componentes.
@@ -7123,7 +7180,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: semantic
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.dimension.48`
+- **Alias**: → `foundation.dimension.64`
 - **Sentido**: Spacing token section.md.
 - **Escopo**: gap, padding, margin
 - **Contexto**: Use em `gap`, `padding`, `margin` em componentes.
@@ -7135,7 +7192,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: semantic
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.dimension.32`
+- **Alias**: → `foundation.dimension.48`
 - **Sentido**: Spacing token section.sm.
 - **Escopo**: gap, padding, margin
 - **Contexto**: Use em `gap`, `padding`, `margin` em componentes.
@@ -7148,7 +7205,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: semantic
 - **Tipo**: `dimension`
-- **Alias**: → `foundation.dimension.80`
+- **Alias**: → `foundation.dimension.96`
 - **Sentido**: Spacing token section.xl.
 - **Escopo**: gap, padding, margin
 - **Contexto**: Use em `gap`, `padding`, `margin` em componentes.
@@ -7170,9 +7227,9 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/checkbox.css` (2×)
     - `css/components/radio.css` (3×)
     - `css/components/tooltip.css` (4×)
-    - `css/tokens/generated/component.css` (24×)
+    - `css/tokens/generated/component.css` (25×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.alert.gap.default`, `component.badge.padding-x.default`, `component.button.padding-x.sm`, `component.button.padding-y.sm`, `component.button.gap.lg`, `component.button.icon-only-padding.md`, `component.card.header.padding-bottom.default`, `component.card.header.gap.default`, `component.checkbox.target.gap.default`, `component.checkbox.group.options.gap.default`, `component.field.padding-y.sm`, `component.input.gap.lg`, `component.input.padding-x.md`, `component.modal.header.padding-bottom.sm`, `component.modal.footer.padding-top.sm`, `component.modal.close.padding.md`, `component.radio.target.gap.default`, `component.radio.group.options.gap.default`, `component.select.gap.lg`, `component.select.padding-x.md`, `component.textarea.padding-x.sm`, `component.toggle.target.gap.default`, `component.tooltip.content.padding-x.default`, `component.tooltip.arrow.base.default`
+  - Tokens que referenciam: `component.alert.gap.default`, `component.badge.padding-x.default`, `component.button.padding-x.sm`, `component.button.padding-y.sm`, `component.button.gap.lg`, `component.button.icon-only-padding.md`, `component.card.header.padding-bottom.default`, `component.card.header.gap.default`, `component.checkbox.target.gap.default`, `component.checkbox.group.options.gap.default`, `component.field.padding-y.sm`, `component.input.gap.lg`, `component.input.padding-x.md`, `component.modal.body.gap.sm`, `component.modal.content-slot.gap.default`, `component.modal.footer.gap.sm`, `component.modal.close.padding.md`, `component.radio.target.gap.default`, `component.radio.group.options.gap.default`, `component.select.gap.lg`, `component.select.padding-x.md`, `component.textarea.padding-x.sm`, `component.toggle.target.gap.default`, `component.tooltip.content.padding-x.default`, `component.tooltip.arrow.base.default`
 
 ### `semantic.space.xl`
 
@@ -7185,9 +7242,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.dimension.20.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (8×)
+    - `css/tokens/generated/component.css` (3×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.modal.overlay.padding.default`, `component.modal.header.padding-x.md`, `component.modal.header.padding-top.md`, `component.modal.body.padding-x.md`, `component.modal.body.padding-bottom.md`, `component.modal.body.padding-bottom.lg`, `component.modal.footer.padding-x.md`, `component.modal.footer.padding-bottom.md`
+  - Tokens que referenciam: `component.modal.overlay.padding.default`, `component.modal.container.padding.md`, `component.modal.container.gap.lg`
 
 ### `semantic.space.xs`
 
@@ -7203,9 +7260,9 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/checkbox.css` (5×)
     - `css/components/radio.css` (6×)
     - `css/components/toggle.css` (1×)
-    - `css/tokens/generated/component.css` (20×)
+    - `css/tokens/generated/component.css` (21×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.alert.content.gap.default`, `component.badge.gap.default`, `component.breadcrumb.gap.default`, `component.breadcrumb.item.gap.default`, `component.button.gap.md`, `component.button.label-frame.padding-x.default`, `component.checkbox.content.gap.default`, `component.form-field.gap.default`, `component.form-field.error.gap.default`, `component.form-field.stack.gap.default`, `component.input.gap.sm`, `component.input.gap.md`, `component.input.padding-x.sm`, `component.radio.content.gap.default`, `component.select.gap.sm`, `component.select.gap.md`, `component.select.padding-x.sm`, `component.toggle.content.gap.default`, `component.tooltip.content.padding-y.default`, `component.tooltip.arrow.depth.default`
+  - Tokens que referenciam: `component.alert.content.gap.default`, `component.badge.gap.default`, `component.breadcrumb.gap.default`, `component.breadcrumb.item.gap.default`, `component.button.gap.md`, `component.button.label-frame.padding-x.default`, `component.checkbox.content.gap.default`, `component.form-field.gap.default`, `component.form-field.error.gap.default`, `component.form-field.stack.gap.default`, `component.input.gap.sm`, `component.input.gap.md`, `component.input.padding-x.sm`, `component.modal.heading.gap.default`, `component.radio.content.gap.default`, `component.select.gap.sm`, `component.select.gap.md`, `component.select.padding-x.sm`, `component.toggle.content.gap.default`, `component.tooltip.content.padding-y.default`, `component.tooltip.arrow.depth.default`
 
 ### `semantic.surface.default`
 
@@ -7393,7 +7450,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-2xl`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.size.24.
 - **Usos**:
-  - Tokens que referenciam: `component.avatar.icon.size.md`, `component.modal.title.font-size.md`
+  - Tokens que referenciam: `component.avatar.icon.size.md`
 
 ### `semantic.typography.body.font-size.2xs`
 
@@ -7417,7 +7474,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-3xl`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.size.28.
 - **Usos**:
-  - Tokens que referenciam: `component.modal.title.font-size.lg`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `semantic.typography.body.font-size.4xl`
 
@@ -7501,7 +7558,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-lg`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.size.18.
 - **Usos**:
-  - Tokens que referenciam: `component.modal.body.font-size.lg`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `semantic.typography.body.font-size.md`
 
@@ -7513,7 +7570,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-md`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.size.16.
 - **Usos**:
-  - Tokens que referenciam: `component.button.label.font-size.lg`, `component.input.text.font-size.lg`, `component.modal.body.font-size.md`, `component.select.text.font-size.lg`, `component.textarea.text.font-size.lg`
+  - Tokens que referenciam: `component.button.label.font-size.lg`, `component.input.text.font-size.lg`, `component.select.text.font-size.lg`, `component.textarea.text.font-size.lg`
 
 ### `semantic.typography.body.font-size.sm`
 
@@ -7525,7 +7582,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-sm`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.size.14.
 - **Usos**:
-  - Tokens que referenciam: `component.alert.title.font-size.default`, `component.alert.description.font-size.default`, `component.avatar.initials.font-size.sm`, `component.avatar.initials.font-size.md`, `component.breadcrumb.label.font-size.default`, `component.button.label.font-size.sm`, `component.button.label.font-size.md`, `component.card.body.font-size.default`, `component.card.subtitle.font-size.default`, `component.form-field.label.font-size.default`, `component.form-field.required.font-size.default`, `component.input.text.font-size.md`, `component.modal.body.font-size.sm`, `component.select.text.font-size.md`, `component.tabs.label.font-size.default`, `component.textarea.text.font-size.md`, `component.tooltip.label.font-size.default`
+  - Tokens que referenciam: `component.alert.title.font-size.default`, `component.alert.description.font-size.default`, `component.avatar.initials.font-size.sm`, `component.avatar.initials.font-size.md`, `component.breadcrumb.label.font-size.default`, `component.button.label.font-size.sm`, `component.button.label.font-size.md`, `component.card.body.font-size.default`, `component.card.subtitle.font-size.default`, `component.form-field.label.font-size.default`, `component.form-field.required.font-size.default`, `component.input.text.font-size.md`, `component.select.text.font-size.md`, `component.tabs.label.font-size.default`, `component.textarea.text.font-size.md`, `component.tooltip.label.font-size.default`
 
 ### `semantic.typography.body.font-size.xl`
 
@@ -7537,7 +7594,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-xl`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.size.20.
 - **Usos**:
-  - Tokens que referenciam: `component.avatar.initials.font-size.lg`, `component.avatar.icon.size.sm`, `component.card.title.font-size.default`, `component.modal.title.font-size.sm`
+  - Tokens que referenciam: `component.avatar.initials.font-size.lg`, `component.avatar.icon.size.sm`, `component.card.title.font-size.default`
 
 ### `semantic.typography.body.font-size.xs`
 
@@ -7549,7 +7606,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-xs`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.size.12.
 - **Usos**:
-  - Tokens que referenciam: `component.badge.label.font-size.default`, `component.breadcrumb.separator.font-size.default`, `component.form-field.helper.font-size.default`, `component.form-field.error.font-size.default`, `component.input.text.font-size.sm`, `component.select.text.font-size.sm`, `component.textarea.text.font-size.sm`
+  - Tokens que referenciam: `component.badge.label.font-size.default`, `component.breadcrumb.separator.font-size.default`, `component.form-field.error.font-size.default`, `component.input.text.font-size.sm`, `component.select.text.font-size.sm`, `component.textarea.text.font-size.sm`
 
 ### `semantic.typography.body.font-weight.bold`
 
@@ -7561,7 +7618,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-bold`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.weight.bold.
 - **Usos**:
-  - Tokens que referenciam: `component.alert.title.font-weight.default`, `component.avatar.initials.font-weight.sm`, `component.avatar.initials.font-weight.md`, `component.badge.label.font-weight.default`, `component.breadcrumb.label.font-weight.default`, `component.button.label.font-weight.default`, `component.card.subtitle.font-weight.default`, `component.form-field.label.font-weight.default`, `component.form-field.required.font-weight.default`, `component.form-field.error.font-weight.default`, `component.tabs.label.font-weight.default`
+  - Tokens que referenciam: `component.alert.title.font-weight.default`, `component.avatar.initials.font-weight.sm`, `component.avatar.initials.font-weight.md`, `component.badge.label.font-weight.default`, `component.breadcrumb.label.font-weight.default`, `component.button.label.font-weight.default`, `component.card.subtitle.font-weight.default`, `component.form-field.error.font-weight.default`, `component.tabs.label.font-weight.default`
 
 ### `semantic.typography.body.font-weight.medium`
 
@@ -7585,7 +7642,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-regular`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.weight.regular.
 - **Usos**:
-  - Tokens que referenciam: `component.alert.description.font-weight.default`, `component.breadcrumb.separator.font-weight.default`, `component.card.body.font-weight.default`, `component.form-field.helper.font-weight.default`, `component.input.text.font-weight.default`, `component.modal.body.font-weight.default`, `component.select.text.font-weight.default`, `component.textarea.text.font-weight.default`, `component.tooltip.label.font-weight.default`
+  - Tokens que referenciam: `component.alert.description.font-weight.default`, `component.breadcrumb.separator.font-weight.default`, `component.card.body.font-weight.default`, `component.input.text.font-weight.default`, `component.select.text.font-weight.default`, `component.textarea.text.font-weight.default`, `component.tooltip.label.font-weight.default`
 
 ### `semantic.typography.body.font-weight.semibold`
 
@@ -7597,7 +7654,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-semibold`.
 - **Decisão**: Aliasado a Foundation foundation.typography.font.weight.semibold.
 - **Usos**:
-  - Tokens que referenciam: `component.avatar.initials.font-weight.lg`, `component.card.title.font-weight.default`, `component.modal.title.font-weight.default`
+  - Tokens que referenciam: `component.avatar.initials.font-weight.lg`, `component.card.title.font-weight.default`
 
 ### `semantic.typography.body.letter-spacing.normal`
 
@@ -7609,7 +7666,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-normal`.
 - **Decisão**: Aliasado a Foundation foundation.typography.letter.spacing.normal.
 - **Usos**:
-  - Tokens que referenciam: `component.breadcrumb.label.letter-spacing.default`, `component.breadcrumb.separator.letter-spacing.default`, `component.button.label.letter-spacing.default`, `component.input.text.letter-spacing.default`, `component.modal.title.letter-spacing.sm`, `component.modal.title.letter-spacing.md`, `component.select.text.letter-spacing.default`, `component.tabs.label.letter-spacing.default`, `component.textarea.text.letter-spacing.default`
+  - Tokens que referenciam: `component.breadcrumb.label.letter-spacing.default`, `component.breadcrumb.separator.letter-spacing.default`, `component.button.label.letter-spacing.default`, `component.input.text.letter-spacing.default`, `component.select.text.letter-spacing.default`, `component.tabs.label.letter-spacing.default`, `component.textarea.text.letter-spacing.default`
 
 ### `semantic.typography.body.letter-spacing.tight`
 
@@ -7621,7 +7678,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-tight`.
 - **Decisão**: Aliasado a Foundation foundation.typography.letter.spacing.tight.
 - **Usos**:
-  - Tokens que referenciam: `component.modal.title.letter-spacing.lg`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `semantic.typography.body.letter-spacing.wider`
 
@@ -7645,7 +7702,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-2xl`.
 - **Decisão**: Aliasado a Foundation foundation.typography.line.height.34.
 - **Usos**:
-  - Tokens que referenciam: `component.modal.title.line-height.md`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `semantic.typography.body.line-height.2xs`
 
@@ -7669,7 +7726,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-3xl`.
 - **Decisão**: Aliasado a Foundation foundation.typography.line.height.40.
 - **Usos**:
-  - Tokens que referenciam: `component.modal.title.line-height.lg`
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `semantic.typography.body.line-height.4xl`
 
@@ -7765,7 +7822,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-md`.
 - **Decisão**: Aliasado a Foundation foundation.typography.line.height.24.
 - **Usos**:
-  - Tokens que referenciam: `component.button.label.line-height.lg`, `component.input.text.line-height.lg`, `component.modal.body.line-height.md`, `component.select.text.line-height.lg`, `component.textarea.text.line-height.lg`
+  - Tokens que referenciam: `component.button.label.line-height.lg`, `component.input.text.line-height.lg`, `component.select.text.line-height.lg`, `component.textarea.text.line-height.lg`
 
 ### `semantic.typography.body.line-height.sm`
 
@@ -7777,7 +7834,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-sm`.
 - **Decisão**: Aliasado a Foundation foundation.typography.line.height.20.
 - **Usos**:
-  - Tokens que referenciam: `component.alert.title.line-height.default`, `component.alert.description.line-height.default`, `component.avatar.initials.line-height.sm`, `component.avatar.initials.line-height.md`, `component.breadcrumb.label.line-height.default`, `component.button.label.line-height.md`, `component.card.body.line-height.default`, `component.card.subtitle.line-height.default`, `component.form-field.label.line-height.default`, `component.form-field.required.line-height.default`, `component.input.text.line-height.md`, `component.modal.body.line-height.sm`, `component.select.text.line-height.md`, `component.tabs.label.line-height.default`, `component.textarea.text.line-height.md`, `component.tooltip.label.line-height.default`
+  - Tokens que referenciam: `component.alert.title.line-height.default`, `component.alert.description.line-height.default`, `component.avatar.initials.line-height.sm`, `component.avatar.initials.line-height.md`, `component.breadcrumb.label.line-height.default`, `component.button.label.line-height.md`, `component.card.body.line-height.default`, `component.card.subtitle.line-height.default`, `component.form-field.label.line-height.default`, `component.form-field.required.line-height.default`, `component.input.text.line-height.md`, `component.select.text.line-height.md`, `component.tabs.label.line-height.default`, `component.textarea.text.line-height.md`, `component.tooltip.label.line-height.default`
 
 ### `semantic.typography.body.line-height.xl`
 
@@ -7789,7 +7846,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-xl`.
 - **Decisão**: Aliasado a Foundation foundation.typography.line.height.32.
 - **Usos**:
-  - Tokens que referenciam: `component.avatar.initials.line-height.lg`, `component.card.title.line-height.default`, `component.modal.body.line-height.lg`, `component.modal.title.line-height.sm`
+  - Tokens que referenciam: `component.avatar.initials.line-height.lg`, `component.card.title.line-height.default`
 
 ### `semantic.typography.body.line-height.xs`
 
@@ -7801,7 +7858,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Aplicado via Text Style ou utility class `.ds-text-body-xs`.
 - **Decisão**: Aliasado a Foundation foundation.typography.line.height.18.
 - **Usos**:
-  - Tokens que referenciam: `component.badge.label.line-height.default`, `component.breadcrumb.separator.line-height.default`, `component.form-field.helper.line-height.default`, `component.form-field.error.line-height.default`
+  - Tokens que referenciam: `component.badge.label.line-height.default`, `component.breadcrumb.separator.line-height.default`, `component.form-field.error.line-height.default`
 
 ### `semantic.z.modal`
 
@@ -10698,7 +10755,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Alias 1:1 para semantic.space.lg porque 16px é escala reutilizável, mas no Card documenta o respiro inferior público do body.
 - **Usos**:
   - CSS:
-    - `css/components/card.css` (1×)
+    - `css/components/card.css` (2×)
 
 ### `component.card.body.padding-x.default`
 
@@ -10711,7 +10768,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Alias 1:1 para semantic.space.lg porque 16px é escala reutilizável, mas no Card documenta o respiro horizontal público do body.
 - **Usos**:
   - CSS:
-    - `css/components/card.css` (1×)
+    - `css/components/card.css` (2×)
 
 ### `component.card.border-color.elevated`
 
@@ -10763,7 +10820,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Alias 1:1 para semantic.space.sm porque 8px é escala reutilizável, mas no Card documenta a separação vertical pública do header.
 - **Usos**:
   - CSS:
-    - `css/components/card.css` (1×)
+    - `css/components/card.css` (2×)
 
 ### `component.card.header.padding-bottom.default`
 
@@ -10776,7 +10833,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Alias 1:1 para semantic.space.sm porque 8px é escala reutilizável, mas no Card documenta a separação pública entre header e body.
 - **Usos**:
   - CSS:
-    - `css/components/card.css` (1×)
+    - `css/components/card.css` (2×)
 
 ### `component.card.header.padding-top.default`
 
@@ -10789,7 +10846,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Alias 1:1 para semantic.space.lg porque 16px é escala reutilizável, mas no Card documenta o respiro superior público do header.
 - **Usos**:
   - CSS:
-    - `css/components/card.css` (1×)
+    - `css/components/card.css` (2×)
 
 ### `component.card.header.padding-x.default`
 
@@ -11848,7 +11905,7 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/modal.css` (2×)
     - `css/components/radio.css` (2×)
     - `css/components/select.css` (2×)
-    - `css/components/tabs.css` (2×)
+    - `css/components/tabs.css` (5×)
     - `css/components/textarea.css` (2×)
     - `css/components/toggle.css` (2×)
 
@@ -12049,60 +12106,6 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/input.css` (1×)
     - `css/components/select.css` (1×)
 
-### `component.form-field.helper.font-size.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.xs`
-- **Sentido**: Tamanho tipografico do helper text do Form Field.
-- **Escopo**: Form Field, CSS-only, ADR-017
-- **Contexto**: Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.
-- **Decisão**: Alias 1:1 para semantic.typography.body.font-size.xs, alinhado ao helper text vivo no Figma.
-- **Usos**:
-  - CSS:
-    - `css/components/checkbox.css` (2×)
-    - `css/components/form-field.css` (1×)
-    - `css/components/input.css` (1×)
-    - `css/components/radio.css` (2×)
-    - `css/components/select.css` (3×)
-    - `css/components/toggle.css` (1×)
-
-### `component.form-field.helper.font-weight.default`
-
-- **Camada**: component
-- **Tipo**: `string`
-- **Alias**: → `semantic.typography.body.font-weight.regular`
-- **Sentido**: Peso tipografico do helper text do Form Field.
-- **Escopo**: Form Field, CSS-only, ADR-017
-- **Contexto**: Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.
-- **Decisão**: Alias 1:1 para semantic.typography.body.font-weight.regular, alinhado ao helper text vivo no Figma.
-- **Usos**:
-  - CSS:
-    - `css/components/checkbox.css` (2×)
-    - `css/components/form-field.css` (1×)
-    - `css/components/input.css` (1×)
-    - `css/components/radio.css` (2×)
-    - `css/components/select.css` (1×)
-    - `css/components/toggle.css` (1×)
-
-### `component.form-field.helper.line-height.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.line-height.xs`
-- **Sentido**: Altura de linha do helper text do Form Field.
-- **Escopo**: Form Field, CSS-only, ADR-017
-- **Contexto**: Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.
-- **Decisão**: Alias 1:1 para semantic.typography.body.line-height.xs, corrigindo o CSS para 18px como no Figma vivo.
-- **Usos**:
-  - CSS:
-    - `css/components/checkbox.css` (2×)
-    - `css/components/form-field.css` (1×)
-    - `css/components/input.css` (1×)
-    - `css/components/radio.css` (2×)
-    - `css/components/select.css` (3×)
-    - `css/components/toggle.css` (1×)
-
 ### `component.form-field.label-row.gap.default`
 
 - **Camada**: component
@@ -12200,24 +12203,6 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/select.css` (3×)
     - `css/components/toggle.css` (1×)
 
-### `component.form-field.label.font-weight.default`
-
-- **Camada**: component
-- **Tipo**: `string`
-- **Alias**: → `semantic.typography.body.font-weight.bold`
-- **Sentido**: Peso tipografico de label no Form Field.
-- **Escopo**: Form Field, CSS-only, ADR-017
-- **Contexto**: Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.
-- **Decisão**: Alias 1:1 para semantic.typography.body.font-weight.bold, alinhado ao Figma vivo dos labels de controle.
-- **Usos**:
-  - CSS:
-    - `css/components/checkbox.css` (1×)
-    - `css/components/form-field.css` (1×)
-    - `css/components/input.css` (1×)
-    - `css/components/radio.css` (2×)
-    - `css/components/select.css` (1×)
-    - `css/components/toggle.css` (1×)
-
 ### `component.form-field.label.line-height.default`
 
 - **Camada**: component
@@ -12274,21 +12259,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Escopo**: Form Field, CSS-only, ADR-017
 - **Contexto**: Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.
 - **Decisão**: Alias 1:1 para semantic.typography.body.font-size.sm, alinhado ao default medio dos controles de formulario.
-- **Usos**:
-  - CSS:
-    - `css/components/form-field.css` (1×)
-    - `css/components/input.css` (1×)
-    - `css/components/select.css` (1×)
-
-### `component.form-field.required.font-weight.default`
-
-- **Camada**: component
-- **Tipo**: `string`
-- **Alias**: → `semantic.typography.body.font-weight.bold`
-- **Sentido**: Peso tipografico de required no Form Field.
-- **Escopo**: Form Field, CSS-only, ADR-017
-- **Contexto**: Contrato Component CSS-only do Form Field. Nao cria componente visual no Figma por ADR-017; materializa a anatomia de label, required, helper e error consumida pelo CSS.
-- **Decisão**: Alias 1:1 para semantic.typography.body.font-weight.bold, alinhado ao Figma vivo dos labels de controle.
 - **Usos**:
   - CSS:
     - `css/components/form-field.css` (1×)
@@ -12729,183 +12699,50 @@ Seção expandida com contexto, decisão e locais de uso.
 
 - **Camada**: component
 - **Tipo**: `color`
-- **Alias**: → `semantic.content.strong`
-- **Sentido**: Contrato body.color de modal, sincronizado a partir das Variables Figma atuais.
+- **Alias**: → `semantic.content.default`
+- **Sentido**: Cor do texto principal do body Modal.
 - **Escopo**: text, fill, stroke
 - **Contexto**: Usado para estabilizar o contrato anatômico do Modal Body entre Figma, JSON e CSS.
-- **Decisão**: Alias 1:1 para semantic.content.strong porque o body da Modal usa conteúdo neutro de alta ênfase no contrato atual.
+- **Decisão**: Alias 1:1 para semantic.content.default porque o body da Modal usa conteúdo neutro padrão no contrato atual do Figma.
 - **Usos**:
   - CSS:
     - `css/components/modal.css` (1×)
 
-### `component.modal.body.font-size.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.lg`
-- **Sentido**: Font-size do body Modal lg.
-- **Escopo**: font-size
-- **Contexto**: Component token do contrato anatômico Modal Body. Binda fontSize do Content na variante Size=Large no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.typography.body.font-size.lg porque a escala tipográfica é reutilizável, mas o tamanho do body é contrato público do Modal.
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.body.font-size.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.md`
-- **Sentido**: Font-size do body Modal md.
-- **Escopo**: font-size
-- **Contexto**: Component token do contrato anatômico Modal Body. Binda fontSize do Content na variante Size=Medium no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.typography.body.font-size.md porque a escala tipográfica é reutilizável, mas o tamanho do body é contrato público do Modal.
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.body.font-size.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.sm`
-- **Sentido**: Font-size do body Modal sm.
-- **Escopo**: font-size
-- **Contexto**: Component token do contrato anatômico Modal Body. Binda fontSize do Content na variante Size=Small no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.typography.body.font-size.sm porque a escala tipográfica é reutilizável, mas o tamanho do body é contrato público do Modal.
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.body.font-weight.default`
-
-- **Camada**: component
-- **Tipo**: `number`
-- **Alias**: → `semantic.typography.body.font-weight.regular`
-- **Sentido**: Font-weight do body Modal.
-- **Escopo**: font-weight
-- **Contexto**: Component token do contrato anatômico Modal Body. Binda fontStyle do Content nas variantes Size no Figma e substitui peso implícito no CSS.
-- **Decisão**: Alias 1:1 para semantic.typography.body.font-weight.regular porque o body usa Regular; no Figma o campo bindável é fontStyle/string, enquanto no JSON/CSS o contrato permanece numérico.
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.body.line-height.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.line-height.xl`
-- **Sentido**: Line-height do body Modal lg.
-- **Escopo**: line-height
-- **Contexto**: Component token do contrato anatômico Modal Body. Binda lineHeight do Content na variante Size=Large no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.typography.body.line-height.xl porque a métrica vertical é reutilizável, mas o body é contrato público do Modal.
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.body.line-height.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.line-height.md`
-- **Sentido**: Line-height do body Modal md.
-- **Escopo**: line-height
-- **Contexto**: Component token do contrato anatômico Modal Body. Binda lineHeight do Content na variante Size=Medium no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.typography.body.line-height.md porque a métrica vertical é reutilizável, mas o body é contrato público do Modal.
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.body.line-height.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.line-height.sm`
-- **Sentido**: Line-height do body Modal sm.
-- **Escopo**: line-height
-- **Contexto**: Component token do contrato anatômico Modal Body. Binda lineHeight do Content na variante Size=Small no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.typography.body.line-height.sm porque a métrica vertical é reutilizável, mas o body é contrato público do Modal.
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.body.padding-bottom.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.xl`
-- **Sentido**: Padding bottom do body Modal lg.
-- **Escopo**: padding-bottom
-- **Contexto**: Component token do contrato anatômico Modal Body. Binda paddingBottom da variante Size=Large no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.space.xl porque o respiro inferior segue a escala de spacing, mas é contrato público do body Modal.
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.body.padding-bottom.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.xl`
-- **Sentido**: Padding bottom do body Modal md.
-- **Escopo**: padding-bottom
-- **Contexto**: Component token do contrato anatômico Modal Body. Binda paddingBottom da variante Size=Medium no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.space.xl porque o respiro inferior segue a escala de spacing, mas é contrato público do body Modal.
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.body.padding-bottom.sm`
+### `component.modal.body.gap.lg`
 
 - **Camada**: component
 - **Tipo**: `dimension`
 - **Alias**: → `semantic.space.lg`
-- **Sentido**: Padding bottom do body Modal sm.
-- **Escopo**: padding-bottom
-- **Contexto**: Component token do contrato anatômico Modal Body. Binda paddingBottom da variante Size=Small no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.space.lg porque o respiro inferior segue a escala de spacing, mas é contrato público do body Modal.
+- **Sentido**: Gap interno do body Modal lg.
+- **Escopo**: modal, body, gap
+- **Contexto**: Contrato anatômico do Body da Modal para conteúdo textual e slot no tamanho lg.
+- **Decisão**: Mantido porque o Body usa gap por tamanho no Figma vivo.
 - **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
-### `component.modal.body.padding-x.lg`
+### `component.modal.body.gap.md`
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.space.2xl`
-- **Sentido**: Padding horizontal do body Modal lg.
-- **Escopo**: padding-left, padding-right
-- **Contexto**: Component token do contrato anatômico Modal Body. Binda paddingLeft/paddingRight da variante Size=Large no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.space.xl porque o respiro horizontal segue a escala de spacing, mas é contrato público do body Modal.
+- **Alias**: → `semantic.space.md`
+- **Sentido**: Gap interno do body Modal md.
+- **Escopo**: modal, body, gap
+- **Contexto**: Contrato anatômico do Body da Modal para conteúdo textual e slot no tamanho md.
+- **Decisão**: Mantido porque o Body usa gap por tamanho no Figma vivo.
 - **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
-### `component.modal.body.padding-x.md`
+### `component.modal.body.gap.sm`
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.space.xl`
-- **Sentido**: Padding horizontal do body Modal md.
-- **Escopo**: padding-left, padding-right
-- **Contexto**: Component token do contrato anatômico Modal Body. Binda paddingLeft/paddingRight da variante Size=Medium no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.space.xl porque o respiro horizontal segue a escala de spacing, mas é contrato público do body Modal.
+- **Alias**: → `semantic.space.sm`
+- **Sentido**: Gap interno do body Modal sm.
+- **Escopo**: modal, body, gap
+- **Contexto**: Contrato anatômico do Body da Modal para conteúdo textual e slot no tamanho sm.
+- **Decisão**: Mantido porque o Body usa gap por tamanho no Figma vivo.
 - **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.body.padding-x.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.lg`
-- **Sentido**: Padding horizontal do body Modal sm.
-- **Escopo**: padding-left, padding-right
-- **Contexto**: Component token do contrato anatômico Modal Body. Binda paddingLeft/paddingRight da variante Size=Small no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.space.lg porque o respiro horizontal segue a escala de spacing, mas é contrato público do body Modal.
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `component.modal.close.color.default`
 
@@ -13022,7 +12859,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Mantido por tamanho para atender melhor acessibilidade em modais maiores sem alterar o tamanho visual do ícone.
 - **Usos**:
   - CSS:
-    - `css/components/modal.css` (3×)
+    - `css/components/modal.css` (4×)
 
 ### `component.modal.close.size.md`
 
@@ -13035,7 +12872,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Mantido por tamanho para alinhar o close à altura padrão de controles do DS.
 - **Usos**:
   - CSS:
-    - `css/components/modal.css` (3×)
+    - `css/components/modal.css` (4×)
 
 ### `component.modal.close.size.sm`
 
@@ -13048,134 +12885,143 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Mantido por tamanho porque Small é usado para decisões curtas e precisa target compacto, mas maior que o ícone.
 - **Usos**:
   - CSS:
-    - `css/components/modal.css` (3×)
+    - `css/components/modal.css` (4×)
 
-### `component.modal.footer.gap.default`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.md`
-- **Sentido**: Gap horizontal do footer Modal.
-- **Escopo**: gap
-- **Contexto**: Component token do contrato anatômico Modal Footer. Binda itemSpacing entre ações nas variantes Size no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.space.md porque o footer usa 12px entre ações no contrato anatômico da Modal.
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.footer.padding-bottom.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.2xl`
-- **Sentido**: Padding bottom do footer Modal lg.
-- **Escopo**: padding-bottom
-- **Contexto**: Component token do contrato anatômico Modal Footer. Binda paddingBottom da variante Size=Large no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.space.xl porque o respiro inferior segue a escala de spacing, mas é contrato público do footer Modal.
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.footer.padding-bottom.md`
+### `component.modal.container.gap.lg`
 
 - **Camada**: component
 - **Tipo**: `dimension`
 - **Alias**: → `semantic.space.xl`
-- **Sentido**: Padding bottom do footer Modal md.
-- **Escopo**: padding-bottom
-- **Contexto**: Component token do contrato anatômico Modal Footer. Binda paddingBottom da variante Size=Medium no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.space.xl porque o respiro inferior segue a escala de spacing, mas é contrato público do footer Modal.
+- **Sentido**: Gap vertical do container Modal lg.
+- **Escopo**: modal, container, gap
+- **Contexto**: Contrato anatômico da Modal para espaçamento vertical principal no tamanho lg.
+- **Decisão**: Substitui o antigo modal.container.gap.default por escala por tamanho, conforme Figma vivo.
 - **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
-### `component.modal.footer.padding-bottom.sm`
+### `component.modal.container.gap.md`
 
 - **Camada**: component
 - **Tipo**: `dimension`
 - **Alias**: → `semantic.space.lg`
-- **Sentido**: Padding bottom do footer Modal sm.
-- **Escopo**: padding-bottom
-- **Contexto**: Component token do contrato anatômico Modal Footer. Binda paddingBottom da variante Size=Small no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.space.lg porque o respiro inferior segue a escala de spacing, mas é contrato público do footer Modal.
+- **Sentido**: Gap vertical do container Modal md.
+- **Escopo**: modal, container, gap
+- **Contexto**: Contrato anatômico da Modal para espaçamento vertical principal no tamanho md.
+- **Decisão**: Substitui o antigo modal.container.gap.default por escala por tamanho, conforme Figma vivo.
 - **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
-### `component.modal.footer.padding-top.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.lg`
-- **Sentido**: Padding top do footer Modal lg.
-- **Escopo**: padding-top
-- **Contexto**: Component token do contrato anatômico Modal Footer. Binda paddingTop da variante Size=Large no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.space.md porque a separação entre body e footer segue a escala de spacing, mas é contrato público do Modal.
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.footer.padding-top.md`
+### `component.modal.container.gap.sm`
 
 - **Camada**: component
 - **Tipo**: `dimension`
 - **Alias**: → `semantic.space.md`
-- **Sentido**: Padding top do footer Modal md.
-- **Escopo**: padding-top
-- **Contexto**: Component token do contrato anatômico Modal Footer. Binda paddingTop da variante Size=Medium no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.space.md porque a separação entre body e footer segue a escala de spacing, mas é contrato público do Modal.
+- **Sentido**: Gap vertical do container Modal sm.
+- **Escopo**: modal, container, gap
+- **Contexto**: Contrato anatômico da Modal para espaçamento vertical principal no tamanho sm.
+- **Decisão**: Substitui o antigo modal.container.gap.default por escala por tamanho, conforme Figma vivo.
+- **Usos**:
+  - _(nenhum uso detectado — token órfão ou novo)_
+
+### `component.modal.container.padding.lg`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.2xl`
+- **Sentido**: Padding do container Modal lg.
+- **Escopo**: modal, container, padding
+- **Contexto**: Contrato anatômico da Modal para inset geral do container no tamanho lg.
+- **Decisão**: Mantido como Component token porque o padding do container é parte pública da anatomia da Modal e está bindado no Figma vivo.
 - **Usos**:
   - CSS:
-    - `css/components/modal.css` (1×)
+    - `css/components/modal.css` (7×)
 
-### `component.modal.footer.padding-top.sm`
+### `component.modal.container.padding.md`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.xl`
+- **Sentido**: Padding do container Modal md.
+- **Escopo**: modal, container, padding
+- **Contexto**: Contrato anatômico da Modal para inset geral do container no tamanho md.
+- **Decisão**: Mantido como Component token porque o padding do container é parte pública da anatomia da Modal e está bindado no Figma vivo.
+- **Usos**:
+  - CSS:
+    - `css/components/modal.css` (7×)
+
+### `component.modal.container.padding.sm`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.lg`
+- **Sentido**: Padding do container Modal sm.
+- **Escopo**: modal, container, padding
+- **Contexto**: Contrato anatômico da Modal para inset geral do container no tamanho sm.
+- **Decisão**: Mantido como Component token porque o padding do container é parte pública da anatomia da Modal e está bindado no Figma vivo.
+- **Usos**:
+  - CSS:
+    - `css/components/modal.css` (7×)
+
+### `component.modal.content-slot.gap.default`
 
 - **Camada**: component
 - **Tipo**: `dimension`
 - **Alias**: → `semantic.space.sm`
-- **Sentido**: Padding top do footer Modal sm.
-- **Escopo**: padding-top
-- **Contexto**: Component token do contrato anatômico Modal Footer. Binda paddingTop da variante Size=Small no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.space.sm porque a separação entre body e footer segue a escala de spacing, mas é contrato público do Modal.
+- **Sentido**: Gap fallback do content slot Modal.
+- **Escopo**: modal, content-slot, gap
+- **Contexto**: Contrato anatômico do slot de conteúdo customizado da Modal.
+- **Decisão**: Mantido porque o slot é editável no Figma e precisa de gap default quando recebe conteúdo composto.
 - **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
-### `component.modal.footer.padding-x.lg`
+### `component.modal.description.color.default`
 
 - **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.2xl`
-- **Sentido**: Padding horizontal do footer Modal lg.
-- **Escopo**: padding-left, padding-right
-- **Contexto**: Component token do contrato anatômico Modal Footer. Binda paddingLeft/paddingRight da variante Size=Large no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.space.xl porque o respiro horizontal segue a escala de spacing, mas é contrato público do footer Modal.
+- **Tipo**: `color`
+- **Alias**: → `semantic.content.default`
+- **Sentido**: Cor da description Modal.
+- **Escopo**: modal, description, color
+- **Contexto**: Contrato anatômico da Description no header da Modal.
+- **Decisão**: Alias 1:1 para semantic.content.default porque a description da Modal precisa manter contraste AA sobre surface.elevated em dark.
 - **Usos**:
   - CSS:
     - `css/components/modal.css` (1×)
 
-### `component.modal.footer.padding-x.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.xl`
-- **Sentido**: Padding horizontal do footer Modal md.
-- **Escopo**: padding-left, padding-right
-- **Contexto**: Component token do contrato anatômico Modal Footer. Binda paddingLeft/paddingRight da variante Size=Medium no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.space.xl porque o respiro horizontal segue a escala de spacing, mas é contrato público do footer Modal.
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.footer.padding-x.sm`
+### `component.modal.footer.gap.lg`
 
 - **Camada**: component
 - **Tipo**: `dimension`
 - **Alias**: → `semantic.space.lg`
-- **Sentido**: Padding horizontal do footer Modal sm.
-- **Escopo**: padding-left, padding-right
-- **Contexto**: Component token do contrato anatômico Modal Footer. Binda paddingLeft/paddingRight da variante Size=Small no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.space.lg porque o respiro horizontal segue a escala de spacing, mas é contrato público do footer Modal.
+- **Sentido**: Gap horizontal do footer Modal lg.
+- **Escopo**: modal, footer, gap
+- **Contexto**: Contrato anatômico do Footer da Modal para espaçamento entre ações no tamanho lg.
+- **Decisão**: Substitui o antigo modal.footer.gap.default por escala por tamanho, conforme Figma vivo.
+- **Usos**:
+  - CSS:
+    - `css/components/modal.css` (1×)
+
+### `component.modal.footer.gap.md`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.md`
+- **Sentido**: Gap horizontal do footer Modal md.
+- **Escopo**: modal, footer, gap
+- **Contexto**: Contrato anatômico do Footer da Modal para espaçamento entre ações no tamanho md.
+- **Decisão**: Substitui o antigo modal.footer.gap.default por escala por tamanho, conforme Figma vivo.
+- **Usos**:
+  - CSS:
+    - `css/components/modal.css` (1×)
+
+### `component.modal.footer.gap.sm`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.sm`
+- **Sentido**: Gap horizontal do footer Modal sm.
+- **Escopo**: modal, footer, gap
+- **Contexto**: Contrato anatômico do Footer da Modal para espaçamento entre ações no tamanho sm.
+- **Decisão**: Substitui o antigo modal.footer.gap.default por escala por tamanho, conforme Figma vivo.
 - **Usos**:
   - CSS:
     - `css/components/modal.css` (1×)
@@ -13191,121 +13037,17 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Alias 1:1 para semantic.space.sm porque 8px é escala reutilizável, mas no Modal documenta a separação pública entre título e close.
 - **Usos**:
   - CSS:
-    - `css/components/modal.css` (4×)
+    - `css/components/modal.css` (7×)
 
-### `component.modal.header.padding-bottom.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.lg`
-- **Sentido**: Padding bottom do header Modal lg.
-- **Escopo**: padding-bottom
-- **Contexto**: Component token do contrato anatômico Modal Header. Binda paddingBottom da variante Size=Large no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.space.md porque a separação entre header e body segue a escala de spacing, mas é contrato público do Modal.
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.header.padding-bottom.md`
+### `component.modal.heading.gap.default`
 
 - **Camada**: component
 - **Tipo**: `dimension`
-- **Alias**: → `semantic.space.md`
-- **Sentido**: Padding bottom do header Modal md.
-- **Escopo**: padding-bottom
-- **Contexto**: Component token do contrato anatômico Modal Header. Binda paddingBottom da variante Size=Medium no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.space.md porque a separação entre header e body segue a escala de spacing, mas é contrato público do Modal.
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.header.padding-bottom.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.sm`
-- **Sentido**: Padding bottom do header Modal sm.
-- **Escopo**: padding-bottom
-- **Contexto**: Component token do contrato anatômico Modal Header. Binda paddingBottom da variante Size=Small no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.space.sm porque a separação entre header e body segue a escala de spacing, mas é contrato público do Modal.
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.header.padding-top.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.2xl`
-- **Sentido**: Padding top do header Modal lg.
-- **Escopo**: padding-top
-- **Contexto**: Component token do contrato anatômico Modal Header. Binda paddingTop da variante Size=Large no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.space.xl porque o respiro superior segue a escala de spacing, mas é contrato público do header Modal.
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.header.padding-top.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.xl`
-- **Sentido**: Padding top do header Modal md.
-- **Escopo**: padding-top
-- **Contexto**: Component token do contrato anatômico Modal Header. Binda paddingTop da variante Size=Medium no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.space.xl porque o respiro superior segue a escala de spacing, mas é contrato público do header Modal.
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.header.padding-top.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.lg`
-- **Sentido**: Padding top do header Modal sm.
-- **Escopo**: padding-top
-- **Contexto**: Component token do contrato anatômico Modal Header. Binda paddingTop da variante Size=Small no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.space.lg porque o respiro superior segue a escala de spacing, mas é contrato público do header Modal.
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.header.padding-x.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.2xl`
-- **Sentido**: Padding horizontal do header Modal lg.
-- **Escopo**: padding-left, padding-right
-- **Contexto**: Component token do contrato anatômico Modal Header. Binda paddingLeft/paddingRight da variante Size=Large no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.space.xl porque o respiro horizontal segue a escala de spacing, mas é contrato público do header Modal.
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.header.padding-x.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.xl`
-- **Sentido**: Padding horizontal do header Modal md.
-- **Escopo**: padding-left, padding-right
-- **Contexto**: Component token do contrato anatômico Modal Header. Binda paddingLeft/paddingRight da variante Size=Medium no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.space.xl porque o respiro horizontal segue a escala de spacing, mas é contrato público do header Modal.
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.header.padding-x.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.space.lg`
-- **Sentido**: Padding horizontal do header Modal sm.
-- **Escopo**: padding-left, padding-right
-- **Contexto**: Component token do contrato anatômico Modal Header. Binda paddingLeft/paddingRight da variante Size=Small no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.space.lg porque o respiro horizontal segue a escala de spacing, mas é contrato público do header Modal.
+- **Alias**: → `semantic.space.xs`
+- **Sentido**: Gap vertical entre title e description Modal.
+- **Escopo**: modal, heading, gap
+- **Contexto**: Contrato anatômico do bloco Heading da Modal.
+- **Decisão**: Mantido porque Title e Description coexistem no Heading e o gap está bindado no Figma vivo.
 - **Usos**:
   - CSS:
     - `css/components/modal.css` (1×)
@@ -13423,136 +13165,6 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Escopo**: text, fill, stroke
 - **Contexto**: Usado para estabilizar o contrato anatômico do componente modal entre Figma, JSON e CSS.
 - **Decisão**: Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.title.font-size.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.3xl`
-- **Sentido**: Font-size do title Modal lg.
-- **Escopo**: font-size
-- **Contexto**: Component token do contrato anatômico Modal Title. Binda fontSize do Title na variante Size=Large no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.typography.body.font-size.3xl porque a escala tipográfica é reutilizável, mas o tamanho do title é contrato público do Modal.
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.title.font-size.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.2xl`
-- **Sentido**: Font-size do title Modal md.
-- **Escopo**: font-size
-- **Contexto**: Component token do contrato anatômico Modal Title. Binda fontSize do Title na variante Size=Medium no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.typography.body.font-size.2xl porque a escala tipográfica é reutilizável, mas o tamanho do title é contrato público do Modal.
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.title.font-size.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.font-size.xl`
-- **Sentido**: Font-size do title Modal sm.
-- **Escopo**: font-size
-- **Contexto**: Component token do contrato anatômico Modal Title. Binda fontSize do Title na variante Size=Small no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.typography.body.font-size.xl porque a escala tipográfica é reutilizável, mas o tamanho do title é contrato público do Modal.
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.title.font-weight.default`
-
-- **Camada**: component
-- **Tipo**: `number`
-- **Alias**: → `semantic.typography.body.font-weight.semibold`
-- **Sentido**: Font-weight do title Modal.
-- **Escopo**: font-weight
-- **Contexto**: Component token do contrato anatômico Modal Title. Binda fontStyle do Title nas variantes Size no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.typography.body.font-weight.semibold porque o title usa Semi Bold; no Figma o campo bindável é fontStyle/string, enquanto no JSON/CSS o contrato permanece numérico.
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.title.letter-spacing.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.letter-spacing.tight`
-- **Sentido**: Letter-spacing do title Modal lg.
-- **Escopo**: letter-spacing
-- **Contexto**: Component token do contrato anatômico Modal Title. Binda letterSpacing do Title na variante Size=Large no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.typography.body.letter-spacing.tight porque a escala de tracking é reutilizável, mas o ajuste por tamanho do title é contrato público do Modal.
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.title.letter-spacing.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.letter-spacing.normal`
-- **Sentido**: Letter-spacing do title Modal md.
-- **Escopo**: letter-spacing
-- **Contexto**: Component token do contrato anatômico Modal Title. Binda letterSpacing do Title na variante Size=Medium no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.typography.body.letter-spacing.normal porque a escala de tracking é reutilizável, mas o ajuste por tamanho do title é contrato público do Modal.
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.title.letter-spacing.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.letter-spacing.normal`
-- **Sentido**: Letter-spacing do title Modal sm.
-- **Escopo**: letter-spacing
-- **Contexto**: Component token do contrato anatômico Modal Title. Binda letterSpacing do Title na variante Size=Small no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.typography.body.letter-spacing.normal porque a escala de tracking é reutilizável, mas o ajuste por tamanho do title é contrato público do Modal.
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.title.line-height.lg`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.line-height.3xl`
-- **Sentido**: Line-height do title Modal lg.
-- **Escopo**: line-height
-- **Contexto**: Component token do contrato anatômico Modal Title. Binda lineHeight do Title na variante Size=Large no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.typography.body.line-height.3xl porque a métrica vertical é reutilizável, mas o title é contrato público do Modal.
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.title.line-height.md`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.line-height.2xl`
-- **Sentido**: Line-height do title Modal md.
-- **Escopo**: line-height
-- **Contexto**: Component token do contrato anatômico Modal Title. Binda lineHeight do Title na variante Size=Medium no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.typography.body.line-height.2xl porque a métrica vertical é reutilizável, mas o title é contrato público do Modal.
-- **Usos**:
-  - CSS:
-    - `css/components/modal.css` (1×)
-
-### `component.modal.title.line-height.sm`
-
-- **Camada**: component
-- **Tipo**: `dimension`
-- **Alias**: → `semantic.typography.body.line-height.xl`
-- **Sentido**: Line-height do title Modal sm.
-- **Escopo**: line-height
-- **Contexto**: Component token do contrato anatômico Modal Title. Binda lineHeight do Title na variante Size=Small no Figma e substitui consumo direto de Semantic no CSS.
-- **Decisão**: Alias 1:1 para semantic.typography.body.line-height.xl porque a métrica vertical é reutilizável, mas o title é contrato público do Modal.
 - **Usos**:
   - CSS:
     - `css/components/modal.css` (1×)
@@ -14779,7 +14391,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Component token do contrato anatômico Tabs. Binda o corner radius da camada Focus Ring no Figma, mantendo cor e largura nos tokens globais de focus ring.
 - **Decisão**: Alias 1:1 para semantic.radius.sm para manter 4px no focus ring de Tabs, evitando o exagero visual de radius/md sem transformar a borda ativa do item em elemento arredondado.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/tabs.css` (1×)
 
 ### `component.tabs.indicator.fill.active`
 
@@ -14805,7 +14418,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Alias 1:1 para semantic.border.width.strong porque 2px é padrão reutilizável, mas no Tabs documenta a espessura pública do indicador.
 - **Usos**:
   - CSS:
-    - `css/components/tabs.css` (1×)
+    - `css/components/tabs.css` (2×)
 
 ### `component.tabs.item.indicator-gap.default`
 

@@ -1,10 +1,10 @@
 {
   "version": "1.0.0-beta.5",
   "totals": {
-    "jsonTokens": 1336,
-    "sharedTokens": 882,
-    "lightTokens": 227,
-    "darkTokens": 227,
+    "jsonTokens": 1314,
+    "sharedTokens": 850,
+    "lightTokens": 232,
+    "darkTokens": 232,
     "errors": 0,
     "warnings": 0
   },
@@ -16,11 +16,11 @@
     "docTokenDrift": [],
     "jsonVsFigma": {
       "skipped": false,
-      "snapshotAge": "2h",
+      "snapshotAge": "0h",
       "snapshotFreshness": "fresh",
       "snapshotMaxAgeHours": 24,
       "summary": {
-        "figmaVariableCount": 1057,
+        "figmaVariableCount": 1030,
         "figmaCollectionCount": 3,
         "VALUE_DRIFT": 0,
         "NEEDS_SYNC": 0,
@@ -834,18 +834,6 @@
             "json": "{foundation.z.40}"
           },
           {
-            "file": "component/modal.json",
-            "token": "component.modal.overlay.z-index.default",
-            "side": "json-only-downstream",
-            "json": "{semantic.z.modal}"
-          },
-          {
-            "file": "component/modal.json",
-            "token": "component.modal.shadow.default",
-            "side": "json-only-downstream",
-            "json": "{semantic.shadow.modal}"
-          },
-          {
             "file": "component/tabs.json",
             "token": "component.tabs.panel.padding-y.default",
             "side": "json-only",
@@ -856,6 +844,18 @@
             "token": "component.breadcrumb.focus-ring.radius.default",
             "side": "json-only",
             "json": "{semantic.radius.md}"
+          },
+          {
+            "file": "component/modal.json",
+            "token": "component.modal.overlay.z-index.default",
+            "side": "json-only-downstream",
+            "json": "{semantic.z.modal}"
+          },
+          {
+            "file": "component/modal.json",
+            "token": "component.modal.shadow.default",
+            "side": "json-only-downstream",
+            "json": "{semantic.shadow.modal}"
           }
         ]
       }

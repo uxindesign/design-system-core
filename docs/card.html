@@ -41,7 +41,7 @@
        ============================================================ -->
   <div class="ds-section">
     <h1 class="ds-section__title">Card</h1>
-    <p class="ds-section__subtitle"><span data-lang="pt">Cards agrupam conteúdo e ações relacionados. A API cobre superfície padrão, borda explícita e elevação.</span><span data-lang="en">Cards group related content and actions. The API covers default surface, explicit border, and elevation.</span></p>
+    <p class="ds-section__subtitle"><span data-lang="pt">Cards agrupam conteúdo e ações relacionados. A API cobre superfície padrão, borda explícita, elevação e composição com slots customizados.</span><span data-lang="en">Cards group related content and actions. The API covers default surface, explicit border, elevation, and custom slot composition.</span></p>
   </div>
 
   <!-- ============================================================
@@ -80,7 +80,7 @@
               <span style="position:absolute;right:-28px;top:50%;transform:translateY(-50%);height:1px;width:28px;background:var(--ds-brand-background-default);"></span>
               <span class="ds-anatomy__marker" style="top:50%;right:-48px;transform:translateY(-50%);">3</span>
             </h3>
-            <p class="ds-card__subtitle">Subtitle text</p>
+            <p class="ds-card__description">Description text</p>
           </div>
           <div class="ds-card__body" style="position:relative;">
             <p>Body content goes here. This is a flexible slot for any content.</p>
@@ -94,10 +94,10 @@
 
     <div class="ds-anatomy-legend">
       <span data-lang="pt"><strong>1</strong> Container (<code>.ds-card</code>) — superfície com border-radius, borda ou sombra opcional dependendo da variante.<br>
-      <strong>2</strong> Header (<code>.ds-card__header</code>) — wrapper para título e subtítulo opcionais.<br>
+      <strong>2</strong> Header (<code>.ds-card__header</code>) — wrapper para título e descrição opcionais.<br>
       <strong>3</strong> Título (<code>.ds-card__title</code>) — heading principal do card.<br>
       <strong>4</strong> Body (<code>.ds-card__body</code>) — área de conteúdo flexível.</span><span data-lang="en"><strong>1</strong> Container (<code>.ds-card</code>) — surface with border-radius, optional border or shadow depending on variant.<br>
-      <strong>2</strong> Header (<code>.ds-card__header</code>) — wrapper for optional title and subtitle.<br>
+      <strong>2</strong> Header (<code>.ds-card__header</code>) — wrapper for optional title and description.<br>
       <strong>3</strong> Title (<code>.ds-card__title</code>) — primary card heading.<br>
       <strong>4</strong> Body (<code>.ds-card__body</code>) — flexible content area.</span>
     </div>
@@ -118,7 +118,7 @@
           <div class="ds-card ds-card--default">
             <div class="ds-card__header">
               <h3 class="ds-card__title">Card Title</h3>
-              <p class="ds-card__subtitle">Subtitle or meta information</p>
+              <p class="ds-card__description">Description or meta information</p>
             </div>
             <div class="ds-card__body">
               <p>This is the card body content. It provides additional context or details about the subject of the card.</p>
@@ -132,7 +132,7 @@
           <pre tabindex="0"><code>&lt;div class="ds-card ds-card--default"&gt;
   &lt;div class="ds-card__header"&gt;
     &lt;h3 class="ds-card__title"&gt;Card Title&lt;/h3&gt;
-    &lt;p class="ds-card__subtitle"&gt;Subtitle or meta information&lt;/p&gt;
+    &lt;p class="ds-card__description"&gt;Description or meta information&lt;/p&gt;
   &lt;/div&gt;
   &lt;div class="ds-card__body"&gt;
     &lt;p&gt;This is the card body content.&lt;/p&gt;
@@ -155,7 +155,7 @@
           <div class="ds-card ds-card--outlined">
             <div class="ds-card__header">
               <h3 class="ds-card__title">Outlined Card</h3>
-              <p class="ds-card__subtitle">With a stronger border</p>
+              <p class="ds-card__description">With a stronger border</p>
             </div>
             <div class="ds-card__body">
               <p>Outlined cards use a more visible border to distinguish content sections clearly from the background.</p>
@@ -169,7 +169,7 @@
           <pre tabindex="0"><code>&lt;div class="ds-card ds-card--outlined"&gt;
   &lt;div class="ds-card__header"&gt;
     &lt;h3 class="ds-card__title"&gt;Outlined Card&lt;/h3&gt;
-    &lt;p class="ds-card__subtitle"&gt;With a stronger border&lt;/p&gt;
+    &lt;p class="ds-card__description"&gt;With a stronger border&lt;/p&gt;
   &lt;/div&gt;
   &lt;div class="ds-card__body"&gt;
     &lt;p&gt;Outlined cards use a more visible border.&lt;/p&gt;
@@ -192,7 +192,7 @@
           <div class="ds-card ds-card--elevated">
             <div class="ds-card__header">
               <h3 class="ds-card__title">Elevated Card</h3>
-              <p class="ds-card__subtitle">Raised surface</p>
+              <p class="ds-card__description">Raised surface</p>
             </div>
             <div class="ds-card__body">
               <p>Elevated cards use a raised surface and shadow instead of a border to create visual depth and hierarchy.</p>
@@ -206,7 +206,7 @@
           <pre tabindex="0"><code>&lt;div class="ds-card ds-card--elevated"&gt;
   &lt;div class="ds-card__header"&gt;
     &lt;h3 class="ds-card__title"&gt;Elevated Card&lt;/h3&gt;
-    &lt;p class="ds-card__subtitle"&gt;Raised surface&lt;/p&gt;
+    &lt;p class="ds-card__description"&gt;Raised surface&lt;/p&gt;
   &lt;/div&gt;
   &lt;div class="ds-card__body"&gt;
     &lt;p&gt;Elevated cards use a raised surface and shadow.&lt;/p&gt;
@@ -258,6 +258,50 @@
           <pre tabindex="0"><code>&lt;div class="ds-card ds-card--default"&gt;...&lt;/div&gt;
 &lt;div class="ds-card ds-card--outlined"&gt;...&lt;/div&gt;
 &lt;div class="ds-card ds-card--elevated"&gt;...&lt;/div&gt;</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title"><span data-lang="pt">Composição customizada</span><span data-lang="en">Custom composition</span></h2>
+    <p style="margin-bottom:var(--ds-space-lg);color:var(--ds-content-default);font-size:var(--ds-body-font-size-sm);">
+      <span data-lang="pt">Use o card como container quando o conteúdo interno precisar ser montado com outros componentes. Header e footer são opcionais; o body recebe o conteúdo principal.</span><span data-lang="en">Use the card as a container when the inner content needs to be composed with other components. Header and footer are optional; the body hosts the primary content.</span>
+    </p>
+    <div class="ds-preview">
+      <div class="ds-preview__tabs" role="tablist">
+        <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
+        <button class="ds-preview__tab" role="tab" aria-selected="false" data-tab="code">Code</button>
+      </div>
+      <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
+        <div class="ds-preview__canvas" style="max-width:var(--ds-size-layout-xs)">
+          <div class="ds-card ds-card--outlined">
+            <div class="ds-card__body">
+              <div style="display:flex;align-items:center;justify-content:space-between;gap:var(--ds-space-md);">
+                <div>
+                  <strong style="display:block;color:var(--ds-content-strong);">Usage</strong>
+                  <span style="color:var(--ds-content-default);font-size:var(--ds-body-font-size-sm);">128 active seats</span>
+                </div>
+                <span class="ds-badge ds-badge--success ds-badge--subtle">Healthy</span>
+              </div>
+            </div>
+            <div class="ds-card__footer">
+              <button class="ds-button ds-button--ghost ds-button--sm">Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ds-preview__panel" data-panel="code">
+        <div class="ds-preview__code">
+          <button class="ds-preview__copy" aria-label="Copy code">Copy</button>
+          <pre tabindex="0"><code>&lt;div class="ds-card ds-card--outlined"&gt;
+  &lt;div class="ds-card__body"&gt;
+    &lt;!-- custom content / nested components --&gt;
+  &lt;/div&gt;
+  &lt;div class="ds-card__footer"&gt;
+    &lt;button class="ds-button ds-button--ghost ds-button--sm"&gt;Details&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
         </div>
       </div>
     </div>
@@ -340,8 +384,9 @@
         <tr><td><code>.ds-card__header</code> gap</td><td><code>component.card.header.gap.default</code></td><td><code>--ds-card-header-gap-default</code></td></tr>
         <tr><td><code>.ds-card__body</code> padding</td><td><code>component.card.body.padding-*</code></td><td><code>--ds-card-body-padding-*-default</code></td></tr>
         <tr><td><code>.ds-card__title</code> typography</td><td><code>component.card.title.{font-size,line-height,font-weight}.default</code></td><td><code>--ds-card-title-*-default</code></td></tr>
-        <tr><td><code>.ds-card__subtitle</code> typography</td><td><code>component.card.subtitle.{font-size,line-height,font-weight}.default</code></td><td><code>--ds-card-subtitle-*-default</code></td></tr>
+        <tr><td><code>.ds-card__description</code> typography</td><td><code>component.card.subtitle.{font-size,line-height,font-weight}.default</code></td><td><code>--ds-card-subtitle-*-default</code></td></tr>
         <tr><td><code>.ds-card__body</code> typography</td><td><code>component.card.body.{font-size,line-height,font-weight}.default</code></td><td><code>--ds-card-body-*-default</code></td></tr>
+        <tr><td><code>.ds-card__footer</code> spacing</td><td><code>component.card.header.gap.default</code> + <code>component.card.body/header.padding-*</code></td><td><code>--ds-card-header-gap-default</code>, <code>--ds-card-body-padding-*-default</code></td></tr>
       </tbody>
     </table>
   </div>
@@ -360,8 +405,9 @@
         <tr><td><code>ds-card--elevated</code></td><td><span data-lang="pt">Variante elevated com box shadow, sem borda</span><span data-lang="en">Elevated variant with box shadow, no border</span></td></tr>
         <tr><td><code>ds-card__header</code></td><td><span data-lang="pt">Seção de header do card</span><span data-lang="en">Card header section</span></td></tr>
         <tr><td><code>ds-card__title</code></td><td><span data-lang="pt">Texto do título do card</span><span data-lang="en">Card title text</span></td></tr>
-        <tr><td><code>ds-card__subtitle</code></td><td><span data-lang="pt">Texto de subtitulo/meta do card</span><span data-lang="en">Card subtitle/meta text</span></td></tr>
+        <tr><td><code>ds-card__description</code></td><td><span data-lang="pt">Texto de descrição/meta do card</span><span data-lang="en">Card description/meta text</span></td></tr>
         <tr><td><code>ds-card__body</code></td><td><span data-lang="pt">Área de conteúdo do corpo do card</span><span data-lang="en">Card body content area</span></td></tr>
+        <tr><td><code>ds-card__footer</code></td><td><span data-lang="pt">Área opcional para ações ou conteúdo complementar</span><span data-lang="en">Optional area for actions or supporting content</span></td></tr>
       </tbody>
     </table>
   </div>

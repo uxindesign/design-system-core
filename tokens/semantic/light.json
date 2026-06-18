@@ -781,59 +781,88 @@
       "none": {
         "$type": "dimension",
         "$value": "{foundation.dimension.0}",
-        "$description": "Espaço zero para remover padding/gap mantendo alias semântico."
+        "$description": "0px. Espaço zero para remover padding/gap mantendo alias semântico."
       },
       "2xs": {
         "$type": "dimension",
         "$value": "{foundation.dimension.2}",
-        "$description": "2px"
+        "$description": "2px. Menor espaço semântico para ajustes finos de gap/padding."
       },
       "xs": {
         "$type": "dimension",
         "$value": "{foundation.dimension.4}",
-        "$description": "4px"
+        "$description": "4px. Espaço compacto para relações muito próximas."
       },
       "sm": {
         "$type": "dimension",
         "$value": "{foundation.dimension.8}",
-        "$description": "8px"
+        "$description": "8px. Espaço pequeno padrão para controles e conteúdo denso."
       },
       "md": {
         "$type": "dimension",
         "$value": "{foundation.dimension.12}",
-        "$description": "12px"
+        "$description": "12px. Espaço médio para gaps internos e agrupamentos próximos."
       },
       "lg": {
         "$type": "dimension",
         "$value": "{foundation.dimension.16}",
-        "$description": "16px"
+        "$description": "16px. Espaço confortável para padding e separação interna."
       },
       "xl": {
         "$type": "dimension",
         "$value": "{foundation.dimension.20}",
-        "$description": "20px"
+        "$description": "20px. Espaço amplo para containers e componentes robustos."
       },
       "2xl": {
         "$type": "dimension",
         "$value": "{foundation.dimension.24}",
-        "$description": "24px"
+        "$description": "24px. Espaço extra amplo para containers antes da escala expandida."
+      },
+      "3xl": {
+        "$type": "dimension",
+        "$value": "{foundation.dimension.32}",
+        "$description": "32px. Espaçamento amplo para composição interna de componentes e blocos densos."
+      },
+      "4xl": {
+        "$type": "dimension",
+        "$value": "{foundation.dimension.40}",
+        "$description": "40px. Espaçamento amplo para composição interna quando 32px ainda é curto."
+      },
+      "5xl": {
+        "$type": "dimension",
+        "$value": "{foundation.dimension.48}",
+        "$description": "48px. Limite alto para composição interna antes de entrar em escala de section."
+      },
+      "6xl": {
+        "$type": "dimension",
+        "$value": "{foundation.dimension.64}",
+        "$description": "64px. Espaçamento máximo da escala genérica; use section/* para respiro entre áreas."
       },
       "section": {
         "sm": {
           "$type": "dimension",
-          "$value": "{foundation.dimension.32}"
+          "$value": "{foundation.dimension.48}",
+          "$description": "48px. Espaçamento compacto entre seções, acima da escala genérica comum."
         },
         "md": {
           "$type": "dimension",
-          "$value": "{foundation.dimension.48}"
+          "$value": "{foundation.dimension.64}",
+          "$description": "64px. Espaçamento padrão entre seções de página, docs e specs."
         },
         "lg": {
           "$type": "dimension",
-          "$value": "{foundation.dimension.64}"
+          "$value": "{foundation.dimension.80}",
+          "$description": "80px. Espaçamento amplo entre seções ou grupos editoriais."
         },
         "xl": {
           "$type": "dimension",
-          "$value": "{foundation.dimension.80}"
+          "$value": "{foundation.dimension.96}",
+          "$description": "96px. Espaçamento extra amplo para separação de grandes áreas."
+        },
+        "2xl": {
+          "$type": "dimension",
+          "$value": "{foundation.dimension.120}",
+          "$description": "120px. Maior respiro de section previsto para páginas e documentação."
         }
       },
       "control": {
