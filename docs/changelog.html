@@ -76,6 +76,9 @@
 </ul>
 <h3>Corrigido</h3>
 <ul>
+<li><strong>Card espelha container, media slot e estados interativos do Figma.</strong> Adicionados contratos <code>card/container/*</code>, <code>card/footer/gap/*</code> e <code>card-interactive/*</code>; CSS passa a usar container interno com padding <code>20px</code>, gap <code>12px</code>, media full-bleed opcional e estados hover/focus/selected derivados do outlined.</li>
+<li><strong>Modal aplica padding/gap no container real.</strong> <code>.ds-modal</code> volta a consumir <code>--ds-modal-container-padding-*</code> e <code>--ds-modal-container-gap-*</code> na superfície principal, deixando header/body/footer como slots internos sem padding duplicado e alinhando o espaçamento ao component set do Figma.</li>
+<li><strong>Modal close alinha posição ao Figma.</strong> <code>.ds-modal__close</code> passa a ficar a <code>8px</code> do topo/direita da superfície em todos os tamanhos, compensando o padding do header como no component set vivo.</li>
 <li><strong>Tabs aplicam radius no focus ring.</strong> <code>.ds-tab:focus-visible</code> passa a consumir <code>--ds-tabs-focus-ring-radius-default</code>, alinhando o repo ao token já definido no Figma.</li>
 <li><strong>Cards Faça/Não faça ajustam altura pelo próprio conteúdo.</strong> O grid compartilhado dos docs deixa de esticar o card menor até a altura da coluna vizinha e reduz o espaço entre label e descrição.</li>
 <li><strong>Visual regression passa a rodar no CI.</strong> <code>test.yml</code> agora executa <code>scripts/test-visual.mjs</code> após a auditoria a11y e publica <code>tests/visual/actual</code> + <code>tests/visual/diff</code> como artifact quando houver falha; a baseline visual foi atualizada para o estado atual validado em produção.</li>

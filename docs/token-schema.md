@@ -74,6 +74,7 @@ Arquivos canônicos em `tokens/component/`:
 - `badge.json`
 - `breadcrumb.json`
 - `button.json`
+- `card-interactive.json`
 - `card.json`
 - `checkbox.json`
 - `divider.json`

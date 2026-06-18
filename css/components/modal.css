@@ -21,15 +21,26 @@
   box-shadow: var(--ds-modal-shadow-default);
   width: 100%;
   max-height: calc(100vh - var(--ds-space-section-sm));
+  padding: var(--ds-modal-container-padding-sm);
   display: flex;
   flex-direction: column;
+  gap: var(--ds-modal-container-gap-sm);
   overflow: hidden;
 }
 
 /* Sizes */
 .ds-modal--sm { max-width: var(--ds-modal-max-width-sm); }
-.ds-modal--md { max-width: var(--ds-modal-max-width-md); }
-.ds-modal--lg { max-width: var(--ds-modal-max-width-lg); }
+.ds-modal--md {
+  max-width: var(--ds-modal-max-width-md);
+  padding: var(--ds-modal-container-padding-md);
+  gap: var(--ds-modal-container-gap-md);
+}
+
+.ds-modal--lg {
+  max-width: var(--ds-modal-max-width-lg);
+  padding: var(--ds-modal-container-padding-lg);
+  gap: var(--ds-modal-container-gap-lg);
+}
 
 /* Header */
 .ds-modal__header {
@@ -37,16 +48,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: var(--ds-modal-container-padding-sm) var(--ds-modal-container-padding-sm) 0;
   gap: var(--ds-modal-header-gap-default);
-}
-
-.ds-modal--md .ds-modal__header {
-  padding: var(--ds-modal-container-padding-md) var(--ds-modal-container-padding-md) 0;
-}
-
-.ds-modal--lg .ds-modal__header {
-  padding: var(--ds-modal-container-padding-lg) var(--ds-modal-container-padding-lg) 0;
 }
 
 .ds-modal__heading {
@@ -119,14 +121,14 @@
 
 .ds-modal__close {
   position: absolute;
-  top: calc(var(--ds-space-sm) - var(--ds-modal-container-padding-md));
-  right: calc(var(--ds-space-sm) - var(--ds-modal-container-padding-md));
+  top: calc(var(--ds-space-sm) - var(--ds-modal-container-padding-sm));
+  right: calc(var(--ds-space-sm) - var(--ds-modal-container-padding-sm));
   flex-shrink: 0;
-  width: var(--ds-modal-close-size-md);
-  height: var(--ds-modal-close-size-md);
+  width: var(--ds-modal-close-size-sm);
+  height: var(--ds-modal-close-size-sm);
   background: none;
   border: none;
-  padding: var(--ds-modal-close-padding-md);
+  padding: var(--ds-modal-close-padding-sm);
   cursor: pointer;
   color: var(--ds-modal-close-color-default);
   border-radius: var(--ds-radius-sm);
@@ -137,23 +139,23 @@
 }
 
 .ds-modal__close .ds-icon {
-  width: var(--ds-modal-close-icon-size-md);
-  height: var(--ds-modal-close-icon-size-md);
+  width: var(--ds-modal-close-icon-size-sm);
+  height: var(--ds-modal-close-icon-size-sm);
   color: currentColor;
   stroke-width: var(--ds-modal-close-icon-stroke-width-default);
 }
 
-.ds-modal--sm .ds-modal__close {
-  top: calc(var(--ds-space-sm) - var(--ds-modal-container-padding-sm));
-  right: calc(var(--ds-space-sm) - var(--ds-modal-container-padding-sm));
-  width: var(--ds-modal-close-size-sm);
-  height: var(--ds-modal-close-size-sm);
-  padding: var(--ds-modal-close-padding-sm);
+.ds-modal--md .ds-modal__close {
+  top: calc(var(--ds-space-sm) - var(--ds-modal-container-padding-md));
+  right: calc(var(--ds-space-sm) - var(--ds-modal-container-padding-md));
+  width: var(--ds-modal-close-size-md);
+  height: var(--ds-modal-close-size-md);
+  padding: var(--ds-modal-close-padding-md);
 }
 
-.ds-modal--sm .ds-modal__close .ds-icon {
-  width: var(--ds-modal-close-icon-size-sm);
-  height: var(--ds-modal-close-icon-size-sm);
+.ds-modal--md .ds-modal__close .ds-icon {
+  width: var(--ds-modal-close-icon-size-md);
+  height: var(--ds-modal-close-icon-size-md);
 }
 
 .ds-modal--lg .ds-modal__close {
@@ -183,7 +185,6 @@
    md → font-size md + line-height md
    lg → font-size lg + line-height xl */
 .ds-modal__body {
-  padding: 0 var(--ds-modal-container-padding-sm) var(--ds-modal-container-padding-sm);
   overflow-y: auto;
   color: var(--ds-modal-body-color-default);
   font-size: var(--ds-body-font-size-sm);
@@ -191,28 +192,14 @@
   line-height: var(--ds-body-line-height-sm);
 }
 
-.ds-modal__body:first-child {
-  padding-top: var(--ds-modal-container-padding-sm);
-}
-
 .ds-modal--md .ds-modal__body {
-  padding: 0 var(--ds-modal-container-padding-md) var(--ds-modal-container-padding-md);
   font-size: var(--ds-body-font-size-md);
   line-height: var(--ds-body-line-height-md);
 }
 
-.ds-modal--md .ds-modal__body:first-child {
-  padding-top: var(--ds-modal-container-padding-md);
-}
-
 .ds-modal--lg .ds-modal__body {
-  padding: 0 var(--ds-modal-container-padding-lg) var(--ds-modal-container-padding-lg);
   font-size: var(--ds-body-font-size-lg);
   line-height: var(--ds-body-line-height-xl);
-}
-
-.ds-modal--lg .ds-modal__body:first-child {
-  padding-top: var(--ds-modal-container-padding-lg);
 }
 
 /* Footer */
@@ -220,18 +207,15 @@
   display: flex;
   justify-content: flex-end;
   gap: var(--ds-modal-footer-gap-sm);
-  padding: 0 var(--ds-modal-container-padding-sm) var(--ds-modal-container-padding-sm);
   /* Figma: footer não tem divider/border-top. */
 }
 
 .ds-modal--md .ds-modal__footer {
   gap: var(--ds-modal-footer-gap-md);
-  padding: 0 var(--ds-modal-container-padding-md) var(--ds-modal-container-padding-md);
 }
 
 .ds-modal--lg .ds-modal__footer {
   gap: var(--ds-modal-footer-gap-lg);
-  padding: 0 var(--ds-modal-container-padding-lg) var(--ds-modal-container-padding-lg);
 }
 
 /* ---------------------------------------------------------

@@ -359,7 +359,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.border.control-default` | color | → `foundation.color.neutral.500` | Border control-default. | 7 |
 | `semantic.border.control-disabled` | color | → `foundation.color.neutral.200` | Border control-disabled. | 6 |
 | `semantic.border.control-hover` | color | → `foundation.color.brand.600` | Border control-hover. | 5 |
-| `semantic.border.default` | color | → `foundation.color.neutral.300` | Borda neutra default — cards, dividers. | 4 |
+| `semantic.border.default` | color | → `foundation.color.neutral.300` | Borda neutra default — cards, dividers. | 5 |
 | `semantic.border.error` | color | → `foundation.color.red.600` | Borda de erro — input invalid. | 4 |
 | `semantic.border.error-hover` | color | → `semantic.feedback.error.border.hover` | Token semantic para border / error hover. | 4 |
 | `semantic.border.focus` | color | → `foundation.color.brand.600` | Focus ring color (WCAG 2.4.7). | 8 |
@@ -367,11 +367,11 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.border.inverse` | color | → `foundation.color.neutral.50` | Borda invertida — sobre dark surfaces em light mode. | 2 |
 | `semantic.border.overlay.default` | color | → `semantic.overlay.default` | Token semantic para border / overlay / default. | 2 |
 | `semantic.border.overlay.medium` | color | → `semantic.overlay.medium` | Token semantic para border / overlay / medium. | 2 |
-| `semantic.border.strong` | color | → `foundation.color.neutral.600` | Borda neutra forte — emphasis em separadores. | 2 |
+| `semantic.border.strong` | color | → `foundation.color.neutral.600` | Borda neutra forte — emphasis em separadores. | 3 |
 | `semantic.border.subtle` | color | → `foundation.color.neutral.200` | Borda neutra sutil — chips, code blocks. | 4 |
-| `semantic.border.width.default` | dimension | → `foundation.border.width.1` | Border-width default. | 12 |
+| `semantic.border.width.default` | dimension | → `foundation.border.width.1` | Border-width default. | 13 |
 | `semantic.border.width.focus` | dimension | → `foundation.border.width.2` | Border-width focus. | 2 |
-| `semantic.border.width.strong` | dimension | → `foundation.border.width.2` | Border-width strong. | 4 |
+| `semantic.border.width.strong` | dimension | → `foundation.border.width.2` | Border-width strong. | 5 |
 
 ### semantic.brand
 
@@ -381,7 +381,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.brand.background.default` | color | → `foundation.color.brand.600` | Fill de ação primária (brand solid) em estado default. | 21 |
 | `semantic.brand.background.disabled` | color | → `foundation.color.disabled.brand.light` | Fill de ação primária (brand solid) em estado disabled. | 10 |
 | `semantic.brand.background.hover` | color | → `foundation.color.brand.700` | Fill de ação primária (brand solid) em estado hover. | 10 |
-| `semantic.brand.border.default` | color | → `semantic.brand.background.default` | Token semantic para primary / border / default. | 2 |
+| `semantic.brand.border.default` | color | → `semantic.brand.background.default` | Token semantic para primary / border / default. | 3 |
 | `semantic.brand.border.disabled` | color | → `semantic.brand.background.disabled` | Token semantic para primary / border / disabled. | 0 |
 | `semantic.brand.border.hover` | color | → `semantic.brand.background.hover` | Token semantic para primary / border / hover. | 2 |
 | `semantic.brand.content-default` | color | → `foundation.color.neutral.50` | Cor de texto/ícone de ação primária (brand solid) em estado default. | 16 |
@@ -514,12 +514,12 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `semantic.motion.duration.fast` | duration | → `foundation.duration.fast` | Semantic wrapper pra motion. | 12 |
+| `semantic.motion.duration.fast` | duration | → `foundation.duration.fast` | Semantic wrapper pra motion. | 13 |
 | `semantic.motion.duration.instant` | duration | → `foundation.duration.instant` | 0ms. | 0 |
 | `semantic.motion.duration.moderate` | duration | → `foundation.duration.moderate` | 250ms. | 0 |
 | `semantic.motion.duration.slow` | duration | → `foundation.duration.slow` | 400ms para animações enfáticas. | 0 |
 | `semantic.motion.duration.slower` | duration | → `foundation.duration.slower` | 600ms para loops contínuos. | 1 |
-| `semantic.motion.ease.default` | cubicBezier | → `foundation.ease.default` | Semantic wrapper pra motion. | 12 |
+| `semantic.motion.ease.default` | cubicBezier | → `foundation.ease.default` | Semantic wrapper pra motion. | 13 |
 | `semantic.motion.ease.in` | cubicBezier | → `foundation.ease.in` | Aceleração no início. | 0 |
 | `semantic.motion.ease.in-out` | cubicBezier | → `foundation.ease.in-out` | Aceleração + desaceleração. | 0 |
 | `semantic.motion.ease.linear` | cubicBezier | → `foundation.ease.linear` | Curva linear pra loops onde aceleração quebra rotação constante. | 1 |
@@ -560,7 +560,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.radius.lg` | dimension | → `foundation.radius.12` | Radius semantic lg. | 9 |
 | `semantic.radius.md` | dimension | → `foundation.radius.8` | Radius semantic md. | 8 |
 | `semantic.radius.sm` | dimension | → `foundation.radius.4` | Radius semantic sm. | 9 |
-| `semantic.radius.xl` | dimension | → `foundation.radius.16` | Radius semantic xl. | 0 |
+| `semantic.radius.xl` | dimension | → `foundation.radius.16` | Radius semantic xl. | 2 |
 
 ### semantic.shadow
 
@@ -582,7 +582,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.size.layout.md` | dimension | → `foundation.dimension.640` | Size token layout.md. | 2 |
 | `semantic.size.layout.sm` | dimension | → `foundation.dimension.480` | Size token layout.sm. | 2 |
 | `semantic.size.layout.xl` | dimension | → `foundation.dimension.1024` | Size token layout.xl. | 0 |
-| `semantic.size.layout.xs` | dimension | → `foundation.dimension.320` | Size token layout.xs. | 0 |
+| `semantic.size.layout.xs` | dimension | → `foundation.dimension.320` | Size token layout.xs. | 1 |
 | `semantic.size.lg` | dimension | → `foundation.dimension.32` | Size token lg. | 13 |
 | `semantic.size.md` | dimension | → `foundation.dimension.24` | Size token md. | 12 |
 | `semantic.size.sm` | dimension | → `foundation.dimension.20` | Size token sm. | 13 |
@@ -602,15 +602,15 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.space.control.padding.10` | dimension | → `foundation.dimension.10` | Spacing token control.padding.10. | 3 |
 | `semantic.space.control.padding.6` | dimension | → `foundation.dimension.6` | Padding simétrico de Icon Only sm Button. | 3 |
 | `semantic.space.lg` | dimension | → `foundation.dimension.16` | Spacing token lg. | 15 |
-| `semantic.space.md` | dimension | → `foundation.dimension.12` | Spacing token md. | 18 |
+| `semantic.space.md` | dimension | → `foundation.dimension.12` | Spacing token md. | 19 |
 | `semantic.space.none` | dimension | → `foundation.dimension.0` | Espaço semântico zero. | 0 |
 | `semantic.space.section.2xl` | dimension | → `foundation.dimension.120` | Maior espaçamento semântico de section para separação macro entre áreas. | 0 |
 | `semantic.space.section.lg` | dimension | → `foundation.dimension.80` | Spacing token section.lg. | 0 |
 | `semantic.space.section.md` | dimension | → `foundation.dimension.64` | Spacing token section.md. | 0 |
 | `semantic.space.section.sm` | dimension | → `foundation.dimension.48` | Spacing token section.sm. | 1 |
 | `semantic.space.section.xl` | dimension | → `foundation.dimension.96` | Spacing token section.xl. | 0 |
-| `semantic.space.sm` | dimension | → `foundation.dimension.8` | Spacing token sm. | 30 |
-| `semantic.space.xl` | dimension | → `foundation.dimension.20` | Spacing token xl. | 5 |
+| `semantic.space.sm` | dimension | → `foundation.dimension.8` | Spacing token sm. | 32 |
+| `semantic.space.xl` | dimension | → `foundation.dimension.20` | Spacing token xl. | 6 |
 | `semantic.space.xs` | dimension | → `foundation.dimension.4` | Spacing token xs. | 26 |
 
 ### semantic.surface
@@ -935,15 +935,18 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.card.body.font-size.default` | dimension | → `semantic.typography.body.font-size.sm` | Font-size do body Card. | 1 |
 | `component.card.body.font-weight.default` | number | → `semantic.typography.body.font-weight.regular` | Font-weight do body Card. | 1 |
 | `component.card.body.line-height.default` | dimension | → `semantic.typography.body.line-height.sm` | Line-height do body Card. | 1 |
-| `component.card.body.padding-bottom.default` | dimension | → `semantic.space.lg` | Padding bottom do body Card. | 1 |
-| `component.card.body.padding-x.default` | dimension | → `semantic.space.lg` | Padding horizontal do body Card. | 1 |
+| `component.card.body.padding-bottom.default` | dimension | → `semantic.space.lg` | Padding bottom do body Card. | 0 |
+| `component.card.body.padding-x.default` | dimension | → `semantic.space.lg` | Padding horizontal do body Card. | 0 |
 | `component.card.border-color.elevated` | color | → `semantic.border.default` | Contrato border-color de card, sincronizado a partir das Variables Figma atuais. | 1 |
 | `component.card.border-color.outlined` | color | → `semantic.border.subtle` | Contrato border-color de card, sincronizado a partir das Variables Figma atuais. | 1 |
 | `component.card.border-width.default` | dimension | → `semantic.border.width.default` | Border width do Card quando stroke está ativo. | 1 |
+| `component.card.container.gap.default` | dimension | → `semantic.space.md` | Gap vertical entre header, body e footer no container de conteúdo do Card. | 1 |
+| `component.card.container.padding.default` | dimension | → `semantic.space.xl` | Padding interno do container de conteúdo do Card. | 1 |
+| `component.card.footer.gap.default` | dimension | → `semantic.space.sm` | Gap interno do footer slot do Card. | 1 |
 | `component.card.header.gap.default` | dimension | → `semantic.space.sm` | Gap vertical do header Card. | 1 |
-| `component.card.header.padding-bottom.default` | dimension | → `semantic.space.sm` | Padding bottom do header Card. | 1 |
-| `component.card.header.padding-top.default` | dimension | → `semantic.space.lg` | Padding top do header Card. | 1 |
-| `component.card.header.padding-x.default` | dimension | → `semantic.space.lg` | Padding horizontal do header Card. | 1 |
+| `component.card.header.padding-bottom.default` | dimension | → `semantic.space.sm` | Padding bottom do header Card. | 0 |
+| `component.card.header.padding-top.default` | dimension | → `semantic.space.lg` | Padding top do header Card. | 0 |
+| `component.card.header.padding-x.default` | dimension | → `semantic.space.lg` | Padding horizontal do header Card. | 0 |
 | `component.card.radius.default` | dimension | → `semantic.radius.lg` | Radius do Card. | 1 |
 | `component.card.subtitle.color.default` | color | → `semantic.content.default` | Contrato subtitle.color de card, sincronizado a partir das Variables Figma atuais. | 1 |
 | `component.card.subtitle.font-size.default` | dimension | → `semantic.typography.body.font-size.sm` | Font-size do subtitle Card. | 1 |
@@ -953,6 +956,17 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.card.title.font-size.default` | dimension | → `semantic.typography.body.font-size.xl` | Font-size do title Card. | 1 |
 | `component.card.title.font-weight.default` | number | → `semantic.typography.body.font-weight.semibold` | Font-weight do title Card. | 1 |
 | `component.card.title.line-height.default` | dimension | → `semantic.typography.body.line-height.xl` | Line-height do title Card. | 1 |
+
+### component.card-interactive
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `component.card-interactive.border-color.default` | color | → `semantic.border.default` | Border color padrão do Card Interactive. | 1 |
+| `component.card-interactive.border-color.hover` | color | → `semantic.border.strong` | Border color do Card Interactive no estado hover. | 1 |
+| `component.card-interactive.border-color.selected` | color | → `semantic.brand.border.default` | Border color do Card Interactive no estado selected. | 1 |
+| `component.card-interactive.border-width.default` | dimension | → `semantic.border.width.default` | Border width padrão do Card Interactive. | 1 |
+| `component.card-interactive.border-width.selected` | dimension | → `semantic.border.width.strong` | Border width do Card Interactive no estado selected. | 1 |
+| `component.card-interactive.focus-ring.radius.default` | dimension | → `semantic.radius.xl` | Radius do focus ring do Card Interactive. | 1 |
 
 ### component.checkbox
 
@@ -1035,11 +1049,11 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `component.focus-ring.color.default` | color | → `semantic.border.focus` | Token component para focus ring / color / default. | 12 |
+| `component.focus-ring.color.default` | color | → `semantic.border.focus` | Token component para focus ring / color / default. | 13 |
 | `component.focus-ring.color.error` | color | → `semantic.border.focus-error` | Token component para focus ring / color / error. | 4 |
 | `component.focus-ring.color.readonly` | color | → `semantic.border.control-default` | Token component para focus ring / color / readonly. | 3 |
 | `component.focus-ring.color.success` | color | → `semantic.feedback.success.border-default` | Token component para focus ring / color / success. | 1 |
-| `component.focus-ring.width` | dimension | → `semantic.border.width.focus` | Token component para focus ring / width. | 12 |
+| `component.focus-ring.width` | dimension | → `semantic.border.width.focus` | Token component para focus ring / width. | 13 |
 
 ### component.form-field
 
@@ -1127,9 +1141,9 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.modal.close.size.lg` | dimension | → `semantic.size.2xl` | Tamanho do alvo interativo do close Modal lg. | 1 |
 | `component.modal.close.size.md` | dimension | → `semantic.size.xl` | Tamanho do alvo interativo do close Modal md. | 1 |
 | `component.modal.close.size.sm` | dimension | → `semantic.size.lg` | Tamanho do alvo interativo do close Modal sm. | 1 |
-| `component.modal.container.gap.lg` | dimension | → `semantic.space.xl` | Gap vertical do container Modal lg. | 0 |
-| `component.modal.container.gap.md` | dimension | → `semantic.space.lg` | Gap vertical do container Modal md. | 0 |
-| `component.modal.container.gap.sm` | dimension | → `semantic.space.md` | Gap vertical do container Modal sm. | 0 |
+| `component.modal.container.gap.lg` | dimension | → `semantic.space.xl` | Gap vertical do container Modal lg. | 1 |
+| `component.modal.container.gap.md` | dimension | → `semantic.space.lg` | Gap vertical do container Modal md. | 1 |
+| `component.modal.container.gap.sm` | dimension | → `semantic.space.md` | Gap vertical do container Modal sm. | 1 |
 | `component.modal.container.padding.lg` | dimension | → `semantic.space.2xl` | Padding do container Modal lg. | 1 |
 | `component.modal.container.padding.md` | dimension | → `semantic.space.xl` | Padding do container Modal md. | 1 |
 | `component.modal.container.padding.sm` | dimension | → `semantic.space.lg` | Padding do container Modal sm. | 1 |
@@ -4830,8 +4844,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/reset.css` (1×)
-    - `css/tokens/generated/component.css` (2×)
-  - Tokens que referenciam: `component.badge.border-color.neutral.subtle`, `component.card.border-color.elevated`
+    - `css/tokens/generated/component.css` (3×)
+  - Tokens que referenciam: `component.badge.border-color.neutral.subtle`, `component.card-interactive.border-color.default`, `component.card.border-color.elevated`
 
 ### `semantic.border.error`
 
@@ -4942,8 +4956,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a foundation.color.neutral.600.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (1×)
-  - Tokens que referenciam: `component.field.border-color.filled`
+    - `css/tokens/generated/component.css` (2×)
+  - Tokens que referenciam: `component.card-interactive.border-color.hover`, `component.field.border-color.filled`
 
 ### `semantic.border.subtle`
 
@@ -4971,8 +4985,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/reset.css` (1×)
-    - `css/tokens/generated/component.css` (10×)
-  - Tokens que referenciam: `component.alert.border-width.default`, `component.badge.border-width.default`, `component.button.border-width.default`, `component.card.border-width.default`, `component.checkbox.box.border-width.default`, `component.divider.line.thickness.default`, `component.field.border-width`, `component.radio.control.border-width.unselected.default`, `component.tabs.list.border-width.default`, `component.toggle.track.border-width.default`
+    - `css/tokens/generated/component.css` (11×)
+  - Tokens que referenciam: `component.alert.border-width.default`, `component.badge.border-width.default`, `component.button.border-width.default`, `component.card-interactive.border-width.default`, `component.card.border-width.default`, `component.checkbox.box.border-width.default`, `component.divider.line.thickness.default`, `component.field.border-width`, `component.radio.control.border-width.unselected.default`, `component.tabs.list.border-width.default`, `component.toggle.track.border-width.default`
 
 ### `semantic.border.width.focus`
 
@@ -4999,8 +5013,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Alias direto a Foundation foundation.border.width.2.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (3×)
-  - Tokens que referenciam: `component.radio.control.border-width.selected.default`, `component.spinner.ring.stroke-width.default`, `component.tabs.indicator.height.default`
+    - `css/tokens/generated/component.css` (4×)
+  - Tokens que referenciam: `component.card-interactive.border-width.selected`, `component.radio.control.border-width.selected.default`, `component.spinner.ring.stroke-width.default`, `component.tabs.indicator.height.default`
 
 ### `semantic.brand.background.active`
 
@@ -5075,8 +5089,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.brand.background.default.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (1×)
-  - Tokens que referenciam: `component.radio.control.border-color.selected.default`
+    - `css/tokens/generated/component.css` (2×)
+  - Tokens que referenciam: `component.card-interactive.border-color.selected`, `component.radio.control.border-color.selected.default`
 
 ### `semantic.brand.border.disabled`
 
@@ -6402,6 +6416,7 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/alert.css` (1×)
     - `css/components/button.css` (4×)
+    - `css/components/card.css` (2×)
     - `css/components/checkbox.css` (3×)
     - `css/components/input.css` (2×)
     - `css/components/link.css` (1×)
@@ -6475,6 +6490,7 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/alert.css` (1×)
     - `css/components/button.css` (4×)
+    - `css/components/card.css` (2×)
     - `css/components/checkbox.css` (3×)
     - `css/components/input.css` (2×)
     - `css/components/link.css` (1×)
@@ -6769,7 +6785,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Use em `border-radius` em componentes.
 - **Decisão**: Aliasado a Foundation foundation.radius.16.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/tokens/generated/component.css` (1×)
+  - Tokens que referenciam: `component.card-interactive.focus-ring.radius.default`
 
 ### `semantic.shadow.card`
 
@@ -6927,7 +6945,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Use em `width`, `height` ou pra ícones, controles, layouts.
 - **Decisão**: Aliasado a Foundation foundation.dimension.320.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/card.css` (1×)
 
 ### `semantic.size.lg`
 
@@ -7136,9 +7155,9 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/divider.css` (2×)
     - `css/components/radio.css` (1×)
-    - `css/tokens/generated/component.css` (14×)
+    - `css/tokens/generated/component.css` (15×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.alert.padding.default`, `component.button.padding-x.md`, `component.button.padding-y.lg`, `component.button.icon-only-padding.lg`, `component.field.padding-y.lg`, `component.input.padding-x.lg`, `component.modal.container.gap.sm`, `component.modal.body.gap.md`, `component.modal.footer.gap.md`, `component.modal.close.padding.lg`, `component.select.padding-x.lg`, `component.tabs.item.padding-top.default`, `component.tabs.item.indicator-gap.default`, `component.textarea.padding-x.md`
+  - Tokens que referenciam: `component.alert.padding.default`, `component.button.padding-x.md`, `component.button.padding-y.lg`, `component.button.icon-only-padding.lg`, `component.card.container.gap.default`, `component.field.padding-y.lg`, `component.input.padding-x.lg`, `component.modal.container.gap.sm`, `component.modal.body.gap.md`, `component.modal.footer.gap.md`, `component.modal.close.padding.lg`, `component.select.padding-x.lg`, `component.tabs.item.padding-top.default`, `component.tabs.item.indicator-gap.default`, `component.textarea.padding-x.md`
 
 ### `semantic.space.none`
 
@@ -7225,11 +7244,12 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/checkbox.css` (2×)
+    - `css/components/modal.css` (6×)
     - `css/components/radio.css` (3×)
     - `css/components/tooltip.css` (4×)
-    - `css/tokens/generated/component.css` (25×)
+    - `css/tokens/generated/component.css` (26×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.alert.gap.default`, `component.badge.padding-x.default`, `component.button.padding-x.sm`, `component.button.padding-y.sm`, `component.button.gap.lg`, `component.button.icon-only-padding.md`, `component.card.header.padding-bottom.default`, `component.card.header.gap.default`, `component.checkbox.target.gap.default`, `component.checkbox.group.options.gap.default`, `component.field.padding-y.sm`, `component.input.gap.lg`, `component.input.padding-x.md`, `component.modal.body.gap.sm`, `component.modal.content-slot.gap.default`, `component.modal.footer.gap.sm`, `component.modal.close.padding.md`, `component.radio.target.gap.default`, `component.radio.group.options.gap.default`, `component.select.gap.lg`, `component.select.padding-x.md`, `component.textarea.padding-x.sm`, `component.toggle.target.gap.default`, `component.tooltip.content.padding-x.default`, `component.tooltip.arrow.base.default`
+  - Tokens que referenciam: `component.alert.gap.default`, `component.badge.padding-x.default`, `component.button.padding-x.sm`, `component.button.padding-y.sm`, `component.button.gap.lg`, `component.button.icon-only-padding.md`, `component.card.header.padding-bottom.default`, `component.card.header.gap.default`, `component.card.footer.gap.default`, `component.checkbox.target.gap.default`, `component.checkbox.group.options.gap.default`, `component.field.padding-y.sm`, `component.input.gap.lg`, `component.input.padding-x.md`, `component.modal.body.gap.sm`, `component.modal.content-slot.gap.default`, `component.modal.footer.gap.sm`, `component.modal.close.padding.md`, `component.radio.target.gap.default`, `component.radio.group.options.gap.default`, `component.select.gap.lg`, `component.select.padding-x.md`, `component.textarea.padding-x.sm`, `component.toggle.target.gap.default`, `component.tooltip.content.padding-x.default`, `component.tooltip.arrow.base.default`
 
 ### `semantic.space.xl`
 
@@ -7242,9 +7262,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.dimension.20.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (3×)
+    - `css/tokens/generated/component.css` (4×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.modal.overlay.padding.default`, `component.modal.container.padding.md`, `component.modal.container.gap.lg`
+  - Tokens que referenciam: `component.card.container.padding.default`, `component.modal.overlay.padding.default`, `component.modal.container.padding.md`, `component.modal.container.gap.lg`
 
 ### `semantic.space.xs`
 
@@ -10666,6 +10686,84 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/button.css` (1×)
 
+### `component.card-interactive.border-color.default`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.border.default`
+- **Sentido**: Border color padrão do Card Interactive.
+- **Escopo**: border-color
+- **Contexto**: Component token do contrato anatômico Card Interactive. Usa o mesmo ponto de partida visual do Card Outlined.
+- **Decisão**: Alias para semantic.border.default porque o Card Interactive começa com contorno neutro padrão antes de hover/selected.
+- **Usos**:
+  - CSS:
+    - `css/components/card.css` (2×)
+
+### `component.card-interactive.border-color.hover`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.border.strong`
+- **Sentido**: Border color do Card Interactive no estado hover.
+- **Escopo**: border-color
+- **Contexto**: Component token do contrato anatômico Card Interactive Hover. Dá feedback visual sem mudar background.
+- **Decisão**: Alias para semantic.border.strong porque hover precisa reforçar o contorno mantendo intenção neutra.
+- **Usos**:
+  - CSS:
+    - `css/components/card.css` (1×)
+
+### `component.card-interactive.border-color.selected`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.brand.border.default`
+- **Sentido**: Border color do Card Interactive no estado selected.
+- **Escopo**: border-color
+- **Contexto**: Component token do contrato anatômico Card Interactive Selected. Marca seleção com intenção de brand.
+- **Decisão**: Alias para semantic.brand.border.default porque selected usa brand como sinal de intenção, não como estilo outlined comum.
+- **Usos**:
+  - CSS:
+    - `css/components/card.css` (1×)
+
+### `component.card-interactive.border-width.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.border.width.default`
+- **Sentido**: Border width padrão do Card Interactive.
+- **Escopo**: border-width
+- **Contexto**: Component token do contrato anatômico Card Interactive. Controla a borda dos estados default, hover e focus.
+- **Decisão**: Alias para semantic.border.width.default para manter a borda interativa padrão em 1px, igual ao outlined.
+- **Usos**:
+  - CSS:
+    - `css/components/card.css` (1×)
+
+### `component.card-interactive.border-width.selected`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.border.width.strong`
+- **Sentido**: Border width do Card Interactive no estado selected.
+- **Escopo**: border-width
+- **Contexto**: Component token do contrato anatômico Card Interactive Selected. Espelha a borda reforçada do estado selected no Figma.
+- **Decisão**: Alias para semantic.border.width.strong porque selected precisa de 2px para diferenciação visual sem criar primitivo novo.
+- **Usos**:
+  - CSS:
+    - `css/components/card.css` (1×)
+
+### `component.card-interactive.focus-ring.radius.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.radius.xl`
+- **Sentido**: Radius do focus ring do Card Interactive.
+- **Escopo**: border-radius
+- **Contexto**: Component token do contrato anatômico Card Interactive Focus Ring. Controla o radius do layer externo de foco.
+- **Decisão**: Alias para semantic.radius.xl porque o focus ring fica fora do card de 12px e precisa acompanhar o offset visual de 16px.
+- **Usos**:
+  - CSS:
+    - `css/components/card.css` (1×)
+
 ### `component.card.bg.default`
 
 - **Camada**: component
@@ -10754,8 +10852,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Component token do contrato anatômico Card Body. Binda paddingBottom dos bodies nas variantes Style do Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.space.lg porque 16px é escala reutilizável, mas no Card documenta o respiro inferior público do body.
 - **Usos**:
-  - CSS:
-    - `css/components/card.css` (2×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `component.card.body.padding-x.default`
 
@@ -10767,8 +10864,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Component token do contrato anatômico Card Body. Binda paddingLeft/paddingRight dos bodies nas variantes Style do Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.space.lg porque 16px é escala reutilizável, mas no Card documenta o respiro horizontal público do body.
 - **Usos**:
-  - CSS:
-    - `css/components/card.css` (2×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `component.card.border-color.elevated`
 
@@ -10809,6 +10905,45 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/card.css` (2×)
 
+### `component.card.container.gap.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.md`
+- **Sentido**: Gap vertical entre header, body e footer no container de conteúdo do Card.
+- **Escopo**: gap
+- **Contexto**: Component token do contrato anatômico Card Container. Espelha o itemSpacing do Container vivo no Figma.
+- **Decisão**: Alias para semantic.space.md porque 12px separa blocos internos do Card sem depender de padding-bottom por seção.
+- **Usos**:
+  - CSS:
+    - `css/components/card.css` (3×)
+
+### `component.card.container.padding.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.xl`
+- **Sentido**: Padding interno do container de conteúdo do Card.
+- **Escopo**: padding
+- **Contexto**: Component token do contrato anatômico Card Container. Espelha o frame Container vivo no Figma, que envolve header, body e footer com padding uniforme.
+- **Decisão**: Alias para semantic.space.xl porque o Card usa 20px como respiro interno de container robusto, sem duplicar padding por header/body/footer.
+- **Usos**:
+  - CSS:
+    - `css/components/card.css` (2×)
+
+### `component.card.footer.gap.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.sm`
+- **Sentido**: Gap interno do footer slot do Card.
+- **Escopo**: gap
+- **Contexto**: Component token do contrato anatômico Card Footer. Espelha o footer slot vivo no Figma.
+- **Decisão**: Alias para semantic.space.sm porque o footer slot vivo no Figma preserva 8px de separação interna para ações ou conteúdo de rodapé.
+- **Usos**:
+  - CSS:
+    - `css/components/card.css` (1×)
+
 ### `component.card.header.gap.default`
 
 - **Camada**: component
@@ -10820,7 +10955,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Alias 1:1 para semantic.space.sm porque 8px é escala reutilizável, mas no Card documenta a separação vertical pública do header.
 - **Usos**:
   - CSS:
-    - `css/components/card.css` (2×)
+    - `css/components/card.css` (1×)
 
 ### `component.card.header.padding-bottom.default`
 
@@ -10832,8 +10967,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Component token do contrato anatômico Card Header. Binda paddingBottom dos headers nas variantes Style do Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.space.sm porque 8px é escala reutilizável, mas no Card documenta a separação pública entre header e body.
 - **Usos**:
-  - CSS:
-    - `css/components/card.css` (2×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `component.card.header.padding-top.default`
 
@@ -10845,8 +10979,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Component token do contrato anatômico Card Header. Binda paddingTop dos headers nas variantes Style do Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.space.lg porque 16px é escala reutilizável, mas no Card documenta o respiro superior público do header.
 - **Usos**:
-  - CSS:
-    - `css/components/card.css` (2×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `component.card.header.padding-x.default`
 
@@ -10858,8 +10991,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Component token do contrato anatômico Card Header. Binda paddingLeft/paddingRight dos headers nas variantes Style do Figma e substitui consumo direto de Semantic no CSS.
 - **Decisão**: Alias 1:1 para semantic.space.lg porque 16px é escala reutilizável, mas no Card documenta o respiro horizontal público do header.
 - **Usos**:
-  - CSS:
-    - `css/components/card.css` (1×)
+  - _(nenhum uso detectado — token órfão ou novo)_
 
 ### `component.card.radius.default`
 
@@ -11831,6 +11963,7 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/alert.css` (1×)
     - `css/components/breadcrumb.css` (1×)
     - `css/components/button.css` (1×)
+    - `css/components/card.css` (1×)
     - `css/components/checkbox.css` (1×)
     - `css/components/input.css` (1×)
     - `css/components/link.css` (1×)
@@ -11899,6 +12032,7 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/alert.css` (2×)
     - `css/components/breadcrumb.css` (2×)
     - `css/components/button.css` (2×)
+    - `css/components/card.css` (2×)
     - `css/components/checkbox.css` (2×)
     - `css/components/input.css` (2×)
     - `css/components/link.css` (2×)
@@ -12833,7 +12967,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Mantido por tamanho porque Medium é o default da Modal e precisa preservar área de interação maior que o ícone.
 - **Usos**:
   - CSS:
-    - `css/components/modal.css` (3×)
+    - `css/components/modal.css` (1×)
 
 ### `component.modal.close.padding.sm`
 
@@ -12897,7 +13031,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Contrato anatômico da Modal para espaçamento vertical principal no tamanho lg.
 - **Decisão**: Substitui o antigo modal.container.gap.default por escala por tamanho, conforme Figma vivo.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/modal.css` (1×)
 
 ### `component.modal.container.gap.md`
 
@@ -12909,7 +13044,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Contrato anatômico da Modal para espaçamento vertical principal no tamanho md.
 - **Decisão**: Substitui o antigo modal.container.gap.default por escala por tamanho, conforme Figma vivo.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/modal.css` (1×)
 
 ### `component.modal.container.gap.sm`
 
@@ -12921,7 +13057,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Contrato anatômico da Modal para espaçamento vertical principal no tamanho sm.
 - **Decisão**: Substitui o antigo modal.container.gap.default por escala por tamanho, conforme Figma vivo.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/modal.css` (1×)
 
 ### `component.modal.container.padding.lg`
 
@@ -12934,7 +13071,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Mantido como Component token porque o padding do container é parte pública da anatomia da Modal e está bindado no Figma vivo.
 - **Usos**:
   - CSS:
-    - `css/components/modal.css` (7×)
+    - `css/components/modal.css` (3×)
 
 ### `component.modal.container.padding.md`
 
@@ -12947,7 +13084,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Mantido como Component token porque o padding do container é parte pública da anatomia da Modal e está bindado no Figma vivo.
 - **Usos**:
   - CSS:
-    - `css/components/modal.css` (7×)
+    - `css/components/modal.css` (3×)
 
 ### `component.modal.container.padding.sm`
 
@@ -12960,7 +13097,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Mantido como Component token porque o padding do container é parte pública da anatomia da Modal e está bindado no Figma vivo.
 - **Usos**:
   - CSS:
-    - `css/components/modal.css` (7×)
+    - `css/components/modal.css` (3×)
 
 ### `component.modal.content-slot.gap.default`
 

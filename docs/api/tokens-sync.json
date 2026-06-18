@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-beta.5",
   "totals": {
-    "jsonTokens": 1314,
-    "sharedTokens": 850,
+    "jsonTokens": 1323,
+    "sharedTokens": 859,
     "lightTokens": 232,
     "darkTokens": 232,
     "errors": 0,
@@ -20,7 +20,7 @@
       "snapshotFreshness": "fresh",
       "snapshotMaxAgeHours": 24,
       "summary": {
-        "figmaVariableCount": 1030,
+        "figmaVariableCount": 1039,
         "figmaCollectionCount": 3,
         "VALUE_DRIFT": 0,
         "NEEDS_SYNC": 0,

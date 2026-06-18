@@ -12,6 +12,8 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 - **Escala semântica de space expandida.** `semantic.space` passa a incluir `3xl` a `6xl` (`32/40/48/64px`) e `semantic.space.section` sobe para `48/64/80/96/120px` com novo `section.2xl`, mantendo aliases Figma ↔ JSON para gaps, paddings e separação macro.
 
 ### Corrigido
+- **Card espelha container, media slot e estados interativos do Figma.** Adicionados contratos `card/container/*`, `card/footer/gap/*` e `card-interactive/*`; CSS passa a usar container interno com padding `20px`, gap `12px`, media full-bleed opcional e estados hover/focus/selected derivados do outlined.
+- **Modal aplica padding/gap no container real.** `.ds-modal` volta a consumir `--ds-modal-container-padding-*` e `--ds-modal-container-gap-*` na superfície principal, deixando header/body/footer como slots internos sem padding duplicado e alinhando o espaçamento ao component set do Figma.
 - **Modal close alinha posição ao Figma.** `.ds-modal__close` passa a ficar a `8px` do topo/direita da superfície em todos os tamanhos, compensando o padding do header como no component set vivo.
 - **Tabs aplicam radius no focus ring.** `.ds-tab:focus-visible` passa a consumir `--ds-tabs-focus-ring-radius-default`, alinhando o repo ao token já definido no Figma.
 - **Cards Faça/Não faça ajustam altura pelo próprio conteúdo.** O grid compartilhado dos docs deixa de esticar o card menor até a altura da coluna vizinha e reduz o espaço entre label e descrição.

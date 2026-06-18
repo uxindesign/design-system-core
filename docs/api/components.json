@@ -747,15 +747,19 @@
         "ds-card-body-font-size-default",
         "ds-card-body-font-weight-default",
         "ds-card-body-line-height-default",
-        "ds-card-body-padding-bottom-default",
-        "ds-card-body-padding-x-default",
         "ds-card-border-color-elevated",
         "ds-card-border-color-outlined",
         "ds-card-border-width-default",
+        "ds-card-container-gap-default",
+        "ds-card-container-padding-default",
+        "ds-card-footer-gap-default",
         "ds-card-header-gap-default",
-        "ds-card-header-padding-bottom-default",
-        "ds-card-header-padding-top-default",
-        "ds-card-header-padding-x-default",
+        "ds-card-interactive-border-color-default",
+        "ds-card-interactive-border-color-hover",
+        "ds-card-interactive-border-color-selected",
+        "ds-card-interactive-border-width-default",
+        "ds-card-interactive-border-width-selected",
+        "ds-card-interactive-focus-ring-radius-default",
         "ds-card-radius-default",
         "ds-card-subtitle-color-default",
         "ds-card-subtitle-font-size-default",
@@ -765,12 +769,21 @@
         "ds-card-title-font-size-default",
         "ds-card-title-font-weight-default",
         "ds-card-title-line-height-default",
-        "ds-shadow-card"
+        "ds-focus-ring-color-default",
+        "ds-focus-ring-width",
+        "ds-motion-duration-fast",
+        "ds-motion-ease-default",
+        "ds-shadow-card",
+        "ds-size-layout-xs"
       ],
       "variants": [
         "default",
         "elevated",
-        "outlined"
+        "focus",
+        "hover",
+        "interactive",
+        "outlined",
+        "selected"
       ],
       "figma": {
         "fileKey": "PRYS2kL7VdC1MtVWfZvuDN",
@@ -815,6 +828,9 @@
         "ds-modal-close-size-lg",
         "ds-modal-close-size-md",
         "ds-modal-close-size-sm",
+        "ds-modal-container-gap-lg",
+        "ds-modal-container-gap-md",
+        "ds-modal-container-gap-sm",
         "ds-modal-container-padding-lg",
         "ds-modal-container-padding-md",
         "ds-modal-container-padding-sm",
@@ -836,7 +852,8 @@
         "ds-motion-duration-fast",
         "ds-motion-ease-default",
         "ds-radius-sm",
-        "ds-space-section-sm"
+        "ds-space-section-sm",
+        "ds-space-sm"
       ],
       "variants": [
         "lg",

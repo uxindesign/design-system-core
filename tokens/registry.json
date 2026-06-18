@@ -4539,11 +4539,12 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 2
+            "count": 3
           }
         ],
         "tokens": [
           "component.badge.border-color.neutral.subtle",
+          "component.card-interactive.border-color.default",
           "component.card.border-color.elevated"
         ],
         "figma": []
@@ -4564,10 +4565,11 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [
+          "component.card-interactive.border-color.hover",
           "component.field.border-color.filled"
         ],
         "figma": []
@@ -4617,13 +4619,14 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 10
+            "count": 11
           }
         ],
         "tokens": [
           "component.alert.border-width.default",
           "component.badge.border-width.default",
           "component.button.border-width.default",
+          "component.card-interactive.border-width.default",
           "component.card.border-width.default",
           "component.checkbox.box.border-width.default",
           "component.divider.line.thickness.default",
@@ -4649,10 +4652,11 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 3
+            "count": 4
           }
         ],
         "tokens": [
+          "component.card-interactive.border-width.selected",
           "component.radio.control.border-width.selected.default",
           "component.spinner.ring.stroke-width.default",
           "component.tabs.indicator.height.default"
@@ -5397,6 +5401,10 @@
             "count": 4
           },
           {
+            "file": "css/components/card.css",
+            "count": 2
+          },
+          {
             "file": "css/components/checkbox.css",
             "count": 3
           },
@@ -5478,6 +5486,10 @@
           {
             "file": "css/components/button.css",
             "count": 4
+          },
+          {
+            "file": "css/components/card.css",
+            "count": 2
           },
           {
             "file": "css/components/checkbox.css",
@@ -6793,6 +6805,10 @@
             "count": 2
           },
           {
+            "file": "css/components/modal.css",
+            "count": 6
+          },
+          {
             "file": "css/components/radio.css",
             "count": 3
           },
@@ -6802,7 +6818,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 25
+            "count": 26
           },
           {
             "file": "css/utilities/layout.css",
@@ -6818,6 +6834,7 @@
           "component.button.icon-only-padding.md",
           "component.card.header.padding-bottom.default",
           "component.card.header.gap.default",
+          "component.card.footer.gap.default",
           "component.checkbox.target.gap.default",
           "component.checkbox.group.options.gap.default",
           "component.field.padding-y.sm",
@@ -6863,7 +6880,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 14
+            "count": 15
           },
           {
             "file": "css/utilities/layout.css",
@@ -6875,6 +6892,7 @@
           "component.button.padding-x.md",
           "component.button.padding-y.lg",
           "component.button.icon-only-padding.lg",
+          "component.card.container.gap.default",
           "component.field.padding-y.lg",
           "component.input.padding-x.lg",
           "component.modal.container.gap.sm",
@@ -6946,7 +6964,7 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 3
+            "count": 4
           },
           {
             "file": "css/utilities/layout.css",
@@ -6954,6 +6972,7 @@
           }
         ],
         "tokens": [
+          "component.card.container.padding.default",
           "component.modal.overlay.padding.default",
           "component.modal.container.padding.md",
           "component.modal.container.gap.lg"
@@ -7104,8 +7123,15 @@
       "contexto": "Use em `border-radius` em componentes.",
       "decisao": "Aliasado a Foundation foundation.radius.16.",
       "usos": {
-        "css": [],
-        "tokens": [],
+        "css": [
+          {
+            "file": "css/tokens/generated/component.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "component.card-interactive.focus-ring.radius.default"
+        ],
         "figma": []
       }
     },
@@ -9347,7 +9373,12 @@
       "contexto": "Use em `width`, `height` ou pra ícones, controles, layouts.",
       "decisao": "Aliasado a Foundation foundation.dimension.320.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -12393,12 +12424,7 @@
       "contexto": "Component token do contrato anatômico Card Header. Binda paddingLeft/paddingRight dos headers nas variantes Style do Figma e substitui consumo direto de Semantic no CSS.",
       "decisao": "Alias 1:1 para semantic.space.lg porque 16px é escala reutilizável, mas no Card documenta o respiro horizontal público do header.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/card.css",
-            "count": 1
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -12414,12 +12440,7 @@
       "contexto": "Component token do contrato anatômico Card Header. Binda paddingTop dos headers nas variantes Style do Figma e substitui consumo direto de Semantic no CSS.",
       "decisao": "Alias 1:1 para semantic.space.lg porque 16px é escala reutilizável, mas no Card documenta o respiro superior público do header.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/card.css",
-            "count": 2
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -12435,12 +12456,7 @@
       "contexto": "Component token do contrato anatômico Card Header. Binda paddingBottom dos headers nas variantes Style do Figma e substitui consumo direto de Semantic no CSS.",
       "decisao": "Alias 1:1 para semantic.space.sm porque 8px é escala reutilizável, mas no Card documenta a separação pública entre header e body.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/card.css",
-            "count": 2
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -12459,7 +12475,7 @@
         "css": [
           {
             "file": "css/components/card.css",
-            "count": 2
+            "count": 1
           }
         ],
         "tokens": [],
@@ -12478,12 +12494,7 @@
       "contexto": "Component token do contrato anatômico Card Body. Binda paddingLeft/paddingRight dos bodies nas variantes Style do Figma e substitui consumo direto de Semantic no CSS.",
       "decisao": "Alias 1:1 para semantic.space.lg porque 16px é escala reutilizável, mas no Card documenta o respiro horizontal público do body.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/card.css",
-            "count": 2
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -12499,12 +12510,7 @@
       "contexto": "Component token do contrato anatômico Card Body. Binda paddingBottom dos bodies nas variantes Style do Figma e substitui consumo direto de Semantic no CSS.",
       "decisao": "Alias 1:1 para semantic.space.lg porque 16px é escala reutilizável, mas no Card documenta o respiro inferior público do body.",
       "usos": {
-        "css": [
-          {
-            "file": "css/components/card.css",
-            "count": 2
-          }
-        ],
+        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -21069,6 +21075,10 @@
             "count": 1
           },
           {
+            "file": "css/components/card.css",
+            "count": 1
+          },
+          {
             "file": "css/components/checkbox.css",
             "count": 1
           },
@@ -21227,6 +21237,10 @@
             "count": 2
           },
           {
+            "file": "css/components/card.css",
+            "count": 2
+          },
+          {
             "file": "css/components/checkbox.css",
             "count": 2
           },
@@ -21281,10 +21295,11 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [
+          "component.card-interactive.border-color.selected",
           "component.radio.control.border-color.selected.default"
         ],
         "figma": []
@@ -24215,7 +24230,7 @@
         "css": [
           {
             "file": "css/components/modal.css",
-            "count": 3
+            "count": 1
           }
         ],
         "tokens": [],
@@ -24459,7 +24474,7 @@
         "css": [
           {
             "file": "css/components/modal.css",
-            "count": 7
+            "count": 3
           }
         ],
         "tokens": [],
@@ -24482,7 +24497,7 @@
         "css": [
           {
             "file": "css/components/modal.css",
-            "count": 7
+            "count": 3
           }
         ],
         "tokens": [],
@@ -24505,7 +24520,7 @@
         "css": [
           {
             "file": "css/components/modal.css",
-            "count": 7
+            "count": 3
           }
         ],
         "tokens": [],
@@ -24525,7 +24540,12 @@
       "contexto": "Contrato anatômico da Modal para espaçamento vertical principal no tamanho sm.",
       "decisao": "Substitui o antigo modal.container.gap.default por escala por tamanho, conforme Figma vivo.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24543,7 +24563,12 @@
       "contexto": "Contrato anatômico da Modal para espaçamento vertical principal no tamanho md.",
       "decisao": "Substitui o antigo modal.container.gap.default por escala por tamanho, conforme Figma vivo.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24561,7 +24586,12 @@
       "contexto": "Contrato anatômico da Modal para espaçamento vertical principal no tamanho lg.",
       "decisao": "Substitui o antigo modal.container.gap.default por escala por tamanho, conforme Figma vivo.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/modal.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -24849,6 +24879,195 @@
       "decisao": "Adicionado em 120px ao elevar a escala section para 48, 64, 80, 96 e 120px.",
       "usos": {
         "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.card.container.padding.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xl",
+      "sentido": "Padding interno do container de conteúdo do Card.",
+      "escopo": [
+        "padding"
+      ],
+      "contexto": "Component token do contrato anatômico Card Container. Espelha o frame Container vivo no Figma, que envolve header, body e footer com padding uniforme.",
+      "decisao": "Alias para semantic.space.xl porque o Card usa 20px como respiro interno de container robusto, sem duplicar padding por header/body/footer.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.card.container.gap.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.md",
+      "sentido": "Gap vertical entre header, body e footer no container de conteúdo do Card.",
+      "escopo": [
+        "gap"
+      ],
+      "contexto": "Component token do contrato anatômico Card Container. Espelha o itemSpacing do Container vivo no Figma.",
+      "decisao": "Alias para semantic.space.md porque 12px separa blocos internos do Card sem depender de padding-bottom por seção.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 3
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.card.footer.gap.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.sm",
+      "sentido": "Gap interno do footer slot do Card.",
+      "escopo": [
+        "gap"
+      ],
+      "contexto": "Component token do contrato anatômico Card Footer. Espelha o footer slot vivo no Figma.",
+      "decisao": "Alias para semantic.space.sm porque o footer slot vivo no Figma preserva 8px de separação interna para ações ou conteúdo de rodapé.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.card-interactive.border-width.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.border.width.default",
+      "sentido": "Border width padrão do Card Interactive.",
+      "escopo": [
+        "border-width"
+      ],
+      "contexto": "Component token do contrato anatômico Card Interactive. Controla a borda dos estados default, hover e focus.",
+      "decisao": "Alias para semantic.border.width.default para manter a borda interativa padrão em 1px, igual ao outlined.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.card-interactive.border-width.selected": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.border.width.strong",
+      "sentido": "Border width do Card Interactive no estado selected.",
+      "escopo": [
+        "border-width"
+      ],
+      "contexto": "Component token do contrato anatômico Card Interactive Selected. Espelha a borda reforçada do estado selected no Figma.",
+      "decisao": "Alias para semantic.border.width.strong porque selected precisa de 2px para diferenciação visual sem criar primitivo novo.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.card-interactive.border-color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.default",
+      "sentido": "Border color padrão do Card Interactive.",
+      "escopo": [
+        "border-color"
+      ],
+      "contexto": "Component token do contrato anatômico Card Interactive. Usa o mesmo ponto de partida visual do Card Outlined.",
+      "decisao": "Alias para semantic.border.default porque o Card Interactive começa com contorno neutro padrão antes de hover/selected.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.card-interactive.border-color.hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.strong",
+      "sentido": "Border color do Card Interactive no estado hover.",
+      "escopo": [
+        "border-color"
+      ],
+      "contexto": "Component token do contrato anatômico Card Interactive Hover. Dá feedback visual sem mudar background.",
+      "decisao": "Alias para semantic.border.strong porque hover precisa reforçar o contorno mantendo intenção neutra.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.card-interactive.border-color.selected": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.brand.border.default",
+      "sentido": "Border color do Card Interactive no estado selected.",
+      "escopo": [
+        "border-color"
+      ],
+      "contexto": "Component token do contrato anatômico Card Interactive Selected. Marca seleção com intenção de brand.",
+      "decisao": "Alias para semantic.brand.border.default porque selected usa brand como sinal de intenção, não como estilo outlined comum.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.card-interactive.focus-ring.radius.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.radius.xl",
+      "sentido": "Radius do focus ring do Card Interactive.",
+      "escopo": [
+        "border-radius"
+      ],
+      "contexto": "Component token do contrato anatômico Card Interactive Focus Ring. Controla o radius do layer externo de foco.",
+      "decisao": "Alias para semantic.radius.xl porque o focus ring fica fora do card de 12px e precisa acompanhar o offset visual de 16px.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/card.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }

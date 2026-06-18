@@ -203,8 +203,15 @@
   --ds-button-content-color-danger-pressed: var(--ds-feedback-error-content-contrast); /** Cor de conteúdo do Button danger pressed. */
   --ds-button-content-color-danger-focus: var(--ds-feedback-error-content-contrast); /** Cor de conteúdo do Button danger focus. */
   --ds-button-content-color-danger-disabled: var(--ds-feedback-error-content-disabled); /** Cor de conteúdo do Button danger disabled. */
+  --ds-card-interactive-border-width-default: var(--ds-border-width-default); /** Border width padrão do Card Interactive. */
+  --ds-card-interactive-border-width-selected: var(--ds-border-width-strong); /** Border width do Card Interactive no estado selected. */
+  --ds-card-interactive-border-color-default: var(--ds-border-default); /** Border color padrão do Card Interactive. */
+  --ds-card-interactive-border-color-hover: var(--ds-border-strong); /** Border color do Card Interactive no estado hover. */
+  --ds-card-interactive-focus-ring-radius-default: var(--ds-radius-xl); /** Radius do focus ring do Card Interactive. */
   --ds-card-radius-default: var(--ds-radius-lg); /** Radius do Card. */
   --ds-card-border-width-default: var(--ds-border-width-default); /** Border width do Card quando stroke está ativo. */
+  --ds-card-container-padding-default: var(--ds-space-xl); /** Padding interno do container de conteúdo do Card. */
+  --ds-card-container-gap-default: var(--ds-space-md); /** Gap vertical entre header, body e footer no container de conteúdo do Card. */
   --ds-card-header-padding-x-default: var(--ds-space-lg); /** Padding horizontal do header Card. */
   --ds-card-header-padding-top-default: var(--ds-space-lg); /** Padding top do header Card. */
   --ds-card-header-padding-bottom-default: var(--ds-space-sm); /** Padding bottom do header Card. */
@@ -215,6 +222,7 @@
   --ds-card-body-line-height-default: var(--ds-body-line-height-sm); /** Line-height do body Card. */
   --ds-card-body-font-weight-default: var(--ds-body-font-weight-regular); /** Font-weight do body Card. */
   --ds-card-body-color-default: var(--ds-content-default);
+  --ds-card-footer-gap-default: var(--ds-space-sm); /** Gap interno do footer slot do Card. */
   --ds-card-title-font-size-default: var(--ds-body-font-size-xl); /** Font-size do title Card. */
   --ds-card-title-line-height-default: var(--ds-body-line-height-xl); /** Line-height do title Card. */
   --ds-card-title-font-weight-default: var(--ds-body-font-weight-semibold); /** Font-weight do title Card. */
@@ -563,6 +571,7 @@
   --ds-alert-close-icon-color-subtle: var(--ds-icon-color-default);
   --ds-button-bg-toned-disabled: var(--ds-toned-background-disabled); /** Bg do Button toned disabled. */
   --ds-button-content-color-toned-disabled: var(--ds-toned-content-disabled); /** Cor de conteúdo do Button toned disabled. */
+  --ds-card-interactive-border-color-selected: var(--ds-brand-border-default); /** Border color do Card Interactive no estado selected. */
   --ds-checkbox-box-border-color-unchecked-error-hover: var(--ds-border-error-hover);
   --ds-field-border-color-error-hover: var(--ds-border-error-hover); /** Field border error hover. */
   --ds-form-field-error-icon-color-default: var(--ds-icon-color-error); /** Cor do ícone da mensagem de erro Form Field. */
