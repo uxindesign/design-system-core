@@ -16,6 +16,8 @@
 
 /* Dialog */
 .ds-modal {
+  --_ds-modal-focus-ring-bleed: calc(var(--ds-focus-ring-width) * 2);
+
   background-color: var(--ds-modal-bg-default);
   border-radius: var(--ds-modal-radius-default);
   box-shadow: var(--ds-modal-shadow-default);
@@ -25,7 +27,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--ds-modal-container-gap-sm);
-  overflow: hidden;
+  overflow: visible;
 }
 
 /* Sizes */
@@ -186,6 +188,8 @@
    lg → font-size lg + line-height xl */
 .ds-modal__body {
   overflow-y: auto;
+  margin: calc(var(--_ds-modal-focus-ring-bleed) * -1);
+  padding: var(--_ds-modal-focus-ring-bleed);
   color: var(--ds-modal-body-color-default);
   font-size: var(--ds-body-font-size-sm);
   font-weight: var(--ds-body-font-weight-regular);
