@@ -112,6 +112,12 @@ Análogo a categorias CSS-only de tokens, alguns **componentes** existem só no 
 6. **Atualize doc HTML do componente** em `docs/<componente>.html` se a mudança altera anatomia/uso.
 7. **CHANGELOG entry** em `[Não publicado]` descrevendo o que mudou e por quê.
 
+### 4.2.1 Exemplos e composição em docs
+
+1. Exemplos em `docs/*.html` devem usar os componentes existentes do DS pela API pública/anatomia completa, não classes internas isoladas. Exemplo: para campo de texto, usar `ds-field` + `ds-input` + `ds-input__field`; nunca usar `ds-input__field` solto como se fosse o componente.
+2. Quando um componente hospeda conteúdo customizado ou slot (ex: Modal/Card), o conteúdo de exemplo deve ser composto com componentes reais do DS (`Button`, `Input`, `Select`, `Textarea`, etc.) sempre que eles já existirem.
+3. Só criar markup ad hoc em docs quando não existir componente DS correspondente ou quando o exemplo estiver documentando explicitamente um primitive/layout genérico.
+
 ### 4.3 Editar componentes no Figma
 
 Editar um component set no Figma exige preservar a API pública do componente, não só o visual. Antes e depois de qualquer mudança em variants, sublayers, icons, texts ou bindings, execute uma auditoria do component set.
