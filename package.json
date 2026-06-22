@@ -43,7 +43,12 @@
     "verify:figma-structure": "node scripts/verify-figma-structure.mjs",
     "audit:component-tokens": "node scripts/verify-figma-structure.mjs --strict-unused",
     "agent:preflight": "node scripts/agent-preflight.mjs",
-    "verify:agent-docs": "node scripts/verify-agent-docs.mjs"
+    "verify:agent-docs": "node scripts/verify-agent-docs.mjs",
+    "agents:create-run": "node scripts/agents/create-run.mjs",
+    "agents:validate-run": "node scripts/agents/validate-run.mjs",
+    "agents:next-step": "node scripts/agents/next-step.mjs",
+    "agents:gate": "node scripts/agents/gate.mjs",
+    "agents:validate-matrix": "node scripts/agents/validate-matrix.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.11.2",

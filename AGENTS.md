@@ -122,7 +122,7 @@ Análogo a categorias CSS-only de tokens, alguns **componentes** existem só no 
 
 Novo componente, redesenho estrutural ou novo padrão de documentação **não começa com escrita no Figma nem no repo**. Primeiro siga `docs/process-ai-component-workflow.md` e obtenha aprovação explícita do owner para o brief/spec.
 
-Para trabalho com agentes especializados, use também `docs/agents/README.md`. Comandos curtos oficiais vivem em `docs/agents/quick-commands.md` e devem ser resolvidos para a role/checklist correspondente. Cada agente deve declarar a role e o checklist antes de agir (`DS Architect`, `Figma Builder`, `Figma Auditor`, `Token Sync Agent`, `Repo Component Agent` ou `Release Agent`). A regra operacional é: **quem constrói não aprova o próprio trabalho**.
+Para trabalho com agentes especializados, use também `docs/agents/README.md`. Para Product Designers, a entrada preferencial é `docs/agents/product-designer-workflow.md`: o Orchestrator deve esconder terminal, scripts e handoffs técnicos, conduzindo o fluxo por gates de aprovação. Comandos curtos oficiais vivem em `docs/agents/quick-commands.md` e devem ser resolvidos para a role/checklist correspondente. Para trabalho multi-chat ou multi-IA, use `docs/agents/protocol.md`, `docs/agents/orchestration.md` e uma run em `docs/agents/runs/` criada por `npm run agents:create-run`. Cada agente deve declarar a role e o checklist antes de agir (`DS Architect`, `Figma Builder`, `Figma Auditor`, `Token Sync Agent`, `Repo Component Agent` ou `Release Agent`). A regra operacional é: **quem constrói não aprova o próprio trabalho**.
 
 Gate obrigatório antes de qualquer escrita:
 
@@ -132,11 +132,21 @@ Gate obrigatório antes de qualquer escrita:
 4. **Brief aprovado**: problema, quando usar/não usar, diferença para componentes próximos, padrão ARIA quando aplicável, composição com componentes DS existentes e nível de interatividade.
 5. **Spec Figma aprovada**: anatomia, slots reais, propriedades públicas, variants, states, tokens necessários, regras de conteúdo e exemplos mínimos para designers.
 6. **Padrão de página Figma aprovado**: antes de criar página nova ou documentação visual, inspecionar 2-3 páginas equivalentes no Figma vivo e registrar frame raiz, largura, margens, ordem de seções, padrão de tabelas/exemplos e onde component sets ficam aninhados.
-7. **Draft Figma primeiro**: criar ou alterar apenas como draft/revisão, validar visualmente e estruturalmente, e só então espelhar no repo.
+7. **Draft Figma primeiro**: criar ou alterar apenas como draft/revisão, validar visualmente, documentalmente e estruturalmente, e só então espelhar no repo.
 
 Para páginas de componentes no Figma, o padrão atual é **um único frame raiz** com o nome do componente e seções internas (`header`, `divider`, `section-*`). Componentes, component sets, exemplos, labels de matriz e documentação visual ficam dentro das seções. Nós gerados soltos no canvas da página são regressão, exceto quando uma página existente provar que aquele componente segue outro padrão e o owner aprovar a exceção.
 
-Qualquer criação/edição de documentação visual no Figma ativa automaticamente o gate permanente de paridade documental em `docs/process-ai-component-workflow.md`: consultar páginas maduras como modelo antes de escrever, manter textos com altura automática/height hug, evitar `clipsContent=true` em frames documentais salvo exceção aprovada, preservar root/seções/tabelas conforme o padrão vivo e auditar contagens objetivas depois. O owner não precisa lembrar essa regra em cada tarefa.
+Qualquer criação/edição de documentação visual no Figma ativa automaticamente o gate permanente de paridade visual e documental em `docs/process-ai-component-workflow.md`: consultar páginas maduras como modelo antes de escrever, capturar screenshots do alvo e dos modelos, manter textos com altura automática/height hug, evitar `clipsContent=true` em frames documentais salvo exceção aprovada, preservar root/seções/tabelas conforme o padrão vivo e auditar contagens objetivas depois. O owner não precisa lembrar essa regra em cada tarefa.
+
+`pronto para auditoria` só pode ser declarado quando três checagens passam juntas:
+
+- **Contrato**: properties, variants, slots, component tokens e bindings batem com a matriz aprovada.
+- **Documentação**: tabelas, exemplos, textos e linhas de tokens/properties refletem a API real do componente; nenhum item removido ou renomeado permanece documentado.
+- **Visual**: screenshot do componente/página foi comparado contra 2-3 páginas modelo vivas e as diferenças relevantes foram corrigidas ou registradas como exceção aprovada.
+
+Contagem agregada (`752/757 binds`, `topLevelCount=1`, `0 loose nodes`) nunca é suficiente para encerrar Builder. Se contrato passa, mas documentação ou visual falham, o status obrigatório é `bloqueado`, não `pronto para auditoria`.
+
+Se o owner rejeitar visualmente um draft, o agente deve parar qualquer escrita, fazer uma auditoria read-only do estado atual contra os modelos vivos e apresentar um plano de recuperação com node IDs antes de nova edição. Correções pontuais sem esse diagnóstico são consideradas improviso.
 
 O agente deve mostrar o status do gate atual e parar quando faltar aprovação. "Ok", "vai" ou "pode seguir" só contam como aprovação para o gate imediatamente apresentado; não autorizam automaticamente Figma, repo, commit ou push.
 

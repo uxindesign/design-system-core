@@ -5,6 +5,7 @@ Use este checklist em modo read-only. Nao corrigir durante a auditoria.
 ## Pagina
 
 - [ ] Paginas modelo usadas na comparacao foram declaradas.
+- [ ] Screenshots do alvo e das paginas modelo foram revisados.
 - [ ] `topLevelCount` esperado.
 - [ ] Frame raiz correto.
 - [ ] Root com auto-layout e background bindado.
@@ -13,6 +14,7 @@ Use este checklist em modo read-only. Nao corrigir durante a auditoria.
 - [ ] `clipsContent=false` onde focus/overlay pode escapar.
 - [ ] Frames documentais com `clipsContent=true`: 0, salvo excecao aprovada.
 - [ ] Root/secoes/tabelas/exemplos seguem as propriedades reais das paginas modelo.
+- [ ] Escala, densidade, hierarquia, espaçamentos, component matrix, exemplos e tabelas parecem da mesma família visual das páginas modelo ou têm exceção aprovada.
 
 ## Component set
 
@@ -33,6 +35,8 @@ Use este checklist em modo read-only. Nao corrigir durante a auditoria.
 - [ ] Textos de documentacao com `autoRename=true`.
 - [ ] Textos de documentacao com altura fixa indevida: 0.
 - [ ] Textos de documentacao usam altura automatica/height hug conforme paginas modelo.
+- [ ] Tabelas de propriedades, tokens e acessibilidade não citam property, slot, token ou state inexistente.
+- [ ] Documentação visual tem bindings equivalentes aos das páginas modelo quando houver fills/strokes/backgrounds/dividers/tabelas bindáveis.
 
 ## Tokens e bindings
 
@@ -61,11 +65,21 @@ Use este checklist em modo read-only. Nao corrigir durante a auditoria.
 - [ ] Contagem de variants.
 - [ ] Contagem de slots.
 - [ ] Contagem de token binds esperados vs encontrados.
+- [ ] Contagem de linhas documentais que citam property/slot/token/state inexistente.
+- [ ] Contagem de binds ausentes na documentação visual.
 - [ ] Contagem de textos com `autoRename=true`.
 - [ ] Contagem de textos documentais com altura fixa indevida.
 - [ ] Contagem de frames documentais com `clipsContent=true`.
 - [ ] Contagem de divergencias contra paginas modelo.
+- [ ] Contagem de divergências visuais relevantes contra screenshots/modelos.
 - [ ] Contagem de instance name mismatches.
 - [ ] Contagem de hardcoded fills/strokes relevantes.
 - [ ] Contagem de loose nodes.
 - [ ] Lista de falhas com node IDs.
+
+## Resultado
+
+- [ ] Contrato: `passou` ou `falhou`.
+- [ ] Documentação: `passou` ou `falhou`.
+- [ ] Visual: `passou` ou `falhou`.
+- [ ] Aprovação final só passa quando os três itens acima passam.

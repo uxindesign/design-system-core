@@ -50,6 +50,8 @@ Armadilhas operacionais conhecidas:
 
 ## Adapters por agente
 
+Fluxos multi-agent portáveis vivem em `docs/agents/protocol.md`, com orquestração em `docs/agents/orchestration.md` e adapters em `docs/agents/adapters/`.
+
 ### Claude Code
 
 - `CLAUDE.md` deve importar ou apontar para `AGENTS.md`.

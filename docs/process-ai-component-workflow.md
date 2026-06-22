@@ -59,6 +59,10 @@ Para reduzir mistura de responsabilidades, trabalhos de componente/padrão devem
 
 Comandos curtos oficiais ficam em `docs/agents/quick-commands.md`. Quando o owner disser algo como "Audite Menu como Figma Auditor" ou "Execute a spec aprovada como Figma Builder", o agente deve resolver o atalho para a role/checklist correspondente sem exigir o prompt completo.
 
+Para trabalho multi-chat ou multi-IA, use o protocolo portatil em `docs/agents/protocol.md` e crie uma run com `npm run agents:create-run`. A run e o artefato compartilhado entre agentes; ela evita depender de copy/paste manual entre chats.
+
+Para Product Designers, o Orchestrator deve operar essa camada tecnica nos bastidores. O fluxo designer-facing esta em `docs/agents/product-designer-workflow.md`: necessidade -> planejamento -> Figma -> auditoria -> aprovacao -> repo -> testes -> web.
+
 | Momento | Role | Arquivo |
 |---|---|---|
 | Brief, classificação e spec | DS Architect | `docs/agents/roles/ds-architect.md` |
@@ -79,7 +83,7 @@ Bloqueado antes de: qualquer escrita no Figma ou repo
 
 Regra: **quem constrói não aprova o próprio trabalho**. A role Figma Builder pode fazer uma leitura pós-escrita básica para confirmar que o script rodou, mas a aprovação estrutural deve vir de Figma Auditor.
 
-## Gate permanente — paridade de documentação Figma
+## Gate permanente — paridade visual e documental Figma
 
 Sempre que o trabalho criar, editar ou reorganizar documentação visual no Figma, este gate é obrigatório. O owner não precisa pedir explicitamente.
 
@@ -87,8 +91,9 @@ Antes de escrever:
 
 1. Escolher 2-3 páginas maduras do DS Core como modelo.
 2. Ler as propriedades reais dessas páginas: root, seções, tabelas, textos, dividers, exemplos e wrappers de component sets.
-3. Registrar o modelo escolhido na spec ou no checkpoint.
-4. Tratar o modelo como contrato operacional, não como inspiração visual vaga.
+3. Capturar screenshot do alvo atual quando existir e screenshots dos modelos.
+4. Registrar o modelo escolhido na spec ou no checkpoint.
+5. Tratar o modelo como contrato operacional, não como inspiração visual vaga.
 
 Regras mínimas:
 
@@ -96,8 +101,10 @@ Regras mínimas:
 - Frames documentais usam `clipsContent=false`, salvo exceção justificada e aprovada.
 - Root e seções seguem o padrão vivo de auto-layout, padding/gap/binds e background.
 - Tabelas, linhas, exemplos, labels de matriz e component sets ficam aninhados na seção correta.
+- Tabelas de propriedades, tokens e acessibilidade são derivadas da API real do componente. Uma property, slot, token ou estado removido/renomeado deve sair da documentação na mesma matriz de contrato.
 - Component matrix pode usar frame `NONE` quando o padrão vivo exigir posicionamento manual, mas não pode cortar focus ring, overlay ou conteúdo.
 - Nenhum node gerado fica solto no canvas fora do frame raiz aprovado.
+- A página resultante precisa parecer parte da mesma família visual dos modelos escolhidos: escala, densidade, espaçamentos, hierarquia, disposição dos component sets, exemplos e tabelas devem estar alinhados ou ter exceção aprovada.
 
 Depois de escrever, a auditoria deve reportar contagens objetivas:
 
@@ -106,9 +113,22 @@ Depois de escrever, a auditoria deve reportar contagens objetivas:
 - seções esperadas sem auto-layout;
 - root sem background ou binds esperados;
 - nós soltos fora do root;
+- linhas de documentação que citam property/slot/token inexistente;
+- bindings ausentes em documentação visual quando a página modelo usa binding equivalente;
 - divergências relevantes contra as páginas modelo.
 
 Qualquer contagem acima de zero bloqueia "pronto" até correção ou justificativa explícita do owner.
+
+O Builder não pode declarar `pronto para auditoria` somente porque a matriz técnica passou. O status final do Builder deve separar três resultados:
+
+```md
+- contrato: passou | falhou
+- documentação: passou | falhou
+- visual: passou | falhou
+- status: pronto para auditoria | bloqueado
+```
+
+Se qualquer um dos três falhar, o status é `bloqueado`. Quando o owner rejeita visualmente o draft, o agente deve parar escritas no Figma, fazer auditoria read-only contra os modelos vivos e apresentar plano de recuperação com node IDs antes de qualquer nova edição.
 
 ## Gate 0 — estado atual e escopo
 
@@ -245,6 +265,51 @@ Formato obrigatório:
 
 Sem aprovação explícita do owner, não escreva no Figma.
 
+### Gate 4.1 — matriz de contrato Figma
+
+Antes de qualquer escrita no Figma, a spec aprovada deve virar uma matriz de contrato implementável. Esta matriz é o artefato operacional do Figma Builder e do Figma Auditor. Sem ela, o Builder fica bloqueado mesmo que a spec visual esteja aprovada.
+
+A matriz deve ser derivada de componentes vivos comparáveis do DS Core, não de heurística. Para componentes novos ou padrões próximos de componentes existentes, use pelo menos 2-3 modelos maduros relevantes. Para form controls e padrões de popup/lista, inclua os componentes equivalentes já aceitos quando existirem, por exemplo `Input Text`, `Select`, `Textarea`, `Menu` ou `Button`.
+
+Cada linha da matriz deve declarar:
+
+| Campo | Obrigatório | Descrição |
+|---|---:|---|
+| `part` | sim | Parte anatômica pública ou sublayer afetado. |
+| `targetNode` | sim | Node ID quando já existir, ou nome/caminho esperado quando será criado. |
+| `figmaProperty` | sim | Propriedade exata a bindar ou preservar (`fills.color`, `strokes.color`, `strokeWeight`, `cornerRadius`, `paddingLeft`, `itemSpacing`, `characters`, `visible`, `mainComponent`, etc.). |
+| `componentProperty` | quando aplicável | Property pública esperada no painel e referência real (`componentPropertyReferences`). |
+| `componentToken` | quando aplicável | Variable da collection `Component`, por nome e, se já existir, por `VariableID`. |
+| `semanticAlias` | quando aplicável | Semantic esperado como alvo do Component token. |
+| `modelEvidence` | sim | Página/componente/model node usado como referência. |
+| `validation` | sim | Como o Auditor deve comprovar a linha depois da escrita. |
+| `exception` | quando houver | Justificativa aprovada para não seguir o padrão vivo. |
+
+Regras bloqueantes:
+
+- A matriz deve ter `unmappedRows=0` antes da escrita.
+- Scripts de Figma só podem aplicar pares explícitos `nodeId/path + figmaProperty + variableId/componentProperty`. Busca por nome pode localizar o node, mas não pode escolher token, camada, property pública ou anatomia.
+- É proibido bindar "o token parecido", "qualquer variável disponível" ou "o primeiro token que passa na contagem".
+- É proibido remover property pública, trocar slot, renomear instância, recriar sublayer ou alterar variant fora de uma linha da matriz.
+- Qualquer token novo, alias novo, exceção de camada ou diferença contra os modelos vivos volta para aprovação do owner antes da escrita.
+- Contagem agregada não aprova implementação. `N/M bindings` só é evidência válida junto da lista de bindings por linha da matriz.
+
+Formato mínimo:
+
+```md
+**Matriz de contrato Figma**
+- Modelos vivos:
+- Linhas:
+
+| part | targetNode | figmaProperty | componentProperty | componentToken | semanticAlias | modelEvidence | validation | exception |
+|---|---|---|---|---|---|---|---|---|
+
+- unmappedRows:
+- novos tokens:
+- exceções:
+- bloqueado antes de:
+```
+
 ### Padrão de página Figma obrigatório
 
 Antes de criar ou redesenhar uma página no Figma, o agente deve inspecionar pelo menos 2 páginas equivalentes do DS Core no Figma vivo. A spec precisa registrar:
@@ -272,12 +337,15 @@ Qualquer exceção precisa ser explicada e aprovada antes da escrita no Figma.
 A primeira execução deve ser draft:
 
 1. Criar ou reorganizar dentro do padrão de página aprovado.
-2. Preservar padrões do DS Core: nomes, ordenação, tokens, text styles, Lucide, focus ring, auto-layout e aninhamento de seções.
-3. Usar componentes existentes dentro de slots e exemplos.
-4. Validar por leitura estrutural depois da escrita.
-5. Para página de componente, validar `topLevelCount`, nome do frame raiz, ordem de seções e ausência de nós gerados soltos.
-6. Verificar screenshot quando layout, spacing, iconografia ou texto mudar.
-7. Apresentar evidência e aguardar aprovação antes de sincronizar repo.
+2. Executar somente linhas aprovadas na matriz de contrato.
+3. Preservar padrões do DS Core: nomes, ordenação, tokens, text styles, Lucide, focus ring, auto-layout e aninhamento de seções.
+4. Usar componentes existentes dentro de slots e exemplos.
+5. Validar por leitura estrutural depois da escrita.
+6. Para página de componente, validar `topLevelCount`, nome do frame raiz, ordem de seções e ausência de nós gerados soltos.
+7. Verificar screenshot sempre que houver página/documentação visual, component set, exemplo, layout, spacing, iconografia ou texto alterado.
+8. Comparar o screenshot final contra os screenshots dos modelos registrados antes da escrita.
+9. Validar que tabelas de propriedades, tokens, exemplos e acessibilidade refletem a API real do componente após a escrita.
+10. Apresentar evidência e aguardar aprovação antes de sincronizar repo.
 
 Se o draft for rejeitado, corrija o draft ou descarte o trabalho. Não consolidar no repo um Figma ainda em disputa.
 
@@ -285,10 +353,16 @@ Evidência mínima após draft:
 
 - node IDs criados/alterados;
 - resumo do que foi alterado;
-- screenshot ou motivo objetivo para não ter screenshot;
+- screenshot do alvo final e screenshots/modelos usados na comparação;
 - problemas encontrados;
 - validação estrutural feita;
+- validação documental feita;
+- validação visual feita;
+- matriz executada com `unmappedRows=0`;
+- divergências contra a matriz, mesmo quando corrigidas;
+- divergências contra os screenshots/modelos vivos, mesmo quando corrigidas;
 - validação do padrão de página (`topLevelCount`, root, seções, loose nodes);
+- status separado de contrato, documentação e visual;
 - o que ainda está bloqueado antes do repo.
 
 ## Gate 6 — repo após aprovação
@@ -319,11 +393,14 @@ Antes de escrever no repo, apresente:
 Para Figma:
 
 - dump antes/depois quando editar component set existente;
+- matriz de contrato antes/depois, com `part`, `targetNode`, `figmaProperty`, `componentToken`, `semanticAlias`, `modelEvidence` e `validation`;
+- zero linhas implementadas fora da matriz, exceto exceção aprovada;
 - `componentPropertyDefinitions` preservadas ou intencionalmente alteradas;
 - texts editáveis ligados a `componentPropertyReferences.characters`;
 - booleans, instance swaps e slots ligados aos layers corretos;
 - sem `Icon Placeholder`, `glyph`, hardcoded indevido ou `ALL_SCOPES`;
-- Component variables apontando para Semantic;
+- Component variables apontando para Semantic, sem raw value, Foundation direto ou Component -> Component;
+- focus ring validado por anatomia, incluindo contagem de variants focados, layers `Focus Ring`, uso de borda estrutural como foco e bindings de cor/largura/radius;
 - página de componente com um root frame, seções internas e zero nós gerados soltos;
 - screenshot revisado.
 

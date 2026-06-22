@@ -4,6 +4,8 @@
 
 Este arquivo existe apenas para compatibilidade com Claude Code. A fonte canônica do projeto é `AGENTS.md`; integrações compartilhadas ficam em `docs/agent-integrations.md`.
 
+Para fluxos multi-agent, use o protocolo portável em `docs/agents/protocol.md` e o adapter específico em `docs/agents/adapters/claude.md`.
+
 ## Antes da primeira escrita na sessão
 
 ```bash

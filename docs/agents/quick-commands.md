@@ -4,6 +4,26 @@ Use estes comandos curtos no chat. O agente deve resolver a role, ler os arquivo
 
 Se o agente ignorar o fluxo, use o prompt completo em `docs/agents/README.md`.
 
+Para trabalhos com varias etapas, prefira criar uma run:
+
+```txt
+Inicie uma agent run para Combobox.
+```
+
+Para Product Designers, prefira:
+
+```txt
+Inicie uma run de DS Core para Combobox.
+Conduza o fluxo para Product Designer: planeje, pare para minha aprovacao, execute no Figma, audite, pare para aprovacao visual e so depois leve ao repo.
+Nao me peca para rodar comandos; rode o que for necessario e me traga os gates.
+```
+
+O Orchestrator deve rodar nos bastidores:
+
+```bash
+npm run agents:create-run -- --slug combobox --title "Combobox"
+```
+
 ## Planejamento
 
 ```txt

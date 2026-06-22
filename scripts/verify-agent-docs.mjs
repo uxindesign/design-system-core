@@ -14,6 +14,17 @@ const requiredFiles = [
   "CLAUDE.md",
   "GEMINI.md",
   "docs/agent-integrations.md",
+  "docs/agents/README.md",
+  "docs/agents/product-designer-workflow.md",
+  "docs/agents/protocol.md",
+  "docs/agents/orchestration.md",
+  "docs/agents/grounding.md",
+  "docs/agents/quick-commands.md",
+  "docs/agents/templates/figma-contract-matrix.md",
+  "docs/agents/adapters/codex.md",
+  "docs/agents/adapters/claude.md",
+  "docs/agents/adapters/gemini.md",
+  "docs/agents/adapters/cursor.md",
   ".claude/settings.example.json",
 ];
 
@@ -24,8 +35,8 @@ const requiredIgnores = [
 ];
 
 const adapterRequirements = [
-  { file: "CLAUDE.md", includes: ["AGENTS.md", "docs/agent-integrations.md"] },
-  { file: "GEMINI.md", includes: ["AGENTS.md", "docs/agent-integrations.md"] },
+  { file: "CLAUDE.md", includes: ["AGENTS.md", "docs/agent-integrations.md", "docs/agents/protocol.md"] },
+  { file: "GEMINI.md", includes: ["AGENTS.md", "docs/agent-integrations.md", "docs/agents/protocol.md"] },
 ];
 
 const forbiddenPatterns = [

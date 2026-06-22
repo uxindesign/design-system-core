@@ -2,6 +2,15 @@
 
 Esta pasta define roles, checklists e templates para agentes IA trabalhando no DS Core. Ela complementa `AGENTS.md` e `docs/process-ai-component-workflow.md`; nao substitui ADRs, Figma vivo, tokens ou validadores.
 
+Para orquestracao portatil entre diferentes IAs, leia tambem:
+
+- `docs/agents/grounding.md` — **obrigatorio para toda role** (regras anti-alucinacao)
+- `docs/agents/protocol.md`
+- `docs/agents/orchestration.md`
+- `docs/agents/adapters/`
+
+Para uso por Product Designers, comece por `docs/agents/product-designer-workflow.md`. Esse fluxo esconde terminal, scripts e handoffs tecnicos atras de um Orchestrator.
+
 ## Objetivo
 
 Separar responsabilidades para reduzir retrabalho:
@@ -24,6 +33,13 @@ Audite Menu como Figma Auditor.
 ```
 
 Os prompts completos abaixo servem para abrir uma thread/agente mais controlado ou para corrigir rota quando o agente ignorar o processo.
+
+Para trabalhos maiores, o Orchestrator deve criar uma run para evitar copy/paste entre chats:
+
+```bash
+npm run agents:create-run -- --slug combobox --title "Combobox"
+npm run agents:next-step -- docs/agents/runs/YYYY-MM-DD-combobox
+```
 
 Antes de qualquer acao, o agente deve declarar:
 

@@ -2,6 +2,8 @@
 
 Este arquivo existe apenas para compatibilidade com Gemini CLI. A fonte canônica do projeto é `AGENTS.md`; integrações compartilhadas ficam em `docs/agent-integrations.md`.
 
+Para fluxos multi-agent, use o protocolo portável em `docs/agents/protocol.md` e o adapter específico em `docs/agents/adapters/gemini.md`.
+
 **Comece sempre por [`AGENTS.md`](./AGENTS.md)** antes de qualquer escrita.
 
 ## Antes da primeira escrita na sessão
