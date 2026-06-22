@@ -54,6 +54,7 @@ const COMPONENTS = [
   { name: "Card", slug: "card", css: "card.css", html: "card.html" },
   { name: "Modal", slug: "modal", css: "modal.css", html: "modal.html" },
   { name: "Tooltip", slug: "tooltip", css: "tooltip.css", html: "tooltip.html" },
+  { name: "Menu", slug: "menu", css: "menu.css", html: "menu.html" },
   { name: "Tabs", slug: "tabs", css: "tabs.css", html: "tabs.html" },
   { name: "Breadcrumb", slug: "breadcrumb", css: "breadcrumb.css", html: "breadcrumb.html" },
   { name: "Avatar", slug: "avatar", css: "avatar.css", html: "avatar.html" },

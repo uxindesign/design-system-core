@@ -1,6 +1,6 @@
 # Token schema — Design System Core
 
-> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-06-18. Não editar manualmente.
+> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-06-22. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
 > Versão atual: **1.0.0-beta.5**
 
@@ -69,6 +69,7 @@ semantic.z.*
 
 Arquivos canônicos em `tokens/component/`:
 
+- `action-menu.json`
 - `alert.json`
 - `avatar.json`
 - `badge.json`
@@ -82,6 +83,7 @@ Arquivos canônicos em `tokens/component/`:
 - `focus-ring.json`
 - `form-field.json`
 - `input.json`
+- `menu.json`
 - `modal.json`
 - `radio.json`
 - `select.json`

@@ -18,6 +18,7 @@ Capacidades esperadas quando houver MCP Figma:
 - Leitura: metadata, design context, variables, screenshots.
 - Escrita: Plugin API via `use_figma` ou ferramenta equivalente.
 - Validação: sempre ler de volta após escrita e, quando layout/spacing/icon/texto mudar, verificar screenshot.
+- Componentes e padrões novos: antes de escrever no Figma, seguir `docs/process-ai-component-workflow.md` para benchmark, brief/spec aprovado, padrão de página Figma validado e draft revisado.
 
 Fallback sem MCP Figma:
 

@@ -969,6 +969,11 @@
         "$value": "{foundation.shadow.sm}",
         "$description": "Elevação leve de cards."
       },
+      "overlay": {
+        "$type": "shadow",
+        "$value": "{foundation.shadow.md}",
+        "$description": "Elevação média para menus e overlays contextuais."
+      },
       "modal": {
         "$type": "shadow",
         "$value": "{foundation.shadow.xl}",

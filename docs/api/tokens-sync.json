@@ -1,10 +1,10 @@
 {
   "version": "1.0.0-beta.5",
   "totals": {
-    "jsonTokens": 1323,
-    "sharedTokens": 859,
-    "lightTokens": 232,
-    "darkTokens": 232,
+    "jsonTokens": 1365,
+    "sharedTokens": 899,
+    "lightTokens": 233,
+    "darkTokens": 233,
     "errors": 0,
     "warnings": 0
   },
@@ -16,18 +16,18 @@
     "docTokenDrift": [],
     "jsonVsFigma": {
       "skipped": false,
-      "snapshotAge": "0h",
+      "snapshotAge": "1h",
       "snapshotFreshness": "fresh",
       "snapshotMaxAgeHours": 24,
       "summary": {
-        "figmaVariableCount": 1039,
+        "figmaVariableCount": 1078,
         "figmaCollectionCount": 3,
         "VALUE_DRIFT": 0,
         "NEEDS_SYNC": 0,
         "DRIFT_FROM_SOURCE": 0,
         "ALIAS_BROKEN": 0,
         "CSS_ONLY": 7,
-        "BY_DESIGN": 124
+        "BY_DESIGN": 127
       },
       "divergences": [],
       "diffs": {
@@ -602,6 +602,12 @@
           },
           {
             "file": "semantic/light.json",
+            "token": "semantic.shadow.overlay",
+            "side": "json-only",
+            "json": "{foundation.shadow.md}"
+          },
+          {
+            "file": "semantic/light.json",
             "token": "semantic.shadow.modal",
             "side": "json-only",
             "json": "{foundation.shadow.xl}"
@@ -811,6 +817,12 @@
           },
           {
             "file": "semantic/dark.json",
+            "token": "semantic.shadow.overlay",
+            "side": "json-only",
+            "json": "{foundation.shadow.md}"
+          },
+          {
+            "file": "semantic/dark.json",
             "token": "semantic.shadow.modal",
             "side": "json-only",
             "json": "{foundation.shadow.xl}"
@@ -856,6 +868,12 @@
             "token": "component.modal.shadow.default",
             "side": "json-only-downstream",
             "json": "{semantic.shadow.modal}"
+          },
+          {
+            "file": "component/menu.json",
+            "token": "component.menu.surface.shadow.default",
+            "side": "json-only-downstream",
+            "json": "{semantic.shadow.overlay}"
           }
         ]
       }

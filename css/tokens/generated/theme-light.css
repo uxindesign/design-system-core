@@ -169,6 +169,7 @@
   --ds-size-layout-xl: var(--ds-dimension-1024); /** 1024px. Page container default. */
   --ds-size-layout-2xl: var(--ds-dimension-1280); /** 1280px. Page max-width. */
   --ds-shadow-card: var(--ds-shadow-sm); /** Elevação leve de cards. */
+  --ds-shadow-overlay: var(--ds-shadow-md); /** Elevação média para menus e overlays contextuais. */
   --ds-shadow-modal: var(--ds-shadow-xl); /** Elevação forte de modais e popovers. */
   --ds-radius-sm: var(--ds-radius-4); /** 4px. Tags, badges, chips pequenos. */
   --ds-radius-md: var(--ds-radius-8); /** 8px. Cards, alerts — radius padrão médio. */

@@ -207,6 +207,7 @@ const knownComponents = [
   { name: 'Card',        css: 'card'       },
   { name: 'Modal',       css: 'modal'      },
   { name: 'Tooltip',     css: 'tooltip'    },
+  { name: 'Menu',        css: 'menu'       },
   { name: 'Tabs',        css: 'tabs'       },
   { name: 'Breadcrumb',  css: 'breadcrumb' },
   { name: 'Avatar',      css: 'avatar'     },

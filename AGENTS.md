@@ -118,6 +118,30 @@ Análogo a categorias CSS-only de tokens, alguns **componentes** existem só no 
 2. Quando um componente hospeda conteúdo customizado ou slot (ex: Modal/Card), o conteúdo de exemplo deve ser composto com componentes reais do DS (`Button`, `Input`, `Select`, `Textarea`, etc.) sempre que eles já existirem.
 3. Só criar markup ad hoc em docs quando não existir componente DS correspondente ou quando o exemplo estiver documentando explicitamente um primitive/layout genérico.
 
+### 4.2.2 Criar ou redesenhar componentes com agente IA
+
+Novo componente, redesenho estrutural ou novo padrão de documentação **não começa com escrita no Figma nem no repo**. Primeiro siga `docs/process-ai-component-workflow.md` e obtenha aprovação explícita do owner para o brief/spec.
+
+Para trabalho com agentes especializados, use também `docs/agents/README.md`. Comandos curtos oficiais vivem em `docs/agents/quick-commands.md` e devem ser resolvidos para a role/checklist correspondente. Cada agente deve declarar a role e o checklist antes de agir (`DS Architect`, `Figma Builder`, `Figma Auditor`, `Token Sync Agent`, `Repo Component Agent` ou `Release Agent`). A regra operacional é: **quem constrói não aprova o próprio trabalho**.
+
+Gate obrigatório antes de qualquer escrita:
+
+1. **Estado atual isolado**: rodar preflight/status, identificar sujeira existente e declarar o que fica fora do escopo.
+2. **Benchmark curto**: olhar 2-3 design systems maduros no Figma ou documentação pública relevante, incluindo pelo menos uma referência fornecida pelo owner quando existir.
+3. **Classificação do padrão**: definir se é componente, primitive, composição, overlay, form control, menu, combobox ou outro padrão com semântica própria.
+4. **Brief aprovado**: problema, quando usar/não usar, diferença para componentes próximos, padrão ARIA quando aplicável, composição com componentes DS existentes e nível de interatividade.
+5. **Spec Figma aprovada**: anatomia, slots reais, propriedades públicas, variants, states, tokens necessários, regras de conteúdo e exemplos mínimos para designers.
+6. **Padrão de página Figma aprovado**: antes de criar página nova ou documentação visual, inspecionar 2-3 páginas equivalentes no Figma vivo e registrar frame raiz, largura, margens, ordem de seções, padrão de tabelas/exemplos e onde component sets ficam aninhados.
+7. **Draft Figma primeiro**: criar ou alterar apenas como draft/revisão, validar visualmente e estruturalmente, e só então espelhar no repo.
+
+Para páginas de componentes no Figma, o padrão atual é **um único frame raiz** com o nome do componente e seções internas (`header`, `divider`, `section-*`). Componentes, component sets, exemplos, labels de matriz e documentação visual ficam dentro das seções. Nós gerados soltos no canvas da página são regressão, exceto quando uma página existente provar que aquele componente segue outro padrão e o owner aprovar a exceção.
+
+Qualquer criação/edição de documentação visual no Figma ativa automaticamente o gate permanente de paridade documental em `docs/process-ai-component-workflow.md`: consultar páginas maduras como modelo antes de escrever, manter textos com altura automática/height hug, evitar `clipsContent=true` em frames documentais salvo exceção aprovada, preservar root/seções/tabelas conforme o padrão vivo e auditar contagens objetivas depois. O owner não precisa lembrar essa regra em cada tarefa.
+
+O agente deve mostrar o status do gate atual e parar quando faltar aprovação. "Ok", "vai" ou "pode seguir" só contam como aprovação para o gate imediatamente apresentado; não autorizam automaticamente Figma, repo, commit ou push.
+
+Se o usuário pedir uma correção pontual em componente existente, mantenha o escopo estreito e use o fluxo de edição/auditoria de Figma da seção 4.3. Não transformar correção pequena em redesign sem autorização.
+
 ### 4.3 Editar componentes no Figma
 
 Editar um component set no Figma exige preservar a API pública do componente, não só o visual. Antes e depois de qualquer mudança em variants, sublayers, icons, texts ou bindings, execute uma auditoria do component set.
@@ -131,6 +155,7 @@ Editar um component set no Figma exige preservar a API pública do componente, n
    - Ordem dos sublayers dentro da anatomia afetada (`Field`, `Text Frame`, `Icon Left`, `Chevron`, `Error Message`, etc.).
 2. Não extrapole de um variant para todos sem confirmar os outros variants. Se o componente tem `sm/md/lg` e estados, leia pelo menos um variant por size e todos os states afetados.
 3. Antes de substituir um layer, registre quais propriedades públicas ele alimenta. Ao recriar o layer, religue as mesmas referências de componente.
+4. Se a edição criar ou reorganizar página de componente, faça dump do padrão de 2-3 páginas equivalentes antes de escrever: frame raiz, largura, margens, ordem das seções, tabelas, exemplos e aninhamento de component sets.
 
 #### Regras de properties no painel do Figma
 
@@ -197,6 +222,7 @@ Editar um component set no Figma exige preservar a API pública do componente, n
 11. Verificar screenshot do component set quando a mudança mexer em layout, icon, spacing ou texto.
 12. Se variables Figma foram alteradas, regenerar `.figma-snapshot.json` antes de afirmar que Figma↔JSON está em dia.
 13. Se a mudança impacta repo, repetir o fluxo Figma → JSON → CSS gerado → docs/API/LLM → `verify:tokens` → testes relevantes.
+14. Para página nova ou reorganizada no Figma, validar objetivamente que há um único frame raiz nomeado pelo componente, seções internas na ordem esperada e zero nós gerados soltos no canvas da página.
 
 ### 4.4 Sync Figma → JSON (após mudança visual feita no Figma)
 
@@ -354,10 +380,11 @@ CI (`.github/workflows/deploy.yml`) roda `build:tokens` em cada push pra main e 
 1. Este `AGENTS.md` (você está aqui).
 2. `docs/decisions/adr-index.md` — decisões arquiteturais ativas.
 3. `docs/system-principles.md` — princípios operacionais profundos.
-4. `docs/token-architecture.html` — arquitetura visual.
-5. `docs/process-figma-sync.md` — fluxo Figma↔JSON.
-6. `docs/backlog.md` — o que ainda está por fazer.
-7. Issue no GitHub ou perguntar ao owner.
+4. `docs/process-ai-component-workflow.md` — gate para agentes antes de criar/redesenhar componentes e padrões.
+5. `docs/token-architecture.html` — arquitetura visual.
+6. `docs/process-figma-sync.md` — fluxo Figma↔JSON.
+7. `docs/backlog.md` — o que ainda está por fazer.
+8. Issue no GitHub ou perguntar ao owner.
 
 ---
 

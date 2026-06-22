@@ -9,6 +9,11 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 ## [Não publicado]
 
 ### Adicionado
+- **Menu e padrão Action Menu documentados no repo.** Adicionados CSS e página de docs para Menu como base de comandos e Action Menu como composição recomendada com Button, roles ARIA e exemplos com ícones Lucide.
+- **Gate permanente de paridade para documentação Figma.** O processo de agents agora obriga consultar páginas maduras como modelo antes de criar/editar documentação visual, manter textos com altura automática/height hug, evitar `clipsContent=true` em frames documentais e auditar contagens objetivas de textos fixos, clips, nós soltos e divergências contra o modelo.
+- **Atalhos oficiais para agents especializados.** `docs/agents/quick-commands.md` documenta comandos curtos como "Audite Menu como Figma Auditor" e "Execute a spec aprovada como Figma Builder", resolvendo cada frase para role, checklist, template e bloqueios sem exigir prompts longos em todo uso.
+- **Estrutura de agents especializados para DS Core.** Adicionada `docs/agents/` com roles, checklists e templates para separar DS Architect, Figma Builder, Figma Auditor, Token Sync Agent, Repo Component Agent e Release Agent; `docs/process-ai-component-workflow.md` e `AGENTS.md` passam a exigir declaração de role/checklist e reforçam que quem constrói não aprova o próprio trabalho.
+- **Processo de agentes para novos componentes e padrões.** `AGENTS.md` agora exige isolamento do estado atual, benchmark, classificação, brief/spec aprovados, padrão de página Figma validado e draft Figma antes de qualquer escrita em Figma ou repo; `docs/process-ai-component-workflow.md` documenta checkpoints, bloqueios, padrão de frame raiz/seções e aprovação por gate para evitar execução prematura por agentes IA.
 - **Escala semântica de space expandida.** `semantic.space` passa a incluir `3xl` a `6xl` (`32/40/48/64px`) e `semantic.space.section` sobe para `48/64/80/96/120px` com novo `section.2xl`, mantendo aliases Figma ↔ JSON para gaps, paddings e separação macro.
 
 ### Corrigido

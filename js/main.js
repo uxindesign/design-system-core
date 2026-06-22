@@ -45,6 +45,7 @@
         { label: 'Button',     path: 'docs/button.html' },
         { label: 'Card',       path: 'docs/card.html' },
         { label: 'Divider',    path: 'docs/divider.html' },
+        { label: 'Menu',       path: 'docs/menu.html' },
         {
           label: 'Form',
           children: [
@@ -265,6 +266,7 @@
       'Alert': 'Alert',
       'Card': 'Card',
       'Modal': 'Modal',
+      'Menu': 'Menu',
       'Tooltip': 'Tooltip',
       'Tabs': 'Tabs',
       'Breadcrumb': 'Breadcrumb',

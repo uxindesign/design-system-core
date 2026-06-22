@@ -4257,11 +4257,14 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 1
+            "count": 4
           }
         ],
         "tokens": [
-          "component.card.bg.elevated"
+          "component.card.bg.elevated",
+          "component.menu.item.bg.default",
+          "component.menu.item.bg.focused",
+          "component.menu.item.bg.disabled"
         ],
         "figma": []
       }
@@ -4296,10 +4299,11 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [
+          "component.menu.surface.bg.default",
           "component.modal.bg.default"
         ],
         "figma": []
@@ -4328,7 +4332,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 9
+            "count": 11
           },
           {
             "file": "css/tokens/generated/theme-dark.css",
@@ -4347,6 +4351,8 @@
           "component.field.value.color.default",
           "component.form-field.label.color.default",
           "component.form-field.description.color.default",
+          "component.menu.item.content.color.hover",
+          "component.menu.item.content.color.focused",
           "component.modal.title.color.default",
           "component.tabs.label.color.hover",
           "semantic.icon.color.active",
@@ -4378,7 +4384,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 12
+            "count": 13
           },
           {
             "file": "css/tokens/generated/theme-dark.css",
@@ -4397,6 +4403,7 @@
           "component.field.value.color.readonly",
           "component.form-field.label.color.readonly",
           "component.form-field.helper.color.default",
+          "component.menu.item.content.color.default",
           "component.modal.body.color.default",
           "component.modal.description.color.default",
           "component.tabs.label.color.default",
@@ -4426,8 +4433,12 @@
             "count": 1
           },
           {
-            "file": "css/tokens/generated/component.css",
+            "file": "css/components/menu.css",
             "count": 1
+          },
+          {
+            "file": "css/tokens/generated/component.css",
+            "count": 2
           },
           {
             "file": "css/tokens/generated/theme-dark.css",
@@ -4440,6 +4451,7 @@
         ],
         "tokens": [
           "component.field.placeholder.color.default",
+          "component.menu.item.meta.color.default",
           "semantic.icon.color.subtle",
           "semantic.icon.color.subtle"
         ],
@@ -4461,7 +4473,7 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 6
+            "count": 8
           },
           {
             "file": "css/tokens/generated/theme-dark.css",
@@ -4477,6 +4489,8 @@
           "component.field.value.color.disabled",
           "component.form-field.label.color.disabled",
           "component.form-field.helper.color.disabled",
+          "component.menu.item.content.color.disabled",
+          "component.menu.item.meta.color.disabled",
           "component.tabs.label.color.disabled",
           "component.toggle.thumb.fill.off.disabled",
           "semantic.toned.content-disabled",
@@ -4590,13 +4604,14 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 3
+            "count": 4
           }
         ],
         "tokens": [
           "component.card.border-color.outlined",
           "component.divider.line.color.default",
-          "component.field.border-color.readonly"
+          "component.field.border-color.readonly",
+          "component.menu.surface.border-color.default"
         ],
         "figma": []
       }
@@ -4619,7 +4634,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 11
+            "count": 12
           }
         ],
         "tokens": [
@@ -4631,6 +4646,7 @@
           "component.checkbox.box.border-width.default",
           "component.divider.line.thickness.default",
           "component.field.border-width",
+          "component.menu.surface.border-width.default",
           "component.radio.control.border-width.unselected.default",
           "component.tabs.list.border-width.default",
           "component.toggle.track.border-width.default"
@@ -5417,6 +5433,10 @@
             "count": 1
           },
           {
+            "file": "css/components/menu.css",
+            "count": 5
+          },
+          {
             "file": "css/components/modal.css",
             "count": 1
           },
@@ -5502,6 +5522,10 @@
           {
             "file": "css/components/link.css",
             "count": 1
+          },
+          {
+            "file": "css/components/menu.css",
+            "count": 5
           },
           {
             "file": "css/components/modal.css",
@@ -6426,7 +6450,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 3
+            "count": 5
           },
           {
             "file": "css/tokens/generated/theme-dark.css",
@@ -6441,6 +6465,8 @@
           "component.badge.label.color.error.subtle",
           "component.form-field.required.color.default",
           "component.form-field.error.color.default",
+          "component.menu.item.content.color.destructive",
+          "component.menu.item.meta.color.destructive",
           "semantic.icon.color.error",
           "semantic.icon.color.error"
         ],
@@ -6705,8 +6731,12 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/menu.css",
+            "count": 1
+          },
+          {
             "file": "css/tokens/generated/component.css",
-            "count": 11
+            "count": 12
           }
         ],
         "tokens": [
@@ -6717,6 +6747,7 @@
           "component.form-field.error.icon-frame.padding-x.default",
           "component.input.icon-frame.padding-x.default",
           "component.input.text-frame.padding-x.default",
+          "component.menu.surface.gap.default",
           "component.select.chevron-frame.padding-x.default",
           "component.select.icon-frame.padding-x.default",
           "component.select.text-frame.padding-x.default",
@@ -6744,6 +6775,10 @@
             "count": 5
           },
           {
+            "file": "css/components/menu.css",
+            "count": 2
+          },
+          {
             "file": "css/components/radio.css",
             "count": 6
           },
@@ -6753,7 +6788,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 21
+            "count": 24
           },
           {
             "file": "css/utilities/layout.css",
@@ -6761,6 +6796,7 @@
           }
         ],
         "tokens": [
+          "component.action-menu.overlay.gap.default",
           "component.alert.content.gap.default",
           "component.badge.gap.default",
           "component.breadcrumb.gap.default",
@@ -6774,6 +6810,8 @@
           "component.input.gap.sm",
           "component.input.gap.md",
           "component.input.padding-x.sm",
+          "component.menu.item.gap.sm",
+          "component.menu.item.gap.md",
           "component.modal.heading.gap.default",
           "component.radio.content.gap.default",
           "component.select.gap.sm",
@@ -6805,6 +6843,10 @@
             "count": 2
           },
           {
+            "file": "css/components/menu.css",
+            "count": 1
+          },
+          {
             "file": "css/components/modal.css",
             "count": 6
           },
@@ -6818,7 +6860,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 26
+            "count": 30
           },
           {
             "file": "css/utilities/layout.css",
@@ -6840,6 +6882,10 @@
           "component.field.padding-y.sm",
           "component.input.gap.lg",
           "component.input.padding-x.md",
+          "component.menu.surface.padding.default",
+          "component.menu.item.gap.lg",
+          "component.menu.item.padding-x.sm",
+          "component.menu.item.padding-x.md",
           "component.modal.body.gap.sm",
           "component.modal.content-slot.gap.default",
           "component.modal.footer.gap.sm",
@@ -6875,12 +6921,16 @@
             "count": 2
           },
           {
+            "file": "css/components/menu.css",
+            "count": 1
+          },
+          {
             "file": "css/components/radio.css",
             "count": 1
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 15
+            "count": 16
           },
           {
             "file": "css/utilities/layout.css",
@@ -6895,6 +6945,7 @@
           "component.card.container.gap.default",
           "component.field.padding-y.lg",
           "component.input.padding-x.lg",
+          "component.menu.item.padding-x.lg",
           "component.modal.container.gap.sm",
           "component.modal.body.gap.md",
           "component.modal.footer.gap.md",
@@ -7064,7 +7115,7 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 7
+            "count": 8
           }
         ],
         "tokens": [
@@ -7073,6 +7124,7 @@
           "component.checkbox.focus-ring.radius.default",
           "component.divider.line.radius.default",
           "component.field.radius",
+          "component.menu.item.radius.default",
           "component.skeleton.text.radius.default",
           "component.skeleton.rectangle.radius.default"
         ],
@@ -7097,7 +7149,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 7
+            "count": 9
           }
         ],
         "tokens": [
@@ -7105,6 +7157,8 @@
           "component.button.focus-ring.radius.default",
           "component.card.radius.default",
           "component.input.focus-ring.radius.default",
+          "component.menu.surface.radius.default",
+          "component.menu.focus-ring.radius.default",
           "component.modal.radius.default",
           "component.select.focus-ring.radius.default",
           "component.textarea.focus-ring.radius.default"
@@ -8625,11 +8679,12 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [
-          "component.button.bg.outline.hover"
+          "component.button.bg.outline.hover",
+          "component.menu.item.bg.hover"
         ],
         "figma": []
       }
@@ -8964,6 +9019,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/menu.css",
+            "count": 1
+          },
+          {
             "file": "css/tokens/generated/component.css",
             "count": 2
           }
@@ -9103,7 +9162,7 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 9
+            "count": 10
           }
         ],
         "tokens": [
@@ -9111,6 +9170,7 @@
           "component.checkbox.box.size.sm",
           "component.form-field.error.icon.size.default",
           "component.input.icon.size.sm",
+          "component.menu.item.icon.size.sm",
           "component.radio.control.size.sm",
           "component.select.chevron.size.sm",
           "component.select.icon.size.sm",
@@ -9147,7 +9207,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 9
+            "count": 10
           }
         ],
         "tokens": [
@@ -9156,6 +9216,7 @@
           "component.button.icon.size.md",
           "component.checkbox.box.size.md",
           "component.input.icon.size.md",
+          "component.menu.item.icon.size.md",
           "component.modal.close.icon-size.sm",
           "component.radio.control.size.md",
           "component.select.chevron.size.md",
@@ -9183,13 +9244,14 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 10
+            "count": 11
           }
         ],
         "tokens": [
           "component.button.icon.size.lg",
           "component.checkbox.box.size.lg",
           "component.input.icon.size.lg",
+          "component.menu.item.icon.size.lg",
           "component.modal.close.icon-size.md",
           "component.modal.close.icon-size.lg",
           "component.radio.control.size.lg",
@@ -9220,7 +9282,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 11
+            "count": 12
           }
         ],
         "tokens": [
@@ -9229,6 +9291,7 @@
           "component.button.icon-only-width.sm",
           "component.checkbox.target.height.sm",
           "component.input.height.sm",
+          "component.menu.item.height.sm",
           "component.modal.close.size.sm",
           "component.radio.target.height.sm",
           "component.select.height.sm",
@@ -9254,7 +9317,7 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 10
+            "count": 11
           }
         ],
         "tokens": [
@@ -9263,6 +9326,7 @@
           "component.button.icon-only-width.md",
           "component.checkbox.target.height.md",
           "component.input.height.md",
+          "component.menu.item.height.md",
           "component.modal.close.size.md",
           "component.radio.target.height.md",
           "component.select.height.md",
@@ -9287,7 +9351,7 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 8
+            "count": 9
           }
         ],
         "tokens": [
@@ -9295,6 +9359,7 @@
           "component.button.icon-only-width.lg",
           "component.checkbox.target.height.lg",
           "component.input.height.lg",
+          "component.menu.item.height.lg",
           "component.modal.close.size.lg",
           "component.radio.target.height.lg",
           "component.select.height.lg",
@@ -9356,7 +9421,12 @@
       "contexto": "Use em `width`, `height` ou pra ícones, controles, layouts.",
       "decisao": "Aliasado a Foundation foundation.dimension.128.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/menu.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -9376,6 +9446,10 @@
         "css": [
           {
             "file": "css/components/card.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/menu.css",
             "count": 1
           }
         ],
@@ -9526,6 +9600,10 @@
       "decisao": "Aliasado a Foundation foundation.shadow.xl.",
       "usos": {
         "css": [
+          {
+            "file": "css/components/menu.css",
+            "count": 1
+          },
           {
             "file": "css/tokens/generated/component.css",
             "count": 1
@@ -9943,6 +10021,10 @@
       "decisao": "Aliasa foundation.z.40. Tooltip vive acima de UI mas abaixo de modal/toast. Token CSS-only (ADR-016): z-index não tem equivalente Figma Variable.",
       "usos": {
         "css": [
+          {
+            "file": "css/components/menu.css",
+            "count": 1
+          },
           {
             "file": "css/components/tooltip.css",
             "count": 1
@@ -19878,13 +19960,14 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 6
+            "count": 7
           }
         ],
         "tokens": [
           "component.alert.icon.color.info.subtle",
           "component.alert.close.icon.color.subtle",
           "component.input.icon.color.default",
+          "component.menu.item.icon.color.default",
           "component.modal.close.color.default",
           "component.select.chevron.color.default",
           "component.select.icon.color.default"
@@ -19948,11 +20031,12 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 3
+            "count": 4
           }
         ],
         "tokens": [
           "component.input.icon.color.disabled",
+          "component.menu.item.icon.color.disabled",
           "component.select.chevron.color.disabled",
           "component.select.icon.color.disabled"
         ],
@@ -20083,12 +20167,13 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 4
+            "count": 5
           }
         ],
         "tokens": [
           "component.alert.icon.color.error.subtle",
-          "component.form-field.error.icon.color.default"
+          "component.form-field.error.icon.color.default",
+          "component.menu.item.icon.color.destructive"
         ],
         "figma": []
       }
@@ -20216,12 +20301,13 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 4
+            "count": 5
           }
         ],
         "tokens": [
           "component.button.icon.stroke-width.sm",
           "component.input.icon.stroke-width.sm",
+          "component.menu.item.icon.stroke-width.sm",
           "component.select.chevron.stroke-width.sm",
           "component.select.icon.stroke-width.sm"
         ],
@@ -20247,7 +20333,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 7
+            "count": 8
           }
         ],
         "tokens": [
@@ -20256,6 +20342,7 @@
           "component.avatar.icon.stroke-width.sm",
           "component.button.icon.stroke-width.md",
           "component.input.icon.stroke-width.md",
+          "component.menu.item.icon.stroke-width.md",
           "component.select.chevron.stroke-width.md",
           "component.select.icon.stroke-width.md"
         ],
@@ -20281,13 +20368,14 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 6
+            "count": 7
           }
         ],
         "tokens": [
           "component.avatar.icon.stroke-width.md",
           "component.button.icon.stroke-width.lg",
           "component.input.icon.stroke-width.lg",
+          "component.menu.item.icon.stroke-width.lg",
           "component.modal.close.icon.stroke-width.default",
           "component.select.chevron.stroke-width.lg",
           "component.select.icon.stroke-width.lg"
@@ -21091,6 +21179,10 @@
             "count": 1
           },
           {
+            "file": "css/components/menu.css",
+            "count": 1
+          },
+          {
             "file": "css/components/modal.css",
             "count": 1
           },
@@ -21140,6 +21232,10 @@
           },
           {
             "file": "css/components/input.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/menu.css",
             "count": 1
           },
           {
@@ -21253,8 +21349,12 @@
             "count": 2
           },
           {
-            "file": "css/components/modal.css",
+            "file": "css/components/menu.css",
             "count": 2
+          },
+          {
+            "file": "css/components/modal.css",
+            "count": 3
           },
           {
             "file": "css/components/radio.css",
@@ -25068,6 +25168,863 @@
             "count": 1
           }
         ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.action-menu.overlay.gap.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xs",
+      "sentido": "Posicionamento do overlay de Action Menu.",
+      "escopo": [
+        "Action Menu"
+      ],
+      "contexto": "Usado pelo padrão Action Menu para afastar o overlay do trigger sem hardcode.",
+      "decisao": "Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/menu.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.menu.surface.bg.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.surface.elevated",
+      "sentido": "Background anatômico da superfície de Menu.",
+      "escopo": [
+        "Menu"
+      ],
+      "contexto": "Usado pela superfície `.ds-menu`.",
+      "decisao": "Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/menu.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.menu.surface.border-color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.subtle",
+      "sentido": "Border color anatômico da superfície de Menu.",
+      "escopo": [
+        "Menu"
+      ],
+      "contexto": "Usado pela superfície `.ds-menu`.",
+      "decisao": "Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/menu.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.menu.surface.border-width.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.border.width.default",
+      "sentido": "Border width anatômico da superfície de Menu.",
+      "escopo": [
+        "Menu"
+      ],
+      "contexto": "Usado pela superfície `.ds-menu`.",
+      "decisao": "Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/menu.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.menu.surface.radius.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.radius.lg",
+      "sentido": "Radius anatômico da superfície de Menu.",
+      "escopo": [
+        "Menu"
+      ],
+      "contexto": "Usado pela superfície `.ds-menu`.",
+      "decisao": "Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/menu.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.menu.surface.padding.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.sm",
+      "sentido": "Padding anatômico da superfície de Menu.",
+      "escopo": [
+        "Menu"
+      ],
+      "contexto": "Usado pela superfície `.ds-menu`.",
+      "decisao": "Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/menu.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.menu.surface.gap.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.2xs",
+      "sentido": "Gap anatômico entre itens de Menu.",
+      "escopo": [
+        "Menu"
+      ],
+      "contexto": "Usado pela superfície `.ds-menu`.",
+      "decisao": "Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/menu.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.menu.item.height.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.lg",
+      "sentido": "Altura anatômica do item de Menu por size.",
+      "escopo": [
+        "Menu"
+      ],
+      "contexto": "Usado pelos itens interativos do Menu.",
+      "decisao": "Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/menu.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.menu.item.height.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.xl",
+      "sentido": "Altura anatômica do item de Menu por size.",
+      "escopo": [
+        "Menu"
+      ],
+      "contexto": "Usado pelos itens interativos do Menu.",
+      "decisao": "Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/menu.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.menu.item.height.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.2xl",
+      "sentido": "Altura anatômica do item de Menu por size.",
+      "escopo": [
+        "Menu"
+      ],
+      "contexto": "Usado pelos itens interativos do Menu.",
+      "decisao": "Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/menu.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.menu.item.radius.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.radius.md",
+      "sentido": "Radius anatômico do item de Menu.",
+      "escopo": [
+        "Menu"
+      ],
+      "contexto": "Usado pelos itens interativos do Menu.",
+      "decisao": "Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/menu.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.menu.item.gap.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xs",
+      "sentido": "Gap anatômico do item de Menu por size.",
+      "escopo": [
+        "Menu"
+      ],
+      "contexto": "Usado pelos itens interativos do Menu.",
+      "decisao": "Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/menu.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.menu.item.gap.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xs",
+      "sentido": "Gap anatômico do item de Menu por size.",
+      "escopo": [
+        "Menu"
+      ],
+      "contexto": "Usado pelos itens interativos do Menu.",
+      "decisao": "Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/menu.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.menu.item.gap.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.sm",
+      "sentido": "Gap anatômico do item de Menu por size.",
+      "escopo": [
+        "Menu"
+      ],
+      "contexto": "Usado pelos itens interativos do Menu.",
+      "decisao": "Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/menu.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.menu.item.padding-x.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.sm",
+      "sentido": "Padding horizontal anatômico do item de Menu por size.",
+      "escopo": [
+        "Menu"
+      ],
+      "contexto": "Usado pelos itens interativos do Menu.",
+      "decisao": "Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/menu.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.menu.item.padding-x.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.sm",
+      "sentido": "Padding horizontal anatômico do item de Menu por size.",
+      "escopo": [
+        "Menu"
+      ],
+      "contexto": "Usado pelos itens interativos do Menu.",
+      "decisao": "Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/menu.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.menu.item.padding-x.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.md",
+      "sentido": "Padding horizontal anatômico do item de Menu por size.",
+      "escopo": [
+        "Menu"
+      ],
+      "contexto": "Usado pelos itens interativos do Menu.",
+      "decisao": "Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/menu.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.menu.item.bg.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.surface.raised",
+      "sentido": "Background anatômico do item de Menu por state.",
+      "escopo": [
+        "Menu"
+      ],
+      "contexto": "Usado pelos itens interativos do Menu.",
+      "decisao": "Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/menu.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.menu.item.bg.hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.outline.background.hover",
+      "sentido": "Background anatômico do item de Menu por state.",
+      "escopo": [
+        "Menu"
+      ],
+      "contexto": "Usado pelos itens interativos do Menu.",
+      "decisao": "Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/menu.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.menu.item.bg.focused": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.surface.raised",
+      "sentido": "Background anatômico do item de Menu por state.",
+      "escopo": [
+        "Menu"
+      ],
+      "contexto": "Usado pelos itens interativos do Menu.",
+      "decisao": "Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/menu.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.menu.item.bg.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.surface.raised",
+      "sentido": "Background anatômico do item de Menu por state.",
+      "escopo": [
+        "Menu"
+      ],
+      "contexto": "Usado pelos itens interativos do Menu.",
+      "decisao": "Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/menu.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.menu.item.content.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.default",
+      "sentido": "Cor anatômica do conteúdo do item de Menu por state.",
+      "escopo": [
+        "Menu"
+      ],
+      "contexto": "Usado pelos itens interativos do Menu.",
+      "decisao": "Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/menu.css",
+            "count": 4
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.menu.item.content.color.hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.strong",
+      "sentido": "Cor anatômica do conteúdo do item de Menu por state.",
+      "escopo": [
+        "Menu"
+      ],
+      "contexto": "Usado pelos itens interativos do Menu.",
+      "decisao": "Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/menu.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.menu.item.content.color.focused": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.strong",
+      "sentido": "Cor anatômica do conteúdo do item de Menu por state.",
+      "escopo": [
+        "Menu"
+      ],
+      "contexto": "Usado pelos itens interativos do Menu.",
+      "decisao": "Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/menu.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.menu.item.content.color.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.disabled",
+      "sentido": "Cor anatômica do conteúdo do item de Menu por state.",
+      "escopo": [
+        "Menu"
+      ],
+      "contexto": "Usado pelos itens interativos do Menu.",
+      "decisao": "Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/menu.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.menu.item.content.color.destructive": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.feedback.error.content-default",
+      "sentido": "Cor anatômica do conteúdo do item de Menu por state.",
+      "escopo": [
+        "Menu"
+      ],
+      "contexto": "Usado pelos itens interativos do Menu.",
+      "decisao": "Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/menu.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.menu.item.meta.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.subtle",
+      "sentido": "Cor anatômica de metadado ou shortcut do item de Menu por state.",
+      "escopo": [
+        "Menu"
+      ],
+      "contexto": "Usado por shortcuts e metadados laterais dos itens do Menu.",
+      "decisao": "Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/menu.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.menu.item.meta.color.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.disabled",
+      "sentido": "Cor anatômica de metadado ou shortcut do item de Menu por state.",
+      "escopo": [
+        "Menu"
+      ],
+      "contexto": "Usado por shortcuts e metadados laterais dos itens do Menu.",
+      "decisao": "Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/menu.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.menu.item.meta.color.destructive": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.feedback.error.content-default",
+      "sentido": "Cor anatômica de metadado ou shortcut do item de Menu por state.",
+      "escopo": [
+        "Menu"
+      ],
+      "contexto": "Usado por shortcuts e metadados laterais dos itens do Menu.",
+      "decisao": "Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/menu.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.menu.item.icon.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.icon.color.default",
+      "sentido": "Cor anatômica do ícone do item de Menu por state.",
+      "escopo": [
+        "Menu"
+      ],
+      "contexto": "Usado pelos ícones de itens do Menu.",
+      "decisao": "Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/menu.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.menu.item.icon.color.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.icon.color.disabled",
+      "sentido": "Cor anatômica do ícone do item de Menu por state.",
+      "escopo": [
+        "Menu"
+      ],
+      "contexto": "Usado pelos ícones de itens do Menu.",
+      "decisao": "Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/menu.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.menu.item.icon.color.destructive": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.icon.color.error",
+      "sentido": "Cor anatômica do ícone do item de Menu por state.",
+      "escopo": [
+        "Menu"
+      ],
+      "contexto": "Usado pelos ícones de itens do Menu.",
+      "decisao": "Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/menu.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.menu.item.icon.size.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.xs",
+      "sentido": "Tamanho anatômico do ícone do item de Menu por size.",
+      "escopo": [
+        "Menu"
+      ],
+      "contexto": "Usado pelos ícones de itens do Menu.",
+      "decisao": "Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/menu.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.menu.item.icon.size.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.sm",
+      "sentido": "Tamanho anatômico do ícone do item de Menu por size.",
+      "escopo": [
+        "Menu"
+      ],
+      "contexto": "Usado pelos ícones de itens do Menu.",
+      "decisao": "Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/menu.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.menu.item.icon.size.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.md",
+      "sentido": "Tamanho anatômico do ícone do item de Menu por size.",
+      "escopo": [
+        "Menu"
+      ],
+      "contexto": "Usado pelos ícones de itens do Menu.",
+      "decisao": "Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/menu.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.menu.item.icon.stroke-width.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.icon.stroke-width.regular.16",
+      "sentido": "Stroke width anatômico do ícone do item de Menu por size.",
+      "escopo": [
+        "Menu"
+      ],
+      "contexto": "Usado pelos ícones de itens do Menu.",
+      "decisao": "Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/menu.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.menu.item.icon.stroke-width.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.icon.stroke-width.regular.20",
+      "sentido": "Stroke width anatômico do ícone do item de Menu por size.",
+      "escopo": [
+        "Menu"
+      ],
+      "contexto": "Usado pelos ícones de itens do Menu.",
+      "decisao": "Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/menu.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.menu.item.icon.stroke-width.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.icon.stroke-width.regular.24",
+      "sentido": "Stroke width anatômico do ícone do item de Menu por size.",
+      "escopo": [
+        "Menu"
+      ],
+      "contexto": "Usado pelos ícones de itens do Menu.",
+      "decisao": "Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/menu.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.menu.focus-ring.radius.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.radius.lg",
+      "sentido": "Radius anatômico do focus ring do Menu.",
+      "escopo": [
+        "Menu"
+      ],
+      "contexto": "Usado no focus ring dos itens interativos do Menu.",
+      "decisao": "Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/menu.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.menu.surface.shadow.default": {
+      "layer": "component",
+      "type": "shadow",
+      "references": "semantic.shadow.overlay",
+      "sentido": "Shadow da superfície elevada do Menu.",
+      "escopo": [
+        "component",
+        "menu",
+        "surface",
+        "shadow"
+      ],
+      "contexto": "Use na superfície principal do Menu e composições Action Menu para refletir o Effect Style Figma elevation/2.",
+      "decisao": "Alias para semantic.shadow.overlay porque a elevação é contrato visual do Menu; shadow permanece CSS-only conforme ADR-016, mas deve espelhar o Effect Style aprovado no Figma.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "semantic.shadow.overlay": {
+      "layer": "semantic",
+      "type": "shadow",
+      "references": "foundation.shadow.md",
+      "sentido": "Shadow semântico para overlays contextuais.",
+      "escopo": [
+        "overlay",
+        "menu",
+        "popover",
+        "shadow"
+      ],
+      "contexto": "Use em overlays contextuais que flutuam sobre conteúdo sem a hierarquia forte de Modal.",
+      "decisao": "Aliasado a foundation.shadow.md para corresponder ao Effect Style Figma elevation/2, usado pelo Menu.",
+      "usos": {
+        "css": [],
         "tokens": [],
         "figma": []
       }

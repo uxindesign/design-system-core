@@ -168,6 +168,7 @@
   --ds-size-layout-xl: var(--ds-dimension-1024); /** 1024px. Page container default. */
   --ds-size-layout-2xl: var(--ds-dimension-1280); /** 1280px. Page max-width. */
   --ds-shadow-card: var(--ds-shadow-sm);
+  --ds-shadow-overlay: var(--ds-shadow-md);
   --ds-shadow-modal: var(--ds-shadow-xl);
   --ds-radius-sm: var(--ds-radius-4);
   --ds-radius-md: var(--ds-radius-8);

@@ -955,6 +955,10 @@
         "$type": "shadow",
         "$value": "{foundation.shadow.sm}"
       },
+      "overlay": {
+        "$type": "shadow",
+        "$value": "{foundation.shadow.md}"
+      },
       "modal": {
         "$type": "shadow",
         "$value": "{foundation.shadow.xl}"

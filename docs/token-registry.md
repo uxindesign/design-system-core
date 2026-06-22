@@ -1,6 +1,6 @@
 # Token Registry
 
-> Gerado automaticamente por `scripts/build-token-registry.mjs` em 2026-06-18. Não editar à mão — edite `tokens/registry.json` e rode `npm run build:registry`.
+> Gerado automaticamente por `scripts/build-token-registry.mjs` em 2026-06-22. Não editar à mão — edite `tokens/registry.json` e rode `npm run build:registry`.
 
 Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra arquitetural de camadas.
 
@@ -368,8 +368,8 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.border.overlay.default` | color | → `semantic.overlay.default` | Token semantic para border / overlay / default. | 2 |
 | `semantic.border.overlay.medium` | color | → `semantic.overlay.medium` | Token semantic para border / overlay / medium. | 2 |
 | `semantic.border.strong` | color | → `foundation.color.neutral.600` | Borda neutra forte — emphasis em separadores. | 3 |
-| `semantic.border.subtle` | color | → `foundation.color.neutral.200` | Borda neutra sutil — chips, code blocks. | 4 |
-| `semantic.border.width.default` | dimension | → `foundation.border.width.1` | Border-width default. | 13 |
+| `semantic.border.subtle` | color | → `foundation.color.neutral.200` | Borda neutra sutil — chips, code blocks. | 5 |
+| `semantic.border.width.default` | dimension | → `foundation.border.width.1` | Border-width default. | 14 |
 | `semantic.border.width.focus` | dimension | → `foundation.border.width.2` | Border-width focus. | 2 |
 | `semantic.border.width.strong` | dimension | → `foundation.border.width.2` | Border-width strong. | 5 |
 
@@ -393,12 +393,12 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `semantic.content.brand` | color | → `semantic.brand.background.default` | Token semantic para content / brand. | 2 |
-| `semantic.content.default` | color | → `foundation.color.neutral.600` | Texto secundário — descrições, helper text, meta-info. | 19 |
-| `semantic.content.disabled` | color | → `foundation.color.neutral.500` | Texto disabled — controles e items inativos. | 13 |
+| `semantic.content.default` | color | → `foundation.color.neutral.600` | Texto secundário — descrições, helper text, meta-info. | 20 |
+| `semantic.content.disabled` | color | → `foundation.color.neutral.500` | Texto disabled — controles e items inativos. | 15 |
 | `semantic.content.hover` | color | → `foundation.color.neutral.700` | Conteúdo neutro em hover. | 6 |
 | `semantic.content.inverse` | color | → `foundation.color.neutral.50` | Texto invertido — sobre background.inverse (tooltips, badges escuros em light). | 5 |
-| `semantic.content.strong` | color | → `foundation.color.neutral.900` | Texto primário — body, headings, labels principais. | 16 |
-| `semantic.content.subtle` | color | → `foundation.color.neutral.500` | Texto terciário — caption, footnote, timestamps. | 7 |
+| `semantic.content.strong` | color | → `foundation.color.neutral.900` | Texto primário — body, headings, labels principais. | 18 |
+| `semantic.content.subtle` | color | → `foundation.color.neutral.500` | Texto terciário — caption, footnote, timestamps. | 9 |
 
 ### semantic.content-placeholder
 
@@ -439,11 +439,11 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.feedback.error.background.default` | color | → `foundation.color.red.600` | Fill de feedback erro (vermelho) em estado default. | 5 |
 | `semantic.feedback.error.background.disabled` | color | → `foundation.color.disabled.error.light` | Fill de feedback erro (vermelho) em estado disabled. | 2 |
 | `semantic.feedback.error.background.hover` | color | → `foundation.color.red.800` | Fill de feedback erro (vermelho) em estado hover. | 2 |
-| `semantic.feedback.error.background.subtle` | color | → `foundation.color.red.100` | Fill de feedback erro (vermelho) em estado subtle. | 3 |
+| `semantic.feedback.error.background.subtle` | color | → `foundation.color.red.100` | Fill de feedback erro (vermelho) em estado subtle. | 4 |
 | `semantic.feedback.error.border-default` | color | → `foundation.color.red.500` | Borda de feedback erro (vermelho) em estado default. | 2 |
 | `semantic.feedback.error.border.hover` | color | → `foundation.color.red.800` | Borda de feedback erro em estado hover. | 4 |
 | `semantic.feedback.error.content-contrast` | color | → `foundation.color.neutral.50` | Cor de feedback erro (vermelho) em estado contrast. | 12 |
-| `semantic.feedback.error.content-default` | color | → `foundation.color.red.700` | Cor de feedback erro (vermelho) em estado default. | 9 |
+| `semantic.feedback.error.content-default` | color | → `foundation.color.red.700` | Cor de feedback erro (vermelho) em estado default. | 11 |
 | `semantic.feedback.error.content-disabled` | color | → `foundation.color.overlay.white.80` | Cor de feedback erro (vermelho) em estado disabled. | 2 |
 | `semantic.feedback.info.background.default` | color | → `foundation.color.blue.400` | Fill de feedback informação (azul) em estado default. | 3 |
 | `semantic.feedback.info.background.hover` | color | → `foundation.color.blue.600` | Fill de feedback informação (azul) em estado hover. | 0 |
@@ -481,9 +481,9 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `semantic.icon.color.active` | color | → `semantic.content.strong` | Cor semantica de icone active. | 0 |
-| `semantic.icon.color.default` | color | → `semantic.content.default` | Cor semantica de icone default. | 8 |
-| `semantic.icon.color.disabled` | color | → `semantic.content.disabled` | Cor semantica de icone disabled. | 5 |
-| `semantic.icon.color.error` | color | → `semantic.feedback.error.content-default` | Cor semantica de icone error. | 4 |
+| `semantic.icon.color.default` | color | → `semantic.content.default` | Cor semantica de icone default. | 9 |
+| `semantic.icon.color.disabled` | color | → `semantic.content.disabled` | Cor semantica de icone disabled. | 6 |
+| `semantic.icon.color.error` | color | → `semantic.feedback.error.content-default` | Cor semantica de icone error. | 5 |
 | `semantic.icon.color.error-contrast` | color | → `semantic.feedback.error.content-contrast` | Cor semantica de icone error-contrast. | 3 |
 | `semantic.icon.color.hover` | color | → `semantic.content.hover` | Cor semantica de icone hover. | 0 |
 | `semantic.icon.color.info-contrast` | color | → `semantic.feedback.info.content-contrast` | Cor semantica de icone info-contrast. | 3 |
@@ -493,9 +493,9 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.icon.color.success-contrast` | color | → `semantic.feedback.success.content-contrast` | Cor semantica de icone success-contrast. | 3 |
 | `semantic.icon.color.warning` | color | → `semantic.feedback.warning.content-default` | Cor semantica de icone warning. | 3 |
 | `semantic.icon.color.warning-contrast` | color | → `semantic.feedback.warning.content-contrast` | Cor semantica de icone warning-contrast. | 3 |
-| `semantic.icon.stroke-width.regular.16` | dimension | → `foundation.stroke.width.1_5` | Stroke width semantico de icone regular 16px. | 6 |
-| `semantic.icon.stroke-width.regular.20` | dimension | → `foundation.stroke.width.1_75` | Stroke width semantico de icone regular 20px. | 9 |
-| `semantic.icon.stroke-width.regular.24` | dimension | → `foundation.stroke.width.2` | Stroke width semantico de icone regular 24px. | 8 |
+| `semantic.icon.stroke-width.regular.16` | dimension | → `foundation.stroke.width.1_5` | Stroke width semantico de icone regular 16px. | 7 |
+| `semantic.icon.stroke-width.regular.20` | dimension | → `foundation.stroke.width.1_75` | Stroke width semantico de icone regular 20px. | 10 |
+| `semantic.icon.stroke-width.regular.24` | dimension | → `foundation.stroke.width.2` | Stroke width semantico de icone regular 24px. | 9 |
 | `semantic.icon.stroke-width.regular.32` | dimension | → `foundation.stroke.width.2_5` | Stroke width semantico de icone regular 32px. | 3 |
 | `semantic.icon.stroke-width.strong.16` | dimension | → `foundation.stroke.width.1_75` | Stroke width semantico de icone strong 16px. | 3 |
 | `semantic.icon.stroke-width.strong.20` | dimension | → `foundation.stroke.width.2` | Stroke width semantico de icone strong 20px. | 1 |
@@ -514,12 +514,12 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `semantic.motion.duration.fast` | duration | → `foundation.duration.fast` | Semantic wrapper pra motion. | 13 |
+| `semantic.motion.duration.fast` | duration | → `foundation.duration.fast` | Semantic wrapper pra motion. | 14 |
 | `semantic.motion.duration.instant` | duration | → `foundation.duration.instant` | 0ms. | 0 |
 | `semantic.motion.duration.moderate` | duration | → `foundation.duration.moderate` | 250ms. | 0 |
 | `semantic.motion.duration.slow` | duration | → `foundation.duration.slow` | 400ms para animações enfáticas. | 0 |
 | `semantic.motion.duration.slower` | duration | → `foundation.duration.slower` | 600ms para loops contínuos. | 1 |
-| `semantic.motion.ease.default` | cubicBezier | → `foundation.ease.default` | Semantic wrapper pra motion. | 13 |
+| `semantic.motion.ease.default` | cubicBezier | → `foundation.ease.default` | Semantic wrapper pra motion. | 14 |
 | `semantic.motion.ease.in` | cubicBezier | → `foundation.ease.in` | Aceleração no início. | 0 |
 | `semantic.motion.ease.in-out` | cubicBezier | → `foundation.ease.in-out` | Aceleração + desaceleração. | 0 |
 | `semantic.motion.ease.linear` | cubicBezier | → `foundation.ease.linear` | Curva linear pra loops onde aceleração quebra rotação constante. | 1 |
@@ -536,7 +536,7 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `semantic.outline.background.active` | color | → `foundation.color.overlay.black.10` | Fill de ação com borda neutra em estado active. | 0 |
-| `semantic.outline.background.hover` | color | → `foundation.color.overlay.black.5` | Fill de ação com borda neutra em estado hover. | 2 |
+| `semantic.outline.background.hover` | color | → `foundation.color.overlay.black.5` | Fill de ação com borda neutra em estado hover. | 3 |
 | `semantic.outline.border-default` | color | → `foundation.color.neutral.500` | Borda de ação com borda neutra em estado default. | 2 |
 | `semantic.outline.border-disabled` | color | → `foundation.color.neutral.200` | Borda de ação com borda neutra em estado disabled. | 0 |
 | `semantic.outline.border-hover` | color | → `foundation.color.neutral.700` | Borda de ação com borda neutra em estado hover. | 2 |
@@ -557,8 +557,8 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `semantic.radius.full` | dimension | → `foundation.radius.999` | Radius semantic full. | 11 |
-| `semantic.radius.lg` | dimension | → `foundation.radius.12` | Radius semantic lg. | 9 |
-| `semantic.radius.md` | dimension | → `foundation.radius.8` | Radius semantic md. | 8 |
+| `semantic.radius.lg` | dimension | → `foundation.radius.12` | Radius semantic lg. | 11 |
+| `semantic.radius.md` | dimension | → `foundation.radius.8` | Radius semantic md. | 9 |
 | `semantic.radius.sm` | dimension | → `foundation.radius.4` | Radius semantic sm. | 9 |
 | `semantic.radius.xl` | dimension | → `foundation.radius.16` | Radius semantic xl. | 2 |
 
@@ -567,34 +567,34 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `semantic.shadow.card` | shadow | → `foundation.shadow.sm` | Sombra semantic card. | 2 |
-| `semantic.shadow.modal` | shadow | → `foundation.shadow.xl` | Sombra semantic modal. | 2 |
+| `semantic.shadow.modal` | shadow | → `foundation.shadow.xl` | Sombra semantic modal. | 3 |
 
 ### semantic.size
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `semantic.size.2xl` | dimension | → `foundation.dimension.48` | Size token 2xl. | 9 |
+| `semantic.size.2xl` | dimension | → `foundation.dimension.48` | Size token 2xl. | 10 |
 | `semantic.size.3xl` | dimension | → `foundation.dimension.64` | Size token 3xl. | 2 |
 | `semantic.size.4xl` | dimension | → `foundation.dimension.96` | Size token 4xl. | 0 |
-| `semantic.size.5xl` | dimension | → `foundation.dimension.128` | Size token 5xl. | 0 |
+| `semantic.size.5xl` | dimension | → `foundation.dimension.128` | Size token 5xl. | 1 |
 | `semantic.size.layout.2xl` | dimension | → `foundation.dimension.1280` | Size token layout.2xl. | 0 |
 | `semantic.size.layout.lg` | dimension | → `foundation.dimension.800` | Size token layout.lg. | 2 |
 | `semantic.size.layout.md` | dimension | → `foundation.dimension.640` | Size token layout.md. | 2 |
 | `semantic.size.layout.sm` | dimension | → `foundation.dimension.480` | Size token layout.sm. | 2 |
 | `semantic.size.layout.xl` | dimension | → `foundation.dimension.1024` | Size token layout.xl. | 0 |
-| `semantic.size.layout.xs` | dimension | → `foundation.dimension.320` | Size token layout.xs. | 1 |
-| `semantic.size.lg` | dimension | → `foundation.dimension.32` | Size token lg. | 13 |
-| `semantic.size.md` | dimension | → `foundation.dimension.24` | Size token md. | 12 |
-| `semantic.size.sm` | dimension | → `foundation.dimension.20` | Size token sm. | 13 |
-| `semantic.size.xl` | dimension | → `foundation.dimension.40` | Size token xl. | 11 |
-| `semantic.size.xs` | dimension | → `foundation.dimension.16` | Size token xs. | 10 |
+| `semantic.size.layout.xs` | dimension | → `foundation.dimension.320` | Size token layout.xs. | 2 |
+| `semantic.size.lg` | dimension | → `foundation.dimension.32` | Size token lg. | 14 |
+| `semantic.size.md` | dimension | → `foundation.dimension.24` | Size token md. | 13 |
+| `semantic.size.sm` | dimension | → `foundation.dimension.20` | Size token sm. | 14 |
+| `semantic.size.xl` | dimension | → `foundation.dimension.40` | Size token xl. | 12 |
+| `semantic.size.xs` | dimension | → `foundation.dimension.16` | Size token xs. | 11 |
 
 ### semantic.space
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `semantic.space.2xl` | dimension | → `foundation.dimension.24` | Spacing token 2xl. | 2 |
-| `semantic.space.2xs` | dimension | → `foundation.dimension.2` | Spacing token 2xs. | 12 |
+| `semantic.space.2xs` | dimension | → `foundation.dimension.2` | Spacing token 2xs. | 14 |
 | `semantic.space.3xl` | dimension | → `foundation.dimension.32` | Espaçamento amplo da escala semântica genérica para composição interna de componentes e blocos densos. | 0 |
 | `semantic.space.4xl` | dimension | → `foundation.dimension.40` | Espaçamento amplo intermediário da escala semântica genérica. | 0 |
 | `semantic.space.5xl` | dimension | → `foundation.dimension.48` | Espaçamento alto da escala semântica genérica para composição interna robusta. | 0 |
@@ -602,26 +602,26 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `semantic.space.control.padding.10` | dimension | → `foundation.dimension.10` | Spacing token control.padding.10. | 3 |
 | `semantic.space.control.padding.6` | dimension | → `foundation.dimension.6` | Padding simétrico de Icon Only sm Button. | 3 |
 | `semantic.space.lg` | dimension | → `foundation.dimension.16` | Spacing token lg. | 15 |
-| `semantic.space.md` | dimension | → `foundation.dimension.12` | Spacing token md. | 19 |
+| `semantic.space.md` | dimension | → `foundation.dimension.12` | Spacing token md. | 21 |
 | `semantic.space.none` | dimension | → `foundation.dimension.0` | Espaço semântico zero. | 0 |
 | `semantic.space.section.2xl` | dimension | → `foundation.dimension.120` | Maior espaçamento semântico de section para separação macro entre áreas. | 0 |
 | `semantic.space.section.lg` | dimension | → `foundation.dimension.80` | Spacing token section.lg. | 0 |
 | `semantic.space.section.md` | dimension | → `foundation.dimension.64` | Spacing token section.md. | 0 |
 | `semantic.space.section.sm` | dimension | → `foundation.dimension.48` | Spacing token section.sm. | 1 |
 | `semantic.space.section.xl` | dimension | → `foundation.dimension.96` | Spacing token section.xl. | 0 |
-| `semantic.space.sm` | dimension | → `foundation.dimension.8` | Spacing token sm. | 32 |
+| `semantic.space.sm` | dimension | → `foundation.dimension.8` | Spacing token sm. | 37 |
 | `semantic.space.xl` | dimension | → `foundation.dimension.20` | Spacing token xl. | 6 |
-| `semantic.space.xs` | dimension | → `foundation.dimension.4` | Spacing token xs. | 26 |
+| `semantic.space.xs` | dimension | → `foundation.dimension.4` | Spacing token xs. | 30 |
 
 ### semantic.surface
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `semantic.surface.default` | color | → `foundation.color.neutral.50` | Surface default — superfície base. | 11 |
-| `semantic.surface.elevated` | color | → `foundation.color.neutral.50` | Surface elevated — superfície altamente elevada (modal). | 2 |
+| `semantic.surface.elevated` | color | → `foundation.color.neutral.50` | Surface elevated — superfície altamente elevada (modal). | 3 |
 | `semantic.surface.hover` | color | → `foundation.color.neutral.100` | Surface neutra em hover. | 4 |
 | `semantic.surface.overlay` | color | → `foundation.color.neutral.50` | Surface overlay — superfície sobre overlay (popover). | 0 |
-| `semantic.surface.raised` | color | → `foundation.color.neutral.50` | Surface raised — superfície elevada (cards). | 2 |
+| `semantic.surface.raised` | color | → `foundation.color.neutral.50` | Surface raised — superfície elevada (cards). | 5 |
 
 ### semantic.toned
 
@@ -681,9 +681,15 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
 | `semantic.z.modal` | number | → `foundation.z.40` | Stack layer para modais e overlays bloqueantes. | 2 |
-| `semantic.z.tooltip` | number | → `foundation.z.40` | Stack layer para tooltips e floating labels não modais. | 1 |
+| `semantic.z.tooltip` | number | → `foundation.z.40` | Stack layer para tooltips e floating labels não modais. | 2 |
 
 ## Component
+
+### component.action-menu
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `component.action-menu.overlay.gap.default` | dimension | → `semantic.space.xs` | Posicionamento do overlay de Action Menu. | 1 |
 
 ### component.alert
 
@@ -1049,11 +1055,11 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 
 | Token | Tipo | Alias | Sentido | Usos |
 |---|---|---|---|---|
-| `component.focus-ring.color.default` | color | → `semantic.border.focus` | Token component para focus ring / color / default. | 13 |
-| `component.focus-ring.color.error` | color | → `semantic.border.focus-error` | Token component para focus ring / color / error. | 4 |
+| `component.focus-ring.color.default` | color | → `semantic.border.focus` | Token component para focus ring / color / default. | 14 |
+| `component.focus-ring.color.error` | color | → `semantic.border.focus-error` | Token component para focus ring / color / error. | 5 |
 | `component.focus-ring.color.readonly` | color | → `semantic.border.control-default` | Token component para focus ring / color / readonly. | 3 |
 | `component.focus-ring.color.success` | color | → `semantic.feedback.success.border-default` | Token component para focus ring / color / success. | 1 |
-| `component.focus-ring.width` | dimension | → `semantic.border.width.focus` | Token component para focus ring / width. | 13 |
+| `component.focus-ring.width` | dimension | → `semantic.border.width.focus` | Token component para focus ring / width. | 14 |
 
 ### component.form-field
 
@@ -1119,6 +1125,49 @@ Ver [ADR-013](decisions/ADR-013-camadas-de-consumo-de-tokens.md) para a regra ar
 | `component.input.text.line-height.lg` | dimension | → `semantic.typography.body.line-height.md` | Line-height do texto Input Text lg. | 1 |
 | `component.input.text.line-height.md` | dimension | → `semantic.typography.body.line-height.sm` | Line-height do texto Input Text md. | 1 |
 | `component.input.text.line-height.sm` | dimension | → `semantic.typography.body.line-height.2xs` | Line-height do texto Input Text sm. | 1 |
+
+### component.menu
+
+| Token | Tipo | Alias | Sentido | Usos |
+|---|---|---|---|---|
+| `component.menu.focus-ring.radius.default` | dimension | → `semantic.radius.lg` | Radius anatômico do focus ring do Menu. | 1 |
+| `component.menu.item.bg.default` | color | → `semantic.surface.raised` | Background anatômico do item de Menu por state. | 1 |
+| `component.menu.item.bg.disabled` | color | → `semantic.surface.raised` | Background anatômico do item de Menu por state. | 1 |
+| `component.menu.item.bg.focused` | color | → `semantic.surface.raised` | Background anatômico do item de Menu por state. | 1 |
+| `component.menu.item.bg.hover` | color | → `semantic.outline.background.hover` | Background anatômico do item de Menu por state. | 1 |
+| `component.menu.item.content.color.default` | color | → `semantic.content.default` | Cor anatômica do conteúdo do item de Menu por state. | 1 |
+| `component.menu.item.content.color.destructive` | color | → `semantic.feedback.error.content-default` | Cor anatômica do conteúdo do item de Menu por state. | 1 |
+| `component.menu.item.content.color.disabled` | color | → `semantic.content.disabled` | Cor anatômica do conteúdo do item de Menu por state. | 1 |
+| `component.menu.item.content.color.focused` | color | → `semantic.content.strong` | Cor anatômica do conteúdo do item de Menu por state. | 1 |
+| `component.menu.item.content.color.hover` | color | → `semantic.content.strong` | Cor anatômica do conteúdo do item de Menu por state. | 1 |
+| `component.menu.item.gap.lg` | dimension | → `semantic.space.sm` | Gap anatômico do item de Menu por size. | 1 |
+| `component.menu.item.gap.md` | dimension | → `semantic.space.xs` | Gap anatômico do item de Menu por size. | 1 |
+| `component.menu.item.gap.sm` | dimension | → `semantic.space.xs` | Gap anatômico do item de Menu por size. | 1 |
+| `component.menu.item.height.lg` | dimension | → `semantic.size.2xl` | Altura anatômica do item de Menu por size. | 1 |
+| `component.menu.item.height.md` | dimension | → `semantic.size.xl` | Altura anatômica do item de Menu por size. | 1 |
+| `component.menu.item.height.sm` | dimension | → `semantic.size.lg` | Altura anatômica do item de Menu por size. | 1 |
+| `component.menu.item.icon.color.default` | color | → `semantic.icon.color.default` | Cor anatômica do ícone do item de Menu por state. | 1 |
+| `component.menu.item.icon.color.destructive` | color | → `semantic.icon.color.error` | Cor anatômica do ícone do item de Menu por state. | 1 |
+| `component.menu.item.icon.color.disabled` | color | → `semantic.icon.color.disabled` | Cor anatômica do ícone do item de Menu por state. | 1 |
+| `component.menu.item.icon.size.lg` | dimension | → `semantic.size.md` | Tamanho anatômico do ícone do item de Menu por size. | 1 |
+| `component.menu.item.icon.size.md` | dimension | → `semantic.size.sm` | Tamanho anatômico do ícone do item de Menu por size. | 1 |
+| `component.menu.item.icon.size.sm` | dimension | → `semantic.size.xs` | Tamanho anatômico do ícone do item de Menu por size. | 1 |
+| `component.menu.item.icon.stroke-width.lg` | dimension | → `semantic.icon.stroke-width.regular.24` | Stroke width anatômico do ícone do item de Menu por size. | 1 |
+| `component.menu.item.icon.stroke-width.md` | dimension | → `semantic.icon.stroke-width.regular.20` | Stroke width anatômico do ícone do item de Menu por size. | 1 |
+| `component.menu.item.icon.stroke-width.sm` | dimension | → `semantic.icon.stroke-width.regular.16` | Stroke width anatômico do ícone do item de Menu por size. | 1 |
+| `component.menu.item.meta.color.default` | color | → `semantic.content.subtle` | Cor anatômica de metadado ou shortcut do item de Menu por state. | 1 |
+| `component.menu.item.meta.color.destructive` | color | → `semantic.feedback.error.content-default` | Cor anatômica de metadado ou shortcut do item de Menu por state. | 1 |
+| `component.menu.item.meta.color.disabled` | color | → `semantic.content.disabled` | Cor anatômica de metadado ou shortcut do item de Menu por state. | 1 |
+| `component.menu.item.padding-x.lg` | dimension | → `semantic.space.md` | Padding horizontal anatômico do item de Menu por size. | 1 |
+| `component.menu.item.padding-x.md` | dimension | → `semantic.space.sm` | Padding horizontal anatômico do item de Menu por size. | 1 |
+| `component.menu.item.padding-x.sm` | dimension | → `semantic.space.sm` | Padding horizontal anatômico do item de Menu por size. | 1 |
+| `component.menu.item.radius.default` | dimension | → `semantic.radius.md` | Radius anatômico do item de Menu. | 1 |
+| `component.menu.surface.bg.default` | color | → `semantic.surface.elevated` | Background anatômico da superfície de Menu. | 1 |
+| `component.menu.surface.border-color.default` | color | → `semantic.border.subtle` | Border color anatômico da superfície de Menu. | 1 |
+| `component.menu.surface.border-width.default` | dimension | → `semantic.border.width.default` | Border width anatômico da superfície de Menu. | 1 |
+| `component.menu.surface.gap.default` | dimension | → `semantic.space.2xs` | Gap anatômico entre itens de Menu. | 1 |
+| `component.menu.surface.padding.default` | dimension | → `semantic.space.sm` | Padding anatômico da superfície de Menu. | 1 |
+| `component.menu.surface.radius.default` | dimension | → `semantic.radius.lg` | Radius anatômico da superfície de Menu. | 1 |
 
 ### component.modal
 
@@ -4970,8 +5019,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a foundation.color.neutral.200.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (3×)
-  - Tokens que referenciam: `component.card.border-color.outlined`, `component.divider.line.color.default`, `component.field.border-color.readonly`
+    - `css/tokens/generated/component.css` (4×)
+  - Tokens que referenciam: `component.card.border-color.outlined`, `component.divider.line.color.default`, `component.field.border-color.readonly`, `component.menu.surface.border-color.default`
 
 ### `semantic.border.width.default`
 
@@ -4985,8 +5034,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/reset.css` (1×)
-    - `css/tokens/generated/component.css` (11×)
-  - Tokens que referenciam: `component.alert.border-width.default`, `component.badge.border-width.default`, `component.button.border-width.default`, `component.card-interactive.border-width.default`, `component.card.border-width.default`, `component.checkbox.box.border-width.default`, `component.divider.line.thickness.default`, `component.field.border-width`, `component.radio.control.border-width.unselected.default`, `component.tabs.list.border-width.default`, `component.toggle.track.border-width.default`
+    - `css/tokens/generated/component.css` (12×)
+  - Tokens que referenciam: `component.alert.border-width.default`, `component.badge.border-width.default`, `component.button.border-width.default`, `component.card-interactive.border-width.default`, `component.card.border-width.default`, `component.checkbox.box.border-width.default`, `component.divider.line.thickness.default`, `component.field.border-width`, `component.menu.surface.border-width.default`, `component.radio.control.border-width.unselected.default`, `component.tabs.list.border-width.default`, `component.toggle.track.border-width.default`
 
 ### `semantic.border.width.focus`
 
@@ -5215,10 +5264,10 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/base/reset.css` (1×)
     - `css/components/textarea.css` (1×)
-    - `css/tokens/generated/component.css` (12×)
+    - `css/tokens/generated/component.css` (13×)
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `component.badge.label.color.neutral.subtle`, `component.breadcrumb.label.color.current`, `component.card.body.color.default`, `component.card.subtitle.color.default`, `component.field.value.color.readonly`, `component.form-field.label.color.readonly`, `component.form-field.helper.color.default`, `component.modal.body.color.default`, `component.modal.description.color.default`, `component.tabs.label.color.default`, `component.toggle.thumb.fill.off.default`, `component.toggle.thumb.fill.off.focus`, `semantic.icon.color.default`, `semantic.icon.color.default`
+  - Tokens que referenciam: `component.badge.label.color.neutral.subtle`, `component.breadcrumb.label.color.current`, `component.card.body.color.default`, `component.card.subtitle.color.default`, `component.field.value.color.readonly`, `component.form-field.label.color.readonly`, `component.form-field.helper.color.default`, `component.menu.item.content.color.default`, `component.modal.body.color.default`, `component.modal.description.color.default`, `component.tabs.label.color.default`, `component.toggle.thumb.fill.off.default`, `component.toggle.thumb.fill.off.focus`, `semantic.icon.color.default`, `semantic.icon.color.default`
 
 ### `semantic.content.disabled`
 
@@ -5231,10 +5280,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a foundation.color.neutral.500 para reduzir a opacidade visual do estado disabled sem tornar o conteúdo indistinto.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (6×)
+    - `css/tokens/generated/component.css` (8×)
     - `css/tokens/generated/theme-dark.css` (2×)
     - `css/tokens/generated/theme-light.css` (2×)
-  - Tokens que referenciam: `component.field.placeholder.color.disabled`, `component.field.value.color.disabled`, `component.form-field.label.color.disabled`, `component.form-field.helper.color.disabled`, `component.tabs.label.color.disabled`, `component.toggle.thumb.fill.off.disabled`, `semantic.toned.content-disabled`, `semantic.icon.color.disabled`, `semantic.toned.content-disabled`, `semantic.icon.color.disabled`
+  - Tokens que referenciam: `component.field.placeholder.color.disabled`, `component.field.value.color.disabled`, `component.form-field.label.color.disabled`, `component.form-field.helper.color.disabled`, `component.menu.item.content.color.disabled`, `component.menu.item.meta.color.disabled`, `component.tabs.label.color.disabled`, `component.toggle.thumb.fill.off.disabled`, `semantic.toned.content-disabled`, `semantic.icon.color.disabled`, `semantic.toned.content-disabled`, `semantic.icon.color.disabled`
 
 ### `semantic.content.hover`
 
@@ -5281,10 +5330,10 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/base/reset.css` (1×)
     - `css/components/modal.css` (1×)
-    - `css/tokens/generated/component.css` (9×)
+    - `css/tokens/generated/component.css` (11×)
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `component.alert.title.color.subtle`, `component.alert.description.color.subtle`, `component.badge.label.color.neutral.solid`, `component.card.title.color.default`, `component.field.value.color.default`, `component.form-field.label.color.default`, `component.form-field.description.color.default`, `component.modal.title.color.default`, `component.tabs.label.color.hover`, `semantic.icon.color.active`, `semantic.icon.color.active`
+  - Tokens que referenciam: `component.alert.title.color.subtle`, `component.alert.description.color.subtle`, `component.badge.label.color.neutral.solid`, `component.card.title.color.default`, `component.field.value.color.default`, `component.form-field.label.color.default`, `component.form-field.description.color.default`, `component.menu.item.content.color.hover`, `component.menu.item.content.color.focused`, `component.modal.title.color.default`, `component.tabs.label.color.hover`, `semantic.icon.color.active`, `semantic.icon.color.active`
 
 ### `semantic.content.subtle`
 
@@ -5298,10 +5347,11 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/breadcrumb.css` (1×)
-    - `css/tokens/generated/component.css` (1×)
+    - `css/components/menu.css` (1×)
+    - `css/tokens/generated/component.css` (2×)
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `component.field.placeholder.color.default`, `semantic.icon.color.subtle`, `semantic.icon.color.subtle`
+  - Tokens que referenciam: `component.field.placeholder.color.default`, `component.menu.item.meta.color.default`, `semantic.icon.color.subtle`, `semantic.icon.color.subtle`
 
 ### `semantic.control.button.min-width.lg`
 
@@ -5628,6 +5678,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a foundation.color.red.100.
 - **Usos**:
   - CSS:
+    - `css/components/menu.css` (1×)
     - `css/tokens/generated/component.css` (2×)
   - Tokens que referenciam: `component.alert.bg.error.subtle`, `component.badge.bg.error.subtle`
 
@@ -5688,10 +5739,10 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/textarea.css` (1×)
-    - `css/tokens/generated/component.css` (3×)
+    - `css/tokens/generated/component.css` (5×)
     - `css/tokens/generated/theme-dark.css` (1×)
     - `css/tokens/generated/theme-light.css` (1×)
-  - Tokens que referenciam: `component.badge.label.color.error.subtle`, `component.form-field.required.color.default`, `component.form-field.error.color.default`, `semantic.icon.color.error`, `semantic.icon.color.error`
+  - Tokens que referenciam: `component.badge.label.color.error.subtle`, `component.form-field.required.color.default`, `component.form-field.error.color.default`, `component.menu.item.content.color.destructive`, `component.menu.item.meta.color.destructive`, `semantic.icon.color.error`, `semantic.icon.color.error`
 
 ### `semantic.feedback.error.content-disabled`
 
@@ -6087,8 +6138,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/icons.css` (1×)
-    - `css/tokens/generated/component.css` (6×)
-  - Tokens que referenciam: `component.alert.icon.color.info.subtle`, `component.alert.close.icon.color.subtle`, `component.input.icon.color.default`, `component.modal.close.color.default`, `component.select.chevron.color.default`, `component.select.icon.color.default`
+    - `css/tokens/generated/component.css` (7×)
+  - Tokens que referenciam: `component.alert.icon.color.info.subtle`, `component.alert.close.icon.color.subtle`, `component.input.icon.color.default`, `component.menu.item.icon.color.default`, `component.modal.close.color.default`, `component.select.chevron.color.default`, `component.select.icon.color.default`
 
 ### `semantic.icon.color.disabled`
 
@@ -6102,8 +6153,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/icons.css` (1×)
-    - `css/tokens/generated/component.css` (3×)
-  - Tokens que referenciam: `component.input.icon.color.disabled`, `component.select.chevron.color.disabled`, `component.select.icon.color.disabled`
+    - `css/tokens/generated/component.css` (4×)
+  - Tokens que referenciam: `component.input.icon.color.disabled`, `component.menu.item.icon.color.disabled`, `component.select.chevron.color.disabled`, `component.select.icon.color.disabled`
 
 ### `semantic.icon.color.error`
 
@@ -6117,8 +6168,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/icons.css` (1×)
-    - `css/tokens/generated/component.css` (4×)
-  - Tokens que referenciam: `component.alert.icon.color.error.subtle`, `component.form-field.error.icon.color.default`
+    - `css/tokens/generated/component.css` (5×)
+  - Tokens que referenciam: `component.alert.icon.color.error.subtle`, `component.form-field.error.icon.color.default`, `component.menu.item.icon.color.destructive`
 
 ### `semantic.icon.color.error-contrast`
 
@@ -6256,8 +6307,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/icons.css` (1×)
-    - `css/tokens/generated/component.css` (4×)
-  - Tokens que referenciam: `component.button.icon.stroke-width.sm`, `component.input.icon.stroke-width.sm`, `component.select.chevron.stroke-width.sm`, `component.select.icon.stroke-width.sm`
+    - `css/tokens/generated/component.css` (5×)
+  - Tokens que referenciam: `component.button.icon.stroke-width.sm`, `component.input.icon.stroke-width.sm`, `component.menu.item.icon.stroke-width.sm`, `component.select.chevron.stroke-width.sm`, `component.select.icon.stroke-width.sm`
 
 ### `semantic.icon.stroke-width.regular.20`
 
@@ -6271,8 +6322,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/icons.css` (1×)
-    - `css/tokens/generated/component.css` (7×)
-  - Tokens que referenciam: `component.alert.icon.stroke-width.default`, `component.alert.close.icon.stroke-width.default`, `component.avatar.icon.stroke-width.sm`, `component.button.icon.stroke-width.md`, `component.input.icon.stroke-width.md`, `component.select.chevron.stroke-width.md`, `component.select.icon.stroke-width.md`
+    - `css/tokens/generated/component.css` (8×)
+  - Tokens que referenciam: `component.alert.icon.stroke-width.default`, `component.alert.close.icon.stroke-width.default`, `component.avatar.icon.stroke-width.sm`, `component.button.icon.stroke-width.md`, `component.input.icon.stroke-width.md`, `component.menu.item.icon.stroke-width.md`, `component.select.chevron.stroke-width.md`, `component.select.icon.stroke-width.md`
 
 ### `semantic.icon.stroke-width.regular.24`
 
@@ -6286,8 +6337,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/icons.css` (2×)
-    - `css/tokens/generated/component.css` (6×)
-  - Tokens que referenciam: `component.avatar.icon.stroke-width.md`, `component.button.icon.stroke-width.lg`, `component.input.icon.stroke-width.lg`, `component.modal.close.icon.stroke-width.default`, `component.select.chevron.stroke-width.lg`, `component.select.icon.stroke-width.lg`
+    - `css/tokens/generated/component.css` (7×)
+  - Tokens que referenciam: `component.avatar.icon.stroke-width.md`, `component.button.icon.stroke-width.lg`, `component.input.icon.stroke-width.lg`, `component.menu.item.icon.stroke-width.lg`, `component.modal.close.icon.stroke-width.default`, `component.select.chevron.stroke-width.lg`, `component.select.icon.stroke-width.lg`
 
 ### `semantic.icon.stroke-width.regular.32`
 
@@ -6420,6 +6471,7 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/checkbox.css` (3×)
     - `css/components/input.css` (2×)
     - `css/components/link.css` (1×)
+    - `css/components/menu.css` (5×)
     - `css/components/modal.css` (1×)
     - `css/components/radio.css` (3×)
     - `css/components/select.css` (2×)
@@ -6494,6 +6546,7 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/checkbox.css` (3×)
     - `css/components/input.css` (2×)
     - `css/components/link.css` (1×)
+    - `css/components/menu.css` (5×)
     - `css/components/modal.css` (1×)
     - `css/components/radio.css` (3×)
     - `css/components/select.css` (2×)
@@ -6587,8 +6640,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a foundation.color.overlay.black.5 — escolha de tom feita no Figma (ADR-014: action × style × prop × state).
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (1×)
-  - Tokens que referenciam: `component.button.bg.outline.hover`
+    - `css/tokens/generated/component.css` (2×)
+  - Tokens que referenciam: `component.button.bg.outline.hover`, `component.menu.item.bg.hover`
 
 ### `semantic.outline.border-default`
 
@@ -6739,8 +6792,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/reset.css` (1×)
-    - `css/tokens/generated/component.css` (7×)
-  - Tokens que referenciam: `component.alert.radius.default`, `component.button.focus-ring.radius.default`, `component.card.radius.default`, `component.input.focus-ring.radius.default`, `component.modal.radius.default`, `component.select.focus-ring.radius.default`, `component.textarea.focus-ring.radius.default`
+    - `css/tokens/generated/component.css` (9×)
+  - Tokens que referenciam: `component.alert.radius.default`, `component.button.focus-ring.radius.default`, `component.card.radius.default`, `component.input.focus-ring.radius.default`, `component.menu.surface.radius.default`, `component.menu.focus-ring.radius.default`, `component.modal.radius.default`, `component.select.focus-ring.radius.default`, `component.textarea.focus-ring.radius.default`
 
 ### `semantic.radius.md`
 
@@ -6753,8 +6806,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.radius.8.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (7×)
-  - Tokens que referenciam: `component.breadcrumb.focus-ring.radius.default`, `component.button.radius.default`, `component.checkbox.focus-ring.radius.default`, `component.divider.line.radius.default`, `component.field.radius`, `component.skeleton.text.radius.default`, `component.skeleton.rectangle.radius.default`
+    - `css/tokens/generated/component.css` (8×)
+  - Tokens que referenciam: `component.breadcrumb.focus-ring.radius.default`, `component.button.radius.default`, `component.checkbox.focus-ring.radius.default`, `component.divider.line.radius.default`, `component.field.radius`, `component.menu.item.radius.default`, `component.skeleton.text.radius.default`, `component.skeleton.rectangle.radius.default`
 
 ### `semantic.radius.sm`
 
@@ -6814,6 +6867,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.shadow.xl.
 - **Usos**:
   - CSS:
+    - `css/components/menu.css` (1×)
     - `css/tokens/generated/component.css` (1×)
   - Tokens que referenciam: `component.modal.shadow.default`
 
@@ -6828,8 +6882,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.dimension.48.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (8×)
-  - Tokens que referenciam: `component.button.height.lg`, `component.button.icon-only-width.lg`, `component.checkbox.target.height.lg`, `component.input.height.lg`, `component.modal.close.size.lg`, `component.radio.target.height.lg`, `component.select.height.lg`, `component.toggle.target.height.lg`
+    - `css/tokens/generated/component.css` (9×)
+  - Tokens que referenciam: `component.button.height.lg`, `component.button.icon-only-width.lg`, `component.checkbox.target.height.lg`, `component.input.height.lg`, `component.menu.item.height.lg`, `component.modal.close.size.lg`, `component.radio.target.height.lg`, `component.select.height.lg`, `component.toggle.target.height.lg`
 
 ### `semantic.size.3xl`
 
@@ -6867,7 +6921,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Contexto**: Use em `width`, `height` ou pra ícones, controles, layouts.
 - **Decisão**: Aliasado a Foundation foundation.dimension.128.
 - **Usos**:
-  - _(nenhum uso detectado — token órfão ou novo)_
+  - CSS:
+    - `css/components/menu.css` (1×)
 
 ### `semantic.size.layout.2xl`
 
@@ -6947,6 +7002,7 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/card.css` (1×)
+    - `css/components/menu.css` (1×)
 
 ### `semantic.size.lg`
 
@@ -6960,8 +7016,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/icons.css` (2×)
-    - `css/tokens/generated/component.css` (11×)
-  - Tokens que referenciam: `component.avatar.size.sm`, `component.button.height.sm`, `component.button.icon-only-width.sm`, `component.checkbox.target.height.sm`, `component.input.height.sm`, `component.modal.close.size.sm`, `component.radio.target.height.sm`, `component.select.height.sm`, `component.spinner.size.lg`, `component.toggle.target.height.sm`, `component.toggle.track.height.lg`
+    - `css/tokens/generated/component.css` (12×)
+  - Tokens que referenciam: `component.avatar.size.sm`, `component.button.height.sm`, `component.button.icon-only-width.sm`, `component.checkbox.target.height.sm`, `component.input.height.sm`, `component.menu.item.height.sm`, `component.modal.close.size.sm`, `component.radio.target.height.sm`, `component.select.height.sm`, `component.spinner.size.lg`, `component.toggle.target.height.sm`, `component.toggle.track.height.lg`
 
 ### `semantic.size.md`
 
@@ -6975,8 +7031,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/base/icons.css` (4×)
-    - `css/tokens/generated/component.css` (10×)
-  - Tokens que referenciam: `component.button.icon.size.lg`, `component.checkbox.box.size.lg`, `component.input.icon.size.lg`, `component.modal.close.icon-size.md`, `component.modal.close.icon-size.lg`, `component.radio.control.size.lg`, `component.select.chevron.size.lg`, `component.select.icon.size.lg`, `component.spinner.size.md`, `component.toggle.track.height.md`
+    - `css/tokens/generated/component.css` (11×)
+  - Tokens que referenciam: `component.button.icon.size.lg`, `component.checkbox.box.size.lg`, `component.input.icon.size.lg`, `component.menu.item.icon.size.lg`, `component.modal.close.icon-size.md`, `component.modal.close.icon-size.lg`, `component.radio.control.size.lg`, `component.select.chevron.size.lg`, `component.select.icon.size.lg`, `component.spinner.size.md`, `component.toggle.track.height.md`
 
 ### `semantic.size.sm`
 
@@ -6992,8 +7048,8 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/base/icons.css` (2×)
     - `css/components/checkbox.css` (2×)
     - `css/components/radio.css` (2×)
-    - `css/tokens/generated/component.css` (9×)
-  - Tokens que referenciam: `component.alert.icon.size.default`, `component.alert.close.icon-size.default`, `component.button.icon.size.md`, `component.checkbox.box.size.md`, `component.input.icon.size.md`, `component.modal.close.icon-size.sm`, `component.radio.control.size.md`, `component.select.chevron.size.md`, `component.select.icon.size.md`
+    - `css/tokens/generated/component.css` (10×)
+  - Tokens que referenciam: `component.alert.icon.size.default`, `component.alert.close.icon-size.default`, `component.button.icon.size.md`, `component.checkbox.box.size.md`, `component.input.icon.size.md`, `component.menu.item.icon.size.md`, `component.modal.close.icon-size.sm`, `component.radio.control.size.md`, `component.select.chevron.size.md`, `component.select.icon.size.md`
 
 ### `semantic.size.xl`
 
@@ -7006,8 +7062,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.dimension.40.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (10×)
-  - Tokens que referenciam: `component.avatar.size.md`, `component.button.height.md`, `component.button.icon-only-width.md`, `component.checkbox.target.height.md`, `component.input.height.md`, `component.modal.close.size.md`, `component.radio.target.height.md`, `component.select.height.md`, `component.skeleton.circle.size.default`, `component.toggle.target.height.md`
+    - `css/tokens/generated/component.css` (11×)
+  - Tokens que referenciam: `component.avatar.size.md`, `component.button.height.md`, `component.button.icon-only-width.md`, `component.checkbox.target.height.md`, `component.input.height.md`, `component.menu.item.height.md`, `component.modal.close.size.md`, `component.radio.target.height.md`, `component.select.height.md`, `component.skeleton.circle.size.default`, `component.toggle.target.height.md`
 
 ### `semantic.size.xs`
 
@@ -7020,8 +7076,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.dimension.16.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (9×)
-  - Tokens que referenciam: `component.button.icon.size.sm`, `component.checkbox.box.size.sm`, `component.form-field.error.icon.size.default`, `component.input.icon.size.sm`, `component.radio.control.size.sm`, `component.select.chevron.size.sm`, `component.select.icon.size.sm`, `component.spinner.size.sm`, `component.toggle.track.height.sm`
+    - `css/tokens/generated/component.css` (10×)
+  - Tokens que referenciam: `component.button.icon.size.sm`, `component.checkbox.box.size.sm`, `component.form-field.error.icon.size.default`, `component.input.icon.size.sm`, `component.menu.item.icon.size.sm`, `component.radio.control.size.sm`, `component.select.chevron.size.sm`, `component.select.icon.size.sm`, `component.spinner.size.sm`, `component.toggle.track.height.sm`
 
 ### `semantic.space.2xl`
 
@@ -7048,8 +7104,9 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasado a Foundation foundation.dimension.2.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (11×)
-  - Tokens que referenciam: `component.badge.padding-y.default`, `component.button.gap.sm`, `component.form-field.label-row.gap.default`, `component.form-field.error.padding-top.default`, `component.form-field.error.icon-frame.padding-x.default`, `component.input.icon-frame.padding-x.default`, `component.input.text-frame.padding-x.default`, `component.select.chevron-frame.padding-x.default`, `component.select.icon-frame.padding-x.default`, `component.select.text-frame.padding-x.default`, `component.toggle.thumb.inset.default`
+    - `css/components/menu.css` (1×)
+    - `css/tokens/generated/component.css` (12×)
+  - Tokens que referenciam: `component.badge.padding-y.default`, `component.button.gap.sm`, `component.form-field.label-row.gap.default`, `component.form-field.error.padding-top.default`, `component.form-field.error.icon-frame.padding-x.default`, `component.input.icon-frame.padding-x.default`, `component.input.text-frame.padding-x.default`, `component.menu.surface.gap.default`, `component.select.chevron-frame.padding-x.default`, `component.select.icon-frame.padding-x.default`, `component.select.text-frame.padding-x.default`, `component.toggle.thumb.inset.default`
 
 ### `semantic.space.3xl`
 
@@ -7154,10 +7211,11 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/divider.css` (2×)
+    - `css/components/menu.css` (1×)
     - `css/components/radio.css` (1×)
-    - `css/tokens/generated/component.css` (15×)
+    - `css/tokens/generated/component.css` (16×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.alert.padding.default`, `component.button.padding-x.md`, `component.button.padding-y.lg`, `component.button.icon-only-padding.lg`, `component.card.container.gap.default`, `component.field.padding-y.lg`, `component.input.padding-x.lg`, `component.modal.container.gap.sm`, `component.modal.body.gap.md`, `component.modal.footer.gap.md`, `component.modal.close.padding.lg`, `component.select.padding-x.lg`, `component.tabs.item.padding-top.default`, `component.tabs.item.indicator-gap.default`, `component.textarea.padding-x.md`
+  - Tokens que referenciam: `component.alert.padding.default`, `component.button.padding-x.md`, `component.button.padding-y.lg`, `component.button.icon-only-padding.lg`, `component.card.container.gap.default`, `component.field.padding-y.lg`, `component.input.padding-x.lg`, `component.menu.item.padding-x.lg`, `component.modal.container.gap.sm`, `component.modal.body.gap.md`, `component.modal.footer.gap.md`, `component.modal.close.padding.lg`, `component.select.padding-x.lg`, `component.tabs.item.padding-top.default`, `component.tabs.item.indicator-gap.default`, `component.textarea.padding-x.md`
 
 ### `semantic.space.none`
 
@@ -7244,12 +7302,13 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/checkbox.css` (2×)
+    - `css/components/menu.css` (1×)
     - `css/components/modal.css` (6×)
     - `css/components/radio.css` (3×)
     - `css/components/tooltip.css` (4×)
-    - `css/tokens/generated/component.css` (26×)
+    - `css/tokens/generated/component.css` (30×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.alert.gap.default`, `component.badge.padding-x.default`, `component.button.padding-x.sm`, `component.button.padding-y.sm`, `component.button.gap.lg`, `component.button.icon-only-padding.md`, `component.card.header.padding-bottom.default`, `component.card.header.gap.default`, `component.card.footer.gap.default`, `component.checkbox.target.gap.default`, `component.checkbox.group.options.gap.default`, `component.field.padding-y.sm`, `component.input.gap.lg`, `component.input.padding-x.md`, `component.modal.body.gap.sm`, `component.modal.content-slot.gap.default`, `component.modal.footer.gap.sm`, `component.modal.close.padding.md`, `component.radio.target.gap.default`, `component.radio.group.options.gap.default`, `component.select.gap.lg`, `component.select.padding-x.md`, `component.textarea.padding-x.sm`, `component.toggle.target.gap.default`, `component.tooltip.content.padding-x.default`, `component.tooltip.arrow.base.default`
+  - Tokens que referenciam: `component.alert.gap.default`, `component.badge.padding-x.default`, `component.button.padding-x.sm`, `component.button.padding-y.sm`, `component.button.gap.lg`, `component.button.icon-only-padding.md`, `component.card.header.padding-bottom.default`, `component.card.header.gap.default`, `component.card.footer.gap.default`, `component.checkbox.target.gap.default`, `component.checkbox.group.options.gap.default`, `component.field.padding-y.sm`, `component.input.gap.lg`, `component.input.padding-x.md`, `component.menu.surface.padding.default`, `component.menu.item.gap.lg`, `component.menu.item.padding-x.sm`, `component.menu.item.padding-x.md`, `component.modal.body.gap.sm`, `component.modal.content-slot.gap.default`, `component.modal.footer.gap.sm`, `component.modal.close.padding.md`, `component.radio.target.gap.default`, `component.radio.group.options.gap.default`, `component.select.gap.lg`, `component.select.padding-x.md`, `component.textarea.padding-x.sm`, `component.toggle.target.gap.default`, `component.tooltip.content.padding-x.default`, `component.tooltip.arrow.base.default`
 
 ### `semantic.space.xl`
 
@@ -7278,11 +7337,12 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/checkbox.css` (5×)
+    - `css/components/menu.css` (2×)
     - `css/components/radio.css` (6×)
     - `css/components/toggle.css` (1×)
-    - `css/tokens/generated/component.css` (21×)
+    - `css/tokens/generated/component.css` (24×)
     - `css/utilities/layout.css` (1×)
-  - Tokens que referenciam: `component.alert.content.gap.default`, `component.badge.gap.default`, `component.breadcrumb.gap.default`, `component.breadcrumb.item.gap.default`, `component.button.gap.md`, `component.button.label-frame.padding-x.default`, `component.checkbox.content.gap.default`, `component.form-field.gap.default`, `component.form-field.error.gap.default`, `component.form-field.stack.gap.default`, `component.input.gap.sm`, `component.input.gap.md`, `component.input.padding-x.sm`, `component.modal.heading.gap.default`, `component.radio.content.gap.default`, `component.select.gap.sm`, `component.select.gap.md`, `component.select.padding-x.sm`, `component.toggle.content.gap.default`, `component.tooltip.content.padding-y.default`, `component.tooltip.arrow.depth.default`
+  - Tokens que referenciam: `component.action-menu.overlay.gap.default`, `component.alert.content.gap.default`, `component.badge.gap.default`, `component.breadcrumb.gap.default`, `component.breadcrumb.item.gap.default`, `component.button.gap.md`, `component.button.label-frame.padding-x.default`, `component.checkbox.content.gap.default`, `component.form-field.gap.default`, `component.form-field.error.gap.default`, `component.form-field.stack.gap.default`, `component.input.gap.sm`, `component.input.gap.md`, `component.input.padding-x.sm`, `component.menu.item.gap.sm`, `component.menu.item.gap.md`, `component.modal.heading.gap.default`, `component.radio.content.gap.default`, `component.select.gap.sm`, `component.select.gap.md`, `component.select.padding-x.sm`, `component.toggle.content.gap.default`, `component.tooltip.content.padding-y.default`, `component.tooltip.arrow.depth.default`
 
 ### `semantic.surface.default`
 
@@ -7309,8 +7369,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Alias resolvido em foundation.color.neutral.50.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (1×)
-  - Tokens que referenciam: `component.modal.bg.default`
+    - `css/tokens/generated/component.css` (2×)
+  - Tokens que referenciam: `component.menu.surface.bg.default`, `component.modal.bg.default`
 
 ### `semantic.surface.hover`
 
@@ -7349,8 +7409,8 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Alias resolvido em foundation.color.neutral.50.
 - **Usos**:
   - CSS:
-    - `css/tokens/generated/component.css` (1×)
-  - Tokens que referenciam: `component.card.bg.elevated`
+    - `css/tokens/generated/component.css` (4×)
+  - Tokens que referenciam: `component.card.bg.elevated`, `component.menu.item.bg.default`, `component.menu.item.bg.focused`, `component.menu.item.bg.disabled`
 
 ### `semantic.toned.background.active`
 
@@ -7905,7 +7965,21 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Decisão**: Aliasa foundation.z.40. Tooltip vive acima de UI mas abaixo de modal/toast. Token CSS-only (ADR-016): z-index não tem equivalente Figma Variable.
 - **Usos**:
   - CSS:
+    - `css/components/menu.css` (1×)
     - `css/components/tooltip.css` (1×)
+
+### `component.action-menu.overlay.gap.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.xs`
+- **Sentido**: Posicionamento do overlay de Action Menu.
+- **Escopo**: Action Menu
+- **Contexto**: Usado pelo padrão Action Menu para afastar o overlay do trigger sem hardcode.
+- **Decisão**: Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.
+- **Usos**:
+  - CSS:
+    - `css/components/menu.css` (2×)
 
 ### `component.alert.bg.error.filled`
 
@@ -11967,6 +12041,7 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/checkbox.css` (1×)
     - `css/components/input.css` (1×)
     - `css/components/link.css` (1×)
+    - `css/components/menu.css` (1×)
     - `css/components/modal.css` (1×)
     - `css/components/radio.css` (1×)
     - `css/components/select.css` (1×)
@@ -11987,6 +12062,7 @@ Seção expandida com contexto, decisão e locais de uso.
   - CSS:
     - `css/components/button.css` (1×)
     - `css/components/input.css` (1×)
+    - `css/components/menu.css` (1×)
     - `css/components/select.css` (1×)
     - `css/components/textarea.css` (1×)
 
@@ -12036,7 +12112,8 @@ Seção expandida com contexto, decisão e locais de uso.
     - `css/components/checkbox.css` (2×)
     - `css/components/input.css` (2×)
     - `css/components/link.css` (2×)
-    - `css/components/modal.css` (2×)
+    - `css/components/menu.css` (2×)
+    - `css/components/modal.css` (3×)
     - `css/components/radio.css` (2×)
     - `css/components/select.css` (2×)
     - `css/components/tabs.css` (5×)
@@ -12803,6 +12880,500 @@ Seção expandida com contexto, decisão e locais de uso.
 - **Usos**:
   - CSS:
     - `css/components/input.css` (1×)
+
+### `component.menu.focus-ring.radius.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.radius.lg`
+- **Sentido**: Radius anatômico do focus ring do Menu.
+- **Escopo**: Menu
+- **Contexto**: Usado no focus ring dos itens interativos do Menu.
+- **Decisão**: Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.
+- **Usos**:
+  - CSS:
+    - `css/components/menu.css` (1×)
+
+### `component.menu.item.bg.default`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.surface.raised`
+- **Sentido**: Background anatômico do item de Menu por state.
+- **Escopo**: Menu
+- **Contexto**: Usado pelos itens interativos do Menu.
+- **Decisão**: Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.
+- **Usos**:
+  - CSS:
+    - `css/components/menu.css` (1×)
+
+### `component.menu.item.bg.disabled`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.surface.raised`
+- **Sentido**: Background anatômico do item de Menu por state.
+- **Escopo**: Menu
+- **Contexto**: Usado pelos itens interativos do Menu.
+- **Decisão**: Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.
+- **Usos**:
+  - CSS:
+    - `css/components/menu.css` (1×)
+
+### `component.menu.item.bg.focused`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.surface.raised`
+- **Sentido**: Background anatômico do item de Menu por state.
+- **Escopo**: Menu
+- **Contexto**: Usado pelos itens interativos do Menu.
+- **Decisão**: Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.
+- **Usos**:
+  - CSS:
+    - `css/components/menu.css` (1×)
+
+### `component.menu.item.bg.hover`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.outline.background.hover`
+- **Sentido**: Background anatômico do item de Menu por state.
+- **Escopo**: Menu
+- **Contexto**: Usado pelos itens interativos do Menu.
+- **Decisão**: Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.
+- **Usos**:
+  - CSS:
+    - `css/components/menu.css` (1×)
+
+### `component.menu.item.content.color.default`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.content.default`
+- **Sentido**: Cor anatômica do conteúdo do item de Menu por state.
+- **Escopo**: Menu
+- **Contexto**: Usado pelos itens interativos do Menu.
+- **Decisão**: Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.
+- **Usos**:
+  - CSS:
+    - `css/components/menu.css` (4×)
+
+### `component.menu.item.content.color.destructive`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.feedback.error.content-default`
+- **Sentido**: Cor anatômica do conteúdo do item de Menu por state.
+- **Escopo**: Menu
+- **Contexto**: Usado pelos itens interativos do Menu.
+- **Decisão**: Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.
+- **Usos**:
+  - CSS:
+    - `css/components/menu.css` (2×)
+
+### `component.menu.item.content.color.disabled`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.content.disabled`
+- **Sentido**: Cor anatômica do conteúdo do item de Menu por state.
+- **Escopo**: Menu
+- **Contexto**: Usado pelos itens interativos do Menu.
+- **Decisão**: Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.
+- **Usos**:
+  - CSS:
+    - `css/components/menu.css` (1×)
+
+### `component.menu.item.content.color.focused`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.content.strong`
+- **Sentido**: Cor anatômica do conteúdo do item de Menu por state.
+- **Escopo**: Menu
+- **Contexto**: Usado pelos itens interativos do Menu.
+- **Decisão**: Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.
+- **Usos**:
+  - CSS:
+    - `css/components/menu.css` (1×)
+
+### `component.menu.item.content.color.hover`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.content.strong`
+- **Sentido**: Cor anatômica do conteúdo do item de Menu por state.
+- **Escopo**: Menu
+- **Contexto**: Usado pelos itens interativos do Menu.
+- **Decisão**: Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.
+- **Usos**:
+  - CSS:
+    - `css/components/menu.css` (1×)
+
+### `component.menu.item.gap.lg`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.sm`
+- **Sentido**: Gap anatômico do item de Menu por size.
+- **Escopo**: Menu
+- **Contexto**: Usado pelos itens interativos do Menu.
+- **Decisão**: Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.
+- **Usos**:
+  - CSS:
+    - `css/components/menu.css` (1×)
+
+### `component.menu.item.gap.md`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.xs`
+- **Sentido**: Gap anatômico do item de Menu por size.
+- **Escopo**: Menu
+- **Contexto**: Usado pelos itens interativos do Menu.
+- **Decisão**: Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.
+- **Usos**:
+  - CSS:
+    - `css/components/menu.css` (1×)
+
+### `component.menu.item.gap.sm`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.xs`
+- **Sentido**: Gap anatômico do item de Menu por size.
+- **Escopo**: Menu
+- **Contexto**: Usado pelos itens interativos do Menu.
+- **Decisão**: Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.
+- **Usos**:
+  - CSS:
+    - `css/components/menu.css` (1×)
+
+### `component.menu.item.height.lg`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.2xl`
+- **Sentido**: Altura anatômica do item de Menu por size.
+- **Escopo**: Menu
+- **Contexto**: Usado pelos itens interativos do Menu.
+- **Decisão**: Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.
+- **Usos**:
+  - CSS:
+    - `css/components/menu.css` (1×)
+
+### `component.menu.item.height.md`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.xl`
+- **Sentido**: Altura anatômica do item de Menu por size.
+- **Escopo**: Menu
+- **Contexto**: Usado pelos itens interativos do Menu.
+- **Decisão**: Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.
+- **Usos**:
+  - CSS:
+    - `css/components/menu.css` (1×)
+
+### `component.menu.item.height.sm`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.lg`
+- **Sentido**: Altura anatômica do item de Menu por size.
+- **Escopo**: Menu
+- **Contexto**: Usado pelos itens interativos do Menu.
+- **Decisão**: Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.
+- **Usos**:
+  - CSS:
+    - `css/components/menu.css` (1×)
+
+### `component.menu.item.icon.color.default`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.icon.color.default`
+- **Sentido**: Cor anatômica do ícone do item de Menu por state.
+- **Escopo**: Menu
+- **Contexto**: Usado pelos ícones de itens do Menu.
+- **Decisão**: Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.
+- **Usos**:
+  - CSS:
+    - `css/components/menu.css` (1×)
+
+### `component.menu.item.icon.color.destructive`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.icon.color.error`
+- **Sentido**: Cor anatômica do ícone do item de Menu por state.
+- **Escopo**: Menu
+- **Contexto**: Usado pelos ícones de itens do Menu.
+- **Decisão**: Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.
+- **Usos**:
+  - CSS:
+    - `css/components/menu.css` (1×)
+
+### `component.menu.item.icon.color.disabled`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.icon.color.disabled`
+- **Sentido**: Cor anatômica do ícone do item de Menu por state.
+- **Escopo**: Menu
+- **Contexto**: Usado pelos ícones de itens do Menu.
+- **Decisão**: Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.
+- **Usos**:
+  - CSS:
+    - `css/components/menu.css` (1×)
+
+### `component.menu.item.icon.size.lg`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.md`
+- **Sentido**: Tamanho anatômico do ícone do item de Menu por size.
+- **Escopo**: Menu
+- **Contexto**: Usado pelos ícones de itens do Menu.
+- **Decisão**: Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.
+- **Usos**:
+  - CSS:
+    - `css/components/menu.css` (1×)
+
+### `component.menu.item.icon.size.md`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.sm`
+- **Sentido**: Tamanho anatômico do ícone do item de Menu por size.
+- **Escopo**: Menu
+- **Contexto**: Usado pelos ícones de itens do Menu.
+- **Decisão**: Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.
+- **Usos**:
+  - CSS:
+    - `css/components/menu.css` (1×)
+
+### `component.menu.item.icon.size.sm`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.size.xs`
+- **Sentido**: Tamanho anatômico do ícone do item de Menu por size.
+- **Escopo**: Menu
+- **Contexto**: Usado pelos ícones de itens do Menu.
+- **Decisão**: Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.
+- **Usos**:
+  - CSS:
+    - `css/components/menu.css` (1×)
+
+### `component.menu.item.icon.stroke-width.lg`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.icon.stroke-width.regular.24`
+- **Sentido**: Stroke width anatômico do ícone do item de Menu por size.
+- **Escopo**: Menu
+- **Contexto**: Usado pelos ícones de itens do Menu.
+- **Decisão**: Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.
+- **Usos**:
+  - CSS:
+    - `css/components/menu.css` (1×)
+
+### `component.menu.item.icon.stroke-width.md`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.icon.stroke-width.regular.20`
+- **Sentido**: Stroke width anatômico do ícone do item de Menu por size.
+- **Escopo**: Menu
+- **Contexto**: Usado pelos ícones de itens do Menu.
+- **Decisão**: Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.
+- **Usos**:
+  - CSS:
+    - `css/components/menu.css` (1×)
+
+### `component.menu.item.icon.stroke-width.sm`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.icon.stroke-width.regular.16`
+- **Sentido**: Stroke width anatômico do ícone do item de Menu por size.
+- **Escopo**: Menu
+- **Contexto**: Usado pelos ícones de itens do Menu.
+- **Decisão**: Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.
+- **Usos**:
+  - CSS:
+    - `css/components/menu.css` (1×)
+
+### `component.menu.item.meta.color.default`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.content.subtle`
+- **Sentido**: Cor anatômica de metadado ou shortcut do item de Menu por state.
+- **Escopo**: Menu
+- **Contexto**: Usado por shortcuts e metadados laterais dos itens do Menu.
+- **Decisão**: Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.
+- **Usos**:
+  - CSS:
+    - `css/components/menu.css` (2×)
+
+### `component.menu.item.meta.color.destructive`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.feedback.error.content-default`
+- **Sentido**: Cor anatômica de metadado ou shortcut do item de Menu por state.
+- **Escopo**: Menu
+- **Contexto**: Usado por shortcuts e metadados laterais dos itens do Menu.
+- **Decisão**: Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.
+- **Usos**:
+  - CSS:
+    - `css/components/menu.css` (1×)
+
+### `component.menu.item.meta.color.disabled`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.content.disabled`
+- **Sentido**: Cor anatômica de metadado ou shortcut do item de Menu por state.
+- **Escopo**: Menu
+- **Contexto**: Usado por shortcuts e metadados laterais dos itens do Menu.
+- **Decisão**: Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.
+- **Usos**:
+  - CSS:
+    - `css/components/menu.css` (1×)
+
+### `component.menu.item.padding-x.lg`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.md`
+- **Sentido**: Padding horizontal anatômico do item de Menu por size.
+- **Escopo**: Menu
+- **Contexto**: Usado pelos itens interativos do Menu.
+- **Decisão**: Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.
+- **Usos**:
+  - CSS:
+    - `css/components/menu.css` (1×)
+
+### `component.menu.item.padding-x.md`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.sm`
+- **Sentido**: Padding horizontal anatômico do item de Menu por size.
+- **Escopo**: Menu
+- **Contexto**: Usado pelos itens interativos do Menu.
+- **Decisão**: Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.
+- **Usos**:
+  - CSS:
+    - `css/components/menu.css` (1×)
+
+### `component.menu.item.padding-x.sm`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.sm`
+- **Sentido**: Padding horizontal anatômico do item de Menu por size.
+- **Escopo**: Menu
+- **Contexto**: Usado pelos itens interativos do Menu.
+- **Decisão**: Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.
+- **Usos**:
+  - CSS:
+    - `css/components/menu.css` (1×)
+
+### `component.menu.item.radius.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.radius.md`
+- **Sentido**: Radius anatômico do item de Menu.
+- **Escopo**: Menu
+- **Contexto**: Usado pelos itens interativos do Menu.
+- **Decisão**: Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.
+- **Usos**:
+  - CSS:
+    - `css/components/menu.css` (1×)
+
+### `component.menu.surface.bg.default`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.surface.elevated`
+- **Sentido**: Background anatômico da superfície de Menu.
+- **Escopo**: Menu
+- **Contexto**: Usado pela superfície `.ds-menu`.
+- **Decisão**: Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.
+- **Usos**:
+  - CSS:
+    - `css/components/menu.css` (1×)
+
+### `component.menu.surface.border-color.default`
+
+- **Camada**: component
+- **Tipo**: `color`
+- **Alias**: → `semantic.border.subtle`
+- **Sentido**: Border color anatômico da superfície de Menu.
+- **Escopo**: Menu
+- **Contexto**: Usado pela superfície `.ds-menu`.
+- **Decisão**: Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.
+- **Usos**:
+  - CSS:
+    - `css/components/menu.css` (2×)
+
+### `component.menu.surface.border-width.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.border.width.default`
+- **Sentido**: Border width anatômico da superfície de Menu.
+- **Escopo**: Menu
+- **Contexto**: Usado pela superfície `.ds-menu`.
+- **Decisão**: Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.
+- **Usos**:
+  - CSS:
+    - `css/components/menu.css` (2×)
+
+### `component.menu.surface.gap.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.2xs`
+- **Sentido**: Gap anatômico entre itens de Menu.
+- **Escopo**: Menu
+- **Contexto**: Usado pela superfície `.ds-menu`.
+- **Decisão**: Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.
+- **Usos**:
+  - CSS:
+    - `css/components/menu.css` (2×)
+
+### `component.menu.surface.padding.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.space.sm`
+- **Sentido**: Padding anatômico da superfície de Menu.
+- **Escopo**: Menu
+- **Contexto**: Usado pela superfície `.ds-menu`.
+- **Decisão**: Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.
+- **Usos**:
+  - CSS:
+    - `css/components/menu.css` (1×)
+
+### `component.menu.surface.radius.default`
+
+- **Camada**: component
+- **Tipo**: `dimension`
+- **Alias**: → `semantic.radius.lg`
+- **Sentido**: Radius anatômico da superfície de Menu.
+- **Escopo**: Menu
+- **Contexto**: Usado pela superfície `.ds-menu`.
+- **Decisão**: Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.
+- **Usos**:
+  - CSS:
+    - `css/components/menu.css` (1×)
 
 ### `component.modal.action.fill.brand`
 
