@@ -72,6 +72,8 @@
           aria-expanded="true"
           aria-controls="combobox-country-listbox"
           aria-autocomplete="list"
+          aria-required="true"
+          aria-describedby="combobox-country-helper"
           value="Brazil"
         >
         <button type="button" class="ds-combobox__clear" aria-label="Clear selection">
@@ -80,10 +82,10 @@
         <i data-lucide="chevron-down" class="ds-combobox__chevron ds-icon" aria-hidden="true"></i>
       </div>
       <ul class="ds-combobox__listbox" id="combobox-country-listbox" role="listbox" aria-label="Countries">
-        <li><button type="button" class="ds-combobox__option" role="option">Argentina</button></li>
-        <li><button type="button" class="ds-combobox__option" role="option" aria-selected="true">Brazil</button></li>
-        <li><button type="button" class="ds-combobox__option" role="option">Chile</button></li>
-        <li><button type="button" class="ds-combobox__option" role="option" aria-disabled="true">Colombia (unavailable)</button></li>
+        <li class="ds-combobox__option" role="option">Argentina</li>
+        <li class="ds-combobox__option" role="option" aria-selected="true">Brazil</li>
+        <li class="ds-combobox__option" role="option">Chile</li>
+        <li class="ds-combobox__option" role="option" aria-disabled="true">Colombia (unavailable)</li>
       </ul>
       <p class="ds-field__helper" id="combobox-country-helper">Type to filter countries.</p>
     </div>
@@ -93,15 +95,15 @@
     <h2 class="ds-subsection__title"><span data-lang="pt">Tamanhos</span><span data-lang="en">Sizes</span></h2>
     <div style="display:flex;flex-direction:column;gap:var(--ds-space-md);max-width:360px;">
       <div class="ds-combobox ds-combobox--sm">
-        <input class="ds-combobox__input" type="text" role="combobox" aria-expanded="false" placeholder="Small (32px)">
+        <input class="ds-combobox__input" type="text" role="combobox" aria-expanded="false" aria-label="Small combobox" placeholder="Small (32px)">
         <i data-lucide="chevron-down" class="ds-combobox__chevron ds-icon" aria-hidden="true"></i>
       </div>
       <div class="ds-combobox ds-combobox--md">
-        <input class="ds-combobox__input" type="text" role="combobox" aria-expanded="false" placeholder="Medium (40px)">
+        <input class="ds-combobox__input" type="text" role="combobox" aria-expanded="false" aria-label="Medium combobox" placeholder="Medium (40px)">
         <i data-lucide="chevron-down" class="ds-combobox__chevron ds-icon" aria-hidden="true"></i>
       </div>
       <div class="ds-combobox ds-combobox--lg">
-        <input class="ds-combobox__input" type="text" role="combobox" aria-expanded="false" placeholder="Large (48px)">
+        <input class="ds-combobox__input" type="text" role="combobox" aria-expanded="false" aria-label="Large combobox" placeholder="Large (48px)">
         <i data-lucide="chevron-down" class="ds-combobox__chevron ds-icon" aria-hidden="true"></i>
       </div>
     </div>

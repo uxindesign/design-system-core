@@ -164,12 +164,14 @@
   gap: var(--ds-combobox-option-gap-default);
   min-block-size: var(--ds-menu-item-height-md);
   padding: 0 var(--ds-menu-item-padding-x-md);
+  margin: 0;
   border: 0;
   border-radius: var(--ds-combobox-option-radius-default);
   background: var(--ds-menu-item-bg-default);
   color: var(--ds-menu-item-content-color-default);
   font: inherit;
   text-align: start;
+  list-style: none;
   cursor: pointer;
   transition:
     background-color var(--ds-motion-duration-fast) var(--ds-motion-ease-default),
