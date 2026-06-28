@@ -207,6 +207,13 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 ## [Não publicado]
 
 ### Adicionado
+- **Componente Pagination.** Figma aprovado (run `2026-06-25-pagination`): tokens `pagination/*` (29 paths), token semântico `background.transparent`, `css/components/pagination.css`, `docs/pagination.html`, prev/next via Button Ghost Icon Only, page items com `aria-current="page"`, sizes sm/md/lg, baselines visuais e run documentada em `docs/agents/runs/2026-06-25-pagination/`.
+- **Estado da run verificável por máquina + porteiro de gates.** Cada run agora tem `state.json` com status por gate, pré-requisitos, aprovações do owner e exit codes de validadores. `agents:next-step` passa a recusar avançar enquanto o gate anterior não estiver `approved`, e o novo `agents:gate` registra status, aprovações, snapshot Figma e checks. Transforma a orquestração de conselheira em porteiro, impedindo pular etapas.
+- **Matriz de contrato como artefato executável.** Novo `templates/figma-contract-matrix.md` + `agents:validate-matrix` computam `unmappedRows`, exigem `modelEvidence` por linha e sinalizam exceções sem aprovação (`--strict-exceptions`). O Figma Builder fica bloqueado enquanto a matriz não passar — atacando a causa raiz dos erros do Combobox (tokens inventados, anatomia copiada parcialmente, exceções sem owner).
+- **Espinha anti-alucinação (`docs/agents/grounding.md`).** Documento único referenciado por todas as roles consolidando: nunca afirmar fato Figma sem ler+persistir em `evidence/`, binding validado por propriedade (não por total agregado), inspeção de ícone no vetor interno, foco no Focus Ring (não na borda estrutural), documentação derivada da API real, protocolo de recuperação pós-rejeição e status tripartite (contrato/documentação/visual) computado, não declarado.
+- **Matriz de contrato obrigatória para Figma Builder.** O fluxo de agents agora bloqueia escrita no Figma sem uma matriz implementável de `node/path + propriedade + token/property pública + evidência de modelo + validação`, proíbe bindings por heurística de nome e exige validação linha a linha antes de entregar para auditoria.
+- **Workflow designer-facing para agents de DS.** `docs/agents/product-designer-workflow.md` define uma entrada otimizada para Product Designers, onde o Orchestrator esconde scripts, terminal e handoffs técnicos e conduz o fluxo por necessidade → planejamento → Figma → auditoria → aprovação → repo → testes → web.
+- **Protocolo portátil de orquestração multi-agent.** `docs/agents/protocol.md`, `docs/agents/orchestration.md`, adapters por IA e scripts `agents:create-run`, `agents:validate-run` e `agents:next-step` permitem criar runs versionadas em `docs/agents/runs/`, passar artefatos entre roles sem copy/paste e replicar o fluxo em Codex, Claude, Gemini, Cursor ou outra IA.
 - **Menu e padrão Action Menu documentados no repo.** Adicionados CSS e página de docs para Menu como base de comandos e Action Menu como composição recomendada com Button, roles ARIA e exemplos com ícones Lucide.
 - **Gate permanente de paridade para documentação Figma.** O processo de agents agora obriga consultar páginas maduras como modelo antes de criar/editar documentação visual, manter textos com altura automática/height hug, evitar `clipsContent=true` em frames documentais e auditar contagens objetivas de textos fixos, clips, nós soltos e divergências contra o modelo.
 - **Atalhos oficiais para agents especializados.** `docs/agents/quick-commands.md` documenta comandos curtos como "Audite Menu como Figma Auditor" e "Execute a spec aprovada como Figma Builder", resolvendo cada frase para role, checklist, template e bloqueios sem exigir prompts longos em todo uso.
@@ -1033,10 +1040,10 @@ Consolidação da documentação como fonte única de verdade. Plano em seis fas
 
 # Índice de ADRs — Design System Core
 
-> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-06-22. Não editar manualmente.
+> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-06-28. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
 
-19 decisões registradas.
+20 decisões registradas.
 
 | ADR | Título | Status | Data |
 |-----|--------|--------|------|
@@ -1059,6 +1066,7 @@ Consolidação da documentação como fonte única de verdade. Plano em seis fas
 | [ADR-017](decisions/ADR-017-componentes-css-only.md) | — Componentes CSS-only (sem equivalência no Figma) | Aceito | 2026-04-30 |
 | [ADR-018](decisions/ADR-018-content-naming-strong-default-subtle.md) | — Renomear `content.{default,secondary,tertiary}` para `content.{strong,default,subtle}` | Aceito | 2026-05-06 |
 | [ADR-019](decisions/ADR-019-component-tokens-contrato-anatomico.md) | — Reintrodução de Component tokens como contrato anatômico | Aceita | 2026-05-11 |
+| [ADR-020](decisions/ADR-020-anatomias-globais-de-form-controls.md) | — Anatomias globais de form controls | Aceita | 2026-06-23 |
 
 
 ═══════════════════════════════════════════════════════════
@@ -1116,6 +1124,8 @@ Armadilhas operacionais conhecidas:
 - Alterações em `.github/workflows/*.yml` devem ser feitas via Git local ou interface GitHub autorizada, não por GitHub MCP com permissão insuficiente.
 
 ## Adapters por agente
+
+Fluxos multi-agent portáveis vivem em `docs/agents/protocol.md`, com orquestração em `docs/agents/orchestration.md` e adapters em `docs/agents/adapters/`.
 
 ### Claude Code
 
@@ -1576,7 +1586,7 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 
 # Inventário de componentes — Design System Core
 
-> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-06-22. Não editar manualmente.
+> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-06-28. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
 > Versão atual: **1.0.0-beta.5**
 
@@ -1599,6 +1609,7 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 | Menu | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
 | Tabs | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
 | Breadcrumb | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
+| Pagination | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
 | Avatar | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
 | Divider | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
 | Form Field | 🟢 | — (CSS-only, ADR-017) | — | ⬜ | 🟢 |
@@ -1647,6 +1658,7 @@ A marca se compromete com WCAG 2.2 AA como mínimo. Isso implica:
 | ADR-017 | — Componentes CSS-only (sem equivalência no Figma) | Aceito |
 | ADR-018 | — Renomear `content.{default,secondary,tertiary}` para `content.{strong,default,subtle}` | Aceito |
 | ADR-019 | — Reintrodução de Component tokens como contrato anatômico | Aceita |
+| ADR-020 | — Anatomias globais de form controls | Aceita |
 
 ## Próximos milestones
 
@@ -1814,16 +1826,20 @@ Não use este processo completo para correções pontuais já especificadas pelo
 
 ## Regras duras
 
-1. Não escrever no Figma antes de benchmark + brief + spec aprovados.
-2. Não espelhar no repo antes do Figma aprovado.
-3. Não inventar estilos ou exemplos soltos quando já existir componente DS equivalente.
-4. Não criar tokens novos sem justificar camada, uso e escopo.
-5. Não criar variants para comportamento que deve ser propriedade, slot ou composição.
-6. Não usar componente errado para semântica errada. Menu button, select e combobox têm papéis diferentes.
-7. Não transformar documentação Figma em cópia da documentação técnica do repo.
-8. Não interpretar aprovação de um gate como autorização para todos os próximos gates.
-9. Não misturar limpeza de trabalho rejeitado, criação de componente e sync repo no mesmo bloco de ação.
-10. Não criar páginas Figma fora do padrão vivo do DS Core. Página de componente deve usar frame raiz único e seções internas; component sets, exemplos, labels e docs não ficam soltos no canvas.
+1. Entregar a melhor recomendação primeiro. Se existirem alternativas, abrir pela opção mais correta para o DS Core e só depois listar trade-offs, fallback ou exceções. Não apresentar uma opção fraca como caminho inicial quando já é possível propor a versão robusta.
+2. Não escrever no Figma antes de benchmark + brief + spec aprovados.
+3. Não espelhar no repo antes do Figma aprovado.
+4. Não inventar estilos ou exemplos soltos quando já existir componente DS equivalente.
+5. Não criar tokens novos sem justificar camada, uso e escopo.
+6. Não criar tokens específicos por componente para anatomias compartilhadas de form controls quando já houver família global/familiar (`form-field/*`, `field/*`, `focus-ring/*`, `icon/*`). Ver ADR-020.
+7. Não criar variants para comportamento que deve ser propriedade, slot ou composição.
+8. Não usar componente errado para semântica errada. Menu button, select e combobox têm papéis diferentes.
+9. Não usar `Dropdown` como classe final de componente. Dropdown descreve forma visual, não semântica; deve ser resolvido para Select, Combobox, Action Menu/Menu ou Popover antes de brief/spec.
+10. Não transformar documentação Figma em cópia da documentação técnica do repo.
+11. Não interpretar aprovação de um gate como autorização para todos os próximos gates.
+12. Não misturar limpeza de trabalho rejeitado, criação de componente e sync repo no mesmo bloco de ação.
+13. Não criar páginas Figma fora do padrão vivo do DS Core. Página de componente deve usar frame raiz único e seções internas; component sets, exemplos, labels e docs não ficam soltos no canvas.
+14. Não declarar componente Figma pronto quando `description` visual, metadata `description` ou `documentationLinks` do component/component set divergirem do padrão vivo dos componentes maduros.
 
 ## Como demonstrar aderência
 
@@ -1854,6 +1870,10 @@ Para reduzir mistura de responsabilidades, trabalhos de componente/padrão devem
 
 Comandos curtos oficiais ficam em `docs/agents/quick-commands.md`. Quando o owner disser algo como "Audite Menu como Figma Auditor" ou "Execute a spec aprovada como Figma Builder", o agente deve resolver o atalho para a role/checklist correspondente sem exigir o prompt completo.
 
+Para trabalho multi-chat ou multi-IA, use o protocolo portatil em `docs/agents/protocol.md` e crie uma run com `npm run agents:create-run`. A run e o artefato compartilhado entre agentes; ela evita depender de copy/paste manual entre chats.
+
+Para Product Designers, o Orchestrator deve operar essa camada tecnica nos bastidores. O fluxo designer-facing esta em `docs/agents/product-designer-workflow.md`: necessidade -> planejamento -> Figma -> auditoria -> aprovacao -> repo -> testes -> web.
+
 | Momento | Role | Arquivo |
 |---|---|---|
 | Brief, classificação e spec | DS Architect | `docs/agents/roles/ds-architect.md` |
@@ -1874,7 +1894,7 @@ Bloqueado antes de: qualquer escrita no Figma ou repo
 
 Regra: **quem constrói não aprova o próprio trabalho**. A role Figma Builder pode fazer uma leitura pós-escrita básica para confirmar que o script rodou, mas a aprovação estrutural deve vir de Figma Auditor.
 
-## Gate permanente — paridade de documentação Figma
+## Gate permanente — paridade visual e documental Figma
 
 Sempre que o trabalho criar, editar ou reorganizar documentação visual no Figma, este gate é obrigatório. O owner não precisa pedir explicitamente.
 
@@ -1882,8 +1902,9 @@ Antes de escrever:
 
 1. Escolher 2-3 páginas maduras do DS Core como modelo.
 2. Ler as propriedades reais dessas páginas: root, seções, tabelas, textos, dividers, exemplos e wrappers de component sets.
-3. Registrar o modelo escolhido na spec ou no checkpoint.
-4. Tratar o modelo como contrato operacional, não como inspiração visual vaga.
+3. Capturar screenshot do alvo atual quando existir e screenshots dos modelos.
+4. Registrar o modelo escolhido na spec ou no checkpoint.
+5. Tratar o modelo como contrato operacional, não como inspiração visual vaga.
 
 Regras mínimas:
 
@@ -1891,8 +1912,14 @@ Regras mínimas:
 - Frames documentais usam `clipsContent=false`, salvo exceção justificada e aprovada.
 - Root e seções seguem o padrão vivo de auto-layout, padding/gap/binds e background.
 - Tabelas, linhas, exemplos, labels de matriz e component sets ficam aninhados na seção correta.
+- Tabelas de propriedades, tokens e acessibilidade são derivadas da API real do componente. Uma property, slot, token ou estado removido/renomeado deve sair da documentação na mesma matriz de contrato.
+- O texto `header/description` é contrato documental: deve existir uma única vez, chamar-se exatamente `description`, usar Text Style `body/md`, altura automática/height hug e conteúdo curto de uso para designer, alinhado aos modelos vivos.
+- A metadata `description` e `documentationLinks` de component/component set também são contrato: a description deve seguir o padrão vivo do DS Core, documentando arquitetura de tokens, modelo de propriedades, properties Figma e contratos Component principais quando o componente tiver Component tokens; o link deve apontar para a página pública do componente em `https://uxindesign.github.io/design-system-core/docs/<slug>.html`.
+- WCAG 2.2 AA é gate de Figma, não só de docs web. Toda página/componente auditado deve gerar `accessibility.contrast.checks[]` em `evidence/page-parity.json`: texto normal ≥ 4.5:1, texto large/UI/focus/borda funcional/ícone informativo ≥ 3:1, com node IDs e tokens/valores foreground/background resolvidos.
+- Texto disabled só é aceito como isento quando representa conteúdo indisponível. Empty state, helper, placeholder informativo e mensagens de ausência de resultado são conteúdo informativo e precisam passar contraste normal.
 - Component matrix pode usar frame `NONE` quando o padrão vivo exigir posicionamento manual, mas não pode cortar focus ring, overlay ou conteúdo.
 - Nenhum node gerado fica solto no canvas fora do frame raiz aprovado.
+- A página resultante precisa parecer parte da mesma família visual dos modelos escolhidos: escala, densidade, espaçamentos, hierarquia, disposição dos component sets, exemplos e tabelas devem estar alinhados ou ter exceção aprovada.
 
 Depois de escrever, a auditoria deve reportar contagens objetivas:
 
@@ -1901,9 +1928,48 @@ Depois de escrever, a auditoria deve reportar contagens objetivas:
 - seções esperadas sem auto-layout;
 - root sem background ou binds esperados;
 - nós soltos fora do root;
+- linhas de documentação que citam property/slot/token inexistente;
+- bindings ausentes em documentação visual quando a página modelo usa binding equivalente;
+- `header/description` ausente, duplicado, com nome livre, Text Style errado, altura fixa ou conteúdo fora do padrão dos modelos;
+- component/component set sem metadata `description`, com texto de draft, sem `documentationLinks`, com link errado, ou sem o bloco canônico esperado para componentes com Component tokens;
+- falhas de contraste WCAG em `accessibility.contrast.checks`, incluindo uso de token disabled para conteúdo informativo;
 - divergências relevantes contra as páginas modelo.
 
 Qualquer contagem acima de zero bloqueia "pronto" até correção ou justificativa explícita do owner.
+
+O Builder não pode declarar `pronto para auditoria` somente porque a matriz técnica passou. O status final do Builder deve separar três resultados:
+
+```md
+- contrato: passou | falhou
+- documentação: passou | falhou
+- visual: passou | falhou
+- status: pronto para auditoria | bloqueado
+```
+
+Se qualquer um dos três falhar, o status é `bloqueado`. Quando o owner rejeita visualmente o draft, o agente deve parar escritas no Figma, fazer auditoria read-only contra os modelos vivos e apresentar plano de recuperação com node IDs antes de qualquer nova edição.
+
+## Gate permanente — anatomias globais de form controls
+
+Sempre que o trabalho envolver form controls (`Input Text`, `Select`, `Textarea`, `Combobox`, Checkbox, Radio, Toggle ou novo controle equivalente), aplique ADR-020 antes de propor tokens, matriz ou script.
+
+Regras mínimas:
+
+- Partes compartilhadas usam famílias compartilhadas: `form-field/label/*`, `form-field/required/*`, `form-field/helper/*`, `form-field/error/*`, `field/*`, `focus-ring/*` e `icon/*`/`field/icon/*` quando aplicável.
+- Component tokens específicos só entram quando documentam anatomia pública local. Wrapper mecânico por componente para helper, error, field border/background, focus ring color/width ou icon stroke-width é bloqueado.
+- Quando uma anatomia compartilhada exigir token local por exceção, a linha da matriz deve ter `decisionRef` aprovado e o token deve aliasar a família global/familiar correspondente.
+- Helper Text segue o baseline vivo de `Input Text` até decisão contrária aprovada. A matriz deve comparar `fills`, Text Style, `charactersRef`, `visibleRef`, `textAutoResize`, distância e ordem por variant.
+- Focus Ring só fica visível em estados focados ou estados explicitamente definidos como foco ativo (`Open` com foco retido, por exemplo). `Default`, `Hover`, `Filled`, `Readonly` sem foco e `Disabled` não exibem Focus Ring.
+- A borda estrutural do Field não substitui o Focus Ring. Se o modelo vivo usa `field/border-color/focus`, isso é estado do Field; o layer `Focus Ring` ainda precisa existir e estar bindado.
+
+Evidência mínima:
+
+- `sharedAnatomyRows`;
+- `localTokenExceptions`;
+- `componentSpecificSharedTokenCount`;
+- `helperBaselineMismatches`;
+- `focusRingVisibleOutsideFocused`;
+- `focusRingMissingInFocused`;
+- lista de exceções com `decisionRef`.
 
 ## Gate 0 — estado atual e escopo
 
@@ -1953,12 +2019,14 @@ Antes de desenhar, classifique o que está sendo criado:
 | Overlay | Popup, modal, popover, tooltip ou menu | Exige regras de foco, camada, fechamento e ARIA. |
 | Form control | Campo que participa de formulário | Exige label, helper/error, disabled/read-only, value/placeholder e ARIA. |
 | Menu action | Lista de ações | Segue menu/menu button; não representa valor de formulário. |
-| Combobox | Input com popup e seleção | Segue combobox/listbox; representa valor e exige teclado/ARIA próprios. |
+| Combobox | Input com listbox e seleção | Segue combobox/listbox; representa valor e exige teclado/ARIA próprios. |
+| Dropdown | Termo ambíguo para “algo abre” | Não é classe final. Resolver para Select, Combobox, Action Menu/Menu ou Popover antes de qualquer Builder. |
 
 Se a classe não estiver clara, pare e peça decisão ao owner antes de criar.
 
 Pare também quando:
 
+- o pedido usar `Dropdown` sem dizer se representa valor, busca, ação/comando ou conteúdo livre;
 - o padrão misturar valor de formulário com menu de ações;
 - o componente exigir comportamento de teclado ainda não especificado;
 - o componente depender de tokens globais novos;
@@ -1987,6 +2055,7 @@ Formato obrigatório:
 **Brief proposto**
 - Nome:
 - Classe:
+- Resolucao de Dropdown: Select | Combobox | Action Menu/Menu | Popover | n/a
 - Problema:
 - Usar quando:
 - Não usar quando:
@@ -2040,6 +2109,54 @@ Formato obrigatório:
 
 Sem aprovação explícita do owner, não escreva no Figma.
 
+### Gate 4.1 — matriz de contrato Figma
+
+Antes de qualquer escrita no Figma, a spec aprovada deve virar uma matriz de contrato implementável. Esta matriz é o artefato operacional do Figma Builder e do Figma Auditor. Sem ela, o Builder fica bloqueado mesmo que a spec visual esteja aprovada.
+
+A matriz deve ser derivada de componentes vivos comparáveis do DS Core, não de heurística. Para componentes novos ou padrões próximos de componentes existentes, use pelo menos 2-3 modelos maduros relevantes. Para form controls e padrões de popup/lista, inclua os componentes equivalentes já aceitos quando existirem, por exemplo `Input Text`, `Select`, `Textarea`, `Menu` ou `Button`.
+
+Cada linha da matriz deve declarar:
+
+| Campo | Obrigatório | Descrição |
+|---|---:|---|
+| `part` | sim | Parte anatômica pública ou sublayer afetado. |
+| `targetNode` | sim | Node ID quando já existir, ou nome/caminho esperado quando será criado. |
+| `figmaProperty` | sim | Propriedade exata a bindar ou preservar (`fills.color`, `strokes.color`, `strokeWeight`, `cornerRadius`, `paddingLeft`, `itemSpacing`, `characters`, `visible`, `mainComponent`, etc.). |
+| `componentProperty` | quando aplicável | Property pública esperada no painel e referência real (`componentPropertyReferences`). |
+| `componentToken` | quando aplicável | Variable da collection `Component`, por nome e, se já existir, por `VariableID`. |
+| `sharedFamily` | para anatomia compartilhada | Família canonica esperada (`form-field/helper`, `field`, `focus-ring`, `icon`, etc.) ou `n/a` quando a parte é específica. |
+| `semanticAlias` | quando aplicável | Semantic esperado como alvo do Component token. |
+| `modelEvidence` | sim | Página/componente/model node usado como referência. |
+| `validation` | sim | Como o Auditor deve comprovar a linha depois da escrita. |
+| `exception` | quando houver | Justificativa aprovada para não seguir o padrão vivo. |
+
+Regras bloqueantes:
+
+- A matriz deve ter `unmappedRows=0` antes da escrita.
+- Scripts de Figma só podem aplicar pares explícitos `nodeId/path + figmaProperty + variableId/componentProperty`. Busca por nome pode localizar o node, mas não pode escolher token, camada, property pública ou anatomia.
+- É proibido bindar "o token parecido", "qualquer variável disponível" ou "o primeiro token que passa na contagem".
+- É proibido remover property pública, trocar slot, renomear instância, recriar sublayer ou alterar variant fora de uma linha da matriz.
+- Qualquer token novo, alias novo, exceção de camada ou diferença contra os modelos vivos volta para aprovação do owner antes da escrita.
+- Em form controls, qualquer linha de label/helper/error/field/focus-ring/icon deve declarar `sharedFamily` ou uma exceção aprovada por ADR/owner.
+- Qualquer página/componente com documentação Figma deve ter linhas explícitas para `header/description`, metadata `description` e `documentationLinks` de cada component/component set público afetado.
+- Contagem agregada não aprova implementação. `N/M bindings` só é evidência válida junto da lista de bindings por linha da matriz.
+
+Formato mínimo:
+
+```md
+**Matriz de contrato Figma**
+- Modelos vivos:
+- Linhas:
+
+| part | targetNode | figmaProperty | componentProperty | componentToken | sharedFamily | semanticAlias | modelEvidence | validation | exception |
+|---|---|---|---|---|---|---|---|---|---|
+
+- unmappedRows:
+- novos tokens:
+- exceções:
+- bloqueado antes de:
+```
+
 ### Padrão de página Figma obrigatório
 
 Antes de criar ou redesenhar uma página no Figma, o agente deve inspecionar pelo menos 2 páginas equivalentes do DS Core no Figma vivo. A spec precisa registrar:
@@ -2067,12 +2184,15 @@ Qualquer exceção precisa ser explicada e aprovada antes da escrita no Figma.
 A primeira execução deve ser draft:
 
 1. Criar ou reorganizar dentro do padrão de página aprovado.
-2. Preservar padrões do DS Core: nomes, ordenação, tokens, text styles, Lucide, focus ring, auto-layout e aninhamento de seções.
-3. Usar componentes existentes dentro de slots e exemplos.
-4. Validar por leitura estrutural depois da escrita.
-5. Para página de componente, validar `topLevelCount`, nome do frame raiz, ordem de seções e ausência de nós gerados soltos.
-6. Verificar screenshot quando layout, spacing, iconografia ou texto mudar.
-7. Apresentar evidência e aguardar aprovação antes de sincronizar repo.
+2. Executar somente linhas aprovadas na matriz de contrato.
+3. Preservar padrões do DS Core: nomes, ordenação, tokens, text styles, Lucide, focus ring, auto-layout e aninhamento de seções.
+4. Usar componentes existentes dentro de slots e exemplos.
+5. Validar por leitura estrutural depois da escrita.
+6. Para página de componente, validar `topLevelCount`, nome do frame raiz, ordem de seções e ausência de nós gerados soltos.
+7. Verificar screenshot sempre que houver página/documentação visual, component set, exemplo, layout, spacing, iconografia ou texto alterado.
+8. Comparar o screenshot final contra os screenshots dos modelos registrados antes da escrita.
+9. Validar que tabelas de propriedades, tokens, exemplos e acessibilidade refletem a API real do componente após a escrita.
+10. Apresentar evidência e aguardar aprovação antes de sincronizar repo.
 
 Se o draft for rejeitado, corrija o draft ou descarte o trabalho. Não consolidar no repo um Figma ainda em disputa.
 
@@ -2080,10 +2200,17 @@ Evidência mínima após draft:
 
 - node IDs criados/alterados;
 - resumo do que foi alterado;
-- screenshot ou motivo objetivo para não ter screenshot;
+- screenshot do alvo final e screenshots/modelos usados na comparação;
 - problemas encontrados;
 - validação estrutural feita;
+- validação documental feita;
+- validação WCAG feita (`accessibility.contrast.checks`, ratios e node IDs);
+- validação visual feita;
+- matriz executada com `unmappedRows=0`;
+- divergências contra a matriz, mesmo quando corrigidas;
+- divergências contra os screenshots/modelos vivos, mesmo quando corrigidas;
 - validação do padrão de página (`topLevelCount`, root, seções, loose nodes);
+- status separado de contrato, documentação e visual;
 - o que ainda está bloqueado antes do repo.
 
 ## Gate 6 — repo após aprovação
@@ -2114,11 +2241,19 @@ Antes de escrever no repo, apresente:
 Para Figma:
 
 - dump antes/depois quando editar component set existente;
+- matriz de contrato antes/depois, com `part`, `targetNode`, `figmaProperty`, `componentToken`, `semanticAlias`, `modelEvidence` e `validation`;
+- zero linhas implementadas fora da matriz, exceto exceção aprovada;
 - `componentPropertyDefinitions` preservadas ou intencionalmente alteradas;
 - texts editáveis ligados a `componentPropertyReferences.characters`;
+- `header/description` validado contra os modelos vivos por nome, Text Style, auto-resize, conteúdo e posição;
+- metadata `description` e `documentationLinks` de component/component set validados contra o padrão vivo, sem texto de draft, placeholders ou link ausente/incorreto;
 - booleans, instance swaps e slots ligados aos layers corretos;
 - sem `Icon Placeholder`, `glyph`, hardcoded indevido ou `ALL_SCOPES`;
-- Component variables apontando para Semantic;
+- Component variables apontando para Semantic, sem raw value, Foundation direto ou Component -> Component;
+- anatomias compartilhadas de form controls usando famílias `form-field/*`, `field/*`, `focus-ring/*` e `icon/*`, com exceções listadas por `decisionRef`;
+- Helper Text validado contra o baseline de `Input Text`, salvo decisão contrária aprovada;
+- focus ring validado por anatomia, incluindo contagem de variants focados, layers `Focus Ring`, uso de borda estrutural como foco e bindings de cor/largura/radius;
+- Focus Ring visível apenas em estados focados ou estados explicitamente definidos como foco ativo;
 - página de componente com um root frame, seções internas e zero nós gerados soltos;
 - screenshot revisado.
 
@@ -2143,6 +2278,7 @@ npm run audit:component-tokens
 - `docs/system-principles.md`
 - `docs/agent-integrations.md`
 - `docs/process-figma-sync.md`
+- `docs/decisions/ADR-020-anatomias-globais-de-form-controls.md`
 - [Figma Help: Variables](https://help.figma.com/hc/en-us/articles/15339657135383-Guide-to-variables-in-Figma)
 - [Figma Help: Component properties](https://help.figma.com/hc/en-us/articles/5579474826519-Explore-component-properties)
 - [WAI-ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/)
@@ -19017,7 +19153,7 @@ Seção expandida com contexto, decisão e locais de uso.
 
 # Token schema — Design System Core
 
-> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-06-22. Não editar manualmente.
+> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-06-28. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
 > Versão atual: **1.0.0-beta.5**
 
@@ -19102,6 +19238,7 @@ Arquivos canônicos em `tokens/component/`:
 - `input.json`
 - `menu.json`
 - `modal.json`
+- `pagination.json`
 - `radio.json`
 - `select.json`
 - `skeleton.json`
@@ -19147,6 +19284,7 @@ Arquivos canônicos em `tokens/component/`:
 - **ADR-017** — — Componentes CSS-only (sem equivalência no Figma) (Aceito)
 - **ADR-018** — — Renomear `content.{default,secondary,tertiary}` para `content.{strong,default,subtle}` (Aceito)
 - **ADR-019** — — Reintrodução de Component tokens como contrato anatômico (Aceita)
+- **ADR-020** — — Anatomias globais de form controls (Aceita)
 
 
 ═══════════════════════════════════════════════════════════
@@ -21585,6 +21723,164 @@ Descartada como regra geral. `control` deve representar padroes reutilizaveis en
 - Material Web: system tokens e component tokens (`--md-sys-*`, `--md-switch-*`, `--md-checkbox-*`).
 - Carbon Design System: component tokens como propriedades associadas a componentes especificos.
 - Spectrum Design Data: eixos `component`, `anatomy`, `property`, `variant` e `state`.
+
+
+═══════════════════════════════════════════════════════════
+# ADR-020 — — Anatomias globais de form controls
+═══════════════════════════════════════════════════════════
+
+# ADR-020 — Anatomias globais de form controls
+
+- **Status:** Aceita
+- **Data:** 2026-06-23
+- **Relaciona:** ADR-003, ADR-006, ADR-009, ADR-013, ADR-015, ADR-017, ADR-019
+
+## Contexto
+
+O DS Core ja tem uma familia de anatomias compartilhadas para form controls. `Input Text`, `Select`, `Textarea` e `Combobox` usam a mesma estrutura conceitual: label, required, field, value/placeholder, helper, error, icones e focus ring. Essa estrutura tambem aparece no CSS via `Form Field`, que e CSS-only por ADR-017, e no Figma como partes inline dos componentes de form.
+
+Sem uma regra canonica, novos componentes tendem a criar tokens locais para cada parte compartilhada, por exemplo `combobox/helper/*`, `select/error/*`, `input/icon/stroke-width/*` ou `textarea/field/border-color/*`, mesmo quando ja existe uma familia global ou familiar que expressa a mesma decisao. Isso reintroduz o problema que ADR-013 e ADR-019 tentaram evitar: Component tokens como wrappers mecanicos, sem contrato anatomico proprio.
+
+O problema fica mais caro em Figma, porque Builder e Auditor passam a discutir contagens agregadas de bindings em vez de validar se a anatomia comum realmente esta usando o mesmo contrato. O resultado esperado para um novo form control nao e "todos os binds existem"; e "as partes compartilhadas usam as familias compartilhadas, e as excecoes sao poucas, explicitas e aprovadas".
+
+## Decisao
+
+Anatomias compartilhadas entre form controls devem usar familias globais ou familiares antes de qualquer token especifico por componente.
+
+### Familias canonicas
+
+Estas familias representam contrato compartilhado. Os nomes abaixo usam o formato Figma da collection `Component`; em DTCG correspondem a `component.<familia>...` quando vivem em `tokens/component/*.json`.
+
+| Familia | Uso canonico |
+|---|---|
+| `form-field/label/*` | Label textual de form controls. |
+| `form-field/required/*` | Indicador required. |
+| `form-field/helper/*` | Helper Text, incluindo cor, tipografia e estado disabled quando existir. |
+| `form-field/error/*` | Error Message, gap, padding, texto e icone de erro. |
+| `field/*` | Superficie do controle: background, border, radius, padding-y, gap, placeholder, value e texto compartilhado. |
+| `focus-ring/*` | Cor e largura do focus ring transversal. Radius pode ser local quando acompanha o shape. |
+| `icon/*` | Decisoes globais de iconografia em Semantic (`semantic.icon.*`) e familias Component compartilhadas quando a anatomia for comum, como `field/icon/*`. |
+
+Componentes podem ter tokens Component proprios apenas quando o token documenta uma anatomia publica especifica daquele componente. Exemplos aceitaveis:
+
+- `combobox/popup/*` para popup/listbox, porque Select nativo e Input Text nao possuem essa anatomia.
+- `combobox/option/*` para option de listbox, quando nao houver familia compartilhada de option/menu aplicavel.
+- `combobox/focus-ring/radius/default` se o radius do ring segue o shape do Combobox e precisa ficar documentado como contrato local.
+- `input/height/*`, `select/height/*` ou `combobox/height/*` quando a altura e parte publica do componente, aliasando a escala Semantic.
+
+Exemplos rejeitados sem ADR ou excecao aprovada:
+
+- `combobox/helper/color/default` quando `form-field/helper/color/default` cobre o mesmo papel.
+- `combobox/error/text/color/default` quando `form-field/error/color/default` cobre o mesmo papel.
+- `combobox/field/border-color/default` quando `field/border-color/default` cobre o mesmo papel.
+- `combobox/icon/stroke-width/md` quando a anatomia usa o mesmo icone de Field e pode usar `field/icon/stroke-width/md` ou `semantic.icon.stroke-width.regular.20`.
+- `input/focus-ring/color/default`, `select/focus-ring/width` ou equivalentes locais quando `focus-ring/color/default` e `focus-ring/width` cobrem a decisao transversal.
+
+### Regra de alias
+
+Quando uma anatomia compartilhada aparece dentro de um componente especifico, o Component token local so pode existir se documentar uma diferenca real de anatomia publica. Se existir por conveniencia de implementacao, ele deve ser removido ou substituido pela familia global/familiar.
+
+Quando um Component token local for aceito para uma anatomia compartilhada, ele deve aliasar a familia global/familiar correspondente, nao Foundation, outro Component token local ou valor cru. A justificativa deve citar esta ADR ou uma excecao aprovada pelo owner.
+
+### Helper Text
+
+Helper Text segue o baseline vivo de `Input Text` ate decisao contraria aprovada. Isso inclui:
+
+- ordem depois do Field, considerando Error Message quando visivel;
+- `characters` exposto por TEXT property quando configuravel;
+- `visible` ligado ao booleano publico quando existir;
+- `fills`, Text Style, `textAutoResize`, distancia e estado disabled equivalentes ao baseline;
+- uso de `form-field/helper/*`, nao de tokens por componente.
+
+Select pode ser usado como comparador adicional, mas divergencia entre Select e Input Text nao autoriza normalizacao implicita. A matriz deve indicar qual baseline venceu e por que.
+
+### Focus Ring
+
+Focus Ring e uma anatomia de foco, nao um ornamento permanente.
+
+- O layer `Focus Ring` deve existir e estar visivel apenas em estados focados ou estados que representem foco ativo, como `Open` em componentes onde o input/trigger permanece focado.
+- Estados `Default`, `Hover`, `Filled`, `Readonly` sem foco e `Disabled` nao devem mostrar Focus Ring.
+- Error e Readonly podem escolher cor especifica de focus ring apenas quando tambem estiverem focados.
+- A borda estrutural do Field nao substitui o Focus Ring. Se o modelo vivo tambem altera `field/border-color/focus`, isso e estado do Field; a anatomia de foco continua sendo o layer `Focus Ring`.
+- Qualquer Focus Ring visivel fora de estado focado exige excecao aprovada e documentada na matriz.
+
+## Gates obrigatorios
+
+### DS Architect
+
+Antes de aprovar uma spec Figma para form control, o DS Architect deve declarar:
+
+1. quais partes usam `form-field/*`, `field/*`, `focus-ring/*` e `icon/*`;
+2. quais tokens especificos por componente sao realmente anatomia publica local;
+3. quais tokens locais propostos foram rejeitados por ja existir familia compartilhada;
+4. quais excecoes precisam de aprovacao do owner antes do Builder.
+
+### Figma Builder
+
+O Builder fica bloqueado antes de escrever quando:
+
+- a matriz nao lista a familia canonica de cada parte compartilhada;
+- existe token local para helper, error, field, focus-ring color/width ou icon stroke width sem excecao aprovada;
+- Helper Text nao aponta para o baseline de Input Text;
+- Focus Ring aparece planejado fora de estados focados;
+- qualquer linha usa busca aproximada de nome para escolher token, camada ou anatomia.
+
+A execucao deve produzir contagens:
+
+- `sharedAnatomyRows`;
+- `localTokenExceptions`;
+- `helperBaselineMismatches`;
+- `focusRingVisibleOutsideFocused`;
+- `focusRingMissingInFocused`;
+- `componentSpecificSharedTokenCount`.
+
+### Figma Auditor
+
+O Auditor deve bloquear quando encontrar:
+
+- anatomia compartilhada usando token especifico por componente sem `decisionRef`;
+- Component token local aliasando Foundation, outro Component local ou valor cru;
+- Helper Text divergindo do baseline de Input Text sem decisao aprovada;
+- Focus Ring ausente em variant focado;
+- Focus Ring visivel em variant nao focado sem excecao;
+- Field border usado como substituto do Focus Ring;
+- relatorio baseado em contagem agregada sem linhas por `part × property × variant`.
+
+## Consequencias
+
+- Novos form controls partem de familias compartilhadas antes de propor tokens locais.
+- Component tokens continuam existindo, mas somente para contratos anatomicos reais e auditaveis.
+- Builder e Auditor ganham criterios objetivos para bloquear duplicacao de tokens e foco fora de estado.
+- O backlog de componentes existentes deve ser corrigido por auditoria, nao por sweep cego: primeiro medir, depois propor excecoes/remocoes, depois aplicar por componente.
+
+## Alternativas consideradas
+
+### (a) Manter a regra apenas em checklists
+
+Descartada. Checklist sem ADR perde autoridade quando conflita com tokens ja criados. A regra precisa viver como decisao arquitetural para prevalecer sobre specs locais.
+
+### (b) Proibir qualquer Component token em form controls
+
+Descartada. ADR-019 continua vigente: Component tokens sao corretos quando documentam anatomia publica. A proibicao e apenas contra wrappers mecanicos de anatomias compartilhadas.
+
+### (c) Permitir tokens locais que aliasam os globais para facilitar CSS
+
+Descartada como regra geral. Isso recria uma camada de espelhos e torna auditoria mais dificil. Se a ergonomia de CSS exigir alias local, a excecao deve ser aprovada e documentada com uso real.
+
+## Referencias
+
+- [ADR-003](./ADR-003-fontes-verdade.md) — Figma como fonte de verdade para valores e componentes.
+- [ADR-006](./ADR-006-semantic-control-tokens.md) — precedente de dimensoes/tipografia compartilhadas entre controles.
+- [ADR-009](./ADR-009-border-control-vs-decorative.md) — borda funcional de controle.
+- [ADR-013](./ADR-013-camadas-de-consumo-de-tokens.md) — Foundation nunca direto em consumidor final.
+- [ADR-015](./ADR-015-unificacao-de-size-e-dimension.md) — escala Semantic reutilizavel e regra contra component-specific disfarçado.
+- [ADR-017](./ADR-017-componentes-css-only.md) — Form Field CSS-only.
+- [ADR-019](./ADR-019-component-tokens-contrato-anatomico.md) — Component tokens como contrato anatomico.
+- `tokens/component/field.json`
+- `tokens/component/form-field.json`
+- `tokens/component/focus-ring.json`
+- `docs/agents/checklists/figma-build-checklist.md`
+- `docs/agents/checklists/figma-audit-checklist.md`
 
 
 ═══════════════════════════════════════════════════════════

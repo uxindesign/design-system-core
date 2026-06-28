@@ -352,6 +352,11 @@
         "$type": "color",
         "$value": "{foundation.color.neutral.900}",
         "$description": "Background de componentes em estado disabled (antes state.disabled.background)."
+      },
+      "transparent": {
+        "$type": "color",
+        "$value": "{foundation.color.transparent}",
+        "$description": "Fundo sem preenchimento. Usado por itens ghost-like (Pagination default/disabled)."
       }
     },
     "content": {

@@ -427,6 +427,34 @@
   --ds-modal-close-size-lg: var(--ds-size-2xl); /** Tamanho do frame de hit-area do close Modal lg. */
   --ds-modal-close-icon-stroke-width-default: var(--ds-icon-stroke-width-regular-24); /** Stroke-width do ícone de fechar Modal. */
   --ds-modal-action-fill-brand: var(--ds-brand-background-default); /** Fill brand para ação principal Modal. */
+  --ds-pagination-gap-default: var(--ds-space-2xs);
+  --ds-pagination-item-height-sm: var(--ds-size-lg);
+  --ds-pagination-item-height-md: var(--ds-size-xl);
+  --ds-pagination-item-height-lg: var(--ds-size-2xl);
+  --ds-pagination-item-min-width-sm: var(--ds-size-lg);
+  --ds-pagination-item-min-width-md: var(--ds-size-xl);
+  --ds-pagination-item-min-width-lg: var(--ds-size-2xl);
+  --ds-pagination-item-radius-default: var(--ds-radius-md);
+  --ds-pagination-item-bg-default: var(--ds-background-transparent);
+  --ds-pagination-item-bg-hover: var(--ds-outline-background-hover);
+  --ds-pagination-item-bg-current: var(--ds-brand-background-default);
+  --ds-pagination-item-bg-disabled: var(--ds-background-transparent);
+  --ds-pagination-item-content-color-default: var(--ds-content-default);
+  --ds-pagination-item-content-color-hover: var(--ds-content-default);
+  --ds-pagination-item-content-color-current: var(--ds-brand-content-default);
+  --ds-pagination-item-content-color-disabled: var(--ds-content-disabled);
+  --ds-pagination-item-font-family-default: var(--ds-body-font-family-sans); /** Família tipográfica do número de página Pagination Item. */
+  --ds-pagination-item-font-size-sm: var(--ds-body-font-size-sm); /** Font-size do Pagination Item size sm. */
+  --ds-pagination-item-font-size-md: var(--ds-body-font-size-md); /** Font-size do Pagination Item size md. */
+  --ds-pagination-item-font-size-lg: var(--ds-body-font-size-lg); /** Font-size do Pagination Item size lg. */
+  --ds-pagination-item-font-weight-default: var(--ds-body-font-weight-regular); /** Font-weight regular do número de página Pagination Item. */
+  --ds-pagination-item-font-weight-current: var(--ds-body-font-weight-bold); /** Font-weight bold da página ativa (State=Active). */
+  --ds-pagination-item-line-height-sm: var(--ds-body-line-height-sm); /** Line-height do Pagination Item size sm. */
+  --ds-pagination-item-line-height-md: var(--ds-body-line-height-md); /** Line-height do Pagination Item size md. */
+  --ds-pagination-item-line-height-lg: var(--ds-body-line-height-xl); /** Line-height do Pagination Item size lg (escala body/lg). */
+  --ds-pagination-focus-ring-radius-default: var(--ds-radius-md);
+  --ds-pagination-icon-size-sm: var(--ds-size-xs);
+  --ds-pagination-icon-stroke-width-sm: var(--ds-icon-stroke-width-regular-16);
   --ds-radio-target-height-sm: var(--ds-size-lg); /** Altura minima da area interativa Radio sm. */
   --ds-radio-target-height-md: var(--ds-size-xl); /** Altura minima da area interativa Radio md. */
   --ds-radio-target-height-lg: var(--ds-size-2xl); /** Altura minima da area interativa Radio lg. */
@@ -618,6 +646,7 @@
   --ds-menu-item-icon-color-disabled: var(--ds-icon-color-disabled); /** Cor do ícone do item Menu disabled. */
   --ds-menu-item-icon-color-destructive: var(--ds-icon-color-error); /** Cor do ícone destructive do item Menu. */
   --ds-modal-close-color-default: var(--ds-icon-color-default); /** Cor do ícone de fechar da Modal. */
+  --ds-pagination-icon-color-default: var(--ds-icon-color-default);
   --ds-radio-control-border-color-unselected-error-hover: var(--ds-border-error-hover);
   --ds-radio-control-border-color-selected-default: var(--ds-brand-border-default); /** Border color do control Radio selected default. */
   --ds-radio-control-border-color-selected-hover: var(--ds-brand-border-hover); /** Border color do control Radio selected hover. */

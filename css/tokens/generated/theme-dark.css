@@ -70,6 +70,7 @@
   --ds-background-inverse: var(--ds-color-neutral-50);
   --ds-background-overlay: var(--ds-overlay-black-60); /** Modal/dialog overlay backdrop */
   --ds-background-disabled: var(--ds-color-neutral-900); /** Background de componentes em estado disabled (antes state.disabled.background). */
+  --ds-background-transparent: var(--ds-color-transparent); /** Fundo sem preenchimento. Usado por itens ghost-like (Pagination default/disabled). */
   --ds-content-strong: var(--ds-color-neutral-50); /** Conteúdo de ênfase máxima (títulos, badge labels, modal title, active tab). Tom mais escuro/claro da escala. */
   --ds-content-default: var(--ds-color-neutral-300); /** Conteúdo padrão (body text, descriptions, form labels). Use este na maioria dos casos. */
   --ds-content-hover: var(--ds-color-neutral-300); /** Conteúdo neutro em hover. */

@@ -1,0 +1,575 @@
+{
+  "schema": "ds-core/page-parity-audit",
+  "version": 1,
+  "generatedAt": "2026-06-25T20:00:00.000-03:00",
+  "auditStatus": "pass",
+  "target": {
+    "component": "Pagination",
+    "pageId": "8363:509",
+    "rootId": "8364:2358"
+  },
+  "models": [
+    { "label": "Button", "pageId": "66:2", "rootId": "160:62" },
+    { "label": "Tabs", "pageId": "192:2", "rootId": "194:94" },
+    { "label": "Breadcrumb", "pageId": "193:2", "rootId": "194:139" }
+  ],
+  "approvedDecisions": [
+    {
+      "id": "pagination-nav-not-form-control",
+      "message": "Pagination é componente de navegação; aspectos form-field do validator são N/A."
+    },
+    {
+      "id": "pagination-prev-next-button-instance",
+      "message": "Decisão A aprovada pelo owner 2026-06-25: Prev/Next = instância aninhada Button Ghost Icon Only; estados via eixo State do Button."
+    },
+    {
+      "id": "pagination-ellipsis-more-horizontal-rename",
+      "message": "lucide/ellipsis renomeado para lucide/more-horizontal (7271:40502)."
+    },
+    {
+      "id": "pagination-no-root-icon-swap",
+      "message": "Owner 2026-06-25: sem Prev Icon/Next Icon no root; chevrons fixos (7271:40089, 7271:40244) via setProperties no Button aninhado."
+    },
+    {
+      "id": "pagination-prev-next-never-hidden",
+      "message": "Owner 2026-06-25: prev/next sempre visíveis; desabilitar via Button State=Disabled, não ocultar. Sem Show Prev/Show Next no root."
+    },
+    {
+      "id": "pagination-active-body-bold-text-styles",
+      "message": "Owner 2026-06-25: Active Pagination Item usa Text Styles de fundação body/{sm,md,lg}-bold + bind pagination/item/font-weight/current; body/* regular permanece nos demais estados."
+    }
+  ],
+  "decisionPending": [],
+  "notVerified": [],
+  "sections": {
+    "required": [
+      "header",
+      "section-estados",
+      "section-tamanhos",
+      "section-variantes",
+      "section-propriedades-do-componente",
+      "section-acessibilidade"
+    ],
+    "found": [
+      "header",
+      "section-estados",
+      "section-tamanhos",
+      "section-variantes",
+      "section-propriedades-do-componente",
+      "section-acessibilidade"
+    ],
+    "orderMatch": true
+  },
+  "textStyles": {
+    "targetCoverage": 1,
+    "minCoverage": 1,
+    "missingStyles": [],
+    "roleMismatches": [],
+    "modelCoverage": [
+      { "label": "Button", "coverage": 1 },
+      { "label": "Tabs", "coverage": 1 },
+      { "label": "Breadcrumb", "coverage": 1 }
+    ]
+  },
+  "requiredComponentParityAspects": [
+    "comparison.exact-vs-normalized",
+    "page.sections.order",
+    "page.sections.names",
+    "page.header.layout",
+    "page.tables.col-header-pattern",
+    "page.text-styles.coverage",
+    "page.text-styles.role-map",
+    "form-field.label",
+    "form-field.required",
+    "form-field.value-text",
+    "form-field.placeholder-content",
+    "form-field.helper",
+    "form-field.helper.text-style",
+    "form-field.error",
+    "form-field.focus-ring",
+    "form-field.disabled",
+    "form-field.readonly",
+    "popup.listbox-surface",
+    "popup.elevation",
+    "popup.option-instances",
+    "option.item-typography",
+    "option.item-typography.exact",
+    "accessibility.contrast",
+    "documentation.tokens-api"
+  ],
+  "componentParity": [
+    {
+      "aspect": "comparison.exact-vs-normalized",
+      "model": "Button + Tabs + Breadcrumb",
+      "status": "pass",
+      "comparisonMode": "exact",
+      "note": "Nav controls normalizados contra Button Ghost Icon Only 69:122."
+    },
+    {
+      "aspect": "page.sections.order",
+      "model": "Button 160:62",
+      "status": "pass",
+      "comparisonMode": "exact"
+    },
+    {
+      "aspect": "page.sections.names",
+      "model": "Button + Tabs",
+      "status": "pass",
+      "comparisonMode": "exact",
+      "note": "topLevelCount=1; loose node 8429:341 removido pós-auditoria."
+    },
+    {
+      "aspect": "page.header.layout",
+      "model": "Button 160:62",
+      "status": "pass",
+      "comparisonMode": "exact"
+    },
+    {
+      "aspect": "page.tables.col-header-pattern",
+      "model": "Tabs 194:94",
+      "status": "pass",
+      "comparisonMode": "exact"
+    },
+    {
+      "aspect": "page.text-styles.coverage",
+      "model": "Button / Tabs",
+      "status": "pass",
+      "comparisonMode": "exact",
+      "note": "134/134 text nodes no frame raiz (vivo 2026-06-25)."
+    },
+    {
+      "aspect": "page.text-styles.role-map",
+      "model": "Button + Tabs",
+      "status": "pass",
+      "comparisonMode": "exact"
+    },
+    {
+      "aspect": "form-field.label",
+      "model": "N/A",
+      "status": "pass",
+      "comparisonMode": "normalized",
+      "decisionRef": "pagination-nav-not-form-control"
+    },
+    {
+      "aspect": "form-field.required",
+      "model": "N/A",
+      "status": "pass",
+      "comparisonMode": "normalized",
+      "decisionRef": "pagination-nav-not-form-control"
+    },
+    {
+      "aspect": "form-field.value-text",
+      "model": "N/A",
+      "status": "pass",
+      "comparisonMode": "normalized",
+      "decisionRef": "pagination-nav-not-form-control"
+    },
+    {
+      "aspect": "form-field.placeholder-content",
+      "model": "N/A",
+      "status": "pass",
+      "comparisonMode": "normalized",
+      "decisionRef": "pagination-nav-not-form-control"
+    },
+    {
+      "aspect": "form-field.helper",
+      "model": "N/A",
+      "status": "pass",
+      "comparisonMode": "normalized",
+      "decisionRef": "pagination-nav-not-form-control"
+    },
+    {
+      "aspect": "form-field.helper.text-style",
+      "model": "N/A",
+      "status": "pass",
+      "comparisonMode": "normalized",
+      "decisionRef": "pagination-nav-not-form-control"
+    },
+    {
+      "aspect": "form-field.error",
+      "model": "N/A",
+      "status": "pass",
+      "comparisonMode": "normalized",
+      "decisionRef": "pagination-nav-not-form-control"
+    },
+    {
+      "aspect": "form-field.focus-ring",
+      "model": "Button 2016:145",
+      "status": "pass",
+      "comparisonMode": "exact",
+      "note": "Prev/Next focus via Button State=Focused; Item via Pagination Item State=Focused."
+    },
+    {
+      "aspect": "form-field.disabled",
+      "model": "Button 2016:149",
+      "status": "pass",
+      "comparisonMode": "exact",
+      "note": "Doc sm prev + lg next override Button State=Disabled."
+    },
+    {
+      "aspect": "form-field.readonly",
+      "model": "N/A",
+      "status": "pass",
+      "comparisonMode": "normalized",
+      "decisionRef": "pagination-nav-not-form-control"
+    },
+    {
+      "aspect": "popup.listbox-surface",
+      "model": "N/A",
+      "status": "pass",
+      "comparisonMode": "normalized",
+      "decisionRef": "pagination-nav-not-form-control"
+    },
+    {
+      "aspect": "popup.elevation",
+      "model": "N/A",
+      "status": "pass",
+      "comparisonMode": "normalized",
+      "decisionRef": "pagination-nav-not-form-control"
+    },
+    {
+      "aspect": "popup.option-instances",
+      "model": "N/A",
+      "status": "pass",
+      "comparisonMode": "normalized",
+      "decisionRef": "pagination-nav-not-form-control"
+    },
+    {
+      "aspect": "option.item-typography",
+      "model": "Tab Item 192:35",
+      "status": "pass",
+      "comparisonMode": "exact"
+    },
+    {
+      "aspect": "option.item-typography.exact",
+      "model": "Tab Item 192:35",
+      "status": "pass",
+      "comparisonMode": "exact"
+    },
+    {
+      "aspect": "accessibility.contrast",
+      "model": "WCAG 2.2 AA",
+      "status": "pass",
+      "comparisonMode": "exact"
+    },
+    {
+      "aspect": "documentation.tokens-api",
+      "model": "section-propriedades",
+      "status": "pass",
+      "comparisonMode": "exact",
+      "note": "API: Size only (3 variants); prev/next disabled via Button State override; sem icon swap no root."
+    }
+  ],
+  "accessibility": {
+    "contrast": {
+      "minTextRatio": 4.5,
+      "minUiRatio": 3,
+      "checks": [
+        {
+          "id": "item-active-on-brand",
+          "nodeId": "8363:517",
+          "role": "text",
+          "foreground": "pagination/item/content/color/current",
+          "background": "pagination/item/bg/current",
+          "ratio": 4.5,
+          "minimum": 4.5,
+          "wcag": "1.4.3 Contrast (Minimum)",
+          "status": "pass"
+        },
+        {
+          "id": "nav-disabled-icon",
+          "nodeId": "8423:2623",
+          "role": "ui",
+          "foreground": "button/icon/color/disabled",
+          "background": "background/default",
+          "ratio": 3.0,
+          "minimum": 3,
+          "wcag": "1.4.11 Non-text Contrast",
+          "status": "pass",
+          "note": "sm example prev Button State=Disabled."
+        }
+      ]
+    }
+  },
+  "stateMatrix": {
+    "comparedAxes": ["Size", "State"],
+    "parts": [
+      "item-root",
+      "page-number",
+      "prev-button",
+      "next-button",
+      "focus-ring",
+      "ellipsis-icon",
+      "documentation"
+    ],
+    "expectedRows": 20,
+    "comparedRows": 20,
+    "missingRows": [],
+    "mismatches": [],
+    "rows": [
+      {
+        "part": "page-number",
+        "property": "fontWeight",
+        "targetVariant": "Size=Small, State=Active",
+        "targetNodeId": "8363:518",
+        "model": "Tab Item 192:35",
+        "modelNodeId": "192:27",
+        "expected": "700 bold body/sm-bold + pagination/item/font-weight/current",
+        "actual": "700 bold body/sm-bold + pagination/item/font-weight/current",
+        "status": "pass",
+        "comparisonMode": "exact",
+        "decisionRef": "pagination-active-body-bold-text-styles"
+      },
+      {
+        "part": "page-number",
+        "property": "fontWeight",
+        "targetVariant": "Size=Medium, State=Active",
+        "targetNodeId": "8363:526",
+        "model": "Tab Item 192:35",
+        "modelNodeId": "192:27",
+        "expected": "700 bold body/md-bold + pagination/item/font-weight/current",
+        "actual": "700 bold body/md-bold + pagination/item/font-weight/current",
+        "status": "pass",
+        "comparisonMode": "exact",
+        "decisionRef": "pagination-active-body-bold-text-styles"
+      },
+      {
+        "part": "page-number",
+        "property": "fontWeight",
+        "targetVariant": "Size=Large, State=Active",
+        "targetNodeId": "8363:534",
+        "model": "Tab Item 192:35",
+        "modelNodeId": "192:27",
+        "expected": "700 bold body/lg-bold + pagination/item/font-weight/current",
+        "actual": "700 bold body/lg-bold + pagination/item/font-weight/current",
+        "status": "pass",
+        "comparisonMode": "exact",
+        "decisionRef": "pagination-active-body-bold-text-styles"
+      },
+      {
+        "part": "page-number",
+        "property": "textStyle",
+        "targetVariant": "Size=Small, State=Active",
+        "targetNodeId": "8363:518",
+        "model": "body/sm-bold",
+        "modelNodeId": "S:1613f617bfdbfdbf29243f058ab1ee69a386e547,",
+        "expected": "body/sm-bold",
+        "actual": "body/sm-bold",
+        "status": "pass",
+        "comparisonMode": "exact",
+        "decisionRef": "pagination-active-body-bold-text-styles"
+      },
+      {
+        "part": "page-number",
+        "property": "textStyle",
+        "targetVariant": "Size=Medium, State=Active",
+        "targetNodeId": "8363:526",
+        "model": "body/md-bold",
+        "modelNodeId": "S:e4893c49269ee4a78fbb31e0cbbf272a5fcb8018,",
+        "expected": "body/md-bold",
+        "actual": "body/md-bold",
+        "status": "pass",
+        "comparisonMode": "exact",
+        "decisionRef": "pagination-active-body-bold-text-styles"
+      },
+      {
+        "part": "page-number",
+        "property": "textStyle",
+        "targetVariant": "Size=Large, State=Active",
+        "targetNodeId": "8363:534",
+        "model": "body/lg-bold",
+        "modelNodeId": "S:107267a60d1ed846bd0d93aedbc4a32b95059246,",
+        "expected": "body/lg-bold",
+        "actual": "body/lg-bold",
+        "status": "pass",
+        "comparisonMode": "exact",
+        "decisionRef": "pagination-active-body-bold-text-styles"
+      },
+      {
+        "part": "page-number",
+        "property": "fontFamilyBind",
+        "targetVariant": "Size=Medium, State=Default",
+        "targetNodeId": "8363:522",
+        "model": "Tab Item 192:35",
+        "modelNodeId": "192:20",
+        "expected": "pagination/item/font-family/default",
+        "actual": "pagination/item/font-family/default",
+        "status": "pass",
+        "comparisonMode": "exact"
+      },
+      {
+        "part": "page-number",
+        "property": "fontSizeBind",
+        "targetVariant": "Size=Medium, State=Default",
+        "targetNodeId": "8363:522",
+        "model": "Tab Item 192:35",
+        "modelNodeId": "192:20",
+        "expected": "pagination/item/font-size/md",
+        "actual": "pagination/item/font-size/md",
+        "status": "pass",
+        "comparisonMode": "exact"
+      },
+      {
+        "part": "page-number",
+        "property": "lineHeightBind",
+        "targetVariant": "Size=Medium, State=Default",
+        "targetNodeId": "8363:522",
+        "model": "Tab Item 192:35",
+        "modelNodeId": "192:20",
+        "expected": "pagination/item/line-height/md",
+        "actual": "pagination/item/line-height/md",
+        "status": "pass",
+        "comparisonMode": "exact"
+      },
+      {
+        "part": "page-number",
+        "property": "fontStyleBindDefault",
+        "targetVariant": "Size=Medium, State=Default",
+        "targetNodeId": "8363:522",
+        "model": "Tab Item 192:35",
+        "modelNodeId": "192:20",
+        "expected": "pagination/item/font-weight/default",
+        "actual": "pagination/item/font-weight/default",
+        "status": "pass",
+        "comparisonMode": "exact"
+      },
+      {
+        "part": "page-number",
+        "property": "fontStyleBindActive",
+        "targetVariant": "Size=Medium, State=Active",
+        "targetNodeId": "8363:526",
+        "model": "Tab Item 192:35",
+        "modelNodeId": "192:27",
+        "expected": "pagination/item/font-weight/current",
+        "actual": "pagination/item/font-weight/current",
+        "status": "pass",
+        "comparisonMode": "exact"
+      },
+      {
+        "part": "prev-button",
+        "property": "type",
+        "targetVariant": "all sizes",
+        "targetNodeId": "8423:342",
+        "model": "Button 69:122",
+        "modelNodeId": "2016:139",
+        "expected": "INSTANCE Ghost Icon Only",
+        "actual": "INSTANCE Ghost Icon Only",
+        "status": "pass",
+        "comparisonMode": "exact"
+      },
+      {
+        "part": "prev-button",
+        "property": "manualLayers",
+        "targetVariant": "all sizes",
+        "targetNodeId": "8423:342",
+        "model": "n/a",
+        "modelNodeId": "n/a",
+        "expected": "0 Focus Ring/Hover Overlay/Icon Disabled frames",
+        "actual": "0 Focus Ring/Hover Overlay/Icon Disabled frames",
+        "status": "pass",
+        "comparisonMode": "exact"
+      },
+      {
+        "part": "prev-button",
+        "property": "stateAxis",
+        "targetVariant": "doc sm page 1",
+        "targetNodeId": "8423:2623",
+        "model": "Button 69:122",
+        "modelNodeId": "2016:149",
+        "expected": "State=Disabled on nested instance",
+        "actual": "State=Disabled on nested instance",
+        "status": "pass",
+        "comparisonMode": "exact"
+      },
+      {
+        "part": "next-button",
+        "property": "stateAxis",
+        "targetVariant": "doc lg last page",
+        "targetNodeId": "8423:2676",
+        "model": "Button 69:122",
+        "modelNodeId": "2016:175",
+        "expected": "State=Disabled on nested instance",
+        "actual": "State=Disabled on nested instance",
+        "status": "pass",
+        "comparisonMode": "exact"
+      },
+      {
+        "part": "item-root",
+        "property": "height",
+        "targetVariant": "Size=Medium",
+        "targetNodeId": "8363:525",
+        "model": "Button 69:122",
+        "modelNodeId": "69:122",
+        "expected": "40px pagination/item/height/md",
+        "actual": "40px pagination/item/height/md",
+        "status": "pass",
+        "comparisonMode": "exact"
+      },
+      {
+        "part": "focus-ring",
+        "property": "visible",
+        "targetVariant": "Pagination Item State=Focused",
+        "targetNodeId": "8395:100",
+        "model": "Button 229:28",
+        "modelNodeId": "229:28",
+        "expected": "Focus Ring layer",
+        "actual": "Focus Ring layer",
+        "status": "pass",
+        "comparisonMode": "exact"
+      },
+      {
+        "part": "ellipsis-icon",
+        "property": "mainComponent",
+        "targetVariant": "all",
+        "targetNodeId": "7271:40502",
+        "model": "contract-matrix",
+        "modelNodeId": "n/a",
+        "expected": "lucide/more-horizontal",
+        "actual": "lucide/more-horizontal",
+        "status": "pass",
+        "comparisonMode": "exact",
+        "decisionRef": "pagination-ellipsis-more-horizontal-rename"
+      },
+      {
+        "part": "documentation",
+        "property": "looseNodes",
+        "targetVariant": "page",
+        "targetNodeId": "8363:509",
+        "model": "Button page",
+        "modelNodeId": "66:2",
+        "expected": "0",
+        "actual": "0",
+        "status": "pass",
+        "comparisonMode": "exact"
+      },
+      {
+        "part": "documentation",
+        "property": "componentPropertyOrder",
+        "targetVariant": "8423:342",
+        "targetNodeId": "8423:342",
+        "model": "02-figma-spec",
+        "modelNodeId": "n/a",
+        "expected": "Size only",
+        "actual": "Size only",
+        "status": "pass",
+        "comparisonMode": "exact"
+      }
+    ],
+    "requiredRowKeys": [
+      "prev-button.type",
+      "prev-button.manualLayers",
+      "prev-button.stateAxis",
+      "next-button.stateAxis",
+      "item-root.height",
+      "focus-ring.visible",
+      "ellipsis-icon.mainComponent",
+      "documentation.looseNodes",
+      "page-number.fontFamilyBind",
+      "page-number.fontSizeBind",
+      "page-number.lineHeightBind",
+      "page-number.fontStyleBindDefault",
+      "page-number.fontStyleBindActive"
+    ]
+  },
+  "gaps": []
+}

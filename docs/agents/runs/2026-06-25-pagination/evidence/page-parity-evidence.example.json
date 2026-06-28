@@ -1,0 +1,155 @@
+{
+  "schema": "ds-core/page-parity-audit",
+  "version": 1,
+  "generatedAt": "2026-06-22T00:00:00.000Z",
+  "auditStatus": "blocked",
+  "target": {
+    "component": "ComponentName",
+    "pageId": "0:0",
+    "rootId": "0:0"
+  },
+  "models": [
+    { "label": "Input Text", "pageId": "100:2", "rootId": "161:38" },
+    { "label": "Select", "pageId": "145:2", "rootId": "146:20" }
+  ],
+  "approvedDecisions": [],
+  "decisionPending": [
+    {
+      "id": "replace-with-real-decision-or-fix",
+      "message": "Example: component-specific token differs from model and has no approved decision"
+    }
+  ],
+  "notVerified": [],
+  "sections": {
+    "required": [
+      "header",
+      "section-estados",
+      "section-tamanhos",
+      "section-variantes",
+      "section-propriedades-do-componente",
+      "section-acessibilidade"
+    ],
+    "found": [],
+    "orderMatch": false
+  },
+  "textStyles": {
+    "targetCoverage": 0,
+    "minCoverage": 1,
+    "missingStyles": [],
+    "roleMismatches": [],
+    "modelCoverage": [
+      { "label": "Input Text", "coverage": 1 },
+      { "label": "Select", "coverage": 1 }
+    ]
+  },
+  "componentParity": [
+    { "aspect": "comparison.exact-vs-normalized", "model": "All live models", "status": "fail", "note": "fill exact and normalized rows" },
+    { "aspect": "page.sections.order", "model": "Input Text + Select", "status": "fail", "note": "fill after audit" },
+    { "aspect": "page.sections.names", "model": "Input Text + Select", "status": "fail", "note": "fill after audit" },
+    { "aspect": "page.header.layout", "model": "Input Text + Select", "status": "fail", "note": "fill after audit" },
+    { "aspect": "page.tables.col-header-pattern", "model": "Input Text + Select", "status": "fail", "note": "fill after audit" },
+    { "aspect": "page.text-styles.coverage", "model": "Input Text / Select (100%)", "status": "fail", "note": "0%" },
+    { "aspect": "page.text-styles.role-map", "model": "Input Text + Select", "status": "fail", "note": "fill after audit" },
+    { "aspect": "form-field.label", "model": "Input Text + Select", "status": "fail", "note": "fill after audit" },
+    { "aspect": "form-field.required", "model": "Input Text + Select", "status": "fail", "note": "fill after audit" },
+    { "aspect": "form-field.value-text", "model": "Input Text + Select", "status": "fail", "note": "fill after audit" },
+    { "aspect": "form-field.placeholder-content", "model": "Input Text + Select", "status": "fail", "note": "fill after audit" },
+    { "aspect": "form-field.helper", "model": "Input Text + Select", "status": "fail", "note": "fill after audit" },
+    { "aspect": "form-field.helper.text-style", "model": "Input Text + Select", "status": "fail", "note": "fill after audit" },
+    { "aspect": "form-field.error", "model": "Input Text + Select", "status": "fail", "note": "fill after audit" },
+    { "aspect": "form-field.focus-ring", "model": "Input Text + Select", "status": "fail", "note": "fill after audit" },
+    { "aspect": "form-field.disabled", "model": "Input Text + Select", "status": "fail", "note": "fill after audit" },
+    { "aspect": "form-field.readonly", "model": "Input Text + Select", "status": "fail", "note": "fill after audit" },
+    { "aspect": "popup.listbox-surface", "model": "Menu", "status": "fail", "note": "fill after audit" },
+    { "aspect": "popup.elevation", "model": "Menu", "status": "fail", "note": "fill after audit" },
+    { "aspect": "popup.option-instances", "model": "Menu / Menu Item", "status": "fail", "note": "fill after audit" },
+    { "aspect": "option.item-typography", "model": "Menu Item", "status": "fail", "note": "fill after audit" },
+    { "aspect": "option.item-typography.exact", "model": "Menu Item", "status": "fail", "note": "fill after audit" },
+    { "aspect": "accessibility.contrast", "model": "WCAG 2.2 AA", "status": "fail", "note": "fill contrast checks for every visible text/UI pair" },
+    { "aspect": "documentation.tokens-api", "model": "Figma API + documented table rows", "status": "fail", "note": "fill after audit" }
+  ],
+  "accessibility": {
+    "contrast": {
+      "minTextRatio": 4.5,
+      "minUiRatio": 3,
+      "checks": [
+        {
+          "id": "empty-state-text",
+          "nodeId": "0:0",
+          "role": "text",
+          "foreground": "menu/item/content/color/default",
+          "background": "combobox/listbox/container/bg/default",
+          "ratio": 0,
+          "minimum": 4.5,
+          "wcag": "1.4.3 Contrast (Minimum)",
+          "status": "fail",
+          "note": "Replace with real resolved contrast from Figma"
+        }
+      ]
+    }
+  },
+  "stateMatrix": {
+    "comparedAxes": ["Size", "State", "Filled", "Read-only", "Error"],
+    "parts": [
+      "label",
+      "required",
+      "field",
+      "value-text",
+      "placeholder-text",
+      "helper-text",
+      "error-text",
+      "focus-ring",
+      "left-icon",
+      "right-icon"
+    ],
+    "requiredRowKeys": [
+      "helper-text.fills",
+      "helper-text.textStyle",
+      "helper-text.characters",
+      "helper-text.visible",
+      "helper-text.orderAfterField",
+      "helper-text.orderAfterError",
+      "placeholder-text.fills",
+      "value-text.fills",
+      "field.fills",
+      "field.strokes",
+      "focus-ring.strokes",
+      "popup-surface.effects",
+      "empty-state.contrast",
+      "option-label.textStyle",
+      "documentation.tokens-api"
+    ],
+    "expectedRows": 1,
+    "comparedRows": 1,
+    "missingRows": [],
+    "mismatches": [
+      {
+        "part": "helper-text",
+        "property": "textStyle",
+        "targetVariant": "Size=Medium, State=Default, Filled=False, Read-only=False, Error=False",
+        "targetNodeId": "0:0",
+        "model": "Input Text",
+        "modelNodeId": "0:0",
+        "expected": "body/xs",
+        "actual": "body/sm",
+        "comparisonMode": "exact"
+      }
+    ],
+    "rows": [
+      {
+        "part": "helper-text",
+        "property": "textStyle",
+        "targetVariant": "Size=Medium, State=Default, Filled=False, Read-only=False, Error=False",
+        "targetNodeId": "0:0",
+        "model": "Input Text",
+        "modelNodeId": "0:0",
+        "expected": "body/xs",
+        "actual": "body/sm",
+        "status": "fail",
+        "comparisonMode": "exact",
+        "note": "example: replace with real Figma live data"
+      }
+    ]
+  },
+  "gaps": []
+}

@@ -57,6 +57,7 @@ const COMPONENTS = [
   { name: "Menu", slug: "menu", css: "menu.css", html: "menu.html" },
   { name: "Tabs", slug: "tabs", css: "tabs.css", html: "tabs.html" },
   { name: "Breadcrumb", slug: "breadcrumb", css: "breadcrumb.css", html: "breadcrumb.html" },
+  { name: "Pagination", slug: "pagination", css: "pagination.css", html: "pagination.html", figmaPage: "Pagination" },
   { name: "Avatar", slug: "avatar", css: "avatar.css", html: "avatar.html" },
   { name: "Divider", slug: "divider", css: "divider.css", html: "divider.html" },
   { name: "Form Field", slug: "form-field", css: "form-field.css", html: "form-field.html", cssClass: "ds-field", cssOnly: true },
