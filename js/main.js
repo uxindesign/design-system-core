@@ -54,6 +54,7 @@
             { label: 'Input',      path: 'docs/input.html' },
             { label: 'Textarea',   path: 'docs/textarea.html' },
             { label: 'Select',     path: 'docs/select.html' },
+            { label: 'Combobox',   path: 'docs/combobox.html' },
             { label: 'Checkbox',   path: 'docs/checkbox.html' },
             { label: 'Radio',      path: 'docs/radio.html' },
             { label: 'Toggle',     path: 'docs/toggle.html' }

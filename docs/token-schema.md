@@ -78,6 +78,7 @@ Arquivos canônicos em `tokens/component/`:
 - `card-interactive.json`
 - `card.json`
 - `checkbox.json`
+- `combobox.json`
 - `divider.json`
 - `field.json`
 - `focus-ring.json`
@@ -131,4 +132,3 @@ Arquivos canônicos em `tokens/component/`:
 - **ADR-017** — — Componentes CSS-only (sem equivalência no Figma) (Aceito)
 - **ADR-018** — — Renomear `content.{default,secondary,tertiary}` para `content.{strong,default,subtle}` (Aceito)
 - **ADR-019** — — Reintrodução de Component tokens como contrato anatômico (Aceita)
-- **ADR-020** — — Anatomias globais de form controls (Aceita)

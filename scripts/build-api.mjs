@@ -46,6 +46,7 @@ const COMPONENTS = [
   { name: "Input Text", slug: "input", css: "input.css", html: "input.html" },
   { name: "Textarea", slug: "textarea", css: "textarea.css", html: "textarea.html" },
   { name: "Select", slug: "select", css: "select.css", html: "select.html" },
+  { name: "Combobox", slug: "combobox", css: "combobox.css", html: "combobox.html", figmaPage: "Combobox" },
   { name: "Checkbox", slug: "checkbox", css: "checkbox.css", html: "checkbox.html" },
   { name: "Radio", slug: "radio", css: "radio.css", html: "radio.html" },
   { name: "Toggle", slug: "toggle", css: "toggle.css", html: "toggle.html" },
