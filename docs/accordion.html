@@ -57,7 +57,7 @@
     <h2 class="ds-subsection__title"><span data-lang="pt">Anatomia</span><span data-lang="en">Anatomy</span></h2>
     <div class="ds-anatomy" style="padding:var(--ds-space-5xl);">
       <div class="ds-accordion" inert>
-        <div class="ds-accordion__item">
+        <div class="ds-accordion__item" data-state="open">
           <button class="ds-accordion__trigger" type="button" aria-expanded="true" aria-controls="accordion-anatomy-panel" id="accordion-anatomy-trigger">
             <i data-lucide="settings" class="ds-accordion__leading-icon ds-icon" aria-hidden="true"></i>
             <span class="ds-accordion__title">Configurações avançadas</span>
@@ -81,7 +81,7 @@
 
   <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Padrão</span><span data-lang="en">Default</span></h2>
-    <p style="margin-bottom:var(--ds-space-lg);color:var(--ds-content-default);font-size:var(--ds-body-font-size-sm);"><span data-lang="pt">Use um <code>button</code> para o trigger e sincronize <code>aria-expanded</code>, <code>aria-controls</code> e <code>hidden</code> no painel.</span><span data-lang="en">Use a <code>button</code> for the trigger and synchronize <code>aria-expanded</code>, <code>aria-controls</code>, and <code>hidden</code> on the panel.</span></p>
+    <p style="margin-bottom:var(--ds-space-lg);color:var(--ds-content-default);font-size:var(--ds-body-font-size-sm);"><span data-lang="pt">Use um <code>button</code> para o trigger. O helper da documentação sincroniza <code>aria-expanded</code>, <code>hidden</code> e <code>data-state</code>; em produto, mantenha esse mesmo contrato.</span><span data-lang="en">Use a <code>button</code> for the trigger. The documentation helper synchronizes <code>aria-expanded</code>, <code>hidden</code>, and <code>data-state</code>; in product, keep the same contract.</span></p>
     <div class="ds-preview">
       <div class="ds-preview__tabs" role="tablist">
         <button class="ds-preview__tab ds-preview__tab--active" role="tab" aria-selected="true" data-tab="preview">Preview</button>
@@ -89,8 +89,8 @@
       </div>
       <div class="ds-preview__panel ds-preview__panel--active" data-panel="preview">
         <div class="ds-preview__canvas">
-          <div class="ds-accordion">
-            <div class="ds-accordion__item">
+          <div class="ds-accordion" data-accordion-mode="single">
+            <div class="ds-accordion__item" data-state="open">
               <button class="ds-accordion__trigger" type="button" aria-expanded="true" aria-controls="billing-panel" id="billing-trigger">
                 <i data-lucide="credit-card" class="ds-accordion__leading-icon ds-icon" aria-hidden="true"></i>
                 <span class="ds-accordion__title">Billing details</span>
@@ -100,7 +100,7 @@
                 <p>Invoices are generated on the first business day of each month and sent to account owners.</p>
               </div>
             </div>
-            <div class="ds-accordion__item">
+            <div class="ds-accordion__item" data-state="closed">
               <button class="ds-accordion__trigger" type="button" aria-expanded="false" aria-controls="security-panel" id="security-trigger">
                 <i data-lucide="shield-check" class="ds-accordion__leading-icon ds-icon" aria-hidden="true"></i>
                 <span class="ds-accordion__title">Security settings</span>
@@ -116,8 +116,8 @@
       <div class="ds-preview__panel" data-panel="code">
         <div class="ds-preview__code">
           <button class="ds-preview__copy" aria-label="Copy code">Copy</button>
-          <pre tabindex="0"><code>&lt;div class="ds-accordion"&gt;
-  &lt;div class="ds-accordion__item"&gt;
+          <pre tabindex="0"><code>&lt;div class="ds-accordion" data-accordion-mode="single"&gt;
+  &lt;div class="ds-accordion__item" data-state="open"&gt;
     &lt;button class="ds-accordion__trigger"
             type="button"
             id="billing-trigger"
@@ -134,6 +134,24 @@
       &lt;p&gt;Invoices are generated on the first business day of each month.&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
+  &lt;div class="ds-accordion__item" data-state="closed"&gt;
+    &lt;button class="ds-accordion__trigger"
+            type="button"
+            id="security-trigger"
+            aria-expanded="false"
+            aria-controls="security-panel"&gt;
+      &lt;i data-lucide="shield-check" class="ds-accordion__leading-icon ds-icon" aria-hidden="true"&gt;&lt;/i&gt;
+      &lt;span class="ds-accordion__title"&gt;Security settings&lt;/span&gt;
+      &lt;i data-lucide="chevron-down" class="ds-accordion__chevron ds-icon" aria-hidden="true"&gt;&lt;/i&gt;
+    &lt;/button&gt;
+    &lt;div class="ds-accordion__panel"
+         id="security-panel"
+         role="region"
+         aria-labelledby="security-trigger"
+         hidden&gt;
+      &lt;p&gt;Admins can enforce two-factor authentication policies.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</code></pre>
         </div>
       </div>
@@ -146,7 +164,7 @@
     <div class="ds-preview">
       <div class="ds-preview__canvas">
         <div class="ds-accordion">
-          <div class="ds-accordion__item">
+          <div class="ds-accordion__item" data-state="open">
             <button class="ds-accordion__trigger" type="button" aria-expanded="true" aria-controls="plan-panel" id="plan-trigger">
               <i data-lucide="layers" class="ds-accordion__leading-icon ds-icon" aria-hidden="true"></i>
               <span class="ds-accordion__title">Plano atual</span>
@@ -176,7 +194,7 @@
     <div class="ds-preview">
       <div class="ds-preview__canvas">
         <div class="ds-accordion">
-          <div class="ds-accordion__item ds-accordion__item--disabled" aria-disabled="true">
+          <div class="ds-accordion__item ds-accordion__item--disabled" aria-disabled="true" data-state="closed">
             <button class="ds-accordion__trigger" type="button" aria-expanded="false" aria-controls="disabled-panel" id="disabled-trigger" disabled>
               <i data-lucide="lock" class="ds-accordion__leading-icon ds-icon" aria-hidden="true"></i>
               <span class="ds-accordion__title">Configuração bloqueada</span>
@@ -192,6 +210,36 @@
   </div>
 
   <div class="ds-subsection">
+    <h2 class="ds-subsection__title"><span data-lang="pt">API no Figma</span><span data-lang="en">Figma API</span></h2>
+    <p style="margin-bottom:var(--ds-space-lg);color:var(--ds-content-default);font-size:var(--ds-body-font-size-sm);"><span data-lang="pt">O component set vivo expõe <strong>Title</strong>, não Label. Use o nome da propriedade pública do Figma para handoff e documentação; a classe CSS continua <code>.ds-accordion__title</code>.</span><span data-lang="en">The live component set exposes <strong>Title</strong>, not Label. Use the public Figma property name for handoff and documentation; the CSS class remains <code>.ds-accordion__title</code>.</span></p>
+    <table class="ds-token-table">
+      <thead><tr><th><span data-lang="pt">Propriedade</span><span data-lang="en">Property</span></th><th><span data-lang="pt">Tipo</span><span data-lang="en">Type</span></th><th><span data-lang="pt">Equivalente no repo</span><span data-lang="en">Repo equivalent</span></th></tr></thead>
+      <tbody>
+        <tr><td><code>Title</code></td><td><code>TEXT</code></td><td><code>.ds-accordion__title</code></td></tr>
+        <tr><td><code>Content</code></td><td><code>TEXT</code></td><td><code>.ds-accordion__panel</code> com texto simples</td></tr>
+        <tr><td><code>Content Slot</code></td><td><code>SLOT</code></td><td><span data-lang="pt">Conteúdo customizado dentro de <code>.ds-accordion__panel</code>.</span><span data-lang="en">Custom content inside <code>.ds-accordion__panel</code>.</span></td></tr>
+        <tr><td><code>Show Leading Icon</code></td><td><code>BOOLEAN</code></td><td><span data-lang="pt">Renderizar ou omitir <code>.ds-accordion__leading-icon</code>.</span><span data-lang="en">Render or omit <code>.ds-accordion__leading-icon</code>.</span></td></tr>
+        <tr><td><code>Leading Icon</code></td><td><code>INSTANCE_SWAP</code></td><td><span data-lang="pt">Ícone Lucide com <code>data-lucide</code>.</span><span data-lang="en">Lucide icon with <code>data-lucide</code>.</span></td></tr>
+        <tr><td><code>State</code></td><td><code>VARIANT</code></td><td><code>Default</code>, <code>Hover</code>, <code>Focus</code>, <code>Disabled</code></td></tr>
+        <tr><td><code>Open</code></td><td><code>VARIANT</code></td><td><code>aria-expanded</code>, <code>hidden</code> e <code>data-state</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ds-subsection">
+    <h2 class="ds-subsection__title"><span data-lang="pt">Comportamento</span><span data-lang="en">Behavior</span></h2>
+    <table class="ds-token-table">
+      <thead><tr><th><span data-lang="pt">Contrato</span><span data-lang="en">Contract</span></th><th><span data-lang="pt">Regra</span><span data-lang="en">Rule</span></th></tr></thead>
+      <tbody>
+        <tr><td><code>aria-expanded</code></td><td><span data-lang="pt">Fonte de estado no trigger; <code>true</code> abre o painel associado.</span><span data-lang="en">State source on the trigger; <code>true</code> opens the associated panel.</span></td></tr>
+        <tr><td><code>hidden</code></td><td><span data-lang="pt">Deve estar presente em painéis fechados e ausente em painéis abertos.</span><span data-lang="en">Must be present on closed panels and absent on open panels.</span></td></tr>
+        <tr><td><code>data-state</code></td><td><span data-lang="pt">Espelha <code>open</code>/<code>closed</code> no item para CSS, testes e debugging.</span><span data-lang="en">Mirrors <code>open</code>/<code>closed</code> on the item for CSS, tests, and debugging.</span></td></tr>
+        <tr><td><code>data-accordion-mode="single"</code></td><td><span data-lang="pt">Opcional. Fecha os irmãos quando um item abre, alinhando padrões como Radix Accordion single.</span><span data-lang="en">Optional. Closes siblings when one item opens, matching patterns such as Radix Accordion single.</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ds-subsection">
     <h2 class="ds-subsection__title"><span data-lang="pt">Classes CSS</span><span data-lang="en">CSS classes</span></h2>
     <table class="ds-token-table">
       <thead><tr><th><span data-lang="pt">Classe</span><span data-lang="en">Class</span></th><th><span data-lang="pt">Descrição</span><span data-lang="en">Description</span></th></tr></thead>
@@ -203,6 +251,7 @@
         <tr><td><code>ds-accordion__title</code></td><td><span data-lang="pt">Texto do trigger.</span><span data-lang="en">Trigger text.</span></td></tr>
         <tr><td><code>ds-accordion__chevron</code></td><td><span data-lang="pt">Indicador decorativo do estado.</span><span data-lang="en">Decorative state indicator.</span></td></tr>
         <tr><td><code>ds-accordion__panel</code></td><td><span data-lang="pt">Slot de conteúdo expandido.</span><span data-lang="en">Expanded content slot.</span></td></tr>
+        <tr><td><code>data-state</code></td><td><span data-lang="pt">Estado sincronizado no item: <code>open</code> ou <code>closed</code>.</span><span data-lang="en">Synchronized item state: <code>open</code> or <code>closed</code>.</span></td></tr>
       </tbody>
     </table>
   </div>
@@ -214,7 +263,8 @@
       <tbody>
         <tr><td><code>Tab</code></td><td><span data-lang="pt">Move o foco entre triggers de Accordion e controles dentro de painéis abertos.</span><span data-lang="en">Moves focus between Accordion triggers and controls inside open panels.</span></td></tr>
         <tr><td><code>Enter</code> / <code>Space</code></td><td><span data-lang="pt">Alterna o painel associado ao trigger focado.</span><span data-lang="en">Toggles the panel associated with the focused trigger.</span></td></tr>
-        <tr><td><code>Arrow Up</code> / <code>Arrow Down</code></td><td><span data-lang="pt">Opcional em implementações interativas: mover foco entre triggers do grupo.</span><span data-lang="en">Optional in interactive implementations: move focus between group triggers.</span></td></tr>
+        <tr><td><code>Arrow Up</code> / <code>Arrow Down</code></td><td><span data-lang="pt">Move o foco entre triggers do grupo.</span><span data-lang="en">Moves focus between group triggers.</span></td></tr>
+        <tr><td><code>Home</code> / <code>End</code></td><td><span data-lang="pt">Move o foco para o primeiro ou último trigger do grupo.</span><span data-lang="en">Moves focus to the first or last trigger in the group.</span></td></tr>
       </tbody>
     </table>
   </div>
@@ -229,6 +279,7 @@
         <tr><td><code>aria-controls</code></td><td><span data-lang="pt">Aponta para o <code>id</code> do painel controlado.</span><span data-lang="en">Points to the controlled panel <code>id</code>.</span></td></tr>
         <tr><td><code>role="region"</code></td><td><span data-lang="pt">Use em painéis com conteúdo suficiente para merecer landmark, sempre com <code>aria-labelledby</code>.</span><span data-lang="en">Use on panels with enough content to merit a landmark, always with <code>aria-labelledby</code>.</span></td></tr>
         <tr><td><code>hidden</code></td><td><span data-lang="pt">Remove painéis fechados da árvore de acessibilidade.</span><span data-lang="en">Removes closed panels from the accessibility tree.</span></td></tr>
+        <tr><td><code>disabled</code></td><td><span data-lang="pt">Remove triggers indisponíveis da interação e da ordem de tabulação.</span><span data-lang="en">Removes unavailable triggers from interaction and the tab order.</span></td></tr>
       </tbody>
     </table>
   </div>
@@ -239,7 +290,8 @@
       <thead><tr><th>Parte</th><th>CSS</th><th>Token atual</th></tr></thead>
       <tbody>
         <tr><td>Item</td><td><code>.ds-accordion__item</code></td><td><code>component.accordion.item.{radius,border-width,bg,border-color}</code></td></tr>
-        <tr><td>Trigger</td><td><code>.ds-accordion__trigger</code></td><td><code>component.accordion.trigger.{height,padding,gap,content.color}</code></td></tr>
+        <tr><td>Trigger</td><td><code>.ds-accordion__trigger</code></td><td><code>component.accordion.trigger.{height,padding,gap}</code></td></tr>
+        <tr><td>Title</td><td><code>.ds-accordion__title</code></td><td><code>component.accordion.trigger.content.color</code> + typography <code>body/md bold</code></td></tr>
         <tr><td>Content</td><td><code>.ds-accordion__panel</code></td><td><code>component.accordion.content.{color,padding,gap}</code></td></tr>
         <tr><td>Chevron</td><td><code>.ds-accordion__chevron</code></td><td><code>component.accordion.chevron.{size,color,stroke-width}</code></td></tr>
         <tr><td>Leading icon</td><td><code>.ds-accordion__leading-icon</code></td><td><code>component.accordion.leading-icon.{size,color,stroke-width}</code></td></tr>

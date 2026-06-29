@@ -93,6 +93,7 @@
 }
 
 .ds-accordion__trigger[aria-expanded="true"] .ds-accordion__chevron,
+.ds-accordion__item[data-state="open"] .ds-accordion__chevron,
 .ds-accordion__item[open] .ds-accordion__chevron {
   transform: rotate(180deg);
 }
