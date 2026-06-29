@@ -28,7 +28,7 @@
     "build:icons": "node scripts/build-icons.mjs",
     "build:llms": "node scripts/build-llms.mjs",
     "build:all": "npm run build:tokens && npm run build:icons && npm run sync:docs && npm run build:api && npm run build:llms && npm run verify:tokens && npm test",
-    "test": "node scripts/test-token-integrity.mjs && node scripts/test-css-references.mjs && node scripts/test-generators.mjs && node scripts/test-a11y.mjs",
+    "test": "node scripts/test-token-integrity.mjs && node scripts/test-css-references.mjs && node scripts/test-generators.mjs && node scripts/test-accordion-docs.mjs && node scripts/test-a11y.mjs",
     "test:self": "node scripts/test-self.mjs",
     "test:a11y": "node scripts/test-a11y.mjs",
     "test:visual": "node scripts/test-visual.mjs",
