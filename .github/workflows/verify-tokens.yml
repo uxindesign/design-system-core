@@ -2,19 +2,8 @@ name: Verify tokens
 
 on:
   pull_request:
-    paths:
-      - "tokens/**"
-      - "css/tokens/generated/**"
-      - "build-tokens.mjs"
-      - "scripts/tokens-verify.mjs"
-      - ".github/workflows/verify-tokens.yml"
   push:
     branches: [main]
-    paths:
-      - "tokens/**"
-      - "css/tokens/generated/**"
-      - "build-tokens.mjs"
-      - "scripts/tokens-verify.mjs"
 
 jobs:
   verify:

@@ -92,6 +92,7 @@
 </ul>
 <h3>Corrigido</h3>
 <ul>
+<li><strong>CI de PR com check obrigatório.</strong> O workflow <code>Verify tokens</code> passa a rodar em todo PR/push para <code>main</code>, evitando bloqueio por check requerido ausente quando a mudança não toca arquivos de tokens.</li>
 <li><strong>Snapshot exporter audita uso real de Component tokens.</strong> Exporter <code>0.2.0</code> passa a contar variables usadas sob ancestrais <code>COMPONENT</code>/<code>COMPONENT_SET</code>; <code>verify:figma-structure</code> bloqueia snapshots sem <code>structureAudit.variableUsage</code> atualizado antes de aceitar a auditoria.</li>
 <li><strong>Drift Figma/JSON eliminado para tokens recentes.</strong> Sincronizados <code>dimension/0</code>, <code>dimension/1</code>, <code>space.none</code>, <code>space.hairline</code>, padding de overlay do Modal, backgrounds de Menu Item, Divider inset, Field compartilhado, Tooltip e aliases de Card/Menu, preservando a cadeia <code>Foundation -&gt; Semantic -&gt; Component -&gt; CSS</code>.</li>
 <li><strong>Registry completo para novos contratos.</strong> Metadados de registry foram preenchidos para Accordion, Pagination, Combobox, Divider, Field, Menu e novos tokens Foundation/Semantic, removendo TODOs e mantendo <code>verify:registry</code> sem pendências.</li>
