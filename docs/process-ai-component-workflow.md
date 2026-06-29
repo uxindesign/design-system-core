@@ -29,6 +29,7 @@ Não use este processo completo para correções pontuais já especificadas pelo
 8. Não interpretar aprovação de um gate como autorização para todos os próximos gates.
 9. Não misturar limpeza de trabalho rejeitado, criação de componente e sync repo no mesmo bloco de ação.
 10. Não criar páginas Figma fora do padrão vivo do DS Core. Página de componente deve usar frame raiz único e seções internas; component sets, exemplos, labels e docs não ficam soltos no canvas.
+11. Não encerrar uma correção sem transformar a causa raiz em prevenção verificável quando o problema veio do processo, exporter, gate, checklist ou documentação.
 
 ## Como demonstrar aderência
 
@@ -52,6 +53,26 @@ Aprovação explícita vale só para o gate apresentado imediatamente antes. Exe
 - "leva para prod" autoriza publicação apenas se o escopo, diff e validações já tiverem sido apresentados.
 
 Se o usuário mudar a decisão, a decisão mais recente prevalece e o agente deve reabrir o gate afetado antes de agir.
+
+## Gate permanente — aprendizado e prevenção
+
+Sempre que uma auditoria ou rejeição do owner revelar erro que o processo deveria ter evitado, o agente deve tratar a correção como duas entregas separadas:
+
+1. corrigir o artefato afetado no menor escopo possível;
+2. retroalimentar o processo com gate, teste, checklist ou documentação que evite a mesma falha.
+
+O agente deve classificar a causa antes de seguir:
+
+| Causa | Ação obrigatória |
+|---|---|
+| Erro no componente atual | Corrigir o componente e registrar evidência antes/depois. |
+| Falha de auditoria automatizada | Corrigir o script/exporter/teste antes de confiar novamente no gate. |
+| Lacuna de checklist ou role | Atualizar checklist/role/processo antes de declarar o fluxo corrigido. |
+| Drift global fora do componente | Reportar como gate paralelo, com lista objetiva, sem misturar com aprovação do componente. |
+
+Se o gate automatizado produzir falso positivo ou falso negativo, o agente não pode contornar o resultado manualmente. Deve corrigir a causa do gate, gerar novo snapshot quando aplicável e reexecutar a validação. Enquanto o snapshot usado pelo gate não refletir a última escrita no Figma, o status é `bloqueado por snapshot desatualizado`.
+
+Para auditoria estrutural Figma, o exporter deve detectar variants finais por estrutura nativa (`COMPONENT` e `COMPONENT_SET`), não por nome fixo de seção como `section-variantes`. Páginas maduras podem organizar component sets em seções diferentes; isso não pode esconder binding real nem inventar token sem uso.
 
 ## Roles obrigatórias para agentes
 

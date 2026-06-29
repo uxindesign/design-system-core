@@ -52,6 +52,7 @@ Use este checklist em modo read-only. Nao corrigir durante a auditoria.
 - [ ] Sem variable nova sem WEB code syntax.
 - [ ] Sem Component -> Foundation, Component -> Component ou valor cru em Component variable.
 - [ ] Sem token Component sem uso real, salvo justificativa explicita.
+- [ ] Auditoria de uso de Component token baseada em COMPONENT/COMPONENT_SET reais, nao em nome fixo de secao.
 
 ## Conteudo e semantica
 
@@ -76,10 +77,12 @@ Use este checklist em modo read-only. Nao corrigir durante a auditoria.
 - [ ] Contagem de hardcoded fills/strokes relevantes.
 - [ ] Contagem de loose nodes.
 - [ ] Lista de falhas com node IDs.
+- [ ] Falhas globais fora do componente atual listadas separadamente com impacto e gate afetado.
 
 ## Resultado
 
 - [ ] Contrato: `passou` ou `falhou`.
 - [ ] Documentação: `passou` ou `falhou`.
 - [ ] Visual: `passou` ou `falhou`.
+- [ ] Gate/processo: `passou`, `falhou` ou `bloqueado por snapshot desatualizado`.
 - [ ] Aprovação final só passa quando os três itens acima passam.

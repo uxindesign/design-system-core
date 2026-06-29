@@ -1,4 +1,5 @@
 const EXPECTED_FILE_KEY = "PRYS2kL7VdC1MtVWfZvuDN";
+const EXPORTER_VERSION = "0.2.0";
 const STROKE_WEIGHT_FIELDS = [
   "strokeWeight",
   "strokeTopWeight",
@@ -59,7 +60,7 @@ async function exportSnapshot() {
     generatedAt: new Date().toISOString(),
     generator: {
       name: "Design System Snapshot Exporter",
-      version: "0.1.0",
+      version: EXPORTER_VERSION,
       source: "figma-plugin/snapshot-exporter",
     },
     fileKey: figma.fileKey || null,
@@ -321,7 +322,7 @@ async function auditPageNodes(page, variablesById, collectionNameById, issues, u
 
   for (const node of nodes) {
     const path = nodePath(node);
-    const isFinalComponentNode = isFinalComponentPath(path);
+    const isFinalComponentNode = isInsideFinalComponent(node);
 
     if (isFinalComponentNode) {
       collectVariableUsage(node.boundVariables, path, usageByVariable);
@@ -365,8 +366,15 @@ async function auditPageNodes(page, variablesById, collectionNameById, issues, u
   }
 }
 
-function isFinalComponentPath(path) {
-  return path.includes(" / section-variantes / ");
+function isInsideFinalComponent(node) {
+  let current = node;
+  while (current && current.type !== "PAGE" && current.type !== "DOCUMENT") {
+    if (current.type === "COMPONENT" || current.type === "COMPONENT_SET") {
+      return true;
+    }
+    current = current.parent;
+  }
+  return false;
 }
 
 function auditLucideInstance(node, path, variablesById, collectionNameById, issues, pageName, mainComponent) {
