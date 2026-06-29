@@ -42,6 +42,7 @@
         { label: 'Avatar',     path: 'docs/avatar.html' },
         { label: 'Badge',      path: 'docs/badge.html' },
         { label: 'Breadcrumb', path: 'docs/breadcrumb.html' },
+        { label: 'Pagination', path: 'docs/pagination.html' },
         { label: 'Button',     path: 'docs/button.html' },
         { label: 'Card',       path: 'docs/card.html' },
         { label: 'Divider',    path: 'docs/divider.html' },

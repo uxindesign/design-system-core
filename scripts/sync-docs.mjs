@@ -210,6 +210,7 @@ const knownComponents = [
   { name: 'Menu',        css: 'menu'       },
   { name: 'Tabs',        css: 'tabs'       },
   { name: 'Breadcrumb',  css: 'breadcrumb' },
+  { name: 'Pagination',  css: 'pagination' },
   { name: 'Avatar',      css: 'avatar'     },
   { name: 'Divider',     css: 'divider'    },
   { name: 'Form Field',  css: 'form-field', cssOnly: true },

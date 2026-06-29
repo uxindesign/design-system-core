@@ -1,6 +1,6 @@
 # Inventário de componentes — Design System Core
 
-> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-06-22. Não editar manualmente.
+> Gerado automaticamente por `scripts/sync-docs.mjs` em 2026-06-28. Não editar manualmente.
 > Para regenerar: `npm run sync:docs`
 > Versão atual: **1.0.0-beta.5**
 
@@ -23,6 +23,7 @@
 | Menu | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
 | Tabs | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
 | Breadcrumb | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
+| Pagination | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
 | Avatar | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
 | Divider | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
 | Form Field | 🟢 | — (CSS-only, ADR-017) | — | ⬜ | 🟢 |
@@ -71,6 +72,7 @@
 | ADR-017 | — Componentes CSS-only (sem equivalência no Figma) | Aceito |
 | ADR-018 | — Renomear `content.{default,secondary,tertiary}` para `content.{strong,default,subtle}` | Aceito |
 | ADR-019 | — Reintrodução de Component tokens como contrato anatômico | Aceita |
+| ADR-020 | — Anatomias globais de form controls | Aceita |
 
 ## Próximos milestones
 

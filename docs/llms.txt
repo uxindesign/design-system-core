@@ -71,6 +71,7 @@ Arquivo completo para LLMs: https://uxindesign.github.io/design-system-core/docs
 - [ADR-017 — — Componentes CSS-only (sem equivalência no Figma)](https://uxindesign.github.io/design-system-core/docs/decisions/adr-017-componentes-css-only.html) — Aceito
 - [ADR-018 — — Renomear `content.{default,secondary,tertiary}` para `content.{strong,default,subtle}`](https://uxindesign.github.io/design-system-core/docs/decisions/adr-018-content-naming-strong-default-subtle.html) — Aceito
 - [ADR-019 — — Reintrodução de Component tokens como contrato anatômico](https://uxindesign.github.io/design-system-core/docs/decisions/adr-019-component-tokens-contrato-anatomico.html) — Aceita
+- [ADR-020 — — Anatomias globais de form controls](https://uxindesign.github.io/design-system-core/docs/decisions/adr-020-anatomias-globais-de-form-controls.html) — Aceita
 
 ## Processo
 

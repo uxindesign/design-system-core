@@ -646,6 +646,11 @@
             "$description": "Disabled fill for Button Danger/Error in dark mode."
           }
         }
+      },
+      "transparent": {
+        "$type": "color",
+        "$value": "rgba(0, 0, 0, 0)",
+        "$description": "Cor totalmente transparente. Espelha Figma foundation/color/transparent."
       }
     }
   }
