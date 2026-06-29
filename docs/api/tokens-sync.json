@@ -1,10 +1,10 @@
 {
   "version": "1.0.0-beta.5",
   "totals": {
-    "jsonTokens": 1365,
-    "sharedTokens": 899,
-    "lightTokens": 233,
-    "darkTokens": 233,
+    "jsonTokens": 1464,
+    "sharedTokens": 990,
+    "lightTokens": 237,
+    "darkTokens": 237,
     "errors": 0,
     "warnings": 0
   },
@@ -16,11 +16,11 @@
     "docTokenDrift": [],
     "jsonVsFigma": {
       "skipped": false,
-      "snapshotAge": "1h",
+      "snapshotAge": "0h",
       "snapshotFreshness": "fresh",
       "snapshotMaxAgeHours": 24,
       "summary": {
-        "figmaVariableCount": 1078,
+        "figmaVariableCount": 1173,
         "figmaCollectionCount": 3,
         "VALUE_DRIFT": 0,
         "NEEDS_SYNC": 0,
@@ -846,18 +846,6 @@
             "json": "{foundation.z.40}"
           },
           {
-            "file": "component/tabs.json",
-            "token": "component.tabs.panel.padding-y.default",
-            "side": "json-only",
-            "json": "{semantic.space.lg}"
-          },
-          {
-            "file": "component/breadcrumb.json",
-            "token": "component.breadcrumb.focus-ring.radius.default",
-            "side": "json-only",
-            "json": "{semantic.radius.md}"
-          },
-          {
             "file": "component/modal.json",
             "token": "component.modal.overlay.z-index.default",
             "side": "json-only-downstream",
@@ -868,6 +856,18 @@
             "token": "component.modal.shadow.default",
             "side": "json-only-downstream",
             "json": "{semantic.shadow.modal}"
+          },
+          {
+            "file": "component/tabs.json",
+            "token": "component.tabs.panel.padding-y.default",
+            "side": "json-only",
+            "json": "{semantic.space.lg}"
+          },
+          {
+            "file": "component/breadcrumb.json",
+            "token": "component.breadcrumb.focus-ring.radius.default",
+            "side": "json-only",
+            "json": "{semantic.radius.md}"
           },
           {
             "file": "component/menu.json",

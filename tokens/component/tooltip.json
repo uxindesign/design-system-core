@@ -5,21 +5,21 @@
         "padding-x": {
           "default": {
             "$type": "dimension",
-            "$value": "{semantic.space.sm}",
+            "$value": "{semantic.space.md}",
             "$description": "Padding horizontal do content Tooltip."
           }
         },
         "padding-y": {
           "default": {
             "$type": "dimension",
-            "$value": "{semantic.space.xs}",
+            "$value": "{semantic.space.sm}",
             "$description": "Padding vertical do content Tooltip."
           }
         },
         "radius": {
           "default": {
             "$type": "dimension",
-            "$value": "{semantic.radius.sm}",
+            "$value": "{semantic.radius.md}",
             "$description": "Radius do content Tooltip."
           }
         },

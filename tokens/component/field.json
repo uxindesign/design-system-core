@@ -119,6 +119,89 @@
             "$description": "Field value color read-only."
           }
         }
+      },
+      "gap": {
+        "sm": {
+          "$type": "dimension",
+          "$value": "{semantic.space.xs}",
+          "$description": "Sincronizado a partir da Variable Figma component.field.gap.sm."
+        },
+        "md": {
+          "$type": "dimension",
+          "$value": "{semantic.space.xs}",
+          "$description": "Sincronizado a partir da Variable Figma component.field.gap.md."
+        },
+        "lg": {
+          "$type": "dimension",
+          "$value": "{semantic.space.sm}",
+          "$description": "Sincronizado a partir da Variable Figma component.field.gap.lg."
+        }
+      },
+      "icon": {
+        "color": {
+          "default": {
+            "$type": "color",
+            "$value": "{semantic.icon.color.default}",
+            "$description": "Sincronizado a partir da Variable Figma component.field.icon.color.default."
+          },
+          "disabled": {
+            "$type": "color",
+            "$value": "{semantic.icon.color.disabled}",
+            "$description": "Sincronizado a partir da Variable Figma component.field.icon.color.disabled."
+          }
+        },
+        "size": {
+          "sm": {
+            "$type": "dimension",
+            "$value": "{semantic.size.xs}",
+            "$description": "Sincronizado a partir da Variable Figma component.field.icon.size.sm."
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "{semantic.size.sm}",
+            "$description": "Sincronizado a partir da Variable Figma component.field.icon.size.md."
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{semantic.size.md}",
+            "$description": "Sincronizado a partir da Variable Figma component.field.icon.size.lg."
+          }
+        },
+        "stroke-width": {
+          "sm": {
+            "$type": "dimension",
+            "$value": "{semantic.icon.stroke-width.regular.16}",
+            "$description": "Sincronizado a partir da Variable Figma component.field.icon.stroke-width.sm."
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "{semantic.icon.stroke-width.regular.20}",
+            "$description": "Sincronizado a partir da Variable Figma component.field.icon.stroke-width.md."
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{semantic.icon.stroke-width.regular.24}",
+            "$description": "Sincronizado a partir da Variable Figma component.field.icon.stroke-width.lg."
+          }
+        }
+      },
+      "icon-frame": {
+        "padding-x": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.space.2xs}",
+            "$description": "Sincronizado a partir da Variable Figma component.field.icon-frame.padding-x.default."
+          }
+        }
+      },
+      "text-frame": {
+        "padding-x": {
+          "default": {
+            "$type": "dimension",
+            "$value": "{semantic.space.2xs}",
+            "$description": "Sincronizado a partir da Variable Figma component.field.text-frame.padding-x.default."
+          }
+        }
       }
     }
   }

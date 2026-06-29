@@ -56,7 +56,7 @@
       },
       "content-disabled": {
         "$type": "color",
-        "$value": "{semantic.content.disabled}"
+        "$value": "{foundation.color.disabled.brand.light}"
       },
       "background": {
         "default": {
@@ -73,7 +73,7 @@
         },
         "disabled": {
           "$type": "color",
-          "$value": "{semantic.background.disabled}"
+          "$value": "{foundation.color.disabled.brand.toned.light}"
         }
       }
     },
@@ -280,6 +280,13 @@
             "$value": "{foundation.color.disabled.error.light}",
             "$description": "Fill error disabled."
           }
+        },
+        "content": {
+          "strong": {
+            "$type": "color",
+            "$value": "{foundation.color.red.700}",
+            "$description": "Conteudo error/destructive ativo com contraste reforcado para surfaces elevadas."
+          }
         }
       },
       "info": {
@@ -378,7 +385,7 @@
       },
       "default": {
         "$type": "color",
-        "$value": "{foundation.color.neutral.600}",
+        "$value": "{foundation.color.neutral.700}",
         "$description": "Conteúdo padrão (body text, descriptions, form labels). Use este na maioria dos casos."
       },
       "hover": {
@@ -388,12 +395,12 @@
       },
       "subtle": {
         "$type": "color",
-        "$value": "{foundation.color.neutral.500}",
+        "$value": "{foundation.color.neutral.600}",
         "$description": "Conteúdo de ênfase reduzida (placeholders, ícones decorativos, helper text)."
       },
       "disabled": {
         "$type": "color",
-        "$value": "{foundation.color.neutral.500}",
+        "$value": "{foundation.color.neutral.400}",
         "$description": "Conteúdo em estado disabled. Isento de contraste WCAG. Unifica text/disabled e state/disabled/foreground (ADR-011)."
       },
       "inverse": {
@@ -583,6 +590,11 @@
         "info-contrast": {
           "$type": "color",
           "$value": "{semantic.feedback.info.content-contrast}"
+        },
+        "error-strong": {
+          "$type": "color",
+          "$value": "{semantic.feedback.error.content.strong}",
+          "$description": "Icone error/destructive ativo pareado com feedback/error/content/strong."
         }
       },
       "stroke-width": {
@@ -884,6 +896,11 @@
             "$description": "10px. Padding-Y vertical de controles (Input/Button md). Único valor de control que foge da escala space (xs–2xl)."
           }
         }
+      },
+      "hairline": {
+        "$type": "dimension",
+        "$value": "{foundation.dimension.1}",
+        "$description": "2px. Menor espaço semântico para ajustes finos de gap/padding."
       }
     },
     "size": {

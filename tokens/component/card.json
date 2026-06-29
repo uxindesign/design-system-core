@@ -32,27 +32,6 @@
         }
       },
       "header": {
-        "padding-x": {
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.space.lg}",
-            "$description": "Padding horizontal do header Card."
-          }
-        },
-        "padding-top": {
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.space.lg}",
-            "$description": "Padding top do header Card."
-          }
-        },
-        "padding-bottom": {
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.space.sm}",
-            "$description": "Padding bottom do header Card."
-          }
-        },
         "gap": {
           "default": {
             "$type": "dimension",
@@ -62,20 +41,6 @@
         }
       },
       "body": {
-        "padding-x": {
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.space.lg}",
-            "$description": "Padding horizontal do body Card."
-          }
-        },
-        "padding-bottom": {
-          "default": {
-            "$type": "dimension",
-            "$value": "{semantic.space.lg}",
-            "$description": "Padding bottom do body Card."
-          }
-        },
         "font-size": {
           "default": {
             "$type": "dimension",
@@ -183,10 +148,6 @@
       },
       "border-color": {
         "outlined": {
-          "$value": "{semantic.border.subtle}",
-          "$type": "color"
-        },
-        "elevated": {
           "$value": "{semantic.border.default}",
           "$type": "color"
         }

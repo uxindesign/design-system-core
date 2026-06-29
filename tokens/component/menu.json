@@ -73,7 +73,7 @@
         "radius": {
           "default": {
             "$type": "dimension",
-            "$value": "{semantic.radius.md}",
+            "$value": "{semantic.radius.sm}",
             "$description": "Radius do item Menu."
           }
         },
@@ -118,9 +118,11 @@
             "$description": "Background default do item Menu."
           },
           "hover": {
-            "$type": "color",
-            "$value": "{semantic.outline.background.hover}",
-            "$description": "Background hover do item Menu."
+            "default": {
+              "$type": "color",
+              "$value": "{semantic.ghost.background.hover}",
+              "$description": "Sincronizado a partir da Variable Figma component.menu.item.bg.hover.default."
+            }
           },
           "focused": {
             "$type": "color",
@@ -157,7 +159,7 @@
             },
             "destructive": {
               "$type": "color",
-              "$value": "{semantic.feedback.error.content-default}",
+              "$value": "{semantic.feedback.error.content.strong}",
               "$description": "Cor do conteúdo destructive do item Menu."
             }
           }
@@ -176,7 +178,7 @@
             },
             "destructive": {
               "$type": "color",
-              "$value": "{semantic.feedback.error.content-default}",
+              "$value": "{semantic.feedback.error.content.strong}",
               "$description": "Cor de shortcut ou metadado destructive do item Menu."
             }
           }
@@ -195,7 +197,7 @@
             },
             "destructive": {
               "$type": "color",
-              "$value": "{semantic.icon.color.error}",
+              "$value": "{semantic.icon.color.error-strong}",
               "$description": "Cor do ícone destructive do item Menu."
             }
           },
@@ -239,7 +241,7 @@
         "radius": {
           "default": {
             "$type": "dimension",
-            "$value": "{semantic.radius.lg}",
+            "$value": "{semantic.radius.md}",
             "$description": "Radius do focus ring do item Menu."
           }
         }

@@ -1,0 +1,42 @@
+{
+  "checkedAt": "2026-06-28T23:29:27-03:00",
+  "source": "Figma MCP live node read",
+  "fileKey": "PRYS2kL7VdC1MtVWfZvuDN",
+  "result": {
+    "componentSet": {
+      "id": "154:33",
+      "name": "Modal"
+    },
+    "variable": {
+      "id": "VariableID:4101:2",
+      "name": "modal/overlay/padding/default"
+    },
+    "bindings": [
+      {
+        "field": "paddingLeft",
+        "value": 20,
+        "variableId": "VariableID:4101:2",
+        "matches": true
+      },
+      {
+        "field": "paddingRight",
+        "value": 20,
+        "variableId": "VariableID:4101:2",
+        "matches": true
+      },
+      {
+        "field": "paddingTop",
+        "value": 20,
+        "variableId": "VariableID:4101:2",
+        "matches": true
+      },
+      {
+        "field": "paddingBottom",
+        "value": 20,
+        "variableId": "VariableID:4101:2",
+        "matches": true
+      }
+    ],
+    "allMatched": true
+  }
+}

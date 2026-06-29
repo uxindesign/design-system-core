@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-06-28T22:56:04-03:00",
+  "source": "Figma MCP live variable read",
+  "fileKey": "PRYS2kL7VdC1MtVWfZvuDN",
+  "result": {
+    "syntax": [
+      {
+        "name": "pagination/item/font-weight/current",
+        "exists": true,
+        "web": "--ds-pagination-item-font-weight-current"
+      },
+      {
+        "name": "pagination/item/font-weight/default",
+        "exists": true,
+        "web": "--ds-pagination-item-font-weight-default"
+      }
+    ],
+    "removedStillPresent": [],
+    "variableCount": 1169
+  }
+}

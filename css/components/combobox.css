@@ -221,7 +221,7 @@
 
 .ds-combobox__option:hover:not([aria-disabled="true"]),
 .ds-combobox__option[data-active="true"] {
-  background: var(--ds-menu-item-bg-hover);
+  background: var(--ds-menu-item-bg-hover-default);
   color: var(--ds-menu-item-content-color-hover);
 }
 
