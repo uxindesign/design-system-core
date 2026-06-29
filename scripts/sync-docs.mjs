@@ -195,6 +195,7 @@ console.log(`✅ token-schema.md (Foundation: ${foundationTotal}, Semantic: ${se
 // precisa ter) equivalente Figma porque os componentes Figma equivalentes já
 // carregam Label/Required/Helper/Error inline em cada variant. Ver ADR-017.
 const knownComponents = [
+  { name: 'Accordion',  css: 'accordion'  },
   { name: 'Button',      css: 'button'     },
   { name: 'Input Text',  css: 'input'      },
   { name: 'Textarea',    css: 'textarea'   },

@@ -42,6 +42,7 @@ const pkg = readJson(path.join(ROOT, "package.json"));
 // Nem todos os componentes foram migrados ainda; consumers podem consultar
 // `tokens` extraidos do CSS e `componentTokenFile` quando existir.
 const COMPONENTS = [
+  { name: "Accordion", slug: "accordion", css: "accordion.css", html: "accordion.html", figmaPage: "Accordion" },
   { name: "Button", slug: "button", css: "button.css", html: "button.html" },
   { name: "Input Text", slug: "input", css: "input.css", html: "input.html" },
   { name: "Textarea", slug: "textarea", css: "textarea.css", html: "textarea.html" },

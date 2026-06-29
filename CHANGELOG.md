@@ -9,6 +9,7 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 ## [Não publicado]
 
 ### Adicionado
+- **Accordion público no repo.** Adicionados `css/components/accordion.css`, `docs/accordion.html`, navegação, API e documentação do componente consumível com slots de conteúdo, ícones Lucide, estados open/closed/disabled, ARIA e consumo dos tokens `component.accordion.*`.
 - **Componente Accordion.** Adicionado o contrato anatômico do Accordion aprovado no Figma para `item`, `trigger`, `content`, `chevron`, `leading-icon` e `focus-ring`, com tokens `component.accordion.*`, CSS gerado, API, registry e documentação de tokens a partir da run `2026-06-29-accordion`. O componente mantém hover por stroke de brand, slot de conteúdo, ícones Lucide tokenizados e `Focus Ring` dedicado com radius `16`.
 - **Aprendizado retroalimentado nos gates de agents.** Checklists de Figma Builder, Figma Auditor e Token Sync passam a exigir registro de falhas corrigidas como novos gates/testes/critérios de auditoria, incluindo bloqueio por snapshot antigo e separação explícita entre drift global e escopo do componente.
 - **Componente Pagination.** Figma aprovado (run `2026-06-25-pagination`): tokens `pagination/*` (29 paths), token semântico `background.transparent`, `css/components/pagination.css`, `docs/pagination.html`, prev/next via Button Ghost Icon Only, page items com `aria-current="page"`, sizes sm/md/lg, baselines visuais e run documentada em `docs/agents/runs/2026-06-25-pagination/`.
@@ -27,6 +28,7 @@ A partir de `1.0.0-beta.1`, o sistema entrou em **fase beta** — releases incre
 - **Escala semântica de space expandida.** `semantic.space` passa a incluir `3xl` a `6xl` (`32/40/48/64px`) e `semantic.space.section` sobe para `48/64/80/96/120px` com novo `section.2xl`, mantendo aliases Figma ↔ JSON para gaps, paddings e separação macro.
 
 ### Corrigido
+- **CI de PR com check obrigatório.** O workflow `Verify tokens` passa a rodar em todo PR/push para `main`, evitando bloqueio por check requerido ausente quando a mudança não toca arquivos de tokens.
 - **Snapshot exporter audita uso real de Component tokens.** Exporter `0.2.0` passa a contar variables usadas sob ancestrais `COMPONENT`/`COMPONENT_SET`; `verify:figma-structure` bloqueia snapshots sem `structureAudit.variableUsage` atualizado antes de aceitar a auditoria.
 - **Drift Figma/JSON eliminado para tokens recentes.** Sincronizados `dimension/0`, `dimension/1`, `space.none`, `space.hairline`, padding de overlay do Modal, backgrounds de Menu Item, Divider inset, Field compartilhado, Tooltip e aliases de Card/Menu, preservando a cadeia `Foundation -> Semantic -> Component -> CSS`.
 - **Registry completo para novos contratos.** Metadados de registry foram preenchidos para Accordion, Pagination, Combobox, Divider, Field, Menu e novos tokens Foundation/Semantic, removendo TODOs e mantendo `verify:registry` sem pendências.
