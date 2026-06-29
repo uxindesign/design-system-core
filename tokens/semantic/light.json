@@ -900,7 +900,7 @@
       "hairline": {
         "$type": "dimension",
         "$value": "{foundation.dimension.1}",
-        "$description": "2px. Menor espaço semântico para ajustes finos de gap/padding."
+        "$description": "1px. Menor espaço semântico para bordas hairline, divisores e ajustes finos."
       }
     },
     "size": {
