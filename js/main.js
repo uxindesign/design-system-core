@@ -38,6 +38,7 @@
     {
       heading: 'Components',
       items: [
+        { label: 'Accordion',  path: 'docs/accordion.html' },
         { label: 'Alert',      path: 'docs/alert.html' },
         { label: 'Avatar',     path: 'docs/avatar.html' },
         { label: 'Badge',      path: 'docs/badge.html' },
@@ -257,6 +258,7 @@
       'Motion': 'Motion',
       'Opacity': 'Opacity',
       'Z-index': 'Z-index',
+      'Accordion': 'Accordion',
       'Button': 'Button',
       'Input': 'Input',
       'Textarea': 'Textarea',

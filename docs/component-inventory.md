@@ -8,6 +8,7 @@
 
 | Componente | CSS | Figma (visual) | Figma (binding) | Stories | Docs site |
 |------------|-----|-----------------|-----------------|---------|----------|
+| Accordion | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
 | Button | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
 | Input Text | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
 | Textarea | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
